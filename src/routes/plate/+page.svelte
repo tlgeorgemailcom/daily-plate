@@ -5,6 +5,7 @@
     isValidFood, 
     isDualIdentity,
     GROUP_COLORS,
+    GROUP_TEXT_COLORS,
     GROUP_EMOJI,
     GROUP_NAMES,
     type FoodGroup,
@@ -44,6 +45,16 @@
   let isHorizontal = $state(true);
   let currentTyping = $state('');
   let reverseEntry = $state(false); // true = typing backward (←/↑), false = forward (→/↓)
+  
+  // Drag state - for dragging words directly on the grid
+  let draggingWordIndex = $state<number | null>(null);
+  let selectedForMove = $state<number | null>(null); // Word selected for moving from word list
+  let dragStartPos = $state<{ row: number; col: number; horizontal: boolean } | null>(null);
+  let dragCurrentPos = $state<{ row: number; col: number; horizontal: boolean } | null>(null);
+  let dragCascade = $state<number[]>([]); // Words that will move together
+  let dragOffset = $state<{ x: number; y: number }>({ x: 0, y: 0 });
+  let gridElement: HTMLDivElement | null = $state(null);
+  let cellSize = $state(28); // Will be measured from actual grid
   
   // Grid state - dynamic size
   const INITIAL_GRID_SIZE = 15;
@@ -263,13 +274,711 @@
     placedWords = newPlacedWords;
   }
 
+  // ========== DRAG WORD ON GRID FUNCTIONS ==========
+  
+  // Helper to check if two word positions intersect (share a cell)
+  function positionsIntersect(
+    a: { row: number; col: number; horizontal: boolean; word: string },
+    b: { row: number; col: number; horizontal: boolean; word: string }
+  ): boolean {
+    const aCells = new Set<string>();
+    for (let i = 0; i < a.word.length; i++) {
+      const r = a.horizontal ? a.row : a.row + i;
+      const c = a.horizontal ? a.col + i : a.col;
+      aCells.add(`${r},${c}`);
+    }
+    for (let i = 0; i < b.word.length; i++) {
+      const r = b.horizontal ? b.row : b.row + i;
+      const c = b.horizontal ? b.col + i : b.col;
+      if (aCells.has(`${r},${c}`)) return true;
+    }
+    return false;
+  }
+  
+  // Find words that depend on a given word (only reachable through it)
+  function findDependentWords(wordIndex: number): Set<number> {
+    if (placedWords.length <= 2) return new Set();
+    
+    // Build current adjacency list
+    const connections: Set<number>[] = placedWords.map(() => new Set<number>());
+    for (let i = 0; i < placedWords.length; i++) {
+      for (let j = i + 1; j < placedWords.length; j++) {
+        const posA = { row: placedWords[i].row, col: placedWords[i].col, horizontal: placedWords[i].horizontal, word: placedWords[i].word };
+        const posB = { row: placedWords[j].row, col: placedWords[j].col, horizontal: placedWords[j].horizontal, word: placedWords[j].word };
+        if (positionsIntersect(posA, posB)) {
+          connections[i].add(j);
+          connections[j].add(i);
+        }
+      }
+    }
+    
+    // BFS from starter, but NOT going through the moving word
+    const reachableWithout = new Set<number>();
+    const queue = [0];
+    reachableWithout.add(0);
+    
+    while (queue.length > 0) {
+      const current = queue.shift()!;
+      for (const neighbor of connections[current]) {
+        if (neighbor !== wordIndex && !reachableWithout.has(neighbor)) {
+          reachableWithout.add(neighbor);
+          queue.push(neighbor);
+        }
+      }
+    }
+    
+    // Words NOT reachable without the moving word are dependents
+    const dependents = new Set<number>();
+    for (let i = 1; i < placedWords.length; i++) {
+      if (i !== wordIndex && !reachableWithout.has(i)) {
+        dependents.add(i);
+      }
+    }
+    return dependents;
+  }
+  
+  // Find the nearest valid position for the dragged word
+  function findNearestValidPosition(
+    wordIndex: number, 
+    targetRow: number, 
+    targetCol: number,
+    preferHorizontal: boolean
+  ): { row: number; col: number; horizontal: boolean } | null {
+    const word = placedWords[wordIndex];
+    if (!word) return null;
+    
+    const rows = grid.length;
+    const cols = grid[0]?.length || 0;
+    
+    // Find dependent words first - they will move with this word
+    const dependents = findDependentWords(wordIndex);
+    
+    // Get cells occupied by ANCHOR words (not moving word, not dependents)
+    const anchorWordCells = new Map<string, string>();
+    placedWords.forEach((placed, idx) => {
+      if (idx === wordIndex || dependents.has(idx)) return; // Skip moving word and its dependents
+      for (let i = 0; i < placed.word.length; i++) {
+        const r = placed.horizontal ? placed.row : placed.row + i;
+        const c = placed.horizontal ? placed.col + i : placed.col;
+        anchorWordCells.set(`${r},${c}`, placed.word[i]);
+      }
+    });
+    
+    // Check if a position is valid (no conflicts, proper crossing with ANCHOR words)
+    function isValidPosition(startRow: number, startCol: number, horizontal: boolean): boolean {
+      const endRow = horizontal ? startRow : startRow + word.word.length - 1;
+      const endCol = horizontal ? startCol + word.word.length - 1 : startCol;
+      
+      if (startRow < 0 || startCol < 0 || endRow >= rows || endCol >= cols) return false;
+      
+      let hasValidCrossing = false;
+      
+      // First pass: check for letter conflicts and valid crossings with anchor words
+      for (let i = 0; i < word.word.length; i++) {
+        const r = horizontal ? startRow : startRow + i;
+        const c = horizontal ? startCol + i : startCol;
+        const key = `${r},${c}`;
+        const wordLetter = word.word[i];
+        
+        if (anchorWordCells.has(key)) {
+          const existingLetter = anchorWordCells.get(key)!;
+          if (existingLetter === wordLetter) {
+            hasValidCrossing = true;
+          } else {
+            return false; // Letter conflict
+          }
+        }
+      }
+      
+      if (!hasValidCrossing) return false;
+      
+      // Second pass: check for invalid adjacencies (parallel touching without crossing)
+      for (let i = 0; i < word.word.length; i++) {
+        const r = horizontal ? startRow : startRow + i;
+        const c = horizontal ? startCol + i : startCol;
+        const key = `${r},${c}`;
+        
+        // If this cell already has a valid crossing, skip adjacency check for it
+        if (anchorWordCells.has(key)) continue;
+        
+        // Check adjacent cells perpendicular to word direction
+        const adjacentCells = horizontal 
+          ? [[r - 1, c], [r + 1, c]] // Check above and below for horizontal word
+          : [[r, c - 1], [r, c + 1]]; // Check left and right for vertical word
+        
+        for (const [ar, ac] of adjacentCells) {
+          const adjKey = `${ar},${ac}`;
+          if (anchorWordCells.has(adjKey)) {
+            // This cell touches another word without crossing - invalid!
+            return false;
+          }
+        }
+      }
+      
+      // Also check the cells immediately before and after the word
+      // (to prevent words from touching end-to-end)
+      const beforeRow = horizontal ? startRow : startRow - 1;
+      const beforeCol = horizontal ? startCol - 1 : startCol;
+      const afterRow = horizontal ? startRow : endRow + 1;
+      const afterCol = horizontal ? endCol + 1 : startCol;
+      
+      if (beforeRow >= 0 && beforeCol >= 0) {
+        const beforeKey = `${beforeRow},${beforeCol}`;
+        if (anchorWordCells.has(beforeKey)) return false;
+      }
+      
+      if (afterRow < rows && afterCol < cols) {
+        const afterKey = `${afterRow},${afterCol}`;
+        if (anchorWordCells.has(afterKey)) return false;
+      }
+      
+      return true;
+    }
+    
+    // Search in expanding radius from target position
+    const maxRadius = Math.max(rows, cols);
+    const orientations = preferHorizontal ? [true, false] : [false, true];
+    
+    for (let radius = 0; radius <= maxRadius; radius++) {
+      for (const horizontal of orientations) {
+        for (let dr = -radius; dr <= radius; dr++) {
+          for (let dc = -radius; dc <= radius; dc++) {
+            if (Math.abs(dr) !== radius && Math.abs(dc) !== radius) continue; // Only check perimeter
+            
+            const r = targetRow + dr;
+            const c = targetCol + dc;
+            
+            if (isValidPosition(r, c, horizontal)) {
+              // Also check that all words remain connected after this move (with cascade)
+              if (getMoveCascade(wordIndex, r, c, horizontal) !== null) {
+                return { row: r, col: c, horizontal };
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    return null;
+  }
+  
+  // Check if moving a word to a new position would keep all words connected
+  // Returns the list of word indices that need to move together (cascade), or null if invalid
+  function getMoveCascade(
+    movingWordIndex: number,
+    newRow: number,
+    newCol: number,
+    newHorizontal: boolean
+  ): number[] | null {
+    if (placedWords.length <= 1) return [movingWordIndex];
+    
+    const movingWord = placedWords[movingWordIndex];
+    const deltaRow = newRow - movingWord.row;
+    const deltaCol = newCol - movingWord.col;
+    const orientationChanged = newHorizontal !== movingWord.horizontal;
+    
+    // Helper to check if two word positions intersect
+    function positionsIntersect(
+      a: { row: number; col: number; horizontal: boolean; word: string },
+      b: { row: number; col: number; horizontal: boolean; word: string }
+    ): boolean {
+      const aCells = new Set<string>();
+      for (let i = 0; i < a.word.length; i++) {
+        const r = a.horizontal ? a.row : a.row + i;
+        const c = a.horizontal ? a.col + i : a.col;
+        aCells.add(`${r},${c}`);
+      }
+      for (let i = 0; i < b.word.length; i++) {
+        const r = b.horizontal ? b.row : b.row + i;
+        const c = b.horizontal ? b.col + i : b.col;
+        if (aCells.has(`${r},${c}`)) return true;
+      }
+      return false;
+    }
+    
+    // Build current adjacency list (before move)
+    const currentConnections: Set<number>[] = placedWords.map(() => new Set<number>());
+    for (let i = 0; i < placedWords.length; i++) {
+      for (let j = i + 1; j < placedWords.length; j++) {
+        const posA = { row: placedWords[i].row, col: placedWords[i].col, horizontal: placedWords[i].horizontal, word: placedWords[i].word };
+        const posB = { row: placedWords[j].row, col: placedWords[j].col, horizontal: placedWords[j].horizontal, word: placedWords[j].word };
+        if (positionsIntersect(posA, posB)) {
+          currentConnections[i].add(j);
+          currentConnections[j].add(i);
+        }
+      }
+    }
+    
+    // Find words that are ONLY reachable through the moving word
+    // These need to move along with it
+    function findDependents(excludeWord: number): Set<number> {
+      // BFS from starter, but NOT going through the moving word
+      const reachableWithout = new Set<number>();
+      const queue = [0];
+      reachableWithout.add(0);
+      
+      while (queue.length > 0) {
+        const current = queue.shift()!;
+        for (const neighbor of currentConnections[current]) {
+          if (neighbor !== excludeWord && !reachableWithout.has(neighbor)) {
+            reachableWithout.add(neighbor);
+            queue.push(neighbor);
+          }
+        }
+      }
+      
+      // Words NOT reachable without the moving word are dependents
+      const dependents = new Set<number>();
+      for (let i = 1; i < placedWords.length; i++) { // Skip starter (0)
+        if (i !== excludeWord && !reachableWithout.has(i)) {
+          dependents.add(i);
+        }
+      }
+      return dependents;
+    }
+    
+    const dependents = findDependents(movingWordIndex);
+    const cascadeWords = [movingWordIndex, ...dependents];
+    
+    // If orientation changes, cascade is more complex - for now just move the single word
+    // and only allow if no dependents
+    if (orientationChanged && dependents.size > 0) {
+      return null; // Can't rotate a word with dependents
+    }
+    
+    // Calculate new positions for all cascade words
+    const rows = grid.length;
+    const cols = grid[0]?.length || 0;
+    
+    const newPositions: Array<{ row: number; col: number; horizontal: boolean; word: string }> = 
+      placedWords.map((placed, idx) => {
+        if (idx === movingWordIndex) {
+          return { row: newRow, col: newCol, horizontal: newHorizontal, word: placed.word };
+        } else if (dependents.has(idx)) {
+          // Move by same delta
+          return { 
+            row: placed.row + deltaRow, 
+            col: placed.col + deltaCol, 
+            horizontal: placed.horizontal, 
+            word: placed.word 
+          };
+        }
+        return { row: placed.row, col: placed.col, horizontal: placed.horizontal, word: placed.word };
+      });
+    
+    // Validate all new positions are within bounds
+    for (const pos of newPositions) {
+      const endRow = pos.horizontal ? pos.row : pos.row + pos.word.length - 1;
+      const endCol = pos.horizontal ? pos.col + pos.word.length - 1 : pos.col;
+      if (pos.row < 0 || pos.col < 0 || endRow >= rows || endCol >= cols) {
+        return null; // Out of bounds
+      }
+    }
+    
+    // Check for letter conflicts between cascade words and non-cascade words
+    const nonCascadeCells = new Map<string, string>();
+    newPositions.forEach((pos, idx) => {
+      if (!cascadeWords.includes(idx)) {
+        for (let i = 0; i < pos.word.length; i++) {
+          const r = pos.horizontal ? pos.row : pos.row + i;
+          const c = pos.horizontal ? pos.col + i : pos.col;
+          nonCascadeCells.set(`${r},${c}`, pos.word[i]);
+        }
+      }
+    });
+    
+    // Check cascade words don't conflict with non-cascade words
+    for (const wordIdx of cascadeWords) {
+      const pos = newPositions[wordIdx];
+      for (let i = 0; i < pos.word.length; i++) {
+        const r = pos.horizontal ? pos.row : pos.row + i;
+        const c = pos.horizontal ? pos.col + i : pos.col;
+        const key = `${r},${c}`;
+        if (nonCascadeCells.has(key) && nonCascadeCells.get(key) !== pos.word[i]) {
+          return null; // Letter conflict
+        }
+      }
+    }
+    
+    // Check that moving word still crosses at least one non-cascade word
+    const movingPos = newPositions[movingWordIndex];
+    let hasValidCrossing = false;
+    for (let i = 0; i < placedWords.length; i++) {
+      if (!cascadeWords.includes(i)) {
+        if (positionsIntersect(movingPos, newPositions[i])) {
+          hasValidCrossing = true;
+          break;
+        }
+      }
+    }
+    if (!hasValidCrossing) return null;
+    
+    // Build a map of ALL cells occupied by cascade words (to detect internal crossings)
+    const cascadeCells = new Map<string, string[]>(); // key -> list of word letters at that cell
+    for (const wordIdx of cascadeWords) {
+      const pos = newPositions[wordIdx];
+      for (let i = 0; i < pos.word.length; i++) {
+        const r = pos.horizontal ? pos.row : pos.row + i;
+        const c = pos.horizontal ? pos.col + i : pos.col;
+        const key = `${r},${c}`;
+        if (!cascadeCells.has(key)) cascadeCells.set(key, []);
+        cascadeCells.get(key)!.push(pos.word[i]);
+      }
+    }
+    
+    // Check adjacency rules for cascade words against non-cascade words
+    for (const wordIdx of cascadeWords) {
+      const pos = newPositions[wordIdx];
+      for (let i = 0; i < pos.word.length; i++) {
+        const r = pos.horizontal ? pos.row : pos.row + i;
+        const c = pos.horizontal ? pos.col + i : pos.col;
+        const key = `${r},${c}`;
+        
+        // If this cell has a valid crossing with non-cascade word, skip
+        if (nonCascadeCells.has(key)) continue;
+        
+        // If this cell is shared by multiple cascade words (internal crossing), skip
+        const cellLetters = cascadeCells.get(key) || [];
+        if (cellLetters.length > 1) continue;
+        
+        // Check perpendicular adjacent cells
+        const adjacentCells = pos.horizontal 
+          ? [[r - 1, c], [r + 1, c]]
+          : [[r, c - 1], [r, c + 1]];
+        
+        for (const [ar, ac] of adjacentCells) {
+          const adjKey = `${ar},${ac}`;
+          if (nonCascadeCells.has(adjKey)) {
+            return null; // Invalid adjacency
+          }
+        }
+      }
+      
+      // Check end-to-end touching
+      const endRow = pos.horizontal ? pos.row : pos.row + pos.word.length - 1;
+      const endCol = pos.horizontal ? pos.col + pos.word.length - 1 : pos.col;
+      const beforeKey = `${pos.horizontal ? pos.row : pos.row - 1},${pos.horizontal ? pos.col - 1 : pos.col}`;
+      const afterKey = `${pos.horizontal ? pos.row : endRow + 1},${pos.horizontal ? endCol + 1 : pos.col}`;
+      
+      if (nonCascadeCells.has(beforeKey) || nonCascadeCells.has(afterKey)) {
+        return null;
+      }
+    }
+    
+    // Verify all words are still connected after the move
+    const newConnections: Set<number>[] = newPositions.map(() => new Set<number>());
+    for (let i = 0; i < newPositions.length; i++) {
+      for (let j = i + 1; j < newPositions.length; j++) {
+        if (positionsIntersect(newPositions[i], newPositions[j])) {
+          newConnections[i].add(j);
+          newConnections[j].add(i);
+        }
+      }
+    }
+    
+    const visited = new Set<number>();
+    const queue = [0];
+    visited.add(0);
+    while (queue.length > 0) {
+      const current = queue.shift()!;
+      for (const neighbor of newConnections[current]) {
+        if (!visited.has(neighbor)) {
+          visited.add(neighbor);
+          queue.push(neighbor);
+        }
+      }
+    }
+    
+    if (visited.size !== newPositions.length) {
+      return null; // Not all words connected
+    }
+    
+    return cascadeWords;
+  }
+  
+  // Start dragging a word from the grid
+  function startDragFromGrid(wordIndex: number, e: MouseEvent | TouchEvent) {
+    if (wordIndex === 0 || gameComplete) return; // Can't drag starter word
+    if (selectedForMove !== wordIndex) return; // Can only drag the word that's selected for move
+    
+    // Cancel any typing mode
+    if (selectedCell) {
+      cancelTyping();
+    }
+    
+    e.preventDefault();
+    e.stopPropagation();
+    
+    const word = placedWords[wordIndex];
+    draggingWordIndex = wordIndex;
+    dragStartPos = { row: word.row, col: word.col, horizontal: word.horizontal };
+    dragCurrentPos = { ...dragStartPos };
+    
+    // Store initial touch/mouse position
+    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY;
+    (window as any)._dragStartX = clientX;
+    (window as any)._dragStartY = clientY;
+    
+    // Measure cell size
+    if (gridElement) {
+      const firstCell = gridElement.querySelector('.cell') as HTMLElement;
+      if (firstCell) {
+        cellSize = firstCell.offsetWidth + 2; // Include gap
+      }
+    }
+  }
+  
+  // Handle drag movement
+  function handleDragMove(e: MouseEvent | TouchEvent) {
+    if (draggingWordIndex === null || !dragStartPos) return;
+    
+    // Prevent page scrolling on touch devices
+    if ('touches' in e) {
+      e.preventDefault();
+    }
+    
+    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY;
+    
+    const startX = (window as any)._dragStartX || clientX;
+    const startY = (window as any)._dragStartY || clientY;
+    
+    dragOffset = {
+      x: clientX - startX,
+      y: clientY - startY
+    };
+    
+    // Calculate target grid position
+    const cellDeltaX = Math.round(dragOffset.x / cellSize);
+    const cellDeltaY = Math.round(dragOffset.y / cellSize);
+    
+    const targetRow = dragStartPos.row + cellDeltaY;
+    const targetCol = dragStartPos.col + cellDeltaX;
+    
+    // Find nearest valid position
+    const newPos = findNearestValidPosition(
+      draggingWordIndex, 
+      targetRow, 
+      targetCol, 
+      dragStartPos.horizontal
+    );
+    
+    if (newPos) {
+      dragCurrentPos = newPos;
+      // Update cascade to show which words will move together
+      const cascade = getMoveCascade(draggingWordIndex, newPos.row, newPos.col, newPos.horizontal);
+      dragCascade = cascade || [draggingWordIndex];
+    }
+  }
+  
+  // End drag and apply the move
+  function handleDragEnd() {
+    if (draggingWordIndex === null || !dragStartPos || !dragCurrentPos) {
+      resetDragState();
+      return;
+    }
+    
+    const wordIndex = draggingWordIndex;
+    const newPosition = dragCurrentPos;
+    
+    // Check if position actually changed
+    const changed = 
+      newPosition.row !== dragStartPos.row ||
+      newPosition.col !== dragStartPos.col ||
+      newPosition.horizontal !== dragStartPos.horizontal;
+    
+    if (changed) {
+      // Get all words that need to move together (cascade)
+      const cascade = getMoveCascade(wordIndex, newPosition.row, newPosition.col, newPosition.horizontal);
+      
+      if (cascade && cascade.length > 0) {
+        const movingWord = placedWords[wordIndex];
+        const deltaRow = newPosition.row - movingWord.row;
+        const deltaCol = newPosition.col - movingWord.col;
+        
+        // Move the primary word
+        moveWordToPosition(wordIndex, newPosition);
+        
+        // Move dependent words by the same delta
+        for (const depIdx of cascade) {
+          if (depIdx !== wordIndex) {
+            const depWord = placedWords[depIdx];
+            moveWordToPosition(depIdx, {
+              row: depWord.row + deltaRow,
+              col: depWord.col + deltaCol,
+              horizontal: depWord.horizontal
+            });
+          }
+        }
+      }
+    }
+    
+    resetDragState();
+  }
+  
+  function resetDragState() {
+    draggingWordIndex = null;
+    selectedForMove = null; // Clear move mode
+    dragStartPos = null;
+    dragCurrentPos = null;
+    dragCascade = [];
+    dragOffset = { x: 0, y: 0 };
+    delete (window as any)._dragStartX;
+    delete (window as any)._dragStartY;
+  }
+  
+  // Toggle move mode for a word (activated from word list)
+  function toggleMoveMode(wordIndex: number) {
+    if (wordIndex === 0 || gameComplete) return; // Can't move starter word
+    
+    // Cancel any typing mode
+    if (selectedCell) {
+      cancelTyping();
+    }
+    
+    if (selectedForMove === wordIndex) {
+      // Already selected, cancel move mode
+      selectedForMove = null;
+    } else {
+      // Select this word for moving
+      selectedForMove = wordIndex;
+    }
+  }
+  
+  // Move a word to a new position on the grid
+  function moveWordToPosition(wordIndex: number, newPosition: { row: number; col: number; horizontal: boolean }) {
+    const word = placedWords[wordIndex];
+    if (!word) return;
+    
+    // Clear old position from grid
+    for (let i = 0; i < word.word.length; i++) {
+      const r = word.horizontal ? word.row : word.row + i;
+      const c = word.horizontal ? word.col + i : word.col;
+      grid[r][c].wordIndices = grid[r][c].wordIndices.filter(idx => idx !== wordIndex);
+      if (grid[r][c].wordIndices.length === 0) {
+        grid[r][c].letter = '';
+      }
+    }
+    
+    // Update word position
+    placedWords[wordIndex] = {
+      ...word,
+      row: newPosition.row,
+      col: newPosition.col,
+      horizontal: newPosition.horizontal
+    };
+    
+    // Place at new position
+    for (let i = 0; i < word.word.length; i++) {
+      const r = newPosition.horizontal ? newPosition.row : newPosition.row + i;
+      const c = newPosition.horizontal ? newPosition.col + i : newPosition.col;
+      grid[r][c].letter = word.word[i];
+      if (!grid[r][c].wordIndices.includes(wordIndex)) {
+        grid[r][c].wordIndices.push(wordIndex);
+      }
+    }
+    
+    grid = [...grid];
+    placedWords = [...placedWords];
+  }
+  
+  // Check if a cell is part of the word being dragged
+  function isCellBeingDragged(r: number, c: number): boolean {
+    if (draggingWordIndex === null || !dragStartPos) return false;
+    
+    // Check the primary dragging word
+    const word = placedWords[draggingWordIndex];
+    if (word) {
+      for (let i = 0; i < word.word.length; i++) {
+        const wr = word.horizontal ? word.row : word.row + i;
+        const wc = word.horizontal ? word.col + i : word.col;
+        if (wr === r && wc === c) return true;
+      }
+    }
+    
+    // Check cascade words (dependent words that move together)
+    for (const idx of dragCascade) {
+      if (idx === draggingWordIndex) continue;
+      const depWord = placedWords[idx];
+      if (depWord) {
+        for (let i = 0; i < depWord.word.length; i++) {
+          const wr = depWord.horizontal ? depWord.row : depWord.row + i;
+          const wc = depWord.horizontal ? depWord.col + i : depWord.col;
+          if (wr === r && wc === c) return true;
+        }
+      }
+    }
+    
+    return false;
+  }
+  
+  // Check if a cell is in the drag preview position
+  function isCellDragPreview(r: number, c: number): { inPreview: boolean; letter: string } {
+    if (draggingWordIndex === null || !dragCurrentPos || !dragStartPos) return { inPreview: false, letter: '' };
+    
+    const movingWord = placedWords[draggingWordIndex];
+    if (!movingWord) return { inPreview: false, letter: '' };
+    
+    const deltaRow = dragCurrentPos.row - dragStartPos.row;
+    const deltaCol = dragCurrentPos.col - dragStartPos.col;
+    
+    // Check the primary dragging word preview
+    for (let i = 0; i < movingWord.word.length; i++) {
+      const wr = dragCurrentPos.horizontal ? dragCurrentPos.row : dragCurrentPos.row + i;
+      const wc = dragCurrentPos.horizontal ? dragCurrentPos.col + i : dragCurrentPos.col;
+      if (wr === r && wc === c) {
+        return { inPreview: true, letter: movingWord.word[i] };
+      }
+    }
+    
+    // Check cascade words preview (shifted by same delta)
+    for (const idx of dragCascade) {
+      if (idx === draggingWordIndex) continue;
+      const depWord = placedWords[idx];
+      if (depWord) {
+        for (let i = 0; i < depWord.word.length; i++) {
+          const wr = depWord.horizontal ? depWord.row + deltaRow : depWord.row + deltaRow + i;
+          const wc = depWord.horizontal ? depWord.col + deltaCol + i : depWord.col + deltaCol;
+          if (wr === r && wc === c) {
+            return { inPreview: true, letter: depWord.word[i] };
+          }
+        }
+      }
+    }
+    
+    return { inPreview: false, letter: '' };
+  }
+  
+  // Get which word index a cell belongs to (for starting drag)
+  function getMovableWordAtCell(row: number, col: number): number | null {
+    const cell = grid[row][col];
+    if (cell.letter === '' || cell.wordIndices.length === 0) return null;
+    
+    // Find a movable word (not the starter, index > 0)
+    for (const idx of cell.wordIndices) {
+      if (idx > 0) return idx;
+    }
+    return null;
+  }
+  
+  // Check if a cell belongs to the word selected for move
+  function isCellSelectedForMove(row: number, col: number): boolean {
+    if (selectedForMove === null) return false;
+    const cell = grid[row][col];
+    return cell.wordIndices.includes(selectedForMove);
+  }
+  // ========== END DRAG FUNCTIONS ==========
+
   // Click on a cell to start typing from there
   function handleCellClick(row: number, col: number) {
     if (gameComplete) return;
+    if (draggingWordIndex !== null) return; // Don't handle click while dragging
+    if (selectedForMove !== null) return; // Don't open keyboard in move mode
     
     const cell = grid[row][col];
     
-    // Can only start from an existing letter
+    // Normal typing mode - can only start from an existing letter
     if (cell.letter === '') {
       errorMessage = 'Click on an existing letter to start';
       setTimeout(() => errorMessage = '', 2000);
@@ -329,6 +1038,13 @@
 
   // Handle typing (called from window keydown)
   function handleKeydown(e: KeyboardEvent) {
+    // Handle escape to cancel drag mode
+    if (e.key === 'Escape' && draggingWordIndex !== null) {
+      resetDragState();
+      e.preventDefault();
+      return;
+    }
+    
     if (!selectedCell) return;
     
     // Prevent default for keys we handle
@@ -541,8 +1257,9 @@
           const crossesHere = belowCell.wordIndices.some(idx => {
             const w = placedWords[idx];
             if (!w || w.horizontal) return false;
-            const wordStartRow = w.row;
-            return r >= wordStartRow - 1 && r < wordStartRow + w.word.length;
+            // The row r must actually be within the vertical word's row range to be a valid crossing
+            const wordEndRow = w.row + w.word.length - 1;
+            return r >= w.row && r <= wordEndRow;
           });
           if (!crossesHere) {
             return 'Word creates invalid adjacent letters';
@@ -556,6 +1273,7 @@
           const crossesHere = leftCell.wordIndices.some(idx => {
             const w = placedWords[idx];
             if (!w || !w.horizontal) return false; // Only check horizontal words
+            // The cell c must actually be within the horizontal word's column range to be a valid crossing
             const wordEndCol = w.col + w.word.length - 1;
             return c >= w.col && c <= wordEndCol;
           });
@@ -569,8 +1287,9 @@
           const crossesHere = rightCell.wordIndices.some(idx => {
             const w = placedWords[idx];
             if (!w || !w.horizontal) return false;
-            const wordStartCol = w.col;
-            return c >= wordStartCol - 1 && c < wordStartCol + w.word.length;
+            // The cell c must actually be within the horizontal word's column range to be a valid crossing
+            const wordEndCol = w.col + w.word.length - 1;
+            return c >= w.col && c <= wordEndCol;
           });
           if (!crossesHere) {
             return 'Word creates invalid adjacent letters';
@@ -949,10 +1668,31 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
   $effect(() => {
     initGame();
   });
+  
+  // Attach touchmove listener with passive: false to allow preventDefault
+  $effect(() => {
+    const handler = (e: TouchEvent) => {
+      if (draggingWordIndex !== null) {
+        e.preventDefault();
+        handleDragMove(e);
+      }
+    };
+    
+    window.addEventListener('touchmove', handler, { passive: false });
+    
+    return () => {
+      window.removeEventListener('touchmove', handler);
+    };
+  });
 </script>
 
 <!-- Listen for keyboard events at window level -->
-<svelte:window onkeydown={handleKeydown} />
+<svelte:window 
+  onkeydown={handleKeydown}
+  onmousemove={handleDragMove}
+  onmouseup={handleDragEnd}
+  ontouchend={handleDragEnd}
+/>
 
 <div class="game-container">
   <header>
@@ -1004,6 +1744,25 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
   
   <!-- Food Groups Panel -->
   <div class="food-groups-panel">
+    {#if true}
+      {@const usedCount = new Set(placedWords.map(p => p.group)).size}
+      {@const remainingCount = ALL_GROUPS.length - usedCount}
+      {#if remainingCount > 0 && placedWords.length > 0}
+        <div class="groups-progress">
+          <span class="progress-text">
+            {#if remainingCount === 1}
+              🎯 1 group left!
+            {:else}
+              {usedCount}/11 groups • {remainingCount} to go
+            {/if}
+          </span>
+        </div>
+      {:else if remainingCount === 0}
+        <div class="groups-progress complete">
+          <span class="progress-text">🌟 All 11 groups used!</span>
+        </div>
+      {/if}
+    {/if}
     <div class="groups-bar">
       {#each ALL_GROUPS as group}
         {@const isUsed = placedWords.some(p => p.group === group)}
@@ -1052,24 +1811,36 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
 
   <!-- Grid Display -->
   <div class="grid-container">
-    <div class="grid" style="--grid-size: {grid[0]?.length || gridSize}">
+    <div class="grid" class:dragging={draggingWordIndex !== null || selectedForMove !== null} bind:this={gridElement} style="--grid-size: {grid[0]?.length || gridSize}">
       {#each grid as row, r}
         {#each row as cell, c}
           {@const preview = isPreviewCell(r, c)}
+          {@const beingDragged = isCellBeingDragged(r, c)}
+          {@const dragPreview = isCellDragPreview(r, c)}
+          {@const movableWordIdx = getMovableWordAtCell(r, c)}
+          {@const isSelectedForMove = isCellSelectedForMove(r, c)}
           <div 
             class="cell" 
             class:filled={cell.letter !== ''}
             class:crossing={cell.wordIndices.length > 1}
-            class:clickable={cell.letter !== '' && !gameComplete}
+            class:clickable={cell.letter !== '' && !gameComplete && draggingWordIndex === null && selectedForMove === null}
+            class:draggable-word={movableWordIdx !== null && !gameComplete}
+            class:selected-for-move={isSelectedForMove}
             class:selected={selectedCell?.row === r && selectedCell?.col === c}
             class:preview={preview.isPreview}
             class:preview-existing={preview.isPreview && preview.isExisting}
+            class:being-dragged={beingDragged}
+            class:drag-preview={dragPreview.inPreview && !beingDragged}
             onclick={() => handleCellClick(r, c)}
+            onmousedown={(e) => movableWordIdx !== null && startDragFromGrid(movableWordIdx, e)}
+            ontouchstart={(e) => movableWordIdx !== null && startDragFromGrid(movableWordIdx, e)}
           >
-            {#if preview.isPreview && preview.letter && !preview.isExisting}
+            {#if dragPreview.inPreview && !beingDragged}
+              <span class="letter drag-preview-letter">{dragPreview.letter}</span>
+            {:else if preview.isPreview && preview.letter && !preview.isExisting}
               <span class="letter new-letter">{preview.letter}</span>
             {:else if cell.letter}
-              <span class="letter" in:scale={{ duration: 200 }}>
+              <span class="letter" class:faded={beingDragged} in:scale={{ duration: 200 }}>
                 {cell.letter}
               </span>
             {/if}
@@ -1079,28 +1850,47 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
     </div>
   </div>
 
+  <!-- Drag Hint -->
+  {#if draggingWordIndex !== null}
+    <div class="drag-hint" in:fly={{ y: -10, duration: 200 }}>
+      <span>🎯 Drag to reposition • Release to place</span>
+    </div>
+  {:else if selectedForMove !== null}
+    <div class="drag-hint move-mode" in:fly={{ y: -10, duration: 200 }}>
+      <span>✋ Touch and drag the highlighted word • Tap here to cancel</span>
+      <button class="cancel-move-btn" onclick={() => selectedForMove = null}>✕</button>
+    </div>
+  {/if}
+
   <!-- Placed Words Legend -->
   <div class="words-legend">
     {#each placedWords as placed, i}
       <div 
         class="word-item" 
         class:changeable={placed.entry.groups.length > 1}
+        class:is-dragging={draggingWordIndex === i}
+        class:selected-for-move={selectedForMove === i}
         in:fly={{ y: 20, duration: 300, delay: i * 50 }}
-        onclick={() => placed.entry.groups.length > 1 && changeWordGroup(i)}
       >
         <span class="group-badge" style="background: {GROUP_COLORS[placed.group]}">
           {GROUP_EMOJI[placed.group]}
         </span>
         <span class="word-text">{placed.word}</span>
-        <span class="group-name" style="color: {GROUP_COLORS[placed.group]}">{GROUP_NAMES[placed.group]}</span>
+        <span class="group-name" style="color: {GROUP_TEXT_COLORS[placed.group]}">{GROUP_NAMES[placed.group]}</span>
         {#if placed.entry.groups.length > 1}
           <button 
             class="change-group-btn" 
             onclick={(e) => { e.stopPropagation(); changeWordGroup(i); }} 
             title="Change food group"
-          >↔</button>
+          >🔄</button>
         {/if}
         {#if i > 0}
+          <button 
+            class="move-word-btn" 
+            class:active={selectedForMove === i}
+            onclick={(e) => { e.stopPropagation(); toggleMoveMode(i); }} 
+            title={selectedForMove === i ? "Cancel move" : "Move this word"}
+          >↔</button>
           <button class="delete-word-btn" onclick={(e) => { e.stopPropagation(); deleteWord(i); }} title="Remove this word">✕</button>
         {/if}
       </div>
@@ -1135,6 +1925,14 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
             <li>Click any letter on the grid</li>
             <li>Type a food word that includes that letter</li>
             <li>Words must connect to existing letters</li>
+          </ul>
+          
+          <h4>✋ Moving Words</h4>
+          <ul>
+            <li>Tap the ↔ button next to a word in the list</li>
+            <li>The word will highlight — now touch and drag it on the grid</li>
+            <li>The word will snap to valid connecting spots</li>
+            <li>Release to place — all words must stay connected!</li>
           </ul>
           
           <h4>🌟 Scoring</h4>
@@ -1233,6 +2031,10 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
           📤 Share
         </button>
         
+        <button class="resume-btn" onclick={() => { gameComplete = false; showResults = false; }}>
+          ✏️ Keep Editing
+        </button>
+        
         <button class="close-btn" onclick={() => showResults = false}>
           View Plate
         </button>
@@ -1244,12 +2046,17 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
   <div class="score-display">
     <span class="score-label">Score</span>
     <span class="score-value">{Math.round($animatedScore)}</span>
+    {#if placedWords.length >= 11 && !showResults}
+      <button class="view-results-btn" onclick={() => showResults = true}>
+        🏆 Results
+      </button>
+    {/if}
   </div>
 </div>
 
 <style>
   .game-container {
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 1rem;
     font-family: system-ui, -apple-system, sans-serif;
@@ -1283,23 +2090,28 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(var(--grid-size), 28px);
+    grid-template-columns: repeat(var(--grid-size), var(--cell-size, 28px));
     gap: 2px;
     background: #e5e7eb;
     padding: 4px;
     border-radius: 8px;
+    touch-action: manipulation;
+  }
+  
+  .grid.dragging {
+    touch-action: none;
   }
 
   .cell {
-    width: 28px;
-    height: 28px;
+    width: var(--cell-size, 28px);
+    height: var(--cell-size, 28px);
     background: #f9fafb;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 4px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: var(--cell-font, 14px);
     transition: all 0.15s ease;
   }
 
@@ -1335,6 +2147,79 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
 
   .cell.crossing {
     background: #fde047;
+  }
+
+  /* Drag mode visuals */
+  .cell.draggable-word {
+    cursor: grab;
+  }
+  
+  .cell.draggable-word:active {
+    cursor: grabbing;
+  }
+
+  .cell.being-dragged {
+    background: #fecaca;
+    opacity: 0.5;
+  }
+
+  .cell.drag-preview {
+    background: #86efac;
+    box-shadow: inset 0 0 0 2px #22c55e;
+  }
+
+  .letter.faded {
+    opacity: 0.3;
+  }
+
+  .letter.drag-preview-letter {
+    color: #16a34a;
+    font-weight: bold;
+  }
+  
+  .drag-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: #dbeafe;
+    border: 2px solid #3b82f6;
+    color: #1e40af;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  .drag-hint.move-mode {
+    background: #fef3c7;
+    border-color: #f59e0b;
+    color: #92400e;
+    cursor: pointer;
+  }
+  
+  .cancel-move-btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: none;
+    background: #f59e0b;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-left: 0.5rem;
+  }
+  
+  .cell.selected-for-move {
+    background: #fef3c7;
+    box-shadow: inset 0 0 0 2px #f59e0b;
+    cursor: grab;
   }
 
   .letter {
@@ -1483,6 +2368,28 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
     margin-bottom: 0.75rem;
   }
   
+  .groups-progress {
+    text-align: center;
+    padding: 0.35rem 0.75rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #92400e;
+  }
+  
+  .groups-progress.complete {
+    background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+    color: #065f46;
+    animation: celebrate 0.5s ease;
+  }
+  
+  @keyframes celebrate {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  
   .groups-bar {
     display: flex;
     flex-wrap: wrap;
@@ -1516,20 +2423,31 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
   }
   
   .group-chip.used {
+    opacity: 0.5;
+    background: #e5e7eb;
+    border-color: #22c55e;
     border-width: 2px;
   }
   
-  .group-chip.used::after {
-    content: '';
-    position: absolute;
-    top: -3px;
-    right: -3px;
-    width: 6px;
-    height: 6px;
-    background: #22c55e;
-    border-radius: 50%;
+  .group-chip.used .chip-emoji {
+    filter: grayscale(50%);
   }
   
+  .group-chip.used .chip-name {
+    color: #6b7280;
+    text-decoration: line-through;
+    text-decoration-color: #22c55e;
+  }
+  
+  .group-chip:not(.used) {
+    animation: subtle-pulse 2s ease-in-out infinite;
+  }
+  
+  @keyframes subtle-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+    50% { box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2); }
+  }
+
   .chip-emoji {
     font-size: 0.75rem;
     flex-shrink: 0;
@@ -1660,6 +2578,23 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
     background: #f3f4f6;
     border-radius: 20px;
     font-size: 0.9rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .word-item.is-dragging {
+    background: #dbeafe;
+    box-shadow: 0 0 0 2px #3b82f6;
+  }
+  
+  .word-item.selected-for-move {
+    background: #fef3c7;
+    box-shadow: 0 0 0 2px #f59e0b;
+    animation: pulse-move 1.5s infinite;
+  }
+  
+  @keyframes pulse-move {
+    0%, 100% { box-shadow: 0 0 0 2px #f59e0b; }
+    50% { box-shadow: 0 0 0 4px #fbbf24; }
   }
 
   .word-item.empty {
@@ -1722,19 +2657,19 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
   }
 
   .delete-word-btn {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     border: none;
     background: #fee2e2;
     color: #dc2626;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: auto;
+    margin-left: 0.5rem;
     padding: 0;
     transition: all 0.15s ease;
   }
@@ -1743,6 +2678,36 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
     background: #dc2626;
     color: white;
     transform: scale(1.1);
+  }
+  
+  .move-word-btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: none;
+    background: #fef3c7;
+    color: #d97706;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-left: 0.25rem;
+    transition: all 0.15s ease;
+  }
+  
+  .move-word-btn:hover {
+    background: #fbbf24;
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  .move-word-btn.active {
+    background: #f59e0b;
+    color: white;
+    animation: pulse-move 1.5s infinite;
   }
 
   .placeholder {
@@ -1985,6 +2950,16 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
     background: linear-gradient(135deg, #3b82f6, #2563eb);
   }
 
+  .resume-btn {
+    width: 100%;
+    margin: 0.5rem 0;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+  }
+  
+  .resume-btn:hover {
+    background: linear-gradient(135deg, #d97706, #b45309);
+  }
+
   .close-btn {
     width: 100%;
     background: #6b7280;
@@ -2012,12 +2987,32 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
     font-weight: bold;
     color: #22c55e;
   }
+
+  .view-results-btn {
+    display: block;
+    margin-top: 0.5rem;
+    padding: 0.35rem 0.75rem;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s;
+  }
+  
+  .view-results-btn:hover {
+    transform: scale(1.05);
+  }
   
   /* Mobile Portrait Responsive Styles */
   @media (max-width: 480px) {
     .game-container {
       padding: 0.5rem;
       max-width: 100%;
+      --cell-size: 20px;
+      --cell-font: 11px;
     }
     
     header h1 {
@@ -2025,15 +3020,11 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
     }
     
     .grid {
-      grid-template-columns: repeat(var(--grid-size), 20px);
       gap: 1px;
       padding: 2px;
     }
     
     .cell {
-      width: 20px;
-      height: 20px;
-      font-size: 11px;
       border-radius: 2px;
     }
     
@@ -2118,14 +3109,9 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
   
   /* Extra small screens */
   @media (max-width: 360px) {
-    .grid {
-      grid-template-columns: repeat(var(--grid-size), 16px);
-    }
-    
-    .cell {
-      width: 16px;
-      height: 16px;
-      font-size: 9px;
+    .game-container {
+      --cell-size: 16px;
+      --cell-font: 9px;
     }
     
     .chip-name {
@@ -2134,6 +3120,199 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
     
     .chip-emoji {
       font-size: 0.75rem;
+    }
+  }
+  
+  /* Tablet Portrait (iPad mini, iPad 10.2") */
+  @media (min-width: 600px) {
+    .game-container {
+      max-width: 700px;
+      padding: 1.5rem;
+      --cell-size: 32px;
+      --cell-font: 16px;
+    }
+    
+    header h1 {
+      font-size: 2.25rem;
+    }
+    
+    .group-chip {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.9rem;
+    }
+    
+    .word-item {
+      padding: 0.4rem 0.7rem;
+      font-size: 1rem;
+    }
+    
+    .group-badge {
+      width: 28px;
+      height: 28px;
+      font-size: 0.9rem;
+    }
+    
+    .food-tag {
+      padding: 0.3rem 0.6rem;
+      font-size: 0.85rem;
+    }
+  }
+  
+  /* Tablet Landscape (iPad 10.2", iPad Air) */
+  @media (min-width: 800px) {
+    .game-container {
+      max-width: 850px;
+      --cell-size: 36px;
+      --cell-font: 18px;
+    }
+    
+    header h1 {
+      font-size: 2.5rem;
+    }
+    
+    .typing-hint {
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+    }
+    
+    .direction-btn {
+      width: 36px;
+      height: 36px;
+      font-size: 20px;
+    }
+    
+    .groups-bar {
+      gap: 0.5rem;
+    }
+    
+    .group-chip {
+      padding: 0.5rem 1rem;
+    }
+    
+    .words-legend {
+      gap: 0.6rem;
+    }
+    
+    .word-item {
+      padding: 0.5rem 0.8rem;
+    }
+    
+    .move-word-btn,
+    .delete-word-btn {
+      width: 28px;
+      height: 28px;
+      font-size: 16px;
+    }
+    
+    .score-display {
+      padding: 0.6rem 1.2rem;
+    }
+    
+    .score-value {
+      font-size: 1.75rem;
+    }
+  }
+  
+  /* Large Tablet (iPad Pro 11", 12.9") */
+  @media (min-width: 1024px) {
+    .game-container {
+      max-width: 1000px;
+      padding: 2rem;
+      --cell-size: 40px;
+      --cell-font: 20px;
+    }
+    
+    header h1 {
+      font-size: 3rem;
+    }
+    
+    .puzzle-number {
+      font-size: 1.1rem;
+    }
+    
+    .typing-hint {
+      padding: 1rem 1.25rem;
+      font-size: 1.1rem;
+      border-radius: 16px;
+    }
+    
+    .groups-bar {
+      gap: 0.6rem;
+    }
+    
+    .group-chip {
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      border-radius: 20px;
+    }
+    
+    .chip-emoji {
+      font-size: 1.1rem;
+    }
+    
+    .group-food-list {
+      max-height: 250px;
+      padding: 1rem;
+    }
+    
+    .food-tag {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.95rem;
+    }
+    
+    .words-legend {
+      gap: 0.75rem;
+      margin: 1.25rem 0;
+    }
+    
+    .word-item {
+      padding: 0.6rem 1rem;
+      font-size: 1.1rem;
+      border-radius: 24px;
+    }
+    
+    .group-badge {
+      width: 32px;
+      height: 32px;
+      font-size: 1rem;
+    }
+    
+    .move-word-btn,
+    .delete-word-btn {
+      width: 32px;
+      height: 32px;
+      font-size: 18px;
+    }
+    
+    .score-display {
+      padding: 0.75rem 1.5rem;
+      border-radius: 20px;
+    }
+    
+    .score-value {
+      font-size: 2rem;
+    }
+    
+    .modal {
+      max-width: 450px;
+      padding: 2rem;
+    }
+    
+    .modal h3 {
+      font-size: 1.5rem;
+    }
+    
+    .rules-content {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Desktop / Very Large Tablet */
+  @media (min-width: 1280px) {
+    .game-container {
+      max-width: 1100px;
+      --cell-size: 44px;
+      --cell-font: 22px;
     }
   }
 </style>

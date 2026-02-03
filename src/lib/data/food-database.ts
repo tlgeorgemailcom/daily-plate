@@ -20,7 +20,7 @@ export interface FoodEntry {
   facts?: string[];
 }
 
-// Group colors for display
+// Group colors for display (backgrounds/badges)
 export const GROUP_COLORS: Record<FoodGroup, string> = {
   vegetable: '#22c55e', // green
   fruit: '#ef4444',     // red
@@ -33,6 +33,21 @@ export const GROUP_COLORS: Record<FoodGroup, string> = {
   spice: '#dc2626',     // deep red
   prepared: '#64748b',  // slate gray
   beverage: '#3b82f6',  // blue
+};
+
+// Darker text colors for readability (for group names as text)
+export const GROUP_TEXT_COLORS: Record<FoodGroup, string> = {
+  vegetable: '#15803d', // darker green
+  fruit: '#b91c1c',     // darker red
+  grain: '#78350f',     // darker brown
+  protein: '#7e22ce',   // darker purple
+  dairy: '#525252',     // gray (since white won't work as text)
+  legume: '#c2410c',    // darker orange
+  nuts: '#a16207',      // darker yellow/amber
+  fats: '#b45309',      // darker amber
+  spice: '#991b1b',     // darker deep red
+  prepared: '#334155',  // darker slate
+  beverage: '#1d4ed8',  // darker blue
 };
 
 export const GROUP_EMOJI: Record<FoodGroup, string> = {
