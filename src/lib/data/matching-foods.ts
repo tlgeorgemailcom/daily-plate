@@ -280,10 +280,32 @@ export const MATCHING_FOODS: MatchingFood[] = [
   { word: 'HAZELNUT', display: 'Hazelnut', containers: ['bowl', 'saucer'], meals: ['snack'] },
 ];
 
-// Get a random food for the game
+// Get a random food for the game (avoids repeating the last few foods)
+let recentFoods: string[] = [];
+const RECENT_HISTORY = 10;  // Don't repeat any of the last 10 foods
+
 export function getRandomFood(): MatchingFood {
-  const index = Math.floor(Math.random() * MATCHING_FOODS.length);
-  return MATCHING_FOODS[index];
+  let food: MatchingFood;
+  let attempts = 0;
+  
+  do {
+    const index = Math.floor(Math.random() * MATCHING_FOODS.length);
+    food = MATCHING_FOODS[index];
+    attempts++;
+  } while (recentFoods.includes(food.word) && attempts < 50);
+  
+  // Track this food in recent history
+  recentFoods.push(food.word);
+  if (recentFoods.length > RECENT_HISTORY) {
+    recentFoods.shift();
+  }
+  
+  return food;
+}
+
+// Reset recent history (call when starting a new game)
+export function resetFoodHistory(): void {
+  recentFoods = [];
 }
 
 // Check if a container can catch this food
