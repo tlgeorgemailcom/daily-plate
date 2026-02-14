@@ -6,7 +6,7 @@
     { id: 'bowl', icon: '🥣', label: 'Bowl' },
     { id: 'cup', icon: '☕', label: 'Cup' },
     { id: 'glass', icon: '🥛', label: 'Glass' },
-    { id: 'snack', icon: '🍿', label: 'Snack' }
+    { id: 'saucer', icon: '🫖', label: 'Saucer' }
   ];
 
   let current = $derived($selectedContainer);

@@ -4,7 +4,7 @@ import type { Food, Portion, FoodGroup } from '$lib/data/food-portions';
 import { calculateNutrients, calculateNutrientsForGrams } from '$lib/data/food-portions';
 
 // Container types
-export type Container = 'plate' | 'bowl' | 'cup' | 'glass' | 'snack';
+export type Container = 'plate' | 'bowl' | 'cup' | 'glass' | 'saucer';
 
 // Meal slot for organizing foods by meal
 export interface MealSlot {
