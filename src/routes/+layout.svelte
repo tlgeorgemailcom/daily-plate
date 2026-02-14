@@ -7,11 +7,14 @@
 
 <div class="app">
   <nav>
-    <a href="/" class:active={$page.url.pathname === '/'}>
+    <a href="/chain" class:active={$page.url.pathname === '/chain'}>
       🔗 Chain
     </a>
     <a href="/plate" class:active={$page.url.pathname === '/plate'}>
       🍽️ Plate
+    </a>
+    <a href="/balanced-diet" class:active={$page.url.pathname === '/balanced-diet'}>
+      🥗 Balance
     </a>
   </nav>
   

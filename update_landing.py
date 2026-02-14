@@ -1,4 +1,4 @@
-<script lang="ts">
+content = '''<script lang="ts">
   import { fade } from 'svelte/transition';
   
   // Daily puzzle number (days since Jan 1, 2024)
@@ -103,3 +103,8 @@
     border-top: 1px solid #e5e7eb;
   }
 </style>
+'''
+
+with open('src/routes/+page.svelte', 'w') as f:
+    f.write(content)
+print("Landing page updated!")

@@ -14,6 +14,24 @@
   import { fly, scale, fade } from 'svelte/transition';
   import { tweened } from 'svelte/motion';
 
+  // Difficulty modes
+  type DifficultyMode = 'easy' | 'medium' | 'hard';
+  const DIFFICULTY_LABELS: Record<DifficultyMode, string> = {
+    easy: 'Easy',
+    medium: 'Medium', 
+    hard: 'Hard'
+  };
+  const DIFFICULTY_EMOJI: Record<DifficultyMode, string> = {
+    easy: '🟢',
+    medium: '🟡',
+    hard: '🔴'
+  };
+  const DIFFICULTY_MULTIPLIER: Record<DifficultyMode, number> = {
+    easy: 1,
+    medium: 1.5,
+    hard: 2
+  };
+
   // Types
   interface PlacedWord {
     word: string;
@@ -28,6 +46,15 @@
     letter: string;
     wordIndices: number[]; // Which placed words use this cell
   }
+
+  // Difficulty state
+  let difficultyMode = $state<DifficultyMode | null>(null); // null = show selector
+  let showDifficultySelector = $state(true);
+  
+  // Letter search state (for Medium mode)
+  let letterSearchType = $state<'first' | 'last'>('first');
+  let letterSearchQuery = $state('');
+  let letterSearchResults = $state<string[]>([]);
 
   // Game state
   let placedWords: PlacedWord[] = $state([]);
@@ -72,6 +99,55 @@
   // Food groups panel state
   let expandedGroup = $state<FoodGroup | null>(null);
   const ALL_GROUPS: FoodGroup[] = ['vegetable', 'fruit', 'grain', 'protein', 'dairy', 'legume', 'nuts', 'fats', 'spice', 'prepared', 'beverage'];
+  
+  // Select difficulty mode
+  function selectDifficulty(mode: DifficultyMode) {
+    difficultyMode = mode;
+    showDifficultySelector = false;
+    // Store preference
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('dailyPlateDifficulty', mode);
+    }
+  }
+  
+  // Load saved difficulty preference on mount
+  $effect(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('dailyPlateDifficulty') as DifficultyMode | null;
+      if (saved && ['easy', 'medium', 'hard'].includes(saved)) {
+        // Don't auto-select, but pre-highlight the saved preference
+        // User still needs to confirm their choice each game
+      }
+    }
+  });
+  
+  // Letter search for Medium mode
+  function searchByLetter() {
+    if (!letterSearchQuery || letterSearchQuery.length !== 1) {
+      letterSearchResults = [];
+      return;
+    }
+    
+    const letter = letterSearchQuery.toUpperCase();
+    const results: string[] = [];
+    
+    for (const [word] of FOOD_DATABASE) {
+      const match = letterSearchType === 'first' 
+        ? word.startsWith(letter)
+        : word.endsWith(letter);
+      if (match && !placedWords.some(p => p.word === word)) {
+        results.push(word);
+      }
+    }
+    
+    letterSearchResults = results.sort();
+  }
+  
+  // Clear letter search
+  function clearLetterSearch() {
+    letterSearchQuery = '';
+    letterSearchResults = [];
+  }
   
   // Get foods for a specific group
   function getFoodsForGroup(group: FoodGroup): string[] {
@@ -1528,6 +1604,21 @@
     showGroupPicker = true;
   }
 
+  // Count how many other words a given word intersects with
+  function countIntersections(wordIndex: number): number {
+    const word = placedWords[wordIndex];
+    let intersectionCount = 0;
+    
+    for (let i = 0; i < placedWords.length; i++) {
+      if (i === wordIndex) continue;
+      if (wordsIntersect(word, placedWords[i])) {
+        intersectionCount++;
+      }
+    }
+    
+    return intersectionCount;
+  }
+
   // Scoring
   function calculateScore(): number {
     let score = 0;
@@ -1535,6 +1626,22 @@
     // 1 point per letter (excluding starting word)
     for (let i = 1; i < placedWords.length; i++) {
       score += placedWords[i].word.length;
+    }
+    
+    // Multi-crossing bonus: words that intersect with 2+ other words get bonus points
+    // Tiered rewards for strategic placement spanning multiple rows/columns
+    for (let i = 1; i < placedWords.length; i++) {
+      const crossings = countIntersections(i);
+      if (crossings >= 4) {
+        // 4+ crossings is immensely difficult with limited food words
+        score += 50;
+      } else if (crossings >= 3) {
+        // 3 crossings is highly difficult
+        score += 25;
+      } else if (crossings >= 2) {
+        // 2 crossings is achievable
+        score += 5;
+      }
     }
     
     // Completion bonus (11 words)
@@ -1552,7 +1659,9 @@
       score += 50;
     }
     
-    return score;
+    // Apply difficulty multiplier
+    const multiplier = difficultyMode ? DIFFICULTY_MULTIPLIER[difficultyMode] : 1;
+    return Math.round(score * multiplier);
   }
 
   function getGroupsUsed(): FoodGroup[] {
@@ -1598,10 +1707,12 @@
     const groups = getGroupsUsed();
     const badge = getAchievementBadge();
     const groupEmojis = groups.map(g => GROUP_EMOJI[g]).join('');
+    const modeEmoji = difficultyMode ? DIFFICULTY_EMOJI[difficultyMode] : '';
+    const modeLabel = difficultyMode ? DIFFICULTY_LABELS[difficultyMode] : '';
     
-    const text = `🍽️ Daily Plate #${puzzleNumber}
-${badge.emoji} ${badge.label}${groups.length >= 3 ? ' • Balanced!' : ''}
-Score: ${Math.round($animatedScore)}
+    const text = `🍽️ Daily Plate #${puzzleNumber} ${modeEmoji}
+${badge.emoji} ${badge.label}${groups.length >= 11 ? ' • Perfectly Balanced!' : groups.length >= 8 ? ' • Well Rounded!' : ''}
+Score: ${Math.round($animatedScore)}${difficultyMode !== 'easy' ? ` (${modeLabel} Mode)` : ''}
 ${groupEmojis}
 ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
 
@@ -1695,9 +1806,44 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
 />
 
 <div class="game-container">
+  <!-- Difficulty Selector Modal -->
+  {#if showDifficultySelector}
+    <div class="modal-overlay" in:fade>
+      <div class="modal difficulty-modal" in:scale>
+        <h2>🍽️ Daily Plate #{puzzleNumber}</h2>
+        <p class="difficulty-subtitle">Choose your challenge level</p>
+        
+        <div class="difficulty-options">
+          <button class="difficulty-option easy" onclick={() => selectDifficulty('easy')}>
+            <span class="difficulty-emoji">🟢</span>
+            <span class="difficulty-name">Easy</span>
+            <span class="difficulty-desc">Food lists by group</span>
+            <span class="difficulty-mult">1× score</span>
+          </button>
+          
+          <button class="difficulty-option medium" onclick={() => selectDifficulty('medium')}>
+            <span class="difficulty-emoji">🟡</span>
+            <span class="difficulty-name">Medium</span>
+            <span class="difficulty-desc">Letter search only</span>
+            <span class="difficulty-mult">1.5× score</span>
+          </button>
+          
+          <button class="difficulty-option hard" onclick={() => selectDifficulty('hard')}>
+            <span class="difficulty-emoji">🔴</span>
+            <span class="difficulty-name">Hard</span>
+            <span class="difficulty-desc">No hints - memory only</span>
+            <span class="difficulty-mult">2× score</span>
+          </button>
+        </div>
+        
+        <a href="/" class="cancel-link">← Back to Games</a>
+      </div>
+    </div>
+  {/if}
+
   <header>
     <h1>🍽️ Daily Plate</h1>
-    <p class="puzzle-number">#{puzzleNumber} · <button class="rules-link" onclick={() => showRules = true}>Rules</button></p>
+    <p class="puzzle-number">#{puzzleNumber} · {#if difficultyMode}<button class="mode-badge-btn" onclick={() => showDifficultySelector = true} title="Change difficulty">{DIFFICULTY_EMOJI[difficultyMode]} {DIFFICULTY_LABELS[difficultyMode]}</button> · {/if}<button class="rules-link" onclick={() => showRules = true}>Rules</button></p>
   </header>
 
   <!-- Hidden input for mobile keyboard -->
@@ -1763,16 +1909,19 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
         </div>
       {/if}
     {/if}
+    
+    <!-- Group chips always shown to track progress -->
     <div class="groups-bar">
       {#each ALL_GROUPS as group}
         {@const isUsed = placedWords.some(p => p.group === group)}
         <button 
           class="group-chip" 
-          class:expanded={expandedGroup === group}
+          class:expanded={expandedGroup === group && difficultyMode === 'easy'}
           class:used={isUsed}
+          class:no-expand={difficultyMode !== 'easy'}
           style="--group-color: {GROUP_COLORS[group]}"
-          onclick={() => toggleGroupExpand(group)}
-          title="{GROUP_NAMES[group]}"
+          onclick={() => difficultyMode === 'easy' && toggleGroupExpand(group)}
+          title="{GROUP_NAMES[group]}{difficultyMode !== 'easy' ? ' (no hints in this mode)' : ''}"
         >
           <span class="chip-emoji">{GROUP_EMOJI[group]}</span>
           <span class="chip-name">{GROUP_NAMES[group]}</span>
@@ -1783,7 +1932,8 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
       {/each}
     </div>
     
-    {#if expandedGroup}
+    <!-- Easy Mode: Food list dropdown -->
+    {#if difficultyMode === 'easy' && expandedGroup}
       <div class="group-food-list" transition:fly={{ y: -10, duration: 200 }}>
         <div class="list-header">
           <span>{GROUP_EMOJI[expandedGroup]} {GROUP_NAMES[expandedGroup]}</span>
@@ -1805,6 +1955,61 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
             </button>
           {/each}
         </div>
+      </div>
+    {/if}
+    
+    <!-- Medium Mode: Letter search -->
+    {#if difficultyMode === 'medium'}
+      <div class="letter-search-panel" transition:fly={{ y: -10, duration: 200 }}>
+        <div class="search-header">
+          <span>🔍 Word Tips</span>
+        </div>
+        <div class="search-controls">
+          <select bind:value={letterSearchType} onchange={searchByLetter}>
+            <option value="first">Starts with</option>
+            <option value="last">Ends with</option>
+          </select>
+          <input 
+            type="text" 
+            maxlength="1" 
+            placeholder="A-Z"
+            bind:value={letterSearchQuery}
+            oninput={searchByLetter}
+            class="letter-input"
+          />
+          {#if letterSearchQuery}
+            <button class="clear-search" onclick={clearLetterSearch}>✕</button>
+          {/if}
+        </div>
+        {#if letterSearchResults.length > 0}
+          <div class="search-results">
+            <span class="result-count">{letterSearchResults.length} foods found</span>
+            <div class="result-list">
+              {#each letterSearchResults.slice(0, 50) as food}
+                <button 
+                  class="food-tag selectable"
+                  class:selectable={selectedCell}
+                  onclick={() => insertFoodFromList(food)}
+                  title={selectedCell ? 'Click to insert' : 'Select a cell first'}
+                >
+                  {food}
+                </button>
+              {/each}
+              {#if letterSearchResults.length > 50}
+                <span class="more-results">...and {letterSearchResults.length - 50} more</span>
+              {/if}
+            </div>
+          </div>
+        {:else if letterSearchQuery}
+          <div class="no-results">No foods found</div>
+        {/if}
+      </div>
+    {/if}
+    
+    <!-- Hard Mode: No hints message -->
+    {#if difficultyMode === 'hard'}
+      <div class="hard-mode-hint">
+        <span>🧠 Hard Mode: Type foods from memory!</span>
       </div>
     {/if}
   </div>
@@ -1938,6 +2143,7 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
           <h4>🌟 Scoring</h4>
           <ul>
             <li><strong>+1 point</strong> per letter</li>
+            <li><strong>+5 / +25 / +50</strong> for crossing 2 / 3 / 4+ words</li>
             <li><strong>+10 points</strong> per unique food group</li>
             <li><strong>+50 bonus</strong> for using all 11 groups</li>
             <li><strong>+25 bonus</strong> for completing 11 words</li>
@@ -1945,13 +2151,14 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
           
           <h4>🌈 Food Groups</h4>
           <p class="group-list">
-            🥬 Vegetable • 🍎 Fruit • 🌾 Grain • 🍗 Protein • 🥛 Dairy • 🫘 Legume • 🥜 Nuts • 🫒 Fats • 🧂 Spices • 🍽️ Prepared • 🥤 Beverage
+            🥬 Vegetable • 🍎 Fruit • 🌾 Grain • 🍗 Protein • 🥛 Dairy • 🫘 Legume • 🥜 Nuts • 🫒 Fats • 🧂 Spices/Condiments • 🍽️ Prepared • 🥤 Beverage
           </p>
           
           <h4>💡 Tips</h4>
           <ul>
             <li>Some foods belong to multiple groups — tap to choose!</li>
             <li>Aim for variety to maximize your score</li>
+            <li>Place words that cross multiple others for bonus points!</li>
           </ul>
         </div>
         <button class="close-rules" onclick={() => showRules = false}>Got it!</button>
@@ -2002,10 +2209,15 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
     <div class="modal-overlay" in:fade>
       <div class="modal results" in:scale>
         <h2>🍽️ Daily Plate #{puzzleNumber}</h2>
+        {#if difficultyMode}
+          <p class="difficulty-badge">{DIFFICULTY_EMOJI[difficultyMode]} {DIFFICULTY_LABELS[difficultyMode]} Mode</p>
+        {/if}
         <p class="complete-badge">Complete!</p>
         
-        {#if getGroupsUsed().length >= 3}
-          <p class="balanced">🌈 Balanced!</p>
+        {#if getGroupsUsed().length >= 11}
+          <p class="balanced">🌈 Perfectly Balanced!</p>
+        {:else if getGroupsUsed().length >= 8}
+          <p class="balanced">🥗 Well Rounded!</p>
         {/if}
         
         <div class="achievement">
@@ -2013,7 +2225,7 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
           <span class="label">{getAchievementBadge().label}</span>
         </div>
         
-        <p class="final-score">Score: {Math.round($animatedScore)}</p>
+        <p class="final-score">Score: {Math.round($animatedScore)}{difficultyMode && difficultyMode !== 'easy' ? ` (${DIFFICULTY_MULTIPLIER[difficultyMode]}× multiplier)` : ''}</p>
         
         <div class="groups-summary">
           {#each getGroupsUsed() as group}
@@ -2842,6 +3054,222 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
     background: #4f46e5;
   }
 
+  /* Difficulty Selector Styles */
+  .difficulty-modal {
+    max-width: 400px;
+  }
+  
+  .difficulty-subtitle {
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+  }
+  
+  .difficulty-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .difficulty-option {
+    display: grid;
+    grid-template-columns: 40px 1fr auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    gap: 0.25rem 0.75rem;
+    padding: 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    background: white;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.15s ease;
+  }
+  
+  .difficulty-option:hover {
+    transform: scale(1.02);
+  }
+  
+  .difficulty-option.easy:hover {
+    border-color: #22c55e;
+    background: #f0fdf4;
+  }
+  
+  .difficulty-option.medium:hover {
+    border-color: #eab308;
+    background: #fefce8;
+  }
+  
+  .difficulty-option.hard:hover {
+    border-color: #ef4444;
+    background: #fef2f2;
+  }
+  
+  .difficulty-emoji {
+    font-size: 1.5rem;
+    grid-row: span 2;
+  }
+  
+  .difficulty-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #1f2937;
+  }
+  
+  .difficulty-mult {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #6366f1;
+    grid-row: span 2;
+  }
+  
+  .difficulty-desc {
+    font-size: 0.85rem;
+    color: #6b7280;
+  }
+
+  .cancel-link {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+  }
+
+  .cancel-link:hover {
+    color: #374151;
+    background: #f3f4f6;
+  }
+  
+  .mode-badge {
+    font-weight: 600;
+    color: #374151;
+  }
+  
+  .mode-badge-btn {
+    font-weight: 600;
+    color: #374151;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 2px;
+  }
+  
+  .mode-badge-btn:hover {
+    color: #6366f1;
+  }
+  
+  /* Letter Search Styles (Medium Mode) */
+  .letter-search-panel {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    border-radius: 12px;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+  }
+  
+  .search-header {
+    font-weight: 600;
+    color: #92400e;
+    margin-bottom: 0.5rem;
+  }
+  
+  .search-controls {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .search-controls select {
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #d97706;
+    background: white;
+    font-size: 0.9rem;
+  }
+  
+  .letter-input {
+    width: 50px;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 2px solid #d97706;
+    border-radius: 8px;
+  }
+  
+  .letter-input:focus {
+    outline: none;
+    border-color: #92400e;
+  }
+  
+  .clear-search {
+    padding: 0.5rem 0.75rem;
+    background: #fbbf24;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .search-results {
+    margin-top: 0.75rem;
+  }
+  
+  .result-count {
+    font-size: 0.8rem;
+    color: #92400e;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .result-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  
+  .more-results {
+    font-size: 0.8rem;
+    color: #92400e;
+    font-style: italic;
+  }
+  
+  .no-results {
+    color: #92400e;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 0.5rem;
+  }
+  
+  /* Hard Mode Styles */
+  .hard-mode-hint {
+    background: linear-gradient(135deg, #fecaca, #fca5a5);
+    border-radius: 12px;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    font-weight: 600;
+    color: #991b1b;
+  }
+  
+  .group-chip.no-expand {
+    cursor: default;
+  }
+  
+  .group-chip.no-expand:hover {
+    background: white;
+  }
+
   .dual-info {
     color: #6366f1;
     font-size: 0.9rem;
@@ -2889,6 +3317,13 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
 
   .results h2 {
     margin: 0 0 0.5rem;
+  }
+
+  .difficulty-badge {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin: 0 0 0.25rem;
+    font-weight: 600;
   }
 
   .complete-badge {
