@@ -35,6 +35,9 @@
       <a href="/balanced-diet" class:active={$page.url.pathname === '/balanced-diet'}>
         🥗 Balance
       </a>
+      <a href="/matching" class:active={$page.url.pathname === '/matching'}>
+        🎯 Match
+      </a>
     </nav>
     
     <main>

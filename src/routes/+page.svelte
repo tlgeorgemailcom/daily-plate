@@ -21,6 +21,7 @@
         <li><strong>🔗 Chain</strong> — Build a chain of 11 food words, each starting with the last letter of the previous word</li>
         <li><strong>🍽️ Plate</strong> — Place 11 food words on a crossword grid</li>
         <li><strong>🥗 Balance</strong> — Build a balanced meal by choosing foods from different groups</li>
+        <li><strong>🎯 Match</strong> — Catch falling food words by dragging a container on the right to catch the falling word and then match the container to a meal category on the left</li>
       </ul>
     </div>
     
