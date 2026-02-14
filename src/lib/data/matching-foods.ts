@@ -19,7 +19,7 @@ export interface MatchingFood {
 //   Glass (🥛) = Cold drinks with ice, juice, milk, soda, cocktails
 //   Bowl (🥣) = Soups, cereals, salads, loose items, desserts
 //   Plate (🍽️) = Main meals, solid foods, entrees
-//   Saucer (🫖) = Small pastries, sides, finger foods, snacks
+//   Saucer (⚪) = Small pastries, sides, finger foods, snacks
 //
 // Word spellings match food-words.json canonical list
 
@@ -178,11 +178,11 @@ export const MATCHING_FOODS: MatchingFood[] = [
   // === SNACKS - Bowl or Saucer ===
   { word: 'POTATOCHIP', display: 'Chips', containers: ['bowl'], meals: ['snack', 'lunch'] },
   { word: 'POPCORN', display: 'Popcorn', containers: ['bowl'], meals: ['snack'] },
-  { word: 'CASHEW', display: 'Cashews', containers: ['bowl', 'saucer'], meals: ['snack'] },
-  { word: 'ALMOND', display: 'Almonds', containers: ['bowl', 'saucer'], meals: ['snack'] },
-  { word: 'PEANUT', display: 'Peanuts', containers: ['bowl', 'saucer'], meals: ['snack'] },
-  { word: 'WALNUT', display: 'Walnuts', containers: ['bowl', 'saucer'], meals: ['snack'] },
-  { word: 'PISTACHIO', display: 'Pistachios', containers: ['bowl', 'saucer'], meals: ['snack'] },
+  { word: 'CASHEW', display: 'Cashews', containers: ['bowl'], meals: ['snack'] },
+  { word: 'ALMOND', display: 'Almonds', containers: ['bowl'], meals: ['snack'] },
+  { word: 'PEANUT', display: 'Peanuts', containers: ['bowl'], meals: ['snack'] },
+  { word: 'WALNUT', display: 'Walnuts', containers: ['bowl'], meals: ['snack'] },
+  { word: 'PISTACHIO', display: 'Pistachios', containers: ['bowl'], meals: ['snack'] },
   { word: 'CRACKER', display: 'Crackers', containers: ['saucer'], meals: ['snack'] },
   { word: 'PRETZEL', display: 'Pretzels', containers: ['bowl', 'saucer'], meals: ['snack'] },
   { word: 'TRAILMIX', display: 'Trail Mix', containers: ['bowl'], meals: ['snack'] },
@@ -223,9 +223,9 @@ export const MATCHING_FOODS: MatchingFood[] = [
   { word: 'MUSHROOM', display: 'Mushroom', containers: ['plate'], meals: ['lunch', 'dinner'] },
   { word: 'PEPPER', display: 'Pepper', containers: ['plate'], meals: ['lunch', 'dinner'] },
   { word: 'CUCUMBER', display: 'Cucumber', containers: ['plate'], meals: ['lunch', 'dinner'] },
-  { word: 'PEAS', display: 'Peas', containers: ['plate', 'bowl'], meals: ['lunch', 'dinner'] },
-  { word: 'KALE', display: 'Kale', containers: ['plate', 'bowl'], meals: ['lunch', 'dinner'] },
-  { word: 'BEET', display: 'Beet', containers: ['plate', 'bowl'], meals: ['lunch', 'dinner'] },
+  { word: 'PEAS', display: 'Peas', containers: ['plate'], meals: ['lunch', 'dinner'] },
+  { word: 'KALE', display: 'Kale', containers: ['plate'], meals: ['lunch', 'dinner'] },
+  { word: 'BEET', display: 'Beet', containers: ['plate'], meals: ['lunch', 'dinner'] },
   
   // === MORE FRUITS ===
   { word: 'CHERRY', display: 'Cherry', containers: ['bowl'], meals: ['snack', 'breakfast'] },
@@ -325,7 +325,7 @@ export function getContainerEmoji(container: Container): string {
     bowl: '🥣',
     cup: '☕',
     glass: '🥛',
-    saucer: '🫖'
+    saucer: '⚪'
   };
   return emojis[container];
 }

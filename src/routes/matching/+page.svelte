@@ -426,7 +426,7 @@
             onpointerup={handleContainerDragEnd}
             onpointercancel={handleContainerDragEnd}
           >
-            <span class="container-emoji">{getContainerEmoji(container)}</span>
+            <span class="container-emoji" class:saucer-emoji={container === 'saucer'}>{getContainerEmoji(container)}</span>
             <span class="container-name">{container}</span>
           </button>
         {/each}
@@ -834,6 +834,10 @@
   
   .container-emoji {
     font-size: 1.75rem;
+  }
+
+  .saucer-emoji {
+    font-size: 1rem;
   }
   
   .container-name {

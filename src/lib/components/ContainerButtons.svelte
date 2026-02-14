@@ -6,7 +6,7 @@
     { id: 'bowl', icon: '🥣', label: 'Bowl' },
     { id: 'cup', icon: '☕', label: 'Cup' },
     { id: 'glass', icon: '🥛', label: 'Glass' },
-    { id: 'saucer', icon: '🫖', label: 'Saucer' }
+    { id: 'saucer', icon: '⚪', label: 'Saucer' }
   ];
 
   let current = $derived($selectedContainer);
@@ -23,7 +23,7 @@
       class:selected={current === c.id}
       onclick={() => select(c.id)}
     >
-      <span class="icon">{c.icon}</span>
+      <span class="icon" class:saucer-icon={c.id === 'saucer'}>{c.icon}</span>
       <span class="label">{c.label}</span>
     </button>
   {/each}
@@ -62,6 +62,10 @@
 
   .icon {
     font-size: 1.25rem;
+  }
+
+  .saucer-icon {
+    font-size: 0.875rem;
   }
 
   .label {
