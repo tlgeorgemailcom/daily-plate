@@ -38,6 +38,9 @@
       <a href="/matching" class:active={$page.url.pathname === '/matching'}>
         🎯 Match
       </a>
+      <a href="/slider" class:active={$page.url.pathname === '/slider'}>
+        🧩 Slider
+      </a>
     </nav>
     
     <main>
