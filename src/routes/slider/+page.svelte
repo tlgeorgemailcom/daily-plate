@@ -21,6 +21,7 @@
   let showPeek = $state(false);
   let isSolving = $state(false);
   let emptyHistory = $state<number[]>([]); // Sequence of empty positions during shuffle
+  let solveSpeed = $state(800); // ms per move (600-1000)
 
   // Puzzle area dimensions
   let puzzleEl: HTMLDivElement;
@@ -253,7 +254,7 @@
     
     // Animate the optimal solution
     for (const targetPos of solutionPath) {
-      await new Promise(resolve => setTimeout(resolve, 150));
+      await new Promise(resolve => setTimeout(resolve, solveSpeed));
       
       board = swapTiles(board, emptyPos, targetPos);
       emptyPos = targetPos;
@@ -466,6 +467,21 @@
     </button>
   </div>
 
+  <div class="speed-control">
+    <label>
+      <span class="speed-label">Solve Speed: {solveSpeed >= 1000 ? '1s' : `${solveSpeed}ms`}/move</span>
+      <input 
+        type="range" 
+        min="600" 
+        max="1500" 
+        step="100"
+        bind:value={solveSpeed}
+        disabled={isSolving}
+      />
+      <span class="speed-range">Fast ← → Slow</span>
+    </label>
+  </div>
+
   <div class="instructions">
     <p>Drag tiles to slide them into the empty space. Arrange the tiles to complete the image.</p>
   </div>
@@ -610,6 +626,33 @@
   .btn.primary:hover {
     background: #2563eb;
     border-color: #2563eb;
+  }
+
+  .speed-control {
+    text-align: center;
+  }
+
+  .speed-control label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .speed-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+  }
+
+  .speed-control input[type="range"] {
+    width: 180px;
+    cursor: pointer;
+  }
+
+  .speed-range {
+    font-size: 0.75rem;
+    color: #9ca3af;
   }
 
   .instructions {
