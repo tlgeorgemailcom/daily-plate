@@ -41,6 +41,9 @@
       <a href="/slider" class:active={$page.url.pathname === '/slider'}>
         🧩 Slider
       </a>
+      <a href="/compare" class:active={$page.url.pathname === '/compare'}>
+        🔍 Compare
+      </a>
     </nav>
     
     <main>

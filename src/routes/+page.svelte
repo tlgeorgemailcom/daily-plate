@@ -23,6 +23,7 @@
         <li><strong>🥗 Balance</strong> — Build a balanced meal by choosing foods from different groups</li>
         <li><strong>🎯 Match</strong> — Catch falling food words by dragging a container on the right to catch the falling word and then match the container to a meal category on the left</li>
         <li><strong>🧩 Slider</strong> — Slide tiles to unscramble the food image in this classic 8-puzzle game</li>
+        <li><strong>🔍 Compare</strong> — Spot the 4 subtle differences between two nearly identical food images</li>
       </ul>
     </div>
     
