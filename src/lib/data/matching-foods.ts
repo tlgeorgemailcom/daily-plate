@@ -32,7 +32,7 @@ export const MATCHING_FOODS: MatchingFood[] = [
   { word: 'MOCHA', display: 'Mocha', containers: ['cup'], meals: ['beverage'] },
   
   // === WATER - Cup (you drink water from a cup/mug) ===
-  { word: 'WATER', display: 'Water', containers: ['cup'], meals: ['beverage'] },
+  { word: 'WATER', display: 'Water', containers: ['glass'], meals: ['beverage'] },
   
   // === COLD BEVERAGES - Glass (served in a glass cold) ===
   { word: 'MILK', display: 'Milk', containers: ['glass'], meals: ['beverage'] },
@@ -46,7 +46,7 @@ export const MATCHING_FOODS: MatchingFood[] = [
   { word: 'SOUP', display: 'Soup', containers: ['bowl', 'cup'], meals: ['breakfast', 'lunch', 'dinner'] },
   { word: 'CHILI', display: 'Chili', containers: ['bowl', 'cup'], meals: ['lunch', 'dinner'] },
   { word: 'RAMEN', display: 'Ramen', containers: ['bowl', 'cup'], meals: ['lunch', 'dinner'] },
-  { word: 'BROTH', display: 'Broth', containers: ['bowl', 'cup'], meals: ['lunch', 'dinner'] },
+  { word: 'BROTH', display: 'Broth', containers: ['bowl', 'cup'], meals: ['breakfast', 'lunch', 'dinner'] },
   { word: 'GUMBO', display: 'Gumbo', containers: ['bowl', 'cup'], meals: ['lunch', 'dinner'] },
   { word: 'CHOWDER', display: 'Chowder', containers: ['bowl', 'cup'], meals: ['lunch', 'dinner'] },
   { word: 'BISQUE', display: 'Bisque', containers: ['bowl', 'cup'], meals: ['lunch', 'dinner'] },
@@ -63,36 +63,36 @@ export const MATCHING_FOODS: MatchingFood[] = [
   // === MAIN MEALS - Plate ===
   { word: 'EGG', display: 'Egg', containers: ['plate'], meals: ['breakfast'] },
   { word: 'BACON', display: 'Bacon', containers: ['plate'], meals: ['breakfast'] },
-  { word: 'SAUSAGE', display: 'Sausage', containers: ['plate'], meals: ['breakfast', 'dinner'] },
+  { word: 'SAUSAGE', display: 'Sausage', containers: ['plate'], meals: ['breakfast', 'lunch', 'dinner'] },
   { word: 'PANCAKE', display: 'Pancake', containers: ['plate'], meals: ['breakfast'] },
   { word: 'WAFFLE', display: 'Waffle', containers: ['plate'], meals: ['breakfast'] },
   { word: 'OMELET', display: 'Omelet', containers: ['plate'], meals: ['breakfast', 'lunch'] },
   { word: 'HASHBROWN', display: 'Hash Brown', containers: ['plate'], meals: ['breakfast'] },
-  { word: 'STEAK', display: 'Steak', containers: ['plate'], meals: ['dinner'] },
+  { word: 'STEAK', display: 'Steak', containers: ['plate'], meals: ['breakfast', 'lunch', 'dinner'] },
   { word: 'CHICKEN', display: 'Chicken', containers: ['plate'], meals: ['lunch', 'dinner'] },
   { word: 'SALMON', display: 'Salmon', containers: ['plate'], meals: ['lunch', 'dinner'] },
   { word: 'TUNA', display: 'Tuna', containers: ['plate'], meals: ['lunch', 'dinner'] },
   { word: 'TILAPIA', display: 'Tilapia', containers: ['plate'], meals: ['lunch', 'dinner'] },
   { word: 'COD', display: 'Cod', containers: ['plate'], meals: ['lunch', 'dinner'] },
   { word: 'TROUT', display: 'Trout', containers: ['plate'], meals: ['lunch', 'dinner'] },
-  { word: 'PORKCHOP', display: 'Pork Chop', containers: ['plate'], meals: ['dinner'] },
+  { word: 'PORKCHOP', display: 'Pork Chop', containers: ['plate'], meals: ['lunch', 'dinner'] },
   { word: 'MEATLOAF', display: 'Meatloaf', containers: ['plate'], meals: ['lunch','dinner'] },
   { word: 'PIZZA', display: 'Pizza', containers: ['plate'], meals: ['lunch', 'dinner', 'snack'] },
   { word: 'HAMBURGER', display: 'Hamburger', containers: ['plate'], meals: ['lunch', 'dinner'] },
-  { word: 'HOTDOG', display: 'Hot Dog', containers: ['plate'], meals: ['lunch', 'snack'] },
-  { word: 'SANDWICH', display: 'Sandwich', containers: ['plate'], meals: ['lunch', 'snack'] },
+  { word: 'HOTDOG', display: 'Hot Dog', containers: ['plate'], meals: ['lunch', 'snack', 'dinner'] },
+  { word: 'SANDWICH', display: 'Sandwich', containers: ['plate'], meals: ['lunch', 'snack', 'dinner'] },
   { word: 'TACO', display: 'Taco', containers: ['plate'], meals: ['lunch', 'dinner'] },
   { word: 'BURRITO', display: 'Burrito', containers: ['plate'], meals: ['lunch', 'dinner'] },
-  { word: 'LASAGNA', display: 'Lasagna', containers: ['plate'], meals: ['dinner'] },
+  { word: 'LASAGNA', display: 'Lasagna', containers: ['plate'], meals: ['lunch', 'dinner'] },
   { word: 'TURKEY', display: 'Turkey', containers: ['plate'], meals: ['lunch', 'dinner'] },
-  { word: 'DUCK', display: 'Duck', containers: ['plate'], meals: ['dinner'] },
+  { word: 'DUCK', display: 'Duck', containers: ['plate'], meals: ['lunch', 'dinner'] },
   { word: 'LAMB', display: 'Lamb', containers: ['plate'], meals: ['lunch', 'dinner'] },
   { word: 'SHRIMP', display: 'Shrimp', containers: ['plate', 'bowl'], meals: ['lunch', 'dinner'] },
   { word: 'LOBSTER', display: 'Lobster', containers: ['plate'], meals: ['dinner'] },
   { word: 'CRAB', display: 'Crab', containers: ['plate'], meals: ['lunch', 'dinner'] },
   { word: 'FALAFEL', display: 'Falafel', containers: ['plate'], meals: ['lunch', 'dinner'] },
   { word: 'GYRO', display: 'Gyro', containers: ['plate'], meals: ['lunch', 'dinner'] },
-  { word: 'QUICHE', display: 'Quiche', containers: ['plate'], meals: ['breakfast', 'lunch'] },
+  { word: 'QUICHE', display: 'Quiche', containers: ['plate'], meals: ['breakfast', 'lunch', 'dinner'] },
   { word: 'FRITTATA', display: 'Frittata', containers: ['plate'], meals: ['breakfast', 'lunch'] },
   
   // === PASTA & NOODLES - Plate or Bowl ===
@@ -106,7 +106,7 @@ export const MATCHING_FOODS: MatchingFood[] = [
   { word: 'MEATBALL', display: 'Meatball', containers: ['plate', 'bowl'], meals: ['lunch', 'dinner'] },
   
   // === SALADS - Bowl (or plate for large salads) ===
-  { word: 'CAESARSALAD', display: 'Caesar Salad', containers: ['bowl', 'plate'], meals: ['lunch', 'dinner'] },
+  { word: 'CAESARSALAD', display: 'Caesar Salad', containers: ['plate'], meals: ['lunch', 'dinner'] },
   { word: 'COLESLAW', display: 'Coleslaw', containers: ['plate'], meals: ['lunch', 'dinner'] },
   
   // === RICE & GRAINS - Bowl or Plate ===
@@ -148,11 +148,11 @@ export const MATCHING_FOODS: MatchingFood[] = [
   { word: 'CAKE', display: 'Cake', containers: ['saucer'], meals: ['lunch', 'dinner'] },
   { word: 'PIE', display: 'Pie', containers: ['saucer'], meals: ['lunch', 'dinner'] },
   { word: 'CUSTARD', display: 'Custard', containers: ['bowl'], meals: ['lunch', 'dinner'] },
-  { word: 'SUNDAE', display: 'Sundae', containers: ['bowl', 'glass'], meals: ['snack'] },
+  { word: 'SUNDAE', display: 'Sundae', containers: ['bowl'], meals: ['snack'] },
   { word: 'SHERBET', display: 'Sherbet', containers: ['bowl'], meals: ['snack'] },
-  { word: 'MOUSSE', display: 'Mousse', containers: ['bowl', 'glass'], meals: ['lunch', 'dinner'] },
-  { word: 'FLAN', display: 'Flan', containers: ['plate', 'saucer'], meals: ['lunch', 'dinner'] },
-  { word: 'TART', display: 'Tart', containers: ['plate', 'saucer'], meals: ['snack', 'breakfast'] },
+  { word: 'MOUSSE', display: 'Mousse', containers: ['bowl'], meals: ['lunch', 'dinner'] },
+  { word: 'FLAN', display: 'Flan', containers: ['saucer'], meals: ['lunch', 'dinner'] },
+  { word: 'TART', display: 'Tart', containers: ['saucer'], meals: ['snack', 'breakfast'] },
   { word: 'COBBLER', display: 'Cobbler', containers: ['bowl'], meals: ['lunch', 'dinner'] },
   
   // === FRUITS - Saucer (whole) or Bowl (cut/multiple) ===
@@ -192,15 +192,17 @@ export const MATCHING_FOODS: MatchingFood[] = [
   { word: 'SALSA', display: 'Salsa', containers: ['bowl'], meals: ['snack'] },
   
   // === CHEESE - Saucer or Plate ===
-  { word: 'CHEESE', display: 'Cheese', containers: ['saucer', 'plate'], meals: ['snack', 'lunch'] },
+  { word: 'CHEESE', display: 'Cheese', containers: ['saucer', 'plate'], meals: ['snack', 'lunch', 'dinner'] },
   { word: 'BRIE', display: 'Brie', containers: ['saucer'], meals: ['snack'] },
-  { word: 'CHEDDAR', display: 'Cheddar', containers: ['saucer'], meals: ['snack', 'lunch'] },
+  { word: 'CHEDDAR', display: 'Cheddar', containers: ['saucer', 'plate'], meals: ['snack', 'lunch', 'dinner'] },
   { word: 'MOZZARELLA', display: 'Mozzarella', containers: ['saucer', 'plate'], meals: ['lunch', 'dinner'] },
   
   // === MORE BEVERAGES ===
   { word: 'COFFEE', display: 'Coffee', containers: ['cup'], meals: ['beverage'] },
   { word: 'JUICE', display: 'Juice', containers: ['glass'], meals: ['beverage'] },
   { word: 'LEMONADE', display: 'Lemonade', containers: ['glass'], meals: ['beverage'] },
+  { word: 'LIMEADE', display: 'Limeade', containers: ['glass'], meals: ['beverage'] },
+  { word: 'ICETEA', display: 'Iced Tea', containers: ['glass'], meals: ['beverage'] },
   { word: 'COLA', display: 'Cola', containers: ['glass'], meals: ['beverage'] },
   { word: 'KEFIR', display: 'Kefir', containers: ['glass'], meals: ['beverage'] },
   
@@ -208,7 +210,7 @@ export const MATCHING_FOODS: MatchingFood[] = [
   { word: 'BROCCOLI', display: 'Broccoli', containers: ['plate'], meals: ['lunch', 'dinner'] },
   { word: 'CAULIFLOWER', display: 'Cauliflower', containers: ['plate'], meals: ['lunch', 'dinner'] },
   { word: 'CARROT', display: 'Carrot', containers: ['plate'], meals: ['lunch', 'dinner', 'snack'] },
-  { word: 'CELERY', display: 'Celery', containers: ['plate'], meals: ['snack', 'lunch'] },
+  { word: 'CELERY', display: 'Celery', containers: ['plate'], meals: ['snack', 'lunch', 'dinner'] },
   { word: 'CORN', display: 'Corn', containers: ['plate'], meals: ['lunch', 'dinner'] },
   { word: 'SPINACH', display: 'Spinach', containers: ['plate'], meals: ['lunch', 'dinner'] },
   { word: 'LETTUCE', display: 'Lettuce', containers: ['plate', 'saucer', 'bowl'], meals: ['lunch', 'dinner'] },
@@ -231,8 +233,7 @@ export const MATCHING_FOODS: MatchingFood[] = [
   { word: 'CHERRY', display: 'Cherry', containers: ['bowl'], meals: ['snack', 'breakfast'] },
   { word: 'PLUM', display: 'Plum', containers: ['bowl'], meals: ['snack', 'breakfast'] },
   { word: 'APRICOT', display: 'Apricot', containers: ['bowl'], meals: ['snack', 'breakfast'] },
-  { word: 'LEMON', display: 'Lemon', containers: ['saucer'], meals: ['lunch', 'dinner'] },
-  { word: 'LIME', display: 'Lime', containers: ['saucer'], meals: ['lunch', 'dinner'] },
+
   { word: 'FIG', display: 'Fig', containers: ['bowl'], meals: ['snack', 'breakfast'] },
   { word: 'POMEGRANATE', display: 'Pomegranate', containers: ['bowl'], meals: ['snack', 'breakfast'] },
   { word: 'COCONUT', display: 'Coconut', containers: ['bowl'], meals: ['snack'] },
