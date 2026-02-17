@@ -23,9 +23,9 @@
   let hoverY = $state(0);
   let clickLog = $state<string[]>([]);
 
-  // Image container refs for coordinate calculation
-  let imageAContainer: HTMLDivElement;
-  let imageBContainer: HTMLDivElement;
+  // Image refs for coordinate calculation
+  let imageARef: HTMLImageElement;
+  let imageBRef: HTMLImageElement;
 
   function initGame() {
     puzzle = getDailyPuzzle();
@@ -42,8 +42,9 @@
     }
   }
 
-  function handleImageClick(e: MouseEvent, container: HTMLDivElement) {
-    const rect = container.getBoundingClientRect();
+  function handleImageClick(e: MouseEvent) {
+    const img = e.currentTarget as HTMLImageElement;
+    const rect = img.getBoundingClientRect();
     const x = ((e.clientX - rect.left) / rect.width) * 100;
     const y = ((e.clientY - rect.top) / rect.height) * 100;
 
@@ -77,9 +78,10 @@
     // Silent on wrong click (per spec)
   }
 
-  function handleImageHover(e: MouseEvent, container: HTMLDivElement) {
+  function handleImageHover(e: MouseEvent) {
     if (!devMode) return;
-    const rect = container.getBoundingClientRect();
+    const img = e.currentTarget as HTMLImageElement;
+    const rect = img.getBoundingClientRect();
     hoverX = Math.round(((e.clientX - rect.left) / rect.width) * 100);
     hoverY = Math.round(((e.clientY - rect.top) / rect.height) * 100);
   }
@@ -104,12 +106,12 @@
 </script>
 
 <svelte:head>
-  <title>Spot the Difference | Daily Food Chain</title>
+  <title>Touch/Click the Difference | Daily Food Chain</title>
 </svelte:head>
 
 <div class="compare-game">
   <header class="game-header">
-    <h1>🔍 Spot the Difference <button class="dev-toggle" onclick={handleDevToggle}>🛠️</button></h1>
+    <h1>👆 Touch/Click the Difference <button class="dev-toggle" onclick={handleDevToggle}>🛠️</button></h1>
     <div class="found-display">Found: {foundCount}/{differences.length}</div>
   </header>
 
@@ -130,13 +132,15 @@
   {#if puzzle}
     <div class="images-container">
       <!-- Image A -->
-      <div 
-        class="image-wrapper"
-        bind:this={imageAContainer}
-        onclick={(e) => handleImageClick(e, imageAContainer)}
-        onmousemove={(e) => handleImageHover(e, imageAContainer)}
-      >
-        <img src={puzzle.imageA} alt="Image A" class="puzzle-image" />
+      <div class="image-wrapper">
+        <img 
+          src={puzzle.imageA} 
+          alt="Image A" 
+          class="puzzle-image"
+          bind:this={imageARef}
+          onclick={handleImageClick}
+          onmousemove={handleImageHover}
+        />
         
         <!-- Found circles -->
         {#each differences as diff}
@@ -174,13 +178,15 @@
       </div>
 
       <!-- Image B -->
-      <div 
-        class="image-wrapper"
-        bind:this={imageBContainer}
-        onclick={(e) => handleImageClick(e, imageBContainer)}
-        onmousemove={(e) => handleImageHover(e, imageBContainer)}
-      >
-        <img src={puzzle.imageB} alt="Image B" class="puzzle-image" />
+      <div class="image-wrapper">
+        <img 
+          src={puzzle.imageB} 
+          alt="Image B" 
+          class="puzzle-image"
+          bind:this={imageBRef}
+          onclick={handleImageClick}
+          onmousemove={handleImageHover}
+        />
         
         <!-- Found circles -->
         {#each differences as diff}
@@ -219,46 +225,51 @@
     </div>
   {/if}
 
-  <!-- Checkbox indicators -->
-  <div class="checkbox-row">
-    {#each differences as diff, i}
-      <div class="checkbox" class:checked={diff.found}>
-        {#if diff.found}
-          ☑
-        {:else}
-          ☐
-        {/if}
-      </div>
-    {/each}
-  </div>
-
   {#if isSolved}
     <div class="solved-banner">
       🎉 You found all the differences!
     </div>
   {/if}
 
-  <div class="controls">
+  <div class="bottom-row">
+    <div class="checkbox-row">
+      {#each differences as diff, i}
+        <div class="checkbox" class:checked={diff.found}>
+          {#if diff.found}
+            ☑
+          {:else}
+            ☐
+          {/if}
+        </div>
+      {/each}
+    </div>
     <button class="btn" onclick={newPuzzle}>
-      🔄 New Puzzle
+      🔄 Reset
     </button>
-  </div>
-
-  <div class="instructions">
-    <p>Tap on either image where you spot a difference between them.</p>
   </div>
 </div>
 
 <style>
   .compare-game {
     position: relative;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+    width: calc(100vw - 2rem);
+    max-width: 1200px;
+    margin-left: calc(-50vw + 50% + 1rem);
+    margin-right: calc(-50vw + 50% + 1rem);
     padding: 1rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+  }
+
+  /* Reset breakout on mobile since parent is already full width */
+  @media (max-width: 600px) {
+    .compare-game {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0.5rem;
+    }
   }
 
   .game-header {
@@ -267,6 +278,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .dev-toggle {
@@ -292,6 +304,7 @@
     padding: 1rem;
     font-family: monospace;
     font-size: 0.875rem;
+    margin-bottom: 0.5rem;
   }
 
   .coord-display {
@@ -322,29 +335,46 @@
   }
 
   .images-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     gap: 0.5rem;
-  }
-
-  @media (max-width: 600px) {
-    .images-container {
-      grid-template-columns: 1fr;
-    }
+    justify-content: center;
+    align-items: flex-start;
   }
 
   .image-wrapper {
     position: relative;
-    cursor: crosshair;
     border-radius: 0.5rem;
     overflow: hidden;
-    background: #1e293b;
+    line-height: 0;
+    flex: 1 1 0;
+    min-width: 200px;
+    max-width: 700px;
+  }
+
+  /* Stack images on mobile - must come after base styles */
+  @media (max-width: 600px) {
+    .images-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .image-wrapper {
+      flex: none;
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
+    }
   }
 
   .puzzle-image {
+    display: block;
     width: 100%;
     height: auto;
-    display: block;
+    cursor: crosshair;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    touch-action: manipulation;
   }
 
   .found-circle {
@@ -445,31 +475,15 @@
   .confetti-7 { --tx: -35px; --ty: 35px; --rot: 220deg; animation-delay: 175ms; }
   .confetti-8 { --tx: 35px; --ty: 40px; --rot: -220deg; animation-delay: 200ms; }
 
-  .checkbox-row {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .checkbox {
-    font-size: 1.5rem;
-    color: #9ca3af;
-    transition: all 0.2s;
-  }
-
-  .checkbox.checked {
-    color: #22c55e;
-    transform: scale(1.1);
-  }
-
   .solved-banner {
     text-align: center;
-    padding: 0.75rem;
+    padding: 0.5rem;
     background: linear-gradient(135deg, #22c55e, #16a34a);
     color: white;
     font-weight: 600;
     border-radius: 0.5rem;
     animation: banner-pop 0.5s ease-out;
+    margin-top: 0.5rem;
   }
 
   @keyframes banner-pop {
@@ -483,15 +497,32 @@
     }
   }
 
-  .controls {
+  .bottom-row {
     display: flex;
     justify-content: center;
-    gap: 0.75rem;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .checkbox-row {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .checkbox {
+    font-size: 1.25rem;
+    color: #9ca3af;
+    transition: all 0.2s;
+  }
+
+  .checkbox.checked {
+    color: #22c55e;
   }
 
   .btn {
-    padding: 0.625rem 1rem;
-    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
     font-weight: 600;
     border: 2px solid #e5e7eb;
     border-radius: 0.5rem;
@@ -503,15 +534,5 @@
   .btn:hover {
     border-color: #3b82f6;
     background: #eff6ff;
-  }
-
-  .instructions {
-    text-align: center;
-    color: #64748b;
-    font-size: 0.875rem;
-  }
-
-  .instructions p {
-    margin: 0;
   }
 </style>

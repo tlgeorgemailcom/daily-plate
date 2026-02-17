@@ -42,7 +42,7 @@
         🧩 Slider
       </a>
       <a href="/compare" class:active={$page.url.pathname === '/compare'}>
-        🔍 Compare
+        � Compare
       </a>
     </nav>
     
@@ -92,21 +92,30 @@
   
   nav {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-    padding: 1rem 0;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
     border-bottom: 1px solid #e5e7eb;
     margin-bottom: 1rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  nav::-webkit-scrollbar {
+    display: none;
   }
   
   nav a {
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1rem;
     border-radius: 20px;
     text-decoration: none;
     font-weight: 600;
     color: #6b7280;
     background: #f3f4f6;
     transition: all 0.2s;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
   
   nav a:hover {

@@ -754,7 +754,7 @@
     background: white;
     border-radius: 1rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    overflow: visible;
+    overflow-x: hidden;
     position: relative;
   }
 
@@ -766,6 +766,8 @@
     background: linear-gradient(135deg, #22c55e, #16a34a);
     border-radius: 0.75rem;
     color: white;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
 
   .game-header h1 {
@@ -776,20 +778,38 @@
   .header-actions {
     display: flex;
     gap: 0.5rem;
+    flex-wrap: wrap;
   }
 
   .settings-btn, .new-game-btn, .rules-btn {
-    padding: 0.5rem 1rem;
+    padding: 0.375rem 0.75rem;
     border: none;
     border-radius: 0.5rem;
     background: rgba(255,255,255,0.2);
     color: white;
     cursor: pointer;
-    font-size: 0.875rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
   }
 
   .settings-btn:hover, .new-game-btn:hover, .rules-btn:hover {
     background: rgba(255,255,255,0.3);
+  }
+
+  @media (max-width: 480px) {
+    .game-header {
+      flex-direction: column;
+      align-items: stretch;
+      text-align: center;
+    }
+    
+    .game-header h1 {
+      font-size: 1.25rem;
+    }
+    
+    .header-actions {
+      justify-content: center;
+    }
   }
 
   /* New Game Confirmation Modal */
