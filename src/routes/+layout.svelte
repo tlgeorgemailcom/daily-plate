@@ -99,11 +99,26 @@
     margin-bottom: 1rem;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    scrollbar-width: thin;
+    scrollbar-color: #c1c1c1 #f1f1f1;
   }
 
   nav::-webkit-scrollbar {
-    display: none;
+    height: 4px;
+  }
+
+  nav::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 2px;
+  }
+
+  nav::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 2px;
+  }
+
+  nav::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
   }
   
   nav a {
