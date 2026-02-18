@@ -309,12 +309,6 @@
 
   // Get background position for a tile
   function getTileBackground(tileId: number): string {
-    if (tileId === EMPTY_TILE) return 'none';
-    
-    const { row, col } = getRowCol(tileId);
-    const offsetX = col * tileSize;
-    const offsetY = row * tileSize;
-    
     return `url('${puzzleImage}')`;
   }
 
