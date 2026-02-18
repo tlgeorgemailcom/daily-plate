@@ -45,6 +45,9 @@
       <a href="/compare" class:active={$page.url.pathname === '/compare'}>
         👆 Compare
       </a>
+      <a href="/archive" class:active={$page.url.pathname === '/archive'}>
+        📅 Archive
+      </a>
     </nav>
     <div class="scroll-indicator">→</div>
   </div>

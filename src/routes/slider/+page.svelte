@@ -447,7 +447,7 @@
       {#if moves > 0}
         🎉 Solved in {moves} moves! Tap New to play again.
       {:else}
-        🎉 Solved! Tap New to play again.
+        🎉 Solved! Tap Reset to try again.
       {/if}
     </div>
   {/if}
@@ -457,10 +457,7 @@
       👁️ Peek
     </button>
     <button class="btn" onclick={demonstrateSolution} disabled={isSolved || isSolving}>
-      ▶️ Solve
-    </button>
-    <button class="btn" onclick={newPuzzle} disabled={isSolving}>
-      🔄 New
+      💡 Solution
     </button>
     <button class="btn" onclick={resetPuzzle} disabled={moves === 0 || isSolving}>
       ↩️ Reset
@@ -469,7 +466,7 @@
 
   <div class="speed-control">
     <label>
-      <span class="speed-label">Solve Speed: {solveSpeed >= 1000 ? '1s' : `${solveSpeed}ms`}/move</span>
+      <span class="speed-label">Solution Speed: {solveSpeed >= 1000 ? '1s' : `${solveSpeed}ms`}/move</span>
       <input 
         type="range" 
         min="600" 
