@@ -13,9 +13,20 @@
   let foundCount = $state(0);
   let isSolved = $state(false);
   
-  // Celebration animation state (confetti + Nice!/Perfect! text)
-  let celebrations = $state<{ x: number; y: number; id: number; isLast: boolean }[]>([]);
+  // Celebration animation state (confetti + reinforcing text)
+  // diffNumber: which difference was found (1-4)
+  // phase: for last diff, 1='OUTSTANDING!', 2='PERFECTO!'
+  let celebrations = $state<{ x: number; y: number; id: number; diffNumber: number; phase: number }[]>([]);
   let celebrationId = 0;
+
+  // Get celebration message based on which difference was found
+  function getCelebrationMessage(diffNumber: number, phase: number): string {
+    if (diffNumber === 4) {
+      return phase === 1 ? 'OUTSTANDING!' : 'PERFECTO!';
+    }
+    const messages = ['', 'SPOT ON!', 'GOOD EYE!', 'EXCELLENT!'];
+    return messages[diffNumber] || 'NICE!';
+  }
 
   // Dev mode for coordinate picking
   let devMode = $state(false);
@@ -69,7 +80,7 @@
       const isLastDiff = foundCount === differences.length;
       
       // Trigger celebration at both image locations
-      triggerCelebration(differences[hitIndex].x, differences[hitIndex].y, isLastDiff);
+      triggerCelebration(differences[hitIndex].x, differences[hitIndex].y, foundCount);
       
       if (isLastDiff) {
         isSolved = true;
@@ -86,14 +97,23 @@
     hoverY = Math.round(((e.clientY - rect.top) / rect.height) * 100);
   }
 
-  function triggerCelebration(x: number, y: number, isLast: boolean = false) {
+  function triggerCelebration(x: number, y: number, diffNumber: number) {
     const id = celebrationId++;
-    celebrations = [...celebrations, { x, y, id, isLast }];
+    celebrations = [...celebrations, { x, y, id, diffNumber, phase: 1 }];
+    
+    // For the last difference (4th), switch to second message after 800ms
+    if (diffNumber === 4) {
+      setTimeout(() => {
+        celebrations = celebrations.map(c => 
+          c.id === id ? { ...c, phase: 2 } : c
+        );
+      }, 800);
+    }
     
     // Remove celebration after animation
     setTimeout(() => {
       celebrations = celebrations.filter(c => c.id !== id);
-    }, 2000);
+    }, diffNumber === 4 ? 2500 : 2000);
   }
 
   function newPuzzle() {
@@ -172,7 +192,7 @@
         <!-- Centered text -->
         {#each celebrations as cel (cel.id)}
           <div class="nice-text-container">
-            <div class="nice-text">{cel.isLast ? 'Perfect!' : 'Nice!'}</div>
+            <div class="nice-text" class:phase-change={cel.diffNumber === 4}>{getCelebrationMessage(cel.diffNumber, cel.phase)}</div>
           </div>
         {/each}
       </div>
@@ -218,7 +238,7 @@
         <!-- Centered text -->
         {#each celebrations as cel (cel.id)}
           <div class="nice-text-container">
-            <div class="nice-text">{cel.isLast ? 'Perfect!' : 'Nice!'}</div>
+            <div class="nice-text" class:phase-change={cel.diffNumber === 4}>{getCelebrationMessage(cel.diffNumber, cel.phase)}</div>
           </div>
         {/each}
       </div>
@@ -424,6 +444,10 @@
     white-space: nowrap;
   }
 
+  .nice-text.phase-change {
+    animation: nice-pop-final 2.3s ease-out forwards;
+  }
+
   @keyframes nice-pop {
     0% {
       transform: scale(0);
@@ -438,6 +462,29 @@
       opacity: 1;
     }
     70% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-30px) scale(1);
+      opacity: 0;
+    }
+  }
+
+  @keyframes nice-pop-final {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    10% {
+      transform: scale(1.3);
+      opacity: 1;
+    }
+    20% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    80% {
       transform: scale(1);
       opacity: 1;
     }

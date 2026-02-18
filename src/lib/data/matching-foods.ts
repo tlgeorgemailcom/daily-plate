@@ -283,7 +283,7 @@ export const MATCHING_FOODS: MatchingFood[] = [
 
 // Get a random food for the game (avoids repeating the last few foods)
 let recentFoods: string[] = [];
-const RECENT_HISTORY = 10;  // Don't repeat any of the last 10 foods
+const RECENT_HISTORY = 50;  // Don't repeat any of the last 50 foods
 
 export function getRandomFood(): MatchingFood {
   let food: MatchingFood;
