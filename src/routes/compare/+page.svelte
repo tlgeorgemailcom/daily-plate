@@ -15,16 +15,12 @@
   
   // Celebration animation state (confetti + reinforcing text)
   // diffNumber: which difference was found (1-4)
-  // phase: for last diff, 1='OUTSTANDING!', 2='PERFECTO!'
-  let celebrations = $state<{ x: number; y: number; id: number; diffNumber: number; phase: number }[]>([]);
+  let celebrations = $state<{ x: number; y: number; id: number; diffNumber: number }[]>([]);
   let celebrationId = 0;
 
   // Get celebration message based on which difference was found
-  function getCelebrationMessage(diffNumber: number, phase: number): string {
-    if (diffNumber === 4) {
-      return phase === 1 ? 'OUTSTANDING!' : 'PERFECTO!';
-    }
-    const messages = ['', 'SPOT ON!', 'GOOD EYE!', 'EXCELLENT!'];
+  function getCelebrationMessage(diffNumber: number): string {
+    const messages = ['', 'SPOT ON!', 'GOOD EYE!', 'EXCELLENT!', 'OUTSTANDING!'];
     return messages[diffNumber] || 'NICE!';
   }
 
@@ -54,6 +50,9 @@
   }
 
   function handleImageClick(e: MouseEvent) {
+    // Prevent double-firing from touch + click
+    e.preventDefault();
+    
     const img = e.currentTarget as HTMLImageElement;
     const rect = img.getBoundingClientRect();
     const x = ((e.clientX - rect.left) / rect.width) * 100;
@@ -71,7 +70,7 @@
 
     const hitIndex = checkHit(x, y, differences);
     
-    if (hitIndex >= 0) {
+    if (hitIndex >= 0 && !differences[hitIndex].found) {
       // Found a difference!
       differences[hitIndex].found = true;
       foundCount++;
@@ -83,7 +82,10 @@
       triggerCelebration(differences[hitIndex].x, differences[hitIndex].y, foundCount);
       
       if (isLastDiff) {
-        isSolved = true;
+        // Delay solved banner until after OUTSTANDING! animation completes
+        setTimeout(() => {
+          isSolved = true;
+        }, 2000);
       }
     }
     // Silent on wrong click (per spec)
@@ -99,27 +101,12 @@
 
   function triggerCelebration(x: number, y: number, diffNumber: number) {
     const id = celebrationId++;
-    celebrations = [...celebrations, { x, y, id, diffNumber, phase: 1 }];
+    celebrations = [...celebrations, { x, y, id, diffNumber }];
     
-    // For the last difference (4th), show OUTSTANDING! then PERFECTO!
-    if (diffNumber === 4) {
-      // After 2000ms: remove OUTSTANDING! and immediately add PERFECTO!
-      setTimeout(() => {
-        celebrations = celebrations.filter(c => c.id !== id);
-        // Add PERFECTO! as a fresh celebration with its own animation
-        const id2 = celebrationId++;
-        celebrations = [...celebrations, { x, y, id: id2, diffNumber, phase: 2 }];
-        // Remove PERFECTO! after 2000ms
-        setTimeout(() => {
-          celebrations = celebrations.filter(c => c.id !== id2);
-        }, 2000);
-      }, 2000);
-    } else {
-      // Remove celebration after animation for non-final differences
-      setTimeout(() => {
-        celebrations = celebrations.filter(c => c.id !== id);
-      }, 2000);
-    }
+    // Remove celebration after 2s
+    setTimeout(() => {
+      celebrations = celebrations.filter(c => c.id !== id);
+    }, 2000);
   }
 
   function newPuzzle() {
@@ -195,12 +182,6 @@
           </div>
         {/each}
         
-        <!-- Centered text -->
-        {#each celebrations as cel (cel.id)}
-          <div class="nice-text-container">
-            <div class="nice-text" class:phase-change={cel.diffNumber === 4}>{getCelebrationMessage(cel.diffNumber, cel.phase)}</div>
-          </div>
-        {/each}
       </div>
 
       <!-- Image B -->
@@ -241,13 +222,14 @@
           </div>
         {/each}
         
-        <!-- Centered text -->
-        {#each celebrations as cel (cel.id)}
-          <div class="nice-text-container">
-            <div class="nice-text" class:phase-change={cel.diffNumber === 4}>{getCelebrationMessage(cel.diffNumber, cel.phase)}</div>
-          </div>
-        {/each}
       </div>
+      
+      <!-- Centered celebration text (single instance over both images) -->
+      {#each celebrations as cel (cel.id)}
+        <div class="nice-text-container">
+          <div class="nice-text">{getCelebrationMessage(cel.diffNumber)}</div>
+        </div>
+      {/each}
     </div>
   {/if}
 
@@ -361,6 +343,7 @@
   }
 
   .images-container {
+    position: relative;
     display: flex;
     gap: 0.5rem;
     justify-content: center;
@@ -439,6 +422,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
+    z-index: 10;
   }
 
   .nice-text {
@@ -450,34 +434,7 @@
     white-space: nowrap;
   }
 
-  .nice-text.phase-change {
-    animation: nice-pop-final 2s ease-out forwards;
-  }
-
   @keyframes nice-pop {
-    0% {
-      transform: scale(0);
-      opacity: 0;
-    }
-    15% {
-      transform: scale(1.3);
-      opacity: 1;
-    }
-    25% {
-      transform: scale(1);
-      opacity: 1;
-    }
-    75% {
-      transform: scale(1);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(-30px) scale(1);
-      opacity: 0;
-    }
-  }
-
-  @keyframes nice-pop-final {
     0% {
       transform: scale(0);
       opacity: 0;
