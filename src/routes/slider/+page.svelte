@@ -22,6 +22,11 @@
   let isSolving = $state(false);
   let emptyHistory = $state<number[]>([]); // Sequence of empty positions during shuffle
   let solveSpeed = $state(800); // ms per move (600-1000)
+  
+  // Step-by-step solution state
+  let solutionPath = $state<number[]>([]);
+  let solutionStep = $state(0);
+  let isStepMode = $state(false);
 
   // Puzzle area dimensions
   let puzzleEl: HTMLDivElement;
@@ -215,6 +220,9 @@
     moves = 0;
     isSolved = false;
     isSolving = false;
+    isStepMode = false;
+    solutionPath = [];
+    solutionStep = 0;
   }
 
   // New shuffle
@@ -243,6 +251,7 @@
     if (isSolving || isSolved) return;
     
     isSolving = true;
+    isStepMode = false;
     
     // First reset to initial state
     board = [...initialBoard];
@@ -250,10 +259,10 @@
     moves = 0;
     
     // Find optimal solution path
-    const solutionPath = findOptimalSolution([...board]);
+    const path = findOptimalSolution([...board]);
     
     // Animate the optimal solution
-    for (const targetPos of solutionPath) {
+    for (const targetPos of path) {
       await new Promise(resolve => setTimeout(resolve, solveSpeed));
       
       board = swapTiles(board, emptyPos, targetPos);
@@ -264,6 +273,38 @@
     // Mark as solved
     isSolved = true;
     isSolving = false;
+  }
+  
+  // Start step-by-step solution mode
+  function startStepSolution() {
+    if (isSolving || isSolved) return;
+    
+    // Reset to initial state
+    board = [...initialBoard];
+    emptyPos = board.indexOf(EMPTY_TILE);
+    moves = 0;
+    
+    // Compute solution path
+    solutionPath = findOptimalSolution([...board]);
+    solutionStep = 0;
+    isStepMode = true;
+  }
+  
+  // Execute next step in solution
+  function nextSolutionStep() {
+    if (!isStepMode || solutionStep >= solutionPath.length) return;
+    
+    const targetPos = solutionPath[solutionStep];
+    board = swapTiles(board, emptyPos, targetPos);
+    emptyPos = targetPos;
+    moves++;
+    solutionStep++;
+    
+    // Check if we've reached the end
+    if (solutionStep >= solutionPath.length) {
+      isSolved = true;
+      isStepMode = false;
+    }
   }
 
   // Get background position for a tile
@@ -453,30 +494,25 @@
   {/if}
 
   <div class="controls">
-    <button class="btn" onclick={togglePeek} disabled={isSolved || showPeek || isSolving}>
+    <button class="btn" onclick={togglePeek} disabled={isSolved || showPeek || isSolving || isStepMode}>
       👁️ Peek
     </button>
-    <button class="btn" onclick={demonstrateSolution} disabled={isSolved || isSolving}>
-      💡 Solution
-    </button>
-    <button class="btn" onclick={resetPuzzle} disabled={moves === 0 || isSolving}>
+    <button class="btn" onclick={resetPuzzle} disabled={(moves === 0 && !isStepMode) || isSolving}>
       ↩️ Reset
     </button>
   </div>
 
-  <div class="speed-control">
-    <label>
-      <span class="speed-label">Solution Speed: {solveSpeed >= 1000 ? '1s' : `${solveSpeed}ms`}/move</span>
-      <input 
-        type="range" 
-        min="600" 
-        max="1500" 
-        step="100"
-        bind:value={solveSpeed}
-        disabled={isSolving}
-      />
-      <span class="speed-range">Fast ← → Slow</span>
-    </label>
+  <div class="help-section">
+    {#if isStepMode}
+      <button class="btn btn-step" onclick={nextSolutionStep} disabled={solutionStep >= solutionPath.length}>
+        ➡️ Next ({solutionStep}/{solutionPath.length})
+      </button>
+    {:else}
+      <p class="help-prompt">Need some help?</p>
+      <button class="btn" onclick={startStepSolution} disabled={isSolved || isSolving}>
+        👣 Solution Step-by-Step
+      </button>
+    {/if}
   </div>
 
   <div class="instructions">
@@ -593,6 +629,19 @@
     gap: 0.75rem;
   }
 
+  .help-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .help-prompt {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin: 0;
+  }
+
   .btn {
     padding: 0.625rem 1rem;
     font-size: 1rem;
@@ -625,8 +674,23 @@
     border-color: #2563eb;
   }
 
+  .btn-step {
+    background: #10b981;
+    border-color: #10b981;
+    color: white;
+  }
+
+  .btn-step:hover:not(:disabled) {
+    background: #059669;
+    border-color: #059669;
+  }
+
   .speed-control {
     text-align: center;
+  }
+
+  .speed-control.hidden {
+    display: none;
   }
 
   .speed-control label {
