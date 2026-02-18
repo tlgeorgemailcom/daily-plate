@@ -25,6 +25,7 @@
 
 {#if $isAuthenticated}
   <div class="app">
+    <div class="nav-wrapper">
     <nav>
       <a href="/chain" class:active={$page.url.pathname === '/chain'}>
         🔗 Chain
@@ -42,9 +43,11 @@
         🧩 Slider
       </a>
       <a href="/compare" class:active={$page.url.pathname === '/compare'}>
-        � Compare
+        👆 Compare
       </a>
     </nav>
+    <div class="scroll-indicator">›</div>
+  </div>
     
     <main>
       {@render children()}
@@ -89,14 +92,35 @@
     margin: 0 auto;
     padding: var(--spacing-md);
   }
+
+  .nav-wrapper {
+    position: relative;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 1rem;
+  }
+
+  .scroll-indicator {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, transparent, white 50%);
+    color: #9ca3af;
+    font-size: 1.5rem;
+    font-weight: bold;
+    pointer-events: none;
+  }
   
   nav {
     display: flex;
     justify-content: flex-start;
     gap: 0.75rem;
     padding: 0.75rem 0;
-    border-bottom: 1px solid #e5e7eb;
-    margin-bottom: 1rem;
+    padding-right: 32px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
