@@ -101,20 +101,25 @@
     const id = celebrationId++;
     celebrations = [...celebrations, { x, y, id, diffNumber, phase: 1 }];
     
-    // For the last difference (4th), switch to second message after 2000ms (same as other messages)
+    // For the last difference (4th), show OUTSTANDING! then PERFECTO!
     if (diffNumber === 4) {
+      // After 2000ms: remove OUTSTANDING! and immediately add PERFECTO!
       setTimeout(() => {
-        celebrations = celebrations.map(c => 
-          c.id === id ? { ...c, phase: 2 } : c
-        );
+        celebrations = celebrations.filter(c => c.id !== id);
+        // Add PERFECTO! as a fresh celebration with its own animation
+        const id2 = celebrationId++;
+        celebrations = [...celebrations, { x, y, id: id2, diffNumber, phase: 2 }];
+        // Remove PERFECTO! after 2000ms
+        setTimeout(() => {
+          celebrations = celebrations.filter(c => c.id !== id2);
+        }, 2000);
+      }, 2000);
+    } else {
+      // Remove celebration after animation for non-final differences
+      setTimeout(() => {
+        celebrations = celebrations.filter(c => c.id !== id);
       }, 2000);
     }
-    
-    // Remove celebration after animation
-    // For 4th diff: 2000ms for OUTSTANDING! + 2000ms for PERFECTO! = 4000ms total
-    setTimeout(() => {
-      celebrations = celebrations.filter(c => c.id !== id);
-    }, diffNumber === 4 ? 4000 : 2000);
   }
 
   function newPuzzle() {
@@ -441,12 +446,12 @@
     font-weight: 700;
     color: white;
     text-shadow: 0 2px 8px rgba(0,0,0,0.5), 0 0 20px rgba(34,197,94,0.8);
-    animation: nice-pop 1.8s ease-out forwards;
+    animation: nice-pop 2s ease-out forwards;
     white-space: nowrap;
   }
 
   .nice-text.phase-change {
-    animation: nice-pop-final 2.3s ease-out forwards;
+    animation: nice-pop-final 2s ease-out forwards;
   }
 
   @keyframes nice-pop {
@@ -462,7 +467,7 @@
       transform: scale(1);
       opacity: 1;
     }
-    70% {
+    75% {
       transform: scale(1);
       opacity: 1;
     }
@@ -477,15 +482,15 @@
       transform: scale(0);
       opacity: 0;
     }
-    10% {
+    15% {
       transform: scale(1.3);
       opacity: 1;
     }
-    20% {
+    25% {
       transform: scale(1);
       opacity: 1;
     }
-    80% {
+    75% {
       transform: scale(1);
       opacity: 1;
     }
