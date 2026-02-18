@@ -23,6 +23,7 @@
   let wordsMatched = $state(0);
   let trainingCorrect = $state(0);  // Correct matches in training
   let trainingSpeed = $state(25);   // Training speed: 10 (slow) to 100 (fast)
+  let showRules = $state(false);    // Rules modal visibility
   
   // Current falling word
   let currentFood = $state<MatchingFood | null>(null);
@@ -309,6 +310,7 @@
 <div class="matching-game">
   <header class="game-header">
     <h1>🎯 Matching Containers</h1>
+    <p class="rules-link-row"><button class="rules-link" onclick={() => showRules = true}>Rules</button></p>
     <div class="mode-links">
       <button 
         class="mode-link" 
@@ -439,6 +441,55 @@
     </div>
   {/if}
 </div>
+
+<!-- Rules Modal -->
+{#if showRules}
+  <div class="modal-overlay" onclick={() => showRules = false}>
+    <div class="rules-modal" onclick={(e) => e.stopPropagation()}>
+      <h3>🎯 How to Play</h3>
+      <div class="rules-content">
+        <p><strong>Catch falling foods in the right container!</strong></p>
+        
+        <h4>🎮 Game Modes</h4>
+        <ul>
+          <li><strong>📚 Train</strong> — Practice at your own pace, adjust speed</li>
+          <li><strong>▶️ Play</strong> — Race against time, earn points!</li>
+        </ul>
+        
+        <h4>🥡 Containers</h4>
+        <ul>
+          <li><strong>🍽️ Plate</strong> — Main meals, solid foods, entrees</li>
+          <li><strong>🥣 Bowl</strong> — Soups, cereals, fruit</li>
+          <li><strong>☕ Cup</strong> — Hot drinks (tea, coffee, cocoa)</li>
+          <li><strong>🥛 Glass</strong> — Cold drinks (milk, juice, smoothies)</li>
+          <li><strong>⚪ Saucer</strong> — Small pastries, sides, finger foods</li>
+        </ul>
+        
+        <h4>🎯 How to Catch</h4>
+        <ul>
+          <li>Drag a container up to catch the falling food</li>
+          <li>Match the food to a valid container</li>
+          <li>Some foods can go in multiple containers!</li>
+        </ul>
+        
+        <h4>🌟 Scoring (Play Mode)</h4>
+        <ul>
+          <li><strong>+10 points</strong> per correct catch</li>
+          <li><strong>Level up</strong> every 5 catches — speed increases!</li>
+          <li>Miss 3 foods and it's game over</li>
+        </ul>
+        
+        <h4>💡 Tips</h4>
+        <ul>
+          <li>Start with Training to learn which foods go where</li>
+          <li>Watch the meal indicator (breakfast/lunch/dinner)</li>
+          <li>Soups can go in bowl OR cup!</li>
+        </ul>
+      </div>
+      <button class="close-rules" onclick={() => showRules = false}>Got it!</button>
+    </div>
+  </div>
+{/if}
 
 <style>
   .matching-game {
@@ -862,5 +913,93 @@
   
   .end-btn:hover {
     background: #dc2626;
+  }
+
+  /* Rules styles */
+  .rules-link-row {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+  }
+
+  .rules-link {
+    background: none;
+    border: none;
+    color: #6366f1;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: inherit;
+    padding: 0;
+  }
+
+  .rules-link:hover {
+    color: #4f46e5;
+  }
+
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+  }
+
+  .rules-modal {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    max-width: 400px;
+    width: 100%;
+    text-align: left;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .rules-modal h3 {
+    text-align: center;
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+  }
+
+  .rules-content h4 {
+    color: #374151;
+    font-size: 1rem;
+    margin: 1rem 0 0.5rem;
+  }
+
+  .rules-content p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #4b5563;
+  }
+
+  .rules-content ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    font-size: 0.9rem;
+    color: #4b5563;
+  }
+
+  .rules-content li {
+    margin: 0.25rem 0;
+  }
+
+  .close-rules {
+    display: block;
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 0.75rem;
+    background: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .close-rules:hover {
+    background: #4f46e5;
   }
 </style>
