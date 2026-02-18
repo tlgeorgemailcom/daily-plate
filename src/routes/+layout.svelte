@@ -46,7 +46,7 @@
         👆 Compare
       </a>
     </nav>
-    <div class="scroll-indicator">›</div>
+    <div class="scroll-indicator">→</div>
   </div>
     
     <main>
@@ -108,11 +108,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to right, transparent, white 50%);
-    color: #9ca3af;
-    font-size: 1.5rem;
+    background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1) 50%);
+    color: #6b7280;
+    font-size: 1.25rem;
     font-weight: bold;
     pointer-events: none;
+    z-index: 10;
   }
   
   nav {
