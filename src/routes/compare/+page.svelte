@@ -101,19 +101,20 @@
     const id = celebrationId++;
     celebrations = [...celebrations, { x, y, id, diffNumber, phase: 1 }];
     
-    // For the last difference (4th), switch to second message after 800ms
+    // For the last difference (4th), switch to second message after 2000ms (same as other messages)
     if (diffNumber === 4) {
       setTimeout(() => {
         celebrations = celebrations.map(c => 
           c.id === id ? { ...c, phase: 2 } : c
         );
-      }, 800);
+      }, 2000);
     }
     
     // Remove celebration after animation
+    // For 4th diff: 2000ms for OUTSTANDING! + 2000ms for PERFECTO! = 4000ms total
     setTimeout(() => {
       celebrations = celebrations.filter(c => c.id !== id);
-    }, diffNumber === 4 ? 2500 : 2000);
+    }, diffNumber === 4 ? 4000 : 2000);
   }
 
   function newPuzzle() {
