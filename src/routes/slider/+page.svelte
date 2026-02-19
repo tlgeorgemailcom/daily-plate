@@ -228,6 +228,9 @@
   // New shuffle
   function newPuzzle() {
     initPuzzle();
+    isStepMode = false;
+    solutionPath = [];
+    solutionStep = 0;
   }
 
   // Move a tile if adjacent to empty
@@ -493,6 +496,9 @@
     </button>
     <button class="btn" onclick={resetPuzzle} disabled={(moves === 0 && !isStepMode) || isSolving}>
       ↩️ Reset
+    </button>
+    <button class="btn" onclick={newPuzzle} disabled={isSolving}>
+      🔀 Shuffle
     </button>
   </div>
 

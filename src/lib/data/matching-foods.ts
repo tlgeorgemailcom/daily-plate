@@ -257,7 +257,7 @@ export const MATCHING_FOODS: MatchingFood[] = [
   { word: 'BREAD', display: 'Bread', containers: ['saucer'], meals: ['breakfast', 'lunch', 'dinner'] },
   { word: 'FRENCHTOAST', display: 'French Toast', containers: ['plate'], meals: ['breakfast'] },
   { word: 'EGGROLL', display: 'Egg Roll', containers: ['plate'], meals: ['lunch', 'dinner'] },
-  { word: 'WONTON', display: 'Wonton', containers: ['bowl'], meals: ['lunch', 'dinner'] },
+  { word: 'WONTON', display: 'Wonton', containers: ['saucer'], meals: ['lunch', 'dinner'] },
   { word: 'TAMALES', display: 'Tamales', containers: ['plate'], meals: ['lunch', 'dinner'] },
   { word: 'CHEESECAKE', display: 'Cheesecake', containers: ['saucer'], meals: ['lunch', 'dinner'] },
   { word: 'ECLAIR', display: 'Eclair', containers: ['saucer'], meals: ['snack'] },

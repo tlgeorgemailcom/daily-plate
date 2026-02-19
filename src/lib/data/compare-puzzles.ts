@@ -27,6 +27,17 @@ export const COMPARE_PUZZLES: ComparePuzzle[] = [
       { x: 48, y: 65, radius: 8 },  // Difference 3
       { x: 34, y: 7, radius: 8 },   // Difference 4
     ]
+  },
+  {
+    id: 'puzzle-002',
+    imageA: '/images/compare/puzzle-002-a.jpg',
+    imageB: '/images/compare/puzzle-002-b.jpg',
+    differences: [
+      { x: 54, y: 11, radius: 8 },  // Difference 1
+      { x: 48, y: 29, radius: 8 },  // Difference 2
+      { x: 40, y: 66, radius: 8 },  // Difference 3
+      { x: 97, y: 50, radius: 8 },  // Difference 4
+    ]
   }
 ];
 
@@ -51,6 +62,7 @@ export function checkHit(
   differences: Difference[]
 ): number {
   // Returns index of hit difference, or -1 if no hit
+  // Use a minimum touch-friendly radius of 10% for hit detection
   for (let i = 0; i < differences.length; i++) {
     if (differences[i].found) continue;
     
@@ -58,7 +70,10 @@ export function checkHit(
     const dy = clickY - differences[i].y;
     const distance = Math.sqrt(dx * dx + dy * dy);
     
-    if (distance <= differences[i].radius) {
+    // Hit radius minimum of 10 for touch-friendliness
+    const hitRadius = Math.max(differences[i].radius, 10);
+    
+    if (distance <= hitRadius) {
       return i;
     }
   }
