@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { browser } from '$app/environment';
+  import { getDailyPuzzle } from '$lib/data/compare-puzzles';
 
   // Puzzle configuration
   const GRID_SIZE = 3;
@@ -8,8 +9,9 @@
   const EMPTY_TILE = TOTAL_TILES - 1; // 8 for 3x3
   const SHUFFLE_MOVES = 100;
 
-  // Image path
-  const puzzleImage = '/images/puzzle/daily-001.jpg';
+  // Image path - use same daily image as Compare game
+  const dailyPuzzle = getDailyPuzzle();
+  const puzzleImage = dailyPuzzle.imageA;
 
   // Board state: array of tile IDs at each position
   // Index = position (0-8), Value = tile ID (0-8 where 8 is empty)
