@@ -38,12 +38,23 @@ export const COMPARE_PUZZLES: ComparePuzzle[] = [
       { x: 40, y: 66, radius: 8 },  // Difference 3
       { x: 97, y: 50, radius: 8 },  // Difference 4
     ]
+  },
+  {
+    id: 'puzzle-003',
+    imageA: '/images/compare/puzzle-003-a.jpg',
+    imageB: '/images/compare/puzzle-003-b.jpg',
+    differences: [
+      { x: 79, y: 50, radius: 8 },  // Difference 1
+      { x: 79, y: 26, radius: 8 },  // Difference 2
+      { x: 56, y: 24, radius: 8 },  // Difference 3
+      { x: 48, y: 47, radius: 8 },  // Difference 4
+    ]
   }
 ];
 
 // Get puzzle by index (for daily rotation)
 export function getDailyPuzzle(): ComparePuzzle {
-  const startDate = new Date('2026-02-16');
+  const startDate = new Date('2026-02-18');
   const today = new Date();
   const daysSinceStart = Math.floor((today.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
   const puzzleIndex = daysSinceStart % COMPARE_PUZZLES.length;
