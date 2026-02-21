@@ -1,7 +1,8 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { browser } from '$app/environment';
-  import { getDailyPuzzle } from '$lib/data/compare-puzzles';
+  import { page } from '$app/stores';
+  import { getDailyPuzzle, getPuzzleForDate, formatDateDisplay } from '$lib/data/compare-puzzles';
 
   // Puzzle configuration
   const GRID_SIZE = 3;
@@ -9,9 +10,12 @@
   const EMPTY_TILE = TOTAL_TILES - 1; // 8 for 3x3
   const SHUFFLE_MOVES = 100;
 
-  // Image path - use same daily image as Compare game
-  const dailyPuzzle = getDailyPuzzle();
-  const puzzleImage = dailyPuzzle.imageA;
+  // Archive mode
+  let archiveDate = $state<string | null>(null);
+  let archiveDateDisplay = $state('');
+
+  // Image path - determined on mount based on URL params
+  let puzzleImage = $state('/images/compare/puzzle-001-a.jpg');
 
   // Board state: array of tile IDs at each position
   // Index = position (0-8), Value = tile ID (0-8 where 8 is empty)
@@ -421,6 +425,22 @@
   }
 
   onMount(() => {
+    // Check for archive date in URL
+    const urlDate = $page.url.searchParams.get('date');
+    if (urlDate) {
+      archiveDate = urlDate;
+      archiveDateDisplay = formatDateDisplay(urlDate);
+      const date = new Date(urlDate + 'T12:00:00');
+      const puzzle = getPuzzleForDate(date);
+      if (puzzle) {
+        puzzleImage = puzzle.imageA;
+      }
+    } else {
+      archiveDate = null;
+      const dailyPuzzle = getDailyPuzzle();
+      puzzleImage = dailyPuzzle.imageA;
+    }
+
     updateTileSize();
     initPuzzle();
 
@@ -438,6 +458,13 @@
 </svelte:head>
 
 <div class="slider-game">
+  {#if archiveDate}
+    <div class="archive-banner">
+      <a href="/archive/{archiveDate}">← Back</a>
+      <span>📅 {archiveDateDisplay}</span>
+    </div>
+  {/if}
+
   <header class="game-header">
     <h1>🧩 Food Slider</h1>
     <div class="moves-display">Moves: {moves}</div>
@@ -531,6 +558,27 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+  }
+
+  .archive-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fef3c7;
+    border: 1px solid #f59e0b;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .archive-banner a {
+    color: #d97706;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .archive-banner a:hover {
+    text-decoration: underline;
   }
 
   .game-header {

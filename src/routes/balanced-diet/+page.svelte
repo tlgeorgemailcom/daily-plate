@@ -22,7 +22,7 @@
     selectedPieNutrient
   } from '$lib/stores/gameStore';
   import { gameSettings, updateSettings, DEFAULT_SETTINGS, getSettings } from '$lib/stores/settingsStore';
-  import { initializeGameState, startAutoSave, startNewGame } from '$lib/stores/gameStateStore';
+  import { initializeGameState, startAutoSave, startNewGame, getSavedGameTime, hasSavedGame } from '$lib/stores/gameStateStore';
   import type { Food, Portion } from '$lib/data/food-portions';
 
   let selectedFood = $state<Food | null>(null);
@@ -30,7 +30,9 @@
   let showAddCustomFood = $state(false);
   let showNewGameConfirm = $state(false);
   let showRules = $state(false);
+  let showHistoryInfo = $state(false);
   let customFoodPrefill = $state('');
+  let lastSavedTime = $state<Date | null>(null);
   
   // Initialize from stored settings
   let calorieTarget = $state($gameSettings.calorieTarget);
@@ -69,6 +71,9 @@
     
     // Start auto-saving game state on any changes
     startAutoSave();
+    
+    // Get last saved time for history info
+    lastSavedTime = getSavedGameTime();
   });
   
   // Track saved settings to detect unsaved changes (initialized from store)
@@ -381,6 +386,9 @@
       <button class="rules-btn" onclick={() => showRules = true}>
         📖 Rules
       </button>
+      <button class="history-btn" onclick={() => { lastSavedTime = getSavedGameTime(); showHistoryInfo = true; }}>
+        📜 History
+      </button>
       <button class="settings-btn" onclick={openSettings}>
         ⚙️ Settings
       </button>
@@ -389,6 +397,47 @@
       </button>
     </div>
   </header>
+
+  <!-- History Info Modal -->
+  {#if showHistoryInfo}
+    <div class="modal-backdrop" onclick={() => showHistoryInfo = false}>
+      <div class="history-modal" onclick={(e) => e.stopPropagation()}>
+        <h3>📜 Game History</h3>
+        <div class="history-content">
+          {#if lastSavedTime}
+            <p class="last-saved">
+              <strong>Last saved:</strong><br/>
+              {lastSavedTime.toLocaleDateString('en-US', { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                hour: 'numeric',
+                minute: '2-digit'
+              })}
+            </p>
+          {:else}
+            <p class="no-history">No saved game history yet.</p>
+          {/if}
+          
+          <div class="history-warning">
+            <span class="warning-icon">⚠️</span>
+            <p>
+              Your game data is stored locally on this device. 
+              <strong>Clearing your browser history or data will also delete your game progress.</strong>
+            </p>
+          </div>
+          
+          <p class="history-note">
+            Game progress auto-saves as you play. Your foods, meals, and settings are preserved between sessions.
+          </p>
+        </div>
+        <button class="modal-close-btn" onclick={() => showHistoryInfo = false}>
+          Got it!
+        </button>
+      </div>
+    </div>
+  {/if}
 
   <!-- Add Custom Food Modal -->
   {#if showAddCustomFood}
@@ -781,7 +830,7 @@
     flex-wrap: wrap;
   }
 
-  .settings-btn, .new-game-btn, .rules-btn {
+  .settings-btn, .new-game-btn, .rules-btn, .history-btn {
     padding: 0.375rem 0.75rem;
     border: none;
     border-radius: 0.5rem;
@@ -792,7 +841,7 @@
     white-space: nowrap;
   }
 
-  .settings-btn:hover, .new-game-btn:hover, .rules-btn:hover {
+  .settings-btn:hover, .new-game-btn:hover, .rules-btn:hover, .history-btn:hover {
     background: rgba(255,255,255,0.3);
   }
 
@@ -830,6 +879,83 @@
     max-width: 320px;
     text-align: center;
     box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  }
+
+  /* History Modal */
+  .history-modal {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    max-width: 400px;
+    text-align: left;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  }
+
+  .history-modal h3 {
+    margin: 0 0 1rem;
+    color: #3b82f6;
+  }
+
+  .history-content {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .last-saved {
+    background: #f0fdf4;
+    border: 1px solid #22c55e;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .no-history {
+    color: #6b7280;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+
+  .history-warning {
+    display: flex;
+    gap: 0.5rem;
+    background: #fef3c7;
+    border: 1px solid #f59e0b;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .warning-icon {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+  }
+
+  .history-warning p {
+    margin: 0;
+    font-size: 0.85rem;
+  }
+
+  .history-note {
+    color: #6b7280;
+    font-size: 0.8rem;
+    margin: 0;
+  }
+
+  .modal-close-btn {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .modal-close-btn:hover {
+    background: #2563eb;
   }
 
   /* Rules Modal */

@@ -1,11 +1,18 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { page } from '$app/stores';
   import { 
-    getDailyPuzzle, 
+    getDailyPuzzle,
+    getPuzzleForDate,
+    formatDateDisplay,
     checkHit,
     type ComparePuzzle,
     type Difference 
   } from '$lib/data/compare-puzzles';
+
+  // Archive mode
+  let archiveDate = $state<string | null>(null);
+  let archiveDateDisplay = $state('');
 
   // Game state
   let puzzle = $state<ComparePuzzle | null>(null);
@@ -35,8 +42,21 @@
   let imageBRef: HTMLImageElement;
 
   function initGame() {
-    puzzle = getDailyPuzzle();
-    differences = puzzle.differences.map(d => ({ ...d, found: false }));
+    // Check for archive date in URL
+    const urlDate = $page.url.searchParams.get('date');
+    if (urlDate) {
+      archiveDate = urlDate;
+      archiveDateDisplay = formatDateDisplay(urlDate);
+      const date = new Date(urlDate + 'T12:00:00');
+      puzzle = getPuzzleForDate(date);
+    } else {
+      archiveDate = null;
+      puzzle = getDailyPuzzle();
+    }
+    
+    if (puzzle) {
+      differences = puzzle.differences.map(d => ({ ...d, found: false }));
+    }
     foundCount = 0;
     isSolved = false;
     celebrations = [];
@@ -123,6 +143,13 @@
 </svelte:head>
 
 <div class="compare-game">
+  {#if archiveDate}
+    <div class="archive-banner">
+      <a href="/archive/{archiveDate}">← Back</a>
+      <span>📅 {archiveDateDisplay}</span>
+    </div>
+  {/if}
+
   <header class="game-header">
     <h1>👆 Touch/Click the Difference <button class="dev-toggle" onclick={handleDevToggle}>🛠️</button></h1>
     <div class="found-display">Found: {foundCount}/{differences.length}</div>
@@ -278,6 +305,28 @@
       margin-right: 0;
       padding: 0.5rem;
     }
+  }
+
+  .archive-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fef3c7;
+    border: 1px solid #f59e0b;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .archive-banner a {
+    color: #d97706;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .archive-banner a:hover {
+    text-decoration: underline;
   }
 
   .game-header {

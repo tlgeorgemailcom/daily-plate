@@ -63,13 +63,59 @@ export const COMPARE_PUZZLES: ComparePuzzle[] = [
   }
 ];
 
+// Archive start date - puzzles cycle from this date
+export const START_DATE = new Date('2026-02-18');
+
+// Get days since start for a given date
+function getDaysSinceStart(date: Date): number {
+  return Math.floor((date.getTime() - START_DATE.getTime()) / (1000 * 60 * 60 * 24));
+}
+
 // Get puzzle by index (for daily rotation)
 export function getDailyPuzzle(): ComparePuzzle {
-  const startDate = new Date('2026-02-18');
   const today = new Date();
-  const daysSinceStart = Math.floor((today.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
+  const daysSinceStart = getDaysSinceStart(today);
   const puzzleIndex = daysSinceStart % COMPARE_PUZZLES.length;
   return COMPARE_PUZZLES[puzzleIndex];
+}
+
+// Get puzzle for a specific date
+export function getPuzzleForDate(date: Date): ComparePuzzle | null {
+  const daysSinceStart = getDaysSinceStart(date);
+  if (daysSinceStart < 0) return null; // Before archive started
+  const puzzleIndex = daysSinceStart % COMPARE_PUZZLES.length;
+  return COMPARE_PUZZLES[puzzleIndex];
+}
+
+// Get all archive dates from start to today
+export function getArchiveDates(): { date: Date; dateString: string; puzzle: ComparePuzzle }[] {
+  const today = new Date();
+  const dates: { date: Date; dateString: string; puzzle: ComparePuzzle }[] = [];
+  
+  let current = new Date(START_DATE);
+  while (current <= today) {
+    const puzzle = getPuzzleForDate(current);
+    if (puzzle) {
+      dates.push({
+        date: new Date(current),
+        dateString: current.toISOString().split('T')[0], // YYYY-MM-DD
+        puzzle
+      });
+    }
+    current.setDate(current.getDate() + 1);
+  }
+  
+  return dates.reverse(); // Most recent first
+}
+
+// Format date for display
+export function formatDateDisplay(dateString: string): string {
+  const date = new Date(dateString + 'T12:00:00'); // Noon to avoid timezone issues
+  return date.toLocaleDateString('en-US', { 
+    weekday: 'short', 
+    month: 'short', 
+    day: 'numeric' 
+  });
 }
 
 // Get puzzle by ID
