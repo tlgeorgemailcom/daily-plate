@@ -746,8 +746,27 @@ export function createGameState() {
       const basketGrid = pixelToGrid(BASKET_POSITION);
       const animalGrid = animal.gridPos;
       
-      // Check if at basket (arrived!)
-      if (animalGrid.col === basketGrid.col && Math.abs(animalGrid.row - basketGrid.row) <= 1) {
+      // Check if at basket (arrived!) - must be in same column and within 1 row
+      // Also check if there's a fence blocking the path to the basket
+      const atBasketColumn = animalGrid.col === basketGrid.col;
+      const withinBasketRange = Math.abs(animalGrid.row - basketGrid.row) <= 1;
+      
+      // If animal is adjacent (not directly on basket), check if a fence blocks the path
+      let pathBlocked = false;
+      if (atBasketColumn && withinBasketRange && animalGrid.row !== basketGrid.row) {
+        // Animal is one row away - check if there's a fence between animal and basket
+        const rowBetween = animalGrid.row > basketGrid.row ? basketGrid.row + 1 : basketGrid.row - 1;
+        // Also check if there's a fence directly on the basket row in the basket column
+        pathBlocked = barriers.some(barrier => {
+          if (barrier.type === 'lid') return false;
+          const barrierGrid = pixelToGrid(barrier.position);
+          // Fence blocks if it's between animal and basket, or directly at basket
+          return barrierGrid.col === animalGrid.col && 
+                 (barrierGrid.row === rowBetween || barrierGrid.row === basketGrid.row);
+        });
+      }
+      
+      if (atBasketColumn && withinBasketRange && !pathBlocked) {
         if (animal.state !== 'sniffing' && animal.state !== 'stealing') {
           return { ...animal, state: 'sniffing' as const };
         }
@@ -860,15 +879,53 @@ export function createGameState() {
         const escapeTime = ANIMAL_ESCAPE_TIME[animal.type];
         const progress = animal.escapeProgress + (deltaTime * 1000 / escapeTime) * 100;
         if (progress >= 100) {
-          // Escaped - move one cell closer to basket
+          // Escaped - move one cell closer to basket (but not INTO another fence)
           const basketGrid = pixelToGrid(BASKET_POSITION);
           const newRow = Math.max(0, animal.gridPos.row - 1);
-          const newPos = gridToPixel({ col: animal.gridPos.col, row: newRow });
+          const newGridPos = { col: animal.gridPos.col, row: newRow };
+          
+          // Check if destination cell has a fence
+          const destHasFence = barriers.some(barrier => {
+            if (barrier.type === 'lid') return false;
+            const barrierGrid = pixelToGrid(barrier.position);
+            return barrierGrid.col === newGridPos.col && barrierGrid.row === newGridPos.row;
+          });
+          
+          // If destination has a fence, stay in current position but try lateral move
+          if (destHasFence) {
+            // Try moving to an adjacent column instead
+            const leftCol = animal.gridPos.col - 1;
+            const rightCol = animal.gridPos.col + 1;
+            const lateralMoves = [leftCol, rightCol].filter(col => col >= 0 && col < GRID_COLS);
+            const shuffled = lateralMoves.sort(() => Math.random() - 0.5);
+            
+            for (const col of shuffled) {
+              const lateralPos = { col, row: animal.gridPos.row };
+              const lateralBlocked = barriers.some(b => {
+                if (b.type === 'lid') return false;
+                const bg = pixelToGrid(b.position);
+                return bg.col === col && bg.row === animal.gridPos.row;
+              });
+              if (!lateralBlocked) {
+                return {
+                  ...animal,
+                  state: 'approaching' as const,
+                  escapeProgress: 0,
+                  gridPos: lateralPos,
+                  position: gridToPixel(lateralPos)
+                };
+              }
+            }
+            // Completely blocked - stay put
+            return { ...animal, state: 'blocked' as const, escapeProgress: 0 };
+          }
+          
+          const newPos = gridToPixel(newGridPos);
           return { 
             ...animal, 
             state: 'approaching' as const, 
             escapeProgress: 0,
-            gridPos: { col: animal.gridPos.col, row: newRow },
+            gridPos: newGridPos,
             position: newPos
           };
         }

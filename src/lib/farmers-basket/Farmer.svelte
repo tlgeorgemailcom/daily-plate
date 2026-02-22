@@ -33,6 +33,11 @@
     transform: translate(-50%, -50%);
     z-index: 20;
     user-select: none;
+    cursor: grab;
+  }
+  
+  .farmer:active {
+    cursor: grabbing;
   }
   
   .emoji {

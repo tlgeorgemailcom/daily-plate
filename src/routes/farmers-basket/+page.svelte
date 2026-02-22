@@ -19,6 +19,10 @@
   let touchTarget: { x: number; y: number } | null = $state(null);
   let gameAreaElement: HTMLDivElement | null = null;
   
+  // Mouse controls for desktop farmer movement
+  let isDraggingFarmerMouse = false;
+  let mouseTarget: { x: number; y: number } | null = $state(null);
+  
   // Tap gesture detection
   let touchStartTime = 0;
   let touchStartPos: { x: number; y: number } | null = null;
@@ -298,15 +302,78 @@
     game.stopLevel();
   });
   
-  // Handle click on game area to place tools
+  // Handle click on game area to place tools or interact with farmer
   function handleGameClick(e: MouseEvent) {
-    if (!game.selectedTool) return;
+    if (game.gameStatus !== 'playing') return;
     
     const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+    const scale = rect.width / GRID_WIDTH;
+    const x = (e.clientX - rect.left) / scale;
+    const y = (e.clientY - rect.top) / scale;
     
-    game.placeToolAt(x, y);
+    // If tool selected, place it
+    if (game.selectedTool) {
+      game.placeToolAt(x, y);
+      return;
+    }
+    
+    // Check if clicked near farmer (within 50px) - toggle pickup/drop
+    const farmerDist = Math.sqrt(
+      Math.pow(x - game.farmer.position.x, 2) + 
+      Math.pow(y - game.farmer.position.y, 2)
+    );
+    if (farmerDist < 50) {
+      if (game.farmer.carrying) {
+        game.dropFood();
+      } else {
+        game.pickupFood();
+      }
+    }
+  }
+  
+  // Handle mouse down on game area - start farmer drag
+  function handleMouseDown(e: MouseEvent) {
+    if (game.gameStatus !== 'playing') return;
+    if (game.selectedTool) return;  // Don't drag farmer when placing tools
+    
+    const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
+    const scale = rect.width / GRID_WIDTH;
+    const x = (e.clientX - rect.left) / scale;
+    const y = (e.clientY - rect.top) / scale;
+    
+    // Check if mouse started near the farmer (within 50px)
+    const farmerDist = Math.sqrt(
+      Math.pow(x - game.farmer.position.x, 2) + 
+      Math.pow(y - game.farmer.position.y, 2)
+    );
+    if (farmerDist < 50) {
+      isDraggingFarmerMouse = true;
+      e.preventDefault();
+    }
+  }
+  
+  // Handle mouse move on game area - move farmer while dragging
+  function handleMouseMove(e: MouseEvent) {
+    if (!isDraggingFarmerMouse) return;
+    if (game.gameStatus !== 'playing') return;
+    
+    const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
+    const scale = rect.width / GRID_WIDTH;
+    const x = (e.clientX - rect.left) / scale;
+    const y = (e.clientY - rect.top) / scale;
+    
+    mouseTarget = { x, y };
+    game.setTouchTarget({ x, y });  // Reuse touch target system for movement
+    e.preventDefault();
+  }
+  
+  // Handle mouse up - stop farmer drag
+  function handleMouseUp(e: MouseEvent) {
+    if (isDraggingFarmerMouse) {
+      isDraggingFarmerMouse = false;
+      mouseTarget = null;
+      game.setTouchTarget(null);
+    }
   }
   
   // Handle drag over game area (allow drop)
@@ -502,8 +569,13 @@
   <div 
     class="game-area"
     class:placing-mode={game.selectedTool !== null}
+    class:dragging-farmer={isDraggingFarmerMouse}
     style="width: {GRID_WIDTH}px; height: {TOTAL_HEIGHT}px;"
     onclick={handleGameClick}
+    onmousedown={handleMouseDown}
+    onmousemove={handleMouseMove}
+    onmouseup={handleMouseUp}
+    onmouseleave={handleMouseUp}
     ondragover={handleDragOver}
     ondrop={handleDrop}
     ontouchstart={handleTouchStart}
@@ -513,9 +585,10 @@
     role="application"
     aria-label="Game area"
   >
-    <!-- Touch target indicator (only for farmer movement, not tool/barrier dragging) -->
-    {#if touchTarget && !touchDragTool && !touchDragBarrierId}
-      <div class="touch-target" style="left: {touchTarget.x}px; top: {touchTarget.y}px;"></div>
+    <!-- Mouse/Touch target indicator (for farmer movement) -->
+    {#if (touchTarget || mouseTarget) && !touchDragTool && !touchDragBarrierId}
+      {@const target = mouseTarget || touchTarget}
+      <div class="touch-target" style="left: {target?.x}px; top: {target?.y}px;"></div>
     {/if}
     
     <!-- Placement cursor for keyboard tool placement -->
@@ -760,6 +833,10 @@
   
   .game-area.placing-mode {
     cursor: crosshair;
+  }
+  
+  .game-area.dragging-farmer {
+    cursor: grabbing;
   }
   
   .grass-background {
