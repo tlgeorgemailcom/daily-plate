@@ -140,8 +140,6 @@
     }
     e.preventDefault();
   }
-    e.preventDefault();
-  }
   
   function handleTouchEnd() {
     // Detect tap gesture: short duration and minimal movement
