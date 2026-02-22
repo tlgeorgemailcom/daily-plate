@@ -140,7 +140,6 @@ export function createGameState() {
   
   // Touch target for mobile (actual position, not direction)
   let touchTargetPos: Position | null = null;
-  const TOUCH_LERP_SPEED = 8; // How quickly farmer follows touch (higher = faster)
   
   // Spawn timers
   let spawnTimeouts: number[] = [];
@@ -283,24 +282,17 @@ export function createGameState() {
     
     let moved = false;
     
-    // Touch movement: use lerp for smooth direct following
+    // Touch movement: directly follow finger position
     if (touchTargetPos) {
-      const fx = farmer.position.x;
-      const fy = farmer.position.y;
-      const diffX = touchTargetPos.x - fx;
-      const diffY = touchTargetPos.y - fy;
+      // Clamp target to bounds
+      const targetX = Math.max(20, Math.min(GRID_WIDTH - 20, touchTargetPos.x));
+      const targetY = Math.max(20, Math.min(GRID_HEIGHT - 20, touchTargetPos.y));
+      
+      const diffX = targetX - farmer.position.x;
+      const diffY = targetY - farmer.position.y;
       const distance = Math.sqrt(diffX * diffX + diffY * diffY);
       
-      if (distance > 5) {
-        // Lerp toward touch position
-        const lerpFactor = Math.min(1, TOUCH_LERP_SPEED * deltaTime);
-        let newX = fx + diffX * lerpFactor;
-        let newY = fy + diffY * lerpFactor;
-        
-        // Clamp to bounds
-        newX = Math.max(20, Math.min(GRID_WIDTH - 20, newX));
-        newY = Math.max(20, Math.min(GRID_HEIGHT - 20, newY));
-        
+      if (distance > 3) {
         // Update direction based on movement
         if (Math.abs(diffX) > Math.abs(diffY)) {
           farmer.direction = diffX > 0 ? 'right' : 'left';
@@ -308,7 +300,8 @@ export function createGameState() {
           farmer.direction = diffY > 0 ? 'down' : 'up';
         }
         
-        farmer.position = { x: newX, y: newY };
+        // Directly set position to target (instant follow)
+        farmer.position = { x: targetX, y: targetY };
         moved = true;
       }
     }
