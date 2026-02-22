@@ -140,7 +140,7 @@ export function createGameState() {
   
   // Touch target for mobile (actual position, not direction)
   let touchTargetPos: Position | null = null;
-  const TOUCH_SPEED_MULTIPLIER = 2.5; // Faster movement when following touch
+  const TOUCH_LERP_SPEED = 8; // How quickly farmer follows touch (higher = faster)
   
   // Spawn timers
   let spawnTimeouts: number[] = [];
@@ -281,46 +281,53 @@ export function createGameState() {
       return; // Don't move during actions
     }
     
-    // Determine movement: touch target takes priority for smooth following
-    let targetDx = inputDx;
-    let targetDy = inputDy;
-    let speedMultiplier = 1;
+    let moved = false;
     
+    // Touch movement: use lerp for smooth direct following
     if (touchTargetPos) {
-      // Calculate direction toward touch target
       const fx = farmer.position.x;
       const fy = farmer.position.y;
       const diffX = touchTargetPos.x - fx;
       const diffY = touchTargetPos.y - fy;
       const distance = Math.sqrt(diffX * diffX + diffY * diffY);
       
-      if (distance > 8) {
-        // Move toward touch position with smooth interpolation
-        targetDx = diffX / distance;
-        targetDy = diffY / distance;
-        speedMultiplier = TOUCH_SPEED_MULTIPLIER;
-      } else {
-        // Close enough, stop
-        targetDx = 0;
-        targetDy = 0;
+      if (distance > 5) {
+        // Lerp toward touch position
+        const lerpFactor = Math.min(1, TOUCH_LERP_SPEED * deltaTime);
+        let newX = fx + diffX * lerpFactor;
+        let newY = fy + diffY * lerpFactor;
+        
+        // Clamp to bounds
+        newX = Math.max(20, Math.min(GRID_WIDTH - 20, newX));
+        newY = Math.max(20, Math.min(GRID_HEIGHT - 20, newY));
+        
+        // Update direction based on movement
+        if (Math.abs(diffX) > Math.abs(diffY)) {
+          farmer.direction = diffX > 0 ? 'right' : 'left';
+        } else {
+          farmer.direction = diffY > 0 ? 'down' : 'up';
+        }
+        
+        farmer.position = { x: newX, y: newY };
+        moved = true;
       }
     }
-    
-    if (targetDx !== 0 || targetDy !== 0) {
-      // Normalize diagonal movement (for keyboard input)
-      const magnitude = Math.sqrt(targetDx * targetDx + targetDy * targetDy);
-      const normDx = targetDx / magnitude;
-      const normDy = targetDy / magnitude;
+    // Keyboard movement: use direction + speed
+    else if (inputDx !== 0 || inputDy !== 0) {
+      // Normalize diagonal movement
+      const magnitude = Math.sqrt(inputDx * inputDx + inputDy * inputDy);
+      const normDx = inputDx / magnitude;
+      const normDy = inputDy / magnitude;
       
       // Update direction
-      if (Math.abs(targetDx) > Math.abs(targetDy)) {
-        farmer.direction = targetDx > 0 ? 'right' : 'left';
+      if (Math.abs(inputDx) > Math.abs(inputDy)) {
+        farmer.direction = inputDx > 0 ? 'right' : 'left';
       } else {
-        farmer.direction = targetDy > 0 ? 'down' : 'up';
+        farmer.direction = inputDy > 0 ? 'down' : 'up';
       }
       
       // Move farmer
-      const moveDistance = FARMER_SPEED * speedMultiplier * deltaTime;
+      const moveDistance = FARMER_SPEED * deltaTime;
       let newX = farmer.position.x + normDx * moveDistance;
       let newY = farmer.position.y + normDy * moveDistance;
       
@@ -329,6 +336,10 @@ export function createGameState() {
       newY = Math.max(20, Math.min(GRID_HEIGHT - 20, newY));
       
       farmer.position = { x: newX, y: newY };
+      moved = true;
+    }
+    
+    if (moved) {
       farmer.state = farmer.carrying ? 'carrying' : 'walking';
     } else {
       farmer.state = farmer.carrying ? 'carrying' : 'idle';
