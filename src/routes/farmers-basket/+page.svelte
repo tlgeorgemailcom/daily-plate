@@ -12,6 +12,10 @@
   
   let game = createGameState();
   
+  // Touch controls - target position for farmer to walk toward
+  let touchTarget: { x: number; y: number } | null = $state(null);
+  let gameAreaElement: HTMLDivElement | null = null;
+  
   // Keyboard controls
   let keysPressed = new Set<string>();
   
@@ -52,19 +56,6 @@
     keysPressed.delete(e.key);
   }
   
-  // Update farmer direction based on keys
-  function updateFarmerInput() {
-    let dx = 0;
-    let dy = 0;
-    
-    if (keysPressed.has('ArrowLeft') || keysPressed.has('a')) dx -= 1;
-    if (keysPressed.has('ArrowRight') || keysPressed.has('d')) dx += 1;
-    if (keysPressed.has('ArrowUp') || keysPressed.has('w')) dy -= 1;
-    if (keysPressed.has('ArrowDown') || keysPressed.has('s')) dy += 1;
-    
-    game.setFarmerInput(dx, dy);
-  }
-  
   // Game loop for input
   let inputLoop: number;
   
@@ -93,6 +84,66 @@
     game.placeToolAt(x, y);
   }
   
+  // Touch handlers for mobile movement
+  function handleTouchStart(e: TouchEvent) {
+    if (game.selectedTool) return; // Don't move when placing tools
+    
+    const touch = e.touches[0];
+    const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
+    const x = touch.clientX - rect.left;
+    const y = touch.clientY - rect.top;
+    
+    touchTarget = { x, y };
+    e.preventDefault();
+  }
+  
+  function handleTouchMove(e: TouchEvent) {
+    if (game.selectedTool || !touchTarget) return;
+    
+    const touch = e.touches[0];
+    const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
+    const x = touch.clientX - rect.left;
+    const y = touch.clientY - rect.top;
+    
+    touchTarget = { x, y };
+    e.preventDefault();
+  }
+  
+  function handleTouchEnd() {
+    touchTarget = null;
+  }
+  
+  // Update farmer direction based on keys OR touch target
+  function updateFarmerInput() {
+    let dx = 0;
+    let dy = 0;
+    
+    // Keyboard input
+    if (keysPressed.has('ArrowLeft') || keysPressed.has('a')) dx -= 1;
+    if (keysPressed.has('ArrowRight') || keysPressed.has('d')) dx += 1;
+    if (keysPressed.has('ArrowUp') || keysPressed.has('w')) dy -= 1;
+    if (keysPressed.has('ArrowDown') || keysPressed.has('s')) dy += 1;
+    
+    // Touch input (if no keyboard input)
+    if (dx === 0 && dy === 0 && touchTarget) {
+      const farmer = game.farmer;
+      const fx = farmer.position.x + 20; // Center of farmer
+      const fy = farmer.position.y + 20;
+      
+      const diffX = touchTarget.x - fx;
+      const diffY = touchTarget.y - fy;
+      
+      // Only move if more than 10px away from target
+      const distance = Math.sqrt(diffX * diffX + diffY * diffY);
+      if (distance > 10) {
+        dx = Math.sign(diffX);
+        dy = Math.sign(diffY);
+      }
+    }
+    
+    game.setFarmerInput(dx, dy);
+  }
+  
   // Tool inventory for toolbar
   const toolSlots = $derived([
     { type: 'fence' as ToolType, remaining: game.tools.fence, unlocked: true },
@@ -101,7 +152,7 @@
     { type: 'net' as ToolType, remaining: game.tools.net, unlocked: game.levelIndex >= 3 },
     { type: 'scarecrow' as ToolType, remaining: game.tools.scarecrow, unlocked: game.levelIndex >= 4 },
   ]);
-  
+
   // Collected food for basket (only what's actually deposited)
   const collectedFood = $derived(
     game.foods.filter(f => f.inBasket).map(f => f.type)
@@ -144,9 +195,18 @@
     class:placing-mode={game.selectedTool !== null}
     style="width: {GRID_WIDTH}px; height: {GRID_HEIGHT}px;"
     onclick={handleGameClick}
+    ontouchstart={handleTouchStart}
+    ontouchmove={handleTouchMove}
+    ontouchend={handleTouchEnd}
+    bind:this={gameAreaElement}
     role="application"
     aria-label="Game area"
   >
+    <!-- Touch target indicator -->
+    {#if touchTarget}
+      <div class="touch-target" style="left: {touchTarget.x}px; top: {touchTarget.y}px;"></div>
+    {/if}
+    
     <!-- Background grass -->
     <div class="grass-background"></div>
     
@@ -217,19 +277,38 @@
       <div class="overlay-content">
         <h2>{game.currentLevel?.name ?? 'Loading'}</h2>
         <p>Collect: {game.currentLevel?.recipe?.map(f => FOOD_EMOJI[f]).join(' ') ?? ''}</p>
-        <p class="hint">Use arrow keys to move, Space to pick up food</p>
+        <p class="hint desktop-hint">Use arrow keys to move, Space to pick up food</p>
+        <p class="hint mobile-hint">Tap to move, use buttons to pick up &amp; deposit</p>
         <button onclick={() => game.startLevel()}>Start Level</button>
       </div>
     </div>
   {/if}
   
-  <footer class="controls-help">
+  <footer class="controls-help desktop-only">
     <span>⬆️⬇️⬅️➡️ Move</span>
     <span>Space: Pick up / Place</span>
     <span>Enter: Drop in basket</span>
     <span>1-5: Select tool</span>
     <span>Esc: Cancel</span>
   </footer>
+  
+  <!-- Mobile action buttons -->
+  <div class="mobile-controls">
+    <button 
+      class="action-btn pickup" 
+      onclick={() => { if (game.selectedTool) game.placeTool(); else game.pickupFood(); }}
+      disabled={game.gameStatus !== 'playing'}
+    >
+      {game.selectedTool ? '📍 Place' : '👆 Pick Up'}
+    </button>
+    <button 
+      class="action-btn deposit" 
+      onclick={() => game.dropFood()}
+      disabled={!game.farmer.carrying || game.gameStatus !== 'playing'}
+    >
+      🧺 Deposit
+    </button>
+  </div>
 </div>
 
 <style>
@@ -406,5 +485,103 @@
   
   .controls-help span {
     white-space: nowrap;
+  }
+  
+  /* Touch target indicator */
+  .touch-target {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    margin-top: -10px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: pulse 0.8s ease-out infinite;
+    z-index: 50;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(2); opacity: 0; }
+  }
+  
+  /* Mobile controls */
+  .mobile-controls {
+    display: none;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  .action-btn {
+    padding: 16px 32px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.1s, opacity 0.2s;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .action-btn:active {
+    transform: scale(0.95);
+  }
+  
+  .action-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .action-btn.pickup {
+    background: linear-gradient(180deg, #4CAF50, #388E3C);
+    color: white;
+    box-shadow: 0 4px 0 #2E7D32;
+  }
+  
+  .action-btn.deposit {
+    background: linear-gradient(180deg, #FF9800, #F57C00);
+    color: white;
+    box-shadow: 0 4px 0 #E65100;
+  }
+  
+  .mobile-hint {
+    display: none;
+  }
+  
+  /* Responsive: show mobile controls on touch devices */
+  @media (pointer: coarse), (max-width: 768px) {
+    .mobile-controls {
+      display: flex;
+    }
+    
+    .desktop-only, .desktop-hint {
+      display: none;
+    }
+    
+    .mobile-hint {
+      display: block;
+    }
+    
+    .game-area {
+      max-width: calc(100vw - 40px);
+      max-height: calc(100vw - 40px);
+      touch-action: none;
+    }
+    
+    .game-container {
+      padding: 10px;
+    }
+    
+    .header h1 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (pointer: fine) and (min-width: 769px) {
+    .mobile-hint {
+      display: none;
+    }
   }
 </style>
