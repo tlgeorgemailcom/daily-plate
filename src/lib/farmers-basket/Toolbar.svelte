@@ -12,9 +12,10 @@
     tools: ToolSlot[];
     selectedTool: ToolType | null;
     onselect: (tool: ToolType | null) => void;
+    ontouchdragstart?: (tool: ToolType) => void;  // For mobile touch drag
   }
   
-  let { tools, selectedTool, onselect }: Props = $props();
+  let { tools, selectedTool, onselect, ontouchdragstart }: Props = $props();
   
   function handleClick(tool: ToolSlot) {
     if (!tool.unlocked) return;
@@ -41,6 +42,12 @@
     e.dataTransfer!.setData('application/tool-type', tool.type);
     e.dataTransfer!.effectAllowed = 'copy';
   }
+  
+  // Handle touch start for mobile drag
+  function handleTouchStart(e: TouchEvent, tool: ToolSlot) {
+    if (!isAvailable(tool)) return;
+    ontouchdragstart?.(tool.type);
+  }
 </script>
 
 <div class="toolbar">
@@ -55,6 +62,7 @@
       disabled={!isAvailable(tool)}
       draggable={isAvailable(tool)}
       ondragstart={(e) => handleDragStart(e, tool)}
+      ontouchstart={(e) => handleTouchStart(e, tool)}
       title="{tool.type} (Press {index + 1} or drag to place)"
     >
       <span class="hotkey">{index + 1}</span>

@@ -2,7 +2,7 @@
   import { onMount, onDestroy } from 'svelte';
   import { 
     createGameState, LEVELS, GRID_WIDTH, GRID_HEIGHT, TOTAL_HEIGHT, PANTRY_HEIGHT,
-    GRID_COLS, GRID_ROWS, CELL_SIZE, pixelToGrid, gridToPixel
+    GRID_COLS, GRID_ROWS, CELL_SIZE, pixelToGrid, gridToPixel, snapToGrid
   } from '$lib/farmers-basket/game-state.svelte';
   import Animal from '$lib/farmers-basket/Animal.svelte';
   import Farmer from '$lib/farmers-basket/Farmer.svelte';
@@ -24,6 +24,7 @@
   let touchStartPos: { x: number; y: number } | null = null;
   let hasMoved = false;
   let isDraggingFarmer = false;  // Only true if touch started on farmer
+  let touchDragTool: ToolType | null = $state(null);  // Tool being touch-dragged
   
   // Placement cursor for keyboard tool placement
   // When a tool is selected, this shows where it will be placed
@@ -294,6 +295,9 @@
     if (game.gameStatus !== 'playing') return;
     if (game.selectedTool) return; // Don't move when placing tools
     
+    // If touch-dragging a tool, don't start farmer movement
+    if (touchDragTool) return;
+    
     const touch = e.touches[0];
     const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
     // Calculate actual scale from rendered vs logical size
@@ -324,14 +328,21 @@
     // Only handle touch when game is playing
     if (game.gameStatus !== 'playing') return;
     if (game.selectedTool) return;
-    if (!isDraggingFarmer) return;  // Only move if touch started on farmer
     
     const touch = e.touches[0];
     const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
-    // Calculate actual scale from rendered vs logical size
     const scale = rect.width / GRID_WIDTH;
     const x = (touch.clientX - rect.left) / scale;
     const y = (touch.clientY - rect.top) / scale;
+    
+    // If touch-dragging a tool, just track position for visual feedback
+    if (touchDragTool) {
+      touchTarget = { x, y };
+      e.preventDefault();
+      return;
+    }
+    
+    if (!isDraggingFarmer) return;  // Only move if touch started on farmer
     
     // Check if moved significantly (more than 15px in game coords)
     if (touchStartPos) {
@@ -355,7 +366,15 @@
     }
   }
   
-  function handleTouchEnd() {
+  function handleTouchEnd(e: TouchEvent) {
+    // If touch-dragging a tool, place it
+    if (touchDragTool && touchTarget) {
+      game.placeToolByDrag(touchDragTool, touchTarget.x, touchTarget.y);
+      touchDragTool = null;
+      touchTarget = null;
+      return;
+    }
+    
     // Detect tap gesture: short duration and minimal movement
     const tapDuration = Date.now() - touchStartTime;
     const isTap = tapDuration < 300 && !hasMoved;
@@ -389,6 +408,52 @@
   const collectedFood = $derived(
     game.foods.filter(f => f.inBasket).map(f => f.type)
   );
+  
+  // Handle tool touch drag from toolbar - uses document-level events to track drag from toolbar to game area
+  function handleToolTouchDragStart(tool: ToolType) {
+    touchDragTool = tool;
+    
+    // Add document-level touch listeners
+    document.addEventListener('touchmove', handleToolTouchMove, { passive: false });
+    document.addEventListener('touchend', handleToolTouchEnd);
+    document.addEventListener('touchcancel', handleToolTouchEnd);
+  }
+  
+  function handleToolTouchMove(e: TouchEvent) {
+    if (!touchDragTool || !gameAreaElement) return;
+    
+    e.preventDefault(); // Prevent scrolling while dragging tool
+    
+    const touch = e.touches[0];
+    const rect = gameAreaElement.getBoundingClientRect();
+    const scale = rect.width / GRID_WIDTH;
+    
+    // Calculate position relative to game area
+    const x = (touch.clientX - rect.left) / scale;
+    const y = (touch.clientY - rect.top) / scale;
+    
+    // Only show cursor if touch is within game area bounds
+    if (x >= 0 && x <= GRID_WIDTH && y >= 0 && y <= TOTAL_HEIGHT) {
+      touchTarget = { x, y };
+    } else {
+      touchTarget = null;
+    }
+  }
+  
+  function handleToolTouchEnd(e: Event) {
+    // Remove document listeners
+    document.removeEventListener('touchmove', handleToolTouchMove);
+    document.removeEventListener('touchend', handleToolTouchEnd);
+    document.removeEventListener('touchcancel', handleToolTouchEnd);
+    
+    // Place tool if we have a valid position
+    if (touchDragTool && touchTarget) {
+      game.placeToolByDrag(touchDragTool, touchTarget.x, touchTarget.y);
+    }
+    
+    touchDragTool = null;
+    touchTarget = null;
+  }
 </script>
 
 <svelte:head>
@@ -419,6 +484,7 @@
       tools={toolSlots}
       selectedTool={game.selectedTool}
       onselect={(t) => game.selectTool(t)}
+      ontouchdragstart={handleToolTouchDragStart}
     />
   </div>
   
@@ -450,6 +516,18 @@
       >
         <span class="cursor-tool">{TOOL_EMOJI[game.selectedTool]}</span>
         <span class="cursor-hint">↵</span>
+      </div>
+    {/if}
+    
+    <!-- Touch drag tool indicator -->
+    {#if touchDragTool && touchTarget}
+      {@const snapPos = snapToGrid(touchTarget)}
+      <div 
+        class="placement-cursor touch-drag" 
+        style="left: {snapPos.x}px; top: {snapPos.y}px; width: {CELL_SIZE}px; height: {CELL_SIZE}px;"
+      >
+        <span class="cursor-tool">{TOOL_EMOJI[touchDragTool]}</span>
+        <span class="cursor-hint">👆</span>
       </div>
     {/if}
     
@@ -834,6 +912,16 @@
     padding: 2px 6px;
     border-radius: 4px;
     white-space: nowrap;
+  }
+  
+  /* Touch drag tool indicator */
+  .placement-cursor.touch-drag {
+    border-color: #00BFFF;
+    background: rgba(0, 191, 255, 0.3);
+  }
+  
+  .placement-cursor.touch-drag .cursor-hint {
+    color: #00BFFF;
   }
   
   @keyframes pulse {
