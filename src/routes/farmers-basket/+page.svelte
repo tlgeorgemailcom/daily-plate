@@ -24,7 +24,8 @@
   let touchStartPos: { x: number; y: number } | null = null;
   let hasMoved = false;
   let isDraggingFarmer = false;  // Only true if touch started on farmer
-  let touchDragTool: ToolType | null = $state(null);  // Tool being touch-dragged
+  let touchDragTool: ToolType | null = $state(null);  // Tool being touch-dragged from toolbar
+  let touchDragBarrierId: string | null = $state(null);  // Barrier being touch-dragged to reposition
   
   // Debug messages (non-blocking)
   let debugMsg: string = $state('');
@@ -234,14 +235,16 @@
     // No longer need to track held keys for grid movement
   }
   
-  // Document-level touch handlers for tool dragging (always active, like farmer touch handlers)
+  // Document-level touch handlers for tool/barrier dragging (always active)
   function handleDocumentTouchMove(e: TouchEvent) {
-    if (!touchDragTool || !gameAreaElement) {
+    // Handle either new tool placement or existing barrier repositioning
+    const isDragging = touchDragTool || touchDragBarrierId;
+    if (!isDragging || !gameAreaElement) {
       return;
     }
-    debugMsg = `move: ${touchDragTool}`;
+    debugMsg = `move: ${touchDragTool || touchDragBarrierId}`;
     
-    e.preventDefault(); // Prevent scrolling while dragging tool
+    e.preventDefault(); // Prevent scrolling while dragging
     
     const touch = e.touches[0];
     const rect = gameAreaElement.getBoundingClientRect();
@@ -260,18 +263,31 @@
   }
   
   function handleDocumentTouchEnd() {
-    if (!touchDragTool) return;
-    
-    // Place tool if we have a valid position
-    if (touchTarget) {
-      debugMsg = `place: ${touchDragTool} @ ${Math.round(touchTarget.x)},${Math.round(touchTarget.y)}`;
-      game.placeToolByDrag(touchDragTool, touchTarget.x, touchTarget.y);
-    } else {
-      debugMsg = `end: no target`;
+    // Handle new tool placement
+    if (touchDragTool) {
+      if (touchTarget) {
+        debugMsg = `place: ${touchDragTool} @ ${Math.round(touchTarget.x)},${Math.round(touchTarget.y)}`;
+        game.placeToolByDrag(touchDragTool, touchTarget.x, touchTarget.y);
+      } else {
+        debugMsg = `end: no target`;
+      }
+      touchDragTool = null;
+      touchTarget = null;
+      return;
     }
     
-    touchDragTool = null;
-    touchTarget = null;
+    // Handle barrier repositioning
+    if (touchDragBarrierId) {
+      if (touchTarget) {
+        debugMsg = `moveBarrier: ${touchDragBarrierId} @ ${Math.round(touchTarget.x)},${Math.round(touchTarget.y)}`;
+        game.moveBarrier(touchDragBarrierId, touchTarget.x, touchTarget.y);
+      } else {
+        debugMsg = `end barrier: no target`;
+      }
+      touchDragBarrierId = null;
+      touchTarget = null;
+      return;
+    }
   }
   
   onMount(() => {
@@ -345,8 +361,8 @@
     if (game.gameStatus !== 'playing') return;
     if (game.selectedTool) return; // Don't move when placing tools
     
-    // If touch-dragging a tool, don't start farmer movement
-    if (touchDragTool) return;
+    // If touch-dragging a tool or barrier, don't start farmer movement
+    if (touchDragTool || touchDragBarrierId) return;
     
     const touch = e.touches[0];
     const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
@@ -379,8 +395,8 @@
     if (game.gameStatus !== 'playing') return;
     if (game.selectedTool) return;
     
-    // Tool dragging is handled by document-level listeners
-    if (touchDragTool) return;
+    // Tool/barrier dragging is handled by document-level listeners
+    if (touchDragTool || touchDragBarrierId) return;
     
     if (!isDraggingFarmer) return;  // Only move if touch started on farmer
     
@@ -413,8 +429,8 @@
   }
   
   function handleTouchEnd(e: TouchEvent) {
-    // Tool dragging is handled by document-level listeners
-    if (touchDragTool) return;
+    // Tool/barrier dragging is handled by document-level listeners
+    if (touchDragTool || touchDragBarrierId) return;
     
     // Detect tap gesture: short duration and minimal movement
     const tapDuration = Date.now() - touchStartTime;
@@ -454,6 +470,12 @@
   function handleToolTouchDragStart(tool: ToolType) {
     debugMsg = `dragStart: ${tool}`;
     touchDragTool = tool;
+  }
+  
+  // Handle placed barrier touch drag - for repositioning existing barriers
+  function handleBarrierTouchDragStart(barrierId: string) {
+    debugMsg = `barrierDragStart: ${barrierId}`;
+    touchDragBarrierId = barrierId;
   }
 </script>
 
@@ -508,8 +530,8 @@
     role="application"
     aria-label="Game area"
   >
-    <!-- Touch target indicator (only for farmer movement, not tool dragging) -->
-    {#if touchTarget && !touchDragTool}
+    <!-- Touch target indicator (only for farmer movement, not tool/barrier dragging) -->
+    {#if touchTarget && !touchDragTool && !touchDragBarrierId}
       <div class="touch-target" style="left: {touchTarget.x}px; top: {touchTarget.y}px;"></div>
     {/if}
     
@@ -525,7 +547,7 @@
       </div>
     {/if}
     
-    <!-- Touch drag tool indicator -->
+    <!-- Touch drag tool indicator (new tool from toolbar) -->
     {#if touchDragTool && touchTarget}
       {@const snapPos = snapToGrid(touchTarget)}
       <div 
@@ -535,6 +557,21 @@
         <span class="cursor-tool">{TOOL_EMOJI[touchDragTool]}</span>
         <span class="cursor-hint">👆</span>
       </div>
+    {/if}
+    
+    <!-- Touch drag barrier indicator (repositioning existing barrier) -->
+    {#if touchDragBarrierId && touchTarget}
+      {@const snapPos = snapToGrid(touchTarget)}
+      {@const draggedBarrier = game.barriers.find(b => b.id === touchDragBarrierId)}
+      {#if draggedBarrier}
+        <div 
+          class="placement-cursor touch-drag" 
+          style="left: {snapPos.x}px; top: {snapPos.y}px; width: {CELL_SIZE}px; height: {CELL_SIZE}px;"
+        >
+          <span class="cursor-tool">{TOOL_EMOJI[draggedBarrier.type]}</span>
+          <span class="cursor-hint">↔️</span>
+        </div>
+      {/if}
     {/if}
     
     <!-- Background grass (main game area) -->
@@ -562,6 +599,7 @@
         type={barrier.type}
         position={barrier.position}
         selected={barrier.id === selectedBarrierId}
+        ontouchdragbarrier={handleBarrierTouchDragStart}
       />
     {/each}
     

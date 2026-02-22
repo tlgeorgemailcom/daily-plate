@@ -9,9 +9,10 @@
     depleted?: boolean;
     selected?: boolean;
     ondragbarrier?: (id: string) => void;
+    ontouchdragbarrier?: (id: string) => void;  // For mobile touch drag
   }
   
-  let { id, type, position, depleted = false, selected = false, ondragbarrier }: Props = $props();
+  let { id, type, position, depleted = false, selected = false, ondragbarrier, ontouchdragbarrier }: Props = $props();
   
   const emoji = $derived(TOOL_EMOJI[type]);
   
@@ -24,6 +25,13 @@
     e.dataTransfer!.effectAllowed = 'move';
     ondragbarrier?.(id);
   }
+  
+  function handleTouchStart(e: TouchEvent) {
+    if (depleted) return;
+    e.preventDefault();
+    e.stopPropagation();
+    ontouchdragbarrier?.(id);
+  }
 </script>
 
 <div 
@@ -33,6 +41,7 @@
   style="left: {position.x}px; top: {position.y}px;"
   draggable={!depleted}
   ondragstart={handleDragStart}
+  ontouchstart={handleTouchStart}
   role="img"
   aria-label="{type} barrier"
 >
@@ -48,6 +57,7 @@
     user-select: none;
     animation: place-in 0.3s ease-out;
     cursor: grab;
+    touch-action: none; /* Prevent browser touch gestures */
   }
   
   .barrier:active {
