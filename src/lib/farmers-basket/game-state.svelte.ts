@@ -61,13 +61,13 @@ export function isValidFarmerGridPos(gridPos: GridPosition): boolean {
 }
 
 // Starting positions in grid coordinates
-const BASKET_GRID: GridPosition = { col: 6, row: 1 }; // Top center area
+const BASKET_GRID: GridPosition = { col: 6, row: 0 }; // Top center area (row 0 matches CSS top: 20px)
 const FARMER_START_GRID: GridPosition = { col: 6, row: 6 }; // Lower center
 
 const BASKET_POSITION: Position = gridToPixel(BASKET_GRID);
 const FARMER_START: Position = gridToPixel(FARMER_START_GRID);
-// Visual basket position (matches CSS: top: 20px, left: 50%)
-const BASKET_VISUAL_POSITION: Position = { x: GRID_WIDTH / 2, y: 45 };
+// Visual basket position - use grid position for consistency
+const BASKET_VISUAL_POSITION: Position = { x: BASKET_POSITION.x, y: 25 }; // y=25 matches CSS top: 20px + padding
 
 // Food item with position and status (individual food being carried or in basket)
 interface FoodItem {
@@ -655,7 +655,10 @@ export function createGameState() {
   function removeLid() {
     if (activeLidId) {
       barriers = barriers.filter(b => b.id !== activeLidId);
-      animals = animals.map(a => ({ ...a, state: 'approaching' as const }));
+      // Only reset animals that were avoiding due to lid, not animals already at basket
+      animals = animals.map(a => 
+        a.state === 'avoiding' ? { ...a, state: 'approaching' as const } : a
+      );
       activeLidId = null;
     }
   }
@@ -751,22 +754,29 @@ export function createGameState() {
       const atBasketColumn = animalGrid.col === basketGrid.col;
       const withinBasketRange = Math.abs(animalGrid.row - basketGrid.row) <= 1;
       
+      // If exactly at basket position, can definitely steal (no fence check needed)
+      const atExactBasket = animalGrid.col === basketGrid.col && animalGrid.row === basketGrid.row;
+      
       // If animal is adjacent (not directly on basket), check if a fence blocks the path
       let pathBlocked = false;
-      if (atBasketColumn && withinBasketRange && animalGrid.row !== basketGrid.row) {
-        // Animal is one row away - check if there's a fence between animal and basket
-        const rowBetween = animalGrid.row > basketGrid.row ? basketGrid.row + 1 : basketGrid.row - 1;
-        // Also check if there's a fence directly on the basket row in the basket column
+      if (atBasketColumn && withinBasketRange && !atExactBasket) {
+        // Animal is one row away - check for fences at basket position
+        // A fence directly at the basket blocks stealing from any direction
         pathBlocked = barriers.some(barrier => {
           if (barrier.type === 'lid') return false;
           const barrierGrid = pixelToGrid(barrier.position);
-          // Fence blocks if it's between animal and basket, or directly at basket
-          return barrierGrid.col === animalGrid.col && 
-                 (barrierGrid.row === rowBetween || barrierGrid.row === basketGrid.row);
+          // Fence blocks if it's at the basket position, or between animal and basket
+          if (barrierGrid.col !== animalGrid.col) return false;
+          // Check basket row
+          if (barrierGrid.row === basketGrid.row) return true;
+          // Check row between animal and basket (if animal below basket, check row below basket)
+          if (animalGrid.row > basketGrid.row && barrierGrid.row === basketGrid.row + 1) return true;
+          // If animal above basket, only the basket row matters (row 0 and row 1 are adjacent)
+          return false;
         });
       }
       
-      if (atBasketColumn && withinBasketRange && !pathBlocked) {
+      if ((atExactBasket || (atBasketColumn && withinBasketRange)) && !pathBlocked) {
         if (animal.state !== 'sniffing' && animal.state !== 'stealing') {
           return { ...animal, state: 'sniffing' as const };
         }
@@ -799,17 +809,19 @@ export function createGameState() {
       const dcol = basketGrid.col - animalGrid.col;
       const drow = basketGrid.row - animalGrid.row;
       
-      // Possible moves: prefer toward basket but add randomness
+      // Possible moves: prefer toward basket but always include alternatives for pathfinding
       const moves: { col: number; row: number }[] = [];
       
       // Add moves toward basket with higher weight
       if (dcol > 0) moves.push({ col: 1, row: 0 }, { col: 1, row: 0 });
       if (dcol < 0) moves.push({ col: -1, row: 0 }, { col: -1, row: 0 });
-      if (drow > 0) moves.push({ col: 0, row: 1 });
+      if (drow > 0) moves.push({ col: 0, row: 1 }, { col: 0, row: 1 });
       if (drow < 0) moves.push({ col: 0, row: -1 }, { col: 0, row: -1 }, { col: 0, row: -1 }); // Prefer up toward basket
       
-      // Add some random lateral movement
-      moves.push({ col: 1, row: 0 }, { col: -1, row: 0 });
+      // ALWAYS add some lateral and vertical moves for pathfinding around obstacles
+      // Even if we're aligned with basket, we need options to go around barriers
+      moves.push({ col: 1, row: 0 }, { col: -1, row: 0 }); // lateral
+      moves.push({ col: 0, row: -1 }, { col: 0, row: 1 }); // vertical - enables going around fences
       
       // Birds can fly over barriers
       const canFly = animal.type === 'bird';
