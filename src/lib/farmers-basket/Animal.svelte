@@ -141,7 +141,7 @@
     75% { transform: translate(-50%, -50%) rotate(5deg); }
   }
   
-  /* Avoiding (umbrella active) */
+  /* Avoiding (lid active) */
   .avoiding {
     animation: shake 0.3s ease-in-out infinite;
     opacity: 0.7;

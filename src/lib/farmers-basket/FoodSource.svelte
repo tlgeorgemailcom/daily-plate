@@ -76,8 +76,8 @@
   
   .quantity {
     position: absolute;
-    bottom: -2px;
-    right: -2px;
+    top: -4px;
+    right: -4px;
     background: #4CAF50;
     color: white;
     font-size: 12px;
@@ -88,7 +88,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 3;
+    z-index: 5;
     font-family: system-ui, sans-serif;
   }
   

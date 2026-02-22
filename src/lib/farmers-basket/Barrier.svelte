@@ -3,20 +3,38 @@
   import { TOOL_EMOJI } from './types';
   
   interface Props {
+    id: string;
     type: ToolType;
     position: Position;
     depleted?: boolean;
+    selected?: boolean;
+    ondragbarrier?: (id: string) => void;
   }
   
-  let { type, position, depleted = false }: Props = $props();
+  let { id, type, position, depleted = false, selected = false, ondragbarrier }: Props = $props();
   
   const emoji = $derived(TOOL_EMOJI[type]);
+  
+  function handleDragStart(e: DragEvent) {
+    if (depleted) {
+      e.preventDefault();
+      return;
+    }
+    e.dataTransfer!.setData('application/barrier-id', id);
+    e.dataTransfer!.effectAllowed = 'move';
+    ondragbarrier?.(id);
+  }
 </script>
 
 <div 
   class="barrier {type}"
   class:depleted
+  class:selected
   style="left: {position.x}px; top: {position.y}px;"
+  draggable={!depleted}
+  ondragstart={handleDragStart}
+  role="img"
+  aria-label="{type} barrier"
 >
   {emoji}
 </div>
@@ -29,6 +47,11 @@
     z-index: 4;
     user-select: none;
     animation: place-in 0.3s ease-out;
+    cursor: grab;
+  }
+  
+  .barrier:active {
+    cursor: grabbing;
   }
   
   @keyframes place-in {
@@ -46,6 +69,17 @@
     opacity: 0.3;
     filter: grayscale(1);
     animation: fade-out 0.5s ease-out forwards;
+  }
+  
+  .selected {
+    z-index: 10;
+    filter: drop-shadow(0 0 8px #FFD700) drop-shadow(0 0 16px #FFA000);
+    animation: selected-pulse 0.5s ease-in-out infinite alternate;
+  }
+  
+  @keyframes selected-pulse {
+    from { transform: translate(-50%, -50%) scale(1); }
+    to { transform: translate(-50%, -50%) scale(1.15); }
   }
   
   @keyframes fade-out {
@@ -73,14 +107,16 @@
     transition: transform 0.2s;
   }
   
-  /* Umbrella spinning */
-  .umbrella {
-    animation: spin-slow 3s linear infinite;
+  /* Lid covers basket to block all animals */
+  .lid {
+    animation: lid-cover 2s ease-in-out infinite;
+    z-index: 10;
+    font-size: 48px;
   }
   
-  @keyframes spin-slow {
-    from { transform: translate(-50%, -50%) rotate(0deg); }
-    to { transform: translate(-50%, -50%) rotate(360deg); }
+  @keyframes lid-cover {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    50% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.9; }
   }
   
   /* Net sprawled */

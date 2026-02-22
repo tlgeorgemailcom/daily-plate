@@ -1,13 +1,16 @@
 <script lang="ts">
   import { onMount, onDestroy } from 'svelte';
-  import { createGameState, LEVELS, GRID_WIDTH, GRID_HEIGHT } from '$lib/farmers-basket/game-state.svelte';
+  import { 
+    createGameState, LEVELS, GRID_WIDTH, GRID_HEIGHT, TOTAL_HEIGHT, PANTRY_HEIGHT,
+    GRID_COLS, GRID_ROWS, CELL_SIZE, pixelToGrid, gridToPixel
+  } from '$lib/farmers-basket/game-state.svelte';
   import Animal from '$lib/farmers-basket/Animal.svelte';
   import Farmer from '$lib/farmers-basket/Farmer.svelte';
   import Basket from '$lib/farmers-basket/Basket.svelte';
   import FoodSource from '$lib/farmers-basket/FoodSource.svelte';
   import Toolbar from '$lib/farmers-basket/Toolbar.svelte';
   import Barrier from '$lib/farmers-basket/Barrier.svelte';
-  import { FOOD_EMOJI } from '$lib/farmers-basket/types';
+  import { FOOD_EMOJI, TOOL_EMOJI } from '$lib/farmers-basket/types';
   import type { ToolType, FoodType } from '$lib/farmers-basket/types';
   
   let game = createGameState();
@@ -21,60 +24,219 @@
   let touchStartPos: { x: number; y: number } | null = null;
   let hasMoved = false;
   
-  // Keyboard controls
-  let keysPressed = new Set<string>();
+  // Placement cursor for keyboard tool placement
+  // When a tool is selected, this shows where it will be placed
+  let placementCursor = $state<{ col: number; row: number } | null>(null);
+  
+  // Selected barrier for repositioning with keyboard
+  let selectedBarrierId = $state<string | null>(null);
+  
+  // Initialize cursor at farmer position when tool is selected
+  $effect(() => {
+    if (game.selectedTool && !placementCursor) {
+      const farmerGrid = pixelToGrid(game.farmer.position);
+      placementCursor = { col: farmerGrid.col, row: farmerGrid.row };
+    } else if (!game.selectedTool) {
+      placementCursor = null;
+    }
+  });
+  
+  // Clear selected barrier if it no longer exists
+  $effect(() => {
+    if (selectedBarrierId && !game.barriers.find(b => b.id === selectedBarrierId)) {
+      selectedBarrierId = null;
+    }
+  });
   
   function handleKeyDown(e: KeyboardEvent) {
-    keysPressed.add(e.key);
+    // Tab cycles through placed barriers for repositioning
+    if (e.key === 'Tab' && game.gameStatus === 'playing') {
+      e.preventDefault();
+      
+      if (game.barriers.length === 0) return;
+      
+      // Clear tool selection when entering barrier edit mode
+      if (game.selectedTool) {
+        game.selectTool(null);
+        placementCursor = null;
+      }
+      
+      if (!selectedBarrierId) {
+        // Select first barrier
+        selectedBarrierId = game.barriers[0].id;
+      } else {
+        // Cycle to next barrier
+        const currentIndex = game.barriers.findIndex(b => b.id === selectedBarrierId);
+        const nextIndex = (currentIndex + 1) % game.barriers.length;
+        selectedBarrierId = game.barriers[nextIndex].id;
+      }
+      return;
+    }
+    
+    // When a barrier is selected for repositioning
+    if (selectedBarrierId) {
+      const barrier = game.barriers.find(b => b.id === selectedBarrierId);
+      if (!barrier) {
+        selectedBarrierId = null;
+        return;
+      }
+      
+      const currentGrid = pixelToGrid(barrier.position);
+      
+      if (e.key === 'ArrowLeft' || e.key === 'a') {
+        e.preventDefault();
+        const newPos = gridToPixel({ col: Math.max(0, currentGrid.col - 1), row: currentGrid.row });
+        game.moveBarrier(selectedBarrierId, newPos.x, newPos.y);
+        return;
+      }
+      if (e.key === 'ArrowRight' || e.key === 'd') {
+        e.preventDefault();
+        const newPos = gridToPixel({ col: Math.min(GRID_COLS - 1, currentGrid.col + 1), row: currentGrid.row });
+        game.moveBarrier(selectedBarrierId, newPos.x, newPos.y);
+        return;
+      }
+      if (e.key === 'ArrowUp' || e.key === 'w') {
+        e.preventDefault();
+        const newPos = gridToPixel({ col: currentGrid.col, row: Math.max(0, currentGrid.row - 1) });
+        game.moveBarrier(selectedBarrierId, newPos.x, newPos.y);
+        return;
+      }
+      if (e.key === 'ArrowDown' || e.key === 's') {
+        e.preventDefault();
+        const newPos = gridToPixel({ col: currentGrid.col, row: Math.min(GRID_ROWS - 1, currentGrid.row + 1) });
+        game.moveBarrier(selectedBarrierId, newPos.x, newPos.y);
+        return;
+      }
+      
+      // Enter or Escape deselects barrier
+      if (e.key === 'Enter' || e.key === 'Escape') {
+        e.preventDefault();
+        selectedBarrierId = null;
+        return;
+      }
+    }
+    
+    // When a tool is selected, arrows move the placement cursor
+    if (game.selectedTool && placementCursor) {
+      if (e.key === 'ArrowLeft' || e.key === 'a') {
+        e.preventDefault();
+        placementCursor = { 
+          col: Math.max(0, placementCursor.col - 1), 
+          row: placementCursor.row 
+        };
+        return;
+      }
+      if (e.key === 'ArrowRight' || e.key === 'd') {
+        e.preventDefault();
+        placementCursor = { 
+          col: Math.min(GRID_COLS - 1, placementCursor.col + 1), 
+          row: placementCursor.row 
+        };
+        return;
+      }
+      if (e.key === 'ArrowUp' || e.key === 'w') {
+        e.preventDefault();
+        placementCursor = { 
+          col: placementCursor.col, 
+          row: Math.max(0, placementCursor.row - 1) 
+        };
+        return;
+      }
+      if (e.key === 'ArrowDown' || e.key === 's') {
+        e.preventDefault();
+        placementCursor = { 
+          col: placementCursor.col, 
+          row: Math.min(GRID_ROWS - 1, placementCursor.row + 1) 
+        };
+        return;
+      }
+      
+      // Space or Enter confirms tool placement at cursor
+      if (e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault();
+        const pos = gridToPixel(placementCursor);
+        game.placeToolAt(pos.x, pos.y);
+        placementCursor = null;
+        return;
+      }
+      
+      // Escape cancels tool selection
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        game.selectTool(null);
+        placementCursor = null;
+        return;
+      }
+    }
+    
+    // Normal mode: Arrow keys move farmer one cell at a time
+    if (e.key === 'ArrowLeft' || e.key === 'a') {
+      e.preventDefault();
+      game.moveFarmerByCell(-1, 0);
+      return;
+    }
+    if (e.key === 'ArrowRight' || e.key === 'd') {
+      e.preventDefault();
+      game.moveFarmerByCell(1, 0);
+      return;
+    }
+    if (e.key === 'ArrowUp' || e.key === 'w') {
+      e.preventDefault();
+      game.moveFarmerByCell(0, -1);
+      return;
+    }
+    if (e.key === 'ArrowDown' || e.key === 's') {
+      e.preventDefault();
+      game.moveFarmerByCell(0, 1);
+      return;
+    }
     
     // Tool selection with number keys
     if (e.key >= '1' && e.key <= '5') {
       const toolIndex = parseInt(e.key) - 1;
-      const tools: ToolType[] = ['fence', 'decoy', 'umbrella', 'net', 'scarecrow'];
+      const tools: ToolType[] = ['net', 'decoy', 'fence', 'lid', 'scarecrow'];
       if (toolIndex < tools.length) {
         game.selectTool(tools[toolIndex]);
+        // Initialize cursor at farmer position
+        const farmerGrid = pixelToGrid(game.farmer.position);
+        placementCursor = { col: farmerGrid.col, row: farmerGrid.row };
       }
+      return;
     }
     
     // Escape to deselect tool
     if (e.key === 'Escape') {
       game.selectTool(null);
+      placementCursor = null;
+      return;
     }
     
-    // Space to pick up food or place tool
+    // Space to pick up food (only when no tool selected)
     if (e.key === ' ') {
       e.preventDefault();
-      if (game.selectedTool) {
-        game.placeTool();
-      } else {
-        game.pickupFood();
-      }
+      game.pickupFood();
+      return;
     }
     
-    // Enter to drop food
+    // Enter to drop food in basket
     if (e.key === 'Enter') {
       game.dropFood();
+      return;
     }
   }
   
   function handleKeyUp(e: KeyboardEvent) {
-    keysPressed.delete(e.key);
+    // No longer need to track held keys for grid movement
   }
-  
-  // Game loop for input
-  let inputLoop: number;
   
   onMount(() => {
     window.addEventListener('keydown', handleKeyDown);
     window.addEventListener('keyup', handleKeyUp);
-    
-    inputLoop = window.setInterval(updateFarmerInput, 16);
   });
   
   onDestroy(() => {
     window.removeEventListener('keydown', handleKeyDown);
     window.removeEventListener('keyup', handleKeyUp);
-    clearInterval(inputLoop);
     game.stopLevel();
   });
   
@@ -87,6 +249,42 @@
     const y = e.clientY - rect.top;
     
     game.placeToolAt(x, y);
+  }
+  
+  // Handle drag over game area (allow drop)
+  function handleDragOver(e: DragEvent) {
+    if (game.gameStatus !== 'playing') return;
+    
+    // Allow drop for tools from toolbar or barrier repositioning
+    if (e.dataTransfer?.types.includes('application/tool-type') ||
+        e.dataTransfer?.types.includes('application/barrier-id')) {
+      e.preventDefault();
+      e.dataTransfer.dropEffect = e.dataTransfer.types.includes('application/barrier-id') ? 'move' : 'copy';
+    }
+  }
+  
+  // Handle drop on game area
+  function handleDrop(e: DragEvent) {
+    if (game.gameStatus !== 'playing') return;
+    e.preventDefault();
+    
+    const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    // Check if dropping a new tool from toolbar
+    const toolType = e.dataTransfer?.getData('application/tool-type');
+    if (toolType) {
+      game.placeToolByDrag(toolType as any, x, y);
+      return;
+    }
+    
+    // Check if repositioning an existing barrier
+    const barrierId = e.dataTransfer?.getData('application/barrier-id');
+    if (barrierId) {
+      game.moveBarrier(barrierId, x, y);
+      return;
+    }
   }
   
   // Touch handlers for mobile movement
@@ -167,33 +365,14 @@
     touchStartPos = null;
   }
   
-  // Update farmer direction based on keys OR touch target
-  function updateFarmerInput() {
-    let dx = 0;
-    let dy = 0;
-    
-    // Keyboard input
-    if (keysPressed.has('ArrowLeft') || keysPressed.has('a')) dx -= 1;
-    if (keysPressed.has('ArrowRight') || keysPressed.has('d')) dx += 1;
-    if (keysPressed.has('ArrowUp') || keysPressed.has('w')) dy -= 1;
-    if (keysPressed.has('ArrowDown') || keysPressed.has('s')) dy += 1;
-    
-    // Touch input (if no keyboard input) - just for visual indicator, actual movement handled by game state
-    if (dx === 0 && dy === 0 && touchTarget) {
-      // Touch target is handled directly by game.setTouchTarget()
-      // No need to convert to dx/dy here
-    }
-    
-    game.setFarmerInput(dx, dy);
-  }
-  
-  // Tool inventory for toolbar
+  // Tool inventory for toolbar - all tools always unlocked
+  // Order: 1.Net 2.Decoy 3.Fence 4.Lid 5.Scarecrow
   const toolSlots = $derived([
+    { type: 'net' as ToolType, remaining: game.tools.net, unlocked: true },
+    { type: 'decoy' as ToolType, remaining: game.tools.decoy, unlocked: true },
     { type: 'fence' as ToolType, remaining: game.tools.fence, unlocked: true },
-    { type: 'decoy' as ToolType, remaining: game.tools.decoy, unlocked: game.levelIndex >= 1 },
-    { type: 'umbrella' as ToolType, remaining: game.tools.umbrella, unlocked: game.levelIndex >= 2 },
-    { type: 'net' as ToolType, remaining: game.tools.net, unlocked: game.levelIndex >= 3 },
-    { type: 'scarecrow' as ToolType, remaining: game.tools.scarecrow, unlocked: game.levelIndex >= 4 },
+    { type: 'lid' as ToolType, remaining: game.tools.lid, unlocked: true },
+    { type: 'scarecrow' as ToolType, remaining: game.tools.scarecrow, unlocked: true },
   ]);
 
   // Collected food for basket (only what's actually deposited)
@@ -236,8 +415,10 @@
   <div 
     class="game-area"
     class:placing-mode={game.selectedTool !== null}
-    style="width: {GRID_WIDTH}px; height: {GRID_HEIGHT}px;"
+    style="width: {GRID_WIDTH}px; height: {TOTAL_HEIGHT}px;"
     onclick={handleGameClick}
+    ondragover={handleDragOver}
+    ondrop={handleDrop}
     ontouchstart={handleTouchStart}
     ontouchmove={handleTouchMove}
     ontouchend={handleTouchEnd}
@@ -250,8 +431,26 @@
       <div class="touch-target" style="left: {touchTarget.x}px; top: {touchTarget.y}px;"></div>
     {/if}
     
-    <!-- Background grass -->
-    <div class="grass-background"></div>
+    <!-- Placement cursor for keyboard tool placement -->
+    {#if placementCursor && game.selectedTool}
+      {@const cursorPos = gridToPixel(placementCursor)}
+      <div 
+        class="placement-cursor" 
+        style="left: {cursorPos.x}px; top: {cursorPos.y}px; width: {CELL_SIZE}px; height: {CELL_SIZE}px;"
+      >
+        <span class="cursor-tool">{TOOL_EMOJI[game.selectedTool]}</span>
+        <span class="cursor-hint">↵</span>
+      </div>
+    {/if}
+    
+    <!-- Background grass (main game area) -->
+    <div class="grass-background" style="height: {GRID_HEIGHT}px;"></div>
+    
+    <!-- Pantry area (below main game) -->
+    <div class="pantry-area" style="top: {GRID_HEIGHT}px; height: {PANTRY_HEIGHT}px;"></div>
+    
+    <!-- Grid lines overlay (main game area only) -->
+    <div class="grid-overlay" style="height: {GRID_HEIGHT}px;"></div>
     
     <!-- Food sources at bottom with quantities -->
     {#each game.foodSources as source}
@@ -265,8 +464,10 @@
     <!-- Placed barriers/tools -->
     {#each game.barriers as barrier}
       <Barrier 
+        id={barrier.id}
         type={barrier.type}
         position={barrier.position}
+        selected={barrier.id === selectedBarrierId}
       />
     {/each}
     
@@ -328,11 +529,23 @@
   {/if}
   
   <footer class="controls-help desktop-only">
-    <span>⬆️⬇️⬅️➡️ Move</span>
-    <span>Space: Pick up / Place</span>
-    <span>Enter: Drop in basket</span>
-    <span>1-5: Select tool</span>
-    <span>Esc: Cancel</span>
+    {#if selectedBarrierId}
+      <span class="mode-indicator">✋ Move Tool</span>
+      <span>⬆️⬇️⬅️➡️ Move tool</span>
+      <span>Tab: Next tool</span>
+      <span>Enter/Esc: Done</span>
+    {:else if game.selectedTool}
+      <span class="mode-indicator">🎯 Place Tool</span>
+      <span>⬆️⬇️⬅️➡️ Move cursor</span>
+      <span>Enter: Place tool</span>
+      <span>Esc: Cancel</span>
+    {:else}
+      <span>⬆️⬇️⬅️➡️ Move farmer</span>
+      <span>Space: Pick up</span>
+      <span>Enter: Drop in basket</span>
+      <span>1-5: Select tool</span>
+      <span>Tab: Edit tools</span>
+    {/if}
   </footer>
   
   <!-- Mobile gesture hints -->
@@ -436,12 +649,39 @@
   
   .grass-background {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     background: 
       radial-gradient(circle at 20% 30%, #8BC34A 0%, transparent 40%),
       radial-gradient(circle at 70% 60%, #9CCC65 0%, transparent 30%),
       radial-gradient(circle at 40% 80%, #8BC34A 0%, transparent 35%),
       #7CB342;
+  }
+  
+  /* Pantry area - distinct zone for food sources */
+  .pantry-area {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: 
+      linear-gradient(to bottom, #5D4037 0%, #4E342E 100%);
+    border-top: 3px solid #3E2723;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.3);
+  }
+  
+  /* Grid overlay - 13x9 cells, each 50x50px (main game area only) */
+  .grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    background-image: 
+      linear-gradient(to right, rgba(139, 69, 19, 0.15) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(139, 69, 19, 0.15) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: 1;
   }
   
   .overlay {
@@ -520,6 +760,14 @@
     white-space: nowrap;
   }
   
+  .mode-indicator {
+    background: #FFD700;
+    color: #5D4037;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
   /* Touch target indicator */
   .touch-target {
     position: absolute;
@@ -532,6 +780,50 @@
     pointer-events: none;
     animation: pulse 0.8s ease-out infinite;
     z-index: 50;
+  }
+  
+  /* Placement cursor for keyboard tool placement */
+  .placement-cursor {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border: 3px dashed #FFD700;
+    border-radius: 8px;
+    background: rgba(255, 215, 0, 0.2);
+    pointer-events: none;
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: cursor-pulse 0.6s ease-in-out infinite alternate;
+  }
+  
+  @keyframes cursor-pulse {
+    from { 
+      border-color: #FFD700;
+      background: rgba(255, 215, 0, 0.2);
+    }
+    to { 
+      border-color: #FFA000;
+      background: rgba(255, 160, 0, 0.3);
+    }
+  }
+  
+  .cursor-tool {
+    font-size: 28px;
+    opacity: 0.8;
+  }
+  
+  .cursor-hint {
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #FFD700;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2px 6px;
+    border-radius: 4px;
+    white-space: nowrap;
   }
   
   @keyframes pulse {

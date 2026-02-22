@@ -21,7 +21,7 @@ export type Direction = 'up' | 'down' | 'left' | 'right';
 
 export type FarmerState = 'idle' | 'walking' | 'carrying' | 'depositing' | 'waiting' | 'placing' | 'picking' | 'dropping' | 'recovering';
 
-export type ToolType = 'fence' | 'scarecrow' | 'cat' | 'dog' | 'torch' | 'bell' | 'decoy' | 'umbrella' | 'net';
+export type ToolType = 'fence' | 'scarecrow' | 'cat' | 'dog' | 'torch' | 'bell' | 'decoy' | 'lid' | 'net';
 
 export type FoodType = 
   | 'lettuce' | 'tomato' | 'carrot' | 'cheese' | 'egg' 
@@ -36,6 +36,7 @@ export interface Animal {
   id: string;
   type: AnimalType;
   position: Position;
+  gridPos: { col: number; row: number };  // Grid-based position
   state: AnimalState;
   direction: Direction;
   targetFood: FoodType | null;
@@ -52,7 +53,7 @@ export interface Farmer {
 
 export interface Barrier {
   id: string;
-  type: 'fence' | 'scarecrow' | 'torch';
+  type: 'fence' | 'scarecrow' | 'torch' | 'lid';
   position: Position;
 }
 
@@ -116,7 +117,7 @@ export const TOOL_EMOJI: Record<ToolType, string> = {
   torch: '🔥',
   bell: '🔔',
   decoy: '🧀',
-  umbrella: '☂️',
+  lid: '🥏',
   net: '🥅'
 };
 
@@ -147,4 +148,18 @@ export const ANIMAL_TARGETS: Record<AnimalType, FoodType[]> = {
   fox: ['egg', 'bacon'],
   squirrel: ['apple', 'bread'],
   raccoon: ['lettuce', 'tomato', 'carrot', 'cheese', 'egg', 'bread', 'apple', 'grapes', 'bacon', 'butter']
+};
+
+// Food-to-animal mapping: which animal appears when this food is picked up
+export const FOOD_ANIMAL_MAP: Record<FoodType, AnimalType> = {
+  lettuce: 'rabbit',
+  carrot: 'rabbit',
+  cheese: 'mouse',
+  bread: 'mouse',
+  grapes: 'bird',
+  egg: 'fox',
+  bacon: 'fox',
+  apple: 'squirrel',
+  tomato: 'raccoon',
+  butter: 'raccoon'
 };
