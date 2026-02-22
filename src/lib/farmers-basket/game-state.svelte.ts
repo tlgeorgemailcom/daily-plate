@@ -374,10 +374,10 @@ export function createGameState() {
   function dropFood() {
     if (!farmer.carrying || !carryingFoodId) return;
     
-    // Check if near basket
+    // Check if near basket (larger Y range to account for touch offset)
     const nearBasket = 
-      Math.abs(BASKET_POSITION.x - farmer.position.x) < 50 &&
-      Math.abs(BASKET_POSITION.y - farmer.position.y) < 50;
+      Math.abs(BASKET_POSITION.x - farmer.position.x) < 60 &&
+      Math.abs(BASKET_POSITION.y - farmer.position.y) < 100;
     
     if (nearBasket) {
       farmer.state = 'dropping';
