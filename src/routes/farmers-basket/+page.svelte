@@ -91,6 +91,8 @@
   
   // Touch handlers for mobile movement
   function handleTouchStart(e: TouchEvent) {
+    // Only handle touch when game is playing
+    if (game.gameStatus !== 'playing') return;
     if (game.selectedTool) return; // Don't move when placing tools
     
     const touch = e.touches[0];
@@ -111,6 +113,8 @@
   }
   
   function handleTouchMove(e: TouchEvent) {
+    // Only handle touch when game is playing
+    if (game.gameStatus !== 'playing') return;
     if (game.selectedTool) return;
     
     const touch = e.touches[0];
@@ -130,6 +134,7 @@
         // Only start moving the farmer once drag is confirmed
         touchTarget = { x, y };
         game.setTouchTarget({ x, y });
+        e.preventDefault(); // Only prevent default when actually dragging
       }
     }
     
@@ -137,8 +142,8 @@
     if (hasMoved) {
       touchTarget = { x, y };
       game.setTouchTarget({ x, y });
+      e.preventDefault();
     }
-    e.preventDefault();
   }
   
   function handleTouchEnd() {
@@ -248,12 +253,12 @@
     <!-- Background grass -->
     <div class="grass-background"></div>
     
-    <!-- Food sources -->
-    {#each game.foods as food}
+    <!-- Food sources at bottom with quantities -->
+    {#each game.foodSources as source}
       <FoodSource
-        type={food.type}
-        position={food.position}
-        available={!food.pickedUp && !food.inBasket && !food.stolen}
+        type={source.type}
+        position={source.position}
+        remaining={source.remaining}
       />
     {/each}
     

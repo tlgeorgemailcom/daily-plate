@@ -5,13 +5,14 @@
   interface Props {
     type: FoodType;
     position: Position;
-    available: boolean;
+    remaining: number;  // quantity remaining
     onclick?: () => void;
   }
   
-  let { type, position, available, onclick }: Props = $props();
+  let { type, position, remaining, onclick }: Props = $props();
   
   const emoji = $derived(FOOD_EMOJI[type]);
+  const available = $derived(remaining > 0);
 </script>
 
 <button 
@@ -23,6 +24,7 @@
   onclick={onclick}
 >
   <span class="food-emoji">{emoji}</span>
+  <span class="quantity" class:empty={remaining === 0}>{remaining}</span>
   {#if available}
     <span class="glow"></span>
   {/if}
@@ -70,6 +72,28 @@
     display: block;
     position: relative;
     z-index: 2;
+  }
+  
+  .quantity {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    background: #4CAF50;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    font-family: system-ui, sans-serif;
+  }
+  
+  .quantity.empty {
+    background: #9E9E9E;
   }
   
   .glow {

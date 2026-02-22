@@ -13,7 +13,7 @@ const FARMER_SPEED = 180; // pixels per second (increased for larger grid)
 const BASKET_POSITION: Position = { x: 300, y: 100 };
 const FARMER_START: Position = { x: 300, y: 320 };
 
-// Food item with position and status
+// Food item with position and status (individual food being carried or in basket)
 interface FoodItem {
   id: string;
   type: FoodType;
@@ -21,6 +21,13 @@ interface FoodItem {
   pickedUp: boolean;  // being carried by farmer
   inBasket: boolean;  // deposited in basket
   stolen: boolean;
+}
+
+// Food source at bottom of screen with limited quantity
+interface FoodSource {
+  type: FoodType;
+  position: Position;
+  remaining: number;  // how many left to pick
 }
 
 // Extended Farmer with direction
@@ -33,7 +40,7 @@ interface FarmerState {
 
 type GameStatus = 'ready' | 'playing' | 'won' | 'lost';
 
-// Sample levels
+// Sample levels - foodSupply shows how many of each item available (must collect 1 of each in recipe)
 export const LEVELS: Level[] = [
   {
     id: '1-1',
@@ -43,7 +50,7 @@ export const LEVELS: Level[] = [
     recipe: ['lettuce'],
     tools: [],
     animalSpawns: [],
-    foodSupply: { lettuce: -1, tomato: -1, carrot: -1, cheese: -1, egg: -1, bread: -1, apple: -1, grapes: -1, bacon: -1, butter: -1 }
+    foodSupply: { lettuce: 3, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0 }
   },
   {
     id: '1-2',
@@ -53,7 +60,7 @@ export const LEVELS: Level[] = [
     recipe: ['lettuce', 'tomato'],
     tools: [{ type: 'fence', count: 2, emoji: '🚧' }],
     animalSpawns: [{ type: 'rabbit', delay: 3000 }],
-    foodSupply: { lettuce: -1, tomato: -1, carrot: -1, cheese: -1, egg: -1, bread: -1, apple: -1, grapes: -1, bacon: -1, butter: -1 }
+    foodSupply: { lettuce: 2, tomato: 2, carrot: 0, cheese: 0, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0 }
   },
   {
     id: '1-3',
@@ -66,7 +73,7 @@ export const LEVELS: Level[] = [
       { type: 'rabbit', delay: 2000 },
       { type: 'rabbit', delay: 8000 }
     ],
-    foodSupply: { lettuce: -1, tomato: -1, carrot: -1, cheese: -1, egg: -1, bread: -1, apple: -1, grapes: -1, bacon: -1, butter: -1 }
+    foodSupply: { lettuce: 2, tomato: 2, carrot: 3, cheese: 0, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0 }
   },
   {
     id: '1-4',
@@ -82,7 +89,7 @@ export const LEVELS: Level[] = [
       { type: 'rabbit', delay: 2000 },
       { type: 'mouse', delay: 5000 }
     ],
-    foodSupply: { lettuce: -1, tomato: -1, carrot: -1, cheese: -1, egg: -1, bread: -1, apple: -1, grapes: -1, bacon: -1, butter: -1 }
+    foodSupply: { lettuce: 2, tomato: 0, carrot: 0, cheese: 3, egg: 0, bread: 2, apple: 0, grapes: 0, bacon: 0, butter: 0 }
   },
   {
     id: '1-5',
@@ -100,7 +107,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 4000 },
       { type: 'rabbit', delay: 7000 }
     ],
-    foodSupply: { lettuce: -1, tomato: -1, carrot: -1, cheese: -1, egg: -1, bread: -1, apple: -1, grapes: -1, bacon: -1, butter: -1 }
+    foodSupply: { lettuce: 2, tomato: 2, carrot: 2, cheese: 2, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0 }
   }
 ];
 
@@ -120,6 +127,7 @@ export function createGameState() {
   });
   let barriers = $state<Barrier[]>([]);
   let foods = $state<FoodItem[]>([]);
+  let foodSources = $state<FoodSource[]>([]);  // Food supply at bottom
   
   // Tools available (as counts) - keys are the tool types we support
   let tools = $state<Record<string, number | null>>({
@@ -158,16 +166,19 @@ export function createGameState() {
     // Reset entities
     animals = [];
     barriers = [];
+    foods = [];  // Clear any carried/deposited items
     
-    // Setup food sources at bottom
-    const spacing = GRID_WIDTH / (level.recipe.length + 1);
-    foods = level.recipe.map((food, i) => ({
-      id: `food-${i}-${Date.now()}`,
-      type: food,
+    // Setup food sources at bottom based on foodSupply
+    // Only create sources for items with quantity > 0
+    const availableFoods = Object.entries(level.foodSupply)
+      .filter(([_, qty]) => qty > 0)
+      .map(([type, qty]) => ({ type: type as FoodType, qty }));
+    
+    const spacing = GRID_WIDTH / (availableFoods.length + 1);
+    foodSources = availableFoods.map((food, i) => ({
+      type: food.type,
       position: { x: spacing * (i + 1), y: GRID_HEIGHT - 40 },
-      pickedUp: false,
-      inBasket: false,
-      stolen: false
+      remaining: food.qty
     }));
     
     // Reset farmer
@@ -344,26 +355,40 @@ export function createGameState() {
   // Track which food item farmer is carrying (by id)
   let carryingFoodId: string | null = null;
   
-  // Pick up food
+  // Pick up food from a food source
   function pickupFood() {
     if (farmer.carrying) return;
     
-    // Check for nearby food
-    const nearbyFood = foods.find(f => 
-      !f.pickedUp && !f.inBasket && !f.stolen &&
-      Math.abs(f.position.x - farmer.position.x) < 40 &&
-      Math.abs(f.position.y - farmer.position.y) < 40
+    // Check for nearby food source with remaining items
+    const nearbySource = foodSources.find(src => 
+      src.remaining > 0 &&
+      Math.abs(src.position.x - farmer.position.x) < 50 &&
+      Math.abs(src.position.y - farmer.position.y) < 50
     );
     
-    if (nearbyFood) {
+    if (nearbySource) {
       farmer.state = 'picking';
-      const foodId = nearbyFood.id;
+      const sourceType = nearbySource.type;
+      
       setTimeout(() => {
-        const food = foods.find(f => f.id === foodId);
-        if (food) {
-          farmer.carrying = food.type;
-          food.pickedUp = true;
-          carryingFoodId = food.id;
+        // Find the source again and decrement
+        const source = foodSources.find(s => s.type === sourceType);
+        if (source && source.remaining > 0) {
+          source.remaining--;
+          
+          // Create a new food item for tracking
+          const newFood: FoodItem = {
+            id: `food-${sourceType}-${Date.now()}`,
+            type: sourceType,
+            position: { ...farmer.position },
+            pickedUp: true,
+            inBasket: false,
+            stolen: false
+          };
+          foods = [...foods, newFood];
+          
+          farmer.carrying = sourceType;
+          carryingFoodId = newFood.id;
         }
         farmer.state = 'carrying';
       }, 200);
@@ -560,8 +585,17 @@ export function createGameState() {
   // Check win condition
   function checkWinCondition() {
     if (!currentLevel) return;
-    const allInBasket = foods.every(f => f.inBasket);
-    if (allInBasket && gameStatus === 'playing') {
+    
+    // Win when we have collected all recipe items in the basket
+    const recipe = currentLevel.recipe;
+    const inBasket = foods.filter(f => f.inBasket).map(f => f.type);
+    
+    // Check each recipe item is in basket
+    const allCollected = recipe.every(recipeItem => 
+      inBasket.includes(recipeItem)
+    );
+    
+    if (allCollected && recipe.length > 0 && gameStatus === 'playing') {
       gameStatus = 'won';
       stopLevel();
     }
@@ -570,11 +604,26 @@ export function createGameState() {
   // Check lose condition
   function checkLoseCondition() {
     if (!currentLevel) return;
-    // Lose if all foods are stolen (none in basket, none being carried, none available)
-    const allStolen = foods.every(f => f.stolen);
-    if (allStolen && gameStatus === 'playing') {
-      gameStatus = 'lost';
-      stopLevel();
+    
+    // Lose if:
+    // 1. Required recipe items can no longer be collected (all stolen or depleted without enough in basket)
+    const recipe = currentLevel.recipe;
+    const inBasket = foods.filter(f => f.inBasket).map(f => f.type);
+    const carrying = farmer.carrying;
+    
+    // Check each recipe item - can we still get it?
+    for (const recipeItem of recipe) {
+      if (inBasket.includes(recipeItem)) continue; // Already have it
+      if (carrying === recipeItem) continue; // Carrying it
+      
+      // Check if any source has this item remaining
+      const source = foodSources.find(s => s.type === recipeItem);
+      if (!source || source.remaining <= 0) {
+        // Can't get this item anymore - lose!
+        gameStatus = 'lost';
+        stopLevel();
+        return;
+      }
     }
   }
   
@@ -596,6 +645,7 @@ export function createGameState() {
     get farmer() { return farmer; },
     get barriers() { return barriers; },
     get foods() { return foods; },
+    get foodSources() { return foodSources; },
     get tools() { return tools; },
     get selectedTool() { return selectedTool; },
     get gameStatus() { return gameStatus; },
