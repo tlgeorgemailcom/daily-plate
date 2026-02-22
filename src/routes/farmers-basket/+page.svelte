@@ -26,6 +26,9 @@
   let isDraggingFarmer = false;  // Only true if touch started on farmer
   let touchDragTool: ToolType | null = $state(null);  // Tool being touch-dragged
   
+  // Debug messages (non-blocking)
+  let debugMsg: string = $state('');
+  
   // Placement cursor for keyboard tool placement
   // When a tool is selected, this shows where it will be placed
   let placementCursor = $state<{ col: number; row: number } | null>(null);
@@ -236,6 +239,7 @@
     if (!touchDragTool || !gameAreaElement) {
       return;
     }
+    debugMsg = `move: ${touchDragTool}`;
     
     e.preventDefault(); // Prevent scrolling while dragging tool
     
@@ -260,10 +264,10 @@
     
     // Place tool if we have a valid position
     if (touchTarget) {
-      alert(`Placing ${touchDragTool} at ${Math.round(touchTarget.x)},${Math.round(touchTarget.y)}`);
+      debugMsg = `place: ${touchDragTool} @ ${Math.round(touchTarget.x)},${Math.round(touchTarget.y)}`;
       game.placeToolByDrag(touchDragTool, touchTarget.x, touchTarget.y);
     } else {
-      alert(`touchend but no touchTarget`);
+      debugMsg = `end: no target`;
     }
     
     touchDragTool = null;
@@ -448,7 +452,7 @@
   
   // Handle tool touch drag from toolbar - just sets state, document listeners handle the rest
   function handleToolTouchDragStart(tool: ToolType) {
-    alert(`handleToolTouchDragStart: ${tool}`);
+    debugMsg = `dragStart: ${tool}`;
     touchDragTool = tool;
   }
 </script>
@@ -475,6 +479,11 @@
       {/each}
     </div>
   </header>
+  
+  <!-- Debug display -->
+  {#if debugMsg}
+    <div class="debug-display">{debugMsg}</div>
+  {/if}
   
   <div class="toolbar-area">
     <Toolbar 
@@ -656,6 +665,20 @@
   .header {
     text-align: center;
     margin-bottom: 10px;
+  }
+  
+  .debug-display {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #0f0;
+    padding: 8px 12px;
+    font-family: monospace;
+    font-size: 14px;
+    border-radius: 4px;
+    z-index: 9999;
+    pointer-events: none;
   }
   
   .header h1 {

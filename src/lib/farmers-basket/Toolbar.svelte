@@ -45,7 +45,6 @@
   
   // Handle touch start for mobile drag
   function handleTouchStart(e: TouchEvent, tool: ToolSlot) {
-    alert(`Toolbar touchstart: ${tool.type}, avail: ${isAvailable(tool)}, rem: ${tool.remaining}`);
     if (!isAvailable(tool)) return;
     e.preventDefault(); // Prevent default to avoid click conflicts
     e.stopPropagation(); // Prevent event from bubbling
