@@ -105,8 +105,8 @@
     touchStartPos = { x, y };
     hasMoved = false;
     
-    touchTarget = { x, y };
-    game.setTouchTarget({ x, y });
+    // Don't set touchTarget yet - wait until user actually drags
+    // This prevents the farmer from jumping on tap
     e.preventDefault();
   }
   
@@ -125,11 +125,21 @@
       const dist = Math.sqrt(
         Math.pow(x - touchStartPos.x, 2) + Math.pow(y - touchStartPos.y, 2)
       );
-      if (dist > 15) hasMoved = true;
+      if (dist > 15) {
+        hasMoved = true;
+        // Only start moving the farmer once drag is confirmed
+        touchTarget = { x, y };
+        game.setTouchTarget({ x, y });
+      }
     }
     
-    touchTarget = { x, y }; // Now uses game coordinates
-    game.setTouchTarget({ x, y });
+    // Update position if already dragging
+    if (hasMoved) {
+      touchTarget = { x, y };
+      game.setTouchTarget({ x, y });
+    }
+    e.preventDefault();
+  }
     e.preventDefault();
   }
   
@@ -308,7 +318,7 @@
         <h2>{game.currentLevel?.name ?? 'Loading'}</h2>
         <p>Collect: {game.currentLevel?.recipe?.map(f => FOOD_EMOJI[f]).join(' ') ?? ''}</p>
         <p class="hint desktop-hint">Use arrow keys to move, Space to pick up food</p>
-        <p class="hint mobile-hint">Tap to move, use buttons to pick up &amp; deposit</p>
+        <p class="hint mobile-hint">Drag farmer to move • Tap when near food/basket</p>
         <button onclick={() => game.startLevel()}>Start Level</button>
       </div>
     </div>
@@ -326,7 +336,7 @@
   <div class="mobile-controls">
     <div class="gesture-hint">
       <span class="gesture-icon">👆</span>
-      <span class="gesture-text">Drag to move • Tap to {game.farmer.carrying ? 'deposit' : 'pickup'}</span>
+      <span class="gesture-text">Drag to move • Tap when near {game.farmer.carrying ? 'basket 🧺' : 'food 🥬'}</span>
     </div>
   </div>
 </div>
