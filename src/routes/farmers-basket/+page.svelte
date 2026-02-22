@@ -26,6 +26,10 @@
   let isDraggingFarmer = false;  // Only true if touch started on farmer
   let touchDragTool: ToolType | null = $state(null);  // Tool being touch-dragged
   
+  // Stable bound listener refs for document events (needed for proper removeEventListener)
+  let boundToolTouchMove: ((e: TouchEvent) => void) | null = null;
+  let boundToolTouchEnd: ((e: Event) => void) | null = null;
+  
   // Placement cursor for keyboard tool placement
   // When a tool is selected, this shows where it will be placed
   let placementCursor = $state<{ col: number; row: number } | null>(null);
@@ -239,6 +243,7 @@
   onDestroy(() => {
     window.removeEventListener('keydown', handleKeyDown);
     window.removeEventListener('keyup', handleKeyUp);
+    cleanupToolTouchListeners();
     game.stopLevel();
   });
   
@@ -402,48 +407,60 @@
   
   // Handle tool touch drag from toolbar - uses document-level events to track drag from toolbar to game area
   function handleToolTouchDragStart(tool: ToolType) {
+    // Clean up any existing listeners first
+    cleanupToolTouchListeners();
+    
     touchDragTool = tool;
     
-    // Add document-level touch listeners
-    document.addEventListener('touchmove', handleToolTouchMove, { passive: false });
-    document.addEventListener('touchend', handleToolTouchEnd);
-    document.addEventListener('touchcancel', handleToolTouchEnd);
-  }
-  
-  function handleToolTouchMove(e: TouchEvent) {
-    if (!touchDragTool || !gameAreaElement) return;
+    // Create bound listeners that we can properly remove later
+    boundToolTouchMove = (e: TouchEvent) => {
+      if (!touchDragTool || !gameAreaElement) return;
+      
+      e.preventDefault(); // Prevent scrolling while dragging tool
+      
+      const touch = e.touches[0];
+      const rect = gameAreaElement.getBoundingClientRect();
+      const scale = rect.width / GRID_WIDTH;
+      
+      // Calculate position relative to game area
+      const x = (touch.clientX - rect.left) / scale;
+      const y = (touch.clientY - rect.top) / scale;
+      
+      // Only show cursor if touch is within game area bounds
+      if (x >= 0 && x <= GRID_WIDTH && y >= 0 && y <= TOTAL_HEIGHT) {
+        touchTarget = { x, y };
+      } else {
+        touchTarget = null;
+      }
+    };
     
-    e.preventDefault(); // Prevent scrolling while dragging tool
-    
-    const touch = e.touches[0];
-    const rect = gameAreaElement.getBoundingClientRect();
-    const scale = rect.width / GRID_WIDTH;
-    
-    // Calculate position relative to game area
-    const x = (touch.clientX - rect.left) / scale;
-    const y = (touch.clientY - rect.top) / scale;
-    
-    // Only show cursor if touch is within game area bounds
-    if (x >= 0 && x <= GRID_WIDTH && y >= 0 && y <= TOTAL_HEIGHT) {
-      touchTarget = { x, y };
-    } else {
+    boundToolTouchEnd = () => {
+      // Place tool if we have a valid position
+      if (touchDragTool && touchTarget) {
+        game.placeToolByDrag(touchDragTool, touchTarget.x, touchTarget.y);
+      }
+      
+      touchDragTool = null;
       touchTarget = null;
-    }
+      cleanupToolTouchListeners();
+    };
+    
+    // Add document-level touch listeners
+    document.addEventListener('touchmove', boundToolTouchMove, { passive: false });
+    document.addEventListener('touchend', boundToolTouchEnd);
+    document.addEventListener('touchcancel', boundToolTouchEnd);
   }
   
-  function handleToolTouchEnd(e: Event) {
-    // Remove document listeners
-    document.removeEventListener('touchmove', handleToolTouchMove);
-    document.removeEventListener('touchend', handleToolTouchEnd);
-    document.removeEventListener('touchcancel', handleToolTouchEnd);
-    
-    // Place tool if we have a valid position
-    if (touchDragTool && touchTarget) {
-      game.placeToolByDrag(touchDragTool, touchTarget.x, touchTarget.y);
+  function cleanupToolTouchListeners() {
+    if (boundToolTouchMove) {
+      document.removeEventListener('touchmove', boundToolTouchMove);
+      boundToolTouchMove = null;
     }
-    
-    touchDragTool = null;
-    touchTarget = null;
+    if (boundToolTouchEnd) {
+      document.removeEventListener('touchend', boundToolTouchEnd);
+      document.removeEventListener('touchcancel', boundToolTouchEnd);
+      boundToolTouchEnd = null;
+    }
   }
 </script>
 
