@@ -138,6 +138,10 @@ export function createGameState() {
   let inputDx = 0;
   let inputDy = 0;
   
+  // Touch target for mobile (actual position, not direction)
+  let touchTargetPos: Position | null = null;
+  const TOUCH_SPEED_MULTIPLIER = 2.5; // Faster movement when following touch
+  
   // Spawn timers
   let spawnTimeouts: number[] = [];
   let gameLoopId: number | null = null;
@@ -266,27 +270,57 @@ export function createGameState() {
     inputDy = dy;
   }
   
+  // Set touch target position for mobile
+  function setTouchTarget(target: Position | null) {
+    touchTargetPos = target;
+  }
+  
   // Update farmer position based on input
   function updateFarmer(deltaTime: number) {
     if (farmer.state === 'picking' || farmer.state === 'dropping' || farmer.state === 'placing') {
       return; // Don't move during actions
     }
     
-    if (inputDx !== 0 || inputDy !== 0) {
-      // Normalize diagonal movement
-      const magnitude = Math.sqrt(inputDx * inputDx + inputDy * inputDy);
-      const normDx = inputDx / magnitude;
-      const normDy = inputDy / magnitude;
+    // Determine movement: touch target takes priority for smooth following
+    let targetDx = inputDx;
+    let targetDy = inputDy;
+    let speedMultiplier = 1;
+    
+    if (touchTargetPos) {
+      // Calculate direction toward touch target
+      const fx = farmer.position.x;
+      const fy = farmer.position.y;
+      const diffX = touchTargetPos.x - fx;
+      const diffY = touchTargetPos.y - fy;
+      const distance = Math.sqrt(diffX * diffX + diffY * diffY);
+      
+      if (distance > 8) {
+        // Move toward touch position with smooth interpolation
+        targetDx = diffX / distance;
+        targetDy = diffY / distance;
+        speedMultiplier = TOUCH_SPEED_MULTIPLIER;
+      } else {
+        // Close enough, stop
+        targetDx = 0;
+        targetDy = 0;
+      }
+    }
+    
+    if (targetDx !== 0 || targetDy !== 0) {
+      // Normalize diagonal movement (for keyboard input)
+      const magnitude = Math.sqrt(targetDx * targetDx + targetDy * targetDy);
+      const normDx = targetDx / magnitude;
+      const normDy = targetDy / magnitude;
       
       // Update direction
-      if (Math.abs(inputDx) > Math.abs(inputDy)) {
-        farmer.direction = inputDx > 0 ? 'right' : 'left';
+      if (Math.abs(targetDx) > Math.abs(targetDy)) {
+        farmer.direction = targetDx > 0 ? 'right' : 'left';
       } else {
-        farmer.direction = inputDy > 0 ? 'down' : 'up';
+        farmer.direction = targetDy > 0 ? 'down' : 'up';
       }
       
       // Move farmer
-      const moveDistance = FARMER_SPEED * deltaTime;
+      const moveDistance = FARMER_SPEED * speedMultiplier * deltaTime;
       let newX = farmer.position.x + normDx * moveDistance;
       let newY = farmer.position.y + normDy * moveDistance;
       
@@ -565,6 +599,7 @@ export function createGameState() {
     startLevel,
     stopLevel,
     setFarmerInput,
+    setTouchTarget,
     pickupFood,
     dropFood,
     selectTool,

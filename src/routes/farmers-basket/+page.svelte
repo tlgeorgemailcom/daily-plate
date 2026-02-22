@@ -94,11 +94,12 @@
     const y = touch.clientY - rect.top;
     
     touchTarget = { x, y };
+    game.setTouchTarget({ x, y });
     e.preventDefault();
   }
   
   function handleTouchMove(e: TouchEvent) {
-    if (game.selectedTool || !touchTarget) return;
+    if (game.selectedTool) return;
     
     const touch = e.touches[0];
     const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
@@ -106,11 +107,13 @@
     const y = touch.clientY - rect.top;
     
     touchTarget = { x, y };
+    game.setTouchTarget({ x, y });
     e.preventDefault();
   }
   
   function handleTouchEnd() {
     touchTarget = null;
+    game.setTouchTarget(null);
   }
   
   // Update farmer direction based on keys OR touch target
@@ -124,21 +127,10 @@
     if (keysPressed.has('ArrowUp') || keysPressed.has('w')) dy -= 1;
     if (keysPressed.has('ArrowDown') || keysPressed.has('s')) dy += 1;
     
-    // Touch input (if no keyboard input)
+    // Touch input (if no keyboard input) - just for visual indicator, actual movement handled by game state
     if (dx === 0 && dy === 0 && touchTarget) {
-      const farmer = game.farmer;
-      const fx = farmer.position.x + 20; // Center of farmer
-      const fy = farmer.position.y + 20;
-      
-      const diffX = touchTarget.x - fx;
-      const diffY = touchTarget.y - fy;
-      
-      // Only move if more than 10px away from target
-      const distance = Math.sqrt(diffX * diffX + diffY * diffY);
-      if (distance > 10) {
-        dx = Math.sign(diffX);
-        dy = Math.sign(diffY);
-      }
+      // Touch target is handled directly by game.setTouchTarget()
+      // No need to convert to dx/dy here
     }
     
     game.setFarmerInput(dx, dy);
