@@ -95,8 +95,10 @@
     
     const touch = e.touches[0];
     const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
-    const x = touch.clientX - rect.left;
-    const y = touch.clientY - rect.top;
+    // Calculate actual scale from rendered vs logical size
+    const scale = rect.width / GRID_WIDTH;
+    const x = (touch.clientX - rect.left) / scale;
+    const y = (touch.clientY - rect.top) / scale;
     
     // Track for tap gesture detection
     touchStartTime = Date.now();
@@ -113,10 +115,12 @@
     
     const touch = e.touches[0];
     const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
-    const x = touch.clientX - rect.left;
-    const y = touch.clientY - rect.top;
+    // Calculate actual scale from rendered vs logical size
+    const scale = rect.width / GRID_WIDTH;
+    const x = (touch.clientX - rect.left) / scale;
+    const y = (touch.clientY - rect.top) / scale;
     
-    // Check if moved significantly (more than 15px)
+    // Check if moved significantly (more than 15px in game coords)
     if (touchStartPos) {
       const dist = Math.sqrt(
         Math.pow(x - touchStartPos.x, 2) + Math.pow(y - touchStartPos.y, 2)
@@ -124,7 +128,7 @@
       if (dist > 15) hasMoved = true;
     }
     
-    touchTarget = { x, y };
+    touchTarget = { x, y }; // Now uses game coordinates
     game.setTouchTarget({ x, y });
     e.preventDefault();
   }

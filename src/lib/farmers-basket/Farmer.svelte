@@ -31,7 +31,6 @@
     position: absolute;
     font-size: 36px;
     transform: translate(-50%, -50%);
-    transition: left 0.05s linear, top 0.05s linear;
     z-index: 20;
     user-select: none;
   }
