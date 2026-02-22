@@ -45,22 +45,25 @@
   
   // Handle touch start for mobile drag
   function handleTouchStart(e: TouchEvent, tool: ToolSlot) {
+    console.log('Toolbar touchstart', tool.type, 'available:', isAvailable(tool), 'remaining:', tool.remaining);
     if (!isAvailable(tool)) return;
     e.preventDefault(); // Prevent default to avoid click conflicts
+    e.stopPropagation(); // Prevent event from bubbling
+    console.log('Calling ontouchdragstart');
     ontouchdragstart?.(tool.type);
   }
 </script>
 
 <div class="toolbar">
-  {#each tools as tool, index}
+  {#each tools as tool, index (tool.type)}
     <button
       class="tool-slot"
       class:selected={selectedTool === tool.type}
       class:locked={!tool.unlocked}
       class:unavailable={tool.remaining === null}
       class:empty={tool.remaining === 0}
+      class:disabled={!isAvailable(tool)}
       onclick={() => handleClick(tool)}
-      disabled={!isAvailable(tool)}
       draggable={isAvailable(tool)}
       ondragstart={(e) => handleDragStart(e, tool)}
       ontouchstart={(e) => handleTouchStart(e, tool)}
@@ -107,13 +110,18 @@
     touch-action: none; /* Prevent browser touch gestures */
   }
   
-  .tool-slot:active:not(:disabled) {
+  .tool-slot:active:not(.disabled) {
     cursor: grabbing;
   }
   
-  .tool-slot:hover:not(:disabled) {
+  .tool-slot:hover:not(.disabled) {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+  
+  .tool-slot.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
   }
   
   .tool-slot:focus {
