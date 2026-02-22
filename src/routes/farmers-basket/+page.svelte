@@ -236,7 +236,6 @@
     if (!touchDragTool || !gameAreaElement) {
       return;
     }
-    console.log('Document touchmove - dragging tool:', touchDragTool);
     
     e.preventDefault(); // Prevent scrolling while dragging tool
     
@@ -257,13 +256,14 @@
   }
   
   function handleDocumentTouchEnd() {
-    console.log('Document touchend - touchDragTool:', touchDragTool, 'touchTarget:', touchTarget);
     if (!touchDragTool) return;
     
     // Place tool if we have a valid position
     if (touchTarget) {
-      console.log('Placing tool at:', touchTarget);
+      alert(`Placing ${touchDragTool} at ${Math.round(touchTarget.x)},${Math.round(touchTarget.y)}`);
       game.placeToolByDrag(touchDragTool, touchTarget.x, touchTarget.y);
+    } else {
+      alert(`touchend but no touchTarget`);
     }
     
     touchDragTool = null;
@@ -271,7 +271,6 @@
   }
   
   onMount(() => {
-    console.log('onMount: Adding document touch listeners');
     window.addEventListener('keydown', handleKeyDown);
     window.addEventListener('keyup', handleKeyUp);
     // Always-active document listeners for tool dragging (like game-area listeners for farmer)
@@ -449,7 +448,7 @@
   
   // Handle tool touch drag from toolbar - just sets state, document listeners handle the rest
   function handleToolTouchDragStart(tool: ToolType) {
-    console.log('handleToolTouchDragStart called with:', tool);
+    alert(`handleToolTouchDragStart: ${tool}`);
     touchDragTool = tool;
   }
 </script>
