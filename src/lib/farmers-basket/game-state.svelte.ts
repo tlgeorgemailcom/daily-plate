@@ -439,9 +439,9 @@ export function createGameState() {
     // Touch movement: directly follow finger position (with offset so farmer is visible)
     // Now with collision detection - farmer stops at blocked cells
     if (touchTargetPos) {
-      // Apply offset so farmer appears above finger (no horizontal offset)
+      // Grid-based movement - no offset needed since farmer snaps to cells
       const targetX = Math.max(20, Math.min(GRID_WIDTH - 20, touchTargetPos.x));
-      const targetY = Math.max(20, Math.min(TOTAL_HEIGHT - 20, touchTargetPos.y + TOUCH_OFFSET_Y));
+      const targetY = Math.max(20, Math.min(TOTAL_HEIGHT - 20, touchTargetPos.y));
       
       // Get target grid cell
       const targetGrid = pixelToGrid({ x: targetX, y: targetY });
