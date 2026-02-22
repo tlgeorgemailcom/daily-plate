@@ -45,6 +45,9 @@
       <a href="/compare" class:active={$page.url.pathname === '/compare'}>
         👆 Compare
       </a>
+      <a href="/farmers-basket" class:active={$page.url.pathname === '/farmers-basket'}>
+        🧺 Basket
+      </a>
       <a href="/archive" class:active={$page.url.pathname === '/archive'}>
         📅 Archive
       </a>

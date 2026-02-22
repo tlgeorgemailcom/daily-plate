@@ -1,0 +1,410 @@
+<script lang="ts">
+  import { onMount, onDestroy } from 'svelte';
+  import { createGameState, LEVELS, GRID_WIDTH, GRID_HEIGHT } from '$lib/farmers-basket/game-state.svelte';
+  import Animal from '$lib/farmers-basket/Animal.svelte';
+  import Farmer from '$lib/farmers-basket/Farmer.svelte';
+  import Basket from '$lib/farmers-basket/Basket.svelte';
+  import FoodSource from '$lib/farmers-basket/FoodSource.svelte';
+  import Toolbar from '$lib/farmers-basket/Toolbar.svelte';
+  import Barrier from '$lib/farmers-basket/Barrier.svelte';
+  import { FOOD_EMOJI } from '$lib/farmers-basket/types';
+  import type { ToolType, FoodType } from '$lib/farmers-basket/types';
+  
+  let game = createGameState();
+  
+  // Keyboard controls
+  let keysPressed = new Set<string>();
+  
+  function handleKeyDown(e: KeyboardEvent) {
+    keysPressed.add(e.key);
+    
+    // Tool selection with number keys
+    if (e.key >= '1' && e.key <= '5') {
+      const toolIndex = parseInt(e.key) - 1;
+      const tools: ToolType[] = ['fence', 'decoy', 'umbrella', 'net', 'scarecrow'];
+      if (toolIndex < tools.length) {
+        game.selectTool(tools[toolIndex]);
+      }
+    }
+    
+    // Escape to deselect tool
+    if (e.key === 'Escape') {
+      game.selectTool(null);
+    }
+    
+    // Space to pick up food or place tool
+    if (e.key === ' ') {
+      e.preventDefault();
+      if (game.selectedTool) {
+        game.placeTool();
+      } else {
+        game.pickupFood();
+      }
+    }
+    
+    // Enter to drop food
+    if (e.key === 'Enter') {
+      game.dropFood();
+    }
+  }
+  
+  function handleKeyUp(e: KeyboardEvent) {
+    keysPressed.delete(e.key);
+  }
+  
+  // Update farmer direction based on keys
+  function updateFarmerInput() {
+    let dx = 0;
+    let dy = 0;
+    
+    if (keysPressed.has('ArrowLeft') || keysPressed.has('a')) dx -= 1;
+    if (keysPressed.has('ArrowRight') || keysPressed.has('d')) dx += 1;
+    if (keysPressed.has('ArrowUp') || keysPressed.has('w')) dy -= 1;
+    if (keysPressed.has('ArrowDown') || keysPressed.has('s')) dy += 1;
+    
+    game.setFarmerInput(dx, dy);
+  }
+  
+  // Game loop for input
+  let inputLoop: number;
+  
+  onMount(() => {
+    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('keyup', handleKeyUp);
+    
+    inputLoop = window.setInterval(updateFarmerInput, 16);
+  });
+  
+  onDestroy(() => {
+    window.removeEventListener('keydown', handleKeyDown);
+    window.removeEventListener('keyup', handleKeyUp);
+    clearInterval(inputLoop);
+    game.stopLevel();
+  });
+  
+  // Handle click on game area to place tools
+  function handleGameClick(e: MouseEvent) {
+    if (!game.selectedTool) return;
+    
+    const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    game.placeToolAt(x, y);
+  }
+  
+  // Tool inventory for toolbar
+  const toolSlots = $derived([
+    { type: 'fence' as ToolType, remaining: game.tools.fence, unlocked: true },
+    { type: 'decoy' as ToolType, remaining: game.tools.decoy, unlocked: game.levelIndex >= 1 },
+    { type: 'umbrella' as ToolType, remaining: game.tools.umbrella, unlocked: game.levelIndex >= 2 },
+    { type: 'net' as ToolType, remaining: game.tools.net, unlocked: game.levelIndex >= 3 },
+    { type: 'scarecrow' as ToolType, remaining: game.tools.scarecrow, unlocked: game.levelIndex >= 4 },
+  ]);
+  
+  // Collected food for basket (only what's actually deposited)
+  const collectedFood = $derived(
+    game.foods.filter(f => f.inBasket).map(f => f.type)
+  );
+</script>
+
+<svelte:head>
+  <title>Farmer's Basket</title>
+</svelte:head>
+
+<div class="game-container">
+  <header class="header">
+    <h1>🧑‍🌾 Farmer's Basket</h1>
+    <div class="level-info">
+      Level {game.currentLevel?.id ?? '?'}: {game.currentLevel?.name ?? 'Loading...'}
+    </div>
+    <div class="recipe-display">
+      <span class="recipe-label">Collect:</span>
+      {#each game.currentLevel?.recipe ?? [] as food}
+        <span class="recipe-item" class:collected={collectedFood.includes(food)}>
+          {FOOD_EMOJI[food]}
+          {#if collectedFood.includes(food)}
+            <span class="check">✓</span>
+          {/if}
+        </span>
+      {/each}
+    </div>
+  </header>
+  
+  <div class="toolbar-area">
+    <Toolbar 
+      tools={toolSlots}
+      selectedTool={game.selectedTool}
+      onselect={(t) => game.selectTool(t)}
+    />
+  </div>
+  
+  <div 
+    class="game-area"
+    class:placing-mode={game.selectedTool !== null}
+    style="width: {GRID_WIDTH}px; height: {GRID_HEIGHT}px;"
+    onclick={handleGameClick}
+    role="application"
+    aria-label="Game area"
+  >
+    <!-- Background grass -->
+    <div class="grass-background"></div>
+    
+    <!-- Food sources -->
+    {#each game.foods as food}
+      <FoodSource
+        type={food.type}
+        position={food.position}
+        available={!food.pickedUp && !food.inBasket && !food.stolen}
+      />
+    {/each}
+    
+    <!-- Placed barriers/tools -->
+    {#each game.barriers as barrier}
+      <Barrier 
+        type={barrier.type}
+        position={barrier.position}
+      />
+    {/each}
+    
+    <!-- Animals -->
+    {#each game.animals as animal}
+      <Animal {animal} />
+    {/each}
+    
+    <!-- Farmer -->
+    <Farmer 
+      state={game.farmer.state}
+      position={game.farmer.position}
+      carrying={game.farmer.carrying ? FOOD_EMOJI[game.farmer.carrying] : null}
+      direction={game.farmer.direction}
+    />
+    
+    <!-- Basket -->
+    <Basket 
+      contents={collectedFood}
+    />
+  </div>
+  
+  <!-- Game status overlays -->
+  {#if game.gameStatus === 'won'}
+    <div class="overlay win">
+      <div class="overlay-content">
+        <h2>🎉 Level Complete!</h2>
+        <p>You gathered all the ingredients!</p>
+        {#if game.levelIndex < LEVELS.length - 1}
+          <button onclick={() => game.nextLevel()}>Next Level →</button>
+        {:else}
+          <p>Congratulations! You've completed all levels!</p>
+          <button onclick={() => game.initLevel(0)}>Play Again</button>
+        {/if}
+      </div>
+    </div>
+  {/if}
+  
+  {#if game.gameStatus === 'lost'}
+    <div class="overlay lose">
+      <div class="overlay-content">
+        <h2>😢 The animals got everything!</h2>
+        <p>Don't worry, try again!</p>
+        <button onclick={() => game.initLevel(game.levelIndex)}>Retry Level</button>
+      </div>
+    </div>
+  {/if}
+  
+  {#if !game.gameStatus || game.gameStatus === 'ready'}
+    <div class="overlay start">
+      <div class="overlay-content">
+        <h2>{game.currentLevel?.name ?? 'Loading'}</h2>
+        <p>Collect: {game.currentLevel?.recipe?.map(f => FOOD_EMOJI[f]).join(' ') ?? ''}</p>
+        <p class="hint">Use arrow keys to move, Space to pick up food</p>
+        <button onclick={() => game.startLevel()}>Start Level</button>
+      </div>
+    </div>
+  {/if}
+  
+  <footer class="controls-help">
+    <span>⬆️⬇️⬅️➡️ Move</span>
+    <span>Space: Pick up / Place</span>
+    <span>Enter: Drop in basket</span>
+    <span>1-5: Select tool</span>
+    <span>Esc: Cancel</span>
+  </footer>
+</div>
+
+<style>
+  .game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #87CEEB 0%, #90EE90 100%);
+    padding: 20px;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: #5D4037;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+  }
+  
+  .level-info {
+    font-size: 1rem;
+    color: #795548;
+  }
+  
+  .recipe-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 8px;
+    padding: 6px 16px;
+    background: rgba(255,255,240,0.9);
+    border-radius: 20px;
+    border: 2px solid #8B4513;
+  }
+  
+  .recipe-label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #5D4037;
+  }
+  
+  .recipe-item {
+    position: relative;
+    font-size: 1.5rem;
+    transition: opacity 0.2s;
+  }
+  
+  .recipe-item.collected {
+    opacity: 0.5;
+    filter: grayscale(0.5);
+  }
+  
+  .recipe-item .check {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    font-size: 0.7rem;
+    color: #4CAF50;
+    font-weight: bold;
+    background: white;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    text-align: center;
+  }
+  
+  .toolbar-area {
+    margin-bottom: 10px;
+  }
+  
+  .game-area {
+    position: relative;
+    background: #7CB342;
+    border: 4px solid #5D4037;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    overflow: hidden;
+    cursor: default;
+  }
+  
+  .game-area.placing-mode {
+    cursor: crosshair;
+  }
+  
+  .grass-background {
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(circle at 20% 30%, #8BC34A 0%, transparent 40%),
+      radial-gradient(circle at 70% 60%, #9CCC65 0%, transparent 30%),
+      radial-gradient(circle at 40% 80%, #8BC34A 0%, transparent 35%),
+      #7CB342;
+  }
+  
+  .overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.6);
+    z-index: 100;
+  }
+  
+  .overlay-content {
+    background: #FFFDE7;
+    border: 4px solid #8B4513;
+    border-radius: 16px;
+    padding: 30px 50px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  }
+  
+  .overlay-content h2 {
+    font-size: 1.8rem;
+    margin: 0 0 10px;
+    color: #5D4037;
+  }
+  
+  .overlay-content p {
+    margin: 10px 0;
+    color: #795548;
+  }
+  
+  .overlay-content .hint {
+    font-size: 0.9rem;
+    color: #9E9E9E;
+  }
+  
+  .overlay-content button {
+    margin-top: 15px;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+  }
+  
+  .overlay-content button:hover {
+    background: #43A047;
+    transform: scale(1.05);
+  }
+  
+  .win .overlay-content {
+    border-color: #FFD700;
+    background: linear-gradient(180deg, #FFF8E1, #FFFDE7);
+  }
+  
+  .lose .overlay-content {
+    border-color: #D32F2F;
+  }
+  
+  .controls-help {
+    margin-top: 15px;
+    display: flex;
+    gap: 20px;
+    font-size: 0.85rem;
+    color: #5D4037;
+    background: rgba(255,255,255,0.7);
+    padding: 8px 16px;
+    border-radius: 8px;
+  }
+  
+  .controls-help span {
+    white-space: nowrap;
+  }
+</style>
