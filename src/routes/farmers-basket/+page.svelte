@@ -23,6 +23,7 @@
   let touchStartTime = 0;
   let touchStartPos: { x: number; y: number } | null = null;
   let hasMoved = false;
+  let isDraggingFarmer = false;  // Only true if touch started on farmer
   
   // Placement cursor for keyboard tool placement
   // When a tool is selected, this shows where it will be placed
@@ -300,6 +301,13 @@
     const x = (touch.clientX - rect.left) / scale;
     const y = (touch.clientY - rect.top) / scale;
     
+    // Check if touch started near the farmer (within 50px)
+    const farmerDist = Math.sqrt(
+      Math.pow(x - game.farmer.position.x, 2) + 
+      Math.pow(y - game.farmer.position.y, 2)
+    );
+    isDraggingFarmer = farmerDist < 50;
+    
     // Track for tap gesture detection
     touchStartTime = Date.now();
     touchStartPos = { x, y };
@@ -307,13 +315,16 @@
     
     // Don't set touchTarget yet - wait until user actually drags
     // This prevents the farmer from jumping on tap
-    e.preventDefault();
+    if (isDraggingFarmer) {
+      e.preventDefault();
+    }
   }
   
   function handleTouchMove(e: TouchEvent) {
     // Only handle touch when game is playing
     if (game.gameStatus !== 'playing') return;
     if (game.selectedTool) return;
+    if (!isDraggingFarmer) return;  // Only move if touch started on farmer
     
     const touch = e.touches[0];
     const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
@@ -349,13 +360,11 @@
     const tapDuration = Date.now() - touchStartTime;
     const isTap = tapDuration < 300 && !hasMoved;
     
-    if (isTap && game.gameStatus === 'playing') {
-      // Tap gesture: pickup or deposit based on context
+    // Tap on farmer area: pickup or deposit
+    if (isTap && isDraggingFarmer && game.gameStatus === 'playing') {
       if (game.farmer.carrying) {
-        // If carrying food, deposit it
         game.dropFood();
       } else {
-        // If not carrying, try to pickup
         game.pickupFood();
       }
     }
@@ -363,6 +372,7 @@
     touchTarget = null;
     game.setTouchTarget(null);
     touchStartPos = null;
+    isDraggingFarmer = false;
   }
   
   // Tool inventory for toolbar - all tools always unlocked
