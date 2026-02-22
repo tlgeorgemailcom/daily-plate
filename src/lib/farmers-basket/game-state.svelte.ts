@@ -140,6 +140,9 @@ export function createGameState() {
   
   // Touch target for mobile (actual position, not direction)
   let touchTargetPos: Position | null = null;
+  // Offset so farmer appears above finger (visible for right-handed users)
+  const TOUCH_OFFSET_X = -30;
+  const TOUCH_OFFSET_Y = -50;
   
   // Spawn timers
   let spawnTimeouts: number[] = [];
@@ -282,11 +285,11 @@ export function createGameState() {
     
     let moved = false;
     
-    // Touch movement: directly follow finger position
+    // Touch movement: directly follow finger position (with offset so farmer is visible)
     if (touchTargetPos) {
-      // Clamp target to bounds
-      const targetX = Math.max(20, Math.min(GRID_WIDTH - 20, touchTargetPos.x));
-      const targetY = Math.max(20, Math.min(GRID_HEIGHT - 20, touchTargetPos.y));
+      // Apply offset so farmer appears above/left of finger
+      const targetX = Math.max(20, Math.min(GRID_WIDTH - 20, touchTargetPos.x + TOUCH_OFFSET_X));
+      const targetY = Math.max(20, Math.min(GRID_HEIGHT - 20, touchTargetPos.y + TOUCH_OFFSET_Y));
       
       const diffX = targetX - farmer.position.x;
       const diffY = targetY - farmer.position.y;
