@@ -7,11 +7,11 @@ import type {
 import { ANIMAL_SPEED, ANIMAL_ESCAPE_TIME, ANIMAL_TARGETS } from './types';
 
 // Game constants
-export const GRID_WIDTH = 400;
-export const GRID_HEIGHT = 300;
-const FARMER_SPEED = 120; // pixels per second
-const BASKET_POSITION: Position = { x: 200, y: 80 };
-const FARMER_START: Position = { x: 200, y: 200 };
+export const GRID_WIDTH = 600;
+export const GRID_HEIGHT = 450;
+const FARMER_SPEED = 180; // pixels per second (increased for larger grid)
+const BASKET_POSITION: Position = { x: 300, y: 100 };
+const FARMER_START: Position = { x: 300, y: 320 };
 
 // Food item with position and status
 interface FoodItem {

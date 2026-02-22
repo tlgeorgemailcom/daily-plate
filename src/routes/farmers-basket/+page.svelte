@@ -16,6 +16,11 @@
   let touchTarget: { x: number; y: number } | null = $state(null);
   let gameAreaElement: HTMLDivElement | null = null;
   
+  // Tap gesture detection
+  let touchStartTime = 0;
+  let touchStartPos: { x: number; y: number } | null = null;
+  let hasMoved = false;
+  
   // Keyboard controls
   let keysPressed = new Set<string>();
   
@@ -93,6 +98,11 @@
     const x = touch.clientX - rect.left;
     const y = touch.clientY - rect.top;
     
+    // Track for tap gesture detection
+    touchStartTime = Date.now();
+    touchStartPos = { x, y };
+    hasMoved = false;
+    
     touchTarget = { x, y };
     game.setTouchTarget({ x, y });
     e.preventDefault();
@@ -106,14 +116,38 @@
     const x = touch.clientX - rect.left;
     const y = touch.clientY - rect.top;
     
+    // Check if moved significantly (more than 15px)
+    if (touchStartPos) {
+      const dist = Math.sqrt(
+        Math.pow(x - touchStartPos.x, 2) + Math.pow(y - touchStartPos.y, 2)
+      );
+      if (dist > 15) hasMoved = true;
+    }
+    
     touchTarget = { x, y };
     game.setTouchTarget({ x, y });
     e.preventDefault();
   }
   
   function handleTouchEnd() {
+    // Detect tap gesture: short duration and minimal movement
+    const tapDuration = Date.now() - touchStartTime;
+    const isTap = tapDuration < 300 && !hasMoved;
+    
+    if (isTap && game.gameStatus === 'playing') {
+      // Tap gesture: pickup or deposit based on context
+      if (game.farmer.carrying) {
+        // If carrying food, deposit it
+        game.dropFood();
+      } else {
+        // If not carrying, try to pickup
+        game.pickupFood();
+      }
+    }
+    
     touchTarget = null;
     game.setTouchTarget(null);
+    touchStartPos = null;
   }
   
   // Update farmer direction based on keys OR touch target
@@ -284,22 +318,12 @@
     <span>Esc: Cancel</span>
   </footer>
   
-  <!-- Mobile action buttons -->
+  <!-- Mobile gesture hints -->
   <div class="mobile-controls">
-    <button 
-      class="action-btn pickup" 
-      onclick={() => { if (game.selectedTool) game.placeTool(); else game.pickupFood(); }}
-      disabled={game.gameStatus !== 'playing'}
-    >
-      {game.selectedTool ? '📍 Place' : '👆 Pick Up'}
-    </button>
-    <button 
-      class="action-btn deposit" 
-      onclick={() => game.dropFood()}
-      disabled={!game.farmer.carrying || game.gameStatus !== 'playing'}
-    >
-      🧺 Deposit
-    </button>
+    <div class="gesture-hint">
+      <span class="gesture-icon">👆</span>
+      <span class="gesture-text">Drag to move • Tap to {game.farmer.carrying ? 'deposit' : 'pickup'}</span>
+    </div>
   </div>
 </div>
 
@@ -501,45 +525,48 @@
   /* Mobile controls */
   .mobile-controls {
     display: none;
-    gap: 15px;
     margin-top: 15px;
   }
   
-  .action-btn {
-    padding: 16px 32px;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: transform 0.1s, opacity 0.2s;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
+  .gesture-hint {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.8);
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    color: #5D4037;
   }
   
-  .action-btn:active {
-    transform: scale(0.95);
+  .gesture-icon {
+    font-size: 1.4rem;
   }
   
-  .action-btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-  
-  .action-btn.pickup {
-    background: linear-gradient(180deg, #4CAF50, #388E3C);
-    color: white;
-    box-shadow: 0 4px 0 #2E7D32;
-  }
-  
-  .action-btn.deposit {
-    background: linear-gradient(180deg, #FF9800, #F57C00);
-    color: white;
-    box-shadow: 0 4px 0 #E65100;
+  .gesture-text {
+    font-weight: 500;
   }
   
   .mobile-hint {
     display: none;
+  }
+  
+  /* Tablet sizing (larger game) */
+  @media (min-width: 768px) and (max-width: 1024px) and (pointer: coarse) {
+    .game-area {
+      transform: scale(1.2);
+      transform-origin: top center;
+      margin-bottom: 80px;
+    }
+  }
+  
+  /* Large tablet / iPad Pro */
+  @media (min-width: 1024px) and (pointer: coarse) {
+    .game-area {
+      transform: scale(1.4);
+      transform-origin: top center;
+      margin-bottom: 150px;
+    }
   }
   
   /* Responsive: show mobile controls on touch devices */
@@ -557,8 +584,7 @@
     }
     
     .game-area {
-      max-width: calc(100vw - 40px);
-      max-height: calc(100vw - 40px);
+      max-width: calc(100vw - 20px);
       touch-action: none;
     }
     
@@ -568,6 +594,15 @@
     
     .header h1 {
       font-size: 1.5rem;
+    }
+  }
+  
+  /* Phone (smaller screens) - scale down if needed */
+  @media (max-width: 620px) and (pointer: coarse) {
+    .game-area {
+      transform: scale(calc((100vw - 20px) / 600));
+      transform-origin: top center;
+      margin-bottom: -50px;
     }
   }
   
