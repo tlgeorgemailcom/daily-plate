@@ -46,6 +46,7 @@
   // Handle touch start for mobile drag
   function handleTouchStart(e: TouchEvent, tool: ToolSlot) {
     if (!isAvailable(tool)) return;
+    e.preventDefault(); // Prevent default to avoid click conflicts
     ontouchdragstart?.(tool.type);
   }
 </script>
@@ -103,6 +104,7 @@
     align-items: center;
     justify-content: center;
     transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    touch-action: none; /* Prevent browser touch gestures */
   }
   
   .tool-slot:active:not(:disabled) {
