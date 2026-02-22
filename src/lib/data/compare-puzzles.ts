@@ -60,6 +60,17 @@ export const COMPARE_PUZZLES: ComparePuzzle[] = [
       { x: 45, y: 75, radius: 8 },  // Difference 3
       { x: 56, y: 67, radius: 8 },  // Difference 4
     ]
+  },
+  {
+    id: 'puzzle-005',
+    imageA: '/images/compare/puzzle-005-a.jpg',
+    imageB: '/images/compare/puzzle-005-b.jpg',
+    differences: [
+      { x: 26, y: 55, radius: 8 },  // Difference 1
+      { x: 73, y: 34, radius: 8 },  // Difference 2
+      { x: 64, y: 22, radius: 8 },  // Difference 3
+      { x: 51, y: 73, radius: 8 },  // Difference 4
+    ]
   }
 ];
 

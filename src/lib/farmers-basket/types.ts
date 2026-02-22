@@ -13,6 +13,7 @@ export type AnimalState =
   | 'pushing'
   | 'sniffing'
   | 'stealing'
+  | 'celebrating'  // Victory dance after stealing
   | 'distracted'
   | 'avoiding'
   | 'flying';
@@ -42,6 +43,7 @@ export interface Animal {
   targetFood: FoodType | null;
   path: Position[];
   escapeProgress: number; // 0-100 for digging/climbing progress
+  stolenFood?: FoodType;  // Food the animal stole (shown during celebration)
 }
 
 export interface Farmer {

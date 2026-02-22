@@ -10,7 +10,7 @@
   import FoodSource from '$lib/farmers-basket/FoodSource.svelte';
   import Toolbar from '$lib/farmers-basket/Toolbar.svelte';
   import Barrier from '$lib/farmers-basket/Barrier.svelte';
-  import { FOOD_EMOJI, TOOL_EMOJI } from '$lib/farmers-basket/types';
+  import { FOOD_EMOJI, TOOL_EMOJI, ANIMAL_EMOJI } from '$lib/farmers-basket/types';
   import type { ToolType, FoodType } from '$lib/farmers-basket/types';
   
   let game = createGameState();
@@ -573,6 +573,19 @@
     />
   </div>
   
+  <!-- Theft notification area -->
+  {#if game.theftLog.length > 0}
+    <div class="theft-notifications">
+      {#each game.theftLog as theft (theft.id)}
+        <div class="theft-entry" class:fresh={Date.now() - theft.timestamp < 3000}>
+          <span class="thief-emoji">{ANIMAL_EMOJI[theft.animalType]}</span>
+          <span class="theft-text">stolen</span>
+          <span class="stolen-emoji">{FOOD_EMOJI[theft.foodType]}</span>
+        </div>
+      {/each}
+    </div>
+  {/if}
+  
   <div 
     class="game-area"
     class:placing-mode={game.selectedTool !== null}
@@ -826,6 +839,70 @@
   
   .toolbar-area {
     margin-bottom: 10px;
+  }
+  
+  /* Theft notifications area */
+  .theft-notifications {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    padding: 6px 12px;
+    background: linear-gradient(135deg, #ff6b6b, #ee5a5a);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(255, 0, 0, 0.3);
+    animation: alert-pulse 1s ease-in-out infinite;
+  }
+  
+  @keyframes alert-pulse {
+    0%, 100% { box-shadow: 0 2px 8px rgba(255, 0, 0, 0.3); }
+    50% { box-shadow: 0 2px 16px rgba(255, 0, 0, 0.6); }
+  }
+  
+  .theft-entry {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    animation: slide-in 0.3s ease-out;
+  }
+  
+  .theft-entry.fresh {
+    animation: slide-in 0.3s ease-out, shake-alert 0.5s ease-in-out 0.3s;
+  }
+  
+  @keyframes slide-in {
+    from { opacity: 0; transform: translateY(-10px) scale(0.9); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  
+  @keyframes shake-alert {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-4px); }
+    40% { transform: translateX(4px); }
+    60% { transform: translateX(-4px); }
+    80% { transform: translateX(4px); }
+  }
+  
+  .thief-emoji {
+    font-size: 20px;
+  }
+  
+  .theft-text {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+  
+  .stolen-emoji {
+    font-size: 20px;
   }
   
   .game-area {

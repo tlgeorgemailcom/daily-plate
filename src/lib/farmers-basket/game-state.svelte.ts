@@ -196,6 +196,15 @@ export function createGameState() {
   let selectedTool = $state<ToolType | null>(null);
   let activeLidId = $state<string | null>(null);  // Track active lid covering basket
   
+  // Theft log for notifications
+  interface TheftEntry {
+    id: string;
+    animalType: AnimalType;
+    foodType: FoodType;
+    timestamp: number;
+  }
+  let theftLog = $state<TheftEntry[]>([]);
+  
   // Game state
   let gameStatus = $state<GameStatus>('ready');
   
@@ -243,6 +252,7 @@ export function createGameState() {
     animals = [];
     barriers = [];
     foods = [];  // Clear any carried/deposited items
+    theftLog = [];  // Clear theft notifications
     
     // Setup food sources at bottom based on foodSupply
     // Only create sources for items with quantity > 0
@@ -601,10 +611,17 @@ export function createGameState() {
     if (nearBasket) {
       farmer.state = 'dropping';
       const foodId = carryingFoodId;
+      const foodType = farmer.carrying;
       setTimeout(() => {
         const food = foods.find(f => f.id === foodId);
         if (food) {
           food.inBasket = true;
+          
+          // Remove theft notification for this food type (it's been replaced)
+          const theftIndex = theftLog.findIndex(t => t.foodType === foodType);
+          if (theftIndex !== -1) {
+            theftLog = theftLog.filter((_, i) => i !== theftIndex);
+          }
         }
         farmer.carrying = null;
         carryingFoodId = null;
@@ -777,7 +794,7 @@ export function createGameState() {
       }
       
       if ((atExactBasket || (atBasketColumn && withinBasketRange)) && !pathBlocked) {
-        if (animal.state !== 'sniffing' && animal.state !== 'stealing') {
+        if (animal.state !== 'sniffing' && animal.state !== 'stealing' && animal.state !== 'celebrating') {
           return { ...animal, state: 'sniffing' as const };
         }
         
@@ -791,11 +808,29 @@ export function createGameState() {
           if (stolenItem) {
             stolenItem.stolen = true;
             stolenItem.inBasket = false;
-            // Remove this animal after stealing
+            
+            // Add to theft log
+            const theftEntry: TheftEntry = {
+              id: `theft-${Date.now()}`,
+              animalType: animal.type,
+              foodType: stolenItem.type,
+              timestamp: Date.now()
+            };
+            theftLog = [theftEntry, ...theftLog].slice(0, 5); // Keep last 5
+            
+            // Go to celebrating state briefly, then remove
             setTimeout(() => {
-              animals = animals.filter(a => a.id !== animal.id);
-            }, 500);
-            return { ...animal, state: 'stealing' as const };
+              // Switch from stealing to celebrating (victory dance)
+              animals = animals.map(a => 
+                a.id === animal.id ? { ...a, state: 'celebrating' as const } : a
+              );
+              // Remove animal after celebration
+              setTimeout(() => {
+                animals = animals.filter(a => a.id !== animal.id);
+              }, 1500);  // 1.5s celebration dance
+            }, 300);
+            
+            return { ...animal, state: 'stealing' as const, stolenFood: stolenItem.type };
           }
           return animal;
         }
@@ -1014,6 +1049,7 @@ export function createGameState() {
     get tools() { return tools; },
     get selectedTool() { return selectedTool; },
     get gameStatus() { return gameStatus; },
+    get theftLog() { return theftLog; },
     
     // Actions
     initLevel,
