@@ -329,20 +329,16 @@
     if (game.gameStatus !== 'playing') return;
     if (game.selectedTool) return;
     
+    // Tool dragging is handled by document-level listeners
+    if (touchDragTool) return;
+    
+    if (!isDraggingFarmer) return;  // Only move if touch started on farmer
+    
     const touch = e.touches[0];
     const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
     const scale = rect.width / GRID_WIDTH;
     const x = (touch.clientX - rect.left) / scale;
     const y = (touch.clientY - rect.top) / scale;
-    
-    // If touch-dragging a tool, just track position for visual feedback
-    if (touchDragTool) {
-      touchTarget = { x, y };
-      e.preventDefault();
-      return;
-    }
-    
-    if (!isDraggingFarmer) return;  // Only move if touch started on farmer
     
     // Check if moved significantly (more than 15px in game coords)
     if (touchStartPos) {
@@ -367,13 +363,8 @@
   }
   
   function handleTouchEnd(e: TouchEvent) {
-    // If touch-dragging a tool, place it
-    if (touchDragTool && touchTarget) {
-      game.placeToolByDrag(touchDragTool, touchTarget.x, touchTarget.y);
-      touchDragTool = null;
-      touchTarget = null;
-      return;
-    }
+    // Tool dragging is handled by document-level listeners
+    if (touchDragTool) return;
     
     // Detect tap gesture: short duration and minimal movement
     const tapDuration = Date.now() - touchStartTime;
@@ -502,8 +493,8 @@
     role="application"
     aria-label="Game area"
   >
-    <!-- Touch target indicator -->
-    {#if touchTarget}
+    <!-- Touch target indicator (only for farmer movement, not tool dragging) -->
+    {#if touchTarget && !touchDragTool}
       <div class="touch-target" style="left: {touchTarget.x}px; top: {touchTarget.y}px;"></div>
     {/if}
     
