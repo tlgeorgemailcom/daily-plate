@@ -140,8 +140,8 @@ export function createGameState() {
   
   // Touch target for mobile (actual position, not direction)
   let touchTargetPos: Position | null = null;
-  // Offset so farmer appears above finger (visible for right-handed users)
-  const TOUCH_OFFSET_X = -30;
+  // Offset so farmer appears above finger (visible while dragging)
+  const TOUCH_OFFSET_X = 0;
   const TOUCH_OFFSET_Y = -50;
   
   // Spawn timers
