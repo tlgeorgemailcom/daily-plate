@@ -30,6 +30,7 @@
   let isDraggingFarmer = false;  // Only true if touch started on farmer
   let touchDragTool: ToolType | null = $state(null);  // Tool being touch-dragged from toolbar
   let touchDragBarrierId: string | null = $state(null);  // Barrier being touch-dragged to reposition
+  let lastTouchTime = 0;  // Prevent click events from firing after touch on mobile
   
   // Placement cursor for keyboard tool placement
   // When a tool is selected, this shows where it will be placed
@@ -306,6 +307,9 @@
   function handleGameClick(e: MouseEvent) {
     if (game.gameStatus !== 'playing') return;
     
+    // Prevent click from firing after touch on mobile (browsers fire both)
+    if (Date.now() - lastTouchTime < 500) return;
+    
     const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
     const scale = rect.width / GRID_WIDTH;
     const x = (e.clientX - rect.left) / scale;
@@ -501,6 +505,9 @@
         game.pickupFood();
       }
     }
+    
+    // Record touch time to prevent duplicate click event
+    lastTouchTime = Date.now();
     
     touchTarget = null;
     game.setTouchTarget(null);
