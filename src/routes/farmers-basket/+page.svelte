@@ -516,11 +516,12 @@
   }
   
   // Tool inventory for toolbar - all tools always unlocked
-  // Order: 1.Net 2.Decoy 3.Fence 4.Lid 5.Scarecrow
+  // Order: 1.Net 2.Decoy 3.Fence 4.Wall 5.Lid 6.Scarecrow
   const toolSlots = $derived([
     { type: 'net' as ToolType, remaining: game.tools.net, unlocked: true },
     { type: 'decoy' as ToolType, remaining: game.tools.decoy, unlocked: true },
     { type: 'fence' as ToolType, remaining: game.tools.fence, unlocked: true },
+    { type: 'wall' as ToolType, remaining: game.tools.wall, unlocked: true },
     { type: 'lid' as ToolType, remaining: game.tools.lid, unlocked: true },
     { type: 'scarecrow' as ToolType, remaining: game.tools.scarecrow, unlocked: true },
   ]);

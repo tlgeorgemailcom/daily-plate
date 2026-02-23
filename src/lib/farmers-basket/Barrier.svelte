@@ -136,4 +136,10 @@
   .net {
     font-size: 32px;
   }
+  
+  /* Wall - solid and imposing */
+  .wall {
+    font-size: 38px;
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.4));
+  }
 </style>

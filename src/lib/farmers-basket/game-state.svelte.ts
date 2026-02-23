@@ -4,7 +4,7 @@ import type {
   Animal, Barrier, Level,
   AnimalType, FoodType, ToolType, Position, Direction
 } from './types';
-import { ANIMAL_SPEED, ANIMAL_ESCAPE_TIME, ANIMAL_TARGETS, FOOD_ANIMAL_MAP } from './types';
+import { ANIMAL_SPEED, ANIMAL_ESCAPE_TIME, ESCAPE_TIME_BY_BARRIER, ANIMAL_TARGETS, FOOD_ANIMAL_MAP } from './types';
 
 // Game constants
 export const GRID_WIDTH = 650;
@@ -104,8 +104,11 @@ export const LEVELS: Level[] = [
     world: 1,
     levelNum: 1,
     recipe: ['lettuce'],
-    tools: [{ type: 'fence', count: 2, emoji: '🚧' }],  // Added for testing
-    animalSpawns: [{ type: 'rabbit', delay: 5000 }],    // Added for testing
+    tools: [
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'wall', count: 5, emoji: '🧱' }
+    ],
+    animalSpawns: [{ type: 'rabbit', delay: 5000 }],
     foodSupply: { lettuce: 3, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0 }
   },
   {
@@ -114,7 +117,10 @@ export const LEVELS: Level[] = [
     world: 1,
     levelNum: 2,
     recipe: ['lettuce', 'tomato'],
-    tools: [{ type: 'fence', count: 2, emoji: '🚧' }],
+    tools: [
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'wall', count: 5, emoji: '🧱' }
+    ],
     animalSpawns: [{ type: 'rabbit', delay: 3000 }],
     foodSupply: { lettuce: 2, tomato: 2, carrot: 0, cheese: 0, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0 }
   },
@@ -124,7 +130,11 @@ export const LEVELS: Level[] = [
     world: 1,
     levelNum: 3,
     recipe: ['lettuce', 'tomato', 'carrot'],
-    tools: [{ type: 'fence', count: 3, emoji: '🚧' }],
+    tools: [
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'net', count: 2, emoji: '🥅' },
+      { type: 'wall', count: 5, emoji: '🧱' }
+    ],
     animalSpawns: [
       { type: 'rabbit', delay: 2000 },
       { type: 'rabbit', delay: 8000 }
@@ -138,7 +148,9 @@ export const LEVELS: Level[] = [
     levelNum: 4,
     recipe: ['lettuce', 'cheese', 'bread'],
     tools: [
-      { type: 'fence', count: 3, emoji: '🚧' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'net', count: 2, emoji: '🥅' },
+      { type: 'wall', count: 5, emoji: '🧱' },
       { type: 'decoy', count: 2, emoji: '🍯' }
     ],
     animalSpawns: [
@@ -154,7 +166,9 @@ export const LEVELS: Level[] = [
     levelNum: 5,
     recipe: ['lettuce', 'tomato', 'carrot', 'cheese'],
     tools: [
-      { type: 'fence', count: 4, emoji: '🚧' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'net', count: 3, emoji: '🥅' },
+      { type: 'wall', count: 5, emoji: '🧱' },
       { type: 'decoy', count: 2, emoji: '🍯' },
       { type: 'lid', count: 1, emoji: '🥏' }
     ],
@@ -191,7 +205,8 @@ export function createGameState() {
     decoy: null,
     fence: null,
     lid: null,
-    scarecrow: null
+    scarecrow: null,
+    wall: null
   });
   let selectedTool = $state<ToolType | null>(null);
   let activeLidId = $state<string | null>(null);  // Track active lid covering basket
@@ -698,7 +713,7 @@ export function createGameState() {
     tools[selectedTool] = count - 1;
     barriers = [...barriers, {
       id: `barrier-${Date.now()}`,
-      type: selectedTool as 'fence' | 'scarecrow' | 'torch' | 'decoy',
+      type: selectedTool as 'fence' | 'scarecrow' | 'torch' | 'decoy' | 'net' | 'wall',
       position: snappedPos,
       health: selectedTool === 'decoy' ? 100 : undefined
     }];
@@ -729,7 +744,7 @@ export function createGameState() {
     tools[toolType] = count - 1;
     barriers = [...barriers, {
       id: `barrier-${Date.now()}`,
-      type: toolType as 'fence' | 'scarecrow' | 'torch' | 'decoy',
+      type: toolType as 'fence' | 'scarecrow' | 'torch' | 'decoy' | 'net' | 'wall',
       position: snappedPos,
       health: toolType === 'decoy' ? 100 : undefined
     }];
@@ -983,6 +998,11 @@ export function createGameState() {
             });
             const barrierType = blockingBarrier?.type;
             
+            // WALL: Completely impassable for ALL ground animals
+            if (barrierType === 'wall') {
+              continue; // Try another direction - no escape possible
+            }
+            
             // Store where we're trying to escape to
             const escapeTarget = { col: newCol, row: newRow };
             
@@ -990,9 +1010,9 @@ export function createGameState() {
             if (animal.type === 'rabbit') {
               // Rabbit hops through fence gaps easily, but must dig under net
               if (barrierType === 'fence') {
-                return { ...animal, state: 'squeezing' as const, escapeProgress: 0, escapeTarget };
+                return { ...animal, state: 'squeezing' as const, escapeProgress: 0, escapeTarget, escapeBarrierType: 'fence' as const };
               } else {
-                return { ...animal, state: 'digging' as const, escapeProgress: 0, escapeTarget };
+                return { ...animal, state: 'digging' as const, escapeProgress: 0, escapeTarget, escapeBarrierType: 'net' as const };
               }
             } else if (animal.type === 'mouse') {
               // Mouse walks right through fence, but must squeeze through net
@@ -1005,10 +1025,10 @@ export function createGameState() {
                   position: newPos 
                 };
               } else {
-                return { ...animal, state: 'squeezing' as const, escapeProgress: 0, escapeTarget };
+                return { ...animal, state: 'squeezing' as const, escapeProgress: 0, escapeTarget, escapeBarrierType: 'net' as const };
               }
             } else if (animal.type === 'squirrel') {
-              return { ...animal, state: 'climbing' as const, escapeProgress: 0, escapeTarget };
+              return { ...animal, state: 'climbing' as const, escapeProgress: 0, escapeTarget, escapeBarrierType: barrierType as 'fence' | 'net' | 'scarecrow' };
             }
             continue; // Try another direction (fox, raccoon)
           }
@@ -1041,7 +1061,10 @@ export function createGameState() {
     // Handle escape progress (runs every frame, not just on move intervals)
     animals = animals.map(animal => {
       if (['digging', 'climbing', 'squeezing'].includes(animal.state)) {
-        const escapeTime = ANIMAL_ESCAPE_TIME[animal.type];
+        // Use barrier-specific escape time if available, otherwise animal default
+        const barrierTimes = ESCAPE_TIME_BY_BARRIER[animal.type];
+        const escapeTime = (barrierTimes && animal.escapeBarrierType && barrierTimes[animal.escapeBarrierType]) 
+          ?? ANIMAL_ESCAPE_TIME[animal.type];
         const progress = animal.escapeProgress + (deltaTime * 1000 / escapeTime) * 100;
         if (progress >= 100) {
           // Escaped - move to the target cell we were trying to reach
@@ -1053,6 +1076,7 @@ export function createGameState() {
             state: 'approaching' as const, 
             escapeProgress: 0,
             escapeTarget: undefined,
+            escapeBarrierType: undefined,
             gridPos: newGridPos,
             position: newPos
           };

@@ -22,7 +22,7 @@ export type Direction = 'up' | 'down' | 'left' | 'right';
 
 export type FarmerState = 'idle' | 'walking' | 'carrying' | 'depositing' | 'waiting' | 'placing' | 'picking' | 'dropping' | 'recovering';
 
-export type ToolType = 'fence' | 'scarecrow' | 'cat' | 'dog' | 'torch' | 'bell' | 'decoy' | 'lid' | 'net';
+export type ToolType = 'fence' | 'scarecrow' | 'cat' | 'dog' | 'torch' | 'bell' | 'decoy' | 'lid' | 'net' | 'wall';
 
 export type FoodType = 
   | 'lettuce' | 'tomato' | 'carrot' | 'cheese' | 'egg' 
@@ -44,6 +44,7 @@ export interface Animal {
   path: Position[];
   escapeProgress: number; // 0-100 for digging/climbing progress
   escapeTarget?: { col: number; row: number };  // Where animal is trying to escape to
+  escapeBarrierType?: 'fence' | 'net' | 'scarecrow';  // What barrier we're escaping through
   stolenFood?: FoodType;  // Food the animal stole (shown during celebration)
 }
 
@@ -56,7 +57,7 @@ export interface Farmer {
 
 export interface Barrier {
   id: string;
-  type: 'fence' | 'scarecrow' | 'torch' | 'lid' | 'decoy';
+  type: 'fence' | 'scarecrow' | 'torch' | 'lid' | 'decoy' | 'net' | 'wall';
   position: Position;
   health?: number;  // For decoys: 0-100, consumed over time
 }
@@ -122,7 +123,8 @@ export const TOOL_EMOJI: Record<ToolType, string> = {
   bell: '🔔',
   decoy: '🍯',
   lid: '🥏',
-  net: '🥅'
+  net: '🥅',
+  wall: '🧱'
 };
 
 // Animal characteristics
@@ -136,12 +138,31 @@ export const ANIMAL_SPEED: Record<AnimalType, number> = {
 };
 
 export const ANIMAL_ESCAPE_TIME: Record<AnimalType, number> = {
-  rabbit: 3000,   // 3 seconds to dig
+  rabbit: 3000,   // Default dig time
   mouse: 1000,    // 1 second to squeeze
   bird: 0,        // Instant fly
   fox: 2000,      // 2 seconds to leap
   squirrel: 2000, // 2 seconds to climb
   raccoon: 4000   // 4 seconds to push
+};
+
+// Barrier-specific escape times (overrides animal default)
+export const ESCAPE_TIME_BY_BARRIER: Record<string, Record<string, number>> = {
+  rabbit: {
+    fence: 500,    // Squeezes through fence gaps quickly
+    net: 4000,     // Must dig under net - takes longer
+    scarecrow: 1000
+  },
+  mouse: {
+    fence: 0,      // Walks right through fence
+    net: 1500,     // Squeezes through net holes
+    scarecrow: 500
+  },
+  squirrel: {
+    fence: 2000,   // Climbs over
+    net: 2500,     // Climbs but net tangles
+    scarecrow: 1500
+  }
 };
 
 // What foods each animal wants to steal
