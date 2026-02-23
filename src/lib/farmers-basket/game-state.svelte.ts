@@ -101,7 +101,7 @@ export const LEVELS: Level[] = [
   {
     id: '1-1',
     name: 'Simple Salad',
-    world: 1,
+    category: 'Salads',
     levelNum: 1,
     recipe: ['lettuce'],
     tools: [
@@ -109,12 +109,20 @@ export const LEVELS: Level[] = [
       { type: 'wall', count: 5, emoji: '🧱' }
     ],
     animalSpawns: [{ type: 'rabbit', delay: 5000 }],
-    foodSupply: { lettuce: 3, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0 }
+    foodSupply: { lettuce: 3, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0 },
+    servings: 'Serves 1',
+    prepTime: '2 minutes',
+    recipeInstructions: [
+      'Wash lettuce leaves thoroughly under cold water.',
+      'Tear leaves into bite-sized pieces.',
+      'Place in a bowl and drizzle with your favorite dressing.',
+      'Toss gently and serve immediately.'
+    ]
   },
   {
     id: '1-2',
     name: 'Garden Salad',
-    world: 1,
+    category: 'Salads',
     levelNum: 2,
     recipe: ['lettuce', 'tomato'],
     tools: [
@@ -122,13 +130,22 @@ export const LEVELS: Level[] = [
       { type: 'wall', count: 5, emoji: '🧱' }
     ],
     animalSpawns: [{ type: 'rabbit', delay: 3000 }],
-    foodSupply: { lettuce: 2, tomato: 2, carrot: 0, cheese: 0, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0 }
+    foodSupply: { lettuce: 2, tomato: 2, carrot: 0, cheese: 0, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0 },
+    servings: 'Serves 2',
+    prepTime: '5 minutes',
+    recipeInstructions: [
+      'Wash and dry lettuce leaves, then tear into pieces.',
+      'Slice tomatoes into wedges or chunks.',
+      'Combine lettuce and tomatoes in a large bowl.',
+      'Season with salt, pepper, and olive oil.',
+      'Add a splash of balsamic vinegar if desired.'
+    ]
   },
   {
     id: '1-3',
     name: 'Veggie Platter',
-    world: 1,
-    levelNum: 3,
+    category: 'Sides',
+    levelNum: 1,
     recipe: ['lettuce', 'tomato', 'carrot'],
     tools: [
       { type: 'fence', count: 2, emoji: '🚧' },
@@ -139,13 +156,22 @@ export const LEVELS: Level[] = [
       { type: 'rabbit', delay: 2000 },
       { type: 'rabbit', delay: 8000 }
     ],
-    foodSupply: { lettuce: 2, tomato: 2, carrot: 3, cheese: 0, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0 }
+    foodSupply: { lettuce: 2, tomato: 2, carrot: 3, cheese: 0, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0 },
+    servings: 'Serves 4',
+    prepTime: '10 minutes',
+    recipeInstructions: [
+      'Arrange lettuce leaves on a large serving platter.',
+      'Slice tomatoes and arrange in a row.',
+      'Peel carrots and cut into sticks.',
+      'Arrange carrot sticks alongside tomatoes.',
+      'Serve with hummus or ranch dressing for dipping.'
+    ]
   },
   {
     id: '1-4',
     name: 'Cheese Snack',
-    world: 1,
-    levelNum: 4,
+    category: 'Snacks',
+    levelNum: 1,
     recipe: ['lettuce', 'cheese', 'bread'],
     tools: [
       { type: 'fence', count: 2, emoji: '🚧' },
@@ -157,13 +183,22 @@ export const LEVELS: Level[] = [
       { type: 'rabbit', delay: 2000 },
       { type: 'mouse', delay: 5000 }
     ],
-    foodSupply: { lettuce: 2, tomato: 0, carrot: 0, cheese: 3, egg: 0, bread: 2, apple: 0, grapes: 0, bacon: 0, butter: 0 }
+    foodSupply: { lettuce: 2, tomato: 0, carrot: 0, cheese: 3, egg: 0, bread: 2, apple: 0, grapes: 0, bacon: 0, butter: 0 },
+    servings: 'Serves 2',
+    prepTime: '5 minutes',
+    recipeInstructions: [
+      'Toast bread slices until golden brown.',
+      'Slice cheese into thin pieces.',
+      'Layer cheese on warm toast.',
+      'Add fresh lettuce leaves on top.',
+      'Cut diagonally and serve as open-faced sandwiches.'
+    ]
   },
   {
     id: '1-5',
     name: 'Full Garden Salad',
-    world: 1,
-    levelNum: 5,
+    category: 'Salads',
+    levelNum: 3,
     recipe: ['lettuce', 'tomato', 'carrot', 'cheese'],
     tools: [
       { type: 'fence', count: 2, emoji: '🚧' },
@@ -177,12 +212,49 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 4000 },
       { type: 'rabbit', delay: 7000 }
     ],
-    foodSupply: { lettuce: 2, tomato: 2, carrot: 2, cheese: 2, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0 }
+    foodSupply: { lettuce: 2, tomato: 2, carrot: 2, cheese: 2, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0 },
+    servings: 'Serves 4',
+    prepTime: '15 minutes',
+    recipeInstructions: [
+      'Wash and chop lettuce into bite-sized pieces.',
+      'Dice tomatoes and shred carrots.',
+      'Cube or crumble cheese of your choice.',
+      'Combine all vegetables in a large bowl.',
+      'Toss with olive oil and lemon juice.',
+      'Top with cheese and serve with crusty bread.'
+    ]
   }
 ];
 
 // Create game state factory
 export function createGameState() {
+  // Load completed levels from localStorage
+  const STORAGE_KEY = 'farmers-basket-completed';
+  function loadCompletedLevels(): Set<string> {
+    if (typeof window === 'undefined') return new Set();
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        return new Set(JSON.parse(saved));
+      }
+    } catch (e) {
+      console.warn('Failed to load completed levels:', e);
+    }
+    return new Set();
+  }
+  
+  function saveCompletedLevels(levels: Set<string>) {
+    if (typeof window === 'undefined') return;
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify([...levels]));
+    } catch (e) {
+      console.warn('Failed to save completed levels:', e);
+    }
+  }
+  
+  // Completed levels tracking
+  let completedLevels = $state<Set<string>>(loadCompletedLevels());
+  
   // Current level
   let currentLevel = $state<Level | null>(LEVELS[0]);
   let levelIndex = $state(0);
@@ -1131,6 +1203,11 @@ export function createGameState() {
     
     if (allCollected && recipe.length > 0 && gameStatus === 'playing') {
       gameStatus = 'won';
+      
+      // Mark level as completed and save
+      completedLevels = new Set([...completedLevels, currentLevel.id]);
+      saveCompletedLevels(completedLevels);
+      
       stopLevel();
     }
   }
@@ -1168,6 +1245,14 @@ export function createGameState() {
     }
   }
   
+  // Load a specific level by ID
+  function loadLevel(levelId: string) {
+    const index = LEVELS.findIndex(l => l.id === levelId);
+    if (index !== -1) {
+      initLevel(index);
+    }
+  }
+  
   // Initialize first level
   initLevel(0);
   
@@ -1184,6 +1269,8 @@ export function createGameState() {
     get selectedTool() { return selectedTool; },
     get gameStatus() { return gameStatus; },
     get theftLog() { return theftLog; },
+    get completedLevels() { return completedLevels; },
+    get allLevels() { return LEVELS; },
     
     // Actions
     initLevel,
@@ -1199,7 +1286,8 @@ export function createGameState() {
     placeToolAt,
     placeToolByDrag,
     moveBarrier,
-    nextLevel
+    nextLevel,
+    loadLevel
   };
 }
 

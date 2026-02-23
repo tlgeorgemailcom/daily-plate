@@ -83,12 +83,16 @@ export interface BasketItem {
 export interface Level {
   id: string;
   name: string;
-  world: number;
+  category: string;
   levelNum: number;
   recipe: FoodType[];
   tools: Tool[];
   animalSpawns: { type: AnimalType; delay: number }[];
   foodSupply: Record<FoodType, number>; // -1 for unlimited
+  // Recipe details (revealed when level is completed)
+  recipeInstructions?: string[];  // Step-by-step cooking instructions
+  servings?: string;              // e.g., "Serves 2"
+  prepTime?: string;              // e.g., "10 minutes"
 }
 
 // Emoji mappings

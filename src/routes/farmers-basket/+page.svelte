@@ -10,10 +10,14 @@
   import FoodSource from '$lib/farmers-basket/FoodSource.svelte';
   import Toolbar from '$lib/farmers-basket/Toolbar.svelte';
   import Barrier from '$lib/farmers-basket/Barrier.svelte';
+  import RecipeBook from '$lib/farmers-basket/RecipeBook.svelte';
   import { FOOD_EMOJI, TOOL_EMOJI, ANIMAL_EMOJI } from '$lib/farmers-basket/types';
   import type { ToolType, FoodType } from '$lib/farmers-basket/types';
   
   let game = createGameState();
+  
+  // Recipe book modal state
+  let showRecipeBook = $state(false);
   
   // Touch controls - target position for farmer to walk toward
   let touchTarget: { x: number; y: number } | null = $state(null);
@@ -555,7 +559,12 @@
 
 <div class="game-container">
   <header class="header">
-    <h1>🧑‍🌾 Farmer's Basket</h1>
+    <div class="header-top">
+      <h1>🧑‍🌾 Farmer's Basket</h1>
+      <button class="recipe-book-btn" onclick={() => showRecipeBook = true}>
+        📖 Recipes
+      </button>
+    </div>
     <div class="level-info">
       Level {game.currentLevel?.id ?? '?'}: {game.currentLevel?.name ?? 'Loading...'}
     </div>
@@ -719,14 +728,32 @@
   {#if game.gameStatus === 'won'}
     <div class="overlay win">
       <div class="overlay-content">
-        <h2>🎉 Level Complete!</h2>
-        <p>You gathered all the ingredients!</p>
-        {#if game.levelIndex < LEVELS.length - 1}
-          <button onclick={() => game.nextLevel()}>Next Level →</button>
-        {:else}
-          <p>Congratulations! You've completed all levels!</p>
-          <button onclick={() => game.initLevel(0)}>Play Again</button>
+        <h2>🎉 Recipe Unlocked!</h2>
+        <h3 class="recipe-title">{game.currentLevel?.name}</h3>
+        
+        {#if game.currentLevel?.recipeInstructions}
+          <div class="unlocked-recipe">
+            <div class="recipe-meta-win">
+              {#if game.currentLevel.prepTime}<span>⏱️ {game.currentLevel.prepTime}</span>{/if}
+              {#if game.currentLevel.servings}<span>🍽️ {game.currentLevel.servings}</span>{/if}
+            </div>
+            <ol class="recipe-steps">
+              {#each game.currentLevel.recipeInstructions as step}
+                <li>{step}</li>
+              {/each}
+            </ol>
+          </div>
         {/if}
+        
+        <div class="win-buttons">
+          {#if game.levelIndex < LEVELS.length - 1}
+            <button onclick={() => game.nextLevel()}>Next Recipe →</button>
+          {:else}
+            <p>Congratulations! You've unlocked all recipes!</p>
+            <button onclick={() => game.initLevel(0)}>Play Again</button>
+          {/if}
+          <button class="secondary" onclick={() => showRecipeBook = true}>📖 View All Recipes</button>
+        </div>
       </div>
     </div>
   {/if}
@@ -782,6 +809,17 @@
   </div>
 </div>
 
+<!-- Recipe Book Modal -->
+{#if showRecipeBook}
+  <RecipeBook 
+    levels={game.allLevels}
+    completedLevels={game.completedLevels}
+    currentLevelId={game.currentLevel?.id ?? null}
+    onselect={(id) => game.loadLevel(id)}
+    onclose={() => showRecipeBook = false}
+  />
+{/if}
+
 <style>
   .game-container {
     display: flex;
@@ -798,11 +836,41 @@
     margin-bottom: 10px;
   }
   
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+  
   .header h1 {
     font-size: 2rem;
     margin: 0;
     color: #5D4037;
     text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+  }
+  
+  .recipe-book-btn {
+    background: #8B4513;
+    color: white;
+    border: 2px solid #5D4037;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  .recipe-book-btn:hover {
+    background: #A0522D;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  }
+  
+  .recipe-book-btn:active {
+    transform: translateY(0);
   }
   
   .level-info {
@@ -1069,6 +1137,60 @@
   .win .overlay-content {
     border-color: #FFD700;
     background: linear-gradient(180deg, #FFF8E1, #FFFDE7);
+    max-width: 450px;
+  }
+  
+  .recipe-title {
+    color: #8B4513;
+    margin: 0 0 12px 0;
+    font-size: 1.3rem;
+  }
+  
+  .unlocked-recipe {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    text-align: left;
+    border: 2px solid #DEB887;
+  }
+  
+  .recipe-meta-win {
+    display: flex;
+    gap: 16px;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 12px;
+    justify-content: center;
+  }
+  
+  .recipe-steps {
+    margin: 0;
+    padding-left: 24px;
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  .recipe-steps li {
+    margin-bottom: 6px;
+  }
+  
+  .win-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+  
+  .win-buttons button.secondary {
+    background: #8B4513;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+  
+  .win-buttons button.secondary:hover {
+    background: #A0522D;
   }
   
   .lose .overlay-content {
