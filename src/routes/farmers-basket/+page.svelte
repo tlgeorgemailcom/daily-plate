@@ -530,6 +530,13 @@
     game.foods.filter(f => f.inBasket).map(f => f.type)
   );
   
+  // Recently stolen food types (for visual feedback)
+  const recentlyStolen = $derived(
+    game.theftLog
+      .filter(t => Date.now() - t.timestamp < 3000)
+      .map(t => t.foodType)
+  );
+  
   // Handle tool touch drag from toolbar - just sets state, document listeners handle the rest
   function handleToolTouchDragStart(tool: ToolType) {
     touchDragTool = tool;
@@ -553,11 +560,19 @@
     </div>
     <div class="recipe-display">
       <span class="recipe-label">Collect:</span>
-      {#each game.currentLevel?.recipe ?? [] as food}
-        <span class="recipe-item" class:collected={collectedFood.includes(food)}>
+      {#each game.currentLevel?.recipe ?? [] as food, i}
+        {@const isCollected = collectedFood.filter(f => f === food).length > collectedFood.slice(0, collectedFood.indexOf(food)).filter(f => f === food).length || collectedFood.includes(food)}
+        {@const isStolen = recentlyStolen.includes(food) && !collectedFood.includes(food)}
+        <span 
+          class="recipe-item" 
+          class:collected={collectedFood.includes(food)}
+          class:stolen={isStolen}
+        >
           {FOOD_EMOJI[food]}
           {#if collectedFood.includes(food)}
             <span class="check">✓</span>
+          {:else if isStolen}
+            <span class="stolen-mark">!</span>
           {/if}
         </span>
       {/each}
@@ -674,6 +689,7 @@
         id={barrier.id}
         type={barrier.type}
         position={barrier.position}
+        health={barrier.health}
         selected={barrier.id === selectedBarrierId}
         ontouchdragbarrier={handleBarrierTouchDragStart}
       />
@@ -814,27 +830,64 @@
   .recipe-item {
     position: relative;
     font-size: 1.5rem;
-    transition: opacity 0.2s;
+    transition: all 0.3s ease;
+    padding: 2px 4px;
+    border-radius: 6px;
+    border: 2px solid transparent;
   }
   
   .recipe-item.collected {
-    opacity: 0.5;
-    filter: grayscale(0.5);
+    background: rgba(76, 175, 80, 0.2);
+    border-color: #4CAF50;
+  }
+  
+  .recipe-item.stolen {
+    animation: stolen-flash 0.5s ease 3;
+    border-color: #f44336;
+    background: rgba(244, 67, 54, 0.2);
+  }
+  
+  @keyframes stolen-flash {
+    0%, 100% { transform: scale(1); background: rgba(244, 67, 54, 0.2); }
+    50% { transform: scale(1.1); background: rgba(244, 67, 54, 0.4); }
   }
   
   .recipe-item .check {
     position: absolute;
-    top: -4px;
-    right: -4px;
+    top: -6px;
+    right: -6px;
     font-size: 0.7rem;
-    color: #4CAF50;
+    color: white;
     font-weight: bold;
-    background: white;
+    background: #4CAF50;
     border-radius: 50%;
-    width: 14px;
-    height: 14px;
-    line-height: 14px;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
     text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  }
+  
+  .recipe-item .stolen-mark {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    font-size: 0.7rem;
+    color: white;
+    font-weight: bold;
+    background: #f44336;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    animation: pulse-warn 0.5s ease infinite;
+  }
+  
+  @keyframes pulse-warn {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
   }
   
   .toolbar-area {

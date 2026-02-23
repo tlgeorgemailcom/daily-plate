@@ -139,7 +139,7 @@ export const LEVELS: Level[] = [
     recipe: ['lettuce', 'cheese', 'bread'],
     tools: [
       { type: 'fence', count: 3, emoji: '🚧' },
-      { type: 'decoy', count: 2, emoji: '🧀' }
+      { type: 'decoy', count: 2, emoji: '🍯' }
     ],
     animalSpawns: [
       { type: 'rabbit', delay: 2000 },
@@ -155,7 +155,7 @@ export const LEVELS: Level[] = [
     recipe: ['lettuce', 'tomato', 'carrot', 'cheese'],
     tools: [
       { type: 'fence', count: 4, emoji: '🚧' },
-      { type: 'decoy', count: 2, emoji: '🧀' },
+      { type: 'decoy', count: 2, emoji: '🍯' },
       { type: 'lid', count: 1, emoji: '🥏' }
     ],
     animalSpawns: [
@@ -698,8 +698,9 @@ export function createGameState() {
     tools[selectedTool] = count - 1;
     barriers = [...barriers, {
       id: `barrier-${Date.now()}`,
-      type: selectedTool as 'fence' | 'scarecrow' | 'torch',
-      position: snappedPos
+      type: selectedTool as 'fence' | 'scarecrow' | 'torch' | 'decoy',
+      position: snappedPos,
+      health: selectedTool === 'decoy' ? 100 : undefined
     }];
     
     farmer.state = 'placing';
@@ -728,8 +729,9 @@ export function createGameState() {
     tools[toolType] = count - 1;
     barriers = [...barriers, {
       id: `barrier-${Date.now()}`,
-      type: toolType as 'fence' | 'scarecrow' | 'torch',
-      position: snappedPos
+      type: toolType as 'fence' | 'scarecrow' | 'torch' | 'decoy',
+      position: snappedPos,
+      health: toolType === 'decoy' ? 100 : undefined
     }];
     
     return true;
@@ -762,9 +764,46 @@ export function createGameState() {
         return animal;
       }
       
+      // Check if escaping through/under/over a barrier - skip movement logic
+      if (['digging', 'climbing', 'squeezing'].includes(animal.state)) {
+        return animal; // Progress handled below
+      }
+      
+      // Check if distracted by decoy
+      if (animal.state === 'distracted') {
+        // Animal is eating a decoy - handled separately below
+        return animal;
+      }
+      
+      // Check for nearby decoys that attract the animal
+      const decoys = barriers.filter(b => b.type === 'decoy');
+      const DECOY_ATTRACTION_RANGE = 4; // Grid cells
+      
+      // Find the nearest decoy within range
+      let nearestDecoy: typeof decoys[0] | null = null;
+      let nearestDecoyDist = Infinity;
+      
+      for (const decoy of decoys) {
+        const decoyGrid = pixelToGrid(decoy.position);
+        const dist = Math.abs(decoyGrid.col - animal.gridPos.col) + Math.abs(decoyGrid.row - animal.gridPos.row);
+        if (dist <= DECOY_ATTRACTION_RANGE && dist < nearestDecoyDist) {
+          nearestDecoy = decoy;
+          nearestDecoyDist = dist;
+        }
+      }
+      
       // Get basket grid position
       const basketGrid = pixelToGrid(BASKET_POSITION);
       const animalGrid = animal.gridPos;
+      
+      // Check if animal has reached a decoy - becomes distracted
+      if (nearestDecoy) {
+        const decoyGrid = pixelToGrid(nearestDecoy.position);
+        if (animalGrid.col === decoyGrid.col && animalGrid.row === decoyGrid.row) {
+          // Animal reached the decoy - become distracted
+          return { ...animal, state: 'distracted' as const };
+        }
+      }
       
       // Check if at basket (arrived!) - must be in same column and within 1 row
       // Also check if there's a fence blocking the path to the basket
@@ -832,6 +871,52 @@ export function createGameState() {
             
             return { ...animal, state: 'stealing' as const, stolenFood: stolenItem.type };
           }
+          
+          // Nothing to steal! Check for nearby decoy to be attracted to
+          if (nearestDecoy && shouldMove) {
+            const decoyGrid = pixelToGrid(nearestDecoy.position);
+            // Move toward decoy instead of staying at basket
+            const moves = [
+              { col: Math.sign(decoyGrid.col - animalGrid.col), row: 0 },
+              { col: 0, row: Math.sign(decoyGrid.row - animalGrid.row) }
+            ].filter(m => m.col !== 0 || m.row !== 0);
+            
+            if (moves.length > 0) {
+              const move = moves[Math.floor(Math.random() * moves.length)];
+              const newCol = animalGrid.col + move.col;
+              const newRow = animalGrid.row + move.row;
+              if (newCol >= 0 && newCol < GRID_COLS && newRow >= 0 && newRow < GRID_ROWS) {
+                const newPos = gridToPixel({ col: newCol, row: newRow });
+                return {
+                  ...animal,
+                  state: 'approaching' as const,
+                  gridPos: { col: newCol, row: newRow },
+                  position: newPos
+                };
+              }
+            }
+          }
+          
+          // No decoy - wander away after a bit (give up)
+          if (shouldMove && Math.random() < 0.3) {
+            // Random direction away from basket
+            const awayMoves = [
+              { col: -1, row: 1 }, { col: 0, row: 1 }, { col: 1, row: 1 }
+            ];
+            const move = awayMoves[Math.floor(Math.random() * awayMoves.length)];
+            const newCol = Math.max(0, Math.min(GRID_COLS - 1, animalGrid.col + move.col));
+            const newRow = Math.min(GRID_ROWS - 1, animalGrid.row + move.row);
+            if (newRow !== animalGrid.row || newCol !== animalGrid.col) {
+              const newPos = gridToPixel({ col: newCol, row: newRow });
+              return {
+                ...animal,
+                state: 'approaching' as const,
+                gridPos: { col: newCol, row: newRow },
+                position: newPos
+              };
+            }
+          }
+          
           return animal;
         }
         return animal;
@@ -840,14 +925,19 @@ export function createGameState() {
       // Only move if it's time
       if (!shouldMove) return animal;
       
-      // Calculate direction toward basket
-      const dcol = basketGrid.col - animalGrid.col;
-      const drow = basketGrid.row - animalGrid.row;
+      // Calculate direction toward target (decoy if nearby, otherwise basket)
+      let targetGrid = basketGrid;
+      if (nearestDecoy) {
+        targetGrid = pixelToGrid(nearestDecoy.position);
+      }
       
-      // Possible moves: prefer toward basket but always include alternatives for pathfinding
+      const dcol = targetGrid.col - animalGrid.col;
+      const drow = targetGrid.row - animalGrid.row;
+      
+      // Possible moves: prefer toward target but always include alternatives for pathfinding
       const moves: { col: number; row: number }[] = [];
       
-      // Add moves toward basket with higher weight
+      // Add moves toward target with higher weight
       if (dcol > 0) moves.push({ col: 1, row: 0 }, { col: 1, row: 0 });
       if (dcol < 0) moves.push({ col: -1, row: 0 }, { col: -1, row: 0 });
       if (drow > 0) moves.push({ col: 0, row: 1 }, { col: 0, row: 1 });
@@ -879,20 +969,48 @@ export function createGameState() {
         if (!canFly) {
           const blocked = barriers.some(barrier => {
             if (barrier.type === 'lid') return false; // Lid only blocks at basket
+            if (barrier.type === 'decoy') return false; // Decoy is passable - attracts animals
             const barrierGrid = pixelToGrid(barrier.position);
             return barrierGrid.col === newCol && barrierGrid.row === newRow;
           });
           
           if (blocked) {
-            // Start escape behavior based on animal type
+            // Get the barrier type that's blocking
+            const blockingBarrier = barriers.find(barrier => {
+              if (barrier.type === 'lid' || barrier.type === 'decoy') return false;
+              const barrierGrid = pixelToGrid(barrier.position);
+              return barrierGrid.col === newCol && barrierGrid.row === newRow;
+            });
+            const barrierType = blockingBarrier?.type;
+            
+            // Store where we're trying to escape to
+            const escapeTarget = { col: newCol, row: newRow };
+            
+            // Start escape behavior based on animal type and barrier type
             if (animal.type === 'rabbit') {
-              return { ...animal, state: 'digging' as const, escapeProgress: 0 };
-            } else if (animal.type === 'squirrel') {
-              return { ...animal, state: 'climbing' as const, escapeProgress: 0 };
+              // Rabbit hops through fence gaps easily, but must dig under net
+              if (barrierType === 'fence') {
+                return { ...animal, state: 'squeezing' as const, escapeProgress: 0, escapeTarget };
+              } else {
+                return { ...animal, state: 'digging' as const, escapeProgress: 0, escapeTarget };
+              }
             } else if (animal.type === 'mouse') {
-              return { ...animal, state: 'squeezing' as const, escapeProgress: 0 };
+              // Mouse walks right through fence, but must squeeze through net
+              if (barrierType === 'fence') {
+                // Pass through fence almost instantly
+                const newPos = gridToPixel({ col: newCol, row: newRow });
+                return { 
+                  ...animal, 
+                  gridPos: { col: newCol, row: newRow },
+                  position: newPos 
+                };
+              } else {
+                return { ...animal, state: 'squeezing' as const, escapeProgress: 0, escapeTarget };
+              }
+            } else if (animal.type === 'squirrel') {
+              return { ...animal, state: 'climbing' as const, escapeProgress: 0, escapeTarget };
             }
-            continue; // Try another direction
+            continue; // Try another direction (fox, raccoon)
           }
         }
         
@@ -926,57 +1044,49 @@ export function createGameState() {
         const escapeTime = ANIMAL_ESCAPE_TIME[animal.type];
         const progress = animal.escapeProgress + (deltaTime * 1000 / escapeTime) * 100;
         if (progress >= 100) {
-          // Escaped - move one cell closer to basket (but not INTO another fence)
-          const basketGrid = pixelToGrid(BASKET_POSITION);
-          const newRow = Math.max(0, animal.gridPos.row - 1);
-          const newGridPos = { col: animal.gridPos.col, row: newRow };
-          
-          // Check if destination cell has a fence
-          const destHasFence = barriers.some(barrier => {
-            if (barrier.type === 'lid') return false;
-            const barrierGrid = pixelToGrid(barrier.position);
-            return barrierGrid.col === newGridPos.col && barrierGrid.row === newGridPos.row;
-          });
-          
-          // If destination has a fence, stay in current position but try lateral move
-          if (destHasFence) {
-            // Try moving to an adjacent column instead
-            const leftCol = animal.gridPos.col - 1;
-            const rightCol = animal.gridPos.col + 1;
-            const lateralMoves = [leftCol, rightCol].filter(col => col >= 0 && col < GRID_COLS);
-            const shuffled = lateralMoves.sort(() => Math.random() - 0.5);
-            
-            for (const col of shuffled) {
-              const lateralPos = { col, row: animal.gridPos.row };
-              const lateralBlocked = barriers.some(b => {
-                if (b.type === 'lid') return false;
-                const bg = pixelToGrid(b.position);
-                return bg.col === col && bg.row === animal.gridPos.row;
-              });
-              if (!lateralBlocked) {
-                return {
-                  ...animal,
-                  state: 'approaching' as const,
-                  escapeProgress: 0,
-                  gridPos: lateralPos,
-                  position: gridToPixel(lateralPos)
-                };
-              }
-            }
-            // Completely blocked - stay put
-            return { ...animal, state: 'blocked' as const, escapeProgress: 0 };
-          }
+          // Escaped - move to the target cell we were trying to reach
+          const newGridPos = animal.escapeTarget ?? { col: animal.gridPos.col, row: Math.max(0, animal.gridPos.row - 1) };
           
           const newPos = gridToPixel(newGridPos);
           return { 
             ...animal, 
             state: 'approaching' as const, 
             escapeProgress: 0,
+            escapeTarget: undefined,
             gridPos: newGridPos,
             position: newPos
           };
         }
         return { ...animal, escapeProgress: progress };
+      }
+      return animal;
+    });
+    
+    // Handle distracted animals consuming decoys (runs every frame)
+    const DECOY_CONSUME_RATE = 25; // % per second
+    animals = animals.map(animal => {
+      if (animal.state === 'distracted') {
+        // Find the decoy at this animal's position
+        const animalGrid = animal.gridPos;
+        const decoyAtPos = barriers.find(b => {
+          if (b.type !== 'decoy') return false;
+          const bGrid = pixelToGrid(b.position);
+          return bGrid.col === animalGrid.col && bGrid.row === animalGrid.row;
+        });
+        
+        if (decoyAtPos && decoyAtPos.health !== undefined) {
+          // Consume the decoy
+          decoyAtPos.health -= DECOY_CONSUME_RATE * deltaTime;
+          
+          if (decoyAtPos.health <= 0) {
+            // Decoy consumed - remove it and make animal approach again
+            barriers = barriers.filter(b => b.id !== decoyAtPos.id);
+            return { ...animal, state: 'approaching' as const };
+          }
+        } else {
+          // No decoy found - animal goes back to approaching
+          return { ...animal, state: 'approaching' as const };
+        }
       }
       return animal;
     });

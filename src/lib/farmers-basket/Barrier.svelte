@@ -6,15 +6,17 @@
     id: string;
     type: ToolType;
     position: Position;
+    health?: number;       // For decoys: 0-100
     depleted?: boolean;
     selected?: boolean;
     ondragbarrier?: (id: string) => void;
     ontouchdragbarrier?: (id: string) => void;  // For mobile touch drag
   }
   
-  let { id, type, position, depleted = false, selected = false, ondragbarrier, ontouchdragbarrier }: Props = $props();
+  let { id, type, position, health = 100, depleted = false, selected = false, ondragbarrier, ontouchdragbarrier }: Props = $props();
   
   const emoji = $derived(TOOL_EMOJI[type]);
+  const decoyScale = $derived(type === 'decoy' ? 0.5 + (health / 100) * 0.5 : 1);
   
   function handleDragStart(e: DragEvent) {
     if (depleted) {
@@ -38,7 +40,7 @@
   class="barrier {type}"
   class:depleted
   class:selected
-  style="left: {position.x}px; top: {position.y}px;"
+  style="left: {position.x}px; top: {position.y}px; {type === 'decoy' ? `--decoy-scale: ${decoyScale};` : ''}"
   draggable={!depleted}
   ondragstart={handleDragStart}
   ontouchstart={handleTouchStart}
@@ -114,6 +116,7 @@
   
   /* Decoy shrinking as consumed */
   .decoy {
+    transform: translate(-50%, -50%) scale(var(--decoy-scale, 1));
     transition: transform 0.2s;
   }
   

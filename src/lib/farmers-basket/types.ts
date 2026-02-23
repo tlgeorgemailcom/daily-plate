@@ -43,6 +43,7 @@ export interface Animal {
   targetFood: FoodType | null;
   path: Position[];
   escapeProgress: number; // 0-100 for digging/climbing progress
+  escapeTarget?: { col: number; row: number };  // Where animal is trying to escape to
   stolenFood?: FoodType;  // Food the animal stole (shown during celebration)
 }
 
@@ -55,8 +56,9 @@ export interface Farmer {
 
 export interface Barrier {
   id: string;
-  type: 'fence' | 'scarecrow' | 'torch' | 'lid';
+  type: 'fence' | 'scarecrow' | 'torch' | 'lid' | 'decoy';
   position: Position;
+  health?: number;  // For decoys: 0-100, consumed over time
 }
 
 export interface Tool {
@@ -118,7 +120,7 @@ export const TOOL_EMOJI: Record<ToolType, string> = {
   dog: '🐕',
   torch: '🔥',
   bell: '🔔',
-  decoy: '🧀',
+  decoy: '🍯',
   lid: '🥏',
   net: '🥅'
 };
