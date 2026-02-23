@@ -127,6 +127,16 @@
     selectedLevel = null;
   }
   
+  function handleClose() {
+    // From detail view, go back to index first
+    if (selectedLevel) {
+      selectedLevel = null;
+      return;
+    }
+    // From index view, close the modal
+    onclose();
+  }
+  
   function handleBrowseAll() {
     showRecipeOfDay = false;
   }
@@ -174,11 +184,11 @@
         <h2>📖 Recipe Book</h2>
       {/if}
       <span class="level-count">{completedLevels.size}/{levels.length} ✓</span>
-      <button class="close-btn" onclick={onclose} aria-label="Close">×</button>
+      <button class="close-btn" onclick={handleClose} aria-label="Close">×</button>
     </header>
     
-    {#if showRecipeOfDay && !selectedLevel && recipeOfTheDay}
-      <!-- RECIPE OF THE DAY VIEW -->
+    {#if showRecipeOfDay && !selectedLevel && recipeOfTheDay && completedLevels.size === 0}
+      <!-- RECIPE OF THE DAY VIEW (only for new players) -->
       <div class="recipe-of-day">
         <div class="cotd-badge">🌟 Recipe of the Day</div>
         
@@ -250,12 +260,12 @@
         {:else}
           <div class="locked-message">
             <span class="lock-icon">🔒</span>
-            <span>Complete this level to unlock the recipe!</span>
+            <span>Complete this recipe to unlock the instructions!</span>
           </div>
         {/if}
         
         <button class="play-btn" onclick={() => handlePlay(selectedLevel!.id)}>
-          {isCurrent ? '🔄 Restart Level' : isCompleted ? '🎮 Play Again' : '▶️ Play Level'}
+          {isCurrent ? '🔄 Replay' : isCompleted ? '🎮 Replay' : '▶️ Play'}
         </button>
       </div>
     {:else}

@@ -230,6 +230,8 @@ export const LEVELS: Level[] = [
 export function createGameState() {
   // Load completed levels from localStorage
   const STORAGE_KEY = 'farmers-basket-completed';
+  const CURRENT_LEVEL_KEY = 'farmers-basket-current-level';
+  
   function loadCompletedLevels(): Set<string> {
     if (typeof window === 'undefined') return new Set();
     try {
@@ -252,12 +254,36 @@ export function createGameState() {
     }
   }
   
+  function loadCurrentLevel(): Level {
+    if (typeof window === 'undefined') return LEVELS[0];
+    try {
+      const savedId = localStorage.getItem(CURRENT_LEVEL_KEY);
+      if (savedId) {
+        const found = LEVELS.find(l => l.id === savedId);
+        if (found) return found;
+      }
+    } catch (e) {
+      console.warn('Failed to load current level:', e);
+    }
+    return LEVELS[0];
+  }
+  
+  function saveCurrentLevel(levelId: string) {
+    if (typeof window === 'undefined') return;
+    try {
+      localStorage.setItem(CURRENT_LEVEL_KEY, levelId);
+    } catch (e) {
+      console.warn('Failed to save current level:', e);
+    }
+  }
+  
   // Completed levels tracking
   let completedLevels = $state<Set<string>>(loadCompletedLevels());
   
-  // Current level
-  let currentLevel = $state<Level | null>(LEVELS[0]);
-  let levelIndex = $state(0);
+  // Current level (restored from localStorage)
+  const initialLevel = loadCurrentLevel();
+  let currentLevel = $state<Level | null>(initialLevel);
+  let levelIndex = $state(LEVELS.findIndex(l => l.id === initialLevel.id));
   
   // Game entities
   let animals = $state<Animal[]>([]);
@@ -334,6 +360,7 @@ export function createGameState() {
     levelIndex = index;
     const level = LEVELS[index];
     currentLevel = level;
+    saveCurrentLevel(level.id);  // Persist to localStorage
     
     // Reset entities
     animals = [];
@@ -1253,8 +1280,8 @@ export function createGameState() {
     }
   }
   
-  // Initialize first level
-  initLevel(0);
+  // Initialize to saved level (or first level)
+  initLevel(levelIndex);
   
   return {
     // State (readable)

@@ -16,8 +16,8 @@
   
   let game = createGameState();
   
-  // Recipe book modal state
-  let showRecipeBook = $state(false);
+  // Recipe book modal state - open automatically if player has completed any recipes
+  let showRecipeBook = $state(game.completedLevels.size > 0);
   
   // Touch controls - target position for farmer to walk toward
   let touchTarget: { x: number; y: number } | null = $state(null);
@@ -746,13 +746,8 @@
         {/if}
         
         <div class="win-buttons">
-          {#if game.levelIndex < LEVELS.length - 1}
-            <button onclick={() => game.nextLevel()}>Next Recipe →</button>
-          {:else}
-            <p>Congratulations! You've unlocked all recipes!</p>
-            <button onclick={() => game.initLevel(0)}>Play Again</button>
-          {/if}
-          <button class="secondary" onclick={() => showRecipeBook = true}>📖 View All Recipes</button>
+          <button onclick={() => { game.initLevel(game.levelIndex); showRecipeBook = true; }}>📖 Choose Next Recipe</button>
+          <button class="secondary" onclick={() => { game.initLevel(game.levelIndex); game.startLevel(); }}>🔄 Play Again</button>
         </div>
       </div>
     </div>
@@ -763,7 +758,10 @@
       <div class="overlay-content">
         <h2>😢 The animals got everything!</h2>
         <p>Don't worry, try again!</p>
-        <button onclick={() => game.initLevel(game.levelIndex)}>Retry Level</button>
+        <div class="lose-buttons">
+          <button onclick={() => { game.initLevel(game.levelIndex); game.startLevel(); }}>🔄 Try Again</button>
+          <button class="secondary" onclick={() => { game.initLevel(game.levelIndex); showRecipeBook = true; }}>📖 Choose Another Recipe</button>
+        </div>
       </div>
     </div>
   {/if}
@@ -775,7 +773,7 @@
         <p>Collect: {game.currentLevel?.recipe?.map(f => FOOD_EMOJI[f]).join(' ') ?? ''}</p>
         <p class="hint desktop-hint">Use arrow keys to move, Space to pick up food</p>
         <p class="hint mobile-hint">Drag farmer to move • Tap when near food/basket</p>
-        <button onclick={() => game.startLevel()}>Start Level</button>
+        <button onclick={() => game.startLevel()}>▶️ Play</button>
       </div>
     </div>
   {/if}
@@ -815,8 +813,14 @@
     levels={game.allLevels}
     completedLevels={game.completedLevels}
     currentLevelId={game.currentLevel?.id ?? null}
-    onselect={(id) => game.loadLevel(id)}
-    onclose={() => showRecipeBook = false}
+    onselect={(id) => { game.loadLevel(id); game.startLevel(); showRecipeBook = false; }}
+    onclose={() => { 
+      showRecipeBook = false;
+      // Auto-start if game is in ready state
+      if (game.gameStatus === 'ready') {
+        game.startLevel();
+      }
+    }}
   />
 {/if}
 
@@ -1191,6 +1195,24 @@
   
   .win-buttons button.secondary:hover {
     background: #A0522D;
+  }
+  
+  .lose-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    margin-top: 12px;
+  }
+  
+  .lose-buttons button.secondary {
+    background: #666;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+  
+  .lose-buttons button.secondary:hover {
+    background: #888;
   }
   
   .lose .overlay-content {
