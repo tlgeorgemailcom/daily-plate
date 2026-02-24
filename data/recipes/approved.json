@@ -1,0 +1,44 @@
+[
+  {
+    "id": "recipe-1771874787378-e6qosltqx",
+    "recipeName": "Lasagna",
+    "category": "Dinner",
+    "submitterName": "Anon",
+    "prepTime": "45",
+    "servings": "4",
+    "ingredients": [
+      {
+        "name": "Tomato Sauce",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "Lasagna noodles",
+        "quantity": "9"
+      },
+      {
+        "name": "Cheese",
+        "quantity": "1 cup"
+      }
+    ],
+    "instructions": [
+      "cook noodles",
+      "layer",
+      "top with cheese"
+    ],
+    "submittedAt": "2026-02-23T19:26:27.355Z",
+    "status": "approved",
+    "gameFoods": [
+      "tomato",
+      "cheese",
+      "bread"
+    ],
+    "animalSpawns": [
+      {
+        "type": "raccoon",
+        "delay": 3
+      }
+    ],
+    "reviewedAt": "2026-02-23T19:28:35.196Z",
+    "reviewedBy": "Moderator"
+  }
+]

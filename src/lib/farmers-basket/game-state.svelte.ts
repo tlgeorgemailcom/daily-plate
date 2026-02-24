@@ -280,6 +280,9 @@ export function createGameState() {
   // Completed levels tracking
   let completedLevels = $state<Set<string>>(loadCompletedLevels());
   
+  // All levels (built-in + community)
+  let allLevels = $state<Level[]>([...LEVELS]);
+  
   // Current level (restored from localStorage)
   const initialLevel = loadCurrentLevel();
   let currentLevel = $state<Level | null>(initialLevel);
@@ -353,12 +356,17 @@ export function createGameState() {
     return animalBlocking;
   }
   
-  // Initialize level by index
+  // Initialize level by index (from allLevels)
   function initLevel(index: number) {
-    if (index < 0 || index >= LEVELS.length) return;
+    initLevelFromList(index, allLevels);
+  }
+  
+  // Initialize level by index from a specific list
+  function initLevelFromList(index: number, levelList: Level[]) {
+    if (index < 0 || index >= levelList.length) return;
     
     levelIndex = index;
-    const level = LEVELS[index];
+    const level = levelList[index];
     currentLevel = level;
     saveCurrentLevel(level.id);  // Persist to localStorage
     
@@ -1267,16 +1275,26 @@ export function createGameState() {
   
   // Next level
   function nextLevel() {
-    if (levelIndex < LEVELS.length - 1) {
-      initLevel(levelIndex + 1);
+    if (levelIndex < allLevels.length - 1) {
+      initLevelFromList(levelIndex + 1, allLevels);
     }
   }
   
   // Load a specific level by ID
   function loadLevel(levelId: string) {
-    const index = LEVELS.findIndex(l => l.id === levelId);
+    const index = allLevels.findIndex(l => l.id === levelId);
     if (index !== -1) {
-      initLevel(index);
+      initLevelFromList(index, allLevels);
+    }
+  }
+  
+  // Add community recipes (from approved submissions)
+  function addCommunityRecipes(recipes: Level[]) {
+    // Filter out any duplicates
+    const newRecipes = recipes.filter(r => !allLevels.find(l => l.id === r.id));
+    if (newRecipes.length > 0) {
+      allLevels = [...allLevels, ...newRecipes];
+      console.log(`✅ Added ${newRecipes.length} community recipes`);
     }
   }
   
@@ -1297,7 +1315,7 @@ export function createGameState() {
     get gameStatus() { return gameStatus; },
     get theftLog() { return theftLog; },
     get completedLevels() { return completedLevels; },
-    get allLevels() { return LEVELS; },
+    get allLevels() { return allLevels; },
     
     // Actions
     initLevel,
@@ -1314,7 +1332,8 @@ export function createGameState() {
     placeToolByDrag,
     moveBarrier,
     nextLevel,
-    loadLevel
+    loadLevel,
+    addCommunityRecipes
   };
 }
 

@@ -22,9 +22,10 @@
     currentLevelId: string | null;
     onselect: (levelId: string) => void;
     onclose: () => void;
+    onshare?: () => void;
   }
   
-  let { levels, completedLevels, currentLevelId, onselect, onclose }: Props = $props();
+  let { levels, completedLevels, currentLevelId, onselect, onclose, onshare }: Props = $props();
   
   // View states: 'recipe-of-day' | 'index' | 'detail'
   let showRecipeOfDay = $state(true);
@@ -183,8 +184,15 @@
       {:else}
         <h2>📖 Recipe Book</h2>
       {/if}
-      <span class="level-count">{completedLevels.size}/{levels.length} ✓</span>
-      <button class="close-btn" onclick={handleClose} aria-label="Close">×</button>
+      <div class="header-actions">
+        <span class="level-count">{completedLevels.size}/{levels.length} ✓</span>
+        {#if onshare}
+          <button class="share-btn" onclick={onshare} aria-label="Share a recipe">
+            📝 Share
+          </button>
+        {/if}
+        <button class="close-btn" onclick={handleClose} aria-label="Close">×</button>
+      </div>
     </header>
     
     {#if showRecipeOfDay && !selectedLevel && recipeOfTheDay && completedLevels.size === 0}
@@ -463,12 +471,34 @@
     background: rgba(255,255,255,0.3);
   }
   
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
   .level-count {
     font-size: 0.85rem;
     opacity: 0.9;
     background: rgba(255,255,255,0.15);
     padding: 4px 10px;
     border-radius: 12px;
+  }
+  
+  .share-btn {
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  
+  .share-btn:hover {
+    background: rgba(255,255,255,0.35);
   }
   
   .close-btn {

@@ -11,6 +11,7 @@
   import Toolbar from '$lib/farmers-basket/Toolbar.svelte';
   import Barrier from '$lib/farmers-basket/Barrier.svelte';
   import RecipeBook from '$lib/farmers-basket/RecipeBook.svelte';
+  import ShareRecipe from '$lib/farmers-basket/ShareRecipe.svelte';
   import { FOOD_EMOJI, TOOL_EMOJI, ANIMAL_EMOJI } from '$lib/farmers-basket/types';
   import type { ToolType, FoodType } from '$lib/farmers-basket/types';
   
@@ -18,6 +19,9 @@
   
   // Recipe book modal state - open automatically if player has completed any recipes
   let showRecipeBook = $state(game.completedLevels.size > 0);
+  
+  // Share recipe modal state
+  let showShareRecipe = $state(false);
   
   // Touch controls - target position for farmer to walk toward
   let touchTarget: { x: number; y: number } | null = $state(null);
@@ -61,6 +65,11 @@
   });
   
   function handleKeyDown(e: KeyboardEvent) {
+    // Skip game controls when a modal is open
+    if (showRecipeBook || showShareRecipe) {
+      return;
+    }
+    
     // Tab cycles through placed barriers for repositioning
     if (e.key === 'Tab' && game.gameStatus === 'playing') {
       e.preventDefault();
@@ -296,7 +305,23 @@
     document.addEventListener('touchmove', handleDocumentTouchMove, { passive: false });
     document.addEventListener('touchend', handleDocumentTouchEnd);
     document.addEventListener('touchcancel', handleDocumentTouchEnd);
+    
+    // Load community recipes
+    loadCommunityRecipes();
   });
+  
+  // Load approved community recipes from server
+  async function loadCommunityRecipes() {
+    try {
+      const res = await fetch('/api/recipes/approved');
+      const data = await res.json();
+      if (data.recipes && data.recipes.length > 0) {
+        game.addCommunityRecipes(data.recipes);
+      }
+    } catch (err) {
+      console.warn('Failed to load community recipes:', err);
+    }
+  }
   
   onDestroy(() => {
     window.removeEventListener('keydown', handleKeyDown);
@@ -821,6 +846,15 @@
         game.startLevel();
       }
     }}
+    onshare={() => { showRecipeBook = false; showShareRecipe = true; }}
+  />
+{/if}
+
+<!-- Share Recipe Modal -->
+{#if showShareRecipe}
+  <ShareRecipe 
+    onclose={() => { showShareRecipe = false; showRecipeBook = true; }}
+    onsubmit={() => { /* Recipe submitted successfully */ }}
   />
 {/if}
 
