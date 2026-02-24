@@ -16,7 +16,7 @@
     bowl: 'Bowl',
     cup: 'Cup',
     glass: 'Glass',
-    snack: 'Snack'
+    saucer: 'Saucer'
   };
   
   const dispatch = createEventDispatcher<{ 
