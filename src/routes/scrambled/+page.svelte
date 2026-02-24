@@ -506,6 +506,8 @@ dailyfoodchain.com/scrambled`;
     padding: 1rem;
     padding-bottom: 6rem;
     font-family: system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile */
   }
   
   /* Wider layout for Phase 2 with 11 groups */
