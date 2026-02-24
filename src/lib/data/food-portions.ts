@@ -3,7 +3,7 @@
 
 export type FoodGroup = 
   | 'vegetable' | 'fruit' | 'grain' | 'protein' | 'dairy'
-  | 'legume' | 'nuts' | 'fats' | 'spice' | 'prepared' | 'beverage';
+  | 'legume' | 'nuts' | 'fats' | 'spice' | 'prepared' | 'condiment' | 'beverage';
 
 export interface Portion {
   amt: number;      // Amount (e.g., 1, 0.5, 2)

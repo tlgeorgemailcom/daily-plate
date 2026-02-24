@@ -1,0 +1,6222 @@
+[
+  {
+    "word": "abalone",
+    "groups": [
+      "protein"
+    ],
+    "source": "Abalone"
+  },
+  {
+    "word": "abiyuch",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Abiyuch"
+  },
+  {
+    "word": "acerola",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Acerola"
+  },
+  {
+    "word": "acorn",
+    "groups": [
+      "nuts"
+    ],
+    "source": "Acorn"
+  },
+  {
+    "word": "adzuki",
+    "groups": [
+      "legume"
+    ],
+    "source": "Adzuki"
+  },
+  {
+    "word": "agave",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Agave"
+  },
+  {
+    "word": "agutuk",
+    "groups": [
+      "protein"
+    ],
+    "source": "Agutuk"
+  },
+  {
+    "word": "alfalfa",
+    "groups": [
+      "legume"
+    ],
+    "source": "Alfalfa"
+  },
+  {
+    "word": "allspice",
+    "groups": [
+      "spice"
+    ],
+    "source": "Allspice"
+  },
+  {
+    "word": "almond",
+    "groups": [
+      "nuts",
+      "fats",
+      "protein"
+    ],
+    "source": "Almond"
+  },
+  {
+    "word": "aloe",
+    "groups": [
+      "beverage"
+    ],
+    "source": "Aloe Vera Juice"
+  },
+  {
+    "word": "amaranth",
+    "groups": [
+      "grain"
+    ],
+    "source": "Amaranth"
+  },
+  {
+    "word": "american",
+    "groups": [
+      "dairy"
+    ],
+    "source": "American Cheese"
+  },
+  {
+    "word": "anchovy",
+    "groups": [
+      "protein"
+    ],
+    "source": "Anchovy"
+  },
+
+  {
+    "word": "queso",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Queso Anejo"
+  },
+  {
+    "word": "angel",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Angel Food"
+  },
+  {
+    "word": "anise",
+    "groups": [
+      "spice"
+    ],
+    "source": "Anise"
+  },
+  {
+    "word": "antelope",
+    "groups": [
+      "protein"
+    ],
+    "source": "Antelope"
+  },
+  {
+    "word": "apple",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Apple"
+  },
+  {
+    "word": "applesauce",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Applesauce"
+  },
+  {
+    "word": "apricot",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Apricot"
+  },
+  {
+    "word": "arrowhead",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Arrowhead"
+  },
+  {
+    "word": "arrowroot",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Arrowroot"
+  },
+  {
+    "word": "artichoke",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Artichoke"
+  },
+  {
+    "word": "arugula",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Arugula"
+  },
+  {
+    "word": "asadero",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Queso Asadero"
+  },
+  {
+    "word": "ascidians",
+    "groups": [
+      "protein"
+    ],
+    "source": "Ascidians"
+  },
+  {
+    "word": "asiago",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Asiago"
+  },
+  {
+    "word": "asparagus",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Asparagus"
+  },
+  {
+    "word": "avocado",
+    "groups": [
+      "vegetable",
+      "fruit",
+      "fats"
+    ],
+    "source": "Avocado"
+  },
+  {
+    "word": "babassu",
+    "groups": [
+      "fats"
+    ],
+    "source": "Babassu"
+  },
+  {
+    "word": "back",
+    "groups": [
+      "protein"
+    ],
+    "source": "Pork Back Rib"
+  },
+  {
+    "word": "bacon",
+    "groups": [
+      "protein"
+    ],
+    "source": "Bacon"
+  },
+  {
+    "word": "bagel",
+    "groups": [
+      "grain"
+    ],
+    "source": "Bagel"
+  },
+  {
+    "word": "baked",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Baked Beans"
+  },
+  {
+    "word": "baking",
+    "groups": [
+      "spice"
+    ],
+    "source": "Baking Soda"
+  },
+  {
+    "word": "balsamic",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Vinegar Balsamic"
+  },
+  {
+    "word": "balsampear",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Balsam-Pear"
+  },
+  {
+    "word": "bamboo",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Bamboo"
+  },
+  {
+    "word": "banana",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Banana"
+  },
+  {
+    "word": "barbecue",
+    "groups": [
+      "condiment",
+      "protein"
+    ],
+    "source": "Barbecue"
+  },
+  {
+    "word": "barley",
+    "groups": [
+      "grain"
+    ],
+    "source": "Barley"
+  },
+  {
+    "word": "basil",
+    "groups": [
+      "spice"
+    ],
+    "source": "Basil"
+  },
+  {
+    "word": "bass",
+    "groups": [
+      "protein"
+    ],
+    "source": "Bass"
+  },
+  {
+    "word": "bay",
+    "groups": [
+      "spice",
+      "protein"
+    ],
+    "source": "Bay Leaf"
+  },
+  {
+    "word": "bean",
+    "groups": [
+      "legume",
+      "protein"
+    ],
+    "source": "Bean"
+  },
+  {
+    "word": "bear",
+    "groups": [
+      "protein"
+    ],
+    "source": "Bear"
+  },
+  {
+    "word": "beaver",
+    "groups": [
+      "protein"
+    ],
+    "source": "Beaver"
+  },
+  {
+    "word": "beechnut",
+    "groups": [
+      "nuts"
+    ],
+    "source": "Beechnut"
+  },
+  {
+    "word": "beef",
+    "groups": [
+      "protein"
+    ],
+    "source": "Beef"
+  },
+  {
+    "word": "beefalo",
+    "groups": [
+      "protein"
+    ],
+    "source": "Beefalo"
+  },
+  {
+    "word": "beer",
+    "groups": [
+      "beverage"
+    ],
+    "source": "Beer"
+  },
+  {
+    "word": "beerwurst",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "source": "Beerwurst"
+  },
+  {
+    "word": "beet",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Beet"
+  },
+  {
+    "word": "belly",
+    "groups": [
+      "protein"
+    ],
+    "source": "Pork Belly"
+  },
+  {
+    "word": "berry",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Pop Tart Frost Wild Berry"
+  },
+  {
+    "word": "biscuit",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Biscuit"
+  },
+  {
+    "word": "bison",
+    "groups": [
+      "protein"
+    ],
+    "source": "Bison"
+  },
+  {
+    "word": "black",
+    "groups": [
+      "fruit",
+      "fats"
+    ],
+    "source": "Olive Black"
+  },
+  {
+    "word": "blackberry",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Blackberry"
+  },
+  {
+    "word": "blackeyed",
+    "groups": [
+      "legume"
+    ],
+    "source": "Black-eyed Pea"
+  },
+  {
+    "word": "blackfish",
+    "groups": [
+      "protein"
+    ],
+    "source": "Blackfish"
+  },
+  {
+    "word": "blanco",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Queso Blanco"
+  },
+  {
+    "word": "blend",
+    "groups": [
+      "dairy",
+      "beverage"
+    ],
+    "source": "Mexican Blend Cheese"
+  },
+  {
+    "word": "blue",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Blue Cheese"
+  },
+  {
+    "word": "blueberries",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Blueberries"
+  },
+  {
+    "word": "blueberry",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Blueberry Pie"
+  },
+  {
+    "word": "bluefin",
+    "groups": [
+      "protein"
+    ],
+    "source": "Bluefin"
+  },
+  {
+    "word": "bluefish",
+    "groups": [
+      "protein"
+    ],
+    "source": "Bluefish"
+  },
+  {
+    "word": "boar",
+    "groups": [
+      "protein"
+    ],
+    "source": "Boar"
+  },
+  {
+    "word": "bockwurst",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "source": "Bockwurst"
+  },
+  {
+    "word": "boiled",
+    "groups": [
+      "protein",
+      "prepared",
+      "vegetable"
+    ],
+    "source": "Egg Boiled"
+  },
+  {
+    "word": "bok",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Bok Choy"
+  },
+  {
+    "word": "bologna",
+    "groups": [
+      "protein"
+    ],
+    "source": "Bologna"
+  },
+  {
+    "word": "borage",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Borage"
+  },
+  {
+    "word": "boston",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "source": "Boston Butt"
+  },
+  {
+    "word": "bottom",
+    "groups": [
+      "protein"
+    ],
+    "source": "Round Roast Bottom"
+  },
+  {
+    "word": "boysenberries",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Boysenberries"
+  },
+  {
+    "word": "brain",
+    "groups": [
+      "protein"
+    ],
+    "source": "Brain"
+  },
+  {
+    "word": "bran",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "source": "Cereal Raisin Bran"
+  },
+  {
+    "word": "bratwurst",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "source": "Bratwurst"
+  },
+  {
+    "word": "braunschweiger",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "source": "Braunschweiger"
+  },
+  {
+    "word": "bread",
+    "groups": [
+      "dairy",
+      "grain",
+      "prepared"
+    ],
+    "source": "Bread Cheese"
+  },
+  {
+    "word": "breadfruit",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Breadfruit"
+  },
+  {
+    "word": "breast",
+    "groups": [
+      "protein"
+    ],
+    "source": "Chicken Breast"
+  },
+  {
+    "word": "brick",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Brick Cheese"
+  },
+  {
+    "word": "brie",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Brie Cheese"
+  },
+  {
+    "word": "brisket",
+    "groups": [
+      "protein"
+    ],
+    "source": "Brisket"
+  },
+  {
+    "word": "broadbean",
+    "groups": [
+      "legume"
+    ],
+    "source": "Broadbean"
+  },
+  {
+    "word": "broccoli",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Broccoli"
+  },
+  {
+    "word": "broilers",
+    "groups": [
+      "protein"
+    ],
+    "source": "Broilers"
+  },
+  {
+    "word": "broth",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Fish Broth"
+  },
+  {
+    "word": "brotwurst",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "source": "Brotwurst"
+  },
+  {
+    "word": "brown",
+    "groups": [
+      "grain"
+    ],
+    "source": "Brown Rice"
+  },
+  {
+    "word": "brussel",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Brussel Sprouts"
+  },
+  {
+    "word": "buckwheat",
+    "groups": [
+      "grain"
+    ],
+    "source": "Buckwheat"
+  },
+  {
+    "word": "buffalo",
+    "groups": [
+      "protein"
+    ],
+    "source": "Buffalo"
+  },
+  {
+    "word": "bulgur",
+    "groups": [
+      "grain"
+    ],
+    "source": "Bulgur"
+  },
+  {
+    "word": "bun",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Hot Dog Bun"
+  },
+  {
+    "word": "burdock",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Burdock"
+  },
+  {
+    "word": "burger",
+    "groups": [
+      "prepared",
+      "protein"
+    ],
+    "source": "Burger"
+  },
+  {
+    "word": "burrito",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Burrito"
+  },
+  {
+    "word": "butt",
+    "groups": [
+      "protein"
+    ],
+    "source": "Boston Butt"
+  },
+  {
+    "word": "butter",
+    "groups": [
+      "dairy",
+      "fats"
+    ],
+    "source": "Butter Salted"
+  },
+  {
+    "word": "butterbur",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Butterbur"
+  },
+  {
+    "word": "butterfish",
+    "groups": [
+      "protein"
+    ],
+    "source": "Butterfish"
+  },
+  {
+    "word": "buttermilk",
+    "groups": [
+      "dairy",
+      "beverage"
+    ],
+    "source": "Buttermilk"
+  },
+  {
+    "word": "butterscotch",
+    "groups": [
+      "prepared",
+      "condiment"
+    ],
+    "source": "Butterscotch"
+  },
+  {
+    "word": "cabbage",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Cabbage"
+  },
+  {
+    "word": "caesar",
+    "groups": [
+      "condiment",
+      "prepared"
+    ],
+    "source": "Caesar Dressing"
+  },
+  {
+    "word": "cake",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Cake White"
+  },
+  {
+    "word": "camembert",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Camembert"
+  },
+  {
+    "word": "cane",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Syrup Cane"
+  },
+  {
+    "word": "canola",
+    "groups": [
+      "fats"
+    ],
+    "source": "Canola"
+  },
+  {
+    "word": "cantaloupe",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Cantaloupe"
+  },
+  {
+    "word": "caper",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Caper"
+  },
+
+  {
+    "word": "carambola",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Carambola"
+  },
+  {
+    "word": "caramel",
+    "groups": [
+      "prepared",
+      "condiment"
+    ],
+    "source": "Caramel"
+  },
+  {
+    "word": "caraway",
+    "groups": [
+      "spice"
+    ],
+    "source": "Caraway"
+  },
+  {
+    "word": "carbonated",
+    "groups": [
+      "beverage"
+    ],
+    "source": "Carbonated"
+  },
+  {
+    "word": "cardamom",
+    "groups": [
+      "spice"
+    ],
+    "source": "Cardamom"
+  },
+  {
+    "word": "cardoon",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Cardoon"
+  },
+  {
+    "word": "caribou",
+    "groups": [
+      "protein"
+    ],
+    "source": "Caribou"
+  },
+  {
+    "word": "carissa",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Carissa"
+  },
+  {
+    "word": "carob",
+    "groups": [
+      "legume"
+    ],
+    "source": "Carob"
+  },
+  {
+    "word": "carp",
+    "groups": [
+      "protein"
+    ],
+    "source": "Carp"
+  },
+  {
+    "word": "carrot",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Carrot"
+  },
+  {
+    "word": "casein",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Casein"
+  },
+  {
+    "word": "cashew",
+    "groups": [
+      "nuts"
+    ],
+    "source": "Cashew"
+  },
+  {
+    "word": "cassava",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Cassava"
+  },
+  {
+    "word": "catfish",
+    "groups": [
+      "protein"
+    ],
+    "source": "Catfish"
+  },
+  {
+    "word": "catsup",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Catsup"
+  },
+  {
+    "word": "cattail",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Cattail"
+  },
+  {
+    "word": "cauliflower",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Cauliflower"
+  },
+  {
+    "word": "cayenne",
+    "groups": [
+      "spice"
+    ],
+    "source": "Cayenne"
+  },
+  {
+    "word": "celeriac",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Celeriac"
+  },
+  {
+    "word": "celery",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Celery"
+  },
+  {
+    "word": "celtuce",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Celtuce"
+  },
+  {
+    "word": "cereal",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "source": "Cereal Honey Grahms"
+  },
+  {
+    "word": "chanterelle",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Chanterelle"
+  },
+  {
+    "word": "chard",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Chard"
+  },
+
+  {
+    "word": "chayote",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Chayote"
+  },
+  {
+    "word": "cheddar",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Cheddar"
+  },
+  {
+    "word": "cheerios",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "source": "Cereal Honey Nut Cheerios"
+  },
+  {
+    "word": "cheese",
+    "groups": [
+      "dairy"
+    ],
+    "source": "American Cheese"
+  },
+  {
+    "word": "cheeseburger",
+    "groups": [
+      "prepared",
+      "protein"
+    ],
+    "source": "Cheeseburger"
+  },
+  {
+    "word": "cheesecake",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Cheesecake"
+  },
+  {
+    "word": "cheesefurter",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "source": "Cheesefurter"
+  },
+  {
+    "word": "cherimoya",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Cherimoya"
+  },
+  {
+    "word": "cherries",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Cherries"
+  },
+
+  {
+    "word": "cherry",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Cherry Fried Pie"
+  },
+  {
+    "word": "chervil",
+    "groups": [
+      "spice"
+    ],
+    "source": "Chervil"
+  },
+  {
+    "word": "cheshire",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Cheshire"
+  },
+  {
+    "word": "chestnut",
+    "groups": [
+      "nuts"
+    ],
+    "source": "Chestnut"
+  },
+  {
+    "word": "chia",
+    "groups": [
+      "nuts"
+    ],
+    "source": "Chia"
+  },
+  {
+    "word": "chicken",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Egg Roll Chicken"
+  },
+  {
+    "word": "chickpea",
+    "groups": [
+      "legume",
+      "protein"
+    ],
+    "source": "Chickpea"
+  },
+  {
+    "word": "chicory",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Chicory"
+  },
+  {
+    "word": "chihuahua",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Queso Chihuahua"
+  },
+  {
+    "word": "chilchen",
+    "groups": [
+      "protein"
+    ],
+    "source": "Chilchen"
+  },
+  {
+    "word": "chili",
+    "groups": [
+      "prepared",
+      "protein"
+    ],
+    "source": "Chili"
+  },
+  {
+    "word": "chinook",
+    "groups": [
+      "protein"
+    ],
+    "source": "Chinook"
+  },
+  {
+    "word": "chip",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Potato Chip"
+  },
+  {
+    "word": "chiton",
+    "groups": [
+      "protein"
+    ],
+    "source": "Chiton"
+  },
+  {
+    "word": "chive",
+    "groups": [
+      "spice"
+    ],
+    "source": "Chive"
+  },
+
+  {
+    "word": "chocolate",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Chocolate"
+  },
+  {
+    "word": "chokecherries",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Chokecherries"
+  },
+  {
+    "word": "chop",
+    "groups": [
+      "protein"
+    ],
+    "source": "Lamb Chop"
+  },
+  {
+    "word": "chorizo",
+    "groups": [
+      "protein"
+    ],
+    "source": "Chorizo"
+  },
+  {
+    "word": "choy",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Bok Choy"
+  },
+  {
+    "word": "chrysanthemum",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Chrysanthemum"
+  },
+  {
+    "word": "chuck",
+    "groups": [
+      "protein"
+    ],
+    "source": "Chuck Roast"
+  },
+  {
+    "word": "chum",
+    "groups": [
+      "protein"
+    ],
+    "source": "Chum"
+  },
+  {
+    "word": "cider",
+    "groups": [
+      "beverage"
+    ],
+    "source": "Vinegar Cider"
+  },
+  {
+    "word": "cilantro",
+    "groups": [
+      "spice"
+    ],
+    "source": "Cilantro"
+  },
+  {
+    "word": "cinnamon",
+    "groups": [
+      "spice"
+    ],
+    "source": "Cinnamon"
+  },
+  {
+    "word": "cisco",
+    "groups": [
+      "protein"
+    ],
+    "source": "Cisco"
+  },
+  {
+    "word": "citrus",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Citrus"
+  },
+  {
+    "word": "clam",
+    "groups": [
+      "protein"
+    ],
+    "source": "Clam"
+  },
+  {
+    "word": "clementine",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Clementine"
+  },
+  {
+    "word": "cloudberry",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Cloudberry"
+  },
+  {
+    "word": "clove",
+    "groups": [
+      "spice"
+    ],
+    "source": "Clove"
+  },
+  {
+    "word": "club",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Club Sandwich"
+  },
+  {
+    "word": "cocktail",
+    "groups": [
+      "fruit",
+      "beverage",
+      "prepared"
+    ],
+    "source": "Fruit Cocktail"
+  },
+  {
+    "word": "cocoa",
+    "groups": [
+      "spice",
+      "beverage"
+    ],
+    "source": "Cocoa"
+  },
+  {
+    "word": "coconut",
+    "groups": [
+      "fruit",
+      "nuts",
+      "fats"
+    ],
+    "source": "Coconut"
+  },
+  {
+    "word": "cod",
+    "groups": [
+      "protein"
+    ],
+    "source": "Cod"
+  },
+  {
+    "word": "coffee",
+    "groups": [
+      "beverage"
+    ],
+    "source": "Coffee"
+  },
+  {
+    "word": "coho",
+    "groups": [
+      "protein"
+    ],
+    "source": "Coho"
+  },
+  {
+    "word": "cola",
+    "groups": [
+      "beverage"
+    ],
+    "source": "Cola"
+  },
+  {
+    "word": "colby",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Colby"
+  },
+  {
+    "word": "coleslaw",
+    "groups": [
+      "vegetable",
+      "prepared"
+    ],
+    "source": "Coleslaw"
+  },
+  {
+    "word": "collard",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Collard"
+  },
+  {
+    "word": "conch",
+    "groups": [
+      "protein"
+    ],
+    "source": "Conch"
+  },
+  {
+    "word": "condensed",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Milk Condensed"
+  },
+  {
+    "word": "cooked",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Buckwheat Cooked"
+  },
+  {
+    "word": "cookie",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Fortune Cookie"
+  },
+  {
+    "word": "coriander",
+    "groups": [
+      "spice"
+    ],
+    "source": "Coriander"
+  },
+  {
+    "word": "corn",
+    "groups": [
+      "vegetable",
+      "grain"
+    ],
+    "source": "Corn"
+  },
+  {
+    "word": "cornbread",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Cornbread"
+  },
+  {
+    "word": "corned",
+    "groups": [
+      "protein"
+    ],
+    "source": "Corned Beef"
+  },
+  {
+    "word": "cornish",
+    "groups": [
+      "protein"
+    ],
+    "source": "Cornish"
+  },
+  {
+    "word": "cornmeal",
+    "groups": [
+      "grain"
+    ],
+    "source": "Cornmeal"
+  },
+  {
+    "word": "cornstarch",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Cornstarch"
+  },
+  {
+    "word": "cotija",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Queso Cotija"
+  },
+  {
+    "word": "cottage",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Cottage"
+  },
+  {
+    "word": "cottonseed",
+    "groups": [
+      "fats",
+      "nuts"
+    ],
+    "source": "Cottonseed"
+  },
+  {
+    "word": "country",
+    "groups": [
+      "protein"
+    ],
+    "source": "Country Style Rib"
+  },
+  {
+    "word": "couscous",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "source": "Couscous"
+  },
+  {
+    "word": "cowpea",
+    "groups": [
+      "legume"
+    ],
+    "source": "Cowpea"
+  },
+  {
+    "word": "crab",
+    "groups": [
+      "protein"
+    ],
+    "source": "Crab"
+  },
+  {
+    "word": "crabapple",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Crabapple"
+  },
+  {
+    "word": "cracker",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "source": "Cracker Whole Wheat"
+  },
+  {
+    "word": "cranberry",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Cranberry"
+  },
+  {
+    "word": "crawfish",
+    "groups": [
+      "protein"
+    ],
+    "source": "Crawfish"
+  },
+  {
+    "word": "crayfish",
+    "groups": [
+      "protein"
+    ],
+    "source": "Crayfish"
+  },
+  {
+    "word": "cream",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Cream"
+  },
+  {
+    "word": "croaker",
+    "groups": [
+      "protein"
+    ],
+    "source": "Croaker"
+  },
+  {
+    "word": "croissant",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Croissant"
+  },
+  {
+    "word": "crookneck",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Crookneck"
+  },
+  {
+    "word": "crouton",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Crouton"
+  },
+  
+  {
+    "word": "cucumber",
+    "groups": [
+      "vegetable",
+      "fruit"
+    ],
+    "source": "Cucumber"
+  },
+  {
+    "word": "cumin",
+    "groups": [
+      "spice"
+    ],
+    "source": "Cumin"
+  },
+  {
+    "word": "cured",
+    "groups": [
+      "protein"
+    ],
+    "source": "Cured"
+  },
+  {
+    "word": "currant",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Currant"
+  },
+  {
+    "word": "curry",
+    "groups": [
+      "spice"
+    ],
+    "source": "Curry"
+  },
+  {
+    "word": "cusk",
+    "groups": [
+      "protein"
+    ],
+    "source": "Cusk"
+  },
+  {
+    "word": "custard",
+    "groups": [
+      "prepared",
+      "dairy"
+    ],
+    "source": "Custard"
+  },
+  {
+    "word": "cuttlefish",
+    "groups": [
+      "protein"
+    ],
+    "source": "Cuttlefish"
+  },
+  {
+    "word": "dandelion",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Dandelion"
+  },
+  {
+    "word": "danish",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Danish"
+  },
+  {
+    "word": "dark",
+    "groups": [
+      "condiment",
+      "protein"
+    ],
+    "source": "Syrup Corn Dark"
+  },
+  {
+    "word": "date",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Date"
+  },
+  {
+    "word": "deer",
+    "groups": [
+      "protein"
+    ],
+    "source": "Deer"
+  },
+  {
+    "word": "devilfish",
+    "groups": [
+      "protein"
+    ],
+    "source": "Devilfish"
+  },
+  {
+    "word": "dill",
+    "groups": [
+      "spice"
+    ],
+    "source": "Dill"
+  },
+  {
+    "word": "dinner",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Dinner Roll"
+  },
+  {
+    "word": "distilled",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Vinegar Distilled"
+  },
+  {
+    "word": "divinity",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Divinity"
+  },
+  {
+    "word": "dock",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Dock"
+  },
+  {
+    "word": "donut",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Doughnut Cake"
+  },
+  {
+    "word": "doughnut",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Doughnut Cake"
+  },
+  {
+    "word": "dressing",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Caesar Dressing"
+  },
+  {
+    "word": "drum",
+    "groups": [
+      "protein"
+    ],
+    "source": "Drum"
+  },
+  {
+    "word": "drumette",
+    "groups": [
+      "protein"
+    ],
+    "source": "Drumette"
+  },
+  {
+    "word": "drumstick",
+    "groups": [
+      "protein",
+      "vegetable"
+    ],
+    "source": "Drumstick"
+  },
+
+  {
+    "word": "duck",
+    "groups": [
+      "protein"
+    ],
+    "source": "Duck"
+  },
+  {
+    "word": "dumpling",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Dumpling"
+  },
+  {
+    "word": "durian",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Durian"
+  },
+  {
+    "word": "eclair",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Eclair"
+  },
+  {
+    "word": "edam",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Edam"
+  },
+  {
+    "word": "edamame",
+    "groups": [
+      "legume"
+    ],
+    "source": "Edamame"
+  },
+  {
+    "word": "eel",
+    "groups": [
+      "protein"
+    ],
+    "source": "Eel"
+  },
+  {
+    "word": "egg",
+    "groups": [
+      "protein"
+    ],
+    "source": "Egg"
+  },
+  {
+    "word": "eggnog",
+    "groups": [
+      "beverage"
+    ],
+    "source": "Eggnog"
+  },
+  {
+    "word": "eggplant",
+    "groups": [
+      "vegetable",
+      "fruit"
+    ],
+    "source": "Eggplant"
+  },
+  {
+    "word": "elderberries",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Elderberries"
+  },
+  {
+    "word": "elk",
+    "groups": [
+      "protein"
+    ],
+    "source": "Elk"
+  },
+  {
+    "word": "emu",
+    "groups": [
+      "protein"
+    ],
+    "source": "Emu"
+  },
+  {
+    "word": "endive",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Endive"
+  },
+  {
+    "word": "english",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "source": "English Muffin"
+  },
+  {
+    "word": "enoki",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Enoki"
+  },
+  {
+    "word": "epazote",
+    "groups": [
+      "spice"
+    ],
+    "source": "Epazote"
+  },
+  {
+    "word": "eppaw",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Eppaw"
+  },
+  {
+    "word": "escarole",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Escarole"
+  },
+  {
+    "word": "evaporated",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Milk Evaporated"
+  },
+  {
+    "word": "eye",
+    "groups": [
+      "protein",
+      "legume"
+    ],
+    "source": "Eye of Round"
+  },
+  {
+    "word": "falafel",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Falafel"
+  },
+  {
+    "word": "farina",
+    "groups": [
+      "grain"
+    ],
+    "source": "Farina"
+  },
+  {
+    "word": "fava",
+    "groups": [
+      "legume"
+    ],
+    "source": "Fava Bean"
+  },
+  {
+    "word": "feijoa",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Feijoa"
+  },
+  {
+    "word": "fengugreek",
+    "groups": [
+      "nuts"
+    ],
+    "source": "Fengugreek"
+  },
+  {
+    "word": "fennel",
+    "groups": [
+      "vegetable",
+      "nuts"
+    ],
+    "source": "Fennel"
+  },
+  {
+    "word": "fern",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Fern"
+  },
+  {
+    "word": "feta",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Feta"
+  },
+  {
+    "word": "fiddlehead",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Fiddlehead"
+  },
+  {
+    "word": "fig",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Fig"
+  },
+  {
+    "word": "filbert",
+    "groups": [
+      "nuts"
+    ],
+    "source": "Filbert"
+  },
+  {
+    "word": "filet",
+    "groups": [
+      "protein"
+    ],
+    "source": "Filet Mignon"
+  },
+  {
+    "word": "fireweed",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Fireweed"
+  },
+  {
+    "word": "fish",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Fish Broth"
+  },
+  {
+    "word": "flakes",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "source": "Cereal Corn Flakes"
+  },
+  {
+    "word": "flan",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Flan"
+  },
+  {
+    "word": "flank",
+    "groups": [
+      "protein"
+    ],
+    "source": "Flank Steak"
+  },
+  {
+    "word": "flatfish",
+    "groups": [
+      "protein"
+    ],
+    "source": "Flatfish"
+  },
+  {
+    "word": "flaxseed",
+    "groups": [
+      "nuts"
+    ],
+    "source": "Flaxseed"
+  },
+  {
+    "word": "flounder",
+    "groups": [
+      "protein"
+    ],
+    "source": "Flounder"
+  },
+  {
+    "word": "flour",
+    "groups": [
+      "grain"
+    ],
+    "source": "Rice Flour Brown"
+  },
+  {
+    "word": "focaccia",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Focaccia"
+  },
+  {
+    "word": "foiegras",
+    "groups": [
+      "protein"
+    ],
+    "source": "Foiegras"
+  },
+  {
+    "word": "fondant",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Fondant"
+  },
+  {
+    "word": "fontina",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Fontina"
+  },
+  {
+    "word": "food",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Angel Food"
+  },
+  {
+    "word": "foreshank",
+    "groups": [
+      "protein"
+    ],
+    "source": "Foreshank Lamb"
+  },
+  {
+    "word": "fortune",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Fortune Cookie"
+  },
+  {
+    "word": "frankfurter",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "source": "Frankfurter"
+  },
+  {
+    "word": "french",
+    "groups": [
+      "legume",
+      "prepared",
+      "vegetable"
+    ],
+    "source": "French Bean"
+  },
+  {
+    "word": "fried",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Cherry Fried Pie"
+  },
+  {
+    "word": "fries",
+    "groups": [
+      "vegetable",
+      "prepared"
+    ],
+    "source": "French Fries"
+  },
+  {
+    "word": "frog",
+    "groups": [
+      "protein"
+    ],
+    "source": "Frog"
+  },
+  
+  {
+    "word": "frosted",
+    "groups": [
+    
+      "prepared"
+    ],
+    "source": "Cereal Frosted Flakes"
+  },
+  {
+    "word": "frosting",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Frosting"
+  },
+  {
+    "word": "fructose",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Syrup High Fructose"
+  },
+  {
+    "word": "fruit",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Fruit Cocktail"
+  },
+  {
+    "word": "fry",
+    "groups": [
+      "prepared",
+      "grain"
+    ],
+    "source": "Fry Bread"
+  },
+  {
+    "word": "fryers",
+    "groups": [
+      "protein"
+    ],
+    "source": "Fryers"
+  },
+  {
+    "word": "fudge",
+    "groups": [
+      "prepared",
+      "condiment"
+    ],
+    "source": "Fudge"
+  },
+  {
+    "word": "garlic",
+    "groups": [
+      "vegetable",
+      "spice"
+    ],
+    "source": "Garlic"
+  },
+  {
+    "word": "gefilte",
+    "groups": [
+      "protein"
+    ],
+    "source": "Gefilte Fish"
+  },
+  {
+    "word": "gelatin",
+    "groups": [
+      "prepared",
+      "protein"
+    ],
+    "source": "Gelatin"
+  },
+  {
+    "word": "germ",
+    "groups": [
+      "grain",
+      "fats"
+    ],
+    "source": "Wheat Germ"
+  },
+  {
+    "word": "ghee",
+    "groups": [
+      "dairy",
+      "fats"
+    ],
+    "source": "Ghee"
+  },
+  {
+    "word": "giblets",
+    "groups": [
+      "protein"
+    ],
+    "source": "Giblets"
+  },
+  {
+    "word": "ginger",
+    "groups": [
+      "vegetable",
+      "spice"
+    ],
+    "source": "Ginger"
+  },
+  {
+    "word": "gingerbread",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Gingerbread"
+  },
+  {
+    "word": "ginkgo",
+    "groups": [
+      "nuts"
+    ],
+    "source": "Ginkgo"
+  },
+  {
+    "word": "gizzard",
+    "groups": [
+      "protein"
+    ],
+    "source": "Gizzard"
+  },
+  {
+    "word": "gjetost",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Gjetost"
+  },
+  {
+    "word": "gluten",
+    "groups": [
+      "protein",
+      "grain",
+      "prepared"
+    ],
+    "source": "Wheat Gluten"
+  },
+  {
+    "word": "goat",
+    "groups": [
+      "protein"
+    ],
+    "source": "Goat"
+  },
+  {
+    "word": "goddess",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Dressing Green Goddess"
+  },
+  {
+    "word": "goji",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Goji"
+  },
+  {
+    "word": "goose",
+    "groups": [
+      "protein"
+    ],
+    "source": "Goose"
+  },
+  {
+    "word": "gooseberries",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Gooseberries"
+  },
+  {
+    "word": "gorgonzola",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Gorgonzola"
+  },
+  {
+    "word": "gouda",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Gouda"
+  },
+  {
+    "word": "gourd",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Gourd"
+  },
+  {
+    "word": "graham",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Graham"
+  },
+  
+  {
+    "word": "granola",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Granola"
+  },
+  {
+    "word": "grape",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Grape"
+  },
+  {
+    "word": "grapefruit",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Grapefruit"
+  },
+  {
+    "word": "grapeseed",
+    "groups": [
+      "fats"
+    ],
+    "source": "Grapeseed Oil"
+  },
+  {
+    "word": "gratin",
+    "groups": [
+      "vegetable",
+      "prepared"
+    ],
+    "source": "Potatoes au Gratin"
+  },
+  {
+    "word": "gravy",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Gravy"
+  },
+  {
+    "word": "green",
+    "groups": [
+      "vegetable",
+      "legume",
+      "fruit"
+    ],
+    "source": "Olive Green"
+  },
+  {
+    "word": "grits",
+    "groups": [
+      "grain"
+    ],
+    "source": "Grits"
+  },
+  {
+    "word": "ground",
+    "groups": [
+      "protein",
+      "spice"
+    ],
+    "source": "Beef Ground"
+  },
+  {
+    "word": "grouper",
+    "groups": [
+      "protein"
+    ],
+    "source": "Grouper"
+  },
+  {
+    "word": "gruyere",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Gruyere"
+  },
+  {
+    "word": "guanabana",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Guanabana"
+  },
+  {
+    "word": "guava",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Guava"
+  },
+  {
+    "word": "guinea",
+    "groups": [
+      "protein"
+    ],
+    "source": "Guinea"
+  },
+  {
+    "word": "gumdrop",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Gumdrop"
+  },
+  {
+    "word": "haddock",
+    "groups": [
+      "protein"
+    ],
+    "source": "Haddock"
+  },
+  
+  {
+    "word": "halibut",
+    "groups": [
+      "protein"
+    ],
+    "source": "Halibut"
+  },
+  {
+    "word": "ham",
+    "groups": [
+      "protein"
+    ],
+    "source": "Ham"
+  },
+  {
+    "word": "hamburger",
+    "groups": [
+      "prepared",
+      "protein"
+    ],
+    "source": "Hamburger"
+  },
+  {
+    "word": "hash",
+    "groups": [
+      "vegetable",
+      "prepared"
+    ],
+    "source": "Hash Brown"
+  },
+  {
+    "word": "hazelnut",
+    "groups": [
+      "nuts"
+    ],
+    "source": "Hazelnut"
+  },
+  {
+    "word": "heart",
+    "groups": [
+      "vegetable",
+      "protein"
+    ],
+    "source": "Heart of Palm"
+  },
+  {
+    "word": "hemp",
+    "groups": [
+      "nuts"
+    ],
+    "source": "Hemp"
+  },
+  {
+    "word": "herring",
+    "groups": [
+      "protein"
+    ],
+    "source": "Herring"
+  },
+  {
+    "word": "hickory",
+    "groups": [
+      "nuts"
+    ],
+    "source": "Hickory Nut"
+  },
+  
+  {
+    "word": "hindshank",
+    "groups": [
+      "protein"
+    ],
+    "source": "Hindshank Lamb"
+  },
+  {
+    "word": "hoisin",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Hoisin"
+  },
+  {
+    "word": "hominy",
+    "groups": [
+      "grain"
+    ],
+    "source": "Hominy"
+  },
+  {
+    "word": "honey",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Honey"
+  },
+  {
+    "word": "honeydew",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Honeydew"
+  },
+  {
+    "word": "horned",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Horned"
+  },
+  {
+    "word": "horse",
+    "groups": [
+      "protein"
+    ],
+    "source": "Horse"
+  },
+  {
+    "word": "horseradish",
+    "groups": [
+      "vegetable",
+      "condiment"
+    ],
+    "source": "Horseradish"
+  },
+  {
+    "word": "hot",
+    "groups": [
+      "prepared",
+      "condiment",
+      "protein"
+    ],
+    "source": "Hot Dog"
+  },
+  {
+    "word": "hotdog",
+    "groups": [
+      "protein"
+    ],
+    "source": "Roll Hotdog"
+  },
+  {
+    "word": "huckleberries",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Huckleberries"
+  },
+  {
+    "word": "hummus",
+    "groups": [
+      "legume",
+      "prepared"
+    ],
+    "source": "Hummus"
+  },
+  {
+    "word": "hyacinth",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Hyacinth"
+  },
+  {
+    "word": "ice",
+    "groups": [
+      "dairy",
+      "prepared"
+    ],
+    "source": "Ice Cream"
+  },
+  {
+    "word": "icing",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Icing"
+  },
+  {
+    "word": "incaparina",
+    "groups": [
+      "grain"
+    ],
+    "source": "Incaparina"
+  },
+  {
+    "word": "italian",
+    "groups": [
+      "spice",
+      "condiment",
+      "prepared"
+    ],
+    "source": "Dressing Italian"
+  },
+  {
+    "word": "jackfruit",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Jackfruit"
+  },
+  {
+    "word": "jalapeno",
+    "groups": [
+      "spice",
+      "vegetable",
+      "fruit"
+    ],
+    "source": "Jalapeno"
+  },
+  {
+    "word": "jam",
+    "groups": [
+      "prepared",
+      "condiment",
+      "fruit"
+    ],
+    "source": "Jam"
+  },
+  {
+    "word": "jellies",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Jellies"
+  },
+  {
+    "word": "jellybean",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Jellybean"
+  },
+  {
+    "word": "jellyfish",
+    "groups": [
+      "protein"
+    ],
+    "source": "Jellyfish"
+  },
+  {
+    "word": "jerusalem",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Jerusalem"
+  },
+  {
+    "word": "jicama",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Jicama"
+  },
+  {
+    "word": "juice",
+    "groups": [
+      "beverage"
+    ],
+    "source": "Aloe Vera Juice"
+  },
+  {
+    "word": "jujube",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Jujube"
+  },
+  {
+    "word": "jute",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Jute"
+  },
+  {
+    "word": "kale",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Kale"
+  },
+  {
+    "word": "kanpyo",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Kanpyo"
+  },
+  {
+    "word": "kefir",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Kefir"
+  },
+  {
+    "word": "kelp",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Kelp"
+  },
+  {
+    "word": "ketchup",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Ketchup"
+  },
+  {
+    "word": "kidney",
+    "groups": [
+      "legume",
+      "protein"
+    ],
+    "source": "Kidney Bean"
+  },
+  {
+    "word": "kielbasa",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "source": "Kielbasa"
+  },
+  {
+    "word": "kimchi",
+    "groups": [
+      "vegetable",
+      "prepared"
+    ],
+    "source": "Kimchi"
+  },
+  {
+    "word": "kiwi",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Kiwi"
+  },
+  {
+    "word": "kohlrabi",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Kohlrabi"
+  },
+  {
+    "word": "krispies",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "source": "Cereal Rice Krispies"
+  },
+  {
+    "word": "kumquat",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Kumquat"
+  },
+  {
+    "word": "ladyfingers",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Ladyfingers"
+  },
+  {
+    "word": "lamb",
+    "groups": [
+      "protein"
+    ],
+    "source": "Foreshank Lamb"
+  },
+  {
+    "word": "lambsquarters",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Lambsquarters"
+  },
+  {
+    "word": "lard",
+    "groups": [
+      "fats"
+    ],
+    "source": "Lard"
+  },
+  {
+    "word": "lasagna",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Lasagna"
+  },
+  {
+    "word": "leaf",
+    "groups": [
+      "spice",
+      "vegetable"
+    ],
+    "source": "Bay Leaf"
+  },
+  {
+    "word": "leave",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Amaranth Leave"
+  },
+  {
+    "word": "lecithin",
+    "groups": [
+      "fats"
+    ],
+    "source": "Lecithin"
+  },
+  {
+    "word": "leek",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Leek"
+  },
+  {
+    "word": "leg",
+    "groups": [
+      "protein"
+    ],
+    "source": "Chicken Leg"
+  },
+  {
+    "word": "lemon",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Lemon Peel"
+  },
+  {
+    "word": "lemonade",
+    "groups": [
+      "beverage"
+    ],
+    "source": "Lemonade"
+  },
+  {
+    "word": "lentil",
+    "groups": [
+      "legume",
+      "protein"
+    ],
+    "source": "Lentil"
+  },
+  {
+    "word": "lettuce",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Lettuce"
+  },
+  {
+    "word": "light",
+    "groups": [
+      "protein",
+      "dairy",
+      "condiment"
+    ],
+    "source": "Tuna Light"
+  },
+  {
+    "word": "lima",
+    "groups": [
+      "legume"
+    ],
+    "source": "Lima Bean"
+  },
+  {
+    "word": "lime",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Lime"
+  },
+  {
+    "word": "limeade",
+    "groups": [
+      "beverage"
+    ],
+    "source": "Limeade"
+  },
+  {
+    "word": "ling",
+    "groups": [
+      "protein"
+    ],
+    "source": "Ling"
+  },
+  {
+    "word": "lingcod",
+    "groups": [
+      "protein"
+    ],
+    "source": "Lingcod"
+  },
+  {
+    "word": "lingonberry",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Lingonberry"
+  },
+  {
+    "word": "litchi",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Litchi"
+  },
+  {
+    "word": "liver",
+    "groups": [
+      "protein"
+    ],
+    "source": "Liver"
+  },
+  {
+    "word": "liverwurst",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "source": "Liverwurst"
+  },
+  {
+    "word": "lobster",
+    "groups": [
+      "protein"
+    ],
+    "source": "Lobster"
+  },
+  {
+    "word": "loganberries",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Loganberries"
+  },
+  {
+    "word": "loin",
+    "groups": [
+      "protein"
+    ],
+    "source": "Veal Loin"
+  },
+  {
+    "word": "longan",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Longan"
+  },
+  {
+    "word": "loops",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "source": "Cereal Fruit Loops"
+  },
+  {
+    "word": "loquat",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Loquat"
+  },
+  {
+    "word": "lotus",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Lotus"
+  },
+  
+  {
+    "word": "lupins",
+    "groups": [
+      "legume"
+    ],
+    "source": "Lupins"
+  },
+  {
+    "word": "macadamia",
+    "groups": [
+      "nuts"
+    ],
+    "source": "Macadamia"
+  },
+  {
+    "word": "macaroni",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "source": "Macaroni"
+  },
+  {
+    "word": "macaroon",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Macaroon"
+  },
+  {
+    "word": "mackerel",
+    "groups": [
+      "protein"
+    ],
+    "source": "Mackerel"
+  },
+  {
+    "word": "mahi",
+    "groups": [
+      "protein"
+    ],
+    "source": "Mahi"
+  },
+  {
+    "word": "maitake",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Maitake"
+  },
+  {
+    "word": "malted",
+    "groups": [
+      "beverage"
+    ],
+    "source": "Malted"
+  },
+  {
+    "word": "mamey",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Mamey"
+  },
+  {
+    "word": "mandarin",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Mandarin"
+  },
+  {
+    "word": "mango",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Mango"
+  },
+  {
+    "word": "mangosteen",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Mangosteen"
+  },
+  {
+    "word": "maple",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Maple Sugar"
+  },
+  {
+    "word": "maraschino",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Maraschino"
+  },
+  {
+    "word": "margarine",
+    "groups": [
+      "fats"
+    ],
+    "source": "Margarine"
+  },
+  {
+    "word": "marjoram",
+    "groups": [
+      "spice"
+    ],
+    "source": "Marjoram"
+  },
+  {
+    "word": "marmalade",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Marmalade"
+  },
+  {
+    "word": "marshmallow",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Marshmallow"
+  },
+  {
+    "word": "masa",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "source": "Masa"
+  },
+  {
+    "word": "mashed",
+    "groups": [
+      "vegetable",
+      "prepared"
+    ],
+    "source": "Potatoes Mashed"
+  },
+  {
+    "word": "matzo",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Matzo"
+  },
+  {
+    "word": "mayo",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Mayo"
+  },
+  {
+    "word": "mayonnaise",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Mayonnaise"
+  },
+  {
+    "word": "meal",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "source": "Cracker Meal"
+  },
+  {
+    "word": "meat",
+    "groups": [
+      "protein"
+    ],
+    "source": "Lasagna with Meat"
+  },
+  {
+    "word": "meatballs",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "source": "Meatballs"
+  },
+  {
+    "word": "meatless",
+    "groups": [
+      "prepared",
+      "grain"
+    ],
+    "source": "Meatless Bacon"
+  },
+  {
+    "word": "melba",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Melba"
+  },
+  {
+    "word": "melon",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Melon"
+  },
+  {
+    "word": "menhaden",
+    "groups": [
+      "fats"
+    ],
+    "source": "Menhaden"
+  },
+  {
+    "word": "mexican",
+    "groups": [
+      "dairy",
+      "legume",
+      "grain"
+    ],
+    "source": "Mexican Blend Cheese"
+  },
+  {
+    "word": "mignon",
+    "groups": [
+      "protein"
+    ],
+    "source": "Mignon"
+  },
+  {
+    "word": "milk",
+    "groups": [
+      "dairy",
+      "beverage"
+    ],
+    "source": "Milk"
+  },
+  {
+    "word": "milkfish",
+    "groups": [
+      "protein"
+    ],
+    "source": "Milkfish"
+  },
+  {
+    "word": "millet",
+    "groups": [
+      "grain"
+    ],
+    "source": "Millet"
+  },
+  {
+    "word": "minestrone",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Soup Minestrone"
+  },
+  {
+    "word": "miso",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Miso"
+  },
+  {
+    "word": "mix",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Trail Mix"
+  },
+  {
+    "word": "mixed",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Vegetables Mixed"
+  },
+  {
+    "word": "molasses",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Molasses"
+  },
+  {
+    "word": "monkfish",
+    "groups": [
+      "protein"
+    ],
+    "source": "Monkfish"
+  },
+  {
+    "word": "monterey",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Monterey"
+  },
+  {
+    "word": "moose",
+    "groups": [
+      "protein"
+    ],
+    "source": "Moose"
+  },
+  {
+    "word": "morel",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Morel"
+  },
+  {
+    "word": "mortadella",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "source": "Mortadella"
+  },
+  {
+    "word": "mothbean",
+    "groups": [
+      "legume"
+    ],
+    "source": "Mothbean"
+  },
+  {
+    "word": "mountain",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Mountain Yam"
+  },
+  {
+    "word": "mousenut",
+    "groups": [
+      "nuts"
+    ],
+    "source": "Mousenut"
+  },
+  {
+    "word": "mozzarella",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Mozzarella"
+  },
+  {
+    "word": "muenster",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Muenster"
+  },
+  {
+    "word": "muffin",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Muffin"
+  },
+  {
+    "word": "mulberry",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Mulberry"
+  },
+  {
+    "word": "mullet",
+    "groups": [
+      "protein"
+    ],
+    "source": "Mullet"
+  },
+  {
+    "word": "multi",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "source": "Toast Multi"
+  },
+  {
+    "word": "multigrain",
+    "groups": [
+      "prepared",
+      "grain"
+    ],
+    "source": "Multigrain"
+  },
+  {
+    "word": "mungbean",
+    "groups": [
+      "legume"
+    ],
+    "source": "Mungbean"
+  },
+  {
+    "word": "mungo",
+    "groups": [
+      "legume"
+    ],
+    "source": "Mungo"
+  },
+  {
+    "word": "mushroom",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Mushroom"
+  },
+  {
+    "word": "muskrat",
+    "groups": [
+      "protein"
+    ],
+    "source": "Muskrat"
+  },
+  {
+    "word": "mussel",
+    "groups": [
+      "protein"
+    ],
+    "source": "Mussel"
+  },
+  {
+    "word": "mustard",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Mustard"
+  },
+  {
+    "word": "mutton",
+    "groups": [
+      "protein"
+    ],
+    "source": "Mutton"
+  },
+  {
+    "word": "naan",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Naan"
+  },
+  {
+    "word": "nachos",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Nachos"
+  },
+  {
+    "word": "nance",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Nance"
+  },
+  {
+    "word": "napa",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Napa"
+  },
+  {
+    "word": "natto",
+    "groups": [
+      "legume",
+      "prepared"
+    ],
+    "source": "Natto"
+  },
+  {
+    "word": "navy",
+    "groups": [
+      "legume"
+    ],
+    "source": "Navy Bean"
+  },
+  {
+    "word": "neck",
+    "groups": [
+      "protein",
+      "vegetable"
+    ],
+    "source": "Neck"
+  },
+  {
+    "word": "nectar",
+    "groups": [
+      "beverage",
+      "fruit"
+    ],
+    "source": "Peach Nectar"
+  },
+  {
+    "word": "nectarine",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Nectarine"
+  },
+  {
+    "word": "nettles",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Nettles"
+  },
+  {
+    "word": "neufchatel",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Neufchatel"
+  },
+  
+  {
+    "word": "noodle",
+    "groups": [
+      "grain"
+    ],
+    "source": "Noodle Egg"
+  },
+  {
+    "word": "nopales",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Nopales"
+  },
+  {
+    "word": "northern",
+    "groups": [
+      "legume"
+    ],
+    "source": "Northern Bean"
+  },
+  {
+    "word": "nut",
+    "groups": [
+      "nuts"
+    ],
+    "source": "Cereal Honey Nut Cheerios"
+  },
+  {
+    "word": "nutmeg",
+    "groups": [
+      "spice"
+    ],
+    "source": "Nutmeg"
+  },
+  {
+    "word": "oat",
+    "groups": [
+      "grain",
+      "fats"
+    ],
+    "source": "Oat"
+  },
+  {
+    "word": "oatmeal",
+    "groups": [
+      "grain"
+    ],
+    "source": "Oatmeal"
+  },
+  {
+    "word": "octopus",
+    "groups": [
+      "protein"
+    ],
+    "source": "Octopus"
+  },
+  {
+    "word": "oheloberry",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Oheloberry"
+  },
+  {
+    "word": "oil",
+    "groups": [
+      "fats"
+    ],
+    "source": "Oil"
+  },
+  {
+    "word": "okara",
+    "groups": [
+      "legume"
+    ],
+    "source": "Okara"
+  },
+  {
+    "word": "okra",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Okra"
+  },
+  {
+    "word": "olive",
+    "groups": [
+      "fruit",
+      "fats"
+    ],
+    "source": "Olive Black"
+  },
+  
+  {
+    "word": "omelet",
+    "groups": [
+      "protein"
+    ],
+    "source": "Egg Omelet"
+  },
+  {
+    "word": "onion",
+    "groups": [
+      "vegetable",
+      "spice"
+    ],
+    "source": "Onion"
+  },
+  {
+    "word": "opossum",
+    "groups": [
+      "protein"
+    ],
+    "source": "Opossum"
+  },
+  {
+    "word": "orange",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Orange"
+  },
+  {
+    "word": "oregano",
+    "groups": [
+      "spice"
+    ],
+    "source": "Oregano"
+  },
+  {
+    "word": "ostrich",
+    "groups": [
+      "protein"
+    ],
+    "source": "Ostrich"
+  },
+  {
+    "word": "oyster",
+    "groups": [
+      "protein",
+      "grain",
+      "prepared"
+    ],
+    "source": "Oyster Cooked"
+  },
+  {
+    "word": "pakchoi",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Pakchoi"
+  },
+  {
+    "word": "palm",
+    "groups": [
+      "fats",
+      "vegetable"
+    ],
+    "source": "Palm Oil"
+  },
+  {
+    "word": "pancake",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Pancake"
+  },
+  {
+    "word": "pandulce",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Pandulce"
+  },
+  {
+    "word": "papad",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Papad"
+  },
+  {
+    "word": "papaya",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Papaya"
+  },
+  {
+    "word": "paprika",
+    "groups": [
+      "spice"
+    ],
+    "source": "Paprika"
+  },
+  {
+    "word": "paratha",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Paratha"
+  },
+  {
+    "word": "parmesan",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Parmesan"
+  },
+  {
+    "word": "parsley",
+    "groups": [
+      "spice"
+    ],
+    "source": "Parsley"
+  },
+  {
+    "word": "parsnip",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Parsnip"
+  },
+  {
+    "word": "pasilla",
+    "groups": [
+      "fruit",
+      "spice"
+    ],
+    "source": "Pasilla"
+  },
+  {
+    "word": "passion",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Passion"
+  },
+  {
+    "word": "pasta",
+    "groups": [
+      "grain"
+    ],
+    "source": "Pasta"
+  },
+  {
+    "word": "paste",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Almond Paste"
+  },
+  {
+    "word": "pastrami",
+    "groups": [
+      "protein"
+    ],
+    "source": "Pastrami"
+  },
+  {
+    "word": "pastry",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Pastry"
+  },
+  {
+    "word": "pate",
+    "groups": [
+      "protein",
+      "prepared",
+      "vegetable"
+    ],
+    "source": "Pate"
+  },
+  {
+    "word": "pea",
+    "groups": [
+      "legume"
+    ],
+    "source": "Black-eyed Pea"
+  },
+  {
+    "word": "peach",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Peach"
+  },
+  {
+    "word": "peanut",
+    "groups": [
+      "legume",
+      "nuts",
+      "fats"
+    ],
+    "source": "Peanut"
+  },
+  {
+    "word": "pear",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Pear"
+  },
+  {
+    "word": "pecan",
+    "groups": [
+      "nuts"
+    ],
+    "source": "Pecan"
+  },
+  {
+    "word": "peel",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Lemon Peel"
+  },
+  {
+    "word": "pepper",
+    "groups": [
+      "vegetable",
+      "fruit",
+      "spice"
+    ],
+    "source": "Pepper"
+  },
+  {
+    "word": "peppermint",
+    "groups": [
+      "spice"
+    ],
+    "source": "Peppermint"
+  },
+  {
+    "word": "pepperoni",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "source": "Pepperoni"
+  },
+  {
+    "word": "perch",
+    "groups": [
+      "protein"
+    ],
+    "source": "Perch"
+  },
+  {
+    "word": "persimmon",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Persimmon"
+  },
+  {
+    "word": "pesto",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Pesto"
+  },
+  {
+    "word": "pheasant",
+    "groups": [
+      "protein"
+    ],
+    "source": "Pheasant"
+  },
+  {
+    "word": "phyllo",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Phyllo"
+  },
+  {
+    "word": "pickle",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Pickle"
+  },
+  {
+    "word": "pickled",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Beet Pickled"
+  },
+  {
+    "word": "picnic",
+    "groups": [
+      "protein"
+    ],
+    "source": "Pork Picnic"
+  },
+  {
+    "word": "pie",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Apple Pie"
+  },
+  
+  {
+    "word": "pigeon",
+    "groups": [
+      "protein"
+    ],
+    "source": "Pigeon"
+  },
+  {
+    "word": "pigeonpeas",
+    "groups": [
+      "legume"
+    ],
+    "source": "Pigeonpeas"
+  },
+  {
+    "word": "pike",
+    "groups": [
+      "protein"
+    ],
+    "source": "Pike"
+  },
+  {
+    "word": "piki",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Piki Bread"
+  },
+  {
+    "word": "pilinut",
+    "groups": [
+      "nuts"
+    ],
+    "source": "Pilinut"
+  },
+  {
+    "word": "pimiento",
+    "groups": [
+      "fruit",
+      "prepared"
+    ],
+    "source": "Pimiento"
+  },
+  {
+    "word": "pine",
+    "groups": [
+      "nuts"
+    ],
+    "source": "Pine"
+  },
+  {
+    "word": "pineapple",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Pineapple"
+  },
+  {
+    "word": "pinon",
+    "groups": [
+      "nuts"
+    ],
+    "source": "Pinon"
+  },
+  {
+    "word": "pinto",
+    "groups": [
+      "legume"
+    ],
+    "source": "Pinto Bean"
+  },
+  {
+    "word": "pistachio",
+    "groups": [
+      "nuts"
+    ],
+    "source": "Pistachio"
+  },
+  {
+    "word": "pita",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Pita"
+  },
+  {
+    "word": "pitanga",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Pitanga"
+  },
+  {
+    "word": "pizza",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Pizza"
+  },
+  {
+    "word": "plaintain",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Plaintain"
+  },
+  {
+    "word": "plum",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Plum"
+  },
+  {
+    "word": "poached",
+    "groups": [
+      "protein"
+    ],
+    "source": "Egg Poached"
+  },
+  {
+    "word": "poke",
+    "groups": [
+      "protein"
+    ],
+    "source": "Poke"
+  },
+  {
+    "word": "pollock",
+    "groups": [
+      "protein"
+    ],
+    "source": "Pollock"
+  },
+  {
+    "word": "pomegranate",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Pomegranate"
+  },
+  {
+    "word": "pompano",
+    "groups": [
+      "protein"
+    ],
+    "source": "Pompano"
+  },
+  {
+    "word": "pop",
+    "groups": [
+      "prepared",
+      "beverage"
+    ],
+    "source": "Pop Tart Blueberry"
+  },
+  {
+    "word": "popcorn",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "source": "Popcorn"
+  },
+  {
+    "word": "poppyseed",
+    "groups": [
+      "nuts",
+      "fats"
+    ],
+    "source": "Poppyseed"
+  },
+  {
+    "word": "pork",
+    "groups": [
+      "protein"
+    ],
+    "source": "Pork"
+  },
+  {
+    "word": "port",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Port de Salut"
+  },
+  {
+    "word": "portabella",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Portabella"
+  },
+  {
+    "word": "porterhouse",
+    "groups": [
+      "protein"
+    ],
+    "source": "Porterhouse Beef"
+  },
+  {
+    "word": "pot",
+    "groups": [
+      "prepared",
+      "protein"
+    ],
+    "source": "Turkey Pot Pie"
+  },
+  {
+    "word": "potato",
+    "groups": [
+      "vegetable"
+      
+    ],
+    "source": "Potato Chip"
+  },
+  {
+    "word": "potatoes",
+    "groups": [
+      "vegetable",
+      "prepared"
+    ],
+    "source": "Potatoes au Gratin"
+  },
+  {
+    "word": "pound",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Pound Cake"
+  },
+  {
+    "word": "pout",
+    "groups": [
+      "protein"
+    ],
+    "source": "Pout"
+  },
+  {
+    "word": "powdered",
+    "groups": [
+      "spice",
+      "condiment"
+    ],
+    "source": "Sugar Powdered"
+  },
+  {
+    "word": "prawn",
+    "groups": [
+      "protein"
+    ],
+    "source": "Prawn"
+  },
+  {
+    "word": "preserves",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Preserves"
+  },
+  {
+    "word": "pretzel",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Pretzel"
+  },
+  {
+    "word": "prickly",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Prickly Pear"
+  },
+  {
+    "word": "prosciutto",
+    "groups": [
+      "protein"
+    ],
+    "source": "Prosciutto"
+  },
+  {
+    "word": "provolone",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Provolone"
+  },
+  {
+    "word": "prune",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Prune"
+  },
+  {
+    "word": "pudding",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Pudding Chocolate"
+  },
+  {
+    "word": "puffs",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "source": "Cereal Cocoa Puffs"
+  },
+  {
+    "word": "pummelo",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Pummelo"
+  },
+  {
+    "word": "pumpernickel",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Pumpernickel"
+  },
+  {
+    "word": "pumpkin",
+    "groups": [
+      "vegetable",
+      "fruit"
+    ],
+    "source": "Pumpkin"
+  },
+  {
+    "word": "punch",
+    "groups": [
+      "beverage"
+    ],
+    "source": "Punch"
+  },
+  {
+    "word": "purslane",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Purslane"
+  },
+  {
+    "word": "quail",
+    "groups": [
+      "protein"
+    ],
+    "source": "Quail"
+  },
+  {
+    "word": "queso",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Queso Anejo"
+  },
+  {
+    "word": "quince",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Quince"
+  },
+  {
+    "word": "quinoa",
+    "groups": [
+      "grain",
+      "protein"
+    ],
+    "source": "Quinoa"
+  },
+  {
+    "word": "raab",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Broccoli Raab"
+  },
+  {
+    "word": "rabbit",
+    "groups": [
+      "protein"
+    ],
+    "source": "Rabbit"
+  },
+  {
+    "word": "raccoon",
+    "groups": [
+      "protein"
+    ],
+    "source": "Raccoon"
+  },
+  {
+    "word": "rack",
+    "groups": [
+      "protein"
+    ],
+    "source": "Rack"
+  },
+  {
+    "word": "radicchio",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Radicchio"
+  },
+  {
+    "word": "radish",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Radish"
+  },
+  {
+    "word": "raisin",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Raisin"
+  },
+  {
+    "word": "ramen",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "source": "Ramen"
+  },
+  {
+    "word": "ranch",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Dressing Ranch"
+  },
+  {
+    "word": "raspberries",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Raspberries"
+  },
+  {
+    "word": "raspberry",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Pop Tart Frost Raspberry"
+  },
+  {
+    "word": "ravioli",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Ravioli"
+  },
+  {
+    "word": "raw",
+    "groups": [
+      "protein",
+      "vegetable"
+    ],
+    "source": "Oyster Raw"
+  },
+  {
+    "word": "red",
+    "groups": [
+      "fruit",
+      "vegetable",
+      "beverage",
+      "vegetable",
+      "legume"
+    ],
+    "source": "Red Bean"
+  },
+  {
+    "word": "refried",
+    "groups": [
+      "legume",
+      "prepared"
+    ],
+    "source": "Refried Bean"
+  },
+  {
+    "word": "relish",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Relish"
+  },
+  {
+    "word": "rennin",
+    "groups": [
+      "prepared",
+      "dairy"
+    ],
+    "source": "Rennin"
+  },
+  {
+    "word": "rhubarb",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Rhubarb"
+  },
+  {
+    "word": "rib",
+    "groups": [
+      "protein"
+    ],
+    "source": "Country Style Rib"
+  },
+  {
+    "word": "ribeye",
+    "groups": [
+      "protein"
+    ],
+    "source": "Ribeye"
+  },
+  {
+    "word": "rice",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "source": "Cereal Rice Krispies"
+  },
+  {
+    "word": "ricotta",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Ricotta"
+  },
+  {
+    "word": "ring",
+    "groups": [
+      "vegetable",
+      "prepared"
+    ],
+    "source": "Onion Ring"
+  },
+  {
+    "word": "roast",
+    "groups": [
+      "protein"
+    ],
+    "source": "Chuck Roast"
+  },
+  {
+    "word": "rockfish",
+    "groups": [
+      "protein"
+    ],
+    "source": "Rockfish"
+  },
+  {
+    "word": "roe",
+    "groups": [
+      "protein"
+    ],
+    "source": "Roe"
+  },
+  {
+    "word": "roll",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Cinnamon Roll"
+  },
+  
+  {
+    "word": "romano",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Romano"
+  },
+  {
+    "word": "roquefort",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Roquefort"
+  },
+  {
+    "word": "roselle",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Roselle"
+  },
+  {
+    "word": "rosemary",
+    "groups": [
+      "spice"
+    ],
+    "source": "Rosemary"
+  },
+  {
+    "word": "roughy",
+    "groups": [
+      "protein"
+    ],
+    "source": "Roughy"
+  },
+  {
+    "word": "round",
+    "groups": [
+      "protein"
+    ],
+    "source": "Eye of Round"
+  },
+  {
+    "word": "rump",
+    "groups": [
+      "protein"
+    ],
+    "source": "Rump"
+  },
+  {
+    "word": "rusk",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Rusk"
+  },
+  {
+    "word": "rutabaga",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Rutabaga"
+  },
+  {
+    "word": "rye",
+    "groups": [
+      "grain"
+    ],
+    "source": "Rye"
+  },
+  {
+    "word": "sablefish",
+    "groups": [
+      "protein"
+    ],
+    "source": "Sablefish"
+  },
+  {
+    "word": "safflower",
+    "groups": [
+      
+      "fats"
+    ],
+    "source": "Safflower"
+  },
+  {
+    "word": "saffron",
+    "groups": [
+      "spice"
+    ],
+    "source": "Saffron"
+  },
+  {
+    "word": "sage",
+    "groups": [
+      "spice"
+    ],
+    "source": "Sage"
+  },
+  {
+    "word": "salad",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Potato Salad"
+  },
+  {
+    "word": "salami",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "source": "Salami"
+  },
+  {
+    "word": "salisbury",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "source": "Salisbury"
+  },
+  {
+    "word": "salmon",
+    "groups": [
+      "protein",
+      "fats"
+    ],
+    "source": "Salmon"
+  },
+  {
+    "word": "salsa",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Salsa"
+  },
+  {
+    "word": "salsify",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Salsify"
+  },
+  {
+    "word": "salt",
+    "groups": [
+      "spice",
+      "condiment"
+    ],
+    "source": "Salt"
+  },
+ 
+  {
+    "word": "saltine",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Saltine"
+  },
+  {
+    "word": "salut",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Port de Salut"
+  },
+  {
+    "word": "sandwich",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Club Sandwich"
+  },
+  {
+    "word": "sapote",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Sapote"
+  },
+  {
+    "word": "sardine",
+    "groups": [
+      "protein"
+    ],
+    "source": "Sardine"
+  },
+  {
+    "word": "sauce",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Sauce"
+  },
+  {
+    "word": "sauerkraut",
+    "groups": [
+      "prepared",
+      "vegetable"
+    ],
+    "source": "Sauerkraut"
+  },
+  {
+    "word": "sausage",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "source": "Pork Sausage"
+  },
+  {
+    "word": "savoy",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Savoy"
+  },
+  {
+    "word": "scallion",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Scallion"
+  },
+  {
+    "word": "scallop",
+    "groups": [
+      "protein"
+    ],
+    "source": "Scallop"
+  },
+  {
+    "word": "scalloped",
+    "groups": [
+      "vegetable",
+      "prepared"
+    ],
+    "source": "Potatoes Scalloped"
+  },
+  {
+    "word": "scrambled",
+    "groups": [
+      "protein"
+    ],
+    "source": "Egg Scrambled"
+  },
+  {
+    "word": "scrod",
+    "groups": [
+      "protein"
+    ],
+    "source": "Scrod"
+  },
+  {
+    "word": "scup",
+    "groups": [
+      "protein"
+    ],
+    "source": "Scup"
+  },
+  {
+    "word": "sea",
+    "groups": [
+      "protein"
+    ],
+    "source": "Sea Bass"
+  },
+  {
+    "word": "seal",
+    "groups": [
+      "protein",
+      "fats"
+    ],
+    "source": "Seal"
+  },
+ 
+  {
+    "word": "seaweed",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Seaweed"
+  },
+  {
+    "word": "seed",
+    "groups": [
+      "fats",
+      "nuts"
+    ],
+    "source": "Tomato Seed Oil"
+  },
+  {
+    "word": "semolina",
+    "groups": [
+      "grain"
+    ],
+    "source": "Semolina"
+  },
+  {
+    "word": "serano",
+    "groups": [
+      "fruit",
+      "spice"
+    ],
+    "source": "Serano"
+  },
+  {
+    "word": "sesame",
+    "groups": [
+      "nuts"
+    ],
+    "source": "Sesame"
+  },
+  {
+    "word": "shad",
+    "groups": [
+      "protein"
+    ],
+    "source": "Shad"
+  },
+  {
+    "word": "shake",
+    "groups": [
+      "dairy",
+      "beverage"
+    ],
+    "source": "Shake"
+  },
+  {
+    "word": "shallot",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Shallot"
+  },
+  {
+    "word": "shank",
+    "groups": [
+      "protein"
+    ],
+    "source": "Lamb Shank"
+  },
+  {
+    "word": "shark",
+    "groups": [
+      "protein"
+    ],
+    "source": "Shark"
+  },
+  {
+    "word": "sheanut",
+    "groups": [
+      "fats",
+      "nuts"
+    ],
+    "source": "Sheanut"
+  },
+  {
+    "word": "sheefish",
+    "groups": [
+      "protein"
+    ],
+    "source": "Sheefish"
+  },
+  {
+    "word": "sheep",
+    "groups": [
+      "beverage",
+      "protein",
+      "dairy"
+    ],
+    "source": "Sheep Milk"
+  },
+  {
+    "word": "sheepshead",
+    "groups": [
+      "protein"
+    ],
+    "source": "Sheepshead"
+  },
+  {
+    "word": "shellie",
+    "groups": [
+      "legume"
+    ],
+    "source": "Shellie Bean"
+  },
+  {
+    "word": "sherbet",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Sherbet"
+  },
+  {
+    "word": "shiitake",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Shiitake"
+  },
+  {
+    "word": "short",
+    "groups": [
+      "protein"
+    ],
+    "source": "Short Rib"
+  },
+  {
+    "word": "shortbread",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Shortbread"
+  },
+  {
+    "word": "shortening",
+    "groups": [
+      "fats"
+    ],
+    "source": "Shortening"
+  },
+  {
+    "word": "shoulder",
+    "groups": [
+      "protein"
+    ],
+    "source": "Shoulder"
+  },
+  {
+    "word": "shrimp",
+    "groups": [
+      "protein"
+    ],
+    "source": "Shrimp"
+  },
+  {
+    "word": "sirloin",
+    "groups": [
+      "protein"
+    ],
+    "source": "Sirloin"
+  },
+  
+  {
+    "word": "skipjack",
+    "groups": [
+      "protein"
+    ],
+    "source": "Tuna Skipjack"
+  },
+  {
+    "word": "skirt",
+    "groups": [
+      "protein"
+    ],
+    "source": "Skirtsteak"
+  },
+  {
+    "word": "sliced",
+    "groups": [
+      "protein",
+      "fruit"
+    ],
+    "source": "Turkey Sliced"
+  },
+  {
+    "word": "smelt",
+    "groups": [
+      "protein"
+    ],
+    "source": "Smelt"
+  },
+  {
+    "word": "smoked",
+    "groups": [
+      "protein"
+    ],
+    "source": "Smoked"
+  },
+  {
+    "word": "smoothie",
+    "groups": [
+      "beverage",
+      "fruit"
+    ],
+    "source": "Smoothie"
+  },
+  {
+    "word": "smores",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Pop Tart Smores"
+  },
+  {
+    "word": "snack",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Snack"
+  },
+  {
+    "word": "snail",
+    "groups": [
+      "protein"
+    ],
+    "source": "Snail"
+  },
+  {
+    "word": "snap",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Snap Bean"
+  },
+  {
+    "word": "snapper",
+    "groups": [
+      "protein"
+    ],
+    "source": "Snapper"
+  },
+  {
+    "word": "soba",
+    "groups": [
+      "grain"
+    ],
+    "source": "Noodle Soba"
+  },
+  {
+    "word": "sockeye",
+    "groups": [
+      "protein"
+    ],
+    "source": "Sockeye"
+  },
+  {
+    "word": "soda",
+    "groups": [
+      "beverage"
+    ],
+    "source": "Baking Soda"
+  },
+  {
+    "word": "sole",
+    "groups": [
+      "protein"
+    ],
+    "source": "Sole"
+  },
+  {
+    "word": "somen",
+    "groups": [
+      "grain"
+    ],
+    "source": "Noodle Somen"
+  },
+  {
+    "word": "sorghum",
+    "groups": [
+      "grain"
+    ],
+    "source": "Sorghum"
+  },
+  {
+    "word": "sorrel",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Sorrel"
+  },
+  {
+    "word": "soup",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Soup Beef Broth"
+  },
+  {
+    "word": "sour",
+    "groups": [
+      "dairy",
+      "vegetable",
+      "condiment"
+    ],
+    "source": "Sour Cream"
+  },
+  {
+    "word": "soursop",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Soursop"
+  },
+  {
+    "word": "soy",
+    "groups": [
+      "fats",
+      "legume",
+      "protein",
+      "condiment"
+    ],
+    "source": "Soy Bean Oil"
+  },
+  {
+    "word": "soybean",
+    "groups": [
+      "legume",
+      "protein",
+      "fats"
+    ],
+    "source": "Soybean"
+  },
+  
+  {
+    "word": "spaghetti",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "source": "Spaghetti"
+  },
+  {
+    "word": "spam",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "source": "Spam"
+  },
+  {
+    "word": "spareribb",
+    "groups": [
+      "protein"
+    ],
+    "source": "Spareribb"
+  },
+  {
+    "word": "spearmint",
+    "groups": [
+      "spice"
+    ],
+    "source": "Spearmint"
+  },
+  {
+    "word": "spelt",
+    "groups": [
+      "grain"
+    ],
+    "source": "Spelt"
+  },
+  {
+    "word": "spinach",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Spinach"
+  },
+  {
+    "word": "spirulina",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Spirulina"
+  },
+  {
+    "word": "spleen",
+    "groups": [
+      "protein"
+    ],
+    "source": "Spleen"
+  },
+  {
+    "word": "split",
+    "groups": [
+      "legume"
+    ],
+    "source": "Split Pea"
+  },
+  {
+    "word": "sponge",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Sponge Cake"
+  },
+  {
+    "word": "spot",
+    "groups": [
+      "protein"
+    ],
+    "source": "Spot"
+  },
+  {
+    "word": "spray",
+    "groups": [
+      "fats"
+    ],
+    "source": "Spray Oil"
+  },
+  {
+    "word": "sprouts",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Sprouts"
+  },
+  {
+    "word": "squab",
+    "groups": [
+      "protein"
+    ],
+    "source": "Squab"
+  },
+  {
+    "word": "squash",
+    "groups": [
+      "vegetable",
+      "fruit"
+    ],
+    "source": "Squash Acorn"
+  },
+  {
+    "word": "squid",
+    "groups": [
+      "protein"
+    ],
+    "source": "Squid"
+  },
+  {
+    "word": "squirrel",
+    "groups": [
+      "protein"
+    ],
+    "source": "Squirrel"
+  },
+  {
+    "word": "sriracha",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Sriracha"
+  },
+  {
+    "word": "starfruit",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Starfruit"
+  },
+  {
+    "word": "steak",
+    "groups": [
+      "protein"
+    ],
+    "source": "Steak"
+  },
+  {
+    "word": "steelhead",
+    "groups": [
+      "protein"
+    ],
+    "source": "Steelhead"
+  },
+  {
+    "word": "stew",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Acorn Stew"
+  },
+  {
+    "word": "stick",
+    "groups": [
+      "protein",
+      "prepared",
+      "vegetable"
+    ],
+    "source": "Fish Stick"
+  },
+  {
+    "word": "stilton",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Stilton"
+  },
+  {
+    "word": "strawberries",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Strawberries"
+  },
+  {
+    "word": "strawberry",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Ice Cream Strawberry"
+  },
+  {
+    "word": "strip",
+    "groups": [
+      "protein"
+    ],
+    "source": "New York Strip"
+  },
+  {
+    "word": "strudel",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Strudel"
+  },
+  {
+    "word": "sturgeon",
+    "groups": [
+      "protein"
+    ],
+    "source": "Sturgeon"
+  },
+  
+  {
+    "word": "submarine",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Submarine"
+  },
+  {
+    "word": "succotash",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Succotash"
+  },
+  {
+    "word": "sucker",
+    "groups": [
+      "protein"
+    ],
+    "source": "Sucker"
+  },
+  {
+    "word": "suet",
+    "groups": [
+      "protein"
+    ],
+    "source": "Suet"
+  },
+  {
+    "word": "sugar",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Sugar"
+  },
+  {
+    "word": "summer",
+    "groups": [
+      "vegetable",
+      "fruit"
+    ],
+    "source": "Squash Summer"
+  },
+  {
+    "word": "sundae",
+    "groups": [
+      "dairy",
+      "prepared"
+    ],
+    "source": "Sundae"
+  },
+  {
+    "word": "sundried",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Tomato Sun-dried"
+  },
+  {
+    "word": "sunfish",
+    "groups": [
+      "protein"
+    ],
+    "source": "Sunfish"
+  },
+  {
+    "word": "sunflower",
+    "groups": [
+      "nuts",
+      "fats"
+    ],
+    "source": "Sunflower"
+  },
+  {
+    "word": "surimi",
+    "groups": [
+      "protein"
+    ],
+    "source": "Surimi"
+  },
+  
+  {
+    "word": "sweetbread",
+    "groups": [
+      "protein"
+    ],
+    "source": "Sweetbread"
+  },
+  {
+    "word": "sweetener",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Sweetener"
+  },
+  {
+    "word": "swiss",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Swiss Cheese"
+  },
+  {
+    "word": "swordfish",
+    "groups": [
+      "protein"
+    ],
+    "source": "Swordfish"
+  },
+  {
+    "word": "sypup",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Maple Sypup"
+  },
+  {
+    "word": "syrup",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Chocolate Syrup"
+  },
+  
+  {
+    "word": "tabasco",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Tabasco"
+  },
+  {
+    "word": "tacoshell",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Tacoshell"
+  },
+  {
+    "word": "tahini",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Tahini"
+  },
+  {
+    "word": "tallow",
+    "groups": [
+      "fats"
+    ],
+    "source": "Tallow"
+  },
+  {
+    "word": "tamales",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Tamales Cheese"
+  },
+  {
+    "word": "tamarind",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Tamarind"
+  },
+  {
+    "word": "tangerine",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Tangerine"
+  },
+  {
+    "word": "tapicoa",
+    "groups": [
+      "prepared"
+   
+    ],
+    "source": "Pudding Tapicoa"
+  },
+ 
+  {
+    "word": "taro",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Taro"
+  },
+  {
+    "word": "tarragon",
+    "groups": [
+      "spice"
+    ],
+    "source": "Tarragon"
+  },
+  {
+    "word": "tart",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Tart"
+  },
+  {
+    "word": "tartar",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Cream of Tartar"
+  },
+  {
+    "word": "tbone",
+    "groups": [
+      "protein"
+    ],
+    "source": "Tbone"
+  },
+  {
+    "word": "tea",
+    "groups": [
+      "beverage"
+    ],
+    "source": "Tea"
+  },
+  {
+    "word": "teaseed",
+    "groups": [
+      "fats"
+    ],
+    "source": "Teaseed"
+  },
+  {
+    "word": "teff",
+    "groups": [
+      "grain"
+    ],
+    "source": "Teff"
+  },
+  {
+    "word": "tempeh",
+    "groups": [
+      "protein",
+      "legume"
+    ],
+    "source": "Tempeh"
+  },
+  {
+    "word": "tenderloin",
+    "groups": [
+      "protein"
+    ],
+    "source": "Tenderloin"
+  },
+  {
+    "word": "tenders",
+    "groups": [
+      "protein"
+    ],
+    "source": "Tenders"
+  },
+  {
+    "word": "teriyaki",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Teriyaki"
+  },
+  {
+    "word": "thigh",
+    "groups": [
+      "protein"
+    ],
+    "source": "Thigh"
+  },
+  {
+    "word": "thousand",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Dressing Thousand"
+  },
+  {
+    "word": "thyme",
+    "groups": [
+      "spice"
+    ],
+    "source": "Thyme"
+  },
+  {
+    "word": "tilapia",
+    "groups": [
+      "protein"
+    ],
+    "source": "Tilapia"
+  },
+  {
+    "word": "tilsit",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Tilsit"
+  },
+  {
+    "word": "tipnuk",
+    "groups": [
+      "protein"
+    ],
+    "source": "Tipnuk"
+  },
+  {
+    "word": "toast",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "source": "Toast"
+  },
+  {
+    "word": "tofu",
+    "groups": [
+      "protein",
+      "legume"
+    ],
+    "source": "Tofu"
+  },
+  {
+    "word": "tomatillo",
+    "groups": [
+      "vegetable",
+      "fruit"
+    ],
+    "source": "Tomatillo"
+  },
+  {
+    "word": "tomato",
+    "groups": [
+      "vegetable",
+      "fruit"
+    ],
+    "source": "Tomato"
+  },
+  
+  
+  {
+    "word": "tongue",
+    "groups": [
+      "protein"
+    ],
+    "source": "Tonguepork"
+  },
+  {
+    "word": "top",
+    "groups": [
+      "protein"
+    ],
+    "source": "Round Roast Top"
+  },
+  {
+    "word": "tortilla",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "source": "Tortilla Corn"
+  },
+  {
+    "word": "trail",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Trail Mix"
+  },
+  {
+    "word": "tricale",
+    "groups": [
+      "grain"
+    ],
+    "source": "Tricale"
+  },
+  {
+    "word": "tripe",
+    "groups": [
+      "protein"
+    ],
+    "source": "Tripe"
+  },
+  {
+    "word": "tritip",
+    "groups": [
+      "protein"
+    ],
+    "source": "Tritip"
+  },
+  {
+    "word": "trix",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "source": "Cereal Trix"
+  },
+  {
+    "word": "trout",
+    "groups": [
+      "protein"
+    ],
+    "source": "Trout"
+  },
+  {
+    "word": "truffles",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Truffles"
+  },
+  {
+    "word": "tuna",
+    "groups": [
+      "protein"
+    ],
+    "source": "Tuna Light"
+  },
+  {
+    "word": "turbot",
+    "groups": [
+      "protein"
+    ],
+    "source": "Turbot"
+  },
+  {
+    "word": "turkey",
+    "groups": [
+      "protein"
+    ],
+    "source": "Turkey"
+  },
+  {
+    "word": "turmeric",
+    "groups": [
+      "spice"
+    ],
+    "source": "Turmeric"
+  },
+  {
+    "word": "turnip",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Turnip"
+  },
+  {
+    "word": "turnover",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Turnover"
+  },
+  {
+    "word": "turtle",
+    "groups": [
+      "legume"
+    ],
+    "source": "Turtle Beans"
+  },
+ 
+  {
+    "word": "ucuuba",
+    "groups": [
+      "fats"
+    ],
+    "source": "Ucuuba Oil"
+  },
+  
+  {
+    "word": "vanilla",
+    "groups": [
+      "spice",
+      "fruit"
+    ],
+    "source": "Vanilla"
+  },
+  {
+    "word": "veal",
+    "groups": [
+      "protein"
+    ],
+    "source": "Veal"
+  },
+  {
+    "word": "vegetable",
+    "groups": [
+      "beverage",
+      "vegetable"
+    ],
+    "source": "Vegetable Juice"
+  },
+  {
+    "word": "venison",
+    "groups": [
+      "protein"
+    ],
+    "source": "Venison"
+  },
+  {
+    "word": "vera",
+    "groups": [
+      "beverage"
+    ],
+    "source": "Aloe Vera Juice"
+  },
+  {
+    "word": "verde",
+    "groups": [
+      "prepared",
+      "condiment"
+    ],
+    "source": "Salsa Verde"
+  },
+  {
+    "word": "vinegar",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Vinegar Balsamic"
+  },
+  {
+    "word": "wafer",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Wafer"
+  },
+  {
+    "word": "waffle",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Waffle"
+  },
+  {
+    "word": "walleye",
+    "groups": [
+      "protein"
+    ],
+    "source": "Walleye"
+  },
+  {
+    "word": "walnut",
+    "groups": [
+      "nuts",
+      "fats"
+    ],
+    "source": "Walnut"
+  },
+  {
+    "word": "walrus",
+    "groups": [
+      "protein",
+      "fats"
+    ],
+    "source": "Walrus"
+  },
+  {
+    "word": "wasabi",
+    "groups": [
+      "condiment"
+    ],
+    "source": "Wasabi"
+  },
+  {
+    "word": "water",
+    "groups": [
+      "beverage"
+    ],
+    "source": "Water"
+  },
+  {
+    "word": "watercress",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Watercress"
+  },
+  {
+    "word": "watermelon",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Watermelon"
+  },
+  {
+    "word": "waxgourd",
+    "groups": [
+      "fruit"
+    ],
+    "source": "Waxgourd"
+  },
+  {
+    "word": "whale",
+    "groups": [
+      "protein",
+      "fats"
+    ],
+    "source": "Whale"
+  },
+  {
+    "word": "wheat",
+    "groups": [
+      "grain"
+    ],
+    "source": "Wheat"
+  },
+  {
+    "word": "whelk",
+    "groups": [
+      "protein"
+    ],
+    "source": "Whelk"
+  },
+  {
+    "word": "whey",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Whey"
+  },
+  {
+    "word": "whipping",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Whipping"
+  },
+  {
+    "word": "whiskey",
+    "groups": [
+      "beverage"
+    ],
+    "source": "Whiskey"
+  },
+  {
+    "word": "white",
+    "groups": [
+      "dairy",
+      "beverage"
+    ],
+    "source": "Dry White Cheese"
+  },
+  {
+    "word": "whitefish",
+    "groups": [
+      "protein"
+    ],
+    "source": "Whitefish"
+  },
+  {
+    "word": "whiting",
+    "groups": [
+      "protein"
+    ],
+    "source": "Whiting"
+  },
+  {
+    "word": "whole",
+    "groups": [
+      "grain",
+      "prepared",
+      "protein"
+    ],
+    "source": "Cracker Whole Wheat"
+  },
+  {
+    "word": "wild",
+    "groups": [
+      "protein",
+      "grain",
+      "fruit"
+    ],
+    "source": "Pop Tart Frost Wild Berry"
+  },
+  {
+    "word": "wine",
+    "groups": [
+      "beverage"
+    ],
+    "source": "Wine"
+  },
+  {
+    "word": "wing",
+    "groups": [
+      "protein"
+    ],
+    "source": "Wing"
+  },
+  {
+    "word": "winged",
+    "groups": [
+      "legume"
+    ],
+    "source": "Winged Bean"
+  },
+  {
+    "word": "winter",
+    "groups": [
+      "vegetable",
+      "fruit"
+    ],
+    "source": "Squash Winter"
+  },
+ 
+  {
+    "word": "wolffish",
+    "groups": [
+      "protein"
+    ],
+    "source": "Wolffish"
+  },
+  {
+    "word": "wonton",
+    "groups": [
+      "prepared"
+    ],
+    "source": "Wonton"
+  },
+  {
+    "word": "yam",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Yam"
+  },
+  {
+    "word": "yambean",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Yambean"
+  },
+  {
+    "word": "yardlong",
+    "groups": [
+      "vegetable"
+    ],
+    "source": "Yardlong"
+  },
+  {
+    "word": "yeast",
+    "groups": [
+      "protein"
+    ],
+    "source": "Yeast"
+  },
+  {
+    "word": "yellow",
+    "groups": [
+      "grain",
+      "vegetable",
+      "prepared"
+    ],
+    "source": "Cake Yellow"
+  },
+  {
+    "word": "yellowfin",
+    "groups": [
+      "protein"
+    ],
+    "source": "Tuna Yellowfin"
+  },
+  {
+    "word": "yellowtail",
+    "groups": [
+      "protein"
+    ],
+    "source": "Yellowtail"
+  },
+  {
+    "word": "yogurt",
+    "groups": [
+      "dairy"
+    ],
+    "source": "Yogurt"
+  },
+  {
+    "word": "yolk",
+    "groups": [
+      "protein"
+    ],
+    "source": "Yolk"
+  },
+  {
+    "word": "york",
+    "groups": [
+      "protein"
+    ],
+    "source": "New York Strip"
+  },
+  {
+    "word": "zucchini",
+    "groups": [
+      "vegetable",
+      "fruit"
+    ],
+    "source": "Zucchini"
+  },
+  {
+    "word": "zwieback",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "source": "Zwieback"
+  }
+]

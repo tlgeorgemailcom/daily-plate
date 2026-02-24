@@ -1,0 +1,107 @@
+// Scrambled puzzle data - precomputed viable letter combinations
+// Each puzzle has 10-16 valid food words
+
+import type { FoodGroup } from './food-portions';
+import scrambledWordsData from './scrambled-words.json';
+
+// Type for the static word list
+interface WordEntry {
+  word: string;
+  groups: FoodGroup[];
+  source: string;
+}
+
+// Load static word list (edit scrambled-words.json to add/remove words or change groups)
+// To regenerate: cd src/lib/data && npx tsx generate-words.ts
+const wordList = scrambledWordsData as WordEntry[];
+
+// Convert to Map for efficient lookup
+export const FOOD_WORDS = new Map<string, { word: string; groups: FoodGroup[] }>(
+  wordList.map(entry => [entry.word, { word: entry.word, groups: entry.groups }])
+);
+
+// Check if a word can be made from the given letters (with letter reuse)
+export function canMakeWord(word: string, letters: Set<string>): boolean {
+  return [...word].every(char => letters.has(char));
+}
+
+// Get all valid words for a set of letters
+export function getValidWords(letters: Set<string>): string[] {
+  const valid: string[] = [];
+  for (const word of FOOD_WORDS.keys()) {
+    if (canMakeWord(word, letters)) {
+      valid.push(word);
+    }
+  }
+  return valid.sort();
+}
+
+// Get food groups for a word
+export function getWordGroups(word: string): FoodGroup[] {
+  return FOOD_WORDS.get(word)?.groups ?? [];
+}
+
+// Top 100 viable 7-letter combinations (pre-analyzed, sorted by word count)
+// Each yields 10-16 valid food words
+export const PUZZLE_COMBOS: string[] = [
+  'ABCNORT', 'AEILPST', 'AELOPST', 'ABCENOR', 'ABENORT', 'AEKLPST', 'AELMOST', 
+  'AEOPRST', 'ABCKNOR', 'ACENOPR', 'ACNORTU', 'AEFLPST', 'AEGOPST', 'AEILNPS', 
+  'AELMPST', 'AELNPST', 'AEMOPST', 'ABCENPR', 'ABCEORT', 'ABCMNOR', 'ABCNORS', 
+  'ABCNOTU', 'ABCORTU', 'ABELNOR', 'ABENORS', 'ABGNORT', 'ABINORT', 'ABNORST', 
+  'ABNORTU', 'ACEHORT', 'ACEIORT', 'ACELNOR', 'ACENORS', 'ACENORT', 'ACEORST', 
+  'ACINOST', 'ACINORT', 'ACIORST', 'ACLNORT', 'ACLORST', 'ACMORST', 'ACNOPRST',
+  'ACNORST', 'ACORSTY', 'ADEINOR', 'ADEIORS', 'ADENORS', 'AEGLOPT', 'AEGLPST',
+  'AEGMOST', 'AEGNOPR', 'AEGNOPS', 'AEGNOST', 'AEGOPRS', 'AEGORST', 'AEHOPST',
+  'AEILOPST', 'AEILMPS', 'AEILMST', 'AEILNOP', 'AEILNOS', 'AEILNOT', 'AEILOPS',
+  'AEILOPST', 'AEILORS', 'AEILORT', 'AEILOST', 'AEILPRT', 'AEILRST', 'AEIMOPS',
+  'AEIMOST', 'AEINOPS', 'AEINORS', 'AEINORT', 'AEINOST', 'AEIOPRS', 'AEIOPST',
+  'AEIPRST', 'AEIRSTT', 'AEKLMPS', 'AEKLNOP', 'AEKLNOS', 'AEKLNOT', 'AEKLOPS',
+  'AEKLORS', 'AEKLOST', 'AEKMNOS', 'AEKMOPS', 'AEKMOST', 'AEKNOPS', 'AEKNORS',
+  'AEKNORT', 'AEKNPST', 'AEKOPRS', 'AEKOPST', 'AEKORST', 'AEKPRST', 'AELMOPS',
+  'AELMORS', 'AELMOST', 'AELMPRS'
+];
+
+// Get today's puzzle based on date
+export function getTodaysPuzzle(): { letters: string[]; validWords: string[]; date: string } {
+  const today = new Date();
+  const dateStr = today.toISOString().split('T')[0]; // YYYY-MM-DD
+  
+  // Use date as seed for puzzle selection
+  const daysSinceEpoch = Math.floor(today.getTime() / (1000 * 60 * 60 * 24));
+  const puzzleIndex = daysSinceEpoch % PUZZLE_COMBOS.length;
+  
+  const letters = PUZZLE_COMBOS[puzzleIndex].toLowerCase().split('');
+  const letterSet = new Set(letters);
+  const validWords = getValidWords(letterSet);
+  
+  return { letters, validWords, date: dateStr };
+}
+
+// Get puzzle for a specific date (for testing/archives)
+export function getPuzzleForDate(date: Date): { letters: string[]; validWords: string[]; date: string } {
+  const dateStr = date.toISOString().split('T')[0];
+  const daysSinceEpoch = Math.floor(date.getTime() / (1000 * 60 * 60 * 24));
+  const puzzleIndex = daysSinceEpoch % PUZZLE_COMBOS.length;
+  
+  const letters = PUZZLE_COMBOS[puzzleIndex].toLowerCase().split('');
+  const letterSet = new Set(letters);
+  const validWords = getValidWords(letterSet);
+  
+  return { letters, validWords, date: dateStr };
+}
+
+// Group display info for classification phase
+export const FOOD_GROUP_INFO: Record<FoodGroup, { emoji: string; label: string; hint: string }> = {
+  vegetable: { emoji: '🥬', label: 'Vegetable', hint: 'Leafy greens, roots, stems' },
+  fruit: { emoji: '🍎', label: 'Fruit', hint: 'Sweet produce with seeds' },
+  grain: { emoji: '🌾', label: 'Grain', hint: 'Wheat, rice, oats, bread' },
+  protein: { emoji: '🥩', label: 'Protein', hint: 'Meat, fish, poultry, eggs' },
+  dairy: { emoji: '🥛', label: 'Dairy', hint: 'Milk, cheese, yogurt' },
+  legume: { emoji: '🫘', label: 'Legume', hint: 'Beans, lentils, peas in pods' },
+  nuts: { emoji: '🥜', label: 'Nuts & Seeds', hint: 'Tree nuts, seeds' },
+  fats: { emoji: '🧈', label: 'Fats & Oils', hint: 'Butter, oil, lard' },
+  spice: { emoji: '🌿', label: 'Herbs & Spices', hint: 'Basil, pepper, cinnamon, oregano' },
+  prepared: { emoji: '🍳', label: 'Prepared', hint: 'Cooked dishes, lasagna, casseroles' },
+  condiment: { emoji: '🥫', label: 'Condiments', hint: 'Sauces, ketchup, mayo, mustard' },
+  beverage: { emoji: '🍵', label: 'Beverage', hint: 'Drinks, tea, coffee' }
+};

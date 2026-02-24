@@ -64,12 +64,28 @@ function saveToStorage(foods: CustomFood[]): void {
   }
 }
 
-// Initialize store with data from localStorage
-const customFoodsWritable = writable<CustomFood[]>(loadFromStorage());
+// Initialize store with empty array (will be populated on client mount)
+const customFoodsWritable = writable<CustomFood[]>([]);
 
-// Auto-save whenever the store changes
+// Track if we've initialized on the client
+let clientInitialized = false;
+
+// Initialize custom foods from localStorage (call on app mount)
+export function initializeCustomFoods(): void {
+  if (!browser || clientInitialized) return;
+  
+  const loaded = loadFromStorage();
+  if (loaded.length > 0) {
+    customFoodsWritable.set(loaded);
+  }
+  clientInitialized = true;
+}
+
+// Auto-save whenever the store changes (only after initialization)
 customFoodsWritable.subscribe(foods => {
-  saveToStorage(foods);
+  if (clientInitialized) {
+    saveToStorage(foods);
+  }
 });
 
 // Read-only export

@@ -10,6 +10,7 @@
   import FoodsAdded from '$lib/components/FoodsAdded.svelte';
   import NutrientPicker from '$lib/components/NutrientPicker.svelte';
   import AddCustomFoodModal from '$lib/components/AddCustomFoodModal.svelte';
+  import { initializeCustomFoods } from '$lib/stores/customFoodsStore';
   import { 
     addFood, 
     clearFoods,
@@ -61,13 +62,13 @@
   // Macro presets modal
   let showMacroHints = $state(false);
   
-  // Close confirmation popup
-  let showCloseConfirm = $state(false);
-  
   // Initialize game state from localStorage on mount
   onMount(() => {
     // Load saved game state (foods, meals, etc.)
     initializeGameState();
+    
+    // Load custom foods from localStorage
+    initializeCustomFoods();
     
     // Start auto-saving game state on any changes
     startAutoSave();
@@ -76,49 +77,13 @@
     lastSavedTime = getSavedGameTime();
   });
   
-  // Track saved settings to detect unsaved changes (initialized from store)
-  let savedSettings = $state({
-    calorieTarget: $gameSettings.calorieTarget,
-    isCustomCalories: $gameSettings.isCustomCalories,
-    customCalories: $gameSettings.customCalories,
-    proteinRatio: $gameSettings.proteinRatio,
-    carbsRatio: $gameSettings.carbsRatio,
-    fatsRatio: $gameSettings.fatsRatio,
-    vegPlateRatio: $gameSettings.vegPlateRatio,
-    fruitPlateRatio: $gameSettings.fruitPlateRatio,
-    grainPlateRatio: $gameSettings.grainPlateRatio,
-    proteinPlateRatio: $gameSettings.proteinPlateRatio,
-    waterInput: $gameSettings.waterInput,
-    proteinInput: $gameSettings.proteinInput,
-    carbsInput: $gameSettings.carbsInput,
-    fatsInput: $gameSettings.fatsInput,
-    fiberInput: $gameSettings.fiberInput,
-    sugarInput: $gameSettings.sugarInput
-  });
-  
-  // Detect if there are unsaved changes
-  const hasUnsavedChanges = $derived(
-    calorieTarget !== savedSettings.calorieTarget ||
-    isCustomCalories !== savedSettings.isCustomCalories ||
-    customCalories !== savedSettings.customCalories ||
-    proteinRatio !== savedSettings.proteinRatio ||
-    carbsRatio !== savedSettings.carbsRatio ||
-    fatsRatio !== savedSettings.fatsRatio ||
-    vegPlateRatio !== savedSettings.vegPlateRatio ||
-    fruitPlateRatio !== savedSettings.fruitPlateRatio ||
-    grainPlateRatio !== savedSettings.grainPlateRatio ||
-    proteinPlateRatio !== savedSettings.proteinPlateRatio ||
-    waterInput !== savedSettings.waterInput ||
-    proteinInput !== savedSettings.proteinInput ||
-    carbsInput !== savedSettings.carbsInput ||
-    fatsInput !== savedSettings.fatsInput ||
-    fiberInput !== savedSettings.fiberInput ||
-    sugarInput !== savedSettings.sugarInput
-  );
-  
-  function openSettings() {
-    // Save current values when opening settings
-    savedSettings = {
+  // Auto-save settings when any value changes (like iOS settings)
+  $effect(() => {
+    // Only auto-save when settings panel is open
+    if (!showSettings) return;
+    
+    // Read all settings to create dependencies
+    const currentSettings = {
       calorieTarget,
       isCustomCalories,
       customCalories,
@@ -136,42 +101,45 @@
       fiberInput,
       sugarInput
     };
+    
+    // Apply settings to game stores
+    const targetValue = currentSettings.isCustomCalories ? currentSettings.customCalories : currentSettings.calorieTarget;
+    const clampedValue = Math.max(800, Math.min(5000, targetValue));
+    
+    targets.update(t => ({ 
+      ...t, 
+      totalCalories: clampedValue,
+      groups: {
+        ...t.groups,
+        vegetable: currentSettings.vegPlateRatio,
+        fruit: currentSettings.fruitPlateRatio,
+        grain: currentSettings.grainPlateRatio,
+        protein: currentSettings.proteinPlateRatio
+      }
+    }));
+    
+    const scaled = getScaledDefaults(clampedValue, currentSettings.proteinRatio, currentSettings.carbsRatio, currentSettings.fatsRatio);
+    
+    nutrientTargets.update(t => ({
+      calories: clampedValue,
+      water: currentSettings.waterInput ? parseInt(currentSettings.waterInput) : scaled.water,
+      protein: currentSettings.proteinInput ? parseInt(currentSettings.proteinInput) : scaled.protein,
+      carbohydrates: currentSettings.carbsInput ? parseInt(currentSettings.carbsInput) : scaled.carbohydrates,
+      fats: currentSettings.fatsInput ? parseInt(currentSettings.fatsInput) : scaled.fats,
+      fiber: currentSettings.fiberInput ? parseInt(currentSettings.fiberInput) : scaled.fiber,
+      sugar: currentSettings.sugarInput ? parseInt(currentSettings.sugarInput) : scaled.sugar
+    }));
+    
+    // Persist to localStorage
+    updateSettings(currentSettings);
+  });
+  
+  function openSettings() {
     showSettings = true;
   }
   
   function closeSettings() {
-    if (hasUnsavedChanges) {
-      showCloseConfirm = true;
-    } else {
-      showSettings = false;
-    }
-  }
-  
-  function discardChanges() {
-    // Revert to saved settings
-    calorieTarget = savedSettings.calorieTarget;
-    isCustomCalories = savedSettings.isCustomCalories;
-    customCalories = savedSettings.customCalories;
-    proteinRatio = savedSettings.proteinRatio;
-    carbsRatio = savedSettings.carbsRatio;
-    fatsRatio = savedSettings.fatsRatio;
-    vegPlateRatio = savedSettings.vegPlateRatio;
-    fruitPlateRatio = savedSettings.fruitPlateRatio;
-    grainPlateRatio = savedSettings.grainPlateRatio;
-    proteinPlateRatio = savedSettings.proteinPlateRatio;
-    waterInput = savedSettings.waterInput;
-    proteinInput = savedSettings.proteinInput;
-    carbsInput = savedSettings.carbsInput;
-    fatsInput = savedSettings.fatsInput;
-    fiberInput = savedSettings.fiberInput;
-    sugarInput = savedSettings.sugarInput;
-    showCloseConfirm = false;
     showSettings = false;
-  }
-  
-  function applyAndClose() {
-    updateTargets();
-    showCloseConfirm = false;
   }
   
   // Macro preset options (from nutritional guidelines)
@@ -271,66 +239,6 @@
 
   function cancelSelection() {
     selectedFood = null;
-  }
-
-  function updateTargets() {
-    const targetValue = isCustomCalories ? customCalories : calorieTarget;
-    // Clamp custom value to valid range
-    const clampedValue = Math.max(800, Math.min(5000, targetValue));
-    calorieTarget = clampedValue;
-    customCalories = clampedValue;
-    
-    // Update calorie target and plate (food group) percentages
-    targets.update(t => ({ 
-      ...t, 
-      totalCalories: clampedValue,
-      groups: {
-        ...t.groups,
-        vegetable: vegPlateRatio,
-        fruit: fruitPlateRatio,
-        grain: grainPlateRatio,
-        protein: proteinPlateRatio
-      }
-    }));
-    
-    // Get scaled defaults for this calorie level
-    const scaled = getScaledDefaults(clampedValue, proteinRatio, carbsRatio, fatsRatio);
-    
-    // Update nutrient targets (use input or scaled default)
-    nutrientTargets.update(t => ({
-      calories: clampedValue,
-      water: waterInput ? parseInt(waterInput) : scaled.water,
-      protein: proteinInput ? parseInt(proteinInput) : scaled.protein,
-      carbohydrates: carbsInput ? parseInt(carbsInput) : scaled.carbohydrates,
-      fats: fatsInput ? parseInt(fatsInput) : scaled.fats,
-      fiber: fiberInput ? parseInt(fiberInput) : scaled.fiber,
-      sugar: sugarInput ? parseInt(sugarInput) : scaled.sugar
-    }));
-    
-    // Update saved settings to match applied values
-    savedSettings = {
-      calorieTarget: clampedValue,
-      isCustomCalories,
-      customCalories: clampedValue,
-      proteinRatio,
-      carbsRatio,
-      fatsRatio,
-      vegPlateRatio,
-      fruitPlateRatio,
-      grainPlateRatio,
-      proteinPlateRatio,
-      waterInput,
-      proteinInput,
-      carbsInput,
-      fatsInput,
-      fiberInput,
-      sugarInput
-    };
-    
-    // Persist to localStorage
-    updateSettings(savedSettings);
-    
-    showSettings = false;
   }
 
   function resetNutrientDefaults() {
@@ -689,27 +597,10 @@
       </div>
 
       <div class="settings-actions">
-        <button class="close-btn" onclick={closeSettings}>Close</button>
         <button class="reset-defaults-btn" onclick={resetNutrientDefaults}>Reset Defaults</button>
-        <button class="apply-btn" class:has-changes={hasUnsavedChanges} onclick={updateTargets}>
-          {hasUnsavedChanges ? '⚠️ Apply Changes' : 'Apply'}
-        </button>
+        <button class="close-btn" onclick={closeSettings}>Done</button>
       </div>
-      {#if hasUnsavedChanges}
-        <div class="unsaved-warning">You have unsaved changes</div>
-      {/if}
-      
-      {#if showCloseConfirm}
-        <div class="confirm-overlay" onclick={() => showCloseConfirm = false}>
-          <div class="confirm-popup" onclick={(e) => e.stopPropagation()}>
-            <p class="confirm-message">You have unsaved changes. What would you like to do?</p>
-            <div class="confirm-actions">
-              <button class="confirm-discard" onclick={discardChanges}>Discard Changes</button>
-              <button class="confirm-apply" onclick={applyAndClose}>Apply Changes</button>
-            </div>
-          </div>
-        </div>
-      {/if}
+      <div class="autosave-notice">✓ Changes save automatically</div>
     </div>
   {/if}
 
@@ -1330,42 +1221,13 @@
     background: #e5e7eb;
   }
 
-  .apply-btn {
-    padding: 0.4rem 1rem;
-    background: #22c55e;
-    color: white;
-    border: none;
-    border-radius: 0.25rem;
-    font-size: 0.85rem;
-    font-weight: 600;
-    cursor: pointer;
-  }
-
-  .apply-btn:hover {
-    background: #16a34a;
-  }
-
-  .apply-btn.has-changes {
-    background: #f59e0b;
-    animation: pulse-apply 1.5s ease-in-out infinite;
-  }
-
-  .apply-btn.has-changes:hover {
-    background: #d97706;
-  }
-
-  @keyframes pulse-apply {
-    0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); }
-    50% { transform: scale(1.02); box-shadow: 0 0 0 4px rgba(245, 158, 11, 0); }
-  }
-
-  .unsaved-warning {
+  .autosave-notice {
     text-align: center;
-    color: #d97706;
+    color: #059669;
     font-size: 0.75rem;
     font-weight: 500;
     padding: 0.25rem;
-    background: #fef3c7;
+    background: #d1fae5;
     border-radius: 0.25rem;
     margin-top: 0.5rem;
   }
@@ -1417,35 +1279,6 @@
     display: flex;
     gap: 0.5rem;
     justify-content: center;
-  }
-
-  .confirm-discard {
-    padding: 0.5rem 1rem;
-    background: #ef4444;
-    color: white;
-    border: none;
-    border-radius: 0.25rem;
-    font-size: 0.85rem;
-    cursor: pointer;
-  }
-
-  .confirm-discard:hover {
-    background: #dc2626;
-  }
-
-  .confirm-apply {
-    padding: 0.5rem 1rem;
-    background: #22c55e;
-    color: white;
-    border: none;
-    border-radius: 0.25rem;
-    font-size: 0.85rem;
-    font-weight: 600;
-    cursor: pointer;
-  }
-
-  .confirm-apply:hover {
-    background: #16a34a;
   }
 
   .settings-panel button {

@@ -1,0 +1,959 @@
+<script lang="ts">
+  import { browser } from '$app/environment';
+  import { onMount } from 'svelte';
+  import { 
+    getTodaysPuzzle, 
+    getWordGroups, 
+    FOOD_GROUP_INFO,
+    FOOD_WORDS,
+    type FoodGroup 
+  } from '$lib/data/scrambled-puzzles';
+
+  // Game state
+  let gamePhase = $state<'loading' | 'phase1' | 'phase2' | 'complete'>('loading');
+  let letters = $state<string[]>([]);
+  let validWords = $state<string[]>([]);
+  let foundWords = $state<string[]>([]);
+  let currentInput = $state('');
+  let inputError = $state('');
+  let puzzleDate = $state('');
+  
+  // Phase 2 state
+  let classifiedWords = $state<Map<string, { group: FoodGroup; attempts: number }>>(new Map());
+  let draggedWord = $state<string | null>(null);
+  let showFeedback = $state<{ word: string; correct: boolean; hint?: string } | null>(null);
+  
+  // Scoring
+  let phase1Score = $state(0);
+  let phase2Score = $state(0);
+  
+  // Give up state
+  let gaveUp = $state(false);
+  let revealedWords = $state<string[]>([]);
+  
+  // Show results state
+  let showResults = $state(false);
+  
+  // Persistence key
+  const STORAGE_KEY = 'scrambled-game-state';
+  
+  // Hints: count words starting with each letter
+  let letterHints = $derived(() => {
+    const hints = new Map<string, { total: number; found: number }>();
+    for (const word of validWords) {
+      const firstLetter = word[0];
+      const existing = hints.get(firstLetter) || { total: 0, found: 0 };
+      existing.total++;
+      if (foundWords.includes(word)) {
+        existing.found++;
+      }
+      hints.set(firstLetter, existing);
+    }
+    return hints;
+  });
+  
+  // Check if phase 1 complete
+  let phase1Complete = $derived(foundWords.length === validWords.length && validWords.length > 0);
+  
+  // Check if phase 2 complete
+  let phase2Complete = $derived(() => {
+    if (foundWords.length === 0) return false;
+    return foundWords.every(word => classifiedWords.has(word));
+  });
+  
+  // Total score
+  let totalScore = $derived(phase1Score + phase2Score);
+  
+  // Initialize game
+  onMount(() => {
+    const puzzle = getTodaysPuzzle();
+    letters = puzzle.letters;
+    validWords = puzzle.validWords;
+    puzzleDate = puzzle.date;
+    
+    // Try to restore saved state
+    if (browser) {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        try {
+          const state = JSON.parse(saved);
+          if (state.date === puzzleDate) {
+            foundWords = state.foundWords || [];
+            // Restore validWords if saved (for completed games)
+            if (state.validWords && state.validWords.length > 0) {
+              validWords = state.validWords;
+            }
+            classifiedWords = new Map(state.classifiedWords || []);
+            phase1Score = state.phase1Score || 0;
+            phase2Score = state.phase2Score || 0;
+            
+            // Determine phase
+            if (state.gamePhase === 'complete') {
+              gamePhase = 'complete';
+            } else if (foundWords.length === validWords.length) {
+              gamePhase = 'phase2';
+            } else {
+              gamePhase = 'phase1';
+            }
+          } else {
+            // New day, fresh game
+            gamePhase = 'phase1';
+          }
+        } catch {
+          gamePhase = 'phase1';
+        }
+      } else {
+        gamePhase = 'phase1';
+      }
+    }
+  });
+  
+  // Save state on changes
+  $effect(() => {
+    if (browser && gamePhase !== 'loading') {
+      const state = {
+        date: puzzleDate,
+        foundWords,
+        validWords,
+        classifiedWords: [...classifiedWords.entries()],
+        phase1Score,
+        phase2Score,
+        gamePhase
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+  });
+  
+  // Handle word submission
+  function submitWord() {
+    const word = currentInput.toLowerCase().trim();
+    currentInput = '';
+    inputError = '';
+    
+    if (word.length < 3) {
+      inputError = 'Too short (min 3 letters)';
+      return;
+    }
+    
+    // Check if word uses only available letters
+    const letterSet = new Set(letters);
+    if (![...word].every(c => letterSet.has(c))) {
+      inputError = 'Uses unavailable letters';
+      return;
+    }
+    
+    // Check if valid food word
+    if (!validWords.includes(word)) {
+      inputError = 'Not a food word';
+      return;
+    }
+    
+    // Check if already found
+    if (foundWords.includes(word)) {
+      inputError = 'Already found!';
+      return;
+    }
+    
+    // Add word and score
+    foundWords = [...foundWords, word].sort();
+    const wordLength = word.length;
+    const points = wordLength <= 4 ? 10 : wordLength <= 6 ? 20 : 30;
+    phase1Score += points;
+    
+    // Check if phase 1 complete
+    if (foundWords.length === validWords.length) {
+      phase1Score += 100; // Bonus for finding all
+      setTimeout(() => {
+        gamePhase = 'phase2';
+      }, 1000);
+    }
+  }
+  
+  // Handle key press in input
+  function handleKeydown(e: KeyboardEvent) {
+    if (e.key === 'Enter') {
+      submitWord();
+    }
+  }
+  
+  // Give up - reveal all words and proceed to phase 2
+  function giveUp() {
+    gaveUp = true;
+    // Track which words are being revealed (no points for these)
+    revealedWords = validWords.filter(w => !foundWords.includes(w));
+    // Add revealed words to foundWords for phase 2
+    foundWords = [...validWords].sort();
+    // Move to phase 2 after showing revealed words
+    setTimeout(() => {
+      gamePhase = 'phase2';
+    }, 2000);
+  }
+  
+  // Drag and drop handlers for Phase 2
+  function handleDragStart(word: string) {
+    draggedWord = word;
+  }
+  
+  function handleDragEnd() {
+    draggedWord = null;
+  }
+  
+  function handleDrop(group: FoodGroup) {
+    if (!draggedWord) return;
+    
+    const word = draggedWord;
+    const correctGroups = getWordGroups(word);
+    const isCorrect = correctGroups.includes(group);
+    
+    // Get current attempts for this word
+    const existing = classifiedWords.get(word);
+    const attempts = (existing?.attempts || 0) + 1;
+    
+    if (isCorrect) {
+      // Correct classification
+      classifiedWords.set(word, { group, attempts });
+      classifiedWords = new Map(classifiedWords);
+      
+      // Score based on attempts
+      const points = attempts === 1 ? 5 : attempts === 2 ? 3 : 1;
+      phase2Score += points;
+      
+      // Show success feedback
+      const groupInfo = FOOD_GROUP_INFO[group];
+      showFeedback = { 
+        word, 
+        correct: true, 
+        hint: `${groupInfo.emoji} ${word} is a ${groupInfo.label.toLowerCase()}!` 
+      };
+    } else {
+      // Wrong - update attempts but don't classify
+      classifiedWords.set(word, { group: '' as FoodGroup, attempts });
+      classifiedWords = new Map(classifiedWords);
+      
+      // Show hint
+      const groupInfo = FOOD_GROUP_INFO[group];
+      showFeedback = { 
+        word, 
+        correct: false, 
+        hint: `${word} is not a ${groupInfo.label.toLowerCase()}. Try again!` 
+      };
+    }
+    
+    draggedWord = null;
+    
+    // Clear feedback after delay
+    setTimeout(() => {
+      showFeedback = null;
+    }, 2000);
+    
+    // Check if complete
+    const allClassified = foundWords.every(w => {
+      const c = classifiedWords.get(w);
+      return c && c.group !== '';
+    });
+    if (allClassified) {
+      // Bonus for all correct on first try
+      const allFirstTry = foundWords.every(w => classifiedWords.get(w)?.attempts === 1);
+      if (allFirstTry) {
+        phase2Score += 50;
+      }
+      setTimeout(() => {
+        gamePhase = 'complete';
+      }, 1000);
+    }
+  }
+  
+  function handleDragOver(e: DragEvent) {
+    e.preventDefault();
+  }
+  
+  // Get unclassified words
+  let unclassifiedWords = $derived(() => {
+    return foundWords.filter(word => {
+      const c = classifiedWords.get(word);
+      return !c || c.group === '';
+    });
+  });
+  
+  // Get words classified into each group
+  function getGroupWords(group: FoodGroup): string[] {
+    const words: string[] = [];
+    for (const [word, data] of classifiedWords) {
+      if (data.group === group) {
+        words.push(word);
+      }
+    }
+    return words;
+  }
+  
+  // Share result
+  function shareResult() {
+    const hints = letterHints();
+    const hintLines = [...hints.entries()]
+      .sort((a, b) => a[0].localeCompare(b[0]))
+      .map(([letter, { total }]) => `${letter.toUpperCase()} ${'●'.repeat(total)}`)
+      .join('\n');
+    
+    const phase2Correct = foundWords.filter(w => classifiedWords.get(w)?.attempts === 1).length;
+    
+    const text = `🍽️ Scrambled ${puzzleDate}
+
+Phase 1: ${foundWords.length}/${validWords.length} words ⭐
+Phase 2: ${phase2Correct}/${foundWords.length} first try 🧠
+
+${hintLines}
+
+Score: ${totalScore}
+dailyfoodchain.com/scrambled`;
+
+    if (navigator.share) {
+      navigator.share({ text });
+    } else if (navigator.clipboard) {
+      navigator.clipboard.writeText(text);
+      alert('Copied to clipboard!');
+    }
+  }
+</script>
+
+<svelte:head>
+  <title>Scrambled - Daily Food Word Game</title>
+</svelte:head>
+
+<main class="scrambled-game" class:wide-mode={gamePhase === 'phase2' || showResults}>
+  <header>
+    <h1>🍽️ Scrambled</h1>
+    <p class="date">{puzzleDate}</p>
+  </header>
+  
+  {#if gamePhase === 'loading'}
+    <div class="loading">Loading puzzle...</div>
+  
+  {:else if gamePhase === 'phase1'}
+    <section class="phase1">
+      <div class="letters">
+        {#each letters as letter}
+          <span class="letter">{letter.toUpperCase()}</span>
+        {/each}
+      </div>
+      
+      <div class="input-area">
+        <input 
+          type="text" 
+          bind:value={currentInput}
+          onkeydown={handleKeydown}
+          placeholder="Type a food word..."
+          autocomplete="off"
+          autocapitalize="off"
+        />
+        <button onclick={submitWord}>Submit</button>
+      </div>
+      
+      {#if inputError}
+        <p class="error">{inputError}</p>
+      {/if}
+      
+      <div class="progress">
+        <span class="found-count">{foundWords.length}/{validWords.length} words found</span>
+        <span class="score">Score: {phase1Score}</span>
+      </div>
+      
+      <div class="hints">
+        <h3>Hints</h3>
+        <div class="hint-grid">
+          {#each [...letterHints().entries()].sort((a, b) => a[0].localeCompare(b[0])) as [letter, { total, found }]}
+            <div class="hint-item" class:complete={found === total}>
+              <span class="hint-letter">{letter.toUpperCase()}</span>
+              <span class="hint-count">{found}/{total}</span>
+            </div>
+          {/each}
+        </div>
+      </div>
+      
+      <div class="found-words">
+        <h3>Found Words</h3>
+        <div class="word-list">
+          {#each foundWords as word}
+            <span class="word">{word}</span>
+          {/each}
+        </div>
+      </div>
+      
+      {#if gaveUp}
+        <div class="revealed-section">
+          <h3>Missed Words ({revealedWords.length})</h3>
+          <div class="word-list revealed">
+            {#each revealedWords as word}
+              <span class="word missed">{word}</span>
+            {/each}
+          </div>
+          <p class="moving-on">Moving to classification...</p>
+        </div>
+      {:else}
+        <button class="give-up" onclick={giveUp}>
+          🏳️ I Give Up - Show Words
+        </button>
+      {/if}
+    </section>
+  
+  {:else if gamePhase === 'phase2'}
+    <section class="phase2">
+      <h2>🧠 Classify Your Words</h2>
+      <p class="instruction">Drag each word to its food group</p>
+      
+      {#if showFeedback}
+        <div class="feedback" class:correct={showFeedback.correct} class:wrong={!showFeedback.correct}>
+          {showFeedback.hint}
+        </div>
+      {/if}
+      
+      <div class="unclassified">
+        {#each unclassifiedWords() as word}
+          <span 
+            class="drag-word"
+            draggable="true"
+            ondragstart={() => handleDragStart(word)}
+            ondragend={handleDragEnd}
+          >{word}</span>
+        {/each}
+      </div>
+      
+      <div class="groups-grid">
+        {#each Object.entries(FOOD_GROUP_INFO) as [group, info]}
+          <div 
+            class="group-drop"
+            ondragover={handleDragOver}
+            ondrop={() => handleDrop(group as FoodGroup)}
+          >
+            <div class="group-header">
+              <span class="emoji">{info.emoji}</span>
+              <span class="label">{info.label}</span>
+            </div>
+            <div class="group-words">
+              {#each getGroupWords(group as FoodGroup) as word}
+                <span class="classified-word">{word}</span>
+              {/each}
+            </div>
+          </div>
+        {/each}
+      </div>
+      
+      <div class="phase2-score">
+        <span>Classification Score: {phase2Score}</span>
+      </div>
+    </section>
+  
+  {:else if gamePhase === 'complete'}
+    <section class="complete">
+      <h2>🎉 Complete!</h2>
+      
+      <div class="final-scores">
+        <div class="score-row">
+          <span>Word Finding:</span>
+          <span>{phase1Score}</span>
+        </div>
+        <div class="score-row">
+          <span>Classification:</span>
+          <span>{phase2Score}</span>
+        </div>
+        <div class="score-row total">
+          <span>Total:</span>
+          <span>{totalScore}</span>
+        </div>
+      </div>
+      
+      <div class="stats">
+        <p>Words found: {foundWords.length}/{validWords.length}</p>
+        <p>First-try classifications: {foundWords.filter(w => classifiedWords.get(w)?.attempts === 1).length}/{foundWords.length}</p>
+      </div>
+      
+      <button class="share-btn" onclick={shareResult}>
+        📤 Share Result
+      </button>
+      
+      <button class="show-results-btn" onclick={() => showResults = !showResults}>
+        {showResults ? '▲ Hide Answers' : '▼ Show Answers'}
+      </button>
+      
+      {#if showResults}
+        {@const wordsToShow = validWords.length > 0 ? validWords : foundWords}
+        <div class="results-grid">
+          {#each [...wordsToShow].sort() as word}
+            {@const groups = getWordGroups(word)}
+            {@const groupInfo = groups[0] ? FOOD_GROUP_INFO[groups[0]] : null}
+            <div class="result-item">
+              <span class="result-word">{word}</span>
+              <span class="result-group">
+                {#if groupInfo}
+                  {groupInfo.emoji} {groupInfo.label}
+                {:else}
+                  ❓ Unknown
+                {/if}
+              </span>
+            </div>
+          {/each}
+        </div>
+      {/if}
+      
+      <p class="comeback">Come back tomorrow for a new puzzle!</p>
+    </section>
+  {/if}
+</main>
+
+<style>
+  .scrambled-game {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    padding-bottom: 6rem;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  
+  /* Wider layout for Phase 2 with 11 groups */
+  .scrambled-game.wide-mode {
+    max-width: 900px;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  .date {
+    color: #666;
+    margin: 0.25rem 0 0;
+  }
+  
+  .loading {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+  }
+  
+  /* Phase 1 Styles */
+  .letters {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .letter {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .input-area {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .input-area input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .input-area input:focus {
+    outline: none;
+    border-color: #4a9eff;
+  }
+  
+  .input-area button {
+    padding: 0.75rem 1.5rem;
+    background: #4a9eff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .input-area button:hover {
+    background: #357abd;
+  }
+  
+  .error {
+    color: #e53935;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+  
+  .progress {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    background: #f5f5f5;
+    border-radius: 8px;
+    margin: 1rem 0;
+  }
+  
+  .hints {
+    margin: 1rem 0;
+  }
+  
+  .hints h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .hint-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .hint-item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    background: #f0f0f0;
+    border-radius: 4px;
+    font-size: 0.875rem;
+  }
+  
+  .hint-item.complete {
+    background: #c8e6c9;
+  }
+  
+  .hint-letter {
+    font-weight: bold;
+  }
+  
+  .hint-count {
+    color: #666;
+  }
+  
+  .found-words {
+    margin: 1rem 0;
+  }
+  
+  .found-words h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .word-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .word {
+    padding: 0.25rem 0.75rem;
+    background: #e3f2fd;
+    border-radius: 20px;
+    font-size: 0.875rem;
+  }
+  
+  .give-up {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1.5rem;
+    background: #9e9e9e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .give-up:hover {
+    background: #757575;
+  }
+  
+  .revealed-section {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #fff3e0;
+    border-radius: 8px;
+  }
+  
+  .revealed-section h3 {
+    margin: 0 0 0.5rem;
+    color: #e65100;
+  }
+  
+  .word.missed {
+    background: #ffccbc;
+    color: #bf360c;
+  }
+  
+  .moving-on {
+    margin: 1rem 0 0;
+    color: #666;
+    font-style: italic;
+  }
+  
+  /* Phase 2 Styles */
+  .phase2 {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+  
+  .phase2 h2 {
+    margin: 0 0 0.5rem;
+  }
+  
+  .instruction {
+    color: #666;
+    margin: 0 0 1rem;
+  }
+  
+  .feedback {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    z-index: 100;
+    animation: fadeInUp 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .feedback.correct {
+    background: #c8e6c9;
+    color: #2e7d32;
+  }
+  
+  .feedback.wrong {
+    background: #ffcdd2;
+    color: #c62828;
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translate(-50%, 10px); }
+    to { opacity: 1; transform: translate(-50%, 0); }
+  }
+  
+  .unclassified {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #f5f5f5;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    min-height: 3rem;
+  }
+  
+  .drag-word {
+    padding: 0.5rem 1rem;
+    background: #fff;
+    border: 2px solid #4a9eff;
+    border-radius: 20px;
+    cursor: grab;
+    user-select: none;
+  }
+  
+  .drag-word:active {
+    cursor: grabbing;
+  }
+  
+  .groups-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+  
+  @media (max-width: 700px) {
+    .groups-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .groups-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .group-drop {
+    padding: 0.5rem;
+    background: #fff;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    min-height: 80px;
+    max-height: 150px;
+    overflow-y: auto;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  
+  .group-drop:hover {
+    border-color: #4a9eff;
+    background: #f0f8ff;
+  }
+  
+  .group-header {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    padding-bottom: 0.25rem;
+  }
+  
+  .emoji {
+    font-size: 1.25rem;
+  }
+  
+  .label {
+    font-weight: 500;
+  }
+  
+  .group-words {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+  
+  .classified-word {
+    padding: 0.125rem 0.5rem;
+    background: #c8e6c9;
+    border-radius: 12px;
+    font-size: 0.75rem;
+  }
+  
+  .phase2-score {
+    margin-top: 1rem;
+    text-align: center;
+    color: #666;
+  }
+  
+  /* Complete Styles */
+  .complete {
+    text-align: center;
+  }
+  
+  .complete h2 {
+    font-size: 2rem;
+    margin: 0 0 1rem;
+  }
+  
+  .final-scores {
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .score-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+  }
+  
+  .score-row.total {
+    border-top: 2px solid #ddd;
+    margin-top: 0.5rem;
+    padding-top: 0.75rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+  
+  .stats {
+    margin: 1rem 0;
+    color: #666;
+  }
+  
+  .stats p {
+    margin: 0.25rem 0;
+  }
+  
+  .share-btn {
+    padding: 1rem 2rem;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+  
+  .share-btn:hover {
+    background: #43a047;
+  }
+  
+  .show-results-btn {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    color: #666;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .show-results-btn:hover {
+    background: #f5f5f5;
+    border-color: #bbb;
+  }
+  
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    margin: 1rem 0;
+    text-align: left;
+  }
+  
+  @media (max-width: 700px) {
+    .results-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .results-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .result-item {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0.75rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #eee;
+  }
+  
+  .result-word {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .result-group {
+    font-size: 0.85rem;
+    color: #666;
+  }
+  
+  .comeback {
+    margin-top: 1rem;
+    color: #666;
+    font-style: italic;
+  }
+</style>
