@@ -178,12 +178,7 @@
   
   main {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
     width: 100%;
-    overflow-y: auto;
   }
   
   footer {
