@@ -2942,11 +2942,11 @@
     "source": "Maitake"
   },
   {
-    "word": "malted",
+    "word": "malt",
     "groups": [
       "beverage"
     ],
-    "source": "Malted"
+    "source": "Malt"
   },
   {
     "word": "mamey",
@@ -4354,12 +4354,13 @@
     "source": "Saffron"
   },
   {
-    "word": "sage",
+    "word": "sake",
     "groups": [
-      "spice"
+      "beverage"
     ],
-    "source": "Sage"
+    "source": "Sake"
   },
+  
   {
     "word": "salad",
     "groups": [

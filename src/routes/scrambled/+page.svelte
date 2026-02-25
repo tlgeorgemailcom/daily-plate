@@ -82,19 +82,29 @@
         try {
           const state = JSON.parse(saved);
           if (state.date === puzzleDate) {
-            foundWords = state.foundWords || [];
+            // Filter out any words that no longer exist in the word list
+            const savedFoundWords = (state.foundWords || []) as string[];
+            foundWords = savedFoundWords.filter(w => FOOD_WORDS.has(w));
+            
             // Restore validWords if saved (for completed games)
             if (state.validWords && state.validWords.length > 0) {
-              validWords = state.validWords;
+              // Also filter validWords to only include words still in FOOD_WORDS
+              validWords = (state.validWords as string[]).filter(w => FOOD_WORDS.has(w));
             }
-            classifiedWords = new Map(state.classifiedWords || []);
+            
+            // Filter classifiedWords to only include valid words
+            const savedClassified = state.classifiedWords || [];
+            classifiedWords = new Map(
+              savedClassified.filter(([word]: [string, unknown]) => FOOD_WORDS.has(word))
+            );
+            
             phase1Score = state.phase1Score || 0;
             phase2Score = state.phase2Score || 0;
             
             // Determine phase
             if (state.gamePhase === 'complete') {
               gamePhase = 'complete';
-            } else if (foundWords.length === validWords.length) {
+            } else if (foundWords.length === validWords.length && validWords.length > 0) {
               gamePhase = 'phase2';
             } else {
               gamePhase = 'phase1';
