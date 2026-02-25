@@ -387,7 +387,7 @@
     const text = `🍽️ Scrambled ${puzzleDate}
 
 Word Finding: ${wordsFoundBeforeReveal}/${validWords.length} (${p1Pct.toFixed(0)}%) ⭐
-Classification: ${firstTryCorrect}/${foundWords.length} (${p2Pct.toFixed(1)}%) 🧠
+Classification: ${firstTryCorrect}/${foundWords.length} (${p2Pct.toFixed(0)}%) 🧠
 
 ${hintLines}
 
@@ -561,7 +561,7 @@ dailyfoodchain.com/scrambled`;
         <div class="score-row">
           <span>Classification:</span>
           <span class="score-value">{firstTryCorrect}/{foundWords.length}</span>
-          <span class="score-percent">{phase2Percent().toFixed(1)}%</span>
+          <span class="score-percent">{phase2Percent().toFixed(0)}%</span>
         </div>
       </div>
       
