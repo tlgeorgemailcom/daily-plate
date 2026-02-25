@@ -123,11 +123,16 @@
             gamePhase = 'phase1';
           }
         } catch {
+          // Corrupted state, clear and start fresh
+          localStorage.removeItem(STORAGE_KEY);
           gamePhase = 'phase1';
         }
       } else {
         gamePhase = 'phase1';
       }
+    } else {
+      // Fallback if browser not available
+      gamePhase = 'phase1';
     }
   });
   
