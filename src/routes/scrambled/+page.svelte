@@ -262,6 +262,14 @@
     console.log('gamePhase set to:', gamePhase);
   }
   
+  // Developer reset with password
+  function devReset() {
+    const password = prompt('Enter developer password:');
+    if (password === '4444') {
+      resetGame();
+    }
+  }
+  
   // Drag and drop handlers for Phase 2
   function handleDragStart(word: string) {
     draggedWord = word;
@@ -440,6 +448,7 @@ dailyfoodchain.com/scrambled`;
   <header>
     <h1>🍽️ Scrambled</h1>
     <p class="date">{puzzleDate}</p>
+    <button class="dev-reset" onclick={devReset} title="Dev Reset">⚙️</button>
   </header>
   
   {#if gamePhase === 'loading'}
@@ -657,6 +666,7 @@ dailyfoodchain.com/scrambled`;
   header {
     text-align: center;
     margin-bottom: 1.5rem;
+    position: relative;
   }
   
   header h1 {
@@ -667,6 +677,22 @@ dailyfoodchain.com/scrambled`;
   .date {
     color: #666;
     margin: 0.25rem 0 0;
+  }
+  
+  .dev-reset {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    opacity: 0.3;
+    cursor: pointer;
+    padding: 0.25rem;
+  }
+  
+  .dev-reset:hover {
+    opacity: 0.6;
   }
   
   .loading {
