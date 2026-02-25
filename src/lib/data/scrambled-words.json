@@ -85,13 +85,7 @@
     ],
     "source": "Amaranth"
   },
-  {
-    "word": "american",
-    "groups": [
-      "dairy"
-    ],
-    "source": "American Cheese"
-  },
+ 
   {
     "word": "anchovy",
     "groups": [
@@ -221,13 +215,7 @@
     ],
     "source": "Babassu"
   },
-  {
-    "word": "back",
-    "groups": [
-      "protein"
-    ],
-    "source": "Pork Back Rib"
-  },
+  
   {
     "word": "bacon",
     "groups": [
@@ -242,20 +230,8 @@
     ],
     "source": "Bagel"
   },
-  {
-    "word": "baked",
-    "groups": [
-      "prepared"
-    ],
-    "source": "Baked Beans"
-  },
-  {
-    "word": "baking",
-    "groups": [
-      "spice"
-    ],
-    "source": "Baking Soda"
-  },
+  
+  
   {
     "word": "balsamic",
     "groups": [
@@ -414,14 +390,7 @@
     ],
     "source": "Bison"
   },
-  {
-    "word": "black",
-    "groups": [
-      "fruit",
-      "fats"
-    ],
-    "source": "Olive Black"
-  },
+  
   {
     "word": "blackberry",
     "groups": [
@@ -450,14 +419,7 @@
     ],
     "source": "Queso Blanco"
   },
-  {
-    "word": "blend",
-    "groups": [
-      "dairy",
-      "beverage"
-    ],
-    "source": "Mexican Blend Cheese"
-  },
+  
   {
     "word": "blue",
     "groups": [
@@ -508,15 +470,7 @@
     ],
     "source": "Bockwurst"
   },
-  {
-    "word": "boiled",
-    "groups": [
-      "protein",
-      "prepared",
-      "vegetable"
-    ],
-    "source": "Egg Boiled"
-  },
+ 
   {
     "word": "bok",
     "groups": [
@@ -671,13 +625,7 @@
     ],
     "source": "Brotwurst"
   },
-  {
-    "word": "brown",
-    "groups": [
-      "grain"
-    ],
-    "source": "Brown Rice"
-  },
+  
   {
     "word": "brussel",
     "groups": [
@@ -1407,13 +1355,7 @@
     ],
     "source": "Milk Condensed"
   },
-  {
-    "word": "cooked",
-    "groups": [
-      "prepared"
-    ],
-    "source": "Buckwheat Cooked"
-  },
+  
   {
     "word": "cookie",
     "groups": [
@@ -1493,13 +1435,7 @@
     ],
     "source": "Cottonseed"
   },
-  {
-    "word": "country",
-    "groups": [
-      "protein"
-    ],
-    "source": "Country Style Rib"
-  },
+ 
   {
     "word": "couscous",
     "groups": [
@@ -1666,14 +1602,7 @@
     ],
     "source": "Danish"
   },
-  {
-    "word": "dark",
-    "groups": [
-      "condiment",
-      "protein"
-    ],
-    "source": "Syrup Corn Dark"
-  },
+  
   {
     "word": "date",
     "groups": [
@@ -1702,13 +1631,7 @@
     ],
     "source": "Dill"
   },
-  {
-    "word": "dinner",
-    "groups": [
-      "prepared"
-    ],
-    "source": "Dinner Roll"
-  },
+  
   {
     "word": "distilled",
     "groups": [
@@ -1873,14 +1796,7 @@
     ],
     "source": "Endive"
   },
-  {
-    "word": "english",
-    "groups": [
-      "grain",
-      "prepared"
-    ],
-    "source": "English Muffin"
-  },
+  
   {
     "word": "enoki",
     "groups": [
@@ -1909,21 +1825,8 @@
     ],
     "source": "Escarole"
   },
-  {
-    "word": "evaporated",
-    "groups": [
-      "dairy"
-    ],
-    "source": "Milk Evaporated"
-  },
-  {
-    "word": "eye",
-    "groups": [
-      "protein",
-      "legume"
-    ],
-    "source": "Eye of Round"
-  },
+  
+  
   {
     "word": "falafel",
     "groups": [
@@ -2130,22 +2033,8 @@
     ],
     "source": "Frankfurter"
   },
-  {
-    "word": "french",
-    "groups": [
-      "legume",
-      "prepared",
-      "vegetable"
-    ],
-    "source": "French Bean"
-  },
-  {
-    "word": "fried",
-    "groups": [
-      "prepared"
-    ],
-    "source": "Cherry Fried Pie"
-  },
+ 
+  
   {
     "word": "fries",
     "groups": [
@@ -2162,14 +2051,7 @@
     "source": "Frog"
   },
   
-  {
-    "word": "frosted",
-    "groups": [
-    
-      "prepared"
-    ],
-    "source": "Cereal Frosted Flakes"
-  },
+  
   {
     "word": "frosting",
     "groups": [
@@ -2191,16 +2073,9 @@
     ],
     "source": "Fruit Cocktail"
   },
+  
   {
-    "word": "fry",
-    "groups": [
-      "prepared",
-      "grain"
-    ],
-    "source": "Fry Bread"
-  },
-  {
-    "word": "fryers",
+    "word": "fryer",
     "groups": [
       "protein"
     ],
@@ -2312,13 +2187,7 @@
     ],
     "source": "Goat"
   },
-  {
-    "word": "goddess",
-    "groups": [
-      "condiment"
-    ],
-    "source": "Dressing Green Goddess"
-  },
+  
   {
     "word": "goji",
     "groups": [
@@ -2412,15 +2281,7 @@
     ],
     "source": "Gravy"
   },
-  {
-    "word": "green",
-    "groups": [
-      "vegetable",
-      "legume",
-      "fruit"
-    ],
-    "source": "Olive Green"
-  },
+  
   {
     "word": "grits",
     "groups": [
@@ -2428,14 +2289,7 @@
     ],
     "source": "Grits"
   },
-  {
-    "word": "ground",
-    "groups": [
-      "protein",
-      "spice"
-    ],
-    "source": "Beef Ground"
-  },
+  
   {
     "word": "grouper",
     "groups": [
@@ -2610,15 +2464,7 @@
     ],
     "source": "Horseradish"
   },
-  {
-    "word": "hot",
-    "groups": [
-      "prepared",
-      "condiment",
-      "protein"
-    ],
-    "source": "Hot Dog"
-  },
+  
   {
     "word": "hotdog",
     "groups": [
@@ -2652,7 +2498,8 @@
     "word": "ice",
     "groups": [
       "dairy",
-      "prepared"
+      "prepared",
+      "beverage"
     ],
     "source": "Ice Cream"
   },
@@ -2670,15 +2517,7 @@
     ],
     "source": "Incaparina"
   },
-  {
-    "word": "italian",
-    "groups": [
-      "spice",
-      "condiment",
-      "prepared"
-    ],
-    "source": "Dressing Italian"
-  },
+  
   {
     "word": "jackfruit",
     "groups": [
@@ -2725,13 +2564,7 @@
     ],
     "source": "Jellyfish"
   },
-  {
-    "word": "jerusalem",
-    "groups": [
-      "vegetable"
-    ],
-    "source": "Jerusalem"
-  },
+  
   {
     "word": "jicama",
     "groups": [
@@ -2891,13 +2724,7 @@
     ],
     "source": "Bay Leaf"
   },
-  {
-    "word": "leave",
-    "groups": [
-      "vegetable"
-    ],
-    "source": "Amaranth Leave"
-  },
+  
   {
     "word": "lecithin",
     "groups": [
@@ -2948,15 +2775,7 @@
     ],
     "source": "Lettuce"
   },
-  {
-    "word": "light",
-    "groups": [
-      "protein",
-      "dairy",
-      "condiment"
-    ],
-    "source": "Tuna Light"
-  },
+ 
   {
     "word": "lima",
     "groups": [
@@ -3207,14 +3026,7 @@
     ],
     "source": "Masa"
   },
-  {
-    "word": "mashed",
-    "groups": [
-      "vegetable",
-      "prepared"
-    ],
-    "source": "Potatoes Mashed"
-  },
+  
   {
     "word": "matzo",
     "groups": [
@@ -3252,7 +3064,7 @@
     "source": "Lasagna with Meat"
   },
   {
-    "word": "meatballs",
+    "word": "meatball",
     "groups": [
       "protein",
       "prepared"
@@ -3288,15 +3100,7 @@
     ],
     "source": "Menhaden"
   },
-  {
-    "word": "mexican",
-    "groups": [
-      "dairy",
-      "legume",
-      "grain"
-    ],
-    "source": "Mexican Blend Cheese"
-  },
+  
   {
     "word": "mignon",
     "groups": [
@@ -3347,13 +3151,7 @@
     ],
     "source": "Trail Mix"
   },
-  {
-    "word": "mixed",
-    "groups": [
-      "vegetable"
-    ],
-    "source": "Vegetables Mixed"
-  },
+  
   {
     "word": "molasses",
     "groups": [
@@ -3404,13 +3202,7 @@
     ],
     "source": "Mothbean"
   },
-  {
-    "word": "mountain",
-    "groups": [
-      "vegetable"
-    ],
-    "source": "Mountain Yam"
-  },
+  
   {
     "word": "mousenut",
     "groups": [
@@ -3453,14 +3245,7 @@
     ],
     "source": "Mullet"
   },
-  {
-    "word": "multi",
-    "groups": [
-      "grain",
-      "prepared"
-    ],
-    "source": "Toast Multi"
-  },
+  
   {
     "word": "multigrain",
     "groups": [
@@ -3539,13 +3324,7 @@
     ],
     "source": "Nance"
   },
-  {
-    "word": "napa",
-    "groups": [
-      "vegetable"
-    ],
-    "source": "Napa"
-  },
+  
   {
     "word": "natto",
     "groups": [
@@ -3656,13 +3435,7 @@
     ],
     "source": "Octopus"
   },
-  {
-    "word": "oheloberry",
-    "groups": [
-      "fruit"
-    ],
-    "source": "Oheloberry"
-  },
+  
   {
     "word": "oil",
     "groups": [
@@ -3745,13 +3518,7 @@
     ],
     "source": "Oyster Cooked"
   },
-  {
-    "word": "pakchoi",
-    "groups": [
-      "vegetable"
-    ],
-    "source": "Pakchoi"
-  },
+  
   {
     "word": "palm",
     "groups": [
@@ -3767,13 +3534,7 @@
     ],
     "source": "Pancake"
   },
-  {
-    "word": "pandulce",
-    "groups": [
-      "prepared"
-    ],
-    "source": "Pandulce"
-  },
+  
   {
     "word": "papad",
     "groups": [
@@ -3985,20 +3746,8 @@
     ],
     "source": "Pickle"
   },
-  {
-    "word": "pickled",
-    "groups": [
-      "vegetable"
-    ],
-    "source": "Beet Pickled"
-  },
-  {
-    "word": "picnic",
-    "groups": [
-      "protein"
-    ],
-    "source": "Pork Picnic"
-  },
+ 
+ 
   {
     "word": "pie",
     "groups": [
@@ -4015,7 +3764,7 @@
     "source": "Pigeon"
   },
   {
-    "word": "pigeonpeas",
+    "word": "pigeonpea",
     "groups": [
       "legume"
     ],
@@ -4120,13 +3869,7 @@
     ],
     "source": "Plum"
   },
-  {
-    "word": "poached",
-    "groups": [
-      "protein"
-    ],
-    "source": "Egg Poached"
-  },
+  
   {
     "word": "poke",
     "groups": [
@@ -4155,14 +3898,7 @@
     ],
     "source": "Pompano"
   },
-  {
-    "word": "pop",
-    "groups": [
-      "prepared",
-      "beverage"
-    ],
-    "source": "Pop Tart Blueberry"
-  },
+  
   {
     "word": "popcorn",
     "groups": [
@@ -4207,14 +3943,7 @@
     ],
     "source": "Porterhouse Beef"
   },
-  {
-    "word": "pot",
-    "groups": [
-      "prepared",
-      "protein"
-    ],
-    "source": "Turkey Pot Pie"
-  },
+  
   {
     "word": "potato",
     "groups": [
@@ -4223,14 +3952,7 @@
     ],
     "source": "Potato Chip"
   },
-  {
-    "word": "potatoes",
-    "groups": [
-      "vegetable",
-      "prepared"
-    ],
-    "source": "Potatoes au Gratin"
-  },
+  
   {
     "word": "pound",
     "groups": [
@@ -4245,14 +3967,7 @@
     ],
     "source": "Pout"
   },
-  {
-    "word": "powdered",
-    "groups": [
-      "spice",
-      "condiment"
-    ],
-    "source": "Sugar Powdered"
-  },
+  
   {
     "word": "prawn",
     "groups": [
@@ -4274,13 +3989,7 @@
     ],
     "source": "Pretzel"
   },
-  {
-    "word": "prickly",
-    "groups": [
-      "fruit"
-    ],
-    "source": "Prickly Pear"
-  },
+ 
   {
     "word": "prosciutto",
     "groups": [
@@ -4439,13 +4148,7 @@
     ],
     "source": "Ramen"
   },
-  {
-    "word": "ranch",
-    "groups": [
-      "condiment"
-    ],
-    "source": "Dressing Ranch"
-  },
+  
   {
     "word": "raspberries",
     "groups": [
@@ -4467,25 +4170,8 @@
     ],
     "source": "Ravioli"
   },
-  {
-    "word": "raw",
-    "groups": [
-      "protein",
-      "vegetable"
-    ],
-    "source": "Oyster Raw"
-  },
-  {
-    "word": "red",
-    "groups": [
-      "fruit",
-      "vegetable",
-      "beverage",
-      "vegetable",
-      "legume"
-    ],
-    "source": "Red Bean"
-  },
+  
+ 
   {
     "word": "refried",
     "groups": [
@@ -4545,14 +4231,7 @@
     ],
     "source": "Ricotta"
   },
-  {
-    "word": "ring",
-    "groups": [
-      "vegetable",
-      "prepared"
-    ],
-    "source": "Onion Ring"
-  },
+  
   {
     "word": "roast",
     "groups": [
@@ -4742,13 +4421,7 @@
     ],
     "source": "Saltine"
   },
-  {
-    "word": "salut",
-    "groups": [
-      "dairy"
-    ],
-    "source": "Port de Salut"
-  },
+  
   {
     "word": "sandwich",
     "groups": [
@@ -4814,21 +4487,8 @@
     ],
     "source": "Scallop"
   },
-  {
-    "word": "scalloped",
-    "groups": [
-      "vegetable",
-      "prepared"
-    ],
-    "source": "Potatoes Scalloped"
-  },
-  {
-    "word": "scrambled",
-    "groups": [
-      "protein"
-    ],
-    "source": "Egg Scrambled"
-  },
+  
+  
   {
     "word": "scrod",
     "groups": [
@@ -4843,13 +4503,7 @@
     ],
     "source": "Scup"
   },
-  {
-    "word": "sea",
-    "groups": [
-      "protein"
-    ],
-    "source": "Sea Bass"
-  },
+  
   {
     "word": "seal",
     "groups": [
@@ -4984,13 +4638,7 @@
     ],
     "source": "Shiitake"
   },
-  {
-    "word": "short",
-    "groups": [
-      "protein"
-    ],
-    "source": "Short Rib"
-  },
+  
   {
     "word": "shortbread",
     "groups": [
@@ -5041,14 +4689,7 @@
     ],
     "source": "Skirtsteak"
   },
-  {
-    "word": "sliced",
-    "groups": [
-      "protein",
-      "fruit"
-    ],
-    "source": "Turkey Sliced"
-  },
+ 
   {
     "word": "smelt",
     "groups": [
@@ -5162,15 +4803,7 @@
     ],
     "source": "Soup Beef Broth"
   },
-  {
-    "word": "sour",
-    "groups": [
-      "dairy",
-      "vegetable",
-      "condiment"
-    ],
-    "source": "Sour Cream"
-  },
+  
   {
     "word": "soursop",
     "groups": [
@@ -5256,13 +4889,7 @@
     ],
     "source": "Spleen"
   },
-  {
-    "word": "split",
-    "groups": [
-      "legume"
-    ],
-    "source": "Split Pea"
-  },
+  
   {
     "word": "sponge",
     "groups": [
@@ -5277,15 +4904,9 @@
     ],
     "source": "Spot"
   },
+  
   {
-    "word": "spray",
-    "groups": [
-      "fats"
-    ],
-    "source": "Spray Oil"
-  },
-  {
-    "word": "sprouts",
+    "word": "sprout",
     "groups": [
       "vegetable"
     ],
@@ -5442,14 +5063,7 @@
     ],
     "source": "Sugar"
   },
-  {
-    "word": "summer",
-    "groups": [
-      "vegetable",
-      "fruit"
-    ],
-    "source": "Squash Summer"
-  },
+  
   {
     "word": "sundae",
     "groups": [
@@ -5458,13 +5072,7 @@
     ],
     "source": "Sundae"
   },
-  {
-    "word": "sundried",
-    "groups": [
-      "condiment"
-    ],
-    "source": "Tomato Sun-dried"
-  },
+  
   {
     "word": "sunfish",
     "groups": [
@@ -5539,7 +5147,7 @@
     "source": "Tabasco"
   },
   {
-    "word": "tacoshell",
+    "word": "taco",
     "groups": [
       "prepared"
     ],
@@ -5560,7 +5168,7 @@
     "source": "Tallow"
   },
   {
-    "word": "tamales",
+    "word": "tamale",
     "groups": [
       "prepared"
     ],
@@ -5617,13 +5225,7 @@
     ],
     "source": "Cream of Tartar"
   },
-  {
-    "word": "tbone",
-    "groups": [
-      "protein"
-    ],
-    "source": "Tbone"
-  },
+  
   {
     "word": "tea",
     "groups": [
@@ -5681,13 +5283,7 @@
     ],
     "source": "Thigh"
   },
-  {
-    "word": "thousand",
-    "groups": [
-      "condiment"
-    ],
-    "source": "Dressing Thousand"
-  },
+  
   {
     "word": "thyme",
     "groups": [
@@ -5757,13 +5353,7 @@
     ],
     "source": "Tonguepork"
   },
-  {
-    "word": "top",
-    "groups": [
-      "protein"
-    ],
-    "source": "Round Roast Top"
-  },
+  
   {
     "word": "tortilla",
     "groups": [
@@ -5816,7 +5406,7 @@
     "source": "Trout"
   },
   {
-    "word": "truffles",
+    "word": "truffle",
     "groups": [
       "prepared"
     ],
@@ -5910,13 +5500,7 @@
     ],
     "source": "Venison"
   },
-  {
-    "word": "vera",
-    "groups": [
-      "beverage"
-    ],
-    "source": "Aloe Vera Juice"
-  },
+ 
   {
     "word": "verde",
     "groups": [
@@ -6033,13 +5617,7 @@
     ],
     "source": "Whey"
   },
-  {
-    "word": "whipping",
-    "groups": [
-      "dairy"
-    ],
-    "source": "Whipping"
-  },
+ 
   {
     "word": "whiskey",
     "groups": [
@@ -6047,14 +5625,7 @@
     ],
     "source": "Whiskey"
   },
-  {
-    "word": "white",
-    "groups": [
-      "dairy",
-      "beverage"
-    ],
-    "source": "Dry White Cheese"
-  },
+  
   {
     "word": "whitefish",
     "groups": [
@@ -6069,24 +5640,8 @@
     ],
     "source": "Whiting"
   },
-  {
-    "word": "whole",
-    "groups": [
-      "grain",
-      "prepared",
-      "protein"
-    ],
-    "source": "Cracker Whole Wheat"
-  },
-  {
-    "word": "wild",
-    "groups": [
-      "protein",
-      "grain",
-      "fruit"
-    ],
-    "source": "Pop Tart Frost Wild Berry"
-  },
+  
+ 
   {
     "word": "wine",
     "groups": [
@@ -6108,14 +5663,7 @@
     ],
     "source": "Winged Bean"
   },
-  {
-    "word": "winter",
-    "groups": [
-      "vegetable",
-      "fruit"
-    ],
-    "source": "Squash Winter"
-  },
+ 
  
   {
     "word": "wolffish",
@@ -6159,15 +5707,7 @@
     ],
     "source": "Yeast"
   },
-  {
-    "word": "yellow",
-    "groups": [
-      "grain",
-      "vegetable",
-      "prepared"
-    ],
-    "source": "Cake Yellow"
-  },
+ 
   {
     "word": "yellowfin",
     "groups": [
@@ -6196,13 +5736,7 @@
     ],
     "source": "Yolk"
   },
-  {
-    "word": "york",
-    "groups": [
-      "protein"
-    ],
-    "source": "New York Strip"
-  },
+  
   {
     "word": "zucchini",
     "groups": [
