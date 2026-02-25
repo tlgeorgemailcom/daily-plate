@@ -422,7 +422,7 @@
     const p1Pct = phase1Percent();
     const p2Pct = phase2Percent();
     
-    const text = `🍽️ Scrambled ${puzzleDate}
+    const text = `🐝 Scramble Bee ${puzzleDate}
 
 Word Finding: ${wordsFoundBeforeReveal}/${validWords.length} (${p1Pct.toFixed(0)}%) ⭐
 Classification: ${firstTryCorrect}/${foundWords.length} (${p2Pct.toFixed(0)}%) 🧠
@@ -441,12 +441,12 @@ dailyfoodchain.com/scrambled`;
 </script>
 
 <svelte:head>
-  <title>Scrambled - Daily Food Word Game</title>
+  <title>Scramble Bee - Daily Food Word Game</title>
 </svelte:head>
 
 <main class="scrambled-game" class:wide-mode={gamePhase === 'phase2' || showResults}>
   <header>
-    <h1>🍽️ Scrambled</h1>
+    <h1>🐝 Scramble Bee</h1>
     <p class="date">{puzzleDate}</p>
     <button class="dev-reset" onclick={devReset} title="Dev Reset">⚙️</button>
   </header>
