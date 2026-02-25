@@ -3076,7 +3076,8 @@
     "groups": [
       "prepared",
       "grain",
-      "vegetable"
+      "vegetable",
+      "protein"
     ],
     "source": "Meatless Bacon"
   },
@@ -3470,7 +3471,8 @@
   {
     "word": "omelet",
     "groups": [
-      "protein"
+      "protein",
+      "prepared"
     ],
     "source": "Egg Omelet"
   },
