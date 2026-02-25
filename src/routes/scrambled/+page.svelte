@@ -145,16 +145,12 @@
               const puzzle = getTodaysPuzzle(currentLevel);
               letters = puzzle.letters;
               
+              // Always use fresh validWords from current level (not saved state)
+              validWords = puzzle.validWords;
+              
               // Filter out any words that no longer exist in the word list
               const savedFoundWords = (state.foundWords || []) as string[];
               foundWords = savedFoundWords.filter(w => wordMap.has(w));
-              
-              // Restore validWords if saved (for completed games)
-              if (state.validWords && state.validWords.length > 0) {
-                validWords = (state.validWords as string[]).filter(w => wordMap.has(w));
-              } else {
-                validWords = puzzle.validWords;
-              }
               
               // Filter classifiedWords to only include valid words
               const savedClassified = state.classifiedWords || [];
