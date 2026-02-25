@@ -203,6 +203,26 @@
     }, 2000);
   }
   
+  // Reset game - start fresh for today
+  function resetGame() {
+    if (browser) {
+      localStorage.removeItem(STORAGE_KEY);
+    }
+    // Reload fresh puzzle
+    const puzzle = getTodaysPuzzle();
+    letters = puzzle.letters;
+    validWords = puzzle.validWords;
+    puzzleDate = puzzle.date;
+    foundWords = [];
+    classifiedWords = new Map();
+    phase1Score = 0;
+    phase2Score = 0;
+    gaveUp = false;
+    revealedWords = [];
+    showResults = false;
+    gamePhase = 'phase1';
+  }
+  
   // Drag and drop handlers for Phase 2
   function handleDragStart(word: string) {
     draggedWord = word;
@@ -517,6 +537,10 @@ dailyfoodchain.com/scrambled`;
       <div class="phase2-score">
         <span>Classification Score: {phase2Score}</span>
       </div>
+      
+      <button class="reset-btn" onclick={resetGame}>
+        🔄 Start Over
+      </button>
     </section>
   
   {:else if gamePhase === 'complete'}
@@ -936,6 +960,22 @@ dailyfoodchain.com/scrambled`;
     margin-top: 1rem;
     text-align: center;
     color: #666;
+  }
+  
+  .reset-btn {
+    display: block;
+    margin: 1rem auto 0;
+    padding: 0.5rem 1.5rem;
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    color: #666;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .reset-btn:hover {
+    background: #eee;
   }
   
   /* Complete Styles */
