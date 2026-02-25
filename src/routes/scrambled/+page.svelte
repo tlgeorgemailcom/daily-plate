@@ -78,61 +78,83 @@
   
   // Initialize game
   onMount(() => {
-    const puzzle = getTodaysPuzzle();
-    letters = puzzle.letters;
-    validWords = puzzle.validWords;
-    puzzleDate = puzzle.date;
+    // Failsafe: if still loading after 3 seconds, force start
+    const failsafe = setTimeout(() => {
+      if (gamePhase === 'loading') {
+        console.warn('Scrambled: Failsafe triggered, forcing phase1');
+        try { localStorage.removeItem(STORAGE_KEY); } catch { /* ignore */ }
+        const puzzle = getTodaysPuzzle();
+        letters = puzzle.letters;
+        validWords = puzzle.validWords;
+        puzzleDate = puzzle.date;
+        gamePhase = 'phase1';
+      }
+    }, 3000);
     
-    // Try to restore saved state
-    if (browser) {
-      const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved) {
-        try {
-          const state = JSON.parse(saved);
-          if (state.date === puzzleDate) {
-            // Filter out any words that no longer exist in the word list
-            const savedFoundWords = (state.foundWords || []) as string[];
-            foundWords = savedFoundWords.filter(w => FOOD_WORDS.has(w));
-            
-            // Restore validWords if saved (for completed games)
-            if (state.validWords && state.validWords.length > 0) {
-              // Also filter validWords to only include words still in FOOD_WORDS
-              validWords = (state.validWords as string[]).filter(w => FOOD_WORDS.has(w));
-            }
-            
-            // Filter classifiedWords to only include valid words
-            const savedClassified = state.classifiedWords || [];
-            classifiedWords = new Map(
-              savedClassified.filter(([word]: [string, unknown]) => FOOD_WORDS.has(word))
-            );
-            
-            wordsFoundBeforeReveal = state.wordsFoundBeforeReveal || 0;
-            firstTryCorrect = state.firstTryCorrect || 0;
-            gaveUp = state.gaveUp || false;
-            
-            // Determine phase
-            if (state.gamePhase === 'complete') {
-              gamePhase = 'complete';
-            } else if (foundWords.length === validWords.length && validWords.length > 0) {
-              gamePhase = 'phase2';
+    try {
+      const puzzle = getTodaysPuzzle();
+      letters = puzzle.letters;
+      validWords = puzzle.validWords;
+      puzzleDate = puzzle.date;
+      
+      // Try to restore saved state
+      if (browser) {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+          try {
+            const state = JSON.parse(saved);
+            if (state.date === puzzleDate) {
+              // Filter out any words that no longer exist in the word list
+              const savedFoundWords = (state.foundWords || []) as string[];
+              foundWords = savedFoundWords.filter(w => FOOD_WORDS.has(w));
+              
+              // Restore validWords if saved (for completed games)
+              if (state.validWords && state.validWords.length > 0) {
+                // Also filter validWords to only include words still in FOOD_WORDS
+                validWords = (state.validWords as string[]).filter(w => FOOD_WORDS.has(w));
+              }
+              
+              // Filter classifiedWords to only include valid words
+              const savedClassified = state.classifiedWords || [];
+              classifiedWords = new Map(
+                savedClassified.filter(([word]: [string, unknown]) => FOOD_WORDS.has(word))
+              );
+              
+              wordsFoundBeforeReveal = state.wordsFoundBeforeReveal || 0;
+              firstTryCorrect = state.firstTryCorrect || 0;
+              gaveUp = state.gaveUp || false;
+              
+              // Determine phase
+              if (state.gamePhase === 'complete') {
+                gamePhase = 'complete';
+              } else if (foundWords.length === validWords.length && validWords.length > 0) {
+                gamePhase = 'phase2';
+              } else {
+                gamePhase = 'phase1';
+              }
             } else {
+              // New day, fresh game
               gamePhase = 'phase1';
             }
-          } else {
-            // New day, fresh game
+          } catch {
+            // Corrupted state, clear and start fresh
+            try { localStorage.removeItem(STORAGE_KEY); } catch { /* ignore */ }
             gamePhase = 'phase1';
           }
-        } catch {
-          // Corrupted state, clear and start fresh
-          localStorage.removeItem(STORAGE_KEY);
+        } else {
           gamePhase = 'phase1';
         }
       } else {
+        // Fallback if browser not available
         gamePhase = 'phase1';
       }
-    } else {
-      // Fallback if browser not available
+      
+      clearTimeout(failsafe);
+    } catch (e) {
+      // Any error during init, just start fresh
+      console.error('Failed to initialize Scrambled:', e);
       gamePhase = 'phase1';
+      clearTimeout(failsafe);
     }
   });
   
@@ -219,11 +241,13 @@
   
   // Reset game - start fresh for today
   function resetGame() {
+    console.log('resetGame called');
     if (browser) {
       localStorage.removeItem(STORAGE_KEY);
     }
     // Reload fresh puzzle
     const puzzle = getTodaysPuzzle();
+    console.log('Got puzzle:', puzzle);
     letters = puzzle.letters;
     validWords = puzzle.validWords;
     puzzleDate = puzzle.date;
@@ -235,6 +259,7 @@
     revealedWords = [];
     showResults = false;
     gamePhase = 'phase1';
+    console.log('gamePhase set to:', gamePhase);
   }
   
   // Drag and drop handlers for Phase 2
@@ -418,7 +443,17 @@ dailyfoodchain.com/scrambled`;
   </header>
   
   {#if gamePhase === 'loading'}
-    <div class="loading">Loading puzzle...</div>
+    <div class="loading">
+      <p>Loading puzzle...</p>
+      <button 
+        type="button" 
+        class="manual-start" 
+        onclick={(e) => { e.preventDefault(); console.log('Start clicked'); resetGame(); }}
+        ontouchend={(e) => { e.preventDefault(); console.log('Start touched'); resetGame(); }}
+      >
+        Start Fresh Game
+      </button>
+    </div>
   
   {:else if gamePhase === 'phase1'}
     <section class="phase1">
@@ -446,7 +481,7 @@ dailyfoodchain.com/scrambled`;
       
       <div class="progress">
         <span class="found-count">{foundWords.length}/{validWords.length} words found</span>
-        <span class="score">Score: {phase1Score}</span>
+        <span class="score">{validWords.length > 0 ? ((foundWords.length / validWords.length) * 100).toFixed(0) : 0}%</span>
       </div>
       
       <div class="hints">
@@ -638,6 +673,24 @@ dailyfoodchain.com/scrambled`;
     text-align: center;
     padding: 2rem;
     color: #666;
+  }
+  
+  .loading p {
+    margin-bottom: 1rem;
+  }
+  
+  .manual-start {
+    padding: 0.75rem 1.5rem;
+    background: #4a9eff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .manual-start:hover {
+    background: #357abd;
   }
   
   /* Phase 1 Styles */
