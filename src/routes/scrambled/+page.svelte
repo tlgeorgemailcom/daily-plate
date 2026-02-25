@@ -27,9 +27,9 @@
   let touchDragPos = $state<{ x: number; y: number } | null>(null);
   let groupElements: Map<string, HTMLElement> = new Map();
   
-  // Scoring
-  let phase1Score = $state(0);
-  let phase2Score = $state(0);
+  // Scoring - track counts instead of points
+  let wordsFoundBeforeReveal = $state(0);  // Words found before "give up"
+  let firstTryCorrect = $state(0);  // Classifications correct on first attempt
   
   // Give up state
   let gaveUp = $state(false);
@@ -65,8 +65,16 @@
     return foundWords.every(word => classifiedWords.has(word));
   });
   
-  // Total score
-  let totalScore = $derived(phase1Score + phase2Score);
+  // Calculated percentages
+  let phase1Percent = $derived(() => {
+    if (validWords.length === 0) return 0;
+    return (wordsFoundBeforeReveal / validWords.length) * 100;
+  });
+  
+  let phase2Percent = $derived(() => {
+    if (foundWords.length === 0) return 0;
+    return (firstTryCorrect / foundWords.length) * 100;
+  });
   
   // Initialize game
   onMount(() => {
@@ -98,8 +106,9 @@
               savedClassified.filter(([word]: [string, unknown]) => FOOD_WORDS.has(word))
             );
             
-            phase1Score = state.phase1Score || 0;
-            phase2Score = state.phase2Score || 0;
+            wordsFoundBeforeReveal = state.wordsFoundBeforeReveal || 0;
+            firstTryCorrect = state.firstTryCorrect || 0;
+            gaveUp = state.gaveUp || false;
             
             // Determine phase
             if (state.gamePhase === 'complete') {
@@ -130,8 +139,9 @@
         foundWords,
         validWords,
         classifiedWords: [...classifiedWords.entries()],
-        phase1Score,
-        phase2Score,
+        wordsFoundBeforeReveal,
+        firstTryCorrect,
+        gaveUp,
         gamePhase
       };
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
@@ -168,15 +178,14 @@
       return;
     }
     
-    // Add word and score
+    // Add word - only counts toward score if found before reveal
     foundWords = [...foundWords, word].sort();
-    const wordLength = word.length;
-    const points = wordLength <= 4 ? 10 : wordLength <= 6 ? 20 : 30;
-    phase1Score += points;
+    if (!gaveUp) {
+      wordsFoundBeforeReveal++;
+    }
     
     // Check if phase 1 complete
     if (foundWords.length === validWords.length) {
-      phase1Score += 100; // Bonus for finding all
       setTimeout(() => {
         gamePhase = 'phase2';
       }, 1000);
@@ -215,8 +224,8 @@
     puzzleDate = puzzle.date;
     foundWords = [];
     classifiedWords = new Map();
-    phase1Score = 0;
-    phase2Score = 0;
+    wordsFoundBeforeReveal = 0;
+    firstTryCorrect = 0;
     gaveUp = false;
     revealedWords = [];
     showResults = false;
@@ -248,9 +257,10 @@
       classifiedWords.set(word, { group, attempts });
       classifiedWords = new Map(classifiedWords);
       
-      // Score based on attempts
-      const points = attempts === 1 ? 5 : attempts === 2 ? 3 : 1;
-      phase2Score += points;
+      // Track first-try correct
+      if (attempts === 1) {
+        firstTryCorrect++;
+      }
       
       // Show success feedback
       const groupInfo = FOOD_GROUP_INFO[group];
@@ -286,11 +296,6 @@
       return c && c.group !== '';
     });
     if (allClassified) {
-      // Bonus for all correct on first try
-      const allFirstTry = foundWords.every(w => classifiedWords.get(w)?.attempts === 1);
-      if (allFirstTry) {
-        phase2Score += 50;
-      }
       setTimeout(() => {
         gamePhase = 'complete';
       }, 1000);
@@ -376,16 +381,16 @@
       .map(([letter, { total }]) => `${letter.toUpperCase()} ${'●'.repeat(total)}`)
       .join('\n');
     
-    const phase2Correct = foundWords.filter(w => classifiedWords.get(w)?.attempts === 1).length;
+    const p1Pct = phase1Percent();
+    const p2Pct = phase2Percent();
     
     const text = `🍽️ Scrambled ${puzzleDate}
 
-Phase 1: ${foundWords.length}/${validWords.length} words ⭐
-Phase 2: ${phase2Correct}/${foundWords.length} first try 🧠
+Word Finding: ${wordsFoundBeforeReveal}/${validWords.length} (${p1Pct.toFixed(0)}%) ⭐
+Classification: ${firstTryCorrect}/${foundWords.length} (${p2Pct.toFixed(1)}%) 🧠
 
 ${hintLines}
 
-Score: ${totalScore}
 dailyfoodchain.com/scrambled`;
 
     if (navigator.share) {
@@ -535,7 +540,7 @@ dailyfoodchain.com/scrambled`;
       </div>
       
       <div class="phase2-score">
-        <span>Classification Score: {phase2Score}</span>
+        <span>First-try: {firstTryCorrect}/{foundWords.length - unclassifiedWords().length} classified</span>
       </div>
       
       <button class="reset-btn" onclick={resetGame}>
@@ -550,21 +555,14 @@ dailyfoodchain.com/scrambled`;
       <div class="final-scores">
         <div class="score-row">
           <span>Word Finding:</span>
-          <span>{phase1Score}</span>
+          <span class="score-value">{wordsFoundBeforeReveal}/{validWords.length}</span>
+          <span class="score-percent">{phase1Percent().toFixed(0)}%</span>
         </div>
         <div class="score-row">
           <span>Classification:</span>
-          <span>{phase2Score}</span>
+          <span class="score-value">{firstTryCorrect}/{foundWords.length}</span>
+          <span class="score-percent">{phase2Percent().toFixed(1)}%</span>
         </div>
-        <div class="score-row total">
-          <span>Total:</span>
-          <span>{totalScore}</span>
-        </div>
-      </div>
-      
-      <div class="stats">
-        <p>Words found: {foundWords.length}/{validWords.length}</p>
-        <p>First-try classifications: {foundWords.filter(w => classifiedWords.get(w)?.attempts === 1).length}/{foundWords.length}</p>
       </div>
       
       <button class="share-btn" onclick={shareResult}>
@@ -998,24 +996,26 @@ dailyfoodchain.com/scrambled`;
   .score-row {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0.5rem 0;
+    gap: 1rem;
   }
   
-  .score-row.total {
-    border-top: 2px solid #ddd;
-    margin-top: 0.5rem;
-    padding-top: 0.75rem;
+  .score-row > span:first-child {
+    flex: 1;
+  }
+  
+  .score-value {
     font-weight: bold;
-    font-size: 1.25rem;
+    min-width: 4rem;
+    text-align: center;
   }
   
-  .stats {
-    margin: 1rem 0;
-    color: #666;
-  }
-  
-  .stats p {
-    margin: 0.25rem 0;
+  .score-percent {
+    min-width: 4rem;
+    text-align: right;
+    color: #4a9eff;
+    font-weight: bold;
   }
   
   .share-btn {

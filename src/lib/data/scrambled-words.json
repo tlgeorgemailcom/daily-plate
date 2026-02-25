@@ -3075,7 +3075,8 @@
     "word": "meatless",
     "groups": [
       "prepared",
-      "grain"
+      "grain",
+      "vegetable"
     ],
     "source": "Meatless Bacon"
   },
@@ -4395,7 +4396,8 @@
   {
     "word": "salsa",
     "groups": [
-      "prepared"
+      "prepared",
+      "condiment"
     ],
     "source": "Salsa"
   },
