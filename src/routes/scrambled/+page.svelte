@@ -6,9 +6,16 @@
     getWordGroups, 
     FOOD_GROUP_INFO,
     FOOD_WORDS,
-    type FoodGroup 
+    FOODIE_WORDS,
+    getWordsForLevel,
+    type FoodGroup,
+    type GameLevel
   } from '$lib/data/scrambled-puzzles';
 
+  // Level selection
+  let currentLevel = $state<GameLevel>('usda');
+  let showRules = $state(false);
+  
   // Game state
   let gamePhase = $state<'loading' | 'phase1' | 'phase2' | 'complete'>('loading');
   let letters = $state<string[]>([]);
@@ -38,22 +45,49 @@
   // Show results state
   let showResults = $state(false);
   
-  // Persistence key
-  const STORAGE_KEY = 'scrambled-game-state';
+  // Persistence key - level-specific
+  function getStorageKey(level: GameLevel) {
+    return `scrambled-game-state-${level}`;
+  }
   
-  // Hints: count words starting with each letter
-  let letterHints = $derived(() => {
+  // Total word counts for each level
+  const usdaWordCount = FOOD_WORDS.size;
+  const foodieWordCount = FOODIE_WORDS.size;
+  
+  // Hints: count words starting with each 2-letter prefix
+  let prefixHints = $derived(() => {
     const hints = new Map<string, { total: number; found: number }>();
     for (const word of validWords) {
-      const firstLetter = word[0];
-      const existing = hints.get(firstLetter) || { total: 0, found: 0 };
+      const prefix = word.slice(0, 2);
+      const existing = hints.get(prefix) || { total: 0, found: 0 };
       existing.total++;
       if (foundWords.includes(word)) {
         existing.found++;
       }
-      hints.set(firstLetter, existing);
+      hints.set(prefix, existing);
     }
     return hints;
+  });
+  
+  // Group prefixes by first letter for column layout
+  let groupedHints = $derived(() => {
+    const hints = prefixHints();
+    const grouped = new Map<string, Array<{ prefix: string; total: number; found: number }>>();
+    
+    for (const [prefix, counts] of hints.entries()) {
+      const firstLetter = prefix[0];
+      if (!grouped.has(firstLetter)) {
+        grouped.set(firstLetter, []);
+      }
+      grouped.get(firstLetter)!.push({ prefix, ...counts });
+    }
+    
+    // Sort prefixes within each group
+    for (const prefixes of grouped.values()) {
+      prefixes.sort((a, b) => a.prefix.localeCompare(b.prefix));
+    }
+    
+    return grouped;
   });
   
   // Check if phase 1 complete
@@ -78,46 +112,54 @@
   
   // Initialize game
   onMount(() => {
-    // Failsafe: if still loading after 3 seconds, force start
+    // Failsafe: if still loading after 3 seconds, start fresh
     const failsafe = setTimeout(() => {
       if (gamePhase === 'loading') {
-        console.warn('Scrambled: Failsafe triggered, forcing phase1');
-        try { localStorage.removeItem(STORAGE_KEY); } catch { /* ignore */ }
-        const puzzle = getTodaysPuzzle();
-        letters = puzzle.letters;
-        validWords = puzzle.validWords;
-        puzzleDate = puzzle.date;
-        gamePhase = 'phase1';
+        console.warn('Scrambled: Failsafe triggered, starting fresh');
+        startLevel(currentLevel);
       }
     }, 3000);
     
     try {
-      const puzzle = getTodaysPuzzle();
-      letters = puzzle.letters;
-      validWords = puzzle.validWords;
-      puzzleDate = puzzle.date;
+      // Get today's date first
+      const today = new Date().toISOString().split('T')[0];
+      puzzleDate = today;
       
-      // Try to restore saved state
+      // Check for saved level preference
       if (browser) {
-        const saved = localStorage.getItem(STORAGE_KEY);
+        const savedLevel = localStorage.getItem('scrambled-level') as GameLevel;
+        if (savedLevel === 'usda' || savedLevel === 'foodie') {
+          currentLevel = savedLevel;
+        }
+        
+        // Check for saved state for the current level
+        const storageKey = getStorageKey(currentLevel);
+        const saved = localStorage.getItem(storageKey);
+        
         if (saved) {
           try {
             const state = JSON.parse(saved);
-            if (state.date === puzzleDate) {
+            if (state.date === today) {
+              // Restore game for this level
+              const wordMap = getWordsForLevel(currentLevel);
+              const puzzle = getTodaysPuzzle(currentLevel);
+              letters = puzzle.letters;
+              
               // Filter out any words that no longer exist in the word list
               const savedFoundWords = (state.foundWords || []) as string[];
-              foundWords = savedFoundWords.filter(w => FOOD_WORDS.has(w));
+              foundWords = savedFoundWords.filter(w => wordMap.has(w));
               
               // Restore validWords if saved (for completed games)
               if (state.validWords && state.validWords.length > 0) {
-                // Also filter validWords to only include words still in FOOD_WORDS
-                validWords = (state.validWords as string[]).filter(w => FOOD_WORDS.has(w));
+                validWords = (state.validWords as string[]).filter(w => wordMap.has(w));
+              } else {
+                validWords = puzzle.validWords;
               }
               
               // Filter classifiedWords to only include valid words
               const savedClassified = state.classifiedWords || [];
               classifiedWords = new Map(
-                savedClassified.filter(([word]: [string, unknown]) => FOOD_WORDS.has(word))
+                savedClassified.filter(([word]: [string, unknown]) => wordMap.has(word))
               );
               
               wordsFoundBeforeReveal = state.wordsFoundBeforeReveal || 0;
@@ -133,27 +175,28 @@
                 gamePhase = 'phase1';
               }
             } else {
-              // New day, fresh game
-              gamePhase = 'phase1';
+              // New day - start fresh with saved level preference
+              startLevel(currentLevel);
             }
           } catch {
-            // Corrupted state, clear and start fresh
-            try { localStorage.removeItem(STORAGE_KEY); } catch { /* ignore */ }
-            gamePhase = 'phase1';
+            // Corrupted state, start fresh
+            try { localStorage.removeItem(storageKey); } catch { /* ignore */ }
+            startLevel(currentLevel);
           }
         } else {
-          gamePhase = 'phase1';
+          // No saved state, start fresh with default level
+          startLevel(currentLevel);
         }
       } else {
-        // Fallback if browser not available
-        gamePhase = 'phase1';
+        // No browser, start fresh
+        startLevel(currentLevel);
       }
       
       clearTimeout(failsafe);
     } catch (e) {
-      // Any error during init, just start fresh
+      // Any error during init, start fresh
       console.error('Failed to initialize Scrambled:', e);
-      gamePhase = 'phase1';
+      startLevel(currentLevel);
       clearTimeout(failsafe);
     }
   });
@@ -161,6 +204,7 @@
   // Save state on changes
   $effect(() => {
     if (browser && gamePhase !== 'loading') {
+      const storageKey = getStorageKey(currentLevel);
       const state = {
         date: puzzleDate,
         foundWords,
@@ -169,11 +213,34 @@
         wordsFoundBeforeReveal,
         firstTryCorrect,
         gaveUp,
-        gamePhase
+        gamePhase,
+        level: currentLevel
       };
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      localStorage.setItem(storageKey, JSON.stringify(state));
+      localStorage.setItem('scrambled-level', currentLevel);
     }
   });
+  
+  // Start game at selected level
+  function startLevel(level: GameLevel) {
+    currentLevel = level;
+    if (browser) {
+      localStorage.setItem('scrambled-level', level);
+    }
+    
+    const puzzle = getTodaysPuzzle(level);
+    letters = puzzle.letters;
+    validWords = puzzle.validWords;
+    puzzleDate = puzzle.date;
+    foundWords = [];
+    classifiedWords = new Map();
+    wordsFoundBeforeReveal = 0;
+    firstTryCorrect = 0;
+    gaveUp = false;
+    revealedWords = [];
+    showResults = false;
+    gamePhase = 'phase1';
+  }
   
   // Handle word submission
   function submitWord() {
@@ -239,14 +306,14 @@
     }, 2000);
   }
   
-  // Reset game - start fresh for today
+  // Reset game - start fresh for today at current level
   function resetGame() {
     console.log('resetGame called');
     if (browser) {
-      localStorage.removeItem(STORAGE_KEY);
+      localStorage.removeItem(getStorageKey(currentLevel));
     }
-    // Reload fresh puzzle
-    const puzzle = getTodaysPuzzle();
+    // Reload fresh puzzle for current level
+    const puzzle = getTodaysPuzzle(currentLevel);
     console.log('Got puzzle:', puzzle);
     letters = puzzle.letters;
     validWords = puzzle.validWords;
@@ -283,7 +350,7 @@
     if (!draggedWord) return;
     
     const word = draggedWord;
-    const correctGroups = getWordGroups(word);
+    const correctGroups = getWordGroups(word, currentLevel);
     const isCorrect = correctGroups.includes(group);
     
     // Get current attempts for this word
@@ -413,19 +480,23 @@
   
   // Share result
   function shareResult() {
-    const hints = letterHints();
+    const hints = prefixHints();
     const hintLines = [...hints.entries()]
       .sort((a, b) => a[0].localeCompare(b[0]))
-      .map(([letter, { total }]) => `${letter.toUpperCase()} ${'●'.repeat(total)}`)
+      .map(([prefix, { total }]) => `${prefix.toUpperCase()} ${'●'.repeat(total)}`)
       .join('\n');
     
     const p1Pct = phase1Percent();
     const p2Pct = phase2Percent();
     
-    const text = `🐝 Scramble Bee ${puzzleDate}
+    const levelEmoji = currentLevel === 'usda' ? '🏛️' : '🍴';
+    const levelName = currentLevel.toUpperCase();
+    
+    const text = `🐝 Scramble Bees ${puzzleDate}
+${levelEmoji} ${levelName} Level
 
-Word Finding: ${wordsFoundBeforeReveal}/${validWords.length} (${p1Pct.toFixed(0)}%) ⭐
-Classification: ${firstTryCorrect}/${foundWords.length} (${p2Pct.toFixed(0)}%) 🧠
+Word Finding: ${wordsFoundBeforeReveal}/${validWords.length} (${p1Pct.toFixed(0)}%)
+Classification: ${firstTryCorrect}/${foundWords.length} (${p2Pct.toFixed(0)}%)
 
 ${hintLines}
 
@@ -441,12 +512,12 @@ dailyfoodchain.com/scrambled`;
 </script>
 
 <svelte:head>
-  <title>Scramble Bee - Daily Food Word Game</title>
+  <title>Scramble Bees - Daily Food Word Game</title>
 </svelte:head>
 
 <main class="scrambled-game" class:wide-mode={gamePhase === 'phase2' || showResults}>
   <header>
-    <h1>🐝 Scramble Bee</h1>
+    <h1>🐝 Scramble Bees</h1>
     <p class="date">{puzzleDate}</p>
     <button class="dev-reset" onclick={devReset} title="Dev Reset">⚙️</button>
   </header>
@@ -457,14 +528,39 @@ dailyfoodchain.com/scrambled`;
       <button 
         type="button" 
         class="manual-start" 
-        onclick={(e) => { e.preventDefault(); console.log('Start clicked'); resetGame(); }}
-        ontouchend={(e) => { e.preventDefault(); console.log('Start touched'); resetGame(); }}
+        onclick={(e) => { e.preventDefault(); console.log('Start clicked'); startLevel('usda'); }}
+        ontouchend={(e) => { e.preventDefault(); console.log('Start touched'); startLevel('usda'); }}
       >
         Start Fresh Game
       </button>
     </div>
   
-  {:else if gamePhase === 'phase1'}
+  {:else}
+    <!-- Level Switcher - always visible -->
+    <div class="level-switcher">
+      <div class="level-option" class:active={currentLevel === 'usda'}>
+        <button class="level-name" onclick={() => startLevel('usda')}>
+          🏛️ USDA
+        </button>
+        <span class="word-count">{usdaWordCount} words</span>
+        <button class="rules-link" onclick={() => { currentLevel = 'usda'; showRules = true; }}>
+          Rules
+        </button>
+      </div>
+      
+      <div class="level-option" class:active={currentLevel === 'foodie'}>
+        <button class="level-name" onclick={() => startLevel('foodie')}>
+          🍴 FOODIE
+        </button>
+        <span class="word-count">{foodieWordCount} words</span>
+        <button class="rules-link" onclick={() => { currentLevel = 'foodie'; showRules = true; }}>
+          Rules
+        </button>
+      </div>
+    </div>
+  {/if}
+  
+  {#if gamePhase === 'phase1'}
     <section class="phase1">
       <div class="letters">
         {#each letters as letter}
@@ -495,11 +591,16 @@ dailyfoodchain.com/scrambled`;
       
       <div class="hints">
         <h3>Hints</h3>
-        <div class="hint-grid">
-          {#each [...letterHints().entries()].sort((a, b) => a[0].localeCompare(b[0])) as [letter, { total, found }]}
-            <div class="hint-item" class:complete={found === total}>
-              <span class="hint-letter">{letter.toUpperCase()}</span>
-              <span class="hint-count">{found}/{total}</span>
+        <div class="hint-columns">
+          {#each [...groupedHints().entries()].sort((a, b) => a[0].localeCompare(b[0])) as [letter, prefixes]}
+            <div class="hint-column">
+              <div class="hint-header">{letter.toUpperCase()}</div>
+              {#each prefixes as { prefix, total, found }}
+                <div class="hint-item" class:complete={found === total}>
+                  <span class="hint-prefix">{prefix.toUpperCase()}</span>
+                  <span class="hint-count">{found}/{total}</span>
+                </div>
+              {/each}
             </div>
           {/each}
         </div>
@@ -626,7 +727,7 @@ dailyfoodchain.com/scrambled`;
         {@const wordsToShow = validWords.length > 0 ? validWords : foundWords}
         <div class="results-grid">
           {#each [...wordsToShow].sort() as word}
-            {@const groups = getWordGroups(word)}
+            {@const groups = getWordGroups(word, currentLevel)}
             {@const groupInfo = groups[0] ? FOOD_GROUP_INFO[groups[0]] : null}
             <div class="result-item">
               <span class="result-word">{word}</span>
@@ -644,6 +745,63 @@ dailyfoodchain.com/scrambled`;
       
       <p class="comeback">Come back tomorrow for a new puzzle!</p>
     </section>
+  {/if}
+  
+  <!-- Rules Modal -->
+  {#if showRules}
+    <div class="modal-backdrop" onclick={() => showRules = false}>
+      <div class="rules-modal" onclick={(e) => e.stopPropagation()}>
+        <h3>📖 {currentLevel === 'usda' ? 'USDA' : 'FOODIE'} Rules</h3>
+        
+        {#if currentLevel === 'usda'}
+          <div class="rules-content">
+            <p><strong>🏛️ USDA Level</strong></p>
+            <p>Find food words using only letters from the USDA Food Database - official, verified food names!</p>
+            
+            <h4>Phase 1: Find Words</h4>
+            <ul>
+              <li>Use the given letters to spell food words</li>
+              <li>Each letter can be reused multiple times</li>
+              <li>Words must be 3+ letters</li>
+              <li>Only words from the USDA database count</li>
+              <li>Plurals are not included (though some words naturally end in 's')</li>
+            </ul>
+            
+            <h4>Phase 2: Classify</h4>
+            <ul>
+              <li>Drag each word to its food group</li>
+              <li>First-try correct answers earn 100%</li>
+              <li>Hints appear after wrong guesses</li>
+            </ul>
+          </div>
+        {:else}
+          <div class="rules-content">
+            <p><strong>🍴 FOODIE Level</strong></p>
+            <p>Expanded word list including specialty, international, and culinary terms!</p>
+            
+            <h4>Phase 1: Find Words</h4>
+            <ul>
+              <li>Use the given letters to spell food words</li>
+              <li>Each letter can be reused multiple times</li>
+              <li>Words must be 3+ letters</li>
+              <li>Includes USDA words PLUS extra foodie terms</li>
+              <li>Plurals are not included (though some words naturally end in 's')</li>
+            </ul>
+            
+            <h4>Phase 2: Classify</h4>
+            <ul>
+              <li>Drag each word to its food group</li>
+              <li>First-try correct answers earn 100%</li>
+              <li>Hints appear after wrong guesses</li>
+            </ul>
+          </div>
+        {/if}
+        
+        <button class="modal-close-btn" onclick={() => showRules = false}>
+          Got it!
+        </button>
+      </div>
+    </div>
   {/if}
 </main>
 
@@ -719,6 +877,138 @@ dailyfoodchain.com/scrambled`;
     background: #357abd;
   }
   
+  /* Level Switcher Styles */
+  .level-switcher {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .level-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    transition: background 0.2s;
+  }
+  
+  .level-option.active {
+    background: #f0f9ff;
+    box-shadow: 0 0 0 2px #4a9eff;
+  }
+  
+  .level-name {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    color: #6b7280;
+    transition: color 0.2s;
+  }
+  
+  .level-option.active .level-name {
+    color: #1f2937;
+  }
+  
+  .level-name:hover {
+    color: #374151;
+  }
+  
+  .rules-link {
+    background: none;
+    border: none;
+    color: #4a9eff;
+    font-size: 0.75rem;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+  }
+  
+  .rules-link:hover {
+    color: #357abd;
+  }
+  
+  .word-count {
+    font-size: 0.7rem;
+    color: #9ca3af;
+    font-weight: normal;
+  }
+  
+  .level-option.active .word-count {
+    color: #6b7280;
+  }
+
+  /* Modal Styles */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+  }
+  
+  .rules-modal {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    max-width: 400px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  
+  .rules-modal h3 {
+    margin: 0 0 1rem;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+  
+  .rules-content {
+    text-align: left;
+    font-size: 0.95rem;
+    color: #374151;
+  }
+  
+  .rules-content h4 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1rem;
+    color: #1f2937;
+  }
+  
+  .rules-content ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+  
+  .rules-content li {
+    margin-bottom: 0.25rem;
+  }
+  
+  .modal-close-btn {
+    display: block;
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 0.75rem;
+    background: #4a9eff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .modal-close-btn:hover {
+    background: #357abd;
+  }
+
   /* Phase 1 Styles */
   .letters {
     display: flex;
@@ -796,32 +1086,56 @@ dailyfoodchain.com/scrambled`;
     font-size: 1rem;
   }
   
-  .hint-grid {
+  .hint-columns {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+  
+  .hint-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 55px;
+  }
+  
+  .hint-header {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #374151;
+    padding: 0.25rem 0;
+    border-bottom: 2px solid #4a9eff;
+    margin-bottom: 0.25rem;
+    width: 100%;
+    text-align: center;
   }
   
   .hint-item {
     display: flex;
     align-items: center;
     gap: 0.25rem;
-    padding: 0.25rem 0.5rem;
+    padding: 0.15rem 0.4rem;
     background: #f0f0f0;
     border-radius: 4px;
-    font-size: 0.875rem;
+    font-size: 0.8rem;
+    margin: 0.1rem 0;
+    width: 100%;
+    justify-content: space-between;
   }
   
   .hint-item.complete {
     background: #c8e6c9;
   }
   
-  .hint-letter {
-    font-weight: bold;
+  .hint-prefix {
+    font-weight: 500;
+    font-size: 0.75rem;
   }
   
   .hint-count {
     color: #666;
+    font-size: 0.7rem;
   }
   
   .found-words {

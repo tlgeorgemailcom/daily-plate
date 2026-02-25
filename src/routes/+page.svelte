@@ -23,9 +23,9 @@
         <li><strong>🥗 Balance</strong> — Build a balanced meal by choosing foods from different groups</li>
         <li><strong>🎯 Match</strong> — Catch falling food words by dragging a container on the right to catch the falling word and then match the container to a meal category on the left</li>
         <li><strong>🧩 Slider</strong> — Slide tiles to unscramble the food image in this classic 8-puzzle game</li>
-        <li><strong>� Compare</strong> — Spot the 4 subtle differences between two nearly identical food images</li>
+        <li><strong>👆 Compare</strong> — Spot the 4 subtle differences between two nearly identical food images</li>
         <li><strong>🧺 Basket</strong> — Help the farmer catch falling food in baskets while avoiding obstacles</li>
-        <li><strong>� Scramble Bee</strong> — Find all the food words hidden in a set of scrambled letters</li>
+        <li><strong>🐝 Scramble Bees</strong> — Find all the food words hidden in a set of scrambled letters (USDA or FOODIE levels)</li>
       </ul>
     </div>
     

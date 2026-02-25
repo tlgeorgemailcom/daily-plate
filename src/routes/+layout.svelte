@@ -49,7 +49,7 @@
         🧺 Basket
       </a>
       <a href="/scrambled" class:active={$page.url.pathname === '/scrambled'}>
-        � Bee
+        🐝 Bees
       </a>
       <a href="/archive" class:active={$page.url.pathname === '/archive'}>
         📅 Archive
