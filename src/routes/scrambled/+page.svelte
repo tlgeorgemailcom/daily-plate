@@ -23,6 +23,10 @@
   let draggedWord = $state<string | null>(null);
   let showFeedback = $state<{ word: string; correct: boolean; hint?: string } | null>(null);
   
+  // Touch drag state
+  let touchDragPos = $state<{ x: number; y: number } | null>(null);
+  let groupElements: Map<string, HTMLElement> = new Map();
+  
   // Scoring
   let phase1Score = $state(0);
   let phase2Score = $state(0);
@@ -267,6 +271,54 @@
     e.preventDefault();
   }
   
+  // Touch drag handlers for mobile/tablet
+  function handleTouchStart(e: TouchEvent, word: string) {
+    e.preventDefault();
+    draggedWord = word;
+    const touch = e.touches[0];
+    touchDragPos = { x: touch.clientX, y: touch.clientY };
+  }
+  
+  function handleTouchMove(e: TouchEvent) {
+    if (!draggedWord) return;
+    e.preventDefault();
+    const touch = e.touches[0];
+    touchDragPos = { x: touch.clientX, y: touch.clientY };
+  }
+  
+  function handleTouchEnd(e: TouchEvent) {
+    if (!draggedWord || !touchDragPos) {
+      draggedWord = null;
+      touchDragPos = null;
+      return;
+    }
+    
+    // Find which group element the touch ended over
+    const touchX = touchDragPos.x;
+    const touchY = touchDragPos.y;
+    
+    for (const [group, el] of groupElements) {
+      const rect = el.getBoundingClientRect();
+      if (touchX >= rect.left && touchX <= rect.right && 
+          touchY >= rect.top && touchY <= rect.bottom) {
+        handleDrop(group as FoodGroup);
+        break;
+      }
+    }
+    
+    draggedWord = null;
+    touchDragPos = null;
+  }
+  
+  function registerGroupElement(el: HTMLElement, group: string) {
+    groupElements.set(group, el);
+    return {
+      destroy() {
+        groupElements.delete(group);
+      }
+    };
+  }
+  
   // Get unclassified words
   let unclassifiedWords = $derived(() => {
     return foundWords.filter(word => {
@@ -410,17 +462,32 @@ dailyfoodchain.com/scrambled`;
         {#each unclassifiedWords() as word}
           <span 
             class="drag-word"
+            class:dragging={draggedWord === word}
             draggable="true"
             ondragstart={() => handleDragStart(word)}
             ondragend={handleDragEnd}
+            ontouchstart={(e) => handleTouchStart(e, word)}
+            ontouchmove={handleTouchMove}
+            ontouchend={handleTouchEnd}
           >{word}</span>
         {/each}
       </div>
+      
+      <!-- Touch drag indicator -->
+      {#if draggedWord && touchDragPos}
+        <div 
+          class="touch-drag-indicator"
+          style="left: {touchDragPos.x}px; top: {touchDragPos.y}px;"
+        >
+          {draggedWord}
+        </div>
+      {/if}
       
       <div class="groups-grid">
         {#each Object.entries(FOOD_GROUP_INFO) as [group, info]}
           <div 
             class="group-drop"
+            use:registerGroupElement={group}
             ondragover={handleDragOver}
             ondrop={() => handleDrop(group as FoodGroup)}
           >
@@ -764,10 +831,28 @@ dailyfoodchain.com/scrambled`;
     border-radius: 20px;
     cursor: grab;
     user-select: none;
+    touch-action: none;
   }
   
   .drag-word:active {
     cursor: grabbing;
+  }
+  
+  .drag-word.dragging {
+    opacity: 0.5;
+  }
+  
+  .touch-drag-indicator {
+    position: fixed;
+    transform: translate(-50%, -100%);
+    padding: 0.5rem 1rem;
+    background: #4a9eff;
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    pointer-events: none;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   }
   
   .groups-grid {
