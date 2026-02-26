@@ -45,6 +45,9 @@
   // Show results state
   let showResults = $state(false);
   
+  // Hint popup state
+  let selectedPrefix = $state<string | null>(null);
+  
   // Persistence key - level-specific
   function getStorageKey(level: GameLevel) {
     return `scrambled-game-state-${level}`;
@@ -89,6 +92,42 @@
     
     return grouped;
   });
+  
+  // Get word length details for a prefix (for tap-to-reveal hints)
+  function getPrefixWordDetails(prefix: string): Array<{ length: number; count: number; prefix3?: string }> {
+    const wordsWithPrefix = validWords.filter(w => w.startsWith(prefix) && !foundWords.includes(w));
+    const lengthMap = new Map<string, { length: number; count: number; prefix3?: string }>();
+    
+    for (const word of wordsWithPrefix) {
+      const len = word.length;
+      if (len >= 8) {
+        // For 8+ letter words, group by first 3 letters
+        const prefix3 = word.slice(0, 3);
+        const key = `${len}-${prefix3}`;
+        const existing = lengthMap.get(key);
+        if (existing) {
+          existing.count++;
+        } else {
+          lengthMap.set(key, { length: len, count: 1, prefix3 });
+        }
+      } else {
+        // For shorter words, just group by length
+        const key = `${len}`;
+        const existing = lengthMap.get(key);
+        if (existing) {
+          existing.count++;
+        } else {
+          lengthMap.set(key, { length: len, count: 1 });
+        }
+      }
+    }
+    
+    // Sort by length, then by prefix3
+    return [...lengthMap.values()].sort((a, b) => {
+      if (a.length !== b.length) return a.length - b.length;
+      return (a.prefix3 || '').localeCompare(b.prefix3 || '');
+    });
+  }
   
   // Check if phase 1 complete
   let phase1Complete = $derived(foundWords.length === validWords.length && validWords.length > 0);
@@ -586,16 +625,21 @@ dailyfoodchain.com/scrambled`;
       </div>
       
       <div class="hints">
-        <h3>Hints</h3>
+        <h3>Hints <span class="hint-tip">(tap for details)</span></h3>
         <div class="hint-columns">
           {#each [...groupedHints().entries()].sort((a, b) => a[0].localeCompare(b[0])) as [letter, prefixes]}
             <div class="hint-column">
               <div class="hint-header">{letter.toUpperCase()}</div>
               {#each prefixes as { prefix, total, found }}
-                <div class="hint-item" class:complete={found === total}>
+                <button 
+                  class="hint-item" 
+                  class:complete={found === total}
+                  onclick={() => found < total && (selectedPrefix = prefix)}
+                  disabled={found === total}
+                >
                   <span class="hint-prefix">{prefix.toUpperCase()}</span>
                   <span class="hint-count">{found}/{total}</span>
-                </div>
+                </button>
               {/each}
             </div>
           {/each}
@@ -795,6 +839,33 @@ dailyfoodchain.com/scrambled`;
         
         <button class="modal-close-btn" onclick={() => showRules = false}>
           Got it!
+        </button>
+      </div>
+    </div>
+  {/if}
+  
+  {#if selectedPrefix}
+    {@const details = getPrefixWordDetails(selectedPrefix)}
+    <div class="modal-backdrop" onclick={() => selectedPrefix = null}>
+      <div class="hint-popup" onclick={(e) => e.stopPropagation()}>
+        <h3>Words starting with {selectedPrefix.toUpperCase()}</h3>
+        {#if details.length === 0}
+          <p class="no-words">All words found! 🎉</p>
+        {:else}
+          <ul class="word-length-list">
+            {#each details as { length, count, prefix3 }}
+              <li>
+                {#if prefix3}
+                  <span class="word-hint">{count} × {length}-letter word{count > 1 ? 's' : ''} starting with <strong>{prefix3.toUpperCase()}</strong></span>
+                {:else}
+                  <span class="word-hint">{count} × {length}-letter word{count > 1 ? 's' : ''}</span>
+                {/if}
+              </li>
+            {/each}
+          </ul>
+        {/if}
+        <button class="modal-close-btn" onclick={() => selectedPrefix = null}>
+          Close
         </button>
       </div>
     </div>
@@ -1082,6 +1153,12 @@ dailyfoodchain.com/scrambled`;
     font-size: 1rem;
   }
   
+  .hint-tip {
+    font-size: 0.7rem;
+    color: #9ca3af;
+    font-weight: normal;
+  }
+  
   .hint-columns {
     display: flex;
     flex-wrap: wrap;
@@ -1113,15 +1190,33 @@ dailyfoodchain.com/scrambled`;
     gap: 0.25rem;
     padding: 0.15rem 0.4rem;
     background: #f0f0f0;
+    border: 1px solid #e0e0e0;
     border-radius: 4px;
     font-size: 0.8rem;
     margin: 0.1rem 0;
     width: 100%;
     justify-content: space-between;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+  }
+  
+  .hint-item:not(.complete):hover {
+    background: #e8e8e8;
+  }
+  
+  .hint-item:not(.complete):active {
+    transform: scale(0.97);
+    background: #ddd;
   }
   
   .hint-item.complete {
     background: #c8e6c9;
+    cursor: default;
+    border-color: #a5d6a7;
+  }
+  
+  .hint-item:disabled {
+    cursor: default;
   }
   
   .hint-prefix {
@@ -1132,6 +1227,47 @@ dailyfoodchain.com/scrambled`;
   .hint-count {
     color: #666;
     font-size: 0.7rem;
+  }
+  
+  /* Hint popup */
+  .hint-popup {
+    background: white;
+    border-radius: 12px;
+    padding: 1.25rem;
+    max-width: 300px;
+    width: 90%;
+    text-align: center;
+  }
+  
+  .hint-popup h3 {
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+    color: #374151;
+  }
+  
+  .word-length-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+    text-align: left;
+  }
+  
+  .word-length-list li {
+    padding: 0.5rem 0.75rem;
+    background: #f5f5f5;
+    border-radius: 6px;
+    margin: 0.35rem 0;
+    font-size: 0.9rem;
+  }
+  
+  .word-length-list strong {
+    color: #4a9eff;
+  }
+  
+  .no-words {
+    color: #4caf50;
+    font-size: 1rem;
+    margin: 1rem 0;
   }
   
   .found-words {
