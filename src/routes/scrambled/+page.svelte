@@ -41,6 +41,7 @@
   // Give up state
   let gaveUp = $state(false);
   let revealedWords = $state<string[]>([]);
+  let showGiveUpConfirm = $state(false);
   
   // Show results state
   let showResults = $state(false);
@@ -666,7 +667,7 @@ dailyfoodchain.com/scrambled`;
           <p class="moving-on">Moving to classification...</p>
         </div>
       {:else}
-        <button class="give-up" onclick={giveUp}>
+        <button class="give-up" onclick={() => showGiveUpConfirm = true}>
           🏳️ I Give Up - Show Words
         </button>
       {/if}
@@ -867,6 +868,24 @@ dailyfoodchain.com/scrambled`;
         <button class="modal-close-btn" onclick={() => selectedPrefix = null}>
           Close
         </button>
+      </div>
+    </div>
+  {/if}
+
+  {#if showGiveUpConfirm}
+    <div class="modal-backdrop" onclick={() => showGiveUpConfirm = false}>
+      <div class="confirm-popup" onclick={(e) => e.stopPropagation()}>
+        <h3>🏳️ Give Up?</h3>
+        <p>Are you sure you want to reveal all remaining words?</p>
+        <p class="warning-text">You will not receive points for the remaining words.</p>
+        <div class="confirm-buttons">
+          <button class="cancel-btn" onclick={() => showGiveUpConfirm = false}>
+            Cancel
+          </button>
+          <button class="confirm-btn" onclick={() => { showGiveUpConfirm = false; giveUp(); }}>
+            Yes, Show Words
+          </button>
+        </div>
       </div>
     </div>
   {/if}
@@ -1269,7 +1288,59 @@ dailyfoodchain.com/scrambled`;
     font-size: 1rem;
     margin: 1rem 0;
   }
-  
+
+  /* Confirmation popup */
+  .confirm-popup {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    max-width: 320px;
+    width: 90%;
+    text-align: center;
+  }
+
+  .confirm-popup h3 {
+    margin: 0 0 0.75rem;
+    font-size: 1.2rem;
+    color: #374151;
+  }
+
+  .confirm-popup p {
+    margin: 0.5rem 0;
+    color: #555;
+  }
+
+  .confirm-popup .warning-text {
+    color: #d32f2f;
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .confirm-buttons {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+
+  .confirm-buttons button {
+    padding: 0.6rem 1.25rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+  }
+
+  .cancel-btn {
+    background: #e0e0e0;
+    color: #333;
+  }
+
+  .confirm-btn {
+    background: #d32f2f;
+    color: white;
+  }
+
   .found-words {
     margin: 1rem 0;
   }

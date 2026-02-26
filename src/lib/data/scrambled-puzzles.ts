@@ -45,12 +45,12 @@ export function canMakeWord(word: string, letters: Set<string>): boolean {
   return [...word].every(char => letters.has(char));
 }
 
-// Get all valid words for a set of letters
+// Get all valid words for a set of letters (minimum 3 letters)
 export function getValidWords(letters: Set<string>, level: GameLevel = 'usda'): string[] {
   const wordMap = getWordsForLevel(level);
   const valid: string[] = [];
   for (const word of wordMap.keys()) {
-    if (canMakeWord(word, letters)) {
+    if (word.length >= 3 && canMakeWord(word, letters)) {
       valid.push(word);
     }
   }
