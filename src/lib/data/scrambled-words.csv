@@ -292,7 +292,6 @@ gelatin,prepared|protein
 germ,grain|fats
 ghee,dairy|fats
 giblets,protein
-gin,beverage
 ginger,vegetable|spice
 gingerbread,prepared
 ginkgo,nuts
@@ -795,3 +794,7 @@ yogurt,dairy
 yolk,protein
 zucchini,vegetable|fruit
 zwieback,grain|prepared
+dip,prepared
+fat,fats
+pop,beverage|prepared
+gum,prepared

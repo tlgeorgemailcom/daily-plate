@@ -128,6 +128,8 @@
         guesses: [],
         solved: false
       });
+      
+      console.log(`Floor ${i + 1}: ${config.length}-letter word = "${word}", placed positions: [${placedPositions}], unplaced letter: "${unplacedLetter}"`);
     }
 
     floors = newFloors;
@@ -195,6 +197,8 @@
 
   // Save state when it changes
   $effect(() => {
+    // Track all state that needs to be persisted
+    const _ = [floors, currentFloor, gamePhase];
     if (browser && floors.length > 0) {
       saveState();
     }
@@ -220,17 +224,22 @@
     const targetLetters = target.split('');
     const guessLetters = guess.split('');
     
-    // First pass: mark correct positions and placed letters
+    // First pass: mark placed letters (these "consume" their target letter)
+    for (const i of placedPositions) {
+      statuses[i] = 'placed';
+      targetLetters[i] = ''; // Mark as used - prevents double-counting
+    }
+    
+    // Second pass: mark correct positions (non-placed)
     for (let i = 0; i < guessLetters.length; i++) {
-      if (placedPositions.includes(i)) {
-        statuses[i] = 'placed'; // Pre-placed letters always shown as placed
-      } else if (guessLetters[i] === targetLetters[i]) {
+      if (statuses[i] !== 'absent') continue; // Skip placed positions
+      if (guessLetters[i] === targetLetters[i]) {
         statuses[i] = 'correct';
         targetLetters[i] = ''; // Mark as used
       }
     }
     
-    // Second pass: mark present letters
+    // Third pass: mark present letters
     for (let i = 0; i < guessLetters.length; i++) {
       if (statuses[i] !== 'absent') continue;
       
@@ -260,9 +269,9 @@
       return;
     }
     
-    // Validate it's a food word
-    if (!isValidWord(guess)) {
-      inputError = 'Not a valid food word';
+    // Check if it only contains letters
+    if (!/^[a-z]+$/.test(guess)) {
+      inputError = 'Only letters allowed';
       return;
     }
     
@@ -274,26 +283,38 @@
       }
     }
     
-    // Add guess
-    floor.guesses = [...floor.guesses, guess];
-    currentInput = '';
+    // Add guess to floor
+    const updatedFloor = {
+      ...floor,
+      guesses: [...floor.guesses, guess]
+    };
     
     // Check if correct
     if (guess === floor.word) {
-      floor.solved = true;
+      updatedFloor.solved = true;
+      
+      // Update floors array with new floor object
+      floors = floors.map((f, idx) => idx === currentFloor - 1 ? updatedFloor : f);
+      currentInput = '';
+      
+      console.log(`Floor ${currentFloor} solved! Word was: ${floor.word}`);
       
       if (currentFloor < 4) {
         // Move to next floor
-        currentFloor++;
+        const nextFloor = currentFloor + 1;
+        console.log(`Moving to floor ${nextFloor}, word length: ${FLOOR_CONFIG[nextFloor - 1].length}, word: ${floors[nextFloor - 1]?.word}`);
+        currentFloor = nextFloor;
       } else {
         // Tower complete!
         gamePhase = 'complete';
         showResults = true;
       }
+      return;
     }
     
-    // Trigger reactivity
-    floors = [...floors];
+    // Wrong guess - just update the floor
+    floors = floors.map((f, idx) => idx === currentFloor - 1 ? updatedFloor : f);
+    currentInput = '';
   }
 
   // Handle keyboard input
@@ -366,6 +387,21 @@
     generatePuzzle(currentLevel);
     showResults = false;
   }
+
+  // Developer reset with password
+  function devReset() {
+    const password = prompt('Enter developer password:');
+    if (password === '4444') {
+      if (browser) {
+        localStorage.removeItem('tower-game-state-usda');
+        localStorage.removeItem('tower-game-state-foodie');
+        localStorage.removeItem('tower-game-state-foodie21');
+        localStorage.removeItem('tower-level');
+      }
+      generatePuzzle(currentLevel);
+      showResults = false;
+    }
+  }
 </script>
 
 <svelte:head>
@@ -375,8 +411,13 @@
 <main class="tower-game">
   <header>
     <h1>🗼 TOWER of FOOD</h1>
-    <p class="date">{puzzleDate}</p>
+    <p class="date">{puzzleDate} <button class="dev-reset" onclick={devReset}>↻</button></p>
   </header>
+
+  <!-- Debug info (remove in production) -->
+  <div style="font-size: 0.7rem; color: #999; text-align: center; margin-bottom: 0.5rem;">
+    Current floor: {currentFloor} | Words: {floors.map(f => f?.word).join(', ')}
+  </div>
 
   <!-- Level Switcher -->
   <div class="level-switcher">
@@ -424,26 +465,39 @@
           {#if floor}
             <!-- Show guesses or empty slots -->
             <div class="guesses">
-              {#each floor.guesses as guess, guessIdx}
-                {@const statuses = getLetterStatuses(guess, floor.word, floor.placedPositions)}
-                <div class="guess-row">
-                  {#each guess.split('') as letter, i}
-                    <span class="letter" class:correct={statuses[i] === 'correct'} class:placed={statuses[i] === 'placed'} class:present={statuses[i] === 'present'} class:absent={statuses[i] === 'absent'}>
-                      {letter.toUpperCase()}
-                    </span>
-                  {/each}
-                </div>
-              {/each}
-              
               {#if isActive && !isSolved}
-                <!-- Current input row with pre-placed letters -->
-                <div class="input-row">
+                <!-- Current input row with pre-placed letters (shown FIRST) -->
+                <div class="input-row current">
                   {#each Array(config.length) as _, i}
                     {#if floor.placedPositions.includes(i)}
                       <span class="letter placed">{floor.word[i].toUpperCase()}</span>
                     {:else}
                       <span class="letter empty">{currentInput[i]?.toUpperCase() || ''}</span>
                     {/if}
+                  {/each}
+                </div>
+                
+                <!-- Previous guesses (shown BELOW current input) -->
+                {#if floor.guesses.length > 0}
+                  <div class="guess-history">
+                    <span class="guess-label">Your guesses:</span>
+                    {#each floor.guesses as guess, guessIdx}
+                      {@const statuses = getLetterStatuses(guess, floor.word, floor.placedPositions)}
+                      <div class="guess-row">
+                        {#each guess.split('') as letter, i}
+                          <span class="letter small" class:correct={statuses[i] === 'correct'} class:placed={statuses[i] === 'placed'} class:present={statuses[i] === 'present'} class:absent={statuses[i] === 'absent'}>
+                            {letter.toUpperCase()}
+                          </span>
+                        {/each}
+                      </div>
+                    {/each}
+                  </div>
+                {/if}
+              {:else if isSolved}
+                <!-- Solved - show the answer -->
+                <div class="guess-row solved">
+                  {#each floor.word.split('') as letter}
+                    <span class="letter correct">{letter.toUpperCase()}</span>
                   {/each}
                 </div>
               {:else if isLocked}
@@ -474,7 +528,7 @@
     {@const config = FLOOR_CONFIG[currentFloor - 1]}
     
     {#if floor && !floor.solved}
-      <div class="input-area">
+      <div class="input-area" class:has-error={inputError}>
         <input
           type="text"
           bind:value={currentInput}
@@ -483,12 +537,15 @@
           maxlength={config.length}
           autocomplete="off"
           autocapitalize="off"
+          class:shake={inputError}
         />
         <button onclick={submitGuess}>Guess</button>
       </div>
       
       {#if inputError}
-        <p class="error">{inputError}</p>
+        <div class="error-banner">
+          ⚠️ {inputError}
+        </div>
       {/if}
       
       <p class="floor-info">
@@ -531,10 +588,10 @@
           
           <h4>Tower Structure</h4>
           <ul>
-            <li>Floor 1 (bottom): 6-letter word, 3 letters shown</li>
-            <li>Floor 2: 5-letter word, 2 letters shown</li>
-            <li>Floor 3: 4-letter word, 1 letter shown</li>
-            <li>Floor 4 (top): 3-letter word, 0 letters shown</li>
+            <li>Floor 1 (bottom): 6-letter word, 3 placed + 1 unplaced</li>
+            <li>Floor 2: 5-letter word, 2 placed + 1 unplaced</li>
+            <li>Floor 3: 4-letter word, 1 placed + 1 unplaced</li>
+            <li>Floor 4 (top): 3-letter word, 1 unplaced only</li>
           </ul>
           
           <h4>Hints</h4>
@@ -584,6 +641,19 @@
     color: #666;
     font-size: 0.9rem;
     margin: 0.25rem 0;
+  }
+
+  .dev-reset {
+    background: none;
+    border: none;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 0.8rem;
+    padding: 0 0.25rem;
+  }
+
+  .dev-reset:hover {
+    color: #999;
   }
 
   /* Level Switcher */
@@ -681,9 +751,28 @@
     gap: 0.25rem;
   }
 
+  .guess-history {
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px dashed #ccc;
+  }
+
+  .guess-label {
+    font-size: 0.7rem;
+    color: #888;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
   .guess-row, .input-row {
     display: flex;
     gap: 0.25rem;
+  }
+
+  .input-row.current {
+    padding: 0.25rem;
+    background: rgba(74, 158, 255, 0.1);
+    border-radius: 4px;
   }
 
   .letter {
@@ -698,6 +787,12 @@
     border: 2px solid #ccc;
     background: white;
     text-transform: uppercase;
+  }
+
+  .letter.small {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.8rem;
   }
 
   .letter.correct {
@@ -780,10 +875,27 @@
     background: #3a8eef;
   }
 
-  .error {
-    color: #d32f2f;
+  .input-area.has-error input {
+    border-color: #d32f2f;
+    animation: shake 0.4s ease-in-out;
+  }
+
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+  }
+
+  .error-banner {
+    background: #ffebee;
+    color: #c62828;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #ef9a9a;
     text-align: center;
-    margin: 0.5rem 0;
+    font-weight: 500;
+    margin: 0.5rem auto;
+    max-width: 300px;
   }
 
   .floor-info {
