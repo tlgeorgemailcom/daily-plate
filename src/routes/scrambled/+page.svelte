@@ -43,6 +43,7 @@
   let gaveUp = $state(false);
   let revealedWords = $state<string[]>([]);
   let showGiveUpConfirm = $state(false);
+  let showMissedWordsReview = $state(false);
   
   // Show results state
   let showResults = $state(false);
@@ -276,6 +277,7 @@
     firstTryCorrect = 0;
     gaveUp = false;
     revealedWords = [];
+    showMissedWordsReview = false;
     showResults = false;
     gamePhase = 'phase1';
   }
@@ -331,17 +333,21 @@
     }
   }
   
-  // Give up - reveal all words and proceed to phase 2
+  // Give up - reveal all words and show review screen
   function giveUp() {
     gaveUp = true;
     // Track which words are being revealed (no points for these)
     revealedWords = validWords.filter(w => !foundWords.includes(w));
     // Add revealed words to foundWords for phase 2
     foundWords = [...validWords].sort();
-    // Move to phase 2 after showing revealed words
-    setTimeout(() => {
-      gamePhase = 'phase2';
-    }, 2000);
+    // Show missed words review screen
+    showMissedWordsReview = true;
+  }
+  
+  // Continue to phase 2 after reviewing missed words
+  function continueToPhase2() {
+    showMissedWordsReview = false;
+    gamePhase = 'phase2';
   }
   
   // Reset game - start fresh for today at current level
@@ -362,6 +368,7 @@
     firstTryCorrect = 0;
     gaveUp = false;
     revealedWords = [];
+    showMissedWordsReview = false;
     showResults = false;
     gamePhase = 'phase1';
     console.log('gamePhase set to:', gamePhase);
@@ -668,7 +675,7 @@ dailyfoodchain.com/scrambled`;
         </div>
       </div>
       
-      {#if gaveUp}
+      {#if showMissedWordsReview}
         <div class="revealed-section">
           <h3>Missed Words ({revealedWords.length})</h3>
           <div class="word-list revealed">
@@ -676,9 +683,11 @@ dailyfoodchain.com/scrambled`;
               <span class="word missed">{word}</span>
             {/each}
           </div>
-          <p class="moving-on">Moving to classification...</p>
+          <button class="continue-btn" onclick={continueToPhase2}>
+            OK - Continue to Classification
+          </button>
         </div>
-      {:else}
+      {:else if !gaveUp}
         <button class="give-up" onclick={() => showGiveUpConfirm = true}>
           🏳️ I Give Up - Show Words
         </button>
@@ -1432,10 +1441,22 @@ dailyfoodchain.com/scrambled`;
     color: #bf360c;
   }
   
-  .moving-on {
-    margin: 1rem 0 0;
-    color: #666;
-    font-style: italic;
+  .continue-btn {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .continue-btn:hover {
+    background: #43a047;
   }
   
   /* Phase 2 Styles */
