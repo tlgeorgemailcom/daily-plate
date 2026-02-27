@@ -1,4 +1,4 @@
-import { FOODS } from './food-portions.ts';
+import { FOODS } from './food-portions';
 import { writeFileSync } from 'fs';
 
 // Extract words with the same logic as scrambled-puzzles.ts

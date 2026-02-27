@@ -51,6 +51,9 @@
       <a href="/scrambled" class:active={$page.url.pathname === '/scrambled'}>
         🐝 Bees
       </a>
+      <a href="/tower" class:active={$page.url.pathname === '/tower'}>
+        🗼 Tower
+      </a>
       <a href="/archive" class:active={$page.url.pathname === '/archive'}>
         📅 Archive
       </a>

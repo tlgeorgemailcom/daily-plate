@@ -34727,7 +34727,10 @@ export const GROUP_COLORS: Record<FoodGroup, string> = {
   fats: '#fcd34d',
   spice: '#14b8a6',
   prepared: '#6b7280',
-  beverage: '#3b82f6'
+  condiment: '#f59e0b',
+  beverage: '#3b82f6',
+  wine: '#7c3aed',
+  bar: '#ec4899'
 };
 
 // Group display names
@@ -34740,7 +34743,10 @@ export const GROUP_NAMES: Record<FoodGroup, string> = {
   legume: 'Legumes',
   nuts: 'Nuts & Seeds',
   fats: 'Fats & Oils',
-  spice: 'Spices/Condiments',
+  spice: 'Spices',
   prepared: 'Prepared Foods',
-  beverage: 'Beverages'
+  condiment: 'Condiments',
+  beverage: 'Beverages',
+  wine: 'Wine',
+  bar: 'Bar'
 };
