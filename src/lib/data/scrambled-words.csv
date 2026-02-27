@@ -12,8 +12,7 @@ almond,nuts|fats|protein
 aloe,beverage
 amaranth,grain
 anchovy,protein
-queso,dairy
-angel,prepared
+angelfood,prepared
 anise,spice
 antelope,protein
 apple,fruit
@@ -39,14 +38,13 @@ barbecue,condiment|protein
 barley,grain
 basil,spice
 bass,protein
-bay,spice|protein
+bay,spice
 bean,legume|protein
 bear,protein
 beaver,protein
 beechnut,nuts
 beef,protein
 beefalo,protein
-beer,beverage
 beerwurst,protein|prepared
 beet,vegetable
 belly,protein
@@ -177,6 +175,7 @@ cocoa,spice|beverage
 coconut,fruit|nuts|fats
 cod,protein
 coffee,beverage
+coffeecake,prepared
 coho,protein
 cola,beverage
 colby,dairy
@@ -216,6 +215,7 @@ curry,spice
 cusk,protein
 custard,prepared|dairy
 cuttlefish,protein
+daiquiri,beverage
 dandelion,vegetable
 danish,prepared
 date,fruit
@@ -283,6 +283,7 @@ frog,protein
 frosting,prepared
 fructose,condiment
 fruit,fruit
+fruitcake,prepared
 fryer,protein
 fudge,prepared|condiment
 garlic,vegetable|spice
@@ -291,6 +292,7 @@ gelatin,prepared|protein
 germ,grain|fats
 ghee,dairy|fats
 giblets,protein
+gin,beverage
 ginger,vegetable|spice
 gingerbread,prepared
 ginkgo,nuts
@@ -336,6 +338,7 @@ honeydew,fruit
 horned,fruit
 horse,protein
 horseradish,vegetable|condiment
+hotcake,prepared
 hotdog,protein
 huckleberry,fruit
 hummus,legume|prepared
@@ -365,6 +368,7 @@ kiwi,fruit
 kohlrabi,vegetable
 krispies,grain|prepared
 kumquat,fruit
+lactose,dairy|condiment
 ladyfingers,prepared
 lamb,protein
 lambsquarters,vegetable
@@ -384,6 +388,7 @@ limeade,beverage
 ling,protein
 lingcod,protein
 lingonberry,fruit
+liqueur,beverage
 litchi,fruit
 liver,protein
 liverwurst,protein|prepared
@@ -413,6 +418,7 @@ marjoram,spice
 marmalade,condiment
 marshmallow,prepared
 masa,grain|prepared
+masala,condiment|prepared
 matzo,prepared
 mayo,condiment
 mayonnaise,condiment
@@ -427,6 +433,7 @@ mignon,protein
 milk,dairy|beverage
 milkfish,protein
 millet,grain
+mincemeat,prepared
 minestrone,prepared
 miso,prepared
 mix,prepared
@@ -535,7 +542,6 @@ pompano,protein
 popcorn,grain|prepared
 poppyseed,nuts|fats
 pork,protein
-port,dairy
 portabella,vegetable
 porterhouse,protein
 potato,vegetable
@@ -586,13 +592,16 @@ roselle,fruit
 rosemary,spice
 roughy,protein
 round,protein
+rum,beverage
 rump,protein
 rusk,prepared
 rutabaga,vegetable
 rye,grain
 sablefish,protein
+saccharin,condiment
 safflower,fats
 saffron,spice
+sage,spice
 sake,beverage
 salad,prepared
 salami,protein|prepared
@@ -632,6 +641,7 @@ shellie,legume
 sherbet,prepared
 shiitake,vegetable
 shortbread,prepared
+shortcake,prepared
 shortening,fats
 shoulder,protein
 shrimp,protein
@@ -662,6 +672,7 @@ spam,protein|prepared
 sparerib,protein
 spearmint,spice
 spelt,grain
+spice,spice
 spinach,vegetable
 spirulina,vegetable
 spleen,protein
@@ -673,9 +684,11 @@ squash,vegetable|fruit
 squid,protein
 squirrel,protein
 sriracha,condiment
+stalk,vegetable
 starfruit,fruit
 steak,protein
 steelhead,protein
+stevia,condiment
 stew,prepared
 stick,protein|prepared|vegetable
 stilton,dairy
@@ -716,6 +729,7 @@ teff,grain
 tempeh,protein|legume
 tenderloin,protein
 tenders,protein
+tequila,beverage
 teriyaki,condiment
 thigh,protein
 thyme,spice
@@ -749,6 +763,7 @@ vegetable,beverage|vegetable
 venison,protein
 verde,prepared|condiment
 vinegar,condiment
+vodka,beverage
 wafer,prepared
 waffle,prepared
 walleye,protein
@@ -766,7 +781,6 @@ whey,dairy
 whiskey,beverage
 whitefish,protein
 whiting,protein
-wine,beverage
 wing,protein
 winged,legume
 wolffish,protein

@@ -7,6 +7,7 @@
     FOOD_GROUP_INFO,
     FOOD_WORDS,
     FOODIE_WORDS,
+    FOODIE_21_WORDS,
     getWordsForLevel,
     type FoodGroup,
     type GameLevel
@@ -57,6 +58,7 @@
   // Total word counts for each level
   const usdaWordCount = FOOD_WORDS.size;
   const foodieWordCount = FOODIE_WORDS.size;
+  const foodie21WordCount = FOODIE_21_WORDS.size;
   
   // Hints: count words starting with each 2-letter prefix
   let prefixHints = $derived(() => {
@@ -525,8 +527,8 @@
     const p1Pct = phase1Percent();
     const p2Pct = phase2Percent();
     
-    const levelEmoji = currentLevel === 'usda' ? '🏛️' : '🍴';
-    const levelName = currentLevel.toUpperCase();
+    const levelEmoji = currentLevel === 'usda' ? '🏛️' : currentLevel === 'foodie' ? '🍴' : '🍸';
+    const levelName = currentLevel === 'foodie21' ? 'FOODIE 21+' : currentLevel.toUpperCase();
     
     const text = `🐝 Scramble Bees ${puzzleDate}
 ${levelEmoji} ${levelName} Level
@@ -590,6 +592,16 @@ dailyfoodchain.com/scrambled`;
         </button>
         <span class="word-count">{foodieWordCount} words</span>
         <button class="rules-link" onclick={() => { currentLevel = 'foodie'; showRules = true; }}>
+          Rules
+        </button>
+      </div>
+      
+      <div class="level-option" class:active={currentLevel === 'foodie21'}>
+        <button class="level-name" onclick={() => startLevel('foodie21')}>
+          🍸 FOODIE 21+
+        </button>
+        <span class="word-count">{foodie21WordCount} words</span>
+        <button class="rules-link" onclick={() => { currentLevel = 'foodie21'; showRules = true; }}>
           Rules
         </button>
       </div>
@@ -792,7 +804,7 @@ dailyfoodchain.com/scrambled`;
   {#if showRules}
     <div class="modal-backdrop" onclick={() => showRules = false}>
       <div class="rules-modal" onclick={(e) => e.stopPropagation()}>
-        <h3>📖 {currentLevel === 'usda' ? 'USDA' : 'FOODIE'} Rules</h3>
+        <h3>📖 {currentLevel === 'usda' ? 'USDA' : currentLevel === 'foodie' ? 'FOODIE' : 'FOODIE 21+'} Rules</h3>
         
         {#if currentLevel === 'usda'}
           <div class="rules-content">
@@ -806,6 +818,29 @@ dailyfoodchain.com/scrambled`;
               <li>Words must be 3+ letters</li>
               <li>Only words from the USDA database count</li>
               <li>Plurals are not included (though some words naturally end in 's')</li>
+              <li><em>Alcoholic beverages are not included</em></li>
+            </ul>
+            
+            <h4>Phase 2: Classify</h4>
+            <ul>
+              <li>Drag each word to its food group</li>
+              <li>First-try correct answers earn 100%</li>
+              <li>Hints appear after wrong guesses</li>
+            </ul>
+          </div>
+        {:else if currentLevel === 'foodie'}
+          <div class="rules-content">
+            <p><strong>🍴 FOODIE Level</strong></p>
+            <p>Expanded word list including specialty, international, and culinary terms!</p>
+            
+            <h4>Phase 1: Find Words</h4>
+            <ul>
+              <li>Use the given letters to spell food words</li>
+              <li>Each letter can be reused multiple times</li>
+              <li>Words must be 3+ letters</li>
+              <li>Includes USDA words PLUS extra foodie terms</li>
+              <li>Plurals are not included (though some words naturally end in 's')</li>
+              <li><em>Alcoholic beverages are not included</em></li>
             </ul>
             
             <h4>Phase 2: Classify</h4>
@@ -817,15 +852,15 @@ dailyfoodchain.com/scrambled`;
           </div>
         {:else}
           <div class="rules-content">
-            <p><strong>🍴 FOODIE Level</strong></p>
-            <p>Expanded word list including specialty, international, and culinary terms!</p>
+            <p><strong>🍸 FOODIE 21+ Level</strong></p>
+            <p>The complete foodie experience including wines, spirits, and cocktails!</p>
             
             <h4>Phase 1: Find Words</h4>
             <ul>
               <li>Use the given letters to spell food words</li>
               <li>Each letter can be reused multiple times</li>
               <li>Words must be 3+ letters</li>
-              <li>Includes USDA words PLUS extra foodie terms</li>
+              <li>Includes all FOODIE words PLUS wine and bar terms</li>
               <li>Plurals are not included (though some words naturally end in 's')</li>
             </ul>
             

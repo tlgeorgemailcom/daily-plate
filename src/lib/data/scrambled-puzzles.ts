@@ -3,10 +3,16 @@
 
 import type { FoodGroup } from './food-portions';
 import scrambledWordsCsv from './scrambled-words.csv?raw';
-import scrambledWordsFoodieCsv from './scrambled-words-foodie.csv?raw';
+import scrambledWordsCombinedCsv from './scrambled-words-combined.csv?raw';
 
 // Game levels
-export type GameLevel = 'usda' | 'foodie';
+// usda: Official USDA food names only
+// foodie: USDA + international foods (excludes wine & bar)
+// foodie21: Full experience including wine & spirits
+export type GameLevel = 'usda' | 'foodie' | 'foodie21';
+
+// Groups to exclude from FOODIE level (alcohol-related)
+const ALCOHOL_GROUPS = new Set(['wine', 'bar']);
 
 // Parse CSV into word list
 // Format: word,groups (groups separated by |)
@@ -22,22 +28,33 @@ function parseWordsCsv(csv: string): Array<{ word: string; groups: FoodGroup[] }
 
 // Load word lists from CSV files
 const usdaWordList = parseWordsCsv(scrambledWordsCsv);
-const foodieExtraWordList = parseWordsCsv(scrambledWordsFoodieCsv);
+const combinedWordList = parseWordsCsv(scrambledWordsCombinedCsv);
 
 // Convert to Map for efficient lookup (USDA level)
 export const FOOD_WORDS = new Map<string, { word: string; groups: FoodGroup[] }>(
   usdaWordList.map(entry => [entry.word, { word: entry.word, groups: entry.groups }])
 );
 
-// FOODIE level words - includes USDA plus additional foodie words
-const allFoodieWords = [...usdaWordList, ...foodieExtraWordList];
+// FOODIE level words - combined list excluding wine & bar groups
+const foodieWords = combinedWordList.filter(entry => 
+  !entry.groups.some(g => ALCOHOL_GROUPS.has(g))
+);
 export const FOODIE_WORDS = new Map<string, { word: string; groups: FoodGroup[] }>(
-  allFoodieWords.map(entry => [entry.word, { word: entry.word, groups: entry.groups }])
+  foodieWords.map(entry => [entry.word, { word: entry.word, groups: entry.groups }])
+);
+
+// FOODIE 21+ level words - full combined list including wine & bar
+export const FOODIE_21_WORDS = new Map<string, { word: string; groups: FoodGroup[] }>(
+  combinedWordList.map(entry => [entry.word, { word: entry.word, groups: entry.groups }])
 );
 
 // Get word map for a level
 export function getWordsForLevel(level: GameLevel): Map<string, { word: string; groups: FoodGroup[] }> {
-  return level === 'foodie' ? FOODIE_WORDS : FOOD_WORDS;
+  switch (level) {
+    case 'foodie21': return FOODIE_21_WORDS;
+    case 'foodie': return FOODIE_WORDS;
+    default: return FOOD_WORDS;
+  }
 }
 
 // Check if a word can be made from the given letters (with letter reuse)
@@ -125,5 +142,7 @@ export const FOOD_GROUP_INFO: Record<FoodGroup, { emoji: string; label: string; 
   spice: { emoji: '🌿', label: 'Herbs & Spices', hint: 'Basil, pepper, cinnamon, oregano' },
   prepared: { emoji: '🍳', label: 'Prepared', hint: 'Cooked dishes, lasagna, casseroles' },
   condiment: { emoji: '🥫', label: 'Condiments', hint: 'Sauces, ketchup, mayo, mustard' },
-  beverage: { emoji: '🍵', label: 'Beverage', hint: 'Drinks, tea, coffee' }
+  beverage: { emoji: '🍵', label: 'Beverage', hint: 'Drinks, tea, coffee' },
+  wine: { emoji: '🍷', label: 'Wine', hint: 'Red, white, sparkling wines' },
+  bar: { emoji: '🍸', label: 'Bar', hint: 'Spirits, cocktails, beer' }
 };
