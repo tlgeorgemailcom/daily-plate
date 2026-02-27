@@ -479,7 +479,7 @@
           type="text"
           bind:value={currentInput}
           onkeydown={handleKeydown}
-          placeholder={`Enter ${config.length}-letter food word`}
+          placeholder={`${config.length}-letter food`}
           maxlength={config.length}
           autocomplete="off"
           autocapitalize="off"
