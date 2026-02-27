@@ -15,17 +15,18 @@
     <p class="puzzle-info">Puzzle #{puzzleNumber}</p>
     
     <div class="intro">
-      <p>Welcome! Choose a game from the navigation above:</p>
+      <p>Tap a game to play:</p>
       
       <ul class="game-list">
-        <li><strong>🔗 Chain</strong> — Build a chain of 11 food words, each starting with the last letter of the previous word</li>
-        <li><strong>🍽️ Plate</strong> — Place 11 food words on a crossword grid</li>
-        <li><strong>🥗 Balance</strong> — Build a balanced meal by choosing foods from different groups</li>
-        <li><strong>🎯 Match</strong> — Catch falling food words by dragging a container on the right to catch the falling word and then match the container to a meal category on the left</li>
-        <li><strong>🧩 Slider</strong> — Slide tiles to unscramble the food image in this classic 8-puzzle game</li>
-        <li><strong>👆 Compare</strong> — Spot the 4 subtle differences between two nearly identical food images</li>
-        <li><strong>🧺 Basket</strong> — Help the farmer catch falling food in baskets while avoiding obstacles</li>
-        <li><strong>🐝 Scramble Bees</strong> — Find all the food words hidden in a set of scrambled letters (USDA or FOODIE levels)</li>
+        <li><a href="/chain"><strong>🔗 Chain</strong></a> — Build a chain of 11 food words, each starting with the last letter of the previous word</li>
+        <li><a href="/plate"><strong>🍽️ Plate</strong></a> — Place 11 food words on a crossword grid</li>
+        <li><a href="/balanced-diet"><strong>🥗 Balance</strong></a> — Build a balanced meal by choosing foods from different groups</li>
+        <li><a href="/matching"><strong>🎯 Match</strong></a> — Catch falling food words by dragging a container on the right to catch the falling word and then match the container to a meal category on the left</li>
+        <li><a href="/slider"><strong>🧩 Slider</strong></a> — Slide tiles to unscramble the food image in this classic 8-puzzle game</li>
+        <li><a href="/compare"><strong>👆 Compare</strong></a> — Spot the 4 subtle differences between two nearly identical food images</li>
+        <li><a href="/farmers-basket"><strong>🧺 Basket</strong></a> — Help the farmer catch falling food in baskets while avoiding obstacles</li>
+        <li><a href="/scrambled"><strong>🐝 Scramble Bees</strong></a> — Find all the food words hidden in a set of scrambled letters (USDA or FOODIE levels)</li>
+        <li><a href="/tower"><strong>🗼 Tower</strong></a> — Climb the tower by guessing food words of decreasing length</li>
       </ul>
     </div>
     
@@ -96,10 +97,20 @@
     line-height: 1.4;
   }
   
+  .game-list a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .game-list a:hover strong,
+  .game-list a:active strong {
+    color: #3b82f6;
+  }
+
   .game-list strong {
     color: #1f2937;
   }
-  
+
   .tip {
     color: #6b7280;
     font-size: 0.85rem;

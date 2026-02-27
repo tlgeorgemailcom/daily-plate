@@ -17,8 +17,8 @@
   
   let game = createGameState();
   
-  // Recipe book modal state - open automatically if player has completed any recipes
-  let showRecipeBook = $state(game.completedLevels.size > 0);
+  // Recipe book modal state - always show recipe book on load
+  let showRecipeBook = $state(true);
   
   // Share recipe modal state
   let showShareRecipe = $state(false);

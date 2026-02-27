@@ -598,7 +598,7 @@
           <ul>
             <li>🟩 Green = correct letter in correct spot</li>
             <li>🟨 Yellow = letter is in the word but wrong spot</li>
-            <li>⬜ Gray = letter is not in the word</li>
+            <li>⬛ Black = letter is not in the word</li>
             <li>+X beside floor = this letter is in the word</li>
           </ul>
           
@@ -808,14 +808,14 @@
   }
 
   .letter.present {
-    background: #c9b458;
-    border-color: #c9b458;
-    color: white;
+    background: #f5c800;
+    border-color: #d4ab00;
+    color: #333;
   }
 
   .letter.absent {
-    background: #787c7e;
-    border-color: #787c7e;
+    background: #3a3a3c;
+    border-color: #3a3a3c;
     color: white;
   }
 
