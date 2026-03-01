@@ -944,6 +944,8 @@ dailyfoodchain.com/scrambled`;
     font-family: system-ui, -apple-system, sans-serif;
     min-height: 100vh;
     min-height: 100dvh; /* Dynamic viewport height for mobile */
+    overflow-x: hidden;
+    box-sizing: border-box;
   }
   
   /* Wider layout for Phase 2 with 11 groups */
@@ -1165,14 +1167,17 @@ dailyfoodchain.com/scrambled`;
     display: flex;
     gap: 0.5rem;
     margin-bottom: 0.5rem;
+    max-width: 100%;
   }
   
   .input-area input {
     flex: 1;
+    min-width: 0;
     padding: 0.75rem 1rem;
     font-size: 1.1rem;
     border: 2px solid #ddd;
     border-radius: 8px;
+    box-sizing: border-box;
   }
   
   .input-area input:focus {
@@ -1181,13 +1186,14 @@ dailyfoodchain.com/scrambled`;
   }
   
   .input-area button {
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 1rem;
     background: #4a9eff;
     color: white;
     border: none;
     border-radius: 8px;
     font-size: 1rem;
     cursor: pointer;
+    flex-shrink: 0;
   }
   
   .input-area button:hover {
