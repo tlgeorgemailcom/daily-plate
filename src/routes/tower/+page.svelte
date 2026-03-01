@@ -425,6 +425,7 @@
       <button class="level-name" onclick={() => startLevel('usda')}>
         🏛️ USDA
       </button>
+      <span class="word-count">{usdaWordCount} words</span>
       <button class="rules-link" onclick={() => { currentLevel = 'usda'; showRules = true; }}>
         Rules
       </button>
@@ -434,6 +435,7 @@
       <button class="level-name" onclick={() => startLevel('foodie')}>
         🍴 FOODIE
       </button>
+      <span class="word-count">{foodieWordCount} words</span>
       <button class="rules-link" onclick={() => { currentLevel = 'foodie'; showRules = true; }}>
         Rules
       </button>
@@ -443,6 +445,7 @@
       <button class="level-name" onclick={() => startLevel('foodie21')}>
         🍸 FOODIE 21+
       </button>
+      <span class="word-count">{foodie21WordCount} words</span>
       <button class="rules-link" onclick={() => { currentLevel = 'foodie21'; showRules = true; }}>
         Rules
       </button>
@@ -604,12 +607,18 @@
           
           <h4>Level: {currentLevel === 'usda' ? 'USDA' : currentLevel === 'foodie' ? 'FOODIE' : 'FOODIE 21+'}</h4>
           {#if currentLevel === 'usda'}
-            <p>Official USDA food names only. <em>Alcoholic beverages not included.</em></p>
+            <p><strong>🏛️ USDA Level</strong> — Only food words from the USDA Food Database are included in this level. <em>Alcoholic beverages not included.</em></p>
           {:else if currentLevel === 'foodie'}
             <p>Includes international and specialty foods. <em>Alcoholic beverages not included.</em></p>
           {:else}
-            <p>Full experience including wines, spirits, and cocktails!</p>
+            <p>FOODIE level plus wines, spirits, and cocktails!</p>
           {/if}
+          
+          <h4>Word List Notes</h4>
+          <ul>
+            <li>Plurals are not included (though some words naturally end in 's')</li>
+            <li>Adjectives are avoided (e.g., 'Frozen' from 'Frozen Yogurt')</li>
+          </ul>
         </div>
         
         <button class="modal-close-btn" onclick={() => showRules = false}>
@@ -698,6 +707,16 @@
     color: #666;
     cursor: pointer;
     text-decoration: underline;
+  }
+
+  .word-count {
+    font-size: 0.7rem;
+    color: #9ca3af;
+    font-weight: normal;
+  }
+
+  .level-option.active .word-count {
+    color: #6b7280;
   }
 
   /* Tower */

@@ -727,6 +727,8 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
             <li>Each word must start with the last letter of the previous word</li>
             <li>Use real food words only</li>
             <li>No repeating words</li>
+            <li>Plurals are not included (though some words naturally end in 's')</li>
+            <li>Adjectives are avoided (e.g., 'Frozen' from 'Frozen Yogurt')</li>
             <li>Try to use all 11 food groups for bonus points!</li>
           </ul>
           

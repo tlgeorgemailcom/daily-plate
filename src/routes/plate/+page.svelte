@@ -2130,6 +2130,8 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
             <li>Click any letter on the grid</li>
             <li>Type a food word that includes that letter</li>
             <li>Words must connect to existing letters</li>
+            <li>Plurals are not included (though some words naturally end in 's')</li>
+            <li>Adjectives are avoided (e.g., 'Frozen' from 'Frozen Yogurt')</li>
           </ul>
           
           <h4>✋ Moving Words</h4>

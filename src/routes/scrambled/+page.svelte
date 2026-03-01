@@ -818,7 +818,7 @@ dailyfoodchain.com/scrambled`;
         {#if currentLevel === 'usda'}
           <div class="rules-content">
             <p><strong>🏛️ USDA Level</strong></p>
-            <p>Find food words using only letters from the USDA Food Database - official, verified food names!</p>
+            <p>Only food words from the USDA Food Database are included in this level.</p>
             
             <h4>Phase 1: Find Words</h4>
             <ul>
@@ -827,6 +827,7 @@ dailyfoodchain.com/scrambled`;
               <li>Words must be 3+ letters</li>
               <li>Only words from the USDA database count</li>
               <li>Plurals are not included (though some words naturally end in 's')</li>
+              <li>Adjectives are avoided (e.g., 'Frozen' from 'Frozen Yogurt')</li>
               <li><em>Alcoholic beverages are not included</em></li>
             </ul>
             
@@ -849,6 +850,7 @@ dailyfoodchain.com/scrambled`;
               <li>Words must be 3+ letters</li>
               <li>Includes USDA words PLUS extra foodie terms</li>
               <li>Plurals are not included (though some words naturally end in 's')</li>
+              <li>Adjectives are avoided (e.g., 'Frozen' from 'Frozen Yogurt')</li>
               <li><em>Alcoholic beverages are not included</em></li>
             </ul>
             
@@ -862,7 +864,7 @@ dailyfoodchain.com/scrambled`;
         {:else}
           <div class="rules-content">
             <p><strong>🍸 FOODIE 21+ Level</strong></p>
-            <p>The complete foodie experience including wines, spirits, and cocktails!</p>
+            <p>FOODIE level plus wines, spirits, and cocktails!</p>
             
             <h4>Phase 1: Find Words</h4>
             <ul>
@@ -871,6 +873,7 @@ dailyfoodchain.com/scrambled`;
               <li>Words must be 3+ letters</li>
               <li>Includes all FOODIE words PLUS wine and bar terms</li>
               <li>Plurals are not included (though some words naturally end in 's')</li>
+              <li>Adjectives are avoided (e.g., 'Frozen' from 'Frozen Yogurt')</li>
             </ul>
             
             <h4>Phase 2: Classify</h4>
