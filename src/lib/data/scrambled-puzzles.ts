@@ -106,8 +106,10 @@ export function getTodaysPuzzle(level: GameLevel = 'usda'): { letters: string[];
   const dateStr = today.toISOString().split('T')[0]; // YYYY-MM-DD
   
   // Use date as seed for puzzle selection
+  // Each level gets a different offset so they have different letters each day
   const daysSinceEpoch = Math.floor(today.getTime() / (1000 * 60 * 60 * 24));
-  const puzzleIndex = daysSinceEpoch % PUZZLE_COMBOS.length;
+  const levelOffset = level === 'usda' ? 0 : level === 'foodie' ? 33 : 67;
+  const puzzleIndex = (daysSinceEpoch + levelOffset) % PUZZLE_COMBOS.length;
   
   const letters = PUZZLE_COMBOS[puzzleIndex].toLowerCase().split('');
   const letterSet = new Set(letters);
@@ -120,7 +122,8 @@ export function getTodaysPuzzle(level: GameLevel = 'usda'): { letters: string[];
 export function getPuzzleForDate(date: Date, level: GameLevel = 'usda'): { letters: string[]; validWords: string[]; date: string; level: GameLevel } {
   const dateStr = date.toISOString().split('T')[0];
   const daysSinceEpoch = Math.floor(date.getTime() / (1000 * 60 * 60 * 24));
-  const puzzleIndex = daysSinceEpoch % PUZZLE_COMBOS.length;
+  const levelOffset = level === 'usda' ? 0 : level === 'foodie' ? 33 : 67;
+  const puzzleIndex = (daysSinceEpoch + levelOffset) % PUZZLE_COMBOS.length;
   
   const letters = PUZZLE_COMBOS[puzzleIndex].toLowerCase().split('');
   const letterSet = new Set(letters);
