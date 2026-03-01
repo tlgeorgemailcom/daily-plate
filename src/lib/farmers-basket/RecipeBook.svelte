@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import type { Level, FoodType, DietaryCategory } from './types';
-  import { FOOD_EMOJI } from './types';
+  import FoodIcon from './FoodIcon.svelte';
   
   // All available meal categories (shown even if empty)
   const ALL_CATEGORIES = [
@@ -15,10 +15,11 @@
   ];
   
   // Dietary preference categories
+  // Using cooked food emojis (not live animals) for child-friendly display
   const DIETARY_CATEGORIES: { id: DietaryCategory; name: string; emoji: string; description: string }[] = [
     { id: 'all', name: 'All Foods', emoji: '🍽️', description: 'All ingredients' },
-    { id: 'pollo-pesca', name: 'Pollo-Pesca', emoji: '🐔🐟', description: 'Poultry & seafood' },
-    { id: 'pollo', name: 'Pollo', emoji: '🐔', description: 'Poultry only' },
+    { id: 'pollo-pesca', name: 'Pollo-Pesca', emoji: '🍗🐟', description: 'Poultry & seafood' },
+    { id: 'pollo', name: 'Pollo', emoji: '🍗', description: 'Poultry only' },
     { id: 'pesca', name: 'Pesca', emoji: '🐟', description: 'Seafood only' },
     { id: 'veggie', name: 'Veggie', emoji: '🥚🧀', description: 'Vegetarian' },
     { id: 'vegan', name: 'Vegan', emoji: '🌱', description: 'Plant-based' }
@@ -297,7 +298,7 @@
           
           <div class="cotd-ingredients">
             {#each todaysRecipe.recipe as food}
-              <span class="cotd-ingredient" title={food}>{FOOD_EMOJI[food]}</span>
+              <span class="cotd-ingredient" title={food}><FoodIcon {food} size={28} /></span>
             {/each}
           </div>
           
@@ -336,7 +337,7 @@
           <span class="ingredients-label">Ingredients:</span>
           <div class="ingredient-icons">
             {#each selectedLevel.recipe as food}
-              <span class="ingredient" title={food}>{FOOD_EMOJI[food]}</span>
+              <span class="ingredient" title={food}><FoodIcon {food} size={28} /></span>
             {/each}
           </div>
         </div>
@@ -486,7 +487,7 @@
                             </span>
                             <span class="tab-ingredients">
                               {#each level.recipe.slice(0, 3) as food}
-                                <span class="mini-emoji">{FOOD_EMOJI[food]}</span>
+                                <span class="mini-emoji"><FoodIcon {food} size={14} /></span>
                               {/each}
                               {#if level.recipe.length > 3}
                                 <span class="more">+{level.recipe.length - 3}</span>

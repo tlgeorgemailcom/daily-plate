@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Beef Steak - T-bone or ribeye style -->
+  <path d="M10 20 Q8 32 12 44 Q20 50 32 48 Q50 46 54 32 Q56 18 44 14 Q28 10 10 20Z" fill="#8B4513"/>
+  <path d="M10 20 Q8 32 12 44 Q20 50 32 48 Q50 46 54 32 Q56 18 44 14 Q28 10 10 20Z" fill="url(#beef-gradient)"/>
+  <!-- Marbling -->
+  <path d="M20 24 Q28 26 36 24" stroke="#FFF5EE" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <path d="M16 32 Q26 35 38 32" stroke="#FFF5EE" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <path d="M22 40 Q32 42 42 38" stroke="#FFF5EE" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <!-- Grill marks -->
+  <path d="M14 22 L48 36" stroke="#5D2E0C" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+  <path d="M12 32 L46 46" stroke="#5D2E0C" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+  <!-- Fat edge -->
+  <path d="M44 14 Q54 16 54 32" stroke="#FFF8DC" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="beef-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A0522D;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#6B3E26;stop-opacity:0.3"/>
+    </linearGradient>
+  </defs>
+</svg>

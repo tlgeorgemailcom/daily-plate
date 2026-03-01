@@ -12,7 +12,8 @@
   import Barrier from '$lib/farmers-basket/Barrier.svelte';
   import RecipeBook from '$lib/farmers-basket/RecipeBook.svelte';
   import ShareRecipe from '$lib/farmers-basket/ShareRecipe.svelte';
-  import { FOOD_EMOJI, TOOL_EMOJI, ANIMAL_EMOJI } from '$lib/farmers-basket/types';
+  import FoodIcon from '$lib/farmers-basket/FoodIcon.svelte';
+  import { TOOL_EMOJI, ANIMAL_EMOJI } from '$lib/farmers-basket/types';
   import type { ToolType, FoodType } from '$lib/farmers-basket/types';
   
   let game = createGameState();
@@ -651,7 +652,7 @@
           class:collected={collectedFood.includes(food)}
           class:stolen={isStolen}
         >
-          {FOOD_EMOJI[food]}
+          <FoodIcon {food} size={24} />
           {#if collectedFood.includes(food)}
             <span class="check">✓</span>
           {:else if isStolen}
@@ -678,7 +679,7 @@
         <div class="theft-entry" class:fresh={Date.now() - theft.timestamp < 3000}>
           <span class="thief-emoji">{ANIMAL_EMOJI[theft.animalType]}</span>
           <span class="theft-text">stolen</span>
-          <span class="stolen-emoji">{FOOD_EMOJI[theft.foodType]}</span>
+          <span class="stolen-emoji"><FoodIcon food={theft.foodType} size={20} /></span>
         </div>
       {/each}
     </div>
@@ -789,7 +790,7 @@
     <Farmer 
       state={game.farmer.state}
       position={game.farmer.position}
-      carrying={game.farmer.carrying ? FOOD_EMOJI[game.farmer.carrying] : null}
+      carryingFood={game.farmer.carrying}
       direction={game.farmer.direction}
     />
     
@@ -846,7 +847,7 @@
     <div class="overlay start">
       <div class="overlay-content">
         <h2>{game.currentLevel?.name ?? 'Loading'}</h2>
-        <p>Collect: {game.currentLevel?.recipe?.map(f => FOOD_EMOJI[f]).join(' ') ?? ''}</p>
+        <p>Collect: {#each game.currentLevel?.recipe ?? [] as food}<FoodIcon {food} size={24} />{/each}</p>
         <p class="hint desktop-hint">Use arrow keys to move, Space to pick up food</p>
         <p class="hint mobile-hint">Drag farmer to move • Tap when near food/basket</p>
         <button onclick={() => game.startLevel()}>▶️ Play</button>

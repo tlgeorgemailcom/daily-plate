@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Lamb Chop - rack style with bone -->
+  <path d="M14 18 Q10 32 14 46 Q24 52 36 48 Q46 44 48 32 Q50 20 40 16 Q28 12 14 18Z" fill="#9B6B5A"/>
+  <path d="M14 18 Q10 32 14 46 Q24 52 36 48 Q46 44 48 32 Q50 20 40 16 Q28 12 14 18Z" fill="url(#lamb-gradient)"/>
+  <!-- Bone (curved rib bone) -->
+  <path d="M40 16 Q52 14 56 20 Q58 26 54 28" stroke="#FFF8DC" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M40 16 Q52 14 56 20 Q58 26 54 28" stroke="#EEE8D8" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Fat cap -->
+  <path d="M14 18 Q20 14 30 14 Q38 14 40 16" stroke="#FFF8DC" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- Grill marks -->
+  <path d="M16 24 L42 36" stroke="#7A4A3A" stroke-width="2" stroke-linecap="round"/>
+  <path d="M14 34 L40 46" stroke="#7A4A3A" stroke-width="2" stroke-linecap="round"/>
+  <!-- Rosemary sprig -->
+  <path d="M24 28 L28 24" stroke="#6B8E23" stroke-width="1.5"/>
+  <ellipse cx="22" cy="30" rx="2" ry="1" fill="#6B8E23" transform="rotate(-30 22 30)"/>
+  <ellipse cx="26" cy="26" rx="2" ry="1" fill="#6B8E23" transform="rotate(-30 26 26)"/>
+  <defs>
+    <linearGradient id="lamb-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#B8857A;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#7A4A3A;stop-opacity:0.3"/>
+    </linearGradient>
+  </defs>
+</svg>

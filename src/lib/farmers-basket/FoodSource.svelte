@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { FOOD_EMOJI } from './types';
+  import FoodIcon from './FoodIcon.svelte';
   import type { FoodType, Position } from './types';
   
   interface Props {
@@ -11,7 +11,6 @@
   
   let { type, position, remaining, onclick }: Props = $props();
   
-  const emoji = $derived(FOOD_EMOJI[type]);
   const available = $derived(remaining > 0);
 </script>
 
@@ -23,7 +22,7 @@
   disabled={!available}
   onclick={onclick}
 >
-  <span class="food-emoji">{emoji}</span>
+  <span class="food-emoji"><FoodIcon food={type} size={40} /></span>
   <span class="quantity" class:empty={remaining === 0}>{remaining}</span>
   {#if available}
     <span class="glow"></span>

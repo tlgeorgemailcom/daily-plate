@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { FOOD_EMOJI } from './types';
+  import FoodIcon from './FoodIcon.svelte';
   import type { FoodType } from './types';
   
   interface Props {
@@ -18,7 +18,7 @@
         class="basket-food" 
         style="animation-delay: {i * 0.1}s;"
       >
-        {FOOD_EMOJI[food]}
+        <FoodIcon {food} size={20} />
       </span>
     {/each}
   </div>

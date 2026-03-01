@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Pork Chop - bone-in, cooked -->
+  <ellipse cx="30" cy="34" rx="22" ry="18" fill="#E8C4A0"/>
+  <ellipse cx="30" cy="34" rx="22" ry="18" fill="url(#pork-gradient)"/>
+  <!-- Bone -->
+  <rect x="48" y="24" width="8" height="24" rx="3" fill="#FFF8DC"/>
+  <rect x="48" y="24" width="8" height="24" rx="3" stroke="#DDD5C0" stroke-width="1"/>
+  <!-- Grill marks -->
+  <path d="M12 28 L44 40" stroke="#C4956A" stroke-width="2" stroke-linecap="round"/>
+  <path d="M12 36 L44 48" stroke="#C4956A" stroke-width="2" stroke-linecap="round"/>
+  <!-- Fat rim -->
+  <path d="M8 30 Q6 34 10 40" stroke="#FFF8DC" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- Highlight -->
+  <ellipse cx="28" cy="30" rx="10" ry="6" fill="#F5DCC4" opacity="0.5"/>
+  <defs>
+    <linearGradient id="pork-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5DCC4;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#D4A574;stop-opacity:0.3"/>
+    </linearGradient>
+  </defs>
+</svg>

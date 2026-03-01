@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { Animal } from './types';
-  import { ANIMAL_EMOJI, FOOD_EMOJI } from './types';
+  import { ANIMAL_EMOJI } from './types';
+  import FoodIcon from './FoodIcon.svelte';
   
   interface Props {
     animal: Animal;
@@ -10,7 +11,6 @@
   
   const emoji = $derived(ANIMAL_EMOJI[animal.type]);
   const facingClass = $derived(animal.direction === 'left' ? 'facing-left' : 'facing-right');
-  const stolenEmoji = $derived(animal.stolenFood ? FOOD_EMOJI[animal.stolenFood] : null);
 </script>
 
 <span 
@@ -18,8 +18,8 @@
   style="left: {animal.position.x}px; top: {animal.position.y}px;"
 >
   {emoji}
-  {#if (animal.state === 'stealing' || animal.state === 'celebrating') && stolenEmoji}
-    <span class="stolen-food">{stolenEmoji}</span>
+  {#if (animal.state === 'stealing' || animal.state === 'celebrating') && animal.stolenFood}
+    <span class="stolen-food"><FoodIcon food={animal.stolenFood} size={16} /></span>
   {/if}
   {#if animal.state === 'digging' || animal.state === 'climbing' || animal.state === 'squeezing'}
     <span class="progress-bar">

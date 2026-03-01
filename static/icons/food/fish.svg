@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Fish Fillet - cooked salmon/fish fillet -->
+  <path d="M8 32 Q8 20 20 18 L52 18 Q58 18 58 26 L58 38 Q58 46 52 46 L20 46 Q8 44 8 32Z" fill="#FA8072"/>
+  <path d="M8 32 Q8 20 20 18 L52 18 Q58 18 58 26 L58 38 Q58 46 52 46 L20 46 Q8 44 8 32Z" fill="url(#fish-gradient)"/>
+  <!-- White fat lines -->
+  <path d="M15 24 Q32 26 50 24" stroke="#FFE4E1" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M15 32 Q32 34 50 32" stroke="#FFE4E1" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M15 40 Q32 42 50 40" stroke="#FFE4E1" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Highlight -->
+  <ellipse cx="35" cy="28" rx="12" ry="6" fill="#FFA07A" opacity="0.5"/>
+  <defs>
+    <linearGradient id="fish-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFA07A;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#E9967A;stop-opacity:0.3"/>
+    </linearGradient>
+  </defs>
+</svg>

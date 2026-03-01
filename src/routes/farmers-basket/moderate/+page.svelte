@@ -1,9 +1,11 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { FOOD_EMOJI } from '$lib/farmers-basket/types';
+  import type { FoodType } from '$lib/farmers-basket/types';
+  import FoodIcon from '$lib/farmers-basket/FoodIcon.svelte';
   
   // Available food types for mapping
-  const GAME_FOODS = Object.keys(FOOD_EMOJI) as Array<keyof typeof FOOD_EMOJI>;
+  const GAME_FOODS = Object.keys(FOOD_EMOJI) as FoodType[];
   
   // Animal types
   const ANIMAL_TYPES = ['rabbit', 'squirrel', 'raccoon', 'crow', 'mouse'];
@@ -240,13 +242,13 @@
                     onclick={() => toggleFood(food)}
                     type="button"
                   >
-                    <span class="emoji">{FOOD_EMOJI[food]}</span>
+                    <span class="emoji"><FoodIcon {food} size={24} /></span>
                     <span class="name">{food}</span>
                   </button>
                 {/each}
               </div>
               <p class="selected-foods">
-                Selected: {gameFoods.length === 0 ? 'None' : gameFoods.map(f => FOOD_EMOJI[f as keyof typeof FOOD_EMOJI]).join(' ')}
+                Selected: {#if gameFoods.length === 0}None{:else}{#each gameFoods as f}<FoodIcon food={f} size={20} />{/each}{/if}
               </p>
             </div>
             

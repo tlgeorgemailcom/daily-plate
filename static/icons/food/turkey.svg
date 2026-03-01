@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Turkey Breast - sliced deli style or roasted -->
+  <ellipse cx="32" cy="34" rx="24" ry="16" fill="#E8D4C4"/>
+  <ellipse cx="32" cy="34" rx="24" ry="16" fill="url(#turkey-gradient)"/>
+  <!-- Sliced appearance / texture lines -->
+  <path d="M12 30 Q32 28 52 30" stroke="#D4B8A4" stroke-width="1.5" fill="none"/>
+  <path d="M14 36 Q32 34 50 36" stroke="#D4B8A4" stroke-width="1.5" fill="none"/>
+  <path d="M16 42 Q32 40 48 42" stroke="#D4B8A4" stroke-width="1.5" fill="none"/>
+  <!-- Golden roasted top -->
+  <ellipse cx="32" cy="28" rx="18" ry="8" fill="#DCC4B0" opacity="0.6"/>
+  <!-- Herb specks -->
+  <circle cx="22" cy="32" r="1" fill="#6B8E23"/>
+  <circle cx="38" cy="30" r="1" fill="#6B8E23"/>
+  <circle cx="28" cy="38" r="1" fill="#6B8E23"/>
+  <circle cx="42" cy="36" r="1" fill="#6B8E23"/>
+  <defs>
+    <linearGradient id="turkey-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5E6D8;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#D4B8A4;stop-opacity:0.3"/>
+    </linearGradient>
+  </defs>
+</svg>

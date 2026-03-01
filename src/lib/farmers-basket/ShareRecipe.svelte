@@ -11,10 +11,11 @@
   ];
   
   // Dietary preference categories
+  // Using cooked food emojis (not live animals) for child-friendly display
   const DIETARY_CATEGORIES = [
     { id: 'all', name: 'All Foods', emoji: '🍽️', description: 'Includes all ingredients' },
-    { id: 'pollo-pesca', name: 'Pollo-Pesca', emoji: '🐔🐟', description: 'Poultry, seafood, and vegetables' },
-    { id: 'pollo', name: 'Pollo', emoji: '🐔', description: 'Poultry and vegetables only' },
+    { id: 'pollo-pesca', name: 'Pollo-Pesca', emoji: '🍗🐟', description: 'Poultry, seafood, and vegetables' },
+    { id: 'pollo', name: 'Pollo', emoji: '🍗', description: 'Poultry and vegetables only' },
     { id: 'pesca', name: 'Pesca', emoji: '🐟', description: 'Seafood and vegetables only' },
     { id: 'veggie', name: 'Veggie', emoji: '🥚🧀', description: 'Vegetarian (eggs/dairy OK)' },
     { id: 'vegan', name: 'Vegan', emoji: '🌱', description: 'Plant-based only' }

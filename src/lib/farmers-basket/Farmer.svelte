@@ -1,14 +1,15 @@
 <script lang="ts">
-  import type { FarmerState, Position } from './types';
+  import type { FarmerState, Position, FoodType } from './types';
+  import FoodIcon from './FoodIcon.svelte';
   
   interface Props {
     state: FarmerState;
     position: Position;
-    carrying: string | null; // food emoji
+    carryingFood: FoodType | null; // food type (rendered with FoodIcon)
     direction: 'up' | 'down' | 'left' | 'right';
   }
   
-  let { state, position, carrying, direction }: Props = $props();
+  let { state, position, carryingFood, direction }: Props = $props();
   
   const facingClass = $derived(
     direction === 'left' ? 'facing-left' : 
@@ -21,8 +22,8 @@
   style="left: {position.x}px; top: {position.y}px;"
 >
   <span class="emoji">🧑‍🌾</span>
-  {#if carrying}
-    <span class="carrying">{carrying}</span>
+  {#if carryingFood}
+    <span class="carrying"><FoodIcon food={carryingFood} size={20} /></span>
   {/if}
 </div>
 

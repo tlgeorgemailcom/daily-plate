@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Chicken Breast - boneless, cooked -->
+  <ellipse cx="32" cy="32" rx="26" ry="18" fill="#F5D6BA"/>
+  <ellipse cx="32" cy="32" rx="26" ry="18" fill="url(#chicken-grill)"/>
+  <ellipse cx="32" cy="30" rx="22" ry="14" fill="#FFECD9" opacity="0.5"/>
+  <!-- Grill marks -->
+  <path d="M14 26 L50 38" stroke="#D4A574" stroke-width="2" stroke-linecap="round"/>
+  <path d="M14 32 L50 44" stroke="#D4A574" stroke-width="2" stroke-linecap="round"/>
+  <path d="M14 38 L50 50" stroke="#D4A574" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <defs>
+    <linearGradient id="chicken-grill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFECD9;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#D4A574;stop-opacity:0.3"/>
+    </linearGradient>
+  </defs>
+</svg>

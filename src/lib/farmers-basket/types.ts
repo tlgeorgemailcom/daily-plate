@@ -26,7 +26,8 @@ export type ToolType = 'fence' | 'scarecrow' | 'cat' | 'dog' | 'torch' | 'bell' 
 
 export type FoodType = 
   | 'lettuce' | 'tomato' | 'carrot' | 'cheese' | 'egg' 
-  | 'bread' | 'apple' | 'grapes' | 'bacon' | 'butter';
+  | 'bread' | 'apple' | 'grapes' | 'bacon' | 'butter'
+  | 'chicken' | 'fish';
 
 export interface Position {
   x: number;
@@ -109,6 +110,8 @@ export const ANIMAL_EMOJI: Record<AnimalType, string> = {
   raccoon: '🦝'
 };
 
+// Fallback emojis - prefer using FoodIcon component for proper rendering
+// Foods marked with (*) have custom SVG icons at /icons/food/{name}.svg
 export const FOOD_EMOJI: Record<FoodType, string> = {
   lettuce: '🥬',
   tomato: '🍅',
@@ -119,8 +122,17 @@ export const FOOD_EMOJI: Record<FoodType, string> = {
   apple: '🍎',
   grapes: '🍇',
   bacon: '🥓',
-  butter: '🧈'
+  butter: '🧈',
+  chicken: '🍗',  // (*) SVG: /icons/food/chicken.svg (grilled breast)
+  fish: '🐟'      // (*) SVG: /icons/food/fish.svg (salmon fillet)
 };
+
+// Foods that should use custom SVG icons instead of emoji
+// These have better visual representations as SVGs
+export const SVG_FOOD_ICONS: Set<FoodType> = new Set(['chicken', 'fish']);
+
+// Additional SVG icons available for future food types:
+// beef.svg, pork.svg, lamb.svg, turkey.svg, patty.svg, ground-meat.svg
 
 export const TOOL_EMOJI: Record<ToolType, string> = {
   fence: '🚧',
@@ -177,10 +189,10 @@ export const ESCAPE_TIME_BY_BARRIER: Record<string, Record<string, number>> = {
 export const ANIMAL_TARGETS: Record<AnimalType, FoodType[]> = {
   rabbit: ['lettuce', 'carrot'],
   mouse: ['cheese', 'bread'],
-  bird: ['grapes', 'bread'],
-  fox: ['egg', 'bacon'],
+  bird: ['grapes', 'bread', 'fish'],
+  fox: ['egg', 'bacon', 'chicken'],
   squirrel: ['apple', 'bread'],
-  raccoon: ['lettuce', 'tomato', 'carrot', 'cheese', 'egg', 'bread', 'apple', 'grapes', 'bacon', 'butter']
+  raccoon: ['lettuce', 'tomato', 'carrot', 'cheese', 'egg', 'bread', 'apple', 'grapes', 'bacon', 'butter', 'chicken', 'fish']
 };
 
 // Food-to-animal mapping: which animal appears when this food is picked up
@@ -194,5 +206,7 @@ export const FOOD_ANIMAL_MAP: Record<FoodType, AnimalType> = {
   bacon: 'fox',
   apple: 'squirrel',
   tomato: 'raccoon',
-  butter: 'raccoon'
+  butter: 'raccoon',
+  chicken: 'fox',
+  fish: 'bird'
 };

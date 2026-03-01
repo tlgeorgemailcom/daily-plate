@@ -110,7 +110,7 @@ export const LEVELS: Level[] = [
       { type: 'wall', count: 5, emoji: '🧱' }
     ],
     animalSpawns: [{ type: 'rabbit', delay: 5000 }],
-    foodSupply: { lettuce: 3, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0 },
+    foodSupply: { lettuce: 3, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
     servings: 'Serves 1',
     prepTime: '2 minutes',
     recipeInstructions: [
@@ -132,7 +132,7 @@ export const LEVELS: Level[] = [
       { type: 'wall', count: 5, emoji: '🧱' }
     ],
     animalSpawns: [{ type: 'rabbit', delay: 3000 }],
-    foodSupply: { lettuce: 2, tomato: 2, carrot: 0, cheese: 0, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0 },
+    foodSupply: { lettuce: 2, tomato: 2, carrot: 0, cheese: 0, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
     servings: 'Serves 2',
     prepTime: '5 minutes',
     recipeInstructions: [
@@ -159,7 +159,7 @@ export const LEVELS: Level[] = [
       { type: 'rabbit', delay: 2000 },
       { type: 'rabbit', delay: 8000 }
     ],
-    foodSupply: { lettuce: 2, tomato: 2, carrot: 3, cheese: 0, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0 },
+    foodSupply: { lettuce: 2, tomato: 2, carrot: 3, cheese: 0, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
     servings: 'Serves 4',
     prepTime: '10 minutes',
     recipeInstructions: [
@@ -187,7 +187,7 @@ export const LEVELS: Level[] = [
       { type: 'rabbit', delay: 2000 },
       { type: 'mouse', delay: 5000 }
     ],
-    foodSupply: { lettuce: 2, tomato: 0, carrot: 0, cheese: 3, egg: 0, bread: 2, apple: 0, grapes: 0, bacon: 0, butter: 0 },
+    foodSupply: { lettuce: 2, tomato: 0, carrot: 0, cheese: 3, egg: 0, bread: 2, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
     servings: 'Serves 2',
     prepTime: '5 minutes',
     recipeInstructions: [
@@ -217,7 +217,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 4000 },
       { type: 'rabbit', delay: 7000 }
     ],
-    foodSupply: { lettuce: 2, tomato: 2, carrot: 2, cheese: 2, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0 },
+    foodSupply: { lettuce: 2, tomato: 2, carrot: 2, cheese: 2, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
     servings: 'Serves 4',
     prepTime: '15 minutes',
     recipeInstructions: [
@@ -227,6 +227,556 @@ export const LEVELS: Level[] = [
       'Combine all vegetables in a large bowl.',
       'Toss with olive oil and lemon juice.',
       'Top with cheese and serve with crusty bread.'
+    ]
+  },
+  // === VEGAN RECIPES ===
+  {
+    id: '2-1',
+    name: 'Fresh Fruit Bowl',
+    category: 'Breakfast',
+    dietaryCategory: 'vegan',
+    levelNum: 1,
+    recipe: ['apple', 'grapes'],
+    tools: [
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'net', count: 2, emoji: '🥅' },
+      { type: 'wall', count: 4, emoji: '🧱' }
+    ],
+    animalSpawns: [
+      { type: 'squirrel', delay: 3000 },
+      { type: 'bird', delay: 6000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 0, apple: 3, grapes: 3, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: 'Serves 2',
+    prepTime: '5 minutes',
+    recipeInstructions: [
+      'Wash and core the apple, then dice into bite-sized pieces.',
+      'Rinse grapes and remove from stem.',
+      'Combine fruits in a bowl.',
+      'Drizzle with agave or maple syrup if desired.',
+      'Serve chilled.'
+    ]
+  },
+  {
+    id: '2-2',
+    name: 'Bruschetta',
+    category: 'Snacks',
+    dietaryCategory: 'vegan',
+    levelNum: 2,
+    recipe: ['tomato', 'bread'],
+    tools: [
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'wall', count: 4, emoji: '🧱' }
+    ],
+    animalSpawns: [
+      { type: 'raccoon', delay: 3000 },
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 3, carrot: 0, cheese: 0, egg: 0, bread: 3, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: 'Serves 4',
+    prepTime: '10 minutes',
+    recipeInstructions: [
+      'Dice tomatoes and mix with minced garlic, olive oil, and fresh basil.',
+      'Slice bread and toast until golden.',
+      'Rub toast with garlic clove.',
+      'Top with tomato mixture.',
+      'Season with salt and pepper.'
+    ]
+  },
+  {
+    id: '2-3',
+    name: 'Apple Carrot Juice',
+    category: 'Beverages',
+    dietaryCategory: 'vegan',
+    levelNum: 1,
+    recipe: ['apple', 'carrot'],
+    tools: [
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'net', count: 2, emoji: '🥅' },
+      { type: 'wall', count: 4, emoji: '🧱' }
+    ],
+    animalSpawns: [
+      { type: 'squirrel', delay: 3000 },
+      { type: 'rabbit', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 3, cheese: 0, egg: 0, bread: 0, apple: 3, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: 'Serves 2',
+    prepTime: '5 minutes',
+    recipeInstructions: [
+      'Wash and chop apples and carrots.',
+      'Feed through a juicer or blend with water.',
+      'Strain if desired for smoother texture.',
+      'Add a squeeze of lemon for brightness.',
+      'Serve over ice.'
+    ]
+  },
+  // === VEGGIE RECIPES ===
+  {
+    id: '3-1',
+    name: 'Scrambled Eggs',
+    category: 'Breakfast',
+    dietaryCategory: 'veggie',
+    levelNum: 1,
+    recipe: ['egg', 'butter'],
+    tools: [
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'decoy', count: 2, emoji: '🍯' },
+      { type: 'wall', count: 4, emoji: '🧱' }
+    ],
+    animalSpawns: [
+      { type: 'fox', delay: 3000 },
+      { type: 'raccoon', delay: 6000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 3, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 2, chicken: 0, fish: 0 },
+    servings: 'Serves 2',
+    prepTime: '10 minutes',
+    recipeInstructions: [
+      'Crack eggs into a bowl and whisk well.',
+      'Melt butter in a non-stick pan over medium-low heat.',
+      'Pour in eggs and stir gently with a spatula.',
+      'Remove from heat while still slightly soft.',
+      'Season with salt and pepper.'
+    ]
+  },
+  {
+    id: '3-2',
+    name: 'Grilled Cheese',
+    category: 'Lunch',
+    dietaryCategory: 'veggie',
+    levelNum: 2,
+    recipe: ['cheese', 'bread', 'butter'],
+    tools: [
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'net', count: 2, emoji: '🥅' },
+      { type: 'decoy', count: 2, emoji: '🍯' },
+      { type: 'wall', count: 4, emoji: '🧱' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 2000 },
+      { type: 'raccoon', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 3, egg: 0, bread: 3, apple: 0, grapes: 0, bacon: 0, butter: 2, chicken: 0, fish: 0 },
+    servings: 'Serves 1',
+    prepTime: '10 minutes',
+    recipeInstructions: [
+      'Butter one side of each bread slice.',
+      'Place one slice butter-side down in a warm pan.',
+      'Add cheese slices on top.',
+      'Cover with second bread slice, butter-side up.',
+      'Grill until golden on both sides and cheese melts.'
+    ]
+  },
+  {
+    id: '3-3',
+    name: 'Egg Salad',
+    category: 'Salads',
+    dietaryCategory: 'veggie',
+    levelNum: 3,
+    recipe: ['egg', 'lettuce'],
+    tools: [
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'decoy', count: 2, emoji: '🍯' },
+      { type: 'wall', count: 4, emoji: '🧱' }
+    ],
+    animalSpawns: [
+      { type: 'fox', delay: 3000 },
+      { type: 'rabbit', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 3, tomato: 0, carrot: 0, cheese: 0, egg: 3, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: 'Serves 2',
+    prepTime: '15 minutes',
+    recipeInstructions: [
+      'Hard boil eggs, then cool and peel.',
+      'Chop eggs and mix with mayonnaise.',
+      'Add diced celery, salt, and pepper.',
+      'Serve on a bed of fresh lettuce.',
+      'Garnish with paprika.'
+    ]
+  },
+  // === PESCA (FISH) RECIPES ===
+  {
+    id: '4-1',
+    name: 'Fish Tacos',
+    category: 'Dinner',
+    dietaryCategory: 'pesca',
+    levelNum: 1,
+    recipe: ['fish', 'lettuce', 'tomato'],
+    tools: [
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'net', count: 3, emoji: '🥅' },
+      { type: 'wall', count: 4, emoji: '🧱' }
+    ],
+    animalSpawns: [
+      { type: 'bird', delay: 3000 },
+      { type: 'rabbit', delay: 5000 },
+      { type: 'raccoon', delay: 8000 }
+    ],
+    foodSupply: { lettuce: 2, tomato: 2, carrot: 0, cheese: 0, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 3 },
+    servings: 'Serves 4',
+    prepTime: '20 minutes',
+    recipeInstructions: [
+      'Season fish with cumin, paprika, and lime juice.',
+      'Grill or pan-fry until cooked through.',
+      'Shred lettuce and dice tomatoes.',
+      'Warm tortillas and assemble with fish, lettuce, and tomato.',
+      'Top with salsa and sour cream.'
+    ]
+  },
+  {
+    id: '4-2',
+    name: 'Fish and Chips',
+    category: 'Dinner',
+    dietaryCategory: 'pesca',
+    levelNum: 2,
+    recipe: ['fish', 'bread'],
+    tools: [
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'net', count: 3, emoji: '🥅' },
+      { type: 'wall', count: 4, emoji: '🧱' }
+    ],
+    animalSpawns: [
+      { type: 'bird', delay: 2000 },
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 3, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 3 },
+    servings: 'Serves 2',
+    prepTime: '25 minutes',
+    recipeInstructions: [
+      'Cut fish into portions.',
+      'Make batter with flour, breadcrumbs, and seasonings.',
+      'Coat fish in batter and deep fry until golden.',
+      'Serve with tartar sauce.',
+      'Add lemon wedges on the side.'
+    ]
+  },
+  {
+    id: '4-3',
+    name: 'Seafood Salad',
+    category: 'Salads',
+    dietaryCategory: 'pesca',
+    levelNum: 1,
+    recipe: ['fish', 'lettuce', 'carrot'],
+    tools: [
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'net', count: 2, emoji: '🥅' },
+      { type: 'wall', count: 4, emoji: '🧱' }
+    ],
+    animalSpawns: [
+      { type: 'bird', delay: 3000 },
+      { type: 'rabbit', delay: 6000 }
+    ],
+    foodSupply: { lettuce: 3, tomato: 0, carrot: 2, cheese: 0, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 3 },
+    servings: 'Serves 2',
+    prepTime: '15 minutes',
+    recipeInstructions: [
+      'Poach or grill fish, then flake into pieces.',
+      'Arrange lettuce on a plate.',
+      'Shred carrots over the lettuce.',
+      'Top with fish pieces.',
+      'Drizzle with lemon vinaigrette.'
+    ]
+  },
+  // === POLLO (CHICKEN) RECIPES ===
+  {
+    id: '5-1',
+    name: 'Chicken Salad',
+    category: 'Salads',
+    dietaryCategory: 'pollo',
+    levelNum: 1,
+    recipe: ['chicken', 'lettuce', 'tomato'],
+    tools: [
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'net', count: 2, emoji: '🥅' },
+      { type: 'decoy', count: 2, emoji: '🍯' },
+      { type: 'wall', count: 4, emoji: '🧱' }
+    ],
+    animalSpawns: [
+      { type: 'fox', delay: 3000 },
+      { type: 'rabbit', delay: 5000 },
+      { type: 'raccoon', delay: 8000 }
+    ],
+    foodSupply: { lettuce: 3, tomato: 2, carrot: 0, cheese: 0, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 3, fish: 0 },
+    servings: 'Serves 2',
+    prepTime: '20 minutes',
+    recipeInstructions: [
+      'Grill or poach chicken breast until cooked through.',
+      'Let rest, then slice into strips.',
+      'Arrange lettuce and diced tomatoes in a bowl.',
+      'Top with chicken slices.',
+      'Dress with olive oil and lemon juice.'
+    ]
+  },
+  {
+    id: '5-2',
+    name: 'Chicken Sandwich',
+    category: 'Lunch',
+    dietaryCategory: 'pollo',
+    levelNum: 2,
+    recipe: ['chicken', 'bread', 'lettuce'],
+    tools: [
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'net', count: 2, emoji: '🥅' },
+      { type: 'decoy', count: 2, emoji: '🍯' },
+      { type: 'wall', count: 4, emoji: '🧱' }
+    ],
+    animalSpawns: [
+      { type: 'fox', delay: 2000 },
+      { type: 'mouse', delay: 4000 },
+      { type: 'rabbit', delay: 7000 }
+    ],
+    foodSupply: { lettuce: 2, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 3, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 3, fish: 0 },
+    servings: 'Serves 1',
+    prepTime: '15 minutes',
+    recipeInstructions: [
+      'Season and grill chicken breast.',
+      'Toast bread slices lightly.',
+      'Spread mayonnaise on bread.',
+      'Layer chicken and lettuce.',
+      'Close sandwich and cut diagonally.'
+    ]
+  },
+  {
+    id: '5-3',
+    name: 'Roast Chicken Dinner',
+    category: 'Dinner',
+    dietaryCategory: 'pollo',
+    levelNum: 3,
+    recipe: ['chicken', 'carrot', 'butter'],
+    tools: [
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'net', count: 3, emoji: '🥅' },
+      { type: 'decoy', count: 3, emoji: '🍯' },
+      { type: 'wall', count: 4, emoji: '🧱' }
+    ],
+    animalSpawns: [
+      { type: 'fox', delay: 2000 },
+      { type: 'rabbit', delay: 4000 },
+      { type: 'raccoon', delay: 7000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 3, cheese: 0, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 2, chicken: 3, fish: 0 },
+    servings: 'Serves 4',
+    prepTime: '45 minutes',
+    recipeInstructions: [
+      'Rub chicken with butter, salt, and herbs.',
+      'Roast at 375°F until internal temp reaches 165°F.',
+      'Peel and chop carrots, roast alongside chicken.',
+      'Let chicken rest before carving.',
+      'Serve with roasted carrots and pan juices.'
+    ]
+  },
+  // === POLLO-PESCA (CHICKEN OR FISH) RECIPES ===
+  {
+    id: '6-1',
+    name: 'Surf and Turf Salad',
+    category: 'Salads',
+    dietaryCategory: 'pollo-pesca',
+    levelNum: 1,
+    recipe: ['chicken', 'fish', 'lettuce'],
+    tools: [
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'net', count: 3, emoji: '🥅' },
+      { type: 'decoy', count: 3, emoji: '🍯' },
+      { type: 'wall', count: 4, emoji: '🧱' }
+    ],
+    animalSpawns: [
+      { type: 'fox', delay: 2000 },
+      { type: 'bird', delay: 4000 },
+      { type: 'rabbit', delay: 7000 }
+    ],
+    foodSupply: { lettuce: 3, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 2, fish: 2 },
+    servings: 'Serves 2',
+    prepTime: '25 minutes',
+    recipeInstructions: [
+      'Grill chicken breast until cooked through.',
+      'Pan-sear fish fillet with lemon and herbs.',
+      'Arrange lettuce on plates.',
+      'Slice chicken and flake fish over greens.',
+      'Dress with citrus vinaigrette.'
+    ]
+  },
+  {
+    id: '6-2',
+    name: 'Protein Bowl',
+    category: 'Dinner',
+    dietaryCategory: 'pollo-pesca',
+    levelNum: 2,
+    recipe: ['chicken', 'fish', 'carrot', 'lettuce'],
+    tools: [
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'net', count: 3, emoji: '🥅' },
+      { type: 'decoy', count: 3, emoji: '🍯' },
+      { type: 'lid', count: 1, emoji: '🥏' },
+      { type: 'wall', count: 4, emoji: '🧱' }
+    ],
+    animalSpawns: [
+      { type: 'fox', delay: 2000 },
+      { type: 'bird', delay: 3500 },
+      { type: 'rabbit', delay: 5000 },
+      { type: 'raccoon', delay: 8000 }
+    ],
+    foodSupply: { lettuce: 2, tomato: 0, carrot: 2, cheese: 0, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 2, fish: 2 },
+    servings: 'Serves 2',
+    prepTime: '30 minutes',
+    recipeInstructions: [
+      'Grill chicken and fish separately.',
+      'Julienne carrots and arrange in bowl base.',
+      'Add shredded lettuce.',
+      'Slice proteins and arrange over vegetables.',
+      'Top with sesame seeds and teriyaki sauce.'
+    ]
+  },
+  // === ALL FOODS (INCLUDING BACON/MEAT) RECIPES ===
+  {
+    id: '7-1',
+    name: 'BLT Sandwich',
+    category: 'Lunch',
+    dietaryCategory: 'all',
+    levelNum: 1,
+    recipe: ['bacon', 'lettuce', 'tomato', 'bread'],
+    tools: [
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'net', count: 2, emoji: '🥅' },
+      { type: 'decoy', count: 2, emoji: '🍯' },
+      { type: 'wall', count: 4, emoji: '🧱' }
+    ],
+    animalSpawns: [
+      { type: 'fox', delay: 2000 },
+      { type: 'rabbit', delay: 4000 },
+      { type: 'raccoon', delay: 6000 },
+      { type: 'mouse', delay: 8000 }
+    ],
+    foodSupply: { lettuce: 2, tomato: 2, carrot: 0, cheese: 0, egg: 0, bread: 3, apple: 0, grapes: 0, bacon: 3, butter: 0, chicken: 0, fish: 0 },
+    servings: 'Serves 1',
+    prepTime: '15 minutes',
+    recipeInstructions: [
+      'Fry bacon until crispy.',
+      'Toast bread slices.',
+      'Spread mayonnaise on toast.',
+      'Layer bacon, lettuce, and tomato slices.',
+      'Close sandwich and cut in half.'
+    ]
+  },
+  {
+    id: '7-2',
+    name: 'Bacon and Eggs',
+    category: 'Breakfast',
+    dietaryCategory: 'all',
+    levelNum: 2,
+    recipe: ['bacon', 'egg', 'bread', 'butter'],
+    tools: [
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'net', count: 2, emoji: '🥅' },
+      { type: 'decoy', count: 3, emoji: '🍯' },
+      { type: 'wall', count: 4, emoji: '🧱' }
+    ],
+    animalSpawns: [
+      { type: 'fox', delay: 2000 },
+      { type: 'raccoon', delay: 4000 },
+      { type: 'mouse', delay: 6000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 3, bread: 2, apple: 0, grapes: 0, bacon: 3, butter: 2, chicken: 0, fish: 0 },
+    servings: 'Serves 2',
+    prepTime: '15 minutes',
+    recipeInstructions: [
+      'Fry bacon in a pan until crispy.',
+      'Remove bacon and fry eggs in the bacon fat.',
+      'Toast bread and butter generously.',
+      'Plate eggs with bacon on the side.',
+      'Serve with buttered toast.'
+    ]
+  },
+  {
+    id: '7-3',
+    name: 'Club Sandwich',
+    category: 'Lunch',
+    dietaryCategory: 'all',
+    levelNum: 3,
+    recipe: ['chicken', 'bacon', 'lettuce', 'tomato', 'bread'],
+    tools: [
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'net', count: 3, emoji: '🥅' },
+      { type: 'decoy', count: 3, emoji: '🍯' },
+      { type: 'lid', count: 1, emoji: '🥏' },
+      { type: 'wall', count: 4, emoji: '🧱' }
+    ],
+    animalSpawns: [
+      { type: 'fox', delay: 2000 },
+      { type: 'rabbit', delay: 3500 },
+      { type: 'raccoon', delay: 5000 },
+      { type: 'mouse', delay: 7000 }
+    ],
+    foodSupply: { lettuce: 2, tomato: 2, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 3, butter: 0, chicken: 3, fish: 0 },
+    servings: 'Serves 1',
+    prepTime: '20 minutes',
+    recipeInstructions: [
+      'Grill chicken breast and slice thinly.',
+      'Fry bacon until crispy.',
+      'Toast three slices of bread.',
+      'Layer chicken, bacon, lettuce, and tomato between slices.',
+      'Secure with toothpicks and cut into triangles.'
+    ]
+  },
+  {
+    id: '7-4',
+    name: 'Full Breakfast',
+    category: 'Breakfast',
+    dietaryCategory: 'all',
+    levelNum: 4,
+    recipe: ['bacon', 'egg', 'tomato', 'bread', 'butter'],
+    tools: [
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'net', count: 3, emoji: '🥅' },
+      { type: 'decoy', count: 3, emoji: '🍯' },
+      { type: 'lid', count: 1, emoji: '🥏' },
+      { type: 'wall', count: 4, emoji: '🧱' }
+    ],
+    animalSpawns: [
+      { type: 'fox', delay: 2000 },
+      { type: 'raccoon', delay: 3500 },
+      { type: 'mouse', delay: 5000 },
+      { type: 'raccoon', delay: 7000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 2, carrot: 0, cheese: 0, egg: 3, bread: 3, apple: 0, grapes: 0, bacon: 3, butter: 2, chicken: 0, fish: 0 },
+    servings: 'Serves 2',
+    prepTime: '25 minutes',
+    recipeInstructions: [
+      'Fry bacon until crispy, set aside.',
+      'Fry or poach eggs to your preference.',
+      'Grill tomato halves in the pan.',
+      'Toast bread and spread with butter.',
+      'Plate everything together and serve hot.'
+    ]
+  },
+  {
+    id: '7-5',
+    name: 'Cobb Salad',
+    category: 'Salads',
+    dietaryCategory: 'all',
+    levelNum: 5,
+    recipe: ['chicken', 'bacon', 'egg', 'lettuce', 'tomato', 'cheese'],
+    tools: [
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'net', count: 4, emoji: '🥅' },
+      { type: 'decoy', count: 4, emoji: '🍯' },
+      { type: 'lid', count: 2, emoji: '🥏' },
+      { type: 'wall', count: 4, emoji: '🧱' }
+    ],
+    animalSpawns: [
+      { type: 'fox', delay: 2000 },
+      { type: 'rabbit', delay: 3000 },
+      { type: 'mouse', delay: 4000 },
+      { type: 'raccoon', delay: 5500 },
+      { type: 'fox', delay: 7000 }
+    ],
+    foodSupply: { lettuce: 3, tomato: 2, carrot: 0, cheese: 2, egg: 3, bread: 0, apple: 0, grapes: 0, bacon: 3, butter: 0, chicken: 3, fish: 0 },
+    servings: 'Serves 4',
+    prepTime: '30 minutes',
+    recipeInstructions: [
+      'Grill chicken and let rest before slicing.',
+      'Fry bacon until crispy, then crumble.',
+      'Hard boil eggs, then quarter.',
+      'Arrange lettuce as base, add rows of each ingredient.',
+      'Crumble cheese on top and drizzle with dressing.'
     ]
   }
 ];
