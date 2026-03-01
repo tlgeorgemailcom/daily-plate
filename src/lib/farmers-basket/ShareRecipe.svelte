@@ -1,5 +1,5 @@
 <script lang="ts">
-  // All available categories
+  // Meal categories
   const CATEGORIES = [
     'Breakfast',
     'Snacks',
@@ -8,6 +8,16 @@
     'Beverages',
     'Salads',
     'Sides'
+  ];
+  
+  // Dietary preference categories
+  const DIETARY_CATEGORIES = [
+    { id: 'all', name: 'All Foods', emoji: '🍽️', description: 'Includes all ingredients' },
+    { id: 'pollo-pesca', name: 'Pollo-Pesca', emoji: '🐔🐟', description: 'Poultry, seafood, and vegetables' },
+    { id: 'pollo', name: 'Pollo', emoji: '🐔', description: 'Poultry and vegetables only' },
+    { id: 'pesca', name: 'Pesca', emoji: '🐟', description: 'Seafood and vegetables only' },
+    { id: 'veggie', name: 'Veggie', emoji: '🥚🧀', description: 'Vegetarian (eggs/dairy OK)' },
+    { id: 'vegan', name: 'Vegan', emoji: '🌱', description: 'Plant-based only' }
   ];
   
   interface Ingredient {
@@ -31,6 +41,7 @@
   // Form state
   let recipeName = $state('');
   let category = $state('Dinner');
+  let dietaryCategory = $state('all');
   let submitterName = $state('');
   let prepTime = $state('');
   let servings = $state('');
@@ -106,6 +117,7 @@
       const submission = {
         recipeName: recipeName.trim(),
         category,
+        dietaryCategory,
         submitterName: submitterName.trim() || 'Anonymous',
         prepTime: prepTime.trim(),
         servings: servings.trim(),
@@ -184,7 +196,7 @@
           
           <div class="form-row">
             <label class="form-label">
-              Category *
+              Meal Type *
               <select bind:value={category} class="form-select">
                 {#each CATEGORIES as cat}
                   <option value={cat}>{cat}</option>
@@ -201,6 +213,25 @@
                 class="form-input"
               />
             </label>
+          </div>
+          
+          <div class="form-section dietary-section">
+            <h3 class="section-title">🥗 Dietary Category *</h3>
+            <p class="section-hint">Select the most restrictive category this recipe fits</p>
+            <div class="dietary-grid">
+              {#each DIETARY_CATEGORIES as diet}
+                <button
+                  type="button"
+                  class="dietary-btn"
+                  class:selected={dietaryCategory === diet.id}
+                  onclick={() => dietaryCategory = diet.id}
+                >
+                  <span class="dietary-emoji">{diet.emoji}</span>
+                  <span class="dietary-name">{diet.name}</span>
+                  <span class="dietary-desc">{diet.description}</span>
+                </button>
+              {/each}
+            </div>
           </div>
           
           <div class="form-row">
@@ -346,18 +377,24 @@
   }
   
   .close-btn {
-    background: none;
-    border: none;
+    background: #E53935;
+    border: 2px solid white;
     color: white;
     font-size: 1.5rem;
+    font-weight: bold;
     cursor: pointer;
-    padding: 4px 8px;
     line-height: 1;
-    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
   }
   
   .close-btn:hover {
-    background: rgba(255,255,255,0.2);
+    background: #C62828;
   }
   
   .recipe-form {
@@ -602,5 +639,62 @@
     .qty-input {
       width: 100px;
     }
+    
+    .dietary-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  /* Dietary category selection */
+  .dietary-section {
+    margin-top: 8px;
+  }
+  
+  .dietary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 8px;
+  }
+  
+  .dietary-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 8px;
+    background: white;
+    border: 2px solid #E0E0E0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .dietary-btn:hover {
+    border-color: #8B4513;
+    background: #FFF8E7;
+  }
+  
+  .dietary-btn.selected {
+    border-color: #4CAF50;
+    background: #E8F5E9;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+  }
+  
+  .dietary-emoji {
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+  }
+  
+  .dietary-name {
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: #333;
+  }
+  
+  .dietary-desc {
+    font-size: 0.65rem;
+    color: #666;
+    text-align: center;
+    margin-top: 2px;
   }
 </style>

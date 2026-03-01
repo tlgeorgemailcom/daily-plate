@@ -4,7 +4,6 @@
   import { 
     MATCHING_FOODS, 
     getRandomFood,
-    resetFoodHistory,
     canCatch, 
     isValidMeal, 
     getContainerEmoji,
@@ -89,7 +88,7 @@
     score = 0;
     trainingCorrect = 0;
     gameState = 'playing';
-    resetFoodHistory();  // Clear food history for fresh randomization
+    // Food history now persists across games - no reset needed
     // Defer spawning until game area is rendered
     setTimeout(() => {
       if (gameAreaEl) {
@@ -109,7 +108,7 @@
     level = 1;
     wordsMatched = 0;
     gameState = 'playing';
-    resetFoodHistory();  // Clear food history for fresh randomization
+    // Food history now persists across games - no reset needed
     // Defer spawning until game area is rendered
     setTimeout(() => {
       if (gameAreaEl) {

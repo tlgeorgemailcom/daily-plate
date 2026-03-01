@@ -29,11 +29,12 @@
 <style>
   .farmer {
     position: absolute;
-    font-size: 36px;
+    font-size: 48px;
     transform: translate(-50%, -50%);
-    z-index: 20;
+    z-index: 10;
     user-select: none;
     cursor: grab;
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.3));
   }
   
   .farmer:active {

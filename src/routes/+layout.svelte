@@ -24,7 +24,9 @@
 </script>
 
 {#if $isAuthenticated}
-  <div class="app">
+  <!-- Use full-width layout for games that need more space -->
+  {@const isFullWidthGame = $page.url.pathname === '/farmers-basket' || $page.url.pathname === '/tower'}
+  <div class="app" class:full-width={isFullWidthGame}>
     <div class="nav-wrapper">
     <nav>
       <a href="/chain" class:active={$page.url.pathname === '/chain'}>
@@ -103,6 +105,16 @@
     max-width: 600px;
     margin: 0 auto;
     padding: var(--spacing-md);
+  }
+  
+  .app.full-width {
+    max-width: none;
+    padding: 0;
+    overflow-y: auto;
+  }
+  
+  .app.full-width main {
+    padding: 0;
   }
 
   .nav-wrapper {

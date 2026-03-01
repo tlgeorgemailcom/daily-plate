@@ -13,9 +13,10 @@
     selectedTool: ToolType | null;
     onselect: (tool: ToolType | null) => void;
     ontouchdragstart?: (tool: ToolType) => void;  // For mobile touch drag
+    scale?: number;  // Scale factor for mobile
   }
   
-  let { tools, selectedTool, onselect, ontouchdragstart }: Props = $props();
+  let { tools, selectedTool, onselect, ontouchdragstart, scale = 1 }: Props = $props();
   
   function handleClick(tool: ToolSlot) {
     if (!tool.unlocked) return;
@@ -86,17 +87,20 @@
 <style>
   .toolbar {
     display: flex;
-    gap: 8px;
-    padding: 8px 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    padding: 6px 10px;
     background: rgba(139, 69, 19, 0.9);
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    max-width: 100%;
   }
   
   .tool-slot {
     position: relative;
-    width: 50px;
-    height: 50px;
+    width: 44px;
+    height: 44px;
     background: #F5DEB3;
     border: 2px solid #8B4513;
     border-radius: 8px;
@@ -106,6 +110,18 @@
     justify-content: center;
     transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
     touch-action: none; /* Prevent browser touch gestures */
+  }
+  
+  /* Larger on bigger screens */
+  @media (min-width: 400px) {
+    .toolbar {
+      gap: 8px;
+      padding: 8px 12px;
+    }
+    .tool-slot {
+      width: 50px;
+      height: 50px;
+    }
   }
   
   .tool-slot:active:not(.disabled) {

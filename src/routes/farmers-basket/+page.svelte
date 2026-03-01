@@ -17,15 +17,57 @@
   
   let game = createGameState();
   
-  // Recipe book modal state - always show recipe book on load
+  // Recipe book modal state - start open to show Recipe of the Day
   let showRecipeBook = $state(true);
+  let showRecipeOfDay = $state(true);
   
   // Share recipe modal state
   let showShareRecipe = $state(false);
   
+  // Rules modal state
+  let showRules = $state(false);
+  
   // Touch controls - target position for farmer to walk toward
   let touchTarget: { x: number; y: number } | null = $state(null);
   let gameAreaElement: HTMLDivElement | null = null;
+  
+  // Responsive scaling for mobile
+  let gameScale = $state(1);
+  let scaledWidth = $derived(GRID_WIDTH * gameScale);
+  let scaledHeight = $derived(TOTAL_HEIGHT * gameScale);
+  
+  // Calculate scale based on available space
+  function updateGameScale() {
+    if (typeof window === 'undefined') return;
+    
+    // Available space - minimal padding (5px each side = 10px)
+    const containerPadding = 10;
+    const availableWidth = window.innerWidth - containerPadding;
+    const availableHeight = window.innerHeight - 220; // Room for header, toolbar, footer
+    
+    // Calculate scale to fit entirely within viewport
+    const scaleX = availableWidth / GRID_WIDTH;
+    const scaleY = availableHeight / TOTAL_HEIGHT;
+    
+    // Use the smaller scale to ensure it fits, cap at 1 (don't enlarge on desktop)
+    const newScale = Math.min(scaleX, scaleY, 1);
+    
+    // Minimum scale to keep game playable (0.35 for very small phones)
+    gameScale = Math.max(newScale, 0.35);
+  }
+  
+  onMount(() => {
+    updateGameScale();
+    window.addEventListener('resize', updateGameScale);
+    window.addEventListener('orientationchange', updateGameScale);
+  });
+  
+  onDestroy(() => {
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('resize', updateGameScale);
+      window.removeEventListener('orientationchange', updateGameScale);
+    }
+  });
   
   // Mouse controls for desktop farmer movement
   let isDraggingFarmerMouse = false;
@@ -461,23 +503,20 @@
     const x = (touch.clientX - rect.left) / scale;
     const y = (touch.clientY - rect.top) / scale;
     
-    // Check if touch started near the farmer (within 50px)
+    // Check if touch started near the farmer (within 60px for easier touch on mobile)
     const farmerDist = Math.sqrt(
       Math.pow(x - game.farmer.position.x, 2) + 
       Math.pow(y - game.farmer.position.y, 2)
     );
-    isDraggingFarmer = farmerDist < 50;
+    isDraggingFarmer = farmerDist < 60;
     
     // Track for tap gesture detection
     touchStartTime = Date.now();
     touchStartPos = { x, y };
     hasMoved = false;
     
-    // Don't set touchTarget yet - wait until user actually drags
-    // This prevents the farmer from jumping on tap
-    if (isDraggingFarmer) {
-      e.preventDefault();
-    }
+    // Prevent default to stop scroll interference when touching game area
+    e.preventDefault();
   }
   
   function handleTouchMove(e: TouchEvent) {
@@ -583,15 +622,24 @@
 </svelte:head>
 
 <div class="game-container">
+  
   <header class="header">
     <div class="header-top">
       <h1>🧑‍🌾 Farmer's Basket</h1>
-      <button class="recipe-book-btn" onclick={() => showRecipeBook = true}>
-        📖 Recipes
-      </button>
+      <div class="header-buttons">
+        <button class="rules-btn" onclick={() => showRules = true}>
+          Rules
+        </button>
+        <button class="recipe-book-btn" onclick={() => { showRecipeOfDay = false; showRecipeBook = true; }}>
+          📖 Recipes
+        </button>
+      </div>
     </div>
     <div class="level-info">
-      Level {game.currentLevel?.id ?? '?'}: {game.currentLevel?.name ?? 'Loading...'}
+      Level {game.currentLevel?.id ?? '?'}: {game.currentLevel?.name ?? 'Loading...'} 
+      <span style="color: {game.gameStatus === 'playing' ? 'green' : 'red'}; font-weight: bold;">
+        [{game.gameStatus}]
+      </span>
     </div>
     <div class="recipe-display">
       <span class="recipe-label">Collect:</span>
@@ -636,11 +684,13 @@
     </div>
   {/if}
   
-  <div 
-    class="game-area"
-    class:placing-mode={game.selectedTool !== null}
-    class:dragging-farmer={isDraggingFarmerMouse}
-    style="width: {GRID_WIDTH}px; height: {TOTAL_HEIGHT}px;"
+  <!-- Scaled game wrapper - takes up scaled dimensions -->
+  <div class="game-scale-wrapper" style="width: {scaledWidth}px; height: {scaledHeight}px;">
+    <div 
+      class="game-area"
+      class:placing-mode={game.selectedTool !== null}
+      class:dragging-farmer={isDraggingFarmerMouse}
+      style="width: {GRID_WIDTH}px; height: {TOTAL_HEIGHT}px; transform: scale({gameScale}); transform-origin: top left;"
     onclick={handleGameClick}
     onmousedown={handleMouseDown}
     onmousemove={handleMouseMove}
@@ -748,6 +798,7 @@
       contents={collectedFood}
     />
   </div>
+  </div> <!-- end game-scale-wrapper -->
   
   <!-- Game status overlays -->
   {#if game.gameStatus === 'won'}
@@ -830,6 +881,12 @@
       <span class="gesture-text">Drag to move • Tap when near {game.farmer.carrying ? 'basket 🧺' : 'food 🥬'}</span>
     </div>
   </div>
+  
+  <!-- Scroll indicator for mobile -->
+  <div class="scroll-indicator">
+    <span class="scroll-arrow up">▲</span>
+    <span class="scroll-arrow down">▼</span>
+  </div>
 </div>
 
 <!-- Recipe Book Modal -->
@@ -838,9 +895,11 @@
     levels={game.allLevels}
     completedLevels={game.completedLevels}
     currentLevelId={game.currentLevel?.id ?? null}
-    onselect={(id) => { game.loadLevel(id); game.startLevel(); showRecipeBook = false; }}
+    startWithRecipeOfDay={showRecipeOfDay}
+    onselect={(id) => { game.loadLevel(id); game.startLevel(); showRecipeBook = false; showRecipeOfDay = true; }}
     onclose={() => { 
       showRecipeBook = false;
+      showRecipeOfDay = true;
       // Auto-start if game is in ready state
       if (game.gameStatus === 'ready') {
         game.startLevel();
@@ -858,20 +917,89 @@
   />
 {/if}
 
+<!-- Rules Modal -->
+{#if showRules}
+  <div class="modal-backdrop" onclick={() => showRules = false}>
+    <div class="rules-modal" onclick={(e) => e.stopPropagation()}>
+      <header class="rules-header">
+        <h3>📖 How to Play</h3>
+        <button class="modal-close-x" onclick={() => showRules = false} aria-label="Close">×</button>
+      </header>
+      
+      <div class="rules-content">
+        <p><strong>🧑‍🌾 Help the farmer collect ingredients!</strong></p>
+        
+        <h4>Goal</h4>
+        <p>Collect all the foods shown in the recipe before the animals steal them!</p>
+        
+        <h4>Controls</h4>
+        <ul>
+          <li><strong>Move:</strong> Tap/click where you want the farmer to walk, or drag the farmer</li>
+          <li><strong>Pick up:</strong> Tap a food source that the farmer is near to collect it</li>
+          <li><strong>Drop off:</strong> Tap the basket when the farmer is near to deposit the food</li>
+          <li><strong>Place tools:</strong> Select a tool, then tap in a cell or drag to place it on the field</li>
+        </ul>
+        
+        <h4>Barriers & Tools</h4>
+        <ul>
+          <li>🧱 <strong>Bricks</strong> - Impassable for all ground animals AND farmer. Only birds fly over.</li>
+          <li>🚧 <strong>Fence</strong> - Mouse passes instantly. Rabbit squeezes through (0.5s). Squirrel climbs (2s). Blocks fox/raccoon.</li>
+          <li>🥅 <strong>Net</strong> - Rabbit digs under (4s). Mouse squeezes (1.5s). Squirrel climbs (2.5s). Blocks fox/raccoon.</li>
+          <li>🍯 <strong>Honey Pot</strong> - Distracts all animals as they stop to eat the honey.</li>
+          <li>🥏 <strong>Lid</strong> - Covers the basket so no animal can steal from it.</li>
+          <li>🎃 <strong>Scarecrow</strong> - Repels birds from nearby cells.</li>
+        </ul>
+        
+        <h4>Tips</h4>
+        <ul>
+          <li>The farmer cannot walk through barriers or animals - reposition them if stuck!</li>
+          <li>Different animals target different foods (rabbits love carrots, mice love cheese, etc.)</li>
+          <li>Place barriers strategically to slow or block animal paths!</li>
+        </ul>
+      </div>
+      
+      <button class="modal-close-btn" onclick={() => showRules = false}>
+        Got it!
+      </button>
+    </div>
+  </div>
+{/if}
+
 <style>
+  .header {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
   .game-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    min-height: 100dvh;
     background: linear-gradient(180deg, #87CEEB 0%, #90EE90 100%);
-    padding: 20px;
+    padding: 5px;
     font-family: system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
   }
   
-  .header {
-    text-align: center;
+  /* Scroll indicator - no longer needed since we use scaling */
+  .scroll-indicator-edge {
+    display: none;
+  }
+
+  .game-scale-wrapper {
+    position: relative;
+    overflow: hidden;
+    /* Width and height set via inline style based on scale */
+  }
+  
+  .toolbar-area {
     margin-bottom: 10px;
+    overflow: hidden; /* Contain the scaled toolbar */
   }
   
   .header-top {
@@ -888,6 +1016,34 @@
     text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
   }
   
+  .header-buttons {
+    display: flex;
+    gap: 8px;
+  }
+
+  .rules-btn {
+    background: #607D8B;
+    color: white;
+    border: 2px solid #455A64;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+
+  .rules-btn:hover {
+    background: #78909C;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  }
+
+  .rules-btn:active {
+    transform: translateY(0);
+  }
+
   .recipe-book-btn {
     background: #8B4513;
     color: white;
@@ -997,10 +1153,6 @@
     50% { transform: scale(1.2); }
   }
   
-  .toolbar-area {
-    margin-bottom: 10px;
-  }
-  
   /* Theft notifications area */
   .theft-notifications {
     display: flex;
@@ -1071,8 +1223,9 @@
     border: 4px solid #5D4037;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    overflow: hidden;
     cursor: default;
+    touch-action: none; /* Prevent browser gestures - game handles all touch */
+    overflow: visible; /* Ensure children aren't clipped */
   }
   
   .game-area.placing-mode {
@@ -1374,31 +1527,56 @@
     font-weight: 500;
   }
   
+  /* Scroll indicator - narrow strip on right edge */
+  .scroll-indicator {
+    display: none; /* Hidden by default, show on mobile */
+    position: fixed;
+    right: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 3px;
+    background: rgba(139, 69, 19, 0.7);
+    border-radius: 10px;
+    z-index: 100;
+  }
+  
+  .scroll-arrow {
+    color: white;
+    font-size: 12px;
+    opacity: 0.9;
+    animation: scroll-bounce 1.5s ease-in-out infinite;
+  }
+  
+  .scroll-arrow.up {
+    animation-delay: 0s;
+  }
+  
+  .scroll-arrow.down {
+    animation-delay: 0.75s;
+  }
+  
+  @keyframes scroll-bounce {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+  
   .mobile-hint {
     display: none;
   }
   
-  /* Tablet sizing (larger game) */
-  @media (min-width: 768px) and (max-width: 1024px) and (pointer: coarse) {
-    .game-area {
-      transform: scale(1.2);
-      transform-origin: top center;
-      margin-bottom: 80px;
-    }
-  }
-  
-  /* Large tablet / iPad Pro */
-  @media (min-width: 1024px) and (pointer: coarse) {
-    .game-area {
-      transform: scale(1.4);
-      transform-origin: top center;
-      margin-bottom: 150px;
-    }
-  }
+  /* Tablet sizing - now handled by JS scaling */
+  /* Removed transform overrides that conflict with JS scaling */
   
   /* Responsive: show mobile controls on touch devices */
   @media (pointer: coarse), (max-width: 768px) {
     .mobile-controls {
+      display: flex;
+    }
+    
+    .scroll-indicator {
       display: flex;
     }
     
@@ -1410,13 +1588,9 @@
       display: block;
     }
     
-    .game-area {
-      max-width: calc(100vw - 20px);
-      touch-action: none;
-    }
-    
     .game-container {
       padding: 10px;
+      min-height: auto; /* Allow scrolling beyond viewport */
     }
     
     .header h1 {
@@ -1424,12 +1598,86 @@
     }
   }
   
-  /* Phone (smaller screens) - scale down if needed */
-  @media (max-width: 620px) and (pointer: coarse) {
-    .game-area {
-      transform: scale(calc((100vw - 20px) / 600));
-      transform-origin: top center;
-      margin-bottom: -50px;
+  /* Small screens */
+  @media (max-width: 680px) {
+    .game-container {
+      padding: 8px;
+    }
+    
+    .header h1 {
+      font-size: 1.3rem;
+    }
+    
+    .header-buttons {
+      gap: 4px;
+    }
+    
+    .rules-btn, .recipe-book-btn {
+      padding: 4px 8px;
+      font-size: 0.85rem;
+    }
+  }
+  
+  /* Very small screens */
+  @media (max-width: 400px) {
+    .game-container {
+      padding: 6px;
+      padding-right: 35px;
+    }
+    
+    .header h1 {
+      font-size: 1.1rem;
+    }
+    
+    .level-info {
+      font-size: 0.85rem;
+    }
+    
+    .recipe-item {
+      font-size: 1.2rem;
+    }
+    
+    .toolbar-area {
+      margin-bottom: 4px;
+    }
+  }
+  
+  /* Landscape on small screens */
+  @media (max-height: 500px) and (orientation: landscape) {
+    .game-container {
+      padding: 4px;
+      min-height: auto;
+    }
+    
+    .header h1 {
+      font-size: 1rem;
+    }
+    
+    .level-info {
+      font-size: 0.75rem;
+    }
+    
+    .recipe-display {
+      gap: 2px;
+    }
+    
+    .recipe-item {
+      font-size: 1rem;
+    }
+    
+    .toolbar-area {
+      margin-bottom: 2px;
+    }
+    
+    .theft-notifications {
+      max-height: 40px;
+    }
+  }
+  
+  /* Landscape on phone touch devices - add scroll padding on right */
+  @media (pointer: coarse) and (max-height: 500px) and (orientation: landscape) {
+    .game-container {
+      padding-right: 40px; /* Space for scroll area in landscape */
     }
   }
   
@@ -1437,5 +1685,99 @@
     .mobile-hint {
       display: none;
     }
+  }
+
+  /* Rules Modal */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .rules-modal {
+    background: white;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  
+  .rules-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: #8B4513;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .rules-header h3 {
+    margin: 0;
+    color: white;
+    font-size: 1.1rem;
+  }
+  
+  .modal-close-x {
+    background: #E53935;
+    border: 2px solid white;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .modal-close-x:hover {
+    background: #C62828;
+  }
+
+  .rules-content {
+    font-size: 0.9rem;
+    color: #333;
+    padding: 1rem 1.5rem;
+  }
+
+  .rules-content h4 {
+    margin: 1rem 0 0.5rem;
+    color: #5D4037;
+  }
+
+  .rules-content ul {
+    margin: 0.5rem 0;
+    padding-left: 1.25rem;
+  }
+
+  .rules-content li {
+    margin: 0.25rem 0;
+  }
+
+  .modal-close-btn {
+    display: block;
+    width: calc(100% - 3rem);
+    margin: 1rem 1.5rem 1.5rem;
+    padding: 0.75rem;
+    background: #8B4513;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .modal-close-btn:hover {
+    background: #A0522D;
   }
 </style>

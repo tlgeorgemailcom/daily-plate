@@ -80,10 +80,14 @@ export interface BasketItem {
   collected: boolean;
 }
 
+// Dietary preference categories
+export type DietaryCategory = 'all' | 'pollo-pesca' | 'pollo' | 'pesca' | 'veggie' | 'vegan';
+
 export interface Level {
   id: string;
   name: string;
   category: string;
+  dietaryCategory: DietaryCategory; // Dietary restriction this recipe fits
   levelNum: number;
   recipe: FoodType[];
   tools: Tool[];

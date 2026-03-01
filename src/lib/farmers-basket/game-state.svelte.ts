@@ -102,6 +102,7 @@ export const LEVELS: Level[] = [
     id: '1-1',
     name: 'Simple Salad',
     category: 'Salads',
+    dietaryCategory: 'vegan',
     levelNum: 1,
     recipe: ['lettuce'],
     tools: [
@@ -123,6 +124,7 @@ export const LEVELS: Level[] = [
     id: '1-2',
     name: 'Garden Salad',
     category: 'Salads',
+    dietaryCategory: 'vegan',
     levelNum: 2,
     recipe: ['lettuce', 'tomato'],
     tools: [
@@ -145,6 +147,7 @@ export const LEVELS: Level[] = [
     id: '1-3',
     name: 'Veggie Platter',
     category: 'Sides',
+    dietaryCategory: 'vegan',
     levelNum: 1,
     recipe: ['lettuce', 'tomato', 'carrot'],
     tools: [
@@ -171,6 +174,7 @@ export const LEVELS: Level[] = [
     id: '1-4',
     name: 'Cheese Snack',
     category: 'Snacks',
+    dietaryCategory: 'veggie',
     levelNum: 1,
     recipe: ['lettuce', 'cheese', 'bread'],
     tools: [
@@ -198,6 +202,7 @@ export const LEVELS: Level[] = [
     id: '1-5',
     name: 'Full Garden Salad',
     category: 'Salads',
+    dietaryCategory: 'veggie',
     levelNum: 3,
     recipe: ['lettuce', 'tomato', 'carrot', 'cheese'],
     tools: [
@@ -255,17 +260,21 @@ export function createGameState() {
   }
   
   function loadCurrentLevel(): Level {
-    if (typeof window === 'undefined') return LEVELS[0];
-    try {
-      const savedId = localStorage.getItem(CURRENT_LEVEL_KEY);
-      if (savedId) {
-        const found = LEVELS.find(l => l.id === savedId);
-        if (found) return found;
-      }
-    } catch (e) {
-      console.warn('Failed to load current level:', e);
-    }
-    return LEVELS[0];
+    // Always use daily level on page load for consistent daily experience
+    return getDailyLevel();
+  }
+  
+  // Get daily level based on current date (cycles through all levels)
+  function getDailyLevel(): Level {
+    const today = new Date();
+    const daysSinceEpoch = Math.floor(today.getTime() / 86400000);
+    const levelIndex = daysSinceEpoch % LEVELS.length;
+    return LEVELS[levelIndex];
+  }
+  
+  // Get daily level ID (exposed for components)
+  function getDailyLevelId(): string {
+    return getDailyLevel().id;
   }
   
   function saveCurrentLevel(levelId: string) {
@@ -383,13 +392,15 @@ export function createGameState() {
       .map(([type, qty]) => ({ type: type as FoodType, qty }));
     
     // Position food sources in the pantry row (row 9, below main game grid)
-    // Spread evenly across available columns
+    // Spread evenly with more spacing (skip columns for wider gaps)
     const totalFoods = availableFoods.length;
-    const startCol = Math.floor((GRID_COLS - totalFoods) / 2); // Center the sources
+    const spacing = totalFoods <= 3 ? 2 : (totalFoods <= 5 ? 1.5 : 1); // More space for fewer items
+    const totalSpan = (totalFoods - 1) * spacing;
+    const startCol = (GRID_COLS - totalSpan) / 2; // Center the sources
     
     foodSources = availableFoods.map((food, i) => ({
       type: food.type,
-      position: gridToPixel({ col: startCol + i, row: PANTRY_ROW }),
+      position: gridToPixel({ col: Math.round(startCol + i * spacing), row: PANTRY_ROW }),
       remaining: food.qty
     }));
     
@@ -1149,6 +1160,19 @@ export function createGameState() {
         );
         if (animalCollision) continue;
         
+        // Birds are repelled by scarecrows - avoid cells on or adjacent to scarecrow
+        if (canFly) {
+          const nearScarecrow = barriers.some(barrier => {
+            if (barrier.type !== 'scarecrow') return false;
+            const scarecrowGrid = pixelToGrid(barrier.position);
+            const distCol = Math.abs(scarecrowGrid.col - newCol);
+            const distRow = Math.abs(scarecrowGrid.row - newRow);
+            // Repel if within 1 cell (including diagonals)
+            return distCol <= 1 && distRow <= 1;
+          });
+          if (nearScarecrow) continue; // Bird won't go near scarecrow
+        }
+        
         // Move to new cell
         const newDirection: Direction = move.col > 0 ? 'right' : move.col < 0 ? 'left' : move.row > 0 ? 'down' : 'up';
         
@@ -1333,7 +1357,8 @@ export function createGameState() {
     moveBarrier,
     nextLevel,
     loadLevel,
-    addCommunityRecipes
+    addCommunityRecipes,
+    getDailyLevelId
   };
 }
 

@@ -33,12 +33,12 @@
 <style>
   .food-source {
     position: absolute;
-    font-size: 28px;
+    font-size: 40px;
     transform: translate(-50%, -50%);
     background: none;
     border: none;
     cursor: pointer;
-    padding: 8px;
+    padding: 10px;
     border-radius: 50%;
     transition: transform 0.2s, filter 0.2s;
     z-index: 3;

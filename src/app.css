@@ -48,6 +48,8 @@ html, body {
   background: linear-gradient(180deg, #e8f5e9 0%, #fff8e1 100%);
   min-height: 100vh;
   color: #333;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 h1, h2, h3 {

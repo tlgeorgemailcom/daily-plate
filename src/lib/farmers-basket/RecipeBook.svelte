@@ -1,8 +1,9 @@
 <script lang="ts">
-  import type { Level, FoodType } from './types';
+  import { onMount } from 'svelte';
+  import type { Level, FoodType, DietaryCategory } from './types';
   import { FOOD_EMOJI } from './types';
   
-  // All available categories (shown even if empty)
+  // All available meal categories (shown even if empty)
   const ALL_CATEGORIES = [
     'Breakfast',
     'Snacks',
@@ -13,8 +14,28 @@
     'Sides'
   ];
   
-  // Recipe of the Day ID (Simple Salad for now)
-  const RECIPE_OF_THE_DAY_ID = '1-1';
+  // Dietary preference categories
+  const DIETARY_CATEGORIES: { id: DietaryCategory; name: string; emoji: string; description: string }[] = [
+    { id: 'all', name: 'All Foods', emoji: '🍽️', description: 'All ingredients' },
+    { id: 'pollo-pesca', name: 'Pollo-Pesca', emoji: '🐔🐟', description: 'Poultry & seafood' },
+    { id: 'pollo', name: 'Pollo', emoji: '🐔', description: 'Poultry only' },
+    { id: 'pesca', name: 'Pesca', emoji: '🐟', description: 'Seafood only' },
+    { id: 'veggie', name: 'Veggie', emoji: '🥚🧀', description: 'Vegetarian' },
+    { id: 'vegan', name: 'Vegan', emoji: '🌱', description: 'Plant-based' }
+  ];
+  
+  // Dietary hierarchy: which categories include which
+  // 'all' includes everything, 'vegan' is most restrictive
+  const DIETARY_INCLUDES: Record<DietaryCategory, DietaryCategory[]> = {
+    'all': ['all', 'pollo-pesca', 'pollo', 'pesca', 'veggie', 'vegan'],
+    'pollo-pesca': ['pollo-pesca', 'pollo', 'pesca', 'veggie', 'vegan'],
+    'pollo': ['pollo', 'veggie', 'vegan'],
+    'pesca': ['pesca', 'veggie', 'vegan'],
+    'veggie': ['veggie', 'vegan'],
+    'vegan': ['vegan']
+  };
+  
+  const DIETARY_STORAGE_KEY = 'farmers-basket-dietary-preference';
   
   interface Props {
     levels: Level[];
@@ -23,18 +44,59 @@
     onselect: (levelId: string) => void;
     onclose: () => void;
     onshare?: () => void;
+    startWithRecipeOfDay?: boolean;
   }
   
-  let { levels, completedLevels, currentLevelId, onselect, onclose, onshare }: Props = $props();
+  let { levels, completedLevels, currentLevelId, onselect, onclose, onshare, startWithRecipeOfDay = false }: Props = $props();
   
-  // View states: 'recipe-of-day' | 'index' | 'detail'
-  let showRecipeOfDay = $state(true);
+  // View states: 'dietary-select' | 'recipe-of-day' | 'index' | 'detail'
+  let showDietarySelect = $state(false);
+  let showRecipeOfDay = $state(startWithRecipeOfDay);
+  
+  // Dietary preference (loaded from localStorage)
+  let dietaryPreference = $state<DietaryCategory>('all');
+  
+  // Load dietary preference on mount
+  onMount(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem(DIETARY_STORAGE_KEY);
+      if (saved && DIETARY_CATEGORIES.some(d => d.id === saved)) {
+        dietaryPreference = saved as DietaryCategory;
+        showDietarySelect = false;
+      } else {
+        // First time: show dietary selector
+        showDietarySelect = true;
+        showRecipeOfDay = false;
+      }
+    }
+  });
+  
+  // Save dietary preference
+  function setDietaryPreference(pref: DietaryCategory) {
+    dietaryPreference = pref;
+    if (typeof window !== 'undefined') {
+      localStorage.setItem(DIETARY_STORAGE_KEY, pref);
+    }
+    showDietarySelect = false;
+    showRecipeOfDay = false;
+  }
+  
+  // Filter levels by dietary preference
+  let filteredLevels = $derived(
+    levels.filter(l => DIETARY_INCLUDES[dietaryPreference].includes(l.dietaryCategory))
+  );
   
   // Which level is expanded (null = show index view)
   let selectedLevel = $state<Level | null>(null);
   
-  // Recipe of the Day
-  let recipeOfTheDay = $derived(levels.find(l => l.id === RECIPE_OF_THE_DAY_ID) || levels[0]);
+  // Recipe of the Day - daily recipe for current dietary preference
+  let recipeOfTheDay = $derived(() => {
+    const eligible = filteredLevels;
+    if (eligible.length === 0) return levels[0]; // Fallback
+    const msPerDay = 24 * 60 * 60 * 1000;
+    const daysSinceEpoch = Math.floor(Date.now() / msPerDay);
+    return eligible[daysSinceEpoch % eligible.length];
+  });
   
   // Search/filter
   let searchQuery = $state('');
@@ -42,15 +104,15 @@
   // Collapsed categories (set of category names that are collapsed)
   let collapsedCategories = $state<Set<string>>(new Set());
   
-  // Group levels by category
+  // Group filtered levels by category
   let categoryGroups = $derived(() => {
     const groups = new Map<string, Level[]>();
     // Initialize all categories (even empty ones)
     for (const cat of ALL_CATEGORIES) {
       groups.set(cat, []);
     }
-    // Fill with actual levels
-    for (const level of levels) {
+    // Fill with filtered levels
+    for (const level of filteredLevels) {
       const categoryLevels = groups.get(level.category) || [];
       categoryLevels.push(level);
       groups.set(level.category, categoryLevels);
@@ -61,7 +123,7 @@
   // Use predefined category order
   let categories = ALL_CATEGORIES;
   
-  // Category completion stats
+  // Category completion stats (based on filtered levels)
   let categoryStats = $derived(() => {
     const stats = new Map<string, { completed: number; total: number }>();
     for (const category of ALL_CATEGORIES) {
@@ -72,11 +134,11 @@
     return stats;
   });
   
-  // Filtered levels based on search (searches all categories)
+  // Filtered levels based on search (searches filtered categories)
   let isSearching = $derived(searchQuery.trim().length > 0);
   let searchResults = $derived(
     isSearching
-      ? levels.filter(l => 
+      ? filteredLevels.filter(l => 
           l.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
           l.category.toLowerCase().includes(searchQuery.toLowerCase())
         )
@@ -185,27 +247,56 @@
         <h2>📖 Recipe Book</h2>
       {/if}
       <div class="header-actions">
-        <span class="level-count">{completedLevels.size}/{levels.length} ✓</span>
+        <span class="level-count">{completedLevels.size}/{filteredLevels.length} ✓</span>
         {#if onshare}
           <button class="share-btn" onclick={onshare} aria-label="Share a recipe">
             📝 Share
           </button>
         {/if}
-        <button class="close-btn" onclick={handleClose} aria-label="Close">×</button>
+        <button class="close-btn" onclick={onclose} aria-label="Close">✕</button>
       </div>
     </header>
     
-    {#if showRecipeOfDay && !selectedLevel && recipeOfTheDay && completedLevels.size === 0}
-      <!-- RECIPE OF THE DAY VIEW (only for new players) -->
+    {#if showDietarySelect && !selectedLevel}
+      <!-- DIETARY PREFERENCE SELECTOR (first-time users or change preference) -->
+      <div class="dietary-select">
+        <div class="dietary-header">
+          <h3>🥗 Choose Your Food Preference</h3>
+          <p>Select what kinds of foods you'd like in your recipes</p>
+        </div>
+        
+        <div class="dietary-grid">
+          {#each DIETARY_CATEGORIES as diet}
+            <button
+              class="dietary-btn"
+              class:selected={dietaryPreference === diet.id}
+              onclick={() => setDietaryPreference(diet.id)}
+            >
+              <span class="dietary-emoji">{diet.emoji}</span>
+              <span class="dietary-name">{diet.name}</span>
+              <span class="dietary-desc">{diet.description}</span>
+            </button>
+          {/each}
+        </div>
+        
+        <p class="dietary-hint">You can change this anytime in the Recipe Book</p>
+      </div>
+    {:else if showRecipeOfDay && !selectedLevel && recipeOfTheDay()}
+      <!-- RECIPE OF THE DAY VIEW -->
+      {@const todaysRecipe = recipeOfTheDay()}
+      {@const currentDiet = DIETARY_CATEGORIES.find(d => d.id === dietaryPreference)}
       <div class="recipe-of-day">
+        <button class="diet-badge" onclick={() => showDietarySelect = true} title="Change food preference">
+          {currentDiet?.emoji} {currentDiet?.name}
+        </button>
         <div class="cotd-badge">🌟 Recipe of the Day</div>
         
         <div class="cotd-card">
-          <h3 class="cotd-name">{recipeOfTheDay.name}</h3>
-          <span class="cotd-category">{recipeOfTheDay.category}</span>
+          <h3 class="cotd-name">{todaysRecipe.name}</h3>
+          <span class="cotd-category">{todaysRecipe.category}</span>
           
           <div class="cotd-ingredients">
-            {#each recipeOfTheDay.recipe as food}
+            {#each todaysRecipe.recipe as food}
               <span class="cotd-ingredient" title={food}>{FOOD_EMOJI[food]}</span>
             {/each}
           </div>
@@ -213,7 +304,7 @@
           <div class="cotd-actions">
             <button 
               class="cotd-play-btn"
-              onclick={() => handleSelect(recipeOfTheDay)}
+              onclick={() => handleSelect(todaysRecipe)}
             >
               ▶ Make This Recipe
             </button>
@@ -277,6 +368,11 @@
         </button>
       </div>
     {:else}
+      <!-- Recipe of the Day link -->
+      <button class="rotd-link" onclick={() => showRecipeOfDay = true}>
+        🌟 Today's Recipe: {recipeOfTheDay()?.name}
+      </button>
+      
       <!-- INDEX VIEW: Category tabs + recipes -->
       <div class="index-layout">
         <!-- Side tabs for categories (like rolodex dividers) -->
@@ -501,18 +597,59 @@
     background: rgba(255,255,255,0.35);
   }
   
+  .header-diet-btn {
+    background: rgba(255,255,255,0.25);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 4px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.2s;
+  }
+  
+  .header-diet-btn:hover {
+    background: rgba(255,255,255,0.4);
+    transform: scale(1.1);
+  }
+  
   .close-btn {
-    background: none;
-    border: none;
+    background: #E53935;
+    border: 2px solid white;
     color: white;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    font-weight: bold;
     cursor: pointer;
     line-height: 1;
-    padding: 0 4px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
   }
   
   .close-btn:hover {
-    opacity: 0.8;
+    background: #C62828;
+  }
+  
+  /* Recipe of the Day link in index view */
+  .rotd-link {
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #FFF8E1 0%, #FFECB3 100%);
+    border: none;
+    border-bottom: 2px solid #DEB887;
+    color: #8B4513;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  .rotd-link:hover {
+    background: linear-gradient(135deg, #FFECB3 0%, #FFE082 100%);
   }
   
   /* INDEX LAYOUT: Side tabs + main content */
@@ -976,17 +1113,121 @@
     transform: translateY(0);
   }
   
+  /* DIETARY PREFERENCE SELECTOR */
+  .dietary-select {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 24px;
+    background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+    text-align: center;
+    gap: 16px;
+    overflow-y: auto;
+  }
+  
+  .dietary-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #2E7D32;
+  }
+  
+  .dietary-header p {
+    margin: 4px 0 0;
+    color: #558B2F;
+    font-size: 0.9rem;
+  }
+  
+  .dietary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .dietary-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 14px 8px;
+    background: white;
+    border: 2px solid #E0E0E0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .dietary-btn:hover {
+    border-color: #8B4513;
+    background: #FFF8E7;
+    transform: scale(1.02);
+  }
+  
+  .dietary-btn.selected {
+    border-color: #4CAF50;
+    background: #E8F5E9;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+  }
+  
+  .dietary-emoji {
+    font-size: 1.6rem;
+    margin-bottom: 4px;
+  }
+  
+  .dietary-name {
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #333;
+  }
+  
+  .dietary-desc {
+    font-size: 0.65rem;
+    color: #666;
+    text-align: center;
+    margin-top: 2px;
+  }
+  
+  .dietary-hint {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 8px;
+  }
+  
+  /* Diet badge (clickable to change preference) */
+  .diet-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: white;
+    border: 2px solid #4CAF50;
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    color: #2E7D32;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .diet-badge:hover {
+    background: #E8F5E9;
+    transform: scale(1.05);
+  }
+  
   /* RECIPE OF THE DAY */
   .recipe-of-day {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 30px;
+    justify-content: flex-start;
+    padding: 30px 20px;
     background: linear-gradient(135deg, #FFF8E1 0%, #FFE0B2 100%);
     text-align: center;
-    gap: 20px;
+    gap: 16px;
+    position: relative;
+    overflow-y: auto;
   }
   
   .cotd-badge {
@@ -1092,6 +1333,80 @@
       margin: 10px;
     }
     
+    .dietary-select {
+      padding: 16px 12px;
+      gap: 12px;
+    }
+    
+    .dietary-header h3 {
+      font-size: 1.1rem;
+    }
+    
+    .dietary-header p {
+      font-size: 0.8rem;
+    }
+    
+    .dietary-grid {
+      gap: 8px;
+    }
+    
+    .dietary-btn {
+      padding: 10px 6px;
+    }
+    
+    .dietary-emoji {
+      font-size: 1.3rem;
+    }
+    
+    .dietary-name {
+      font-size: 0.75rem;
+    }
+    
+    .dietary-desc {
+      font-size: 0.6rem;
+    }
+    
+    .recipe-of-day {
+      padding: 16px 12px;
+      gap: 12px;
+    }
+    
+    .diet-badge {
+      position: static;
+      align-self: center;
+      padding: 4px 12px;
+      font-size: 0.75rem;
+      margin-bottom: -4px;
+    }
+    
+    .cotd-badge {
+      font-size: 1.1rem;
+    }
+    
+    .cotd-card {
+      padding: 16px 20px;
+      gap: 12px;
+    }
+    
+    .cotd-name {
+      font-size: 1.3rem;
+    }
+    
+    .cotd-ingredients {
+      gap: 6px;
+      padding: 8px 0;
+    }
+    
+    .cotd-ingredient {
+      font-size: 1.6rem;
+      padding: 6px 10px;
+    }
+    
+    .cotd-play-btn, .cotd-browse-btn {
+      padding: 10px 16px;
+      font-size: 0.9rem;
+    }
+    
     .category-tabs {
       min-width: 80px;
       max-width: 100px;
@@ -1126,6 +1441,26 @@
     .ingredient {
       font-size: 1.6rem;
       padding: 6px 10px;
+    }
+  }
+  
+  /* Extra small screens (iPhone SE) */
+  @media (max-width: 375px) {
+    .dietary-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .dietary-select {
+      padding: 12px 8px;
+    }
+    
+    .recipe-of-day {
+      padding: 12px 8px;
+    }
+    
+    .cotd-card {
+      padding: 12px 16px;
+      max-width: 280px;
     }
   }
 </style>
