@@ -1011,16 +1011,17 @@ dailyfoodchain.com/scrambled`;
   .level-switcher {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
     margin-bottom: 1.5rem;
+    flex-wrap: nowrap;
   }
   
   .level-option {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.25rem;
-    padding: 0.5rem 1rem;
+    gap: 0.15rem;
+    padding: 0.35rem 0.5rem;
     border-radius: 12px;
     transition: background 0.2s;
   }
@@ -1033,12 +1034,13 @@ dailyfoodchain.com/scrambled`;
   .level-name {
     background: none;
     border: none;
-    font-size: 1.1rem;
+    font-size: 0.85rem;
     font-weight: bold;
     cursor: pointer;
-    padding: 0.25rem 0.5rem;
+    padding: 0.2rem 0.3rem;
     color: #6b7280;
     transition: color 0.2s;
+    white-space: nowrap;
   }
   
   .level-option.active .level-name {
@@ -1053,7 +1055,7 @@ dailyfoodchain.com/scrambled`;
     background: none;
     border: none;
     color: #4a9eff;
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     cursor: pointer;
     text-decoration: underline;
     padding: 0;
@@ -1064,7 +1066,7 @@ dailyfoodchain.com/scrambled`;
   }
   
   .word-count {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     color: #9ca3af;
     font-weight: normal;
   }
