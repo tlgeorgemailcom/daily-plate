@@ -29,16 +29,43 @@
     "status": "approved",
     "gameFoods": [
       "tomato",
-      "cheese",
-      "bread"
+      "bread",
+      "cheese"
     ],
     "animalSpawns": [
       {
         "type": "raccoon",
-        "delay": 3
+        "delay": 1
+      },
+      {
+        "type": "mouse",
+        "delay": 5
       }
     ],
     "reviewedAt": "2026-02-23T19:28:35.196Z",
-    "reviewedBy": "Moderator"
+    "reviewedBy": "Moderator",
+    "dietaryCategory": "all",
+    "modIngredients": [
+      {
+        "name": "Tomato Sauce",
+        "quantity": "1 cup",
+        "gameFood": "tomato",
+        "animal": "raccoon"
+      },
+      {
+        "name": "Lasagna noodles",
+        "quantity": "9",
+        "gameFood": "bread",
+        "animal": "mouse"
+      },
+      {
+        "name": "Cheese",
+        "quantity": "1 cup",
+        "gameFood": "cheese",
+        "animal": "mouse"
+      }
+    ],
+    "editedAt": "2026-03-02T19:32:53.633Z",
+    "editedBy": "Moderator"
   }
 ]

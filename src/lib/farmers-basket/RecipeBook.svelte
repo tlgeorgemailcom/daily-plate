@@ -1,7 +1,10 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { goto } from '$app/navigation';
   import type { Level, FoodType, DietaryCategory } from './types';
   import FoodIcon from './FoodIcon.svelte';
+  import RecipeForm, { type RecipeFormData, type RecipeIngredient } from './RecipeForm.svelte';
+  import { clearOverrideCache } from './level-overrides';
   
   // All available meal categories (shown even if empty)
   const ALL_CATEGORIES = [
@@ -53,6 +56,13 @@
   // View states: 'dietary-select' | 'recipe-of-day' | 'index' | 'detail'
   let showDietarySelect = $state(false);
   let showRecipeOfDay = $state(startWithRecipeOfDay);
+  
+  // Moderator mode - allows editing the currently selected recipe
+  let isModeratorMode = $state(false);
+  let isSaving = $state(false);
+  let saveError = $state<string | null>(null);
+  let saveSuccess = $state(false);
+  const MODERATOR_PASSWORD = '4444';
   
   // Dietary preference (loaded from localStorage)
   let dietaryPreference = $state<DietaryCategory>('all');
@@ -188,10 +198,20 @@
   }
   
   function handleBack() {
+    // If in moderator mode, exit that first
+    if (isModeratorMode) {
+      isModeratorMode = false;
+      return;
+    }
     selectedLevel = null;
   }
   
   function handleClose() {
+    // From moderator mode, exit that first
+    if (isModeratorMode) {
+      isModeratorMode = false;
+      return;
+    }
     // From detail view, go back to index first
     if (selectedLevel) {
       selectedLevel = null;
@@ -207,7 +227,9 @@
   
   function handleKeydown(e: KeyboardEvent) {
     if (e.key === 'Escape') {
-      if (selectedLevel) {
+      if (isModeratorMode) {
+        isModeratorMode = false;
+      } else if (selectedLevel) {
         selectedLevel = null;
       } else if (!showRecipeOfDay) {
         onclose();
@@ -219,12 +241,133 @@
   
   function handleBackdropClick(e: MouseEvent) {
     if (e.target === e.currentTarget) {
+      if (isModeratorMode) {
+        isModeratorMode = false;
+        return;
+      }
       if (selectedLevel) {
         selectedLevel = null;
       } else {
         onclose();
       }
     }
+  }
+  
+  function handleSettingsClick() {
+    // If already in moderator mode on a selected recipe, toggle off
+    if (isModeratorMode && selectedLevel) {
+      isModeratorMode = false;
+      return;
+    }
+    
+    // If viewing a recipe, prompt for password and enter edit mode
+    if (selectedLevel) {
+      const password = prompt('Enter moderator password:');
+      if (password === MODERATOR_PASSWORD) {
+        isModeratorMode = true;
+        saveError = null;
+        saveSuccess = false;
+      }
+      return;
+    }
+    
+    // If not viewing a recipe, go to the full moderation page
+    const password = prompt('Enter moderator password:');
+    if (password === MODERATOR_PASSWORD) {
+      onclose();
+      goto('/farmers-basket/moderate');
+    }
+  }
+  
+  // Convert Level to RecipeFormData for editing
+  function levelToFormData(level: Level): Partial<RecipeFormData> {
+    return {
+      recipeName: level.name,
+      category: level.category,
+      dietaryCategory: level.dietaryCategory,
+      prepTime: level.prepTime || '',
+      servings: level.servings || '',
+      // Convert recipe foods to ingredients
+      ingredients: level.recipe.map((food, i) => ({
+        id: i + 1,
+        name: food,
+        quantity: '1',
+        gameFood: food,  // Pre-map game food
+        animal: level.animalSpawns[i]?.type || ''  // Pre-map animal
+      })),
+      instructions: (level.recipeInstructions || []).map((text, i) => ({
+        id: i + 1,
+        text
+      }))
+    };
+  }
+  
+  // Handle moderator save
+  async function handleModeratorSave(data: RecipeFormData) {
+    if (!selectedLevel) return;
+    
+    isSaving = true;
+    saveError = null;
+    
+    try {
+      // Build the updates
+      const gameFoods = data.ingredients
+        .filter(i => i.gameFood)
+        .map(i => i.gameFood) as string[];
+      
+      const animalSpawns = data.ingredients
+        .filter(i => i.gameFood && i.animal)
+        .map((ing, i) => ({
+          type: ing.animal as string,
+          delay: (i + 1) * 2000  // Staggered delays
+        }));
+      
+      // Default spawn if none
+      if (animalSpawns.length === 0 && gameFoods.length > 0) {
+        animalSpawns.push({ type: 'rabbit', delay: 3000 });
+      }
+      
+      const res = await fetch('/api/recipes/builtin', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          id: selectedLevel.id,
+          updates: {
+            name: data.recipeName,
+            category: data.category,
+            dietaryCategory: data.dietaryCategory,
+            prepTime: data.prepTime,
+            servings: data.servings,
+            recipe: gameFoods,
+            animalSpawns,
+            recipeInstructions: data.instructions.map(i => i.text)
+          },
+          editedBy: 'Moderator'
+        })
+      });
+      
+      if (!res.ok) throw new Error('Failed to save');
+      
+      // Clear override cache so changes take effect
+      clearOverrideCache();
+      
+      saveSuccess = true;
+      setTimeout(() => {
+        saveSuccess = false;
+        isModeratorMode = false;
+      }, 1500);
+    } catch (err) {
+      saveError = err instanceof Error ? err.message : 'Failed to save';
+    } finally {
+      isSaving = false;
+    }
+  }
+  
+  // Handle cancel from moderator form
+  function handleModeratorCancel() {
+    isModeratorMode = false;
+    saveError = null;
+    saveSuccess = false;
   }
   
   // Find which category the current level is in
@@ -254,6 +397,7 @@
             📝 Share
           </button>
         {/if}
+        <button class="settings-btn" onclick={handleSettingsClick} aria-label="Settings">⚙️</button>
         <button class="close-btn" onclick={onclose} aria-label="Close">✕</button>
       </div>
     </header>
@@ -319,55 +463,81 @@
         </div>
       </div>
     {:else if selectedLevel}
-      <!-- DETAIL VIEW: Full recipe card -->
+      <!-- DETAIL VIEW: Full recipe card or Moderator Edit Form -->
       {@const isCompleted = completedLevels.has(selectedLevel.id)}
       {@const isCurrent = selectedLevel.id === currentLevelId}
-      <div class="detail-card">
-        {#if isCurrent}
-          <div class="current-badge">Now Playing</div>
-        {/if}
-        
-        <div class="recipe-header">
-          <span class="recipe-number">#{selectedLevel.levelNum}</span>
-          <h3 class="recipe-name">{selectedLevel.name}</h3>
-          <span class="recipe-category">{selectedLevel.category}</span>
-        </div>
-        
-        <div class="ingredients">
-          <span class="ingredients-label">Ingredients:</span>
-          <div class="ingredient-icons">
-            {#each selectedLevel.recipe as food}
-              <span class="ingredient" title={food}><FoodIcon {food} size={28} /></span>
-            {/each}
+      
+      {#if isModeratorMode}
+        <!-- MODERATOR EDIT MODE -->
+        <div class="moderator-edit-view">
+          <div class="mod-header">
+            <h3>✏️ Edit Recipe: {selectedLevel.name}</h3>
+            {#if saveSuccess}
+              <span class="save-success">✓ Saved!</span>
+            {/if}
+          </div>
+          
+          <div class="mod-form-container">
+            <RecipeForm
+              moderatorMode={true}
+              initialData={levelToFormData(selectedLevel)}
+              onsubmit={handleModeratorSave}
+              oncancel={handleModeratorCancel}
+              submitLabel="💾 Save Changes"
+              submitting={isSaving}
+              errorMessage={saveError || ''}
+            />
           </div>
         </div>
-        
-        {#if isCompleted && selectedLevel.recipeInstructions}
-          <div class="recipe-details">
-            <div class="recipe-meta">
-              {#if selectedLevel.prepTime}<span>⏱️ {selectedLevel.prepTime}</span>{/if}
-              {#if selectedLevel.servings}<span>🍽️ {selectedLevel.servings}</span>{/if}
-            </div>
-            <div class="instructions">
-              <span class="instructions-label">How to make:</span>
-              <ol>
-                {#each selectedLevel.recipeInstructions as step}
-                  <li>{step}</li>
-                {/each}
-              </ol>
+      {:else}
+        <!-- NORMAL RECIPE VIEW -->
+        <div class="detail-card">
+          {#if isCurrent}
+            <div class="current-badge">Now Playing</div>
+          {/if}
+          
+          <div class="recipe-header">
+            <span class="recipe-number">#{selectedLevel.levelNum}</span>
+            <h3 class="recipe-name">{selectedLevel.name}</h3>
+            <span class="recipe-category">{selectedLevel.category}</span>
+          </div>
+          
+          <div class="ingredients">
+            <span class="ingredients-label">Ingredients:</span>
+            <div class="ingredient-icons">
+              {#each selectedLevel.recipe as food}
+                <span class="ingredient" title={food}><FoodIcon {food} size={28} /></span>
+              {/each}
             </div>
           </div>
-        {:else}
-          <div class="locked-message">
-            <span class="lock-icon">🔒</span>
-            <span>Complete this recipe to unlock the instructions!</span>
-          </div>
-        {/if}
-        
-        <button class="play-btn" onclick={() => handlePlay(selectedLevel!.id)}>
-          {isCurrent ? '🔄 Replay' : isCompleted ? '🎮 Replay' : '▶️ Play'}
-        </button>
-      </div>
+          
+          {#if isCompleted && selectedLevel.recipeInstructions}
+            <div class="recipe-details">
+              <div class="recipe-meta">
+                {#if selectedLevel.prepTime}<span>⏱️ {selectedLevel.prepTime}</span>{/if}
+                {#if selectedLevel.servings}<span>🍽️ {selectedLevel.servings}</span>{/if}
+              </div>
+              <div class="instructions">
+                <span class="instructions-label">How to make:</span>
+                <ol>
+                  {#each selectedLevel.recipeInstructions as step}
+                    <li>{step}</li>
+                  {/each}
+                </ol>
+              </div>
+            </div>
+          {:else}
+            <div class="locked-message">
+              <span class="lock-icon">🔒</span>
+              <span>Complete this recipe to unlock the instructions!</span>
+            </div>
+          {/if}
+          
+          <button class="play-btn" onclick={() => handlePlay(selectedLevel!.id)}>
+            {isCurrent ? '🔄 Replay' : isCompleted ? '🎮 Replay' : '▶️ Play'}
+          </button>
+        </div>
+      {/if}
     {:else}
       <!-- Recipe of the Day link -->
       <button class="rotd-link" onclick={() => showRecipeOfDay = true}>
@@ -611,6 +781,23 @@
   .header-diet-btn:hover {
     background: rgba(255,255,255,0.4);
     transform: scale(1.1);
+  }
+  
+  .settings-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255,255,255,0.4);
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: all 0.2s;
+    opacity: 0.6;
+  }
+  
+  .settings-btn:hover {
+    opacity: 1;
+    color: rgba(255,255,255,0.8);
   }
   
   .close-btn {
@@ -949,6 +1136,43 @@
     padding: 30px;
     color: #999;
     font-style: italic;
+  }
+  
+  /* MODERATOR EDIT VIEW */
+  .moderator-edit-view {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .mod-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #E65100 0%, #FF9800 100%);
+    color: white;
+  }
+  
+  .mod-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  
+  .save-success {
+    background: #4CAF50;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+  }
+  
+  .mod-form-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px 20px;
+    background: #FFFEF5;
   }
   
   /* DETAIL VIEW: Recipe card */

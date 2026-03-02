@@ -4,6 +4,7 @@
     createGameState, LEVELS, GRID_WIDTH, GRID_HEIGHT, TOTAL_HEIGHT, PANTRY_HEIGHT,
     GRID_COLS, GRID_ROWS, CELL_SIZE, pixelToGrid, gridToPixel, snapToGrid
   } from '$lib/farmers-basket/game-state.svelte';
+  import { getLevelsWithOverrides } from '$lib/farmers-basket/level-overrides';
   import Animal from '$lib/farmers-basket/Animal.svelte';
   import Farmer from '$lib/farmers-basket/Farmer.svelte';
   import Basket from '$lib/farmers-basket/Basket.svelte';
@@ -57,10 +58,18 @@
     gameScale = Math.max(newScale, 0.35);
   }
   
-  onMount(() => {
+  onMount(async () => {
     updateGameScale();
     window.addEventListener('resize', updateGameScale);
     window.addEventListener('orientationchange', updateGameScale);
+    
+    // Load levels with any moderator overrides applied
+    try {
+      const levelsWithOverrides = await getLevelsWithOverrides();
+      game.setLevelsWithOverrides(levelsWithOverrides);
+    } catch (err) {
+      console.warn('Could not load level overrides:', err);
+    }
   });
   
   onDestroy(() => {

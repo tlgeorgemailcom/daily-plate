@@ -148,7 +148,7 @@ export const LEVELS: Level[] = [
     name: 'Veggie Platter',
     category: 'Sides',
     dietaryCategory: 'vegan',
-    levelNum: 1,
+    levelNum: 3,
     recipe: ['lettuce', 'tomato', 'carrot'],
     tools: [
       { type: 'fence', count: 2, emoji: '🚧' },
@@ -175,7 +175,7 @@ export const LEVELS: Level[] = [
     name: 'Cheese Snack',
     category: 'Snacks',
     dietaryCategory: 'veggie',
-    levelNum: 1,
+    levelNum: 3,
     recipe: ['lettuce', 'cheese', 'bread'],
     tools: [
       { type: 'fence', count: 2, emoji: '🚧' },
@@ -203,7 +203,7 @@ export const LEVELS: Level[] = [
     name: 'Full Garden Salad',
     category: 'Salads',
     dietaryCategory: 'veggie',
-    levelNum: 3,
+    levelNum: 4,
     recipe: ['lettuce', 'tomato', 'carrot', 'cheese'],
     tools: [
       { type: 'fence', count: 2, emoji: '🚧' },
@@ -235,7 +235,7 @@ export const LEVELS: Level[] = [
     name: 'Fresh Fruit Bowl',
     category: 'Breakfast',
     dietaryCategory: 'vegan',
-    levelNum: 1,
+    levelNum: 2,
     recipe: ['apple', 'grapes'],
     tools: [
       { type: 'fence', count: 2, emoji: '🚧' },
@@ -288,7 +288,7 @@ export const LEVELS: Level[] = [
     name: 'Apple Carrot Juice',
     category: 'Beverages',
     dietaryCategory: 'vegan',
-    levelNum: 1,
+    levelNum: 2,
     recipe: ['apple', 'carrot'],
     tools: [
       { type: 'fence', count: 2, emoji: '🚧' },
@@ -316,7 +316,7 @@ export const LEVELS: Level[] = [
     name: 'Scrambled Eggs',
     category: 'Breakfast',
     dietaryCategory: 'veggie',
-    levelNum: 1,
+    levelNum: 2,
     recipe: ['egg', 'butter'],
     tools: [
       { type: 'fence', count: 2, emoji: '🚧' },
@@ -343,7 +343,7 @@ export const LEVELS: Level[] = [
     name: 'Grilled Cheese',
     category: 'Lunch',
     dietaryCategory: 'veggie',
-    levelNum: 2,
+    levelNum: 3,
     recipe: ['cheese', 'bread', 'butter'],
     tools: [
       { type: 'fence', count: 2, emoji: '🚧' },
@@ -371,7 +371,7 @@ export const LEVELS: Level[] = [
     name: 'Egg Salad',
     category: 'Salads',
     dietaryCategory: 'veggie',
-    levelNum: 3,
+    levelNum: 2,
     recipe: ['egg', 'lettuce'],
     tools: [
       { type: 'fence', count: 2, emoji: '🚧' },
@@ -399,7 +399,7 @@ export const LEVELS: Level[] = [
     name: 'Fish Tacos',
     category: 'Dinner',
     dietaryCategory: 'pesca',
-    levelNum: 1,
+    levelNum: 3,
     recipe: ['fish', 'lettuce', 'tomato'],
     tools: [
       { type: 'fence', count: 2, emoji: '🚧' },
@@ -454,7 +454,7 @@ export const LEVELS: Level[] = [
     name: 'Seafood Salad',
     category: 'Salads',
     dietaryCategory: 'pesca',
-    levelNum: 1,
+    levelNum: 3,
     recipe: ['fish', 'lettuce', 'carrot'],
     tools: [
       { type: 'fence', count: 2, emoji: '🚧' },
@@ -482,7 +482,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken Salad',
     category: 'Salads',
     dietaryCategory: 'pollo',
-    levelNum: 1,
+    levelNum: 3,
     recipe: ['chicken', 'lettuce', 'tomato'],
     tools: [
       { type: 'fence', count: 2, emoji: '🚧' },
@@ -511,7 +511,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken Sandwich',
     category: 'Lunch',
     dietaryCategory: 'pollo',
-    levelNum: 2,
+    levelNum: 3,
     recipe: ['chicken', 'bread', 'lettuce'],
     tools: [
       { type: 'fence', count: 2, emoji: '🚧' },
@@ -570,7 +570,7 @@ export const LEVELS: Level[] = [
     name: 'Surf and Turf Salad',
     category: 'Salads',
     dietaryCategory: 'pollo-pesca',
-    levelNum: 1,
+    levelNum: 3,
     recipe: ['chicken', 'fish', 'lettuce'],
     tools: [
       { type: 'fence', count: 2, emoji: '🚧' },
@@ -599,7 +599,7 @@ export const LEVELS: Level[] = [
     name: 'Protein Bowl',
     category: 'Dinner',
     dietaryCategory: 'pollo-pesca',
-    levelNum: 2,
+    levelNum: 4,
     recipe: ['chicken', 'fish', 'carrot', 'lettuce'],
     tools: [
       { type: 'fence', count: 2, emoji: '🚧' },
@@ -631,7 +631,7 @@ export const LEVELS: Level[] = [
     name: 'BLT Sandwich',
     category: 'Lunch',
     dietaryCategory: 'all',
-    levelNum: 1,
+    levelNum: 4,
     recipe: ['bacon', 'lettuce', 'tomato', 'bread'],
     tools: [
       { type: 'fence', count: 2, emoji: '🚧' },
@@ -661,7 +661,7 @@ export const LEVELS: Level[] = [
     name: 'Bacon and Eggs',
     category: 'Breakfast',
     dietaryCategory: 'all',
-    levelNum: 2,
+    levelNum: 4,
     recipe: ['bacon', 'egg', 'bread', 'butter'],
     tools: [
       { type: 'fence', count: 2, emoji: '🚧' },
@@ -690,7 +690,7 @@ export const LEVELS: Level[] = [
     name: 'Club Sandwich',
     category: 'Lunch',
     dietaryCategory: 'all',
-    levelNum: 3,
+    levelNum: 5,
     recipe: ['chicken', 'bacon', 'lettuce', 'tomato', 'bread'],
     tools: [
       { type: 'fence', count: 2, emoji: '🚧' },
@@ -721,7 +721,7 @@ export const LEVELS: Level[] = [
     name: 'Full Breakfast',
     category: 'Breakfast',
     dietaryCategory: 'all',
-    levelNum: 4,
+    levelNum: 5,
     recipe: ['bacon', 'egg', 'tomato', 'bread', 'butter'],
     tools: [
       { type: 'fence', count: 2, emoji: '🚧' },
@@ -752,7 +752,7 @@ export const LEVELS: Level[] = [
     name: 'Cobb Salad',
     category: 'Salads',
     dietaryCategory: 'all',
-    levelNum: 5,
+    levelNum: 6,
     recipe: ['chicken', 'bacon', 'egg', 'lettuce', 'tomato', 'cheese'],
     tools: [
       { type: 'fence', count: 2, emoji: '🚧' },
@@ -1872,6 +1872,16 @@ export function createGameState() {
     }
   }
   
+  // Replace built-in levels with overridden versions (from moderator edits)
+  function setLevelsWithOverrides(overriddenLevels: Level[]) {
+    // Keep any community recipes that were added
+    const communityRecipes = allLevels.filter(l => 
+      !LEVELS.find(bl => bl.id === l.id)
+    );
+    allLevels = [...overriddenLevels, ...communityRecipes];
+    console.log(`✅ Loaded ${overriddenLevels.length} levels with overrides`);
+  }
+  
   // Initialize to saved level (or first level)
   initLevel(levelIndex);
   
@@ -1908,6 +1918,7 @@ export function createGameState() {
     nextLevel,
     loadLevel,
     addCommunityRecipes,
+    setLevelsWithOverrides,
     getDailyLevelId
   };
 }

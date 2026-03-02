@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Cheeseburger Patty - cooked patty with melted cheese -->
+  
+  <!-- Patty shadow/depth -->
+  <ellipse cx="32" cy="40" rx="26" ry="10" fill="#5D2E0C"/>
+  
+  <!-- Main patty -->
+  <ellipse cx="32" cy="36" rx="26" ry="10" fill="#8B4513"/>
+  <ellipse cx="32" cy="36" rx="26" ry="10" fill="url(#patty-grad)"/>
+  
+  <!-- Grill marks on patty -->
+  <path d="M10 34 L54 38" stroke="#5D2E0C" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <path d="M10 38 L54 42" stroke="#5D2E0C" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+  
+  <!-- Melted cheese - base layer -->
+  <path d="M6 30 Q6 26 16 24 L48 24 Q58 26 58 30 Q58 34 48 36 L16 36 Q6 34 6 30Z" fill="#FFD700"/>
+  
+  <!-- Cheese drips on sides -->
+  <path d="M8 30 Q6 36 10 42 Q12 44 14 40 Q16 34 14 30" fill="#FFD700"/>
+  <path d="M52 30 Q56 38 54 44 Q52 46 50 42 Q48 36 50 30" fill="#FFD700"/>
+  <path d="M20 34 Q18 40 20 44 Q22 42 22 38" fill="#FFD700"/>
+  <path d="M44 34 Q46 42 44 46 Q42 44 42 38" fill="#FFD700"/>
+  
+  <!-- Cheese highlight/shine -->
+  <ellipse cx="32" cy="28" rx="16" ry="4" fill="#FFE44D" opacity="0.6"/>
+  
+  <!-- Cheese texture lines -->
+  <path d="M18 28 Q32 26 46 28" stroke="#E6BE00" stroke-width="1" fill="none" opacity="0.5"/>
+  
+  <!-- Patty char bits visible at edges -->
+  <circle cx="12" cy="36" r="1.5" fill="#4A2C17"/>
+  <circle cx="52" cy="36" r="1.5" fill="#4A2C17"/>
+  <circle cx="24" cy="40" r="1" fill="#4A2C17"/>
+  <circle cx="40" cy="40" r="1" fill="#4A2C17"/>
+  
+  <defs>
+    <linearGradient id="patty-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#A0522D;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#5D2E0C;stop-opacity:0.2"/>
+    </linearGradient>
+  </defs>
+</svg>

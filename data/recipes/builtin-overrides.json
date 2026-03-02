@@ -1,0 +1,39 @@
+{
+  "7-2": {
+    "id": "7-2",
+    "name": "Bacon and Eggs",
+    "category": "Breakfast",
+    "dietaryCategory": "all",
+    "prepTime": "15 minutes",
+    "servings": "Serves 2",
+    "recipe": [
+      "bacon",
+      "egg",
+      "bread",
+      "butter"
+    ],
+    "animalSpawns": [
+      {
+        "type": "fox",
+        "delay": 2000
+      },
+      {
+        "type": "raccoon",
+        "delay": 4000
+      },
+      {
+        "type": "mouse",
+        "delay": 6000
+      }
+    ],
+    "recipeInstructions": [
+      "Fry bacon in a pan until crispy.",
+      "Remove bacon and fry eggs in the bacon fat.",
+      "Toast bread and butter generously.",
+      "Plate eggs with bacon on the side.",
+      "Serve with buttered toast."
+    ],
+    "editedAt": "2026-03-02T20:16:58.240Z",
+    "editedBy": "Moderator"
+  }
+}
