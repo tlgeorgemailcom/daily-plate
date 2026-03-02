@@ -352,7 +352,6 @@ deer,protein
 devilfish,protein
 dian,beverage
 dill,spice
-dim,prepared
 distilled,condiment
 divinity,prepared
 dock,vegetable
@@ -1116,7 +1115,7 @@ tamale,prepared
 tamarind,fruit
 tandoori,prepared
 tangerine,fruit
-tapas,prepared
+tapa,prepared
 tapenade,condiment
 tapicoa,prepared
 taro,vegetable
@@ -1247,3 +1246,5 @@ ahi,protein
 dip,prepared
 fat,fats
 pop,beverage
+canape,prepared
+botana,prepared
