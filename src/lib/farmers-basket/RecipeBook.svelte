@@ -1,6 +1,5 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { goto } from '$app/navigation';
   import type { Level, FoodType, DietaryCategory } from './types';
   import FoodIcon from './FoodIcon.svelte';
   import RecipeForm, { type RecipeFormData, type RecipeIngredient } from './RecipeForm.svelte';
@@ -254,13 +253,13 @@
   }
   
   function handleSettingsClick() {
-    // If already in moderator mode on a selected recipe, toggle off
+    // If already in moderator mode, toggle off
     if (isModeratorMode && selectedLevel) {
       isModeratorMode = false;
       return;
     }
     
-    // If viewing a recipe, prompt for password and enter edit mode
+    // Prompt for password and enter edit mode
     if (selectedLevel) {
       const password = prompt('Enter moderator password:');
       if (password === MODERATOR_PASSWORD) {
@@ -268,14 +267,6 @@
         saveError = null;
         saveSuccess = false;
       }
-      return;
-    }
-    
-    // If not viewing a recipe, go to the full moderation page
-    const password = prompt('Enter moderator password:');
-    if (password === MODERATOR_PASSWORD) {
-      onclose();
-      goto('/farmers-basket/moderate');
     }
   }
   
@@ -397,7 +388,9 @@
             📝 Share
           </button>
         {/if}
-        <button class="settings-btn" onclick={handleSettingsClick} aria-label="Settings">⚙️</button>
+        {#if selectedLevel}
+          <button class="settings-btn" onclick={handleSettingsClick} aria-label="Edit recipe">⚙️</button>
+        {/if}
         <button class="close-btn" onclick={onclose} aria-label="Close">✕</button>
       </div>
     </header>
