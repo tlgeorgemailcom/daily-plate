@@ -320,8 +320,6 @@
     });
   }
   
-  // Built-in recipe functions
-  }
   
   // Published recipe functions
   function selectPublished(recipe: RecipeSubmission) {
