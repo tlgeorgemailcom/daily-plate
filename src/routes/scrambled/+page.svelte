@@ -184,25 +184,27 @@
             const state = JSON.parse(saved);
             if (state.date === today) {
               // Restore game for this level
-              const wordMap = getWordsForLevel(currentLevel);
               const puzzle = getTodaysPuzzle(currentLevel);
               letters = puzzle.letters;
               
               // Always use fresh validWords from current level (not saved state)
               validWords = puzzle.validWords;
+              const validSet = new Set(validWords);
               
-              // Filter out any words that no longer exist in the word list
+              // Filter out any words that aren't valid for today's puzzle
+              // (this handles cases where puzzle generation changes)
               const savedFoundWords = (state.foundWords || []) as string[];
-              foundWords = savedFoundWords.filter(w => wordMap.has(w));
+              foundWords = savedFoundWords.filter(w => validSet.has(w));
               
-              // Filter classifiedWords to only include valid words
+              // Filter classifiedWords to only include words valid for today's puzzle
               const savedClassified = state.classifiedWords || [];
               classifiedWords = new Map(
-                savedClassified.filter(([word]: [string, unknown]) => wordMap.has(word))
+                savedClassified.filter(([word]: [string, unknown]) => validSet.has(word))
               );
               
-              wordsFoundBeforeReveal = state.wordsFoundBeforeReveal || 0;
-              firstTryCorrect = state.firstTryCorrect || 0;
+              // Adjust scores if words were filtered out
+              wordsFoundBeforeReveal = Math.min(state.wordsFoundBeforeReveal || 0, foundWords.length);
+              firstTryCorrect = Math.min(state.firstTryCorrect || 0, classifiedWords.size);
               gaveUp = state.gaveUp || false;
               
               // Determine phase

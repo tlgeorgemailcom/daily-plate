@@ -100,18 +100,74 @@ export const PUZZLE_COMBOS: string[] = [
   'AELMORS', 'AELMOST', 'AELMPRS'
 ];
 
+// Seeded random number generator for consistent daily puzzles
+function seededRandom(seed: number) {
+  return function() {
+    seed = (seed * 1103515245 + 12345) & 0x7fffffff;
+    return seed / 0x7fffffff;
+  };
+}
+
+// Generate a puzzle dynamically from a seed
+function generatePuzzleFromSeed(seed: number, level: GameLevel): string[] {
+  const random = seededRandom(seed);
+  const wordMap = getWordsForLevel(level);
+  
+  // Get all unique letters from the word list
+  const allLetters = new Set<string>();
+  for (const word of wordMap.keys()) {
+    for (const c of word) {
+      allLetters.add(c);
+    }
+  }
+  const letterPool = Array.from(allLetters);
+  
+  // Try to generate a good set (10+ valid words)
+  // We'll try multiple times with the seeded random to find a good combo
+  for (let attempt = 0; attempt < 50; attempt++) {
+    // Shuffle the letter pool using seeded random
+    const shuffled = [...letterPool];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    
+    // Pick 7 letters
+    const picked = shuffled.slice(0, 7);
+    const letterSet = new Set(picked);
+    
+    // Count valid words
+    let wordCount = 0;
+    for (const word of wordMap.keys()) {
+      if (word.length >= 3 && canMakeWord(word, letterSet)) {
+        wordCount++;
+        if (wordCount >= 10) break; // Good enough
+      }
+    }
+    
+    if (wordCount >= 10) {
+      return picked.sort(); // Sort alphabetically for consistent display
+    }
+  }
+  
+  // Fallback to a known good combo if generation fails
+  return PUZZLE_COMBOS[seed % PUZZLE_COMBOS.length].toLowerCase().split('');
+}
+
 // Get today's puzzle based on date and level
 export function getTodaysPuzzle(level: GameLevel = 'usda'): { letters: string[]; validWords: string[]; date: string; level: GameLevel } {
   const today = new Date();
   const dateStr = today.toISOString().split('T')[0]; // YYYY-MM-DD
   
-  // Use date as seed for puzzle selection
-  // Each level gets a different offset so they have different letters each day
-  const daysSinceEpoch = Math.floor(today.getTime() / (1000 * 60 * 60 * 24));
-  const levelOffset = level === 'usda' ? 0 : level === 'foodie' ? 33 : 67;
-  const puzzleIndex = (daysSinceEpoch + levelOffset) % PUZZLE_COMBOS.length;
+  // Use date components to create a unique seed for each day
+  // This gives us 365 unique seeds per year, plus level offset
+  const year = today.getFullYear();
+  const month = today.getMonth();
+  const day = today.getDate();
+  const levelOffset = level === 'usda' ? 0 : level === 'foodie' ? 10000 : 20000;
+  const seed = (year * 10000 + month * 100 + day) + levelOffset;
   
-  const letters = PUZZLE_COMBOS[puzzleIndex].toLowerCase().split('');
+  const letters = generatePuzzleFromSeed(seed, level);
   const letterSet = new Set(letters);
   const validWords = getValidWords(letterSet, level);
   
@@ -121,11 +177,13 @@ export function getTodaysPuzzle(level: GameLevel = 'usda'): { letters: string[];
 // Get puzzle for a specific date (for testing/archives)
 export function getPuzzleForDate(date: Date, level: GameLevel = 'usda'): { letters: string[]; validWords: string[]; date: string; level: GameLevel } {
   const dateStr = date.toISOString().split('T')[0];
-  const daysSinceEpoch = Math.floor(date.getTime() / (1000 * 60 * 60 * 24));
-  const levelOffset = level === 'usda' ? 0 : level === 'foodie' ? 33 : 67;
-  const puzzleIndex = (daysSinceEpoch + levelOffset) % PUZZLE_COMBOS.length;
+  const year = date.getFullYear();
+  const month = date.getMonth();
+  const day = date.getDate();
+  const levelOffset = level === 'usda' ? 0 : level === 'foodie' ? 10000 : 20000;
+  const seed = (year * 10000 + month * 100 + day) + levelOffset;
   
-  const letters = PUZZLE_COMBOS[puzzleIndex].toLowerCase().split('');
+  const letters = generatePuzzleFromSeed(seed, level);
   const letterSet = new Set(letters);
   const validWords = getValidWords(letterSet, level);
   
