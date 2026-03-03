@@ -1,0 +1,121 @@
+{
+  "7-2": {
+    "id": "7-2",
+    "name": "Bacon and Eggs",
+    "category": "Breakfast",
+    "dietaryCategory": "all",
+    "prepTime": "15 minutes",
+    "servings": "Serves 2",
+    "recipe": [
+      "bacon",
+      "egg",
+      "bread",
+      "butter"
+    ],
+    "animalSpawns": [
+      {
+        "type": "fox",
+        "delay": 2000
+      },
+      {
+        "type": "raccoon",
+        "delay": 4000
+      },
+      {
+        "type": "mouse",
+        "delay": 6000
+      }
+    ],
+    "recipeInstructions": [
+      "Fry bacon in a pan until crispy.",
+      "Remove bacon and fry eggs in the bacon fat.",
+      "Toast bread and butter generously.",
+      "Plate eggs with bacon on the side.",
+      "Serve with buttered toast."
+    ],
+    "editedAt": "2026-03-02T20:16:58.240Z",
+    "editedBy": "Moderator"
+  },
+  "2-1": {
+    "id": "2-1",
+    "name": "Fresh Fruit Bowl",
+    "category": "Breakfast",
+    "dietaryCategory": "all",
+    "prepTime": "5 minutes",
+    "servings": "Serves 2",
+    "recipe": [
+      "apple",
+      "grapes"
+    ],
+    "animalSpawns": [
+      {
+        "type": "squirrel",
+        "delay": 2000
+      },
+      {
+        "type": "bird",
+        "delay": 4000
+      }
+    ],
+    "recipeInstructions": [
+      "Wash and core the apple, then dice into bite-sized pieces.",
+      "Rinse grapes and remove from stem.",
+      "Combine fruits in a bowl.",
+      "Drizzle with agave or maple syrup if desired.",
+      "Serve chilled."
+    ],
+    "recipeIngredients": [
+      {
+        "name": "Apple",
+        "quantity": "2 medium"
+      },
+      {
+        "name": "Grapes",
+        "quantity": "13"
+      }
+    ],
+    "editedAt": "2026-03-03T21:35:23.382Z",
+    "editedBy": "Moderator"
+  },
+  "3-1": {
+    "id": "3-1",
+    "name": "Scrambled Eggs",
+    "category": "Breakfast",
+    "dietaryCategory": "veggie",
+    "prepTime": "10 minutes",
+    "servings": "Serves 2",
+    "recipe": [
+      "egg",
+      "butter"
+    ],
+    "animalSpawns": [
+      {
+        "type": "fox",
+        "delay": 2000
+      },
+      {
+        "type": "raccoon",
+        "delay": 4000
+      }
+    ],
+    "recipeInstructions": [
+      "Crack eggs into a bowl and whisk well.",
+      "Melt butter in a non-stick pan over medium-low heat.",
+      "Pour in eggs and stir gently with a spatula.",
+      "Remove from heat while still slightly soft.",
+      "Season with salt and pepper."
+    ],
+    "recipeIngredients": [
+      {
+        "name": "Egg",
+        "quantity": "4 large"
+      },
+      {
+        "name": "Butter",
+        "quantity": "3 tbsp"
+      }
+    ],
+    "editedAt": "2026-03-03T21:38:00.065Z",
+    "editedBy": "Moderator"
+  }
+}

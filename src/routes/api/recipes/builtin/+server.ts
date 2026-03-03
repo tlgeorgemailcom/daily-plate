@@ -5,6 +5,7 @@ import { join } from 'path';
 
 const DATA_DIR = join(process.cwd(), 'data', 'recipes');
 const BUILTIN_OVERRIDES_FILE = join(DATA_DIR, 'builtin-overrides.json');
+const STATIC_OVERRIDES_FILE = join(process.cwd(), 'static', 'builtin-overrides.json');
 
 interface BuiltinOverride {
   id: string;
@@ -40,7 +41,10 @@ function loadOverrides(): Record<string, BuiltinOverride> {
 
 function saveOverrides(data: Record<string, BuiltinOverride>) {
   ensureDataDir();
-  writeFileSync(BUILTIN_OVERRIDES_FILE, JSON.stringify(data, null, 2));
+  const jsonStr = JSON.stringify(data, null, 2);
+  // Save to both locations - data folder and static folder
+  writeFileSync(BUILTIN_OVERRIDES_FILE, jsonStr);
+  writeFileSync(STATIC_OVERRIDES_FILE, jsonStr);
 }
 
 // GET: Fetch all built-in overrides
