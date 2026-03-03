@@ -532,6 +532,23 @@
         </div>
       {/if}
     {:else}
+      <!-- Dietary Filter Strip (compact horizontal) -->
+      <div class="dietary-strip">
+        <div class="dietary-strip-scroll">
+          {#each DIETARY_CATEGORIES as diet}
+            <button
+              class="diet-pill"
+              class:active={dietaryPreference === diet.id}
+              onclick={() => setDietaryPreference(diet.id)}
+              title={diet.description}
+            >
+              <span class="pill-emoji">{diet.emoji}</span>
+              <span class="pill-name">{diet.name}</span>
+            </button>
+          {/each}
+        </div>
+      </div>
+      
       <!-- Recipe of the Day link -->
       <button class="rotd-link" onclick={() => showRecipeOfDay = true}>
         🌟 Today's Recipe: {recipeOfTheDay()?.name}
@@ -812,6 +829,95 @@
   
   .close-btn:hover {
     background: #C62828;
+  }
+  
+  /* Dietary Filter Strip (compact horizontal) */
+  .dietary-strip {
+    width: 100%;
+    background: linear-gradient(135deg, #F5F5F5 0%, #EEEEEE 100%);
+    border-bottom: 1px solid #DDD;
+    padding: 8px 8px 10px 8px;
+    margin-bottom: 4px;
+    position: relative;
+  }
+  
+  /* Fade hint on right edge to show scrollability */
+  .dietary-strip::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    background: linear-gradient(to right, transparent 0%, #EEEEEE 60%, #EEEEEE 100%);
+    pointer-events: none;
+  }
+  
+  .dietary-strip-scroll {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+    padding-bottom: 4px;
+    padding-right: 24px; /* Space for fade hint */
+  }
+  
+  .dietary-strip-scroll::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+  
+  .diet-pill {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    background: white;
+    border: 1.5px solid #DDD;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: all 0.15s ease;
+  }
+  
+  .diet-pill:hover {
+    border-color: #8B4513;
+    color: #8B4513;
+  }
+  
+  .diet-pill.active {
+    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    border-color: #8B4513;
+    color: white;
+    box-shadow: 0 2px 4px rgba(139, 69, 19, 0.3);
+  }
+  
+  .pill-emoji {
+    font-size: 0.9rem;
+  }
+  
+  .pill-name {
+    font-size: 0.7rem;
+    letter-spacing: 0.02em;
+  }
+  
+  @media (max-width: 480px) {
+    .dietary-strip {
+      padding: 4px 6px;
+    }
+    
+    .diet-pill {
+      padding: 3px 8px;
+    }
+    
+    .pill-name {
+      font-size: 0.65rem;
+    }
   }
   
   /* Recipe of the Day link in index view */

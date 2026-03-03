@@ -40,6 +40,7 @@
   let currentInput = $state('');
   let inputError = $state('');
   let showResults = $state(false);
+  let showAnswers = $state(false);
 
   // Word lists by length
   let wordsByLength = $derived(() => {
@@ -89,12 +90,22 @@
     const levelOffset = level === 'usda' ? 0 : level === 'foodie' ? 1000 : 2000;
     const random = seededRandom(daysSinceEpoch + levelOffset);
 
-    const words = wordsByLength();
+    // Get words for this specific level (don't rely on reactive state)
+    const wordMap = getWordsForLevel(level);
+    const wordsByLen: Map<number, string[]> = new Map();
+    for (const word of wordMap.keys()) {
+      const len = word.length;
+      if (!wordsByLen.has(len)) {
+        wordsByLen.set(len, []);
+      }
+      wordsByLen.get(len)!.push(word);
+    }
+    
     const newFloors: FloorState[] = [];
 
     for (let i = 0; i < 4; i++) {
       const config = FLOOR_CONFIG[i];
-      const availableWords = words.get(config.length) || [];
+      const availableWords = wordsByLen.get(config.length) || [];
       
       if (availableWords.length === 0) {
         console.error(`No ${config.length}-letter words available`);
@@ -388,19 +399,29 @@
     showResults = false;
   }
 
-  // Developer reset with password
-  function devReset() {
-    const password = prompt('Enter developer password:');
-    if (password === '4444') {
-      if (browser) {
-        localStorage.removeItem('tower-game-state-usda');
-        localStorage.removeItem('tower-game-state-foodie');
-        localStorage.removeItem('tower-game-state-foodie21');
-        localStorage.removeItem('tower-level');
+  // Toggle answers visibility with auth
+  function toggleAnswers() {
+    if (showAnswers) {
+      showAnswers = false;
+    } else {
+      const password = prompt('Enter moderator password:');
+      if (password === '4444') {
+        showAnswers = true;
       }
-      generatePuzzle(currentLevel);
-      showResults = false;
     }
+  }
+
+  // Moderator reset - clears all saved states and regenerates puzzle
+  function moderatorReset() {
+    if (browser) {
+      localStorage.removeItem('tower-game-state-usda');
+      localStorage.removeItem('tower-game-state-foodie');
+      localStorage.removeItem('tower-game-state-foodie21');
+      localStorage.removeItem('tower-level');
+    }
+    generatePuzzle(currentLevel);
+    showResults = false;
+    showAnswers = false;
   }
 </script>
 
@@ -411,13 +432,20 @@
 <main class="tower-game">
   <header>
     <h1>🗼 TOWER of FOOD</h1>
-    <p class="date">{puzzleDate} <button class="dev-reset" onclick={devReset}>↻</button></p>
+    <p class="date">
+      {puzzleDate}
+      <button class="answers-toggle" onclick={toggleAnswers} title="{showAnswers ? 'Hide answers' : 'Show answers'}">
+        {showAnswers ? '👁️' : '👁️‍🗨️'}
+      </button>
+    </p>
   </header>
 
-  <!-- Debug info (remove in production) -->
-  <div style="font-size: 0.7rem; color: #999; text-align: center; margin-bottom: 0.5rem;">
-    Current floor: {currentFloor} | Words: {floors.map(f => f?.word).join(', ')}
+  {#if showAnswers}
+  <div class="answers-panel">
+    <strong>Answers:</strong> {floors.map((f, i) => `F${i+1}: ${f?.word?.toUpperCase()}`).join(' | ')}
+    <button class="reset-btn" onclick={moderatorReset}>↻ Reset All</button>
   </div>
+  {/if}
 
   <!-- Level Switcher -->
   <div class="level-switcher">
@@ -652,17 +680,45 @@
     margin: 0.25rem 0;
   }
 
-  .dev-reset {
+  .answers-toggle {
     background: none;
     border: none;
-    color: #ccc;
     cursor: pointer;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     padding: 0 0.25rem;
+    opacity: 0.5;
+    transition: opacity 0.2s;
   }
 
-  .dev-reset:hover {
-    color: #999;
+  .answers-toggle:hover {
+    opacity: 1;
+  }
+
+  .answers-panel {
+    background: linear-gradient(135deg, #FFF8E1 0%, #FFE082 100%);
+    border: 1px solid #FFB300;
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin: 0 auto 1rem;
+    max-width: 400px;
+    font-size: 0.75rem;
+    color: #5D4037;
+    text-align: center;
+  }
+
+  .answers-panel .reset-btn {
+    margin-left: 10px;
+    background: #D84315;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 0.7rem;
+    cursor: pointer;
+  }
+
+  .answers-panel .reset-btn:hover {
+    background: #BF360C;
   }
 
   /* Level Switcher */
