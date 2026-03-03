@@ -52,6 +52,7 @@ export const GET: RequestHandler = async () => {
       prepTime: recipe.prepTime ? `${recipe.prepTime} mins` : undefined,
       servings: recipe.servings ? `${recipe.servings} servings` : undefined,
       recipeInstructions: recipe.instructions,
+      recipeIngredients: recipe.ingredients,
       submittedBy: recipe.submitterName,
       isCommunityRecipe: true
     }));

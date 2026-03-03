@@ -4,7 +4,7 @@
     createGameState, LEVELS, GRID_WIDTH, GRID_HEIGHT, TOTAL_HEIGHT, PANTRY_HEIGHT,
     GRID_COLS, GRID_ROWS, CELL_SIZE, pixelToGrid, gridToPixel, snapToGrid
   } from '$lib/farmers-basket/game-state.svelte';
-  import { getLevelsWithOverrides } from '$lib/farmers-basket/level-overrides';
+  import { getLevelsWithOverrides, clearOverrideCache } from '$lib/farmers-basket/level-overrides';
   import Animal from '$lib/farmers-basket/Animal.svelte';
   import Farmer from '$lib/farmers-basket/Farmer.svelte';
   import Basket from '$lib/farmers-basket/Basket.svelte';
@@ -71,6 +71,17 @@
       console.warn('Could not load level overrides:', err);
     }
   });
+  
+  // Reload levels after moderator edits
+  async function reloadLevels() {
+    clearOverrideCache();
+    try {
+      const levelsWithOverrides = await getLevelsWithOverrides();
+      game.setLevelsWithOverrides(levelsWithOverrides);
+    } catch (err) {
+      console.warn('Could not reload level overrides:', err);
+    }
+  }
   
   onDestroy(() => {
     if (typeof window !== 'undefined') {
@@ -823,11 +834,39 @@
               {#if game.currentLevel.prepTime}<span>⏱️ {game.currentLevel.prepTime}</span>{/if}
               {#if game.currentLevel.servings}<span>🍽️ {game.currentLevel.servings}</span>{/if}
             </div>
-            <ol class="recipe-steps">
-              {#each game.currentLevel.recipeInstructions as step}
-                <li>{step}</li>
-              {/each}
-            </ol>
+            
+            <div class="ingredients-section">
+              <h4>📝 Ingredients</h4>
+              {#if game.currentLevel.recipeIngredients && game.currentLevel.recipeIngredients.length > 0}
+                <ul class="ingredients-list">
+                  {#each game.currentLevel.recipeIngredients as ing}
+                    <li>{ing.quantity ? `${ing.quantity} ` : ''}{ing.name}</li>
+                  {/each}
+                </ul>
+              {:else}
+                {@const foodCounts = game.currentLevel.recipe.reduce((acc, food) => {
+                  acc[food] = (acc[food] || 0) + 1;
+                  return acc;
+                }, {} as Record<string, number>)}
+                <div class="ingredient-icons-win">
+                  {#each Object.entries(foodCounts) as [food, count]}
+                    <span class="ingredient-item">
+                      <FoodIcon food={food} size={24} />
+                      <span class="food-name">{count > 1 ? `${count}x ` : ''}{food}</span>
+                    </span>
+                  {/each}
+                </div>
+              {/if}
+            </div>
+            
+            <div class="instructions-section">
+              <h4>👨‍🍳 Instructions</h4>
+              <ol class="recipe-steps">
+                {#each game.currentLevel.recipeInstructions as step}
+                  <li>{step}</li>
+                {/each}
+              </ol>
+            </div>
           </div>
         {/if}
         
@@ -916,6 +955,7 @@
       }
     }}
     onshare={() => { showRecipeBook = false; showShareRecipe = true; }}
+    onLevelsUpdated={reloadLevels}
   />
 {/if}
 
@@ -1377,6 +1417,54 @@
     margin-bottom: 6px;
   }
   
+  .ingredients-section,
+  .instructions-section {
+    margin-bottom: 12px;
+  }
+  
+  .ingredients-section h4,
+  .instructions-section h4 {
+    font-size: 0.85rem;
+    color: #8B4513;
+    margin: 0 0 8px 0;
+    font-weight: 600;
+  }
+  
+  .ingredients-list {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.4;
+  }
+  
+  .ingredients-list li {
+    margin-bottom: 4px;
+  }
+  
+  .ingredient-icons-win {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+  
+  .ingredient-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: #f5f5f5;
+    padding: 4px 10px;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    color: #555;
+    text-transform: capitalize;
+  }
+  
+  .ingredient-item .food-name {
+    font-weight: 500;
+  }
+
   .win-buttons {
     display: flex;
     flex-direction: column;

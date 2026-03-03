@@ -15,6 +15,8 @@ interface BuiltinOverride {
   servings?: string;
   recipe?: string[];
   animalSpawns?: { type: string; delay: number }[];
+  recipeInstructions?: string[];
+  recipeIngredients?: { name: string; quantity?: string }[];
   editedAt: string;
   editedBy: string;
 }

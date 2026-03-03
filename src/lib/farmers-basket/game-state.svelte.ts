@@ -118,6 +118,9 @@ export const LEVELS: Level[] = [
       'Tear leaves into bite-sized pieces.',
       'Place in a bowl and drizzle with your favorite dressing.',
       'Toss gently and serve immediately.'
+    ],
+    recipeIngredients: [
+      { name: 'Lettuce', quantity: '1 head' }
     ]
   },
   {
@@ -141,6 +144,10 @@ export const LEVELS: Level[] = [
       'Combine lettuce and tomatoes in a large bowl.',
       'Season with salt, pepper, and olive oil.',
       'Add a splash of balsamic vinegar if desired.'
+    ],
+    recipeIngredients: [
+      { name: 'Lettuce', quantity: '1 head' },
+      { name: 'Tomato', quantity: '2 medium' }
     ]
   },
   {
@@ -168,6 +175,11 @@ export const LEVELS: Level[] = [
       'Peel carrots and cut into sticks.',
       'Arrange carrot sticks alongside tomatoes.',
       'Serve with hummus or ranch dressing for dipping.'
+    ],
+    recipeIngredients: [
+      { name: 'Lettuce', quantity: '1 head' },
+      { name: 'Tomato', quantity: '2 medium' },
+      { name: 'Carrot', quantity: '3 medium' }
     ]
   },
   {
@@ -196,6 +208,11 @@ export const LEVELS: Level[] = [
       'Layer cheese on warm toast.',
       'Add fresh lettuce leaves on top.',
       'Cut diagonally and serve as open-faced sandwiches.'
+    ],
+    recipeIngredients: [
+      { name: 'Lettuce', quantity: '4 leaves' },
+      { name: 'Cheese', quantity: '4 slices' },
+      { name: 'Bread', quantity: '4 slices' }
     ]
   },
   {
@@ -227,6 +244,12 @@ export const LEVELS: Level[] = [
       'Combine all vegetables in a large bowl.',
       'Toss with olive oil and lemon juice.',
       'Top with cheese and serve with crusty bread.'
+    ],
+    recipeIngredients: [
+      { name: 'Lettuce', quantity: '1 head' },
+      { name: 'Tomato', quantity: '2 medium' },
+      { name: 'Carrot', quantity: '2 medium' },
+      { name: 'Cheese', quantity: '1/2 cup crumbled' }
     ]
   },
   // === VEGAN RECIPES ===
@@ -255,6 +278,10 @@ export const LEVELS: Level[] = [
       'Combine fruits in a bowl.',
       'Drizzle with agave or maple syrup if desired.',
       'Serve chilled.'
+    ],
+    recipeIngredients: [
+      { name: 'Apple', quantity: '2 medium' },
+      { name: 'Grapes', quantity: '1 cup' }
     ]
   },
   {
@@ -281,6 +308,10 @@ export const LEVELS: Level[] = [
       'Rub toast with garlic clove.',
       'Top with tomato mixture.',
       'Season with salt and pepper.'
+    ],
+    recipeIngredients: [
+      { name: 'Tomato', quantity: '4 medium' },
+      { name: 'Bread', quantity: '1 baguette' }
     ]
   },
   {
@@ -308,6 +339,10 @@ export const LEVELS: Level[] = [
       'Strain if desired for smoother texture.',
       'Add a squeeze of lemon for brightness.',
       'Serve over ice.'
+    ],
+    recipeIngredients: [
+      { name: 'Apple', quantity: '2 large' },
+      { name: 'Carrot', quantity: '3 medium' }
     ]
   },
   // === VEGGIE RECIPES ===
@@ -336,6 +371,10 @@ export const LEVELS: Level[] = [
       'Pour in eggs and stir gently with a spatula.',
       'Remove from heat while still slightly soft.',
       'Season with salt and pepper.'
+    ],
+    recipeIngredients: [
+      { name: 'Egg', quantity: '4 large' },
+      { name: 'Butter', quantity: '2 tbsp' }
     ]
   },
   {
@@ -364,6 +403,11 @@ export const LEVELS: Level[] = [
       'Add cheese slices on top.',
       'Cover with second bread slice, butter-side up.',
       'Grill until golden on both sides and cheese melts.'
+    ],
+    recipeIngredients: [
+      { name: 'Cheese', quantity: '2 slices' },
+      { name: 'Bread', quantity: '2 slices' },
+      { name: 'Butter', quantity: '2 tbsp' }
     ]
   },
   {
@@ -391,6 +435,10 @@ export const LEVELS: Level[] = [
       'Add diced celery, salt, and pepper.',
       'Serve on a bed of fresh lettuce.',
       'Garnish with paprika.'
+    ],
+    recipeIngredients: [
+      { name: 'Egg', quantity: '4 large' },
+      { name: 'Lettuce', quantity: '1 head' }
     ]
   },
   // === PESCA (FISH) RECIPES ===
@@ -420,6 +468,11 @@ export const LEVELS: Level[] = [
       'Shred lettuce and dice tomatoes.',
       'Warm tortillas and assemble with fish, lettuce, and tomato.',
       'Top with salsa and sour cream.'
+    ],
+    recipeIngredients: [
+      { name: 'Fish fillet', quantity: '1 lb' },
+      { name: 'Lettuce', quantity: '1/2 head' },
+      { name: 'Tomato', quantity: '2 medium' }
     ]
   },
   {
@@ -447,6 +500,10 @@ export const LEVELS: Level[] = [
       'Coat fish in batter and deep fry until golden.',
       'Serve with tartar sauce.',
       'Add lemon wedges on the side.'
+    ],
+    recipeIngredients: [
+      { name: 'Fish fillet', quantity: '1 lb' },
+      { name: 'Bread crumbs', quantity: '1 cup' }
     ]
   },
   {
@@ -474,6 +531,11 @@ export const LEVELS: Level[] = [
       'Shred carrots over the lettuce.',
       'Top with fish pieces.',
       'Drizzle with lemon vinaigrette.'
+    ],
+    recipeIngredients: [
+      { name: 'Fish fillet', quantity: '8 oz' },
+      { name: 'Lettuce', quantity: '1 head' },
+      { name: 'Carrot', quantity: '2 medium' }
     ]
   },
   // === POLLO (CHICKEN) RECIPES ===
@@ -504,6 +566,11 @@ export const LEVELS: Level[] = [
       'Arrange lettuce and diced tomatoes in a bowl.',
       'Top with chicken slices.',
       'Dress with olive oil and lemon juice.'
+    ],
+    recipeIngredients: [
+      { name: 'Chicken breast', quantity: '2 (6 oz each)' },
+      { name: 'Lettuce', quantity: '1 head' },
+      { name: 'Tomato', quantity: '2 medium' }
     ]
   },
   {
@@ -533,6 +600,11 @@ export const LEVELS: Level[] = [
       'Spread mayonnaise on bread.',
       'Layer chicken and lettuce.',
       'Close sandwich and cut diagonally.'
+    ],
+    recipeIngredients: [
+      { name: 'Chicken breast', quantity: '1 (6 oz)' },
+      { name: 'Bread', quantity: '2 slices' },
+      { name: 'Lettuce', quantity: '2 leaves' }
     ]
   },
   {
@@ -562,6 +634,11 @@ export const LEVELS: Level[] = [
       'Peel and chop carrots, roast alongside chicken.',
       'Let chicken rest before carving.',
       'Serve with roasted carrots and pan juices.'
+    ],
+    recipeIngredients: [
+      { name: 'Whole chicken', quantity: '1 (4 lb)' },
+      { name: 'Carrot', quantity: '4 large' },
+      { name: 'Butter', quantity: '4 tbsp' }
     ]
   },
   // === POLLO-PESCA (CHICKEN OR FISH) RECIPES ===
@@ -592,6 +669,11 @@ export const LEVELS: Level[] = [
       'Arrange lettuce on plates.',
       'Slice chicken and flake fish over greens.',
       'Dress with citrus vinaigrette.'
+    ],
+    recipeIngredients: [
+      { name: 'Chicken breast', quantity: '1 (6 oz)' },
+      { name: 'Fish fillet', quantity: '6 oz' },
+      { name: 'Lettuce', quantity: '1 head' }
     ]
   },
   {
@@ -623,6 +705,12 @@ export const LEVELS: Level[] = [
       'Add shredded lettuce.',
       'Slice proteins and arrange over vegetables.',
       'Top with sesame seeds and teriyaki sauce.'
+    ],
+    recipeIngredients: [
+      { name: 'Chicken breast', quantity: '1 (6 oz)' },
+      { name: 'Fish fillet', quantity: '6 oz' },
+      { name: 'Carrot', quantity: '2 medium' },
+      { name: 'Lettuce', quantity: '1/2 head' }
     ]
   },
   // === ALL FOODS (INCLUDING BACON/MEAT) RECIPES ===
@@ -654,6 +742,12 @@ export const LEVELS: Level[] = [
       'Spread mayonnaise on toast.',
       'Layer bacon, lettuce, and tomato slices.',
       'Close sandwich and cut in half.'
+    ],
+    recipeIngredients: [
+      { name: 'Bacon', quantity: '4 strips' },
+      { name: 'Lettuce', quantity: '2 leaves' },
+      { name: 'Tomato', quantity: '1 medium' },
+      { name: 'Bread', quantity: '2 slices' }
     ]
   },
   {
@@ -683,6 +777,12 @@ export const LEVELS: Level[] = [
       'Toast bread and butter generously.',
       'Plate eggs with bacon on the side.',
       'Serve with buttered toast.'
+    ],
+    recipeIngredients: [
+      { name: 'Bacon', quantity: '4 strips' },
+      { name: 'Egg', quantity: '4 large' },
+      { name: 'Bread', quantity: '2 slices' },
+      { name: 'Butter', quantity: '2 tbsp' }
     ]
   },
   {
@@ -714,6 +814,13 @@ export const LEVELS: Level[] = [
       'Toast three slices of bread.',
       'Layer chicken, bacon, lettuce, and tomato between slices.',
       'Secure with toothpicks and cut into triangles.'
+    ],
+    recipeIngredients: [
+      { name: 'Chicken breast', quantity: '1 (6 oz)' },
+      { name: 'Bacon', quantity: '4 strips' },
+      { name: 'Lettuce', quantity: '2 leaves' },
+      { name: 'Tomato', quantity: '1 medium' },
+      { name: 'Bread', quantity: '3 slices' }
     ]
   },
   {
@@ -745,6 +852,13 @@ export const LEVELS: Level[] = [
       'Grill tomato halves in the pan.',
       'Toast bread and spread with butter.',
       'Plate everything together and serve hot.'
+    ],
+    recipeIngredients: [
+      { name: 'Bacon', quantity: '4 strips' },
+      { name: 'Egg', quantity: '4 large' },
+      { name: 'Tomato', quantity: '2 medium' },
+      { name: 'Bread', quantity: '2 slices' },
+      { name: 'Butter', quantity: '2 tbsp' }
     ]
   },
   {
@@ -777,6 +891,14 @@ export const LEVELS: Level[] = [
       'Hard boil eggs, then quarter.',
       'Arrange lettuce as base, add rows of each ingredient.',
       'Crumble cheese on top and drizzle with dressing.'
+    ],
+    recipeIngredients: [
+      { name: 'Chicken breast', quantity: '2 (6 oz each)' },
+      { name: 'Bacon', quantity: '6 strips' },
+      { name: 'Egg', quantity: '4 large' },
+      { name: 'Lettuce', quantity: '1 head' },
+      { name: 'Tomato', quantity: '2 medium' },
+      { name: 'Cheese', quantity: '1/2 cup crumbled' }
     ]
   }
 ];

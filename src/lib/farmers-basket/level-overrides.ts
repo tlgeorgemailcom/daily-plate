@@ -11,6 +11,8 @@ export interface BuiltinOverride {
   servings?: string;
   recipe?: FoodType[];
   animalSpawns?: { type: AnimalType; delay: number }[];
+  recipeInstructions?: string[];
+  recipeIngredients?: { name: string; quantity?: string }[];
   editedAt?: string;
   editedBy?: string;
 }
@@ -64,7 +66,9 @@ export async function getLevelsWithOverrides(): Promise<Level[]> {
       prepTime: override.prepTime ?? level.prepTime,
       servings: override.servings ?? level.servings,
       recipe: override.recipe ?? level.recipe,
-      animalSpawns: override.animalSpawns ?? level.animalSpawns
+      animalSpawns: override.animalSpawns ?? level.animalSpawns,
+      recipeInstructions: override.recipeInstructions ?? level.recipeInstructions,
+      recipeIngredients: override.recipeIngredients ?? level.recipeIngredients
     } as Level;
   });
 }

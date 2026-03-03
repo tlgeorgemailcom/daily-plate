@@ -47,10 +47,11 @@
     onselect: (levelId: string) => void;
     onclose: () => void;
     onshare?: () => void;
+    onLevelsUpdated?: () => void | Promise<void>;  // Called after recipe save to refresh levels
     startWithRecipeOfDay?: boolean;
   }
   
-  let { levels, completedLevels, currentLevelId, onselect, onclose, onshare, startWithRecipeOfDay = false }: Props = $props();
+  let { levels, completedLevels, currentLevelId, onselect, onclose, onshare, onLevelsUpdated, startWithRecipeOfDay = false }: Props = $props();
   
   // View states: 'dietary-select' | 'recipe-of-day' | 'index' | 'detail'
   let showDietarySelect = $state(false);
@@ -272,20 +273,42 @@
   
   // Convert Level to RecipeFormData for editing
   function levelToFormData(level: Level): Partial<RecipeFormData> {
+    // Use recipeIngredients if available (has real quantities), otherwise fall back to recipe array
+    let ingredients;
+    if (level.recipeIngredients && level.recipeIngredients.length > 0) {
+      // Map recipeIngredients to form ingredients, matching with game foods from recipe array
+      ingredients = level.recipeIngredients.map((ing, i) => {
+        // Try to match this ingredient to a game food
+        const matchedFood = level.recipe.find(food => 
+          ing.name.toLowerCase().includes(food.toLowerCase()) ||
+          food.toLowerCase().includes(ing.name.toLowerCase().split(' ')[0])
+        ) || level.recipe[i] || '';
+        return {
+          id: i + 1,
+          name: ing.name,
+          quantity: ing.quantity || '',
+          gameFood: matchedFood,
+          animal: level.animalSpawns[i]?.type || ''
+        };
+      });
+    } else {
+      // Fallback: convert recipe foods to ingredients
+      ingredients = level.recipe.map((food, i) => ({
+        id: i + 1,
+        name: food,
+        quantity: '1',
+        gameFood: food,
+        animal: level.animalSpawns[i]?.type || ''
+      }));
+    }
+    
     return {
       recipeName: level.name,
       category: level.category,
       dietaryCategory: level.dietaryCategory,
       prepTime: level.prepTime || '',
       servings: level.servings || '',
-      // Convert recipe foods to ingredients
-      ingredients: level.recipe.map((food, i) => ({
-        id: i + 1,
-        name: food,
-        quantity: '1',
-        gameFood: food,  // Pre-map game food
-        animal: level.animalSpawns[i]?.type || ''  // Pre-map animal
-      })),
+      ingredients,
       instructions: (level.recipeInstructions || []).map((text, i) => ({
         id: i + 1,
         text
@@ -331,7 +354,11 @@
             servings: data.servings,
             recipe: gameFoods,
             animalSpawns,
-            recipeInstructions: data.instructions.map(i => i.text)
+            recipeInstructions: data.instructions.map(i => i.text),
+            recipeIngredients: data.ingredients.filter(i => i.name.trim()).map(i => ({
+              name: i.name,
+              quantity: i.quantity || ''
+            }))
           },
           editedBy: 'Moderator'
         })
@@ -341,6 +368,11 @@
       
       // Clear override cache so changes take effect
       clearOverrideCache();
+      
+      // Notify parent to reload levels
+      if (onLevelsUpdated) {
+        await onLevelsUpdated();
+      }
       
       saveSuccess = true;
       setTimeout(() => {
@@ -510,6 +542,18 @@
                 {#if selectedLevel.prepTime}<span>⏱️ {selectedLevel.prepTime}</span>{/if}
                 {#if selectedLevel.servings}<span>🍽️ {selectedLevel.servings}</span>{/if}
               </div>
+              
+              {#if selectedLevel.recipeIngredients && selectedLevel.recipeIngredients.length > 0}
+                <div class="full-ingredients">
+                  <span class="ingredients-label">📝 Full Ingredient List:</span>
+                  <ul>
+                    {#each selectedLevel.recipeIngredients as ing}
+                      <li>{ing.quantity ? `${ing.quantity} ` : ''}{ing.name}</li>
+                    {/each}
+                  </ul>
+                </div>
+              {/if}
+              
               <div class="instructions">
                 <span class="instructions-label">How to make:</span>
                 <ol>
@@ -1371,6 +1415,24 @@
     font-size: 0.9rem;
     color: #666;
     margin-bottom: 12px;
+  }
+  
+  .full-ingredients {
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #DDD;
+  }
+  
+  .full-ingredients ul {
+    margin: 8px 0 0;
+    padding-left: 20px;
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.4;
+  }
+  
+  .full-ingredients li {
+    margin-bottom: 4px;
   }
   
   .instructions {

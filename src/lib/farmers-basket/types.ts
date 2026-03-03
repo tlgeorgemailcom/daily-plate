@@ -96,6 +96,7 @@ export interface Level {
   foodSupply: Record<FoodType, number>; // -1 for unlimited
   // Recipe details (revealed when level is completed)
   recipeInstructions?: string[];  // Step-by-step cooking instructions
+  recipeIngredients?: { name: string; quantity?: string }[];  // Full ingredient list with quantities
   servings?: string;              // e.g., "Serves 2"
   prepTime?: string;              // e.g., "10 minutes"
 }
