@@ -1,0 +1,54 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  migrate-database:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2  # Need previous commit to detect changes
+      
+      # Check if any migration files changed
+      - name: Check for migration changes
+        id: migration-check
+        run: |
+          if git diff --name-only HEAD~1 HEAD | grep -q "^migrations/"; then
+            echo "migrations_changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "migrations_changed=false" >> $GITHUB_OUTPUT
+          fi
+      
+      # Install Turso CLI only if migrations changed
+      - name: Install Turso CLI
+        if: steps.migration-check.outputs.migrations_changed == 'true'
+        run: curl -sSfL https://get.tur.so/install.sh | bash
+        
+      # Run new migrations
+      - name: Run migrations
+        if: steps.migration-check.outputs.migrations_changed == 'true'
+        env:
+          TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
+          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+        run: |
+          export PATH="$HOME/.turso:$PATH"
+          
+          # Run all .sql files in migrations/ that were added/modified
+          for file in $(git diff --name-only HEAD~1 HEAD | grep "^migrations/.*\.sql$"); do
+            echo "Running migration: $file"
+            turso db shell daily-food-chain < "$file"
+          done
+          
+      - name: Migration summary
+        if: steps.migration-check.outputs.migrations_changed == 'true'
+        run: echo "✅ Database migrations completed"
+        
+      - name: No migrations needed
+        if: steps.migration-check.outputs.migrations_changed == 'false'
+        run: echo "ℹ️ No migration files changed, skipping database updates"
+
+  # Note: Vercel deployment happens automatically via Vercel's GitHub integration
+  # This workflow only handles Turso database migrations
