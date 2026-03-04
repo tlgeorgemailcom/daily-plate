@@ -6,6 +6,7 @@
 import { browser } from '$app/environment';
 import { get } from 'svelte/store';
 import { canUseStorage, playerStore } from './playerStore';
+import { saveGameScore } from './scoreHistory';
 import { 
   addedFoods, 
   meals, 
@@ -13,6 +14,7 @@ import {
   selectedContainer,
   targets,
   nutrientTargets,
+  nutrientProgress,
   selectedPieNutrient,
   DEFAULT_MEALS,
   type AddedFood,
@@ -256,10 +258,68 @@ export function stopAutoSave(): void {
   unsubscribers = [];
 }
 
+// Save daily diet stats when starting a new game (for premium users)
+// Tracks if each nutrient target was met (>= 80% of target)
+function saveDailyDietStats(): void {
+  if (!browser) return;
+  
+  // Only track if there are foods added
+  const foods = get(addedFoods);
+  if (foods.length === 0) {
+    console.log('[GameState] No foods added, skipping diet stats');
+    return;
+  }
+  
+  // Get current nutrient progress
+  const progress = get(nutrientProgress);
+  const ntargets = get(nutrientTargets);
+  
+  // Check if each nutrient is >= 80% of target (for sugar, <= 120% is good)
+  const caloriesMet = progress.calories.percent >= 80;
+  const proteinMet = progress.protein.percent >= 80;
+  const fatsMet = progress.fat.percent >= 80;
+  const carbsMet = progress.carbs.percent >= 80;
+  const fiberMet = progress.fiber.percent >= 80;
+  const waterMet = progress.water.percent >= 80;
+  const sugarMet = progress.sugar.percent <= 120; // Sugar is a max, so <= 120% is good
+  
+  // Count how many targets were met
+  const targetsMetCount = [caloriesMet, proteinMet, fatsMet, carbsMet, fiberMet, waterMet, sugarMet]
+    .filter(Boolean).length;
+  
+  // Save the daily diet to score history
+  saveGameScore('balanced-diet', targetsMetCount, {
+    date: new Date().toISOString().split('T')[0], // YYYY-MM-DD
+    foodsAdded: foods.length,
+    caloriesTarget: ntargets.calories,
+    caloriesActual: progress.calories.current,
+    caloriesPercent: progress.calories.percent,
+    caloriesMet,
+    proteinPercent: progress.protein.percent,
+    proteinMet,
+    fatsPercent: progress.fat.percent,
+    fatsMet,
+    carbsPercent: progress.carbs.percent,
+    carbsMet,
+    fiberPercent: progress.fiber.percent,
+    fiberMet,
+    waterPercent: progress.water.percent,
+    waterMet,
+    sugarPercent: progress.sugar.percent,
+    sugarMet,
+    targetsMetCount
+  });
+  
+  console.log('[GameState] Daily diet stats saved:', targetsMetCount, '/7 targets met');
+}
+
 // Start a new game - clear foods and meals but keep user's settings
 export function startNewGame(): void {
   // Stop auto-save first to prevent saving the reset state before clearing
   stopAutoSave();
+  
+  // Save the current day's stats before clearing (for premium users)
+  saveDailyDietStats();
   
   // Clear localStorage game state
   clearGameState();

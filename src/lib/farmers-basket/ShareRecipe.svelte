@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { canUseStorage } from '$lib/stores/playerStore';
+  import { saveGameScore } from '$lib/stores/scoreHistory';
   import RecipeForm, { type RecipeFormData } from './RecipeForm.svelte';
   
   interface Props {
@@ -113,6 +114,14 @@
         } catch (e) {
           console.warn('Could not save recipe ID to localStorage:', e);
         }
+        
+        // Track recipe submission for premium users
+        saveGameScore('farmers-basket', 1, {
+          recipeSubmitted: true,
+          recipeId: result.id,
+          recipeName: data.name,
+          ingredientCount: data.ingredients.length
+        });
       }
       
       submitSuccess = true;

@@ -5,6 +5,7 @@ import type {
   AnimalType, FoodType, ToolType, Position, Direction
 } from './types';
 import { ANIMAL_SPEED, ANIMAL_ESCAPE_TIME, ESCAPE_TIME_BY_BARRIER, ANIMAL_TARGETS, FOOD_ANIMAL_MAP } from './types';
+import { saveGameScore } from '$lib/stores/scoreHistory';
 
 // Game constants
 export const GRID_WIDTH = 650;
@@ -1939,6 +1940,16 @@ export function createGameState() {
       completedLevels = new Set([...completedLevels, currentLevel.id]);
       saveCompletedLevels(completedLevels);
       
+      // Save game result to cloud for premium users
+      saveGameScore('farmers-basket', 1, {
+        won: true,
+        recipeId: currentLevel.id,
+        recipeName: currentLevel.name,
+        levelNum: currentLevel.levelNum,
+        recipeIngredients: recipe.length,
+        category: currentLevel.category
+      });
+      
       stopLevel();
     }
   }
@@ -1963,6 +1974,17 @@ export function createGameState() {
       if (!source || source.remaining <= 0) {
         // Can't get this item anymore - lose!
         gameStatus = 'lost';
+        
+        // Save game result to cloud for premium users (score 0 for loss)
+        saveGameScore('farmers-basket', 0, {
+          won: false,
+          recipeId: currentLevel.id,
+          recipeName: currentLevel.name,
+          levelNum: currentLevel.levelNum,
+          recipeIngredients: recipe.length,
+          category: currentLevel.category
+        });
+        
         stopLevel();
         return;
       }

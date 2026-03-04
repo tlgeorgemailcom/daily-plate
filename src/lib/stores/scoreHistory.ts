@@ -3,16 +3,33 @@ import { browser } from '$app/environment';
 import { get } from 'svelte/store';
 import { playerStore } from './playerStore';
 
-export type GameType = 'chain' | 'plate' | 'matching' | 'tower' | 'scrambled' | 'farmers-basket' | 'balanced-diet';
+export type GameType = 'chain' | 'plate' | 'matching' | 'tower' | 'scrambled' | 'slider' | 'farmers-basket' | 'balanced-diet';
 
 export interface GameScoreDetails {
   difficulty?: string;
   level?: string;
+  levelNum?: number;
   wordsUsed?: number;
   groupsHit?: number;
   timeSeconds?: number;
   streak?: number;
   puzzleNumber?: number;
+  // Farmer's Basket specific
+  recipeId?: string;
+  recipeName?: string;
+  won?: boolean;
+  // Balanced Diet specific
+  date?: string;
+  caloriesTarget?: number;
+  caloriesActual?: number;
+  caloriesMet?: boolean;
+  proteinMet?: boolean;
+  fatsMet?: boolean;
+  carbsMet?: boolean;
+  fiberMet?: boolean;
+  waterMet?: boolean;
+  sugarMet?: boolean;
+  targetsMetCount?: number;
   [key: string]: unknown; // Allow additional game-specific fields
 }
 
