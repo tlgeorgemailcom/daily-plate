@@ -1,40 +1,67 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import { readFileSync, existsSync } from 'fs';
-import { join } from 'path';
+import { queryAll } from '$lib/server/turso';
 
-const DATA_DIR = join(process.cwd(), 'data', 'recipes');
-const PENDING_FILE = join(DATA_DIR, 'pending.json');
-
-interface RecipeSubmission {
+interface RecipeRow {
   id: string;
-  recipeName: string;
+  type: string;
+  name: string;
   category: string;
-  submitterName: string;
-  prepTime: string;
-  servings: string;
-  ingredients: { name: string; quantity: string }[];
-  instructions: string[];
-  submittedAt: string;
-  status: 'pending' | 'approved' | 'rejected';
+  dietary_category: string | null;
+  prep_time: string | null;
+  servings: string | null;
+  recipe: string | null;
+  recipe_ingredients: string | null;
+  recipe_instructions: string | null;
+  food_supply: string | null;
+  tools: string | null;
+  animal_spawns: string | null;
+  submitted_by: string | null;
+  status: string;
+  created_at: string;
+  edited_at: string | null;
+  edited_by: string | null;
 }
 
 export const GET: RequestHandler = async ({ url }) => {
   try {
-    if (!existsSync(PENDING_FILE)) {
-      return json({ recipes: [] });
+    const status = url.searchParams.get('status');
+    const type = url.searchParams.get('type');
+    
+    let sql = 'SELECT * FROM recipes WHERE 1=1';
+    const args: string[] = [];
+    
+    if (status) {
+      sql += ' AND status = ?';
+      args.push(status);
     }
     
-    const data = readFileSync(PENDING_FILE, 'utf-8');
-    const recipes: RecipeSubmission[] = JSON.parse(data);
+    if (type) {
+      sql += ' AND type = ?';
+      args.push(type);
+    }
     
-    // Filter by status if provided
-    const status = url.searchParams.get('status');
-    const filtered = status 
-      ? recipes.filter(r => r.status === status)
-      : recipes;
+    sql += ' ORDER BY created_at DESC';
     
-    return json({ recipes: filtered });
+    const rows = await queryAll<RecipeRow>(sql, args);
+    
+    // Convert to API format
+    const recipes = rows.map(row => ({
+      id: row.id,
+      recipeName: row.name,
+      category: row.category,
+      dietaryCategory: row.dietary_category,
+      submitterName: row.submitted_by || 'System',
+      prepTime: row.prep_time || '',
+      servings: row.servings || '',
+      ingredients: row.recipe_ingredients ? JSON.parse(row.recipe_ingredients) : [],
+      instructions: row.recipe_instructions ? JSON.parse(row.recipe_instructions) : [],
+      submittedAt: row.created_at,
+      status: row.status,
+      type: row.type
+    }));
+    
+    return json({ recipes });
     
   } catch (err) {
     console.error('Failed to load recipes:', err);

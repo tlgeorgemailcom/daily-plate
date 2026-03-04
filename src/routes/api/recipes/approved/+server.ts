@@ -1,61 +1,72 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import { readFileSync, existsSync } from 'fs';
-import { join } from 'path';
+import { queryAll } from '$lib/server/turso';
 
-const DATA_DIR = join(process.cwd(), 'data', 'recipes');
-const APPROVED_FILE = join(DATA_DIR, 'approved.json');
-
-interface ApprovedRecipe {
+interface RecipeRow {
   id: string;
-  recipeName: string;
+  type: string;
+  name: string;
   category: string;
-  submitterName: string;
-  prepTime: string;
-  servings: string;
-  ingredients: { name: string; quantity: string }[];
-  instructions: string[];
-  submittedAt: string;
-  status: 'approved';
-  gameFoods: string[];
-  animalSpawns: { type: string; delay: number }[];
-  reviewedAt: string;
-  reviewedBy: string;
+  dietary_category: string | null;
+  level_num: number | null;
+  prep_time: string | null;
+  servings: string | null;
+  recipe: string | null;
+  recipe_ingredients: string | null;
+  recipe_instructions: string | null;
+  food_supply: string | null;
+  tools: string | null;
+  animal_spawns: string | null;
+  submitted_by: string | null;
+  status: string;
+  created_at: string;
 }
 
 export const GET: RequestHandler = async () => {
   try {
-    if (!existsSync(APPROVED_FILE)) {
-      return json({ recipes: [] });
-    }
-    
-    const data = readFileSync(APPROVED_FILE, 'utf-8');
-    const recipes: ApprovedRecipe[] = JSON.parse(data);
+    // Get all approved community recipes
+    const rows = await queryAll<RecipeRow>(
+      `SELECT * FROM recipes 
+       WHERE status = 'approved' AND type = 'community'
+       ORDER BY created_at ASC`
+    );
     
     // Convert to game Level format
-    const levels = recipes.map((recipe, index) => ({
-      id: recipe.id,
-      levelNum: 100 + index + 1, // Community recipes start at 101
-      name: recipe.recipeName,
-      category: recipe.category,
-      recipe: recipe.gameFoods,
-      foodSupply: recipe.gameFoods.reduce((acc, food) => {
-        acc[food] = (acc[food] || 0) + 1;
-        return acc;
-      }, {} as Record<string, number>),
-      animalSpawns: recipe.animalSpawns.map(spawn => ({
-        type: spawn.type,
-        delay: spawn.delay * 1000, // Convert to ms
-        from: 'left' as const
-      })),
-      tools: [], // Default tools
-      prepTime: recipe.prepTime ? `${recipe.prepTime} mins` : undefined,
-      servings: recipe.servings ? `${recipe.servings} servings` : undefined,
-      recipeInstructions: recipe.instructions,
-      recipeIngredients: recipe.ingredients,
-      submittedBy: recipe.submitterName,
-      isCommunityRecipe: true
-    }));
+    const levels = rows.map((row, index) => {
+      const gameFoods = row.recipe ? JSON.parse(row.recipe) : [];
+      const ingredients = row.recipe_ingredients ? JSON.parse(row.recipe_ingredients) : [];
+      const instructions = row.recipe_instructions ? JSON.parse(row.recipe_instructions) : [];
+      const animalSpawns = row.animal_spawns ? JSON.parse(row.animal_spawns) : [];
+      const tools = row.tools ? JSON.parse(row.tools) : [];
+      const foodSupply = row.food_supply ? JSON.parse(row.food_supply) : 
+        // Default: count game foods
+        gameFoods.reduce((acc: Record<string, number>, food: string) => {
+          acc[food] = (acc[food] || 0) + 1;
+          return acc;
+        }, {});
+      
+      return {
+        id: row.id,
+        levelNum: row.level_num || (100 + index + 1), // Community recipes start at 101
+        name: row.name,
+        category: row.category,
+        dietaryCategory: row.dietary_category,
+        recipe: gameFoods,
+        foodSupply,
+        animalSpawns: animalSpawns.map((spawn: { type: string; delay: number }) => ({
+          type: spawn.type,
+          delay: spawn.delay * 1000, // Convert to ms
+          from: 'left' as const
+        })),
+        tools,
+        prepTime: row.prep_time,
+        servings: row.servings,
+        recipeInstructions: instructions,
+        recipeIngredients: ingredients,
+        submittedBy: row.submitted_by || 'Community',
+        isCommunityRecipe: true
+      };
+    });
     
     return json({ recipes: levels });
     

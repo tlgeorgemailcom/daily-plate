@@ -26,6 +26,7 @@
     servings: string;
     ingredients: RecipeIngredient[];
     instructions: RecipeInstruction[];
+    foodSupply?: Record<FoodType, number>; // How many of each food available in game
   }
   
   // Props
@@ -110,6 +111,9 @@
       : [{ id: 1, text: '' }]
   );
   
+  // Initialize food supply (default 3 of each selected food)
+  let foodSupply = $state<Record<FoodType, number>>(initialData.foodSupply || {} as Record<FoodType, number>);
+  
   // Update next IDs based on initial data
   $effect(() => {
     if (initialData.ingredients?.length) {
@@ -160,7 +164,8 @@
       prepTime,
       servings,
       ingredients: ingredients.filter(i => i.name.trim()),
-      instructions: instructions.filter(i => i.text.trim())
+      instructions: instructions.filter(i => i.text.trim()),
+      foodSupply: moderatorMode ? foodSupply : undefined
     };
     
     onsubmit(data);
@@ -182,7 +187,8 @@
     prepTime,
     servings,
     ingredients: ingredients.filter(i => i.name.trim()),
-    instructions: instructions.filter(i => i.text.trim())
+    instructions: instructions.filter(i => i.text.trim()),
+    foodSupply: moderatorMode ? foodSupply : undefined
   });
 </script>
 
@@ -383,6 +389,36 @@
         <p class="mapping-warning">⚠️ Select at least one game food to enable gameplay</p>
       {/if}
     </div>
+    
+    <!-- Food Supply Section -->
+    {@const selectedFoods = [...new Set(ingredients.filter(i => i.gameFood).map(i => i.gameFood as FoodType))]}
+    {#if selectedFoods.length > 0}
+      <div class="form-section food-supply-section">
+        <h3 class="section-title">📦 Food Supply</h3>
+        <p class="section-hint">How many of each food can be collected? (-1 = unlimited)</p>
+        
+        <div class="food-supply-grid">
+          {#each selectedFoods as food}
+            <div class="food-supply-item">
+              <span class="food-supply-label">
+                {FOOD_EMOJI[food]} {food}
+              </span>
+              <input 
+                type="number" 
+                min="-1" 
+                max="20"
+                value={foodSupply[food] ?? 3}
+                onchange={(e) => {
+                  const val = parseInt((e.target as HTMLInputElement).value) || 3;
+                  foodSupply = { ...foodSupply, [food]: val };
+                }}
+                class="food-supply-input"
+              />
+            </div>
+          {/each}
+        </div>
+      </div>
+    {/if}
   {/if}
   
   <!-- Form Actions -->
@@ -750,5 +786,58 @@
     color: #C62828;
     border-radius: 6px;
     font-size: 0.85rem;
+  }
+  
+  /* Food Supply Section */
+  .food-supply-section {
+    background: #E8F5E9;
+    padding: 16px;
+    border-radius: 12px;
+    border: 2px solid #66BB6A;
+    margin-top: 16px;
+  }
+  
+  .food-supply-section .section-title {
+    color: #2E7D32;
+    border-bottom-color: #66BB6A;
+  }
+  
+  .food-supply-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+  }
+  
+  .food-supply-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 12px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #C8E6C9;
+  }
+  
+  .food-supply-label {
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .food-supply-input {
+    width: 60px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid #C8E6C9;
+    text-align: center;
+    font-size: 0.95rem;
+  }
+  
+  .food-supply-input:focus {
+    outline: none;
+    border-color: #66BB6A;
+    box-shadow: 0 0 0 2px rgba(102, 187, 106, 0.2);
   }
 </style>

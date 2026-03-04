@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { canUseStorage } from '$lib/stores/playerStore';
   import type { Level, FoodType, DietaryCategory } from './types';
   import FoodIcon from './FoodIcon.svelte';
   import RecipeForm, { type RecipeFormData, type RecipeIngredient } from './RecipeForm.svelte';
@@ -82,10 +83,10 @@
     }
   });
   
-  // Save dietary preference
+  // Save dietary preference (only for logged-in users)
   function setDietaryPreference(pref: DietaryCategory) {
     dietaryPreference = pref;
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && canUseStorage()) {
       localStorage.setItem(DIETARY_STORAGE_KEY, pref);
     }
     showDietarySelect = false;
@@ -271,6 +272,15 @@
     }
   }
   
+  // Secret admin access via book icon
+  function handleSecretAdmin(e: MouseEvent) {
+    e.stopPropagation();
+    const code = prompt('');
+    if (code === '4444') {
+      window.open('/farmers-basket/moderate', '_blank');
+    }
+  }
+  
   // Convert Level to RecipeFormData for editing
   function levelToFormData(level: Level): Partial<RecipeFormData> {
     // Use recipeIngredients if available (has real quantities), otherwise fall back to recipe array
@@ -411,7 +421,7 @@
           ← Back
         </button>
       {:else}
-        <h2>📖 Recipe Book</h2>
+        <h2><button class="secret-admin-btn" onclick={handleSecretAdmin}>📖</button> Recipe Book</h2>
       {/if}
       <div class="header-actions">
         <span class="level-count">{completedLevels.size}/{filteredLevels.length} ✓</span>
@@ -775,6 +785,16 @@
     margin: 0;
     font-size: 1.2rem;
     flex: 1;
+  }
+  
+  .secret-admin-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: default;
+    font-size: inherit;
+    line-height: 1;
   }
   
   .back-btn {

@@ -281,13 +281,16 @@ export const MATCHING_FOODS: MatchingFood[] = [
   { word: 'HAZELNUT', display: 'Hazelnut', containers: ['bowl'], meals: ['snack'] },
 ];
 
+import { canUseStorage } from '$lib/stores/playerStore';
+
 // Get a random food for the game (avoids repeating the last few foods)
-// History is persisted to localStorage to survive page refreshes
+// History is persisted to localStorage only for logged-in users (Free tier)
 const RECENT_HISTORY = 50;  // Don't repeat any of the last 50 foods
 const STORAGE_KEY = 'matching-recent-foods';
 
 function loadRecentFoods(): string[] {
   if (typeof localStorage === 'undefined') return [];
+  if (!canUseStorage()) return [];  // Guests don't persist
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
     return saved ? JSON.parse(saved) : [];
@@ -298,6 +301,7 @@ function loadRecentFoods(): string[] {
 
 function saveRecentFoods(foods: string[]): void {
   if (typeof localStorage === 'undefined') return;
+  if (!canUseStorage()) return;  // Guests don't persist
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(foods));
   } catch {

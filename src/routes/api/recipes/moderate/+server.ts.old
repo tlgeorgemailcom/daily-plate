@@ -22,7 +22,6 @@ interface RecipeSubmission {
   // Added by moderator
   gameFoods?: string[];  // Food types for gameplay: ['lettuce', 'tomato', 'cheese']
   animalSpawns?: { type: string; delay: number }[];
-  foodSupply?: Record<string, number>;  // How many of each food: { lettuce: 3, tomato: 2 }
   // Enhanced ingredient mapping (game food + animal per ingredient)
   modIngredients?: { 
     name: string; 
@@ -96,7 +95,6 @@ export const POST: RequestHandler = async ({ request }) => {
       gameFoods, 
       animalSpawns, 
       reviewedBy,
-      foodSupply,
       // New fields for full recipe editing on approval
       recipeName,
       category,
@@ -107,63 +105,12 @@ export const POST: RequestHandler = async ({ request }) => {
       instructions
     } = body;
     
-    if (!action) {
-      return json({ error: 'Missing action' }, { status: 400 });
-    }
-    
-    // Handle creating new built-in recipes
-    if (action === 'create-builtin') {
-      if (!gameFoods || gameFoods.length === 0) {
-        return json({ error: 'Game foods required' }, { status: 400 });
-      }
-      if (!recipeName || !recipeName.trim()) {
-        return json({ error: 'Recipe name required' }, { status: 400 });
-      }
-      
-      const newRecipe: RecipeSubmission = {
-        id: `builtin-${Date.now()}`,
-        recipeName: recipeName,
-        category: category || 'Dinner',
-        dietaryCategory: dietaryCategory || 'all',
-        submitterName: 'Built-in',
-        prepTime: prepTime || '',
-        servings: servings || '',
-        ingredients: ingredients?.map((ing: { name: string; quantity: string }) => ({
-          name: ing.name,
-          quantity: ing.quantity
-        })) || [],
-        instructions: instructions || [],
-        submittedAt: new Date().toISOString(),
-        status: 'approved',
-        gameFoods: gameFoods,
-        animalSpawns: animalSpawns || [{ type: 'rabbit', delay: 3 }],
-        foodSupply: foodSupply || {},
-        modIngredients: ingredients,
-        reviewedAt: new Date().toISOString(),
-        reviewedBy: 'Moderator'
-      };
-      
-      const approved = loadJSON(APPROVED_FILE);
-      approved.push(newRecipe);
-      saveJSON(APPROVED_FILE, approved);
-      
-      console.log(`➕ Created new recipe: "${newRecipe.recipeName}"`);
-      
-      return json({ 
-        success: true, 
-        action: 'create-builtin',
-        recipe: newRecipe.recipeName,
-        id: newRecipe.id
-      });
+    if (!id || !action) {
+      return json({ error: 'Missing id or action' }, { status: 400 });
     }
     
     if (!['approve', 'reject'].includes(action)) {
       return json({ error: 'Invalid action' }, { status: 400 });
-    }
-    
-    // For approve/reject, id is required
-    if (!id) {
-      return json({ error: 'Missing recipe id' }, { status: 400 });
     }
     
     // Load pending recipes
@@ -186,7 +133,6 @@ export const POST: RequestHandler = async ({ request }) => {
       recipe.status = 'approved';
       recipe.gameFoods = gameFoods;
       recipe.animalSpawns = animalSpawns || [];
-      recipe.foodSupply = foodSupply || {};
       recipe.reviewedAt = new Date().toISOString();
       recipe.reviewedBy = reviewedBy || 'Moderator';
       
@@ -280,7 +226,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
     // Apply updates
     for (const field of allowedFields) {
       if (updates[field] !== undefined) {
-        (recipe as unknown as Record<string, unknown>)[field] = updates[field];
+        (recipe as Record<string, unknown>)[field] = updates[field];
       }
     }
     

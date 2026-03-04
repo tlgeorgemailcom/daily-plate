@@ -8,6 +8,7 @@
     type FoodGroup,
     type GameLevel
   } from '$lib/data/scrambled-puzzles';
+  import { canUseStorage } from '$lib/stores/playerStore';
 
   // Level selection
   let currentLevel = $state<GameLevel>('usda');
@@ -157,6 +158,9 @@
   // Save game state
   function saveState() {
     if (!browser) return;
+    // Only save to localStorage for logged-in (Free tier) users
+    if (!canUseStorage()) return;
+    
     const state = {
       floors,
       currentFloor,

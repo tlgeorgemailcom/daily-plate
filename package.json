@@ -21,6 +21,8 @@
   },
   "type": "module",
   "dependencies": {
+    "@libsql/client": "^0.17.0",
+    "@sveltejs/adapter-vercel": "^6.3.3",
     "svelte-dnd-action": "^0.9.69"
   }
 }

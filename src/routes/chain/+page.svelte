@@ -3,6 +3,7 @@
   import { flip } from 'svelte/animate';
   import { tweened } from 'svelte/motion';
   import { cubicOut } from 'svelte/easing';
+  import { canUseStorage } from '$lib/stores/playerStore';
   import { 
     getFoodEntry, 
     isValidFood, 
@@ -127,7 +128,7 @@
   function selectDifficulty(mode: DifficultyMode) {
     difficultyMode = mode;
     showDifficultySelector = false;
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && canUseStorage()) {
       localStorage.setItem('dailyChainDifficulty', mode);
     }
   }
@@ -322,6 +323,7 @@
   
   function saveProgress() {
     if (typeof window === 'undefined') return;
+    if (!canUseStorage()) return;  // Guests don't persist
     
     const lastPlayed = localStorage.getItem('dailyChainLastPlayed');
     const today = new Date().toDateString();

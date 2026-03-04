@@ -3,6 +3,7 @@
 
 import { writable, derived, get } from 'svelte/store';
 import { browser } from '$app/environment';
+import { canUseStorage } from './playerStore';
 
 const STORAGE_KEY = 'balancedDiet_settings';
 const STORAGE_VERSION = 1;
@@ -78,9 +79,10 @@ function loadFromStorage(): GameSettings {
   return { ...DEFAULT_SETTINGS };
 }
 
-// Save to localStorage
+// Save to localStorage (only for logged-in users, not guests)
 function saveToStorage(settings: GameSettings): void {
   if (!browser) return;
+  if (!canUseStorage()) return;  // Guests don't persist
   
   try {
     const data: StorageData = {

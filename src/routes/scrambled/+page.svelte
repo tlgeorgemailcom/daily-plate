@@ -1,6 +1,7 @@
 <script lang="ts">
   import { browser } from '$app/environment';
   import { onMount } from 'svelte';
+  import { canUseStorage } from '$lib/stores/playerStore';
   import { 
     getTodaysPuzzle, 
     getWordGroups, 
@@ -242,9 +243,9 @@
     }
   });
   
-  // Save state on changes
+  // Save state on changes (only for logged-in users)
   $effect(() => {
-    if (browser && gamePhase !== 'loading') {
+    if (browser && gamePhase !== 'loading' && canUseStorage()) {
       const storageKey = getStorageKey(currentLevel);
       const state = {
         date: puzzleDate,
@@ -265,7 +266,7 @@
   // Start game at selected level
   function startLevel(level: GameLevel) {
     currentLevel = level;
-    if (browser) {
+    if (browser && canUseStorage()) {
       localStorage.setItem('scrambled-level', level);
     }
     

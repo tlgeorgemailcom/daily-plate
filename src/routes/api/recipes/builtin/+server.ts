@@ -1,11 +1,21 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import { writeFileSync, readFileSync, existsSync, mkdirSync } from 'fs';
-import { join } from 'path';
+import { queryAll, getGameDb } from '$lib/server/turso';
 
-const DATA_DIR = join(process.cwd(), 'data', 'recipes');
-const BUILTIN_OVERRIDES_FILE = join(DATA_DIR, 'builtin-overrides.json');
-const STATIC_OVERRIDES_FILE = join(process.cwd(), 'static', 'builtin-overrides.json');
+interface BuiltinRecipeRow {
+  id: string;
+  name: string;
+  category: string;
+  dietary_category: string | null;
+  prep_time: string | null;
+  servings: string | null;
+  recipe: string | null;
+  animal_spawns: string | null;
+  recipe_instructions: string | null;
+  recipe_ingredients: string | null;
+  created_at: string;
+  submitted_by: string;
+}
 
 interface BuiltinOverride {
   id: string;
@@ -22,35 +32,42 @@ interface BuiltinOverride {
   editedBy: string;
 }
 
-function ensureDataDir() {
-  if (!existsSync(DATA_DIR)) {
-    mkdirSync(DATA_DIR, { recursive: true });
-  }
-}
-
-function loadOverrides(): Record<string, BuiltinOverride> {
-  if (!existsSync(BUILTIN_OVERRIDES_FILE)) {
-    return {};
-  }
-  try {
-    return JSON.parse(readFileSync(BUILTIN_OVERRIDES_FILE, 'utf-8'));
-  } catch {
-    return {};
-  }
-}
-
-function saveOverrides(data: Record<string, BuiltinOverride>) {
-  ensureDataDir();
-  const jsonStr = JSON.stringify(data, null, 2);
-  // Save to both locations - data folder and static folder
-  writeFileSync(BUILTIN_OVERRIDES_FILE, jsonStr);
-  writeFileSync(STATIC_OVERRIDES_FILE, jsonStr);
-}
-
-// GET: Fetch all built-in overrides
+// GET: Fetch all built-in recipe overrides from Turso
 export const GET: RequestHandler = async () => {
   try {
-    const overrides = loadOverrides();
+    // Get builtin recipes where there's been custom edits (recipe_ingredients/instructions set)
+    const rows = await queryAll<BuiltinRecipeRow>(
+      `SELECT id, name, category, dietary_category, prep_time, servings, 
+              recipe, animal_spawns, recipe_instructions, recipe_ingredients, 
+              created_at, submitted_by
+       FROM recipes 
+       WHERE type = 'builtin' 
+         AND (recipe_ingredients IS NOT NULL OR recipe_instructions IS NOT NULL)`
+    );
+    
+    // Convert rows to override format
+    const overrides: Record<string, BuiltinOverride> = {};
+    for (const row of rows) {
+      const override: BuiltinOverride = {
+        id: row.id,
+        editedAt: row.created_at,
+        editedBy: row.submitted_by || 'System'
+      };
+      
+      // Only include fields that have been overridden
+      if (row.name) override.name = row.name;
+      if (row.category) override.category = row.category;
+      if (row.dietary_category) override.dietaryCategory = row.dietary_category;
+      if (row.prep_time) override.prepTime = row.prep_time;
+      if (row.servings) override.servings = row.servings;
+      if (row.recipe) override.recipe = JSON.parse(row.recipe);
+      if (row.animal_spawns) override.animalSpawns = JSON.parse(row.animal_spawns);
+      if (row.recipe_instructions) override.recipeInstructions = JSON.parse(row.recipe_instructions);
+      if (row.recipe_ingredients) override.recipeIngredients = JSON.parse(row.recipe_ingredients);
+      
+      overrides[row.id] = override;
+    }
+    
     return json({ overrides });
   } catch (err) {
     console.error('Failed to load builtin overrides:', err);
@@ -58,7 +75,7 @@ export const GET: RequestHandler = async () => {
   }
 };
 
-// PATCH: Save/update an override for a built-in recipe
+// PATCH: Save/update an override for a built-in recipe in Turso
 export const PATCH: RequestHandler = async ({ request }) => {
   try {
     const body = await request.json();
@@ -72,26 +89,79 @@ export const PATCH: RequestHandler = async ({ request }) => {
       return json({ error: 'Missing updates object' }, { status: 400 });
     }
     
-    // Load existing overrides
-    const overrides = loadOverrides();
+    const db = getGameDb();
+    const now = new Date().toISOString();
     
-    // Create or update the override
-    overrides[id] = {
-      id,
-      ...updates,
-      editedAt: new Date().toISOString(),
-      editedBy: editedBy || 'Moderator'
-    };
+    // Always use 'System' for builtin edits (FK constraint on players table)
+    const submittedBy = 'System';
     
-    // Save
-    saveOverrides(overrides);
+    // Check if recipe exists
+    const existing = await db.execute({
+      sql: 'SELECT id FROM recipes WHERE id = ?',
+      args: [id]
+    });
+    
+    if (existing.rows.length === 0) {
+      // Create new override entry
+      await db.execute({
+        sql: `INSERT INTO recipes (id, type, name, category, dietary_category, prep_time, servings,
+              recipe, animal_spawns, recipe_instructions, recipe_ingredients, 
+              submitted_by, status, created_at)
+              VALUES (?, 'builtin', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'approved', ?)`,
+        args: [
+          id,
+          updates.name || null,
+          updates.category || null,
+          updates.dietaryCategory || null,
+          updates.prepTime || null,
+          updates.servings || null,
+          updates.recipe ? JSON.stringify(updates.recipe) : null,
+          updates.animalSpawns ? JSON.stringify(updates.animalSpawns) : null,
+          updates.recipeInstructions ? JSON.stringify(updates.recipeInstructions) : null,
+          updates.recipeIngredients ? JSON.stringify(updates.recipeIngredients) : null,
+          submittedBy,
+          now
+        ]
+      });
+    } else {
+      // Update existing override
+      await db.execute({
+        sql: `UPDATE recipes SET 
+              name = COALESCE(?, name),
+              category = COALESCE(?, category),
+              dietary_category = COALESCE(?, dietary_category),
+              prep_time = COALESCE(?, prep_time),
+              servings = COALESCE(?, servings),
+              recipe = COALESCE(?, recipe),
+              animal_spawns = COALESCE(?, animal_spawns),
+              recipe_instructions = COALESCE(?, recipe_instructions),
+              recipe_ingredients = COALESCE(?, recipe_ingredients),
+              submitted_by = ?,
+              created_at = ?
+              WHERE id = ?`,
+        args: [
+          updates.name || null,
+          updates.category || null,
+          updates.dietaryCategory || null,
+          updates.prepTime || null,
+          updates.servings || null,
+          updates.recipe ? JSON.stringify(updates.recipe) : null,
+          updates.animalSpawns ? JSON.stringify(updates.animalSpawns) : null,
+          updates.recipeInstructions ? JSON.stringify(updates.recipeInstructions) : null,
+          updates.recipeIngredients ? JSON.stringify(updates.recipeIngredients) : null,
+          submittedBy,
+          now,
+          id
+        ]
+      });
+    }
     
     console.log(`✏️ Saved builtin override for: "${id}" by ${editedBy || 'Moderator'}`);
     
     return json({ 
       success: true, 
       id,
-      editedAt: overrides[id].editedAt
+      editedAt: now
     });
     
   } catch (err) {
@@ -110,16 +180,26 @@ export const DELETE: RequestHandler = async ({ request }) => {
       return json({ error: 'Missing recipe id' }, { status: 400 });
     }
     
-    // Load existing overrides
-    const overrides = loadOverrides();
+    const db = getGameDb();
     
-    if (!overrides[id]) {
+    // Check if the override exists
+    const existing = await db.execute({
+      sql: 'SELECT id FROM recipes WHERE id = ? AND type = ?',
+      args: [id, 'builtin']
+    });
+    
+    if (existing.rows.length === 0) {
       return json({ error: 'No override found for this recipe' }, { status: 404 });
     }
     
-    // Remove the override
-    delete overrides[id];
-    saveOverrides(overrides);
+    // Clear the override fields (set instructions/ingredients to null)
+    await db.execute({
+      sql: `UPDATE recipes SET 
+            recipe_instructions = NULL, 
+            recipe_ingredients = NULL
+            WHERE id = ? AND type = 'builtin'`,
+      args: [id]
+    });
     
     console.log(`🔄 Reverted builtin recipe: "${id}" to original values`);
     

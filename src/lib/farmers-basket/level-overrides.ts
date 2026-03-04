@@ -34,18 +34,13 @@ export async function fetchOverrides(): Promise<Record<string, BuiltinOverride>>
   }
   
   try {
-    // Try static file first (works in production), fall back to API (dev mode)
-    let res = await fetch('/builtin-overrides.json');
-    if (!res.ok) {
-      res = await fetch('/api/recipes/builtin');
-      if (!res.ok) throw new Error('Failed to fetch overrides');
-      const data = await res.json();
-      cachedOverrides = data.overrides || {};
-    } else {
-      cachedOverrides = await res.json();
-    }
+    // Fetch from Turso API
+    const res = await fetch('/api/recipes/builtin');
+    if (!res.ok) throw new Error('Failed to fetch overrides');
+    const data = await res.json();
+    cachedOverrides = data.overrides || {};
     lastFetchTime = now;
-    return cachedOverrides;
+    return cachedOverrides!;
   } catch (err) {
     console.warn('Could not load built-in overrides:', err);
     return cachedOverrides ?? {};

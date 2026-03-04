@@ -1,29 +1,49 @@
 <script lang="ts">
   import '../app.css';
   import { page } from '$app/stores';
-  import { isAuthenticated } from '$lib/stores/authStore';
+  import { goto } from '$app/navigation';
+  import { playerStore, type Player } from '$lib/stores/playerStore';
+  import StartScreen from '$lib/components/StartScreen.svelte';
+  import LoginModal from '$lib/farmers-basket/LoginModal.svelte';
   
   let { children } = $props();
-  let password = $state('');
-  let error = $state('');
   
-  function handleLogin() {
-    if (isAuthenticated.login(password)) {
-      error = '';
-    } else {
-      error = 'Incorrect password';
-      password = '';
-    }
+  // Player authentication state
+  let showLoginModal = $state(false);
+  
+  // Session-only state for guest players (resets on refresh)
+  let guestSessionStarted = $state(false);
+  
+  // Subscribe to player store reactively
+  let player = $state<Player | null>(null);
+  $effect(() => {
+    const unsub = playerStore.subscribe(p => player = p);
+    return unsub;
+  });
+  
+  // Check if player has started (logged in persists, guest is session-only)
+  let hasStarted = $derived((player?.status === 'logged-in' && player?.id !== null) || guestSessionStarted);
+  
+  function handleGameStart() {
+    // Guest mode - mark session as started and go to game list
+    guestSessionStarted = true;
+    goto('/');
   }
   
-  function handleKeydown(event: KeyboardEvent) {
-    if (event.key === 'Enter') {
-      handleLogin();
-    }
+  function handleShowLogin() {
+    showLoginModal = true;
+  }
+  
+  function handleLoginSuccess() {
+    showLoginModal = false;
+  }
+  
+  function handleLoginClose() {
+    showLoginModal = false;
   }
 </script>
 
-{#if $isAuthenticated}
+{#if hasStarted}
   <!-- Use full-width layout for games that need more space -->
   {@const isFullWidthGame = $page.url.pathname === '/farmers-basket' || $page.url.pathname === '/tower'}
   <div class="app" class:full-width={isFullWidthGame}>
@@ -72,29 +92,18 @@
     </footer>
   </div>
 {:else}
-  <div class="login-container">
-    <div class="login-box">
-      <h1>🍎 Daily Food Chain</h1>
-      <p>Enter the password to access the beta</p>
-      
-      <div class="login-form">
-        <input
-          type="password"
-          bind:value={password}
-          onkeydown={handleKeydown}
-          placeholder="Enter password"
-          class="password-input"
-        />
-        <button onclick={handleLogin} class="login-button">
-          Enter
-        </button>
-      </div>
-      
-      {#if error}
-        <p class="error">{error}</p>
-      {/if}
-    </div>
-  </div>
+  <StartScreen 
+    mode="auth"
+    onStart={handleGameStart}
+    onLogin={handleShowLogin}
+  />
+{/if}
+
+{#if showLoginModal}
+  <LoginModal 
+    onSuccess={handleLoginSuccess}
+    onClose={handleLoginClose}
+  />
 {/if}
 
 <style>

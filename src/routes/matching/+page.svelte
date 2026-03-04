@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { browser } from '$app/environment';
+  import { canUseStorage } from '$lib/stores/playerStore';
   import { 
     MATCHING_FOODS, 
     getRandomFood,
@@ -70,14 +71,14 @@
   const levelSpeeds = [60, 90, 120, 150, 180];
   
   $effect(() => {
-    if (browser) {
+    if (browser && canUseStorage()) {
       const saved = localStorage.getItem('matching-highscore');
       if (saved) highScore = parseInt(saved) || 0;
     }
   });
 
   function saveHighScore() {
-    if (browser && score > highScore) {
+    if (browser && canUseStorage() && score > highScore) {
       highScore = score;
       localStorage.setItem('matching-highscore', String(highScore));
     }

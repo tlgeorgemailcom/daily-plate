@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canUseStorage } from '$lib/stores/playerStore';
   import { 
     FOOD_DATABASE, 
     getFoodEntry, 
@@ -104,8 +105,8 @@
   function selectDifficulty(mode: DifficultyMode) {
     difficultyMode = mode;
     showDifficultySelector = false;
-    // Store preference
-    if (typeof window !== 'undefined') {
+    // Store preference (only for logged-in users)
+    if (typeof window !== 'undefined' && canUseStorage()) {
       localStorage.setItem('dailyPlateDifficulty', mode);
     }
   }
@@ -1670,6 +1671,7 @@
 
   function saveProgress() {
     if (typeof window === 'undefined') return;
+    if (!canUseStorage()) return;  // Guests don't persist
     
     const lastPlayed = localStorage.getItem('dailyPlateLastPlayed');
     const today = new Date().toDateString();

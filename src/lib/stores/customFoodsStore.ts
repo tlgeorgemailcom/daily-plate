@@ -3,6 +3,7 @@
 
 import { writable, derived } from 'svelte/store';
 import { browser } from '$app/environment';
+import { canUseStorage } from './playerStore';
 import type { FoodGroup, Portion } from '$lib/data/food-portions';
 
 const STORAGE_KEY = 'balancedDiet_customFoods';
@@ -49,9 +50,10 @@ function loadFromStorage(): CustomFood[] {
   return [];
 }
 
-// Save to localStorage
+// Save to localStorage (only for logged-in users)
 function saveToStorage(foods: CustomFood[]): void {
   if (!browser) return;
+  if (!canUseStorage()) return;  // Guests don't persist
   
   try {
     const data: StorageData = {

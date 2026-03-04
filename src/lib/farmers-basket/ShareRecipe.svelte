@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
+  import { canUseStorage } from '$lib/stores/playerStore';
   import RecipeForm, { type RecipeFormData } from './RecipeForm.svelte';
   
   interface Props {
@@ -13,12 +15,62 @@
   let submitError = $state<string | null>(null);
   let submitSuccess = $state(false);
   
+  // Player authentication state
+  let playerId = $state<string | null>(null);
+  let isLoggedIn = $state(false);
+  let isSubscriber = $state(false);
+  
+  // Player/subscriber detection
+  const PLAYER_KEY = 'daily-food-chain-player';
+  
+  function getPlayerId(): string | null {
+    if (typeof window === 'undefined') return null;
+    try {
+      const player = localStorage.getItem(PLAYER_KEY);
+      if (player) {
+        const parsed = JSON.parse(player);
+        return parsed.id || null;
+      }
+      return null;
+    } catch {
+      return null;
+    }
+  }
+  
+  function checkSubscriber(): boolean {
+    if (typeof window === 'undefined') return false;
+    try {
+      const player = localStorage.getItem(PLAYER_KEY);
+      if (player) {
+        const parsed = JSON.parse(player);
+        const tier = parsed.subscription_tier || 'free';
+        return tier !== 'free';
+      }
+      return false;
+    } catch {
+      return false;
+    }
+  }
+  
+  onMount(() => {
+    playerId = getPlayerId();
+    isLoggedIn = !!playerId;
+    isSubscriber = checkSubscriber();
+  });
+  
   async function handleFormSubmit(data: RecipeFormData) {
     isSubmitting = true;
     submitError = null;
     
     try {
-      const submission = {
+      // Subscription required (checked at mount, but verify again)
+      if (!isSubscriber || !playerId) {
+        submitError = 'Subscription required to submit recipes';
+        isSubmitting = false;
+        return;
+      }
+      
+      const submission: Record<string, unknown> = {
         recipeName: data.recipeName.trim(),
         category: data.category,
         dietaryCategory: data.dietaryCategory,
@@ -33,6 +85,9 @@
         submittedAt: new Date().toISOString()
       };
       
+      // Include playerId (required)
+      submission.playerId = playerId;
+      
       const response = await fetch('/api/recipes/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -41,6 +96,23 @@
       
       if (!response.ok) {
         throw new Error('Failed to submit recipe');
+      }
+      
+      // Get the recipe ID and store it in localStorage for "My Recipes" tracking
+      // (Only for logged-in users - guests don't persist)
+      const result = await response.json();
+      if (result.id && canUseStorage()) {
+        try {
+          const STORAGE_KEY = 'my-recipe-submissions';
+          const stored = localStorage.getItem(STORAGE_KEY);
+          const ids: string[] = stored ? JSON.parse(stored) : [];
+          if (!ids.includes(result.id)) {
+            ids.push(result.id);
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(ids));
+          }
+        } catch (e) {
+          console.warn('Could not save recipe ID to localStorage:', e);
+        }
       }
       
       submitSuccess = true;
@@ -74,12 +146,25 @@
       <button class="close-btn" onclick={onclose} aria-label="Close">×</button>
     </header>
     
-    {#if submitSuccess}
+    {#if !isSubscriber}
+      <div class="login-required">
+        <div class="login-icon">⭐</div>
+        <h3>Subscription Required</h3>
+        <p>Subscribe to submit recipes, save progress to the cloud, and appear on leaderboards.</p>
+        <div class="login-actions">
+          <a href="/subscribe" class="login-btn">Subscribe Now</a>
+          <button class="cancel-btn" onclick={onclose}>Maybe Later</button>
+        </div>
+      </div>
+    {:else if submitSuccess}}
       <div class="success-view">
         <div class="success-icon">✅</div>
         <h3>Recipe Submitted!</h3>
         <p>Thank you for sharing your recipe. It will be reviewed by a moderator and added to the game soon!</p>
-        <button class="done-btn" onclick={onclose}>Done</button>
+        <div class="success-actions">
+          <button class="done-btn" onclick={onclose}>Done</button>
+          <a href="/farmers-basket/my-recipes" class="my-recipes-link">View My Submissions</a>
+        </div>
       </div>
     {:else}
       <div class="form-container">
@@ -201,6 +286,87 @@
   
   .done-btn:hover {
     background: #A0522D;
+  }
+  
+  .success-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    margin-top: 8px;
+  }
+  
+  .my-recipes-link {
+    color: #4a7c59;
+    font-size: 0.9rem;
+    text-decoration: underline;
+  }
+  
+  .my-recipes-link:hover {
+    color: #3d6a4a;
+  }
+  
+  /* Login required view */
+  .login-required {
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .login-icon {
+    font-size: 4rem;
+  }
+  
+  .login-required h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #8B4513;
+  }
+  
+  .login-required p {
+    margin: 0;
+    color: #666;
+    max-width: 300px;
+  }
+  
+  .login-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    margin-top: 8px;
+  }
+  
+  .login-btn {
+    padding: 12px 32px;
+    background: #4a7c59;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .login-btn:hover {
+    background: #3d6a4a;
+  }
+  
+  .cancel-btn {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .cancel-btn:hover {
+    color: #333;
   }
   
   @media (max-width: 500px) {

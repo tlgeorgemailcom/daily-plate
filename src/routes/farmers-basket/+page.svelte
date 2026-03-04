@@ -19,7 +19,7 @@
   
   let game = createGameState();
   
-  // Recipe book modal state - start open to show Recipe of the Day
+  // Recipe book modal state - show on mount
   let showRecipeBook = $state(true);
   let showRecipeOfDay = $state(true);
   
@@ -642,17 +642,18 @@
   <title>Farmer's Basket</title>
 </svelte:head>
 
+<!-- Main Game -->
 <div class="game-container">
   
-  <header class="header">
-    <div class="header-top">
-      <h1>🧑‍🌾 Farmer's Basket</h1>
-      <div class="header-buttons">
-        <button class="rules-btn" onclick={() => showRules = true}>
-          Rules
-        </button>
-        <button class="recipe-book-btn" onclick={() => { showRecipeOfDay = false; showRecipeBook = true; }}>
-          📖 Recipes
+    <header class="header">
+      <div class="header-top">
+        <h1>🧑‍🌾 Farmer's Basket</h1>
+        <div class="header-buttons">
+          <button class="rules-btn" onclick={() => showRules = true}>
+            Rules
+          </button>
+          <button class="recipe-book-btn" onclick={() => { showRecipeOfDay = false; showRecipeBook = true; }}>
+            📖 Recipes
         </button>
       </div>
     </div>

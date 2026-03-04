@@ -1,0 +1,331 @@
+// Recipe Moderation API - Turso-backed
+import { json } from '@sveltejs/kit';
+import type { RequestHandler } from './$types';
+import { queryAll, queryOne, execute } from '$lib/server/turso';
+
+interface RecipeRow {
+  id: string;
+  type: string;
+  name: string;
+  category: string;
+  dietary_category: string | null;
+  level_num: number | null;
+  prep_time: string | null;
+  servings: string | null;
+  recipe: string | null;
+  recipe_ingredients: string | null;
+  recipe_instructions: string | null;
+  food_supply: string | null;
+  tools: string | null;
+  animal_spawns: string | null;
+  submitted_by: string | null;
+  status: string;
+  created_at: string;
+  edited_at: string | null;
+  edited_by: string | null;
+}
+
+// Convert DB row to API format
+function rowToRecipe(row: RecipeRow) {
+  return {
+    id: row.id,
+    recipeName: row.name,
+    category: row.category,
+    dietaryCategory: row.dietary_category,
+    submitterName: row.submitted_by || 'System',
+    prepTime: row.prep_time || '',
+    servings: row.servings || '',
+    ingredients: row.recipe_ingredients ? JSON.parse(row.recipe_ingredients) : [],
+    instructions: row.recipe_instructions ? JSON.parse(row.recipe_instructions) : [],
+    gameFoods: row.recipe ? JSON.parse(row.recipe) : [],
+    animalSpawns: row.animal_spawns ? JSON.parse(row.animal_spawns) : [],
+    submittedAt: row.created_at,
+    status: row.status,
+    type: row.type,
+    editedAt: row.edited_at,
+    editedBy: row.edited_by
+  };
+}
+
+// GET: Fetch recipes for moderation (pending + approved for editing)
+export const GET: RequestHandler = async ({ url }) => {
+  try {
+    const filter = url.searchParams.get('filter'); // 'pending', 'approved', or 'all'
+    
+    if (filter === 'pending') {
+      const rows = await queryAll<RecipeRow>(
+        `SELECT * FROM recipes WHERE status = 'pending' ORDER BY created_at DESC`
+      );
+      return json({ recipes: rows.map(rowToRecipe) });
+    } else if (filter === 'approved') {
+      const rows = await queryAll<RecipeRow>(
+        `SELECT * FROM recipes WHERE status = 'approved' ORDER BY created_at DESC`
+      );
+      return json({ recipes: rows.map(rowToRecipe) });
+    } else {
+      const pending = await queryAll<RecipeRow>(
+        `SELECT * FROM recipes WHERE status = 'pending' ORDER BY created_at DESC`
+      );
+      const approved = await queryAll<RecipeRow>(
+        `SELECT * FROM recipes WHERE status = 'approved' ORDER BY created_at DESC`
+      );
+      return json({ 
+        pending: pending.map(rowToRecipe),
+        approved: approved.map(rowToRecipe),
+        counts: {
+          pending: pending.length,
+          approved: approved.length
+        }
+      });
+    }
+  } catch (err) {
+    console.error('Failed to load recipes for moderation:', err);
+    return json({ error: 'Failed to load recipes' }, { status: 500 });
+  }
+};
+
+// POST: Approve or reject a pending recipe
+export const POST: RequestHandler = async ({ request }) => {
+  try {
+    const body = await request.json();
+    const { 
+      id, 
+      action, 
+      gameFoods, 
+      animalSpawns, 
+      reviewedBy,
+      recipeName,
+      category,
+      dietaryCategory,
+      prepTime,
+      servings,
+      ingredients,
+      instructions
+    } = body;
+    
+    if (!id || !action) {
+      return json({ error: 'Missing id or action' }, { status: 400 });
+    }
+    
+    if (!['approve', 'reject'].includes(action)) {
+      return json({ error: 'Invalid action' }, { status: 400 });
+    }
+    
+    // Check recipe exists and is pending
+    const recipe = await queryOne<RecipeRow>(
+      `SELECT * FROM recipes WHERE id = ?`,
+      [id]
+    );
+    
+    if (!recipe) {
+      return json({ error: 'Recipe not found' }, { status: 404 });
+    }
+    
+    if (action === 'approve') {
+      // Require game foods for approval
+      if (!gameFoods || gameFoods.length === 0) {
+        return json({ error: 'Game foods required for approval' }, { status: 400 });
+      }
+      
+      // Build food supply from game foods
+      const foodSupply = (gameFoods as string[]).reduce((acc: Record<string, number>, food: string) => {
+        acc[food] = (acc[food] || 0) + 1;
+        return acc;
+      }, {});
+      
+      // Update recipe
+      await execute(
+        `UPDATE recipes SET
+          status = 'approved',
+          name = COALESCE(?, name),
+          category = COALESCE(?, category),
+          dietary_category = ?,
+          prep_time = ?,
+          servings = ?,
+          recipe = ?,
+          recipe_ingredients = COALESCE(?, recipe_ingredients),
+          recipe_instructions = COALESCE(?, recipe_instructions),
+          food_supply = ?,
+          animal_spawns = ?,
+          edited_at = datetime('now'),
+          edited_by = ?
+        WHERE id = ?`,
+        [
+          recipeName || null,
+          category || null,
+          dietaryCategory || null,
+          prepTime || null,
+          servings || null,
+          JSON.stringify(gameFoods),
+          ingredients ? JSON.stringify(ingredients) : null,
+          instructions ? JSON.stringify(instructions) : null,
+          JSON.stringify(foodSupply),
+          JSON.stringify(animalSpawns || []),
+          reviewedBy || 'Moderator',
+          id
+        ]
+      );
+      
+      console.log(`✅ Approved recipe: "${recipeName || recipe.name}"`);
+    } else {
+      // Mark as rejected
+      await execute(
+        `UPDATE recipes SET status = 'rejected', edited_at = datetime('now'), edited_by = ? WHERE id = ?`,
+        [reviewedBy || 'Moderator', id]
+      );
+      
+      console.log(`❌ Rejected recipe: "${recipe.name}"`);
+    }
+    
+    return json({ 
+      success: true, 
+      action,
+      recipe: recipeName || recipe.name
+    });
+    
+  } catch (err) {
+    console.error('Failed to moderate recipe:', err);
+    return json({ error: 'Failed to moderate recipe' }, { status: 500 });
+  }
+};
+
+// PATCH: Edit an approved recipe
+export const PATCH: RequestHandler = async ({ request }) => {
+  try {
+    const body = await request.json();
+    const { id, updates, editedBy } = body;
+    
+    if (!id) {
+      return json({ error: 'Missing recipe id' }, { status: 400 });
+    }
+    
+    if (!updates || typeof updates !== 'object') {
+      return json({ error: 'Missing updates object' }, { status: 400 });
+    }
+    
+    // Check recipe exists
+    const recipe = await queryOne<RecipeRow>(
+      `SELECT * FROM recipes WHERE id = ?`,
+      [id]
+    );
+    
+    if (!recipe) {
+      return json({ error: 'Recipe not found' }, { status: 404 });
+    }
+    
+    // Build update query dynamically
+    const fields: string[] = [];
+    const values: unknown[] = [];
+    
+    if (updates.recipeName !== undefined) {
+      fields.push('name = ?');
+      values.push(updates.recipeName);
+    }
+    if (updates.category !== undefined) {
+      fields.push('category = ?');
+      values.push(updates.category);
+    }
+    if (updates.dietaryCategory !== undefined) {
+      fields.push('dietary_category = ?');
+      values.push(updates.dietaryCategory);
+    }
+    if (updates.prepTime !== undefined) {
+      fields.push('prep_time = ?');
+      values.push(updates.prepTime);
+    }
+    if (updates.servings !== undefined) {
+      fields.push('servings = ?');
+      values.push(updates.servings);
+    }
+    if (updates.ingredients !== undefined) {
+      fields.push('recipe_ingredients = ?');
+      values.push(JSON.stringify(updates.ingredients));
+    }
+    if (updates.instructions !== undefined) {
+      fields.push('recipe_instructions = ?');
+      values.push(JSON.stringify(updates.instructions));
+    }
+    if (updates.gameFoods !== undefined) {
+      fields.push('recipe = ?');
+      values.push(JSON.stringify(updates.gameFoods));
+      // Also update food supply
+      const foodSupply = (updates.gameFoods as string[]).reduce((acc: Record<string, number>, food: string) => {
+        acc[food] = (acc[food] || 0) + 1;
+        return acc;
+      }, {});
+      fields.push('food_supply = ?');
+      values.push(JSON.stringify(foodSupply));
+    }
+    if (updates.animalSpawns !== undefined) {
+      fields.push('animal_spawns = ?');
+      values.push(JSON.stringify(updates.animalSpawns));
+    }
+    
+    if (fields.length === 0) {
+      return json({ error: 'No fields to update' }, { status: 400 });
+    }
+    
+    // Add edit tracking
+    fields.push('edited_at = datetime("now")');
+    fields.push('edited_by = ?');
+    values.push(editedBy || 'Moderator');
+    values.push(id);
+    
+    await execute(
+      `UPDATE recipes SET ${fields.join(', ')} WHERE id = ?`,
+      values
+    );
+    
+    console.log(`✏️ Edited recipe: "${updates.recipeName || recipe.name}" by ${editedBy || 'Moderator'}`);
+    
+    return json({ 
+      success: true, 
+      recipe: updates.recipeName || recipe.name,
+      editedAt: new Date().toISOString()
+    });
+    
+  } catch (err) {
+    console.error('Failed to edit recipe:', err);
+    return json({ error: 'Failed to edit recipe' }, { status: 500 });
+  }
+};
+
+// DELETE: Remove a recipe (unpublish)
+export const DELETE: RequestHandler = async ({ request }) => {
+  try {
+    const body = await request.json();
+    const { id, deletedBy } = body;
+    
+    if (!id) {
+      return json({ error: 'Missing recipe id' }, { status: 400 });
+    }
+    
+    // Check recipe exists
+    const recipe = await queryOne<RecipeRow>(
+      `SELECT name FROM recipes WHERE id = ?`,
+      [id]
+    );
+    
+    if (!recipe) {
+      return json({ error: 'Recipe not found' }, { status: 404 });
+    }
+    
+    // Delete from database
+    await execute(
+      `DELETE FROM recipes WHERE id = ?`,
+      [id]
+    );
+    
+    console.log(`🗑️ Deleted recipe: "${recipe.name}" by ${deletedBy || 'Moderator'}`);
+    
+    return json({ 
+      success: true, 
+      recipe: recipe.name,
+      action: 'deleted'
+    });
+    
+  } catch (err) {
+    console.error('Failed to delete recipe:', err);
+    return json({ error: 'Failed to delete recipe' }, { status: 500 });
+  }
+};

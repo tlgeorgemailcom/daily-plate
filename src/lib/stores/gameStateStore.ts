@@ -4,6 +4,8 @@
 
 import { browser } from '$app/environment';
 import { get } from 'svelte/store';
+import { canUseStorage } from './playerStore';
+import { canUseStorage } from './playerStore';
 import { 
   addedFoods, 
   meals, 
@@ -58,9 +60,10 @@ function loadGameState(): GameState | null {
   return null;
 }
 
-// Save game state to localStorage
+// Save game state to localStorage (only for logged-in users)
 function saveGameState(): void {
   if (!browser) return;
+  if (!canUseStorage()) return;  // Guests don't persist
   
   try {
     const state: GameState = {
