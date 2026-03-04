@@ -89,44 +89,4 @@ export const POST: RequestHandler = async ({ request }) => {
   }
 };
 
-// GET /api/game-scores/stats?player_id=xxx&game=xxx
-// Returns aggregate stats for a player/game
-export const statsHandler: RequestHandler = async ({ url }) => {
-  const playerId = url.searchParams.get('player_id');
-  const game = url.searchParams.get('game');
-  
-  if (!playerId) {
-    throw error(400, 'Missing player_id parameter');
-  }
-  
-  try {
-    const db = getGameDb();
-    
-    let sql = `
-      SELECT 
-        game,
-        COUNT(*) as games_played,
-        MAX(score) as high_score,
-        AVG(score) as avg_score,
-        MIN(played_at) as first_played,
-        MAX(played_at) as last_played
-      FROM game_scores
-      WHERE player_id = ?
-    `;
-    const args: (string | number)[] = [playerId];
-    
-    if (game) {
-      sql += ' AND game = ?';
-      args.push(game);
-    }
-    
-    sql += ' GROUP BY game';
-    
-    const result = await db.execute({ sql, args });
-    
-    return json({ stats: result.rows });
-  } catch (e) {
-    console.error('[API game-scores stats] Error:', e);
-    throw error(500, 'Failed to fetch stats');
-  }
-};
+
