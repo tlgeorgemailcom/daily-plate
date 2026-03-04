@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canUseStorage } from '$lib/stores/playerStore';
+  import { saveGameScore } from '$lib/stores/scoreHistory';
   import { 
     FOOD_DATABASE, 
     getFoodEntry, 
@@ -1574,6 +1575,17 @@
       gameComplete = true;
       showResults = true;
       saveProgress();
+      
+      // Save score to cloud for premium users
+      const finalScore = calculateScore();
+      const uniqueGroups = new Set(placedWords.map(p => p.group)).size;
+      saveGameScore('plate', finalScore, {
+        difficulty: difficultyMode,
+        wordsUsed: placedWords.length,
+        groupsHit: uniqueGroups,
+        streak,
+        puzzleNumber
+      });
     }
   }
 

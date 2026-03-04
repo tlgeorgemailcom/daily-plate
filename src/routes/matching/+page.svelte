@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
   import { browser } from '$app/environment';
   import { canUseStorage } from '$lib/stores/playerStore';
+  import { saveGameScore } from '$lib/stores/scoreHistory';
   import { 
     MATCHING_FOODS, 
     getRandomFood,
@@ -283,6 +284,19 @@
     cancelAnimationFrame(animationFrame);
     if (gameMode === 'timed') {
       saveHighScore();
+      // Save score to cloud for premium users
+      saveGameScore('matching', score, {
+        level,
+        wordsMatched,
+        mode: gameMode
+      });
+    } else if (gameMode === 'training') {
+      // Save training score too
+      saveGameScore('matching', score, {
+        trainingCorrect,
+        trainingSpeed,
+        mode: gameMode
+      });
     }
   }
   

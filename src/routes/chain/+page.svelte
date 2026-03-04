@@ -4,6 +4,7 @@
   import { tweened } from 'svelte/motion';
   import { cubicOut } from 'svelte/easing';
   import { canUseStorage } from '$lib/stores/playerStore';
+  import { saveGameScore } from '$lib/stores/scoreHistory';
   import { 
     getFoodEntry, 
     isValidFood, 
@@ -271,6 +272,18 @@
       gameComplete = true;
       showResults = true;
       saveProgress();
+      
+      // Save score to cloud for premium users
+      const finalScore = calculateScore();
+      const uniqueGroups = new Set(chain.map(c => c.group)).size;
+      saveGameScore('chain', finalScore, {
+        difficulty: difficultyMode,
+        wordsUsed: chain.length,
+        groupsHit: uniqueGroups,
+        streak,
+        puzzleNumber
+      });
+      
       showMessage('🎉 Chain Complete!', 'success');
     } else {
       showMessage(`Great! ${wordsRemaining} word${wordsRemaining !== 1 ? 's' : ''} to go`, 'success');
