@@ -104,7 +104,6 @@ blackberry,fruit
 blackeyed,legume
 blackfish,protein
 blanco,dairy
-blue,dairy
 blueberry,fruit
 bluefin,protein
 bluefish,protein
@@ -370,7 +369,6 @@ duck,protein
 dulce,prepared
 dumpling,prepared
 durian,fruit
-earl,beverage
 eclair,prepared
 edam,dairy
 edamame,legume
@@ -425,7 +423,6 @@ foiegras,protein
 fondant,prepared
 fondue,prepared
 fontina,dairy
-food,prepared
 foreshank,protein
 fortune,prepared
 franc,wine
@@ -501,7 +498,6 @@ grits,grain
 grouper,protein
 gruner,wine
 gruyere,dairy
-guac,vegetable
 guanabana,fruit
 guava,fruit
 guinea,protein
@@ -620,7 +616,7 @@ lingcod,protein
 lingonberry,fruit
 linguine,grain
 liqueur,beverage
-litchi,fruit
+Lychee,fruit
 liver,protein
 liverwurst,protein|prepared
 lobster,protein
@@ -745,7 +741,6 @@ nero,wine
 nettles,vegetable
 neufchatel,dairy
 nigiri,prepared
-nilgiri,beverage
 nocino,bar
 noodle,grain
 nopales,vegetable
@@ -774,7 +769,6 @@ osso,protein
 ostrich,protein
 ouzo,bar
 oyster,protein|grain|prepared
-pad,prepared
 paella,prepared
 pakora,prepared
 palm,fats|vegetable
@@ -1014,7 +1008,6 @@ shiraz,wine
 shortbread,prepared
 shortening,fats
 shoulder,protein
-shoumei,beverage
 shrimp,protein
 sidecar,bar
 silvaner,wine
@@ -1150,7 +1143,6 @@ toast,grain|prepared
 toddy,bar
 tofu,protein|legume
 tokaji,wine
-tom,prepared
 tomatillo,vegetable|fruit
 tomato,vegetable|fruit
 tongue,protein
@@ -1159,7 +1151,6 @@ torta,prepared
 tortellini,grain
 tortilla,grain|prepared
 touriga,wine
-trail,prepared
 trebbiano,wine
 trento,wine
 tricale,grain
@@ -1185,7 +1176,6 @@ veal,protein
 vegetable,beverage|vegetable
 veloute,prepared
 venison,protein
-verde,prepared|condiment
 verdejo,wine
 verdello,wine
 verdicchio,wine
