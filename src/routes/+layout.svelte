@@ -6,6 +6,7 @@
   import { syncCustomFoodsFromCloud } from '$lib/stores/customFoodsStore';
   import { syncSettingsFromCloud } from '$lib/stores/settingsStore';
   import { syncGameStateFromCloud } from '$lib/stores/gameStateStore';
+  import { syncAllGameDataFromCloud, enableAutoSync } from '$lib/stores/gameDataSync';
   import StartScreen from '$lib/components/StartScreen.svelte';
   import LoginModal from '$lib/farmers-basket/LoginModal.svelte';
   import UpgradeModal from '$lib/components/UpgradeModal.svelte';
@@ -24,6 +25,13 @@
   $effect(() => {
     const unsub = playerStore.subscribe(p => player = p);
     return unsub;
+  });
+  
+  // Enable auto-sync for returning premium users
+  $effect(() => {
+    if (player?.status === 'logged-in' && player?.tier === 'premium') {
+      enableAutoSync();
+    }
   });
   
   // Check if player has started (logged in persists, guest is session-only)
@@ -61,8 +69,13 @@
     await Promise.all([
       syncCustomFoodsFromCloud(),
       syncSettingsFromCloud(),
-      syncGameStateFromCloud()
+      syncGameStateFromCloud(),
+      syncAllGameDataFromCloud()
     ]);
+    
+    // Enable auto-sync for future localStorage changes
+    enableAutoSync();
+    
     console.log('[Layout] cloud sync completed');
   }
   
@@ -80,8 +93,12 @@
     await Promise.all([
       syncCustomFoodsFromCloud(),
       syncSettingsFromCloud(),
-      syncGameStateFromCloud()
+      syncGameStateFromCloud(),
+      syncAllGameDataFromCloud()
     ]);
+    
+    // Enable auto-sync for future localStorage changes
+    enableAutoSync();
   }
   
   function handleUpgradeClose() {
