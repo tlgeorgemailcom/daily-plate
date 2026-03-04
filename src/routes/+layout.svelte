@@ -4,6 +4,7 @@
   import { goto } from '$app/navigation';
   import { playerStore, type Player } from '$lib/stores/playerStore';
   import { syncCustomFoodsFromCloud } from '$lib/stores/customFoodsStore';
+  import { syncSettingsFromCloud } from '$lib/stores/settingsStore';
   import StartScreen from '$lib/components/StartScreen.svelte';
   import LoginModal from '$lib/farmers-basket/LoginModal.svelte';
   import UpgradeModal from '$lib/components/UpgradeModal.svelte';
@@ -55,9 +56,12 @@
       tier: currentPlayer?.tier
     });
     
-    // Sync custom foods from cloud if user is premium
-    await syncCustomFoodsFromCloud();
-    console.log('[Layout] syncCustomFoodsFromCloud completed');
+    // Sync data from cloud if user is premium
+    await Promise.all([
+      syncCustomFoodsFromCloud(),
+      syncSettingsFromCloud()
+    ]);
+    console.log('[Layout] cloud sync completed');
   }
   
   function handleLoginClose() {
@@ -70,8 +74,11 @@
   
   async function handleUpgradeSuccess() {
     showUpgradeModal = false;
-    // Sync any existing local custom foods to cloud now that user is premium
-    await syncCustomFoodsFromCloud();
+    // Sync data to/from cloud now that user is premium
+    await Promise.all([
+      syncCustomFoodsFromCloud(),
+      syncSettingsFromCloud()
+    ]);
   }
   
   function handleUpgradeClose() {

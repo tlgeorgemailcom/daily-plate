@@ -1,9 +1,10 @@
-// Game Settings Store - with localStorage persistence
-// Settings persist across page refreshes on the same device/browser
+// Game Settings Store - with localStorage persistence AND cloud sync for premium
+// Free tier: localStorage only (persists on device)
+// Premium tier: syncs to database (persists across devices)
 
 import { writable, derived, get } from 'svelte/store';
 import { browser } from '$app/environment';
-import { canUseStorage } from './playerStore';
+import { canUseStorage, playerStore } from './playerStore';
 
 const STORAGE_KEY = 'balancedDiet_settings';
 const STORAGE_VERSION = 1;
@@ -95,13 +96,170 @@ function saveToStorage(settings: GameSettings): void {
   }
 }
 
+// ============ Cloud Sync for Premium Users ============
+
+// Check if user is premium (should sync to cloud)
+function isPremiumUser(): boolean {
+  const player = get(playerStore);
+  const isPremium = player.status === 'logged-in' && player.tier === 'premium';
+  console.log('[Settings] isPremiumUser check:', { status: player.status, tier: player.tier, isPremium });
+  return isPremium;
+}
+
+// Get current player ID
+function getPlayerId(): string | null {
+  const player = get(playerStore);
+  return player.id;
+}
+
+// Convert client format to API format
+function toApiFormat(settings: GameSettings): Record<string, unknown> {
+  return {
+    calorie_target: settings.calorieTarget,
+    is_custom_calories: settings.isCustomCalories ? 1 : 0,
+    custom_calories: settings.customCalories,
+    protein_ratio: settings.proteinRatio,
+    carbs_ratio: settings.carbsRatio,
+    fats_ratio: settings.fatsRatio,
+    veg_plate_ratio: settings.vegPlateRatio,
+    fruit_plate_ratio: settings.fruitPlateRatio,
+    grain_plate_ratio: settings.grainPlateRatio,
+    protein_plate_ratio: settings.proteinPlateRatio,
+    water_target: settings.waterInput,
+    protein_target: settings.proteinInput,
+    carbs_target: settings.carbsInput,
+    fats_target: settings.fatsInput,
+    fiber_target: settings.fiberInput,
+    sugar_target: settings.sugarInput
+  };
+}
+
+// Convert API format to client format
+function fromApiFormat(api: Record<string, unknown>): GameSettings {
+  return {
+    calorieTarget: api.calorie_target as number,
+    isCustomCalories: Boolean(api.is_custom_calories),
+    customCalories: api.custom_calories as number,
+    proteinRatio: api.protein_ratio as number,
+    carbsRatio: api.carbs_ratio as number,
+    fatsRatio: api.fats_ratio as number,
+    vegPlateRatio: api.veg_plate_ratio as number,
+    fruitPlateRatio: api.fruit_plate_ratio as number,
+    grainPlateRatio: api.grain_plate_ratio as number,
+    proteinPlateRatio: api.protein_plate_ratio as number,
+    waterInput: (api.water_target as string) || '',
+    proteinInput: (api.protein_target as string) || '',
+    carbsInput: (api.carbs_target as string) || '',
+    fatsInput: (api.fats_target as string) || '',
+    fiberInput: (api.fiber_target as string) || '',
+    sugarInput: (api.sugar_target as string) || ''
+  };
+}
+
+// Fetch settings from cloud
+async function fetchFromCloud(): Promise<GameSettings | null> {
+  const playerId = getPlayerId();
+  console.log('[Settings] fetchFromCloud: playerId =', playerId);
+  if (!playerId) return null;
+  
+  try {
+    const res = await fetch(`/api/settings?player_id=${playerId}`);
+    console.log('[Settings] fetch response status:', res.status);
+    if (!res.ok) {
+      console.error('Failed to fetch settings from cloud:', res.status);
+      return null;
+    }
+    
+    const data = await res.json();
+    console.log('[Settings] Got settings from cloud');
+    return fromApiFormat(data);
+  } catch (e) {
+    console.error('Failed to fetch settings from cloud:', e);
+    return null;
+  }
+}
+
+// Save settings to cloud
+async function saveToCloud(settings: GameSettings): Promise<boolean> {
+  const playerId = getPlayerId();
+  if (!playerId) {
+    console.log('[Settings] saveToCloud: no player ID, skipping');
+    return false;
+  }
+  
+  console.log('[Settings] Saving to cloud for player:', playerId);
+  
+  try {
+    const res = await fetch('/api/settings', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        player_id: playerId,
+        ...toApiFormat(settings)
+      })
+    });
+    
+    console.log('[Settings] saveToCloud response:', res.status, res.ok);
+    return res.ok;
+  } catch (e) {
+    console.error('Failed to save settings to cloud:', e);
+    return false;
+  }
+}
+
+// ============ End Cloud Sync ============
+
 // Initialize store with data from localStorage
 const settingsWritable = writable<GameSettings>(loadFromStorage());
+
+// Track if cloud sync is in progress to avoid save loops
+let syncInProgress = false;
 
 // Auto-save whenever the store changes
 settingsWritable.subscribe(settings => {
   saveToStorage(settings);
+  
+  // Also save to cloud for premium users (but not during sync operations)
+  if (!syncInProgress && isPremiumUser()) {
+    saveToCloud(settings);
+  }
 });
+
+// Sync settings from cloud (call after login or tier upgrade)
+export async function syncSettingsFromCloud(): Promise<void> {
+  console.log('[Settings] syncSettingsFromCloud called');
+  
+  if (!browser) {
+    console.log('[Settings] Not in browser, skipping sync');
+    return;
+  }
+  
+  if (!isPremiumUser()) {
+    console.log('[Settings] Not premium, skipping sync');
+    return;
+  }
+  
+  console.log('[Settings] Starting cloud sync...');
+  syncInProgress = true;
+  
+  try {
+    const cloudSettings = await fetchFromCloud();
+    
+    if (cloudSettings) {
+      // Cloud settings exist - use them
+      console.log('[Settings] Applying cloud settings');
+      settingsWritable.set(cloudSettings);
+      saveToStorage(cloudSettings);
+    } else {
+      // No cloud settings - push local to cloud
+      const local = get(settingsWritable);
+      console.log('[Settings] No cloud settings, pushing local');
+      await saveToCloud(local);
+    }
+  } finally {
+    syncInProgress = false;
+  }
+}
 
 // Read-only export
 export const gameSettings = { subscribe: settingsWritable.subscribe };
