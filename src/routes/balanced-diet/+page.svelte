@@ -63,12 +63,12 @@
   let showMacroHints = $state(false);
   
   // Initialize game state from localStorage on mount
-  onMount(() => {
+  onMount(async () => {
     // Load saved game state (foods, meals, etc.)
     initializeGameState();
     
-    // Load custom foods from localStorage
-    initializeCustomFoods();
+    // Load custom foods (from cloud for premium users, localStorage for others)
+    await initializeCustomFoods();
     
     // Start auto-saving game state on any changes
     startAutoSave();

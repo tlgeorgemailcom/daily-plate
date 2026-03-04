@@ -148,9 +148,9 @@
         <span class="benefit-icon">🏆</span>
         <span class="benefit-text">Leaderboard access</span>
       </div>
-      <div class="benefit">
+      <div class="benefit premium-hint">
         <span class="benefit-icon">⭐</span>
-        <span class="benefit-text">Upgrade to premium</span>
+        <span class="benefit-text">Premium available</span>
       </div>
     </div>
   </div>
@@ -363,6 +363,16 @@
     color: #888;
     text-align: center;
     max-width: 70px;
+  }
+  
+  .premium-hint {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 183, 0, 0.1));
+    border-radius: 8px;
+    padding: 6px 10px;
+  }
+  
+  .premium-hint .benefit-text {
+    color: #b8860b;
   }
   
   /* Mobile adjustments */

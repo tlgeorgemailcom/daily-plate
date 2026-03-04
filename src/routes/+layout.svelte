@@ -3,13 +3,16 @@
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
   import { playerStore, type Player } from '$lib/stores/playerStore';
+  import { syncCustomFoodsFromCloud } from '$lib/stores/customFoodsStore';
   import StartScreen from '$lib/components/StartScreen.svelte';
   import LoginModal from '$lib/farmers-basket/LoginModal.svelte';
+  import UpgradeModal from '$lib/components/UpgradeModal.svelte';
   
   let { children } = $props();
   
   // Player authentication state
   let showLoginModal = $state(false);
+  let showUpgradeModal = $state(false);
   
   // Session-only state for guest players (resets on refresh)
   let guestSessionStarted = $state(false);
@@ -24,6 +27,9 @@
   // Check if player has started (logged in persists, guest is session-only)
   let hasStarted = $derived((player?.status === 'logged-in' && player?.id !== null) || guestSessionStarted);
   
+  // Check if user can upgrade (logged in but not premium)
+  let canUpgrade = $derived(player?.status === 'logged-in' && player?.tier !== 'premium');
+
   function handleGameStart() {
     // Guest mode - mark session as started and go to game list
     guestSessionStarted = true;
@@ -34,12 +40,42 @@
     showLoginModal = true;
   }
   
-  function handleLoginSuccess() {
+  async function handleLoginSuccess() {
+    console.log('[Layout] handleLoginSuccess called');
     showLoginModal = false;
+    
+    // Small delay to ensure player store has updated
+    await new Promise(r => setTimeout(r, 100));
+    
+    // Log current player state before sync
+    const currentPlayer = player;
+    console.log('[Layout] Current player before sync:', {
+      id: currentPlayer?.id,
+      status: currentPlayer?.status,
+      tier: currentPlayer?.tier
+    });
+    
+    // Sync custom foods from cloud if user is premium
+    await syncCustomFoodsFromCloud();
+    console.log('[Layout] syncCustomFoodsFromCloud completed');
   }
   
   function handleLoginClose() {
     showLoginModal = false;
+  }
+  
+  function handleShowUpgrade() {
+    showUpgradeModal = true;
+  }
+  
+  async function handleUpgradeSuccess() {
+    showUpgradeModal = false;
+    // Sync any existing local custom foods to cloud now that user is premium
+    await syncCustomFoodsFromCloud();
+  }
+  
+  function handleUpgradeClose() {
+    showUpgradeModal = false;
   }
 </script>
 
@@ -49,6 +85,11 @@
   <div class="app" class:full-width={isFullWidthGame}>
     <div class="nav-wrapper">
     <nav>
+      {#if canUpgrade}
+        <button class="upgrade-btn" onclick={handleShowUpgrade}>
+          ⭐ Upgrade
+        </button>
+      {/if}
       <a href="/chain" class:active={$page.url.pathname === '/chain'}>
         🔗 Chain
       </a>
@@ -103,6 +144,13 @@
   <LoginModal 
     onSuccess={handleLoginSuccess}
     onClose={handleLoginClose}
+  />
+{/if}
+
+{#if showUpgradeModal}
+  <UpgradeModal 
+    onSuccess={handleUpgradeSuccess}
+    onClose={handleUpgradeClose}
   />
 {/if}
 
@@ -198,6 +246,24 @@
   nav a.active {
     background: linear-gradient(135deg, #22c55e, #16a34a);
     color: white;
+  }
+  
+  .upgrade-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ffd700, #ffb700);
+    color: #1a1a2e;
+    transition: all 0.2s;
+  }
+  
+  .upgrade-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
   }
   
   main {

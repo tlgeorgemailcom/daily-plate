@@ -36,7 +36,7 @@
     portionGrams !== null && portionGrams >= 1 && portionGrams <= 2000
   );
 
-  function handleSave() {
+  async function handleSave() {
     if (!isValid) {
       errorMessage = 'Please fill in all required fields correctly';
       return;
@@ -59,24 +59,33 @@
       caloriesPer100g
     });
 
-    addCustomFood({
-      name: name.trim(),
-      calories: caloriesPer100g,
-      protein: proteinPer100g,
-      carbs: carbsPer100g,
-      fat: fatPer100g,
-      fiber: fiberPer100g,
-      sugar: sugarPer100g,
-      water: 0,
-      foodGroup,
-      portions: [
-        { amt: 1, desc: 'custom (g)', gm: 100 },  // Always include 100g base
-        { amt: 1, desc: portionName.trim(), gm: grams }
-      ]
-    });
+    console.log('>>> About to call addCustomFood function');
+    
+    try {
+      console.log('>>> Inside try block, calling addCustomFood now...');
+      const result = await addCustomFood({
+        name: name.trim(),
+        calories: caloriesPer100g,
+        protein: proteinPer100g,
+        carbs: carbsPer100g,
+        fat: fatPer100g,
+        fiber: fiberPer100g,
+        sugar: sugarPer100g,
+        water: 0,
+        foodGroup,
+        portions: [
+          { amt: 1, desc: 'custom (g)', gm: 100 },  // Always include 100g base
+          { amt: 1, desc: portionName.trim(), gm: grams }
+        ]
+      });
+      console.log('Custom food saved successfully:', result);
 
-    dispatch('saved');
-    dispatch('close');
+      dispatch('saved');
+      dispatch('close');
+    } catch (err) {
+      console.error('Failed to save custom food:', err);
+      errorMessage = 'Failed to save. Please try again.';
+    }
   }
 
   function handleClose() {

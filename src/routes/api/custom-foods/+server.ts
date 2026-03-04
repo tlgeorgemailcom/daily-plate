@@ -22,6 +22,7 @@ interface CustomFood {
 // GET /api/custom-foods?player_id=xxx
 export const GET: RequestHandler = async ({ url }) => {
   const playerId = url.searchParams.get('player_id');
+  console.log('[API custom-foods GET] playerId:', playerId);
   
   if (!playerId) {
     throw error(400, 'Missing player_id parameter');
@@ -32,6 +33,8 @@ export const GET: RequestHandler = async ({ url }) => {
       'SELECT * FROM custom_foods WHERE player_id = ? ORDER BY created_at DESC',
       [playerId]
     );
+    
+    console.log('[API custom-foods GET] Found', foods.length, 'foods for player', playerId);
     
     // Parse portions JSON for each food
     const parsed = foods.map(food => ({
@@ -49,6 +52,13 @@ export const GET: RequestHandler = async ({ url }) => {
 // POST /api/custom-foods - Create a new custom food
 export const POST: RequestHandler = async ({ request }) => {
   const body = await request.json();
+  console.log('[API custom-foods POST] Received:', { 
+    id: body.id, 
+    player_id: body.player_id, 
+    name: body.name,
+    food_group: body.food_group 
+  });
+  
   const { 
     id, player_id, name, food_group, 
     calories, protein, carbs, fat, fiber, sugar, water,
@@ -56,6 +66,7 @@ export const POST: RequestHandler = async ({ request }) => {
   } = body;
   
   if (!player_id || !name || !food_group) {
+    console.error('[API custom-foods POST] Missing required fields');
     throw error(400, 'Missing required fields: player_id, name, food_group');
   }
   
@@ -84,6 +95,8 @@ export const POST: RequestHandler = async ({ request }) => {
         JSON.stringify(portions || [])
       ]
     );
+    
+    console.log('[API custom-foods POST] INSERT success for:', foodId);
     
     const created = await queryOne<CustomFood>(
       'SELECT * FROM custom_foods WHERE id = ?',
