@@ -3,6 +3,7 @@
   import { browser } from '$app/environment';
   import { page } from '$app/stores';
   import { getDailyPuzzle, getPuzzleForDate, formatDateDisplay } from '$lib/data/compare-puzzles';
+  import { saveGameScore } from '$lib/stores/scoreHistory';
 
   // Puzzle configuration
   const GRID_SIZE = 3;
@@ -252,6 +253,11 @@
 
     if (checkSolved(board)) {
       isSolved = true;
+      // Save score to cloud for premium users (only manual solves count)
+      saveGameScore('slider', moves, {
+        puzzleImage,
+        archiveDate
+      });
     }
   }
 

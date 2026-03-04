@@ -2,6 +2,7 @@
   import { browser } from '$app/environment';
   import { onMount } from 'svelte';
   import { canUseStorage } from '$lib/stores/playerStore';
+  import { saveGameScore } from '$lib/stores/scoreHistory';
   import { 
     getTodaysPuzzle, 
     getWordGroups, 
@@ -451,6 +452,23 @@
     if (allClassified) {
       setTimeout(() => {
         gamePhase = 'complete';
+        
+        // Save score to cloud for premium users
+        // Score is average of phase1 and phase2 percentages
+        const p1 = (wordsFoundBeforeReveal / validWords.length) * 100;
+        const p2 = (firstTryCorrect / foundWords.length) * 100;
+        const avgScore = Math.round((p1 + p2) / 2);
+        saveGameScore('scrambled', avgScore, {
+          level: currentLevel,
+          wordsFound: foundWords.length,
+          totalWords: validWords.length,
+          wordsFoundBeforeReveal,
+          firstTryCorrect,
+          phase1Percent: Math.round(p1),
+          phase2Percent: Math.round(p2),
+          gaveUp,
+          puzzleDate
+        });
       }, 1000);
     }
   }

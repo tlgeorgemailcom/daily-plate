@@ -9,6 +9,7 @@
     type GameLevel
   } from '$lib/data/scrambled-puzzles';
   import { canUseStorage } from '$lib/stores/playerStore';
+  import { saveGameScore } from '$lib/stores/scoreHistory';
 
   // Level selection
   let currentLevel = $state<GameLevel>('usda');
@@ -323,6 +324,15 @@
         // Tower complete!
         gamePhase = 'complete';
         showResults = true;
+        
+        // Save score to cloud for premium users
+        const guesses = totalGuesses();
+        saveGameScore('tower', guesses, {
+          level: currentLevel,
+          rating: getRating(guesses).label,
+          floorsCompleted: 4,
+          puzzleDate
+        });
       }
       return;
     }
