@@ -5,7 +5,6 @@
 import { browser } from '$app/environment';
 import { get } from 'svelte/store';
 import { canUseStorage } from './playerStore';
-import { canUseStorage } from './playerStore';
 import { 
   addedFoods, 
   meals, 
