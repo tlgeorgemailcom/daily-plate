@@ -5,6 +5,7 @@
   import { playerStore, type Player } from '$lib/stores/playerStore';
   import { syncCustomFoodsFromCloud } from '$lib/stores/customFoodsStore';
   import { syncSettingsFromCloud } from '$lib/stores/settingsStore';
+  import { syncGameStateFromCloud } from '$lib/stores/gameStateStore';
   import StartScreen from '$lib/components/StartScreen.svelte';
   import LoginModal from '$lib/farmers-basket/LoginModal.svelte';
   import UpgradeModal from '$lib/components/UpgradeModal.svelte';
@@ -59,7 +60,8 @@
     // Sync data from cloud if user is premium
     await Promise.all([
       syncCustomFoodsFromCloud(),
-      syncSettingsFromCloud()
+      syncSettingsFromCloud(),
+      syncGameStateFromCloud()
     ]);
     console.log('[Layout] cloud sync completed');
   }
@@ -77,7 +79,8 @@
     // Sync data to/from cloud now that user is premium
     await Promise.all([
       syncCustomFoodsFromCloud(),
-      syncSettingsFromCloud()
+      syncSettingsFromCloud(),
+      syncGameStateFromCloud()
     ]);
   }
   

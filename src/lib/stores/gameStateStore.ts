@@ -1,10 +1,11 @@
 // Game State Persistence Store
-// Persists foods added, meals, and game progress to localStorage
-// Survives page refresh and browser closing until player starts a "New Game"
+// Persists foods added, meals, and game progress
+// Free tier: localStorage only (persists on device)
+// Premium tier: syncs to database (persists across devices)
 
 import { browser } from '$app/environment';
 import { get } from 'svelte/store';
-import { canUseStorage } from './playerStore';
+import { canUseStorage, playerStore } from './playerStore';
 import { 
   addedFoods, 
   meals, 
@@ -98,6 +99,116 @@ function clearGameState(): void {
   }
 }
 
+// ============ Cloud Sync for Premium Users ============
+
+// Check if user is premium
+function isPremiumUser(): boolean {
+  const player = get(playerStore);
+  const isPremium = player.status === 'logged-in' && player.tier === 'premium';
+  console.log('[GameState] isPremiumUser check:', { status: player.status, tier: player.tier, isPremium });
+  return isPremium;
+}
+
+// Get current player ID
+function getPlayerId(): string | null {
+  const player = get(playerStore);
+  return player.id;
+}
+
+// Fetch game state from cloud
+async function fetchFromCloud(): Promise<GameState | null> {
+  const playerId = getPlayerId();
+  console.log('[GameState] fetchFromCloud: playerId =', playerId);
+  if (!playerId) return null;
+  
+  try {
+    const res = await fetch(`/api/game-state?player_id=${playerId}`);
+    console.log('[GameState] fetch response status:', res.status);
+    if (!res.ok) {
+      console.error('Failed to fetch game state from cloud:', res.status);
+      return null;
+    }
+    
+    const data = await res.json();
+    if (data.state) {
+      console.log('[GameState] Got state from cloud');
+      return data.state as GameState;
+    }
+    return null;
+  } catch (e) {
+    console.error('Failed to fetch game state from cloud:', e);
+    return null;
+  }
+}
+
+// Save game state to cloud
+let cloudSaveTimeout: ReturnType<typeof setTimeout> | null = null;
+
+async function saveToCloud(): Promise<boolean> {
+  const playerId = getPlayerId();
+  if (!playerId) {
+    console.log('[GameState] saveToCloud: no player ID, skipping');
+    return false;
+  }
+  
+  const state: GameState = {
+    addedFoods: get(addedFoods),
+    meals: get(meals),
+    selectedMeal: get(selectedMeal),
+    selectedContainer: get(selectedContainer),
+    targets: get(targets),
+    nutrientTargets: get(nutrientTargets),
+    selectedPieNutrient: get(selectedPieNutrient)
+  };
+  
+  console.log('[GameState] Saving to cloud for player:', playerId);
+  
+  try {
+    const res = await fetch('/api/game-state', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ player_id: playerId, state })
+    });
+    
+    console.log('[GameState] saveToCloud response:', res.status, res.ok);
+    return res.ok;
+  } catch (e) {
+    console.error('Failed to save game state to cloud:', e);
+    return false;
+  }
+}
+
+// Debounced cloud save (avoid too many requests)
+function scheduleCloudSave(): void {
+  if (!isPremiumUser()) return;
+  
+  if (cloudSaveTimeout) {
+    clearTimeout(cloudSaveTimeout);
+  }
+  
+  // Debounce: save to cloud 2 seconds after last change
+  cloudSaveTimeout = setTimeout(() => {
+    saveToCloud();
+  }, 2000);
+}
+
+// Clear cloud game state
+async function clearCloudGameState(): Promise<void> {
+  const playerId = getPlayerId();
+  if (!playerId || !isPremiumUser()) return;
+  
+  try {
+    await fetch(`/api/game-state?player_id=${playerId}`, {
+      method: 'DELETE'
+    });
+    console.log('[GameState] Cleared cloud state');
+  } catch (e) {
+    console.error('Failed to clear cloud game state:', e);
+  }
+}
+
+// ============ End Cloud Sync ============
+
 // Initialize stores from saved state (call on app mount)
 export function initializeGameState(): boolean {
   const savedState = loadGameState();
@@ -130,13 +241,13 @@ export function startAutoSave(): void {
   
   // Subscribe to all stores that should trigger saves
   unsubscribers = [
-    addedFoods.subscribe(() => saveGameState()),
-    meals.subscribe(() => saveGameState()),
-    selectedMeal.subscribe(() => saveGameState()),
-    selectedContainer.subscribe(() => saveGameState()),
-    targets.subscribe(() => saveGameState()),
-    nutrientTargets.subscribe(() => saveGameState()),
-    selectedPieNutrient.subscribe(() => saveGameState())
+    addedFoods.subscribe(() => { saveGameState(); scheduleCloudSave(); }),
+    meals.subscribe(() => { saveGameState(); scheduleCloudSave(); }),
+    selectedMeal.subscribe(() => { saveGameState(); scheduleCloudSave(); }),
+    selectedContainer.subscribe(() => { saveGameState(); scheduleCloudSave(); }),
+    targets.subscribe(() => { saveGameState(); scheduleCloudSave(); }),
+    nutrientTargets.subscribe(() => { saveGameState(); scheduleCloudSave(); }),
+    selectedPieNutrient.subscribe(() => { saveGameState(); scheduleCloudSave(); })
   ];
 }
 
@@ -152,6 +263,9 @@ export function startNewGame(): void {
   
   // Clear localStorage game state
   clearGameState();
+  
+  // Clear cloud state for premium users
+  clearCloudGameState();
   
   // Reset game progress stores (foods, meals, selections)
   // Note: targets and nutrientTargets are kept - they're managed by settingsStore
@@ -184,4 +298,55 @@ export function getSavedGameTime(): Date | null {
     // Ignore
   }
   return null;
+}
+
+// Sync game state from cloud (call after login)
+export async function syncGameStateFromCloud(): Promise<void> {
+  console.log('[GameState] syncGameStateFromCloud called');
+  
+  if (!browser) {
+    console.log('[GameState] Not in browser, skipping sync');
+    return;
+  }
+  
+  if (!isPremiumUser()) {
+    console.log('[GameState] Not premium, skipping sync');
+    return;
+  }
+  
+  console.log('[GameState] Starting cloud sync...');
+  
+  const cloudState = await fetchFromCloud();
+  
+  if (cloudState) {
+    // Cloud state exists - use it (cloud is source of truth)
+    console.log('[GameState] Applying cloud state');
+    
+    // Stop auto-save to prevent loops
+    stopAutoSave();
+    
+    // Restore all stores from cloud state
+    addedFoods.set(cloudState.addedFoods || []);
+    meals.set(cloudState.meals || structuredClone(DEFAULT_MEALS));
+    selectedMeal.set(cloudState.selectedMeal || 'breakfast');
+    selectedContainer.set(cloudState.selectedContainer || 'plate');
+    targets.set(cloudState.targets);
+    nutrientTargets.set(cloudState.nutrientTargets);
+    if (cloudState.selectedPieNutrient) {
+      selectedPieNutrient.set(cloudState.selectedPieNutrient);
+    }
+    
+    // Also save to localStorage for offline access
+    saveGameState();
+    
+    // Re-enable auto-save
+    startAutoSave();
+  } else {
+    // No cloud state - push local to cloud if we have local state
+    const localState = loadGameState();
+    if (localState) {
+      console.log('[GameState] No cloud state, pushing local');
+      await saveToCloud();
+    }
+  }
 }
