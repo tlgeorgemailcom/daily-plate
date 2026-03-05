@@ -147,6 +147,11 @@
       <a href="/archive" class:active={$page.url.pathname === '/archive'}>
         📅 Archive
       </a>
+      {#if player?.tier === 'premium'}
+        <a href="/stats" class:active={$page.url.pathname.startsWith('/stats')}>
+          📊 Stats
+        </a>
+      {/if}
     </nav>
     <div class="scroll-indicator">→</div>
   </div>
