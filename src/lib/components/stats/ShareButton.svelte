@@ -93,10 +93,11 @@
     // Try native share first
     if (navigator.share) {
       try {
+        // Share TEXT only - no url parameter!
+        // Including url creates a link preview that hides the stats
         await navigator.share({
           title: 'My Daily Food Chain Stats',
-          text: text,
-          url: 'https://todaypage.com'
+          text: text
         });
         return;
       } catch (e) {
