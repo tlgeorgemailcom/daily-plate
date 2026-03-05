@@ -9,18 +9,20 @@
 
   interface Props {
     game: string;
-    score: GameScore | null;
+    scores: GameScore[];  // All scores for this game today
     checked: boolean;
     onToggle: (game: string) => void;
   }
 
-  let { game, score, checked, onToggle }: Props = $props();
+  let { game, scores, checked, onToggle }: Props = $props();
+
+  const played = $derived(scores.length > 0);
 
   const gameEmojis: Record<string, string> = {
     'chain': '🔗',
     'plate': '🍽️',
     'matching': '🃏',
-    'tower': '🏗️',
+    'tower': '🗼',
     'scrambled': '🐝',
     'slider': '🧩',
     'farmers-basket': '🧺',
@@ -30,41 +32,23 @@
   const gameNames: Record<string, string> = {
     'chain': 'Food Chain',
     'plate': 'Daily Plate',
-    'matching': 'Matching Meals',
-    'tower': 'Tower of Nutrition',
+    'matching': 'Matching Containers',
+    'tower': 'Tower of Food',
     'scrambled': 'Scrambled Bees',
     'slider': 'Food Slider',
     'farmers-basket': "Farmer's Basket",
     'balanced-diet': 'Balanced Diet'
   };
 
-  function formatScore(score: GameScore): string {
-    const details = score.details || {};
-    
-    switch (score.game) {
-      case 'chain':
-      case 'plate':
-        return `${score.score} pts` + (details.difficulty ? ` (${details.difficulty})` : '');
-      case 'matching':
-        return `${score.score} matches` + (details.level ? ` (Level ${details.level})` : '');
-      case 'tower':
-        return `${score.score} guesses`;
-      case 'scrambled':
-        return `${score.score}%`;
-      case 'slider':
-        return `${score.score} moves`;
-      case 'farmers-basket':
-        const won = details.won ?? score.score === 1;
-        return won ? '✅ Won' : '❌ Lost';
-      case 'balanced-diet':
-        return `${score.score}/7 nutrients`;
-      default:
-        return `${score.score}`;
-    }
+  // Simple summary - details are in the Message Preview
+  function getSummary(): string {
+    if (scores.length === 0) return '';
+    if (scores.length > 1) return `${scores.length} plays`;
+    return 'Played ✓';
   }
 
   function handleClick() {
-    if (score) {
+    if (played) {
       onToggle(game);
     }
   }
@@ -72,13 +56,13 @@
 
 <button 
   class="game-row" 
-  class:disabled={!score}
-  class:checked={checked && score}
+  class:disabled={!played}
+  class:checked={checked && played}
   onclick={handleClick}
-  disabled={!score}
+  disabled={!played}
 >
   <span class="checkbox">
-    {#if score}
+    {#if played}
       {checked ? '☑' : '☐'}
     {:else}
       <span class="unchecked">☐</span>
@@ -91,8 +75,8 @@
   </span>
   
   <span class="score">
-    {#if score}
-      {formatScore(score)}
+    {#if played}
+      {getSummary()}
     {:else}
       <span class="not-played">not played today</span>
     {/if}

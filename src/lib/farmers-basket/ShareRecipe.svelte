@@ -16,13 +16,20 @@
   let submitError = $state<string | null>(null);
   let submitSuccess = $state(false);
   
+  // Image upload state
+  let selectedImageFile = $state<File | null>(null);
+  let imagePreviewUrl = $state<string | null>(null);
+  let uploadedImageUrl = $state<string | null>(null);
+  let imageUploadError = $state<string | null>(null);
+  let isUploadingImage = $state(false);
+  
   // Player authentication state
   let playerId = $state<string | null>(null);
   let isLoggedIn = $state(false);
   let isSubscriber = $state(false);
   
-  // Player/subscriber detection
-  const PLAYER_KEY = 'daily-food-chain-player';
+  // Player/subscriber detection - must match playerStore.ts
+  const PLAYER_KEY = 'dailyfoodchain_player';
   
   function getPlayerId(): string | null {
     if (typeof window === 'undefined') return null;
@@ -44,12 +51,85 @@
       const player = localStorage.getItem(PLAYER_KEY);
       if (player) {
         const parsed = JSON.parse(player);
-        const tier = parsed.subscription_tier || 'free';
+        // Check both 'tier' (current) and 'subscription_tier' (legacy)
+        const tier = parsed.tier || parsed.subscription_tier || 'free';
         return tier !== 'free';
       }
       return false;
     } catch {
       return false;
+    }
+  }
+  
+  // Image handling
+  function handleImageSelect(e: Event) {
+    const input = e.target as HTMLInputElement;
+    const file = input.files?.[0];
+    
+    if (!file) return;
+    
+    // Validate file type
+    const validTypes = ['image/jpeg', 'image/png', 'image/webp', 'image/gif'];
+    if (!validTypes.includes(file.type)) {
+      imageUploadError = 'Please select a JPEG, PNG, WebP, or GIF image';
+      return;
+    }
+    
+    // Validate file size (5MB max)
+    if (file.size > 5 * 1024 * 1024) {
+      imageUploadError = 'Image must be under 5MB';
+      return;
+    }
+    
+    imageUploadError = null;
+    selectedImageFile = file;
+    
+    // Create preview URL
+    if (imagePreviewUrl) {
+      URL.revokeObjectURL(imagePreviewUrl);
+    }
+    imagePreviewUrl = URL.createObjectURL(file);
+    uploadedImageUrl = null; // Reset any previous upload
+  }
+  
+  function removeImage() {
+    if (imagePreviewUrl) {
+      URL.revokeObjectURL(imagePreviewUrl);
+    }
+    selectedImageFile = null;
+    imagePreviewUrl = null;
+    uploadedImageUrl = null;
+    imageUploadError = null;
+  }
+  
+  async function uploadImage(): Promise<string | null> {
+    if (!selectedImageFile) return null;
+    
+    isUploadingImage = true;
+    imageUploadError = null;
+    
+    try {
+      const formData = new FormData();
+      formData.append('image', selectedImageFile);
+      
+      const response = await fetch('/api/recipes/upload-image', {
+        method: 'POST',
+        body: formData
+      });
+      
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.error || 'Failed to upload image');
+      }
+      
+      const result = await response.json();
+      uploadedImageUrl = result.url;
+      return result.url;
+    } catch (err) {
+      imageUploadError = err instanceof Error ? err.message : 'Image upload failed';
+      return null;
+    } finally {
+      isUploadingImage = false;
     }
   }
   
@@ -71,6 +151,17 @@
         return;
       }
       
+      // Upload image if selected
+      let imageUrl: string | null = uploadedImageUrl;
+      if (selectedImageFile && !uploadedImageUrl) {
+        imageUrl = await uploadImage();
+        if (imageUploadError) {
+          submitError = imageUploadError;
+          isSubmitting = false;
+          return;
+        }
+      }
+      
       const submission: Record<string, unknown> = {
         recipeName: data.recipeName.trim(),
         category: data.category,
@@ -88,6 +179,11 @@
       
       // Include playerId (required)
       submission.playerId = playerId;
+      
+      // Include image URL if uploaded
+      if (imageUrl) {
+        submission.imageUrl = imageUrl;
+      }
       
       const response = await fetch('/api/recipes/submit', {
         method: 'POST',
@@ -177,12 +273,54 @@
       </div>
     {:else}
       <div class="form-container">
+        <!-- Image Upload Section -->
+        <div class="image-upload-section">
+          <h3>📸 Recipe Photo (Optional)</h3>
+          <p class="image-tip">Adding a photo helps your recipe stand out!</p>
+          
+          {#if imagePreviewUrl}
+            <div class="image-preview-container">
+              <img src={imagePreviewUrl} alt="Recipe preview" class="image-preview" />
+              <button 
+                type="button" 
+                class="remove-image-btn" 
+                onclick={removeImage}
+                aria-label="Remove image"
+              >
+                ✕
+              </button>
+            </div>
+          {:else}
+            <label class="image-upload-label">
+              <input 
+                type="file" 
+                accept="image/jpeg,image/png,image/webp,image/gif"
+                onchange={handleImageSelect}
+                class="image-input"
+              />
+              <div class="upload-placeholder">
+                <span class="upload-icon">📷</span>
+                <span class="upload-text">Tap to add photo</span>
+                <span class="upload-hint">JPEG, PNG, WebP or GIF (max 5MB)</span>
+              </div>
+            </label>
+          {/if}
+          
+          {#if imageUploadError}
+            <p class="image-error">{imageUploadError}</p>
+          {/if}
+          
+          {#if isUploadingImage}
+            <p class="uploading-text">⏳ Uploading image...</p>
+          {/if}
+        </div>
+        
         <RecipeForm 
           moderatorMode={false}
           onsubmit={handleFormSubmit}
           oncancel={onclose}
-          submitLabel="📤 Submit Recipe"
-          submitting={isSubmitting}
+          submitLabel={isUploadingImage ? "⏳ Uploading..." : "📤 Submit Recipe"}
+          submitting={isSubmitting || isUploadingImage}
           errorMessage={submitError || ''}
         />
       </div>
@@ -378,9 +516,128 @@
     color: #333;
   }
   
+  /* Image Upload Styles */
+  .image-upload-section {
+    padding: 16px 20px;
+    border-bottom: 1px solid #E8E0D0;
+    background: #FAFAF5;
+  }
+  
+  .image-upload-section h3 {
+    margin: 0 0 4px;
+    font-size: 1rem;
+    color: #8B4513;
+  }
+  
+  .image-tip {
+    margin: 0 0 12px;
+    font-size: 0.85rem;
+    color: #666;
+  }
+  
+  .image-upload-label {
+    display: block;
+    cursor: pointer;
+  }
+  
+  .image-input {
+    display: none;
+  }
+  
+  .upload-placeholder {
+    border: 2px dashed #C9B896;
+    border-radius: 12px;
+    padding: 24px 16px;
+    text-align: center;
+    background: white;
+    transition: border-color 0.2s, background-color 0.2s;
+  }
+  
+  .upload-placeholder:hover {
+    border-color: #8B4513;
+    background: #FFF9EB;
+  }
+  
+  .upload-icon {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+  
+  .upload-text {
+    display: block;
+    font-weight: 600;
+    color: #8B4513;
+    margin-bottom: 4px;
+  }
+  
+  .upload-hint {
+    display: block;
+    font-size: 0.75rem;
+    color: #999;
+  }
+  
+  .image-preview-container {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+  }
+  
+  .image-preview {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .remove-image-btn {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #E53935;
+    color: white;
+    border: 2px solid white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .remove-image-btn:hover {
+    background: #C62828;
+  }
+  
+  .image-error {
+    margin: 8px 0 0;
+    color: #C62828;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+  
+  .uploading-text {
+    margin: 8px 0 0;
+    color: #8B4513;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+  
   @media (max-width: 500px) {
     .share-modal {
       max-height: 95vh;
+    }
+    
+    .image-upload-section {
+      padding: 12px 16px;
+    }
+    
+    .upload-placeholder {
+      padding: 20px 12px;
     }
   }
 </style>

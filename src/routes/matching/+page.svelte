@@ -375,7 +375,8 @@
       {#if gameMode === 'training'}
         <p>You matched <strong>{trainingCorrect}</strong> foods correctly! Click a mode above to continue.</p>
       {:else}
-        <p>Final Score: <strong>{score}</strong>{#if score >= highScore && score > 0} 🎉 New High Score!{/if}</p>
+        <p>Final Score: <strong>{score}</strong> | Level: <strong>{level}</strong>{#if score >= highScore && score > 0} 🎉 New High Score!{/if}</p>
+        <a href="/stats" class="stats-link">📊 Share/View Stats</a>
       {/if}
     </div>
   {:else}
@@ -577,6 +578,23 @@
   .gameover-banner p {
     margin: 0;
     font-size: 1rem;
+  }
+
+  .stats-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  .stats-link:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
   }
   
   .stats {

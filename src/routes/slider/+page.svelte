@@ -518,7 +518,8 @@
   {#if isSolved}
     <div class="solved-banner">
       {#if moves > 0}
-        🎉 Solved in {moves} moves! Tap New to play again.
+        🎉 Solved in {moves} moves!
+        <a href="/stats" class="stats-link">📊 Share/View Stats</a>
       {:else}
         🎉 Solved! Tap Reset to try again.
       {/if}
@@ -677,6 +678,21 @@
     color: white;
     font-weight: 600;
     border-radius: 0.5rem;
+  }
+
+  .stats-link {
+    display: inline-block;
+    margin-left: 0.75rem;
+    padding: 0.4rem 0.75rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+  }
+
+  .stats-link:hover {
+    background: rgba(255, 255, 255, 0.3);
   }
 
   .controls {

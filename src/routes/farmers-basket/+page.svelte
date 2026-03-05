@@ -1,9 +1,11 @@
 <script lang="ts">
   import { onMount, onDestroy } from 'svelte';
+  import { get } from 'svelte/store';
   import { 
     createGameState, LEVELS, GRID_WIDTH, GRID_HEIGHT, TOTAL_HEIGHT, PANTRY_HEIGHT,
     GRID_COLS, GRID_ROWS, CELL_SIZE, pixelToGrid, gridToPixel, snapToGrid
   } from '$lib/farmers-basket/game-state.svelte';
+  import { playerStore } from '$lib/stores/playerStore';
   import { getLevelsWithOverrides, clearOverrideCache } from '$lib/farmers-basket/level-overrides';
   import Animal from '$lib/farmers-basket/Animal.svelte';
   import Farmer from '$lib/farmers-basket/Farmer.svelte';
@@ -373,8 +375,12 @@
     loadCommunityRecipes();
   });
   
-  // Load approved community recipes from server
+  // Load approved community recipes from server (premium only)
   async function loadCommunityRecipes() {
+    // Only premium users get community recipes - Guest/Free see built-in only
+    const player = get(playerStore);
+    if (player.tier !== 'premium') return;
+    
     try {
       const res = await fetch('/api/recipes/approved');
       const data = await res.json();
@@ -872,6 +878,7 @@
         {/if}
         
         <div class="win-buttons">
+          <a href="/stats" class="stats-link">📊 Share/View Stats</a>
           <button onclick={() => { game.initLevel(game.levelIndex); showRecipeBook = true; }}>📖 Choose Next Recipe</button>
           <button class="secondary" onclick={() => { game.initLevel(game.levelIndex); game.startLevel(); }}>🔄 Play Again</button>
         </div>
@@ -1471,6 +1478,22 @@
     flex-direction: column;
     gap: 8px;
     align-items: center;
+  }
+
+  .stats-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .stats-link:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
   }
   
   .win-buttons button.secondary {

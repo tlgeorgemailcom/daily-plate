@@ -611,9 +611,9 @@
       <p class="total">Total guesses: {totalGuesses()}</p>
       
       <div class="results-buttons">
-        <button class="share-btn" onclick={shareResults}>
-          📤 Share Results
-        </button>
+        <a href="/stats" class="share-btn">
+          📊 Share/View Stats
+        </a>
         <button class="reset-btn" onclick={resetGame}>
           🔄 Play Again
         </button>
@@ -1036,6 +1036,9 @@
   .share-btn {
     background: #4caf50;
     color: white;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
   }
 
   .reset-btn {

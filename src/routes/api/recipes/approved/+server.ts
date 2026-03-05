@@ -17,6 +17,7 @@ interface RecipeRow {
   food_supply: string | null;
   tools: string | null;
   animal_spawns: string | null;
+  image_url: string | null;
   submitted_by: string | null;
   status: string;
   created_at: string;
@@ -63,6 +64,7 @@ export const GET: RequestHandler = async () => {
         servings: row.servings,
         recipeInstructions: instructions,
         recipeIngredients: ingredients,
+        imageUrl: row.image_url,
         submittedBy: row.submitted_by || 'Community',
         isCommunityRecipe: true
       };

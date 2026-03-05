@@ -24,13 +24,13 @@
   let todaysScores = $state<GameScore[]>([]);
   let checkedGames = $state<Set<string>>(new Set());
 
-  // Get score for each game (most recent if multiple)
+  // Group all scores by game type
   const scoresByGame = $derived(() => {
-    const map = new Map<string, GameScore>();
+    const map = new Map<string, GameScore[]>();
     for (const score of todaysScores) {
-      if (!map.has(score.game)) {
-        map.set(score.game, score);
-      }
+      const existing = map.get(score.game) || [];
+      existing.push(score);
+      map.set(score.game, existing);
     }
     return map;
   });
@@ -134,10 +134,10 @@
       {:else}
         <div class="games-list">
           {#each ALL_GAMES as game}
-            {@const score = scoresByGame().get(game) || null}
+            {@const scores = scoresByGame().get(game) || []}
             <GameCheckbox 
               {game} 
-              {score}
+              {scores}
               checked={checkedGames.has(game)}
               onToggle={toggleGame}
             />

@@ -172,6 +172,45 @@ function createPlayerStore() {
       return player.status === 'logged-in';
     },
     
+    // Validate session with server and update tier if changed
+    // Call this on app init to ensure tier accuracy
+    validateSession: async (): Promise<boolean> => {
+      const player = get({ subscribe });
+      
+      // Only validate logged-in users with a real ID
+      if (player.status !== 'logged-in' || !player.id || player.id.startsWith('anon-')) {
+        return false;
+      }
+      
+      try {
+        const res = await fetch(`/api/auth/validate?id=${encodeURIComponent(player.id)}`);
+        const data = await res.json();
+        
+        if (data.valid) {
+          // Update tier in case it changed on the server
+          if (data.tier !== player.tier) {
+            update(p => {
+              const updated = { ...p, tier: data.tier };
+              savePlayer(updated);
+              return updated;
+            });
+          }
+          return true;
+        } else {
+          // Session invalid - log out
+          set(DEFAULT_PLAYER);
+          if (browser) {
+            localStorage.removeItem(STORAGE_KEY);
+          }
+          return false;
+        }
+      } catch (e) {
+        console.warn('Session validation failed:', e);
+        // On network error, trust localStorage (offline support)
+        return true;
+      }
+    },
+    
     // Get current player
     get: (): Player => get({ subscribe })
   };

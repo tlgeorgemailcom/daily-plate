@@ -20,7 +20,7 @@
     'chain': '🔗',
     'plate': '🍽️',
     'matching': '🃏',
-    'tower': '🏗️',
+    'tower': '🗼',
     'scrambled': '🐝',
     'slider': '🧩',
     'farmers-basket': '🧺',

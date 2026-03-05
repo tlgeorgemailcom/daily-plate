@@ -99,6 +99,7 @@ export interface Level {
   recipeIngredients?: { name: string; quantity?: string }[];  // Full ingredient list with quantities
   servings?: string;              // e.g., "Serves 2"
   prepTime?: string;              // e.g., "10 minutes"
+  imageUrl?: string;              // Cloudinary URL for community recipe photos
 }
 
 // Emoji mappings

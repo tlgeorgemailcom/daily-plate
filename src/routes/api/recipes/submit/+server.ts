@@ -51,8 +51,9 @@ export const POST: RequestHandler = async ({ request }) => {
         id, type, name, category, dietary_category,
         prep_time, servings,
         recipe_ingredients, recipe_instructions,
+        image_url,
         submitted_by, submitter_name, status, created_at
-      ) VALUES (?, 'community', ?, ?, ?, ?, ?, ?, ?, ?, ?, 'pending', datetime('now'))`,
+      ) VALUES (?, 'community', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'pending', datetime('now'))`,
       [
         recipeId,
         body.recipeName,
@@ -62,6 +63,7 @@ export const POST: RequestHandler = async ({ request }) => {
         body.servings || null,
         JSON.stringify(body.ingredients),
         JSON.stringify(body.instructions),
+        body.imageUrl || null,
         submittedBy,
         submitterName
       ]

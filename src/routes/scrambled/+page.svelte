@@ -798,9 +798,9 @@ dailyfoodchain.com/scrambled`;
         </div>
       </div>
       
-      <button class="share-btn" onclick={shareResult}>
-        📤 Share Result
-      </button>
+      <a href="/stats" class="share-btn">
+        📊 Share/View Stats
+      </a>
       
       <button class="show-results-btn" onclick={() => showResults = !showResults}>
         {showResults ? '▲ Hide Answers' : '▼ Show Answers'}
@@ -1715,6 +1715,9 @@ dailyfoodchain.com/scrambled`;
     border-radius: 8px;
     font-size: 1.1rem;
     cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
   }
   
   .share-btn:hover {

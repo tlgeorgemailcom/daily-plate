@@ -475,6 +475,17 @@
           <h3 class="cotd-name">{todaysRecipe.name}</h3>
           <span class="cotd-category">{todaysRecipe.category}</span>
           
+          {#if todaysRecipe.imageUrl}
+            <div class="cotd-image-container">
+              <img 
+                src={todaysRecipe.imageUrl} 
+                alt={todaysRecipe.name}
+                class="cotd-image"
+                loading="lazy"
+              />
+            </div>
+          {/if}
+          
           <div class="cotd-ingredients">
             {#each todaysRecipe.recipe as food}
               <span class="cotd-ingredient" title={food}><FoodIcon {food} size={28} /></span>
@@ -536,6 +547,17 @@
             <h3 class="recipe-name">{selectedLevel.name}</h3>
             <span class="recipe-category">{selectedLevel.category}</span>
           </div>
+          
+          {#if selectedLevel.imageUrl}
+            <div class="recipe-image-container">
+              <img 
+                src={selectedLevel.imageUrl} 
+                alt={selectedLevel.name}
+                class="recipe-image"
+                loading="lazy"
+              />
+            </div>
+          {/if}
           
           <div class="ingredients">
             <span class="ingredients-label">Ingredients:</span>
@@ -1392,6 +1414,22 @@
     border-radius: 12px;
   }
   
+  /* Recipe Image (community recipes) */
+  .recipe-image-container {
+    width: 100%;
+    max-height: 200px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #f5f5f5;
+  }
+  
+  .recipe-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
   .ingredients {
     display: flex;
     flex-direction: column;
@@ -1667,6 +1705,22 @@
     font-size: 0.9rem;
     color: #8D6E63;
     font-style: italic;
+  }
+  
+  .cotd-image-container {
+    width: 100%;
+    max-width: 280px;
+    max-height: 180px;
+    margin: 12px auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cotd-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   
   .cotd-ingredients {

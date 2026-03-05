@@ -263,6 +263,7 @@
   {#if isSolved}
     <div class="solved-banner">
       🎉 You found all the differences!
+      <a href="/stats" class="stats-link">📊 Share/View Stats</a>
     </div>
   {/if}
 
@@ -543,6 +544,17 @@
     border-radius: 0.5rem;
     animation: banner-pop 0.5s ease-out;
     margin-top: 0.5rem;
+  }
+
+  .solved-banner .stats-link {
+    display: block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
   }
 
   @keyframes banner-pop {

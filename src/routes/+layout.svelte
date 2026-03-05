@@ -1,5 +1,6 @@
 <script lang="ts">
   import '../app.css';
+  import { onMount } from 'svelte';
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
   import { playerStore, type Player } from '$lib/stores/playerStore';
@@ -25,6 +26,11 @@
   $effect(() => {
     const unsub = playerStore.subscribe(p => player = p);
     return unsub;
+  });
+  
+  // Validate session on app load to ensure tier accuracy
+  onMount(async () => {
+    await playerStore.validateSession();
   });
   
   // Enable auto-sync for returning premium users
@@ -149,7 +155,7 @@
       </a>
       {#if player?.tier === 'premium'}
         <a href="/stats" class:active={$page.url.pathname.startsWith('/stats')}>
-          📊 Stats
+          📊 Share/Stats
         </a>
       {/if}
     </nav>

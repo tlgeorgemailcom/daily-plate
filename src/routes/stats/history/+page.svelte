@@ -16,7 +16,7 @@
     { id: '', label: 'All Games' },
     { id: 'chain', label: 'Food Chain' },
     { id: 'plate', label: 'Daily Plate' },
-    { id: 'matching', label: 'Matching Meals' },
+    { id: 'matching', label: 'Matching Containers' },
     { id: 'tower', label: 'Tower' },
     { id: 'scrambled', label: 'Scrambled Bees' },
     { id: 'slider', label: 'Slider' },

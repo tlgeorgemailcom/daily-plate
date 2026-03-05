@@ -713,9 +713,9 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
           <p class="streak">🔥 {streak} day streak</p>
         {/if}
         
-        <button class="share-btn" onclick={shareResults}>
-          📤 Share
-        </button>
+        <a href="/stats" class="share-btn">
+          📊 Share/View Stats
+        </a>
         
         <button class="resume-btn" onclick={() => { gameComplete = false; showResults = false; }}>
           ✏️ Keep Editing
@@ -1453,6 +1453,7 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
   }
   
   .share-btn, .resume-btn, .close-btn {
+    display: block;
     width: 100%;
     padding: 0.75rem;
     border: none;
@@ -1462,6 +1463,8 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
     cursor: pointer;
     margin: 0.25rem 0;
     color: white;
+    text-decoration: none;
+    text-align: center;
   }
   
   .share-btn {
