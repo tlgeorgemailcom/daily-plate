@@ -1690,7 +1690,7 @@
   /* Recipe Image (community recipes) */
   .recipe-image-container {
     width: 100%;
-    max-height: 120px;
+    max-height: 160px;
     overflow: hidden;
     border-radius: 8px;
     background: #f5f5f5;
@@ -1699,8 +1699,9 @@
 
   .recipe-image {
     width: 100%;
-    height: 120px;
-    object-fit: cover;
+    height: auto;
+    max-height: 160px;
+    object-fit: contain;
     display: block;
   }
 
