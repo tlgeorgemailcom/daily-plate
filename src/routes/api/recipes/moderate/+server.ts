@@ -2,6 +2,7 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { writeFileSync, readFileSync, existsSync, mkdirSync } from 'fs';
 import { join } from 'path';
+import { queryAll, execute } from '$lib/server/turso';
 
 const DATA_DIR = join(process.cwd(), 'data', 'recipes');
 const PENDING_FILE = join(DATA_DIR, 'pending.json');
@@ -30,6 +31,7 @@ interface RecipeSubmission {
     gameFood?: string | null; 
     animal?: string | null; 
   }[];
+  imageUrl?: string;  // Cloudinary URL for recipe photo
   reviewedAt?: string;
   reviewedBy?: string;
   // Edit tracking
@@ -239,7 +241,7 @@ export const POST: RequestHandler = async ({ request }) => {
   }
 };
 
-// PATCH: Edit an approved recipe
+// PATCH: Edit an approved recipe (JSON file or database)
 export const PATCH: RequestHandler = async ({ request }) => {
   try {
     const body = await request.json();
@@ -253,7 +255,66 @@ export const PATCH: RequestHandler = async ({ request }) => {
       return json({ error: 'Missing updates object' }, { status: 400 });
     }
     
-    // Load approved recipes
+    // Check if this is a database recipe (community recipe IDs start with 'recipe-')
+    const isDatabaseRecipe = id.startsWith('recipe-');
+    
+    if (isDatabaseRecipe) {
+      // Update in database
+      interface RecipeRow {
+        id: string;
+        name: string;
+        status: string;
+      }
+      
+      const existing = await queryAll<RecipeRow>(
+        'SELECT id, name, status FROM recipes WHERE id = ? AND type = ?',
+        [id, 'community']
+      );
+      
+      if (existing.length === 0) {
+        return json({ error: 'Recipe not found in database' }, { status: 404 });
+      }
+      
+      // Build SQL update
+      await execute(
+        `UPDATE recipes SET 
+          name = COALESCE(?, name),
+          category = COALESCE(?, category),
+          dietary_category = COALESCE(?, dietary_category),
+          prep_time = COALESCE(?, prep_time),
+          servings = COALESCE(?, servings),
+          recipe = COALESCE(?, recipe),
+          recipe_ingredients = COALESCE(?, recipe_ingredients),
+          recipe_instructions = COALESCE(?, recipe_instructions),
+          animal_spawns = COALESCE(?, animal_spawns),
+          image_url = COALESCE(?, image_url)
+         WHERE id = ?`,
+        [
+          updates.recipeName || null,
+          updates.category || null,
+          updates.dietaryCategory || null,
+          updates.prepTime || null,
+          updates.servings || null,
+          updates.gameFoods ? JSON.stringify(updates.gameFoods) : null,
+          updates.ingredients ? JSON.stringify(updates.ingredients) : 
+            (updates.modIngredients ? JSON.stringify(updates.modIngredients) : null),
+          updates.instructions ? JSON.stringify(updates.instructions) : null,
+          updates.animalSpawns ? JSON.stringify(updates.animalSpawns) : null,
+          updates.imageUrl !== undefined ? (updates.imageUrl || null) : null,
+          id
+        ]
+      );
+      
+      console.log(`✏️ Edited database recipe: "${updates.recipeName || existing[0].name}" by ${editedBy || 'Moderator'}`);
+      
+      return json({ 
+        success: true, 
+        recipe: updates.recipeName || existing[0].name,
+        editedAt: new Date().toISOString()
+      });
+    }
+    
+    // Otherwise, update in JSON file
     const approved = loadJSON(APPROVED_FILE);
     const recipeIndex = approved.findIndex(r => r.id === id);
     
@@ -274,7 +335,8 @@ export const PATCH: RequestHandler = async ({ request }) => {
       'modIngredients',
       'instructions',
       'gameFoods',
-      'animalSpawns'
+      'animalSpawns',
+      'imageUrl'
     ];
     
     // Apply updates

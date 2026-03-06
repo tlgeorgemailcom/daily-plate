@@ -27,6 +27,7 @@
     animalSpawns?: { type: string; delay: number }[];
     foodSupply?: Record<string, number>;
     modIngredients?: SubmittedIngredient[];
+    imageUrl?: string;
     editedAt?: string;
     editedBy?: string;
   }
@@ -55,6 +56,12 @@
   let isSaving = $state(false);
   let saveError = $state<string | null>(null);
   let successMsg = $state<string | null>(null);
+  
+  // Image upload state for published recipes
+  let selectedImageFile = $state<File | null>(null);
+  let imagePreviewUrl = $state<string | null>(null);
+  let isUploadingImage = $state(false);
+  let imageUploadError = $state<string | null>(null);
   
   onMount(async () => {
     if (typeof window !== 'undefined' && sessionStorage.getItem('mod-auth') === 'true') {
@@ -116,6 +123,10 @@
     selectedPublished = recipe;
     selectedRecipe = null;
     saveError = null;
+    // Reset image state - show existing image if any
+    selectedImageFile = null;
+    imagePreviewUrl = recipe.imageUrl || null;
+    imageUploadError = null;
   }
   
   function recipeToFormData(recipe: RecipeSubmission): Partial<RecipeFormData> {
@@ -140,6 +151,72 @@
       })),
       foodSupply: recipe.foodSupply
     };
+  }
+  
+  // Image handling functions for published recipes
+  function handleImageSelect(event: Event) {
+    const input = event.target as HTMLInputElement;
+    const file = input.files?.[0];
+    if (!file) return;
+    
+    // Validate file type
+    if (!file.type.startsWith('image/')) {
+      imageUploadError = 'Please select an image file';
+      return;
+    }
+    
+    // Validate file size (max 5MB)
+    if (file.size > 5 * 1024 * 1024) {
+      imageUploadError = 'Image must be under 5MB';
+      return;
+    }
+    
+    selectedImageFile = file;
+    imageUploadError = null;
+    
+    // Create preview URL
+    if (imagePreviewUrl && !selectedPublished?.imageUrl) {
+      URL.revokeObjectURL(imagePreviewUrl);
+    }
+    imagePreviewUrl = URL.createObjectURL(file);
+  }
+  
+  function removeImage() {
+    if (imagePreviewUrl && !selectedPublished?.imageUrl) {
+      URL.revokeObjectURL(imagePreviewUrl);
+    }
+    selectedImageFile = null;
+    imagePreviewUrl = null;
+  }
+  
+  async function uploadImage(): Promise<string | null> {
+    if (!selectedImageFile) return selectedPublished?.imageUrl || null;
+    
+    isUploadingImage = true;
+    imageUploadError = null;
+    
+    try {
+      const formData = new FormData();
+      formData.append('image', selectedImageFile);
+      
+      const res = await fetch('/api/recipes/upload-image', {
+        method: 'POST',
+        body: formData
+      });
+      
+      if (!res.ok) {
+        const errorData = await res.json().catch(() => ({ error: 'Upload failed' }));
+        throw new Error(errorData.error || 'Failed to upload image');
+      }
+      
+      const data = await res.json();
+      return data.url;
+    } catch (err) {
+      imageUploadError = err instanceof Error ? err.message : 'Failed to upload image';
+      return null;
+    } finally {
+      isUploadingImage = false;
+    }
   }
   
   async function handleApprove(data: RecipeFormData) {
@@ -253,6 +330,22 @@
     saveError = null;
     
     try {
+      // Upload image if a new one was selected
+      let imageUrl = selectedPublished.imageUrl;
+      if (selectedImageFile) {
+        const uploadedUrl = await uploadImage();
+        if (uploadedUrl) {
+          imageUrl = uploadedUrl;
+        } else if (imageUploadError) {
+          saveError = imageUploadError;
+          isSaving = false;
+          return;
+        }
+      } else if (!imagePreviewUrl) {
+        // Image was removed
+        imageUrl = undefined;
+      }
+      
       const res = await fetch('/api/recipes/moderate', {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
@@ -275,7 +368,8 @@
               gameFood: i.gameFood || null,
               animal: i.animal || null
             })),
-            instructions: data.instructions.filter(i => i.text.trim()).map(i => i.text)
+            instructions: data.instructions.filter(i => i.text.trim()).map(i => i.text),
+            imageUrl
           },
           editedBy: 'Moderator'
         })
@@ -577,6 +671,47 @@
               </div>
               
               <div class="form-container">
+                <!-- Image Upload Section -->
+                <div class="image-upload-section">
+                  <label class="section-label">Recipe Photo</label>
+                  
+                  {#if imagePreviewUrl}
+                    <div class="image-preview-container">
+                      <img src={imagePreviewUrl} alt="Recipe preview" class="image-preview" />
+                      <button 
+                        type="button" 
+                        class="remove-image-btn"
+                        onclick={removeImage}
+                        disabled={isSaving || isUploadingImage}
+                      >
+                        ✕ Remove
+                      </button>
+                    </div>
+                  {:else}
+                    <label class="image-picker">
+                      <input 
+                        type="file" 
+                        accept="image/*"
+                        onchange={handleImageSelect}
+                        disabled={isSaving || isUploadingImage}
+                      />
+                      <span class="picker-content">
+                        <span class="picker-icon">📷</span>
+                        <span class="picker-text">Add Recipe Photo</span>
+                        <span class="picker-hint">Max 5MB</span>
+                      </span>
+                    </label>
+                  {/if}
+                  
+                  {#if imageUploadError}
+                    <p class="image-error">{imageUploadError}</p>
+                  {/if}
+                  
+                  {#if isUploadingImage}
+                    <p class="image-uploading">Uploading image...</p>
+                  {/if}
+                </div>
+                
                 <RecipeForm
                   moderatorMode={true}
                   initialData={recipeToFormData(selectedPublished)}
@@ -939,6 +1074,103 @@
     overflow-y: auto;
     padding: 20px;
     background: #FFFEF5;
+  }
+  
+  /* Image Upload Section */
+  .image-upload-section {
+    margin-bottom: 20px;
+    padding: 16px;
+    background: white;
+    border-radius: 12px;
+    border: 2px dashed #DDD;
+  }
+  
+  .section-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #333;
+  }
+  
+  .image-picker {
+    display: block;
+    cursor: pointer;
+  }
+  
+  .image-picker input {
+    display: none;
+  }
+  
+  .picker-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    background: #F5F5F5;
+    border-radius: 8px;
+    transition: background 0.2s;
+  }
+  
+  .image-picker:hover .picker-content {
+    background: #EEEEEE;
+  }
+  
+  .picker-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+  
+  .picker-text {
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .picker-hint {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 4px;
+  }
+  
+  .image-preview-container {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+  }
+  
+  .image-preview {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .remove-image-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 6px 12px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+  }
+  
+  .remove-image-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+  }
+  
+  .image-error {
+    color: #E53935;
+    font-size: 0.9rem;
+    margin: 8px 0 0;
+  }
+  
+  .image-uploading {
+    color: #1976D2;
+    font-size: 0.9rem;
+    margin: 8px 0 0;
   }
   
   /* Action Buttons */

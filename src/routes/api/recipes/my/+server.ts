@@ -12,6 +12,7 @@ interface RecipeRow {
   servings: string | null;
   recipe_ingredients: string | null;
   recipe_instructions: string | null;
+  image_url: string | null;
   submitted_by: string;
   submitter_name: string | null;
   status: string;
@@ -28,7 +29,7 @@ export const GET: RequestHandler = async ({ url }) => {
       // Subscriber: fetch all their recipes across devices
       const rows = await queryAll<RecipeRow>(
         `SELECT id, type, name, category, dietary_category, prep_time, servings,
-                recipe_ingredients, recipe_instructions, submitted_by, submitter_name, status, created_at
+                recipe_ingredients, recipe_instructions, image_url, submitted_by, submitter_name, status, created_at
          FROM recipes 
          WHERE submitted_by = ? AND type = 'community'
          ORDER BY created_at DESC`,
@@ -44,6 +45,7 @@ export const GET: RequestHandler = async ({ url }) => {
         servings: row.servings || '',
         ingredients: row.recipe_ingredients ? JSON.parse(row.recipe_ingredients) : [],
         instructions: row.recipe_instructions ? JSON.parse(row.recipe_instructions) : [],
+        imageUrl: row.image_url || null,
         submitterName: row.submitter_name || row.submitted_by,
         status: row.status,
         submittedAt: row.created_at
@@ -69,7 +71,7 @@ export const GET: RequestHandler = async ({ url }) => {
     const placeholders = ids.map(() => '?').join(', ');
     const rows = await queryAll<RecipeRow>(
       `SELECT id, type, name, category, dietary_category, prep_time, servings,
-              recipe_ingredients, recipe_instructions, submitted_by, submitter_name, status, created_at
+              recipe_ingredients, recipe_instructions, image_url, submitted_by, submitter_name, status, created_at
        FROM recipes 
        WHERE id IN (${placeholders}) AND type = 'community'
        ORDER BY created_at DESC`,
@@ -86,6 +88,7 @@ export const GET: RequestHandler = async ({ url }) => {
       servings: row.servings || '',
       ingredients: row.recipe_ingredients ? JSON.parse(row.recipe_ingredients) : [],
       instructions: row.recipe_instructions ? JSON.parse(row.recipe_instructions) : [],
+      imageUrl: row.image_url || null,
       submitterName: row.submitter_name || row.submitted_by,
       status: row.status,
       submittedAt: row.created_at
@@ -141,7 +144,8 @@ export const PATCH: RequestHandler = async ({ request }) => {
         prep_time = COALESCE(?, prep_time),
         servings = COALESCE(?, servings),
         recipe_ingredients = COALESCE(?, recipe_ingredients),
-        recipe_instructions = COALESCE(?, recipe_instructions)
+        recipe_instructions = COALESCE(?, recipe_instructions),
+        image_url = COALESCE(?, image_url)
        WHERE id = ? AND status = 'pending'`,
       [
         updates.recipeName || null,
@@ -151,6 +155,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
         updates.servings || null,
         updates.ingredients ? JSON.stringify(updates.ingredients) : null,
         updates.instructions ? JSON.stringify(updates.instructions) : null,
+        updates.imageUrl || null,
         id
       ]
     );

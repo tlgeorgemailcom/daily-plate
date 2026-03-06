@@ -65,6 +65,12 @@
   let saveSuccess = $state(false);
   const MODERATOR_PASSWORD = '4444';
   
+  // Image upload state for moderator mode
+  let selectedImageFile = $state<File | null>(null);
+  let imagePreviewUrl = $state<string | null>(null);
+  let isUploadingImage = $state(false);
+  let imageUploadError = $state<string | null>(null);
+  
   // Dietary preference (loaded from localStorage)
   let dietaryPreference = $state<DietaryCategory>('all');
   
@@ -268,6 +274,12 @@
         isModeratorMode = true;
         saveError = null;
         saveSuccess = false;
+        
+        // Initialize image state - show existing image if any
+        selectedImageFile = null;
+        isUploadingImage = false;
+        imageUploadError = null;
+        imagePreviewUrl = selectedLevel.imageUrl || null;
       }
     }
   }
@@ -278,6 +290,72 @@
     const code = prompt('');
     if (code === '4444') {
       window.open('/farmers-basket/moderate', '_blank');
+    }
+  }
+  
+  // Image handling functions for moderator mode
+  function handleImageSelect(event: Event) {
+    const input = event.target as HTMLInputElement;
+    const file = input.files?.[0];
+    if (!file) return;
+    
+    // Validate file type
+    if (!file.type.startsWith('image/')) {
+      imageUploadError = 'Please select an image file';
+      return;
+    }
+    
+    // Validate file size (max 5MB)
+    if (file.size > 5 * 1024 * 1024) {
+      imageUploadError = 'Image must be under 5MB';
+      return;
+    }
+    
+    selectedImageFile = file;
+    imageUploadError = null;
+    
+    // Create preview URL
+    if (imagePreviewUrl && !selectedLevel?.imageUrl) {
+      URL.revokeObjectURL(imagePreviewUrl);
+    }
+    imagePreviewUrl = URL.createObjectURL(file);
+  }
+  
+  function removeImage() {
+    if (imagePreviewUrl && !selectedLevel?.imageUrl) {
+      URL.revokeObjectURL(imagePreviewUrl);
+    }
+    selectedImageFile = null;
+    imagePreviewUrl = null;
+  }
+  
+  async function uploadImage(): Promise<string | null> {
+    if (!selectedImageFile) return selectedLevel?.imageUrl || null;
+    
+    isUploadingImage = true;
+    imageUploadError = null;
+    
+    try {
+      const formData = new FormData();
+      formData.append('image', selectedImageFile);
+      
+      const res = await fetch('/api/recipes/upload-image', {
+        method: 'POST',
+        body: formData
+      });
+      
+      if (!res.ok) {
+        const errorData = await res.json().catch(() => ({ error: 'Upload failed' }));
+        throw new Error(errorData.error || 'Failed to upload image');
+      }
+      
+      const data = await res.json();
+      return data.url;
+    } catch (err) {
+      imageUploadError = err instanceof Error ? err.message : 'Failed to upload image';
+      return null;
+    } finally {
+      isUploadingImage = false;
     }
   }
   
@@ -334,6 +412,22 @@
     saveError = null;
     
     try {
+      // Upload image if a new one was selected
+      let imageUrl = selectedLevel.imageUrl;
+      if (selectedImageFile) {
+        const uploadedUrl = await uploadImage();
+        if (uploadedUrl) {
+          imageUrl = uploadedUrl;
+        } else if (imageUploadError) {
+          saveError = imageUploadError;
+          isSaving = false;
+          return;
+        }
+      } else if (!imagePreviewUrl) {
+        // Image was removed
+        imageUrl = undefined;
+      }
+      
       // Build the updates
       const gameFoods = data.ingredients
         .filter(i => i.gameFood)
@@ -351,28 +445,67 @@
         animalSpawns.push({ type: 'rabbit', delay: 3000 });
       }
       
-      const res = await fetch('/api/recipes/builtin', {
-        method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          id: selectedLevel.id,
-          updates: {
-            name: data.recipeName,
-            category: data.category,
-            dietaryCategory: data.dietaryCategory,
-            prepTime: data.prepTime,
-            servings: data.servings,
-            recipe: gameFoods,
-            animalSpawns,
-            recipeInstructions: data.instructions.map(i => i.text),
-            recipeIngredients: data.ingredients.filter(i => i.name.trim()).map(i => ({
-              name: i.name,
-              quantity: i.quantity || ''
-            }))
-          },
-          editedBy: 'Moderator'
-        })
-      });
+      // Check if this is a community recipe (id starts with 'recipe-')
+      const isCommunityRecipe = selectedLevel.isCommunityRecipe || selectedLevel.id.startsWith('recipe-');
+      
+      let res;
+      if (isCommunityRecipe) {
+        // Use moderate API for community recipes
+        res = await fetch('/api/recipes/moderate', {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            id: selectedLevel.id,
+            updates: {
+              recipeName: data.recipeName,
+              category: data.category,
+              dietaryCategory: data.dietaryCategory,
+              prepTime: data.prepTime,
+              servings: data.servings,
+              gameFoods,
+              ingredients: data.ingredients.filter(i => i.name.trim()).map(i => ({
+                name: i.name,
+                quantity: i.quantity
+              })),
+              modIngredients: data.ingredients.filter(i => i.name.trim()).map(i => ({
+                name: i.name,
+                quantity: i.quantity,
+                gameFood: i.gameFood || null,
+                animal: i.animal || null
+              })),
+              instructions: data.instructions.map(i => i.text),
+              animalSpawns: animalSpawns.map(s => ({ type: s.type, delay: s.delay / 1000 })),
+              imageUrl
+            },
+            editedBy: 'Moderator'
+          })
+        });
+      } else {
+        // Use builtin API for built-in recipes
+        res = await fetch('/api/recipes/builtin', {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            id: selectedLevel.id,
+            updates: {
+              name: data.recipeName,
+              category: data.category,
+              dietaryCategory: data.dietaryCategory,
+              prepTime: data.prepTime,
+              servings: data.servings,
+              recipe: gameFoods,
+              animalSpawns,
+              recipeInstructions: data.instructions.map(i => i.text),
+              recipeIngredients: data.ingredients.filter(i => i.name.trim()).map(i => ({
+                name: i.name,
+                quantity: i.quantity || ''
+              })),
+              imageUrl
+            },
+            editedBy: 'Moderator'
+          })
+        });
+      }
       
       if (!res.ok) throw new Error('Failed to save');
       
@@ -524,6 +657,47 @@
           </div>
           
           <div class="mod-form-container">
+            <!-- Image Upload Section -->
+            <div class="mod-image-section">
+              <label class="mod-section-label">📷 Recipe Photo</label>
+              
+              {#if imagePreviewUrl}
+                <div class="mod-image-preview-container">
+                  <img src={imagePreviewUrl} alt="Recipe preview" class="mod-image-preview" />
+                  <button 
+                    type="button" 
+                    class="mod-remove-image-btn"
+                    onclick={removeImage}
+                    disabled={isSaving || isUploadingImage}
+                  >
+                    ✕ Remove
+                  </button>
+                </div>
+              {:else}
+                <label class="mod-image-picker">
+                  <input 
+                    type="file" 
+                    accept="image/*"
+                    onchange={handleImageSelect}
+                    disabled={isSaving || isUploadingImage}
+                  />
+                  <span class="mod-picker-content">
+                    <span class="mod-picker-icon">📷</span>
+                    <span class="mod-picker-text">Add Photo</span>
+                    <span class="mod-picker-hint">Max 5MB</span>
+                  </span>
+                </label>
+              {/if}
+              
+              {#if imageUploadError}
+                <p class="mod-image-error">{imageUploadError}</p>
+              {/if}
+              
+              {#if isUploadingImage}
+                <p class="mod-image-uploading">Uploading image...</p>
+              {/if}
+            </div>
+            
             <RecipeForm
               moderatorMode={true}
               initialData={levelToFormData(selectedLevel)}
@@ -1358,6 +1532,105 @@
     overflow-y: auto;
     padding: 16px 20px;
     background: #FFFEF5;
+  }
+  
+  /* Moderator Image Upload Section */
+  .mod-image-section {
+    margin-bottom: 16px;
+    padding: 12px;
+    background: white;
+    border-radius: 12px;
+    border: 2px dashed #DDD;
+  }
+  
+  .mod-section-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 0.95rem;
+  }
+  
+  .mod-image-picker {
+    display: block;
+    cursor: pointer;
+  }
+  
+  .mod-image-picker input {
+    display: none;
+  }
+  
+  .mod-picker-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    background: #F5F5F5;
+    border-radius: 8px;
+    transition: background 0.2s;
+  }
+  
+  .mod-image-picker:hover .mod-picker-content {
+    background: #EEEEEE;
+  }
+  
+  .mod-picker-icon {
+    font-size: 1.5rem;
+    margin-bottom: 6px;
+  }
+  
+  .mod-picker-text {
+    font-weight: 500;
+    color: #333;
+    font-size: 0.9rem;
+  }
+  
+  .mod-picker-hint {
+    font-size: 0.75rem;
+    color: #666;
+    margin-top: 2px;
+  }
+  
+  .mod-image-preview-container {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+  }
+  
+  .mod-image-preview {
+    max-width: 100%;
+    max-height: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .mod-remove-image-btn {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    padding: 4px 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+  }
+  
+  .mod-remove-image-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+  }
+  
+  .mod-image-error {
+    color: #E53935;
+    font-size: 0.85rem;
+    margin: 6px 0 0;
+  }
+  
+  .mod-image-uploading {
+    color: #1976D2;
+    font-size: 0.85rem;
+    margin: 6px 0 0;
   }
   
   /* DETAIL VIEW: Recipe card */
