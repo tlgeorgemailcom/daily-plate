@@ -5,7 +5,7 @@
     createGameState, LEVELS, GRID_WIDTH, GRID_HEIGHT, TOTAL_HEIGHT, PANTRY_HEIGHT,
     GRID_COLS, GRID_ROWS, CELL_SIZE, pixelToGrid, gridToPixel, snapToGrid
   } from '$lib/farmers-basket/game-state.svelte';
-  import { playerStore } from '$lib/stores/playerStore';
+  import { playerStore, isPremium } from '$lib/stores/playerStore';
   import { getLevelsWithOverrides, clearOverrideCache } from '$lib/farmers-basket/level-overrides';
   import Animal from '$lib/farmers-basket/Animal.svelte';
   import Farmer from '$lib/farmers-basket/Farmer.svelte';
@@ -65,17 +65,21 @@
     window.addEventListener('resize', updateGameScale);
     window.addEventListener('orientationchange', updateGameScale);
     
-    // Load levels with any moderator overrides applied
-    try {
-      const levelsWithOverrides = await getLevelsWithOverrides();
-      game.setLevelsWithOverrides(levelsWithOverrides);
-    } catch (err) {
-      console.warn('Could not load level overrides:', err);
+    // Premium users: load Turso overrides, images, and admin-added recipes
+    // Guest/free users: use TypeScript LEVELS only (zero Turso reads)
+    if (get(isPremium)) {
+      try {
+        const levelsWithOverrides = await getLevelsWithOverrides();
+        game.setLevelsWithOverrides(levelsWithOverrides);
+      } catch (err) {
+        console.warn('Could not load level overrides:', err);
+      }
     }
   });
   
-  // Reload levels after moderator edits
+  // Reload levels after moderator edits (premium only)
   async function reloadLevels() {
+    if (!get(isPremium)) return;
     clearOverrideCache();
     try {
       const levelsWithOverrides = await getLevelsWithOverrides();

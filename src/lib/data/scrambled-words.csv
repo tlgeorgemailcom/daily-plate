@@ -171,7 +171,7 @@ cloudberry,fruit
 clove,spice
 club,prepared
 cocktail,fruit|beverage|prepared
-cocoa,spice|beverage
+cocoa,spice|beverage|condiment
 coconut,fruit|nuts|fats
 cod,protein
 coffee,beverage
@@ -209,7 +209,6 @@ crookneck,vegetable
 crouton,prepared
 cucumber,vegetable|fruit
 cumin,spice
-cured,protein
 currant,fruit
 curry,spice
 cusk,protein
@@ -507,7 +506,7 @@ peanut,legume|nuts|fats
 pear,fruit
 pecan,nuts
 peel,fruit
-pepper,vegetable|fruit|spice
+pepper,vegetable|fruit|spice|condiment
 peppermint,spice
 pepperoni,protein|prepared
 perch,protein
@@ -590,7 +589,6 @@ roselle,fruit
 rosemary,spice
 roughy,protein
 round,protein
-rum,beverage
 rump,protein
 rusk,prepared
 rutabaga,vegetable
@@ -776,7 +774,6 @@ whale,protein|fats
 wheat,grain
 whelk,protein
 whey,dairy
-whiskey,beverage
 whitefish,protein
 whiting,protein
 wing,protein
@@ -797,3 +794,4 @@ dip,prepared
 fat,fats
 pop,beverage|prepared
 gum,prepared
+penne,grain|prepared

@@ -1,4 +1,9 @@
-import { json } from '@sveltejs/kit';
+#!/usr/bin/env python3
+"""Rewrites the builtin/+server.ts with POST support, image_url, and newBuiltins."""
+
+path = '/Volumes/training/Daily Food Chain/daily-food-chain/src/routes/api/recipes/builtin/+server.ts'
+
+new_content = r"""import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { queryAll, getGameDb } from '$lib/server/turso';
 
@@ -308,3 +313,8 @@ export const DELETE: RequestHandler = async ({ request }) => {
     return json({ error: 'Failed to revert override' }, { status: 500 });
   }
 };
+"""
+
+with open(path, 'w') as f:
+    f.write(new_content)
+print(f'Written {len(new_content)} bytes to {path}')

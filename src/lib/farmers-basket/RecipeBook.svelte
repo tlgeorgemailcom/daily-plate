@@ -60,6 +60,8 @@
   
   // Moderator mode - allows editing the currently selected recipe
   let isModeratorMode = $state(false);
+  // Add new built-in recipe mode (moderator only, no pre-filled data)
+  let isAddingNewBuiltin = $state(false);
   let isSaving = $state(false);
   let saveError = $state<string | null>(null);
   let saveSuccess = $state(false);
@@ -205,6 +207,13 @@
   }
   
   function handleBack() {
+    // If adding new built-in, exit that first
+    if (isAddingNewBuiltin) {
+      isAddingNewBuiltin = false;
+      saveError = null;
+      saveSuccess = false;
+      return;
+    }
     // If in moderator mode, exit that first
     if (isModeratorMode) {
       isModeratorMode = false;
@@ -214,6 +223,13 @@
   }
   
   function handleClose() {
+    // From add-new mode, exit that first
+    if (isAddingNewBuiltin) {
+      isAddingNewBuiltin = false;
+      saveError = null;
+      saveSuccess = false;
+      return;
+    }
     // From moderator mode, exit that first
     if (isModeratorMode) {
       isModeratorMode = false;
@@ -234,7 +250,11 @@
   
   function handleKeydown(e: KeyboardEvent) {
     if (e.key === 'Escape') {
-      if (isModeratorMode) {
+      if (isAddingNewBuiltin) {
+        isAddingNewBuiltin = false;
+        saveError = null;
+        saveSuccess = false;
+      } else if (isModeratorMode) {
         isModeratorMode = false;
       } else if (selectedLevel) {
         selectedLevel = null;
@@ -248,6 +268,12 @@
   
   function handleBackdropClick(e: MouseEvent) {
     if (e.target === e.currentTarget) {
+      if (isAddingNewBuiltin) {
+        isAddingNewBuiltin = false;
+        saveError = null;
+        saveSuccess = false;
+        return;
+      }
       if (isModeratorMode) {
         isModeratorMode = false;
         return;
@@ -535,6 +561,102 @@
     saveError = null;
     saveSuccess = false;
   }
+
+  // Open the "Add New Built-In Recipe" form (prompts for moderator password)
+  function handleAddNewBuiltinClick() {
+    const password = prompt('Enter moderator password:');
+    if (password === MODERATOR_PASSWORD) {
+      isAddingNewBuiltin = true;
+      saveError = null;
+      saveSuccess = false;
+      selectedImageFile = null;
+      imagePreviewUrl = null;
+      isUploadingImage = false;
+      imageUploadError = null;
+    }
+  }
+
+  // Handle save of a brand-new built-in recipe
+  async function handleAddNewBuiltinSave(data: RecipeFormData) {
+    isSaving = true;
+    saveError = null;
+
+    try {
+      // Upload image if one was selected
+      let imageUrl: string | undefined;
+      if (selectedImageFile) {
+        const uploadedUrl = await uploadImage();
+        if (uploadedUrl) {
+          imageUrl = uploadedUrl;
+        } else if (imageUploadError) {
+          saveError = imageUploadError;
+          isSaving = false;
+          return;
+        }
+      }
+
+      const gameFoods = data.ingredients
+        .filter(i => i.gameFood)
+        .map(i => i.gameFood) as string[];
+
+      const animalSpawns = data.ingredients
+        .filter(i => i.gameFood && i.animal)
+        .map((ing, i) => ({
+          type: ing.animal as string,
+          delay: (i + 1) * 2000
+        }));
+
+      if (animalSpawns.length === 0 && gameFoods.length > 0) {
+        animalSpawns.push({ type: 'rabbit', delay: 3000 });
+      }
+
+      const res = await fetch('/api/recipes/builtin', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          recipe: {
+            name: data.recipeName,
+            category: data.category,
+            dietaryCategory: data.dietaryCategory,
+            prepTime: data.prepTime,
+            servings: data.servings,
+            recipe: gameFoods,
+            animalSpawns,
+            recipeInstructions: data.instructions.map(i => i.text),
+            recipeIngredients: data.ingredients.filter(i => i.name.trim()).map(i => ({
+              name: i.name,
+              quantity: i.quantity || ''
+            })),
+            imageUrl
+          }
+        })
+      });
+
+      if (!res.ok) throw new Error('Failed to save');
+
+      clearOverrideCache();
+      if (onLevelsUpdated) {
+        await onLevelsUpdated();
+      }
+
+      saveSuccess = true;
+      setTimeout(() => {
+        saveSuccess = false;
+        isAddingNewBuiltin = false;
+      }, 1500);
+    } catch (err) {
+      saveError = err instanceof Error ? err.message : 'Failed to save';
+    } finally {
+      isSaving = false;
+    }
+  }
+
+  // Handle cancel from add-new form
+  function handleAddNewBuiltinCancel() {
+    isAddingNewBuiltin = false;
+    saveError = null;
+    saveSuccess = false;
+  }
   
   // Find which category the current level is in
   let currentCategory = $derived(
@@ -549,7 +671,7 @@
 <div class="modal-backdrop" onclick={handleBackdropClick} role="dialog" aria-modal="true" aria-label="Recipe Book">
   <div class="recipe-book" class:detail-view={selectedLevel}>
     <header class="book-header">
-      {#if selectedLevel}
+      {#if selectedLevel || isAddingNewBuiltin}
         <button class="back-btn" onclick={handleBack} aria-label="Back to index">
           ← Back
         </button>
@@ -562,6 +684,9 @@
           <button class="share-btn" onclick={onshare} aria-label="Share a recipe">
             📝 Share
           </button>
+        {/if}
+        {#if !selectedLevel && !isAddingNewBuiltin}
+          <button class="add-builtin-btn" onclick={handleAddNewBuiltinClick} aria-label="Add new built-in recipe">➕</button>
         {/if}
         {#if selectedLevel}
           <button class="settings-btn" onclick={handleSettingsClick} aria-label="Edit recipe">⚙️</button>
@@ -781,6 +906,68 @@
           </button>
         </div>
       {/if}
+    {:else if isAddingNewBuiltin}
+      <!-- ADD NEW BUILT-IN RECIPE MODE -->
+      <div class="moderator-edit-view">
+        <div class="mod-header">
+          <h3>➕ Add New Built-In Recipe</h3>
+          {#if saveSuccess}
+            <span class="save-success">✓ Saved!</span>
+          {/if}
+        </div>
+
+        <div class="mod-form-container">
+          <!-- Image Upload Section -->
+          <div class="mod-image-section">
+            <label class="mod-section-label">📷 Recipe Photo</label>
+
+            {#if imagePreviewUrl}
+              <div class="mod-image-preview-container">
+                <img src={imagePreviewUrl} alt="Recipe preview" class="mod-image-preview" />
+                <button
+                  type="button"
+                  class="mod-remove-image-btn"
+                  onclick={removeImage}
+                  disabled={isSaving || isUploadingImage}
+                >
+                  ✕ Remove
+                </button>
+              </div>
+            {:else}
+              <label class="mod-image-picker">
+                <input
+                  type="file"
+                  accept="image/*"
+                  onchange={handleImageSelect}
+                  disabled={isSaving || isUploadingImage}
+                />
+                <span class="mod-picker-content">
+                  <span class="mod-picker-icon">📷</span>
+                  <span class="mod-picker-text">Add Photo</span>
+                  <span class="mod-picker-hint">Max 5MB</span>
+                </span>
+              </label>
+            {/if}
+
+            {#if imageUploadError}
+              <p class="mod-image-error">{imageUploadError}</p>
+            {/if}
+
+            {#if isUploadingImage}
+              <p class="mod-image-uploading">Uploading image...</p>
+            {/if}
+          </div>
+
+          <RecipeForm
+            moderatorMode={true}
+            onsubmit={handleAddNewBuiltinSave}
+            oncancel={handleAddNewBuiltinCancel}
+            submitLabel="➕ Add Recipe"
+            submitting={isSaving}
+            errorMessage={saveError || ''}
+          />
+        </div>
+      </div>
     {:else}
       <!-- Dietary Filter Strip (compact horizontal) -->
       <div class="dietary-strip">
@@ -1066,6 +1253,23 @@
   }
   
   .settings-btn:hover {
+    opacity: 1;
+    color: rgba(255,255,255,0.8);
+  }
+
+  .add-builtin-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255,255,255,0.4);
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: all 0.2s;
+    opacity: 0.6;
+  }
+
+  .add-builtin-btn:hover {
     opacity: 1;
     color: rgba(255,255,255,0.8);
   }
