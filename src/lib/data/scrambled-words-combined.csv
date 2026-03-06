@@ -803,7 +803,7 @@ pear,fruit
 pecan,nuts
 peel,fruit
 penne,grain
-pepper,vegetable|fruit|spice
+pepper,vegetable|fruit|spice|condiment
 peppermint,spice
 pepperoni,protein|prepared
 perch,protein
@@ -1238,3 +1238,4 @@ pop,beverage
 canape,prepared
 botana,prepared
 callaloo,prepared
+cronut,prepared

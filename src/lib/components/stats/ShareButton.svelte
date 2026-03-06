@@ -95,7 +95,7 @@
           const words = details.wordsFound ?? score.score;
           const total = details.totalWords ?? words;
           const matched = details.firstTryCorrect ?? details.matched ?? 0;
-          const matchTotal = details.wordsFound ?? details.matchTotal ?? 16;
+          const matchTotal = details.totalWords ?? details.matchTotal ?? 16;
           return `${emoji} Scrambled Bees: ${words}/${total} words, ${matched}/${matchTotal} matched` + 
                  (difficulty ? ` (${difficulty})` : '');
         }
@@ -157,7 +157,7 @@
           const words = details.wordsFound ?? score.score;
           const total = details.totalWords ?? words;
           const matched = details.firstTryCorrect ?? details.matched ?? 0;
-          const matchTotal = details.wordsFound ?? details.matchTotal ?? 16;
+          const matchTotal = details.totalWords ?? details.matchTotal ?? 16;
           let line = `${emoji} Scrambled Bees: ${words}/${total} words, ${matched}/${matchTotal} matched`;
           if (difficulty !== 'Default') line += ` (${difficulty})`;
           return line;
@@ -192,7 +192,7 @@
           const words = details.wordsFound ?? score.score;
           const total = details.totalWords ?? words;
           const matched = details.firstTryCorrect ?? details.matched ?? 0;
-          const matchTotal = details.wordsFound ?? details.matchTotal ?? 16;
+          const matchTotal = details.totalWords ?? details.matchTotal ?? 16;
           text += `   ${difficulty}: ${words}/${total} words, ${matched}/${matchTotal} matched\n`;
           break;
         }

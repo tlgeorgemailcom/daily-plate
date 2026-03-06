@@ -460,7 +460,7 @@
         const avgScore = Math.round((p1 + p2) / 2);
         saveGameScore('scrambled', avgScore, {
           level: currentLevel,
-          wordsFound: foundWords.length,
+          wordsFound: wordsFoundBeforeReveal,
           totalWords: validWords.length,
           wordsFoundBeforeReveal,
           firstTryCorrect,
