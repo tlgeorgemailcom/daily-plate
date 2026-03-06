@@ -70,7 +70,11 @@ export const GET: RequestHandler = async () => {
       };
     });
     
-    return json({ recipes: levels });
+    return json({ recipes: levels }, {
+      headers: {
+        'Cache-Control': 'no-cache, no-store, must-revalidate'
+      }
+    });
     
   } catch (err) {
     console.error('Failed to load approved recipes:', err);

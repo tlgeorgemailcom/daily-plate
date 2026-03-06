@@ -1690,18 +1690,16 @@
   /* Recipe Image (community recipes) */
   .recipe-image-container {
     width: 100%;
-    max-height: 200px;
+    max-height: 120px;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 8px;
     background: #f5f5f5;
+    margin: -4px 0 4px;
   }
-  
+
   .recipe-image {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
+    height: 120px;
   
   .ingredients {
     display: flex;
