@@ -2138,6 +2138,13 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
           
           <h4>🎯 Goal</h4>
           <p>Place 11 food words, using as many different food groups as possible.</p>
+
+          <h4>⚡ Difficulty</h4>
+          <ul>
+            <li><strong>Easy:</strong> Tap food groups for hints</li>
+            <li><strong>Medium:</strong> Use search field for hints</li>
+            <li><strong>Hard:</strong> Your memory only</li>
+          </ul>
           
           <h4>🔤 Placing Words</h4>
           <ul>
