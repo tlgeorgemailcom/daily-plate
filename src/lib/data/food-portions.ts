@@ -3,7 +3,7 @@
 
 export type FoodGroup = 
   | 'vegetable' | 'fruit' | 'grain' | 'protein' | 'dairy'
-  | 'legume' | 'nuts' | 'fats' | 'spice' | 'prepared' | 'condiment' | 'beverage'
+  | 'legume' | 'nuts' | 'fats' | 'spice' | 'prepared' | 'beverage'
   | 'wine' | 'bar';
 
 export interface Portion {
@@ -34727,7 +34727,6 @@ export const GROUP_COLORS: Record<FoodGroup, string> = {
   fats: '#fcd34d',
   spice: '#14b8a6',
   prepared: '#6b7280',
-  condiment: '#f59e0b',
   beverage: '#3b82f6',
   wine: '#7c3aed',
   bar: '#ec4899'
@@ -34743,9 +34742,8 @@ export const GROUP_NAMES: Record<FoodGroup, string> = {
   legume: 'Legumes',
   nuts: 'Nuts & Seeds',
   fats: 'Fats & Oils',
-  spice: 'Spices',
+  spice: 'Spices & Condiments',
   prepared: 'Prepared Foods',
-  condiment: 'Condiments',
   beverage: 'Beverages',
   wine: 'Wine',
   bar: 'Bar'
