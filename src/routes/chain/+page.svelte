@@ -736,6 +736,13 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
         <div class="rules-content">
           <h4>🎯 Goal</h4>
           <p>Build a chain of 11 food words where each word starts with the last letter of the previous word.</p>
+
+          <h4>⚡ Difficulty</h4>
+          <ul>
+            <li><strong>Easy:</strong> Tap food groups for hints</li>
+            <li><strong>Medium:</strong> Use search field for hints</li>
+            <li><strong>Hard:</strong> Your memory only</li>
+          </ul>
           
           <h4>📝 Rules</h4>
           <ul>
