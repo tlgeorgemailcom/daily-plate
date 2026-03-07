@@ -475,7 +475,7 @@
         <ul>
           <li><strong>🍽️ Plate</strong> — Main meals, solid foods, entrees</li>
           <li><strong>🥣 Bowl</strong> — Soups, cereals, fruit</li>
-          <li><strong>☕ Cup</strong> — Hot drinks (tea, coffee, cocoa)</li>
+          <li><strong>☕ Cup</strong> — Hot drinks (tea, coffee, cocoa), soups</li>
           <li><strong>🥛 Glass</strong> — Cold drinks (milk, juice, smoothies)</li>
           <li><strong>⚪ Saucer</strong> — Small pastries, sides, finger foods</li>
         </ul>
