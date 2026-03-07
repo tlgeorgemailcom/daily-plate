@@ -1,0 +1,598 @@
+// Scrambled puzzle data - precomputed viable letter combinations
+// Each puzzle has 10-16 valid food words
+
+import type { FoodGroup } from './food-portions';
+import scrambledWordsCsv from './scrambled-words.csv?raw';
+import scrambledWordsCombinedCsv from './scrambled-words-combined.csv?raw';
+
+// Game levels
+// usda: Official USDA food names only
+// foodie: USDA + international foods (excludes wine & bar)
+// foodie21: Full experience including wine & spirits
+export type GameLevel = 'usda' | 'foodie' | 'foodie21';
+
+// Groups to exclude from FOODIE level (alcohol-related)
+const ALCOHOL_GROUPS = new Set(['wine', 'bar']);
+
+// Parse CSV into word list
+// Format: word,groups (groups separated by |)
+function parseWordsCsv(csv: string): Array<{ word: string; groups: FoodGroup[] }> {
+  const lines = csv.trim().split('\n');
+  // Skip header row
+  return lines.slice(1).map(line => {
+    const [word, groupsStr] = line.split(',');
+    const groups = groupsStr.trim().split('|').map(g => g.trim()) as FoodGroup[];
+    return { word: word.trim(), groups };
+  });
+}
+
+// Load word lists from CSV files
+const usdaWordList = parseWordsCsv(scrambledWordsCsv);
+const combinedWordList = parseWordsCsv(scrambledWordsCombinedCsv);
+
+// Convert to Map for efficient lookup (USDA level)
+export const FOOD_WORDS = new Map<string, { word: string; groups: FoodGroup[] }>(
+  usdaWordList.map(entry => [entry.word, { word: entry.word, groups: entry.groups }])
+);
+
+// FOODIE level words - combined list excluding wine & bar groups
+const foodieWords = combinedWordList.filter(entry => 
+  !entry.groups.some(g => ALCOHOL_GROUPS.has(g))
+);
+export const FOODIE_WORDS = new Map<string, { word: string; groups: FoodGroup[] }>(
+  foodieWords.map(entry => [entry.word, { word: entry.word, groups: entry.groups }])
+);
+
+// FOODIE 21+ level words - full combined list including wine & bar
+export const FOODIE_21_WORDS = new Map<string, { word: string; groups: FoodGroup[] }>(
+  combinedWordList.map(entry => [entry.word, { word: entry.word, groups: entry.groups }])
+);
+
+// Get word map for a level
+export function getWordsForLevel(level: GameLevel): Map<string, { word: string; groups: FoodGroup[] }> {
+  switch (level) {
+    case 'foodie21': return FOODIE_21_WORDS;
+    case 'foodie': return FOODIE_WORDS;
+    default: return FOOD_WORDS;
+  }
+}
+
+// Check if a word can be made from the given letters (with letter reuse)
+export function canMakeWord(word: string, letters: Set<string>): boolean {
+  return [...word].every(char => letters.has(char));
+}
+
+// Get all valid words for a set of letters (minimum 3 letters)
+export function getValidWords(letters: Set<string>, level: GameLevel = 'usda'): string[] {
+  const wordMap = getWordsForLevel(level);
+  const valid: string[] = [];
+  for (const word of wordMap.keys()) {
+    if (word.length >= 3 && canMakeWord(word, letters)) {
+      valid.push(word);
+    }
+  }
+  return valid.sort();
+}
+
+// Get food groups for a word
+export function getWordGroups(word: string, level: GameLevel = 'usda'): FoodGroup[] {
+  const wordMap = getWordsForLevel(level);
+  return wordMap.get(word)?.groups ?? [];
+}
+
+// Verified letter combinations per game level.
+// Each set is independently validated against that level's word list (10+ valid food words).
+// 420 entries each = ~14 months before cycling. Ordered to minimize adjacent-day word overlap.
+// USDA level (796 words) — 10-25 valid words per combo
+export const PUZZLE_COMBOS_USDA: string[] = [
+'AEKLMPS',
+  'ACENORT',
+  'ADEOPST',
+  'ABEFLMT',
+  'AEILMPS',
+  'ABCENOR',
+  'AEOPRST',
+  'ACEKLOR',
+  'ADELMST',
+  'ABCNORT',
+  'AEMOPST',
+  'AEKLOPR',
+  'AEFLMST',
+  'ACNORTU',
+  'AEILPST',
+  'ACENOPR',
+  'ABELMOT',
+  'AEFKLST',
+  'ADELMPS',
+  'ACEOPRT',
+  'AELMOST',
+  'AEIKLMP',
+  'AEFLPST',
+  'AELOPRT',
+  'ABELMST',
+  'AEILMPT',
+  'AEFLMOT',
+  'AELORST',
+  'AEKLMST',
+  'AELNPST',
+  'AEFLMPT',
+  'AELMORT',
+  'AELMORS',
+  'AEKLPST',
+  'AEHLMPS',
+  'AEILMST',
+  'AELOPST',
+  'ADELPST',
+  'AELMNPS',
+  'AELMSTU',
+  'AELMOPT',
+  'AELMOPS',
+  'AEGLMST',
+  'AELMSTY',
+  'AELMPST'
+];
+
+// FOODIE level (~1020 words, no wine/bar) — 10-30 valid words per combo
+export const PUZZLE_COMBOS_FOODIE: string[] = [
+'ABCENOR',
+  'AEKLPST',
+  'AIKOPRT',
+  'ADELMOS',
+  'ABCHNOR',
+  'ACEINPR',
+  'AIOPRST',
+  'ABELMST',
+  'ABCLNOR',
+  'ACEKNPR',
+  'AINOPST',
+  'AEFKLST',
+  'ABCIORT',
+  'ADELMPS',
+  'ACENOPR',
+  'AILOPST',
+  'ABINORT',
+  'ADELMST',
+  'ACEKOPR',
+  'AEIKLPT',
+  'ABNORST',
+  'AEILMOS',
+  'ABCENPR',
+  'AEFKLPT',
+  'ACNORTU',
+  'ABELMOS',
+  'ABEINPR',
+  'ADEOPST',
+  'ACEKORT',
+  'AEKLMST',
+  'ABINORS',
+  'ACELNPR',
+  'ACIOPRT',
+  'AEFLMST',
+  'ABCINOR',
+  'AEKLOPR',
+  'AINOPRT',
+  'AEILMST',
+  'ABCNORS',
+  'ACELOPR',
+  'AEIKPRT',
+  'AELMOST',
+  'ABCKNOR',
+  'AEILNOP',
+  'ACEIPRT',
+  'AELMORS',
+  'ABCMNOR',
+  'AEFLMPT',
+  'ACENPRT',
+  'AEGLMOS',
+  'ABCKORT',
+  'AEFILPT',
+  'ABNOPST',
+  'AELMNOS',
+  'ABCORTU',
+  'AEILMPT',
+  'AEOPRST',
+  'ACELMOS',
+  'ABCNOPR',
+  'AEILNPS',
+  'AEKOPRT',
+  'ABELMOT',
+  'ABCNORT',
+  'AEILMPS',
+  'AEINPRT',
+  'AEMOPST',
+  'ABNORTU',
+  'ADELPST',
+  'ABEIPRT',
+  'AELMOPS',
+  'ABCORST',
+  'AEFLNPT',
+  'AEIOPRT',
+  'AELMPST',
+  'ABIORST',
+  'ACNOPRT',
+  'AELOPRS',
+  'AEFLPST',
+  'ABMORST',
+  'ACENORT',
+  'ABENPRT',
+  'AEILPST',
+  'AELMOPT',
+  'ACELORT',
+  'ABEORTU',
+  'AELMNPS',
+  'AELOPST',
+  'ACEOPRT',
+  'ABENORT',
+  'AEILNPT',
+  'AELORST',
+  'ADELPRT',
+  'ABCEORT',
+  'AELNPST',
+  'AELMORT',
+  'AEILPRT',
+  'ABEORST',
+  'AENOPRT',
+  'AELPRST',
+  'AEFLPRT',
+  'ABEOPRT',
+  'AELMPRT',
+  'ACELPRT',
+  'AEKLPRT',
+  'AELOPRT'
+];
+
+// FOODIE 21+ level (1239 words) — 10-35 valid words per combo
+export const PUZZLE_COMBOS_FOODIE21: string[] = [
+'ACELNOP',
+  'AILORST',
+  'ABEINOR',
+  'AEIKLMT',
+  'ACEKNPR',
+  'ACIORST',
+  'ABEGNOR',
+  'AEFKLST',
+  'ACEINPR',
+  'ACIOPST',
+  'ABIKORT',
+  'ADEKLST',
+  'AEINPRS',
+  'AILMOPS',
+  'ABCEKOR',
+  'AEFLMOT',
+  'ACENPRT',
+  'AILOPST',
+  'ABCINOR',
+  'ADEILMS',
+  'AEIKPRT',
+  'AOPRSTU',
+  'ABCDNOR',
+  'AELMORS',
+  'AEIKLPR',
+  'AIOPRST',
+  'ABCNORU',
+  'ADELMST',
+  'ACELNPR',
+  'AINOPST',
+  'ABCKNOR',
+  'AEKLMST',
+  'ACEIPRT',
+  'AILNOPS',
+  'ABCENOR',
+  'ADELMOS',
+  'AEFIPRT',
+  'AILNOPT',
+  'ABCLNOR',
+  'AEKLMOS',
+  'AEIPRST',
+  'AEGNORT',
+  'ABCHNOR',
+  'AEILMOS',
+  'AEFILPT',
+  'AEMNORT',
+  'ABCNOPR',
+  'AEGLMOS',
+  'AEIKLPT',
+  'ACEKORT',
+  'ABCENPR',
+  'AILMOST',
+  'AEFKLPT',
+  'ACNORTU',
+  'ABEKNOR',
+  'ALMOPST',
+  'AEIKLMP',
+  'ACINORT',
+  'ABENPRY',
+  'AIMOPST',
+  'ADELORS',
+  'ABCKORT',
+  'ABEINPR',
+  'AEMOPST',
+  'AEGLORS',
+  'ABCORTU',
+  'AEFILNP',
+  'ADEOPST',
+  'AEILMST',
+  'ABCMNOR',
+  'AEINOPR',
+  'AEGOPST',
+  'AEFLMST',
+  'ABCIORT',
+  'ACENOPR',
+  'AEIOPST',
+  'ABELMST',
+  'ABNORTU',
+  'ACEKLOR',
+  'AEINPST',
+  'ADELMPS',
+  'ABORSTU',
+  'ACEKOPR',
+  'AEINOPT',
+  'AEKLMPS',
+  'ABIORST',
+  'ACELNOR',
+  'ABENRTU',
+  'AEHLMPS',
+  'ABNOPST',
+  'ACELMOR',
+  'ABEIPRT',
+  'AEGLMST',
+  'ABINORS',
+  'ACNOPRT',
+  'ADEILMP',
+  'AELMSTY',
+  'ABEKLOR',
+  'ACIOPRT',
+  'AEILNPS',
+  'AELMSTU',
+  'ABELMOR',
+  'AEOPRST',
+  'ACINOPT',
+  'AEILMPS',
+  'ABELNOR',
+  'AEMORST',
+  'ACENOPT',
+  'AEKLPST',
+  'ABCNORS',
+  'ALMORST',
+  'AEINPRT',
+  'AEILMOT',
+  'ABCELOR',
+  'AEGLMPS',
+  'AINOPRT',
+  'AEKLOST',
+  'ABCEOPR',
+  'ABELMPS',
+  'ACENORT',
+  'AEKLORS',
+  'ABENOPR',
+  'AEILMPT',
+  'AMOPRST',
+  'ACELORS',
+  'ABEINRT',
+  'AEFLMPT',
+  'ABMORST',
+  'ACELOPR',
+  'ABEFNRT',
+  'AEHLMST',
+  'ABIOPRT',
+  'AELOPRS',
+  'AENOPST',
+  'ACELMOT',
+  'ABEORTU',
+  'AELMPRS',
+  'ABENOPT',
+  'AEGLOST',
+  'ABEMORT',
+  'ACELMOS',
+  'AEILNOP',
+  'AEFLPST',
+  'ABEKORT',
+  'AELMOSY',
+  'ABCNORT',
+  'AEILNPT',
+  'AEKOPRT',
+  'AELMOSU',
+  'ABINORT',
+  'AEFLNPT',
+  'ACEOPRT',
+  'AELMNOS',
+  'ABKNORT',
+  'AEKLMPT',
+  'AEIOPRT',
+  'ABELMOS',
+  'ABENORT',
+  'ADELMPT',
+  'AEGOPRT',
+  'AELMOST',
+  'ABMNORT',
+  'AEILPST',
+  'AENOPRT',
+  'AELMOPS',
+  'ABCORST',
+  'ABELMOT',
+  'ABENPRT',
+  'ADELPST',
+  'ABCOPRT',
+  'AELMNOT',
+  'ABELORS',
+  'AELMNPS',
+  'AEFOPRT',
+  'ACELORT',
+  'ABNORST',
+  'AELMNST',
+  'AEILOPT',
+  'ABCEORT',
+  'ABELNPR',
+  'AELMRST',
+  'AELOPST',
+  'ABEIORT',
+  'ADELPRT',
+  'AELMNPT',
+  'AELORST',
+  'ABEORTY',
+  'AEHOPRT',
+  'AELMPST',
+  'AELNOPT',
+  'ABEORST',
+  'AEKLPRT',
+  'AELMORT',
+  'AELNPST',
+  'ABOPRST',
+  'ACELPRT',
+  'ABELMPT',
+  'AEGLPST',
+  'ABNOPRT',
+  'ABELOPR',
+  'AELMOPT',
+  'AELPRST',
+  'ABEFORT',
+  'AEKLOPT',
+  'AEMOPRT',
+  'AEILPRT',
+  'ABELORT',
+  'AEFLOPT',
+  'AELMPRT',
+  'AEGLPRT'
+];
+
+// Legacy alias kept for any external code that referenced PUZZLE_COMBOS
+export const PUZZLE_COMBOS = PUZZLE_COMBOS_USDA;
+
+// Get the right combo list for a given level
+function getPuzzleCombos(level: GameLevel): string[] {
+  switch (level) {
+    case 'foodie21': return PUZZLE_COMBOS_FOODIE21;
+    case 'foodie':   return PUZZLE_COMBOS_FOODIE;
+    default:         return PUZZLE_COMBOS_USDA;
+  }
+}
+
+// Starting offsets spread the three levels across their combo rings.
+//   USDA      45 combos -> offset   0
+//   FOODIE   105 combos -> offset  35  (approx 105/3)
+//   FOODIE21 210 combos -> offset  70  (approx 210/3)
+function getLevelOffset(level: GameLevel): number {
+  switch (level) {
+    case 'foodie':   return 35;
+    case 'foodie21': return 70;
+    default:         return 0;
+  }
+}
+
+// Get days since the game epoch (2025-01-01), giving a unique sequential
+// integer per calendar day. This is the puzzle index — no arithmetic collisions.
+function daysSinceEpoch(date: Date): number {
+  const epoch = Date.UTC(2025, 0, 1);
+  const d = Date.UTC(date.getFullYear(), date.getMonth(), date.getDate());
+  return Math.floor((d - epoch) / 86400000);
+}
+
+// Per-level minimum word counts.
+// USDA caps at ~24 words per 7-letter combo (796-word dict), so 15 is the
+// practical floor that still gives 86/420 qualifying combos (avg scan ≈ 5).
+// FOODIE / FOODIE21 have larger dictionaries and can hit 20 consistently.
+const MIN_WORDS: Record<GameLevel, number> = { usda: 22, foodie: 20, foodie21: 20 };
+
+// Resolve a puzzle for a given date + level, enforcing:
+//   1. Minimum word count per level (see MIN_WORDS above)
+//   2. Strict cross-level exclusion (cascade):
+//      USDA:     picks the first combo (from base index) with enough words
+//      FOODIE:   picks the first combo with enough words AND zero overlap
+//                with that day's USDA word set
+//      FOODIE21: picks the first combo with enough words AND zero overlap
+//                with the UNION of USDA + FOODIE resolved word sets
+//
+// If no combo satisfies both constraints, falls back to the combo
+// that has the fewest overlaps (still respecting the word-count floor).
+// In the pathological case where no combo meets the word-count floor,
+// returns the combo with the most words as a last resort.
+function resolvePuzzle(date: Date, level: GameLevel): { letters: string[]; validWords: string[] } {
+  const dayIdx = daysSinceEpoch(date);
+  const combos = getPuzzleCombos(level);
+  const baseIdx = (dayIdx + getLevelOffset(level)) % combos.length;
+
+  if (level === 'usda') {
+    // No exclusion needed — scan forward for first combo meeting the word-count floor
+    let lastResort: { letters: string[]; validWords: string[] } | null = null;
+    for (let i = 0; i < combos.length; i++) {
+      const letters = combos[(baseIdx + i) % combos.length].toLowerCase().split('');
+      const validWords = getValidWords(new Set(letters), 'usda');
+      if (validWords.length >= MIN_WORDS['usda']) return { letters, validWords };
+      if (!lastResort || validWords.length > lastResort.validWords.length) lastResort = { letters, validWords };
+    }
+    return lastResort!;
+  }
+
+  // Cascade: build the exclusion set for this level.
+  // FOODIE:   must not repeat any USDA words
+  // FOODIE21: must not repeat any USDA *or* FOODIE words — both are excluded
+  //           (a word in USDA but not FOODIE, like 'eel', still can't appear
+  //            in FOODIE21 since the player may be comparing across all levels)
+  let excludeWords: Set<string>;
+  if (level === 'foodie') {
+    excludeWords = new Set(resolvePuzzle(date, 'usda').validWords);
+  } else {
+    // foodie21: union of USDA + FOODIE resolved word sets
+    const usdaWords = resolvePuzzle(date, 'usda').validWords;
+    const foodieWords = resolvePuzzle(date, 'foodie').validWords;
+    excludeWords = new Set([...usdaWords, ...foodieWords]);
+  }
+
+  // Walk forward: need >= MIN_WORDS[level] valid words AND zero overlap
+  let bestFallback: { letters: string[]; validWords: string[]; overlapCount: number } | null = null;
+  let lastResort: { letters: string[]; validWords: string[] } | null = null;
+  for (let i = 0; i < combos.length; i++) {
+    const letters = combos[(baseIdx + i) % combos.length].toLowerCase().split('');
+    const validWords = getValidWords(new Set(letters), level);
+    if (validWords.length < MIN_WORDS[level]) continue; // below word-count floor
+    const overlapCount = validWords.filter(w => excludeWords.has(w)).length;
+    if (overlapCount === 0) return { letters, validWords };
+    if (!bestFallback || overlapCount < bestFallback.overlapCount) bestFallback = { letters, validWords, overlapCount };
+    if (!lastResort || validWords.length > lastResort.validWords.length) lastResort = { letters, validWords };
+  }
+
+  // Every qualifying combo has some overlap — return the one with fewest shared words
+  if (bestFallback) return { letters: bestFallback.letters, validWords: bestFallback.validWords };
+
+  // No combo reached the word-count floor — return the one with the most words
+  for (let i = 0; i < combos.length; i++) {
+    const letters = combos[(baseIdx + i) % combos.length].toLowerCase().split('');
+    const validWords = getValidWords(new Set(letters), level);
+    if (!lastResort || validWords.length > lastResort.validWords.length) lastResort = { letters, validWords };
+  }
+  return lastResort!;
+}
+
+// Get today's puzzle based on date and level.
+export function getTodaysPuzzle(level: GameLevel = 'usda'): { letters: string[]; validWords: string[]; date: string; level: GameLevel } {
+  const today = new Date();
+  const dateStr = today.toISOString().split('T')[0]; // YYYY-MM-DD
+  const { letters, validWords } = resolvePuzzle(today, level);
+  return { letters, validWords, date: dateStr, level };
+}
+
+// Get puzzle for a specific date (for testing/archives)
+export function getPuzzleForDate(date: Date, level: GameLevel = 'usda'): { letters: string[]; validWords: string[]; date: string; level: GameLevel } {
+  const dateStr = date.toISOString().split('T')[0];
+  const { letters, validWords } = resolvePuzzle(date, level);
+  return { letters, validWords, date: dateStr, level };
+}
+
+
+// Group display info for classification phase
+export const FOOD_GROUP_INFO: Record<FoodGroup, { emoji: string; label: string; hint: string }> = {
+  vegetable: { emoji: '🥬', label: 'Vegetable', hint: 'Leafy greens, roots, stems' },
+  fruit: { emoji: '🍎', label: 'Fruit', hint: 'Sweet produce with seeds' },
+  grain: { emoji: '🌾', label: 'Grain', hint: 'Wheat, rice, oats, bread' },
+  protein: { emoji: '🥩', label: 'Protein', hint: 'Meat, fish, poultry, eggs' },
+  dairy: { emoji: '🥛', label: 'Dairy', hint: 'Milk, cheese, yogurt' },
+  legume: { emoji: '🫘', label: 'Legume', hint: 'Beans, lentils, peas in pods' },
+  nuts: { emoji: '🥜', label: 'Nuts & Seeds', hint: 'Tree nuts, seeds' },
+  fats: { emoji: '🧈', label: 'Fats & Oils', hint: 'Butter, oil, lard' },
+  spice: { emoji: '🌿', label: 'Herbs & Spices', hint: 'Basil, pepper, cinnamon, oregano' },
+  prepared: { emoji: '🍳', label: 'Prepared', hint: 'Cooked dishes, lasagna, casseroles' },
+  condiment: { emoji: '🥫', label: 'Condiments', hint: 'Sauces, ketchup, mayo, mustard' },
+  beverage: { emoji: '🍵', label: 'Beverage', hint: 'Drinks, tea, coffee' },
+  wine: { emoji: '🍷', label: 'Wine', hint: 'Red, white, sparkling wines' },
+  bar: { emoji: '🍸', label: 'Bar', hint: 'Spirits, cocktails, beer' }
+};
