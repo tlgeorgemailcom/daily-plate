@@ -43,7 +43,7 @@ def main():
             # Collect portions M0-M12 (amt, desc, and gm)
             portions = []
             for n in range(0, 13):
-                desc = row.get(f'M{n}_Desc', '').strip()
+                desc = (row.get(f'M{n}_Desc') or '').strip()
                 if desc:
                     amt = row.get(f'M{n}_Amt', '')
                     gm = row.get(f'M{n}_Gm', '')

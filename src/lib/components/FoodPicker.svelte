@@ -67,13 +67,16 @@
       });
       
       foods = foods.filter(f => {
-        const wordLower = f.word.toLowerCase();
-        // Match if ANY query variation is found in the food name
-        return queryVariations.some(qw => wordLower.includes(qw));
+        const displayLower = f.display.toLowerCase();
+        // Match only at word boundaries in the display name
+        return queryVariations.some(qw => {
+          const regex = new RegExp(`\\b${qw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`);
+          return regex.test(displayLower);
+        });
       });
     }
     
-    return foods; // Show all matching foods
+    return foods.sort((a, b) => a.display.localeCompare(b.display)); // Alphabetical by display name
   });
 
   function selectFood(food: Food) {

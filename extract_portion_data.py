@@ -12,6 +12,7 @@ Output structure:
 - Calories are calculated at runtime: (grams / 100) * cal_100g
 """
 
+import os
 import sqlite3
 import csv
 import re
@@ -52,6 +53,7 @@ WORD_SPLITS = {
     'BANANAPIE': 'Banana Pie',
     'BAYLEAF': 'Bay Leaf',
     'BEEFGROUND': 'Beef Ground',
+    'BEEFPOTPIE': 'Beef Pot Pie',
     'BEEFSTEW': 'Beef Stew',
     'BEETCOOKED': 'Beet Cooked',
     'BEETPICKLED': 'Beet Pickled',
@@ -80,6 +82,20 @@ WORD_SPLITS = {
     'CAESARDRESSING': 'Caesar Dressing',
     'CAKEWHITE': 'Cake White',
     'CAKEYELLOW': 'Cake Yellow',
+    'CAKEANGELFOOD': 'Cake Angel Food',
+    'CAKECHEESECAKE': 'Cake Cheesecake',
+    'CAKECHOCOLATE': 'Cake Chocolate',
+    'CAKECHOCOLATE WITH FROSTING': 'Cake Chocolate Frosting',
+    'CAKECOFFEECAKE': 'Cake Coffee',
+    'CAKEFRUITCAKE': 'Cake Fruitcake',
+    'CAKEGINGERBREAD': 'Cake Gingerbread',
+    'CAKEPINEAPPLE': 'Cake Pineapple',
+    'CAKEPOUND': 'Cake Pound',
+    'CAKESHORTCAKE': 'Cake Shortcake',
+    'CAKESPONGE': 'Cake Sponge',
+    'CAKEWHITECOCONUTFROSTING': 'Cake White Coconut',
+    'CAKEYELLOWCHOCOLATEFROSTING': 'Cake Yellow Choc',
+    'CAKEYELLOWVANILLFROSTING': 'Cake Yellow Vanilla',
     'CARAWAYCHEESE': 'Caraway Cheese',
     'CAROBMILK': 'Carob Milk',
     'CARROTCOOKED': 'Carrot Cooked',
@@ -102,6 +118,7 @@ WORD_SPLITS = {
     'CEREALTRIX': 'Cereal Trix',
     'CHERRYFRIEDPIE': 'Cherry Fried Pie',
     'CHERRYPIE': 'Cherry Pie',
+    'CHICKENPOTPIE': 'Chicken Pot Pie',
     'CHICKENBREAST': 'Chicken Breast',
     'CHICKENDRUMSTICK': 'Chicken Drumstick',
     'CHICKENLEG': 'Chicken Leg',
@@ -140,7 +157,39 @@ WORD_SPLITS = {
     'CREAMCHEESE': 'Cream Cheese',
     'CREAMOFTARTAR': 'Cream of Tartar',
     'CREAMOFWHEAT': 'Cream of Wheat',
-    
+    'COOKIESANIMAL': 'Cookies Animal',
+    'COOKIESANIMALFROSTED': 'Cookies Animal Frosted',
+    'COOKIESBROWNIES': 'Cookies Brownies',
+    'COOKIESBUTTER': 'Cookies Butter',
+    'COOKIESCHOCOLATECHIP': 'Cookies Choc Chip',
+    'COOKIESCHOCOLATESANDWICH': 'Cookies Choc Sandwich',
+    'COOKIESFIGBAR': 'Cookies Fig Bar',
+    'COOKIESFORTUNE': 'Cookies Fortune',
+    'COOKIESGINGERSNAP': 'Cookies Gingersnap',
+    'COOKIESGIRLSCOUTSCARAMEL DULCE': 'Cookies Girl Scouts Caramel',
+    'COOKIESGIRLSCOUTSCHALET': 'Cookies Girl Scouts Chalet',
+    'COOKIESGIRLSCOUTSDOSIDOS': 'Cookies Girl Scouts Do-Si-Dos',
+    'COOKIESGIRLSCOUTSSAMOSAS': 'Cookies Girl Scouts Samoas',
+    'COOKIESGIRLSCOUTSTAGALONGS': 'Cookies Girl Scouts Tagalongs',
+    'COOKIESGIRLSCOUTSTHANKU': 'Cookies Girl Scouts Thank U',
+    'COOKIESGIRLSCOUTSTHINMINTS': 'Cookies Girl Scouts Thin Mints',
+    'COOKIESGIRLSCOUTSTREFOILS': 'Cookies Girl Scouts Trefoils',
+    'COOKIESGLUTINOCHOCOLATECREME': 'Cookies Glutino Choc Creme',
+    'COOKIESGLUTIONVANILLACREME': 'Cookies Glutino Vanilla Creme',
+    'COOKIESGRAHAM': 'Cookies Graham',
+    'COOKIESMACAROON': 'Cookies Macaroon',
+    'COOKIESMARIEBISCUIT': 'Cookies Marie Biscuit',
+    'COOKIESMOLASSES': 'Cookies Molasses',
+    'COOKIESOATMEAL': 'Cookies Oatmeal',
+    'COOKIESOATMEALICED': 'Cookies Oatmeal Iced',
+    'COOKIESOATMEALRAISIN': 'Cookies Oatmeal Raisin',
+    'COOKIESOATMEALSANDWICH': 'Cookies Oatmeal Sandwich',
+    'COOKIESPEANUTBUTTER': 'Cookies Peanut Butter',
+    'COOKIESSHORTBREAD': 'Cookies Shortbread',
+    'COOKIESSUGAR': 'Cookies Sugar',
+    'COOKIESVANILLASANDWICH': 'Cookies Vanilla Sandwich',
+    'COOKIESVANILLAWAFER': 'Cookies Vanilla Wafer',
+
     # D
     'DINNERROLL': 'Dinner Roll',
     'DOUGHNUTCAKE': 'Doughnut Cake',
@@ -175,6 +224,7 @@ WORD_SPLITS = {
     'EYEOFROUND': 'Eye of Round',
     
     # F
+    'FENGUGREEK': 'Fenugreek',
     'FAVABEAN': 'Fava Bean',
     'FILETMIGNON': 'Filet Mignon',
     'FISHBROTH': 'Fish Broth',
@@ -212,6 +262,7 @@ WORD_SPLITS = {
     'HINDSHANKLAMB': 'Hindshank Lamb',
     'HOTDOG': 'Hot Dog',
     'HOTDOGBUN': 'Hot Dog Bun',
+    'HUSHPUPPIES': 'Hush Puppies',
     'HUCKLEBERRIES': 'Huckleberries',
     
     # I
@@ -223,6 +274,7 @@ WORD_SPLITS = {
     'KIDNEYBEAN': 'Kidney Bean',
     
     # L
+    'LAMBSQUARTERS': "Lamb's Quarters",
     'LAMBCHOP': 'Lamb Chop',
     'LAMBGROUND': 'Lamb Ground',
     'LAMBLEG': 'Lamb Leg',
@@ -268,6 +320,20 @@ WORD_SPLITS = {
     'OYSTERRAW': 'Oyster Raw',
     
     # P
+    'PIEBANANACREAM': 'Pie Banana Cream',
+    'PIEBLUEBERRY': 'Pie Blueberry',
+    'PIEBOSTONCREAM': 'Pie Boston Cream',
+    'PIECHERRY': 'Pie Cherry',
+    'PIECRUST': 'Pie Crust',
+    'PIEDUTCHAPPLE': 'Pie Dutch Apple',
+    'PIEFRIEDCHERRY': 'Pie Fried Cherry',
+    'PIEFRIEDLEMON': 'Pie Fried Lemon',
+    'PIELEMON': 'Pie Lemon Meringue',
+    'PIEMINCE': 'Pie Mince',
+    'PIEPEACH': 'Pie Peach',
+    'PIEPECAN': 'Pie Pecan',
+    'PIEPUMPKIN': 'Pie Pumpkin',
+    'PIGEONPEAS': 'Pigeon Peas',
     'PALMOIL': 'Palm Oil',
     'PASTRYCHEESE': 'Pastry Cheese',
     'PEACHNECTAR': 'Peach Nectar',
@@ -352,6 +418,7 @@ WORD_SPLITS = {
     'SALSAVERDE': 'Salsa Verde',
     'SALTPORK': 'Salt Pork',
     'SARDINEOIL': 'Sardine Oil',
+    'SAUCEBARBECUE': 'Sauce Barbecue',
     'SAUSAGEBEEF': 'Sausage Beef',
     'SEABASS': 'Sea Bass',
     'SEATROUT': 'Sea Trout',
@@ -363,6 +430,8 @@ WORD_SPLITS = {
     'SHORTRIB': 'Short Rib',
     'SNAPBEAN': 'Snap Bean',
     'SIRLOINMROAST': 'Sirloin Roast',
+    'SIRLOINROAST': 'Sirloin Roast',
+    'SKIRTSTEAK': 'Skirt Steak',
     'SKIRTSTAEK': 'Skirt Steak',
     'SORGHUMFLOUR': 'Sorghum Flour',
     'SORGHUMSYRUP': 'Sorghum Syrup',
@@ -383,6 +452,7 @@ WORD_SPLITS = {
     'SOYMILK': 'Soy Milk',
     'SOYSAUCE': 'Soy Sauce',
     'SPARERIB': 'Spare Rib',
+    'SPARERIBB': 'Spare Ribs',
     'SPLITPEA': 'Split Pea',
     'SPONGECAKE': 'Sponge Cake',
     'SPRAYOIL': 'Spray Oil',
@@ -398,6 +468,7 @@ WORD_SPLITS = {
     'SWISSCHEESE': 'Swiss Cheese',
     'SYRUPAGAVE': 'Syrup Agave',
     'SYRUPCANE': 'Syrup Cane',
+    'SYRUPCHOC': 'Chocolate Syrup',
     'SYRUPCHOCOLATE': 'Syrup Chocolate',
     'SYRUPCORNDARK': 'Syrup Corn Dark',
     'SYRUPCORNLIGHT': 'Syrup Corn Light',
@@ -417,6 +488,9 @@ WORD_SPLITS = {
     'TONQUEBEEF': 'Tongue Beef',
     'TONQUELAMB': 'Tongue Lamb',
     'TONQUEPORK': 'Tongue Pork',
+    'TONGUEBEEF': 'Tongue Beef',
+    'TONGUELAMB': 'Tongue Lamb',
+    'TONGUEPORK': 'Tongue Pork',
     'TORTILLACHIP': 'Tortilla Chip',
     'TORTILLACORN': 'Tortilla Corn',
     'TORTILLAFLOUR': 'Tortilla Flour',
@@ -591,35 +665,56 @@ def main():
     print(f"Opening database: {DB_PATH}")
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
-    
+
+    output_fieldnames = ['word', 'display', 'group1', 'group2', 'group3', 'group4', 'NDB_NO', 'usda_desc'] + NUTRIENT_COLUMNS_100G + get_portion_columns()
+
+    # Load existing words from output CSV to skip already-extracted entries
+    existing_words = set()
+    output_exists = os.path.exists(OUTPUT_CSV)
+    if output_exists:
+        with open(OUTPUT_CSV, 'r', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                existing_words.add(row['word'])
+        print(f"Found {len(existing_words)} existing entries in {OUTPUT_CSV}")
+        print(f"Only new words will be extracted and appended.\n")
+    else:
+        print(f"No existing output found — will create {OUTPUT_CSV}\n")
+
     print(f"Reading input: {INPUT_CSV}")
-    
-    results = []
+
+    new_results = []
+    skipped = 0
     portion_counts = {i: 0 for i in PORTION_NUMBERS}
-    
+
     with open(INPUT_CSV, 'r', encoding='utf-8') as f:
         reader = csv.DictReader(f)
-        
+
         for row in reader:
             word = row['word']
             ndb_no = row.get('NDB_NO', '').strip()
-            
+
+            # Skip words already in the output CSV
+            if word in existing_words:
+                skipped += 1
+                continue
+
             # NDB_NO is required - it's the unique ID in USDA database
             if not ndb_no:
                 print(f"⚠ SKIPPED {word} - no NDB_NO (not in USDA database)")
                 continue
-            
+
             # Get nutrient data per 100g
             nutrient_data = extract_nutrient_data(cursor, ndb_no)
-            
+
             # Get portion data from database
             portion_data = extract_portion_data(cursor, ndb_no)
-            
+
             # Count how many portions each food has
             for n in PORTION_NUMBERS:
                 if portion_data.get(f'M{n}_Desc'):
                     portion_counts[n] += 1
-            
+
             # Build clean result row
             result = {
                 'word': word,
@@ -634,39 +729,54 @@ def main():
             result.update(nutrient_data)
             # Add portion data
             result.update(portion_data)
-            results.append(result)
-            
+            new_results.append(result)
+
             # Show progress with cal/pro/fat/carb
             portion_count = sum(1 for n in PORTION_NUMBERS if portion_data.get(f'M{n}_Desc'))
             cal = nutrient_data.get('cal_100g', '')
             pro = nutrient_data.get('pro_100g', '')
             print(f"✓ {word} → {result['display']} (NDB#{ndb_no}) → {cal}cal, {pro}g pro, {portion_count} portions")
-    
+
     conn.close()
-    
-    # Output fieldnames: clean columns + nutrient columns + portion columns
-    output_fieldnames = ['word', 'display', 'group1', 'group2', 'group3', 'group4', 'NDB_NO', 'usda_desc'] + NUTRIENT_COLUMNS_100G + get_portion_columns()
-    
-    # Write output CSV
-    print(f"\nWriting output: {OUTPUT_CSV}")
-    
-    with open(OUTPUT_CSV, 'w', encoding='utf-8', newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=output_fieldnames)
-        writer.writeheader()
-        writer.writerows(results)
-    
+
+    if not new_results:
+        print(f"\nNo new foods to add — {skipped} already extracted. Nothing written.")
+        return
+
+    # Append new rows to existing CSV, or create it fresh
+    if output_exists:
+        print(f"\nAppending {len(new_results)} new entries to: {OUTPUT_CSV}")
+        # Ensure file ends with a newline before appending
+        with open(OUTPUT_CSV, 'rb+') as f:
+            f.seek(0, 2)
+            if f.tell() > 0:
+                f.seek(-1, 2)
+                if f.read(1) != b'\n':
+                    f.write(b'\n')
+        with open(OUTPUT_CSV, 'a', encoding='utf-8', newline='') as f:
+            writer = csv.DictWriter(f, fieldnames=output_fieldnames)
+            writer.writerows(new_results)
+    else:
+        print(f"\nWriting output: {OUTPUT_CSV}")
+        with open(OUTPUT_CSV, 'w', encoding='utf-8', newline='') as f:
+            writer = csv.DictWriter(f, fieldnames=output_fieldnames)
+            writer.writeheader()
+            writer.writerows(new_results)
+
+    total_in_output = len(existing_words) + len(new_results)
     print(f"\n{'='*60}")
     print(f"SUMMARY")
     print(f"{'='*60}")
-    print(f"Total foods:     {len(results)}")
-    print(f"\nPortion coverage:")
-    # M0 is always 100% (standard 100g)
-    print(f"  M 0: {len(results):4d} foods (100.0%) ████████████████████ (100g standard)")
-    for n in range(1, 13):  # M1-M12
-        pct = 100 * portion_counts[n] / len(results) if results else 0
+    print(f"Skipped (already extracted): {skipped}")
+    print(f"Newly extracted:             {len(new_results)}")
+    print(f"Total foods in output:       {total_in_output}")
+    print(f"\nPortion coverage (new additions only):")
+    print(f"  M 0: {len(new_results):4d} foods (100.0%) ████████████████████ (100g standard)")
+    for n in range(1, 13):
+        pct = 100 * portion_counts[n] / len(new_results) if new_results else 0
         bar = '█' * int(pct / 5) + '░' * (20 - int(pct / 5))
         print(f"  M{n:2d}: {portion_counts[n]:4d} foods ({pct:5.1f}%) {bar}")
-    
+
     print(f"\nOutput saved to: {OUTPUT_CSV}")
     print(f"\nNutrient columns per 100g:")
     for col in NUTRIENT_COLUMNS_100G:
