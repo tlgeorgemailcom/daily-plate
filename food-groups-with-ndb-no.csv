@@ -426,7 +426,6 @@ EMU,prepared,,,,,,5622,"Emu, ground, cooked, pan-broiled",KEYWORD_EXACT,10
 ENCHILADACHEESE,prepared,,,,,,36050,"Restaurant, Mexican, cheese enchilada",,
 ENCHILADASAUCE,spice,,,,,,27063,"Sauce, enchilada, red, mild, ready to serve",,
 ENDIVE,vegetable,,,,,,11213,"Endive, raw",KEYWORD_EXACT,1
-ENGLISHMUFFIN,grain,prepared,,,,,28320,"English muffins, whole grain white",,
 ENOKI,vegetable,,,,,,11950,"Mushrooms, enoki, raw",,
 EPAZOTE,spice,,,,,,11984,"Epazote, raw",KEYWORD_EXACT,1
 EPPAW,vegetable,,,,,,11618,"Eppaw, raw",KEYWORD_EXACT,1
@@ -650,8 +649,6 @@ MOUSENUT,nuts,,,,,,12004,"Seeds, breadnut tree seeds, raw",COMPOUND_MATCH,2
 MOZZARELLA,dairy,,,,,,1026,"Cheese, mozzarella, whole milk",DESC_CONTAINS,5
 MOZZARELLASKIM,dairy,,,,,,1028,"Cheese, mozzarella, part skim milk",,
 MUENSTER,dairy,,,,,,1030,"Cheese, muenster",DESC_CONTAINS,2
-MUFFIN,prepared,,,,,,18566,"Artificial Blueberry Muffin Mix, dry",KEYWORD_EXACT,11
-MUFFINCORN,prepared,,,,,,18412,"Bread, cornbread, dry mix, unenriched (includes corn muffin mix)",,
 MULBERRY,fruit,,,,,,9190,"Mulberries, raw",PREFERRED,1
 MULLET,protein,,,,,,15056,"Fish, mullet, striped, cooked, dry heat",DESC_CONTAINS,2
 MULTIGRAIN,prepared,grain,,,,,3996,"Babyfood, Multigrain whole grain cereal, dry fortified",DESC_CONTAINS,5
@@ -1167,3 +1164,35 @@ ZWIEBACK,grain,prepared,,,,,3217,Zwieback,KEYWORD_EXACT,1
 SUCRALOSE,spice,,,,,,19868,"Sweeteners, tabletop, sucralose, SPLENDA packets",,
 FRUCTOSEPWDR,spice,,,,,,43216,"Sweeteners, tabletop, fructose, dry, powder",,
 FRUCTOSELIQ,spice,,,,,,44018,"Sweeteners, tabletop, fructose, liquid",,
+MUFFINCORN,prepared,,,,,,18282,"Muffins, corn, prepared from recipe, made with low fat (2%) milk",,
+MUFFUNBLUEBERRY,prepared,,,,,,18278,"Muffins, blueberry, prepared from recipe, made with low fat (2%) milk",,
+SALMONREDCAN,protein,,,,,,15181,"Fish, salmon, pink, canned, without salt, solids with bone and liquid",,
+SALMONPINKCAN,protein,,,,,,35157,"Fish, salmon, red, canned, bones removed (Alaska Native)",,
+MACKERELCAN,protein,,,,,,15048,"Fish, mackerel, jack, canned, drained solids",,
+CAVIAR,protein,,,,,,15012,"Fish, caviar, black and red, granular",,
+TILEFISH,protein,,,,,,15113,"Fish, tilefish, cooked, dry heat",,
+FRIEDRICE,grain,prepared,,,,,36602,"Restaurant, Chinese, fried rice, without meat",,
+CHOCMALT,beverage,,,,,,14318,"Beverages, Malted drink mix, chocolate, powder, prepared with whole milk",,
+WINERED,beverage,,,,,,14096,"Alcoholic beverage, wine, table, red",,
+WINEDESSERTSWEET,beverage,,,,,,14057,"Alcoholic beverage, wine, dessert, sweet",,
+WINEDESSERTDRY,beverage,,,,,,14536,"Alcoholic beverage, wine, dessert, dry",,
+BEERLIGHT,beverage,,,,,,14013,"Alcoholic beverage, beer, light, low carb",,
+BEERHIGH,beverage,,,,,,14251,"Beverages, Beer, higher alcohol",,
+SODAROOTBEER,beverage,,,,,,14157,"Beverages, Carbonated beverage, root beer",,
+SODACREAM,beverage,,,,,,14130,"Carbonated beverage, cream soda",,
+SODACLUB,beverage,,,,,,14121,"Beverages, Carbonated beverage, club soda",,
+SODACOLA,beverage,,,,,,14148,"Beverages, carbonated, cola, regular",,
+SODACOLALOW,beverage,,,,,,14416,"Beverages, Carbonated beverage, low calorie, cola or pepper-type, with aspartame, contains caffeine",,
+SODANONCOLALOW,beverage,,,,,,14537,"Carbonated beverage, low calorie, other than cola or pepper, with sodium saccharin, without caffeine",,
+PINACOLADA,beverage,,,,,,14017,"Alcoholic beverage, pina colada, prepared-from-recipe",,
+ICECREAMVANILLALIGHT,dairy,prepared,,,,,19088,"Ice creams, vanilla, light",,
+ICECREAMCHOCLIGHT,dairy,prepared,,,,,19114,"Ice creams, chocolate, light",,
+ICECREAMSAND,dairy,prepared,,,,,1238,Ice cream sandwich,,
+ICECREAMBARCHOC,dairy,prepared,,,,,1237,"Ice cream, bar or stick, chocolate covered",,
+ICECREAMCREAM,dairy,prepared,,,,,1302,"Light ice cream, Creamsicle",,
+ICECREAMCONECHOC,dairy,prepared,,,,,1240,"Ice cream cone, chocolate covered, with nuts, flavors other than chocolate",,
+ICECREAMCONEWAFER,prepared,,,,,,18271,"Ice cream cones, cake or wafer-type",,
+ICECREAMSOFTVAN,dairy,prepared,,,,,21028,"Fast foods, vanilla, light, soft-serve ice cream, with cone",,
+ICECREAMSUBDAEFUD,dairy,prepared,,,,,21033,"Fast foods, sundae, hot fudge",,
+ICECREAMSUNDAESTRW,dairy,prepared,,,,,21034,"Fast foods, sundae, strawberry",,
+ICECREAMSUNDAECARM,dairy,prepared,,,,,21032,"Fast foods, sundae, caramel",,

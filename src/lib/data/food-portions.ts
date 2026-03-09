@@ -7969,7 +7969,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CHINOOK",
-    "display": "Chinook",
+    "display": "Salmon Chinook",
     "groups": [
       "protein"
     ],
@@ -8939,7 +8939,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CHUM",
-    "display": "Chum",
+    "display": "Salmon Chum",
     "groups": [
       "protein"
     ],
@@ -9503,7 +9503,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "COHO",
-    "display": "Coho",
+    "display": "Salmon Coho",
     "groups": [
       "protein"
     ],
@@ -22007,67 +22007,6 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "MUFFIN",
-    "display": "Muffin",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "18566",
-    "desc": "Artificial Blueberry Muffin Mix, dry",
-    "cal": 407.0,
-    "pro": 4.7,
-    "fat": 8.7,
-    "carb": 77.5,
-    "fib": 0.0,
-    "h2o": 6.4,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "muffin",
-        "gm": 31.0
-      }
-    ]
-  },
-  {
-    "word": "MUFFINCORN",
-    "display": "Muffin Corn",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "18412",
-    "desc": "Bread, cornbread, dry mix, unenriched (includes corn muffin mix)",
-    "cal": 418.0,
-    "pro": 7.0,
-    "fat": 12.2,
-    "carb": 69.5,
-    "fib": 6.5,
-    "h2o": 7.8,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      },
-      {
-        "amt": 1.0,
-        "desc": "package (8.5 oz)",
-        "gm": 241.0
-      }
-    ]
-  },
-  {
     "word": "MULBERRY",
     "display": "Mulberry",
     "groups": [
@@ -32515,7 +32454,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "SOCKEYE",
-    "display": "Sockeye",
+    "display": "Salmon Sockeye",
     "groups": [
       "protein"
     ],
@@ -36139,7 +36078,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "TIPNUK",
-    "display": "Tipnuk",
+    "display": "Salmon Tipnuk",
     "groups": [
       "protein"
     ],
@@ -39365,6 +39304,1083 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "toast, Gerber Zwieback",
         "gm": 7.0
+      }
+    ]
+  },
+  {
+    "word": "MUFFUNBLUEBERRY",
+    "display": "Muffin Blueberry",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "18278",
+    "desc": "Muffins, blueberry, prepared from recipe, made with low fat (2%) milk",
+    "cal": 285.0,
+    "pro": 6.5,
+    "fat": 10.8,
+    "carb": 40.7,
+    "fib": 0.0,
+    "h2o": 39.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "muffin",
+        "gm": 57.0
+      }
+    ]
+  },
+  {
+    "word": "MUFFINCORN",
+    "display": "Muffin Corn",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "18282",
+    "desc": "Muffins, corn, prepared from recipe, made with low fat (2%) milk",
+    "cal": 316.0,
+    "pro": 7.1,
+    "fat": 12.3,
+    "carb": 44.2,
+    "fib": 0.0,
+    "h2o": 33.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "muffin (2-3/4\" dia x 2\")",
+        "gm": 57.0
+      }
+    ]
+  },
+  {
+    "word": "SALMONREDCAN",
+    "display": "Salmonredcan",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "15181",
+    "desc": "Fish, salmon, pink, canned, without salt, solids with bone and liquid",
+    "cal": 139.0,
+    "pro": 19.8,
+    "fat": 6.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 70.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "oz",
+        "gm": 85.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "can",
+        "gm": 454.0
+      }
+    ]
+  },
+  {
+    "word": "SALMONPINKCAN",
+    "display": "Salmonpinkcan",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "35157",
+    "desc": "Fish, salmon, red, canned, bones removed (Alaska Native)",
+    "cal": 161.0,
+    "pro": 27.3,
+    "fat": 5.8,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 65.8,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      }
+    ]
+  },
+  {
+    "word": "MACKERELCAN",
+    "display": "Mackerelcan",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "15048",
+    "desc": "Fish, mackerel, jack, canned, drained solids",
+    "cal": 156.0,
+    "pro": 23.2,
+    "fat": 6.3,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 69.2,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz, boneless",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 190.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cubic inch",
+        "gm": 16.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "can (15 oz)",
+        "gm": 361.0
+      }
+    ]
+  },
+  {
+    "word": "CAVIAR",
+    "display": "Caviar",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "15012",
+    "desc": "Fish, caviar, black and red, granular",
+    "cal": 264.0,
+    "pro": 24.6,
+    "fat": 17.9,
+    "carb": 4.0,
+    "fib": 0.0,
+    "h2o": 47.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 16.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "TILEFISH",
+    "display": "Tilefish",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "15113",
+    "desc": "Fish, tilefish, cooked, dry heat",
+    "cal": 147.0,
+    "pro": 24.5,
+    "fat": 4.7,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 70.2,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.5,
+        "desc": "fillet",
+        "gm": 150.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "oz",
+        "gm": 85.0
+      }
+    ]
+  },
+  {
+    "word": "FRIEDRICE",
+    "display": "Fried Rice",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "36602",
+    "desc": "Restaurant, Chinese, fried rice, without meat",
+    "cal": 174.0,
+    "pro": 4.0,
+    "fat": 3.0,
+    "carb": 32.8,
+    "fib": 1.1,
+    "h2o": 59.1,
+    "sug": 0.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 137.0
+      }
+    ]
+  },
+  {
+    "word": "CHOCMALT",
+    "display": "Chocolate Malt",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14318",
+    "desc": "Beverages, Malted drink mix, chocolate, powder, prepared with whole milk",
+    "cal": 85.0,
+    "pro": 3.4,
+    "fat": 3.3,
+    "carb": 11.2,
+    "fib": 0.5,
+    "h2o": 81.3,
+    "sug": 6.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup (8 fl oz)",
+        "gm": 265.0
+      }
+    ]
+  },
+  {
+    "word": "WINERED",
+    "display": "Wine Red",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14096",
+    "desc": "Alcoholic beverage, wine, table, red",
+    "cal": 85.0,
+    "pro": 0.1,
+    "fat": 0.0,
+    "carb": 2.6,
+    "fib": 0.0,
+    "h2o": 86.5,
+    "sug": 0.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.4
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving (5 fl oz)",
+        "gm": 147.0
+      }
+    ]
+  },
+  {
+    "word": "WINEDESSERTSWEET",
+    "display": "Wine Dessert Sweet",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14057",
+    "desc": "Alcoholic beverage, wine, dessert, sweet",
+    "cal": 160.0,
+    "pro": 0.2,
+    "fat": 0.0,
+    "carb": 13.7,
+    "fib": 0.0,
+    "h2o": 70.5,
+    "sug": 7.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.5
+      },
+      {
+        "amt": 1.0,
+        "desc": "glass (3.5 fl oz)",
+        "gm": 103.0
+      }
+    ]
+  },
+  {
+    "word": "WINEDESSERTDRY",
+    "display": "Wine Dessert Dry",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14536",
+    "desc": "Alcoholic beverage, wine, dessert, dry",
+    "cal": 152.0,
+    "pro": 0.2,
+    "fat": 0.0,
+    "carb": 11.7,
+    "fib": 0.0,
+    "h2o": 72.5,
+    "sug": 1.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.5
+      },
+      {
+        "amt": 1.0,
+        "desc": "glass (3.5 fl oz)",
+        "gm": 103.0
+      }
+    ]
+  },
+  {
+    "word": "BEERLIGHT",
+    "display": "Beer Light",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14013",
+    "desc": "Alcoholic beverage, beer, light, low carb",
+    "cal": 27.0,
+    "pro": 0.2,
+    "fat": 0.0,
+    "carb": 0.7,
+    "fib": 0.0,
+    "h2o": 95.4,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.5
+      },
+      {
+        "amt": 12.0,
+        "desc": "fl oz",
+        "gm": 354.0
+      }
+    ]
+  },
+  {
+    "word": "BEERHIGH",
+    "display": "Beer High Alcohol",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14251",
+    "desc": "Beverages, Beer, higher alcohol",
+    "cal": 58.0,
+    "pro": 0.9,
+    "fat": 0.0,
+    "carb": 0.3,
+    "fib": 0.0,
+    "h2o": 91.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.6
+      },
+      {
+        "amt": 1.0,
+        "desc": "bottle",
+        "gm": 355.0
+      }
+    ]
+  },
+  {
+    "word": "SODAROOTBEER",
+    "display": "Soda Root Beer",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14157",
+    "desc": "Beverages, Carbonated beverage, root beer",
+    "cal": 41.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 10.6,
+    "fib": 0.0,
+    "h2o": 89.3,
+    "sug": 10.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.8
+      },
+      {
+        "amt": 1.0,
+        "desc": "can or bottle (16 fl oz)",
+        "gm": 493.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "can or bottle (12 fl oz)",
+        "gm": 370.0
+      }
+    ]
+  },
+  {
+    "word": "SODACREAM",
+    "display": "Cream Soda",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14130",
+    "desc": "Carbonated beverage, cream soda",
+    "cal": 51.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 13.3,
+    "fib": 0.0,
+    "h2o": 86.7,
+    "sug": 13.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.9
+      },
+      {
+        "amt": 1.0,
+        "desc": "can or bottle (16 fl oz)",
+        "gm": 494.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "can or bottle (12 fl oz)",
+        "gm": 371.0
+      }
+    ]
+  },
+  {
+    "word": "SODACLUB",
+    "display": "Club Soda",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14121",
+    "desc": "Beverages, Carbonated beverage, club soda",
+    "cal": 0.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 99.9,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.6
+      },
+      {
+        "amt": 1.0,
+        "desc": "can or bottle (16 fl oz)",
+        "gm": 474.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "can or bottle (12 fl oz)",
+        "gm": 355.0
+      }
+    ]
+  },
+  {
+    "word": "SODACOLA",
+    "display": "Soda Cola",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14148",
+    "desc": "Beverages, carbonated, cola, regular",
+    "cal": 42.0,
+    "pro": 0.0,
+    "fat": 0.2,
+    "carb": 10.4,
+    "fib": 0.0,
+    "h2o": 89.4,
+    "sug": 9.9,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.7
+      },
+      {
+        "amt": 1.0,
+        "desc": "can or bottle (12 fl oz)",
+        "gm": 370.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "can or bottle (16 fl oz)",
+        "gm": 492.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "drink, small (16 fl oz)",
+        "gm": 492.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "drink, medium (22 fl oz)",
+        "gm": 676.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "drink, large (32 fl oz)",
+        "gm": 984.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "drink, extra large (44 fl oz)",
+        "gm": 1353.0
+      }
+    ]
+  },
+  {
+    "word": "SODACOLALOW",
+    "display": "Soda Cola Low Cal",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14416",
+    "desc": "Beverages, Carbonated beverage, low calorie, cola or pepper-type, with aspartame, contains caffeine",
+    "cal": 2.0,
+    "pro": 0.1,
+    "fat": 0.0,
+    "carb": 0.3,
+    "fib": 0.0,
+    "h2o": 99.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.6
+      },
+      {
+        "amt": 1.0,
+        "desc": "can can 12 fl oz",
+        "gm": 355.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bottle bottle 16 fl oz",
+        "gm": 473.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving child 12 fl oz",
+        "gm": 258.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving small 16 fl oz",
+        "gm": 347.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving medium 21 fl oz",
+        "gm": 486.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving large 32 fl oz",
+        "gm": 722.0
+      }
+    ]
+  },
+  {
+    "word": "SODANONCOLALOW",
+    "display": "Soda non Cola Low Cal",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14537",
+    "desc": "Carbonated beverage, low calorie, other than cola or pepper, with sodium saccharin, without caffeine",
+    "cal": 0.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.1,
+    "fib": 0.0,
+    "h2o": 99.8,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.6
+      },
+      {
+        "amt": 1.0,
+        "desc": "can (12 fl oz)",
+        "gm": 355.0
+      }
+    ]
+  },
+  {
+    "word": "PINACOLADA",
+    "display": "Pina Colada",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14017",
+    "desc": "Alcoholic beverage, pina colada, prepared-from-recipe",
+    "cal": 174.0,
+    "pro": 0.4,
+    "fat": 1.9,
+    "carb": 22.7,
+    "fib": 0.3,
+    "h2o": 65.0,
+    "sug": 22.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 31.4
+      },
+      {
+        "amt": 1.0,
+        "desc": "cocktail (4.5 fl oz)",
+        "gm": 141.0
+      }
+    ]
+  },
+  {
+    "word": "ICECREAMVANILLALIGHT",
+    "display": "Ice Cream Vanilla Light",
+    "groups": [
+      "dairy",
+      "prepared"
+    ],
+    "ndb": "19088",
+    "desc": "Ice creams, vanilla, light",
+    "cal": 180.0,
+    "pro": 4.8,
+    "fat": 4.8,
+    "carb": 29.5,
+    "fib": 0.3,
+    "h2o": 59.9,
+    "sug": 22.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 1/2 cup",
+        "gm": 76.0
+      }
+    ]
+  },
+  {
+    "word": "ICECREAMCHOCLIGHT",
+    "display": "Ice Cream Choc Light",
+    "groups": [
+      "dairy",
+      "prepared"
+    ],
+    "ndb": "19114",
+    "desc": "Ice creams, chocolate, light",
+    "cal": 187.0,
+    "pro": 5.0,
+    "fat": 7.2,
+    "carb": 25.7,
+    "fib": 0.8,
+    "h2o": 61.4,
+    "sug": 24.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 68.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "unit",
+        "gm": 100.0
+      }
+    ]
+  },
+  {
+    "word": "ICECREAMSAND",
+    "display": "Ice Cream Sandwich",
+    "groups": [
+      "dairy",
+      "prepared"
+    ],
+    "ndb": "1238",
+    "desc": "Ice cream sandwich",
+    "cal": 237.0,
+    "pro": 4.3,
+    "fat": 8.6,
+    "carb": 37.1,
+    "fib": 0.0,
+    "h2o": 48.9,
+    "sug": 18.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 70.0
+      }
+    ]
+  },
+  {
+    "word": "ICECREAMBARCHOC",
+    "display": "Ice Cream Bar Choc",
+    "groups": [
+      "dairy",
+      "prepared"
+    ],
+    "ndb": "1237",
+    "desc": "Ice cream, bar or stick, chocolate covered",
+    "cal": 331.0,
+    "pro": 4.1,
+    "fat": 24.1,
+    "carb": 24.5,
+    "fib": 0.8,
+    "h2o": 46.3,
+    "sug": 18.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar",
+        "gm": 50.0
+      }
+    ]
+  },
+  {
+    "word": "ICECREAMCREAM",
+    "display": "Ice Cream Creamsicle",
+    "groups": [
+      "dairy",
+      "prepared"
+    ],
+    "ndb": "1302",
+    "desc": "Light ice cream, Creamsicle",
+    "cal": 165.0,
+    "pro": 1.5,
+    "fat": 3.1,
+    "carb": 32.8,
+    "fib": 0.0,
+    "h2o": 61.8,
+    "sug": 18.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      }
+    ]
+  },
+  {
+    "word": "ICECREAMCONECHOC",
+    "display": "Ice Cream Choc with Cone",
+    "groups": [
+      "dairy",
+      "prepared"
+    ],
+    "ndb": "1240",
+    "desc": "Ice cream cone, chocolate covered, with nuts, flavors other than chocolate",
+    "cal": 354.0,
+    "pro": 5.2,
+    "fat": 21.9,
+    "carb": 34.4,
+    "fib": 1.0,
+    "h2o": 37.4,
+    "sug": 25.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "unit",
+        "gm": 96.0
+      }
+    ]
+  },
+  {
+    "word": "ICECREAMCONEWAFER",
+    "display": "Ice Cream Cone only",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "18271",
+    "desc": "Ice cream cones, cake or wafer-type",
+    "cal": 417.0,
+    "pro": 8.1,
+    "fat": 6.9,
+    "carb": 79.0,
+    "fib": 3.0,
+    "h2o": 5.3,
+    "sug": 6.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "cone",
+        "gm": 4.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "large waffle cone",
+        "gm": 29.0
+      }
+    ]
+  },
+  {
+    "word": "ICECREAMSOFTVAN",
+    "display": "Ice Cream Soft Vanilla",
+    "groups": [
+      "dairy",
+      "prepared"
+    ],
+    "ndb": "21028",
+    "desc": "Fast foods, vanilla, light, soft-serve ice cream, with cone",
+    "cal": 163.0,
+    "pro": 4.2,
+    "fat": 4.9,
+    "carb": 26.4,
+    "fib": 0.1,
+    "h2o": 63.6,
+    "sug": 19.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "item",
+        "gm": 120.0
+      }
+    ]
+  },
+  {
+    "word": "ICECREAMSUBDAEFUD",
+    "display": "Ice Cream Sundae Fudge",
+    "groups": [
+      "dairy",
+      "prepared"
+    ],
+    "ndb": "21033",
+    "desc": "Fast foods, sundae, hot fudge",
+    "cal": 180.0,
+    "pro": 3.6,
+    "fat": 5.5,
+    "carb": 30.2,
+    "fib": 0.0,
+    "h2o": 59.7,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "sundae",
+        "gm": 158.0
+      }
+    ]
+  },
+  {
+    "word": "ICECREAMSUNDAESTRW",
+    "display": "Ice Cream Sundae Strawberry",
+    "groups": [
+      "dairy",
+      "prepared"
+    ],
+    "ndb": "21034",
+    "desc": "Fast foods, sundae, strawberry",
+    "cal": 175.0,
+    "pro": 4.1,
+    "fat": 5.1,
+    "carb": 29.2,
+    "fib": 0.0,
+    "h2o": 60.9,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "sundae",
+        "gm": 153.0
+      }
+    ]
+  },
+  {
+    "word": "ICECREAMSUNDAECARM",
+    "display": "Ice Cream Sundae Caramel",
+    "groups": [
+      "dairy",
+      "prepared"
+    ],
+    "ndb": "21032",
+    "desc": "Fast foods, sundae, caramel",
+    "cal": 196.0,
+    "pro": 4.7,
+    "fat": 6.0,
+    "carb": 31.8,
+    "fib": 0.0,
+    "h2o": 56.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "sundae",
+        "gm": 155.0
       }
     ]
   }
