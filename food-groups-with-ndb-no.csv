@@ -10,9 +10,15 @@ AGAVE,vegetable,,,,,,35192,"Agave, raw (Southwest)",KEYWORD_EXACT,4
 AGUTUK,protein,,,,,,35001,"Agutuk, fish/berry with seal oil (Alaskan ice cream) (Alaska Native)",DESC_STARTS,3
 ALFALFA,vegetable,,,,,,11001,"Alfalfa seeds, sprouted, raw",,
 ALLSPICE,spice,,,,,,2001,"Spices, allspice, ground",DESC_CONTAINS,1
-ALMONDOIL,nuts,fats,protein,High in healthy fats,Good source of protein,,4529,"Oil, almond",DESC_CONTAINS,5
+ALMONDBLANCHED,nuts,,,,,,12062,"Nuts, almonds, blanched",,
 ALMONDBUTTER,nuts,fats,protein,High in healthy fats,Good source of protein,,12195,"Nuts, almond butter, plain, without salt added",COMPOUND_MATCH,2
+ALMONDDRYNOSALT,nuts,,,,,,12063,"Nuts, almonds, dry roasted, without salt added",,
+ALMONDDRYSALT,nuts,,,,,,12563,"Nuts, almonds, dry roasted, with salt added",,
+ALMONDHONEY,nuts,,,,,,12206,"Nuts, almonds, honey roasted, unblanched",,
 ALMONDMILK,beverage,,,,,,14016,"Beverages, almond milk, sweetened, vanilla flavor, ready-to-drink",COMPOUND_MATCH,4
+ALMONDOIL,nuts,fats,protein,High in healthy fats,Good source of protein,,4529,"Oil, almond",DESC_CONTAINS,5
+ALMONDOILNOSALT,nuts,,,,,,12065,"Nuts, almonds, oil roasted, without salt added",,
+ALMONDOILSALT,nuts,,,,,,12565,"Nuts, almonds, oil roasted, with salt added",,
 ALMONDPASTE,spice,,,,,,12071,"Nuts, almond paste",COMPOUND_MATCH,1
 ALOEVERAJUICE,beverage,,,,,,14216,"Beverages, aloe vera juice drink, fortified with Vitamin C",,
 AMARANTH,grain,,,,,,20002,"Amaranth grain, cooked",,
@@ -600,7 +606,6 @@ MAMEY,fruit,,,,,,9314,"Sapote, mamey, raw",,
 MANDARIN,fruit,,,,,,9218,"Tangerines, (mandarin oranges), raw",,
 MANGO,fruit,,,,,,9176,"Mangos, raw",KEYWORD_EXACT,7
 MANGOSTEEN,fruit,,,,,,9177,"Mangosteen, canned, syrup pack",KEYWORD_EXACT,1
-MAPLESUGAR,spice,,,,,,19340,"Sugars, maple",DESC_CONTAINS,5
 MAPLESYPUP,spice,,,,,,19353,"Syrups, maple",,
 MARASCHINO,fruit,,,,,,9328,"Maraschino cherries, canned, drained",DESC_STARTS,1
 MARGARINE,fats,,,,,,4073,"Margarine, regular, hard, soybean (hydrogenated)",KEYWORD_EXACT,12
@@ -1159,9 +1164,6 @@ YOGURT,dairy,,,,,,1116,"Yogurt, plain, whole milk, 8 grams protein per 8 ounce",
 YOLK,protein,,,,,,1125,"Egg, yolk, raw, fresh",,
 ZUCCHINI,vegetable,fruit,,Botanically a fruit,Used as a vegetable,,11478,"Squash, summer, zucchini, includes skin, cooked, boiled, drained, without salt",DESC_CONTAINS,5
 ZWIEBACK,grain,prepared,,,,,3217,Zwieback,KEYWORD_EXACT,1
-ALMONDBLANCHED,,,,,,,12062,"Nuts, almonds, blanched",,
-ALMONDDRYNOSALT,,,,,,,12063,"Nuts, almonds, dry roasted, without salt added",,
-ALMONDOILNOSALT,,,,,,,12065,"Nuts, almonds, oil roasted, without salt added",,
-ALMONDDRYSALT,,,,,,,12563,"Nuts, almonds, dry roasted, with salt added",,
-ALMONDOILSALT,,,,,,,12565,"Nuts, almonds, oil roasted, with salt added",,
-ALMONDHONEY,,,,,,,12206,"Nuts, almonds, honey roasted, unblanched",,
+SUCRALOSE,spice,,,,,,19868,"Sweeteners, tabletop, sucralose, SPLENDA packets",,
+FRUCTOSEPWDR,spice,,,,,,43216,"Sweeteners, tabletop, fructose, dry, powder",,
+FRUCTOSELIQ,spice,,,,,,44018,"Sweeteners, tabletop, fructose, liquid",,
