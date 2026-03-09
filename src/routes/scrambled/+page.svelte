@@ -400,7 +400,10 @@
     
     const word = draggedWord;
     const correctGroups = getWordGroups(word, currentLevel);
-    const isCorrect = correctGroups.includes(group);
+    // 'condiment' and 'spice' map to the same group zone (Spices & Condiments)
+    const isCorrect = correctGroups.includes(group) ||
+      (group === 'spice' && correctGroups.includes('condiment')) ||
+      (group === 'condiment' && correctGroups.includes('spice'));
     
     // Get current attempts for this word
     const existing = classifiedWords.get(word);

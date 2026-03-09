@@ -201,6 +201,7 @@ export const FOOD_GROUP_INFO: Record<FoodGroup, { emoji: string; label: string; 
   nuts: { emoji: '🥜', label: 'Nuts & Seeds', hint: 'Tree nuts, seeds' },
   fats: { emoji: '🧈', label: 'Fats & Oils', hint: 'Butter, oil, lard' },
   spice: { emoji: '🌿', label: 'Spices & Condiments', hint: 'Basil, pepper, cinnamon, ketchup, mayo' },
+  condiment: { emoji: '🌿', label: 'Spices & Condiments', hint: 'Basil, pepper, cinnamon, ketchup, mayo' },
   prepared: { emoji: '🍳', label: 'Prepared', hint: 'Cooked dishes, lasagna, casseroles' },
 
   beverage: { emoji: '🍵', label: 'Beverage', hint: 'Drinks, tea, coffee' },
