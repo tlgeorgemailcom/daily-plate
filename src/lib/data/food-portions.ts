@@ -349,6 +349,44 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "ALMONDBLANCHED",
+    "display": "Almonds Blanched",
+    "groups": [
+      "nuts"
+    ],
+    "ndb": "12062",
+    "desc": "Nuts, almonds, blanched",
+    "cal": 590.0,
+    "pro": 21.4,
+    "fat": 52.5,
+    "carb": 18.7,
+    "fib": 9.9,
+    "h2o": 4.5,
+    "sug": 4.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup whole kernels",
+        "gm": 145.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 9.1
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
     "word": "ALMONDBUTTER",
     "display": "Almond Butter",
     "groups": [
@@ -384,6 +422,105 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "ALMONDDRYNOSALT",
+    "display": "Almonds Dry Roasted no Salt",
+    "groups": [
+      "nuts"
+    ],
+    "ndb": "12063",
+    "desc": "Nuts, almonds, dry roasted, without salt added",
+    "cal": 598.0,
+    "pro": 21.0,
+    "fat": 52.5,
+    "carb": 21.0,
+    "fib": 10.9,
+    "h2o": 2.4,
+    "sug": 4.9,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup whole kernels",
+        "gm": 138.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz (22 whole kernels)",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "ALMONDDRYSALT",
+    "display": "Almonds Dry Roasted Salt",
+    "groups": [
+      "nuts"
+    ],
+    "ndb": "12563",
+    "desc": "Nuts, almonds, dry roasted, with salt added",
+    "cal": 598.0,
+    "pro": 21.0,
+    "fat": 52.5,
+    "carb": 21.0,
+    "fib": 10.9,
+    "h2o": 2.4,
+    "sug": 4.9,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup whole kernels",
+        "gm": 138.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz (22 whole kernels)",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "ALMONDHONEY",
+    "display": "Almonds Honey Roasted",
+    "groups": [
+      "nuts"
+    ],
+    "ndb": "12206",
+    "desc": "Nuts, almonds, honey roasted, unblanched",
+    "cal": 594.0,
+    "pro": 18.2,
+    "fat": 49.9,
+    "carb": 27.9,
+    "fib": 13.7,
+    "h2o": 1.7,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup whole kernels",
+        "gm": 144.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
     "word": "ALMONDMILK",
     "display": "Almond Milk",
     "groups": [
@@ -413,6 +550,111 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "cup",
         "gm": 240.0
+      }
+    ]
+  },
+  {
+    "word": "ALMONDOIL",
+    "display": "Almond Oil",
+    "groups": [
+      "nuts",
+      "fats"
+    ],
+    "ndb": "4529",
+    "desc": "Oil, almond",
+    "cal": 884.0,
+    "pro": 0.0,
+    "fat": 100.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 0.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tablespoon",
+        "gm": 13.6
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 218.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 4.5
+      }
+    ]
+  },
+  {
+    "word": "ALMONDOILNOSALT",
+    "display": "Almonds Oil Roasted no Salt",
+    "groups": [
+      "nuts"
+    ],
+    "ndb": "12065",
+    "desc": "Nuts, almonds, oil roasted, without salt added",
+    "cal": 607.0,
+    "pro": 21.2,
+    "fat": 55.2,
+    "carb": 17.7,
+    "fib": 10.5,
+    "h2o": 2.8,
+    "sug": 4.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup whole kernels",
+        "gm": 157.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz (22 whole kernels)",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "ALMONDOILSALT",
+    "display": "Almonds Oil Roasted Salt",
+    "groups": [
+      "nuts"
+    ],
+    "ndb": "12565",
+    "desc": "Nuts, almonds, oil roasted, with salt added",
+    "cal": 607.0,
+    "pro": 21.2,
+    "fat": 55.2,
+    "carb": 17.7,
+    "fib": 10.5,
+    "h2o": 2.8,
+    "sug": 4.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup whole kernels",
+        "gm": 157.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz (22 whole kernels)",
+        "gm": 28.35
       }
     ]
   },
@@ -1498,6 +1740,45 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "NLEA serving",
         "gm": 126.0
+      }
+    ]
+  },
+  {
+    "word": "BANANACHIPS",
+    "display": "Bananachips",
+    "groups": [
+      "fruit",
+      "prepared"
+    ],
+    "ndb": "19400",
+    "desc": "Snacks, banana chips",
+    "cal": 519.0,
+    "pro": 2.3,
+    "fat": 33.6,
+    "carb": 58.4,
+    "fib": 7.7,
+    "h2o": 4.3,
+    "sug": 35.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 3.0,
+        "desc": "oz",
+        "gm": 85.0
+      },
+      {
+        "amt": 1.5,
+        "desc": "oz",
+        "gm": 42.0
       }
     ]
   },
@@ -3455,6 +3736,40 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "BREADRICEBRAN",
+    "display": "Bread Rice Bran",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "18059",
+    "desc": "Bread, rice bran",
+    "cal": 243.0,
+    "pro": 8.9,
+    "fat": 4.6,
+    "carb": 43.5,
+    "fib": 4.9,
+    "h2o": 41.0,
+    "sug": 4.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice",
+        "gm": 27.0
+      }
+    ]
+  },
+  {
     "word": "BREADRYE",
     "display": "Bread Rye",
     "groups": [
@@ -4335,6 +4650,51 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "stick",
         "gm": 113.0
+      }
+    ]
+  },
+  {
+    "word": "BUTTERWHIP",
+    "display": "Butter Whipped",
+    "groups": [
+      "fats",
+      "spice",
+      "dairy"
+    ],
+    "ndb": "1002",
+    "desc": "Butter, whipped, with salt",
+    "cal": 718.0,
+    "pro": 0.5,
+    "fat": 78.3,
+    "carb": 2.9,
+    "fib": 0.0,
+    "h2o": 16.7,
+    "sug": 0.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "pat (1\" sq, 1/3\" high)",
+        "gm": 3.8
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 9.4
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 151.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "stick",
+        "gm": 76.0
       }
     ]
   },
@@ -6604,6 +6964,39 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "CEREALRICECREAM",
+    "display": "Cerealricecream",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "8168",
+    "desc": "Cereals, CREAM OF RICE, cooked with water, with salt",
+    "cal": 52.0,
+    "pro": 0.9,
+    "fat": 0.1,
+    "carb": 11.5,
+    "fib": 0.1,
+    "h2o": 87.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 244.0
+      },
+      {
+        "amt": 0.75,
+        "desc": "cup",
+        "gm": 183.0
+      }
+    ]
+  },
+  {
     "word": "CEREALTRIX",
     "display": "Cereal Trix",
     "groups": [
@@ -7608,6 +8001,341 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "CHIPSCASSAVA",
+    "display": "Cassava Chips",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "25050",
+    "desc": "Snacks, yucca (cassava) chips, salted",
+    "cal": 515.0,
+    "pro": 1.3,
+    "fat": 25.9,
+    "carb": 69.2,
+    "fib": 3.7,
+    "h2o": 2.8,
+    "sug": 3.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 10.0,
+        "desc": "chips",
+        "gm": 17.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bag",
+        "gm": 105.0
+      }
+    ]
+  },
+  {
+    "word": "CHIPSCORNRANCH",
+    "display": "Tortilla Chips Ranch",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "19058",
+    "desc": "Snacks, tortilla chips, ranch-flavor",
+    "cal": 501.0,
+    "pro": 7.2,
+    "fat": 24.6,
+    "carb": 62.7,
+    "fib": 4.0,
+    "h2o": 3.1,
+    "sug": 3.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "bag (7 oz)",
+        "gm": 198.0
+      }
+    ]
+  },
+  {
+    "word": "CHIPSCORNUNSALTED",
+    "display": "Tortilla Chips Unsalted",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "43364",
+    "desc": "Snacks, tortilla chips, unsalted, white corn",
+    "cal": 503.0,
+    "pro": 7.8,
+    "fat": 23.4,
+    "carb": 65.3,
+    "fib": 5.3,
+    "h2o": 2.1,
+    "sug": 1.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 26.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bag, single serving",
+        "gm": 28.0
+      },
+      {
+        "amt": 10.0,
+        "desc": "chips",
+        "gm": 18.0
+      }
+    ]
+  },
+  {
+    "word": "CHIPSPITA",
+    "display": "Pita Chips",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "25037",
+    "desc": "Snacks, pita chips, salted",
+    "cal": 457.0,
+    "pro": 11.8,
+    "fat": 15.2,
+    "carb": 68.3,
+    "fib": 3.8,
+    "h2o": 2.0,
+    "sug": 4.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "bag",
+        "gm": 262.0
+      }
+    ]
+  },
+  {
+    "word": "CHIPSPLANTAIN",
+    "display": "Plantain Chips",
+    "groups": [
+      "fruit"
+    ],
+    "ndb": "25027",
+    "desc": "Snacks, plantain chips, salted",
+    "cal": 531.0,
+    "pro": 2.3,
+    "fat": 29.6,
+    "carb": 63.8,
+    "fib": 3.5,
+    "h2o": 2.1,
+    "sug": 0.9,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "CHIPSPOTATOBBQ",
+    "display": "Potato Chips BBQ",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "19042",
+    "desc": "Snacks, potato chips, barbecue-flavor",
+    "cal": 487.0,
+    "pro": 6.5,
+    "fat": 31.1,
+    "carb": 55.9,
+    "fib": 3.8,
+    "h2o": 2.5,
+    "sug": 5.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "bag (7 oz)",
+        "gm": 198.0
+      }
+    ]
+  },
+  {
+    "word": "CHIPSPOTATOSOUR",
+    "display": "Potato Chips Sour Cream",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "19043",
+    "desc": "Snacks, potato chips, sour-cream-and-onion-flavor",
+    "cal": 531.0,
+    "pro": 8.1,
+    "fat": 33.9,
+    "carb": 51.5,
+    "fib": 5.2,
+    "h2o": 1.8,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "bag (7 oz)",
+        "gm": 198.0
+      }
+    ]
+  },
+  {
+    "word": "CHIPSSWEETPOTATO",
+    "display": "Sweet Potato Chips",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "25012",
+    "desc": "Snacks, sweet potato chips, unsalted",
+    "cal": 532.0,
+    "pro": 2.9,
+    "fat": 32.4,
+    "carb": 56.8,
+    "fib": 8.8,
+    "h2o": 4.5,
+    "sug": 8.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "Bag",
+        "gm": 28.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package",
+        "gm": 34.0
+      }
+    ]
+  },
+  {
+    "word": "CHIPSTARO",
+    "display": "Taro Chips",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "19524",
+    "desc": "Snacks, taro chips",
+    "cal": 498.0,
+    "pro": 2.3,
+    "fat": 24.9,
+    "carb": 68.1,
+    "fib": 7.2,
+    "h2o": 2.0,
+    "sug": 3.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 10.0,
+        "desc": "chips",
+        "gm": 23.0
+      }
+    ]
+  },
+  {
+    "word": "CHIPSVEGGIE",
+    "display": "Vegetable Chips",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "25040",
+    "desc": "Snacks, vegetable chips, made from garden vegetables",
+    "cal": 473.0,
+    "pro": 5.3,
+    "fat": 23.3,
+    "carb": 60.4,
+    "fib": 4.7,
+    "h2o": 6.3,
+    "sug": 4.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
     "word": "CHITON",
     "display": "Chiton",
     "groups": [
@@ -7660,6 +8388,308 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "tsp chopped",
         "gm": 1.0
+      }
+    ]
+  },
+  {
+    "word": "CHOC45",
+    "display": "Choc 45-59%",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "19902",
+    "desc": "Chocolate, dark, 45- 59% cacao solids",
+    "cal": 546.0,
+    "pro": 4.9,
+    "fat": 31.3,
+    "carb": 61.2,
+    "fib": 7.0,
+    "h2o": 1.0,
+    "sug": 47.9,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar",
+        "gm": 162.0
+      }
+    ]
+  },
+  {
+    "word": "CHOC60",
+    "display": "Choc 60-69%",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "19903",
+    "desc": "Chocolate, dark, 60-69% cacao solids",
+    "cal": 579.0,
+    "pro": 6.1,
+    "fat": 38.3,
+    "carb": 52.4,
+    "fib": 8.0,
+    "h2o": 1.2,
+    "sug": 36.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar",
+        "gm": 112.0
+      }
+    ]
+  },
+  {
+    "word": "CHOC70",
+    "display": "Choc 70-85%",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "19904",
+    "desc": "Chocolate, dark, 70-85% cacao solids",
+    "cal": 598.0,
+    "pro": 7.8,
+    "fat": 42.6,
+    "carb": 45.9,
+    "fib": 10.9,
+    "h2o": 1.4,
+    "sug": 24.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar",
+        "gm": 101.0
+      }
+    ]
+  },
+  {
+    "word": "CHOCBAKING",
+    "display": "Choc Baking",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "19078",
+    "desc": "Baking chocolate, unsweetened, squares",
+    "cal": 642.0,
+    "pro": 14.3,
+    "fat": 52.3,
+    "carb": 28.4,
+    "fib": 16.6,
+    "h2o": 1.3,
+    "sug": 0.9,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz square Bakers",
+        "gm": 29.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, grated",
+        "gm": 132.0
+      },
+      {
+        "amt": 0.5,
+        "desc": "oz Hersheys",
+        "gm": 14.2
+      }
+    ]
+  },
+  {
+    "word": "CHOCBEVSODA",
+    "display": "Choc Soda",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14552",
+    "desc": "Carbonated beverage, chocolate-flavored soda",
+    "cal": 42.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 10.7,
+    "fib": 0.0,
+    "h2o": 89.2,
+    "sug": 10.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 31.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "can or bottle (16 fl oz)",
+        "gm": 492.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "can (12 fl oz)",
+        "gm": 369.0
+      }
+    ]
+  },
+  {
+    "word": "CHOCFUDGE",
+    "display": "Choc Fudge",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "19100",
+    "desc": "Candies, fudge, chocolate, prepared-from-recipe",
+    "cal": 411.0,
+    "pro": 2.4,
+    "fat": 10.4,
+    "carb": 76.4,
+    "fib": 1.7,
+    "h2o": 9.8,
+    "sug": 73.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "piece",
+        "gm": 17.0
+      }
+    ]
+  },
+  {
+    "word": "CHOCFUDGENUTS",
+    "display": "Choc Fudge with Nuts",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "19101",
+    "desc": "Candies, fudge, chocolate, with nuts, prepared-from-recipe",
+    "cal": 461.0,
+    "pro": 4.4,
+    "fat": 18.9,
+    "carb": 67.9,
+    "fib": 2.5,
+    "h2o": 7.7,
+    "sug": 63.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "CHOCHOT",
+    "display": "Choc Hot",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "1105",
+    "desc": "Milk, chocolate beverage, hot cocoa, homemade",
+    "cal": 77.0,
+    "pro": 3.5,
+    "fat": 2.3,
+    "carb": 10.7,
+    "fib": 1.0,
+    "h2o": 82.5,
+    "sug": 9.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 250.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 31.2
+      }
+    ]
+  },
+  {
+    "word": "CHOCMILKCANDY",
+    "display": "Milk Choc Candy",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "19120",
+    "desc": "Candies, milk chocolate",
+    "cal": 535.0,
+    "pro": 7.7,
+    "fat": 29.7,
+    "carb": 59.4,
+    "fib": 3.4,
+    "h2o": 1.5,
+    "sug": 51.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar, miniature",
+        "gm": 7.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar (1.55 oz)",
+        "gm": 44.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup chips",
+        "gm": 168.0
       }
     ]
   },
@@ -7749,6 +8779,44 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "cup",
         "gm": 300.0
+      }
+    ]
+  },
+  {
+    "word": "CHOCWHITE",
+    "display": "Choc White",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "19087",
+    "desc": "Candies, white chocolate",
+    "cal": 539.0,
+    "pro": 5.9,
+    "fat": 32.1,
+    "carb": 59.2,
+    "fib": 0.2,
+    "h2o": 1.3,
+    "sug": 59.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar (3 oz)",
+        "gm": 85.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 14.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup chips",
+        "gm": 170.0
       }
     ]
   },
@@ -9992,6 +11060,39 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "COTTAGE2",
+    "display": "Cottage Cheese 2%",
+    "groups": [
+      "dairy"
+    ],
+    "ndb": "1015",
+    "desc": "Cheese, cottage, lowfat, 2% milkfat",
+    "cal": 81.0,
+    "pro": 10.4,
+    "fat": 2.3,
+    "carb": 4.8,
+    "fib": 0.0,
+    "h2o": 81.2,
+    "sug": 4.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 4.0,
+        "desc": "oz",
+        "gm": 113.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup (not packed)",
+        "gm": 226.0
+      }
+    ]
+  },
+  {
     "word": "COTTONSEED",
     "display": "Cottonseed",
     "groups": [
@@ -10367,6 +11468,39 @@ export const FOODS: Food[] = [
         "amt": 4.0,
         "desc": "crackers",
         "gm": 14.0
+      }
+    ]
+  },
+  {
+    "word": "CRACKERRICEBROWN",
+    "display": "Cracker Brown Rice",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "19051",
+    "desc": "Snacks, rice cracker brown rice, plain",
+    "cal": 387.0,
+    "pro": 8.2,
+    "fat": 2.8,
+    "carb": 81.5,
+    "fib": 4.2,
+    "h2o": 5.8,
+    "sug": 0.9,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cake",
+        "gm": 9.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "cakes",
+        "gm": 18.0
       }
     ]
   },
@@ -13106,6 +14240,87 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "ENCHILADACHEESE",
+    "display": "Enchiladas Cheese",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "36050",
+    "desc": "Restaurant, Mexican, cheese enchilada",
+    "cal": 273.0,
+    "pro": 11.2,
+    "fat": 18.5,
+    "carb": 15.4,
+    "fib": 1.9,
+    "h2o": 52.4,
+    "sug": 2.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving serving size varied from 1 to 3 enchiladas",
+        "gm": 244.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "enchilada",
+        "gm": 137.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "enchilada",
+        "gm": 257.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "enchilada",
+        "gm": 365.0
+      }
+    ]
+  },
+  {
+    "word": "ENCHILADASAUCE",
+    "display": "Enchilada Sauce",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "27063",
+    "desc": "Sauce, enchilada, red, mild, ready to serve",
+    "cal": 30.0,
+    "pro": 0.6,
+    "fat": 0.9,
+    "carb": 4.9,
+    "fib": 0.5,
+    "h2o": 91.8,
+    "sug": 1.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.25,
+        "desc": "cup",
+        "gm": 56.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 224.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "can",
+        "gm": 283.0
+      }
+    ]
+  },
+  {
     "word": "ENDIVE",
     "display": "Endive",
     "groups": [
@@ -14301,6 +15516,72 @@ export const FOODS: Food[] = [
         "amt": 0.08,
         "desc": "package",
         "gm": 34.0
+      }
+    ]
+  },
+  {
+    "word": "FRUCTOSELIQ",
+    "display": "Sweetener Fructose Liquid",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "44018",
+    "desc": "Sweeteners, tabletop, fructose, liquid",
+    "cal": 279.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 76.1,
+    "fib": 0.1,
+    "h2o": 23.9,
+    "sug": 76.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 0.1
+      }
+    ]
+  },
+  {
+    "word": "FRUCTOSEPWDR",
+    "display": "Sweetener Fructose Powder",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "43216",
+    "desc": "Sweeteners, tabletop, fructose, dry, powder",
+    "cal": 368.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 100.0,
+    "fib": 0.0,
+    "h2o": 0.0,
+    "sug": 92.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 196.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 4.2
+      },
+      {
+        "amt": 1.0,
+        "desc": "individual packet",
+        "gm": 3.0
       }
     ]
   },
@@ -16908,6 +18189,40 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "JAMNOSUGAR",
+    "display": "Jam Preserves no Sugar",
+    "groups": [
+      "prepared",
+      "spice"
+    ],
+    "ndb": "43028",
+    "desc": "Jams and preserves, no sugar (with sodium saccharin), any flavor",
+    "cal": 132.0,
+    "pro": 0.3,
+    "fat": 0.3,
+    "carb": 53.4,
+    "fib": 2.5,
+    "h2o": 45.8,
+    "sug": 37.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 224.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 14.0
+      }
+    ]
+  },
+  {
     "word": "JELLIES",
     "display": "Jellies",
     "groups": [
@@ -19268,6 +20583,34 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "MARGARINESMART",
+    "display": "Margarine Smart Balance",
+    "groups": [
+      "fats"
+    ],
+    "ndb": "4677",
+    "desc": "Margarine-like spread, SMART BALANCE Omega Plus Spread (with plant sterols & fish oil)",
+    "cal": 605.0,
+    "pro": 0.1,
+    "fat": 71.0,
+    "carb": 0.2,
+    "fib": 0.0,
+    "h2o": 27.9,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tablespoon",
+        "gm": 14.0
+      }
+    ]
+  },
+  {
     "word": "MARJORAM",
     "display": "Marjoram",
     "groups": [
@@ -19443,6 +20786,67 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "MAYOCHOLESTEROL",
+    "display": "Mayo no Cholesterol",
+    "groups": [
+      "fats"
+    ],
+    "ndb": "43598",
+    "desc": "Mayonnaise dressing, no cholesterol",
+    "cal": 688.0,
+    "pro": 0.0,
+    "fat": 77.8,
+    "carb": 0.3,
+    "fib": 0.0,
+    "h2o": 21.7,
+    "sug": 0.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 15.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 239.0
+      }
+    ]
+  },
+  {
+    "word": "MAYOLIGHT",
+    "display": "Mayo Light",
+    "groups": [
+      "fats"
+    ],
+    "ndb": "4641",
+    "desc": "Salad dressing, mayonnaise, light",
+    "cal": 238.0,
+    "pro": 0.4,
+    "fat": 22.2,
+    "carb": 9.2,
+    "fib": 0.0,
+    "h2o": 66.1,
+    "sug": 3.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tablespoon",
+        "gm": 15.0
+      }
+    ]
+  },
+  {
     "word": "MAYONNAISE",
     "display": "Mayonnaise",
     "groups": [
@@ -19477,6 +20881,105 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "packet",
         "gm": 10.0
+      }
+    ]
+  },
+  {
+    "word": "MAYOREGULAR",
+    "display": "Mayo Regular",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "4025",
+    "desc": "Salad dressing, mayonnaise, regular",
+    "cal": 680.0,
+    "pro": 1.0,
+    "fat": 74.8,
+    "carb": 0.6,
+    "fib": 0.0,
+    "h2o": 21.6,
+    "sug": 0.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 13.8
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 220.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "packet",
+        "gm": 10.0
+      }
+    ]
+  },
+  {
+    "word": "MAYOSMART",
+    "display": "Mayo Smart Balance",
+    "groups": [
+      "fats"
+    ],
+    "ndb": "4689",
+    "desc": "Salad Dressing, mayonnaise, light, SMART BALANCE, Omega Plus light",
+    "cal": 333.0,
+    "pro": 1.5,
+    "fat": 34.2,
+    "carb": 9.4,
+    "fib": 0.2,
+    "h2o": 52.4,
+    "sug": 5.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp (1 NLEA serving)",
+        "gm": 14.0
+      }
+    ]
+  },
+  {
+    "word": "MAYOSOY",
+    "display": "Mayonnaise Soy",
+    "groups": [
+      "fats"
+    ],
+    "ndb": "4026",
+    "desc": "Salad dressing, mayonnaise, soybean and safflower oil, with salt",
+    "cal": 717.0,
+    "pro": 1.1,
+    "fat": 79.4,
+    "carb": 2.7,
+    "fib": 0.0,
+    "h2o": 15.3,
+    "sug": 0.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tablespoon",
+        "gm": 13.8
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 220.0
       }
     ]
   },
@@ -19767,6 +21270,103 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "MILK2",
+    "display": "Milk 2%",
+    "groups": [
+      "dairy",
+      "beverage"
+    ],
+    "ndb": "1080",
+    "desc": "Milk, reduced fat, fluid, 2% milkfat, with added nonfat milk solids and vitamin A and vitamin D",
+    "cal": 51.0,
+    "pro": 3.5,
+    "fat": 1.9,
+    "carb": 5.0,
+    "fib": 0.0,
+    "h2o": 88.9,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 245.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "quart",
+        "gm": 980.0
+      }
+    ]
+  },
+  {
+    "word": "MILKBUFFALO",
+    "display": "Milk Buffalo",
+    "groups": [
+      "dairy",
+      "beverage"
+    ],
+    "ndb": "1108",
+    "desc": "Milk, indian buffalo, fluid",
+    "cal": 97.0,
+    "pro": 3.8,
+    "fat": 6.9,
+    "carb": 5.2,
+    "fib": 0.0,
+    "h2o": 83.4,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 244.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "quart",
+        "gm": 976.0
+      }
+    ]
+  },
+  {
+    "word": "MILKCHOC",
+    "display": "Milk Choc",
+    "groups": [
+      "dairy",
+      "beverage"
+    ],
+    "ndb": "14182",
+    "desc": "Beverages, Chocolate syrup, prepared with whole milk",
+    "cal": 90.0,
+    "pro": 3.1,
+    "fat": 3.0,
+    "carb": 12.8,
+    "fib": 0.3,
+    "h2o": 80.5,
+    "sug": 11.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup (8 fl oz)",
+        "gm": 282.0
+      }
+    ]
+  },
+  {
     "word": "MILKCONDENSED",
     "display": "Milk Condensed",
     "groups": [
@@ -19867,6 +21467,74 @@ export const FOODS: Food[] = [
         "amt": 3.0,
         "desc": "oz",
         "gm": 85.0
+      }
+    ]
+  },
+  {
+    "word": "MILKSHAKECHOC",
+    "display": "Milkshake Choc",
+    "groups": [
+      "dairy",
+      "beverage"
+    ],
+    "ndb": "1110",
+    "desc": "Milk shakes, thick chocolate",
+    "cal": 119.0,
+    "pro": 3.0,
+    "fat": 2.7,
+    "carb": 21.1,
+    "fib": 0.3,
+    "h2o": 72.2,
+    "sug": 20.9,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 28.4
+      },
+      {
+        "amt": 1.0,
+        "desc": "container (10.6 oz)",
+        "gm": 300.0
+      }
+    ]
+  },
+  {
+    "word": "MILKSHAKEVANILLA",
+    "display": "Milkshake Vanilla",
+    "groups": [
+      "dairy",
+      "beverage"
+    ],
+    "ndb": "1111",
+    "desc": "Milk shakes, thick vanilla",
+    "cal": 112.0,
+    "pro": 3.9,
+    "fat": 3.0,
+    "carb": 17.8,
+    "fib": 0.0,
+    "h2o": 74.5,
+    "sug": 17.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 28.4
+      },
+      {
+        "amt": 1.0,
+        "desc": "container (11 oz)",
+        "gm": 313.0
       }
     ]
   },
@@ -20254,6 +21922,34 @@ export const FOODS: Food[] = [
         "amt": 6.0,
         "desc": "slices",
         "gm": 170.0
+      }
+    ]
+  },
+  {
+    "word": "MOZZARELLASKIM",
+    "display": "Mozzarella Part Skim",
+    "groups": [
+      "dairy"
+    ],
+    "ndb": "1028",
+    "desc": "Cheese, mozzarella, part skim milk",
+    "cal": 254.0,
+    "pro": 24.3,
+    "fat": 15.9,
+    "carb": 2.8,
+    "fib": 0.0,
+    "h2o": 53.8,
+    "sug": 1.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
       }
     ]
   },
@@ -21073,6 +22769,34 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "cup",
         "gm": 160.0
+      }
+    ]
+  },
+  {
+    "word": "NOODLERICE",
+    "display": "Rice Noodles",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20134",
+    "desc": "Rice noodles, cooked",
+    "cal": 108.0,
+    "pro": 1.8,
+    "fat": 0.2,
+    "carb": 24.0,
+    "fib": 1.0,
+    "h2o": 73.8,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 176.0
       }
     ]
   },
@@ -23426,6 +25150,76 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "PEANUTBUTTERCHUNK",
+    "display": "Peanut Butter Chunky",
+    "groups": [
+      "legume",
+      "nuts",
+      "fats"
+    ],
+    "ndb": "16097",
+    "desc": "Peanut butter, chunk style, with salt",
+    "cal": 589.0,
+    "pro": 24.1,
+    "fat": 49.9,
+    "carb": 21.6,
+    "fib": 8.0,
+    "h2o": 1.1,
+    "sug": 8.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "tbsp",
+        "gm": 32.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 258.0
+      }
+    ]
+  },
+  {
+    "word": "PEANUTDRYSALT",
+    "display": "Peanuts Dry Roasted Salted",
+    "groups": [
+      "legume",
+      "nuts",
+      "fats"
+    ],
+    "ndb": "16090",
+    "desc": "Peanuts, all types, dry-roasted, with salt",
+    "cal": 587.0,
+    "pro": 24.4,
+    "fat": 49.7,
+    "carb": 21.3,
+    "fib": 8.4,
+    "h2o": 1.8,
+    "sug": 4.9,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "peanut",
+        "gm": 1.0
+      }
+    ]
+  },
+  {
     "word": "PEANUTOIL",
     "display": "Peanut Oil",
     "groups": [
@@ -23460,6 +25254,76 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "tsp",
         "gm": 4.5
+      }
+    ]
+  },
+  {
+    "word": "PEANUTOILNOSALT",
+    "display": "Peanut Oil Roasted no salt",
+    "groups": [
+      "legume",
+      "nuts",
+      "fats"
+    ],
+    "ndb": "16389",
+    "desc": "Peanuts, all types, oil-roasted, without salt",
+    "cal": 599.0,
+    "pro": 28.0,
+    "fat": 52.5,
+    "carb": 15.3,
+    "fib": 9.4,
+    "h2o": 1.4,
+    "sug": 4.2,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup,",
+        "gm": 144.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz shelled (32 nuts)",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "PEANUTOILSALT",
+    "display": "Peanut Oil Roasted Salted",
+    "groups": [
+      "legume",
+      "nuts",
+      "fats"
+    ],
+    "ndb": "16089",
+    "desc": "Peanuts, all types, oil-roasted, with salt",
+    "cal": 599.0,
+    "pro": 28.0,
+    "fat": 52.5,
+    "carb": 15.3,
+    "fib": 9.4,
+    "h2o": 1.4,
+    "sug": 4.2,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, chopped",
+        "gm": 144.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz shelled (32 nuts)",
+        "gm": 28.35
       }
     ]
   },
@@ -28287,6 +30151,35 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "RICESPANISH",
+    "display": "Spanish Rice",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "36417",
+    "desc": "Restaurant, Mexican, spanish rice",
+    "cal": 185.0,
+    "pro": 3.3,
+    "fat": 5.3,
+    "carb": 31.2,
+    "fib": 1.2,
+    "h2o": 58.5,
+    "sug": 1.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 116.0
+      }
+    ]
+  },
+  {
     "word": "RICEWHITE",
     "display": "White Rice",
     "groups": [
@@ -28339,6 +30232,44 @@ export const FOODS: Food[] = [
         "amt": 0.5,
         "desc": "cup",
         "gm": 124.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 246.0
+      }
+    ]
+  },
+  {
+    "word": "RICOTTASKIM",
+    "display": "Ricotta Part Skim",
+    "groups": [
+      "dairy"
+    ],
+    "ndb": "1037",
+    "desc": "Cheese, ricotta, part skim milk",
+    "cal": 138.0,
+    "pro": 11.4,
+    "fat": 7.9,
+    "carb": 5.1,
+    "fib": 0.0,
+    "h2o": 74.4,
+    "sug": 0.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.5,
+        "desc": "cup",
+        "gm": 124.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
       },
       {
         "amt": 1.0,
@@ -30855,6 +32786,39 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "SOUPCHICKENRICE",
+    "display": "Soup Chicken Rice",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "6022",
+    "desc": "Soup, chicken rice, canned, chunky, ready-to-serve",
+    "cal": 53.0,
+    "pro": 5.1,
+    "fat": 1.3,
+    "carb": 5.4,
+    "fib": 0.4,
+    "h2o": 86.8,
+    "sug": 0.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 240.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "can 19 oz",
+        "gm": 539.0
+      }
+    ]
+  },
+  {
     "word": "SOUPCHICKNOODLE",
     "display": "Soup Chicken Noodle",
     "groups": [
@@ -31015,6 +32979,40 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "SOUPRAMENNOODLE",
+    "display": "Soup Ramen Noodle",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "6583",
+    "desc": "Soup, ramen noodle, any flavor, dry",
+    "cal": 440.0,
+    "pro": 10.2,
+    "fat": 17.6,
+    "carb": 60.3,
+    "fib": 2.9,
+    "h2o": 6.5,
+    "sug": 2.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package without flavor packet",
+        "gm": 81.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "packet",
+        "gm": 5.8
+      }
+    ]
+  },
+  {
     "word": "SOUPTOMATO",
     "display": "Soup Tomato",
     "groups": [
@@ -31039,6 +33037,39 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "container",
         "gm": 305.0
+      }
+    ]
+  },
+  {
+    "word": "SOUPTOMATORICE",
+    "display": "Soup Tomato Rice",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "6463",
+    "desc": "Soup, tomato rice, canned, prepared with equal volume water",
+    "cal": 47.0,
+    "pro": 0.8,
+    "fat": 1.1,
+    "carb": 8.5,
+    "fib": 0.7,
+    "h2o": 88.5,
+    "sug": 3.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 247.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "can (11 oz), prepared",
+        "gm": 600.0
       }
     ]
   },
@@ -32333,6 +34364,34 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "SUCRALOSE",
+    "display": "Sweetener Sucralose",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "19868",
+    "desc": "Sweeteners, tabletop, sucralose, SPLENDA packets",
+    "cal": 336.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 91.2,
+    "fib": 0.0,
+    "h2o": 8.8,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 1 packet",
+        "gm": 1.0
+      }
+    ]
+  },
+  {
     "word": "SUET",
     "display": "Suet",
     "groups": [
@@ -32691,7 +34750,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "SWEETENER",
-    "display": "Sweetener",
+    "display": "Sweetener Aspartame",
     "groups": [
       "spice"
     ],
@@ -32886,7 +34945,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "SYRUPAGAVE",
-    "display": "Syrup Agave",
+    "display": "Sweetener Agave Syrup",
     "groups": [
       "spice"
     ],
@@ -33252,6 +35311,72 @@ export const FOODS: Food[] = [
         "amt": 1.5,
         "desc": "cup",
         "gm": 198.0
+      }
+    ]
+  },
+  {
+    "word": "TACOGREENSAUCE",
+    "display": "Taco Green Sauce",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "6600",
+    "desc": "PACE, Green Taco Sauce",
+    "cal": 25.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 6.2,
+    "fib": 0.0,
+    "h2o": 90.7,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 16.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "tbsp",
+        "gm": 16.0
+      }
+    ]
+  },
+  {
+    "word": "TACOREDSAUCE",
+    "display": "Taco Red Sauce",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "6604",
+    "desc": "PACE, Red Taco Sauce",
+    "cal": 50.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 12.5,
+    "fib": 0.0,
+    "h2o": 85.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 16.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 16.0
       }
     ]
   },
@@ -34388,6 +36513,95 @@ export const FOODS: Food[] = [
     "fib": 5.3,
     "h2o": 1.7,
     "sug": 0.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "TORTILLACHIPNACHO",
+    "display": "Tortilla Chips Nacho",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "19057",
+    "desc": "Snacks, tortilla chips, nacho cheese",
+    "cal": 519.0,
+    "pro": 7.4,
+    "fat": 27.4,
+    "carb": 60.8,
+    "fib": 5.1,
+    "h2o": 1.7,
+    "sug": 2.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "TORTILLACHIPWHITE",
+    "display": "Tortilla Chips White Corn",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "19056",
+    "desc": "Snacks, tortilla chips, plain, white corn, salted",
+    "cal": 472.0,
+    "pro": 7.1,
+    "fat": 20.7,
+    "carb": 67.8,
+    "fib": 5.4,
+    "h2o": 2.6,
+    "sug": 0.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "bag",
+        "gm": 213.0
+      }
+    ]
+  },
+  {
+    "word": "TORTILLACHIPYELLOW",
+    "display": "Tortilla Chips Yellow Corn",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "25028",
+    "desc": "Tortilla chips, yellow, plain, salted",
+    "cal": 497.0,
+    "pro": 6.6,
+    "fat": 22.3,
+    "carb": 67.4,
+    "fib": 4.7,
+    "h2o": 1.9,
+    "sug": 1.2,
     "portions": [
       {
         "amt": 1.0,
@@ -37151,2126 +39365,6 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "toast, Gerber Zwieback",
         "gm": 7.0
-      }
-    ]
-  },
-  {
-    "word": "CHIPSCASSAVA",
-    "display": "Cassava Chips",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "25050",
-    "desc": "Snacks, yucca (cassava) chips, salted",
-    "cal": 515.0,
-    "pro": 1.3,
-    "fat": 25.9,
-    "carb": 69.2,
-    "fib": 3.7,
-    "h2o": 2.8,
-    "sug": 3.4,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      },
-      {
-        "amt": 10.0,
-        "desc": "chips",
-        "gm": 17.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bag",
-        "gm": 105.0
-      }
-    ]
-  },
-  {
-    "word": "CHIPSCORNRANCH",
-    "display": "Tortilla Chips Ranch",
-    "groups": [
-      "grain"
-    ],
-    "ndb": "19058",
-    "desc": "Snacks, tortilla chips, ranch-flavor",
-    "cal": 501.0,
-    "pro": 7.2,
-    "fat": 24.6,
-    "carb": 62.7,
-    "fib": 4.0,
-    "h2o": 3.1,
-    "sug": 3.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      },
-      {
-        "amt": 1.0,
-        "desc": "bag (7 oz)",
-        "gm": 198.0
-      }
-    ]
-  },
-  {
-    "word": "CHIPSCORNUNSALTED",
-    "display": "Tortilla Chips Unsalted",
-    "groups": [
-      "grain"
-    ],
-    "ndb": "43364",
-    "desc": "Snacks, tortilla chips, unsalted, white corn",
-    "cal": 503.0,
-    "pro": 7.8,
-    "fat": 23.4,
-    "carb": 65.3,
-    "fib": 5.3,
-    "h2o": 2.1,
-    "sug": 1.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 26.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bag, single serving",
-        "gm": 28.0
-      },
-      {
-        "amt": 10.0,
-        "desc": "chips",
-        "gm": 18.0
-      }
-    ]
-  },
-  {
-    "word": "CHIPSPITA",
-    "display": "Pita Chips",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "25037",
-    "desc": "Snacks, pita chips, salted",
-    "cal": 457.0,
-    "pro": 11.8,
-    "fat": 15.2,
-    "carb": 68.3,
-    "fib": 3.8,
-    "h2o": 2.0,
-    "sug": 4.8,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      },
-      {
-        "amt": 1.0,
-        "desc": "bag",
-        "gm": 262.0
-      }
-    ]
-  },
-  {
-    "word": "CHIPSPLANTAIN",
-    "display": "Plantain Chips",
-    "groups": [
-      "fruit"
-    ],
-    "ndb": "25027",
-    "desc": "Snacks, plantain chips, salted",
-    "cal": 531.0,
-    "pro": 2.3,
-    "fat": 29.6,
-    "carb": 63.8,
-    "fib": 3.5,
-    "h2o": 2.1,
-    "sug": 0.9,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      }
-    ]
-  },
-  {
-    "word": "CHIPSPOTATOBBQ",
-    "display": "Potato Chips BBQ",
-    "groups": [
-      "vegetable"
-    ],
-    "ndb": "19042",
-    "desc": "Snacks, potato chips, barbecue-flavor",
-    "cal": 487.0,
-    "pro": 6.5,
-    "fat": 31.1,
-    "carb": 55.9,
-    "fib": 3.8,
-    "h2o": 2.5,
-    "sug": 5.5,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      },
-      {
-        "amt": 1.0,
-        "desc": "bag (7 oz)",
-        "gm": 198.0
-      }
-    ]
-  },
-  {
-    "word": "CHIPSPOTATOSOUR",
-    "display": "Potato Chips Sour Cream",
-    "groups": [
-      "vegetable"
-    ],
-    "ndb": "19043",
-    "desc": "Snacks, potato chips, sour-cream-and-onion-flavor",
-    "cal": 531.0,
-    "pro": 8.1,
-    "fat": 33.9,
-    "carb": 51.5,
-    "fib": 5.2,
-    "h2o": 1.8,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      },
-      {
-        "amt": 1.0,
-        "desc": "bag (7 oz)",
-        "gm": 198.0
-      }
-    ]
-  },
-  {
-    "word": "CHIPSSWEETPOTATO",
-    "display": "Sweet Potato Chips",
-    "groups": [
-      "vegetable"
-    ],
-    "ndb": "25012",
-    "desc": "Snacks, sweet potato chips, unsalted",
-    "cal": 532.0,
-    "pro": 2.9,
-    "fat": 32.4,
-    "carb": 56.8,
-    "fib": 8.8,
-    "h2o": 4.5,
-    "sug": 8.8,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      },
-      {
-        "amt": 1.0,
-        "desc": "Bag",
-        "gm": 28.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "package",
-        "gm": 34.0
-      }
-    ]
-  },
-  {
-    "word": "CHIPSTARO",
-    "display": "Taro Chips",
-    "groups": [
-      "vegetable"
-    ],
-    "ndb": "19524",
-    "desc": "Snacks, taro chips",
-    "cal": 498.0,
-    "pro": 2.3,
-    "fat": 24.9,
-    "carb": 68.1,
-    "fib": 7.2,
-    "h2o": 2.0,
-    "sug": 3.8,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      },
-      {
-        "amt": 10.0,
-        "desc": "chips",
-        "gm": 23.0
-      }
-    ]
-  },
-  {
-    "word": "CHIPSVEGGIE",
-    "display": "Vegetable Chips",
-    "groups": [
-      "vegetable"
-    ],
-    "ndb": "25040",
-    "desc": "Snacks, vegetable chips, made from garden vegetables",
-    "cal": 473.0,
-    "pro": 5.3,
-    "fat": 23.3,
-    "carb": 60.4,
-    "fib": 4.7,
-    "h2o": 6.3,
-    "sug": 4.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      }
-    ]
-  },
-  {
-    "word": "TORTILLACHIPNACHO",
-    "display": "Tortilla Chips Nacho",
-    "groups": [
-      "grain"
-    ],
-    "ndb": "19057",
-    "desc": "Snacks, tortilla chips, nacho cheese",
-    "cal": 519.0,
-    "pro": 7.4,
-    "fat": 27.4,
-    "carb": 60.8,
-    "fib": 5.1,
-    "h2o": 1.7,
-    "sug": 2.6,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      }
-    ]
-  },
-  {
-    "word": "TORTILLACHIPWHITE",
-    "display": "Tortilla Chips White Corn",
-    "groups": [
-      "grain"
-    ],
-    "ndb": "19056",
-    "desc": "Snacks, tortilla chips, plain, white corn, salted",
-    "cal": 472.0,
-    "pro": 7.1,
-    "fat": 20.7,
-    "carb": 67.8,
-    "fib": 5.4,
-    "h2o": 2.6,
-    "sug": 0.8,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      },
-      {
-        "amt": 1.0,
-        "desc": "bag",
-        "gm": 213.0
-      }
-    ]
-  },
-  {
-    "word": "TORTILLACHIPYELLOW",
-    "display": "Tortilla Chips Yellow Corn",
-    "groups": [
-      "grain"
-    ],
-    "ndb": "25028",
-    "desc": "Tortilla chips, yellow, plain, salted",
-    "cal": 497.0,
-    "pro": 6.6,
-    "fat": 22.3,
-    "carb": 67.4,
-    "fib": 4.7,
-    "h2o": 1.9,
-    "sug": 1.2,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      }
-    ]
-  },
-  {
-    "word": "BANANACHIPS",
-    "display": "Bananachips",
-    "groups": [
-      "fruit",
-      "prepared"
-    ],
-    "ndb": "19400",
-    "desc": "Snacks, banana chips",
-    "cal": 519.0,
-    "pro": 2.3,
-    "fat": 33.6,
-    "carb": 58.4,
-    "fib": 7.7,
-    "h2o": 4.3,
-    "sug": 35.3,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      },
-      {
-        "amt": 3.0,
-        "desc": "oz",
-        "gm": 85.0
-      },
-      {
-        "amt": 1.5,
-        "desc": "oz",
-        "gm": 42.0
-      }
-    ]
-  },
-  {
-    "word": "ENCHILADACHEESE",
-    "display": "Enchiladas Cheese",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "36050",
-    "desc": "Restaurant, Mexican, cheese enchilada",
-    "cal": 273.0,
-    "pro": 11.2,
-    "fat": 18.5,
-    "carb": 15.4,
-    "fib": 1.9,
-    "h2o": 52.4,
-    "sug": 2.6,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving serving size varied from 1 to 3 enchiladas",
-        "gm": 244.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "enchilada",
-        "gm": 137.0
-      },
-      {
-        "amt": 2.0,
-        "desc": "enchilada",
-        "gm": 257.0
-      },
-      {
-        "amt": 3.0,
-        "desc": "enchilada",
-        "gm": 365.0
-      }
-    ]
-  },
-  {
-    "word": "ENCHILADASAUCE",
-    "display": "Enchilada Sauce",
-    "groups": [
-      "spice"
-    ],
-    "ndb": "27063",
-    "desc": "Sauce, enchilada, red, mild, ready to serve",
-    "cal": 30.0,
-    "pro": 0.6,
-    "fat": 0.9,
-    "carb": 4.9,
-    "fib": 0.5,
-    "h2o": 91.8,
-    "sug": 1.8,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 0.25,
-        "desc": "cup",
-        "gm": 56.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 224.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "can",
-        "gm": 283.0
-      }
-    ]
-  },
-  {
-    "word": "TACOREDSAUCE",
-    "display": "Taco Red Sauce",
-    "groups": [
-      "spice"
-    ],
-    "ndb": "6604",
-    "desc": "PACE, Red Taco Sauce",
-    "cal": 50.0,
-    "pro": 0.0,
-    "fat": 0.0,
-    "carb": 12.5,
-    "fib": 0.0,
-    "h2o": 85.3,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "tbsp",
-        "gm": 16.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving",
-        "gm": 16.0
-      }
-    ]
-  },
-  {
-    "word": "TACOGREENSAUCE",
-    "display": "Taco Green Sauce",
-    "groups": [
-      "spice"
-    ],
-    "ndb": "6600",
-    "desc": "PACE, Green Taco Sauce",
-    "cal": 25.0,
-    "pro": 0.0,
-    "fat": 0.0,
-    "carb": 6.2,
-    "fib": 0.0,
-    "h2o": 90.7,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving",
-        "gm": 16.0
-      },
-      {
-        "amt": 2.0,
-        "desc": "tbsp",
-        "gm": 16.0
-      }
-    ]
-  },
-  {
-    "word": "RICESPANISH",
-    "display": "Spanish Rice",
-    "groups": [
-      "grain",
-      "prepared"
-    ],
-    "ndb": "36417",
-    "desc": "Restaurant, Mexican, spanish rice",
-    "cal": 185.0,
-    "pro": 3.3,
-    "fat": 5.3,
-    "carb": 31.2,
-    "fib": 1.2,
-    "h2o": 58.5,
-    "sug": 1.3,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 116.0
-      }
-    ]
-  },
-  {
-    "word": "BREADRICEBRAN",
-    "display": "Bread Rice Bran",
-    "groups": [
-      "grain",
-      "prepared"
-    ],
-    "ndb": "18059",
-    "desc": "Bread, rice bran",
-    "cal": 243.0,
-    "pro": 8.9,
-    "fat": 4.6,
-    "carb": 43.5,
-    "fib": 4.9,
-    "h2o": 41.0,
-    "sug": 4.7,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      },
-      {
-        "amt": 1.0,
-        "desc": "slice",
-        "gm": 27.0
-      }
-    ]
-  },
-  {
-    "word": "CRACKERRICEBROWN",
-    "display": "Cracker Brown Rice",
-    "groups": [
-      "grain"
-    ],
-    "ndb": "19051",
-    "desc": "Snacks, rice cracker brown rice, plain",
-    "cal": 387.0,
-    "pro": 8.2,
-    "fat": 2.8,
-    "carb": 81.5,
-    "fib": 4.2,
-    "h2o": 5.8,
-    "sug": 0.9,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cake",
-        "gm": 9.0
-      },
-      {
-        "amt": 2.0,
-        "desc": "cakes",
-        "gm": 18.0
-      }
-    ]
-  },
-  {
-    "word": "CEREALRICECREAM",
-    "display": "Cerealricecream",
-    "groups": [
-      "grain"
-    ],
-    "ndb": "8168",
-    "desc": "Cereals, CREAM OF RICE, cooked with water, with salt",
-    "cal": 52.0,
-    "pro": 0.9,
-    "fat": 0.1,
-    "carb": 11.5,
-    "fib": 0.1,
-    "h2o": 87.5,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 244.0
-      },
-      {
-        "amt": 0.75,
-        "desc": "cup",
-        "gm": 183.0
-      }
-    ]
-  },
-  {
-    "word": "SOUPCHICKENRICE",
-    "display": "Soup Chicken Rice",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "6022",
-    "desc": "Soup, chicken rice, canned, chunky, ready-to-serve",
-    "cal": 53.0,
-    "pro": 5.1,
-    "fat": 1.3,
-    "carb": 5.4,
-    "fib": 0.4,
-    "h2o": 86.8,
-    "sug": 0.6,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 240.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "can 19 oz",
-        "gm": 539.0
-      }
-    ]
-  },
-  {
-    "word": "SOUPTOMATORICE",
-    "display": "Soup Tomato Rice",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "6463",
-    "desc": "Soup, tomato rice, canned, prepared with equal volume water",
-    "cal": 47.0,
-    "pro": 0.8,
-    "fat": 1.1,
-    "carb": 8.5,
-    "fib": 0.7,
-    "h2o": 88.5,
-    "sug": 3.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 247.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "can (11 oz), prepared",
-        "gm": 600.0
-      }
-    ]
-  },
-  {
-    "word": "NOODLERICE",
-    "display": "Rice Noodles",
-    "groups": [
-      "grain"
-    ],
-    "ndb": "20134",
-    "desc": "Rice noodles, cooked",
-    "cal": 108.0,
-    "pro": 1.8,
-    "fat": 0.2,
-    "carb": 24.0,
-    "fib": 1.0,
-    "h2o": 73.8,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 176.0
-      }
-    ]
-  },
-  {
-    "word": "SOUPRAMENNOODLE",
-    "display": "Soup Ramen Noodle",
-    "groups": [
-      "grain",
-      "prepared"
-    ],
-    "ndb": "6583",
-    "desc": "Soup, ramen noodle, any flavor, dry",
-    "cal": 440.0,
-    "pro": 10.2,
-    "fat": 17.6,
-    "carb": 60.3,
-    "fib": 2.9,
-    "h2o": 6.5,
-    "sug": 2.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "package without flavor packet",
-        "gm": 81.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "packet",
-        "gm": 5.8
-      }
-    ]
-  },
-  {
-    "word": "MAYOSOY",
-    "display": "Mayonnaise Soy",
-    "groups": [
-      "fats"
-    ],
-    "ndb": "4026",
-    "desc": "Salad dressing, mayonnaise, soybean and safflower oil, with salt",
-    "cal": 717.0,
-    "pro": 1.1,
-    "fat": 79.4,
-    "carb": 2.7,
-    "fib": 0.0,
-    "h2o": 15.3,
-    "sug": 0.5,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "tablespoon",
-        "gm": 13.8
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 220.0
-      }
-    ]
-  },
-  {
-    "word": "MAYOCHOLESTEROL",
-    "display": "Mayo no Cholesterol",
-    "groups": [
-      "fats"
-    ],
-    "ndb": "43598",
-    "desc": "Mayonnaise dressing, no cholesterol",
-    "cal": 688.0,
-    "pro": 0.0,
-    "fat": 77.8,
-    "carb": 0.3,
-    "fib": 0.0,
-    "h2o": 21.7,
-    "sug": 0.3,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "tbsp",
-        "gm": 15.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 239.0
-      }
-    ]
-  },
-  {
-    "word": "MAYOSMART",
-    "display": "Mayo Smart Balance",
-    "groups": [
-      "fats"
-    ],
-    "ndb": "4689",
-    "desc": "Salad Dressing, mayonnaise, light, SMART BALANCE, Omega Plus light",
-    "cal": 333.0,
-    "pro": 1.5,
-    "fat": 34.2,
-    "carb": 9.4,
-    "fib": 0.2,
-    "h2o": 52.4,
-    "sug": 5.4,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "tbsp (1 NLEA serving)",
-        "gm": 14.0
-      }
-    ]
-  },
-  {
-    "word": "MARGARINESMART",
-    "display": "Margarine Smart Balance",
-    "groups": [
-      "fats"
-    ],
-    "ndb": "4677",
-    "desc": "Margarine-like spread, SMART BALANCE Omega Plus Spread (with plant sterols & fish oil)",
-    "cal": 605.0,
-    "pro": 0.1,
-    "fat": 71.0,
-    "carb": 0.2,
-    "fib": 0.0,
-    "h2o": 27.9,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "tablespoon",
-        "gm": 14.0
-      }
-    ]
-  },
-  {
-    "word": "MAYOLIGHT",
-    "display": "Mayo Light",
-    "groups": [
-      "fats"
-    ],
-    "ndb": "4641",
-    "desc": "Salad dressing, mayonnaise, light",
-    "cal": 238.0,
-    "pro": 0.4,
-    "fat": 22.2,
-    "carb": 9.2,
-    "fib": 0.0,
-    "h2o": 66.1,
-    "sug": 3.6,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "tablespoon",
-        "gm": 15.0
-      }
-    ]
-  },
-  {
-    "word": "MAYOREGULAR",
-    "display": "Mayo Regular",
-    "groups": [
-      "spice"
-    ],
-    "ndb": "4025",
-    "desc": "Salad dressing, mayonnaise, regular",
-    "cal": 680.0,
-    "pro": 1.0,
-    "fat": 74.8,
-    "carb": 0.6,
-    "fib": 0.0,
-    "h2o": 21.6,
-    "sug": 0.6,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "tbsp",
-        "gm": 13.8
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 220.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "packet",
-        "gm": 10.0
-      }
-    ]
-  },
-  {
-    "word": "BUTTERWHIP",
-    "display": "Butter Whipped",
-    "groups": [
-      "fats",
-      "spice",
-      "dairy"
-    ],
-    "ndb": "1002",
-    "desc": "Butter, whipped, with salt",
-    "cal": 718.0,
-    "pro": 0.5,
-    "fat": 78.3,
-    "carb": 2.9,
-    "fib": 0.0,
-    "h2o": 16.7,
-    "sug": 0.1,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "pat (1\" sq, 1/3\" high)",
-        "gm": 3.8
-      },
-      {
-        "amt": 1.0,
-        "desc": "tbsp",
-        "gm": 9.4
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 151.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "stick",
-        "gm": 76.0
-      }
-    ]
-  },
-  {
-    "word": "CHOC45",
-    "display": "Choc 45-59%",
-    "groups": [
-      "spice"
-    ],
-    "ndb": "19902",
-    "desc": "Chocolate, dark, 45- 59% cacao solids",
-    "cal": 546.0,
-    "pro": 4.9,
-    "fat": 31.3,
-    "carb": 61.2,
-    "fib": 7.0,
-    "h2o": 1.0,
-    "sug": 47.9,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar",
-        "gm": 162.0
-      }
-    ]
-  },
-  {
-    "word": "CHOC60",
-    "display": "Choc 60-69%",
-    "groups": [
-      "spice"
-    ],
-    "ndb": "19903",
-    "desc": "Chocolate, dark, 60-69% cacao solids",
-    "cal": 579.0,
-    "pro": 6.1,
-    "fat": 38.3,
-    "carb": 52.4,
-    "fib": 8.0,
-    "h2o": 1.2,
-    "sug": 36.7,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar",
-        "gm": 112.0
-      }
-    ]
-  },
-  {
-    "word": "CHOC70",
-    "display": "Choc 70-85%",
-    "groups": [
-      "spice"
-    ],
-    "ndb": "19904",
-    "desc": "Chocolate, dark, 70-85% cacao solids",
-    "cal": 598.0,
-    "pro": 7.8,
-    "fat": 42.6,
-    "carb": 45.9,
-    "fib": 10.9,
-    "h2o": 1.4,
-    "sug": 24.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar",
-        "gm": 101.0
-      }
-    ]
-  },
-  {
-    "word": "CHOCBAKING",
-    "display": "Choc Baking",
-    "groups": [
-      "spice"
-    ],
-    "ndb": "19078",
-    "desc": "Baking chocolate, unsweetened, squares",
-    "cal": 642.0,
-    "pro": 14.3,
-    "fat": 52.3,
-    "carb": 28.4,
-    "fib": 16.6,
-    "h2o": 1.3,
-    "sug": 0.9,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz square Bakers",
-        "gm": 29.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup, grated",
-        "gm": 132.0
-      },
-      {
-        "amt": 0.5,
-        "desc": "oz Hersheys",
-        "gm": 14.2
-      }
-    ]
-  },
-  {
-    "word": "CHOCBEVSODA",
-    "display": "Choc Soda",
-    "groups": [
-      "beverage"
-    ],
-    "ndb": "14552",
-    "desc": "Carbonated beverage, chocolate-flavored soda",
-    "cal": 42.0,
-    "pro": 0.0,
-    "fat": 0.0,
-    "carb": 10.7,
-    "fib": 0.0,
-    "h2o": 89.2,
-    "sug": 10.7,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "fl oz",
-        "gm": 31.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "can or bottle (16 fl oz)",
-        "gm": 492.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "can (12 fl oz)",
-        "gm": 369.0
-      }
-    ]
-  },
-  {
-    "word": "CHOCFUDGE",
-    "display": "Choc Fudge",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "19100",
-    "desc": "Candies, fudge, chocolate, prepared-from-recipe",
-    "cal": 411.0,
-    "pro": 2.4,
-    "fat": 10.4,
-    "carb": 76.4,
-    "fib": 1.7,
-    "h2o": 9.8,
-    "sug": 73.1,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "piece",
-        "gm": 17.0
-      }
-    ]
-  },
-  {
-    "word": "CHOCFUDGENUTS",
-    "display": "Choc Fudge with Nuts",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "19101",
-    "desc": "Candies, fudge, chocolate, with nuts, prepared-from-recipe",
-    "cal": 461.0,
-    "pro": 4.4,
-    "fat": 18.9,
-    "carb": 67.9,
-    "fib": 2.5,
-    "h2o": 7.7,
-    "sug": 63.4,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      }
-    ]
-  },
-  {
-    "word": "CHOCHOT",
-    "display": "Choc Hot",
-    "groups": [
-      "beverage"
-    ],
-    "ndb": "1105",
-    "desc": "Milk, chocolate beverage, hot cocoa, homemade",
-    "cal": 77.0,
-    "pro": 3.5,
-    "fat": 2.3,
-    "carb": 10.7,
-    "fib": 1.0,
-    "h2o": 82.5,
-    "sug": 9.7,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 250.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "fl oz",
-        "gm": 31.2
-      }
-    ]
-  },
-  {
-    "word": "CHOCMILKCANDY",
-    "display": "Milk Choc Candy",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "19120",
-    "desc": "Candies, milk chocolate",
-    "cal": 535.0,
-    "pro": 7.7,
-    "fat": 29.7,
-    "carb": 59.4,
-    "fib": 3.4,
-    "h2o": 1.5,
-    "sug": 51.5,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar, miniature",
-        "gm": 7.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar (1.55 oz)",
-        "gm": 44.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup chips",
-        "gm": 168.0
-      }
-    ]
-  },
-  {
-    "word": "CHOCWHITE",
-    "display": "Choc White",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "19087",
-    "desc": "Candies, white chocolate",
-    "cal": 539.0,
-    "pro": 5.9,
-    "fat": 32.1,
-    "carb": 59.2,
-    "fib": 0.2,
-    "h2o": 1.3,
-    "sug": 59.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar (3 oz)",
-        "gm": 85.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "tbsp",
-        "gm": 14.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup chips",
-        "gm": 170.0
-      }
-    ]
-  },
-  {
-    "word": "COTTAGE2",
-    "display": "Cottage Cheese 2%",
-    "groups": [
-      "dairy"
-    ],
-    "ndb": "1015",
-    "desc": "Cheese, cottage, lowfat, 2% milkfat",
-    "cal": 81.0,
-    "pro": 10.4,
-    "fat": 2.3,
-    "carb": 4.8,
-    "fib": 0.0,
-    "h2o": 81.2,
-    "sug": 4.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 4.0,
-        "desc": "oz",
-        "gm": 113.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup (not packed)",
-        "gm": 226.0
-      }
-    ]
-  },
-  {
-    "word": "JAMNOSUGAR",
-    "display": "Jam Preserves no Sugar",
-    "groups": [
-      "prepared",
-      "spice"
-    ],
-    "ndb": "43028",
-    "desc": "Jams and preserves, no sugar (with sodium saccharin), any flavor",
-    "cal": 132.0,
-    "pro": 0.3,
-    "fat": 0.3,
-    "carb": 53.4,
-    "fib": 2.5,
-    "h2o": 45.8,
-    "sug": 37.8,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 224.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "tbsp",
-        "gm": 14.0
-      }
-    ]
-  },
-  {
-    "word": "MILK2",
-    "display": "Milk 2%",
-    "groups": [
-      "dairy",
-      "beverage"
-    ],
-    "ndb": "1080",
-    "desc": "Milk, reduced fat, fluid, 2% milkfat, with added nonfat milk solids and vitamin A and vitamin D",
-    "cal": 51.0,
-    "pro": 3.5,
-    "fat": 1.9,
-    "carb": 5.0,
-    "fib": 0.0,
-    "h2o": 88.9,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 245.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "quart",
-        "gm": 980.0
-      }
-    ]
-  },
-  {
-    "word": "MILKBUFFALO",
-    "display": "Milk Buffalo",
-    "groups": [
-      "dairy",
-      "beverage"
-    ],
-    "ndb": "1108",
-    "desc": "Milk, indian buffalo, fluid",
-    "cal": 97.0,
-    "pro": 3.8,
-    "fat": 6.9,
-    "carb": 5.2,
-    "fib": 0.0,
-    "h2o": 83.4,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 244.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "quart",
-        "gm": 976.0
-      }
-    ]
-  },
-  {
-    "word": "MILKCHOC",
-    "display": "Milk Choc",
-    "groups": [
-      "dairy",
-      "beverage"
-    ],
-    "ndb": "14182",
-    "desc": "Beverages, Chocolate syrup, prepared with whole milk",
-    "cal": 90.0,
-    "pro": 3.1,
-    "fat": 3.0,
-    "carb": 12.8,
-    "fib": 0.3,
-    "h2o": 80.5,
-    "sug": 11.3,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup (8 fl oz)",
-        "gm": 282.0
-      }
-    ]
-  },
-  {
-    "word": "MILKSHAKECHOC",
-    "display": "Milkshake Choc",
-    "groups": [
-      "dairy",
-      "beverage"
-    ],
-    "ndb": "1110",
-    "desc": "Milk shakes, thick chocolate",
-    "cal": 119.0,
-    "pro": 3.0,
-    "fat": 2.7,
-    "carb": 21.1,
-    "fib": 0.3,
-    "h2o": 72.2,
-    "sug": 20.9,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "fl oz",
-        "gm": 28.4
-      },
-      {
-        "amt": 1.0,
-        "desc": "container (10.6 oz)",
-        "gm": 300.0
-      }
-    ]
-  },
-  {
-    "word": "MILKSHAKEVANILLA",
-    "display": "Milkshake Vanilla",
-    "groups": [
-      "dairy",
-      "beverage"
-    ],
-    "ndb": "1111",
-    "desc": "Milk shakes, thick vanilla",
-    "cal": 112.0,
-    "pro": 3.9,
-    "fat": 3.0,
-    "carb": 17.8,
-    "fib": 0.0,
-    "h2o": 74.5,
-    "sug": 17.8,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "fl oz",
-        "gm": 28.4
-      },
-      {
-        "amt": 1.0,
-        "desc": "container (11 oz)",
-        "gm": 313.0
-      }
-    ]
-  },
-  {
-    "word": "MOZZARELLASKIM",
-    "display": "Mozzarella Part Skim",
-    "groups": [
-      "dairy"
-    ],
-    "ndb": "1028",
-    "desc": "Cheese, mozzarella, part skim milk",
-    "cal": 254.0,
-    "pro": 24.3,
-    "fat": 15.9,
-    "carb": 2.8,
-    "fib": 0.0,
-    "h2o": 53.8,
-    "sug": 1.1,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      }
-    ]
-  },
-  {
-    "word": "PEANUTBUTTERCHUNK",
-    "display": "Peanut Butter Chunky",
-    "groups": [
-      "legume",
-      "nuts",
-      "fats"
-    ],
-    "ndb": "16097",
-    "desc": "Peanut butter, chunk style, with salt",
-    "cal": 589.0,
-    "pro": 24.1,
-    "fat": 49.9,
-    "carb": 21.6,
-    "fib": 8.0,
-    "h2o": 1.1,
-    "sug": 8.4,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 2.0,
-        "desc": "tbsp",
-        "gm": 32.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 258.0
-      }
-    ]
-  },
-  {
-    "word": "PEANUTDRYSALT",
-    "display": "Peanuts Dry Roasted Salted",
-    "groups": [
-      "legume",
-      "nuts",
-      "fats"
-    ],
-    "ndb": "16090",
-    "desc": "Peanuts, all types, dry-roasted, with salt",
-    "cal": 587.0,
-    "pro": 24.4,
-    "fat": 49.7,
-    "carb": 21.3,
-    "fib": 8.4,
-    "h2o": 1.8,
-    "sug": 4.9,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      },
-      {
-        "amt": 1.0,
-        "desc": "peanut",
-        "gm": 1.0
-      }
-    ]
-  },
-  {
-    "word": "PEANUTOILNOSALT",
-    "display": "Peanut Oil Roasted no salt",
-    "groups": [
-      "legume",
-      "nuts",
-      "fats"
-    ],
-    "ndb": "16389",
-    "desc": "Peanuts, all types, oil-roasted, without salt",
-    "cal": 599.0,
-    "pro": 28.0,
-    "fat": 52.5,
-    "carb": 15.3,
-    "fib": 9.4,
-    "h2o": 1.4,
-    "sug": 4.2,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup,",
-        "gm": 144.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz shelled (32 nuts)",
-        "gm": 28.35
-      }
-    ]
-  },
-  {
-    "word": "PEANUTOILSALT",
-    "display": "Peanut Oil Roasted Salted",
-    "groups": [
-      "legume",
-      "nuts",
-      "fats"
-    ],
-    "ndb": "16089",
-    "desc": "Peanuts, all types, oil-roasted, with salt",
-    "cal": 599.0,
-    "pro": 28.0,
-    "fat": 52.5,
-    "carb": 15.3,
-    "fib": 9.4,
-    "h2o": 1.4,
-    "sug": 4.2,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup, chopped",
-        "gm": 144.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz shelled (32 nuts)",
-        "gm": 28.35
-      }
-    ]
-  },
-  {
-    "word": "RICOTTASKIM",
-    "display": "Ricotta Part Skim",
-    "groups": [
-      "dairy"
-    ],
-    "ndb": "1037",
-    "desc": "Cheese, ricotta, part skim milk",
-    "cal": 138.0,
-    "pro": 11.4,
-    "fat": 7.9,
-    "carb": 5.1,
-    "fib": 0.0,
-    "h2o": 74.4,
-    "sug": 0.3,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 0.5,
-        "desc": "cup",
-        "gm": 124.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 246.0
-      }
-    ]
-  },
-  {
-    "word": "ALMONDOIL",
-    "display": "Almond Oil",
-    "groups": [
-      "nuts",
-      "fats"
-    ],
-    "ndb": "4529",
-    "desc": "Oil, almond",
-    "cal": 884.0,
-    "pro": 0.0,
-    "fat": 100.0,
-    "carb": 0.0,
-    "fib": 0.0,
-    "h2o": 0.0,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "tablespoon",
-        "gm": 13.6
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 218.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "tsp",
-        "gm": 4.5
-      }
-    ]
-  },
-  {
-    "word": "ALMONDBLANCHED",
-    "display": "Almonds Blanched",
-    "groups": [
-      "nuts"
-    ],
-    "ndb": "12062",
-    "desc": "Nuts, almonds, blanched",
-    "cal": 590.0,
-    "pro": 21.4,
-    "fat": 52.5,
-    "carb": 18.7,
-    "fib": 9.9,
-    "h2o": 4.5,
-    "sug": 4.6,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup whole kernels",
-        "gm": 145.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "tbsp",
-        "gm": 9.1
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      }
-    ]
-  },
-  {
-    "word": "ALMONDDRYNOSALT",
-    "display": "Almonds Dry Roasted no Salt",
-    "groups": [
-      "nuts"
-    ],
-    "ndb": "12063",
-    "desc": "Nuts, almonds, dry roasted, without salt added",
-    "cal": 598.0,
-    "pro": 21.0,
-    "fat": 52.5,
-    "carb": 21.0,
-    "fib": 10.9,
-    "h2o": 2.4,
-    "sug": 4.9,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup whole kernels",
-        "gm": 138.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz (22 whole kernels)",
-        "gm": 28.35
-      }
-    ]
-  },
-  {
-    "word": "ALMONDOILNOSALT",
-    "display": "Almonds Oil Roasted no Salt",
-    "groups": [
-      "nuts"
-    ],
-    "ndb": "12065",
-    "desc": "Nuts, almonds, oil roasted, without salt added",
-    "cal": 607.0,
-    "pro": 21.2,
-    "fat": 55.2,
-    "carb": 17.7,
-    "fib": 10.5,
-    "h2o": 2.8,
-    "sug": 4.5,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup whole kernels",
-        "gm": 157.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz (22 whole kernels)",
-        "gm": 28.35
-      }
-    ]
-  },
-  {
-    "word": "ALMONDDRYSALT",
-    "display": "Almonds Dry Roasted Salt",
-    "groups": [
-      "nuts"
-    ],
-    "ndb": "12563",
-    "desc": "Nuts, almonds, dry roasted, with salt added",
-    "cal": 598.0,
-    "pro": 21.0,
-    "fat": 52.5,
-    "carb": 21.0,
-    "fib": 10.9,
-    "h2o": 2.4,
-    "sug": 4.9,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup whole kernels",
-        "gm": 138.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz (22 whole kernels)",
-        "gm": 28.35
-      }
-    ]
-  },
-  {
-    "word": "ALMONDOILSALT",
-    "display": "Almonds Oil Roasted Salt",
-    "groups": [
-      "nuts"
-    ],
-    "ndb": "12565",
-    "desc": "Nuts, almonds, oil roasted, with salt added",
-    "cal": 607.0,
-    "pro": 21.2,
-    "fat": 55.2,
-    "carb": 17.7,
-    "fib": 10.5,
-    "h2o": 2.8,
-    "sug": 4.5,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup whole kernels",
-        "gm": 157.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz (22 whole kernels)",
-        "gm": 28.35
-      }
-    ]
-  },
-  {
-    "word": "ALMONDHONEY",
-    "display": "Almonds Honey Roasted",
-    "groups": [
-      "nuts"
-    ],
-    "ndb": "12206",
-    "desc": "Nuts, almonds, honey roasted, unblanched",
-    "cal": 594.0,
-    "pro": 18.2,
-    "fat": 49.9,
-    "carb": 27.9,
-    "fib": 13.7,
-    "h2o": 1.7,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup whole kernels",
-        "gm": 144.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
       }
     ]
   }
