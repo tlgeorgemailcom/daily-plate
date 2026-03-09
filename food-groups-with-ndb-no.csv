@@ -10,9 +10,9 @@ AGAVE,vegetable,,,,,,35192,"Agave, raw (Southwest)",KEYWORD_EXACT,4
 AGUTUK,protein,,,,,,35001,"Agutuk, fish/berry with seal oil (Alaskan ice cream) (Alaska Native)",DESC_STARTS,3
 ALFALFA,vegetable,,,,,,11001,"Alfalfa seeds, sprouted, raw",,
 ALLSPICE,spice,,,,,,2001,"Spices, allspice, ground",DESC_CONTAINS,1
-ALMOND,nuts,fats,protein,High in healthy fats,Good source of protein,,4529,"Oil, almond",DESC_CONTAINS,5
+ALMONDOIL,nuts,fats,protein,High in healthy fats,Good source of protein,,4529,"Oil, almond",DESC_CONTAINS,5
 ALMONDBUTTER,nuts,fats,protein,High in healthy fats,Good source of protein,,12195,"Nuts, almond butter, plain, without salt added",COMPOUND_MATCH,2
-ALMONDMILK,Beverage,,,,,,14016,"Beverages, almond milk, sweetened, vanilla flavor, ready-to-drink",COMPOUND_MATCH,4
+ALMONDMILK,beverage,,,,,,14016,"Beverages, almond milk, sweetened, vanilla flavor, ready-to-drink",COMPOUND_MATCH,4
 ALMONDPASTE,spice,,,,,,12071,"Nuts, almond paste",COMPOUND_MATCH,1
 ALOEVERAJUICE,beverage,,,,,,14216,"Beverages, aloe vera juice drink, fortified with Vitamin C",,
 AMARANTH,grain,,,,,,20002,"Amaranth grain, cooked",,
@@ -45,6 +45,7 @@ BAKINGSODA,spice,,,,,,18372,"Leavening agents, baking soda",,
 BALSAMPEAR,fruit,,,,,,11022,"Balsam-pear (bitter gourd), leafy tips, raw",COMPOUND_MATCH,6
 BAMBOO,vegetable,,,,,,11026,"Bamboo shoots, raw",KEYWORD_EXACT,4
 BANANA,fruit,,,,,,9040,"Bananas, raw",PREFERRED,1
+BANANACHIPS,fruit,prepared,,,,,19400,"Snacks, banana chips",,
 BARBECUE,spice,,,,,,7001,"Barbecue loaf, pork, beef",KEYWORD_EXACT,6
 BARLEY,grain,,,,,,20006,"Barley, pearled, cooked",KEYWORD_EXACT,7
 BASIL,spice,,,,,,2044,"Basil, fresh",KEYWORD_EXACT,5
@@ -108,6 +109,7 @@ BRATWURST,protein,,,,,,7013,"Bratwurst, pork, cooked",DESC_STARTS,5
 BRAUNSCHWEIGER,protein,,,,,,7014,"Braunschweiger (a liver sausage), pork",DESC_STARTS,2
 BREADCHEESE,dairy,,,,,,18972,"Bread, cheese",COMPOUND_MATCH,8
 BREADFRUIT,fruit,,,,,,9059,"Breadfruit, raw",KEYWORD_EXACT,4
+BREADRICEBRAN,grain,prepared,,,,,18059,"Bread, rice bran",,
 BREADRYE,prepared,,,,,,18060,"Bread, rye",,
 BREADWHITE,prepared,,,,,,18967,"Bread, white wheat",PREFERRED,1
 BREADWHOLE,prepared,,,,,,18075,"Bread, whole-wheat, commercially prepared",,
@@ -131,9 +133,10 @@ BURRITOBEANS,prepared,,,,,,21060,"Fast foods, burrito, with beans",,
 BUTTERBUR,vegetable,,,,,,11107,"Butterbur, cooked, boiled, drained, without salt",KEYWORD_EXACT,4
 BUTTERFISH,protein,,,,,,15191,"Fish, butterfish, cooked, dry heat",DESC_CONTAINS,2
 BUTTERMILK,dairy,beverage,,,,,1230,"Milk, buttermilk, fluid, whole",KEYWORD_EXACT,6
-BUTTERSALTED,dairy,fats,,Made from cream,High in saturated fat,,1001,"Butter, salted",PREFERRED,1
+BUTTERSALTED,dairy,fats,spice,Made from cream,High in saturated fat,,1001,"Butter, salted",PREFERRED,1
 BUTTERSCOTCH,prepared,,,,,,19364,"Toppings, butterscotch or caramel",DESC_CONTAINS,3
 BUTTERUNSALTED,dairy,,,,,,1145,"Butter, without salt",,
+BUTTERWHIP,fats,spice,dairy,,,,1002,"Butter, whipped, with salt",,
 CABBAGE,vegetable,,,,,,11109,"Cabbage, raw",KEYWORD_EXACT,10
 CABBAGECOOKED,vegetable,,,,,,11110,"Cabbage, cooked, boiled, drained, without salt",,
 CAESARDRESSING,spice,,,,,,43015,"Salad dressing, caesar dressing, regular",,
@@ -198,6 +201,7 @@ CEREALOATS,grain,prepared,,,,,8180,"Cereals, oats, regular and quick and instant
 CEREALPUFFS,grain,prepared,,,,,8271,"Cereals ready-to-eat, GENERAL MILLS, COCOA PUFFS",,
 CEREALRAISIN,grain,prepared,,,,,8060,"Cereals ready-to-eat, KELLOGG, KELLOGG'S RAISIN BRAN",,
 CEREALRICE,grain,prepared,,,,,8065,"Cereals ready-to-eat, KELLOGG, KELLOGG'S RICE KRISPIES",,
+CEREALRICECREAM,grain,,,,,,8168,"Cereals, CREAM OF RICE, cooked with water, with salt",,
 CEREALTRIX,grain,prepared,,,,,8078,"Cereals ready-to-eat, GENERAL MILLS, TRIX",,
 CHANTERELLE,vegetable,,,,,,11239,"Mushrooms, Chanterelle, raw",,
 CHARD,vegetable,,,,,,11148,"Chard, swiss, cooked, boiled, drained, without salt",KEYWORD_EXACT,4
@@ -229,11 +233,31 @@ CHILI,prepared,protein,,,,,22911,"Chili, no beans, canned entree",KEYWORD_EXACT,
 CHILIBEANS,prepared,protein,,,,,16059,"Chili with beans, canned",,
 CHILIDOG,prepared,,,,,,21119,"Fast foods, hotdog, with chili",,
 CHINOOK,protein,,,,,,15210,"Fish, salmon, chinook, cooked, dry heat",,
+CHIPSCASSAVA,prepared,,,,,,25050,"Snacks, yucca (cassava) chips, salted",,
+CHIPSCORNRANCH,grain,,,,,,19058,"Snacks, tortilla chips, ranch-flavor",,
+CHIPSCORNUNSALTED,grain,,,,,,43364,"Snacks, tortilla chips, unsalted, white corn",,
+CHIPSPITA,prepared,,,,,,25037,"Snacks, pita chips, salted",,
+CHIPSPLANTAIN,fruit,,,,,,25027,"Snacks, plantain chips, salted",,
+CHIPSPOTATOBBQ,vegetable,,,,,,19042,"Snacks, potato chips, barbecue-flavor",,
+CHIPSPOTATOSOUR,vegetable,,,,,,19043,"Snacks, potato chips, sour-cream-and-onion-flavor",,
+CHIPSSWEETPOTATO,vegetable,,,,,,25012,"Snacks, sweet potato chips, unsalted",,
+CHIPSTARO,vegetable,,,,,,19524,"Snacks, taro chips",,
+CHIPSVEGGIE,vegetable,,,,,,25040,"Snacks, vegetable chips, made from garden vegetables",,
 CHITON,protein,,,,,,35026,"Chiton, leathery, gumboots (Alaska Native)",KEYWORD_EXACT,1
 CHIVE,spice,,,,,,11156,"Chives, raw",DESC_STARTS,2
+CHOC45,spice,,,,,,19902,"Chocolate, dark, 45- 59% cacao solids",,
+CHOC60,spice,,,,,,19903,"Chocolate, dark, 60-69% cacao solids",,
+CHOC70,spice,,,,,,19904,"Chocolate, dark, 70-85% cacao solids",,
+CHOCBAKING,spice,,,,,,19078,"Baking chocolate, unsweetened, squares",,
+CHOCBEVSODA,beverage,,,,,,14552,"Carbonated beverage, chocolate-flavored soda",,
+CHOCFUDGE,prepared,,,,,,19100,"Candies, fudge, chocolate, prepared-from-recipe",,
+CHOCFUDGENUTS,prepared,,,,,,19101,"Candies, fudge, chocolate, with nuts, prepared-from-recipe",,
+CHOCHOT,beverage,,,,,,1105,"Milk, chocolate beverage, hot cocoa, homemade",,
+CHOCMILKCANDY,prepared,,,,,,19120,"Candies, milk chocolate",,
 CHOCOLATE,spice,,,,,,19077,"Baking chocolate, unsweetened, liquid",KEYWORD_EXACT,15
 CHOCOLATEMILK,beverage,,,,,,14177,"Chocolate-flavor beverage mix, powder, prepared with whole milk",,
 CHOCOLATESYRUP,spice,,,,,,14181,Chocolate syrup,,
+CHOCWHITE,prepared,,,,,,19087,"Candies, white chocolate",,
 CHOKECHERRIES,fruit,,,,,,35179,"Chokecherries, raw, pitted (Shoshone Bannock)",COMPOUND_MATCH,2
 CHORIZO,protein,,,,,,7019,"Chorizo, pork and beef",KEYWORD_EXACT,1
 CHRYSANTHEMUM,vegetable,,,,,,11158,"Chrysanthemum, garland, cooked, boiled, drained, without salt",KEYWORD_EXACT,4
@@ -302,6 +326,7 @@ CORNMEAL,grain,,,,,,20020,"Cornmeal, whole-grain, yellow",KEYWORD_EXACT,10
 CORNSALAD,vegetable,,,,,,11190,"Cornsalad, raw",KEYWORD_EXACT,1
 CORNSTARCH,spice,,,,,,20027,Cornstarch,KEYWORD_EXACT,1
 COTTAGE,dairy,,,,,,1012,"Cheese, cottage, creamed, large or small curd",DESC_CONTAINS,5
+COTTAGE2,dairy,,,,,,1015,"Cheese, cottage, lowfat, 2% milkfat",,
 COTTONSEED,fats,,,,,,4502,"Oil, cottonseed, salad or cooking",DESC_CONTAINS,5
 COUSCOUS,grain,,,,,,20029,"Couscous, cooked",KEYWORD_EXACT,2
 COWPEA,legume,,,,,,16063,"Cowpeas, common (blackeyes, crowder, southern), mature seeds, cooked, boiled, without salt",DESC_STARTS,10
@@ -312,6 +337,7 @@ CRACKERMATZO,grain,prepared,,,,,18217,"Crackers, matzo, plain",,
 CRACKERMEAL,grain,,,,,,18236,Cracker meal,KEYWORD_EXACT,25
 CRACKERMELBA,grain,,,,,,18220,"Crackers, melba toast, plain",,
 CRACKERMULTI,grain,prepared,,,,,28292,"Crackers, multigrain",,
+CRACKERRICEBROWN,grain,,,,,,19051,"Snacks, rice cracker brown rice, plain",,
 CRACKERRUSK,grain,,,,,,18224,"Crackers, rusk toast",,
 CRACKERRYE,grain,,,,,,18226,"Crackers, rye, wafers, plain",,
 CRACKERSALTINES,grain,,,,,,18228,"Crackers, saltines (includes oyster, soda, soup)",,
@@ -358,7 +384,6 @@ DRESSINGFRENCH,spice,,,,,,4120,"Salad dressing, french dressing, commercial, reg
 DRESSINGGREENGODDESS,spice,,,,,,43017,"Salad dressing, green goddess, regular",,
 DRESSINGHONEYMUST,spice,,,,,,4703,"Salad dressing, honey mustard, regular",,
 DRESSINGITALIAN,spice,,,,,,4114,"Salad dressing, italian dressing, commercial, regular",,
-DRESSINGMAYO,spice,,,,,,4025,"Salad dressing, mayonnaise, regular",,
 DRESSINGRANCH,spice,,,,,,4639,"Salad dressing, ranch dressing, regular",,
 DRESSINGRUSSIAN,spice,,,,,,4015,"Salad dressing, russian dressing",,
 DRESSINGSESAME,spice,,,,,,4016,"Salad dressing, sesame seed dressing, regular",,
@@ -392,6 +417,8 @@ EGGYOLK,protein,,,,,,1125,"Egg, yolk, raw, fresh",,
 ELDERBERRIES,fruit,,,,,,9088,"Elderberries, raw",PREFERRED,1
 ELK,protein,,,,,,17167,"Game meat, elk, cooked, roasted",KEYWORD_EXACT,9
 EMU,prepared,,,,,,5622,"Emu, ground, cooked, pan-broiled",KEYWORD_EXACT,10
+ENCHILADACHEESE,prepared,,,,,,36050,"Restaurant, Mexican, cheese enchilada",,
+ENCHILADASAUCE,spice,,,,,,27063,"Sauce, enchilada, red, mild, ready to serve",,
 ENDIVE,vegetable,,,,,,11213,"Endive, raw",KEYWORD_EXACT,1
 ENGLISHMUFFIN,grain,prepared,,,,,28320,"English muffins, whole grain white",,
 ENOKI,vegetable,,,,,,11950,"Mushrooms, enoki, raw",,
@@ -504,7 +531,8 @@ ICING,prepared,,,,,,19230,"Frostings, vanilla, creamy, ready-to-eat",PREFERRED,1
 INCAPARINA,grain,,,,,,8580,"Incaparina, dry mix (corn and soy flours), unprepared",KEYWORD_EXACT,1
 JACKFRUIT,fruit,,,,,,9144,"Jackfruit, raw",KEYWORD_EXACT,2
 JALAPENO,spice,,,,,,11979,"Peppers, jalapeno, raw",DESC_CONTAINS,3
-JAM,prepared,,,,,,19297,Jams and preserves,DESC_STARTS,5
+JAM,prepared,spice,,,,,19297,Jams and preserves,DESC_STARTS,5
+JAMNOSUGAR,prepared,spice,,,,,43028,"Jams and preserves, no sugar (with sodium saccharin), any flavor",,
 JELLIES,prepared,,,,,,19300,Jellies,KEYWORD_EXACT,3
 JELLYBEAN,prepared,,,,,,19108,"Candies, jellybeans",DESC_CONTAINS,1
 JELLYFISH,protein,,,,,,43497,"Jellyfish, dried, salted",KEYWORD_EXACT,1
@@ -576,13 +604,17 @@ MAPLESUGAR,spice,,,,,,19340,"Sugars, maple",DESC_CONTAINS,5
 MAPLESYPUP,spice,,,,,,19353,"Syrups, maple",,
 MARASCHINO,fruit,,,,,,9328,"Maraschino cherries, canned, drained",DESC_STARTS,1
 MARGARINE,fats,,,,,,4073,"Margarine, regular, hard, soybean (hydrogenated)",KEYWORD_EXACT,12
+MARGARINESMART,fats,,,,,,4677,"Margarine-like spread, SMART BALANCE Omega Plus Spread (with plant sterols & fish oil)",,
 MARJORAM,spice,,,,,,2023,"Spices, marjoram, dried",DESC_CONTAINS,1
 MARMALADE,spice,,,,,,19303,"Marmalade, orange",KEYWORD_EXACT,3
 MARSHMALLOW,prepared,,,,,,19116,"Candies, marshmallows",DESC_CONTAINS,5
 MASA,grain,,,,,,20019,"Corn flour, masa, unenriched, white",DESC_CONTAINS,4
 MATZO,prepared,,,,,,18219,"Crackers, matzo, whole-wheat",DESC_CONTAINS,4
-MAYO,spice,,,,,,4025,"Salad dressing, mayonnaise, regular",,
-MAYONNAISE,spice,,,,,,4025,"Salad dressing, mayonnaise, regular",,
+MAYOCHOLESTEROL,fats,,,,,,43598,"Mayonnaise dressing, no cholesterol",,
+MAYOLIGHT,fats,,,,,,4641,"Salad dressing, mayonnaise, light",,
+MAYOREGULAR,spice,,,,,,4025,"Salad dressing, mayonnaise, regular",,
+MAYOSMART,fats,,,,,,4689,"Salad Dressing, mayonnaise, light, SMART BALANCE, Omega Plus light",,
+MAYOSOY,fats,,,,,,4026,"Salad dressing, mayonnaise, soybean and safflower oil, with salt",,
 MEATBALLS,protein,,,,,,43132,"Meatballs, meatless",KEYWORD_EXACT,4
 MEATLESSBACON,prepared,grain,,,,,16104,"Bacon, meatless",DESC_CONTAINS,5
 MELBA,grain,prepared,,,,,18220,"Crackers, melba toast, plain",,
@@ -591,9 +623,14 @@ MENHADEN,fats,,,,,,4591,"Fish oil, menhaden",DESC_CONTAINS,2
 MEXICANBLEND,dairy,,,,,,1251,"Cheese, Mexican blend",,
 MIGNON,protein,,,,,,13921,"Beef, tenderloin, steak, separable lean and fat, trimmed to 1/8"" fat, choice, cooked, broiled",COMPOUND_MATCH,10
 MILK,dairy,beverage,,,,,1077,"Milk, whole, 3.25% milkfat, with added vitamin D",PREFERRED,1
+MILK2,dairy,beverage,,,,,1080,"Milk, reduced fat, fluid, 2% milkfat, with added nonfat milk solids and vitamin A and vitamin D",,
+MILKBUFFALO,dairy,beverage,,,,,1108,"Milk, indian buffalo, fluid",,
+MILKCHOC,dairy,beverage,,,,,14182,"Beverages, Chocolate syrup, prepared with whole milk",,
 MILKCONDENSED,dairy,,,,,,1095,"Milk, canned, condensed, sweetened",,
 MILKEVAPORATED,dairy,,,,,,1214,"Milk, canned, evaporated, without added vitamin A and vitamin D",,
 MILKFISH,protein,,,,,,15202,"Fish, milkfish, cooked, dry heat",DESC_CONTAINS,2
+MILKSHAKECHOC,dairy,beverage,,,,,1110,"Milk shakes, thick chocolate",,
+MILKSHAKEVANILLA,dairy,beverage,,,,,1111,"Milk shakes, thick vanilla",,
 MILLET,grain,,,,,,20032,"Millet, cooked",KEYWORD_EXACT,4
 MISO,spice,,,,,,16112,Miso,KEYWORD_EXACT,1
 MOLASSES,spice,,,,,,19304,Molasses,KEYWORD_EXACT,3
@@ -606,6 +643,7 @@ MOTHBEAN,legume,,,,,,16079,"Mothbeans, mature seeds, cooked, boiled, without sal
 MOUNTAINYAM,vegetable,,,,,,11259,"Mountain yam, hawaii, cooked, steamed, without salt",COMPOUND_MATCH,3
 MOUSENUT,nuts,,,,,,12004,"Seeds, breadnut tree seeds, raw",COMPOUND_MATCH,2
 MOZZARELLA,dairy,,,,,,1026,"Cheese, mozzarella, whole milk",DESC_CONTAINS,5
+MOZZARELLASKIM,dairy,,,,,,1028,"Cheese, mozzarella, part skim milk",,
 MUENSTER,dairy,,,,,,1030,"Cheese, muenster",DESC_CONTAINS,2
 MUFFIN,prepared,,,,,,18566,"Artificial Blueberry Muffin Mix, dry",KEYWORD_EXACT,11
 MUFFINCORN,prepared,,,,,,18412,"Bread, cornbread, dry mix, unenriched (includes corn muffin mix)",,
@@ -632,6 +670,7 @@ NECTARINE,fruit,,,,,,9191,"Nectarines, raw",DESC_STARTS,1
 NETTLES,vegetable,,,,,,35205,"Stinging Nettles, blanched (Northern Plains Indians)",COMPOUND_MATCH,1
 NEUFCHATEL,dairy,,,,,,1031,"Cheese, neufchatel",DESC_CONTAINS,1
 NOODLEEGG,grain,,,,,,20110,"Noodles, egg, enriched, cooked",DESC_STARTS,12
+NOODLERICE,grain,,,,,,20134,"Rice noodles, cooked",,
 NOODLESOBA,grain,,,,,,20115,"Noodles, japanese, soba, cooked",,
 NOODLESOMEN,grain,,,,,,20117,"Noodles, japanese, somen, cooked",,
 NOPALES,vegetable,,,,,,11964,"Nopales, cooked, without salt",KEYWORD_EXACT,2
@@ -698,7 +737,11 @@ PEACH,fruit,,,,,,9236,"Peaches, yellow, raw",,
 PEACHNECTAR,beverage,,,,,,9251,"Peach nectar, canned, without added ascorbic acid",KEYWORD_EXACT,17
 PEANUT,legume,nuts,fats,Botanically a legume,Commonly grouped with nuts,,16390,"Peanuts, all types, dry-roasted, without salt",,
 PEANUTBUTTER,legume,nuts,fats,,,,16098,"Peanut butter, smooth style, with salt",KEYWORD_EXACT,18
+PEANUTBUTTERCHUNK,legume,nuts,fats,,,,16097,"Peanut butter, chunk style, with salt",,
+PEANUTDRYSALT,legume,nuts,fats,,,,16090,"Peanuts, all types, dry-roasted, with salt",,
 PEANUTOIL,fats,,,,,,4042,"Oil, peanut, salad or cooking",,
+PEANUTOILNOSALT,legume,nuts,fats,,,,16389,"Peanuts, all types, oil-roasted, without salt",,
+PEANUTOILSALT,legume,nuts,fats,,,,16089,"Peanuts, all types, oil-roasted, with salt",,
 PEAR,fruit,,,,,,9252,"Pears, raw",,
 PEARNECTAR,beverage,,,,,,9262,"Pear nectar, canned, without added ascorbic acid",KEYWORD_EXACT,17
 PEAS,legume,,,,,,11313,"Peas, green, frozen, cooked, boiled, drained, without salt",DESC_STARTS,15
@@ -842,8 +885,10 @@ RICEBRAN,grain,,,,,,20060,"Rice bran, crude",COMPOUND_MATCH,5
 RICEBROWN,grain,,,,,,20037,"Rice, brown, long-grain, cooked",,
 RICEFLOURBROWN,grain,,,,,,20090,"Rice flour, brown",,
 RICEFLOURWHITE,grain,,,,,,20061,"Rice flour, white, unenriched",,
+RICESPANISH,grain,prepared,,,,,36417,"Restaurant, Mexican, spanish rice",,
 RICEWHITE,grain,,,,,,20545,"Rice, white, long-grain, regular, cooked, unenriched, with salt",PREFERRED,1
 RICOTTA,dairy,,,,,,1036,"Cheese, ricotta, whole milk",DESC_CONTAINS,2
+RICOTTASKIM,dairy,,,,,,1037,"Cheese, ricotta, part skim milk",,
 ROCKFISH,protein,,,,,,15071,"Fish, rockfish, Pacific, mixed species, cooked, dry heat",DESC_CONTAINS,2
 ROE,protein,,,,,,15072,"Fish, roe, mixed species, raw",DESC_CONTAINS,2
 ROLLDINNER,prepared,,,,,,18347,"Rolls, dinner, wheat",,
@@ -921,12 +966,15 @@ SORREL,vegetable,,,,,,11617,"Dock, cooked, boiled, drained, without salt",KEYWOR
 SOUPBEEFBROTH,prepared,,,,,,6008,"Soup, beef broth or bouillon canned, ready-to-serve",,
 SOUPBROCCOLI,prepared,,,,,,6546,CAMPBELL'S Homestyle Potato Broccoli Cheese Soup,,
 SOUPCHICKBROTH,prepared,,,,,,6194,"Soup, chicken broth, ready-to-serve",,
+SOUPCHICKENRICE,prepared,,,,,,6022,"Soup, chicken rice, canned, chunky, ready-to-serve",,
 SOUPCHICKNOODLE,prepared,,,,,,6018,"Soup, chunky chicken noodle, canned, ready-to-serve",,
 SOUPCLAM,prepared,,,,,,27042,"Soup, clam chowder, new england, canned, ready-to-serve",,
 SOUPCLAMRED,prepared,,,,,,6027,"Soup, clam chowder, manhattan style, canned, chunky, ready-to-serve",,
 SOUPMINESTRONE,prepared,,,,,,6544,CAMPBELL'S Homestyle Minestrone Soup,,
 SOUPMUSHROOM,prepared,,,,,,6443,"Soup, cream of mushroom, canned, prepared with equal volume water",,
+SOUPRAMENNOODLE,grain,prepared,,,,,6583,"Soup, ramen noodle, any flavor, dry",,
 SOUPTOMATO,prepared,,,,,,6588,"CAMPBELL'S Soup on the Go, Classic Tomato Soup",,
+SOUPTOMATORICE,prepared,,,,,,6463,"Soup, tomato rice, canned, prepared with equal volume water",,
 SOUPTORTILLA,prepared,,,,,,6543,CAMPBELL'S Homestyle Mexican Style Chicken Tortilla Soup,,
 SOUPVEG,prepared,,,,,,6468,"Soup, vegetarian vegetable, canned, prepared with equal volume water",KEYWORD_EXACT,14
 SOURCREAM,dairy,,,,,,1178,"Sour cream, reduced fat",COMPOUND_MATCH,10
@@ -993,6 +1041,8 @@ TABASCO,spice,,,,,,6169,"Sauce, ready-to-serve, pepper, TABASCO",DESC_CONTAINS,1
 TACO,prepared,,,,,,21487,"Fast foods, taco with chicken, lettuce and cheese, soft",,
 TACO,prepared,,,,,,21486,"Fast foods, taco with beef, cheese and lettuce, soft",,
 TACO,prepared,,,,,,21083,"Fast foods, taco salad",,
+TACOGREENSAUCE,spice,,,,,,6600,"PACE, Green Taco Sauce",,
+TACOREDSAUCE,spice,,,,,,6604,"PACE, Red Taco Sauce",,
 TACOSHELL,prepared,,,,,,18360,"Taco shells, baked",KEYWORD_EXACT,15
 TAHINI,nuts,spice,,,,,12166,"Seeds, sesame butter, tahini, from roasted and toasted kernels (most common type)",COMPOUND_MATCH,5
 TALLOW,fats,,,,,,4001,"Fat, beef tallow",PREFERRED,1
@@ -1025,6 +1075,9 @@ TOMATOSAUCE,spice,,,,,,43217,"Tomato sauce, canned, no salt added",,
 TOMATOSEEDOIL,fats,,,,,,4515,"Oil, tomatoseed",DESC_CONTAINS,1
 TOMATOSUNDRIED,spice,,,,,,11956,"Tomatoes, sun-dried, packed in oil, drained",,
 TORTILLACHIP,prepared,,,,,,19433,"Tortilla chips, low fat, baked without fat",KEYWORD_EXACT,15
+TORTILLACHIPNACHO,grain,,,,,,19057,"Snacks, tortilla chips, nacho cheese",,
+TORTILLACHIPWHITE,grain,,,,,,19056,"Snacks, tortilla chips, plain, white corn, salted",,
+TORTILLACHIPYELLOW,grain,,,,,,25028,"Tortilla chips, yellow, plain, salted",,
 TORTILLACORN,grain,prepared,,,,,18363,"Tortillas, ready-to-bake or -fry, corn",,
 TORTILLAFLOUR,grain,prepared,,,,,18364,"Tortillas, ready-to-bake or -fry, flour, refrigerated",,
 TRAILMIX,prepared,,,,,,19059,"Snacks, trail mix, regular",COMPOUND_MATCH,7
@@ -1106,3 +1159,9 @@ YOGURT,dairy,,,,,,1116,"Yogurt, plain, whole milk, 8 grams protein per 8 ounce",
 YOLK,protein,,,,,,1125,"Egg, yolk, raw, fresh",,
 ZUCCHINI,vegetable,fruit,,Botanically a fruit,Used as a vegetable,,11478,"Squash, summer, zucchini, includes skin, cooked, boiled, drained, without salt",DESC_CONTAINS,5
 ZWIEBACK,grain,prepared,,,,,3217,Zwieback,KEYWORD_EXACT,1
+ALMONDBLANCHED,,,,,,,12062,"Nuts, almonds, blanched",,
+ALMONDDRYNOSALT,,,,,,,12063,"Nuts, almonds, dry roasted, without salt added",,
+ALMONDOILNOSALT,,,,,,,12065,"Nuts, almonds, oil roasted, without salt added",,
+ALMONDDRYSALT,,,,,,,12563,"Nuts, almonds, dry roasted, with salt added",,
+ALMONDOILSALT,,,,,,,12565,"Nuts, almonds, oil roasted, with salt added",,
+ALMONDHONEY,,,,,,,12206,"Nuts, almonds, honey roasted, unblanched",,
