@@ -755,7 +755,7 @@ dailyfoodchain.com/scrambled`;
       {/if}
       
       <div class="groups-grid">
-        {#each Object.entries(FOOD_GROUP_INFO) as [group, info]}
+        {#each Object.entries(FOOD_GROUP_INFO).filter(([g]) => g !== 'condiment') as [group, info]}
           <div 
             class="group-drop"
             use:registerGroupElement={group}
