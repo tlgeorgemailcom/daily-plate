@@ -1948,35 +1948,6 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "BEAN",
-    "display": "Bean",
-    "groups": [
-      "legume",
-      "protein"
-    ],
-    "ndb": "11053",
-    "desc": "Beans, snap, green, cooked, boiled, drained, without salt",
-    "cal": 35.0,
-    "pro": 1.9,
-    "fat": 0.3,
-    "carb": 7.9,
-    "fib": 3.2,
-    "h2o": 89.2,
-    "sug": 3.6,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 125.0
-      }
-    ]
-  },
-  {
     "word": "BEAR",
     "display": "Bear",
     "groups": [
@@ -40381,6 +40352,381 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "sundae",
         "gm": 155.0
+      }
+    ]
+  },
+  {
+    "word": "TEAGREEN",
+    "display": "Tea Green",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14278",
+    "desc": "Beverages, tea, green, brewed, regular",
+    "cal": 1.0,
+    "pro": 0.2,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 99.9,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 245.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.6
+      }
+    ]
+  },
+  {
+    "word": "TEAHIBISCUS",
+    "display": "Tea Hibiscus",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14649",
+    "desc": "Beverages, tea, hibiscus, brewed",
+    "cal": 0.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 99.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 8.0,
+        "desc": "fl oz",
+        "gm": 237.0
+      }
+    ]
+  },
+  {
+    "word": "TEACHAM",
+    "display": "Tea Chamomile",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14545",
+    "desc": "Beverages, tea, herb, brewed, chamomile",
+    "cal": 1.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.2,
+    "fib": 0.0,
+    "h2o": 99.7,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.6
+      },
+      {
+        "amt": 6.0,
+        "desc": "fl oz",
+        "gm": 178.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup (8 fl oz)",
+        "gm": 237.0
+      }
+    ]
+  },
+  {
+    "word": "TEAINSTANTDECAF",
+    "display": "Tea Instant Decaf",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14353",
+    "desc": "Beverages, tea, instant, decaffeinated, unsweetened",
+    "cal": 315.0,
+    "pro": 20.2,
+    "fat": 0.0,
+    "carb": 58.7,
+    "fib": 8.5,
+    "h2o": 5.1,
+    "sug": 5.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 2 tsp",
+        "gm": 0.7
+      }
+    ]
+  },
+  {
+    "word": "TEAINSTANT",
+    "display": "Tea Instant",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14367",
+    "desc": "Beverages, tea, instant, unsweetened, prepared with water",
+    "cal": 1.0,
+    "pro": 0.1,
+    "fat": 0.0,
+    "carb": 0.2,
+    "fib": 0.0,
+    "h2o": 99.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.7
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 6 fl oz",
+        "gm": 178.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 8 fl oz",
+        "gm": 238.0
+      }
+    ]
+  },
+  {
+    "word": "SOUPSPLITPEA",
+    "display": "Soup Split Pea",
+    "groups": [
+      "legume",
+      "prepared"
+    ],
+    "ndb": "6192",
+    "desc": "Split pea soup, canned, reduced sodium, prepared with water or ready-to serve",
+    "cal": 71.0,
+    "pro": 3.9,
+    "fat": 0.9,
+    "carb": 11.8,
+    "fib": 1.9,
+    "h2o": 82.4,
+    "sug": 5.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 253.0
+      }
+    ]
+  },
+  {
+    "word": "SOUPSPLITPEAHAM",
+    "display": "Soup Split Pea with Ham",
+    "groups": [
+      "legume",
+      "prepared"
+    ],
+    "ndb": "6050",
+    "desc": "Soup, pea, split with ham, canned, chunky, ready-to-serve",
+    "cal": 77.0,
+    "pro": 4.6,
+    "fat": 1.7,
+    "carb": 11.2,
+    "fib": 1.7,
+    "h2o": 81.0,
+    "sug": 1.9,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 240.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "can (19 oz)",
+        "gm": 539.0
+      }
+    ]
+  },
+  {
+    "word": "TOASTWHITE",
+    "display": "Toast White",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "18070",
+    "desc": "Bread, white, commercially prepared, toasted",
+    "cal": 290.0,
+    "pro": 9.0,
+    "fat": 4.0,
+    "carb": 54.5,
+    "fib": 2.9,
+    "h2o": 30.4,
+    "sug": 6.2,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, crumbs",
+        "gm": 45.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, cubes",
+        "gm": 42.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice, large",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice crust not eaten",
+        "gm": 11.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice, thin",
+        "gm": 17.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice thin, crust not eaten",
+        "gm": 8.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice, very thin",
+        "gm": 13.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice",
+        "gm": 22.0
+      }
+    ]
+  },
+  {
+    "word": "TOASTWHOLE",
+    "display": "Toast Whole Wheat",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "18076",
+    "desc": "Bread, whole-wheat, commercially prepared, toasted",
+    "cal": 306.0,
+    "pro": 16.3,
+    "fat": 4.1,
+    "carb": 51.2,
+    "fib": 7.5,
+    "h2o": 24.2,
+    "sug": 5.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice",
+        "gm": 25.0
+      }
+    ]
+  },
+  {
+    "word": "TOASTRAISIN",
+    "display": "Toast Raisin",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "18048",
+    "desc": "Bread, raisin, enriched, toasted",
+    "cal": 297.0,
+    "pro": 8.6,
+    "fat": 4.8,
+    "carb": 56.9,
+    "fib": 4.7,
+    "h2o": 27.8,
+    "sug": 6.2,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice, large",
+        "gm": 29.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice",
+        "gm": 24.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice, thin",
+        "gm": 21.0
       }
     ]
   }

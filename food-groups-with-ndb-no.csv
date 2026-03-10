@@ -57,7 +57,6 @@ BARLEY,grain,,,,,,20006,"Barley, pearled, cooked",KEYWORD_EXACT,7
 BASIL,spice,,,,,,2044,"Basil, fresh",KEYWORD_EXACT,5
 BASS,protein,,,,,,15187,"Fish, bass, freshwater, mixed species, cooked, dry heat",DESC_CONTAINS,4
 BAYLEAF,spice,,,,,,2004,"Spices, bay leaf",COMPOUND_MATCH,1
-BEAN,legume,,,,,,11053,"Beans, snap, green, cooked, boiled, drained, without salt",,
 BEAR,protein,,,,,,35008,"Bear, polar, meat, raw (Alaska Native)",KEYWORD_EXACT,9
 BEAVER,protein,,,,,,17150,"Game meat, beaver, raw",DESC_CONTAINS,2
 BEECHNUT,nuts,,,,,,12077,"Nuts, beechnuts, dried",DESC_CONTAINS,1
@@ -1021,7 +1020,6 @@ SUGAR,spice,,,,,,19335,"Sugars, granulated",PREFERRED,1
 SUGARBROWN,spice,,,,,,19334,"Sugars, brown",,
 SUGARMAPLE,spice,,,,,,19340,"Sugars, maple",,
 SUGARPOWDERED,spice,,,,,,18336,"Sugars, powdered",,
-SUNDAE,dairy,prepared,,,,,21032,"Fast foods, sundae, caramel",DESC_CONTAINS,4
 SUNFISH,protein,,,,,,15218,"Fish, sunfish, pumpkin seed, cooked, dry heat",DESC_CONTAINS,2
 SUNFLOWER,nuts,fats,,,,,4060,"Oil, sunflower, linoleic (less than 60%)",DESC_CONTAINS,5
 SURIMI,protein,,,,,,15109,"Fish, surimi",DESC_CONTAINS,1
@@ -1196,3 +1194,13 @@ ICECREAMSOFTVAN,dairy,prepared,,,,,21028,"Fast foods, vanilla, light, soft-serve
 ICECREAMSUBDAEFUD,dairy,prepared,,,,,21033,"Fast foods, sundae, hot fudge",,
 ICECREAMSUNDAESTRW,dairy,prepared,,,,,21034,"Fast foods, sundae, strawberry",,
 ICECREAMSUNDAECARM,dairy,prepared,,,,,21032,"Fast foods, sundae, caramel",,
+TEAGREEN,beverage,,,,,,14278,"Beverages, tea, green, brewed, regular",,
+TEAHIBISCUS,beverage,,,,,,14649,"Beverages, tea, hibiscus, brewed",,
+TEACHAM,beverage,,,,,,14545,"Beverages, tea, herb, brewed, chamomile",,
+TEAINSTANTDECAF,beverage,,,,,,14353,"Beverages, tea, instant, decaffeinated, unsweetened",,
+TEAINSTANT,beverage,,,,,,14367,"Beverages, tea, instant, unsweetened, prepared with water",,
+SOUPSPLITPEA,legume,prepared,,,,,6192,"Split pea soup, canned, reduced sodium, prepared with water or ready-to serve",,
+SOUPSPLITPEAHAM,legume,prepared,,,,,6050,"Soup, pea, split with ham, canned, chunky, ready-to-serve",,
+TOASTWHITE,grain,prepared,,,,,18070,"Bread, white, commercially prepared, toasted",,
+TOASTWHOLE,grain,prepared,,,,,18076,"Bread, whole-wheat, commercially prepared, toasted",,
+TOASTRAISIN,grain,prepared,,,,,18048,"Bread, raisin, enriched, toasted",,
