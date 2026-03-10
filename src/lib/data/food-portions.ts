@@ -34181,7 +34181,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "SUBMARINE",
-    "display": "Submarine",
+    "display": "Sandwich Sub Tuna",
     "groups": [
       "prepared"
     ],
@@ -40727,6 +40727,372 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "slice, thin",
         "gm": 21.0
+      }
+    ]
+  },
+  {
+    "word": "PORKHAMSLICED",
+    "display": "Pork Ham Sliced",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "7029",
+    "desc": "Ham, sliced, regular (approximately 11% fat)",
+    "cal": 163.0,
+    "pro": 16.6,
+    "fat": 8.6,
+    "carb": 3.8,
+    "fib": 1.3,
+    "h2o": 67.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 56.0,
+        "desc": "grams 1 serving",
+        "gm": 56.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice",
+        "gm": 28.0
+      }
+    ]
+  },
+  {
+    "word": "CHICKENBREASTSLICED",
+    "display": "Chicken Breast Sliced",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "7933",
+    "desc": "Chicken breast, oven-roasted, fat-free, sliced",
+    "cal": 79.0,
+    "pro": 16.8,
+    "fat": 0.4,
+    "carb": 2.2,
+    "fib": 0.0,
+    "h2o": 76.7,
+    "sug": 0.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 2 slices",
+        "gm": 42.0
+      }
+    ]
+  },
+  {
+    "word": "LUNCHEONMEATLESS",
+    "display": "Sliced Luncheon Meatless",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "43131",
+    "desc": "Luncheon slices, meatless",
+    "cal": 189.0,
+    "pro": 17.8,
+    "fat": 11.1,
+    "carb": 4.4,
+    "fib": 1.1,
+    "h2o": 65.0,
+    "sug": 2.2,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice, thin",
+        "gm": 14.0
+      }
+    ]
+  },
+  {
+    "word": "SANDWICHFISH",
+    "display": "Sandwich Fish",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "21105",
+    "desc": "Fast foods, fish sandwich, with tartar sauce",
+    "cal": 257.0,
+    "pro": 10.3,
+    "fat": 12.4,
+    "carb": 26.7,
+    "fib": 1.0,
+    "h2o": 48.4,
+    "sug": 3.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "sandwich",
+        "gm": 220.0
+      }
+    ]
+  },
+  {
+    "word": "SANDWICHCHICKEN",
+    "display": "Sandwich Chicken",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "21102",
+    "desc": "Fast foods, chicken fillet sandwich, plain with pickles",
+    "cal": 250.0,
+    "pro": 16.3,
+    "fat": 11.2,
+    "carb": 20.9,
+    "fib": 1.4,
+    "h2o": 48.9,
+    "sug": 3.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "sandwich",
+        "gm": 187.0
+      }
+    ]
+  },
+  {
+    "word": "SANDWICHBEEF",
+    "display": "Sandwich Roast Beef",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "21121",
+    "desc": "Fast foods, roast beef sandwich, plain",
+    "cal": 244.0,
+    "pro": 15.2,
+    "fat": 10.3,
+    "carb": 22.2,
+    "fib": 1.3,
+    "h2o": 49.9,
+    "sug": 3.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "sandwich",
+        "gm": 149.0
+      }
+    ]
+  },
+  {
+    "word": "SANDWICHCHICKENCRISP",
+    "display": "Sandwich Crispy Chicken",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "21230",
+    "desc": "Fast Foods, crispy chicken filet sandwich, with lettuce and mayonnaise",
+    "cal": 276.0,
+    "pro": 10.9,
+    "fat": 13.6,
+    "carb": 27.4,
+    "fib": 1.4,
+    "h2o": 45.8,
+    "sug": 3.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "sandwich",
+        "gm": 152.0
+      }
+    ]
+  },
+  {
+    "word": "SANDSUBBEEF",
+    "display": "Sandwich Sub Roast Beef",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "21125",
+    "desc": "Fast foods, submarine sandwich, roast beef on white bread with lettuce and tomato",
+    "cal": 156.0,
+    "pro": 12.2,
+    "fat": 2.7,
+    "carb": 20.3,
+    "fib": 0.7,
+    "h2o": 63.1,
+    "sug": 3.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 6.0,
+        "desc": "inch sub",
+        "gm": 190.0
+      },
+      {
+        "amt": 12.0,
+        "desc": "inch sub",
+        "gm": 381.0
+      }
+    ]
+  },
+  {
+    "word": "SANDSUBBLT",
+    "display": "Sandwich Sub BLT",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "21162",
+    "desc": "Fast foods, submarine sandwich, bacon, lettuce, and tomato on white bread",
+    "cal": 205.0,
+    "pro": 10.1,
+    "fat": 6.4,
+    "carb": 26.7,
+    "fib": 1.6,
+    "h2o": 55.0,
+    "sug": 3.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 6.0,
+        "desc": "inch sub",
+        "gm": 148.0
+      },
+      {
+        "amt": 12.0,
+        "desc": "inch sub",
+        "gm": 296.0
+      }
+    ]
+  },
+  {
+    "word": "SANDSUBMEATBALL",
+    "display": "Sandwich Sub Meatball",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "21158",
+    "desc": "Fast foods, submarine sandwich, meatball marinara on white bread",
+    "cal": 219.0,
+    "pro": 9.8,
+    "fat": 8.4,
+    "carb": 26.0,
+    "fib": 2.1,
+    "h2o": 53.6,
+    "sug": 5.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 6.0,
+        "desc": "inch sub",
+        "gm": 209.0
+      },
+      {
+        "amt": 12.0,
+        "desc": "inch sub",
+        "gm": 418.0
+      }
+    ]
+  },
+  {
+    "word": "SANDSUBTURKEY",
+    "display": "Sandwich Sub Turkey",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "21155",
+    "desc": "Fast foods, submarine sandwich, turkey breast on white bread with lettuce and tomato",
+    "cal": 147.0,
+    "pro": 9.1,
+    "fat": 2.3,
+    "carb": 22.4,
+    "fib": 1.3,
+    "h2o": 64.3,
+    "sug": 3.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 6.0,
+        "desc": "inch sub",
+        "gm": 184.0
+      },
+      {
+        "amt": 12.0,
+        "desc": "inch sub",
+        "gm": 367.0
+      }
+    ]
+  },
+  {
+    "word": "SANDSUBHAM",
+    "display": "Sandwich Sub Ham",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "21156",
+    "desc": "Fast foods, submarine sandwich, ham on white bread with lettuce and tomato",
+    "cal": 151.0,
+    "pro": 9.1,
+    "fat": 2.5,
+    "carb": 22.9,
+    "fib": 1.3,
+    "h2o": 63.3,
+    "sug": 3.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 6.0,
+        "desc": "inch sub",
+        "gm": 184.0
+      },
+      {
+        "amt": 12.0,
+        "desc": "inch sub",
+        "gm": 368.0
       }
     ]
   }
