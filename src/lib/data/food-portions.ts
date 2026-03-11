@@ -996,9 +996,9 @@ export const FOODS: Food[] = [
   },
   {
     "word": "APPLEPIE",
-    "display": "Apple Pie",
+    "display": "Pie Apple Pie",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18302",
     "desc": "Pie, apple, prepared from recipe",
@@ -1059,7 +1059,7 @@ export const FOODS: Food[] = [
     "word": "APPLESTRUDEL",
     "display": "Apple Strudel",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18354",
     "desc": "Strudel, apple",
@@ -2971,6 +2971,72 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "BEERHIGH",
+    "display": "Beer High Alcohol",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14251",
+    "desc": "Beverages, Beer, higher alcohol",
+    "cal": 58.0,
+    "pro": 0.9,
+    "fat": 0.0,
+    "carb": 0.3,
+    "fib": 0.0,
+    "h2o": 91.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.6
+      },
+      {
+        "amt": 1.0,
+        "desc": "bottle",
+        "gm": 355.0
+      }
+    ]
+  },
+  {
+    "word": "BEERLIGHT",
+    "display": "Beer Light",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14013",
+    "desc": "Alcoholic beverage, beer, light, low carb",
+    "cal": 27.0,
+    "pro": 0.2,
+    "fat": 0.0,
+    "carb": 0.7,
+    "fib": 0.0,
+    "h2o": 95.4,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.5
+      },
+      {
+        "amt": 12.0,
+        "desc": "fl oz",
+        "gm": 354.0
+      }
+    ]
+  },
+  {
     "word": "BEERWURST",
     "display": "Beerwurst",
     "groups": [
@@ -4276,6 +4342,122 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "BUNHONEY",
+    "display": "Buns Honey Bun",
+    "groups": [
+      "grain",
+      "sweets"
+    ],
+    "ndb": "18964",
+    "desc": "Cinnamon buns, frosted (includes honey buns)",
+    "cal": 452.0,
+    "pro": 4.5,
+    "fat": 26.6,
+    "carb": 48.6,
+    "fib": 1.2,
+    "h2o": 19.0,
+    "sug": 25.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bun",
+        "gm": 65.0
+      }
+    ]
+  },
+  {
+    "word": "BUNSHAMBURGER",
+    "display": "Buns Hamburger",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "28394",
+    "desc": "PEPPERIDGE FARM, Hamburger Bun",
+    "cal": 278.0,
+    "pro": 0.0,
+    "fat": 3.7,
+    "carb": 50.0,
+    "fib": 1.8,
+    "h2o": 33.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 51.0
+      }
+    ]
+  },
+  {
+    "word": "BUNSHAMBURGERSES",
+    "display": "Buns Hamburger Sesame",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "28387",
+    "desc": "PEPPERIDGE FARM, Hamburger Buns w/Sesame",
+    "cal": 280.0,
+    "pro": 0.0,
+    "fat": 4.1,
+    "carb": 49.9,
+    "fib": 3.1,
+    "h2o": 33.2,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 53.0
+      }
+    ]
+  },
+  {
+    "word": "BUNSHAMBURGERWHOLE",
+    "display": "Buns Hamburger Whole Wheat",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "28377",
+    "desc": "PEPPERIDGE FARM, 100% Whole Wheat Hamburger Buns",
+    "cal": 257.0,
+    "pro": 0.0,
+    "fat": 3.1,
+    "carb": 43.2,
+    "fib": 5.9,
+    "h2o": 37.1,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 51.0
+      }
+    ]
+  },
+  {
     "word": "BURDOCK",
     "display": "Burdock",
     "groups": [
@@ -4556,7 +4738,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "BUTTERSCOTCH",
-    "display": "Butterscotch",
+    "display": "Butterscotch Topping",
     "groups": [
       "sweets"
     ],
@@ -4877,7 +5059,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CAKECHOCOLATE",
-    "display": "Cake Chocolate",
+    "display": "Cake Chocolate no Frosting",
     "groups": [
       "sweets"
     ],
@@ -5184,7 +5366,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CAKEWHITE",
-    "display": "Cake White",
+    "display": "Cake White no Frosting",
     "groups": [
       "sweets"
     ],
@@ -5217,7 +5399,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CAKEWHITECOCONUTFROSTING",
-    "display": "Cake White Coconut",
+    "display": "Cake White Coconut Frosting",
     "groups": [
       "sweets"
     ],
@@ -5561,7 +5743,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CARAMEL",
-    "display": "Caramel",
+    "display": "Candies Caramel",
     "groups": [
       "sweets"
     ],
@@ -6360,6 +6542,39 @@ export const FOODS: Food[] = [
         "amt": 3.0,
         "desc": "flowerets",
         "gm": 54.0
+      }
+    ]
+  },
+  {
+    "word": "CAVIAR",
+    "display": "Caviar",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "15012",
+    "desc": "Fish, caviar, black and red, granular",
+    "cal": 264.0,
+    "pro": 24.6,
+    "fat": 17.9,
+    "carb": 4.0,
+    "fib": 0.0,
+    "h2o": 47.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 16.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
       }
     ]
   },
@@ -7276,7 +7491,7 @@ export const FOODS: Food[] = [
     "word": "CHERRYFRIEDPIE",
     "display": "Cherry Fried Pie",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18444",
     "desc": "Pie, fried pies, cherry",
@@ -7457,6 +7672,34 @@ export const FOODS: Food[] = [
         "amt": 0.5,
         "desc": "breast, bone and skin removed",
         "gm": 86.0
+      }
+    ]
+  },
+  {
+    "word": "CHICKENBREASTSLICED",
+    "display": "Chicken Breast Sliced",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "7933",
+    "desc": "Chicken breast, oven-roasted, fat-free, sliced",
+    "cal": 79.0,
+    "pro": 16.8,
+    "fat": 0.4,
+    "carb": 2.2,
+    "fib": 0.0,
+    "h2o": 76.7,
+    "sug": 0.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 2 slices",
+        "gm": 42.0
       }
     ]
   },
@@ -8628,6 +8871,34 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "CHOCMALT",
+    "display": "Chocolate Malt",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14318",
+    "desc": "Beverages, Malted drink mix, chocolate, powder, prepared with whole milk",
+    "cal": 85.0,
+    "pro": 3.4,
+    "fat": 3.3,
+    "carb": 11.2,
+    "fib": 0.5,
+    "h2o": 81.3,
+    "sug": 6.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup (8 fl oz)",
+        "gm": 265.0
+      }
+    ]
+  },
+  {
     "word": "CHOCMILKCANDY",
     "display": "Candies Milk Choc Candy",
     "groups": [
@@ -8667,7 +8938,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CHOCOLATE",
-    "display": "Chocolate",
+    "display": "Chocolate Baking",
     "groups": [
       "spice"
     ],
@@ -8723,9 +8994,9 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CHOCOLATESYRUP",
-    "display": "Chocolate Syrup",
+    "display": "Chocolate Syrup Beverage",
     "groups": [
-      "spice"
+      "beverage"
     ],
     "ndb": "14181",
     "desc": "Beverages, Chocolate syrup",
@@ -8751,44 +9022,6 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "cup",
         "gm": 300.0
-      }
-    ]
-  },
-  {
-    "word": "CHOCWHITE",
-    "display": "Candies White Choc",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19087",
-    "desc": "Candies, white chocolate",
-    "cal": 539.0,
-    "pro": 5.9,
-    "fat": 32.1,
-    "carb": 59.2,
-    "fib": 0.2,
-    "h2o": 1.3,
-    "sug": 59.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar (3 oz)",
-        "gm": 85.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "tbsp",
-        "gm": 14.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup chips",
-        "gm": 170.0
       }
     ]
   },
@@ -9012,7 +9245,7 @@ export const FOODS: Food[] = [
     "word": "CINNAMONROLL",
     "display": "Roll Cinnamon",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18358",
     "desc": "Sweet rolls, cinnamon, refrigerated dough with frosting, baked",
@@ -11825,7 +12058,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CREAM",
-    "display": "Cream",
+    "display": "Heavy Whipping Cream",
     "groups": [
       "dairy"
     ],
@@ -12023,7 +12256,8 @@ export const FOODS: Food[] = [
     "word": "CROISSANT",
     "display": "Croissant",
     "groups": [
-      "prepared"
+      "prepared",
+      "grain"
     ],
     "ndb": "18239",
     "desc": "Croissants, butter",
@@ -12658,34 +12892,6 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "DIVINITY",
-    "display": "Divinity",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "19384",
-    "desc": "Candies, divinity, prepared-from-recipe",
-    "cal": 364.0,
-    "pro": 1.3,
-    "fat": 0.1,
-    "carb": 89.0,
-    "fib": 0.0,
-    "h2o": 9.2,
-    "sug": 79.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "piece",
-        "gm": 11.0
-      }
-    ]
-  },
-  {
     "word": "DOCK",
     "display": "Dock",
     "groups": [
@@ -12771,7 +12977,7 @@ export const FOODS: Food[] = [
     "word": "DOUGHNUTCAKE",
     "display": "Doughnut Cake-type",
     "groups": [
-      "prepared",
+      "sweets",
       "grain"
     ],
     "ndb": "18248",
@@ -12830,7 +13036,7 @@ export const FOODS: Food[] = [
     "word": "DOUGHNUTYEAST",
     "display": "Doughnut Yeast-type",
     "groups": [
-      "prepared",
+      "sweets",
       "grain"
     ],
     "ndb": "18436",
@@ -13509,7 +13715,7 @@ export const FOODS: Food[] = [
     "word": "ECLAIR",
     "display": "Eclair",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18969",
     "desc": "Cream puff, eclair, custard or cream filled, iced",
@@ -15165,34 +15371,6 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "FONDANT",
-    "display": "Fondant",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "19099",
-    "desc": "Candies, fondant, prepared-from-recipe",
-    "cal": 373.0,
-    "pro": 0.0,
-    "fat": 0.0,
-    "carb": 93.2,
-    "fib": 0.0,
-    "h2o": 6.7,
-    "sug": 88.9,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      }
-    ]
-  },
-  {
     "word": "FONTINA",
     "display": "Fontina",
     "groups": [
@@ -15406,6 +15584,35 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "FRIEDRICE",
+    "display": "Fried Rice",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "36602",
+    "desc": "Restaurant, Chinese, fried rice, without meat",
+    "cal": 174.0,
+    "pro": 4.0,
+    "fat": 3.0,
+    "carb": 32.8,
+    "fib": 1.1,
+    "h2o": 59.1,
+    "sug": 0.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 137.0
+      }
+    ]
+  },
+  {
     "word": "FROG",
     "display": "Frog",
     "groups": [
@@ -15430,39 +15637,6 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "leg",
         "gm": 45.0
-      }
-    ]
-  },
-  {
-    "word": "FROSTING",
-    "display": "Frosting",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "19244",
-    "desc": "Frostings, vanilla, creamy, dry mix",
-    "cal": 410.0,
-    "pro": 0.3,
-    "fat": 4.9,
-    "carb": 93.8,
-    "fib": 0.1,
-    "h2o": 0.7,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "package",
-        "gm": 411.0
-      },
-      {
-        "amt": 0.08,
-        "desc": "package",
-        "gm": 34.0
       }
     ]
   },
@@ -15629,7 +15803,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "FUDGE",
-    "display": "Fudge",
+    "display": "Candies Fudge",
     "groups": [
       "sweets"
     ],
@@ -15762,7 +15936,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "GELATIN",
-    "display": "Gelatin",
+    "display": "Gelatin Dry Powder",
     "groups": [
       "sweets"
     ],
@@ -17869,6 +18043,35 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "ICECREAMBARCHOC",
+    "display": "Ice Cream Bar Choc",
+    "groups": [
+      "dairy",
+      "sweets"
+    ],
+    "ndb": "1237",
+    "desc": "Ice cream, bar or stick, chocolate covered",
+    "cal": 331.0,
+    "pro": 4.1,
+    "fat": 24.1,
+    "carb": 24.5,
+    "fib": 0.8,
+    "h2o": 46.3,
+    "sug": 18.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar",
+        "gm": 50.0
+      }
+    ]
+  },
+  {
     "word": "ICECREAMCHOC",
     "display": "Ice Cream Chocolate",
     "groups": [
@@ -17899,6 +18102,189 @@ export const FOODS: Food[] = [
         "amt": 0.5,
         "desc": "cup (4 fl oz)",
         "gm": 66.0
+      }
+    ]
+  },
+  {
+    "word": "ICECREAMCHOCLIGHT",
+    "display": "Ice Cream Choc Light",
+    "groups": [
+      "dairy",
+      "sweets"
+    ],
+    "ndb": "19114",
+    "desc": "Ice creams, chocolate, light",
+    "cal": 187.0,
+    "pro": 5.0,
+    "fat": 7.2,
+    "carb": 25.7,
+    "fib": 0.8,
+    "h2o": 61.4,
+    "sug": 24.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 68.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "unit",
+        "gm": 100.0
+      }
+    ]
+  },
+  {
+    "word": "ICECREAMCONECHOC",
+    "display": "Ice Cream Choc with Cone",
+    "groups": [
+      "dairy",
+      "sweets"
+    ],
+    "ndb": "1240",
+    "desc": "Ice cream cone, chocolate covered, with nuts, flavors other than chocolate",
+    "cal": 354.0,
+    "pro": 5.2,
+    "fat": 21.9,
+    "carb": 34.4,
+    "fib": 1.0,
+    "h2o": 37.4,
+    "sug": 25.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "unit",
+        "gm": 96.0
+      }
+    ]
+  },
+  {
+    "word": "ICECREAMCONEWAFER",
+    "display": "Ice Cream Cone only",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "18271",
+    "desc": "Ice cream cones, cake or wafer-type",
+    "cal": 417.0,
+    "pro": 8.1,
+    "fat": 6.9,
+    "carb": 79.0,
+    "fib": 3.0,
+    "h2o": 5.3,
+    "sug": 6.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "cone",
+        "gm": 4.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "large waffle cone",
+        "gm": 29.0
+      }
+    ]
+  },
+  {
+    "word": "ICECREAMCREAM",
+    "display": "Ice Cream Creamsicle",
+    "groups": [
+      "dairy",
+      "sweets"
+    ],
+    "ndb": "1302",
+    "desc": "Light ice cream, Creamsicle",
+    "cal": 165.0,
+    "pro": 1.5,
+    "fat": 3.1,
+    "carb": 32.8,
+    "fib": 0.0,
+    "h2o": 61.8,
+    "sug": 18.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      }
+    ]
+  },
+  {
+    "word": "ICECREAMSAND",
+    "display": "Ice Cream Sandwich",
+    "groups": [
+      "dairy",
+      "sweets"
+    ],
+    "ndb": "1238",
+    "desc": "Ice cream sandwich",
+    "cal": 237.0,
+    "pro": 4.3,
+    "fat": 8.6,
+    "carb": 37.1,
+    "fib": 0.0,
+    "h2o": 48.9,
+    "sug": 18.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 70.0
+      }
+    ]
+  },
+  {
+    "word": "ICECREAMSOFTVAN",
+    "display": "Ice Cream Soft Vanilla",
+    "groups": [
+      "dairy",
+      "sweets"
+    ],
+    "ndb": "21028",
+    "desc": "Fast foods, vanilla, light, soft-serve ice cream, with cone",
+    "cal": 163.0,
+    "pro": 4.2,
+    "fat": 4.9,
+    "carb": 26.4,
+    "fib": 0.1,
+    "h2o": 63.6,
+    "sug": 19.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "item",
+        "gm": 120.0
       }
     ]
   },
@@ -17937,6 +18323,93 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "ICECREAMSUBDAEFUD",
+    "display": "Ice Cream Sundae Fudge",
+    "groups": [
+      "dairy",
+      "sweets"
+    ],
+    "ndb": "21033",
+    "desc": "Fast foods, sundae, hot fudge",
+    "cal": 180.0,
+    "pro": 3.6,
+    "fat": 5.5,
+    "carb": 30.2,
+    "fib": 0.0,
+    "h2o": 59.7,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "sundae",
+        "gm": 158.0
+      }
+    ]
+  },
+  {
+    "word": "ICECREAMSUNDAECARM",
+    "display": "Ice Cream Sundae Caramel",
+    "groups": [
+      "dairy",
+      "sweets"
+    ],
+    "ndb": "21032",
+    "desc": "Fast foods, sundae, caramel",
+    "cal": 196.0,
+    "pro": 4.7,
+    "fat": 6.0,
+    "carb": 31.8,
+    "fib": 0.0,
+    "h2o": 56.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "sundae",
+        "gm": 155.0
+      }
+    ]
+  },
+  {
+    "word": "ICECREAMSUNDAESTRW",
+    "display": "Ice Cream Sundae Strawberry",
+    "groups": [
+      "dairy",
+      "sweets"
+    ],
+    "ndb": "21034",
+    "desc": "Fast foods, sundae, strawberry",
+    "cal": 175.0,
+    "pro": 4.1,
+    "fat": 5.1,
+    "carb": 29.2,
+    "fib": 0.0,
+    "h2o": 60.9,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "sundae",
+        "gm": 153.0
+      }
+    ]
+  },
+  {
     "word": "ICECREAMVANILLA",
     "display": "Ice Cream Vanilla",
     "groups": [
@@ -17966,20 +18439,21 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "ICING",
-    "display": "Icing",
+    "word": "ICECREAMVANILLALIGHT",
+    "display": "Ice Cream Vanilla Light",
     "groups": [
-      "prepared"
+      "dairy",
+      "sweets"
     ],
-    "ndb": "19230",
-    "desc": "Frostings, vanilla, creamy, ready-to-eat",
-    "cal": 418.0,
-    "pro": 0.0,
-    "fat": 16.2,
-    "carb": 67.9,
-    "fib": 0.0,
-    "h2o": 15.1,
-    "sug": 63.1,
+    "ndb": "19088",
+    "desc": "Ice creams, vanilla, light",
+    "cal": 180.0,
+    "pro": 4.8,
+    "fat": 4.8,
+    "carb": 29.5,
+    "fib": 0.3,
+    "h2o": 59.9,
+    "sug": 22.1,
     "portions": [
       {
         "amt": 1.0,
@@ -17987,19 +18461,9 @@ export const FOODS: Food[] = [
         "gm": 100.0
       },
       {
-        "amt": 0.08,
-        "desc": "package",
-        "gm": 38.0
-      },
-      {
-        "amt": 2.0,
-        "desc": "tbsp creamy",
-        "gm": 33.0
-      },
-      {
         "amt": 1.0,
-        "desc": "package (16 oz)",
-        "gm": 462.0
+        "desc": "serving 1/2 cup",
+        "gm": 76.0
       }
     ]
   },
@@ -18106,7 +18570,7 @@ export const FOODS: Food[] = [
     "word": "JAM",
     "display": "Jam Preserves",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "19297",
     "desc": "Jams and preserves",
@@ -18139,7 +18603,7 @@ export const FOODS: Food[] = [
     "word": "JAMNOSUGAR",
     "display": "Jam Preserves no Sugar",
     "groups": [
-      "prepared",
+      "sweets",
       "spice"
     ],
     "ndb": "43028",
@@ -18173,7 +18637,7 @@ export const FOODS: Food[] = [
     "word": "JELLIES",
     "display": "Jellies",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "19300",
     "desc": "Jellies",
@@ -18204,9 +18668,9 @@ export const FOODS: Food[] = [
   },
   {
     "word": "JELLYBEAN",
-    "display": "Jellybean",
+    "display": "Candies Jellybean",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "19108",
     "desc": "Candies, jellybeans",
@@ -18736,9 +19200,9 @@ export const FOODS: Food[] = [
   },
   {
     "word": "LADYFINGERS",
-    "display": "Ladyfingers",
+    "display": "Cookies Ladyfingers",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18175",
     "desc": "Cookies, ladyfingers, with lemon juice and rind",
@@ -19964,6 +20428,34 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "LUNCHEONMEATLESS",
+    "display": "Sliced Luncheon Meatless",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "43131",
+    "desc": "Luncheon slices, meatless",
+    "cal": 189.0,
+    "pro": 17.8,
+    "fat": 11.1,
+    "carb": 4.4,
+    "fib": 1.1,
+    "h2o": 65.0,
+    "sug": 2.2,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice, thin",
+        "gm": 14.0
+      }
+    ]
+  },
+  {
     "word": "LUNG",
     "display": "Lung",
     "groups": [
@@ -20148,6 +20640,49 @@ export const FOODS: Food[] = [
         "amt": 3.0,
         "desc": "oz",
         "gm": 85.0
+      }
+    ]
+  },
+  {
+    "word": "MACKERELCAN",
+    "display": "Mackerelcan",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "15048",
+    "desc": "Fish, mackerel, jack, canned, drained solids",
+    "cal": 156.0,
+    "pro": 23.2,
+    "fat": 6.3,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 69.2,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz, boneless",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 190.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cubic inch",
+        "gm": 16.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "can (15 oz)",
+        "gm": 361.0
       }
     ]
   },
@@ -20635,7 +21170,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "MARSHMALLOW",
-    "display": "Marshmallow",
+    "display": "Candies Marshmallow",
     "groups": [
       "sweets"
     ],
@@ -21286,7 +21821,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "MILKCHOC",
-    "display": "Milk Choc",
+    "display": "Milk Choc Beverage",
     "groups": [
       "dairy",
       "beverage"
@@ -21950,6 +22485,72 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "package (6 oz)",
         "gm": 170.0
+      }
+    ]
+  },
+  {
+    "word": "MUFFINCORN",
+    "display": "Muffin Corn",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "18282",
+    "desc": "Muffins, corn, prepared from recipe, made with low fat (2%) milk",
+    "cal": 316.0,
+    "pro": 7.1,
+    "fat": 12.3,
+    "carb": 44.2,
+    "fib": 0.0,
+    "h2o": 33.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "muffin (2-3/4\" dia x 2\")",
+        "gm": 57.0
+      }
+    ]
+  },
+  {
+    "word": "MUFFUNBLUEBERRY",
+    "display": "Muffin Blueberry",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "18278",
+    "desc": "Muffins, blueberry, prepared from recipe, made with low fat (2%) milk",
+    "cal": 285.0,
+    "pro": 6.5,
+    "fat": 10.8,
+    "carb": 40.7,
+    "fib": 0.0,
+    "h2o": 39.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "muffin",
+        "gm": 57.0
       }
     ]
   },
@@ -24728,6 +25329,482 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "PASTACOOKED",
+    "display": "Pasta Cooked",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20521",
+    "desc": "Pasta, cooked, unenriched, with added salt",
+    "cal": 157.0,
+    "pro": 5.8,
+    "fat": 0.9,
+    "carb": 30.6,
+    "fib": 1.8,
+    "h2o": 62.1,
+    "sug": 0.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup spaghetti not packed",
+        "gm": 124.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup spaghetti packed",
+        "gm": 151.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup elbows not packed",
+        "gm": 120.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup elbows packed",
+        "gm": 132.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup penne",
+        "gm": 107.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup rotini",
+        "gm": 107.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup farfalle",
+        "gm": 107.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup shells",
+        "gm": 105.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup lasagne",
+        "gm": 116.0
+      }
+    ]
+  },
+  {
+    "word": "PASTACORNCOOKED",
+    "display": "Pasta Corn Cooked",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20092",
+    "desc": "Pasta, gluten-free, corn, cooked",
+    "cal": 126.0,
+    "pro": 2.6,
+    "fat": 0.7,
+    "carb": 27.9,
+    "fib": 4.8,
+    "h2o": 68.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 140.0
+      }
+    ]
+  },
+  {
+    "word": "PASTACORNDRY",
+    "display": "Pasta Corn Dry",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20091",
+    "desc": "Pasta, gluten-free, corn, dry",
+    "cal": 357.0,
+    "pro": 7.5,
+    "fat": 2.1,
+    "carb": 79.3,
+    "fib": 11.0,
+    "h2o": 10.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 105.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "oz",
+        "gm": 57.0
+      }
+    ]
+  },
+  {
+    "word": "PASTAPOMODOROCHIC",
+    "display": "Pasta Chicken Pomodoro",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "22984",
+    "desc": "KASHI, Chicken Pasta Pomodoro, Frozen Entree",
+    "cal": 100.0,
+    "pro": 7.0,
+    "fat": 2.3,
+    "carb": 13.0,
+    "fib": 2.6,
+    "h2o": 76.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package",
+        "gm": 283.0
+      }
+    ]
+  },
+  {
+    "word": "PASTAPRIMAVERAPESTO",
+    "display": "Pasta Pesto Primavera",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "22987",
+    "desc": "KASHI Pesto Pasta Primavera, frozen, unprepared",
+    "cal": 101.0,
+    "pro": 3.8,
+    "fat": 3.8,
+    "carb": 13.0,
+    "fib": 2.4,
+    "h2o": 77.9,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "entree",
+        "gm": 283.0
+      }
+    ]
+  },
+  {
+    "word": "PASTARICEBRWNCK",
+    "display": "Pasta Brown Rice Cooked",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20654",
+    "desc": "Pasta, gluten-free, brown rice flour, cooked, TINKYADA",
+    "cal": 138.0,
+    "pro": 3.5,
+    "fat": 1.7,
+    "carb": 32.2,
+    "fib": 1.7,
+    "h2o": 62.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup spaghetti not packed",
+        "gm": 169.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup penne not packed",
+        "gm": 131.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup fettucini not packed",
+        "gm": 153.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup spirals not packed",
+        "gm": 136.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup elbows not packed",
+        "gm": 131.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup shells not packed",
+        "gm": 156.0
+      }
+    ]
+  },
+  {
+    "word": "PASTASPINACHFRESH",
+    "display": "Pasta Spinach Fresh",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20095",
+    "desc": "Pasta, fresh-refrigerated, spinach, as purchased",
+    "cal": 289.0,
+    "pro": 11.3,
+    "fat": 2.1,
+    "carb": 55.7,
+    "fib": 0.0,
+    "h2o": 30.1,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 4.5,
+        "desc": "oz",
+        "gm": 128.0
+      }
+    ]
+  },
+  {
+    "word": "PASTASPINACHFRESHCK",
+    "display": "Pasta Spinach Fresh Cooked",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20096",
+    "desc": "Pasta, fresh-refrigerated, spinach, cooked",
+    "cal": 130.0,
+    "pro": 5.1,
+    "fat": 0.9,
+    "carb": 25.0,
+    "fib": 0.0,
+    "h2o": 68.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "oz",
+        "gm": 57.0
+      }
+    ]
+  },
+  {
+    "word": "PASTATOMATOMEATLESS",
+    "display": "Pasta with Tomato Sauce Meatless",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "22914",
+    "desc": "Pasta with tomato sauce, no meat, canned",
+    "cal": 70.0,
+    "pro": 2.2,
+    "fat": 0.4,
+    "carb": 14.2,
+    "fib": 0.9,
+    "h2o": 82.2,
+    "sug": 4.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving (1 NLEA serving)",
+        "gm": 252.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 238.0
+      }
+    ]
+  },
+  {
+    "word": "PASTATORTCHEESE",
+    "display": "Pasta Cheese Tortellini",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "22901",
+    "desc": "Tortellini, pasta with cheese filling, fresh-refrigerated, as purchased",
+    "cal": 307.0,
+    "pro": 13.5,
+    "fat": 7.2,
+    "carb": 47.0,
+    "fib": 1.9,
+    "h2o": 30.5,
+    "sug": 0.9,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.75,
+        "desc": "cup",
+        "gm": 81.0
+      }
+    ]
+  },
+  {
+    "word": "PASTAWHOLECK",
+    "display": "Pasta Whole Wheat Cooked",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20125",
+    "desc": "Pasta, whole-wheat, cooked",
+    "cal": 149.0,
+    "pro": 6.0,
+    "fat": 1.7,
+    "carb": 30.1,
+    "fib": 3.9,
+    "h2o": 61.8,
+    "sug": 0.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup spaghetti not packed",
+        "gm": 117.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup spaghetti packed",
+        "gm": 151.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup elbows",
+        "gm": 117.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup penne",
+        "gm": 97.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup shells",
+        "gm": 105.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup lasagne",
+        "gm": 116.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup rotini",
+        "gm": 107.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup farfalle",
+        "gm": 107.0
+      }
+    ]
+  },
+  {
+    "word": "PASTAWHOLEDRY",
+    "display": "Pasta Whole Wheat Dry",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20124",
+    "desc": "Pasta, whole-wheat, dry",
+    "cal": 352.0,
+    "pro": 13.9,
+    "fat": 2.9,
+    "carb": 73.4,
+    "fib": 9.2,
+    "h2o": 8.2,
+    "sug": 2.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup spaghetti",
+        "gm": 91.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup elbows",
+        "gm": 122.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup penne",
+        "gm": 95.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup farfalle",
+        "gm": 81.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup rotini",
+        "gm": 96.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup shells",
+        "gm": 64.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup lasagne",
+        "gm": 90.0
+      }
+    ]
+  },
+  {
     "word": "PASTRAMI",
     "display": "Pastrami",
     "groups": [
@@ -24764,7 +25841,7 @@ export const FOODS: Food[] = [
     "word": "PASTRY",
     "display": "Pastry",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18430",
     "desc": "Danish pastry, cinnamon, unenriched",
@@ -25688,7 +26765,7 @@ export const FOODS: Food[] = [
     "word": "PIEBANANACREAM",
     "display": "Pie Banana Cream",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18304",
     "desc": "Pie, banana cream, prepared from recipe",
@@ -25726,7 +26803,7 @@ export const FOODS: Food[] = [
     "word": "PIEBLUEBERRY",
     "display": "Pie Blueberry",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18306",
     "desc": "Pie, blueberry, prepared from recipe",
@@ -25759,7 +26836,7 @@ export const FOODS: Food[] = [
     "word": "PIEBOSTONCREAM",
     "display": "Pie Boston Cream",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18090",
     "desc": "Cake, boston cream pie, commercially prepared",
@@ -25792,7 +26869,7 @@ export const FOODS: Food[] = [
     "word": "PIECHERRY",
     "display": "Pie Cherry",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18309",
     "desc": "Pie, cherry, prepared from recipe",
@@ -25825,7 +26902,7 @@ export const FOODS: Food[] = [
     "word": "PIECHERRYFRIED",
     "display": "Pie Cherry Fried",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18444",
     "desc": "Pie, fried pies, cherry",
@@ -25858,7 +26935,7 @@ export const FOODS: Food[] = [
     "word": "PIECHOCOLATE",
     "display": "Pie Chocolate",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18310",
     "desc": "Pie, chocolate creme, commercially prepared",
@@ -25901,7 +26978,7 @@ export const FOODS: Food[] = [
     "word": "PIECOCONUT",
     "display": "Pie Coconut",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18313",
     "desc": "Pie, coconut creme, commercially prepared",
@@ -25967,7 +27044,7 @@ export const FOODS: Food[] = [
     "word": "PIEDUTCHAPPLE",
     "display": "Pie Dutch Apple",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18944",
     "desc": "Pie, Dutch Apple, Commercially Prepared",
@@ -26010,7 +27087,7 @@ export const FOODS: Food[] = [
     "word": "PIELEMON",
     "display": "Pie Lemon",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18321",
     "desc": "Pie, lemon meringue, prepared from recipe",
@@ -26043,7 +27120,7 @@ export const FOODS: Food[] = [
     "word": "PIELEMONFRIED",
     "display": "Pie Lemon Fried ",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18445",
     "desc": "Pie, fried pies, lemon",
@@ -26109,7 +27186,7 @@ export const FOODS: Food[] = [
     "word": "PIEPEACH",
     "display": "Pie Peach",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18323",
     "desc": "Pie, peach",
@@ -26142,7 +27219,7 @@ export const FOODS: Food[] = [
     "word": "PIEPECAN",
     "display": "Pie Pecan",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18325",
     "desc": "Pie, pecan, prepared from recipe",
@@ -26175,7 +27252,7 @@ export const FOODS: Food[] = [
     "word": "PIEPUMPKIN",
     "display": "Pie Pumpkin",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18327",
     "desc": "Pie, pumpkin, prepared from recipe",
@@ -26208,7 +27285,7 @@ export const FOODS: Food[] = [
     "word": "PIEVANILLACREAM",
     "display": "Pie Vanilla Cream",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18328",
     "desc": "Pie, vanilla cream, prepared from recipe",
@@ -26442,6 +27519,39 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "pimiento, whole",
         "gm": 66.0
+      }
+    ]
+  },
+  {
+    "word": "PINACOLADA",
+    "display": "Pina Colada",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14017",
+    "desc": "Alcoholic beverage, pina colada, prepared-from-recipe",
+    "cal": 174.0,
+    "pro": 0.4,
+    "fat": 1.9,
+    "carb": 22.7,
+    "fib": 0.3,
+    "h2o": 65.0,
+    "sug": 22.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 31.4
+      },
+      {
+        "amt": 1.0,
+        "desc": "cocktail (4.5 fl oz)",
+        "gm": 141.0
       }
     ]
   },
@@ -27700,6 +28810,39 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "PORKHAMSLICED",
+    "display": "Pork Ham Sliced",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "7029",
+    "desc": "Ham, sliced, regular (approximately 11% fat)",
+    "cal": 163.0,
+    "pro": 16.6,
+    "fat": 8.6,
+    "carb": 3.8,
+    "fib": 1.3,
+    "h2o": 67.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 56.0,
+        "desc": "grams 1 serving",
+        "gm": 56.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice",
+        "gm": 28.0
+      }
+    ]
+  },
+  {
     "word": "PORKPICNIC",
     "display": "Pork Picnic",
     "groups": [
@@ -28513,7 +29656,7 @@ export const FOODS: Food[] = [
     "word": "PRESERVES",
     "display": "Preserves",
     "groups": [
-      "spice"
+      "sweets"
     ],
     "ndb": "19920",
     "desc": "Jams, preserves, marmalades, sweetened with fruit juice",
@@ -30270,6 +31413,128 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "ROLLDINNERSWEET",
+    "display": "Roll Dinner Sweet",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "28348",
+    "desc": "Rolls, dinner, sweet",
+    "cal": 321.0,
+    "pro": 10.0,
+    "fat": 7.4,
+    "carb": 53.6,
+    "fib": 3.1,
+    "h2o": 27.8,
+    "sug": 15.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "roll",
+        "gm": 30.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice",
+        "gm": 39.0
+      }
+    ]
+  },
+  {
+    "word": "ROLLDINNERWHOLE",
+    "display": "Roll Dinner Whole Wheat",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "18348",
+    "desc": "Rolls, dinner, whole-wheat",
+    "cal": 266.0,
+    "pro": 8.7,
+    "fat": 4.7,
+    "carb": 51.1,
+    "fib": 7.5,
+    "h2o": 33.1,
+    "sug": 8.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "roll (1 oz)",
+        "gm": 28.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "roll (hamburger, frankfurter roll)",
+        "gm": 43.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "roll, large submarine, hoagie",
+        "gm": 135.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "medium (2-1/2\" dia)",
+        "gm": 36.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "roll medium submarine, hoagie",
+        "gm": 94.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "roll (small submarine, hoagie roll)",
+        "gm": 65.0
+      }
+    ]
+  },
+  {
+    "word": "ROLLFRENCH",
+    "display": "Roll French",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "18349",
+    "desc": "Rolls, french",
+    "cal": 277.0,
+    "pro": 8.6,
+    "fat": 4.3,
+    "carb": 50.2,
+    "fib": 3.2,
+    "h2o": 34.8,
+    "sug": 0.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "roll",
+        "gm": 38.0
+      }
+    ]
+  },
+  {
     "word": "ROLLHOTDOG",
     "display": "Roll Hotdog",
     "groups": [
@@ -30300,6 +31565,69 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "oz",
         "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "ROLLPIZZA",
+    "display": "Roll Pizza",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "32012",
+    "desc": "Pizza rolls, frozen, unprepared",
+    "cal": 328.0,
+    "pro": 8.7,
+    "fat": 10.0,
+    "carb": 50.7,
+    "fib": 1.2,
+    "h2o": 27.9,
+    "sug": 3.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 6 rolls",
+        "gm": 80.0
+      }
+    ]
+  },
+  {
+    "word": "ROLLPUMP",
+    "display": "Roll Pumpernickel",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "43441",
+    "desc": "Rolls, pumpernickel",
+    "cal": 276.0,
+    "pro": 10.8,
+    "fat": 2.8,
+    "carb": 51.9,
+    "fib": 5.4,
+    "h2o": 32.0,
+    "sug": 0.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "medium (2-1/2\" dia)",
+        "gm": 36.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "roll (pan, dinner, or small roll) (2\" square, 2\" h",
+        "gm": 28.0
       }
     ]
   },
@@ -30780,6 +32108,64 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "SALADFRUIT",
+    "display": "Salad Fruit",
+    "groups": [
+      "fruit",
+      "prepared"
+    ],
+    "ndb": "9102",
+    "desc": "Fruit salad, (peach and pear and apricot and pineapple and cherry), canned, water pack, solids and liquids",
+    "cal": 30.0,
+    "pro": 0.3,
+    "fat": 0.1,
+    "carb": 7.9,
+    "fib": 1.0,
+    "h2o": 91.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 245.0
+      }
+    ]
+  },
+  {
+    "word": "SALADPOTATOEGG",
+    "display": "Salad Potato with Egg",
+    "groups": [
+      "vegetable",
+      "prepared"
+    ],
+    "ndb": "22971",
+    "desc": "Potato salad with egg",
+    "cal": 157.0,
+    "pro": 2.0,
+    "fat": 9.4,
+    "carb": 16.2,
+    "fib": 1.3,
+    "h2o": 71.0,
+    "sug": 5.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.5,
+        "desc": "cup",
+        "gm": 125.0
+      }
+    ]
+  },
+  {
     "word": "SALISBURY",
     "display": "Salisbury",
     "groups": [
@@ -30838,6 +32224,62 @@ export const FOODS: Food[] = [
         "amt": 0.5,
         "desc": "fillet",
         "gm": 154.0
+      }
+    ]
+  },
+  {
+    "word": "SALMONPINKCAN",
+    "display": "Salmonpinkcan",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "35157",
+    "desc": "Fish, salmon, red, canned, bones removed (Alaska Native)",
+    "cal": 161.0,
+    "pro": 27.3,
+    "fat": 5.8,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 65.8,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      }
+    ]
+  },
+  {
+    "word": "SALMONREDCAN",
+    "display": "Salmonredcan",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "15181",
+    "desc": "Fish, salmon, pink, canned, without salt, solids with bone and liquid",
+    "cal": 139.0,
+    "pro": 19.8,
+    "fat": 6.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 70.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "oz",
+        "gm": 85.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "can",
+        "gm": 454.0
       }
     ]
   },
@@ -31043,6 +32485,283 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "cup oyster crackers",
         "gm": 45.0
+      }
+    ]
+  },
+  {
+    "word": "SANDSUBBEEF",
+    "display": "Sandwich Sub Roast Beef",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "21125",
+    "desc": "Fast foods, submarine sandwich, roast beef on white bread with lettuce and tomato",
+    "cal": 156.0,
+    "pro": 12.2,
+    "fat": 2.7,
+    "carb": 20.3,
+    "fib": 0.7,
+    "h2o": 63.1,
+    "sug": 3.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 6.0,
+        "desc": "inch sub",
+        "gm": 190.0
+      },
+      {
+        "amt": 12.0,
+        "desc": "inch sub",
+        "gm": 381.0
+      }
+    ]
+  },
+  {
+    "word": "SANDSUBBLT",
+    "display": "Sandwich Sub BLT",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "21162",
+    "desc": "Fast foods, submarine sandwich, bacon, lettuce, and tomato on white bread",
+    "cal": 205.0,
+    "pro": 10.1,
+    "fat": 6.4,
+    "carb": 26.7,
+    "fib": 1.6,
+    "h2o": 55.0,
+    "sug": 3.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 6.0,
+        "desc": "inch sub",
+        "gm": 148.0
+      },
+      {
+        "amt": 12.0,
+        "desc": "inch sub",
+        "gm": 296.0
+      }
+    ]
+  },
+  {
+    "word": "SANDSUBHAM",
+    "display": "Sandwich Sub Ham",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "21156",
+    "desc": "Fast foods, submarine sandwich, ham on white bread with lettuce and tomato",
+    "cal": 151.0,
+    "pro": 9.1,
+    "fat": 2.5,
+    "carb": 22.9,
+    "fib": 1.3,
+    "h2o": 63.3,
+    "sug": 3.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 6.0,
+        "desc": "inch sub",
+        "gm": 184.0
+      },
+      {
+        "amt": 12.0,
+        "desc": "inch sub",
+        "gm": 368.0
+      }
+    ]
+  },
+  {
+    "word": "SANDSUBMEATBALL",
+    "display": "Sandwich Sub Meatball",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "21158",
+    "desc": "Fast foods, submarine sandwich, meatball marinara on white bread",
+    "cal": 219.0,
+    "pro": 9.8,
+    "fat": 8.4,
+    "carb": 26.0,
+    "fib": 2.1,
+    "h2o": 53.6,
+    "sug": 5.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 6.0,
+        "desc": "inch sub",
+        "gm": 209.0
+      },
+      {
+        "amt": 12.0,
+        "desc": "inch sub",
+        "gm": 418.0
+      }
+    ]
+  },
+  {
+    "word": "SANDSUBTURKEY",
+    "display": "Sandwich Sub Turkey",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "21155",
+    "desc": "Fast foods, submarine sandwich, turkey breast on white bread with lettuce and tomato",
+    "cal": 147.0,
+    "pro": 9.1,
+    "fat": 2.3,
+    "carb": 22.4,
+    "fib": 1.3,
+    "h2o": 64.3,
+    "sug": 3.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 6.0,
+        "desc": "inch sub",
+        "gm": 184.0
+      },
+      {
+        "amt": 12.0,
+        "desc": "inch sub",
+        "gm": 367.0
+      }
+    ]
+  },
+  {
+    "word": "SANDWICHBEEF",
+    "display": "Sandwich Roast Beef",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "21121",
+    "desc": "Fast foods, roast beef sandwich, plain",
+    "cal": 244.0,
+    "pro": 15.2,
+    "fat": 10.3,
+    "carb": 22.2,
+    "fib": 1.3,
+    "h2o": 49.9,
+    "sug": 3.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "sandwich",
+        "gm": 149.0
+      }
+    ]
+  },
+  {
+    "word": "SANDWICHCHICKEN",
+    "display": "Sandwich Chicken",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "21102",
+    "desc": "Fast foods, chicken fillet sandwich, plain with pickles",
+    "cal": 250.0,
+    "pro": 16.3,
+    "fat": 11.2,
+    "carb": 20.9,
+    "fib": 1.4,
+    "h2o": 48.9,
+    "sug": 3.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "sandwich",
+        "gm": 187.0
+      }
+    ]
+  },
+  {
+    "word": "SANDWICHCHICKENCRISP",
+    "display": "Sandwich Crispy Chicken",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "21230",
+    "desc": "Fast Foods, crispy chicken filet sandwich, with lettuce and mayonnaise",
+    "cal": 276.0,
+    "pro": 10.9,
+    "fat": 13.6,
+    "carb": 27.4,
+    "fib": 1.4,
+    "h2o": 45.8,
+    "sug": 3.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "sandwich",
+        "gm": 152.0
+      }
+    ]
+  },
+  {
+    "word": "SANDWICHFISH",
+    "display": "Sandwich Fish",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "21105",
+    "desc": "Fast foods, fish sandwich, with tartar sauce",
+    "cal": 257.0,
+    "pro": 10.3,
+    "fat": 12.4,
+    "carb": 26.7,
+    "fib": 1.0,
+    "h2o": 48.4,
+    "sug": 3.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "sandwich",
+        "gm": 220.0
       }
     ]
   },
@@ -32247,39 +33966,6 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "SNACK",
-    "display": "Snack",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "19056",
-    "desc": "Snacks, tortilla chips, plain, white corn, salted",
-    "cal": 472.0,
-    "pro": 7.1,
-    "fat": 20.7,
-    "carb": 67.8,
-    "fib": 5.4,
-    "h2o": 2.6,
-    "sug": 0.8,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      },
-      {
-        "amt": 1.0,
-        "desc": "bag",
-        "gm": 213.0
-      }
-    ]
-  },
-  {
     "word": "SNAIL",
     "display": "Snail",
     "groups": [
@@ -32398,6 +34084,269 @@ export const FOODS: Food[] = [
         "amt": 0.5,
         "desc": "fillet",
         "gm": 155.0
+      }
+    ]
+  },
+  {
+    "word": "SODACLUB",
+    "display": "Club Soda",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14121",
+    "desc": "Beverages, Carbonated beverage, club soda",
+    "cal": 0.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 99.9,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.6
+      },
+      {
+        "amt": 1.0,
+        "desc": "can or bottle (16 fl oz)",
+        "gm": 474.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "can or bottle (12 fl oz)",
+        "gm": 355.0
+      }
+    ]
+  },
+  {
+    "word": "SODACOLA",
+    "display": "Soda Cola",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14148",
+    "desc": "Beverages, carbonated, cola, regular",
+    "cal": 42.0,
+    "pro": 0.0,
+    "fat": 0.2,
+    "carb": 10.4,
+    "fib": 0.0,
+    "h2o": 89.4,
+    "sug": 9.9,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.7
+      },
+      {
+        "amt": 1.0,
+        "desc": "can or bottle (12 fl oz)",
+        "gm": 370.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "can or bottle (16 fl oz)",
+        "gm": 492.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "drink, small (16 fl oz)",
+        "gm": 492.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "drink, medium (22 fl oz)",
+        "gm": 676.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "drink, large (32 fl oz)",
+        "gm": 984.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "drink, extra large (44 fl oz)",
+        "gm": 1353.0
+      }
+    ]
+  },
+  {
+    "word": "SODACOLALOW",
+    "display": "Soda Cola Low Cal",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14416",
+    "desc": "Beverages, Carbonated beverage, low calorie, cola or pepper-type, with aspartame, contains caffeine",
+    "cal": 2.0,
+    "pro": 0.1,
+    "fat": 0.0,
+    "carb": 0.3,
+    "fib": 0.0,
+    "h2o": 99.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.6
+      },
+      {
+        "amt": 1.0,
+        "desc": "can can 12 fl oz",
+        "gm": 355.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bottle bottle 16 fl oz",
+        "gm": 473.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving child 12 fl oz",
+        "gm": 258.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving small 16 fl oz",
+        "gm": 347.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving medium 21 fl oz",
+        "gm": 486.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving large 32 fl oz",
+        "gm": 722.0
+      }
+    ]
+  },
+  {
+    "word": "SODACREAM",
+    "display": "Cream Soda",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14130",
+    "desc": "Carbonated beverage, cream soda",
+    "cal": 51.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 13.3,
+    "fib": 0.0,
+    "h2o": 86.7,
+    "sug": 13.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.9
+      },
+      {
+        "amt": 1.0,
+        "desc": "can or bottle (16 fl oz)",
+        "gm": 494.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "can or bottle (12 fl oz)",
+        "gm": 371.0
+      }
+    ]
+  },
+  {
+    "word": "SODANONCOLALOW",
+    "display": "Soda non Cola Low Cal",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14537",
+    "desc": "Carbonated beverage, low calorie, other than cola or pepper, with sodium saccharin, without caffeine",
+    "cal": 0.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.1,
+    "fib": 0.0,
+    "h2o": 99.8,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.6
+      },
+      {
+        "amt": 1.0,
+        "desc": "can (12 fl oz)",
+        "gm": 355.0
+      }
+    ]
+  },
+  {
+    "word": "SODAROOTBEER",
+    "display": "Soda Root Beer",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14157",
+    "desc": "Beverages, Carbonated beverage, root beer",
+    "cal": 41.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 10.6,
+    "fib": 0.0,
+    "h2o": 89.3,
+    "sug": 10.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.8
+      },
+      {
+        "amt": 1.0,
+        "desc": "can or bottle (16 fl oz)",
+        "gm": 493.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "can or bottle (12 fl oz)",
+        "gm": 370.0
       }
     ]
   },
@@ -32864,6 +34813,69 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "packet",
         "gm": 5.8
+      }
+    ]
+  },
+  {
+    "word": "SOUPSPLITPEA",
+    "display": "Soup Split Pea",
+    "groups": [
+      "legume",
+      "prepared"
+    ],
+    "ndb": "6192",
+    "desc": "Split pea soup, canned, reduced sodium, prepared with water or ready-to serve",
+    "cal": 71.0,
+    "pro": 3.9,
+    "fat": 0.9,
+    "carb": 11.8,
+    "fib": 1.9,
+    "h2o": 82.4,
+    "sug": 5.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 253.0
+      }
+    ]
+  },
+  {
+    "word": "SOUPSPLITPEAHAM",
+    "display": "Soup Split Pea with Ham",
+    "groups": [
+      "legume",
+      "prepared"
+    ],
+    "ndb": "6050",
+    "desc": "Soup, pea, split with ham, canned, chunky, ready-to-serve",
+    "cal": 77.0,
+    "pro": 4.6,
+    "fat": 1.7,
+    "carb": 11.2,
+    "fib": 1.7,
+    "h2o": 81.0,
+    "sug": 1.9,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 240.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "can (19 oz)",
+        "gm": 539.0
       }
     ]
   },
@@ -34446,7 +36458,7 @@ export const FOODS: Food[] = [
     "display": "Sundae",
     "groups": [
       "dairy",
-      "prepared"
+      "sweets"
     ],
     "ndb": "21032",
     "desc": "Fast foods, sundae, caramel",
@@ -35087,19 +37099,19 @@ export const FOODS: Food[] = [
   },
   {
     "word": "TACO",
-    "display": "Taco Chicken Lettuce Cheese",
+    "display": "Salad Taco",
     "groups": [
       "prepared"
     ],
-    "ndb": "21487",
-    "desc": "Fast foods, taco with chicken, lettuce and cheese, soft",
-    "cal": 189.0,
-    "pro": 13.3,
-    "fat": 6.3,
-    "carb": 19.7,
-    "fib": 1.2,
-    "h2o": 58.4,
-    "sug": 1.3,
+    "ndb": "21083",
+    "desc": "Fast foods, taco salad",
+    "cal": 141.0,
+    "pro": 6.7,
+    "fat": 7.5,
+    "carb": 11.9,
+    "fib": 0.0,
+    "h2o": 72.3,
+    "sug": 0.0,
     "portions": [
       {
         "amt": 1.0,
@@ -35107,9 +37119,9 @@ export const FOODS: Food[] = [
         "gm": 100.0
       },
       {
-        "amt": 1.0,
-        "desc": "each taco",
-        "gm": 98.0
+        "amt": 1.5,
+        "desc": "cup",
+        "gm": 198.0
       }
     ]
   },
@@ -35143,19 +37155,19 @@ export const FOODS: Food[] = [
   },
   {
     "word": "TACO",
-    "display": "Salad Taco",
+    "display": "Taco Chicken Lettuce Cheese",
     "groups": [
       "prepared"
     ],
-    "ndb": "21083",
-    "desc": "Fast foods, taco salad",
-    "cal": 141.0,
-    "pro": 6.7,
-    "fat": 7.5,
-    "carb": 11.9,
-    "fib": 0.0,
-    "h2o": 72.3,
-    "sug": 0.0,
+    "ndb": "21487",
+    "desc": "Fast foods, taco with chicken, lettuce and cheese, soft",
+    "cal": 189.0,
+    "pro": 13.3,
+    "fat": 6.3,
+    "carb": 19.7,
+    "fib": 1.2,
+    "h2o": 58.4,
+    "sug": 1.3,
     "portions": [
       {
         "amt": 1.0,
@@ -35163,9 +37175,9 @@ export const FOODS: Food[] = [
         "gm": 100.0
       },
       {
-        "amt": 1.5,
-        "desc": "cup",
-        "gm": 198.0
+        "amt": 1.0,
+        "desc": "each taco",
+        "gm": 98.0
       }
     ]
   },
@@ -35738,6 +37750,171 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "TEACHAM",
+    "display": "Tea Chamomile",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14545",
+    "desc": "Beverages, tea, herb, brewed, chamomile",
+    "cal": 1.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.2,
+    "fib": 0.0,
+    "h2o": 99.7,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.6
+      },
+      {
+        "amt": 6.0,
+        "desc": "fl oz",
+        "gm": 178.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup (8 fl oz)",
+        "gm": 237.0
+      }
+    ]
+  },
+  {
+    "word": "TEAGREEN",
+    "display": "Tea Green",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14278",
+    "desc": "Beverages, tea, green, brewed, regular",
+    "cal": 1.0,
+    "pro": 0.2,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 99.9,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 245.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.6
+      }
+    ]
+  },
+  {
+    "word": "TEAHIBISCUS",
+    "display": "Tea Hibiscus",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14649",
+    "desc": "Beverages, tea, hibiscus, brewed",
+    "cal": 0.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 99.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 8.0,
+        "desc": "fl oz",
+        "gm": 237.0
+      }
+    ]
+  },
+  {
+    "word": "TEAINSTANT",
+    "display": "Tea Instant",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14367",
+    "desc": "Beverages, tea, instant, unsweetened, prepared with water",
+    "cal": 1.0,
+    "pro": 0.1,
+    "fat": 0.0,
+    "carb": 0.2,
+    "fib": 0.0,
+    "h2o": 99.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.7
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 6 fl oz",
+        "gm": 178.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 8 fl oz",
+        "gm": 238.0
+      }
+    ]
+  },
+  {
+    "word": "TEAINSTANTDECAF",
+    "display": "Tea Instant Decaf",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14353",
+    "desc": "Beverages, tea, instant, decaffeinated, unsweetened",
+    "cal": 315.0,
+    "pro": 20.2,
+    "fat": 0.0,
+    "carb": 58.7,
+    "fib": 8.5,
+    "h2o": 5.1,
+    "sug": 5.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 2 tsp",
+        "gm": 0.7
+      }
+    ]
+  },
+  {
     "word": "TEASEED",
     "display": "Teaseed",
     "groups": [
@@ -35960,6 +38137,39 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "TILEFISH",
+    "display": "Tilefish",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "15113",
+    "desc": "Fish, tilefish, cooked, dry heat",
+    "cal": 147.0,
+    "pro": 24.5,
+    "fat": 4.7,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 70.2,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.5,
+        "desc": "fillet",
+        "gm": 150.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "oz",
+        "gm": 85.0
+      }
+    ]
+  },
+  {
     "word": "TILSIT",
     "display": "Tilsit",
     "groups": [
@@ -36095,6 +38305,153 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "slice large",
         "gm": 38.0
+      }
+    ]
+  },
+  {
+    "word": "TOASTRAISIN",
+    "display": "Toast Raisin",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "18048",
+    "desc": "Bread, raisin, enriched, toasted",
+    "cal": 297.0,
+    "pro": 8.6,
+    "fat": 4.8,
+    "carb": 56.9,
+    "fib": 4.7,
+    "h2o": 27.8,
+    "sug": 6.2,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice, large",
+        "gm": 29.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice",
+        "gm": 24.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice, thin",
+        "gm": 21.0
+      }
+    ]
+  },
+  {
+    "word": "TOASTWHITE",
+    "display": "Toast White",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "18070",
+    "desc": "Bread, white, commercially prepared, toasted",
+    "cal": 290.0,
+    "pro": 9.0,
+    "fat": 4.0,
+    "carb": 54.5,
+    "fib": 2.9,
+    "h2o": 30.4,
+    "sug": 6.2,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, crumbs",
+        "gm": 45.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, cubes",
+        "gm": 42.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice, large",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice crust not eaten",
+        "gm": 11.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice, thin",
+        "gm": 17.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice thin, crust not eaten",
+        "gm": 8.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice, very thin",
+        "gm": 13.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice",
+        "gm": 22.0
+      }
+    ]
+  },
+  {
+    "word": "TOASTWHOLE",
+    "display": "Toast Whole Wheat",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "18076",
+    "desc": "Bread, whole-wheat, commercially prepared, toasted",
+    "cal": 306.0,
+    "pro": 16.3,
+    "fat": 4.1,
+    "carb": 51.2,
+    "fib": 7.5,
+    "h2o": 24.2,
+    "sug": 5.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice",
+        "gm": 25.0
       }
     ]
   },
@@ -38570,49 +40927,6 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "WHIPPING",
-    "display": "Whipping Cream",
-    "groups": [
-      "dairy"
-    ],
-    "ndb": "1053",
-    "desc": "Cream, fluid, heavy whipping",
-    "cal": 340.0,
-    "pro": 2.8,
-    "fat": 36.1,
-    "carb": 2.7,
-    "fib": 0.0,
-    "h2o": 57.8,
-    "sug": 2.9,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup, whipped",
-        "gm": 120.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup, fluid (yields 2 cups whipped)",
-        "gm": 238.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "tbsp",
-        "gm": 15.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "fl oz",
-        "gm": 29.8
-      }
-    ]
-  },
-  {
     "word": "WHISKEY",
     "display": "Whiskey",
     "groups": [
@@ -38792,6 +41106,105 @@ export const FOODS: Food[] = [
     "fib": 0.0,
     "h2o": 86.9,
     "sug": 1.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.4
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving (5 fl oz)",
+        "gm": 147.0
+      }
+    ]
+  },
+  {
+    "word": "WINEDESSERTDRY",
+    "display": "Wine Dessert Dry",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14536",
+    "desc": "Alcoholic beverage, wine, dessert, dry",
+    "cal": 152.0,
+    "pro": 0.2,
+    "fat": 0.0,
+    "carb": 11.7,
+    "fib": 0.0,
+    "h2o": 72.5,
+    "sug": 1.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.5
+      },
+      {
+        "amt": 1.0,
+        "desc": "glass (3.5 fl oz)",
+        "gm": 103.0
+      }
+    ]
+  },
+  {
+    "word": "WINEDESSERTSWEET",
+    "display": "Wine Dessert Sweet",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14057",
+    "desc": "Alcoholic beverage, wine, dessert, sweet",
+    "cal": 160.0,
+    "pro": 0.2,
+    "fat": 0.0,
+    "carb": 13.7,
+    "fib": 0.0,
+    "h2o": 70.5,
+    "sug": 7.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.5
+      },
+      {
+        "amt": 1.0,
+        "desc": "glass (3.5 fl oz)",
+        "gm": 103.0
+      }
+    ]
+  },
+  {
+    "word": "WINERED",
+    "display": "Wine Red",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14096",
+    "desc": "Alcoholic beverage, wine, table, red",
+    "cal": 85.0,
+    "pro": 0.1,
+    "fat": 0.0,
+    "carb": 2.6,
+    "fib": 0.0,
+    "h2o": 86.5,
+    "sug": 0.6,
     "portions": [
       {
         "amt": 1.0,
@@ -39224,20 +41637,213 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "MUFFUNBLUEBERRY",
-    "display": "Muffin Blueberry",
+    "word": "FROSTINGVANILLA",
+    "display": "Frosting Vanilla",
     "groups": [
-      "prepared"
+      "sweets"
     ],
-    "ndb": "18278",
-    "desc": "Muffins, blueberry, prepared from recipe, made with low fat (2%) milk",
-    "cal": 285.0,
-    "pro": 6.5,
-    "fat": 10.8,
-    "carb": 40.7,
+    "ndb": "19230",
+    "desc": "Frostings, vanilla, creamy, ready-to-eat",
+    "cal": 418.0,
+    "pro": 0.0,
+    "fat": 16.2,
+    "carb": 67.9,
     "fib": 0.0,
-    "h2o": 39.5,
-    "sug": 0.0,
+    "h2o": 15.1,
+    "sug": 63.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.08,
+        "desc": "package",
+        "gm": 38.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "tbsp creamy",
+        "gm": 33.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package (16 oz)",
+        "gm": 462.0
+      }
+    ]
+  },
+  {
+    "word": "FROSTINGCHOC",
+    "display": "Frosting Choc",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19226",
+    "desc": "Frostings, chocolate, creamy, ready-to-eat",
+    "cal": 397.0,
+    "pro": 1.1,
+    "fat": 17.6,
+    "carb": 63.2,
+    "fib": 0.9,
+    "h2o": 17.0,
+    "sug": 57.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "tbsp creamy",
+        "gm": 41.0
+      }
+    ]
+  },
+  {
+    "word": "FROSTINGCREAM",
+    "display": "Frosting Cream Cheese",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19228",
+    "desc": "Frostings, cream cheese-flavor, ready-to-eat",
+    "cal": 415.0,
+    "pro": 0.1,
+    "fat": 17.3,
+    "carb": 67.3,
+    "fib": 0.0,
+    "h2o": 15.1,
+    "sug": 63.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "tbsp creamy",
+        "gm": 33.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "tbsp whipped",
+        "gm": 24.0
+      }
+    ]
+  },
+  {
+    "word": "FROSTINGGLAZE",
+    "display": "Frosting Glaze",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19375",
+    "desc": "Frostings, glaze, prepared-from-recipe",
+    "cal": 341.0,
+    "pro": 0.4,
+    "fat": 0.5,
+    "carb": 83.7,
+    "fib": 0.0,
+    "h2o": 15.3,
+    "sug": 80.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "recipe yield",
+        "gm": 327.0
+      }
+    ]
+  },
+  {
+    "word": "FROSTINGCOCONUT",
+    "display": "Frosting Coconut",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19227",
+    "desc": "Frostings, coconut-nut, ready-to-eat",
+    "cal": 433.0,
+    "pro": 1.5,
+    "fat": 24.0,
+    "carb": 52.7,
+    "fib": 2.5,
+    "h2o": 21.0,
+    "sug": 40.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.08,
+        "desc": "package",
+        "gm": 38.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "tbsp",
+        "gm": 35.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package (16 oz)",
+        "gm": 462.0
+      }
+    ]
+  },
+  {
+    "word": "CANDFUDGEPEANUT",
+    "display": "Candies Fudge Peanut Butter",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19102",
+    "desc": "Candies, fudge, peanut butter, prepared-from-recipe",
+    "cal": 387.0,
+    "pro": 3.8,
+    "fat": 6.6,
+    "carb": 77.8,
+    "fib": 0.7,
+    "h2o": 10.9,
+    "sug": 73.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "piece",
+        "gm": 16.0
+      }
+    ]
+  },
+  {
+    "word": "CANDFUDGEVANILLA",
+    "display": "Candies Fudge Vanilla",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19103",
+    "desc": "Candies, fudge, vanilla, prepared-from-recipe",
+    "cal": 383.0,
+    "pro": 1.1,
+    "fat": 5.5,
+    "carb": 82.2,
+    "fib": 0.0,
+    "h2o": 10.8,
+    "sug": 79.8,
     "portions": [
       {
         "amt": 1.0,
@@ -39248,29 +41854,24 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "oz",
         "gm": 28.35
-      },
-      {
-        "amt": 1.0,
-        "desc": "muffin",
-        "gm": 57.0
       }
     ]
   },
   {
-    "word": "MUFFINCORN",
-    "display": "Muffin Corn",
+    "word": "CANDFUDGEVANILLANUTS",
+    "display": "Candies Fudge Vanilla with Nuts",
     "groups": [
-      "prepared"
+      "sweets"
     ],
-    "ndb": "18282",
-    "desc": "Muffins, corn, prepared from recipe, made with low fat (2%) milk",
-    "cal": 316.0,
-    "pro": 7.1,
-    "fat": 12.3,
-    "carb": 44.2,
-    "fib": 0.0,
-    "h2o": 33.0,
-    "sug": 0.0,
+    "ndb": "19104",
+    "desc": "Candies, fudge, vanilla with nuts",
+    "cal": 435.0,
+    "pro": 3.0,
+    "fat": 13.7,
+    "carb": 74.6,
+    "fib": 0.9,
+    "h2o": 8.0,
+    "sug": 71.0,
     "portions": [
       {
         "amt": 1.0,
@@ -39281,805 +41882,461 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "oz",
         "gm": 28.35
-      },
-      {
-        "amt": 1.0,
-        "desc": "muffin (2-3/4\" dia x 2\")",
-        "gm": 57.0
       }
     ]
   },
   {
-    "word": "SALMONREDCAN",
-    "display": "Salmonredcan",
+    "word": "CANDBITTERSCOTCH",
+    "display": "Candies Butterscotch",
     "groups": [
-      "protein"
+      "sweets"
     ],
-    "ndb": "15181",
-    "desc": "Fish, salmon, pink, canned, without salt, solids with bone and liquid",
-    "cal": 139.0,
-    "pro": 19.8,
-    "fat": 6.0,
-    "carb": 0.0,
+    "ndb": "19070",
+    "desc": "Candies, butterscotch",
+    "cal": 391.0,
+    "pro": 0.0,
+    "fat": 3.3,
+    "carb": 90.4,
     "fib": 0.0,
-    "h2o": 70.0,
-    "sug": 0.0,
+    "h2o": 5.2,
+    "sug": 80.5,
     "portions": [
       {
         "amt": 1.0,
         "desc": "custom (g)",
         "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
       },
       {
         "amt": 3.0,
+        "desc": "pieces",
+        "gm": 16.0
+      }
+    ]
+  },
+  {
+    "word": "CANDHALAVAH",
+    "display": "Candies Halavah",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19117",
+    "desc": "Candies, halavah, plain",
+    "cal": 469.0,
+    "pro": 12.5,
+    "fat": 21.5,
+    "carb": 60.5,
+    "fib": 4.5,
+    "h2o": 3.7,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
         "desc": "oz",
-        "gm": 85.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "can",
-        "gm": 454.0
-      }
-    ]
-  },
-  {
-    "word": "SALMONPINKCAN",
-    "display": "Salmonpinkcan",
-    "groups": [
-      "protein"
-    ],
-    "ndb": "35157",
-    "desc": "Fish, salmon, red, canned, bones removed (Alaska Native)",
-    "cal": 161.0,
-    "pro": 27.3,
-    "fat": 5.8,
-    "carb": 0.0,
-    "fib": 0.0,
-    "h2o": 65.8,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      }
-    ]
-  },
-  {
-    "word": "MACKERELCAN",
-    "display": "Mackerelcan",
-    "groups": [
-      "protein"
-    ],
-    "ndb": "15048",
-    "desc": "Fish, mackerel, jack, canned, drained solids",
-    "cal": 156.0,
-    "pro": 23.2,
-    "fat": 6.3,
-    "carb": 0.0,
-    "fib": 0.0,
-    "h2o": 69.2,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz, boneless",
         "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "CANDPEANUTSCHOC",
+    "display": "Candies Peanuts Choc Coated",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19126",
+    "desc": "Candies, milk chocolate coated peanuts",
+    "cal": 519.0,
+    "pro": 13.1,
+    "fat": 33.5,
+    "carb": 49.7,
+    "fib": 4.7,
+    "h2o": 1.9,
+    "sug": 37.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
       },
       {
         "amt": 1.0,
         "desc": "cup",
-        "gm": 190.0
+        "gm": 149.0
       },
       {
-        "amt": 1.0,
-        "desc": "cubic inch",
-        "gm": 16.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "can (15 oz)",
-        "gm": 361.0
+        "amt": 10.0,
+        "desc": "pieces",
+        "gm": 40.0
       }
     ]
   },
   {
-    "word": "CAVIAR",
-    "display": "Caviar",
+    "word": "CANDRAISINCHOC",
+    "display": "Candies Raisin Choc Coated",
     "groups": [
-      "protein"
+      "sweets"
     ],
-    "ndb": "15012",
-    "desc": "Fish, caviar, black and red, granular",
-    "cal": 264.0,
-    "pro": 24.6,
-    "fat": 17.9,
-    "carb": 4.0,
-    "fib": 0.0,
-    "h2o": 47.5,
-    "sug": 0.0,
+    "ndb": "19127",
+    "desc": "Candies, milk chocolate coated raisins",
+    "cal": 390.0,
+    "pro": 4.1,
+    "fat": 14.8,
+    "carb": 68.4,
+    "fib": 3.1,
+    "h2o": 11.2,
+    "sug": 62.2,
     "portions": [
       {
         "amt": 1.0,
         "desc": "custom (g)",
         "gm": 100.0
+      }
+    ]
+  },
+  {
+    "word": "CANDPRALINE",
+    "display": "Candies Praline",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19216",
+    "desc": "Candies, praline, prepared-from-recipe",
+    "cal": 485.0,
+    "pro": 3.3,
+    "fat": 25.9,
+    "carb": 59.6,
+    "fib": 3.5,
+    "h2o": 10.4,
+    "sug": 55.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "piece",
+        "gm": 39.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "recipe yield",
+        "gm": 907.0
+      }
+    ]
+  },
+  {
+    "word": "CANDCHOCFUDGEMARSH",
+    "display": "Candies Choc Fudge Marshmallow",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19379",
+    "desc": "Candies, fudge, chocolate marshmallow, prepared-from-recipe",
+    "cal": 453.0,
+    "pro": 2.3,
+    "fat": 17.5,
+    "carb": 71.3,
+    "fib": 1.7,
+    "h2o": 7.8,
+    "sug": 64.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "piece",
+        "gm": 20.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "recipe yield (60 pieces)",
+        "gm": 1229.0
+      }
+    ]
+  },
+  {
+    "word": "CANDTAFFY",
+    "display": "Candies Taffy",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19382",
+    "desc": "Candies, taffy, prepared-from-recipe",
+    "cal": 397.0,
+    "pro": 0.0,
+    "fat": 3.3,
+    "carb": 91.6,
+    "fib": 0.0,
+    "h2o": 4.8,
+    "sug": 68.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "piece",
+        "gm": 15.0
+      }
+    ]
+  },
+  {
+    "word": "CANDPEANUTBRITTLE",
+    "display": "Candies Peanut Brittle",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19148",
+    "desc": "Candies, peanut brittle, prepared-from-recipe",
+    "cal": 486.0,
+    "pro": 7.6,
+    "fat": 19.0,
+    "carb": 71.2,
+    "fib": 2.5,
+    "h2o": 0.7,
+    "sug": 51.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "CANDTOFFE",
+    "display": "Candies Toffee",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19383",
+    "desc": "Candies, toffee, prepared-from-recipe",
+    "cal": 560.0,
+    "pro": 1.1,
+    "fat": 32.8,
+    "carb": 64.7,
+    "fib": 0.0,
+    "h2o": 0.6,
+    "sug": 63.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "piece",
+        "gm": 12.0
+      }
+    ]
+  },
+  {
+    "word": "CANDTAMARIND",
+    "display": "Candies Tamarind",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19921",
+    "desc": "Candies, Tamarind",
+    "cal": 368.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 92.0,
+    "fib": 2.5,
+    "h2o": 2.5,
+    "sug": 78.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      }
+    ]
+  },
+  {
+    "word": "CANDDIVINITY",
+    "display": "Candies Divinity",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19384",
+    "desc": "Candies, divinity, prepared-from-recipe",
+    "cal": 364.0,
+    "pro": 1.3,
+    "fat": 0.1,
+    "carb": 89.0,
+    "fib": 0.0,
+    "h2o": 9.2,
+    "sug": 79.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "piece",
+        "gm": 11.0
+      }
+    ]
+  },
+  {
+    "word": "CANDCHOCSEMI",
+    "display": "Candies Chos Semisweet",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19080",
+    "desc": "Candies, semisweet chocolate",
+    "cal": 480.0,
+    "pro": 4.2,
+    "fat": 30.0,
+    "carb": 63.9,
+    "fib": 5.9,
+    "h2o": 0.7,
+    "sug": 54.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 14.5
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup large chips",
+        "gm": 182.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup mini chips",
+        "gm": 173.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz (approx 60 pcs)",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup chips (6 oz package)",
+        "gm": 168.0
+      }
+    ]
+  },
+  {
+    "word": "CANDCHOCSWEET",
+    "display": "Candies Choc Sweet",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19081",
+    "desc": "Candies, sweet chocolate",
+    "cal": 507.0,
+    "pro": 3.9,
+    "fat": 34.2,
+    "carb": 60.4,
+    "fib": 5.5,
+    "h2o": 0.5,
+    "sug": 51.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar (1.45 oz)",
+        "gm": 41.0
+      }
+    ]
+  },
+  {
+    "word": "CANDWHIRCHOC",
+    "display": "Candies White choc",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19087",
+    "desc": "Candies, white chocolate",
+    "cal": 539.0,
+    "pro": 5.9,
+    "fat": 32.1,
+    "carb": 59.2,
+    "fib": 0.2,
+    "h2o": 1.3,
+    "sug": 59.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar (3 oz)",
+        "gm": 85.0
       },
       {
         "amt": 1.0,
         "desc": "tbsp",
-        "gm": 16.0
+        "gm": 14.0
       },
       {
         "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
+        "desc": "cup chips",
+        "gm": 170.0
       }
     ]
   },
   {
-    "word": "TILEFISH",
-    "display": "Tilefish",
+    "word": "CANDTOBLERONE",
+    "display": "Candies TOBLERONE",
     "groups": [
-      "protein"
-    ],
-    "ndb": "15113",
-    "desc": "Fish, tilefish, cooked, dry heat",
-    "cal": 147.0,
-    "pro": 24.5,
-    "fat": 4.7,
-    "carb": 0.0,
-    "fib": 0.0,
-    "h2o": 70.2,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 0.5,
-        "desc": "fillet",
-        "gm": 150.0
-      },
-      {
-        "amt": 3.0,
-        "desc": "oz",
-        "gm": 85.0
-      }
-    ]
-  },
-  {
-    "word": "FRIEDRICE",
-    "display": "Fried Rice",
-    "groups": [
-      "grain",
-      "prepared"
-    ],
-    "ndb": "36602",
-    "desc": "Restaurant, Chinese, fried rice, without meat",
-    "cal": 174.0,
-    "pro": 4.0,
-    "fat": 3.0,
-    "carb": 32.8,
-    "fib": 1.1,
-    "h2o": 59.1,
-    "sug": 0.6,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 137.0
-      }
-    ]
-  },
-  {
-    "word": "CHOCMALT",
-    "display": "Chocolate Malt",
-    "groups": [
-      "beverage"
-    ],
-    "ndb": "14318",
-    "desc": "Beverages, Malted drink mix, chocolate, powder, prepared with whole milk",
-    "cal": 85.0,
-    "pro": 3.4,
-    "fat": 3.3,
-    "carb": 11.2,
-    "fib": 0.5,
-    "h2o": 81.3,
-    "sug": 6.7,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup (8 fl oz)",
-        "gm": 265.0
-      }
-    ]
-  },
-  {
-    "word": "WINERED",
-    "display": "Wine Red",
-    "groups": [
-      "beverage"
-    ],
-    "ndb": "14096",
-    "desc": "Alcoholic beverage, wine, table, red",
-    "cal": 85.0,
-    "pro": 0.1,
-    "fat": 0.0,
-    "carb": 2.6,
-    "fib": 0.0,
-    "h2o": 86.5,
-    "sug": 0.6,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "fl oz",
-        "gm": 29.4
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving (5 fl oz)",
-        "gm": 147.0
-      }
-    ]
-  },
-  {
-    "word": "WINEDESSERTSWEET",
-    "display": "Wine Dessert Sweet",
-    "groups": [
-      "beverage"
-    ],
-    "ndb": "14057",
-    "desc": "Alcoholic beverage, wine, dessert, sweet",
-    "cal": 160.0,
-    "pro": 0.2,
-    "fat": 0.0,
-    "carb": 13.7,
-    "fib": 0.0,
-    "h2o": 70.5,
-    "sug": 7.8,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "fl oz",
-        "gm": 29.5
-      },
-      {
-        "amt": 1.0,
-        "desc": "glass (3.5 fl oz)",
-        "gm": 103.0
-      }
-    ]
-  },
-  {
-    "word": "WINEDESSERTDRY",
-    "display": "Wine Dessert Dry",
-    "groups": [
-      "beverage"
-    ],
-    "ndb": "14536",
-    "desc": "Alcoholic beverage, wine, dessert, dry",
-    "cal": 152.0,
-    "pro": 0.2,
-    "fat": 0.0,
-    "carb": 11.7,
-    "fib": 0.0,
-    "h2o": 72.5,
-    "sug": 1.1,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "fl oz",
-        "gm": 29.5
-      },
-      {
-        "amt": 1.0,
-        "desc": "glass (3.5 fl oz)",
-        "gm": 103.0
-      }
-    ]
-  },
-  {
-    "word": "BEERLIGHT",
-    "display": "Beer Light",
-    "groups": [
-      "beverage"
-    ],
-    "ndb": "14013",
-    "desc": "Alcoholic beverage, beer, light, low carb",
-    "cal": 27.0,
-    "pro": 0.2,
-    "fat": 0.0,
-    "carb": 0.7,
-    "fib": 0.0,
-    "h2o": 95.4,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "fl oz",
-        "gm": 29.5
-      },
-      {
-        "amt": 12.0,
-        "desc": "fl oz",
-        "gm": 354.0
-      }
-    ]
-  },
-  {
-    "word": "BEERHIGH",
-    "display": "Beer High Alcohol",
-    "groups": [
-      "beverage"
-    ],
-    "ndb": "14251",
-    "desc": "Beverages, Beer, higher alcohol",
-    "cal": 58.0,
-    "pro": 0.9,
-    "fat": 0.0,
-    "carb": 0.3,
-    "fib": 0.0,
-    "h2o": 91.0,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "fl oz",
-        "gm": 30.6
-      },
-      {
-        "amt": 1.0,
-        "desc": "bottle",
-        "gm": 355.0
-      }
-    ]
-  },
-  {
-    "word": "SODAROOTBEER",
-    "display": "Soda Root Beer",
-    "groups": [
-      "beverage"
-    ],
-    "ndb": "14157",
-    "desc": "Beverages, Carbonated beverage, root beer",
-    "cal": 41.0,
-    "pro": 0.0,
-    "fat": 0.0,
-    "carb": 10.6,
-    "fib": 0.0,
-    "h2o": 89.3,
-    "sug": 10.6,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "fl oz",
-        "gm": 30.8
-      },
-      {
-        "amt": 1.0,
-        "desc": "can or bottle (16 fl oz)",
-        "gm": 493.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "can or bottle (12 fl oz)",
-        "gm": 370.0
-      }
-    ]
-  },
-  {
-    "word": "SODACREAM",
-    "display": "Cream Soda",
-    "groups": [
-      "beverage"
-    ],
-    "ndb": "14130",
-    "desc": "Carbonated beverage, cream soda",
-    "cal": 51.0,
-    "pro": 0.0,
-    "fat": 0.0,
-    "carb": 13.3,
-    "fib": 0.0,
-    "h2o": 86.7,
-    "sug": 13.3,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "fl oz",
-        "gm": 30.9
-      },
-      {
-        "amt": 1.0,
-        "desc": "can or bottle (16 fl oz)",
-        "gm": 494.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "can or bottle (12 fl oz)",
-        "gm": 371.0
-      }
-    ]
-  },
-  {
-    "word": "SODACLUB",
-    "display": "Club Soda",
-    "groups": [
-      "beverage"
-    ],
-    "ndb": "14121",
-    "desc": "Beverages, Carbonated beverage, club soda",
-    "cal": 0.0,
-    "pro": 0.0,
-    "fat": 0.0,
-    "carb": 0.0,
-    "fib": 0.0,
-    "h2o": 99.9,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "fl oz",
-        "gm": 29.6
-      },
-      {
-        "amt": 1.0,
-        "desc": "can or bottle (16 fl oz)",
-        "gm": 474.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "can or bottle (12 fl oz)",
-        "gm": 355.0
-      }
-    ]
-  },
-  {
-    "word": "SODACOLA",
-    "display": "Soda Cola",
-    "groups": [
-      "beverage"
-    ],
-    "ndb": "14148",
-    "desc": "Beverages, carbonated, cola, regular",
-    "cal": 42.0,
-    "pro": 0.0,
-    "fat": 0.2,
-    "carb": 10.4,
-    "fib": 0.0,
-    "h2o": 89.4,
-    "sug": 9.9,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "fl oz",
-        "gm": 30.7
-      },
-      {
-        "amt": 1.0,
-        "desc": "can or bottle (12 fl oz)",
-        "gm": 370.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "can or bottle (16 fl oz)",
-        "gm": 492.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "drink, small (16 fl oz)",
-        "gm": 492.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "drink, medium (22 fl oz)",
-        "gm": 676.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "drink, large (32 fl oz)",
-        "gm": 984.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "drink, extra large (44 fl oz)",
-        "gm": 1353.0
-      }
-    ]
-  },
-  {
-    "word": "SODACOLALOW",
-    "display": "Soda Cola Low Cal",
-    "groups": [
-      "beverage"
-    ],
-    "ndb": "14416",
-    "desc": "Beverages, Carbonated beverage, low calorie, cola or pepper-type, with aspartame, contains caffeine",
-    "cal": 2.0,
-    "pro": 0.1,
-    "fat": 0.0,
-    "carb": 0.3,
-    "fib": 0.0,
-    "h2o": 99.5,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "fl oz",
-        "gm": 29.6
-      },
-      {
-        "amt": 1.0,
-        "desc": "can can 12 fl oz",
-        "gm": 355.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bottle bottle 16 fl oz",
-        "gm": 473.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving child 12 fl oz",
-        "gm": 258.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving small 16 fl oz",
-        "gm": 347.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving medium 21 fl oz",
-        "gm": 486.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving large 32 fl oz",
-        "gm": 722.0
-      }
-    ]
-  },
-  {
-    "word": "SODANONCOLALOW",
-    "display": "Soda non Cola Low Cal",
-    "groups": [
-      "beverage"
-    ],
-    "ndb": "14537",
-    "desc": "Carbonated beverage, low calorie, other than cola or pepper, with sodium saccharin, without caffeine",
-    "cal": 0.0,
-    "pro": 0.0,
-    "fat": 0.0,
-    "carb": 0.1,
-    "fib": 0.0,
-    "h2o": 99.8,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "fl oz",
-        "gm": 29.6
-      },
-      {
-        "amt": 1.0,
-        "desc": "can (12 fl oz)",
-        "gm": 355.0
-      }
-    ]
-  },
-  {
-    "word": "PINACOLADA",
-    "display": "Pina Colada",
-    "groups": [
-      "beverage"
-    ],
-    "ndb": "14017",
-    "desc": "Alcoholic beverage, pina colada, prepared-from-recipe",
-    "cal": 174.0,
-    "pro": 0.4,
-    "fat": 1.9,
-    "carb": 22.7,
-    "fib": 0.3,
-    "h2o": 65.0,
-    "sug": 22.3,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "fl oz",
-        "gm": 31.4
-      },
-      {
-        "amt": 1.0,
-        "desc": "cocktail (4.5 fl oz)",
-        "gm": 141.0
-      }
-    ]
-  },
-  {
-    "word": "ICECREAMVANILLALIGHT",
-    "display": "Ice Cream Vanilla Light",
-    "groups": [
-      "dairy",
       "sweets"
     ],
-    "ndb": "19088",
-    "desc": "Ice creams, vanilla, light",
-    "cal": 180.0,
-    "pro": 4.8,
-    "fat": 4.8,
-    "carb": 29.5,
-    "fib": 0.3,
-    "h2o": 59.9,
-    "sug": 22.1,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 1/2 cup",
-        "gm": 76.0
-      }
-    ]
-  },
-  {
-    "word": "ICECREAMCHOCLIGHT",
-    "display": "Ice Cream Choc Light",
-    "groups": [
-      "dairy",
-      "sweets"
-    ],
-    "ndb": "19114",
-    "desc": "Ice creams, chocolate, light",
-    "cal": 187.0,
-    "pro": 5.0,
-    "fat": 7.2,
-    "carb": 25.7,
-    "fib": 0.8,
-    "h2o": 61.4,
-    "sug": 24.7,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving",
-        "gm": 68.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "unit",
-        "gm": 100.0
-      }
-    ]
-  },
-  {
-    "word": "ICECREAMSAND",
-    "display": "Ice Cream Sandwich",
-    "groups": [
-      "dairy",
-      "sweets"
-    ],
-    "ndb": "1238",
-    "desc": "Ice cream sandwich",
-    "cal": 237.0,
-    "pro": 4.3,
-    "fat": 8.6,
-    "carb": 37.1,
-    "fib": 0.0,
-    "h2o": 48.9,
-    "sug": 18.6,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving",
-        "gm": 70.0
-      }
-    ]
-  },
-  {
-    "word": "ICECREAMBARCHOC",
-    "display": "Ice Cream Bar Choc",
-    "groups": [
-      "dairy",
-      "sweets"
-    ],
-    "ndb": "1237",
-    "desc": "Ice cream, bar or stick, chocolate covered",
-    "cal": 331.0,
-    "pro": 4.1,
-    "fat": 24.1,
-    "carb": 24.5,
-    "fib": 0.8,
-    "h2o": 46.3,
-    "sug": 18.3,
+    "ndb": "19001",
+    "desc": "Candies, TOBLERONE, milk chocolate with honey and almond nougat",
+    "cal": 525.0,
+    "pro": 5.7,
+    "fat": 28.6,
+    "carb": 61.2,
+    "fib": 2.5,
+    "h2o": 3.3,
+    "sug": 0.0,
     "portions": [
       {
         "amt": 1.0,
@@ -40089,398 +42346,550 @@ export const FOODS: Food[] = [
       {
         "amt": 1.0,
         "desc": "bar",
+        "gm": 35.0
+      }
+    ]
+  },
+  {
+    "word": "CANDALMONDSOLITARES",
+    "display": "Candies ALMOND SOLITARIES",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19084",
+    "desc": "Candies, HERSHEY'S GOLDEN ALMOND SOLITAIRES",
+    "cal": 569.0,
+    "pro": 12.0,
+    "fat": 37.1,
+    "carb": 46.9,
+    "fib": 4.4,
+    "h2o": 1.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 13.0,
+        "desc": "pieces",
+        "gm": 41.0
+      }
+    ]
+  },
+  {
+    "word": "CANDYORK",
+    "display": "Candies YORK ",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19091",
+    "desc": "Candies, YORK Peppermint Pattie",
+    "cal": 384.0,
+    "pro": 2.2,
+    "fat": 7.2,
+    "carb": 81.0,
+    "fib": 2.0,
+    "h2o": 9.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "patty 1.5 oz",
+        "gm": 43.0
+      }
+    ]
+  },
+  {
+    "word": "CANDTWIZZLERNIBS",
+    "display": "Candies TWIZZLERS CHERRY BITS",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19092",
+    "desc": "Candies, TWIZZLERS NIBS CHERRY BITS",
+    "cal": 347.0,
+    "pro": 2.3,
+    "fat": 2.6,
+    "carb": 79.4,
+    "fib": 0.6,
+    "h2o": 15.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 27.0,
+        "desc": "pieces",
+        "gm": 40.0
+      }
+    ]
+  },
+  {
+    "word": "CANDTWIZZLERBITES",
+    "display": "Candies TWIZZLERS CHERRY BITES",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19067",
+    "desc": "Candies, TWIZZLERS CHERRY BITES",
+    "cal": 338.0,
+    "pro": 3.0,
+    "fat": 1.7,
+    "carb": 79.4,
+    "fib": 0.1,
+    "h2o": 15.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 18.0,
+        "desc": "pieces",
+        "gm": 40.0
+      }
+    ]
+  },
+  {
+    "word": "CANDBITOHONEY",
+    "display": "Candies BIT-O\u2019-HONEY",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19068",
+    "desc": "Candies, NESTLE, BIT-O'-HONEY Candy Chews",
+    "cal": 375.0,
+    "pro": 2.0,
+    "fat": 7.5,
+    "carb": 80.9,
+    "fib": 0.2,
+    "h2o": 8.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 6 pieces",
+        "gm": 40.0
+      }
+    ]
+  },
+  {
+    "word": "CANDBUTTERFINGER",
+    "display": "Candies BUTTERFINGER",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19069",
+    "desc": "Candies, NESTLE, BUTTERFINGER Bar",
+    "cal": 459.0,
+    "pro": 5.4,
+    "fat": 18.9,
+    "carb": 72.9,
+    "fib": 2.0,
+    "h2o": 1.2,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 2.1 oz bar",
+        "gm": 60.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 1 fun size bar 0.65 oz",
+        "gm": 18.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 0.75 oz bar",
+        "gm": 21.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar bite size",
+        "gm": 7.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar king size",
+        "gm": 108.0
+      },
+      {
+        "amt": 10.0,
+        "desc": "Butterfinger BB's",
+        "gm": 26.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "tbsp",
+        "gm": 25.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup BB's",
+        "gm": 174.0
+      }
+    ]
+  },
+  {
+    "word": "CAND5THAVE",
+    "display": "Candies 5TH AVENUE",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19098",
+    "desc": "Candies, 5TH AVENUE Candy Bar",
+    "cal": 482.0,
+    "pro": 8.8,
+    "fat": 24.0,
+    "carb": 62.7,
+    "fib": 3.1,
+    "h2o": 2.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 2 oz",
+        "gm": 56.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar snack size",
+        "gm": 16.0
+      }
+    ]
+  },
+  {
+    "word": "CANDGOOBERS",
+    "display": "Candies GOOBERS",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19105",
+    "desc": "Candies, NESTLE, GOOBERS Chocolate Covered Peanuts",
+    "cal": 512.0,
+    "pro": 9.7,
+    "fat": 34.0,
+    "carb": 53.0,
+    "fib": 9.7,
+    "h2o": 1.9,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package 1.375 oz",
+        "gm": 39.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 0.25 cup",
+        "gm": 41.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving fun size",
+        "gm": 48.0
+      }
+    ]
+  },
+  {
+    "word": "CANDCARMELO",
+    "display": "Candies CARAMELLO",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19075",
+    "desc": "Candies, CARAMELLO Candy Bar",
+    "cal": 462.0,
+    "pro": 6.2,
+    "fat": 21.2,
+    "carb": 63.8,
+    "fib": 1.2,
+    "h2o": 6.8,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 1.25 oz",
+        "gm": 35.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 1.6 oz",
+        "gm": 45.0
+      },
+      {
+        "amt": 6.0,
+        "desc": "blocks",
+        "gm": 43.0
+      }
+    ]
+  },
+  {
+    "word": "CANDMRGOODBAR",
+    "display": "Candies MR. GOODBAR",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19143",
+    "desc": "Candies, MR. GOODBAR Chocolate Bar",
+    "cal": 538.0,
+    "pro": 10.2,
+    "fat": 33.2,
+    "carb": 54.3,
+    "fib": 3.8,
+    "h2o": 0.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar (1.75 oz)",
+        "gm": 49.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar (2.6 oz)",
+        "gm": 73.0
+      }
+    ]
+  },
+  {
+    "word": "CANDSYMPHONY",
+    "display": "Candies SYMPHONY",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19093",
+    "desc": "Candies, SYMPHONY Milk Chocolate Bar",
+    "cal": 531.0,
+    "pro": 8.5,
+    "fat": 30.6,
+    "carb": 58.0,
+    "fib": 1.7,
+    "h2o": 0.9,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 1.5 oz",
+        "gm": 42.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 2.4 oz",
+        "gm": 68.0
+      }
+    ]
+  },
+  {
+    "word": "CANDKITKAT",
+    "display": "Candies KIT KAT",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19109",
+    "desc": "Candies, KIT KAT Wafer Bar",
+    "cal": 518.0,
+    "pro": 6.5,
+    "fat": 26.0,
+    "carb": 64.6,
+    "fib": 1.0,
+    "h2o": 1.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar (1.5 oz)",
+        "gm": 42.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar, miniature (.35 oz)",
+        "gm": 10.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar (1.625 oz)",
+        "gm": 46.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar (2.8 oz)",
+        "gm": 78.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar (3.375 oz)",
+        "gm": 96.0
+      }
+    ]
+  },
+  {
+    "word": "CANDKRACKEL",
+    "display": "Candies KRACKLE",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19110",
+    "desc": "Candies, KRACKEL Chocolate Bar",
+    "cal": 512.0,
+    "pro": 6.6,
+    "fat": 26.6,
+    "carb": 64.0,
+    "fib": 2.2,
+    "h2o": 1.2,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 1.45 oz",
+        "gm": 41.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 2 oz",
+        "gm": 56.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "blocks",
+        "gm": 37.0
+      }
+    ]
+  },
+  {
+    "word": "CANDBABYRUTH",
+    "display": "Candies BABY RUTH",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19111",
+    "desc": "Candies, NESTLE, BABY RUTH Bar",
+    "cal": 459.0,
+    "pro": 5.4,
+    "fat": 21.6,
+    "carb": 64.8,
+    "fib": 2.0,
+    "h2o": 7.0,
+    "sug": 54.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 2.1 oz bar",
+        "gm": 60.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving fun size bar 0.65 oz",
+        "gm": 18.0
+      }
+    ]
+  },
+  {
+    "word": "CANDMARSALMONDBAR",
+    "display": "Candies MARS Almond Bar",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19115",
+    "desc": "Candies, MARS SNACKFOOD US, MARS Almond Bar",
+    "cal": 467.0,
+    "pro": 8.1,
+    "fat": 23.0,
+    "carb": 62.7,
+    "fib": 2.0,
+    "h2o": 4.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar (1.76 oz)",
         "gm": 50.0
       }
     ]
   },
   {
-    "word": "ICECREAMCREAM",
-    "display": "Ice Cream Creamsicle",
-    "groups": [
-      "dairy",
-      "sweets"
-    ],
-    "ndb": "1302",
-    "desc": "Light ice cream, Creamsicle",
-    "cal": 165.0,
-    "pro": 1.5,
-    "fat": 3.1,
-    "carb": 32.8,
-    "fib": 0.0,
-    "h2o": 61.8,
-    "sug": 18.5,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      }
-    ]
-  },
-  {
-    "word": "ICECREAMCONECHOC",
-    "display": "Ice Cream Choc with Cone",
-    "groups": [
-      "dairy",
-      "sweets"
-    ],
-    "ndb": "1240",
-    "desc": "Ice cream cone, chocolate covered, with nuts, flavors other than chocolate",
-    "cal": 354.0,
-    "pro": 5.2,
-    "fat": 21.9,
-    "carb": 34.4,
-    "fib": 1.0,
-    "h2o": 37.4,
-    "sug": 25.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "unit",
-        "gm": 96.0
-      }
-    ]
-  },
-  {
-    "word": "ICECREAMCONEWAFER",
-    "display": "Ice Cream Cone only",
+    "word": "CANDOHHENRY",
+    "display": "Candies OH HENRY!",
     "groups": [
       "sweets"
     ],
-    "ndb": "18271",
-    "desc": "Ice cream cones, cake or wafer-type",
-    "cal": 417.0,
-    "pro": 8.1,
-    "fat": 6.9,
-    "carb": 79.0,
-    "fib": 3.0,
-    "h2o": 5.3,
-    "sug": 6.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      },
-      {
-        "amt": 1.0,
-        "desc": "cone",
-        "gm": 4.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "large waffle cone",
-        "gm": 29.0
-      }
-    ]
-  },
-  {
-    "word": "ICECREAMSOFTVAN",
-    "display": "Ice Cream Soft Vanilla",
-    "groups": [
-      "dairy",
-      "sweets"
-    ],
-    "ndb": "21028",
-    "desc": "Fast foods, vanilla, light, soft-serve ice cream, with cone",
-    "cal": 163.0,
-    "pro": 4.2,
-    "fat": 4.9,
-    "carb": 26.4,
-    "fib": 0.1,
-    "h2o": 63.6,
-    "sug": 19.5,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "item",
-        "gm": 120.0
-      }
-    ]
-  },
-  {
-    "word": "ICECREAMSUBDAEFUD",
-    "display": "Ice Cream Sundae Fudge",
-    "groups": [
-      "dairy",
-      "sweets"
-    ],
-    "ndb": "21033",
-    "desc": "Fast foods, sundae, hot fudge",
-    "cal": 180.0,
-    "pro": 3.6,
-    "fat": 5.5,
-    "carb": 30.2,
-    "fib": 0.0,
-    "h2o": 59.7,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "sundae",
-        "gm": 158.0
-      }
-    ]
-  },
-  {
-    "word": "ICECREAMSUNDAESTRW",
-    "display": "Ice Cream Sundae Strawberry",
-    "groups": [
-      "dairy",
-      "sweets"
-    ],
-    "ndb": "21034",
-    "desc": "Fast foods, sundae, strawberry",
-    "cal": 175.0,
-    "pro": 4.1,
-    "fat": 5.1,
-    "carb": 29.2,
-    "fib": 0.0,
-    "h2o": 60.9,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "sundae",
-        "gm": 153.0
-      }
-    ]
-  },
-  {
-    "word": "ICECREAMSUNDAECARM",
-    "display": "Ice Cream Sundae Caramel",
-    "groups": [
-      "dairy",
-      "sweets"
-    ],
-    "ndb": "21032",
-    "desc": "Fast foods, sundae, caramel",
-    "cal": 196.0,
-    "pro": 4.7,
-    "fat": 6.0,
-    "carb": 31.8,
-    "fib": 0.0,
-    "h2o": 56.5,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "sundae",
-        "gm": 155.0
-      }
-    ]
-  },
-  {
-    "word": "TEAGREEN",
-    "display": "Tea Green",
-    "groups": [
-      "beverage"
-    ],
-    "ndb": "14278",
-    "desc": "Beverages, tea, green, brewed, regular",
-    "cal": 1.0,
-    "pro": 0.2,
-    "fat": 0.0,
-    "carb": 0.0,
-    "fib": 0.0,
-    "h2o": 99.9,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 245.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "fl oz",
-        "gm": 29.6
-      }
-    ]
-  },
-  {
-    "word": "TEAHIBISCUS",
-    "display": "Tea Hibiscus",
-    "groups": [
-      "beverage"
-    ],
-    "ndb": "14649",
-    "desc": "Beverages, tea, hibiscus, brewed",
-    "cal": 0.0,
-    "pro": 0.0,
-    "fat": 0.0,
-    "carb": 0.0,
-    "fib": 0.0,
-    "h2o": 99.6,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 8.0,
-        "desc": "fl oz",
-        "gm": 237.0
-      }
-    ]
-  },
-  {
-    "word": "TEACHAM",
-    "display": "Tea Chamomile",
-    "groups": [
-      "beverage"
-    ],
-    "ndb": "14545",
-    "desc": "Beverages, tea, herb, brewed, chamomile",
-    "cal": 1.0,
-    "pro": 0.0,
-    "fat": 0.0,
-    "carb": 0.2,
-    "fib": 0.0,
-    "h2o": 99.7,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "fl oz",
-        "gm": 29.6
-      },
-      {
-        "amt": 6.0,
-        "desc": "fl oz",
-        "gm": 178.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup (8 fl oz)",
-        "gm": 237.0
-      }
-    ]
-  },
-  {
-    "word": "TEAINSTANTDECAF",
-    "display": "Tea Instant Decaf",
-    "groups": [
-      "beverage"
-    ],
-    "ndb": "14353",
-    "desc": "Beverages, tea, instant, decaffeinated, unsweetened",
-    "cal": 315.0,
-    "pro": 20.2,
-    "fat": 0.0,
-    "carb": 58.7,
-    "fib": 8.5,
-    "h2o": 5.1,
-    "sug": 5.5,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 2 tsp",
-        "gm": 0.7
-      }
-    ]
-  },
-  {
-    "word": "TEAINSTANT",
-    "display": "Tea Instant",
-    "groups": [
-      "beverage"
-    ],
-    "ndb": "14367",
-    "desc": "Beverages, tea, instant, unsweetened, prepared with water",
-    "cal": 1.0,
-    "pro": 0.1,
-    "fat": 0.0,
-    "carb": 0.2,
-    "fib": 0.0,
-    "h2o": 99.6,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "fl oz",
-        "gm": 29.7
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 6 fl oz",
-        "gm": 178.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 8 fl oz",
-        "gm": 238.0
-      }
-    ]
-  },
-  {
-    "word": "SOUPSPLITPEA",
-    "display": "Soup Split Pea",
-    "groups": [
-      "legume",
-      "prepared"
-    ],
-    "ndb": "6192",
-    "desc": "Split pea soup, canned, reduced sodium, prepared with water or ready-to serve",
-    "cal": 71.0,
-    "pro": 3.9,
-    "fat": 0.9,
-    "carb": 11.8,
+    "ndb": "19118",
+    "desc": "Candies, NESTLE, OH HENRY! Bar",
+    "cal": 462.0,
+    "pro": 7.7,
+    "fat": 23.0,
+    "carb": 65.5,
     "fib": 1.9,
-    "h2o": 82.4,
-    "sug": 5.1,
+    "h2o": 2.3,
+    "sug": 0.0,
     "portions": [
       {
         "amt": 1.0,
@@ -40489,27 +42898,31 @@ export const FOODS: Food[] = [
       },
       {
         "amt": 1.0,
-        "desc": "cup",
-        "gm": 253.0
+        "desc": "bar 2 oz",
+        "gm": 57.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving fun size bar",
+        "gm": 26.0
       }
     ]
   },
   {
-    "word": "SOUPSPLITPEAHAM",
-    "display": "Soup Split Pea with Ham",
+    "word": "CANDCHUNKY",
+    "display": "Candies CHUNKY",
     "groups": [
-      "legume",
-      "prepared"
+      "sweets"
     ],
-    "ndb": "6050",
-    "desc": "Soup, pea, split with ham, canned, chunky, ready-to-serve",
-    "cal": 77.0,
-    "pro": 4.6,
-    "fat": 1.7,
-    "carb": 11.2,
-    "fib": 1.7,
-    "h2o": 81.0,
-    "sug": 1.9,
+    "ndb": "19119",
+    "desc": "Candies, NESTLE, CHUNKY Bar",
+    "cal": 475.0,
+    "pro": 7.5,
+    "fat": 27.5,
+    "carb": 60.0,
+    "fib": 2.5,
+    "h2o": 2.9,
+    "sug": 0.0,
     "portions": [
       {
         "amt": 1.0,
@@ -40518,32 +42931,26 @@ export const FOODS: Food[] = [
       },
       {
         "amt": 1.0,
-        "desc": "cup",
-        "gm": 240.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "can (19 oz)",
-        "gm": 539.0
+        "desc": "serving 1.4 oz bar",
+        "gm": 40.0
       }
     ]
   },
   {
-    "word": "TOASTWHITE",
-    "display": "Toast White",
+    "word": "CANDTWIX",
+    "display": "Candies TWIX Peanut Cookie Bar",
     "groups": [
-      "grain",
-      "prepared"
+      "sweets"
     ],
-    "ndb": "18070",
-    "desc": "Bread, white, commercially prepared, toasted",
-    "cal": 290.0,
-    "pro": 9.0,
-    "fat": 4.0,
-    "carb": 54.5,
-    "fib": 2.9,
-    "h2o": 30.4,
-    "sug": 6.2,
+    "ndb": "19161",
+    "desc": "Candies, MARS SNACKFOOD US, TWIX Peanut Butter Cookie Bars",
+    "cal": 536.0,
+    "pro": 9.2,
+    "fat": 32.7,
+    "carb": 54.1,
+    "fib": 3.1,
+    "h2o": 1.8,
+    "sug": 0.0,
     "portions": [
       {
         "amt": 1.0,
@@ -40552,143 +42959,111 @@ export const FOODS: Food[] = [
       },
       {
         "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
+        "desc": "package (1.89 oz, 2 bars)",
+        "gm": 54.0
       },
       {
         "amt": 1.0,
-        "desc": "cup, crumbs",
-        "gm": 45.0
+        "desc": "package (2.06 oz, 2 bars)",
+        "gm": 58.0
       },
       {
         "amt": 1.0,
-        "desc": "cup, cubes",
+        "desc": "package (1.77 oz)",
+        "gm": 50.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package (9.43 oz)",
+        "gm": 267.0
+      }
+    ]
+  },
+  {
+    "word": "CANDWHATCHA",
+    "display": "Candies WHATCHAMACALLIT",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19162",
+    "desc": "Candies, WHATCHAMACALLIT Candy Bar",
+    "cal": 494.0,
+    "pro": 8.0,
+    "fat": 23.7,
+    "carb": 63.2,
+    "fib": 1.9,
+    "h2o": 3.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 1.7 oz",
+        "gm": 48.0
+      }
+    ]
+  },
+  {
+    "word": "CANDSPECIALDARK",
+    "display": "Candies SPECIAL DARK",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19164",
+    "desc": "Candies, SPECIAL DARK Chocolate Bar",
+    "cal": 556.0,
+    "pro": 5.5,
+    "fat": 32.4,
+    "carb": 60.5,
+    "fib": 6.5,
+    "h2o": 0.9,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 1.45 oz",
+        "gm": 41.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 2.6 oz",
+        "gm": 73.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "blocks",
         "gm": 42.0
       },
       {
         "amt": 1.0,
-        "desc": "slice, large",
-        "gm": 27.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "slice crust not eaten",
-        "gm": 11.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "slice, thin",
+        "desc": "bar",
         "gm": 17.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "slice thin, crust not eaten",
-        "gm": 8.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "slice, very thin",
-        "gm": 13.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "slice",
-        "gm": 22.0
       }
     ]
   },
   {
-    "word": "TOASTWHOLE",
-    "display": "Toast Whole Wheat",
+    "word": "CANDAFTEREIGHT",
+    "display": "Candies AFTER EIGHT",
     "groups": [
-      "grain",
-      "prepared"
+      "sweets"
     ],
-    "ndb": "18076",
-    "desc": "Bread, whole-wheat, commercially prepared, toasted",
-    "cal": 306.0,
-    "pro": 16.3,
-    "fat": 4.1,
-    "carb": 51.2,
-    "fib": 7.5,
-    "h2o": 24.2,
-    "sug": 5.8,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      },
-      {
-        "amt": 1.0,
-        "desc": "slice",
-        "gm": 25.0
-      }
-    ]
-  },
-  {
-    "word": "TOASTRAISIN",
-    "display": "Toast Raisin",
-    "groups": [
-      "grain",
-      "prepared"
-    ],
-    "ndb": "18048",
-    "desc": "Bread, raisin, enriched, toasted",
-    "cal": 297.0,
-    "pro": 8.6,
-    "fat": 4.8,
-    "carb": 56.9,
-    "fib": 4.7,
-    "h2o": 27.8,
-    "sug": 6.2,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      },
-      {
-        "amt": 1.0,
-        "desc": "slice, large",
-        "gm": 29.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "slice",
-        "gm": 24.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "slice, thin",
-        "gm": 21.0
-      }
-    ]
-  },
-  {
-    "word": "PORKHAMSLICED",
-    "display": "Pork Ham Sliced",
-    "groups": [
-      "protein"
-    ],
-    "ndb": "7029",
-    "desc": "Ham, sliced, regular (approximately 11% fat)",
-    "cal": 163.0,
-    "pro": 16.6,
-    "fat": 8.6,
-    "carb": 3.8,
-    "fib": 1.3,
-    "h2o": 67.3,
+    "ndb": "19153",
+    "desc": "Candies, NESTLE, AFTER EIGHT Mints",
+    "cal": 432.0,
+    "pro": 1.7,
+    "fat": 11.9,
+    "carb": 79.5,
+    "fib": 2.4,
+    "h2o": 6.3,
     "sug": 0.0,
     "portions": [
       {
@@ -40697,394 +43072,31 @@ export const FOODS: Food[] = [
         "gm": 100.0
       },
       {
-        "amt": 56.0,
-        "desc": "grams 1 serving",
-        "gm": 56.0
-      },
-      {
         "amt": 1.0,
-        "desc": "slice",
-        "gm": 28.0
-      }
-    ]
-  },
-  {
-    "word": "CHICKENBREASTSLICED",
-    "display": "Chicken Breast Sliced",
-    "groups": [
-      "protein"
-    ],
-    "ndb": "7933",
-    "desc": "Chicken breast, oven-roasted, fat-free, sliced",
-    "cal": 79.0,
-    "pro": 16.8,
-    "fat": 0.4,
-    "carb": 2.2,
-    "fib": 0.0,
-    "h2o": 76.7,
-    "sug": 0.1,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 2 slices",
+        "desc": "serving 5 mints",
         "gm": 42.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "piece",
+        "gm": 8.4
       }
     ]
   },
   {
-    "word": "LUNCHEONMEATLESS",
-    "display": "Sliced Luncheon Meatless",
+    "word": "CANDSNICKERS",
+    "display": "Candies SNICKERS",
     "groups": [
-      "prepared"
+      "sweets"
     ],
-    "ndb": "43131",
-    "desc": "Luncheon slices, meatless",
-    "cal": 189.0,
-    "pro": 17.8,
-    "fat": 11.1,
-    "carb": 4.4,
-    "fib": 1.1,
-    "h2o": 65.0,
-    "sug": 2.2,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "slice, thin",
-        "gm": 14.0
-      }
-    ]
-  },
-  {
-    "word": "SANDWICHFISH",
-    "display": "Sandwich Fish",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "21105",
-    "desc": "Fast foods, fish sandwich, with tartar sauce",
-    "cal": 257.0,
-    "pro": 10.3,
-    "fat": 12.4,
-    "carb": 26.7,
-    "fib": 1.0,
-    "h2o": 48.4,
-    "sug": 3.5,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "sandwich",
-        "gm": 220.0
-      }
-    ]
-  },
-  {
-    "word": "SANDWICHCHICKEN",
-    "display": "Sandwich Chicken",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "21102",
-    "desc": "Fast foods, chicken fillet sandwich, plain with pickles",
-    "cal": 250.0,
-    "pro": 16.3,
-    "fat": 11.2,
-    "carb": 20.9,
-    "fib": 1.4,
-    "h2o": 48.9,
-    "sug": 3.6,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "sandwich",
-        "gm": 187.0
-      }
-    ]
-  },
-  {
-    "word": "SANDWICHBEEF",
-    "display": "Sandwich Roast Beef",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "21121",
-    "desc": "Fast foods, roast beef sandwich, plain",
-    "cal": 244.0,
-    "pro": 15.2,
-    "fat": 10.3,
-    "carb": 22.2,
-    "fib": 1.3,
-    "h2o": 49.9,
-    "sug": 3.8,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "sandwich",
-        "gm": 149.0
-      }
-    ]
-  },
-  {
-    "word": "SANDWICHCHICKENCRISP",
-    "display": "Sandwich Crispy Chicken",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "21230",
-    "desc": "Fast Foods, crispy chicken filet sandwich, with lettuce and mayonnaise",
-    "cal": 276.0,
-    "pro": 10.9,
-    "fat": 13.6,
-    "carb": 27.4,
-    "fib": 1.4,
-    "h2o": 45.8,
-    "sug": 3.4,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "sandwich",
-        "gm": 152.0
-      }
-    ]
-  },
-  {
-    "word": "SANDSUBBEEF",
-    "display": "Sandwich Sub Roast Beef",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "21125",
-    "desc": "Fast foods, submarine sandwich, roast beef on white bread with lettuce and tomato",
-    "cal": 156.0,
-    "pro": 12.2,
-    "fat": 2.7,
-    "carb": 20.3,
-    "fib": 0.7,
-    "h2o": 63.1,
-    "sug": 3.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 6.0,
-        "desc": "inch sub",
-        "gm": 190.0
-      },
-      {
-        "amt": 12.0,
-        "desc": "inch sub",
-        "gm": 381.0
-      }
-    ]
-  },
-  {
-    "word": "SANDSUBBLT",
-    "display": "Sandwich Sub BLT",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "21162",
-    "desc": "Fast foods, submarine sandwich, bacon, lettuce, and tomato on white bread",
-    "cal": 205.0,
-    "pro": 10.1,
-    "fat": 6.4,
-    "carb": 26.7,
-    "fib": 1.6,
-    "h2o": 55.0,
-    "sug": 3.6,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 6.0,
-        "desc": "inch sub",
-        "gm": 148.0
-      },
-      {
-        "amt": 12.0,
-        "desc": "inch sub",
-        "gm": 296.0
-      }
-    ]
-  },
-  {
-    "word": "SANDSUBMEATBALL",
-    "display": "Sandwich Sub Meatball",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "21158",
-    "desc": "Fast foods, submarine sandwich, meatball marinara on white bread",
-    "cal": 219.0,
-    "pro": 9.8,
-    "fat": 8.4,
-    "carb": 26.0,
-    "fib": 2.1,
-    "h2o": 53.6,
-    "sug": 5.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 6.0,
-        "desc": "inch sub",
-        "gm": 209.0
-      },
-      {
-        "amt": 12.0,
-        "desc": "inch sub",
-        "gm": 418.0
-      }
-    ]
-  },
-  {
-    "word": "SANDSUBTURKEY",
-    "display": "Sandwich Sub Turkey",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "21155",
-    "desc": "Fast foods, submarine sandwich, turkey breast on white bread with lettuce and tomato",
-    "cal": 147.0,
-    "pro": 9.1,
-    "fat": 2.3,
-    "carb": 22.4,
-    "fib": 1.3,
-    "h2o": 64.3,
-    "sug": 3.1,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 6.0,
-        "desc": "inch sub",
-        "gm": 184.0
-      },
-      {
-        "amt": 12.0,
-        "desc": "inch sub",
-        "gm": 367.0
-      }
-    ]
-  },
-  {
-    "word": "SANDSUBHAM",
-    "display": "Sandwich Sub Ham",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "21156",
-    "desc": "Fast foods, submarine sandwich, ham on white bread with lettuce and tomato",
-    "cal": 151.0,
-    "pro": 9.1,
-    "fat": 2.5,
-    "carb": 22.9,
-    "fib": 1.3,
-    "h2o": 63.3,
-    "sug": 3.5,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 6.0,
-        "desc": "inch sub",
-        "gm": 184.0
-      },
-      {
-        "amt": 12.0,
-        "desc": "inch sub",
-        "gm": 368.0
-      }
-    ]
-  },
-  {
-    "word": "BUNHONEY",
-    "display": "Buns Honey Bun",
-    "groups": [
-      "grain",
-      "prepared"
-    ],
-    "ndb": "18964",
-    "desc": "Cinnamon buns, frosted (includes honey buns)",
-    "cal": 452.0,
-    "pro": 4.5,
-    "fat": 26.6,
-    "carb": 48.6,
-    "fib": 1.2,
-    "h2o": 19.0,
-    "sug": 25.7,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bun",
-        "gm": 65.0
-      }
-    ]
-  },
-  {
-    "word": "BUNSHAMBURGER",
-    "display": "Buns Hamburger",
-    "groups": [
-      "grain",
-      "prepared"
-    ],
-    "ndb": "28394",
-    "desc": "PEPPERIDGE FARM, Hamburger Bun",
-    "cal": 278.0,
-    "pro": 0.0,
-    "fat": 3.7,
-    "carb": 50.0,
-    "fib": 1.8,
-    "h2o": 33.3,
+    "ndb": "19155",
+    "desc": "Candies, MARS SNACKFOOD US, SNICKERS Bar",
+    "cal": 491.0,
+    "pro": 7.5,
+    "fat": 23.9,
+    "carb": 61.5,
+    "fib": 2.3,
+    "h2o": 5.5,
     "sug": 0.0,
     "portions": [
       {
@@ -41094,26 +43106,35 @@ export const FOODS: Food[] = [
       },
       {
         "amt": 1.0,
-        "desc": "serving",
-        "gm": 51.0
+        "desc": "bar (2 oz)",
+        "gm": 57.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar, fun size",
+        "gm": 15.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar, king size (4 oz)",
+        "gm": 113.0
       }
     ]
   },
   {
-    "word": "BUNSHAMBURGERWHOLE",
-    "display": "Buns Hamburger Whole Wheat",
+    "word": "CABDSTARBURST",
+    "display": "Candies STARBURST ORIGINAL",
     "groups": [
-      "grain",
-      "prepared"
+      "sweets"
     ],
-    "ndb": "28377",
-    "desc": "PEPPERIDGE FARM, 100% Whole Wheat Hamburger Buns",
-    "cal": 257.0,
-    "pro": 0.0,
-    "fat": 3.1,
-    "carb": 43.2,
-    "fib": 5.9,
-    "h2o": 37.1,
+    "ndb": "19156",
+    "desc": "Candies, MARS SNACKFOOD US, STARBURST Fruit Chews, Original fruits",
+    "cal": 408.0,
+    "pro": 0.4,
+    "fat": 8.2,
+    "carb": 82.6,
+    "fib": 0.0,
+    "h2o": 8.5,
     "sug": 0.0,
     "portions": [
       {
@@ -41123,26 +43144,35 @@ export const FOODS: Food[] = [
       },
       {
         "amt": 1.0,
-        "desc": "serving",
-        "gm": 51.0
+        "desc": "serving fun size (8 chews)",
+        "gm": 40.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 2.07 oz pack",
+        "gm": 59.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "piece",
+        "gm": 5.0
       }
     ]
   },
   {
-    "word": "BUNSHAMBURGERSES",
-    "display": "Buns Hamburger Sesame",
+    "word": "CANDMMMINIS",
+    "display": "Candies M&M MINIS",
     "groups": [
-      "grain",
-      "prepared"
+      "sweets"
     ],
-    "ndb": "28387",
-    "desc": "PEPPERIDGE FARM, Hamburger Buns w/Sesame",
-    "cal": 280.0,
-    "pro": 0.0,
-    "fat": 4.1,
-    "carb": 49.9,
-    "fib": 3.1,
-    "h2o": 33.2,
+    "ndb": "19157",
+    "desc": "Candies, MARS SNACKFOOD US, M&M's MINIs Milk Chocolate Candies",
+    "cal": 502.0,
+    "pro": 4.8,
+    "fat": 23.4,
+    "carb": 68.4,
+    "fib": 2.7,
+    "h2o": 1.2,
     "sug": 0.0,
     "portions": [
       {
@@ -41152,149 +43182,178 @@ export const FOODS: Food[] = [
       },
       {
         "amt": 1.0,
-        "desc": "serving",
-        "gm": 53.0
-      }
-    ]
-  },
-  {
-    "word": "ROLLDINNERWHOLE",
-    "display": "Roll Dinner Whole Wheat",
-    "groups": [
-      "grain",
-      "prepared"
-    ],
-    "ndb": "18348",
-    "desc": "Rolls, dinner, whole-wheat",
-    "cal": 266.0,
-    "pro": 8.7,
-    "fat": 4.7,
-    "carb": 51.1,
-    "fib": 7.5,
-    "h2o": 33.1,
-    "sug": 8.5,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "roll (1 oz)",
-        "gm": 28.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "roll (hamburger, frankfurter roll)",
-        "gm": 43.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "roll, large submarine, hoagie",
-        "gm": 135.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "medium (2-1/2\" dia)",
-        "gm": 36.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "roll medium submarine, hoagie",
-        "gm": 94.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "roll (small submarine, hoagie roll)",
-        "gm": 65.0
-      }
-    ]
-  },
-  {
-    "word": "ROLLFRENCH",
-    "display": "Roll French",
-    "groups": [
-      "grain",
-      "prepared"
-    ],
-    "ndb": "18349",
-    "desc": "Rolls, french",
-    "cal": 277.0,
-    "pro": 8.6,
-    "fat": 4.3,
-    "carb": 50.2,
-    "fib": 3.2,
-    "h2o": 34.8,
-    "sug": 0.3,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      },
-      {
-        "amt": 1.0,
-        "desc": "roll",
-        "gm": 38.0
-      }
-    ]
-  },
-  {
-    "word": "ROLLDINNERSWEET",
-    "display": "Roll Dinner Sweet",
-    "groups": [
-      "grain",
-      "prepared"
-    ],
-    "ndb": "28348",
-    "desc": "Rolls, dinner, sweet",
-    "cal": 321.0,
-    "pro": 10.0,
-    "fat": 7.4,
-    "carb": 53.6,
-    "fib": 3.1,
-    "h2o": 27.8,
-    "sug": 15.4,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "roll",
+        "desc": "serving 1.0 oz tube",
         "gm": 30.0
       },
       {
         "amt": 1.0,
-        "desc": "slice",
+        "desc": "serving 0.50 oz box",
+        "gm": 15.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 1 1.94 oz tube",
+        "gm": 55.0
+      }
+    ]
+  },
+  {
+    "word": "CANDMUSKETEER",
+    "display": "Candies 3 MUSKETEERS",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19159",
+    "desc": "Candies, MARS SNACKFOOD US, 3 MUSKETEERS Bar",
+    "cal": 436.0,
+    "pro": 2.6,
+    "fat": 12.8,
+    "carb": 77.8,
+    "fib": 1.5,
+    "h2o": 5.8,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 2.13 oz bar",
+        "gm": 60.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 2 fun size bars",
+        "gm": 28.0
+      }
+    ]
+  },
+  {
+    "word": "CANDRAISINETS",
+    "display": "Candies RAISINETS",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19149",
+    "desc": "Candies, NESTLE, RAISINETS Chocolate Covered Raisins",
+    "cal": 422.0,
+    "pro": 4.4,
+    "fat": 17.0,
+    "carb": 71.0,
+    "fib": 2.2,
+    "h2o": 6.4,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 1.58 oz bag",
+        "gm": 45.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving fun size",
+        "gm": 48.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 0.25 cup",
+        "gm": 45.0
+      }
+    ]
+  },
+  {
+    "word": "CANDMILKYWAY",
+    "display": "Candies MILKYWAY",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19135",
+    "desc": "Candies, MARS SNACKFOOD US, MILKY WAY Bar",
+    "cal": 456.0,
+    "pro": 4.0,
+    "fat": 17.2,
+    "carb": 71.2,
+    "fib": 1.0,
+    "h2o": 6.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 2.05 oz bar",
+        "gm": 58.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar fun size",
+        "gm": 17.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "piece miniature 5 pieces = serving",
+        "gm": 8.2
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar king size",
+        "gm": 103.0
+      }
+    ]
+  },
+  {
+    "word": "CANDSKOR",
+    "display": "Candies SKOR",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19136",
+    "desc": "Candies, HERSHEY'S SKOR Toffee Bar",
+    "cal": 541.0,
+    "pro": 3.1,
+    "fat": 30.4,
+    "carb": 63.7,
+    "fib": 1.3,
+    "h2o": 1.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 1.4 oz",
         "gm": 39.0
       }
     ]
   },
   {
-    "word": "ROLLPUMP",
-    "display": "Roll Pumpernickel",
+    "word": "CANDPOTOFGOLD",
+    "display": "Candies POT OF GOLD",
     "groups": [
-      "grain",
-      "prepared"
+      "sweets"
     ],
-    "ndb": "43441",
-    "desc": "Rolls, pumpernickel",
-    "cal": 276.0,
-    "pro": 10.8,
-    "fat": 2.8,
-    "carb": 51.9,
-    "fib": 5.4,
-    "h2o": 32.0,
-    "sug": 0.4,
+    "ndb": "19130",
+    "desc": "Candies, HERSHEY'S POT OF GOLD Almond Bar",
+    "cal": 577.0,
+    "pro": 12.8,
+    "fat": 38.5,
+    "carb": 44.9,
+    "fib": 3.8,
+    "h2o": 1.3,
+    "sug": 0.0,
     "portions": [
       {
         "amt": 1.0,
@@ -41303,32 +43362,26 @@ export const FOODS: Food[] = [
       },
       {
         "amt": 1.0,
-        "desc": "medium (2-1/2\" dia)",
-        "gm": 36.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "roll (pan, dinner, or small roll) (2\" square, 2\" h",
-        "gm": 28.0
+        "desc": "bar 2.8 oz",
+        "gm": 78.0
       }
     ]
   },
   {
-    "word": "ROLLPIZZA",
-    "display": "Roll Pizza",
+    "word": "CANDMM",
+    "display": "Candies M&M PEANUTS",
     "groups": [
-      "grain",
-      "prepared"
+      "sweets"
     ],
-    "ndb": "32012",
-    "desc": "Pizza rolls, frozen, unprepared",
-    "cal": 328.0,
-    "pro": 8.7,
-    "fat": 10.0,
-    "carb": 50.7,
-    "fib": 1.2,
-    "h2o": 27.9,
-    "sug": 3.7,
+    "ndb": "19140",
+    "desc": "Candies, MARS SNACKFOOD US, M&M's Peanut Chocolate Candies",
+    "cal": 515.0,
+    "pro": 9.6,
+    "fat": 26.1,
+    "carb": 60.5,
+    "fib": 3.7,
+    "h2o": 2.5,
+    "sug": 0.0,
     "portions": [
       {
         "amt": 1.0,
@@ -41337,55 +43390,40 @@ export const FOODS: Food[] = [
       },
       {
         "amt": 1.0,
-        "desc": "serving 6 rolls",
-        "gm": 80.0
-      }
-    ]
-  },
-  {
-    "word": "SALADPOTATOEGG",
-    "display": "Salad Potato with Egg",
-    "groups": [
-      "vegetable",
-      "prepared"
-    ],
-    "ndb": "22971",
-    "desc": "Potato salad with egg",
-    "cal": 157.0,
-    "pro": 2.0,
-    "fat": 9.4,
-    "carb": 16.2,
-    "fib": 1.3,
-    "h2o": 71.0,
-    "sug": 5.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
+        "desc": "serving 1 singles bag",
+        "gm": 54.0
       },
       {
-        "amt": 0.5,
+        "amt": 1.0,
+        "desc": "package fun size",
+        "gm": 18.0
+      },
+      {
+        "amt": 10.0,
+        "desc": "pieces",
+        "gm": 20.0
+      },
+      {
+        "amt": 1.0,
         "desc": "cup",
-        "gm": 125.0
+        "gm": 170.0
       }
     ]
   },
   {
-    "word": "SALADFRUIT",
-    "display": "Salad Fruit",
+    "word": "CAND100GRAND",
+    "display": "Candies 100 GRAND BAR",
     "groups": [
-      "fruit",
-      "prepared"
+      "sweets"
     ],
-    "ndb": "9102",
-    "desc": "Fruit salad, (peach and pear and apricot and pineapple and cherry), canned, water pack, solids and liquids",
-    "cal": 30.0,
-    "pro": 0.3,
-    "fat": 0.1,
-    "carb": 7.9,
+    "ndb": "19144",
+    "desc": "Candies, NESTLE, 100 GRAND Bar",
+    "cal": 468.0,
+    "pro": 2.5,
+    "fat": 19.3,
+    "carb": 71.0,
     "fib": 1.0,
-    "h2o": 91.5,
+    "h2o": 6.1,
     "sug": 0.0,
     "portions": [
       {
@@ -41395,385 +43433,36 @@ export const FOODS: Food[] = [
       },
       {
         "amt": 1.0,
-        "desc": "cup",
-        "gm": 245.0
+        "desc": "bar (1.5 oz)",
+        "gm": 43.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar, miniature",
+        "gm": 21.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 1.5 oz bar",
+        "gm": 43.0
       }
     ]
   },
   {
-    "word": "PASTACORNDRY",
-    "display": "Pasta Corn Dry",
+    "word": "CANDCRUNCH",
+    "display": "Candies NESTLE CRUNCH",
     "groups": [
-      "grain"
+      "sweets"
     ],
-    "ndb": "20091",
-    "desc": "Pasta, gluten-free, corn, dry",
-    "cal": 357.0,
-    "pro": 7.5,
-    "fat": 2.1,
-    "carb": 79.3,
-    "fib": 11.0,
-    "h2o": 10.0,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 105.0
-      },
-      {
-        "amt": 2.0,
-        "desc": "oz",
-        "gm": 57.0
-      }
-    ]
-  },
-  {
-    "word": "PASTACOOKED",
-    "display": "Pasta Cooked",
-    "groups": [
-      "grain"
-    ],
-    "ndb": "20521",
-    "desc": "Pasta, cooked, unenriched, with added salt",
-    "cal": 157.0,
-    "pro": 5.8,
-    "fat": 0.9,
-    "carb": 30.6,
-    "fib": 1.8,
-    "h2o": 62.1,
-    "sug": 0.6,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup spaghetti not packed",
-        "gm": 124.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup spaghetti packed",
-        "gm": 151.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup elbows not packed",
-        "gm": 120.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup elbows packed",
-        "gm": 132.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup penne",
-        "gm": 107.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup rotini",
-        "gm": 107.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup farfalle",
-        "gm": 107.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup shells",
-        "gm": 105.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup lasagne",
-        "gm": 116.0
-      }
-    ]
-  },
-  {
-    "word": "PASTACORNCOOKED",
-    "display": "Pasta Corn Cooked",
-    "groups": [
-      "grain"
-    ],
-    "ndb": "20092",
-    "desc": "Pasta, gluten-free, corn, cooked",
-    "cal": 126.0,
-    "pro": 2.6,
-    "fat": 0.7,
-    "carb": 27.9,
-    "fib": 4.8,
-    "h2o": 68.3,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 140.0
-      }
-    ]
-  },
-  {
-    "word": "PASTASPINACHFRESH",
-    "display": "Pasta Spinach Fresh",
-    "groups": [
-      "grain"
-    ],
-    "ndb": "20095",
-    "desc": "Pasta, fresh-refrigerated, spinach, as purchased",
-    "cal": 289.0,
-    "pro": 11.3,
-    "fat": 2.1,
-    "carb": 55.7,
-    "fib": 0.0,
-    "h2o": 30.1,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 4.5,
-        "desc": "oz",
-        "gm": 128.0
-      }
-    ]
-  },
-  {
-    "word": "PASTASPINACHFRESHCK",
-    "display": "Pasta Spinach Fresh Cooked",
-    "groups": [
-      "grain"
-    ],
-    "ndb": "20096",
-    "desc": "Pasta, fresh-refrigerated, spinach, cooked",
-    "cal": 130.0,
-    "pro": 5.1,
-    "fat": 0.9,
-    "carb": 25.0,
-    "fib": 0.0,
-    "h2o": 68.6,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 2.0,
-        "desc": "oz",
-        "gm": 57.0
-      }
-    ]
-  },
-  {
-    "word": "PASTAWHOLEDRY",
-    "display": "Pasta Whole Wheat Dry",
-    "groups": [
-      "grain"
-    ],
-    "ndb": "20124",
-    "desc": "Pasta, whole-wheat, dry",
-    "cal": 352.0,
-    "pro": 13.9,
-    "fat": 2.9,
-    "carb": 73.4,
-    "fib": 9.2,
-    "h2o": 8.2,
-    "sug": 2.7,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup spaghetti",
-        "gm": 91.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup elbows",
-        "gm": 122.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup penne",
-        "gm": 95.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup farfalle",
-        "gm": 81.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup rotini",
-        "gm": 96.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup shells",
-        "gm": 64.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup lasagne",
-        "gm": 90.0
-      }
-    ]
-  },
-  {
-    "word": "PASTAWHOLECK",
-    "display": "Pasta Whole Wheat Cooked",
-    "groups": [
-      "grain"
-    ],
-    "ndb": "20125",
-    "desc": "Pasta, whole-wheat, cooked",
-    "cal": 149.0,
-    "pro": 6.0,
-    "fat": 1.7,
-    "carb": 30.1,
-    "fib": 3.9,
-    "h2o": 61.8,
-    "sug": 0.8,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup spaghetti not packed",
-        "gm": 117.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup spaghetti packed",
-        "gm": 151.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup elbows",
-        "gm": 117.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup penne",
-        "gm": 97.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup shells",
-        "gm": 105.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup lasagne",
-        "gm": 116.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup rotini",
-        "gm": 107.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup farfalle",
-        "gm": 107.0
-      }
-    ]
-  },
-  {
-    "word": "PASTARICEBRWNCK",
-    "display": "Pasta Brown Rice Cooked",
-    "groups": [
-      "grain"
-    ],
-    "ndb": "20654",
-    "desc": "Pasta, gluten-free, brown rice flour, cooked, TINKYADA",
-    "cal": 138.0,
-    "pro": 3.5,
-    "fat": 1.7,
-    "carb": 32.2,
-    "fib": 1.7,
-    "h2o": 62.3,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup spaghetti not packed",
-        "gm": 169.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup penne not packed",
-        "gm": 131.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup fettucini not packed",
-        "gm": 153.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup spirals not packed",
-        "gm": 136.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup elbows not packed",
-        "gm": 131.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup shells not packed",
-        "gm": 156.0
-      }
-    ]
-  },
-  {
-    "word": "PASTATORTCHEESE",
-    "display": "Pasta Cheese Tortellini",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "22901",
-    "desc": "Tortellini, pasta with cheese filling, fresh-refrigerated, as purchased",
-    "cal": 307.0,
-    "pro": 13.5,
-    "fat": 7.2,
-    "carb": 47.0,
+    "ndb": "19145",
+    "desc": "Candies, NESTLE, CRUNCH Bar and Dessert Topping",
+    "cal": 500.0,
+    "pro": 5.0,
+    "fat": 26.0,
+    "carb": 67.0,
     "fib": 1.9,
-    "h2o": 30.5,
-    "sug": 0.9,
+    "h2o": 0.7,
+    "sug": 0.0,
     "portions": [
       {
         "amt": 1.0,
@@ -41781,83 +43470,123 @@ export const FOODS: Food[] = [
         "gm": 100.0
       },
       {
-        "amt": 0.75,
+        "amt": 1.0,
+        "desc": "bar 1.55 oz",
+        "gm": 44.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 0.5 oz",
+        "gm": 14.2
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 4 fun size bars",
+        "gm": 41.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "tbsp",
+        "gm": 24.0
+      }
+    ]
+  },
+  {
+    "word": "CANDREESESCUPS",
+    "display": "Candies REESE\u2019S CUPS",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19150",
+    "desc": "Candies, REESE'S Peanut Butter Cups",
+    "cal": 515.0,
+    "pro": 10.2,
+    "fat": 30.5,
+    "carb": 55.4,
+    "fib": 3.6,
+    "h2o": 1.4,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package 0.6 oz 1 cup",
+        "gm": 17.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package 1.6 oz 2 cups",
+        "gm": 45.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "miniature",
+        "gm": 7.0
+      }
+    ]
+  },
+  {
+    "word": "CANDREESESPIECES",
+    "display": "Candies REESE\u2019S PIECES",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19151",
+    "desc": "Candies, REESE'S PIECES Candy",
+    "cal": 497.0,
+    "pro": 12.5,
+    "fat": 24.8,
+    "carb": 59.9,
+    "fib": 3.0,
+    "h2o": 1.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.25,
         "desc": "cup",
-        "gm": 81.0
-      }
-    ]
-  },
-  {
-    "word": "PASTAPOMODOROCHIC",
-    "display": "Pasta Chicken Pomodoro",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "22984",
-    "desc": "KASHI, Chicken Pasta Pomodoro, Frozen Entree",
-    "cal": 100.0,
-    "pro": 7.0,
-    "fat": 2.3,
-    "carb": 13.0,
-    "fib": 2.6,
-    "h2o": 76.0,
-    "sug": 0.0,
-    "portions": [
+        "gm": 47.0
+      },
       {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
+        "amt": 10.0,
+        "desc": "pieces",
+        "gm": 8.0
       },
       {
         "amt": 1.0,
-        "desc": "package",
-        "gm": 283.0
-      }
-    ]
-  },
-  {
-    "word": "PASTAPRIMAVERAPESTO",
-    "display": "Pasta Pesto Primavera",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "22987",
-    "desc": "KASHI Pesto Pasta Primavera, frozen, unprepared",
-    "cal": 101.0,
-    "pro": 3.8,
-    "fat": 3.8,
-    "carb": 13.0,
-    "fib": 2.4,
-    "h2o": 77.9,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
+        "desc": "package 1.63 oz",
+        "gm": 46.0
       },
       {
         "amt": 1.0,
-        "desc": "entree",
-        "gm": 283.0
+        "desc": "package (1.6 oz)",
+        "gm": 46.0
       }
     ]
   },
   {
-    "word": "PASTATOMATOMEATLESS",
-    "display": "Pasta with Tomato Sauce Meatless",
+    "word": "CANDROLO",
+    "display": "Candies ROLO",
     "groups": [
-      "prepared"
+      "sweets"
     ],
-    "ndb": "22914",
-    "desc": "Pasta with tomato sauce, no meat, canned",
-    "cal": 70.0,
-    "pro": 2.2,
-    "fat": 0.4,
-    "carb": 14.2,
+    "ndb": "19152",
+    "desc": "Candies, ROLO Caramels in Milk Chocolate",
+    "cal": 474.0,
+    "pro": 5.1,
+    "fat": 20.9,
+    "carb": 68.0,
     "fib": 0.9,
-    "h2o": 82.2,
-    "sug": 4.0,
+    "h2o": 4.6,
+    "sug": 0.0,
     "portions": [
       {
         "amt": 1.0,
@@ -41866,13 +43595,585 @@ export const FOODS: Food[] = [
       },
       {
         "amt": 1.0,
-        "desc": "serving (1 NLEA serving)",
-        "gm": 252.0
+        "desc": "package 1 package",
+        "gm": 48.0
+      },
+      {
+        "amt": 7.0,
+        "desc": "pieces",
+        "gm": 42.0
+      }
+    ]
+  },
+  {
+    "word": "CANDSNICKERSPOP",
+    "display": "Candies SNICKERS POP\u2019ABLES",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19306",
+    "desc": "Candies, MARS SNACKFOOD US, POP'ABLES SNICKERS Brand Bite Size Candies",
+    "cal": 480.0,
+    "pro": 7.2,
+    "fat": 24.3,
+    "carb": 61.1,
+    "fib": 2.3,
+    "h2o": 5.8,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 13 pieces",
+        "gm": 39.0
+      }
+    ]
+  },
+  {
+    "word": "CANDRESESBITES",
+    "display": "Candies REESE\u2019S BITES",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19238",
+    "desc": "Candies, REESE'S BITES",
+    "cal": 521.0,
+    "pro": 11.3,
+    "fat": 29.9,
+    "carb": 55.2,
+    "fib": 3.1,
+    "h2o": 1.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 16.0,
+        "desc": "pieces",
+        "gm": 39.0
+      }
+    ]
+  },
+  {
+    "word": "CANDHEATHBITES",
+    "display": "Candies HEATH BITES",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19243",
+    "desc": "Candies, HEATH BITES",
+    "cal": 530.0,
+    "pro": 3.9,
+    "fat": 30.4,
+    "carb": 63.4,
+    "fib": 2.0,
+    "h2o": 0.9,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 15.0,
+        "desc": "pieces",
+        "gm": 39.0
+      }
+    ]
+  },
+  {
+    "word": "CANDALMONDJOYBITES",
+    "display": "Candies ALMOND JOY BITES",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19248",
+    "desc": "Candies, HERSHEY'S, ALMOND JOY BITES",
+    "cal": 563.0,
+    "pro": 5.6,
+    "fat": 34.5,
+    "carb": 57.5,
+    "fib": 4.3,
+    "h2o": 1.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 18.0,
+        "desc": "pieces",
+        "gm": 40.0
+      }
+    ]
+  },
+  {
+    "word": "CANDREESESTICKS",
+    "display": "Candies REESESTICKS",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19249",
+    "desc": "Candies, HERSHEY, REESESTICKS crispy wafers, peanut butter, milk chocolate",
+    "cal": 521.0,
+    "pro": 9.5,
+    "fat": 31.3,
+    "carb": 55.4,
+    "fib": 3.3,
+    "h2o": 1.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 1.5 oz",
+        "gm": 42.0
+      }
+    ]
+  },
+  {
+    "word": "CANDKITKATBIG",
+    "display": "Candies KIT KAT BIG KAT",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19250",
+    "desc": "Candies, HERSHEY, KIT KAT BIG KAT Bar",
+    "cal": 520.0,
+    "pro": 6.2,
+    "fat": 27.8,
+    "carb": 63.6,
+    "fib": 1.9,
+    "h2o": 1.1,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 1.94 oz",
+        "gm": 55.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar king size 2.8 oz",
+        "gm": 79.0
+      }
+    ]
+  },
+  {
+    "word": "CANDREESEFAST",
+    "display": "Candies REESE\u2019S FAST BREAK",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19252",
+    "desc": "Candies, REESE'S, FAST BREAK, milk chocolate peanut butter and soft nougats",
+    "cal": 474.0,
+    "pro": 8.7,
+    "fat": 23.4,
+    "carb": 61.6,
+    "fib": 2.9,
+    "h2o": 4.1,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "oz bar",
+        "gm": 56.0
+      }
+    ]
+  },
+  {
+    "word": "CANDSNICKERSALMOND",
+    "display": "Candies SNICKERS Almond",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19302",
+    "desc": "Candies, MARS SNACKFOOD US, SNICKERS Almond bar",
+    "cal": 472.0,
+    "pro": 5.4,
+    "fat": 22.4,
+    "carb": 64.7,
+    "fib": 2.6,
+    "h2o": 5.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 1.76 oz bar",
+        "gm": 50.0
+      }
+    ]
+  },
+  {
+    "word": "CANDMUSKETEERPOP",
+    "display": "Candies MUSKETEERS POP\u2019ABLES",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19308",
+    "desc": "Candies, MARS SNACKFOOD US, POP'ABLES 3 MUSKETEERS Brand Bite Size Candies",
+    "cal": 443.0,
+    "pro": 2.6,
+    "fat": 15.2,
+    "carb": 75.9,
+    "fib": 1.3,
+    "h2o": 5.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 15 pieces",
+        "gm": 41.0
+      }
+    ]
+  },
+  {
+    "word": "CANDREESENURAGEOUS",
+    "display": "Candies REESE\u2019S NUTRAGEOUS",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19239",
+    "desc": "Candies, REESE'S NUTRAGEOUS Candy Bar",
+    "cal": 517.0,
+    "pro": 11.3,
+    "fat": 32.1,
+    "carb": 52.8,
+    "fib": 3.9,
+    "h2o": 1.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 1.92 oz",
+        "gm": 54.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "bars",
+        "gm": 34.0
+      }
+    ]
+  },
+  {
+    "word": "CANDDOVE",
+    "display": "Candies DOVE ",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19255",
+    "desc": "Candies, MARS SNACKFOOD US, DOVE Dark Chocolate",
+    "cal": 520.0,
+    "pro": 5.2,
+    "fat": 32.5,
+    "carb": 59.4,
+    "fib": 7.6,
+    "h2o": 1.7,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 1.3 oz bar",
+        "gm": 37.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 7 pieces",
+        "gm": 42.0
+      }
+    ]
+  },
+  {
+    "word": "CANDSKITTLES",
+    "display": "Candies SKITTLES Original",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19370",
+    "desc": "Candies, MARS SNACKFOOD US, SKITTLES Original Bite Size Candies",
+    "cal": 405.0,
+    "pro": 0.2,
+    "fat": 4.4,
+    "carb": 90.8,
+    "fib": 0.0,
+    "h2o": 3.8,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 2.17 oz pack",
+        "gm": 62.0
       },
       {
         "amt": 1.0,
         "desc": "cup",
-        "gm": 238.0
+        "gm": 205.0
+      },
+      {
+        "amt": 10.0,
+        "desc": "pieces",
+        "gm": 10.7
+      },
+      {
+        "amt": 1.0,
+        "desc": "package fun size",
+        "gm": 20.0
+      }
+    ]
+  },
+  {
+    "word": "CANDCORDOVA",
+    "display": "Candies COCOAVIA",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19326",
+    "desc": "Candies, MARS SNACKFOOD US, COCOAVIA Chocolate Bar",
+    "cal": 539.0,
+    "pro": 5.8,
+    "fat": 29.3,
+    "carb": 63.0,
+    "fib": 8.7,
+    "h2o": 0.7,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 0.78 oz bar",
+        "gm": 22.0
+      }
+    ]
+  },
+  {
+    "word": "CANDMMPRETZEL",
+    "display": "Candies M&M Pretzel",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19917",
+    "desc": "Candies, M&M MARS Pretzel Chocolate Candies",
+    "cal": 447.0,
+    "pro": 5.0,
+    "fat": 15.0,
+    "carb": 72.9,
+    "fib": 2.5,
+    "h2o": 4.8,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.25,
+        "desc": "cup",
+        "gm": 40.0
+      }
+    ]
+  },
+  {
+    "word": "CANDPAYDAY",
+    "display": "Candies PAYDAY",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19923",
+    "desc": "Candies, HERSHEYS, PAYDAY Bar",
+    "cal": 490.0,
+    "pro": 13.4,
+    "fat": 25.0,
+    "carb": 52.9,
+    "fib": 3.8,
+    "h2o": 7.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      }
+    ]
+  },
+  {
+    "word": "CANDMOUNDS",
+    "display": "Candies MOUNDS",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19142",
+    "desc": "Candies, MOUNDS Candy Bar",
+    "cal": 486.0,
+    "pro": 4.6,
+    "fat": 26.6,
+    "carb": 58.6,
+    "fib": 3.7,
+    "h2o": 9.1,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar snack size",
+        "gm": 19.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package 1.9 oz",
+        "gm": 53.0
+      }
+    ]
+  },
+  {
+    "word": "CANDTOOTSIE",
+    "display": "Candies TOOTSIE ROLL",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19064",
+    "desc": "Candies, TOOTSIE ROLL, chocolate-flavor roll",
+    "cal": 387.0,
+    "pro": 1.6,
+    "fat": 3.3,
+    "carb": 87.7,
+    "fib": 0.1,
+    "h2o": 6.7,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 6 pieces",
+        "gm": 40.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "piece",
+        "gm": 6.6
+      }
+    ]
+  },
+  {
+    "word": "CANDALMONDJOY",
+    "display": "Candies ALMOND JOY",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19065",
+    "desc": "Candies, ALMOND JOY Candy Bar",
+    "cal": 479.0,
+    "pro": 4.1,
+    "fat": 26.9,
+    "carb": 59.5,
+    "fib": 5.0,
+    "h2o": 8.2,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package 1.76 oz",
+        "gm": 49.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar snack size",
+        "gm": 19.0
+      }
+    ]
+  },
+  {
+    "word": "CANDFONDANT",
+    "display": "Candies Fondant",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19099",
+    "desc": "Candies, fondant, prepared-from-recipe",
+    "cal": 373.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 93.2,
+    "fib": 0.0,
+    "h2o": 6.7,
+    "sug": 88.9,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
       }
     ]
   }

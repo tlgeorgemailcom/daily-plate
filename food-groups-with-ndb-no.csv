@@ -90,6 +90,8 @@ BEEFTONGUE,protein,,,,,,13340,"Beef, variety meats and by-products, tongue, cook
 BEEFTRIPE,protein,,,,,,23444,"Beef, New Zealand, imported, variety meats and by-products, tripe cooked, boiled",DESC_CONTAINS,5
 BEEFTRITIP,protein,,,,,,13953,"Beef, bottom sirloin, tri-tip roast, separable lean and fat, trimmed to 0"" fat, all grades, cooked, roasted",,
 BEER,beverage,,,,,,14003,"Alcoholic beverage, beer, regular, all",PREFERRED,1
+BEERHIGH,beverage,,,,,,14251,"Beverages, Beer, higher alcohol",,
+BEERLIGHT,beverage,,,,,,14013,"Alcoholic beverage, beer, light, low carb",,
 BEERWURST,protein,,,,,,7002,"Beerwurst, beer salami, pork and beef",DESC_STARTS,3
 BEET,vegetable,,,,,,11080,"Beets, raw",DESC_STARTS,11
 BEETCOOKED,vegetable,,,,,,11081,"Beets, cooked, boiled, drained",,
@@ -130,6 +132,10 @@ BUCKWHEAT,grain,,,,,,20011,"Buckwheat flour, whole-groat",KEYWORD_EXACT,7
 BUCKWHEATCOOKED,grain,,,,,,2000,"Buckwheat groats, roasted, cooked",,
 BUFFALO,protein,,,,,,17161,"Game meat, buffalo, water, cooked, roasted",KEYWORD_EXACT,5
 BULGUR,grain,,,,,,20013,"Bulgur, cooked",DESC_STARTS,2
+BUNHONEY,grain,prepared,,,,,18964,"Cinnamon buns, frosted (includes honey buns)",,
+BUNSHAMBURGER,grain,prepared,,,,,28394,"PEPPERIDGE FARM, Hamburger Bun",,
+BUNSHAMBURGERSES,grain,prepared,,,,,28387,"PEPPERIDGE FARM, Hamburger Buns w/Sesame",,
+BUNSHAMBURGERWHOLE,grain,prepared,,,,,28377,"PEPPERIDGE FARM, 100% Whole Wheat Hamburger Buns",,
 BURDOCK,vegetable,,,,,,11105,"Burdock root, cooked, boiled, drained, without salt",KEYWORD_EXACT,3
 BURRITO,prepared,,,,,,22928,"Burrito, beef and bean, microwaved",KEYWORD_EXACT,8
 BURRITOBEANCHEESE,prepared,,,,,,21061,"Fast foods, burrito, with beans and cheese",,
@@ -139,33 +145,33 @@ BUTTERBUR,vegetable,,,,,,11107,"Butterbur, cooked, boiled, drained, without salt
 BUTTERFISH,protein,,,,,,15191,"Fish, butterfish, cooked, dry heat",DESC_CONTAINS,2
 BUTTERMILK,dairy,beverage,,,,,1230,"Milk, buttermilk, fluid, whole",KEYWORD_EXACT,6
 BUTTERSALTED,dairy,fats,spice,Made from cream,High in saturated fat,,1001,"Butter, salted",PREFERRED,1
-BUTTERSCOTCH,sweets,,,,,,19364,"Toppings, butterscotch or caramel",DESC_CONTAINS,3
+BUTTERSCOTCH,prepared,,,,,,19364,"Toppings, butterscotch or caramel",DESC_CONTAINS,3
 BUTTERUNSALTED,dairy,,,,,,1145,"Butter, without salt",,
 BUTTERWHIP,fats,spice,dairy,,,,1002,"Butter, whipped, with salt",,
 CABBAGE,vegetable,,,,,,11109,"Cabbage, raw",KEYWORD_EXACT,10
 CABBAGECOOKED,vegetable,,,,,,11110,"Cabbage, cooked, boiled, drained, without salt",,
 CAESARDRESSING,spice,,,,,,43015,"Salad dressing, caesar dressing, regular",,
-CAKEANGELFOOD,sweets,,,,,,18086,"Cake, angelfood, commercially prepared",,
-CAKECHEESECAKE,sweets,,,,,,18147,Cheesecake commercially prepared,,
-CAKECHOCOLATE,sweets,,,,,,18101,"Cake, chocolate, prepared from recipe without frosting",,
-CAKECHOCOLATEFROSTING,sweets,,,,,,18096,"Cake, chocolate, commercially prepared with chocolate frosting, in-store bakery",,
-CAKECOFFEECAKE,sweets,,,,,,18104,"Coffeecake, cinnamon with crumb topping, commercially prepared, enriched",,
-CAKEFRUITCAKE,sweets,,,,,,18110,"Cake, fruitcake, commercially prepared",,
-CAKEGINGERBREAD,sweets,,,,,,18116,"Cake, gingerbread, prepared from recipe",,
-CAKEPINEAPPLE,sweets,,,,,,18119,"Cake, pineapple upside-down, prepared from recipe",,
-CAKEPOUND,sweets,,,,,,18120,"Cake, pound, commercially prepared, butter (includes fresh and frozen)",,
-CAKESHORTCAKE,sweets,,,,,,18126,"Cake, shortcake, biscuit-type, prepared from recipe",,
-CAKESPONGE,sweets,,,,,,18134,"Cake, sponge, prepared from recipe",,
-CAKEWHITE,sweets,,,,,,18139,"Cake, white, prepared from recipe without frosting",DESC_STARTS,15
-CAKEWHITECOCONUTFROSTING,sweets,,,,,,18102,"Cake, white, prepared from recipe with coconut frosting",,
-CAKEYELLOWCHOCOLATEFROSTING,sweets,,,,,,18140,"Cake, yellow, commercially prepared, with chocolate frosting, in-store bakery",,
-CAKEYELLOWFROSTING,sweets,,,,,,18141,"Cake, yellow, prepared from recipe without frosting",,
+CAKEANGELFOOD,prepared,,,,,,18086,"Cake, angelfood, commercially prepared",,
+CAKECHEESECAKE,prepared,,,,,,18147,Cheesecake commercially prepared,,
+CAKECHOCOLATE,prepared,,,,,,18101,"Cake, chocolate, prepared from recipe without frosting",,
+CAKECHOCOLATEFROSTING,prepared,,,,,,18096,"Cake, chocolate, commercially prepared with chocolate frosting, in-store bakery",,
+CAKECOFFEECAKE,prepared,,,,,,18104,"Coffeecake, cinnamon with crumb topping, commercially prepared, enriched",,
+CAKEFRUITCAKE,prepared,,,,,,18110,"Cake, fruitcake, commercially prepared",,
+CAKEGINGERBREAD,prepared,,,,,,18116,"Cake, gingerbread, prepared from recipe",,
+CAKEPINEAPPLE,prepared,,,,,,18119,"Cake, pineapple upside-down, prepared from recipe",,
+CAKEPOUND,prepared,,,,,,18120,"Cake, pound, commercially prepared, butter (includes fresh and frozen)",,
+CAKESHORTCAKE,prepared,,,,,,18126,"Cake, shortcake, biscuit-type, prepared from recipe",,
+CAKESPONGE,prepared,,,,,,18134,"Cake, sponge, prepared from recipe",,
+CAKEWHITE,prepared,,,,,,18139,"Cake, white, prepared from recipe without frosting",DESC_STARTS,15
+CAKEWHITECOCONUTFROSTING,prepared,,,,,,18102,"Cake, white, prepared from recipe with coconut frosting",,
+CAKEYELLOWCHOCOLATEFROSTING,prepared,,,,,,18140,"Cake, yellow, commercially prepared, with chocolate frosting, in-store bakery",,
+CAKEYELLOWFROSTING,prepared,,,,,,18141,"Cake, yellow, prepared from recipe without frosting",,
 CAMEMBERT,dairy,,,,,,1007,"Cheese, camembert",DESC_CONTAINS,1
 CANOLA,fats,,,,,,4582,"Oil, canola",DESC_CONTAINS,5
 CANTALOUPE,fruit,,,,,,9181,"Melons, cantaloupe, raw",DESC_CONTAINS,1
 CAPER,spice,,,,,,2054,"Capers, canned",DESC_STARTS,1
 CARAMBOLA,fruit,,,,,,9060,"Carambola, (starfruit), raw",,
-CARAMEL,sweets,,,,,,19074,"Candies, caramels",DESC_CONTAINS,5
+CARAMEL,prepared,,,,,,19074,"Candies, caramels",DESC_CONTAINS,5
 CARAWAY,spice,,,,,,2005,"Spices, caraway seed",DESC_CONTAINS,2
 CARAWAYCHEESE,dairy,,,,,,1008,"Cheese, caraway",,
 CARBONATED,beverage,,,,,,14121,"Beverages, Carbonated beverage, club soda",DESC_STARTS,8
@@ -188,6 +194,7 @@ CATSUP,spice,,,,,,11935,Catsup,,
 CATTAIL,vegetable,,,,,,35195,"Cattail, Narrow Leaf Shoots (Northern Plains Indians)",KEYWORD_EXACT,1
 CAULIFLOWER,vegetable,,,,,,11135,"Cauliflower, raw",,
 CAULIFLOWERCOOKED,vegetable,,,,,,11136,"Cauliflower, cooked, boiled, drained, without salt",KEYWORD_EXACT,9
+CAVIAR,protein,,,,,,15012,"Fish, caviar, black and red, granular",,
 CAYENNE,spice,,,,,,2031,"Spices, pepper, red or cayenne",PREFERRED,1
 CEERALGRAHMS,grain,prepared,,,,,8035,"Cereals ready-to-eat, GENERAL MILLS, GOLDEN GRAHAMS",,
 CELERIAC,vegetable,,,,,,11142,"Celeriac, cooked, boiled, drained, without salt",KEYWORD_EXACT,3
@@ -222,6 +229,7 @@ CHESHIRE,dairy,,,,,,1010,"Cheese, cheshire",DESC_CONTAINS,1
 CHESTNUT,nuts,,,,,,12096,"Nuts, chestnuts, chinese, roasted",DESC_CONTAINS,5
 CHIA,nuts,,,,,,12006,"Seeds, chia seeds, dried",DESC_CONTAINS,1
 CHICKENBREAST,protein,,,,,,5064,"Chicken, broilers or fryers, breast, meat only, cooked, roasted",PREFERRED,1
+CHICKENBREASTSLICED,protein,,,,,,7933,"Chicken breast, oven-roasted, fat-free, sliced",,
 CHICKENBROILERS,protein,,,,,,5013,"Chicken, broilers or fryers, meat only, roasted",DESC_CONTAINS,5
 CHICKENDRUMSTICK,protein,,,,,,5069,"Chicken, broilers or fryers, drumstick, meat and skin, cooked, roasted",,
 CHICKENGIZZARD,protein,,,,,,5024,"Chicken, gizzard, all classes, cooked, simmered",DESC_CONTAINS,4
@@ -255,14 +263,14 @@ CHOC60,spice,,,,,,19903,"Chocolate, dark, 60-69% cacao solids",,
 CHOC70,spice,,,,,,19904,"Chocolate, dark, 70-85% cacao solids",,
 CHOCBAKING,spice,,,,,,19078,"Baking chocolate, unsweetened, squares",,
 CHOCBEVSODA,beverage,,,,,,14552,"Carbonated beverage, chocolate-flavored soda",,
-CHOCFUDGE,sweets,,,,,,19100,"Candies, fudge, chocolate, prepared-from-recipe",,
-CHOCFUDGENUTS,sweets,,,,,,19101,"Candies, fudge, chocolate, with nuts, prepared-from-recipe",,
+CHOCFUDGE,prepared,,,,,,19100,"Candies, fudge, chocolate, prepared-from-recipe",,
+CHOCFUDGENUTS,prepared,,,,,,19101,"Candies, fudge, chocolate, with nuts, prepared-from-recipe",,
 CHOCHOT,beverage,,,,,,1105,"Milk, chocolate beverage, hot cocoa, homemade",,
-CHOCMILKCANDY,sweets,,,,,,19120,"Candies, milk chocolate",,
+CHOCMALT,beverage,,,,,,14318,"Beverages, Malted drink mix, chocolate, powder, prepared with whole milk",,
+CHOCMILKCANDY,prepared,,,,,,19120,"Candies, milk chocolate",,
 CHOCOLATE,spice,,,,,,19077,"Baking chocolate, unsweetened, liquid",KEYWORD_EXACT,15
 CHOCOLATEMILK,beverage,,,,,,14177,"Chocolate-flavor beverage mix, powder, prepared with whole milk",,
 CHOCOLATESYRUP,spice,,,,,,14181,Chocolate syrup,,
-CHOCWHITE,sweets,,,,,,19087,"Candies, white chocolate",,
 CHOKECHERRIES,fruit,,,,,,35179,"Chokecherries, raw, pitted (Shoshone Bannock)",COMPOUND_MATCH,2
 CHORIZO,protein,,,,,,7019,"Chorizo, pork and beef",KEYWORD_EXACT,1
 CHRYSANTHEMUM,vegetable,,,,,,11158,"Chrysanthemum, garland, cooked, boiled, drained, without salt",KEYWORD_EXACT,4
@@ -290,38 +298,38 @@ COLBY,dairy,,,,,,1011,"Cheese, colby",DESC_CONTAINS,2
 COLESLAW,vegetable,prepared,,,,,21127,"Fast foods, coleslaw",DESC_CONTAINS,5
 COLLARD,vegetable,,,,,,11162,"Collards, cooked, boiled, drained, without salt",KEYWORD_EXACT,6
 CONCH,protein,,,,,,15250,"Mollusks, conch, baked or broiled",DESC_CONTAINS,1
-COOKIESANIMAL,sweets,,,,,,28043,"KEEBLER, ANIMALS, Cookies",,
-COOKIESANIMALFROSTED,sweets,,,,,,28291,"Cookies, animal, with frosting or icing",,
-COOKIESBROWNIES,sweets,,,,,,18154,"Cookies, brownies, prepared from recipe",,
-COOKIESBUTTER,sweets,,,,,,18155,"Cookies, butter, commercially prepared, enriched",,
-COOKIESCHOCOLATECHIP,sweets,,,,,,18164,"Cookies, chocolate chip, refrigerated dough, baked",,
-COOKIESCHOCOLATESANDWICH,sweets,,,,,,18166,"Cookies, chocolate sandwich, with creme filling, regular",,
-COOKIESFIGBAR,sweets,,,,,,18170,"Cookies, fig bars",,
-COOKIESFORTUNE,sweets,,,,,,18171,"Cookies, fortune",,
-COOKIESGINGERSNAP,sweets,,,,,,18172,"Cookies, gingersnaps",,
-COOKIESGIRLSCOUTSCARAMEL,sweets,,,,,,28029,"GIRL SCOUTS, Caramel Dulce De Leche Cookies",,
-COOKIESGIRLSCOUTSCHALET,sweets,,,,,,28030,"GIRL SCOUTS, Chalet Cookies",,
-COOKIESGIRLSCOUTSDOSIDOS,sweets,,,,,,28031,"GIRL SCOUTS, Do-si-dos Cookies",,
-COOKIESGIRLSCOUTSSAMOSAS,sweets,,,,,,28032,"GIRL SCOUTS, Samoas Cookies",,
-COOKIESGIRLSCOUTSTAGALONGS,sweets,,,,,,28033,"GIRL SCOUTS, Tagalongs Cookies",,
-COOKIESGIRLSCOUTSTHANKU,sweets,,,,,,28034,"GIRL SCOUTS, Thank U Berry Munch Cookies",,
-COOKIESGIRLSCOUTSTHINMINTS,sweets,,,,,,28035,"GIRL SCOUTS, Thin Mints Cookies",,
-COOKIESGIRLSCOUTSTREFOILS,sweets,,,,,,28036,"GIRL SCOUTS, Trefoils Cookies",,
-COOKIESGLUTINOCHOCOLATECREME,sweets,,,,,,28356,"GLUTINO, Gluten Free Cookies, Chocolate Vanilla Creme",,
-COOKIESGLUTIONVANILLACREME,sweets,,,,,,28357,"GLUTINO, Gluten Free Cookies, Vanilla Creme",,
-COOKIESGRAHAM,sweets,,,,,,18173,"Cookies, graham crackers, plain or honey (includes cinnamon)",,
-COOKIESMACAROON,sweets,,,,,,28309,"Cookies, coconut macaroon",DESC_CONTAINS,1
-COOKIESMARIEBISCUIT,sweets,,,,,,28351,"Cookies, Marie biscuit",,
-COOKIESMOLASSES,sweets,,,,,,18177,"Cookies, molasses",,
-COOKIESOATMEAL,sweets,,,,,,18183,"Cookies, oatmeal, refrigerated dough, baked",,
-COOKIESOATMEALICED,sweets,,,,,,28203,"MOTHER'S, Iced Oatmeal Cookies",,
-COOKIESOATMEALRAISIN,sweets,,,,,,18184,"Cookies, oatmeal, prepared from recipe, with raisins",,
-COOKIESOATMEALSANDWICH,sweets,,,,,,28300,"Cookies, oatmeal sandwich, with creme filling",,
-COOKIESPEANUTBUTTER,sweets,,,,,,18188,"Cookies, peanut butter, refrigerated dough, baked",,
-COOKIESSHORTBREAD,sweets,,,,,,18192,"Cookies, shortbread, commercially prepared, plain",,
-COOKIESSUGAR,sweets,,,,,,18208,"Cookies, sugar, prepared from recipe, made with margarine",,
-COOKIESVANILLASANDWICH,sweets,,,,,,18210,"Cookies, vanilla sandwich with creme filling",,
-COOKIESVANILLAWAFER,sweets,,,,,,18213,"Cookies, vanilla wafers, higher fat",,
+COOKIESANIMAL,prepared,,,,,,28043,"KEEBLER, ANIMALS, Cookies",,
+COOKIESANIMALFROSTED,prepared,,,,,,28291,"Cookies, animal, with frosting or icing",,
+COOKIESBROWNIES,prepared,,,,,,18154,"Cookies, brownies, prepared from recipe",,
+COOKIESBUTTER,prepared,,,,,,18155,"Cookies, butter, commercially prepared, enriched",,
+COOKIESCHOCOLATECHIP,prepared,,,,,,18164,"Cookies, chocolate chip, refrigerated dough, baked",,
+COOKIESCHOCOLATESANDWICH,prepared,,,,,,18166,"Cookies, chocolate sandwich, with creme filling, regular",,
+COOKIESFIGBAR,prepared,,,,,,18170,"Cookies, fig bars",,
+COOKIESFORTUNE,prepared,,,,,,18171,"Cookies, fortune",,
+COOKIESGINGERSNAP,prepared,,,,,,18172,"Cookies, gingersnaps",,
+COOKIESGIRLSCOUTSCARAMEL,prepared,,,,,,28029,"GIRL SCOUTS, Caramel Dulce De Leche Cookies",,
+COOKIESGIRLSCOUTSCHALET,prepared,,,,,,28030,"GIRL SCOUTS, Chalet Cookies",,
+COOKIESGIRLSCOUTSDOSIDOS,prepared,,,,,,28031,"GIRL SCOUTS, Do-si-dos Cookies",,
+COOKIESGIRLSCOUTSSAMOSAS,prepared,,,,,,28032,"GIRL SCOUTS, Samoas Cookies",,
+COOKIESGIRLSCOUTSTAGALONGS,prepared,,,,,,28033,"GIRL SCOUTS, Tagalongs Cookies",,
+COOKIESGIRLSCOUTSTHANKU,prepared,,,,,,28034,"GIRL SCOUTS, Thank U Berry Munch Cookies",,
+COOKIESGIRLSCOUTSTHINMINTS,prepared,,,,,,28035,"GIRL SCOUTS, Thin Mints Cookies",,
+COOKIESGIRLSCOUTSTREFOILS,prepared,,,,,,28036,"GIRL SCOUTS, Trefoils Cookies",,
+COOKIESGLUTINOCHOCOLATECREME,prepared,,,,,,28356,"GLUTINO, Gluten Free Cookies, Chocolate Vanilla Creme",,
+COOKIESGLUTIONVANILLACREME,prepared,,,,,,28357,"GLUTINO, Gluten Free Cookies, Vanilla Creme",,
+COOKIESGRAHAM,prepared,,,,,,18173,"Cookies, graham crackers, plain or honey (includes cinnamon)",,
+COOKIESMACAROON,prepared,,,,,,28309,"Cookies, coconut macaroon",DESC_CONTAINS,1
+COOKIESMARIEBISCUIT,prepared,,,,,,28351,"Cookies, Marie biscuit",,
+COOKIESMOLASSES,prepared,,,,,,18177,"Cookies, molasses",,
+COOKIESOATMEAL,prepared,,,,,,18183,"Cookies, oatmeal, refrigerated dough, baked",,
+COOKIESOATMEALICED,prepared,,,,,,28203,"MOTHER'S, Iced Oatmeal Cookies",,
+COOKIESOATMEALRAISIN,prepared,,,,,,18184,"Cookies, oatmeal, prepared from recipe, with raisins",,
+COOKIESOATMEALSANDWICH,prepared,,,,,,28300,"Cookies, oatmeal sandwich, with creme filling",,
+COOKIESPEANUTBUTTER,prepared,,,,,,18188,"Cookies, peanut butter, refrigerated dough, baked",,
+COOKIESSHORTBREAD,prepared,,,,,,18192,"Cookies, shortbread, commercially prepared, plain",,
+COOKIESSUGAR,prepared,,,,,,18208,"Cookies, sugar, prepared from recipe, made with margarine",,
+COOKIESVANILLASANDWICH,prepared,,,,,,18210,"Cookies, vanilla sandwich with creme filling",,
+COOKIESVANILLAWAFER,prepared,,,,,,18213,"Cookies, vanilla wafers, higher fat",,
 CORIANDER,spice,,,,,,11165,"Coriander (cilantro) leaves, raw",DESC_CONTAINS,1
 CORN,vegetable,grain,,Used as a vegetable,Botanically a grain,,11168,"Corn, sweet, yellow, cooked, boiled, drained, without salt",PREFERRED,1
 CORNBREAD,prepared,,,,,,18024,"Bread, cornbread, prepared from recipe, made with low fat (2%) milk",DESC_CONTAINS,5
@@ -366,7 +374,7 @@ CURED,protein,,,,,,10879,"Pork, cured, ham -- water added, whole, boneless, sepa
 CURRANT,fruit,,,,,,9083,"Currants, european black, raw",DESC_STARTS,3
 CURRY,spice,,,,,,2015,"Spices, curry powder",DESC_CONTAINS,1
 CUSK,protein,,,,,,15193,"Fish, cusk, cooked, dry heat",DESC_CONTAINS,2
-CUSTARD,sweets,,,,,,19170,"Egg custards, dry mix, prepared with whole milk",KEYWORD_EXACT,4
+CUSTARD,prepared,,,,,,19170,"Egg custards, dry mix, prepared with whole milk",KEYWORD_EXACT,4
 CUTTLEFISH,protein,,,,,,15229,"Mollusks, cuttlefish, mixed species, cooked, moist heat",DESC_CONTAINS,2
 DAIQUIRI,beverage,,,,,,14010,"Alcoholic beverage, daiquiri, prepared-from-recipe",,
 DANDELION,vegetable,,,,,,11208,"Dandelion greens, cooked, boiled, drained, without salt",KEYWORD_EXACT,3
@@ -376,9 +384,8 @@ DEER,protein,,,,,,17165,"Game meat, deer, cooked, roasted",KEYWORD_EXACT,6
 DEVILFISH,protein,,,,,,35034,"Fish, devilfish, meat (Alaska Native)",DESC_CONTAINS,1
 DILL,spice,,,,,,2045,"Dill weed, fresh",KEYWORD_EXACT,5
 DIPQUESO,prepared,,,,,,27052,"Dip, salsa con queso, cheese and salsa- medium",,
-DIVINITY,prepared,,,,,,19384,"Candies, divinity, prepared-from-recipe",DESC_CONTAINS,1
 DOCK,vegetable,,,,,,11617,"Dock, cooked, boiled, drained, without salt",,
-DONUT,sweets,,,,,,18250,"Doughnuts, cake-type, plain, sugared or glazed",,
+DONUT,prepared,,,,,,18250,"Doughnuts, cake-type, plain, sugared or glazed",,
 DOUGHNUTCAKE,prepared,,,,,,18248,"Doughnuts, cake-type, plain (includes unsugared, old-fashioned)",,
 DOUGHNUTYEAST,prepared,,,,,,18436,"Doughnuts, yeast-leavened, glazed, unenriched (includes honey buns)",,
 DRESSINGBLUE,spice,,,,,,4539,"Salad dressing, blue or roquefort cheese dressing, commercial, regular",,
@@ -449,23 +456,29 @@ FLAXSEEDOIL,fats,,,,,,42231,"Oil, flaxseed, cold pressed",DESC_CONTAINS,3
 FLOUNDER,protein,,,,,,15029,"Fish, flatfish (flounder and sole species), cooked, dry heat",,
 FOCACCIA,prepared,,,,,,18973,"Focaccia, Italian flatbread, plain",KEYWORD_EXACT,1
 FOIEGRAS,protein,,,,,,5282,"Pate de foie gras, canned (goose liver pate), smoked",,
-FONDANT,prepared,,,,,,19099,"Candies, fondant, prepared-from-recipe",DESC_CONTAINS,1
 FONTINA,dairy,,,,,,1020,"Cheese, fontina",DESC_CONTAINS,1
 FORTUNECOOKIE,prepared,,,,,,18171,"Cookies, fortune",DESC_CONTAINS,1
 FRANKFURTER,protein,,,,,,7945,"Frankfurter, beef, heated",KEYWORD_EXACT,10
 FRENCHBEAN,legume,,,,,,16023,"Beans, french, mature seeds, cooked, boiled, without salt",,
 FRENCHBREAD,prepared,,,,,,18029,"Bread, french or vienna (includes sourdough)",COMPOUND_MATCH,3
 FRENCHTOAST,prepared,,,,,,18269,"French toast, prepared from recipe, made with low fat (2%) milk",COMPOUND_MATCH,8
+FRIEDRICE,grain,prepared,,,,,36602,"Restaurant, Chinese, fried rice, without meat",,
 FROG,protein,,,,,,80200,"Frog legs, raw",KEYWORD_EXACT,1
-FROSTING,prepared,,,,,,19244,"Frostings, vanilla, creamy, dry mix",DESC_STARTS,10
+FROSTINGCHOC,sweets,,,,,,19226,"Frostings, chocolate, creamy, ready-to-eat",,
+FROSTINGCOCONUT,sweets,,,,,,19227,"Frostings, coconut-nut, ready-to-eat",,
+FROSTINGCREAM,sweets,,,,,,19228,"Frostings, cream cheese-flavor, ready-to-eat",,
+FROSTINGGLAZE,sweets,,,,,,19375,"Frostings, glaze, prepared-from-recipe",,
+FROSTINGVANILLA,sweets,,,,,,19230,"Frostings, vanilla, creamy, ready-to-eat",,
+FRUCTOSELIQ,spice,,,,,,44018,"Sweeteners, tabletop, fructose, liquid",,
+FRUCTOSEPWDR,spice,,,,,,43216,"Sweeteners, tabletop, fructose, dry, powder",,
 FRUITCOCKTAIL,fruit,,,,,,9097,"Fruit cocktail, (peach and pineapple and pear and grape and cherry), canned, juice pack, solids and liquids",KEYWORD_EXACT,15
 FRYBREAD,prepared,grain,,,,,35142,"Frybread, made with lard (Navajo)",KEYWORD_EXACT,2
 FRYERS,protein,,,,,,5045,"Chicken, broilers or fryers, dark meat, meat only, cooked, roasted",COMPOUND_MATCH,10
-FUDGE,sweets,,,,,,19100,"Candies, fudge, chocolate, prepared-from-recipe",DESC_CONTAINS,5
+FUDGE,prepared,,,,,,19100,"Candies, fudge, chocolate, prepared-from-recipe",DESC_CONTAINS,5
 GARLIC,vegetable,spice,,A bulb vegetable,Used as a flavoring/spice,,11215,"Garlic, raw",PREFERRED,1
 GARLICBREAD,prepared,,,,,,18963,"Garlic bread, frozen",COMPOUND_MATCH,1
 GEFILTEFISH,protein,,,,,,15030,"Fish, gefiltefish, commercial, sweet recipe",DESC_CONTAINS,1
-GELATIN,sweets,,,,,,19177,"Gelatins, dry powder, unsweetened",KEYWORD_EXACT,8
+GELATIN,prepared,,,,,,19177,"Gelatins, dry powder, unsweetened",KEYWORD_EXACT,8
 GHEE,dairy,fats,,Clarified butter,Used in cooking,,1003,"Butter oil, anhydrous",PREFERRED,1
 GIBLETS,protein,,,,,,5021,"Chicken, broilers or fryers, giblets, cooked, fried",DESC_CONTAINS,5
 GINGER,vegetable,spice,,A root vegetable,Widely used as a spice,,11216,"Ginger root, raw",KEYWORD_EXACT,7
@@ -527,10 +540,20 @@ HUCKLEBERRIES,fruit,,,,,,35043,"Huckleberries, raw (Alaska Native)",PREFERRED,1
 HUMMUS,legume,,,,,,16158,"Hummus, commercial",KEYWORD_EXACT,2
 HUSHPUPPIES,prepared,,,,,,18270,"Hush puppies, prepared from recipe",,
 HYACINTH,vegetable,,,,,,11225,"Hyacinth-beans, immature seeds, cooked, boiled, drained, without salt",KEYWORD_EXACT,6
-ICECREAMCHOC,dairy,sweets,,,,,19270,"Ice creams, chocolate",,
-ICECREAMSTRAW,dairy,sweets,,,,,19271,"Ice creams, strawberry",,
-ICECREAMVANILLA,dairy,sweets,,,,,19095,"Ice creams, vanilla",COMPOUND_MATCH,10
-ICING,prepared,,,,,,19230,"Frostings, vanilla, creamy, ready-to-eat",PREFERRED,1
+ICECREAMBARCHOC,dairy,prepared,,,,,1237,"Ice cream, bar or stick, chocolate covered",,
+ICECREAMCHOC,dairy,prepared,,,,,19270,"Ice creams, chocolate",,
+ICECREAMCHOCLIGHT,dairy,prepared,,,,,19114,"Ice creams, chocolate, light",,
+ICECREAMCONECHOC,dairy,prepared,,,,,1240,"Ice cream cone, chocolate covered, with nuts, flavors other than chocolate",,
+ICECREAMCONEWAFER,prepared,,,,,,18271,"Ice cream cones, cake or wafer-type",,
+ICECREAMCREAM,dairy,prepared,,,,,1302,"Light ice cream, Creamsicle",,
+ICECREAMSAND,dairy,prepared,,,,,1238,Ice cream sandwich,,
+ICECREAMSOFTVAN,dairy,prepared,,,,,21028,"Fast foods, vanilla, light, soft-serve ice cream, with cone",,
+ICECREAMSTRAW,dairy,prepared,,,,,19271,"Ice creams, strawberry",,
+ICECREAMSUBDAEFUD,dairy,prepared,,,,,21033,"Fast foods, sundae, hot fudge",,
+ICECREAMSUNDAECARM,dairy,prepared,,,,,21032,"Fast foods, sundae, caramel",,
+ICECREAMSUNDAESTRW,dairy,prepared,,,,,21034,"Fast foods, sundae, strawberry",,
+ICECREAMVANILLA,dairy,prepared,,,,,19095,"Ice creams, vanilla",COMPOUND_MATCH,10
+ICECREAMVANILLALIGHT,dairy,prepared,,,,,19088,"Ice creams, vanilla, light",,
 INCAPARINA,grain,,,,,,8580,"Incaparina, dry mix (corn and soy flours), unprepared",KEYWORD_EXACT,1
 JACKFRUIT,fruit,,,,,,9144,"Jackfruit, raw",KEYWORD_EXACT,2
 JALAPENO,spice,,,,,,11979,"Peppers, jalapeno, raw",DESC_CONTAINS,3
@@ -590,12 +613,14 @@ LOGANBERRIES,fruit,,,,,,9167,"Loganberries, frozen",COMPOUND_MATCH,1
 LONGAN,fruit,,,,,,9172,"Longans, raw",DESC_STARTS,2
 LOQUAT,fruit,,,,,,9174,"Loquats, raw",KEYWORD_EXACT,1
 LOTUS,vegetable,,,,,,11255,"Lotus root, cooked, boiled, drained, without salt",KEYWORD_EXACT,5
+LUNCHEONMEATLESS,prepared,,,,,,43131,"Luncheon slices, meatless",,
 LUNG,protein,,,,,,13328,"Beef, variety meats and by-products, lungs, raw",,
 LUPINS,legume,,,,,,16077,"Lupins, mature seeds, cooked, boiled, without salt",KEYWORD_EXACT,3
 MACADAMIA,nuts,,,,,,12632,"Nuts, macadamia nuts, dry roasted, with salt added",DESC_CONTAINS,3
 MACARONI,grain,,,,,,20106,"Macaroni, vegetable, enriched, cooked",KEYWORD_EXACT,15
 MACARONICHEESE,prepared,,,,,,22970,"Macaroni and cheese, frozen entree",,
 MACKEREL,protein,,,,,,15047,"Fish, mackerel, Atlantic, cooked, dry heat",DESC_CONTAINS,5
+MACKERELCAN,protein,,,,,,15048,"Fish, mackerel, jack, canned, drained solids",,
 MAHI,protein,,,,,,15194,"Fish, mahimahi, cooked, dry heat",DESC_CONTAINS,2
 MAITAKE,vegetable,,,,,,11993,"Mushrooms, maitake, raw",,
 MALTED,beverage,,,,,,14317,"Malted drink mix, chocolate, powder",DESC_STARTS,6
@@ -609,7 +634,7 @@ MARGARINE,fats,,,,,,4073,"Margarine, regular, hard, soybean (hydrogenated)",KEYW
 MARGARINESMART,fats,,,,,,4677,"Margarine-like spread, SMART BALANCE Omega Plus Spread (with plant sterols & fish oil)",,
 MARJORAM,spice,,,,,,2023,"Spices, marjoram, dried",DESC_CONTAINS,1
 MARMALADE,spice,,,,,,19303,"Marmalade, orange",KEYWORD_EXACT,3
-MARSHMALLOW,sweets,,,,,,19116,"Candies, marshmallows",DESC_CONTAINS,5
+MARSHMALLOW,prepared,,,,,,19116,"Candies, marshmallows",DESC_CONTAINS,5
 MASA,grain,,,,,,20019,"Corn flour, masa, unenriched, white",DESC_CONTAINS,4
 MATZO,prepared,,,,,,18219,"Crackers, matzo, whole-wheat",DESC_CONTAINS,4
 MAYOCHOLESTEROL,fats,,,,,,43598,"Mayonnaise dressing, no cholesterol",,
@@ -647,6 +672,8 @@ MOUSENUT,nuts,,,,,,12004,"Seeds, breadnut tree seeds, raw",COMPOUND_MATCH,2
 MOZZARELLA,dairy,,,,,,1026,"Cheese, mozzarella, whole milk",DESC_CONTAINS,5
 MOZZARELLASKIM,dairy,,,,,,1028,"Cheese, mozzarella, part skim milk",,
 MUENSTER,dairy,,,,,,1030,"Cheese, muenster",DESC_CONTAINS,2
+MUFFINCORN,prepared,,,,,,18282,"Muffins, corn, prepared from recipe, made with low fat (2%) milk",,
+MUFFUNBLUEBERRY,prepared,,,,,,18278,"Muffins, blueberry, prepared from recipe, made with low fat (2%) milk",,
 MULBERRY,fruit,,,,,,9190,"Mulberries, raw",PREFERRED,1
 MULLET,protein,,,,,,15056,"Fish, mullet, striped, cooked, dry heat",DESC_CONTAINS,2
 MULTIGRAIN,prepared,grain,,,,,3996,"Babyfood, Multigrain whole grain cereal, dry fortified",DESC_CONTAINS,5
@@ -729,6 +756,18 @@ PARSNIP,vegetable,,,,,,11299,"Parsnips, cooked, boiled, drained, without salt",D
 PASILLA,fruit,spice,,,,,11982,"Peppers, pasilla, dried",DESC_CONTAINS,1
 PASSION,fruit,,,,,,9231,"Passion-fruit, (granadilla), purple, raw",KEYWORD_EXACT,3
 PASTA,grain,,,,,,20420,"Pasta, dry, unenriched",PREFERRED,1
+PASTACOOKED,grain,,,,,,20521,"Pasta, cooked, unenriched, with added salt",,
+PASTACORNCOOKED,grain,,,,,,20092,"Pasta, gluten-free, corn, cooked",,
+PASTACORNDRY,grain,,,,,,20091,"Pasta, gluten-free, corn, dry",,
+PASTAPOMODOROCHIC,,prepared,,,,,22984,"KASHI, Chicken Pasta Pomodoro, Frozen Entree",,
+PASTAPRIMAVERAPESTO,,prepared,,,,,22987,"KASHI Pesto Pasta Primavera, frozen, unprepared",,
+PASTARICEBRWNCK,grain,,,,,,20654,"Pasta, gluten-free, brown rice flour, cooked, TINKYADA",,
+PASTASPINACHFRESH,grain,,,,,,20095,"Pasta, fresh-refrigerated, spinach, as purchased",,
+PASTASPINACHFRESHCK,grain,,,,,,20096,"Pasta, fresh-refrigerated, spinach, cooked",,
+PASTATOMATOMEATLESS,,prepared,,,,,22914,"Pasta with tomato sauce, no meat, canned",,
+PASTATORTCHEESE,,prepared,,,,,22901,"Tortellini, pasta with cheese filling, fresh-refrigerated, as purchased",,
+PASTAWHOLECK,grain,,,,,,20125,"Pasta, whole-wheat, cooked",,
+PASTAWHOLEDRY,grain,,,,,,20124,"Pasta, whole-wheat, dry",,
 PASTRAMI,protein,,,,,,13355,"Beef, cured, pastrami",KEYWORD_EXACT,3
 PASTRY,prepared,,,,,,18430,"Danish pastry, cinnamon, unenriched",KEYWORD_EXACT,9
 PASTRYCHEESE,prepared,,,,,,18245,"Danish pastry, cheese",,
@@ -777,6 +816,7 @@ PIKE,protein,,,,,,15063,"Fish, pike, northern, cooked, dry heat",DESC_CONTAINS,5
 PIKIBREAD,grain,,,,,,35234,"Piki bread, made from blue cornmeal (Hopi)",COMPOUND_MATCH,1
 PILINUT,nuts,,,,,,12145,"Nuts, pilinuts, dried",DESC_CONTAINS,1
 PIMIENTO,spice,,,,,,11943,"Pimento, canned",PREFERRED,1
+PINACOLADA,beverage,,,,,,14017,"Alcoholic beverage, pina colada, prepared-from-recipe",,
 PINE,nuts,,,,,,12149,"Nuts, pine nuts, pinyon, dried",DESC_STARTS,15
 PINEAPPLE,fruit,,,,,,9266,"Pineapple, raw, all varieties",KEYWORD_EXACT,14
 PINEAPPLEJUICE,beverage,,,,,,9273,"Pineapple juice, canned or bottled, unsweetened, without added ascorbic acid",,
@@ -816,6 +856,7 @@ PORKCOUNTRYSTYLERIB,protein,,,,,,10991,"Pork, fresh, loin, country-style ribs, s
 PORKGROUND,protein,,,,,,10975,"Pork, ground, 84% lean / 16% fat, cooked, crumbles",,
 PORKHAM,protein,,,,,,7029,"Ham, sliced, regular (approximately 11% fat)",KEYWORD_EXACT,15
 PORKHAMLEG,protein,,,,,,10009,"Pork, fresh, leg (ham), whole, separable lean and fat, cooked, roasted",,
+PORKHAMSLICED,protein,,,,,,7029,"Ham, sliced, regular (approximately 11% fat)",,
 PORKPICNIC,protein,,,,,,10076,"Pork, fresh, shoulder, arm picnic, separable lean and fat, cooked, roasted",,
 PORKPORTERHOUSE,protein,,,,,,10037,"Pork, fresh, loin, center loin (chops), bone-in, separable lean and fat, cooked, braised",,
 PORKRUMP,protein,,,,,,10013,"Pork, fresh, leg (ham), rump half, separable lean and fat, cooked, roasted",DESC_CONTAINS,5
@@ -847,11 +888,11 @@ PROSCIUTTO,protein,,,,,,7057,"Pepperoni, beef and pork, sliced",KEYWORD_EXACT,6
 PROVOLONE,dairy,,,,,,1035,"Cheese, provolone",DESC_CONTAINS,2
 PRUNE,fruit,,,,,,9289,"Prunes, dehydrated (low-moisture), uncooked",KEYWORD_EXACT,9
 PRUNEJUICE,beverage,,,,,,9294,"Prune juice, canned",,
-PUDDINGCHOC,sweets,,,,,,19183,"Puddings, chocolate, ready-to-eat",,
-PUDDINGLEMON,sweets,,,,,,19204,"Puddings, lemon, dry mix, instant, prepared with 2% milk",,
-PUDDINGRICE,sweets,,,,,,19193,"Puddings, rice, ready-to-eat",,
-PUDDINGTAPICOA,sweets,,,,,,19218,"Puddings, tapioca, ready-to-eat",,
-PUDDINGVANILLA,sweets,,,,,,19203,"Puddings, vanilla, dry mix, instant, prepared with whole milk",DESC_STARTS,15
+PUDDINGCHOC,prepared,,,,,,19183,"Puddings, chocolate, ready-to-eat",,
+PUDDINGLEMON,prepared,,,,,,19204,"Puddings, lemon, dry mix, instant, prepared with 2% milk",,
+PUDDINGRICE,prepared,,,,,,19193,"Puddings, rice, ready-to-eat",,
+PUDDINGTAPICOA,prepared,,,,,,19218,"Puddings, tapioca, ready-to-eat",,
+PUDDINGVANILLA,prepared,,,,,,19203,"Puddings, vanilla, dry mix, instant, prepared with whole milk",DESC_STARTS,15
 PUMMELO,fruit,,,,,,9295,"Pummelo, raw",KEYWORD_EXACT,1
 PUMPERNICKEL,prepared,,,,,,18044,"Bread, pumpernickel",DESC_CONTAINS,4
 PUMPKIN,vegetable,fruit,,Botanically a fruit,Used as a vegetable,,11424,"Pumpkin, canned, without salt",KEYWORD_EXACT,15
@@ -892,7 +933,12 @@ RICOTTASKIM,dairy,,,,,,1037,"Cheese, ricotta, part skim milk",,
 ROCKFISH,protein,,,,,,15071,"Fish, rockfish, Pacific, mixed species, cooked, dry heat",DESC_CONTAINS,2
 ROE,protein,,,,,,15072,"Fish, roe, mixed species, raw",DESC_CONTAINS,2
 ROLLDINNER,prepared,,,,,,18347,"Rolls, dinner, wheat",,
+ROLLDINNERSWEET,grain,prepared,,,,,28348,"Rolls, dinner, sweet",,
+ROLLDINNERWHOLE,grain,prepared,,,,,18348,"Rolls, dinner, whole-wheat",,
+ROLLFRENCH,grain,prepared,,,,,18349,"Rolls, french",,
 ROLLHOTDOG,prepared,,,,,,18350,"Rolls, hamburger or hotdog, plain",,
+ROLLPIZZA,grain,prepared,,,,,32012,"Pizza rolls, frozen, unprepared",,
+ROLLPUMP,grain,prepared,,,,,43441,"Rolls, pumpernickel",,
 ROMANO,dairy,,,,,,1038,"Cheese, romano",DESC_CONTAINS,1
 ROQUEFORT,dairy,,,,,,1039,"Cheese, roquefort",DESC_CONTAINS,1
 ROSELLE,fruit,,,,,,9311,"Roselle, raw",KEYWORD_EXACT,1
@@ -908,13 +954,26 @@ SAFFLOWER,nuts,fats,,,,,4510,"Oil, safflower, salad or cooking, linoleic, (over 
 SAFFRON,spice,,,,,,2037,"Spices, saffron",DESC_CONTAINS,1
 SAGE,spice,,,,,,28367,"SAGE VALLEY, Gluten Free Vanilla Sandwich Cookies",KEYWORD_EXACT,2
 SAKE,beverage,,,,,,43479,"Alcoholic beverage, rice (sake)",,
+SALADFRUIT,fruit,prepared,,,,,9102,"Fruit salad, (peach and pear and apricot and pineapple and cherry), canned, water pack, solids and liquids",,
+SALADPOTATOEGG,vegetable,prepared,,,,,22971,Potato salad with egg,,
 SALISBURY,protein,,,,,,32031,"Salisbury steak with gravy, frozen",KEYWORD_EXACT,4
 SALMON,protein,,,,,,15210,"Fish, salmon, chinook, cooked, dry heat",DESC_CONTAINS,5
+SALMONPINKCAN,protein,,,,,,35157,"Fish, salmon, red, canned, bones removed (Alaska Native)",,
+SALMONREDCAN,protein,,,,,,15181,"Fish, salmon, pink, canned, without salt, solids with bone and liquid",,
 SALSA,prepared,,,,,,6164,"Fish, salmon, chinook, cooked, dry heat",DESC_CONTAINS,5
 SALSAVERDE,prepared,,,,,,27047,"Sauce, salsa, verde, ready-to-serve",,
 SALSIFY,vegetable,,,,,,11438,"Salsify, cooked, boiled, drained, without salt",KEYWORD_EXACT,3
 SALT,spice,,,,,,2047,"Salt, table",PREFERRED,1
 SALTINE,grain,prepared,,,,,18228,"Crackers, saltines (includes oyster, soda, soup)",,
+SANDSUBBEEF,prepared,,,,,,21125,"Fast foods, submarine sandwich, roast beef on white bread with lettuce and tomato",,
+SANDSUBBLT,prepared,,,,,,21162,"Fast foods, submarine sandwich, bacon, lettuce, and tomato on white bread",,
+SANDSUBHAM,prepared,,,,,,21156,"Fast foods, submarine sandwich, ham on white bread with lettuce and tomato",,
+SANDSUBMEATBALL,prepared,,,,,,21158,"Fast foods, submarine sandwich, meatball marinara on white bread",,
+SANDSUBTURKEY,prepared,,,,,,21155,"Fast foods, submarine sandwich, turkey breast on white bread with lettuce and tomato",,
+SANDWICHBEEF,prepared,,,,,,21121,"Fast foods, roast beef sandwich, plain",,
+SANDWICHCHICKEN,prepared,,,,,,21102,"Fast foods, chicken fillet sandwich, plain with pickles",,
+SANDWICHCHICKENCRISP,prepared,,,,,,21230,"Fast Foods, crispy chicken filet sandwich, with lettuce and mayonnaise",,
+SANDWICHFISH,prepared,,,,,,21105,"Fast foods, fish sandwich, with tartar sauce",,
 SAPOTE,fruit,,,,,,9314,"Sapote, mamey, raw",DESC_CONTAINS,1
 SARDINE,protein,,,,,,15088,"Fish, sardine, Atlantic, canned in oil, drained solids with bone",,
 SARDINEOIL,fats,,,,,,4594,"Fish oil, sardine",DESC_CONTAINS,3
@@ -945,18 +1004,23 @@ SHEEFISH,protein,,,,,,35169,"Fish, sheefish, raw (Alaska Native)",DESC_CONTAINS,
 SHEEPMILK,beverage,,,,,,1109,"Milk, sheep, fluid",,
 SHEEPSHEAD,protein,,,,,,15098,"Fish, sheepshead, cooked, dry heat",DESC_CONTAINS,2
 SHELLIEBEAN,legume,,,,,,11050,"Beans, shellie, canned, solids and liquids",COMPOUND_MATCH,1
-SHERBET,sweets,,,,,,19097,"Sherbet, orange",KEYWORD_EXACT,1
+SHERBET,prepared,,,,,,19097,"Sherbet, orange",KEYWORD_EXACT,1
 SHIITAKE,vegetable,,,,,,11238,"Mushrooms, shiitake, raw",,
 SHORTBREAD,prepared,,,,,,18192,"Cookies, shortbread, commercially prepared, plain",DESC_CONTAINS,5
 SHORTENING,fats,,,,,,4031,"Shortening, household, soybean (partially hydrogenated)-cottonseed (partially hydrogenated)",KEYWORD_EXACT,10
 SHRIMP,protein,,,,,,15150,"Crustaceans, shrimp, mixed species, cooked, breaded and fried",DESC_CONTAINS,5
 SMELT,protein,,,,,,35184,"Smelt, dried (Alaska Native)",KEYWORD_EXACT,3
 SMOOTHIE,beverage,,,,,,9531,"Fruit juice smoothie, NAKED JUICE, strawberry banana",KEYWORD_EXACT,10
-SNACK,prepared,,,,,,19056,"Snacks, tortilla chips, plain, white corn, salted",DESC_STARTS,15
 SNAIL,protein,,,,,,90560,"Mollusks, snail, raw",DESC_CONTAINS,1
 SNAPBEAN,legume,protein,,A legume,Good protein source,,11053,"Beans, snap, green, cooked, boiled, drained, without salt",DESC_STARTS,15
 SNAPPER,protein,,,,,,15102,"Fish, snapper, mixed species, cooked, dry heat",DESC_CONTAINS,2
 SOCKEYE,protein,,,,,,15086,"Fish, salmon, sockeye, cooked, dry heat",DESC_CONTAINS,5
+SODACLUB,beverage,,,,,,14121,"Beverages, Carbonated beverage, club soda",,
+SODACOLA,beverage,,,,,,14148,"Beverages, carbonated, cola, regular",,
+SODACOLALOW,beverage,,,,,,14416,"Beverages, Carbonated beverage, low calorie, cola or pepper-type, with aspartame, contains caffeine",,
+SODACREAM,beverage,,,,,,14130,"Carbonated beverage, cream soda",,
+SODANONCOLALOW,beverage,,,,,,14537,"Carbonated beverage, low calorie, other than cola or pepper, with sodium saccharin, without caffeine",,
+SODAROOTBEER,beverage,,,,,,14157,"Beverages, Carbonated beverage, root beer",,
 SOLE,protein,,,,,,15029,"Fish, flatfish (flounder and sole species), cooked, dry heat",DESC_CONTAINS,2
 SORGHUM,grain,,,,,,20067,Sorghum grain,KEYWORD_EXACT,4
 SORGHUMFLOUR,grain,,,,,,20648,"Sorghum flour, whole-grain",COMPOUND_MATCH,3
@@ -972,6 +1036,8 @@ SOUPCLAMRED,prepared,,,,,,6027,"Soup, clam chowder, manhattan style, canned, chu
 SOUPMINESTRONE,prepared,,,,,,6544,CAMPBELL'S Homestyle Minestrone Soup,,
 SOUPMUSHROOM,prepared,,,,,,6443,"Soup, cream of mushroom, canned, prepared with equal volume water",,
 SOUPRAMENNOODLE,grain,prepared,,,,,6583,"Soup, ramen noodle, any flavor, dry",,
+SOUPSPLITPEA,legume,prepared,,,,,6192,"Split pea soup, canned, reduced sodium, prepared with water or ready-to serve",,
+SOUPSPLITPEAHAM,legume,prepared,,,,,6050,"Soup, pea, split with ham, canned, chunky, ready-to-serve",,
 SOUPTOMATO,prepared,,,,,,6588,"CAMPBELL'S Soup on the Go, Classic Tomato Soup",,
 SOUPTOMATORICE,prepared,,,,,,6463,"Soup, tomato rice, canned, prepared with equal volume water",,
 SOUPTORTILLA,prepared,,,,,,6543,CAMPBELL'S Homestyle Mexican Style Chicken Tortilla Soup,,
@@ -1013,6 +1079,7 @@ STURGEON,protein,,,,,,15105,"Fish, sturgeon, mixed species, cooked, dry heat",DE
 SUBMARINE,prepared,,,,,,21126,"Fast foods, submarine sandwich, tuna on white bread with lettuce and tomato",DESC_CONTAINS,5
 SUCCOTASH,vegetable,,,,,,11496,"Succotash, (corn and limas), cooked, boiled, drained, without salt",KEYWORD_EXACT,8
 SUCKER,protein,,,,,,15217,"Fish, sucker, white, cooked, dry heat",DESC_CONTAINS,2
+SUCRALOSE,spice,,,,,,19868,"Sweeteners, tabletop, sucralose, SPLENDA packets",,
 SUET,protein,,,,,,13335,"Beef, variety meats and by-products, suet, raw",DESC_CONTAINS,1
 SUGAR,spice,,,,,,19335,"Sugars, granulated",PREFERRED,1
 SUGARBROWN,spice,,,,,,19334,"Sugars, brown",,
@@ -1055,6 +1122,11 @@ TARRAGON,spice,,,,,,2041,"Spices, tarragon, dried",DESC_CONTAINS,1
 TART,prepared,,,,,,18459,"Breakfast tart, low fat",KEYWORD_EXACT,3
 TBONE,protein,,,,,,13236,"Beef, short loin, t-bone steak, bone-in, separable lean only, trimmed to 1/8"" fat, choice, cooked, grilled",COMPOUND_MATCH,10
 TEA,beverage,,,,,,14355,"Beverages, tea, black, brewed, prepared with tap water",PREFERRED,1
+TEACHAM,beverage,,,,,,14545,"Beverages, tea, herb, brewed, chamomile",,
+TEAGREEN,beverage,,,,,,14278,"Beverages, tea, green, brewed, regular",,
+TEAHIBISCUS,beverage,,,,,,14649,"Beverages, tea, hibiscus, brewed",,
+TEAINSTANT,beverage,,,,,,14367,"Beverages, tea, instant, unsweetened, prepared with water",,
+TEAINSTANTDECAF,beverage,,,,,,14353,"Beverages, tea, instant, decaffeinated, unsweetened",,
 TEASEED,fats,,,,,,4516,"Oil, teaseed",DESC_CONTAINS,1
 TEFF,grain,,,,,,20143,"Teff, cooked",KEYWORD_EXACT,2
 TEMPEH,protein,legume,,Fermented soybeans,Rich in protein,,16174,"Tempeh, cooked",KEYWORD_EXACT,2
@@ -1062,10 +1134,14 @@ TEQUILA,beverage,,,,,,14037,"Alcoholic beverage, distilled, all (gin, rum, vodka
 TERIYAKI,spice,,,,,,6112,"Sauce, teriyaki, ready-to-serve",DESC_CONTAINS,4
 THYME,spice,,,,,,2049,"Thyme, fresh",KEYWORD_EXACT,2
 TILAPIA,protein,,,,,,15262,"Fish, tilapia, cooked, dry heat",DESC_CONTAINS,2
+TILEFISH,protein,,,,,,15113,"Fish, tilefish, cooked, dry heat",,
 TILSIT,dairy,,,,,,1041,"Cheese, tilsit",,
 TIPNUK,protein,,,,,,35064,"Fish, salmon, tipnuk, fermented (Alaska Native)",DESC_CONTAINS,1
 TOAST,grain,prepared,,,,,18030,"Bread, french or vienna, toasted (includes sourdough)",,
 TOASTMULTI,grain,prepared,,,,,18036,"Bread, multi-grain, toasted (includes whole-grain)",,
+TOASTRAISIN,grain,prepared,,,,,18048,"Bread, raisin, enriched, toasted",,
+TOASTWHITE,grain,prepared,,,,,18070,"Bread, white, commercially prepared, toasted",,
+TOASTWHOLE,grain,prepared,,,,,18076,"Bread, whole-wheat, commercially prepared, toasted",,
 TOFU,protein,legume,,Made from soybeans,High in protein,,16126,"Tofu, firm, prepared with calcium sulfate and magnesium chloride (nigari)",PREFERRED,1
 TOMATILLO,vegetable,,,,,,11954,"Tomatillos, raw",DESC_STARTS,1
 TOMATO,vegetable,fruit,,Botanically a fruit,Commonly used as a vegetable,,11529,"Tomatoes, red, ripe, raw, year round average",PREFERRED,1
@@ -1138,13 +1214,15 @@ WHEATGERM,grain,fats,,,,,4038,"Oil, wheat germ",COMPOUND_MATCH,6
 WHEATGLUTEN,spice,,,,,,48052,Vital wheat gluten,,
 WHELK,protein,,,,,,15178,"Mollusks, whelk, unspecified, cooked, moist heat",DESC_CONTAINS,2
 WHEY,dairy,,,,,,1112,"Whey, acid, fluid",KEYWORD_EXACT,8
-WHIPPING,dairy,,,,,,1053,"Cream, fluid, heavy whipping",PREFERRED,1
 WHISKEY,beverage,,,,,,14550,"Alcoholic beverage, distilled, all (gin, rum, vodka, whiskey) 86 proof",KEYWORD_EXACT,6
 WHITEBEAN,legume,,,,,,16050,"Beans, white, mature seeds, cooked, boiled, without salt",COMPOUND_MATCH,4
 WHITEFISH,protein,,,,,,15223,"Fish, whitefish, mixed species, cooked, dry heat",DESC_CONTAINS,5
 WHITING,protein,,,,,,15133,"Fish, whiting, mixed species, cooked, dry heat",DESC_CONTAINS,2
 WHOLEWHEAT,prepared,,,,,,8145,"Wheat flour, whole-grain",COMPOUND_MATCH,10
 WINE,beverage,,,,,,14106,"Alcoholic beverage, wine, table, white",PREFERRED,1
+WINEDESSERTDRY,beverage,,,,,,14536,"Alcoholic beverage, wine, dessert, dry",,
+WINEDESSERTSWEET,beverage,,,,,,14057,"Alcoholic beverage, wine, dessert, sweet",,
+WINERED,beverage,,,,,,14096,"Alcoholic beverage, wine, table, red",,
 WINGEDBEAN,legume,,,,,,16136,"Winged beans, mature seeds, cooked, boiled, without salt",COMPOUND_MATCH,5
 WOLFFISH,protein,,,,,,15224,"Fish, wolffish, Atlantic, cooked, dry heat",DESC_CONTAINS,2
 WONTON,prepared,,,,,,18368,Wonton wrappers (includes egg roll wrappers),KEYWORD_EXACT,2
@@ -1157,83 +1235,75 @@ YOGURT,dairy,,,,,,1116,"Yogurt, plain, whole milk, 8 grams protein per 8 ounce",
 YOLK,protein,,,,,,1125,"Egg, yolk, raw, fresh",,
 ZUCCHINI,vegetable,fruit,,Botanically a fruit,Used as a vegetable,,11478,"Squash, summer, zucchini, includes skin, cooked, boiled, drained, without salt",DESC_CONTAINS,5
 ZWIEBACK,grain,prepared,,,,,3217,Zwieback,KEYWORD_EXACT,1
-SUCRALOSE,spice,,,,,,19868,"Sweeteners, tabletop, sucralose, SPLENDA packets",,
-FRUCTOSEPWDR,spice,,,,,,43216,"Sweeteners, tabletop, fructose, dry, powder",,
-FRUCTOSELIQ,spice,,,,,,44018,"Sweeteners, tabletop, fructose, liquid",,
-MUFFINCORN,prepared,,,,,,18282,"Muffins, corn, prepared from recipe, made with low fat (2%) milk",,
-MUFFUNBLUEBERRY,prepared,,,,,,18278,"Muffins, blueberry, prepared from recipe, made with low fat (2%) milk",,
-SALMONREDCAN,protein,,,,,,15181,"Fish, salmon, pink, canned, without salt, solids with bone and liquid",,
-SALMONPINKCAN,protein,,,,,,35157,"Fish, salmon, red, canned, bones removed (Alaska Native)",,
-MACKERELCAN,protein,,,,,,15048,"Fish, mackerel, jack, canned, drained solids",,
-CAVIAR,protein,,,,,,15012,"Fish, caviar, black and red, granular",,
-TILEFISH,protein,,,,,,15113,"Fish, tilefish, cooked, dry heat",,
-FRIEDRICE,grain,prepared,,,,,36602,"Restaurant, Chinese, fried rice, without meat",,
-CHOCMALT,beverage,,,,,,14318,"Beverages, Malted drink mix, chocolate, powder, prepared with whole milk",,
-WINERED,beverage,,,,,,14096,"Alcoholic beverage, wine, table, red",,
-WINEDESSERTSWEET,beverage,,,,,,14057,"Alcoholic beverage, wine, dessert, sweet",,
-WINEDESSERTDRY,beverage,,,,,,14536,"Alcoholic beverage, wine, dessert, dry",,
-BEERLIGHT,beverage,,,,,,14013,"Alcoholic beverage, beer, light, low carb",,
-BEERHIGH,beverage,,,,,,14251,"Beverages, Beer, higher alcohol",,
-SODAROOTBEER,beverage,,,,,,14157,"Beverages, Carbonated beverage, root beer",,
-SODACREAM,beverage,,,,,,14130,"Carbonated beverage, cream soda",,
-SODACLUB,beverage,,,,,,14121,"Beverages, Carbonated beverage, club soda",,
-SODACOLA,beverage,,,,,,14148,"Beverages, carbonated, cola, regular",,
-SODACOLALOW,beverage,,,,,,14416,"Beverages, Carbonated beverage, low calorie, cola or pepper-type, with aspartame, contains caffeine",,
-SODANONCOLALOW,beverage,,,,,,14537,"Carbonated beverage, low calorie, other than cola or pepper, with sodium saccharin, without caffeine",,
-PINACOLADA,beverage,,,,,,14017,"Alcoholic beverage, pina colada, prepared-from-recipe",,
-ICECREAMVANILLALIGHT,dairy,sweets,,,,,19088,"Ice creams, vanilla, light",,
-ICECREAMCHOCLIGHT,dairy,sweets,,,,,19114,"Ice creams, chocolate, light",,
-ICECREAMSAND,dairy,sweets,,,,,1238,Ice cream sandwich,,
-ICECREAMBARCHOC,dairy,sweets,,,,,1237,"Ice cream, bar or stick, chocolate covered",,
-ICECREAMCREAM,dairy,sweets,,,,,1302,"Light ice cream, Creamsicle",,
-ICECREAMCONECHOC,dairy,sweets,,,,,1240,"Ice cream cone, chocolate covered, with nuts, flavors other than chocolate",,
-ICECREAMCONEWAFER,sweets,,,,,,18271,"Ice cream cones, cake or wafer-type",,
-ICECREAMSOFTVAN,dairy,sweets,,,,,21028,"Fast foods, vanilla, light, soft-serve ice cream, with cone",,
-ICECREAMSUBDAEFUD,dairy,sweets,,,,,21033,"Fast foods, sundae, hot fudge",,
-ICECREAMSUNDAESTRW,dairy,sweets,,,,,21034,"Fast foods, sundae, strawberry",,
-ICECREAMSUNDAECARM,dairy,sweets,,,,,21032,"Fast foods, sundae, caramel",,
-TEAGREEN,beverage,,,,,,14278,"Beverages, tea, green, brewed, regular",,
-TEAHIBISCUS,beverage,,,,,,14649,"Beverages, tea, hibiscus, brewed",,
-TEACHAM,beverage,,,,,,14545,"Beverages, tea, herb, brewed, chamomile",,
-TEAINSTANTDECAF,beverage,,,,,,14353,"Beverages, tea, instant, decaffeinated, unsweetened",,
-TEAINSTANT,beverage,,,,,,14367,"Beverages, tea, instant, unsweetened, prepared with water",,
-SOUPSPLITPEA,legume,prepared,,,,,6192,"Split pea soup, canned, reduced sodium, prepared with water or ready-to serve",,
-SOUPSPLITPEAHAM,legume,prepared,,,,,6050,"Soup, pea, split with ham, canned, chunky, ready-to-serve",,
-TOASTWHITE,grain,prepared,,,,,18070,"Bread, white, commercially prepared, toasted",,
-TOASTWHOLE,grain,prepared,,,,,18076,"Bread, whole-wheat, commercially prepared, toasted",,
-TOASTRAISIN,grain,prepared,,,,,18048,"Bread, raisin, enriched, toasted",,
-PORKHAMSLICED,protein,,,,,,7029,"Ham, sliced, regular (approximately 11% fat)",,
-CHICKENBREASTSLICED,protein,,,,,,7933,"Chicken breast, oven-roasted, fat-free, sliced",,
-LUNCHEONMEATLESS,prepared,,,,,,43131,"Luncheon slices, meatless",,
-SANDWICHFISH,prepared,,,,,,21105,"Fast foods, fish sandwich, with tartar sauce",,
-SANDWICHCHICKEN,prepared,,,,,,21102,"Fast foods, chicken fillet sandwich, plain with pickles",,
-SANDWICHBEEF,prepared,,,,,,21121,"Fast foods, roast beef sandwich, plain",,
-SANDWICHCHICKENCRISP,prepared,,,,,,21230,"Fast Foods, crispy chicken filet sandwich, with lettuce and mayonnaise",,
-SANDSUBBEEF,prepared,,,,,,21125,"Fast foods, submarine sandwich, roast beef on white bread with lettuce and tomato",,
-SANDSUBBLT,prepared,,,,,,21162,"Fast foods, submarine sandwich, bacon, lettuce, and tomato on white bread",,
-SANDSUBMEATBALL,prepared,,,,,,21158,"Fast foods, submarine sandwich, meatball marinara on white bread",,
-SANDSUBTURKEY,prepared,,,,,,21155,"Fast foods, submarine sandwich, turkey breast on white bread with lettuce and tomato",,
-SANDSUBHAM,prepared,,,,,,21156,"Fast foods, submarine sandwich, ham on white bread with lettuce and tomato",,
-BUNHONEY,grain,prepared,,,,,18964,"Cinnamon buns, frosted (includes honey buns)",,
-BUNSHAMBURGERSES,grain,prepared,,,,,28387,"PEPPERIDGE FARM, Hamburger Buns w/Sesame",,
-BUNSHAMBURGER,grain,prepared,,,,,28394,"PEPPERIDGE FARM, Hamburger Bun",,
-BUNSHAMBURGERWHOLE,grain,prepared,,,,,28377,"PEPPERIDGE FARM, 100% Whole Wheat Hamburger Buns",,
-ROLLDINNERWHOLE,grain,prepared,,,,,18348,"Rolls, dinner, whole-wheat",,
-ROLLFRENCH,grain,prepared,,,,,18349,"Rolls, french",,
-ROLLDINNERSWEET,grain,prepared,,,,,28348,"Rolls, dinner, sweet",,
-ROLLPUMP,grain,prepared,,,,,43441,"Rolls, pumpernickel",,
-ROLLPIZZA,grain,prepared,,,,,32012,"Pizza rolls, frozen, unprepared",,
-SALADPOTATOEGG,vegetable,prepared,,,,,22971,Potato salad with egg,,
-SALADFRUIT,fruit,prepared,,,,,9102,"Fruit salad, (peach and pear and apricot and pineapple and cherry), canned, water pack, solids and liquids",,
-PASTACORNDRY,grain,,,,,,20091,"Pasta, gluten-free, corn, dry",,
-PASTACOOKED,grain,,,,,,20521,"Pasta, cooked, unenriched, with added salt",,
-PASTACORNCOOKED,grain,,,,,,20092,"Pasta, gluten-free, corn, cooked",,
-PASTASPINACHFRESH,grain,,,,,,20095,"Pasta, fresh-refrigerated, spinach, as purchased",,
-PASTASPINACHFRESHCK,grain,,,,,,20096,"Pasta, fresh-refrigerated, spinach, cooked",,
-PASTAWHOLEDRY,grain,,,,,,20124,"Pasta, whole-wheat, dry",,
-PASTAWHOLECK,grain,,,,,,20125,"Pasta, whole-wheat, cooked",,
-PASTARICEBRWNCK,grain,,,,,,20654,"Pasta, gluten-free, brown rice flour, cooked, TINKYADA",,
-PASTATORTCHEESE,,prepared,,,,,22901,"Tortellini, pasta with cheese filling, fresh-refrigerated, as purchased",,
-PASTAPOMODOROCHIC,,prepared,,,,,22984,"KASHI, Chicken Pasta Pomodoro, Frozen Entree",,
-PASTAPRIMAVERAPESTO,,prepared,,,,,22987,"KASHI Pesto Pasta Primavera, frozen, unprepared",,
-PASTATOMATOMEATLESS,,prepared,,,,,22914,"Pasta with tomato sauce, no meat, canned",,
+CANDFUDGEPEANUT,sweets,,,,,,19102,"Candies, fudge, peanut butter, prepared-from-recipe",,
+CANDFUDGEVANILLA,sweets,,,,,,19103,"Candies, fudge, vanilla, prepared-from-recipe",,
+CANDFUDGEVANILLANUTS,sweets,,,,,,19104,"Candies, fudge, vanilla with nuts",,
+CANDBITTERSCOTCH,sweets,,,,,,19070,"Candies, butterscotch",,
+CANDHALAVAH,sweets,,,,,,19117,"Candies, halavah, plain",,
+CANDPEANUTSCHOC,sweets,,,,,,19126,"Candies, milk chocolate coated peanuts",,
+CANDRAISINCHOC,sweets,,,,,,19127,"Candies, milk chocolate coated raisins",,
+CANDPRALINE,sweets,,,,,,19216,"Candies, praline, prepared-from-recipe",,
+CANDCHOCFUDGEMARSH,sweets,,,,,,19379,"Candies, fudge, chocolate marshmallow, prepared-from-recipe",,
+CANDTAFFY,sweets,,,,,,19382,"Candies, taffy, prepared-from-recipe",,
+CANDPEANUTBRITTLE,sweets,,,,,,19148,"Candies, peanut brittle, prepared-from-recipe",,
+CANDTOFFE,sweets,,,,,,19383,"Candies, toffee, prepared-from-recipe",,
+CANDTAMARIND,sweets,,,,,,19921,"Candies, Tamarind",,
+CANDDIVINITY,sweets,,,,,,19384,"Candies, divinity, prepared-from-recipe",,
+CANDCHOCSEMI,sweets,,,,,,19080,"Candies, semisweet chocolate",,
+CANDCHOCSWEET,sweets,,,,,,19081,"Candies, sweet chocolate",,
+CANDWHIRCHOC,sweets,,,,,,19087,"Candies, white chocolate",,
+CANDTOBLERONE,sweets,,,,,,19001,"Candies, TOBLERONE, milk chocolate with honey and almond nougat",,
+CANDALMONDSOLITARES,sweets,,,,,,19084,"Candies, HERSHEY'S GOLDEN ALMOND SOLITAIRES",,
+CANDYORK,sweets,,,,,,19091,"Candies, YORK Peppermint Pattie",,
+CANDTWIZZLERNIBS,sweets,,,,,,19092,"Candies, TWIZZLERS NIBS CHERRY BITS",,
+CANDTWIZZLERBITES,sweets,,,,,,19067,"Candies, TWIZZLERS CHERRY BITES",,
+CANDBITOHONEY,sweets,,,,,,19068,"Candies, NESTLE, BIT-O'-HONEY Candy Chews",,
+CANDBUTTERFINGER,sweets,,,,,,19069,"Candies, NESTLE, BUTTERFINGER Bar",,
+CAND5THAVE,sweets,,,,,,19098,"Candies, 5TH AVENUE Candy Bar",,
+CANDGOOBERS,sweets,,,,,,19105,"Candies, NESTLE, GOOBERS Chocolate Covered Peanuts",,
+CANDCARMELO,sweets,,,,,,19075,"Candies, CARAMELLO Candy Bar",,
+CANDMRGOODBAR,sweets,,,,,,19143,"Candies, MR. GOODBAR Chocolate Bar",,
+CANDSYMPHONY,sweets,,,,,,19093,"Candies, SYMPHONY Milk Chocolate Bar",,
+CANDKITKAT,sweets,,,,,,19109,"Candies, KIT KAT Wafer Bar",,
+CANDKRACKEL,sweets,,,,,,19110,"Candies, KRACKEL Chocolate Bar",,
+CANDBABYRUTH,sweets,,,,,,19111,"Candies, NESTLE, BABY RUTH Bar",,
+CANDMARSALMONDBAR,sweets,,,,,,19115,"Candies, MARS SNACKFOOD US, MARS Almond Bar",,
+CANDOHHENRY,sweets,,,,,,19118,"Candies, NESTLE, OH HENRY! Bar",,
+CANDCHUNKY,sweets,,,,,,19119,"Candies, NESTLE, CHUNKY Bar",,
+CANDTWIX,sweets,,,,,,19161,"Candies, MARS SNACKFOOD US, TWIX Peanut Butter Cookie Bars",,
+CANDWHATCHA,sweets,,,,,,19162,"Candies, WHATCHAMACALLIT Candy Bar",,
+CANDSPECIALDARK,sweets,,,,,,19164,"Candies, SPECIAL DARK Chocolate Bar",,
+CANDAFTEREIGHT,sweets,,,,,,19153,"Candies, NESTLE, AFTER EIGHT Mints",,
+CANDSNICKERS,sweets,,,,,,19155,"Candies, MARS SNACKFOOD US, SNICKERS Bar",,
+CABDSTARBURST,sweets,,,,,,19156,"Candies, MARS SNACKFOOD US, STARBURST Fruit Chews, Original fruits",,
+CANDMMMINIS,sweets,,,,,,19157,"Candies, MARS SNACKFOOD US, M&M's MINIs Milk Chocolate Candies",,
+CANDMUSKETEER,sweets,,,,,,19159,"Candies, MARS SNACKFOOD US, 3 MUSKETEERS Bar",,
+CANDRAISINETS,sweets,,,,,,19149,"Candies, NESTLE, RAISINETS Chocolate Covered Raisins",,
+CANDMILKYWAY,sweets,,,,,,19135,"Candies, MARS SNACKFOOD US, MILKY WAY Bar",,
+CANDSKOR,sweets,,,,,,19136,"Candies, HERSHEY'S SKOR Toffee Bar",,
+CANDPOTOFGOLD,sweets,,,,,,19130,"Candies, HERSHEY'S POT OF GOLD Almond Bar",,
+CANDMM,sweets,,,,,,19140,"Candies, MARS SNACKFOOD US, M&M's Peanut Chocolate Candies",,
+CAND100GRAND,sweets,,,,,,19144,"Candies, NESTLE, 100 GRAND Bar",,
+CANDCRUNCH,sweets,,,,,,19145,"Candies, NESTLE, CRUNCH Bar and Dessert Topping",,
+CANDREESESCUPS,sweets,,,,,,19150,"Candies, REESE'S Peanut Butter Cups",,
+CANDREESESPIECES,sweets,,,,,,19151,"Candies, REESE'S PIECES Candy",,
+CANDROLO,sweets,,,,,,19152,"Candies, ROLO Caramels in Milk Chocolate",,
+CANDSNICKERSPOP,sweets,,,,,,19306,"Candies, MARS SNACKFOOD US, POP'ABLES SNICKERS Brand Bite Size Candies",,
+CANDRESESBITES,sweets,,,,,,19238,"Candies, REESE'S BITES",,
+CANDHEATHBITES,sweets,,,,,,19243,"Candies, HEATH BITES",,
+CANDALMONDJOYBITES,sweets,,,,,,19248,"Candies, HERSHEY'S, ALMOND JOY BITES",,
+CANDREESESTICKS,sweets,,,,,,19249,"Candies, HERSHEY, REESESTICKS crispy wafers, peanut butter, milk chocolate",,
+CANDKITKATBIG,sweets,,,,,,19250,"Candies, HERSHEY, KIT KAT BIG KAT Bar",,
+CANDREESEFAST,sweets,,,,,,19252,"Candies, REESE'S, FAST BREAK, milk chocolate peanut butter and soft nougats",,
+CANDSNICKERSALMOND,sweets,,,,,,19302,"Candies, MARS SNACKFOOD US, SNICKERS Almond bar",,
+CANDMUSKETEERPOP,sweets,,,,,,19308,"Candies, MARS SNACKFOOD US, POP'ABLES 3 MUSKETEERS Brand Bite Size Candies",,
+CANDREESENURAGEOUS,sweets,,,,,,19239,"Candies, REESE'S NUTRAGEOUS Candy Bar",,
+CANDDOVE,sweets,,,,,,19255,"Candies, MARS SNACKFOOD US, DOVE Dark Chocolate",,
+CANDSKITTLES,sweets,,,,,,19370,"Candies, MARS SNACKFOOD US, SKITTLES Original Bite Size Candies",,
+CANDCORDOVA,sweets,,,,,,19326,"Candies, MARS SNACKFOOD US, COCOAVIA Chocolate Bar",,
+CANDMMPRETZEL,sweets,,,,,,19917,"Candies, M&M MARS Pretzel Chocolate Candies",,
+CANDPAYDAY,sweets,,,,,,19923,"Candies, HERSHEYS, PAYDAY Bar",,
+CANDMOUNDS,sweets,,,,,,19142,"Candies, MOUNDS Candy Bar",,
+CANDTOOTSIE,sweets,,,,,,19064,"Candies, TOOTSIE ROLL, chocolate-flavor roll",,
+CANDALMONDJOY,sweets,,,,,,19065,"Candies, ALMOND JOY Candy Bar",,
+CANDFONDANT,sweets,,,,,,19099,"Candies, fondant, prepared-from-recipe",,
