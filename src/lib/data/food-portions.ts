@@ -4949,6 +4949,44 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "CABDSTARBURST",
+    "display": "Candies STARBURST ORIGINAL",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19156",
+    "desc": "Candies, MARS SNACKFOOD US, STARBURST Fruit Chews, Original fruits",
+    "cal": 408.0,
+    "pro": 0.4,
+    "fat": 8.2,
+    "carb": 82.6,
+    "fib": 0.0,
+    "h2o": 8.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving fun size (8 chews)",
+        "gm": 40.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 2.07 oz pack",
+        "gm": 59.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "piece",
+        "gm": 5.0
+      }
+    ]
+  },
+  {
     "word": "CAESARDRESSING",
     "display": "Caesar Dressing",
     "groups": [
@@ -5546,6 +5584,2344 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "wedge (1.33 oz)",
         "gm": 38.0
+      }
+    ]
+  },
+  {
+    "word": "CAND100GRAND",
+    "display": "Candies 100 GRAND BAR",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19144",
+    "desc": "Candies, NESTLE, 100 GRAND Bar",
+    "cal": 468.0,
+    "pro": 2.5,
+    "fat": 19.3,
+    "carb": 71.0,
+    "fib": 1.0,
+    "h2o": 6.1,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar (1.5 oz)",
+        "gm": 43.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar, miniature",
+        "gm": 21.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 1.5 oz bar",
+        "gm": 43.0
+      }
+    ]
+  },
+  {
+    "word": "CAND5THAVE",
+    "display": "Candies 5TH AVENUE",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19098",
+    "desc": "Candies, 5TH AVENUE Candy Bar",
+    "cal": 482.0,
+    "pro": 8.8,
+    "fat": 24.0,
+    "carb": 62.7,
+    "fib": 3.1,
+    "h2o": 2.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 2 oz",
+        "gm": 56.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar snack size",
+        "gm": 16.0
+      }
+    ]
+  },
+  {
+    "word": "CANDAFTEREIGHT",
+    "display": "Candies AFTER EIGHT",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19153",
+    "desc": "Candies, NESTLE, AFTER EIGHT Mints",
+    "cal": 432.0,
+    "pro": 1.7,
+    "fat": 11.9,
+    "carb": 79.5,
+    "fib": 2.4,
+    "h2o": 6.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 5 mints",
+        "gm": 42.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "piece",
+        "gm": 8.4
+      }
+    ]
+  },
+  {
+    "word": "CANDALMONDJOY",
+    "display": "Candies ALMOND JOY",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19065",
+    "desc": "Candies, ALMOND JOY Candy Bar",
+    "cal": 479.0,
+    "pro": 4.1,
+    "fat": 26.9,
+    "carb": 59.5,
+    "fib": 5.0,
+    "h2o": 8.2,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package 1.76 oz",
+        "gm": 49.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar snack size",
+        "gm": 19.0
+      }
+    ]
+  },
+  {
+    "word": "CANDALMONDJOYBITES",
+    "display": "Candies ALMOND JOY BITES",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19248",
+    "desc": "Candies, HERSHEY'S, ALMOND JOY BITES",
+    "cal": 563.0,
+    "pro": 5.6,
+    "fat": 34.5,
+    "carb": 57.5,
+    "fib": 4.3,
+    "h2o": 1.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 18.0,
+        "desc": "pieces",
+        "gm": 40.0
+      }
+    ]
+  },
+  {
+    "word": "CANDALMONDSOLITARES",
+    "display": "Candies ALMOND SOLITARIES",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19084",
+    "desc": "Candies, HERSHEY'S GOLDEN ALMOND SOLITAIRES",
+    "cal": 569.0,
+    "pro": 12.0,
+    "fat": 37.1,
+    "carb": 46.9,
+    "fib": 4.4,
+    "h2o": 1.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 13.0,
+        "desc": "pieces",
+        "gm": 41.0
+      }
+    ]
+  },
+  {
+    "word": "CANDBABYRUTH",
+    "display": "Candies BABY RUTH",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19111",
+    "desc": "Candies, NESTLE, BABY RUTH Bar",
+    "cal": 459.0,
+    "pro": 5.4,
+    "fat": 21.6,
+    "carb": 64.8,
+    "fib": 2.0,
+    "h2o": 7.0,
+    "sug": 54.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 2.1 oz bar",
+        "gm": 60.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving fun size bar 0.65 oz",
+        "gm": 18.0
+      }
+    ]
+  },
+  {
+    "word": "CANDBITOHONEY",
+    "display": "Candies BIT-O\u2019-HONEY",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19068",
+    "desc": "Candies, NESTLE, BIT-O'-HONEY Candy Chews",
+    "cal": 375.0,
+    "pro": 2.0,
+    "fat": 7.5,
+    "carb": 80.9,
+    "fib": 0.2,
+    "h2o": 8.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 6 pieces",
+        "gm": 40.0
+      }
+    ]
+  },
+  {
+    "word": "CANDBITTERSCOTCH",
+    "display": "Candies Butterscotch",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19070",
+    "desc": "Candies, butterscotch",
+    "cal": 391.0,
+    "pro": 0.0,
+    "fat": 3.3,
+    "carb": 90.4,
+    "fib": 0.0,
+    "h2o": 5.2,
+    "sug": 80.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 3.0,
+        "desc": "pieces",
+        "gm": 16.0
+      }
+    ]
+  },
+  {
+    "word": "CANDBUTTERFINGER",
+    "display": "Candies BUTTERFINGER",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19069",
+    "desc": "Candies, NESTLE, BUTTERFINGER Bar",
+    "cal": 459.0,
+    "pro": 5.4,
+    "fat": 18.9,
+    "carb": 72.9,
+    "fib": 2.0,
+    "h2o": 1.2,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 2.1 oz bar",
+        "gm": 60.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 1 fun size bar 0.65 oz",
+        "gm": 18.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 0.75 oz bar",
+        "gm": 21.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar bite size",
+        "gm": 7.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar king size",
+        "gm": 108.0
+      },
+      {
+        "amt": 10.0,
+        "desc": "Butterfinger BB's",
+        "gm": 26.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "tbsp",
+        "gm": 25.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup BB's",
+        "gm": 174.0
+      }
+    ]
+  },
+  {
+    "word": "CANDCARMELO",
+    "display": "Candies CARAMELLO",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19075",
+    "desc": "Candies, CARAMELLO Candy Bar",
+    "cal": 462.0,
+    "pro": 6.2,
+    "fat": 21.2,
+    "carb": 63.8,
+    "fib": 1.2,
+    "h2o": 6.8,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 1.25 oz",
+        "gm": 35.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 1.6 oz",
+        "gm": 45.0
+      },
+      {
+        "amt": 6.0,
+        "desc": "blocks",
+        "gm": 43.0
+      }
+    ]
+  },
+  {
+    "word": "CANDCHOCFUDGEMARSH",
+    "display": "Candies Choc Fudge Marshmallow",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19379",
+    "desc": "Candies, fudge, chocolate marshmallow, prepared-from-recipe",
+    "cal": 453.0,
+    "pro": 2.3,
+    "fat": 17.5,
+    "carb": 71.3,
+    "fib": 1.7,
+    "h2o": 7.8,
+    "sug": 64.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "piece",
+        "gm": 20.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "recipe yield (60 pieces)",
+        "gm": 1229.0
+      }
+    ]
+  },
+  {
+    "word": "CANDCHOCSEMI",
+    "display": "Candies Chos Semisweet",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19080",
+    "desc": "Candies, semisweet chocolate",
+    "cal": 480.0,
+    "pro": 4.2,
+    "fat": 30.0,
+    "carb": 63.9,
+    "fib": 5.9,
+    "h2o": 0.7,
+    "sug": 54.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 14.5
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup large chips",
+        "gm": 182.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup mini chips",
+        "gm": 173.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz (approx 60 pcs)",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup chips (6 oz package)",
+        "gm": 168.0
+      }
+    ]
+  },
+  {
+    "word": "CANDCHOCSWEET",
+    "display": "Candies Choc Sweet",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19081",
+    "desc": "Candies, sweet chocolate",
+    "cal": 507.0,
+    "pro": 3.9,
+    "fat": 34.2,
+    "carb": 60.4,
+    "fib": 5.5,
+    "h2o": 0.5,
+    "sug": 51.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar (1.45 oz)",
+        "gm": 41.0
+      }
+    ]
+  },
+  {
+    "word": "CANDCHUNKY",
+    "display": "Candies CHUNKY",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19119",
+    "desc": "Candies, NESTLE, CHUNKY Bar",
+    "cal": 475.0,
+    "pro": 7.5,
+    "fat": 27.5,
+    "carb": 60.0,
+    "fib": 2.5,
+    "h2o": 2.9,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 1.4 oz bar",
+        "gm": 40.0
+      }
+    ]
+  },
+  {
+    "word": "CANDCORDOVA",
+    "display": "Candies COCOAVIA",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19326",
+    "desc": "Candies, MARS SNACKFOOD US, COCOAVIA Chocolate Bar",
+    "cal": 539.0,
+    "pro": 5.8,
+    "fat": 29.3,
+    "carb": 63.0,
+    "fib": 8.7,
+    "h2o": 0.7,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 0.78 oz bar",
+        "gm": 22.0
+      }
+    ]
+  },
+  {
+    "word": "CANDCRUNCH",
+    "display": "Candies NESTLE CRUNCH",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19145",
+    "desc": "Candies, NESTLE, CRUNCH Bar and Dessert Topping",
+    "cal": 500.0,
+    "pro": 5.0,
+    "fat": 26.0,
+    "carb": 67.0,
+    "fib": 1.9,
+    "h2o": 0.7,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 1.55 oz",
+        "gm": 44.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 0.5 oz",
+        "gm": 14.2
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 4 fun size bars",
+        "gm": 41.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "tbsp",
+        "gm": 24.0
+      }
+    ]
+  },
+  {
+    "word": "CANDDIVINITY",
+    "display": "Candies Divinity",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19384",
+    "desc": "Candies, divinity, prepared-from-recipe",
+    "cal": 364.0,
+    "pro": 1.3,
+    "fat": 0.1,
+    "carb": 89.0,
+    "fib": 0.0,
+    "h2o": 9.2,
+    "sug": 79.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "piece",
+        "gm": 11.0
+      }
+    ]
+  },
+  {
+    "word": "CANDDOVE",
+    "display": "Candies DOVE ",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19255",
+    "desc": "Candies, MARS SNACKFOOD US, DOVE Dark Chocolate",
+    "cal": 520.0,
+    "pro": 5.2,
+    "fat": 32.5,
+    "carb": 59.4,
+    "fib": 7.6,
+    "h2o": 1.7,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 1.3 oz bar",
+        "gm": 37.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 7 pieces",
+        "gm": 42.0
+      }
+    ]
+  },
+  {
+    "word": "CANDFONDANT",
+    "display": "Candies Fondant",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19099",
+    "desc": "Candies, fondant, prepared-from-recipe",
+    "cal": 373.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 93.2,
+    "fib": 0.0,
+    "h2o": 6.7,
+    "sug": 88.9,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "CANDFUDGEPEANUT",
+    "display": "Candies Fudge Peanut Butter",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19102",
+    "desc": "Candies, fudge, peanut butter, prepared-from-recipe",
+    "cal": 387.0,
+    "pro": 3.8,
+    "fat": 6.6,
+    "carb": 77.8,
+    "fib": 0.7,
+    "h2o": 10.9,
+    "sug": 73.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "piece",
+        "gm": 16.0
+      }
+    ]
+  },
+  {
+    "word": "CANDFUDGEVANILLA",
+    "display": "Candies Fudge Vanilla",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19103",
+    "desc": "Candies, fudge, vanilla, prepared-from-recipe",
+    "cal": 383.0,
+    "pro": 1.1,
+    "fat": 5.5,
+    "carb": 82.2,
+    "fib": 0.0,
+    "h2o": 10.8,
+    "sug": 79.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "CANDFUDGEVANILLANUTS",
+    "display": "Candies Fudge Vanilla with Nuts",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19104",
+    "desc": "Candies, fudge, vanilla with nuts",
+    "cal": 435.0,
+    "pro": 3.0,
+    "fat": 13.7,
+    "carb": 74.6,
+    "fib": 0.9,
+    "h2o": 8.0,
+    "sug": 71.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "CANDGOOBERS",
+    "display": "Candies GOOBERS",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19105",
+    "desc": "Candies, NESTLE, GOOBERS Chocolate Covered Peanuts",
+    "cal": 512.0,
+    "pro": 9.7,
+    "fat": 34.0,
+    "carb": 53.0,
+    "fib": 9.7,
+    "h2o": 1.9,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package 1.375 oz",
+        "gm": 39.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 0.25 cup",
+        "gm": 41.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving fun size",
+        "gm": 48.0
+      }
+    ]
+  },
+  {
+    "word": "CANDHALAVAH",
+    "display": "Candies Halavah",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19117",
+    "desc": "Candies, halavah, plain",
+    "cal": 469.0,
+    "pro": 12.5,
+    "fat": 21.5,
+    "carb": 60.5,
+    "fib": 4.5,
+    "h2o": 3.7,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "CANDHEATHBITES",
+    "display": "Candies HEATH BITES",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19243",
+    "desc": "Candies, HEATH BITES",
+    "cal": 530.0,
+    "pro": 3.9,
+    "fat": 30.4,
+    "carb": 63.4,
+    "fib": 2.0,
+    "h2o": 0.9,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 15.0,
+        "desc": "pieces",
+        "gm": 39.0
+      }
+    ]
+  },
+  {
+    "word": "CANDKITKAT",
+    "display": "Candies KIT KAT",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19109",
+    "desc": "Candies, KIT KAT Wafer Bar",
+    "cal": 518.0,
+    "pro": 6.5,
+    "fat": 26.0,
+    "carb": 64.6,
+    "fib": 1.0,
+    "h2o": 1.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar (1.5 oz)",
+        "gm": 42.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar, miniature (.35 oz)",
+        "gm": 10.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar (1.625 oz)",
+        "gm": 46.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar (2.8 oz)",
+        "gm": 78.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar (3.375 oz)",
+        "gm": 96.0
+      }
+    ]
+  },
+  {
+    "word": "CANDKITKATBIG",
+    "display": "Candies KIT KAT BIG KAT",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19250",
+    "desc": "Candies, HERSHEY, KIT KAT BIG KAT Bar",
+    "cal": 520.0,
+    "pro": 6.2,
+    "fat": 27.8,
+    "carb": 63.6,
+    "fib": 1.9,
+    "h2o": 1.1,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 1.94 oz",
+        "gm": 55.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar king size 2.8 oz",
+        "gm": 79.0
+      }
+    ]
+  },
+  {
+    "word": "CANDKRACKEL",
+    "display": "Candies KRACKLE",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19110",
+    "desc": "Candies, KRACKEL Chocolate Bar",
+    "cal": 512.0,
+    "pro": 6.6,
+    "fat": 26.6,
+    "carb": 64.0,
+    "fib": 2.2,
+    "h2o": 1.2,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 1.45 oz",
+        "gm": 41.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 2 oz",
+        "gm": 56.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "blocks",
+        "gm": 37.0
+      }
+    ]
+  },
+  {
+    "word": "CANDMARSALMONDBAR",
+    "display": "Candies MARS Almond Bar",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19115",
+    "desc": "Candies, MARS SNACKFOOD US, MARS Almond Bar",
+    "cal": 467.0,
+    "pro": 8.1,
+    "fat": 23.0,
+    "carb": 62.7,
+    "fib": 2.0,
+    "h2o": 4.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar (1.76 oz)",
+        "gm": 50.0
+      }
+    ]
+  },
+  {
+    "word": "CANDMILKYWAY",
+    "display": "Candies MILKYWAY",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19135",
+    "desc": "Candies, MARS SNACKFOOD US, MILKY WAY Bar",
+    "cal": 456.0,
+    "pro": 4.0,
+    "fat": 17.2,
+    "carb": 71.2,
+    "fib": 1.0,
+    "h2o": 6.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 2.05 oz bar",
+        "gm": 58.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar fun size",
+        "gm": 17.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "piece miniature 5 pieces = serving",
+        "gm": 8.2
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar king size",
+        "gm": 103.0
+      }
+    ]
+  },
+  {
+    "word": "CANDMM",
+    "display": "Candies M&M PEANUTS",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19140",
+    "desc": "Candies, MARS SNACKFOOD US, M&M's Peanut Chocolate Candies",
+    "cal": 515.0,
+    "pro": 9.6,
+    "fat": 26.1,
+    "carb": 60.5,
+    "fib": 3.7,
+    "h2o": 2.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 1 singles bag",
+        "gm": 54.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package fun size",
+        "gm": 18.0
+      },
+      {
+        "amt": 10.0,
+        "desc": "pieces",
+        "gm": 20.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 170.0
+      }
+    ]
+  },
+  {
+    "word": "CANDMMMINIS",
+    "display": "Candies M&M MINIS",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19157",
+    "desc": "Candies, MARS SNACKFOOD US, M&M's MINIs Milk Chocolate Candies",
+    "cal": 502.0,
+    "pro": 4.8,
+    "fat": 23.4,
+    "carb": 68.4,
+    "fib": 2.7,
+    "h2o": 1.2,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 1.0 oz tube",
+        "gm": 30.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 0.50 oz box",
+        "gm": 15.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 1 1.94 oz tube",
+        "gm": 55.0
+      }
+    ]
+  },
+  {
+    "word": "CANDMMPRETZEL",
+    "display": "Candies M&M Pretzel",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19917",
+    "desc": "Candies, M&M MARS Pretzel Chocolate Candies",
+    "cal": 447.0,
+    "pro": 5.0,
+    "fat": 15.0,
+    "carb": 72.9,
+    "fib": 2.5,
+    "h2o": 4.8,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.25,
+        "desc": "cup",
+        "gm": 40.0
+      }
+    ]
+  },
+  {
+    "word": "CANDMOUNDS",
+    "display": "Candies MOUNDS",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19142",
+    "desc": "Candies, MOUNDS Candy Bar",
+    "cal": 486.0,
+    "pro": 4.6,
+    "fat": 26.6,
+    "carb": 58.6,
+    "fib": 3.7,
+    "h2o": 9.1,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar snack size",
+        "gm": 19.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package 1.9 oz",
+        "gm": 53.0
+      }
+    ]
+  },
+  {
+    "word": "CANDMRGOODBAR",
+    "display": "Candies MR. GOODBAR",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19143",
+    "desc": "Candies, MR. GOODBAR Chocolate Bar",
+    "cal": 538.0,
+    "pro": 10.2,
+    "fat": 33.2,
+    "carb": 54.3,
+    "fib": 3.8,
+    "h2o": 0.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar (1.75 oz)",
+        "gm": 49.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar (2.6 oz)",
+        "gm": 73.0
+      }
+    ]
+  },
+  {
+    "word": "CANDMUSKETEER",
+    "display": "Candies 3 MUSKETEERS",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19159",
+    "desc": "Candies, MARS SNACKFOOD US, 3 MUSKETEERS Bar",
+    "cal": 436.0,
+    "pro": 2.6,
+    "fat": 12.8,
+    "carb": 77.8,
+    "fib": 1.5,
+    "h2o": 5.8,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 2.13 oz bar",
+        "gm": 60.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 2 fun size bars",
+        "gm": 28.0
+      }
+    ]
+  },
+  {
+    "word": "CANDMUSKETEERPOP",
+    "display": "Candies MUSKETEERS POP\u2019ABLES",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19308",
+    "desc": "Candies, MARS SNACKFOOD US, POP'ABLES 3 MUSKETEERS Brand Bite Size Candies",
+    "cal": 443.0,
+    "pro": 2.6,
+    "fat": 15.2,
+    "carb": 75.9,
+    "fib": 1.3,
+    "h2o": 5.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 15 pieces",
+        "gm": 41.0
+      }
+    ]
+  },
+  {
+    "word": "CANDOHHENRY",
+    "display": "Candies OH HENRY!",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19118",
+    "desc": "Candies, NESTLE, OH HENRY! Bar",
+    "cal": 462.0,
+    "pro": 7.7,
+    "fat": 23.0,
+    "carb": 65.5,
+    "fib": 1.9,
+    "h2o": 2.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 2 oz",
+        "gm": 57.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving fun size bar",
+        "gm": 26.0
+      }
+    ]
+  },
+  {
+    "word": "CANDPAYDAY",
+    "display": "Candies PAYDAY",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19923",
+    "desc": "Candies, HERSHEYS, PAYDAY Bar",
+    "cal": 490.0,
+    "pro": 13.4,
+    "fat": 25.0,
+    "carb": 52.9,
+    "fib": 3.8,
+    "h2o": 7.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      }
+    ]
+  },
+  {
+    "word": "CANDPEANUTBRITTLE",
+    "display": "Candies Peanut Brittle",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19148",
+    "desc": "Candies, peanut brittle, prepared-from-recipe",
+    "cal": 486.0,
+    "pro": 7.6,
+    "fat": 19.0,
+    "carb": 71.2,
+    "fib": 2.5,
+    "h2o": 0.7,
+    "sug": 51.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "CANDPEANUTSCHOC",
+    "display": "Candies Peanuts Choc Coated",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19126",
+    "desc": "Candies, milk chocolate coated peanuts",
+    "cal": 519.0,
+    "pro": 13.1,
+    "fat": 33.5,
+    "carb": 49.7,
+    "fib": 4.7,
+    "h2o": 1.9,
+    "sug": 37.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 149.0
+      },
+      {
+        "amt": 10.0,
+        "desc": "pieces",
+        "gm": 40.0
+      }
+    ]
+  },
+  {
+    "word": "CANDPOTOFGOLD",
+    "display": "Candies POT OF GOLD",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19130",
+    "desc": "Candies, HERSHEY'S POT OF GOLD Almond Bar",
+    "cal": 577.0,
+    "pro": 12.8,
+    "fat": 38.5,
+    "carb": 44.9,
+    "fib": 3.8,
+    "h2o": 1.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 2.8 oz",
+        "gm": 78.0
+      }
+    ]
+  },
+  {
+    "word": "CANDPRALINE",
+    "display": "Candies Praline",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19216",
+    "desc": "Candies, praline, prepared-from-recipe",
+    "cal": 485.0,
+    "pro": 3.3,
+    "fat": 25.9,
+    "carb": 59.6,
+    "fib": 3.5,
+    "h2o": 10.4,
+    "sug": 55.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "piece",
+        "gm": 39.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "recipe yield",
+        "gm": 907.0
+      }
+    ]
+  },
+  {
+    "word": "CANDRAISINCHOC",
+    "display": "Candies Raisin Choc Coated",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19127",
+    "desc": "Candies, milk chocolate coated raisins",
+    "cal": 390.0,
+    "pro": 4.1,
+    "fat": 14.8,
+    "carb": 68.4,
+    "fib": 3.1,
+    "h2o": 11.2,
+    "sug": 62.2,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      }
+    ]
+  },
+  {
+    "word": "CANDRAISINETS",
+    "display": "Candies RAISINETS",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19149",
+    "desc": "Candies, NESTLE, RAISINETS Chocolate Covered Raisins",
+    "cal": 422.0,
+    "pro": 4.4,
+    "fat": 17.0,
+    "carb": 71.0,
+    "fib": 2.2,
+    "h2o": 6.4,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 1.58 oz bag",
+        "gm": 45.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving fun size",
+        "gm": 48.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 0.25 cup",
+        "gm": 45.0
+      }
+    ]
+  },
+  {
+    "word": "CANDREESEFAST",
+    "display": "Candies REESE\u2019S FAST BREAK",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19252",
+    "desc": "Candies, REESE'S, FAST BREAK, milk chocolate peanut butter and soft nougats",
+    "cal": 474.0,
+    "pro": 8.7,
+    "fat": 23.4,
+    "carb": 61.6,
+    "fib": 2.9,
+    "h2o": 4.1,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "oz bar",
+        "gm": 56.0
+      }
+    ]
+  },
+  {
+    "word": "CANDREESENURAGEOUS",
+    "display": "Candies REESE\u2019S NUTRAGEOUS",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19239",
+    "desc": "Candies, REESE'S NUTRAGEOUS Candy Bar",
+    "cal": 517.0,
+    "pro": 11.3,
+    "fat": 32.1,
+    "carb": 52.8,
+    "fib": 3.9,
+    "h2o": 1.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 1.92 oz",
+        "gm": 54.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "bars",
+        "gm": 34.0
+      }
+    ]
+  },
+  {
+    "word": "CANDREESESCUPS",
+    "display": "Candies REESE\u2019S CUPS",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19150",
+    "desc": "Candies, REESE'S Peanut Butter Cups",
+    "cal": 515.0,
+    "pro": 10.2,
+    "fat": 30.5,
+    "carb": 55.4,
+    "fib": 3.6,
+    "h2o": 1.4,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package 0.6 oz 1 cup",
+        "gm": 17.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package 1.6 oz 2 cups",
+        "gm": 45.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "miniature",
+        "gm": 7.0
+      }
+    ]
+  },
+  {
+    "word": "CANDREESESPIECES",
+    "display": "Candies REESE\u2019S PIECES",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19151",
+    "desc": "Candies, REESE'S PIECES Candy",
+    "cal": 497.0,
+    "pro": 12.5,
+    "fat": 24.8,
+    "carb": 59.9,
+    "fib": 3.0,
+    "h2o": 1.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.25,
+        "desc": "cup",
+        "gm": 47.0
+      },
+      {
+        "amt": 10.0,
+        "desc": "pieces",
+        "gm": 8.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package 1.63 oz",
+        "gm": 46.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package (1.6 oz)",
+        "gm": 46.0
+      }
+    ]
+  },
+  {
+    "word": "CANDREESESTICKS",
+    "display": "Candies REESESTICKS",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19249",
+    "desc": "Candies, HERSHEY, REESESTICKS crispy wafers, peanut butter, milk chocolate",
+    "cal": 521.0,
+    "pro": 9.5,
+    "fat": 31.3,
+    "carb": 55.4,
+    "fib": 3.3,
+    "h2o": 1.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 1.5 oz",
+        "gm": 42.0
+      }
+    ]
+  },
+  {
+    "word": "CANDRESESBITES",
+    "display": "Candies REESE\u2019S BITES",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19238",
+    "desc": "Candies, REESE'S BITES",
+    "cal": 521.0,
+    "pro": 11.3,
+    "fat": 29.9,
+    "carb": 55.2,
+    "fib": 3.1,
+    "h2o": 1.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 16.0,
+        "desc": "pieces",
+        "gm": 39.0
+      }
+    ]
+  },
+  {
+    "word": "CANDROLO",
+    "display": "Candies ROLO",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19152",
+    "desc": "Candies, ROLO Caramels in Milk Chocolate",
+    "cal": 474.0,
+    "pro": 5.1,
+    "fat": 20.9,
+    "carb": 68.0,
+    "fib": 0.9,
+    "h2o": 4.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package 1 package",
+        "gm": 48.0
+      },
+      {
+        "amt": 7.0,
+        "desc": "pieces",
+        "gm": 42.0
+      }
+    ]
+  },
+  {
+    "word": "CANDSKITTLES",
+    "display": "Candies SKITTLES Original",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19370",
+    "desc": "Candies, MARS SNACKFOOD US, SKITTLES Original Bite Size Candies",
+    "cal": 405.0,
+    "pro": 0.2,
+    "fat": 4.4,
+    "carb": 90.8,
+    "fib": 0.0,
+    "h2o": 3.8,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 2.17 oz pack",
+        "gm": 62.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 205.0
+      },
+      {
+        "amt": 10.0,
+        "desc": "pieces",
+        "gm": 10.7
+      },
+      {
+        "amt": 1.0,
+        "desc": "package fun size",
+        "gm": 20.0
+      }
+    ]
+  },
+  {
+    "word": "CANDSKOR",
+    "display": "Candies SKOR",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19136",
+    "desc": "Candies, HERSHEY'S SKOR Toffee Bar",
+    "cal": 541.0,
+    "pro": 3.1,
+    "fat": 30.4,
+    "carb": 63.7,
+    "fib": 1.3,
+    "h2o": 1.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 1.4 oz",
+        "gm": 39.0
+      }
+    ]
+  },
+  {
+    "word": "CANDSNICKERS",
+    "display": "Candies SNICKERS",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19155",
+    "desc": "Candies, MARS SNACKFOOD US, SNICKERS Bar",
+    "cal": 491.0,
+    "pro": 7.5,
+    "fat": 23.9,
+    "carb": 61.5,
+    "fib": 2.3,
+    "h2o": 5.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar (2 oz)",
+        "gm": 57.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar, fun size",
+        "gm": 15.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar, king size (4 oz)",
+        "gm": 113.0
+      }
+    ]
+  },
+  {
+    "word": "CANDSNICKERSALMOND",
+    "display": "Candies SNICKERS Almond",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19302",
+    "desc": "Candies, MARS SNACKFOOD US, SNICKERS Almond bar",
+    "cal": 472.0,
+    "pro": 5.4,
+    "fat": 22.4,
+    "carb": 64.7,
+    "fib": 2.6,
+    "h2o": 5.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 1.76 oz bar",
+        "gm": 50.0
+      }
+    ]
+  },
+  {
+    "word": "CANDSNICKERSPOP",
+    "display": "Candies SNICKERS POP\u2019ABLES",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19306",
+    "desc": "Candies, MARS SNACKFOOD US, POP'ABLES SNICKERS Brand Bite Size Candies",
+    "cal": 480.0,
+    "pro": 7.2,
+    "fat": 24.3,
+    "carb": 61.1,
+    "fib": 2.3,
+    "h2o": 5.8,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 13 pieces",
+        "gm": 39.0
+      }
+    ]
+  },
+  {
+    "word": "CANDSPECIALDARK",
+    "display": "Candies SPECIAL DARK",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19164",
+    "desc": "Candies, SPECIAL DARK Chocolate Bar",
+    "cal": 556.0,
+    "pro": 5.5,
+    "fat": 32.4,
+    "carb": 60.5,
+    "fib": 6.5,
+    "h2o": 0.9,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 1.45 oz",
+        "gm": 41.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 2.6 oz",
+        "gm": 73.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "blocks",
+        "gm": 42.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar",
+        "gm": 17.0
+      }
+    ]
+  },
+  {
+    "word": "CANDSYMPHONY",
+    "display": "Candies SYMPHONY",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19093",
+    "desc": "Candies, SYMPHONY Milk Chocolate Bar",
+    "cal": 531.0,
+    "pro": 8.5,
+    "fat": 30.6,
+    "carb": 58.0,
+    "fib": 1.7,
+    "h2o": 0.9,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 1.5 oz",
+        "gm": 42.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 2.4 oz",
+        "gm": 68.0
+      }
+    ]
+  },
+  {
+    "word": "CANDTAFFY",
+    "display": "Candies Taffy",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19382",
+    "desc": "Candies, taffy, prepared-from-recipe",
+    "cal": 397.0,
+    "pro": 0.0,
+    "fat": 3.3,
+    "carb": 91.6,
+    "fib": 0.0,
+    "h2o": 4.8,
+    "sug": 68.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "piece",
+        "gm": 15.0
+      }
+    ]
+  },
+  {
+    "word": "CANDTAMARIND",
+    "display": "Candies Tamarind",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19921",
+    "desc": "Candies, Tamarind",
+    "cal": 368.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 92.0,
+    "fib": 2.5,
+    "h2o": 2.5,
+    "sug": 78.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      }
+    ]
+  },
+  {
+    "word": "CANDTOBLERONE",
+    "display": "Candies TOBLERONE",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19001",
+    "desc": "Candies, TOBLERONE, milk chocolate with honey and almond nougat",
+    "cal": 525.0,
+    "pro": 5.7,
+    "fat": 28.6,
+    "carb": 61.2,
+    "fib": 2.5,
+    "h2o": 3.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar",
+        "gm": 35.0
+      }
+    ]
+  },
+  {
+    "word": "CANDTOFFE",
+    "display": "Candies Toffee",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19383",
+    "desc": "Candies, toffee, prepared-from-recipe",
+    "cal": 560.0,
+    "pro": 1.1,
+    "fat": 32.8,
+    "carb": 64.7,
+    "fib": 0.0,
+    "h2o": 0.6,
+    "sug": 63.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "piece",
+        "gm": 12.0
+      }
+    ]
+  },
+  {
+    "word": "CANDTOOTSIE",
+    "display": "Candies TOOTSIE ROLL",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19064",
+    "desc": "Candies, TOOTSIE ROLL, chocolate-flavor roll",
+    "cal": 387.0,
+    "pro": 1.6,
+    "fat": 3.3,
+    "carb": 87.7,
+    "fib": 0.1,
+    "h2o": 6.7,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 6 pieces",
+        "gm": 40.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "piece",
+        "gm": 6.6
+      }
+    ]
+  },
+  {
+    "word": "CANDTWIX",
+    "display": "Candies TWIX Peanut Cookie Bar",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19161",
+    "desc": "Candies, MARS SNACKFOOD US, TWIX Peanut Butter Cookie Bars",
+    "cal": 536.0,
+    "pro": 9.2,
+    "fat": 32.7,
+    "carb": 54.1,
+    "fib": 3.1,
+    "h2o": 1.8,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package (1.89 oz, 2 bars)",
+        "gm": 54.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package (2.06 oz, 2 bars)",
+        "gm": 58.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package (1.77 oz)",
+        "gm": 50.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package (9.43 oz)",
+        "gm": 267.0
+      }
+    ]
+  },
+  {
+    "word": "CANDTWIZZLERBITES",
+    "display": "Candies TWIZZLERS CHERRY BITES",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19067",
+    "desc": "Candies, TWIZZLERS CHERRY BITES",
+    "cal": 338.0,
+    "pro": 3.0,
+    "fat": 1.7,
+    "carb": 79.4,
+    "fib": 0.1,
+    "h2o": 15.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 18.0,
+        "desc": "pieces",
+        "gm": 40.0
+      }
+    ]
+  },
+  {
+    "word": "CANDTWIZZLERNIBS",
+    "display": "Candies TWIZZLERS CHERRY BITS",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19092",
+    "desc": "Candies, TWIZZLERS NIBS CHERRY BITS",
+    "cal": 347.0,
+    "pro": 2.3,
+    "fat": 2.6,
+    "carb": 79.4,
+    "fib": 0.6,
+    "h2o": 15.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 27.0,
+        "desc": "pieces",
+        "gm": 40.0
+      }
+    ]
+  },
+  {
+    "word": "CANDWHATCHA",
+    "display": "Candies WHATCHAMACALLIT",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19162",
+    "desc": "Candies, WHATCHAMACALLIT Candy Bar",
+    "cal": 494.0,
+    "pro": 8.0,
+    "fat": 23.7,
+    "carb": 63.2,
+    "fib": 1.9,
+    "h2o": 3.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar 1.7 oz",
+        "gm": 48.0
+      }
+    ]
+  },
+  {
+    "word": "CANDWHIRCHOC",
+    "display": "Candies White choc",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19087",
+    "desc": "Candies, white chocolate",
+    "cal": 539.0,
+    "pro": 5.9,
+    "fat": 32.1,
+    "carb": 59.2,
+    "fib": 0.2,
+    "h2o": 1.3,
+    "sug": 59.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bar (3 oz)",
+        "gm": 85.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 14.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup chips",
+        "gm": 170.0
+      }
+    ]
+  },
+  {
+    "word": "CANDYORK",
+    "display": "Candies YORK ",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19091",
+    "desc": "Candies, YORK Peppermint Pattie",
+    "cal": 384.0,
+    "pro": 2.2,
+    "fat": 7.2,
+    "carb": 81.0,
+    "fib": 2.0,
+    "h2o": 9.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "patty 1.5 oz",
+        "gm": 43.0
       }
     ]
   },
@@ -15143,7 +17519,7 @@ export const FOODS: Food[] = [
     "word": "FLAN",
     "display": "Flan",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "19232",
     "desc": "Flan, caramel custard, dry mix, prepared with whole milk",
@@ -15637,6 +18013,171 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "leg",
         "gm": 45.0
+      }
+    ]
+  },
+  {
+    "word": "FROSTINGCHOC",
+    "display": "Frosting Choc",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19226",
+    "desc": "Frostings, chocolate, creamy, ready-to-eat",
+    "cal": 397.0,
+    "pro": 1.1,
+    "fat": 17.6,
+    "carb": 63.2,
+    "fib": 0.9,
+    "h2o": 17.0,
+    "sug": 57.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "tbsp creamy",
+        "gm": 41.0
+      }
+    ]
+  },
+  {
+    "word": "FROSTINGCOCONUT",
+    "display": "Frosting Coconut",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19227",
+    "desc": "Frostings, coconut-nut, ready-to-eat",
+    "cal": 433.0,
+    "pro": 1.5,
+    "fat": 24.0,
+    "carb": 52.7,
+    "fib": 2.5,
+    "h2o": 21.0,
+    "sug": 40.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.08,
+        "desc": "package",
+        "gm": 38.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "tbsp",
+        "gm": 35.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package (16 oz)",
+        "gm": 462.0
+      }
+    ]
+  },
+  {
+    "word": "FROSTINGCREAM",
+    "display": "Frosting Cream Cheese",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19228",
+    "desc": "Frostings, cream cheese-flavor, ready-to-eat",
+    "cal": 415.0,
+    "pro": 0.1,
+    "fat": 17.3,
+    "carb": 67.3,
+    "fib": 0.0,
+    "h2o": 15.1,
+    "sug": 63.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "tbsp creamy",
+        "gm": 33.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "tbsp whipped",
+        "gm": 24.0
+      }
+    ]
+  },
+  {
+    "word": "FROSTINGGLAZE",
+    "display": "Frosting Glaze",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19375",
+    "desc": "Frostings, glaze, prepared-from-recipe",
+    "cal": 341.0,
+    "pro": 0.4,
+    "fat": 0.5,
+    "carb": 83.7,
+    "fib": 0.0,
+    "h2o": 15.3,
+    "sug": 80.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "recipe yield",
+        "gm": 327.0
+      }
+    ]
+  },
+  {
+    "word": "FROSTINGVANILLA",
+    "display": "Frosting Vanilla",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19230",
+    "desc": "Frostings, vanilla, creamy, ready-to-eat",
+    "cal": 418.0,
+    "pro": 0.0,
+    "fat": 16.2,
+    "carb": 67.9,
+    "fib": 0.0,
+    "h2o": 15.1,
+    "sug": 63.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.08,
+        "desc": "package",
+        "gm": 38.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "tbsp creamy",
+        "gm": 33.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package (16 oz)",
+        "gm": 462.0
       }
     ]
   },
@@ -28251,7 +30792,8 @@ export const FOODS: Food[] = [
     "word": "POPTARTBLUE",
     "display": "Pop Tart Blueberry",
     "groups": [
-      "prepared"
+      "sweets",
+      "grain"
     ],
     "ndb": "18476",
     "desc": "Toaster Pastries, KELLOGG, KELLOGG'S POP TARTS, Blueberry",
@@ -28279,7 +30821,8 @@ export const FOODS: Food[] = [
     "word": "POPTARTFRSTBLUE",
     "display": "Pop Tart Frost Blueberry",
     "groups": [
-      "prepared"
+      "sweets",
+      "grain"
     ],
     "ndb": "18477",
     "desc": "Toaster Pastries, KELLOGG, KELLOGG'S POP TARTS, Frosted blueberry",
@@ -28307,7 +30850,8 @@ export const FOODS: Food[] = [
     "word": "POPTARTFRSTBRWN",
     "display": "Pop Tart Frost Brown",
     "groups": [
-      "prepared"
+      "sweets",
+      "grain"
     ],
     "ndb": "18479",
     "desc": "Toaster Pastries, KELLOGG, KELLOGG'S POP TARTS, Frosted brown sugar cinnamon",
@@ -28335,7 +30879,8 @@ export const FOODS: Food[] = [
     "word": "POPTARTFRSTCHERRY",
     "display": "Pop Tart Frost Cherry",
     "groups": [
-      "prepared"
+      "sweets",
+      "grain"
     ],
     "ndb": "18481",
     "desc": "Toaster Pastries, KELLOGG, KELLOGG'S POP TARTS, Frosted cherry",
@@ -28363,7 +30908,8 @@ export const FOODS: Food[] = [
     "word": "POPTARTFRSTCHOC",
     "display": "Pop Tart Frost Choc",
     "groups": [
-      "prepared"
+      "sweets",
+      "grain"
     ],
     "ndb": "18482",
     "desc": "Toaster Pastries, KELLOGG, KELLOGG'S POP TARTS, Frosted chocolate fudge",
@@ -28391,7 +30937,8 @@ export const FOODS: Food[] = [
     "word": "POPTARTFRSTRASP",
     "display": "Pop Tart Frost Raspberry",
     "groups": [
-      "prepared"
+      "sweets",
+      "grain"
     ],
     "ndb": "18486",
     "desc": "Toaster Pastries, KELLOGG, KELLOGG'S POP TARTS, Frosted raspberry",
@@ -28419,7 +30966,8 @@ export const FOODS: Food[] = [
     "word": "POPTARTFRSTSTRAW",
     "display": "Pop Tart Frost Strawberry",
     "groups": [
-      "prepared"
+      "sweets",
+      "grain"
     ],
     "ndb": "18497",
     "desc": "Toaster Pastries, KELLOGG, KELLOGG'S LOW FAT POP TARTS, Frosted strawberry",
@@ -28447,7 +30995,8 @@ export const FOODS: Food[] = [
     "word": "POPTARTFRSTWILD",
     "display": "Pop Tart Frost Wild Berry",
     "groups": [
-      "prepared"
+      "sweets",
+      "grain"
     ],
     "ndb": "18490",
     "desc": "Toaster Pastries, KELLOGG, KELLOGG'S POP TARTS, Frosted wild berry",
@@ -28475,7 +31024,8 @@ export const FOODS: Food[] = [
     "word": "POPTARTSMORES",
     "display": "Pop Tart Smores",
     "groups": [
-      "prepared"
+      "sweets",
+      "grain"
     ],
     "ndb": "18487",
     "desc": "Toaster Pastries, KELLOGG, KELLOGG'S POP TARTS, S'mores",
@@ -28503,7 +31053,8 @@ export const FOODS: Food[] = [
     "word": "POPTARTSTRAW",
     "display": "Pop Tart Strawberry",
     "groups": [
-      "prepared"
+      "sweets",
+      "grain"
     ],
     "ndb": "18488",
     "desc": "Toaster Pastries, KELLOGG, KELLOGG'S POP TARTS, Strawberry",
@@ -36059,7 +38610,7 @@ export const FOODS: Food[] = [
     "word": "STRUDEL",
     "display": "Strudel",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18354",
     "desc": "Strudel, apple",
@@ -41633,2547 +44184,6 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "toast, Gerber Zwieback",
         "gm": 7.0
-      }
-    ]
-  },
-  {
-    "word": "FROSTINGVANILLA",
-    "display": "Frosting Vanilla",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19230",
-    "desc": "Frostings, vanilla, creamy, ready-to-eat",
-    "cal": 418.0,
-    "pro": 0.0,
-    "fat": 16.2,
-    "carb": 67.9,
-    "fib": 0.0,
-    "h2o": 15.1,
-    "sug": 63.1,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 0.08,
-        "desc": "package",
-        "gm": 38.0
-      },
-      {
-        "amt": 2.0,
-        "desc": "tbsp creamy",
-        "gm": 33.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "package (16 oz)",
-        "gm": 462.0
-      }
-    ]
-  },
-  {
-    "word": "FROSTINGCHOC",
-    "display": "Frosting Choc",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19226",
-    "desc": "Frostings, chocolate, creamy, ready-to-eat",
-    "cal": 397.0,
-    "pro": 1.1,
-    "fat": 17.6,
-    "carb": 63.2,
-    "fib": 0.9,
-    "h2o": 17.0,
-    "sug": 57.7,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 2.0,
-        "desc": "tbsp creamy",
-        "gm": 41.0
-      }
-    ]
-  },
-  {
-    "word": "FROSTINGCREAM",
-    "display": "Frosting Cream Cheese",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19228",
-    "desc": "Frostings, cream cheese-flavor, ready-to-eat",
-    "cal": 415.0,
-    "pro": 0.1,
-    "fat": 17.3,
-    "carb": 67.3,
-    "fib": 0.0,
-    "h2o": 15.1,
-    "sug": 63.5,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 2.0,
-        "desc": "tbsp creamy",
-        "gm": 33.0
-      },
-      {
-        "amt": 2.0,
-        "desc": "tbsp whipped",
-        "gm": 24.0
-      }
-    ]
-  },
-  {
-    "word": "FROSTINGGLAZE",
-    "display": "Frosting Glaze",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19375",
-    "desc": "Frostings, glaze, prepared-from-recipe",
-    "cal": 341.0,
-    "pro": 0.4,
-    "fat": 0.5,
-    "carb": 83.7,
-    "fib": 0.0,
-    "h2o": 15.3,
-    "sug": 80.4,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "recipe yield",
-        "gm": 327.0
-      }
-    ]
-  },
-  {
-    "word": "FROSTINGCOCONUT",
-    "display": "Frosting Coconut",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19227",
-    "desc": "Frostings, coconut-nut, ready-to-eat",
-    "cal": 433.0,
-    "pro": 1.5,
-    "fat": 24.0,
-    "carb": 52.7,
-    "fib": 2.5,
-    "h2o": 21.0,
-    "sug": 40.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 0.08,
-        "desc": "package",
-        "gm": 38.0
-      },
-      {
-        "amt": 2.0,
-        "desc": "tbsp",
-        "gm": 35.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "package (16 oz)",
-        "gm": 462.0
-      }
-    ]
-  },
-  {
-    "word": "CANDFUDGEPEANUT",
-    "display": "Candies Fudge Peanut Butter",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19102",
-    "desc": "Candies, fudge, peanut butter, prepared-from-recipe",
-    "cal": 387.0,
-    "pro": 3.8,
-    "fat": 6.6,
-    "carb": 77.8,
-    "fib": 0.7,
-    "h2o": 10.9,
-    "sug": 73.4,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "piece",
-        "gm": 16.0
-      }
-    ]
-  },
-  {
-    "word": "CANDFUDGEVANILLA",
-    "display": "Candies Fudge Vanilla",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19103",
-    "desc": "Candies, fudge, vanilla, prepared-from-recipe",
-    "cal": 383.0,
-    "pro": 1.1,
-    "fat": 5.5,
-    "carb": 82.2,
-    "fib": 0.0,
-    "h2o": 10.8,
-    "sug": 79.8,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      }
-    ]
-  },
-  {
-    "word": "CANDFUDGEVANILLANUTS",
-    "display": "Candies Fudge Vanilla with Nuts",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19104",
-    "desc": "Candies, fudge, vanilla with nuts",
-    "cal": 435.0,
-    "pro": 3.0,
-    "fat": 13.7,
-    "carb": 74.6,
-    "fib": 0.9,
-    "h2o": 8.0,
-    "sug": 71.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      }
-    ]
-  },
-  {
-    "word": "CANDBITTERSCOTCH",
-    "display": "Candies Butterscotch",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19070",
-    "desc": "Candies, butterscotch",
-    "cal": 391.0,
-    "pro": 0.0,
-    "fat": 3.3,
-    "carb": 90.4,
-    "fib": 0.0,
-    "h2o": 5.2,
-    "sug": 80.5,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      },
-      {
-        "amt": 3.0,
-        "desc": "pieces",
-        "gm": 16.0
-      }
-    ]
-  },
-  {
-    "word": "CANDHALAVAH",
-    "display": "Candies Halavah",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19117",
-    "desc": "Candies, halavah, plain",
-    "cal": 469.0,
-    "pro": 12.5,
-    "fat": 21.5,
-    "carb": 60.5,
-    "fib": 4.5,
-    "h2o": 3.7,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      }
-    ]
-  },
-  {
-    "word": "CANDPEANUTSCHOC",
-    "display": "Candies Peanuts Choc Coated",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19126",
-    "desc": "Candies, milk chocolate coated peanuts",
-    "cal": 519.0,
-    "pro": 13.1,
-    "fat": 33.5,
-    "carb": 49.7,
-    "fib": 4.7,
-    "h2o": 1.9,
-    "sug": 37.6,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 149.0
-      },
-      {
-        "amt": 10.0,
-        "desc": "pieces",
-        "gm": 40.0
-      }
-    ]
-  },
-  {
-    "word": "CANDRAISINCHOC",
-    "display": "Candies Raisin Choc Coated",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19127",
-    "desc": "Candies, milk chocolate coated raisins",
-    "cal": 390.0,
-    "pro": 4.1,
-    "fat": 14.8,
-    "carb": 68.4,
-    "fib": 3.1,
-    "h2o": 11.2,
-    "sug": 62.2,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      }
-    ]
-  },
-  {
-    "word": "CANDPRALINE",
-    "display": "Candies Praline",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19216",
-    "desc": "Candies, praline, prepared-from-recipe",
-    "cal": 485.0,
-    "pro": 3.3,
-    "fat": 25.9,
-    "carb": 59.6,
-    "fib": 3.5,
-    "h2o": 10.4,
-    "sug": 55.8,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "piece",
-        "gm": 39.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "recipe yield",
-        "gm": 907.0
-      }
-    ]
-  },
-  {
-    "word": "CANDCHOCFUDGEMARSH",
-    "display": "Candies Choc Fudge Marshmallow",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19379",
-    "desc": "Candies, fudge, chocolate marshmallow, prepared-from-recipe",
-    "cal": 453.0,
-    "pro": 2.3,
-    "fat": 17.5,
-    "carb": 71.3,
-    "fib": 1.7,
-    "h2o": 7.8,
-    "sug": 64.1,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "piece",
-        "gm": 20.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "recipe yield (60 pieces)",
-        "gm": 1229.0
-      }
-    ]
-  },
-  {
-    "word": "CANDTAFFY",
-    "display": "Candies Taffy",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19382",
-    "desc": "Candies, taffy, prepared-from-recipe",
-    "cal": 397.0,
-    "pro": 0.0,
-    "fat": 3.3,
-    "carb": 91.6,
-    "fib": 0.0,
-    "h2o": 4.8,
-    "sug": 68.5,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "piece",
-        "gm": 15.0
-      }
-    ]
-  },
-  {
-    "word": "CANDPEANUTBRITTLE",
-    "display": "Candies Peanut Brittle",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19148",
-    "desc": "Candies, peanut brittle, prepared-from-recipe",
-    "cal": 486.0,
-    "pro": 7.6,
-    "fat": 19.0,
-    "carb": 71.2,
-    "fib": 2.5,
-    "h2o": 0.7,
-    "sug": 51.3,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      }
-    ]
-  },
-  {
-    "word": "CANDTOFFE",
-    "display": "Candies Toffee",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19383",
-    "desc": "Candies, toffee, prepared-from-recipe",
-    "cal": 560.0,
-    "pro": 1.1,
-    "fat": 32.8,
-    "carb": 64.7,
-    "fib": 0.0,
-    "h2o": 0.6,
-    "sug": 63.5,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "piece",
-        "gm": 12.0
-      }
-    ]
-  },
-  {
-    "word": "CANDTAMARIND",
-    "display": "Candies Tamarind",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19921",
-    "desc": "Candies, Tamarind",
-    "cal": 368.0,
-    "pro": 0.0,
-    "fat": 0.0,
-    "carb": 92.0,
-    "fib": 2.5,
-    "h2o": 2.5,
-    "sug": 78.6,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      }
-    ]
-  },
-  {
-    "word": "CANDDIVINITY",
-    "display": "Candies Divinity",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19384",
-    "desc": "Candies, divinity, prepared-from-recipe",
-    "cal": 364.0,
-    "pro": 1.3,
-    "fat": 0.1,
-    "carb": 89.0,
-    "fib": 0.0,
-    "h2o": 9.2,
-    "sug": 79.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "piece",
-        "gm": 11.0
-      }
-    ]
-  },
-  {
-    "word": "CANDCHOCSEMI",
-    "display": "Candies Chos Semisweet",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19080",
-    "desc": "Candies, semisweet chocolate",
-    "cal": 480.0,
-    "pro": 4.2,
-    "fat": 30.0,
-    "carb": 63.9,
-    "fib": 5.9,
-    "h2o": 0.7,
-    "sug": 54.5,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving",
-        "gm": 14.5
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup large chips",
-        "gm": 182.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup mini chips",
-        "gm": 173.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz (approx 60 pcs)",
-        "gm": 28.35
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup chips (6 oz package)",
-        "gm": 168.0
-      }
-    ]
-  },
-  {
-    "word": "CANDCHOCSWEET",
-    "display": "Candies Choc Sweet",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19081",
-    "desc": "Candies, sweet chocolate",
-    "cal": 507.0,
-    "pro": 3.9,
-    "fat": 34.2,
-    "carb": 60.4,
-    "fib": 5.5,
-    "h2o": 0.5,
-    "sug": 51.5,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar (1.45 oz)",
-        "gm": 41.0
-      }
-    ]
-  },
-  {
-    "word": "CANDWHIRCHOC",
-    "display": "Candies White choc",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19087",
-    "desc": "Candies, white chocolate",
-    "cal": 539.0,
-    "pro": 5.9,
-    "fat": 32.1,
-    "carb": 59.2,
-    "fib": 0.2,
-    "h2o": 1.3,
-    "sug": 59.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar (3 oz)",
-        "gm": 85.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "tbsp",
-        "gm": 14.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup chips",
-        "gm": 170.0
-      }
-    ]
-  },
-  {
-    "word": "CANDTOBLERONE",
-    "display": "Candies TOBLERONE",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19001",
-    "desc": "Candies, TOBLERONE, milk chocolate with honey and almond nougat",
-    "cal": 525.0,
-    "pro": 5.7,
-    "fat": 28.6,
-    "carb": 61.2,
-    "fib": 2.5,
-    "h2o": 3.3,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar",
-        "gm": 35.0
-      }
-    ]
-  },
-  {
-    "word": "CANDALMONDSOLITARES",
-    "display": "Candies ALMOND SOLITARIES",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19084",
-    "desc": "Candies, HERSHEY'S GOLDEN ALMOND SOLITAIRES",
-    "cal": 569.0,
-    "pro": 12.0,
-    "fat": 37.1,
-    "carb": 46.9,
-    "fib": 4.4,
-    "h2o": 1.3,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 13.0,
-        "desc": "pieces",
-        "gm": 41.0
-      }
-    ]
-  },
-  {
-    "word": "CANDYORK",
-    "display": "Candies YORK ",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19091",
-    "desc": "Candies, YORK Peppermint Pattie",
-    "cal": 384.0,
-    "pro": 2.2,
-    "fat": 7.2,
-    "carb": 81.0,
-    "fib": 2.0,
-    "h2o": 9.0,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "patty 1.5 oz",
-        "gm": 43.0
-      }
-    ]
-  },
-  {
-    "word": "CANDTWIZZLERNIBS",
-    "display": "Candies TWIZZLERS CHERRY BITS",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19092",
-    "desc": "Candies, TWIZZLERS NIBS CHERRY BITS",
-    "cal": 347.0,
-    "pro": 2.3,
-    "fat": 2.6,
-    "carb": 79.4,
-    "fib": 0.6,
-    "h2o": 15.0,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 27.0,
-        "desc": "pieces",
-        "gm": 40.0
-      }
-    ]
-  },
-  {
-    "word": "CANDTWIZZLERBITES",
-    "display": "Candies TWIZZLERS CHERRY BITES",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19067",
-    "desc": "Candies, TWIZZLERS CHERRY BITES",
-    "cal": 338.0,
-    "pro": 3.0,
-    "fat": 1.7,
-    "carb": 79.4,
-    "fib": 0.1,
-    "h2o": 15.0,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 18.0,
-        "desc": "pieces",
-        "gm": 40.0
-      }
-    ]
-  },
-  {
-    "word": "CANDBITOHONEY",
-    "display": "Candies BIT-O\u2019-HONEY",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19068",
-    "desc": "Candies, NESTLE, BIT-O'-HONEY Candy Chews",
-    "cal": 375.0,
-    "pro": 2.0,
-    "fat": 7.5,
-    "carb": 80.9,
-    "fib": 0.2,
-    "h2o": 8.3,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 6 pieces",
-        "gm": 40.0
-      }
-    ]
-  },
-  {
-    "word": "CANDBUTTERFINGER",
-    "display": "Candies BUTTERFINGER",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19069",
-    "desc": "Candies, NESTLE, BUTTERFINGER Bar",
-    "cal": 459.0,
-    "pro": 5.4,
-    "fat": 18.9,
-    "carb": 72.9,
-    "fib": 2.0,
-    "h2o": 1.2,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 2.1 oz bar",
-        "gm": 60.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 1 fun size bar 0.65 oz",
-        "gm": 18.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 0.75 oz bar",
-        "gm": 21.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar bite size",
-        "gm": 7.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar king size",
-        "gm": 108.0
-      },
-      {
-        "amt": 10.0,
-        "desc": "Butterfinger BB's",
-        "gm": 26.0
-      },
-      {
-        "amt": 2.0,
-        "desc": "tbsp",
-        "gm": 25.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup BB's",
-        "gm": 174.0
-      }
-    ]
-  },
-  {
-    "word": "CAND5THAVE",
-    "display": "Candies 5TH AVENUE",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19098",
-    "desc": "Candies, 5TH AVENUE Candy Bar",
-    "cal": 482.0,
-    "pro": 8.8,
-    "fat": 24.0,
-    "carb": 62.7,
-    "fib": 3.1,
-    "h2o": 2.3,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar 2 oz",
-        "gm": 56.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar snack size",
-        "gm": 16.0
-      }
-    ]
-  },
-  {
-    "word": "CANDGOOBERS",
-    "display": "Candies GOOBERS",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19105",
-    "desc": "Candies, NESTLE, GOOBERS Chocolate Covered Peanuts",
-    "cal": 512.0,
-    "pro": 9.7,
-    "fat": 34.0,
-    "carb": 53.0,
-    "fib": 9.7,
-    "h2o": 1.9,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "package 1.375 oz",
-        "gm": 39.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 0.25 cup",
-        "gm": 41.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving fun size",
-        "gm": 48.0
-      }
-    ]
-  },
-  {
-    "word": "CANDCARMELO",
-    "display": "Candies CARAMELLO",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19075",
-    "desc": "Candies, CARAMELLO Candy Bar",
-    "cal": 462.0,
-    "pro": 6.2,
-    "fat": 21.2,
-    "carb": 63.8,
-    "fib": 1.2,
-    "h2o": 6.8,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar 1.25 oz",
-        "gm": 35.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar 1.6 oz",
-        "gm": 45.0
-      },
-      {
-        "amt": 6.0,
-        "desc": "blocks",
-        "gm": 43.0
-      }
-    ]
-  },
-  {
-    "word": "CANDMRGOODBAR",
-    "display": "Candies MR. GOODBAR",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19143",
-    "desc": "Candies, MR. GOODBAR Chocolate Bar",
-    "cal": 538.0,
-    "pro": 10.2,
-    "fat": 33.2,
-    "carb": 54.3,
-    "fib": 3.8,
-    "h2o": 0.5,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar (1.75 oz)",
-        "gm": 49.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar (2.6 oz)",
-        "gm": 73.0
-      }
-    ]
-  },
-  {
-    "word": "CANDSYMPHONY",
-    "display": "Candies SYMPHONY",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19093",
-    "desc": "Candies, SYMPHONY Milk Chocolate Bar",
-    "cal": 531.0,
-    "pro": 8.5,
-    "fat": 30.6,
-    "carb": 58.0,
-    "fib": 1.7,
-    "h2o": 0.9,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar 1.5 oz",
-        "gm": 42.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar 2.4 oz",
-        "gm": 68.0
-      }
-    ]
-  },
-  {
-    "word": "CANDKITKAT",
-    "display": "Candies KIT KAT",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19109",
-    "desc": "Candies, KIT KAT Wafer Bar",
-    "cal": 518.0,
-    "pro": 6.5,
-    "fat": 26.0,
-    "carb": 64.6,
-    "fib": 1.0,
-    "h2o": 1.6,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar (1.5 oz)",
-        "gm": 42.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar, miniature (.35 oz)",
-        "gm": 10.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar (1.625 oz)",
-        "gm": 46.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar (2.8 oz)",
-        "gm": 78.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar (3.375 oz)",
-        "gm": 96.0
-      }
-    ]
-  },
-  {
-    "word": "CANDKRACKEL",
-    "display": "Candies KRACKLE",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19110",
-    "desc": "Candies, KRACKEL Chocolate Bar",
-    "cal": 512.0,
-    "pro": 6.6,
-    "fat": 26.6,
-    "carb": 64.0,
-    "fib": 2.2,
-    "h2o": 1.2,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar 1.45 oz",
-        "gm": 41.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar 2 oz",
-        "gm": 56.0
-      },
-      {
-        "amt": 3.0,
-        "desc": "blocks",
-        "gm": 37.0
-      }
-    ]
-  },
-  {
-    "word": "CANDBABYRUTH",
-    "display": "Candies BABY RUTH",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19111",
-    "desc": "Candies, NESTLE, BABY RUTH Bar",
-    "cal": 459.0,
-    "pro": 5.4,
-    "fat": 21.6,
-    "carb": 64.8,
-    "fib": 2.0,
-    "h2o": 7.0,
-    "sug": 54.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 2.1 oz bar",
-        "gm": 60.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving fun size bar 0.65 oz",
-        "gm": 18.0
-      }
-    ]
-  },
-  {
-    "word": "CANDMARSALMONDBAR",
-    "display": "Candies MARS Almond Bar",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19115",
-    "desc": "Candies, MARS SNACKFOOD US, MARS Almond Bar",
-    "cal": 467.0,
-    "pro": 8.1,
-    "fat": 23.0,
-    "carb": 62.7,
-    "fib": 2.0,
-    "h2o": 4.5,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar (1.76 oz)",
-        "gm": 50.0
-      }
-    ]
-  },
-  {
-    "word": "CANDOHHENRY",
-    "display": "Candies OH HENRY!",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19118",
-    "desc": "Candies, NESTLE, OH HENRY! Bar",
-    "cal": 462.0,
-    "pro": 7.7,
-    "fat": 23.0,
-    "carb": 65.5,
-    "fib": 1.9,
-    "h2o": 2.3,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar 2 oz",
-        "gm": 57.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving fun size bar",
-        "gm": 26.0
-      }
-    ]
-  },
-  {
-    "word": "CANDCHUNKY",
-    "display": "Candies CHUNKY",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19119",
-    "desc": "Candies, NESTLE, CHUNKY Bar",
-    "cal": 475.0,
-    "pro": 7.5,
-    "fat": 27.5,
-    "carb": 60.0,
-    "fib": 2.5,
-    "h2o": 2.9,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 1.4 oz bar",
-        "gm": 40.0
-      }
-    ]
-  },
-  {
-    "word": "CANDTWIX",
-    "display": "Candies TWIX Peanut Cookie Bar",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19161",
-    "desc": "Candies, MARS SNACKFOOD US, TWIX Peanut Butter Cookie Bars",
-    "cal": 536.0,
-    "pro": 9.2,
-    "fat": 32.7,
-    "carb": 54.1,
-    "fib": 3.1,
-    "h2o": 1.8,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "package (1.89 oz, 2 bars)",
-        "gm": 54.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "package (2.06 oz, 2 bars)",
-        "gm": 58.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "package (1.77 oz)",
-        "gm": 50.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "package (9.43 oz)",
-        "gm": 267.0
-      }
-    ]
-  },
-  {
-    "word": "CANDWHATCHA",
-    "display": "Candies WHATCHAMACALLIT",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19162",
-    "desc": "Candies, WHATCHAMACALLIT Candy Bar",
-    "cal": 494.0,
-    "pro": 8.0,
-    "fat": 23.7,
-    "carb": 63.2,
-    "fib": 1.9,
-    "h2o": 3.0,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar 1.7 oz",
-        "gm": 48.0
-      }
-    ]
-  },
-  {
-    "word": "CANDSPECIALDARK",
-    "display": "Candies SPECIAL DARK",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19164",
-    "desc": "Candies, SPECIAL DARK Chocolate Bar",
-    "cal": 556.0,
-    "pro": 5.5,
-    "fat": 32.4,
-    "carb": 60.5,
-    "fib": 6.5,
-    "h2o": 0.9,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar 1.45 oz",
-        "gm": 41.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar 2.6 oz",
-        "gm": 73.0
-      },
-      {
-        "amt": 3.0,
-        "desc": "blocks",
-        "gm": 42.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar",
-        "gm": 17.0
-      }
-    ]
-  },
-  {
-    "word": "CANDAFTEREIGHT",
-    "display": "Candies AFTER EIGHT",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19153",
-    "desc": "Candies, NESTLE, AFTER EIGHT Mints",
-    "cal": 432.0,
-    "pro": 1.7,
-    "fat": 11.9,
-    "carb": 79.5,
-    "fib": 2.4,
-    "h2o": 6.3,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 5 mints",
-        "gm": 42.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "piece",
-        "gm": 8.4
-      }
-    ]
-  },
-  {
-    "word": "CANDSNICKERS",
-    "display": "Candies SNICKERS",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19155",
-    "desc": "Candies, MARS SNACKFOOD US, SNICKERS Bar",
-    "cal": 491.0,
-    "pro": 7.5,
-    "fat": 23.9,
-    "carb": 61.5,
-    "fib": 2.3,
-    "h2o": 5.5,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar (2 oz)",
-        "gm": 57.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar, fun size",
-        "gm": 15.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar, king size (4 oz)",
-        "gm": 113.0
-      }
-    ]
-  },
-  {
-    "word": "CABDSTARBURST",
-    "display": "Candies STARBURST ORIGINAL",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19156",
-    "desc": "Candies, MARS SNACKFOOD US, STARBURST Fruit Chews, Original fruits",
-    "cal": 408.0,
-    "pro": 0.4,
-    "fat": 8.2,
-    "carb": 82.6,
-    "fib": 0.0,
-    "h2o": 8.5,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving fun size (8 chews)",
-        "gm": 40.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 2.07 oz pack",
-        "gm": 59.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "piece",
-        "gm": 5.0
-      }
-    ]
-  },
-  {
-    "word": "CANDMMMINIS",
-    "display": "Candies M&M MINIS",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19157",
-    "desc": "Candies, MARS SNACKFOOD US, M&M's MINIs Milk Chocolate Candies",
-    "cal": 502.0,
-    "pro": 4.8,
-    "fat": 23.4,
-    "carb": 68.4,
-    "fib": 2.7,
-    "h2o": 1.2,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 1.0 oz tube",
-        "gm": 30.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 0.50 oz box",
-        "gm": 15.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 1 1.94 oz tube",
-        "gm": 55.0
-      }
-    ]
-  },
-  {
-    "word": "CANDMUSKETEER",
-    "display": "Candies 3 MUSKETEERS",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19159",
-    "desc": "Candies, MARS SNACKFOOD US, 3 MUSKETEERS Bar",
-    "cal": 436.0,
-    "pro": 2.6,
-    "fat": 12.8,
-    "carb": 77.8,
-    "fib": 1.5,
-    "h2o": 5.8,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 2.13 oz bar",
-        "gm": 60.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 2 fun size bars",
-        "gm": 28.0
-      }
-    ]
-  },
-  {
-    "word": "CANDRAISINETS",
-    "display": "Candies RAISINETS",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19149",
-    "desc": "Candies, NESTLE, RAISINETS Chocolate Covered Raisins",
-    "cal": 422.0,
-    "pro": 4.4,
-    "fat": 17.0,
-    "carb": 71.0,
-    "fib": 2.2,
-    "h2o": 6.4,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 1.58 oz bag",
-        "gm": 45.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving fun size",
-        "gm": 48.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 0.25 cup",
-        "gm": 45.0
-      }
-    ]
-  },
-  {
-    "word": "CANDMILKYWAY",
-    "display": "Candies MILKYWAY",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19135",
-    "desc": "Candies, MARS SNACKFOOD US, MILKY WAY Bar",
-    "cal": 456.0,
-    "pro": 4.0,
-    "fat": 17.2,
-    "carb": 71.2,
-    "fib": 1.0,
-    "h2o": 6.3,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 2.05 oz bar",
-        "gm": 58.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar fun size",
-        "gm": 17.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "piece miniature 5 pieces = serving",
-        "gm": 8.2
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar king size",
-        "gm": 103.0
-      }
-    ]
-  },
-  {
-    "word": "CANDSKOR",
-    "display": "Candies SKOR",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19136",
-    "desc": "Candies, HERSHEY'S SKOR Toffee Bar",
-    "cal": 541.0,
-    "pro": 3.1,
-    "fat": 30.4,
-    "carb": 63.7,
-    "fib": 1.3,
-    "h2o": 1.6,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar 1.4 oz",
-        "gm": 39.0
-      }
-    ]
-  },
-  {
-    "word": "CANDPOTOFGOLD",
-    "display": "Candies POT OF GOLD",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19130",
-    "desc": "Candies, HERSHEY'S POT OF GOLD Almond Bar",
-    "cal": 577.0,
-    "pro": 12.8,
-    "fat": 38.5,
-    "carb": 44.9,
-    "fib": 3.8,
-    "h2o": 1.3,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar 2.8 oz",
-        "gm": 78.0
-      }
-    ]
-  },
-  {
-    "word": "CANDMM",
-    "display": "Candies M&M PEANUTS",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19140",
-    "desc": "Candies, MARS SNACKFOOD US, M&M's Peanut Chocolate Candies",
-    "cal": 515.0,
-    "pro": 9.6,
-    "fat": 26.1,
-    "carb": 60.5,
-    "fib": 3.7,
-    "h2o": 2.5,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 1 singles bag",
-        "gm": 54.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "package fun size",
-        "gm": 18.0
-      },
-      {
-        "amt": 10.0,
-        "desc": "pieces",
-        "gm": 20.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 170.0
-      }
-    ]
-  },
-  {
-    "word": "CAND100GRAND",
-    "display": "Candies 100 GRAND BAR",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19144",
-    "desc": "Candies, NESTLE, 100 GRAND Bar",
-    "cal": 468.0,
-    "pro": 2.5,
-    "fat": 19.3,
-    "carb": 71.0,
-    "fib": 1.0,
-    "h2o": 6.1,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar (1.5 oz)",
-        "gm": 43.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar, miniature",
-        "gm": 21.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 1.5 oz bar",
-        "gm": 43.0
-      }
-    ]
-  },
-  {
-    "word": "CANDCRUNCH",
-    "display": "Candies NESTLE CRUNCH",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19145",
-    "desc": "Candies, NESTLE, CRUNCH Bar and Dessert Topping",
-    "cal": 500.0,
-    "pro": 5.0,
-    "fat": 26.0,
-    "carb": 67.0,
-    "fib": 1.9,
-    "h2o": 0.7,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar 1.55 oz",
-        "gm": 44.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar 0.5 oz",
-        "gm": 14.2
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 4 fun size bars",
-        "gm": 41.0
-      },
-      {
-        "amt": 2.0,
-        "desc": "tbsp",
-        "gm": 24.0
-      }
-    ]
-  },
-  {
-    "word": "CANDREESESCUPS",
-    "display": "Candies REESE\u2019S CUPS",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19150",
-    "desc": "Candies, REESE'S Peanut Butter Cups",
-    "cal": 515.0,
-    "pro": 10.2,
-    "fat": 30.5,
-    "carb": 55.4,
-    "fib": 3.6,
-    "h2o": 1.4,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "package 0.6 oz 1 cup",
-        "gm": 17.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "package 1.6 oz 2 cups",
-        "gm": 45.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "miniature",
-        "gm": 7.0
-      }
-    ]
-  },
-  {
-    "word": "CANDREESESPIECES",
-    "display": "Candies REESE\u2019S PIECES",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19151",
-    "desc": "Candies, REESE'S PIECES Candy",
-    "cal": 497.0,
-    "pro": 12.5,
-    "fat": 24.8,
-    "carb": 59.9,
-    "fib": 3.0,
-    "h2o": 1.0,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 0.25,
-        "desc": "cup",
-        "gm": 47.0
-      },
-      {
-        "amt": 10.0,
-        "desc": "pieces",
-        "gm": 8.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "package 1.63 oz",
-        "gm": 46.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "package (1.6 oz)",
-        "gm": 46.0
-      }
-    ]
-  },
-  {
-    "word": "CANDROLO",
-    "display": "Candies ROLO",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19152",
-    "desc": "Candies, ROLO Caramels in Milk Chocolate",
-    "cal": 474.0,
-    "pro": 5.1,
-    "fat": 20.9,
-    "carb": 68.0,
-    "fib": 0.9,
-    "h2o": 4.6,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "package 1 package",
-        "gm": 48.0
-      },
-      {
-        "amt": 7.0,
-        "desc": "pieces",
-        "gm": 42.0
-      }
-    ]
-  },
-  {
-    "word": "CANDSNICKERSPOP",
-    "display": "Candies SNICKERS POP\u2019ABLES",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19306",
-    "desc": "Candies, MARS SNACKFOOD US, POP'ABLES SNICKERS Brand Bite Size Candies",
-    "cal": 480.0,
-    "pro": 7.2,
-    "fat": 24.3,
-    "carb": 61.1,
-    "fib": 2.3,
-    "h2o": 5.8,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 13 pieces",
-        "gm": 39.0
-      }
-    ]
-  },
-  {
-    "word": "CANDRESESBITES",
-    "display": "Candies REESE\u2019S BITES",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19238",
-    "desc": "Candies, REESE'S BITES",
-    "cal": 521.0,
-    "pro": 11.3,
-    "fat": 29.9,
-    "carb": 55.2,
-    "fib": 3.1,
-    "h2o": 1.6,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 16.0,
-        "desc": "pieces",
-        "gm": 39.0
-      }
-    ]
-  },
-  {
-    "word": "CANDHEATHBITES",
-    "display": "Candies HEATH BITES",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19243",
-    "desc": "Candies, HEATH BITES",
-    "cal": 530.0,
-    "pro": 3.9,
-    "fat": 30.4,
-    "carb": 63.4,
-    "fib": 2.0,
-    "h2o": 0.9,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 15.0,
-        "desc": "pieces",
-        "gm": 39.0
-      }
-    ]
-  },
-  {
-    "word": "CANDALMONDJOYBITES",
-    "display": "Candies ALMOND JOY BITES",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19248",
-    "desc": "Candies, HERSHEY'S, ALMOND JOY BITES",
-    "cal": 563.0,
-    "pro": 5.6,
-    "fat": 34.5,
-    "carb": 57.5,
-    "fib": 4.3,
-    "h2o": 1.3,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 18.0,
-        "desc": "pieces",
-        "gm": 40.0
-      }
-    ]
-  },
-  {
-    "word": "CANDREESESTICKS",
-    "display": "Candies REESESTICKS",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19249",
-    "desc": "Candies, HERSHEY, REESESTICKS crispy wafers, peanut butter, milk chocolate",
-    "cal": 521.0,
-    "pro": 9.5,
-    "fat": 31.3,
-    "carb": 55.4,
-    "fib": 3.3,
-    "h2o": 1.6,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 1.5 oz",
-        "gm": 42.0
-      }
-    ]
-  },
-  {
-    "word": "CANDKITKATBIG",
-    "display": "Candies KIT KAT BIG KAT",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19250",
-    "desc": "Candies, HERSHEY, KIT KAT BIG KAT Bar",
-    "cal": 520.0,
-    "pro": 6.2,
-    "fat": 27.8,
-    "carb": 63.6,
-    "fib": 1.9,
-    "h2o": 1.1,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar 1.94 oz",
-        "gm": 55.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar king size 2.8 oz",
-        "gm": 79.0
-      }
-    ]
-  },
-  {
-    "word": "CANDREESEFAST",
-    "display": "Candies REESE\u2019S FAST BREAK",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19252",
-    "desc": "Candies, REESE'S, FAST BREAK, milk chocolate peanut butter and soft nougats",
-    "cal": 474.0,
-    "pro": 8.7,
-    "fat": 23.4,
-    "carb": 61.6,
-    "fib": 2.9,
-    "h2o": 4.1,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 2.0,
-        "desc": "oz bar",
-        "gm": 56.0
-      }
-    ]
-  },
-  {
-    "word": "CANDSNICKERSALMOND",
-    "display": "Candies SNICKERS Almond",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19302",
-    "desc": "Candies, MARS SNACKFOOD US, SNICKERS Almond bar",
-    "cal": 472.0,
-    "pro": 5.4,
-    "fat": 22.4,
-    "carb": 64.7,
-    "fib": 2.6,
-    "h2o": 5.5,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 1.76 oz bar",
-        "gm": 50.0
-      }
-    ]
-  },
-  {
-    "word": "CANDMUSKETEERPOP",
-    "display": "Candies MUSKETEERS POP\u2019ABLES",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19308",
-    "desc": "Candies, MARS SNACKFOOD US, POP'ABLES 3 MUSKETEERS Brand Bite Size Candies",
-    "cal": 443.0,
-    "pro": 2.6,
-    "fat": 15.2,
-    "carb": 75.9,
-    "fib": 1.3,
-    "h2o": 5.3,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 15 pieces",
-        "gm": 41.0
-      }
-    ]
-  },
-  {
-    "word": "CANDREESENURAGEOUS",
-    "display": "Candies REESE\u2019S NUTRAGEOUS",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19239",
-    "desc": "Candies, REESE'S NUTRAGEOUS Candy Bar",
-    "cal": 517.0,
-    "pro": 11.3,
-    "fat": 32.1,
-    "carb": 52.8,
-    "fib": 3.9,
-    "h2o": 1.5,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar 1.92 oz",
-        "gm": 54.0
-      },
-      {
-        "amt": 2.0,
-        "desc": "bars",
-        "gm": 34.0
-      }
-    ]
-  },
-  {
-    "word": "CANDDOVE",
-    "display": "Candies DOVE ",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19255",
-    "desc": "Candies, MARS SNACKFOOD US, DOVE Dark Chocolate",
-    "cal": 520.0,
-    "pro": 5.2,
-    "fat": 32.5,
-    "carb": 59.4,
-    "fib": 7.6,
-    "h2o": 1.7,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 1.3 oz bar",
-        "gm": 37.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 7 pieces",
-        "gm": 42.0
-      }
-    ]
-  },
-  {
-    "word": "CANDSKITTLES",
-    "display": "Candies SKITTLES Original",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19370",
-    "desc": "Candies, MARS SNACKFOOD US, SKITTLES Original Bite Size Candies",
-    "cal": 405.0,
-    "pro": 0.2,
-    "fat": 4.4,
-    "carb": 90.8,
-    "fib": 0.0,
-    "h2o": 3.8,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 2.17 oz pack",
-        "gm": 62.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 205.0
-      },
-      {
-        "amt": 10.0,
-        "desc": "pieces",
-        "gm": 10.7
-      },
-      {
-        "amt": 1.0,
-        "desc": "package fun size",
-        "gm": 20.0
-      }
-    ]
-  },
-  {
-    "word": "CANDCORDOVA",
-    "display": "Candies COCOAVIA",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19326",
-    "desc": "Candies, MARS SNACKFOOD US, COCOAVIA Chocolate Bar",
-    "cal": 539.0,
-    "pro": 5.8,
-    "fat": 29.3,
-    "carb": 63.0,
-    "fib": 8.7,
-    "h2o": 0.7,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 0.78 oz bar",
-        "gm": 22.0
-      }
-    ]
-  },
-  {
-    "word": "CANDMMPRETZEL",
-    "display": "Candies M&M Pretzel",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19917",
-    "desc": "Candies, M&M MARS Pretzel Chocolate Candies",
-    "cal": 447.0,
-    "pro": 5.0,
-    "fat": 15.0,
-    "carb": 72.9,
-    "fib": 2.5,
-    "h2o": 4.8,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 0.25,
-        "desc": "cup",
-        "gm": 40.0
-      }
-    ]
-  },
-  {
-    "word": "CANDPAYDAY",
-    "display": "Candies PAYDAY",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19923",
-    "desc": "Candies, HERSHEYS, PAYDAY Bar",
-    "cal": 490.0,
-    "pro": 13.4,
-    "fat": 25.0,
-    "carb": 52.9,
-    "fib": 3.8,
-    "h2o": 7.0,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      }
-    ]
-  },
-  {
-    "word": "CANDMOUNDS",
-    "display": "Candies MOUNDS",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19142",
-    "desc": "Candies, MOUNDS Candy Bar",
-    "cal": 486.0,
-    "pro": 4.6,
-    "fat": 26.6,
-    "carb": 58.6,
-    "fib": 3.7,
-    "h2o": 9.1,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar snack size",
-        "gm": 19.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "package 1.9 oz",
-        "gm": 53.0
-      }
-    ]
-  },
-  {
-    "word": "CANDTOOTSIE",
-    "display": "Candies TOOTSIE ROLL",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19064",
-    "desc": "Candies, TOOTSIE ROLL, chocolate-flavor roll",
-    "cal": 387.0,
-    "pro": 1.6,
-    "fat": 3.3,
-    "carb": 87.7,
-    "fib": 0.1,
-    "h2o": 6.7,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving 6 pieces",
-        "gm": 40.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "piece",
-        "gm": 6.6
-      }
-    ]
-  },
-  {
-    "word": "CANDALMONDJOY",
-    "display": "Candies ALMOND JOY",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19065",
-    "desc": "Candies, ALMOND JOY Candy Bar",
-    "cal": 479.0,
-    "pro": 4.1,
-    "fat": 26.9,
-    "carb": 59.5,
-    "fib": 5.0,
-    "h2o": 8.2,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "package 1.76 oz",
-        "gm": 49.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "bar snack size",
-        "gm": 19.0
-      }
-    ]
-  },
-  {
-    "word": "CANDFONDANT",
-    "display": "Candies Fondant",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "19099",
-    "desc": "Candies, fondant, prepared-from-recipe",
-    "cal": 373.0,
-    "pro": 0.0,
-    "fat": 0.0,
-    "carb": 93.2,
-    "fib": 0.0,
-    "h2o": 6.7,
-    "sug": 88.9,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
       }
     ]
   }

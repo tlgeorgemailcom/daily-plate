@@ -837,16 +837,16 @@ POMEGRANATE,fruit,,,,,,9286,"Pomegranates, raw",KEYWORD_EXACT,3
 POMPANO,protein,,,,,,15069,"Fish, pompano, florida, cooked, dry heat",DESC_CONTAINS,2
 POPCORN,grain,prepared,,,,,19807,"Snacks, popcorn, oil-popped, white popcorn, salt added",KEYWORD_EXACT,8
 POPPYSEED,nuts,fats,,,,,2033,"Spices, poppy seed",COMPOUND_MATCH,3
-POPTARTBLUE,prepared,,,,,,18476,"Toaster Pastries, KELLOGG, KELLOGG'S POP TARTS, Blueberry",,
-POPTARTFRSTBLUE,prepared,,,,,,18477,"Toaster Pastries, KELLOGG, KELLOGG'S POP TARTS, Frosted blueberry",,
-POPTARTFRSTBRWN,prepared,,,,,,18479,"Toaster Pastries, KELLOGG, KELLOGG'S POP TARTS, Frosted brown sugar cinnamon",,
-POPTARTFRSTCHERRY,prepared,,,,,,18481,"Toaster Pastries, KELLOGG, KELLOGG'S POP TARTS, Frosted cherry",,
-POPTARTFRSTCHOC,prepared,,,,,,18482,"Toaster Pastries, KELLOGG, KELLOGG'S POP TARTS, Frosted chocolate fudge",,
-POPTARTFRSTRASP,prepared,,,,,,18486,"Toaster Pastries, KELLOGG, KELLOGG'S POP TARTS, Frosted raspberry",,
-POPTARTFRSTSTRAW,prepared,,,,,,18497,"Toaster Pastries, KELLOGG, KELLOGG'S LOW FAT POP TARTS, Frosted strawberry",,
-POPTARTFRSTWILD,prepared,,,,,,18490,"Toaster Pastries, KELLOGG, KELLOGG'S POP TARTS, Frosted wild berry",,
-POPTARTSMORES,prepared,,,,,,18487,"Toaster Pastries, KELLOGG, KELLOGG'S POP TARTS, S'mores",,
-POPTARTSTRAW,prepared,,,,,,18488,"Toaster Pastries, KELLOGG, KELLOGG'S POP TARTS, Strawberry",,
+POPTARTBLUE,sweets,grain,,,,,18476,"Toaster Pastries, KELLOGG, KELLOGG'S POP TARTS, Blueberry",,
+POPTARTFRSTBLUE,sweets,grain,,,,,18477,"Toaster Pastries, KELLOGG, KELLOGG'S POP TARTS, Frosted blueberry",,
+POPTARTFRSTBRWN,sweets,grain,,,,,18479,"Toaster Pastries, KELLOGG, KELLOGG'S POP TARTS, Frosted brown sugar cinnamon",,
+POPTARTFRSTCHERRY,sweets,grain,,,,,18481,"Toaster Pastries, KELLOGG, KELLOGG'S POP TARTS, Frosted cherry",,
+POPTARTFRSTCHOC,sweets,grain,,,,,18482,"Toaster Pastries, KELLOGG, KELLOGG'S POP TARTS, Frosted chocolate fudge",,
+POPTARTFRSTRASP,sweets,grain,,,,,18486,"Toaster Pastries, KELLOGG, KELLOGG'S POP TARTS, Frosted raspberry",,
+POPTARTFRSTSTRAW,sweets,grain,,,,,18497,"Toaster Pastries, KELLOGG, KELLOGG'S LOW FAT POP TARTS, Frosted strawberry",,
+POPTARTFRSTWILD,sweets,grain,,,,,18490,"Toaster Pastries, KELLOGG, KELLOGG'S POP TARTS, Frosted wild berry",,
+POPTARTSMORES,sweets,grain,,,,,18487,"Toaster Pastries, KELLOGG, KELLOGG'S POP TARTS, S'mores",,
+POPTARTSTRAW,sweets,grain,,,,,18488,"Toaster Pastries, KELLOGG, KELLOGG'S POP TARTS, Strawberry",,
 PORK,protein,,,,,,10062,"Pork, fresh, loin, top loin (chops), boneless, separable lean and fat, raw",PREFERRED,1
 PORKBACKRIB,protein,,,,,,10193,"Pork, fresh, backribs, separable lean and fat, cooked, roasted",,
 PORKBELLY,protein,,,,,,10005,"Pork, fresh, belly, raw",COMPOUND_MATCH,1
