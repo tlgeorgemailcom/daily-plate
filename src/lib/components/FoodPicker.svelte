@@ -20,7 +20,7 @@
   let pointerStartPos = { x: 0, y: 0 };
   const SCROLL_THRESHOLD = 10; // pixels of movement to cancel long press
   
-  const allGroups: FoodGroup[] = ['vegetable', 'fruit', 'grain', 'protein', 'dairy', 'legume', 'nuts', 'fats', 'spice', 'prepared', 'beverage'];
+  const allGroups: FoodGroup[] = ['vegetable', 'fruit', 'grain', 'protein', 'dairy', 'legume', 'nuts', 'fats', 'spice', 'prepared', 'sweets', 'beverage'];
 
   // Convert custom foods to Food format
   function customToFood(cf: CustomFood): Food & { isCustom: true } {

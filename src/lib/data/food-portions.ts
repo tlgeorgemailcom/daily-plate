@@ -3,7 +3,8 @@
 
 export type FoodGroup = 
   | 'vegetable' | 'fruit' | 'grain' | 'protein' | 'dairy'
-  | 'legume' | 'nuts' | 'fats' | 'spice' | 'prepared' | 'beverage';
+  | 'legume' | 'nuts' | 'fats' | 'spice' | 'condiment' | 'prepared' | 'sweets' | 'beverage'
+  | 'wine' | 'bar';
 
 export interface Portion {
   amt: number;      // Amount (e.g., 1, 0.5, 2)
@@ -1745,7 +1746,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "BANANACHIPS",
-    "display": "Bananachips",
+    "display": "Banana Chips",
     "groups": [
       "fruit",
       "prepared"
@@ -3708,7 +3709,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "BREADRICEBRAN",
-    "display": "Bread Rice Bran",
+    "display": "Breads Rice Bran Bread",
     "groups": [
       "grain",
       "prepared"
@@ -3742,7 +3743,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "BREADRYE",
-    "display": "Bread Rye",
+    "display": "Breads Rye Bread",
     "groups": [
       "prepared"
     ],
@@ -3785,7 +3786,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "BREADWHITE",
-    "display": "Bread White",
+    "display": "Breads White Bread",
     "groups": [
       "prepared"
     ],
@@ -3813,7 +3814,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "BREADWHOLE",
-    "display": "Bread Whole Wheat",
+    "display": "Breads Whole Wheat Bread",
     "groups": [
       "prepared"
     ],
@@ -4557,7 +4558,7 @@ export const FOODS: Food[] = [
     "word": "BUTTERSCOTCH",
     "display": "Butterscotch",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "19364",
     "desc": "Toppings, butterscotch or caramel",
@@ -4807,7 +4808,7 @@ export const FOODS: Food[] = [
     "word": "CAKEANGELFOOD",
     "display": "Cake Angel Food",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18086",
     "desc": "Cake, angelfood, commercially prepared",
@@ -4840,7 +4841,7 @@ export const FOODS: Food[] = [
     "word": "CAKECHEESECAKE",
     "display": "Cake Cheesecake",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18147",
     "desc": "Cheesecake commercially prepared",
@@ -4878,7 +4879,7 @@ export const FOODS: Food[] = [
     "word": "CAKECHOCOLATE",
     "display": "Cake Chocolate",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18101",
     "desc": "Cake, chocolate, prepared from recipe without frosting",
@@ -4911,7 +4912,7 @@ export const FOODS: Food[] = [
     "word": "CAKECHOCOLATEFROSTING",
     "display": "Cake Chocolate Frosting",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18096",
     "desc": "Cake, chocolate, commercially prepared with chocolate frosting, in-store bakery",
@@ -4954,7 +4955,7 @@ export const FOODS: Food[] = [
     "word": "CAKECOFFEECAKE",
     "display": "Cake Coffee",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18104",
     "desc": "Coffeecake, cinnamon with crumb topping, commercially prepared, enriched",
@@ -4992,7 +4993,7 @@ export const FOODS: Food[] = [
     "word": "CAKEFRUITCAKE",
     "display": "Cake Fruitcake",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18110",
     "desc": "Cake, fruitcake, commercially prepared",
@@ -5025,7 +5026,7 @@ export const FOODS: Food[] = [
     "word": "CAKEGINGERBREAD",
     "display": "Cake Gingerbread",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18116",
     "desc": "Cake, gingerbread, prepared from recipe",
@@ -5058,7 +5059,7 @@ export const FOODS: Food[] = [
     "word": "CAKEPINEAPPLE",
     "display": "Cake Pineapple",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18119",
     "desc": "Cake, pineapple upside-down, prepared from recipe",
@@ -5091,7 +5092,7 @@ export const FOODS: Food[] = [
     "word": "CAKEPOUND",
     "display": "Cake Pound",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18120",
     "desc": "Cake, pound, commercially prepared, butter (includes fresh and frozen)",
@@ -5124,7 +5125,7 @@ export const FOODS: Food[] = [
     "word": "CAKESHORTCAKE",
     "display": "Cake Shortcake",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18126",
     "desc": "Cake, shortcake, biscuit-type, prepared from recipe",
@@ -5152,7 +5153,7 @@ export const FOODS: Food[] = [
     "word": "CAKESPONGE",
     "display": "Cake Sponge",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18134",
     "desc": "Cake, sponge, prepared from recipe",
@@ -5185,7 +5186,7 @@ export const FOODS: Food[] = [
     "word": "CAKEWHITE",
     "display": "Cake White",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18139",
     "desc": "Cake, white, prepared from recipe without frosting",
@@ -5218,7 +5219,7 @@ export const FOODS: Food[] = [
     "word": "CAKEWHITECOCONUTFROSTING",
     "display": "Cake White Coconut",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18102",
     "desc": "Cake, white, prepared from recipe with coconut frosting",
@@ -5251,7 +5252,7 @@ export const FOODS: Food[] = [
     "word": "CAKEYELLOWCHOCOLATEFROSTING",
     "display": "Cake Yellow Choc Frosting",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18140",
     "desc": "Cake, yellow, commercially prepared, with chocolate frosting, in-store bakery",
@@ -5294,7 +5295,7 @@ export const FOODS: Food[] = [
     "word": "CAKEYELLOWFROSTING",
     "display": "Cake Yellow Vanilla Frosting",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18141",
     "desc": "Cake, yellow, commercially prepared, with vanilla frosting",
@@ -5562,7 +5563,7 @@ export const FOODS: Food[] = [
     "word": "CARAMEL",
     "display": "Caramel",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "19074",
     "desc": "Candies, caramels",
@@ -8501,7 +8502,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CHOCBEVSODA",
-    "display": "Choc Soda",
+    "display": "Candies Choc Soda",
     "groups": [
       "beverage"
     ],
@@ -8539,9 +8540,9 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CHOCFUDGE",
-    "display": "Choc Fudge",
+    "display": "Candies Choc Fudge",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "19100",
     "desc": "Candies, fudge, chocolate, prepared-from-recipe",
@@ -8567,9 +8568,9 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CHOCFUDGENUTS",
-    "display": "Choc Fudge with Nuts",
+    "display": "Candies Choc Fudge with Nuts",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "19101",
     "desc": "Candies, fudge, chocolate, with nuts, prepared-from-recipe",
@@ -8628,9 +8629,9 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CHOCMILKCANDY",
-    "display": "Milk Choc Candy",
+    "display": "Candies Milk Choc Candy",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "19120",
     "desc": "Candies, milk chocolate",
@@ -8755,9 +8756,9 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CHOCWHITE",
-    "display": "Choc White",
+    "display": "Candies White Choc",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "19087",
     "desc": "Candies, white chocolate",
@@ -9009,7 +9010,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CINNAMONROLL",
-    "display": "Cinnamon Roll",
+    "display": "Roll Cinnamon",
     "groups": [
       "prepared"
     ],
@@ -9225,7 +9226,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CLUBSANDWICH",
-    "display": "Club Sandwich",
+    "display": "Sandwich Club",
     "groups": [
       "prepared"
     ],
@@ -9710,7 +9711,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESANIMAL",
     "display": "Cookies Animal",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "28043",
     "desc": "KEEBLER, ANIMALS, Cookies",
@@ -9738,7 +9739,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESANIMALFROSTED",
     "display": "Cookies Animal Frosted",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "28291",
     "desc": "Cookies, animal, with frosting or icing",
@@ -9771,7 +9772,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESBROWNIES",
     "display": "Cookies Brownies",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18154",
     "desc": "Cookies, brownies, prepared from recipe",
@@ -9804,7 +9805,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESBUTTER",
     "display": "Cookies Butter",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18155",
     "desc": "Cookies, butter, commercially prepared, enriched",
@@ -9837,7 +9838,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESCHOCOLATECHIP",
     "display": "Cookies Choc Chip",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18164",
     "desc": "Cookies, chocolate chip, refrigerated dough, baked",
@@ -9870,7 +9871,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESCHOCOLATESANDWICH",
     "display": "Cookies Choc Sandwich",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18166",
     "desc": "Cookies, chocolate sandwich, with creme filling, regular",
@@ -9903,7 +9904,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESFIGBAR",
     "display": "Cookies Fig Bar",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18170",
     "desc": "Cookies, fig bars",
@@ -9946,7 +9947,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESFORTUNE",
     "display": "Cookies Fortune",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18171",
     "desc": "Cookies, fortune",
@@ -9979,7 +9980,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESGINGERSNAP",
     "display": "Cookies Gingersnap",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18172",
     "desc": "Cookies, gingersnaps",
@@ -10017,7 +10018,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESGIRLSCOUTSCARAMEL",
     "display": "Cookies Girl Scouts Caramel",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "28029",
     "desc": "GIRL SCOUTS, Caramel Dulce De Leche Cookies",
@@ -10045,7 +10046,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESGIRLSCOUTSCHALET",
     "display": "Cookies Girl Scouts Chalet",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "28030",
     "desc": "GIRL SCOUTS, Chalet Cookies",
@@ -10073,7 +10074,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESGIRLSCOUTSDOSIDOS",
     "display": "Cookies Girl Scouts Do-Si-Dos",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "28031",
     "desc": "GIRL SCOUTS, Do-si-dos Cookies",
@@ -10101,7 +10102,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESGIRLSCOUTSSAMOSAS",
     "display": "Cookies Girl Scouts Samoas",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "28032",
     "desc": "GIRL SCOUTS, Samoas Cookies",
@@ -10129,7 +10130,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESGIRLSCOUTSTAGALONGS",
     "display": "Cookies Girl Scouts Tagalongs",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "28033",
     "desc": "GIRL SCOUTS, Tagalongs Cookies",
@@ -10157,7 +10158,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESGIRLSCOUTSTHANKU",
     "display": "Cookies Girl Scouts Thank U",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "28034",
     "desc": "GIRL SCOUTS, Thank U Berry Munch Cookies",
@@ -10185,7 +10186,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESGIRLSCOUTSTHINMINTS",
     "display": "Cookies Girl Scouts Thin Mints",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "28035",
     "desc": "GIRL SCOUTS, Thin Mints Cookies",
@@ -10213,7 +10214,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESGIRLSCOUTSTREFOILS",
     "display": "Cookies Girl Scouts Trefoils",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "28036",
     "desc": "GIRL SCOUTS, Trefoils Cookies",
@@ -10241,7 +10242,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESGLUTINOCHOCOLATECREME",
     "display": "Cookies Glutino Choc Creme",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "28356",
     "desc": "GLUTINO, Gluten Free Cookies, Chocolate Vanilla Creme",
@@ -10269,7 +10270,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESGLUTIONVANILLACREME",
     "display": "Cookies Glutino Vanilla Creme",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "28357",
     "desc": "GLUTINO, Gluten Free Cookies, Vanilla Creme",
@@ -10297,7 +10298,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESGRAHAM",
     "display": "Cookies Graham",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18173",
     "desc": "Cookies, graham crackers, plain or honey (includes cinnamon)",
@@ -10340,7 +10341,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESMACAROON",
     "display": "Cookies Macaroon",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "28309",
     "desc": "Cookies, coconut macaroon",
@@ -10368,7 +10369,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESMARIEBISCUIT",
     "display": "Cookies Marie Biscuit",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "28351",
     "desc": "Cookies, Marie biscuit",
@@ -10396,7 +10397,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESMOLASSES",
     "display": "Cookies Molasses",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18177",
     "desc": "Cookies, molasses",
@@ -10439,7 +10440,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESOATMEAL",
     "display": "Cookies Oatmeal",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18183",
     "desc": "Cookies, oatmeal, refrigerated dough, baked",
@@ -10472,7 +10473,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESOATMEALICED",
     "display": "Cookies Oatmeal Iced",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "28203",
     "desc": "MOTHER'S, Iced Oatmeal Cookies",
@@ -10500,7 +10501,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESOATMEALRAISIN",
     "display": "Cookies Oatmeal Raisin",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18184",
     "desc": "Cookies, oatmeal, prepared from recipe, with raisins",
@@ -10533,7 +10534,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESOATMEALSANDWICH",
     "display": "Cookies Oatmeal Sandwich",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "28300",
     "desc": "Cookies, oatmeal sandwich, with creme filling",
@@ -10561,7 +10562,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESPEANUTBUTTER",
     "display": "Cookies Peanut Butter",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18188",
     "desc": "Cookies, peanut butter, refrigerated dough, baked",
@@ -10594,7 +10595,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESSHORTBREAD",
     "display": "Cookies Shortbread",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18192",
     "desc": "Cookies, shortbread, commercially prepared, plain",
@@ -10627,7 +10628,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESSUGAR",
     "display": "Cookies Sugar",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18208",
     "desc": "Cookies, sugar, prepared from recipe, made with margarine",
@@ -10660,7 +10661,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESVANILLASANDWICH",
     "display": "Cookies Vanilla Sandwich",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18210",
     "desc": "Cookies, vanilla sandwich with creme filling",
@@ -10698,7 +10699,7 @@ export const FOODS: Food[] = [
     "word": "COOKIESVANILLAWAFER",
     "display": "Cookies Vanilla Wafer",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18213",
     "desc": "Cookies, vanilla wafers, higher fat",
@@ -10938,7 +10939,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CORNSALAD",
-    "display": "Corn Salad",
+    "display": "Salad Corn",
     "groups": [
       "vegetable"
     ],
@@ -12355,7 +12356,7 @@ export const FOODS: Food[] = [
     "word": "CUSTARD",
     "display": "Custard",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "19170",
     "desc": "Egg custards, dry mix, prepared with whole milk",
@@ -12624,34 +12625,6 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "DINNERROLL",
-    "display": "Dinner Roll",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "18347",
-    "desc": "Rolls, dinner, wheat",
-    "cal": 273.0,
-    "pro": 8.6,
-    "fat": 6.3,
-    "carb": 46.0,
-    "fib": 3.8,
-    "h2o": 37.0,
-    "sug": 1.6,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "roll (1 oz)",
-        "gm": 28.0
-      }
-    ]
-  },
-  {
     "word": "DIPQUESO",
     "display": "Dip Queso",
     "groups": [
@@ -12739,7 +12712,8 @@ export const FOODS: Food[] = [
     "word": "DONUT",
     "display": "Donut",
     "groups": [
-      "prepared"
+      "sweets",
+      "grain"
     ],
     "ndb": "18250",
     "desc": "Doughnuts, cake-type, plain (includes unsugared, old-fashioned)",
@@ -12797,7 +12771,8 @@ export const FOODS: Food[] = [
     "word": "DOUGHNUTCAKE",
     "display": "Doughnut Cake-type",
     "groups": [
-      "prepared"
+      "prepared",
+      "grain"
     ],
     "ndb": "18248",
     "desc": "Doughnuts, cake-type, plain (includes unsugared, old-fashioned)",
@@ -12855,7 +12830,8 @@ export const FOODS: Food[] = [
     "word": "DOUGHNUTYEAST",
     "display": "Doughnut Yeast-type",
     "groups": [
-      "prepared"
+      "prepared",
+      "grain"
     ],
     "ndb": "18436",
     "desc": "Doughnuts, yeast-leavened, glazed, unenriched (includes honey buns)",
@@ -15365,7 +15341,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "FRENCHBREAD",
-    "display": "French Bread",
+    "display": "Breads French Bread",
     "groups": [
       "prepared"
     ],
@@ -15586,7 +15562,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "FRYBREAD",
-    "display": "Fry Bread",
+    "display": "Breads Fry Bread",
     "groups": [
       "prepared",
       "grain"
@@ -15655,7 +15631,7 @@ export const FOODS: Food[] = [
     "word": "FUDGE",
     "display": "Fudge",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "19100",
     "desc": "Candies, fudge, chocolate, prepared-from-recipe",
@@ -15725,7 +15701,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "GARLICBREAD",
-    "display": "Garlic Bread",
+    "display": "Breads Garlic Bread",
     "groups": [
       "prepared"
     ],
@@ -15788,7 +15764,7 @@ export const FOODS: Food[] = [
     "word": "GELATIN",
     "display": "Gelatin",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "19177",
     "desc": "Gelatins, dry powder, unsweetened",
@@ -17744,7 +17720,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "HOTDOGBUN",
-    "display": "Hot Dog Bun",
+    "display": "Buns Hot Dog Bun",
     "groups": [
       "prepared"
     ],
@@ -17897,7 +17873,7 @@ export const FOODS: Food[] = [
     "display": "Ice Cream Chocolate",
     "groups": [
       "dairy",
-      "prepared"
+      "sweets"
     ],
     "ndb": "19270",
     "desc": "Ice creams, chocolate",
@@ -17931,7 +17907,7 @@ export const FOODS: Food[] = [
     "display": "Ice Cream Strawberry",
     "groups": [
       "dairy",
-      "prepared"
+      "sweets"
     ],
     "ndb": "19271",
     "desc": "Ice creams, strawberry",
@@ -17965,7 +17941,7 @@ export const FOODS: Food[] = [
     "display": "Ice Cream Vanilla",
     "groups": [
       "dairy",
-      "prepared"
+      "sweets"
     ],
     "ndb": "19095",
     "desc": "Ice creams, vanilla",
@@ -20661,7 +20637,7 @@ export const FOODS: Food[] = [
     "word": "MARSHMALLOW",
     "display": "Marshmallow",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "19116",
     "desc": "Candies, marshmallows",
@@ -24364,7 +24340,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "PANDULCE",
-    "display": "Pandulce",
+    "display": "Breads Pandulce",
     "groups": [
       "prepared"
     ],
@@ -24690,7 +24666,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "PASTA",
-    "display": "Pasta",
+    "display": "Pasta Dry",
     "groups": [
       "grain"
     ],
@@ -26362,7 +26338,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "PIKIBREAD",
-    "display": "Piki Bread",
+    "display": "Breads Piki Bread",
     "groups": [
       "grain"
     ],
@@ -28441,7 +28417,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "POTATOSALAD",
-    "display": "Potato Salad",
+    "display": "Salad Potato",
     "groups": [
       "prepared"
     ],
@@ -28778,7 +28754,7 @@ export const FOODS: Food[] = [
     "word": "PUDDINGCHOC",
     "display": "Pudding Chocolate",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "19183",
     "desc": "Puddings, chocolate, ready-to-eat",
@@ -28816,7 +28792,7 @@ export const FOODS: Food[] = [
     "word": "PUDDINGLEMON",
     "display": "Pudding Lemon",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "19204",
     "desc": "Puddings, lemon, dry mix, instant, prepared with 2% milk",
@@ -28849,7 +28825,7 @@ export const FOODS: Food[] = [
     "word": "PUDDINGRICE",
     "display": "Pudding Rice",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "19193",
     "desc": "Puddings, rice, ready-to-eat",
@@ -28897,7 +28873,7 @@ export const FOODS: Food[] = [
     "word": "PUDDINGTAPICOA",
     "display": "Pudding Tapicoa",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "19218",
     "desc": "Puddings, tapioca, ready-to-eat",
@@ -28935,7 +28911,7 @@ export const FOODS: Food[] = [
     "word": "PUDDINGVANILLA",
     "display": "Pudding Vanilla",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "19203",
     "desc": "Puddings, vanilla, dry mix, instant, prepared with whole milk",
@@ -29630,7 +29606,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "RAISINBREAD",
-    "display": "Raisin Bread",
+    "display": "Breads Raisin Bread",
     "groups": [
       "prepared"
     ],
@@ -30266,9 +30242,10 @@ export const FOODS: Food[] = [
   },
   {
     "word": "ROLLDINNER",
-    "display": "Rolldinner",
+    "display": "Roll Dinner",
     "groups": [
-      "prepared"
+      "prepared",
+      "grain"
     ],
     "ndb": "18347",
     "desc": "Rolls, dinner, wheat",
@@ -30293,43 +30270,11 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "ROLLHAMBURGER",
-    "display": "Roll Hamburger",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "18350",
-    "desc": "Rolls, hamburger or hotdog, plain",
-    "cal": 279.0,
-    "pro": 9.8,
-    "fat": 3.9,
-    "carb": 50.1,
-    "fib": 1.8,
-    "h2o": 34.3,
-    "sug": 7.3,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "roll 1 serving",
-        "gm": 44.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      }
-    ]
-  },
-  {
     "word": "ROLLHOTDOG",
     "display": "Roll Hotdog",
     "groups": [
-      "protein"
+      "protein",
+      "grain"
     ],
     "ndb": "18350",
     "desc": "Rolls, hamburger or hotdog, plain",
@@ -32094,7 +32039,7 @@ export const FOODS: Food[] = [
     "word": "SHERBET",
     "display": "Sherbet",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "19097",
     "desc": "Sherbet, orange",
@@ -33324,7 +33269,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "SPAGHETTI",
-    "display": "Spaghetti",
+    "display": "Pasta Spaghetti Cooked",
     "groups": [
       "grain"
     ],
@@ -33352,7 +33297,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "SPAGHETTIMEAT",
-    "display": "Spaghetti with Meat",
+    "display": "Pasta Spaghetti with Meat",
     "groups": [
       "prepared"
     ],
@@ -33380,7 +33325,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "SPAGHETTIMEATBALLS",
-    "display": "Spaghetti with Meatballs",
+    "display": "Pasta Spaghetti with Meatballs",
     "groups": [
       "prepared"
     ],
@@ -33413,7 +33358,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "SPAGHETTIMEATLESS",
-    "display": "Spaghetti Meatless",
+    "display": "Pasta Spaghetti Meatless",
     "groups": [
       "prepared"
     ],
@@ -35198,7 +35143,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "TACO",
-    "display": "Taco Salad",
+    "display": "Salad Taco",
     "groups": [
       "prepared"
     ],
@@ -36833,7 +36778,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "TUNASALAD",
-    "display": "Tuna Salad",
+    "display": "Salad Tuna",
     "groups": [
       "protein"
     ],
@@ -37154,7 +37099,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "TURKEYSANDWICH",
-    "display": "Turkey Sandwich",
+    "display": "Sandwich Turkey",
     "groups": [
       "prepared"
     ],
@@ -40032,7 +39977,7 @@ export const FOODS: Food[] = [
     "display": "Ice Cream Vanilla Light",
     "groups": [
       "dairy",
-      "prepared"
+      "sweets"
     ],
     "ndb": "19088",
     "desc": "Ice creams, vanilla, light",
@@ -40061,7 +40006,7 @@ export const FOODS: Food[] = [
     "display": "Ice Cream Choc Light",
     "groups": [
       "dairy",
-      "prepared"
+      "sweets"
     ],
     "ndb": "19114",
     "desc": "Ice creams, chocolate, light",
@@ -40095,7 +40040,7 @@ export const FOODS: Food[] = [
     "display": "Ice Cream Sandwich",
     "groups": [
       "dairy",
-      "prepared"
+      "sweets"
     ],
     "ndb": "1238",
     "desc": "Ice cream sandwich",
@@ -40124,7 +40069,7 @@ export const FOODS: Food[] = [
     "display": "Ice Cream Bar Choc",
     "groups": [
       "dairy",
-      "prepared"
+      "sweets"
     ],
     "ndb": "1237",
     "desc": "Ice cream, bar or stick, chocolate covered",
@@ -40153,7 +40098,7 @@ export const FOODS: Food[] = [
     "display": "Ice Cream Creamsicle",
     "groups": [
       "dairy",
-      "prepared"
+      "sweets"
     ],
     "ndb": "1302",
     "desc": "Light ice cream, Creamsicle",
@@ -40177,7 +40122,7 @@ export const FOODS: Food[] = [
     "display": "Ice Cream Choc with Cone",
     "groups": [
       "dairy",
-      "prepared"
+      "sweets"
     ],
     "ndb": "1240",
     "desc": "Ice cream cone, chocolate covered, with nuts, flavors other than chocolate",
@@ -40205,7 +40150,7 @@ export const FOODS: Food[] = [
     "word": "ICECREAMCONEWAFER",
     "display": "Ice Cream Cone only",
     "groups": [
-      "prepared"
+      "sweets"
     ],
     "ndb": "18271",
     "desc": "Ice cream cones, cake or wafer-type",
@@ -40244,7 +40189,7 @@ export const FOODS: Food[] = [
     "display": "Ice Cream Soft Vanilla",
     "groups": [
       "dairy",
-      "prepared"
+      "sweets"
     ],
     "ndb": "21028",
     "desc": "Fast foods, vanilla, light, soft-serve ice cream, with cone",
@@ -40273,7 +40218,7 @@ export const FOODS: Food[] = [
     "display": "Ice Cream Sundae Fudge",
     "groups": [
       "dairy",
-      "prepared"
+      "sweets"
     ],
     "ndb": "21033",
     "desc": "Fast foods, sundae, hot fudge",
@@ -40302,7 +40247,7 @@ export const FOODS: Food[] = [
     "display": "Ice Cream Sundae Strawberry",
     "groups": [
       "dairy",
-      "prepared"
+      "sweets"
     ],
     "ndb": "21034",
     "desc": "Fast foods, sundae, strawberry",
@@ -40331,7 +40276,7 @@ export const FOODS: Food[] = [
     "display": "Ice Cream Sundae Caramel",
     "groups": [
       "dairy",
-      "prepared"
+      "sweets"
     ],
     "ndb": "21032",
     "desc": "Fast foods, sundae, caramel",
@@ -41095,6 +41040,841 @@ export const FOODS: Food[] = [
         "gm": 368.0
       }
     ]
+  },
+  {
+    "word": "BUNHONEY",
+    "display": "Buns Honey Bun",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "18964",
+    "desc": "Cinnamon buns, frosted (includes honey buns)",
+    "cal": 452.0,
+    "pro": 4.5,
+    "fat": 26.6,
+    "carb": 48.6,
+    "fib": 1.2,
+    "h2o": 19.0,
+    "sug": 25.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bun",
+        "gm": 65.0
+      }
+    ]
+  },
+  {
+    "word": "BUNSHAMBURGER",
+    "display": "Buns Hamburger",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "28394",
+    "desc": "PEPPERIDGE FARM, Hamburger Bun",
+    "cal": 278.0,
+    "pro": 0.0,
+    "fat": 3.7,
+    "carb": 50.0,
+    "fib": 1.8,
+    "h2o": 33.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 51.0
+      }
+    ]
+  },
+  {
+    "word": "BUNSHAMBURGERWHOLE",
+    "display": "Buns Hamburger Whole Wheat",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "28377",
+    "desc": "PEPPERIDGE FARM, 100% Whole Wheat Hamburger Buns",
+    "cal": 257.0,
+    "pro": 0.0,
+    "fat": 3.1,
+    "carb": 43.2,
+    "fib": 5.9,
+    "h2o": 37.1,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 51.0
+      }
+    ]
+  },
+  {
+    "word": "BUNSHAMBURGERSES",
+    "display": "Buns Hamburger Sesame",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "28387",
+    "desc": "PEPPERIDGE FARM, Hamburger Buns w/Sesame",
+    "cal": 280.0,
+    "pro": 0.0,
+    "fat": 4.1,
+    "carb": 49.9,
+    "fib": 3.1,
+    "h2o": 33.2,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 53.0
+      }
+    ]
+  },
+  {
+    "word": "ROLLDINNERWHOLE",
+    "display": "Roll Dinner Whole Wheat",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "18348",
+    "desc": "Rolls, dinner, whole-wheat",
+    "cal": 266.0,
+    "pro": 8.7,
+    "fat": 4.7,
+    "carb": 51.1,
+    "fib": 7.5,
+    "h2o": 33.1,
+    "sug": 8.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "roll (1 oz)",
+        "gm": 28.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "roll (hamburger, frankfurter roll)",
+        "gm": 43.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "roll, large submarine, hoagie",
+        "gm": 135.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "medium (2-1/2\" dia)",
+        "gm": 36.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "roll medium submarine, hoagie",
+        "gm": 94.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "roll (small submarine, hoagie roll)",
+        "gm": 65.0
+      }
+    ]
+  },
+  {
+    "word": "ROLLFRENCH",
+    "display": "Roll French",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "18349",
+    "desc": "Rolls, french",
+    "cal": 277.0,
+    "pro": 8.6,
+    "fat": 4.3,
+    "carb": 50.2,
+    "fib": 3.2,
+    "h2o": 34.8,
+    "sug": 0.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "roll",
+        "gm": 38.0
+      }
+    ]
+  },
+  {
+    "word": "ROLLDINNERSWEET",
+    "display": "Roll Dinner Sweet",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "28348",
+    "desc": "Rolls, dinner, sweet",
+    "cal": 321.0,
+    "pro": 10.0,
+    "fat": 7.4,
+    "carb": 53.6,
+    "fib": 3.1,
+    "h2o": 27.8,
+    "sug": 15.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "roll",
+        "gm": 30.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice",
+        "gm": 39.0
+      }
+    ]
+  },
+  {
+    "word": "ROLLPUMP",
+    "display": "Roll Pumpernickel",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "43441",
+    "desc": "Rolls, pumpernickel",
+    "cal": 276.0,
+    "pro": 10.8,
+    "fat": 2.8,
+    "carb": 51.9,
+    "fib": 5.4,
+    "h2o": 32.0,
+    "sug": 0.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "medium (2-1/2\" dia)",
+        "gm": 36.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "roll (pan, dinner, or small roll) (2\" square, 2\" h",
+        "gm": 28.0
+      }
+    ]
+  },
+  {
+    "word": "ROLLPIZZA",
+    "display": "Roll Pizza",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "32012",
+    "desc": "Pizza rolls, frozen, unprepared",
+    "cal": 328.0,
+    "pro": 8.7,
+    "fat": 10.0,
+    "carb": 50.7,
+    "fib": 1.2,
+    "h2o": 27.9,
+    "sug": 3.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 6 rolls",
+        "gm": 80.0
+      }
+    ]
+  },
+  {
+    "word": "SALADPOTATOEGG",
+    "display": "Salad Potato with Egg",
+    "groups": [
+      "vegetable",
+      "prepared"
+    ],
+    "ndb": "22971",
+    "desc": "Potato salad with egg",
+    "cal": 157.0,
+    "pro": 2.0,
+    "fat": 9.4,
+    "carb": 16.2,
+    "fib": 1.3,
+    "h2o": 71.0,
+    "sug": 5.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.5,
+        "desc": "cup",
+        "gm": 125.0
+      }
+    ]
+  },
+  {
+    "word": "SALADFRUIT",
+    "display": "Salad Fruit",
+    "groups": [
+      "fruit",
+      "prepared"
+    ],
+    "ndb": "9102",
+    "desc": "Fruit salad, (peach and pear and apricot and pineapple and cherry), canned, water pack, solids and liquids",
+    "cal": 30.0,
+    "pro": 0.3,
+    "fat": 0.1,
+    "carb": 7.9,
+    "fib": 1.0,
+    "h2o": 91.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 245.0
+      }
+    ]
+  },
+  {
+    "word": "PASTACORNDRY",
+    "display": "Pasta Corn Dry",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20091",
+    "desc": "Pasta, gluten-free, corn, dry",
+    "cal": 357.0,
+    "pro": 7.5,
+    "fat": 2.1,
+    "carb": 79.3,
+    "fib": 11.0,
+    "h2o": 10.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 105.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "oz",
+        "gm": 57.0
+      }
+    ]
+  },
+  {
+    "word": "PASTACOOKED",
+    "display": "Pasta Cooked",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20521",
+    "desc": "Pasta, cooked, unenriched, with added salt",
+    "cal": 157.0,
+    "pro": 5.8,
+    "fat": 0.9,
+    "carb": 30.6,
+    "fib": 1.8,
+    "h2o": 62.1,
+    "sug": 0.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup spaghetti not packed",
+        "gm": 124.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup spaghetti packed",
+        "gm": 151.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup elbows not packed",
+        "gm": 120.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup elbows packed",
+        "gm": 132.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup penne",
+        "gm": 107.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup rotini",
+        "gm": 107.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup farfalle",
+        "gm": 107.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup shells",
+        "gm": 105.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup lasagne",
+        "gm": 116.0
+      }
+    ]
+  },
+  {
+    "word": "PASTACORNCOOKED",
+    "display": "Pasta Corn Cooked",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20092",
+    "desc": "Pasta, gluten-free, corn, cooked",
+    "cal": 126.0,
+    "pro": 2.6,
+    "fat": 0.7,
+    "carb": 27.9,
+    "fib": 4.8,
+    "h2o": 68.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 140.0
+      }
+    ]
+  },
+  {
+    "word": "PASTASPINACHFRESH",
+    "display": "Pasta Spinach Fresh",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20095",
+    "desc": "Pasta, fresh-refrigerated, spinach, as purchased",
+    "cal": 289.0,
+    "pro": 11.3,
+    "fat": 2.1,
+    "carb": 55.7,
+    "fib": 0.0,
+    "h2o": 30.1,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 4.5,
+        "desc": "oz",
+        "gm": 128.0
+      }
+    ]
+  },
+  {
+    "word": "PASTASPINACHFRESHCK",
+    "display": "Pasta Spinach Fresh Cooked",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20096",
+    "desc": "Pasta, fresh-refrigerated, spinach, cooked",
+    "cal": 130.0,
+    "pro": 5.1,
+    "fat": 0.9,
+    "carb": 25.0,
+    "fib": 0.0,
+    "h2o": 68.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "oz",
+        "gm": 57.0
+      }
+    ]
+  },
+  {
+    "word": "PASTAWHOLEDRY",
+    "display": "Pasta Whole Wheat Dry",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20124",
+    "desc": "Pasta, whole-wheat, dry",
+    "cal": 352.0,
+    "pro": 13.9,
+    "fat": 2.9,
+    "carb": 73.4,
+    "fib": 9.2,
+    "h2o": 8.2,
+    "sug": 2.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup spaghetti",
+        "gm": 91.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup elbows",
+        "gm": 122.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup penne",
+        "gm": 95.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup farfalle",
+        "gm": 81.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup rotini",
+        "gm": 96.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup shells",
+        "gm": 64.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup lasagne",
+        "gm": 90.0
+      }
+    ]
+  },
+  {
+    "word": "PASTAWHOLECK",
+    "display": "Pasta Whole Wheat Cooked",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20125",
+    "desc": "Pasta, whole-wheat, cooked",
+    "cal": 149.0,
+    "pro": 6.0,
+    "fat": 1.7,
+    "carb": 30.1,
+    "fib": 3.9,
+    "h2o": 61.8,
+    "sug": 0.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup spaghetti not packed",
+        "gm": 117.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup spaghetti packed",
+        "gm": 151.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup elbows",
+        "gm": 117.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup penne",
+        "gm": 97.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup shells",
+        "gm": 105.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup lasagne",
+        "gm": 116.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup rotini",
+        "gm": 107.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup farfalle",
+        "gm": 107.0
+      }
+    ]
+  },
+  {
+    "word": "PASTARICEBRWNCK",
+    "display": "Pasta Brown Rice Cooked",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20654",
+    "desc": "Pasta, gluten-free, brown rice flour, cooked, TINKYADA",
+    "cal": 138.0,
+    "pro": 3.5,
+    "fat": 1.7,
+    "carb": 32.2,
+    "fib": 1.7,
+    "h2o": 62.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup spaghetti not packed",
+        "gm": 169.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup penne not packed",
+        "gm": 131.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup fettucini not packed",
+        "gm": 153.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup spirals not packed",
+        "gm": 136.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup elbows not packed",
+        "gm": 131.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup shells not packed",
+        "gm": 156.0
+      }
+    ]
+  },
+  {
+    "word": "PASTATORTCHEESE",
+    "display": "Pasta Cheese Tortellini",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "22901",
+    "desc": "Tortellini, pasta with cheese filling, fresh-refrigerated, as purchased",
+    "cal": 307.0,
+    "pro": 13.5,
+    "fat": 7.2,
+    "carb": 47.0,
+    "fib": 1.9,
+    "h2o": 30.5,
+    "sug": 0.9,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.75,
+        "desc": "cup",
+        "gm": 81.0
+      }
+    ]
+  },
+  {
+    "word": "PASTAPOMODOROCHIC",
+    "display": "Pasta Chicken Pomodoro",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "22984",
+    "desc": "KASHI, Chicken Pasta Pomodoro, Frozen Entree",
+    "cal": 100.0,
+    "pro": 7.0,
+    "fat": 2.3,
+    "carb": 13.0,
+    "fib": 2.6,
+    "h2o": 76.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package",
+        "gm": 283.0
+      }
+    ]
+  },
+  {
+    "word": "PASTAPRIMAVERAPESTO",
+    "display": "Pasta Pesto Primavera",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "22987",
+    "desc": "KASHI Pesto Pasta Primavera, frozen, unprepared",
+    "cal": 101.0,
+    "pro": 3.8,
+    "fat": 3.8,
+    "carb": 13.0,
+    "fib": 2.4,
+    "h2o": 77.9,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "entree",
+        "gm": 283.0
+      }
+    ]
+  },
+  {
+    "word": "PASTATOMATOMEATLESS",
+    "display": "Pasta with Tomato Sauce Meatless",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "22914",
+    "desc": "Pasta with tomato sauce, no meat, canned",
+    "cal": 70.0,
+    "pro": 2.2,
+    "fat": 0.4,
+    "carb": 14.2,
+    "fib": 0.9,
+    "h2o": 82.2,
+    "sug": 4.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving (1 NLEA serving)",
+        "gm": 252.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 238.0
+      }
+    ]
   }
 ];
 
@@ -41143,8 +41923,12 @@ export const GROUP_COLORS: Record<FoodGroup, string> = {
   nuts: '#92400e',
   fats: '#fcd34d',
   spice: '#14b8a6',
+  condiment: '#14b8a6',
   prepared: '#6b7280',
-  beverage: '#3b82f6'
+  sweets: '#f472b6',
+  beverage: '#3b82f6',
+  wine: '#7c3aed',
+  bar: '#ec4899'
 };
 
 // Group display names
@@ -41157,7 +41941,11 @@ export const GROUP_NAMES: Record<FoodGroup, string> = {
   legume: 'Legumes',
   nuts: 'Nuts & Seeds',
   fats: 'Fats & Oils',
-  spice: 'Herbs & Spices',
+  spice: 'Spices & Condiments',
+  condiment: 'Spices & Condiments',
   prepared: 'Prepared Foods',
-  beverage: 'Beverages'
+  sweets: 'Sweets & Desserts',
+  beverage: 'Beverages',
+  wine: 'Wine',
+  bar: 'Bar'
 };

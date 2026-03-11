@@ -10,7 +10,7 @@ OUTPUT_TS = "/Volumes/training/Daily Food Chain/daily-food-chain/src/lib/data/fo
 NUTRIENT_COLS = ['cal_100g', 'pro_100g', 'fat_100g', 'carb_100g', 'fib_100g', 'h2o_100g', 'sug_100g']
 
 # Valid food groups (lowercase)
-VALID_GROUPS = {'vegetable', 'fruit', 'grain', 'protein', 'dairy', 'legume', 'nuts', 'fats', 'spice', 'prepared', 'beverage'}
+VALID_GROUPS = {'vegetable', 'fruit', 'grain', 'protein', 'dairy', 'legume', 'nuts', 'fats', 'spice', 'condiment', 'prepared', 'sweets', 'beverage', 'wine', 'bar'}
 
 def normalize_group(g: str) -> str | None:
     """Normalize group name to valid FoodGroup or None if invalid."""
@@ -80,7 +80,8 @@ def main():
 
 export type FoodGroup = 
   | 'vegetable' | 'fruit' | 'grain' | 'protein' | 'dairy'
-  | 'legume' | 'nuts' | 'fats' | 'spice' | 'prepared' | 'beverage';
+  | 'legume' | 'nuts' | 'fats' | 'spice' | 'condiment' | 'prepared' | 'sweets' | 'beverage'
+  | 'wine' | 'bar';
 
 export interface Portion {
   amt: number;      // Amount (e.g., 1, 0.5, 2)
@@ -163,8 +164,12 @@ export const GROUP_COLORS: Record<FoodGroup, string> = {
   nuts: '#92400e',
   fats: '#fcd34d',
   spice: '#14b8a6',
+  condiment: '#14b8a6',
   prepared: '#6b7280',
-  beverage: '#3b82f6'
+  sweets: '#f472b6',
+  beverage: '#3b82f6',
+  wine: '#7c3aed',
+  bar: '#ec4899'
 };
 
 // Group display names
@@ -177,9 +182,13 @@ export const GROUP_NAMES: Record<FoodGroup, string> = {
   legume: 'Legumes',
   nuts: 'Nuts & Seeds',
   fats: 'Fats & Oils',
-  spice: 'Herbs & Spices',
+  spice: 'Spices & Condiments',
+  condiment: 'Spices & Condiments',
   prepared: 'Prepared Foods',
-  beverage: 'Beverages'
+  sweets: 'Sweets & Desserts',
+  beverage: 'Beverages',
+  wine: 'Wine',
+  bar: 'Bar'
 };
 '''
     
