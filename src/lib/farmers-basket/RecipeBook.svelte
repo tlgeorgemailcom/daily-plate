@@ -1734,6 +1734,7 @@
   .mod-form-container {
     flex: 1;
     overflow-y: auto;
+    overflow-x: hidden;
     padding: 16px 20px;
     background: #FFFEF5;
   }

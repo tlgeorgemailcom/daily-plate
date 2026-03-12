@@ -954,6 +954,10 @@
       width: 80px;
     }
     
+    .name-input {
+      min-width: 0;
+    }
+    
     .dietary-grid {
       grid-template-columns: 1fr 1fr;
     }
@@ -1142,7 +1146,7 @@
   }
 
   .nutrition-badge {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 6px;
     padding: 4px 8px;
@@ -1151,11 +1155,13 @@
     border-radius: 6px;
     font-size: 0.82rem;
     color: #2E7D32;
+    min-width: 0;
     max-width: 100%;
   }
 
   .nutrition-badge-text {
     flex: 1;
+    min-width: 0;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

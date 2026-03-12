@@ -765,6 +765,7 @@
     width: 100%;
     max-height: 90vh;
     overflow-y: auto;
+    overflow-x: hidden;
   }
   
   .edit-content h2 {
