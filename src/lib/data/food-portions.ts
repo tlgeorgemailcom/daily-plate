@@ -1787,7 +1787,8 @@ export const FOODS: Food[] = [
     "word": "BARBECUE",
     "display": "Barbecue",
     "groups": [
-      "spice"
+      "protein",
+      "prepared"
     ],
     "ndb": "7001",
     "desc": "Barbecue loaf, pork, beef",
@@ -16739,6 +16740,7 @@ export const FOODS: Food[] = [
     "word": "EMU",
     "display": "Emu",
     "groups": [
+      "protein",
       "prepared"
     ],
     "ndb": "5622",
@@ -28990,7 +28992,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "PEPPER",
-    "display": "Pepper",
+    "display": "Pepper Black",
     "groups": [
       "vegetable",
       "fruit",
@@ -34691,7 +34693,6 @@ export const FOODS: Food[] = [
     "word": "SALADPOTATOEGG",
     "display": "Salad Potato with Egg",
     "groups": [
-      "vegetable",
       "prepared"
     ],
     "ndb": "22971",
@@ -35442,7 +35443,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "SAUCE",
-    "display": "Sauce",
+    "display": "Cheese Sauce",
     "groups": [
       "prepared"
     ],
@@ -40590,7 +40591,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "TERIYAKI",
-    "display": "Teriyaki",
+    "display": "Teriyaki Sauce",
     "groups": [
       "spice"
     ],
@@ -44184,6 +44185,1615 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "toast, Gerber Zwieback",
         "gm": 7.0
+      }
+    ]
+  },
+  {
+    "word": "SOFRITOSAUCE",
+    "display": "Sofrito Sauce",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "6142",
+    "desc": "Sauce, sofrito, prepared from recipe",
+    "cal": 237.0,
+    "pro": 12.8,
+    "fat": 18.2,
+    "carb": 5.5,
+    "fib": 1.7,
+    "h2o": 59.7,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.5,
+        "desc": "cup",
+        "gm": 103.0
+      }
+    ]
+  },
+  {
+    "word": "SAUCEWHITETHIN",
+    "display": "Sauce White Thin",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "6165",
+    "desc": "Sauce, homemade, white, thin",
+    "cal": 105.0,
+    "pro": 3.8,
+    "fat": 6.7,
+    "carb": 7.4,
+    "fib": 0.1,
+    "h2o": 80.7,
+    "sug": 4.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 250.0
+      },
+      {
+        "amt": 0.5,
+        "desc": "cup",
+        "gm": 125.0
+      }
+    ]
+  },
+  {
+    "word": "SAUCEWHITEMED",
+    "display": "Sauce White Medium",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "6166",
+    "desc": "Sauce, homemade, white, medium",
+    "cal": 147.0,
+    "pro": 3.8,
+    "fat": 10.6,
+    "carb": 9.2,
+    "fib": 0.2,
+    "h2o": 74.9,
+    "sug": 4.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 250.0
+      },
+      {
+        "amt": 0.5,
+        "desc": "cup",
+        "gm": 125.0
+      }
+    ]
+  },
+  {
+    "word": "SAUCEWHITETHICK",
+    "display": "Sauce White Thick",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "6167",
+    "desc": "Sauce, homemade, white, thick",
+    "cal": 186.0,
+    "pro": 4.0,
+    "fat": 13.8,
+    "carb": 11.6,
+    "fib": 0.3,
+    "h2o": 69.1,
+    "sug": 4.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 250.0
+      },
+      {
+        "amt": 0.5,
+        "desc": "cup",
+        "gm": 125.0
+      }
+    ]
+  },
+  {
+    "word": "PLUMSAUCE",
+    "display": "Plum Sauce",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "6151",
+    "desc": "Sauce, plum, ready-to-serve",
+    "cal": 184.0,
+    "pro": 0.9,
+    "fat": 1.0,
+    "carb": 42.8,
+    "fib": 0.7,
+    "h2o": 53.7,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 19.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 305.0
+      }
+    ]
+  },
+  {
+    "word": "PICANTESAUCE",
+    "display": "Picante Sauce",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "6603",
+    "desc": "PACE, Picante Sauce",
+    "cal": 25.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 6.2,
+    "fib": 3.1,
+    "h2o": 89.9,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 32.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "tbsp",
+        "gm": 32.0
+      }
+    ]
+  },
+  {
+    "word": "HOISINSAUCE",
+    "display": "Hoisin Sauce",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "6175",
+    "desc": "Sauce, hoisin, ready-to-serve",
+    "cal": 220.0,
+    "pro": 3.3,
+    "fat": 3.4,
+    "carb": 44.1,
+    "fib": 2.8,
+    "h2o": 44.2,
+    "sug": 27.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 16.0
+      }
+    ]
+  },
+  {
+    "word": "FISHSAUCE",
+    "display": "Fish Sauce",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "6179",
+    "desc": "Sauce, fish, ready-to-serve",
+    "cal": 35.0,
+    "pro": 5.1,
+    "fat": 0.0,
+    "carb": 3.6,
+    "fib": 0.0,
+    "h2o": 71.1,
+    "sug": 3.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 18.0
+      }
+    ]
+  },
+  {
+    "word": "SWEETSOURSAUCE",
+    "display": "Sweet Sour Sauce",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "6285",
+    "desc": "Sauce, sweet and sour, prepared-from-recipe",
+    "cal": 79.0,
+    "pro": 1.8,
+    "fat": 0.6,
+    "carb": 16.7,
+    "fib": 0.4,
+    "h2o": 78.6,
+    "sug": 10.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      }
+    ]
+  },
+  {
+    "word": "PESTOSAUCE",
+    "display": "Pesto Sauce",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "6626",
+    "desc": "Sauce, pesto, ready-to-serve, refrigerated",
+    "cal": 418.0,
+    "pro": 9.8,
+    "fat": 37.6,
+    "carb": 10.1,
+    "fib": 1.8,
+    "h2o": 39.0,
+    "sug": 6.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.25,
+        "desc": "cup",
+        "gm": 63.0
+      }
+    ]
+  },
+  {
+    "word": "MARINARASAUCE",
+    "display": "Marinara Sauce",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "6931",
+    "desc": "Sauce, pasta, spaghetti/marinara, ready-to-serve",
+    "cal": 50.0,
+    "pro": 1.4,
+    "fat": 1.6,
+    "carb": 7.4,
+    "fib": 1.8,
+    "h2o": 87.9,
+    "sug": 4.9,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving 1/2 cup",
+        "gm": 132.0
+      }
+    ]
+  },
+  {
+    "word": "HOTCHILESRIRACHA",
+    "display": "Hot Chile Sriracha",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "6631",
+    "desc": "Sauce, hot chile, sriracha",
+    "cal": 93.0,
+    "pro": 1.9,
+    "fat": 0.9,
+    "carb": 19.2,
+    "fib": 2.2,
+    "h2o": 71.8,
+    "sug": 15.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 6.5
+      }
+    ]
+  },
+  {
+    "word": "GUAVASAUCE",
+    "display": "Guava Sauce",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "9143",
+    "desc": "Guava sauce, cooked",
+    "cal": 36.0,
+    "pro": 0.3,
+    "fat": 0.1,
+    "carb": 9.5,
+    "fib": 3.6,
+    "h2o": 89.6,
+    "sug": 5.9,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 238.0
+      }
+    ]
+  },
+  {
+    "word": "HORSERADISHSAUCE",
+    "display": "Horseradish Sauce",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "27066",
+    "desc": "Sauce, horseradish",
+    "cal": 503.0,
+    "pro": 1.1,
+    "fat": 50.9,
+    "carb": 10.1,
+    "fib": 1.0,
+    "h2o": 35.8,
+    "sug": 9.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 5.6
+      }
+    ]
+  },
+  {
+    "word": "STEAKSAUCE",
+    "display": "Steak Sauce",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "27048",
+    "desc": "Sauce, steak, tomato based",
+    "cal": 95.0,
+    "pro": 1.2,
+    "fat": 0.2,
+    "carb": 22.0,
+    "fib": 1.5,
+    "h2o": 71.0,
+    "sug": 9.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "Tbsp",
+        "gm": 34.0
+      }
+    ]
+  },
+  {
+    "word": "COCKTAILSAUCE",
+    "display": "Cocktail Sauce",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "27051",
+    "desc": "Sauce, cocktail, ready-to-serve",
+    "cal": 124.0,
+    "pro": 1.4,
+    "fat": 1.1,
+    "carb": 28.2,
+    "fib": 1.8,
+    "h2o": 65.7,
+    "sug": 11.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.25,
+        "desc": "cup",
+        "gm": 60.0
+      }
+    ]
+  },
+  {
+    "word": "TARTARSAUCE",
+    "display": "Tartar Sauce",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "27049",
+    "desc": "Sauce, tartar, ready-to-serve",
+    "cal": 211.0,
+    "pro": 1.0,
+    "fat": 16.7,
+    "carb": 13.3,
+    "fib": 0.5,
+    "h2o": 67.0,
+    "sug": 4.2,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "tablespoons",
+        "gm": 30.0
+      }
+    ]
+  },
+  {
+    "word": "DUCKSAUCE",
+    "display": "Duck Sauce",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "27046",
+    "desc": "Sauce, duck, ready-to-serve",
+    "cal": 245.0,
+    "pro": 0.4,
+    "fat": 0.1,
+    "carb": 60.6,
+    "fib": 0.6,
+    "h2o": 37.4,
+    "sug": 30.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "Tbsp",
+        "gm": 33.0
+      }
+    ]
+  },
+  {
+    "word": "PEANUTSAUCE",
+    "display": "Peanut Sauce",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "27059",
+    "desc": "Sauce, peanut, made from peanut butter, water, soy sauce",
+    "cal": 257.0,
+    "pro": 6.3,
+    "fat": 16.0,
+    "carb": 22.0,
+    "fib": 1.8,
+    "h2o": 51.4,
+    "sug": 17.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 18.0
+      }
+    ]
+  },
+  {
+    "word": "PLAINTAINFRIED",
+    "display": "Plaintain Fried",
+    "groups": [
+      "fruit"
+    ],
+    "ndb": "9447",
+    "desc": "Plantains, yellow, fried, Latino restaurant",
+    "cal": 236.0,
+    "pro": 1.4,
+    "fat": 7.5,
+    "carb": 40.8,
+    "fib": 3.2,
+    "h2o": 49.0,
+    "sug": 21.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 169.0
+      }
+    ]
+  },
+  {
+    "word": "COFFEEESPRESSODECAF",
+    "display": "Coffee Espresso Decaf",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14202",
+    "desc": "Beverages, coffee, brewed, espresso, restaurant-prepared, decaffeinated",
+    "cal": 9.0,
+    "pro": 0.1,
+    "fat": 0.2,
+    "carb": 1.7,
+    "fib": 0.0,
+    "h2o": 97.8,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.6
+      }
+    ]
+  },
+  {
+    "word": "COFFEEESPRESSO",
+    "display": "Coffee Espresso",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14210",
+    "desc": "Beverages, coffee, brewed, espresso, restaurant-prepared",
+    "cal": 9.0,
+    "pro": 0.1,
+    "fat": 0.2,
+    "carb": 1.7,
+    "fib": 0.0,
+    "h2o": 97.8,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.6
+      }
+    ]
+  },
+  {
+    "word": "HORCHATA",
+    "display": "Horchata",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14638",
+    "desc": "Beverage, Horchata, as served in restaurant",
+    "cal": 54.0,
+    "pro": 0.5,
+    "fat": 0.7,
+    "carb": 11.5,
+    "fib": 0.0,
+    "h2o": 87.1,
+    "sug": 9.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 228.0
+      }
+    ]
+  },
+  {
+    "word": "RICESTEAMED",
+    "display": "Rice Steamed",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20058",
+    "desc": "Rice, white, steamed, Chinese restaurant",
+    "cal": 151.0,
+    "pro": 3.2,
+    "fat": 0.3,
+    "carb": 33.9,
+    "fib": 0.9,
+    "h2o": 62.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, loosely packed",
+        "gm": 132.0
+      }
+    ]
+  },
+  {
+    "word": "NOODLEFLAT",
+    "display": "Noodles Flat",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20118",
+    "desc": "Noodles, flat, crunchy, Chinese restaurant",
+    "cal": 521.0,
+    "pro": 10.3,
+    "fat": 31.7,
+    "carb": 51.9,
+    "fib": 1.9,
+    "h2o": 4.9,
+    "sug": 0.2,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 45.0
+      }
+    ]
+  },
+  {
+    "word": "SOUPEGGDROP",
+    "display": "Soup Egg Drop",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "27000",
+    "desc": "Soup, egg drop, Chinese restaurant",
+    "cal": 27.0,
+    "pro": 1.2,
+    "fat": 0.6,
+    "carb": 4.3,
+    "fib": 0.4,
+    "h2o": 92.9,
+    "sug": 0.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 241.0
+      }
+    ]
+  },
+  {
+    "word": "SOUPHOTSOUR",
+    "display": "Soup Hot Sour",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "27001",
+    "desc": "Soup, hot and sour, Chinese restaurant",
+    "cal": 39.0,
+    "pro": 2.6,
+    "fat": 1.2,
+    "carb": 4.3,
+    "fib": 0.5,
+    "h2o": 90.7,
+    "sug": 0.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 233.0
+      }
+    ]
+  },
+  {
+    "word": "SOUPWONTON",
+    "display": "Soup Wonton",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "27002",
+    "desc": "Soup, wonton, Chinese restaurant",
+    "cal": 32.0,
+    "pro": 2.1,
+    "fat": 0.3,
+    "carb": 5.2,
+    "fib": 0.2,
+    "h2o": 91.2,
+    "sug": 0.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 223.0
+      }
+    ]
+  },
+  {
+    "word": "CHINESELEMONCHICK",
+    "display": "Chinese Lemon Chicken",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "ndb": "36617",
+    "desc": "Restaurant, Chinese, lemon chicken",
+    "cal": 252.0,
+    "pro": 11.9,
+    "fat": 13.6,
+    "carb": 20.6,
+    "fib": 1.0,
+    "h2o": 52.7,
+    "sug": 8.2,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "order",
+        "gm": 623.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "pieces",
+        "gm": 73.0
+      }
+    ]
+  },
+  {
+    "word": "CHILEBEANS",
+    "display": "Chile with Beans",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "ndb": "36037",
+    "desc": "Restaurant, family style, chili with meat and beans",
+    "cal": 157.0,
+    "pro": 12.6,
+    "fat": 9.8,
+    "carb": 4.6,
+    "fib": 1.4,
+    "h2o": 71.3,
+    "sug": 2.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 136.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 182.0
+      }
+    ]
+  },
+  {
+    "word": "STEAKSIRLOIN",
+    "display": "Steak Sirloin",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "ndb": "36013",
+    "desc": "Restaurant, family style, sirloin steak",
+    "cal": 195.0,
+    "pro": 29.8,
+    "fat": 8.5,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 60.2,
+    "sug": 0.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 166.0
+      }
+    ]
+  },
+  {
+    "word": "CHICKENFINGERS",
+    "display": "Chicken Fingers",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "ndb": "36015",
+    "desc": "Restaurant, family style, chicken fingers, from kid's menu",
+    "cal": 307.0,
+    "pro": 18.7,
+    "fat": 17.4,
+    "carb": 18.8,
+    "fib": 1.1,
+    "h2o": 42.2,
+    "sug": 0.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 114.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "piece",
+        "gm": 37.0
+      }
+    ]
+  },
+  {
+    "word": "SHRIMPBREADED",
+    "display": "Shrimp Breaded and Fried",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "ndb": "36016",
+    "desc": "Restaurant, family style, shrimp, breaded and fried",
+    "cal": 308.0,
+    "pro": 12.7,
+    "fat": 18.7,
+    "carb": 22.3,
+    "fib": 1.5,
+    "h2o": 43.0,
+    "sug": 0.9,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 169.0
+      }
+    ]
+  },
+  {
+    "word": "FISHFRIED",
+    "display": "Fish Batter and Fried",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "ndb": "36033",
+    "desc": "Restaurant, family style, fish fillet, battered or breaded, fried",
+    "cal": 219.0,
+    "pro": 13.5,
+    "fat": 10.8,
+    "carb": 16.9,
+    "fib": 0.9,
+    "h2o": 56.7,
+    "sug": 0.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 226.0
+      }
+    ]
+  },
+  {
+    "word": "QUESADILLACHEESE",
+    "display": "Quesadilla Cheese",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "36052",
+    "desc": "Restaurant, Mexican, cheese quesadilla",
+    "cal": 368.0,
+    "pro": 15.9,
+    "fat": 23.1,
+    "carb": 24.1,
+    "fib": 1.7,
+    "h2o": 33.8,
+    "sug": 2.2,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving serving size varied on diameter and count",
+        "gm": 205.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "quesadilla 8-10 inch diameter",
+        "gm": 194.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "quesadilla 5-6 inch diameter",
+        "gm": 279.0
+      }
+    ]
+  },
+  {
+    "word": "CHINESEKUNGPAOCHICK",
+    "display": "Chinese Kung Pao Chicken",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "ndb": "36619",
+    "desc": "Restaurant, Chinese, kung pao chicken",
+    "cal": 129.0,
+    "pro": 9.8,
+    "fat": 7.0,
+    "carb": 6.9,
+    "fib": 1.5,
+    "h2o": 74.8,
+    "sug": 3.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "order",
+        "gm": 604.0
+      }
+    ]
+  },
+  {
+    "word": "CHINESESHRIMPVEG",
+    "display": "Chinese Shrimp and veg",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "ndb": "36620",
+    "desc": "Restaurant, Chinese, shrimp and vegetables",
+    "cal": 78.0,
+    "pro": 5.9,
+    "fat": 4.0,
+    "carb": 4.5,
+    "fib": 1.4,
+    "h2o": 84.1,
+    "sug": 2.2,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "order",
+        "gm": 601.0
+      }
+    ]
+  },
+  {
+    "word": "CHINESESWSOURCHICK",
+    "display": "Chinese Sweet Sour Chicken",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "ndb": "36621",
+    "desc": "Restaurant, Chinese, sweet and sour chicken",
+    "cal": 250.0,
+    "pro": 10.1,
+    "fat": 12.7,
+    "carb": 23.9,
+    "fib": 1.0,
+    "h2o": 52.2,
+    "sug": 11.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "order",
+        "gm": 706.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "pieces",
+        "gm": 55.0
+      }
+    ]
+  },
+  {
+    "word": "CHINESESWSOURPORK",
+    "display": "Chinese Sweet Sour Pork",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "ndb": "36622",
+    "desc": "Restaurant, Chinese, sweet and sour pork",
+    "cal": 270.0,
+    "pro": 8.9,
+    "fat": 15.7,
+    "carb": 23.3,
+    "fib": 1.0,
+    "h2o": 50.8,
+    "sug": 10.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "order",
+        "gm": 609.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "pieces",
+        "gm": 42.0
+      }
+    ]
+  },
+  {
+    "word": "CHINESECHICKCHOWMEIN",
+    "display": "Chinese Chicken Chow Mein",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "ndb": "36623",
+    "desc": "Restaurant, Chinese, chicken chow mein",
+    "cal": 85.0,
+    "pro": 6.8,
+    "fat": 2.8,
+    "carb": 8.3,
+    "fib": 1.0,
+    "h2o": 81.0,
+    "sug": 1.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "order",
+        "gm": 604.0
+      }
+    ]
+  },
+  {
+    "word": "CHINESEVEGCHOWMEIN",
+    "display": "Chinese Veg Chow Mein",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "36624",
+    "desc": "Restaurant, Chinese, vegetable chow mein, without meat or noodles",
+    "cal": 43.0,
+    "pro": 1.3,
+    "fat": 1.7,
+    "carb": 5.7,
+    "fib": 1.2,
+    "h2o": 90.1,
+    "sug": 2.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "order",
+        "gm": 777.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 195.0
+      }
+    ]
+  },
+  {
+    "word": "CHINESEVEGLOMEIN",
+    "display": "Chinese Veg lo Mein",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "36625",
+    "desc": "Restaurant, Chinese, vegetable lo mein, without meat",
+    "cal": 121.0,
+    "pro": 4.8,
+    "fat": 2.4,
+    "carb": 20.2,
+    "fib": 1.3,
+    "h2o": 71.3,
+    "sug": 2.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "order",
+        "gm": 741.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 136.0
+      }
+    ]
+  },
+  {
+    "word": "CHINESEGENERAL",
+    "display": "Chinese General Tso\u2019s Chicken",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "ndb": "36618",
+    "desc": "Restaurant, Chinese, general tso's chicken",
+    "cal": 295.0,
+    "pro": 12.9,
+    "fat": 16.4,
+    "carb": 24.0,
+    "fib": 0.9,
+    "h2o": 45.1,
+    "sug": 11.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "order",
+        "gm": 535.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "pieces",
+        "gm": 53.0
+      }
+    ]
+  },
+  {
+    "word": "SOUPBLACKBEAN",
+    "display": "Soup Black Bean",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "36413",
+    "desc": "Restaurant, Latino, black bean soup",
+    "cal": 103.0,
+    "pro": 5.1,
+    "fat": 2.6,
+    "carb": 14.8,
+    "fib": 4.9,
+    "h2o": 75.9,
+    "sug": 0.9,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 246.0
+      }
+    ]
+  },
+  {
+    "word": "TRIPE",
+    "display": "Tripe",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "36414",
+    "desc": "Restaurant, Latino, tripe soup",
+    "cal": 74.0,
+    "pro": 8.6,
+    "fat": 2.6,
+    "carb": 4.1,
+    "fib": 0.0,
+    "h2o": 83.4,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 200.0
+      }
+    ]
+  },
+  {
+    "word": "RICEFRIED",
+    "display": "Chinese Rice Fried",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "36602",
+    "desc": "Restaurant, Chinese, fried rice, without meat",
+    "cal": 174.0,
+    "pro": 4.0,
+    "fat": 3.0,
+    "carb": 32.8,
+    "fib": 1.1,
+    "h2o": 59.1,
+    "sug": 0.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 137.0
+      }
+    ]
+  },
+  {
+    "word": "CHINESEBEEFVEG",
+    "display": "Chinese Beef and Veg",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "ndb": "36603",
+    "desc": "Restaurant, Chinese, beef and vegetables",
+    "cal": 105.0,
+    "pro": 7.1,
+    "fat": 5.3,
+    "carb": 7.3,
+    "fib": 1.5,
+    "h2o": 78.8,
+    "sug": 2.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "order",
+        "gm": 574.0
+      }
+    ]
+  },
+  {
+    "word": "TAMALESCORN",
+    "display": "Tamales Corn",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "36411",
+    "desc": "Restaurant, Latino, tamale, corn",
+    "cal": 186.0,
+    "pro": 3.5,
+    "fat": 7.2,
+    "carb": 26.7,
+    "fib": 3.2,
+    "h2o": 61.3,
+    "sug": 7.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "piece",
+        "gm": 166.0
+      }
+    ]
+  },
+  {
+    "word": "CHICKENPARMESAN",
+    "display": "Chicken Parmesan",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "ndb": "36059",
+    "desc": "Restaurant, Italian, chicken parmesan without pasta",
+    "cal": 204.0,
+    "pro": 16.2,
+    "fat": 10.6,
+    "carb": 10.9,
+    "fib": 0.9,
+    "h2o": 59.9,
+    "sug": 2.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 301.0
+      }
+    ]
+  },
+  {
+    "word": "CHICKENRICE",
+    "display": "Chicken Rice",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "ndb": "36401",
+    "desc": "Restaurant, Latino, chicken and rice, entree, prepared",
+    "cal": 174.0,
+    "pro": 12.0,
+    "fat": 5.1,
+    "carb": 20.0,
+    "fib": 1.2,
+    "h2o": 61.1,
+    "sug": 0.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 141.0
+      }
+    ]
+  },
+  {
+    "word": "EMPANADAS",
+    "display": "Empanadas",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "36403",
+    "desc": "Restaurant, Latino, empanadas, beef, prepared",
+    "cal": 335.0,
+    "pro": 11.3,
+    "fat": 18.4,
+    "carb": 31.2,
+    "fib": 2.0,
+    "h2o": 37.5,
+    "sug": 1.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "piece",
+        "gm": 89.0
+      }
+    ]
+  },
+  {
+    "word": "CHICKENSESASME",
+    "display": "Chicken Sesame",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "ndb": "36633",
+    "desc": "Restaurant, Chinese, sesame chicken",
+    "cal": 293.0,
+    "pro": 14.3,
+    "fat": 14.2,
+    "carb": 26.9,
+    "fib": 0.7,
+    "h2o": 42.8,
+    "sug": 16.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "order",
+        "gm": 547.0
+      }
+    ]
+  },
+  {
+    "word": "COFFEEDECAF",
+    "display": "Coffee Decaf",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14201",
+    "desc": "Beverages, coffee, brewed, prepared with tap water, decaffeinated",
+    "cal": 0.0,
+    "pro": 0.1,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 99.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.6
+      },
+      {
+        "amt": 6.0,
+        "desc": "fl oz",
+        "gm": 178.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup (8 fl oz)",
+        "gm": 237.0
+      }
+    ]
+  },
+  {
+    "word": "COFFEESWEETMILK",
+    "display": "Coffee Milk & Sugar",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14179",
+    "desc": "Beverages, coffee, ready to drink, milk based, sweetened",
+    "cal": 71.0,
+    "pro": 2.0,
+    "fat": 1.4,
+    "carb": 12.6,
+    "fib": 0.0,
+    "h2o": 83.6,
+    "sug": 10.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 262.0
       }
     ]
   }
