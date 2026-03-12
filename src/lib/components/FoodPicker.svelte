@@ -53,26 +53,28 @@
       foods = foods.filter(f => f.groups.includes(group));
     }
     
-    // Filter by search - split into words and match ANY
+    // Filter by search - split into words and require ALL words to match (AND logic)
     // Also handle basic plurals by stripping trailing 's'
     const queryWords = searchQuery.toLowerCase().split(/\s+/).filter(w => w.length > 0);
     if (queryWords.length > 0) {
-      // Create variations: original word + singular form (strip trailing 's')
-      const queryVariations = queryWords.flatMap(w => {
+      // For each query word, build a list of acceptable variations (e.g. plural handling)
+      const queryWordGroups = queryWords.map(w => {
         const variations = [w];
         if (w.endsWith('s') && w.length > 2) {
           variations.push(w.slice(0, -1)); // "crackers" -> also try "cracker"
         }
         return variations;
       });
-      
+
       foods = foods.filter(f => {
         const displayLower = f.display.toLowerCase();
-        // Match only at word boundaries in the display name
-        return queryVariations.some(qw => {
-          const regex = new RegExp(`\\b${qw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`);
-          return regex.test(displayLower);
-        });
+        // Every query word must have at least one variation that matches
+        return queryWordGroups.every(variations =>
+          variations.some(qw => {
+            const regex = new RegExp(`\\b${qw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`);
+            return regex.test(displayLower);
+          })
+        );
       });
     }
     
