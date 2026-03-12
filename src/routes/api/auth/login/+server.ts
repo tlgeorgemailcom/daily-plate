@@ -44,14 +44,19 @@ export const POST: RequestHandler = async ({ request }) => {
     // Verify password
     const inputHash = simpleHash(password);
     if (inputHash !== user.password_hash) {
+      console.log(`Login hash mismatch for ${email}: input=${inputHash} stored=${user.password_hash}`);
       return json({ error: 'Invalid email or password' }, { status: 401 });
     }
     
-    // Update last login
-    await execute(
-      'UPDATE players SET last_login_at = datetime("now") WHERE id = ?',
-      [user.id]
-    );
+    // Update last login (non-fatal — don't block login if this fails)
+    try {
+      await execute(
+        'UPDATE players SET last_login_at = datetime("now") WHERE id = ?',
+        [user.id]
+      );
+    } catch (updateErr) {
+      console.warn('Non-fatal: last_login_at update failed:', updateErr);
+    }
     
     // Map subscription_tier to tier for client
     const tier = user.subscription_tier === 'subscriber' ? 'premium' : 'free';
@@ -67,6 +72,6 @@ export const POST: RequestHandler = async ({ request }) => {
     
   } catch (err) {
     console.error('Login error:', err);
-    return json({ error: 'Login failed' }, { status: 500 });
+    return json({ error: 'Login failed', detail: String(err) }, { status: 500 });
   }
 };
