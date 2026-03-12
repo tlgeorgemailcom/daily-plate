@@ -851,6 +851,7 @@
   .form-actions {
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
     gap: 12px;
     padding-top: 12px;
     border-top: 2px solid #EEE;

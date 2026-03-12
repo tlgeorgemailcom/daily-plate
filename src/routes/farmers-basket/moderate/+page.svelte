@@ -1395,6 +1395,16 @@
     .header-actions .hint {
       display: none;
     }
+
+    .request-changes-btn,
+    .reject-btn,
+    .approve-btn {
+      font-size: 0.8rem;
+      padding: 8px 12px;
+      flex: 1 1 auto;
+      min-width: 0;
+      text-align: center;
+    }
   }
   
   /* Add New View */
