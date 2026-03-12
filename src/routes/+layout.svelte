@@ -114,7 +114,7 @@
 
 {#if hasStarted}
   <!-- Use full-width layout for games that need more space -->
-  {@const isFullWidthGame = $page.url.pathname === '/farmers-basket' || $page.url.pathname === '/tower'}
+  {@const isFullWidthGame = $page.url.pathname.startsWith('/farmers-basket') || $page.url.pathname === '/tower'}
   <div class="app" class:full-width={isFullWidthGame}>
     <div class="nav-wrapper">
     <nav>

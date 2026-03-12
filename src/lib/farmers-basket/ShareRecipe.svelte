@@ -171,8 +171,16 @@
         servings: data.servings.trim(),
         ingredients: data.ingredients.map(i => ({
           name: i.name.trim(),
-          quantity: i.quantity.trim()
+          quantity: i.quantity.trim(),
+          ...(data.nutritionComplete ? {
+            foodWord: i.foodWord,
+            ndbNo: i.ndbNo,
+            portionDesc: i.portionDesc,
+            portionGrams: i.portionGrams,
+            servingCount: i.servingCount
+          } : {})
         })),
+        ...(data.nutritionComplete ? { nutritionComplete: true } : {}),
         instructions: data.instructions.map(i => i.text.trim()),
         submittedAt: new Date().toISOString()
       };

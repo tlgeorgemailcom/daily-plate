@@ -2,6 +2,8 @@
   import { FOOD_EMOJI } from '$lib/farmers-basket/types';
   import type { FoodType, AnimalType, DietaryCategory } from '$lib/farmers-basket/types';
   import FoodIcon from '$lib/farmers-basket/FoodIcon.svelte';
+  import { FOODS } from '$lib/data/food-portions';
+  import type { Food as FoodData } from '$lib/data/food-portions';
   
   // Types for ingredients and instructions
   export interface RecipeIngredient {
@@ -10,6 +12,12 @@
     quantity: string;
     gameFood?: FoodType | '';
     animal?: AnimalType | '';
+    // Nutrition linking
+    foodWord?: string;       // key into food-portions.ts e.g. "BEEFGROUND"
+    ndbNo?: string;          // USDA NDB#
+    portionDesc?: string;    // e.g. "1 cup"
+    portionGrams?: number;   // grams per one portion
+    servingCount?: number;   // number of portions used in recipe
   }
   
   export interface RecipeInstruction {
@@ -27,12 +35,15 @@
     ingredients: RecipeIngredient[];
     instructions: RecipeInstruction[];
     foodSupply?: Record<FoodType, number>; // How many of each food available in game
+    nutritionComplete?: boolean;           // true when all ingredients have nutrition links
   }
   
   // Props
   interface Props {
     /** If true, shows game food and animal mapping per ingredient */
     moderatorMode?: boolean;
+    /** If true, shows nutrition linking per ingredient (default true) */
+    nutritionMode?: boolean;
     /** Initial data for editing existing recipes */
     initialData?: Partial<RecipeFormData>;
     /** Called when form is submitted with full form data */
@@ -53,6 +64,7 @@
   
   let { 
     moderatorMode = false,
+    nutritionMode = true,
     initialData = {},
     onsubmit,
     oncancel,
@@ -95,7 +107,12 @@
           name: ing.name || '',
           quantity: ing.quantity || '',
           gameFood: ing.gameFood || '',
-          animal: ing.animal || ''
+          animal: ing.animal || '',
+          foodWord: ing.foodWord,
+          ndbNo: ing.ndbNo,
+          portionDesc: ing.portionDesc,
+          portionGrams: ing.portionGrams,
+          servingCount: ing.servingCount
         }))
       : [{ id: 1, name: '', quantity: '', gameFood: '', animal: '' }]
   );
@@ -113,7 +130,114 @@
   
   // Initialize food supply (default 3 of each selected food)
   let foodSupply = $state<Record<FoodType, number>>(initialData.foodSupply || {} as Record<FoodType, number>);
-  
+
+  // ─── Nutrition linking state (keyed by ingredient id) ───────────────────────
+  let nutritionOpen = $state<Record<number, boolean>>({});
+  let nutritionSearchQ = $state<Record<number, string>>({});
+  let nutritionPendingFood = $state<Record<number, FoodData | null>>({});
+  let nutritionPendingPortionIdx = $state<Record<number, number>>({});
+  let nutritionPendingCount = $state<Record<number, number>>({});
+  let nutritionCustomGrams = $state<Record<number, number | null>>({});
+
+  function searchFoods(query: string): FoodData[] {
+    if (!query.trim()) return [];
+    const words = query.toLowerCase().split(/\s+/).filter(w => w.length > 0);
+    if (words.length === 0) return [];
+    const escaped = words.map(w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+    const matches = FOODS.filter(f => {
+      const d = f.display.toLowerCase();
+      return escaped.every(w => d.includes(w));
+    });
+    // rank: display starts with first query word → top; then alphabetical
+    matches.sort((a, b) => {
+      const aStarts = a.display.toLowerCase().startsWith(words[0]) ? 0 : 1;
+      const bStarts = b.display.toLowerCase().startsWith(words[0]) ? 0 : 1;
+      if (aStarts !== bStarts) return aStarts - bStarts;
+      return a.display.localeCompare(b.display);
+    });
+    return matches.slice(0, 20);
+  }
+
+  function openNutritionSearchFresh(ing: RecipeIngredient) {
+    // Always go to search screen (change food)
+    nutritionSearchQ = { ...nutritionSearchQ, [ing.id]: ing.name };
+    nutritionPendingFood = { ...nutritionPendingFood, [ing.id]: null };
+    nutritionCustomGrams = { ...nutritionCustomGrams, [ing.id]: null };
+    nutritionOpen = { ...nutritionOpen, [ing.id]: true };
+  }
+
+  function openNutritionSearch(ing: RecipeIngredient) {
+    nutritionSearchQ = { ...nutritionSearchQ, [ing.id]: ing.name };
+    nutritionOpen = { ...nutritionOpen, [ing.id]: true };
+    // If already linked, skip search and pre-load the portion picker
+    if (ing.foodWord) {
+      const existing = FOODS.find(f => f.word === ing.foodWord) ?? null;
+      nutritionPendingFood = { ...nutritionPendingFood, [ing.id]: existing };
+      if (existing) {
+        // Restore current portion selection if possible
+        const matchIdx = existing.portions.findIndex(p => p.desc === ing.portionDesc);
+        nutritionPendingPortionIdx = { ...nutritionPendingPortionIdx, [ing.id]: matchIdx >= 0 ? matchIdx : (existing.portions.length > 1 ? 1 : 0) };
+        nutritionPendingCount = { ...nutritionPendingCount, [ing.id]: ing.servingCount ?? 1 };
+        // Restore custom grams if the previous link used a custom gram amount
+        nutritionCustomGrams = { ...nutritionCustomGrams, [ing.id]: ing.portionDesc === 'g' ? (ing.portionGrams ?? null) : null };
+      }
+    } else {
+      nutritionPendingFood = { ...nutritionPendingFood, [ing.id]: null };
+    }
+  }
+
+  function selectPendingFood(ingId: number, food: FoodData) {
+    nutritionPendingFood = { ...nutritionPendingFood, [ingId]: food };
+    const defaultIdx = food.portions.length > 1 ? 1 : 0;
+    nutritionPendingPortionIdx = { ...nutritionPendingPortionIdx, [ingId]: defaultIdx };
+    nutritionPendingCount = { ...nutritionPendingCount, [ingId]: 1 };
+    nutritionCustomGrams = { ...nutritionCustomGrams, [ingId]: null };
+  }
+
+  function confirmNutritionLink(ingId: number) {
+    const food = nutritionPendingFood[ingId];
+    if (!food) return;
+    const customG = nutritionCustomGrams[ingId];
+    const count = nutritionPendingCount[ingId] ?? 1;
+    let portionDesc: string;
+    let portionGrams: number;
+    if (customG && customG > 0) {
+      portionDesc = 'g';
+      portionGrams = customG;
+    } else {
+      const portionIdx = nutritionPendingPortionIdx[ingId] ?? (food.portions.length > 1 ? 1 : 0);
+      const portion = food.portions[portionIdx] ?? food.portions[0];
+      portionDesc = portion.desc;
+      portionGrams = portion.gm;
+    }
+    ingredients = ingredients.map(i => i.id === ingId ? {
+      ...i,
+      foodWord: food.word,
+      ndbNo: food.ndb,
+      portionDesc,
+      portionGrams,
+      servingCount: count
+    } : i);
+    nutritionOpen = { ...nutritionOpen, [ingId]: false };
+  }
+
+  function unlinkNutrition(ingId: number) {
+    ingredients = ingredients.map(i => i.id === ingId ? {
+      ...i,
+      foodWord: undefined, ndbNo: undefined,
+      portionDesc: undefined, portionGrams: undefined, servingCount: undefined
+    } : i);
+  }
+
+  let nutritionLinkedCount = $derived(
+    ingredients.filter(i => i.name.trim() && i.foodWord && i.portionGrams).length
+  );
+  let nutritionTotalCount = $derived(ingredients.filter(i => i.name.trim()).length);
+  let nutritionComplete = $derived(
+    nutritionMode && nutritionTotalCount > 0 && nutritionLinkedCount === nutritionTotalCount
+  );
+  // ────────────────────────────────────────────────────────────────────────────
+
   // Update next IDs based on initial data
   $effect(() => {
     if (initialData.ingredients?.length) {
@@ -127,7 +251,7 @@
   // Ingredient functions
   function addIngredient() {
     ingredients = [...ingredients, { 
-      id: nextIngredientId++, 
+      id: ++nextIngredientId, 
       name: '', 
       quantity: '', 
       gameFood: '', 
@@ -143,7 +267,7 @@
   
   // Instruction functions
   function addInstruction() {
-    instructions = [...instructions, { id: nextInstructionId++, text: '' }];
+    instructions = [...instructions, { id: ++nextInstructionId, text: '' }];
   }
   
   function removeInstruction(id: number) {
@@ -156,6 +280,7 @@
   function handleSubmit(e: Event) {
     e.preventDefault();
     
+    const linked = nutritionMode && nutritionComplete;
     const data: RecipeFormData = {
       recipeName,
       category,
@@ -163,9 +288,23 @@
       submitterName,
       prepTime,
       servings,
-      ingredients: ingredients.filter(i => i.name.trim()),
+      ingredients: ingredients.filter(i => i.name.trim()).map(i => ({
+        id: i.id,
+        name: i.name,
+        quantity: i.quantity,
+        gameFood: i.gameFood,
+        animal: i.animal,
+        ...(linked ? {
+          foodWord: i.foodWord,
+          ndbNo: i.ndbNo,
+          portionDesc: i.portionDesc,
+          portionGrams: i.portionGrams,
+          servingCount: i.servingCount
+        } : {})
+      })),
       instructions: instructions.filter(i => i.text.trim()),
-      foodSupply: moderatorMode ? foodSupply : undefined
+      foodSupply: moderatorMode ? foodSupply : undefined,
+      nutritionComplete: linked || undefined
     };
     
     onsubmit(data);
@@ -188,7 +327,8 @@
     servings,
     ingredients: ingredients.filter(i => i.name.trim()),
     instructions: instructions.filter(i => i.text.trim()),
-    foodSupply: moderatorMode ? foodSupply : undefined
+    foodSupply: moderatorMode ? foodSupply : undefined,
+    nutritionComplete: nutritionMode ? nutritionComplete : undefined
   });
 </script>
 
@@ -286,32 +426,154 @@
     <h3 class="section-title">🥗 Ingredients</h3>
     <p class="section-hint">List all ingredients with quantities (e.g., "2 cups flour", "1 tsp salt")</p>
     
+    {#if nutritionMode && nutritionTotalCount > 0}
+      <div class="nutrition-progress" class:complete={nutritionComplete}>
+        {#if nutritionComplete}
+          ✅ Nutrition complete — all {nutritionTotalCount} ingredient{nutritionTotalCount === 1 ? '' : 's'} linked
+        {:else}
+          🔗 Nutrition: {nutritionLinkedCount}/{nutritionTotalCount} ingredient{nutritionTotalCount === 1 ? '' : 's'} linked
+        {/if}
+      </div>
+    {/if}
+
     <div class="ingredients-list">
       {#each ingredients as ingredient, i (ingredient.id)}
-        <div class="ingredient-row">
-          <span class="row-num">{i + 1}.</span>
-          <input 
-            type="text"
-            bind:value={ingredient.quantity}
-            placeholder="Qty (e.g., 2 cups)"
-            class="form-input qty-input"
-          />
-          <input 
-            type="text"
-            bind:value={ingredient.name}
-            placeholder="Ingredient (e.g., flour)"
-            class="form-input name-input"
-          />
-          
-          <button 
-            type="button"
-            class="remove-btn"
-            onclick={() => removeIngredient(ingredient.id)}
-            disabled={ingredients.length <= 1}
-            aria-label="Remove ingredient"
-          >
-            ✕
-          </button>
+        <div class="ingredient-entry">
+          <div class="ingredient-row">
+            <span class="row-num">{i + 1}.</span>
+            {#if !nutritionMode || !ingredient.foodWord}
+              <input 
+                type="text"
+                bind:value={ingredient.quantity}
+                placeholder="Qty (e.g., 2 cups)"
+                class="form-input qty-input"
+              />
+            {/if}
+            <input 
+              type="text"
+              bind:value={ingredient.name}
+              placeholder="Ingredient (e.g., flour)"
+              class="form-input name-input"
+            />
+            <button 
+              type="button"
+              class="remove-btn"
+              onclick={() => removeIngredient(ingredient.id)}
+              disabled={ingredients.length <= 1}
+              aria-label="Remove ingredient"
+            >
+              ✕
+            </button>
+          </div>
+
+          {#if nutritionMode}
+            <div class="nutrition-row">
+              {#if ingredient.foodWord}
+                <div class="nutrition-badge">
+                  <span class="nutrition-badge-text">
+                    ✓ {FOODS.find(f => f.word === ingredient.foodWord)?.display}
+                    · {ingredient.portionDesc === 'g'
+                        ? `${(ingredient.servingCount ?? 1) * (ingredient.portionGrams ?? 0)}g`
+                        : `${ingredient.servingCount}×${ingredient.portionDesc}`}
+                  </span>
+                  <span class="nutrition-badge-edit-label">Edit:</span>
+                  <button type="button" class="nutrition-relink-btn" onclick={() => openNutritionSearch(ingredient)}>qty</button>
+                  <button type="button" class="nutrition-relink-btn" onclick={() => openNutritionSearchFresh(ingredient)}>food</button>
+                  <button type="button" class="nutrition-unlink-btn" onclick={() => unlinkNutrition(ingredient.id)}>✕</button>
+                </div>
+              {:else}
+                <button type="button" class="link-nutrition-btn" onclick={() => openNutritionSearch(ingredient)}>
+                  🔗 Link nutrition
+                </button>
+              {/if}
+
+              {#if nutritionOpen[ingredient.id]}
+                <div class="nutrition-search-panel">
+                  {#if !nutritionPendingFood[ingredient.id]}
+                    <input
+                      type="text"
+                      class="nutrition-search-input"
+                      placeholder="Search food (e.g. flour, chicken)..."
+                      value={nutritionSearchQ[ingredient.id] ?? ''}
+                      oninput={(e) => { nutritionSearchQ = { ...nutritionSearchQ, [ingredient.id]: (e.target as HTMLInputElement).value }; }}
+                    />
+                    {@const results = searchFoods(nutritionSearchQ[ingredient.id] ?? '')}
+                    {#if results.length > 0}
+                      <div class="nutrition-results">
+                        {#each results as food}
+                          <button type="button" class="nutrition-result-btn" onclick={() => selectPendingFood(ingredient.id, food)}>
+                            <span class="result-name">{food.display}</span>
+                            <span class="result-cal">{food.cal} cal/100g</span>
+                          </button>
+                        {/each}
+                      </div>
+                    {:else if (nutritionSearchQ[ingredient.id] ?? '').trim().length > 1}
+                      <p class="nutrition-no-results">No matches — try a shorter word</p>
+                    {:else}
+                      <p class="nutrition-search-hint">Type to search 1,300+ USDA foods</p>
+                    {/if}
+                  {:else}
+                    {@const pFood = nutritionPendingFood[ingredient.id]!}
+                    {@const namedPortions = pFood.portions.map((p, idx) => ({...p, idx})).filter(p => p.desc !== 'custom (g)')}
+                    <div class="portion-picker">
+                      <div class="portion-food-name">📌 {pFood.display}</div>
+                      <div class="portion-controls">
+                        <label class="portion-label">
+                          How many?
+                          <input
+                            type="number" min="0.25" step="0.25"
+                            class="portion-count-input"
+                            value={nutritionPendingCount[ingredient.id] ?? 1}
+                            oninput={(e) => {
+                              nutritionPendingCount = { ...nutritionPendingCount, [ingredient.id]: parseFloat((e.target as HTMLInputElement).value) || 1 };
+                            }}
+                          />
+                        </label>
+                        {#if namedPortions.length > 0}
+                            <label class="portion-label">
+                              Portion size
+                              <select
+                                class="portion-select"
+                                onchange={(e) => {
+                                  nutritionCustomGrams = { ...nutritionCustomGrams, [ingredient.id]: null };
+                                  nutritionPendingPortionIdx = { ...nutritionPendingPortionIdx, [ingredient.id]: parseInt((e.target as HTMLSelectElement).value) };
+                                }}
+                              >
+                                {#each namedPortions as p}
+                                  <option value={p.idx} selected={p.idx === (nutritionPendingPortionIdx[ingredient.id] ?? namedPortions[0].idx)}>
+                                    {p.amt} {p.desc} ({p.gm}g)
+                                  </option>
+                                {/each}
+                              </select>
+                            </label>
+                          {:else}
+                            <p class="portion-note">Nutrient values per 100g</p>
+                          {/if}
+                        <label class="portion-label">
+                          Custom grams
+                          <input
+                            type="number" min="1" step="1"
+                            class="portion-custom-grams-input"
+                            placeholder="e.g. 150"
+                            value={nutritionCustomGrams[ingredient.id] ?? ''}
+                            oninput={(e) => {
+                              const v = parseFloat((e.target as HTMLInputElement).value);
+                              nutritionCustomGrams = { ...nutritionCustomGrams, [ingredient.id]: isNaN(v) ? null : v };
+                            }}
+                          />
+                        </label>
+                      </div>
+                      <div class="portion-actions">
+                        <button type="button" class="portion-back-btn" onclick={() => { nutritionPendingFood = { ...nutritionPendingFood, [ingredient.id]: null }; }}>← Back</button>
+                        <button type="button" class="portion-confirm-btn" onclick={() => confirmNutritionLink(ingredient.id)}>✓ Confirm</button>
+                      </div>
+                    </div>
+                  {/if}
+                  <button type="button" class="nutrition-cancel-btn" onclick={() => { nutritionOpen = { ...nutritionOpen, [ingredient.id]: false }; }}>Cancel</button>
+                </div>
+              {/if}
+            </div>
+          {/if}
         </div>
       {/each}
     </div>
@@ -839,5 +1101,292 @@
     outline: none;
     border-color: #66BB6A;
     box-shadow: 0 0 0 2px rgba(102, 187, 106, 0.2);
+  }
+
+  /* ── Nutrition linking ──────────────────────────────────────────────────── */
+
+  .ingredient-entry {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F0F0F0;
+  }
+
+  .ingredient-entry:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .nutrition-progress {
+    padding: 7px 12px;
+    background: #FFF8E1;
+    border: 1px solid #FFD54F;
+    border-radius: 8px;
+    font-size: 0.83rem;
+    color: #F57F17;
+    font-weight: 500;
+  }
+
+  .nutrition-progress.complete {
+    background: #E8F5E9;
+    border-color: #81C784;
+    color: #2E7D32;
+  }
+
+  .nutrition-row {
+    padding-left: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .nutrition-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 8px;
+    background: #E8F5E9;
+    border: 1px solid #81C784;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    color: #2E7D32;
+    max-width: 100%;
+  }
+
+  .nutrition-badge-text {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .nutrition-badge-edit-label {
+    font-size: 0.78rem;
+    color: #888;
+    margin-right: 2px;
+  }
+
+  .nutrition-relink-btn {
+    background: none;
+    border: none;
+    color: #388E3C;
+    font-size: 0.75rem;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+    white-space: nowrap;
+  }
+
+  .nutrition-unlink-btn {
+    background: none;
+    border: none;
+    color: #C62828;
+    font-size: 0.85rem;
+    cursor: pointer;
+    padding: 0 2px;
+    line-height: 1;
+  }
+
+  .link-nutrition-btn {
+    align-self: flex-start;
+    padding: 4px 10px;
+    background: none;
+    border: 1px dashed #BDBDBD;
+    border-radius: 6px;
+    color: #757575;
+    font-size: 0.82rem;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .link-nutrition-btn:hover {
+    border-color: #4CAF50;
+    color: #2E7D32;
+    background: #F1F8E9;
+  }
+
+  .nutrition-search-panel {
+    background: #FAFAFA;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .nutrition-search-input {
+    padding: 8px 10px;
+    border: 1px solid #DDD;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .nutrition-search-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+  }
+
+  .nutrition-results {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-height: 400px;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nutrition-result-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 10px;
+    background: white;
+    border: 1px solid #E8E8E8;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.1s;
+  }
+
+  .nutrition-result-btn:hover {
+    background: #F1F8E9;
+    border-color: #81C784;
+  }
+
+  .result-name {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #333;
+  }
+
+  .result-cal {
+    font-size: 0.75rem;
+    color: #888;
+    margin-left: 8px;
+    white-space: nowrap;
+  }
+
+  .nutrition-no-results, .nutrition-search-hint {
+    font-size: 0.82rem;
+    color: #888;
+    margin: 0;
+    padding: 2px 4px;
+    font-style: italic;
+  }
+
+  .portion-picker {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .portion-food-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #5D4037;
+  }
+
+  .portion-controls {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+
+  .portion-label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #555;
+  }
+
+  .portion-count-input {
+    width: 70px;
+    padding: 6px 8px;
+    border: 1px solid #DDD;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .portion-select {
+    padding: 6px 8px;
+    border: 1px solid #DDD;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    max-width: 220px;
+  }
+
+  .portion-custom-grams-input {
+    padding: 6px 8px;
+    border: 1px solid #DDD;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    width: 100px;
+  }
+
+  .portion-custom-grams-input:focus {
+    outline: none;
+    border-color: #8B4513;
+  }
+
+  .portion-note {
+    font-size: 0.82rem;
+    color: #888;
+    margin: 0;
+    font-style: italic;
+    align-self: flex-end;
+    padding-bottom: 6px;
+  }
+
+  .portion-actions {
+    display: flex;
+    gap: 8px;
+  }
+
+  .portion-back-btn {
+    padding: 7px 14px;
+    background: #EEE;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    color: #555;
+  }
+
+  .portion-back-btn:hover {
+    background: #DDD;
+  }
+
+  .portion-confirm-btn {
+    padding: 7px 14px;
+    background: #4CAF50;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+  }
+
+  .portion-confirm-btn:hover {
+    background: #388E3C;
+  }
+
+  .nutrition-cancel-btn {
+    align-self: flex-start;
+    padding: 4px 10px;
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 0.8rem;
+    cursor: pointer;
+    text-decoration: underline;
   }
 </style>

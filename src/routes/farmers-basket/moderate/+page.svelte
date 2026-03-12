@@ -9,6 +9,11 @@
     quantity: string;
     gameFood?: string;
     animal?: string;
+    foodWord?: string;
+    ndbNo?: string;
+    portionDesc?: string;
+    portionGrams?: number;
+    servingCount?: number;
   }
   
   interface RecipeSubmission {
@@ -143,7 +148,12 @@
         name: ing.name,
         quantity: ing.quantity,
         gameFood: (ing.gameFood || '') as FoodType | '',
-        animal: (ing.animal || '') as AnimalType | ''
+        animal: (ing.animal || '') as AnimalType | '',
+        foodWord: ing.foodWord,
+        ndbNo: ing.ndbNo,
+        portionDesc: ing.portionDesc,
+        portionGrams: ing.portionGrams,
+        servingCount: ing.servingCount
       })),
       instructions: recipe.instructions.map((text, i) => ({
         id: i + 1,

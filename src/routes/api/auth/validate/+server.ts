@@ -41,6 +41,6 @@ export const GET: RequestHandler = async ({ url }) => {
     
   } catch (err) {
     console.error('Session validation error:', err);
-    return json({ valid: false, error: 'Validation failed' }, { status: 500 });
+    return json({ error: 'Database unavailable' }, { status: 503 });
   }
 };

@@ -196,13 +196,17 @@ function createPlayerStore() {
             });
           }
           return true;
-        } else {
-          // Session invalid - log out
+        } else if (res.ok) {
+          // Server explicitly confirmed session is invalid (200 + valid:false)
           set(DEFAULT_PLAYER);
           if (browser) {
             localStorage.removeItem(STORAGE_KEY);
           }
           return false;
+        } else {
+          // Server error (5xx) - don't log out, treat same as network error
+          console.warn('Session validation server error, keeping session');
+          return true;
         }
       } catch (e) {
         console.warn('Session validation failed:', e);
