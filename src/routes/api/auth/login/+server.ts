@@ -47,15 +47,11 @@ export const POST: RequestHandler = async ({ request }) => {
       return json({ error: 'Invalid email or password' }, { status: 401 });
     }
     
-    // Update last login (non-fatal — don't block login if this fails)
-    try {
-      await execute(
-        "UPDATE players SET last_login_at = datetime('now') WHERE id = ?",
-        [user.id]
-      );
-    } catch (updateErr) {
-      console.warn('Non-fatal: last_login_at update failed:', updateErr);
-    }
+    // Update last login
+    await execute(
+      "UPDATE players SET last_login_at = datetime('now') WHERE id = ?",
+      [user.id]
+    );
     
     // Map subscription_tier to tier for client
     const tier = user.subscription_tier === 'subscriber' ? 'premium' : 'free';
