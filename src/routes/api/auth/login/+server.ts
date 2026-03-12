@@ -44,14 +44,13 @@ export const POST: RequestHandler = async ({ request }) => {
     // Verify password
     const inputHash = simpleHash(password);
     if (inputHash !== user.password_hash) {
-      console.log(`Login hash mismatch for ${email}: input=${inputHash} stored=${user.password_hash}`);
       return json({ error: 'Invalid email or password' }, { status: 401 });
     }
     
     // Update last login (non-fatal — don't block login if this fails)
     try {
       await execute(
-        'UPDATE players SET last_login_at = datetime("now") WHERE id = ?',
+        "UPDATE players SET last_login_at = datetime('now') WHERE id = ?",
         [user.id]
       );
     } catch (updateErr) {

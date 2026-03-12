@@ -73,7 +73,7 @@ export const POST: RequestHandler = async ({ request }) => {
       }
       
       await execute(
-        'UPDATE players SET last_login_at = datetime("now") WHERE id = ?',
+        "UPDATE players SET last_login_at = datetime('now') WHERE id = ?",
         [id]
       );
       
