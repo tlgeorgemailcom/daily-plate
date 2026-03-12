@@ -730,7 +730,6 @@ OKRA,vegetable,,,,,,11279,"Okra, cooked, boiled, drained, without salt",KEYWORD_
 OLIVEBLACK,fruit,fats,,Botanically a fruit,,,9193,"Olives, ripe, canned (small-extra large)",,
 OLIVEGREEN,fruit,fats,,Botanically a fruit,Primary source of olive oil,,9195,"Olives, pickled, canned or bottled, green",KEYWORD_EXACT,10
 ONION,vegetable,spice,,A bulb vegetable,Base flavoring in cooking,,11282,"Onions, raw",PREFERRED,1
-ONIONRING,vegetable,prepared,,,,,11289,"Onions, frozen, whole, unprepared",PREFERRED,1
 OPOSSUM,protein,,,,,,17176,"Game meat, opossum, cooked, roasted",DESC_CONTAINS,1
 ORANGE,fruit,,,,,,9200,"Oranges, raw, all commercial varieties",PREFERRED,1
 ORANGEJUICE,beverage,,,,,,9207,"Orange juice, canned, unsweetened",,
@@ -869,7 +868,7 @@ PORKSPARERIBB,protein,,,,,,10089,"Pork, fresh, spareribs, separable lean and fat
 PORKSPLEEN,protein,,,,,,10118,"Pork, fresh, variety meats and by-products, spleen, cooked, braised",DESC_CONTAINS,5
 PORKTENDERLOIN,protein,,,,,,10221,"Pork, fresh, loin, tenderloin, separable lean and fat, cooked, broiled",,
 PORKTONGUE,protein,,,,,,10122,"Pork, fresh, variety meats and by-products, tongue, cooked, braised",,
-PORTABELLA,vegetable,,,,,,1265,"Mushrooms, portabella, raw",,
+PORTABELLARAW,vegetable,,,,,,11265,"Mushrooms, portabella, raw",,
 PORTDESALUT,dairy,,,,,,1034,"Cheese, port de salut",COMPOUND_MATCH,1
 POTATOCHIP,prepared,,,,,,19411,"Snacks, potato chips, plain, salted",PREFERRED,1
 POTATOESAUGRATIN,vegetable,prepared,,,,,11373,"Potatoes, au gratin, home-prepared from recipe using butter",,
@@ -1025,7 +1024,6 @@ SOLE,protein,,,,,,15029,"Fish, flatfish (flounder and sole species), cooked, dry
 SORGHUM,grain,,,,,,20067,Sorghum grain,KEYWORD_EXACT,4
 SORGHUMFLOUR,grain,,,,,,20648,"Sorghum flour, whole-grain",COMPOUND_MATCH,3
 SORGHUMSYRUP,spice,,,,,,19355,"Syrups, sorghum",,
-SORREL,vegetable,,,,,,11617,"Dock, cooked, boiled, drained, without salt",KEYWORD_EXACT,3
 SOUPBEEFBROTH,prepared,,,,,,6008,"Soup, beef broth or bouillon canned, ready-to-serve",,
 SOUPBROCCOLI,prepared,,,,,,6546,CAMPBELL'S Homestyle Potato Broccoli Cheese Soup,,
 SOUPCHICKBROTH,prepared,,,,,,6194,"Soup, chicken broth, ready-to-serve",,
