@@ -72,6 +72,6 @@ export const POST: RequestHandler = async ({ request }) => {
     
   } catch (err) {
     console.error('Login error:', err);
-    return json({ error: 'Login failed', detail: String(err) }, { status: 500 });
+    return json({ error: 'Login failed' }, { status: 500 });
   }
 };
