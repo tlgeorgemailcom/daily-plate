@@ -17,11 +17,15 @@ interface RecipeRow {
   submitter_name: string | null;
   status: string;
   created_at: string;
+  moderator_note: string | null;
 }
 
 // GET: Fetch recipes by IDs (anonymous) OR by player_id (subscribers)
 export const GET: RequestHandler = async ({ url }) => {
   try {
+    // Ensure moderator_note column exists (safe migration)
+    try { await execute(`ALTER TABLE recipes ADD COLUMN moderator_note TEXT`); } catch { /* already exists */ }
+    
     // For subscribers: query by player_id
     const playerId = url.searchParams.get('player_id');
     
@@ -29,7 +33,7 @@ export const GET: RequestHandler = async ({ url }) => {
       // Subscriber: fetch all their recipes across devices
       const rows = await queryAll<RecipeRow>(
         `SELECT id, type, name, category, dietary_category, prep_time, servings,
-                recipe_ingredients, recipe_instructions, image_url, submitted_by, submitter_name, status, created_at
+                recipe_ingredients, recipe_instructions, image_url, submitted_by, submitter_name, status, created_at, moderator_note
          FROM recipes 
          WHERE submitted_by = ? AND type = 'community'
          ORDER BY created_at DESC`,
@@ -48,6 +52,7 @@ export const GET: RequestHandler = async ({ url }) => {
         imageUrl: row.image_url || null,
         submitterName: row.submitter_name || row.submitted_by,
         status: row.status,
+        moderatorNote: row.moderator_note || null,
         submittedAt: row.created_at
       }));
       
@@ -71,7 +76,7 @@ export const GET: RequestHandler = async ({ url }) => {
     const placeholders = ids.map(() => '?').join(', ');
     const rows = await queryAll<RecipeRow>(
       `SELECT id, type, name, category, dietary_category, prep_time, servings,
-              recipe_ingredients, recipe_instructions, image_url, submitted_by, submitter_name, status, created_at
+              recipe_ingredients, recipe_instructions, image_url, submitted_by, submitter_name, status, created_at, moderator_note
        FROM recipes 
        WHERE id IN (${placeholders}) AND type = 'community'
        ORDER BY created_at DESC`,
@@ -91,6 +96,7 @@ export const GET: RequestHandler = async ({ url }) => {
       imageUrl: row.image_url || null,
       submitterName: row.submitter_name || row.submitted_by,
       status: row.status,
+      moderatorNote: row.moderator_note || null,
       submittedAt: row.created_at
     }));
     
@@ -128,25 +134,40 @@ export const PATCH: RequestHandler = async ({ request }) => {
     
     const recipe = existing[0];
     
-    if (recipe.status !== 'pending') {
-      return json({ error: 'Can only edit pending recipes' }, { status: 403 });
+    if (!['pending', 'needs_changes'].includes(recipe.status)) {
+      return json({ error: 'Can only edit pending or needs_changes recipes' }, { status: 403 });
     }
     
     // Note: We rely on localStorage tracking for ownership since we don't have auth
     // The frontend only sends requests for recipes in the player's localStorage
     
-    // Update the recipe
-    await execute(
-      `UPDATE recipes SET 
-        name = COALESCE(?, name),
-        category = COALESCE(?, category),
-        dietary_category = COALESCE(?, dietary_category),
-        prep_time = COALESCE(?, prep_time),
-        servings = COALESCE(?, servings),
-        recipe_ingredients = COALESCE(?, recipe_ingredients),
-        recipe_instructions = COALESCE(?, recipe_instructions),
-        image_url = COALESCE(?, image_url)
-       WHERE id = ? AND status = 'pending'`,
+    const wasNeedsChanges = recipe.status === 'needs_changes';
+    
+    // Update the recipe and reset to pending (clears any needs_changes state)
+    const sql = wasNeedsChanges
+      ? `UPDATE recipes SET 
+          name = COALESCE(?, name),
+          category = COALESCE(?, category),
+          dietary_category = COALESCE(?, dietary_category),
+          prep_time = COALESCE(?, prep_time),
+          servings = COALESCE(?, servings),
+          recipe_ingredients = COALESCE(?, recipe_ingredients),
+          recipe_instructions = COALESCE(?, recipe_instructions),
+          image_url = COALESCE(?, image_url),
+          status = 'pending',
+          moderator_note = NULL
+         WHERE id = ?`
+      : `UPDATE recipes SET 
+          name = COALESCE(?, name),
+          category = COALESCE(?, category),
+          dietary_category = COALESCE(?, dietary_category),
+          prep_time = COALESCE(?, prep_time),
+          servings = COALESCE(?, servings),
+          recipe_ingredients = COALESCE(?, recipe_ingredients),
+          recipe_instructions = COALESCE(?, recipe_instructions),
+          image_url = COALESCE(?, image_url)
+         WHERE id = ?`;
+    await execute(sql,
       [
         updates.recipeName || null,
         updates.category || null,

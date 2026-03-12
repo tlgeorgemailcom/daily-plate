@@ -14,7 +14,8 @@
     instructions: string[];
     imageUrl: string | null;
     submitterName: string;
-    status: 'pending' | 'approved' | 'rejected';
+    status: 'pending' | 'approved' | 'rejected' | 'needs_changes';
+    moderatorNote?: string | null;
     submittedAt: string;
   }
   
@@ -123,7 +124,7 @@
   }
   
   async function handleEdit(recipe: MyRecipe) {
-    if (recipe.status !== 'pending') {
+    if (recipe.status !== 'pending' && recipe.status !== 'needs_changes') {
       alert('You can only edit pending recipes');
       return;
     }
@@ -328,6 +329,7 @@
       case 'pending': return '⏳';
       case 'approved': return '✅';
       case 'rejected': return '❌';
+      case 'needs_changes': return '💬';
       default: return '❓';
     }
   }
@@ -337,6 +339,7 @@
       case 'pending': return 'Pending Review';
       case 'approved': return 'Approved';
       case 'rejected': return 'Not Approved';
+      case 'needs_changes': return 'Changes Requested';
       default: return status;
     }
   }
@@ -456,10 +459,10 @@
     {:else}
       <div class="recipes-list">
         {#each recipes as recipe (recipe.id)}
-          <div class="recipe-card" class:pending={recipe.status === 'pending'} class:approved={recipe.status === 'approved'} class:rejected={recipe.status === 'rejected'}>
+          <div class="recipe-card" class:pending={recipe.status === 'pending'} class:approved={recipe.status === 'approved'} class:rejected={recipe.status === 'rejected'} class:needs-changes={recipe.status === 'needs_changes'}>
             <div class="recipe-header">
               <h3>{recipe.recipeName}</h3>
-              <span class="status-badge" class:pending={recipe.status === 'pending'} class:approved={recipe.status === 'approved'} class:rejected={recipe.status === 'rejected'}>
+              <span class="status-badge" class:pending={recipe.status === 'pending'} class:approved={recipe.status === 'approved'} class:rejected={recipe.status === 'rejected'} class:needs-changes={recipe.status === 'needs_changes'}>
                 {getStatusEmoji(recipe.status)} {getStatusLabel(recipe.status)}
               </span>
             </div>
@@ -502,6 +505,14 @@
             {:else if recipe.status === 'rejected'}
               <div class="rejected-message">
                 This recipe wasn't approved. You can submit a new one!
+              </div>
+            {:else if recipe.status === 'needs_changes'}
+              <div class="needs-changes-message">
+                <p class="changes-title">💬 The moderator has some feedback:</p>
+                <p class="changes-note">{recipe.moderatorNote}</p>
+                <button class="resubmit-btn" onclick={() => handleEdit(recipe)}>
+                  ✏️ Edit & Resubmit
+                </button>
               </div>
             {/if}
           </div>
@@ -625,6 +636,10 @@
   .recipe-card.rejected {
     border-left-color: #ef4444;
   }
+
+  .recipe-card.needs-changes {
+    border-left-color: #f59e0b;
+  }
   
   .recipe-header {
     display: flex;
@@ -661,6 +676,11 @@
   .status-badge.rejected {
     background: #fee2e2;
     color: #991b1b;
+  }
+
+  .status-badge.needs-changes {
+    background: #fef3c7;
+    color: #92400e;
   }
   
   .recipe-meta {
@@ -743,6 +763,42 @@
     border-radius: 0.5rem;
     font-size: 0.875rem;
     text-align: center;
+  }
+
+  .needs-changes-message {
+    padding: 0.75rem 1rem;
+    background: #FFFDE7;
+    border: 1px solid #F9A825;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .changes-title {
+    font-weight: 600;
+    color: #E65100;
+    margin: 0 0 0.4rem 0;
+  }
+
+  .changes-note {
+    color: #4e4e4e;
+    margin: 0 0 0.75rem 0;
+    white-space: pre-wrap;
+  }
+
+  .resubmit-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #F9A825;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .resubmit-btn:hover {
+    background: #F57F17;
   }
   
   /* Edit Modal */

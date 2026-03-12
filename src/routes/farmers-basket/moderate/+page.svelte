@@ -27,7 +27,8 @@
     ingredients: SubmittedIngredient[];
     instructions: string[];
     submittedAt: string;
-    status: 'pending' | 'approved' | 'rejected';
+    status: 'pending' | 'approved' | 'rejected' | 'needs_changes';
+    moderatorNote?: string;
     gameFoods?: string[];
     animalSpawns?: { type: string; delay: number }[];
     foodSupply?: Record<string, number>;
@@ -61,6 +62,10 @@
   let isSaving = $state(false);
   let saveError = $state<string | null>(null);
   let successMsg = $state<string | null>(null);
+  
+  // Request Changes panel state
+  let showRequestChangesPanel = $state(false);
+  let requestChangesNote = $state('');
   
   // Image upload state for published recipes
   let selectedImageFile = $state<File | null>(null);
@@ -301,7 +306,7 @@
   
   async function handleReject() {
     if (!selectedRecipe) return;
-    if (!confirm(`Reject "${selectedRecipe.recipeName}"?`)) return;
+    if (!confirm(`Permanently reject "${selectedRecipe.recipeName}"? The player will NOT be able to edit and resubmit.`)) return;
     
     isSaving = true;
     try {
@@ -323,6 +328,38 @@
       setTimeout(() => successMsg = null, 3000);
     } catch (err) {
       saveError = 'Failed to reject recipe';
+    } finally {
+      isSaving = false;
+    }
+  }
+
+  async function handleRequestChanges() {
+    if (!selectedRecipe) return;
+    if (!requestChangesNote.trim()) return;
+    
+    isSaving = true;
+    try {
+      const res = await fetch('/api/recipes/moderate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          id: selectedRecipe.id,
+          action: 'needs_changes',
+          moderatorNote: requestChangesNote.trim()
+        })
+      });
+      
+      if (!res.ok) throw new Error('Failed to request changes');
+      
+      const name = selectedRecipe.recipeName;
+      recipes = recipes.filter(r => r.id !== selectedRecipe!.id);
+      selectedRecipe = null;
+      showRequestChangesPanel = false;
+      requestChangesNote = '';
+      successMsg = `Changes requested for: ${name}`;
+      setTimeout(() => successMsg = null, 3000);
+    } catch (err) {
+      saveError = 'Failed to request changes';
     } finally {
       isSaving = false;
     }
@@ -643,14 +680,53 @@
                   errorMessage={saveError || ''}
                 >
                   {#snippet customActions({ formData, isValid })}
-                    <button 
-                      type="button" 
-                      class="reject-btn"
-                      onclick={handleReject}
-                      disabled={isSaving}
-                    >
-                      ❌ Reject
-                    </button>
+                    {#if showRequestChangesPanel}
+                      <div class="request-changes-panel">
+                        <label class="mod-note-label">💬 What needs to change?</label>
+                        <textarea
+                          class="mod-note-textarea"
+                          bind:value={requestChangesNote}
+                          placeholder="Describe what the player should fix before resubmitting..."
+                          rows="3"
+                          disabled={isSaving}
+                        ></textarea>
+                        <div class="request-changes-actions">
+                          <button
+                            type="button"
+                            class="cancel-changes-btn"
+                            onclick={() => { showRequestChangesPanel = false; requestChangesNote = ''; }}
+                            disabled={isSaving}
+                          >
+                            Cancel
+                          </button>
+                          <button
+                            type="button"
+                            class="send-changes-btn"
+                            onclick={handleRequestChanges}
+                            disabled={isSaving || !requestChangesNote.trim()}
+                          >
+                            {isSaving ? 'Sending...' : '💬 Send Feedback'}
+                          </button>
+                        </div>
+                      </div>
+                    {:else}
+                      <button 
+                        type="button" 
+                        class="request-changes-btn"
+                        onclick={() => { showRequestChangesPanel = true; saveError = null; }}
+                        disabled={isSaving}
+                      >
+                        💬 Request Changes
+                      </button>
+                      <button 
+                        type="button" 
+                        class="reject-btn"
+                        onclick={handleReject}
+                        disabled={isSaving}
+                      >
+                        ❌ Reject
+                      </button>
+                    {/if}
                     <button 
                       type="submit" 
                       class="approve-btn"
@@ -1184,6 +1260,89 @@
   }
   
   /* Action Buttons */
+  .request-changes-btn {
+    padding: 12px 20px;
+    background: #FFF8E1;
+    border: 2px solid #F9A825;
+    border-radius: 8px;
+    color: #E65100;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .request-changes-btn:hover {
+    background: #FFF3CD;
+  }
+
+  .request-changes-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    background: #FFFDE7;
+    border: 2px solid #F9A825;
+    border-radius: 8px;
+    flex: 1;
+  }
+
+  .mod-note-label {
+    font-weight: bold;
+    color: #E65100;
+    font-size: 0.9rem;
+  }
+
+  .mod-note-textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #F9A825;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    resize: vertical;
+    font-family: inherit;
+    box-sizing: border-box;
+  }
+
+  .request-changes-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+  }
+
+  .cancel-changes-btn {
+    padding: 8px 14px;
+    background: transparent;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    color: #555;
+    font-size: 0.875rem;
+    cursor: pointer;
+  }
+
+  .cancel-changes-btn:hover {
+    background: #f5f5f5;
+  }
+
+  .send-changes-btn {
+    padding: 8px 16px;
+    background: #F9A825;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 0.875rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .send-changes-btn:hover:not(:disabled) {
+    background: #F57F17;
+  }
+
+  .send-changes-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
   .reject-btn, .unpublish-btn {
     padding: 12px 20px;
     background: #FFEBEE;

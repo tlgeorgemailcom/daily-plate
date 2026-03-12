@@ -99,6 +99,7 @@ export const POST: RequestHandler = async ({ request }) => {
       animalSpawns, 
       reviewedBy,
       foodSupply,
+      moderatorNote,
       // New fields for full recipe editing on approval
       recipeName,
       category,
@@ -159,7 +160,7 @@ export const POST: RequestHandler = async ({ request }) => {
       });
     }
     
-    if (!['approve', 'reject'].includes(action)) {
+    if (!['approve', 'reject', 'needs_changes'].includes(action)) {
       return json({ error: 'Invalid action' }, { status: 400 });
     }
     
@@ -178,7 +179,7 @@ export const POST: RequestHandler = async ({ request }) => {
     if (existing.length === 0) {
       return json({ error: 'Recipe not found' }, { status: 404 });
     }
-    if (existing[0].status !== 'pending') {
+    if (!['pending', 'needs_changes'].includes(existing[0].status)) {
       return json({ error: 'Recipe is not pending' }, { status: 409 });
     }
 
@@ -222,13 +223,28 @@ export const POST: RequestHandler = async ({ request }) => {
       );
 
       console.log(`✅ Approved recipe: "${recipeName || currentName}"`);
+    } else if (action === 'needs_changes') {
+      // Request changes: store moderator note, player can edit and resubmit
+      if (!moderatorNote || !moderatorNote.trim()) {
+        return json({ error: 'Moderator note is required for requesting changes' }, { status: 400 });
+      }
+      // Ensure column exists (safe to run each time — DDL is idempotent via try/catch)
+      try {
+        await execute(`ALTER TABLE recipes ADD COLUMN moderator_note TEXT`);
+      } catch {
+        // Column already exists — ignore
+      }
+      await execute(
+        `UPDATE recipes SET status = 'needs_changes', moderator_note = ?, edited_at = datetime('now'), edited_by = ? WHERE id = ?`,
+        [moderatorNote.trim(), reviewedBy || 'Moderator', id]
+      );
+      console.log(`💬 Requested changes for recipe: "${currentName}"`);
     } else {
-      // Reject: update status in Turso, player sees "Not Approved" in my-recipes
+      // Hard reject: update status in Turso, player sees "Not Approved" in my-recipes
       await execute(
         `UPDATE recipes SET status = 'rejected', edited_at = datetime('now'), edited_by = ? WHERE id = ?`,
         [reviewedBy || 'Moderator', id]
       );
-
       console.log(`❌ Rejected recipe: "${currentName}"`);
     }
     
