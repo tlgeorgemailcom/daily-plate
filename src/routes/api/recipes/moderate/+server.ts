@@ -167,72 +167,75 @@ export const POST: RequestHandler = async ({ request }) => {
     if (!id) {
       return json({ error: 'Missing recipe id' }, { status: 400 });
     }
-    
-    // Load pending recipes
-    const pending = loadJSON(PENDING_FILE);
-    const recipeIndex = pending.findIndex(r => r.id === id);
-    
-    if (recipeIndex === -1) {
+
+    // Verify recipe exists and is pending in Turso
+    interface RecipeRow { id: string; name: string; status: string; }
+    const existing = await queryAll<RecipeRow>(
+      `SELECT id, name, status FROM recipes WHERE id = ? AND type = 'community'`,
+      [id]
+    );
+
+    if (existing.length === 0) {
       return json({ error: 'Recipe not found' }, { status: 404 });
     }
-    
-    const recipe = pending[recipeIndex];
-    
+    if (existing[0].status !== 'pending') {
+      return json({ error: 'Recipe is not pending' }, { status: 409 });
+    }
+
+    const currentName = existing[0].name;
+
     if (action === 'approve') {
-      // Require game foods for approval
       if (!gameFoods || gameFoods.length === 0) {
         return json({ error: 'Game foods required for approval' }, { status: 400 });
       }
-      
-      // Update recipe with moderator additions and any edits
-      recipe.status = 'approved';
-      recipe.gameFoods = gameFoods;
-      recipe.animalSpawns = animalSpawns || [];
-      recipe.foodSupply = foodSupply || {};
-      recipe.reviewedAt = new Date().toISOString();
-      recipe.reviewedBy = reviewedBy || 'Moderator';
-      
-      // Apply any moderator edits to the recipe data
-      if (recipeName) recipe.recipeName = recipeName;
-      if (category) recipe.category = category;
-      if (dietaryCategory) recipe.dietaryCategory = dietaryCategory;
-      if (prepTime !== undefined) recipe.prepTime = prepTime;
-      if (servings !== undefined) recipe.servings = servings;
-      if (instructions) recipe.instructions = instructions;
-      
-      // Store enhanced ingredients with game mappings
-      if (ingredients) {
-        recipe.ingredients = ingredients.map((ing: { name: string; quantity: string }) => ({
-          name: ing.name,
-          quantity: ing.quantity
-        }));
-        // Also store the enhanced modIngredients with game/animal mappings
-        recipe.modIngredients = ingredients;
-      }
-      
-      // Move to approved file
-      const approved = loadJSON(APPROVED_FILE);
-      approved.push(recipe);
-      saveJSON(APPROVED_FILE, approved);
-      
-      console.log(`✅ Approved recipe: "${recipe.recipeName}"`);
+
+      await execute(
+        `UPDATE recipes SET
+          status = 'approved',
+          name = COALESCE(?, name),
+          category = COALESCE(?, category),
+          dietary_category = COALESCE(?, dietary_category),
+          prep_time = COALESCE(?, prep_time),
+          servings = COALESCE(?, servings),
+          recipe_ingredients = COALESCE(?, recipe_ingredients),
+          recipe_instructions = COALESCE(?, recipe_instructions),
+          recipe = ?,
+          animal_spawns = ?,
+          food_supply = ?,
+          edited_at = datetime('now'),
+          edited_by = ?
+         WHERE id = ?`,
+        [
+          recipeName || null,
+          category || null,
+          dietaryCategory || null,
+          prepTime !== undefined ? prepTime : null,
+          servings !== undefined ? servings : null,
+          ingredients ? JSON.stringify(ingredients) : null,
+          instructions ? JSON.stringify(instructions) : null,
+          JSON.stringify(gameFoods),
+          JSON.stringify(animalSpawns || []),
+          JSON.stringify(foodSupply || {}),
+          reviewedBy || 'Moderator',
+          id
+        ]
+      );
+
+      console.log(`✅ Approved recipe: "${recipeName || currentName}"`);
     } else {
-      // Mark as rejected
-      recipe.status = 'rejected';
-      recipe.reviewedAt = new Date().toISOString();
-      recipe.reviewedBy = reviewedBy || 'Moderator';
-      
-      console.log(`❌ Rejected recipe: "${recipe.recipeName}"`);
+      // Reject: update status in Turso, player sees "Not Approved" in my-recipes
+      await execute(
+        `UPDATE recipes SET status = 'rejected', edited_at = datetime('now'), edited_by = ? WHERE id = ?`,
+        [reviewedBy || 'Moderator', id]
+      );
+
+      console.log(`❌ Rejected recipe: "${currentName}"`);
     }
-    
-    // Remove from pending (or keep with updated status)
-    pending.splice(recipeIndex, 1);
-    saveJSON(PENDING_FILE, pending);
     
     return json({ 
       success: true, 
       action,
-      recipe: recipe.recipeName
+      recipe: recipeName || currentName
     });
     
   } catch (err) {
