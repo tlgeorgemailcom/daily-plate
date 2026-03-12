@@ -9,16 +9,47 @@
   let { onClose, onSuccess }: Props = $props();
   
   // Form state
-  let mode = $state<'login' | 'register'>('login');
+  let mode = $state<'login' | 'register' | 'reset'>('login');
   let email = $state('');
   let password = $state('');
+  let newPassword = $state('');
   let displayName = $state('');
   let error = $state<string | null>(null);
+  let success = $state<string | null>(null);
   let loading = $state(false);
   
   async function handleSubmit(e: Event) {
     e.preventDefault();
     
+    if (mode === 'reset') {
+      if (!email.trim() || !newPassword.trim()) {
+        error = 'Please fill in all fields';
+        return;
+      }
+      if (newPassword.length < 6) {
+        error = 'Password must be at least 6 characters';
+        return;
+      }
+      loading = true;
+      error = null;
+      try {
+        const result = await playerStore.resetPassword(email, newPassword);
+        if (result.success) {
+          success = 'Password updated! You can now login.';
+          mode = 'login';
+          password = newPassword;
+          newPassword = '';
+        } else {
+          error = result.error || 'Reset failed';
+        }
+      } catch (e) {
+        error = 'Connection failed. Please try again.';
+      } finally {
+        loading = false;
+      }
+      return;
+    }
+
     if (!email.trim() || !password.trim()) {
       error = 'Please fill in all fields';
       return;
@@ -55,6 +86,7 @@
   function switchMode() {
     mode = mode === 'login' ? 'register' : 'login';
     error = null;
+    success = null;
   }
 </script>
 
@@ -64,21 +96,26 @@
     
     <div class="modal-header">
       <div class="modal-icon">
-        {mode === 'login' ? '👤' : '✨'}
+        {mode === 'login' ? '👤' : mode === 'register' ? '✨' : '🔑'}
       </div>
       <h2 class="modal-title">
-        {mode === 'login' ? 'Welcome Back!' : 'Create Account'}
+        {mode === 'login' ? 'Welcome Back!' : mode === 'register' ? 'Create Account' : 'Reset Password'}
       </h2>
       <p class="modal-subtitle">
         {mode === 'login' 
-          ? 'Login to sync your progress' 
-          : 'Join to save progress & unlock features'}
+          ? 'Login to sync your progress'
+          : mode === 'register'
+          ? 'Join to save progress & unlock features'
+          : 'Set a new password for your account'}
       </p>
     </div>
     
     <form class="login-form" onsubmit={handleSubmit}>
       {#if error}
         <div class="error-msg">{error}</div>
+      {/if}
+      {#if success}
+        <div class="success-msg">{success}</div>
       {/if}
       
       {#if mode === 'register'}
@@ -104,22 +141,37 @@
         />
       </label>
       
-      <label class="form-label">
-        Password
-        <input 
-          type="password"
-          bind:value={password}
-          placeholder={mode === 'login' ? '••••••••' : 'At least 6 characters'}
-          class="form-input"
-          required
-        />
-      </label>
+      {#if mode === 'login' || mode === 'register'}
+        <label class="form-label">
+          Password
+          <input 
+            type="password"
+            bind:value={password}
+            placeholder={mode === 'login' ? '••••••••' : 'At least 6 characters'}
+            class="form-input"
+            required
+          />
+        </label>
+      {/if}
+
+      {#if mode === 'reset'}
+        <label class="form-label">
+          New Password
+          <input 
+            type="password"
+            bind:value={newPassword}
+            placeholder="At least 6 characters"
+            class="form-input"
+            required
+          />
+        </label>
+      {/if}
       
       <button type="submit" class="submit-btn" disabled={loading}>
         {#if loading}
           <span class="spinner"></span>
         {:else}
-          {mode === 'login' ? 'Login' : 'Create Account'}
+          {mode === 'login' ? 'Login' : mode === 'register' ? 'Create Account' : 'Set New Password'}
         {/if}
       </button>
     </form>
@@ -127,14 +179,14 @@
     <div class="switch-mode">
       {#if mode === 'login'}
         <span>Don't have an account?</span>
-        <button type="button" class="link-btn" onclick={switchMode}>
-          Sign up
-        </button>
-      {:else}
+        <button type="button" class="link-btn" onclick={switchMode}>Sign up</button>
+        <span class="switch-sep">·</span>
+        <button type="button" class="link-btn" onclick={() => { mode = 'reset'; error = null; success = null; }}>Forgot password?</button>
+      {:else if mode === 'register'}
         <span>Already have an account?</span>
-        <button type="button" class="link-btn" onclick={switchMode}>
-          Login
-        </button>
+        <button type="button" class="link-btn" onclick={switchMode}>Login</button>
+      {:else}
+        <button type="button" class="link-btn" onclick={() => { mode = 'login'; error = null; success = null; }}>← Back to login</button>
       {/if}
     </div>
     
@@ -248,6 +300,15 @@
     font-size: 0.9rem;
     text-align: center;
   }
+
+  .success-msg {
+    background: #E8F5E9;
+    color: #2E7D32;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
   
   .form-label {
     display: flex;
@@ -323,6 +384,15 @@
     border-top: 1px solid #EEE;
     font-size: 0.9rem;
     color: #666;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .switch-sep {
+    color: #CCC;
   }
   
   .link-btn {

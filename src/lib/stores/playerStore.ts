@@ -215,6 +215,24 @@ function createPlayerStore() {
       }
     },
     
+    // Reset password — no token required (game app)
+    resetPassword: async (email: string, newPassword: string): Promise<{ success: boolean; error?: string }> => {
+      try {
+        const res = await fetch('/api/auth/reset-password', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, newPassword })
+        });
+        const data = await res.json();
+        if (!res.ok) {
+          return { success: false, error: data.error || 'Reset failed' };
+        }
+        return { success: true };
+      } catch (e) {
+        return { success: false, error: 'Connection failed' };
+      }
+    },
+
     // Get current player
     get: (): Player => get({ subscribe })
   };
