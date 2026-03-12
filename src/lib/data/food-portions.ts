@@ -9529,7 +9529,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CEREALRICECREAM",
-    "display": "Cerealricecream",
+    "display": "Cereal Cream of Rice",
     "groups": [
       "grain"
     ],
@@ -44770,7 +44770,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "COFFEEESPRESSODECAF",
-    "display": "Coffee Espresso Decaf",
+    "display": "Coffee Espresso Decaf Restaurant",
     "groups": [
       "beverage"
     ],
@@ -44798,7 +44798,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "COFFEEESPRESSO",
-    "display": "Coffee Espresso",
+    "display": "Coffee Espresso Restaurant",
     "groups": [
       "beverage"
     ],
@@ -45770,20 +45770,76 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "COFFEESWEETMILK",
-    "display": "Coffee Milk & Sugar",
+    "word": "PUDDINGRICEWHOLEMILK",
+    "display": "Rice Pudding Whole Milk",
     "groups": [
-      "beverage"
+      "sweets"
     ],
-    "ndb": "14179",
-    "desc": "Beverages, coffee, ready to drink, milk based, sweetened",
-    "cal": 71.0,
-    "pro": 2.0,
-    "fat": 1.4,
-    "carb": 12.6,
-    "fib": 0.0,
-    "h2o": 83.6,
-    "sug": 10.7,
+    "ndb": "19195",
+    "desc": "Puddings, rice, dry mix, prepared with whole milk",
+    "cal": 121.0,
+    "pro": 3.2,
+    "fat": 2.8,
+    "carb": 20.7,
+    "fib": 0.1,
+    "h2o": 72.4,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.5,
+        "desc": "cup",
+        "gm": 128.0
+      }
+    ]
+  },
+  {
+    "word": "PUDDINGRICE2",
+    "display": "Rice Pudding 2% Milk",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19208",
+    "desc": "Puddings, rice, dry mix, prepared with 2% milk",
+    "cal": 111.0,
+    "pro": 3.3,
+    "fat": 1.6,
+    "carb": 20.8,
+    "fib": 0.1,
+    "h2o": 73.4,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.5,
+        "desc": "cup",
+        "gm": 128.0
+      }
+    ]
+  },
+  {
+    "word": "RICEWILD",
+    "display": "Rice Wild",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20089",
+    "desc": "Wild rice, cooked",
+    "cal": 101.0,
+    "pro": 4.0,
+    "fat": 0.3,
+    "carb": 21.3,
+    "fib": 1.8,
+    "h2o": 73.9,
+    "sug": 0.7,
     "portions": [
       {
         "amt": 1.0,
@@ -45793,7 +45849,92 @@ export const FOODS: Food[] = [
       {
         "amt": 1.0,
         "desc": "cup",
-        "gm": 262.0
+        "gm": 164.0
+      }
+    ]
+  },
+  {
+    "word": "RICEBOWLCHICKEN",
+    "display": "Rice Chicken Bowl",
+    "groups": [
+      "prepared",
+      "protein"
+    ],
+    "ndb": "22958",
+    "desc": "Rice bowl with chicken, frozen entree, prepared (includes fried, teriyaki, and sweet and sour varieties)",
+    "cal": 126.0,
+    "pro": 5.7,
+    "fat": 1.6,
+    "carb": 22.5,
+    "fib": 0.7,
+    "h2o": 69.1,
+    "sug": 4.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bowl",
+        "gm": 340.0
+      }
+    ]
+  },
+  {
+    "word": "VERMICELLIDRY",
+    "display": "Vermicelli Dry",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "43114",
+    "desc": "Vermicelli, made from soy",
+    "cal": 331.0,
+    "pro": 0.1,
+    "fat": 0.1,
+    "carb": 82.3,
+    "fib": 3.9,
+    "h2o": 11.9,
+    "sug": 17.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 140.0
+      }
+    ]
+  },
+  {
+    "word": "VERMICELLIPILAF",
+    "display": "Rice and Vermicelli Pilaf",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "32003",
+    "desc": "Rice and vermicelli mix, rice pilaf flavor, prepared with 80% margarine",
+    "cal": 148.0,
+    "pro": 2.9,
+    "fat": 3.7,
+    "carb": 25.7,
+    "fib": 0.6,
+    "h2o": 66.5,
+    "sug": 0.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 238.0
       }
     ]
   }
