@@ -175,6 +175,7 @@
         onpointerup={handlePointerUp}
         onpointerleave={handlePointerLeave}
         onpointercancel={handlePointerUp}
+        oncontextmenu={(e) => e.preventDefault()}
       >
         <span class="food-name">
           {'isCustom' in food && food.isCustom ? '🏠 ' : ''}{food.display}
@@ -304,6 +305,8 @@
     cursor: pointer;
     text-align: left;
     transition: all 0.15s;
+    -webkit-user-select: none;
+    user-select: none;
   }
 
   .food-item:hover {
