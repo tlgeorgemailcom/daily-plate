@@ -3855,7 +3855,8 @@ export const FOODS: Food[] = [
     "word": "BREADWHITE",
     "display": "Breads White Bread",
     "groups": [
-      "prepared"
+      "prepared",
+      "grain"
     ],
     "ndb": "18967",
     "desc": "Bread, white wheat",
@@ -3883,7 +3884,8 @@ export const FOODS: Food[] = [
     "word": "BREADWHOLE",
     "display": "Breads Whole Wheat Bread",
     "groups": [
-      "prepared"
+      "prepared",
+      "grain"
     ],
     "ndb": "18075",
     "desc": "Bread, whole-wheat, commercially prepared",
@@ -18420,7 +18422,8 @@ export const FOODS: Food[] = [
     "word": "GARLICBREAD",
     "display": "Breads Garlic Bread",
     "groups": [
-      "prepared"
+      "prepared",
+      "grain"
     ],
     "ndb": "18963",
     "desc": "Garlic bread, frozen",
@@ -27486,7 +27489,9 @@ export const FOODS: Food[] = [
     "word": "PANDULCE",
     "display": "Breads Pandulce",
     "groups": [
-      "prepared"
+      "prepared",
+      "grain",
+      "sweets"
     ],
     "ndb": "18955",
     "desc": "Bread, pan dulce, sweet yeast bread",
@@ -29960,7 +29965,8 @@ export const FOODS: Food[] = [
     "word": "PIKIBREAD",
     "display": "Breads Piki Bread",
     "groups": [
-      "grain"
+      "grain",
+      "prepared"
     ],
     "ndb": "35234",
     "desc": "Piki bread, made from blue cornmeal (Hopi)",
