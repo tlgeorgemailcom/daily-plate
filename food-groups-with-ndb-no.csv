@@ -1,6 +1,6 @@
 word,group1,group2,group3,group4,fact2,fact3,NDB_NO,USDA_Desc,Match_Type,Alt_Matches
 ABALONE,protein,,,,,,15155,"Mollusks, abalone, mixed species, raw",DESC_CONTAINS,2
-ABIYUCH,vegetable,,,,,,9427,"Abiyuch, raw",KEYWORD_EXACT,1
+ABIYUCH,fruit,,,,,,9427,"Abiyuch, raw",KEYWORD_EXACT,1
 ACEROLA,fruit,,,,,,9001,"Acerola, (west indian cherry), raw",KEYWORD_EXACT,2
 ACORN,nuts,,,,,,12059,"Nuts, acorns, dried",KEYWORD_EXACT,6
 ACORNFLOUR,nuts,,,,,,12060,"Nuts, acorn flour, full fat",COMPOUND_MATCH,1
@@ -47,8 +47,6 @@ APRICOTDRIED,fruit,,,,,,9032,"Apricots, dried, sulfured, uncooked",,
 APRICOTJAM,fruit,spice,,,,,19719,"Jams and preserves, apricot",PREFERRED,1
 APRICOTNECTAR,beverage,fruit,,,,,9036,"Apricot nectar, canned, without added ascorbic acid",,
 APRICOTOIL,fruit,fats,,,,,4530,"Oil, apricot kernel",PREFERRED,1
-ARROWHEAD,vegetable,,,,,,11005,"Arrowhead, raw",KEYWORD_EXACT,5
-ARROWROOT,vegetable,,,,,,11697,"Arrowroot, raw",DESC_STARTS,3
 ARTICHOKE,vegetable,,,,,,11008,"Artichokes, (globe or french), cooked, boiled, drained, without salt",KEYWORD_EXACT,7
 ARUGULA,vegetable,,,,,,11959,"Arugula, raw",KEYWORD_EXACT,1
 ASCIDIANS,protein,,,,,,35004,Ascidians (tunughnak) (Alaska Native),DESC_STARTS,1
@@ -63,7 +61,7 @@ BAKINGCHOCMEX,spice,,,,,,19124,"Baking chocolate, mexican, squares",,
 BAKINGPOWDER,spice,,,,,,18370,"Leavening agents, baking powder, double-acting, straight phosphate",,
 BAKINGSODA,spice,,,,,,18372,"Leavening agents, baking soda",,
 BALSAMPEAR,fruit,,,,,,11022,"Balsam-pear (bitter gourd), leafy tips, raw",COMPOUND_MATCH,6
-BAMBOO,vegetable,,,,,,11026,"Bamboo shoots, raw",KEYWORD_EXACT,4
+BAMBOO,vegetable,,,,,,11027,"Bamboo shoots, cooked, boiled, drained, without salt",KEYWORD_EXACT,4
 BANANA,fruit,,,,,,9040,"Bananas, raw",PREFERRED,1
 BANANACHIPS,fruit,prepared,,,,,19400,"Snacks, banana chips",,
 BARBECUE,spice,,,,,,7001,"Barbecue loaf, pork, beef",KEYWORD_EXACT,6
@@ -274,7 +272,6 @@ CARROTJUICE,beverage,,,,,,11655,"Carrot juice, canned",,
 CASEIN,dairy,,,,,,1068,"Cream substitute, liquid, with lauric acid oil and sodium caseinate",PREFERRED,1
 CASHEW,nuts,,,,,,12085,"Nuts, cashew nuts, dry roasted, without salt added",DESC_CONTAINS,5
 CASHEWBUTTER,nuts,,,,,,12088,"Nuts, cashew butter, plain, without salt added",COMPOUND_MATCH,2
-CASSAVA,vegetable,,,,,,11134,"Cassava, raw",KEYWORD_EXACT,1
 CATFISH,protein,,,,,,15011,"Fish, catfish, channel, cooked, breaded and fried",DESC_CONTAINS,5
 CATSUP,spice,,,,,,11935,Catsup,,
 CATTAIL,vegetable,,,,,,35195,"Cattail, Narrow Leaf Shoots (Northern Plains Indians)",KEYWORD_EXACT,1
@@ -547,7 +544,6 @@ FAVABEAN,legume,,,,,,16053,"Broadbeans (fava beans), mature seeds, cooked, boile
 FEIJOA,fruit,,,,,,9334,"Feijoa, raw",KEYWORD_EXACT,1
 FENGUGREEK,nuts,,,,,,2019,"Spices, fenugreek seed",COMPOUND_MATCH,1
 FENNEL,vegetable,,,,,,11957,"Fennel, bulb, raw",KEYWORD_EXACT,2
-FERNFIDDLEHEAD,vegetable,,,,,,11995,"Fiddlehead ferns, raw",COMPOUND_MATCH,2
 FETA,dairy,,,,,,1019,"Cheese, feta",DESC_CONTAINS,1
 FIG,fruit,,,,,,9094,"Figs, dried, uncooked",DESC_STARTS,8
 FILBERT,nuts,,,,,,12120,"Nuts, hazelnuts or filberts",,
@@ -1003,10 +999,7 @@ POTATOESBAKED,vegetable,,,,,,11363,"Potatoes, baked, flesh, without salt",PREFER
 POTATOESBOILED,vegetable,,,,,,11367,"Potatoes, boiled, cooked without skin, flesh, without salt",,
 POTATOESFRENCHFRIES,vegetable,,,,,,11403,"Potatoes, french fried, all types, salt added in processing, frozen, home-prepared, oven heated",PREFERRED,1
 POTATOESMASHED,vegetable,prepared,,,,,11657,"Potatoes, mashed, home-prepared, whole milk added",,
-POTATOESREDRAW,vegetable,,,,,,11354,"Potatoes, white, flesh and skin, raw",,
-POTATOESRUSSETRAW,vegetable,,,,,,11353,"Potatoes, russet, flesh and skin, raw",,
 POTATOESSCALLOPED,vegetable,prepared,,,,,11372,"Potatoes, scalloped, home-prepared with butter",,
-POTATOESWHITERAW,vegetable,,,,,,11355,"Potatoes, red, flesh and skin, raw",,
 POTATOSALAD,prepared,,,,,,11414,"Potato salad, home-prepared",,
 POUT,protein,,,,,,15206,"Fish, pout, ocean, cooked, dry heat",DESC_CONTAINS,2
 PRAWN,protein,,,,,,15151,"Crustaceans, shrimp, mixed species, cooked, moist heat (may have been previously frozen)",PREFERRED,1
@@ -1435,6 +1428,11 @@ CRABDUNGENESS,protein,,,,,,15226,"Crustaceans, crab, dungeness, cooked, moist he
 CRABBLUECAN,protein,,,,,,15141,"Crustaceans, crab, blue, canned",,
 SHRIMPCANNED,protein,,,,,,15152,"Crustaceans, shrimp, mixed species, canned",,
 SHRIMPCOOKED,protein,,,,,,15271,"Crustaceans, shrimp, cooked (not previously frozen)",,
-SHRIMPRAW,protein,,,,,,15270,"Crustaceans, shrimp, raw (not previously frozen)",,
 CUCUMBERPEEL,vegetable,,,,,,11205,"Cucumber, with peel, raw",,
 CURRANTREDWHITE,fruit,,,,,,9084,"Currants, red and white, raw",,
+POTATOESRUSSET,vegetable,,,,,,11356,"Potatoes, Russet, flesh and skin, baked",,
+POTATOESRED,vegetable,,,,,,11358,"Potatoes, red, flesh and skin, baked",,
+POTATOESWHITE,vegetable,,,,,,11357,"Potatoes, white, flesh and skin, baked",,
+ARROWHEADCOOKED,vegetable,,,,,,11006,"Arrowhead, cooked, boiled, drained, without salt",,
+BAMBOOCANNED,vegetable,,,,,,11028,"Bamboo shoots, canned, drained solids",,
+AGAVECOOKED,vegetable,,,,,,35193,"Agave, cooked (Southwest)",,

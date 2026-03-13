@@ -73,7 +73,7 @@ export const FOODS: Food[] = [
     "word": "ABIYUCH",
     "display": "Abiyuch Raw",
     "groups": [
-      "vegetable"
+      "fruit"
     ],
     "ndb": "9427",
     "desc": "Abiyuch, raw",
@@ -1687,72 +1687,6 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "ARROWHEAD",
-    "display": "Arrowhead Raw",
-    "groups": [
-      "vegetable"
-    ],
-    "ndb": "11005",
-    "desc": "Arrowhead, raw",
-    "cal": 99.0,
-    "pro": 5.3,
-    "fat": 0.3,
-    "carb": 20.2,
-    "fib": 0.0,
-    "h2o": 72.5,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "large",
-        "gm": 25.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "medium",
-        "gm": 12.0
-      }
-    ]
-  },
-  {
-    "word": "ARROWROOT",
-    "display": "Arrowroot Raw",
-    "groups": [
-      "vegetable"
-    ],
-    "ndb": "11697",
-    "desc": "Arrowroot, raw",
-    "cal": 65.0,
-    "pro": 4.2,
-    "fat": 0.2,
-    "carb": 13.4,
-    "fib": 1.3,
-    "h2o": 80.8,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup, sliced",
-        "gm": 120.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "root",
-        "gm": 33.0
-      }
-    ]
-  },
-  {
     "word": "ARTICHOKE",
     "display": "Artichoke Cooked",
     "groups": [
@@ -2193,39 +2127,6 @@ export const FOODS: Food[] = [
         "amt": 0.5,
         "desc": "cup",
         "gm": 24.0
-      }
-    ]
-  },
-  {
-    "word": "BAMBOO",
-    "display": "Bamboo Shoots Raw",
-    "groups": [
-      "vegetable"
-    ],
-    "ndb": "11026",
-    "desc": "Bamboo shoots, raw",
-    "cal": 27.0,
-    "pro": 2.6,
-    "fat": 0.3,
-    "carb": 5.2,
-    "fib": 2.2,
-    "h2o": 91.0,
-    "sug": 3.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup (1/2\" slices)",
-        "gm": 151.0
-      },
-      {
-        "amt": 0.5,
-        "desc": "cup (1/2\" pieces)",
-        "gm": 76.0
       }
     ]
   },
@@ -5193,7 +5094,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "BUTTERBUR",
-    "display": "Butterbur Raw",
+    "display": "Butterbur Cooked",
     "groups": [
       "vegetable"
     ],
@@ -21958,7 +21859,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "HYACINTH",
-    "display": "Hyacinth Raw",
+    "display": "Hyacinth Cooked",
     "groups": [
       "vegetable"
     ],
@@ -34400,92 +34301,6 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "POTATOESREDRAW",
-    "display": "Red Potatoes Raw",
-    "groups": [
-      "vegetable"
-    ],
-    "ndb": "11354",
-    "desc": "Potatoes, white, flesh and skin, raw",
-    "cal": 69.0,
-    "pro": 1.7,
-    "fat": 0.1,
-    "carb": 15.7,
-    "fib": 2.4,
-    "h2o": 81.6,
-    "sug": 1.1,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 0.5,
-        "desc": "cup, diced",
-        "gm": 75.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "large (3\" to 4-1/4\" dia.)",
-        "gm": 369.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "medium (2+-1/4\" to 3-1/4\" dia.)",
-        "gm": 213.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "small (1-3/4\" to 2-1/4\" dia.)",
-        "gm": 92.0
-      }
-    ]
-  },
-  {
-    "word": "POTATOESRUSSETRAW",
-    "display": "Russet Potatoes Raw",
-    "groups": [
-      "vegetable"
-    ],
-    "ndb": "11353",
-    "desc": "Potatoes, russet, flesh and skin, raw",
-    "cal": 79.0,
-    "pro": 2.1,
-    "fat": 0.1,
-    "carb": 18.1,
-    "fib": 1.3,
-    "h2o": 78.6,
-    "sug": 0.6,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 0.5,
-        "desc": "cup, diced",
-        "gm": 75.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "potato large (3\" to 4-1/4\" dia)",
-        "gm": 369.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "Potato medium (2-1/4\" to 3-1/4\" dia)",
-        "gm": 213.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "Potato small (1-3/4\" to 2-1/4\" dia)",
-        "gm": 170.0
-      }
-    ]
-  },
-  {
     "word": "POTATOESSCALLOPED",
     "display": "Scalloped Potatoes",
     "groups": [
@@ -34511,49 +34326,6 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "cup",
         "gm": 245.0
-      }
-    ]
-  },
-  {
-    "word": "POTATOESWHITERAW",
-    "display": "White Potatoes Raw",
-    "groups": [
-      "vegetable"
-    ],
-    "ndb": "11355",
-    "desc": "Potatoes, red, flesh and skin, raw",
-    "cal": 70.0,
-    "pro": 1.9,
-    "fat": 0.1,
-    "carb": 15.9,
-    "fib": 1.7,
-    "h2o": 81.0,
-    "sug": 1.3,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 0.5,
-        "desc": "cup, diced",
-        "gm": 75.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "potato large (3\" to 4-1/4\" dia)",
-        "gm": 369.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "potato medium (2-1/4\" to 3-1/4\" dia)",
-        "gm": 213.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "potato small (1-3/4\" to 2-1/4\" dia)",
-        "gm": 170.0
       }
     ]
   },
@@ -48457,34 +48229,6 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "SHRIMPRAW",
-    "display": "Shrimp Raw",
-    "groups": [
-      "protein"
-    ],
-    "ndb": "15270",
-    "desc": "Crustaceans, shrimp, raw (not previously frozen)",
-    "cal": 85.0,
-    "pro": 20.1,
-    "fat": 0.5,
-    "carb": 0.0,
-    "fib": 0.0,
-    "h2o": 78.5,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 3.0,
-        "desc": "oz",
-        "gm": 85.0
-      }
-    ]
-  },
-  {
     "word": "CUCUMBERPEEL",
     "display": "Cucumber with Peel Raw",
     "groups": [
@@ -48542,6 +48286,237 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "cup",
         "gm": 112.0
+      }
+    ]
+  },
+  {
+    "word": "BAMBOO",
+    "display": "Bamboo Shoots",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11027",
+    "desc": "Bamboo shoots, cooked, boiled, drained, without salt",
+    "cal": 12.0,
+    "pro": 1.5,
+    "fat": 0.2,
+    "carb": 1.9,
+    "fib": 1.0,
+    "h2o": 95.9,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup (1/2\" slices)",
+        "gm": 120.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "shoot",
+        "gm": 144.0
+      }
+    ]
+  },
+  {
+    "word": "POTATOESRUSSET",
+    "display": "Potatoes Russet Baked",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11356",
+    "desc": "Potatoes, Russet, flesh and skin, baked",
+    "cal": 97.0,
+    "pro": 2.6,
+    "fat": 0.1,
+    "carb": 21.4,
+    "fib": 2.3,
+    "h2o": 74.5,
+    "sug": 1.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "potato large (3\" to 4-1/4\" dia.",
+        "gm": 299.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "potato medium (2-1/4\" to 3-1/4\" dia.)",
+        "gm": 173.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "potato small (1-3/4\" to 2-1/2\" dia.)",
+        "gm": 138.0
+      }
+    ]
+  },
+  {
+    "word": "POTATOESRED",
+    "display": "Potatoes Red Baked",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11358",
+    "desc": "Potatoes, red, flesh and skin, baked",
+    "cal": 89.0,
+    "pro": 2.3,
+    "fat": 0.1,
+    "carb": 19.6,
+    "fib": 1.8,
+    "h2o": 76.7,
+    "sug": 1.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "potato large (3\" to 4-1/4\" dia.",
+        "gm": 299.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "potato medium (2-1/4\" to 3-1/4\" dia.)",
+        "gm": 173.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "potato small (1-3/4\" to 2-1/2\" dia.)",
+        "gm": 138.0
+      }
+    ]
+  },
+  {
+    "word": "POTATOESWHITE",
+    "display": "Potatoes White Baked",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11357",
+    "desc": "Potatoes, white, flesh and skin, baked",
+    "cal": 94.0,
+    "pro": 2.1,
+    "fat": 0.1,
+    "carb": 21.1,
+    "fib": 2.1,
+    "h2o": 75.4,
+    "sug": 1.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "potato large (3\" to 4-1/4\" dia)",
+        "gm": 299.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "potato medium (2-1/4\" to 3-1/4\" dia)",
+        "gm": 173.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "potato small (1-3/4\" to 2-1/2\" dia)",
+        "gm": 138.0
+      }
+    ]
+  },
+  {
+    "word": "ARROWHEADCOOKED",
+    "display": "Arrowhead Cooked",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11006",
+    "desc": "Arrowhead, cooked, boiled, drained, without salt",
+    "cal": 78.0,
+    "pro": 4.5,
+    "fat": 0.1,
+    "carb": 16.1,
+    "fib": 0.0,
+    "h2o": 77.1,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "medium",
+        "gm": 12.0
+      }
+    ]
+  },
+  {
+    "word": "BAMBOOCANNED",
+    "display": "Bamboo Shoots Canned",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11028",
+    "desc": "Bamboo shoots, canned, drained solids",
+    "cal": 19.0,
+    "pro": 1.7,
+    "fat": 0.4,
+    "carb": 3.2,
+    "fib": 1.4,
+    "h2o": 94.3,
+    "sug": 1.9,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup (1/8\" slices)",
+        "gm": 131.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "can (303 x 406)",
+        "gm": 262.0
+      }
+    ]
+  },
+  {
+    "word": "AGAVECOOKED",
+    "display": "Agave Cooked",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "35193",
+    "desc": "Agave, cooked (Southwest)",
+    "cal": 135.0,
+    "pro": 1.0,
+    "fat": 0.3,
+    "carb": 32.0,
+    "fib": 10.6,
+    "h2o": 65.4,
+    "sug": 20.9,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
       }
     ]
   }
