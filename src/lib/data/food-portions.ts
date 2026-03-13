@@ -11559,7 +11559,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CHOCBAKING",
-    "display": "Choc Baking",
+    "display": "Baking Choc Squares Unsweet",
     "groups": [
       "spice"
     ],
@@ -11597,7 +11597,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CHOCBEVSODA",
-    "display": "Candies Choc Soda",
+    "display": "Choc Soda",
     "groups": [
       "beverage"
     ],
@@ -11724,7 +11724,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CHOCMALT",
-    "display": "Chocolate Malt",
+    "display": "Choc Malt",
     "groups": [
       "beverage"
     ],
@@ -11790,7 +11790,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CHOCOLATE",
-    "display": "Chocolate Baking",
+    "display": "Baking Choc Liquid Unsweet",
     "groups": [
       "spice"
     ],
@@ -11818,7 +11818,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CHOCOLATEMILK",
-    "display": "Chocolate Milk",
+    "display": "Choc Milk",
     "groups": [
       "beverage"
     ],
@@ -11846,7 +11846,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CHOCOLATESYRUP",
-    "display": "Chocolate Syrup Beverage",
+    "display": "Choc Beverage from Syrup",
     "groups": [
       "beverage"
     ],
@@ -32977,7 +32977,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "POTATOESBAKED",
-    "display": "Potatoes Baked",
+    "display": "Baked Potatoes",
     "groups": [
       "vegetable"
     ],
@@ -33010,7 +33010,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "POTATOESBOILED",
-    "display": "Potatoes Boiled",
+    "display": "Boiled Potatoes",
     "groups": [
       "vegetable"
     ],
@@ -33053,7 +33053,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "POTATOESFRENCHFRIES",
-    "display": "Potatoes French Fries",
+    "display": "French Fried Potatoes",
     "groups": [
       "vegetable"
     ],
@@ -33086,7 +33086,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "POTATOESMASHED",
-    "display": "Potatoes Mashed",
+    "display": "Mashed Potatoes",
     "groups": [
       "vegetable",
       "prepared"
@@ -33115,7 +33115,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "POTATOESSCALLOPED",
-    "display": "Potatoes Scalloped",
+    "display": "Scalloped Potatoes",
     "groups": [
       "vegetable",
       "prepared"
@@ -43164,6 +43164,34 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "TRICALEFLOUR",
+    "display": "Tricale Flour",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20070",
+    "desc": "Triticale flour, whole-grain",
+    "cal": 338.0,
+    "pro": 13.2,
+    "fat": 1.8,
+    "carb": 73.1,
+    "fib": 14.6,
+    "h2o": 10.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 130.0
+      }
+    ]
+  },
+  {
     "word": "TRIPE",
     "display": "Tripe",
     "groups": [
@@ -43938,7 +43966,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "VANILLA",
-    "display": "Vanilla",
+    "display": "Vanilla Extract",
     "groups": [
       "spice",
       "fruit"
@@ -45033,12 +45061,96 @@ export const FOODS: Food[] = [
   },
   {
     "word": "WHEAT",
-    "display": "Flour White Wheat",
+    "display": "Wheat Flour White Enriched",
     "groups": [
       "grain"
     ],
     "ndb": "20581",
     "desc": "Wheat flour, white, all-purpose, enriched, unbleached",
+    "cal": 364.0,
+    "pro": 10.3,
+    "fat": 1.0,
+    "carb": 76.3,
+    "fib": 2.7,
+    "h2o": 11.9,
+    "sug": 0.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 125.0
+      }
+    ]
+  },
+  {
+    "word": "WHEATFLOURBREAD",
+    "display": "Wheat Flour Bread",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20129",
+    "desc": "Wheat flours, bread, unenriched",
+    "cal": 361.0,
+    "pro": 12.0,
+    "fat": 1.7,
+    "carb": 72.5,
+    "fib": 2.4,
+    "h2o": 13.4,
+    "sug": 0.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup unsifted, dipped",
+        "gm": 137.0
+      }
+    ]
+  },
+  {
+    "word": "WHEATFLOURENSELF",
+    "display": "Wheat Flour Self-rising White",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20082",
+    "desc": "Wheat flour, white, all-purpose, self-rising, enriched",
+    "cal": 354.0,
+    "pro": 9.9,
+    "fat": 1.0,
+    "carb": 74.2,
+    "fib": 2.7,
+    "h2o": 10.6,
+    "sug": 0.2,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 125.0
+      }
+    ]
+  },
+  {
+    "word": "WHEATFLOURUNEN",
+    "display": "Wheat Flour White Unenriched",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20481",
+    "desc": "Wheat flour, white, all-purpose, unenriched",
     "cal": 364.0,
     "pro": 10.3,
     "fat": 1.0,
@@ -45118,6 +45230,34 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "custom (g)",
         "gm": 100.0
+      }
+    ]
+  },
+  {
+    "word": "WHEATWHOLE",
+    "display": "Wheat Flour Whole-grain",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20080",
+    "desc": "Wheat flour, whole-grain",
+    "cal": 340.0,
+    "pro": 13.2,
+    "fat": 2.5,
+    "carb": 72.0,
+    "fib": 10.7,
+    "h2o": 10.7,
+    "sug": 0.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 120.0
       }
     ]
   },
@@ -45889,6 +46029,196 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "toast, Gerber Zwieback",
         "gm": 7.0
+      }
+    ]
+  },
+  {
+    "word": "BAKINGPOWDER",
+    "display": "Baking Powder",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "18370",
+    "desc": "Leavening agents, baking powder, double-acting, straight phosphate",
+    "cal": 51.0,
+    "pro": 0.1,
+    "fat": 0.0,
+    "carb": 24.1,
+    "fib": 0.2,
+    "h2o": 4.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 4.6
+      },
+      {
+        "amt": 0.5,
+        "desc": "tsp",
+        "gm": 2.3
+      }
+    ]
+  },
+  {
+    "word": "POTATOESRUSSETRAW",
+    "display": "Russet Potatoes Raw",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11353",
+    "desc": "Potatoes, russet, flesh and skin, raw",
+    "cal": 79.0,
+    "pro": 2.1,
+    "fat": 0.1,
+    "carb": 18.1,
+    "fib": 1.3,
+    "h2o": 78.6,
+    "sug": 0.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.5,
+        "desc": "cup, diced",
+        "gm": 75.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "potato large (3\" to 4-1/4\" dia)",
+        "gm": 369.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "Potato medium (2-1/4\" to 3-1/4\" dia)",
+        "gm": 213.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "Potato small (1-3/4\" to 2-1/4\" dia)",
+        "gm": 170.0
+      }
+    ]
+  },
+  {
+    "word": "POTATOESREDRAW",
+    "display": "Red Potatoes Raw",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11354",
+    "desc": "Potatoes, white, flesh and skin, raw",
+    "cal": 69.0,
+    "pro": 1.7,
+    "fat": 0.1,
+    "carb": 15.7,
+    "fib": 2.4,
+    "h2o": 81.6,
+    "sug": 1.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.5,
+        "desc": "cup, diced",
+        "gm": 75.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "large (3\" to 4-1/4\" dia.)",
+        "gm": 369.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "medium (2+-1/4\" to 3-1/4\" dia.)",
+        "gm": 213.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "small (1-3/4\" to 2-1/4\" dia.)",
+        "gm": 92.0
+      }
+    ]
+  },
+  {
+    "word": "POTATOESWHITERAW",
+    "display": "White Potatoes Raw",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11355",
+    "desc": "Potatoes, red, flesh and skin, raw",
+    "cal": 70.0,
+    "pro": 1.9,
+    "fat": 0.1,
+    "carb": 15.9,
+    "fib": 1.7,
+    "h2o": 81.0,
+    "sug": 1.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.5,
+        "desc": "cup, diced",
+        "gm": 75.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "potato large (3\" to 4-1/4\" dia)",
+        "gm": 369.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "potato medium (2-1/4\" to 3-1/4\" dia)",
+        "gm": 213.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "potato small (1-3/4\" to 2-1/4\" dia)",
+        "gm": 170.0
+      }
+    ]
+  },
+  {
+    "word": "BAKINGCHOCMEX",
+    "display": "Baking Choc Mexican Squares",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "19124",
+    "desc": "Baking chocolate, mexican, squares",
+    "cal": 426.0,
+    "pro": 3.6,
+    "fat": 15.6,
+    "carb": 77.4,
+    "fib": 4.0,
+    "h2o": 1.6,
+    "sug": 69.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tablet",
+        "gm": 20.0
       }
     ]
   }
