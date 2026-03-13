@@ -778,7 +778,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "AMERICAN",
-    "display": "American Cheese",
+    "display": "American Cheese Nonfat",
     "groups": [
       "dairy"
     ],
@@ -801,6 +801,107 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "serving",
         "gm": 19.0
+      }
+    ]
+  },
+  {
+    "word": "AMERICANFAT",
+    "display": "American Cheese Reg",
+    "groups": [
+      "dairy"
+    ],
+    "ndb": "1253",
+    "desc": "Cheese, pasteurized process, American, without added vitamin D",
+    "cal": 371.0,
+    "pro": 18.1,
+    "fat": 31.8,
+    "carb": 3.7,
+    "fib": 0.0,
+    "h2o": 39.6,
+    "sug": 2.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice (3/4 oz)",
+        "gm": 21.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice (1 oz)",
+        "gm": 28.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cubic inch",
+        "gm": 18.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, diced",
+        "gm": 140.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, shredded",
+        "gm": 113.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, melted",
+        "gm": 244.0
+      }
+    ]
+  },
+  {
+    "word": "AMERICANLOW",
+    "display": "American Cheese Low-fat",
+    "groups": [
+      "dairy"
+    ],
+    "ndb": "43275",
+    "desc": "Cheese, pasteurized process, American, low fat",
+    "cal": 180.0,
+    "pro": 24.6,
+    "fat": 7.0,
+    "carb": 3.5,
+    "fib": 0.0,
+    "h2o": 58.9,
+    "sug": 0.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, diced",
+        "gm": 140.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, shredded",
+        "gm": 113.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cubic inch",
+        "gm": 18.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice (3/4 oz)",
+        "gm": 21.0
       }
     ]
   },
@@ -900,7 +1001,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "APPLE",
-    "display": "Apple",
+    "display": "Apples all with Skin",
     "groups": [
       "fruit"
     ],
@@ -957,6 +1058,168 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "APPLEDRIED",
+    "display": "Apples Dried",
+    "groups": [
+      "fruit"
+    ],
+    "ndb": "9011",
+    "desc": "Apples, dried, sulfured, uncooked",
+    "cal": 243.0,
+    "pro": 0.9,
+    "fat": 0.3,
+    "carb": 65.9,
+    "fib": 8.7,
+    "h2o": 31.8,
+    "sug": 57.2,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 86.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "ring",
+        "gm": 6.4
+      }
+    ]
+  },
+  {
+    "word": "APPLEGALA",
+    "display": "Apples Gala",
+    "groups": [
+      "fruit"
+    ],
+    "ndb": "9503",
+    "desc": "Apples, raw, gala, with skin",
+    "cal": 57.0,
+    "pro": 0.2,
+    "fat": 0.1,
+    "carb": 13.7,
+    "fib": 2.3,
+    "h2o": 85.8,
+    "sug": 10.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, sliced",
+        "gm": 109.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "large",
+        "gm": 200.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "medium",
+        "gm": 172.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "small",
+        "gm": 157.0
+      }
+    ]
+  },
+  {
+    "word": "APPLEGRNDEL",
+    "display": "Apples Green Delicious",
+    "groups": [
+      "fruit"
+    ],
+    "ndb": "9501",
+    "desc": "Apples, raw, golden delicious, with skin",
+    "cal": 57.0,
+    "pro": 0.3,
+    "fat": 0.1,
+    "carb": 13.6,
+    "fib": 2.4,
+    "h2o": 85.8,
+    "sug": 10.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, sliced",
+        "gm": 109.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "large",
+        "gm": 215.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "medium",
+        "gm": 169.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "small",
+        "gm": 129.0
+      }
+    ]
+  },
+  {
+    "word": "APPLEJUGI",
+    "display": "Apples FuJi",
+    "groups": [
+      "fruit"
+    ],
+    "ndb": "9504",
+    "desc": "Apples, raw, fuji, with skin",
+    "cal": 63.0,
+    "pro": 0.2,
+    "fat": 0.2,
+    "carb": 15.2,
+    "fib": 2.1,
+    "h2o": 84.2,
+    "sug": 11.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, sliced",
+        "gm": 109.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "large",
+        "gm": 236.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "medium",
+        "gm": 192.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "small",
+        "gm": 158.0
+      }
+    ]
+  },
+  {
     "word": "APPLEJUICE",
     "display": "Apple Juice",
     "groups": [
@@ -995,8 +1258,51 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "APPLENOSKIN",
+    "display": "Apples all no Skin",
+    "groups": [
+      "fruit"
+    ],
+    "ndb": "9004",
+    "desc": "Apples, raw, without skin",
+    "cal": 48.0,
+    "pro": 0.3,
+    "fat": 0.1,
+    "carb": 12.8,
+    "fib": 1.3,
+    "h2o": 86.7,
+    "sug": 10.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup slices",
+        "gm": 110.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "large (3-1/4\" dia)",
+        "gm": 216.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "medium (3\" dia)",
+        "gm": 161.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "small (2-3/4\" dia)",
+        "gm": 132.0
+      }
+    ]
+  },
+  {
     "word": "APPLEPIE",
-    "display": "Pie Apple Pie",
+    "display": "Pie Apple",
     "groups": [
       "sweets"
     ],
@@ -1028,6 +1334,49 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "APPLEREDDEL",
+    "display": "Apple Red Deliciousl",
+    "groups": [
+      "fruit"
+    ],
+    "ndb": "9500",
+    "desc": "Apples, raw, red delicious, with skin",
+    "cal": 59.0,
+    "pro": 0.3,
+    "fat": 0.2,
+    "carb": 14.1,
+    "fib": 2.3,
+    "h2o": 85.3,
+    "sug": 10.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, sliced",
+        "gm": 109.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "large",
+        "gm": 260.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "medium",
+        "gm": 212.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "small",
+        "gm": 158.0
+      }
+    ]
+  },
+  {
     "word": "APPLESAUCE",
     "display": "Applesauce",
     "groups": [
@@ -1052,6 +1401,49 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "cup",
         "gm": 244.0
+      }
+    ]
+  },
+  {
+    "word": "APPLESMITH",
+    "display": "Apple Granny Smith",
+    "groups": [
+      "fruit"
+    ],
+    "ndb": "9502",
+    "desc": "Apples, raw, granny smith, with skin",
+    "cal": 58.0,
+    "pro": 0.4,
+    "fat": 0.2,
+    "carb": 13.6,
+    "fib": 2.8,
+    "h2o": 85.5,
+    "sug": 9.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, sliced",
+        "gm": 109.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "large",
+        "gm": 206.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "medium",
+        "gm": 167.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "small",
+        "gm": 144.0
       }
     ]
   },
@@ -1127,6 +1519,67 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "APRICOTCANNED",
+    "display": "Apricot Canned",
+    "groups": [
+      "fruit"
+    ],
+    "ndb": "9023",
+    "desc": "Apricots, canned, water pack, without skin, solids and liquids",
+    "cal": 22.0,
+    "pro": 0.7,
+    "fat": 0.0,
+    "carb": 5.5,
+    "fib": 1.1,
+    "h2o": 93.4,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, whole, without pits",
+        "gm": 227.0
+      }
+    ]
+  },
+  {
+    "word": "APRICOTDRIED",
+    "display": "Apricot Dried",
+    "groups": [
+      "fruit"
+    ],
+    "ndb": "9032",
+    "desc": "Apricots, dried, sulfured, uncooked",
+    "cal": 241.0,
+    "pro": 3.4,
+    "fat": 0.5,
+    "carb": 62.6,
+    "fib": 7.3,
+    "h2o": 30.9,
+    "sug": 53.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, halves",
+        "gm": 130.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "half",
+        "gm": 3.5
+      }
+    ]
+  },
+  {
     "word": "APRICOTJAM",
     "display": "Apricot Jam",
     "groups": [
@@ -1157,6 +1610,40 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "packet (0.5 oz)",
         "gm": 14.0
+      }
+    ]
+  },
+  {
+    "word": "APRICOTNECTAR",
+    "display": "Apricot Nectar",
+    "groups": [
+      "beverage",
+      "fruit"
+    ],
+    "ndb": "9036",
+    "desc": "Apricot nectar, canned, without added ascorbic acid",
+    "cal": 56.0,
+    "pro": 0.4,
+    "fat": 0.1,
+    "carb": 14.4,
+    "fib": 0.6,
+    "h2o": 84.9,
+    "sug": 13.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 251.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 31.4
       }
     ]
   },
@@ -1556,7 +2043,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "BAKEDBEANS",
-    "display": "Baked Beans",
+    "display": "Baked Beans Veggie",
     "groups": [
       "prepared"
     ],
@@ -1579,6 +2066,67 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "cup",
         "gm": 254.0
+      }
+    ]
+  },
+  {
+    "word": "BAKINGCHOCMEX",
+    "display": "Baking Choc Mexican Squares",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "19124",
+    "desc": "Baking chocolate, mexican, squares",
+    "cal": 426.0,
+    "pro": 3.6,
+    "fat": 15.6,
+    "carb": 77.4,
+    "fib": 4.0,
+    "h2o": 1.6,
+    "sug": 69.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tablet",
+        "gm": 20.0
+      }
+    ]
+  },
+  {
+    "word": "BAKINGPOWDER",
+    "display": "Baking Powder",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "18370",
+    "desc": "Leavening agents, baking powder, double-acting, straight phosphate",
+    "cal": 51.0,
+    "pro": 0.1,
+    "fat": 0.0,
+    "carb": 24.1,
+    "fib": 0.2,
+    "h2o": 4.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 4.6
+      },
+      {
+        "amt": 0.5,
+        "desc": "tsp",
+        "gm": 2.3
       }
     ]
   },
@@ -1650,7 +2198,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "BAMBOO",
-    "display": "Bamboo Raw",
+    "display": "Bamboo Shoots Raw",
     "groups": [
       "vegetable"
     ],
@@ -1819,7 +2367,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "BARLEY",
-    "display": "Barley",
+    "display": "Barley Pearled Cooked",
     "groups": [
       "grain"
     ],
@@ -3338,6 +3886,39 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "BLUBERRIESFROZEN",
+    "display": "Blueberries Frozen",
+    "groups": [
+      "fruit"
+    ],
+    "ndb": "9054",
+    "desc": "Blueberries, frozen, unsweetened",
+    "cal": 51.0,
+    "pro": 0.4,
+    "fat": 0.6,
+    "carb": 12.2,
+    "fib": 2.7,
+    "h2o": 86.6,
+    "sug": 8.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, unthawed",
+        "gm": 155.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package (20 oz)",
+        "gm": 567.0
+      }
+    ]
+  },
+  {
     "word": "BLUEBERRIES",
     "display": "Blueberries",
     "groups": [
@@ -3621,7 +4202,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "BOYSENBERRIES",
-    "display": "Boysenberries",
+    "display": "Boysenberries Frozen",
     "groups": [
       "fruit"
     ],
@@ -9682,7 +10263,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CHEDDAR",
-    "display": "Cheddar",
+    "display": "Cheddar Cheese",
     "groups": [
       "dairy"
     ],
@@ -9863,39 +10444,6 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "NLEA serving",
         "gm": 140.0
-      }
-    ]
-  },
-  {
-    "word": "CHERRYFRIEDPIE",
-    "display": "Cherry Fried Pie",
-    "groups": [
-      "sweets"
-    ],
-    "ndb": "18444",
-    "desc": "Pie, fried pies, cherry",
-    "cal": 316.0,
-    "pro": 3.0,
-    "fat": 16.1,
-    "carb": 42.6,
-    "fib": 2.6,
-    "h2o": 37.6,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      },
-      {
-        "amt": 1.0,
-        "desc": "pie (5\" x 3-3/4\")",
-        "gm": 128.0
       }
     ]
   },
@@ -15228,7 +15776,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CROISSANT",
-    "display": "Croissant",
+    "display": "Croissant Butter",
     "groups": [
       "prepared",
       "grain"
@@ -15310,7 +15858,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CROUTON",
-    "display": "Crouton",
+    "display": "Crouton Plain",
     "groups": [
       "grain"
     ],
@@ -23093,6 +23641,54 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "LEMON",
+    "display": "Lemon Raw",
+    "groups": [
+      "fruit"
+    ],
+    "ndb": "9150",
+    "desc": "Lemons, raw, without peel",
+    "cal": 29.0,
+    "pro": 1.1,
+    "fat": 0.3,
+    "carb": 9.3,
+    "fib": 2.8,
+    "h2o": 89.0,
+    "sug": 2.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, sections",
+        "gm": 212.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fruit (2-1/8\" dia)",
+        "gm": 58.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fruit (2-3/8\" dia)",
+        "gm": 84.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "wedge or slice (1/8 of one 2-1/8\" dia lemon)",
+        "gm": 7.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "NLEA serving",
+        "gm": 58.0
+      }
+    ]
+  },
+  {
     "word": "LEMONADE",
     "display": "Lemonade",
     "groups": [
@@ -23121,8 +23717,41 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "LEMONGRASS",
+    "display": "Lemon Grass",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11972",
+    "desc": "Lemon grass (citronella), raw",
+    "cal": 99.0,
+    "pro": 1.8,
+    "fat": 0.5,
+    "carb": 25.3,
+    "fib": 0.0,
+    "h2o": 70.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 67.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 4.8
+      }
+    ]
+  },
+  {
     "word": "LEMONJUICE",
-    "display": "Lemon Juice",
+    "display": "Lemon Juice Raw",
     "groups": [
       "spice"
     ],
@@ -24285,6 +24914,35 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "fruit without refuse",
         "gm": 336.0
+      }
+    ]
+  },
+  {
+    "word": "MANGONECTAR",
+    "display": "Mangonectar",
+    "groups": [
+      "beverage",
+      "fruit"
+    ],
+    "ndb": "9436",
+    "desc": "Mango nectar, canned",
+    "cal": 51.0,
+    "pro": 0.1,
+    "fat": 0.1,
+    "carb": 13.1,
+    "fib": 0.3,
+    "h2o": 86.6,
+    "sug": 12.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 251.0
       }
     ]
   },
@@ -27903,7 +28561,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "ORANGE",
-    "display": "Orange",
+    "display": "Oranges all",
     "groups": [
       "fruit"
     ],
@@ -27945,8 +28603,79 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "ORANGECALVAL",
+    "display": "Oranges Valencia",
+    "groups": [
+      "fruit"
+    ],
+    "ndb": "9201",
+    "desc": "Oranges, raw, California, valencias",
+    "cal": 49.0,
+    "pro": 1.0,
+    "fat": 0.3,
+    "carb": 11.9,
+    "fib": 2.5,
+    "h2o": 86.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup sections, without membranes",
+        "gm": 180.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fruit (2-5/8\" dia)",
+        "gm": 121.0
+      }
+    ]
+  },
+  {
+    "word": "ORANGEFLORDIA",
+    "display": "Oranges Flordia",
+    "groups": [
+      "fruit"
+    ],
+    "ndb": "9203",
+    "desc": "Oranges, raw, Florida",
+    "cal": 46.0,
+    "pro": 0.7,
+    "fat": 0.2,
+    "carb": 11.5,
+    "fib": 2.4,
+    "h2o": 87.1,
+    "sug": 9.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup sections, without membranes",
+        "gm": 185.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fruit (2-5/8\" dia)",
+        "gm": 141.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fruit (2-11/16\" dia)",
+        "gm": 151.0
+      }
+    ]
+  },
+  {
     "word": "ORANGEJUICE",
-    "display": "Orange Juice",
+    "display": "Orange Juice Canned",
     "groups": [
       "beverage"
     ],
@@ -27979,6 +28708,155 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "drink box (8.45 fl oz)",
         "gm": 263.0
+      }
+    ]
+  },
+  {
+    "word": "ORANGEJUICECAN",
+    "display": "Orange Juice Concentrate",
+    "groups": [
+      "fruit",
+      "beverage"
+    ],
+    "ndb": "9215",
+    "desc": "Orange juice, frozen concentrate, unsweetened, diluted with 3 volume water",
+    "cal": 37.0,
+    "pro": 0.6,
+    "fat": 0.1,
+    "carb": 8.8,
+    "fib": 0.2,
+    "h2o": 90.1,
+    "sug": 7.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 249.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 31.1
+      }
+    ]
+  },
+  {
+    "word": "ORANGEMARMALADE",
+    "display": "Orange Marmalade",
+    "groups": [
+      "fruit",
+      "sweets"
+    ],
+    "ndb": "19303",
+    "desc": "Marmalade, orange",
+    "cal": 246.0,
+    "pro": 0.3,
+    "fat": 0.0,
+    "carb": 66.3,
+    "fib": 0.7,
+    "h2o": 33.2,
+    "sug": 60.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 20.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package (0.5 oz)",
+        "gm": 14.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 20.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 320.0
+      }
+    ]
+  },
+  {
+    "word": "ORANGENAVEL",
+    "display": "Oranges Navel",
+    "groups": [
+      "fruit"
+    ],
+    "ndb": "9202",
+    "desc": "Oranges, raw, navels",
+    "cal": 49.0,
+    "pro": 0.9,
+    "fat": 0.1,
+    "carb": 12.5,
+    "fib": 2.2,
+    "h2o": 86.0,
+    "sug": 8.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup sections, without membranes",
+        "gm": 165.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fruit (2-7/8\" dia)",
+        "gm": 140.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "NLEA serving",
+        "gm": 154.0
+      }
+    ]
+  },
+  {
+    "word": "ORANGEPEEL",
+    "display": "Orange Peel",
+    "groups": [
+      "fruit"
+    ],
+    "ndb": "9216",
+    "desc": "Orange peel, raw",
+    "cal": 97.0,
+    "pro": 1.5,
+    "fat": 0.2,
+    "carb": 25.0,
+    "fib": 10.6,
+    "h2o": 72.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 6.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 2.0
       }
     ]
   },
@@ -29790,6 +30668,277 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "PEARANJOUGREEN",
+    "display": "Pear Green Anjou",
+    "groups": [
+      "fruit"
+    ],
+    "ndb": "9415",
+    "desc": "Pears, raw, green anjou",
+    "cal": 66.0,
+    "pro": 0.4,
+    "fat": 0.1,
+    "carb": 15.8,
+    "fib": 3.1,
+    "h2o": 83.3,
+    "sug": 9.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, sliced",
+        "gm": 140.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "small",
+        "gm": 172.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "medium",
+        "gm": 202.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "large",
+        "gm": 242.0
+      }
+    ]
+  },
+  {
+    "word": "PEARANJOURED",
+    "display": "Pear Red Anjou",
+    "groups": [
+      "fruit"
+    ],
+    "ndb": "9413",
+    "desc": "Pears, raw, red anjou",
+    "cal": 62.0,
+    "pro": 0.3,
+    "fat": 0.1,
+    "carb": 14.9,
+    "fib": 3.0,
+    "h2o": 84.2,
+    "sug": 9.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "small",
+        "gm": 126.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "medium",
+        "gm": 157.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "large",
+        "gm": 223.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, sliced",
+        "gm": 140.0
+      }
+    ]
+  },
+  {
+    "word": "PEARASIAN",
+    "display": "Pear Asian",
+    "groups": [
+      "fruit"
+    ],
+    "ndb": "9340",
+    "desc": "Pears, asian, raw",
+    "cal": 42.0,
+    "pro": 0.5,
+    "fat": 0.2,
+    "carb": 10.7,
+    "fib": 3.6,
+    "h2o": 88.2,
+    "sug": 7.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fruit 2-1/4\" high x 2-1/2\" dia",
+        "gm": 122.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fruit 3-3/8\" high x 3\" diameter",
+        "gm": 275.0
+      }
+    ]
+  },
+  {
+    "word": "PEARBARTLETT",
+    "display": "Pear Bartlett",
+    "groups": [
+      "fruit"
+    ],
+    "ndb": "9412",
+    "desc": "Pears, raw, bartlett",
+    "cal": 63.0,
+    "pro": 0.4,
+    "fat": 0.2,
+    "carb": 15.0,
+    "fib": 3.1,
+    "h2o": 84.1,
+    "sug": 9.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, sliced",
+        "gm": 140.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "small",
+        "gm": 152.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "medium",
+        "gm": 177.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "large",
+        "gm": 227.0
+      }
+    ]
+  },
+  {
+    "word": "PEARBOSCH",
+    "display": "Pear Bosch",
+    "groups": [
+      "fruit"
+    ],
+    "ndb": "9414",
+    "desc": "Pears, raw, bosc",
+    "cal": 67.0,
+    "pro": 0.4,
+    "fat": 0.1,
+    "carb": 16.1,
+    "fib": 3.1,
+    "h2o": 83.2,
+    "sug": 10.2,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, sliced",
+        "gm": 140.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "small",
+        "gm": 159.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "medium",
+        "gm": 179.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "large",
+        "gm": 219.0
+      }
+    ]
+  },
+  {
+    "word": "PEARCANNED",
+    "display": "Pear Canned",
+    "groups": [
+      "fruit"
+    ],
+    "ndb": "9253",
+    "desc": "Pears, canned, water pack, solids and liquids",
+    "cal": 29.0,
+    "pro": 0.2,
+    "fat": 0.0,
+    "carb": 7.8,
+    "fib": 1.6,
+    "h2o": 91.8,
+    "sug": 6.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, halves",
+        "gm": 244.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "half, with liquid",
+        "gm": 76.0
+      }
+    ]
+  },
+  {
+    "word": "PEARDRIED",
+    "display": "Pear Dried",
+    "groups": [
+      "fruit"
+    ],
+    "ndb": "9258",
+    "desc": "Pears, canned, extra heavy syrup pack, solids and liquids",
+    "cal": 97.0,
+    "pro": 0.2,
+    "fat": 0.1,
+    "carb": 25.2,
+    "fib": 1.6,
+    "h2o": 74.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, halves",
+        "gm": 266.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "half, with liquid",
+        "gm": 79.0
+      }
+    ]
+  },
+  {
     "word": "PEARNECTAR",
     "display": "Pear Nectar",
     "groups": [
@@ -30270,7 +31419,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "PIEBANANACREAM",
-    "display": "Pie Banana Cream",
+    "display": "Pies Banana Cream",
     "groups": [
       "sweets"
     ],
@@ -30308,7 +31457,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "PIEBLUEBERRY",
-    "display": "Pie Blueberry",
+    "display": "Pies Blueberry",
     "groups": [
       "sweets"
     ],
@@ -30341,7 +31490,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "PIEBOSTONCREAM",
-    "display": "Pie Boston Cream",
+    "display": "Pies Boston Cream",
     "groups": [
       "sweets"
     ],
@@ -30374,7 +31523,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "PIECHERRY",
-    "display": "Pie Cherry",
+    "display": "Pies Cherry",
     "groups": [
       "sweets"
     ],
@@ -30407,7 +31556,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "PIECHERRYFRIED",
-    "display": "Pie Cherry Fried",
+    "display": "Pies Cherry Fried",
     "groups": [
       "sweets"
     ],
@@ -30440,7 +31589,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "PIECHOCOLATE",
-    "display": "Pie Chocolate",
+    "display": "Pies Chocolate",
     "groups": [
       "sweets"
     ],
@@ -30483,7 +31632,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "PIECOCONUT",
-    "display": "Pie Coconut",
+    "display": "Pies Coconut",
     "groups": [
       "sweets"
     ],
@@ -30521,7 +31670,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "PIECRUST",
-    "display": "Pie Crust",
+    "display": "Pies Crust",
     "groups": [
       "prepared"
     ],
@@ -30549,7 +31698,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "PIEDUTCHAPPLE",
-    "display": "Pie Dutch Apple",
+    "display": "Pies Dutch Apple",
     "groups": [
       "sweets"
     ],
@@ -30591,8 +31740,145 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "PIEFILLINGAPPLE",
+    "display": "Pie Filling Apple",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19312",
+    "desc": "Pie fillings, apple, canned",
+    "cal": 100.0,
+    "pro": 0.1,
+    "fat": 0.1,
+    "carb": 26.1,
+    "fib": 1.0,
+    "h2o": 73.4,
+    "sug": 13.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.12,
+        "desc": "can",
+        "gm": 74.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 85.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "can (21 oz)",
+        "gm": 595.0
+      }
+    ]
+  },
+  {
+    "word": "PIEFILLINGBLUEBERRY",
+    "display": "Pie Filling Blueberry",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "44158",
+    "desc": "Pie fillings, blueberry, canned",
+    "cal": 181.0,
+    "pro": 0.4,
+    "fat": 0.2,
+    "carb": 44.4,
+    "fib": 2.6,
+    "h2o": 54.7,
+    "sug": 37.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 151.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 262.0
+      }
+    ]
+  },
+  {
+    "word": "PIEFILLINGCHERRY",
+    "display": "Pie Filling Cherry",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "19314",
+    "desc": "Pie fillings, canned, cherry",
+    "cal": 115.0,
+    "pro": 0.4,
+    "fat": 0.1,
+    "carb": 28.0,
+    "fib": 0.6,
+    "h2o": 71.2,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.12,
+        "desc": "can",
+        "gm": 74.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "can (21 oz)",
+        "gm": 595.0
+      }
+    ]
+  },
+  {
+    "word": "PIEFILLINGFRUIT",
+    "display": "Pie Filling fruit",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "18319",
+    "desc": "Pie, fried pies, fruit",
+    "cal": 316.0,
+    "pro": 3.0,
+    "fat": 16.1,
+    "carb": 42.6,
+    "fib": 2.6,
+    "h2o": 37.6,
+    "sug": 21.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "pie (5\" x 3-3/4\")",
+        "gm": 128.0
+      }
+    ]
+  },
+  {
     "word": "PIELEMON",
-    "display": "Pie Lemon",
+    "display": "Pies Lemon",
     "groups": [
       "sweets"
     ],
@@ -30625,7 +31911,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "PIELEMONFRIED",
-    "display": "Pie Lemon Fried ",
+    "display": "Pies Lemon Fried ",
     "groups": [
       "sweets"
     ],
@@ -30658,7 +31944,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "PIEMINCE",
-    "display": "Pie Mince",
+    "display": "Pies Mince",
     "groups": [
       "prepared"
     ],
@@ -30691,7 +31977,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "PIEPEACH",
-    "display": "Pie Peach",
+    "display": "Pies Peach",
     "groups": [
       "sweets"
     ],
@@ -30724,7 +32010,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "PIEPECAN",
-    "display": "Pie Pecan",
+    "display": "Pies Pecan",
     "groups": [
       "sweets"
     ],
@@ -30757,7 +32043,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "PIEPUMPKIN",
-    "display": "Pie Pumpkin",
+    "display": "Pies Pumpkin",
     "groups": [
       "sweets"
     ],
@@ -30790,7 +32076,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "PIEVANILLACREAM",
-    "display": "Pie Vanilla Cream",
+    "display": "Pies Vanilla Cream",
     "groups": [
       "sweets"
     ],
@@ -33114,6 +34400,92 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "POTATOESREDRAW",
+    "display": "Red Potatoes Raw",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11354",
+    "desc": "Potatoes, white, flesh and skin, raw",
+    "cal": 69.0,
+    "pro": 1.7,
+    "fat": 0.1,
+    "carb": 15.7,
+    "fib": 2.4,
+    "h2o": 81.6,
+    "sug": 1.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.5,
+        "desc": "cup, diced",
+        "gm": 75.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "large (3\" to 4-1/4\" dia.)",
+        "gm": 369.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "medium (2+-1/4\" to 3-1/4\" dia.)",
+        "gm": 213.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "small (1-3/4\" to 2-1/4\" dia.)",
+        "gm": 92.0
+      }
+    ]
+  },
+  {
+    "word": "POTATOESRUSSETRAW",
+    "display": "Russet Potatoes Raw",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11353",
+    "desc": "Potatoes, russet, flesh and skin, raw",
+    "cal": 79.0,
+    "pro": 2.1,
+    "fat": 0.1,
+    "carb": 18.1,
+    "fib": 1.3,
+    "h2o": 78.6,
+    "sug": 0.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.5,
+        "desc": "cup, diced",
+        "gm": 75.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "potato large (3\" to 4-1/4\" dia)",
+        "gm": 369.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "Potato medium (2-1/4\" to 3-1/4\" dia)",
+        "gm": 213.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "Potato small (1-3/4\" to 2-1/4\" dia)",
+        "gm": 170.0
+      }
+    ]
+  },
+  {
     "word": "POTATOESSCALLOPED",
     "display": "Scalloped Potatoes",
     "groups": [
@@ -33139,6 +34511,49 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "cup",
         "gm": 245.0
+      }
+    ]
+  },
+  {
+    "word": "POTATOESWHITERAW",
+    "display": "White Potatoes Raw",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11355",
+    "desc": "Potatoes, red, flesh and skin, raw",
+    "cal": 70.0,
+    "pro": 1.9,
+    "fat": 0.1,
+    "carb": 15.9,
+    "fib": 1.7,
+    "h2o": 81.0,
+    "sug": 1.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.5,
+        "desc": "cup, diced",
+        "gm": 75.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "potato large (3\" to 4-1/4\" dia)",
+        "gm": 369.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "potato medium (2-1/4\" to 3-1/4\" dia)",
+        "gm": 213.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "potato small (1-3/4\" to 2-1/4\" dia)",
+        "gm": 170.0
       }
     ]
   },
@@ -35552,7 +36967,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "ROUGHY",
-    "display": "Roughy",
+    "display": "Orange Roughy",
     "groups": [
       "protein"
     ],
@@ -37768,39 +39183,6 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "cup",
         "gm": 205.0
-      }
-    ]
-  },
-  {
-    "word": "SHRIMP",
-    "display": "Shrimp",
-    "groups": [
-      "protein"
-    ],
-    "ndb": "15150",
-    "desc": "Crustaceans, shrimp, mixed species, cooked, breaded and fried",
-    "cal": 242.0,
-    "pro": 21.4,
-    "fat": 12.3,
-    "carb": 11.5,
-    "fib": 0.4,
-    "h2o": 52.9,
-    "sug": 0.8,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 3.0,
-        "desc": "oz",
-        "gm": 85.0
-      },
-      {
-        "amt": 4.0,
-        "desc": "large",
-        "gm": 30.0
       }
     ]
   },
@@ -42668,7 +44050,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "TOMATILLO",
-    "display": "Tomatillo Raw",
+    "display": "Tomatillos Raw",
     "groups": [
       "vegetable"
     ],
@@ -42701,7 +44083,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "TOMATO",
-    "display": "Tomato Raw",
+    "display": "Tomatoes Raw",
     "groups": [
       "vegetable",
       "fruit"
@@ -42851,7 +44233,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "TOMATOSUNDRIED",
-    "display": "Tomato Sun-dried",
+    "display": "Sun-dried Tomato",
     "groups": [
       "spice"
     ],
@@ -43001,7 +44383,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "TORTILLACORN",
-    "display": "Tortillas Corn",
+    "display": "Corn Tortillas",
     "groups": [
       "grain",
       "prepared"
@@ -43040,7 +44422,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "TORTILLAFLOUR",
-    "display": "Tortillas Flour",
+    "display": "Flour Tortillas",
     "groups": [
       "grain",
       "prepared"
@@ -43900,7 +45282,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "TURTLEBEANS",
-    "display": "Turtle Beans",
+    "display": "Black Turtle Beans",
     "groups": [
       "legume"
     ],
@@ -46033,19 +47415,19 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "BAKINGPOWDER",
-    "display": "Baking Powder",
+    "word": "ARROWROOTFLOUR",
+    "display": "Arrowroot Flour",
     "groups": [
-      "spice"
+      "vegetable"
     ],
-    "ndb": "18370",
-    "desc": "Leavening agents, baking powder, double-acting, straight phosphate",
-    "cal": 51.0,
-    "pro": 0.1,
-    "fat": 0.0,
-    "carb": 24.1,
-    "fib": 0.2,
-    "h2o": 4.0,
+    "ndb": "20003",
+    "desc": "Arrowroot flour",
+    "cal": 357.0,
+    "pro": 0.3,
+    "fat": 0.1,
+    "carb": 88.2,
+    "fib": 3.4,
+    "h2o": 11.4,
     "sug": 0.0,
     "portions": [
       {
@@ -46055,31 +47437,26 @@ export const FOODS: Food[] = [
       },
       {
         "amt": 1.0,
-        "desc": "tsp",
-        "gm": 4.6
-      },
-      {
-        "amt": 0.5,
-        "desc": "tsp",
-        "gm": 2.3
+        "desc": "cup",
+        "gm": 128.0
       }
     ]
   },
   {
-    "word": "POTATOESRUSSETRAW",
-    "display": "Russet Potatoes Raw",
+    "word": "ASPARAGUSRAW",
+    "display": "Asparagus Raw",
     "groups": [
       "vegetable"
     ],
-    "ndb": "11353",
-    "desc": "Potatoes, russet, flesh and skin, raw",
-    "cal": 79.0,
-    "pro": 2.1,
+    "ndb": "11011",
+    "desc": "Asparagus, raw",
+    "cal": 20.0,
+    "pro": 2.2,
     "fat": 0.1,
-    "carb": 18.1,
-    "fib": 1.3,
-    "h2o": 78.6,
-    "sug": 0.6,
+    "carb": 3.9,
+    "fib": 2.1,
+    "h2o": 93.2,
+    "sug": 1.9,
     "portions": [
       {
         "amt": 1.0,
@@ -46087,42 +47464,52 @@ export const FOODS: Food[] = [
         "gm": 100.0
       },
       {
-        "amt": 0.5,
-        "desc": "cup, diced",
-        "gm": 75.0
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 134.0
       },
       {
         "amt": 1.0,
-        "desc": "potato large (3\" to 4-1/4\" dia)",
-        "gm": 369.0
+        "desc": "spear, small (5\" long or less)",
+        "gm": 12.0
       },
       {
         "amt": 1.0,
-        "desc": "Potato medium (2-1/4\" to 3-1/4\" dia)",
-        "gm": 213.0
+        "desc": "spear, medium (5-1/4\" to 7\" long)",
+        "gm": 16.0
       },
       {
         "amt": 1.0,
-        "desc": "Potato small (1-3/4\" to 2-1/4\" dia)",
-        "gm": 170.0
+        "desc": "spear, large (7-1/4\" to 8-1/2\")",
+        "gm": 20.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "spear, extra large (8-3/4\" to 10\" long)",
+        "gm": 24.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "spear tip (2\" long or less)",
+        "gm": 3.5
       }
     ]
   },
   {
-    "word": "POTATOESREDRAW",
-    "display": "Red Potatoes Raw",
+    "word": "AVOCADOFLOR",
+    "display": "Avocado Florida",
     "groups": [
       "vegetable"
     ],
-    "ndb": "11354",
-    "desc": "Potatoes, white, flesh and skin, raw",
-    "cal": 69.0,
-    "pro": 1.7,
-    "fat": 0.1,
-    "carb": 15.7,
-    "fib": 2.4,
-    "h2o": 81.6,
-    "sug": 1.1,
+    "ndb": "9039",
+    "desc": "Avocados, raw, Florida",
+    "cal": 120.0,
+    "pro": 2.2,
+    "fat": 10.1,
+    "carb": 7.8,
+    "fib": 5.6,
+    "h2o": 78.8,
+    "sug": 2.4,
     "portions": [
       {
         "amt": 1.0,
@@ -46130,42 +47517,257 @@ export const FOODS: Food[] = [
         "gm": 100.0
       },
       {
-        "amt": 0.5,
-        "desc": "cup, diced",
-        "gm": 75.0
+        "amt": 1.0,
+        "desc": "cup, pureed",
+        "gm": 230.0
       },
       {
         "amt": 1.0,
-        "desc": "large (3\" to 4-1/4\" dia.)",
-        "gm": 369.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "medium (2+-1/4\" to 3-1/4\" dia.)",
-        "gm": 213.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "small (1-3/4\" to 2-1/4\" dia.)",
-        "gm": 92.0
+        "desc": "fruit without skin and seeds",
+        "gm": 304.0
       }
     ]
   },
   {
-    "word": "POTATOESWHITERAW",
-    "display": "White Potatoes Raw",
+    "word": "BAGELWHEAT",
+    "display": "Bagel Wheat",
     "groups": [
-      "vegetable"
+      "grain",
+      "prepared"
     ],
-    "ndb": "11355",
-    "desc": "Potatoes, red, flesh and skin, raw",
-    "cal": 70.0,
+    "ndb": "18968",
+    "desc": "Bagels, wheat",
+    "cal": 250.0,
+    "pro": 10.2,
+    "fat": 1.5,
+    "carb": 48.9,
+    "fib": 4.1,
+    "h2o": 37.5,
+    "sug": 6.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "bagel",
+        "gm": 98.0
+      }
+    ]
+  },
+  {
+    "word": "BAGELCINRAISIN",
+    "display": "Bagel Cinnamon Raisin",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "18005",
+    "desc": "Bagels, cinnamon-raisin",
+    "cal": 274.0,
+    "pro": 9.8,
+    "fat": 1.7,
+    "carb": 55.2,
+    "fib": 2.3,
+    "h2o": 32.0,
+    "sug": 6.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "mini bagel (2-1/2\" dia)",
+        "gm": 26.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "small bagel (3\" dia)",
+        "gm": 69.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "medium bagel (3-1/2\" to 4\" dia)",
+        "gm": 105.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "large bagel (4-1/2\" dia)",
+        "gm": 131.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "TURKEYBACON",
+    "display": "Turkey Bacon",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "ndb": "7974",
+    "desc": "Bacon, turkey, low sodium",
+    "cal": 253.0,
+    "pro": 13.3,
+    "fat": 20.0,
+    "carb": 4.8,
+    "fib": 0.0,
+    "h2o": 58.9,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 15.0
+      }
+    ]
+  },
+  {
+    "word": "BANANAPOWDER",
+    "display": "Banana Powder",
+    "groups": [
+      "fruit"
+    ],
+    "ndb": "9041",
+    "desc": "Bananas, dehydrated, or banana powder",
+    "cal": 346.0,
+    "pro": 3.9,
+    "fat": 1.8,
+    "carb": 88.3,
+    "fib": 9.9,
+    "h2o": 3.0,
+    "sug": 47.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 6.2
+      }
+    ]
+  },
+  {
+    "word": "BARLEYPEARLRAW",
+    "display": "Barleypearlraw",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20005",
+    "desc": "Barley, pearled, raw",
+    "cal": 352.0,
+    "pro": 9.9,
+    "fat": 1.2,
+    "carb": 77.7,
+    "fib": 15.6,
+    "h2o": 10.1,
+    "sug": 0.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 200.0
+      }
+    ]
+  },
+  {
+    "word": "FLOURBARLEY",
+    "display": "Flour Barley",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20130",
+    "desc": "Barley flour or meal",
+    "cal": 345.0,
+    "pro": 10.5,
+    "fat": 1.6,
+    "carb": 74.5,
+    "fib": 10.1,
+    "h2o": 12.1,
+    "sug": 0.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 148.0
+      }
+    ]
+  },
+  {
+    "word": "BAKEDBEANSPORK",
+    "display": "Baked Beans Pork",
+    "groups": [
+      "legume",
+      "prepared"
+    ],
+    "ndb": "16009",
+    "desc": "Beans, baked, canned, with pork",
+    "cal": 106.0,
+    "pro": 5.2,
+    "fat": 1.6,
+    "carb": 20.0,
+    "fib": 5.5,
+    "h2o": 71.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 253.0
+      }
+    ]
+  },
+  {
+    "word": "YELLOWSNAPBEAN",
+    "display": "Yellow Snap Bean",
+    "groups": [
+      "legume"
+    ],
+    "ndb": "11724",
+    "desc": "Beans, snap, yellow, cooked, boiled, drained, without salt",
+    "cal": 35.0,
     "pro": 1.9,
-    "fat": 0.1,
-    "carb": 15.9,
-    "fib": 1.7,
-    "h2o": 81.0,
-    "sug": 1.3,
+    "fat": 0.3,
+    "carb": 7.9,
+    "fib": 3.3,
+    "h2o": 89.2,
+    "sug": 3.6,
     "portions": [
       {
         "amt": 1.0,
@@ -46173,42 +47775,232 @@ export const FOODS: Food[] = [
         "gm": 100.0
       },
       {
-        "amt": 0.5,
-        "desc": "cup, diced",
-        "gm": 75.0
-      },
-      {
         "amt": 1.0,
-        "desc": "potato large (3\" to 4-1/4\" dia)",
-        "gm": 369.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "potato medium (2-1/4\" to 3-1/4\" dia)",
-        "gm": 213.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "potato small (1-3/4\" to 2-1/4\" dia)",
-        "gm": 170.0
+        "desc": "cup",
+        "gm": 125.0
       }
     ]
   },
   {
-    "word": "BAKINGCHOCMEX",
-    "display": "Baking Choc Mexican Squares",
+    "word": "COCKLES",
+    "display": "Cockles",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "35028",
+    "desc": "Cockles, raw (Alaska Native)",
+    "cal": 79.0,
+    "pro": 13.5,
+    "fat": 0.7,
+    "carb": 4.7,
+    "fib": 0.0,
+    "h2o": 78.8,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      }
+    ]
+  },
+  {
+    "word": "CORNCREAMWHITE",
+    "display": "Corn Cream Style White",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "11906",
+    "desc": "Corn, sweet, white, canned, cream style, regular pack",
+    "cal": 74.0,
+    "pro": 1.7,
+    "fat": 0.4,
+    "carb": 18.6,
+    "fib": 1.2,
+    "h2o": 78.2,
+    "sug": 6.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 256.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "can (303 x 406)",
+        "gm": 482.0
+      }
+    ]
+  },
+  {
+    "word": "CORNCREAMYELLOW",
+    "display": "Corn Cream Style Yellow",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "11174",
+    "desc": "Corn, sweet, yellow, canned, cream style, regular pack",
+    "cal": 72.0,
+    "pro": 1.7,
+    "fat": 0.4,
+    "carb": 18.1,
+    "fib": 1.2,
+    "h2o": 78.7,
+    "sug": 3.2,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 256.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "can (303 x 406)",
+        "gm": 482.0
+      }
+    ]
+  },
+  {
+    "word": "CORNWHITERAW",
+    "display": "Corn White Raw",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "11900",
+    "desc": "Corn, sweet, white, raw",
+    "cal": 86.0,
+    "pro": 3.2,
+    "fat": 1.2,
+    "carb": 19.0,
+    "fib": 2.7,
+    "h2o": 76.0,
+    "sug": 3.2,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "ear, small (5-1/2\" to 6-1/2\" long)",
+        "gm": 73.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "ear, medium (6-3/4\" to 7-1/2\" long)",
+        "gm": 90.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "ear, large (7-3/4\" to 9\" long)",
+        "gm": 143.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup kernels",
+        "gm": 154.0
+      }
+    ]
+  },
+  {
+    "word": "CORNYELLOWRAW",
+    "display": "Corn Yellow Raw",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "11167",
+    "desc": "Corn, sweet, yellow, raw",
+    "cal": 86.0,
+    "pro": 3.3,
+    "fat": 1.4,
+    "carb": 18.7,
+    "fib": 2.0,
+    "h2o": 76.0,
+    "sug": 6.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 145.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "ear, large (7-3/4\" to 9\" long) yields",
+        "gm": 143.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "ear, medium (6-3/4\" to 7-1/2\" long) yields",
+        "gm": 102.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "ear, small (5-1/2\" to 6-1/2\" long)",
+        "gm": 73.0
+      }
+    ]
+  },
+  {
+    "word": "COUSCOUSDRY",
+    "display": "Couscous Dry",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20028",
+    "desc": "Couscous, dry",
+    "cal": 376.0,
+    "pro": 12.8,
+    "fat": 0.6,
+    "carb": 77.4,
+    "fib": 5.0,
+    "h2o": 8.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 173.0
+      }
+    ]
+  },
+  {
+    "word": "CREAMSUBPWDR",
+    "display": "Cream Substitute Powdered",
     "groups": [
       "spice"
     ],
-    "ndb": "19124",
-    "desc": "Baking chocolate, mexican, squares",
-    "cal": 426.0,
-    "pro": 3.6,
-    "fat": 15.6,
-    "carb": 77.4,
-    "fib": 4.0,
-    "h2o": 1.6,
-    "sug": 69.4,
+    "ndb": "1069",
+    "desc": "Cream substitute, powdered",
+    "cal": 529.0,
+    "pro": 2.5,
+    "fat": 32.9,
+    "carb": 59.3,
+    "fib": 0.0,
+    "h2o": 3.0,
+    "sug": 7.8,
     "portions": [
       {
         "amt": 1.0,
@@ -46217,8 +48009,539 @@ export const FOODS: Food[] = [
       },
       {
         "amt": 1.0,
-        "desc": "tablet",
-        "gm": 20.0
+        "desc": "cup",
+        "gm": 94.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 2.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "packet",
+        "gm": 3.0
+      }
+    ]
+  },
+  {
+    "word": "CREAMSUBLIQUID",
+    "display": "Cream Substitute Liquid",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "1205",
+    "desc": "Cream substitute, flavored, liquid",
+    "cal": 251.0,
+    "pro": 0.7,
+    "fat": 13.5,
+    "carb": 35.1,
+    "fib": 1.1,
+    "h2o": 50.1,
+    "sug": 33.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 15.0
+      }
+    ]
+  },
+  {
+    "word": "CRESSCOOKED",
+    "display": "Cress Cooked",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11204",
+    "desc": "Cress, garden, cooked, boiled, drained, without salt",
+    "cal": 23.0,
+    "pro": 1.9,
+    "fat": 0.6,
+    "carb": 3.8,
+    "fib": 0.7,
+    "h2o": 92.5,
+    "sug": 3.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 135.0
+      },
+      {
+        "amt": 0.5,
+        "desc": "cup",
+        "gm": 68.0
+      }
+    ]
+  },
+  {
+    "word": "CRESSRAW",
+    "display": "Cress Raw",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11203",
+    "desc": "Cress, garden, raw",
+    "cal": 32.0,
+    "pro": 2.6,
+    "fat": 0.7,
+    "carb": 5.5,
+    "fib": 1.1,
+    "h2o": 89.4,
+    "sug": 4.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 50.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "sprig",
+        "gm": 1.0
+      }
+    ]
+  },
+  {
+    "word": "CROISSANTAPPLE",
+    "display": "Croissant Apple",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "18240",
+    "desc": "Croissants, apple",
+    "cal": 254.0,
+    "pro": 7.4,
+    "fat": 8.7,
+    "carb": 37.1,
+    "fib": 2.5,
+    "h2o": 45.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "croissant, medium",
+        "gm": 57.0
+      }
+    ]
+  },
+  {
+    "word": "CROISSANTCHEESE",
+    "display": "Croissant Cheese",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "18241",
+    "desc": "Croissants, cheese",
+    "cal": 414.0,
+    "pro": 9.2,
+    "fat": 20.9,
+    "carb": 47.0,
+    "fib": 2.6,
+    "h2o": 21.0,
+    "sug": 11.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "croissant, small",
+        "gm": 42.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "croissant, medium",
+        "gm": 57.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "croissant, large",
+        "gm": 67.0
+      }
+    ]
+  },
+  {
+    "word": "CROISSANTPLAIN",
+    "display": "Croissant Plain",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "18242",
+    "desc": "Croutons, plain",
+    "cal": 407.0,
+    "pro": 11.9,
+    "fat": 6.6,
+    "carb": 73.5,
+    "fib": 5.1,
+    "h2o": 5.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.5,
+        "desc": "oz",
+        "gm": 14.2
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 30.0
+      }
+    ]
+  },
+  {
+    "word": "CROUTONSEASON",
+    "display": "Crouton Seasoned",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "18243",
+    "desc": "Croutons, seasoned",
+    "cal": 465.0,
+    "pro": 10.8,
+    "fat": 18.3,
+    "carb": 63.5,
+    "fib": 5.0,
+    "h2o": 3.6,
+    "sug": 4.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.5,
+        "desc": "oz",
+        "gm": 14.2
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 40.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package, fast food",
+        "gm": 10.0
+      },
+      {
+        "amt": 4.0,
+        "desc": "cubes",
+        "gm": 1.0
+      }
+    ]
+  },
+  {
+    "word": "CRABKING",
+    "display": "Crab King Cooked",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "15137",
+    "desc": "Crustaceans, crab, alaska king, cooked, moist heat",
+    "cal": 97.0,
+    "pro": 19.4,
+    "fat": 1.5,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 77.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "leg",
+        "gm": 134.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "oz",
+        "gm": 85.0
+      }
+    ]
+  },
+  {
+    "word": "CRABDUNGENESS",
+    "display": "Crab Dungeness Cooked",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "15226",
+    "desc": "Crustaceans, crab, dungeness, cooked, moist heat",
+    "cal": 110.0,
+    "pro": 22.3,
+    "fat": 1.2,
+    "carb": 0.9,
+    "fib": 0.0,
+    "h2o": 73.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "oz",
+        "gm": 85.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "crab",
+        "gm": 127.0
+      }
+    ]
+  },
+  {
+    "word": "CRABBLUECAN",
+    "display": "Crab Blue Canned",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "15141",
+    "desc": "Crustaceans, crab, blue, canned",
+    "cal": 83.0,
+    "pro": 17.9,
+    "fat": 0.7,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 79.7,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 135.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "can (6.5 oz), drained",
+        "gm": 125.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "oz",
+        "gm": 85.0
+      }
+    ]
+  },
+  {
+    "word": "SHRIMPCANNED",
+    "display": "Shrimp Canned",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "15152",
+    "desc": "Crustaceans, shrimp, mixed species, canned",
+    "cal": 100.0,
+    "pro": 20.4,
+    "fat": 1.4,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 75.8,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 128.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "can (4.5 oz), drained",
+        "gm": 128.0
+      },
+      {
+        "amt": 10.0,
+        "desc": "shrimp",
+        "gm": 32.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "oz",
+        "gm": 85.0
+      }
+    ]
+  },
+  {
+    "word": "SHRIMPCOOKED",
+    "display": "Shrimp Cooked",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "15271",
+    "desc": "Crustaceans, shrimp, cooked (not previously frozen)",
+    "cal": 99.0,
+    "pro": 24.0,
+    "fat": 0.3,
+    "carb": 0.2,
+    "fib": 0.0,
+    "h2o": 74.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "oz",
+        "gm": 85.0
+      }
+    ]
+  },
+  {
+    "word": "SHRIMPRAW",
+    "display": "Shrimp Raw",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "15270",
+    "desc": "Crustaceans, shrimp, raw (not previously frozen)",
+    "cal": 85.0,
+    "pro": 20.1,
+    "fat": 0.5,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 78.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "oz",
+        "gm": 85.0
+      }
+    ]
+  },
+  {
+    "word": "CUCUMBERPEEL",
+    "display": "Cucumber with Peel Raw",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11205",
+    "desc": "Cucumber, with peel, raw",
+    "cal": 15.0,
+    "pro": 0.7,
+    "fat": 0.1,
+    "carb": 3.6,
+    "fib": 0.5,
+    "h2o": 95.2,
+    "sug": 1.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 0.5,
+        "desc": "cup slices",
+        "gm": 52.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cucumber (8-1/4\")",
+        "gm": 301.0
+      }
+    ]
+  },
+  {
+    "word": "CURRANTREDWHITE",
+    "display": "Currant Red and White",
+    "groups": [
+      "fruit"
+    ],
+    "ndb": "9084",
+    "desc": "Currants, red and white, raw",
+    "cal": 56.0,
+    "pro": 1.4,
+    "fat": 0.2,
+    "carb": 13.8,
+    "fib": 4.3,
+    "h2o": 84.0,
+    "sug": 7.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 112.0
       }
     ]
   }
