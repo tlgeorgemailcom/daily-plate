@@ -18341,29 +18341,6 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "FERNFIDDLEHEAD",
-    "display": "Fern Raw",
-    "groups": [
-      "vegetable"
-    ],
-    "ndb": "11995",
-    "desc": "Fiddlehead ferns, raw",
-    "cal": 34.0,
-    "pro": 4.5,
-    "fat": 0.4,
-    "carb": 5.5,
-    "fib": 0.0,
-    "h2o": 88.7,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      }
-    ]
-  },
-  {
     "word": "FETA",
     "display": "Feta",
     "groups": [
