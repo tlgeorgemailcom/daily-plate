@@ -12095,7 +12095,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CINNAMONROLL",
-    "display": "Roll Cinnamon",
+    "display": "Cinnamon Roll",
     "groups": [
       "sweets"
     ],
@@ -14146,7 +14146,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CORNSALAD",
-    "display": "Salad Corn",
+    "display": "Corn Salad",
     "groups": [
       "vegetable"
     ],
@@ -33144,7 +33144,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "POTATOSALAD",
-    "display": "Salad Potato",
+    "display": "Potato Salad",
     "groups": [
       "prepared"
     ],
@@ -34747,7 +34747,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "RICEBOWLCHICKEN",
-    "display": "Rice Chicken Bowl",
+    "display": "Chicken Rice Bowl",
     "groups": [
       "prepared",
       "protein"
@@ -34832,7 +34832,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "RICEFLOURBROWN",
-    "display": "Rice Flour Brown",
+    "display": "Brown Rice Flour",
     "groups": [
       "grain"
     ],
@@ -34860,7 +34860,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "RICEFLOURWHITE",
-    "display": "Rice Flour White",
+    "display": "White Rice Flour",
     "groups": [
       "grain"
     ],
@@ -34946,7 +34946,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "RICESTEAMED",
-    "display": "Rice Steamed",
+    "display": "Steamed Rice",
     "groups": [
       "grain"
     ],
@@ -35002,7 +35002,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "RICEWILD",
-    "display": "Rice Wild",
+    "display": "Wild Rice",
     "groups": [
       "grain"
     ],
@@ -35177,7 +35177,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "ROLLDINNER",
-    "display": "Roll Dinner",
+    "display": "Dinner Roll",
     "groups": [
       "prepared",
       "grain"
@@ -35206,7 +35206,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "ROLLDINNERSWEET",
-    "display": "Roll Dinner Sweet",
+    "display": "Sweet Dinner Roll",
     "groups": [
       "grain",
       "prepared"
@@ -35240,7 +35240,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "ROLLDINNERWHOLE",
-    "display": "Roll Dinner Whole Wheat",
+    "display": "Whole Wheat Dinner Roll",
     "groups": [
       "grain",
       "prepared"
@@ -35294,7 +35294,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "ROLLFRENCH",
-    "display": "Roll French",
+    "display": "French Roll",
     "groups": [
       "grain",
       "prepared"
@@ -35328,7 +35328,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "ROLLHOTDOG",
-    "display": "Roll Hotdog",
+    "display": "Hot Dog Roll",
     "groups": [
       "protein",
       "grain"
@@ -35362,7 +35362,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "ROLLPIZZA",
-    "display": "Roll Pizza",
+    "display": "Pizza Roll",
     "groups": [
       "grain",
       "prepared"
@@ -35391,7 +35391,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "ROLLPUMP",
-    "display": "Roll Pumpernickel",
+    "display": "Pumpernickel Roll",
     "groups": [
       "grain",
       "prepared"
@@ -35901,7 +35901,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "SALADFRUIT",
-    "display": "Salad Fruit",
+    "display": "Fruit Salad",
     "groups": [
       "fruit",
       "prepared"
@@ -35930,7 +35930,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "SALADPOTATOEGG",
-    "display": "Salad Potato with Egg",
+    "display": "Potato Salad with Egg",
     "groups": [
       "prepared"
     ],
@@ -36715,7 +36715,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "SAUCEBARBECUE",
-    "display": "Sauce Barbecue",
+    "display": "Barbecue Sauce",
     "groups": [
       "spice"
     ],
@@ -36753,7 +36753,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "SAUCEWHITEMED",
-    "display": "Sauce White Medium",
+    "display": "White Sauce Medium",
     "groups": [
       "spice"
     ],
@@ -36786,7 +36786,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "SAUCEWHITETHICK",
-    "display": "Sauce White Thick",
+    "display": "White Sauce Thick",
     "groups": [
       "spice"
     ],
@@ -36819,7 +36819,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "SAUCEWHITETHIN",
-    "display": "Sauce White Thin",
+    "display": "White Sauce Thin",
     "groups": [
       "spice"
     ],
@@ -40429,7 +40429,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "SUGARBROWN",
-    "display": "Sugar Brown",
+    "display": "Brown Sugar",
     "groups": [
       "spice"
     ],
@@ -40477,7 +40477,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "SUGARMAPLE",
-    "display": "Sugar Maple",
+    "display": "Maple Sugar",
     "groups": [
       "spice"
     ],
@@ -40515,7 +40515,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "SUGARPOWDERED",
-    "display": "Sugar Powdered",
+    "display": "Powdered Sugar",
     "groups": [
       "spice"
     ],
@@ -40961,7 +40961,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "SYRUPCANE",
-    "display": "Syrup Cane",
+    "display": "Cane Syrup",
     "groups": [
       "spice"
     ],
@@ -40989,7 +40989,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "SYRUPCHOC",
-    "display": "Syrup Chocolate",
+    "display": "Chocolate Syrup",
     "groups": [
       "spice"
     ],
@@ -41017,7 +41017,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "SYRUPCORNDARK",
-    "display": "Syrup Corn Dark",
+    "display": "Dark Corn Syrup",
     "groups": [
       "spice"
     ],
@@ -41050,7 +41050,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "SYRUPCORNLIGHT",
-    "display": "Syrup Corn Light",
+    "display": "Light Corn Syrup",
     "groups": [
       "spice"
     ],
@@ -41083,7 +41083,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "SYRUPHIGHFRUCTOSE",
-    "display": "Syrup High Fructose",
+    "display": "High Fructose Corn Syrup",
     "groups": [
       "spice"
     ],
@@ -41116,7 +41116,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "SYRUPPANCAKE",
-    "display": "Syrup Pancake",
+    "display": "Pancake Syrup",
     "groups": [
       "spice"
     ],
@@ -41149,7 +41149,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "SYRUPSORGHUM",
-    "display": "Syrup Sorghum",
+    "display": "Sorghum Syrup",
     "groups": [
       "spice"
     ],
@@ -41215,7 +41215,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "TACO",
-    "display": "Salad Taco",
+    "display": "Taco Salad",
     "groups": [
       "prepared"
     ],
@@ -41923,7 +41923,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "TEACHAM",
-    "display": "Tea Chamomile",
+    "display": "Chamomile Tea",
     "groups": [
       "beverage"
     ],
@@ -41961,7 +41961,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "TEAGREEN",
-    "display": "Tea Green",
+    "display": "Green Tea",
     "groups": [
       "beverage"
     ],
@@ -41994,7 +41994,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "TEAHIBISCUS",
-    "display": "Tea Hibiscus",
+    "display": "Hibiscus Tea",
     "groups": [
       "beverage"
     ],
@@ -42022,7 +42022,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "TEAINSTANT",
-    "display": "Tea Instant",
+    "display": "Instant Tea",
     "groups": [
       "beverage"
     ],
@@ -42060,7 +42060,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "TEAINSTANTDECAF",
-    "display": "Tea Instant Decaf",
+    "display": "Instant Decaf Tea",
     "groups": [
       "beverage"
     ],
@@ -42443,7 +42443,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "TOASTMULTI",
-    "display": "Toast Multi",
+    "display": "Multigrain Toast",
     "groups": [
       "grain",
       "prepared"
@@ -42482,7 +42482,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "TOASTRAISIN",
-    "display": "Toast Raisin",
+    "display": "Raisin Toast",
     "groups": [
       "grain",
       "prepared"
@@ -42526,7 +42526,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "TOASTWHITE",
-    "display": "Toast White",
+    "display": "White Toast",
     "groups": [
       "grain",
       "prepared"
@@ -42595,7 +42595,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "TOASTWHOLE",
-    "display": "Toast Whole Wheat",
+    "display": "Whole Wheat Toast",
     "groups": [
       "grain",
       "prepared"
@@ -43335,7 +43335,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "TUNASALAD",
-    "display": "Salad Tuna",
+    "display": "Tuna Salad",
     "groups": [
       "protein"
     ],
@@ -44368,7 +44368,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "VINEGARBALSAMIC",
-    "display": "Vinegar Balsamic",
+    "display": "Balsamic Vinegar",
     "groups": [
       "spice"
     ],
@@ -44406,7 +44406,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "VINEGARCIDER",
-    "display": "Vinegar Cider",
+    "display": "Cider Vinegar",
     "groups": [
       "spice"
     ],
@@ -44444,7 +44444,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "VINEGARDISTILLED",
-    "display": "Vinegar Distilled",
+    "display": "Distilled Vinegar",
     "groups": [
       "spice"
     ],
@@ -44482,7 +44482,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "VINEGARREDWINE",
-    "display": "Vinegar Red Wine",
+    "display": "Red Wine Vinegar",
     "groups": [
       "spice"
     ],
@@ -44596,7 +44596,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "WAFFLE",
-    "display": "Waffle Plain",
+    "display": "Plain Waffle",
     "groups": [
       "prepared"
     ],
@@ -44629,7 +44629,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "WAFFLEBUTTERMILK",
-    "display": "Waffle Buttermilk",
+    "display": "Buttermilk Waffle",
     "groups": [
       "prepared"
     ],
@@ -45033,7 +45033,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "WHEAT",
-    "display": "Wheat",
+    "display": "Flour White Wheat",
     "groups": [
       "grain"
     ],

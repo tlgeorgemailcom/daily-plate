@@ -148,11 +148,13 @@
       const d = f.display.toLowerCase();
       return escaped.every(w => d.includes(w));
     });
-    // rank: display starts with first query word → top; then alphabetical
+    // rank: any word in display starts with first query word → top; then alphabetical
+    const wordStarts = (s: string) =>
+      s.toLowerCase().split(/\s+/).some(w => w.startsWith(words[0]));
     matches.sort((a, b) => {
-      const aStarts = a.display.toLowerCase().startsWith(words[0]) ? 0 : 1;
-      const bStarts = b.display.toLowerCase().startsWith(words[0]) ? 0 : 1;
-      if (aStarts !== bStarts) return aStarts - bStarts;
+      const aMatch = wordStarts(a.display) ? 0 : 1;
+      const bMatch = wordStarts(b.display) ? 0 : 1;
+      if (aMatch !== bMatch) return aMatch - bMatch;
       return a.display.localeCompare(b.display);
     });
     return matches.slice(0, 20);
