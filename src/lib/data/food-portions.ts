@@ -9194,39 +9194,6 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "CASSAVA",
-    "display": "Cassava Raw",
-    "groups": [
-      "vegetable"
-    ],
-    "ndb": "11134",
-    "desc": "Cassava, raw",
-    "cal": 160.0,
-    "pro": 1.4,
-    "fat": 0.3,
-    "carb": 38.1,
-    "fib": 1.8,
-    "h2o": 59.7,
-    "sug": 1.7,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 206.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "root",
-        "gm": 408.0
-      }
-    ]
-  },
-  {
     "word": "CATFISH",
     "display": "Catfish",
     "groups": [
