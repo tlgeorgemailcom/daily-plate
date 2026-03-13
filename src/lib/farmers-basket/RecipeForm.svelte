@@ -148,13 +148,18 @@
       const d = f.display.toLowerCase();
       return escaped.every(w => d.includes(w));
     });
-    // rank: any word in display starts with first query word → top; then alphabetical
-    const wordStarts = (s: string) =>
-      s.toLowerCase().split(/\s+/).some(w => w.startsWith(words[0]));
+    // rank: position of first word matching query (earlier = more relevant),
+    // then shorter name wins (more specific), then alphabetical
+    const matchPos = (s: string) => {
+      const ws = s.toLowerCase().split(/\s+/);
+      const idx = ws.findIndex(w => w.startsWith(words[0]));
+      return idx === -1 ? 999 : idx;
+    };
     matches.sort((a, b) => {
-      const aMatch = wordStarts(a.display) ? 0 : 1;
-      const bMatch = wordStarts(b.display) ? 0 : 1;
-      if (aMatch !== bMatch) return aMatch - bMatch;
+      const posDiff = matchPos(a.display) - matchPos(b.display);
+      if (posDiff !== 0) return posDiff;
+      const lenDiff = a.display.split(/\s+/).length - b.display.split(/\s+/).length;
+      if (lenDiff !== 0) return lenDiff;
       return a.display.localeCompare(b.display);
     });
     return matches.slice(0, 20);
