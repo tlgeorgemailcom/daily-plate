@@ -148,15 +148,20 @@
       const d = f.display.toLowerCase();
       return escaped.every(w => d.includes(w));
     });
-    // rank: position of first word matching query (earlier = more relevant),
-    // then shorter name wins (more specific), then alphabetical
-    const matchPos = (s: string) => {
+    // rank: exact word match > prefix match, then by position (earlier = better),
+    // then shorter name (more specific), then alphabetical
+    const q0 = words[0];
+    const matchScore = (s: string) => {
       const ws = s.toLowerCase().split(/\s+/);
-      const idx = ws.findIndex(w => w.startsWith(words[0]));
-      return idx === -1 ? 999 : idx;
+      const idx = ws.findIndex(w => w.startsWith(q0));
+      if (idx === -1) return { pos: 999, exact: false };
+      return { pos: idx, exact: ws[idx] === q0 };
     };
     matches.sort((a, b) => {
-      const posDiff = matchPos(a.display) - matchPos(b.display);
+      const sa = matchScore(a.display), sb = matchScore(b.display);
+      // Exact word match beats prefix-only match
+      if (sa.exact !== sb.exact) return sa.exact ? -1 : 1;
+      const posDiff = sa.pos - sb.pos;
       if (posDiff !== 0) return posDiff;
       const lenDiff = a.display.split(/\s+/).length - b.display.split(/\s+/).length;
       if (lenDiff !== 0) return lenDiff;
