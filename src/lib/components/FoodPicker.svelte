@@ -78,7 +78,23 @@
       });
     }
     
-    return foods.sort((a, b) => a.display.localeCompare(b.display)); // Alphabetical by display name
+    if (queryWords.length === 0) {
+      return foods.sort((a, b) => a.display.localeCompare(b.display));
+    }
+    // Rank: position of first word matching query (earlier = more relevant),
+    // then shorter name wins (more specific), then alphabetical
+    const matchPos = (s: string) => {
+      const ws = s.toLowerCase().split(/\s+/);
+      const idx = ws.findIndex(w => w.startsWith(queryWords[0]));
+      return idx === -1 ? 999 : idx;
+    };
+    return foods.sort((a, b) => {
+      const posDiff = matchPos(a.display) - matchPos(b.display);
+      if (posDiff !== 0) return posDiff;
+      const lenDiff = a.display.split(/\s+/).length - b.display.split(/\s+/).length;
+      if (lenDiff !== 0) return lenDiff;
+      return a.display.localeCompare(b.display);
+    });
   });
 
   function selectFood(food: Food) {
