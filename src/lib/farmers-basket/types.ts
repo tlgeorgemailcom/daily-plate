@@ -96,7 +96,15 @@ export interface Level {
   foodSupply: Record<FoodType, number>; // -1 for unlimited
   // Recipe details (revealed when level is completed)
   recipeInstructions?: string[];  // Step-by-step cooking instructions
-  recipeIngredients?: { name: string; quantity?: string }[];  // Full ingredient list with quantities
+  recipeIngredients?: {           // Full ingredient list with quantities and optional nutrition links
+    name: string;
+    quantity?: string;
+    foodWord?: string;      // key into food-portions.ts e.g. "BEEFGROUND"
+    ndbNo?: string;         // USDA NDB#
+    portionDesc?: string;   // e.g. "1 cup"
+    portionGrams?: number;  // grams for this portion
+    servingCount?: number;  // number of portions
+  }[];
   servings?: string;              // e.g., "Serves 2"
   prepTime?: string;              // e.g., "10 minutes"
   imageUrl?: string;              // Cloudinary URL for community recipe photos

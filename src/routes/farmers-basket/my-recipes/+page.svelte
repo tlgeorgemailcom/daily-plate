@@ -249,7 +249,15 @@
         servings: data.servings,
         ingredients: data.ingredients.filter(i => i.name.trim()).map(i => ({
           name: i.name,
-          quantity: i.quantity
+          quantity: i.quantity,
+          // Preserve nutrition links if present
+          ...(i.foodWord ? {
+            foodWord: i.foodWord,
+            ndbNo: i.ndbNo,
+            portionDesc: i.portionDesc,
+            portionGrams: i.portionGrams,
+            servingCount: i.servingCount
+          } : {})
         })),
         instructions: data.instructions.filter(i => i.text.trim()).map(i => i.text)
       };

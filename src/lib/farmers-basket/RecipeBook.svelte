@@ -457,7 +457,13 @@
           name: ing.name,
           quantity: ing.quantity || '',
           gameFood: matchedFood,
-          animal: level.animalSpawns[i]?.type || ''
+          animal: level.animalSpawns[i]?.type || '',
+          // Preserve existing nutrition links so the creator can see and update them
+          foodWord: ing.foodWord,
+          ndbNo: ing.ndbNo,
+          portionDesc: ing.portionDesc,
+          portionGrams: ing.portionGrams,
+          servingCount: ing.servingCount
         };
       });
     } else {
@@ -756,42 +762,33 @@
         imageUrl = undefined;
       }
 
-      const gameFoods = data.ingredients
-        .filter(i => i.gameFood)
-        .map(i => i.gameFood) as string[];
+      const updates: Record<string, unknown> = {
+        recipeName: data.recipeName,
+        category: data.category,
+        dietaryCategory: data.dietaryCategory,
+        prepTime: data.prepTime,
+        servings: data.servings,
+        ingredients: data.ingredients.filter(i => i.name.trim()).map(i => ({
+          name: i.name,
+          quantity: i.quantity,
+          // Preserve nutrition links
+          ...(i.foodWord ? {
+            foodWord: i.foodWord,
+            ndbNo: i.ndbNo,
+            portionDesc: i.portionDesc,
+            portionGrams: i.portionGrams,
+            servingCount: i.servingCount
+          } : {})
+        })),
+        instructions: data.instructions.filter(i => i.text.trim()).map(i => i.text)
+      };
 
-      const animalSpawns = data.ingredients
-        .filter(i => i.gameFood && i.animal)
-        .map((ing, i) => ({
-          type: ing.animal as string,
-          delay: (i + 1) * 2000
-        }));
-
-      if (animalSpawns.length === 0 && gameFoods.length > 0) {
-        animalSpawns.push({ type: 'rabbit', delay: 3000 });
-      }
+      if (imageUrl !== undefined) updates.imageUrl = imageUrl;
 
       const res = await fetch('/api/recipes/my', {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          id: selectedLevel.id,
-          recipeName: data.recipeName,
-          category: data.category,
-          dietaryCategory: data.dietaryCategory,
-          prepTime: data.prepTime,
-          servings: data.servings,
-          gameFoods,
-          ingredients: data.ingredients.filter(i => i.name.trim()).map(i => ({
-            name: i.name,
-            quantity: i.quantity,
-            gameFood: i.gameFood || null,
-            animal: i.animal || null
-          })),
-          instructions: data.instructions.map(i => i.text),
-          animalSpawns: animalSpawns.map(s => ({ type: s.type, delay: s.delay / 1000 })),
-          imageUrl
-        })
+        body: JSON.stringify({ id: selectedLevel.id, updates })
       });
 
       if (!res.ok) {
