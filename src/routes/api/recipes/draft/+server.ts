@@ -1,6 +1,6 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import { execute, queryOne } from '$lib/server/turso';
+import { execute, queryAll, queryOne } from '$lib/server/turso';
 
 // Safe migration — add draft columns if they don't exist yet
 async function ensureDraftColumns() {
@@ -13,12 +13,22 @@ async function ensureDraftColumns() {
 
 // GET ?recipeId=xxx&code=xxx  — collaborator loads latest draft
 //     ?recipeId=xxx&playerId=xxx — creator loads latest draft
+//     ?playerId=xxx (no recipeId) — creator gets all recipe IDs with unseen drafts
 export const GET: RequestHandler = async ({ url }) => {
   await ensureDraftColumns();
 
   const recipeId = url.searchParams.get('recipeId');
   const code = url.searchParams.get('code');
   const playerId = url.searchParams.get('playerId');
+
+  // No recipeId: return all recipe IDs where creator has unseen drafts
+  if (!recipeId && playerId) {
+    const rows = await queryAll<{ id: string }>(
+      `SELECT id FROM recipes WHERE submitted_by = ? AND draft_data IS NOT NULL AND draft_seen_by_creator = 0`,
+      [playerId]
+    );
+    return json({ unseenDraftIds: rows.map(r => r.id) });
+  }
 
   if (!recipeId || (!code && !playerId)) {
     return json({ error: 'Missing recipeId and code or playerId' }, { status: 400 });

@@ -94,6 +94,8 @@
   let creatorDraftUpdatedAt = $state<string | null>(null);
   let creatorDraftLoading = $state(false);
   let creatorDraftLoadingIntoForm = $state(false);
+  // Set of recipe IDs that have unseen collaborator drafts (for badge in list view)
+  let unseenDraftIds = $state<Set<string>>(new Set());
 
   // Creator edit code management
   let creatorEditCode = $state<string | null>(null);
@@ -133,6 +135,17 @@
           const parsed = JSON.parse(storedPlayer);
           currentPlayerId = parsed.id || null;
         } catch { /* ignore */ }
+      }
+      // Load which of the creator's recipes have unseen collaborator drafts
+      if (currentPlayerId) {
+        fetch(`/api/recipes/draft?playerId=${currentPlayerId}`)
+          .then(r => r.ok ? r.json() : null)
+          .then(data => {
+            if (data?.unseenDraftIds) {
+              unseenDraftIds = new Set(data.unseenDraftIds);
+            }
+          })
+          .catch(() => {});
       }
     }
   });
@@ -795,6 +808,8 @@
       creatorDraftUpdatedAt = null;
       handleLoadCreatorEditCode(level.id);
       handleCheckCreatorDraft(level.id);
+      // Clear the unseen badge immediately (will be confirmed seen by server call in handleCheckCreatorDraft)
+      unseenDraftIds = new Set([...unseenDraftIds].filter(id => id !== level.id));
     } else {
       showEditCodeModal = true;
       editCodeInput = '';
@@ -1664,7 +1679,10 @@
                   </span>
                 </button>
                 {#if level.isCommunityRecipe}
-                  <button class="edit-icon-btn" onclick={(e) => handleEditIconClick(level, e)} title="Edit recipe" aria-label="Edit recipe">✏️</button>
+                  <button class="edit-icon-btn" onclick={(e) => handleEditIconClick(level, e)} title="Edit recipe" aria-label="Edit recipe">
+                    ✏️
+                    {#if unseenDraftIds.has(level.id)}<span class="draft-badge"></span>{/if}
+                  </button>
                 {/if}
                 </div>
               {/each}
@@ -1729,7 +1747,10 @@
                           </span>
                         </button>
                         {#if level.isCommunityRecipe}
-                          <button class="edit-icon-btn" onclick={(e) => handleEditIconClick(level, e)} title="Edit recipe" aria-label="Edit recipe">✏️</button>
+                          <button class="edit-icon-btn" onclick={(e) => handleEditIconClick(level, e)} title="Edit recipe" aria-label="Edit recipe">
+                            ✏️
+                            {#if unseenDraftIds.has(level.id)}<span class="draft-badge"></span>{/if}
+                          </button>
                         {/if}
                         </div>
                       {/each}
@@ -3086,6 +3107,19 @@
     transition: background 0.15s, border-color 0.15s;
     color: #8B4513;
     padding: 0;
+    position: relative;
+  }
+
+  .draft-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 9px;
+    height: 9px;
+    background: #e74c3c;
+    border-radius: 50%;
+    border: 1.5px solid #FDF5E6;
+    pointer-events: none;
   }
 
   .edit-icon-btn:hover {
