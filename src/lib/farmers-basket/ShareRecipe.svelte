@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
+  import { onMount, onDestroy } from 'svelte';
   import { canUseStorage } from '$lib/stores/playerStore';
   import { saveGameScore } from '$lib/stores/scoreHistory';
   import RecipeForm, { type RecipeFormData } from './RecipeForm.svelte';
@@ -15,21 +15,58 @@
   let isSubmitting = $state(false);
   let submitError = $state<string | null>(null);
   let submitSuccess = $state(false);
-  let submittedRecipeId = $state<string | null>(null);
 
-  // Edit code state (for sharing with collaborators after submission)
+  // Draft state (recipe saved as status='draft' — not yet submitted)
+  let draftRecipeId = $state<string | null>(null);
+  let draftSaving = $state(false);
+  let draftError = $state<string | null>(null);
+  let draftSuccess = $state(false);
+  let draftTimestamp = $state<string | null>(null);
+
+  // Edit code state (available as soon as draft is saved)
   let shareEditCode = $state<string | null>(null);
   let generatingShareCode = $state(false);
   let shareCodeCopied = $state(false);
 
+  // Polling — detect collaborator changes while the form is open
+  let draftChangedWhileEditing = $state(false);
+  let knownDraftTimestamp = $state<string | null>(null);
+  let pollInterval: ReturnType<typeof setInterval> | null = null;
+
+  function startPoll() {
+    stopPoll();
+    pollInterval = setInterval(async () => {
+      if (!draftRecipeId || !playerId) return;
+      try {
+        const res = await fetch(`/api/recipes/draft?recipeId=${draftRecipeId}&playerId=${encodeURIComponent(playerId)}`);
+        if (!res.ok) return;
+        const data = await res.json();
+        const serverTimestamp: string | null = data.draftUpdatedAt ?? null;
+        if (serverTimestamp && knownDraftTimestamp && serverTimestamp !== knownDraftTimestamp) {
+          draftChangedWhileEditing = true;
+          stopPoll();
+        }
+      } catch {}
+    }, 12000);
+  }
+
+  function stopPoll() {
+    if (pollInterval !== null) {
+      clearInterval(pollInterval);
+      pollInterval = null;
+    }
+  }
+
+  onDestroy(() => stopPoll());
+
   async function handleGenerateShareCode() {
-    if (!submittedRecipeId || !playerId) return;
+    if (!draftRecipeId || !playerId) return;
     generatingShareCode = true;
     try {
       const res = await fetch('/api/recipes/edit-code', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ recipeId: submittedRecipeId, playerId })
+        body: JSON.stringify({ recipeId: draftRecipeId, playerId })
       });
       const data = await res.json();
       if (res.ok) shareEditCode = data.code;
@@ -44,6 +81,65 @@
       shareCodeCopied = true;
       setTimeout(() => { shareCodeCopied = false; }, 2000);
     });
+  }
+
+  async function handleSaveDraft(data: RecipeFormData) {
+    if (!isSubscriber || !playerId) return;
+    draftSaving = true;
+    draftError = null;
+    draftSuccess = false;
+
+    try {
+      // Upload image if needed
+      let imageUrl: string | null = uploadedImageUrl;
+      if (selectedImageFile && !uploadedImageUrl) {
+        imageUrl = await uploadImage();
+        if (imageUploadError) { draftError = imageUploadError; return; }
+      }
+
+      const payload = buildPayload(data, imageUrl);
+
+      let id = draftRecipeId;
+      if (!id) {
+        // First save — create a draft row
+        const res = await fetch('/api/recipes/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ...payload, draft: true })
+        });
+        if (!res.ok) throw new Error('Failed to save draft');
+        const result = await res.json();
+        id = result.id;
+        draftRecipeId = id!;
+        // Track in localStorage so "My Recipes" can show draft too
+        if (id && canUseStorage()) {
+          try {
+            const stored = localStorage.getItem('my-recipe-submissions');
+            const ids: string[] = stored ? JSON.parse(stored) : [];
+            if (!ids.includes(id)) { ids.push(id); localStorage.setItem('my-recipe-submissions', JSON.stringify(ids)); }
+          } catch {}
+        }
+      } else {
+        // Subsequent saves — update existing draft row
+        const res = await fetch('/api/recipes/submit', {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ...payload, recipeId: id, playerId, submit: false })
+        });
+        if (!res.ok) throw new Error('Failed to update draft');
+      }
+
+      draftTimestamp = new Date().toISOString();
+      knownDraftTimestamp = draftTimestamp;
+      draftSuccess = true;
+      draftChangedWhileEditing = false;
+      startPoll();
+      setTimeout(() => { draftSuccess = false; }, 3000);
+    } catch (err) {
+      draftError = err instanceof Error ? err.message : 'Failed to save draft';
+    } finally {
+      draftSaving = false;
+    }
   }
   
   // Image upload state
@@ -172,6 +268,33 @@
     isLoggedIn = !!playerId;
     isSubscriber = checkSubscriber();
   });
+
+  // Shared helper — builds the submission payload from form data
+  function buildPayload(data: RecipeFormData, imageUrl: string | null): Record<string, unknown> {
+    return {
+      recipeName: data.recipeName.trim(),
+      category: data.category,
+      dietaryCategory: data.dietaryCategory,
+      submitterName: data.submitterName.trim() || 'Anonymous',
+      prepTime: data.prepTime.trim(),
+      servings: data.servings.trim(),
+      ingredients: data.ingredients.map(i => ({
+        name: i.name.trim(),
+        quantity: i.quantity.trim(),
+        ...(data.nutritionComplete ? {
+          foodWord: i.foodWord,
+          ndbNo: i.ndbNo,
+          portionDesc: i.portionDesc,
+          portionGrams: i.portionGrams,
+          servingCount: i.servingCount
+        } : {})
+      })),
+      ...(data.nutritionComplete ? { nutritionComplete: true } : {}),
+      instructions: data.instructions.map(i => i.text.trim()),
+      playerId,
+      ...(imageUrl ? { imageUrl } : {})
+    };
+  }
   
   async function handleFormSubmit(data: RecipeFormData) {
     isSubmitting = true;
@@ -196,58 +319,39 @@
         }
       }
       
-      const submission: Record<string, unknown> = {
-        recipeName: data.recipeName.trim(),
-        category: data.category,
-        dietaryCategory: data.dietaryCategory,
-        submitterName: data.submitterName.trim() || 'Anonymous',
-        prepTime: data.prepTime.trim(),
-        servings: data.servings.trim(),
-        ingredients: data.ingredients.map(i => ({
-          name: i.name.trim(),
-          quantity: i.quantity.trim(),
-          ...(data.nutritionComplete ? {
-            foodWord: i.foodWord,
-            ndbNo: i.ndbNo,
-            portionDesc: i.portionDesc,
-            portionGrams: i.portionGrams,
-            servingCount: i.servingCount
-          } : {})
-        })),
-        ...(data.nutritionComplete ? { nutritionComplete: true } : {}),
-        instructions: data.instructions.map(i => i.text.trim()),
-        submittedAt: new Date().toISOString()
-      };
-      
-      // Include playerId (required)
-      submission.playerId = playerId;
-      
-      // Include image URL if uploaded
-      if (imageUrl) {
-        submission.imageUrl = imageUrl;
+      const payload = buildPayload(data, imageUrl);
+      let recipeId: string;
+
+      if (draftRecipeId) {
+        // Promote existing draft to pending
+        const response = await fetch('/api/recipes/submit', {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ...payload, recipeId: draftRecipeId, playerId, submit: true })
+        });
+        if (!response.ok) throw new Error('Failed to submit recipe');
+        recipeId = draftRecipeId;
+      } else {
+        // No draft — direct submit
+        const response = await fetch('/api/recipes/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        if (!response.ok) throw new Error('Failed to submit recipe');
+        const result = await response.json();
+        recipeId = result.id;
       }
-      
-      const response = await fetch('/api/recipes/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(submission)
-      });
-      
-      if (!response.ok) {
-        throw new Error('Failed to submit recipe');
-      }
-      
-      // Get the recipe ID and store it in localStorage for "My Recipes" tracking
-      // (Only for logged-in users - guests don't persist)
-      const result = await response.json();
-      if (result.id) submittedRecipeId = result.id;
-      if (result.id && canUseStorage()) {
+
+      stopPoll();
+
+      if (recipeId && canUseStorage()) {
         try {
           const STORAGE_KEY = 'my-recipe-submissions';
           const stored = localStorage.getItem(STORAGE_KEY);
           const ids: string[] = stored ? JSON.parse(stored) : [];
-          if (!ids.includes(result.id)) {
-            ids.push(result.id);
+          if (!ids.includes(recipeId)) {
+            ids.push(recipeId);
             localStorage.setItem(STORAGE_KEY, JSON.stringify(ids));
           }
         } catch (e) {
@@ -257,8 +361,8 @@
         // Track recipe submission for premium users
         saveGameScore('farmers-basket', 1, {
           recipeSubmitted: true,
-          recipeId: result.id,
-          recipeName: data.name,
+          recipeId,
+          recipeName: data.recipeName,
           ingredientCount: data.ingredients.length
         });
       }
@@ -304,33 +408,11 @@
           <button class="cancel-btn" onclick={onclose}>Maybe Later</button>
         </div>
       </div>
-    {:else if submitSuccess}}
+    {:else if submitSuccess}
       <div class="success-view">
         <div class="success-icon">✅</div>
         <h3>Recipe Submitted!</h3>
         <p>Thank you for sharing your recipe. It will be reviewed by a moderator and added to the game soon!</p>
-
-        <!-- Edit code section: invite collaborators -->
-        <div class="share-edit-code-section">
-          <p class="edit-code-label">🔑 Invite a collaborator</p>
-          <p class="edit-code-hint">Share an edit code so another player can suggest changes before you submit for approval.</p>
-          {#if shareEditCode}
-            <div class="edit-code-display">
-              <span class="edit-code-value">{shareEditCode}</span>
-              <button class="copy-code-btn" onclick={handleCopyShareCode}>
-                {shareCodeCopied ? '✓ Copied' : 'Copy'}
-              </button>
-            </div>
-          {:else}
-            <button
-              class="generate-code-btn"
-              onclick={handleGenerateShareCode}
-              disabled={generatingShareCode}
-            >
-              {generatingShareCode ? 'Generating...' : 'Generate Edit Code'}
-            </button>
-          {/if}
-        </div>
 
         <div class="success-actions">
           <button class="done-btn" onclick={onclose}>Done</button>
@@ -428,14 +510,77 @@
           {/if}
         </div>
         
-        <RecipeForm 
+        <!-- Draft saved notice + collaborator poll banner -->
+        {#if draftRecipeId}
+          <div class="share-draft-notice">
+            💾 Draft saved
+            {#if draftTimestamp}
+              <span class="share-draft-time">· {new Date(draftTimestamp).toLocaleTimeString()}</span>
+            {/if}
+          </div>
+
+          {#if draftChangedWhileEditing}
+            <div class="share-updated-banner">
+              <span>A collaborator saved changes while you were editing.</span>
+              <button class="load-updated-btn" onclick={async () => {
+                const res = await fetch(`/api/recipes/draft?recipeId=${draftRecipeId}&playerId=${encodeURIComponent(playerId ?? '')}`);
+                if (res.ok) {
+                  const d = await res.json();
+                  knownDraftTimestamp = d.draftUpdatedAt;
+                  draftChangedWhileEditing = false;
+                  startPoll();
+                }
+              }}>Reload their version</button>
+            </div>
+          {/if}
+
+          <!-- Collaborator Edit Code -->
+          <div class="share-edit-code-section">
+            <p class="edit-code-label">🔑 Collaborator Edit Code</p>
+            <p class="edit-code-hint">Share this code so another player can suggest changes. Only you can submit for approval.</p>
+            {#if shareEditCode}
+              <div class="edit-code-display">
+                <span class="edit-code-value">{shareEditCode}</span>
+                <button class="copy-code-btn" onclick={handleCopyShareCode}>
+                  {shareCodeCopied ? '✓ Copied' : 'Copy'}
+                </button>
+              </div>
+            {:else}
+              <button class="generate-code-btn" onclick={handleGenerateShareCode} disabled={generatingShareCode}>
+                {generatingShareCode ? 'Generating...' : 'Generate Edit Code'}
+              </button>
+            {/if}
+          </div>
+        {/if}
+
+        <RecipeForm
           moderatorMode={false}
           onsubmit={handleFormSubmit}
           oncancel={onclose}
-          submitLabel={isUploadingImage ? "⏳ Uploading..." : "📤 Submit Recipe"}
-          submitting={isSubmitting || isUploadingImage}
-          errorMessage={submitError || ''}
-        />
+          submitting={isSubmitting || draftSaving || isUploadingImage}
+          errorMessage={submitError || draftError || ''}
+        >
+          {#snippet customActions({ formData, isValid })}
+            <div class="share-form-actions">
+              <button type="button" class="cancel-btn" onclick={onclose}>Cancel</button>
+              <button
+                type="button"
+                class="share-save-draft-btn"
+                disabled={draftSaving || isSubmitting}
+                onclick={() => handleSaveDraft(formData)}
+              >
+                {draftSaving ? '⏳ Saving...' : draftSuccess ? '✓ Draft saved!' : '💾 Save Draft'}
+              </button>
+              <button
+                type="submit"
+                class="share-submit-btn"
+                disabled={isSubmitting || draftSaving || !isValid}
+              >
+                {isSubmitting ? '⏳ Submitting...' : '📤 Submit for Approval'}
+              </button>
+            </div>
+          {/snippet}
+        </RecipeForm>
       </div>
     {/if}
   </div>
@@ -570,15 +715,106 @@
   /* Edit code section in success view */
   .share-edit-code-section {
     width: 100%;
-    max-width: 320px;
     background: #f9f5f0;
     border: 1px solid #e0d5c5;
     border-radius: 10px;
-    padding: 14px 16px;
+    padding: 12px 14px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  /* Draft saved notice */
+  .share-draft-notice {
+    background: #f0faf3;
+    border: 1px solid #b8dfc6;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    color: #3d6a4a;
+    margin-bottom: 6px;
+  }
+
+  .share-draft-time {
+    color: #6a9a7a;
+  }
+
+  /* Polling banner */
+  .share-updated-banner {
+    background: #fffbea;
+    border: 1px solid #f59e0b;
+    border-radius: 8px;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.88rem;
+    color: #7c5a00;
+    margin-bottom: 8px;
+  }
+
+  .load-updated-btn {
+    flex-shrink: 0;
+    background: #f59e0b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 0.82rem;
+    cursor: pointer;
+  }
+
+  /* Form action buttons */
+  .share-form-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding-top: 4px;
+  }
+
+  .share-save-draft-btn {
+    background: #f0faf3;
+    color: #3d6a4a;
+    border: 1.5px solid #b8dfc6;
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+  }
+
+  .share-save-draft-btn:hover:not(:disabled) {
+    background: #d8f0e2;
+    border-color: #88c4a4;
+  }
+
+  .share-save-draft-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+
+  .share-submit-btn {
+    background: #3d6a4a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+
+  .share-submit-btn:hover:not(:disabled) {
+    background: #2e5238;
+  }
+
+  .share-submit-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
   }
 
   .edit-code-label {
@@ -592,7 +828,6 @@
     margin: 0;
     font-size: 0.8rem;
     color: #888;
-    text-align: center;
     line-height: 1.4;
   }
 
