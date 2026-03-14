@@ -319,7 +319,13 @@
               <button type="button" class="info-close-btn" onclick={() => showRankingsInfo = false}>×</button>
             </div>
             <div class="info-panel-body">
-              <p class="coming-soon">Coming soon.</p>
+              <p>Every time a player attempts your recipe — win or lose — that counts as a vote of interest. A recipe tried 40 times ranks higher than a recipe won 5 times by 5 players. Wins are shown on your recipe card, but they don't determine your rank. Engagement does.</p>
+              <p><strong>There are two tiers in every meal category.</strong></p>
+              <p>Recipes in Breakfast, Snacks, Lunch, Dinner, Beverages, Salads, and Sides are organised into two tiers. Within each tier, recipes shuffle daily so every recipe gets seen. The highest-ranked recipe in each tier is always pinned at the top.</p>
+              <p><strong>Tier 1 — Linked Recipes</strong><br>All recipes with ingredients connected to the nutrition database — whether built-in or player-shared — compete as equals. This is the most visible tier.</p>
+              <p><strong>Tier 2 — Unlinked Recipes</strong><br>All recipes not yet linked to the database — built-in or player-shared — compete as equals. Link your recipe to move it into Tier 1.</p>
+              <p><strong>Every new shared recipe gets one day at the top.</strong><br>When your recipe is approved, it is pinned to the top of its meal category — above both tiers — for one full day. That's your spotlight. After that day, your recipe takes its earned place in the daily shuffle.</p>
+              <p><strong>Link your recipe to reach Tier 1 and Recipe of the Day.</strong><br>Linking all your ingredients moves your recipe into Tier 1 and qualifies it for the daily Recipe of the Day rotation. Every fully linked recipe is guaranteed a turn. Linking is always optional — but it is the clearest path to the top.</p>
             </div>
           </div>
         {/if}
