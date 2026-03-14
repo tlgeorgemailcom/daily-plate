@@ -68,6 +68,7 @@
 
   // Player edit mode - creator editing their own approved recipe
   let myRecipeIds = $state<string[]>([]);
+  let currentPlayerId = $state<string | null>(null);
   let isPlayerEditing = $state(false);
   let playerEditSaving = $state(false);
   let playerEditError = $state<string | null>(null);
@@ -103,6 +104,14 @@
       // Load IDs of recipes submitted from this device (for owner-edit detection)
       const storedIds = localStorage.getItem('my-recipe-submissions');
       myRecipeIds = storedIds ? JSON.parse(storedIds) : [];
+      // Load current player ID so server-side ownership can also be checked
+      const storedPlayer = localStorage.getItem('dailyfoodchain_player');
+      if (storedPlayer) {
+        try {
+          const parsed = JSON.parse(storedPlayer);
+          currentPlayerId = parsed.id || null;
+        } catch { /* ignore */ }
+      }
     }
   });
   
@@ -726,7 +735,7 @@
     selectedLevel = level;
     showRecipeOfDay = false;
     searchQuery = '';
-    if (myRecipeIds.includes(level.id)) {
+    if (myRecipeIds.includes(level.id) || (currentPlayerId && level.submittedBy === currentPlayerId)) {
       isPlayerEditing = true;
       playerEditError = null;
       playerEditSuccess = false;

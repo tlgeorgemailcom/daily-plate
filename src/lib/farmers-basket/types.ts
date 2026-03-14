@@ -109,7 +109,7 @@ export interface Level {
   prepTime?: string;              // e.g., "10 minutes"
   imageUrl?: string;              // Cloudinary URL for community recipe photos
   isCommunityRecipe?: boolean;    // True if this is a community-submitted recipe
-  submittedBy?: string;           // Submitter name for community recipes
+  submittedBy?: string;           // Submitter player ID for community recipes
 }
 
 // Emoji mappings
