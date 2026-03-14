@@ -81,6 +81,20 @@
   let editCodeValidating = $state(false);
   let editCodeValidated = $state(false);
 
+  // Collaborator edit mode (after code is validated)
+  let isCollabEditing = $state(false);
+  let collabRecipeId = $state<string | null>(null);
+  let collabValidatedCode = $state('');
+  let collabEditSaving = $state(false);
+  let collabEditError = $state<string | null>(null);
+  let collabEditSuccess = $state(false);
+
+  // Creator draft state (draft left by collaborators)
+  let creatorDraft = $state<Record<string, unknown> | null>(null);
+  let creatorDraftUpdatedAt = $state<string | null>(null);
+  let creatorDraftLoading = $state(false);
+  let creatorDraftLoadingIntoForm = $state(false);
+
   // Creator edit code management
   let creatorEditCode = $state<string | null>(null);
   let editCodeGenerating = $state(false);
@@ -258,6 +272,13 @@
       playerEditSuccess = false;
       return;
     }
+    // If collaborator is editing, exit collab edit form first
+    if (isCollabEditing) {
+      isCollabEditing = false;
+      collabEditError = null;
+      collabEditSuccess = false;
+      return;
+    }
     // If edit code modal is open, close it first
     if (showEditCodeModal) {
       showEditCodeModal = false;
@@ -284,6 +305,13 @@
       isPlayerEditing = false;
       playerEditError = null;
       playerEditSuccess = false;
+      return;
+    }
+    // From collaborator edit mode, exit first
+    if (isCollabEditing) {
+      isCollabEditing = false;
+      collabEditError = null;
+      collabEditSuccess = false;
       return;
     }
     // Close edit code modal
@@ -316,6 +344,10 @@
         isPlayerEditing = false;
         playerEditError = null;
         playerEditSuccess = false;
+      } else if (isCollabEditing) {
+        isCollabEditing = false;
+        collabEditError = null;
+        collabEditSuccess = false;
       } else if (showEditCodeModal) {
         showEditCodeModal = false;
       } else if (selectedLevel) {
@@ -344,6 +376,12 @@
         isPlayerEditing = false;
         playerEditError = null;
         playerEditSuccess = false;
+        return;
+      }
+      if (isCollabEditing) {
+        isCollabEditing = false;
+        collabEditError = null;
+        collabEditSuccess = false;
         return;
       }
       if (showEditCodeModal) {
@@ -753,11 +791,15 @@
       imagePreviewUrl = level.imageUrl || null;
       creatorEditCode = null;
       editCodeCopied = false;
+      creatorDraft = null;
+      creatorDraftUpdatedAt = null;
       handleLoadCreatorEditCode(level.id);
+      handleCheckCreatorDraft(level.id);
     } else {
       showEditCodeModal = true;
       editCodeInput = '';
       editCodeError = '';
+      editCodeValidated = false;
     }
   }
 
@@ -902,7 +944,18 @@
         body: JSON.stringify({ code: editCodeInput.trim() })
       });
       if (res.ok) {
+        const data = await res.json();
         editCodeValidated = true;
+        collabRecipeId = data.recipeId;
+        collabValidatedCode = editCodeInput.trim().toUpperCase();
+        // Close the modal and open the collab edit form
+        showEditCodeModal = false;
+        isCollabEditing = true;
+        collabEditError = null;
+        collabEditSuccess = false;
+        collabEditSaving = false;
+        // Load any existing draft for this recipe
+        handleLoadCollabDraft();
       } else {
         const data = await res.json().catch(() => ({}));
         editCodeError = data.error || 'Invalid edit code';
@@ -913,6 +966,174 @@
       editCodeValidating = false;
     }
   }
+
+  // Load any existing draft so collaborator sees latest state
+  async function handleLoadCollabDraft() {
+    if (!collabRecipeId || !collabValidatedCode) return;
+    try {
+      const res = await fetch(
+        `/api/recipes/draft?recipeId=${collabRecipeId}&code=${collabValidatedCode}`
+      );
+      if (res.ok) {
+        const data = await res.json();
+        // If there's a draft, we could pre-fill the form — handled by collabInitialData derived value
+        collabDraft = data.draft ?? null;
+      }
+    } catch { /* non-critical */ }
+  }
+
+  // Save collaborator draft
+  async function handleCollabSave(data: RecipeFormData) {
+    if (!collabRecipeId || !collabValidatedCode) return;
+    collabEditSaving = true;
+    collabEditError = null;
+    try {
+      const draftData = {
+        recipeName: data.recipeName,
+        category: data.category,
+        dietaryCategory: data.dietaryCategory,
+        prepTime: data.prepTime,
+        servings: data.servings,
+        ingredients: data.ingredients.filter(i => i.name.trim()).map(i => ({
+          name: i.name,
+          quantity: i.quantity,
+          ...(i.foodWord ? {
+            foodWord: i.foodWord,
+            ndbNo: i.ndbNo,
+            portionDesc: i.portionDesc,
+            portionGrams: i.portionGrams,
+            servingCount: i.servingCount
+          } : {})
+        })),
+        instructions: data.instructions.filter(i => i.text.trim()).map(i => i.text)
+      };
+
+      const res = await fetch('/api/recipes/draft', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          recipeId: collabRecipeId,
+          code: collabValidatedCode,
+          draftData
+        })
+      });
+
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        throw new Error(body.error || 'Failed to save draft');
+      }
+
+      collabEditSuccess = true;
+      setTimeout(() => { collabEditSuccess = false; }, 3000);
+    } catch (err) {
+      collabEditError = err instanceof Error ? err.message : 'Failed to save draft';
+    } finally {
+      collabEditSaving = false;
+    }
+  }
+
+  function handleCollabCancel() {
+    isCollabEditing = false;
+    collabEditError = null;
+    collabEditSuccess = false;
+    collabDraft = null;
+  }
+
+  // Load the collaborator draft into the creator's form
+  async function handleLoadCreatorDraft() {
+    if (!selectedLevel || !currentPlayerId) return;
+    creatorDraftLoadingIntoForm = true;
+    try {
+      const res = await fetch(
+        `/api/recipes/draft?recipeId=${selectedLevel.id}&playerId=${currentPlayerId}`
+      );
+      if (res.ok) {
+        const data = await res.json();
+        creatorDraft = data.draft ?? null;
+        creatorDraftUpdatedAt = data.draftUpdatedAt ?? null;
+      }
+    } catch { /* non-critical */ }
+    creatorDraftLoadingIntoForm = false;
+    // Mark as seen
+    if (currentPlayerId) {
+      fetch('/api/recipes/draft', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ recipeId: selectedLevel.id, playerId: currentPlayerId })
+      }).catch(() => {});
+    }
+  }
+
+  // Check for unseen draft when creator opens edit view
+  async function handleCheckCreatorDraft(recipeId: string) {
+    if (!currentPlayerId) return;
+    creatorDraftLoading = true;
+    try {
+      const res = await fetch(
+        `/api/recipes/draft?recipeId=${recipeId}&playerId=${currentPlayerId}`
+      );
+      if (res.ok) {
+        const data = await res.json();
+        creatorDraft = data.draft ?? null;
+        creatorDraftUpdatedAt = data.draftUpdatedAt ?? null;
+      }
+    } catch { /* non-critical */ }
+    creatorDraftLoading = false;
+  }
+
+  // Creator discards the collaborator draft
+  async function handleDiscardCreatorDraft() {
+    if (!selectedLevel || !currentPlayerId) return;
+    try {
+      await fetch('/api/recipes/draft', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ recipeId: selectedLevel.id, playerId: currentPlayerId })
+      });
+      creatorDraft = null;
+      creatorDraftUpdatedAt = null;
+    } catch { /* non-critical */ }
+  }
+
+  // Derive initial form data for collaborator: use draft if available, else live level
+  let collabDraft = $state<Record<string, unknown> | null>(null);
+
+  let collabInitialData = $derived((): Partial<RecipeFormData> => {
+    if (!selectedLevel) return {};
+    if (collabDraft) {
+      // Map draft back to RecipeFormData shape
+      const d = collabDraft as {
+        recipeName?: string;
+        category?: string;
+        dietaryCategory?: string;
+        prepTime?: string;
+        servings?: string;
+        ingredients?: { name: string; quantity: string; foodWord?: string; ndbNo?: string; portionDesc?: string; portionGrams?: number; servingCount?: number }[];
+        instructions?: string[];
+      };
+      return {
+        recipeName: d.recipeName || selectedLevel.name,
+        category: d.category || selectedLevel.category,
+        dietaryCategory: (d.dietaryCategory as DietaryCategory) || selectedLevel.dietaryCategory,
+        prepTime: d.prepTime || selectedLevel.prepTime || '',
+        servings: d.servings || selectedLevel.servings || '',
+        ingredients: (d.ingredients || []).map((ing, i) => ({
+          id: i + 1,
+          name: ing.name,
+          quantity: ing.quantity || '',
+          gameFood: selectedLevel.recipe[i] || '',
+          animal: selectedLevel.animalSpawns[i]?.type || '',
+          foodWord: ing.foodWord,
+          ndbNo: ing.ndbNo,
+          portionDesc: ing.portionDesc,
+          portionGrams: ing.portionGrams,
+          servingCount: ing.servingCount
+        })),
+        instructions: (d.instructions || []).map((text, i) => ({ id: i + 1, text }))
+      };
+    }
+    return levelToFormData(selectedLevel);
+  });
 
 
   let currentCategory = $derived(
@@ -1179,6 +1400,49 @@
                 </button>
               {/if}
             </div>
+
+            <!-- Collaborator Draft Badge -->
+            {#if creatorDraft && !creatorDraftLoading}
+              <div class="collab-draft-banner">
+                <span class="collab-draft-icon">📝</span>
+                <div class="collab-draft-text">
+                  <span class="collab-draft-title">Draft saved by a collaborator</span>
+                  {#if creatorDraftUpdatedAt}
+                    <span class="collab-draft-time">{new Date(creatorDraftUpdatedAt).toLocaleString()}</span>
+                  {/if}
+                </div>
+                <div class="collab-draft-actions">
+                  <button class="load-draft-btn" onclick={handleLoadCreatorDraft} disabled={creatorDraftLoadingIntoForm}>
+                    {creatorDraftLoadingIntoForm ? 'Loading...' : 'Load Draft'}
+                  </button>
+                  <button class="discard-draft-btn" onclick={handleDiscardCreatorDraft}>Discard</button>
+                </div>
+              </div>
+            {/if}
+              {/if}
+            </div>
+          </div>
+        </div>
+      {:else if isCollabEditing}
+        <!-- COLLABORATOR EDIT MODE -->
+        <div class="moderator-edit-view">
+          <div class="mod-header">
+            <h3>✏️ Edit Draft: {selectedLevel.name}</h3>
+            {#if collabEditSuccess}
+              <span class="save-success">✓ Draft saved!</span>
+            {/if}
+          </div>
+          <p class="collab-edit-note">Your changes will be saved as a draft. The recipe creator reviews and submits for approval.</p>
+
+          <div class="mod-form-container">
+            <RecipeForm
+              initialData={collabInitialData()}
+              onsubmit={handleCollabSave}
+              oncancel={handleCollabCancel}
+              submitLabel={collabEditSaving ? '⏳ Saving...' : '💾 Save Draft'}
+              submitting={collabEditSaving}
+              errorMessage={collabEditError || ''}
+            />
           </div>
         </div>
       {:else}
@@ -3024,5 +3288,95 @@
   .gen-creator-code-btn:disabled {
     opacity: 0.6;
     cursor: default;
+  }
+
+  /* Collaborator edit note */
+  .collab-edit-note {
+    font-size: 0.82rem;
+    color: #6b5a3e;
+    background: #fef9e7;
+    border-left: 3px solid #f39c12;
+    padding: 8px 12px;
+    margin: 0 0 12px 0;
+    border-radius: 0 6px 6px 0;
+  }
+
+  /* Creator draft banner */
+  .collab-draft-banner {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #eaf4ff;
+    border: 1px solid #90caf9;
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 14px;
+  }
+
+  .collab-draft-icon {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .collab-draft-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .collab-draft-title {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #1565c0;
+  }
+
+  .collab-draft-time {
+    font-size: 0.75rem;
+    color: #5c7a9e;
+  }
+
+  .collab-draft-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+
+  .load-draft-btn {
+    padding: 6px 14px;
+    background: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .load-draft-btn:hover:not(:disabled) {
+    background: #1565c0;
+  }
+
+  .load-draft-btn:disabled {
+    opacity: 0.6;
+    cursor: default;
+  }
+
+  .discard-draft-btn {
+    padding: 5px 12px;
+    background: transparent;
+    color: #c0392b;
+    border: 1px solid #c0392b;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .discard-draft-btn:hover {
+    background: #fdf0ee;
   }
 </style>
