@@ -510,48 +510,50 @@
           {/if}
         </div>
         
-        <!-- Draft saved notice + collaborator poll banner -->
-        {#if draftRecipeId}
+        <!-- Draft saved notice -->
+        {#if draftRecipeId && draftTimestamp}
           <div class="share-draft-notice">
             💾 Draft saved
-            {#if draftTimestamp}
-              <span class="share-draft-time">· {new Date(draftTimestamp).toLocaleTimeString()}</span>
-            {/if}
-          </div>
-
-          {#if draftChangedWhileEditing}
-            <div class="share-updated-banner">
-              <span>A collaborator saved changes while you were editing.</span>
-              <button class="load-updated-btn" onclick={async () => {
-                const res = await fetch(`/api/recipes/draft?recipeId=${draftRecipeId}&playerId=${encodeURIComponent(playerId ?? '')}`);
-                if (res.ok) {
-                  const d = await res.json();
-                  knownDraftTimestamp = d.draftUpdatedAt;
-                  draftChangedWhileEditing = false;
-                  startPoll();
-                }
-              }}>Reload their version</button>
-            </div>
-          {/if}
-
-          <!-- Collaborator Edit Code -->
-          <div class="share-edit-code-section">
-            <p class="edit-code-label">🔑 Collaborator Edit Code</p>
-            <p class="edit-code-hint">Share this code so another player can suggest changes. Only you can submit for approval.</p>
-            {#if shareEditCode}
-              <div class="edit-code-display">
-                <span class="edit-code-value">{shareEditCode}</span>
-                <button class="copy-code-btn" onclick={handleCopyShareCode}>
-                  {shareCodeCopied ? '✓ Copied' : 'Copy'}
-                </button>
-              </div>
-            {:else}
-              <button class="generate-code-btn" onclick={handleGenerateShareCode} disabled={generatingShareCode}>
-                {generatingShareCode ? 'Generating...' : 'Generate Edit Code'}
-              </button>
-            {/if}
+            <span class="share-draft-time">· {new Date(draftTimestamp).toLocaleTimeString()}</span>
           </div>
         {/if}
+
+        {#if draftChangedWhileEditing}
+          <div class="share-updated-banner">
+            <span>A collaborator saved changes while you were editing.</span>
+            <button class="load-updated-btn" onclick={async () => {
+              const res = await fetch(`/api/recipes/draft?recipeId=${draftRecipeId}&playerId=${encodeURIComponent(playerId ?? '')}`);
+              if (res.ok) {
+                const d = await res.json();
+                knownDraftTimestamp = d.draftUpdatedAt;
+                draftChangedWhileEditing = false;
+                startPoll();
+              }
+            }}>Reload their version</button>
+          </div>
+        {/if}
+
+        <!-- Collaborator Edit Code — always visible; generate button enabled once draft is saved -->
+        <div class="share-edit-code-section">
+          <p class="edit-code-label">🔑 Collaborator Edit Code</p>
+          {#if !draftRecipeId}
+            <p class="edit-code-hint">Save a draft first to generate a code you can share with collaborators.</p>
+            <button class="generate-code-btn" disabled>Generate Edit Code</button>
+          {:else if shareEditCode}
+            <p class="edit-code-hint">Share this code so another player can suggest changes. Only you can submit for approval.</p>
+            <div class="edit-code-display">
+              <span class="edit-code-value">{shareEditCode}</span>
+              <button class="copy-code-btn" onclick={handleCopyShareCode}>
+                {shareCodeCopied ? '✓ Copied' : 'Copy'}
+              </button>
+            </div>
+          {:else}
+            <p class="edit-code-hint">Share this code so another player can suggest changes. Only you can submit for approval.</p>
+            <button class="generate-code-btn" onclick={handleGenerateShareCode} disabled={generatingShareCode}>
+              {generatingShareCode ? 'Generating...' : 'Generate Edit Code'}
+            </button>
+          {/if}
+        </div>
 
         <RecipeForm
           moderatorMode={false}
