@@ -302,7 +302,7 @@
               <button type="button" class="info-close-btn" onclick={() => showNutrientInfo = false}>×</button>
             </div>
             <div class="info-panel-body">
-              <p>Most recipes — in cookbooks, on food blogs, on websites — list ingredients in their raw or pre-cooked state. "2 chicken breasts." "1 cup dry rice." We appreciate you sharing recipes in this format, and your recipe submission will be visible to all players once reviewed.</p>
+              <p>Most recipes — in cookbooks, on food blogs, on websites — list ingredients in their raw or pre-cooked state — "1 cup dry lentils" or "1 cup dry rice" — We appreciate you sharing recipes in this format, and your recipe submission will be visible to all players once reviewed.</p>
               <p>You also have the option to link each ingredient to the nutrition database.</p>
               <p>The nutrition database only contains food <strong>"as eaten"</strong> — the way it actually arrives on your plate, ready to consume.</p>
               <p>Nutrition science measures food the way your body actually receives it — after it has been cooked, prepared, and is ready to eat. That is the only measurement that tells you what your body actually got. That is also why only ready-to-eat foods are in the database.</p>
