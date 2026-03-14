@@ -1592,8 +1592,6 @@
                 </div>
               </div>
             {/if}
-              {/if}
-            </div>
           </div>
         </div>
       {:else if isCollabEditing}
