@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
+  import { onMount, onDestroy } from 'svelte';
   import { canUseStorage } from '$lib/stores/playerStore';
   import type { Level, FoodType, DietaryCategory } from './types';
   import FoodIcon from './FoodIcon.svelte';
@@ -88,6 +88,9 @@
   let collabEditSaving = $state(false);
   let collabEditError = $state<string | null>(null);
   let collabEditSuccess = $state(false);
+  let collabDraftChangedWhileEditing = $state(false);
+  let collabKnownDraftTimestamp = $state<string | null>(null);
+  let collabPollInterval: ReturnType<typeof setInterval> | null = null;
 
   // Creator draft state (draft left by collaborators)
   let creatorDraft = $state<Record<string, unknown> | null>(null);
@@ -287,9 +290,7 @@
     }
     // If collaborator is editing, exit collab edit form first
     if (isCollabEditing) {
-      isCollabEditing = false;
-      collabEditError = null;
-      collabEditSuccess = false;
+      closeCollabEdit();
       return;
     }
     // If edit code modal is open, close it first
@@ -322,9 +323,7 @@
     }
     // From collaborator edit mode, exit first
     if (isCollabEditing) {
-      isCollabEditing = false;
-      collabEditError = null;
-      collabEditSuccess = false;
+      closeCollabEdit();
       return;
     }
     // Close edit code modal
@@ -358,9 +357,7 @@
         playerEditError = null;
         playerEditSuccess = false;
       } else if (isCollabEditing) {
-        isCollabEditing = false;
-        collabEditError = null;
-        collabEditSuccess = false;
+        closeCollabEdit();
       } else if (showEditCodeModal) {
         showEditCodeModal = false;
       } else if (selectedLevel) {
@@ -392,9 +389,7 @@
         return;
       }
       if (isCollabEditing) {
-        isCollabEditing = false;
-        collabEditError = null;
-        collabEditSuccess = false;
+        closeCollabEdit();
         return;
       }
       if (showEditCodeModal) {
@@ -991,11 +986,52 @@
       );
       if (res.ok) {
         const data = await res.json();
-        // If there's a draft, we could pre-fill the form — handled by collabInitialData derived value
         collabDraft = data.draft ?? null;
+        collabKnownDraftTimestamp = data.draftUpdatedAt ?? null;
+        collabDraftChangedWhileEditing = false;
+        startCollabPoll();
       }
     } catch { /* non-critical */ }
   }
+
+  function startCollabPoll() {
+    stopCollabPoll();
+    collabPollInterval = setInterval(async () => {
+      if (!collabRecipeId || !collabValidatedCode) return;
+      try {
+        const res = await fetch(
+          `/api/recipes/draft?recipeId=${collabRecipeId}&code=${collabValidatedCode}`
+        );
+        if (!res.ok) return;
+        const data = await res.json();
+        const serverTimestamp: string | null = data.draftUpdatedAt ?? null;
+        if (serverTimestamp && serverTimestamp !== collabKnownDraftTimestamp) {
+          collabDraftChangedWhileEditing = true;
+          stopCollabPoll();
+        }
+      } catch { /* non-critical */ }
+    }, 12000);
+  }
+
+  function stopCollabPoll() {
+    if (collabPollInterval !== null) {
+      clearInterval(collabPollInterval);
+      collabPollInterval = null;
+    }
+  }
+
+  function closeCollabEdit() {
+    isCollabEditing = false;
+    collabEditError = null;
+    collabEditSuccess = false;
+    collabDraft = null;
+    collabDraftChangedWhileEditing = false;
+    stopCollabPoll();
+  }
+
+  onDestroy(() => {
+    stopCollabPoll();
+  });
 
   // Save collaborator draft
   async function handleCollabSave(data: RecipeFormData) {
@@ -1040,6 +1076,8 @@
 
       collabEditSuccess = true;
       setTimeout(() => { collabEditSuccess = false; }, 3000);
+      // Refresh timestamp baseline so poller knows what we just saved
+      handleLoadCollabDraft();
     } catch (err) {
       collabEditError = err instanceof Error ? err.message : 'Failed to save draft';
     } finally {
@@ -1048,10 +1086,7 @@
   }
 
   function handleCollabCancel() {
-    isCollabEditing = false;
-    collabEditError = null;
-    collabEditSuccess = false;
-    collabDraft = null;
+    closeCollabEdit();
   }
 
   // Load the collaborator draft into the creator's form
@@ -1447,6 +1482,12 @@
               <span class="save-success">✓ Draft saved!</span>
             {/if}
           </div>
+          {#if collabDraftChangedWhileEditing}
+            <div class="collab-updated-banner">
+              <span>Someone saved changes while you were editing.</span>
+              <button class="load-updated-btn" onclick={() => handleLoadCollabDraft()}>Load their version</button>
+            </div>
+          {/if}
           <p class="collab-edit-note">Your changes will be saved as a draft. The recipe creator reviews and submits for approval.</p>
 
           <div class="mod-form-container">
@@ -3412,5 +3453,36 @@
 
   .discard-draft-btn:hover {
     background: #fdf0ee;
+  }
+
+  .collab-updated-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 14px;
+    background: #fff3cd;
+    border: 1px solid #e6a817;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: #7d5a00;
+    margin-bottom: 10px;
+  }
+
+  .load-updated-btn {
+    padding: 5px 12px;
+    background: #e6a817;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .load-updated-btn:hover {
+    background: #c8940f;
   }
 </style>
