@@ -33,7 +33,7 @@ export const GET: RequestHandler = async ({ url }) => {
       // Subscriber: fetch all their recipes across devices
       const rows = await queryAll<RecipeRow>(
         `SELECT id, type, name, category, dietary_category, prep_time, servings,
-                recipe_ingredients, recipe_instructions, image_url, submitted_by, submitter_name, status, created_at, moderator_note
+                recipe_ingredients, recipe_instructions, image_url, submitted_by, submitter_name, status, created_at
          FROM recipes 
          WHERE submitted_by = ? AND type = 'community'
          ORDER BY created_at DESC`,
@@ -76,7 +76,7 @@ export const GET: RequestHandler = async ({ url }) => {
     const placeholders = ids.map(() => '?').join(', ');
     const rows = await queryAll<RecipeRow>(
       `SELECT id, type, name, category, dietary_category, prep_time, servings,
-              recipe_ingredients, recipe_instructions, image_url, submitted_by, submitter_name, status, created_at, moderator_note
+              recipe_ingredients, recipe_instructions, image_url, submitted_by, submitter_name, status, created_at
        FROM recipes 
        WHERE id IN (${placeholders}) AND type = 'community'
        ORDER BY created_at DESC`,
@@ -134,17 +134,18 @@ export const PATCH: RequestHandler = async ({ request }) => {
     
     const recipe = existing[0];
     
-    if (!['pending', 'needs_changes'].includes(recipe.status)) {
-      return json({ error: 'Can only edit pending or needs_changes recipes' }, { status: 403 });
+    if (!['pending', 'needs_changes', 'approved'].includes(recipe.status)) {
+      return json({ error: 'Can only edit pending, needs_changes, or approved recipes' }, { status: 403 });
     }
     
     // Note: We rely on localStorage tracking for ownership since we don't have auth
     // The frontend only sends requests for recipes in the player's localStorage
     
-    const wasNeedsChanges = recipe.status === 'needs_changes';
+    // Reset approved recipes back to pending (re-approval required)
+    const shouldResetToPending = recipe.status === 'needs_changes' || recipe.status === 'approved';
     
-    // Update the recipe and reset to pending (clears any needs_changes state)
-    const sql = wasNeedsChanges
+    // Update the recipe and reset to pending (clears any needs_changes or approved state)
+    const sql = shouldResetToPending
       ? `UPDATE recipes SET 
           name = COALESCE(?, name),
           category = COALESCE(?, category),
@@ -165,7 +166,8 @@ export const PATCH: RequestHandler = async ({ request }) => {
           servings = COALESCE(?, servings),
           recipe_ingredients = COALESCE(?, recipe_ingredients),
           recipe_instructions = COALESCE(?, recipe_instructions),
-          image_url = COALESCE(?, image_url)
+          image_url = COALESCE(?, image_url),
+          status = 'pending'
          WHERE id = ?`;
     await execute(sql,
       [

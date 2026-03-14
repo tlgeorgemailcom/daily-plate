@@ -124,8 +124,8 @@
   }
   
   async function handleEdit(recipe: MyRecipe) {
-    if (recipe.status !== 'pending' && recipe.status !== 'needs_changes') {
-      alert('You can only edit pending recipes');
+    if (!['pending', 'needs_changes', 'approved'].includes(recipe.status)) {
+      alert('You can only edit your own recipes');
       return;
     }
     editingRecipe = recipe;
@@ -363,7 +363,7 @@
   {#if editingRecipe}
     <div class="edit-modal">
       <div class="edit-content">
-        <h2>Edit Recipe</h2>
+        <h2>{editingRecipe?.status === 'approved' ? 'Edit & Resubmit for Approval' : 'Edit Recipe'}</h2>
         
         <!-- Image Upload Section -->
         <div class="image-upload-section">
@@ -428,7 +428,7 @@
           }}
           onsubmit={handleSaveEdit}
           oncancel={() => editingRecipe = null}
-          submitLabel={isUploadingImage ? "⏳ Uploading..." : "Save Changes"}
+          submitLabel={isUploadingImage ? '⏳ Uploading...' : editingRecipe?.status === 'approved' ? 'Submit for Re-approval' : 'Save Changes'}
           submitting={saving || isUploadingImage}
           errorMessage={saveError}
         />
@@ -501,6 +501,11 @@
             {:else if recipe.status === 'approved'}
               <div class="approved-message">
                 🎉 Your recipe is now available in the game!
+              </div>
+              <div class="recipe-actions">
+                <button class="edit-btn" onclick={() => handleEdit(recipe)}>
+                  ✏️ Edit
+                </button>
               </div>
             {:else if recipe.status === 'rejected'}
               <div class="rejected-message">
