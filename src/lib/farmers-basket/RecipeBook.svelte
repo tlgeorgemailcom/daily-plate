@@ -78,6 +78,14 @@
   let showEditCodeModal = $state(false);
   let editCodeInput = $state('');
   let editCodeError = $state('');
+  let editCodeValidating = $state(false);
+  let editCodeValidated = $state(false);
+
+  // Creator edit code management
+  let creatorEditCode = $state<string | null>(null);
+  let editCodeGenerating = $state(false);
+  let editCodeRevoking = $state(false);
+  let editCodeCopied = $state(false);
   const MODERATOR_PASSWORD = '4444';
   
   // Image upload state for moderator mode
@@ -743,6 +751,9 @@
       imageUploadError = null;
       isUploadingImage = false;
       imagePreviewUrl = level.imageUrl || null;
+      creatorEditCode = null;
+      editCodeCopied = false;
+      handleLoadCreatorEditCode(level.id);
     } else {
       showEditCodeModal = true;
       editCodeInput = '';
@@ -824,6 +835,83 @@
     isPlayerEditing = false;
     playerEditError = null;
     playerEditSuccess = false;
+    creatorEditCode = null;
+    editCodeCopied = false;
+  }
+
+  async function handleLoadCreatorEditCode(recipeId: string) {
+    if (!currentPlayerId) return;
+    try {
+      const res = await fetch(`/api/recipes/edit-code?recipeId=${recipeId}&playerId=${currentPlayerId}`);
+      if (res.ok) {
+        const data = await res.json();
+        creatorEditCode = data.code ?? null;
+      }
+    } catch { /* non-critical */ }
+  }
+
+  async function handleGenerateCreatorCode() {
+    if (!selectedLevel || !currentPlayerId) return;
+    editCodeGenerating = true;
+    try {
+      const res = await fetch('/api/recipes/edit-code', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ recipeId: selectedLevel.id, playerId: currentPlayerId })
+      });
+      if (res.ok) {
+        const data = await res.json();
+        creatorEditCode = data.code;
+      }
+    } finally {
+      editCodeGenerating = false;
+    }
+  }
+
+  async function handleRevokeCreatorCode() {
+    if (!selectedLevel || !currentPlayerId) return;
+    editCodeRevoking = true;
+    try {
+      const res = await fetch('/api/recipes/edit-code', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ recipeId: selectedLevel.id, playerId: currentPlayerId })
+      });
+      if (res.ok) creatorEditCode = null;
+    } finally {
+      editCodeRevoking = false;
+    }
+  }
+
+  function handleCopyCreatorCode() {
+    if (!creatorEditCode) return;
+    navigator.clipboard.writeText(creatorEditCode).then(() => {
+      editCodeCopied = true;
+      setTimeout(() => { editCodeCopied = false; }, 2000);
+    });
+  }
+
+  async function handleValidateEditCode() {
+    if (!editCodeInput.trim()) return;
+    editCodeValidating = true;
+    editCodeError = '';
+    try {
+      const res = await fetch('/api/recipes/edit-code/validate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ code: editCodeInput.trim() })
+      });
+      if (res.ok) {
+        editCodeValidated = true;
+      } else {
+        const data = await res.json().catch(() => ({}));
+        editCodeError = data.error || 'Invalid edit code';
+      }
+    } catch {
+      editCodeError = 'Could not verify code';
+    } finally {
+      editCodeValidating = false;
+    }
   }
 
 
@@ -1062,6 +1150,35 @@
               submitting={playerEditSaving}
               errorMessage={playerEditError || ''}
             />
+
+            <!-- Collaborator Edit Code -->
+            <div class="creator-edit-code-section">
+              <p class="creator-code-label">🔑 Collaborator Edit Code</p>
+              <p class="creator-code-hint">Share this code so another player can suggest changes. Only you can submit for approval.</p>
+              {#if creatorEditCode}
+                <div class="creator-code-display">
+                  <span class="creator-code-value">{creatorEditCode}</span>
+                  <button class="copy-creator-code-btn" onclick={handleCopyCreatorCode}>
+                    {editCodeCopied ? '✓ Copied' : 'Copy'}
+                  </button>
+                </div>
+                <button
+                  class="revoke-code-btn"
+                  onclick={handleRevokeCreatorCode}
+                  disabled={editCodeRevoking}
+                >
+                  {editCodeRevoking ? 'Revoking...' : 'Revoke Code'}
+                </button>
+              {:else}
+                <button
+                  class="gen-creator-code-btn"
+                  onclick={handleGenerateCreatorCode}
+                  disabled={editCodeGenerating}
+                >
+                  {editCodeGenerating ? 'Generating...' : 'Generate Edit Code'}
+                </button>
+              {/if}
+            </div>
           </div>
         </div>
       {:else}
@@ -1368,23 +1485,34 @@
 {#if showEditCodeModal && selectedLevel}
   <div class="edit-code-overlay" role="dialog" aria-modal="true" aria-label="Edit code required">
     <div class="edit-code-modal">
-      <h3>🔑 Edit Code Required</h3>
-      <p>Ask the recipe creator for their edit code to suggest changes.</p>
-      <input
-        type="text"
-        class="edit-code-input"
-        placeholder="Enter edit code"
-        bind:value={editCodeInput}
-        maxlength="20"
-      />
-      {#if editCodeError}
-        <p class="edit-code-error">{editCodeError}</p>
+      <h3>🔑 Enter Edit Code</h3>
+      {#if editCodeValidated}
+        <p class="edit-code-accepted">✅ Code accepted! Collaborative editing is coming soon — your access has been noted.</p>
+        <div class="edit-code-actions">
+          <button class="edit-code-cancel" onclick={() => { showEditCodeModal = false; editCodeValidated = false; editCodeInput = ''; }}>Close</button>
+        </div>
+      {:else}
+        <p>Ask the recipe creator for their edit code to suggest changes.</p>
+        <input
+          type="text"
+          class="edit-code-input"
+          placeholder="Enter edit code"
+          bind:value={editCodeInput}
+          maxlength="10"
+          oninput={() => { editCodeInput = editCodeInput.toUpperCase(); }}
+        />
+        {#if editCodeError}
+          <p class="edit-code-error">{editCodeError}</p>
+        {/if}
+        <div class="edit-code-actions">
+          <button class="edit-code-cancel" onclick={() => { showEditCodeModal = false; editCodeError = ''; editCodeInput = ''; }}>Cancel</button>
+          <button
+            class="edit-code-submit"
+            onclick={handleValidateEditCode}
+            disabled={editCodeValidating || !editCodeInput.trim()}
+          >{editCodeValidating ? 'Checking...' : 'Continue'}</button>
+        </div>
       {/if}
-      <div class="edit-code-actions">
-        <button class="edit-code-cancel" onclick={() => { showEditCodeModal = false; }}>Cancel</button>
-        <button class="edit-code-submit" disabled title="Collaborative editing coming soon">Continue</button>
-      </div>
-      <p class="edit-code-coming-soon">✨ Collaborative editing coming soon</p>
     </div>
   </div>
 {/if}
@@ -2790,10 +2918,111 @@
     cursor: not-allowed;
   }
 
-  .edit-code-coming-soon {
-    font-size: 0.78rem;
-    color: #A0856B;
+  .edit-code-accepted {
+    color: #2E7D32;
+    font-weight: 600;
+    font-size: 0.9rem;
     margin: 0;
-    font-style: italic;
+  }
+
+  /* Creator edit code management section (inside creator edit view) */
+  .creator-edit-code-section {
+    margin-top: 20px;
+    background: #f9f5f0;
+    border: 1px solid #e0d5c5;
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .creator-code-label {
+    margin: 0;
+    font-weight: 600;
+    color: #5a3e28;
+    font-size: 0.9rem;
+  }
+
+  .creator-code-hint {
+    margin: 0;
+    font-size: 0.78rem;
+    color: #888;
+    line-height: 1.4;
+  }
+
+  .creator-code-display {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    border: 1.5px solid #c8a96e;
+    border-radius: 8px;
+    padding: 8px 14px;
+    align-self: flex-start;
+  }
+
+  .creator-code-value {
+    font-family: 'Courier New', monospace;
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #5a3e28;
+  }
+
+  .copy-creator-code-btn {
+    padding: 4px 10px;
+    background: #8B4513;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .copy-creator-code-btn:hover {
+    background: #A0522D;
+  }
+
+  .revoke-code-btn {
+    padding: 6px 14px;
+    background: transparent;
+    color: #c0392b;
+    border: 1px solid #c0392b;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    align-self: flex-start;
+  }
+
+  .revoke-code-btn:hover:not(:disabled) {
+    background: #fdf0ee;
+  }
+
+  .revoke-code-btn:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  .gen-creator-code-btn {
+    padding: 8px 18px;
+    background: #4a7c59;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-start;
+  }
+
+  .gen-creator-code-btn:hover:not(:disabled) {
+    background: #3d6a4a;
+  }
+
+  .gen-creator-code-btn:disabled {
+    opacity: 0.6;
+    cursor: default;
   }
 </style>

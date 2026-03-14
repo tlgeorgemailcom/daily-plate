@@ -15,6 +15,36 @@
   let isSubmitting = $state(false);
   let submitError = $state<string | null>(null);
   let submitSuccess = $state(false);
+  let submittedRecipeId = $state<string | null>(null);
+
+  // Edit code state (for sharing with collaborators after submission)
+  let shareEditCode = $state<string | null>(null);
+  let generatingShareCode = $state(false);
+  let shareCodeCopied = $state(false);
+
+  async function handleGenerateShareCode() {
+    if (!submittedRecipeId || !playerId) return;
+    generatingShareCode = true;
+    try {
+      const res = await fetch('/api/recipes/edit-code', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ recipeId: submittedRecipeId, playerId })
+      });
+      const data = await res.json();
+      if (res.ok) shareEditCode = data.code;
+    } finally {
+      generatingShareCode = false;
+    }
+  }
+
+  function handleCopyShareCode() {
+    if (!shareEditCode) return;
+    navigator.clipboard.writeText(shareEditCode).then(() => {
+      shareCodeCopied = true;
+      setTimeout(() => { shareCodeCopied = false; }, 2000);
+    });
+  }
   
   // Image upload state
   let selectedImageFile = $state<File | null>(null);
@@ -210,6 +240,7 @@
       // Get the recipe ID and store it in localStorage for "My Recipes" tracking
       // (Only for logged-in users - guests don't persist)
       const result = await response.json();
+      if (result.id) submittedRecipeId = result.id;
       if (result.id && canUseStorage()) {
         try {
           const STORAGE_KEY = 'my-recipe-submissions';
@@ -278,6 +309,29 @@
         <div class="success-icon">✅</div>
         <h3>Recipe Submitted!</h3>
         <p>Thank you for sharing your recipe. It will be reviewed by a moderator and added to the game soon!</p>
+
+        <!-- Edit code section: invite collaborators -->
+        <div class="share-edit-code-section">
+          <p class="edit-code-label">🔑 Invite a collaborator</p>
+          <p class="edit-code-hint">Share an edit code so another player can suggest changes before you submit for approval.</p>
+          {#if shareEditCode}
+            <div class="edit-code-display">
+              <span class="edit-code-value">{shareEditCode}</span>
+              <button class="copy-code-btn" onclick={handleCopyShareCode}>
+                {shareCodeCopied ? '✓ Copied' : 'Copy'}
+              </button>
+            </div>
+          {:else}
+            <button
+              class="generate-code-btn"
+              onclick={handleGenerateShareCode}
+              disabled={generatingShareCode}
+            >
+              {generatingShareCode ? 'Generating...' : 'Generate Edit Code'}
+            </button>
+          {/if}
+        </div>
+
         <div class="success-actions">
           <button class="done-btn" onclick={onclose}>Done</button>
           <a href="/farmers-basket/my-recipes" class="my-recipes-link">View My Submissions</a>
@@ -511,6 +565,88 @@
   
   .my-recipes-link:hover {
     color: #3d6a4a;
+  }
+
+  /* Edit code section in success view */
+  .share-edit-code-section {
+    width: 100%;
+    max-width: 320px;
+    background: #f9f5f0;
+    border: 1px solid #e0d5c5;
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .edit-code-label {
+    margin: 0;
+    font-weight: 600;
+    color: #5a3e28;
+    font-size: 0.95rem;
+  }
+
+  .edit-code-hint {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #888;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .edit-code-display {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    border: 1.5px solid #c8a96e;
+    border-radius: 8px;
+    padding: 8px 14px;
+  }
+
+  .edit-code-value {
+    font-family: 'Courier New', monospace;
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #5a3e28;
+  }
+
+  .copy-code-btn {
+    padding: 4px 10px;
+    background: #8B4513;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .copy-code-btn:hover {
+    background: #A0522D;
+  }
+
+  .generate-code-btn {
+    padding: 8px 20px;
+    background: #4a7c59;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .generate-code-btn:hover:not(:disabled) {
+    background: #3d6a4a;
+  }
+
+  .generate-code-btn:disabled {
+    opacity: 0.6;
+    cursor: default;
   }
   
   /* Login required view */
