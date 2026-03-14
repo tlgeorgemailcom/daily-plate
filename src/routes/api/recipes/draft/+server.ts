@@ -7,7 +7,8 @@ async function ensureDraftColumns() {
   await Promise.allSettled([
     execute('ALTER TABLE recipes ADD COLUMN draft_data TEXT'),
     execute('ALTER TABLE recipes ADD COLUMN draft_updated_at TEXT'),
-    execute('ALTER TABLE recipes ADD COLUMN draft_seen_by_creator INTEGER DEFAULT 1')
+    execute('ALTER TABLE recipes ADD COLUMN draft_seen_by_creator INTEGER DEFAULT 1'),
+    execute('ALTER TABLE recipes ADD COLUMN draft_is_creator_draft INTEGER DEFAULT 0')
   ]);
 }
 
@@ -21,10 +22,10 @@ export const GET: RequestHandler = async ({ url }) => {
   const code = url.searchParams.get('code');
   const playerId = url.searchParams.get('playerId');
 
-  // No recipeId: return all recipe IDs where creator has unseen drafts
+  // No recipeId: return all recipe IDs where creator has unseen collaborator drafts
   if (!recipeId && playerId) {
     const rows = await queryAll<{ id: string }>(
-      `SELECT id FROM recipes WHERE submitted_by = ? AND draft_data IS NOT NULL AND draft_seen_by_creator = 0`,
+      `SELECT id FROM recipes WHERE submitted_by = ? AND draft_data IS NOT NULL AND draft_seen_by_creator = 0 AND draft_is_creator_draft = 0`,
       [playerId]
     );
     return json({ unseenDraftIds: rows.map(r => r.id) });
@@ -39,8 +40,9 @@ export const GET: RequestHandler = async ({ url }) => {
     edit_code: string | null;
     draft_data: string | null;
     draft_updated_at: string | null;
+    draft_is_creator_draft: number | null;
   }>(
-    'SELECT submitted_by, edit_code, draft_data, draft_updated_at FROM recipes WHERE id = ?',
+    'SELECT submitted_by, edit_code, draft_data, draft_updated_at, draft_is_creator_draft FROM recipes WHERE id = ?',
     [recipeId]
   );
 
@@ -55,21 +57,45 @@ export const GET: RequestHandler = async ({ url }) => {
   }
 
   const draft = recipe.draft_data ? JSON.parse(recipe.draft_data) : null;
-  return json({ draft, draftUpdatedAt: recipe.draft_updated_at ?? null });
+  return json({
+    draft,
+    draftUpdatedAt: recipe.draft_updated_at ?? null,
+    draftIsCreatorDraft: !!(recipe.draft_is_creator_draft)
+  });
 };
 
-// POST — collaborator saves a draft
-// Body: { recipeId, code, draftData }
+// POST — save a draft (creator or collaborator)
+// Creator body: { recipeId, playerId, draftData }
+// Collaborator body: { recipeId, code, draftData }
 export const POST: RequestHandler = async ({ request }) => {
   await ensureDraftColumns();
 
   const body = await request.json();
-  const { recipeId, code, draftData } = body;
+  const { recipeId, code, playerId, draftData } = body;
 
-  if (!recipeId || !code || !draftData) {
-    return json({ error: 'Missing recipeId, code, or draftData' }, { status: 400 });
+  if (!recipeId || !draftData || (!code && !playerId)) {
+    return json({ error: 'Missing recipeId, draftData, and either code or playerId' }, { status: 400 });
   }
 
+  if (playerId) {
+    // Creator saves their own draft
+    const recipe = await queryOne<{ submitted_by: string; status: string }>(
+      'SELECT submitted_by, status FROM recipes WHERE id = ?',
+      [recipeId]
+    );
+    if (!recipe) return json({ error: 'Recipe not found' }, { status: 404 });
+    if (recipe.submitted_by !== playerId) return json({ error: 'Not authorized' }, { status: 403 });
+    if (recipe.status !== 'approved') {
+      return json({ error: 'Recipe is not approved — drafts only apply to live recipes' }, { status: 409 });
+    }
+    await execute(
+      `UPDATE recipes SET draft_data = ?, draft_updated_at = ?, draft_seen_by_creator = 1, draft_is_creator_draft = 1 WHERE id = ?`,
+      [JSON.stringify(draftData), new Date().toISOString(), recipeId]
+    );
+    return json({ success: true });
+  }
+
+  // Collaborator saves draft
   const recipe = await queryOne<{ edit_code: string | null; status: string }>(
     'SELECT edit_code, status FROM recipes WHERE id = ?',
     [recipeId]
@@ -84,7 +110,7 @@ export const POST: RequestHandler = async ({ request }) => {
   }
 
   await execute(
-    `UPDATE recipes SET draft_data = ?, draft_updated_at = ?, draft_seen_by_creator = 0 WHERE id = ?`,
+    `UPDATE recipes SET draft_data = ?, draft_updated_at = ?, draft_seen_by_creator = 0, draft_is_creator_draft = 0 WHERE id = ?`,
     [JSON.stringify(draftData), new Date().toISOString(), recipeId]
   );
 

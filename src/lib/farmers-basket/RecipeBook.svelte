@@ -92,11 +92,16 @@
   let collabKnownDraftTimestamp = $state<string | null>(null);
   let collabPollInterval: ReturnType<typeof setInterval> | null = null;
 
-  // Creator draft state (draft left by collaborators)
+  // Creator draft state (draft left by collaborators or creator's own saved draft)
   let creatorDraft = $state<Record<string, unknown> | null>(null);
   let creatorDraftUpdatedAt = $state<string | null>(null);
+  let creatorDraftIsOwn = $state(false);
   let creatorDraftLoading = $state(false);
   let creatorDraftLoadingIntoForm = $state(false);
+  // Player (creator) save-draft state
+  let playerDraftSaving = $state(false);
+  let playerDraftError = $state<string | null>(null);
+  let playerDraftSuccess = $state(false);
   // Set of recipe IDs that have unseen collaborator drafts (for badge in list view)
   let unseenDraftIds = $state<Set<string>>(new Set());
 
@@ -783,16 +788,17 @@
   }
 
   // Handle edit icon click — creator gets edit form, non-creator gets edit code modal
-  function handleEditIconClick(level: Level, e: MouseEvent) {
+  async function handleEditIconClick(level: Level, e: MouseEvent) {
     e.stopPropagation();
     if (!level.isCommunityRecipe) return;
     selectedLevel = level;
     showRecipeOfDay = false;
     searchQuery = '';
     if (myRecipeIds.includes(level.id) || (currentPlayerId && level.submittedBy === currentPlayerId)) {
-      isPlayerEditing = true;
       playerEditError = null;
       playerEditSuccess = false;
+      playerDraftError = null;
+      playerDraftSuccess = false;
       selectedImageFile = null;
       imageUploadError = null;
       isUploadingImage = false;
@@ -801,9 +807,12 @@
       editCodeCopied = false;
       creatorDraft = null;
       creatorDraftUpdatedAt = null;
+      creatorDraftIsOwn = false;
+      // Load draft first so creatorInitialData is ready before form mounts
+      await handleCheckCreatorDraft(level.id);
+      isPlayerEditing = true;
       handleLoadCreatorEditCode(level.id);
-      handleCheckCreatorDraft(level.id);
-      // Clear the unseen badge immediately (will be confirmed seen by server call in handleCheckCreatorDraft)
+      // Clear the unseen badge immediately
       unseenDraftIds = new Set([...unseenDraftIds].filter(id => id !== level.id));
     } else {
       showEditCodeModal = true;
@@ -887,8 +896,56 @@
     isPlayerEditing = false;
     playerEditError = null;
     playerEditSuccess = false;
+    playerDraftError = null;
+    playerDraftSuccess = false;
     creatorEditCode = null;
     editCodeCopied = false;
+  }
+
+  // Creator saves their own draft (no submission for approval)
+  async function handlePlayerSaveDraft(data: RecipeFormData) {
+    if (!selectedLevel || !currentPlayerId) return;
+    playerDraftSaving = true;
+    playerDraftError = null;
+    try {
+      const draftData = {
+        recipeName: data.recipeName,
+        category: data.category,
+        dietaryCategory: data.dietaryCategory,
+        prepTime: data.prepTime,
+        servings: data.servings,
+        ingredients: data.ingredients.filter(i => i.name.trim()).map(i => ({
+          name: i.name,
+          quantity: i.quantity,
+          ...(i.foodWord ? {
+            foodWord: i.foodWord,
+            ndbNo: i.ndbNo,
+            portionDesc: i.portionDesc,
+            portionGrams: i.portionGrams,
+            servingCount: i.servingCount
+          } : {})
+        })),
+        instructions: data.instructions.filter(i => i.text.trim()).map(i => i.text)
+      };
+      const res = await fetch('/api/recipes/draft', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ recipeId: selectedLevel.id, playerId: currentPlayerId, draftData })
+      });
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        throw new Error(body.error || 'Failed to save draft');
+      }
+      // Update local draft state so a re-open auto-fills
+      creatorDraft = draftData as Record<string, unknown>;
+      creatorDraftIsOwn = true;
+      playerDraftSuccess = true;
+      setTimeout(() => { playerDraftSuccess = false; }, 3000);
+    } catch (err) {
+      playerDraftError = err instanceof Error ? err.message : 'Failed to save draft';
+    } finally {
+      playerDraftSaving = false;
+    }
   }
 
   async function handleLoadCreatorEditCode(recipeId: string) {
@@ -1126,6 +1183,7 @@
         const data = await res.json();
         creatorDraft = data.draft ?? null;
         creatorDraftUpdatedAt = data.draftUpdatedAt ?? null;
+        creatorDraftIsOwn = !!(data.draftIsCreatorDraft);
       }
     } catch { /* non-critical */ }
     creatorDraftLoading = false;
@@ -1185,6 +1243,42 @@
     return levelToFormData(selectedLevel);
   });
 
+  // Derive initial form data for creator: auto-load their own saved draft if present
+  let creatorInitialData = $derived((): Partial<RecipeFormData> => {
+    if (!selectedLevel) return {};
+    if (creatorDraft && creatorDraftIsOwn) {
+      const d = creatorDraft as {
+        recipeName?: string;
+        category?: string;
+        dietaryCategory?: string;
+        prepTime?: string;
+        servings?: string;
+        ingredients?: { name: string; quantity: string; foodWord?: string; ndbNo?: string; portionDesc?: string; portionGrams?: number; servingCount?: number }[];
+        instructions?: string[];
+      };
+      return {
+        recipeName: d.recipeName || selectedLevel.name,
+        category: d.category || selectedLevel.category,
+        dietaryCategory: (d.dietaryCategory as DietaryCategory) || selectedLevel.dietaryCategory,
+        prepTime: d.prepTime || selectedLevel.prepTime || '',
+        servings: d.servings || selectedLevel.servings || '',
+        ingredients: (d.ingredients || []).map((ing, i) => ({
+          id: i + 1,
+          name: ing.name,
+          quantity: ing.quantity || '',
+          gameFood: selectedLevel.recipe[i] || '',
+          animal: selectedLevel.animalSpawns[i]?.type || '',
+          foodWord: ing.foodWord,
+          ndbNo: ing.ndbNo,
+          portionDesc: ing.portionDesc,
+          portionGrams: ing.portionGrams,
+          servingCount: ing.servingCount
+        })),
+        instructions: (d.instructions || []).map((text, i) => ({ id: i + 1, text }))
+      };
+    }
+    return levelToFormData(selectedLevel);
+  });
 
   let currentCategory = $derived(
     currentLevelId 
@@ -1414,13 +1508,33 @@
             </div>
 
             <RecipeForm
-              initialData={levelToFormData(selectedLevel)}
+              initialData={creatorInitialData()}
               onsubmit={handlePlayerSave}
               oncancel={handlePlayerEditCancel}
-              submitLabel={playerEditSaving ? '⏳ Saving...' : '📤 Submit for Re-approval'}
-              submitting={playerEditSaving}
-              errorMessage={playerEditError || ''}
-            />
+              submitting={playerEditSaving || playerDraftSaving}
+              errorMessage={playerEditError || playerDraftError || ''}
+            >
+              {#snippet customActions({ formData, isValid })}
+                <div class="creator-form-actions">
+                  <button type="button" class="cancel-btn" onclick={handlePlayerEditCancel}>Cancel</button>
+                  <button
+                    type="button"
+                    class="creator-save-draft-btn"
+                    disabled={playerDraftSaving || playerEditSaving}
+                    onclick={() => handlePlayerSaveDraft(formData)}
+                  >
+                    {playerDraftSaving ? '⏳ Saving...' : playerDraftSuccess ? '✓ Draft saved!' : '💾 Save Draft'}
+                  </button>
+                  <button
+                    type="submit"
+                    class="creator-submit-btn"
+                    disabled={playerEditSaving || playerDraftSaving || !isValid}
+                  >
+                    {playerEditSaving ? '⏳ Submitting...' : '📤 Submit for Re-approval'}
+                  </button>
+                </div>
+              {/snippet}
+            </RecipeForm>
 
             <!-- Collaborator Edit Code -->
             <div class="creator-edit-code-section">
@@ -1451,8 +1565,17 @@
               {/if}
             </div>
 
-            <!-- Collaborator Draft Badge -->
-            {#if creatorDraft && !creatorDraftLoading}
+            <!-- Creator Own Draft Notice -->
+            {#if creatorDraft && creatorDraftIsOwn}
+              <div class="creator-own-draft-notice">
+                <span>💾 Draft restored</span>
+                {#if creatorDraftUpdatedAt}<span class="creator-own-draft-time">· saved {new Date(creatorDraftUpdatedAt).toLocaleString()}</span>{/if}
+                <button class="creator-own-draft-discard" onclick={handleDiscardCreatorDraft}>Discard draft</button>
+              </div>
+            {/if}
+
+            <!-- Collaborator Draft Banner (only shown when a collaborator saved the draft) -->
+            {#if creatorDraft && !creatorDraftIsOwn && !creatorDraftLoading}
               <div class="collab-draft-banner">
                 <span class="collab-draft-icon">📝</span>
                 <div class="collab-draft-text">
@@ -3484,5 +3607,85 @@
 
   .load-updated-btn:hover {
     background: #c8940f;
+  }
+
+  .creator-form-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+
+  .creator-save-draft-btn {
+    padding: 10px 20px;
+    background: transparent;
+    color: #1976d2;
+    border: 2px solid #1976d2;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .creator-save-draft-btn:hover:not(:disabled) {
+    background: #e3f0fb;
+  }
+
+  .creator-save-draft-btn:disabled {
+    opacity: 0.6;
+    cursor: default;
+  }
+
+  .creator-submit-btn {
+    padding: 10px 20px;
+    background: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .creator-submit-btn:hover:not(:disabled) {
+    background: #1565c0;
+  }
+
+  .creator-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: default;
+  }
+
+  .creator-own-draft-notice {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: #e8f5e9;
+    border: 1px solid #81c784;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    color: #2e7d32;
+    margin-bottom: 8px;
+  }
+
+  .creator-own-draft-time {
+    flex: 1;
+    color: #4caf50;
+  }
+
+  .creator-own-draft-discard {
+    background: none;
+    border: none;
+    color: #c62828;
+    font-size: 0.78rem;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+  }
+
+  .creator-own-draft-discard:hover {
+    color: #b71c1c;
   }
 </style>
