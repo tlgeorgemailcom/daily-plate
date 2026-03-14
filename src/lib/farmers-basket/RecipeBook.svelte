@@ -65,6 +65,18 @@
   let isSaving = $state(false);
   let saveError = $state<string | null>(null);
   let saveSuccess = $state(false);
+
+  // Player edit mode - creator editing their own approved recipe
+  let myRecipeIds = $state<string[]>([]);
+  let isPlayerEditing = $state(false);
+  let playerEditSaving = $state(false);
+  let playerEditError = $state<string | null>(null);
+  let playerEditSuccess = $state(false);
+
+  // Edit code modal - non-creator requesting collaborator access (Phase 2)
+  let showEditCodeModal = $state(false);
+  let editCodeInput = $state('');
+  let editCodeError = $state('');
   const MODERATOR_PASSWORD = '4444';
   
   // Image upload state for moderator mode
@@ -88,6 +100,9 @@
         showDietarySelect = true;
         showRecipeOfDay = false;
       }
+      // Load IDs of recipes submitted from this device (for owner-edit detection)
+      const storedIds = localStorage.getItem('my-recipe-submissions');
+      myRecipeIds = storedIds ? JSON.parse(storedIds) : [];
     }
   });
   
@@ -219,6 +234,18 @@
       isModeratorMode = false;
       return;
     }
+    // If player is editing their own recipe, exit edit form first
+    if (isPlayerEditing) {
+      isPlayerEditing = false;
+      playerEditError = null;
+      playerEditSuccess = false;
+      return;
+    }
+    // If edit code modal is open, close it first
+    if (showEditCodeModal) {
+      showEditCodeModal = false;
+      return;
+    }
     selectedLevel = null;
   }
   
@@ -233,6 +260,18 @@
     // From moderator mode, exit that first
     if (isModeratorMode) {
       isModeratorMode = false;
+      return;
+    }
+    // From player edit mode, exit that first
+    if (isPlayerEditing) {
+      isPlayerEditing = false;
+      playerEditError = null;
+      playerEditSuccess = false;
+      return;
+    }
+    // Close edit code modal
+    if (showEditCodeModal) {
+      showEditCodeModal = false;
       return;
     }
     // From detail view, go back to index first
@@ -256,6 +295,12 @@
         saveSuccess = false;
       } else if (isModeratorMode) {
         isModeratorMode = false;
+      } else if (isPlayerEditing) {
+        isPlayerEditing = false;
+        playerEditError = null;
+        playerEditSuccess = false;
+      } else if (showEditCodeModal) {
+        showEditCodeModal = false;
       } else if (selectedLevel) {
         selectedLevel = null;
       } else if (!showRecipeOfDay) {
@@ -276,6 +321,16 @@
       }
       if (isModeratorMode) {
         isModeratorMode = false;
+        return;
+      }
+      if (isPlayerEditing) {
+        isPlayerEditing = false;
+        playerEditError = null;
+        playerEditSuccess = false;
+        return;
+      }
+      if (showEditCodeModal) {
+        showEditCodeModal = false;
         return;
       }
       if (selectedLevel) {
@@ -657,8 +712,115 @@
     saveError = null;
     saveSuccess = false;
   }
-  
-  // Find which category the current level is in
+
+  // Handle edit icon click — creator gets edit form, non-creator gets edit code modal
+  function handleEditIconClick(level: Level, e: MouseEvent) {
+    e.stopPropagation();
+    if (!level.isCommunityRecipe) return;
+    selectedLevel = level;
+    showRecipeOfDay = false;
+    searchQuery = '';
+    if (myRecipeIds.includes(level.id)) {
+      isPlayerEditing = true;
+      playerEditError = null;
+      playerEditSuccess = false;
+      selectedImageFile = null;
+      imageUploadError = null;
+      isUploadingImage = false;
+      imagePreviewUrl = level.imageUrl || null;
+    } else {
+      showEditCodeModal = true;
+      editCodeInput = '';
+      editCodeError = '';
+    }
+  }
+
+  // Handle player save — uses /api/recipes/my PATCH (same as my-recipes page)
+  async function handlePlayerSave(data: RecipeFormData) {
+    if (!selectedLevel) return;
+    playerEditSaving = true;
+    playerEditError = null;
+
+    try {
+      let imageUrl = selectedLevel.imageUrl;
+      if (selectedImageFile) {
+        const uploadedUrl = await uploadImage();
+        if (uploadedUrl) {
+          imageUrl = uploadedUrl;
+        } else if (imageUploadError) {
+          playerEditError = imageUploadError;
+          playerEditSaving = false;
+          return;
+        }
+      } else if (!imagePreviewUrl) {
+        imageUrl = undefined;
+      }
+
+      const gameFoods = data.ingredients
+        .filter(i => i.gameFood)
+        .map(i => i.gameFood) as string[];
+
+      const animalSpawns = data.ingredients
+        .filter(i => i.gameFood && i.animal)
+        .map((ing, i) => ({
+          type: ing.animal as string,
+          delay: (i + 1) * 2000
+        }));
+
+      if (animalSpawns.length === 0 && gameFoods.length > 0) {
+        animalSpawns.push({ type: 'rabbit', delay: 3000 });
+      }
+
+      const res = await fetch('/api/recipes/my', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          id: selectedLevel.id,
+          recipeName: data.recipeName,
+          category: data.category,
+          dietaryCategory: data.dietaryCategory,
+          prepTime: data.prepTime,
+          servings: data.servings,
+          gameFoods,
+          ingredients: data.ingredients.filter(i => i.name.trim()).map(i => ({
+            name: i.name,
+            quantity: i.quantity,
+            gameFood: i.gameFood || null,
+            animal: i.animal || null
+          })),
+          instructions: data.instructions.map(i => i.text),
+          animalSpawns: animalSpawns.map(s => ({ type: s.type, delay: s.delay / 1000 })),
+          imageUrl
+        })
+      });
+
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        throw new Error(body.error || 'Failed to save');
+      }
+
+      clearOverrideCache();
+      if (onLevelsUpdated) await onLevelsUpdated();
+
+      playerEditSuccess = true;
+      setTimeout(() => {
+        playerEditSuccess = false;
+        isPlayerEditing = false;
+      }, 2000);
+    } catch (err) {
+      playerEditError = err instanceof Error ? err.message : 'Failed to save';
+    } finally {
+      playerEditSaving = false;
+    }
+  }
+
+  function handlePlayerEditCancel() {
+    isPlayerEditing = false;
+    playerEditError = null;
+    playerEditSuccess = false;
+  }
+
+
   let currentCategory = $derived(
     currentLevelId 
       ? levels.find(l => l.id === currentLevelId)?.category ?? '' 
@@ -831,6 +993,68 @@
               submitLabel="💾 Save Changes"
               submitting={isSaving}
               errorMessage={saveError || ''}
+            />
+          </div>
+        </div>
+      {:else if isPlayerEditing}
+        <!-- PLAYER EDIT MODE (recipe creator editing their own approved recipe) -->
+        <div class="moderator-edit-view">
+          <div class="mod-header">
+            <h3>✏️ Edit: {selectedLevel.name}</h3>
+            {#if playerEditSuccess}
+              <span class="save-success">✓ Submitted for re-approval!</span>
+            {/if}
+          </div>
+
+          <div class="mod-form-container">
+            <!-- Image Upload Section -->
+            <div class="mod-image-section">
+              <label class="mod-section-label">📷 Recipe Photo</label>
+
+              {#if imagePreviewUrl}
+                <div class="mod-image-preview-container">
+                  <img src={imagePreviewUrl} alt="Recipe preview" class="mod-image-preview" />
+                  <button
+                    type="button"
+                    class="mod-remove-image-btn"
+                    onclick={removeImage}
+                    disabled={playerEditSaving || isUploadingImage}
+                  >
+                    ✕ Remove
+                  </button>
+                </div>
+              {:else}
+                <label class="mod-image-picker">
+                  <input
+                    type="file"
+                    accept="image/*"
+                    onchange={handleImageSelect}
+                    disabled={playerEditSaving || isUploadingImage}
+                  />
+                  <span class="mod-picker-content">
+                    <span class="mod-picker-icon">📷</span>
+                    <span class="mod-picker-text">Add Photo</span>
+                    <span class="mod-picker-hint">Max 5MB</span>
+                  </span>
+                </label>
+              {/if}
+
+              {#if imageUploadError}
+                <p class="mod-image-error">{imageUploadError}</p>
+              {/if}
+
+              {#if isUploadingImage}
+                <p class="mod-image-uploading">Uploading image...</p>
+              {/if}
+            </div>
+
+            <RecipeForm
+              initialData={levelToFormData(selectedLevel)}
+              onsubmit={handlePlayerSave}
+              oncancel={handlePlayerEditCancel}
+              submitLabel={playerEditSaving ? '⏳ Saving...' : '📤 Submit for Re-approval'}
+              submitting={playerEditSaving}
+              errorMessage={playerEditError || ''}
             />
           </div>
         </div>
@@ -1039,6 +1263,7 @@
               {#each searchResults as level (level.id)}
                 {@const isCompleted = completedLevels.has(level.id)}
                 {@const isCurrent = level.id === currentLevelId}
+                <div class="recipe-tab-row">
                 <button 
                   class="recipe-tab"
                   class:completed={isCompleted}
@@ -1051,6 +1276,10 @@
                     {#if isCurrent}🎮{:else if isCompleted}✓{:else}🔒{/if}
                   </span>
                 </button>
+                {#if level.isCommunityRecipe}
+                  <button class="edit-icon-btn" onclick={(e) => handleEditIconClick(level, e)} title="Edit recipe" aria-label="Edit recipe">✏️</button>
+                {/if}
+                </div>
               {/each}
               {#if searchResults.length === 0}
                 <div class="no-results">No recipes found</div>
@@ -1091,6 +1320,7 @@
                         {#each categoryLevels as level (level.id)}
                           {@const isCompleted = completedLevels.has(level.id)}
                           {@const isCurrent = level.id === currentLevelId}
+                          <div class="recipe-tab-row">
                           <button 
                             class="recipe-tab"
                             class:completed={isCompleted}
@@ -1111,6 +1341,10 @@
                               {/if}
                           </span>
                         </button>
+                        {#if level.isCommunityRecipe}
+                          <button class="edit-icon-btn" onclick={(e) => handleEditIconClick(level, e)} title="Edit recipe" aria-label="Edit recipe">✏️</button>
+                        {/if}
+                        </div>
                       {/each}
                       {/if}
                     </div>
@@ -1124,6 +1358,30 @@
     {/if}
   </div>
 </div>
+
+{#if showEditCodeModal && selectedLevel}
+  <div class="edit-code-overlay" role="dialog" aria-modal="true" aria-label="Edit code required">
+    <div class="edit-code-modal">
+      <h3>🔑 Edit Code Required</h3>
+      <p>Ask the recipe creator for their edit code to suggest changes.</p>
+      <input
+        type="text"
+        class="edit-code-input"
+        placeholder="Enter edit code"
+        bind:value={editCodeInput}
+        maxlength="20"
+      />
+      {#if editCodeError}
+        <p class="edit-code-error">{editCodeError}</p>
+      {/if}
+      <div class="edit-code-actions">
+        <button class="edit-code-cancel" onclick={() => { showEditCodeModal = false; }}>Cancel</button>
+        <button class="edit-code-submit" disabled title="Collaborative editing coming soon">Continue</button>
+      </div>
+      <p class="edit-code-coming-soon">✨ Collaborative editing coming soon</p>
+    </div>
+  </div>
+{/if}
 
 <style>
   .modal-backdrop {
@@ -2400,5 +2658,136 @@
       padding: 12px 16px;
       max-width: 280px;
     }
+  }
+
+  /* Edit icon row layout */
+  .recipe-tab-row {
+    display: flex;
+    align-items: stretch;
+    gap: 4px;
+    margin-bottom: 2px;
+  }
+
+  .recipe-tab-row .recipe-tab {
+    flex: 1;
+    min-width: 0;
+    margin-bottom: 0;
+  }
+
+  .edit-icon-btn {
+    flex-shrink: 0;
+    width: 32px;
+    background: none;
+    border: 2px solid #DEB887;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, border-color 0.15s;
+    color: #8B4513;
+    padding: 0;
+  }
+
+  .edit-icon-btn:hover {
+    background: #FFF8E7;
+    border-color: #8B4513;
+  }
+
+  /* Edit code modal */
+  .edit-code-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+
+  .edit-code-modal {
+    background: #FFF8E7;
+    border: 3px solid #DEB887;
+    border-radius: 16px;
+    padding: 24px;
+    max-width: 340px;
+    width: 90%;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    text-align: center;
+  }
+
+  .edit-code-modal h3 {
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+    color: #8B4513;
+  }
+
+  .edit-code-modal p {
+    font-size: 0.9rem;
+    color: #5C4033;
+    margin: 0 0 12px;
+  }
+
+  .edit-code-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 2px solid #DEB887;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 0.1em;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+  }
+
+  .edit-code-input:focus {
+    outline: none;
+    border-color: #8B4513;
+  }
+
+  .edit-code-error {
+    color: #C0392B;
+    font-size: 0.85rem;
+    margin: 0 0 8px;
+  }
+
+  .edit-code-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .edit-code-cancel {
+    padding: 8px 20px;
+    background: none;
+    border: 2px solid #DEB887;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #8B4513;
+    font-size: 0.9rem;
+  }
+
+  .edit-code-submit {
+    padding: 8px 20px;
+    background: #8B4513;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    font-size: 0.9rem;
+  }
+
+  .edit-code-submit:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+
+  .edit-code-coming-soon {
+    font-size: 0.78rem;
+    color: #A0856B;
+    margin: 0;
+    font-style: italic;
   }
 </style>
