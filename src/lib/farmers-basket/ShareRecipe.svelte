@@ -23,6 +23,10 @@
   let imageUploadError = $state<string | null>(null);
   let isUploadingImage = $state(false);
   
+  // Info panel state
+  let showNutrientInfo = $state(false);
+  let showRankingsInfo = $state(false);
+
   // Player authentication state
   let playerId = $state<string | null>(null);
   let isLoggedIn = $state(false);
@@ -281,6 +285,45 @@
       </div>
     {:else}
       <div class="form-container">
+        <!-- Info Links -->
+        <div class="info-links">
+          <button type="button" class="info-link" onclick={() => { showNutrientInfo = !showNutrientInfo; showRankingsInfo = false; }}>
+            🔗 Nutrient Linking
+          </button>
+          <button type="button" class="info-link" onclick={() => { showRankingsInfo = !showRankingsInfo; showNutrientInfo = false; }}>
+            🏆 Rankings
+          </button>
+        </div>
+
+        {#if showNutrientInfo}
+          <div class="info-panel">
+            <div class="info-panel-header">
+              <h3>🔗 Nutrient Linking</h3>
+              <button type="button" class="info-close-btn" onclick={() => showNutrientInfo = false}>×</button>
+            </div>
+            <div class="info-panel-body">
+              <p>Most recipes — in cookbooks, on food blogs, on websites — list ingredients in their raw or pre-cooked state. "2 chicken breasts." "1 cup dry rice." We appreciate you sharing recipes in this format, and your recipe submission will be visible to all players once reviewed.</p>
+              <p>You also have the option to link each ingredient to the nutrition database.</p>
+              <p>The nutrition database only contains food <strong>"as eaten"</strong> — the way it actually arrives on your plate, ready to consume.</p>
+              <p>Nutrition science measures food the way your body actually receives it — after it has been cooked, prepared, and is ready to eat. That is the only measurement that tells you what your body actually got. That is also why only ready-to-eat foods are in the database.</p>
+              <p>If you choose to link, match every ingredient to its cooked or ready-to-eat form. Your recipe stays exactly as you wrote it — only the nutrition connection is added.</p>
+              <p><strong>Linking is an enhancement, never a requirement.</strong> If you'd like to add nutrition links later, you can always come back and connect each ingredient to its as-eaten equivalent. Linked recipes earn a higher ranking and are guaranteed a rotation in the daily Recipe of the Day — but that's entirely your choice, whenever you're ready.</p>
+            </div>
+          </div>
+        {/if}
+
+        {#if showRankingsInfo}
+          <div class="info-panel">
+            <div class="info-panel-header">
+              <h3>🏆 Rankings</h3>
+              <button type="button" class="info-close-btn" onclick={() => showRankingsInfo = false}>×</button>
+            </div>
+            <div class="info-panel-body">
+              <p class="coming-soon">Coming soon.</p>
+            </div>
+          </div>
+        {/if}
+
         <!-- Image Upload Section -->
         <div class="image-upload-section">
           <h3>📸 Recipe Photo (Optional)</h3>
@@ -525,6 +568,98 @@
     color: #333;
   }
   
+  /* Info Links */
+  .info-links {
+    display: flex;
+    gap: 10px;
+    padding: 12px 20px;
+    border-bottom: 1px solid #E8E0D0;
+    background: #F5F0E8;
+  }
+
+  .info-link {
+    flex: 1;
+    padding: 8px 12px;
+    background: #8B4513;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+
+  .info-link:hover {
+    background: #A0522D;
+  }
+
+  /* Info Panels */
+  .info-panel {
+    margin: 0;
+    border-bottom: 2px solid #C9B896;
+    background: #FFFDF5;
+    animation: slideDown 0.2s ease-out;
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .info-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    background: #F0E8D8;
+    border-bottom: 1px solid #E0D0B8;
+  }
+
+  .info-panel-header h3 {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #6B3410;
+  }
+
+  .info-close-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #8B4513;
+    cursor: pointer;
+    line-height: 1;
+    padding: 2px 6px;
+  }
+
+  .info-close-btn:hover {
+    color: #C62828;
+  }
+
+  .info-panel-body {
+    padding: 14px 16px;
+    font-size: 0.85rem;
+    color: #444;
+    line-height: 1.6;
+    max-height: 280px;
+    overflow-y: auto;
+  }
+
+  .info-panel-body p {
+    margin: 0 0 10px;
+  }
+
+  .info-panel-body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .coming-soon {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    padding: 16px 0;
+  }
+
   /* Image Upload Styles */
   .image-upload-section {
     padding: 16px 20px;
