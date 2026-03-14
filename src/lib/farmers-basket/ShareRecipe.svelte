@@ -319,7 +319,8 @@
               <button type="button" class="info-close-btn" onclick={() => showRankingsInfo = false}>×</button>
             </div>
             <div class="info-panel-body">
-              <p><strong>Seen a recipe you don't recognise at the top?</strong><br>Every newly approved shared recipe is pinned to the top of its meal category — above both tiers — for one full day. After that one day, it takes its ranked place in the daily shuffle like everything else.</p>
+              <p><strong>Recipe Placement</strong></p>
+              <p>Every newly approved shared recipe is pinned to the top of its meal category for one day. After that one day, it takes its ranked place in the daily shuffle.</p>
               <p>Every time a player attempts your recipe — win or lose — that counts as a vote of interest. A recipe tried 40 times ranks higher than a recipe won 5 times by 5 players. Wins are shown on your recipe card, but they don't determine your rank. Engagement does.</p>
               <p><strong>There are two tiers in every meal category.</strong></p>
               <p>Recipes in Breakfast, Snacks, Lunch, Dinner, Beverages, Salads, and Sides are organised into two tiers. Within each tier, recipes shuffle daily so every recipe gets seen. The highest-ranked recipe in each tier is always pinned at the top.</p>
