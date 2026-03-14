@@ -305,7 +305,8 @@
               <p>Most recipes — in cookbooks, on food blogs, on websites — list ingredients in their raw or pre-cooked state — "1 cup dry lentils" or "1 cup dry rice" — We appreciate you sharing recipes in this format, and your recipe submission will be visible to all players once reviewed.</p>
               <p>You also have the option to link each ingredient to the nutrition database.</p>
               <p>The nutrition database only contains food <strong>"as eaten"</strong> — the way it actually arrives on your plate, ready to consume.</p>
-              <p>Nutrition science measures food the way your body actually receives it — after it has been cooked, prepared, and is ready to eat. That is the only measurement that tells you what your body actually got. That is also why only ready-to-eat foods are in the database.</p>
+              <p>Nutrition science measures food the way your body actually receives it — after it has been cooked, prepared, and is ready to eat. That is the only measurement that tells you what your body actually got.</p>
+              <p>The dataset used in the Basket game draws from the USDA SR Legacy Foods dataset — one of the most comprehensive nutrition references available — filtered to include only foods as they are actually eaten.</p>
               <p>If you choose to link, match every ingredient to its cooked or ready-to-eat form. Your recipe stays exactly as you wrote it — only the nutrition connection is added.</p>
               <p><strong>Linking is an enhancement, never a requirement.</strong> If you'd like to add nutrition links later, you can always come back and connect each ingredient to its as-eaten equivalent. Linked recipes earn a higher ranking and are guaranteed a rotation in the daily Recipe of the Day — but that's entirely your choice, whenever you're ready.</p>
             </div>
