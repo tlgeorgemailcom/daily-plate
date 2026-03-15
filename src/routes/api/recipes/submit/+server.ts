@@ -101,8 +101,13 @@ export const POST: RequestHandler = async ({ request }) => {
     }
     
     // Validate required fields
-    if (!body.recipeName || !body.category || !body.ingredients?.length || !body.instructions?.length) {
+    // Drafts only need a recipe name — collaborators fill in the rest.
+    // Full submissions require ingredients and instructions too.
+    if (!body.recipeName || !body.category) {
       return json({ error: 'Missing required fields' }, { status: 400 });
+    }
+    if (body.draft !== true && (!body.ingredients?.length || !body.instructions?.length)) {
+      return json({ error: 'Ingredients and instructions are required to submit for approval' }, { status: 400 });
     }
     
     const recipeId = generateId();
