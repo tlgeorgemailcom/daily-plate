@@ -27,6 +27,7 @@
   let shareEditCode = $state<string | null>(null);
   let generatingShareCode = $state(false);
   let shareCodeCopied = $state(false);
+  let shareCodeError = $state<string | null>(null);
 
   // Polling — detect collaborator changes while the form is open
   let draftChangedWhileEditing = $state(false);
@@ -62,6 +63,7 @@
   async function handleGenerateShareCode() {
     if (!draftRecipeId || !playerId) return;
     generatingShareCode = true;
+    shareCodeError = null;
     try {
       const res = await fetch('/api/recipes/edit-code', {
         method: 'POST',
@@ -69,7 +71,13 @@
         body: JSON.stringify({ recipeId: draftRecipeId, playerId })
       });
       const data = await res.json();
-      if (res.ok) shareEditCode = data.code;
+      if (res.ok) {
+        shareEditCode = data.code;
+      } else {
+        shareCodeError = data.error || 'Failed to generate code';
+      }
+    } catch {
+      shareCodeError = 'Network error — please try again';
     } finally {
       generatingShareCode = false;
     }
@@ -533,28 +541,6 @@
           </div>
         {/if}
 
-        <!-- Collaborator Edit Code — always visible; generate button enabled once draft is saved -->
-        <div class="share-edit-code-section">
-          <p class="edit-code-label">🔑 Collaborator Edit Code</p>
-          {#if !draftRecipeId}
-            <p class="edit-code-hint">Save a draft first to generate a code you can share with collaborators.</p>
-            <button class="generate-code-btn" disabled>Generate Edit Code</button>
-          {:else if shareEditCode}
-            <p class="edit-code-hint">Share this code so another player can suggest changes. Only you can submit for approval.</p>
-            <div class="edit-code-display">
-              <span class="edit-code-value">{shareEditCode}</span>
-              <button class="copy-code-btn" onclick={handleCopyShareCode}>
-                {shareCodeCopied ? '✓ Copied' : 'Copy'}
-              </button>
-            </div>
-          {:else}
-            <p class="edit-code-hint">Share this code so another player can suggest changes. Only you can submit for approval.</p>
-            <button class="generate-code-btn" onclick={handleGenerateShareCode} disabled={generatingShareCode}>
-              {generatingShareCode ? 'Generating...' : 'Generate Edit Code'}
-            </button>
-          {/if}
-        </div>
-
         <RecipeForm
           moderatorMode={false}
           onsubmit={handleFormSubmit}
@@ -583,6 +569,31 @@
             </div>
           {/snippet}
         </RecipeForm>
+
+        <!-- Collaborator Edit Code — shown below form; generate button enabled once draft is saved -->
+        <div class="share-edit-code-section">
+          <p class="edit-code-label">🔑 Collaborator Edit Code</p>
+          {#if !draftRecipeId}
+            <p class="edit-code-hint">Save a draft first to generate a code you can share with collaborators.</p>
+            <button class="generate-code-btn" disabled>Generate Edit Code</button>
+          {:else if shareEditCode}
+            <p class="edit-code-hint">Share this code so another player can suggest changes. Only you can submit for approval.</p>
+            <div class="edit-code-display">
+              <span class="edit-code-value">{shareEditCode}</span>
+              <button class="copy-code-btn" onclick={handleCopyShareCode}>
+                {shareCodeCopied ? '✓ Copied' : 'Copy'}
+              </button>
+            </div>
+          {:else}
+            <p class="edit-code-hint">Share this code so another player can suggest changes. Only you can submit for approval.</p>
+            {#if shareCodeError}
+              <p class="edit-code-error">{shareCodeError}</p>
+            {/if}
+            <button class="generate-code-btn" onclick={handleGenerateShareCode} disabled={generatingShareCode}>
+              {generatingShareCode ? 'Generating...' : 'Generate Edit Code'}
+            </button>
+          {/if}
+        </div>
       </div>
     {/if}
   </div>
@@ -884,6 +895,12 @@
   .generate-code-btn:disabled {
     opacity: 0.6;
     cursor: default;
+  }
+
+  .edit-code-error {
+    color: #C62828;
+    font-size: 0.8rem;
+    margin: 4px 0 8px;
   }
   
   /* Login required view */
