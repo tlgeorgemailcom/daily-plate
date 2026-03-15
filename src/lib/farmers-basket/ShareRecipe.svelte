@@ -83,7 +83,7 @@
     try {
       const res = await fetch(`/api/recipes/by-edit-code?code=${encodeURIComponent(trimmed)}`);
       const data = await res.json();
-      if (!res.ok) { collabCodeError = data.error || 'Code not found'; return; }
+      if (!res.ok) { collabCodeError = data.error || 'Code not found'; entryView = 'join'; return; }
       draftRecipeId = data.recipeId;
       shareEditCode = trimmed;
       isCollaborator = true;
@@ -100,6 +100,7 @@
       entryView = 'new';
     } catch {
       collabCodeError = 'Network error — please try again';
+      entryView = 'join';
     } finally {
       collabCodeLoading = false;
     }
@@ -413,7 +414,6 @@
     // If opened via a share link, auto-trigger the join with the code
     if (joinCode) {
       collabCode = joinCode.toUpperCase().trim();
-      entryView = 'join';
       handleJoinByCode();
     }
   });
