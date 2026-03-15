@@ -172,6 +172,32 @@
     });
   }
 
+  let revokingShareCode = $state(false);
+
+  async function handleRevokeShareCode() {
+    if (!draftRecipeId || !playerId) return;
+    revokingShareCode = true;
+    shareCodeError = null;
+    try {
+      const res = await fetch('/api/recipes/edit-code', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ recipeId: draftRecipeId, playerId })
+      });
+      if (res.ok) {
+        shareEditCode = null;
+        shareCodeCopied = false;
+      } else {
+        const data = await res.json();
+        shareCodeError = data.error || 'Failed to revoke code';
+      }
+    } catch {
+      shareCodeError = 'Network error — please try again';
+    } finally {
+      revokingShareCode = false;
+    }
+  }
+
   async function handleSaveDraft(data: RecipeFormData) {
     if (!isSubscriber || !playerId) return;
     draftSaving = true;
@@ -710,7 +736,13 @@
               <button class="copy-code-btn" onclick={handleCopyShareCode}>
                 {shareCodeCopied ? '✓ Copied' : 'Copy'}
               </button>
+              <button class="revoke-code-btn" onclick={handleRevokeShareCode} disabled={revokingShareCode}>
+                {revokingShareCode ? 'Revoking...' : 'Revoke'}
+              </button>
             </div>
+            {#if shareCodeError}
+              <p class="edit-code-error">{shareCodeError}</p>
+            {/if}
           {:else}
             <p class="edit-code-hint">Generate a code you can share with collaborators. Save a draft first if you haven't already.</p>
             {#if shareCodeError}
@@ -1132,6 +1164,26 @@
 
   .copy-code-btn:hover {
     background: #A0522D;
+  }
+
+  .revoke-code-btn {
+    padding: 4px 10px;
+    background: #C62828;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .revoke-code-btn:hover {
+    background: #B71C1C;
+  }
+
+  .revoke-code-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
   }
 
   .generate-code-btn {
