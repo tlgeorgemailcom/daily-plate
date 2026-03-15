@@ -587,7 +587,11 @@
         </div>
       </div>
     {:else if entryView === 'loading'}
-      <!-- Auto-joining via share link — render nothing to avoid flash -->
+      <div class="join-loading-view">
+        <div class="join-loading-spinner">⏳</div>
+        <h3>Joining recipe&hellip;</h3>
+        <p>Loading the shared recipe draft.</p>
+      </div>
     {:else if entryView === 'choose'}
       <!-- Entry screen: creator starts fresh or collaborator joins via code -->
       <div class="entry-view">
@@ -1013,6 +1017,36 @@
   }
 
   /* Success view */
+  .join-loading-view {
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .join-loading-spinner {
+    font-size: 3rem;
+    animation: spin 1.2s linear infinite;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+
+  .join-loading-view h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #2E7D32;
+  }
+
+  .join-loading-view p {
+    margin: 0;
+    color: #666;
+  }
+
   .success-view {
     padding: 40px;
     text-align: center;
