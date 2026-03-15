@@ -6,6 +6,8 @@
   let code = $state('');
   let error = $state<string | null>(null);
   let loading = $state(false);
+  // If a code is in the URL, suppress the UI immediately — we redirect on mount
+  let autoRedirecting = $state($page.url.searchParams.has('code'));
 
   onMount(() => {
     const urlCode = $page.url.searchParams.get('code');
@@ -45,6 +47,7 @@
 </svelte:head>
 
 <div class="join-page">
+  {#if !autoRedirecting}
   <div class="join-card">
     <h1 class="join-title">🍽️ Join a Recipe Draft</h1>
     <p class="join-desc">
@@ -73,6 +76,7 @@
       You'll need an account to save changes. <a href="/">Sign in or create one here.</a>
     </p>
   </div>
+  {/if}
 </div>
 
 <style>

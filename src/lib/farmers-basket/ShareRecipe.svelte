@@ -25,8 +25,9 @@
   let draftTimestamp = $state<string | null>(null);
 
   // Entry view: 'choose' (start vs join), 'new' (creating own recipe), 'join' (entering a code)
-  type EntryView = 'choose' | 'new' | 'join';
-  let entryView = $state<EntryView>('choose');
+  // 'loading' is used transiently when auto-joining via a share link — prevents UI flash
+  type EntryView = 'choose' | 'new' | 'join' | 'loading';
+  let entryView = $state<EntryView>(joinCode ? 'loading' : 'choose');
 
   // Collaborator state — set when joining via edit code
   let isCollaborator = $state(false);
@@ -567,6 +568,8 @@
           <a href="/farmers-basket/my-recipes" class="my-recipes-link">View My Submissions</a>
         </div>
       </div>
+    {:else if entryView === 'loading'}
+      <!-- Auto-joining via share link — render nothing to avoid flash -->
     {:else if entryView === 'choose'}
       <!-- Entry screen: creator starts fresh or collaborator joins via code -->
       <div class="entry-view">
