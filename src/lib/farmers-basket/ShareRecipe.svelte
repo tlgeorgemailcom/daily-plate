@@ -297,6 +297,7 @@
   
   // Info panel state
   let showNutrientInfo = $state(false);
+  let showLinkingMethodsInfo = $state(false);
   let showRankingsInfo = $state(false);
 
   // Player/subscriber detection - must match playerStore.ts
@@ -657,10 +658,13 @@
       <div class="form-container">
         <!-- Info Links -->
         <div class="info-links">
-          <button type="button" class="info-link" onclick={() => { showNutrientInfo = !showNutrientInfo; showRankingsInfo = false; }}>
+          <button type="button" class="info-link" onclick={() => { showNutrientInfo = !showNutrientInfo; showLinkingMethodsInfo = false; showRankingsInfo = false; }}>
             🔗 Nutrient Linking
           </button>
-          <button type="button" class="info-link" onclick={() => { showRankingsInfo = !showRankingsInfo; showNutrientInfo = false; }}>
+          <button type="button" class="info-link" onclick={() => { showLinkingMethodsInfo = !showLinkingMethodsInfo; showNutrientInfo = false; showRankingsInfo = false; }}>
+            🍽️ Linking Methods
+          </button>
+          <button type="button" class="info-link" onclick={() => { showRankingsInfo = !showRankingsInfo; showNutrientInfo = false; showLinkingMethodsInfo = false; }}>
             🏆 Rankings
           </button>
         </div>
@@ -679,6 +683,21 @@
               <p>The dataset used in the Basket game draws from the USDA SR Legacy Foods dataset — one of the most comprehensive nutrition references available — filtered to include only foods as they are actually eaten.</p>
               <p>If you choose to link, match every ingredient to its cooked or ready-to-eat form. Your recipe stays exactly as you wrote it — only the nutrition connection is added.</p>
               <p><strong>Linking is an enhancement, never a requirement.</strong> If you'd like to add nutrition links later, you can always come back and connect each ingredient to its as-eaten equivalent. Linked recipes earn a higher ranking and are guaranteed a rotation in the daily Recipe of the Day — but that's entirely your choice, whenever you're ready.</p>
+            </div>
+          </div>
+        {/if}
+
+        {#if showLinkingMethodsInfo}
+          <div class="info-panel">
+            <div class="info-panel-header">
+              <h3>🍽️ Linking Methods</h3>
+              <button type="button" class="info-close-btn" onclick={() => showLinkingMethodsInfo = false}>×</button>
+            </div>
+            <div class="info-panel-body">
+              <p>There are two ways to link your recipe to the nutrition database.</p>
+              <p><strong>Ingredient by ingredient</strong><br>Match each ingredient to its cooked or ready-to-eat form in the database. Best for recipes where the individual ingredients are the nutrition story — a salad, a grain bowl, a stir-fry.</p>
+              <p><strong>Whole dish</strong><br>Some recipes produce a dish that already exists in the database exactly as eaten — pancakes, apple pie, bean tacos, biscuits. For these, you can link the entire recipe to that single database entry rather than linking each ingredient separately.</p>
+              <p>Both methods qualify your recipe for Tier 1 and the daily Recipe of the Day rotation. Choose whichever fits your recipe better.</p>
             </div>
           </div>
         {/if}
