@@ -1,6 +1,7 @@
 <script lang="ts">
   import '../app.css';
   import { onMount } from 'svelte';
+  import { browser } from '$app/environment';
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
   import { playerStore, type Player } from '$lib/stores/playerStore';
@@ -171,7 +172,7 @@
       <p>A new puzzle every day!</p>
     </footer>
   </div>
-{:else}
+{:else if browser}
   <StartScreen 
     mode="auth"
     onStart={handleGameStart}
