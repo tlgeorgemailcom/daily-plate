@@ -4,6 +4,7 @@
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
   import { playerStore, type Player } from '$lib/stores/playerStore';
+  import { get } from 'svelte/store';
   import { syncCustomFoodsFromCloud } from '$lib/stores/customFoodsStore';
   import { syncSettingsFromCloud } from '$lib/stores/settingsStore';
   import { syncGameStateFromCloud } from '$lib/stores/gameStateStore';
@@ -21,8 +22,8 @@
   // Session-only state for guest players (resets on refresh)
   let guestSessionStarted = $state(false);
   
-  // Subscribe to player store reactively
-  let player = $state<Player | null>(null);
+  // Subscribe to player store reactively — initialized synchronously to avoid StartScreen flash
+  let player = $state<Player | null>(get(playerStore));
   $effect(() => {
     const unsub = playerStore.subscribe(p => player = p);
     return unsub;

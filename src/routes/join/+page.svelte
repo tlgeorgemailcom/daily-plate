@@ -12,8 +12,6 @@
   onMount(async () => {
     const urlCode = $page.url.searchParams.get('code');
     if (urlCode) {
-      // DEBUG: 2-second hold so we can see if the join page is flashing
-      await new Promise(r => setTimeout(r, 2000));
       goto(`/farmers-basket?joinCode=${encodeURIComponent(urlCode.toUpperCase().trim())}`);
       return;
     }
@@ -48,10 +46,6 @@
 </svelte:head>
 
 <div class="join-page">
-  <!-- DEBUG: always show what state we're in -->
-  <div style="position:fixed;top:0;left:0;right:0;background:#e53935;color:white;font-size:13px;font-weight:700;text-align:center;padding:6px;z-index:9999">
-    DEBUG — join/+page.svelte | autoRedirecting={autoRedirecting ? 'TRUE' : 'FALSE'}
-  </div>
   {#if !autoRedirecting}
   <div class="join-card">
     <h1 class="join-title">🍽️ Join a Recipe Draft</h1>

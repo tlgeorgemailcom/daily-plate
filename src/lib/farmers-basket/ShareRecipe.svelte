@@ -561,10 +561,6 @@
 <svelte:window onkeydown={handleKeydown} />
 
 <div class="modal-backdrop" onclick={handleBackdropClick} role="dialog" aria-modal="true" aria-label="Share Recipe">
-  <!-- DEBUG: visible state banner -->
-  <div style="position:fixed;top:0;left:0;right:0;background:#1565c0;color:white;font-size:13px;font-weight:700;text-align:center;padding:6px;z-index:9999">
-    DEBUG — ShareRecipe | entryView=<b>{entryView}</b> | playerId={playerId ? 'SET' : 'NULL'} | isSubscriber={isSubscriber ? 'YES' : 'NO'} | collabCodeLoading={collabCodeLoading ? 'true' : 'false'}
-  </div>
   <div class="share-modal">
     <header class="modal-header">
       <h2>📝 Share Your Recipe</h2>
