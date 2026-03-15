@@ -22,13 +22,18 @@
   
   let game = createGameState();
   
-  // Recipe book modal state - show on mount
-  let showRecipeBook = $state(true);
-  let showRecipeOfDay = $state(true);
-  
+  // If a joinCode is present in the URL, open ShareRecipe immediately and skip
+  // the recipe book — both initialized synchronously to prevent the game page
+  // from rendering for one frame before onMount fires.
+  const _urlJoinCode = $page.url.searchParams.get('joinCode') ?? '';
+
+  // Recipe book modal state - show on mount (suppressed when joining via link)
+  let showRecipeBook = $state(!_urlJoinCode);
+  let showRecipeOfDay = $state(!_urlJoinCode);
+
   // Share recipe modal state
-  let showShareRecipe = $state(false);
-  let initialJoinCode = $state('');
+  let showShareRecipe = $state(!!_urlJoinCode);
+  let initialJoinCode = $state(_urlJoinCode);
   
   // Rules modal state
   let showRules = $state(false);
@@ -379,14 +384,6 @@
     
     // Load community recipes
     loadCommunityRecipes();
-
-    // Open ShareRecipe in join mode if ?joinCode= is present in the URL
-    const urlJoinCode = $page.url.searchParams.get('joinCode');
-    if (urlJoinCode) {
-      initialJoinCode = urlJoinCode;
-      showShareRecipe = true;
-      showRecipeBook = false;
-    }
   });
   
   // Load approved community recipes from server (premium only)
