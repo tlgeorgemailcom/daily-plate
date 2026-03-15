@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount, onDestroy } from 'svelte';
+  import { PUBLIC_APP_URL } from '$env/static/public';
   import { canUseStorage } from '$lib/stores/playerStore';
   import { saveGameScore } from '$lib/stores/scoreHistory';
   import RecipeForm, { type RecipeFormData } from './RecipeForm.svelte';
@@ -181,11 +182,15 @@
     });
   }
 
+  function appOrigin() {
+    return (PUBLIC_APP_URL || window.location.origin).replace(/\/$/, '');
+  }
+
   let canNativeShare = $state(typeof navigator !== 'undefined' && !!navigator.share);
 
   async function handleShareCode() {
     if (!shareEditCode) return;
-    const joinUrl = `${window.location.origin}/join?code=${shareEditCode}`;
+    const joinUrl = `${appOrigin()}/join?code=${shareEditCode}`;
     try {
       await navigator.share({
         title: 'Collaborate on my recipe',
@@ -199,7 +204,7 @@
 
   function handleEmailCode() {
     if (!shareEditCode) return;
-    const joinUrl = `${window.location.origin}/join?code=${shareEditCode}`;
+    const joinUrl = `${appOrigin()}/join?code=${shareEditCode}`;
     const subject = encodeURIComponent('Collaborate on my recipe');
     const body = encodeURIComponent(
       `I'd like you to help with a recipe I'm working on.\n\nUse this code in the Daily Food Chain app: ${shareEditCode}\n\nOr open this link: ${joinUrl}`
