@@ -61,9 +61,16 @@
   onDestroy(() => stopPoll());
 
   async function handleGenerateShareCode() {
-    if (!draftRecipeId || !playerId) return;
-    generatingShareCode = true;
     shareCodeError = null;
+    if (!playerId) {
+      shareCodeError = 'Please log in to generate an edit code';
+      return;
+    }
+    if (!draftRecipeId) {
+      shareCodeError = 'Save a draft first to generate an edit code';
+      return;
+    }
+    generatingShareCode = true;
     try {
       const res = await fetch('/api/recipes/edit-code', {
         method: 'POST',
@@ -570,13 +577,10 @@
           {/snippet}
         </RecipeForm>
 
-        <!-- Collaborator Edit Code — shown below form; generate button enabled once draft is saved -->
+        <!-- Collaborator Edit Code — always visible; handler shows errors for missing preconditions -->
         <div class="share-edit-code-section">
           <p class="edit-code-label">🔑 Collaborator Edit Code</p>
-          {#if !draftRecipeId}
-            <p class="edit-code-hint">Save a draft first to generate a code you can share with collaborators.</p>
-            <button class="generate-code-btn" disabled>Generate Edit Code</button>
-          {:else if shareEditCode}
+          {#if shareEditCode}
             <p class="edit-code-hint">Share this code so another player can suggest changes. Only you can submit for approval.</p>
             <div class="edit-code-display">
               <span class="edit-code-value">{shareEditCode}</span>
@@ -585,7 +589,7 @@
               </button>
             </div>
           {:else}
-            <p class="edit-code-hint">Share this code so another player can suggest changes. Only you can submit for approval.</p>
+            <p class="edit-code-hint">Generate a code you can share with collaborators. Save a draft first if you haven't already.</p>
             {#if shareCodeError}
               <p class="edit-code-error">{shareCodeError}</p>
             {/if}
