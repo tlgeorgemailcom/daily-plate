@@ -26,9 +26,10 @@
 
   // Entry view: 'choose' (start vs join), 'new' (creating own recipe), 'join' (entering a code)
   // 'loading' is used transiently when auto-joining via a share link — prevents UI flash
-  // 'confirmed' is shown after a successful auto-join, before proceeding to the recipe form
-  type EntryView = 'choose' | 'new' | 'join' | 'loading' | 'confirmed';
-  let entryView = $state<EntryView>(joinCode ? 'loading' : 'choose');
+  // 'confirmed' is shown immediately when opening via a share link, with the
+  // Continue button disabled until the API call completes
+  type EntryView = 'choose' | 'new' | 'join' | 'confirmed';
+  let entryView = $state<EntryView>(joinCode ? 'confirmed' : 'choose');
 
   // Collaborator state — set when joining via edit code
   let isCollaborator = $state(false);
@@ -98,7 +99,7 @@
         ingredients: data.ingredients?.length ? data.ingredients : [{ id: 1, name: '', quantity: '' }],
         instructions: data.instructions?.length ? data.instructions : [{ id: 1, text: '' }],
       };
-      entryView = 'confirmed';
+      entryView = 'confirmed'; // data is now ready, button becomes active
     } catch {
       collabCodeError = 'Network error — please try again';
       entryView = 'join';
@@ -430,7 +431,7 @@
     playerId = getPlayerId();
     isLoggedIn = !!playerId;
     isSubscriber = checkSubscriber();
-    // If opened via a share link, auto-trigger the join with the code
+    // If opened via a share link, start the API call — confirmed screen already visible
     if (joinCode) {
       collabCode = joinCode.toUpperCase().trim();
       handleJoinByCode();
@@ -597,21 +598,24 @@
           <a href="/farmers-basket/my-recipes" class="my-recipes-link">View My Submissions</a>
         </div>
       </div>
-    {:else if entryView === 'loading'}
-      <div class="join-loading-view">
-        <div class="join-loading-spinner">⏳</div>
-        <h3>Joining recipe&hellip;</h3>
-        <p>Loading the shared recipe draft.</p>
-      </div>
     {:else if entryView === 'confirmed'}
       <div class="account-confirmed-view">
         <div class="confirmed-icon">✅</div>
         <h3>Account Confirmed</h3>
         {#if collabInitialData?.recipeName}
           <p class="confirmed-recipe-name">{collabInitialData.recipeName}</p>
+        {:else if collabCodeLoading}
+          <p class="confirmed-recipe-name loading-name">Loading recipe…</p>
         {/if}
-        <p>You're ready to edit this shared recipe draft.</p>
-        <button class="continue-btn" onclick={() => entryView = 'new'}>Continue to Recipe</button>
+        {#if collabCodeError}
+          <p class="join-error">{collabCodeError}</p>
+          <button class="cancel-btn" onclick={onclose}>Close</button>
+        {:else}
+          <p>You're ready to edit this shared recipe draft.</p>
+          <button class="continue-btn" onclick={() => entryView = 'new'} disabled={collabCodeLoading}>
+            {collabCodeLoading ? 'Loading recipe…' : 'Continue to Recipe'}
+          </button>
+        {/if}
       </div>
     {:else if entryView === 'choose'}
       <!-- Entry screen: creator starts fresh or collaborator joins via code -->
@@ -1057,6 +1061,12 @@
     color: #2E7D32;
   }
 
+  .loading-name {
+    color: #999;
+    font-style: italic;
+    font-weight: normal;
+  }
+
   .confirmed-recipe-name {
     margin: 0;
     font-size: 1.1rem;
@@ -1080,6 +1090,11 @@
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
+  }
+
+  .continue-btn:disabled {
+    background: #a5d6a7;
+    cursor: default;
   }
 
   .continue-btn:hover {
