@@ -696,8 +696,9 @@
             <div class="info-panel-body">
               <p>There are two ways to link your recipe to the nutrition database.</p>
               <p><strong>Ingredient by ingredient</strong><br>Match each ingredient to its cooked or ready-to-eat form in the database. Best for recipes where the individual ingredients are the nutrition story — a salad, a grain bowl, a stir-fry.</p>
-              <p><strong>Whole dish</strong><br>Some recipes produce a dish that already exists in the database exactly as eaten — pancakes, apple pie, bean tacos, biscuits. For these, you can link the entire recipe to that single database entry rather than linking each ingredient separately.</p>
-              <p>Both methods qualify your recipe for Tier 1 and the daily Recipe of the Day rotation. Choose whichever fits your recipe better.</p>
+              <p><strong>Whole dish</strong><br>Some recipes produce a dish that already exists in the database exactly as eaten — pancakes, apple pie, bean tacos, biscuits. For these, you can link the entire recipe to that single database entry rather than linking each ingredient separately. Your full recipe — all ingredients and instructions — is always preserved exactly as you wrote it for others to follow. The database link only adds the nutrition connection.</p>
+              <p><strong>Mixed</strong><br>Some recipes combine a whole dish with additional components that exist separately — apple pie à la mode, for example. Apple pie exists in the database and so does vanilla ice cream. For these, you can link the main dish as a whole and link the remaining components as individual ingredients.</p>
+              <p>All three methods qualify your recipe for Tier 1 and the daily Recipe of the Day rotation. Choose whichever fits your recipe best.</p>
             </div>
           </div>
         {/if}
