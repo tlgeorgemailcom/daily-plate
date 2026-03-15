@@ -32,14 +32,6 @@
   // Collaborator state — set when joining via edit code
   let isCollaborator = $state(false);
   let collabCode = $state('');
-
-  // Auto-enter join flow if a joinCode prop was passed in (e.g. from /join redirect)
-  onMount(() => {
-    if (joinCode) {
-      collabCode = joinCode.toUpperCase().trim();
-      entryView = 'join';
-    }
-  });
   let collabCodeError = $state<string | null>(null);
   let collabCodeLoading = $state(false);
   let collabInitialData = $state<Record<string, unknown> | null>(null);
@@ -422,6 +414,12 @@
     playerId = getPlayerId();
     isLoggedIn = !!playerId;
     isSubscriber = checkSubscriber();
+    // If opened via a share link, auto-trigger the join with the code
+    if (joinCode) {
+      collabCode = joinCode.toUpperCase().trim();
+      entryView = 'join';
+      handleJoinByCode();
+    }
   });
 
   // Shared helper — builds the submission payload from form data

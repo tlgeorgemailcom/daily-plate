@@ -10,7 +10,9 @@
   onMount(() => {
     const urlCode = $page.url.searchParams.get('code');
     if (urlCode) {
-      code = urlCode.toUpperCase().trim();
+      // Code provided via URL — skip the UI and go straight to farmers-basket
+      goto(`/farmers-basket?joinCode=${encodeURIComponent(urlCode.toUpperCase().trim())}`);
+      return;
     }
   });
 
