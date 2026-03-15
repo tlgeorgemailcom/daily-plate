@@ -26,7 +26,8 @@
 
   // Entry view: 'choose' (start vs join), 'new' (creating own recipe), 'join' (entering a code)
   // 'loading' is used transiently when auto-joining via a share link — prevents UI flash
-  type EntryView = 'choose' | 'new' | 'join' | 'loading';
+  // 'confirmed' is shown after a successful auto-join, before proceeding to the recipe form
+  type EntryView = 'choose' | 'new' | 'join' | 'loading' | 'confirmed';
   let entryView = $state<EntryView>(joinCode ? 'loading' : 'choose');
 
   // Collaborator state — set when joining via edit code
@@ -97,7 +98,7 @@
         ingredients: data.ingredients?.length ? data.ingredients : [{ id: 1, name: '', quantity: '' }],
         instructions: data.instructions?.length ? data.instructions : [{ id: 1, text: '' }],
       };
-      entryView = 'new';
+      entryView = 'confirmed';
     } catch {
       collabCodeError = 'Network error — please try again';
       entryView = 'join';
@@ -565,7 +566,17 @@
       <button class="close-btn" onclick={onclose} aria-label="Close">×</button>
     </header>
     
-    {#if !isSubscriber}
+    {#if !playerId}
+      <div class="login-required">
+        <div class="login-icon">👤</div>
+        <h3>Account Required</h3>
+        <p>You need a free account to collaborate on this recipe draft.</p>
+        <div class="login-actions">
+          <a href="/subscribe" class="login-btn">Create Account</a>
+          <button class="cancel-btn" onclick={onclose}>Maybe Later</button>
+        </div>
+      </div>
+    {:else if !isSubscriber}
       <div class="login-required">
         <div class="login-icon">⭐</div>
         <h3>Subscription Required</h3>
@@ -591,6 +602,16 @@
         <div class="join-loading-spinner">⏳</div>
         <h3>Joining recipe&hellip;</h3>
         <p>Loading the shared recipe draft.</p>
+      </div>
+    {:else if entryView === 'confirmed'}
+      <div class="account-confirmed-view">
+        <div class="confirmed-icon">✅</div>
+        <h3>Account Confirmed</h3>
+        {#if collabInitialData?.recipeName}
+          <p class="confirmed-recipe-name">{collabInitialData.recipeName}</p>
+        {/if}
+        <p>You're ready to edit this shared recipe draft.</p>
+        <button class="continue-btn" onclick={() => entryView = 'new'}>Continue to Recipe</button>
       </div>
     {:else if entryView === 'choose'}
       <!-- Entry screen: creator starts fresh or collaborator joins via code -->
@@ -1017,6 +1038,54 @@
   }
 
   /* Success view */
+  .account-confirmed-view {
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .confirmed-icon {
+    font-size: 4rem;
+  }
+
+  .account-confirmed-view h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #2E7D32;
+  }
+
+  .confirmed-recipe-name {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .account-confirmed-view p {
+    margin: 0;
+    color: #666;
+    max-width: 300px;
+  }
+
+  .continue-btn {
+    margin-top: 8px;
+    padding: 14px 32px;
+    background: #2E7D32;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .continue-btn:hover {
+    background: #1B5E20;
+  }
+
   .join-loading-view {
     padding: 40px;
     text-align: center;
