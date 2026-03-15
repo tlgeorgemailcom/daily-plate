@@ -8,22 +8,33 @@ function generateId(): string {
 }
 
 // PATCH — promote a draft recipe to pending, or update its data
+// Auth: creator uses playerId; collaborators use edit code (code field).
+// Collaborators can only save (submit=false) — they cannot submit for approval.
 export const PATCH: RequestHandler = async ({ request }) => {
   try {
     const body = await request.json();
-    const { recipeId, playerId, submit, ...fields } = body;
+    const { recipeId, playerId, code, submit, ...fields } = body;
 
-    if (!recipeId || !playerId) {
-      return json({ error: 'Missing recipeId or playerId' }, { status: 400 });
+    if (!recipeId || (!playerId && !code)) {
+      return json({ error: 'Missing recipeId and playerId or code' }, { status: 400 });
     }
 
-    const recipe = await queryOne<{ submitted_by: string; status: string }>(
-      'SELECT submitted_by, status FROM recipes WHERE id = ?',
+    const recipe = await queryOne<{ submitted_by: string; status: string; edit_code: string | null }>(
+      'SELECT submitted_by, status, edit_code FROM recipes WHERE id = ?',
       [recipeId]
     );
     if (!recipe) return json({ error: 'Recipe not found' }, { status: 404 });
-    if (recipe.submitted_by !== playerId) return json({ error: 'Not authorized' }, { status: 403 });
     if (recipe.status !== 'draft') return json({ error: 'Only draft recipes can be updated here' }, { status: 400 });
+
+    const isCreator = playerId && recipe.submitted_by === playerId;
+    const isCollaborator = code && recipe.edit_code && recipe.edit_code === code.toUpperCase().trim();
+
+    if (!isCreator && !isCollaborator) {
+      return json({ error: 'Not authorized' }, { status: 403 });
+    }
+    if (isCollaborator && submit) {
+      return json({ error: 'Only the recipe creator can submit for approval' }, { status: 403 });
+    }
 
     const newStatus = submit ? 'pending' : 'draft';
 

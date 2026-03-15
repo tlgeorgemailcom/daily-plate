@@ -23,6 +23,17 @@
   let draftSuccess = $state(false);
   let draftTimestamp = $state<string | null>(null);
 
+  // Entry view: 'choose' (start vs join), 'new' (creating own recipe), 'join' (entering a code)
+  type EntryView = 'choose' | 'new' | 'join';
+  let entryView = $state<EntryView>('choose');
+
+  // Collaborator state — set when joining via edit code
+  let isCollaborator = $state(false);
+  let collabCode = $state('');
+  let collabCodeError = $state<string | null>(null);
+  let collabCodeLoading = $state(false);
+  let collabInitialData = $state<Record<string, unknown> | null>(null);
+
   // Edit code state (available as soon as draft is saved)
   let shareEditCode = $state<string | null>(null);
   let generatingShareCode = $state(false);
@@ -59,6 +70,69 @@
   }
 
   onDestroy(() => stopPoll());
+
+  // Collaborator: join a draft recipe by its edit code
+  async function handleJoinByCode() {
+    collabCodeError = null;
+    const trimmed = collabCode.trim().toUpperCase();
+    if (!trimmed) { collabCodeError = 'Enter the edit code'; return; }
+    if (!playerId) { collabCodeError = 'Please log in first'; return; }
+    collabCodeLoading = true;
+    try {
+      const res = await fetch(`/api/recipes/by-edit-code?code=${encodeURIComponent(trimmed)}`);
+      const data = await res.json();
+      if (!res.ok) { collabCodeError = data.error || 'Code not found'; return; }
+      draftRecipeId = data.recipeId;
+      shareEditCode = trimmed;
+      isCollaborator = true;
+      collabInitialData = {
+        recipeName: data.name || '',
+        category: data.category || 'Dinner',
+        dietaryCategory: data.dietaryCategory || 'all',
+        submitterName: '',
+        prepTime: data.prepTime || '',
+        servings: data.servings || '',
+        ingredients: data.ingredients?.length ? data.ingredients : [{ id: 1, name: '', quantity: '' }],
+        instructions: data.instructions?.length ? data.instructions : [{ id: 1, text: '' }],
+      };
+      entryView = 'new';
+    } catch {
+      collabCodeError = 'Network error — please try again';
+    } finally {
+      collabCodeLoading = false;
+    }
+  }
+
+  // Collaborator: save changes to the shared draft
+  async function handleCollabSave(data: RecipeFormData) {
+    if (!draftRecipeId || !shareEditCode) return;
+    draftSaving = true;
+    draftError = null;
+    draftSuccess = false;
+    try {
+      let imageUrl: string | null = uploadedImageUrl;
+      if (selectedImageFile && !uploadedImageUrl) {
+        imageUrl = await uploadImage();
+        if (imageUploadError) { draftError = imageUploadError; return; }
+      }
+      const payload = buildPayload(data, imageUrl);
+      const res = await fetch('/api/recipes/submit', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...payload, recipeId: draftRecipeId, code: shareEditCode, submit: false })
+      });
+      if (!res.ok) {
+        const err = await res.json();
+        throw new Error(err.error || 'Failed to save changes');
+      }
+      draftSuccess = true;
+      setTimeout(() => { draftSuccess = false; }, 3000);
+    } catch (err) {
+      draftError = err instanceof Error ? err.message : 'Failed to save changes';
+    } finally {
+      draftSaving = false;
+    }
+  }
 
   async function handleGenerateShareCode() {
     shareCodeError = null;
@@ -434,6 +508,42 @@
           <a href="/farmers-basket/my-recipes" class="my-recipes-link">View My Submissions</a>
         </div>
       </div>
+    {:else if entryView === 'choose'}
+      <!-- Entry screen: creator starts fresh or collaborator joins via code -->
+      <div class="entry-view">
+        <p class="entry-intro">What would you like to do?</p>
+        <div class="entry-options">
+          <button class="entry-option-btn" onclick={() => entryView = 'new'}>
+            <span class="entry-icon">✍️</span>
+            <span class="entry-label">Start a new recipe</span>
+          </button>
+          <button class="entry-option-btn entry-option-secondary" onclick={() => { entryView = 'join'; collabCodeError = null; collabCode = ''; }}>
+            <span class="entry-icon">🤝</span>
+            <span class="entry-label">Join with an edit code</span>
+          </button>
+        </div>
+      </div>
+    {:else if entryView === 'join'}
+      <!-- Collaborator code entry -->
+      <div class="join-view">
+        <p class="join-hint">Enter the edit code shared by the recipe creator.</p>
+        <div class="join-input-row">
+          <input
+            class="join-code-input"
+            bind:value={collabCode}
+            placeholder="e.g. ABC123"
+            maxlength={6}
+            onkeydown={(e) => { if (e.key === 'Enter') handleJoinByCode(); }}
+          />
+          <button class="join-load-btn" onclick={handleJoinByCode} disabled={collabCodeLoading}>
+            {collabCodeLoading ? 'Loading...' : 'Load Recipe'}
+          </button>
+        </div>
+        {#if collabCodeError}
+          <p class="join-error">{collabCodeError}</p>
+        {/if}
+        <button class="join-back-link" onclick={() => { entryView = 'choose'; collabCodeError = null; }}>← Back</button>
+      </div>
     {:else}
       <div class="form-container">
         <!-- Info Links -->
@@ -550,14 +660,25 @@
 
         <RecipeForm
           moderatorMode={false}
-          onsubmit={handleFormSubmit}
+          onsubmit={isCollaborator ? () => {} : handleFormSubmit}
           oncancel={onclose}
           submitting={isSubmitting || draftSaving || isUploadingImage}
           errorMessage={submitError || draftError || ''}
+          initialData={collabInitialData ?? {}}
         >
           {#snippet customActions({ formData, isValid })}
             <div class="share-form-actions">
               <button type="button" class="cancel-btn" onclick={onclose}>Cancel</button>
+              {#if isCollaborator}
+                <button
+                  type="button"
+                  class="share-save-draft-btn"
+                  disabled={draftSaving}
+                  onclick={() => handleCollabSave(formData)}
+                >
+                  {draftSaving ? '⏳ Saving...' : draftSuccess ? '✓ Saved!' : '💾 Save Changes'}
+                </button>
+              {:else}
               <button
                 type="button"
                 class="share-save-draft-btn"
@@ -573,11 +694,13 @@
               >
                 {isSubmitting ? '⏳ Submitting...' : '📤 Submit for Approval'}
               </button>
+              {/if}
             </div>
           {/snippet}
         </RecipeForm>
 
-        <!-- Collaborator Edit Code — always visible; handler shows errors for missing preconditions -->
+        <!-- Collaborator Edit Code — creator only; hides when joining via code -->
+        {#if !isCollaborator}
         <div class="share-edit-code-section">
           <p class="edit-code-label">🔑 Collaborator Edit Code</p>
           {#if shareEditCode}
@@ -598,6 +721,7 @@
             </button>
           {/if}
         </div>
+        {/if}
       </div>
     {/if}
   </div>
@@ -668,7 +792,136 @@
     overflow-x: hidden;
     padding: 20px;
   }
-  
+
+  /* Entry view — start new or join via code */
+  .entry-view {
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .entry-intro {
+    font-size: 1rem;
+    color: #5D4037;
+    margin: 0;
+  }
+
+  .entry-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .entry-option-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    border-radius: 12px;
+    border: 2px solid #8D6E63;
+    background: #FFF8E1;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #3E2723;
+    text-align: left;
+    transition: background 0.15s;
+  }
+
+  .entry-option-btn:hover {
+    background: #FFE0B2;
+  }
+
+  .entry-option-secondary {
+    border-color: #A5D6A7;
+    background: #F1F8E9;
+    color: #1B5E20;
+  }
+
+  .entry-option-secondary:hover {
+    background: #C8E6C9;
+  }
+
+  .entry-icon {
+    font-size: 1.4rem;
+  }
+
+  .entry-label {
+    font-weight: 600;
+  }
+
+  /* Join via code view */
+  .join-view {
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .join-hint {
+    font-size: 0.95rem;
+    color: #5D4037;
+    margin: 0;
+  }
+
+  .join-input-row {
+    display: flex;
+    gap: 8px;
+  }
+
+  .join-code-input {
+    flex: 1;
+    padding: 10px 14px;
+    border: 2px solid #8D6E63;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-family: monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: #FFF8E1;
+  }
+
+  .join-code-input:focus {
+    outline: none;
+    border-color: #F57F17;
+  }
+
+  .join-load-btn {
+    padding: 10px 18px;
+    background: #388E3C;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .join-load-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .join-error {
+    color: #C62828;
+    font-size: 0.85rem;
+    margin: 0;
+  }
+
+  .join-back-link {
+    background: none;
+    border: none;
+    color: #8D6E63;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    text-decoration: underline;
+  }
+
   /* Success view */
   .success-view {
     padding: 40px;
