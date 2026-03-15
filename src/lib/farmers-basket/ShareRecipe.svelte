@@ -7,9 +7,10 @@
   interface Props {
     onclose: () => void;
     onsubmit?: () => void;
+    joinCode?: string;
   }
   
-  let { onclose, onsubmit }: Props = $props();
+  let { onclose, onsubmit, joinCode }: Props = $props();
   
   // Submission state
   let isSubmitting = $state(false);
@@ -30,6 +31,14 @@
   // Collaborator state — set when joining via edit code
   let isCollaborator = $state(false);
   let collabCode = $state('');
+
+  // Auto-enter join flow if a joinCode prop was passed in (e.g. from /join redirect)
+  onMount(() => {
+    if (joinCode) {
+      collabCode = joinCode.toUpperCase().trim();
+      entryView = 'join';
+    }
+  });
   let collabCodeError = $state<string | null>(null);
   let collabCodeLoading = $state(false);
   let collabInitialData = $state<Record<string, unknown> | null>(null);
@@ -170,6 +179,32 @@
       shareCodeCopied = true;
       setTimeout(() => { shareCodeCopied = false; }, 2000);
     });
+  }
+
+  let canNativeShare = $state(typeof navigator !== 'undefined' && !!navigator.share);
+
+  async function handleShareCode() {
+    if (!shareEditCode) return;
+    const joinUrl = `${window.location.origin}/join?code=${shareEditCode}`;
+    try {
+      await navigator.share({
+        title: 'Collaborate on my recipe',
+        text: `Use code ${shareEditCode} to collaborate on my recipe draft.`,
+        url: joinUrl
+      });
+    } catch {
+      // User cancelled or share failed — fall through silently
+    }
+  }
+
+  function handleEmailCode() {
+    if (!shareEditCode) return;
+    const joinUrl = `${window.location.origin}/join?code=${shareEditCode}`;
+    const subject = encodeURIComponent('Collaborate on my recipe');
+    const body = encodeURIComponent(
+      `I'd like you to help with a recipe I'm working on.\n\nUse this code in the Daily Food Chain app: ${shareEditCode}\n\nOr open this link: ${joinUrl}`
+    );
+    window.location.href = `mailto:?subject=${subject}&body=${body}`;
   }
 
   let revokingShareCode = $state(false);
@@ -736,6 +771,10 @@
               <button class="copy-code-btn" onclick={handleCopyShareCode}>
                 {shareCodeCopied ? '✓ Copied' : 'Copy'}
               </button>
+              {#if canNativeShare}
+                <button class="share-code-btn" onclick={handleShareCode}>Share</button>
+              {/if}
+              <button class="email-code-btn" onclick={handleEmailCode}>Email</button>
               <button class="revoke-code-btn" onclick={handleRevokeShareCode} disabled={revokingShareCode}>
                 {revokingShareCode ? 'Revoking...' : 'Revoke'}
               </button>
@@ -744,7 +783,7 @@
               <p class="edit-code-error">{shareCodeError}</p>
             {/if}
           {:else}
-            <p class="edit-code-hint">Generate a code you can share with collaborators. Save a draft first if you haven't already.</p>
+            <p class="edit-code-hint">Generate a code you can share with collaborators. Save a draft first if you haven't already. At minimum, a Recipe Name is required to save a draft.</p>
             {#if shareCodeError}
               <p class="edit-code-error">{shareCodeError}</p>
             {/if}
@@ -1164,6 +1203,36 @@
 
   .copy-code-btn:hover {
     background: #A0522D;
+  }
+
+  .share-code-btn {
+    padding: 4px 10px;
+    background: #5b7fa6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .share-code-btn:hover {
+    background: #4a6d93;
+  }
+
+  .email-code-btn {
+    padding: 4px 10px;
+    background: #5b7fa6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .email-code-btn:hover {
+    background: #4a6d93;
   }
 
   .revoke-code-btn {

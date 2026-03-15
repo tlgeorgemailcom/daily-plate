@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount, onDestroy } from 'svelte';
   import { get } from 'svelte/store';
+  import { page } from '$app/stores';
   import { 
     createGameState, LEVELS, GRID_WIDTH, GRID_HEIGHT, TOTAL_HEIGHT, PANTRY_HEIGHT,
     GRID_COLS, GRID_ROWS, CELL_SIZE, pixelToGrid, gridToPixel, snapToGrid
@@ -27,6 +28,7 @@
   
   // Share recipe modal state
   let showShareRecipe = $state(false);
+  let initialJoinCode = $state('');
   
   // Rules modal state
   let showRules = $state(false);
@@ -377,6 +379,14 @@
     
     // Load community recipes
     loadCommunityRecipes();
+
+    // Open ShareRecipe in join mode if ?joinCode= is present in the URL
+    const urlJoinCode = $page.url.searchParams.get('joinCode');
+    if (urlJoinCode) {
+      initialJoinCode = urlJoinCode;
+      showShareRecipe = true;
+      showRecipeBook = false;
+    }
   });
   
   // Load approved community recipes from server (premium only)
@@ -974,8 +984,9 @@
 <!-- Share Recipe Modal -->
 {#if showShareRecipe}
   <ShareRecipe 
-    onclose={() => { showShareRecipe = false; showRecipeBook = true; }}
+    onclose={() => { showShareRecipe = false; showRecipeBook = true; initialJoinCode = ''; }}
     onsubmit={() => { /* Recipe submitted successfully */ }}
+    joinCode={initialJoinCode || undefined}
   />
 {/if}
 
