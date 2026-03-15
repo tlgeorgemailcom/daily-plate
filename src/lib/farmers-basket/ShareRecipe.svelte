@@ -297,13 +297,31 @@
   let showNutrientInfo = $state(false);
   let showRankingsInfo = $state(false);
 
-  // Player authentication state
-  let playerId = $state<string | null>(null);
-  let isLoggedIn = $state(false);
-  let isSubscriber = $state(false);
-  
   // Player/subscriber detection - must match playerStore.ts
   const PLAYER_KEY = 'dailyfoodchain_player';
+
+  // Player authentication state — initialized synchronously to avoid flash of
+  // the 'Subscription Required' screen before onMount fires
+  let playerId = $state<string | null>(
+    typeof window !== 'undefined' ? (() => {
+      try {
+        const p = localStorage.getItem(PLAYER_KEY);
+        return p ? (JSON.parse(p).id || null) : null;
+      } catch { return null; }
+    })() : null
+  );
+  let isLoggedIn = $state(playerId !== null);
+  let isSubscriber = $state(
+    typeof window !== 'undefined' ? (() => {
+      try {
+        const p = localStorage.getItem(PLAYER_KEY);
+        if (!p) return false;
+        const parsed = JSON.parse(p);
+        const tier = parsed.tier || parsed.subscription_tier || 'free';
+        return tier !== 'free';
+      } catch { return false; }
+    })() : false
+  );
   
   function getPlayerId(): string | null {
     if (typeof window === 'undefined') return null;
