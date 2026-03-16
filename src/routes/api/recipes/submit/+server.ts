@@ -35,6 +35,15 @@ export const PATCH: RequestHandler = async ({ request }) => {
     if (isCollaborator && submit) {
       return json({ error: 'Only the recipe creator can submit for approval' }, { status: 403 });
     }
+    if (isCreator && submit) {
+      const creator = await queryOne<{ subscription_tier: string }>(
+        'SELECT subscription_tier FROM players WHERE id = ?',
+        [playerId]
+      );
+      if (!creator || creator.subscription_tier === 'free') {
+        return json({ error: 'Subscription required to submit recipes' }, { status: 403 });
+      }
+    }
 
     const newStatus = submit ? 'pending' : 'draft';
 
