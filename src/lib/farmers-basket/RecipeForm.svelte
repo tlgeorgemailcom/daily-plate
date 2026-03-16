@@ -506,7 +506,6 @@
   <!-- Ingredients Section -->
   <div class="form-section">
     <h3 class="section-title">🥗 Ingredients</h3>
-    <p class="section-hint">List all ingredients with quantities (e.g., "2 cups flour", "1 tsp salt")</p>
     
     {#if nutritionMode}
       <div class="link-mode-selector">
@@ -650,6 +649,9 @@
     {/if}
 
     <div class="ingredients-list">
+      {#if !nutritionMode || linkMode !== 'dish'}
+        <p class="section-hint" style="margin: 0 0 8px 0;">List all ingredients with quantities (e.g., "2 cups flour", "1 tsp salt")</p>
+      {/if}
       {#each ingredients as ingredient, i (ingredient.id)}
         <div class="ingredient-entry">
           <div class="ingredient-row">
