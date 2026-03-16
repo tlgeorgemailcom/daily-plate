@@ -2,6 +2,7 @@ import { FOODS } from '$lib/data/food-portions';
 
 // Built once per cold start — avoids O(n) scan per ingredient
 const FOOD_MAP = new Map(FOODS.map(f => [f.word, f]));
+console.log('[calcNutrition] FOOD_MAP ready, size:', FOOD_MAP.size);
 
 export interface NutritionJson {
   perServing: {

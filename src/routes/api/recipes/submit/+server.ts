@@ -52,6 +52,9 @@ export const PATCH: RequestHandler = async ({ request }) => {
       ? calcNutritionJson(fields.ingredients, fields.linkType, fields.servings)
       : null;
 
+    // Debug: log what we received and computed (remove after verified)
+    console.log('[submit PATCH] linkType:', fields.linkType, '| ingredients count:', fields.ingredients?.length, '| nutritionComplete:', fields.nutritionComplete, '| nutritionJson:', nutritionJson ? 'computed' : 'null');
+
     if (fields.recipeName) {
       await execute(
         `UPDATE recipes SET
@@ -83,7 +86,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
       await execute('UPDATE recipes SET status = ? WHERE id = ?', [newStatus, recipeId]);
     }
 
-    return json({ success: true, id: recipeId, status: newStatus });
+    return json({ success: true, id: recipeId, status: newStatus, nutritionJson });
   } catch (err) {
     console.error('Failed to update draft recipe:', err);
     return json({ error: 'Failed to update draft' }, { status: 500 });
