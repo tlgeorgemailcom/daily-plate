@@ -862,7 +862,7 @@
                   {/each}
                 </ul>
                 {#if game.currentLevel.nutritionJson}
-                  <p class="recipe-nutrition">🔬 Per serving: {game.currentLevel.nutritionJson.perServing.cal} cal&nbsp;|&nbsp;{game.currentLevel.nutritionJson.perServing.pro}g protein&nbsp;|&nbsp;{game.currentLevel.nutritionJson.perServing.fat}g fat&nbsp;|&nbsp;{game.currentLevel.nutritionJson.perServing.carb}g carbs&nbsp;|&nbsp;{game.currentLevel.nutritionJson.perServing.fib}g fiber</p>
+                  <p class="recipe-nutrition">🔬 Per serving: {game.currentLevel.nutritionJson.perServing.cal} cal&nbsp;|&nbsp;{game.currentLevel.nutritionJson.perServing.pro}g protein&nbsp;|&nbsp;{game.currentLevel.nutritionJson.perServing.fat}g fat&nbsp;|&nbsp;{game.currentLevel.nutritionJson.perServing.carb}g carbs&nbsp;|&nbsp;{game.currentLevel.nutritionJson.perServing.fib}g fiber&nbsp;|&nbsp;{game.currentLevel.nutritionJson.perServing.sug}g sugar&nbsp;|&nbsp;{game.currentLevel.nutritionJson.perServing.h2o}g water</p>
                 {/if}
               {:else}
                 {@const foodCounts = game.currentLevel.recipe.reduce((acc, food) => {

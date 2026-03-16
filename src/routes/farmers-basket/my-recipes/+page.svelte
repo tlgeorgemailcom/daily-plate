@@ -18,7 +18,7 @@
     moderatorNote?: string | null;
     submittedAt: string;
     linkType?: string | null;
-    nutritionJson?: { perServing: { cal: number; pro: number; fat: number; carb: number; fib: number } } | null;
+    nutritionJson?: { perServing: { cal: number; pro: number; fat: number; carb: number; fib: number; sug: number; h2o: number } } | null;
   }
   
   let recipes = $state<MyRecipe[]>([]);
@@ -544,7 +544,7 @@
             </div>
 
             {#if recipe.nutritionJson}
-              <p class="recipe-nutrition">🔬 Per serving: {recipe.nutritionJson.perServing.cal} cal&nbsp;|&nbsp;{recipe.nutritionJson.perServing.pro}g protein&nbsp;|&nbsp;{recipe.nutritionJson.perServing.fat}g fat&nbsp;|&nbsp;{recipe.nutritionJson.perServing.carb}g carbs&nbsp;|&nbsp;{recipe.nutritionJson.perServing.fib}g fiber</p>
+              <p class="recipe-nutrition">🔬 Per serving: {recipe.nutritionJson.perServing.cal} cal&nbsp;|&nbsp;{recipe.nutritionJson.perServing.pro}g protein&nbsp;|&nbsp;{recipe.nutritionJson.perServing.fat}g fat&nbsp;|&nbsp;{recipe.nutritionJson.perServing.carb}g carbs&nbsp;|&nbsp;{recipe.nutritionJson.perServing.fib}g fiber&nbsp;|&nbsp;{recipe.nutritionJson.perServing.sug}g sugar&nbsp;|&nbsp;{recipe.nutritionJson.perServing.h2o}g water</p>
             {/if}
             
             {#if recipe.status === 'pending'}
