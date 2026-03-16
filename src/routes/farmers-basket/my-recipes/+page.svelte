@@ -10,13 +10,14 @@
     dietaryCategory: string;
     prepTime: string;
     servings: string;
-    ingredients: { name: string; quantity: string }[];
+    ingredients: { name: string; quantity: string; foodWord?: string; ndbNo?: string; portionDesc?: string; portionGrams?: number; servingCount?: number; exempt?: boolean; isDish?: boolean }[];
     instructions: string[];
     imageUrl: string | null;
     submitterName: string;
     status: 'pending' | 'approved' | 'rejected' | 'needs_changes';
     moderatorNote?: string | null;
     submittedAt: string;
+    linkType?: string | null;
     nutritionJson?: { perServing: { cal: number; pro: number; fat: number; carb: number; fib: number } } | null;
   }
   
@@ -242,25 +243,48 @@
         imageUrl = null;
       }
       
+      const isLinked = data.nutritionComplete === true;
+      const linkMode = data.linkMode ?? 'ingredient';
+
+      let ingredientsPayload: Record<string, unknown>[];
+      if (isLinked && (linkMode === 'dish' || linkMode === 'mixed') && data.dishLink) {
+        const dishEntry = { isDish: true, ...data.dishLink };
+        if (linkMode === 'dish') {
+          ingredientsPayload = [
+            dishEntry,
+            ...data.ingredients.map(i => ({ name: i.name.trim(), quantity: i.quantity.trim() }))
+          ];
+        } else {
+          ingredientsPayload = [
+            dishEntry,
+            ...data.ingredients.map(i => ({
+              name: i.name.trim(),
+              quantity: i.quantity.trim(),
+              ...(i.foodWord ? { foodWord: i.foodWord, ndbNo: i.ndbNo, portionDesc: i.portionDesc, portionGrams: i.portionGrams, servingCount: i.servingCount } : {}),
+              ...(i.exempt ? { exempt: true } : {})
+            }))
+          ];
+        }
+      } else {
+        ingredientsPayload = data.ingredients.filter(i => i.name.trim()).map(i => ({
+          name: i.name.trim(),
+          quantity: i.quantity.trim(),
+          ...(isLinked ? {
+            ...(i.foodWord ? { foodWord: i.foodWord, ndbNo: i.ndbNo, portionDesc: i.portionDesc, portionGrams: i.portionGrams, servingCount: i.servingCount } : {}),
+            ...(i.exempt ? { exempt: true } : {})
+          } : {})
+        }));
+      }
+
       const updates: Record<string, unknown> = {
         recipeName: data.recipeName,
         category: data.category,
         dietaryCategory: data.dietaryCategory,
         prepTime: data.prepTime,
         servings: data.servings,
-        ingredients: data.ingredients.filter(i => i.name.trim()).map(i => ({
-          name: i.name,
-          quantity: i.quantity,
-          // Preserve nutrition links if present
-          ...(i.foodWord ? {
-            foodWord: i.foodWord,
-            ndbNo: i.ndbNo,
-            portionDesc: i.portionDesc,
-            portionGrams: i.portionGrams,
-            servingCount: i.servingCount
-          } : {})
-        })),
-        instructions: data.instructions.filter(i => i.text.trim()).map(i => i.text)
+        ingredients: ingredientsPayload,
+        instructions: data.instructions.filter(i => i.text.trim()).map(i => i.text),
+        ...(isLinked && data.linkMode ? { linkType: data.linkMode } : {})
       };
       
       // Only include imageUrl if it changed
@@ -423,12 +447,25 @@
             submitterName: editingRecipe.submitterName,
             prepTime: editingRecipe.prepTime,
             servings: editingRecipe.servings,
-            ingredients: editingRecipe.ingredients.map((ing, i) => ({
+            linkMode: (editingRecipe.linkType as any) ?? 'ingredient',
+            ...((() => {
+              const dish = editingRecipe.ingredients.find(i => i.isDish);
+              return dish ? { dishLink: { foodWord: dish.foodWord!, ndbNo: dish.ndbNo!, portionDesc: dish.portionDesc!, portionGrams: dish.portionGrams!, servingCount: dish.servingCount! } } : {};
+            })()),
+            ingredients: editingRecipe.ingredients.filter(i => !i.isDish).map((ing, i) => ({
               id: i + 1,
               name: ing.name,
               quantity: ing.quantity,
               gameFood: '',
-              animal: ''
+              animal: '',
+              ...(ing.foodWord ? {
+                foodWord: ing.foodWord,
+                ndbNo: ing.ndbNo,
+                portionDesc: ing.portionDesc,
+                portionGrams: ing.portionGrams,
+                servingCount: ing.servingCount
+              } : {}),
+              ...(ing.exempt ? { exempt: true } : {})
             })),
             instructions: editingRecipe.instructions.map((text, i) => ({
               id: i + 1,

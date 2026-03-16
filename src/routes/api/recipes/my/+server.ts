@@ -1,6 +1,7 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { queryAll, execute } from '$lib/server/turso';
+import { calcNutritionJson } from '$lib/server/calcNutrition';
 
 interface RecipeRow {
   id: string;
@@ -19,6 +20,7 @@ interface RecipeRow {
   created_at: string;
   moderator_note: string | null;
   nutrition_json: string | null;
+  link_type: string | null;
 }
 
 // GET: Fetch recipes by IDs (anonymous) OR by player_id (subscribers)
@@ -35,7 +37,7 @@ export const GET: RequestHandler = async ({ url }) => {
       const rows = await queryAll<RecipeRow>(
         `SELECT id, type, name, category, dietary_category, prep_time, servings,
                 recipe_ingredients, recipe_instructions, image_url, submitted_by, submitter_name, status, created_at,
-                moderator_note, nutrition_json
+                moderator_note, nutrition_json, link_type
          FROM recipes 
          WHERE submitted_by = ? AND type = 'community'
          ORDER BY created_at DESC`,
@@ -56,6 +58,7 @@ export const GET: RequestHandler = async ({ url }) => {
         status: row.status,
         moderatorNote: row.moderator_note || null,
         submittedAt: row.created_at,
+        linkType: row.link_type ?? null,
         nutritionJson: row.nutrition_json ? JSON.parse(row.nutrition_json) : null
       }));
       
@@ -80,7 +83,7 @@ export const GET: RequestHandler = async ({ url }) => {
     const rows = await queryAll<RecipeRow>(
       `SELECT id, type, name, category, dietary_category, prep_time, servings,
               recipe_ingredients, recipe_instructions, image_url, submitted_by, submitter_name, status, created_at,
-              moderator_note, nutrition_json
+              moderator_note, nutrition_json, link_type
        FROM recipes 
        WHERE id IN (${placeholders}) AND type = 'community'
        ORDER BY created_at DESC`,
@@ -102,7 +105,7 @@ export const GET: RequestHandler = async ({ url }) => {
       status: row.status,
       moderatorNote: row.moderator_note || null,
       submittedAt: row.created_at,
-      nutritionJson: row.nutrition_json ? JSON.parse(row.nutrition_json) : null
+        linkType: row.link_type ?? null,
     }));
     
     return json({ recipes });
@@ -148,10 +151,23 @@ export const PATCH: RequestHandler = async ({ request }) => {
     
     // Reset approved recipes back to pending (re-approval required)
     const shouldResetToPending = recipe.status === 'needs_changes' || recipe.status === 'approved';
-    
+
+    // Compute nutrition_json if linkType is provided
+    const linkType = typeof updates.linkType === 'string' ? updates.linkType : null;
+    const rawIngs: unknown[] = Array.isArray(updates.ingredients) ? updates.ingredients : [];
+    let nutritionJson: string | null = null;
+    if (linkType && rawIngs.length > 0) {
+      const computed = calcNutritionJson(
+        rawIngs as Parameters<typeof calcNutritionJson>[0],
+        linkType,
+        typeof updates.servings === 'string' ? updates.servings : null
+      );
+      if (computed) nutritionJson = JSON.stringify(computed);
+    }
+
     // Update the recipe and reset to pending (clears any needs_changes or approved state)
     const sql = shouldResetToPending
-      ? `UPDATE recipes SET 
+      ? `UPDATE recipes SET
           name = COALESCE(?, name),
           category = COALESCE(?, category),
           dietary_category = COALESCE(?, dietary_category),
@@ -160,10 +176,12 @@ export const PATCH: RequestHandler = async ({ request }) => {
           recipe_ingredients = COALESCE(?, recipe_ingredients),
           recipe_instructions = COALESCE(?, recipe_instructions),
           image_url = COALESCE(?, image_url),
+          link_type = COALESCE(?, link_type),
+          nutrition_json = ?,
           status = 'pending',
           moderator_note = NULL
          WHERE id = ?`
-      : `UPDATE recipes SET 
+      : `UPDATE recipes SET
           name = COALESCE(?, name),
           category = COALESCE(?, category),
           dietary_category = COALESCE(?, dietary_category),
@@ -172,6 +190,8 @@ export const PATCH: RequestHandler = async ({ request }) => {
           recipe_ingredients = COALESCE(?, recipe_ingredients),
           recipe_instructions = COALESCE(?, recipe_instructions),
           image_url = COALESCE(?, image_url),
+          link_type = COALESCE(?, link_type),
+          nutrition_json = ?,
           status = 'pending'
          WHERE id = ?`;
     await execute(sql,
@@ -184,14 +204,16 @@ export const PATCH: RequestHandler = async ({ request }) => {
         updates.ingredients ? JSON.stringify(updates.ingredients) : null,
         updates.instructions ? JSON.stringify(updates.instructions) : null,
         updates.imageUrl || null,
+        linkType,
+        nutritionJson,
         id
       ]
     );
-    
+
     console.log(`✏️ Player edited pending recipe: "${updates.recipeName || id}"`);
-    
-    return json({ 
-      success: true, 
+
+    return json({
+      success: true,
       id,
       message: 'Recipe updated!'
     });
