@@ -914,6 +914,8 @@
         dietaryCategory: data.dietaryCategory,
         prepTime: data.prepTime,
         servings: data.servings,
+        linkMode: data.linkMode ?? 'ingredient',
+        ...(data.dishLink ? { dishLink: data.dishLink } : {}),
         ingredients: data.ingredients.filter(i => i.name.trim()).map(i => ({
           name: i.name,
           quantity: i.quantity,
@@ -923,7 +925,8 @@
             portionDesc: i.portionDesc,
             portionGrams: i.portionGrams,
             servingCount: i.servingCount
-          } : {})
+          } : {}),
+          ...(i.exempt ? { exempt: true } : {})
         })),
         instructions: data.instructions.filter(i => i.text.trim()).map(i => i.text)
       };

@@ -1,6 +1,7 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { execute, queryAll, queryOne } from '$lib/server/turso';
+import { calcNutritionJson } from '$lib/server/calcNutrition';
 
 // Safe migration — add draft columns if they don't exist yet
 async function ensureDraftColumns() {
@@ -88,10 +89,28 @@ export const POST: RequestHandler = async ({ request }) => {
     if (recipe.status !== 'approved') {
       return json({ error: 'Recipe is not approved — drafts only apply to live recipes' }, { status: 409 });
     }
-    await execute(
-      `UPDATE recipes SET draft_data = ?, draft_updated_at = ?, draft_seen_by_creator = 1, draft_is_creator_draft = 1 WHERE id = ?`,
-      [JSON.stringify(draftData), new Date().toISOString(), recipeId]
-    );
+    // Compute nutrition_json from draft data if all ingredients are linked
+    const linkType = typeof draftData?.linkMode === 'string' ? draftData.linkMode : null;
+    const rawIngs: unknown[] = Array.isArray(draftData?.ingredients) ? draftData.ingredients : [];
+    let nutritionJson: string | null = null;
+    if (linkType && rawIngs.length > 0) {
+      const dishLinkEntry = draftData?.dishLink ? { isDish: true, ...draftData.dishLink } : null;
+      const ingRows = (dishLinkEntry ? [dishLinkEntry, ...rawIngs] : rawIngs) as Parameters<typeof calcNutritionJson>[0];
+      const computed = calcNutritionJson(ingRows, linkType, draftData?.servings ?? null);
+      if (computed) nutritionJson = JSON.stringify(computed);
+    }
+
+    if (nutritionJson) {
+      await execute(
+        `UPDATE recipes SET draft_data = ?, draft_updated_at = ?, draft_seen_by_creator = 1, draft_is_creator_draft = 1, nutrition_json = ? WHERE id = ?`,
+        [JSON.stringify(draftData), new Date().toISOString(), nutritionJson, recipeId]
+      );
+    } else {
+      await execute(
+        `UPDATE recipes SET draft_data = ?, draft_updated_at = ?, draft_seen_by_creator = 1, draft_is_creator_draft = 1 WHERE id = ?`,
+        [JSON.stringify(draftData), new Date().toISOString(), recipeId]
+      );
+    }
     return json({ success: true });
   }
 
