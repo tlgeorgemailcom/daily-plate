@@ -649,9 +649,7 @@
     {/if}
 
     <div class="ingredients-list">
-      {#if !nutritionMode || linkMode !== 'dish'}
-        <p class="section-hint" style="margin: 0 0 8px 0;">List all ingredients with quantities (e.g., "2 cups flour", "1 tsp salt")</p>
-      {/if}
+      <p class="section-hint" style="margin: 0 0 8px 0;">List all ingredients with quantities (e.g., "2 cups flour", "1 tsp salt")</p>
       {#each ingredients as ingredient, i (ingredient.id)}
         <div class="ingredient-entry">
           <div class="ingredient-row">
