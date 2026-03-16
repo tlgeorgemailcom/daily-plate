@@ -156,6 +156,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
     const linkType = typeof updates.linkType === 'string' ? updates.linkType : null;
     const rawIngs: unknown[] = Array.isArray(updates.ingredients) ? updates.ingredients : [];
     let nutritionJson: string | null = null;
+    console.log('[my PATCH] linkType:', linkType, '| ingCount:', rawIngs.length, '| sample:', JSON.stringify(rawIngs[0]));
     if (linkType && rawIngs.length > 0) {
       const computed = calcNutritionJson(
         rawIngs as Parameters<typeof calcNutritionJson>[0],
@@ -164,6 +165,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
       );
       if (computed) nutritionJson = JSON.stringify(computed);
     }
+    console.log('[my PATCH] nutritionJson:', nutritionJson ? 'computed' : 'null');
 
     // Update the recipe and reset to pending (clears any needs_changes or approved state)
     const sql = shouldResetToPending
