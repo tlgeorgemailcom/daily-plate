@@ -55,6 +55,7 @@ CREATE TABLE recipes (
   created_at TEXT DEFAULT (datetime('now')),
   edited_at TEXT,
   edited_by TEXT,
+  link_type TEXT,                   -- 'ingredient' | 'dish' | 'mixed' | NULL (unlinked)
   FOREIGN KEY (submitted_by) REFERENCES players(id)
 );
 

@@ -45,6 +45,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
           prep_time = ?, servings = ?,
           recipe_ingredients = ?, recipe_instructions = ?,
           image_url = COALESCE(?, image_url),
+          link_type = COALESCE(?, link_type),
           status = ?
         WHERE id = ?`,
         [
@@ -56,6 +57,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
           JSON.stringify(fields.ingredients || []),
           JSON.stringify(fields.instructions || []),
           fields.imageUrl || null,
+          fields.linkType || null,
           newStatus,
           recipeId
         ]
@@ -122,9 +124,9 @@ export const POST: RequestHandler = async ({ request }) => {
         id, type, name, category, dietary_category,
         prep_time, servings,
         recipe_ingredients, recipe_instructions,
-        image_url,
+        image_url, link_type,
         submitted_by, submitter_name, status, created_at
-      ) VALUES (?, 'community', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))`,
+      ) VALUES (?, 'community', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))`,
       [
         recipeId,
         body.recipeName,
@@ -135,6 +137,7 @@ export const POST: RequestHandler = async ({ request }) => {
         JSON.stringify(body.ingredients),
         JSON.stringify(body.instructions),
         body.imageUrl || null,
+        body.linkType || null,
         submittedBy,
         submitterName,
         status

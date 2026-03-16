@@ -18,6 +18,7 @@
     portionDesc?: string;    // e.g. "1 cup"
     portionGrams?: number;   // grams per one portion
     servingCount?: number;   // number of portions used in recipe
+    exempt?: boolean;        // explicitly marked as not nutritionally significant
   }
   
   export interface RecipeInstruction {
@@ -36,6 +37,8 @@
     instructions: RecipeInstruction[];
     foodSupply?: Record<FoodType, number>; // How many of each food available in game
     nutritionComplete?: boolean;           // true when all ingredients have nutrition links
+    linkMode?: 'ingredient' | 'dish' | 'mixed';
+    dishLink?: { foodWord: string; ndbNo: string; portionDesc: string; portionGrams: number; servingCount: number };
   }
   
   // Props
@@ -112,7 +115,8 @@
           ndbNo: ing.ndbNo,
           portionDesc: ing.portionDesc,
           portionGrams: ing.portionGrams,
-          servingCount: ing.servingCount
+          servingCount: ing.servingCount,
+          exempt: ing.exempt
         }))
       : [{ id: 1, name: '', quantity: '', gameFood: '', animal: '' }]
   );
@@ -131,6 +135,20 @@
   // Initialize food supply (default 3 of each selected food)
   let foodSupply = $state<Record<FoodType, number>>(initialData.foodSupply || {} as Record<FoodType, number>);
 
+  // ─── Link mode ──────────────────────────────────────────────────────────────
+  let linkMode = $state<'ingredient' | 'dish' | 'mixed'>(
+    (initialData as RecipeFormData).linkMode ?? 'ingredient'
+  );
+  // ─── Dish-level link state (for 'dish' and 'mixed' modes) ───────────────────
+  let dishSearchOpen = $state(false);
+  let dishSearchQ = $state('');
+  let dishPendingFood = $state<FoodData | null>(null);
+  let dishPendingPortionIdx = $state(0);
+  let dishPendingCount = $state(1);
+  let dishCustomGrams = $state<number | null>(null);
+  let dishLink = $state<{ foodWord: string; ndbNo: string; portionDesc: string; portionGrams: number; servingCount: number } | null>(
+    (initialData as RecipeFormData).dishLink ?? null
+  );
   // ─── Nutrition linking state (keyed by ingredient id) ───────────────────────
   let nutritionOpen = $state<Record<number, boolean>>({});
   let nutritionSearchQ = $state<Record<number, string>>({});
@@ -241,12 +259,59 @@
     } : i);
   }
 
+  function setLinkMode(mode: 'ingredient' | 'dish' | 'mixed') {
+    linkMode = mode;
+    if (mode === 'ingredient') {
+      dishLink = null;
+      dishSearchOpen = false;
+    }
+  }
+
+  function toggleExempt(ingId: number) {
+    ingredients = ingredients.map(i => i.id === ingId ? { ...i, exempt: !i.exempt } : i);
+  }
+
+  function confirmDishLink() {
+    if (!dishPendingFood) return;
+    const customG = dishCustomGrams;
+    const count = dishPendingCount ?? 1;
+    let portionDesc: string;
+    let portionGrams: number;
+    if (customG && customG > 0) {
+      portionDesc = 'g';
+      portionGrams = customG;
+    } else {
+      const portionIdx = dishPendingPortionIdx ?? (dishPendingFood.portions.length > 1 ? 1 : 0);
+      const portion = dishPendingFood.portions[portionIdx] ?? dishPendingFood.portions[0];
+      portionDesc = portion.desc;
+      portionGrams = portion.gm;
+    }
+    dishLink = {
+      foodWord: dishPendingFood.word,
+      ndbNo: dishPendingFood.ndb,
+      portionDesc,
+      portionGrams,
+      servingCount: count
+    };
+    dishSearchOpen = false;
+    dishPendingFood = null;
+  }
+
   let nutritionLinkedCount = $derived(
     ingredients.filter(i => i.name.trim() && i.foodWord && i.portionGrams).length
   );
+  let nutritionExemptCount = $derived(
+    ingredients.filter(i => i.name.trim() && i.exempt && !i.foodWord).length
+  );
   let nutritionTotalCount = $derived(ingredients.filter(i => i.name.trim()).length);
   let nutritionComplete = $derived(
-    nutritionMode && nutritionTotalCount > 0 && nutritionLinkedCount === nutritionTotalCount
+    nutritionMode && nutritionTotalCount > 0 && (
+      linkMode === 'dish'
+        ? dishLink !== null
+        : linkMode === 'mixed'
+          ? dishLink !== null && ingredients.filter(i => i.name.trim()).every(i => i.foodWord || i.exempt)
+          : (nutritionLinkedCount + nutritionExemptCount) === nutritionTotalCount
+    )
   );
   // ────────────────────────────────────────────────────────────────────────────
 
@@ -300,18 +365,21 @@
       submitterName,
       prepTime,
       servings,
+      linkMode: nutritionMode ? linkMode : undefined,
+      dishLink: (linked && (linkMode === 'dish' || linkMode === 'mixed') && dishLink) ? dishLink : undefined,
       ingredients: ingredients.filter(i => i.name.trim()).map(i => ({
         id: i.id,
         name: i.name,
         quantity: i.quantity,
         gameFood: i.gameFood,
         animal: i.animal,
-        ...(linked ? {
+        ...(linked && linkMode !== 'dish' ? {
           foodWord: i.foodWord,
           ndbNo: i.ndbNo,
           portionDesc: i.portionDesc,
           portionGrams: i.portionGrams,
-          servingCount: i.servingCount
+          servingCount: i.servingCount,
+          ...(i.exempt ? { exempt: true } : {})
         } : {})
       })),
       instructions: instructions.filter(i => i.text.trim()),
@@ -337,6 +405,8 @@
     submitterName,
     prepTime,
     servings,
+    linkMode: nutritionMode ? linkMode : undefined,
+    dishLink: (nutritionMode && (linkMode === 'dish' || linkMode === 'mixed')) ? dishLink ?? undefined : undefined,
     ingredients: ingredients.filter(i => i.name.trim()),
     instructions: instructions.filter(i => i.text.trim()),
     foodSupply: moderatorMode ? foodSupply : undefined,
@@ -438,14 +508,145 @@
     <h3 class="section-title">🥗 Ingredients</h3>
     <p class="section-hint">List all ingredients with quantities (e.g., "2 cups flour", "1 tsp salt")</p>
     
-    {#if nutritionMode && nutritionTotalCount > 0}
-      <div class="nutrition-progress" class:complete={nutritionComplete}>
-        {#if nutritionComplete}
-          ✅ Nutrition complete — all {nutritionTotalCount} ingredient{nutritionTotalCount === 1 ? '' : 's'} linked
-        {:else}
-          🔗 Nutrition: {nutritionLinkedCount}/{nutritionTotalCount} ingredient{nutritionTotalCount === 1 ? '' : 's'} linked
-        {/if}
+    {#if nutritionMode}
+      <div class="link-mode-selector">
+        <span class="link-mode-label">Linking method:</span>
+        <div class="link-mode-options">
+          <button type="button" class="link-mode-btn" class:selected={linkMode === 'ingredient'} onclick={() => setLinkMode('ingredient')}>
+            ✅ Each ingredient
+          </button>
+          <button type="button" class="link-mode-btn" class:selected={linkMode === 'dish'} onclick={() => setLinkMode('dish')}>
+            🍽️ Whole dish
+          </button>
+          <button type="button" class="link-mode-btn" class:selected={linkMode === 'mixed'} onclick={() => setLinkMode('mixed')}>
+            🍽️➕ Mixed
+          </button>
+        </div>
       </div>
+
+      {#if linkMode === 'dish' || linkMode === 'mixed'}
+        <div class="dish-link-section">
+          <div class="dish-link-label">
+            {linkMode === 'dish' ? '🍽️ Link this whole recipe as a single dish:' : '🍽️ Link the primary dish:'}
+          </div>
+          {#if dishLink}
+            <div class="nutrition-badge">
+              <span class="nutrition-badge-text">
+                ✓ {FOODS.find(f => f.word === dishLink!.foodWord)?.display}
+                · {dishLink.portionDesc === 'g'
+                    ? `${dishLink.servingCount * dishLink.portionGrams}g`
+                    : `${dishLink.servingCount}×${dishLink.portionDesc}`}
+              </span>
+              <span class="nutrition-badge-edit-label">Edit:</span>
+              <button type="button" class="nutrition-relink-btn" onclick={() => { dishSearchOpen = true; dishPendingFood = FOODS.find(f => f.word === dishLink!.foodWord) ?? null; dishCustomGrams = null; }}>qty</button>
+              <button type="button" class="nutrition-relink-btn" onclick={() => { dishSearchOpen = true; dishSearchQ = ''; dishPendingFood = null; }}>food</button>
+              <button type="button" class="nutrition-unlink-btn" onclick={() => { dishLink = null; }}>✕</button>
+            </div>
+          {:else}
+            <button type="button" class="link-nutrition-btn" onclick={() => { dishSearchOpen = true; dishSearchQ = ''; dishPendingFood = null; }}>
+              🔗 Search for this dish…
+            </button>
+          {/if}
+          {#if dishSearchOpen}
+            <div class="nutrition-search-panel">
+              {#if !dishPendingFood}
+                <input
+                  type="text"
+                  class="nutrition-search-input"
+                  placeholder="e.g. pancakes, apple pie…"
+                  value={dishSearchQ}
+                  oninput={(e) => { dishSearchQ = (e.target as HTMLInputElement).value; }}
+                />
+                {@const results = searchFoods(dishSearchQ)}
+                {#if results.length > 0}
+                  <div class="nutrition-results">
+                    {#each results as food}
+                      <button type="button" class="nutrition-result-btn" onclick={() => {
+                        dishPendingFood = food;
+                        dishPendingPortionIdx = food.portions.length > 1 ? 1 : 0;
+                        dishPendingCount = 1;
+                        dishCustomGrams = null;
+                      }}>
+                        <span class="result-name">{food.display}</span>
+                        <span class="result-cal">{food.cal} cal/100g</span>
+                      </button>
+                    {/each}
+                  </div>
+                {:else if dishSearchQ.trim().length > 1}
+                  <p class="nutrition-no-results">No matches — try a shorter word</p>
+                {:else}
+                  <p class="nutrition-search-hint">Type to search 1,300+ USDA foods</p>
+                {/if}
+              {:else}
+                {@const pFood = dishPendingFood}
+                {@const namedPortions = pFood.portions.map((p, idx) => ({...p, idx})).filter(p => p.desc !== 'custom (g)')}
+                <div class="portion-picker">
+                  <div class="portion-food-name">📌 {pFood.display}</div>
+                  <div class="portion-controls">
+                    <label class="portion-label">
+                      How many?
+                      <input
+                        type="number" min="0.25" step="0.25"
+                        class="portion-count-input"
+                        value={dishPendingCount}
+                        oninput={(e) => { dishPendingCount = parseFloat((e.target as HTMLInputElement).value) || 1; }}
+                      />
+                    </label>
+                    {#if namedPortions.length > 0}
+                      <label class="portion-label">
+                        Portion size
+                        <select
+                          class="portion-select"
+                          onchange={(e) => {
+                            dishCustomGrams = null;
+                            dishPendingPortionIdx = parseInt((e.target as HTMLSelectElement).value);
+                          }}
+                        >
+                          {#each namedPortions as p}
+                            <option value={p.idx} selected={p.idx === dishPendingPortionIdx}>
+                              {p.amt} {p.desc} ({p.gm}g)
+                            </option>
+                          {/each}
+                        </select>
+                      </label>
+                    {:else}
+                      <p class="portion-note">Nutrient values per 100g</p>
+                    {/if}
+                    <label class="portion-label">
+                      Custom grams
+                      <input
+                        type="number" min="1" step="1"
+                        class="portion-custom-grams-input"
+                        placeholder="e.g. 150"
+                        value={dishCustomGrams ?? ''}
+                        oninput={(e) => {
+                          const v = parseFloat((e.target as HTMLInputElement).value);
+                          dishCustomGrams = isNaN(v) ? null : v;
+                        }}
+                      />
+                    </label>
+                  </div>
+                  <div class="portion-actions">
+                    <button type="button" class="portion-back-btn" onclick={() => { dishPendingFood = null; }}>← Back</button>
+                    <button type="button" class="portion-confirm-btn" onclick={() => confirmDishLink()}>✓ Confirm</button>
+                  </div>
+                </div>
+              {/if}
+              <button type="button" class="nutrition-cancel-btn" onclick={() => { dishSearchOpen = false; }}>Cancel</button>
+            </div>
+          {/if}
+        </div>
+      {/if}
+
+      {#if nutritionTotalCount > 0 && linkMode !== 'dish'}
+        <div class="nutrition-progress" class:complete={nutritionComplete}>
+          {#if nutritionComplete}
+            ✅ Nutrition complete — all {nutritionTotalCount} ingredient{nutritionTotalCount === 1 ? '' : 's'} accounted for
+          {:else}
+            🔗 Nutrition: {nutritionLinkedCount + nutritionExemptCount}/{nutritionTotalCount} ingredient{nutritionTotalCount === 1 ? '' : 's'} accounted for
+          {/if}
+        </div>
+      {/if}
     {/if}
 
     <div class="ingredients-list">
@@ -478,7 +679,7 @@
             </button>
           </div>
 
-          {#if nutritionMode}
+          {#if nutritionMode && linkMode !== 'dish'}
             <div class="nutrition-row">
               {#if ingredient.foodWord}
                 <div class="nutrition-badge">
@@ -493,10 +694,20 @@
                   <button type="button" class="nutrition-relink-btn" onclick={() => openNutritionSearchFresh(ingredient)}>food</button>
                   <button type="button" class="nutrition-unlink-btn" onclick={() => unlinkNutrition(ingredient.id)}>✕</button>
                 </div>
+              {:else if ingredient.exempt}
+                <div class="exempt-badge">
+                  <span class="exempt-badge-text">⊘ Exempt</span>
+                  <button type="button" class="nutrition-unlink-btn" title="Remove exemption" onclick={() => toggleExempt(ingredient.id)}>✕</button>
+                </div>
               {:else}
-                <button type="button" class="link-nutrition-btn" onclick={() => openNutritionSearch(ingredient)}>
-                  🔗 Link nutrition
-                </button>
+                <div class="nutrition-actions-row">
+                  <button type="button" class="link-nutrition-btn" onclick={() => openNutritionSearch(ingredient)}>
+                    🔗 Link nutrition
+                  </button>
+                  <button type="button" class="exempt-btn" title="Mark as not nutritionally significant (spices, leavening agents, etc.)" onclick={() => toggleExempt(ingredient.id)}>
+                    Exempt
+                  </button>
+                </div>
               {/if}
 
               {#if nutritionOpen[ingredient.id]}
@@ -1407,5 +1618,109 @@
     font-size: 0.8rem;
     cursor: pointer;
     text-decoration: underline;
+  }
+
+  /* ── Link mode selector ─────────────────────────────────────────────────── */
+
+  .link-mode-selector {
+    margin-bottom: 10px;
+  }
+
+  .link-mode-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #666;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .link-mode-options {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .link-mode-btn {
+    padding: 5px 12px;
+    background: #F5F5F5;
+    border: 1px solid #DDD;
+    border-radius: 16px;
+    font-size: 0.82rem;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .link-mode-btn:hover {
+    border-color: #4CAF50;
+    color: #2E7D32;
+    background: #F1F8E9;
+  }
+
+  .link-mode-btn.selected {
+    background: #E8F5E9;
+    border-color: #4CAF50;
+    color: #2E7D32;
+    font-weight: 600;
+  }
+
+  .dish-link-section {
+    background: #FAFAFA;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .dish-link-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #5D4037;
+  }
+
+  /* ── Exempt ─────────────────────────────────────────────────────────────── */
+
+  .nutrition-actions-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .exempt-btn {
+    padding: 4px 10px;
+    background: none;
+    border: 1px dashed #BDBDBD;
+    border-radius: 6px;
+    color: #888;
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .exempt-btn:hover {
+    border-color: #FF8F00;
+    color: #E65100;
+    background: #FFF8E1;
+  }
+
+  .exempt-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 8px;
+    background: #FFF8E1;
+    border: 1px solid #FFD54F;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    color: #E65100;
+  }
+
+  .exempt-badge-text {
+    flex: 1;
+    min-width: 0;
   }
 </style>

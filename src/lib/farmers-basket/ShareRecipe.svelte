@@ -441,6 +441,42 @@
 
   // Shared helper — builds the submission payload from form data
   function buildPayload(data: RecipeFormData, imageUrl: string | null): Record<string, unknown> {
+    const isLinked = data.nutritionComplete === true;
+    const linkMode = data.linkMode ?? 'ingredient';
+
+    let ingredientsPayload: Record<string, unknown>[];
+    if (isLinked && (linkMode === 'dish' || linkMode === 'mixed') && data.dishLink) {
+      const dishEntry = { isDish: true, ...data.dishLink };
+      if (linkMode === 'dish') {
+        // Dish entry + original recipe text rows (name/qty only)
+        ingredientsPayload = [
+          dishEntry,
+          ...data.ingredients.map(i => ({ name: i.name.trim(), quantity: i.quantity.trim() }))
+        ];
+      } else {
+        // Mixed: dish entry + individually-linked extra components
+        ingredientsPayload = [
+          dishEntry,
+          ...data.ingredients.map(i => ({
+            name: i.name.trim(),
+            quantity: i.quantity.trim(),
+            ...(i.foodWord ? { foodWord: i.foodWord, ndbNo: i.ndbNo, portionDesc: i.portionDesc, portionGrams: i.portionGrams, servingCount: i.servingCount } : {}),
+            ...(i.exempt ? { exempt: true } : {})
+          }))
+        ];
+      }
+    } else {
+      // Ingredient mode (or unlinked)
+      ingredientsPayload = data.ingredients.map(i => ({
+        name: i.name.trim(),
+        quantity: i.quantity.trim(),
+        ...(isLinked ? {
+          ...(i.foodWord ? { foodWord: i.foodWord, ndbNo: i.ndbNo, portionDesc: i.portionDesc, portionGrams: i.portionGrams, servingCount: i.servingCount } : {}),
+          ...(i.exempt ? { exempt: true } : {})
+        } : {})
+      }));
+    }
+
     return {
       recipeName: data.recipeName.trim(),
       category: data.category,
@@ -448,18 +484,9 @@
       submitterName: data.submitterName.trim() || 'Anonymous',
       prepTime: data.prepTime.trim(),
       servings: data.servings.trim(),
-      ingredients: data.ingredients.map(i => ({
-        name: i.name.trim(),
-        quantity: i.quantity.trim(),
-        ...(data.nutritionComplete ? {
-          foodWord: i.foodWord,
-          ndbNo: i.ndbNo,
-          portionDesc: i.portionDesc,
-          portionGrams: i.portionGrams,
-          servingCount: i.servingCount
-        } : {})
-      })),
-      ...(data.nutritionComplete ? { nutritionComplete: true } : {}),
+      ingredients: ingredientsPayload,
+      ...(isLinked ? { nutritionComplete: true } : {}),
+      ...(isLinked && data.linkMode ? { linkType: data.linkMode } : {}),
       instructions: data.instructions.map(i => i.text.trim()),
       playerId,
       ...(imageUrl ? { imageUrl } : {})
