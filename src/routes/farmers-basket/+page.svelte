@@ -1476,6 +1476,7 @@
     line-height: 1.5;
   }
   
+  .ingredient-icons-win {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
