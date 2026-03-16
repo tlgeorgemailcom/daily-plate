@@ -17,6 +17,7 @@
     status: 'pending' | 'approved' | 'rejected' | 'needs_changes';
     moderatorNote?: string | null;
     submittedAt: string;
+    nutritionJson?: { perServing: { cal: number; pro: number; fat: number; carb: number; fib: number } } | null;
   }
   
   let recipes = $state<MyRecipe[]>([]);
@@ -496,6 +497,10 @@
                 </div>
               {/if}
             </div>
+
+            {#if recipe.nutritionJson}
+              <p class="recipe-nutrition">🔬 Per serving: {recipe.nutritionJson.perServing.cal} cal&nbsp;|&nbsp;{recipe.nutritionJson.perServing.pro}g protein&nbsp;|&nbsp;{recipe.nutritionJson.perServing.fat}g fat&nbsp;|&nbsp;{recipe.nutritionJson.perServing.carb}g carbs&nbsp;|&nbsp;{recipe.nutritionJson.perServing.fib}g fiber</p>
+            {/if}
             
             {#if recipe.status === 'pending'}
               <div class="recipe-actions">
@@ -652,6 +657,16 @@
 
   .recipe-card.needs-changes {
     border-left-color: #f59e0b;
+  }
+
+  .recipe-nutrition {
+    margin: 0.75rem 0 0;
+    font-size: 0.78rem;
+    color: #2a7a2a;
+    background: #f0faf0;
+    border-radius: 6px;
+    padding: 5px 10px;
+    line-height: 1.5;
   }
   
   .recipe-header {

@@ -18,6 +18,7 @@ interface RecipeRow {
   status: string;
   created_at: string;
   moderator_note: string | null;
+  nutrition_json: string | null;
 }
 
 // GET: Fetch recipes by IDs (anonymous) OR by player_id (subscribers)
@@ -33,7 +34,8 @@ export const GET: RequestHandler = async ({ url }) => {
       // Subscriber: fetch all their recipes across devices
       const rows = await queryAll<RecipeRow>(
         `SELECT id, type, name, category, dietary_category, prep_time, servings,
-                recipe_ingredients, recipe_instructions, image_url, submitted_by, submitter_name, status, created_at
+                recipe_ingredients, recipe_instructions, image_url, submitted_by, submitter_name, status, created_at,
+                moderator_note, nutrition_json
          FROM recipes 
          WHERE submitted_by = ? AND type = 'community'
          ORDER BY created_at DESC`,
@@ -53,7 +55,8 @@ export const GET: RequestHandler = async ({ url }) => {
         submitterName: row.submitter_name || row.submitted_by,
         status: row.status,
         moderatorNote: row.moderator_note || null,
-        submittedAt: row.created_at
+        submittedAt: row.created_at,
+        nutritionJson: row.nutrition_json ? JSON.parse(row.nutrition_json) : null
       }));
       
       return json({ recipes });
@@ -76,7 +79,8 @@ export const GET: RequestHandler = async ({ url }) => {
     const placeholders = ids.map(() => '?').join(', ');
     const rows = await queryAll<RecipeRow>(
       `SELECT id, type, name, category, dietary_category, prep_time, servings,
-              recipe_ingredients, recipe_instructions, image_url, submitted_by, submitter_name, status, created_at
+              recipe_ingredients, recipe_instructions, image_url, submitted_by, submitter_name, status, created_at,
+              moderator_note, nutrition_json
        FROM recipes 
        WHERE id IN (${placeholders}) AND type = 'community'
        ORDER BY created_at DESC`,
@@ -97,7 +101,8 @@ export const GET: RequestHandler = async ({ url }) => {
       submitterName: row.submitter_name || row.submitted_by,
       status: row.status,
       moderatorNote: row.moderator_note || null,
-      submittedAt: row.created_at
+      submittedAt: row.created_at,
+      nutritionJson: row.nutrition_json ? JSON.parse(row.nutrition_json) : null
     }));
     
     return json({ recipes });
