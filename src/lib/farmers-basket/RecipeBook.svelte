@@ -1471,6 +1471,9 @@
             {#if playerEditSuccess}
               <span class="save-success">✓ Submitted for re-approval!</span>
             {/if}
+            {#if selectedLevel.nutritionJson}
+              <p class="recipe-nutrition recipe-nutrition-edit">🔬 Per serving: {selectedLevel.nutritionJson.perServing.cal} cal&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.pro}g protein&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.fat}g fat&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.carb}g carbs&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.fib}g fiber</p>
+            {/if}
           </div>
 
           <div class="mod-form-container">
