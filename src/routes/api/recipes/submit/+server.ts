@@ -52,9 +52,6 @@ export const PATCH: RequestHandler = async ({ request }) => {
       ? calcNutritionJson(fields.ingredients, fields.linkType, fields.servings)
       : null;
 
-    // Debug: log what we received and computed (remove after verified)
-    console.log('[submit PATCH] linkType:', fields.linkType, '| ingredients count:', fields.ingredients?.length, '| nutritionComplete:', fields.nutritionComplete, '| nutritionJson:', nutritionJson ? 'computed' : 'null');
-
     if (fields.recipeName) {
       await execute(
         `UPDATE recipes SET

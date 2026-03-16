@@ -2,7 +2,6 @@ import { FOODS } from '$lib/data/food-portions';
 
 // Built once per cold start — avoids O(n) scan per ingredient
 const FOOD_MAP = new Map(FOODS.map(f => [f.word, f]));
-console.log('[calcNutrition] FOOD_MAP ready, size:', FOOD_MAP.size);
 
 export interface NutritionJson {
   perServing: {
@@ -44,9 +43,6 @@ export function calcNutritionJson(
   linkType: string,
   servingsStr: string | null | undefined
 ): NutritionJson | null {
-  console.log('[calcNutrition] linkType:', linkType, '| servings:', servingsStr, '| ingredient count:', ingredients.length);
-  console.log('[calcNutrition] sample ingredient:', JSON.stringify(ingredients[0]));
-
   if (linkType === 'dish') {
     const dish = ingredients.find(i => i.isDish);
     if (!dish?.foodWord || !dish.portionGrams || !dish.servingCount) return null;
@@ -80,12 +76,10 @@ export function calcNutritionJson(
   for (const ing of ingredients) {
     if (ing.exempt) continue;
     if (!ing.foodWord || !ing.portionGrams || !ing.servingCount) {
-      console.log('[calcNutrition] skip:', JSON.stringify({ name: (ing as Record<string,unknown>)['name'], exempt: ing.exempt, foodWord: ing.foodWord, portionGrams: ing.portionGrams, servingCount: ing.servingCount }));
       continue;
     }
     const food = FOOD_MAP.get(ing.foodWord);
     if (!food) {
-      console.log('[calcNutrition] FOOD_MAP miss for foodWord:', ing.foodWord);
       continue;
     }
 
