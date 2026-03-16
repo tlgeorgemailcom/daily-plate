@@ -305,7 +305,15 @@
         const err = await res.json();
         throw new Error(err.error || 'Failed to save');
       }
-      
+
+      const result = await res.json().catch(() => ({}));
+      // Update the recipe card immediately with the new nutritionJson
+      if (result.nutritionJson) {
+        recipes = recipes.map(r =>
+          r.id === editingRecipe!.id ? { ...r, nutritionJson: result.nutritionJson } : r
+        );
+      }
+
       // Reload and close editor
       await loadRecipes();
       editingRecipe = null;

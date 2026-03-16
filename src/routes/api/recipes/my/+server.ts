@@ -217,7 +217,8 @@ export const PATCH: RequestHandler = async ({ request }) => {
     return json({
       success: true,
       id,
-      message: 'Recipe updated!'
+      message: 'Recipe updated!',
+      nutritionJson: nutritionJson ? JSON.parse(nutritionJson) : null
     });
     
   } catch (err) {

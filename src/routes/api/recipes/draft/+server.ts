@@ -111,7 +111,7 @@ export const POST: RequestHandler = async ({ request }) => {
         [JSON.stringify(draftData), new Date().toISOString(), recipeId]
       );
     }
-    return json({ success: true });
+    return json({ success: true, nutritionJson: nutritionJson ? JSON.parse(nutritionJson) : null });
   }
 
   // Collaborator saves draft

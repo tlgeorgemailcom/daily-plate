@@ -939,6 +939,11 @@
         const body = await res.json().catch(() => ({}));
         throw new Error(body.error || 'Failed to save draft');
       }
+      const result = await res.json().catch(() => ({}));
+      // Update selectedLevel.nutritionJson in-place so the 🔬 line shows immediately
+      if (result.nutritionJson && selectedLevel) {
+        selectedLevel = { ...selectedLevel, nutritionJson: result.nutritionJson };
+      }
       // Update local draft state so a re-open auto-fills
       creatorDraft = draftData as Record<string, unknown>;
       creatorDraftIsOwn = true;
