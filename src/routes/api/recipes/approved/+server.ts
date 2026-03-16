@@ -21,6 +21,8 @@ interface RecipeRow {
   submitted_by: string | null;
   status: string;
   created_at: string;
+  link_type: string | null;
+  nutrition_json: string | null;
 }
 
 export const GET: RequestHandler = async () => {
@@ -66,7 +68,9 @@ export const GET: RequestHandler = async () => {
         recipeIngredients: ingredients,
         imageUrl: row.image_url,
         submittedBy: row.submitted_by || 'Community',
-        isCommunityRecipe: true
+        isCommunityRecipe: true,
+        linkType: (row.link_type as 'ingredient' | 'dish' | 'mixed') ?? undefined,
+        nutritionJson: row.nutrition_json ? JSON.parse(row.nutrition_json) : null
       };
     });
     

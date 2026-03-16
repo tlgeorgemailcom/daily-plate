@@ -31,6 +31,13 @@ export const GET: RequestHandler = async () => {
       results['link_type_already_exists'] = true;
     }
 
+    if (!recipeCols.includes('nutrition_json')) {
+      await db.execute('ALTER TABLE recipes ADD COLUMN nutrition_json TEXT');
+      results['added_nutrition_json'] = true;
+    } else {
+      results['nutrition_json_already_exists'] = true;
+    }
+
     return json({ success: true, ...results });
   } catch (err) {
     return json({ success: false, error: String(err) });

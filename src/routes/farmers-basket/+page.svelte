@@ -857,10 +857,13 @@
               <h4>📝 Ingredients</h4>
               {#if game.currentLevel.recipeIngredients && game.currentLevel.recipeIngredients.length > 0}
                 <ul class="ingredients-list">
-                  {#each game.currentLevel.recipeIngredients as ing}
+                  {#each game.currentLevel.recipeIngredients.filter(i => !i.isDish) as ing}
                     <li>{ing.quantity ? `${ing.quantity} ` : ''}{ing.name}</li>
                   {/each}
                 </ul>
+                {#if game.currentLevel.nutritionJson}
+                  <p class="recipe-nutrition">🔬 Per serving: {game.currentLevel.nutritionJson.perServing.cal} cal&nbsp;|&nbsp;{game.currentLevel.nutritionJson.perServing.pro}g protein&nbsp;|&nbsp;{game.currentLevel.nutritionJson.perServing.fat}g fat&nbsp;|&nbsp;{game.currentLevel.nutritionJson.perServing.carb}g carbs&nbsp;|&nbsp;{game.currentLevel.nutritionJson.perServing.fib}g fiber</p>
+                {/if}
               {:else}
                 {@const foodCounts = game.currentLevel.recipe.reduce((acc, food) => {
                   acc[food] = (acc[food] || 0) + 1;
@@ -1461,8 +1464,18 @@
   .ingredients-list li {
     margin-bottom: 4px;
   }
+
+  .recipe-nutrition {
+    margin: 8px 0 0;
+    font-size: 0.78rem;
+    color: #2a7a2a;
+    background: #f0faf0;
+    border-radius: 6px;
+    padding: 5px 10px;
+    text-align: center;
+    line-height: 1.5;
+  }
   
-  .ingredient-icons-win {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;

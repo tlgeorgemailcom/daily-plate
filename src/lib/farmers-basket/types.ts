@@ -84,6 +84,15 @@ export interface BasketItem {
 // Dietary preference categories
 export type DietaryCategory = 'all' | 'pollo-pesca' | 'pollo' | 'pesca' | 'veggie' | 'vegan';
 
+export interface NutritionJson {
+  perServing: {
+    cal: number; pro: number; fat: number;
+    carb: number; fib: number; h2o: number; sug: number;
+  };
+  gramsPerServing: number;
+  servings: number;
+}
+
 export interface Level {
   id: string;
   name: string;
@@ -104,12 +113,16 @@ export interface Level {
     portionDesc?: string;   // e.g. "1 cup"
     portionGrams?: number;  // grams for this portion
     servingCount?: number;  // number of portions
+    exempt?: boolean;       // true = no nutrition link needed (e.g. salt, water)
+    isDish?: boolean;       // true = this row is the dish-level USDA entry
   }[];
   servings?: string;              // e.g., "Serves 2"
   prepTime?: string;              // e.g., "10 minutes"
   imageUrl?: string;              // Cloudinary URL for community recipe photos
   isCommunityRecipe?: boolean;    // True if this is a community-submitted recipe
   submittedBy?: string;           // Submitter player ID for community recipes
+  linkType?: 'ingredient' | 'dish' | 'mixed';  // How ingredients were USDA-linked
+  nutritionJson?: NutritionJson | null;         // Per-serving nutrients (null = unlinked)
 }
 
 // Emoji mappings

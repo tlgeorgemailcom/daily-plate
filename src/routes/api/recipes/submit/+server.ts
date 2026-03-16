@@ -1,6 +1,7 @@
 import { json, error } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { execute, queryOne } from '$lib/server/turso';
+import { calcNutritionJson } from '$lib/server/calcNutrition';
 
 // Generate unique ID
 function generateId(): string {
@@ -47,6 +48,10 @@ export const PATCH: RequestHandler = async ({ request }) => {
 
     const newStatus = submit ? 'pending' : 'draft';
 
+    const nutritionJson = (fields.linkType && Array.isArray(fields.ingredients) && fields.ingredients.length > 0)
+      ? calcNutritionJson(fields.ingredients, fields.linkType, fields.servings)
+      : null;
+
     if (fields.recipeName) {
       await execute(
         `UPDATE recipes SET
@@ -55,6 +60,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
           recipe_ingredients = ?, recipe_instructions = ?,
           image_url = COALESCE(?, image_url),
           link_type = COALESCE(?, link_type),
+          nutrition_json = ?,
           status = ?
         WHERE id = ?`,
         [
@@ -67,6 +73,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
           JSON.stringify(fields.instructions || []),
           fields.imageUrl || null,
           fields.linkType || null,
+          nutritionJson ? JSON.stringify(nutritionJson) : null,
           newStatus,
           recipeId
         ]
@@ -133,9 +140,9 @@ export const POST: RequestHandler = async ({ request }) => {
         id, type, name, category, dietary_category,
         prep_time, servings,
         recipe_ingredients, recipe_instructions,
-        image_url, link_type,
+        image_url, link_type, nutrition_json,
         submitted_by, submitter_name, status, created_at
-      ) VALUES (?, 'community', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))`,
+      ) VALUES (?, 'community', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))`,
       [
         recipeId,
         body.recipeName,
@@ -147,6 +154,7 @@ export const POST: RequestHandler = async ({ request }) => {
         JSON.stringify(body.instructions),
         body.imageUrl || null,
         body.linkType || null,
+        null, // nutrition_json — computed later via PATCH when linking is complete
         submittedBy,
         submitterName,
         status

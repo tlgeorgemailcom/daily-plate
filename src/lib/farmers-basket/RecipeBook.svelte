@@ -1666,11 +1666,14 @@
                 <div class="full-ingredients">
                   <span class="ingredients-label">📝 Full Ingredient List:</span>
                   <ul>
-                    {#each selectedLevel.recipeIngredients as ing}
+                    {#each selectedLevel.recipeIngredients.filter(i => !i.isDish) as ing}
                       <li>{ing.quantity ? `${ing.quantity} ` : ''}{ing.name}</li>
                     {/each}
                   </ul>
                 </div>
+                {#if selectedLevel.nutritionJson}
+                  <p class="recipe-nutrition">🔬 Per serving: {selectedLevel.nutritionJson.perServing.cal} cal&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.pro}g protein&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.fat}g fat&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.carb}g carbs&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.fib}g fiber</p>
+                {/if}
               {/if}
               
               <div class="instructions">
@@ -2808,6 +2811,17 @@
   
   .full-ingredients li {
     margin-bottom: 4px;
+  }
+
+  .recipe-nutrition {
+    margin: 8px 0 0;
+    font-size: 0.78rem;
+    color: #2a7a2a;
+    background: #f0faf0;
+    border-radius: 6px;
+    padding: 5px 10px;
+    text-align: center;
+    line-height: 1.5;
   }
   
   .instructions {
