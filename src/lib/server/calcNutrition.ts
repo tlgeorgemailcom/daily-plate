@@ -44,6 +44,8 @@ export function calcNutritionJson(
   linkType: string,
   servingsStr: string | null | undefined
 ): NutritionJson | null {
+  console.log('[calcNutrition] linkType:', linkType, '| servings:', servingsStr, '| ingredient count:', ingredients.length);
+  console.log('[calcNutrition] sample ingredient:', JSON.stringify(ingredients[0]));
 
   if (linkType === 'dish') {
     const dish = ingredients.find(i => i.isDish);
@@ -77,9 +79,15 @@ export function calcNutritionJson(
 
   for (const ing of ingredients) {
     if (ing.exempt) continue;
-    if (!ing.foodWord || !ing.portionGrams || !ing.servingCount) continue;
+    if (!ing.foodWord || !ing.portionGrams || !ing.servingCount) {
+      console.log('[calcNutrition] skip:', JSON.stringify({ name: (ing as Record<string,unknown>)['name'], exempt: ing.exempt, foodWord: ing.foodWord, portionGrams: ing.portionGrams, servingCount: ing.servingCount }));
+      continue;
+    }
     const food = FOOD_MAP.get(ing.foodWord);
-    if (!food) continue;
+    if (!food) {
+      console.log('[calcNutrition] FOOD_MAP miss for foodWord:', ing.foodWord);
+      continue;
+    }
 
     const g = ing.portionGrams * ing.servingCount; // total grams for whole recipe
     const scale = g / 100;
