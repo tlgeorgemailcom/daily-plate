@@ -271,6 +271,8 @@
     ingredients = ingredients.map(i => i.id === ingId ? { ...i, exempt: !i.exempt } : i);
   }
 
+  let exemptInfoOpen = $state(false);
+
   function confirmDishLink() {
     if (!dishPendingFood) return;
     const customG = dishCustomGrams;
@@ -697,6 +699,7 @@
               {:else if ingredient.exempt}
                 <div class="exempt-badge">
                   <span class="exempt-badge-text">⊘ Exempt</span>
+                  <button type="button" class="exempt-info-btn" title="What can be exempted?" onclick={() => exemptInfoOpen = !exemptInfoOpen}>ℹ️</button>
                   <button type="button" class="nutrition-unlink-btn" title="Remove exemption" onclick={() => toggleExempt(ingredient.id)}>✕</button>
                 </div>
               {:else}
@@ -704,9 +707,26 @@
                   <button type="button" class="link-nutrition-btn" onclick={() => openNutritionSearch(ingredient)}>
                     🔗 Link nutrition
                   </button>
-                  <button type="button" class="exempt-btn" title="Mark as not nutritionally significant (spices, leavening agents, etc.)" onclick={() => toggleExempt(ingredient.id)}>
+                  <button type="button" class="exempt-btn" onclick={() => toggleExempt(ingredient.id)}>
                     Exempt
                   </button>
+                  <button type="button" class="exempt-info-btn" title="What can be exempted?" onclick={() => exemptInfoOpen = !exemptInfoOpen}>ℹ️</button>
+                </div>
+              {/if}
+
+              {#if exemptInfoOpen}
+                <div class="exempt-info-panel">
+                  <button type="button" class="exempt-info-close" onclick={() => exemptInfoOpen = false}>✕</button>
+                  <p class="exempt-info-heading">What can be exempted?</p>
+                  <p class="exempt-info-note">Moderators review all exemptions. When in doubt, link it.</p>
+                  <p class="exempt-info-section">✅ Spices &amp; seasonings (not salt)</p>
+                  <p class="exempt-info-body">Black pepper, cumin, paprika, cinnamon, dried herbs, vanilla extract, spice blends used in trace amounts. <strong>Salt is not exempt</strong> — sodium is tracked.</p>
+                  <p class="exempt-info-section">✅ Leavening agents</p>
+                  <p class="exempt-info-body">Baking powder, baking soda, cream of tartar, yeast used for rising.</p>
+                  <p class="exempt-info-section">✅ Functional cooking agents</p>
+                  <p class="exempt-info-body">Cooking spray, parchment paper, water used only for blanching or processing (discarded), food coloring.</p>
+                  <p class="exempt-info-section">❌ Not exempt</p>
+                  <p class="exempt-info-body">Salt · butter/oil/fat · sugar/honey · flour/starch · dairy · any protein (meat, fish, eggs, legumes, tofu)</p>
                 </div>
               {/if}
 
@@ -1722,5 +1742,70 @@
   .exempt-badge-text {
     flex: 1;
     min-width: 0;
+  }
+
+  .exempt-info-btn {
+    background: none;
+    border: none;
+    padding: 0 2px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    line-height: 1;
+    opacity: 0.7;
+  }
+
+  .exempt-info-btn:hover {
+    opacity: 1;
+  }
+
+  .exempt-info-panel {
+    position: relative;
+    background: #FFFDE7;
+    border: 1px solid #FFD54F;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 0.82rem;
+    color: #4E342E;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .exempt-info-close {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    background: none;
+    border: none;
+    font-size: 0.8rem;
+    color: #999;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+  }
+
+  .exempt-info-heading {
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    font-size: 0.85rem;
+    color: #5D4037;
+  }
+
+  .exempt-info-note {
+    margin: 0 0 6px 0;
+    font-style: italic;
+    color: #888;
+  }
+
+  .exempt-info-section {
+    font-weight: 600;
+    margin: 4px 0 0 0;
+    color: #4E342E;
+  }
+
+  .exempt-info-body {
+    margin: 0 0 2px 0;
+    color: #5D4037;
+    padding-left: 4px;
   }
 </style>
