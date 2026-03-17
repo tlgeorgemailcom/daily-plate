@@ -3,6 +3,12 @@ import { FOODS } from '$lib/data/food-portions';
 // Built once per cold start — avoids O(n) scan per ingredient
 const FOOD_MAP = new Map(FOODS.map(f => [f.word, f]));
 
+export interface NutritionSource {
+  ndb: string;   // USDA NDB number — use to query SR Legacy for deeper nutrients
+  name: string;  // Readable ingredient name
+  grams: number; // Grams per serving — scale factor: sr_value_per_100g × (grams / 100)
+}
+
 export interface NutritionJson {
   perServing: {
     cal: number; pro: number; fat: number;
@@ -10,6 +16,7 @@ export interface NutritionJson {
   };
   gramsPerServing: number;
   servings: number;
+  sources: NutritionSource[];
 }
 
 interface IngRow {
@@ -62,6 +69,7 @@ export function calcNutritionJson(
       },
       gramsPerServing: g,
       servings: dish.servingCount,
+      sources: [{ ndb: food.ndb, name: food.display, grams: round1(g) }],
     };
   }
 
@@ -72,6 +80,7 @@ export function calcNutritionJson(
 
   let totals = { cal: 0, pro: 0, fat: 0, carb: 0, fib: 0, h2o: 0, sug: 0 };
   let totalGrams = 0;
+  const sources: NutritionSource[] = [];
 
   for (const ing of ingredients) {
     if (ing.exempt) continue;
@@ -93,6 +102,7 @@ export function calcNutritionJson(
     totals.fib     += food.fib  * scale;
     totals.h2o     += food.h2o  * scale;
     totals.sug     += food.sug  * scale;
+    sources.push({ ndb: food.ndb, name: food.display, grams: round1(g / servings) });
   }
 
   if (totalGrams === 0) return null;
@@ -109,5 +119,6 @@ export function calcNutritionJson(
     },
     gramsPerServing: round1(totalGrams / servings),
     servings,
+    sources,
   };
 }

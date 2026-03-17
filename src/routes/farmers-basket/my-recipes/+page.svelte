@@ -18,7 +18,7 @@
     moderatorNote?: string | null;
     submittedAt: string;
     linkType?: string | null;
-    nutritionJson?: { perServing: { cal: number; pro: number; fat: number; carb: number; fib: number; sug: number; h2o: number } } | null;
+    nutritionJson?: { perServing: { cal: number; pro: number; fat: number; carb: number; fib: number; sug: number; h2o: number }; gramsPerServing: number; servings: number; sources: { ndb: string; name: string; grams: number }[] } | null;
   }
   
   let recipes = $state<MyRecipe[]>([]);
