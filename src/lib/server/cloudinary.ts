@@ -71,9 +71,13 @@ export async function uploadRecipeImage(
           return;
         }
 
-        // Build URLs with transformations
-        const baseUrl = result.secure_url;
-        
+        // Build URLs with transformations — use cloud.url() for both so
+        // q_auto/f_auto are applied and Cloudinary CDN serves the optimised variant
+        const fullUrl = cloud.url(result.public_id, {
+          quality: 'auto',
+          fetch_format: 'auto'
+        });
+
         // Thumbnail: 200x200 square crop
         const thumbnailUrl = cloud.url(result.public_id, {
           width: 200,
@@ -85,7 +89,7 @@ export async function uploadRecipeImage(
         });
 
         resolve({
-          url: baseUrl,
+          url: fullUrl,
           thumbnailUrl,
           publicId: result.public_id
         });

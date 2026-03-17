@@ -40,7 +40,9 @@ export const GET: RequestHandler = async ({ url }) => {
     const result = await db.execute({ sql, args });
     
     console.log('[API game-scores/stats GET] Found stats for', result.rows.length, 'games');
-    return json({ stats: result.rows });
+    return json({ stats: result.rows }, {
+      headers: { 'Cache-Control': 'private, max-age=30' }
+    });
   } catch (e) {
     console.error('[API game-scores/stats GET] Error:', e);
     throw error(500, 'Failed to fetch stats');

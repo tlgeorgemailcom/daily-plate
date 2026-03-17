@@ -112,7 +112,9 @@ export const GET: RequestHandler = async () => {
       createdAt: row.created_at
     }));
 
-    return json({ overrides, newBuiltins });
+    return json({ overrides, newBuiltins }, {
+      headers: { 'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400' }
+    });
   } catch (err) {
     console.error('Failed to load builtin overrides:', err);
     return json({ error: 'Failed to load overrides' }, { status: 500 });

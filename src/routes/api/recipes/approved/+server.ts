@@ -76,7 +76,7 @@ export const GET: RequestHandler = async () => {
     
     return json({ recipes: levels }, {
       headers: {
-        'Cache-Control': 'no-cache, no-store, must-revalidate'
+        'Cache-Control': 'public, s-maxage=30, stale-while-revalidate=300'
       }
     });
     

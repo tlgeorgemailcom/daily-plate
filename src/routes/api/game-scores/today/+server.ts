@@ -37,7 +37,9 @@ export const GET: RequestHandler = async ({ url }) => {
     }));
     
     console.log('[API game-scores/today GET] Found', scores.length, 'scores for today');
-    return json({ scores });
+    return json({ scores }, {
+      headers: { 'Cache-Control': 'private, max-age=60' }
+    });
   } catch (e) {
     console.error('[API game-scores/today GET] Error:', e);
     throw error(500, 'Failed to fetch today\'s scores');

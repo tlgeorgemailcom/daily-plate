@@ -37,6 +37,8 @@ export const GET: RequestHandler = async ({ url }) => {
       email: user.email,
       displayName: user.display_name,
       tier: tier
+    }, {
+      headers: { 'Cache-Control': 'private, max-age=30' }
     });
     
   } catch (err) {
