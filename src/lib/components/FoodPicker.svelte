@@ -3,7 +3,11 @@
   import { createEventDispatcher } from 'svelte';
   import { customFoods, type CustomFood } from '$lib/stores/customFoodsStore';
 
+  export type RecipeFood = Food & { isRecipe: true; gramsPerServing: number };
+
   const dispatch = createEventDispatcher<{ select: Food; addCustom: string }>();
+
+  let { recipeFoods = [] }: { recipeFoods?: RecipeFood[] } = $props();
   
   function handleAddCustomFood() {
     // Pass current search query to pre-populate the form
@@ -11,7 +15,7 @@
   }
 
   let searchQuery = $state('');
-  let selectedGroup = $state<FoodGroup | 'all'>('all');
+  let selectedGroup = $state<FoodGroup | 'all' | 'recipes'>('all');
   
   // Long-press tooltip state
   let tooltipFood = $state<Food | null>(null);
@@ -43,12 +47,15 @@
   }
 
   const filteredFoods = $derived(() => {
-    // Combine custom foods with built-in foods
+    // Combine custom foods with built-in foods and recipe foods
     const customAsFoods = $customFoods.map(customToFood);
-    let foods: (Food | (Food & { isCustom: true }))[] = [...customAsFoods, ...FOODS];
+    let foods: (Food | (Food & { isCustom: true }) | RecipeFood)[] =
+      selectedGroup === 'recipes'
+        ? [...recipeFoods]
+        : [...customAsFoods, ...FOODS, ...recipeFoods];
     
     // Filter by group
-    if (selectedGroup !== 'all') {
+    if (selectedGroup !== 'all' && selectedGroup !== 'recipes') {
       const group = selectedGroup as FoodGroup;
       foods = foods.filter(f => f.groups.includes(group));
     }
@@ -184,6 +191,15 @@
         {GROUP_NAMES[group]}
       </button>
     {/each}
+    {#if recipeFoods.length > 0}
+      <button
+        class="tab tab-recipes"
+        class:active={selectedGroup === 'recipes'}
+        onclick={() => selectedGroup = 'recipes'}
+      >
+        🍽️ Recipes
+      </button>
+    {/if}
   </div>
 
   <!-- Food list -->
@@ -192,6 +208,7 @@
       <button 
         class="food-item" 
         class:custom-food={'isCustom' in food && food.isCustom}
+        class:recipe-food={'isRecipe' in food && food.isRecipe}
         onclick={() => selectFood(food)}
         onpointerdown={(e) => handlePointerDown(e, food)}
         onpointermove={handlePointerMove}
@@ -201,9 +218,13 @@
         oncontextmenu={(e) => e.preventDefault()}
       >
         <span class="food-name">
-          {'isCustom' in food && food.isCustom ? '🏠 ' : ''}{food.display}
+          {'isCustom' in food && food.isCustom ? '🏠 ' : ''}{'isRecipe' in food && food.isRecipe ? '🍽️ ' : ''}{food.display}
         </span>
-        <span class="food-cal">{Math.round(food.cal)} cal/100g</span>
+        <span class="food-cal">
+          {'isRecipe' in food && food.isRecipe
+            ? `${Math.round(food.cal * (food as RecipeFood).gramsPerServing / 100)} cal/serving`
+            : `${Math.round(food.cal)} cal/100g`}
+        </span>
       </button>
     {/each}
     
@@ -228,7 +249,7 @@
         <span class="usda-desc">{tooltipFood.desc}</span>
         <span class="nutrient-info">{Math.round(tooltipFood.cal)} cal · {tooltipFood.pro}g protein · {tooltipFood.fat}g fat · {tooltipFood.carb}g carbs per 100g</span>
         <span class="group-info">Groups: {tooltipFood.groups.join(', ')}</span>
-        <span class="ndb-info">USDA NDB#{tooltipFood.ndb}</span>
+        <span class="ndb-info">{'isRecipe' in tooltipFood ? '🍽️ Community recipe' : `USDA NDB#${tooltipFood.ndb}`}</span>
       </p>
     </div>
   </div>
@@ -309,6 +330,20 @@
     border-color: transparent;
   }
 
+  .tab-recipes {
+    border-color: #fbbf24;
+  }
+
+  .tab-recipes:hover {
+    background: #fef9c3;
+  }
+
+  .tab-recipes.active {
+    background: #f59e0b;
+    color: white;
+    border-color: transparent;
+  }
+
   .food-list {
     flex: 1;
     overflow-y: auto;
@@ -345,6 +380,16 @@
   .food-item.custom-food:hover {
     background: #dcfce7;
     border-color: #4ade80;
+  }
+
+  .food-item.recipe-food {
+    background: #fffbeb;
+    border-color: #fde68a;
+  }
+
+  .food-item.recipe-food:hover {
+    background: #fef3c7;
+    border-color: #f59e0b;
   }
 
   .food-name {

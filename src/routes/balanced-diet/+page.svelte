@@ -25,6 +25,7 @@
   import { gameSettings, updateSettings, DEFAULT_SETTINGS, getSettings } from '$lib/stores/settingsStore';
   import { initializeGameState, startAutoSave, startNewGame, getSavedGameTime, hasSavedGame } from '$lib/stores/gameStateStore';
   import type { Food, Portion } from '$lib/data/food-portions';
+  import type { RecipeFood } from '$lib/components/FoodPicker.svelte';
 
   let selectedFood = $state<Food | null>(null);
   let showSettings = $state(false);
@@ -58,6 +59,9 @@
   let fruitPlateRatio = $state($gameSettings.fruitPlateRatio);
   let grainPlateRatio = $state($gameSettings.grainPlateRatio);
   let proteinPlateRatio = $state($gameSettings.proteinPlateRatio);
+
+  // Recipe foods fetched from approved Basket game recipes
+  let recipeFoods = $state<RecipeFood[]>([]);
   
   // Macro presets modal
   let showMacroHints = $state(false);
@@ -75,6 +79,40 @@
     
     // Get last saved time for history info
     lastSavedTime = getSavedGameTime();
+
+    // Load approved recipes as extra food options
+    try {
+      const res = await fetch('/api/recipes/nutrition');
+      if (res.ok) {
+        const data = await res.json();
+        recipeFoods = data.map((r: {
+          id: string; name: string; gramsPerServing: number;
+          cal: number; pro: number; fat: number;
+          carb: number; fib: number; h2o: number; sug: number;
+        }): RecipeFood => ({
+          word:     r.id,
+          display:  r.name,
+          groups:   ['prepared'],
+          ndb:      r.id,
+          desc:     `Community recipe · ${r.gramsPerServing}g per serving`,
+          cal:      r.cal,
+          pro:      r.pro,
+          fat:      r.fat,
+          carb:     r.carb,
+          fib:      r.fib,
+          h2o:      r.h2o,
+          sug:      r.sug,
+          portions: [
+            { amt: 100, desc: 'custom (g)', gm: 100 },
+            { amt: 1,   desc: '1 serving', gm: r.gramsPerServing },
+          ],
+          isRecipe: true,
+          gramsPerServing: r.gramsPerServing,
+        }));
+      }
+    } catch {
+      // Non-critical — Balance game works without recipes
+    }
   });
   
   // Auto-save settings when any value changes (like iOS settings)
@@ -637,7 +675,7 @@
 
     <!-- Center: Food picker (main area) -->
     <div class="picker-area">
-      <FoodPicker on:select={handleFoodSelect} on:addCustom={handleAddCustomFood} />
+      <FoodPicker recipeFoods={recipeFoods} on:select={handleFoodSelect} on:addCustom={handleAddCustomFood} />
     </div>
 
     <!-- Right: Pie chart + nutrient picker -->
