@@ -14,6 +14,7 @@
     portionDesc?: string;
     portionGrams?: number;
     servingCount?: number;
+    exempt?: boolean;
   }
   
   interface RecipeSubmission {
@@ -36,6 +37,7 @@
     imageUrl?: string;
     editedAt?: string;
     editedBy?: string;
+    linkType?: 'ingredient' | 'dish' | 'mixed';
   }
   
   // Password protection
@@ -158,13 +160,15 @@
         ndbNo: ing.ndbNo,
         portionDesc: ing.portionDesc,
         portionGrams: ing.portionGrams,
-        servingCount: ing.servingCount
+        servingCount: ing.servingCount,
+        exempt: ing.exempt
       })),
       instructions: recipe.instructions.map((text, i) => ({
         id: i + 1,
         text
       })),
-      foodSupply: recipe.foodSupply
+      foodSupply: recipe.foodSupply,
+      linkMode: recipe.linkType
     };
   }
   

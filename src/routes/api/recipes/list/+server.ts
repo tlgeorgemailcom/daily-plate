@@ -21,6 +21,7 @@ interface RecipeRow {
   created_at: string;
   edited_at: string | null;
   edited_by: string | null;
+  link_type: string | null;
 }
 
 export const GET: RequestHandler = async ({ url }) => {
@@ -58,7 +59,8 @@ export const GET: RequestHandler = async ({ url }) => {
       instructions: row.recipe_instructions ? JSON.parse(row.recipe_instructions) : [],
       submittedAt: row.created_at,
       status: row.status,
-      type: row.type
+      type: row.type,
+      linkType: row.link_type ?? undefined
     }));
     
     return json({ recipes });
