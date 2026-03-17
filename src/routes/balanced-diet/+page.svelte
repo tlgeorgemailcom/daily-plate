@@ -104,7 +104,7 @@
           sug:      r.sug,
           portions: [
             { amt: 100, desc: 'custom (g)', gm: 100 },
-            { amt: 1,   desc: '1 serving', gm: r.gramsPerServing },
+            { amt: 1,   desc: 'serving', gm: r.gramsPerServing },
           ],
           isRecipe: true,
           gramsPerServing: r.gramsPerServing,
