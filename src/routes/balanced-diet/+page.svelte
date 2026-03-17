@@ -90,7 +90,7 @@
           cal: number; pro: number; fat: number;
           carb: number; fib: number; h2o: number; sug: number;
         }): RecipeFood => ({
-          word:     r.id,
+          word:     r.name,
           display:  r.name,
           groups:   ['prepared'],
           ndb:      r.id,
