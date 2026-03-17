@@ -82,7 +82,7 @@
 </script>
 
 <div class="portion-selector">
-  <h3 class="food-title">{food.word}</h3>
+  <h3 class="food-title">{food.display ?? food.word}</h3>
   
   <!-- Preset portions -->
   <div class="portions-list">
