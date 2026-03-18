@@ -1,0 +1,17 @@
+{
+  "name": "TodayPage",
+  "short_name": "TodayPage",
+  "description": "Daily food games, nutrition facts, and more — updated every day.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FF9800",
+  "theme_color": "#FF9800",
+  "icons": [
+    {
+      "src": "/icons/todaypage_icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
