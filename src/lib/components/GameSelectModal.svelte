@@ -7,7 +7,22 @@
   }
   
   let { onSelectGame, onClose }: Props = $props();
-  
+
+  const BASKET_PASSWORD = '4444';
+  let showBasketPasswordModal = $state(false);
+  let basketPasswordInput = $state('');
+  let basketPasswordError = $state(false);
+
+  function handleBasketPasswordSubmit() {
+    if (basketPasswordInput === BASKET_PASSWORD) {
+      showBasketPasswordModal = false;
+      onSelectGame('farmers-basket');
+    } else {
+      basketPasswordError = true;
+      basketPasswordInput = '';
+    }
+  }
+
   const games = [
     { id: 'farmers-basket', name: "Farmer's Basket", icon: '🧺', description: 'Collect ingredients for recipes', available: true },
     { id: 'balanced-diet', name: 'Balanced Diet', icon: '🍽️', description: 'Build nutritious meals', available: true },
@@ -17,7 +32,9 @@
   
   function handleSelectGame(gameId: string) {
     if (gameId === 'farmers-basket') {
-      onSelectGame(gameId);
+      basketPasswordInput = '';
+      basketPasswordError = false;
+      showBasketPasswordModal = true;
     } else if (gameId === 'balanced-diet') {
       goto('/balanced-diet');
     } else {
@@ -58,7 +75,32 @@
   </div>
 </div>
 
-<style>
+{#if showBasketPasswordModal}
+  <div class="password-overlay" role="dialog" aria-modal="true">
+    <div class="password-box">
+      <h2>Beta Access</h2>
+      <p style="margin:0 0 14px; font-size:0.9rem; color:#555;">During Beta, the Basket game requires pre-approval. Please enter your access code.</p>
+      <input
+        type="password"
+        bind:value={basketPasswordInput}
+        placeholder="Access code"
+        onkeydown={(e) => e.key === 'Enter' && handleBasketPasswordSubmit()}
+        style="width:100%; padding:10px 12px; border:2px solid {basketPasswordError ? '#e53935' : '#ddd'}; border-radius:10px; font-size:1rem; margin-bottom:8px; box-sizing:border-box;"
+      />
+      {#if basketPasswordError}
+        <p style="color:#e53935; font-size:0.85rem; margin:0 0 10px;">Incorrect code. Please try again.</p>
+      {/if}
+      <div style="display:flex; gap:10px; margin-top:6px;">
+        <button onclick={handleBasketPasswordSubmit} style="flex:1; padding:10px; background:linear-gradient(135deg,#FF9800,#e68900); color:white; border:none; border-radius:10px; font-weight:700; font-size:1rem; cursor:pointer;">
+          Submit
+        </button>
+        <button onclick={() => showBasketPasswordModal = false} style="flex:1; padding:10px; background:#f0f0f0; color:#555; border:none; border-radius:10px; font-weight:600; font-size:1rem; cursor:pointer;">
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+{/if}
   .modal-overlay {
     position: fixed;
     inset: 0;
@@ -175,5 +217,31 @@
     padding: 3px 8px;
     border-radius: 10px;
     font-weight: 600;
+  }
+
+  .password-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 300;
+    padding: 20px;
+  }
+
+  .password-box {
+    background: white;
+    border-radius: 18px;
+    padding: 28px 24px;
+    max-width: 360px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  }
+
+  .password-box h2 {
+    margin: 0 0 10px;
+    font-size: 1.3rem;
+    color: #333;
   }
 </style>
