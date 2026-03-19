@@ -1,7 +1,7 @@
 <script lang="ts">
   import '../app.css';
   import { onMount } from 'svelte';
-  import { injectAnalytics } from '@vercel/analytics/sveltekit';
+  import { injectAnalytics, track } from '@vercel/analytics/sveltekit';
   import { browser } from '$app/environment';
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
@@ -45,6 +45,31 @@
   // Validate session on app load to ensure tier accuracy
   onMount(async () => {
     await playerStore.validateSession();
+
+    // --- Visitor tracking ---
+    const visitCount = parseInt(localStorage.getItem('va_visit_count') || '0') + 1;
+    localStorage.setItem('va_visit_count', String(visitCount));
+    const firstSeen = localStorage.getItem('va_first_seen') || new Date().toISOString().split('T')[0];
+    if (visitCount === 1) localStorage.setItem('va_first_seen', firstSeen);
+    const lastSeen = localStorage.getItem('va_last_seen') || '';
+    localStorage.setItem('va_last_seen', new Date().toISOString().split('T')[0]);
+
+    const nav = navigator as Navigator & { connection?: { effectiveType?: string } };
+    track('session_start', {
+      visit_count:    visitCount,
+      returning:      visitCount > 1,
+      first_seen:     firstSeen,
+      last_seen:      lastSeen || null,
+      referrer:       document.referrer ? new URL(document.referrer).hostname : 'direct',
+      screen:         `${window.screen.width}x${window.screen.height}`,
+      viewport:       `${window.innerWidth}x${window.innerHeight}`,
+      device_type:    window.innerWidth < 768 ? 'mobile' : window.innerWidth < 1024 ? 'tablet' : 'desktop',
+      language:       navigator.language,
+      timezone:       Intl.DateTimeFormat().resolvedOptions().timeZone,
+      connection:     nav.connection?.effectiveType ?? null,
+      player_status:  player?.status ?? 'anonymous',
+      player_tier:    player?.tier ?? 'free',
+    });
   });
   
   // Enable auto-sync for returning premium users
@@ -63,6 +88,10 @@
   function handleGameStart() {
     // Guest mode - mark session as started and go to game list
     guestSessionStarted = true;
+    track('guest_start', {
+      visit_count: parseInt(localStorage.getItem('va_visit_count') || '1'),
+      returning: parseInt(localStorage.getItem('va_visit_count') || '1') > 1,
+    });
     goto('/');
   }
   
@@ -83,6 +112,12 @@
       id: currentPlayer?.id,
       status: currentPlayer?.status,
       tier: currentPlayer?.tier
+    });
+
+    track('player_login', {
+      tier: currentPlayer?.tier ?? 'free',
+      visit_count: parseInt(localStorage.getItem('va_visit_count') || '1'),
+      returning: parseInt(localStorage.getItem('va_visit_count') || '1') > 1,
     });
     
     // Sync data from cloud if user is premium
