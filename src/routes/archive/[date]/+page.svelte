@@ -23,7 +23,7 @@
 </script>
 
 <svelte:head>
-  <title>{displayDate} | Archive | Daily Food Chain</title>
+  <title>{displayDate} | Archive | TodayPage</title>
 </svelte:head>
 
 <div class="archive-day">

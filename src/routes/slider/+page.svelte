@@ -460,7 +460,7 @@
 </script>
 
 <svelte:head>
-  <title>Food Slider | Daily Food Chain</title>
+  <title>Food Slider | TodayPage</title>
 </svelte:head>
 
 <div class="slider-game">

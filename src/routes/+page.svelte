@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-  <title>Daily Food Games</title>
+  <title>TodayPage - Daily Food Games</title>
 </svelte:head>
 
 <div class="landing-container" in:fade>

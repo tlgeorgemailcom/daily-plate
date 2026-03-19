@@ -693,7 +693,7 @@
 {/if}
 
 <svelte:head>
-  <title>Farmer's Basket</title>
+  <title>Farmer's Basket | TodayPage</title>
 </svelte:head>
 
 <!-- Main Game -->

@@ -391,7 +391,7 @@
 </script>
 
 <svelte:head>
-  <title>My Recipes - Farmer's Basket</title>
+  <title>My Recipes | TodayPage</title>
 </svelte:head>
 
 <div class="my-recipes-page">

@@ -125,7 +125,7 @@
 </script>
 
 <svelte:head>
-  <title>All Stats | Daily Food Chain</title>
+  <title>All Stats | TodayPage</title>
 </svelte:head>
 
 <div class="all-stats-page">

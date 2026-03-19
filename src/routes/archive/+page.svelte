@@ -16,7 +16,7 @@
 </script>
 
 <svelte:head>
-  <title>Archive | Daily Food Chain</title>
+  <title>Archive | TodayPage</title>
 </svelte:head>
 
 <div class="archive-page">

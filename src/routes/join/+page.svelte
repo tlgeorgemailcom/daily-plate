@@ -42,7 +42,7 @@
 </script>
 
 <svelte:head>
-  <title>Join a Recipe Draft — Daily Food Chain</title>
+  <title>Join a Recipe Draft | TodayPage</title>
 </svelte:head>
 
 <div class="join-page">

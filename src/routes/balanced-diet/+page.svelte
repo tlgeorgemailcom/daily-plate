@@ -302,7 +302,7 @@
 </script>
 
 <svelte:head>
-  <title>Balanced Diet Game</title>
+  <title>Balanced Diet | TodayPage</title>
   <style>
     html, body {
       overflow: hidden !important;

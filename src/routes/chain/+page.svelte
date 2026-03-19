@@ -387,7 +387,7 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
 </script>
 
 <svelte:head>
-  <title>Daily Food Chain</title>
+  <title>Food Chain | TodayPage</title>
 </svelte:head>
 
 <div class="game-container">

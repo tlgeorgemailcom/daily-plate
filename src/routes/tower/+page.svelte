@@ -440,7 +440,7 @@
 </script>
 
 <svelte:head>
-  <title>Tower of Food - Daily Food Chain</title>
+  <title>Tower of Food | TodayPage</title>
 </svelte:head>
 
 <main class="tower-game">

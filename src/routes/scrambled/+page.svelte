@@ -581,7 +581,7 @@ dailyfoodchain.com/scrambled`;
 </script>
 
 <svelte:head>
-  <title>Scramble Bees - Daily Food Word Game</title>
+  <title>Scramble Bees | TodayPage</title>
 </svelte:head>
 
 <main class="scrambled-game" class:wide-mode={gamePhase === 'phase2' || showResults}>

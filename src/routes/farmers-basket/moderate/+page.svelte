@@ -541,7 +541,7 @@
 </script>
 
 <svelte:head>
-  <title>Recipe Moderation | Farmer's Basket</title>
+  <title>Recipe Moderation | TodayPage</title>
 </svelte:head>
 
 {#if !authenticated}

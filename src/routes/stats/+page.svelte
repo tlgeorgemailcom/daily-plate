@@ -98,7 +98,7 @@
 </script>
 
 <svelte:head>
-  <title>Today's Stats | Daily Food Chain</title>
+  <title>Today's Stats | TodayPage</title>
 </svelte:head>
 
 <div class="stats-page">

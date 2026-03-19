@@ -139,7 +139,7 @@
 </script>
 
 <svelte:head>
-  <title>Touch/Click the Difference | Daily Food Chain</title>
+  <title>Spot the Difference | TodayPage</title>
 </svelte:head>
 
 <div class="compare-game">
