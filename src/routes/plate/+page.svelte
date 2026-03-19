@@ -1819,6 +1819,10 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
   ontouchend={handleDragEnd}
 />
 
+<svelte:head>
+  <title>Daily Plate | TodayPage</title>
+</svelte:head>
+
 <div class="game-container">
   <!-- Difficulty Selector Modal -->
   {#if showDifficultySelector}

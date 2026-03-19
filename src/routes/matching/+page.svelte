@@ -321,6 +321,10 @@
   });
 </script>
 
+<svelte:head>
+  <title>Matching Containers | TodayPage</title>
+</svelte:head>
+
 <div class="matching-game">
   <header class="game-header">
     <h1>🎯 Matching Containers</h1>
