@@ -19,6 +19,10 @@
   // Player authentication state
   let showLoginModal = $state(false);
   let showUpgradeModal = $state(false);
+  let showUpgradePasswordModal = $state(false);
+  let upgradePasswordInput = $state('');
+  let upgradePasswordError = $state(false);
+  const UPGRADE_PASSWORD = '4444';
   
   // Session-only state for guest players (resets on refresh)
   let guestSessionStarted = $state(false);
@@ -92,7 +96,19 @@
   }
   
   function handleShowUpgrade() {
-    showUpgradeModal = true;
+    upgradePasswordInput = '';
+    upgradePasswordError = false;
+    showUpgradePasswordModal = true;
+  }
+
+  function handleUpgradePasswordSubmit() {
+    if (upgradePasswordInput === UPGRADE_PASSWORD) {
+      showUpgradePasswordModal = false;
+      showUpgradeModal = true;
+    } else {
+      upgradePasswordError = true;
+      upgradePasswordInput = '';
+    }
   }
   
   async function handleUpgradeSuccess() {
@@ -196,6 +212,29 @@
     onSuccess={handleUpgradeSuccess}
     onClose={handleUpgradeClose}
   />
+{/if}
+
+{#if showUpgradePasswordModal}
+  <div class="password-overlay" role="dialog" aria-modal="true">
+    <div class="password-box">
+      <h2>Enter Access Code</h2>
+      <input
+        type="password"
+        bind:value={upgradePasswordInput}
+        placeholder="••••"
+        class="password-input"
+        class:error={upgradePasswordError}
+        onkeydown={(e) => e.key === 'Enter' && handleUpgradePasswordSubmit()}
+      />
+      {#if upgradePasswordError}
+        <p class="error-text">Incorrect code</p>
+      {/if}
+      <div class="password-actions">
+        <button onclick={handleUpgradePasswordSubmit}>Continue</button>
+        <button onclick={() => showUpgradePasswordModal = false}>Cancel</button>
+      </div>
+    </div>
+  </div>
 {/if}
 
 <style>
@@ -326,6 +365,77 @@
   .login-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(255, 152, 0, 0.4);
+  }
+
+  .password-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  .password-box {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 280px;
+    text-align: center;
+  }
+
+  .password-box h2 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  .password-input {
+    padding: 0.6rem 1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 0.3em;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .password-input.error {
+    border-color: #e53935;
+  }
+
+  .error-text {
+    color: #e53935;
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .password-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  .password-actions button {
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .password-actions button:first-child {
+    background: #FF9800;
+    color: white;
+  }
+
+  .password-actions button:last-child {
+    background: #eee;
+    color: #333;
   }
   
   main {
