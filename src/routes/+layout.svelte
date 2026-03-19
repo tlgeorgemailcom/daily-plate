@@ -76,6 +76,53 @@
       enableAutoSync();
     }
   });
+
+  // --- Game time tracking ---
+  const GAME_ROUTES: Record<string, string> = {
+    '/chain':         'chain',
+    '/compare':       'compare',
+    '/plate':         'plate',
+    '/balanced-diet': 'balanced-diet',
+    '/matching':      'matching',
+    '/slider':        'slider',
+    '/scrambled':     'scrambled',
+    '/tower':         'tower',
+    '/farmers-basket':'farmers-basket',
+    '/archive':       'archive',
+  };
+
+  let currentGame = $state<string | null>(null);
+  let gameStartTime = $state<number | null>(null);
+
+  $effect(() => {
+    const path = $page.url.pathname;
+    const gameKey = Object.keys(GAME_ROUTES).find(r => path === r || path.startsWith(r + '/'));
+    const gameName = gameKey ? GAME_ROUTES[gameKey] : null;
+
+    if (gameName !== currentGame) {
+      // Leaving a game — fire exit event
+      if (currentGame && gameStartTime !== null) {
+        const duration = Math.round((Date.now() - gameStartTime) / 1000);
+        track('game_exit', {
+          game:           currentGame,
+          duration_seconds: duration,
+          player_tier:    player?.tier ?? 'free',
+          player_status:  player?.status ?? 'anonymous',
+        });
+      }
+      // Entering a game — fire enter event
+      if (gameName) {
+        track('game_enter', {
+          game:           gameName,
+          player_tier:    player?.tier ?? 'free',
+          player_status:  player?.status ?? 'anonymous',
+          visit_count:    parseInt(localStorage.getItem('va_visit_count') || '1'),
+        });
+      }
+      currentGame = gameName;
+      gameStartTime = gameName ? Date.now() : null;
+    }
+  });
   
   // Check if player has started (logged in persists, guest is session-only)
   let hasStarted = $derived((player?.status === 'logged-in' && player?.id !== null) || guestSessionStarted);
