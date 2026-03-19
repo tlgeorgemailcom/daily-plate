@@ -89,12 +89,13 @@
     function handleVisibilityHidden() {
       if (document.visibilityState === 'hidden' && currentGame && gameStartTime !== null) {
         const duration = Math.round((Date.now() - gameStartTime) / 1000);
-        track(`exit:${currentGame}`, {
+        const bucket = duration < 30 ? '<30s' : duration < 120 ? '30s-2min' : duration < 300 ? '2-5min' : '5min+';
+        track(`exit:${currentGame}:${bucket}`, {
           duration_seconds: duration,
           player_tier:    player?.tier ?? 'free',
           player_status:  player?.status ?? 'anonymous',
         });
-        gameStartTime = null; // prevent double-fire
+        gameStartTime = null;
       }
     }
     document.addEventListener('visibilitychange', handleVisibilityHidden);
@@ -134,10 +135,9 @@
       // Leaving a game — fire exit event
       if (currentGame && gameStartTime !== null) {
         const duration = Math.round((Date.now() - gameStartTime) / 1000);
-        const bucket = duration < 30 ? '<30s' : duration < 120 ? '30-120s' : duration < 300 ? '2-5min' : '5min+';
-        track(`exit:${currentGame}`, {
+        const bucket = duration < 30 ? '<30s' : duration < 120 ? '30s-2min' : duration < 300 ? '2-5min' : '5min+';
+        track(`exit:${currentGame}:${bucket}`, {
           duration_seconds: duration,
-          duration_bucket:  bucket,
           player_tier:    player?.tier ?? 'free',
           player_status:  player?.status ?? 'anonymous',
         });
