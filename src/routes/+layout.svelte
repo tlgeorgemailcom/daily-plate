@@ -5,10 +5,23 @@
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
 
+  type UmamiWindow = Window & { umami?: { track: (name: string, data?: Record<string, unknown>) => void } };
+  const eventQueue: Array<{ name: string; props?: Record<string, unknown> }> = [];
+
   function track(eventName: string, props?: Record<string, unknown>) {
-    if (typeof window !== 'undefined' && (window as Window & { umami?: { track: (name: string, data?: Record<string, unknown>) => void } }).umami) {
-      (window as Window & { umami?: { track: (name: string, data?: Record<string, unknown>) => void } }).umami!.track(eventName, props);
+    if (typeof window === 'undefined') return;
+    const umami = (window as UmamiWindow).umami;
+    if (umami) {
+      umami.track(eventName, props);
+    } else {
+      eventQueue.push({ name: eventName, props });
     }
+  }
+
+  function flushEventQueue() {
+    const umami = (window as UmamiWindow).umami;
+    if (!umami) return;
+    eventQueue.splice(0).forEach(e => umami.track(e.name, e.props));
   }
   import { playerStore, type Player } from '$lib/stores/playerStore';
   import { get } from 'svelte/store';
@@ -68,6 +81,9 @@
       player_status:  player?.status ?? 'anonymous',
       player_tier:    player?.tier ?? 'free',
     });
+
+    // Flush any events queued before Umami script finished loading
+    flushEventQueue();
   });
   
   // Enable auto-sync for returning premium users
