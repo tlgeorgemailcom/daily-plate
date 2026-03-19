@@ -119,8 +119,7 @@
       // Leaving a game — fire exit event
       if (currentGame && gameStartTime !== null) {
         const duration = Math.round((Date.now() - gameStartTime) / 1000);
-        track('game_exit', {
-          game:           currentGame,
+        track(`exit:${currentGame}`, {
           duration_seconds: duration,
           player_tier:    player?.tier ?? 'free',
           player_status:  player?.status ?? 'anonymous',
@@ -128,8 +127,7 @@
       }
       // Entering a game — fire enter event
       if (gameName) {
-        track('game_enter', {
-          game:           gameName,
+        track(`enter:${gameName}`, {
           player_tier:    player?.tier ?? 'free',
           player_status:  player?.status ?? 'anonymous',
           visit_count:    parseInt(localStorage.getItem('va_visit_count') || '1'),
