@@ -84,6 +84,21 @@
 
     // Flush any events queued before Umami script finished loading
     flushEventQueue();
+
+    // Capture duration on tab close/switch (visibilitychange is reliable for analytics)
+    function handleVisibilityHidden() {
+      if (document.visibilityState === 'hidden' && currentGame && gameStartTime !== null) {
+        const duration = Math.round((Date.now() - gameStartTime) / 1000);
+        track(`exit:${currentGame}`, {
+          duration_seconds: duration,
+          player_tier:    player?.tier ?? 'free',
+          player_status:  player?.status ?? 'anonymous',
+        });
+        gameStartTime = null; // prevent double-fire
+      }
+    }
+    document.addEventListener('visibilitychange', handleVisibilityHidden);
+    return () => document.removeEventListener('visibilitychange', handleVisibilityHidden);
   });
   
   // Enable auto-sync for returning premium users
@@ -119,8 +134,10 @@
       // Leaving a game — fire exit event
       if (currentGame && gameStartTime !== null) {
         const duration = Math.round((Date.now() - gameStartTime) / 1000);
+        const bucket = duration < 30 ? '<30s' : duration < 120 ? '30-120s' : duration < 300 ? '2-5min' : '5min+';
         track(`exit:${currentGame}`, {
           duration_seconds: duration,
+          duration_bucket:  bucket,
           player_tier:    player?.tier ?? 'free',
           player_status:  player?.status ?? 'anonymous',
         });
