@@ -1,17 +1,15 @@
 <script lang="ts">
   import '../app.css';
   import { onMount } from 'svelte';
-  import { injectAnalytics, track } from '@vercel/analytics/sveltekit';
   import { browser } from '$app/environment';
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
 
-  injectAnalytics({
-    beforeSend(event) {
-      const routeId = get(page).route?.id;
-      return routeId ? { ...event, url: routeId } : event;
+  function track(eventName: string, props?: Record<string, unknown>) {
+    if (typeof window !== 'undefined' && (window as Window & { umami?: { track: (name: string, data?: Record<string, unknown>) => void } }).umami) {
+      (window as Window & { umami?: { track: (name: string, data?: Record<string, unknown>) => void } }).umami!.track(eventName, props);
     }
-  });
+  }
   import { playerStore, type Player } from '$lib/stores/playerStore';
   import { get } from 'svelte/store';
   import { syncCustomFoodsFromCloud } from '$lib/stores/customFoodsStore';
