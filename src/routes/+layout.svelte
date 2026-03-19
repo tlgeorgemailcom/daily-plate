@@ -1,6 +1,7 @@
 <script lang="ts">
   import '../app.css';
   import { onMount } from 'svelte';
+  import { inject } from '@vercel/analytics';
   import { browser } from '$app/environment';
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
@@ -128,6 +129,8 @@
   function handleUpgradeClose() {
     showUpgradeModal = false;
   }
+
+  inject();
 </script>
 
 {#if hasStarted}
