@@ -5,6 +5,13 @@
   import { browser } from '$app/environment';
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
+
+  injectAnalytics({
+    beforeSend(event) {
+      const routeId = get(page).route?.id;
+      return routeId ? { ...event, url: routeId } : event;
+    }
+  });
   import { playerStore, type Player } from '$lib/stores/playerStore';
   import { get } from 'svelte/store';
   import { syncCustomFoodsFromCloud } from '$lib/stores/customFoodsStore';
@@ -129,8 +136,6 @@
   function handleUpgradeClose() {
     showUpgradeModal = false;
   }
-
-  injectAnalytics();
 </script>
 
 {#if hasStarted}
