@@ -2,6 +2,7 @@
   import { onMount, onDestroy } from 'svelte';
   import { get } from 'svelte/store';
   import { page } from '$app/stores';
+  import { goto } from '$app/navigation';
   import { 
     createGameState, LEVELS, GRID_WIDTH, GRID_HEIGHT, TOTAL_HEIGHT, PANTRY_HEIGHT,
     GRID_COLS, GRID_ROWS, CELL_SIZE, pixelToGrid, gridToPixel, snapToGrid
@@ -20,6 +21,20 @@
   import { TOOL_EMOJI, ANIMAL_EMOJI } from '$lib/farmers-basket/types';
   import type { ToolType, FoodType } from '$lib/farmers-basket/types';
   
+  const BASKET_PASSWORD = '4444';
+  let basketUnlocked = $state(false);
+  let basketPasswordInput = $state('');
+  let basketPasswordError = $state(false);
+
+  function handleBasketPasswordSubmit() {
+    if (basketPasswordInput === BASKET_PASSWORD) {
+      basketUnlocked = true;
+    } else {
+      basketPasswordError = true;
+      basketPasswordInput = '';
+    }
+  }
+
   let game = createGameState();
   
   // If a joinCode is present in the URL, open ShareRecipe immediately and skip
@@ -655,6 +670,28 @@
   }
 </script>
 
+{#if !basketUnlocked}
+  <div class="basket-password-overlay" role="dialog" aria-modal="true">
+    <div class="basket-password-box">
+      <h2>Beta Access</h2>
+      <p>During Beta, the Basket game requires pre-approval. Please enter your access code.</p>
+      <input
+        type="password"
+        bind:value={basketPasswordInput}
+        placeholder="Access code"
+        onkeydown={(e) => e.key === 'Enter' && handleBasketPasswordSubmit()}
+      />
+      {#if basketPasswordError}
+        <p class="basket-error">Incorrect code. Please try again.</p>
+      {/if}
+      <div class="basket-pw-buttons">
+        <button class="basket-pw-submit" onclick={handleBasketPasswordSubmit}>Submit</button>
+        <button class="basket-pw-cancel" onclick={() => goto('/')}>Cancel</button>
+      </div>
+    </div>
+  </div>
+{/if}
+
 <svelte:head>
   <title>Farmer's Basket</title>
 </svelte:head>
@@ -1039,6 +1076,84 @@
 {/if}
 
 <style>
+  .basket-password-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+  }
+
+  .basket-password-box {
+    background: white;
+    border-radius: 18px;
+    padding: 28px 24px;
+    max-width: 360px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  }
+
+  .basket-password-box h2 {
+    margin: 0 0 10px;
+    font-size: 1.3rem;
+    color: #333;
+  }
+
+  .basket-password-box p {
+    margin: 0 0 14px;
+    font-size: 0.9rem;
+    color: #555;
+  }
+
+  .basket-password-box input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+  }
+
+  .basket-error {
+    color: #e53935 !important;
+    font-size: 0.85rem !important;
+    margin: 0 0 10px !important;
+  }
+
+  .basket-pw-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+  }
+
+  .basket-pw-submit {
+    flex: 1;
+    padding: 10px;
+    background: linear-gradient(135deg, #FF9800, #e68900);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .basket-pw-cancel {
+    flex: 1;
+    padding: 10px;
+    background: #f0f0f0;
+    color: #555;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
   .header {
     margin-bottom: 10px;
     text-align: center;
