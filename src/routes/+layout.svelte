@@ -66,6 +66,23 @@
     localStorage.setItem('va_last_seen', new Date().toISOString().split('T')[0]);
 
     const nav = navigator as Navigator & { connection?: { effectiveType?: string } };
+
+    // --- Device fingerprint (stable cross-session estimate) ---
+    async function getDeviceFingerprint(): Promise<string> {
+      const raw = [
+        window.screen.width, window.screen.height, window.screen.colorDepth,
+        navigator.hardwareConcurrency ?? '',
+        (navigator as Navigator & { deviceMemory?: number }).deviceMemory ?? '',
+        navigator.language,
+        Intl.DateTimeFormat().resolvedOptions().timeZone,
+        navigator.platform ?? '',
+      ].join('|');
+      const msgBuffer = new TextEncoder().encode(raw);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+      return Array.from(new Uint8Array(hashBuffer)).slice(0, 6).map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+    const fingerprint = await getDeviceFingerprint();
+
     track('session_start', {
       visit_count:    visitCount,
       returning:      visitCount > 1,
@@ -80,6 +97,7 @@
       connection:     nav.connection?.effectiveType ?? null,
       player_status:  player?.status ?? 'anonymous',
       player_tier:    player?.tier ?? 'free',
+      device_fp:      fingerprint,
     });
 
     // Flush any events queued before Umami script finished loading
