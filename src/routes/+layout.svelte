@@ -217,7 +217,8 @@
 {#if showUpgradePasswordModal}
   <div class="password-overlay" role="dialog" aria-modal="true">
     <div class="password-box">
-      <h2>Enter Access Code</h2>
+      <h2>Beta Access</h2>
+      <p style="margin:0; font-size:0.9rem; color:#555;">During Beta, paid subscriptions require pre-approval. Please enter your access code.</p>
       <input
         type="password"
         bind:value={upgradePasswordInput}
