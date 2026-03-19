@@ -120,7 +120,11 @@
   <div class="app" class:full-width={isFullWidthGame}>
     <div class="nav-wrapper">
     <nav>
-      {#if canUpgrade}
+      {#if player?.status === 'anonymous'}
+        <button class="login-btn" onclick={handleShowLogin}>
+          🔑 Login
+        </button>
+      {:else if canUpgrade}
         <button class="upgrade-btn" onclick={handleShowUpgrade}>
           ⭐ Upgrade
         </button>
@@ -304,6 +308,24 @@
   .upgrade-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+  }
+
+  .login-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #FF9800, #e68900);
+    color: #fff;
+    transition: all 0.2s;
+  }
+
+  .login-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.4);
   }
   
   main {
