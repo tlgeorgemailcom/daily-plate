@@ -24,6 +24,7 @@
   "dependencies": {
     "@libsql/client": "^0.17.0",
     "@sveltejs/adapter-vercel": "^6.3.3",
+    "@vercel/analytics": "^2.0.1",
     "cloudinary": "^2.9.0",
     "svelte-dnd-action": "^0.9.69"
   }
