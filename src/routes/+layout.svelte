@@ -1,7 +1,7 @@
 <script lang="ts">
   import '../app.css';
   import { onMount } from 'svelte';
-  import { inject } from '@vercel/analytics';
+  import { injectAnalytics } from '@vercel/analytics/sveltekit';
   import { browser } from '$app/environment';
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
@@ -130,7 +130,7 @@
     showUpgradeModal = false;
   }
 
-  inject();
+  injectAnalytics();
 </script>
 
 {#if hasStarted}
