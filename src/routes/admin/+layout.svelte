@@ -1,8 +1,12 @@
+<script lang="ts">
+  let { children } = $props();
+</script>
+
 <nav class="admin-nav">
   <a href="/admin/analytics" class="nav-link">Analytics</a>
 </nav>
 
-<slot />
+{@render children()}
 
 <style>
   .admin-nav {
