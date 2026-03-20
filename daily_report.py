@@ -75,7 +75,7 @@ def turso_query(sql, args=None):
     cols = [c['name'] for c in result['response']['result']['cols']]
     rows = result['response']['result']['rows']
     return [
-        dict(zip(cols, [cell['value'] if isinstance(cell, dict) else cell for cell in row]))
+        dict(zip(cols, [cell.get('value') if isinstance(cell, dict) else cell for cell in row]))
         for row in rows
     ]
 
