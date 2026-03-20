@@ -8,6 +8,9 @@ interface EventRow extends Record<string, unknown> {
   ts: string;
 }
 
+// Known owner device fingerprints — excluded from all stats
+const OWNER_FPS = new Set(['fa1d3a62511d', '2373aabb0e3b']);
+
 function isBot(data: Record<string, unknown>): boolean {
   return (
     data['screen'] === '800x600' &&
@@ -47,6 +50,7 @@ export const load: PageServerLoad = async ({ url }) => {
     try { data = JSON.parse(String(row['data_json'] ?? '{}')); } catch { /* skip */ }
     if (isBot(data)) continue;
     const fp = String(row['device_fp'] ?? data['device_fp'] ?? '');
+    if (OWNER_FPS.has(fp)) continue;
     events.push({
       id:        Number(row['id']),
       event:     String(row['event_name']),
