@@ -1,6 +1,6 @@
 <script lang="ts">
   import { enhance } from '$app/forms';
-  let { form, data } = $props();
+  let { form } = $props();
 
   $effect(() => {
     if (form?.success) {
@@ -15,9 +15,6 @@
     <h2>TodayPage Admin</h2>
     {#if form?.error}
       <p class="err-msg">{form.error}</p>
-    {/if}
-    {#if !data.hasPw}
-      <p class="err-msg">⚠️ ADMIN_PASSWORD not set on server</p>
     {/if}
     <input
       type="password"
