@@ -199,8 +199,8 @@ for prop in ('player_status', 'player_tier', 'returning', 'timezone', 'device_ty
         lines.append(f'- **{prop}**: {summary}')
 lines.append('')
 
-# Visit count distribution
-vc = count_by('visit_count')
+# Visit count distribution — only session_start events (reflect real sessions, not enter/exit)
+vc = count_by('visit_count', filter_fn=lambda e: e['event'] == 'session_start')
 if vc:
     lines.append('## Visit Count Distribution')
     lines.append('| visit_count | Sessions |')
