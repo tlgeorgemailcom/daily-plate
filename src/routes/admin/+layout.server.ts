@@ -5,8 +5,7 @@ import { env } from '$env/dynamic/private';
 export const load: LayoutServerLoad = async ({ cookies, url }) => {
   // Login page must not redirect — that would be an infinite loop
   if (url.pathname === '/admin/login') return {};
-  const adminPw = env.ADMIN_PASSWORD?.trim();
-  if (!adminPw || cookies.get('admin_auth') !== adminPw) {
+  if (cookies.get('admin_auth') !== 'ok') {
     throw redirect(303, '/admin/login');
   }
   return {};

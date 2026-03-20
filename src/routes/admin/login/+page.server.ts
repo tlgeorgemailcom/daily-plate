@@ -2,10 +2,11 @@ import { redirect, fail } from '@sveltejs/kit';
 import type { Actions, PageServerLoad } from './$types';
 import { env } from '$env/dynamic/private';
 
+const AUTH_TOKEN = 'ok';
+
 // If already logged in, skip the login page
 export const load: PageServerLoad = async ({ cookies }) => {
-  const adminPw = env.ADMIN_PASSWORD?.trim();
-  if (adminPw && cookies.get('admin_auth') === adminPw) {
+  if (cookies.get('admin_auth') === AUTH_TOKEN) {
     throw redirect(303, '/admin/analytics');
   }
   return {};
@@ -21,10 +22,10 @@ export const actions: Actions = {
       return fail(401, { error: 'Wrong password' });
     }
 
-    cookies.set('admin_auth', adminPw, {
+    cookies.set('admin_auth', AUTH_TOKEN, {
       path: '/admin',
       httpOnly: true,
-      sameSite: 'strict',
+      sameSite: 'lax',
       secure: true,
       maxAge: 60 * 60 * 8,   // 8 hours
     });
