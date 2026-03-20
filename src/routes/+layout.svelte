@@ -16,6 +16,12 @@
     } else {
       eventQueue.push({ name: eventName, props });
     }
+    // Also log to our own Turso-backed endpoint (fire-and-forget)
+    fetch('/api/log-event', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ event: eventName, data: props ?? {} }),
+    }).catch(() => {/* ignore */});
   }
 
   function flushEventQueue() {
