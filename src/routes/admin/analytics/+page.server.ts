@@ -8,7 +8,7 @@ interface EventRow extends Record<string, unknown> {
   ts: string;
 }
 
-// Known owner device fingerprints — excluded from all stats
+// Known owner device fingerprints — only excluded when hideOwner=1
 const OWNER_FPS = new Set(['fa1d3a62511d', '2373aabb0e3b']);
 
 function isBot(data: Record<string, unknown>): boolean {
@@ -34,6 +34,7 @@ export const load: PageServerLoad = async ({ url }) => {
 
   const date = url.searchParams.get('date') ?? new Date().toISOString().slice(0, 10);
   const filterFp = url.searchParams.get('fp') ?? null;
+  const hideOwner = url.searchParams.get('hideOwner') === '1';
 
   const db = getGameDb();
   const result = await db.execute({
@@ -50,7 +51,7 @@ export const load: PageServerLoad = async ({ url }) => {
     try { data = JSON.parse(String(row['data_json'] ?? '{}')); } catch { /* skip */ }
     if (isBot(data)) continue;
     const fp = String(row['device_fp'] ?? data['device_fp'] ?? '');
-    if (OWNER_FPS.has(fp)) continue;
+    if (hideOwner && OWNER_FPS.has(fp)) continue;
     events.push({
       id:        Number(row['id']),
       event:     String(row['event_name']),
@@ -116,6 +117,7 @@ export const load: PageServerLoad = async ({ url }) => {
   return {
     date,
     filterFp,
+    hideOwner,
     overview: {
       total:    events.length,
       sessions: sessions.length,

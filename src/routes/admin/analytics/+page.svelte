@@ -15,11 +15,19 @@
     const next = data.filterFp === fp ? null : fp;
     const params = new URLSearchParams({ date: data.date });
     if (next) params.set('fp', next);
+    if (data.hideOwner) params.set('hideOwner', '1');
+    goto(`?${params}`);
+  }
+
+  function toggleOwner() {
+    const params = new URLSearchParams({ date: data.date });
+    if (data.filterFp) params.set('fp', data.filterFp);
+    if (!data.hideOwner) params.set('hideOwner', '1');
     goto(`?${params}`);
   }
 
   function logout() {
-    document.cookie = 'admin_auth=; Max-Age=0; path=/admin';
+    document.cookie = 'admin_auth=; Max-Age=0; path=/';
     goto('/admin/login');
   }
 
@@ -60,6 +68,9 @@
       onchange={(e) => goto(`?date=${e.currentTarget.value}`)}
     />
     <button class="nav-btn" onclick={() => shiftDate(1)}>→</button>
+    <button class="owner-btn" class:active={data.hideOwner} onclick={toggleOwner}>
+      {data.hideOwner ? '👤 Owner hidden' : '👤 Show owner'}
+    </button>
   </nav>
 
   <!-- Overview cards -->
@@ -263,6 +274,18 @@
     cursor: pointer;
   }
   .nav-btn:hover { background: #388e3c; }
+  .owner-btn {
+    margin-left: 0.5rem;
+    padding: 6px 12px;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    background: white;
+    color: #555;
+    font-size: 13px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .owner-btn.active { background: #e8f5e9; border-color: #4caf50; color: #2e7d32; font-weight: 600; }
   .date-input {
     padding: 6px 10px;
     border: 1px solid #c8e6c9;
