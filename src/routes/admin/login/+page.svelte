@@ -1,9 +1,16 @@
 <script lang="ts">
+  import { enhance } from '$app/forms';
   let { form, data } = $props();
+
+  $effect(() => {
+    if (form?.success) {
+      window.location.href = '/admin/analytics';
+    }
+  });
 </script>
 
 <div class="login-wrap">
-  <form method="POST" class="login-form">
+  <form method="POST" use:enhance class="login-form">
     <div class="logo">🥗</div>
     <h2>TodayPage Admin</h2>
     {#if form?.error}

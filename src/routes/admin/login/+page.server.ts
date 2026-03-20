@@ -23,13 +23,13 @@ export const actions: Actions = {
     }
 
     cookies.set('admin_auth', AUTH_TOKEN, {
-      path: '/admin',
+      path: '/',
       httpOnly: true,
       sameSite: 'lax',
       secure: true,
       maxAge: 60 * 60 * 8,   // 8 hours
     });
 
-    throw redirect(303, '/admin/analytics');
+    return { success: true };
   },
 };
