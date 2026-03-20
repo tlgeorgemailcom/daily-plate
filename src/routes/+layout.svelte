@@ -82,6 +82,7 @@
       return Array.from(new Uint8Array(hashBuffer)).slice(0, 6).map(b => b.toString(16).padStart(2, '0')).join('');
     }
     const fingerprint = await getDeviceFingerprint();
+    deviceFp = fingerprint;
 
     track('session_start', {
       visit_count:    visitCount,
@@ -112,6 +113,7 @@
           duration_seconds: duration,
           player_tier:    player?.tier ?? 'free',
           player_status:  player?.status ?? 'anonymous',
+          device_fp:      deviceFp,
         });
         gameStartTime = null;
       }
@@ -143,6 +145,7 @@
 
   let currentGame = $state<string | null>(null);
   let gameStartTime = $state<number | null>(null);
+  let deviceFp = $state<string>('');
 
   $effect(() => {
     const path = $page.url.pathname;
@@ -158,6 +161,7 @@
           duration_seconds: duration,
           player_tier:    player?.tier ?? 'free',
           player_status:  player?.status ?? 'anonymous',
+          device_fp:      deviceFp,
         });
       }
       // Entering a game — fire enter event
@@ -166,6 +170,7 @@
           player_tier:    player?.tier ?? 'free',
           player_status:  player?.status ?? 'anonymous',
           visit_count:    parseInt(localStorage.getItem('va_visit_count') || '1'),
+          device_fp:      deviceFp,
         });
       }
       currentGame = gameName;
