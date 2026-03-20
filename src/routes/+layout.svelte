@@ -280,7 +280,9 @@
   }
 </script>
 
-{#if hasStarted}
+{#if $page.url.pathname.startsWith('/admin')}
+  {@render children()}
+{:else if hasStarted}
   <!-- Use full-width layout for games that need more space -->
   {@const isFullWidthGame = $page.url.pathname.startsWith('/farmers-basket') || $page.url.pathname === '/tower'}
   <div class="app" class:full-width={isFullWidthGame}>
