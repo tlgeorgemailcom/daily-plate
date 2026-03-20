@@ -38,14 +38,11 @@ if not TURSO_URL or not TURSO_TOKEN:
 SITE_ID = "818b6018-2a1a-4b1c-8c53-b13d6dcf541b"  # kept for reference / Umami dashboard
 
 # ── Date range ───────────────────────────────────────────────────────────────
+# Default = today in UTC (events are stored as UTC ISO timestamps)
 if len(sys.argv) > 1:
-    target = datetime.fromisoformat(sys.argv[1]).replace(tzinfo=timezone.utc)
+    DATE_STR = sys.argv[1][:10]   # accept YYYY-MM-DD or full ISO
 else:
-    target = datetime.now(timezone.utc) - timedelta(days=1)
-
-DATE_STR  = target.strftime('%Y-%m-%d')
-DAY_START = DATE_STR + 'T00:00:00'
-DAY_END   = DATE_STR + 'T23:59:59'
+    DATE_STR = datetime.now(timezone.utc).strftime('%Y-%m-%d')
 
 # ── Turso HTTP query helper ──────────────────────────────────────────────────
 def turso_query(sql, args=None):
@@ -83,10 +80,11 @@ def turso_query(sql, args=None):
     ]
 
 # ── Fetch all events for the day ─────────────────────────────────────────────
+# Filter by local_date (browser's calendar day) — falls back to UTC ts prefix for old rows
 rows = turso_query(
-    "SELECT event_name, device_fp, data_json, ts FROM analytics_events "
-    "WHERE ts >= ? AND ts <= ? ORDER BY ts",
-    [DAY_START, DAY_END],
+    "SELECT event_name, device_fp, local_date, data_json, ts FROM analytics_events "
+    "WHERE coalesce(local_date, substr(ts, 1, 10)) = ? ORDER BY ts",
+    [DATE_STR],
 )
 
 events = []

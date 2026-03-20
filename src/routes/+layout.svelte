@@ -16,11 +16,13 @@
     } else {
       eventQueue.push({ name: eventName, props });
     }
+    // Include browser-local date so reports group by the user's calendar day, not UTC
+    const local_date = new Date().toLocaleDateString('en-CA'); // YYYY-MM-DD in local time
     // Also log to our own Turso-backed endpoint (fire-and-forget)
     fetch('/api/log-event', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ event: eventName, data: props ?? {} }),
+      body: JSON.stringify({ event: eventName, data: { local_date, ...(props ?? {}) } }),
     }).catch(() => {/* ignore */});
   }
 
