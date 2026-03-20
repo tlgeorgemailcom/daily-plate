@@ -93,6 +93,11 @@ for r in rows:
         data = json.loads(r['data_json'] or '{}')
     except (json.JSONDecodeError, TypeError):
         data = {}
+    # Skip bot/health-check sessions: 800x600 + UTC + first visit + anonymous
+    if (data.get('screen') == '800x600' and data.get('timezone') == 'UTC'
+            and str(data.get('visit_count', '')) == '1'
+            and data.get('player_status') == 'anonymous'):
+        continue
     events.append({
         'event':     r['event_name'],
         'device_fp': r['device_fp'] or data.get('device_fp', ''),
