@@ -1,5 +1,5 @@
 <script lang="ts">
-  let { form } = $props();
+  let { form, data } = $props();
 </script>
 
 <div class="login-wrap">
@@ -8,6 +8,9 @@
     <h2>TodayPage Admin</h2>
     {#if form?.error}
       <p class="err-msg">{form.error}</p>
+    {/if}
+    {#if !data.hasPw}
+      <p class="err-msg">⚠️ ADMIN_PASSWORD not set on server</p>
     {/if}
     <input
       type="password"

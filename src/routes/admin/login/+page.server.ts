@@ -1,6 +1,6 @@
 import { redirect, fail } from '@sveltejs/kit';
 import type { Actions, PageServerLoad } from './$types';
-import { env } from '$env/dynamic/private';
+import { ADMIN_PASSWORD } from '$env/static/private';
 
 const AUTH_TOKEN = 'ok';
 
@@ -9,14 +9,14 @@ export const load: PageServerLoad = async ({ cookies }) => {
   if (cookies.get('admin_auth') === AUTH_TOKEN) {
     throw redirect(303, '/admin/analytics');
   }
-  return {};
+  return { hasPw: !!ADMIN_PASSWORD?.trim() };
 };
 
 export const actions: Actions = {
   default: async ({ request, cookies }) => {
     const data = await request.formData();
     const pw = String(data.get('password') ?? '').trim();
-    const adminPw = env.ADMIN_PASSWORD?.trim();
+    const adminPw = ADMIN_PASSWORD?.trim();
 
     if (!adminPw || !pw || pw !== adminPw) {
       return fail(401, { error: 'Wrong password' });
