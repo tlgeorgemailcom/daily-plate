@@ -21,6 +21,19 @@ interface PlayerSettings {
   fats_target: string;
   fiber_target: string;
   sugar_target: string;
+  // Owner demographics — drives the "You" profile in jetcool
+  owner_groupage: string;
+  owner_age: string;
+  owner_height: string;
+  owner_height_unit: string;
+  owner_weight: string;
+  owner_weight_unit: string;
+  owner_activity_level: string;
+  owner_use_dri_macros: number;
+  owner_custom_kcal: string;
+  owner_custom_water_cups: string;
+  owner_custom_sugar_max: string;
+  owner_custom_fiber_g: string;
   updated_at: string;
 }
 
@@ -41,7 +54,19 @@ const DEFAULT_SETTINGS = {
   carbs_target: '',
   fats_target: '',
   fiber_target: '',
-  sugar_target: ''
+  sugar_target: '',
+  owner_groupage: '',
+  owner_age: '',
+  owner_height: '',
+  owner_height_unit: 'cm',
+  owner_weight: '',
+  owner_weight_unit: 'kilos',
+  owner_activity_level: '',
+  owner_use_dri_macros: 1,
+  owner_custom_kcal: '',
+  owner_custom_water_cups: '',
+  owner_custom_sugar_max: '',
+  owner_custom_fiber_g: ''
 };
 
 // GET /api/settings?player_id=xxx
@@ -109,6 +134,18 @@ export const PUT: RequestHandler = async ({ request }) => {
           fats_target = ?,
           fiber_target = ?,
           sugar_target = ?,
+          owner_groupage = ?,
+          owner_age = ?,
+          owner_height = ?,
+          owner_height_unit = ?,
+          owner_weight = ?,
+          owner_weight_unit = ?,
+          owner_activity_level = ?,
+          owner_use_dri_macros = ?,
+          owner_custom_kcal = ?,
+          owner_custom_water_cups = ?,
+          owner_custom_sugar_max = ?,
+          owner_custom_fiber_g = ?,
           updated_at = datetime('now')
         WHERE player_id = ?`,
         [
@@ -128,6 +165,18 @@ export const PUT: RequestHandler = async ({ request }) => {
           finalSettings.fats_target,
           finalSettings.fiber_target,
           finalSettings.sugar_target,
+          finalSettings.owner_groupage,
+          finalSettings.owner_age,
+          finalSettings.owner_height,
+          finalSettings.owner_height_unit,
+          finalSettings.owner_weight,
+          finalSettings.owner_weight_unit,
+          finalSettings.owner_activity_level,
+          finalSettings.owner_use_dri_macros ? 1 : 0,
+          finalSettings.owner_custom_kcal,
+          finalSettings.owner_custom_water_cups,
+          finalSettings.owner_custom_sugar_max,
+          finalSettings.owner_custom_fiber_g,
           player_id
         ]
       );
@@ -138,8 +187,11 @@ export const PUT: RequestHandler = async ({ request }) => {
           player_id, calorie_target, is_custom_calories, custom_calories,
           protein_ratio, carbs_ratio, fats_ratio,
           veg_plate_ratio, fruit_plate_ratio, grain_plate_ratio, protein_plate_ratio,
-          water_target, protein_target, carbs_target, fats_target, fiber_target, sugar_target
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          water_target, protein_target, carbs_target, fats_target, fiber_target, sugar_target,
+          owner_groupage, owner_age, owner_height, owner_height_unit,
+          owner_weight, owner_weight_unit, owner_activity_level, owner_use_dri_macros,
+          owner_custom_kcal, owner_custom_water_cups, owner_custom_sugar_max, owner_custom_fiber_g
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
         [
           player_id,
           finalSettings.calorie_target,
@@ -157,7 +209,19 @@ export const PUT: RequestHandler = async ({ request }) => {
           finalSettings.carbs_target,
           finalSettings.fats_target,
           finalSettings.fiber_target,
-          finalSettings.sugar_target
+          finalSettings.sugar_target,
+          finalSettings.owner_groupage,
+          finalSettings.owner_age,
+          finalSettings.owner_height,
+          finalSettings.owner_height_unit,
+          finalSettings.owner_weight,
+          finalSettings.owner_weight_unit,
+          finalSettings.owner_activity_level,
+          finalSettings.owner_use_dri_macros ? 1 : 0,
+          finalSettings.owner_custom_kcal,
+          finalSettings.owner_custom_water_cups,
+          finalSettings.owner_custom_sugar_max,
+          finalSettings.owner_custom_fiber_g
         ]
       );
     }
@@ -201,8 +265,11 @@ export const POST: RequestHandler = async ({ request }) => {
             player_id, calorie_target, is_custom_calories, custom_calories,
             protein_ratio, carbs_ratio, fats_ratio,
             veg_plate_ratio, fruit_plate_ratio, grain_plate_ratio, protein_plate_ratio,
-            water_target, protein_target, carbs_target, fats_target, fiber_target, sugar_target
-          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+            water_target, protein_target, carbs_target, fats_target, fiber_target, sugar_target,
+            owner_groupage, owner_age, owner_height, owner_height_unit,
+            owner_weight, owner_weight_unit, owner_activity_level, owner_use_dri_macros,
+            owner_custom_kcal, owner_custom_water_cups, owner_custom_sugar_max, owner_custom_fiber_g
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
           [
             player_id,
             localSettings.calorie_target ?? DEFAULT_SETTINGS.calorie_target,
@@ -220,7 +287,19 @@ export const POST: RequestHandler = async ({ request }) => {
             localSettings.carbs_target ?? '',
             localSettings.fats_target ?? '',
             localSettings.fiber_target ?? '',
-            localSettings.sugar_target ?? ''
+            localSettings.sugar_target ?? '',
+            localSettings.owner_groupage ?? '',
+            localSettings.owner_age ?? '',
+            localSettings.owner_height ?? '',
+            localSettings.owner_height_unit ?? 'cm',
+            localSettings.owner_weight ?? '',
+            localSettings.owner_weight_unit ?? 'kilos',
+            localSettings.owner_activity_level ?? '',
+            localSettings.owner_use_dri_macros ? 1 : 0,
+            localSettings.owner_custom_kcal ?? '',
+            localSettings.owner_custom_water_cups ?? '',
+            localSettings.owner_custom_sugar_max ?? '',
+            localSettings.owner_custom_fiber_g ?? ''
           ]
         );
       }

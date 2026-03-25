@@ -28,8 +28,14 @@ export const GET: RequestHandler = async ({ url }) => {
       return json({ valid: false, error: 'Player not found' });
     }
     
-    // Map subscription_tier to tier for client
-    const tier = user.subscription_tier === 'subscriber' ? 'premium' : 'free';
+    // Map subscription_tier to tier for client (same TIER_MAP as /api/auth/login)
+    const TIER_MAP: Record<string, string> = {
+      subscriber: 'premium',
+      plus: 'plus',
+      allin: 'allin',
+      moderator: 'moderator',
+    };
+    const tier = TIER_MAP[user.subscription_tier] ?? 'free';
     
     return json({
       valid: true,

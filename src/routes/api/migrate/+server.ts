@@ -157,6 +157,44 @@ export const GET: RequestHandler = async () => {
       results['custom_category_id_already_exists'] = true;
     }
 
+    // household_members: jetcool_sharing_behavior (controls Auto Share vs Prompt per member)
+    const memberSchema = await db.execute('PRAGMA table_info(household_members)');
+    const memberCols = memberSchema.rows.map((r: Record<string, unknown>) => r['name']);
+    if (!memberCols.includes('jetcool_sharing_behavior')) {
+      await db.execute(
+        "ALTER TABLE household_members ADD COLUMN jetcool_sharing_behavior TEXT NOT NULL DEFAULT 'prompt'"
+      );
+      results['added_jetcool_sharing_behavior'] = true;
+    } else {
+      results['jetcool_sharing_behavior_already_exists'] = true;
+    }
+
+    // player_settings: owner demographic fields (drive "You" profile on jetcool)
+    const settingsSchema = await db.execute('PRAGMA table_info(player_settings)');
+    const settingsCols = settingsSchema.rows.map((r: Record<string, unknown>) => r['name']);
+    const demographicCols: [string, string][] = [
+      ['owner_groupage',      "TEXT DEFAULT ''"],
+      ['owner_age',           "TEXT DEFAULT ''"],
+      ['owner_height',        "TEXT DEFAULT ''"],
+      ['owner_height_unit',   "TEXT DEFAULT 'cm'"],
+      ['owner_weight',        "TEXT DEFAULT ''"],
+      ['owner_weight_unit',   "TEXT DEFAULT 'kilos'"],
+      ['owner_activity_level',"TEXT DEFAULT ''"],
+      ['owner_use_dri_macros',"INTEGER DEFAULT 1"],
+      ['owner_custom_kcal',   "TEXT DEFAULT ''"],
+      ['owner_custom_water_cups', "TEXT DEFAULT ''"],
+      ['owner_custom_sugar_max',  "TEXT DEFAULT ''"],
+      ['owner_custom_fiber_g',    "TEXT DEFAULT ''"],
+    ];
+    for (const [col, def] of demographicCols) {
+      if (!settingsCols.includes(col)) {
+        await db.execute(`ALTER TABLE player_settings ADD COLUMN ${col} ${def}`);
+        results[`added_${col}`] = true;
+      } else {
+        results[`${col}_already_exists`] = true;
+      }
+    }
+
     return json({ success: true, ...results });
   } catch (err) {
     return json({ success: false, error: String(err) });

@@ -125,10 +125,11 @@ function saveToStorage(settings: GameSettings): void {
 
 // ============ Cloud Sync for Premium Users ============
 
-// Check if user is premium (should sync to cloud)
+// Check if user should sync settings to cloud (any paid/identified tier)
 function isPremiumUser(): boolean {
   const player = get(playerStore);
-  const isPremium = player.status === 'logged-in' && player.tier === 'premium';
+  const syncTiers = ['premium', 'allin', 'subscriber', 'moderator', 'plus'];
+  const isPremium = player.status === 'logged-in' && syncTiers.includes(player.tier);
   console.log('[Settings] isPremiumUser check:', { status: player.status, tier: player.tier, isPremium });
   return isPremium;
 }
@@ -157,14 +158,26 @@ function toApiFormat(settings: GameSettings): Record<string, unknown> {
     carbs_target: settings.carbsInput,
     fats_target: settings.fatsInput,
     fiber_target: settings.fiberInput,
-    sugar_target: settings.sugarInput
+    sugar_target: settings.sugarInput,
+    owner_groupage: settings.ownerGroupage,
+    owner_age: settings.ownerAge,
+    owner_height: settings.ownerHeight,
+    owner_height_unit: settings.ownerHeightUnit,
+    owner_weight: settings.ownerWeight,
+    owner_weight_unit: settings.ownerWeightUnit,
+    owner_activity_level: settings.ownerActivityLevel,
+    owner_use_dri_macros: settings.ownerUseDRIMacros ? 1 : 0,
+    owner_custom_kcal: settings.ownerCustomKcal,
+    owner_custom_water_cups: settings.ownerCustomWaterCups,
+    owner_custom_sugar_max: settings.ownerCustomSugarMax,
+    owner_custom_fiber_g: settings.ownerCustomFiberG
   };
 }
 
 // Convert API format to client format
 function fromApiFormat(api: Record<string, unknown>): GameSettings {
   return {
-    ...DEFAULT_SETTINGS, // fill any fields not in API (e.g. owner DRI profile)
+    ...DEFAULT_SETTINGS, // fill any fields not in API
     calorieTarget: api.calorie_target as number,
     isCustomCalories: Boolean(api.is_custom_calories),
     customCalories: api.custom_calories as number,
@@ -180,7 +193,19 @@ function fromApiFormat(api: Record<string, unknown>): GameSettings {
     carbsInput: (api.carbs_target as string) || '',
     fatsInput: (api.fats_target as string) || '',
     fiberInput: (api.fiber_target as string) || '',
-    sugarInput: (api.sugar_target as string) || ''
+    sugarInput: (api.sugar_target as string) || '',
+    ownerGroupage: (api.owner_groupage as string) || DEFAULT_SETTINGS.ownerGroupage,
+    ownerAge: (api.owner_age as string) || DEFAULT_SETTINGS.ownerAge,
+    ownerHeight: (api.owner_height as string) || '',
+    ownerHeightUnit: (api.owner_height_unit as string) || 'cm',
+    ownerWeight: (api.owner_weight as string) || '',
+    ownerWeightUnit: (api.owner_weight_unit as string) || 'kilos',
+    ownerActivityLevel: (api.owner_activity_level as string) || DEFAULT_SETTINGS.ownerActivityLevel,
+    ownerUseDRIMacros: api.owner_use_dri_macros !== 0,
+    ownerCustomKcal: (api.owner_custom_kcal as string) || '',
+    ownerCustomWaterCups: (api.owner_custom_water_cups as string) || '',
+    ownerCustomSugarMax: (api.owner_custom_sugar_max as string) || '',
+    ownerCustomFiberG: (api.owner_custom_fiber_g as string) || ''
   };
 }
 
@@ -274,10 +299,37 @@ export async function syncSettingsFromCloud(): Promise<void> {
     const cloudSettings = await fetchFromCloud();
     
     if (cloudSettings) {
-      // Cloud settings exist - use them
-      console.log('[Settings] Applying cloud settings');
-      settingsWritable.set(cloudSettings);
-      saveToStorage(cloudSettings);
+      // Smart merge: cloud wins for macro/calorie targets, but if cloud has no
+      // demographics yet (newly added columns), preserve local demographics and
+      // push them back up so future syncs have them.
+      const local = get(settingsWritable);
+      const cloudHasDemographics = !!(cloudSettings.ownerGroupage && cloudSettings.ownerAge);
+      const merged: GameSettings = cloudHasDemographics
+        ? cloudSettings
+        : {
+            ...cloudSettings,
+            ownerGroupage: local.ownerGroupage || DEFAULT_SETTINGS.ownerGroupage,
+            ownerAge: local.ownerAge || DEFAULT_SETTINGS.ownerAge,
+            ownerHeight: local.ownerHeight || cloudSettings.ownerHeight,
+            ownerHeightUnit: local.ownerHeightUnit || cloudSettings.ownerHeightUnit,
+            ownerWeight: local.ownerWeight || cloudSettings.ownerWeight,
+            ownerWeightUnit: local.ownerWeightUnit || cloudSettings.ownerWeightUnit,
+            ownerActivityLevel: local.ownerActivityLevel || DEFAULT_SETTINGS.ownerActivityLevel,
+            ownerUseDRIMacros: local.ownerUseDRIMacros,
+            ownerCustomKcal: local.ownerCustomKcal || cloudSettings.ownerCustomKcal,
+            ownerCustomWaterCups: local.ownerCustomWaterCups || cloudSettings.ownerCustomWaterCups,
+            ownerCustomSugarMax: local.ownerCustomSugarMax || cloudSettings.ownerCustomSugarMax,
+            ownerCustomFiberG: local.ownerCustomFiberG || cloudSettings.ownerCustomFiberG,
+          };
+      console.log('[Settings] Applying cloud settings (demographicsFromCloud:', cloudHasDemographics, ')');
+      syncInProgress = true; // prevent the subscribe from double-saving
+      settingsWritable.set(merged);
+      saveToStorage(merged);
+      syncInProgress = false;
+      if (!cloudHasDemographics) {
+        // Push merged demographics up so next sync doesn't need to do this
+        await saveToCloud(merged);
+      }
     } else {
       // No cloud settings - push local to cloud
       const local = get(settingsWritable);
