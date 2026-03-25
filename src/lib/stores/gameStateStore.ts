@@ -291,7 +291,9 @@ export function initializeGameState(): boolean {
   if (savedState) {
     // Restore all stores from saved state
     addedFoods.set(savedState.addedFoods);
-    meals.set(savedState.meals);
+    // Reorder slots to match DEFAULT_MEALS order (handles order changes between versions)
+    const orderedMeals = DEFAULT_MEALS.map(def => savedState.meals.find((m: MealSlot) => m.id === def.id) ?? def);
+    meals.set(orderedMeals);
     selectedMeal.set(savedState.selectedMeal);
     selectedContainer.set(savedState.selectedContainer);
     targets.set(savedState.targets);
@@ -460,7 +462,10 @@ export async function syncGameStateFromCloud(): Promise<void> {
     
     // Restore all stores from cloud state
     addedFoods.set(cloudState.addedFoods || []);
-    meals.set(cloudState.meals || structuredClone(DEFAULT_MEALS));
+    // Reorder slots to match DEFAULT_MEALS order (handles order changes between versions)
+    const rawCloudMeals: MealSlot[] = cloudState.meals || structuredClone(DEFAULT_MEALS);
+    const orderedCloudMeals = DEFAULT_MEALS.map(def => rawCloudMeals.find((m: MealSlot) => m.id === def.id) ?? def);
+    meals.set(orderedCloudMeals);
     selectedMeal.set(cloudState.selectedMeal || 'breakfast');
     selectedContainer.set(cloudState.selectedContainer || 'plate');
     targets.set(cloudState.targets);
