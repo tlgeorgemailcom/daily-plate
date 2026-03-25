@@ -15,8 +15,7 @@
   let mealSlots = $derived($meals);
   
   // Track which meal name is being edited
-  let editingMealId = $state<string | null>(null);
-  let editingName = $state('');
+
   
   // Track which food is being quantity-edited
   let editingFoodId = $state<string | null>(null);
@@ -140,10 +139,10 @@
   let scheduledPlan       = $state<MealTemplate | null>(null);
   let scheduledDismissed  = $state(false);
 
-  const SLOT_ORDER = ['breakfast','snack','lunch','beverage','dinner'] as const;
+  const SLOT_ORDER = ['breakfast','beverage','lunch','dinner','snack'] as const;
   const SLOT_LABELS: Record<string, string> = {
-    breakfast: '🍳 Bkfst', snack: '🍎 Snack', lunch: '🥗 Lunch',
-    beverage: '🥤 Bev', dinner: '🍽 Dinner',
+    breakfast: '🍳 Bkfst', beverage: '🥤 Bev', lunch: '🥗 Lunch',
+    dinner: '🍽 Dinner', snack: '🍎 Snack',
   };
   const filteredTemplates = $derived(
     templateSearch.trim()
@@ -328,31 +327,6 @@
     return word.charAt(0) + word.slice(1).toLowerCase();
   }
   
-  function startEditing(mealId: string, currentName: string) {
-    editingMealId = mealId;
-    editingName = currentName;
-  }
-  
-  function saveEdit() {
-    if (editingMealId && editingName.trim()) {
-      meals.update(m => m.map(meal => 
-        meal.id === editingMealId ? { ...meal, name: editingName.trim() } : meal
-      ));
-    }
-    editingMealId = null;
-    editingName = '';
-  }
-  
-  function cancelEdit() {
-    editingMealId = null;
-    editingName = '';
-  }
-  
-  function handleKeydown(e: KeyboardEvent) {
-    if (e.key === 'Enter') saveEdit();
-    if (e.key === 'Escape') cancelEdit();
-  }
-  
   function startQuantityEdit(foodId: string, currentGrams: number) {
     editingFoodId = foodId;
     editingGrams = currentGrams;
@@ -507,21 +481,10 @@
       <div class="meal-column">
         <!-- Meal Header -->
         <div class="column-header">
-          {#if editingMealId === meal.id}
-            <input 
-              type="text"
-              class="meal-name-input"
-              bind:value={editingName}
-              onblur={saveEdit}
-              onkeydown={handleKeydown}
-              autofocus
-            />
-          {:else}
             {#if isLoggedIn}
               <button class="history-btn" title="Meal history" onclick={() => openHistory(meal.id)}>🕐</button>
             {/if}
             <span class="meal-name">{meal.name}</span>
-            <button class="edit-btn" title="Rename" onclick={() => startEditing(meal.id, meal.name)}>✏️</button>
             {#if householdMembers.length > 0}
               <div class="share-wrap">
                 {#if isAllin}
@@ -562,7 +525,6 @@
                 {/if}
               </div>
             {/if}
-          {/if}
         </div>
         <!-- Foods List with DnD -->
         <div 
@@ -907,19 +869,7 @@
     white-space: nowrap;
   }
 
-  .meal-name-input {
-    font-weight: 600;
-    font-size: 0.75rem;
-    color: #92400e;
-    border: 1px solid #f59e0b;
-    border-radius: 0.25rem;
-    padding: 0.125rem;
-    background: white;
-    width: 50px;
-    text-align: center;
-  }
-
-  .edit-btn, .history-btn {
+  .history-btn {
     background: none;
     border: none;
     cursor: pointer;
@@ -930,7 +880,7 @@
     flex-shrink: 0;
   }
 
-  .edit-btn:hover, .history-btn:hover {
+  .history-btn:hover {
     opacity: 1;
   }
 

@@ -18,10 +18,10 @@ export interface MealSlot {
 // Default meal slots
 export const DEFAULT_MEALS: MealSlot[] = [
   { id: 'breakfast', name: 'Bkfst', foods: [] },
-  { id: 'snack', name: 'Snack', foods: [] },
-  { id: 'lunch', name: 'Lunch', foods: [] },
   { id: 'beverage', name: 'Bev', foods: [] },
-  { id: 'dinner', name: 'Dinner', foods: [] }
+  { id: 'lunch', name: 'Lunch', foods: [] },
+  { id: 'dinner', name: 'Dinner', foods: [] },
+  { id: 'snack', name: 'Snack', foods: [] }
 ];
 
 // A food item added to the day's diet
