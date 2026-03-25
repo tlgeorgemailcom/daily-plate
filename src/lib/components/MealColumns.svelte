@@ -545,7 +545,7 @@
     </div>
   {/if}
 
-  <div class="meal-columns">
+  <div class="meal-columns" style="grid-template-columns: repeat({mealSlots.length + (isAllin ? 1 : 0)}, 1fr)">
     {#each mealSlots as meal}
       {@const mealFoods = getFoodsForMeal(meal.id)}
       {@const mealTotal = getMealTotal(meal.id)}
@@ -959,7 +959,6 @@
 
   .meal-columns {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
     gap: 0.5rem;
     min-height: 120px;
   }
