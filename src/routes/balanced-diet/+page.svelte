@@ -26,7 +26,7 @@
   } from '$lib/stores/gameStore';
   import { gameSettings, updateSettings, DEFAULT_SETTINGS, getSettings } from '$lib/stores/settingsStore';
   import { playerStore } from '$lib/stores/playerStore';
-  import { initializeGameState, startAutoSave, startNewGame, getSavedGameTime, hasSavedGame, setViewingUserId, saveMealLog, suppressMealLogSave } from '$lib/stores/gameStateStore';
+  import { initializeGameState, startAutoSave, startNewGame, getSavedGameTime, hasSavedGame, setViewingUserId, saveMealLog, suppressMealLogSave, loadCustomCategories } from '$lib/stores/gameStateStore';
   import { FOODS } from '$lib/data/food-portions';
   import type { Food, Portion } from '$lib/data/food-portions';
   import type { RecipeFood } from '$lib/components/FoodPicker.svelte';
@@ -405,6 +405,11 @@
         const hm = await fetch(`/api/household-members?player_id=${$playerStore.id}`);
         if (hm.ok) householdMembers = await hm.json();
       } catch { /* non-critical */ }
+
+      // Load custom meal categories so their slots exist before we add foods
+      if (isAllin) {
+        await loadCustomCategories($playerStore.id);
+      }
 
       // Sync today's meals from DB — DB is source of truth, overrides any stale
       // localStorage data (e.g. a household member's foods from a prior session).

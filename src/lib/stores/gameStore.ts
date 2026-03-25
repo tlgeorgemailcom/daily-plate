@@ -13,6 +13,7 @@ export interface MealSlot {
   id: string;
   name: string;        // editable: "Breakfast", "Lunch", etc.
   foods: string[];     // array of AddedFood ids
+  custom?: boolean;    // true for user-created custom slots
 }
 
 // Default meal slots
@@ -88,6 +89,17 @@ export const nutrientTargets = writable<NutrientTargets>(DEFAULT_NUTRIENT_TARGET
 export const selectedContainer = writable<Container>('plate');
 export const meals = writable<MealSlot[]>(structuredClone(DEFAULT_MEALS));
 export const selectedMeal = writable<string>('breakfast');
+
+// Custom meal categories loaded from DB for ALL·IN users
+export interface CustomMealCategory {
+  id: number;
+  name: string;     // internal slug key used as meal slot id
+  label: string;    // display name
+  emoji: string;
+  color: string;
+  sort_order: number;
+}
+export const customMealCategories = writable<CustomMealCategory[]>([]);
 
 // Generate unique ID
 function generateId(): string {

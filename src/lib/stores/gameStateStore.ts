@@ -16,13 +16,15 @@ import {
   nutrientTargets,
   nutrientProgress,
   selectedPieNutrient,
+  customMealCategories,
   DEFAULT_MEALS,
   type AddedFood,
   type MealSlot,
   type Container,
   type DailyTargets,
   type NutrientTargets,
-  type PieChartNutrient
+  type PieChartNutrient,
+  type CustomMealCategory
 } from './gameStore';
 import { calculateNutrients, calculateNutrientsForGrams } from '$lib/data/food-portions';
 import { getMicrosForGrams } from '$lib/data/food-micros';
@@ -489,4 +491,42 @@ export async function syncGameStateFromCloud(): Promise<void> {
       await saveToCloud();
     }
   }
+}
+
+// ============ Custom Meal Categories (ALL·IN) ============
+
+// Load custom categories from DB and append as meal slots.
+// Must be called after initializeGameState() so default slots are in place first.
+export async function loadCustomCategories(userId: string): Promise<void> {
+  try {
+    const res = await fetch(`/api/meal-categories?user_id=${encodeURIComponent(userId)}`);
+    if (!res.ok) return;
+    const cats: CustomMealCategory[] = await res.json();
+    if (cats.length === 0) return;
+    customMealCategories.set(cats);
+    // Append custom slots to the meals store (after the 5 defaults)
+    meals.update(current => {
+      const existingIds = new Set(current.map(m => m.id));
+      const newSlots: MealSlot[] = cats
+        .filter(c => !existingIds.has(c.name))
+        .map(c => ({ id: c.name, name: `${c.emoji} ${c.label}`, foods: [], custom: true }));
+      return newSlots.length > 0 ? [...current, ...newSlots] : current;
+    });
+  } catch { /* non-critical */ }
+}
+
+// Append a single newly-created custom category to the stores (call after POST succeeds).
+export function appendCustomCategory(cat: CustomMealCategory): void {
+  customMealCategories.update(list => [...list, cat]);
+  meals.update(current => {
+    if (current.some(m => m.id === cat.name)) return current;
+    return [...current, { id: cat.name, name: `${cat.emoji} ${cat.label}`, foods: [], custom: true }];
+  });
+}
+
+// Remove a custom category from the stores and drop its foods (call after DELETE succeeds).
+export function removeCustomCategoryLocally(categoryName: string): void {
+  customMealCategories.update(list => list.filter(c => c.name !== categoryName));
+  addedFoods.update(fs => fs.filter(f => f.mealId !== categoryName));
+  meals.update(current => current.filter(m => m.id !== categoryName));
 }

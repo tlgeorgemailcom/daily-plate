@@ -2,6 +2,7 @@
   import { addedFoods, removeFood, moveFoodToMeal, updateFoodQuantity, meals, addFood, type AddedFood } from '$lib/stores/gameStore';
   import { playerStore } from '$lib/stores/playerStore';
   import { FOODS } from '$lib/data/food-portions';
+  import { appendCustomCategory, removeCustomCategoryLocally } from '$lib/stores/gameStateStore';
 
   // All user IDs to include in meal history (owner + household members)
   let { allUserIds = [], householdMembers = [] }: {
@@ -101,7 +102,7 @@
       const food = FOODS.find(f => f.ndb === entry.food_id);
       if (food) {
         // Use portions[0] (custom 100g base) with customGrams for exact reproduction
-        addFood(food, food.portions[0], targetMealId, entry.quantity_grams);
+        addFood(food, food.portions[0], 'plate', entry.quantity_grams, 1, targetMealId);
       }
     }
     closeHistory();
@@ -272,7 +273,7 @@
     for (const [slotId, entries] of Object.entries(mealData)) {
       for (const entry of entries) {
         const food = FOODS.find(f => f.ndb === entry.food_id);
-        if (food) addFood(food, food.portions[0], slotId, entry.quantity_grams);
+        if (food) addFood(food, food.portions[0], 'plate', entry.quantity_grams, 1, slotId);
       }
     }
     showLoadModal = false;
@@ -393,8 +394,7 @@
     const foods = getFoodsForMeal(mealId);
     if (foods.length === 0) return;
 
-    sharingMealId = mealId;
-    const today = new Date().toISOString().split('T')[0];
+    sharingMealId = mealId;    const today = new Date().toISOString().split('T')[0];
 
     // Build entries the same way saveMealLog does, but scoped to this slot only
     const entries = foods.map(af => {
@@ -438,6 +438,78 @@
       console.error('[Share] Failed to share meal slot:', e);
     } finally {
       sharingMealId = null;
+    }
+  }
+
+  // ── Custom Meal Categories (ALL·IN) ───────────────────────────────────────
+  let showAddCategoryModal = $state(false);
+  let newCatEmoji  = $state('🍽️');
+  let newCatLabel  = $state('');
+  let addCatPending = $state(false);
+  let addCatError  = $state('');
+
+  function openAddCategoryModal() {
+    newCatEmoji  = '🍽️';
+    newCatLabel  = '';
+    addCatError  = '';
+    showAddCategoryModal = true;
+  }
+
+  // Derive a URL-safe slug from the user-typed label
+  function slugify(s: string): string {
+    return s.trim().toLowerCase()
+      .replace(/\s+/g, '_')
+      .replace(/[^a-z0-9_-]/g, '')
+      .slice(0, 40);
+  }
+
+  async function addCategory() {
+    const playerId = $playerStore.id;
+    if (!playerId) return;
+    const label = newCatLabel.trim();
+    if (!label) { addCatError = 'Please enter a name'; return; }
+    const name = slugify(label);
+    if (!name) { addCatError = 'Name must contain letters or numbers'; return; }
+    addCatPending = true;
+    addCatError = '';
+    try {
+      const res = await fetch('/api/meal-categories', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ user_id: playerId, name, label, emoji: newCatEmoji }),
+      });
+      if (res.status === 201) {
+        const cat = await res.json();
+        appendCustomCategory(cat);
+        showAddCategoryModal = false;
+      } else {
+        const body = await res.json().catch(() => ({}));
+        addCatError = body.message ?? `Failed (${res.status})`;
+      }
+    } catch {
+      addCatError = 'Connection error';
+    } finally {
+      addCatPending = false;
+    }
+  }
+
+  let deletingCategoryName = $state<string | null>(null);
+
+  async function deleteCustomCategory(categoryName: string) {
+    const playerId = $playerStore.id;
+    if (!playerId) return;
+    deletingCategoryName = categoryName;
+    try {
+      await fetch(
+        `/api/meal-categories?user_id=${encodeURIComponent(playerId)}&name=${encodeURIComponent(categoryName)}`,
+        { method: 'DELETE' }
+      );
+      removeCustomCategoryLocally(categoryName);
+    } catch {
+      // non-critical: remove locally anyway
+      removeCustomCategoryLocally(categoryName);
+    } finally {
+      deletingCategoryName = null;
     }
   }
 </script>
@@ -485,6 +557,15 @@
               <button class="history-btn" title="Meal history" onclick={() => openHistory(meal.id)}>🕐</button>
             {/if}
             <span class="meal-name">{meal.name}</span>
+            {#if meal.custom && isAllin}
+              <button
+                class="delete-slot-btn"
+                title="Delete this custom meal slot"
+                onclick={(e) => { e.stopPropagation(); deleteCustomCategory(meal.id); }}
+                disabled={deletingCategoryName === meal.id}
+                aria-label="Delete {meal.name} slot"
+              >{deletingCategoryName === meal.id ? '⏳' : '×'}</button>
+            {/if}
             {#if householdMembers.length > 0}
               <div class="share-wrap">
                 <button
@@ -574,10 +655,59 @@
         </div>
       </div>
     {/each}
+    {#if isAllin}
+      <div class="add-slot-column">
+        <button class="add-slot-btn" title="Add a custom meal slot" onclick={openAddCategoryModal}>
+          ＋
+        </button>
+      </div>
+    {/if}
   </div>
 </div>
 
-<!-- ═══════════════════ MEAL HISTORY MODAL ═══════════════════ -->
+<!-- ═══════════════════ ADD CUSTOM CATEGORY MODAL ═══════════════════ -->
+{#if showAddCategoryModal}
+  <div class="mc-backdrop" onclick={() => showAddCategoryModal = false} role="dialog" aria-modal="true" aria-label="Add custom meal slot">
+    <div class="mc-modal mc-modal--narrow" onclick={(e) => e.stopPropagation()}>
+      <div class="mc-modal-header">
+        <span class="mc-modal-title">＋ Add Custom Meal Slot</span>
+        <button class="mc-close" onclick={() => showAddCategoryModal = false}>×</button>
+      </div>
+      <div class="mc-body">
+        <p class="mc-save-hint">Create a custom meal slot for today's plate. It will be available to add foods to.</p>
+        <div class="add-cat-row">
+          <label class="add-cat-emoji-label" title="Click to change emoji">
+            <input
+              type="text"
+              class="add-cat-emoji-input"
+              maxlength="2"
+              bind:value={newCatEmoji}
+              aria-label="Slot emoji"
+            />
+          </label>
+          <input
+            type="text"
+            class="mc-name-input add-cat-label-input"
+            placeholder="e.g. Late Night"
+            maxlength="30"
+            bind:value={newCatLabel}
+            onkeydown={(e) => { if (e.key === 'Enter') addCategory(); if (e.key === 'Escape') showAddCategoryModal = false; }}
+            autofocus
+          />
+        </div>
+        {#if addCatError}
+          <p class="mc-error">{addCatError}</p>
+        {/if}
+        <div class="mc-modal-footer">
+          <button class="mc-btn mc-btn--primary" onclick={addCategory} disabled={addCatPending}>
+            {addCatPending ? 'Adding…' : 'Add Slot'}
+          </button>
+          <button class="mc-btn" onclick={() => showAddCategoryModal = false}>Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+{/if}
 {#if historyMealId}
   <div class="mc-backdrop" onclick={closeHistory} role="dialog" aria-modal="true" aria-label="Meal history">
     <div class="mc-modal" onclick={(e) => e.stopPropagation()}>
@@ -829,7 +959,7 @@
 
   .meal-columns {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
     gap: 0.5rem;
     min-height: 120px;
   }
@@ -960,6 +1090,74 @@
 
   .share-member-icon { font-size: 0.85rem; }
   .share-check { margin-left: auto; font-size: 0.75rem; color: #16a34a; }
+
+  /* ── Custom meal slot controls ── */
+  .delete-slot-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.7rem;
+    padding: 0 0.1rem;
+    opacity: 0.45;
+    line-height: 1;
+    color: #92400e;
+    flex-shrink: 0;
+  }
+  .delete-slot-btn:hover:not(:disabled) { opacity: 1; color: #dc2626; }
+  .delete-slot-btn:disabled { cursor: default; opacity: 0.3; }
+
+  /* Plus button column */
+  .add-slot-column {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 0.375rem;
+  }
+  .add-slot-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px dashed #d1d5db;
+    background: transparent;
+    color: #9ca3af;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.15s, color 0.15s, background 0.15s;
+    line-height: 1;
+  }
+  .add-slot-btn:hover {
+    border-color: #f59e0b;
+    color: #f59e0b;
+    background: #fffbeb;
+  }
+
+  /* Add category modal extras */
+  .add-cat-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .add-cat-emoji-label {
+    flex-shrink: 0;
+  }
+  .add-cat-emoji-input {
+    width: 2.4rem;
+    font-size: 1.25rem;
+    text-align: center;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    padding: 0.25rem;
+    background: #f9fafb;
+    cursor: text;
+  }
+  .add-cat-label-input {
+    flex: 1;
+    margin-bottom: 0;
+  }
 
   .column-foods {
     flex: 1;

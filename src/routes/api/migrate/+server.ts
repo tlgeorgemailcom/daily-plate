@@ -127,6 +127,36 @@ export const GET: RequestHandler = async () => {
       results['total_kcal_already_exists'] = true;
     }
 
+    // meal_categories: user-defined custom meal slots (ALL·IN only)
+    await db.execute(`
+      CREATE TABLE IF NOT EXISTS meal_categories (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        user_id TEXT NOT NULL,
+        name TEXT NOT NULL,
+        label TEXT NOT NULL,
+        emoji TEXT NOT NULL DEFAULT '🍽️',
+        color TEXT NOT NULL DEFAULT '#6B7280',
+        sort_order INTEGER NOT NULL DEFAULT 0,
+        is_active INTEGER NOT NULL DEFAULT 1,
+        created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        UNIQUE(user_id, name)
+      )
+    `);
+    await db.execute(
+      'CREATE INDEX IF NOT EXISTS idx_meal_categories_user ON meal_categories(user_id, is_active)'
+    );
+    results['meal_categories'] = 'ok';
+
+    // daily_meal_log: add custom_category_id column if missing
+    const logSchema = await db.execute('PRAGMA table_info(daily_meal_log)');
+    const logCols = logSchema.rows.map((r: Record<string, unknown>) => r['name']);
+    if (!logCols.includes('custom_category_id')) {
+      await db.execute('ALTER TABLE daily_meal_log ADD COLUMN custom_category_id INTEGER');
+      results['added_custom_category_id'] = true;
+    } else {
+      results['custom_category_id_already_exists'] = true;
+    }
+
     return json({ success: true, ...results });
   } catch (err) {
     return json({ success: false, error: String(err) });
