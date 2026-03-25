@@ -54,7 +54,9 @@ function loadGameState(): GameState | null {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored) {
       const data: StorageData = JSON.parse(stored);
-      if (data.version === STORAGE_VERSION && data.state) {
+      const today = new Date().toISOString().split('T')[0];
+      const savedDay = data.savedAt ? data.savedAt.split('T')[0] : null;
+      if (data.version === STORAGE_VERSION && data.state && savedDay === today) {
         return data.state;
       }
     }
