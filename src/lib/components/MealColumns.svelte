@@ -543,28 +543,27 @@
                     >{m.icon}</span>
                   {/each}
                 </span>
+                <!-- Popover anchored inside share-wrap so position:absolute works correctly -->
+                {#if shareOpenMealId === meal.id && isAllin && householdMembers.length > 0}
+                  <div class="share-popover" role="menu">
+                    <p class="share-popover-title">Share {meal.name} with:</p>
+                    {#each householdMembers as m (m.id)}
+                      <button
+                        class="share-member-btn{sharedSlots.has(`${meal.id}|${m.id}`) ? ' share-member-btn--done' : ''}"
+                        onclick={() => { shareMealSlot(meal.id, m.id, m.name); shareOpenMealId = null; }}
+                        disabled={getFoodsForMeal(meal.id).length === 0}
+                      >
+                        <span class="share-member-icon">{m.icon}</span>
+                        <span>{m.name}</span>
+                        {#if sharedSlots.has(`${meal.id}|${m.id}`)}<span class="share-check">✓</span>{/if}
+                      </button>
+                    {/each}
+                  </div>
+                {/if}
               </div>
             {/if}
           {/if}
         </div>
-        <!-- Share popover -->
-        {#if shareOpenMealId === meal.id && isAllin && householdMembers.length > 0}
-          <div class="share-popover" role="menu">
-            <p class="share-popover-title">Share {meal.name} with:</p>
-            {#each householdMembers as m (m.id)}
-              <button
-                class="share-member-btn{sharedSlots.has(`${meal.id}|${m.id}`) ? ' share-member-btn--done' : ''}"
-                onclick={() => { shareMealSlot(meal.id, m.id, m.name); shareOpenMealId = null; }}
-                disabled={getFoodsForMeal(meal.id).length === 0}
-              >
-                <span class="share-member-icon">{m.icon}</span>
-                <span>{m.name}</span>
-                {#if sharedSlots.has(`${meal.id}|${m.id}`)}<span class="share-check">✓</span>{/if}
-              </button>
-            {/each}
-          </div>
-        {/if}
-        
         <!-- Foods List with DnD -->
         <div 
           class="column-foods"
