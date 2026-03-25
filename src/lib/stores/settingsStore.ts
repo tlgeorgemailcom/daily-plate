@@ -33,6 +33,20 @@ export interface GameSettings {
   fatsInput: string;
   fiberInput: string;
   sugarInput: string;
+
+  // Owner DRI profile (drives calorie + nutrient targets)
+  ownerGroupage: string;
+  ownerAge: string;
+  ownerHeight: string;
+  ownerHeightUnit: string;
+  ownerWeight: string;
+  ownerWeightUnit: string;
+  ownerActivityLevel: string;
+  ownerUseDRIMacros: boolean;
+  ownerCustomKcal: string;
+  ownerCustomWaterCups: string;
+  ownerCustomSugarMax: string;
+  ownerCustomFiberG: string;
 }
 
 export const DEFAULT_SETTINGS: GameSettings = {
@@ -51,7 +65,20 @@ export const DEFAULT_SETTINGS: GameSettings = {
   carbsInput: '',
   fatsInput: '',
   fiberInput: '',
-  sugarInput: ''
+  sugarInput: '',
+
+  ownerGroupage: 'Males',
+  ownerAge: '19_30y',
+  ownerHeight: '',
+  ownerHeightUnit: 'cm',
+  ownerWeight: '',
+  ownerWeightUnit: 'kilos',
+  ownerActivityLevel: 'Sedentary',
+  ownerUseDRIMacros: true,
+  ownerCustomKcal: '',
+  ownerCustomWaterCups: '',
+  ownerCustomSugarMax: '',
+  ownerCustomFiberG: '',
 };
 
 interface StorageData {
@@ -137,6 +164,7 @@ function toApiFormat(settings: GameSettings): Record<string, unknown> {
 // Convert API format to client format
 function fromApiFormat(api: Record<string, unknown>): GameSettings {
   return {
+    ...DEFAULT_SETTINGS, // fill any fields not in API (e.g. owner DRI profile)
     calorieTarget: api.calorie_target as number,
     isCustomCalories: Boolean(api.is_custom_calories),
     customCalories: api.custom_calories as number,

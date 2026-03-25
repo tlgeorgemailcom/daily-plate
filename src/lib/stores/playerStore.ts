@@ -4,7 +4,7 @@ import { browser } from '$app/environment';
 
 const STORAGE_KEY = 'dailyfoodchain_player';
 
-export type PlayerTier = 'free' | 'premium';
+export type PlayerTier = 'free' | 'plus' | 'allin' | 'premium' | 'subscriber' | 'moderator';
 export type PlayerStatus = 'anonymous' | 'logged-in';
 
 export interface Player {

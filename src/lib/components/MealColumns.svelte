@@ -1,5 +1,10 @@
 <script lang="ts">
-  import { addedFoods, removeFood, moveFoodToMeal, updateFoodQuantity, meals, type AddedFood } from '$lib/stores/gameStore';
+  import { addedFoods, removeFood, moveFoodToMeal, updateFoodQuantity, meals, addFood, type AddedFood } from '$lib/stores/gameStore';
+  import { playerStore } from '$lib/stores/playerStore';
+  import { FOODS } from '$lib/data/food-portions';
+
+  // All user IDs to include in meal history (owner + household members)
+  let { allUserIds = [] }: { allUserIds: string[] } = $props();
   import { dndzone, SHADOW_PLACEHOLDER_ITEM_ID } from 'svelte-dnd-action';
   import { flip } from 'svelte/animate';
 
@@ -17,6 +22,272 @@
   // For dnd - we need mutable local copies per meal
   let mealFoodsMap = $state<Record<string, AddedFood[]>>({});
   
+  // ── Meal History per Slot ──────────────────────────────────────────────────
+  interface HistoryEntry {
+    food_id: string; food_name: string; quantity_grams: number;
+    kcal: number; protein: number; carbohydrate: number; fat: number;
+    serving_description: string | null;
+  }
+  interface HistoryDay { meal_date: string; entries: HistoryEntry[]; total_kcal: number; }
+  let historyMealId    = $state<string | null>(null);
+  let historyDays      = $state<HistoryDay[]>([]);
+  let historyLoading   = $state(false);
+  let historyConfirm   = $state<HistoryDay | null>(null);  // awaiting confirmation
+
+  async function openHistory(mealId: string) {
+    const playerId = $playerStore.id;
+    if (!playerId) return;
+    historyMealId = mealId;
+    historyDays = [];
+    historyLoading = true;
+    historyConfirm = null;
+
+    // Use allUserIds if household members are present, otherwise just the owner
+    const userIds = allUserIds.length > 0 ? allUserIds : [playerId];
+
+    try {
+      // Fetch history for all household members in parallel
+      const allResults = await Promise.all(
+        userIds.map(uid =>
+          fetch(`/api/meal-log?user_id=${encodeURIComponent(uid)}&category=${encodeURIComponent(mealId)}&history=true&limit=30`)
+            .then(r => r.ok ? r.json() : { days: [] })
+            .then((d: { days?: HistoryDay[] }) => d.days ?? [])
+        )
+      );
+
+      // Merge by date — union of entries, deduplicated by food_id
+      const dayMap = new Map<string, HistoryDay>();
+      for (const days of allResults) {
+        for (const day of days) {
+          if (!dayMap.has(day.meal_date)) {
+            dayMap.set(day.meal_date, { meal_date: day.meal_date, entries: [], total_kcal: 0 });
+          }
+          const merged = dayMap.get(day.meal_date)!;
+          for (const entry of day.entries) {
+            if (!merged.entries.some(e => e.food_id === entry.food_id)) {
+              merged.entries.push(entry);
+              merged.total_kcal += entry.kcal;
+            }
+          }
+        }
+      }
+
+      historyDays = Array.from(dayMap.values())
+        .sort((a, b) => b.meal_date.localeCompare(a.meal_date));
+    } finally {
+      historyLoading = false;
+    }
+  }
+
+  function closeHistory() { historyMealId = null; historyConfirm = null; }
+
+  function requestLoad(day: HistoryDay) {
+    const currentFoods = getFoodsForMeal(historyMealId!);
+    if (currentFoods.length > 0) {
+      historyConfirm = day;   // ask before replacing
+    } else {
+      applyHistoryDay(day);
+    }
+  }
+
+  function applyHistoryDay(day: HistoryDay) {
+    const targetMealId = historyMealId!;
+    // Remove current foods in this slot
+    for (const f of getFoodsForMeal(targetMealId)) removeFood(f.id);
+    // Add foods from the history day
+    for (const entry of day.entries) {
+      const food = FOODS.find(f => f.ndb === entry.food_id);
+      if (food) {
+        // Use portions[0] (custom 100g base) with customGrams for exact reproduction
+        addFood(food, food.portions[0], targetMealId, entry.quantity_grams);
+      }
+    }
+    closeHistory();
+  }
+
+  // ── Saved Day Plans ────────────────────────────────────────────────────────
+  interface TemplateEntry {
+    food_id: string; food_name: string; quantity_grams: number;
+    kcal: number; protein: number; carbohydrate: number; fat: number;
+    serving_description: string;
+  }
+  interface TemplateMealData { [slotId: string]: TemplateEntry[] }
+  interface MealTemplate {
+    id: string; name: string; description?: string | null;
+    meal_data: string; total_kcal: number;
+    saved_from_date?: string | null; scheduled_for_date?: string | null;
+    created_at: string; updated_at: string;
+  }
+
+  let showSaveModal       = $state(false);
+  let saveName            = $state('');
+  let saveScheduledDate   = $state('');   // optional future date to schedule this plan
+  let saveError           = $state('');
+  let savePending         = $state(false);
+
+  let showLoadModal       = $state(false);
+  let templateList        = $state<MealTemplate[]>([]);
+  let templatesLoading    = $state(false);
+  let loadConfirm         = $state<MealTemplate | null>(null);
+  let deleteConfirm       = $state<string | null>(null);
+  let templateSearch      = $state('');
+  let previewTemplate     = $state<MealTemplate | null>(null);
+
+  // Scheduled plan for today — shown as a banner when found on login
+  let scheduledPlan       = $state<MealTemplate | null>(null);
+  let scheduledDismissed  = $state(false);
+
+  const SLOT_ORDER = ['breakfast','snack','lunch','beverage','dinner'] as const;
+  const SLOT_LABELS: Record<string, string> = {
+    breakfast: '🍳 Bkfst', snack: '🍎 Snack', lunch: '🥗 Lunch',
+    beverage: '🥤 Bev', dinner: '🍽 Dinner',
+  };
+  const filteredTemplates = $derived(
+    templateSearch.trim()
+      ? templateList.filter(t => t.name.toLowerCase().includes(templateSearch.trim().toLowerCase()))
+      : templateList
+  );
+
+  // Check for a meal plan scheduled for today on player login
+  $effect(() => {
+    const playerId = $playerStore.id;
+    if (!playerId || scheduledDismissed || scheduledPlan) return;
+    const today = new Date().toISOString().split('T')[0];
+    (async () => {
+      try {
+        const res = await fetch(`/api/meal-templates?user_id=${encodeURIComponent(playerId)}&scheduled_for=${today}`);
+        if (res.ok) {
+          const data = await res.json();
+          if (data.template) scheduledPlan = data.template;
+        }
+      } catch { /* silent */ }
+    })();
+  });
+
+  function getPreviewSlots(t: MealTemplate) {
+    try {
+      const data: TemplateMealData = JSON.parse(t.meal_data);
+      return SLOT_ORDER
+        .filter(slot => (data[slot]?.length ?? 0) > 0)
+        .map(slot => ({
+          label: SLOT_LABELS[slot] ?? slot,
+          foods: (data[slot] ?? []).map(e => e.food_name).join(', '),
+          kcal: Math.round((data[slot] ?? []).reduce((s, e) => s + e.kcal, 0)),
+        }));
+    } catch { return []; }
+  }
+
+  function openSaveModal() {
+    saveName = '';
+    saveScheduledDate = '';
+    saveError = '';
+    showSaveModal = true;
+  }
+
+  async function saveDay() {
+    const playerId = $playerStore.id;
+    if (!playerId) return;
+    if (!saveName.trim()) { saveError = 'Please enter a name'; return; }
+    savePending = true;
+    saveError = '';
+
+    const mealData: TemplateMealData = {};
+    let totalKcal = 0;
+    for (const slot of mealSlots) {
+      const slotFoods = getFoodsForMeal(slot.id);
+      mealData[slot.id] = slotFoods.map(f => {
+        const grams = f.customGrams ?? Math.round(f.portion.gm * (f.multiplier ?? 1));
+        totalKcal += f.calories;
+        return {
+          food_id: f.food.ndb,
+          food_name: f.food.display,
+          quantity_grams: grams,
+          kcal: Math.round(f.calories),
+          protein: f.food.pro * grams / 100,
+          carbohydrate: f.food.carb * grams / 100,
+          fat: f.food.fat * grams / 100,
+          serving_description: f.portion.desc,
+        };
+      });
+    }
+
+    try {
+      const res = await fetch('/api/meal-templates', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          id: crypto.randomUUID(),
+          user_id: playerId,
+          name: saveName.trim(),
+          meal_data: JSON.stringify(mealData),
+          total_kcal: Math.round(totalKcal),
+          saved_from_date: new Date().toISOString().split('T')[0],
+          scheduled_for_date: saveScheduledDate || null,
+        }),
+      });
+      if (!res.ok) { saveError = 'Save failed — try again'; }
+      else { showSaveModal = false; }
+    } catch {
+      saveError = 'Connection error';
+    } finally {
+      savePending = false;
+    }
+  }
+
+  async function openLoadModal() {
+    const playerId = $playerStore.id;
+    if (!playerId) return;
+    showLoadModal = true;
+    loadConfirm = null;
+    deleteConfirm = null;
+    templateSearch = '';
+    previewTemplate = null;
+    templatesLoading = true;
+    try {
+      const res = await fetch(`/api/meal-templates?user_id=${encodeURIComponent(playerId)}`);
+      if (res.ok) {
+        const data = await res.json();
+        templateList = data.templates ?? [];
+      }
+    } finally {
+      templatesLoading = false;
+    }
+  }
+
+  function requestLoadTemplate(t: MealTemplate) {
+    if (foods.length > 0) {
+      loadConfirm = t;
+    } else {
+      applyTemplate(t);
+    }
+  }
+
+  function applyTemplate(t: MealTemplate) {
+    const mealData: TemplateMealData = JSON.parse(t.meal_data);
+    // Clear all current foods
+    for (const f of [...foods]) removeFood(f.id);
+    // Re-populate from template
+    for (const [slotId, entries] of Object.entries(mealData)) {
+      for (const entry of entries) {
+        const food = FOODS.find(f => f.ndb === entry.food_id);
+        if (food) addFood(food, food.portions[0], slotId, entry.quantity_grams);
+      }
+    }
+    showLoadModal = false;
+    loadConfirm = null;
+  }
+
+  async function deleteTemplate(id: string) {
+    const playerId = $playerStore.id;
+    if (!playerId) return;
+    await fetch(`/api/meal-templates?user_id=${encodeURIComponent(playerId)}&id=${encodeURIComponent(id)}`, {
+      method: 'DELETE'
+    });
+    templateList = templateList.filter(t => t.id !== id);
+    deleteConfirm = null;
+  }
+
+  // ── Shared helpers ─────────────────────────────────────────────────────────
   // Sync from store to local state when foods change
   $effect(() => {
     const newMap: Record<string, AddedFood[]> = {};
@@ -26,17 +297,14 @@
     mealFoodsMap = newMap;
   });
 
-  // Get foods for a specific meal (now from local state)
   function getFoodsForMeal(mealId: string) {
     return mealFoodsMap[mealId] || [];
   }
   
-  // Get total calories for a meal
   function getMealTotal(mealId: string) {
     return getFoodsForMeal(mealId).reduce((sum, f) => sum + f.calories, 0);
   }
   
-  // Handle dnd events
   function handleDndConsider(mealId: string, e: CustomEvent<{ items: AddedFood[] }>) {
     mealFoodsMap[mealId] = e.detail.items;
   }
@@ -44,8 +312,6 @@
   function handleDndFinalize(mealId: string, e: CustomEvent<{ items: AddedFood[] }>) {
     const { items } = e.detail;
     mealFoodsMap[mealId] = items;
-    
-    // Update the store - move any items that changed meals
     for (const item of items) {
       if (item.id !== SHADOW_PLACEHOLDER_ITEM_ID && item.mealId !== mealId) {
         moveFoodToMeal(item.id, mealId);
@@ -84,7 +350,6 @@
     if (e.key === 'Escape') cancelEdit();
   }
   
-  // Quantity editing functions
   function startQuantityEdit(foodId: string, currentGrams: number) {
     editingFoodId = foodId;
     editingGrams = currentGrams;
@@ -113,14 +378,53 @@
     if (e.key === 'Enter') saveQuantityEdit();
     if (e.key === 'Escape') cancelQuantityEdit();
   }
+
+  function formatDate(iso: string) {
+    return new Date(iso + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  }
+
+  function formatSavedAt(isoDatetime: string) {
+    const d = new Date(isoDatetime);
+    const date = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    const time = d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+    return `${date} at ${time}`;
+  }
+
+  const isLoggedIn = $derived($playerStore.status === 'logged-in');
+  const isPlus = $derived(isLoggedIn && ['plus', 'allin', 'premium', 'moderator'].includes($playerStore.tier));
 </script>
 
+<!-- ═══════════════════ MAIN LAYOUT ═══════════════════ -->
 <div class="meal-columns-container">
   <div class="meal-columns-header">
     <h3>Today's Foods</h3>
-    <span class="total-count">{foods.length} items</span>
+    <div class="header-actions">
+      {#if isLoggedIn}
+        <button class="action-btn" title="Save today's day as a template" onclick={openSaveModal}>
+          💾 Save Day
+        </button>
+        <button class="action-btn" title="Load a saved day plan" onclick={openLoadModal}>
+          📂 Load Day
+        </button>
+      {/if}
+      <span class="total-count">{foods.length} items</span>
+    </div>
   </div>
-  
+
+  {#if scheduledPlan && !scheduledDismissed}
+    <div class="mc-scheduled-banner">
+      <span class="mc-scheduled-icon">📅</span>
+      <span class="mc-scheduled-text">
+        You have a planned meal for today: <strong>{scheduledPlan.name}</strong>
+        ({Math.round(scheduledPlan.total_kcal)} cal)
+      </span>
+      <button class="mc-scheduled-load" onclick={() => { requestLoadTemplate(scheduledPlan!); scheduledDismissed = true; }}>
+        Load it
+      </button>
+      <button class="mc-scheduled-dismiss" onclick={() => scheduledDismissed = true} aria-label="Dismiss">×</button>
+    </div>
+  {/if}
+
   <div class="meal-columns">
     {#each mealSlots as meal}
       {@const mealFoods = getFoodsForMeal(meal.id)}
@@ -139,8 +443,11 @@
               autofocus
             />
           {:else}
+            {#if isLoggedIn}
+              <button class="history-btn" title="Meal history" onclick={() => openHistory(meal.id)}>🕐</button>
+            {/if}
             <span class="meal-name">{meal.name}</span>
-            <button class="edit-btn" onclick={() => startEditing(meal.id, meal.name)}>✏️</button>
+            <button class="edit-btn" title="Rename" onclick={() => startEditing(meal.id, meal.name)}>✏️</button>
           {/if}
         </div>
         
@@ -199,6 +506,202 @@
   </div>
 </div>
 
+<!-- ═══════════════════ MEAL HISTORY MODAL ═══════════════════ -->
+{#if historyMealId}
+  <div class="mc-backdrop" onclick={closeHistory} role="dialog" aria-modal="true" aria-label="Meal history">
+    <div class="mc-modal" onclick={(e) => e.stopPropagation()}>
+      <div class="mc-modal-header">
+        <span class="mc-modal-title">
+          🕐 {mealSlots.find(m => m.id === historyMealId)?.name ?? historyMealId} History
+        </span>
+        <button class="mc-close" onclick={closeHistory}>×</button>
+      </div>
+
+      {#if historyConfirm}
+        <div class="mc-confirm">
+          <p>Replace current {mealSlots.find(m => m.id === historyMealId)?.name} with {formatDate(historyConfirm.meal_date)}?</p>
+          <div class="mc-confirm-btns">
+            <button class="mc-btn mc-btn--primary" onclick={() => { applyHistoryDay(historyConfirm!); historyConfirm = null; }}>Replace</button>
+            <button class="mc-btn" onclick={() => historyConfirm = null}>Keep current</button>
+          </div>
+        </div>
+      {:else if historyLoading}
+        <div class="mc-empty">Loading…</div>
+      {:else if historyDays.length === 0}
+        <div class="mc-empty">No history yet — meals are saved as you log them.</div>
+      {:else}
+        <div class="mc-list">
+          {#each historyDays as day}
+            <button class="mc-day-row" onclick={() => requestLoad(day)}>
+              <span class="mc-day-date">{formatDate(day.meal_date)}</span>
+              <span class="mc-day-foods">
+                {day.entries.map(e => e.food_name).join(', ')}
+              </span>
+              <span class="mc-day-kcal">{Math.round(day.total_kcal)} cal</span>
+            </button>
+          {/each}
+        </div>
+      {/if}
+    </div>
+  </div>
+{/if}
+
+<!-- ═══════════════════ SAVE DAY MODAL ═══════════════════ -->
+{#if showSaveModal}
+  <div class="mc-backdrop" onclick={() => showSaveModal = false} role="dialog" aria-modal="true" aria-label="Save day plan">
+    <div class="mc-modal mc-modal--narrow" onclick={(e) => e.stopPropagation()}>
+      <div class="mc-modal-header">
+        <span class="mc-modal-title">💾 Save Day As…</span>
+        <button class="mc-close" onclick={() => showSaveModal = false}>×</button>
+      </div>
+      <div class="mc-body">
+        {#if !isPlus}
+          <div class="mc-upgrade">
+            <div class="upgrade-icon">💾</div>
+            <h4>Saved Day Plans is a Plus feature</h4>
+            <p>Save named day plans you can reload any day, with optional scheduling to a future date.</p>
+            <ul class="upgrade-features">
+              <li class="upgrade-feature">📅 Schedule plans for specific dates</li>
+              <li class="upgrade-feature">🔔 Banner reminder on the scheduled day</li>
+              <li class="upgrade-feature">📂 Unlimited saved plan templates</li>
+            </ul>
+            <button class="upgrade-cta">Upgrade to Plus — $4.95/mo</button>
+            <button class="upgrade-skip" onclick={() => showSaveModal = false}>Maybe later</button>
+          </div>
+        {:else}
+        <p class="mc-save-hint">Save today's full meal plan as a named template you can reload any day.</p>
+        <input
+          type="text"
+          class="mc-name-input"
+          placeholder="e.g. High Protein Saturday"
+          maxlength="60"
+          bind:value={saveName}
+          onkeydown={(e) => { if (e.key === 'Enter') saveDay(); if (e.key === 'Escape') showSaveModal = false; }}
+          autofocus
+        />
+        <label class="mc-date-label">
+          📅 Plan this meal for a specific date <span class="mc-date-hint">(optional)</span>
+          <input
+            type="date"
+            class="mc-date-input"
+            bind:value={saveScheduledDate}
+            min={new Date().toISOString().split('T')[0]}
+          />
+        </label>
+        {#if saveError}
+          <p class="mc-error">{saveError}</p>
+        {/if}
+        <div class="mc-modal-footer">
+          <button class="mc-btn mc-btn--primary" onclick={saveDay} disabled={savePending}>
+            {savePending ? 'Saving…' : 'Save'}
+          </button>
+          <button class="mc-btn" onclick={() => showSaveModal = false}>Cancel</button>
+        </div>
+        {/if}
+      </div>
+    </div>
+  </div>
+{/if}
+
+<!-- ═══════════════════ LOAD DAY MODAL ═══════════════════ -->
+{#if showLoadModal}
+  <div class="mc-backdrop" onclick={() => { showLoadModal = false; loadConfirm = null; deleteConfirm = null; previewTemplate = null; }} role="dialog" aria-modal="true" aria-label="Load saved day">
+    <div class="mc-modal" onclick={(e) => e.stopPropagation()}>
+      <div class="mc-modal-header">
+        <span class="mc-modal-title">📂 Saved Day Plans</span>
+        <button class="mc-close" onclick={() => showLoadModal = false}>×</button>
+      </div>
+
+      {#if !isPlus}
+        <div class="mc-upgrade">
+          <div class="upgrade-icon">📂</div>
+          <h4>Saved Day Plans is a Plus feature</h4>
+          <p>Save named day plans you can reload any day, with optional scheduling to a future date.</p>
+          <ul class="upgrade-features">
+            <li class="upgrade-feature">📅 Schedule plans for specific dates</li>
+            <li class="upgrade-feature">🔔 Banner reminder on the scheduled day</li>
+            <li class="upgrade-feature">📂 Unlimited saved plan templates</li>
+          </ul>
+          <button class="upgrade-cta">Upgrade to Plus — $4.95/mo</button>
+          <button class="upgrade-skip" onclick={() => showLoadModal = false}>Maybe later</button>
+        </div>
+      {:else if loadConfirm}
+        <div class="mc-confirm">
+          <p>Load "<strong>{loadConfirm.name}</strong>"? This will replace all current foods.</p>
+          <div class="mc-confirm-btns">
+            <button class="mc-btn mc-btn--primary" onclick={() => applyTemplate(loadConfirm!)}>Load</button>
+            <button class="mc-btn" onclick={() => loadConfirm = null}>Cancel</button>
+          </div>
+        </div>
+      {:else if previewTemplate}
+        <div class="mc-preview">
+          <div class="mc-preview-header">
+            <span class="mc-preview-name">{previewTemplate.name}</span>
+            <span class="mc-preview-meta">
+              {Math.round(previewTemplate.total_kcal)} cal total · saved {formatSavedAt(previewTemplate.updated_at)}
+              {#if previewTemplate.scheduled_for_date}
+                · <strong>📅 Planned for {formatDate(previewTemplate.scheduled_for_date)}</strong>
+              {/if}
+            </span>
+          </div>
+          <div class="mc-preview-slots">
+            {#each getPreviewSlots(previewTemplate) as slot}
+              <div class="mc-preview-slot">
+                <span class="mc-preview-slot-label">{slot.label}</span>
+                <span class="mc-preview-slot-foods">{slot.foods}</span>
+                <span class="mc-preview-slot-kcal">{slot.kcal} cal</span>
+              </div>
+            {/each}
+          </div>
+          <div class="mc-confirm-btns">
+            <button class="mc-btn mc-btn--primary" onclick={() => { requestLoadTemplate(previewTemplate!); previewTemplate = null; }}>Load this plan</button>
+            <button class="mc-btn" onclick={() => previewTemplate = null}>← Back</button>
+          </div>
+        </div>
+      {:else if deleteConfirm}
+        <div class="mc-confirm">
+          <p>Delete this plan? This cannot be undone.</p>
+          <div class="mc-confirm-btns">
+            <button class="mc-btn mc-btn--danger" onclick={() => deleteTemplate(deleteConfirm!)}>Delete</button>
+            <button class="mc-btn" onclick={() => deleteConfirm = null}>Cancel</button>
+          </div>
+        </div>
+      {:else if templatesLoading}
+        <div class="mc-empty">Loading…</div>
+      {:else if templateList.length === 0}
+        <div class="mc-empty">No saved plans yet — use "Save Day" to create one.</div>
+      {:else}
+        <div class="mc-search-wrap">
+          <input
+            type="search"
+            class="mc-search-input"
+            placeholder="Search plans…"
+            bind:value={templateSearch}
+          />
+        </div>
+        <div class="mc-list">
+          {#each filteredTemplates as t}
+            <div class="mc-template-row">
+              <button class="mc-template-info" onclick={() => previewTemplate = t}>
+                <span class="mc-template-name">{t.name}</span>
+                <span class="mc-template-meta">
+                  {Math.round(t.total_kcal)} cal · saved {formatSavedAt(t.updated_at)}
+                  {#if t.scheduled_for_date}
+                    <span class="mc-scheduled-badge">📅 {formatDate(t.scheduled_for_date)}</span>
+                  {/if}
+                </span>
+              </button>
+              <button class="mc-delete-btn" title="Delete" onclick={() => deleteConfirm = t.id}>🗑</button>
+            </div>
+          {:else}
+            <div class="mc-empty" style="padding:0.75rem 1rem">No plans match "{templateSearch}"</div>
+          {/each}
+        </div>
+      {/if}
+    </div>
+  </div>
+{/if}
+
 <style>
   .meal-columns-container {
     background: #f9fafb;
@@ -212,6 +715,8 @@
     align-items: center;
     margin-bottom: 0.5rem;
     padding: 0 0.25rem;
+    flex-wrap: wrap;
+    gap: 0.25rem;
   }
 
   .meal-columns-header h3 {
@@ -219,6 +724,28 @@
     font-size: 0.875rem;
     font-weight: 600;
     color: #374151;
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+  }
+
+  .action-btn {
+    font-size: 0.65rem;
+    background: white;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    padding: 0.125rem 0.4rem;
+    cursor: pointer;
+    color: #374151;
+    white-space: nowrap;
+  }
+
+  .action-btn:hover {
+    background: #f3f4f6;
+    border-color: #9ca3af;
   }
 
   .total-count {
@@ -249,8 +776,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.25rem;
-    padding: 0.375rem;
+    gap: 0.2rem;
+    padding: 0.375rem 0.25rem;
     background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
     border-bottom: 1px solid #fcd34d;
     min-height: 28px;
@@ -260,6 +787,11 @@
     font-weight: 600;
     font-size: 0.75rem;
     color: #92400e;
+    flex: 1;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .meal-name-input {
@@ -274,7 +806,7 @@
     text-align: center;
   }
 
-  .edit-btn {
+  .edit-btn, .history-btn {
     background: none;
     border: none;
     cursor: pointer;
@@ -282,9 +814,10 @@
     padding: 0;
     opacity: 0.5;
     line-height: 1;
+    flex-shrink: 0;
   }
 
-  .edit-btn:hover {
+  .edit-btn:hover, .history-btn:hover {
     opacity: 1;
   }
 
@@ -383,11 +916,6 @@
     border-top: 1px solid #fde68a;
   }
 
-  /* Drag & drop styles */
-  .column-foods {
-    min-height: 30px;
-  }
-
   .drag-handle {
     color: #6b7280;
     font-size: 0.75rem;
@@ -405,7 +933,6 @@
     background: #e5e7eb;
   }
 
-  /* Quantity editing styles */
   .quantity-input {
     width: 35px;
     padding: 0.125rem;
@@ -413,5 +940,473 @@
     border-radius: 0.25rem;
     font-size: 0.625rem;
     text-align: center;
+  }
+
+  /* ── Shared modal chrome ── */
+  .mc-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 1000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 5rem;
+    overflow-y: auto;
+  }
+
+  .mc-modal {
+    background: white;
+    border-radius: 0.75rem;
+    width: 90%;
+    max-width: 480px;
+    max-height: calc(100vh - 6rem);
+    overflow-y: auto;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  }
+
+  .mc-modal--narrow {
+    max-width: 360px;
+  }
+
+  .mc-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    border-radius: 0.75rem 0.75rem 0 0;
+    color: white;
+  }
+
+  .mc-modal-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  .mc-close {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mc-close:hover { background: rgba(255,255,255,0.35); }
+
+  .mc-empty {
+    padding: 2rem 1rem;
+    text-align: center;
+    color: #6b7280;
+    font-size: 0.85rem;
+  }
+
+  .mc-list {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  /* ── History day row ── */
+  .mc-day-row {
+    width: 100%;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 3.5rem 1fr auto;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+  }
+
+  .mc-day-row:hover { background: #f0fdf4; border-color: #86efac; }
+
+  .mc-day-date {
+    font-weight: 600;
+    color: #166534;
+    white-space: nowrap;
+    font-size: 0.75rem;
+  }
+
+  .mc-day-foods {
+    color: #374151;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .mc-day-kcal {
+    color: #92400e;
+    font-weight: 600;
+    white-space: nowrap;
+    font-size: 0.75rem;
+  }
+
+  /* ── Template row ── */
+  .mc-template-row {
+    display: flex;
+    align-items: stretch;
+    gap: 0.25rem;
+  }
+
+  .mc-template-info {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+    padding: 0.5rem 0.75rem;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+
+  .mc-template-info:hover { background: #f0fdf4; border-color: #86efac; }
+
+  .mc-template-name {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #111827;
+  }
+
+  .mc-template-meta {
+    font-size: 0.7rem;
+    color: #6b7280;
+  }
+
+  .mc-delete-btn {
+    padding: 0 0.5rem;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 0.75rem;
+    color: #dc2626;
+  }
+
+  .mc-delete-btn:hover { background: #fee2e2; }
+
+  /* ── Save day body ── */
+  .mc-body {
+    padding: 1rem;
+  }
+
+  .mc-save-hint {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin: 0 0 0.75rem;
+  }
+
+  /* ── Plus upgrade prompt ───────────────────────────────────────────────── */
+  .mc-upgrade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.25rem 1rem;
+    gap: 0.65rem;
+  }
+
+  .mc-upgrade .upgrade-icon { font-size: 2.25rem; line-height: 1; }
+
+  .mc-upgrade h4 { margin: 0; font-size: 1rem; color: #111827; }
+
+  .mc-upgrade p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #6b7280;
+    max-width: 280px;
+    line-height: 1.45;
+  }
+
+  .upgrade-features {
+    list-style: none;
+    margin: 0.2rem 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .upgrade-feature {
+    background: #f3f4f6;
+    border-radius: 0.4rem;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.82rem;
+    color: #374151;
+    text-align: left;
+  }
+
+  .upgrade-cta {
+    background: #7c3aed;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.55rem 1.2rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+
+  .upgrade-cta:hover { background: #6d28d9; }
+
+  .upgrade-skip {
+    background: none;
+    border: none;
+    color: #9ca3af;
+    font-size: 0.83rem;
+    cursor: pointer;
+    padding: 0.2rem;
+  }
+
+  .upgrade-skip:hover { color: #6b7280; }
+
+  .mc-name-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    outline: none;
+  }
+
+  .mc-name-input:focus { border-color: #22c55e; box-shadow: 0 0 0 2px #bbf7d0; }
+
+  .mc-error {
+    font-size: 0.8rem;
+    color: #dc2626;
+    margin: 0.375rem 0 0;
+  }
+
+  .mc-modal-footer {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    margin-top: 1rem;
+  }
+
+  /* ── Confirmation inline panel ── */
+  .mc-confirm {
+    padding: 1rem;
+  }
+
+  .mc-confirm p {
+    margin: 0 0 0.75rem;
+    font-size: 0.875rem;
+    color: #374151;
+  }
+
+  .mc-confirm-btns {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  /* ── Shared button styles ── */
+  .mc-btn {
+    padding: 0.375rem 0.875rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    background: white;
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: #374151;
+  }
+
+  .mc-btn:hover { background: #f9fafb; }
+
+  .mc-btn--primary {
+    background: #22c55e;
+    border-color: #16a34a;
+    color: white;
+  }
+
+  .mc-btn--primary:hover { background: #16a34a; }
+  .mc-btn--primary:disabled { opacity: 0.6; cursor: default; }
+
+  .mc-btn--danger {
+    background: #dc2626;
+    border-color: #b91c1c;
+    color: white;
+  }
+
+  .mc-btn--danger:hover { background: #b91c1c; }
+
+  /* ── Template search ── */
+  .mc-search-wrap {
+    padding: 0.5rem 0.5rem 0;
+  }
+
+  .mc-search-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.375rem 0.625rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 0.85rem;
+    outline: none;
+    color: #374151;
+    background: white;
+  }
+
+  .mc-search-input:focus {
+    border-color: #22c55e;
+    box-shadow: 0 0 0 2px #bbf7d0;
+  }
+
+  /* ── Template preview panel ── */
+  .mc-preview {
+    padding: 0.75rem 1rem 1rem;
+  }
+
+  .mc-preview-header {
+    margin-bottom: 0.75rem;
+  }
+
+  .mc-preview-name {
+    display: block;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #111827;
+  }
+
+  .mc-preview-meta {
+    display: block;
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-top: 0.125rem;
+  }
+
+  .mc-preview-slots {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .mc-preview-slot {
+    display: grid;
+    grid-template-columns: 4.5rem 1fr auto;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.5rem;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.375rem;
+    font-size: 0.78rem;
+  }
+
+  .mc-preview-slot-label {
+    font-weight: 600;
+    color: #166534;
+    white-space: nowrap;
+  }
+
+  .mc-preview-slot-foods {
+    color: #374151;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .mc-preview-slot-kcal {
+    color: #92400e;
+    font-weight: 500;
+    white-space: nowrap;
+    font-size: 0.72rem;
+  }
+
+  /* ── Scheduled plan banner ──────────────────────────── */
+  .mc-scheduled-banner {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f0fdf4;
+    border: 1px solid #86efac;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+  }
+  .mc-scheduled-icon { font-size: 1rem; flex-shrink: 0; }
+  .mc-scheduled-text { flex: 1; color: #166534; }
+  .mc-scheduled-load {
+    background: #22c55e;
+    color: #fff;
+    border: none;
+    border-radius: 0.375rem;
+    padding: 0.25rem 0.6rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  .mc-scheduled-load:hover { background: #16a34a; }
+  .mc-scheduled-dismiss {
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0 0.2rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .mc-scheduled-dismiss:hover { color: #374151; }
+
+  /* ── Scheduled date badge in template list ──────────── */
+  .mc-scheduled-badge {
+    display: inline-block;
+    background: #dcfce7;
+    color: #166534;
+    padding: 0.1rem 0.35rem;
+    border-radius: 0.25rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-left: 0.25rem;
+    white-space: nowrap;
+  }
+
+  /* ── Schedule date picker in Save modal ─────────────── */
+  .mc-date-label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #374151;
+    margin-top: 0.75rem;
+  }
+  .mc-date-hint { font-weight: 400; color: #9ca3af; }
+  .mc-date-input {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    font-size: 0.85rem;
+    color: #111827;
+    background: #fff;
+    cursor: pointer;
+  }
+  .mc-date-input:focus {
+    outline: none;
+    border-color: #22c55e;
+    box-shadow: 0 0 0 2px #bbf7d0;
   }
 </style>

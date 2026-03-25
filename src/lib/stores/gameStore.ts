@@ -2,6 +2,8 @@
 import { writable, derived } from 'svelte/store';
 import type { Food, Portion, FoodGroup } from '$lib/data/food-portions';
 import { calculateNutrients, calculateNutrientsForGrams } from '$lib/data/food-portions';
+import { getMicrosForGrams, type FoodMicros } from '$lib/data/food-micros';
+export type { FoodMicros };
 
 // Container types
 export type Container = 'plate' | 'bowl' | 'cup' | 'glass' | 'saucer';
@@ -311,3 +313,21 @@ export const nutrientProgress = derived(
 // Which nutrient is displayed in the pie chart
 export type PieChartNutrient = 'calories' | 'protein' | 'fat' | 'carbs' | 'fiber' | 'water' | 'sugar';
 export const selectedPieNutrient = writable<PieChartNutrient>('calories');
+
+// Derived: summed micronutrient totals across all foods on the plate today
+export const micronutrientTotals = derived(addedFoods, ($foods) => {
+  const totals: FoodMicros = {};
+  for (const added of $foods) {
+    const grams = added.customGrams ?? added.portion.gm * (added.multiplier ?? 1);
+    const micros = getMicrosForGrams(added.food.ndb, grams);
+    if (!micros) continue;
+    for (const key in micros) {
+      const k = key as keyof FoodMicros;
+      const v = micros[k];
+      if (v !== undefined) {
+        (totals as Record<string, number>)[k] = ((totals as Record<string, number>)[k] ?? 0) + v;
+      }
+    }
+  }
+  return totals;
+});

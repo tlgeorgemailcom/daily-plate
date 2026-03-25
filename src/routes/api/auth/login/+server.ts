@@ -54,7 +54,8 @@ export const POST: RequestHandler = async ({ request }) => {
     );
     
     // Map subscription_tier to tier for client
-    const tier = user.subscription_tier === 'subscriber' ? 'premium' : 'free';
+    const TIER_MAP: Record<string, string> = { subscriber: 'premium', plus: 'plus', allin: 'allin', moderator: 'moderator' };
+    const tier = TIER_MAP[user.subscription_tier] ?? 'free';
     
     // Return user data (without password)
     return json({

@@ -1,0 +1,48 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug: SvelteKit (Integrated Browser)",
+      "type": "editor-browser",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/src",
+      "sourceMaps": true,
+      "skipFiles": [
+        "<node_internals>/**",
+        "**/node_modules/**"
+      ]
+    },
+    {
+      "name": "Debug: Balance Game",
+      "type": "editor-browser",
+      "request": "launch",
+      "url": "http://localhost:3000/balanced-diet",
+      "webRoot": "${workspaceFolder}/src",
+      "sourceMaps": true,
+      "skipFiles": [
+        "<node_internals>/**",
+        "**/node_modules/**"
+      ]
+    },
+    {
+      "name": "Debug: Farmers Basket",
+      "type": "editor-browser",
+      "request": "launch",
+      "url": "http://localhost:3000/farmers-basket",
+      "webRoot": "${workspaceFolder}/src",
+      "sourceMaps": true,
+      "skipFiles": [
+        "<node_internals>/**",
+        "**/node_modules/**"
+      ]
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Dev Server + Debug",
+      "configurations": ["Debug: SvelteKit (Integrated Browser)"],
+      "preLaunchTask": "Dev Server"
+    }
+  ]
+}

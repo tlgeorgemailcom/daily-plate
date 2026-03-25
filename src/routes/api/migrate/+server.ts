@@ -38,6 +38,95 @@ export const GET: RequestHandler = async () => {
       results['nutrition_json_already_exists'] = true;
     }
 
+    // daily_meal_log: per-food dated meal log (web + Jetcool sync)
+    await db.execute(`
+      CREATE TABLE IF NOT EXISTS daily_meal_log (
+        id TEXT PRIMARY KEY,
+        user_id TEXT NOT NULL,
+        meal_date TEXT NOT NULL,
+        meal_category TEXT NOT NULL,
+        food_id TEXT NOT NULL,
+        food_name TEXT NOT NULL,
+        brand_name TEXT,
+        quantity_grams REAL NOT NULL,
+        serving_description TEXT,
+        kcal REAL NOT NULL DEFAULT 0,
+        protein REAL NOT NULL DEFAULT 0,
+        carbohydrate REAL NOT NULL DEFAULT 0,
+        fat REAL NOT NULL DEFAULT 0,
+        sugar REAL DEFAULT 0,
+        fiber REAL DEFAULT 0,
+        sodium REAL DEFAULT 0,
+        water REAL DEFAULT 0,
+        extended_nutrients TEXT,
+        serving_data TEXT,
+        notes TEXT,
+        is_favorite INTEGER NOT NULL DEFAULT 0,
+        source TEXT NOT NULL DEFAULT 'web',
+        logged_at TEXT NOT NULL,
+        created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+      )
+    `);
+    await db.execute(
+      'CREATE INDEX IF NOT EXISTS idx_meal_log_user_date ON daily_meal_log(user_id, meal_date)'
+    );
+    results['daily_meal_log'] = 'ok';
+
+    // planned_meals: future meal planning
+    await db.execute(`
+      CREATE TABLE IF NOT EXISTS planned_meals (
+        id TEXT PRIMARY KEY,
+        user_id TEXT NOT NULL,
+        planned_date TEXT NOT NULL,
+        meal_category TEXT NOT NULL,
+        food_id TEXT NOT NULL,
+        food_name TEXT NOT NULL,
+        quantity_grams REAL NOT NULL,
+        serving_description TEXT,
+        source TEXT NOT NULL DEFAULT 'web',
+        created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+      )
+    `);
+    await db.execute(
+      'CREATE INDEX IF NOT EXISTS idx_planned_meals_user_date ON planned_meals(user_id, planned_date)'
+    );
+    results['planned_meals'] = 'ok';
+
+    // meal_templates: saved named day plans
+    await db.execute(`
+      CREATE TABLE IF NOT EXISTS meal_templates (
+        id TEXT PRIMARY KEY,
+        user_id TEXT NOT NULL,
+        name TEXT NOT NULL,
+        description TEXT,
+        meal_data TEXT NOT NULL,
+        created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+      )
+    `);
+    await db.execute(
+      'CREATE INDEX IF NOT EXISTS idx_meal_templates_user ON meal_templates(user_id)'
+    );
+    results['meal_templates'] = 'ok';
+
+    // meal_templates: add saved_from_date column if missing
+    const tmplSchema = await db.execute('PRAGMA table_info(meal_templates)');
+    const tmplCols = tmplSchema.rows.map((r: Record<string, unknown>) => r['name']);
+    if (!tmplCols.includes('saved_from_date')) {
+      await db.execute('ALTER TABLE meal_templates ADD COLUMN saved_from_date TEXT');
+      results['added_saved_from_date'] = true;
+    } else {
+      results['saved_from_date_already_exists'] = true;
+    }
+    if (!tmplCols.includes('total_kcal')) {
+      await db.execute('ALTER TABLE meal_templates ADD COLUMN total_kcal REAL DEFAULT 0');
+      results['added_total_kcal'] = true;
+    } else {
+      results['total_kcal_already_exists'] = true;
+    }
+
     return json({ success: true, ...results });
   } catch (err) {
     return json({ success: false, error: String(err) });

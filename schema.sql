@@ -7,14 +7,17 @@ CREATE TABLE players (
   email TEXT UNIQUE,
   display_name TEXT,
   password_hash TEXT,               -- Hashed password for authentication
-  subscription_tier TEXT DEFAULT 'free',  -- 'free' | 'subscriber' | 'moderator'
+  subscription_tier TEXT DEFAULT 'free',  -- 'free' | 'plus' | 'allin' | 'subscriber' | 'moderator'
   subscription_expires_at TEXT,
+  billing_owner_id TEXT,            -- NULL = this player is the billing owner; value = shared ALL·IN seat
   created_at TEXT DEFAULT (datetime('now')),
-  last_login_at TEXT
+  last_login_at TEXT,
+  FOREIGN KEY (billing_owner_id) REFERENCES players(id)
 );
 
 CREATE INDEX idx_players_email ON players(email);
 CREATE INDEX idx_players_tier ON players(subscription_tier);
+CREATE INDEX idx_players_billing_owner ON players(billing_owner_id);
 
 -- Game Statistics
 CREATE TABLE game_stats (
@@ -160,3 +163,27 @@ CREATE TABLE meal_logs (
 );
 
 CREATE INDEX idx_meal_logs_player_date ON meal_logs(player_id, log_date DESC);
+
+-- Household Members (ALL·IN tier — sub-profiles for DRI tracking)
+-- Field names mirror Jetcool's profile table (profile_columns.dart) for cross-app compatibility.
+-- DRI key = groupage || age  e.g. 'Males19_30y'. EER is derived at runtime.
+CREATE TABLE household_members (
+  id TEXT PRIMARY KEY,              -- UUID generated client-side
+  owner_id TEXT NOT NULL,           -- FK → players.id (the ALL·IN subscriber)
+  display_name TEXT NOT NULL,
+  avatar_icon  TEXT NOT NULL DEFAULT '👤',
+  avatar_color TEXT NOT NULL DEFAULT '#60a5fa',
+  groupage       TEXT NOT NULL,     -- 'Infants'|'Children'|'Males'|'Females'|'Pregnancy'|'Lactation'
+  age            TEXT NOT NULL,     -- bracket e.g. '19_30y', '0_6mo', '>70y'
+  height         TEXT NOT NULL DEFAULT '',
+  height_unit    TEXT NOT NULL DEFAULT 'inches',  -- 'inches'|'cm'
+  weight         TEXT NOT NULL DEFAULT '',
+  weight_unit    TEXT NOT NULL DEFAULT 'pounds',  -- 'pounds'|'kilos'
+  activity_level TEXT NOT NULL DEFAULT 'Sedentary',
+  sort_order INTEGER NOT NULL DEFAULT 0,
+  created_at TEXT DEFAULT (datetime('now')),
+  updated_at TEXT DEFAULT (datetime('now')),
+  FOREIGN KEY (owner_id) REFERENCES players(id) ON DELETE CASCADE
+);
+
+CREATE INDEX idx_household_owner ON household_members(owner_id);

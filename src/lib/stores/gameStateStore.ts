@@ -24,6 +24,8 @@ import {
   type NutrientTargets,
   type PieChartNutrient
 } from './gameStore';
+import { calculateNutrients, calculateNutrientsForGrams } from '$lib/data/food-portions';
+import { getMicrosForGrams } from '$lib/data/food-micros';
 
 const STORAGE_KEY = 'balancedDiet_gameState';
 const STORAGE_VERSION = 1;
@@ -211,6 +213,77 @@ async function clearCloudGameState(): Promise<void> {
 
 // ============ End Cloud Sync ============
 
+// ============ Daily Meal Log ============
+// Writes per-food rows to daily_meal_log for all logged-in users.
+// This is the data source for Reports, Meal History, and Jetcool sync.
+
+function buildMealLogEntries(foods: AddedFood[]) {
+  const now = new Date().toISOString();
+  return foods.map(af => {
+    const portionIndex = af.customGrams
+      ? -1
+      : af.food.portions.findIndex(p => p.desc === af.portion.desc && p.gm === af.portion.gm);
+    const n = af.customGrams
+      ? calculateNutrientsForGrams(af.food, af.customGrams)
+      : calculateNutrients(af.food, portionIndex >= 0 ? portionIndex : 0, af.multiplier ?? 1);
+
+    return {
+      id: af.id,
+      meal_category: af.mealId,
+      food_id: af.food.ndb,
+      food_name: af.food.display,
+      brand_name: null,
+      quantity_grams: n.grams,
+      serving_description: af.portion.desc,
+      kcal: n.calories,
+      protein: n.protein,
+      carbohydrate: n.carbs,
+      fat: n.fat,
+      sugar: n.sugar,
+      fiber: n.fiber,
+      water: n.water,
+      sodium: getMicrosForGrams(af.food.ndb, n.grams)?.sodium ?? 0,
+      source: 'web',
+      logged_at: now,
+    };
+  });
+}
+
+// Active member override — when set, meal log reads/writes use this id instead of player.id
+let _viewingUserId: string | null = null;
+export function setViewingUserId(id: string | null): void { _viewingUserId = id; }
+export function getViewingUserId(): string | null { return _viewingUserId; }
+
+// Suppress saves during member switch reload so clearFoods/addFood don't overwrite DB
+let _suppressMealLogSave = false;
+export function suppressMealLogSave(v: boolean): void { _suppressMealLogSave = v; }
+
+export async function saveMealLog(): Promise<void> {
+  if (_suppressMealLogSave) return;
+  const player = get(playerStore);
+  if (!player.id) return;
+
+  const effectiveUserId = _viewingUserId ?? player.id;
+  const foods = get(addedFoods);
+  const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+
+  try {
+    await fetch('/api/meal-log', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        user_id: effectiveUserId,
+        meal_date: today,
+        entries: buildMealLogEntries(foods),
+      }),
+    });
+  } catch (e) {
+    console.error('[MealLog] Failed to save meal log:', e);
+  }
+}
+
+// ============ End Daily Meal Log ============
+
 // Initialize stores from saved state (call on app mount)
 export function initializeGameState(): boolean {
   const savedState = loadGameState();
@@ -243,7 +316,7 @@ export function startAutoSave(): void {
   
   // Subscribe to all stores that should trigger saves
   unsubscribers = [
-    addedFoods.subscribe(() => { saveGameState(); scheduleCloudSave(); }),
+    addedFoods.subscribe(() => { saveGameState(); scheduleCloudSave(); saveMealLog(); }),
     meals.subscribe(() => { saveGameState(); scheduleCloudSave(); }),
     selectedMeal.subscribe(() => { saveGameState(); scheduleCloudSave(); }),
     selectedContainer.subscribe(() => { saveGameState(); scheduleCloudSave(); }),

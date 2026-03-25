@@ -278,6 +278,10 @@
   function handleUpgradeClose() {
     showUpgradeModal = false;
   }
+
+  function handleLogout() {
+    playerStore.logout();
+  }
 </script>
 
 {#if $page.url.pathname.startsWith('/admin')}
@@ -292,9 +296,14 @@
         <button class="login-btn" onclick={handleShowLogin}>
           🔑 Login
         </button>
-      {:else if canUpgrade}
-        <button class="upgrade-btn" onclick={handleShowUpgrade}>
-          ⭐ Upgrade
+      {:else}
+        {#if canUpgrade}
+          <button class="upgrade-btn" onclick={handleShowUpgrade}>
+            ⭐ Upgrade
+          </button>
+        {/if}
+        <button class="logout-btn" onclick={handleLogout}>
+          🚪 Sign Out
         </button>
       {/if}
       <a href="/chain" class:active={$page.url.pathname === '/chain'}>
@@ -518,6 +527,24 @@
   .login-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(255, 152, 0, 0.4);
+  }
+
+  .logout-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+    border: none;
+    cursor: pointer;
+    background: #fef2f2;
+    color: #dc2626;
+    transition: all 0.2s;
+  }
+
+  .logout-btn:hover {
+    background: #fee2e2;
+    color: #b91c1c;
   }
 
   .password-overlay {
