@@ -487,16 +487,12 @@
             <span class="meal-name">{meal.name}</span>
             {#if householdMembers.length > 0}
               <div class="share-wrap">
-                {#if isAllin}
-                  <button
-                    class="share-btn{shareOpenMealId === meal.id ? ' share-btn--open' : ''}"
-                    title="Share this meal with a household member"
-                    onclick={(e) => { e.stopPropagation(); toggleSharePopover(meal.id); }}
-                    disabled={sharingMealId === meal.id}
-                  >{sharingMealId === meal.id ? '⏳' : '👥'}</button>
-                {:else}
-                  <button class="share-btn share-btn--locked" title="Meal sharing requires ALL·IN" disabled>👥🔒</button>
-                {/if}
+                <button
+                  class="share-btn{shareOpenMealId === meal.id ? ' share-btn--open' : ''}"
+                  title="Share this meal with a household member"
+                  onclick={(e) => { e.stopPropagation(); toggleSharePopover(meal.id); }}
+                  disabled={sharingMealId === meal.id}
+                >{sharingMealId === meal.id ? '⏳' : '👥'}</button>
                 <!-- Avatar indicators: filled = already shared this session -->
                 <span class="share-indicators">
                   {#each householdMembers as m (m.id)}
@@ -906,7 +902,6 @@
 
   .share-btn:hover:not(:disabled) { opacity: 1; }
   .share-btn--open { opacity: 1; }
-  .share-btn--locked { cursor: default; opacity: 0.35; }
 
   .share-indicators {
     display: flex;
