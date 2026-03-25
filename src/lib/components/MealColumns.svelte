@@ -4,7 +4,10 @@
   import { FOODS } from '$lib/data/food-portions';
 
   // All user IDs to include in meal history (owner + household members)
-  let { allUserIds = [] }: { allUserIds: string[] } = $props();
+  let { allUserIds = [], householdMembers = [] }: {
+    allUserIds: string[];
+    householdMembers: Array<{ id: string; name: string; icon: string; color?: string }>;
+  } = $props();
   import { dndzone, SHADOW_PLACEHOLDER_ITEM_ID } from 'svelte-dnd-action';
   import { flip } from 'svelte/animate';
 
@@ -392,10 +395,81 @@
 
   const isLoggedIn = $derived($playerStore.status === 'logged-in');
   const isPlus = $derived(isLoggedIn && ['plus', 'allin', 'premium', 'moderator'].includes($playerStore.tier));
+  const isAllin = $derived(isLoggedIn && ['allin', 'premium', 'moderator'].includes($playerStore.tier));
+
+  // ── Phase 2: Share meal slot to household members ─────────────────────────
+  // shareOpenMealId: which slot's share popover is currently open
+  // sharingMealId:   which slot is actively being shared (shows spinner)
+  // sharedSlots:     Set of "mealId|memberId" pairs shared this session (for avatar indicators)
+  let shareOpenMealId = $state<string | null>(null);
+  let sharingMealId   = $state<string | null>(null);
+  let sharedSlots     = $state<Set<string>>(new Set());
+
+  // Close share popover on any outside click
+  function handleDocClick() { if (shareOpenMealId) shareOpenMealId = null; }
+
+  function toggleSharePopover(mealId: string) {
+    shareOpenMealId = shareOpenMealId === mealId ? null : mealId;
+  }
+
+  async function shareMealSlot(mealId: string, memberId: string, memberName: string) {
+    const playerId = $playerStore.id;
+    if (!playerId) return;
+
+    const foods = getFoodsForMeal(mealId);
+    if (foods.length === 0) return;
+
+    sharingMealId = mealId;
+    const today = new Date().toISOString().split('T')[0];
+
+    // Build entries the same way saveMealLog does, but scoped to this slot only
+    const entries = foods.map(af => {
+      const grams = af.customGrams ?? af.portion.gm * (af.multiplier ?? 1);
+      return {
+        id: af.id,
+        meal_category: mealId,
+        food_id: af.food.ndb,
+        food_name: af.food.display,
+        brand_name: null,
+        quantity_grams: grams,
+        serving_description: af.portion.desc,
+        kcal: 0, protein: 0, carbohydrate: 0, fat: 0,
+        sugar: 0, fiber: 0, water: 0, sodium: 0,
+        source: 'web',
+        logged_at: new Date().toISOString(),
+      };
+    });
+
+    try {
+      // GET member's existing log so we don't wipe their other slots
+      const getRes = await fetch(`/api/meal-log?user_id=${encodeURIComponent(memberId)}&date=${today}`);
+      const existing: { id: string; meal_category: string; food_id: string; food_name: string;
+        quantity_grams: number; serving_description: string | null; kcal: number;
+        protein: number; carbohydrate: number; fat: number; sugar: number;
+        fiber: number; water: number; sodium: number; source: string; logged_at: string }[] =
+        getRes.ok ? ((await getRes.json()).rows ?? []) : [];
+
+      // Replace only this meal slot's entries; keep all other slots intact
+      const otherSlots = existing.filter(e => e.meal_category !== mealId);
+      const merged = [...otherSlots, ...entries];
+
+      await fetch('/api/meal-log', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ user_id: memberId, meal_date: today, entries: merged }),
+      });
+
+      sharedSlots = new Set([...sharedSlots, `${mealId}|${memberId}`]);
+    } catch (e) {
+      console.error('[Share] Failed to share meal slot:', e);
+    } finally {
+      sharingMealId = null;
+    }
+  }
 </script>
 
 <!-- ═══════════════════ MAIN LAYOUT ═══════════════════ -->
-<div class="meal-columns-container">
+<div class="meal-columns-container" onclick={handleDocClick}>
   <div class="meal-columns-header">
     <h3>Today's Foods</h3>
     <div class="header-actions">
@@ -448,8 +522,48 @@
             {/if}
             <span class="meal-name">{meal.name}</span>
             <button class="edit-btn" title="Rename" onclick={() => startEditing(meal.id, meal.name)}>✏️</button>
+            {#if householdMembers.length > 0}
+              <div class="share-wrap">
+                {#if isAllin}
+                  <button
+                    class="share-btn{shareOpenMealId === meal.id ? ' share-btn--open' : ''}"
+                    title="Share this meal with a household member"
+                    onclick={(e) => { e.stopPropagation(); toggleSharePopover(meal.id); }}
+                    disabled={sharingMealId === meal.id}
+                  >{sharingMealId === meal.id ? '⏳' : '👥'}</button>
+                {:else}
+                  <button class="share-btn share-btn--locked" title="Meal sharing requires ALL·IN" disabled>👥🔒</button>
+                {/if}
+                <!-- Avatar indicators: filled = already shared this session -->
+                <span class="share-indicators">
+                  {#each householdMembers as m (m.id)}
+                    <span
+                      class="share-avatar{sharedSlots.has(`${meal.id}|${m.id}`) ? ' share-avatar--shared' : ' share-avatar--unshared'}"
+                      title={sharedSlots.has(`${meal.id}|${m.id}`) ? `Shared with ${m.name}` : m.name}
+                    >{m.icon}</span>
+                  {/each}
+                </span>
+              </div>
+            {/if}
           {/if}
         </div>
+        <!-- Share popover -->
+        {#if shareOpenMealId === meal.id && isAllin && householdMembers.length > 0}
+          <div class="share-popover" role="menu">
+            <p class="share-popover-title">Share {meal.name} with:</p>
+            {#each householdMembers as m (m.id)}
+              <button
+                class="share-member-btn{sharedSlots.has(`${meal.id}|${m.id}`) ? ' share-member-btn--done' : ''}"
+                onclick={() => { shareMealSlot(meal.id, m.id, m.name); shareOpenMealId = null; }}
+                disabled={getFoodsForMeal(meal.id).length === 0}
+              >
+                <span class="share-member-icon">{m.icon}</span>
+                <span>{m.name}</span>
+                {#if sharedSlots.has(`${meal.id}|${m.id}`)}<span class="share-check">✓</span>{/if}
+              </button>
+            {/each}
+          </div>
+        {/if}
         
         <!-- Foods List with DnD -->
         <div 
@@ -820,6 +934,88 @@
   .edit-btn:hover, .history-btn:hover {
     opacity: 1;
   }
+
+  /* ── Share button + popover ── */
+  .share-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  .share-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.65rem;
+    padding: 0;
+    opacity: 0.55;
+    line-height: 1;
+  }
+
+  .share-btn:hover:not(:disabled) { opacity: 1; }
+  .share-btn--open { opacity: 1; }
+  .share-btn--locked { cursor: default; opacity: 0.35; }
+
+  .share-indicators {
+    display: flex;
+    gap: 0.1rem;
+  }
+
+  .share-avatar {
+    font-size: 0.6rem;
+    line-height: 1;
+    transition: opacity 0.2s;
+  }
+
+  .share-avatar--shared  { opacity: 1; }
+  .share-avatar--unshared { opacity: 0.25; }
+
+  .share-popover {
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 0;
+    z-index: 100;
+    background: white;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    padding: 0.4rem 0.3rem;
+    min-width: 130px;
+  }
+
+  .share-popover-title {
+    font-size: 0.6rem;
+    color: #6b7280;
+    margin: 0 0 0.3rem 0.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .share-member-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    width: 100%;
+    background: none;
+    border: none;
+    border-radius: 0.375rem;
+    padding: 0.3rem 0.4rem;
+    font-size: 0.75rem;
+    cursor: pointer;
+    text-align: left;
+    color: #111827;
+  }
+
+  .share-member-btn:hover:not(:disabled) { background: #f3f4f6; }
+  .share-member-btn:disabled { opacity: 0.4; cursor: default; }
+  .share-member-btn--done { color: #16a34a; }
+
+  .share-member-icon { font-size: 0.85rem; }
+  .share-check { margin-left: auto; font-size: 0.75rem; color: #16a34a; }
 
   .column-foods {
     flex: 1;

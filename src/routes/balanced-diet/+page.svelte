@@ -2007,7 +2007,10 @@
     <!-- Today's Foods list (separate for grid positioning) -->
     <div class="foods-area">
       <div class="foods-columns-view">
-        <MealColumns allUserIds={[$playerStore.id, ...householdMembers.filter(m => m.id).map(m => m.id)].filter((id): id is string => !!id)} />
+        <MealColumns
+          allUserIds={[$playerStore.id, ...householdMembers.filter(m => m.id).map(m => m.id)].filter((id): id is string => !!id)}
+          householdMembers={householdMembers.filter(m => m.id).map(m => ({ id: m.id, name: m.name, icon: m.icon ?? '👤' }))}
+        />
       </div>
       <div class="foods-list-view">
         <FoodsAdded />
