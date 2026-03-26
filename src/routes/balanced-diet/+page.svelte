@@ -416,10 +416,7 @@
           const mealData: { rows: { food_id: string; meal_category: string; quantity_grams: number }[] } =
             await mealRes.json();
           clearFoods();
-          for (const entry of (mealData.rows ?? [])) {
-            const food = FOODS.find(f => f.ndb === entry.food_id);
-            if (food) addFood(food, food.portions[0], 'plate', entry.quantity_grams, 1, entry.meal_category);
-          }
+          loadRowsIntoPlate(mealData.rows ?? []);
         }
       } catch { /* non-critical — localStorage state left intact */ } finally {
         suppressMealLogSave(false);
@@ -555,6 +552,26 @@
     updateSettings(currentSettings);
   });
 
+  // Load rows from DB into the plate, deduplicating by (food_id, meal_category).
+  // Sums quantity_grams when the same food appears more than once in the same
+  // slot — prevents duplicates when Turso has both a Jetcool row (jc_...) and
+  // a stale web-originated row for the same food.
+  function loadRowsIntoPlate(rows: { food_id: string; meal_category: string; quantity_grams: number }[]) {
+    const merged = new Map<string, { food_id: string; meal_category: string; quantity_grams: number }>();
+    for (const entry of rows) {
+      const key = `${entry.food_id}|${entry.meal_category}`;
+      if (merged.has(key)) {
+        merged.get(key)!.quantity_grams += entry.quantity_grams;
+      } else {
+        merged.set(key, { ...entry });
+      }
+    }
+    for (const entry of merged.values()) {
+      const food = FOODS.find(f => f.ndb === entry.food_id);
+      if (food) addFood(food, food.portions[0], 'plate', entry.quantity_grams, 1, entry.meal_category);
+    }
+  }
+
   // Switch to a household member (or back to owner when newId = '').
   // Called from the select onchange and from the member delete button.
   async function switchToMember(newId: string) {
@@ -577,10 +594,7 @@
       clearFoods();
       if (res.ok) {
         const data: { rows: { food_id: string; meal_category: string; quantity_grams: number }[] } = await res.json();
-        for (const entry of (data.rows ?? [])) {
-          const food = FOODS.find(f => f.ndb === entry.food_id);
-          if (food) addFood(food, food.portions[0], 'plate', entry.quantity_grams, 1, entry.meal_category);
-        }
+        loadRowsIntoPlate(data.rows ?? []);
       }
     } catch {
       clearFoods();
@@ -794,10 +808,7 @@
         await res.json();
       suppressMealLogSave(true);
       clearFoods();
-      for (const entry of (data.rows ?? [])) {
-        const food = FOODS.find(f => f.ndb === entry.food_id);
-        if (food) addFood(food, food.portions[0], 'plate', entry.quantity_grams, 1, entry.meal_category);
-      }
+      loadRowsIntoPlate(data.rows ?? []);
       syncMobileResult = 'ok';
     } catch {
       syncMobileResult = 'error';

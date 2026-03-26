@@ -208,6 +208,27 @@ export const PUT: RequestHandler = async ({ request }) => {
     );
   }
 
+  // Delete web-originated rows for today that are no longer on the plate.
+  // This prevents stale web rows from accumulating when the same food gets
+  // saved multiple times with a fresh random id (addFood generates a new id
+  // on every call). Jetcool rows (id starts with 'jc_') are never touched.
+  if (entries.length > 0) {
+    const ids = entries.map(e => e.id);
+    const placeholders = ids.map(() => '?').join(', ');
+    await execute(
+      `DELETE FROM daily_meal_log
+       WHERE user_id = ? AND meal_date = ? AND source = 'web'
+         AND id NOT IN (${placeholders})`,
+      [user_id, meal_date, ...ids]
+    );
+  } else {
+    // Empty plate — clear all web-originated rows for today.
+    await execute(
+      `DELETE FROM daily_meal_log WHERE user_id = ? AND meal_date = ? AND source = 'web'`,
+      [user_id, meal_date]
+    );
+  }
+
   return json({ ok: true, count: entries.length });
 };
 
