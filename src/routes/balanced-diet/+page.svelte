@@ -1819,7 +1819,7 @@
                   {/each}
                 </div>
                 <div class="member-row-actions">
-                  <button class="member-btn" title="Edit">✏️</button>
+                  <button class="member-btn" title="Edit" onclick={() => { switchToMember(member.id ?? ''); settingsTab = 'targets'; }}>✏️</button>
                   <button class="member-btn" onclick={async () => {
                     if (member.id) {
                       await fetch(`/api/household-members/${member.id}?player_id=${$playerStore.id}`, { method: 'DELETE' });
