@@ -342,6 +342,7 @@
   let editingMemberWeightUnit = $state('kilos');
   let editingMemberActivityLevel = $state('Sedentary');
   let memberProfileDirty = $state(false);
+  let ownerProfileDirty = $state(false);
   const editingMemberDRITargets = $derived(getMemberTargets({
     groupage: editingMemberGroupage, age: editingMemberAge,
     height: editingMemberHeight, height_unit: editingMemberHeightUnit,
@@ -686,6 +687,19 @@
       }
     }
   });
+
+  async function saveOwnerDRI() {
+    updateSettings({
+      ownerGroupage,
+      ownerAge,
+      ownerHeight,
+      ownerHeightUnit,
+      ownerWeight,
+      ownerWeightUnit,
+      ownerActivityLevel,
+    });
+    ownerProfileDirty = false;
+  }
 
   async function saveMemberDRI() {
     if (!activeMember?.id || !$playerStore.id) return;
@@ -1434,6 +1448,7 @@
                   } else {
                     ownerGroupage = val;
                     ownerAge = MEMBER_AGE_OPTIONS[val]?.[0] ?? '19_30y';
+                    ownerProfileDirty = true;
                   }
                 }}
               >
@@ -1449,7 +1464,7 @@
                 value={activeMember ? editingMemberAge : ownerAge}
                 onchange={(e) => {
                   if (activeMember) { editingMemberAge = e.currentTarget.value; memberProfileDirty = true; }
-                  else ownerAge = e.currentTarget.value;
+                  else { ownerAge = e.currentTarget.value; ownerProfileDirty = true; }
                 }}
               >
                 {#each (MEMBER_AGE_OPTIONS[activeMember ? editingMemberGroupage : ownerGroupage] ?? []) as bracket}
@@ -1470,8 +1485,8 @@
                     <option value="cm">cm</option>
                   </select>
                 {:else}
-                  <input type="number" bind:value={ownerHeight} placeholder={ownerHeightUnit === 'inches' ? '68' : '173'} min="20" max="300" class="member-input-sm {!ownerHeight ? 'field-missing' : ''}" />
-                  <select class="unit-select" bind:value={ownerHeightUnit}>
+                  <input type="number" bind:value={ownerHeight} oninput={() => ownerProfileDirty = true} placeholder={ownerHeightUnit === 'inches' ? '68' : '173'} min="20" max="300" class="member-input-sm {!ownerHeight ? 'field-missing' : ''}" />
+                  <select class="unit-select" bind:value={ownerHeightUnit} onchange={() => ownerProfileDirty = true}>
                     <option value="inches">in</option>
                     <option value="cm">cm</option>
                   </select>
@@ -1488,8 +1503,8 @@
                     <option value="kilos">kg</option>
                   </select>
                 {:else}
-                  <input type="number" bind:value={ownerWeight} placeholder={ownerWeightUnit === 'pounds' ? '154' : '70'} min="5" max="500" class="member-input-sm {!ownerWeight ? 'field-missing' : ''}" />
-                  <select class="unit-select" bind:value={ownerWeightUnit}>
+                  <input type="number" bind:value={ownerWeight} oninput={() => ownerProfileDirty = true} placeholder={ownerWeightUnit === 'pounds' ? '154' : '70'} min="5" max="500" class="member-input-sm {!ownerWeight ? 'field-missing' : ''}" />
+                  <select class="unit-select" bind:value={ownerWeightUnit} onchange={() => ownerProfileDirty = true}>
                     <option value="pounds">lb</option>
                     <option value="kilos">kg</option>
                   </select>
@@ -1505,7 +1520,7 @@
               value={activeMember ? editingMemberActivityLevel : ownerActivityLevel}
               onchange={(e) => {
                 if (activeMember) { editingMemberActivityLevel = e.currentTarget.value; memberProfileDirty = true; }
-                else ownerActivityLevel = e.currentTarget.value;
+                else { ownerActivityLevel = e.currentTarget.value; ownerProfileDirty = true; }
               }}
             >
               {#each MEMBER_ACTIVITY_LEVELS as level}
@@ -1596,6 +1611,8 @@
 
         {#if activeMember && memberProfileDirty}
           <button class="save-dri-btn" onclick={saveMemberDRI}>💾 Save {activeMember.name}'s Profile</button>
+        {:else if !activeMember && ownerProfileDirty}
+          <button class="save-dri-btn" onclick={saveOwnerDRI}>💾 Save Your Profile</button>
         {/if}
       </div>
 
