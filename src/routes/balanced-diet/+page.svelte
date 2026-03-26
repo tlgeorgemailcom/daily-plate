@@ -256,21 +256,14 @@
   let newMemberIcon = $state('👤');
   let newMemberColor = $state('#60a5fa');
   let newMemberGroupage = $state('Males');
-  let newMemberAge = $state('19_30y');
+  let newMemberAge = $state('');
   let newMemberHeight = $state('');
   let newMemberHeightUnit = $state('inches');
   let newMemberWeight = $state('');
   let newMemberWeightUnit = $state('pounds');
   let newMemberActivityLevel = $state('Sedentary');
 
-  const MEMBER_AGE_OPTIONS: Record<string, string[]> = {
-    'Infants':   ['0_6mo', '7_12mo'],
-    'Children':  ['1_3y', '4_8y'],
-    'Males':     ['9_13y', '14_18y', '19_30y', '31_50y', '51_70y', '>70y'],
-    'Females':   ['9_13y', '14_18y', '19_30y', '31_50y', '51_70y', '>70y'],
-    'Pregnancy': ['14_18y', '19_30y', '31_50y'],
-    'Lactation': ['14_18y', '19_30y', '31_50y'],
-  };
+  const MEMBER_GROUPS = ['Infants', 'Children', 'Males', 'Females', 'Pregnancy', 'Lactation'];
   const MEMBER_ACTIVITY_LEVELS = ['Sedentary', 'Low Active', 'Active', 'Very Active'];
 
   // Live preview of calorie target for the member being added
@@ -302,7 +295,7 @@
 
   // Owner DRI profile (drives calorie + nutrient targets)
   let ownerGroupage = $state($gameSettings.ownerGroupage ?? 'Males');
-  let ownerAge = $state($gameSettings.ownerAge ?? '19_30y');
+  let ownerAge = $state($gameSettings.ownerAge ?? '');
   let ownerHeight = $state($gameSettings.ownerHeight ?? '');
   let ownerHeightUnit = $state($gameSettings.ownerHeightUnit ?? 'cm');
   let ownerWeight = $state($gameSettings.ownerWeight ?? '');
@@ -335,7 +328,7 @@
 
   // Member editing state (editable DRI fields for the active member)
   let editingMemberGroupage = $state('Males');
-  let editingMemberAge = $state('19_30y');
+  let editingMemberAge = $state('');
   let editingMemberHeight = $state('');
   let editingMemberHeightUnit = $state('cm');
   let editingMemberWeight = $state('');
@@ -601,7 +594,7 @@
     const member = activeMember;
     if (member) {
       editingMemberGroupage = member.groupage ?? 'Males';
-      editingMemberAge = member.age ?? '19_30y';
+      editingMemberAge = member.age ?? '';
       editingMemberHeight = member.height ?? '';
       editingMemberHeightUnit = member.height_unit ?? 'cm';
       editingMemberWeight = member.weight ?? '';
@@ -1481,34 +1474,32 @@
                   const val = e.currentTarget.value;
                   if (activeMember) {
                     editingMemberGroupage = val;
-                    editingMemberAge = MEMBER_AGE_OPTIONS[val]?.[0] ?? '19_30y';
                     memberProfileDirty = true;
                   } else {
                     ownerGroupage = val;
-                    ownerAge = MEMBER_AGE_OPTIONS[val]?.[0] ?? '19_30y';
                     ownerProfileDirty = true;
                   }
                 }}
               >
-                {#each Object.keys(MEMBER_AGE_OPTIONS) as g}
+                {#each MEMBER_GROUPS as g}
                   <option value={g}>{g}</option>
                 {/each}
               </select>
             </label>
             <label class="member-label half">
-              Age Range
-              <select
-                class="member-select"
+              Age
+              <input
+                type="number"
+                class="member-input-sm"
                 value={activeMember ? editingMemberAge : ownerAge}
-                onchange={(e) => {
+                oninput={(e) => {
                   if (activeMember) { editingMemberAge = e.currentTarget.value; memberProfileDirty = true; }
                   else { ownerAge = e.currentTarget.value; ownerProfileDirty = true; }
                 }}
-              >
-                {#each (MEMBER_AGE_OPTIONS[activeMember ? editingMemberGroupage : ownerGroupage] ?? []) as bracket}
-                  <option value={bracket}>{bracket}</option>
-                {/each}
-              </select>
+                min="0"
+                max="120"
+                placeholder="e.g. 35"
+              />
             </label>
           </div>
 
@@ -1883,21 +1874,23 @@
                     value={newMemberGroupage}
                     onchange={(e) => {
                       newMemberGroupage = e.currentTarget.value;
-                      newMemberAge = MEMBER_AGE_OPTIONS[newMemberGroupage]?.[0] ?? '19_30y';
                     }}
                   >
-                    {#each Object.keys(MEMBER_AGE_OPTIONS) as g}
+                    {#each MEMBER_GROUPS as g}
                       <option value={g}>{g}</option>
                     {/each}
                   </select>
                 </label>
                 <label class="member-label half">
-                  Age Range
-                  <select class="member-select" bind:value={newMemberAge}>
-                    {#each (MEMBER_AGE_OPTIONS[newMemberGroupage] ?? []) as bracket}
-                      <option value={bracket}>{bracket}</option>
-                    {/each}
-                  </select>
+                  Age
+                  <input
+                    type="number"
+                    class="member-input-sm"
+                    bind:value={newMemberAge}
+                    min="0"
+                    max="120"
+                    placeholder="e.g. 10"
+                  />
                 </label>
               </div>
 
@@ -1954,7 +1947,7 @@
                   newMemberIcon = '👤';
                   newMemberColor = '#60a5fa';
                   newMemberGroupage = 'Males';
-                  newMemberAge = '19_30y';
+                  newMemberAge = '';
                   newMemberHeight = '';
                   newMemberHeightUnit = 'inches';
                   newMemberWeight = '';
@@ -1997,7 +1990,7 @@
                   newMemberIcon = '👤';
                   newMemberColor = '#60a5fa';
                   newMemberGroupage = 'Males';
-                  newMemberAge = '19_30y';
+                  newMemberAge = '';
                   newMemberHeight = '';
                   newMemberHeightUnit = 'inches';
                   newMemberWeight = '';

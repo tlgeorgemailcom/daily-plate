@@ -68,7 +68,7 @@ export const DEFAULT_SETTINGS: GameSettings = {
   sugarInput: '',
 
   ownerGroupage: 'Males',
-  ownerAge: '19_30y',
+  ownerAge: '',
   ownerHeight: '',
   ownerHeightUnit: 'cm',
   ownerWeight: '',

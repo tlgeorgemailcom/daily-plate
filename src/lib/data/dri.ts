@@ -313,6 +313,41 @@ const PA_VALUES: Record<string, number> = {
 };
 
 /**
+ * Mirrors Jetcool's ageCategoryMatcher.dart.
+ * Maps an exact numeric age (years) + groupage to a DRI bracket string.
+ * e.g. ageCategoryMatcher('Males', 25) → '19_30y'
+ * Infants: use fractional years (0.25 = 3 months, 0.75 = 9 months).
+ */
+export function ageCategoryMatcher(groupage: string, age: number): string | null {
+  switch (groupage) {
+    case 'Infants':
+      if (age >= 0 && age <= 0.5)  return '0_6mo';
+      if (age > 0.5 && age <= 1)   return '7_12mo';
+      break;
+    case 'Children':
+      if (age >= 1 && age <= 3)    return '1_3y';
+      if (age >= 4 && age <= 8)    return '4_8y';
+      break;
+    case 'Males':
+    case 'Females':
+      if (age >= 9  && age <= 13)  return '9_13y';
+      if (age >= 14 && age <= 18)  return '14_18y';
+      if (age >= 19 && age <= 30)  return '19_30y';
+      if (age >= 31 && age <= 50)  return '31_50y';
+      if (age >= 51 && age <= 70)  return '51_70y';
+      if (age > 70)                return '>70y';
+      break;
+    case 'Pregnancy':
+    case 'Lactation':
+      if (age >= 14 && age <= 18)  return '14_18y';
+      if (age >= 19 && age <= 30)  return '19_30y';
+      if (age >= 31 && age <= 50)  return '31_50y';
+      break;
+  }
+  return null;
+}
+
+/**
  * Returns the numeric midpoint age (years) for a Jetcool age bracket string.
  * e.g. '19_30y' → 24.5 | '>70y' → 75 | '1_3y' → 2
  * Month brackets: '0_6mo' → 0.25 | '7_12mo' → 0.79
@@ -367,8 +402,8 @@ function calculateEER(
 }
 
 export interface MemberProfile {
-  groupage: string;      // 'Males' | 'Females' | 'Children'
-  age: string;           // bracket e.g. '19_30y'
+  groupage: string;      // 'Males' | 'Females' | 'Children' etc.
+  age: string;           // exact numeric age string e.g. '35', OR legacy bracket e.g. '19_30y'
   height: string;        // numeric string e.g. '68'
   height_unit: string;   // 'inches' | 'cm'
   weight: string;        // numeric string e.g. '154'
@@ -391,12 +426,18 @@ export interface MemberTargets {
  * weight are missing the population-average `kcal` from the DRI table is used instead.
  */
 export function getMemberTargets(member: MemberProfile): MemberTargets | null {
-  // 1. Build the LifeStageGroup key and look up the DRI row
-  const lifeStageGroup = member.groupage + member.age; // e.g. 'Males19_30y'
+  // 1. Derive age bracket — accept exact numeric age ('35') or legacy bracket ('19_30y')
+  const numericAge = parseFloat(member.age);
+  const ageBracket = !isNaN(numericAge)
+    ? (ageCategoryMatcher(member.groupage, numericAge) ?? member.age)
+    : member.age;
+
+  // 2. Build the LifeStageGroup key and look up the DRI row
+  const lifeStageGroup = member.groupage + ageBracket; // e.g. 'Males19_30y'
   const driRow = getDRIByGroup(lifeStageGroup);
   if (!driRow) return null;
 
-  // 2. Parse biometrics — missing values return null (no EER)
+  // 3. Parse biometrics — missing values return null (no EER)
   const heightVal = parseFloat(member.height);
   const weightVal = parseFloat(member.weight);
 
@@ -404,7 +445,7 @@ export function getMemberTargets(member: MemberProfile): MemberTargets | null {
     return { driRow, kcal: driRow.kcal, kcalIsPersonalised: false };
   }
 
-  // 3. Convert to SI units
+  // 4. Convert to SI units
   const heightM = member.height_unit === 'cm'
     ? heightVal * 0.01
     : heightVal * 0.0254; // inches → metres
@@ -413,13 +454,13 @@ export function getMemberTargets(member: MemberProfile): MemberTargets | null {
     ? weightVal
     : weightVal * 0.453592; // pounds → kg
 
-  // 4. Physical Activity multiplier (lookup is case-insensitive)
+  // 5. Physical Activity multiplier (lookup is case-insensitive)
   const pa = PA_VALUES[member.activity_level.toLowerCase()] ?? PA_VALUES['sedentary'];
 
-  // 5. Age midpoint from bracket string
-  const ageMid = ageBracketMidpoint(member.age);
+  // 6. Age midpoint — use exact numeric age if available, else derive from bracket
+  const ageMid = !isNaN(numericAge) ? numericAge : ageBracketMidpoint(ageBracket);
 
-  // 6. EER
+  // 7. EER
   const eer = calculateEER(member.groupage, ageMid, weightKg, heightM, pa);
 
   if (!eer || eer < 500) {
