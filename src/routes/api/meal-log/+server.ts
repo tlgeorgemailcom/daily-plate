@@ -138,10 +138,11 @@ export const GET: RequestHandler = async ({ url }) => {
 // This ensures Jetcool-only rows are never wiped by a web save, and vice versa.
 export const PUT: RequestHandler = async ({ request }) => {
   const body = await request.json();
-  const { user_id, meal_date, entries } = body as {
+  const { user_id, meal_date, entries, source } = body as {
     user_id: string;
     meal_date: string;
     entries: MealLogEntry[];
+    source?: string;  // 'jetcool' when sent by Jetcool sync; absent/undefined for web
   };
 
   if (!user_id)    throw error(400, 'Missing user_id');
@@ -208,10 +209,7 @@ export const PUT: RequestHandler = async ({ request }) => {
     );
   }
 
-  // Delete web-originated rows for today that are no longer on the plate.
-  // This prevents stale web rows from accumulating when the same food gets
-  // saved multiple times with a fresh random id (addFood generates a new id
-  // on every call). Jetcool rows (id starts with 'jc_') are never touched.
+  // Always clean up stale web-originated rows not in the current entries list.
   if (entries.length > 0) {
     const ids = entries.map(e => e.id);
     const placeholders = ids.map(() => '?').join(', ');
@@ -222,11 +220,35 @@ export const PUT: RequestHandler = async ({ request }) => {
       [user_id, meal_date, ...ids]
     );
   } else {
-    // Empty plate — clear all web-originated rows for today.
     await execute(
       `DELETE FROM daily_meal_log WHERE user_id = ? AND meal_date = ? AND source = 'web'`,
       [user_id, meal_date]
     );
+  }
+
+  // When Jetcool sends a full-day reconciliation (source='jetcool'), also
+  // remove its own orphaned rows — this is how deletions propagate from
+  // Jetcool to Turso. The incremental push has no delete signal; the full-day
+  // PUT with the complete current set is the deletion mechanism.
+  // Only rows prefixed 'jc_' for this user are touched (never other users').
+  if (source === 'jetcool') {
+    const userPrefix = `jc_${user_id}_`;
+    if (entries.length > 0) {
+      const ids = entries.map(e => e.id);
+      const placeholders = ids.map(() => '?').join(', ');
+      await execute(
+        `DELETE FROM daily_meal_log
+         WHERE user_id = ? AND meal_date = ? AND id LIKE ?
+           AND id NOT IN (${placeholders})`,
+        [user_id, meal_date, `${userPrefix}%`, ...ids]
+      );
+    } else {
+      // All meals deleted — wipe all Jetcool rows for today.
+      await execute(
+        `DELETE FROM daily_meal_log WHERE user_id = ? AND meal_date = ? AND id LIKE ?`,
+        [user_id, meal_date, `${userPrefix}%`]
+      );
+    }
   }
 
   return json({ ok: true, count: entries.length });
