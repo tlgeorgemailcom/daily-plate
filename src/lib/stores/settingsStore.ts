@@ -358,3 +358,8 @@ export function resetSettings(): void {
 export function getSettings(): GameSettings {
   return get(settingsWritable);
 }
+
+// Explicitly save current settings to cloud (call from Save buttons)
+export async function saveSettingsToCloud(): Promise<boolean> {
+  return saveToCloud(get(settingsWritable));
+}

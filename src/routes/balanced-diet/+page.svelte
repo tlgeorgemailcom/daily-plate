@@ -24,7 +24,7 @@
     nutrientProgress,
     selectedPieNutrient
   } from '$lib/stores/gameStore';
-  import { gameSettings, updateSettings, DEFAULT_SETTINGS, getSettings } from '$lib/stores/settingsStore';
+  import { gameSettings, updateSettings, DEFAULT_SETTINGS, getSettings, saveSettingsToCloud } from '$lib/stores/settingsStore';
   import { playerStore } from '$lib/stores/playerStore';
   import { initializeGameState, startAutoSave, startNewGame, getSavedGameTime, hasSavedGame, setViewingUserId, saveMealLog, suppressMealLogSave, loadCustomCategories } from '$lib/stores/gameStateStore';
   import { FOODS } from '$lib/data/food-portions';
@@ -698,6 +698,7 @@
       ownerWeightUnit,
       ownerActivityLevel,
     });
+    await saveSettingsToCloud();
     ownerProfileDirty = false;
   }
 
