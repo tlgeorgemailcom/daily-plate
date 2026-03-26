@@ -226,13 +226,32 @@ export const PUT: RequestHandler = async ({ request }) => {
     );
   }
 
-  // When Jetcool sends a full-day reconciliation (source='jetcool'), also
-  // remove its own orphaned rows — this is how deletions propagate from
-  // Jetcool to Turso. The incremental push has no delete signal; the full-day
-  // PUT with the complete current set is the deletion mechanism.
-  // Only rows prefixed 'jc_' for this user are touched (never other users').
+  // When Jetcool sends a full-day reconciliation (source='jetcool'):
+  //
+  // 1. Capture which food_id+meal_category combos currently have jc_ rows
+  //    BEFORE we remove orphans — these represent "Jetcool-owned" foods.
+  //
+  // 2. Delete orphaned jc_ rows (foods deleted in Jetcool).
+  //
+  // 3. Cascade: for every food that previously had a jc_ row but is NOT in
+  //    the new entries, also delete any web-originated copy of that food.
+  //    This is why bacon keeps coming back: the incremental push cleans up
+  //    jc_ rows, but the web auto-save had already created a source='web'
+  //    copy (e.g. 11.5g rounded to 12g). That web row survived both the
+  //    jc_ cleanup and the generic web-row purge (which only removes rows
+  //    not in the current entries list — but the web row's id is never in
+  //    a Jetcool entries list). Explicit cascade is required.
   if (source === 'jetcool') {
     const userPrefix = `jc_${user_id}_`;
+
+    // Snapshot Jetcool-owned food keys before removal.
+    const prevJcFoods = await queryAll<{ food_id: string; meal_category: string }>(
+      `SELECT DISTINCT food_id, meal_category FROM daily_meal_log
+       WHERE user_id = ? AND meal_date = ? AND id LIKE ?`,
+      [user_id, meal_date, `${userPrefix}%`]
+    );
+
+    // Remove orphaned jc_ rows.
     if (entries.length > 0) {
       const ids = entries.map(e => e.id);
       const placeholders = ids.map(() => '?').join(', ');
@@ -243,11 +262,24 @@ export const PUT: RequestHandler = async ({ request }) => {
         [user_id, meal_date, `${userPrefix}%`, ...ids]
       );
     } else {
-      // All meals deleted — wipe all Jetcool rows for today.
       await execute(
         `DELETE FROM daily_meal_log WHERE user_id = ? AND meal_date = ? AND id LIKE ?`,
         [user_id, meal_date, `${userPrefix}%`]
       );
+    }
+
+    // Cascade deletions to web rows: any food that had a jc_ row but is
+    // absent from the new entries was deleted in Jetcool → delete its
+    // web-originated counterpart too.
+    const newFoodKeys = new Set(entries.map(e => `${e.food_id}|${e.meal_category}`));
+    for (const row of prevJcFoods) {
+      if (!newFoodKeys.has(`${row.food_id}|${row.meal_category}`)) {
+        await execute(
+          `DELETE FROM daily_meal_log
+           WHERE user_id = ? AND meal_date = ? AND food_id = ? AND meal_category = ? AND source = 'web'`,
+          [user_id, meal_date, row.food_id, row.meal_category]
+        );
+      }
     }
   }
 
