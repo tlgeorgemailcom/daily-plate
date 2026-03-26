@@ -24,7 +24,7 @@
     nutrientProgress,
     selectedPieNutrient
   } from '$lib/stores/gameStore';
-  import { gameSettings, updateSettings, DEFAULT_SETTINGS, getSettings, saveSettingsToCloud } from '$lib/stores/settingsStore';
+  import { gameSettings, updateSettings, DEFAULT_SETTINGS, getSettings } from '$lib/stores/settingsStore';
   import { playerStore } from '$lib/stores/playerStore';
   import { initializeGameState, startAutoSave, startNewGame, getSavedGameTime, hasSavedGame, setViewingUserId, saveMealLog, suppressMealLogSave, loadCustomCategories } from '$lib/stores/gameStateStore';
   import { FOODS } from '$lib/data/food-portions';
@@ -689,17 +689,51 @@
   });
 
   async function saveOwnerDRI() {
-    updateSettings({
-      ownerGroupage,
-      ownerAge,
-      ownerHeight,
-      ownerHeightUnit,
-      ownerWeight,
-      ownerWeightUnit,
-      ownerActivityLevel,
+    const playerId = $playerStore.id;
+    if (!playerId) {
+      console.error('[saveOwnerDRI] No player ID — not logged in');
+      return;
+    }
+    console.log('[saveOwnerDRI] Saving demographics:', {
+      owner_groupage: ownerGroupage,
+      owner_age: ownerAge,
+      owner_height: String(ownerHeight),
+      owner_height_unit: ownerHeightUnit,
+      owner_weight: String(ownerWeight),
+      owner_weight_unit: ownerWeightUnit,
+      owner_activity_level: ownerActivityLevel,
     });
-    await saveSettingsToCloud();
-    ownerProfileDirty = false;
+    try {
+      const res = await fetch('/api/settings', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          player_id: playerId,
+          owner_groupage: ownerGroupage,
+          owner_age: ownerAge,
+          owner_height: String(ownerHeight),
+          owner_height_unit: ownerHeightUnit,
+          owner_weight: String(ownerWeight),
+          owner_weight_unit: ownerWeightUnit,
+          owner_activity_level: ownerActivityLevel,
+        }),
+      });
+      console.log('[saveOwnerDRI] Response:', res.status, res.ok);
+      if (res.ok) {
+        updateSettings({
+          ownerGroupage,
+          ownerAge,
+          ownerHeight: String(ownerHeight),
+          ownerHeightUnit,
+          ownerWeight: String(ownerWeight),
+          ownerWeightUnit,
+          ownerActivityLevel,
+        });
+        ownerProfileDirty = false;
+      }
+    } catch (e) {
+      console.error('[saveOwnerDRI] Failed:', e);
+    }
   }
 
   async function saveMemberDRI() {
