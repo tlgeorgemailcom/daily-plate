@@ -90,3 +90,37 @@ export const POST: RequestHandler = async ({ request }) => {
 
   return json({ ok: true, id });
 };
+
+// PATCH /api/household-members
+// Body: { player_id, id, groupage, age, height, height_unit, weight, weight_unit, activity_level }
+// Updates demographics for an existing household member. Silently no-ops if
+// the member doesn't belong to player_id (ownership guard).
+export const PATCH: RequestHandler = async ({ request }) => {
+  const body = await request.json();
+  const { player_id, id, groupage, age, height, height_unit,
+          weight, weight_unit, activity_level } = body;
+
+  if (!player_id || !id) throw error(400, 'Missing player_id or id');
+
+  await execute(
+    `UPDATE household_members
+     SET groupage        = COALESCE(?, groupage),
+         age             = COALESCE(?, age),
+         height          = COALESCE(?, height),
+         height_unit     = COALESCE(?, height_unit),
+         weight          = COALESCE(?, weight),
+         weight_unit     = COALESCE(?, weight_unit),
+         activity_level  = COALESCE(?, activity_level),
+         updated_at      = datetime('now')
+     WHERE id = ? AND owner_id = ?`,
+    [
+      groupage ?? null, age ?? null,
+      height ?? null, height_unit ?? null,
+      weight ?? null, weight_unit ?? null,
+      activity_level ?? null,
+      id, player_id,
+    ]
+  );
+
+  return json({ ok: true });
+};
