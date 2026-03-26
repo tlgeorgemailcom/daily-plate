@@ -209,21 +209,27 @@ export const PUT: RequestHandler = async ({ request }) => {
     );
   }
 
-  // Always clean up stale web-originated rows not in the current entries list.
-  if (entries.length > 0) {
-    const ids = entries.map(e => e.id);
-    const placeholders = ids.map(() => '?').join(', ');
-    await execute(
-      `DELETE FROM daily_meal_log
-       WHERE user_id = ? AND meal_date = ? AND source = 'web'
-         AND id NOT IN (${placeholders})`,
-      [user_id, meal_date, ...ids]
-    );
-  } else {
-    await execute(
-      `DELETE FROM daily_meal_log WHERE user_id = ? AND meal_date = ? AND source = 'web'`,
-      [user_id, meal_date]
-    );
+  // Clean up stale web-originated rows not in the current entries list.
+  // Skip this when source='jetcool': Jetcool only sends its own jc_-prefixed ids,
+  // so every web row would incorrectly appear "stale" and be deleted — wiping foods
+  // the user added on the web (e.g. French Toast) before Jetcool can pull them.
+  // The jetcool-specific cascade block below handles web-row cleanup precisely.
+  if (source !== 'jetcool') {
+    if (entries.length > 0) {
+      const ids = entries.map(e => e.id);
+      const placeholders = ids.map(() => '?').join(', ');
+      await execute(
+        `DELETE FROM daily_meal_log
+         WHERE user_id = ? AND meal_date = ? AND source = 'web'
+           AND id NOT IN (${placeholders})`,
+        [user_id, meal_date, ...ids]
+      );
+    } else {
+      await execute(
+        `DELETE FROM daily_meal_log WHERE user_id = ? AND meal_date = ? AND source = 'web'`,
+        [user_id, meal_date]
+      );
+    }
   }
 
   // When Jetcool sends a full-day reconciliation (source='jetcool'):

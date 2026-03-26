@@ -839,6 +839,50 @@
   function closeSettings() {
     showSettings = false;
   }
+
+  // Called when the user logs in mid-session via the LoginModal.
+  // onMount only runs once, so we must replicate its DB-reload block here;
+  // otherwise the plate never reflects Turso state for the newly signed-in user.
+  async function handleLoginSuccess() {
+    showLoginModal = false;
+    const playerId = $playerStore.id;
+    if (!playerId) return;
+
+    const today = new Date().toISOString().split('T')[0];
+
+    // Flush any foods that were added before login (player.id was null then,
+    // so saveMealLog() was a no-op).  Now that player.id is set, save them.
+    await saveMealLog();
+
+    // Load household members (needed for the member-switcher dropdown).
+    try {
+      const hm = await fetch(`/api/household-members?player_id=${encodeURIComponent(playerId)}`);
+      if (hm.ok) householdMembers = await hm.json();
+    } catch { /* non-critical */ }
+
+    // Load custom meal categories for ALL·IN users.
+    if (isAllin) {
+      await loadCustomCategories(playerId);
+    }
+
+    // Reload today's meals from Turso — suppress auto-saves during the reload
+    // so clearFoods() does not trigger a PUT that wipes the DB rows.
+    suppressMealLogSave(true);
+    try {
+      const res = await fetch(`/api/meal-log?user_id=${encodeURIComponent(playerId)}&date=${today}`);
+      if (res.ok) {
+        const data: { rows: { food_id: string; meal_category: string; quantity_grams: number; source?: string; updated_at?: string }[] } =
+          await res.json();
+        clearFoods();
+        loadRowsIntoPlate(data.rows ?? []);
+      }
+    } catch { /* non-critical — leave plate as-is */ } finally {
+      suppressMealLogSave(false);
+    }
+
+    // Load today's note for Plus+ users.
+    await loadNoteForDate(todayDateStr());
+  }
   
   // Macro preset options (from nutritional guidelines)
   const macroPresets = [
@@ -1500,7 +1544,7 @@
   {#if showLoginModal}
     <LoginModal
       onClose={() => showLoginModal = false}
-      onSuccess={() => showLoginModal = false}
+      onSuccess={handleLoginSuccess}
     />
   {/if}
 
