@@ -761,6 +761,40 @@
   function openSettings() {
     showSettings = true;
   }
+
+  let syncingMobile = $state(false);
+  let syncMobileResult = $state<'ok' | 'error' | null>(null);
+  let syncMobileTimer: ReturnType<typeof setTimeout> | null = null;
+
+  async function syncFromJetcool() {
+    if (syncingMobile || !$playerStore.id) return;
+    syncingMobile = true;
+    syncMobileResult = null;
+    if (syncMobileTimer) clearTimeout(syncMobileTimer);
+    const today = new Date().toISOString().split('T')[0];
+    const effectiveUserId = activeMemberId || $playerStore.id;
+    try {
+      const res = await fetch(
+        `/api/meal-log?user_id=${encodeURIComponent(effectiveUserId)}&date=${today}`
+      );
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data: { rows: { food_id: string; meal_category: string; quantity_grams: number }[] } =
+        await res.json();
+      suppressMealLogSave(true);
+      clearFoods();
+      for (const entry of (data.rows ?? [])) {
+        const food = FOODS.find(f => f.ndb === entry.food_id);
+        if (food) addFood(food, food.portions[0], 'plate', entry.quantity_grams, 1, entry.meal_category);
+      }
+      syncMobileResult = 'ok';
+    } catch {
+      syncMobileResult = 'error';
+    } finally {
+      suppressMealLogSave(false);
+      syncingMobile = false;
+      syncMobileTimer = setTimeout(() => { syncMobileResult = null; }, 4000);
+    }
+  }
   
   function closeSettings() {
     showSettings = false;
@@ -956,6 +990,19 @@
             <button class="menu-item" onclick={() => { showRules = true; closeMenu(); }}>
               📖 Rules
             </button>
+            {#if $playerStore.status === 'logged-in'}
+              <button class="menu-item" onclick={() => { syncFromJetcool(); closeMenu(); }} disabled={syncingMobile}>
+                {#if syncingMobile}
+                  ⏳ Syncing…
+                {:else if syncMobileResult === 'ok'}
+                  ✅ Synced!
+                {:else if syncMobileResult === 'error'}
+                  ❌ Sync failed
+                {:else}
+                  📱 Sync from Jetcool
+                {/if}
+              </button>
+            {/if}
             <button class="menu-item" onclick={() => { openSettings(); closeMenu(); }}>
               ⚙️ Settings
             </button>
