@@ -760,6 +760,13 @@
   
   function openSettings() {
     showSettings = true;
+    // Re-fetch members so edits pushed from Jetcool are visible immediately.
+    if ($playerStore.id) {
+      fetch(`/api/household-members?player_id=${$playerStore.id}`)
+        .then(r => r.ok ? r.json() : null)
+        .then(data => { if (data) householdMembers = data; })
+        .catch(() => {});
+    }
   }
 
   let syncingMobile = $state(false);
@@ -792,6 +799,13 @@
     } finally {
       suppressMealLogSave(false);
       syncingMobile = false;
+      // Also refresh household members so demographic changes from Jetcool show immediately.
+      if ($playerStore.id) {
+        fetch(`/api/household-members?player_id=${$playerStore.id}`)
+          .then(r => r.ok ? r.json() : null)
+          .then(data => { if (data) householdMembers = data; })
+          .catch(() => {});
+      }
       syncMobileTimer = setTimeout(() => { syncMobileResult = null; }, 4000);
     }
   }
