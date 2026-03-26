@@ -553,20 +553,30 @@
   });
 
   // Load rows from DB into the plate, deduplicating by (food_id, meal_category).
-  // Sums quantity_grams when the same food appears more than once in the same
-  // slot — prevents duplicates when Turso has both a Jetcool row (jc_...) and
-  // a stale web-originated row for the same food.
-  function loadRowsIntoPlate(rows: { food_id: string; meal_category: string; quantity_grams: number }[]) {
-    const merged = new Map<string, { food_id: string; meal_category: string; quantity_grams: number }>();
+  // Load rows from Turso into the plate. When Turso has both a Jetcool row
+  // (source='jetcool') and a stale web-originated row for the same food+slot,
+  // we must NOT sum them — that causes the displayed quantity to double on
+  // every sync cycle (12g → 24g → 36g…). Instead we take exactly ONE row per
+  // (food_id, meal_category): prefer the jetcool row (canonical source of
+  // truth), or the most recently updated web row when no jetcool row exists.
+  type MealRow = { food_id: string; meal_category: string; quantity_grams: number; source?: string; updated_at?: string };
+  function loadRowsIntoPlate(rows: MealRow[]) {
+    const best = new Map<string, MealRow>();
     for (const entry of rows) {
       const key = `${entry.food_id}|${entry.meal_category}`;
-      if (merged.has(key)) {
-        merged.get(key)!.quantity_grams += entry.quantity_grams;
+      if (!best.has(key)) {
+        best.set(key, entry);
       } else {
-        merged.set(key, { ...entry });
+        const cur = best.get(key)!;
+        const curIsJetcool  = cur.source   === 'jetcool';
+        const newIsJetcool  = entry.source === 'jetcool';
+        // Jetcool beats web; between two web rows keep the more recent one.
+        if (!curIsJetcool && (newIsJetcool || (entry.updated_at ?? '') > (cur.updated_at ?? ''))) {
+          best.set(key, entry);
+        }
       }
     }
-    for (const entry of merged.values()) {
+    for (const entry of best.values()) {
       const food = FOODS.find(f => f.ndb === entry.food_id);
       if (food) addFood(food, food.portions[0], 'plate', entry.quantity_grams, 1, entry.meal_category);
     }
