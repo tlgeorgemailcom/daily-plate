@@ -34,6 +34,8 @@ export interface MealLogEntry {
 //   → { dates: string[] } distinct logged dates, most recent first
 // GET /api/meal-log?user_id=xxx&category=breakfast&history=true&limit=30
 //   → { days: Array<{ meal_date, entries, total_kcal }> } for Meal History per Slot
+// GET /api/meal-log?user_id=xxx&since=ISO8601
+//   → { rows: MealLogEntry[], sync_at: string } rows updated after the watermark (bi-dir sync pull)
 export const GET: RequestHandler = async ({ url }) => {
   const userId = url.searchParams.get('user_id');
   if (!userId) throw error(400, 'Missing user_id');
@@ -44,6 +46,24 @@ export const GET: RequestHandler = async ({ url }) => {
   const dates    = url.searchParams.get('dates');
   const category = url.searchParams.get('category');
   const history  = url.searchParams.get('history');
+  const since    = url.searchParams.get('since');
+
+  // Incremental pull for bi-directional sync.
+  // Returns all rows updated after `since` (ISO-8601), plus a server-side
+  // sync_at timestamp the client should store as its new watermark.
+  if (since !== null) {
+    // Basic sanity-check: must look like an ISO datetime, not user content
+    if (!/^\d{4}-\d{2}-\d{2}T/.test(since)) throw error(400, 'Invalid since format');
+    const syncAt = new Date().toISOString();
+    const rows = await queryAll<MealLogEntry & { meal_date: string; deleted_at: string | null }>(
+      `SELECT * FROM daily_meal_log
+       WHERE user_id = ? AND updated_at > ?
+       ORDER BY updated_at ASC
+       LIMIT 2000`,
+      [userId, since]
+    );
+    return json({ rows, sync_at: syncAt });
+  }
 
   // Meal History per Slot: grouped days for a specific meal category
   if (history === 'true' && category) {
@@ -113,8 +133,9 @@ export const GET: RequestHandler = async ({ url }) => {
 
 // PUT /api/meal-log
 // Body: { user_id: string, meal_date: string, entries: MealLogEntry[] }
-// Atomically replaces all rows for (user_id, meal_date) with the provided entries.
-// Used by the web auto-save on every state change.
+// Upserts all provided entries by id (last-write-wins on updated_at).
+// Rows not present in entries are LEFT INTACT — use DELETE /api/meal-log?id= to remove individual rows.
+// This ensures Jetcool-only rows are never wiped by a web save, and vice versa.
 export const PUT: RequestHandler = async ({ request }) => {
   const body = await request.json();
   const { user_id, meal_date, entries } = body as {
@@ -129,12 +150,9 @@ export const PUT: RequestHandler = async ({ request }) => {
   if (!Array.isArray(entries)) throw error(400, 'entries must be an array');
   if (entries.length > 200) throw error(400, 'Too many entries');
 
-  // Delete existing rows for this user+date, then insert fresh
-  await execute(
-    `DELETE FROM daily_meal_log WHERE user_id = ? AND meal_date = ?`,
-    [user_id, meal_date]
-  );
-
+  // Upsert each entry individually by id (ON CONFLICT id DO UPDATE).
+  // Web-originated rows have source='web'; Jetcool rows have source='jetcool'.
+  // A Jetcool push will only touch its own jc_-prefixed ids, leaving web rows alone.
   for (const e of entries) {
     await execute(
       `INSERT INTO daily_meal_log
@@ -143,7 +161,25 @@ export const PUT: RequestHandler = async ({ request }) => {
           sugar, fiber, water, sodium, extended_nutrients, serving_data, notes,
           is_favorite, source, logged_at, updated_at)
        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
-               strftime('%Y-%m-%dT%H:%M:%SZ', 'now'))`,
+               strftime('%Y-%m-%dT%H:%M:%SZ', 'now'))
+       ON CONFLICT(id) DO UPDATE SET
+         meal_category     = excluded.meal_category,
+         quantity_grams    = excluded.quantity_grams,
+         kcal              = excluded.kcal,
+         protein           = excluded.protein,
+         carbohydrate      = excluded.carbohydrate,
+         fat               = excluded.fat,
+         sugar             = excluded.sugar,
+         fiber             = excluded.fiber,
+         water             = excluded.water,
+         sodium            = excluded.sodium,
+         extended_nutrients = excluded.extended_nutrients,
+         serving_description = excluded.serving_description,
+         notes             = excluded.notes,
+         is_favorite       = excluded.is_favorite,
+         updated_at        = strftime('%Y-%m-%dT%H:%M:%SZ', 'now')
+       WHERE excluded.updated_at >= daily_meal_log.updated_at
+          OR daily_meal_log.updated_at IS NULL`,
       [
         e.id,
         user_id,
