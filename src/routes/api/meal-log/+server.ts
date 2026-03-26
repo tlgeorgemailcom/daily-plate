@@ -151,10 +151,29 @@ export const PUT: RequestHandler = async ({ request }) => {
   if (!Array.isArray(entries)) throw error(400, 'entries must be an array');
   if (entries.length > 200) throw error(400, 'Too many entries');
 
+  // For web-originated saves, pre-fetch which (food_id, meal_category) slots are
+  // already owned by Jetcool for this date.  Any web entry that matches a jc_ slot
+  // is a stale re-echo of a Jetcool food (the web plate reloads all foods and
+  // re-saves them with a new UUID every time).  Skipping it prevents the duplicate
+  // from ever reaching Turso so Jetcool never pulls it back as a second row.
+  const jcSlotsForDate: Set<string> = source !== 'jetcool' && entries.length > 0
+    ? new Set(
+        (await queryAll<{ food_id: string; meal_category: string }>(
+          `SELECT food_id, meal_category FROM daily_meal_log
+           WHERE user_id = ? AND meal_date = ? AND source = 'jetcool'`,
+          [user_id, meal_date]
+        )).map(r => `${r.food_id}|${r.meal_category}`)
+      )
+    : new Set<string>();
+
   // Upsert each entry individually by id (ON CONFLICT id DO UPDATE).
   // Web-originated rows have source='web'; Jetcool rows have source='jetcool'.
   // A Jetcool push will only touch its own jc_-prefixed ids, leaving web rows alone.
   for (const e of entries) {
+    // Skip web entry if Jetcool already owns this food+meal slot for this date.
+    if ((e.source ?? 'web') !== 'jetcool' && jcSlotsForDate.has(`${e.food_id}|${e.meal_category}`)) {
+      continue;
+    }
     await execute(
       `INSERT INTO daily_meal_log
          (id, user_id, meal_date, meal_category, food_id, food_name, brand_name,
@@ -286,6 +305,19 @@ export const PUT: RequestHandler = async ({ request }) => {
           [user_id, meal_date, row.food_id, row.meal_category]
         );
       }
+    }
+
+    // Also delete any stale web-originated copies for foods that ARE in the new
+    // entries.  The web plate reloads all jc_ foods and re-saves them as source='web'
+    // on every auto-save, producing a web duplicate alongside every jc_ row.  Now
+    // that we have an authoritative jc_ row for each entry, the web copy is redundant
+    // and should be removed so Jetcool never pulls it back as a second plate entry.
+    for (const e of entries) {
+      await execute(
+        `DELETE FROM daily_meal_log
+         WHERE user_id = ? AND meal_date = ? AND food_id = ? AND meal_category = ? AND source = 'web'`,
+        [user_id, meal_date, e.food_id, e.meal_category]
+      );
     }
   }
 
