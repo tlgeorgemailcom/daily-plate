@@ -688,37 +688,35 @@
     }
   });
 
+  let ownerSaving = $state(false);
+
   async function saveOwnerDRI() {
     const playerId = $playerStore.id;
+    console.log('[saveOwnerDRI] playerId:', playerId, 'status:', $playerStore.status);
     if (!playerId) {
-      console.error('[saveOwnerDRI] No player ID — not logged in');
+      alert('Not logged in — please log in and try again.');
       return;
     }
-    console.log('[saveOwnerDRI] Saving demographics:', {
-      owner_groupage: ownerGroupage,
-      owner_age: ownerAge,
-      owner_height: String(ownerHeight),
-      owner_height_unit: ownerHeightUnit,
-      owner_weight: String(ownerWeight),
-      owner_weight_unit: ownerWeightUnit,
-      owner_activity_level: ownerActivityLevel,
-    });
+    ownerSaving = true;
     try {
+      const payload = {
+        player_id: playerId,
+        owner_groupage: ownerGroupage,
+        owner_age: ownerAge,
+        owner_height: String(ownerHeight),
+        owner_height_unit: ownerHeightUnit,
+        owner_weight: String(ownerWeight),
+        owner_weight_unit: ownerWeightUnit,
+        owner_activity_level: ownerActivityLevel,
+      };
+      console.log('[saveOwnerDRI] Sending:', payload);
       const res = await fetch('/api/settings', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          player_id: playerId,
-          owner_groupage: ownerGroupage,
-          owner_age: ownerAge,
-          owner_height: String(ownerHeight),
-          owner_height_unit: ownerHeightUnit,
-          owner_weight: String(ownerWeight),
-          owner_weight_unit: ownerWeightUnit,
-          owner_activity_level: ownerActivityLevel,
-        }),
+        body: JSON.stringify(payload),
       });
-      console.log('[saveOwnerDRI] Response:', res.status, res.ok);
+      const responseText = await res.text();
+      console.log('[saveOwnerDRI] Response:', res.status, responseText);
       if (res.ok) {
         updateSettings({
           ownerGroupage,
@@ -730,9 +728,14 @@
           ownerActivityLevel,
         });
         ownerProfileDirty = false;
+      } else {
+        alert('Save failed: ' + responseText);
       }
     } catch (e) {
       console.error('[saveOwnerDRI] Failed:', e);
+      alert('Save error: ' + String(e));
+    } finally {
+      ownerSaving = false;
     }
   }
 
@@ -1646,8 +1649,8 @@
 
         {#if activeMember && memberProfileDirty}
           <button class="save-dri-btn" onclick={saveMemberDRI}>💾 Save {activeMember.name}'s Profile</button>
-        {:else if !activeMember && ownerProfileDirty}
-          <button class="save-dri-btn" onclick={saveOwnerDRI}>💾 Save Your Profile</button>
+        {:else if !activeMember}
+          <button class="save-dri-btn" onclick={saveOwnerDRI} disabled={ownerSaving}>{ownerSaving ? '⏳ Saving…' : '💾 Save Your Profile'}</button>
         {/if}
       </div>
 
