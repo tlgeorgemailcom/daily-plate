@@ -53,7 +53,8 @@ export const GET: RequestHandler = async ({ url }) => {
     custom_water_cups: r.custom_water_cups  ?? '',
     custom_sugar_max:  r.custom_sugar_max   ?? '',
     custom_fiber_g:    r.custom_fiber_g     ?? '',
-  })));
+  })),
+  { headers: { 'Cache-Control': 'no-store' } })
 };
 
 // POST /api/household-members

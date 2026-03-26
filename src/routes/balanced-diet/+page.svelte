@@ -609,6 +609,16 @@
     }
   });
 
+  // Re-fetch household members from Turso whenever settings is opened so that
+  // demographic changes pushed from Jetcool are visible without a page reload.
+  $effect(() => {
+    if (!showSettings || !$playerStore.id) return;
+    fetch(`/api/household-members?player_id=${encodeURIComponent($playerStore.id)}`)
+      .then(r => r.ok ? r.json() : null)
+      .then(data => { if (data) householdMembers = data; })
+      .catch(() => {});
+  });
+
   // Switch game targets when a household member is selected (or DRI profile changes)
   $effect(() => {
     const memberId = activeMemberId;
@@ -760,13 +770,6 @@
   
   function openSettings() {
     showSettings = true;
-    // Re-fetch members so edits pushed from Jetcool are visible immediately.
-    if ($playerStore.id) {
-      fetch(`/api/household-members?player_id=${$playerStore.id}`)
-        .then(r => r.ok ? r.json() : null)
-        .then(data => { if (data) householdMembers = data; })
-        .catch(() => {});
-    }
   }
 
   let syncingMobile = $state(false);
