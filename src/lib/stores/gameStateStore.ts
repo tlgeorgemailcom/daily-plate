@@ -257,20 +257,9 @@ let _viewingUserId: string | null = null;
 export function setViewingUserId(id: string | null): void { _viewingUserId = id; }
 export function getViewingUserId(): string | null { return _viewingUserId; }
 
-// Suppress saves during member switch reload so clearFoods/addFood don't overwrite DB
-let _suppressMealLogSave = false;
-export function suppressMealLogSave(v: boolean): void { _suppressMealLogSave = v; }
-
 export async function saveMealLog(): Promise<void> {
-  if (_suppressMealLogSave) {
-    console.log('[MealLog] saveMealLog: suppressed, skipping');
-    return;
-  }
   const player = get(playerStore);
-  if (!player.id) {
-    console.log('[MealLog] saveMealLog: no player.id, skipping');
-    return;
-  }
+  if (!player.id) return;
 
   const effectiveUserId = _viewingUserId ?? player.id;
   const foods = get(addedFoods);
@@ -328,7 +317,7 @@ export function startAutoSave(): void {
   
   // Subscribe to all stores that should trigger saves
   unsubscribers = [
-    addedFoods.subscribe(() => { saveGameState(); scheduleCloudSave(); saveMealLog(); }),
+    addedFoods.subscribe(() => { saveGameState(); scheduleCloudSave(); }),
     meals.subscribe(() => { saveGameState(); scheduleCloudSave(); }),
     selectedMeal.subscribe(() => { saveGameState(); scheduleCloudSave(); }),
     selectedContainer.subscribe(() => { saveGameState(); scheduleCloudSave(); }),

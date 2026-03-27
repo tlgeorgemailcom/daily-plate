@@ -1,6 +1,7 @@
 <script lang="ts">
   import { browser } from '$app/environment';
   import { onMount } from 'svelte';
+  import { beforeNavigate } from '$app/navigation';
   import FoodPicker from '$lib/components/FoodPicker.svelte';
   import PortionSelector from '$lib/components/PortionSelector.svelte';
   import PieChart from '$lib/components/PieChart.svelte';
@@ -26,7 +27,7 @@
   } from '$lib/stores/gameStore';
   import { gameSettings, updateSettings, DEFAULT_SETTINGS, getSettings } from '$lib/stores/settingsStore';
   import { playerStore } from '$lib/stores/playerStore';
-  import { initializeGameState, startAutoSave, startNewGame, getSavedGameTime, hasSavedGame, setViewingUserId, saveMealLog, suppressMealLogSave, loadCustomCategories } from '$lib/stores/gameStateStore';
+  import { initializeGameState, startAutoSave, startNewGame, getSavedGameTime, hasSavedGame, setViewingUserId, saveMealLog, loadCustomCategories } from '$lib/stores/gameStateStore';
   import { FOODS } from '$lib/data/food-portions';
   import type { Food, Portion } from '$lib/data/food-portions';
   import type { RecipeFood } from '$lib/components/FoodPicker.svelte';
@@ -46,6 +47,20 @@
   let showReports = $state(false);
   let showLoginModal = $state(false);
   function closeMenu() { showMenu = false; }
+
+  // Save-before-switch confirmation popup
+  let saveConfirmPending = $state<{ label: string; onSave: () => void; onSkip: () => void } | null>(null);
+
+  /** Show a "Save meals?" dialog. Resolves true=save, false=skip. */
+  function askSaveMeals(memberLabel: string): Promise<boolean> {
+    return new Promise(resolve => {
+      saveConfirmPending = {
+        label: memberLabel,
+        onSave:  () => { saveConfirmPending = null; resolve(true); },
+        onSkip:  () => { saveConfirmPending = null; resolve(false); },
+      };
+    });
+  }
 
   // Tier gates — derived from playerStore
   const isPlus = $derived($playerStore.status === 'logged-in' && ['plus', 'allin', 'premium', 'moderator'].includes($playerStore.tier));
@@ -381,13 +396,7 @@
     // Load custom foods (from cloud for premium users, localStorage for others)
     await initializeCustomFoods();
 
-    // Suppress DB meal-log writes until we have loaded authoritative data from
-    // the server.  Without this, startAutoSave()'s immediate subscriber fire
-    // would write whatever is in localStorage (possibly a household member's
-    // foods from a prior session) into the owner's meal-log, wiping real data.
-    suppressMealLogSave(true);
-
-    // Start auto-saving game state on any changes
+    // Start auto-saving game state (localStorage) on any changes
     startAutoSave();
     
     // Get last saved time for history info
@@ -418,15 +427,10 @@
           clearFoods();
           loadRowsIntoPlate(mealData.rows ?? []);
         }
-      } catch { /* non-critical — localStorage state left intact */ } finally {
-        suppressMealLogSave(false);
-      }
+      } catch { /* non-critical — localStorage state left intact */ }
 
       // Load today's note (Plus + ALL·IN users)
       await loadNoteForDate(todayDateStr());
-    } else {
-      // Not logged in — nothing to load from DB; unsuppress immediately.
-      suppressMealLogSave(false);
     }
 
     // Load approved recipes as extra food options
@@ -588,15 +592,18 @@
     const playerId = $playerStore.id;
     if (!playerId) return;
 
-    // 1. Flush current member's plate to DB before changing anything
-    await saveMealLog();
+    // Ask user whether to save the current member's meals to Turso first.
+    const currentLabel = activeMemberId
+      ? (householdMembers.find((m: { id?: string }) => m.id === activeMemberId) as { name?: string } | undefined)?.name ?? 'current member'
+      : 'your';
+    const shouldSave = await askSaveMeals(currentLabel);
+    if (shouldSave) await saveMealLog();
 
-    // 2. Switch context so future saves target the new id
+    // Switch context so future saves target the new id.
     activeMemberId = newId;
     setViewingUserId(newId || null);
 
-    // 3. Load new member's today meals — suppress auto-saves during reload
-    suppressMealLogSave(true);
+    // Load new member's today meals from Turso.
     const today = new Date().toISOString().split('T')[0];
     const effectiveUserId = newId || playerId;
     try {
@@ -608,8 +615,6 @@
       }
     } catch {
       clearFoods();
-    } finally {
-      suppressMealLogSave(false);
     }
   }
 
@@ -816,14 +821,12 @@
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data: { rows: { food_id: string; meal_category: string; quantity_grams: number }[] } =
         await res.json();
-      suppressMealLogSave(true);
       clearFoods();
       loadRowsIntoPlate(data.rows ?? []);
       syncMobileResult = 'ok';
     } catch {
       syncMobileResult = 'error';
     } finally {
-      suppressMealLogSave(false);
       syncingMobile = false;
       // Also refresh household members so demographic changes from Jetcool show immediately.
       if ($playerStore.id) {
@@ -861,9 +864,7 @@
       await loadCustomCategories(playerId);
     }
 
-    // Reload today's meals from Turso — suppress auto-saves during the reload
-    // so clearFoods() does not trigger a PUT that wipes the DB rows.
-    suppressMealLogSave(true);
+    // Reload today's meals from Turso.
     try {
       const res = await fetch(`/api/meal-log?user_id=${encodeURIComponent(playerId)}&date=${today}`);
       if (res.ok) {
@@ -872,9 +873,7 @@
         clearFoods();
         loadRowsIntoPlate(data.rows ?? []);
       }
-    } catch { /* non-critical — leave plate as-is */ } finally {
-      suppressMealLogSave(false);
-    }
+    } catch { /* non-critical — leave plate as-is */ }
 
     // Load today's note for Plus+ users.
     await loadNoteForDate(todayDateStr());
@@ -999,6 +998,17 @@
   }
   
   let nutrients = $derived($nutrientProgress);
+
+  // Ask to save before SvelteKit navigates away from this page.
+  beforeNavigate(({ cancel }) => {
+    if ($playerStore.status !== 'logged-in') return;
+    cancel();
+    askSaveMeals('your').then(async (shouldSave) => {
+      if (shouldSave) await saveMealLog();
+      // Re-trigger navigation after the user has answered.
+      history.back();
+    });
+  });
 </script>
 
 <svelte:head>
@@ -1024,6 +1034,19 @@
 </svelte:head>
 
 <div class="game-wrapper" class:scroll-locked={showNotes}>
+
+{#if saveConfirmPending}
+  <div class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="save-confirm-title">
+    <div class="modal-box save-confirm-box">
+      <h3 id="save-confirm-title">Save meals?</h3>
+      <p>Save <strong>{saveConfirmPending.label}</strong> meals to the cloud before switching?</p>
+      <div class="save-confirm-actions">
+        <button class="btn-primary" onclick={saveConfirmPending.onSave}>Save</button>
+        <button class="btn-secondary" onclick={saveConfirmPending.onSkip}>Don't save</button>
+      </div>
+    </div>
+  </div>
+{/if}
 <div class="game-container">
   <!-- Header -->
   <header class="game-header">
@@ -4596,4 +4619,60 @@
       display: block;
     }
   }
+
+  /* Save-before-switch confirmation popup */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+  }
+  .modal-box {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    max-width: 320px;
+    width: 90%;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    text-align: center;
+  }
+  .modal-box h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+    color: #111827;
+  }
+  .modal-box p {
+    margin: 0 0 1.25rem;
+    font-size: 0.9rem;
+    color: #4b5563;
+  }
+  .save-confirm-actions {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+  .btn-primary {
+    background: #16a34a;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .btn-primary:hover { background: #15803d; }
+  .btn-secondary {
+    background: #f3f4f6;
+    color: #374151;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+  }
+  .btn-secondary:hover { background: #e5e7eb; }
 </style>
