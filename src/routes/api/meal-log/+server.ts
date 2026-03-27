@@ -182,16 +182,15 @@ export const PUT: RequestHandler = async ({ request }) => {
 
   // Delete rows no longer on the plate (identified by food_id + meal_category pair).
   if (entries.length > 0) {
-    const keys = entries.map(e => `${e.food_id}||'|'||${e.meal_category}`);
-    // Build explicit pair exclusion: delete any row whose (food_id, meal_category)
-    // is not in the submitted list.
-    const placeholders = entries.map(() => '(?,?)').join(',');
-    const pairs = entries.flatMap(e => [e.food_id, e.meal_category]);
+    // Use string concatenation for the NOT IN check — avoids tuple syntax not supported
+    // by all libSQL versions.
+    const placeholders = entries.map(() => '?').join(',');
+    const keys = entries.map(e => `${e.food_id}|${e.meal_category}`);
     await execute(
       `DELETE FROM daily_meal_log
        WHERE user_id = ? AND meal_date = ?
-         AND (food_id, meal_category) NOT IN (${placeholders})`,
-      [user_id, meal_date, ...pairs]
+         AND food_id || '|' || meal_category NOT IN (${placeholders})`,
+      [user_id, meal_date, ...keys]
     );
   } else {
     await execute(
