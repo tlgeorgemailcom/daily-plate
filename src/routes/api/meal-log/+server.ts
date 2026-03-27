@@ -65,13 +65,14 @@ export const GET: RequestHandler = async ({ url }) => {
   if (history === 'true' && category) {
     const limit = Math.min(parseInt(url.searchParams.get('limit') ?? '30', 10), 90);
     const rows = await queryAll<MealLogEntry & { meal_date: string }>(
-      `SELECT id, meal_date, meal_category, food_id, food_name,
+      `SELECT meal_date, meal_category, food_id, food_name,
               quantity_grams, serving_description, kcal, protein, carbohydrate,
-              fat, sugar, fiber, water, logged_at
+              fat, sugar, fiber, water
        FROM daily_meal_log
        WHERE user_id = ? AND meal_category = ?
-       ORDER BY meal_date DESC, logged_at ASC
+       ORDER BY meal_date DESC, food_name ASC
        LIMIT ?`,
+
       [userId, category, limit * 20]   // fetch enough rows to cover limit days
     );
 
@@ -109,7 +110,7 @@ export const GET: RequestHandler = async ({ url }) => {
     const rows = await queryAll<MealLogEntry & { meal_date: string }>(
       `SELECT * FROM daily_meal_log
        WHERE user_id = ? AND meal_date >= ? AND meal_date <= ?
-       ORDER BY meal_date ASC, logged_at ASC`,
+       ORDER BY meal_date ASC`,
       [userId, from, to]
     );
     return json({ rows });
@@ -121,7 +122,7 @@ export const GET: RequestHandler = async ({ url }) => {
   const rows = await queryAll<MealLogEntry & { meal_date: string }>(
     `SELECT * FROM daily_meal_log
      WHERE user_id = ? AND meal_date = ?
-     ORDER BY logged_at ASC`,
+     ORDER BY meal_category ASC`,
     [userId, date]
   );
   return json({ rows });
