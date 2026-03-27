@@ -232,7 +232,6 @@ function buildMealLogEntries(foods: AddedFood[]) {
       : calculateNutrients(af.food, portionIndex >= 0 ? portionIndex : 0, af.multiplier ?? 1);
 
     return {
-      id: af.id,
       meal_category: af.mealId,
       food_id: af.food.ndb,
       food_name: af.food.display,

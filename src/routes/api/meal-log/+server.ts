@@ -3,7 +3,6 @@ import type { RequestHandler } from './$types';
 import { queryAll, execute } from '$lib/server/turso';
 
 export interface MealLogEntry {
-  id: string;               // UUID (matches AddedFood.id from the client)
   meal_category: string;    // 'breakfast' | 'snack' | 'lunch' | 'beverage' | 'dinner'
   food_id: string;          // USDA NDB number or USER_xxx
   food_name: string;
@@ -19,11 +18,8 @@ export interface MealLogEntry {
   water?: number;
   sodium?: number;
   extended_nutrients?: string | null; // JSON blob (Jetcool micronutrients)
-  serving_data?: string | null;       // JSON M1-M12 serving options
   notes?: string | null;
   is_favorite?: number;
-  source?: string;          // 'web' | 'jetcool'
-  logged_at: string;        // ISO-8601
 }
 
 // GET /api/meal-log?user_id=xxx&date=YYYY-MM-DD
@@ -133,16 +129,14 @@ export const GET: RequestHandler = async ({ url }) => {
 
 // PUT /api/meal-log
 // Body: { user_id: string, meal_date: string, entries: MealLogEntry[] }
-// Upserts all provided entries by id (last-write-wins on updated_at).
-// Rows not present in entries are LEFT INTACT — use DELETE /api/meal-log?id= to remove individual rows.
-// This ensures Jetcool-only rows are never wiped by a web save, and vice versa.
+// Upserts all entries by natural key (user_id, meal_date, meal_category, food_id).
+// Any row for this user+date NOT in entries is deleted (full-day reconciliation).
 export const PUT: RequestHandler = async ({ request }) => {
   const body = await request.json();
-  const { user_id, meal_date, entries, source } = body as {
+  const { user_id, meal_date, entries } = body as {
     user_id: string;
     meal_date: string;
     entries: MealLogEntry[];
-    source?: string;  // 'jetcool' when sent by Jetcool sync; absent/undefined for web
   };
 
   if (!user_id)    throw error(400, 'Missing user_id');
@@ -151,39 +145,17 @@ export const PUT: RequestHandler = async ({ request }) => {
   if (!Array.isArray(entries)) throw error(400, 'entries must be an array');
   if (entries.length > 200) throw error(400, 'Too many entries');
 
-  // For web-originated saves, pre-fetch which (food_id, meal_category) slots are
-  // already owned by Jetcool for this date.  Any web entry that matches a jc_ slot
-  // is a stale re-echo of a Jetcool food (the web plate reloads all foods and
-  // re-saves them with a new UUID every time).  Skipping it prevents the duplicate
-  // from ever reaching Turso so Jetcool never pulls it back as a second row.
-  const jcSlotsForDate: Set<string> = source !== 'jetcool' && entries.length > 0
-    ? new Set(
-        (await queryAll<{ food_id: string; meal_category: string }>(
-          `SELECT food_id, meal_category FROM daily_meal_log
-           WHERE user_id = ? AND meal_date = ? AND source = 'jetcool'`,
-          [user_id, meal_date]
-        )).map(r => `${r.food_id}|${r.meal_category}`)
-      )
-    : new Set<string>();
-
-  // Upsert each entry individually by id (ON CONFLICT id DO UPDATE).
-  // Web-originated rows have source='web'; Jetcool rows have source='jetcool'.
-  // A Jetcool push will only touch its own jc_-prefixed ids, leaving web rows alone.
+  // Upsert each entry by natural key — last write wins.
   for (const e of entries) {
-    // Skip web entry if Jetcool already owns this food+meal slot for this date.
-    if ((e.source ?? 'web') !== 'jetcool' && jcSlotsForDate.has(`${e.food_id}|${e.meal_category}`)) {
-      continue;
-    }
     await execute(
       `INSERT INTO daily_meal_log
-         (id, user_id, meal_date, meal_category, food_id, food_name, brand_name,
+         (user_id, meal_date, meal_category, food_id, food_name, brand_name,
           quantity_grams, serving_description, kcal, protein, carbohydrate, fat,
-          sugar, fiber, water, sodium, extended_nutrients, serving_data, notes,
-          is_favorite, source, logged_at, updated_at)
-       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
-               strftime('%Y-%m-%dT%H:%M:%SZ', 'now'))
-       ON CONFLICT(id) DO UPDATE SET
-         meal_category     = excluded.meal_category,
+          sugar, fiber, water, sodium, extended_nutrients, notes, is_favorite, updated_at)
+       VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,
+               strftime('%Y-%m-%dT%H:%M:%SZ','now'))
+       ON CONFLICT(user_id, meal_date, meal_category, food_id) DO UPDATE SET
+         food_name         = excluded.food_name,
          quantity_grams    = excluded.quantity_grams,
          kcal              = excluded.kcal,
          protein           = excluded.protein,
@@ -197,128 +169,35 @@ export const PUT: RequestHandler = async ({ request }) => {
          serving_description = excluded.serving_description,
          notes             = excluded.notes,
          is_favorite       = excluded.is_favorite,
-         updated_at        = strftime('%Y-%m-%dT%H:%M:%SZ', 'now')
-       WHERE excluded.updated_at >= daily_meal_log.updated_at
-          OR daily_meal_log.updated_at IS NULL`,
+         updated_at        = strftime('%Y-%m-%dT%H:%M:%SZ','now')`,
       [
-        e.id,
-        user_id,
-        meal_date,
-        e.meal_category,
-        e.food_id,
-        e.food_name,
-        e.brand_name ?? null,
-        e.quantity_grams,
-        e.serving_description ?? null,
-        e.kcal,
-        e.protein,
-        e.carbohydrate,
-        e.fat,
-        e.sugar ?? 0,
-        e.fiber ?? 0,
-        e.water ?? 0,
-        e.sodium ?? 0,
-        e.extended_nutrients ?? null,
-        e.serving_data ?? null,
-        e.notes ?? null,
-        e.is_favorite ?? 0,
-        e.source ?? 'web',
-        e.logged_at,
+        user_id, meal_date, e.meal_category, e.food_id, e.food_name,
+        e.brand_name ?? null, e.quantity_grams, e.serving_description ?? null,
+        e.kcal, e.protein, e.carbohydrate, e.fat,
+        e.sugar ?? 0, e.fiber ?? 0, e.water ?? 0, e.sodium ?? 0,
+        e.extended_nutrients ?? null, e.notes ?? null, e.is_favorite ?? 0,
       ]
     );
   }
 
-  // Clean up stale web-originated rows not in the current entries list.
-  // Skip this when source='jetcool': Jetcool only sends its own jc_-prefixed ids,
-  // so every web row would incorrectly appear "stale" and be deleted — wiping foods
-  // the user added on the web (e.g. French Toast) before Jetcool can pull them.
-  // The jetcool-specific cascade block below handles web-row cleanup precisely.
-  if (source !== 'jetcool') {
-    if (entries.length > 0) {
-      const ids = entries.map(e => e.id);
-      const placeholders = ids.map(() => '?').join(', ');
-      await execute(
-        `DELETE FROM daily_meal_log
-         WHERE user_id = ? AND meal_date = ? AND source = 'web'
-           AND id NOT IN (${placeholders})`,
-        [user_id, meal_date, ...ids]
-      );
-    } else {
-      await execute(
-        `DELETE FROM daily_meal_log WHERE user_id = ? AND meal_date = ? AND source = 'web'`,
-        [user_id, meal_date]
-      );
-    }
-  }
-
-  // When Jetcool sends a full-day reconciliation (source='jetcool'):
-  //
-  // 1. Capture which food_id+meal_category combos currently have jc_ rows
-  //    BEFORE we remove orphans — these represent "Jetcool-owned" foods.
-  //
-  // 2. Delete orphaned jc_ rows (foods deleted in Jetcool).
-  //
-  // 3. Cascade: for every food that previously had a jc_ row but is NOT in
-  //    the new entries, also delete any web-originated copy of that food.
-  //    This is why bacon keeps coming back: the incremental push cleans up
-  //    jc_ rows, but the web auto-save had already created a source='web'
-  //    copy (e.g. 11.5g rounded to 12g). That web row survived both the
-  //    jc_ cleanup and the generic web-row purge (which only removes rows
-  //    not in the current entries list — but the web row's id is never in
-  //    a Jetcool entries list). Explicit cascade is required.
-  if (source === 'jetcool') {
-    const userPrefix = `jc_${user_id}_`;
-
-    // Snapshot Jetcool-owned food keys before removal.
-    const prevJcFoods = await queryAll<{ food_id: string; meal_category: string }>(
-      `SELECT DISTINCT food_id, meal_category FROM daily_meal_log
-       WHERE user_id = ? AND meal_date = ? AND id LIKE ?`,
-      [user_id, meal_date, `${userPrefix}%`]
+  // Delete rows no longer on the plate (identified by food_id + meal_category pair).
+  if (entries.length > 0) {
+    const keys = entries.map(e => `${e.food_id}||'|'||${e.meal_category}`);
+    // Build explicit pair exclusion: delete any row whose (food_id, meal_category)
+    // is not in the submitted list.
+    const placeholders = entries.map(() => '(?,?)').join(',');
+    const pairs = entries.flatMap(e => [e.food_id, e.meal_category]);
+    await execute(
+      `DELETE FROM daily_meal_log
+       WHERE user_id = ? AND meal_date = ?
+         AND (food_id, meal_category) NOT IN (${placeholders})`,
+      [user_id, meal_date, ...pairs]
     );
-
-    // Remove orphaned jc_ rows.
-    if (entries.length > 0) {
-      const ids = entries.map(e => e.id);
-      const placeholders = ids.map(() => '?').join(', ');
-      await execute(
-        `DELETE FROM daily_meal_log
-         WHERE user_id = ? AND meal_date = ? AND id LIKE ?
-           AND id NOT IN (${placeholders})`,
-        [user_id, meal_date, `${userPrefix}%`, ...ids]
-      );
-    } else {
-      await execute(
-        `DELETE FROM daily_meal_log WHERE user_id = ? AND meal_date = ? AND id LIKE ?`,
-        [user_id, meal_date, `${userPrefix}%`]
-      );
-    }
-
-    // Cascade deletions to web rows: any food that had a jc_ row but is
-    // absent from the new entries was deleted in Jetcool → delete its
-    // web-originated counterpart too.
-    const newFoodKeys = new Set(entries.map(e => `${e.food_id}|${e.meal_category}`));
-    for (const row of prevJcFoods) {
-      if (!newFoodKeys.has(`${row.food_id}|${row.meal_category}`)) {
-        await execute(
-          `DELETE FROM daily_meal_log
-           WHERE user_id = ? AND meal_date = ? AND food_id = ? AND meal_category = ? AND source = 'web'`,
-          [user_id, meal_date, row.food_id, row.meal_category]
-        );
-      }
-    }
-
-    // Also delete any stale web-originated copies for foods that ARE in the new
-    // entries.  The web plate reloads all jc_ foods and re-saves them as source='web'
-    // on every auto-save, producing a web duplicate alongside every jc_ row.  Now
-    // that we have an authoritative jc_ row for each entry, the web copy is redundant
-    // and should be removed so Jetcool never pulls it back as a second plate entry.
-    for (const e of entries) {
-      await execute(
-        `DELETE FROM daily_meal_log
-         WHERE user_id = ? AND meal_date = ? AND food_id = ? AND meal_category = ? AND source = 'web'`,
-        [user_id, meal_date, e.food_id, e.meal_category]
-      );
-    }
+  } else {
+    await execute(
+      `DELETE FROM daily_meal_log WHERE user_id = ? AND meal_date = ?`,
+      [user_id, meal_date]
+    );
   }
 
   return json({ ok: true, count: entries.length });
@@ -326,7 +205,7 @@ export const PUT: RequestHandler = async ({ request }) => {
 
 // POST /api/meal-log
 // Body: { user_id: string, meal_date: string, entry: MealLogEntry }
-// Upserts a single row by id — used by Jetcool sync (last-write-wins on updated_at).
+// Upserts a single row by natural key — used by Jetcool incremental push.
 export const POST: RequestHandler = async ({ request }) => {
   const body = await request.json();
   const { user_id, meal_date, entry } = body as {
@@ -337,18 +216,19 @@ export const POST: RequestHandler = async ({ request }) => {
 
   if (!user_id)   throw error(400, 'Missing user_id');
   if (!meal_date) throw error(400, 'Missing meal_date');
-  if (!entry?.id) throw error(400, 'Missing entry.id');
+  if (!entry?.food_id) throw error(400, 'Missing entry.food_id');
   if (!/^\d{4}-\d{2}-\d{2}$/.test(meal_date)) throw error(400, 'Invalid date format');
 
   await execute(
     `INSERT INTO daily_meal_log
-       (id, user_id, meal_date, meal_category, food_id, food_name, brand_name,
+       (user_id, meal_date, meal_category, food_id, food_name, brand_name,
         quantity_grams, serving_description, kcal, protein, carbohydrate, fat,
-        sugar, fiber, water, sodium, extended_nutrients, serving_data, notes,
-        is_favorite, source, logged_at, updated_at)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
-             strftime('%Y-%m-%dT%H:%M:%SZ', 'now'))
-     ON CONFLICT(id) DO UPDATE SET
+        sugar, fiber, water, sodium, extended_nutrients, notes, is_favorite, updated_at)
+     VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,
+             strftime('%Y-%m-%dT%H:%M:%SZ','now'))
+     ON CONFLICT(user_id, meal_date, meal_category, food_id) DO UPDATE SET
+       food_name         = excluded.food_name,
+       quantity_grams    = excluded.quantity_grams,
        kcal              = excluded.kcal,
        protein           = excluded.protein,
        carbohydrate      = excluded.carbohydrate,
@@ -357,35 +237,17 @@ export const POST: RequestHandler = async ({ request }) => {
        fiber             = excluded.fiber,
        water             = excluded.water,
        sodium            = excluded.sodium,
-       quantity_grams    = excluded.quantity_grams,
        extended_nutrients = excluded.extended_nutrients,
+       serving_description = excluded.serving_description,
        notes             = excluded.notes,
        is_favorite       = excluded.is_favorite,
-       updated_at        = strftime('%Y-%m-%dT%H:%M:%SZ', 'now')`,
+       updated_at        = strftime('%Y-%m-%dT%H:%M:%SZ','now')`,
     [
-      entry.id,
-      user_id,
-      meal_date,
-      entry.meal_category,
-      entry.food_id,
-      entry.food_name,
-      entry.brand_name ?? null,
-      entry.quantity_grams,
-      entry.serving_description ?? null,
-      entry.kcal,
-      entry.protein,
-      entry.carbohydrate,
-      entry.fat,
-      entry.sugar ?? 0,
-      entry.fiber ?? 0,
-      entry.water ?? 0,
-      entry.sodium ?? 0,
-      entry.extended_nutrients ?? null,
-      entry.serving_data ?? null,
-      entry.notes ?? null,
-      entry.is_favorite ?? 0,
-      entry.source ?? 'web',
-      entry.logged_at,
+      user_id, meal_date, entry.meal_category, entry.food_id, entry.food_name,
+      entry.brand_name ?? null, entry.quantity_grams, entry.serving_description ?? null,
+      entry.kcal, entry.protein, entry.carbohydrate, entry.fat,
+      entry.sugar ?? 0, entry.fiber ?? 0, entry.water ?? 0, entry.sodium ?? 0,
+      entry.extended_nutrients ?? null, entry.notes ?? null, entry.is_favorite ?? 0,
     ]
   );
 
@@ -394,31 +256,31 @@ export const POST: RequestHandler = async ({ request }) => {
 
 // DELETE /api/meal-log?user_id=xxx&date=YYYY-MM-DD
 // Removes all log entries for a user on a specific date.
-// DELETE /api/meal-log?user_id=xxx&id=uuid
-// Removes a single entry by id.
+// DELETE /api/meal-log?user_id=xxx&date=YYYY-MM-DD&food_id=xxx&meal_category=xxx
+// Removes a single entry by natural key.
 export const DELETE: RequestHandler = async ({ url }) => {
   const userId = url.searchParams.get('user_id');
   if (!userId) throw error(400, 'Missing user_id');
 
-  const id   = url.searchParams.get('id');
-  const date = url.searchParams.get('date');
+  const date       = url.searchParams.get('date');
+  const foodId     = url.searchParams.get('food_id');
+  const mealCat    = url.searchParams.get('meal_category');
 
-  if (id) {
+  if (!date) throw error(400, 'Provide date');
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) throw error(400, 'Invalid date format');
+
+  if (foodId && mealCat) {
     await execute(
-      `DELETE FROM daily_meal_log WHERE id = ? AND user_id = ?`,
-      [id, userId]
+      `DELETE FROM daily_meal_log
+       WHERE user_id = ? AND meal_date = ? AND food_id = ? AND meal_category = ?`,
+      [userId, date, foodId, mealCat]
     );
-    return json({ ok: true });
-  }
-
-  if (date) {
-    if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) throw error(400, 'Invalid date format');
+  } else {
     await execute(
       `DELETE FROM daily_meal_log WHERE user_id = ? AND meal_date = ?`,
       [userId, date]
     );
-    return json({ ok: true });
   }
 
-  throw error(400, 'Provide id or date');
+  return json({ ok: true });
 };

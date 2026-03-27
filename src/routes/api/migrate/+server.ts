@@ -38,40 +38,101 @@ export const GET: RequestHandler = async () => {
       results['nutrition_json_already_exists'] = true;
     }
 
-    // daily_meal_log: per-food dated meal log (web + Jetcool sync)
-    await db.execute(`
-      CREATE TABLE IF NOT EXISTS daily_meal_log (
-        id TEXT PRIMARY KEY,
-        user_id TEXT NOT NULL,
-        meal_date TEXT NOT NULL,
-        meal_category TEXT NOT NULL,
-        food_id TEXT NOT NULL,
-        food_name TEXT NOT NULL,
-        brand_name TEXT,
-        quantity_grams REAL NOT NULL,
-        serving_description TEXT,
-        kcal REAL NOT NULL DEFAULT 0,
-        protein REAL NOT NULL DEFAULT 0,
-        carbohydrate REAL NOT NULL DEFAULT 0,
-        fat REAL NOT NULL DEFAULT 0,
-        sugar REAL DEFAULT 0,
-        fiber REAL DEFAULT 0,
-        sodium REAL DEFAULT 0,
-        water REAL DEFAULT 0,
-        extended_nutrients TEXT,
-        serving_data TEXT,
-        notes TEXT,
-        is_favorite INTEGER NOT NULL DEFAULT 0,
-        source TEXT NOT NULL DEFAULT 'web',
-        logged_at TEXT NOT NULL,
-        created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
-        updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
-      )
-    `);
+    // daily_meal_log: natural-key schema migration
+    // Check whether the new schema (no id column, UNIQUE natural key) is already in place.
+    const mlSchema = await db.execute('PRAGMA table_info(daily_meal_log)');
+    const mlCols = mlSchema.rows.map((r: Record<string, unknown>) => r['name'] as string);
+    results['meal_log_columns'] = mlCols;
+
+    if (mlCols.includes('id')) {
+      // Old schema present — migrate to natural-key schema.
+      // Step 1: rename old table as backup (skip if already renamed from a previous run).
+      const v1Tables = await db.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='daily_meal_log_v1'");
+      if (v1Tables.rows.length === 0) {
+        await db.execute('ALTER TABLE daily_meal_log RENAME TO daily_meal_log_v1');
+        results['meal_log_renamed_to_v1'] = true;
+      }
+
+      // Step 2: create new table with UNIQUE natural key.
+      await db.execute(`
+        CREATE TABLE IF NOT EXISTS daily_meal_log (
+          user_id             TEXT NOT NULL,
+          meal_date           TEXT NOT NULL,
+          meal_category       TEXT NOT NULL,
+          food_id             TEXT NOT NULL,
+          food_name           TEXT,
+          brand_name          TEXT,
+          quantity_grams      REAL NOT NULL DEFAULT 0,
+          serving_description TEXT,
+          kcal                REAL NOT NULL DEFAULT 0,
+          protein             REAL NOT NULL DEFAULT 0,
+          carbohydrate        REAL NOT NULL DEFAULT 0,
+          fat                 REAL NOT NULL DEFAULT 0,
+          sugar               REAL DEFAULT 0,
+          fiber               REAL DEFAULT 0,
+          sodium              REAL DEFAULT 0,
+          water               REAL DEFAULT 0,
+          extended_nutrients  TEXT,
+          notes               TEXT,
+          is_favorite         INTEGER NOT NULL DEFAULT 0,
+          updated_at          TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ','now')),
+          UNIQUE (user_id, meal_date, meal_category, food_id)
+        )
+      `);
+
+      // Step 3: copy data from v1, keeping most-recent row per natural key.
+      await db.execute(`
+        INSERT OR IGNORE INTO daily_meal_log
+          (user_id, meal_date, meal_category, food_id,
+           food_name, brand_name, quantity_grams, serving_description,
+           kcal, protein, carbohydrate, fat, sugar, fiber, sodium, water,
+           extended_nutrients, notes, is_favorite, updated_at)
+        SELECT
+          user_id, meal_date, meal_category, food_id,
+          food_name, brand_name, quantity_grams, serving_description,
+          kcal, protein, carbohydrate, fat, sugar, fiber, sodium, water,
+          extended_nutrients, notes, is_favorite, MAX(updated_at)
+        FROM daily_meal_log_v1
+        GROUP BY user_id, meal_date, meal_category, food_id
+      `);
+
+      results['meal_log_migrated'] = true;
+    } else {
+      // New schema already in place — ensure table exists (first deploy).
+      await db.execute(`
+        CREATE TABLE IF NOT EXISTS daily_meal_log (
+          user_id             TEXT NOT NULL,
+          meal_date           TEXT NOT NULL,
+          meal_category       TEXT NOT NULL,
+          food_id             TEXT NOT NULL,
+          food_name           TEXT,
+          brand_name          TEXT,
+          quantity_grams      REAL NOT NULL DEFAULT 0,
+          serving_description TEXT,
+          kcal                REAL NOT NULL DEFAULT 0,
+          protein             REAL NOT NULL DEFAULT 0,
+          carbohydrate        REAL NOT NULL DEFAULT 0,
+          fat                 REAL NOT NULL DEFAULT 0,
+          sugar               REAL DEFAULT 0,
+          fiber               REAL DEFAULT 0,
+          sodium              REAL DEFAULT 0,
+          water               REAL DEFAULT 0,
+          extended_nutrients  TEXT,
+          notes               TEXT,
+          is_favorite         INTEGER NOT NULL DEFAULT 0,
+          updated_at          TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ','now')),
+          UNIQUE (user_id, meal_date, meal_category, food_id)
+        )
+      `);
+      results['daily_meal_log'] = 'ok';
+    }
+
     await db.execute(
       'CREATE INDEX IF NOT EXISTS idx_meal_log_user_date ON daily_meal_log(user_id, meal_date)'
     );
-    results['daily_meal_log'] = 'ok';
+    await db.execute(
+      'CREATE INDEX IF NOT EXISTS idx_meal_log_updated ON daily_meal_log(user_id, updated_at)'
+    );
 
     // planned_meals: future meal planning
     await db.execute(`
