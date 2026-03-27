@@ -276,7 +276,6 @@ export async function saveMealLog(): Promise<void> {
   const foods = get(addedFoods);
   const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
   const entries = buildMealLogEntries(foods);
-  console.log('[MealLog] saveMealLog: PUT user_id=' + effectiveUserId + ' date=' + today + ' entries=' + entries.length);
 
   try {
     const res = await fetch('/api/meal-log', {
@@ -288,7 +287,6 @@ export async function saveMealLog(): Promise<void> {
         entries,
       }),
     });
-    console.log('[MealLog] saveMealLog: response ' + res.status);
   } catch (e) {
     console.error('[MealLog] Failed to save meal log:', e);
   }
