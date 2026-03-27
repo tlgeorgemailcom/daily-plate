@@ -23,7 +23,8 @@
     nutrientTargets,
     DEFAULT_NUTRIENT_TARGETS,
     nutrientProgress,
-    selectedPieNutrient
+    selectedPieNutrient,
+    plateDirty
   } from '$lib/stores/gameStore';
   import { gameSettings, updateSettings, DEFAULT_SETTINGS, getSettings } from '$lib/stores/settingsStore';
   import { playerStore } from '$lib/stores/playerStore';
@@ -584,6 +585,8 @@
       const food = FOODS.find(f => f.ndb === entry.food_id);
       if (food) addFood(food, food.portions[0], 'plate', entry.quantity_grams, 1, entry.meal_category);
     }
+    // Loading from cloud represents the current saved state — plate is clean.
+    plateDirty.set(false);
   }
 
   // Switch to a household member (or back to owner when newId = '').
@@ -592,12 +595,15 @@
     const playerId = $playerStore.id;
     if (!playerId) return;
 
-    // Ask user whether to save the current member's meals to Turso first.
-    const currentLabel = activeMemberId
-      ? (householdMembers.find((m: { id?: string }) => m.id === activeMemberId) as { name?: string } | undefined)?.name ?? 'current member'
-      : 'your';
-    const shouldSave = await askSaveMeals(currentLabel);
-    if (shouldSave) await saveMealLog();
+    // Ask user whether to save the current member's meals to Turso first,
+    // but only if the plate has been modified since the last save.
+    if ($plateDirty) {
+      const currentLabel = activeMemberId
+        ? (householdMembers.find((m: { id?: string }) => m.id === activeMemberId) as { name?: string } | undefined)?.name ?? 'current member'
+        : 'your';
+      const shouldSave = await askSaveMeals(currentLabel);
+      if (shouldSave) await saveMealLog();
+    }
 
     // Switch context so future saves target the new id.
     activeMemberId = newId;
@@ -1002,6 +1008,7 @@
   // Ask to save before SvelteKit navigates away from this page.
   beforeNavigate(({ cancel }) => {
     if ($playerStore.status !== 'logged-in') return;
+    if (!$plateDirty) return;  // nothing unsaved — let navigation proceed
     cancel();
     askSaveMeals('your').then(async (shouldSave) => {
       if (shouldSave) await saveMealLog();

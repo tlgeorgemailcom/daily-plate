@@ -90,6 +90,10 @@ export const selectedContainer = writable<Container>('plate');
 export const meals = writable<MealSlot[]>(structuredClone(DEFAULT_MEALS));
 export const selectedMeal = writable<string>('breakfast');
 
+// True when the plate has been modified since the last save to Turso.
+// Reset to false after saveMealLog() and after clearFoods() (loading a new member's plate).
+export const plateDirty = writable<boolean>(false);
+
 // Custom meal categories loaded from DB for ALL·IN users
 export interface CustomMealCategory {
   id: number;
@@ -140,11 +144,13 @@ export function addFood(
   };
 
   addedFoods.update(foods => [...foods, newFood]);
+  plateDirty.set(true);
 }
 
 // Remove a food from today's diet
 export function removeFood(id: string): void {
   addedFoods.update(foods => foods.filter(f => f.id !== id));
+  plateDirty.set(true);
 }
 
 // Move a food to a different meal
@@ -152,6 +158,7 @@ export function moveFoodToMeal(foodId: string, newMealId: string): void {
   addedFoods.update(foods => 
     foods.map(f => f.id === foodId ? { ...f, mealId: newMealId } : f)
   );
+  plateDirty.set(true);
 }
 
 // Update a food's quantity (multiplier or custom grams)
@@ -178,11 +185,13 @@ export function updateFoodQuantity(foodId: string, multiplier?: number, customGr
       };
     })
   );
+  plateDirty.set(true);
 }
 
 // Clear all foods
 export function clearFoods(): void {
   addedFoods.set([]);
+  plateDirty.set(false);
 }
 
 // Derived: Total calories consumed

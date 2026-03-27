@@ -17,6 +17,7 @@ import {
   nutrientProgress,
   selectedPieNutrient,
   customMealCategories,
+  plateDirty,
   DEFAULT_MEALS,
   type AddedFood,
   type MealSlot,
@@ -276,6 +277,7 @@ export async function saveMealLog(): Promise<void> {
         entries,
       }),
     });
+    if (res.ok) plateDirty.set(false);
   } catch (e) {
     console.error('[MealLog] Failed to save meal log:', e);
   }
