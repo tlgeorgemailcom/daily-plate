@@ -262,24 +262,33 @@ let _suppressMealLogSave = false;
 export function suppressMealLogSave(v: boolean): void { _suppressMealLogSave = v; }
 
 export async function saveMealLog(): Promise<void> {
-  if (_suppressMealLogSave) return;
+  if (_suppressMealLogSave) {
+    console.log('[MealLog] saveMealLog: suppressed, skipping');
+    return;
+  }
   const player = get(playerStore);
-  if (!player.id) return;
+  if (!player.id) {
+    console.log('[MealLog] saveMealLog: no player.id, skipping');
+    return;
+  }
 
   const effectiveUserId = _viewingUserId ?? player.id;
   const foods = get(addedFoods);
   const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+  const entries = buildMealLogEntries(foods);
+  console.log('[MealLog] saveMealLog: PUT user_id=' + effectiveUserId + ' date=' + today + ' entries=' + entries.length);
 
   try {
-    await fetch('/api/meal-log', {
+    const res = await fetch('/api/meal-log', {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         user_id: effectiveUserId,
         meal_date: today,
-        entries: buildMealLogEntries(foods),
+        entries,
       }),
     });
+    console.log('[MealLog] saveMealLog: response ' + res.status);
   } catch (e) {
     console.error('[MealLog] Failed to save meal log:', e);
   }
