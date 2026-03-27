@@ -850,10 +850,6 @@
 
     const today = new Date().toISOString().split('T')[0];
 
-    // Flush any foods that were added before login (player.id was null then,
-    // so saveMealLog() was a no-op).  Now that player.id is set, save them.
-    await saveMealLog();
-
     // Load household members (needed for the member-switcher dropdown).
     try {
       const hm = await fetch(`/api/household-members?player_id=${encodeURIComponent(playerId)}`);
@@ -1093,7 +1089,7 @@
             {#if $playerStore.status === 'logged-in'}
               <div class="menu-divider"></div>
               <div class="menu-account-name">👤 {$playerStore.displayName ?? $playerStore.email ?? 'Account'}<span class="menu-account-tier">{$playerStore.tier}</span></div>
-              <button class="menu-item menu-item--logout" onclick={() => { playerStore.logout(); closeMenu(); }}>
+              <button class="menu-item menu-item--logout" onclick={() => { setViewingUserId(null); activeMemberId = ''; playerStore.logout(); closeMenu(); }}>
                 🚪 Sign Out
               </button>
             {:else}
