@@ -22,23 +22,16 @@
     e.preventDefault();
     
     if (mode === 'reset') {
-      if (!email.trim() || !newPassword.trim()) {
-        error = 'Please fill in all fields';
-        return;
-      }
-      if (newPassword.length < 6) {
-        error = 'Password must be at least 6 characters';
+      if (!email.trim()) {
+        error = 'Please enter your email address';
         return;
       }
       loading = true;
       error = null;
       try {
-        const result = await playerStore.resetPassword(email, newPassword);
+        const result = await playerStore.resetPassword(email);
         if (result.success) {
-          success = 'Password updated! You can now login.';
-          mode = 'login';
-          password = newPassword;
-          newPassword = '';
+          success = 'Check your email for a password reset link.';
         } else {
           error = result.error || 'Reset failed';
         }
@@ -154,24 +147,13 @@
         </label>
       {/if}
 
-      {#if mode === 'reset'}
-        <label class="form-label">
-          New Password
-          <input 
-            type="password"
-            bind:value={newPassword}
-            placeholder="At least 6 characters"
-            class="form-input"
-            required
-          />
-        </label>
-      {/if}
+
       
       <button type="submit" class="submit-btn" disabled={loading}>
         {#if loading}
           <span class="spinner"></span>
         {:else}
-          {mode === 'login' ? 'Login' : mode === 'register' ? 'Create Account' : 'Set New Password'}
+          {mode === 'login' ? 'Login' : mode === 'register' ? 'Create Account' : 'Send Reset Link'}
         {/if}
       </button>
     </form>
