@@ -248,6 +248,14 @@ export const GET: RequestHandler = async () => {
       ['owner_custom_fiber_g',    "TEXT DEFAULT ''"],
     ];
     for (const [col, def] of demographicCols) {
+      if (!settingsCols.includes(col)) {
+        await db.execute(`ALTER TABLE player_settings ADD COLUMN ${col} ${def}`);
+        results[`added_${col}`] = true;
+      } else {
+        results[`${col}_already_exists`] = true;
+      }
+    }
+
     // password_reset_tokens table
     await db.execute(`
       CREATE TABLE IF NOT EXISTS password_reset_tokens (
