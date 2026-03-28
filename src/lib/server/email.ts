@@ -1,4 +1,3 @@
-import nodemailer from 'nodemailer';
 import { env } from '$env/dynamic/private';
 
 interface EmailOptions {
@@ -8,27 +7,28 @@ interface EmailOptions {
 }
 
 export async function sendEmail({ to, subject, html }: EmailOptions): Promise<void> {
-  const user = env.SMTP_USER?.trim();
-  const pass = env.SMTP_PASS?.trim();
-  if (!user || !pass) {
-    throw new Error('SMTP_USER and SMTP_PASS are required');
+  const apiKey = env.SMTP_PASS?.trim();
+  const fromAddress = env.SMTP_USER?.trim() || 'support@todaypage.com';
+  if (!apiKey) {
+    throw new Error('SMTP_PASS (ZeptoMail API key) is required');
   }
 
-  const transporter = nodemailer.createTransport({
-    host: 'smtp.zoho.com',
-    port: 465,
-    secure: true,
-    auth: { user, pass },
+  const res = await fetch('https://api.zeptomail.com/v1.1/email', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Zoho-enczapikey ${apiKey}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      from: { address: fromAddress },
+      to: [{ email_address: { address: to } }],
+      subject,
+      htmlbody: html,
+    }),
   });
 
-  const res = await transporter.sendMail({
-    from: `TodayPage <${user}>`,
-    to,
-    subject,
-    html,
-  });
-
-  if (!res.accepted?.length) {
-    throw new Error(`Email not accepted: ${JSON.stringify(res)}`);
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`ZeptoMail error ${res.status}: ${body}`);
   }
 }
