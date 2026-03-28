@@ -1,61 +1,71 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
+import { randomBytes } from 'crypto';
 import { queryOne, execute } from '$lib/server/turso';
+import { sendEmail } from '$lib/server/email';
+import { env } from '$env/dynamic/private';
 
-// Same hash as login/register
-function simpleHash(password: string): string {
-  let hash = 0;
-  for (let i = 0; i < password.length; i++) {
-    const char = password.charCodeAt(i);
-    hash = ((hash << 5) - hash) + char;
-    hash = hash & hash;
-  }
-  return 'h1_' + Math.abs(hash).toString(36);
-}
+const TOKEN_TTL_HOURS = 1;
 
-interface PlayerRow {
-  id: string;
-}
+interface PlayerRow { id: string; email: string; }
 
-// POST: Reset password — requires email + new password
-// No email verification (game app, low risk)
+// POST: Request a password reset link.
+// Takes { email }. Always returns 200 to avoid email enumeration.
 export const POST: RequestHandler = async ({ request }) => {
   try {
-    const { email, newPassword } = await request.json();
+    let body: unknown;
+    try { body = await request.json(); } catch { body = {}; }
+    const { email } = body as Record<string, unknown>;
 
-    if (!email || !newPassword) {
-      return json({ error: 'Email and new password required' }, { status: 400 });
-    }
-
-    if (newPassword.length < 6) {
-      return json({ error: 'Password must be at least 6 characters' }, { status: 400 });
+    if (!email || typeof email !== 'string') {
+      return json({ error: 'Email required' }, { status: 400 });
     }
 
     const normalizedEmail = email.toLowerCase().trim();
 
     const player = await queryOne<PlayerRow>(
-      'SELECT id FROM players WHERE email = ?',
+      'SELECT id, email FROM players WHERE email = ?',
       [normalizedEmail]
     );
 
-    if (!player) {
-      // Don't reveal whether email exists
-      return json({ success: true });
-    }
+    // Always return success — prevents email enumeration
+    if (!player) return json({ ok: true });
 
-    const newHash = simpleHash(newPassword);
+    // Invalidate any existing tokens for this email
+    await execute('DELETE FROM password_reset_tokens WHERE email = ?', [normalizedEmail]);
+
+    const token = randomBytes(32).toString('hex');
+    const expiresAt = new Date(Date.now() + TOKEN_TTL_HOURS * 60 * 60 * 1000).toISOString();
 
     await execute(
-      'UPDATE players SET password_hash = ? WHERE email = ?',
-      [newHash, normalizedEmail]
+      'INSERT INTO password_reset_tokens (token, email, expires_at) VALUES (?, ?, ?)',
+      [token, normalizedEmail, expiresAt]
     );
 
-    console.log(`🔑 Password reset for: ${normalizedEmail}`);
+    const siteUrl = env.PUBLIC_SITE_URL?.trim() || 'https://todaypage.com';
+    const resetLink = `${siteUrl}/reset-password?token=${token}`;
 
-    return json({ success: true });
+    await sendEmail({
+      to: normalizedEmail,
+      subject: 'Reset your TodayPage password',
+      html: `
+        <div style="font-family:system-ui,sans-serif;max-width:480px;margin:0 auto;padding:24px">
+          <h2 style="color:#1b5e20;margin-bottom:8px">Reset your password</h2>
+          <p style="color:#555">Click the link below to set a new password. This link expires in ${TOKEN_TTL_HOURS} hour.</p>
+          <a href="${resetLink}"
+            style="display:inline-block;margin:16px 0;padding:12px 24px;background:#2e7d32;color:white;text-decoration:none;border-radius:8px;font-weight:600">
+            Reset Password
+          </a>
+          <p style="color:#999;font-size:13px">If you didn't request this, you can safely ignore this email.</p>
+          <p style="color:#ccc;font-size:11px">Or copy this link: ${resetLink}</p>
+        </div>
+      `,
+    });
+
+    return json({ ok: true });
 
   } catch (err) {
-    console.error('Password reset error:', err);
-    return json({ error: 'Reset failed. Please try again.' }, { status: 500 });
+    console.error('Password reset request error:', err);
+    return json({ error: 'Request failed. Please try again.' }, { status: 500 });
   }
 };

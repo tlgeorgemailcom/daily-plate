@@ -18,6 +18,7 @@
   let players = $state<Player[]>(data.players.map((p: Player) => ({ ...p })));
   let statuses = $state<Record<string, Status>>({});
   let confirmDelete = $state<string | null>(null); // player id awaiting confirmation
+  let resetStatuses = $state<Record<string, 'idle' | 'sending' | 'sent' | 'error'>>({});
 
   async function setTier(playerId: string, tier: string) {
     statuses[playerId] = 'saving';
@@ -55,6 +56,22 @@
       statuses[playerId] = 'error';
     } finally {
       confirmDelete = null;
+    }
+  }
+
+  async function sendResetLink(email: string, playerId: string) {
+    resetStatuses[playerId] = 'sending';
+    try {
+      const res = await fetch('/api/auth/reset-password', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+      if (!res.ok) throw new Error('failed');
+      resetStatuses[playerId] = 'sent';
+      setTimeout(() => { resetStatuses[playerId] = 'idle'; }, 4000);
+    } catch {
+      resetStatuses[playerId] = 'error';
     }
   }
 
@@ -107,6 +124,7 @@
           <th>Tier</th>
           <th>Joined</th>
           <th>Last Login</th>
+          <th>Reset</th>
           <th></th>
           <th></th>
         </tr>
@@ -130,6 +148,21 @@
             </td>
             <td class="date">{formatDate(player.created_at)}</td>
             <td class="date">{formatDate(player.last_login_at)}</td>
+            <td class="reset-cell">
+              {#if resetStatuses[player.id] === 'sending'}
+                <span class="badge saving">Sending…</span>
+              {:else if resetStatuses[player.id] === 'sent'}
+                <span class="badge saved">Sent ✓</span>
+              {:else if resetStatuses[player.id] === 'error'}
+                <span class="badge error">Error</span>
+              {:else}
+                <button
+                  class="reset-btn"
+                  onclick={() => sendResetLink(player.email, player.id)}
+                  title="Send password reset link to {player.email}"
+                >Send reset link</button>
+              {/if}
+            </td>
             <td class="status-cell">
               {#if statuses[player.id] === 'saving'}
                 <span class="badge saving">Saving…</span>
@@ -302,4 +335,18 @@
   .confirm-no:hover { background: #e0e0e0; }
 
   tr.deleting { background: #fff8f8 !important; }
+
+  .reset-cell { white-space: nowrap; }
+  .reset-btn {
+    background: none;
+    border: 1px solid #90caf9;
+    color: #1565c0;
+    padding: 4px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .reset-btn:hover { background: #e3f2fd; border-color: #1565c0; }
 </style>

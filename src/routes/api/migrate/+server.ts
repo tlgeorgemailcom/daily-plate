@@ -248,13 +248,17 @@ export const GET: RequestHandler = async () => {
       ['owner_custom_fiber_g',    "TEXT DEFAULT ''"],
     ];
     for (const [col, def] of demographicCols) {
-      if (!settingsCols.includes(col)) {
-        await db.execute(`ALTER TABLE player_settings ADD COLUMN ${col} ${def}`);
-        results[`added_${col}`] = true;
-      } else {
-        results[`${col}_already_exists`] = true;
-      }
-    }
+    // password_reset_tokens table
+    await db.execute(`
+      CREATE TABLE IF NOT EXISTS password_reset_tokens (
+        token       TEXT PRIMARY KEY,
+        email       TEXT NOT NULL,
+        expires_at  TEXT NOT NULL,
+        created_at  TEXT NOT NULL DEFAULT (datetime('now'))
+      )
+    `);
+    await db.execute(`CREATE INDEX IF NOT EXISTS idx_prt_email ON password_reset_tokens(email)`);
+    results['password_reset_tokens'] = 'ok';
 
     return json({ success: true, ...results });
   } catch (err) {

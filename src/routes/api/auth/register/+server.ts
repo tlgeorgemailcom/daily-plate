@@ -1,17 +1,7 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { queryOne, execute } from '$lib/server/turso';
-
-// Simple password hashing (in production, use bcrypt or argon2)
-function simpleHash(password: string): string {
-  let hash = 0;
-  for (let i = 0; i < password.length; i++) {
-    const char = password.charCodeAt(i);
-    hash = ((hash << 5) - hash) + char;
-    hash = hash & hash;
-  }
-  return 'h1_' + Math.abs(hash).toString(36);
-}
+import { hashPassword } from '$lib/server/password';
 
 // Generate a simple unique ID
 function generateId(): string {
@@ -53,7 +43,7 @@ export const POST: RequestHandler = async ({ request }) => {
     
     // Create new player
     const playerId = generateId();
-    const passwordHash = simpleHash(password);
+    const passwordHash = await hashPassword(password);
     const name = displayName?.trim() || normalizedEmail.split('@')[0];
     
     await execute(
