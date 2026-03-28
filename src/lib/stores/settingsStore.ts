@@ -128,7 +128,7 @@ function saveToStorage(settings: GameSettings): void {
 // Check if user should sync settings to cloud (any paid/identified tier)
 function isPremiumUser(): boolean {
   const player = get(playerStore);
-  const syncTiers = ['premium', 'allin', 'subscriber', 'moderator', 'plus'];
+  const syncTiers = ['allin', 'moderator', 'plus'];
   const isPremium = player.status === 'logged-in' && syncTiers.includes(player.tier);
   console.log('[Settings] isPremiumUser check:', { status: player.status, tier: player.tier, isPremium });
   return isPremium;

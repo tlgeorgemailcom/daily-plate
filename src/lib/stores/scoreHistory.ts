@@ -38,10 +38,10 @@ function getPlayer() {
   return get(playerStore);
 }
 
-// Check if current user is premium (only premium users get score history)
+// Check if current user is paid (only paid users get score history)
 function isPremiumUser(): boolean {
   const player = getPlayer();
-  return player?.status === 'logged-in' && player?.tier === 'premium';
+  return player?.status === 'logged-in' && ['plus', 'allin', 'moderator'].includes(player?.tier);
 }
 
 // Get player ID

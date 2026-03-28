@@ -67,7 +67,7 @@ export const POST: RequestHandler = async ({ request }) => {
       return json({ error: 'Player not found' }, { status: 404 });
     }
     
-    if (player.subscription_tier === 'subscriber') {
+    if (player.subscription_tier === 'plus' || player.subscription_tier === 'allin' || player.subscription_tier === 'subscriber') {
       return json({ error: 'Already subscribed' }, { status: 400 });
     }
     
@@ -78,19 +78,19 @@ export const POST: RequestHandler = async ({ request }) => {
     // Update player subscription
     await execute(
       `UPDATE players 
-       SET subscription_tier = 'subscriber', 
+       SET subscription_tier = 'plus', 
            subscription_expires_at = ? 
        WHERE id = ?`,
       [expiresAt.toISOString(), playerId]
     );
     
-    console.log(`💳 Mock payment successful for ${player.email} - upgraded to Premium`);
+    console.log(`💳 Mock payment successful for ${player.email} - upgraded to Plus`);
     
     return json({
       success: true,
-      tier: 'premium',
+      tier: 'plus',
       expiresAt: expiresAt.toISOString(),
-      message: 'Welcome to Premium! Your progress will now sync across devices.'
+      message: 'Welcome to Plus! Your progress will now sync across devices.'
     });
     
   } catch (err) {
@@ -117,12 +117,13 @@ export const GET: RequestHandler = async ({ url }) => {
       return json({ error: 'Player not found' }, { status: 404 });
     }
     
-    const tier = player.subscription_tier === 'subscriber' ? 'premium' : 'free';
+    const tierMap: Record<string, string> = { subscriber: 'allin', plus: 'plus', allin: 'allin', moderator: 'moderator' };
+    const tier = tierMap[player.subscription_tier] ?? 'free';
     
     return json({
       tier,
       expiresAt: player.subscription_expires_at,
-      isActive: tier === 'premium'
+      isActive: tier !== 'free'
     });
     
   } catch (err) {

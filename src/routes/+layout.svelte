@@ -130,9 +130,9 @@
     return () => document.removeEventListener('visibilitychange', handleVisibilityHidden);
   });
   
-  // Enable auto-sync for returning premium users
+  // Enable auto-sync for returning paid users
   $effect(() => {
-    if (player?.status === 'logged-in' && player?.tier === 'premium') {
+    if (player?.status === 'logged-in' && ['plus', 'allin', 'moderator'].includes(player?.tier)) {
       enableAutoSync();
     }
   });
@@ -189,8 +189,8 @@
   // Check if player has started (logged in persists, guest is session-only)
   let hasStarted = $derived((player?.status === 'logged-in' && player?.id !== null) || guestSessionStarted);
   
-  // Check if user can upgrade (logged in but not premium/allin/moderator)
-  let canUpgrade = $derived(player?.status === 'logged-in' && !['premium', 'allin', 'moderator'].includes(player?.tier ?? ''));
+  // Check if user can upgrade (logged in but not plus/allin/moderator)
+  let canUpgrade = $derived(player?.status === 'logged-in' && !['plus', 'allin', 'moderator'].includes(player?.tier ?? ''));
 
   function handleGameStart() {
     // Guest mode - mark session as started and go to game list
@@ -336,7 +336,7 @@
       <a href="/archive" class:active={$page.url.pathname === '/archive'}>
         📅 Archive
       </a>
-      {#if player?.tier === 'premium'}
+      {#if ['plus', 'allin', 'moderator'].includes(player?.tier)}
         <a href="/stats" class:active={$page.url.pathname.startsWith('/stats')}>
           📊 Share/Stats
         </a>

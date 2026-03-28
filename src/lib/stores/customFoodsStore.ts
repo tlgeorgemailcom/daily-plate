@@ -30,10 +30,10 @@ interface StorageData {
   foods: CustomFood[];
 }
 
-// Check if user is premium (should sync to cloud)
+// Check if user is paid (should sync to cloud)
 function isPremiumUser(): boolean {
   const player = get(playerStore);
-  const isPremium = player.status === 'logged-in' && player.tier === 'premium';
+  const isPremium = player.status === 'logged-in' && ['plus', 'allin', 'moderator'].includes(player.tier);
   console.log('[CustomFoods] isPremiumUser check:', { status: player.status, tier: player.tier, isPremium });
   return isPremium;
 }

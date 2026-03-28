@@ -98,7 +98,7 @@
       }
       
       // Update local store
-      playerStore.setTier('premium');
+      playerStore.setTier('plus');
       
       // Show success state
       success = true;

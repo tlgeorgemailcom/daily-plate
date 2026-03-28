@@ -52,7 +52,7 @@
           <span class="btn-icon">👤</span>
           <span class="btn-text">
             <span class="btn-label">Login</span>
-            <span class="btn-sub">Sync progress & unlock premium</span>
+            <span class="btn-sub">Sync progress & unlock features</span>
           </span>
         </button>
         

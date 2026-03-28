@@ -30,7 +30,7 @@ export const GET: RequestHandler = async ({ url }) => {
     
     // Map subscription_tier to tier for client (same TIER_MAP as /api/auth/login)
     const TIER_MAP: Record<string, string> = {
-      subscriber: 'premium',
+      subscriber: 'allin',
       plus: 'plus',
       allin: 'allin',
       moderator: 'moderator',

@@ -61,8 +61,8 @@
   async function loadTodaysScores() {
     const player = $playerStore;
     
-    if (player.status !== 'logged-in' || player.tier !== 'premium') {
-      error = 'Stats are available for premium members only';
+    if (player.status !== 'logged-in' || !['plus', 'allin', 'moderator'].includes(player.tier)) {
+      error = 'Stats are available for Plus and All-In members';
       loading = false;
       return;
     }
@@ -116,9 +116,9 @@
     <div class="error-state">
       <div class="error-icon">🔒</div>
       <p>{error}</p>
-      {#if $playerStore.tier !== 'premium'}
+      {#if !['plus', 'allin', 'moderator'].includes($playerStore.tier)}
         <button class="upgrade-btn" onclick={() => goto('/account')}>
-          Upgrade to Premium
+          Upgrade to Plus
         </button>
       {/if}
     </div>

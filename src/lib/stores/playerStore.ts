@@ -4,7 +4,7 @@ import { browser } from '$app/environment';
 
 const STORAGE_KEY = 'dailyfoodchain_player';
 
-export type PlayerTier = 'free' | 'plus' | 'allin' | 'premium' | 'subscriber' | 'moderator';
+export type PlayerTier = 'free' | 'plus' | 'allin' | 'moderator';
 export type PlayerStatus = 'anonymous' | 'logged-in';
 
 export interface Player {
@@ -243,7 +243,7 @@ export const playerStore = createPlayerStore();
 // Derived stores for convenient access
 export const isLoggedIn = derived(playerStore, $p => $p.status === 'logged-in');
 export const isAnonymous = derived(playerStore, $p => $p.status === 'anonymous');
-export const isPremium = derived(playerStore, $p => $p.tier === 'premium');
+export const isPremium = derived(playerStore, $p => ['plus', 'allin', 'moderator'].includes($p.tier));
 export const playerTier = derived(playerStore, $p => $p.tier);
 export const playerName = derived(playerStore, $p => $p.displayName || 'Guest');
 

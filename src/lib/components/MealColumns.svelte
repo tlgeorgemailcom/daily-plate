@@ -369,8 +369,8 @@
   }
 
   const isLoggedIn = $derived($playerStore.status === 'logged-in');
-  const isPlus = $derived(isLoggedIn && ['plus', 'allin', 'premium', 'moderator'].includes($playerStore.tier));
-  const isAllin = $derived(isLoggedIn && ['allin', 'premium', 'moderator'].includes($playerStore.tier));
+  const isPlus = $derived(isLoggedIn && ['plus', 'allin', 'moderator'].includes($playerStore.tier));
+  const isAllin = $derived(isLoggedIn && ['allin', 'moderator'].includes($playerStore.tier));
 
   // ── Phase 2: Share meal slot to household members ─────────────────────────
   // shareOpenMealId: which slot's share popover is currently open

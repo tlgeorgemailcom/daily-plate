@@ -110,10 +110,10 @@ function clearGameState(): void {
 
 // ============ Cloud Sync for Premium Users ============
 
-// Check if user is premium
+// Check if user is paid (Plus, All-In, or Moderator)
 function isPremiumUser(): boolean {
   const player = get(playerStore);
-  const isPremium = player.status === 'logged-in' && player.tier === 'premium';
+  const isPremium = player.status === 'logged-in' && ['plus', 'allin', 'moderator'].includes(player.tier);
   console.log('[GameState] isPremiumUser check:', { status: player.status, tier: player.tier, isPremium });
   return isPremium;
 }

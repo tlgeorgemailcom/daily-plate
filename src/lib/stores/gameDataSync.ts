@@ -48,10 +48,10 @@ function getPlayer() {
   return get(playerStore);
 }
 
-// Check if current user is premium
+// Check if current user is paid (Plus, All-In, or Moderator)
 function isPremiumUser(): boolean {
   const player = getPlayer();
-  return player?.status === 'logged-in' && player?.tier === 'premium';
+  return player?.status === 'logged-in' && ['plus', 'allin', 'moderator'].includes(player?.tier);
 }
 
 // Get player ID

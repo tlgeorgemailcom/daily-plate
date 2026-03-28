@@ -2,7 +2,7 @@ import { json, error } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { queryAll, execute } from '$lib/server/turso';
 
-const ALLIN_TIERS = new Set(['allin', 'premium', 'moderator']);
+const ALLIN_TIERS = new Set(['allin', 'moderator']);
 const MAX_CUSTOM_CATEGORIES = 10;
 
 async function getPlayerTier(userId: string): Promise<string | null> {

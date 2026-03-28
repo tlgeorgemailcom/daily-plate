@@ -64,8 +64,8 @@
   }
 
   // Tier gates — derived from playerStore
-  const isPlus = $derived($playerStore.status === 'logged-in' && ['plus', 'allin', 'premium', 'moderator'].includes($playerStore.tier));
-  const isAllin = $derived($playerStore.status === 'logged-in' && ['allin', 'premium', 'moderator'].includes($playerStore.tier));
+  const isPlus = $derived($playerStore.status === 'logged-in' && ['plus', 'allin', 'moderator'].includes($playerStore.tier));
+  const isAllin = $derived($playerStore.status === 'logged-in' && ['allin', 'moderator'].includes($playerStore.tier));
 
   // Notes state
   let showNotes = $state(false);
@@ -585,8 +585,6 @@
       const food = FOODS.find(f => f.ndb === entry.food_id);
       if (food) addFood(food, food.portions[0], 'plate', entry.quantity_grams, 1, entry.meal_category);
     }
-    // Loading from cloud represents the current saved state — plate is clean.
-    plateDirty.set(false);
   }
 
   // Switch to a household member (or back to owner when newId = '').

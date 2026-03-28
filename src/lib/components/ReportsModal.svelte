@@ -64,7 +64,7 @@
   // ── Tier gate ────────────────────────────────────────────────────────────────
   // TODO: remove DEV_BYPASS before release
   const DEV_BYPASS = false;
-  let isAllin = $derived(DEV_BYPASS || ['allin', 'premium', 'moderator'].includes($playerStore.tier));
+  let isAllin = $derived(DEV_BYPASS || ['allin', 'moderator'].includes($playerStore.tier));
 
   // ── Per-symptom food correlation data ──────────────────────────────────────
   // For each unique symptom, foods eaten in the LAG_DAYS-day window before each

@@ -59,7 +59,7 @@ export const POST: RequestHandler = async ({ request }) => {
     );
 
     // Map subscription_tier to tier for client
-    const TIER_MAP: Record<string, string> = { subscriber: 'premium', plus: 'plus', allin: 'allin', moderator: 'moderator' };
+    const TIER_MAP: Record<string, string> = { subscriber: 'allin', plus: 'plus', allin: 'allin', moderator: 'moderator' };
     const tier = TIER_MAP[effectiveTier] ?? 'free';
 
     return json({

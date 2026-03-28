@@ -401,11 +401,11 @@
     loadCommunityRecipes();
   });
   
-  // Load approved community recipes from server (premium only)
+  // Load approved community recipes from server (paid users only)
   async function loadCommunityRecipes() {
-    // Only premium users get community recipes - Guest/Free see built-in only
+    // Only paid users get community recipes - Guest/Free see built-in only
     const player = get(playerStore);
-    if (player.tier !== 'premium') return;
+    if (!['plus', 'allin', 'moderator'].includes(player.tier)) return;
     
     try {
       const res = await fetch('/api/recipes/approved');
