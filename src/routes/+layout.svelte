@@ -189,8 +189,8 @@
   // Check if player has started (logged in persists, guest is session-only)
   let hasStarted = $derived((player?.status === 'logged-in' && player?.id !== null) || guestSessionStarted);
   
-  // Check if user can upgrade (logged in but not plus/allin/moderator)
-  let canUpgrade = $derived(player?.status === 'logged-in' && !['plus', 'allin', 'moderator'].includes(player?.tier ?? ''));
+  // Check if user can upgrade (logged in but not already at top tier)
+  let canUpgrade = $derived(player?.status === 'logged-in' && !['allin', 'moderator'].includes(player?.tier ?? ''));
 
   function handleGameStart() {
     // Guest mode - mark session as started and go to game list
