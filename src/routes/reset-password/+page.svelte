@@ -38,6 +38,7 @@
         return;
       }
       status = 'success';
+      setTimeout(() => goto('/'), 2000);
     } catch {
       errorMsg = 'Network error. Please try again.';
       status = 'error';
@@ -61,9 +62,8 @@
     {:else if status === 'success'}
       <div class="success-box">
         <span class="checkmark">✓</span>
-        <p>Your password has been updated. You can now sign in with your new password.</p>
+        <p>Your password has been updated. Redirecting to TodayPage…</p>
       </div>
-      <button class="submit-btn" onclick={() => goto('/')}>Go to TodayPage</button>
 
     {:else}
       <p class="subtitle">Enter a new password for your account.</p>
