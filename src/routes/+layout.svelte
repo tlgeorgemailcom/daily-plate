@@ -284,7 +284,7 @@
   }
 </script>
 
-{#if $page.url.pathname.startsWith('/admin')}
+{#if $page.url.pathname.startsWith('/admin') || $page.url.pathname.startsWith('/reset-password')}
   {@render children()}
 {:else if hasStarted}
   <!-- Use full-width layout for games that need more space -->
