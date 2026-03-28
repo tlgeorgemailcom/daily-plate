@@ -284,6 +284,22 @@ export const GET: RequestHandler = async () => {
       results['admin_notes_already_exists'] = true;
     }
 
+    // players: stripe_customer_id + stripe_subscription_id
+    const playersSchema3 = await db.execute('PRAGMA table_info(players)');
+    const playerCols3 = playersSchema3.rows.map((r: Record<string, unknown>) => r['name'] as string);
+    if (!playerCols3.includes('stripe_customer_id')) {
+      await db.execute('ALTER TABLE players ADD COLUMN stripe_customer_id TEXT');
+      results['added_stripe_customer_id'] = true;
+    } else {
+      results['stripe_customer_id_already_exists'] = true;
+    }
+    if (!playerCols3.includes('stripe_subscription_id')) {
+      await db.execute('ALTER TABLE players ADD COLUMN stripe_subscription_id TEXT');
+      results['added_stripe_subscription_id'] = true;
+    } else {
+      results['stripe_subscription_id_already_exists'] = true;
+    }
+
     return json({ success: true, ...results });
   } catch (err) {
     return json({ success: false, error: String(err) });
