@@ -8,7 +8,8 @@
   
   let { onClose, onSuccess }: Props = $props();
   
-  let selectedTier = $state<'plus' | 'allin'>('plus');
+  const currentTierInit = playerStore.get().tier;
+  let selectedTier = $state<'plus' | 'allin'>(currentTierInit === 'plus' ? 'allin' : 'plus');
   let error = $state<string | null>(null);
   let loading = $state(false);
   let success = $state(false);
@@ -80,22 +81,76 @@
   }
   
   const currentTier = $derived(playerStore.get().tier);
-  const isSubscribed = $derived(['plus', 'allin'].includes(currentTier));
+  const isAllin = $derived(['allin', 'moderator'].includes(currentTier));
+  const isPlus = $derived(currentTier === 'plus');
 </script>
 
 <div class="modal-overlay" onclick={onClose}>
   <div class="modal" onclick={(e) => e.stopPropagation()}>
     <button class="close-btn" onclick={onClose}>✕</button>
     
-    {#if isSubscribed}
+    {#if isAllin}
       <div class="success-state">
         <div class="success-icon">✅</div>
-        <h2>You're on {currentTier === 'allin' ? 'ALL·IN' : 'Plus'}!</h2>
-        <p>Your progress syncs across all devices.</p>
+        <h2>You're on ALL·IN!</h2>
+        <p>You have access to everything.</p>
         <button class="manage-btn" onclick={openBillingPortal} disabled={loading}>
           {loading ? 'Opening...' : 'Manage Subscription'}
         </button>
       </div>
+    {:else if isPlus}
+      <div class="modal-header">
+        <div class="modal-icon">🚀</div>
+        <h2 class="modal-title">Upgrade to ALL·IN</h2>
+        <p class="modal-subtitle">You're on Plus — unlock everything</p>
+      </div>
+      
+      <div class="tier-cards">
+        <div class="tier-card current-tier">
+          <div class="tier-badge plus-badge">Plus <span class="current-label">current</span></div>
+          <div class="tier-price">$4.95<span class="period">/mo</span></div>
+          <ul class="tier-features">
+            <li>☁️ Cloud sync across devices</li>
+            <li>📊 Stats & history</li>
+            <li>📖 Unlimited recipes</li>
+            <li>💚 Support development</li>
+          </ul>
+        </div>
+        
+        <button 
+          class="tier-card selected"
+          onclick={() => selectedTier = 'allin'}
+        >
+          <div class="tier-badge allin-badge">ALL·IN</div>
+          <div class="tier-price">$14.95<span class="period">/mo</span></div>
+          <ul class="tier-features">
+            <li>✨ Everything in Plus</li>
+            <li>🍽️ Custom meal categories</li>
+            <li>📋 Detailed reports</li>
+            <li>🏆 Priority support</li>
+          </ul>
+        </button>
+      </div>
+      
+      {#if error}
+        <div class="error-msg">{error}</div>
+      {/if}
+      
+      <button class="submit-btn" onclick={handleSubscribe} disabled={loading}>
+        {#if loading}
+          Redirecting to checkout...
+        {:else}
+          Upgrade to ALL·IN · $14.95/mo
+        {/if}
+      </button>
+      
+      <div class="manage-link">
+        <button class="text-btn" onclick={openBillingPortal} disabled={loading}>Manage current subscription</button>
+      </div>
+      
+      <p class="secure-hint">
+        🔒 Secure checkout powered by Stripe
+      </p>
     {:else}
       <div class="modal-header">
         <div class="modal-icon">⭐</div>
@@ -379,6 +434,37 @@
     cursor: not-allowed;
   }
   
+  .current-tier {
+    opacity: 0.6;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  .current-label {
+    font-size: 0.7rem;
+    font-weight: 400;
+    opacity: 0.8;
+  }
+
+  .manage-link {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  .text-btn {
+    background: none;
+    border: none;
+    color: #88c999;
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-decoration: underline;
+    font-family: inherit;
+  }
+
+  .text-btn:hover {
+    color: #a8e9b9;
+  }
+
   @media (max-width: 480px) {
     .modal {
       padding: 1.5rem;
