@@ -42,7 +42,7 @@ export const POST: RequestHandler = async ({ request }) => {
       [token, normalizedEmail, expiresAt]
     );
 
-    const siteUrl = env.PUBLIC_SITE_URL?.trim() || 'https://todaypage.com';
+    const siteUrl = env.SITE_URL?.trim() || 'https://todaypage.com';
     const resetLink = `${siteUrl}/reset-password?token=${token}`;
 
     await sendEmail({
