@@ -14,10 +14,16 @@
     moderator: 'Moderator',
   };
 
+  // Local reactive copy so tier counts update immediately on change
+  let players = $state<Player[]>(data.players.map((p: Player) => ({ ...p })));
   let statuses = $state<Record<string, Status>>({});
+  let confirmDelete = $state<string | null>(null); // player id awaiting confirmation
 
   async function setTier(playerId: string, tier: string) {
     statuses[playerId] = 'saving';
+    // Optimistically update local state so counts refresh immediately
+    const p = players.find(x => x.id === playerId);
+    if (p) p.subscription_tier = tier;
     try {
       const res = await fetch('/api/admin/set-tier', {
         method: 'POST',
@@ -29,6 +35,26 @@
       setTimeout(() => { statuses[playerId] = 'idle'; }, 2500);
     } catch {
       statuses[playerId] = 'error';
+      // Revert optimistic update on failure
+      const orig = data.players.find((x: Player) => x.id === playerId);
+      if (p && orig) p.subscription_tier = orig.subscription_tier;
+    }
+  }
+
+  async function deletePlayer(playerId: string) {
+    statuses[playerId] = 'saving';
+    try {
+      const res = await fetch('/api/admin/delete-player', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ player_id: playerId }),
+      });
+      if (!res.ok) throw new Error('failed');
+      players = players.filter(p => p.id !== playerId);
+    } catch {
+      statuses[playerId] = 'error';
+    } finally {
+      confirmDelete = null;
     }
   }
 
@@ -49,7 +75,7 @@
 
   const tierCounts = $derived(
     TIERS.reduce((acc, t) => {
-      acc[t] = data.players.filter((p: Player) => p.subscription_tier === t).length;
+      acc[t] = players.filter(p => p.subscription_tier === t).length;
       return acc;
     }, {} as Record<string, number>)
   );
@@ -59,7 +85,7 @@
   <header class="top-bar">
     <span class="site-name">TodayPage</span>
     <h1>Subscribers</h1>
-    <span class="player-count">{data.players.length} users</span>
+    <span class="player-count">{players.length} users</span>
     <button class="logout-btn" onclick={logout}>Logout</button>
   </header>
 
@@ -82,11 +108,12 @@
           <th>Joined</th>
           <th>Last Login</th>
           <th></th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
-        {#each data.players as player (player.id)}
-          <tr>
+        {#each players as player (player.id)}
+          <tr class:deleting={confirmDelete === player.id}>
             <td class="email">{player.email}</td>
             <td class="name">{player.display_name ?? '—'}</td>
             <td class="tier-cell">
@@ -110,6 +137,19 @@
                 <span class="badge saved">Saved ✓</span>
               {:else if statuses[player.id] === 'error'}
                 <span class="badge error">Error</span>
+              {/if}
+            </td>
+            <td class="delete-cell">
+              {#if confirmDelete === player.id}
+                <span class="confirm-ask">Delete?</span>
+                <button class="confirm-yes" onclick={() => deletePlayer(player.id)}>Yes</button>
+                <button class="confirm-no" onclick={() => confirmDelete = null}>No</button>
+              {:else}
+                <button
+                  class="delete-btn"
+                  onclick={() => confirmDelete = player.id}
+                  title="Delete subscriber"
+                >✕</button>
               {/if}
             </td>
           </tr>
@@ -232,4 +272,34 @@
   .badge.saving { background: #fff9c4; color: #f59f00; }
   .badge.saved  { background: #e8f5e9; color: #2e7d32; }
   .badge.error  { background: #ffebee; color: #c62828; }
+
+  .delete-cell { width: 130px; text-align: right; white-space: nowrap; }
+  .delete-btn {
+    background: none;
+    border: 1px solid #e0e0e0;
+    color: #bdbdbd;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 1;
+    transition: border-color 0.15s, color 0.15s, background 0.15s;
+  }
+  .delete-btn:hover { border-color: #ef5350; color: #ef5350; background: #fff5f5; }
+
+  .confirm-ask { font-size: 12px; color: #c62828; font-weight: 600; margin-right: 6px; }
+  .confirm-yes {
+    background: #c62828; color: white; border: none;
+    padding: 3px 10px; border-radius: 5px; cursor: pointer; font-size: 12px; font-weight: 600;
+    margin-right: 4px;
+  }
+  .confirm-yes:hover { background: #b71c1c; }
+  .confirm-no {
+    background: #eee; color: #333; border: none;
+    padding: 3px 10px; border-radius: 5px; cursor: pointer; font-size: 12px; font-weight: 600;
+  }
+  .confirm-no:hover { background: #e0e0e0; }
+
+  tr.deleting { background: #fff8f8 !important; }
 </style>
