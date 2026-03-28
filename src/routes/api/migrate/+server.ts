@@ -268,6 +268,22 @@ export const GET: RequestHandler = async () => {
     await db.execute(`CREATE INDEX IF NOT EXISTS idx_prt_email ON password_reset_tokens(email)`);
     results['password_reset_tokens'] = 'ok';
 
+    // players: subscription_expires_at + admin_notes
+    const playersSchema2 = await db.execute('PRAGMA table_info(players)');
+    const playerCols2 = playersSchema2.rows.map((r: Record<string, unknown>) => r['name'] as string);
+    if (!playerCols2.includes('subscription_expires_at')) {
+      await db.execute('ALTER TABLE players ADD COLUMN subscription_expires_at TEXT');
+      results['added_subscription_expires_at'] = true;
+    } else {
+      results['subscription_expires_at_already_exists'] = true;
+    }
+    if (!playerCols2.includes('admin_notes')) {
+      await db.execute('ALTER TABLE players ADD COLUMN admin_notes TEXT');
+      results['added_admin_notes'] = true;
+    } else {
+      results['admin_notes_already_exists'] = true;
+    }
+
     return json({ success: true, ...results });
   } catch (err) {
     return json({ success: false, error: String(err) });

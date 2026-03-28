@@ -9,6 +9,7 @@ interface PlayerRow {
   display_name: string | null;
   password_hash: string | null;
   subscription_tier: string;
+  subscription_expires_at: string | null;
   created_at: string;
 }
 
@@ -22,7 +23,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
     // Look up user in database
     const user = await queryOne<PlayerRow>(
-      'SELECT id, email, display_name, password_hash, subscription_tier, created_at FROM players WHERE email = ?',
+      'SELECT id, email, display_name, password_hash, subscription_tier, subscription_expires_at, created_at FROM players WHERE email = ?',
       [email.toLowerCase().trim()]
     );
 
@@ -39,14 +40,27 @@ export const POST: RequestHandler = async ({ request }) => {
     // Silently upgrade legacy hash to bcrypt on successful login
     const newHash = needsUpgrade ? await hashPassword(password) : null;
 
+    // Auto-downgrade if subscription has expired
+    let effectiveTier = user.subscription_tier;
+    const expired = user.subscription_expires_at && new Date(user.subscription_expires_at) < new Date();
+    if (expired && effectiveTier !== 'free' && effectiveTier !== 'moderator') {
+      effectiveTier = 'free';
+    }
+
+    const updateClauses: string[] = [`last_login_at = datetime('now')`];
+    const updateArgs: unknown[] = [];
+    if (newHash) { updateClauses.push('password_hash = ?'); updateArgs.push(newHash); }
+    if (expired && effectiveTier === 'free') { updateClauses.push('subscription_tier = ?'); updateArgs.push('free'); }
+    updateArgs.push(user.id);
+
     await execute(
-      `UPDATE players SET last_login_at = datetime('now')${newHash ? ', password_hash = ?' : ''} WHERE id = ?`,
-      newHash ? [newHash, user.id] : [user.id]
+      `UPDATE players SET ${updateClauses.join(', ')} WHERE id = ?`,
+      updateArgs as import('@libsql/client').InValue[]
     );
 
     // Map subscription_tier to tier for client
     const TIER_MAP: Record<string, string> = { subscriber: 'premium', plus: 'plus', allin: 'allin', moderator: 'moderator' };
-    const tier = TIER_MAP[user.subscription_tier] ?? 'free';
+    const tier = TIER_MAP[effectiveTier] ?? 'free';
 
     return json({
       id: user.id,

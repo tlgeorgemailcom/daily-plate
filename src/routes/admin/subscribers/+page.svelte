@@ -59,6 +59,43 @@
     }
   }
 
+  async function saveExtra(playerId: string, field: 'expires_at' | 'admin_notes', value: string | null) {
+    statuses[playerId] = 'saving';
+    const p = players.find(x => x.id === playerId);
+    if (!p) return;
+    // Optimistic update
+    if (field === 'expires_at') p.subscription_expires_at = value;
+    else p.admin_notes = value;
+    try {
+      const res = await fetch('/api/admin/set-tier', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ player_id: playerId, tier: p.subscription_tier, [field]: value }),
+      });
+      if (!res.ok) throw new Error('failed');
+      statuses[playerId] = 'saved';
+      setTimeout(() => { statuses[playerId] = 'idle'; }, 2500);
+    } catch {
+      statuses[playerId] = 'error';
+      const orig = data.players.find((x: Player) => x.id === playerId);
+      if (p && orig) {
+        if (field === 'expires_at') p.subscription_expires_at = orig.subscription_expires_at;
+        else p.admin_notes = orig.admin_notes;
+      }
+    }
+  }
+
+  function toDateInput(dt: string | null): string {
+    if (!dt) return '';
+    try { return new Date(dt).toISOString().slice(0, 10); } catch { return ''; }
+  }
+
+  function isExpired(p: Player): boolean {
+    if (!p.subscription_expires_at) return false;
+    if (p.subscription_tier === 'free' || p.subscription_tier === 'moderator') return false;
+    return new Date(p.subscription_expires_at) < new Date();
+  }
+
   async function sendResetLink(email: string, playerId: string) {
     resetStatuses[playerId] = 'sending';
     try {
@@ -96,6 +133,8 @@
       return acc;
     }, {} as Record<string, number>)
   );
+
+  const expiredCount = $derived(players.filter(p => isExpired(p)).length);
 </script>
 
 <div class="page">
@@ -113,6 +152,12 @@
         <span class="tier-label">{TIER_LABELS[t]}</span>
       </div>
     {/each}
+    {#if expiredCount > 0}
+      <div class="tier-card tier-expired">
+        <span class="tier-count">{expiredCount}</span>
+        <span class="tier-label">Expired</span>
+      </div>
+    {/if}
   </section>
 
   <section class="table-wrap">
@@ -124,6 +169,8 @@
           <th>Tier</th>
           <th>Joined</th>
           <th>Last Login</th>
+          <th>Expires</th>
+          <th>Notes</th>
           <th>Reset</th>
           <th></th>
           <th></th>
@@ -131,7 +178,7 @@
       </thead>
       <tbody>
         {#each players as player (player.id)}
-          <tr class:deleting={confirmDelete === player.id}>
+          <tr class:deleting={confirmDelete === player.id} class:expired={isExpired(player)}>
             <td class="email">{player.email}</td>
             <td class="name">{player.display_name ?? '—'}</td>
             <td class="tier-cell">
@@ -148,6 +195,34 @@
             </td>
             <td class="date">{formatDate(player.created_at)}</td>
             <td class="date">{formatDate(player.last_login_at)}</td>
+            <td class="expiry-cell">
+              <input
+                type="date"
+                value={toDateInput(player.subscription_expires_at)}
+                onchange={(e) => saveExtra(player.id, 'expires_at', e.currentTarget.value || null)}
+                class="date-input"
+                class:date-expired={isExpired(player)}
+              />
+              {#if player.subscription_expires_at}
+                <button
+                  class="clear-date"
+                  title="Clear expiry"
+                  onclick={() => saveExtra(player.id, 'expires_at', null)}
+                >✕</button>
+              {/if}
+            </td>
+            <td class="notes-cell">
+              <input
+                type="text"
+                value={player.admin_notes ?? ''}
+                onblur={(e) => {
+                  const val = e.currentTarget.value.trim() || null;
+                  if (val !== player.admin_notes) saveExtra(player.id, 'admin_notes', val);
+                }}
+                class="notes-input"
+                placeholder="Add note…"
+              />
+            </td>
             <td class="reset-cell">
               {#if resetStatuses[player.id] === 'sending'}
                 <span class="badge saving">Sending…</span>
@@ -349,4 +424,50 @@
     transition: background 0.15s, border-color 0.15s;
   }
   .reset-btn:hover { background: #e3f2fd; border-color: #1565c0; }
+
+  .tier-card.tier-expired { border-top-color: #e53935; }
+  .tier-card.tier-expired .tier-count { color: #e53935; }
+
+  tr.expired td { background: #fff5f5 !important; }
+  tr.expired:hover td { background: #ffebee !important; }
+
+  .expiry-cell { white-space: nowrap; }
+  .date-input {
+    padding: 4px 6px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #555;
+    background: white;
+    cursor: pointer;
+    outline: none;
+  }
+  .date-input:focus { border-color: #1b5e20; }
+  .date-input.date-expired { border-color: #e53935; color: #c62828; }
+  .clear-date {
+    background: none;
+    border: none;
+    color: #bdbdbd;
+    font-size: 11px;
+    cursor: pointer;
+    padding: 0 2px;
+    line-height: 1;
+    vertical-align: middle;
+  }
+  .clear-date:hover { color: #e53935; }
+
+  .notes-cell { min-width: 140px; }
+  .notes-input {
+    width: 100%;
+    padding: 4px 6px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #555;
+    background: white;
+    outline: none;
+    box-sizing: border-box;
+  }
+  .notes-input:focus { border-color: #1b5e20; }
+  .notes-input::placeholder { color: #bdbdbd; }
 </style>
