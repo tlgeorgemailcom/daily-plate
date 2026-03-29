@@ -361,20 +361,19 @@
     border: 2px solid #1b5e20;
     border-top: none;
     line-height: 0;
+    aspect-ratio: 3 / 1;
+    overflow: hidden;
+  }
+
+  .strip-frame.sunday {
+    aspect-ratio: 2 / 1;
   }
 
   .strip-img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
-  }
-
-  /* Weekday natural height ~300px at 900px width (3:1).
-     Sunday natural height ~450px at 900px width (2:1).
-     height:auto handles both correctly via viewBox / img aspect ratio. */
-
-  .placeholder-svg {
-    aspect-ratio: 3 / 1;
+    object-fit: contain;
   }
 
   .strip-nav {
