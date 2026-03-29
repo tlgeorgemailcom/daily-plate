@@ -28,6 +28,10 @@
         <li><a href="/scrambled"><strong>🐝 Scramble Bees</strong></a> — Find all the food words hidden in a set of scrambled letters (USDA or FOODIE levels)</li>
         <li><a href="/tower"><strong>🗼 Tower</strong></a> — Climb the tower by guessing food words of decreasing length</li>
       </ul>
+
+      <div class="cartoon-link">
+        <a href="/cartoon">🐦 <strong>Feather &amp; Spag</strong> — Daily comic strip</a>
+      </div>
     </div>
     
     <p class="tip">💡 A new puzzle is available each day!</p>
@@ -118,4 +122,19 @@
     padding-top: 1rem;
     border-top: 1px solid #e5e7eb;
   }
+
+  .cartoon-link {
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+    text-align: center;
+  }
+
+  .cartoon-link a {
+    color: #1b5e20;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  .cartoon-link a:hover { text-decoration: underline; }
 </style>

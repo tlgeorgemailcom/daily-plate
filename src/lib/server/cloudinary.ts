@@ -102,6 +102,46 @@ export async function uploadRecipeImage(
 }
 
 /**
+ * Upload a Feather & Spag cartoon strip to Cloudinary
+ * @param fileBuffer - The strip PNG as a Buffer
+ * @param publishDate - 'YYYY-MM-DD' — used as the public_id and file name
+ * @returns Cloudinary delivery URL and public_id
+ */
+export async function uploadCartoonStrip(
+  fileBuffer: Buffer,
+  publishDate: string  // 'YYYY-MM-DD'
+): Promise<{ url: string; publicId: string }> {
+  const cloud = getCloudinary();
+
+  const [year, month] = publishDate.split('-');
+  const publicId = `feather-spag/${year}/${month}/feather-spag-${publishDate}`;
+
+  return new Promise((resolve, reject) => {
+    const uploadStream = cloud.uploader.upload_stream(
+      {
+        public_id: publicId,
+        resource_type: 'image',
+        overwrite: true,
+        transformation: [{ quality: 'auto', fetch_format: 'auto' }]
+      },
+      (error, result) => {
+        if (error) { reject(error); return; }
+        if (!result) { reject(new Error('No result from Cloudinary')); return; }
+
+        const url = cloud.url(result.public_id, {
+          width: 900,
+          quality: 'auto',
+          fetch_format: 'auto'
+        });
+
+        resolve({ url, publicId: result.public_id });
+      }
+    );
+    uploadStream.end(fileBuffer);
+  });
+}
+
+/**
  * Delete an image from Cloudinary
  * @param publicId - The public_id of the image to delete
  */

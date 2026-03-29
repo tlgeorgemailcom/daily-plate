@@ -5,6 +5,7 @@
 <nav class="admin-nav">
   <a href="/admin/analytics" class="nav-link">Analytics</a>
   <a href="/admin/subscribers" class="nav-link">Subscribers</a>
+  <a href="/admin/cartoon" class="nav-link">Cartoon</a>
 </nav>
 
 {@render children()}
