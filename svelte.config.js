@@ -10,6 +10,9 @@ const config = {
     }),
     paths: {
       base: ''
+    },
+    version: {
+      pollInterval: 60000
     }
   }
 };
