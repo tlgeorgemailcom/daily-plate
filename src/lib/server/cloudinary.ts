@@ -122,6 +122,7 @@ export async function uploadCartoonStrip(
         public_id: publicId,
         resource_type: 'image',
         overwrite: true,
+        invalidate: true,
         transformation: [{ quality: 'auto', fetch_format: 'auto' }]
       },
       (error, result) => {
