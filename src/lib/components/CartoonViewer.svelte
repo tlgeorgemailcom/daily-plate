@@ -367,7 +367,7 @@
     justify-content: space-between;
     align-items: baseline;
     padding: 0.5rem 0 0.4rem;
-    border-bottom: 2px solid #1b5e20;
+    border-bottom: 1px solid #ddd;
     margin-bottom: 0;
   }
 
@@ -387,8 +387,6 @@
   .strip-frame {
     width: 100%;
     background: #f5f5f5;
-    border: 2px solid #1b5e20;
-    border-top: none;
     line-height: 0;
     aspect-ratio: 3 / 1;
     overflow: hidden;
