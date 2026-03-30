@@ -336,6 +336,9 @@
       <a href="/archive" class:active={$page.url.pathname === '/archive'}>
         📅 Archive
       </a>
+      <a href="/cartoon" class:active={$page.url.pathname.startsWith('/cartoon')}>
+        🐦 Strip
+      </a>
       {#if ['plus', 'allin', 'moderator'].includes(player?.tier)}
         <a href="/stats" class:active={$page.url.pathname.startsWith('/stats')}>
           📊 Share/Stats
@@ -353,6 +356,8 @@
       <p>A new puzzle every day!</p>
     </footer>
   </div>
+{:else if $page.url.pathname.startsWith('/cartoon')}
+  {@render children()}
 {:else if browser}
   <StartScreen 
     mode="auth"
