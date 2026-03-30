@@ -75,17 +75,21 @@
         class="strip-img placeholder-svg"
         aria-label="Feather and Spag — mock strip placeholder"
       >
+        <!-- Layout (SVG units, viewBox 0 0 900 300 = 1800×600px rendered):
+             Panel 1: 0–280 (280) | copyright gutter: 280–302 (22) |
+             Panel 2: 302–570 (268) | middle gutter: 570–582 (12) |
+             Panel 3: 582–900 (318)   total = 900 ✓
+             2px stroke (centered) → border rects inset 1px; clipPaths inset 2px -->
         <defs>
-          <!-- Clip regions matching each panel's inner art area -->
-          <clipPath id="pc1"><rect x="0"   y="0" width="280" height="300"/></clipPath>
-          <clipPath id="pc2"><rect x="302" y="0" width="268" height="300"/></clipPath>
-          <clipPath id="pc3"><rect x="582" y="0" width="318" height="300"/></clipPath>
+          <clipPath id="pc1"><rect x="2"   y="2" width="276" height="296"/></clipPath>
+          <clipPath id="pc2"><rect x="304" y="2" width="264" height="296"/></clipPath>
+          <clipPath id="pc3"><rect x="584" y="2" width="314" height="296"/></clipPath>
         </defs>
 
-        <!-- White background (gutter / margin space) -->
+        <!-- White gutter background -->
         <rect width="900" height="300" fill="white"/>
 
-        <!-- Panel backgrounds: sky + ground per panel (edge-to-edge, no outer margins) -->
+        <!-- Panel backgrounds: sky + ground -->
         <rect x="0"   y="0"   width="280" height="255" fill="#e3f2fd"/>
         <rect x="0"   y="255" width="280" height="45"  fill="#c8e6c9"/>
         <rect x="302" y="0"   width="268" height="255" fill="#e3f2fd"/>
@@ -313,9 +317,12 @@
           <text x="709" y="146" text-anchor="middle" font-family="Georgia,serif" font-size="9.5" fill="#111">That&#x2019;s a schedule.&#x201D;</text>
         </g>
 
-        <!-- Vertical copyright in copyright gutter only — no panel borders (strips read as one continuous piece) -->
+        <!-- 2px panel borders drawn on top of art -->
+        <rect x="1"   y="1" width="278" height="298" fill="none" stroke="black" stroke-width="2"/>
+        <rect x="303" y="1" width="266" height="298" fill="none" stroke="black" stroke-width="2"/>
+        <rect x="583" y="1" width="316" height="298" fill="none" stroke="black" stroke-width="2"/>
 
-        <!-- Vertical copyright in copyright gutter (between panel 1 and panel 2) -->
+        <!-- Vertical copyright in gutter between panel 1 and panel 2 (x=291 = centre of 280–302) -->
         <text
           transform="rotate(-90, 291, 150)"
           x="291" y="150"
@@ -324,7 +331,7 @@
         >&#169; 2026 Feather &amp; Spag</text>
 
         <!-- Mock watermark -->
-        <text x="848" y="297" text-anchor="end" font-family="Arial" font-size="7" fill="#bbb">MOCK STRIP</text>
+        <text x="897" y="297" text-anchor="end" font-family="Arial" font-size="7" fill="#bbb">MOCK STRIP</text>
       </svg>
     {/if}
   </div>
