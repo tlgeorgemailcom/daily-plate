@@ -77,21 +77,21 @@
       >
         <defs>
           <!-- Clip regions matching each panel's inner art area -->
-          <clipPath id="pc1"><rect x="12" y="10" width="268" height="280"/></clipPath>
-          <clipPath id="pc2"><rect x="302" y="10" width="268" height="280"/></clipPath>
-          <clipPath id="pc3"><rect x="582" y="10" width="268" height="280"/></clipPath>
+          <clipPath id="pc1"><rect x="0"   y="0" width="280" height="300"/></clipPath>
+          <clipPath id="pc2"><rect x="302" y="0" width="268" height="300"/></clipPath>
+          <clipPath id="pc3"><rect x="582" y="0" width="318" height="300"/></clipPath>
         </defs>
 
         <!-- White background (gutter / margin space) -->
         <rect width="900" height="300" fill="white"/>
 
-        <!-- Panel backgrounds: sky + ground per panel -->
-        <rect x="12"  y="10" width="268" height="245" fill="#e3f2fd"/>
-        <rect x="12"  y="255" width="268" height="35" fill="#c8e6c9"/>
-        <rect x="302" y="10" width="268" height="245" fill="#e3f2fd"/>
-        <rect x="302" y="255" width="268" height="35" fill="#c8e6c9"/>
-        <rect x="582" y="10" width="268" height="245" fill="#e3f2fd"/>
-        <rect x="582" y="255" width="268" height="35" fill="#c8e6c9"/>
+        <!-- Panel backgrounds: sky + ground per panel (edge-to-edge, no outer margins) -->
+        <rect x="0"   y="0"   width="280" height="255" fill="#e3f2fd"/>
+        <rect x="0"   y="255" width="280" height="45"  fill="#c8e6c9"/>
+        <rect x="302" y="0"   width="268" height="255" fill="#e3f2fd"/>
+        <rect x="302" y="255" width="268" height="45"  fill="#c8e6c9"/>
+        <rect x="582" y="0"   width="318" height="255" fill="#e3f2fd"/>
+        <rect x="582" y="255" width="318" height="45"  fill="#c8e6c9"/>
 
         <!-- === PANEL 1: Blue Jay introduces himself === -->
         <g clip-path="url(#pc1)">
@@ -111,7 +111,7 @@
           </g>
 
           <!-- Branch -->
-          <rect x="12" y="218" width="268" height="9" rx="4" fill="#5d4037"/>
+          <rect x="0" y="218" width="280" height="9" rx="4" fill="#5d4037"/>
 
           <!-- Blue Jay -->
           <g transform="translate(72,214)">
@@ -256,7 +256,7 @@
           </g>
 
           <!-- Branch -->
-          <rect x="582" y="218" width="268" height="9" rx="4" fill="#5d4037"/>
+          <rect x="582" y="218" width="318" height="9" rx="4" fill="#5d4037"/>
 
           <!-- Blue Jay p3 -->
           <g transform="translate(618,214)">
@@ -313,12 +313,7 @@
           <text x="709" y="146" text-anchor="middle" font-family="Georgia,serif" font-size="9.5" fill="#111">That&#x2019;s a schedule.&#x201D;</text>
         </g>
 
-        <!-- === PANEL BORDERS — rendered on top for clean separation === -->
-        <!-- Panel 1: x=12–280, Panel 2: x=302–570, Panel 3: x=582–850 -->
-        <!-- Gutters: copyright gutter 280–302 (22px), narrow gutter 570–582 (12px) -->
-        <rect x="12"  y="10" width="268" height="280" fill="none" stroke="black" stroke-width="2"/>
-        <rect x="302" y="10" width="268" height="280" fill="none" stroke="black" stroke-width="2"/>
-        <rect x="582" y="10" width="268" height="280" fill="none" stroke="black" stroke-width="2"/>
+        <!-- Vertical copyright in copyright gutter only — no panel borders (strips read as one continuous piece) -->
 
         <!-- Vertical copyright in copyright gutter (between panel 1 and panel 2) -->
         <text
