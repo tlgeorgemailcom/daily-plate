@@ -387,19 +387,12 @@
   .strip-frame {
     width: 100%;
     line-height: 0;
-    aspect-ratio: 3 / 1;
-    overflow: hidden;
-  }
-
-  .strip-frame.sunday {
-    aspect-ratio: 2 / 1;
   }
 
   .strip-img {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: block;
-    object-fit: contain;
   }
 
   .strip-nav {
