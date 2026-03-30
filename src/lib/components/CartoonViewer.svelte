@@ -386,7 +386,6 @@
 
   .strip-frame {
     width: 100%;
-    background: #f5f5f5;
     line-height: 0;
     aspect-ratio: 3 / 1;
     overflow: hidden;
