@@ -1,6 +1,7 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { getGameDb } from '$lib/server/turso';
+import { deleteCartoonStrip } from '$lib/server/cloudinary';
 
 // GET /api/cartoon/[date]
 // Returns the strip for a specific date. Fully public.
@@ -72,6 +73,8 @@ export const DELETE: RequestHandler = async ({ params, cookies }) => {
       sql: `DELETE FROM cartoon_strips WHERE publish_date = ?`,
       args: [params.date]
     });
+    // Remove from Cloudinary CDN so re-uploads for the same date are always fresh
+    try { await deleteCartoonStrip(params.date); } catch { /* ignore if asset doesn't exist */ }
     return json({ success: true });
   } catch (err) {
     console.error('DELETE /api/cartoon/[date] error:', err);

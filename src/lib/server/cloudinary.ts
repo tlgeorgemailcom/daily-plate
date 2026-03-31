@@ -130,6 +130,7 @@ export async function uploadCartoonStrip(
         if (!result) { reject(new Error('No result from Cloudinary')); return; }
 
         const url = cloud.url(result.public_id, {
+          version: result.version,
           width: 900,
           quality: 'auto',
           fetch_format: 'auto'
@@ -140,6 +141,16 @@ export async function uploadCartoonStrip(
     );
     uploadStream.end(fileBuffer);
   });
+}
+
+/**
+ * Delete a Feather & Spag cartoon strip from Cloudinary
+ */
+export async function deleteCartoonStrip(publishDate: string): Promise<void> {
+  const cloud = getCloudinary();
+  const [year, month] = publishDate.split('-');
+  const publicId = `feather-spag/${year}/${month}/feather-spag-${publishDate}`;
+  await cloud.uploader.destroy(publicId, { invalidate: true });
 }
 
 /**

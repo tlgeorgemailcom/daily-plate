@@ -3,7 +3,7 @@
 
   let { data } = $props();
 
-  let publishDate = $state(nextUnpublishedDate(data.strips));
+  let publishDate = $state(defaultDate(data.strips));
   let altText     = $state('');
   let stripType   = $state('weekday');
   let fileInput: HTMLInputElement;
@@ -12,16 +12,21 @@
   let error       = $state('');
   let migrating   = $state(false);
 
-  function nextUnpublishedDate(strips: { publish_date: string }[]) {
+  // Default to today if today is unpublished, otherwise next future date.
+  // User can manually change to any past date.
+  function defaultDate(strips: { publish_date: string }[]) {
     const published = new Set(strips.map(s => s.publish_date));
+    const today = new Date().toISOString().slice(0, 10);
+    if (!published.has(today)) return today;
+    // today is taken — find next future unpublished date
     const d = new Date();
-    // Find next date not already in the list
+    d.setDate(d.getDate() + 1);
     for (let i = 0; i < 365; i++) {
       const iso = d.toISOString().slice(0, 10);
       if (!published.has(iso)) return iso;
       d.setDate(d.getDate() + 1);
     }
-    return new Date().toISOString().slice(0, 10);
+    return today;
   }
 
   async function runMigration() {
@@ -64,7 +69,7 @@
         altText = '';
         fileInput.value = '';
         await invalidateAll();
-        publishDate = nextUnpublishedDate(data.strips);
+        publishDate = defaultDate(data.strips);
       }
     } catch (e) {
       error = String(e);
