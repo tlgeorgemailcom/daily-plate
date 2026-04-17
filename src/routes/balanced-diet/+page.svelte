@@ -440,7 +440,7 @@
       if (res.ok) {
         const data = await res.json();
         recipeFoods = data.map((r: {
-          id: string; name: string; gramsPerServing: number;
+          id: string; name: string; type?: 'community' | 'developer'; gramsPerServing: number;
           cal: number; pro: number; fat: number;
           carb: number; fib: number; h2o: number; sug: number;
         }): RecipeFood => ({
@@ -448,7 +448,9 @@
           display:  r.name,
           groups:   ['prepared'],
           ndb:      r.id,
-          desc:     `Community recipe · ${r.gramsPerServing}g per serving`,
+          desc:     r.type === 'developer'
+                      ? `Developer recipe · ${r.gramsPerServing}g per serving`
+                      : `Community recipe · ${r.gramsPerServing}g per serving`,
           cal:      r.cal,
           pro:      r.pro,
           fat:      r.fat,
