@@ -77,8 +77,12 @@ export const DEFAULT_TARGETS: DailyTargets = {
     nuts: 0,         // included in protein/fats
     fats: 0,         // distributed across groups
     spice: 0,        // negligible
+    condiment: 0,
     prepared: 0,     // depends on content
-    beverage: 0      // mostly water/0 cal
+    sweets: 0,
+    beverage: 0,     // mostly water/0 cal
+    wine: 0,
+    bar: 0,
   }
 };
 
@@ -203,7 +207,8 @@ export const totalCalories = derived(addedFoods, $foods =>
 export const caloriesByGroup = derived(addedFoods, $foods => {
   const groups: Record<FoodGroup, number> = {
     vegetable: 0, fruit: 0, grain: 0, protein: 0, dairy: 0,
-    legume: 0, nuts: 0, fats: 0, spice: 0, prepared: 0, beverage: 0
+    legume: 0, nuts: 0, fats: 0, spice: 0, condiment: 0,
+    prepared: 0, sweets: 0, beverage: 0, wine: 0, bar: 0
   };
 
   for (const added of $foods) {

@@ -9,9 +9,10 @@
   // All available meal categories (shown even if empty)
   const ALL_CATEGORIES = [
     'Breakfast',
-    'Snacks',
     'Lunch',
     'Dinner',
+    'Snacks',
+    'Sweets & Desserts',
     'Beverages',
     'Salads',
     'Sides'

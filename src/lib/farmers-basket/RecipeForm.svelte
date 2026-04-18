@@ -79,7 +79,7 @@
   }: Props = $props();
   
   // Constants
-  const CATEGORIES = ['Breakfast', 'Lunch', 'Dinner', 'Snacks', 'Salads', 'Sides', 'Beverages'];
+  const CATEGORIES = ['Breakfast', 'Lunch', 'Dinner', 'Snacks', 'Sweets & Desserts', 'Salads', 'Sides', 'Beverages'];
   
   const DIETARY_CATEGORIES = [
     { id: 'all' as DietaryCategory, name: 'All Foods', emoji: '🍽️', description: 'No restrictions' },
@@ -272,6 +272,7 @@
   }
 
   let exemptInfoOpen = $state(false);
+  let linkNutritionInfoOpen = $state(false);
 
   function confirmDishLink() {
     if (!dishPendingFood) return;
@@ -704,6 +705,7 @@
                 </div>
               {:else}
                 <div class="nutrition-actions-row">
+                  <button type="button" class="link-nutrition-info-btn" onclick={() => linkNutritionInfoOpen = !linkNutritionInfoOpen} title="How to link nutrition">How to link ℹ️</button>
                   <button type="button" class="link-nutrition-btn" onclick={() => openNutritionSearch(ingredient)}>
                     🔗 Link nutrition
                   </button>
@@ -711,6 +713,20 @@
                     Exempt
                   </button>
                   <button type="button" class="exempt-info-btn" title="What can be exempted?" onclick={() => exemptInfoOpen = !exemptInfoOpen}>ℹ️</button>
+                </div>
+              {/if}
+
+              {#if linkNutritionInfoOpen}
+                <div class="link-nutrition-info-panel">
+                  <button type="button" class="exempt-info-close" onclick={() => linkNutritionInfoOpen = false}>✕</button>
+                  <p class="exempt-info-heading">How to link an ingredient</p>
+                  <p class="exempt-info-section">1 · Search for the food as you'd eat it</p>
+                  <p class="exempt-info-body">Type the ingredient name. Match to its <strong>cooked or ready-to-eat form</strong> — not raw, unless it's eaten raw. Choose "chicken breast, roasted" not "chicken breast, raw".</p>
+                  <p class="exempt-info-section">2 · Baking ingredients stay raw</p>
+                  <p class="exempt-info-body">Eggs, flour, butter, and sugar that bake <em>into</em> a dish should be linked to their raw or plain form. Nutrient losses from baking heat will be automatically corrected for your recipe using USDA retention data. Water evaporates during baking, concentrating the finished product — but this should be within normal recipe estimation range.</p>
+                  <p class="exempt-info-section">3 · Pick the right portion</p>
+                  <p class="exempt-info-body">After selecting a food, choose the portion size that matches your recipe quantity — cup, ounce, tablespoon, or enter grams directly.</p>
+                  <p class="exempt-info-note">Nutrition uses USDA SR28 data with cooking retention factors applied — values reflect what ends up in the finished dish.</p>
                 </div>
               {/if}
 
@@ -1807,5 +1823,37 @@
     margin: 0 0 2px 0;
     color: #5D4037;
     padding-left: 4px;
+  }
+
+  /* ── Link Nutrition info ─────────────────────────────────────────────────── */
+  .link-nutrition-info-btn {
+    background: none;
+    border: none;
+    font-size: 0.78rem;
+    color: #1565C0;
+    cursor: pointer;
+    padding: 0 6px 0 0;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    white-space: nowrap;
+    align-self: center;
+  }
+
+  .link-nutrition-info-btn:hover {
+    color: #0D47A1;
+  }
+
+  .link-nutrition-info-panel {
+    position: relative;
+    background: #E3F2FD;
+    border: 1px solid #90CAF9;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 0.82rem;
+    color: #1A237E;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: 4px;
   }
 </style>

@@ -22,6 +22,21 @@ export function getGameDb(): Client {
   return gameClient;
 }
 
+// SR28 Legacy reference database client (DataCentralCombo)
+// Dev:  set TURSO_SR28_URL=file:/absolute/path/to/comboo.db  (no auth token needed)
+// Prod: set TURSO_SR28_URL + TURSO_SR28_TOKEN to the Turso DB once synced
+let sr28Client: Client | null = null;
+
+export function getSR28Db(): Client {
+  if (!sr28Client) {
+    const url = env.TURSO_SR28_URL?.trim();
+    if (!url) throw new Error('Missing TURSO_SR28_URL environment variable');
+    const authToken = env.TURSO_SR28_TOKEN?.trim();
+    sr28Client = createClient(authToken ? { url, authToken } : { url });
+  }
+  return sr28Client;
+}
+
 // Branded foods database client (for barcode/nutrition lookup)
 let brandedClient: Client | null = null;
 
