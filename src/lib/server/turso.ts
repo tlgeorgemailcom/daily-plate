@@ -3,6 +3,8 @@
 import { createClient, type Client, type InValue } from '@libsql/client';
 import { env } from '$env/dynamic/private';
 
+const DEFAULT_SR28_DB_URL = 'file:/Users/macminidata/vscode/jetfooddata/jetcool/assets/comboo.db';
+
 // Game data database client (daily-food-chain)
 let gameClient: Client | null = null;
 
@@ -29,8 +31,7 @@ let sr28Client: Client | null = null;
 
 export function getSR28Db(): Client {
   if (!sr28Client) {
-    const url = env.TURSO_SR28_URL?.trim();
-    if (!url) throw new Error('Missing TURSO_SR28_URL environment variable');
+    const url = env.TURSO_SR28_URL?.trim() || DEFAULT_SR28_DB_URL;
     const authToken = env.TURSO_SR28_TOKEN?.trim();
     sr28Client = createClient(authToken ? { url, authToken } : { url });
   }

@@ -46,6 +46,23 @@
     };
   }
 
+  function matchesQuery(food: Food, queryWords: string[]): boolean {
+    if (queryWords.length === 0) return true;
+
+    const displayLower = food.display.toLowerCase();
+    return queryWords.every(word => {
+      const variations = [word];
+      if (word.endsWith('s') && word.length > 2) {
+        variations.push(word.slice(0, -1));
+      }
+
+      return variations.some(qw => {
+        const regex = new RegExp(`\\b${qw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`);
+        return regex.test(displayLower);
+      });
+    });
+  }
+
   const filteredFoods = $derived(() => {
     // Combine custom foods with built-in foods and recipe foods
     const customAsFoods = $customFoods.map(customToFood);
@@ -53,6 +70,7 @@
       selectedGroup === 'recipes'
         ? [...recipeFoods]
         : [...customAsFoods, ...FOODS, ...recipeFoods];
+    const queryWords = searchQuery.toLowerCase().split(/\s+/).filter(w => w.length > 0);
     
     // Filter by group
     if (selectedGroup !== 'all' && selectedGroup !== 'recipes') {
@@ -62,27 +80,8 @@
     
     // Filter by search - split into words and require ALL words to match (AND logic)
     // Also handle basic plurals by stripping trailing 's'
-    const queryWords = searchQuery.toLowerCase().split(/\s+/).filter(w => w.length > 0);
     if (queryWords.length > 0) {
-      // For each query word, build a list of acceptable variations (e.g. plural handling)
-      const queryWordGroups = queryWords.map(w => {
-        const variations = [w];
-        if (w.endsWith('s') && w.length > 2) {
-          variations.push(w.slice(0, -1)); // "crackers" -> also try "cracker"
-        }
-        return variations;
-      });
-
-      foods = foods.filter(f => {
-        const displayLower = f.display.toLowerCase();
-        // Every query word must have at least one variation that matches
-        return queryWordGroups.every(variations =>
-          variations.some(qw => {
-            const regex = new RegExp(`\\b${qw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`);
-            return regex.test(displayLower);
-          })
-        );
-      });
+      foods = foods.filter(f => matchesQuery(f, queryWords));
     }
     
     if (queryWords.length === 0) {

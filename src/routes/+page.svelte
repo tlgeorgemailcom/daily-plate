@@ -1,8 +1,61 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
+  import { goto } from '$app/navigation';
   
   // Daily puzzle number (days since Jan 1, 2024)
   const puzzleNumber = Math.floor((Date.now() - new Date('2024-01-01').getTime()) / 86400000);
+
+  const games = [
+    {
+      href: '/chain',
+      title: '🔗 Chain',
+      description: 'Build a chain of 11 food words, each starting with the last letter of the previous word'
+    },
+    {
+      href: '/plate',
+      title: '🍽️ Plate',
+      description: 'Place 11 food words on a crossword grid'
+    },
+    {
+      href: '/balanced-diet',
+      title: '🥗 Balance',
+      description: 'Build a balanced meal by choosing foods from different groups'
+    },
+    {
+      href: '/matching',
+      title: '🎯 Match',
+      description: 'Catch falling food words by dragging a container on the right to catch the falling word and then match the container to a meal category on the left'
+    },
+    {
+      href: '/slider',
+      title: '🧩 Slider',
+      description: 'Slide tiles to unscramble the food image in this classic 8-puzzle game'
+    },
+    {
+      href: '/compare',
+      title: '👆 Compare',
+      description: 'Spot the 4 subtle differences between two nearly identical food images'
+    },
+    {
+      href: '/farmers-basket',
+      title: '🧺 Basket',
+      description: 'Help the farmer catch falling food in baskets while avoiding obstacles'
+    },
+    {
+      href: '/scrambled',
+      title: '🐝 Scramble Bees',
+      description: 'Find all the food words hidden in a set of scrambled letters (USDA or FOODIE levels)'
+    },
+    {
+      href: '/tower',
+      title: '🗼 Tower',
+      description: 'Climb the tower by guessing food words of decreasing length'
+    }
+  ];
+
+  function openGame(href: string) {
+    goto(href);
+  }
 </script>
 
 <svelte:head>
@@ -18,15 +71,13 @@
       <p>Tap a game to play:</p>
       
       <ul class="game-list">
-        <li><a href="/chain"><strong>🔗 Chain</strong></a> — Build a chain of 11 food words, each starting with the last letter of the previous word</li>
-        <li><a href="/plate"><strong>🍽️ Plate</strong></a> — Place 11 food words on a crossword grid</li>
-        <li><a href="/balanced-diet"><strong>🥗 Balance</strong></a> — Build a balanced meal by choosing foods from different groups</li>
-        <li><a href="/matching"><strong>🎯 Match</strong></a> — Catch falling food words by dragging a container on the right to catch the falling word and then match the container to a meal category on the left</li>
-        <li><a href="/slider"><strong>🧩 Slider</strong></a> — Slide tiles to unscramble the food image in this classic 8-puzzle game</li>
-        <li><a href="/compare"><strong>👆 Compare</strong></a> — Spot the 4 subtle differences between two nearly identical food images</li>
-        <li><a href="/farmers-basket"><strong>🧺 Basket</strong></a> — Help the farmer catch falling food in baskets while avoiding obstacles</li>
-        <li><a href="/scrambled"><strong>🐝 Scramble Bees</strong></a> — Find all the food words hidden in a set of scrambled letters (USDA or FOODIE levels)</li>
-        <li><a href="/tower"><strong>🗼 Tower</strong></a> — Climb the tower by guessing food words of decreasing length</li>
+        {#each games as game}
+          <li>
+            <button class="game-link" type="button" onclick={() => openGame(game.href)}>
+              <strong>{game.title}</strong> — {game.description}
+            </button>
+          </li>
+        {/each}
       </ul>
 
       <div class="cartoon-link">
@@ -93,22 +144,29 @@
   }
   
   .game-list li {
+    list-style: none;
+  }
+  
+  .game-link {
+    display: block;
+    width: 100%;
     font-size: 0.9rem;
     color: #4b5563;
     padding: 0.75rem;
     background: #f9fafb;
     border-radius: 0.5rem;
     line-height: 1.4;
-  }
-  
-  .game-list a {
-    text-decoration: none;
-    color: inherit;
+    text-align: left;
+    box-shadow: none;
   }
 
-  .game-list a:hover strong,
-  .game-list a:active strong {
+  .game-link:hover strong,
+  .game-link:active strong {
     color: #3b82f6;
+  }
+
+  .game-link:hover {
+    background: #f3f4f6;
   }
 
   .game-list strong {
