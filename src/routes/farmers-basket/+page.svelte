@@ -8,6 +8,7 @@
     GRID_COLS, GRID_ROWS, CELL_SIZE, pixelToGrid, gridToPixel, snapToGrid
   } from '$lib/farmers-basket/game-state.svelte';
   import { playerStore, isPremium } from '$lib/stores/playerStore';
+  import { gameSettings } from '$lib/stores/settingsStore';
   import { getLevelsWithOverrides, clearOverrideCache } from '$lib/farmers-basket/level-overrides';
   import Animal from '$lib/farmers-basket/Animal.svelte';
   import Farmer from '$lib/farmers-basket/Farmer.svelte';
@@ -36,6 +37,29 @@
   }
 
   let game = createGameState();
+  let householdMembers = $state<Array<{ id: string; groupage: string }>>([]);
+  const hasInfantProfile = $derived(
+    $gameSettings.ownerGroupage === 'Infants' || householdMembers.some((member) => member.groupage === 'Infants')
+  );
+
+  async function loadHouseholdMembers(playerId: string) {
+    try {
+      const res = await fetch(`/api/household-members?player_id=${encodeURIComponent(playerId)}`);
+      if (!res.ok) {
+        householdMembers = [];
+        return;
+      }
+      const data = await res.json();
+      householdMembers = Array.isArray(data)
+        ? data.map((member: { id?: string; groupage?: string }) => ({
+            id: member.id ?? '',
+            groupage: member.groupage ?? ''
+          }))
+        : [];
+    } catch {
+      householdMembers = [];
+    }
+  }
   
   // If a joinCode is present in the URL, open ShareRecipe immediately and skip
   // the recipe book — both initialized synchronously to prevent the game page
@@ -97,6 +121,20 @@
         console.warn('Could not load level overrides:', err);
       }
     }
+
+    const player = get(playerStore);
+    if (player.status === 'logged-in' && player.id) {
+      await loadHouseholdMembers(player.id);
+    }
+  });
+
+  $effect(() => {
+    const playerId = $playerStore.status === 'logged-in' ? $playerStore.id : null;
+    if (!playerId) {
+      householdMembers = [];
+      return;
+    }
+    void loadHouseholdMembers(playerId);
   });
   
   // Reload levels after moderator edits (premium only)
@@ -1003,6 +1041,7 @@
     levels={game.allLevels}
     completedLevels={game.completedLevels}
     currentLevelId={game.currentLevel?.id ?? null}
+    {hasInfantProfile}
     startWithRecipeOfDay={showRecipeOfDay}
     onselect={(id) => { game.loadLevel(id); game.startLevel(); showRecipeBook = false; showRecipeOfDay = true; }}
     onclose={() => { 

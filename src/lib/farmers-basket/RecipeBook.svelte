@@ -7,7 +7,7 @@
   import { clearOverrideCache } from './level-overrides';
   
   // All available meal categories (shown even if empty)
-  const ALL_CATEGORIES = [
+  const BASE_CATEGORIES = [
     'Breakfast',
     'Soups & Stews',
     'Sandwiches & Burgers',
@@ -48,6 +48,7 @@
     levels: Level[];
     completedLevels: Set<string>;
     currentLevelId: string | null;
+    hasInfantProfile?: boolean;
     onselect: (levelId: string) => void;
     onclose: () => void;
     onshare?: () => void;
@@ -55,7 +56,7 @@
     startWithRecipeOfDay?: boolean;
   }
   
-  let { levels, completedLevels, currentLevelId, onselect, onclose, onshare, onLevelsUpdated, startWithRecipeOfDay = false }: Props = $props();
+  let { levels, completedLevels, currentLevelId, hasInfantProfile = false, onselect, onclose, onshare, onLevelsUpdated, startWithRecipeOfDay = false }: Props = $props();
   
   // View states: 'dietary-select' | 'recipe-of-day' | 'index' | 'detail'
   let showDietarySelect = $state(false);
@@ -190,6 +191,12 @@
   
   // Search/filter
   let searchQuery = $state('');
+
+  let categories = $state<string[]>(BASE_CATEGORIES);
+
+  $effect(() => {
+    categories = hasInfantProfile ? [...BASE_CATEGORIES, 'Baby Food'] : BASE_CATEGORIES;
+  });
   
   // Collapsed categories (set of category names that are collapsed)
   let collapsedCategories = $state<Set<string>>(new Set());
@@ -198,7 +205,7 @@
   let categoryGroups = $derived(() => {
     const groups = new Map<string, Level[]>();
     // Initialize all categories (even empty ones)
-    for (const cat of ALL_CATEGORIES) {
+    for (const cat of categories) {
       groups.set(cat, []);
     }
     // Fill with filtered levels
@@ -210,13 +217,10 @@
     return groups;
   });
   
-  // Use predefined category order
-  let categories = ALL_CATEGORIES;
-  
   // Category completion stats (based on filtered levels)
   let categoryStats = $derived(() => {
     const stats = new Map<string, { completed: number; total: number }>();
-    for (const category of ALL_CATEGORIES) {
+    for (const category of categories) {
       const categoryLevels = categoryGroups().get(category) || [];
       const completed = categoryLevels.filter(l => completedLevels.has(l.id)).length;
       stats.set(category, { completed, total: categoryLevels.length });
