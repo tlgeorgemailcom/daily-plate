@@ -89,12 +89,12 @@ function buildSearchWhere(query: string, scope: Sr28SearchScope): { sql: string;
     clauses.push('"FdGrp_Cd" = ?');
     args.push('300');
   } else {
-    clauses.push('COALESCE("FdGrp_Cd", "") <> ?');
+    clauses.push('COALESCE("FdGrp_Cd", \'\') <> ?');
     args.push('300');
   }
 
   for (const term of terms) {
-    clauses.push('(LOWER(COALESCE("Long_Desc", "")) LIKE ? OR LOWER(COALESCE(keyword, "")) LIKE ?)');
+    clauses.push('(LOWER(COALESCE("Long_Desc", \'\')) LIKE ? OR LOWER(COALESCE("keyword", \'\')) LIKE ?)');
     const like = `%${term}%`;
     args.push(like, like);
   }

@@ -9,13 +9,15 @@
   // All available meal categories (shown even if empty)
   const ALL_CATEGORIES = [
     'Breakfast',
-    'Lunch',
-    'Dinner',
-    'Snacks',
-    'Sweets & Desserts',
-    'Beverages',
+    'Soups & Stews',
+    'Sandwiches & Burgers',
     'Salads',
-    'Sides'
+    'Pasta & Pizza',
+    'Entrees & Main Courses',
+    'Sides',
+    'Desserts',
+    'Beverages',
+    'Sauces & Condiments'
   ];
   
   // Dietary preference categories

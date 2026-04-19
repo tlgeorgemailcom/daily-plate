@@ -72,7 +72,7 @@ RECIPE_FOODS = {
     'DINR_036': ['bacon', 'carrot'],
     'DINR_037': ['chicken', 'carrot', 'butter'],
     # Japan
-    'JAPAN_003': ['tomato', 'egg', 'carrot'],  # miso soup (tofu/scallions) + rice
+    'JAPAN_003': ['bread', 'butter', 'carrot'],  # miso paste — fermented soybean
     # Lunch
     'LUNCH_001': ['bacon', 'cheese', 'bread'],
     'LUNCH_002': ['bacon', 'bread', 'tomato'],

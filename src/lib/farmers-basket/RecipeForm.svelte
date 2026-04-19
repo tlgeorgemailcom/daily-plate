@@ -27,7 +27,10 @@
   }
   
   export interface RecipeFormData {
-    recipeName: string;
+    recipeName: string;     // combined: "Dish Name — Suffix"
+    dishName: string;       // common dish name e.g. "Apple Pie"
+    recipeSuffix: string;   // personal suffix e.g. "Grandma's"
+    cookingMethod: string;  // Bake | Boil | Grill | Fry | No heat
     category: string;
     dietaryCategory: DietaryCategory;
     submitterName: string;
@@ -79,7 +82,18 @@
   }: Props = $props();
   
   // Constants
-  const CATEGORIES = ['Breakfast', 'Lunch', 'Dinner', 'Snacks', 'Sweets & Desserts', 'Salads', 'Sides', 'Beverages'];
+  const CATEGORIES = [
+    'Breakfast',
+    'Soups & Stews',
+    'Sandwiches & Burgers',
+    'Salads',
+    'Pasta & Pizza',
+    'Entrees & Main Courses',
+    'Sides',
+    'Desserts',
+    'Beverages',
+    'Sauces & Condiments'
+  ];
   
   const DIETARY_CATEGORIES = [
     { id: 'all' as DietaryCategory, name: 'All Foods', emoji: '🍽️', description: 'No restrictions' },
@@ -93,9 +107,15 @@
   const GAME_FOODS = Object.keys(FOOD_EMOJI) as FoodType[];
   const ANIMAL_TYPES: AnimalType[] = ['rabbit', 'squirrel', 'raccoon', 'bird', 'mouse', 'fox'];
   
+  const COOKING_METHODS = ['Bake', 'Boil', 'Grill', 'Fry', 'No heat'];
+
   // Form state
   let recipeName = $state(initialData.recipeName || '');
-  let category = $state(initialData.category || 'Dinner');
+  // Split existing recipeName into parts if present (format: "Dish Name — Suffix")
+  let dishName = $state(initialData.dishName || (initialData.recipeName?.includes(' — ') ? initialData.recipeName.split(' — ')[0] : initialData.recipeName || ''));
+  let recipeSuffix = $state(initialData.recipeSuffix || (initialData.recipeName?.includes(' — ') ? initialData.recipeName.split(' — ')[1] : ''));
+  let cookingMethod = $state(initialData.cookingMethod || 'Bake');
+  let category = $state(initialData.category || 'Entrees & Main Courses');
   let dietaryCategory = $state<DietaryCategory>(initialData.dietaryCategory || 'all');
   let submitterName = $state(initialData.submitterName || '');
   let prepTime = $state(initialData.prepTime || '');
@@ -360,9 +380,14 @@
   function handleSubmit(e: Event) {
     e.preventDefault();
     
+    const combined = recipeSuffix.trim() ? `${dishName.trim()} — ${recipeSuffix.trim()}` : dishName.trim();
+    recipeName = combined;
     const linked = nutritionMode && nutritionComplete;
     const data: RecipeFormData = {
-      recipeName,
+      recipeName: combined,
+      dishName: dishName.trim(),
+      recipeSuffix: recipeSuffix.trim(),
+      cookingMethod,
       category,
       dietaryCategory,
       submitterName,
@@ -394,15 +419,26 @@
   }
   
   // Validation
+  let dishNameTooGeneric = $derived(
+    dishName.trim().split(/\s+/).length < 2 && dishName.trim().length > 0
+  );
+  let nameReady = $derived(
+    dishName.trim().split(/\s+/).length >= 2 && recipeSuffix.trim().length > 0
+  );
   let isValid = $derived(
-    recipeName.trim().length > 0 &&
+    dishName.trim().length > 0 &&
+    !dishNameTooGeneric &&
+    recipeSuffix.trim().length > 0 &&
     ingredients.some(i => i.name.trim()) &&
     instructions.some(i => i.text.trim())
   );
   
   // Current form data (for customActions snippet)
   let formData = $derived<RecipeFormData>({
-    recipeName,
+    recipeName: recipeSuffix.trim() ? `${dishName.trim()} — ${recipeSuffix.trim()}` : dishName.trim(),
+    dishName: dishName.trim(),
+    recipeSuffix: recipeSuffix.trim(),
+    cookingMethod,
     category,
     dietaryCategory,
     submitterName,
@@ -428,23 +464,50 @@
     
     <div class="form-row">
       <label class="form-label flex-2">
-        Recipe Name *
+        Dish Name *
         <input 
           type="text" 
-          bind:value={recipeName}
-          placeholder="e.g., Grandma's Apple Pie"
+          bind:value={dishName}
+          placeholder="e.g., Apple Pie"
           class="form-input"
+          class:input-error={dishNameTooGeneric}
           required
         />
+        {#if dishNameTooGeneric}
+          <span class="field-hint field-hint-warn">Use a dish name like "Apple Pie" or "Chicken Stir Fry"</span>
+        {/if}
       </label>
-      
+
       <label class="form-label">
-        Meal Type *
+        Your Version *
+        <input
+          type="text"
+          bind:value={recipeSuffix}
+          placeholder="e.g., Grandma's"
+          class="form-input"
+        />
+        <span class="field-hint">Makes your recipe unique</span>
+      </label>
+    </div>
+
+    <div class="form-row">
+      <label class="form-label">
+        Dish Family *
         <select bind:value={category} class="form-select">
           {#each CATEGORIES as cat}
             <option value={cat}>{cat}</option>
           {/each}
         </select>
+      </label>
+
+      <label class="form-label">
+        Final Dish Preparation
+        <select bind:value={cookingMethod} class="form-select">
+          {#each COOKING_METHODS as m}
+            <option value={m}>{m}</option>
+          {/each}
+        </select>
+        <span class="field-hint">Choose how the finished dish is prepared, not each ingredient step</span>
       </label>
     </div>
     
@@ -461,6 +524,14 @@
     {/if}
   </div>
   
+  <!-- Lock hint -->
+  {#if !nameReady}
+    <div class="name-lock-hint">
+      Name your recipe first to unlock the rest
+    </div>
+  {/if}
+
+  <div class="form-body" class:locked={!nameReady}>
   <!-- Dietary Category Section -->
   <div class="form-section dietary-section">
     <h3 class="section-title">🥗 Dietary Category *</h3>
@@ -955,6 +1026,7 @@
       </button>
     {/if}
   </div>
+  </div> <!-- /form-body -->
 </form>
 
 <style>
@@ -970,6 +1042,41 @@
     padding: 10px 14px;
     border-radius: 8px;
     font-size: 0.9rem;
+  }
+
+  .input-error {
+    border-color: #E53935 !important;
+  }
+
+  .name-lock-hint {
+    text-align: center;
+    font-size: 0.82rem;
+    color: #999;
+    padding: 6px 0 2px;
+    letter-spacing: 0.01em;
+  }
+
+  .form-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form-body.locked {
+    opacity: 0.35;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .field-hint {
+    font-size: 0.78rem;
+    color: #888;
+    margin-top: 3px;
+    display: block;
+  }
+
+  .field-hint-warn {
+    color: #E53935;
   }
   
   .form-section {

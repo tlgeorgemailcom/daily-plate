@@ -341,6 +341,8 @@
           activity_level: ownerActivityLevel,
         }
   );
+  const shouldPromoteBabyScope = $derived(activeProfile.groupage === 'Infants');
+  const shouldEnableBabyScope = $derived(isPlus && shouldPromoteBabyScope);
 
   // Member editing state (editable DRI fields for the active member)
   let editingMemberGroupage = $state('Males');
@@ -2203,7 +2205,13 @@
 
     <!-- Center: Food picker (main area) -->
     <div class="picker-area">
-      <FoodPicker recipeFoods={recipeFoods} on:select={handleFoodSelect} on:addCustom={handleAddCustomFood} />
+      <FoodPicker
+        recipeFoods={recipeFoods}
+        enableBabyScope={shouldEnableBabyScope}
+        promoteBabyScope={shouldEnableBabyScope}
+        on:select={handleFoodSelect}
+        on:addCustom={handleAddCustomFood}
+      />
     </div>
 
     <!-- Right: Pie chart + nutrient picker -->

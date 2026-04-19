@@ -1,116 +1,166 @@
-recipe_id,food_word,recipe_name,category,dietary_category,link_type,prep_time,servings,sr28_rule,sr28_notes,status
-SWEET_001,APPLEPIE,Pie Apple,Sweets & Desserts,veggie,dish,45 mins,8 slices,Rule 1,,todo
-SWEET_002,APPLESTRUDEL,Apple Strudel,Sweets & Desserts,veggie,dish,45 mins,8 servings,Rule 1,,todo
-DINR_001,BEEFPOTPIE,Beef Pot Pie,Dinner,all,dish,60 mins,6 servings,Rule 1,,todo
-DINR_002,BEEFSTEW,Beef Stew,Dinner,all,dish,90 mins,6 servings,Rule 1,,todo
-SIDE_001,BISCUIT,Biscuit,Sides,veggie,dish,25 mins,12 biscuits,Rule 1,,todo
-DINR_003,BURRITO,Burrito Beef Bean,Dinner,all,dish,20 mins,1 serving,Rule 1,,todo
-DINR_004,BURRITOBEANCHEESE,Burrito Bean Cheese,Dinner,veggie,dish,20 mins,1 serving,Rule 1,,todo
-DINR_005,BURRITOBEANCHEESEBEEF,Burrito Bean Cheese Beef,Dinner,all,dish,20 mins,1 serving,Rule 1,,todo
-DINR_006,BURRITOBEANS,Burrito Bean,Dinner,vegan,dish,20 mins,1 serving,Rule 1,,todo
-SWEET_003,CAKEANGELFOOD,Cake Angel Food,Sweets & Desserts,veggie,dish,45 mins,12 slices,Rule 1,,todo
-SWEET_004,CAKECHEESECAKE,Cake Cheesecake,Sweets & Desserts,veggie,dish,60 mins,8 slices,Rule 1,,todo
-SWEET_005,CAKECHOCOLATE,Cake Chocolate no Frosting,Sweets & Desserts,veggie,dish,35 mins,12 slices,Rule 1,,todo
-SWEET_006,CAKECHOCOLATEFROSTING,Cake Chocolate Frosting,Sweets & Desserts,veggie,dish,45 mins,12 slices,Rule 1,,todo
-SWEET_007,CAKECOFFEECAKE,Cake Coffee,Sweets & Desserts,veggie,dish,40 mins,12 slices,Rule 1,,todo
-SWEET_008,CAKEGINGERBREAD,Cake Gingerbread,Sweets & Desserts,veggie,dish,40 mins,12 slices,Rule 1,,todo
-SWEET_009,CAKEPINEAPPLE,Cake Pineapple,Sweets & Desserts,veggie,dish,45 mins,12 slices,Rule 1,,todo
-SWEET_010,CAKEPOUND,Cake Pound,Sweets & Desserts,veggie,dish,60 mins,12 slices,Rule 1,,todo
-SWEET_011,CAKESHORTCAKE,Cake Shortcake,Sweets & Desserts,veggie,dish,30 mins,8 servings,Rule 1,,todo
-SWEET_012,CAKESPONGE,Cake Sponge,Sweets & Desserts,veggie,dish,40 mins,12 slices,Rule 1,,todo
-SWEET_013,CAKEWHITE,Cake White no Frosting,Sweets & Desserts,veggie,dish,35 mins,12 slices,Rule 1,,todo
-SWEET_014,CAKEWHITECOCONUTFROSTING,Cake White Coconut Frosting,Sweets & Desserts,veggie,dish,45 mins,12 slices,Rule 1,,todo
-SWEET_015,CAKEYELLOWCHOCOLATEFROSTING,Cake Yellow Choc Frosting,Sweets & Desserts,veggie,dish,45 mins,12 slices,Rule 1,,todo
-SWEET_016,CAKEYELLOWFROSTING,Cake Yellow Vanilla Frosting,Sweets & Desserts,veggie,dish,45 mins,12 slices,Rule 1,,todo
-LUNCH_001,CHEESEBURGER,Cheeseburger,Lunch,all,dish,15 mins,1 serving,Rule 1,,todo
-DINR_007,CHICKENPARMESAN,Chicken Parmesan,Dinner,pollo,dish,40 mins,4 servings,Rule 1,SR28 restaurant entry without pasta - note in recipe,todo
-DINR_008,CHICKENPOTPIE,Chicken Pot Pie,Dinner,pollo,dish,60 mins,6 servings,Rule 1,,todo
-DINR_009,CHICKENRICE,Chicken Rice,Dinner,pollo,dish,30 mins,4 servings,Rule 1,,todo
-DINR_010,CHICKENSESAME,Chicken Sesame,Dinner,pollo,dish,25 mins,2 servings,Rule 1,,todo
-DINR_011,CHILI,Chili,Dinner,all,dish,60 mins,6 servings,Rule 1,,todo
-DINR_012,CHILIBEANS,Chili Beans,Dinner,vegan,dish,30 mins,4 servings,Rule 1,,todo
-LUNCH_002,CHILIDOG,Chili Dog,Lunch,all,dish,15 mins,1 serving,Rule 1,,todo
-DINR_013,CHINESEBEEFVEG,Chinese Beef and Veg,Dinner,all,dish,20 mins,2 servings,Rule 1,,todo
-DINR_014,CHINESECHICKCHOWMEIN,Chinese Chicken Chow Mein,Dinner,pollo,dish,20 mins,2 servings,Rule 1,,todo
-DINR_015,CHINESEGENERAL,Chinese General Tso’s Chicken,Dinner,pollo,dish,25 mins,2 servings,Rule 1,,todo
-DINR_016,CHINESEKUNGPAOCHICK,Chinese Kung Pao Chicken,Dinner,pollo,dish,25 mins,2 servings,Rule 1,,todo
-DINR_017,CHINESELEMONCHICK,Chinese Lemon Chicken,Dinner,pollo,dish,25 mins,2 servings,Rule 1,,todo
-DINR_018,CHINESESHRIMPVEG,Chinese Shrimp and veg,Dinner,pesca,dish,20 mins,2 servings,Rule 1,,todo
-DINR_019,CHINESESWSOURCHICK,Chinese Sweet Sour Chicken,Dinner,pollo,dish,25 mins,2 servings,Rule 1,,todo
-DINR_020,CHINESESWSOURPORK,Chinese Sweet Sour Pork,Dinner,all,dish,25 mins,2 servings,Rule 1,,todo
-DINR_021,CHINESEVEGCHOWMEIN,Chinese Veg Chow Mein,Dinner,veggie,dish,20 mins,2 servings,Rule 1,,todo
-DINR_022,CHINESEVEGLOMEIN,Chinese Veg lo Mein,Dinner,veggie,dish,20 mins,2 servings,Rule 1,,todo
-LUNCH_003,CLUBSANDWICH,Sandwich Club,Lunch,all,dish,15 mins,1 serving,Rule 1,,todo
-SWEET_017,COOKIESBROWNIES,Cookies Brownies,Sweets & Desserts,veggie,dish,30 mins,24 brownies,Rule 1,,todo
-SWEET_018,COOKIESBUTTER,Cookies Butter,Sweets & Desserts,veggie,dish,25 mins,36 cookies,Rule 1,,todo
-SWEET_019,COOKIESCHOCOLATECHIP,Cookies Choc Chip,Sweets & Desserts,veggie,dish,25 mins,36 cookies,Rule 1,,todo
-SWEET_020,COOKIESFIGBAR,Cookies Fig Bar,Sweets & Desserts,veggie,dish,25 mins,24 cookies,Rule 1,,todo
-SWEET_021,COOKIESGINGERSNAP,Cookies Gingersnap,Sweets & Desserts,veggie,dish,25 mins,36 cookies,Rule 1,,todo
-SWEET_022,COOKIESMACAROON,Cookies Macaroon,Sweets & Desserts,veggie,dish,25 mins,24 cookies,Rule 1,,todo
-SWEET_023,COOKIESMOLASSES,Cookies Molasses,Sweets & Desserts,veggie,dish,25 mins,36 cookies,Rule 1,,todo
-SWEET_024,COOKIESOATMEAL,Cookies Oatmeal,Sweets & Desserts,veggie,dish,25 mins,36 cookies,Rule 1,,todo
-SWEET_025,COOKIESOATMEALRAISIN,Cookies Oatmeal Raisin,Sweets & Desserts,veggie,dish,25 mins,36 cookies,Rule 1,,todo
-SWEET_026,COOKIESPEANUTBUTTER,Cookies Peanut Butter,Sweets & Desserts,veggie,dish,25 mins,36 cookies,Rule 1,,todo
-SWEET_027,COOKIESSHORTBREAD,Cookies Shortbread,Sweets & Desserts,veggie,dish,25 mins,36 cookies,Rule 1,,todo
-SWEET_028,COOKIESSUGAR,Cookies Sugar,Sweets & Desserts,veggie,dish,25 mins,36 cookies,Rule 1,,todo
-SIDE_002,CORNBREAD,Cornbread,Sides,veggie,dish,30 mins,9 servings,Rule 1,,todo
-SNACK_001,CORNDOG,Corn Dog,Snacks,all,dish,20 mins,1 serving,Rule 1,,todo
-SWEET_029,DOUGHNUTCAKEGLAZE,Doughnut Cake-type Glazed,Sweets & Desserts,veggie,dish,30 mins,12 doughnuts,Rule 1,,todo
-SNACK_002,EGGROLL,Egg Roll,Snacks,veggie,dish,20 mins,1 roll,Rule 1,SR28 vegetable egg roll,todo
-SNACK_003,EGGROLLCHICKEN,Egg Roll Chicken,Snacks,pollo,dish,20 mins,1 roll,Rule 1,,todo
-SNACK_004,EGGROLLPORK,Egg Roll Pork,Snacks,all,dish,20 mins,1 roll,Rule 1,,todo
-DINR_023,ENCHILADACHEESE,Enchiladas Cheese,Dinner,veggie,dish,40 mins,4 servings,Rule 1,,todo
-LUNCH_004,FALAFEL,Falafel,Lunch,vegan,dish,30 mins,4 servings,Rule 1,,todo
-LUNCH_005,HAMBURGER,Hamburger,Lunch,all,dish,15 mins,1 serving,Rule 1,,todo
-BFAST_001,HASHBROWN,Hash Brown,Breakfast,vegan,dish,15 mins,4 servings,Rule 1,,todo
-SNACK_005,HUMMUS,Hummus,Snacks,vegan,dish,10 mins,8 servings,Rule 1,,todo
-SIDE_003,HUSHPUPPIES,Hush Puppies,Sides,veggie,dish,20 mins,12 hush puppies,Rule 1,,todo
-DINR_024,LASAGNA,Lasagna,Dinner,veggie,dish,60 mins,8 servings,Rule 1,,todo
-DINR_025,LASAGNAMEAT,Lasagna with Meat,Dinner,all,dish,60 mins,8 servings,Rule 1,,todo
-SIDE_004,MACARONICHEESE,Macaroni and Cheese,Sides,veggie,dish,25 mins,4 servings,Rule 1,,todo
-SIDE_005,MARINARASAUCE,Marinara Sauce,Sides,vegan,dish,20 mins,4 servings,Rule 1,Ready-to-serve SR28 entry,todo
-DINR_026,MEATBALLS,Meatballs,Dinner,all,dish,30 mins,4 servings,Rule 1,,todo
-BEV_001,MILKSHAKECHOC,Milkshake Choc,Beverages,all,dish,5 mins,1 serving,Rule 1,,todo
-BEV_002,MILKSHAKEVANILLA,Milkshake Vanilla,Beverages,veggie,dish,5 mins,1 serving,Rule 1,,todo
-BFAST_002,MUFFINCORN,Muffin Corn,Breakfast,veggie,dish,25 mins,12 muffins,Rule 1,,todo
-BFAST_003,MUFFUNBLUEBERRY,Muffin Blueberry,Breakfast,veggie,dish,25 mins,12 muffins,Rule 1,Word key typo MUFFUN vs MUFFIN - fix in food-portions-complete.csv,todo
-BFAST_004,PANCAKE,Pancake Buttermilk,Breakfast,veggie,dish,20 mins,8 pancakes,Rule 1,,todo
-BFAST_005,PANCAKEBLUEBERRY,Pancake Blueberry,Breakfast,veggie,dish,20 mins,8 pancakes,Rule 1,,todo
-BFAST_006,PANCAKEGLUTENFREE,Pancake Gluten Free,Breakfast,veggie,dish,20 mins,8 pancakes,Rule 1,,todo
-BFAST_007,PANCAKEPLAIN,Pancake Plain,Breakfast,veggie,dish,20 mins,8 pancakes,Rule 1,,todo
-DINR_027,PASTAPOMODOROCHIC,Pasta Chicken Pomodoro,Dinner,pollo,dish,30 mins,4 servings,Rule 1,,todo
-DINR_029,PASTATOMATOMEATLESS,Pasta with Tomato Sauce Meatless,Dinner,veggie,dish,30 mins,4 servings,Rule 1,,todo
-SIDE_006,PEANUTSAUCE,Peanut Sauce,Sides,vegan,dish,10 mins,4 servings,Rule 1,,todo
-SWEET_030,PIEBANANACREAM,Pies Banana Cream,Sweets & Desserts,veggie,dish,30 mins,8 slices,Rule 1,,todo
-SWEET_031,PIEBLUEBERRY,Pies Blueberry,Sweets & Desserts,veggie,dish,45 mins,8 slices,Rule 1,,todo
-SWEET_032,PIEBOSTONCREAM,Pies Boston Cream,Sweets & Desserts,veggie,dish,45 mins,8 slices,Rule 1,,todo
-SWEET_033,PIECHERRY,Pies Cherry,Sweets & Desserts,veggie,dish,45 mins,8 slices,Rule 1,,todo
-SWEET_034,PIECHOCOLATE,Pies Chocolate,Sweets & Desserts,veggie,dish,30 mins,8 slices,Rule 1,,todo
-SWEET_035,PIECOCONUT,Pies Coconut,Sweets & Desserts,veggie,dish,30 mins,8 slices,Rule 1,,todo
-SWEET_036,PIEDUTCHAPPLE,Pies Dutch Apple,Sweets & Desserts,veggie,dish,45 mins,8 slices,Rule 1,,todo
-SWEET_037,PIELEMON,Pies Lemon,Sweets & Desserts,veggie,dish,30 mins,8 slices,Rule 1,,todo
-SWEET_038,PIEMINCE,Pies Mince,Sweets & Desserts,all,dish,45 mins,8 slices,Rule 1,May contain suet/meat - verify dietary category,todo
-SWEET_039,PIEPEACH,Pies Peach,Sweets & Desserts,veggie,dish,45 mins,8 slices,Rule 1,,todo
-SWEET_040,PIEPECAN,Pies Pecan,Sweets & Desserts,veggie,dish,45 mins,8 slices,Rule 1,,todo
-SWEET_041,PIEPUMPKIN,Pies Pumpkin,Sweets & Desserts,veggie,dish,50 mins,8 slices,Rule 1,,todo
-SIDE_007,POTATOESSCALLOPED,Scalloped Potatoes,Sides,veggie,dish,60 mins,6 servings,Rule 1,,todo
-SALAD_001,POTATOSALAD,Potato Salad,Salads,veggie,dish,20 mins,6 servings,Rule 1,,todo
-LUNCH_006,QUESADILLACHEESE,Quesadilla Cheese,Lunch,veggie,dish,10 mins,1 serving,Rule 1,,todo
-DINR_031,RAVIOLI,Ravioli,Dinner,veggie,dish,20 mins,4 servings,Rule 1,,todo
-SIDE_008,RICEFRIED,Chinese Rice Fried,Sides,vegan,dish,20 mins,4 servings,Rule 1,,todo
-SIDE_009,ROLLDINNER,Dinner Roll,Sides,veggie,dish,20 mins,12 rolls,Rule 1,,todo
-SIDE_010,ROLLDINNERSWEET,Sweet Dinner Roll,Sides,veggie,dish,25 mins,12 rolls,Rule 1,,todo
-SIDE_011,ROLLDINNERWHOLE,Whole Wheat Dinner Roll,Sides,veggie,dish,20 mins,12 rolls,Rule 1,,todo
-LUNCH_007,SANDSUBBLT,Sandwich Sub BLT,Lunch,all,dish,10 mins,1 serving,Rule 1,,todo
-SIDE_012,SAUCE,Cheese Sauce,Sides,veggie,dish,15 mins,4 servings,Rule 1,,todo
-LUNCH_008,SOUPEGGDROP,Soup Egg Drop,Lunch,all,dish,15 mins,4 servings,Rule 1,,todo
-LUNCH_009,SOUPHOTSOUR,Soup Hot Sour,Lunch,all,dish,20 mins,4 servings,Rule 1,,todo
-SALAD_002,TACOSALAD,Taco Salad,Salads,all,dish,15 mins,1 serving,Rule 1,,todo
-DINR_032,TACOBEEF,Taco Beef Lettuce Cheese,Dinner,all,dish,20 mins,2 tacos,Rule 1,,todo
-DINR_033,TACOCHICKEN,Taco Chicken Lettuce Cheese,Dinner,pollo,dish,20 mins,2 tacos,Rule 1,,todo
-DINR_034,TAMALESCHEESE,Tamales Cheese,Dinner,veggie,dish,60 mins,4 servings,Rule 1,,todo
-DINR_035,TAMALESPORK,Tamales Pork,Dinner,all,dish,60 mins,4 servings,Rule 1,,todo
-DINR_036,TRIPE,Tripe,Dinner,all,dish,60 mins,4 servings,Rule 1,,todo
-SALAD_003,TUNASALAD,Tuna Salad,Salads,pesca,dish,15 mins,4 servings,Rule 1,,todo
-DINR_037,TURKEYPOTPIE,Turkey Pot Pie,Dinner,pollo,dish,60 mins,6 servings,Rule 1,,todo
-JAPAN_003,MISOSOUPRICE,Miso Soup + Rice,Dinner,vegan,mixed,15 mins,1,Rule 1,Dish row uses NDB 06035 (soup miso); rice added as separate ingredient component,published
+recipe_id,recipe_name,category,dietary_category,link_type,prep_time,servings,sr28_rule,sr28_notes,status
+BFAST_001,Pancakes,Breakfast,veggie,dish,20 mins,8 pancakes,Rule 1,SR28 complete - verify NDB for plain pancakes,todo
+BFAST_002,Scrambled Eggs,Breakfast,veggie,dish,10 mins,2 servings,Rule 1,SR28 complete - NDB 01132 verify,todo
+BFAST_003,Bacon,Breakfast,all,dish,10 mins,4 strips,Rule 1,SR28 complete - cooked bacon verify NDB,todo
+BFAST_004,French Toast,Breakfast,veggie,dish,15 mins,4 slices,Rule 1,SR28 complete - verify NDB,todo
+BFAST_005,Oatmeal,Breakfast,veggie,dish,10 mins,1 serving,Rule 1,SR28 complete - verify NDB,todo
+BFAST_006,Biscuits & Gravy,Breakfast,all,ingredient,20 mins,4 servings,Rule 2,,todo
+BFAST_007,Eggs Benedict,Breakfast,all,ingredient,25 mins,2 servings,Rule 2,Gap: hollandaise - raw calc from egg yolk + butter + lemon,todo
+BFAST_008,Breakfast Burrito,Breakfast,all,ingredient,15 mins,1 serving,Rule 2,,todo
+BFAST_009,Breakfast Sandwich,Breakfast,all,ingredient,15 mins,1 serving,Rule 2,,todo
+SANDW_001,BLT,Sandwiches & Burgers,all,ingredient,10 mins,1 serving,Rule 2,,todo
+SANDW_002,Club Sandwich,Sandwiches & Burgers,all,ingredient,15 mins,1 serving,Rule 2,,todo
+SANDW_003,Grilled Cheese,Sandwiches & Burgers,veggie,dish,10 mins,1 serving,Rule 1,SR28 complete - verify NDB,todo
+SANDW_004,Reuben,Sandwiches & Burgers,all,ingredient,15 mins,1 serving,Rule 2,,todo
+SANDW_005,Tuna Salad Sandwich,Sandwiches & Burgers,pesca,ingredient,10 mins,1 serving,Rule 2,SR28 has tuna salad - verify as dish_ingredient component,todo
+SANDW_006,Chicken Salad Sandwich,Sandwiches & Burgers,pollo,ingredient,10 mins,1 serving,Rule 2,SR28 has chicken salad component,todo
+SANDW_007,Egg Salad Sandwich,Sandwiches & Burgers,veggie,ingredient,10 mins,1 serving,Rule 2,SR28 has egg salad component,todo
+SANDW_008,Philly Cheesesteak,Sandwiches & Burgers,all,ingredient,20 mins,1 serving,Rule 2,Gap: sauteed peppers/onions - sum individual SR28 vegetable items by weight,todo
+SANDW_009,Italian Sub,Sandwiches & Burgers,all,ingredient,10 mins,1 serving,Rule 2,,todo
+BURG_001,Hamburger,Sandwiches & Burgers,all,ingredient,15 mins,1 serving,Rule 2,,todo
+BURG_002,Cheeseburger,Sandwiches & Burgers,all,ingredient,15 mins,1 serving,Rule 2,,todo
+BURG_003,Bacon Cheeseburger,Sandwiches & Burgers,all,ingredient,15 mins,1 serving,Rule 2,,todo
+BURG_004,Mushroom Swiss Burger,Sandwiches & Burgers,all,ingredient,20 mins,1 serving,Rule 2,Gap: sauteed mushrooms - sum SR28 mushroom items by weight,todo
+BURG_005,Turkey Burger,Sandwiches & Burgers,pollo,ingredient,15 mins,1 serving,Rule 2,,todo
+AMER_001,Fried Chicken (piece),Entrees & Main Courses,all,dish,30 mins,4 pieces,Rule 1,SR28 complete - verify NDB,todo
+AMER_002,Fried Chicken Dinner,Entrees & Main Courses,all,mixed,35 mins,4 servings,Rule 3 - Dual,Primary dish: SR28 fried chicken + mashed potatoes + gravy + vegetable individually linked,todo
+AMER_003,Meatloaf (slice),Entrees & Main Courses,all,dish,60 mins,8 slices,Rule 1,SR28 complete - verify NDB,todo
+AMER_004,Meatloaf Dinner,Entrees & Main Courses,all,mixed,65 mins,4 servings,Rule 2,Primary dish: SR28 meatloaf + mashed potatoes + green beans individually linked,todo
+AMER_005,Roast Chicken Dinner,Entrees & Main Courses,pollo,mixed,90 mins,4 servings,Rule 2,Primary dish: roasted chicken + roasted potatoes + vegetable,todo
+AMER_006,Pot Roast Plate,Entrees & Main Courses,all,mixed,120 mins,6 servings,Rule 2,Primary dish: SR28 beef pot roast + potatoes + carrots + gravy,todo
+AMER_007,Beef Steak Dinner,Entrees & Main Courses,all,mixed,30 mins,1 serving,Rule 3 - Dual,Primary dish: SR28 grilled steak + baked potato + sour cream + vegetable,todo
+AMER_008,Pork Chop Dinner,Entrees & Main Courses,all,mixed,30 mins,2 servings,Rule 2,Primary dish: SR28 pork chop + applesauce + mashed potatoes,todo
+AMER_009,Salmon Dinner,Entrees & Main Courses,pesca,mixed,30 mins,2 servings,Rule 3 - Dual,Primary dish: SR28 baked salmon + rice + steamed broccoli,todo
+AMER_010,Chicken Pot Pie,Entrees & Main Courses,all,dish,60 mins,6 servings,Rule 1,SR28 complete - verify NDB,todo
+AMER_011,Shrimp & Grits,Entrees & Main Courses,pesca,ingredient,30 mins,2 servings,Rule 2,Gap: seasoning/sauce - cooked shrimp + cooked grits + butter,todo
+PIZZA_001,Cheese Pizza,Pasta & Pizza,veggie,dish,35 mins,8 slices,Rule 1,SR28 complete cheese pizza - verify NDB,todo
+PIZZA_002,Pepperoni Pizza,Pasta & Pizza,all,ingredient,40 mins,8 slices,Rule 2,,todo
+PIZZA_003,Meat Lovers Pizza,Pasta & Pizza,all,ingredient,45 mins,8 slices,Rule 2,,todo
+PIZZA_004,Veggie Pizza,Pasta & Pizza,veggie,ingredient,40 mins,8 slices,Rule 2,Gap: topping combo - sum individual vegetable SR28 items,todo
+PIZZA_005,BBQ Chicken Pizza,Pasta & Pizza,pollo,ingredient,45 mins,8 slices,Rule 2,Gap: BBQ sauce - SR28 has generic BBQ sauce use as approximation,todo
+ITAL_001,Spaghetti & Meatballs,Pasta & Pizza,all,ingredient,45 mins,4 servings,Rule 2,,todo
+ITAL_002,Fettuccine Alfredo,Pasta & Pizza,veggie,ingredient,25 mins,4 servings,Rule 2,Gap: Alfredo sauce - raw calc from butter + cream + parmesan,todo
+ITAL_003,Chicken Parmesan,Pasta & Pizza,pollo,ingredient,40 mins,4 servings,Rule 2,,todo
+ITAL_004,Lasagna,Pasta & Pizza,all,dish,60 mins,8 servings,Rule 1,SR28 complete - verify NDB,todo
+ITAL_005,Baked Ziti,Pasta & Pizza,veggie,ingredient,50 mins,6 servings,Rule 2,,todo
+TEXMX_001,Ground Beef Taco,Entrees & Main Courses,all,ingredient,20 mins,2 tacos,Rule 2,,todo
+TEXMX_002,Chicken Taco,Entrees & Main Courses,pollo,ingredient,20 mins,2 tacos,Rule 2,,todo
+TEXMX_003,Beef Burrito,Entrees & Main Courses,all,ingredient,25 mins,1 serving,Rule 2,,todo
+TEXMX_004,Chicken Burrito,Entrees & Main Courses,pollo,ingredient,25 mins,1 serving,Rule 2,,todo
+TEXMX_005,Cheese Quesadilla,Entrees & Main Courses,veggie,ingredient,15 mins,1 serving,Rule 2,,todo
+TEXMX_006,Chicken Quesadilla,Entrees & Main Courses,pollo,ingredient,15 mins,1 serving,Rule 2,,todo
+TEXMX_007,Nachos,Sides,veggie,ingredient,15 mins,4 servings,Rule 2,,todo
+TEXMX_008,Beef Enchiladas,Entrees & Main Courses,all,ingredient,40 mins,4 servings,Rule 2,Gap: enchilada sauce - raw calc or SR28 tomato sauce approximation,todo
+TEXMX_009,Chicken Fajitas,Entrees & Main Courses,pollo,ingredient,25 mins,2 servings,Rule 2,Gap: pepper/onion combo - sum individual SR28 vegetable items,todo
+TEXMX_010,Guacamole & Chips,Sides,vegan,ingredient,10 mins,4 servings,Rule 2,SR28 has both guacamole and tortilla chips - verify NDB for each,todo
+TEXMX_011,Taco Salad,Salads,all,ingredient,25 mins,1 serving,Rule 2,Gap: tortilla bowl,todo
+CHIN_001,Egg Roll,Sides,all,dish,20 mins,1 roll,Rule 1,SR28 complete fried egg roll - verify NDB,todo
+CHIN_002,Egg Drop Soup,Soups & Stews,all,dish,15 mins,4 servings,Rule 1,SR28 complete - verify NDB,todo
+CHIN_003,Chicken Fried Rice,Entrees & Main Courses,pollo,ingredient,20 mins,4 servings,Rule 2,Gap: vegetable mix - sum individual SR28 vegetables by weight,todo
+CHIN_004,Pork Fried Rice,Entrees & Main Courses,all,ingredient,20 mins,4 servings,Rule 2,,todo
+CHIN_005,Shrimp Fried Rice,Entrees & Main Courses,pesca,ingredient,20 mins,4 servings,Rule 2,,todo
+CHIN_006,Beef with Broccoli,Entrees & Main Courses,all,ingredient,20 mins,2 servings,Rule 3 - Dual,Gap: stir-fry sauce - raw calc or SR28 soy sauce approximation,todo
+CHIN_007,Beef with Broccoli + Rice,Entrees & Main Courses,all,ingredient,20 mins,2 servings,Rule 3 - Dual,Gap: stir-fry sauce,todo
+CHIN_008,General Tso's Chicken,Entrees & Main Courses,pollo,ingredient,25 mins,2 servings,Rule 3 - Dual,Gap: General Tso's sauce,todo
+CHIN_009,General Tso's Chicken + Rice,Entrees & Main Courses,pollo,ingredient,25 mins,2 servings,Rule 3 - Dual,Gap: General Tso's sauce,todo
+CHIN_010,Kung Pao Chicken,Entrees & Main Courses,pollo,ingredient,25 mins,2 servings,Rule 3 - Dual,Gap: kung pao sauce - peanuts individually linkable,todo
+CHIN_011,Kung Pao Chicken + Rice,Entrees & Main Courses,pollo,ingredient,25 mins,2 servings,Rule 3 - Dual,Gap: kung pao sauce,todo
+CHIN_012,Sweet & Sour Pork,Entrees & Main Courses,all,ingredient,25 mins,2 servings,Rule 3 - Dual,Gap: sweet & sour sauce,todo
+CHIN_013,Sweet & Sour Pork + Rice,Entrees & Main Courses,all,ingredient,25 mins,2 servings,Rule 3 - Dual,Gap: sweet & sour sauce,todo
+CHIN_014,Lo Mein (Chicken),Entrees & Main Courses,pollo,ingredient,20 mins,2 servings,Rule 2,Gap: lo mein sauce/vegetable combo,todo
+CHIN_015,Wonton Soup,Soups & Stews,all,ingredient,30 mins,4 servings,Rule 2,Gap: wonton wrappers - raw calc or find closest SR28 analog,todo
+CHIN_016,Moo Shu Pork,Entrees & Main Courses,all,ingredient,30 mins,2 servings,Rule 2,Gap: hoisin sauce + moo shu pancakes,todo
+JAPAN_001,Edamame,Sides,vegan,dish,10 mins,1 serving,Rule 1,SR28 complete - verify NDB,todo
+JAPAN_002,Miso Soup,Soups & Stews,all,dish,15 mins,1 serving,Rule 1,SR28 complete - verify NDB. Dashi broth is fish-based,todo
+JAPAN_003,Miso Soup + Rice,Soups & Stews,all,mixed,20 mins,1 serving,Rule 3 - Dual,Primary dish: SR28 Miso Soup + cooked white rice as individual component,todo
+JAPAN_004,Teriyaki Chicken,Entrees & Main Courses,pollo,ingredient,20 mins,2 servings,Rule 3 - Dual,Gap: teriyaki sauce - verify SR28 has analog or use raw calc,todo
+JAPAN_005,Teriyaki Chicken + Rice,Entrees & Main Courses,pollo,ingredient,20 mins,2 servings,Rule 3 - Dual,Gap: teriyaki sauce,todo
+JAPAN_006,Beef Teriyaki,Entrees & Main Courses,all,ingredient,20 mins,2 servings,Rule 3 - Dual,Gap: teriyaki sauce,todo
+JAPAN_007,Beef Teriyaki + Rice,Entrees & Main Courses,all,ingredient,20 mins,2 servings,Rule 3 - Dual,Gap: teriyaki sauce,todo
+JAPAN_008,California Roll,Entrees & Main Courses,pesca,ingredient,30 mins,8 pieces,Rule 2,Assembly: imitation crab + avocado + cucumber + nori + rice - verify SR28 for each,todo
+JAPAN_009,Shrimp Tempura,Entrees & Main Courses,pesca,ingredient,25 mins,4 pieces,Rule 3 - Dual,Gap: tempura batter - raw calc from flour + egg + water,todo
+JAPAN_010,Shrimp Tempura + Rice,Entrees & Main Courses,pesca,ingredient,25 mins,4 pieces,Rule 3 - Dual,Gap: tempura batter,todo
+JAPAN_011,Ramen Bowl,Soups & Stews,all,ingredient,20 mins,1 serving,Rule 2,Gap: ramen broth - approximate from SR28 beef/chicken broth + adjustments,todo
+JAPAN_012,Chicken Katsu,Entrees & Main Courses,pollo,ingredient,25 mins,2 servings,Rule 3 - Dual,Gap: katsu sauce,todo
+JAPAN_013,Chicken Katsu + Rice,Entrees & Main Courses,pollo,ingredient,25 mins,2 servings,Rule 3 - Dual,Gap: katsu sauce,todo
+ASIAN_001,Pad Thai (Chicken),Entrees & Main Courses,pollo,ingredient,25 mins,2 servings,Rule 2,Gap: pad thai sauce,todo
+ASIAN_002,Pho (Beef),Soups & Stews,all,ingredient,30 mins,2 servings,Rule 2,Gap: pho broth/herb combo - raw calc from beef broth + herbs,todo
+ASIAN_003,Vietnamese Spring Roll,Sides,pesca,ingredient,30 mins,4 rolls,Rule 2,Assembly: rice paper + shrimp + vegetables + rice noodles,todo
+ASIAN_004,Korean Bibimbap,Entrees & Main Courses,all,ingredient,30 mins,1 serving,Rule 2,Gap: gochujang sauce,todo
+ASIAN_005,Korean BBQ Beef,Entrees & Main Courses,all,ingredient,20 mins,2 servings,Rule 3 - Dual,Gap: bulgogi marinade,todo
+ASIAN_006,Korean BBQ Beef + Rice,Entrees & Main Courses,all,ingredient,20 mins,2 servings,Rule 3 - Dual,Gap: bulgogi marinade,todo
+ASIAN_007,Curry Chicken,Entrees & Main Courses,pollo,ingredient,30 mins,4 servings,Rule 3 - Dual,Gap: curry sauce - coconut milk + spice paste,todo
+ASIAN_008,Curry Chicken + Rice,Entrees & Main Courses,pollo,ingredient,30 mins,4 servings,Rule 3 - Dual,Gap: curry sauce,todo
+ASIAN_009,Thai Green Curry,Entrees & Main Courses,pollo,ingredient,30 mins,4 servings,Rule 3 - Dual,Gap: coconut curry sauce,todo
+ASIAN_010,Thai Green Curry + Rice,Entrees & Main Courses,pollo,ingredient,30 mins,4 servings,Rule 3 - Dual,Gap: coconut curry sauce,todo
+SOUP_001,Chicken Noodle Soup,Soups & Stews,pollo,dish,30 mins,6 servings,Rule 1,SR28 complete - verify NDB,todo
+SOUP_002,Tomato Soup,Soups & Stews,veggie,dish,20 mins,4 servings,Rule 1,SR28 complete - verify NDB,todo
+SOUP_003,Beef Stew,Soups & Stews,all,dish,90 mins,6 servings,Rule 1,SR28 complete - verify NDB,todo
+SOUP_004,Clam Chowder (New England),Soups & Stews,pesca,dish,30 mins,4 servings,Rule 1,SR28 complete - verify NDB,todo
+SOUP_005,French Onion Soup,Soups & Stews,all,dish,60 mins,4 servings,Rule 1,SR28 complete - verify NDB,todo
+SOUP_006,Split Pea Soup,Soups & Stews,all,dish,60 mins,6 servings,Rule 1,SR28 complete - may contain ham - verify NDB,todo
+SOUP_007,Lentil Soup,Soups & Stews,vegan,dish,45 mins,6 servings,Rule 1,SR28 complete - verify NDB,todo
+SOUP_008,Beef Chili,Soups & Stews,all,dish,60 mins,6 servings,Rule 1,SR28 complete - verify NDB,todo
+SOUP_009,Chili + Cornbread,Soups & Stews,all,mixed,65 mins,6 servings,Rule 2,Primary dish: SR28 beef chili + SR28 cornbread as individual component,todo
+SOUP_010,Hot & Sour Soup,Soups & Stews,all,dish,20 mins,4 servings,Rule 1,Verify SR28 has complete item - may need ingredient mode if absent,todo
+SOUP_011,Minestrone Soup,Soups & Stews,vegan,dish,40 mins,6 servings,Rule 1,SR28 complete - verify NDB,todo
+SALAD_001,Caesar Salad,Salads,veggie,ingredient,15 mins,4 servings,Rule 1,Components: romaine + croutons + Caesar dressing + parmesan - all individually linked,todo
+SALAD_002,Chicken Caesar Salad,Salads,pollo,ingredient,20 mins,4 servings,Rule 2,,todo
+SALAD_003,Cobb Salad,Salads,all,ingredient,20 mins,4 servings,Rule 2,Gap: verify SR28 has avocado,todo
+SALAD_004,Greek Salad,Salads,veggie,ingredient,15 mins,4 servings,Rule 2,,todo
+SALAD_005,Chef Salad,Salads,all,ingredient,15 mins,4 servings,Rule 2,,todo
+SIDE_001,French Fries,Sides,vegan,dish,20 mins,4 servings,Rule 1,SR28 complete - verify NDB,todo
+SIDE_002,Onion Rings,Sides,veggie,dish,20 mins,4 servings,Rule 1,SR28 complete - verify NDB,todo
+SIDE_003,Coleslaw,Sides,veggie,dish,15 mins,6 servings,Rule 1,SR28 complete - verify NDB,todo
+SIDE_004,Macaroni Salad,Sides,veggie,dish,20 mins,6 servings,Rule 1,SR28 complete - verify NDB,todo
+SIDE_005,Potato Salad,Sides,veggie,dish,30 mins,6 servings,Rule 1,SR28 complete - verify NDB,todo
+SIDE_006,Corn on the Cob,Sides,vegan,dish,15 mins,1 ear,Rule 1,SR28 complete - verify NDB,todo
+SIDE_007,Baked Beans,Sides,all,dish,60 mins,6 servings,Rule 1,SR28 complete - may contain pork - verify NDB,todo
+SIDE_008,Mac & Cheese,Sides,veggie,dish,25 mins,4 servings,Rule 1,SR28 complete - verify NDB,todo
+SIDE_009,Mashed Potatoes,Sides,veggie,dish,20 mins,4 servings,Rule 1,SR28 complete - verify NDB,todo
+SIDE_010,Steamed Broccoli,Sides,vegan,dish,10 mins,4 servings,Rule 1,SR28 complete - verify NDB,todo
+SIDE_011,Green Beans (cooked),Sides,vegan,dish,10 mins,4 servings,Rule 1,SR28 complete - verify NDB,todo
+SIDE_012,Cheese Sauce,Sauces & Condiments,veggie,dish,15 mins,4 servings,Rule 1,,todo
+SWEET_001,Pie Apple,Desserts,veggie,dish,45 mins,8 slices,Rule 1,,todo
+SWEET_002,Apple Strudel,Desserts,veggie,dish,45 mins,8 servings,Rule 1,,todo
+SWEET_003,Cake Angel Food,Desserts,veggie,dish,45 mins,12 slices,Rule 1,,todo
+SWEET_004,Cake Cheesecake,Desserts,veggie,dish,60 mins,8 slices,Rule 1,,todo
+SWEET_005,Cake Chocolate no Frosting,Desserts,veggie,dish,35 mins,12 slices,Rule 1,,todo
+SWEET_006,Cake Chocolate Frosting,Desserts,veggie,dish,45 mins,12 slices,Rule 1,,todo
+SWEET_007,Cake Coffee,Desserts,veggie,dish,40 mins,12 slices,Rule 1,,todo
+SWEET_008,Cake Gingerbread,Desserts,veggie,dish,40 mins,12 slices,Rule 1,,todo
+SWEET_009,Cake Pineapple,Desserts,veggie,dish,45 mins,12 slices,Rule 1,,todo
+SWEET_010,Cake Pound,Desserts,veggie,dish,60 mins,12 slices,Rule 1,,todo
+SWEET_011,Cake Shortcake,Desserts,veggie,dish,30 mins,8 servings,Rule 1,,todo
+SWEET_012,Cake Sponge,Desserts,veggie,dish,40 mins,12 slices,Rule 1,,todo
+SWEET_013,Cake White no Frosting,Desserts,veggie,dish,35 mins,12 slices,Rule 1,,todo
+SWEET_014,Cake White Coconut Frosting,Desserts,veggie,dish,45 mins,12 slices,Rule 1,,todo
+SWEET_015,Cake Yellow Choc Frosting,Desserts,veggie,dish,45 mins,12 slices,Rule 1,,todo
+SWEET_016,Cake Yellow Vanilla Frosting,Desserts,veggie,dish,45 mins,12 slices,Rule 1,,todo
+SWEET_017,Cookies Brownies,Desserts,veggie,dish,30 mins,24 brownies,Rule 1,,todo
+SWEET_018,Cookies Butter,Desserts,veggie,dish,25 mins,36 cookies,Rule 1,,todo
+SWEET_019,Cookies Choc Chip,Desserts,veggie,dish,25 mins,36 cookies,Rule 1,,todo
+SWEET_020,Cookies Fig Bar,Desserts,veggie,dish,25 mins,24 cookies,Rule 1,,todo
+SWEET_021,Cookies Gingersnap,Desserts,veggie,dish,25 mins,36 cookies,Rule 1,,todo
+SWEET_022,Cookies Macaroon,Desserts,veggie,dish,25 mins,24 cookies,Rule 1,,todo
+SWEET_023,Cookies Molasses,Desserts,veggie,dish,25 mins,36 cookies,Rule 1,,todo
+SWEET_024,Cookies Oatmeal,Desserts,veggie,dish,25 mins,36 cookies,Rule 1,,todo
+SWEET_025,Cookies Oatmeal Raisin,Desserts,veggie,dish,25 mins,36 cookies,Rule 1,,todo
+SWEET_026,Cookies Peanut Butter,Desserts,veggie,dish,25 mins,36 cookies,Rule 1,,todo
+SWEET_027,Cookies Shortbread,Desserts,veggie,dish,25 mins,36 cookies,Rule 1,,todo
+SWEET_028,Cookies Sugar,Desserts,veggie,dish,25 mins,36 cookies,Rule 1,,todo
+SWEET_029,Doughnut Cake-type Glazed,Desserts,veggie,dish,30 mins,12 doughnuts,Rule 1,,todo
+SWEET_030,Pies Banana Cream,Desserts,veggie,dish,30 mins,8 slices,Rule 1,,todo
+SWEET_031,Pies Blueberry,Desserts,veggie,dish,45 mins,8 slices,Rule 1,,todo
+SWEET_032,Pies Boston Cream,Desserts,veggie,dish,45 mins,8 slices,Rule 1,,todo
+SWEET_033,Pies Cherry,Desserts,veggie,dish,45 mins,8 slices,Rule 1,,todo
+SWEET_034,Pies Chocolate,Desserts,veggie,dish,30 mins,8 slices,Rule 1,,todo
+SWEET_035,Pies Coconut,Desserts,veggie,dish,30 mins,8 slices,Rule 1,,todo
+SWEET_036,Pies Dutch Apple,Desserts,veggie,dish,45 mins,8 slices,Rule 1,,todo
+SWEET_037,Pies Lemon,Desserts,veggie,dish,30 mins,8 slices,Rule 1,,todo
+SWEET_038,Pies Mince,Desserts,all,dish,45 mins,8 slices,Rule 1,May contain suet/meat - verify dietary category,todo
+SWEET_039,Pies Peach,Desserts,veggie,dish,45 mins,8 slices,Rule 1,,todo
+SWEET_040,Pies Pecan,Desserts,veggie,dish,45 mins,8 slices,Rule 1,,todo
+SWEET_041,Pies Pumpkin,Desserts,veggie,dish,50 mins,8 slices,Rule 1,,todo
+BEV_001,Milkshake Choc,Beverages,all,dish,5 mins,1 serving,Rule 1,,todo
+BEV_002,Milkshake Vanilla,Beverages,veggie,dish,5 mins,1 serving,Rule 1,,todo

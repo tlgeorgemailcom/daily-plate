@@ -4,10 +4,19 @@
   import { customFoods, type CustomFood } from '$lib/stores/customFoodsStore';
 
   export type RecipeFood = Food & { isRecipe: true; gramsPerServing: number };
+  type SearchScope = 'all' | 'baby';
 
   const dispatch = createEventDispatcher<{ select: Food; addCustom: string }>();
 
-  let { recipeFoods = [] }: { recipeFoods?: RecipeFood[] } = $props();
+  let {
+    recipeFoods = [],
+    enableBabyScope = false,
+    promoteBabyScope = false
+  }: {
+    recipeFoods?: RecipeFood[];
+    enableBabyScope?: boolean;
+    promoteBabyScope?: boolean;
+  } = $props();
   
   function handleAddCustomFood() {
     // Pass current search query to pre-populate the form
@@ -16,6 +25,10 @@
 
   let searchQuery = $state('');
   let selectedGroup = $state<FoodGroup | 'all' | 'recipes'>('all');
+  let searchScope = $state<SearchScope>('all');
+  let remoteFoods = $state<Food[]>([]);
+  let remoteLoading = $state(false);
+  let remoteError = $state<string | null>(null);
   
   // Long-press tooltip state
   let tooltipFood = $state<Food | null>(null);
@@ -63,14 +76,82 @@
     });
   }
 
+  const useRemoteSearch = $derived(searchQuery.trim().length >= 2 && selectedGroup !== 'recipes');
+
+  $effect(() => {
+    if (!enableBabyScope && searchScope !== 'all') {
+      searchScope = 'all';
+    }
+  });
+
+  $effect(() => {
+    if (!useRemoteSearch) {
+      remoteFoods = [];
+      remoteLoading = false;
+      remoteError = null;
+      return;
+    }
+
+    const query = searchQuery.trim();
+    let cancelled = false;
+    remoteLoading = true;
+    remoteError = null;
+
+    const timeout = setTimeout(async () => {
+      try {
+        const params = new URLSearchParams({ q: query, limit: '80', scope: searchScope });
+        const res = await fetch(`/api/foods/search?${params.toString()}`);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json() as { foods?: Food[] };
+        if (!cancelled) {
+          remoteFoods = data.foods ?? [];
+          remoteLoading = false;
+        }
+      } catch (error) {
+        if (!cancelled) {
+          console.error('[FoodPicker] remote SR28 search failed:', error);
+          remoteFoods = [];
+          remoteLoading = false;
+          remoteError = 'search_failed';
+        }
+      }
+    }, 180);
+
+    return () => {
+      cancelled = true;
+      clearTimeout(timeout);
+    };
+  });
+
   const filteredFoods = $derived(() => {
-    // Combine custom foods with built-in foods and recipe foods
-    const customAsFoods = $customFoods.map(customToFood);
-    let foods: (Food | (Food & { isCustom: true }) | RecipeFood)[] =
-      selectedGroup === 'recipes'
+    const queryWords = searchQuery.toLowerCase().split(/\s+/).filter(w => w.length > 0);
+    let foods: (Food | (Food & { isCustom: true }) | RecipeFood)[];
+
+    if (useRemoteSearch) {
+      const customAsFoods = $customFoods.map(customToFood);
+      const matchedCustomFoods = customAsFoods.filter(food => matchesQuery(food, queryWords));
+      const matchedRecipeFoods = recipeFoods.filter(food => matchesQuery(food, queryWords));
+      const filteredRemoteFoods = selectedGroup === 'all'
+        ? remoteFoods
+        : remoteFoods.filter(food => food.groups.includes(selectedGroup as FoodGroup));
+
+      foods = selectedGroup === 'recipes'
+        ? matchedRecipeFoods
+        : [...matchedCustomFoods, ...filteredRemoteFoods, ...matchedRecipeFoods];
+
+      const seen = new Set<string>();
+      foods = foods.filter(food => {
+        const key = `${food.ndb}:${food.display}`;
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+    } else {
+      const customAsFoods = $customFoods.map(customToFood);
+      foods = selectedGroup === 'recipes'
         ? [...recipeFoods]
         : [...customAsFoods, ...FOODS, ...recipeFoods];
-    const queryWords = searchQuery.toLowerCase().split(/\s+/).filter(w => w.length > 0);
+    }
     
     // Filter by group
     if (selectedGroup !== 'all' && selectedGroup !== 'recipes') {
@@ -171,6 +252,25 @@
     </button>
   </div>
 
+  {#if enableBabyScope}
+    <div class="scope-tabs" class:scope-tabs-promoted={promoteBabyScope}>
+      <button
+        class="scope-tab"
+        class:active={searchScope === 'all'}
+        onclick={() => searchScope = 'all'}
+      >
+        All Foods
+      </button>
+      <button
+        class="scope-tab scope-tab-baby"
+        class:active={searchScope === 'baby'}
+        onclick={() => searchScope = 'baby'}
+      >
+        Baby Food & Formulas
+      </button>
+    </div>
+  {/if}
+
   <!-- Group filter tabs -->
   <div class="group-tabs">
     <button 
@@ -203,6 +303,12 @@
 
   <!-- Food list -->
   <div class="food-list">
+    {#if remoteLoading}
+      <div class="search-status">Searching SR28…</div>
+    {:else if remoteError}
+      <div class="search-status search-status-error">SR28 search is unavailable right now.</div>
+    {/if}
+
     {#each filteredFoods() as food}
       <button 
         class="food-item" 
@@ -309,6 +415,45 @@
     gap: 0.25rem;
   }
 
+  .scope-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .scope-tabs-promoted {
+    padding: 0.55rem;
+    border: 1px solid #fed7aa;
+    border-radius: 0.75rem;
+    background: #fff7ed;
+  }
+
+  .scope-tab {
+    padding: 0.35rem 0.7rem;
+    border: 1px solid #d1d5db;
+    border-radius: 999px;
+    background: white;
+    color: #334155;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .scope-tab:hover {
+    background: #f8fafc;
+  }
+
+  .scope-tab.active {
+    background: #0f172a;
+    color: white;
+    border-color: transparent;
+  }
+
+  .scope-tab-baby.active {
+    background: #9a3412;
+  }
+
   .tab {
     padding: 0.25rem 0.5rem;
     border: 1px solid #e5e7eb;
@@ -349,6 +494,16 @@
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+  }
+
+  .search-status {
+    padding: 0.65rem 0.75rem;
+    color: #475569;
+    font-size: 0.82rem;
+  }
+
+  .search-status-error {
+    color: #b91c1c;
   }
 
   .food-item {
