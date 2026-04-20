@@ -1720,9 +1720,15 @@
             </div>
           {/if}
           
-          <button class="play-btn" class:secondary-play-btn={isPremiumReadOnly} onclick={() => handlePlay(selectedLevel!.id)}>
-            {isPremiumReadOnly ? '▶️ Play Recipe Game' : isCurrent ? '🔄 Replay' : isCompleted ? '🎮 Replay' : '▶️ Play'}
-          </button>
+          {#if isPremiumReadOnly}
+            <button class="play-inline-link" onclick={() => handlePlay(selectedLevel!.id)}>
+              Play recipe game
+            </button>
+          {:else}
+            <button class="play-btn" onclick={() => handlePlay(selectedLevel!.id)}>
+              {isCurrent ? '🔄 Replay' : isCompleted ? '🎮 Replay' : '▶️ Play'}
+            </button>
+          {/if}
           {#if !canReadRecipe}
             <p class="paid-tier-note">Upgrade to a paid tier if you do not want to play the game</p>
           {/if}
@@ -2924,15 +2930,18 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   }
 
-  .play-btn.secondary-play-btn {
+  .play-inline-link {
     margin-top: 8px;
     align-self: flex-start;
-    padding: 10px 16px;
-    font-size: 0.95rem;
-    font-weight: 500;
-    background: #f3f4f6;
-    color: #374151;
-    box-shadow: none;
+    padding: 0;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #6b7280;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 2px;
   }
   
   .play-btn:hover {
