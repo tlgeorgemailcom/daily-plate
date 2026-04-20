@@ -94,9 +94,9 @@ function buildSearchWhere(query: string, scope: Sr28SearchScope): { sql: string;
   }
 
   for (const term of terms) {
-    clauses.push('(LOWER(COALESCE("Long_Desc", \'\')) LIKE ? OR LOWER(COALESCE("keyword", \'\')) LIKE ?)');
+    clauses.push('LOWER(COALESCE("Long_Desc", \'\')) LIKE ?');
     const like = `%${term}%`;
-    args.push(like, like);
+    args.push(like);
   }
 
   const sql = clauses.length > 0 ? `WHERE ${clauses.join(' AND ')}` : '';
