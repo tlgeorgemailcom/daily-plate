@@ -2209,6 +2209,8 @@
         recipeFoods={recipeFoods}
         enableBabyScope={shouldEnableBabyScope}
         promoteBabyScope={shouldEnableBabyScope}
+        allowFullDatabaseSearch={isPlus}
+        playerId={$playerStore.id}
         on:select={handleFoodSelect}
         on:addCustom={handleAddCustomFood}
       />

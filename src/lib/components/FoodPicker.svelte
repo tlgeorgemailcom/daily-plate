@@ -11,11 +11,15 @@
   let {
     recipeFoods = [],
     enableBabyScope = false,
-    promoteBabyScope = false
+    promoteBabyScope = false,
+    allowFullDatabaseSearch = false,
+    playerId = null
   }: {
     recipeFoods?: RecipeFood[];
     enableBabyScope?: boolean;
     promoteBabyScope?: boolean;
+    allowFullDatabaseSearch?: boolean;
+    playerId?: string | null;
   } = $props();
   
   function handleAddCustomFood() {
@@ -77,7 +81,7 @@
     });
   }
 
-  const canUseRemoteSearch = $derived(searchQuery.trim().length >= 2 && selectedGroup !== 'recipes');
+  const canUseRemoteSearch = $derived(allowFullDatabaseSearch && searchQuery.trim().length >= 2 && selectedGroup !== 'recipes');
   const useRemoteSearch = $derived(canUseRemoteSearch && remoteRequested);
 
   $effect(() => {
@@ -112,6 +116,7 @@
     const timeout = setTimeout(async () => {
       try {
         const params = new URLSearchParams({ q: query, limit: '80', scope: searchScope });
+        if (playerId) params.set('playerId', playerId);
         const res = await fetch(`/api/foods/search?${params.toString()}`);
         const data = await res.json() as { foods?: Food[] };
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
