@@ -2,6 +2,7 @@
 // This module should only be imported in +server.ts files
 import { createClient, type Client, type InValue } from '@libsql/client';
 import { env } from '$env/dynamic/private';
+import { existsSync } from 'node:fs';
 
 const DEFAULT_SR28_DB_URL = 'file:/Users/macminidata/vscode/jetfooddata/jetcool/assets/comboo.db';
 
@@ -31,15 +32,27 @@ let sr28Client: Client | null = null;
 
 export function getSR28Db(): Client {
   if (!sr28Client) {
-    const url =
+    const configuredUrl =
       env.TURSO_SR28_URL?.trim() ||
       env.TURSO_COMBOO_URL?.trim() ||
-      env.USDA_DATABASE_URL?.trim() ||
+      env.USDA_DATABASE_URL?.trim();
+    const url =
+      configuredUrl ||
       DEFAULT_SR28_DB_URL;
     const authToken =
       env.TURSO_SR28_TOKEN?.trim() ||
       env.TURSO_COMBOO_TOKEN?.trim() ||
       env.USDA_DATABASE_TOKEN?.trim();
+
+    if (!configuredUrl) {
+      const localPath = url.startsWith('file:') ? url.slice('file:'.length) : '';
+      if (!localPath || !existsSync(localPath)) {
+        throw new Error(
+          'SR28/comboo database is not configured. Set TURSO_COMBOO_URL and TURSO_COMBOO_TOKEN, or TURSO_SR28_URL and TURSO_SR28_TOKEN.'
+        );
+      }
+    }
+
     sr28Client = createClient(authToken ? { url, authToken } : { url });
   }
   return sr28Client;
