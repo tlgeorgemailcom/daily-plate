@@ -113,8 +113,10 @@
       try {
         const params = new URLSearchParams({ q: query, limit: '80', scope: searchScope });
         const res = await fetch(`/api/foods/search?${params.toString()}`);
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const data = await res.json() as { foods?: Food[] };
+        const data = await res.json() as { foods?: Food[]; error?: string; detail?: string };
+        if (!res.ok) {
+          throw new Error(data.detail || data.error || `HTTP ${res.status}`);
+        }
         if (!cancelled) {
           remoteFoods = data.foods ?? [];
           remoteLoading = false;
@@ -124,7 +126,7 @@
           console.error('[FoodPicker] remote SR28 search failed:', error);
           remoteFoods = [];
           remoteLoading = false;
-          remoteError = 'search_failed';
+          remoteError = error instanceof Error ? error.message : 'search_failed';
         }
       }
     }, 180);
