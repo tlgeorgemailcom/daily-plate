@@ -15,18 +15,18 @@ export const GET: RequestHandler = async ({ url }) => {
 
   const recipe = await queryOne<{
     id: string;
-    name: string;
+    title: string;
     category: string;
     dietary_category: string | null;
     prep_time: string | null;
     servings: string | null;
-    recipe_ingredients: string | null;
-    recipe_instructions: string | null;
+    recipe_ingredients_json: string | null;
+    recipe_instructions_json: string | null;
     status: string;
   }>(
-    `SELECT id, name, category, dietary_category, prep_time, servings,
-            recipe_ingredients, recipe_instructions, status
-     FROM recipes WHERE edit_code = ? AND status = 'draft'`,
+    `SELECT id, title, category, dietary_category, prep_time, servings,
+            recipe_ingredients_json, recipe_instructions_json, status
+     FROM player_recipes WHERE edit_code = ? AND status = 'draft'`,
     [code]
   );
 
@@ -36,12 +36,12 @@ export const GET: RequestHandler = async ({ url }) => {
 
   return json({
     recipeId: recipe.id,
-    name: recipe.name,
+    name: recipe.title,
     category: recipe.category,
     dietaryCategory: recipe.dietary_category ?? 'all',
     prepTime: recipe.prep_time ?? '',
     servings: recipe.servings ?? '',
-    ingredients: recipe.recipe_ingredients ? JSON.parse(recipe.recipe_ingredients) : [],
-    instructions: recipe.recipe_instructions ? JSON.parse(recipe.recipe_instructions) : [],
+    ingredients: recipe.recipe_ingredients_json ? JSON.parse(recipe.recipe_ingredients_json) : [],
+    instructions: recipe.recipe_instructions_json ? JSON.parse(recipe.recipe_instructions_json) : [],
   });
 };

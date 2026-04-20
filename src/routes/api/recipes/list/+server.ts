@@ -4,7 +4,6 @@ import { queryAll } from '$lib/server/turso';
 
 interface RecipeRow {
   id: string;
-  type: string;
   name: string;
   category: string;
   dietary_category: string | null;
@@ -22,6 +21,7 @@ interface RecipeRow {
   edited_at: string | null;
   edited_by: string | null;
   link_type: string | null;
+  source_type: 'dev' | 'player';
 }
 
 export const GET: RequestHandler = async ({ url }) => {
@@ -29,20 +29,33 @@ export const GET: RequestHandler = async ({ url }) => {
     const status = url.searchParams.get('status');
     const type = url.searchParams.get('type');
     
-    let sql = 'SELECT * FROM recipes WHERE 1=1';
+    let sql = '';
     const args: string[] = [];
-    
-    if (status) {
-      sql += ' AND status = ?';
-      args.push(status);
+
+    const wantDev = !type || ['builtin', 'developer', 'dev'].includes(type);
+    const wantPlayer = !type || ['community', 'player'].includes(type);
+
+    const queries: string[] = [];
+    if (wantDev) {
+      queries.push(`SELECT recipe_id AS id, recipe_name AS name, category, dietary_category,
+              prep_time, servings, recipe, recipe_ingredients_json AS recipe_ingredients,
+              recipe_instructions_json AS recipe_instructions, food_supply, NULL AS tools,
+              animal_spawns, submitted_by, status, created_at, updated_at AS edited_at,
+              submitted_by AS edited_by, NULL AS link_type, 'dev' AS source_type
+       FROM dev_recipes${status ? ' WHERE status = ?' : ''}`);
+      if (status) args.push(status);
     }
-    
-    if (type) {
-      sql += ' AND type = ?';
-      args.push(type);
+    if (wantPlayer) {
+      queries.push(`SELECT id, title AS name, category, dietary_category,
+              prep_time, servings, recipe, recipe_ingredients_json AS recipe_ingredients,
+              recipe_instructions_json AS recipe_instructions, food_supply, NULL AS tools,
+              animal_spawns, user_id AS submitted_by, status, created_at, updated_at AS edited_at,
+              user_id AS edited_by, link_type, 'player' AS source_type
+       FROM player_recipes${status ? ' WHERE status = ?' : ''}`);
+      if (status) args.push(status);
     }
-    
-    sql += ' ORDER BY created_at DESC';
+
+    sql = `${queries.join(' UNION ALL ')} ORDER BY created_at DESC`;
     
     const rows = await queryAll<RecipeRow>(sql, args);
     
@@ -59,7 +72,7 @@ export const GET: RequestHandler = async ({ url }) => {
       instructions: row.recipe_instructions ? JSON.parse(row.recipe_instructions) : [],
       submittedAt: row.created_at,
       status: row.status,
-      type: row.type,
+      type: row.source_type,
       linkType: row.link_type ?? undefined
     }));
     

@@ -3,16 +3,16 @@ import type { RequestHandler } from './$types';
 import { queryAll, getGameDb } from '$lib/server/turso';
 
 interface BuiltinRecipeRow {
-  id: string;
-  name: string;
+  recipe_id: string;
+  recipe_name: string;
   category: string;
   dietary_category: string | null;
   prep_time: string | null;
   servings: string | null;
   recipe: string | null;
   animal_spawns: string | null;
-  recipe_instructions: string | null;
-  recipe_ingredients: string | null;
+  recipe_instructions_json: string | null;
+  recipe_ingredients_json: string | null;
   image_url: string | null;
   created_at: string;
   submitted_by: string;
@@ -52,24 +52,24 @@ interface NewBuiltinRecipe {
 // GET: Fetch all built-in recipe overrides and admin-added recipes from Turso
 export const GET: RequestHandler = async () => {
   try {
-    // Get overrides: edits to existing TypeScript LEVELS (IDs like '1-1', '2-3')
+    // Get published dev recipes that override existing local LEVELS rows.
     const overrideRows = await queryAll<BuiltinRecipeRow>(
-      `SELECT id, name, category, dietary_category, prep_time, servings, 
-              recipe, animal_spawns, recipe_instructions, recipe_ingredients,
+      `SELECT recipe_id, recipe_name, category, dietary_category, prep_time, servings, 
+              recipe, animal_spawns, recipe_instructions_json, recipe_ingredients_json,
               image_url, created_at, submitted_by
-       FROM recipes 
-       WHERE type = 'builtin'
-         AND id NOT LIKE 'admin-%'
-         AND (recipe_ingredients IS NOT NULL OR recipe_instructions IS NOT NULL)`
+       FROM dev_recipes 
+       WHERE status = 'published'
+         AND recipe_id NOT LIKE 'admin-%'
+         AND (recipe_ingredients_json IS NOT NULL OR recipe_instructions_json IS NOT NULL)`
     );
 
-    // Get admin-added new recipes (IDs like 'admin-1234567890')
+    // Get admin-added new dev recipes.
     const newRows = await queryAll<BuiltinRecipeRow>(
-      `SELECT id, name, category, dietary_category, prep_time, servings, 
-              recipe, animal_spawns, recipe_instructions, recipe_ingredients,
+      `SELECT recipe_id, recipe_name, category, dietary_category, prep_time, servings, 
+              recipe, animal_spawns, recipe_instructions_json, recipe_ingredients_json,
               image_url, created_at, submitted_by
-       FROM recipes 
-       WHERE type = 'builtin' AND id LIKE 'admin-%'
+       FROM dev_recipes 
+       WHERE status = 'published' AND recipe_id LIKE 'admin-%'
        ORDER BY created_at ASC`
     );
 
@@ -77,37 +77,37 @@ export const GET: RequestHandler = async () => {
     const overrides: Record<string, BuiltinOverride> = {};
     for (const row of overrideRows) {
       const override: BuiltinOverride = {
-        id: row.id,
+        id: row.recipe_id,
         editedAt: row.created_at,
         editedBy: row.submitted_by || 'System'
       };
 
-      if (row.name) override.name = row.name;
+      if (row.recipe_name) override.name = row.recipe_name;
       if (row.category) override.category = row.category;
       if (row.dietary_category) override.dietaryCategory = row.dietary_category;
       if (row.prep_time) override.prepTime = row.prep_time;
       if (row.servings) override.servings = row.servings;
       if (row.recipe) override.recipe = JSON.parse(row.recipe);
       if (row.animal_spawns) override.animalSpawns = JSON.parse(row.animal_spawns);
-      if (row.recipe_instructions) override.recipeInstructions = JSON.parse(row.recipe_instructions);
-      if (row.recipe_ingredients) override.recipeIngredients = JSON.parse(row.recipe_ingredients);
+      if (row.recipe_instructions_json) override.recipeInstructions = JSON.parse(row.recipe_instructions_json);
+      if (row.recipe_ingredients_json) override.recipeIngredients = JSON.parse(row.recipe_ingredients_json);
       if (row.image_url) override.imageUrl = row.image_url;
 
-      overrides[row.id] = override;
+      overrides[row.recipe_id] = override;
     }
 
     // Convert new recipe rows to array format
     const newBuiltins: NewBuiltinRecipe[] = newRows.map(row => ({
-      id: row.id,
-      name: row.name,
+      id: row.recipe_id,
+      name: row.recipe_name,
       category: row.category || 'Other',
       dietaryCategory: row.dietary_category || 'all',
       prepTime: row.prep_time ?? undefined,
       servings: row.servings ?? undefined,
       recipe: row.recipe ? JSON.parse(row.recipe) : [],
       animalSpawns: row.animal_spawns ? JSON.parse(row.animal_spawns) : [{ type: 'rabbit', delay: 3000 }],
-      recipeInstructions: row.recipe_instructions ? JSON.parse(row.recipe_instructions) : undefined,
-      recipeIngredients: row.recipe_ingredients ? JSON.parse(row.recipe_ingredients) : undefined,
+      recipeInstructions: row.recipe_instructions_json ? JSON.parse(row.recipe_instructions_json) : undefined,
+      recipeIngredients: row.recipe_ingredients_json ? JSON.parse(row.recipe_ingredients_json) : undefined,
       imageUrl: row.image_url ?? undefined,
       createdAt: row.created_at
     }));
@@ -138,20 +138,23 @@ export const PATCH: RequestHandler = async ({ request }) => {
     const db = getGameDb();
     const now = new Date().toISOString();
 
-    // Check if recipe exists
+    // Check if dev recipe exists
     const existing = await db.execute({
-      sql: 'SELECT id FROM recipes WHERE id = ?',
+      sql: 'SELECT recipe_id FROM dev_recipes WHERE recipe_id = ?',
       args: [id]
     });
 
     if (existing.rows.length === 0) {
-      // Create new override entry
+      // Create new dev recipe row.
       await db.execute({
-        sql: `INSERT INTO recipes (id, type, name, category, dietary_category, prep_time, servings,
-              recipe, animal_spawns, recipe_instructions, recipe_ingredients,
-              image_url, submitted_by, status, created_at)
-              VALUES (?, 'builtin', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NULL, 'approved', ?)`,
+        sql: `INSERT INTO dev_recipes (
+              recipe_id, food_word, recipe_name, category, dietary_category, prep_time, servings,
+              recipe, animal_spawns, recipe_instructions_json, recipe_ingredients_json,
+              image_url, submitted_by, status, created_at, updated_at,
+              grams_per_serving, nutrition_json, nutrient_version, retention_model_version, source_match_version
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'published', ?, ?, ?, ?, ?, ?, ?)`,
         args: [
+          id,
           id,
           updates.name || null,
           updates.category || null,
@@ -163,25 +166,33 @@ export const PATCH: RequestHandler = async ({ request }) => {
           updates.recipeInstructions ? JSON.stringify(updates.recipeInstructions) : null,
           updates.recipeIngredients ? JSON.stringify(updates.recipeIngredients) : null,
           updates.imageUrl || null,
-          now
+          editedBy || 'Moderator',
+          now,
+          now,
+          0,
+          '{}',
+          'legacy',
+          'legacy',
+          'legacy'
         ]
       });
     } else {
-      // Update existing override
+      // Update existing dev recipe row.
       await db.execute({
-        sql: `UPDATE recipes SET
-              name = COALESCE(?, name),
+        sql: `UPDATE dev_recipes SET
+              recipe_name = COALESCE(?, recipe_name),
               category = COALESCE(?, category),
               dietary_category = COALESCE(?, dietary_category),
               prep_time = COALESCE(?, prep_time),
               servings = COALESCE(?, servings),
               recipe = COALESCE(?, recipe),
               animal_spawns = COALESCE(?, animal_spawns),
-              recipe_instructions = COALESCE(?, recipe_instructions),
-              recipe_ingredients = COALESCE(?, recipe_ingredients),
+              recipe_instructions_json = COALESCE(?, recipe_instructions_json),
+              recipe_ingredients_json = COALESCE(?, recipe_ingredients_json),
               image_url = ?,
-              created_at = ?
-              WHERE id = ?`,
+              updated_at = ?,
+              submitted_by = COALESCE(?, submitted_by)
+              WHERE recipe_id = ?`,
         args: [
           updates.name || null,
           updates.category || null,
@@ -194,12 +205,13 @@ export const PATCH: RequestHandler = async ({ request }) => {
           updates.recipeIngredients ? JSON.stringify(updates.recipeIngredients) : null,
           updates.imageUrl || null,
           now,
+          editedBy || 'Moderator',
           id
         ]
       });
     }
 
-    console.log(`✏️ Saved builtin override for: "${id}" by ${editedBy || 'Moderator'}`);
+    console.log(`✏️ Saved dev recipe for: "${id}" by ${editedBy || 'Moderator'}`);
 
     return json({
       success: true,
@@ -228,11 +240,14 @@ export const POST: RequestHandler = async ({ request }) => {
     const id = `admin-${Date.now()}`;
 
     await db.execute({
-      sql: `INSERT INTO recipes (id, type, name, category, dietary_category, prep_time, servings,
-            recipe, animal_spawns, recipe_instructions, recipe_ingredients,
-            image_url, submitted_by, status, created_at)
-            VALUES (?, 'builtin', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NULL, 'approved', ?)`,
+      sql: `INSERT INTO dev_recipes (
+            recipe_id, food_word, recipe_name, category, dietary_category, prep_time, servings,
+            recipe, animal_spawns, recipe_instructions_json, recipe_ingredients_json,
+            image_url, submitted_by, status, created_at, updated_at,
+            grams_per_serving, nutrition_json, nutrient_version, retention_model_version, source_match_version
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'published', ?, ?, ?, ?, ?, ?, ?)`,
       args: [
+        id,
         id,
         data.name.trim(),
         data.category || 'Other',
@@ -244,7 +259,14 @@ export const POST: RequestHandler = async ({ request }) => {
         data.recipeInstructions ? JSON.stringify(data.recipeInstructions) : null,
         data.recipeIngredients ? JSON.stringify(data.recipeIngredients) : null,
         data.imageUrl || null,
-        now
+        'Moderator',
+        now,
+        now,
+        0,
+        '{}',
+        'legacy',
+        'legacy',
+        'legacy'
       ]
     });
 
@@ -270,8 +292,8 @@ export const DELETE: RequestHandler = async ({ request }) => {
     const db = getGameDb();
 
     const existing = await db.execute({
-      sql: 'SELECT id FROM recipes WHERE id = ? AND type = ?',
-      args: [id, 'builtin']
+      sql: 'SELECT recipe_id FROM dev_recipes WHERE recipe_id = ?',
+      args: [id]
     });
 
     if (existing.rows.length === 0) {
@@ -279,34 +301,18 @@ export const DELETE: RequestHandler = async ({ request }) => {
     }
 
     if (id.startsWith('admin-')) {
-      // Admin-added recipes: delete entirely
       await db.execute({
-        sql: "DELETE FROM recipes WHERE id = ? AND type = 'builtin'",
+        sql: 'DELETE FROM dev_recipes WHERE recipe_id = ?',
         args: [id]
       });
       console.log(`🗑️ Deleted admin-added recipe: "${id}"`);
       return json({ success: true, id, action: 'deleted' });
     }
 
-    // Existing LEVELS overrides: clear override fields (revert to TypeScript defaults)
-    await db.execute({
-      sql: `UPDATE recipes SET
-            recipe_instructions = NULL,
-            recipe_ingredients = NULL
-            WHERE id = ? AND type = 'builtin'`,
-      args: [id]
-    });
-
-    console.log(`🔄 Reverted builtin recipe: "${id}" to original values`);
-
-    return json({
-      success: true,
-      id,
-      action: 'reverted'
-    });
+    return json({ error: 'Non-admin dev recipes should be edited, not reverted' }, { status: 400 });
 
   } catch (err) {
-    console.error('Failed to delete builtin override:', err);
-    return json({ error: 'Failed to revert override' }, { status: 500 });
+    console.error('Failed to delete dev recipe:', err);
+    return json({ error: 'Failed to update dev recipes' }, { status: 500 });
   }
 };

@@ -4,21 +4,19 @@ import { queryAll } from '$lib/server/turso';
 
 interface RecipeRow {
   id: string;
-  type: string;
-  name: string;
+  title: string;
   category: string;
   dietary_category: string | null;
-  level_num: number | null;
   prep_time: string | null;
   servings: string | null;
   recipe: string | null;
-  recipe_ingredients: string | null;
-  recipe_instructions: string | null;
+  recipe_ingredients_json: string | null;
+  recipe_instructions_json: string | null;
   food_supply: string | null;
-  tools: string | null;
   animal_spawns: string | null;
   image_url: string | null;
-  submitted_by: string | null;
+  user_id: string | null;
+  submitter_name: string | null;
   status: string;
   created_at: string;
   link_type: string | null;
@@ -27,10 +25,14 @@ interface RecipeRow {
 
 export const GET: RequestHandler = async () => {
   try {
-    // Get all approved community recipes
+    // Get all approved player recipes
     const rows = await queryAll<RecipeRow>(
-      `SELECT * FROM recipes 
-       WHERE status = 'approved' AND type = 'community'
+      `SELECT id, title, category, dietary_category, prep_time, servings, recipe,
+              recipe_ingredients_json, recipe_instructions_json, food_supply,
+              animal_spawns, image_url, user_id, submitter_name, status, created_at,
+              link_type, nutrition_json
+       FROM player_recipes 
+       WHERE status = 'approved'
        ORDER BY created_at ASC`
     );
     
@@ -50,8 +52,8 @@ export const GET: RequestHandler = async () => {
       
       return {
         id: row.id,
-        levelNum: row.level_num || (100 + index + 1), // Community recipes start at 101
-        name: row.name,
+        levelNum: 100 + index + 1,
+        name: row.title,
         category: row.category,
         dietaryCategory: row.dietary_category,
         recipe: gameFoods,
@@ -61,13 +63,13 @@ export const GET: RequestHandler = async () => {
           delay: spawn.delay * 1000, // Convert to ms
           from: 'left' as const
         })),
-        tools,
+        tools: [],
         prepTime: row.prep_time,
         servings: row.servings,
         recipeInstructions: instructions,
         recipeIngredients: ingredients,
         imageUrl: row.image_url,
-        submittedBy: row.submitted_by || 'Community',
+        submittedBy: row.submitter_name || row.user_id || 'Player',
         isCommunityRecipe: true,
         linkType: (row.link_type as 'ingredient' | 'dish' | 'mixed') ?? undefined,
         nutritionJson: row.nutrition_json ? JSON.parse(row.nutrition_json) : null

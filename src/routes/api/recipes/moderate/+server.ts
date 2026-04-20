@@ -1,12 +1,6 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import { writeFileSync, readFileSync, existsSync, mkdirSync } from 'fs';
-import { join } from 'path';
-import { queryAll, execute } from '$lib/server/turso';
-
-const DATA_DIR = join(process.cwd(), 'data', 'recipes');
-const PENDING_FILE = join(DATA_DIR, 'pending.json');
-const APPROVED_FILE = join(DATA_DIR, 'approved.json');
+import { execute, queryAll } from '$lib/server/turso';
 
 interface RecipeSubmission {
   id: string;
@@ -19,70 +13,125 @@ interface RecipeSubmission {
   ingredients: { name: string; quantity: string }[];
   instructions: string[];
   submittedAt: string;
-  status: 'pending' | 'approved' | 'rejected';
-  // Added by moderator
-  gameFoods?: string[];  // Food types for gameplay: ['lettuce', 'tomato', 'cheese']
+  status: 'pending' | 'approved' | 'rejected' | 'needs_changes' | 'published';
+  gameFoods?: string[];
   animalSpawns?: { type: string; delay: number }[];
-  foodSupply?: Record<string, number>;  // How many of each food: { lettuce: 3, tomato: 2 }
-  // Enhanced ingredient mapping (game food + animal per ingredient)
-  modIngredients?: { 
-    name: string; 
-    quantity: string; 
-    gameFood?: string | null; 
-    animal?: string | null; 
+  foodSupply?: Record<string, number>;
+  modIngredients?: {
+    name: string;
+    quantity: string;
+    gameFood?: string | null;
+    animal?: string | null;
   }[];
-  imageUrl?: string;  // Cloudinary URL for recipe photo
+  imageUrl?: string;
   reviewedAt?: string;
   reviewedBy?: string;
-  // Edit tracking
   editedAt?: string;
   editedBy?: string;
 }
 
-function ensureDataDir() {
-  if (!existsSync(DATA_DIR)) {
-    mkdirSync(DATA_DIR, { recursive: true });
-  }
-}
-
-function loadJSON(filepath: string): RecipeSubmission[] {
-  if (!existsSync(filepath)) {
-    return [];
-  }
+function parseJson<T>(value: string | null | undefined, fallback: T): T {
+  if (!value) return fallback;
   try {
-    return JSON.parse(readFileSync(filepath, 'utf-8'));
+    return JSON.parse(value) as T;
   } catch {
-    return [];
+    return fallback;
   }
 }
 
-function saveJSON(filepath: string, data: RecipeSubmission[]) {
-  ensureDataDir();
-  writeFileSync(filepath, JSON.stringify(data, null, 2));
+function buildPlayerSubmission(row: Record<string, unknown>): RecipeSubmission {
+  const ingredients = parseJson<{ name: string; quantity: string }[]>(row.ingredients as string | null, []);
+  return {
+    id: row.id as string,
+    recipeName: row.recipeName as string,
+    category: (row.category as string) || 'Other',
+    dietaryCategory: (row.dietaryCategory as string | null) || 'all',
+    submitterName: (row.submitterName as string | null) || 'Player',
+    prepTime: (row.prepTime as string | null) || '',
+    servings: (row.servings as string | null) || '',
+    ingredients,
+    instructions: parseJson<string[]>(row.instructions as string | null, []),
+    submittedAt: row.submittedAt as string,
+    status: row.status as RecipeSubmission['status'],
+    gameFoods: parseJson<string[] | undefined>(row.gameFoods as string | null, undefined),
+    animalSpawns: parseJson<{ type: string; delay: number }[] | undefined>(row.animalSpawns as string | null, undefined),
+    foodSupply: parseJson<Record<string, number> | undefined>(row.foodSupply as string | null, undefined),
+    modIngredients: ingredients,
+    imageUrl: (row.imageUrl as string | null) || undefined,
+    reviewedAt: (row.updatedAt as string | null) || undefined,
+    editedAt: (row.updatedAt as string | null) || undefined
+  };
 }
 
-// GET: Fetch recipes for moderation (pending + approved for editing)
+function buildDevSubmission(row: Record<string, unknown>): RecipeSubmission {
+  const ingredients = parseJson<{ name: string; quantity: string }[]>(row.ingredients as string | null, []);
+  return {
+    id: row.id as string,
+    recipeName: row.recipeName as string,
+    category: (row.category as string) || 'Other',
+    dietaryCategory: (row.dietaryCategory as string | null) || 'all',
+    submitterName: (row.submitterName as string | null) || 'System',
+    prepTime: (row.prepTime as string | null) || '',
+    servings: (row.servings as string | null) || '',
+    ingredients,
+    instructions: parseJson<string[]>(row.instructions as string | null, []),
+    submittedAt: row.submittedAt as string,
+    status: row.status as RecipeSubmission['status'],
+    gameFoods: parseJson<string[] | undefined>(row.gameFoods as string | null, undefined),
+    animalSpawns: parseJson<{ type: string; delay: number }[] | undefined>(row.animalSpawns as string | null, undefined),
+    foodSupply: parseJson<Record<string, number> | undefined>(row.foodSupply as string | null, undefined),
+    modIngredients: ingredients,
+    imageUrl: (row.imageUrl as string | null) || undefined,
+    reviewedAt: (row.updatedAt as string | null) || undefined,
+    reviewedBy: (row.submitterName as string | null) || undefined,
+    editedAt: (row.updatedAt as string | null) || undefined,
+    editedBy: (row.submitterName as string | null) || undefined
+  };
+}
+
 export const GET: RequestHandler = async ({ url }) => {
   try {
-    const filter = url.searchParams.get('filter'); // 'pending', 'approved', or 'all'
-    
-    const pending = loadJSON(PENDING_FILE);
-    const approved = loadJSON(APPROVED_FILE);
-    
+    const filter = url.searchParams.get('filter');
+
+    const pending = await queryAll(`
+      SELECT id, title AS recipeName, category, dietary_category AS dietaryCategory,
+             COALESCE(submitter_name, user_id) AS submitterName, prep_time AS prepTime,
+             servings, recipe_ingredients_json AS ingredients,
+             recipe_instructions_json AS instructions, created_at AS submittedAt,
+             status, recipe AS gameFoods, animal_spawns AS animalSpawns,
+             food_supply AS foodSupply, image_url AS imageUrl, updated_at AS updatedAt
+      FROM player_recipes
+      WHERE status IN ('pending', 'needs_changes')
+      ORDER BY created_at ASC
+    `).then((rows) => rows.map((row) => buildPlayerSubmission(row as Record<string, unknown>)));
+
+    const approved = await queryAll(`
+      SELECT recipe_id AS id, recipe_name AS recipeName, category,
+             dietary_category AS dietaryCategory, COALESCE(submitted_by, 'System') AS submitterName,
+             prep_time AS prepTime, servings, recipe_ingredients_json AS ingredients,
+             recipe_instructions_json AS instructions, created_at AS submittedAt,
+             status, recipe AS gameFoods, animal_spawns AS animalSpawns,
+             food_supply AS foodSupply, image_url AS imageUrl, updated_at AS updatedAt
+      FROM dev_recipes
+      WHERE status = 'published'
+      ORDER BY created_at ASC
+    `).then((rows) => rows.map((row) => buildDevSubmission(row as Record<string, unknown>)));
+
     if (filter === 'pending') {
       return json({ recipes: pending });
-    } else if (filter === 'approved') {
-      return json({ recipes: approved });
-    } else {
-      return json({ 
-        pending,
-        approved,
-        counts: {
-          pending: pending.length,
-          approved: approved.length
-        }
-      });
     }
+    if (filter === 'approved') {
+      return json({ recipes: approved });
+    }
+
+    return json({
+      pending,
+      approved,
+      counts: {
+        pending: pending.length,
+        approved: approved.length
+      }
+    });
   } catch (err) {
     console.error('Failed to load recipes for moderation:', err);
     return json({ error: 'Failed to load recipes' }, { status: 500 });
@@ -92,15 +141,14 @@ export const GET: RequestHandler = async ({ url }) => {
 export const POST: RequestHandler = async ({ request }) => {
   try {
     const body = await request.json();
-    const { 
-      id, 
-      action, 
-      gameFoods, 
-      animalSpawns, 
+    const {
+      id,
+      action,
+      gameFoods,
+      animalSpawns,
       reviewedBy,
       foodSupply,
       moderatorNote,
-      // New fields for full recipe editing on approval
       recipeName,
       category,
       dietaryCategory,
@@ -109,12 +157,11 @@ export const POST: RequestHandler = async ({ request }) => {
       ingredients,
       instructions
     } = body;
-    
+
     if (!action) {
       return json({ error: 'Missing action' }, { status: 400 });
     }
-    
-    // Handle creating new built-in recipes
+
     if (action === 'create-builtin') {
       if (!gameFoods || gameFoods.length === 0) {
         return json({ error: 'Game foods required' }, { status: 400 });
@@ -122,60 +169,55 @@ export const POST: RequestHandler = async ({ request }) => {
       if (!recipeName || !recipeName.trim()) {
         return json({ error: 'Recipe name required' }, { status: 400 });
       }
-      
-      const newRecipe: RecipeSubmission = {
-        id: `builtin-${Date.now()}`,
-        recipeName: recipeName,
-        category: category || 'Dinner',
-        dietaryCategory: dietaryCategory || 'all',
-        submitterName: 'Built-in',
-        prepTime: prepTime || '',
-        servings: servings || '',
-        ingredients: ingredients?.map((ing: { name: string; quantity: string }) => ({
-          name: ing.name,
-          quantity: ing.quantity
-        })) || [],
-        instructions: instructions || [],
-        submittedAt: new Date().toISOString(),
-        status: 'approved',
-        gameFoods: gameFoods,
-        animalSpawns: animalSpawns || [{ type: 'rabbit', delay: 3 }],
-        foodSupply: foodSupply || {},
-        modIngredients: ingredients,
-        reviewedAt: new Date().toISOString(),
-        reviewedBy: 'Moderator'
-      };
-      
-      const approved = loadJSON(APPROVED_FILE);
-      approved.push(newRecipe);
-      saveJSON(APPROVED_FILE, approved);
-      
-      console.log(`➕ Created new recipe: "${newRecipe.recipeName}"`);
-      
-      return json({ 
-        success: true, 
-        action: 'create-builtin',
-        recipe: newRecipe.recipeName,
-        id: newRecipe.id
-      });
+
+      const newId = `admin-${Date.now()}`;
+      const now = new Date().toISOString();
+      await execute(
+        `INSERT INTO dev_recipes (
+          recipe_id, food_word, recipe_name, category, dietary_category, prep_time, servings,
+          recipe, animal_spawns, recipe_ingredients_json, recipe_instructions_json,
+          food_supply, image_url, submitted_by, status, created_at, updated_at,
+          grams_per_serving, nutrition_json, nutrient_version, retention_model_version, source_match_version
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'published', ?, ?, ?, ?, ?, ?, ?)`,
+        [
+          newId,
+          newId,
+          recipeName,
+          category || 'Dinner',
+          dietaryCategory || 'all',
+          prepTime || '',
+          servings || '',
+          JSON.stringify(gameFoods),
+          JSON.stringify(animalSpawns || [{ type: 'rabbit', delay: 3 }]),
+          JSON.stringify(ingredients || []),
+          JSON.stringify(instructions || []),
+          JSON.stringify(foodSupply || {}),
+          null,
+          reviewedBy || 'Moderator',
+          now,
+          now,
+          0,
+          '{}',
+          'legacy',
+          'legacy',
+          'legacy'
+        ]
+      );
+
+      return json({ success: true, action, recipe: recipeName, id: newId });
     }
-    
+
     if (!['approve', 'reject', 'needs_changes'].includes(action)) {
       return json({ error: 'Invalid action' }, { status: 400 });
     }
-    
-    // For approve/reject, id is required
     if (!id) {
       return json({ error: 'Missing recipe id' }, { status: 400 });
     }
 
-    // Verify recipe exists and is pending in Turso
-    interface RecipeRow { id: string; name: string; status: string; }
-    const existing = await queryAll<RecipeRow>(
-      `SELECT id, name, status FROM recipes WHERE id = ? AND type = 'community'`,
+    const existing = await queryAll<{ id: string; recipeName: string; status: string }>(
+      `SELECT id, title AS recipeName, status FROM player_recipes WHERE id = ?`,
       [id]
     );
-
     if (existing.length === 0) {
       return json({ error: 'Recipe not found' }, { status: 404 });
     }
@@ -183,7 +225,7 @@ export const POST: RequestHandler = async ({ request }) => {
       return json({ error: 'Recipe is not pending' }, { status: 409 });
     }
 
-    const currentName = existing[0].name;
+    const currentName = existing[0].recipeName;
 
     if (action === 'approve') {
       if (!gameFoods || gameFoods.length === 0) {
@@ -191,20 +233,19 @@ export const POST: RequestHandler = async ({ request }) => {
       }
 
       await execute(
-        `UPDATE recipes SET
+        `UPDATE player_recipes SET
           status = 'approved',
-          name = COALESCE(?, name),
+          title = COALESCE(?, title),
           category = COALESCE(?, category),
           dietary_category = COALESCE(?, dietary_category),
           prep_time = COALESCE(?, prep_time),
           servings = COALESCE(?, servings),
-          recipe_ingredients = COALESCE(?, recipe_ingredients),
-          recipe_instructions = COALESCE(?, recipe_instructions),
+          recipe_ingredients_json = COALESCE(?, recipe_ingredients_json),
+          recipe_instructions_json = COALESCE(?, recipe_instructions_json),
           recipe = ?,
           animal_spawns = ?,
           food_supply = ?,
-          edited_at = datetime('now'),
-          edited_by = ?
+          updated_at = datetime('now')
          WHERE id = ?`,
         [
           recipeName || null,
@@ -217,96 +258,67 @@ export const POST: RequestHandler = async ({ request }) => {
           JSON.stringify(gameFoods),
           JSON.stringify(animalSpawns || []),
           JSON.stringify(foodSupply || {}),
-          reviewedBy || 'Moderator',
           id
         ]
       );
-
-      console.log(`✅ Approved recipe: "${recipeName || currentName}"`);
     } else if (action === 'needs_changes') {
-      // Request changes: store moderator note, player can edit and resubmit
       if (!moderatorNote || !moderatorNote.trim()) {
         return json({ error: 'Moderator note is required for requesting changes' }, { status: 400 });
       }
-      // Ensure column exists (safe to run each time — DDL is idempotent via try/catch)
-      try {
-        await execute(`ALTER TABLE recipes ADD COLUMN moderator_note TEXT`);
-      } catch {
-        // Column already exists — ignore
-      }
       await execute(
-        `UPDATE recipes SET status = 'needs_changes', moderator_note = ?, edited_at = datetime('now'), edited_by = ? WHERE id = ?`,
-        [moderatorNote.trim(), reviewedBy || 'Moderator', id]
+        `UPDATE player_recipes SET status = 'needs_changes', moderator_note = ?, updated_at = datetime('now') WHERE id = ?`,
+        [moderatorNote.trim(), id]
       );
-      console.log(`💬 Requested changes for recipe: "${currentName}"`);
     } else {
-      // Hard reject: update status in Turso, player sees "Not Approved" in my-recipes
       await execute(
-        `UPDATE recipes SET status = 'rejected', edited_at = datetime('now'), edited_by = ? WHERE id = ?`,
-        [reviewedBy || 'Moderator', id]
+        `UPDATE player_recipes SET status = 'rejected', updated_at = datetime('now') WHERE id = ?`,
+        [id]
       );
-      console.log(`❌ Rejected recipe: "${currentName}"`);
     }
-    
-    return json({ 
-      success: true, 
-      action,
-      recipe: recipeName || currentName
-    });
-    
+
+    return json({ success: true, action, recipe: recipeName || currentName });
   } catch (err) {
     console.error('Failed to moderate recipe:', err);
     return json({ error: 'Failed to moderate recipe' }, { status: 500 });
   }
 };
 
-// PATCH: Edit an approved recipe (JSON file or database)
 export const PATCH: RequestHandler = async ({ request }) => {
   try {
     const body = await request.json();
     const { id, updates, editedBy } = body;
-    
+
     if (!id) {
       return json({ error: 'Missing recipe id' }, { status: 400 });
     }
-    
     if (!updates || typeof updates !== 'object') {
       return json({ error: 'Missing updates object' }, { status: 400 });
     }
-    
-    // Check if this is a database recipe (community recipe IDs start with 'recipe-')
-    const isDatabaseRecipe = id.startsWith('recipe-');
-    
-    if (isDatabaseRecipe) {
-      // Update in database
-      interface RecipeRow {
-        id: string;
-        name: string;
-        status: string;
-      }
-      
-      const existing = await queryAll<RecipeRow>(
-        'SELECT id, name, status FROM recipes WHERE id = ? AND type = ?',
-        [id, 'community']
+
+    const isPlayerRecipe = id.startsWith('recipe-');
+
+    if (isPlayerRecipe) {
+      const existing = await queryAll<{ id: string; recipeName: string }>(
+        'SELECT id, title AS recipeName FROM player_recipes WHERE id = ?',
+        [id]
       );
-      
       if (existing.length === 0) {
-        return json({ error: 'Recipe not found in database' }, { status: 404 });
+        return json({ error: 'Player recipe not found' }, { status: 404 });
       }
-      
-      // Build SQL update
+
       await execute(
-        `UPDATE recipes SET 
-          name = COALESCE(?, name),
+        `UPDATE player_recipes SET
+          title = COALESCE(?, title),
           category = COALESCE(?, category),
           dietary_category = COALESCE(?, dietary_category),
           prep_time = COALESCE(?, prep_time),
           servings = COALESCE(?, servings),
           recipe = COALESCE(?, recipe),
-          recipe_ingredients = COALESCE(?, recipe_ingredients),
-          recipe_instructions = COALESCE(?, recipe_instructions),
+          recipe_ingredients_json = COALESCE(?, recipe_ingredients_json),
+          recipe_instructions_json = COALESCE(?, recipe_instructions_json),
           animal_spawns = COALESCE(?, animal_spawns),
-          image_url = COALESCE(?, image_url)
+          image_url = COALESCE(?, image_url),
+          updated_at = datetime('now')
          WHERE id = ?`,
         [
           updates.recipeName || null,
@@ -315,110 +327,87 @@ export const PATCH: RequestHandler = async ({ request }) => {
           updates.prepTime || null,
           updates.servings || null,
           updates.gameFoods ? JSON.stringify(updates.gameFoods) : null,
-          updates.ingredients ? JSON.stringify(updates.ingredients) : 
-            (updates.modIngredients ? JSON.stringify(updates.modIngredients) : null),
+          updates.ingredients ? JSON.stringify(updates.ingredients) : (updates.modIngredients ? JSON.stringify(updates.modIngredients) : null),
           updates.instructions ? JSON.stringify(updates.instructions) : null,
           updates.animalSpawns ? JSON.stringify(updates.animalSpawns) : null,
           updates.imageUrl !== undefined ? (updates.imageUrl || null) : null,
           id
         ]
       );
-      
-      console.log(`✏️ Edited database recipe: "${updates.recipeName || existing[0].name}" by ${editedBy || 'Moderator'}`);
-      
-      return json({ 
-        success: true, 
-        recipe: updates.recipeName || existing[0].name,
-        editedAt: new Date().toISOString()
-      });
+
+      return json({ success: true, recipe: updates.recipeName || existing[0].recipeName, editedAt: new Date().toISOString() });
     }
-    
-    // Otherwise, update in JSON file
-    const approved = loadJSON(APPROVED_FILE);
-    const recipeIndex = approved.findIndex(r => r.id === id);
-    
-    if (recipeIndex === -1) {
-      return json({ error: 'Recipe not found in approved list' }, { status: 404 });
+
+    const existingDev = await queryAll<{ recipe_id: string; recipe_name: string }>(
+      'SELECT recipe_id, recipe_name FROM dev_recipes WHERE recipe_id = ?',
+      [id]
+    );
+    if (existingDev.length === 0) {
+      return json({ error: 'Dev recipe not found' }, { status: 404 });
     }
-    
-    const recipe = approved[recipeIndex];
-    
-    // Allowed fields to update
-    const allowedFields = [
-      'recipeName',
-      'category',
-      'dietaryCategory',
-      'prepTime',
-      'servings',
-      'ingredients',
-      'modIngredients',
-      'instructions',
-      'gameFoods',
-      'animalSpawns',
-      'imageUrl'
-    ];
-    
-    // Apply updates
-    for (const field of allowedFields) {
-      if (updates[field] !== undefined) {
-        (recipe as unknown as Record<string, unknown>)[field] = updates[field];
-      }
-    }
-    
-    // Track edit
-    recipe.editedAt = new Date().toISOString();
-    recipe.editedBy = editedBy || 'Moderator';
-    
-    // Save
-    approved[recipeIndex] = recipe;
-    saveJSON(APPROVED_FILE, approved);
-    
-    console.log(`✏️ Edited recipe: "${recipe.recipeName}" by ${recipe.editedBy}`);
-    
-    return json({ 
-      success: true, 
-      recipe: recipe.recipeName,
-      editedAt: recipe.editedAt
-    });
-    
+
+    await execute(
+      `UPDATE dev_recipes SET
+        recipe_name = COALESCE(?, recipe_name),
+        category = COALESCE(?, category),
+        dietary_category = COALESCE(?, dietary_category),
+        prep_time = COALESCE(?, prep_time),
+        servings = COALESCE(?, servings),
+        recipe = COALESCE(?, recipe),
+        recipe_ingredients_json = COALESCE(?, recipe_ingredients_json),
+        recipe_instructions_json = COALESCE(?, recipe_instructions_json),
+        animal_spawns = COALESCE(?, animal_spawns),
+        image_url = COALESCE(?, image_url),
+        updated_at = datetime('now'),
+        submitted_by = COALESCE(?, submitted_by)
+       WHERE recipe_id = ?`,
+      [
+        updates.recipeName || null,
+        updates.category || null,
+        updates.dietaryCategory || null,
+        updates.prepTime || null,
+        updates.servings || null,
+        updates.gameFoods ? JSON.stringify(updates.gameFoods) : null,
+        updates.ingredients ? JSON.stringify(updates.ingredients) : (updates.modIngredients ? JSON.stringify(updates.modIngredients) : null),
+        updates.instructions ? JSON.stringify(updates.instructions) : null,
+        updates.animalSpawns ? JSON.stringify(updates.animalSpawns) : null,
+        updates.imageUrl !== undefined ? (updates.imageUrl || null) : null,
+        editedBy || 'Moderator',
+        id
+      ]
+    );
+
+    return json({ success: true, recipe: updates.recipeName || existingDev[0].recipe_name, editedAt: new Date().toISOString() });
   } catch (err) {
     console.error('Failed to edit recipe:', err);
     return json({ error: 'Failed to edit recipe' }, { status: 500 });
   }
 };
 
-// DELETE: Remove an approved recipe (unpublish)
 export const DELETE: RequestHandler = async ({ request }) => {
   try {
     const body = await request.json();
-    const { id, deletedBy } = body;
-    
+    const { id } = body;
+
     if (!id) {
       return json({ error: 'Missing recipe id' }, { status: 400 });
     }
-    
-    // Load approved recipes
-    const approved = loadJSON(APPROVED_FILE);
-    const recipeIndex = approved.findIndex(r => r.id === id);
-    
-    if (recipeIndex === -1) {
-      return json({ error: 'Recipe not found in approved list' }, { status: 404 });
+
+    if (id.startsWith('recipe-')) {
+      const playerRows = await queryAll<{ id: string; title: string }>('SELECT id, title FROM player_recipes WHERE id = ?', [id]);
+      if (playerRows.length === 0) {
+        return json({ error: 'Player recipe not found' }, { status: 404 });
+      }
+      await execute(`UPDATE player_recipes SET status = 'rejected', updated_at = datetime('now') WHERE id = ?`, [id]);
+      return json({ success: true, recipe: playerRows[0].title, action: 'unpublished' });
     }
-    
-    const recipe = approved[recipeIndex];
-    
-    // Remove from approved
-    approved.splice(recipeIndex, 1);
-    saveJSON(APPROVED_FILE, approved);
-    
-    console.log(`🗑️ Unpublished recipe: "${recipe.recipeName}" by ${deletedBy || 'Moderator'}`);
-    
-    return json({ 
-      success: true, 
-      recipe: recipe.recipeName,
-      action: 'unpublished'
-    });
-    
+
+    const devRows = await queryAll<{ recipe_id: string; recipe_name: string }>('SELECT recipe_id, recipe_name FROM dev_recipes WHERE recipe_id = ?', [id]);
+    if (devRows.length === 0) {
+      return json({ error: 'Dev recipe not found' }, { status: 404 });
+    }
+    await execute('DELETE FROM dev_recipes WHERE recipe_id = ?', [id]);
+    return json({ success: true, recipe: devRows[0].recipe_name, action: 'unpublished' });
   } catch (err) {
     console.error('Failed to unpublish recipe:', err);
     return json({ error: 'Failed to unpublish recipe' }, { status: 500 });

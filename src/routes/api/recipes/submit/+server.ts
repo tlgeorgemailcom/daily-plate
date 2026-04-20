@@ -3,6 +3,9 @@ import type { RequestHandler } from './$types';
 import { execute, queryOne } from '$lib/server/turso';
 import { calcNutritionJson } from '$lib/server/calcNutrition';
 
+const EMPTY_NUTRITION_JSON = '{}';
+const DEFAULT_VERSION = 'pending';
+
 // Generate unique ID
 function generateId(): string {
   return `recipe-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
@@ -21,7 +24,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
     }
 
     const recipe = await queryOne<{ submitted_by: string; status: string; edit_code: string | null }>(
-      'SELECT submitted_by, status, edit_code FROM recipes WHERE id = ?',
+      'SELECT user_id AS submitted_by, status, edit_code FROM player_recipes WHERE id = ?',
       [recipeId]
     );
     if (!recipe) return json({ error: 'Recipe not found' }, { status: 404 });
@@ -54,13 +57,14 @@ export const PATCH: RequestHandler = async ({ request }) => {
 
     if (fields.recipeName) {
       await execute(
-        `UPDATE recipes SET
-          name = ?, category = ?, dietary_category = ?,
+        `UPDATE player_recipes SET
+          title = ?, category = ?, dietary_category = ?,
           prep_time = ?, servings = ?,
-          recipe_ingredients = ?, recipe_instructions = ?,
+          recipe_ingredients_json = ?, recipe_instructions_json = ?,
           image_url = COALESCE(?, image_url),
           link_type = COALESCE(?, link_type),
           nutrition_json = ?,
+          updated_at = datetime('now'),
           status = ?
         WHERE id = ?`,
         [
@@ -73,14 +77,14 @@ export const PATCH: RequestHandler = async ({ request }) => {
           JSON.stringify(fields.instructions || []),
           fields.imageUrl || null,
           fields.linkType || null,
-          nutritionJson ? JSON.stringify(nutritionJson) : null,
+          nutritionJson ? JSON.stringify(nutritionJson) : EMPTY_NUTRITION_JSON,
           newStatus,
           recipeId
         ]
       );
     } else {
       // status-only change (just submitting)
-      await execute('UPDATE recipes SET status = ? WHERE id = ?', [newStatus, recipeId]);
+      await execute('UPDATE player_recipes SET status = ?, updated_at = datetime(\'now\') WHERE id = ?', [newStatus, recipeId]);
     }
 
     return json({ success: true, id: recipeId, status: newStatus, nutritionJson });
@@ -136,15 +140,17 @@ export const POST: RequestHandler = async ({ request }) => {
     
     // Insert into Turso
     await execute(
-      `INSERT INTO recipes (
-        id, type, name, category, dietary_category,
+      `INSERT INTO player_recipes (
+        id, user_id, title, category, dietary_category,
         prep_time, servings,
-        recipe_ingredients, recipe_instructions,
+        recipe_ingredients_json, recipe_instructions_json,
         image_url, link_type, nutrition_json,
-        submitted_by, submitter_name, status, created_at
-      ) VALUES (?, 'community', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))`,
+        submitter_name, status, created_at, updated_at,
+        grams_per_serving, nutrient_version, retention_model_version, source_match_version
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'), datetime('now'), ?, ?, ?, ?)`,
       [
         recipeId,
+        submittedBy,
         body.recipeName,
         body.category,
         body.dietaryCategory || null,
@@ -154,10 +160,13 @@ export const POST: RequestHandler = async ({ request }) => {
         JSON.stringify(body.instructions),
         body.imageUrl || null,
         body.linkType || null,
-        null, // nutrition_json — computed later via PATCH when linking is complete
-        submittedBy,
+        EMPTY_NUTRITION_JSON,
         submitterName,
         status
+        ,0,
+        DEFAULT_VERSION,
+        DEFAULT_VERSION,
+        DEFAULT_VERSION
       ]
     );
     
