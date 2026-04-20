@@ -6,6 +6,7 @@ export type Sr28SearchScope = 'all' | 'baby';
 
 const DEFAULT_LIMIT = 80;
 const CUSTOM_PORTION: Portion = { amt: 1, desc: 'custom (g)', gm: 100 };
+const SEARCH_FIELDS = ['keyword', 'key0', 'key1', 'key2', 'key3', 'key4', 'key5', 'key6', 'key7', 'key8'];
 
 function mapFdGroupToFoodGroups(fdGrpCd: string): FoodGroup[] {
   switch (fdGrpCd) {
@@ -85,18 +86,15 @@ function buildSearchWhere(query: string, scope: Sr28SearchScope): { sql: string;
   const clauses: string[] = [];
   const args: InValue[] = [];
 
-  if (scope === 'baby') {
-    clauses.push('"FdGrp_Cd" = ?');
-    args.push('300');
-  } else {
-    clauses.push('COALESCE("FdGrp_Cd", \'\') <> ?');
-    args.push('300');
-  }
+  // Baby foods and infant formula (FdGrp_Cd = 300) are handled separately.
+  clauses.push('COALESCE("FdGrp_Cd", \'\') <> ?');
+  args.push('300');
 
   for (const term of terms) {
-    clauses.push('LOWER(COALESCE("Long_Desc", \'\')) LIKE ?');
+    const fieldClauses = SEARCH_FIELDS.map((field) => `LOWER(COALESCE("${field}", '')) LIKE ?`);
+    clauses.push(`(${fieldClauses.join(' OR ')})`);
     const like = `%${term}%`;
-    args.push(like);
+    args.push(...SEARCH_FIELDS.map(() => like));
   }
 
   const sql = clauses.length > 0 ? `WHERE ${clauses.join(' AND ')}` : '';
@@ -107,7 +105,6 @@ export async function searchSr28Foods(query: string, scope: Sr28SearchScope, lim
   const db = getSR28Db();
   const safeLimit = Math.max(1, Math.min(limit, 100));
   const trimmedQuery = query.trim();
-  const loweredQuery = trimmedQuery.toLowerCase();
   const { sql, args } = buildSearchWhere(trimmedQuery, scope);
 
   const result = await db.execute({
@@ -122,24 +119,17 @@ export async function searchSr28Foods(query: string, scope: Sr28SearchScope, lim
         Carbohydrate,
         FiberTotalDietary,
         Water,
-        SugarsTotal
+        SugarsTotal,
+        key10
       FROM DataCentralCombo
       ${sql}
       ORDER BY
-        CASE
-          WHEN ? <> '' AND LOWER(COALESCE("Long_Desc", '')) = ? THEN 0
-          WHEN ? <> '' AND LOWER(COALESCE("Long_Desc", '')) LIKE ? THEN 1
-          ELSE 2
-        END,
+        CAST(COALESCE(key10, '0') AS INTEGER) DESC,
         "Long_Desc" ASC
       LIMIT ?
     `,
     args: [
       ...args,
-      loweredQuery,
-      loweredQuery,
-      loweredQuery,
-      `${loweredQuery}%`,
       safeLimit
     ]
   });
