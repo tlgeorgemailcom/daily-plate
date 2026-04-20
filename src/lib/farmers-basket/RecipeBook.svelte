@@ -1409,6 +1409,7 @@
       {@const isCurrent = selectedLevel.id === currentLevelId}
       {@const canReadRecipe = isCompleted || canReadAllRecipes}
       {@const hasRecipeDetails = !!selectedLevel.recipeInstructions || !!selectedLevel.recipeIngredients?.length}
+      {@const isPremiumReadOnly = canReadAllRecipes && !isCompleted}
       
       {#if isModeratorMode}
         <!-- MODERATOR EDIT MODE -->
@@ -1719,8 +1720,8 @@
             </div>
           {/if}
           
-          <button class="play-btn" onclick={() => handlePlay(selectedLevel!.id)}>
-            {isCurrent ? '🔄 Replay' : isCompleted ? '🎮 Replay' : '▶️ Play'}
+          <button class="play-btn" class:secondary-play-btn={isPremiumReadOnly} onclick={() => handlePlay(selectedLevel!.id)}>
+            {isPremiumReadOnly ? '▶️ Play Recipe Game' : isCurrent ? '🔄 Replay' : isCompleted ? '🎮 Replay' : '▶️ Play'}
           </button>
           {#if !canReadRecipe}
             <p class="paid-tier-note">Upgrade to a paid tier if you do not want to play the game</p>
@@ -2921,6 +2922,17 @@
     cursor: pointer;
     transition: transform 0.15s, box-shadow 0.15s;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .play-btn.secondary-play-btn {
+    margin-top: 8px;
+    align-self: flex-start;
+    padding: 10px 16px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    background: #f3f4f6;
+    color: #374151;
+    box-shadow: none;
   }
   
   .play-btn:hover {
