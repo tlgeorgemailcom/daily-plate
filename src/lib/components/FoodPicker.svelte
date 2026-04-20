@@ -29,6 +29,7 @@
   let remoteFoods = $state<Food[]>([]);
   let remoteLoading = $state(false);
   let remoteError = $state<string | null>(null);
+  let remoteRequested = $state(false);
   
   // Long-press tooltip state
   let tooltipFood = $state<Food | null>(null);
@@ -76,7 +77,18 @@
     });
   }
 
-  const useRemoteSearch = $derived(searchQuery.trim().length >= 2 && selectedGroup !== 'recipes');
+  const canUseRemoteSearch = $derived(searchQuery.trim().length >= 2 && selectedGroup !== 'recipes');
+  const useRemoteSearch = $derived(canUseRemoteSearch && remoteRequested);
+
+  $effect(() => {
+    searchQuery;
+    selectedGroup;
+    searchScope;
+    remoteRequested = false;
+    remoteFoods = [];
+    remoteLoading = false;
+    remoteError = null;
+  });
 
   $effect(() => {
     if (!enableBabyScope && searchScope !== 'all') {
@@ -126,18 +138,23 @@
   const filteredFoods = $derived(() => {
     const queryWords = searchQuery.toLowerCase().split(/\s+/).filter(w => w.length > 0);
     let foods: (Food | (Food & { isCustom: true }) | RecipeFood)[];
+    const customAsFoods = $customFoods.map(customToFood);
+    const matchedCustomFoods = customAsFoods.filter(food => matchesQuery(food, queryWords));
+    const matchedRecipeFoods = recipeFoods.filter(food => matchesQuery(food, queryWords));
+    const matchedCuratedFoods = FOODS.filter(food => matchesQuery(food, queryWords));
 
     if (useRemoteSearch) {
-      const customAsFoods = $customFoods.map(customToFood);
-      const matchedCustomFoods = customAsFoods.filter(food => matchesQuery(food, queryWords));
-      const matchedRecipeFoods = recipeFoods.filter(food => matchesQuery(food, queryWords));
       const filteredRemoteFoods = selectedGroup === 'all'
         ? remoteFoods
         : remoteFoods.filter(food => food.groups.includes(selectedGroup as FoodGroup));
 
+      const curatedFoodsForGroup = selectedGroup === 'all'
+        ? matchedCuratedFoods
+        : matchedCuratedFoods.filter(food => food.groups.includes(selectedGroup as FoodGroup));
+
       foods = selectedGroup === 'recipes'
         ? matchedRecipeFoods
-        : [...matchedCustomFoods, ...filteredRemoteFoods, ...matchedRecipeFoods];
+        : [...matchedCustomFoods, ...curatedFoodsForGroup, ...filteredRemoteFoods, ...matchedRecipeFoods];
 
       const seen = new Set<string>();
       foods = foods.filter(food => {
@@ -147,7 +164,6 @@
         return true;
       });
     } else {
-      const customAsFoods = $customFoods.map(customToFood);
       foods = selectedGroup === 'recipes'
         ? [...recipeFoods]
         : [...customAsFoods, ...FOODS, ...recipeFoods];
@@ -191,6 +207,11 @@
 
   function selectFood(food: Food) {
     dispatch('select', food);
+  }
+
+  function requestRemoteSearch() {
+    if (!canUseRemoteSearch) return;
+    remoteRequested = true;
   }
 
   function handlePointerDown(event: PointerEvent, food: Food) {
@@ -304,9 +325,9 @@
   <!-- Food list -->
   <div class="food-list">
     {#if remoteLoading}
-      <div class="search-status">Searching SR28…</div>
+      <div class="search-status">Searching curated foods first, then DataCentralCombo…</div>
     {:else if remoteError}
-      <div class="search-status search-status-error">SR28 search is unavailable right now.</div>
+      <div class="search-status search-status-error">DataCentralCombo fallback search is unavailable right now.</div>
     {/if}
 
     {#each filteredFoods() as food}
@@ -332,6 +353,16 @@
         </span>
       </button>
     {/each}
+
+    {#if canUseRemoteSearch && !remoteRequested && filteredFoods().length > 0}
+      <button class="load-more-btn" onclick={requestRemoteSearch}>
+        Search Full Database for more results
+      </button>
+    {:else if canUseRemoteSearch && !remoteRequested && filteredFoods().length === 0}
+      <button class="load-more-btn" onclick={requestRemoteSearch}>
+        Search Full Database
+      </button>
+    {/if}
     
     {#if filteredFoods().length === 0}
       <div class="no-results">No foods found</div>
@@ -544,6 +575,24 @@
   .food-item.recipe-food:hover {
     background: #fef3c7;
     border-color: #f59e0b;
+  }
+
+  .load-more-btn {
+    padding: 0.75rem 0.9rem;
+    border: 1px dashed #94a3b8;
+    border-radius: 0.5rem;
+    background: #f8fafc;
+    color: #0f172a;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.15s;
+  }
+
+  .load-more-btn:hover {
+    background: #f1f5f9;
+    border-color: #64748b;
   }
 
   .food-name {
