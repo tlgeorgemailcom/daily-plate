@@ -48,6 +48,7 @@
     levels: Level[];
     completedLevels: Set<string>;
     currentLevelId: string | null;
+    canReadAllRecipes?: boolean;
     hasInfantProfile?: boolean;
     onselect: (levelId: string) => void;
     onclose: () => void;
@@ -56,7 +57,7 @@
     startWithRecipeOfDay?: boolean;
   }
   
-  let { levels, completedLevels, currentLevelId, hasInfantProfile = false, onselect, onclose, onshare, onLevelsUpdated, startWithRecipeOfDay = false }: Props = $props();
+  let { levels, completedLevels, currentLevelId, canReadAllRecipes = false, hasInfantProfile = false, onselect, onclose, onshare, onLevelsUpdated, startWithRecipeOfDay = false }: Props = $props();
   
   // View states: 'dietary-select' | 'recipe-of-day' | 'index' | 'detail'
   let showDietarySelect = $state(false);
@@ -1406,6 +1407,7 @@
       <!-- DETAIL VIEW: Full recipe card or Moderator Edit Form -->
       {@const isCompleted = completedLevels.has(selectedLevel.id)}
       {@const isCurrent = selectedLevel.id === currentLevelId}
+      {@const canReadRecipe = isCompleted || canReadAllRecipes}
       
       {#if isModeratorMode}
         <!-- MODERATOR EDIT MODE -->
@@ -1673,7 +1675,7 @@
             </div>
           </div>
           
-          {#if isCompleted && selectedLevel.recipeInstructions}
+          {#if canReadRecipe && selectedLevel.recipeInstructions}
             <div class="recipe-details">
               <div class="recipe-meta">
                 {#if selectedLevel.prepTime}<span>⏱️ {selectedLevel.prepTime}</span>{/if}
@@ -1713,6 +1715,9 @@
           <button class="play-btn" onclick={() => handlePlay(selectedLevel!.id)}>
             {isCurrent ? '🔄 Replay' : isCompleted ? '🎮 Replay' : '▶️ Play'}
           </button>
+          {#if !canReadRecipe}
+            <p class="paid-tier-note">Upgrade to a paid tier if you do not want to play the game</p>
+          {/if}
         </div>
       {/if}
     {:else if isAddingNewBuiltin}
@@ -2881,6 +2886,14 @@
   
   .lock-icon {
     font-size: 2rem;
+  }
+
+  .paid-tier-note {
+    margin: 12px 0 0;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #4b5563;
   }
   
   .play-btn {

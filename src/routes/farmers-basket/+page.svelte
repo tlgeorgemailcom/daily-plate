@@ -1041,6 +1041,7 @@
     levels={game.allLevels}
     completedLevels={game.completedLevels}
     currentLevelId={game.currentLevel?.id ?? null}
+    canReadAllRecipes={$isPremium}
     {hasInfantProfile}
     startWithRecipeOfDay={showRecipeOfDay}
     onselect={(id) => { game.loadLevel(id); game.startLevel(); showRecipeBook = false; showRecipeOfDay = true; }}
