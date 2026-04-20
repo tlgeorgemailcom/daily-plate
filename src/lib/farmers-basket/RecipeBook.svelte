@@ -1408,6 +1408,7 @@
       {@const isCompleted = completedLevels.has(selectedLevel.id)}
       {@const isCurrent = selectedLevel.id === currentLevelId}
       {@const canReadRecipe = isCompleted || canReadAllRecipes}
+      {@const hasRecipeDetails = !!selectedLevel.recipeInstructions || !!selectedLevel.recipeIngredients?.length}
       
       {#if isModeratorMode}
         <!-- MODERATOR EDIT MODE -->
@@ -1675,7 +1676,7 @@
             </div>
           </div>
           
-          {#if canReadRecipe && selectedLevel.recipeInstructions}
+          {#if canReadRecipe}
             <div class="recipe-details">
               <div class="recipe-meta">
                 {#if selectedLevel.prepTime}<span>⏱️ {selectedLevel.prepTime}</span>{/if}
@@ -1696,14 +1697,20 @@
                 {/if}
               {/if}
               
-              <div class="instructions">
-                <span class="instructions-label">How to make:</span>
-                <ol>
-                  {#each selectedLevel.recipeInstructions as step}
-                    <li>{step}</li>
-                  {/each}
-                </ol>
-              </div>
+              {#if selectedLevel.recipeInstructions && selectedLevel.recipeInstructions.length > 0}
+                <div class="instructions">
+                  <span class="instructions-label">How to make:</span>
+                  <ol>
+                    {#each selectedLevel.recipeInstructions as step}
+                      <li>{step}</li>
+                    {/each}
+                  </ol>
+                </div>
+              {:else if !hasRecipeDetails}
+                <div class="recipe-details-unavailable">
+                  <span>Recipe details are not available for this entry yet.</span>
+                </div>
+              {/if}
             </div>
           {:else}
             <div class="locked-message">
@@ -2894,6 +2901,12 @@
     font-size: 1rem;
     font-weight: 400;
     color: #4b5563;
+  }
+
+  .recipe-details-unavailable {
+    margin-top: 12px;
+    color: #6b7280;
+    font-size: 1rem;
   }
   
   .play-btn {
