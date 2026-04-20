@@ -18,7 +18,7 @@ function classifySearchError(error: unknown): string {
     return 'sr28_auth_failed';
   }
 
-  return 'search_failed';
+  return message || 'search_failed';
 }
 
 export const GET: RequestHandler = async ({ url }) => {
