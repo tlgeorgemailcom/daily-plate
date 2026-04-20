@@ -31,8 +31,15 @@ let sr28Client: Client | null = null;
 
 export function getSR28Db(): Client {
   if (!sr28Client) {
-    const url = env.TURSO_SR28_URL?.trim() || DEFAULT_SR28_DB_URL;
-    const authToken = env.TURSO_SR28_TOKEN?.trim();
+    const url =
+      env.TURSO_SR28_URL?.trim() ||
+      env.TURSO_COMBOO_URL?.trim() ||
+      env.USDA_DATABASE_URL?.trim() ||
+      DEFAULT_SR28_DB_URL;
+    const authToken =
+      env.TURSO_SR28_TOKEN?.trim() ||
+      env.TURSO_COMBOO_TOKEN?.trim() ||
+      env.USDA_DATABASE_TOKEN?.trim();
     sr28Client = createClient(authToken ? { url, authToken } : { url });
   }
   return sr28Client;
