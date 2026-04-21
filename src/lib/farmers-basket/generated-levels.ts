@@ -22,7 +22,7 @@ export const LEVELS: Level[] = [
     servings: '8 slices',
     prepTime: '',
     linkType: 'dish',
-        nutritionJson: {"perServing": {"cal": 350.88, "pro": 3.18, "fat": 16.55, "carb": 49.12, "fib": 1.48, "sug": 17.34, "h2o": 62.63}, "gramsPerServing": null, "servings": 8.0},
+        nutritionJson: {"perServing": {"cal": 410.75, "pro": 3.72, "fat": 19.38, "carb": 57.51, "fib": 1.48, "sug": 17.34, "h2o": 73.31}, "gramsPerServing": null, "servings": 8.0},
     recipeIngredients: [
       { name: 'Pie, apple, prepared from recipe', quantity: 'custom (g)', foodWord: 'APPLEPIE', ndbNo: '18302', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'all-purpose enriched white flour', quantity: '2 cups', section: 'crust', foodWord: 'bread', ndbNo: '20081', portionDesc: 'g', portionGrams: 250.0 },

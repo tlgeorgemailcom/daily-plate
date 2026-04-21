@@ -4,12 +4,26 @@
 import csv
 import json
 import os
+import re
+import sqlite3
 
 BASE = '/Volumes/training/Daily Food Chain/daily-food-chain'
 RECIPES_CSV      = f'{BASE}/src/lib/data/recipes.csv'
 INGREDIENTS_CSV  = f'{BASE}/src/lib/data/recipe_ingredients.csv'
 INSTRUCTIONS_CSV = f'{BASE}/src/lib/data/recipe_instructions.csv'
 OUTPUT           = f'{BASE}/src/lib/farmers-basket/generated-levels.ts'
+COMBOO_DB        = '/Users/macminidata/vscode/jetfooddata/jetcool/assets/comboo.db'
+DEV_DB           = f'{BASE}/recipes_dev.db'
+
+CANONICAL_NUTRIENT_COLS = {
+    'Energy_KCal': 'cal',
+    'Protein': 'pro',
+    'TotalLipidFat': 'fat',
+    'Carbohydrate': 'carb',
+    'FiberTotalDietary': 'fib',
+    'SugarsTotal': 'sug',
+    'Water': 'h2o',
+}
 
 ALL_FOODS = ['lettuce','tomato','carrot','cheese','egg','bread','apple','grapes','bacon','butter','chicken','fish']
 
@@ -107,7 +121,7 @@ RECIPE_FOODS = {
     'SNACK_004': ['bacon', 'carrot', 'bread'],
     'SNACK_005': ['carrot', 'butter'],
     # Sweets
-    'SWEET_001': ['apple', 'butter'],
+    'SWEET_001': ['apple', 'bread'],
     'SWEET_002': ['apple', 'butter'],
     'SWEET_003': ['egg', 'bread'],
     'SWEET_004': ['egg', 'butter', 'cheese'],
@@ -232,6 +246,7 @@ def ts_recipe_ingredients(ings):
         parts = []
         if ing.get('name'):      parts.append(f"name: '{esc(ing['name'])}'")
         if ing.get('quantity'):  parts.append(f"quantity: '{esc(ing['quantity'])}'")
+        if ing.get('section'):   parts.append(f"section: '{esc(ing['section'])}'")
         if ing.get('foodWord'):  parts.append(f"foodWord: '{esc(ing['foodWord'])}'")
         if ing.get('ndbNo'):     parts.append(f"ndbNo: '{esc(ing['ndbNo'])}'")
         if ing.get('portionDesc'): parts.append(f"portionDesc: '{esc(ing['portionDesc'])}'")
@@ -248,8 +263,222 @@ def ts_instructions(instr_list):
     lines = [f"      '{esc(t)}'" for t in instr_list]
     return '[\n' + ',\n'.join(lines) + '\n    ]'
 
+
+def parse_notes(notes):
+    flags = set()
+    values = {}
+    if not notes:
+        return flags, values
+    for part in notes.split(';'):
+        token = part.strip()
+        if not token:
+            continue
+        if '=' in token:
+            key, value = token.split('=', 1)
+            values[key.strip().lower()] = value.strip()
+        else:
+            flags.add(token.lower())
+    return flags, values
+
+
+def parse_servings_count(servings_text):
+    if not servings_text:
+        return None
+    match = re.search(r'(\d+(?:\.\d+)?)', servings_text)
+    if not match:
+        return None
+    try:
+        value = float(match.group(1))
+        return value if value > 0 else None
+    except ValueError:
+        return None
+
+
+def ts_nutrition_json(nutrition_json, servings_count):
+    if not nutrition_json:
+        return 'null'
+    payload = {
+        'perServing': nutrition_json,
+        'gramsPerServing': None,
+        'servings': servings_count,
+    }
+    return json.dumps(payload, ensure_ascii=False)
+
+
+def normalize_built_per_serving(nutrition_json, servings_count):
+    if not nutrition_json or not servings_count:
+        return None
+    return {
+        'cal': round(nutrition_json.get('kcal', 0) / servings_count, 2),
+        'pro': round(nutrition_json.get('protein', 0) / servings_count, 2),
+        'fat': round(nutrition_json.get('fat', 0) / servings_count, 2),
+        'carb': round(nutrition_json.get('carbs', 0) / servings_count, 2),
+        'fib': round(nutrition_json.get('fiber', 0) / servings_count, 2),
+        'sug': round(nutrition_json.get('sugar', 0) / servings_count, 2),
+        'h2o': round(nutrition_json.get('water', 0) / servings_count, 2),
+    }
+
+
+def normalize_built_whole_recipe(nutrition_json):
+    if not nutrition_json:
+        return None
+    return {
+        'cal': float(nutrition_json.get('kcal', 0) or 0),
+        'pro': float(nutrition_json.get('protein', 0) or 0),
+        'fat': float(nutrition_json.get('fat', 0) or 0),
+        'carb': float(nutrition_json.get('carbs', 0) or 0),
+        'fib': float(nutrition_json.get('fiber', 0) or 0),
+        'sug': float(nutrition_json.get('sugar', 0) or 0),
+        'h2o': float(nutrition_json.get('water', 0) or 0),
+    }
+
+
+def merge_canonical_with_built_fallback(canonical_per_serving, built_per_serving):
+    if not canonical_per_serving:
+        return built_per_serving
+    if not built_per_serving:
+        return canonical_per_serving
+    merged = dict(canonical_per_serving)
+    for key, canonical_value in canonical_per_serving.items():
+        built_value = built_per_serving.get(key)
+        if canonical_value == 0 and built_value not in (None, 0):
+            merged[key] = built_value
+    return merged
+
+
+def compute_total_recipe_grams(ingredient_rows):
+    total_grams = 0.0
+    for ing in ingredient_rows:
+        if ing.get('row_type') not in ('ingredient', 'dish_ingredient', 'exempt'):
+            continue
+        flags, note_values = parse_notes(ing.get('notes', ''))
+        if 'optional' in flags:
+            continue
+        portion_grams = ing.get('portion_grams', '')
+        if not portion_grams:
+            continue
+        try:
+            grams = float(portion_grams)
+        except ValueError:
+            continue
+        serving_count = ing.get('serving_count', '')
+        try:
+            count = float(serving_count) if serving_count else 1.0
+        except ValueError:
+            count = 1.0
+        retained = note_values.get('retained')
+        if retained:
+            try:
+                grams *= float(retained)
+            except ValueError:
+                pass
+        total_grams += grams * count
+    return total_grams
+
+
+def get_canonical_per_serving(comboo_cur, dish_ndb_no, grams_per_serving):
+    if not dish_ndb_no or not grams_per_serving:
+        return None
+    cols = ', '.join(CANONICAL_NUTRIENT_COLS.keys())
+    comboo_cur.execute(
+        f'SELECT {cols} FROM DataCentralCombo WHERE NDB_NO = ?',
+        (dish_ndb_no,)
+    )
+    row = comboo_cur.fetchone()
+    if not row:
+        return None
+    scale = grams_per_serving / 100.0
+    return {
+        out_key: round((row[index] or 0) * scale, 2)
+        for index, out_key in enumerate(CANONICAL_NUTRIENT_COLS.values())
+    }
+
+
+def get_canonical_whole_recipe(comboo_cur, dish_ndb_no, total_recipe_grams):
+    if not dish_ndb_no or not total_recipe_grams:
+        return None
+    cols = ', '.join(CANONICAL_NUTRIENT_COLS.keys())
+    comboo_cur.execute(
+        f'SELECT {cols} FROM DataCentralCombo WHERE NDB_NO = ?',
+        (dish_ndb_no,)
+    )
+    row = comboo_cur.fetchone()
+    if not row:
+        return None
+    scale = total_recipe_grams / 100.0
+    return {
+        out_key: round((row[index] or 0) * scale, 2)
+        for index, out_key in enumerate(CANONICAL_NUTRIENT_COLS.values())
+    }
+
+
+def get_canonical_serving_grams(comboo_cur, dish_ndb_no, servings_count):
+    if not dish_ndb_no or not servings_count:
+        return None
+    comboo_cur.execute(
+        'SELECT M1_Amt, M1_Desc, M1_Gm_Wgt, M2_Amt, M2_Desc, M2_Gm_Wgt, M3_Amt, M3_Desc, M3_Gm_Wgt FROM DataCentralCombo WHERE NDB_NO = ?',
+        (dish_ndb_no,)
+    )
+    row = comboo_cur.fetchone()
+    if not row:
+        return None
+    serving_marker = f'1/{int(servings_count)}'
+    for offset in (0, 3, 6):
+        amount = row[offset]
+        description = row[offset + 1]
+        grams = row[offset + 2]
+        if not grams:
+            continue
+        if amount == 1 and description and serving_marker in str(description):
+            return float(grams)
+    return None
+
+
+def get_canonical_per_serving_from_density(comboo_cur, dish_ndb_no, grams_per_serving):
+    if not dish_ndb_no or not grams_per_serving:
+        return None
+    cols = ', '.join(CANONICAL_NUTRIENT_COLS.keys())
+    comboo_cur.execute(
+        f'SELECT {cols} FROM DataCentralCombo WHERE NDB_NO = ?',
+        (dish_ndb_no,)
+    )
+    row = comboo_cur.fetchone()
+    if not row:
+        return None
+    scale = grams_per_serving / 100.0
+    return {
+        out_key: round((row[index] or 0) * scale, 2)
+        for index, out_key in enumerate(CANONICAL_NUTRIENT_COLS.values())
+    }
+
+
+def divide_nutrition_by_servings(nutrition_json, servings_count):
+    if not nutrition_json or not servings_count:
+        return None
+    return {
+        key: round(value / servings_count, 2)
+        for key, value in nutrition_json.items()
+    }
+
 # ── Load CSVs ──────────────────────────────────────────────────────────────────
 recipes = list(csv.DictReader(open(RECIPES_CSV)))
+
+comboo = sqlite3.connect(COMBOO_DB)
+comboo_cur = comboo.cursor()
+
+dev_nutrition_by_recipe = {}
+if os.path.exists(DEV_DB):
+    dev = sqlite3.connect(DEV_DB)
+    dev_cur = dev.cursor()
+    dev_cur.execute("SELECT id, nutrition_json FROM recipes")
+    for rid, nutrition_json in dev_cur.fetchall():
+        if not nutrition_json:
+            continue
+        try:
+            dev_nutrition_by_recipe[rid] = json.loads(nutrition_json)
+        except json.JSONDecodeError:
+            continue
+    dev.close()
 
 ingredients_by_recipe = {}
 for row in csv.DictReader(open(INGREDIENTS_CSV)):
@@ -261,10 +490,16 @@ for row in csv.DictReader(open(INSTRUCTIONS_CSV)):
     rid = row['recipe_id']
     instructions_by_recipe.setdefault(rid, []).append(row)
 
+authored_recipe_ids = set(ingredients_by_recipe) & set(instructions_by_recipe)
+
 # ── Generate ───────────────────────────────────────────────────────────────────
 level_blocks = []
-for level_num, recipe in enumerate(recipes, start=1):
+level_num = 0
+for recipe in recipes:
     rid = recipe['recipe_id']
+    if rid not in authored_recipe_ids:
+        continue
+    level_num += 1
     foods = RECIPE_FOODS.get(rid, ['bread'])
     difficulty = CATEGORY_DIFFICULTY.get(recipe.get('category', ''), 3)
 
@@ -276,6 +511,7 @@ for level_num, recipe in enumerate(recipes, start=1):
     recipe_ings = []
     for ing in ingredients_by_recipe.get(rid, []):
         rt = ing.get('row_type', '')
+        _, note_values = parse_notes(ing.get('notes', ''))
         item = {}
         if rt == 'dish':
             item['name'] = ing.get('sr28_long_desc') or recipe.get('recipe_name', '')
@@ -291,6 +527,8 @@ for level_num, recipe in enumerate(recipes, start=1):
         elif rt in ('ingredient', 'dish_ingredient', 'exempt'):
             item['name'] = ing.get('ing_name', '')
             item['quantity'] = ing.get('ing_qty', '')
+            if note_values.get('section'):
+                item['section'] = note_values['section']
             if ing.get('ndb_no'):
                 item['ndbNo'] = ing['ndb_no']
                 item['portionDesc'] = ing.get('portion_desc', '')
@@ -321,6 +559,21 @@ for level_num, recipe in enumerate(recipes, start=1):
     instr_texts = [r['step_text'] for r in instr_rows if r.get('step_text')]
 
     link_type = recipe.get('link_type', 'ingredient')
+    servings_text = recipe.get('servings', '')
+    servings_count = parse_servings_count(servings_text)
+    total_recipe_grams = compute_total_recipe_grams(ingredients_by_recipe.get(rid, []))
+    grams_per_serving = round(total_recipe_grams / servings_count, 2) if servings_count and total_recipe_grams else None
+    dish_row = next((row for row in ingredients_by_recipe.get(rid, []) if row.get('row_type') == 'dish'), None)
+    dish_ndb_no = dish_row.get('ndb_no', '') if dish_row else ''
+    canonical_serving_grams = get_canonical_serving_grams(comboo_cur, dish_ndb_no, servings_count)
+    canonical_per_serving = get_canonical_per_serving_from_density(
+        comboo_cur,
+        dish_ndb_no,
+        canonical_serving_grams or grams_per_serving,
+    )
+    built_per_serving = normalize_built_per_serving(dev_nutrition_by_recipe.get(rid), servings_count)
+    nutrition_per_serving = merge_canonical_with_built_fallback(canonical_per_serving, built_per_serving)
+    nutrition_json = ts_nutrition_json(nutrition_per_serving, servings_count)
 
     block = f"""  {{
     id: '{esc(rid)}',
@@ -335,6 +588,7 @@ for level_num, recipe in enumerate(recipes, start=1):
     servings: '{esc(recipe.get('servings',''))}',
     prepTime: '{esc(recipe.get('prep_time',''))}',
     linkType: '{esc(link_type)}',
+        nutritionJson: {nutrition_json},
     recipeIngredients: {ts_recipe_ingredients(recipe_ings)},
     recipeInstructions: {ts_instructions(instr_texts)},
   }}"""
@@ -350,5 +604,7 @@ export const LEVELS: Level[] = [
 
 with open(OUTPUT, 'w') as f:
     f.write(output)
+
+comboo.close()
 
 print(f"Generated {len(level_blocks)} levels → {OUTPUT}")
