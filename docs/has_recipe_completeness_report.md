@@ -1,0 +1,121 @@
+# Has Recipe Completeness Report
+
+Source set: `food-portions-complete.csv` rows with `has_recipe = 1`.
+
+## Summary
+
+- complete_with_ingredients_and_instructions: 0
+- complete_ingredients_only: 45
+- partial_ingredient_data_only: 0
+- matched_but_no_recipe_body: 8
+- not_in_current_catalog: 63
+
+## Complete With Ingredients
+
+- Pie Apple -> SWEET_001 | ingredient_rows=3 | instruction_rows=0
+- Apple Strudel -> SWEET_002 | ingredient_rows=7 | instruction_rows=0
+- Cake Angel Food -> SWEET_003 | ingredient_rows=5 | instruction_rows=0
+- Cake Cheesecake -> SWEET_004 | ingredient_rows=5 | instruction_rows=0
+- Cake Chocolate no Frosting -> SWEET_005 | ingredient_rows=6 | instruction_rows=0
+- Cake Chocolate Frosting -> SWEET_006 | ingredient_rows=7 | instruction_rows=0
+- Cake Coffee -> SWEET_007 | ingredient_rows=5 | instruction_rows=0
+- Cake Gingerbread -> SWEET_008 | ingredient_rows=7 | instruction_rows=0
+- Cake Pineapple -> SWEET_009 | ingredient_rows=6 | instruction_rows=0
+- Cake Pound -> SWEET_010 | ingredient_rows=5 | instruction_rows=0
+- Cake Shortcake -> SWEET_011 | ingredient_rows=5 | instruction_rows=0
+- Cake Sponge -> SWEET_012 | ingredient_rows=4 | instruction_rows=0
+- Cake White no Frosting -> SWEET_013 | ingredient_rows=5 | instruction_rows=0
+- Cake White Coconut Frosting -> SWEET_014 | ingredient_rows=6 | instruction_rows=0
+- Cake Yellow Choc Frosting -> SWEET_015 | ingredient_rows=7 | instruction_rows=0
+- Cake Yellow Vanilla Frosting -> SWEET_016 | ingredient_rows=6 | instruction_rows=0
+- Cookies Brownies -> SWEET_017 | ingredient_rows=5 | instruction_rows=0
+- Cookies Butter -> SWEET_018 | ingredient_rows=4 | instruction_rows=0
+- Cookies Choc Chip -> SWEET_019 | ingredient_rows=5 | instruction_rows=0
+- Cookies Fig Bar -> SWEET_020 | ingredient_rows=5 | instruction_rows=0
+- Cookies Gingersnap -> SWEET_021 | ingredient_rows=6 | instruction_rows=0
+- Cookies Macaroon -> SWEET_022 | ingredient_rows=4 | instruction_rows=0
+- Cookies Molasses -> SWEET_023 | ingredient_rows=6 | instruction_rows=0
+- Cookies Oatmeal -> SWEET_024 | ingredient_rows=6 | instruction_rows=0
+- Cookies Oatmeal Raisin -> SWEET_025 | ingredient_rows=6 | instruction_rows=0
+- Cookies Peanut Butter -> SWEET_026 | ingredient_rows=5 | instruction_rows=0
+- Cookies Shortbread -> SWEET_027 | ingredient_rows=4 | instruction_rows=0
+- Cookies Sugar -> SWEET_028 | ingredient_rows=5 | instruction_rows=0
+- Doughnut Cake-type Glazed -> SWEET_029 | ingredient_rows=5 | instruction_rows=0
+- Milkshake Choc -> BEV_001 | ingredient_rows=4 | instruction_rows=0
+- Milkshake Vanilla -> BEV_002 | ingredient_rows=3 | instruction_rows=0
+- Pies Banana Cream -> SWEET_030 | ingredient_rows=6 | instruction_rows=0
+- Pies Blueberry -> SWEET_031 | ingredient_rows=5 | instruction_rows=0
+- Pies Boston Cream -> SWEET_032 | ingredient_rows=4 | instruction_rows=0
+- Pies Cherry -> SWEET_033 | ingredient_rows=3 | instruction_rows=0
+- Pies Chocolate -> SWEET_034 | ingredient_rows=7 | instruction_rows=0
+- Pies Coconut -> SWEET_035 | ingredient_rows=5 | instruction_rows=0
+- Pies Dutch Apple -> SWEET_036 | ingredient_rows=7 | instruction_rows=0
+- Pies Lemon -> SWEET_037 | ingredient_rows=6 | instruction_rows=0
+- Pies Mince -> SWEET_038 | ingredient_rows=6 | instruction_rows=0
+- Pies Peach -> SWEET_039 | ingredient_rows=4 | instruction_rows=0
+- Pies Pecan -> SWEET_040 | ingredient_rows=6 | instruction_rows=0
+- Pies Pumpkin -> SWEET_041 | ingredient_rows=7 | instruction_rows=0
+- Potato Salad -> SIDE_005 | ingredient_rows=6 | instruction_rows=0
+- Cheese Sauce -> SIDE_012 | ingredient_rows=5 | instruction_rows=0
+
+## Missing Or Incomplete
+
+- Beef Pot Pie -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Beef Stew -> SOUP_003 | status=matched_but_no_recipe_body | ingredient_rows=0 | instruction_rows=0
+- Biscuit -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Burrito Beef Bean -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Burrito Bean Cheese -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Burrito Bean Cheese Beef -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Burrito Bean -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Cheeseburger -> BURG_002 | status=matched_but_no_recipe_body | ingredient_rows=0 | instruction_rows=0
+- Chicken Parmesan -> ITAL_003 | status=matched_but_no_recipe_body | ingredient_rows=0 | instruction_rows=0
+- Chicken Pot Pie -> AMER_010 | status=matched_but_no_recipe_body | ingredient_rows=0 | instruction_rows=0
+- Chicken Rice -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Chicken Sesame -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Chili -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Chili Beans -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Chili Dog -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Chinese Beef and Veg -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Chinese Chicken Chow Mein -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Chinese General Tso’s Chicken -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Chinese Kung Pao Chicken -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Chinese Lemon Chicken -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Chinese Shrimp and veg -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Chinese Sweet Sour Chicken -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Chinese Sweet Sour Pork -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Chinese Veg Chow Mein -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Chinese Veg lo Mein -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Sandwich Club -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Cornbread -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Corn Dog -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Egg Roll -> CHIN_001 | status=matched_but_no_recipe_body | ingredient_rows=0 | instruction_rows=0
+- Egg Roll Chicken -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Egg Roll Pork -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Enchiladas Cheese -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Falafel -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Hamburger -> BURG_001 | status=matched_but_no_recipe_body | ingredient_rows=0 | instruction_rows=0
+- Hash Brown -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Hummus -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Hush Puppies -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Lasagna -> ITAL_004 | status=matched_but_no_recipe_body | ingredient_rows=0 | instruction_rows=0
+- Lasagna with Meat -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Macaroni and Cheese -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Marinara Sauce -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Meatballs -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Muffin Corn -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Muffin Blueberry -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Pancake Buttermilk -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Pancake Blueberry -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Pancake Gluten Free -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Pancake Plain -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Pasta Chicken Pomodoro -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Pasta Pesto Primavera -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Pasta with Tomato Sauce Meatless -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Pasta Cheese Tortellini -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Peanut Sauce -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Scalloped Potatoes -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Quesadilla Cheese -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Ravioli -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Chinese Rice Fried -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Dinner Roll -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0
+- Sweet Dinner Roll -> NONE | status=not_in_current_catalog | ingredient_rows=0 | instruction_rows=0

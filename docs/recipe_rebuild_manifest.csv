@@ -1,0 +1,117 @@
+word,display,has_recipe,NDB_NO,usda_desc,group1,group2,matched_recipe_id,matched_recipe_name
+APPLEPIE,Pie Apple,1,18302,"Pie, apple, prepared from recipe",sweets,,SWEET_001,Pie Apple
+APPLESTRUDEL,Apple Strudel,1,18354,"Strudel, apple",sweets,,SWEET_002,Apple Strudel
+BEEFPOTPIE,Beef Pot Pie,1,22529,"Beef Pot Pie, frozen entree, prepared",protein,prepared,,
+BEEFSTEW,Beef Stew,1,22905,"Beef stew, canned entree",protein,,SOUP_003,Beef Stew
+BISCUIT,Biscuit,1,18015,"Biscuits, plain or buttermilk, refrigerated dough, higher fat, baked",prepared,,,
+BURRITO,Burrito Beef Bean,1,22928,"Burrito, beef and bean, microwaved",prepared,,,
+BURRITOBEANCHEESE,Burrito Bean Cheese,1,21061,"Fast foods, burrito, with beans and cheese",prepared,,,
+BURRITOBEANCHEESEBEEF,Burrito Bean Cheese Beef,1,21064,"Fast foods, burrito, with beans, cheese, and beef",prepared,,,
+BURRITOBEANS,Burrito Bean,1,21060,"Fast foods, burrito, with beans",prepared,,,
+CAKEANGELFOOD,Cake Angel Food,1,18086,"Cake, angelfood, commercially prepared",sweets,,SWEET_003,Cake Angel Food
+CAKECHEESECAKE,Cake Cheesecake,1,18147,Cheesecake commercially prepared,sweets,,SWEET_004,Cake Cheesecake
+CAKECHOCOLATE,Cake Chocolate no Frosting,1,18101,"Cake, chocolate, prepared from recipe without frosting",sweets,,SWEET_005,Cake Chocolate no Frosting
+CAKECHOCOLATEFROSTING,Cake Chocolate Frosting,1,18096,"Cake, chocolate, commercially prepared with chocolate frosting, in-store bakery",sweets,,SWEET_006,Cake Chocolate Frosting
+CAKECOFFEECAKE,Cake Coffee,1,18104,"Coffeecake, cinnamon with crumb topping, commercially prepared, enriched",sweets,,SWEET_007,Cake Coffee
+CAKEGINGERBREAD,Cake Gingerbread,1,18116,"Cake, gingerbread, prepared from recipe",sweets,,SWEET_008,Cake Gingerbread
+CAKEPINEAPPLE,Cake Pineapple,1,18119,"Cake, pineapple upside-down, prepared from recipe",sweets,,SWEET_009,Cake Pineapple
+CAKEPOUND,Cake Pound,1,18120,"Cake, pound, commercially prepared, butter (includes fresh and frozen)",sweets,,SWEET_010,Cake Pound
+CAKESHORTCAKE,Cake Shortcake,1,18126,"Cake, shortcake, biscuit-type, prepared from recipe",sweets,,SWEET_011,Cake Shortcake
+CAKESPONGE,Cake Sponge,1,18134,"Cake, sponge, prepared from recipe",sweets,,SWEET_012,Cake Sponge
+CAKEWHITE,Cake White no Frosting,1,18139,"Cake, white, prepared from recipe without frosting",sweets,,SWEET_013,Cake White no Frosting
+CAKEWHITECOCONUTFROSTING,Cake White Coconut Frosting,1,18102,"Cake, white, prepared from recipe with coconut frosting",sweets,,SWEET_014,Cake White Coconut Frosting
+CAKEYELLOWCHOCOLATEFROSTING,Cake Yellow Choc Frosting,1,18140,"Cake, yellow, commercially prepared, with chocolate frosting, in-store bakery",sweets,,SWEET_015,Cake Yellow Choc Frosting
+CAKEYELLOWFROSTING,Cake Yellow Vanilla Frosting,1,18141,"Cake, yellow, commercially prepared, with vanilla frosting",sweets,,SWEET_016,Cake Yellow Vanilla Frosting
+CHEESEBURGER,Cheeseburger,1,21091,"Fast foods, cheeseburger; single, regular patty, with condiments and vegetables",prepared,,BURG_002,Cheeseburger
+CHICKENPARMESAN,Chicken Parmesan,1,36059,"Restaurant, Italian, chicken parmesan without pasta",protein,prepared,ITAL_003,Chicken Parmesan
+CHICKENPOTPIE,Chicken Pot Pie,1,22906,"Chicken pot pie, frozen entree, prepared",protein,prepared,AMER_010,Chicken Pot Pie
+CHICKENRICE,Chicken Rice,1,36401,"Restaurant, Latino, chicken and rice, entree, prepared",protein,prepared,,
+CHICKENSESAME,Chicken Sesame,1,36633,"Restaurant, Chinese, sesame chicken",protein,prepared,,
+CHILI,Chili,1,22911,"Chili, no beans, canned entree",prepared,protein,,
+CHILIBEANS,Chili Beans,1,16059,"Chili with beans, canned",prepared,protein,,
+CHILIDOG,Chili Dog,1,21119,"Fast foods, hotdog, with chili",prepared,,,
+CHINESEBEEFVEG,Chinese Beef and Veg,1,36603,"Restaurant, Chinese, beef and vegetables",protein,prepared,,
+CHINESECHICKCHOWMEIN,Chinese Chicken Chow Mein,1,36623,"Restaurant, Chinese, chicken chow mein",protein,prepared,,
+CHINESEGENERAL,Chinese General Tso’s Chicken,1,36618,"Restaurant, Chinese, general tso's chicken",protein,prepared,,
+CHINESEKUNGPAOCHICK,Chinese Kung Pao Chicken,1,36619,"Restaurant, Chinese, kung pao chicken",protein,prepared,,
+CHINESELEMONCHICK,Chinese Lemon Chicken,1,36617,"Restaurant, Chinese, lemon chicken",protein,prepared,,
+CHINESESHRIMPVEG,Chinese Shrimp and veg,1,36620,"Restaurant, Chinese, shrimp and vegetables",protein,prepared,,
+CHINESESWSOURCHICK,Chinese Sweet Sour Chicken,1,36621,"Restaurant, Chinese, sweet and sour chicken",protein,prepared,,
+CHINESESWSOURPORK,Chinese Sweet Sour Pork,1,36622,"Restaurant, Chinese, sweet and sour pork",protein,prepared,,
+CHINESEVEGCHOWMEIN,Chinese Veg Chow Mein,1,36624,"Restaurant, Chinese, vegetable chow mein, without meat or noodles",prepared,,,
+CHINESEVEGLOMEIN,Chinese Veg lo Mein,1,36625,"Restaurant, Chinese, vegetable lo mein, without meat",prepared,,,
+CLUBSANDWICH,Sandwich Club,1,21152,"SUBWAY, SUBWAY CLUB sub on white bread with lettuce and tomato",prepared,,,
+COOKIESBROWNIES,Cookies Brownies,1,18154,"Cookies, brownies, prepared from recipe",sweets,,SWEET_017,Cookies Brownies
+COOKIESBUTTER,Cookies Butter,1,18155,"Cookies, butter, commercially prepared, enriched",sweets,,SWEET_018,Cookies Butter
+COOKIESCHOCOLATECHIP,Cookies Choc Chip,1,18164,"Cookies, chocolate chip, refrigerated dough, baked",sweets,,SWEET_019,Cookies Choc Chip
+COOKIESFIGBAR,Cookies Fig Bar,1,18170,"Cookies, fig bars",sweets,,SWEET_020,Cookies Fig Bar
+COOKIESGINGERSNAP,Cookies Gingersnap,1,18172,"Cookies, gingersnaps",sweets,,SWEET_021,Cookies Gingersnap
+COOKIESMACAROON,Cookies Macaroon,1,28309,"Cookies, coconut macaroon",sweets,,SWEET_022,Cookies Macaroon
+COOKIESMOLASSES,Cookies Molasses,1,18177,"Cookies, molasses",sweets,,SWEET_023,Cookies Molasses
+COOKIESOATMEAL,Cookies Oatmeal,1,18183,"Cookies, oatmeal, refrigerated dough, baked",sweets,,SWEET_024,Cookies Oatmeal
+COOKIESOATMEALRAISIN,Cookies Oatmeal Raisin,1,18184,"Cookies, oatmeal, prepared from recipe, with raisins",sweets,,SWEET_025,Cookies Oatmeal Raisin
+COOKIESPEANUTBUTTER,Cookies Peanut Butter,1,18188,"Cookies, peanut butter, refrigerated dough, baked",sweets,,SWEET_026,Cookies Peanut Butter
+COOKIESSHORTBREAD,Cookies Shortbread,1,18192,"Cookies, shortbread, commercially prepared, plain",sweets,,SWEET_027,Cookies Shortbread
+COOKIESSUGAR,Cookies Sugar,1,18208,"Cookies, sugar, prepared from recipe, made with margarine",sweets,,SWEET_028,Cookies Sugar
+CORNBREAD,Cornbread,1,18024,"Bread, cornbread, prepared from recipe, made with low fat (2%) milk",prepared,,,
+CORNDOG,Corn Dog,1,21120,"Fast foods, hotdog, with corn flour coating (corndog)",prepared,,,
+DOUGHNUTCAKEGLAZE,Doughnut Cake-type Glazed,1,18250,"Doughnuts, cake-type, plain, sugared or glazed",sweets,grain,SWEET_029,Doughnut Cake-type Glazed
+EGGROLL,Egg Roll,1,22955,"Egg rolls, vegetable, frozen, prepared",prepared,,CHIN_001,Egg Roll
+EGGROLLCHICKEN,Egg Roll Chicken,1,22954,"Egg rolls, chicken, refrigerated, heated",prepared,,,
+EGGROLLPORK,Egg Roll Pork,1,22953,"Egg rolls, pork, refrigerated, heated",prepared,,,
+ENCHILADACHEESE,Enchiladas Cheese,1,36050,"Restaurant, Mexican, cheese enchilada",prepared,,,
+FALAFEL,Falafel,1,16138,"Falafel, home-prepared",prepared,,,
+HAMBURGER,Hamburger,1,21109,"Fast foods, hamburger; single, regular patty; with condiments and vegetables",prepared,,BURG_001,Hamburger
+HASHBROWN,Hash Brown,1,11370,"Potatoes, hash brown, home-prepared",vegetable,prepared,,
+HUMMUS,Hummus,1,16158,"Hummus, commercial",legume,,,
+HUSHPUPPIES,Hush Puppies,1,18270,"Hush puppies, prepared from recipe",prepared,,,
+LASAGNA,Lasagna,1,22910,"Lasagna, cheese, frozen, prepared",prepared,,ITAL_004,Lasagna
+LASAGNAMEAT,Lasagna with Meat,1,22977,"Lasagna with meat sauce, frozen, prepared",prepared,,,
+MACARONICHEESE,Macaroni and Cheese,1,22970,"Macaroni and cheese, frozen entree",prepared,,,
+MARINARASAUCE,Marinara Sauce,1,6931,"Sauce, pasta, spaghetti/marinara, ready-to-serve",spice,,,
+MEATBALLS,Meatballs,1,43132,"Meatballs, meatless",protein,,,
+MILKSHAKECHOC,Milkshake Choc,1,1110,"Milk shakes, thick chocolate",dairy,beverage,BEV_001,Milkshake Choc
+MILKSHAKEVANILLA,Milkshake Vanilla,1,1111,"Milk shakes, thick vanilla",dairy,beverage,BEV_002,Milkshake Vanilla
+MUFFINCORN,Muffin Corn,1,18282,"Muffins, corn, prepared from recipe, made with low fat (2%) milk",prepared,,,
+MUFFUNBLUEBERRY,Muffin Blueberry,1,18278,"Muffins, blueberry, prepared from recipe, made with low fat (2%) milk",prepared,,,
+PANCAKE,Pancake Buttermilk,1,18390,"Pancakes, buttermilk, prepared from recipe",prepared,,,
+PANCAKEBLUEBERRY,Pancake Blueberry,1,18294,"Pancakes, blueberry, prepared from recipe",prepared,,,
+PANCAKEGLUTENFREE,Pancake Gluten Free,1,28347,"Pancakes, gluten-free, frozen, ready-to-heat",prepared,,,
+PANCAKEPLAIN,Pancake Plain,1,18293,"Pancakes, plain, prepared from recipe",prepared,,,
+PASTAPOMODOROCHIC,Pasta Chicken Pomodoro,1,22984,"KASHI, Chicken Pasta Pomodoro, Frozen Entree",,prepared,,
+PASTAPRIMAVERAPESTO,Pasta Pesto Primavera,1,22987,"KASHI Pesto Pasta Primavera, frozen, unprepared",,prepared,,
+PASTATOMATOMEATLESS,Pasta with Tomato Sauce Meatless,1,22914,"Pasta with tomato sauce, no meat, canned",,prepared,,
+PASTATORTCHEESE,Pasta Cheese Tortellini,1,22901,"Tortellini, pasta with cheese filling, fresh-refrigerated, as purchased",,prepared,,
+PEANUTSAUCE,Peanut Sauce,1,27059,"Sauce, peanut, made from peanut butter, water, soy sauce",spice,,,
+PIEBANANACREAM,Pies Banana Cream,1,18304,"Pie, banana cream, prepared from recipe",sweets,,SWEET_030,Pies Banana Cream
+PIEBLUEBERRY,Pies Blueberry,1,18306,"Pie, blueberry, prepared from recipe",sweets,,SWEET_031,Pies Blueberry
+PIEBOSTONCREAM,Pies Boston Cream,1,18090,"Cake, boston cream pie, commercially prepared",sweets,,SWEET_032,Pies Boston Cream
+PIECHERRY,Pies Cherry,1,18309,"Pie, cherry, prepared from recipe",sweets,,SWEET_033,Pies Cherry
+PIECHOCOLATE,Pies Chocolate,1,18310,"Pie, chocolate creme, commercially prepared",sweets,,SWEET_034,Pies Chocolate
+PIECOCONUT,Pies Coconut,1,18313,"Pie, coconut creme, commercially prepared",sweets,,SWEET_035,Pies Coconut
+PIEDUTCHAPPLE,Pies Dutch Apple,1,18944,"Pie, Dutch Apple, Commercially Prepared",sweets,,SWEET_036,Pies Dutch Apple
+PIELEMON,Pies Lemon,1,18321,"Pie, lemon meringue, prepared from recipe",sweets,,SWEET_037,Pies Lemon
+PIEMINCE,Pies Mince,1,18322,"Pie, mince, prepared from recipe",prepared,,SWEET_038,Pies Mince
+PIEPEACH,Pies Peach,1,18323,"Pie, peach",sweets,,SWEET_039,Pies Peach
+PIEPECAN,Pies Pecan,1,18325,"Pie, pecan, prepared from recipe",sweets,,SWEET_040,Pies Pecan
+PIEPUMPKIN,Pies Pumpkin,1,18327,"Pie, pumpkin, prepared from recipe",sweets,,SWEET_041,Pies Pumpkin
+POTATOESSCALLOPED,Scalloped Potatoes,1,11372,"Potatoes, scalloped, home-prepared with butter",vegetable,prepared,,
+POTATOSALAD,Potato Salad,1,11414,"Potato salad, home-prepared",prepared,,SIDE_005,Potato Salad
+QUESADILLACHEESE,Quesadilla Cheese,1,36052,"Restaurant, Mexican, cheese quesadilla",prepared,,,
+RAVIOLI,Ravioli,1,36055,"Restaurant, Italian, cheese ravioli with marinara sauce",prepared,,,
+RICEFRIED,Chinese Rice Fried,1,36602,"Restaurant, Chinese, fried rice, without meat",grain,prepared,,
+ROLLDINNER,Dinner Roll,1,18347,"Rolls, dinner, wheat",prepared,grain,,
+ROLLDINNERSWEET,Sweet Dinner Roll,1,28348,"Rolls, dinner, sweet",grain,prepared,,
+ROLLDINNERWHOLE,Whole Wheat Dinner Roll,1,18348,"Rolls, dinner, whole-wheat",grain,prepared,,
+SANDSUBBLT,Sandwich Sub BLT,1,21162,"Fast foods, submarine sandwich, bacon, lettuce, and tomato on white bread",prepared,,,
+SAUCE,Cheese Sauce,1,1164,"Cheese sauce, prepared from recipe",prepared,,SIDE_012,Cheese Sauce
+SOUPEGGDROP,Soup Egg Drop,1,27000,"Soup, egg drop, Chinese restaurant",prepared,,,
+SOUPHOTSOUR,Soup Hot Sour,1,27001,"Soup, hot and sour, Chinese restaurant",prepared,,,
+TACOBEEF,Taco Beef Lettuce Cheese,1,21486,"Fast foods, taco with beef, cheese and lettuce, soft",prepared,,,
+TACOCHICKEN,Taco Chicken Lettuce Cheese,1,21487,"Fast foods, taco with chicken, lettuce and cheese, soft",prepared,,,
+TACOSALAD,Taco Salad,1,21083,"Fast foods, taco salad",prepared,,TEXMX_011,Taco Salad
+TAMALESCHEESE,Tamales Cheese,1,36056,"Restaurant, Mexican, cheese tamales",prepared,,,
+TAMALESPORK,Tamales Pork,1,35237,"Tamales, masa and pork filling (Hopi)",prepared,,,
+TRIPE,Tripe,1,36414,"Restaurant, Latino, tripe soup",prepared,,,
+TUNASALAD,Tuna Salad,1,15128,"Fish, tuna salad",protein,,,
+TURKEYPOTPIE,Turkey Pot Pie,1,22528,"Turkey Pot Pie, frozen entree",protein,prepared,,

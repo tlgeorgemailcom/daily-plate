@@ -1,0 +1,211 @@
+# Basket Recipe Restoreability Report
+
+Source baseline: git commit `3a1a9b6` from April 18 recipe work.
+Current target: current `src/lib/data/recipes.csv` IDs as used to regenerate Basket levels.
+
+## Summary
+
+- full_rebuild_available: 0
+- metadata_plus_ingredients_available: 66
+- metadata_only_available: 0
+- not_in_yesterday_commit: 99
+
+## Meaning
+
+- `full_rebuild_available`: yesterday had recipe row + ingredient rows + instruction rows.
+- `metadata_plus_ingredients_available`: yesterday had recipe row + ingredient rows, but no instruction rows.
+- `metadata_only_available`: yesterday had only the recipe metadata row.
+- `not_in_yesterday_commit`: current recipe ID was not present in the April 18 commit.
+
+## Sample Missing/Weak Cases
+
+- BFAST_001 | Pancakes | ingredients=6 instructions=0 | current generated ingredients=yes instructions=no
+- BFAST_002 | Scrambled Eggs | ingredients=9 instructions=0 | current generated ingredients=yes instructions=no
+- BFAST_003 | Bacon | ingredients=9 instructions=0 | current generated ingredients=yes instructions=no
+- BFAST_004 | French Toast | ingredients=9 instructions=0 | current generated ingredients=yes instructions=no
+- BFAST_005 | Oatmeal | ingredients=10 instructions=0 | current generated ingredients=yes instructions=no
+- BFAST_006 | Biscuits & Gravy | ingredients=10 instructions=0 | current generated ingredients=yes instructions=no
+- BFAST_007 | Eggs Benedict | ingredients=8 instructions=0 | current generated ingredients=no instructions=no
+- BFAST_008 | Breakfast Burrito | ingredients=0 instructions=0 | current generated ingredients=no instructions=no
+- BFAST_009 | Breakfast Sandwich | ingredients=0 instructions=0 | current generated ingredients=no instructions=no
+- SANDW_001 | BLT | ingredients=0 instructions=0 | current generated ingredients=no instructions=no
+- SANDW_002 | Club Sandwich | ingredients=0 instructions=0 | current generated ingredients=no instructions=no
+- SANDW_003 | Grilled Cheese | ingredients=0 instructions=0 | current generated ingredients=no instructions=no
+- SANDW_004 | Reuben | ingredients=0 instructions=0 | current generated ingredients=no instructions=no
+- SANDW_005 | Tuna Salad Sandwich | ingredients=0 instructions=0 | current generated ingredients=no instructions=no
+- SANDW_006 | Chicken Salad Sandwich | ingredients=0 instructions=0 | current generated ingredients=no instructions=no
+- SANDW_007 | Egg Salad Sandwich | ingredients=0 instructions=0 | current generated ingredients=no instructions=no
+- SANDW_008 | Philly Cheesesteak | ingredients=0 instructions=0 | current generated ingredients=no instructions=no
+- SANDW_009 | Italian Sub | ingredients=0 instructions=0 | current generated ingredients=no instructions=no
+- BURG_001 | Hamburger | ingredients=0 instructions=0 | current generated ingredients=no instructions=no
+- BURG_002 | Cheeseburger | ingredients=0 instructions=0 | current generated ingredients=no instructions=no
+
+## Full Table
+
+| recipe_id | recipe_name | category | hist row | hist ing rows | hist inst rows | current gen ings | current gen inst | restoreability |
+|---|---|---|---|---:|---:|---|---|---|
+| BFAST_001 | Pancakes | Breakfast | yes | 6 | 0 | yes | no | metadata_plus_ingredients_available |
+| BFAST_002 | Scrambled Eggs | Breakfast | yes | 9 | 0 | yes | no | metadata_plus_ingredients_available |
+| BFAST_003 | Bacon | Breakfast | yes | 9 | 0 | yes | no | metadata_plus_ingredients_available |
+| BFAST_004 | French Toast | Breakfast | yes | 9 | 0 | yes | no | metadata_plus_ingredients_available |
+| BFAST_005 | Oatmeal | Breakfast | yes | 10 | 0 | yes | no | metadata_plus_ingredients_available |
+| BFAST_006 | Biscuits & Gravy | Breakfast | yes | 10 | 0 | yes | no | metadata_plus_ingredients_available |
+| BFAST_007 | Eggs Benedict | Breakfast | yes | 8 | 0 | no | no | metadata_plus_ingredients_available |
+| BFAST_008 | Breakfast Burrito | Breakfast | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| BFAST_009 | Breakfast Sandwich | Breakfast | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| SANDW_001 | BLT | Sandwiches & Burgers | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| SANDW_002 | Club Sandwich | Sandwiches & Burgers | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| SANDW_003 | Grilled Cheese | Sandwiches & Burgers | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| SANDW_004 | Reuben | Sandwiches & Burgers | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| SANDW_005 | Tuna Salad Sandwich | Sandwiches & Burgers | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| SANDW_006 | Chicken Salad Sandwich | Sandwiches & Burgers | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| SANDW_007 | Egg Salad Sandwich | Sandwiches & Burgers | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| SANDW_008 | Philly Cheesesteak | Sandwiches & Burgers | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| SANDW_009 | Italian Sub | Sandwiches & Burgers | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| BURG_001 | Hamburger | Sandwiches & Burgers | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| BURG_002 | Cheeseburger | Sandwiches & Burgers | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| BURG_003 | Bacon Cheeseburger | Sandwiches & Burgers | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| BURG_004 | Mushroom Swiss Burger | Sandwiches & Burgers | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| BURG_005 | Turkey Burger | Sandwiches & Burgers | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| AMER_001 | Fried Chicken (piece) | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| AMER_002 | Fried Chicken Dinner | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| AMER_003 | Meatloaf (slice) | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| AMER_004 | Meatloaf Dinner | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| AMER_005 | Roast Chicken Dinner | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| AMER_006 | Pot Roast Plate | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| AMER_007 | Beef Steak Dinner | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| AMER_008 | Pork Chop Dinner | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| AMER_009 | Salmon Dinner | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| AMER_010 | Chicken Pot Pie | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| AMER_011 | Shrimp & Grits | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| PIZZA_001 | Cheese Pizza | Pasta & Pizza | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| PIZZA_002 | Pepperoni Pizza | Pasta & Pizza | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| PIZZA_003 | Meat Lovers Pizza | Pasta & Pizza | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| PIZZA_004 | Veggie Pizza | Pasta & Pizza | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| PIZZA_005 | BBQ Chicken Pizza | Pasta & Pizza | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| ITAL_001 | Spaghetti & Meatballs | Pasta & Pizza | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| ITAL_002 | Fettuccine Alfredo | Pasta & Pizza | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| ITAL_003 | Chicken Parmesan | Pasta & Pizza | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| ITAL_004 | Lasagna | Pasta & Pizza | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| ITAL_005 | Baked Ziti | Pasta & Pizza | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| TEXMX_001 | Ground Beef Taco | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| TEXMX_002 | Chicken Taco | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| TEXMX_003 | Beef Burrito | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| TEXMX_004 | Chicken Burrito | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| TEXMX_005 | Cheese Quesadilla | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| TEXMX_006 | Chicken Quesadilla | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| TEXMX_007 | Nachos | Sides | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| TEXMX_008 | Beef Enchiladas | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| TEXMX_009 | Chicken Fajitas | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| TEXMX_010 | Guacamole & Chips | Sides | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| TEXMX_011 | Taco Salad | Salads | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| CHIN_001 | Egg Roll | Sides | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| CHIN_002 | Egg Drop Soup | Soups & Stews | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| CHIN_003 | Chicken Fried Rice | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| CHIN_004 | Pork Fried Rice | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| CHIN_005 | Shrimp Fried Rice | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| CHIN_006 | Beef with Broccoli | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| CHIN_007 | Beef with Broccoli + Rice | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| CHIN_008 | General Tso's Chicken | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| CHIN_009 | General Tso's Chicken + Rice | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| CHIN_010 | Kung Pao Chicken | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| CHIN_011 | Kung Pao Chicken + Rice | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| CHIN_012 | Sweet & Sour Pork | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| CHIN_013 | Sweet & Sour Pork + Rice | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| CHIN_014 | Lo Mein (Chicken) | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| CHIN_015 | Wonton Soup | Soups & Stews | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| CHIN_016 | Moo Shu Pork | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| JAPAN_001 | Edamame | Sides | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| JAPAN_002 | Miso Soup | Soups & Stews | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| JAPAN_003 | Miso Soup + Rice | Soups & Stews | yes | 6 | 0 | no | no | metadata_plus_ingredients_available |
+| JAPAN_004 | Teriyaki Chicken | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| JAPAN_005 | Teriyaki Chicken + Rice | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| JAPAN_006 | Beef Teriyaki | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| JAPAN_007 | Beef Teriyaki + Rice | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| JAPAN_008 | California Roll | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| JAPAN_009 | Shrimp Tempura | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| JAPAN_010 | Shrimp Tempura + Rice | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| JAPAN_011 | Ramen Bowl | Soups & Stews | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| JAPAN_012 | Chicken Katsu | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| JAPAN_013 | Chicken Katsu + Rice | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| ASIAN_001 | Pad Thai (Chicken) | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| ASIAN_002 | Pho (Beef) | Soups & Stews | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| ASIAN_003 | Vietnamese Spring Roll | Sides | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| ASIAN_004 | Korean Bibimbap | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| ASIAN_005 | Korean BBQ Beef | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| ASIAN_006 | Korean BBQ Beef + Rice | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| ASIAN_007 | Curry Chicken | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| ASIAN_008 | Curry Chicken + Rice | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| ASIAN_009 | Thai Green Curry | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| ASIAN_010 | Thai Green Curry + Rice | Entrees & Main Courses | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| SOUP_001 | Chicken Noodle Soup | Soups & Stews | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| SOUP_002 | Tomato Soup | Soups & Stews | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| SOUP_003 | Beef Stew | Soups & Stews | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| SOUP_004 | Clam Chowder (New England) | Soups & Stews | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| SOUP_005 | French Onion Soup | Soups & Stews | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| SOUP_006 | Split Pea Soup | Soups & Stews | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| SOUP_007 | Lentil Soup | Soups & Stews | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| SOUP_008 | Beef Chili | Soups & Stews | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| SOUP_009 | Chili + Cornbread | Soups & Stews | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| SOUP_010 | Hot & Sour Soup | Soups & Stews | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| SOUP_011 | Minestrone Soup | Soups & Stews | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| SALAD_001 | Caesar Salad | Salads | yes | 7 | 0 | yes | no | metadata_plus_ingredients_available |
+| SALAD_002 | Chicken Caesar Salad | Salads | yes | 8 | 0 | yes | no | metadata_plus_ingredients_available |
+| SALAD_003 | Cobb Salad | Salads | yes | 5 | 0 | no | no | metadata_plus_ingredients_available |
+| SALAD_004 | Greek Salad | Salads | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| SALAD_005 | Chef Salad | Salads | no | 0 | 0 | no | no | not_in_yesterday_commit |
+| SIDE_001 | French Fries | Sides | yes | 5 | 0 | yes | no | metadata_plus_ingredients_available |
+| SIDE_002 | Onion Rings | Sides | yes | 7 | 0 | yes | no | metadata_plus_ingredients_available |
+| SIDE_003 | Coleslaw | Sides | yes | 7 | 0 | yes | no | metadata_plus_ingredients_available |
+| SIDE_004 | Macaroni Salad | Sides | yes | 5 | 0 | yes | no | metadata_plus_ingredients_available |
+| SIDE_005 | Potato Salad | Sides | yes | 6 | 0 | yes | no | metadata_plus_ingredients_available |
+| SIDE_006 | Corn on the Cob | Sides | yes | 5 | 0 | yes | no | metadata_plus_ingredients_available |
+| SIDE_007 | Baked Beans | Sides | yes | 5 | 0 | yes | no | metadata_plus_ingredients_available |
+| SIDE_008 | Mac & Cheese | Sides | yes | 7 | 0 | yes | no | metadata_plus_ingredients_available |
+| SIDE_009 | Mashed Potatoes | Sides | yes | 7 | 0 | yes | no | metadata_plus_ingredients_available |
+| SIDE_010 | Steamed Broccoli | Sides | yes | 7 | 0 | yes | no | metadata_plus_ingredients_available |
+| SIDE_011 | Green Beans (cooked) | Sides | yes | 7 | 0 | yes | no | metadata_plus_ingredients_available |
+| SIDE_012 | Cheese Sauce | Sauces & Condiments | yes | 5 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_001 | Pie Apple | Desserts | yes | 3 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_002 | Apple Strudel | Desserts | yes | 7 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_003 | Cake Angel Food | Desserts | yes | 5 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_004 | Cake Cheesecake | Desserts | yes | 5 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_005 | Cake Chocolate no Frosting | Desserts | yes | 6 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_006 | Cake Chocolate Frosting | Desserts | yes | 7 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_007 | Cake Coffee | Desserts | yes | 5 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_008 | Cake Gingerbread | Desserts | yes | 7 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_009 | Cake Pineapple | Desserts | yes | 6 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_010 | Cake Pound | Desserts | yes | 5 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_011 | Cake Shortcake | Desserts | yes | 5 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_012 | Cake Sponge | Desserts | yes | 4 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_013 | Cake White no Frosting | Desserts | yes | 5 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_014 | Cake White Coconut Frosting | Desserts | yes | 6 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_015 | Cake Yellow Choc Frosting | Desserts | yes | 7 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_016 | Cake Yellow Vanilla Frosting | Desserts | yes | 6 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_017 | Cookies Brownies | Desserts | yes | 5 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_018 | Cookies Butter | Desserts | yes | 4 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_019 | Cookies Choc Chip | Desserts | yes | 5 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_020 | Cookies Fig Bar | Desserts | yes | 5 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_021 | Cookies Gingersnap | Desserts | yes | 6 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_022 | Cookies Macaroon | Desserts | yes | 4 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_023 | Cookies Molasses | Desserts | yes | 6 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_024 | Cookies Oatmeal | Desserts | yes | 6 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_025 | Cookies Oatmeal Raisin | Desserts | yes | 6 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_026 | Cookies Peanut Butter | Desserts | yes | 5 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_027 | Cookies Shortbread | Desserts | yes | 4 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_028 | Cookies Sugar | Desserts | yes | 5 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_029 | Doughnut Cake-type Glazed | Desserts | yes | 5 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_030 | Pies Banana Cream | Desserts | yes | 6 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_031 | Pies Blueberry | Desserts | yes | 5 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_032 | Pies Boston Cream | Desserts | yes | 4 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_033 | Pies Cherry | Desserts | yes | 3 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_034 | Pies Chocolate | Desserts | yes | 7 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_035 | Pies Coconut | Desserts | yes | 5 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_036 | Pies Dutch Apple | Desserts | yes | 7 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_037 | Pies Lemon | Desserts | yes | 6 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_038 | Pies Mince | Desserts | yes | 6 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_039 | Pies Peach | Desserts | yes | 4 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_040 | Pies Pecan | Desserts | yes | 6 | 0 | yes | no | metadata_plus_ingredients_available |
+| SWEET_041 | Pies Pumpkin | Desserts | yes | 7 | 0 | yes | no | metadata_plus_ingredients_available |
+| BEV_001 | Milkshake Choc | Beverages | yes | 4 | 0 | yes | no | metadata_plus_ingredients_available |
+| BEV_002 | Milkshake Vanilla | Beverages | yes | 3 | 0 | yes | no | metadata_plus_ingredients_available |

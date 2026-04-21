@@ -918,8 +918,8 @@
   {#if game.gameStatus === 'won'}
     <div class="overlay win">
       <div class="overlay-content">
-        <h2>🎉 Recipe Unlocked!</h2>
-        <h3 class="recipe-title">{game.currentLevel?.name}</h3>
+        <h2 class="recipe-title">{game.currentLevel?.name}</h2>
+        <p class="recipe-status">Recipe completed</p>
         
         {#if game.currentLevel?.recipeInstructions}
           <div class="unlocked-recipe">
@@ -988,7 +988,7 @@
     </div>
   {/if}
   
-  {#if !game.gameStatus || game.gameStatus === 'ready'}
+  {#if (!game.gameStatus || game.gameStatus === 'ready') && !$isPremium}
     <div class="overlay start">
       <div class="overlay-content">
         <h2>{game.currentLevel?.name ?? 'Loading'}</h2>
@@ -1044,14 +1044,11 @@
     canReadAllRecipes={$isPremium}
     {hasInfantProfile}
     startWithRecipeOfDay={showRecipeOfDay}
-    onselect={(id) => { game.loadLevel(id); game.startLevel(); showRecipeBook = false; showRecipeOfDay = true; }}
+    onselect={(id) => { if ($isPremium) game.completeLevel(id); }}
+    onplay={(id) => { game.loadLevel(id); game.startLevel(); showRecipeBook = false; showRecipeOfDay = true; }}
     onclose={() => { 
       showRecipeBook = false;
       showRecipeOfDay = true;
-      // Auto-start if game is in ready state
-      if (game.gameStatus === 'ready') {
-        game.startLevel();
-      }
     }}
     onshare={() => { showRecipeBook = false; showShareRecipe = true; }}
     onLevelsUpdated={reloadLevels}
@@ -1561,8 +1558,14 @@
   
   .recipe-title {
     color: #8B4513;
-    margin: 0 0 12px 0;
-    font-size: 1.3rem;
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .recipe-status {
+    margin: 8px 0 12px 0;
+    font-size: 0.95rem;
+    color: #7a5c33;
   }
   
   .unlocked-recipe {

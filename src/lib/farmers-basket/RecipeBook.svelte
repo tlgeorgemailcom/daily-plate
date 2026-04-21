@@ -51,13 +51,14 @@
     canReadAllRecipes?: boolean;
     hasInfantProfile?: boolean;
     onselect: (levelId: string) => void;
+    onplay?: (levelId: string) => void;
     onclose: () => void;
     onshare?: () => void;
     onLevelsUpdated?: () => void | Promise<void>;  // Called after recipe save to refresh levels
     startWithRecipeOfDay?: boolean;
   }
   
-  let { levels, completedLevels, currentLevelId, canReadAllRecipes = false, hasInfantProfile = false, onselect, onclose, onshare, onLevelsUpdated, startWithRecipeOfDay = false }: Props = $props();
+  let { levels, completedLevels, currentLevelId, canReadAllRecipes = false, hasInfantProfile = false, onselect, onplay, onclose, onshare, onLevelsUpdated, startWithRecipeOfDay = false }: Props = $props();
   
   // View states: 'dietary-select' | 'recipe-of-day' | 'index' | 'detail'
   let showDietarySelect = $state(false);
@@ -274,10 +275,17 @@
     selectedLevel = level;
     showRecipeOfDay = false;
     searchQuery = ''; // Clear search when viewing detail
+    if (canReadAllRecipes) {
+      onselect(level.id);
+    }
   }
   
   function handlePlay(levelId: string) {
-    onselect(levelId);
+    if (onplay) {
+      onplay(levelId);
+    } else {
+      onselect(levelId);
+    }
     onclose();
   }
   
@@ -1720,11 +1728,7 @@
             </div>
           {/if}
           
-          {#if isPremiumReadOnly}
-            <button class="play-inline-link" onclick={() => handlePlay(selectedLevel!.id)}>
-              Play recipe game
-            </button>
-          {:else}
+          {#if !canReadAllRecipes}
             <button class="play-btn" onclick={() => handlePlay(selectedLevel!.id)}>
               {isCurrent ? '🔄 Replay' : isCompleted ? '🎮 Replay' : '▶️ Play'}
             </button>

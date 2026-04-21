@@ -1,0 +1,166 @@
+recipe_id,recipe_name,category,ingredient_rows,dish_rows,nutrition_present,ingredient_anchor,nutrition_long_desc,ingredient_name_overlap,nutrition_name_overlap,status
+BFAST_001,Pancakes,Breakfast,6,1,yes,Potatoes hash brown home-prepared,"Potatoes, hash brown, home-prepared",0.0,0.0,strongly_mismatched_ingredients_and_nutrition
+BFAST_002,Scrambled Eggs,Breakfast,9,1,yes,Muffins corn prepared from recipe made with low fat 2% milk,"Muffins, corn, prepared from recipe, made with low fat (2%) milk",0.5,0.0,nutrition_mismatched
+BFAST_003,Bacon,Breakfast,9,1,yes,Muffins blueberry prepared from recipe made with low fat 2% milk,"Muffins, blueberry, prepared from recipe, made with low fat (2%) milk",0.0,0.0,strongly_mismatched_ingredients_and_nutrition
+BFAST_004,French Toast,Breakfast,9,1,yes,Pancakes buttermilk prepared from recipe,"Pancakes, buttermilk, prepared from recipe",0.0,0.0,strongly_mismatched_ingredients_and_nutrition
+BFAST_005,Oatmeal,Breakfast,10,1,yes,Pancakes blueberry prepared from recipe,"Pancakes, blueberry, prepared from recipe",0.0,0.0,strongly_mismatched_ingredients_and_nutrition
+BFAST_006,Biscuits & Gravy,Breakfast,10,1,yes,Pancakes gluten-free frozen ready-to-heat,"Pancakes, gluten-free, frozen, ready-to-heat",0.0,0.0,strongly_mismatched_ingredients_and_nutrition
+BFAST_007,Eggs Benedict,Breakfast,8,1,yes,Pancakes plain prepared from recipe,"Pancakes, plain, prepared from recipe",0.0,0.0,strongly_mismatched_ingredients_and_nutrition
+BFAST_008,Breakfast Burrito,Breakfast,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+BFAST_009,Breakfast Sandwich,Breakfast,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+SANDW_001,BLT,Sandwiches & Burgers,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+SANDW_002,Club Sandwich,Sandwiches & Burgers,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+SANDW_003,Grilled Cheese,Sandwiches & Burgers,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+SANDW_004,Reuben,Sandwiches & Burgers,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+SANDW_005,Tuna Salad Sandwich,Sandwiches & Burgers,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+SANDW_006,Chicken Salad Sandwich,Sandwiches & Burgers,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+SANDW_007,Egg Salad Sandwich,Sandwiches & Burgers,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+SANDW_008,Philly Cheesesteak,Sandwiches & Burgers,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+SANDW_009,Italian Sub,Sandwiches & Burgers,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+BURG_001,Hamburger,Sandwiches & Burgers,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+BURG_002,Cheeseburger,Sandwiches & Burgers,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+BURG_003,Bacon Cheeseburger,Sandwiches & Burgers,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+BURG_004,Mushroom Swiss Burger,Sandwiches & Burgers,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+BURG_005,Turkey Burger,Sandwiches & Burgers,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+AMER_001,Fried Chicken (piece),Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+AMER_002,Fried Chicken Dinner,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+AMER_003,Meatloaf (slice),Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+AMER_004,Meatloaf Dinner,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+AMER_005,Roast Chicken Dinner,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+AMER_006,Pot Roast Plate,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+AMER_007,Beef Steak Dinner,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+AMER_008,Pork Chop Dinner,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+AMER_009,Salmon Dinner,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+AMER_010,Chicken Pot Pie,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+AMER_011,Shrimp & Grits,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+PIZZA_001,Cheese Pizza,Pasta & Pizza,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+PIZZA_002,Pepperoni Pizza,Pasta & Pizza,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+PIZZA_003,Meat Lovers Pizza,Pasta & Pizza,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+PIZZA_004,Veggie Pizza,Pasta & Pizza,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+PIZZA_005,BBQ Chicken Pizza,Pasta & Pizza,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+ITAL_001,Spaghetti & Meatballs,Pasta & Pizza,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+ITAL_002,Fettuccine Alfredo,Pasta & Pizza,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+ITAL_003,Chicken Parmesan,Pasta & Pizza,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+ITAL_004,Lasagna,Pasta & Pizza,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+ITAL_005,Baked Ziti,Pasta & Pizza,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+TEXMX_001,Ground Beef Taco,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+TEXMX_002,Chicken Taco,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+TEXMX_003,Beef Burrito,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+TEXMX_004,Chicken Burrito,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+TEXMX_005,Cheese Quesadilla,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+TEXMX_006,Chicken Quesadilla,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+TEXMX_007,Nachos,Sides,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+TEXMX_008,Beef Enchiladas,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+TEXMX_009,Chicken Fajitas,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+TEXMX_010,Guacamole & Chips,Sides,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+TEXMX_011,Taco Salad,Salads,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+CHIN_001,Egg Roll,Sides,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+CHIN_002,Egg Drop Soup,Soups & Stews,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+CHIN_003,Chicken Fried Rice,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+CHIN_004,Pork Fried Rice,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+CHIN_005,Shrimp Fried Rice,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+CHIN_006,Beef with Broccoli,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+CHIN_007,Beef with Broccoli + Rice,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+CHIN_008,General Tso's Chicken,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+CHIN_009,General Tso's Chicken + Rice,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+CHIN_010,Kung Pao Chicken,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+CHIN_011,Kung Pao Chicken + Rice,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+CHIN_012,Sweet & Sour Pork,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+CHIN_013,Sweet & Sour Pork + Rice,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+CHIN_014,Lo Mein (Chicken),Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+CHIN_015,Wonton Soup,Soups & Stews,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+CHIN_016,Moo Shu Pork,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+JAPAN_001,Edamame,Sides,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+JAPAN_002,Miso Soup,Soups & Stews,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+JAPAN_003,Miso Soup + Rice,Soups & Stews,1,1,yes,Miso,Miso,0.33,0.33,partially_aligned
+JAPAN_004,Teriyaki Chicken,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+JAPAN_005,Teriyaki Chicken + Rice,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+JAPAN_006,Beef Teriyaki,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+JAPAN_007,Beef Teriyaki + Rice,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+JAPAN_008,California Roll,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+JAPAN_009,Shrimp Tempura,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+JAPAN_010,Shrimp Tempura + Rice,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+JAPAN_011,Ramen Bowl,Soups & Stews,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+JAPAN_012,Chicken Katsu,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+JAPAN_013,Chicken Katsu + Rice,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+ASIAN_001,Pad Thai (Chicken),Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+ASIAN_002,Pho (Beef),Soups & Stews,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+ASIAN_003,Vietnamese Spring Roll,Sides,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+ASIAN_004,Korean Bibimbap,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+ASIAN_005,Korean BBQ Beef,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+ASIAN_006,Korean BBQ Beef + Rice,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+ASIAN_007,Curry Chicken,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+ASIAN_008,Curry Chicken + Rice,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+ASIAN_009,Thai Green Curry,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+ASIAN_010,Thai Green Curry + Rice,Entrees & Main Courses,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+SOUP_001,Chicken Noodle Soup,Soups & Stews,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+SOUP_002,Tomato Soup,Soups & Stews,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+SOUP_003,Beef Stew,Soups & Stews,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+SOUP_004,Clam Chowder (New England),Soups & Stews,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+SOUP_005,French Onion Soup,Soups & Stews,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+SOUP_006,Split Pea Soup,Soups & Stews,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+SOUP_007,Lentil Soup,Soups & Stews,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+SOUP_008,Beef Chili,Soups & Stews,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+SOUP_009,Chili + Cornbread,Soups & Stews,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+SOUP_010,Hot & Sour Soup,Soups & Stews,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+SOUP_011,Minestrone Soup,Soups & Stews,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+SALAD_001,Caesar Salad,Salads,7,1,yes,"Potato salad, home-prepared","Potato salad, home-prepared",0.5,0.5,coherent_across_live_files
+SALAD_002,Chicken Caesar Salad,Salads,8,1,yes,"Fast foods, taco salad","Fast foods, taco salad",0.33,0.33,partially_aligned
+SALAD_003,Cobb Salad,Salads,5,1,yes,"Fish, tuna salad","Fish, tuna salad",0.5,0.5,coherent_across_live_files
+SALAD_004,Greek Salad,Salads,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+SALAD_005,Chef Salad,Salads,0,0,no,,,0.0,0.0,missing_ingredients_and_nutrition
+SIDE_001,French Fries,Sides,5,1,yes,"Biscuits, plain or buttermilk, prepared from recipe","Biscuits, plain or buttermilk, prepared from recipe",0.0,0.0,strongly_mismatched_ingredients_and_nutrition
+SIDE_002,Onion Rings,Sides,7,1,yes,"Bread, cornbread, prepared from recipe, made with low fat (2%) milk","Bread, cornbread, prepared from recipe, made with low fat (2%) milk",0.0,0.0,strongly_mismatched_ingredients_and_nutrition
+SIDE_003,Coleslaw,Sides,7,1,yes,"Hush puppies, prepared from recipe","Hush puppies, prepared from recipe",0.0,0.0,strongly_mismatched_ingredients_and_nutrition
+SIDE_004,Macaroni Salad,Sides,5,1,yes,"Macaroni and cheese, box mix with cheese sauce, prepared","Macaroni and cheese, box mix with cheese sauce, prepared",0.5,0.5,coherent_across_live_files
+SIDE_005,Potato Salad,Sides,6,1,yes,"Sauce, pasta, spaghetti/marinara, ready-to-serve","Sauce, pasta, spaghetti/marinara, ready-to-serve",0.0,0.0,strongly_mismatched_ingredients_and_nutrition
+SIDE_006,Corn on the Cob,Sides,5,1,yes,"Sauce, peanut, made from peanut butter, water, soy sauce","Sauce, peanut, made from peanut butter, water, soy sauce",0.0,0.0,strongly_mismatched_ingredients_and_nutrition
+SIDE_007,Baked Beans,Sides,5,1,yes,"Potatoes, scalloped, home-prepared with butter","Potatoes, scalloped, home-prepared with butter",0.0,0.0,strongly_mismatched_ingredients_and_nutrition
+SIDE_008,Mac & Cheese,Sides,7,1,yes,"Restaurant, Chinese, fried rice, without meat","Restaurant, Chinese, fried rice, without meat",0.0,0.0,strongly_mismatched_ingredients_and_nutrition
+SIDE_009,Mashed Potatoes,Sides,7,1,yes,"Rolls, dinner, plain, commercially prepared (includes brown-and-serve)","Rolls, dinner, plain, commercially prepared (includes brown-and-serve)",0.0,0.0,strongly_mismatched_ingredients_and_nutrition
+SIDE_010,Steamed Broccoli,Sides,7,1,yes,"Rolls, dinner, sweet","Rolls, dinner, sweet",0.0,0.0,strongly_mismatched_ingredients_and_nutrition
+SIDE_011,Green Beans (cooked),Sides,7,1,yes,"Rolls, dinner, wheat","Rolls, dinner, wheat",0.0,0.0,strongly_mismatched_ingredients_and_nutrition
+SIDE_012,Cheese Sauce,Sauces & Condiments,5,1,yes,"Cheese sauce, prepared from recipe","Cheese sauce, prepared from recipe",1.0,1.0,coherent_across_live_files
+SWEET_001,Pie Apple,Desserts,3,1,yes,"Pie, apple, commercially prepared, enriched flour","Pie, apple, commercially prepared, enriched flour",1.0,1.0,coherent_across_live_files
+SWEET_002,Apple Strudel,Desserts,7,1,yes,"Strudel, apple","Strudel, apple",1.0,1.0,coherent_across_live_files
+SWEET_003,Cake Angel Food,Desserts,5,1,yes,"Cake, angelfood, commercially prepared","Cake, angelfood, commercially prepared",0.33,0.33,partially_aligned
+SWEET_004,Cake Cheesecake,Desserts,5,1,yes,Cheesecake commercially prepared,Cheesecake commercially prepared,0.5,0.5,coherent_across_live_files
+SWEET_005,Cake Chocolate no Frosting,Desserts,6,1,yes,"Cake, chocolate, prepared from recipe without frosting","Cake, chocolate, prepared from recipe without frosting",1.0,1.0,coherent_across_live_files
+SWEET_006,Cake Chocolate Frosting,Desserts,7,1,yes,"Cake, chocolate, commercially prepared with chocolate frosting, in-store bakery","Cake, chocolate, commercially prepared with chocolate frosting, in-store bakery",1.0,1.0,coherent_across_live_files
+SWEET_007,Cake Coffee,Desserts,5,1,yes,"Coffeecake, cinnamon with crumb topping, commercially prepared, enriched","Coffeecake, cinnamon with crumb topping, commercially prepared, enriched",0.0,0.0,strongly_mismatched_ingredients_and_nutrition
+SWEET_008,Cake Gingerbread,Desserts,7,1,yes,"Cake, gingerbread, prepared from recipe","Cake, gingerbread, prepared from recipe",1.0,1.0,coherent_across_live_files
+SWEET_009,Cake Pineapple,Desserts,6,1,yes,"Cake, pineapple upside-down, prepared from recipe","Cake, pineapple upside-down, prepared from recipe",1.0,1.0,coherent_across_live_files
+SWEET_010,Cake Pound,Desserts,5,1,yes,"Cake, pound, commercially prepared, butter (includes fresh and frozen)","Cake, pound, commercially prepared, butter (includes fresh and frozen)",1.0,1.0,coherent_across_live_files
+SWEET_011,Cake Shortcake,Desserts,5,1,yes,"Cake, shortcake, biscuit-type, prepared from recipe","Cake, shortcake, biscuit-type, prepared from recipe",1.0,1.0,coherent_across_live_files
+SWEET_012,Cake Sponge,Desserts,4,1,yes,"Cake, sponge, commercially prepared","Cake, sponge, commercially prepared",1.0,1.0,coherent_across_live_files
+SWEET_013,Cake White no Frosting,Desserts,5,1,yes,"Cake, white, prepared from recipe without frosting","Cake, white, prepared from recipe without frosting",1.0,1.0,coherent_across_live_files
+SWEET_014,Cake White Coconut Frosting,Desserts,6,1,yes,"Cake, white, prepared from recipe with coconut frosting","Cake, white, prepared from recipe with coconut frosting",1.0,1.0,coherent_across_live_files
+SWEET_015,Cake Yellow Choc Frosting,Desserts,7,1,yes,"Cake, yellow, commercially prepared, with chocolate frosting, in-store bakery","Cake, yellow, commercially prepared, with chocolate frosting, in-store bakery",0.75,0.75,coherent_across_live_files
+SWEET_016,Cake Yellow Vanilla Frosting,Desserts,6,1,yes,"Cake, yellow, commercially prepared, with vanilla frosting","Cake, yellow, commercially prepared, with vanilla frosting",1.0,1.0,coherent_across_live_files
+SWEET_017,Cookies Brownies,Desserts,5,1,yes,"Cookies, brownies, commercially prepared","Cookies, brownies, commercially prepared",1.0,1.0,coherent_across_live_files
+SWEET_018,Cookies Butter,Desserts,4,1,yes,"Cookies, butter, commercially prepared, enriched","Cookies, butter, commercially prepared, enriched",1.0,1.0,coherent_across_live_files
+SWEET_019,Cookies Choc Chip,Desserts,5,1,yes,"Cookies, chocolate chip, commercially prepared, regular, lower fat","Cookies, chocolate chip, commercially prepared, regular, lower fat",0.67,0.67,coherent_across_live_files
+SWEET_020,Cookies Fig Bar,Desserts,5,1,yes,"Cookies, fig bars","Cookies, fig bars",0.67,0.67,coherent_across_live_files
+SWEET_021,Cookies Gingersnap,Desserts,6,1,yes,"Cookies, gingersnaps","Cookies, gingersnaps",1.0,1.0,coherent_across_live_files
+SWEET_022,Cookies Macaroon,Desserts,4,1,yes,"Cookies, coconut macaroon","Cookies, coconut macaroon",1.0,1.0,coherent_across_live_files
+SWEET_023,Cookies Molasses,Desserts,6,1,yes,"Cookies, molasses","Cookies, molasses",1.0,1.0,coherent_across_live_files
+SWEET_024,Cookies Oatmeal,Desserts,6,1,yes,"Cookies, oatmeal, commercially prepared, regular","Cookies, oatmeal, commercially prepared, regular",1.0,1.0,coherent_across_live_files
+SWEET_025,Cookies Oatmeal Raisin,Desserts,6,1,yes,"Cookies, oatmeal, prepared from recipe, with raisins","Cookies, oatmeal, prepared from recipe, with raisins",1.0,1.0,coherent_across_live_files
+SWEET_026,Cookies Peanut Butter,Desserts,5,1,yes,"Cookies, peanut butter, commercially prepared, regular","Cookies, peanut butter, commercially prepared, regular",1.0,1.0,coherent_across_live_files
+SWEET_027,Cookies Shortbread,Desserts,4,1,yes,"Cookies, shortbread, commercially prepared, plain","Cookies, shortbread, commercially prepared, plain",1.0,1.0,coherent_across_live_files
+SWEET_028,Cookies Sugar,Desserts,5,1,yes,"Cookies, sugar, commercially prepared, regular (includes vanilla)","Cookies, sugar, commercially prepared, regular (includes vanilla)",1.0,1.0,coherent_across_live_files
+SWEET_029,Doughnut Cake-type Glazed,Desserts,5,1,yes,"Doughnuts, cake-type, plain, sugared or glazed","Doughnuts, cake-type, plain, sugared or glazed",1.0,1.0,coherent_across_live_files
+SWEET_030,Pies Banana Cream,Desserts,6,1,yes,"Pie, banana cream, prepared from mix, no-bake type","Pie, banana cream, prepared from mix, no-bake type",0.67,0.67,coherent_across_live_files
+SWEET_031,Pies Blueberry,Desserts,5,1,yes,"Pie, blueberry, commercially prepared","Pie, blueberry, commercially prepared",0.5,0.5,coherent_across_live_files
+SWEET_032,Pies Boston Cream,Desserts,4,1,yes,"Cake, boston cream pie, commercially prepared","Cake, boston cream pie, commercially prepared",0.67,0.67,coherent_across_live_files
+SWEET_033,Pies Cherry,Desserts,3,1,yes,"Pie, cherry, commercially prepared","Pie, cherry, commercially prepared",0.5,0.5,coherent_across_live_files
+SWEET_034,Pies Chocolate,Desserts,7,1,yes,"Pie, chocolate creme, commercially prepared","Pie, chocolate creme, commercially prepared",0.5,0.5,coherent_across_live_files
+SWEET_035,Pies Coconut,Desserts,5,1,yes,"Pie, coconut creme, commercially prepared","Pie, coconut creme, commercially prepared",0.5,0.5,coherent_across_live_files
+SWEET_036,Pies Dutch Apple,Desserts,7,1,yes,"Pie, Dutch Apple, Commercially Prepared","Pie, Dutch Apple, Commercially Prepared",0.67,0.67,coherent_across_live_files
+SWEET_037,Pies Lemon,Desserts,6,1,yes,"Pie, lemon meringue, commercially prepared","Pie, lemon meringue, commercially prepared",0.5,0.5,coherent_across_live_files
+SWEET_038,Pies Mince,Desserts,6,1,yes,"Pie, mince, prepared from recipe","Pie, mince, prepared from recipe",0.5,0.5,coherent_across_live_files
+SWEET_039,Pies Peach,Desserts,4,1,yes,"Pie, peach","Pie, peach",0.5,0.5,coherent_across_live_files
+SWEET_040,Pies Pecan,Desserts,6,1,yes,"Pie, pecan, commercially prepared","Pie, pecan, commercially prepared",0.5,0.5,coherent_across_live_files
+SWEET_041,Pies Pumpkin,Desserts,7,1,yes,"Pie, pumpkin, commercially prepared","Pie, pumpkin, commercially prepared",0.5,0.5,coherent_across_live_files
+BEV_001,Milkshake Choc,Beverages,4,1,yes,"Milk shakes, thick chocolate","Milk shakes, thick chocolate",0.0,0.0,strongly_mismatched_ingredients_and_nutrition
+BEV_002,Milkshake Vanilla,Beverages,3,1,yes,"Milk shakes, thick vanilla","Milk shakes, thick vanilla",0.5,0.5,coherent_across_live_files

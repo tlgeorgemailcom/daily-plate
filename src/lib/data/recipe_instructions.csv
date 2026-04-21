@@ -1,4 +1,9 @@
 recipe_id,recipe_name,step_order,step_text
+SWEET_001,Pie Apple,1,Preheat the oven to 425 degrees F (220 degrees C). Line a 9-inch pie plate with bottom crust.
+SWEET_001,Pie Apple,2,Stir the cinnamon and lemon juice into the apple pie filling, then spoon it into the lined pie plate and scatter the butter over the top.
+SWEET_001,Pie Apple,3,Cover with top crust and seal. Cut holes in top crust to allow venting, then brush the top crust with the egg wash.
+SWEET_001,Pie Apple,4,Bake for 15 minutes. Lower the oven to 350°F and bake 35 to 40 minutes more, until the crust is golden brown and the filling is bubbling.
+SWEET_001,Pie Apple,5,Set the pie on a rack and let it cool for at least 2 hours before slicing.
 LUNCH_005,Hamburger,1,Form ground beef into a patty about 3/4 inch thick and season both sides with salt and pepper.
 LUNCH_005,Hamburger,2,Heat a skillet or grill over medium-high heat. Cook patty 3–4 minutes per side for medium.
 LUNCH_005,Hamburger,3,Toast the bun cut-side down in the pan for 1 minute.

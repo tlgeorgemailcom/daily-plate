@@ -1,11 +1,11 @@
 recipe_id,recipe_name,category,dietary_category,link_type,prep_time,servings,sr28_rule,sr28_notes,status
-BFAST_001,Pancakes,Breakfast,veggie,dish,20 mins,8 pancakes,Rule 1,SR28 complete - verify NDB for plain pancakes,todo
-BFAST_002,Scrambled Eggs,Breakfast,veggie,dish,10 mins,2 servings,Rule 1,SR28 complete - NDB 01132 verify,todo
-BFAST_003,Bacon,Breakfast,all,dish,10 mins,4 strips,Rule 1,SR28 complete - cooked bacon verify NDB,todo
-BFAST_004,French Toast,Breakfast,veggie,dish,15 mins,4 slices,Rule 1,SR28 complete - verify NDB,todo
-BFAST_005,Oatmeal,Breakfast,veggie,dish,10 mins,1 serving,Rule 1,SR28 complete - verify NDB,todo
-BFAST_006,Biscuits & Gravy,Breakfast,all,ingredient,20 mins,4 servings,Rule 2,,todo
-BFAST_007,Eggs Benedict,Breakfast,all,ingredient,25 mins,2 servings,Rule 2,Gap: hollandaise - raw calc from egg yolk + butter + lemon,todo
+BFAST_001,Hash Brown,Breakfast,veggie,dish,20 mins,8 pancakes,Rule 1,SR28 complete - verify NDB for plain pancakes,todo
+BFAST_002,Muffin Corn,Breakfast,veggie,dish,10 mins,2 servings,Rule 1,SR28 complete - NDB 01132 verify,todo
+BFAST_003,Muffin Blueberry,Breakfast,all,dish,10 mins,4 strips,Rule 1,SR28 complete - cooked bacon verify NDB,todo
+BFAST_004,Pancake Buttermilk,Breakfast,veggie,dish,15 mins,4 slices,Rule 1,SR28 complete - verify NDB,todo
+BFAST_005,Pancake Blueberry,Breakfast,veggie,dish,10 mins,1 serving,Rule 1,SR28 complete - verify NDB,todo
+BFAST_006,Pancake Gluten Free,Breakfast,all,ingredient,20 mins,4 servings,Rule 2,,todo
+BFAST_007,Pancake Plain,Breakfast,all,ingredient,25 mins,2 servings,Rule 2,Gap: hollandaise - raw calc from egg yolk + butter + lemon,todo
 BFAST_008,Breakfast Burrito,Breakfast,all,ingredient,15 mins,1 serving,Rule 2,,todo
 BFAST_009,Breakfast Sandwich,Breakfast,all,ingredient,15 mins,1 serving,Rule 2,,todo
 SANDW_001,BLT,Sandwiches & Burgers,all,ingredient,10 mins,1 serving,Rule 2,,todo
@@ -104,22 +104,22 @@ SOUP_008,Beef Chili,Soups & Stews,all,dish,60 mins,6 servings,Rule 1,SR28 comple
 SOUP_009,Chili + Cornbread,Soups & Stews,all,mixed,65 mins,6 servings,Rule 2,Primary dish: SR28 beef chili + SR28 cornbread as individual component,todo
 SOUP_010,Hot & Sour Soup,Soups & Stews,all,dish,20 mins,4 servings,Rule 1,Verify SR28 has complete item - may need ingredient mode if absent,todo
 SOUP_011,Minestrone Soup,Soups & Stews,vegan,dish,40 mins,6 servings,Rule 1,SR28 complete - verify NDB,todo
-SALAD_001,Caesar Salad,Salads,veggie,ingredient,15 mins,4 servings,Rule 1,Components: romaine + croutons + Caesar dressing + parmesan - all individually linked,todo
-SALAD_002,Chicken Caesar Salad,Salads,pollo,ingredient,20 mins,4 servings,Rule 2,,todo
-SALAD_003,Cobb Salad,Salads,all,ingredient,20 mins,4 servings,Rule 2,Gap: verify SR28 has avocado,todo
+SALAD_001,Potato Salad,Salads,veggie,ingredient,15 mins,4 servings,Rule 1,Components: romaine + croutons + Caesar dressing + parmesan - all individually linked,todo
+SALAD_002,Taco Salad,Salads,pollo,ingredient,20 mins,4 servings,Rule 2,,todo
+SALAD_003,Tuna Salad,Salads,all,ingredient,20 mins,4 servings,Rule 2,Gap: verify SR28 has avocado,todo
 SALAD_004,Greek Salad,Salads,veggie,ingredient,15 mins,4 servings,Rule 2,,todo
 SALAD_005,Chef Salad,Salads,all,ingredient,15 mins,4 servings,Rule 2,,todo
 SIDE_001,French Fries,Sides,vegan,dish,20 mins,4 servings,Rule 1,SR28 complete - verify NDB,todo
-SIDE_002,Onion Rings,Sides,veggie,dish,20 mins,4 servings,Rule 1,SR28 complete - verify NDB,todo
-SIDE_003,Coleslaw,Sides,veggie,dish,15 mins,6 servings,Rule 1,SR28 complete - verify NDB,todo
+SIDE_002,Cornbread,Sides,veggie,dish,20 mins,4 servings,Rule 1,SR28 complete - verify NDB,todo
+SIDE_003,Hush Puppies,Sides,veggie,dish,15 mins,6 servings,Rule 1,SR28 complete - verify NDB,todo
 SIDE_004,Macaroni Salad,Sides,veggie,dish,20 mins,6 servings,Rule 1,SR28 complete - verify NDB,todo
-SIDE_005,Potato Salad,Sides,veggie,dish,30 mins,6 servings,Rule 1,SR28 complete - verify NDB,todo
-SIDE_006,Corn on the Cob,Sides,vegan,dish,15 mins,1 ear,Rule 1,SR28 complete - verify NDB,todo
-SIDE_007,Baked Beans,Sides,all,dish,60 mins,6 servings,Rule 1,SR28 complete - may contain pork - verify NDB,todo
-SIDE_008,Mac & Cheese,Sides,veggie,dish,25 mins,4 servings,Rule 1,SR28 complete - verify NDB,todo
+SIDE_005,Marinara Sauce,Sides,veggie,dish,30 mins,6 servings,Rule 1,SR28 complete - verify NDB,todo
+SIDE_006,Peanut Sauce,Sides,vegan,dish,15 mins,1 ear,Rule 1,SR28 complete - verify NDB,todo
+SIDE_007,Scalloped Potatoes,Sides,all,dish,60 mins,6 servings,Rule 1,SR28 complete - may contain pork - verify NDB,todo
+SIDE_008,Chinese Rice Fried,Sides,veggie,dish,25 mins,4 servings,Rule 1,SR28 complete - verify NDB,todo
 SIDE_009,Mashed Potatoes,Sides,veggie,dish,20 mins,4 servings,Rule 1,SR28 complete - verify NDB,todo
-SIDE_010,Steamed Broccoli,Sides,vegan,dish,10 mins,4 servings,Rule 1,SR28 complete - verify NDB,todo
-SIDE_011,Green Beans (cooked),Sides,vegan,dish,10 mins,4 servings,Rule 1,SR28 complete - verify NDB,todo
+SIDE_010,Sweet Dinner Roll,Sides,vegan,dish,10 mins,4 servings,Rule 1,SR28 complete - verify NDB,todo
+SIDE_011,Dinner Roll,Sides,vegan,dish,10 mins,4 servings,Rule 1,SR28 complete - verify NDB,todo
 SIDE_012,Cheese Sauce,Sauces & Condiments,veggie,dish,15 mins,4 servings,Rule 1,,todo
 SWEET_001,Pie Apple,Desserts,veggie,dish,45 mins,8 slices,Rule 1,,todo
 SWEET_002,Apple Strudel,Desserts,veggie,dish,45 mins,8 servings,Rule 1,,todo
