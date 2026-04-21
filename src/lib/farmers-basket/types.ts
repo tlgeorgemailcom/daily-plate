@@ -108,6 +108,7 @@ export interface Level {
   recipeIngredients?: {           // Full ingredient list with quantities and optional nutrition links
     name: string;
     quantity?: string;
+    section?: string;       // presentation group such as 'crust' or 'filling'
     foodWord?: string;      // key into food-portions.ts e.g. "BEEFGROUND"
     ndbNo?: string;         // USDA NDB#
     portionDesc?: string;   // e.g. "1 cup"

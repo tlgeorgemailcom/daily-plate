@@ -197,7 +197,10 @@
   let categories = $state<string[]>(BASE_CATEGORIES);
 
   $effect(() => {
-    categories = hasInfantProfile ? [...BASE_CATEGORIES, 'Baby Food'] : BASE_CATEGORIES;
+    const baseCategories = hasInfantProfile ? [...BASE_CATEGORIES, 'Baby Food'] : BASE_CATEGORIES;
+    const levelCategories = Array.from(new Set(levels.map((level) => level.category).filter(Boolean)));
+    const extraCategories = levelCategories.filter((category) => !baseCategories.includes(category));
+    categories = [...baseCategories, ...extraCategories];
   });
   
   // Collapsed categories (set of category names that are collapsed)
@@ -269,6 +272,25 @@
         });
       }
     }, 50);
+  }
+
+  function formatIngredientSection(section: string | undefined) {
+    if (!section) return '';
+    return section.charAt(0).toUpperCase() + section.slice(1) + ':';
+  }
+
+  function groupRecipeIngredients(level: Level) {
+    const ingredients = (level.recipeIngredients || []).filter((ingredient) => !ingredient.isDish);
+    const groups: Array<{ section?: string; items: typeof ingredients }> = [];
+    for (const ingredient of ingredients) {
+      const lastGroup = groups[groups.length - 1];
+      if (lastGroup && lastGroup.section === ingredient.section) {
+        lastGroup.items.push(ingredient);
+      } else {
+        groups.push({ section: ingredient.section, items: [ingredient] });
+      }
+    }
+    return groups;
   }
   
   function handleSelect(level: Level) {
@@ -1695,20 +1717,25 @@
               {#if selectedLevel.recipeIngredients && selectedLevel.recipeIngredients.length > 0}
                 <div class="full-ingredients">
                   <span class="ingredients-label">📝 Full Ingredient List:</span>
-                  <ul>
-                    {#each selectedLevel.recipeIngredients.filter(i => !i.isDish) as ing}
-                      <li>{ing.quantity ? `${ing.quantity} ` : ''}{ing.name}</li>
-                    {/each}
-                  </ul>
+                  {#each groupRecipeIngredients(selectedLevel) as group}
+                    {#if group.section}
+                      <div class="ingredient-section-label">{formatIngredientSection(group.section)}</div>
+                    {/if}
+                    <ul>
+                      {#each group.items as ing}
+                        <li>{ing.quantity ? `${ing.quantity} ` : ''}{ing.name}</li>
+                      {/each}
+                    </ul>
+                  {/each}
                 </div>
                 {#if selectedLevel.nutritionJson}
-                  <p class="recipe-nutrition">🔬 Per serving: {selectedLevel.nutritionJson.perServing.cal} cal&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.pro}g protein&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.fat}g fat&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.carb}g carbs&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.fib}g fiber&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.sug}g sugar&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.h2o}g water</p>
+                  <p class="recipe-nutrition">🔬 Per serving(slice): {selectedLevel.nutritionJson.perServing.cal} cal&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.pro}g protein&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.fat}g fat&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.carb}g carbs&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.fib}g fiber&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.sug}g sugar&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.h2o}g water</p>
                 {/if}
               {/if}
               
               {#if selectedLevel.recipeInstructions && selectedLevel.recipeInstructions.length > 0}
                 <div class="instructions">
-                  <span class="instructions-label">How to make:</span>
+                  <span class="instructions-label">Instructions:</span>
                   <ol>
                     {#each selectedLevel.recipeInstructions as step}
                       <li>{step}</li>

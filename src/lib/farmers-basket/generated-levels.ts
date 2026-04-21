@@ -5,10 +5,10 @@ export const LEVELS: Level[] = [
   {
     id: 'SWEET_001',
     name: 'Pie Apple',
-    category: 'Desserts',
+    category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 1,
-    recipe: ['apple', 'bread', 'butter'],
+    recipe: ['apple', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
       { type: 'fence', count: 2, emoji: '🚧' },
@@ -16,85 +16,33 @@ export const LEVELS: Level[] = [
     ],
     animalSpawns: [
       { type: 'squirrel', delay: 3500 },
-      { type: 'raccoon', delay: 5000 }
+      { type: 'mouse', delay: 5000 }
     ],
-    foodSupply: {
-      lettuce: 0,
-      tomato: 0,
-      carrot: 0,
-      cheese: 0,
-      egg: 0,
-      bread: 0,
-      apple: 5,
-      grapes: 0,
-      bacon: 0,
-      butter: 4,
-      chicken: 0,
-      fish: 0
-    },
-    servings: '1 pie (8 slices)',
-    prepTime: '45 mins',
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 5, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '8 slices',
+    prepTime: '',
     linkType: 'dish',
+        nutritionJson: {"perServing": {"cal": 350.88, "pro": 3.18, "fat": 16.55, "carb": 49.12, "fib": 1.48, "sug": 17.34, "h2o": 62.63}, "gramsPerServing": null, "servings": 8.0},
     recipeIngredients: [
-      {
-        name: 'Pie, apple, prepared from recipe',
-        quantity: 'custom (g)',
-        ndbNo: '18302',
-        portionDesc: 'custom (g)',
-        portionGrams: 100.0,
-        isDish: true
-      },
-      {
-        name: 'pastry for a 9-inch double-crust pie',
-        ndbNo: '18335',
-        portionDesc: 'custom (g)',
-        portionGrams: 280.0
-      },
-      {
-        name: 'apple pie filling, canned',
-        quantity: '1 can (21 ounces)',
-        ndbNo: '19312',
-        portionDesc: 'custom (g)',
-        portionGrams: 595.0,
-        foodWord: 'APPLE'
-      },
-      {
-        name: 'butter',
-        quantity: '3 tablespoons',
-        ndbNo: '1145',
-        portionDesc: 'g',
-        portionGrams: 42.0,
-        foodWord: 'BUTTER'
-      },
-      {
-        name: 'ground cinnamon',
-        quantity: '1 teaspoon',
-        ndbNo: '2010',
-        portionDesc: 'g',
-        portionGrams: 2.6
-      },
-      {
-        name: 'lemon juice',
-        quantity: '1 tablespoon',
-        ndbNo: '9152',
-        portionDesc: 'g',
-        portionGrams: 15.0
-      },
-      {
-        name: 'for egg wash',
-        quantity: '1 whole egg',
-        ndbNo: '1123',
-        portionDesc: 'g',
-        portionGrams: 50.0,
-        foodWord: 'EGG'
-      }
+      { name: 'Pie, apple, prepared from recipe', quantity: 'custom (g)', foodWord: 'APPLEPIE', ndbNo: '18302', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'all-purpose enriched white flour', quantity: '2 cups', section: 'crust', foodWord: 'bread', ndbNo: '20081', portionDesc: 'g', portionGrams: 250.0 },
+      { name: 'salt', quantity: '3/4 teaspoon', section: 'crust', ndbNo: '2047', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'vegetable shortening chilled', quantity: '2/3 cup', section: 'crust', ndbNo: '4031', portionDesc: 'g', portionGrams: 127.3 },
+      { name: 'ice-cold water', quantity: '6 tablespoons', section: 'crust', ndbNo: '14411', portionDesc: 'g', portionGrams: 88.7 },
+      { name: 'sugar', quantity: '2 teaspoons', section: 'crust', ndbNo: '19335', portionDesc: 'g', portionGrams: 8.0 },
+      { name: 'apple pie filling, canned', quantity: '1 can (21 ounces)', section: 'filling', foodWord: 'apple', ndbNo: '19312', portionDesc: 'custom (g)', portionGrams: 595.0 },
+      { name: 'sugar', quantity: '5 tablespoon', section: 'filling', ndbNo: '19335', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'lemon juice', quantity: '1 tablespoon', section: 'filling', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'Optional: ground cinnamon', quantity: '1 teaspoon', section: 'filling', ndbNo: '2010', portionDesc: 'g', portionGrams: 2.6 },
+      { name: 'Optional: ground cloves', quantity: '1 teaspoon', section: 'filling', ndbNo: '2011', portionDesc: 'g', portionGrams: 2.1 },
+      { name: 'Optional: allspice', quantity: '1 teaspoon', section: 'filling', ndbNo: '2001', portionDesc: 'g', portionGrams: 2.0 }
     ],
     recipeInstructions: [
-      'Preheat the oven to 425 degrees F (220 degrees C). Line a 9-inch pie plate with bottom crust.',
-      'Stir the cinnamon and lemon juice into the apple pie filling, then spoon it into the lined pie plate and scatter the butter over the top.',
-      'Cover with top crust and seal. Cut holes in top crust to allow venting, then brush the top crust with the egg wash.',
-      'Bake for 15 minutes. Lower the oven to 350°F and bake 35 to 40 minutes more, until the crust is golden brown and the filling is bubbling.',
-      'Set the pie on a rack and let it cool for at least 2 hours before slicing.'
-    ]
+      'Preheat the oven to 425 degrees F (220 degrees C).',
+      'For the crust whisk the flour, salt and sugar together. Cut in the chilled shortening until the mixture resembles coarse crumbs then add the ice-cold water just until the dough comes together. Divide into two discs and chill for at least 30 minutes.',
+      'Roll out one disc and line the bottom of a 9-inch pie plate. Stir the apple pie filling with the sugar, lemon juice and any optional cinnamon, cloves or allspice then spoon it into the crust.',
+      'Roll out the top crust and place it over the filling. Seal and crimp the edges then cut vents in the top crust.',
+      'Bake for 15 minutes. Lower the oven to 350 degrees F (175 degrees C) and bake 35 to 40 minutes more until the crust is golden brown and the filling is bubbling. Cool on a rack before slicing.'
+    ],
   }
 ];
