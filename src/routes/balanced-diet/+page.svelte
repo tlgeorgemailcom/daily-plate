@@ -51,6 +51,7 @@
 
   // Save-before-switch confirmation popup
   let saveConfirmPending = $state<{ label: string; onSave: () => void; onSkip: () => void } | null>(null);
+  let bypassNextSaveConfirm = false;
 
   /** Show a "Save meals?" dialog. Resolves true=save, false=skip. */
   function askSaveMeals(memberLabel: string): Promise<boolean> {
@@ -1046,12 +1047,17 @@
 
   // Ask to save before SvelteKit navigates away from this page.
   beforeNavigate(({ cancel }) => {
+    if (bypassNextSaveConfirm) {
+      bypassNextSaveConfirm = false;
+      return;
+    }
     if ($playerStore.status !== 'logged-in') return;
     if (!$plateDirty) return;  // nothing unsaved — let navigation proceed
     cancel();
     askSaveMeals('your').then(async (shouldSave) => {
       if (shouldSave) await saveMealLog();
       // Re-trigger navigation after the user has answered.
+      bypassNextSaveConfirm = true;
       history.back();
     });
   });
