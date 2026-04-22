@@ -3,7 +3,11 @@
   import { createEventDispatcher } from 'svelte';
   import { customFoods, type CustomFood } from '$lib/stores/customFoodsStore';
 
-  export type RecipeFood = Food & { isRecipe: true; gramsPerServing: number };
+  export type RecipeFood = Food & {
+    isRecipe: true;
+    gramsPerServing: number;
+    recipeType?: 'developer' | 'community';
+  };
   type SearchScope = 'all' | 'baby';
 
   const dispatch = createEventDispatcher<{ select: Food; addCustom: string }>();
@@ -93,6 +97,12 @@
 
   function isPaidTierSearchEnabled(): boolean {
     return hasPaidRecipeAccess;
+  }
+
+  function recipeIcon(food: RecipeFood): string {
+    if (food.recipeType === 'developer') return '🧪';
+    if (food.recipeType === 'community') return '👥';
+    return '🍽️';
   }
 
   function sortAlphabetically<T extends Food>(foods: T[]): T[] {
@@ -386,7 +396,7 @@
         oncontextmenu={(e) => e.preventDefault()}
       >
         <span class="food-name">
-          {'isCustom' in food && food.isCustom ? '🏠 ' : ''}{'isRecipe' in food && food.isRecipe ? '🍽️ ' : ''}{food.display}
+          {'isCustom' in food && food.isCustom ? '🏠 ' : ''}{'isRecipe' in food && food.isRecipe ? `${recipeIcon(food as RecipeFood)} ` : ''}{food.display}
         </span>
         <span class="food-cal">
           {'isRecipe' in food && food.isRecipe
@@ -427,7 +437,7 @@
         <span class="usda-desc">{tooltipFood.desc}</span>
         <span class="nutrient-info">{Math.round(tooltipFood.cal)} cal · {tooltipFood.pro}g protein · {tooltipFood.fat}g fat · {tooltipFood.carb}g carbs per 100g</span>
         <span class="group-info">Groups: {tooltipFood.groups.join(', ')}</span>
-        <span class="ndb-info">{'isRecipe' in tooltipFood ? '🍽️ Community recipe' : `USDA NDB#${tooltipFood.ndb}`}</span>
+        <span class="ndb-info">{'isRecipe' in tooltipFood ? `${recipeIcon(tooltipFood as RecipeFood)} ${(tooltipFood as RecipeFood).recipeType === 'developer' ? 'Developer recipe' : (tooltipFood as RecipeFood).recipeType === 'community' ? 'Community recipe' : 'Recipe'}` : `USDA NDB#${tooltipFood.ndb}`}</span>
       </p>
     </div>
   </div>

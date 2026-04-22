@@ -440,6 +440,7 @@
         ],
         isRecipe: true,
         gramsPerServing: r.gramsPerServing,
+        recipeType: r.type,
       }));
     } catch {
       if (loadVersion === recipeLoadVersion) {
