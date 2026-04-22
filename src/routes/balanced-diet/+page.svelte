@@ -388,6 +388,7 @@
   // Recipe foods fetched from approved Basket game recipes
   let recipeFoods = $state<RecipeFood[]>([]);
   let recipeLoadVersion = 0;
+  let recipeDebugStatus = $state('idle');
 
   function mapRecipeCategoryToGroups(category?: string | null): FoodGroup[] {
     const normalized = (category ?? '').toLowerCase();
@@ -405,10 +406,14 @@
 
   async function loadPaidRecipeFoods(): Promise<void> {
     const loadVersion = ++recipeLoadVersion;
+    recipeDebugStatus = 'loading';
     try {
       const res = await fetch('/api/recipes/nutrition');
       if (!res.ok) {
-        if (loadVersion === recipeLoadVersion) recipeFoods = [];
+        if (loadVersion === recipeLoadVersion) {
+          recipeFoods = [];
+          recipeDebugStatus = `http_${res.status}`;
+        }
         return;
       }
 
@@ -442,9 +447,11 @@
         gramsPerServing: r.gramsPerServing,
         recipeType: r.type,
       }));
+      recipeDebugStatus = `loaded_${data.length}`;
     } catch {
       if (loadVersion === recipeLoadVersion) {
         recipeFoods = [];
+        recipeDebugStatus = 'fetch_failed';
       }
     }
   }
@@ -505,6 +512,7 @@
     } else {
       recipeLoadVersion += 1;
       recipeFoods = [];
+      recipeDebugStatus = 'free';
     }
   });
   
@@ -1106,6 +1114,9 @@
       </div>
     {/if}
     <div class="header-actions">
+      <div class="recipe-debug-badge">
+        recipes: {recipeDebugStatus}
+      </div>
       <button class="new-game-btn" onclick={() => showNewGameConfirm = true}>
         🆕 New
       </button>
