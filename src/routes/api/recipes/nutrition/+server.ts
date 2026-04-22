@@ -5,12 +5,20 @@ import { queryAll } from '$lib/server/turso';
 // Pattern that matches auto-generated player IDs like "recipe-1771874787378-e6qosltqx"
 const autoIdPattern = /^recipe-\d{10,}-\w+$/i;
 
+function normalizeRecipeName(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()
+    .replace(/\s+/g, ' ');
+}
+
 export const GET: RequestHandler = async () => {
   // ── 1. Player recipes from Turso (approved, nutritionally linked) ────────
-  let communityRecipes: object[] = [];
+  let communityRecipes: Array<Record<string, unknown>> = [];
   try {
     const rows = await queryAll(`
-      SELECT id, title, nutrition_json
+      SELECT id, title, category, nutrition_json
       FROM player_recipes
       WHERE status = 'approved' AND nutrition_json IS NOT NULL AND nutrition_json != '{}'
       ORDER BY title ASC
@@ -31,6 +39,7 @@ export const GET: RequestHandler = async () => {
           id:             row.id as string,
           name:           row.title as string,
           type:           'community',
+          category:       row.category as string | null,
           gramsPerServing: gpS,
           servings:       nj.servings as number,
           sources:        nj.sources ?? [],
@@ -48,10 +57,10 @@ export const GET: RequestHandler = async () => {
   }
 
   // ── 2. Developer recipes from Turso dev_recipes ──────────────────────────
-  let devRecipes: object[] = [];
+  let devRecipes: Array<Record<string, unknown>> = [];
   try {
     const rows = await queryAll(`
-      SELECT recipe_id, recipe_name, nutrition_json, source_ndb_no, source_long_desc
+      SELECT recipe_id, recipe_name, category, nutrition_json, source_ndb_no, source_long_desc
       FROM dev_recipes
       WHERE status = 'published' AND nutrition_json IS NOT NULL AND nutrition_json != '{}'
       ORDER BY recipe_name ASC
@@ -66,6 +75,7 @@ export const GET: RequestHandler = async () => {
         id:              `dev-${row.recipe_id as string}`,
         name:            row.recipe_name as string,
         type:            'developer',
+        category:        row.category as string | null,
         gramsPerServing: gpS,
         servings:        nutrition.servings as number,
         sources:         [{ ndb: row.source_ndb_no as string | null, name: (row.source_long_desc as string | null) || (row.recipe_name as string), grams: gpS }],
@@ -83,7 +93,16 @@ export const GET: RequestHandler = async () => {
     console.error('[/api/recipes/nutrition] dev_recipes error:', err);
   }
 
-  return json([...communityRecipes, ...devRecipes], {
+  const seenNames = new Set<string>();
+  const combinedRecipes = [...devRecipes, ...communityRecipes].filter((recipe) => {
+    const normalized = normalizeRecipeName((recipe.name as string | undefined) ?? '');
+    if (!normalized) return false;
+    if (seenNames.has(normalized)) return false;
+    seenNames.add(normalized);
+    return true;
+  });
+
+  return json(combinedRecipes, {
     headers: {
       'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=60',
     },

@@ -13,6 +13,7 @@ export interface BuiltinOverride {
   animalSpawns?: { type: AnimalType; delay: number }[];
   recipeInstructions?: string[];
   recipeIngredients?: { name: string; quantity?: string }[];
+  nutritionJson?: Level['nutritionJson'];
   imageUrl?: string;
   editedAt?: string;
   editedBy?: string;
@@ -29,6 +30,7 @@ interface NewBuiltinRecipe {
   animalSpawns: { type: AnimalType; delay: number }[];
   recipeInstructions?: string[];
   recipeIngredients?: { name: string; quantity?: string }[];
+  nutritionJson?: Level['nutritionJson'];
   imageUrl?: string;
   createdAt: string;
 }
@@ -97,6 +99,7 @@ export async function getLevelsWithOverrides(): Promise<Level[]> {
       animalSpawns: override.animalSpawns ?? level.animalSpawns,
       recipeInstructions: override.recipeInstructions ?? level.recipeInstructions,
       recipeIngredients: override.recipeIngredients ?? level.recipeIngredients,
+      nutritionJson: override.nutritionJson ?? level.nutritionJson,
       imageUrl: override.imageUrl ?? level.imageUrl
     } as Level;
   });
@@ -119,6 +122,7 @@ export async function getLevelsWithOverrides(): Promise<Level[]> {
     servings: r.servings,
     recipeInstructions: r.recipeInstructions,
     recipeIngredients: r.recipeIngredients,
+    nutritionJson: r.nutritionJson,
     imageUrl: r.imageUrl
   }));
 

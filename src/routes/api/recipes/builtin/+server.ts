@@ -13,9 +13,24 @@ interface BuiltinRecipeRow {
   animal_spawns: string | null;
   recipe_instructions_json: string | null;
   recipe_ingredients_json: string | null;
+  nutrition_json: string | null;
   image_url: string | null;
   created_at: string;
   submitted_by: string;
+}
+
+interface NutritionJson {
+  perServing: {
+    cal: number;
+    pro: number;
+    fat: number;
+    carb: number;
+    fib: number;
+    h2o: number;
+    sug: number;
+  };
+  gramsPerServing: number;
+  servings: number;
 }
 
 interface BuiltinOverride {
@@ -29,6 +44,7 @@ interface BuiltinOverride {
   animalSpawns?: { type: string; delay: number }[];
   recipeInstructions?: string[];
   recipeIngredients?: { name: string; quantity?: string }[];
+  nutritionJson?: NutritionJson | null;
   imageUrl?: string;
   editedAt: string;
   editedBy: string;
@@ -45,6 +61,7 @@ interface NewBuiltinRecipe {
   animalSpawns: { type: string; delay: number }[];
   recipeInstructions?: string[];
   recipeIngredients?: { name: string; quantity?: string }[];
+  nutritionJson?: NutritionJson | null;
   imageUrl?: string;
   createdAt: string;
 }
@@ -56,7 +73,7 @@ export const GET: RequestHandler = async () => {
     const overrideRows = await queryAll<BuiltinRecipeRow>(
       `SELECT recipe_id, recipe_name, category, dietary_category, prep_time, servings, 
               recipe, animal_spawns, recipe_instructions_json, recipe_ingredients_json,
-              image_url, created_at, submitted_by
+              nutrition_json, image_url, created_at, submitted_by
        FROM dev_recipes 
        WHERE status = 'published'
          AND recipe_id NOT LIKE 'admin-%'
@@ -67,7 +84,7 @@ export const GET: RequestHandler = async () => {
     const newRows = await queryAll<BuiltinRecipeRow>(
       `SELECT recipe_id, recipe_name, category, dietary_category, prep_time, servings, 
               recipe, animal_spawns, recipe_instructions_json, recipe_ingredients_json,
-              image_url, created_at, submitted_by
+              nutrition_json, image_url, created_at, submitted_by
        FROM dev_recipes 
        WHERE status = 'published' AND recipe_id LIKE 'admin-%'
        ORDER BY created_at ASC`
@@ -91,6 +108,7 @@ export const GET: RequestHandler = async () => {
       if (row.animal_spawns) override.animalSpawns = JSON.parse(row.animal_spawns);
       if (row.recipe_instructions_json) override.recipeInstructions = JSON.parse(row.recipe_instructions_json);
       if (row.recipe_ingredients_json) override.recipeIngredients = JSON.parse(row.recipe_ingredients_json);
+      if (row.nutrition_json && row.nutrition_json !== '{}') override.nutritionJson = JSON.parse(row.nutrition_json);
       if (row.image_url) override.imageUrl = row.image_url;
 
       overrides[row.recipe_id] = override;
@@ -108,6 +126,7 @@ export const GET: RequestHandler = async () => {
       animalSpawns: row.animal_spawns ? JSON.parse(row.animal_spawns) : [{ type: 'rabbit', delay: 3000 }],
       recipeInstructions: row.recipe_instructions_json ? JSON.parse(row.recipe_instructions_json) : undefined,
       recipeIngredients: row.recipe_ingredients_json ? JSON.parse(row.recipe_ingredients_json) : undefined,
+      nutritionJson: row.nutrition_json && row.nutrition_json !== '{}' ? JSON.parse(row.nutrition_json) : undefined,
       imageUrl: row.image_url ?? undefined,
       createdAt: row.created_at
     }));

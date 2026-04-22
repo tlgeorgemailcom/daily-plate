@@ -30,7 +30,7 @@
   import { playerStore } from '$lib/stores/playerStore';
   import { initializeGameState, startAutoSave, startNewGame, getSavedGameTime, hasSavedGame, setViewingUserId, saveMealLog, loadCustomCategories } from '$lib/stores/gameStateStore';
   import { FOODS } from '$lib/data/food-portions';
-  import type { Food, Portion } from '$lib/data/food-portions';
+  import type { Food, FoodGroup, Portion } from '$lib/data/food-portions';
   import type { RecipeFood } from '$lib/components/FoodPicker.svelte';
   import { getMemberTargets } from '$lib/data/dri';
   import type { MemberProfile } from '$lib/data/dri';
@@ -387,6 +387,20 @@
 
   // Recipe foods fetched from approved Basket game recipes
   let recipeFoods = $state<RecipeFood[]>([]);
+
+  function mapRecipeCategoryToGroups(category?: string | null): FoodGroup[] {
+    const normalized = (category ?? '').toLowerCase();
+    if (normalized.includes('sweet') || normalized.includes('dessert')) return ['sweets', 'prepared'];
+    if (normalized.includes('beverage') || normalized.includes('drink')) return ['beverage'];
+    if (normalized.includes('salad')) return ['vegetable', 'prepared'];
+    if (normalized.includes('soup') || normalized.includes('stew')) return ['prepared'];
+    if (normalized.includes('sandwich') || normalized.includes('burger')) return ['prepared', 'grain'];
+    if (normalized.includes('pasta') || normalized.includes('pizza')) return ['prepared', 'grain'];
+    if (normalized.includes('entree') || normalized.includes('main course')) return ['prepared'];
+    if (normalized.includes('side')) return ['prepared'];
+    if (normalized.includes('sauce') || normalized.includes('condiment')) return ['condiment', 'prepared'];
+    return ['prepared'];
+  }
   
   // Macro presets modal
   let showMacroHints = $state(false);
@@ -436,40 +450,44 @@
       await loadNoteForDate(todayDateStr());
     }
 
-    // Load approved recipes as extra food options
-    try {
-      const res = await fetch('/api/recipes/nutrition');
-      if (res.ok) {
-        const data = await res.json();
-        recipeFoods = data.map((r: {
-          id: string; name: string; type?: 'community' | 'developer'; gramsPerServing: number;
-          cal: number; pro: number; fat: number;
-          carb: number; fib: number; h2o: number; sug: number;
-        }): RecipeFood => ({
-          word:     r.name,
-          display:  r.name,
-          groups:   ['prepared'],
-          ndb:      r.id,
-          desc:     r.type === 'developer'
-                      ? `Developer recipe · ${r.gramsPerServing}g per serving`
-                      : `Community recipe · ${r.gramsPerServing}g per serving`,
-          cal:      r.cal,
-          pro:      r.pro,
-          fat:      r.fat,
-          carb:     r.carb,
-          fib:      r.fib,
-          h2o:      r.h2o,
-          sug:      r.sug,
-          portions: [
-            { amt: 100, desc: 'custom (g)', gm: 100 },
-            { amt: 1,   desc: 'serving', gm: r.gramsPerServing },
-          ],
-          isRecipe: true,
-          gramsPerServing: r.gramsPerServing,
-        }));
+    // Paid tiers receive the Turso-backed recipe layer. Free users stay on Vercel data only.
+    if (isPlus) {
+      try {
+        const res = await fetch('/api/recipes/nutrition');
+        if (res.ok) {
+          const data = await res.json();
+          recipeFoods = data.map((r: {
+            id: string; name: string; category?: string | null; type?: 'community' | 'developer'; gramsPerServing: number;
+            cal: number; pro: number; fat: number;
+            carb: number; fib: number; h2o: number; sug: number;
+          }): RecipeFood => ({
+            word:     r.name,
+            display:  r.name,
+            groups:   mapRecipeCategoryToGroups(r.category),
+            ndb:      r.id,
+            desc:     r.type === 'developer'
+                        ? `Developer recipe · ${r.gramsPerServing}g per serving`
+                        : `Community recipe · ${r.gramsPerServing}g per serving`,
+            cal:      r.cal,
+            pro:      r.pro,
+            fat:      r.fat,
+            carb:     r.carb,
+            fib:      r.fib,
+            h2o:      r.h2o,
+            sug:      r.sug,
+            portions: [
+              { amt: 100, desc: 'custom (g)', gm: 100 },
+              { amt: 1,   desc: 'serving', gm: r.gramsPerServing },
+            ],
+            isRecipe: true,
+            gramsPerServing: r.gramsPerServing,
+          }));
+        }
+      } catch {
+        // Non-critical — Balance game works without recipes
       }
-    } catch {
-      // Non-critical — Balance game works without recipes
+    } else {
+      recipeFoods = [];
     }
   });
   
@@ -2210,6 +2228,7 @@
         enableBabyScope={shouldEnableBabyScope}
         promoteBabyScope={shouldEnableBabyScope}
         allowFullDatabaseSearch={isPlus}
+        hasPaidRecipeAccess={isPlus}
         playerId={$playerStore.id}
         on:select={handleFoodSelect}
         on:addCustom={handleAddCustomFood}

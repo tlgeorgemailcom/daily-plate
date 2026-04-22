@@ -13,12 +13,14 @@
     enableBabyScope = false,
     promoteBabyScope = false,
     allowFullDatabaseSearch = false,
+    hasPaidRecipeAccess = false,
     playerId = null
   }: {
     recipeFoods?: RecipeFood[];
     enableBabyScope?: boolean;
     promoteBabyScope?: boolean;
     allowFullDatabaseSearch?: boolean;
+    hasPaidRecipeAccess?: boolean;
     playerId?: string | null;
   } = $props();
   
@@ -78,6 +80,33 @@
         const regex = new RegExp(`\\b${qw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`);
         return regex.test(displayLower);
       });
+    });
+  }
+
+  function normalizeExactName(value: string): string {
+    return value
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, ' ')
+      .trim()
+      .replace(/\s+/g, ' ');
+  }
+
+  function isPaidTierSearchEnabled(): boolean {
+    return hasPaidRecipeAccess;
+  }
+
+  function sortAlphabetically<T extends Food>(foods: T[]): T[] {
+    return [...foods].sort((a, b) => a.display.localeCompare(b.display));
+  }
+
+  function dedupeFoods<T extends Food>(foods: T[]): T[] {
+    const seen = new Set<string>();
+    return foods.filter((food) => {
+      const normalized = normalizeExactName(food.display);
+      if (!normalized) return false;
+      if (seen.has(normalized)) return false;
+      seen.add(normalized);
+      return true;
     });
   }
 
@@ -143,15 +172,23 @@
   const filteredFoods = $derived(() => {
     const queryWords = searchQuery.toLowerCase().split(/\s+/).filter(w => w.length > 0);
     let foods: (Food | (Food & { isCustom: true }) | RecipeFood)[];
-    const customAsFoods = $customFoods.map(customToFood);
-    const matchedCustomFoods = customAsFoods.filter(food => matchesQuery(food, queryWords));
-    const matchedRecipeFoods = recipeFoods.filter(food => matchesQuery(food, queryWords));
-    const matchedCuratedFoods = FOODS.filter(food => matchesQuery(food, queryWords));
+    const paidTierSearch = isPaidTierSearchEnabled();
+    const customAsFoods = sortAlphabetically($customFoods.map(customToFood));
+    const matchedCustomFoods = sortAlphabetically(customAsFoods.filter(food => matchesQuery(food, queryWords)));
+    const matchedRecipeFoods = recipeFoods
+      .filter(food => matchesQuery(food, queryWords))
+      .sort((a, b) => {
+        const aRank = a.type === 'developer' ? 0 : 1;
+        const bRank = b.type === 'developer' ? 0 : 1;
+        if (aRank !== bRank) return aRank - bRank;
+        return a.display.localeCompare(b.display);
+      });
+    const matchedCuratedFoods = sortAlphabetically(FOODS.filter(food => matchesQuery(food, queryWords)));
 
     if (useRemoteSearch) {
-      const filteredRemoteFoods = selectedGroup === 'all'
+      const filteredRemoteFoods = sortAlphabetically((selectedGroup === 'all'
         ? remoteFoods
-        : remoteFoods.filter(food => food.groups.includes(selectedGroup as FoodGroup));
+        : remoteFoods.filter(food => food.groups.includes(selectedGroup as FoodGroup))));
 
       const curatedFoodsForGroup = selectedGroup === 'all'
         ? matchedCuratedFoods
@@ -159,19 +196,16 @@
 
       foods = selectedGroup === 'recipes'
         ? matchedRecipeFoods
-        : [...matchedCustomFoods, ...curatedFoodsForGroup, ...filteredRemoteFoods, ...matchedRecipeFoods];
-
-      const seen = new Set<string>();
-      foods = foods.filter(food => {
-        const key = `${food.ndb}:${food.display}`;
-        if (seen.has(key)) return false;
-        seen.add(key);
-        return true;
-      });
+        : paidTierSearch
+          ? [...matchedCustomFoods, ...matchedRecipeFoods, ...curatedFoodsForGroup, ...filteredRemoteFoods]
+          : [...matchedCustomFoods, ...curatedFoodsForGroup, ...filteredRemoteFoods];
+      foods = dedupeFoods(foods);
     } else {
       foods = selectedGroup === 'recipes'
-        ? [...recipeFoods]
-        : [...customAsFoods, ...FOODS, ...recipeFoods];
+        ? (paidTierSearch ? [...matchedRecipeFoods] : [])
+        : paidTierSearch
+          ? dedupeFoods([...matchedCustomFoods, ...matchedRecipeFoods, ...matchedCuratedFoods])
+          : [...customAsFoods, ...FOODS];
     }
     
     // Filter by group
@@ -188,6 +222,9 @@
     
     if (queryWords.length === 0) {
       return foods.sort((a, b) => a.display.localeCompare(b.display));
+    }
+    if (paidTierSearch) {
+      return foods;
     }
     // Rank: exact word match > prefix match, then by position (earlier = better),
     // then shorter name (more specific), then alphabetical
