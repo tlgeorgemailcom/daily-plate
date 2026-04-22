@@ -387,6 +387,7 @@
 
   // Recipe foods fetched from approved Basket game recipes
   let recipeFoods = $state<RecipeFood[]>([]);
+  let recipeLoadVersion = 0;
 
   function mapRecipeCategoryToGroups(category?: string | null): FoodGroup[] {
     const normalized = (category ?? '').toLowerCase();
@@ -400,6 +401,51 @@
     if (normalized.includes('side')) return ['prepared'];
     if (normalized.includes('sauce') || normalized.includes('condiment')) return ['condiment', 'prepared'];
     return ['prepared'];
+  }
+
+  async function loadPaidRecipeFoods(): Promise<void> {
+    const loadVersion = ++recipeLoadVersion;
+    try {
+      const res = await fetch('/api/recipes/nutrition');
+      if (!res.ok) {
+        if (loadVersion === recipeLoadVersion) recipeFoods = [];
+        return;
+      }
+
+      const data = await res.json();
+      if (loadVersion !== recipeLoadVersion) return;
+
+      recipeFoods = data.map((r: {
+        id: string; name: string; category?: string | null; type?: 'community' | 'developer'; gramsPerServing: number;
+        cal: number; pro: number; fat: number;
+        carb: number; fib: number; h2o: number; sug: number;
+      }): RecipeFood => ({
+        word:     r.name,
+        display:  r.name,
+        groups:   mapRecipeCategoryToGroups(r.category),
+        ndb:      r.id,
+        desc:     r.type === 'developer'
+                    ? `Developer recipe · ${r.gramsPerServing}g per serving`
+                    : `Community recipe · ${r.gramsPerServing}g per serving`,
+        cal:      r.cal,
+        pro:      r.pro,
+        fat:      r.fat,
+        carb:     r.carb,
+        fib:      r.fib,
+        h2o:      r.h2o,
+        sug:      r.sug,
+        portions: [
+          { amt: 100, desc: 'custom (g)', gm: 100 },
+          { amt: 1,   desc: 'serving', gm: r.gramsPerServing },
+        ],
+        isRecipe: true,
+        gramsPerServing: r.gramsPerServing,
+      }));
+    } catch {
+      if (loadVersion === recipeLoadVersion) {
+        recipeFoods = [];
+      }
+    }
   }
   
   // Macro presets modal
@@ -450,43 +496,13 @@
       await loadNoteForDate(todayDateStr());
     }
 
-    // Paid tiers receive the Turso-backed recipe layer. Free users stay on Vercel data only.
+  });
+
+  $effect(() => {
     if (isPlus) {
-      try {
-        const res = await fetch('/api/recipes/nutrition');
-        if (res.ok) {
-          const data = await res.json();
-          recipeFoods = data.map((r: {
-            id: string; name: string; category?: string | null; type?: 'community' | 'developer'; gramsPerServing: number;
-            cal: number; pro: number; fat: number;
-            carb: number; fib: number; h2o: number; sug: number;
-          }): RecipeFood => ({
-            word:     r.name,
-            display:  r.name,
-            groups:   mapRecipeCategoryToGroups(r.category),
-            ndb:      r.id,
-            desc:     r.type === 'developer'
-                        ? `Developer recipe · ${r.gramsPerServing}g per serving`
-                        : `Community recipe · ${r.gramsPerServing}g per serving`,
-            cal:      r.cal,
-            pro:      r.pro,
-            fat:      r.fat,
-            carb:     r.carb,
-            fib:      r.fib,
-            h2o:      r.h2o,
-            sug:      r.sug,
-            portions: [
-              { amt: 100, desc: 'custom (g)', gm: 100 },
-              { amt: 1,   desc: 'serving', gm: r.gramsPerServing },
-            ],
-            isRecipe: true,
-            gramsPerServing: r.gramsPerServing,
-          }));
-        }
-      } catch {
-        // Non-critical — Balance game works without recipes
-      }
+      void loadPaidRecipeFoods();
     } else {
+      recipeLoadVersion += 1;
       recipeFoods = [];
     }
   });
