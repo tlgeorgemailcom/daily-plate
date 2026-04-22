@@ -234,7 +234,7 @@
       return foods.sort((a, b) => a.display.localeCompare(b.display));
     }
     if (paidTierSearch) {
-      return foods;
+      return sortAlphabetically(foods);
     }
     // Rank: exact word match > prefix match, then by position (earlier = better),
     // then shorter name (more specific), then alphabetical
