@@ -260,6 +260,49 @@ For future rebuild work, `Pie Apple` should be treated as the example that prove
 
 ## Ingredients From Pie Apple That Can Be Reused In Other Pies
 
+The current approved `Pie Apple` approach should be recorded explicitly because it is now the working example for how a rebuilt pie can use a realistic ingredient structure while still staying anchored to the canonical food row.
+
+The active `Pie Apple` build uses this structure:
+
+- Crust:
+	- `all-purpose flour`
+	- `salt`
+	- `vegetable shortening`
+	- `ice-cold water`
+	- `sugar`
+- Filling:
+	- `apple pie filling, canned`
+	- `sugar`
+	- `lemon juice`
+	- optional `ground cinnamon`
+	- optional `ground cloves`
+	- optional `allspice`
+
+The current saved recipe text reflects that structure directly:
+
+- Crust:
+	- `2 cups all-purpose flour`
+	- `3/4 teaspoon salt`
+	- `2/3 cup vegetable shortening chilled`
+	- `6 tablespoons ice-cold water`
+	- `2 teaspoons sugar`
+- Filling:
+	- `1 can (21 ounces) apple pie filling, canned`
+	- `5 tablespoon sugar`
+	- `1 tablespoon lemon juice`
+	- `1 teaspoon Optional: ground cinnamon`
+	- `1 teaspoon Optional: ground cloves`
+	- `1 teaspoon Optional: allspice`
+
+The current nutrition-source rule for `Pie Apple` is also part of the approach and should be reused in later recipe work when canonical dish data is incomplete:
+
+- the rebuilt recipe remains anchored to the canonical food row for identity and primary nutrient authority
+- the recipe text shown to the user comes from the rebuilt ingredient and instruction files
+- displayed nutrient values use the canonical dish row first
+- if a canonical nutrient value is `0` and the rebuilt recipe value for that same nutrient is not `0`, use the rebuilt value for that nutrient as a fallback
+
+For `Pie Apple`, this means the displayed recipe still inherits its nutrient identity from canonical row `18302`, while sugar and fiber can fall back to the rebuilt recipe when the canonical values appear to be unavailable or defective.
+
 The `Pie Apple` build also produced a practical list of pie ingredients that can be reused in later pie reconstructions when the target recipe makes culinary sense.
 
 - `pastry for a 9-inch double-crust pie`  
@@ -298,3 +341,30 @@ For future pie recipes, the reusable pie-ingredient checklist should therefore b
 - Does the filling plausibly use cinnamon or other warm spices?
 - Does the filling plausibly use lemon juice or another acidifier?
 - Should the filling be modeled as plain fruit, sweetened fruit, or a more prepared filling equivalent?
+
+## Nutrient Fallback Rule
+
+Canonical nutrient values remain the primary authority.
+
+However, a canonical nutrient value should not be treated as authoritative when it is clearly unusable for that specific nutrient.
+
+Use this rule:
+
+1. Use the canonical nutrient value by default.
+2. Use the rebuilt recipe value only for the specific nutrient that is demonstrably defective in the canonical row.
+3. Keep fallback decisions nutrient-by-nutrient, not recipe-wide.
+4. Do not replace a canonical nutrient value just because the rebuilt value seems more plausible.
+
+For this rebuild, a canonical nutrient value counts as demonstrably defective when at least one of these is true:
+
+- the value is missing or null
+- the value is `0` even though the rebuilt recipe contains clear contributing ingredients for that nutrient
+- the value is impossible or internally inconsistent for that nutrient
+- the value is so incompatible with the ingredient model that it is more likely to be a source defect than a recipe-design error
+
+This means the practical decision rule is:
+
+- use canonical unless that nutrient value is demonstrably defective
+- if it is demonstrably defective, use the rebuilt value for that nutrient only
+
+For `Pie Apple`, this rule justifies using rebuilt fallback values for nutrients such as sugar or fiber when the canonical row gives `0`, while preserving canonical authority for nutrients that remain usable.

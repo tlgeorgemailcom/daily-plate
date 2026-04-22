@@ -64,6 +64,23 @@ def read_csv(path):
     with open(path, newline='', encoding='utf-8') as f:
         return list(csv.DictReader(f))
 
+
+def parse_notes(notes):
+    flags = set()
+    values = {}
+    if not notes:
+        return flags, values
+    for part in notes.split(';'):
+        token = part.strip()
+        if not token:
+            continue
+        if '=' in token:
+            key, value = token.split('=', 1)
+            values[key.strip().lower()] = value.strip()
+        else:
+            flags.add(token.lower())
+    return flags, values
+
 def get_nutrients(comboo_cur, ndb_no, portion_grams, serving_count):
     """Return dict of nutrients scaled to (portion_grams * serving_count)."""
     cols = ', '.join(NUTRIENT_COLS.keys())
@@ -142,14 +159,19 @@ def main():
         missing_ndb = []
 
         for r in ingredient_rows:
+            flags, values = parse_notes(r.get('notes'))
+            if 'optional' in flags:
+                continue
+
             portion_grams = float(r['portion_grams'])
             serving_count = float(r['serving_count'] or 1)
+            retained = float(values.get('retained', '1') or 1)
             nutrients = get_nutrients(comboo_cur, r['ndb_no'].strip(), portion_grams, serving_count)
             if nutrients is None:
                 missing_ndb.append(r['ndb_no'])
                 continue
             for k, v in nutrients.items():
-                totals[k] += v
+                totals[k] += v * retained
 
         if missing_ndb:
             print(f'  WARNING {recipe_id}: NDB not found in comboo.db: {missing_ndb}')
@@ -213,7 +235,7 @@ def main():
             json.dumps(nutrition_json),
         ))
         inserted += 1
-        print(f'  ✓ {recipe_id}: {meta["recipe_name"]} ({len(ingredient_rows)} ingredients, {round(nutrition_json.get("kcal",0))} kcal/serving)')
+        print(f'  ✓ {recipe_id}: {meta["recipe_name"]} ({len(ingredient_rows)} ingredients, {round(nutrition_json.get("kcal",0))} kcal total)')
 
     dev.commit()
     dev.close()
