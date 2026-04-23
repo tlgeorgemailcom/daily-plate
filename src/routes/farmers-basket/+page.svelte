@@ -7,6 +7,7 @@
     createGameState, LEVELS, GRID_WIDTH, GRID_HEIGHT, TOTAL_HEIGHT, PANTRY_HEIGHT,
     GRID_COLS, GRID_ROWS, CELL_SIZE, pixelToGrid, gridToPixel, snapToGrid
   } from '$lib/farmers-basket/game-state.svelte';
+  import { RECIPE_NUTRITION } from '$lib/data/recipe-nutrition';
   import { playerStore, isPremium } from '$lib/stores/playerStore';
   import { gameSettings } from '$lib/stores/settingsStore';
   import { getLevelsWithOverrides, clearOverrideCache } from '$lib/farmers-basket/level-overrides';
@@ -105,6 +106,32 @@
     // Minimum scale to keep game playable (0.35 for very small phones)
     gameScale = Math.max(newScale, 0.35);
   }
+
+  function getCanonicalLevels() {
+    return LEVELS.map((level) => {
+      const canonicalNutrition = RECIPE_NUTRITION[level.id];
+      if (!canonicalNutrition) return level;
+
+      const perServing = canonicalNutrition.perServing;
+
+      return {
+        ...level,
+        nutritionJson: {
+          perServing: {
+            cal: Number(perServing.Energy_KCal ?? 0),
+            pro: Number(perServing.Protein ?? 0),
+            fat: Number(perServing.TotalLipidFat ?? 0),
+            carb: Number(perServing.Carbohydrate ?? 0),
+            fib: Number(perServing.FiberTotalDietary ?? 0),
+            h2o: Number(perServing.Water ?? 0),
+            sug: Number(perServing.SugarsTotal ?? 0)
+          },
+          gramsPerServing: canonicalNutrition.gramsPerServing,
+          servings: canonicalNutrition.servings
+        }
+      };
+    });
+  }
   
   onMount(async () => {
     updateGameScale();
@@ -120,6 +147,8 @@
       } catch (err) {
         console.warn('Could not load level overrides:', err);
       }
+    } else {
+      game.setLevelsWithOverrides(getCanonicalLevels());
     }
 
     const player = get(playerStore);
