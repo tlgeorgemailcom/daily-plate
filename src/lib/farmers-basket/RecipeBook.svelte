@@ -181,6 +181,14 @@
   
   // Which level is expanded (null = show index view)
   let selectedLevel = $state<Level | null>(null);
+
+  $effect(() => {
+    if (!selectedLevel) return;
+    const refreshedLevel = levels.find((level) => level.id === selectedLevel?.id);
+    if (refreshedLevel && refreshedLevel !== selectedLevel) {
+      selectedLevel = refreshedLevel;
+    }
+  });
   
   // Recipe of the Day - daily recipe for current dietary preference
   let recipeOfTheDay = $derived(() => {

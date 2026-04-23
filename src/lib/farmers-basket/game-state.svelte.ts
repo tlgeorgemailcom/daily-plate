@@ -2036,6 +2036,13 @@ export function createGameState() {
       !LEVELS.find(bl => bl.id === l.id)
     );
     allLevels = [...overriddenLevels, ...communityRecipes];
+    if (currentLevel) {
+      const refreshedCurrentLevel = allLevels.find((level) => level.id === currentLevel?.id);
+      if (refreshedCurrentLevel) {
+        currentLevel = refreshedCurrentLevel;
+        levelIndex = allLevels.findIndex((level) => level.id === refreshedCurrentLevel.id);
+      }
+    }
     console.log(`✅ Loaded ${overriddenLevels.length} levels with overrides`);
   }
   
