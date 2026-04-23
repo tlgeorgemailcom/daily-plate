@@ -8,6 +8,7 @@ import { pathToFileURL } from 'node:url';
 const BASE = '/Volumes/training/Daily Food Chain/daily-food-chain';
 const RECIPES_CSV = resolve(BASE, 'src/lib/data/recipes.csv');
 const INGREDIENTS_CSV = resolve(BASE, 'src/lib/data/recipe_ingredients.csv');
+const FOOD_PORTIONS_CSV = resolve(BASE, 'food-portions-complete.csv');
 const COMBOO_DB = '/Users/macminidata/vscode/jetfooddata/jetcool/assets/comboo.db';
 const LOCAL_RECIPES_DB = resolve(BASE, 'recipes_dev.db');
 const DEFAULT_RECIPE_ID = 'SWEET_001';
@@ -146,6 +147,23 @@ function round2(value) {
   return Math.round((value + Number.EPSILON) * 100) / 100;
 }
 
+function pickCanonicalServingGrams(foodRow) {
+  if (!foodRow) return null;
+  let fallback = null;
+  for (let idx = 0; idx <= 12; idx += 1) {
+    const desc = String(foodRow[`M${idx}_Desc`] || '').trim().toLowerCase();
+    const grams = Number.parseFloat(String(foodRow[`M${idx}_Gm`] || ''));
+    if (!desc || !Number.isFinite(grams) || grams <= 0) continue;
+    if (desc === 'custom (g)') {
+      fallback = grams;
+      continue;
+    }
+    if (desc === 'oz') continue;
+    return grams;
+  }
+  return fallback;
+}
+
 function isDefectiveCanonical(canonicalValue, builtValue) {
   if (canonicalValue == null || !Number.isFinite(canonicalValue)) return true;
   if (canonicalValue === 0 && builtValue != null && Number.isFinite(builtValue) && builtValue !== 0) return true;
@@ -213,6 +231,7 @@ async function main() {
 
   const recipes = parseCsv(readFileSync(RECIPES_CSV, 'utf8'));
   const ingredients = parseCsv(readFileSync(INGREDIENTS_CSV, 'utf8'));
+  const foodPortions = parseCsv(readFileSync(FOOD_PORTIONS_CSV, 'utf8'));
   const recipeMeta = recipes.find(row => row.recipe_id === recipeId);
   if (!recipeMeta) throw new Error(`Recipe ${recipeId} not found in recipes.csv`);
   const ingredientRows = ingredients.filter(row => row.recipe_id === recipeId);
@@ -223,6 +242,10 @@ async function main() {
 
   const servingsCount = parseServingsCount(recipeMeta.servings);
   if (!servingsCount) throw new Error(`Unable to parse servings count from recipes.csv for ${recipeId}`);
+
+  const canonicalFoodRow = foodPortions.find((row) => row.NDB_NO === String(dishRow.ndb_no || ''))
+    || foodPortions.find((row) => row.word === String(recipeMeta.food_word || ''));
+  const canonicalServingGrams = pickCanonicalServingGrams(canonicalFoodRow);
 
   let totalRecipeGrams = 0;
   for (const row of ingredientRows) {
@@ -240,7 +263,7 @@ async function main() {
     totalRecipeGrams += grams * (Number.isFinite(servingCount) && servingCount > 0 ? servingCount : 1);
   }
   totalRecipeGrams = round2(totalRecipeGrams);
-  const gramsPerServing = round2(totalRecipeGrams / servingsCount);
+  const gramsPerServing = round2(canonicalServingGrams || (totalRecipeGrams / servingsCount));
 
   const localDb = createClient({ url: pathToFileURL(LOCAL_RECIPES_DB).href });
   const combooDb = createClient({ url: pathToFileURL(COMBOO_DB).href });
@@ -264,8 +287,8 @@ async function main() {
   const mergedPerServing = {};
   const mergedPer100g = {};
   for (const col of NUTRIENT_COLS) {
-    mergedPerServing[col] = round2((mergedWhole[col] || 0) / servingsCount);
     mergedPer100g[col] = round2((mergedWhole[col] || 0) * 100 / totalRecipeGrams);
+    mergedPerServing[col] = round2((mergedPer100g[col] || 0) * gramsPerServing / 100);
   }
 
   const perServingMacros = macroSnapshot(mergedPerServing);

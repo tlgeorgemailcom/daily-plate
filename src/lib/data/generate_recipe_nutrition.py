@@ -25,6 +25,7 @@ REPO_ROOT    = SCRIPT_DIR.parent.parent.parent  # daily-food-chain/
 DB_PATH      = Path('/Users/macminidata/vscode/jetfooddata/jetcool/assets/comboo.db')
 RECIPES_CSV  = SCRIPT_DIR / 'recipes.csv'
 INGR_CSV     = SCRIPT_DIR / 'recipe_ingredients.csv'
+FOODS_CSV    = REPO_ROOT / 'food-portions-complete.csv'
 OUT_TS       = SCRIPT_DIR / 'recipe-nutrition.ts'
 
 # ── Nutrient columns to extract from DataCentralCombo ─────────────────────────
@@ -90,6 +91,29 @@ def parse_servings(s):
 def round2(v):
     return round(v * 100) / 100
 
+def pick_canonical_serving_grams(food_row):
+    if not food_row:
+        return None
+    fallback = None
+    for idx in range(13):
+        desc = (food_row.get(f'M{idx}_Desc', '') or '').strip().lower()
+        grams_str = (food_row.get(f'M{idx}_Gm', '') or '').strip()
+        if not desc or not grams_str:
+            continue
+        try:
+            grams = float(grams_str)
+        except ValueError:
+            continue
+        if grams <= 0:
+            continue
+        if desc == 'custom (g)':
+            fallback = grams
+            continue
+        if desc == 'oz':
+            continue
+        return grams
+    return fallback
+
 def build_per_serving(sr28_row, portion_grams):
     """Scale SR28 per-100g values to per-serving using portion_grams."""
     scale = portion_grams / 100.0
@@ -139,6 +163,9 @@ def main():
     print(f'Reading CSVs...')
     recipes = {r['recipe_id']: r for r in load_csv(RECIPES_CSV)}
     ingr_rows = load_csv(INGR_CSV)
+    food_rows = load_csv(FOODS_CSV)
+    foods_by_ndb = {row['NDB_NO']: row for row in food_rows if row.get('NDB_NO')}
+    foods_by_word = {row['word']: row for row in food_rows if row.get('word')}
 
     # Group ingredient rows by recipe_id
     by_recipe = {}
@@ -228,19 +255,18 @@ def main():
             }
             continue
 
-        per_serving = build_per_serving(sr28_row, portion_grams)
+        canonical_food_row = foods_by_ndb.get(ndb_no) or foods_by_word.get(recipe.get('food_word', '').strip())
+        serving_grams = pick_canonical_serving_grams(canonical_food_row) or portion_grams
+        per_serving = build_per_serving(sr28_row, serving_grams)
 
-        # per-100g normalisation (for UI display flexibility)
-        if portion_grams > 0:
-            per_100g = {k: round2(per_serving[k] * 100.0 / portion_grams) for k in NUTRIENT_COLS}
-        else:
-            per_100g = {k: 0.0 for k in NUTRIENT_COLS}
+        # Canonical SR rows are already per 100g; keep that basis independent of serving size.
+        per_100g = {k: round2(float(sr28_row.get(k) or 0.0)) for k in NUTRIENT_COLS}
 
         output[recipe_id] = {
             'ndb': ndb_no,
             'long_desc': sr28_row['_Long_Desc'],
             'cook_method': sr28_row['_cookMethod'],
-            'gramsPerServing': portion_grams,
+            'gramsPerServing': round2(serving_grams),
             'servings': serving_count,
             'perServing': per_serving,
             'per100g': per_100g,
