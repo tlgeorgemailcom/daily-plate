@@ -119,11 +119,11 @@ function parseCsv(text) {
 }
 
 function parseServingsCount(servingsText) {
-  if (!servingsText) return null;
+  if (!servingsText) return 1;
   const match = servingsText.match(/(\d+(?:\.\d+)?)/);
-  if (!match) return null;
+  if (!match) return 1;
   const value = Number.parseFloat(match[1]);
-  return Number.isFinite(value) && value > 0 ? value : null;
+  return Number.isFinite(value) && value > 0 ? value : 1;
 }
 
 function parseNotes(notes) {

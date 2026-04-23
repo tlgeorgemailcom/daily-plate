@@ -1,2 +1,3 @@
 recipe_id,food_word,recipe_name,category,dietary_category,link_type,prep_time,servings,sr28_rule,sr28_notes,status
 SWEET_001,APPLEPIE,Pie Apple,Sweets & Desserts,veggie,dish,,8 slices,Rule 1,,todo
+SWEET_002,APPLESTRUDEL,Apple Strudel,Sweets & Desserts,veggie,dish,,12 pieces,Rule 1,,todo

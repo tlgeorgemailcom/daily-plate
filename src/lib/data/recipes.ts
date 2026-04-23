@@ -245,6 +245,213 @@ export const RECIPES: Recipe[] = [
         "step_text": "Bake for 15 minutes. Lower the oven to 350 degrees F (175 degrees C) and bake 35 to 40 minutes more until the crust is golden brown and the filling is bubbling. Cool on a rack before slicing."
       }
     ]
+  },
+  {
+    "recipe_id": "SWEET_002",
+    "food_word": "APPLESTRUDEL",
+    "recipe_name": "Apple Strudel",
+    "category": "Sweets & Desserts",
+    "dietary_category": "veggie",
+    "link_type": "dish",
+    "servings": "12 pieces",
+    "sr28_rule": "Rule 1",
+    "status": "todo",
+    "ingredients": [
+      {
+        "row_order": 0,
+        "row_type": "dish",
+        "ing_qty": "custom (g)",
+        "sr28_long_desc": "Strudel, apple",
+        "ndb_no": "18354",
+        "portion_desc": "custom (g)",
+        "portion_grams": 100.0,
+        "serving_count": 1.0
+      },
+      {
+        "row_order": 1,
+        "row_type": "ingredient",
+        "ing_name": "puff pastry sheet",
+        "ing_qty": "1 sheet",
+        "sr28_long_desc": "Pastry, puff, ready-to-bake, frozen",
+        "ndb_no": "18211",
+        "portion_desc": "sheet",
+        "portion_grams": 245.0,
+        "serving_count": 1.0,
+        "notes": "section=pastry",
+        "game_food": "bread"
+      },
+      {
+        "row_order": 2,
+        "row_type": "ingredient",
+        "ing_name": "all-purpose enriched white flour for dusting",
+        "ing_qty": "2 tablespoons",
+        "sr28_long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
+        "ndb_no": "20081",
+        "portion_desc": "g",
+        "portion_grams": 16.0,
+        "serving_count": 1.0,
+        "notes": "section=pastry",
+        "game_food": "bread"
+      },
+      {
+        "row_order": 3,
+        "row_type": "ingredient",
+        "ing_name": "Granny Smith apples thinly sliced",
+        "ing_qty": "5 cups",
+        "sr28_long_desc": "Apples, raw, granny smith, with skin",
+        "ndb_no": "9502",
+        "portion_desc": "g",
+        "portion_grams": 542.0,
+        "serving_count": 1.0,
+        "notes": "section=filling",
+        "game_food": "apple"
+      },
+      {
+        "row_order": 4,
+        "row_type": "ingredient",
+        "ing_name": "sugar",
+        "ing_qty": "3/4 cup",
+        "sr28_long_desc": "Sugars, granulated",
+        "ndb_no": "19335",
+        "portion_desc": "g",
+        "portion_grams": 135.0,
+        "serving_count": 1.0,
+        "notes": "section=filling"
+      },
+      {
+        "row_order": 5,
+        "row_type": "ingredient",
+        "ing_name": "brown sugar",
+        "ing_qty": "1/4 cup",
+        "sr28_long_desc": "Sugars, brown",
+        "ndb_no": "19334",
+        "portion_desc": "g",
+        "portion_grams": 36.0,
+        "serving_count": 1.0,
+        "notes": "section=filling"
+      },
+      {
+        "row_order": 6,
+        "row_type": "ingredient",
+        "ing_name": "raisins",
+        "ing_qty": "1/2 cup",
+        "sr28_long_desc": "Raisins, seedless",
+        "ndb_no": "9298",
+        "portion_desc": "g",
+        "portion_grams": 80.0,
+        "serving_count": 1.0,
+        "notes": "section=filling",
+        "game_food": "fruit"
+      },
+      {
+        "row_order": 7,
+        "row_type": "ingredient",
+        "ing_name": "all-purpose enriched white flour for thickening",
+        "ing_qty": "2 tablespoons",
+        "sr28_long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
+        "ndb_no": "20081",
+        "portion_desc": "g",
+        "portion_grams": 16.0,
+        "serving_count": 1.0,
+        "notes": "section=filling",
+        "game_food": "bread"
+      },
+      {
+        "row_order": 8,
+        "row_type": "ingredient",
+        "ing_name": "bread crumbs",
+        "ing_qty": "1/2 cup",
+        "sr28_long_desc": "Bread crumbs, dry, grated, plain",
+        "ndb_no": "18079",
+        "portion_desc": "g",
+        "portion_grams": 55.0,
+        "serving_count": 1.0,
+        "notes": "section=filling",
+        "game_food": "bread"
+      },
+      {
+        "row_order": 9,
+        "row_type": "ingredient",
+        "ing_name": "unsalted butter for browning bread crumbs",
+        "ing_qty": "3 tablespoons",
+        "sr28_long_desc": "Butter, without salt",
+        "ndb_no": "1145",
+        "portion_desc": "g",
+        "portion_grams": 42.0,
+        "serving_count": 1.0,
+        "notes": "section=filling"
+      },
+      {
+        "row_order": 10,
+        "row_type": "ingredient",
+        "ing_name": "lemon juice",
+        "ing_qty": "1 tablespoon",
+        "sr28_long_desc": "Lemon juice, raw",
+        "ndb_no": "9152",
+        "portion_desc": "g",
+        "portion_grams": 15.0,
+        "serving_count": 1.0,
+        "notes": "section=filling"
+      },
+      {
+        "row_order": 11,
+        "row_type": "ingredient",
+        "ing_name": "ground cinnamon",
+        "ing_qty": "1 teaspoon",
+        "sr28_long_desc": "Spices, cinnamon, ground",
+        "ndb_no": "2010",
+        "portion_desc": "g",
+        "portion_grams": 3.0,
+        "serving_count": 1.0,
+        "notes": "section=filling"
+      },
+      {
+        "row_order": 12,
+        "row_type": "ingredient",
+        "ing_name": "egg beaten for sealing and basting",
+        "ing_qty": "1 egg",
+        "sr28_long_desc": "Egg, whole, raw, fresh",
+        "ndb_no": "1123",
+        "portion_desc": "g",
+        "portion_grams": 50.0,
+        "serving_count": 1.0,
+        "notes": "section=finish"
+      }
+    ],
+    "instructions": [
+      {
+        "step_order": 1,
+        "step_text": "Preheat the oven to 375 degrees F (190 degrees C)."
+      },
+      {
+        "step_order": 2,
+        "step_text": "Melt the butter in a skillet and cook the bread crumbs over medium heat until lightly golden then let them cool slightly."
+      },
+      {
+        "step_order": 3,
+        "step_text": "Combine the Granny Smith apples, sugar, brown sugar, raisins, lemon juice, ground cinnamon, all-purpose enriched white flour for thickening, and 1/4 cup water in a saucepan. Bring to a boil, cover and simmer for 5 minutes, then uncover and simmer until thickened."
+      },
+      {
+        "step_order": 4,
+        "step_text": "Toss the filling with the browned bread crumbs and let it cool enough to handle."
+      },
+      {
+        "step_order": 5,
+        "step_text": "Roll the puff pastry sheet on a lightly floured surface to about a 1/8 inch thick 16 by 12 inch rectangle."
+      },
+      {
+        "step_order": 6,
+        "step_text": "Spread the filling along one long side of the pastry leaving a border around the edges. Brush the exposed border with beaten egg, fold the pastry over the filling, tuck in the ends, and roll into a long sealed strudel."
+      },
+      {
+        "step_order": 7,
+        "step_text": "Place the strudel seam-side down on a lined baking sheet and brush the top with the remaining beaten egg."
+      },
+      {
+        "step_order": 8,
+        "step_text": "Bake for 30 to 40 minutes until the pastry is browned and crisp and the apple filling is tender. Cool before slicing."
+      }
+    ]
   }
 ];
 
