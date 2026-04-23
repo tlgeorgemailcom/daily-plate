@@ -2049,10 +2049,11 @@
     inset: 0;
     background: rgba(0, 0, 0, 0.6);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     z-index: 1000;
     padding: 20px;
+    overflow-y: auto;
   }
   
   .recipe-book {
@@ -2060,16 +2061,18 @@
     border-radius: 16px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     max-width: 520px;
-    max-height: 85vh;
+    max-height: calc(100dvh - 40px);
     width: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     border: 4px solid #8B4513;
+    min-height: 0;
+    margin: auto 0;
   }
   
   .recipe-book.detail-view {
-    max-width: 480px;
+    max-width: 520px;
   }
   
   .book-header {
@@ -2765,6 +2768,7 @@
     flex-direction: column;
     gap: 16px;
     position: relative;
+    min-height: 0;
   }
   
   .current-badge {
@@ -2956,7 +2960,7 @@
   }
   
   .play-btn {
-    margin-top: auto;
+    margin-top: 8px;
     padding: 14px 24px;
     font-size: 1.1rem;
     font-weight: bold;
@@ -3223,9 +3227,13 @@
   }
   
   @media (max-width: 480px) {
+    .modal-backdrop {
+      padding: 10px;
+    }
+
     .recipe-book {
-      max-height: 90vh;
-      margin: 10px;
+      max-height: calc(100dvh - 20px);
+      margin: 0;
     }
     
     .dietary-select {
