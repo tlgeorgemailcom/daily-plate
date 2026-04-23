@@ -66,6 +66,88 @@ interface NewBuiltinRecipe {
   createdAt: string;
 }
 
+function normalizeRecipeInstructions(value: string | null): string[] | undefined {
+  if (!value) return undefined;
+  const parsed = JSON.parse(value);
+  if (!Array.isArray(parsed)) return undefined;
+
+  return parsed
+    .map((item) => {
+      if (typeof item === 'string') return item;
+      if (item && typeof item === 'object' && 'text' in item && typeof item.text === 'string') {
+        return item.text;
+      }
+      return null;
+    })
+    .filter((item): item is string => Boolean(item && item.trim()));
+}
+
+function normalizeRecipeIngredients(value: string | null): BuiltinOverride['recipeIngredients'] {
+  if (!value) return undefined;
+  const parsed = JSON.parse(value);
+  if (!Array.isArray(parsed)) return undefined;
+
+  return parsed
+    .map((item) => {
+      if (!item || typeof item !== 'object') return null;
+
+      const source = item as Record<string, unknown>;
+      const name = typeof source.name === 'string'
+        ? source.name
+        : typeof source.ing_name === 'string'
+          ? source.ing_name
+          : '';
+
+      if (!name && !source.row_type) return null;
+
+      return {
+        name,
+        quantity: typeof source.quantity === 'string'
+          ? source.quantity
+          : typeof source.ing_qty === 'string'
+            ? source.ing_qty
+            : undefined,
+        section: typeof source.section === 'string'
+          ? source.section
+          : typeof source.notes === 'string'
+            ? source.notes.split(';').find((note) => note.startsWith('section='))?.slice('section='.length)
+            : undefined,
+        foodWord: typeof source.foodWord === 'string'
+          ? source.foodWord
+          : typeof source.game_food === 'string' && source.game_food.length > 0
+            ? source.game_food
+            : undefined,
+        ndbNo: typeof source.ndbNo === 'string'
+          ? source.ndbNo
+          : typeof source.ndb_no === 'string'
+            ? source.ndb_no
+            : undefined,
+        portionDesc: typeof source.portionDesc === 'string'
+          ? source.portionDesc
+          : typeof source.portion_desc === 'string'
+            ? source.portion_desc
+            : undefined,
+        portionGrams: typeof source.portionGrams === 'number'
+          ? source.portionGrams
+          : typeof source.portion_grams === 'number'
+            ? source.portion_grams
+            : undefined,
+        servingCount: typeof source.servingCount === 'number'
+          ? source.servingCount
+          : typeof source.serving_count === 'number'
+            ? source.serving_count
+            : undefined,
+        exempt: typeof source.exempt === 'boolean'
+          ? source.exempt
+          : source.row_type === 'exempt',
+        isDish: typeof source.isDish === 'boolean'
+          ? source.isDish
+          : source.row_type === 'dish'
+      };
+    })
+    .filter((item): item is NonNullable<BuiltinOverride['recipeIngredients']>[number] => Boolean(item && (item.name || item.isDish)));
+}
+
 // GET: Fetch all built-in recipe overrides and admin-added recipes from Turso
 export const GET: RequestHandler = async () => {
   try {
@@ -106,8 +188,8 @@ export const GET: RequestHandler = async () => {
       if (row.servings) override.servings = row.servings;
       if (row.recipe) override.recipe = JSON.parse(row.recipe);
       if (row.animal_spawns) override.animalSpawns = JSON.parse(row.animal_spawns);
-      if (row.recipe_instructions_json) override.recipeInstructions = JSON.parse(row.recipe_instructions_json);
-      if (row.recipe_ingredients_json) override.recipeIngredients = JSON.parse(row.recipe_ingredients_json);
+      if (row.recipe_instructions_json) override.recipeInstructions = normalizeRecipeInstructions(row.recipe_instructions_json);
+      if (row.recipe_ingredients_json) override.recipeIngredients = normalizeRecipeIngredients(row.recipe_ingredients_json);
       if (row.nutrition_json && row.nutrition_json !== '{}') override.nutritionJson = JSON.parse(row.nutrition_json);
       if (row.image_url) override.imageUrl = row.image_url;
 
@@ -124,8 +206,8 @@ export const GET: RequestHandler = async () => {
       servings: row.servings ?? undefined,
       recipe: row.recipe ? JSON.parse(row.recipe) : [],
       animalSpawns: row.animal_spawns ? JSON.parse(row.animal_spawns) : [{ type: 'rabbit', delay: 3000 }],
-      recipeInstructions: row.recipe_instructions_json ? JSON.parse(row.recipe_instructions_json) : undefined,
-      recipeIngredients: row.recipe_ingredients_json ? JSON.parse(row.recipe_ingredients_json) : undefined,
+      recipeInstructions: normalizeRecipeInstructions(row.recipe_instructions_json),
+      recipeIngredients: normalizeRecipeIngredients(row.recipe_ingredients_json),
       nutritionJson: row.nutrition_json && row.nutrition_json !== '{}' ? JSON.parse(row.nutrition_json) : undefined,
       imageUrl: row.image_url ?? undefined,
       createdAt: row.created_at
