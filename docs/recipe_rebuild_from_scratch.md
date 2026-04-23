@@ -236,9 +236,115 @@ If those answers are clear, that is the recipe definition.
 
 ## Immediate Next Step
 
-Extract the full set of rows where `has_recipe = 1` from `food-portions-complete.csv` and use that set as the canonical rebuild list for all recipe work.
+The next recipe to reverse engineer is:
 
-After the first recipe is completed, route it through developer review before creating the free-tier TypeScript file and testing it in Turso `dev_recipes`.
+- `word`: `APPLESTRUDEL`
+- `display`: `Apple Strudel`
+- `NDB_NO`: `18354`
+- `usda_desc`: `Strudel, apple`
+
+Use the canonical row for `APPLESTRUDEL` in `food-portions-complete.csv` as the fixed rebuild target for the next recipe pass.
+
+After `Apple Strudel` is completed, route it through developer review before creating the free-tier TypeScript file and testing it in Turso `dev_recipes`.
+
+## First-Pass Ingredient Hypothesis For Apple Strudel
+
+The canonical `APPLESTRUDEL` row suggests a dessert that is clearly fruit-forward and sugar-forward, but not as fat-heavy as pie and not as lean as plain baked apples.
+
+Canonical target per `100g`:
+
+- `cal_100g`: `274.0`
+- `pro_100g`: `3.3`
+- `fat_100g`: `11.2`
+- `carb_100g`: `41.1`
+- `fib_100g`: `2.2`
+- `h2o_100g`: `43.5`
+- `sug_100g`: `25.8`
+
+That profile points toward a pastry-based apple dessert with meaningful added sugar and butter or pastry fat, but probably not a dense double-crust pie model.
+
+The first-pass culinary hypothesis should therefore be a classic apple strudel structure:
+
+- Pastry:
+	- `phyllo dough` or a thin strudel pastry equivalent
+	- `melted butter`
+- Filling:
+	- `apples`
+	- `sugar`
+	- `raisins`
+	- `bread crumbs`
+	- `ground cinnamon`
+	- `lemon juice`
+- Optional finishing ingredient to test only if needed:
+	- `powdered sugar`
+
+Why this is the right first guess:
+
+- `apples` explain the high water content and fruit sugar base
+- `sugar` is required because `25.8g` sugar per `100g` is too high for apples alone
+- `butter` or pastry fat is needed to reach `11.2g` fat per `100g`
+- a thin layered pastry model fits strudel better than a pie crust model
+- `bread crumbs` are common in apple strudel because they absorb apple juices and add some starch without making the dessert read like pie
+- `raisins` are common in many recognizable apple strudels and can help move sugar upward without forcing excessive plain sugar
+- `cinnamon` and `lemon juice` improve culinary realism even if their macro effect is minor
+
+What to test first:
+
+1. Start with a thin-pastry strudel model, not a pie model.
+2. Use fresh apples first, not canned pie filling.
+3. Include bread crumbs from the beginning because they are structurally normal for strudel and may help the carb profile.
+4. Include raisins in the first nutrition pass because the sugar target is relatively high.
+5. Add powdered sugar only if the first-pass build is still too low in sugar after the core strudel structure is tested.
+
+What to avoid in the first pass:
+
+- do not start from the `Pie Apple` canned-filling model
+- do not start from a double-crust pastry assumption
+- do not omit pastry fat and then try to repair the fat gap later with unrealistic butter additions inside the filling
+
+The working question for the first Apple Strudel pass is whether a realistic thin-pastry apple strudel with apples, sugar, raisins, bread crumbs, cinnamon, lemon juice, and butter can land within the normal `<=5%` target window before any more specialized adjustments are introduced.
+
+## First Candidate Gram-Weight Build For Apple Strudel
+
+The first candidate should be treated as a test build, not an approved recipe.
+
+Use this as the opening quantitative pass:
+
+- Pastry:
+	- `phyllo dough` or thin strudel pastry sheets: `120g`
+	- `melted butter`: `45g`
+- Filling:
+	- `apples`: `650g`
+	- `sugar`: `90g`
+	- `raisins`: `60g`
+	- `bread crumbs`: `55g`
+	- `lemon juice`: `15g`
+	- `ground cinnamon`: `3g`
+
+Why this is a reasonable first numeric pass:
+
+- `650g` apples keeps the dessert clearly apple-centered and should contribute most of the water mass
+- `120g` pastry keeps the structure thin enough to read as strudel instead of pie or turnover
+- `45g` butter gives enough pastry fat to move toward the `11.2g` fat target without making the dessert read as laminated pastry
+- `90g` sugar plus `60g` raisins gives a realistic sweet filling and should push total sugar much closer to the `25.8g` target
+- `55g` bread crumbs is enough to absorb moisture and support the carbohydrate profile without overpowering the filling
+- `15g` lemon juice and `3g` cinnamon keep the recipe recognizable without materially distorting the macro model
+
+First-pass evaluation questions for this build:
+
+1. Is sugar still too low even with raisins included?
+2. Is fat still too low, which would imply either more butter or a richer pastry is needed?
+3. Is water too high, which would imply either less apple, more crumb absorption, or stronger bake-loss modeling is needed?
+4. Is fiber too low, which would imply the apple variety or raisin share may need adjustment?
+5. Does the final pastry-to-filling ratio still read like strudel to a cook?
+
+If this first candidate misses badly, the next changes should be small and controlled:
+
+- raise or lower butter before changing the pastry style entirely
+- adjust sugar and raisins before introducing a glaze or powdered-sugar finish
+- adjust bread crumbs before replacing fresh apples with a more processed apple component
+
+Only after this candidate is tested should we decide whether Apple Strudel needs a more enriched pastry model or a more prepared apple filling model.
 
 ## What We Learned From Building Pie Apple
 
