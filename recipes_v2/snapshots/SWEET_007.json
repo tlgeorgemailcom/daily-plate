@@ -1,0 +1,190 @@
+{
+  "recipe_id": "SWEET_007",
+  "recorded_at": "2026-04-24T17:47:04.624679+00:00",
+  "fingerprint": "c663c211c3c0099fddb48c1008cb248c56f70011ce3ec2167c365c8ddd3a6eb2",
+  "disclosure": "The nutrient values reflect water loss during the pre-cooked mincemeat simmer and the double-crust bake. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18322 within an average macro discrepancy of 4.4%.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_007",
+    "canonical_ndb_no": "18322",
+    "cook_method": "bake",
+    "yield_factor_water": 0.82,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "allspice_ground",
+        "grams": 0.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "apple_granny_smith_raw",
+        "grams": 360.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "apricots_dried",
+        "grams": 65.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 42.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 170.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "candied_fruit_mixed",
+        "grams": 60.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "cinnamon_ground",
+        "grams": 2.6,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "cloves_ground",
+        "grams": 0.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "cranberries_dried_sweetened",
+        "grams": 60.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "currants_zante_dried",
+        "grams": 75.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "dates_medjool",
+        "grams": 75.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_whole_raw",
+        "grams": 25.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 250.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "ginger_ground",
+        "grams": 0.2,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "lemon_juice_raw",
+        "grams": 30.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "lemon_peel_raw",
+        "grams": 6.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "nutmeg_ground",
+        "grams": 0.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "raisins_golden",
+        "grams": 75.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "raisins_seedless",
+        "grams": 75.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 4.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 6.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_brown",
+        "grams": 110.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 8.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "water_tap",
+        "grams": 5.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "water_tap",
+        "grams": 75.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "water_tap",
+        "grams": 160.0,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "Preheat the oven to 425 degrees F (220 degrees C).",
+      "For the crust, whisk the flour, salt, and sugar together. Cut in the chilled butter until the mixture resembles coarse crumbs, then add the ice water 1 tablespoon at a time just until the dough comes together. Divide into 2 discs (one slightly larger for the bottom) and chill for at least 30 minutes.",
+      "Roll the larger disc into a 12-inch circle and fit into a 9-inch pie plate, leaving overhang. Roll the second disc and cut into 1/2-inch strips for the lattice.",
+      "For the mincemeat, melt the butter in a large saucepan over medium heat. Add the apples, dark and golden raisins, currants, dried cranberries, chopped dates and apricots, candied peel, brown sugar, lemon zest, lemon juice, water, cinnamon, nutmeg, cloves, ginger, allspice, and salt. Bring to a boil, stirring often, then reduce the heat to low and simmer, stirring frequently, until the apples have softened and most of the liquid has cooked away, about 25-30 minutes. The mixture should be glossy and thickened. Cool slightly. (Optional make-ahead: cool completely, transfer to an airtight container, and refrigerate up to 1 week; flavors deepen with rest. Stir in a tablespoon of rum or brandy weekly to keep up to 1 month.)",
+      "Pour the warm mincemeat into the prepared crust and smooth the top. Lay the lattice strips over the filling in a woven pattern. Trim, fold, and crimp the edges to seal.",
+      "Whisk the egg with 1 teaspoon of water and brush the lattice top.",
+      "Bake at 425F for 20 minutes, then reduce the temperature to 375F and bake for another 30-35 minutes, until the crust is deep golden brown and the filling is bubbling. Tent loosely with foil if the crust browns too quickly.",
+      "Cool the pie on a wire rack for at least 2 hours before slicing to allow the filling to set."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 289.0,
+    "pro": 2.6,
+    "fat": 10.8,
+    "carb": 48.0,
+    "fib": 2.6,
+    "h2o": 37.4,
+    "sug": 28.31,
+    "sodium": 254.0
+  },
+  "built": {
+    "raw_grams_total": 1740.8,
+    "cooked_grams_total": 1603.72,
+    "whole_cooked": {
+      "cal": 4550.772,
+      "pro": 44.6612,
+      "fat": 179.9179,
+      "carb": 733.0314,
+      "fib": 44.1313,
+      "h2o": 624.4789,
+      "sug": 466.9984,
+      "sodium": 4272.614
+    },
+    "per100g_cooked": {
+      "cal": 283.7636,
+      "pro": 2.7849,
+      "fat": 11.2188,
+      "carb": 45.7082,
+      "fib": 2.7518,
+      "h2o": 38.9394,
+      "sug": 29.1197,
+      "sodium": 266.4191
+    }
+  }
+}

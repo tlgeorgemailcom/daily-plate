@@ -1,0 +1,137 @@
+{
+  "recipe_id": "SWEET_011",
+  "recorded_at": "2026-04-24T19:11:40.870849+00:00",
+  "fingerprint": "1940f7d08557ea35869e9d2a518484886fddc1124c7e18947db83104faca8005",
+  "disclosure": "The nutrient values reflect water loss during the bake and stovetop cooking. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18328 within an average macro discrepancy of 4.9%.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_011",
+    "canonical_ndb_no": "18328",
+    "cook_method": "stovetop_then_chill",
+    "yield_factor_water": 0.86,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 14.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 85.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "cornstarch",
+        "grams": 56.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_yolk_raw",
+        "grams": 68.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 24.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 188.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "heavy_cream",
+        "grams": 180.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "milk_whole",
+        "grams": 488.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 3.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 4.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 113.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_powdered",
+        "grams": 15.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vanilla_extract",
+        "grams": 2.1,
+        "is_optional": true
+      },
+      {
+        "ingredient_key": "vanilla_extract",
+        "grams": 8.4,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "water_tap",
+        "grams": 45.0,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "Preheat the oven to 425 degrees F (220 degrees C).",
+      "For the crust, whisk the flour and salt together. Cut in the chilled butter until the mixture resembles coarse crumbs, then add the ice water 1 tablespoon at a time just until the dough comes together. Form into a disc and chill for at least 30 minutes.",
+      "Roll the dough into an 11-inch circle and fit into a 9-inch pie plate. Trim, fold under, and crimp the edges. Prick the bottom and sides with a fork.",
+      "Line the crust with parchment and fill with pie weights or dried beans. Blind-bake at 425F for 12-15 minutes until the edges are set, then remove the parchment and weights, reduce the oven to 375F, and bake for another 8-10 minutes until the bottom is dry and golden. Cool completely on a rack.",
+      "For the pastry cream, whisk the sugar, cornstarch, flour, and salt together in a heavy saucepan. Gradually whisk in the milk until smooth.",
+      "Set over medium heat and cook, whisking constantly, until the mixture thickens, comes to a gentle boil, and bubbles for about 1 minute. The custard should coat the back of a spoon thickly.",
+      "Whisk a ladleful of the hot custard into the egg yolks to temper them, then return the yolks to the saucepan. Cook, whisking constantly, for another 2 minutes until thickened and glossy. Do not let it scorch.",
+      "Remove from the heat and whisk in the butter and vanilla extract until smooth.",
+      "Pour the warm filling into the cooled crust and smooth the top. Press a piece of plastic wrap directly onto the surface to prevent a skin from forming, then refrigerate for at least 4 hours, or until fully set.",
+      "Just before serving, whip the heavy cream with the powdered sugar and vanilla (if using) to soft peaks. Spread or pipe over the chilled pie and serve."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 278.0,
+    "pro": 4.8,
+    "fat": 14.4,
+    "carb": 32.6,
+    "fib": 0.6,
+    "h2o": 47.0,
+    "sug": 12.68,
+    "sodium": 260.0
+  },
+  "built": {
+    "raw_grams_total": 1294.0,
+    "cooked_grams_total": 1200.49,
+    "whole_cooked": {
+      "cal": 3349.41,
+      "pro": 54.1618,
+      "fat": 181.262,
+      "carb": 373.0161,
+      "fib": 6.228,
+      "h2o": 574.4296,
+      "sug": 159.6863,
+      "sodium": 3222.275
+    },
+    "per100g_cooked": {
+      "cal": 279.004,
+      "pro": 4.5116,
+      "fat": 15.099,
+      "carb": 31.072,
+      "fib": 0.5188,
+      "h2o": 47.8497,
+      "sug": 13.3018,
+      "sodium": 268.4137
+    }
+  }
+}

@@ -1,13 +1,13 @@
 {
   "recipe_id": "SWEET_002",
-  "recorded_at": "2026-04-24T02:23:21.348135+00:00",
-  "fingerprint": "1edb829980b3d1d3d24d89d6ebbd76bcdad1a72b1532b91256133f9e546c56cc",
-  "disclosure": "The nutrient values reflect water loss during the saucepan pre-cook and oven bake. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18354 within \u00b18%.",
+  "recorded_at": "2026-04-24T03:13:26.014159+00:00",
+  "fingerprint": "faa13ac99bbda20f4b2aaf02755bb004c2deb3ab4542fe58dca1c2dcf7556881",
+  "disclosure": "The nutrient values reflect water loss during the saucepan pre-cook and oven bake. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18354 within an average macro discrepancy of 1.8%.",
   "canonical_payload": {
     "recipe_id": "SWEET_002",
     "canonical_ndb_no": "18354",
     "cook_method": "bake",
-    "yield_factor_water": 0.78,
+    "yield_factor_water": 0.83,
     "yield_factor_fat": 1.0,
     "yield_factor_other": 1.0,
     "ingredients": [
@@ -63,7 +63,7 @@
       },
       {
         "ingredient_key": "salt_table",
-        "grams": 1.0,
+        "grams": 1.3,
         "is_optional": false
       },
       {
@@ -73,7 +73,7 @@
       },
       {
         "ingredient_key": "sugar_granulated",
-        "grams": 135.0,
+        "grams": 160.0,
         "is_optional": false
       },
       {
@@ -85,7 +85,7 @@
     "instructions": [
       "Preheat the oven to 375 degrees F (190 degrees C).",
       "Melt the butter in a skillet and cook the bread crumbs over medium heat until lightly golden, then let them cool slightly.",
-      "Combine apples, sugar, brown sugar, raisins, lemon juice, cinnamon, flour and 1/4 cup water in a sauce pan and bring to a boil. Cover and simmer for 5 minutes then uncover and simmer until thickened. The added water should evaporate.",
+      "Combine apples, sugar, brown sugar, raisins, lemon juice, cinnamon, flour and 1/4 cup water in a sauce pan and bring to a boil. Cover and simmer for 5 minutes, stir occasionally, then uncover and simmer until thickened, about 5 minutes. The added water should evaporate.",
       "Roll the puff pastry to a 1/8 inch sheet or 16x12 rectangle on a lightly floured surface.",
       "Sprinkle the browned bread crumbs along one long side of the pastry several inches in, leaving a border on the sides so the roll can be sealed; the crumbs absorb juices and keep the bottom from going soggy.",
       "Spoon the cooled filling on top of the bread crumbs.",
@@ -104,27 +104,27 @@
     "sodium": 135.0
   },
   "built": {
-    "raw_grams_total": 1295.0,
-    "cooked_grams_total": 1158.54,
+    "raw_grams_total": 1320.3,
+    "cooked_grams_total": 1214.85,
     "whole_cooked": {
-      "cal": 3296.99,
+      "cal": 3393.74,
       "pro": 40.4713,
       "fat": 137.8458,
-      "carb": 487.2067,
+      "carb": 512.2017,
       "fib": 26.788,
-      "h2o": 483.8248,
-      "sug": 274.9742,
-      "sodium": 1514.75
+      "h2o": 514.8439,
+      "sug": 299.9242,
+      "sodium": 1631.274
     },
     "per100g_cooked": {
-      "cal": 284.5823,
-      "pro": 3.4933,
-      "fat": 11.8983,
-      "carb": 42.0536,
-      "fib": 2.3122,
-      "h2o": 41.7617,
-      "sug": 23.7346,
-      "sodium": 130.7468
+      "cal": 279.3546,
+      "pro": 3.3314,
+      "fat": 11.3467,
+      "carb": 42.1617,
+      "fib": 2.205,
+      "h2o": 42.3792,
+      "sug": 24.6882,
+      "sodium": 134.2778
     }
   }
 }

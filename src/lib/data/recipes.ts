@@ -310,11 +310,11 @@ export const RECIPES: Recipe[] = [
         "row_order": 4,
         "row_type": "ingredient",
         "ing_name": "sugar",
-        "ing_qty": "3/4 cup",
+        "ing_qty": "3/4 cup + 2 tablespoons",
         "sr28_long_desc": "Sugars, granulated",
         "ndb_no": "19335",
         "portion_desc": "g",
-        "portion_grams": 135.0,
+        "portion_grams": 160.0,
         "serving_count": 1.0,
         "notes": "section=filling"
       },
@@ -408,6 +408,18 @@ export const RECIPES: Recipe[] = [
       {
         "row_order": 12,
         "row_type": "ingredient",
+        "ing_name": "salt",
+        "ing_qty": "1/4 teaspoon (heaping)",
+        "sr28_long_desc": "Salt, table",
+        "ndb_no": "2047",
+        "portion_desc": "g",
+        "portion_grams": 1.3,
+        "serving_count": 1.0,
+        "notes": "section=filling"
+      },
+      {
+        "row_order": 13,
+        "row_type": "ingredient",
         "ing_name": "ground cinnamon",
         "ing_qty": "1 teaspoon",
         "sr28_long_desc": "Spices, cinnamon, ground",
@@ -418,7 +430,7 @@ export const RECIPES: Recipe[] = [
         "notes": "section=filling"
       },
       {
-        "row_order": 13,
+        "row_order": 14,
         "row_type": "ingredient",
         "ing_name": "beaten for sealing and basting the pastry",
         "ing_qty": "1 egg",

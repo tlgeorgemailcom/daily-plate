@@ -1,0 +1,138 @@
+{
+  "recipe_id": "SWEET_008",
+  "recorded_at": "2026-04-24T18:25:42.979742+00:00",
+  "fingerprint": "fbc5f2320600bb7319163fe9db18c35e57143c7b56a33dd4b5ec49b22cca284d",
+  "disclosure": "Authentic homemade peach pie spec. NOT validated against USDA SR Legacy NDB 18323 because that canonical entry's protein (1.9 g/100g) and fiber (0.8 g/100g) are inconsistent with any double-crust pie made with a standard wheat-flour shell \u2014 the crust alone exceeds those totals. Free-tier nutrient values are computed from the ingredients in this recipe; paid-tier values may substitute canonical fields where appropriate.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_008",
+    "canonical_ndb_no": "18323",
+    "cook_method": "bake",
+    "yield_factor_water": 0.78,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 14.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 170.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "cinnamon_ground",
+        "grams": 1.3,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "cornstarch",
+        "grams": 32.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_whole_raw",
+        "grams": 25.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 250.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "lemon_juice_raw",
+        "grams": 15.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "nutmeg_ground",
+        "grams": 0.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "peach_yellow_raw",
+        "grams": 900.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 1.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 6.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 8.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 150.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "water_tap",
+        "grams": 5.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "water_tap",
+        "grams": 75.0,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "Preheat the oven to 425 degrees F (220 degrees C).",
+      "For the crust, whisk the flour, salt, and sugar together. Cut in the chilled butter until the mixture resembles coarse crumbs, then add the ice water 1 tablespoon at a time just until the dough comes together. Divide into 2 discs (one slightly larger for the bottom) and chill for at least 30 minutes.",
+      "Roll the larger disc into a 12-inch circle and fit into a 9-inch pie plate, leaving overhang. Roll the second disc and cut into 1/2-inch strips for the lattice; chill while you make the filling.",
+      "Score a small X in the bottom of each peach, blanch in boiling water for 30-45 seconds, then transfer to an ice bath. Slip off the skins, halve, pit, and slice into 1/4-inch slices. Alternatively, use a vegetable peeler to remove the skin.",
+      "Combine the sliced peaches, sugar, cornstarch, lemon juice, cinnamon, nutmeg, and salt in a heavy saucepan and toss gently to coat the fruit evenly. Set over medium heat.",
+      "Cook, stirring every minute or two so nothing scorches, until the peaches release their juice and the cornstarch turns the syrup glossy and noticeably thickened, about 8-12 minutes. Remove from the heat as soon as the liquid looks like a glaze that coats the spoon.",
+      "Spread the cooked filling on a sheet pan or shallow plate so it cools to at least lukewarm before going into the crust. Pouring hot filling onto raw dough will melt the butter and ruin the bottom crust.",
+      "Scrape the cooled filling into the prepared bottom crust and smooth the surface. Dot with the butter pieces. Lay the lattice strips over the filling in a woven pattern. Trim, fold under, and crimp the edges to seal.",
+      "Whisk the egg with 1 teaspoon of water and brush the lattice top.",
+      "Bake at 425F for 20 minutes, then reduce the temperature to 375F and bake for another 25-30 minutes, until the crust is deep golden brown and the filling is bubbling slowly through the lattice. Tent the edges loosely with foil if they brown too quickly.",
+      "Cool the pie on a wire rack for at least 3 hours before slicing so the filling sets firmly."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 224.0,
+    "pro": 1.9,
+    "fat": 10.0,
+    "carb": 32.9,
+    "fib": 0.8,
+    "h2o": 54.4,
+    "sug": 16.23,
+    "sodium": 217.0
+  },
+  "built": {
+    "raw_grams_total": 1653.3,
+    "cooked_grams_total": 1438.07,
+    "whole_cooked": {
+      "cal": 3358.546,
+      "pro": 38.9358,
+      "fat": 156.5696,
+      "carb": 466.4293,
+      "fib": 21.3773,
+      "h2o": 763.0906,
+      "sug": 234.4931,
+      "sodium": 2975.61
+    },
+    "per100g_cooked": {
+      "cal": 233.5455,
+      "pro": 2.7075,
+      "fat": 10.8875,
+      "carb": 32.4344,
+      "fib": 1.4865,
+      "h2o": 53.0635,
+      "sug": 16.3061,
+      "sodium": 206.917
+    }
+  }
+}

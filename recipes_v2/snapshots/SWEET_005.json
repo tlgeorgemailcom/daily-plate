@@ -1,0 +1,126 @@
+{
+  "recipe_id": "SWEET_005",
+  "recorded_at": "2026-04-24T16:21:11.689553+00:00",
+  "fingerprint": "f96af95bdb89ddf30433a8f4439cc7fe3ce3385e6e99ca20b57207b4db992b3e",
+  "disclosure": "The nutrient values reflect water loss during the double-crust bake. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18309 within an average macro discrepancy of 1.4%.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_005",
+    "canonical_ndb_no": "18309",
+    "cook_method": "bake",
+    "yield_factor_water": 0.82,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 14.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 170.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "cherries_sour_red_raw",
+        "grams": 620.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "cornstarch",
+        "grams": 32.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_whole_raw",
+        "grams": 25.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 250.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "lemon_juice_raw",
+        "grams": 15.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 1.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 4.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 8.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 200.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "water_tap",
+        "grams": 5.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "water_tap",
+        "grams": 75.0,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "Preheat the oven to 425 degrees F (220 degrees C).",
+      "For the crust whisk the flour and salt together. Cut in the chilled butter until the mixture resembles coarse crumbs, then add the ice water 1 tablespoon at a time just until the dough comes together. Divide into two discs (one slightly larger than the other for the bottom crust) and chill for at least 30 minutes.",
+      "While the dough chills, pit and halve the cherries. Add them to a medium saucepan with the sugar and lemon juice, and toss to combine. Cook over medium heat for a few minutes, stirring occasionally, until the cherries have released their juices.",
+      "Use a slotted spoon to transfer the cherries into a bowl, leaving the juices in the saucepan. Spoon a few tablespoons of the hot juice into a small container, stir in the cornstarch until fully dissolved, then return the slurry to the saucepan with the remaining juices. Cook over medium heat for a few minutes, stirring constantly, until the sauce has thickened. Pour the thickened sauce over the cherries, stir in the salt, and set aside to cool slightly.",
+      "Roll the larger disc into a 12-inch circle and fit into a 9-inch pie plate, leaving a 1-inch overhang. Pour the cooled cherry filling into the prepared crust and dot the top with the butter.",
+      "Roll out the second disc into an 11-inch circle, cut into 1/2-inch-wide strips, and weave into a lattice on top of the pie. Trim, crimp, and seal the lattice to the bottom crust.",
+      "Lightly beat 1 large egg with 1 teaspoon water; brush the egg wash evenly over the lattice top to give it a deep golden, glossy finish during baking.",
+      "Bake at 425 degrees F (220 degrees C) for 25 minutes to set the crust. Reduce the heat to 375 degrees F (190 degrees C) and shield the crust edges with a 2- to 3-inch strip of aluminum foil (or a pie crust shield) to prevent over-browning. Continue baking for 50-55 minutes more (total bake time roughly 75-80 minutes), removing the foil for the last 15 minutes, until the crust is deep golden brown and the filling is bubbling thickly across the entire surface. An instant-read thermometer inserted through the lattice should read about 200 degrees F (93 degrees C).",
+      "Cool the pie on a wire rack for at least 3 hours before slicing to allow the filling to set. Serve at room temperature or slightly warm."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 270.0,
+    "pro": 2.8,
+    "fat": 12.2,
+    "carb": 38.5,
+    "fib": 0.0,
+    "h2o": 45.8,
+    "sug": 0.0,
+    "sodium": 191.0
+  },
+  "built": {
+    "raw_grams_total": 1420.0,
+    "cooked_grams_total": 1291.78,
+    "whole_cooked": {
+      "cal": 3505.21,
+      "pro": 36.8647,
+      "fat": 155.9819,
+      "carb": 504.7812,
+      "fib": 17.003,
+      "h2o": 584.1152,
+      "sug": 261.4779,
+      "sodium": 2413.13
+    },
+    "per100g_cooked": {
+      "cal": 271.3474,
+      "pro": 2.8538,
+      "fat": 12.075,
+      "carb": 39.0764,
+      "fib": 1.3162,
+      "h2o": 45.2179,
+      "sug": 20.2417,
+      "sodium": 186.8066
+    }
+  }
+}

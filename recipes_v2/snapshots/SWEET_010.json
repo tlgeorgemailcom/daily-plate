@@ -1,0 +1,117 @@
+{
+  "recipe_id": "SWEET_010",
+  "recorded_at": "2026-04-24T19:00:53.732332+00:00",
+  "fingerprint": "d26549ad94d0ec2c526efcaa93921f22d39709bf91b14f9afe36bc3e562fde31",
+  "disclosure": "The nutrient values reflect water loss during the bake. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18327 within an average macro discrepancy of 2.9%.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_010",
+    "canonical_ndb_no": "18327",
+    "cook_method": "bake",
+    "yield_factor_water": 0.95,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 14.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 85.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_whole_raw",
+        "grams": 100.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 188.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "milk_evaporated",
+        "grams": 354.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "pumpkin_canned",
+        "grams": 425.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "pumpkin_pie_spice",
+        "grams": 5.1,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 3.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 3.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 150.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "water_tap",
+        "grams": 45.0,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "Preheat the oven to 425 degrees F (220 degrees C).",
+      "For the crust, whisk the flour and salt together. Cut in the chilled butter until the mixture resembles coarse crumbs, then add the ice water 1 tablespoon at a time just until the dough comes together. Form into a disc and chill for at least 30 minutes.",
+      "Roll the dough into an 11-inch circle and fit into a 9-inch pie plate. Trim, fold under, and crimp the edges. Prick the bottom and sides with a fork.",
+      "Line the crust with parchment paper and fill with pie weights or dried beans. Blind-bake for 12-15 minutes until the edges are set, then remove the parchment and weights and bake for another 5 minutes until the bottom looks dry and barely golden. Set aside while you make the filling.",
+      "In a large bowl, whisk the sugar, salt, and pumpkin pie spice together until evenly combined.",
+      "Add the eggs and whisk to break them up, then whisk in the pumpkin puree until smooth.",
+      "Gradually whisk in the evaporated milk and the melted butter until the filling is uniform with no streaks.",
+      "Pour the filling into the par-baked crust. The crust should be nearly full but not overflowing.",
+      "Bake at 425F for 15 minutes, then reduce the oven temperature to 350F and bake for another 40-50 minutes, until a knife inserted 1 inch from the edge comes out clean and the center is just set with only a slight jiggle. Tent the crust edges with foil if they brown too quickly.",
+      "Cool on a wire rack for at least 2 hours so the filling sets completely before slicing."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 204.0,
+    "pro": 4.5,
+    "fat": 9.3,
+    "carb": 26.4,
+    "fib": 0.0,
+    "h2o": 58.5,
+    "sug": 0.0,
+    "sodium": 225.0
+  },
+  "built": {
+    "raw_grams_total": 1372.1,
+    "cooked_grams_total": 1331.79,
+    "whole_cooked": {
+      "cal": 2753.952,
+      "pro": 61.8981,
+      "fat": 120.2463,
+      "carb": 367.6696,
+      "fib": 18.1558,
+      "h2o": 765.9116,
+      "sug": 200.5994,
+      "sodium": 2884.572
+    },
+    "per100g_cooked": {
+      "cal": 206.7859,
+      "pro": 4.6477,
+      "fat": 9.0289,
+      "carb": 27.6072,
+      "fib": 1.3633,
+      "h2o": 57.51,
+      "sug": 15.0624,
+      "sodium": 216.5938
+    }
+  }
+}

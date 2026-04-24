@@ -1,0 +1,113 @@
+{
+  "recipe_id": "SWEET_014",
+  "generated_at": "2026-04-24T20:01:49.654534+00:00",
+  "canonical_source": "DataCentralCombo",
+  "canonical_per100g": {
+    "cal": 276.0,
+    "pro": 2.8,
+    "fat": 17.6,
+    "carb": 28.5,
+    "fib": 0.5,
+    "h2o": 49.7,
+    "sug": 0.0,
+    "sodium": 329.0
+  },
+  "built_per100g": {
+    "cal": 287.9979083684707,
+    "pro": 3.1208537519674873,
+    "fat": 22.63581690332177,
+    "carb": 19.463842537307812,
+    "fib": 0.8164005941711392,
+    "h2o": 53.35240623068147,
+    "sug": 15.05475800017947,
+    "sodium": 249.61708831084684
+  },
+  "deltas": [
+    {
+      "macro_key": "cal",
+      "canonical": 276.0,
+      "built": 287.9979,
+      "delta_abs": 11.9979,
+      "delta_pct": 4.35,
+      "status": "match"
+    },
+    {
+      "macro_key": "pro",
+      "canonical": 2.8,
+      "built": 3.1209,
+      "delta_abs": 0.3209,
+      "delta_pct": 11.46,
+      "status": "minor"
+    },
+    {
+      "macro_key": "fat",
+      "canonical": 17.6,
+      "built": 22.6358,
+      "delta_abs": 5.0358,
+      "delta_pct": 28.61,
+      "status": "major"
+    },
+    {
+      "macro_key": "carb",
+      "canonical": 28.5,
+      "built": 19.4638,
+      "delta_abs": -9.0362,
+      "delta_pct": -31.71,
+      "status": "major"
+    },
+    {
+      "macro_key": "fib",
+      "canonical": 0.5,
+      "built": 0.8164,
+      "delta_abs": 0.3164,
+      "delta_pct": 63.28,
+      "status": "major"
+    },
+    {
+      "macro_key": "h2o",
+      "canonical": 49.7,
+      "built": 53.3524,
+      "delta_abs": 3.6524,
+      "delta_pct": 7.35,
+      "status": "minor"
+    },
+    {
+      "macro_key": "sug",
+      "canonical": 0.0,
+      "built": 15.0548,
+      "delta_abs": 15.0548,
+      "delta_pct": null,
+      "status": "canonical_zero"
+    },
+    {
+      "macro_key": "sodium",
+      "canonical": 329.0,
+      "built": 249.6171,
+      "delta_abs": -79.3829,
+      "delta_pct": -24.13,
+      "status": "major"
+    }
+  ],
+  "summary": {
+    "match": 1,
+    "minor": 2,
+    "major": 4,
+    "canonical_zero": 1,
+    "majors": [
+      "fat",
+      "carb",
+      "fib",
+      "sodium"
+    ],
+    "minors": [
+      "pro",
+      "h2o"
+    ],
+    "canonical_zeros": [
+      "sug"
+    ]
+  },
+  "raw_grams_total": 1204.3,
+  "cooked_grams_total": 1150.91,
+  "cook_method": "stovetop_then_chill"
+}

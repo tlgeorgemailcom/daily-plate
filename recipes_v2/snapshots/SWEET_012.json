@@ -1,0 +1,153 @@
+{
+  "recipe_id": "SWEET_012",
+  "recorded_at": "2026-04-24T19:18:45.476260+00:00",
+  "fingerprint": "d66761bee31eb8831ef04575003573c9b1ef4cf48cc14a2bbfe7c105b0fc365a",
+  "disclosure": "Authentic homemade Boston cream pie spec: 2-layer butter yellow cake, vanilla pastry cream filling, semisweet chocolate ganache glaze. NOT validated against USDA SR Legacy NDB 18090 because that record is for a commercially prepared sponge-cake version with much less fat and protein and much more glaze sugar; no homemade butter-cake recipe can represent it. Free-tier nutrient values are computed from the ingredients in this recipe; paid-tier values may substitute canonical fields where appropriate.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_012",
+    "canonical_ndb_no": "18090",
+    "cook_method": "bake_then_assemble",
+    "yield_factor_water": 0.92,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "baking_powder",
+        "grams": 6.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 14.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 14.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 113.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "chocolate_semisweet",
+        "grams": 113.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "cornstarch",
+        "grams": 16.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_whole_raw",
+        "grams": 100.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_yolk_raw",
+        "grams": 34.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 188.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "heavy_cream",
+        "grams": 115.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "milk_whole",
+        "grams": 122.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "milk_whole",
+        "grams": 244.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 0.75,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 1.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 50.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 200.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vanilla_extract",
+        "grams": 4.2,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vanilla_extract",
+        "grams": 6.3,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "Preheat the oven to 350 degrees F (175 degrees C). Grease two 8-inch round cake pans and line the bottoms with parchment paper.",
+      "For the cake, whisk the flour, baking powder, and salt together and set aside.",
+      "In a stand mixer or large bowl, beat the softened butter and sugar on medium-high until pale and fluffy, about 3 minutes. Add the eggs one at a time, beating well after each, then beat in the vanilla.",
+      "On low speed, add the flour mixture in three additions alternating with the milk in two additions, beginning and ending with the flour. Mix just until smooth.",
+      "Divide the batter evenly between the two pans and smooth the tops. Bake for 22-26 minutes, until the centers spring back when lightly pressed and a toothpick comes out clean. Cool in the pans 10 minutes, then turn out onto a rack and cool completely.",
+      "For the pastry cream, whisk the sugar, cornstarch, and salt in a heavy saucepan. Gradually whisk in the milk until smooth. Cook over medium heat, whisking constantly, until thickened and gently boiling, about 1 minute.",
+      "Whisk a ladleful of the hot custard into the egg yolks to temper them, then return the yolks to the saucepan. Cook 1-2 minutes more, whisking constantly, until thick and glossy.",
+      "Remove from the heat and whisk in the butter and vanilla. Press plastic wrap onto the surface and chill until cold, at least 1 hour.",
+      "When the cake layers are completely cool and the pastry cream is set, place the bottom layer on a serving plate. Spread the pastry cream evenly to within 1/2 inch of the edge. Top with the second cake layer, pressing gently.",
+      "For the glaze, heat the cream in a small saucepan or microwave until it just begins to steam. Pour over the chopped chocolate in a heatproof bowl, let sit 1 minute, then whisk until smooth. Whisk in the butter until glossy.",
+      "Pour the warm glaze over the center of the top cake layer and spread gently with the back of a spoon, letting some drip down the sides. Refrigerate at least 1 hour before slicing so the glaze sets."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 252.0,
+    "pro": 2.4,
+    "fat": 8.5,
+    "carb": 42.9,
+    "fib": 1.4,
+    "h2o": 45.4,
+    "sug": 36.11,
+    "sodium": 254.0
+  },
+  "built": {
+    "raw_grams_total": 1341.75,
+    "cooked_grams_total": 1298.66,
+    "whole_cooked": {
+      "cal": 4166.31,
+      "pro": 58.1602,
+      "fat": 222.0424,
+      "carb": 505.9574,
+      "fib": 11.899,
+      "h2o": 495.5813,
+      "sug": 335.4068,
+      "sodium": 1891.39
+    },
+    "per100g_cooked": {
+      "cal": 320.8171,
+      "pro": 4.4785,
+      "fat": 17.0979,
+      "carb": 38.9601,
+      "fib": 0.9163,
+      "h2o": 38.1611,
+      "sug": 25.8272,
+      "sodium": 145.6421
+    }
+  }
+}

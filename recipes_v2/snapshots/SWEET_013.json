@@ -1,0 +1,130 @@
+{
+  "recipe_id": "SWEET_013",
+  "recorded_at": "2026-04-24T19:29:56.139217+00:00",
+  "fingerprint": "c22731f9d19109304feebca5fd93c01d52d353dc8cfe1320d7671e1e3437dca3",
+  "disclosure": "Authentic homemade chocolate cream pie spec: chocolate cookie crumb crust, egg-yolk-thickened chocolate pastry cream, fresh whipped cream topping. NOT validated against USDA SR Legacy NDB 18310 because that record is for a commercially prepared product made with non-dairy whipped topping and a no-egg starch/gelatin filling (cholesterol only 12 mg/100 g vs ~70-80 mg in any homemade version with egg yolks and dairy). Free-tier nutrient values are computed from the ingredients in this recipe; paid-tier values may substitute canonical fields where appropriate.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_013",
+    "canonical_ndb_no": "18310",
+    "cook_method": "stovetop_then_chill",
+    "yield_factor_water": 0.78,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 42.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 57.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "chocolate_sandwich_cookies",
+        "grams": 280.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "chocolate_semisweet",
+        "grams": 170.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "cocoa_powder_unsweetened",
+        "grams": 10.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "cornstarch",
+        "grams": 24.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_yolk_raw",
+        "grams": 68.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "heavy_cream",
+        "grams": 115.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "milk_whole",
+        "grams": 488.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 6.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 133.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_powdered",
+        "grams": 15.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vanilla_extract",
+        "grams": 2.1,
+        "is_optional": true
+      },
+      {
+        "ingredient_key": "vanilla_extract",
+        "grams": 4.2,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "Preheat the oven to 350 degrees F (175 degrees C).",
+      "For the crust, pulse the cookies in a food processor to fine crumbs (or crush in a sealed bag with a rolling pin). Combine with the melted butter and stir until evenly moistened. Press firmly into the bottom and up the sides of a 9-inch pie plate. Bake for 8-10 minutes, then cool on a rack while you make the filling.",
+      "For the filling, whisk the sugar, cornstarch, cocoa, and salt together in a heavy saucepan. Gradually whisk in the milk until smooth and no lumps remain.",
+      "Set over medium heat and cook, whisking constantly, until the mixture thickens, comes to a gentle boil, and bubbles for about 1 minute.",
+      "Whisk a ladleful of the hot custard into the egg yolks to temper them, then return the yolks to the saucepan. Cook 1-2 minutes more, whisking constantly, until thick and glossy.",
+      "Remove from the heat and add the chopped chocolate, butter, and vanilla. Whisk until completely smooth and the chocolate is fully melted.",
+      "Pour the warm filling into the cooled cookie crust and smooth the top. Press a piece of plastic wrap directly onto the surface and refrigerate for at least 4 hours, or until fully set.",
+      "Just before serving, whip the heavy cream with the powdered sugar and vanilla (if using) to soft peaks. Spread or pipe over the chilled pie and serve."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 353.0,
+    "pro": 4.15,
+    "fat": 22.41,
+    "carb": 38.44,
+    "fib": 0.8,
+    "h2o": 33.92,
+    "sug": 27.39,
+    "sodium": 266.0
+  },
+  "built": {
+    "raw_grams_total": 1414.3,
+    "cooked_grams_total": 1289.9,
+    "whole_cooked": {
+      "cal": 4438.114,
+      "pro": 54.0185,
+      "fat": 261.6759,
+      "carb": 512.9363,
+      "fib": 22.066,
+      "h2o": 441.0648,
+      "sug": 383.3456,
+      "sodium": 3721.457
+    },
+    "per100g_cooked": {
+      "cal": 344.0673,
+      "pro": 4.1878,
+      "fat": 20.2866,
+      "carb": 39.7657,
+      "fib": 1.7107,
+      "h2o": 34.1938,
+      "sug": 29.7191,
+      "sodium": 288.5081
+    }
+  }
+}

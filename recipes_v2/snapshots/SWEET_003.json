@@ -1,0 +1,140 @@
+{
+  "recipe_id": "SWEET_003",
+  "recorded_at": "2026-04-24T17:11:01.767760+00:00",
+  "fingerprint": "366954eb728d1c6c01ef4e4e3de759ad919b68c1ae41b74c49acf3c082c74baa",
+  "disclosure": "The nutrient values reflect water loss during the bake of the crust and the cream filling set. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18304 within an average macro discrepancy of 4.5%.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_003",
+    "canonical_ndb_no": "18304",
+    "cook_method": "bake+stovetop+chill",
+    "yield_factor_water": 0.7,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "banana_raw",
+        "grams": 295.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 14.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 85.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "cornstarch",
+        "grams": 32.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_yolk_raw",
+        "grams": 51.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 16.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 188.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "heavy_cream",
+        "grams": 180.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "milk_whole",
+        "grams": 488.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 3.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 3.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 80.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_powdered",
+        "grams": 15.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vanilla_extract",
+        "grams": 2.1,
+        "is_optional": true
+      },
+      {
+        "ingredient_key": "vanilla_extract",
+        "grams": 4.2,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "water_tap",
+        "grams": 45.0,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "Preheat the oven to 425 degrees F (220 degrees C).",
+      "For the crust whisk the flour and salt together. Cut in the chilled butter until the mixture resembles coarse crumbs, then add the ice water 1 tablespoon at a time just until the dough comes together. Form into a disc and chill for at least 30 minutes.",
+      "Roll the chilled dough into a 12-inch circle and fit into a 9-inch pie plate, trimming and crimping the edges. Line with parchment, fill with pie weights or dried beans, and blind-bake for 15 minutes. Remove the weights and bake 8-10 minutes more, until the crust is golden brown. Cool completely on a rack.",
+      "For the pastry cream, whisk the sugar, cornstarch, and salt together in a heavy saucepan. Whisk in the milk a little at a time to keep the cornstarch smooth. Bring to a boil over medium heat, whisking constantly, until thick and bubbling, about 5-7 minutes. Boil 1 minute more, still whisking.",
+      "Whisk a ladleful of the hot mixture into the egg yolks to temper, then whisk the tempered yolks back into the saucepan. Cook over medium-low heat, whisking constantly, for 2 more minutes until very thick. Remove from heat and whisk in the butter and vanilla until smooth.",
+      "Spread half of the warm pastry cream over the cooled crust. Layer the sliced bananas evenly on top, then spread the remaining pastry cream over the bananas. Press plastic wrap directly onto the surface to prevent a skin from forming.",
+      "Refrigerate the pie for at least 4 hours or until fully chilled and set.",
+      "Just before serving, beat the heavy cream with the powdered sugar and vanilla until soft peaks form, then spread or pipe over the chilled pie. Slice with a clean knife and serve immediately."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 269.0,
+    "pro": 4.4,
+    "fat": 13.6,
+    "carb": 32.9,
+    "fib": 0.7,
+    "h2o": 47.9,
+    "sug": 12.06,
+    "sodium": 240.0
+  },
+  "built": {
+    "raw_grams_total": 1501.8,
+    "cooked_grams_total": 1239.34,
+    "whole_cooked": {
+      "cal": 3296.854,
+      "pro": 53.7898,
+      "fat": 177.6308,
+      "carb": 378.2495,
+      "fib": 13.466,
+      "h2o": 612.4061,
+      "sug": 162.1827,
+      "sodium": 2826.457
+    },
+    "per100g_cooked": {
+      "cal": 266.0169,
+      "pro": 4.3402,
+      "fat": 14.3327,
+      "carb": 30.5202,
+      "fib": 1.0865,
+      "h2o": 49.4139,
+      "sug": 13.0862,
+      "sodium": 228.0614
+    }
+  }
+}

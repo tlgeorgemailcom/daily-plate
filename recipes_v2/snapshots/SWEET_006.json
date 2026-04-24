@@ -1,0 +1,136 @@
+{
+  "recipe_id": "SWEET_006",
+  "recorded_at": "2026-04-24T17:08:57.352458+00:00",
+  "fingerprint": "f476b9ae0d6afac4c755ddf865e3b70a09b92b6aafa24f397f8c9247ebca7b6d",
+  "disclosure": "The nutrient values reflect water loss during the bake. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18321 within an average macro discrepancy of 4.4%.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_006",
+    "canonical_ndb_no": "18321",
+    "cook_method": "bake+stovetop",
+    "yield_factor_water": 0.78,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 85.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 85.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "cornstarch",
+        "grams": 32.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_white_raw",
+        "grams": 165.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_yolk_raw",
+        "grams": 85.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 188.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "lemon_juice_raw",
+        "grams": 160.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "lemon_peel_raw",
+        "grams": 6.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 1.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 3.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 3.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 133.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 200.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "water_tap",
+        "grams": 45.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "water_tap",
+        "grams": 237.0,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "Preheat the oven to 425 degrees F (220 degrees C).",
+      "For the crust whisk the flour and salt together. Cut in the chilled butter until the mixture resembles coarse crumbs, then add the ice water 1 tablespoon at a time just until the dough comes together. Form into a single disc and chill for at least 30 minutes.",
+      "Roll the chilled dough into a 12-inch circle and fit into a 9-inch pie plate, trimming and crimping the edges. Line with parchment, fill with pie weights or dried beans, and blind-bake for 15 minutes. Remove the weights and bake 8-10 minutes more, until the crust is golden brown. Cool completely on a rack. Reduce oven temperature to 350 degrees F (175 degrees C).",
+      "For the curd, whisk together the sugar, lemon zest, yolks, and salt in a heavy saucepan. In a separate bowl, whisk the cold water with the cornstarch until smooth, then whisk into the saucepan along with the lemon juice.",
+      "Cook over medium heat, whisking constantly, until the mixture thickens and just comes to a gentle boil, about 8-10 minutes. Remove from heat and whisk in the butter a few pieces at a time until smooth and glossy. Pour the warm curd directly into the cooled crust and smooth the top.",
+      "For the meringue, combine the egg whites, sugar, and salt in a large bowl. Beat on medium-high until stiff, glossy peaks form.",
+      "Pile the meringue onto the pie, spreading it so it touches the crust all the way around to seal.",
+      "Bake at 350F until the meringue begins to brown, 8-10 minutes.",
+      "Cool the pie on a wire rack for at least 1 hour, then refrigerate for at least 3 hours before slicing to allow the filling to set fully."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 285.0,
+    "pro": 3.8,
+    "fat": 12.9,
+    "carb": 39.1,
+    "fib": 0.0,
+    "h2o": 43.3,
+    "sug": 0.0,
+    "sodium": 242.0
+  },
+  "built": {
+    "raw_grams_total": 1428.5,
+    "cooked_grams_total": 1279.14,
+    "whole_cooked": {
+      "cal": 3711.37,
+      "pro": 53.0646,
+      "fat": 162.9869,
+      "carb": 521.9606,
+      "fib": 6.48,
+      "h2o": 529.5542,
+      "sug": 338.8733,
+      "sodium": 3263.46
+    },
+    "per100g_cooked": {
+      "cal": 290.146,
+      "pro": 4.1485,
+      "fat": 12.7419,
+      "carb": 40.8056,
+      "fib": 0.5066,
+      "h2o": 41.3993,
+      "sug": 26.4923,
+      "sodium": 255.1295
+    }
+  }
+}

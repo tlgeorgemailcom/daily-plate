@@ -1,0 +1,110 @@
+{
+  "recipe_id": "SWEET_015",
+  "recorded_at": "2026-04-24T20:09:25.134935+00:00",
+  "fingerprint": "b2d487e7ce48733508840470127cb566870fe7394c31eceffaff3d52c4c711ae",
+  "disclosure": "Authentic homemade egg custard pie spec: blind-baked single pie crust filled with whole milk + whole egg custard, sweetened, lightly nutmegged. NOT validated against USDA SR Legacy NDB 18317 because that record is a commercially prepared pie that uses added starches, gums, and milk solids (evidenced by ~1.6 g/100g fiber and elevated protein and carbohydrate at lower sugar) that no authentic homemade custard pie contains. No homemade recipe can represent it. Free-tier nutrient values are computed from the ingredients in this recipe; paid-tier values may substitute canonical fields where appropriate.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_015",
+    "canonical_ndb_no": "18317",
+    "cook_method": "bake",
+    "yield_factor_water": 0.92,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 85.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_whole_raw",
+        "grams": 200.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap",
+        "grams": 188.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "milk_whole",
+        "grams": 610.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "nutmeg_ground",
+        "grams": 1.1,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 3.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 3.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 133.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vanilla_extract",
+        "grams": 8.4,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "water_ice",
+        "grams": 45.0,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "For the crust, whisk the flour and salt together. Cut in the cold butter until the mixture resembles coarse crumbs with pea-sized pieces. Sprinkle the ice water over and stir gently with a fork until the dough just comes together.",
+      "Shape into a disk, wrap, and chill for at least 30 minutes. Roll out to a 12-inch round, transfer to a 9-inch pie plate, trim, and crimp the edges. Prick the bottom with a fork and chill for another 15 minutes.",
+      "Preheat the oven to 400 degrees F (205 degrees C). Line the chilled shell with parchment and fill with pie weights. Bake for 12 minutes, then remove the weights and parchment and bake another 5-7 minutes, until the bottom looks dry and just set (the crust should not be fully browned). Remove and lower the oven to 325 degrees F (165 degrees C).",
+      "For the filling, whisk the eggs in a large bowl until smooth. Whisk in the sugar, salt, and nutmeg.",
+      "Heat the milk in a saucepan over medium heat just until steaming and small bubbles appear at the edges (do not boil). Slowly pour the hot milk into the egg mixture in a thin stream, whisking constantly. Stir in the vanilla.",
+      "Place the par-baked crust on a rimmed baking sheet near the oven. Pour the custard through a fine-mesh strainer into the crust to remove any cooked egg bits and foam.",
+      "Sprinkle a little more nutmeg over the top. Carefully transfer to the oven and bake at 325 degrees F (165 degrees C) for 35-45 minutes, until the edges are set and puffed and the center jiggles only slightly when nudged (a knife inserted 1 inch from the edge should come out clean).",
+      "Cool the pie completely on a rack, then refrigerate for at least 2 hours before slicing. Serve cold."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 210.0,
+    "pro": 5.5,
+    "fat": 11.6,
+    "carb": 20.8,
+    "fib": 1.6,
+    "h2o": 60.9,
+    "sug": 11.58,
+    "sodium": 275.0
+  },
+  "built": {
+    "raw_grams_total": 1043.5,
+    "cooked_grams_total": 986.73,
+    "whole_cooked": {
+      "cal": 1812.227,
+      "pro": 45.1268,
+      "fat": 108.1929,
+      "carb": 165.3492,
+      "fib": 0.2288,
+      "h2o": 652.8926,
+      "sug": 165.4255,
+      "sodium": 2883.392
+    },
+    "per100g_cooked": {
+      "cal": 183.6605,
+      "pro": 4.5734,
+      "fat": 10.9648,
+      "carb": 16.7573,
+      "fib": 0.0232,
+      "h2o": 66.1675,
+      "sug": 16.7651,
+      "sodium": 292.2179
+    }
+  }
+}

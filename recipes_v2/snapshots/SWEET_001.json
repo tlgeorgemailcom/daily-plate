@@ -1,8 +1,8 @@
 {
   "recipe_id": "SWEET_001",
-  "recorded_at": "2026-04-24T02:11:45.479496+00:00",
+  "recorded_at": "2026-04-24T03:15:32.670519+00:00",
   "fingerprint": "aef34f001017cce1ad1f6476d6a42498d711aeb66652e367e40f9176763ff7d6",
-  "disclosure": "The nutrient values reflect water loss during the saucepan pre-cook and oven bake. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18302 within \u00b13.5%.",
+  "disclosure": "The nutrient values reflect water loss during the saucepan pre-cook and oven bake. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18302 within an average macro discrepancy of 1.9%.",
   "canonical_payload": {
     "recipe_id": "SWEET_001",
     "canonical_ndb_no": "18302",
