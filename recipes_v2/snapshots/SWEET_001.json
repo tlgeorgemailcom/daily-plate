@@ -1,0 +1,128 @@
+{
+  "recipe_id": "SWEET_001",
+  "recorded_at": "2026-04-24T02:11:45.479496+00:00",
+  "fingerprint": "aef34f001017cce1ad1f6476d6a42498d711aeb66652e367e40f9176763ff7d6",
+  "disclosure": "The nutrient values reflect water loss during the saucepan pre-cook and oven bake. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18302 within \u00b13.5%.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_001",
+    "canonical_ndb_no": "18302",
+    "cook_method": "bake",
+    "yield_factor_water": 0.71,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "allspice_ground",
+        "grams": 2.0,
+        "is_optional": true
+      },
+      {
+        "ingredient_key": "apple_granny_smith_raw",
+        "grams": 750.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 28.4,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 74.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "cinnamon_ground",
+        "grams": 2.6,
+        "is_optional": true
+      },
+      {
+        "ingredient_key": "cloves_ground",
+        "grams": 2.1,
+        "is_optional": true
+      },
+      {
+        "ingredient_key": "cornstarch",
+        "grams": 24.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 234.4,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "lemon_juice_raw",
+        "grams": 15.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 6.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 130.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vegetable_shortening",
+        "grams": 64.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "water_tap",
+        "grams": 60.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "water_tap",
+        "grams": 74.0,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "Preheat the oven to 425 degrees F (220 degrees C).",
+      "For the crust whisk the flour and salt together. Cut in the chilled butter and shortening until the mixture resembles coarse crumbs, then add the ice water 1 tablespoon at a time just until the dough comes together. Divide into two discs and chill for at least 30 minutes.",
+      "In a large saucepan, combine the peeled and cored Granny Smith apple slices with the sugar, lemon juice, cornstarch, butter, and 1/4 cup water, plus any optional cinnamon, cloves, or allspice. Bring to a boil over medium heat, then reduce heat, cover, and simmer for 5 minutes, stirring occasionally. Uncover and simmer 5 minutes more, until the apples are slightly softened and the juices have thickened. Remove from heat and let cool while you roll out the crust.",
+      "Roll out one disc and line the bottom of a 9-inch pie plate. Spoon the cooled apple filling into the crust, mounding slightly in the center.",
+      "Roll out the second disc and cut into 1/2-inch strips. Lay the strips over the filling in a lattice pattern, weaving them over and under. Trim and crimp the edges to seal.",
+      "Bake for 15 minutes. Lower the oven to 350 degrees F (175 degrees C) and bake 35 to 40 minutes more until the crust is golden brown and the filling is bubbling. Cool on a rack before slicing."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 265.0,
+    "pro": 2.4,
+    "fat": 12.5,
+    "carb": 37.1,
+    "fib": 0.0,
+    "h2o": 47.3,
+    "sug": 0.0,
+    "sodium": 211.0
+  },
+  "built": {
+    "raw_grams_total": 1467.0,
+    "cooked_grams_total": 1224.08,
+    "whole_cooked": {
+      "cal": 3203.46,
+      "pro": 28.8497,
+      "fat": 151.3058,
+      "carb": 438.8348,
+      "fib": 30.1143,
+      "h2o": 594.7392,
+      "sug": 202.8437,
+      "sodium": 2559.309
+    },
+    "per100g_cooked": {
+      "cal": 261.7038,
+      "pro": 2.3569,
+      "fat": 12.3608,
+      "carb": 35.8502,
+      "fib": 2.4602,
+      "h2o": 48.5867,
+      "sug": 16.5711,
+      "sodium": 209.0805
+    }
+  }
+}

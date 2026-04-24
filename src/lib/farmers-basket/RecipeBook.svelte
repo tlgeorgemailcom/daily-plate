@@ -287,6 +287,32 @@
     return section.charAt(0).toUpperCase() + section.slice(1) + ':';
   }
 
+  function formatIngredientLine(ingredient: { name: string; quantity?: string }) {
+    const quantity = ingredient.quantity?.trim();
+    const name = ingredient.name.trim();
+    if (!quantity) return name;
+
+    const singularUnitMatch = quantity.match(/^1\s+(\S+)$/i);
+    if (singularUnitMatch) {
+      const unit = singularUnitMatch[1].toLowerCase();
+      const nameWords = name.split(/\s+/);
+      const lastWord = nameWords[nameWords.length - 1]?.toLowerCase();
+      if (lastWord === unit) {
+        return `1 ${name}`;
+      }
+    }
+
+    return `${quantity} ${name}`;
+  }
+
+  function formatPerServingLabel(level: Level) {
+    const gramsPerServing = level.nutritionJson?.gramsPerServing;
+    if (typeof gramsPerServing === 'number' && Number.isFinite(gramsPerServing) && gramsPerServing > 0) {
+      return `Per serving(${gramsPerServing}g piece)`;
+    }
+    return 'Per serving';
+  }
+
   function groupRecipeIngredients(level: Level) {
     const ingredients = (level.recipeIngredients || []).filter((ingredient) => !ingredient.isDish);
     const groups: Array<{ section?: string; items: typeof ingredients }> = [];
@@ -1731,13 +1757,13 @@
                     {/if}
                     <ul>
                       {#each group.items as ing}
-                        <li>{ing.quantity ? `${ing.quantity} ` : ''}{ing.name}</li>
+                        <li>{formatIngredientLine(ing)}</li>
                       {/each}
                     </ul>
                   {/each}
                 </div>
                 {#if selectedLevel.nutritionJson}
-                  <p class="recipe-nutrition">🔬 Per serving(slice): {selectedLevel.nutritionJson.perServing.cal} cal&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.pro}g protein&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.fat}g fat&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.carb}g carbs&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.fib}g fiber&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.sug}g sugar&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.h2o}g water</p>
+                  <p class="recipe-nutrition">🔬 {formatPerServingLabel(selectedLevel)}: {selectedLevel.nutritionJson.perServing.cal} cal&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.pro}g protein&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.fat}g fat&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.carb}g carbs&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.fib}g fiber&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.sug}g sugar&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.h2o}g water</p>
                 {/if}
               {/if}
               

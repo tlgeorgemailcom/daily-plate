@@ -283,7 +283,7 @@ export const RECIPES: Recipe[] = [
       {
         "row_order": 2,
         "row_type": "ingredient",
-        "ing_name": "all-purpose enriched white flour for dusting",
+        "ing_name": "flour for dusting",
         "ing_qty": "2 tablespoons",
         "sr28_long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
         "ndb_no": "20081",
@@ -296,7 +296,7 @@ export const RECIPES: Recipe[] = [
       {
         "row_order": 3,
         "row_type": "ingredient",
-        "ing_name": "Granny Smith apples thinly sliced",
+        "ing_name": "Granny Smith apples, thinly sliced",
         "ing_qty": "5 cups",
         "sr28_long_desc": "Apples, raw, granny smith, with skin",
         "ndb_no": "9502",
@@ -346,7 +346,7 @@ export const RECIPES: Recipe[] = [
       {
         "row_order": 7,
         "row_type": "ingredient",
-        "ing_name": "all-purpose enriched white flour for thickening",
+        "ing_name": "flour for thickening",
         "ing_qty": "2 tablespoons",
         "sr28_long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
         "ndb_no": "20081",
@@ -359,6 +359,18 @@ export const RECIPES: Recipe[] = [
       {
         "row_order": 8,
         "row_type": "ingredient",
+        "ing_name": "water",
+        "ing_qty": "1/4 cup",
+        "sr28_long_desc": "Water, tap, drinking",
+        "ndb_no": "14411",
+        "portion_desc": "g",
+        "portion_grams": 59.0,
+        "serving_count": 1.0,
+        "notes": "retained=0;section=filling"
+      },
+      {
+        "row_order": 9,
+        "row_type": "ingredient",
         "ing_name": "bread crumbs",
         "ing_qty": "1/2 cup",
         "sr28_long_desc": "Bread crumbs, dry, grated, plain",
@@ -370,9 +382,9 @@ export const RECIPES: Recipe[] = [
         "game_food": "bread"
       },
       {
-        "row_order": 9,
+        "row_order": 10,
         "row_type": "ingredient",
-        "ing_name": "unsalted butter for browning bread crumbs",
+        "ing_name": "butter for browning the bread crumbs",
         "ing_qty": "3 tablespoons",
         "sr28_long_desc": "Butter, without salt",
         "ndb_no": "1145",
@@ -382,7 +394,7 @@ export const RECIPES: Recipe[] = [
         "notes": "section=filling"
       },
       {
-        "row_order": 10,
+        "row_order": 11,
         "row_type": "ingredient",
         "ing_name": "lemon juice",
         "ing_qty": "1 tablespoon",
@@ -394,7 +406,7 @@ export const RECIPES: Recipe[] = [
         "notes": "section=filling"
       },
       {
-        "row_order": 11,
+        "row_order": 12,
         "row_type": "ingredient",
         "ing_name": "ground cinnamon",
         "ing_qty": "1 teaspoon",
@@ -406,9 +418,9 @@ export const RECIPES: Recipe[] = [
         "notes": "section=filling"
       },
       {
-        "row_order": 12,
+        "row_order": 13,
         "row_type": "ingredient",
-        "ing_name": "egg beaten for sealing and basting",
+        "ing_name": "beaten for sealing and basting the pastry",
         "ing_qty": "1 egg",
         "sr28_long_desc": "Egg, whole, raw, fresh",
         "ndb_no": "1123",
@@ -425,31 +437,31 @@ export const RECIPES: Recipe[] = [
       },
       {
         "step_order": 2,
-        "step_text": "Melt the butter in a skillet and cook the bread crumbs over medium heat until lightly golden then let them cool slightly."
+        "step_text": "Melt the butter in a skillet and cook the bread crumbs over medium heat until lightly golden, then let them cool slightly."
       },
       {
         "step_order": 3,
-        "step_text": "Combine the Granny Smith apples, sugar, brown sugar, raisins, lemon juice, ground cinnamon, all-purpose enriched white flour for thickening, and 1/4 cup water in a saucepan. Bring to a boil, cover and simmer for 5 minutes, then uncover and simmer until thickened."
+        "step_text": "Combine apples, sugar, brown sugar, raisins, lemon juice, cinnamon, flour and 1/4 cup water in a sauce pan and bring to a boil. Cover and simmer for 5 minutes, stir occasionally, then uncover and simmer until thickened, about 5 minutes. The added water should evaporate."
       },
       {
         "step_order": 4,
-        "step_text": "Toss the filling with the browned bread crumbs and let it cool enough to handle."
+        "step_text": "Sprinkle the browned bread crumbs over the pastry where the filling will sit; this absorbs juices and keeps the bottom from going soggy."
       },
       {
         "step_order": 5,
-        "step_text": "Roll the puff pastry sheet on a lightly floured surface to about a 1/8 inch thick 16 by 12 inch rectangle."
+        "step_text": "Roll the puff pastry to a 1/8 inch sheet or 16x12 rectangle."
       },
       {
         "step_order": 6,
-        "step_text": "Spread the filling along one long side of the pastry leaving a border around the edges. Brush the exposed border with beaten egg, fold the pastry over the filling, tuck in the ends, and roll into a long sealed strudel."
+        "step_text": "Spread the filling along one long side of the pastry several inches in, leaving a border on the sides so the roll can be sealed."
       },
       {
         "step_order": 7,
-        "step_text": "Place the strudel seam-side down on a lined baking sheet and brush the top with the remaining beaten egg."
+        "step_text": "Brush the exposed border with beaten egg. Fold the long end halfway over the filling then fold in the short ends. Continue rolling the pastry around the filling into a long strudel and seal the edge with egg. Tuck ends under.  Place it seam-side down on a lined baking sheet. Brush with the remaining egg."
       },
       {
         "step_order": 8,
-        "step_text": "Bake for 30 to 40 minutes until the pastry is browned and crisp and the apple filling is tender. Cool before slicing."
+        "step_text": "Bake for about 30-40 minutes or until the pastry is browned and crisp and the apple filling is tender. Cool before slicing."
       }
     ]
   }

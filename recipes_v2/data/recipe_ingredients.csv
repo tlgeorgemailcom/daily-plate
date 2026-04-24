@@ -1,0 +1,29 @@
+recipe_id,row_order,ingredient_key,qty_display,grams,grams_min,grams_max,section,is_optional,display_name_override
+SWEET_001,1,flour_ap_white_enriched_bleached,1 3/4 cups + 2 tbsp,234.4,150.0,400.0,crust,false,
+SWEET_001,2,salt_table,1 1/8 teaspoon,6.5,1.0,12.0,crust,false,
+SWEET_001,3,butter_unsalted,5 1/4 tablespoon (0.6 stick),74.0,40.0,200.0,crust,false,
+SWEET_001,4,vegetable_shortening,5 tablespoon (2.25 oz),64.0,15.0,120.0,crust,false,
+SWEET_001,5,water_tap,5 tablespoon ice water,74.0,30.0,150.0,crust,false,
+SWEET_001,6,apple_granny_smith_raw,6 medium apples (peeled and cored),750.0,400.0,1000.0,filling,false,
+SWEET_001,7,sugar_granulated,2/3 cup,130.0,40.0,200.0,filling,false,
+SWEET_001,8,lemon_juice_raw,1 tablespoon,15.0,3.0,40.0,filling,false,
+SWEET_001,9,butter_unsalted,2 tablespoon,28.4,3.0,40.0,filling,false,unsalted butter (cut into pieces)
+SWEET_001,10,cornstarch,3 tablespoon,24.0,4.0,40.0,filling,false,
+SWEET_001,11,cinnamon_ground,1 teaspoon,2.6,0.0,8.0,filling,true,
+SWEET_001,12,cloves_ground,1 teaspoon,2.1,0.0,8.0,filling,true,
+SWEET_001,13,allspice_ground,1 teaspoon,2.0,0.0,8.0,filling,true,
+SWEET_001,14,water_tap,1/4 cup,60.0,0.0,120.0,filling,false,
+SWEET_002,1,puff_pastry_baked,1 sheet,245.0,200.0,300.0,pastry,false,
+SWEET_002,2,flour_ap_white_enriched_bleached,2 tablespoons (for dusting),16.0,8.0,30.0,pastry,false,flour for dusting
+SWEET_002,3,apple_granny_smith_raw,5 cups thinly sliced,542.0,400.0,700.0,filling,false,Granny Smith apples (thinly sliced)
+SWEET_002,4,sugar_granulated,3/4 cup,135.0,80.0,200.0,filling,false,
+SWEET_002,5,sugar_brown,1/4 cup,36.0,20.0,80.0,filling,false,
+SWEET_002,6,raisins_seedless,1/2 cup,80.0,40.0,150.0,filling,false,
+SWEET_002,7,flour_ap_white_enriched_bleached,2 tablespoons (for thickening),16.0,8.0,30.0,filling,false,flour (for thickening)
+SWEET_002,8,water_tap,1/4 cup,59.0,0.0,120.0,filling,false,water (evaporates during simmer)
+SWEET_002,9,bread_crumbs_dry,1/2 cup,55.0,30.0,100.0,filling,false,
+SWEET_002,10,butter_unsalted,3 tablespoons,42.0,15.0,80.0,filling,false,butter (for browning the bread crumbs)
+SWEET_002,11,lemon_juice_raw,1 tablespoon,15.0,5.0,40.0,filling,false,
+SWEET_002,12,salt_table,1/4 teaspoon,1.0,0.0,4.0,filling,false,salt (pinch)
+SWEET_002,13,cinnamon_ground,1 teaspoon,3.0,0.0,8.0,filling,true,
+SWEET_002,14,egg_whole_raw,1 large egg,50.0,40.0,60.0,finish,false,beaten (for sealing and basting the pastry)

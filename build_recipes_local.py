@@ -13,7 +13,7 @@ Usage:
     python3 build_recipes_local.py [--reset]
 
     --reset   Delete and re-insert all developer recipes before building
-              (otherwise only adds recipes not already present)
+              (otherwise refreshes existing developer-owned rows in place)
 
 Output:
     Inserts rows into recipes_dev.db under submitted_by='dev-player-001',
@@ -134,6 +134,7 @@ def main():
 
     # ── Process each recipe ───────────────────────────────────────────────────
     inserted = 0
+    refreshed = 0
     skipped  = 0
 
     for recipe_id, meta in sorted(recipes.items()):
@@ -148,11 +149,21 @@ def main():
             skipped += 1
             continue
 
-        # ── Check if already exists ───────────────────────────────────────────
-        dev_cur.execute("SELECT id FROM recipes WHERE id = ?", (recipe_id,))
-        if dev_cur.fetchone():
-            skipped += 1
-            continue
+        # ── Refresh existing developer-owned rows instead of leaving them stale ──
+        dev_cur.execute(
+            "SELECT submitted_by FROM recipes WHERE id = ?",
+            (recipe_id,)
+        )
+        existing = dev_cur.fetchone()
+        replacing_existing = False
+        if existing:
+            submitted_by = existing[0]
+            if submitted_by != 'dev-player-001':
+                skipped += 1
+                print(f'  - {recipe_id}: skipped existing non-dev recipe owned by {submitted_by}')
+                continue
+            dev_cur.execute("DELETE FROM recipes WHERE id = ?", (recipe_id,))
+            replacing_existing = True
 
         # ── Calculate nutrition totals ────────────────────────────────────────
         totals = defaultdict(float)
@@ -234,14 +245,19 @@ def main():
             'approved',
             json.dumps(nutrition_json),
         ))
-        inserted += 1
-        print(f'  ✓ {recipe_id}: {meta["recipe_name"]} ({len(ingredient_rows)} ingredients, {round(nutrition_json.get("kcal",0))} kcal total)')
+        if replacing_existing:
+            refreshed += 1
+            action = 'refreshed'
+        else:
+            inserted += 1
+            action = 'inserted'
+        print(f'  ✓ {recipe_id}: {meta["recipe_name"]} ({action}, {len(ingredient_rows)} ingredients, {round(nutrition_json.get("kcal",0))} kcal total)')
 
     dev.commit()
     dev.close()
     comboo.close()
 
-    print(f'\nDone: {inserted} recipes inserted, {skipped} skipped (no ingredient data yet)')
+    print(f'\nDone: {inserted} inserted, {refreshed} refreshed, {skipped} skipped')
     print(f'DB: {DEV_DB}')
 
 if __name__ == '__main__':

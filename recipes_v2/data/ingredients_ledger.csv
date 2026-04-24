@@ -1,0 +1,22 @@
+ingredient_key,ndb_no,default_long_desc,default_display_name,common_unit,common_unit_grams,notes
+flour_ap_white_enriched_bleached,20081,"Wheat flour, white, all-purpose, enriched, bleached",all-purpose enriched white flour,cup,125.0,
+salt_table,2047,"Salt, table",salt,teaspoon,6.0,
+butter_unsalted,1145,"Butter, without salt",unsalted butter,tablespoon,14.2,
+water_tap,14411,"Water, tap, drinking",ice water,tablespoon,15.0,
+sugar_granulated,19335,"Sugars, granulated",sugar,teaspoon,4.0,
+pie_filling_apple_canned,19312,"Pie fillings, apple, canned","apple pie filling, canned",can_21oz,595.0,
+lemon_juice_raw,9152,"Lemon juice, raw",lemon juice,tablespoon,15.0,
+cinnamon_ground,2010,"Spices, cinnamon, ground",ground cinnamon,teaspoon,2.6,
+cloves_ground,2011,"Spices, cloves, ground",ground cloves,teaspoon,2.1,
+allspice_ground,2001,"Spices, allspice, ground",allspice,teaspoon,2.0,
+flour_pastry_white_enriched_bleached,20623,"Wheat flour, white (industrial), 9% protein, bleached, enriched",pastry flour (9% protein),cup,125.0,Lower-protein enriched flour for pie crust; same enrichment as AP
+flour_cake_white_enriched,20084,"Wheat flour, white, cake, enriched",cake flour,cup,125.0,Home-cook accessible enriched flour; lower protein than AP for tender crust
+canola_oil,4582,"Oil, canola",canola oil,tablespoon,13.6,Neutral vegetable oil; common in 70/30 butter+oil pie crusts for tenderness
+vegetable_shortening,4031,"Shortening, household, soybean (partially hydrogenated)-cottonseed (partially hydrogenated)",vegetable shortening,tablespoon,12.8,Crisco-equivalent solid vegetable shortening; pure fat 0% water for flakier pie crust
+cornstarch,20027,Cornstarch,cornstarch,tablespoon,8.0,Pure starch thickener; gluten-free alternative to flour for pie filling thickening
+apple_granny_smith_raw,9502,"Apples, raw, granny smith, with skin",Granny Smith apples (peeled and cored),medium_apple,125.0,Tart firm baking apple; assume ~125g per medium apple after peeling and coring (from ~150g whole)
+puff_pastry_baked,18211,"Puff pastry, frozen, ready-to-bake, baked",puff pastry sheet,sheet,245.0,Pre-baked nutrition values from USDA; 17.25 oz package typically contains 2 sheets ~245g each
+bread_crumbs_dry,18079,"Bread crumbs, dry, grated, plain",dry bread crumbs,cup,108.0,Plain dry breadcrumbs; 1/2 cup ~ 54g
+raisins_seedless,9298,"Raisins, seedless",raisins,cup,165.0,Seedless raisins; 1/2 cup ~ 80g
+sugar_brown,19334,"Sugars, brown",brown sugar,cup,220.0,"Packed brown sugar; 1/4 cup ~ 55g loose, ~36g unpacked"
+egg_whole_raw,1123,"Egg, whole, raw, fresh",large egg,large_egg,50.0,Large egg ~50g without shell

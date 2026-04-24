@@ -1,0 +1,130 @@
+{
+  "recipe_id": "SWEET_002",
+  "recorded_at": "2026-04-24T02:23:21.348135+00:00",
+  "fingerprint": "1edb829980b3d1d3d24d89d6ebbd76bcdad1a72b1532b91256133f9e546c56cc",
+  "disclosure": "The nutrient values reflect water loss during the saucepan pre-cook and oven bake. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18354 within \u00b18%.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_002",
+    "canonical_ndb_no": "18354",
+    "cook_method": "bake",
+    "yield_factor_water": 0.78,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "apple_granny_smith_raw",
+        "grams": 542.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "bread_crumbs_dry",
+        "grams": 55.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 42.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "cinnamon_ground",
+        "grams": 3.0,
+        "is_optional": true
+      },
+      {
+        "ingredient_key": "egg_whole_raw",
+        "grams": 50.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 16.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 16.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "lemon_juice_raw",
+        "grams": 15.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "puff_pastry_baked",
+        "grams": 245.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "raisins_seedless",
+        "grams": 80.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 1.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_brown",
+        "grams": 36.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 135.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "water_tap",
+        "grams": 59.0,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "Preheat the oven to 375 degrees F (190 degrees C).",
+      "Melt the butter in a skillet and cook the bread crumbs over medium heat until lightly golden, then let them cool slightly.",
+      "Combine apples, sugar, brown sugar, raisins, lemon juice, cinnamon, flour and 1/4 cup water in a sauce pan and bring to a boil. Cover and simmer for 5 minutes then uncover and simmer until thickened. The added water should evaporate.",
+      "Roll the puff pastry to a 1/8 inch sheet or 16x12 rectangle on a lightly floured surface.",
+      "Sprinkle the browned bread crumbs along one long side of the pastry several inches in, leaving a border on the sides so the roll can be sealed; the crumbs absorb juices and keep the bottom from going soggy.",
+      "Spoon the cooled filling on top of the bread crumbs.",
+      "Brush the exposed border with beaten egg. Fold the long end halfway over the filling then fold in the short ends. Continue rolling the pastry around the filling into a long strudel and seal the edge with egg. Tuck ends under. Place it seam-side down on a lined baking sheet. Brush with the remaining egg.",
+      "Bake for about 30-40 minutes or until the pastry is browned and crisp and the apple filling is tender. Cool before slicing."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 274.0,
+    "pro": 3.3,
+    "fat": 11.2,
+    "carb": 41.1,
+    "fib": 2.2,
+    "h2o": 43.5,
+    "sug": 25.75,
+    "sodium": 135.0
+  },
+  "built": {
+    "raw_grams_total": 1295.0,
+    "cooked_grams_total": 1158.54,
+    "whole_cooked": {
+      "cal": 3296.99,
+      "pro": 40.4713,
+      "fat": 137.8458,
+      "carb": 487.2067,
+      "fib": 26.788,
+      "h2o": 483.8248,
+      "sug": 274.9742,
+      "sodium": 1514.75
+    },
+    "per100g_cooked": {
+      "cal": 284.5823,
+      "pro": 3.4933,
+      "fat": 11.8983,
+      "carb": 42.0536,
+      "fib": 2.3122,
+      "h2o": 41.7617,
+      "sug": 23.7346,
+      "sodium": 130.7468
+    }
+  }
+}

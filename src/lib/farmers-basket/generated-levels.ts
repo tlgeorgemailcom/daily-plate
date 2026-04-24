@@ -71,27 +71,28 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Strudel, apple', quantity: 'custom (g)', foodWord: 'APPLESTRUDEL', ndbNo: '18354', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'puff pastry sheet', quantity: '1 sheet', section: 'pastry', foodWord: 'bread', ndbNo: '18211', portionDesc: 'sheet', portionGrams: 245.0 },
-      { name: 'all-purpose enriched white flour for dusting', quantity: '2 tablespoons', section: 'pastry', foodWord: 'bread', ndbNo: '20081', portionDesc: 'g', portionGrams: 16.0 },
-      { name: 'Granny Smith apples thinly sliced', quantity: '5 cups', section: 'filling', foodWord: 'apple', ndbNo: '9502', portionDesc: 'g', portionGrams: 542.0 },
+      { name: 'flour for dusting', quantity: '2 tablespoons', section: 'pastry', foodWord: 'bread', ndbNo: '20081', portionDesc: 'g', portionGrams: 16.0 },
+      { name: 'Granny Smith apples, thinly sliced', quantity: '5 cups', section: 'filling', foodWord: 'apple', ndbNo: '9502', portionDesc: 'g', portionGrams: 542.0 },
       { name: 'sugar', quantity: '3/4 cup', section: 'filling', ndbNo: '19335', portionDesc: 'g', portionGrams: 135.0 },
       { name: 'brown sugar', quantity: '1/4 cup', section: 'filling', ndbNo: '19334', portionDesc: 'g', portionGrams: 36.0 },
       { name: 'raisins', quantity: '1/2 cup', section: 'filling', foodWord: 'fruit', ndbNo: '9298', portionDesc: 'g', portionGrams: 80.0 },
-      { name: 'all-purpose enriched white flour for thickening', quantity: '2 tablespoons', section: 'filling', foodWord: 'bread', ndbNo: '20081', portionDesc: 'g', portionGrams: 16.0 },
+      { name: 'flour for thickening', quantity: '2 tablespoons', section: 'filling', foodWord: 'bread', ndbNo: '20081', portionDesc: 'g', portionGrams: 16.0 },
+      { name: 'water', quantity: '1/4 cup', section: 'filling', ndbNo: '14411', portionDesc: 'g', portionGrams: 59.0 },
       { name: 'bread crumbs', quantity: '1/2 cup', section: 'filling', foodWord: 'bread', ndbNo: '18079', portionDesc: 'g', portionGrams: 55.0 },
-      { name: 'unsalted butter for browning bread crumbs', quantity: '3 tablespoons', section: 'filling', ndbNo: '1145', portionDesc: 'g', portionGrams: 42.0 },
+      { name: 'butter for browning the bread crumbs', quantity: '3 tablespoons', section: 'filling', ndbNo: '1145', portionDesc: 'g', portionGrams: 42.0 },
       { name: 'lemon juice', quantity: '1 tablespoon', section: 'filling', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
       { name: 'ground cinnamon', quantity: '1 teaspoon', section: 'filling', ndbNo: '2010', portionDesc: 'g', portionGrams: 3.0 },
-      { name: 'egg beaten for sealing and basting', quantity: '1 egg', section: 'finish', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 }
+      { name: 'beaten for sealing and basting the pastry', quantity: '1 egg', section: 'finish', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 }
     ],
     recipeInstructions: [
       'Preheat the oven to 375 degrees F (190 degrees C).',
-      'Melt the butter in a skillet and cook the bread crumbs over medium heat until lightly golden then let them cool slightly.',
-      'Combine the Granny Smith apples, sugar, brown sugar, raisins, lemon juice, ground cinnamon, all-purpose enriched white flour for thickening, and 1/4 cup water in a saucepan. Bring to a boil, cover and simmer for 5 minutes, then uncover and simmer until thickened.',
-      'Toss the filling with the browned bread crumbs and let it cool enough to handle.',
-      'Roll the puff pastry sheet on a lightly floured surface to about a 1/8 inch thick 16 by 12 inch rectangle.',
-      'Spread the filling along one long side of the pastry leaving a border around the edges. Brush the exposed border with beaten egg, fold the pastry over the filling, tuck in the ends, and roll into a long sealed strudel.',
-      'Place the strudel seam-side down on a lined baking sheet and brush the top with the remaining beaten egg.',
-      'Bake for 30 to 40 minutes until the pastry is browned and crisp and the apple filling is tender. Cool before slicing.'
+      'Melt the butter in a skillet and cook the bread crumbs over medium heat until lightly golden, then let them cool slightly.',
+      'Combine apples, sugar, brown sugar, raisins, lemon juice, cinnamon, flour and 1/4 cup water in sauce pan and bring to a bowl. Cover and simmer for 5 minutes then uncover and simmer until thickened. The added water should evaporate.',
+      'Toss the filling with the browned bread crumbs',
+      'Roll the puff pastry to a 1/8 inch sheet or 16x12 rectangle.',
+      'Spread the filling along one long side of the pastry several inches in, leaving a border on the sides so the roll can be sealed.',
+      'Brush the exposed border with beaten egg. Fold the long end halfway over the filling then fold in the short ends. Continue rolling the pastry around the filling into a long strudel and seal the edge with egg. Tuck ends under.  Place it seam-side down on a lined baking sheet. Brush with the remaining egg.',
+      'Bake for about 30-40 minutes or until the pastry is browned and crisp and the apple filling is tender. Cool before slicing.'
     ],
   }
 ];
