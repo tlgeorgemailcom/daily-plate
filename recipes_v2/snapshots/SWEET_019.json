@@ -1,0 +1,90 @@
+{
+  "recipe_id": "SWEET_019",
+  "recorded_at": "2026-04-25T17:02:54.203116+00:00",
+  "fingerprint": "b5ec731acd782c762318746dc7fd67c24901d42a5326e2dac005fbbf8a6ee57b",
+  "disclosure": "The nutrient values reflect this glaze prepared from scratch and validated against USDA SR Legacy NDB 19409 (NFSMI Recipe No. C-32) within an average macro discrepancy of 3.0%.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_019",
+    "canonical_ndb_no": "19409",
+    "cook_method": "stir",
+    "yield_factor_water": 1.0,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 12.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "cocoa_powder_unsweetened",
+        "grams": 5.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "milk_evaporated",
+        "grams": 21.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 0.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_powdered",
+        "grams": 120.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vanilla_extract",
+        "grams": 2.1,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "water_tap",
+        "grams": 12.0,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "Sift the powdered sugar and cocoa powder together into a medium bowl.",
+      "Whisk in the melted butter, then the milk, vanilla, and salt. Beat until smooth, glossy, and pourable. If too thick, add milk a teaspoon at a time; if too thin, add powdered sugar a tablespoon at a time.",
+      "Pour or drizzle over a fully cooled cake. Let set 10\u201315 minutes before slicing."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 359.0,
+    "pro": 1.42,
+    "fat": 7.17,
+    "carb": 72.18,
+    "fib": 1.1,
+    "h2o": 18.27,
+    "sug": 64.3,
+    "sodium": 132.0
+  },
+  "built": {
+    "raw_grams_total": 172.6,
+    "cooked_grams_total": 172.6,
+    "whole_cooked": {
+      "cal": 598.428,
+      "pro": 2.5134,
+      "fat": 12.0071,
+      "carb": 125.0002,
+      "fib": 1.85,
+      "h2o": 31.2204,
+      "sug": 119.8407,
+      "sodium": 221.489
+    },
+    "per100g_cooked": {
+      "cal": 346.7138,
+      "pro": 1.4562,
+      "fat": 6.9566,
+      "carb": 72.4219,
+      "fib": 1.0718,
+      "h2o": 18.0883,
+      "sug": 69.4326,
+      "sodium": 128.325
+    }
+  }
+}

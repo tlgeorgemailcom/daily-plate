@@ -1,0 +1,144 @@
+{
+  "recipe_id": "SWEET_017",
+  "recorded_at": "2026-04-25T15:51:02.833917+00:00",
+  "fingerprint": "98594b80317d5d2e18a16c37e71a50c94645a66f33d47731902282d4351208f0",
+  "disclosure": "The nutrient values reflect water loss during baking and the boiled-frosting reduction. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18102 within an average macro discrepancy of 4.5%.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_017",
+    "canonical_ndb_no": "18102",
+    "cook_method": "bake",
+    "yield_factor_water": 0.58,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "baking_powder",
+        "grams": 12.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "coconut_flaked_sweetened",
+        "grams": 111.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "corn_syrup_light",
+        "grams": 41.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_white_raw",
+        "grams": 132.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_white_raw",
+        "grams": 198.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 281.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "milk_whole",
+        "grams": 244.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 3.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 3.75,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 312.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 500.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vanilla_extract",
+        "grams": 4.2,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vanilla_extract",
+        "grams": 8.4,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vegetable_shortening",
+        "grams": 124.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "water_tap",
+        "grams": 79.0,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "--- Seven-Minute Coconut Frosting ---",
+      "Preheat the oven to 350 degrees F (175 degrees C). Grease two 9-inch round cake pans, then dust with flour or line the bottoms with parchment.",
+      "Sift together the flour, baking powder, and salt into a medium bowl and set aside.",
+      "In a large bowl with a handheld mixer or in a stand mixer fitted with the paddle attachment, beat the shortening and sugar together on medium-high speed until light and creamy, about 3 minutes. Stop and scrape down the sides and bottom of the bowl with a silicone spatula as needed.",
+      "Slowly add the egg whites until incorporated, then beat on high speed until smooth and well combined, about 2 minutes. Scrape down the bowl again.",
+      "Add the vanilla and beat on medium-high until incorporated, about 1 minute.",
+      "Add all of the sifted dry ingredients to the bowl. With the mixer running on low speed, slowly pour in the milk and beat just until the batter comes together. Do not overmix. Overmixing will cause gluten to form causing a dense bread-like cake. Finish with a few hand strokes using a whisk or spatula to make sure there are no flour pockets at the bottom of the bowl. The batter will be smooth and slightly thick.",
+      "Divide the batter evenly between the prepared pans and smooth the top. Tap the pans gently on the counter once or twice to release any large air bubbles.",
+      "Bake until the tops spring back when lightly pressed and a toothpick inserted in the center comes out clean, about 22-26 minutes.",
+      "Cool in the pans on a rack for 10 minutes, then turn the layers out onto the rack and cool completely before frosting.",
+      "Place the top part of the double boiler or heatproof bowl over rapidly boiling water, ensuring the bottom pan's water stays at a steady boil and the water does not touch the top container.",
+      "In the top part (off the heat), combine the egg whites, sugar, water, corn syrup, and salt and beat with a handheld electric mixer until thoroughly mixed.",
+      "Place the top part over the rapidly boiling water and beat constantly on high speed for 7 minutes, until the frosting is bright white, glossy, and stands in stiff peaks. (The corn syrup acts as the stabilizer here, so cream of tartar is not needed.)",
+      "Remove from heat and quickly beat in the vanilla extract.",
+      "Fold in about 1 cup of the flaked coconut with a rubber spatula, beating briefly until the frosting is thick enough to spread.",
+      "Place one cooled cake layer on a serving plate or cake board. Spread about a quarter of the frosting over the top. Add the second layer and frost the top and sides with the remaining frosting in soft swoops.",
+      "Press the remaining flaked coconut all over the top and sides of the frosted cake while the frosting is still tacky. Let the cake set for at least 30 minutes before slicing. Seven-minute frosting is best the day it is made."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 356.0,
+    "pro": 4.4,
+    "fat": 10.3,
+    "carb": 63.2,
+    "fib": 1.0,
+    "h2o": 20.7,
+    "sug": 57.39,
+    "sodium": 284.0
+  },
+  "built": {
+    "raw_grams_total": 2053.85,
+    "cooked_grams_total": 1780.7,
+    "whole_cooked": {
+      "cal": 6248.653,
+      "pro": 76.1652,
+      "fat": 166.4033,
+      "carb": 1134.8449,
+      "fib": 18.6,
+      "h2o": 377.2019,
+      "sug": 900.1608,
+      "sodium": 4900.694
+    },
+    "per100g_cooked": {
+      "cal": 350.9092,
+      "pro": 4.2773,
+      "fat": 9.3448,
+      "carb": 63.7301,
+      "fib": 1.0445,
+      "h2o": 21.1827,
+      "sug": 50.5508,
+      "sodium": 275.2111
+    }
+  }
+}

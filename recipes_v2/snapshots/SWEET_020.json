@@ -1,0 +1,151 @@
+{
+  "recipe_id": "SWEET_020",
+  "recorded_at": "2026-04-25T17:22:20.010963+00:00",
+  "fingerprint": "14633344fcbd994da1dfc54d5a79d6d2780c5e576de6be24fa72ae0fda6e46bf",
+  "disclosure": "Authentic homemade yellow layer cake with chocolate glaze. NOT validated against USDA SR Legacy NDB 18140 because the canonical entry reflects commercial in-store-bakery production using hydrogenated shortening, reduced-egg formulations, and industrial frosting bases. Built from two USDA-validated components: SWEET_018 yellow cake (validated against NDB 18146 within 1.8%) and 3x SWEET_019 chocolate glaze (validated against NDB 19409 / NFSMI Recipe C-32 within 3.0%).",
+  "canonical_payload": {
+    "recipe_id": "SWEET_020",
+    "canonical_ndb_no": "18140",
+    "cook_method": "bake",
+    "yield_factor_water": 0.83,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "baking_powder",
+        "grams": 8.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 36.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 57.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "cocoa_powder_unsweetened",
+        "grams": 53.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_whole_raw",
+        "grams": 100.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 187.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_cake_white_enriched",
+        "grams": 62.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "milk_evaporated",
+        "grams": 63.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "milk_whole",
+        "grams": 183.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 1.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 4.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 250.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_powdered",
+        "grams": 360.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vanilla_extract",
+        "grams": 5.25,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vanilla_extract",
+        "grams": 6.3,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vegetable_shortening",
+        "grams": 61.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "water_tap",
+        "grams": 36.0,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "--- Chocolate Glaze (3\u00d7 NFSMI Recipe C-32) ---",
+      "Preheat the oven to 350\u00b0F (175\u00b0C). Grease two 9-inch round cake pans, then dust with flour or line the bottoms with parchment.",
+      "Sift together the all-purpose flour, cake flour, baking powder, and salt into a medium bowl and set aside.",
+      "In a large bowl with a handheld mixer or in a stand mixer fitted with the paddle attachment, beat the butter, shortening, and sugar together on medium-high speed until light and fluffy, about 4 minutes. Stop and scrape down the sides and bottom of the bowl with a silicone spatula as needed.",
+      "Add the eggs one at a time, beating well after each addition, then beat on high speed for 1 minute until smooth and well combined. Scrape down the bowl again.",
+      "Add the vanilla and beat on medium-high until incorporated, about 30 seconds.",
+      "Add about a third of the sifted dry ingredients to the bowl, followed by half of the milk, and beat on low until just combined. Repeat with another third of the dry ingredients and the rest of the milk, then finish with the remaining dry ingredients. Do not overmix. Finish with a few hand strokes using a whisk or spatula to make sure there are no flour pockets at the bottom of the bowl.",
+      "Divide the batter evenly between the prepared pans and smooth the top. Tap the pans gently on the counter once or twice to release any large air bubbles.",
+      "Bake until the tops are golden, spring back when lightly pressed, and a toothpick inserted in the center comes out clean, about 25\u201330 minutes.",
+      "Cool in the pans on a rack for 10 minutes, then turn the layers out onto the rack and cool completely before frosting.",
+      "Sift the powdered sugar and cocoa powder together into a medium bowl.",
+      "Whisk in the melted butter, then the evaporated milk, boiling water, vanilla, and salt. Beat until smooth, glossy, and spreadable. If too thick, add boiling water a teaspoon at a time; if too thin, add powdered sugar a tablespoon at a time.",
+      "Place one cake layer on a serving plate. Spread about 1/3 of the warm glaze over the top, letting some run down the sides. Top with the second layer.",
+      "Pour the remaining glaze over the top of the cake, using an offset spatula to coax it over the edges so it coats the top fully and drips down the sides. Let set 15\u201320 minutes before slicing."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 379.0,
+    "pro": 3.16,
+    "fat": 17.75,
+    "carb": 55.36,
+    "fib": 1.5,
+    "h2o": 22.38,
+    "sug": 39.22,
+    "sodium": 310.0
+  },
+  "built": {
+    "raw_grams_total": 1474.05,
+    "cooked_grams_total": 1410.17,
+    "whole_cooked": {
+      "cal": 4978.274,
+      "pro": 58.2423,
+      "fat": 166.2906,
+      "carb": 850.8395,
+      "fib": 25.7375,
+      "h2o": 311.9003,
+      "sug": 620.6957,
+      "sodium": 3499.4795
+    },
+    "per100g_cooked": {
+      "cal": 353.0273,
+      "pro": 4.1302,
+      "fat": 11.7923,
+      "carb": 60.3361,
+      "fib": 1.8251,
+      "h2o": 22.118,
+      "sug": 44.0158,
+      "sodium": 248.1607
+    }
+  }
+}

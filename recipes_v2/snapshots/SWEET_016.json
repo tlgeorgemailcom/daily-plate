@@ -1,0 +1,101 @@
+{
+  "recipe_id": "SWEET_016",
+  "recorded_at": "2026-04-25T14:46:02.341870+00:00",
+  "fingerprint": "81a5c6c85f3489498ae3d52a414942ec0bdaaef43c79985b84f36eac3a229f5b",
+  "disclosure": "The nutrient values reflect water loss during baking. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18139 within an average macro discrepancy of 1.8%.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_016",
+    "canonical_ndb_no": "18139",
+    "cook_method": "bake",
+    "yield_factor_water": 0.62,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "baking_powder",
+        "grams": 12.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_white_raw",
+        "grams": 132.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 281.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "milk_whole",
+        "grams": 244.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 3.75,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 312.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vanilla_extract",
+        "grams": 8.4,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vegetable_shortening",
+        "grams": 105.0,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "Preheat the oven to 350 degrees F (175 degrees C). Grease a 9x13-inch baking pan or two 9-inch round pans, then dust with flour (or line with parchment).",
+      "Sift together the cake flour, baking powder, and salt into a medium bowl and set aside.",
+      "In a large bowl with a handheld mixer or in a stand mixer fitted with the paddle attachment, beat the shortening and sugar together on medium-high speed until light and creamy, about 3 minutes. Stop and scrape down the sides and bottom of the bowl with a silicone spatula as needed.",
+      "Slowly add the egg whites until incorporated, then beat on high speed until smooth and well combined, about 2 minutes. Scrape down the bowl again.",
+      "Add the vanilla and beat on medium-high until incorporated, about 1 minute.",
+      "Add all of the sifted dry ingredients to the bowl. With the mixer running on low speed, slowly pour in the milk and beat just until the batter comes together. Do not overmix. Overmixing will cause gluten to form causing a dense bread-like cake. Finish with a few hand strokes using a whisk or spatula to make sure there are no flour pockets at the bottom of the bowl. The batter will be smooth and slightly thick.",
+      "Divide the batter evenly between the prepared pan(s) and smooth the top. Tap the pan gently on the counter once or twice to release any large air bubbles.",
+      "Bake until the top springs back when lightly pressed and a toothpick inserted in the center comes out clean: about 30-35 minutes for a 9x13 pan, or 22-26 minutes for 9-inch rounds.",
+      "Cool in the pan(s) on a rack for 10 minutes, then turn out onto the rack and cool completely before slicing or frosting."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 357.0,
+    "pro": 5.4,
+    "fat": 12.4,
+    "carb": 57.2,
+    "fib": 0.8,
+    "h2o": 23.3,
+    "sug": 35.49,
+    "sodium": 327.0
+  },
+  "built": {
+    "raw_grams_total": 1098.65,
+    "cooked_grams_total": 958.35,
+    "whole_cooked": {
+      "cal": 3408.447,
+      "pro": 51.1063,
+      "fat": 115.9132,
+      "carb": 543.9308,
+      "fib": 7.611,
+      "h2o": 228.9111,
+      "sug": 326.9555,
+      "sodium": 3058.966
+    },
+    "per100g_cooked": {
+      "cal": 355.658,
+      "pro": 5.3327,
+      "fat": 12.0951,
+      "carb": 56.757,
+      "fib": 0.7942,
+      "h2o": 23.886,
+      "sug": 34.1165,
+      "sodium": 319.191
+    }
+  }
+}

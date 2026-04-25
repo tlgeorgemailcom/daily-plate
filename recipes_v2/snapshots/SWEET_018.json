@@ -1,0 +1,111 @@
+{
+  "recipe_id": "SWEET_018",
+  "recorded_at": "2026-04-25T16:38:38.782746+00:00",
+  "fingerprint": "c6c2a82e300350149c07e64bb9a4ff836109318544a76143e903571d3a9ed52d",
+  "disclosure": "The nutrient values reflect water loss during baking. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18146 within an average macro discrepancy of 1.8%.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_018",
+    "canonical_ndb_no": "18146",
+    "cook_method": "bake",
+    "yield_factor_water": 0.78,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "baking_powder",
+        "grams": 8.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 57.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_whole_raw",
+        "grams": 100.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 187.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_cake_white_enriched",
+        "grams": 62.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "milk_whole",
+        "grams": 183.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 4.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 250.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vanilla_extract",
+        "grams": 5.25,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vegetable_shortening",
+        "grams": 61.0,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "Preheat the oven to 350 degrees F (175 degrees C). Grease two 9-inch round cake pans, then dust with flour or line the bottoms with parchment.",
+      "Sift together the all-purpose flour, cake flour, baking powder, and salt into a medium bowl and set aside.",
+      "In a large bowl with a handheld mixer or in a stand mixer fitted with the paddle attachment, beat the butter, shortening, and sugar together on medium-high speed until light and fluffy, about 4 minutes. Stop and scrape down the sides and bottom of the bowl with a silicone spatula as needed.",
+      "Add the eggs one at a time, beating well after each addition, then beat on high speed for 1 minute until smooth and well combined. Scrape down the bowl again.",
+      "Add the vanilla and beat on medium-high until incorporated, about 30 seconds.",
+      "Add about a third of the sifted dry ingredients to the bowl, followed by half of the milk, and beat on low until just combined. Repeat with another third of the dry ingredients and the rest of the milk, then finish with the remaining dry ingredients. Do not overmix. Finish with a few hand strokes using a whisk or spatula to make sure there are no flour pockets at the bottom of the bowl.",
+      "Divide the batter evenly between the prepared pans and smooth the top. Tap the pans gently on the counter once or twice to release any large air bubbles.",
+      "Bake until the tops are golden, spring back when lightly pressed, and a toothpick inserted in the center comes out clean, about 25-30 minutes.",
+      "Cool in the pans on a rack for 10 minutes, then turn the layers out onto the rack and cool completely before slicing."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 361.0,
+    "pro": 5.3,
+    "fat": 14.6,
+    "carb": 53.0,
+    "fib": 0.7,
+    "h2o": 25.1,
+    "sug": 0.0,
+    "sodium": 343.0
+  },
+  "built": {
+    "raw_grams_total": 918.25,
+    "cooked_grams_total": 856.43,
+    "whole_cooked": {
+      "cal": 3096.35,
+      "pro": 43.2542,
+      "fat": 125.0635,
+      "carb": 453.8368,
+      "fib": 6.1275,
+      "h2o": 219.1662,
+      "sug": 260.5085,
+      "sodium": 2827.0325
+    },
+    "per100g_cooked": {
+      "cal": 361.5399,
+      "pro": 5.0505,
+      "fat": 14.6028,
+      "carb": 52.9915,
+      "fib": 0.7155,
+      "h2o": 25.5906,
+      "sug": 30.4178,
+      "sodium": 330.0935
+    }
+  }
+}

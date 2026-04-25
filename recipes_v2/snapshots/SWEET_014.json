@@ -1,7 +1,7 @@
 {
   "recipe_id": "SWEET_014",
-  "recorded_at": "2026-04-24T20:01:49.655232+00:00",
-  "fingerprint": "ce6f8f86a70fcd87f3d360814cca560e8ad996e4bb02e1b2aabf9416d8c712de",
+  "recorded_at": "2026-04-25T13:56:22.741961+00:00",
+  "fingerprint": "7214609f5c4684121ca8e83c4180bd64ddf20761463a49f6bdb869874fc72ba6",
   "disclosure": "Authentic homemade coconut cream pie spec: blind-baked single pie crust, coconut milk + dairy pastry cream with toasted flaked coconut, fresh whipped cream topping. NOT validated against USDA SR Legacy NDB 18314 because that record is a mix-based no-bake commercial product (instant pudding mix + non-dairy whipped topping) with no egg yolks, far less fat and protein, and dramatically higher sodium from added phosphates. No homemade recipe can represent it. Free-tier nutrient values are computed from the ingredients in this recipe; paid-tier values may substitute canonical fields where appropriate.",
   "canonical_payload": {
     "recipe_id": "SWEET_014",
@@ -47,7 +47,7 @@
         "is_optional": false
       },
       {
-        "ingredient_key": "flour_ap",
+        "ingredient_key": "flour_ap_white_enriched_bleached",
         "grams": 188.0,
         "is_optional": false
       },
@@ -92,7 +92,7 @@
         "is_optional": false
       },
       {
-        "ingredient_key": "water_ice",
+        "ingredient_key": "water_tap",
         "grams": 45.0,
         "is_optional": false
       }
@@ -121,27 +121,27 @@
     "sodium": 329.0
   },
   "built": {
-    "raw_grams_total": 1204.3,
-    "cooked_grams_total": 1150.91,
+    "raw_grams_total": 1437.3,
+    "cooked_grams_total": 1378.52,
     "whole_cooked": {
-      "cal": 3314.584,
-      "pro": 35.9181,
-      "fat": 260.5169,
-      "carb": 224.0104,
-      "fib": 9.396,
-      "h2o": 614.0358,
-      "sug": 173.2661,
-      "sodium": 2872.857
+      "cal": 3998.904,
+      "pro": 55.3385,
+      "fat": 262.3593,
+      "carb": 367.4733,
+      "fib": 14.472,
+      "h2o": 676.0113,
+      "sug": 173.7737,
+      "sodium": 2878.417
     },
     "per100g_cooked": {
-      "cal": 287.9979,
-      "pro": 3.1209,
-      "fat": 22.6358,
-      "carb": 19.4638,
-      "fib": 0.8164,
-      "h2o": 53.3524,
-      "sug": 15.0548,
-      "sodium": 249.6171
+      "cal": 290.0875,
+      "pro": 4.0144,
+      "fat": 19.032,
+      "carb": 26.6572,
+      "fib": 1.0498,
+      "h2o": 49.039,
+      "sug": 12.6058,
+      "sodium": 208.8054
     }
   }
 }
