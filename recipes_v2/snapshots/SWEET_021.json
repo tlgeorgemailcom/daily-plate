@@ -1,0 +1,125 @@
+{
+  "recipe_id": "SWEET_021",
+  "recorded_at": "2026-04-25T17:42:46.297092+00:00",
+  "fingerprint": "da4e4115947301349a7e1618c9c61fddd6045b731aa52be9a26165ed72872b9a",
+  "disclosure": "The nutrient values reflect water loss during baking. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18116 within an average macro discrepancy of 2.3%.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_021",
+    "canonical_ndb_no": "18116",
+    "cook_method": "bake",
+    "yield_factor_water": 0.88,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "baking_soda",
+        "grams": 4.6,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 57.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "cinnamon_ground",
+        "grams": 2.6,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "cloves_ground",
+        "grams": 1.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_whole_raw",
+        "grams": 50.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 281.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "ginger_ground",
+        "grams": 2.7,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "ginger_root_fresh",
+        "grams": 6.0,
+        "is_optional": true
+      },
+      {
+        "ingredient_key": "molasses",
+        "grams": 252.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 4.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_brown",
+        "grams": 73.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vegetable_shortening",
+        "grams": 96.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "water_tap",
+        "grams": 170.0,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "Preheat the oven to 350\u00b0F (175\u00b0C). Grease a 9-inch square baking pan, then dust with flour or line the bottom with parchment.",
+      "In a medium bowl, whisk together the all-purpose flour, baking soda, ginger, cinnamon, cloves, and salt. Set aside.",
+      "In a large bowl with a handheld mixer or in a stand mixer fitted with the paddle attachment, beat the butter, shortening, and brown sugar together on medium-high speed until well blended and smooth, about 3 minutes. Stop and scrape down the sides and bottom of the bowl with a silicone spatula as needed.",
+      "Add the molasses (and the optional fresh gingerroot, if using) and beat on medium until fully incorporated, about 1 minute. Add the egg and beat until smooth.",
+      "Add about half of the dry ingredients and beat on low until just combined. Pour in the hot water and beat until smooth \u2014 the batter will look loose, which is correct. Add the remaining dry ingredients and beat on low until just combined. Do not overmix.",
+      "Pour the batter into the prepared pan and smooth the top.",
+      "Bake until the top springs back when lightly pressed and a toothpick inserted in the center comes out with just a few moist crumbs, about 35\u201340 minutes.",
+      "Cool in the pan on a wire rack for 15 minutes, then cut into 9 squares. Serve warm or at room temperature."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 356.0,
+    "pro": 3.9,
+    "fat": 16.4,
+    "carb": 49.2,
+    "fib": 0.0,
+    "h2o": 28.0,
+    "sug": 0.0,
+    "sodium": 327.0
+  },
+  "built": {
+    "raw_grams_total": 1000.4,
+    "cooked_grams_total": 962.83,
+    "whole_cooked": {
+      "cal": 3382.877,
+      "pro": 36.3945,
+      "fat": 150.3152,
+      "carb": 480.5012,
+      "fib": 9.8073,
+      "h2o": 275.5371,
+      "sug": 260.3706,
+      "sodium": 3210.579
+    },
+    "per100g_cooked": {
+      "cal": 351.3485,
+      "pro": 3.78,
+      "fat": 15.6119,
+      "carb": 49.9053,
+      "fib": 1.0186,
+      "h2o": 28.6175,
+      "sug": 27.0423,
+      "sodium": 333.4534
+    }
+  }
+}

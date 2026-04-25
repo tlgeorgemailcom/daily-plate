@@ -1,0 +1,109 @@
+{
+  "recipe_id": "SWEET_024",
+  "recorded_at": "2026-04-25T18:53:51.483864+00:00",
+  "fingerprint": "162e20de7913ad8ec22d88e145623eceaa3f0f5677145a2a2f6638cbc86e4ca0",
+  "disclosure": "The nutrient values reflect water loss during baking. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18134 within an average macro discrepancy of 3.0%.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_024",
+    "canonical_ndb_no": "18134",
+    "cook_method": "bake",
+    "yield_factor_water": 0.55,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "cream_of_tartar",
+        "grams": 0.75,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_white_raw",
+        "grams": 165.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_yolk_raw",
+        "grams": 85.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_cake_white_enriched",
+        "grams": 114.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "lemon_juice_raw",
+        "grams": 15.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 2.25,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 200.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vanilla_extract",
+        "grams": 4.2,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "water_tap",
+        "grams": 60.0,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "Position a rack in the lower third of the oven and preheat to 325\u00b0F. Have ready an ungreased 10-inch tube (angel food) pan with a removable bottom \u2014 the batter must climb the sides as it bakes.",
+      "Separate the eggs while cold (whites whip more cleanly when free of yolk). Place 5 yolks in a large mixing bowl and 5 whites in a separate clean, grease-free bowl. Let both come to room temperature, about 20 minutes.",
+      "Sift the cake flour once onto a sheet of parchment, then sift again with the salt. Set aside.",
+      "Heat the water until just steaming (about 180\u00b0F) and stir in the lemon juice and vanilla. Set aside to cool slightly.",
+      "Beat the yolks: With an electric mixer on high speed, beat the yolks until thick, pale yellow, and ribbon-stage \u2014 about 4\u20135 minutes. Gradually beat in half the sugar (1/2 cup / 100 g), then drizzle in the warm lemon-water mixture and beat 1 minute more until glossy and aerated.",
+      "Beat the whites: With clean beaters, whip the whites on medium speed until foamy, then add the cream of tartar. Increase to high speed and beat to soft peaks. Gradually rain in the remaining sugar (1/2 cup / 100 g) and continue beating to firm, glossy peaks that hold their shape but still look moist (not dry or chunky).",
+      "Fold in the flour: Sift the flour mixture over the yolk mixture in three additions, gently folding with a large rubber spatula after each \u2014 turn the bowl as you fold to keep the batter light. Stop folding while a few flour streaks remain.",
+      "Fold in the whites: Scoop one-third of the whipped whites onto the yolk batter and fold in to lighten. Add the remaining whites in two more additions, folding gently and just until no white streaks remain. Do not overmix \u2014 the airy whites are the only leavening.",
+      "Pour the batter into the ungreased tube pan and gently smooth the top. Run a thin knife once through the batter in a circle to release any large air pockets.",
+      "Bake on the lower rack for 40\u201350 minutes, until the top is golden, springs back when lightly pressed, and a wooden skewer inserted near the center comes out clean.",
+      "Invert immediately: Flip the pan upside down onto the neck of a tall bottle (or use the pan's built-in feet) and let the cake cool completely upside-down, about 1 1/2 hours. This prevents the delicate sponge from collapsing under its own weight.",
+      "To unmold: run a thin knife around the outer edge and around the center tube, then push the removable bottom up and out of the outer ring. Slide the knife under the cake to release it from the bottom. Slice with a serrated knife in a gentle sawing motion."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 297.0,
+    "pro": 7.3,
+    "fat": 4.3,
+    "carb": 57.7,
+    "fib": 0.0,
+    "h2o": 29.4,
+    "sug": 0.0,
+    "sodium": 228.0
+  },
+  "built": {
+    "raw_grams_total": 646.2,
+    "cooked_grams_total": 520.53,
+    "whole_cooked": {
+      "cal": 1563.511,
+      "pro": 40.869,
+      "fat": 23.8584,
+      "carb": 295.1978,
+      "fib": 1.9845,
+      "h2o": 153.5971,
+      "sug": 202.5102,
+      "sodium": 1194.353
+    },
+    "per100g_cooked": {
+      "cal": 300.3693,
+      "pro": 7.8514,
+      "fat": 4.5835,
+      "carb": 56.711,
+      "fib": 0.3812,
+      "h2o": 29.5079,
+      "sug": 38.9046,
+      "sodium": 229.4496
+    }
+  }
+}

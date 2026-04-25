@@ -1,0 +1,132 @@
+{
+  "recipe_id": "SWEET_027",
+  "recorded_at": "2026-04-25T20:00:30.303158+00:00",
+  "fingerprint": "aeb9ac33c5b6f0e8f63f0361a975d0fd85688a06033c62447be87adc6483f2fc",
+  "disclosure": "Authentic homemade sour cream coffee cake with cinnamon crumb topping. NOT validated against USDA SR Legacy NDB 18104 because the canonical entry reflects commercially prepared coffee cake with hydrogenated shortening, reduced-egg formulations, low-moisture shelf-stable formulation, and sodium-based preservatives (cholesterol 32 mg/100g vs ~88 mg/100g for the authentic recipe; protein 6.8 g vs 5.0 g, fat 23.3 g vs 18.6 g; sodium 351 mg/100g vs ~255 mg/100g without preservatives). Built entirely from USDA single-NDB ingredients (AP flour, baking powder, baking soda, salt, butter, sugars, eggs, vanilla, sour cream, cinnamon) with no composite components.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_027",
+    "canonical_ndb_no": "18104",
+    "cook_method": "bake",
+    "yield_factor_water": 0.83,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "baking_powder",
+        "grams": 4.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "baking_soda",
+        "grams": 2.3,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 57.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 113.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "cinnamon_ground",
+        "grams": 4.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_whole_raw",
+        "grams": 100.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 62.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 250.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 0.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 3.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sour_cream",
+        "grams": 230.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_brown",
+        "grams": 73.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 200.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vanilla_extract",
+        "grams": 4.2,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "Position a rack in the center of the oven and preheat to 350\u00b0F. Butter a 9-inch square baking pan and line the bottom with a parchment sling (leaving an overhang on two sides for easy lift-out).",
+      "Make the crumb topping: In a medium bowl, whisk together the 1/2 cup flour, brown sugar, cinnamon, and pinch of salt. Add the cold cubed butter and rub it in with your fingertips (or cut in with a pastry blender) until the mixture forms damp, pebbly crumbs ranging from pea-sized to small-marble-sized. Refrigerate while you make the cake.",
+      "Mix the dry ingredients: In a separate medium bowl, whisk together the 2 cups flour, baking powder, baking soda, and salt. Set aside.",
+      "Cream the butter and sugar: In the bowl of a stand mixer fitted with the paddle attachment (or a large bowl with a hand mixer), beat the room-temperature butter on medium speed until smooth, about 1 minute. Add the granulated sugar and beat on medium-high until light, pale, and fluffy, 3\u20134 minutes, scraping down the bowl once.",
+      "Add the eggs and vanilla: Reduce the mixer to medium and add the eggs one at a time, beating well and scraping down the bowl after each addition. Beat in the vanilla.",
+      "Alternate dry and sour cream to protect the emulsion and minimize gluten development: With the mixer on low speed, add the flour and sour cream in 5 additions in this exact order, mixing just until each addition is incorporated and scraping down the bowl as needed: (a) Add one-third of the flour mixture and mix until just blended. (b) Add half of the sour cream and mix until just blended. (c) Add another one-third of the flour mixture and mix until just blended. (d) Add the remaining sour cream and mix until just blended. (e) Add the final one-third of the flour mixture and mix only until no flour streaks remain. The batter will be thick and creamy. Do not overmix.",
+      "Assemble: Spread the batter evenly in the prepared pan, smoothing the top with an offset spatula. Scatter the chilled crumb topping evenly over the entire surface, breaking up any large clumps with your fingers so the crumbs are distributed in pebbles rather than sheets.",
+      "Bake at 350\u00b0F for 40\u201350 minutes, until the topping is golden brown, the cake springs back when lightly pressed at the center, and a wooden toothpick inserted in the cake (not into a melted butter pocket) comes out with just a few moist crumbs.",
+      "Transfer the pan to a wire rack and let cool for at least 30 minutes. Lift out using the parchment sling and slice into 10 squares (or 9 if you prefer larger pieces). Serve warm or at room temperature.",
+      "Storage: Cover loosely with foil at room temperature for up to 2 days, or wrap individual slices and refrigerate up to 5 days. Reheat briefly in a 300\u00b0F oven or toaster oven to refresh the crumb texture."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 418.0,
+    "pro": 6.8,
+    "fat": 23.3,
+    "carb": 46.7,
+    "fib": 2.0,
+    "h2o": 21.9,
+    "sug": 0.0,
+    "sodium": 351.0
+  },
+  "built": {
+    "raw_grams_total": 1103.0,
+    "cooked_grams_total": 1049.32,
+    "whole_cooked": {
+      "cal": 4028.476,
+      "pro": 52.0963,
+      "fat": 195.0117,
+      "carb": 525.9868,
+      "fib": 10.556,
+      "h2o": 262.0814,
+      "sug": 280.2001,
+      "sodium": 2671.268
+    },
+    "per100g_cooked": {
+      "cal": 383.9128,
+      "pro": 4.9648,
+      "fat": 18.5846,
+      "carb": 50.1264,
+      "fib": 1.006,
+      "h2o": 24.9763,
+      "sug": 26.703,
+      "sodium": 254.5712
+    }
+  }
+}

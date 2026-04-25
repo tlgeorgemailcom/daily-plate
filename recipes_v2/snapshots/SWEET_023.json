@@ -1,0 +1,91 @@
+{
+  "recipe_id": "SWEET_023",
+  "recorded_at": "2026-04-25T18:18:57.564647+00:00",
+  "fingerprint": "ffdb8f7643b56315676c92aa409530b8ba9e5b242394cb7bf92a2ac33b7afa85",
+  "disclosure": "The nutrient values reflect water loss during baking. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18126 within an average macro discrepancy of 1.5%.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_023",
+    "canonical_ndb_no": "18126",
+    "cook_method": "bake",
+    "yield_factor_water": 0.85,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "baking_powder",
+        "grams": 12.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 250.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "milk_whole",
+        "grams": 163.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 3.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 37.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vegetable_shortening",
+        "grams": 64.0,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 450\u00b0F. Lightly grease a baking sheet or line with parchment paper.",
+      "In a large bowl, whisk together the flour, sugar, baking powder, and salt until evenly blended.",
+      "Cut the shortening into the dry ingredients with a pastry blender or two knives until the mixture resembles coarse crumbs the size of small peas.",
+      "Pour in the milk all at once. Stir gently with a fork just until the dough comes together \u2014 do not overmix. The dough will be slightly sticky.",
+      "Turn the dough out onto a lightly floured surface. Pat (do not roll) to about 3/4-inch thickness, folding once or twice to build flaky layers.",
+      "Cut with a floured 2 1/2-inch round biscuit cutter, pressing straight down without twisting. Gather scraps gently and pat out once more to cut remaining biscuits. You should get 8 biscuits.",
+      "Place biscuits on the prepared baking sheet with sides nearly touching for soft sides, or 1 inch apart for crisp sides.",
+      "Bake 12\u201315 minutes until tops are golden brown and the biscuits have risen tall and split easily.",
+      "Transfer to a rack. Serve warm, split horizontally with sweetened berries and whipped cream for classic strawberry shortcake."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 346.0,
+    "pro": 6.1,
+    "fat": 14.2,
+    "carb": 48.5,
+    "fib": 0.0,
+    "h2o": 28.4,
+    "sug": 0.0,
+    "sodium": 506.0
+  },
+  "built": {
+    "raw_grams_total": 529.0,
+    "cooked_grams_total": 502.89,
+    "whole_cooked": {
+      "cal": 1724.74,
+      "pro": 30.9595,
+      "fat": 71.7475,
+      "carb": 238.9156,
+      "fib": 6.774,
+      "h2o": 147.9555,
+      "sug": 45.8325,
+      "sodium": 2510.2
+    },
+    "per100g_cooked": {
+      "cal": 342.9655,
+      "pro": 6.1563,
+      "fat": 14.267,
+      "carb": 47.5085,
+      "fib": 1.347,
+      "h2o": 29.421,
+      "sug": 9.1138,
+      "sodium": 499.1547
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "recipe_id": "SWEET_022",
+  "recorded_at": "2026-04-25T18:06:38.495349+00:00",
+  "fingerprint": "a558c50a1cede5b2bb8a148b4f1379a25bd4178956a20ac55e0d5d5e94291aca",
+  "disclosure": "The nutrient values reflect water loss during baking. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18119 within an average macro discrepancy of 3.2%.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_022",
+    "canonical_ndb_no": "18119",
+    "cook_method": "bake",
+    "yield_factor_water": 0.86,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "baking_powder",
+        "grams": 8.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 43.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "cherries_maraschino_drained",
+        "grams": 25.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_whole_raw",
+        "grams": 50.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 187.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "milk_whole",
+        "grams": 122.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "pineapple_canned_juice_pack_drained",
+        "grams": 200.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 5.25,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_brown",
+        "grams": 147.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 150.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vanilla_extract",
+        "grams": 4.2,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vegetable_shortening",
+        "grams": 77.0,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "Preheat the oven to 350\u00b0F (175\u00b0C).",
+      "Pour the melted butter into a 9-inch round cake pan or 9-inch cast-iron skillet, tilting to coat the bottom evenly. Sprinkle the brown sugar over the butter in an even layer.",
+      "Arrange the drained pineapple slices in a single layer over the brown sugar (one center, the rest around). Place a maraschino cherry in the center of each pineapple slice. Set aside.",
+      "In a medium bowl, whisk together the flour, baking powder, salt, and the optional cinnamon, cloves, and ginger if using.",
+      "In a large bowl with a handheld mixer or in a stand mixer fitted with the paddle attachment, beat the shortening and granulated sugar together on medium-high speed until light and fluffy, about 3 minutes. Stop and scrape down the sides and bottom of the bowl with a silicone spatula as needed.",
+      "Add the egg and vanilla and beat until smooth, about 1 minute.",
+      "Add about half of the dry ingredients and beat on low until just combined. Pour in the milk and beat until smooth. Add the remaining dry ingredients and beat on low until just combined. Do not overmix.",
+      "Pour the batter evenly over the pineapple and cherries in the prepared pan and smooth the top. Tap the pan gently on the counter once or twice to release any large air bubbles.",
+      "Bake until the top is golden, springs back when lightly pressed, and a toothpick inserted in the cake portion comes out clean, about 35\u201345 minutes.",
+      "Let the cake cool in the pan on a wire rack for exactly 10 minutes \u2014 no longer, or the topping will stick. Run a thin knife around the edge, place a serving plate over the pan, and quickly invert. Lift off the pan, replacing any pineapple or cherries that stick. Serve warm or at room temperature."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 319.0,
+    "pro": 3.5,
+    "fat": 12.1,
+    "carb": 50.5,
+    "fib": 0.8,
+    "h2o": 32.3,
+    "sug": 0.0,
+    "sodium": 319.0
+  },
+  "built": {
+    "raw_grams_total": 1018.45,
+    "cooked_grams_total": 967.83,
+    "whole_cooked": {
+      "cal": 3132.276,
+      "pro": 31.0595,
+      "fat": 122.7049,
+      "carb": 487.4636,
+      "fib": 8.465,
+      "h2o": 310.9367,
+      "sug": 337.9399,
+      "sodium": 3060.763
+    },
+    "per100g_cooked": {
+      "cal": 323.6383,
+      "pro": 3.2092,
+      "fat": 12.6783,
+      "carb": 50.3665,
+      "fib": 0.8746,
+      "h2o": 32.1271,
+      "sug": 34.9172,
+      "sodium": 316.2493
+    }
+  }
+}
