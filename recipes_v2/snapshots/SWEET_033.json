@@ -1,0 +1,90 @@
+{
+  "recipe_id": "SWEET_033",
+  "recorded_at": "2026-04-26T18:27:02.799917+00:00",
+  "fingerprint": "6044483040e3967ab04e127e457fee720accb580d33df37c569c418490733c1c",
+  "disclosure": "Built from authentic home butter cookie recipe consensus (Recipes 2, 4, 5). USDA SR Legacy NDB 18155 is a commercially prepared butter wafer with significantly lower fat, sugar, water, and sodium content than any home-based formula would produce. Not comparable to home recipe profile.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_033",
+    "canonical_ndb_no": "18155",
+    "cook_method": "bake",
+    "yield_factor_water": 0.38,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 227.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_whole_raw",
+        "grams": 50.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 280.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 1.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 200.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vanilla_extract",
+        "grams": 8.4,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 325\u00b0F. Line baking sheets with parchment paper.",
+      "Beat butter and sugar together until light and fluffy (3\u20134 minutes).",
+      "Beat in egg and vanilla extract until well combined.",
+      "In a separate bowl, whisk together flour and salt.",
+      "Gradually mix dry ingredients into wet ingredients until a soft dough forms.",
+      "Drop small spoonfuls (\u00bd teaspoon) onto prepared baking sheets, spacing 1 inch apart.",
+      "Bake 12\u201315 minutes, until edges are set and bottoms are pale golden. Cookies should be soft.",
+      "Cool on baking sheet for 3 minutes, then transfer to a wire rack."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 467.0,
+    "pro": 6.1,
+    "fat": 18.8,
+    "carb": 68.9,
+    "fib": 0.8,
+    "h2o": 4.6,
+    "sug": 20.24,
+    "sodium": 282.0
+  },
+  "built": {
+    "raw_grams_total": 766.9,
+    "cooked_grams_total": 694.59,
+    "whole_cooked": {
+      "cal": 3516.482,
+      "pro": 37.1385,
+      "fat": 191.6237,
+      "carb": 415.1868,
+      "fib": 7.56,
+      "h2o": 44.3211,
+      "sug": 201.7398,
+      "sodium": 685.696
+    },
+    "per100g_cooked": {
+      "cal": 506.2698,
+      "pro": 5.3469,
+      "fat": 27.5882,
+      "carb": 59.7747,
+      "fib": 1.0884,
+      "h2o": 6.3809,
+      "sug": 29.0446,
+      "sodium": 98.72
+    }
+  }
+}

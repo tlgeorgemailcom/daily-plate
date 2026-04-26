@@ -249,7 +249,7 @@ SWEET_026,11,"Bake at 325°F for 60–75 minutes, until the outer 2 inches are s
 SWEET_026,12,"Slow cool in the oven: Turn off the oven, prop the door open about 4 inches with a wooden spoon, and let the cheesecake cool slowly in the oven for 1 hour. This gradual cooling helps prevent surface cracks."
 SWEET_026,13,"Carefully remove the cheesecake from the water bath. Run a thin knife around the edge of the pan to release the cake from the sides (this also helps prevent cracking as it shrinks while cooling). Cool on a rack to room temperature, about 1 hour more."
 SWEET_026,14,"Chill: Cover loosely and refrigerate at least 8 hours, preferably overnight, to fully set the texture. To serve, release the springform ring, slide a thin spatula under the crust to lift onto a serving plate, and slice with a knife dipped in hot water and wiped clean between cuts."
-SWEET_027,1,"Position a rack in the center of the oven and preheat to 350°F. Butter a 9-inch square baking pan and line the bottom with a parchment sling (leaving an overhang on two sides for easy lift-out)."
+SWEET_027,1,Position a rack in the center of the oven and preheat to 350°F. Butter a 9-inch square baking pan and line the bottom with a parchment sling (leaving an overhang on two sides for easy lift-out).
 SWEET_027,2,"Make the crumb topping: In a medium bowl, whisk together the 1/2 cup flour, brown sugar, cinnamon, and pinch of salt. Add the cold cubed butter and rub it in with your fingertips (or cut in with a pastry blender) until the mixture forms damp, pebbly crumbs ranging from pea-sized to small-marble-sized. Refrigerate while you make the cake."
 SWEET_027,3,"Mix the dry ingredients: In a separate medium bowl, whisk together the 2 cups flour, baking powder, baking soda, and salt. Set aside."
 SWEET_027,4,"Cream the butter and sugar: In the bowl of a stand mixer fitted with the paddle attachment (or a large bowl with a hand mixer), beat the room-temperature butter on medium speed until smooth, about 1 minute. Add the granulated sugar and beat on medium-high until light, pale, and fluffy, 3–4 minutes, scraping down the bowl once."
@@ -257,7 +257,7 @@ SWEET_027,5,"Add the eggs and vanilla: Reduce the mixer to medium and add the eg
 SWEET_027,6,"Alternate dry and sour cream to protect the emulsion and minimize gluten development: With the mixer on low speed, add the flour and sour cream in 5 additions in this exact order, mixing just until each addition is incorporated and scraping down the bowl as needed: (a) Add one-third of the flour mixture and mix until just blended. (b) Add half of the sour cream and mix until just blended. (c) Add another one-third of the flour mixture and mix until just blended. (d) Add the remaining sour cream and mix until just blended. (e) Add the final one-third of the flour mixture and mix only until no flour streaks remain. The batter will be thick and creamy. Do not overmix."
 SWEET_027,7,"Assemble: Spread the batter evenly in the prepared pan, smoothing the top with an offset spatula. Scatter the chilled crumb topping evenly over the entire surface, breaking up any large clumps with your fingers so the crumbs are distributed in pebbles rather than sheets."
 SWEET_027,8,"Bake at 350°F for 40–50 minutes, until the topping is golden brown, the cake springs back when lightly pressed at the center, and a wooden toothpick inserted in the cake (not into a melted butter pocket) comes out with just a few moist crumbs."
-SWEET_027,9,"Transfer the pan to a wire rack and let cool for at least 30 minutes. Lift out using the parchment sling and slice into 10 squares (or 9 if you prefer larger pieces). Serve warm or at room temperature."
+SWEET_027,9,Transfer the pan to a wire rack and let cool for at least 30 minutes. Lift out using the parchment sling and slice into 10 squares (or 9 if you prefer larger pieces). Serve warm or at room temperature.
 SWEET_027,10,"Storage: Cover loosely with foil at room temperature for up to 2 days, or wrap individual slices and refrigerate up to 5 days. Reheat briefly in a 300°F oven or toaster oven to refresh the crumb texture."
 SWEET_028,1,"Position a rack in the lower-middle of the oven and preheat to 325°F. Generously butter a 9x5-inch loaf pan and dust with flour, tapping out the excess (or line with a parchment sling for easy lift-out)."
 SWEET_028,2,"Mix the dry ingredients: In a medium bowl, whisk together the AP flour, baking powder, and salt. Set aside."
@@ -269,3 +269,100 @@ SWEET_028,7,"Bake at 325°F for 65–80 minutes, until the top is deep golden br
 SWEET_028,8,"Cool: Transfer the pan to a wire rack and let cool for 15 minutes. Run a thin knife around the edge, then invert onto the rack and turn the cake right-side up. Let cool completely before slicing, at least 1 hour — pound cake's crumb continues to set as it cools and slices much more cleanly when fully cool."
 SWEET_028,9,"Slice and serve: Cut into 10 slices with a serrated knife in a gentle sawing motion. Serve plain, dusted with confectioners' sugar, with macerated berries, with a dollop of whipped cream, or toasted with butter for breakfast."
 SWEET_028,10,"Storage: Wrap tightly in plastic at room temperature for up to 3 days, or refrigerate up to 1 week, or freeze (whole or sliced) up to 3 months. The flavor improves on day 2 as the butter mellows."
+SWEET_029,1,"Position a rack in the center of the oven and preheat to 350°F. Grease a 9-inch square metal baking pan and line it with parchment, leaving overhang on two sides for easy lift-out."
+SWEET_029,2,"In a large bowl, stir together the vegetable shortening and butter until smooth and creamy."
+SWEET_029,3,Add the sugar and whisk until glossy and well blended.
+SWEET_029,4,"Whisk in the eggs one at a time, then whisk in the vanilla until smooth."
+SWEET_029,5,"In a separate bowl, whisk together the flour, cocoa powder, and salt."
+SWEET_029,6,Fold the dry ingredients into the wet mixture just until no dry streaks remain. Do not overmix.
+SWEET_029,7,Spread the batter evenly in the prepared pan and smooth the top with an offset spatula.
+SWEET_029,8,"Bake for 22–28 minutes, until the top is set and a toothpick inserted 1 inch from the edge comes out with moist crumbs."
+SWEET_029,9,Cool completely in the pan on a wire rack. Lift out using the parchment overhang and cut into 16 squares.
+SWEET_030,1,Preheat oven to 350°F. Line baking sheets with parchment paper.
+SWEET_030,2,Cream butter and sugar together until light and fluffy (2–3 minutes).
+SWEET_030,3,"Beat in eggs one at a time, then add vanilla extract."
+SWEET_030,4,"In a separate bowl, whisk together flour, oats, baking soda, cinnamon, and salt."
+SWEET_030,5,Fold dry ingredients into wet ingredients until just combined; do not overmix.
+SWEET_030,6,Fold in raisins gently until evenly distributed.
+SWEET_030,7,"Scoop dough onto parchment sheets, spacing 2 inches apart (dough will spread)."
+SWEET_030,8,"Bake 13–17 minutes, until edges are golden and center is set."
+SWEET_030,9,"Cool on baking sheet for 5 minutes, then transfer to wire rack to cool completely."
+SWEET_031,1,Preheat oven to 375°F. Line baking sheets with parchment paper.
+SWEET_031,2,Beat margarine and sugar together until light and fluffy (2–3 minutes).
+SWEET_031,3,"Add eggs one at a time, beating well after each addition, then mix in vanilla."
+SWEET_031,4,"In a separate bowl, whisk together flour, baking powder, and salt."
+SWEET_031,5,Gradually mix dry ingredients into wet ingredients until a soft dough forms.
+SWEET_031,6,Roll dough into 1-inch balls. Roll each ball in the reserved granulated sugar.
+SWEET_031,7,Place 2 inches apart on prepared baking sheets; flatten slightly with the bottom of a glass.
+SWEET_031,8,"Bake 8–10 minutes, until edges are lightly golden. Do not overbake."
+SWEET_031,9,"Cool on baking sheet for 2 minutes, then transfer to a wire rack to cool completely."
+SWEET_032,1,Preheat oven to 375°F. Line baking sheets with parchment paper.
+SWEET_032,2,Beat butter and sugar together until light and fluffy (2–3 minutes).
+SWEET_032,3,"Beat in egg, then stir in molasses until fully combined."
+SWEET_032,4,"In a separate bowl, whisk together flour, baking soda, salt, ginger, cinnamon, and cloves."
+SWEET_032,5,Gradually mix dry ingredients into wet ingredients until a smooth dough forms.
+SWEET_032,6,Roll dough into 1-inch balls. Roll each ball in the reserved granulated sugar.
+SWEET_032,7,Place 2 inches apart on prepared baking sheets.
+SWEET_032,8,"Bake 10–12 minutes, until cookies are set and surface is cracked. Do not overbake."
+SWEET_032,9,"Cool on baking sheet for 5 minutes, then transfer to a wire rack."
+SWEET_033,1,Preheat oven to 325°F. Line baking sheets with parchment paper.
+SWEET_033,2,Beat butter and sugar together until light and fluffy (3–4 minutes).
+SWEET_033,3,Beat in egg and vanilla extract until well combined.
+SWEET_033,4,"In a separate bowl, whisk together flour and salt."
+SWEET_033,5,Gradually mix dry ingredients into wet ingredients until a soft dough forms.
+SWEET_033,6,"Drop small spoonfuls (½ teaspoon) onto prepared baking sheets, spacing 1 inch apart."
+SWEET_033,7,"Bake 12–15 minutes, until edges are set and bottoms are pale golden. Cookies should be soft."
+SWEET_033,8,"Cool on baking sheet for 3 minutes, then transfer to a wire rack."
+SWEET_034,1,Preheat oven to 350°F. Line baking sheets with parchment paper.
+SWEET_034,2,"Whisk together flour, baking soda, and salt in a bowl; set aside."
+SWEET_034,3,"In a separate bowl, stir together melted butter, brown sugar, and granulated sugar until combined."
+SWEET_034,4,"Beat in egg and egg yolk, then add vanilla extract and stir until well combined."
+SWEET_034,5,Fold dry ingredients into wet ingredients until just combined. Do not overmix.
+SWEET_034,6,Fold in chocolate chips gently until evenly distributed.
+SWEET_034,7,"Drop rounded tablespoons of dough onto prepared baking sheets, spacing 2 inches apart."
+SWEET_034,8,"Bake 11–13 minutes, until edges are set and centers are still soft. Do not overbake."
+SWEET_034,9,"Cool on baking sheet for 3 minutes, then transfer to a wire rack to cool completely."
+SWEET_035,1,"Prepare filling: Bring water to a boil in a small saucepan. Add chopped figs and remove from heat. Let sit 15 minutes, then stir to break figs into a paste."
+SWEET_035,2,Preheat oven to 350°F. Grease an 8×8 or 9×9 inch baking pan.
+SWEET_035,3,Make crust: Beat butter and brown sugar together until fluffy. Beat in egg and vanilla.
+SWEET_035,4,"Whisk together flour, baking powder, and salt. Fold into wet ingredients until just combined."
+SWEET_035,5,"Spread half the crust mixture into prepared pan, pressing gently."
+SWEET_035,6,Spread fig filling evenly over crust layer.
+SWEET_035,7,"Top with remaining crust mixture, spreading or dropping spoonfuls to cover filling."
+SWEET_035,8,"Bake 30–35 minutes, until golden and a toothpick inserted comes out clean."
+SWEET_035,9,"Cool completely in pan, then cut into bars (16 squares)."
+SWEET_036,1,Preheat oven to 325°F. Line two baking sheets with parchment paper.
+SWEET_036,2,"In a clean bowl, whisk egg whites and salt until frothy (not stiff peaks)."
+SWEET_036,3,Whisk in granulated sugar until dissolved and glossy.
+SWEET_036,4,Stir in vanilla extract.
+SWEET_036,5,Fold in sweetened shredded coconut until evenly coated and mixture holds together when pressed.
+SWEET_036,6,Use a small cookie scoop or two spoons to portion 24 mounds onto prepared baking sheets.
+SWEET_036,7,Bake 20–24 minutes until edges and tops are lightly golden.
+SWEET_036,8,"Cool on sheet 5 minutes, then transfer to a rack to cool completely."
+SWEET_037,1,Preheat oven to 350°F and line baking sheets with parchment paper.
+SWEET_037,2,"Cream softened butter and brown sugar until light and fluffy, about 2-3 minutes."
+SWEET_037,3,Beat in molasses and egg until fully combined.
+SWEET_037,4,"In a separate bowl, whisk flour, baking soda, cinnamon, ginger, cloves, and salt."
+SWEET_037,5,Add dry ingredients to wet ingredients and mix just until no dry streaks remain.
+SWEET_037,6,Cover and chill dough 20-30 minutes so it is easy to scoop and roll.
+SWEET_037,7,"Scoop into 1 to 1 1/2 tablespoon portions, roll into balls, and coat lightly in granulated sugar."
+SWEET_037,8,"Place 2 inches apart and bake 9-11 minutes, until puffed and crackled with set edges."
+SWEET_037,9,"Cool 5 minutes on the pan, then move to a wire rack to cool completely."
+SWEET_038,1,Preheat oven to 350°F and line baking sheets with parchment paper.
+SWEET_038,2,"Cream butter, granulated sugar, and brown sugar until smooth and fluffy."
+SWEET_038,3,"Beat in peanut butter, egg, and vanilla until fully combined."
+SWEET_038,4,"Whisk flour, baking soda, baking powder, and salt in a separate bowl."
+SWEET_038,5,Add dry mixture to wet and mix just until combined; do not overmix.
+SWEET_038,6,Chill dough 20-30 minutes if soft.
+SWEET_038,7,"Scoop 1 to 1 1/2 tablespoon portions, roll into balls, and roll in granulated sugar."
+SWEET_038,8,Place on baking sheet and press lightly with a fork to form crosshatch pattern.
+SWEET_038,9,"Bake 9-11 minutes until edges are set and tops are lightly cracked. Cool 5 minutes, then transfer to rack."
+SWEET_039,1,Preheat oven to 325°F and line a baking sheet with parchment paper.
+SWEET_039,2,"Cream butter and powdered sugar until smooth and fluffy, about 2 to 3 minutes."
+SWEET_039,3,Mix in vanilla and salt until combined.
+SWEET_039,4,Whisk flour and cornstarch together in a separate bowl.
+SWEET_039,5,Add dry ingredients to butter mixture and mix on low just until dough comes together.
+SWEET_039,6,"Turn dough onto a lightly floured surface, press into a disk, and roll to about 1/2-inch thickness."
+SWEET_039,7,Cut into rounds or fingers and place on baking sheet; chill 10 to 15 minutes if dough is soft.
+SWEET_039,8,Bake 18 to 24 minutes until tops are set and edges are just turning light golden.
+SWEET_039,9,"Cool on pan 5 minutes, then transfer to a rack to cool completely."

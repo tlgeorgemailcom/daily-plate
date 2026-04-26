@@ -1,0 +1,116 @@
+{
+  "recipe_id": "SWEET_030",
+  "recorded_at": "2026-04-26T17:29:16.011090+00:00",
+  "fingerprint": "0d2989eab064ee3c629f504f39ba7c5770d07c834b5b743ab96cdb68e4c48eb1",
+  "disclosure": "Built from an authentic Quaker-style home recipe and treated as Rule 2. USDA SR Legacy NDB 18184 appears to reflect a different formulation with materially higher sodium and lower moisture than this batch profile.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_030",
+    "canonical_ndb_no": "18184",
+    "cook_method": "bake",
+    "yield_factor_water": 0.7,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "baking_soda",
+        "grams": 5.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 199.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "cinnamon_ground",
+        "grams": 2.6,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_whole_raw",
+        "grams": 100.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 185.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "oats_rolled_old_fashioned_dry",
+        "grams": 300.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "raisins_seedless",
+        "grams": 140.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 3.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_brown",
+        "grams": 165.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 100.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vanilla_extract",
+        "grams": 4.2,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 350\u00b0F. Line baking sheets with parchment paper.",
+      "Cream butter and sugar together until light and fluffy (2\u20133 minutes).",
+      "Beat in eggs one at a time, then add vanilla extract.",
+      "In a separate bowl, whisk together flour, oats, baking soda, cinnamon, and salt.",
+      "Fold dry ingredients into wet ingredients until just combined; do not overmix.",
+      "Fold in raisins gently until evenly distributed.",
+      "Scoop dough onto parchment sheets, spacing 2 inches apart (dough will spread).",
+      "Bake 13\u201317 minutes, until edges are golden and center is set.",
+      "Cool on baking sheet for 5 minutes, then transfer to wire rack to cool completely."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 435.0,
+    "pro": 6.5,
+    "fat": 16.2,
+    "carb": 68.4,
+    "fib": 0.0,
+    "h2o": 6.4,
+    "sug": 0.0,
+    "sodium": 538.0
+  },
+  "built": {
+    "raw_grams_total": 1203.8,
+    "cooked_grams_total": 1145.97,
+    "whole_cooked": {
+      "cal": 4831.348,
+      "pro": 77.4143,
+      "fat": 192.9707,
+      "carb": 720.42,
+      "fib": 41.8556,
+      "h2o": 134.9285,
+      "sug": 347.2956,
+      "sodium": 2779.568
+    },
+    "per100g_cooked": {
+      "cal": 421.5933,
+      "pro": 6.7553,
+      "fat": 16.839,
+      "carb": 62.8653,
+      "fib": 3.6524,
+      "h2o": 11.7741,
+      "sug": 30.3057,
+      "sodium": 242.5508
+    }
+  }
+}

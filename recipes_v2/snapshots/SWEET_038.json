@@ -1,0 +1,116 @@
+{
+  "recipe_id": "SWEET_038",
+  "recorded_at": "2026-04-26T19:42:20.862018+00:00",
+  "fingerprint": "c4329cf7c76bb3835fa739cbb2c537f6c2ab1fee34dea42cf9ebab9fe97e7ce4",
+  "disclosure": "Built from authentic home peanut-butter cookie references with proportions intentionally preserved when Rule 1 was not fully attainable. USDA SR Legacy NDB 18188 appears to represent a commercial refrigerated-dough profile with canonical sugar=0 artifact; therefore recipe is classified as Rule 2 while maintaining realistic home-recipe ratios.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_038",
+    "canonical_ndb_no": "18188",
+    "cook_method": "bake",
+    "yield_factor_water": 0.42,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "baking_powder",
+        "grams": 2.0,
+        "is_optional": true
+      },
+      {
+        "ingredient_key": "baking_soda",
+        "grams": 5.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 113.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_whole_raw",
+        "grams": 50.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 180.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "peanut_butter_smooth",
+        "grams": 198.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 1.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_brown",
+        "grams": 106.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 25.0,
+        "is_optional": true
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 100.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vanilla_extract",
+        "grams": 4.2,
+        "is_optional": true
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 350\u00b0F and line baking sheets with parchment paper.",
+      "Cream butter, granulated sugar, and brown sugar until smooth and fluffy.",
+      "Beat in peanut butter, egg, and vanilla until fully combined.",
+      "Whisk flour, baking soda, baking powder, and salt in a separate bowl.",
+      "Add dry mixture to wet and mix just until combined; do not overmix.",
+      "Chill dough 20-30 minutes if soft.",
+      "Scoop 1 to 1 1/2 tablespoon portions, roll into balls, and roll in granulated sugar.",
+      "Place on baking sheet and press lightly with a fork to form crosshatch pattern.",
+      "Bake 9-11 minutes until edges are set and tops are lightly cracked. Cool 5 minutes, then transfer to rack."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 503.0,
+    "pro": 9.1,
+    "fat": 27.5,
+    "carb": 57.3,
+    "fib": 1.2,
+    "h2o": 4.0,
+    "sug": 0.0,
+    "sodium": 436.0
+  },
+  "built": {
+    "raw_grams_total": 784.7,
+    "cooked_grams_total": 734.82,
+    "whole_cooked": {
+      "cal": 3620.656,
+      "pro": 69.94,
+      "fat": 199.8686,
+      "carb": 411.9953,
+      "fib": 14.764,
+      "h2o": 36.1223,
+      "sug": 249.6315,
+      "sodium": 3123.188
+    },
+    "per100g_cooked": {
+      "cal": 492.729,
+      "pro": 9.518,
+      "fat": 27.1998,
+      "carb": 56.0678,
+      "fib": 2.0092,
+      "h2o": 4.9158,
+      "sug": 33.9719,
+      "sodium": 425.0294
+    }
+  }
+}

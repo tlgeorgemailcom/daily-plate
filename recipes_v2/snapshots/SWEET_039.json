@@ -1,0 +1,91 @@
+{
+  "recipe_id": "SWEET_039",
+  "recorded_at": "2026-04-26T19:58:57.825196+00:00",
+  "fingerprint": "e38676fabbd1464fdd0e835e3105f0e2e18fb2bf091247c7c024d60c26574927",
+  "disclosure": "Validated against USDA SR Legacy NDB 18192 within Rule 1 tolerance bands using authentic shortbread ingredient structure.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_039",
+    "canonical_ndb_no": "18192",
+    "cook_method": "bake",
+    "yield_factor_water": 0.3,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 224.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "cornstarch",
+        "grams": 31.0,
+        "is_optional": true
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 320.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 6.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 150.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vanilla_extract",
+        "grams": 4.2,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 325\u00b0F and line a baking sheet with parchment paper.",
+      "Cream butter and powdered sugar until smooth and fluffy, about 2 to 3 minutes.",
+      "Mix in vanilla and salt until combined.",
+      "Whisk flour and cornstarch together in a separate bowl.",
+      "Add dry ingredients to butter mixture and mix on low just until dough comes together.",
+      "Turn dough onto a lightly floured surface, press into a disk, and roll to about 1/2-inch thickness.",
+      "Cut into rounds or fingers and place on baking sheet; chill 10 to 15 minutes if dough is soft.",
+      "Bake 18 to 24 minutes until tops are set and edges are just turning light golden.",
+      "Cool on pan 5 minutes, then transfer to a rack to cool completely."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 514.0,
+    "pro": 5.37,
+    "fat": 26.22,
+    "carb": 63.78,
+    "fib": 1.3,
+    "h2o": 3.6,
+    "sug": 21.65,
+    "sodium": 353.0
+  },
+  "built": {
+    "raw_grams_total": 735.2,
+    "cooked_grams_total": 676.99,
+    "whole_cooked": {
+      "cal": 3481.586,
+      "pro": 35.0431,
+      "fat": 184.8404,
+      "carb": 423.1214,
+      "fib": 8.919,
+      "h2o": 24.9477,
+      "sug": 151.2297,
+      "sodium": 2361.188
+    },
+    "per100g_cooked": {
+      "cal": 514.2754,
+      "pro": 5.1763,
+      "fat": 27.3033,
+      "carb": 62.5005,
+      "fib": 1.3175,
+      "h2o": 3.6851,
+      "sug": 22.3386,
+      "sodium": 348.7781
+    }
+  }
+}

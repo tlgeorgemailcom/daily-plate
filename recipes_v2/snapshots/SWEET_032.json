@@ -1,0 +1,116 @@
+{
+  "recipe_id": "SWEET_032",
+  "recorded_at": "2026-04-26T18:14:56.672364+00:00",
+  "fingerprint": "5d2e0123c01aa51cc3162ee17b4a109f01573a3dd5da89bc9c669d44e56332b4",
+  "disclosure": "Built from authentic home gingersnap recipe consensus (5 reference sources). USDA SR Legacy NDB 18172 reflects a commercial packaged product with lower fat, analytically lower sugar, higher apparent fiber, and higher protein than achievable from home recipe formula.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_032",
+    "canonical_ndb_no": "18172",
+    "cook_method": "bake",
+    "yield_factor_water": 0.4,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "baking_soda",
+        "grams": 10.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 113.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "cinnamon_ground",
+        "grams": 2.6,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "cloves_ground",
+        "grams": 2.1,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_whole_raw",
+        "grams": 50.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 270.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "ginger_ground",
+        "grams": 3.6,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "molasses",
+        "grams": 170.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 3.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 50.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 200.0,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 375\u00b0F. Line baking sheets with parchment paper.",
+      "Beat butter and sugar together until light and fluffy (2\u20133 minutes).",
+      "Beat in egg, then stir in molasses until fully combined.",
+      "In a separate bowl, whisk together flour, baking soda, salt, ginger, cinnamon, and cloves.",
+      "Gradually mix dry ingredients into wet ingredients until a smooth dough forms.",
+      "Roll dough into 1-inch balls. Roll each ball in the reserved granulated sugar.",
+      "Place 2 inches apart on prepared baking sheets.",
+      "Bake 10\u201312 minutes, until cookies are set and surface is cracked. Do not overbake.",
+      "Cool on baking sheet for 5 minutes, then transfer to a wire rack."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 416.0,
+    "pro": 5.6,
+    "fat": 9.8,
+    "carb": 76.9,
+    "fib": 2.2,
+    "h2o": 5.3,
+    "sug": 19.92,
+    "sodium": 501.0
+  },
+  "built": {
+    "raw_grams_total": 874.3,
+    "cooked_grams_total": 797.12,
+    "whole_cooked": {
+      "cal": 3349.246,
+      "pro": 35.6839,
+      "fat": 99.6832,
+      "carb": 589.5056,
+      "fib": 9.8901,
+      "h2o": 51.4506,
+      "sug": 377.7342,
+      "sodium": 4060.019
+    },
+    "per100g_cooked": {
+      "cal": 420.1662,
+      "pro": 4.4766,
+      "fat": 12.5054,
+      "carb": 73.954,
+      "fib": 1.2407,
+      "h2o": 6.4545,
+      "sug": 47.3871,
+      "sodium": 509.3333
+    }
+  }
+}

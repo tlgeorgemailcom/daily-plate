@@ -1,0 +1,101 @@
+{
+  "recipe_id": "SWEET_031",
+  "recorded_at": "2026-04-26T17:51:57.845134+00:00",
+  "fingerprint": "cbfde05574f6deb22d9a88984c9c19730c857f45a3fa099fe50e8fbfab96963a",
+  "disclosure": "",
+  "canonical_payload": {
+    "recipe_id": "SWEET_031",
+    "canonical_ndb_no": "18208",
+    "cook_method": "bake",
+    "yield_factor_water": 0.46,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "baking_powder",
+        "grams": 8.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_whole_raw",
+        "grams": 100.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 350.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "margarine_stick_salted",
+        "grams": 227.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 3.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 50.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 155.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vanilla_extract",
+        "grams": 4.2,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 375\u00b0F. Line baking sheets with parchment paper.",
+      "Beat margarine and sugar together until light and fluffy (2\u20133 minutes).",
+      "Add eggs one at a time, beating well after each addition, then mix in vanilla.",
+      "In a separate bowl, whisk together flour, baking powder, and salt.",
+      "Gradually mix dry ingredients into wet ingredients until a soft dough forms.",
+      "Roll dough into 1-inch balls. Roll each ball in the reserved granulated sugar.",
+      "Place 2 inches apart on prepared baking sheets; flatten slightly with the bottom of a glass.",
+      "Bake 8\u201310 minutes, until edges are lightly golden. Do not overbake.",
+      "Cool on baking sheet for 2 minutes, then transfer to a wire rack to cool completely."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 472.0,
+    "pro": 5.9,
+    "fat": 23.4,
+    "carb": 60.0,
+    "fib": 1.2,
+    "h2o": 8.9,
+    "sug": 24.86,
+    "sodium": 491.0
+  },
+  "built": {
+    "raw_grams_total": 897.2,
+    "cooked_grams_total": 811.87,
+    "whole_cooked": {
+      "cal": 3854.276,
+      "pro": 49.0807,
+      "fat": 196.1542,
+      "carb": 477.1003,
+      "fib": 9.466,
+      "h2o": 72.6918,
+      "sug": 206.4363,
+      "sodium": 3866.938
+    },
+    "per100g_cooked": {
+      "cal": 474.7428,
+      "pro": 6.0454,
+      "fat": 24.1609,
+      "carb": 58.7659,
+      "fib": 1.166,
+      "h2o": 8.9537,
+      "sug": 25.4274,
+      "sodium": 476.3024
+    }
+  }
+}

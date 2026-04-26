@@ -1,0 +1,111 @@
+{
+  "recipe_id": "SWEET_034",
+  "recorded_at": "2026-04-26T18:38:09.514298+00:00",
+  "fingerprint": "6f2ddf1416e9511a96e7c0902215fd01f9ff9bee606db1d2f6a979a23251e634",
+  "disclosure": "Built from authentic home chocolate chip cookie recipe consensus (Recipes 2, 5). USDA SR Legacy NDB 18164 is a commercially prepared refrigerated dough product with stabilizers and very low moisture content not achievable in home formula. Canonical water (3.0g/100g) and sugar (0.0g) are product-specific anomalies. Not comparable to home recipe.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_034",
+    "canonical_ndb_no": "18164",
+    "cook_method": "bake",
+    "yield_factor_water": 0.33,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "baking_soda",
+        "grams": 5.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 170.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "chocolate_chips_semisweet",
+        "grams": 340.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_whole_raw",
+        "grams": 50.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_yolk_raw",
+        "grams": 18.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 280.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 3.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_brown",
+        "grams": 150.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 100.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vanilla_extract",
+        "grams": 8.4,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 350\u00b0F. Line baking sheets with parchment paper.",
+      "Whisk together flour, baking soda, and salt in a bowl; set aside.",
+      "In a separate bowl, stir together melted butter, brown sugar, and granulated sugar until combined.",
+      "Beat in egg and egg yolk, then add vanilla extract and stir until well combined.",
+      "Fold dry ingredients into wet ingredients until just combined. Do not overmix.",
+      "Fold in chocolate chips gently until evenly distributed.",
+      "Drop rounded tablespoons of dough onto prepared baking sheets, spacing 2 inches apart.",
+      "Bake 11\u201313 minutes, until edges are set and centers are still soft. Do not overbake.",
+      "Cool on baking sheet for 3 minutes, then transfer to a wire rack to cool completely."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 492.0,
+    "pro": 4.9,
+    "fat": 22.6,
+    "carb": 68.2,
+    "fib": 1.7,
+    "h2o": 3.0,
+    "sug": 0.0,
+    "sodium": 232.0
+  },
+  "built": {
+    "raw_grams_total": 1124.4,
+    "cooked_grams_total": 847.59,
+    "whole_cooked": {
+      "cal": 3627.552,
+      "pro": 39.9268,
+      "fat": 150.1682,
+      "carb": 471.7938,
+      "fib": 7.56,
+      "h2o": 136.34,
+      "sug": 250.8004,
+      "sodium": 2695.436
+    },
+    "per100g_cooked": {
+      "cal": 427.9851,
+      "pro": 4.7106,
+      "fat": 17.7171,
+      "carb": 55.6631,
+      "fib": 0.8919,
+      "h2o": 16.0856,
+      "sug": 29.5899,
+      "sodium": 318.0123
+    }
+  }
+}

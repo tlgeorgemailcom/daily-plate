@@ -1,0 +1,85 @@
+{
+  "recipe_id": "SWEET_036",
+  "recorded_at": "2026-04-26T19:20:19.733409+00:00",
+  "fingerprint": "1be37ed66a0aff9ac565cb970d53f5641f4a48e71c8e1651a8d026709c400153",
+  "disclosure": "Built from authentic home coconut-macaroon references using classic egg-white method. Despite corrected ingredient proportions, USDA SR Legacy NDB 28309 remains non-convergent across key macros, indicating a commercial product profile not fully reproducible with home supermarket formulations.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_036",
+    "canonical_ndb_no": "28309",
+    "cook_method": "bake",
+    "yield_factor_water": 0.55,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "coconut_shredded_sweetened",
+        "grams": 397.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_white_raw",
+        "grams": 132.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 0.75,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 100.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vanilla_extract",
+        "grams": 4.2,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 325\u00b0F. Line two baking sheets with parchment paper.",
+      "In a clean bowl, whisk egg whites and salt until frothy (not stiff peaks).",
+      "Whisk in granulated sugar until dissolved and glossy.",
+      "Stir in vanilla extract.",
+      "Fold in sweetened shredded coconut until evenly coated and mixture holds together when pressed.",
+      "Use a small cookie scoop or two spoons to portion 24 mounds onto prepared baking sheets.",
+      "Bake 20\u201324 minutes until edges and tops are lightly golden.",
+      "Cool on sheet 5 minutes, then transfer to a rack to cool completely."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 460.0,
+    "pro": 3.02,
+    "fat": 22.55,
+    "carb": 61.22,
+    "fib": 5.1,
+    "h2o": 11.5,
+    "sug": 45.16,
+    "sodium": 241.0
+  },
+  "built": {
+    "raw_grams_total": 633.95,
+    "cooked_grams_total": 558.51,
+    "whole_cooked": {
+      "cal": 2456.706,
+      "pro": 25.8241,
+      "fat": 141.1222,
+      "carb": 290.7248,
+      "fib": 17.865,
+      "h2o": 92.2052,
+      "sug": 272.6534,
+      "sodium": 1551.323
+    },
+    "per100g_cooked": {
+      "cal": 439.8683,
+      "pro": 4.6238,
+      "fat": 25.2677,
+      "carb": 52.0537,
+      "fib": 3.1987,
+      "h2o": 16.5092,
+      "sug": 48.818,
+      "sodium": 277.7613
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "recipe_id": "SWEET_037",
+  "recorded_at": "2026-04-26T19:31:49.901682+00:00",
+  "fingerprint": "e252a04108cc67895f03f93ddd0d71c21177e8be7771ab827c8f18d101a128a3",
+  "disclosure": "Built from authentic home molasses-cookie references (Recipes 1-5) using standard pantry ingredients and classic crackle-cookie method. USDA SR Legacy NDB 18177 appears nutritionally non-equivalent to these home formulas, especially on sugar/fat/water profile, so this recipe is classified as Rule 2.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_037",
+    "canonical_ndb_no": "18177",
+    "cook_method": "bake",
+    "yield_factor_water": 0.46,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "baking_soda",
+        "grams": 7.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 170.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "cinnamon_ground",
+        "grams": 2.6,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "cloves_ground",
+        "grams": 0.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_whole_raw",
+        "grams": 50.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 281.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "ginger_ground",
+        "grams": 2.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "molasses",
+        "grams": 110.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 1.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_brown",
+        "grams": 165.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 36.0,
+        "is_optional": true
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 350\u00b0F and line baking sheets with parchment paper.",
+      "Cream softened butter and brown sugar until light and fluffy, about 2-3 minutes.",
+      "Beat in molasses and egg until fully combined.",
+      "In a separate bowl, whisk flour, baking soda, cinnamon, ginger, cloves, and salt.",
+      "Add dry ingredients to wet ingredients and mix just until no dry streaks remain.",
+      "Cover and chill dough 20-30 minutes so it is easy to scoop and roll.",
+      "Scoop into 1 to 1 1/2 tablespoon portions, roll into balls, and coat lightly in granulated sugar.",
+      "Place 2 inches apart and bake 9-11 minutes, until puffed and crackled with set edges.",
+      "Cool 5 minutes on the pan, then move to a wire rack to cool completely."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 430.0,
+    "pro": 5.6,
+    "fat": 12.8,
+    "carb": 73.8,
+    "fib": 1.0,
+    "h2o": 5.8,
+    "sug": 17.6,
+    "sodium": 459.0
+  },
+  "built": {
+    "raw_grams_total": 826.1,
+    "cooked_grams_total": 756.5,
+    "whole_cooked": {
+      "cal": 3413.052,
+      "pro": 37.2635,
+      "fat": 145.6878,
+      "carb": 498.7928,
+      "fib": 9.4191,
+      "h2o": 59.2869,
+      "sug": 279.3848,
+      "sodium": 2818.135
+    },
+    "per100g_cooked": {
+      "cal": 451.1621,
+      "pro": 4.9258,
+      "fat": 19.2581,
+      "carb": 65.9341,
+      "fib": 1.2451,
+      "h2o": 7.837,
+      "sug": 36.9311,
+      "sodium": 372.5217
+    }
+  }
+}
