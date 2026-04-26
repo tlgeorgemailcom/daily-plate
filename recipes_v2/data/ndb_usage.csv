@@ -1,0 +1,86 @@
+ndb_no,in_food_portions_csv,csv_word,csv_display,usda_desc,use_count,recipe_ids,roles,example_name
+1017,yes,CREAMCHEESE,Cream Cheese,"Cheese, cream",1,SWEET_026,ingredient,cream cheese
+1053,yes,CREAM,Heavy Whipping Cream,"Cream, fluid, heavy whipping",5,SWEET_003;SWEET_011;SWEET_012;SWEET_013;SWEET_014,ingredient,heavy cream
+1056,NO,,,"Cream, sour, cultured",2,SWEET_026;SWEET_027,ingredient,sour cream
+1077,yes,MILK,Milk,"Milk, whole, 3.25% milkfat, with added vitamin D",14,SWEET_003;SWEET_011;SWEET_012;SWEET_013;SWEET_014;SWEET_015;SWEET_016;SWEET_017;SWEET_018;SWEET_020;SWEET_022;SWEET_023;SWEET_028,ingredient,whole milk
+1096,NO,,,"Milk, canned, evaporated, with added vitamin D",3,SWEET_010;SWEET_019;SWEET_020,ingredient,evaporated milk
+1123,yes,EGGRAW,Egg Raw,"Egg, whole, raw, fresh",16,SWEET_002;SWEET_004;SWEET_005;SWEET_007;SWEET_008;SWEET_009;SWEET_010;SWEET_012;SWEET_015;SWEET_018;SWEET_020;SWEET_021;SWEET_022;SWEET_026;SWEET_027;SWEET_028,ingredient,large egg
+1124,yes,EGGWHITE,Egg White,"Egg, white, raw, fresh",6,SWEET_006;SWEET_016;SWEET_017;SWEET_024;SWEET_025,ingredient,egg whites
+1125,yes,YOLK,Yolk,"Egg, yolk, raw, fresh",8,SWEET_003;SWEET_006;SWEET_011;SWEET_012;SWEET_013;SWEET_014;SWEET_024;SWEET_026,ingredient,egg yolks
+1145,yes,BUTTERUNSALTED,Butter Unsalted,"Butter, without salt",39,SWEET_001;SWEET_002;SWEET_003;SWEET_004;SWEET_005;SWEET_006;SWEET_007;SWEET_008;SWEET_009;SWEET_010;SWEET_011;SWEET_012;SWEET_013;SWEET_014;SWEET_015;SWEET_018;SWEET_019;SWEET_020;SWEET_021;SWEET_022;SWEET_026;SWEET_027;SWEET_028,ingredient,unsalted butter
+2001,yes,ALLSPICE,Allspice,"Spices, allspice, ground",2,SWEET_001;SWEET_007,ingredient,allspice
+2010,yes,CINNAMON,Cinnamon,"Spices, cinnamon, ground",8,SWEET_001;SWEET_002;SWEET_004;SWEET_007;SWEET_008;SWEET_021;SWEET_022;SWEET_027,ingredient,ground cinnamon
+2011,yes,CLOVE,Clove,"Spices, cloves, ground",4,SWEET_001;SWEET_007;SWEET_021;SWEET_022,ingredient,ground cloves
+2021,NO,,,"Spices, ginger, ground",3,SWEET_007;SWEET_021;SWEET_022,ingredient,ground ginger
+2025,yes,NUTMEG,Nutmeg,"Spices, nutmeg, ground",3,SWEET_007;SWEET_008;SWEET_015,ingredient,ground nutmeg
+2035,NO,,,"Spices, pumpkin pie spice",1,SWEET_010,ingredient,pumpkin pie spice
+2047,yes,SALT,Salt,"Salt, table",44,SWEET_001;SWEET_002;SWEET_003;SWEET_004;SWEET_005;SWEET_006;SWEET_007;SWEET_008;SWEET_009;SWEET_010;SWEET_011;SWEET_012;SWEET_013;SWEET_014;SWEET_015;SWEET_016;SWEET_017;SWEET_018;SWEET_019;SWEET_020;SWEET_021;SWEET_022;SWEET_023;SWEET_024;SWEET_025;SWEET_026;SWEET_027;SWEET_028,ingredient,salt
+2050,yes,VANILLA,Vanilla Extract,Vanilla extract,25,SWEET_003;SWEET_009;SWEET_011;SWEET_012;SWEET_013;SWEET_014;SWEET_015;SWEET_016;SWEET_017;SWEET_018;SWEET_019;SWEET_020;SWEET_022;SWEET_024;SWEET_025;SWEET_026;SWEET_027;SWEET_028,ingredient,vanilla extract
+4031,yes,SHORTENING,Shortening,"Shortening, household, soybean (partially hydrogenated)-cottonseed (partially hydrogenated)",8,SWEET_001;SWEET_016;SWEET_017;SWEET_018;SWEET_020;SWEET_021;SWEET_022;SWEET_023,ingredient,vegetable shortening
+9032,yes,APRICOTDRIED,Apricot Dried,"Apricots, dried, sulfured, uncooked",1,SWEET_007,ingredient,dried apricots
+9040,yes,BANANA,Banana,"Bananas, raw",1,SWEET_003,ingredient,bananas (sliced)
+9050,yes,BLUEBERRIES,Blueberries,"Blueberries, raw",1,SWEET_004,ingredient,blueberries
+9063,NO,,,"Cherries, sour, red, raw",1,SWEET_005,ingredient,sour cherries (pitted)
+9079,NO,,,"Cranberries, dried, sweetened",1,SWEET_007,ingredient,dried cranberries
+9085,NO,,,"Currants, zante, dried",1,SWEET_007,ingredient,currants
+9152,yes,LEMONJUICE,Lemon Juice Raw,"Lemon juice, raw",9,SWEET_001;SWEET_002;SWEET_004;SWEET_005;SWEET_006;SWEET_007;SWEET_008;SWEET_024;SWEET_025,ingredient,lemon juice
+9156,yes,LEMONPEEL,Lemon Peel,"Lemon peel, raw",2,SWEET_006;SWEET_007,ingredient,lemon zest
+9236,yes,PEACH,Peach,"Peaches, yellow, raw",1,SWEET_008,ingredient,peaches
+9297,yes,RAISIN,Raisin,"Raisins, golden seedless",1,SWEET_007,ingredient,golden raisins
+9298,NO,,,"Raisins, seedless",2,SWEET_002;SWEET_007,ingredient,raisins
+9328,yes,MARASCHINO,Maraschino,"Maraschino cherries, canned, drained",1,SWEET_022,ingredient,maraschino cherries
+9354,NO,,,"Pineapple, canned, juice pack, drained",1,SWEET_022,ingredient,pineapple slices
+9421,NO,,,"Dates, medjool",1,SWEET_007,ingredient,medjool dates
+9426,NO,,,Candied fruit,1,SWEET_007,ingredient,mixed candied peel
+9502,yes,APPLESMITH,Apple Granny Smith,"Apples, raw, granny smith, with skin",3,SWEET_001;SWEET_002;SWEET_007,ingredient,Granny Smith apples (peeled and cored)
+11216,yes,GINGER,Ginger Root Raw,"Ginger root, raw",1,SWEET_021,ingredient,fresh ginger
+11424,yes,PUMPKIN,Pumpkin Canned,"Pumpkin, canned, without salt",1,SWEET_010,ingredient,canned pumpkin puree
+12109,NO,,,"Nuts, coconut meat, dried, sweetened, flaked",3,SWEET_014;SWEET_017,ingredient,sweetened flaked coconut
+12118,NO,,,"Nuts, coconut milk, canned",1,SWEET_014,ingredient,canned coconut milk
+12142,yes,PECAN,Pecan,"Nuts, pecans",1,SWEET_009,ingredient,pecan halves
+14411,yes,WATER,Water,"Water, tap, drinking",25,SWEET_001;SWEET_002;SWEET_003;SWEET_004;SWEET_005;SWEET_006;SWEET_007;SWEET_008;SWEET_009;SWEET_010;SWEET_011;SWEET_014;SWEET_015;SWEET_017;SWEET_019;SWEET_020;SWEET_021;SWEET_024,ingredient,ice water
+18079,NO,,,"Bread crumbs, dry, grated, plain",1,SWEET_002,ingredient,dry bread crumbs
+18086,yes,CAKEANGELFOOD,Cake Angel Food,"Cake, angelfood, commercially prepared",1,SWEET_025,canonical,
+18090,yes,PIEBOSTONCREAM,Pies Boston Cream,"Cake, boston cream pie, commercially prepared",1,SWEET_012,canonical,
+18102,yes,CAKEWHITECOCONUTFROSTING,Cake White Coconut Frosting,"Cake, white, prepared from recipe with coconut frosting",1,SWEET_017,canonical,
+18104,yes,CAKECOFFEECAKE,Cake Coffee,"Coffeecake, cinnamon with crumb topping, commercially prepared, enriched",1,SWEET_027,canonical,
+18116,yes,CAKEGINGERBREAD,Cake Gingerbread,"Cake, gingerbread, prepared from recipe",1,SWEET_021,canonical,
+18119,yes,CAKEPINEAPPLE,Cake Pineapple,"Cake, pineapple upside-down, prepared from recipe",1,SWEET_022,canonical,
+18120,yes,CAKEPOUND,Cake Pound,"Cake, pound, commercially prepared, butter (includes fresh and frozen)",1,SWEET_028,canonical,
+18126,yes,CAKESHORTCAKE,Cake Shortcake,"Cake, shortcake, biscuit-type, prepared from recipe",1,SWEET_023,canonical,
+18134,yes,CAKESPONGE,Cake Sponge,"Cake, sponge, prepared from recipe",1,SWEET_024,canonical,
+18139,yes,CAKEWHITE,Cake White no Frosting,"Cake, white, prepared from recipe without frosting",1,SWEET_016,canonical,
+18140,yes,CAKEYELLOWCHOCOLATEFROSTING,Cake Yellow Choc Frosting,"Cake, yellow, commercially prepared, with chocolate frosting, in-store bakery",1,SWEET_020,canonical,
+18146,NO,,,,1,SWEET_018,canonical,
+18147,yes,CAKECHEESECAKE,Cake Cheesecake,Cheesecake commercially prepared,1,SWEET_026,canonical,
+18166,yes,COOKIESCHOCOLATESANDWICH,Cookies Choc Sandwich,"Cookies, chocolate sandwich, with creme filling, regular",1,SWEET_013,ingredient,chocolate sandwich cookies
+18173,yes,GRAHAM,Graham,"Cookies, graham crackers, plain or honey (includes cinnamon)",1,SWEET_026,ingredient,graham crackers
+18211,NO,,,"Puff pastry, frozen, ready-to-bake, baked",1,SWEET_002,ingredient,puff pastry sheet
+18302,yes,APPLEPIE,Pie Apple,"Pie, apple, prepared from recipe",1,SWEET_001,canonical,
+18304,yes,PIEBANANACREAM,Pies Banana Cream,"Pie, banana cream, prepared from recipe",1,SWEET_003,canonical,
+18306,yes,PIEBLUEBERRY,Pies Blueberry,"Pie, blueberry, prepared from recipe",1,SWEET_004,canonical,
+18309,yes,PIECHERRY,Pies Cherry,"Pie, cherry, prepared from recipe",1,SWEET_005,canonical,
+18310,yes,PIECHOCOLATE,Pies Chocolate,"Pie, chocolate creme, commercially prepared",1,SWEET_013,canonical,
+18314,NO,,,,1,SWEET_014,canonical,
+18317,NO,,,,1,SWEET_015,canonical,
+18321,yes,PIELEMON,Pies Lemon,"Pie, lemon meringue, prepared from recipe",1,SWEET_006,canonical,
+18322,yes,PIEMINCE,Pies Mince,"Pie, mince, prepared from recipe",1,SWEET_007,canonical,
+18323,yes,PIEPEACH,Pies Peach,"Pie, peach",1,SWEET_008,canonical,
+18325,yes,PIEPECAN,Pies Pecan,"Pie, pecan, prepared from recipe",1,SWEET_009,canonical,
+18327,yes,PIEPUMPKIN,Pies Pumpkin,"Pie, pumpkin, prepared from recipe",1,SWEET_010,canonical,
+18328,yes,PIEVANILLACREAM,Pies Vanilla Cream,"Pie, vanilla cream, prepared from recipe",1,SWEET_011,canonical,
+18354,yes,APPLESTRUDEL,Apple Strudel,"Strudel, apple",1,SWEET_002,canonical,
+18369,NO,,,"Leavening agents, baking powder, double-acting, sodium aluminum sulfate",9,SWEET_012;SWEET_016;SWEET_017;SWEET_018;SWEET_020;SWEET_022;SWEET_023;SWEET_027;SWEET_028,ingredient,baking powder
+18372,yes,BAKINGSODA,Baking Soda,"Leavening agents, baking soda",2,SWEET_021;SWEET_027,ingredient,baking soda
+18373,yes,CREAMOFTARTAR,Cream of Tartar,"Leavening agents, cream of tartar",2,SWEET_024;SWEET_025,ingredient,cream of tartar
+19080,yes,CANDCHOCSEMI,Candies Chos Semisweet,"Candies, semisweet chocolate",2,SWEET_012;SWEET_013,ingredient,semisweet chocolate
+19165,NO,,,"Cocoa, dry powder, unsweetened",3,SWEET_013;SWEET_019;SWEET_020,ingredient,unsweetened cocoa powder
+19304,yes,MOLASSES,Molasses,Molasses,1,SWEET_021,ingredient,molasses
+19334,yes,SUGARBROWN,Brown Sugar,"Sugars, brown",6,SWEET_002;SWEET_007;SWEET_009;SWEET_021;SWEET_022;SWEET_027,ingredient,brown sugar
+19335,yes,SUGAR,Sugar,"Sugars, granulated",32,SWEET_001;SWEET_002;SWEET_003;SWEET_004;SWEET_005;SWEET_006;SWEET_007;SWEET_008;SWEET_010;SWEET_011;SWEET_012;SWEET_013;SWEET_014;SWEET_015;SWEET_016;SWEET_017;SWEET_018;SWEET_020;SWEET_022;SWEET_023;SWEET_024;SWEET_025;SWEET_026;SWEET_027;SWEET_028,ingredient,sugar
+19336,NO,,,"Sugars, powdered",6,SWEET_003;SWEET_011;SWEET_013;SWEET_014;SWEET_019;SWEET_020,ingredient,powdered sugar
+19350,yes,SYRUPCORNLIGHT,Light Corn Syrup,"Syrups, corn, light",2,SWEET_009;SWEET_017,ingredient,light corn syrup
+19409,NO,,,,1,SWEET_019,canonical,
+20027,yes,CORNSTARCH,Cornstarch,Cornstarch,10,SWEET_001;SWEET_003;SWEET_004;SWEET_005;SWEET_006;SWEET_008;SWEET_011;SWEET_012;SWEET_013;SWEET_014,ingredient,cornstarch
+20081,NO,,,"Wheat flour, white, all-purpose, enriched, bleached",28,SWEET_001;SWEET_002;SWEET_003;SWEET_004;SWEET_005;SWEET_006;SWEET_007;SWEET_008;SWEET_009;SWEET_010;SWEET_011;SWEET_012;SWEET_014;SWEET_015;SWEET_016;SWEET_017;SWEET_018;SWEET_020;SWEET_021;SWEET_022;SWEET_023;SWEET_027;SWEET_028,ingredient,all-purpose enriched white flour
+20084,NO,,,"Wheat flour, white, cake, enriched",4,SWEET_018;SWEET_020;SWEET_024;SWEET_025,ingredient,cake flour

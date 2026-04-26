@@ -1,0 +1,29 @@
+recipe_id,recipe_name,status,canonical_ndb_no,in_food_portions_csv,csv_word,csv_display
+SWEET_001,Pie Apple,approved,18302,yes,APPLEPIE,Pie Apple
+SWEET_002,Apple Strudel,approved,18354,yes,APPLESTRUDEL,Apple Strudel
+SWEET_003,Pie Banana Cream,approved,18304,yes,PIEBANANACREAM,Pies Banana Cream
+SWEET_004,Pie Blueberry,approved,18306,yes,PIEBLUEBERRY,Pies Blueberry
+SWEET_005,Pie Cherry,approved,18309,yes,PIECHERRY,Pies Cherry
+SWEET_006,Pie Lemon Meringue,approved,18321,yes,PIELEMON,Pies Lemon
+SWEET_007,Pie Mince,approved,18322,yes,PIEMINCE,Pies Mince
+SWEET_008,Pie Peach,approved,18323,yes,PIEPEACH,Pies Peach
+SWEET_009,Pecan Pie,approved,18325,yes,PIEPECAN,Pies Pecan
+SWEET_010,Pumpkin Pie,approved,18327,yes,PIEPUMPKIN,Pies Pumpkin
+SWEET_011,Vanilla Cream Pie,approved,18328,yes,PIEVANILLACREAM,Pies Vanilla Cream
+SWEET_012,Boston Cream Pie,approved,18090,yes,PIEBOSTONCREAM,Pies Boston Cream
+SWEET_013,Chocolate Cream Pie,approved,18310,yes,PIECHOCOLATE,Pies Chocolate
+SWEET_014,Coconut Cream Pie,approved,18314,NO,,
+SWEET_015,Egg Custard Pie,approved,18317,NO,,
+SWEET_016,White Cake (No Frosting),approved,18139,yes,CAKEWHITE,Cake White no Frosting
+SWEET_017,White Cake with Coconut Frosting,approved,18102,yes,CAKEWHITECOCONUTFROSTING,Cake White Coconut Frosting
+SWEET_018,Yellow Cake (No Frosting),approved,18146,NO,,
+SWEET_019,Chocolate Glaze with Butter,approved,19409,NO,,
+SWEET_020,Yellow Cake with Chocolate Glaze,approved,18140,yes,CAKEYELLOWCHOCOLATEFROSTING,Cake Yellow Choc Frosting
+SWEET_021,Gingerbread,approved,18116,yes,CAKEGINGERBREAD,Cake Gingerbread
+SWEET_022,Pineapple Upside-Down Cake,approved,18119,yes,CAKEPINEAPPLE,Cake Pineapple
+SWEET_023,Shortcake (Biscuit-Type),approved,18126,yes,CAKESHORTCAKE,Cake Shortcake
+SWEET_024,Hot-Water Sponge Cake,approved,18134,yes,CAKESPONGE,Cake Sponge
+SWEET_025,Angel Food Cake,approved,18086,yes,CAKEANGELFOOD,Cake Angel Food
+SWEET_026,Cheesecake (NY-Style),approved,18147,yes,CAKECHEESECAKE,Cake Cheesecake
+SWEET_027,Sour Cream Coffee Cake,approved,18104,yes,CAKECOFFEECAKE,Cake Coffee
+SWEET_028,Pound Cake,approved,18120,yes,CAKEPOUND,Cake Pound
