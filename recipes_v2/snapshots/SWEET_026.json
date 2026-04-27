@@ -1,7 +1,7 @@
 {
   "recipe_id": "SWEET_026",
-  "recorded_at": "2026-04-25T19:37:24.868749+00:00",
-  "fingerprint": "7d1eb4d3cb2402d906d47394e84fcd17adb8c5fe559416710ebf75966e99d7e5",
+  "recorded_at": "2026-04-27T15:52:39.416370+00:00",
+  "fingerprint": "e60d93ae1fe86be81afdb0034fe80c1b588ed91b5cfcec43fdba0d50f891a34c",
   "disclosure": "Authentic homemade NY-style cheesecake. NOT validated against USDA SR Legacy NDB 18147 because the canonical entry reflects commercially prepared cheesecake with industrial gums, modified starch, gelatin, and reduced-egg formulations (cholesterol 55 mg/100g vs ~121 mg/100g for the authentic full-fat recipe; sodium 438 mg/100g vs ~263 mg/100g without preservatives). Built entirely from USDA single-NDB ingredients (graham crackers, butter, cream cheese, sour cream, sugar, eggs, vanilla, salt) with no composite components.",
   "canonical_payload": {
     "recipe_id": "SWEET_026",
@@ -13,12 +13,12 @@
     "ingredients": [
       {
         "ingredient_key": "butter_unsalted",
-        "grams": 85.0,
+        "grams": 70.0,
         "is_optional": false
       },
       {
         "ingredient_key": "cream_cheese",
-        "grams": 907.0,
+        "grams": 908.0,
         "is_optional": false
       },
       {
@@ -32,8 +32,23 @@
         "is_optional": false
       },
       {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 16.0,
+        "is_optional": false
+      },
+      {
         "ingredient_key": "graham_crackers",
-        "grams": 170.0,
+        "grams": 150.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "lemon_peel_raw",
+        "grams": 2.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 0.75,
         "is_optional": false
       },
       {
@@ -48,7 +63,7 @@
       },
       {
         "ingredient_key": "sugar_granulated",
-        "grams": 37.0,
+        "grams": 25.0,
         "is_optional": false
       },
       {
@@ -58,7 +73,7 @@
       },
       {
         "ingredient_key": "vanilla_extract",
-        "grams": 8.4,
+        "grams": 4.2,
         "is_optional": false
       }
     ],
@@ -66,10 +81,10 @@
       "Position a rack in the lower-middle of the oven and preheat to 325\u00b0F.",
       "Use a springform pan protector, a leakproof springform pan, or wrap the outside bottom and sides of a 9-inch springform pan tightly with two layers of heavy-duty aluminum foil to prevent water from seeping in during the water bath.",
       "If not using a nonstick, non-toxic springform pan, line the bottom and sides with parchment paper.",
-      "Make the crust: In a medium bowl, stir together the crushed graham crackers and 3 tablespoons of sugar. Drizzle in the melted butter and stir with a fork until the crumbs are evenly moistened and resemble wet sand.",
+      "Make the crust: In a medium bowl, stir together the crushed graham crackers and 2 tablespoons of sugar. Drizzle in the melted butter and stir with a fork until the crumbs are evenly moistened and resemble wet sand.",
       "Transfer the crumb mixture to the springform pan. Press firmly and evenly across the bottom and about 1/2 inch up the sides using the flat bottom of a measuring cup. Bake the crust for 10 minutes, then transfer to a rack to cool while you prepare the filling. Maintain an oven temperature of 325\u00b0F.",
       "Make the filling: In the bowl of a stand mixer fitted with the paddle attachment (or a large bowl with a hand mixer), beat the room-temperature cream cheese on medium-low speed until completely smooth and lump-free, about 2\u20133 minutes. Scrape down the bowl and paddle thoroughly.",
-      "Add the 1 1/4 cups sugar and salt and beat on medium-low until smooth and creamy, about 2 minutes. Scrape down again. Beat in the sour cream and vanilla just until incorporated.",
+      "Add the 1 1/4 cups sugar and salt and beat on medium-low until smooth and creamy, about 2 minutes. Scrape down again. Add the flour and lemon zest and beat until just combined. Beat in the sour cream and vanilla just until incorporated.",
       "With the mixer on low speed, add the whole eggs one at a time, beating just until each is incorporated and scraping down between additions. Finally beat in the extra yolk on low. Do not overbeat \u2014 overmixing incorporates air, which causes cracks during baking.",
       "Pour the filling into the cooled crust and gently smooth the top. Tap the pan gently on the counter a few times to release any large air bubbles.",
       "Set up the water bath: Place the springform pan in a large roasting pan. Pour very hot tap water into the roasting pan to come about 1 inch up the sides of the foil-wrapped springform \u2014 the water bath ensures gentle, even baking and prevents cracking.",
@@ -90,27 +105,27 @@
     "sodium": 438.0
   },
   "built": {
-    "raw_grams_total": 1790.9,
-    "cooked_grams_total": 1731.06,
+    "raw_grams_total": 1759.45,
+    "cooked_grams_total": 1699.73,
     "whole_cooked": {
-      "cal": 6218.272,
-      "pro": 98.5032,
-      "fat": 445.1236,
-      "carb": 477.5194,
-      "fib": 5.78,
-      "h2o": 688.1377,
-      "sug": 368.6445,
-      "sodium": 4550.436
+      "cal": 6028.866,
+      "pro": 98.7795,
+      "fat": 431.3418,
+      "carb": 462.0343,
+      "fib": 5.744,
+      "h2o": 686.7458,
+      "sug": 351.3224,
+      "sodium": 4750.753
     },
     "per100g_cooked": {
-      "cal": 359.2172,
-      "pro": 5.6903,
-      "fat": 25.7139,
-      "carb": 27.5853,
-      "fib": 0.3339,
-      "h2o": 39.7523,
-      "sug": 21.2959,
-      "sodium": 262.8696
+      "cal": 354.6949,
+      "pro": 5.8115,
+      "fat": 25.377,
+      "carb": 27.1828,
+      "fib": 0.3379,
+      "h2o": 40.4032,
+      "sug": 20.6693,
+      "sodium": 279.5
     }
   }
 }

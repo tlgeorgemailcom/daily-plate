@@ -331,6 +331,19 @@ SWEET_025,3,flour_cake_white_enriched,1 cup,114,110,118,cake,false,sifted cake f
 SWEET_025,4,cream_of_tartar,1 1/2 teaspoons,4.5,4,5,cake,false,cream of tartar
 SWEET_025,5,salt_table,1/4 teaspoon,1.5,1.4,1.6,cake,false,table salt
 SWEET_025,6,vanilla_extract,1 1/2 teaspoons,6.3,6,7,cake,false,pure vanilla extract
+SWEET_026,1,graham_crackers,1 1/2 cups crushed,150.0,120.0,200.0,crust,false,graham cracker crumbs (about 12 crackers)
+SWEET_026,2,sugar_granulated,2 tablespoons,25.0,15.0,50.0,crust,false,
+SWEET_026,3,butter_unsalted,5 tablespoons,70.0,55.0,115.0,crust,false,melted
+SWEET_026,4,salt_table,pinch,0.75,0.0,2.0,crust,false,
+SWEET_026,5,cream_cheese,32 oz (4 blocks),908.0,680.0,1135.0,filling,false,"full-fat cream cheese, room temperature"
+SWEET_026,6,sugar_granulated,1 1/4 cups,250.0,200.0,400.0,filling,false,
+SWEET_026,7,salt_table,1/4 teaspoon,1.5,0.5,4.0,filling,false,
+SWEET_026,8,sour_cream,1/2 cup,115.0,80.0,230.0,filling,false,"full-fat sour cream, room temperature"
+SWEET_026,9,vanilla_extract,1 teaspoon,4.2,3.0,12.0,filling,false,
+SWEET_026,10,egg_whole_raw,4 large eggs,200.0,150.0,300.0,filling,false,"room temperature"
+SWEET_026,11,egg_yolk_raw,1 large yolk,17.0,15.0,20.0,filling,false,
+SWEET_026,12,flour_ap_white_enriched_bleached,2 tablespoons,16.0,8.0,24.0,filling,false,all-purpose flour
+SWEET_026,13,lemon_peel_raw,1 teaspoon,2.0,0.0,6.0,filling,false,freshly grated lemon zest
 SWEET_030,1,butter_unsalted,1/2 cup + 6 tbsp,199,180,220,,false,
 SWEET_030,2,sugar_brown,3/4 cup packed,165,145,185,,false,
 SWEET_030,3,sugar_granulated,1/2 cup,100,85,115,,false,
