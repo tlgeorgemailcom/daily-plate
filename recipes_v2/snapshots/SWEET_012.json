@@ -1,7 +1,7 @@
 {
   "recipe_id": "SWEET_012",
-  "recorded_at": "2026-04-25T13:56:22.631918+00:00",
-  "fingerprint": "d66761bee31eb8831ef04575003573c9b1ef4cf48cc14a2bbfe7c105b0fc365a",
+  "recorded_at": "2026-04-27T13:39:00.314467+00:00",
+  "fingerprint": "822074f48e8aadf0fc5ebd5c69e59ada4222380a4d167cd25f799bfcab6b0658",
   "disclosure": "Authentic homemade Boston cream pie spec: 2-layer butter yellow cake, vanilla pastry cream filling, semisweet chocolate ganache glaze. NOT validated against USDA SR Legacy NDB 18090 because that record is for a commercially prepared sponge-cake version with much less fat and protein and much more glaze sugar; no homemade butter-cake recipe can represent it. Free-tier nutrient values are computed from the ingredients in this recipe; paid-tier values may substitute canonical fields where appropriate.",
   "canonical_payload": {
     "recipe_id": "SWEET_012",
@@ -43,12 +43,12 @@
       },
       {
         "ingredient_key": "egg_whole_raw",
-        "grams": 100.0,
+        "grams": 150.0,
         "is_optional": false
       },
       {
         "ingredient_key": "egg_yolk_raw",
-        "grams": 34.0,
+        "grams": 51.0,
         "is_optional": false
       },
       {
@@ -58,17 +58,17 @@
       },
       {
         "ingredient_key": "heavy_cream",
-        "grams": 115.0,
+        "grams": 60.0,
         "is_optional": false
       },
       {
         "ingredient_key": "milk_whole",
-        "grams": 122.0,
+        "grams": 183.0,
         "is_optional": false
       },
       {
         "ingredient_key": "milk_whole",
-        "grams": 244.0,
+        "grams": 366.0,
         "is_optional": false
       },
       {
@@ -83,7 +83,7 @@
       },
       {
         "ingredient_key": "sugar_granulated",
-        "grams": 50.0,
+        "grams": 67.0,
         "is_optional": false
       },
       {
@@ -127,27 +127,27 @@
     "sodium": 254.0
   },
   "built": {
-    "raw_grams_total": 1341.75,
-    "cooked_grams_total": 1298.66,
+    "raw_grams_total": 1553.75,
+    "cooked_grams_total": 1496.54,
     "whole_cooked": {
-      "cal": 4166.31,
-      "pro": 58.1602,
-      "fat": 222.0424,
-      "carb": 505.9574,
+      "cal": 4282.97,
+      "pro": 71.3389,
+      "fat": 217.4127,
+      "carb": 531.2013,
       "fib": 11.899,
-      "h2o": 495.5813,
-      "sug": 335.4068,
-      "sodium": 1891.39
+      "h2o": 657.9185,
+      "sug": 360.2885,
+      "sodium": 2034.56
     },
     "per100g_cooked": {
-      "cal": 320.8171,
-      "pro": 4.4785,
-      "fat": 17.0979,
-      "carb": 38.9601,
-      "fib": 0.9163,
-      "h2o": 38.1611,
-      "sug": 25.8272,
-      "sodium": 145.6421
+      "cal": 286.1915,
+      "pro": 4.7669,
+      "fat": 14.5277,
+      "carb": 35.4953,
+      "fib": 0.7951,
+      "h2o": 43.9626,
+      "sug": 24.0748,
+      "sodium": 135.951
     }
   }
 }
