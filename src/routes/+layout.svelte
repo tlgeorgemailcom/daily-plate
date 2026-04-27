@@ -38,6 +38,7 @@
   import { syncGameStateFromCloud } from '$lib/stores/gameStateStore';
   import { syncAllGameDataFromCloud, enableAutoSync } from '$lib/stores/gameDataSync';
   import StartScreen from '$lib/components/StartScreen.svelte';
+  import NutritionLegendDialog from '$lib/components/NutritionLegendDialog.svelte';
   import LoginModal from '$lib/farmers-basket/LoginModal.svelte';
   import UpgradeModal from '$lib/components/UpgradeModal.svelte';
   
@@ -403,6 +404,8 @@
     </div>
   </div>
 {/if}
+
+<NutritionLegendDialog />
 
 <style>
   .app {

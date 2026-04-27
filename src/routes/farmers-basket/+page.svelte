@@ -18,8 +18,10 @@
   import Toolbar from '$lib/farmers-basket/Toolbar.svelte';
   import Barrier from '$lib/farmers-basket/Barrier.svelte';
   import RecipeBook from '$lib/farmers-basket/RecipeBook.svelte';
+  import RecipeBadges from '$lib/farmers-basket/RecipeBadges.svelte';
   import ShareRecipe from '$lib/farmers-basket/ShareRecipe.svelte';
   import FoodIcon from '$lib/farmers-basket/FoodIcon.svelte';
+  import { nutritionLegendModal } from '$lib/stores/nutritionLegendStore';
   import { TOOL_EMOJI, ANIMAL_EMOJI } from '$lib/farmers-basket/types';
   import type { ToolType, FoodType } from '$lib/farmers-basket/types';
   
@@ -224,7 +226,7 @@
   
   function handleKeyDown(e: KeyboardEvent) {
     // Skip game controls when a modal is open
-    if (showRecipeBook || showShareRecipe) {
+    if (showRecipeBook || showShareRecipe || get(nutritionLegendModal).open) {
       return;
     }
     
@@ -955,6 +957,7 @@
             <div class="recipe-meta-win">
               {#if game.currentLevel.prepTime}<span>⏱️ {game.currentLevel.prepTime}</span>{/if}
               {#if game.currentLevel.servings}<span>🍽️ {game.currentLevel.servings}</span>{/if}
+              <RecipeBadges sr28Rule={game.currentLevel.sr28Rule} isCommunityRecipe={game.currentLevel.isCommunityRecipe} compact={true} />
             </div>
             
             <div class="ingredients-section">
@@ -966,11 +969,7 @@
                   {/each}
                 </ul>
                 {#if game.currentLevel.nutritionJson}
-                  {@const srRule = game.currentLevel.sr28Rule ?? ''}
-                  {@const ruleIcon = srRule === 'Rule A' ? '🔬' : srRule === 'Rule B' ? '🧪' : srRule === 'Rule C' ? '📊' : srRule === 'Rule D' ? '📐' : '🔬'}
-                  {@const ruleTip = srRule === 'Rule A' ? 'Rule A: Full USDA SR28 lab data for this dish' : srRule === 'Rule B' ? 'Rule B: USDA SR28 data + recipe calculation for missing values' : srRule === 'Rule C' ? 'Rule C: Calculated from ingredients — commercial USDA data too different from homemade' : srRule === 'Rule D' ? 'Rule D: Calculated from ingredients — no USDA match exists' : ''}
                   <p class="recipe-nutrition">
-                    <span class="nutrition-rule-badge" title={ruleTip}>{ruleIcon}</span>
                     Per serving: {game.currentLevel.nutritionJson.perServing.cal} cal&nbsp;|&nbsp;{game.currentLevel.nutritionJson.perServing.pro}g protein&nbsp;|&nbsp;{game.currentLevel.nutritionJson.perServing.fat}g fat&nbsp;|&nbsp;{game.currentLevel.nutritionJson.perServing.carb}g carbs&nbsp;|&nbsp;{game.currentLevel.nutritionJson.perServing.fib}g fiber&nbsp;|&nbsp;{game.currentLevel.nutritionJson.perServing.sug}g sugar&nbsp;|&nbsp;{game.currentLevel.nutritionJson.perServing.h2o}g water
                   </p>
                 {/if}
@@ -1667,14 +1666,6 @@
     padding: 5px 10px;
     text-align: center;
     line-height: 1.5;
-  }
-
-  .nutrition-rule-badge {
-    display: inline-block;
-    margin-right: 4px;
-    cursor: help;
-    font-size: 0.9rem;
-    vertical-align: middle;
   }
   
   .ingredient-icons-win {

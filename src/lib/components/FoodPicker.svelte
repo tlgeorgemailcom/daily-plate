@@ -2,11 +2,15 @@
   import { FOODS, GROUP_COLORS, GROUP_NAMES, type Food, type FoodGroup } from '$lib/data/food-portions';
   import { createEventDispatcher } from 'svelte';
   import { customFoods, type CustomFood } from '$lib/stores/customFoodsStore';
+  import { getRecipeLegendItems, type NutritionLegendKey } from '$lib/farmers-basket/nutrition-legend';
+  import { openNutritionLegend } from '$lib/stores/nutritionLegendStore';
 
   export type RecipeFood = Food & {
     isRecipe: true;
     gramsPerServing: number;
     recipeType?: 'developer' | 'community';
+    sr28Rule?: 'Rule A' | 'Rule B' | 'Rule C' | 'Rule D' | null;
+    isCommunityRecipe?: boolean;
   };
   type SearchScope = 'all' | 'baby';
 
@@ -103,6 +107,19 @@
     if (food.recipeType === 'developer') return '🧪';
     if (food.recipeType === 'community') return '👥';
     return '🍽️';
+  }
+
+  function recipeSourceBadges(food: RecipeFood) {
+    return getRecipeLegendItems({
+      sr28Rule: food.sr28Rule ?? null,
+      isCommunityRecipe: food.isCommunityRecipe ?? food.recipeType === 'community'
+    });
+  }
+
+  function openSourceLegend(key: NutritionLegendKey, event: MouseEvent) {
+    event.preventDefault();
+    event.stopPropagation();
+    openNutritionLegend(key);
   }
 
   function sortAlphabetically<T extends Food>(foods: T[]): T[] {
@@ -383,27 +400,46 @@
     {/if}
 
     {#each filteredFoods() as food}
-      <button 
-        class="food-item" 
-        class:custom-food={'isCustom' in food && food.isCustom}
-        class:recipe-food={'isRecipe' in food && food.isRecipe}
-        onclick={() => selectFood(food)}
-        onpointerdown={(e) => handlePointerDown(e, food)}
-        onpointermove={handlePointerMove}
-        onpointerup={handlePointerUp}
-        onpointerleave={handlePointerLeave}
-        onpointercancel={handlePointerUp}
-        oncontextmenu={(e) => e.preventDefault()}
-      >
-        <span class="food-name">
-          {'isCustom' in food && food.isCustom ? '🏠 ' : ''}{'isRecipe' in food && food.isRecipe ? `${recipeIcon(food as RecipeFood)} ` : ''}{food.display}
-        </span>
-        <span class="food-cal">
-          {'isRecipe' in food && food.isRecipe
-            ? `${Math.round(food.cal * (food as RecipeFood).gramsPerServing / 100)} cal/serving`
-            : `${Math.round(food.cal)} cal/100g`}
-        </span>
-      </button>
+      <div class="food-row" class:recipe-row={'isRecipe' in food && food.isRecipe}>
+        <button 
+          class="food-item" 
+          class:custom-food={'isCustom' in food && food.isCustom}
+          class:recipe-food={'isRecipe' in food && food.isRecipe}
+          onclick={() => selectFood(food)}
+          onpointerdown={(e) => handlePointerDown(e, food)}
+          onpointermove={handlePointerMove}
+          onpointerup={handlePointerUp}
+          onpointerleave={handlePointerLeave}
+          onpointercancel={handlePointerUp}
+          oncontextmenu={(e) => e.preventDefault()}
+        >
+          <span class="food-name">
+            {'isCustom' in food && food.isCustom ? '🏠 ' : ''}{'isRecipe' in food && food.isRecipe ? `${recipeIcon(food as RecipeFood)} ` : ''}{food.display}
+          </span>
+          <span class="food-cal">
+            {'isRecipe' in food && food.isRecipe
+              ? `${Math.round(food.cal * (food as RecipeFood).gramsPerServing / 100)} cal/serving`
+              : `${Math.round(food.cal)} cal/100g`}
+          </span>
+        </button>
+
+        {#if 'isRecipe' in food && food.isRecipe}
+          <div class="recipe-source-badges">
+            {#each recipeSourceBadges(food as RecipeFood) as badge (badge.key)}
+              <a
+                href="#recipe-badge-guide"
+                class="source-badge"
+                class:shared={badge.key === 'shared'}
+                onclick={(event) => openSourceLegend(badge.key, event)}
+                title={badge.title}
+                aria-label={badge.title}
+              >
+                {badge.label}
+              </a>
+            {/each}
+          </div>
+        {/if}
+      </div>
     {/each}
 
     {#if canUseRemoteSearch && !remoteRequested && filteredFoods().length > 0}
@@ -437,7 +473,7 @@
         <span class="usda-desc">{tooltipFood.desc}</span>
         <span class="nutrient-info">{Math.round(tooltipFood.cal)} cal · {tooltipFood.pro}g protein · {tooltipFood.fat}g fat · {tooltipFood.carb}g carbs per 100g</span>
         <span class="group-info">Groups: {tooltipFood.groups.join(', ')}</span>
-        <span class="ndb-info">{'isRecipe' in tooltipFood ? `${recipeIcon(tooltipFood as RecipeFood)} ${(tooltipFood as RecipeFood).recipeType === 'developer' ? 'Developer recipe' : (tooltipFood as RecipeFood).recipeType === 'community' ? 'Community recipe' : 'Recipe'}` : `USDA NDB#${tooltipFood.ndb}`}</span>
+        <span class="ndb-info">{'isRecipe' in tooltipFood ? `${recipeIcon(tooltipFood as RecipeFood)} ${(tooltipFood as RecipeFood).recipeType === 'developer' ? 'Developer recipe' : (tooltipFood as RecipeFood).recipeType === 'community' ? 'Community recipe' : 'Recipe'} · ${recipeSourceBadges(tooltipFood as RecipeFood).map((b) => b.label).join(' · ')}` : `USDA NDB#${tooltipFood.ndb}`}</span>
       </p>
     </div>
   </div>
@@ -602,6 +638,70 @@
     transition: all 0.15s;
     -webkit-user-select: none;
     user-select: none;
+  }
+
+  .food-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .food-row .food-item {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .recipe-source-badges {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+
+  .source-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    inline-size: 52px;
+    padding: 4px 0;
+    border-radius: 999px;
+    border: 1px solid #93c5fd;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  }
+
+  .source-badge.shared {
+    border-color: #c4b5fd;
+    color: #6d28d9;
+    background: #f5f3ff;
+  }
+
+  .source-badge:hover {
+    background: #dbeafe;
+    border-color: #3b82f6;
+  }
+
+  .source-badge.shared:hover {
+    background: #ede9fe;
+    border-color: #8b5cf6;
+  }
+
+  .source-badge:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+  }
+
+  .source-badge.shared:focus-visible {
+    outline-color: #7c3aed;
   }
 
   .food-item:hover {

@@ -238,7 +238,8 @@ async function main() {
   if (ingredientRows.length === 0) throw new Error(`No ingredient rows found for ${recipeId}`);
 
   const dishRow = ingredientRows.find(row => row.row_type === 'dish');
-  if (!dishRow?.ndb_no) throw new Error(`Dish row with ndb_no not found for ${recipeId}`);
+  if (!dishRow) throw new Error(`Dish row not found for ${recipeId}`);
+  const hasCanonicalNdb = Boolean(dishRow.ndb_no);
 
   const servingsCount = parseServingsCount(recipeMeta.servings);
   if (!servingsCount) throw new Error(`Unable to parse servings count from recipes.csv for ${recipeId}`);
@@ -271,16 +272,29 @@ async function main() {
 
   const builtRow = await loadBuiltRecipe(localDb, recipeId);
   const builtNutrition = JSON.parse(String(builtRow.nutrition_json || '{}'));
-  const { whole: canonicalWhole, longDesc } = await loadCanonicalWhole(combooDb, dishRow.ndb_no, totalRecipeGrams);
+
+  let canonicalWhole, longDesc;
+  if (hasCanonicalNdb) {
+    ({ whole: canonicalWhole, longDesc } = await loadCanonicalWhole(combooDb, dishRow.ndb_no, totalRecipeGrams));
+  } else {
+    // No canonical NDB — build the whole from ingredient-computed nutrition
+    canonicalWhole = {};
+    for (const [builtKey, canonicalKey] of Object.entries(BUILT_TO_CANONICAL)) {
+      canonicalWhole[canonicalKey] = round2(Number(builtNutrition[builtKey] || 0));
+    }
+    longDesc = '';
+  }
 
   const mergedWhole = { ...canonicalWhole };
   const fallback = [];
-  for (const [builtKey, canonicalKey] of Object.entries(BUILT_TO_CANONICAL)) {
-    const builtValue = Number(builtNutrition[builtKey] || 0);
-    const canonicalValue = Number(canonicalWhole[canonicalKey] || 0);
-    if (isDefectiveCanonical(canonicalValue, builtValue)) {
-      mergedWhole[canonicalKey] = round2(builtValue);
-      fallback.push(canonicalKey);
+  if (hasCanonicalNdb) {
+    for (const [builtKey, canonicalKey] of Object.entries(BUILT_TO_CANONICAL)) {
+      const builtValue = Number(builtNutrition[builtKey] || 0);
+      const canonicalValue = Number(canonicalWhole[canonicalKey] || 0);
+      if (isDefectiveCanonical(canonicalValue, builtValue)) {
+        mergedWhole[canonicalKey] = round2(builtValue);
+        fallback.push(canonicalKey);
+      }
     }
   }
 
@@ -308,52 +322,62 @@ async function main() {
     nutrientVersion: NUTRIENT_VERSION,
     retentionModelVersion: RETENTION_MODEL_VERSION,
     sourceMatchVersion: SOURCE_MATCH_VERSION,
-    sourceNdbNo: dishRow.ndb_no,
-    sourceLongDesc: longDesc,
-    mergeBasis: 'whole_recipe'
+    sourceNdbNo: dishRow.ndb_no || null,
+    sourceLongDesc: longDesc || null,
+    mergeBasis: hasCanonicalNdb ? 'whole_recipe' : 'ingredient_build'
   };
 
-  const sourceKcal = round2(canonicalWhole.Energy_KCal || 0);
+  const sourceKcal = hasCanonicalNdb ? round2(canonicalWhole.Energy_KCal || 0) : 0;
   const reconstructedKcal = round2(Number(builtNutrition.kcal || 0));
-  const gapPct = sourceKcal === 0 ? null : round2(((reconstructedKcal - sourceKcal) / sourceKcal) * 100);
+  const gapPct = hasCanonicalNdb && sourceKcal !== 0
+    ? round2(((reconstructedKcal - sourceKcal) / sourceKcal) * 100)
+    : null;
 
-  const macroKeys = ['Energy_KCal', 'Protein', 'TotalLipidFat', 'Carbohydrate', 'Water'];
-  const macrosWithin5Pct = macroKeys.every((key) => {
-    const c = Number(canonicalWhole[key] || 0);
-    const b = key === 'Energy_KCal'
-      ? Number(builtNutrition.kcal || 0)
-      : key === 'Protein'
-        ? Number(builtNutrition.protein || 0)
-        : key === 'TotalLipidFat'
-          ? Number(builtNutrition.fat || 0)
-          : key === 'Carbohydrate'
-            ? Number(builtNutrition.carbs || 0)
-            : Number(builtNutrition.water || 0);
-    if (!c) return true;
-    return Math.abs((b - c) / c) <= 0.05;
-  });
-
-  const anomalyNames = [];
-  for (const [builtKey, canonicalKey] of Object.entries(BUILT_TO_CANONICAL)) {
-    const c = Number(canonicalWhole[canonicalKey] || 0);
-    const b = Number(builtNutrition[builtKey] || 0);
-    if (!c || !Number.isFinite(c) || !Number.isFinite(b)) continue;
-    if (Math.abs((b - c) / c) > 0.05 && !fallback.includes(canonicalKey)) {
-      anomalyNames.push(canonicalKey);
+  let gapStatus, validationNotes;
+  if (!hasCanonicalNdb) {
+    gapStatus = 'build_only';
+    validationNotes = [
+      'basis=ingredient_build',
+      'canonical_primary=false',
+      'no_canonical_ndb=true',
+      `sr28_rule=${String(recipeMeta.sr28_rule || 'unknown')}`
+    ].join('; ');
+  } else {
+    const macroKeys = ['Energy_KCal', 'Protein', 'TotalLipidFat', 'Carbohydrate', 'Water'];
+    const macrosWithin5Pct = macroKeys.every((key) => {
+      const c = Number(canonicalWhole[key] || 0);
+      const b = key === 'Energy_KCal'
+        ? Number(builtNutrition.kcal || 0)
+        : key === 'Protein'
+          ? Number(builtNutrition.protein || 0)
+          : key === 'TotalLipidFat'
+            ? Number(builtNutrition.fat || 0)
+            : key === 'Carbohydrate'
+              ? Number(builtNutrition.carbs || 0)
+              : Number(builtNutrition.water || 0);
+      if (!c) return true;
+      return Math.abs((b - c) / c) <= 0.05;
+    });
+    const anomalyNames = [];
+    for (const [builtKey, canonicalKey] of Object.entries(BUILT_TO_CANONICAL)) {
+      const c = Number(canonicalWhole[canonicalKey] || 0);
+      const b = Number(builtNutrition[builtKey] || 0);
+      if (!c || !Number.isFinite(c) || !Number.isFinite(b)) continue;
+      if (Math.abs((b - c) / c) > 0.05 && !fallback.includes(canonicalKey)) {
+        anomalyNames.push(canonicalKey);
+      }
     }
+    gapStatus = fallback.length > 0
+      ? 'fallback_used'
+      : (macrosWithin5Pct ? 'strong_match' : 'needs_review');
+    validationNotes = [
+      'basis=whole_recipe',
+      'canonical_primary=true',
+      `fallback=${fallback.length ? fallback.join(',') : 'none'}`,
+      `major_anomalies=${anomalyNames.length ? anomalyNames.join(',') : 'none'}`,
+      `macros_within_5pct=${macrosWithin5Pct}`
+    ].join('; ');
   }
-
-  const gapStatus = fallback.length > 0
-    ? 'fallback_used'
-    : (macrosWithin5Pct ? 'strong_match' : 'needs_review');
-
-  const validationNotes = [
-    'basis=whole_recipe',
-    'canonical_primary=true',
-    `fallback=${fallback.length ? fallback.join(',') : 'none'}`,
-    `major_anomalies=${anomalyNames.length ? anomalyNames.join(',') : 'none'}`,
-    `macros_within_5pct=${macrosWithin5Pct}`
-  ].join('; ');
 
   const existing = await loadRemoteExisting(remoteDb, recipeId);
 

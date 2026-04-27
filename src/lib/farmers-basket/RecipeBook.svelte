@@ -3,6 +3,7 @@
   import { canUseStorage } from '$lib/stores/playerStore';
   import type { Level, FoodType, DietaryCategory } from './types';
   import FoodIcon from './FoodIcon.svelte';
+  import RecipeBadges from './RecipeBadges.svelte';
   import RecipeForm, { type RecipeFormData, type RecipeIngredient } from './RecipeForm.svelte';
   import { clearOverrideCache } from './level-overrides';
   
@@ -1433,6 +1434,7 @@
         <div class="cotd-card">
           <h3 class="cotd-name">{todaysRecipe.name}</h3>
           <span class="cotd-category">{todaysRecipe.category}</span>
+          <RecipeBadges sr28Rule={todaysRecipe.sr28Rule} isCommunityRecipe={todaysRecipe.isCommunityRecipe} compact={true} />
           
           {#if todaysRecipe.imageUrl}
             <div class="cotd-image-container">
@@ -1546,8 +1548,9 @@
             {#if playerEditSuccess}
               <span class="save-success">✓ Submitted for re-approval!</span>
             {/if}
+            <RecipeBadges sr28Rule={selectedLevel.sr28Rule} isCommunityRecipe={selectedLevel.isCommunityRecipe} compact={true} />
             {#if selectedLevel.nutritionJson}
-              <p class="recipe-nutrition recipe-nutrition-edit">🔬 Per serving: {selectedLevel.nutritionJson.perServing.cal} cal&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.pro}g protein&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.fat}g fat&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.carb}g carbs&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.fib}g fiber&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.sug}g sugar&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.h2o}g water</p>
+              <p class="recipe-nutrition recipe-nutrition-edit">Per serving: {selectedLevel.nutritionJson.perServing.cal} cal&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.pro}g protein&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.fat}g fat&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.carb}g carbs&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.fib}g fiber&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.sug}g sugar&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.h2o}g water</p>
             {/if}
           </div>
 
@@ -1719,6 +1722,7 @@
             <span class="recipe-number">#{selectedLevel.levelNum}</span>
             <h3 class="recipe-name">{selectedLevel.name}</h3>
             <span class="recipe-category">{selectedLevel.category}</span>
+            <RecipeBadges sr28Rule={selectedLevel.sr28Rule} isCommunityRecipe={selectedLevel.isCommunityRecipe} compact={true} />
           </div>
           
           {#if selectedLevel.imageUrl}
@@ -1763,7 +1767,7 @@
                   {/each}
                 </div>
                 {#if selectedLevel.nutritionJson}
-                  <p class="recipe-nutrition">🔬 {formatPerServingLabel(selectedLevel)}: {selectedLevel.nutritionJson.perServing.cal} cal&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.pro}g protein&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.fat}g fat&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.carb}g carbs&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.fib}g fiber&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.sug}g sugar&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.h2o}g water</p>
+                  <p class="recipe-nutrition">{formatPerServingLabel(selectedLevel)}: {selectedLevel.nutritionJson.perServing.cal} cal&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.pro}g protein&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.fat}g fat&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.carb}g carbs&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.fib}g fiber&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.sug}g sugar&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.h2o}g water</p>
                 {/if}
               {/if}
               
@@ -1945,6 +1949,7 @@
                     {#if isCurrent}🎮{:else if isCompleted}✓{:else}🔒{/if}
                   </span>
                 </button>
+                <RecipeBadges sr28Rule={level.sr28Rule} isCommunityRecipe={level.isCommunityRecipe} compact={true} />
                 {#if level.isCommunityRecipe}
                   <button class="edit-icon-btn" onclick={(e) => handleEditIconClick(level, e)} title="Edit recipe" aria-label="Edit recipe">
                     ✏️
@@ -2013,6 +2018,7 @@
                               {/if}
                           </span>
                         </button>
+                        <RecipeBadges sr28Rule={level.sr28Rule} isCommunityRecipe={level.isCommunityRecipe} compact={true} />
                         {#if level.isCommunityRecipe}
                           <button class="edit-icon-btn" onclick={(e) => handleEditIconClick(level, e)} title="Edit recipe" aria-label="Edit recipe">
                             ✏️
@@ -2815,6 +2821,10 @@
     gap: 12px;
     flex-wrap: wrap;
   }
+
+  .recipe-header :global(.recipe-badges) {
+    margin-left: auto;
+  }
   
   .recipe-number {
     background: #8B4513;
@@ -3399,6 +3409,11 @@
     align-items: stretch;
     gap: 4px;
     margin-bottom: 2px;
+  }
+
+  .recipe-tab-row :global(.recipe-badges) {
+    align-self: center;
+    flex-shrink: 0;
   }
 
   .recipe-tab-row .recipe-tab {

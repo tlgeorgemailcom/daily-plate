@@ -420,6 +420,8 @@
 
       recipeFoods = data.map((r: {
         id: string; name: string; category?: string | null; type?: 'community' | 'developer'; gramsPerServing: number;
+        sr28Rule?: 'Rule A' | 'Rule B' | 'Rule C' | 'Rule D' | null;
+        isCommunityRecipe?: boolean;
         cal: number; pro: number; fat: number;
         carb: number; fib: number; h2o: number; sug: number;
       }): RecipeFood => ({
@@ -444,6 +446,8 @@
         isRecipe: true,
         gramsPerServing: r.gramsPerServing,
         recipeType: r.type,
+        sr28Rule: r.sr28Rule ?? null,
+        isCommunityRecipe: r.isCommunityRecipe ?? r.type === 'community',
       }));
     } catch {
       if (loadVersion === recipeLoadVersion) {
