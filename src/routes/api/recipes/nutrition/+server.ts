@@ -21,12 +21,10 @@ const basketLevelById = new Map(
     .map((level) => [level.id, level])
 );
 
-export const GET: RequestHandler = async ({ url }) => {
-  const blockTurso = url.searchParams.get('blockTurso') === '1';
+export const GET: RequestHandler = async () => {
   // ── 1. Player recipes from Turso (approved, nutritionally linked) ────────
   let communityRecipes: Array<Record<string, unknown>> = [];
   try {
-    if (blockTurso) throw new Error('Turso blocked for local fallback test');
     const rows = await queryAll(`
       SELECT id, title, category, nutrition_json
       FROM player_recipes
@@ -72,7 +70,6 @@ export const GET: RequestHandler = async ({ url }) => {
   // ── 2. Developer recipes from Turso dev_recipes ──────────────────────────
   let devRecipes: Array<Record<string, unknown>> = [];
   try {
-    if (blockTurso) throw new Error('Turso blocked for local fallback test');
     const rows = await queryAll(`
       SELECT recipe_id, recipe_name, category, nutrition_json, source_ndb_no, source_long_desc
       FROM dev_recipes
