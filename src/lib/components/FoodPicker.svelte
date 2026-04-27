@@ -117,26 +117,14 @@
     });
   }
 
-  function recipeOriginMeta(food: RecipeFood): { label: string; title: string; isFallback: boolean } {
-    if (food.recipeOrigin === 'ts-builtin') {
-      return {
-        label: 'Fallback',
-        title: 'TS fallback: using generated TypeScript recipe data because Turso recipe row is unavailable.',
-        isFallback: true
-      };
-    }
-    if (food.recipeOrigin === 'turso-community') {
-      return {
-        label: 'Live',
-        title: 'Live Turso row: player recipe from Turso.',
-        isFallback: false
-      };
-    }
-    return {
-      label: 'Live',
-      title: 'Live Turso row: developer recipe from Turso.',
-      isFallback: false
-    };
+  function isRecipeFallback(food: RecipeFood): boolean {
+    return food.recipeOrigin === 'ts-builtin';
+  }
+
+  function recipeOriginTitle(food: RecipeFood): string {
+    return isRecipeFallback(food)
+      ? 'TS fallback: using generated TypeScript recipe data because Turso recipe row is unavailable.'
+      : 'Live Turso row';
   }
 
   function openSourceLegend(key: NutritionLegendKey, event: MouseEvent) {
@@ -428,8 +416,6 @@
           class="food-item" 
           class:custom-food={'isCustom' in food && food.isCustom}
           class:recipe-food={'isRecipe' in food && food.isRecipe}
-          class:recipe-live={'isRecipe' in food && food.isRecipe && recipeOriginMeta(food as RecipeFood).isFallback === false}
-          class:recipe-fallback={'isRecipe' in food && food.isRecipe && recipeOriginMeta(food as RecipeFood).isFallback}
           onclick={() => selectFood(food)}
           onpointerdown={(e) => handlePointerDown(e, food)}
           onpointermove={handlePointerMove}
@@ -450,17 +436,12 @@
 
         {#if 'isRecipe' in food && food.isRecipe}
           <div class="recipe-source-badges">
-            {#if true}
-              {@const origin = recipeOriginMeta(food as RecipeFood)}
+            {#if isRecipeFallback(food as RecipeFood)}
               <span
-                class="origin-badge"
-                class:fallback={origin.isFallback}
-                class:live={!origin.isFallback}
-                title={origin.title}
-                aria-label={origin.title}
-              >
-                {origin.label}
-              </span>
+                class="origin-fallback-dot"
+                title={recipeOriginTitle(food as RecipeFood)}
+                aria-label={recipeOriginTitle(food as RecipeFood)}
+              />
             {/if}
             {#each recipeSourceBadges(food as RecipeFood) as badge (badge.key)}
               <a
@@ -510,7 +491,7 @@
         <span class="usda-desc">{tooltipFood.desc}</span>
         <span class="nutrient-info">{Math.round(tooltipFood.cal)} cal · {tooltipFood.pro}g protein · {tooltipFood.fat}g fat · {tooltipFood.carb}g carbs per 100g</span>
         <span class="group-info">Groups: {tooltipFood.groups.join(', ')}</span>
-        <span class="ndb-info">{'isRecipe' in tooltipFood ? `${recipeIcon(tooltipFood as RecipeFood)} ${(tooltipFood as RecipeFood).recipeType === 'developer' ? 'Developer recipe' : (tooltipFood as RecipeFood).recipeType === 'community' ? 'Community recipe' : 'Recipe'} · ${recipeOriginMeta(tooltipFood as RecipeFood).label} · ${recipeSourceBadges(tooltipFood as RecipeFood).map((b) => b.label).join(' · ')}` : `USDA NDB#${tooltipFood.ndb}`}</span>
+        <span class="ndb-info">{'isRecipe' in tooltipFood ? `${recipeIcon(tooltipFood as RecipeFood)} ${(tooltipFood as RecipeFood).recipeType === 'developer' ? 'Developer recipe' : (tooltipFood as RecipeFood).recipeType === 'community' ? 'Community recipe' : 'Recipe'}${isRecipeFallback(tooltipFood as RecipeFood) ? ' · Fallback source' : ''} · ${recipeSourceBadges(tooltipFood as RecipeFood).map((b) => b.label).join(' · ')}` : `USDA NDB#${tooltipFood.ndb}`}</span>
       </p>
     </div>
   </div>
@@ -695,31 +676,17 @@
     flex-shrink: 0;
   }
 
-  .origin-badge {
+  .origin-fallback-dot {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    inline-size: 62px;
-    padding: 4px 0;
+    inline-size: 8px;
+    block-size: 8px;
+    margin: 0 2px;
     border-radius: 999px;
-    border: 1px solid #d1d5db;
-    font-size: 0.62rem;
-    font-weight: 800;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
+    border: 1px solid #fb923c;
+    background: #fdba74;
     box-sizing: border-box;
-  }
-
-  .origin-badge.live {
-    border-color: #86efac;
-    color: #166534;
-    background: #f0fdf4;
-  }
-
-  .origin-badge.fallback {
-    border-color: #fdba74;
-    color: #9a3412;
-    background: #fff7ed;
   }
 
   .source-badge {
@@ -786,26 +753,6 @@
   .food-item.recipe-food {
     background: #fffbeb;
     border-color: #fde68a;
-  }
-
-  .food-item.recipe-live {
-    background: #f0fdf4;
-    border-color: #86efac;
-  }
-
-  .food-item.recipe-live:hover {
-    background: #dcfce7;
-    border-color: #22c55e;
-  }
-
-  .food-item.recipe-fallback {
-    background: #fff7ed;
-    border-color: #fdba74;
-  }
-
-  .food-item.recipe-fallback:hover {
-    background: #ffedd5;
-    border-color: #f97316;
   }
 
   .food-item.recipe-food:hover {
