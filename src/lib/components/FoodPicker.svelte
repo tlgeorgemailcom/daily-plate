@@ -493,6 +493,7 @@
   <div class="tooltip-overlay" onclick={closeTooltip} onkeydown={(e) => e.key === 'Escape' && closeTooltip()} role="button" tabindex="0">
     <div 
       class="tooltip"
+      onclick={(e) => e.stopPropagation()}
       style="left: {tooltipPosition.x}px; top: {tooltipPosition.y}px;"
     >
       <div class="tooltip-header">
