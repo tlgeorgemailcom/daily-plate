@@ -407,7 +407,7 @@
   async function loadPaidRecipeFoods(): Promise<void> {
     const loadVersion = ++recipeLoadVersion;
     try {
-      const res = await fetch('/api/recipes/nutrition');
+      const res = await fetch('/api/recipes/nutrition?blockTurso=1');
       if (!res.ok) {
         if (loadVersion === recipeLoadVersion) {
           recipeFoods = [];
