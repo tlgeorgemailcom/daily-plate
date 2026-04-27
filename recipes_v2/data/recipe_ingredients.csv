@@ -265,23 +265,23 @@ SWEET_019,4,milk_evaporated,1 tablespoon + 1 teaspoon,21.0,5,25,frosting,false,e
 SWEET_019,5,water_tap,2 1/2 teaspoons,12.0,0,0,frosting,false,boiling water
 SWEET_019,6,vanilla_extract,1/2 teaspoon,2.1,4,16,frosting,false,pure vanilla extract
 SWEET_019,7,salt_table,scant 1/8 teaspoon,0.5,0,5,frosting,false,salt
-SWEET_020,1,flour_ap_white_enriched_bleached,1 1/2 cups,187.0,200,350,cake,false,"all-purpose flour, sifted"
-SWEET_020,1b,flour_cake_white_enriched,1/2 cup,62.5,40,120,cake,false,sifted cake flour
-SWEET_020,2,sugar_granulated,1 1/4 cups,250.0,200,400,cake,false,granulated sugar
-SWEET_020,3,baking_powder,2 teaspoons,8.0,6,15,cake,false,baking powder
-SWEET_020,4,salt_table,3/4 teaspoon,4.5,2,6,cake,false,
-SWEET_020,5,butter_unsalted,1/4 cup,57.0,60,200,cake,false,"unsalted butter, soft"
-SWEET_020,5b,vegetable_shortening,1/4 cup + 1 tablespoon,61.0,0,100,cake,false,"vegetable shortening, soft"
-SWEET_020,6,milk_whole,3/4 cup,183.0,120,244,cake,false,whole milk
-SWEET_020,7,vanilla_extract,1 1/4 teaspoons,5.25,4,16,cake,false,pure vanilla extract
-SWEET_020,8,egg_whole_raw,2 large,100.0,100,200,cake,false,"large eggs, unbeaten"
+SWEET_020,1,flour_ap_white_enriched_bleached,2 2/3 cups,333.0,250,450,cake,false,"all-purpose flour, sifted"
+SWEET_020,1b,baking_soda,1/4 teaspoon,1.2,0,3,cake,false,baking soda
+SWEET_020,2,sugar_granulated,1 3/4 cups,350.0,250,450,cake,false,granulated sugar
+SWEET_020,3,baking_powder,2 1/2 teaspoons,10.0,6,15,cake,false,baking powder
+SWEET_020,4,salt_table,1 teaspoon,6.0,2,8,cake,false,
+SWEET_020,5,butter_unsalted,3/4 cup,170.0,120,240,cake,false,"unsalted butter, soft"
+SWEET_020,6,milk_buttermilk_whole,1 cup,244.0,180,300,cake,false,whole buttermilk
+SWEET_020,7,vanilla_extract,1 tablespoon,12.6,8,20,cake,false,pure vanilla extract
+SWEET_020,8,egg_whole_raw,3 large,150.0,100,220,cake,false,"large eggs, unbeaten"
+SWEET_020,8b,egg_yolk_raw,2 large yolks,34.0,20,60,cake,false,large egg yolks
 SWEET_020,9,sugar_powdered,3 cups,360.0,350,450,frosting,false,powdered sugar
-SWEET_020,10,cocoa_powder_unsweetened,2/3 cup,53.0,5,20,frosting,false,unsweetened cocoa powder
-SWEET_020,11,butter_unsalted,2 1/2 tablespoons,36.0,60,200,frosting,false,"unsalted butter, melted"
-SWEET_020,12,milk_evaporated,1/4 cup (4 tablespoons),63.0,5,25,frosting,false,evaporated milk
-SWEET_020,13,water_tap,2 1/2 tablespoons,36.0,0,0,frosting,false,boiling water
-SWEET_020,14,vanilla_extract,1 1/2 teaspoons,6.3,4,16,frosting,false,pure vanilla extract
-SWEET_020,15,salt_table,scant 1/4 teaspoon,1.5,0,5,frosting,false,salt
+SWEET_020,10,cocoa_powder_unsweetened,2/3 cup,57.0,40,80,frosting,false,unsweetened cocoa powder
+SWEET_020,11,butter_unsalted,1/2 cup,113.0,80,180,frosting,false,"unsalted butter, melted"
+SWEET_020,12,milk_whole,1/3 cup,83.0,60,120,frosting,false,whole milk
+SWEET_020,13,water_tap,1-2 tablespoons,18.0,0,36,frosting,true,boiling water if needed for consistency
+SWEET_020,14,vanilla_extract,1 teaspoon,4.2,4,12,frosting,false,pure vanilla extract
+SWEET_020,15,salt_table,1/4 teaspoon,1.5,0,5,frosting,false,salt
 SWEET_021,1,flour_ap_white_enriched_bleached,2 1/4 cups,281.0,200,350,cake,false,"all-purpose flour, sifted"
 SWEET_021,2,butter_unsalted,1/4 cup,57.0,60,200,cake,false,"unsalted butter, softened"
 SWEET_021,3,vegetable_shortening,1/2 cup,96.0,0,100,cake,false,vegetable shortening
