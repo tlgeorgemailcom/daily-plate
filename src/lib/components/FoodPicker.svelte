@@ -50,6 +50,7 @@
   // Long-press tooltip state
   let tooltipFood = $state<Food | null>(null);
   let tooltipPosition = $state({ x: 0, y: 0 });
+  let nutrientDisplayMode = $state<'serving' | 'per100g'>('serving');
   let longPressTimer: ReturnType<typeof setTimeout> | null = null;
   let pointerStartPos = { x: 0, y: 0 };
   const SCROLL_THRESHOLD = 10; // pixels of movement to cancel long press
@@ -310,6 +311,7 @@
     
     longPressTimer = setTimeout(() => {
       tooltipFood = food;
+      nutrientDisplayMode = 'serving';
       tooltipPosition = { 
         x: rect.left + rect.width / 2, 
         y: rect.top 
@@ -343,6 +345,7 @@
 
   function closeTooltip() {
     tooltipFood = null;
+    nutrientDisplayMode = 'serving';
   }
 </script>
 
@@ -503,6 +506,9 @@
       </p>
       {#if 'isRecipe' in tooltipFood && (tooltipFood as RecipeFood).micros}
         {@const micros = (tooltipFood as RecipeFood).micros!}
+        {@const gramsPerServing = Math.max(1, Number((tooltipFood as RecipeFood).gramsPerServing ?? 100))}
+        {@const amountScale = nutrientDisplayMode === 'serving' ? gramsPerServing / 100 : 1}
+        {@const amountLabel = nutrientDisplayMode === 'serving' ? `per serving (${Math.round(gramsPerServing)}g)` : 'per 100g'}
         {@const NUTRIENT_ROWS: Array<{ key: string; label: string; rule: 'required' | 'optional' | 'other' }> = [
           // Nutrition label required core (latest FDA format)
           { key: 'Energy_KCal', label: 'Calories (kcal)', rule: 'required' },
@@ -583,20 +589,36 @@
         {@const totalFat = Number(micros.TotalLipidFat ?? 0)}
         {@const otherFat = Math.max(0, totalFat - satFat - monoFat - polyFat)}
         <div class="micros-grid">
-          <div class="micros-title">Full nutrient data per 100g (ordered by food-label priority)</div>
+          <div class="micros-head">
+            <div class="micros-title">Nutrient label view ({amountLabel})</div>
+            <div class="micros-units-toggle">
+              <button
+                type="button"
+                class="units-btn"
+                class:active={nutrientDisplayMode === 'serving'}
+                onclick={() => nutrientDisplayMode = 'serving'}
+              >Per serving</button>
+              <button
+                type="button"
+                class="units-btn"
+                class:active={nutrientDisplayMode === 'per100g'}
+                onclick={() => nutrientDisplayMode = 'per100g'}
+              >Per 100g</button>
+            </div>
+          </div>
           <div class="micros-subtitle">Required and optional label nutrients are listed first. Fat subtypes may not fully sum to total fat due source-data rounding and unclassified fatty components.</div>
           {#each NUTRIENT_ROWS as row (row.key)}
             {#if micros[row.key] != null}
               <div class="micro-row">
                 <span class="micro-label">{row.label} <span class="micro-rule {row.rule}">{row.rule === 'required' ? 'required label' : row.rule === 'optional' ? 'optional label' : 'other nutrient'}</span></span>
-                <span class="micro-value">{(micros[row.key] as number).toFixed(2)}</span>
+                <span class="micro-value">{((micros[row.key] as number) * amountScale).toFixed(2)}</span>
               </div>
             {/if}
           {/each}
           {#if totalFat > 0 && otherFat > 0.01}
             <div class="micro-row">
               <span class="micro-label">Other / unspecified fat (g) <span class="micro-rule other">other nutrient</span></span>
-              <span class="micro-value">{otherFat.toFixed(2)}</span>
+              <span class="micro-value">{(otherFat * amountScale).toFixed(2)}</span>
             </div>
           {/if}
         </div>
@@ -1001,6 +1023,39 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     padding-bottom: 0.35rem;
+  }
+
+  .micros-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .micros-units-toggle {
+    display: inline-flex;
+    gap: 0.25rem;
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 0.15rem;
+  }
+
+  .units-btn {
+    border: 0;
+    background: transparent;
+    color: #4b5563;
+    font-size: 0.68rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.35rem;
+    cursor: pointer;
+  }
+
+  .units-btn.active {
+    background: #ffffff;
+    color: #111827;
+    font-weight: 700;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
   }
 
   .micros-subtitle {
