@@ -1,7 +1,7 @@
 {
   "recipe_id": "SWEET_027",
-  "recorded_at": "2026-04-25T20:00:30.303158+00:00",
-  "fingerprint": "aeb9ac33c5b6f0e8f63f0361a975d0fd85688a06033c62447be87adc6483f2fc",
+  "recorded_at": "2026-04-27T16:03:36.761792+00:00",
+  "fingerprint": "7e32c2ce6364e7f728557e1532b448198193a6948b98f6b14fd9cf97dfa254ac",
   "disclosure": "Authentic homemade sour cream coffee cake with cinnamon crumb topping. NOT validated against USDA SR Legacy NDB 18104 because the canonical entry reflects commercially prepared coffee cake with hydrogenated shortening, reduced-egg formulations, low-moisture shelf-stable formulation, and sodium-based preservatives (cholesterol 32 mg/100g vs ~88 mg/100g for the authentic recipe; protein 6.8 g vs 5.0 g, fat 23.3 g vs 18.6 g; sodium 351 mg/100g vs ~255 mg/100g without preservatives). Built entirely from USDA single-NDB ingredients (AP flour, baking powder, baking soda, salt, butter, sugars, eggs, vanilla, sour cream, cinnamon) with no composite components.",
   "canonical_payload": {
     "recipe_id": "SWEET_027",
@@ -18,12 +18,12 @@
       },
       {
         "ingredient_key": "baking_soda",
-        "grams": 2.3,
+        "grams": 1.2,
         "is_optional": false
       },
       {
         "ingredient_key": "butter_unsalted",
-        "grams": 57.0,
+        "grams": 43.0,
         "is_optional": false
       },
       {
@@ -33,7 +33,7 @@
       },
       {
         "ingredient_key": "cinnamon_ground",
-        "grams": 4.0,
+        "grams": 2.6,
         "is_optional": false
       },
       {
@@ -43,17 +43,17 @@
       },
       {
         "ingredient_key": "flour_ap_white_enriched_bleached",
-        "grams": 62.0,
+        "grams": 60.0,
         "is_optional": false
       },
       {
         "ingredient_key": "flour_ap_white_enriched_bleached",
-        "grams": 250.0,
+        "grams": 240.0,
         "is_optional": false
       },
       {
         "ingredient_key": "salt_table",
-        "grams": 0.5,
+        "grams": 0.75,
         "is_optional": false
       },
       {
@@ -68,12 +68,12 @@
       },
       {
         "ingredient_key": "sugar_brown",
-        "grams": 73.0,
+        "grams": 55.0,
         "is_optional": false
       },
       {
         "ingredient_key": "sugar_granulated",
-        "grams": 200.0,
+        "grams": 198.0,
         "is_optional": false
       },
       {
@@ -106,27 +106,27 @@
     "sodium": 351.0
   },
   "built": {
-    "raw_grams_total": 1103.0,
-    "cooked_grams_total": 1049.32,
+    "raw_grams_total": 1054.75,
+    "cooked_grams_total": 1001.81,
     "whole_cooked": {
-      "cal": 4028.476,
-      "pro": 52.0963,
-      "fat": 195.0117,
-      "carb": 525.9868,
-      "fib": 10.556,
-      "h2o": 262.0814,
-      "sug": 280.2001,
-      "sodium": 2671.268
+      "cal": 3804.818,
+      "pro": 50.6603,
+      "fat": 183.5214,
+      "carb": 496.0371,
+      "fib": 9.4886,
+      "h2o": 258.4847,
+      "sug": 260.6693,
+      "sodium": 2460.223
     },
     "per100g_cooked": {
-      "cal": 383.9128,
-      "pro": 4.9648,
-      "fat": 18.5846,
-      "carb": 50.1264,
-      "fib": 1.006,
-      "h2o": 24.9763,
-      "sug": 26.703,
-      "sodium": 254.5712
+      "cal": 379.7954,
+      "pro": 5.0569,
+      "fat": 18.319,
+      "carb": 49.5142,
+      "fib": 0.9471,
+      "h2o": 25.8018,
+      "sug": 26.0199,
+      "sodium": 245.5785
     }
   }
 }
