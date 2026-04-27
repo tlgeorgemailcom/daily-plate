@@ -220,9 +220,9 @@ SWEET_015,2,salt_table,1/2 teaspoon,3.0,0.5,6.0,crust,false,
 SWEET_015,3,butter_unsalted,6 tablespoons,85.0,60.0,120.0,crust,false,"cold unsalted butter, cubed"
 SWEET_015,4,water_tap,3 tablespoons,45.0,30.0,75.0,crust,false,ice water (more as needed)
 SWEET_015,5,egg_whole_raw,4 large eggs,200.0,150.0,300.0,filling,false,large eggs
-SWEET_015,6,sugar_granulated,2/3 cup,133.0,80.0,250.0,filling,false,
-SWEET_015,7,salt_table,1/2 teaspoon,3.0,0.5,6.0,filling,false,
-SWEET_015,8,nutmeg_ground,1/2 teaspoon,1.1,0.0,4.0,filling,false,"ground nutmeg, plus more for sprinkling"
+SWEET_015,6,sugar_granulated,3/4 cup,150.0,80.0,250.0,filling,false,
+SWEET_015,7,salt_table,1/4 teaspoon,1.5,0.5,6.0,filling,false,
+SWEET_015,8,nutmeg_ground,1/4 teaspoon,0.55,0.0,4.0,filling,false,"ground nutmeg, plus more for sprinkling"
 SWEET_015,9,milk_whole,2 1/2 cups,610.0,400.0,800.0,filling,false,"whole milk, scalded"
 SWEET_015,10,vanilla_extract,2 teaspoons,8.4,0.0,16.0,filling,false,
 SWEET_016,1,flour_ap_white_enriched_bleached,2 1/4 cups,281.0,200.0,350.0,cake,false,"all-purpose flour, sifted"

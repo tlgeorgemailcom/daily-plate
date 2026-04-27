@@ -1,7 +1,7 @@
 {
   "recipe_id": "SWEET_015",
-  "recorded_at": "2026-04-25T13:56:22.802573+00:00",
-  "fingerprint": "92150a08e0ebbb30d96b7e8474065b9e486352ccfb5656394fc478df0e90d257",
+  "recorded_at": "2026-04-27T14:36:46.510127+00:00",
+  "fingerprint": "14a4da4f118927bb2ec9d75a7183fde17a597537509f66a59bc24ba67cc839bf",
   "disclosure": "Authentic homemade egg custard pie spec: blind-baked single pie crust filled with whole milk + whole egg custard, sweetened, lightly nutmegged. NOT validated against USDA SR Legacy NDB 18317 because that record is a commercially prepared pie that uses added starches, gums, and milk solids (evidenced by ~1.6 g/100g fiber and elevated protein and carbohydrate at lower sugar) that no authentic homemade custard pie contains. No homemade recipe can represent it. Free-tier nutrient values are computed from the ingredients in this recipe; paid-tier values may substitute canonical fields where appropriate.",
   "canonical_payload": {
     "recipe_id": "SWEET_015",
@@ -33,12 +33,12 @@
       },
       {
         "ingredient_key": "nutmeg_ground",
-        "grams": 1.1,
+        "grams": 0.55,
         "is_optional": false
       },
       {
         "ingredient_key": "salt_table",
-        "grams": 3.0,
+        "grams": 1.5,
         "is_optional": false
       },
       {
@@ -48,7 +48,7 @@
       },
       {
         "ingredient_key": "sugar_granulated",
-        "grams": 133.0,
+        "grams": 150.0,
         "is_optional": false
       },
       {
@@ -84,27 +84,27 @@
     "sodium": 275.0
   },
   "built": {
-    "raw_grams_total": 1276.5,
-    "cooked_grams_total": 1214.34,
+    "raw_grams_total": 1291.45,
+    "cooked_grams_total": 1229.29,
     "whole_cooked": {
-      "cal": 2496.547,
-      "pro": 64.5472,
-      "fat": 110.0353,
-      "carb": 308.812,
-      "fib": 5.3048,
-      "h2o": 714.868,
-      "sug": 165.9331,
-      "sodium": 2888.952
+      "cal": 2559.4495,
+      "pro": 64.5151,
+      "fat": 109.8356,
+      "carb": 325.5375,
+      "fib": 5.1904,
+      "h2o": 714.8369,
+      "sug": 182.8826,
+      "sodium": 2307.664
     },
     "per100g_cooked": {
-      "cal": 205.5892,
-      "pro": 5.3154,
-      "fat": 9.0613,
-      "carb": 25.4305,
-      "fib": 0.4368,
-      "h2o": 58.869,
-      "sug": 13.6645,
-      "sodium": 237.9035
+      "cal": 208.2055,
+      "pro": 5.2482,
+      "fat": 8.9349,
+      "carb": 26.4817,
+      "fib": 0.4222,
+      "h2o": 58.1504,
+      "sug": 14.8771,
+      "sodium": 187.7233
     }
   }
 }
