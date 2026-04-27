@@ -1,7 +1,7 @@
 {
   "recipe_id": "SWEET_025",
-  "recorded_at": "2026-04-25T18:54:34.083191+00:00",
-  "fingerprint": "c3e16481ea99ea1d0ea3f295be20c6f4348f8975b82b7c8e5b4afb69a0dbdc88",
+  "recorded_at": "2026-04-27T15:36:03.150298+00:00",
+  "fingerprint": "601428b19601bcde542e4170a042ae959cca16148d341dfc2a9aaff18daf633e",
   "disclosure": "Authentic homemade angel food cake. NOT validated against USDA SR Legacy NDB 18086 because the canonical entry reflects commercially prepared cake with industrial sodium-based preservatives, gums, and stabilizers (sodium 749 mg/100g vs ~189 mg/100g for the authentic from-scratch recipe). Built entirely from USDA single-NDB ingredients (egg whites, sugar, cake flour, cream of tartar, salt, vanilla, lemon juice) with no composite components.",
   "canonical_payload": {
     "recipe_id": "SWEET_025",
@@ -27,11 +27,6 @@
         "is_optional": false
       },
       {
-        "ingredient_key": "lemon_juice_raw",
-        "grams": 5.0,
-        "is_optional": false
-      },
-      {
         "ingredient_key": "salt_table",
         "grams": 1.5,
         "is_optional": false
@@ -50,14 +45,14 @@
     "instructions": [
       "Position a rack in the lower third of the oven and preheat to 350\u00b0F. Have ready a clean ungreased 10-inch tube (angel food) pan with a removable bottom \u2014 the batter must climb the ungreased sides as it bakes. Do not use a nonstick or greased pan; the cake will collapse.",
       "Separate the eggs while cold, letting not a speck of yolk fall into the whites (any fat will keep them from whipping). Place the 12 whites in a large grease-free metal or glass bowl. Let them stand at room temperature for 30 minutes.",
-      "Sift the cake flour and half the sugar (3/4 cup / 150 g) together onto a sheet of parchment, then sift the mixture two more times to lighten thoroughly. Set aside.",
-      "Add the cream of tartar, salt, and lemon juice to the room-temperature whites. With an electric mixer on medium speed, beat until foamy and the whites turn opaque, about 1 minute. Add the vanilla.",
+      "Reserve 3/4 cup of the sugar for the meringue (this goes into the egg whites later). Sift the remaining 3/4 cup sugar together with the cake flour into a bowl. Re-sift the mixture two more times until well combined and airy \u2014 repeated sifting helps the sugar coat the flour particles, allowing them to fold into the delicate meringue without deflating it. Set aside.",
+      "Add the cream of tartar and salt to the room-temperature whites. With an electric mixer on medium speed, beat until foamy and the whites turn opaque, about 1 minute. Add the vanilla.",
       "Increase the mixer to medium-high. Whip until the whites form soft peaks that gently flop over when the beaters are lifted, about 2\u20133 minutes.",
-      "Still on medium-high, gradually rain in the remaining sugar (3/4 cup / 150 g) about 2 tablespoons at a time, beating well between additions. Continue until the whites form firm, glossy, moist peaks that hold their shape but are not dry or chunky, about 3\u20134 minutes more.",
+      "Still on medium-high, gradually rain in the reserved 3/4 cup sugar about 2 tablespoons at a time, beating well between additions. Continue until the whites form firm, glossy, moist peaks that hold their shape but are not dry or chunky, about 3\u20134 minutes more.",
       "Sift the flour-sugar mixture over the whites in four additions. After each addition, fold in gently with a large rubber spatula \u2014 cut down through the center, sweep across the bottom, and turn the bowl a quarter turn. Stop folding the moment no flour streaks remain. Do not overmix.",
       "Gently spoon the batter into the ungreased tube pan. Run a thin knife or skewer once through the batter in a circle to release any large air pockets, then smooth the top.",
       "Bake on the lower rack for 35\u201340 minutes, until the top is golden, springs back when lightly pressed, and a wooden skewer inserted near the center comes out clean. Cracks on the surface are normal and expected.",
-      "Invert immediately: Flip the pan upside down onto the neck of a tall bottle (or use the pan's built-in feet) and let the cake cool completely upside-down, about 1 1/2 hours. This stretching prevents the airy structure from collapsing under its own weight.",
+      "Invert immediately: Flip the pan upside down and rest it on its built-in feet, or set it over something that elevates it. Let the cake cool completely upside-down, about 1 1/2 hours \u2014 this prevents the airy structure from collapsing under its own weight while it sets.",
       "To unmold: run a thin knife around the outer edge and around the center tube using a gentle sawing motion (do not press inward \u2014 keep the knife flush against the metal). Push the removable bottom up and out of the outer ring. Slide the knife under the cake to release it from the bottom.",
       "Slice with a serrated knife in a gentle sawing motion (a regular knife will compress the cake). Serve plain, with sweetened berries, or with a light glaze."
     ]
@@ -73,27 +68,27 @@
     "sodium": 749.0
   },
   "built": {
-    "raw_grams_total": 827.3,
-    "cooked_grams_total": 661.2,
+    "raw_grams_total": 822.3,
+    "cooked_grams_total": 658.28,
     "whole_cooked": {
-      "cal": 1810.454,
-      "pro": 52.5333,
-      "fat": 1.6694,
-      "carb": 395.6945,
-      "fib": 1.962,
-      "h2o": 203.0084,
-      "sug": 303.4879,
-      "sodium": 1246.967
+      "cal": 1809.354,
+      "pro": 52.5158,
+      "fat": 1.6574,
+      "carb": 395.3494,
+      "fib": 1.947,
+      "h2o": 200.4699,
+      "sug": 303.3619,
+      "sodium": 1246.917
     },
     "per100g_cooked": {
-      "cal": 273.8124,
-      "pro": 7.9451,
-      "fat": 0.2525,
-      "carb": 59.8447,
-      "fib": 0.2967,
-      "h2o": 30.7029,
-      "sug": 45.8994,
-      "sodium": 188.5909
+      "cal": 274.8612,
+      "pro": 7.9777,
+      "fat": 0.2518,
+      "carb": 60.058,
+      "fib": 0.2958,
+      "h2o": 30.4536,
+      "sug": 46.0841,
+      "sodium": 189.4207
     }
   }
 }
