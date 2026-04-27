@@ -127,6 +127,12 @@
       : 'Live Turso row';
   }
 
+  function openFallbackPopup(event: MouseEvent): void {
+    event.preventDefault();
+    event.stopPropagation();
+    alert('Remote API failure. Fallback to file initiated.');
+  }
+
   function openSourceLegend(key: NutritionLegendKey, event: MouseEvent) {
     event.preventDefault();
     event.stopPropagation();
@@ -437,10 +443,12 @@
         {#if 'isRecipe' in food && food.isRecipe}
           <div class="recipe-source-badges">
             {#if isRecipeFallback(food as RecipeFood)}
-              <span
+              <button
+                type="button"
                 class="origin-fallback-dot"
                 title={recipeOriginTitle(food as RecipeFood)}
                 aria-label={recipeOriginTitle(food as RecipeFood)}
+                onclick={openFallbackPopup}
               />
             {/if}
             {#each recipeSourceBadges(food as RecipeFood) as badge (badge.key)}
@@ -683,10 +691,17 @@
     inline-size: 8px;
     block-size: 8px;
     margin: 0 2px;
+    padding: 0;
     border-radius: 999px;
     border: 1px solid #fb923c;
     background: #fdba74;
+    cursor: pointer;
     box-sizing: border-box;
+  }
+
+  .origin-fallback-dot:focus-visible {
+    outline: 2px solid #f97316;
+    outline-offset: 2px;
   }
 
   .source-badge {
