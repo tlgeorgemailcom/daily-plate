@@ -498,48 +498,94 @@
       </div>
       <p class="tooltip-description">
         <span class="usda-desc">{tooltipFood.desc}</span>
-        <span class="nutrient-info">{Math.round(tooltipFood.cal)} cal · {tooltipFood.pro}g protein · {tooltipFood.fat}g fat · {tooltipFood.carb}g carbs per 100g</span>
+        <span class="nutrient-info">{Math.round(tooltipFood.cal)} cal · {tooltipFood.pro}g protein · {tooltipFood.fat}g fat · {tooltipFood.carb}g carbs · {tooltipFood.fib}g fiber · {tooltipFood.h2o}g water · {tooltipFood.sug}g sugar per 100g</span>
         <span class="group-info">Groups: {tooltipFood.groups.join(', ')}</span>
         <span class="ndb-info">{'isRecipe' in tooltipFood ? `${recipeIcon(tooltipFood as RecipeFood)} ${(tooltipFood as RecipeFood).recipeType === 'developer' ? 'Developer recipe' : (tooltipFood as RecipeFood).recipeType === 'community' ? 'Community recipe' : 'Recipe'}${isRecipeFallback(tooltipFood as RecipeFood) ? ' · Fallback source' : ''} · ${recipeSourceBadges(tooltipFood as RecipeFood).map((b) => b.label).join(' · ')}` : `USDA NDB#${tooltipFood.ndb}`}</span>
       </p>
       {#if 'isRecipe' in tooltipFood && (tooltipFood as RecipeFood).micros}
         {@const micros = (tooltipFood as RecipeFood).micros!}
-        {@const LABELS: Record<string, string> = {
-          Energy_KCal: 'Energy (kcal)', Water: 'Water (g)', Protein: 'Protein (g)',
-          TotalLipidFat: 'Fat (g)', Carbohydrate: 'Carbs (g)', FiberTotalDietary: 'Fiber (g)',
-          SugarsTotal: 'Sugar (g)', Cholesterol: 'Cholesterol (mg)',
-          FattyAcids_totalSaturated: 'Saturated fat (g)', FattyAcids_totalMonounsaturated: 'Mono fat (g)',
-          FattyAcids_totalPolyunsaturated: 'Poly fat (g)', LinoleicAcid: 'Linoleic (g)',
-          alphaLinolenicAcid: 'ALA (g)', EPA_20_5n3: 'EPA (g)', DPA_22_5n3: 'DPA (g)',
-          DHA_22_6n3: 'DHA (g)', omega3: 'Omega-3 (g)', omega6: 'Omega-6 (g)',
-          VitaminA_RAE: 'Vitamin A (mcg)', Retinol: 'Retinol (mcg)', Carotene_beta: 'β-carotene (mcg)',
-          VitaminD: 'Vitamin D (mcg)', VitaminE_alphaTocopherol: 'Vitamin E (mg)',
-          VitaminK_phylloquinone: 'Vitamin K (mcg)', VitaminC_totalAscorbicAcid: 'Vitamin C (mg)',
-          Thiamin: 'Thiamin (mg)', Riboflavin: 'Riboflavin (mg)', Niacin: 'Niacin (mg)',
-          PantothenicAcid: 'Pantothenic acid (mg)', VitaminB6: 'Vitamin B6 (mg)',
-          Folate_total: 'Folate total (mcg)', Folate_food: 'Folate food (mcg)',
-          Folate_DFE: 'Folate DFE (mcg)', FolicAcid: 'Folic acid (mcg)',
-          VitaminB12: 'Vitamin B12 (mcg)', Choline_total: 'Choline (mg)',
-          Betaine: 'Betaine (mg)', LuteinZeaxanthin: 'Lutein+Zeaxanthin (mcg)',
-          Lycopene: 'Lycopene (mcg)',
-          Calcium_Ca: 'Calcium (mg)', Iron_Fe: 'Iron (mg)', Magnesium_Mg: 'Magnesium (mg)',
-          Phosphorus_P: 'Phosphorus (mg)', Potassium_K: 'Potassium (mg)', Sodium_Na: 'Sodium (mg)',
-          Zinc_Zn: 'Zinc (mg)', Copper_Cu: 'Copper (mg)', Manganese_Mn: 'Manganese (mg)',
-          Selenium_Se: 'Selenium (mcg)',
-          Tryptophan: 'Tryptophan (g)', Threonine: 'Threonine (g)', Isoleucine: 'Isoleucine (g)',
-          Leucine: 'Leucine (g)', Lysine: 'Lysine (g)', Methionine: 'Methionine (g)',
-          Cystine: 'Cystine (g)', Phenylalanine: 'Phenylalanine (g)', Tyrosine: 'Tyrosine (g)',
-          Valine: 'Valine (g)', Arginine: 'Arginine (g)', Histidine: 'Histidine (g)',
-          Alanine: 'Alanine (g)', AsparticAcid: 'Aspartic acid (g)', GlutamicAcid: 'Glutamic acid (g)',
-          Glycine: 'Glycine (g)', Proline: 'Proline (g)', Serine: 'Serine (g)',
-        }}
+        {@const NUTRIENT_ROWS: Array<{ key: string; label: string; rule: 'required' | 'optional' | 'other' }> = [
+          // Nutrition label required core (latest FDA format)
+          { key: 'Energy_KCal', label: 'Calories (kcal)', rule: 'required' },
+          { key: 'TotalLipidFat', label: 'Total fat (g)', rule: 'required' },
+          { key: 'FattyAcids_totalSaturated', label: 'Saturated fat (g)', rule: 'required' },
+          { key: 'Cholesterol', label: 'Cholesterol (mg)', rule: 'required' },
+          { key: 'Sodium_Na', label: 'Sodium (mg)', rule: 'required' },
+          { key: 'Carbohydrate', label: 'Total carbohydrate (g)', rule: 'required' },
+          { key: 'FiberTotalDietary', label: 'Dietary fiber (g)', rule: 'required' },
+          { key: 'SugarsTotal', label: 'Total sugars (g)', rule: 'required' },
+          { key: 'Protein', label: 'Protein (g)', rule: 'required' },
+          { key: 'VitaminD', label: 'Vitamin D (mcg)', rule: 'required' },
+          { key: 'Calcium_Ca', label: 'Calcium (mg)', rule: 'required' },
+          { key: 'Iron_Fe', label: 'Iron (mg)', rule: 'required' },
+          { key: 'Potassium_K', label: 'Potassium (mg)', rule: 'required' },
+
+          // Nutrition label optional disclosures
+          { key: 'FattyAcids_totalMonounsaturated', label: 'Monounsaturated fat (g)', rule: 'optional' },
+          { key: 'FattyAcids_totalPolyunsaturated', label: 'Polyunsaturated fat (g)', rule: 'optional' },
+          { key: 'VitaminA_RAE', label: 'Vitamin A (mcg)', rule: 'optional' },
+          { key: 'VitaminC_totalAscorbicAcid', label: 'Vitamin C (mg)', rule: 'optional' },
+
+          // Other available per-100g nutrients (not standard label lines)
+          { key: 'Water', label: 'Water (g)', rule: 'other' },
+          { key: 'LinoleicAcid', label: 'Linoleic (g)', rule: 'other' },
+          { key: 'alphaLinolenicAcid', label: 'ALA (g)', rule: 'other' },
+          { key: 'EPA_20_5n3', label: 'EPA (g)', rule: 'other' },
+          { key: 'DPA_22_5n3', label: 'DPA (g)', rule: 'other' },
+          { key: 'DHA_22_6n3', label: 'DHA (g)', rule: 'other' },
+          { key: 'omega3', label: 'Omega-3 (g)', rule: 'other' },
+          { key: 'omega6', label: 'Omega-6 (g)', rule: 'other' },
+          { key: 'Retinol', label: 'Retinol (mcg)', rule: 'other' },
+          { key: 'Carotene_beta', label: 'Beta-carotene (mcg)', rule: 'other' },
+          { key: 'VitaminE_alphaTocopherol', label: 'Vitamin E (mg)', rule: 'other' },
+          { key: 'VitaminK_phylloquinone', label: 'Vitamin K (mcg)', rule: 'other' },
+          { key: 'Thiamin', label: 'Thiamin (mg)', rule: 'other' },
+          { key: 'Riboflavin', label: 'Riboflavin (mg)', rule: 'other' },
+          { key: 'Niacin', label: 'Niacin (mg)', rule: 'other' },
+          { key: 'PantothenicAcid', label: 'Pantothenic acid (mg)', rule: 'other' },
+          { key: 'VitaminB6', label: 'Vitamin B6 (mg)', rule: 'other' },
+          { key: 'Folate_total', label: 'Folate total (mcg)', rule: 'other' },
+          { key: 'Folate_food', label: 'Folate food (mcg)', rule: 'other' },
+          { key: 'Folate_DFE', label: 'Folate DFE (mcg)', rule: 'other' },
+          { key: 'FolicAcid', label: 'Folic acid (mcg)', rule: 'other' },
+          { key: 'VitaminB12', label: 'Vitamin B12 (mcg)', rule: 'other' },
+          { key: 'Choline_total', label: 'Choline (mg)', rule: 'other' },
+          { key: 'Betaine', label: 'Betaine (mg)', rule: 'other' },
+          { key: 'LuteinZeaxanthin', label: 'Lutein + Zeaxanthin (mcg)', rule: 'other' },
+          { key: 'Lycopene', label: 'Lycopene (mcg)', rule: 'other' },
+          { key: 'Magnesium_Mg', label: 'Magnesium (mg)', rule: 'other' },
+          { key: 'Phosphorus_P', label: 'Phosphorus (mg)', rule: 'other' },
+          { key: 'Zinc_Zn', label: 'Zinc (mg)', rule: 'other' },
+          { key: 'Copper_Cu', label: 'Copper (mg)', rule: 'other' },
+          { key: 'Manganese_Mn', label: 'Manganese (mg)', rule: 'other' },
+          { key: 'Selenium_Se', label: 'Selenium (mcg)', rule: 'other' },
+          { key: 'Tryptophan', label: 'Tryptophan (g)', rule: 'other' },
+          { key: 'Threonine', label: 'Threonine (g)', rule: 'other' },
+          { key: 'Isoleucine', label: 'Isoleucine (g)', rule: 'other' },
+          { key: 'Leucine', label: 'Leucine (g)', rule: 'other' },
+          { key: 'Lysine', label: 'Lysine (g)', rule: 'other' },
+          { key: 'Methionine', label: 'Methionine (g)', rule: 'other' },
+          { key: 'Cystine', label: 'Cystine (g)', rule: 'other' },
+          { key: 'Phenylalanine', label: 'Phenylalanine (g)', rule: 'other' },
+          { key: 'Tyrosine', label: 'Tyrosine (g)', rule: 'other' },
+          { key: 'Valine', label: 'Valine (g)', rule: 'other' },
+          { key: 'Arginine', label: 'Arginine (g)', rule: 'other' },
+          { key: 'Histidine', label: 'Histidine (g)', rule: 'other' },
+          { key: 'Alanine', label: 'Alanine (g)', rule: 'other' },
+          { key: 'AsparticAcid', label: 'Aspartic acid (g)', rule: 'other' },
+          { key: 'GlutamicAcid', label: 'Glutamic acid (g)', rule: 'other' },
+          { key: 'Glycine', label: 'Glycine (g)', rule: 'other' },
+          { key: 'Proline', label: 'Proline (g)', rule: 'other' },
+          { key: 'Serine', label: 'Serine (g)', rule: 'other' },
+        ]}
         <div class="micros-grid">
-          <div class="micros-title">Full nutrient data per 100g</div>
-          {#each Object.keys(LABELS) as key (key)}
-            {#if micros[key] != null}
+          <div class="micros-title">Full nutrient data per 100g (ordered by food-label priority)</div>
+          <div class="micros-subtitle">Required and optional label nutrients are listed first.</div>
+          {#each NUTRIENT_ROWS as row (row.key)}
+            {#if micros[row.key] != null}
               <div class="micro-row">
-                <span class="micro-label">{LABELS[key]}</span>
-                <span class="micro-value">{(micros[key] as number).toFixed(2)}</span>
+                <span class="micro-label">{row.label} <span class="micro-rule {row.rule}">{row.rule === 'required' ? 'required label' : row.rule === 'optional' ? 'optional label' : 'other nutrient'}</span></span>
+                <span class="micro-value">{(micros[row.key] as number).toFixed(2)}</span>
               </div>
             {/if}
           {/each}
@@ -952,6 +998,12 @@
     padding-bottom: 0.35rem;
   }
 
+  .micros-subtitle {
+    font-size: 0.7rem;
+    color: #6b7280;
+    padding-bottom: 0.3rem;
+  }
+
   .micro-row {
     display: flex;
     justify-content: space-between;
@@ -964,6 +1016,26 @@
   .micro-label {
     color: #4b5563;
     flex: 1;
+  }
+
+  .micro-rule {
+    font-size: 0.66rem;
+    font-weight: 600;
+    margin-left: 0.35rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .micro-rule.required {
+    color: #166534;
+  }
+
+  .micro-rule.optional {
+    color: #92400e;
+  }
+
+  .micro-rule.other {
+    color: #4b5563;
   }
 
   .micro-value {
