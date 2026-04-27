@@ -607,7 +607,7 @@
               >Per 100g</button>
             </div>
           </div>
-          <div class="micros-subtitle">Required and optional label nutrients are listed first. Fat subtypes may not fully sum to total fat due source-data rounding and unclassified fatty components.</div>
+          <div class="micros-subtitle">Required and optional label nutrients are listed first. Fat subtypes may not fully sum to total fat due to source-data rounding and unclassified fatty components.</div>
           {#each NUTRIENT_ROWS as row (row.key)}
             {#if micros[row.key] != null}
               <div class="micro-row">
