@@ -1926,7 +1926,7 @@ export const LEVELS: Level[] = [
     servings: '8 slices',
     prepTime: '25 min',
     linkType: 'dish',
-        nutritionJson: {"perServing": {"cal": 512.74, "pro": 6.34, "fat": 28.22, "carb": 59.81, "fib": 0.75, "sug": 39.46, "h2o": 59.29}, "gramsPerServing": null, "servings": 8.0},
+        nutritionJson: {"perServing": {"cal": 512.74, "pro": 6.34, "fat": 28.22, "carb": 59.81, "fib": 0.75, "sug": 39.46, "h2o": 59.29}, "gramsPerServing": 155.04, "servings": 8.0},
     recipeIngredients: [
       { name: 'Buttermilk Pie', quantity: 'custom (g)', foodWord: 'BUTTERMILKPIE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'all-purpose enriched white flour', quantity: '1 1/2 cups', section: 'crust', ndbNo: '20081', portionDesc: 'g', portionGrams: 188.0 },

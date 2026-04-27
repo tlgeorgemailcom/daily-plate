@@ -294,12 +294,12 @@ def parse_servings_count(servings_text):
         return None
 
 
-def ts_nutrition_json(nutrition_json, servings_count):
+def ts_nutrition_json(nutrition_json, servings_count, grams_per_serving=None):
     if not nutrition_json:
         return 'null'
     payload = {
         'perServing': nutrition_json,
-        'gramsPerServing': None,
+        'gramsPerServing': round(grams_per_serving, 2) if grams_per_serving else None,
         'servings': servings_count,
     }
     return json.dumps(payload, ensure_ascii=False)
@@ -440,6 +440,7 @@ def ingredient_sum_per_serving(comboo_cur, ingredient_rows, servings_count):
         return None
     cols = ', '.join(CANONICAL_NUTRIENT_COLS.keys())
     totals = {k: 0.0 for k in CANONICAL_NUTRIENT_COLS.values()}
+    total_grams = 0.0
     hit = 0
     for row in ingredient_rows:
         if row.get('row_type') not in ('dish_ingredient', 'ingredient'):
@@ -462,10 +463,11 @@ def ingredient_sum_per_serving(comboo_cur, ingredient_rows, servings_count):
         scale = grams / 100.0
         for i, out_key in enumerate(CANONICAL_NUTRIENT_COLS.values()):
             totals[out_key] += (sr[i] or 0.0) * scale
+        total_grams += grams
         hit += 1
     if hit == 0:
-        return None
-    return {k: round(v / servings_count, 2) for k, v in totals.items()}
+        return None, 0.0
+    return {k: round(v / servings_count, 2) for k, v in totals.items()}, total_grams / servings_count
 
 
 def get_canonical_per_serving_from_density(comboo_cur, dish_ndb_no, grams_per_serving):
@@ -607,11 +609,12 @@ for recipe in recipes:
     )
     built_per_serving = normalize_built_per_serving(dev_nutrition_by_recipe.get(rid), servings_count)
     nutrition_per_serving = merge_canonical_with_built_fallback(canonical_per_serving, built_per_serving)
+    ingredient_sum_grams = None
     if not nutrition_per_serving and servings_count:
-        nutrition_per_serving = ingredient_sum_per_serving(
+        nutrition_per_serving, ingredient_sum_grams = ingredient_sum_per_serving(
             comboo_cur, ingredients_by_recipe.get(rid, []), servings_count
         )
-    nutrition_json = ts_nutrition_json(nutrition_per_serving, servings_count)
+    nutrition_json = ts_nutrition_json(nutrition_per_serving, servings_count, ingredient_sum_grams)
 
     block = f"""  {{
     id: '{esc(rid)}',
