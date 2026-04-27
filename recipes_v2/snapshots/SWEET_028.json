@@ -1,7 +1,7 @@
 {
   "recipe_id": "SWEET_028",
-  "recorded_at": "2026-04-25T20:15:51.321453+00:00",
-  "fingerprint": "e8f83408308d8829fecfdfb195893fa3f3c2cd80edb81c1e3b61df3deceb339a",
+  "recorded_at": "2026-04-27T16:31:51.951372+00:00",
+  "fingerprint": "186393eca951160ead1508f2350b9131090e35ddf098efb38f89304df2478d45",
   "disclosure": "Authentic homemade American pound cake built in the classic 1:1 butter-to-sugar ratio. NOT validated against USDA SR Legacy NDB 18120 because the canonical entry reflects commercially prepared pound cake with reduced butter padded by corn syrup/water, reduced-egg formulations, and sodium-based preservatives (fat 14 g/100g vs ~22 g/100g for an authentic butter-rich pound cake; cholesterol 66 mg/100g vs ~131 mg/100g; sodium 377 mg/100g vs ~225 mg/100g without preservatives; sugar 33 g/100g vs ~22 g/100g without sugar/corn-syrup padding). Built entirely from USDA single-NDB ingredients (butter, granulated sugar, eggs, AP flour, baking powder, salt, whole milk, vanilla) with no composite components.",
   "canonical_payload": {
     "recipe_id": "SWEET_028",
@@ -13,7 +13,7 @@
     "ingredients": [
       {
         "ingredient_key": "baking_powder",
-        "grams": 6.0,
+        "grams": 4.0,
         "is_optional": false
       },
       {
@@ -28,12 +28,7 @@
       },
       {
         "ingredient_key": "flour_ap_white_enriched_bleached",
-        "grams": 250.0,
-        "is_optional": false
-      },
-      {
-        "ingredient_key": "milk_whole",
-        "grams": 122.0,
+        "grams": 240.0,
         "is_optional": false
       },
       {
@@ -42,8 +37,13 @@
         "is_optional": false
       },
       {
+        "ingredient_key": "sour_cream",
+        "grams": 58.0,
+        "is_optional": false
+      },
+      {
         "ingredient_key": "sugar_granulated",
-        "grams": 200.0,
+        "grams": 198.0,
         "is_optional": false
       },
       {
@@ -56,8 +56,8 @@
       "Position a rack in the lower-middle of the oven and preheat to 325\u00b0F. Generously butter a 9x5-inch loaf pan and dust with flour, tapping out the excess (or line with a parchment sling for easy lift-out).",
       "Mix the dry ingredients: In a medium bowl, whisk together the AP flour, baking powder, and salt. Set aside.",
       "Cream the butter and sugar: In the bowl of a stand mixer fitted with the paddle attachment (or a large bowl with a hand mixer), beat the room-temperature butter on medium speed until smooth and creamy, about 1 minute. Add the sugar and beat on medium-high until very pale, light, and fluffy \u2014 about 5 minutes, scraping down the bowl twice. Do not rush this step; this is where pound cake gets most of its lift.",
-      "Add the eggs: Reduce the mixer to medium and add the eggs one at a time, beating for 30 seconds and scraping down the bowl after each addition. The mixture should remain emulsified and creamy; if it looks curdled or broken, beat in a tablespoon of the measured flour to bring it back together. Beat in the vanilla.",
-      "Alternate dry and milk to protect the emulsion and minimize gluten development: With the mixer on low speed, add the flour mixture and milk in 5 additions in this exact order, mixing just until each addition is incorporated and scraping down the bowl as needed: (a) Add one-third of the flour mixture and mix until just blended. (b) Add half of the milk and mix until just blended. (c) Add another one-third of the flour mixture and mix until just blended. (d) Add the remaining milk and mix until just blended. (e) Add the final one-third of the flour mixture and mix only until no flour streaks remain. The batter will be thick, smooth, and glossy. Do not overmix.",
+      "Add the eggs: Reduce the mixer to medium and add the eggs one at a time, beating for 30 seconds and scraping down the bowl after each addition. The mixture should remain emulsified and creamy; if it looks curdled or broken, beat in a tablespoon of the measured flour to bring it back together. Beat in the vanilla and sour cream until fully incorporated.",
+      "Add the dry ingredients: With the mixer on low speed, add the flour mixture in 3 additions, mixing just until each addition is incorporated and scraping down the bowl as needed: (a) Add one-third of the flour mixture and mix until just blended. (b) Add another one-third and mix until just blended. (c) Add the final one-third and mix only until no flour streaks remain. The batter will be thick, smooth, and dense. Do not overmix.",
       "Transfer to the pan: Scrape the batter into the prepared loaf pan and smooth the top with an offset spatula, building the batter slightly higher at the corners and ends than in the center (this helps the cake rise level instead of doming).",
       "Bake at 325\u00b0F for 65\u201380 minutes, until the top is deep golden brown, a long crack runs down the center (this is normal and desirable), the cake springs back when lightly pressed, and a wooden skewer inserted in the deepest part comes out with just a few moist crumbs. If the top is browning too quickly past the 50-minute mark, tent loosely with foil.",
       "Cool: Transfer the pan to a wire rack and let cool for 15 minutes. Run a thin knife around the edge, then invert onto the rack and turn the cake right-side up. Let cool completely before slicing, at least 1 hour \u2014 pound cake's crumb continues to set as it cools and slices much more cleanly when fully cool.",
@@ -76,27 +76,27 @@
     "sodium": 377.0
   },
   "built": {
-    "raw_grams_total": 1012.2,
-    "cooked_grams_total": 962.27,
+    "raw_grams_total": 934.2,
+    "cooked_grams_total": 894.23,
     "whole_cooked": {
-      "cal": 3687.286,
-      "pro": 56.72,
-      "fat": 209.5572,
-      "carb": 400.3605,
-      "fib": 6.762,
-      "h2o": 282.9622,
-      "sug": 207.8435,
-      "sodium": 2167.548
+      "cal": 3682.506,
+      "pro": 53.2592,
+      "fat": 216.7172,
+      "carb": 387.0053,
+      "fib": 6.488,
+      "h2o": 226.4964,
+      "sug": 201.6373,
+      "sodium": 1920.848
     },
     "per100g_cooked": {
-      "cal": 383.188,
-      "pro": 5.8944,
-      "fat": 21.7775,
-      "carb": 41.606,
-      "fib": 0.7027,
-      "h2o": 29.4058,
-      "sug": 21.5994,
-      "sodium": 225.2547
+      "cal": 411.8075,
+      "pro": 5.9559,
+      "fat": 24.2351,
+      "carb": 43.278,
+      "fib": 0.7255,
+      "h2o": 25.3287,
+      "sug": 22.5487,
+      "sodium": 214.8047
     }
   }
 }

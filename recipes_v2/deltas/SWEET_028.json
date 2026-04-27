@@ -1,6 +1,6 @@
 {
   "recipe_id": "SWEET_028",
-  "generated_at": "2026-04-25T20:15:51.320974+00:00",
+  "generated_at": "2026-04-27T16:31:51.950062+00:00",
   "canonical_source": "DataCentralCombo",
   "canonical_per100g": {
     "cal": 353.0,
@@ -13,87 +13,88 @@
     "sodium": 377.0
   },
   "built_per100g": {
-    "cal": 383.18801345848124,
-    "pro": 5.894425272985422,
-    "fat": 21.77748480526922,
-    "carb": 41.60603345177029,
-    "fib": 0.7027166721014453,
-    "h2o": 29.405839668658757,
-    "sug": 21.59939258176823,
-    "sodium": 225.25467571430698
+    "cal": 411.80745563988796,
+    "pro": 5.95587458039852,
+    "fat": 24.235063557683233,
+    "carb": 43.278047045178354,
+    "fib": 0.7255403717445656,
+    "h2o": 25.328650833546252,
+    "sug": 22.548705548639102,
+    "sodium": 214.80468125536456
   },
   "deltas": [
     {
       "macro_key": "cal",
       "canonical": 353.0,
-      "built": 383.188,
-      "delta_abs": 30.188,
-      "delta_pct": 8.55,
-      "status": "minor"
+      "built": 411.8075,
+      "delta_abs": 58.8075,
+      "delta_pct": 16.66,
+      "status": "major"
     },
     {
       "macro_key": "pro",
       "canonical": 5.0,
-      "built": 5.8944,
-      "delta_abs": 0.8944,
-      "delta_pct": 17.89,
+      "built": 5.9559,
+      "delta_abs": 0.9559,
+      "delta_pct": 19.12,
       "status": "major"
     },
     {
       "macro_key": "fat",
       "canonical": 13.96,
-      "built": 21.7775,
-      "delta_abs": 7.8175,
-      "delta_pct": 56.0,
+      "built": 24.2351,
+      "delta_abs": 10.2751,
+      "delta_pct": 73.6,
       "status": "major"
     },
     {
       "macro_key": "carb",
       "canonical": 53.64,
-      "built": 41.606,
-      "delta_abs": -12.034,
-      "delta_pct": -22.43,
+      "built": 43.278,
+      "delta_abs": -10.362,
+      "delta_pct": -19.32,
       "status": "major"
     },
     {
       "macro_key": "fib",
       "canonical": 0.6,
-      "built": 0.7027,
-      "delta_abs": 0.1027,
-      "delta_pct": 17.12,
+      "built": 0.7255,
+      "delta_abs": 0.1255,
+      "delta_pct": 20.92,
       "status": "major"
     },
     {
       "macro_key": "h2o",
       "canonical": 25.87,
-      "built": 29.4058,
-      "delta_abs": 3.5358,
-      "delta_pct": 13.67,
-      "status": "minor"
+      "built": 25.3287,
+      "delta_abs": -0.5413,
+      "delta_pct": -2.09,
+      "status": "match"
     },
     {
       "macro_key": "sug",
       "canonical": 33.36,
-      "built": 21.5994,
-      "delta_abs": -11.7606,
-      "delta_pct": -35.25,
+      "built": 22.5487,
+      "delta_abs": -10.8113,
+      "delta_pct": -32.41,
       "status": "major"
     },
     {
       "macro_key": "sodium",
       "canonical": 377.0,
-      "built": 225.2547,
-      "delta_abs": -151.7453,
-      "delta_pct": -40.25,
+      "built": 214.8047,
+      "delta_abs": -162.1953,
+      "delta_pct": -43.02,
       "status": "major"
     }
   ],
   "summary": {
-    "match": 0,
-    "minor": 2,
-    "major": 6,
+    "match": 1,
+    "minor": 0,
+    "major": 7,
     "canonical_zero": 0,
     "majors": [
+      "cal",
       "pro",
       "fat",
       "carb",
@@ -101,13 +102,10 @@
       "sug",
       "sodium"
     ],
-    "minors": [
-      "cal",
-      "h2o"
-    ],
+    "minors": [],
     "canonical_zeros": []
   },
-  "raw_grams_total": 1012.2,
-  "cooked_grams_total": 962.27,
+  "raw_grams_total": 934.2,
+  "cooked_grams_total": 894.23,
   "cook_method": "bake"
 }
