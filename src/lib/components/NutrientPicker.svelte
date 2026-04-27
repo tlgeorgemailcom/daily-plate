@@ -25,13 +25,22 @@
 
   // DRI micronutrients available in the expanded "more" panel.
   // scale: copper mcg→mg (÷1000), potassium/sodium g→mg (×1000)
-  type DRIItem = { key: string; label: string; unit: string; driKey: keyof DRIRow; scale: number };
+  type DRIItem = { key: string; label: string; unit: string; driKey?: keyof DRIRow; scale?: number };
   const DRI_EXTENDED: { section: string; items: DRIItem[] }[] = [
     {
       section: 'Fatty Acids',
       items: [
         { key: 'linoleic_acid',   label: 'Linoleic (Ω6)',    unit: 'g',   driKey: 'linoleic_acid',        scale: 1    },
         { key: 'alpha_linolenic', label: 'α-Linolenic (Ω3)', unit: 'g',   driKey: 'alpha_linolenic_acid', scale: 1    },
+        { key: 'saturated_fat',        label: 'Saturated fat',       unit: 'g'  },
+        { key: 'monounsaturated_fat',  label: 'Monounsaturated fat', unit: 'g'  },
+        { key: 'polyunsaturated_fat',  label: 'Polyunsaturated fat', unit: 'g'  },
+        { key: 'cholesterol',          label: 'Cholesterol',         unit: 'mg' },
+        { key: 'omega3_total',         label: 'Omega-3 total',       unit: 'g'  },
+        { key: 'omega6_total',         label: 'Omega-6 total',       unit: 'g'  },
+        { key: 'epa',                  label: 'EPA (20:5n-3)',        unit: 'g'  },
+        { key: 'dpa',                  label: 'DPA (22:5n-3)',        unit: 'g'  },
+        { key: 'dha',                  label: 'DHA (22:6n-3)',        unit: 'g'  },
       ],
     },
     {
@@ -51,6 +60,7 @@
         { key: 'vitamin_b12',      label: 'Vitamin B12',     unit: 'mcg', driKey: 'vitamin_b12',      scale: 1 },
         { key: 'biotin',           label: 'Biotin (B7)',     unit: 'mcg', driKey: 'biotin',           scale: 1 },
         { key: 'choline',          label: 'Choline',         unit: 'mg',  driKey: 'choline',          scale: 1 },
+        { key: 'betaine',          label: 'Betaine',         unit: 'mg'  },
       ],
     },
     {
@@ -68,6 +78,27 @@
         { key: 'selenium',   label: 'Selenium',   unit: 'mcg', driKey: 'selenium',   scale: 1    },
         { key: 'sodium',     label: 'Sodium',     unit: 'mg',  driKey: 'sodium',     scale: 1000 },
         { key: 'zinc',       label: 'Zinc',       unit: 'mg',  driKey: 'zinc',       scale: 1    },
+      ],
+    },
+    {
+      section: 'Amino Acids',
+      items: [
+        { key: 'tryptophan',    label: 'Tryptophan',    unit: 'g' },
+        { key: 'threonine',     label: 'Threonine',     unit: 'g' },
+        { key: 'isoleucine',    label: 'Isoleucine',    unit: 'g' },
+        { key: 'leucine',       label: 'Leucine',       unit: 'g' },
+        { key: 'lysine',        label: 'Lysine',        unit: 'g' },
+        { key: 'methionine',    label: 'Methionine',    unit: 'g' },
+        { key: 'phenylalanine', label: 'Phenylalanine', unit: 'g' },
+        { key: 'valine',        label: 'Valine',        unit: 'g' },
+        { key: 'histidine',     label: 'Histidine',     unit: 'g' },
+        { key: 'arginine',      label: 'Arginine',      unit: 'g' },
+        { key: 'alanine',       label: 'Alanine',       unit: 'g' },
+        { key: 'aspartic_acid', label: 'Aspartic acid', unit: 'g' },
+        { key: 'glutamic_acid', label: 'Glutamic acid', unit: 'g' },
+        { key: 'glycine',       label: 'Glycine',       unit: 'g' },
+        { key: 'proline',       label: 'Proline',       unit: 'g' },
+        { key: 'serine',        label: 'Serine',        unit: 'g' },
       ],
     },
   ];
@@ -122,14 +153,12 @@
       for (const section of DRI_EXTENDED) {
         const item = section.items.find(i => i.key === selectedDRIKey);
         if (item) {
-          const rawTarget = driRow ? Number(driRow[item.driKey]) : 0;
-          const target = parseFloat((rawTarget * item.scale).toPrecision(3));
-          // Current: scale raw micro total to display unit.
-          // For most nutrients scale=1 (already in display unit).
-          // Exception: DRI copper is mcg but DB/display is mg → scale=0.001 targets DRI,
-          // but microTotals.copper is already in mg so no currentScale needed.
+          const rawTarget = (item.driKey && driRow) ? Number(driRow[item.driKey]) : 0;
+          const target = (item.scale != null && rawTarget > 0)
+            ? parseFloat((rawTarget * item.scale).toPrecision(3))
+            : rawTarget > 0 ? rawTarget : 0;
           const rawCurrent = (microTotals as Record<string, number>)[item.key] ?? 0;
-          const current = parseFloat((rawCurrent).toFixed(item.scale < 1 ? 2 : item.scale > 100 ? 0 : 2));
+          const current = parseFloat(rawCurrent.toFixed(2));
           const percent = target > 0 ? Math.round((current / target) * 100) : 0;
           return {
             key: item.key,
@@ -234,10 +263,10 @@
           {#each DRI_EXTENDED as section}
             <div class="dri-section-heading">{section.section}</div>
             {#each section.items as item}
-              {@const rawTarget = driRow ? Number(driRow[item.driKey]) : null}
-              {@const target = rawTarget !== null ? parseFloat((rawTarget * item.scale).toPrecision(3)) : null}
+              {@const rawTarget = (item.driKey && driRow) ? Number(driRow[item.driKey]) : null}
+              {@const target = (rawTarget !== null && item.scale != null) ? parseFloat((rawTarget * item.scale).toPrecision(3)) : null}
               {@const rawCurrent = (microTotals as Record<string, number>)[item.key] ?? 0}
-              {@const current = parseFloat(rawCurrent.toFixed(item.scale < 1 ? 2 : 2))}
+              {@const current = parseFloat(rawCurrent.toFixed(2))}
               {@const pct = target !== null && target > 0 ? Math.min(Math.round((current / target) * 100), 100) : 0}
               <button
                 class="dri-row"

@@ -341,10 +341,81 @@ export type PieChartNutrient = 'calories' | 'protein' | 'fat' | 'carbs' | 'fiber
 export const selectedPieNutrient = writable<PieChartNutrient>('calories');
 
 // Derived: summed micronutrient totals across all foods on the plate today
+/**
+ * Maps Turso `nutrition_json.per100g` key names → FoodMicros key names.
+ * Only keys that have a corresponding FoodMicros field are included.
+ */
+const TURSO_TO_MICRO_KEY: Partial<Record<string, keyof FoodMicros>> = {
+  LinoleicAcid:                      'linoleic_acid',
+  alphaLinolenicAcid:                'alpha_linolenic_acid',
+  FattyAcids_totalSaturated:         'saturated_fat',
+  FattyAcids_totalMonounsaturated:   'monounsaturated_fat',
+  FattyAcids_totalPolyunsaturated:   'polyunsaturated_fat',
+  omega3:                            'omega3_total',
+  omega6:                            'omega6_total',
+  EPA_20_5n3:                        'epa',
+  DPA_22_5n3:                        'dpa',
+  DHA_22_6n3:                        'dha',
+  Cholesterol:                       'cholesterol',
+  VitaminA_RAE:                      'vitamin_a_rae',
+  VitaminD:                          'vitamin_d',
+  VitaminE_alphaTocopherol:          'vitamin_e',
+  VitaminK_phylloquinone:            'vitamin_k',
+  VitaminC_totalAscorbicAcid:        'vitamin_c',
+  Thiamin:                           'thiamin',
+  Riboflavin:                        'riboflavin',
+  Niacin:                            'niacin',
+  PantothenicAcid:                   'pantothenic_acid',
+  VitaminB6:                         'vitamin_b6',
+  Folate_DFE:                        'folate',
+  VitaminB12:                        'vitamin_b12',
+  Choline_total:                     'choline',
+  Betaine:                           'betaine',
+  Calcium_Ca:                        'calcium',
+  Copper_Cu:                         'copper',
+  Iron_Fe:                           'iron',
+  Magnesium_Mg:                      'magnesium',
+  Manganese_Mn:                      'manganese',
+  Phosphorus_P:                      'phosphorus',
+  Potassium_K:                       'potassium',
+  Selenium_Se:                       'selenium',
+  Sodium_Na:                         'sodium',
+  Zinc_Zn:                           'zinc',
+  Tryptophan:                        'tryptophan',
+  Threonine:                         'threonine',
+  Isoleucine:                        'isoleucine',
+  Leucine:                           'leucine',
+  Lysine:                            'lysine',
+  Methionine:                        'methionine',
+  Phenylalanine:                     'phenylalanine',
+  Valine:                            'valine',
+  Histidine:                         'histidine',
+  Arginine:                          'arginine',
+  Alanine:                           'alanine',
+  AsparticAcid:                      'aspartic_acid',
+  GlutamicAcid:                      'glutamic_acid',
+  Glycine:                           'glycine',
+  Proline:                           'proline',
+  Serine:                            'serine',
+};
+
 export const micronutrientTotals = derived(addedFoods, ($foods) => {
   const totals: FoodMicros = {};
   for (const added of $foods) {
     const grams = added.customGrams ?? added.portion.gm * (added.multiplier ?? 1);
+    // Recipe foods carry per-100g Turso micros — map and scale them directly.
+    if (added.food.micros) {
+      const scale = grams / 100;
+      for (const [tursoKey, microKey] of Object.entries(TURSO_TO_MICRO_KEY)) {
+        const raw = (added.food.micros as Record<string, number | null>)[tursoKey];
+        if (raw != null && microKey) {
+          (totals as Record<string, number>)[microKey] =
+            ((totals as Record<string, number>)[microKey] ?? 0) + raw * scale;
+        }
+      }
+      continue; // skip static lookup for recipe foods
+    }
+    // Static USDA SR lookup for curated/custom foods.
     const micros = getMicrosForGrams(added.food.ndb, grams);
     if (!micros) continue;
     for (const key in micros) {

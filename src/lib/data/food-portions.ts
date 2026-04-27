@@ -27,6 +27,8 @@ export interface Food {
   h2o: number;      // Water (g)
   sug: number;      // Total Sugar (g)
   portions: Portion[];  // [0] is always custom (100g base)
+  /** Per-100g micronutrient data from Turso dev_recipes (Turso key names). Present only for recipe foods. */
+  micros?: Record<string, number | null> | null;
 }
 
 export interface NutrientValues {
