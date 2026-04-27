@@ -306,8 +306,9 @@ async function main() {
   }
 
   const perServingMacros = macroSnapshot(mergedPerServing);
+  // Keep micros aligned to per100g units for UI consistency.
   const micros = Object.fromEntries(
-    Object.entries(mergedPerServing).filter(([key]) => ![
+    Object.entries(mergedPer100g).filter(([key]) => ![
       'Energy_KCal', 'Protein', 'TotalLipidFat', 'Carbohydrate', 'FiberTotalDietary', 'Water', 'SugarsTotal'
     ].includes(key))
   );

@@ -84,6 +84,17 @@ export const GET: RequestHandler = async () => {
       const ps = nutrition.perServing;
       const gpS: number = nutrition.gramsPerServing || 100;
       const scale = 100 / gpS;
+      // Always expose micros in per-100g units for consistent UI display.
+      // Legacy `nutrition.micros` payloads are per-serving, so normalize them.
+      const normalizedMicros = nutrition.per100g
+        ?? (nutrition.micros
+          ? Object.fromEntries(
+              Object.entries(nutrition.micros as Record<string, unknown>).map(([k, v]) => [
+                k,
+                Math.round((Number(v ?? 0) * scale) * 100) / 100,
+              ])
+            )
+          : null);
       return {
         id:              `dev-${recipeId}`,
         name:            row.recipe_name as string,
@@ -102,7 +113,7 @@ export const GET: RequestHandler = async () => {
         fib:  Math.round(((ps.fib ?? ps.FiberTotalDietary ?? 0) as number) * scale * 10) / 10,
         h2o:  Math.round(((ps.h2o ?? ps.Water ?? 0) as number) * scale * 10) / 10,
         sug:  Math.round(((ps.sug ?? ps.SugarsTotal ?? 0) as number) * scale * 10) / 10,
-        micros: nutrition.micros ?? nutrition.per100g ?? null,
+        micros: normalizedMicros,
       };
     });
   } catch (err) {
