@@ -1,0 +1,101 @@
+{
+  "recipe_id": "SWEET_029",
+  "recorded_at": "2026-04-27T17:06:18.985571+00:00",
+  "fingerprint": "068c4e34ad9a332c754ef796394a1bcfcd5692b798062ea7d0da162a3f1fedbc",
+  "disclosure": "The nutrient values reflect water loss during baking and were validated against USDA SR Legacy NDB 18154 on all usable nutrients. Sugar and fiber are excluded from strict validation because the canonical entry reports both as 0.0 g/100g despite a high-carbohydrate brownie profile.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_029",
+    "canonical_ndb_no": "18154",
+    "cook_method": "bake",
+    "yield_factor_water": 0.79,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 57.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "cocoa_powder_unsweetened",
+        "grams": 95.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_whole_raw",
+        "grams": 100.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 80.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 5.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 210.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vanilla_extract",
+        "grams": 4.2,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vegetable_shortening",
+        "grams": 130.0,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "Position a rack in the center of the oven and preheat to 350\u00b0F. Grease a 9-inch square metal baking pan and line it with parchment, leaving overhang on two sides for easy lift-out.",
+      "In a large bowl, stir together the vegetable shortening and butter until smooth and creamy.",
+      "Add the sugar and whisk until glossy and well blended.",
+      "Whisk in the eggs one at a time, then whisk in the vanilla until smooth.",
+      "In a separate bowl, whisk together the flour, cocoa powder, and salt.",
+      "Fold the dry ingredients into the wet mixture just until no dry streaks remain. Do not overmix.",
+      "Spread the batter evenly in the prepared pan and smooth the top with an offset spatula.",
+      "Bake for 22\u201328 minutes, until the top is set and a toothpick inserted 1 inch from the edge comes out with moist crumbs.",
+      "Cool completely in the pan on a wire rack. Lift out using the parchment overhang and cut into 16 squares."
+    ]
+  },
+  "canonical_per100g": {
+    "cal": 466.0,
+    "pro": 6.2,
+    "fat": 29.1,
+    "carb": 50.2,
+    "fib": 0.0,
+    "h2o": 12.6,
+    "sug": 0.0,
+    "sodium": 343.0
+  },
+  "built": {
+    "raw_grams_total": 681.7,
+    "cooked_grams_total": 660.49,
+    "whole_cooked": {
+      "cal": 3033.486,
+      "pro": 39.931,
+      "fat": 199.5442,
+      "carb": 327.2965,
+      "fib": 37.31,
+      "h2o": 79.8083,
+      "sug": 212.394,
+      "sodium": 2303.988
+    },
+    "per100g_cooked": {
+      "cal": 459.2815,
+      "pro": 6.0457,
+      "fat": 30.2118,
+      "carb": 49.554,
+      "fib": 5.6489,
+      "h2o": 12.0833,
+      "sug": 32.1573,
+      "sodium": 348.8327
+    }
+  }
+}

@@ -1,14 +1,378 @@
 recipe_id,recipe_name,step_order,step_text
 SWEET_001,Pie Apple,1,Preheat the oven to 425 degrees F (220 degrees C).
-SWEET_001,Pie Apple,2,"For the crust whisk the all-purpose enriched white flour, salt and sugar together. Cut in the chilled butter until the mixture resembles coarse crumbs, then add the ice water just until the dough comes together. Divide into two discs and chill for at least 30 minutes."
-SWEET_001,Pie Apple,3,"Roll out one disc and line the bottom of a 9-inch pie plate. Stir the apple pie filling with the sugar, lemon juice, butter, and all-purpose enriched white flour, plus any optional cinnamon, cloves, or allspice, then spoon it into the crust."
-SWEET_001,Pie Apple,4,Roll out the top crust and place it over the filling. Seal and crimp the edges then cut vents in the top crust.
-SWEET_001,Pie Apple,5,Bake for 15 minutes. Lower the oven to 350 degrees F (175 degrees C) and bake 35 to 40 minutes more until the crust is golden brown and the filling is bubbling. Cool on a rack before slicing.
+SWEET_001,Pie Apple,2,"For the crust whisk the flour and salt together. Cut in the chilled butter and shortening until the mixture resembles coarse crumbs, then add the ice water 1 tablespoon at a time just until the dough comes together. Divide into two discs and chill for at least 30 minutes."
+SWEET_001,Pie Apple,3,"In a large saucepan, combine the peeled and cored Granny Smith apple slices with the sugar, lemon juice, cornstarch, butter, and 1/4 cup water, plus any optional cinnamon, cloves, or allspice. Bring to a boil over medium heat, then reduce heat, cover, and simmer for 5 minutes, stirring occasionally. Uncover and simmer 5 minutes more, until the apples are slightly softened and the juices have thickened. Remove from heat and let cool while you roll out the crust."
+SWEET_001,Pie Apple,4,"Roll out one disc and line the bottom of a 9-inch pie plate. Spoon the cooled apple filling into the crust, mounding slightly in the center."
+SWEET_001,Pie Apple,5,"Roll out the second disc and cut into 1/2-inch strips. Lay the strips over the filling in a lattice pattern, weaving them over and under. Trim and crimp the edges to seal."
+SWEET_001,Pie Apple,6,Bake for 15 minutes. Lower the oven to 350 degrees F (175 degrees C) and bake 35 to 40 minutes more until the crust is golden brown and the filling is bubbling. Cool on a rack before slicing.
 SWEET_002,Apple Strudel,1,Preheat the oven to 375 degrees F (190 degrees C).
 SWEET_002,Apple Strudel,2,"Melt the butter in a skillet and cook the bread crumbs over medium heat until lightly golden, then let them cool slightly."
 SWEET_002,Apple Strudel,3,"Combine apples, sugar, brown sugar, raisins, lemon juice, cinnamon, flour and 1/4 cup water in a sauce pan and bring to a boil. Cover and simmer for 5 minutes, stir occasionally, then uncover and simmer until thickened, about 5 minutes. The added water should evaporate."
-SWEET_002,Apple Strudel,4,"Sprinkle the browned bread crumbs over the pastry where the filling will sit; this absorbs juices and keeps the bottom from going soggy."
-SWEET_002,Apple Strudel,5,Roll the puff pastry to a 1/8 inch sheet or 16x12 rectangle.
-SWEET_002,Apple Strudel,6,"Spread the filling along one long side of the pastry several inches in, leaving a border on the sides so the roll can be sealed."
-SWEET_002,Apple Strudel,7,"Brush the exposed border with beaten egg. Fold the long end halfway over the filling then fold in the short ends. Continue rolling the pastry around the filling into a long strudel and seal the edge with egg. Tuck ends under.  Place it seam-side down on a lined baking sheet. Brush with the remaining egg."
+SWEET_002,Apple Strudel,4,Roll the puff pastry to a 1/8 inch sheet or 16x12 rectangle on a lightly floured surface.
+SWEET_002,Apple Strudel,5,"Sprinkle the browned bread crumbs along one long side of the pastry several inches in, leaving a border on the sides so the roll can be sealed; the crumbs absorb juices and keep the bottom from going soggy."
+SWEET_002,Apple Strudel,6,Spoon the cooled filling on top of the bread crumbs.
+SWEET_002,Apple Strudel,7,Brush the exposed border with beaten egg. Fold the long end halfway over the filling then fold in the short ends. Continue rolling the pastry around the filling into a long strudel and seal the edge with egg. Tuck ends under. Place it seam-side down on a lined baking sheet. Brush with the remaining egg.
 SWEET_002,Apple Strudel,8,Bake for about 30-40 minutes or until the pastry is browned and crisp and the apple filling is tender. Cool before slicing.
+SWEET_003,Pie Banana Cream,1,Preheat the oven to 425 degrees F (220 degrees C).
+SWEET_003,Pie Banana Cream,2,"For the crust whisk the flour and salt together. Cut in the chilled butter until the mixture resembles coarse crumbs, then add the ice water 1 tablespoon at a time just until the dough comes together. Form into a disc and chill for at least 30 minutes."
+SWEET_003,Pie Banana Cream,3,"Roll the chilled dough into a 12-inch circle and fit into a 9-inch pie plate, trimming and crimping the edges. Line with parchment, fill with pie weights or dried beans, and blind-bake for 15 minutes. Remove the weights and bake 8-10 minutes more, until the crust is golden brown. Cool completely on a rack."
+SWEET_003,Pie Banana Cream,4,"For the pastry cream, whisk the sugar, cornstarch, and salt together in a heavy saucepan. Whisk in the milk a little at a time to keep the cornstarch smooth. Bring to a boil over medium heat, whisking constantly, until thick and bubbling, about 5-7 minutes. Boil 1 minute more, still whisking."
+SWEET_003,Pie Banana Cream,5,"Whisk a ladleful of the hot mixture into the egg yolks to temper, then whisk the tempered yolks back into the saucepan. Cook over medium-low heat, whisking constantly, for 2 more minutes until very thick. Remove from heat and whisk in the butter and vanilla until smooth."
+SWEET_003,Pie Banana Cream,6,"Spread half of the warm pastry cream over the cooled crust. Layer the sliced bananas evenly on top, then spread the remaining pastry cream over the bananas. Press plastic wrap directly onto the surface to prevent a skin from forming."
+SWEET_003,Pie Banana Cream,7,Refrigerate the pie for at least 4 hours or until fully chilled and set.
+SWEET_003,Pie Banana Cream,8,"Just before serving, beat the heavy cream with the powdered sugar and vanilla until soft peaks form, then spread or pipe over the chilled pie. Slice with a clean knife and serve immediately."
+SWEET_004,Pie Blueberry,1,Preheat the oven to 425 degrees F (220 degrees C).
+SWEET_004,Pie Blueberry,2,"For the crust whisk the flour and salt together. Cut in the chilled butter until the mixture resembles coarse crumbs, then add the ice water 1 tablespoon at a time just until the dough comes together. Divide into two discs (one slightly larger than the other for the bottom crust), and chill for at least 30 minutes."
+SWEET_004,Pie Blueberry,3,"Roll the larger disc into a 12-inch circle and fit into a 9-inch pie plate, leaving a 1-inch overhang. Refrigerate while preparing the filling."
+SWEET_004,Pie Blueberry,4,"In a large bowl, gently toss the blueberries with the sugar, cornstarch, lemon juice, cinnamon, and salt until evenly coated. Pour into the prepared crust, mounding slightly in the center, and dot the top with the butter."
+SWEET_004,Pie Blueberry,5,"Roll out the second disc into an 11-inch circle, cut into 1/2-inch-wide strips, and weave into a lattice on top of the pie. Trim, crimp, and seal the lattice to the bottom crust."
+SWEET_004,Pie Blueberry,6,"Lightly beat 1 large egg with 1 teaspoon water; brush the egg wash evenly over the lattice top to give it a deep golden, glossy finish during baking."
+SWEET_004,Pie Blueberry,7,"Bake at 425 degrees F (220 degrees C) for 25 minutes to set the crust and activate the cornstarch. Reduce the heat to 375 degrees F (190 degrees C) and shield the crust edges with a 2- to 3-inch strip of aluminum foil (or a pie crust shield) to prevent over-browning. Continue baking for 50-55 minutes more (total bake time roughly 75-80 minutes), removing the foil for the last 15 minutes, until the crust is deep golden brown and the filling is bubbling thickly across the entire surface. An instant-read thermometer inserted through the lattice should read about 200 degrees F (93 degrees C)."
+SWEET_004,Pie Blueberry,8,Cool the pie on a wire rack for at least 3 hours before slicing to allow the filling to set. Serve at room temperature or slightly warm.
+SWEET_005,Pie Cherry,1,Preheat the oven to 425 degrees F (220 degrees C).
+SWEET_005,Pie Cherry,2,"For the crust whisk the flour and salt together. Cut in the chilled butter until the mixture resembles coarse crumbs, then add the ice water 1 tablespoon at a time just until the dough comes together. Divide into two discs (one slightly larger than the other for the bottom crust) and chill for at least 30 minutes."
+SWEET_005,Pie Cherry,3,"While the dough chills, pit and halve the cherries. Add them to a medium saucepan with the sugar and lemon juice, and toss to combine. Cook over medium heat for a few minutes, stirring occasionally, until the cherries have released their juices."
+SWEET_005,Pie Cherry,4,"Use a slotted spoon to transfer the cherries into a bowl, leaving the juices in the saucepan. Spoon a few tablespoons of the hot juice into a small container, stir in the cornstarch until fully dissolved, then return the slurry to the saucepan with the remaining juices. Cook over medium heat for a few minutes, stirring constantly, until the sauce has thickened. Pour the thickened sauce over the cherries, stir in the salt, and set aside to cool slightly."
+SWEET_005,Pie Cherry,5,"Roll the larger disc into a 12-inch circle and fit into a 9-inch pie plate, leaving a 1-inch overhang. Pour the cooled cherry filling into the prepared crust and dot the top with the butter."
+SWEET_005,Pie Cherry,6,"Roll out the second disc into an 11-inch circle, cut into 1/2-inch-wide strips, and weave into a lattice on top of the pie. Trim, crimp, and seal the lattice to the bottom crust."
+SWEET_005,Pie Cherry,7,"Lightly beat 1 large egg with 1 teaspoon water; brush the egg wash evenly over the lattice top to give it a deep golden, glossy finish during baking."
+SWEET_005,Pie Cherry,8,"Bake at 425 degrees F (220 degrees C) for 25 minutes to set the crust. Reduce the heat to 375 degrees F (190 degrees C) and shield the crust edges with a 2- to 3-inch strip of aluminum foil (or a pie crust shield) to prevent over-browning. Continue baking for 50-55 minutes more (total bake time roughly 75-80 minutes), removing the foil for the last 15 minutes, until the crust is deep golden brown and the filling is bubbling thickly across the entire surface. An instant-read thermometer inserted through the lattice should read about 200 degrees F (93 degrees C)."
+SWEET_005,Pie Cherry,9,Cool the pie on a wire rack for at least 3 hours before slicing to allow the filling to set. Serve at room temperature or slightly warm.
+SWEET_006,Pie Lemon Meringue,1,Preheat the oven to 425 degrees F (220 degrees C).
+SWEET_006,Pie Lemon Meringue,2,"For the crust whisk the flour and salt together. Cut in the chilled butter until the mixture resembles coarse crumbs, then add the ice water 1 tablespoon at a time just until the dough comes together. Form into a single disc and chill for at least 30 minutes."
+SWEET_006,Pie Lemon Meringue,3,"Roll the chilled dough into a 12-inch circle and fit into a 9-inch pie plate, trimming and crimping the edges. Line with parchment, fill with pie weights or dried beans, and blind-bake for 15 minutes. Remove the weights and bake 8-10 minutes more, until the crust is golden brown. Cool completely on a rack. Reduce oven temperature to 350 degrees F (175 degrees C)."
+SWEET_006,Pie Lemon Meringue,4,"For the curd, whisk together the sugar, lemon zest, yolks, and salt in a heavy saucepan. In a separate bowl, whisk the cold water with the cornstarch until smooth, then whisk into the saucepan along with the lemon juice."
+SWEET_006,Pie Lemon Meringue,5,"Cook over medium heat, whisking constantly, until the mixture thickens and just comes to a gentle boil, about 8-10 minutes. Remove from heat and whisk in the butter a few pieces at a time until smooth and glossy. Pour the warm curd directly into the cooled crust and smooth the top."
+SWEET_006,Pie Lemon Meringue,6,"For the meringue, combine the egg whites, sugar, and salt in a large bowl. Beat on medium-high until stiff, glossy peaks form."
+SWEET_006,Pie Lemon Meringue,7,"Pile the meringue onto the pie, spreading it so it touches the crust all the way around to seal."
+SWEET_006,Pie Lemon Meringue,8,"Bake at 350F until the meringue begins to brown, 8-10 minutes."
+SWEET_006,Pie Lemon Meringue,9,"Cool the pie on a wire rack for at least 1 hour, then refrigerate for at least 3 hours before slicing to allow the filling to set fully."
+SWEET_007,Pie Mince,1,Preheat the oven to 425 degrees F (220 degrees C).
+SWEET_007,Pie Mince,2,"For the crust, whisk the flour, salt, and sugar together. Cut in the chilled butter until the mixture resembles coarse crumbs, then add the ice water 1 tablespoon at a time just until the dough comes together. Divide into 2 discs (one slightly larger for the bottom) and chill for at least 30 minutes."
+SWEET_007,Pie Mince,3,"Roll the larger disc into a 12-inch circle and fit into a 9-inch pie plate, leaving overhang. Roll the second disc and cut into 1/2-inch strips for the lattice."
+SWEET_007,Pie Mince,4,"For the mincemeat, melt the butter in a large saucepan over medium heat. Add the apples, dark and golden raisins, currants, dried cranberries, chopped dates and apricots, candied peel, brown sugar, lemon zest, lemon juice, water, cinnamon, nutmeg, cloves, ginger, allspice, and salt. Bring to a boil, stirring often, then reduce the heat to low and simmer, stirring frequently, until the apples have softened and most of the liquid has cooked away, about 25-30 minutes. The mixture should be glossy and thickened. Cool slightly. (Optional make-ahead: cool completely, transfer to an airtight container, and refrigerate up to 1 week; flavors deepen with rest. Stir in a tablespoon of rum or brandy weekly to keep up to 1 month.)"
+SWEET_007,Pie Mince,5,"Pour the warm mincemeat into the prepared crust and smooth the top. Lay the lattice strips over the filling in a woven pattern. Trim, fold, and crimp the edges to seal."
+SWEET_007,Pie Mince,6,Whisk the egg with 1 teaspoon of water and brush the lattice top.
+SWEET_007,Pie Mince,7,"Bake at 425F for 20 minutes, then reduce the temperature to 375F and bake for another 30-35 minutes, until the crust is deep golden brown and the filling is bubbling. Tent loosely with foil if the crust browns too quickly."
+SWEET_007,Pie Mince,8,Cool the pie on a wire rack for at least 2 hours before slicing to allow the filling to set.
+SWEET_008,Pie Peach,1,Preheat the oven to 425 degrees F (220 degrees C).
+SWEET_008,Pie Peach,2,"For the crust, whisk the flour, salt, and sugar together. Cut in the chilled butter until the mixture resembles coarse crumbs, then add the ice water 1 tablespoon at a time just until the dough comes together. Divide into 2 discs (one slightly larger for the bottom) and chill for at least 30 minutes."
+SWEET_008,Pie Peach,3,"Roll the larger disc into a 12-inch circle and fit into a 9-inch pie plate, leaving overhang. Roll the second disc and cut into 1/2-inch strips for the lattice; chill while you make the filling."
+SWEET_008,Pie Peach,4,"Score a small X in the bottom of each peach, blanch in boiling water for 30-45 seconds, then transfer to an ice bath. Slip off the skins, halve, pit, and slice into 1/4-inch slices. Alternatively, use a vegetable peeler to remove the skin."
+SWEET_008,Pie Peach,5,"Combine the sliced peaches, sugar, cornstarch, lemon juice, cinnamon, nutmeg, and salt in a heavy saucepan and toss gently to coat the fruit evenly. Set over medium heat."
+SWEET_008,Pie Peach,6,"Cook, stirring every minute or two so nothing scorches, until the peaches release their juice and the cornstarch turns the syrup glossy and noticeably thickened, about 8-12 minutes. Remove from the heat as soon as the liquid looks like a glaze that coats the spoon."
+SWEET_008,Pie Peach,7,Spread the cooked filling on a sheet pan or shallow plate so it cools to at least lukewarm before going into the crust. Pouring hot filling onto raw dough will melt the butter and ruin the bottom crust.
+SWEET_008,Pie Peach,8,"Scrape the cooled filling into the prepared bottom crust and smooth the surface. Dot with the butter pieces. Lay the lattice strips over the filling in a woven pattern. Trim, fold under, and crimp the edges to seal."
+SWEET_008,Pie Peach,9,Whisk the egg with 1 teaspoon of water and brush the lattice top.
+SWEET_008,Pie Peach,10,"Bake at 425F for 20 minutes, then reduce the temperature to 375F and bake for another 25-30 minutes, until the crust is deep golden brown and the filling is bubbling slowly through the lattice. Tent the edges loosely with foil if they brown too quickly."
+SWEET_008,Pie Peach,11,Cool the pie on a wire rack for at least 3 hours before slicing so the filling sets firmly.
+SWEET_009,Pecan Pie,1,Preheat the oven to 350 degrees F (175 degrees C).
+SWEET_009,Pecan Pie,2,"For the crust, whisk the flour and salt together. Cut in the chilled butter until the mixture resembles coarse crumbs, then add the ice water 1 tablespoon at a time just until the dough comes together. Form into a disc and chill for at least 30 minutes."
+SWEET_009,Pecan Pie,3,"Roll the dough into an 11-inch circle and fit into a 9-inch pie plate. Trim, fold under, and crimp the edges. Prick the bottom and sides with a fork."
+SWEET_009,Pecan Pie,4,"Line the crust with parchment paper and fill with pie weights or dried beans. Blind-bake for 12-15 minutes until the edges are set, then remove the parchment and weights and bake for another 5 minutes until the bottom looks dry and barely golden. Set aside while you make the filling."
+SWEET_009,Pecan Pie,5,"In a large bowl, whisk the eggs with the tablespoon of flour until the flour is fully dispersed and there are no lumps. Add the corn syrup, brown sugar, melted butter, vanilla, and salt and whisk until smooth. The flour helps the filling set so it does not run when sliced."
+SWEET_009,Pecan Pie,6,Stir in the pecan halves so they are evenly coated.
+SWEET_009,Pecan Pie,7,"Pour the filling into the par-baked crust, arranging the pecans so they float in an even layer across the top."
+SWEET_009,Pecan Pie,8,"Bake at 350F for 50-60 minutes, until the edges are puffed, the pecans on top are well toasted, and the center is just set with only a slight jiggle when the pan is gently shaken. Tent the crust edges with foil if they brown too quickly."
+SWEET_009,Pecan Pie,9,Cool on a wire rack for at least 2 hours before slicing so the filling sets fully.
+SWEET_010,Pumpkin Pie,1,Preheat the oven to 425 degrees F (220 degrees C).
+SWEET_010,Pumpkin Pie,2,"For the crust, whisk the flour and salt together. Cut in the chilled butter until the mixture resembles coarse crumbs, then add the ice water 1 tablespoon at a time just until the dough comes together. Form into a disc and chill for at least 30 minutes."
+SWEET_010,Pumpkin Pie,3,"Roll the dough into an 11-inch circle and fit into a 9-inch pie plate. Trim, fold under, and crimp the edges. Prick the bottom and sides with a fork."
+SWEET_010,Pumpkin Pie,4,"Line the crust with parchment paper and fill with pie weights or dried beans. Blind-bake for 12-15 minutes until the edges are set, then remove the parchment and weights and bake for another 5 minutes until the bottom looks dry and barely golden. Set aside while you make the filling."
+SWEET_010,Pumpkin Pie,5,"In a large bowl, whisk the sugar, salt, and pumpkin pie spice together until evenly combined."
+SWEET_010,Pumpkin Pie,6,"Add the eggs and whisk to break them up, then whisk in the pumpkin puree until smooth."
+SWEET_010,Pumpkin Pie,7,Gradually whisk in the evaporated milk and the melted butter until the filling is uniform with no streaks.
+SWEET_010,Pumpkin Pie,8,Pour the filling into the par-baked crust. The crust should be nearly full but not overflowing.
+SWEET_010,Pumpkin Pie,9,"Bake at 425F for 15 minutes, then reduce the oven temperature to 350F and bake for another 40-50 minutes, until a knife inserted 1 inch from the edge comes out clean and the center is just set with only a slight jiggle. Tent the crust edges with foil if they brown too quickly."
+SWEET_010,Pumpkin Pie,10,Cool on a wire rack for at least 2 hours so the filling sets completely before slicing.
+SWEET_011,Vanilla Cream Pie,1,Preheat the oven to 425 degrees F (220 degrees C).
+SWEET_011,Vanilla Cream Pie,2,"For the crust, whisk the flour and salt together. Cut in the chilled butter until the mixture resembles coarse crumbs, then add the ice water 1 tablespoon at a time just until the dough comes together. Form into a disc and chill for at least 30 minutes."
+SWEET_011,Vanilla Cream Pie,3,"Roll the dough into an 11-inch circle and fit into a 9-inch pie plate. Trim, fold under, and crimp the edges. Prick the bottom and sides with a fork."
+SWEET_011,Vanilla Cream Pie,4,"Line the crust with parchment and fill with pie weights or dried beans. Blind-bake at 425F for 12-15 minutes until the edges are set, then remove the parchment and weights, reduce the oven to 375F, and bake for another 8-10 minutes until the bottom is dry and golden. Cool completely on a rack."
+SWEET_011,Vanilla Cream Pie,5,"For the pastry cream, whisk the sugar, cornstarch, flour, and salt together in a heavy saucepan. Gradually whisk in the milk until smooth."
+SWEET_011,Vanilla Cream Pie,6,"Set over medium heat and cook, whisking constantly, until the mixture thickens, comes to a gentle boil, and bubbles for about 1 minute. The custard should coat the back of a spoon thickly."
+SWEET_011,Vanilla Cream Pie,7,"Whisk a ladleful of the hot custard into the egg yolks to temper them, then return the yolks to the saucepan. Cook, whisking constantly, for another 2 minutes until thickened and glossy. Do not let it scorch."
+SWEET_011,Vanilla Cream Pie,8,Remove from the heat and whisk in the butter and vanilla extract until smooth.
+SWEET_011,Vanilla Cream Pie,9,"Pour the warm filling into the cooled crust and smooth the top. Press a piece of plastic wrap directly onto the surface to prevent a skin from forming, then refrigerate for at least 4 hours, or until fully set."
+SWEET_011,Vanilla Cream Pie,10,"Just before serving, whip the heavy cream with the powdered sugar and vanilla (if using) to soft peaks. Spread or pipe over the chilled pie and serve."
+SWEET_012,Boston Cream Pie,1,Preheat the oven to 350 degrees F (175 degrees C). Grease two 8-inch round cake pans and line the bottoms with parchment paper.
+SWEET_012,Boston Cream Pie,2,"For the cake, whisk the flour, baking powder, and salt together and set aside."
+SWEET_012,Boston Cream Pie,3,"In a stand mixer or large bowl, beat the softened butter and sugar on medium-high until pale and fluffy, about 3 minutes. Add the eggs one at a time, beating well after each, then beat in the vanilla."
+SWEET_012,Boston Cream Pie,4,"On low speed, add the flour mixture in three additions alternating with the milk in two additions, beginning and ending with the flour. Mix just until smooth."
+SWEET_012,Boston Cream Pie,5,"Divide the batter evenly between the two pans and smooth the tops. Bake for 22-26 minutes, until the centers spring back when lightly pressed and a toothpick comes out clean. Cool in the pans 10 minutes, then turn out onto a rack and cool completely."
+SWEET_012,Boston Cream Pie,6,"For the pastry cream, whisk the sugar, cornstarch, and salt in a heavy saucepan. Gradually whisk in the milk until smooth. Cook over medium heat, whisking constantly, until thickened and gently boiling, about 1 minute."
+SWEET_012,Boston Cream Pie,7,"Whisk a ladleful of the hot custard into the egg yolks to temper them, then return the yolks to the saucepan. Cook 1-2 minutes more, whisking constantly, until thick and glossy."
+SWEET_012,Boston Cream Pie,8,"Remove from the heat and whisk in the butter and vanilla. Press plastic wrap onto the surface and chill until cold, at least 1 hour."
+SWEET_012,Boston Cream Pie,9,"When the cake layers are completely cool and the pastry cream is set, place the bottom layer on a serving plate. Spread the pastry cream evenly to within 1/2 inch of the edge. Top with the second cake layer, pressing gently."
+SWEET_012,Boston Cream Pie,10,"For the glaze, heat the cream in a small saucepan or microwave until it just begins to steam. Pour over the chopped chocolate in a heatproof bowl, let sit 1 minute, then whisk until smooth. Whisk in the butter until glossy."
+SWEET_012,Boston Cream Pie,11,"Pour the warm glaze over the center of the top cake layer and spread gently with the back of a spoon, letting some drip down the sides. Refrigerate at least 1 hour before slicing so the glaze sets."
+SWEET_013,Chocolate Cream Pie,1,Preheat the oven to 350 degrees F (175 degrees C).
+SWEET_013,Chocolate Cream Pie,2,"For the crust, pulse the cookies in a food processor to fine crumbs (or crush in a sealed bag with a rolling pin). Combine with the melted butter and stir until evenly moistened. Press firmly into the bottom and up the sides of a 9-inch pie plate. Bake for 8-10 minutes, then cool on a rack while you make the filling."
+SWEET_013,Chocolate Cream Pie,3,"For the filling, whisk the sugar, cornstarch, cocoa, and salt together in a heavy saucepan. Gradually whisk in the milk and heavy cream until smooth and no lumps remain."
+SWEET_013,Chocolate Cream Pie,4,"Set over medium heat and cook, whisking constantly, until the mixture thickens, comes to a gentle boil, and bubbles for about 1 minute."
+SWEET_013,Chocolate Cream Pie,5,"Whisk a ladleful of the hot custard into the egg yolks to temper them, then return the yolks to the saucepan. Cook 1-2 minutes more, whisking constantly, until thick and glossy."
+SWEET_013,Chocolate Cream Pie,6,"Remove from the heat and add the chopped chocolate, butter, and vanilla. Whisk until completely smooth and the chocolate is fully melted."
+SWEET_013,Chocolate Cream Pie,7,"Pour the warm filling into the cooled cookie crust and smooth the top. Press a piece of plastic wrap directly onto the surface and refrigerate for at least 4 hours, or until fully set."
+SWEET_013,Chocolate Cream Pie,8,"Just before serving, whip the heavy cream with the powdered sugar and vanilla (if using) to soft peaks. Spread or pipe over the chilled pie and serve."
+SWEET_014,Coconut Cream Pie,1,"For the crust, whisk the flour and salt together in a bowl. Cut in the cold butter with a pastry cutter or your fingertips until the mixture resembles coarse crumbs with some pea-sized pieces. Sprinkle the ice water over and stir gently with a fork until the dough just comes together, adding a few more drops of water if needed."
+SWEET_014,Coconut Cream Pie,2,"Shape the dough into a disk, wrap, and chill for at least 30 minutes. Roll out on a lightly floured surface to a 12-inch round, transfer to a 9-inch pie plate, trim, and crimp the edges. Prick the bottom all over with a fork and chill for another 15 minutes."
+SWEET_014,Coconut Cream Pie,3,"Preheat the oven to 400 degrees F (205 degrees C). Line the chilled shell with parchment and fill with pie weights or dried beans. Bake for 15 minutes, then remove the weights and parchment and bake another 8-10 minutes, until the crust is fully baked and lightly golden. Cool completely on a rack."
+SWEET_014,Coconut Cream Pie,4,"For the filling, whisk the sugar, cornstarch, and salt together in a heavy saucepan. Gradually whisk in the half-and-half and coconut milk until smooth."
+SWEET_014,Coconut Cream Pie,5,"Set over medium heat and cook, whisking constantly, until the mixture thickens, comes to a gentle boil, and bubbles for about 1 minute."
+SWEET_014,Coconut Cream Pie,6,"Whisk a ladleful of the hot custard into the egg yolks to temper them, then return the yolks to the saucepan. Cook 1-2 minutes more, whisking constantly, until thick and glossy."
+SWEET_014,Coconut Cream Pie,7,Remove from the heat and whisk in the butter and vanilla until smooth. Stir in the flaked coconut.
+SWEET_014,Coconut Cream Pie,8,"Pour the warm filling into the cooled crust and smooth the top. Press a piece of plastic wrap directly onto the surface to prevent a skin from forming, then refrigerate for at least 4 hours, or until fully set."
+SWEET_014,Coconut Cream Pie,9,"Toast the coconut: place 1/4 cup of the sweetened flaked coconut on a parchment-lined baking sheet. Bake at 350 degrees F (175 degrees C) until light golden, about 5 minutes. Set aside to cool."
+SWEET_014,Coconut Cream Pie,10,"Just before serving, whip the heavy cream with the powdered sugar and vanilla (if using) to soft peaks. Spread or pipe over the chilled pie. Sprinkle with toasted coconut and serve."
+SWEET_015,Egg Custard Pie,1,"For the crust, whisk the flour and salt together. Cut in the cold butter until the mixture resembles coarse crumbs with pea-sized pieces. Sprinkle the ice water over and stir gently with a fork until the dough just comes together."
+SWEET_015,Egg Custard Pie,2,"Shape into a disk, wrap, and chill for at least 30 minutes. Roll out to a 12-inch round, transfer to a 9-inch pie plate, trim, and crimp the edges. Prick the bottom with a fork and chill for another 15 minutes."
+SWEET_015,Egg Custard Pie,3,"Preheat the oven to 400 degrees F (205 degrees C). Line the chilled shell with parchment and fill with pie weights. Bake for 12 minutes, then remove the weights and parchment and bake another 5-7 minutes, until the bottom looks dry and just set (the crust should not be fully browned). Remove and lower the oven to 325 degrees F (165 degrees C)."
+SWEET_015,Egg Custard Pie,4,"For the filling, whisk the eggs in a large bowl until smooth. Whisk in the sugar, salt, and nutmeg."
+SWEET_015,Egg Custard Pie,5,"Heat the milk in a saucepan over medium heat just until steaming and small bubbles appear at the edges (do not boil). Slowly pour the hot milk into the egg mixture in a thin stream, whisking constantly. Stir in the vanilla."
+SWEET_015,Egg Custard Pie,6,Place the par-baked crust on a rimmed baking sheet near the oven. Pour the custard through a fine-mesh strainer into the crust to remove any cooked egg bits and foam.
+SWEET_015,Egg Custard Pie,7,"Sprinkle a little more nutmeg over the top. Carefully transfer to the oven and bake at 325 degrees F (165 degrees C) for 35-45 minutes, until the edges are set and puffed and the center jiggles only slightly when nudged (a knife inserted 1 inch from the edge should come out clean)."
+SWEET_015,Egg Custard Pie,8,"Cool the pie completely on a rack, then refrigerate for at least 2 hours before slicing. Serve cold."
+SWEET_016,White Cake (No Frosting),1,"Preheat the oven to 350 degrees F (175 degrees C). Grease a 9x13-inch baking pan or two 9-inch round pans, then dust with flour (or line with parchment)."
+SWEET_016,White Cake (No Frosting),2,"Sift together the cake flour, baking powder, and salt into a medium bowl and set aside."
+SWEET_016,White Cake (No Frosting),3,"In a large bowl with a handheld mixer or in a stand mixer fitted with the paddle attachment, beat the shortening and sugar together on medium-high speed until light and creamy, about 3 minutes. Stop and scrape down the sides and bottom of the bowl with a silicone spatula as needed."
+SWEET_016,White Cake (No Frosting),4,"Slowly add the egg whites until incorporated, then beat on high speed until smooth and well combined, about 2 minutes. Scrape down the bowl again."
+SWEET_016,White Cake (No Frosting),5,"Add the vanilla and beat on medium-high until incorporated, about 1 minute."
+SWEET_016,White Cake (No Frosting),6,"Add all of the sifted dry ingredients to the bowl. With the mixer running on low speed, slowly pour in the milk and beat just until the batter comes together. Do not overmix. Overmixing will cause gluten to form causing a dense bread-like cake. Finish with a few hand strokes using a whisk or spatula to make sure there are no flour pockets at the bottom of the bowl. The batter will be smooth and slightly thick."
+SWEET_016,White Cake (No Frosting),7,Divide the batter evenly between the prepared pan(s) and smooth the top. Tap the pan gently on the counter once or twice to release any large air bubbles.
+SWEET_016,White Cake (No Frosting),8,"Bake until the top springs back when lightly pressed and a toothpick inserted in the center comes out clean: about 30-35 minutes for a 9x13 pan, or 22-26 minutes for 9-inch rounds."
+SWEET_016,White Cake (No Frosting),9,"Cool in the pan(s) on a rack for 10 minutes, then turn out onto the rack and cool completely before slicing or frosting."
+SWEET_017,White Cake with Coconut Frosting,1,"Preheat the oven to 350 degrees F (175 degrees C). Grease two 9-inch round cake pans, then dust with flour or line the bottoms with parchment."
+SWEET_017,White Cake with Coconut Frosting,2,"Sift together the flour, baking powder, and salt into a medium bowl and set aside."
+SWEET_017,White Cake with Coconut Frosting,3,"In a large bowl with a handheld mixer or in a stand mixer fitted with the paddle attachment, beat the shortening and sugar together on medium-high speed until light and creamy, about 3 minutes. Stop and scrape down the sides and bottom of the bowl with a silicone spatula as needed."
+SWEET_017,White Cake with Coconut Frosting,4,"Slowly add the egg whites until incorporated, then beat on high speed until smooth and well combined, about 2 minutes. Scrape down the bowl again."
+SWEET_017,White Cake with Coconut Frosting,5,"Add the vanilla and beat on medium-high until incorporated, about 1 minute."
+SWEET_017,White Cake with Coconut Frosting,6,"Add all of the sifted dry ingredients to the bowl. With the mixer running on low speed, slowly pour in the milk and beat just until the batter comes together. Do not overmix. Overmixing will cause gluten to form causing a dense bread-like cake. Finish with a few hand strokes using a whisk or spatula to make sure there are no flour pockets at the bottom of the bowl. The batter will be smooth and slightly thick."
+SWEET_017,White Cake with Coconut Frosting,7,Divide the batter evenly between the prepared pans and smooth the top. Tap the pans gently on the counter once or twice to release any large air bubbles.
+SWEET_017,White Cake with Coconut Frosting,8,"Bake until the tops spring back when lightly pressed and a toothpick inserted in the center comes out clean, about 22-26 minutes."
+SWEET_017,White Cake with Coconut Frosting,9,"Cool in the pans on a rack for 10 minutes, then turn the layers out onto the rack and cool completely before frosting."
+SWEET_017,White Cake with Coconut Frosting,10,--- Seven-Minute Coconut Frosting ---
+SWEET_017,White Cake with Coconut Frosting,11,"Place the top part of the double boiler or heatproof bowl over rapidly boiling water, ensuring the bottom pan's water stays at a steady boil and the water does not touch the top container."
+SWEET_017,White Cake with Coconut Frosting,12,"In the top part (off the heat), combine the egg whites, sugar, water, corn syrup, and salt and beat with a handheld electric mixer until thoroughly mixed."
+SWEET_017,White Cake with Coconut Frosting,13,"Place the top part over the rapidly boiling water and beat constantly on high speed for 7 minutes, until the frosting is bright white, glossy, and stands in stiff peaks. (The corn syrup acts as the stabilizer here, so cream of tartar is not needed.)"
+SWEET_017,White Cake with Coconut Frosting,14,Remove from heat and quickly beat in the vanilla extract.
+SWEET_017,White Cake with Coconut Frosting,15,"Fold in about 1 cup of the flaked coconut with a rubber spatula, beating briefly until the frosting is thick enough to spread."
+SWEET_017,White Cake with Coconut Frosting,16,Place one cooled cake layer on a serving plate or cake board. Spread about a quarter of the frosting over the top. Add the second layer and frost the top and sides with the remaining frosting in soft swoops.
+SWEET_017,White Cake with Coconut Frosting,17,Press the remaining flaked coconut all over the top and sides of the frosted cake while the frosting is still tacky. Let the cake set for at least 30 minutes before slicing. Seven-minute frosting is best the day it is made.
+SWEET_018,Yellow Cake (No Frosting),1,"Preheat the oven to 350 degrees F (175 degrees C). Grease two 9-inch round cake pans, then dust with flour or line the bottoms with parchment."
+SWEET_018,Yellow Cake (No Frosting),2,"Sift together the all-purpose flour, cake flour, baking powder, and salt into a medium bowl and set aside."
+SWEET_018,Yellow Cake (No Frosting),3,"In a large bowl with a handheld mixer or in a stand mixer fitted with the paddle attachment, beat the butter, shortening, and sugar together on medium-high speed until light and fluffy, about 4 minutes. Stop and scrape down the sides and bottom of the bowl with a silicone spatula as needed."
+SWEET_018,Yellow Cake (No Frosting),4,"Add the eggs one at a time, beating well after each addition, then beat on high speed for 1 minute until smooth and well combined. Scrape down the bowl again."
+SWEET_018,Yellow Cake (No Frosting),5,"Add the vanilla and beat on medium-high until incorporated, about 30 seconds."
+SWEET_018,Yellow Cake (No Frosting),6,"Add about a third of the sifted dry ingredients to the bowl, followed by half of the milk, and beat on low until just combined. Repeat with another third of the dry ingredients and the rest of the milk, then finish with the remaining dry ingredients. Do not overmix. Finish with a few hand strokes using a whisk or spatula to make sure there are no flour pockets at the bottom of the bowl."
+SWEET_018,Yellow Cake (No Frosting),7,Divide the batter evenly between the prepared pans and smooth the top. Tap the pans gently on the counter once or twice to release any large air bubbles.
+SWEET_018,Yellow Cake (No Frosting),8,"Bake until the tops are golden, spring back when lightly pressed, and a toothpick inserted in the center comes out clean, about 25-30 minutes."
+SWEET_018,Yellow Cake (No Frosting),9,"Cool in the pans on a rack for 10 minutes, then turn the layers out onto the rack and cool completely before slicing."
+SWEET_019,Chocolate Glaze with Butter,1,Sift the powdered sugar and cocoa powder together into a medium bowl.
+SWEET_019,Chocolate Glaze with Butter,2,"Whisk in the melted butter, then the milk, vanilla, and salt. Beat until smooth, glossy, and pourable. If too thick, add milk a teaspoon at a time; if too thin, add powdered sugar a tablespoon at a time."
+SWEET_019,Chocolate Glaze with Butter,3,Pour or drizzle over a fully cooled cake. Let set 10–15 minutes before slicing.
+SWEET_020,Yellow Cake with Chocolate Glaze,1,"Preheat the oven to 350°F (175°C). Grease two 9-inch round cake pans, then dust with flour or line the bottoms with parchment."
+SWEET_020,Yellow Cake with Chocolate Glaze,2,"Sift together the flour, baking powder, baking soda, and salt into a medium bowl and set aside."
+SWEET_020,Yellow Cake with Chocolate Glaze,3,"In a large bowl with a handheld mixer or in a stand mixer fitted with the paddle attachment, beat the butter and sugar together on medium-high speed until light and fluffy, about 4 minutes. Stop and scrape down the sides and bottom of the bowl with a silicone spatula as needed."
+SWEET_020,Yellow Cake with Chocolate Glaze,4,"Add the whole eggs one at a time, beating well after each addition. Beat in the yolks, then beat on high speed for 1 minute until smooth and well combined. Scrape down the bowl again."
+SWEET_020,Yellow Cake with Chocolate Glaze,5,"Add the vanilla and beat on medium-high until incorporated, about 30 seconds."
+SWEET_020,Yellow Cake with Chocolate Glaze,6,"Add about a third of the sifted dry ingredients to the bowl, followed by half of the buttermilk, and beat on low until just combined. Repeat with another third of the dry ingredients and the rest of the buttermilk, then finish with the remaining dry ingredients. Do not overmix. Finish with a few hand strokes using a whisk or spatula to make sure there are no flour pockets at the bottom of the bowl."
+SWEET_020,Yellow Cake with Chocolate Glaze,7,Divide the batter evenly between the prepared pans and smooth the top. Tap the pans gently on the counter once or twice to release any large air bubbles.
+SWEET_020,Yellow Cake with Chocolate Glaze,8,"Bake until the tops are golden, spring back when lightly pressed, and a toothpick inserted in the center comes out clean, about 25–30 minutes."
+SWEET_020,Yellow Cake with Chocolate Glaze,9,"Cool in the pans on a rack for 10 minutes, then turn the layers out onto the rack and cool completely before glazing."
+SWEET_020,Yellow Cake with Chocolate Glaze,10,--- Chocolate Glaze ---
+SWEET_020,Yellow Cake with Chocolate Glaze,11,Sift the powdered sugar and cocoa powder together into a medium bowl.
+SWEET_020,Yellow Cake with Chocolate Glaze,12,"Whisk in the melted butter, then the milk, vanilla, and salt. Beat until smooth, glossy, and spreadable. If too thick, add boiling water a teaspoon at a time; if too thin, add powdered sugar a tablespoon at a time."
+SWEET_020,Yellow Cake with Chocolate Glaze,13,"Place one cake layer on a serving plate. Spread about 1/3 of the warm glaze over the top, letting some run down the sides. Top with the second layer."
+SWEET_020,Yellow Cake with Chocolate Glaze,14,"Pour the remaining glaze over the top of the cake, using an offset spatula to coax it over the edges so it coats the top fully and drips down the sides. Let set 15–20 minutes before slicing."
+SWEET_021,Gingerbread,1,"Preheat the oven to 350°F (175°C). Grease a 9-inch square baking pan, then dust with flour or line the bottom with parchment."
+SWEET_021,Gingerbread,2,"In a medium bowl, whisk together the all-purpose flour, baking soda, ginger, cinnamon, cloves, and salt. Set aside."
+SWEET_021,Gingerbread,3,"In a large bowl with a handheld mixer or in a stand mixer fitted with the paddle attachment, beat the butter, shortening, and brown sugar together on medium-high speed until well blended and smooth, about 3 minutes. Stop and scrape down the sides and bottom of the bowl with a silicone spatula as needed."
+SWEET_021,Gingerbread,4,"Add the molasses (and the optional fresh gingerroot, if using) and beat on medium until fully incorporated, about 1 minute. Add the egg and beat until smooth."
+SWEET_021,Gingerbread,5,"Add about half of the dry ingredients and beat on low until just combined. Pour in the hot water and beat until smooth — the batter will look loose, which is correct. Add the remaining dry ingredients and beat on low until just combined. Do not overmix."
+SWEET_021,Gingerbread,6,Pour the batter into the prepared pan and smooth the top.
+SWEET_021,Gingerbread,7,"Bake until the top springs back when lightly pressed and a toothpick inserted in the center comes out with just a few moist crumbs, about 35–40 minutes."
+SWEET_021,Gingerbread,8,"Cool in the pan on a wire rack for 15 minutes, then cut into 9 squares. Serve warm or at room temperature."
+SWEET_022,Pineapple Upside-Down Cake,1,Preheat the oven to 350°F (175°C).
+SWEET_022,Pineapple Upside-Down Cake,2,"Pour the melted butter into a 9-inch round cake pan or 9-inch cast-iron skillet, tilting to coat the bottom evenly. Sprinkle the brown sugar over the butter in an even layer."
+SWEET_022,Pineapple Upside-Down Cake,3,"Arrange the drained pineapple slices in a single layer over the brown sugar (one center, the rest around). Place a maraschino cherry in the center of each pineapple slice. Set aside."
+SWEET_022,Pineapple Upside-Down Cake,4,"In a medium bowl, whisk together the flour, baking powder, salt, and the optional cinnamon, cloves, and ginger if using."
+SWEET_022,Pineapple Upside-Down Cake,5,"In a large bowl with a handheld mixer or in a stand mixer fitted with the paddle attachment, beat the shortening and granulated sugar together on medium-high speed until light and fluffy, about 3 minutes. Stop and scrape down the sides and bottom of the bowl with a silicone spatula as needed."
+SWEET_022,Pineapple Upside-Down Cake,6,"Add the egg and vanilla and beat until smooth, about 1 minute."
+SWEET_022,Pineapple Upside-Down Cake,7,Add about half of the dry ingredients and beat on low until just combined. Pour in the milk and beat until smooth. Add the remaining dry ingredients and beat on low until just combined. Do not overmix.
+SWEET_022,Pineapple Upside-Down Cake,8,Pour the batter evenly over the pineapple and cherries in the prepared pan and smooth the top. Tap the pan gently on the counter once or twice to release any large air bubbles.
+SWEET_022,Pineapple Upside-Down Cake,9,"Bake until the top is golden, springs back when lightly pressed, and a toothpick inserted in the cake portion comes out clean, about 35–45 minutes."
+SWEET_022,Pineapple Upside-Down Cake,10,"Let the cake cool in the pan on a wire rack for exactly 10 minutes — no longer, or the topping will stick. Run a thin knife around the edge, place a serving plate over the pan, and quickly invert. Lift off the pan, replacing any pineapple or cherries that stick. Serve warm or at room temperature."
+SWEET_023,Shortcake (Biscuit-Type),1,Preheat oven to 450°F. Lightly grease a baking sheet or line with parchment paper.
+SWEET_023,Shortcake (Biscuit-Type),2,"In a large bowl, whisk together the flour, sugar, baking powder, and salt until evenly blended."
+SWEET_023,Shortcake (Biscuit-Type),3,Cut the shortening into the dry ingredients with a pastry blender or two knives until the mixture resembles coarse crumbs the size of small peas.
+SWEET_023,Shortcake (Biscuit-Type),4,Pour in the milk all at once. Stir gently with a fork just until the dough comes together — do not overmix. The dough will be slightly sticky.
+SWEET_023,Shortcake (Biscuit-Type),5,"Turn the dough out onto a lightly floured surface. Pat (do not roll) to about 3/4-inch thickness, folding once or twice to build flaky layers."
+SWEET_023,Shortcake (Biscuit-Type),6,"Cut with a floured 2 1/2-inch round biscuit cutter, pressing straight down without twisting. Gather scraps gently and pat out once more to cut remaining biscuits. You should get 8 biscuits."
+SWEET_023,Shortcake (Biscuit-Type),7,"Place biscuits on the prepared baking sheet with sides nearly touching for soft sides, or 1 inch apart for crisp sides."
+SWEET_023,Shortcake (Biscuit-Type),8,Bake 12–15 minutes until tops are golden brown and the biscuits have risen tall and split easily.
+SWEET_023,Shortcake (Biscuit-Type),9,"Transfer to a rack. Serve warm, split horizontally with sweetened berries and whipped cream for classic strawberry shortcake."
+SWEET_024,Hot-Water Sponge Cake,1,Position a rack in the lower third of the oven and preheat to 325°F. Have ready an ungreased 10-inch tube (angel food) pan with a removable bottom — the batter must climb the sides as it bakes.
+SWEET_024,Hot-Water Sponge Cake,2,"Separate the eggs while cold (whites whip more cleanly when free of yolk). Place 5 yolks in a large mixing bowl and 5 whites in a separate clean, grease-free bowl. Let both come to room temperature, about 20 minutes."
+SWEET_024,Hot-Water Sponge Cake,3,"Sift the cake flour once onto a sheet of parchment, then sift again with the salt. Set aside."
+SWEET_024,Hot-Water Sponge Cake,4,Heat the water until just steaming (about 180°F) and stir in the lemon juice and vanilla. Set aside to cool slightly.
+SWEET_024,Hot-Water Sponge Cake,5,"Beat the yolks: With an electric mixer on high speed, beat the yolks until thick, pale yellow, and ribbon-stage — about 4–5 minutes. Gradually beat in half the sugar (1/2 cup / 100 g), then drizzle in the warm lemon-water mixture and beat 1 minute more until glossy and aerated."
+SWEET_024,Hot-Water Sponge Cake,6,"Beat the whites: With clean beaters, whip the whites on medium speed until foamy, then add the cream of tartar. Increase to high speed and beat to soft peaks. Gradually rain in the remaining sugar (1/2 cup / 100 g) and continue beating to firm, glossy peaks that hold their shape but still look moist (not dry or chunky)."
+SWEET_024,Hot-Water Sponge Cake,7,"Fold in the flour: Sift the flour mixture over the yolk mixture in three additions, gently folding with a large rubber spatula after each — turn the bowl as you fold to keep the batter light. Stop folding while a few flour streaks remain."
+SWEET_024,Hot-Water Sponge Cake,8,"Fold in the whites: Scoop one-third of the whipped whites onto the yolk batter and fold in to lighten. Add the remaining whites in two more additions, folding gently and just until no white streaks remain. Do not overmix — the airy whites are the only leavening."
+SWEET_024,Hot-Water Sponge Cake,9,Pour the batter into the ungreased tube pan and gently smooth the top. Run a thin knife once through the batter in a circle to release any large air pockets.
+SWEET_024,Hot-Water Sponge Cake,10,"Bake on the lower rack for 40–50 minutes, until the top is golden, springs back when lightly pressed, and a wooden skewer inserted near the center comes out clean."
+SWEET_024,Hot-Water Sponge Cake,11,"Invert immediately: Flip the pan upside down onto the neck of a tall bottle (or use the pan's built-in feet) and let the cake cool completely upside-down, about 1 1/2 hours. This prevents the delicate sponge from collapsing under its own weight."
+SWEET_024,Hot-Water Sponge Cake,12,"To unmold: run a thin knife around the outer edge and around the center tube, then push the removable bottom up and out of the outer ring. Slide the knife under the cake to release it from the bottom. Slice with a serrated knife in a gentle sawing motion."
+SWEET_025,Angel Food Cake,1,Position a rack in the lower third of the oven and preheat to 350°F. Have ready a clean ungreased 10-inch tube (angel food) pan with a removable bottom — the batter must climb the ungreased sides as it bakes. Do not use a nonstick or greased pan; the cake will collapse.
+SWEET_025,Angel Food Cake,2,"Separate the eggs while cold, letting not a speck of yolk fall into the whites (any fat will keep them from whipping). Place the 12 whites in a large grease-free metal or glass bowl. Let them stand at room temperature for 30 minutes."
+SWEET_025,Angel Food Cake,3,"Reserve 3/4 cup of the sugar for the meringue (this goes into the egg whites later). Sift the remaining 3/4 cup sugar together with the cake flour into a bowl. Re-sift the mixture two more times until well combined and airy — repeated sifting helps the sugar coat the flour particles, allowing them to fold into the delicate meringue without deflating it. Set aside."
+SWEET_025,Angel Food Cake,4,"Add the cream of tartar and salt to the room-temperature whites. With an electric mixer on medium speed, beat until foamy and the whites turn opaque, about 1 minute. Add the vanilla."
+SWEET_025,Angel Food Cake,5,"Increase the mixer to medium-high. Whip until the whites form soft peaks that gently flop over when the beaters are lifted, about 2–3 minutes."
+SWEET_025,Angel Food Cake,6,"Still on medium-high, gradually rain in the reserved 3/4 cup sugar about 2 tablespoons at a time, beating well between additions. Continue until the whites form firm, glossy, moist peaks that hold their shape but are not dry or chunky, about 3–4 minutes more."
+SWEET_025,Angel Food Cake,7,"Sift the flour-sugar mixture over the whites in four additions. After each addition, fold in gently with a large rubber spatula — cut down through the center, sweep across the bottom, and turn the bowl a quarter turn. Stop folding the moment no flour streaks remain. Do not overmix."
+SWEET_025,Angel Food Cake,8,"Gently spoon the batter into the ungreased tube pan. Run a thin knife or skewer once through the batter in a circle to release any large air pockets, then smooth the top."
+SWEET_025,Angel Food Cake,9,"Bake on the lower rack for 35–40 minutes, until the top is golden, springs back when lightly pressed, and a wooden skewer inserted near the center comes out clean. Cracks on the surface are normal and expected."
+SWEET_025,Angel Food Cake,10,"Invert immediately: Flip the pan upside down and rest it on its built-in feet, or set it over something that elevates it. Let the cake cool completely upside-down, about 1 1/2 hours — this prevents the airy structure from collapsing under its own weight while it sets."
+SWEET_025,Angel Food Cake,11,To unmold: run a thin knife around the outer edge and around the center tube using a gentle sawing motion (do not press inward — keep the knife flush against the metal). Push the removable bottom up and out of the outer ring. Slide the knife under the cake to release it from the bottom.
+SWEET_025,Angel Food Cake,12,"Slice with a serrated knife in a gentle sawing motion (a regular knife will compress the cake). Serve plain, with sweetened berries, or with a light glaze."
+SWEET_026,Cheesecake (NY-Style),1,Position a rack in the lower-middle of the oven and preheat to 325°F.
+SWEET_026,Cheesecake (NY-Style),2,"Use a springform pan protector, a leakproof springform pan, or wrap the outside bottom and sides of a 9-inch springform pan tightly with two layers of heavy-duty aluminum foil to prevent water from seeping in during the water bath."
+SWEET_026,Cheesecake (NY-Style),3,"If not using a nonstick, non-toxic springform pan, line the bottom and sides with parchment paper."
+SWEET_026,Cheesecake (NY-Style),4,"Make the crust: In a medium bowl, stir together the crushed graham crackers and 2 tablespoons of sugar. Drizzle in the melted butter and stir with a fork until the crumbs are evenly moistened and resemble wet sand."
+SWEET_026,Cheesecake (NY-Style),5,"Transfer the crumb mixture to the springform pan. Press firmly and evenly across the bottom and about 1/2 inch up the sides using the flat bottom of a measuring cup. Bake the crust for 10 minutes, then transfer to a rack to cool while you prepare the filling. Maintain an oven temperature of 325°F."
+SWEET_026,Cheesecake (NY-Style),6,"Make the filling: In the bowl of a stand mixer fitted with the paddle attachment (or a large bowl with a hand mixer), beat the room-temperature cream cheese on medium-low speed until completely smooth and lump-free, about 2–3 minutes. Scrape down the bowl and paddle thoroughly."
+SWEET_026,Cheesecake (NY-Style),7,"Add the 1 1/4 cups sugar and salt and beat on medium-low until smooth and creamy, about 2 minutes. Scrape down again. Add the flour and lemon zest and beat until just combined. Beat in the sour cream and vanilla just until incorporated."
+SWEET_026,Cheesecake (NY-Style),8,"With the mixer on low speed, add the whole eggs one at a time, beating just until each is incorporated and scraping down between additions. Finally beat in the extra yolk on low. Do not overbeat — overmixing incorporates air, which causes cracks during baking."
+SWEET_026,Cheesecake (NY-Style),9,Pour the filling into the cooled crust and gently smooth the top. Tap the pan gently on the counter a few times to release any large air bubbles.
+SWEET_026,Cheesecake (NY-Style),10,"Set up the water bath: Place the springform pan in a large roasting pan. Pour very hot tap water into the roasting pan to come about 1 inch up the sides of the foil-wrapped springform — the water bath ensures gentle, even baking and prevents cracking."
+SWEET_026,Cheesecake (NY-Style),11,"Bake at 325°F for 60–75 minutes, until the outer 2 inches are set and barely puffed, the center 3 inches still wobbles like just-set jelly when the pan is gently nudged, and the surface is pale ivory with no browning. Do not overbake — the center will firm up as it cools."
+SWEET_026,Cheesecake (NY-Style),12,"Slow cool in the oven: Turn off the oven, prop the door open about 4 inches with a wooden spoon, and let the cheesecake cool slowly in the oven for 1 hour. This gradual cooling helps prevent surface cracks."
+SWEET_026,Cheesecake (NY-Style),13,"Carefully remove the cheesecake from the water bath. Run a thin knife around the edge of the pan to release the cake from the sides (this also helps prevent cracking as it shrinks while cooling). Cool on a rack to room temperature, about 1 hour more."
+SWEET_026,Cheesecake (NY-Style),14,"Chill: Cover loosely and refrigerate at least 8 hours, preferably overnight, to fully set the texture. To serve, release the springform ring, slide a thin spatula under the crust to lift onto a serving plate, and slice with a knife dipped in hot water and wiped clean between cuts."
+SWEET_027,Sour Cream Coffee Cake,1,Position a rack in the center of the oven and preheat to 350°F. Butter a 9-inch square baking pan and line the bottom with a parchment sling (leaving an overhang on two sides for easy lift-out).
+SWEET_027,Sour Cream Coffee Cake,2,"Make the crumb topping: In a medium bowl, whisk together the 1/2 cup flour, brown sugar, cinnamon, and pinch of salt. Add the cold cubed butter and rub it in with your fingertips (or cut in with a pastry blender) until the mixture forms damp, pebbly crumbs ranging from pea-sized to small-marble-sized. Refrigerate while you make the cake."
+SWEET_027,Sour Cream Coffee Cake,3,"Mix the dry ingredients: In a separate medium bowl, whisk together the 2 cups flour, baking powder, baking soda, and salt. Set aside."
+SWEET_027,Sour Cream Coffee Cake,4,"Cream the butter and sugar: In the bowl of a stand mixer fitted with the paddle attachment (or a large bowl with a hand mixer), beat the room-temperature butter on medium speed until smooth, about 1 minute. Add the granulated sugar and beat on medium-high until light, pale, and fluffy, 3–4 minutes, scraping down the bowl once."
+SWEET_027,Sour Cream Coffee Cake,5,"Add the eggs and vanilla: Reduce the mixer to medium and add the eggs one at a time, beating well and scraping down the bowl after each addition. Beat in the vanilla."
+SWEET_027,Sour Cream Coffee Cake,6,"Alternate dry and sour cream to protect the emulsion and minimize gluten development: With the mixer on low speed, add the flour and sour cream in 5 additions in this exact order, mixing just until each addition is incorporated and scraping down the bowl as needed: (a) Add one-third of the flour mixture and mix until just blended. (b) Add half of the sour cream and mix until just blended. (c) Add another one-third of the flour mixture and mix until just blended. (d) Add the remaining sour cream and mix until just blended. (e) Add the final one-third of the flour mixture and mix only until no flour streaks remain. The batter will be thick and creamy. Do not overmix."
+SWEET_027,Sour Cream Coffee Cake,7,"Assemble: Spread the batter evenly in the prepared pan, smoothing the top with an offset spatula. Scatter the chilled crumb topping evenly over the entire surface, breaking up any large clumps with your fingers so the crumbs are distributed in pebbles rather than sheets."
+SWEET_027,Sour Cream Coffee Cake,8,"Bake at 350°F for 40–50 minutes, until the topping is golden brown, the cake springs back when lightly pressed at the center, and a wooden toothpick inserted in the cake (not into a melted butter pocket) comes out with just a few moist crumbs."
+SWEET_027,Sour Cream Coffee Cake,9,Transfer the pan to a wire rack and let cool for at least 30 minutes. Lift out using the parchment sling and slice into 10 squares (or 9 if you prefer larger pieces). Serve warm or at room temperature.
+SWEET_027,Sour Cream Coffee Cake,10,"Storage: Cover loosely with foil at room temperature for up to 2 days, or wrap individual slices and refrigerate up to 5 days. Reheat briefly in a 300°F oven or toaster oven to refresh the crumb texture."
+SWEET_028,Pound Cake,1,"Position a rack in the lower-middle of the oven and preheat to 325°F. Generously butter a 9x5-inch loaf pan and dust with flour, tapping out the excess (or line with a parchment sling for easy lift-out)."
+SWEET_028,Pound Cake,2,"Mix the dry ingredients: In a medium bowl, whisk together the AP flour, baking powder, and salt. Set aside."
+SWEET_028,Pound Cake,3,"Cream the butter and sugar: In the bowl of a stand mixer fitted with the paddle attachment (or a large bowl with a hand mixer), beat the room-temperature butter on medium speed until smooth and creamy, about 1 minute. Add the sugar and beat on medium-high until very pale, light, and fluffy — about 5 minutes, scraping down the bowl twice. Do not rush this step; this is where pound cake gets most of its lift."
+SWEET_028,Pound Cake,4,"Add the eggs: Reduce the mixer to medium and add the eggs one at a time, beating for 30 seconds and scraping down the bowl after each addition. The mixture should remain emulsified and creamy; if it looks curdled or broken, beat in a tablespoon of the measured flour to bring it back together. Beat in the vanilla and sour cream until fully incorporated."
+SWEET_028,Pound Cake,5,"Add the dry ingredients: With the mixer on low speed, add the flour mixture in 3 additions, mixing just until each addition is incorporated and scraping down the bowl as needed: (a) Add one-third of the flour mixture and mix until just blended. (b) Add another one-third and mix until just blended. (c) Add the final one-third and mix only until no flour streaks remain. The batter will be thick, smooth, and dense. Do not overmix."
+SWEET_028,Pound Cake,6,"Transfer to the pan: Scrape the batter into the prepared loaf pan and smooth the top with an offset spatula, building the batter slightly higher at the corners and ends than in the center (this helps the cake rise level instead of doming)."
+SWEET_028,Pound Cake,7,"Bake at 325°F for 65–80 minutes, until the top is deep golden brown, a long crack runs down the center (this is normal and desirable), the cake springs back when lightly pressed, and a wooden skewer inserted in the deepest part comes out with just a few moist crumbs. If the top is browning too quickly past the 50-minute mark, tent loosely with foil."
+SWEET_028,Pound Cake,8,"Cool: Transfer the pan to a wire rack and let cool for 15 minutes. Run a thin knife around the edge, then invert onto the rack and turn the cake right-side up. Let cool completely before slicing, at least 1 hour — pound cake's crumb continues to set as it cools and slices much more cleanly when fully cool."
+SWEET_028,Pound Cake,9,"Slice and serve: Cut into 10 slices with a serrated knife in a gentle sawing motion. Serve plain, dusted with confectioners' sugar, with macerated berries, with a dollop of whipped cream, or toasted with butter for breakfast."
+SWEET_028,Pound Cake,10,"Storage: Wrap tightly in plastic at room temperature for up to 3 days, or refrigerate up to 1 week, or freeze (whole or sliced) up to 3 months. The flavor improves on day 2 as the butter mellows."
+SWEET_029,Brownies (Fudgy),1,"Position a rack in the center of the oven and preheat to 350°F. Grease a 9-inch square metal baking pan and line it with parchment, leaving overhang on two sides for easy lift-out."
+SWEET_029,Brownies (Fudgy),2,"In a large bowl, stir together the vegetable shortening and butter until smooth and creamy."
+SWEET_029,Brownies (Fudgy),3,Add the sugar and whisk until glossy and well blended.
+SWEET_029,Brownies (Fudgy),4,"Whisk in the eggs one at a time, then whisk in the vanilla until smooth."
+SWEET_029,Brownies (Fudgy),5,"In a separate bowl, whisk together the flour, cocoa powder, and salt."
+SWEET_029,Brownies (Fudgy),6,Fold the dry ingredients into the wet mixture just until no dry streaks remain. Do not overmix.
+SWEET_029,Brownies (Fudgy),7,Spread the batter evenly in the prepared pan and smooth the top with an offset spatula.
+SWEET_029,Brownies (Fudgy),8,"Bake for 22–28 minutes, until the top is set and a toothpick inserted 1 inch from the edge comes out with moist crumbs."
+SWEET_029,Brownies (Fudgy),9,Cool completely in the pan on a wire rack. Lift out using the parchment overhang and cut into 16 squares.
+SWEET_030,"Cookies, Oatmeal with Raisins",1,Preheat oven to 350°F. Line baking sheets with parchment paper.
+SWEET_030,"Cookies, Oatmeal with Raisins",2,Cream butter and sugar together until light and fluffy (2–3 minutes).
+SWEET_030,"Cookies, Oatmeal with Raisins",3,"Beat in eggs one at a time, then add vanilla extract."
+SWEET_030,"Cookies, Oatmeal with Raisins",4,"In a separate bowl, whisk together flour, oats, baking soda, cinnamon, and salt."
+SWEET_030,"Cookies, Oatmeal with Raisins",5,Fold dry ingredients into wet ingredients until just combined; do not overmix.
+SWEET_030,"Cookies, Oatmeal with Raisins",6,Fold in raisins gently until evenly distributed.
+SWEET_030,"Cookies, Oatmeal with Raisins",7,"Scoop dough onto parchment sheets, spacing 2 inches apart (dough will spread)."
+SWEET_030,"Cookies, Oatmeal with Raisins",8,"Bake 13–17 minutes, until edges are golden and center is set."
+SWEET_030,"Cookies, Oatmeal with Raisins",9,"Cool on baking sheet for 5 minutes, then transfer to wire rack to cool completely."
+SWEET_031,"Cookies, Sugar, from Recipe with Margarine",1,Preheat oven to 375°F. Line baking sheets with parchment paper.
+SWEET_031,"Cookies, Sugar, from Recipe with Margarine",2,Beat margarine and sugar together until light and fluffy (2–3 minutes).
+SWEET_031,"Cookies, Sugar, from Recipe with Margarine",3,"Add eggs one at a time, beating well after each addition, then mix in vanilla."
+SWEET_031,"Cookies, Sugar, from Recipe with Margarine",4,"In a separate bowl, whisk together flour, baking powder, and salt."
+SWEET_031,"Cookies, Sugar, from Recipe with Margarine",5,Gradually mix dry ingredients into wet ingredients until a soft dough forms.
+SWEET_031,"Cookies, Sugar, from Recipe with Margarine",6,Roll dough into 1-inch balls. Roll each ball in the reserved granulated sugar.
+SWEET_031,"Cookies, Sugar, from Recipe with Margarine",7,Place 2 inches apart on prepared baking sheets; flatten slightly with the bottom of a glass.
+SWEET_031,"Cookies, Sugar, from Recipe with Margarine",8,"Bake 8–10 minutes, until edges are lightly golden. Do not overbake."
+SWEET_031,"Cookies, Sugar, from Recipe with Margarine",9,"Cool on baking sheet for 2 minutes, then transfer to a wire rack to cool completely."
+SWEET_032,"Cookies, Gingersnaps",1,Preheat oven to 375°F. Line baking sheets with parchment paper.
+SWEET_032,"Cookies, Gingersnaps",2,Beat butter and sugar together until light and fluffy (2–3 minutes).
+SWEET_032,"Cookies, Gingersnaps",3,"Beat in egg, then stir in molasses until fully combined."
+SWEET_032,"Cookies, Gingersnaps",4,"In a separate bowl, whisk together flour, baking soda, salt, ginger, cinnamon, and cloves."
+SWEET_032,"Cookies, Gingersnaps",5,Gradually mix dry ingredients into wet ingredients until a smooth dough forms.
+SWEET_032,"Cookies, Gingersnaps",6,Roll dough into 1-inch balls. Roll each ball in the reserved granulated sugar.
+SWEET_032,"Cookies, Gingersnaps",7,Place 2 inches apart on prepared baking sheets.
+SWEET_032,"Cookies, Gingersnaps",8,"Bake 10–12 minutes, until cookies are set and surface is cracked. Do not overbake."
+SWEET_032,"Cookies, Gingersnaps",9,"Cool on baking sheet for 5 minutes, then transfer to a wire rack."
+SWEET_033,"Cookies, Butter, Homemade",1,Preheat oven to 325°F. Line baking sheets with parchment paper.
+SWEET_033,"Cookies, Butter, Homemade",2,Beat butter and sugar together until light and fluffy (3–4 minutes).
+SWEET_033,"Cookies, Butter, Homemade",3,Beat in egg and vanilla extract until well combined.
+SWEET_033,"Cookies, Butter, Homemade",4,"In a separate bowl, whisk together flour and salt."
+SWEET_033,"Cookies, Butter, Homemade",5,Gradually mix dry ingredients into wet ingredients until a soft dough forms.
+SWEET_033,"Cookies, Butter, Homemade",6,"Drop small spoonfuls (½ teaspoon) onto prepared baking sheets, spacing 1 inch apart."
+SWEET_033,"Cookies, Butter, Homemade",7,"Bake 12–15 minutes, until edges are set and bottoms are pale golden. Cookies should be soft."
+SWEET_033,"Cookies, Butter, Homemade",8,"Cool on baking sheet for 3 minutes, then transfer to a wire rack."
+SWEET_034,"Cookies, Chocolate Chip, Homemade",1,Preheat oven to 350°F. Line baking sheets with parchment paper.
+SWEET_034,"Cookies, Chocolate Chip, Homemade",2,"Whisk together flour, baking soda, and salt in a bowl; set aside."
+SWEET_034,"Cookies, Chocolate Chip, Homemade",3,"In a separate bowl, stir together melted butter, brown sugar, and granulated sugar until combined."
+SWEET_034,"Cookies, Chocolate Chip, Homemade",4,"Beat in egg and egg yolk, then add vanilla extract and stir until well combined."
+SWEET_034,"Cookies, Chocolate Chip, Homemade",5,Fold dry ingredients into wet ingredients until just combined. Do not overmix.
+SWEET_034,"Cookies, Chocolate Chip, Homemade",6,Fold in chocolate chips gently until evenly distributed.
+SWEET_034,"Cookies, Chocolate Chip, Homemade",7,"Drop rounded tablespoons of dough onto prepared baking sheets, spacing 2 inches apart."
+SWEET_034,"Cookies, Chocolate Chip, Homemade",8,"Bake 11–13 minutes, until edges are set and centers are still soft. Do not overbake."
+SWEET_034,"Cookies, Chocolate Chip, Homemade",9,"Cool on baking sheet for 3 minutes, then transfer to a wire rack to cool completely."
+SWEET_035,"Cookies, Fig Bars",1,"Prepare filling: Bring water to a boil in a small saucepan. Add chopped figs and remove from heat. Let sit 15 minutes, then stir to break figs into a paste."
+SWEET_035,"Cookies, Fig Bars",2,Preheat oven to 350°F. Grease an 8×8 or 9×9 inch baking pan.
+SWEET_035,"Cookies, Fig Bars",3,Make crust: Beat butter and brown sugar together until fluffy. Beat in egg and vanilla.
+SWEET_035,"Cookies, Fig Bars",4,"Whisk together flour, baking powder, and salt. Fold into wet ingredients until just combined."
+SWEET_035,"Cookies, Fig Bars",5,"Spread half the crust mixture into prepared pan, pressing gently."
+SWEET_035,"Cookies, Fig Bars",6,Spread fig filling evenly over crust layer.
+SWEET_035,"Cookies, Fig Bars",7,"Top with remaining crust mixture, spreading or dropping spoonfuls to cover filling."
+SWEET_035,"Cookies, Fig Bars",8,"Bake 30–35 minutes, until golden and a toothpick inserted comes out clean."
+SWEET_035,"Cookies, Fig Bars",9,"Cool completely in pan, then cut into bars (16 squares)."
+SWEET_036,"Cookies, Coconut Macaroon",1,Preheat oven to 325°F. Line two baking sheets with parchment paper.
+SWEET_036,"Cookies, Coconut Macaroon",2,"In a clean bowl, whisk egg whites and salt until frothy (not stiff peaks)."
+SWEET_036,"Cookies, Coconut Macaroon",3,Whisk in granulated sugar until dissolved and glossy.
+SWEET_036,"Cookies, Coconut Macaroon",4,Stir in vanilla extract.
+SWEET_036,"Cookies, Coconut Macaroon",5,Fold in sweetened shredded coconut until evenly coated and mixture holds together when pressed.
+SWEET_036,"Cookies, Coconut Macaroon",6,Use a small cookie scoop or two spoons to portion 24 mounds onto prepared baking sheets.
+SWEET_036,"Cookies, Coconut Macaroon",7,Bake 20–24 minutes until edges and tops are lightly golden.
+SWEET_036,"Cookies, Coconut Macaroon",8,"Cool on sheet 5 minutes, then transfer to a rack to cool completely."
+SWEET_037,"Cookies, Molasses",1,Preheat oven to 350°F and line baking sheets with parchment paper.
+SWEET_037,"Cookies, Molasses",2,"Cream softened butter and brown sugar until light and fluffy, about 2-3 minutes."
+SWEET_037,"Cookies, Molasses",3,Beat in molasses and egg until fully combined.
+SWEET_037,"Cookies, Molasses",4,"In a separate bowl, whisk flour, baking soda, cinnamon, ginger, cloves, and salt."
+SWEET_037,"Cookies, Molasses",5,Add dry ingredients to wet ingredients and mix just until no dry streaks remain.
+SWEET_037,"Cookies, Molasses",6,Cover and chill dough 20-30 minutes so it is easy to scoop and roll.
+SWEET_037,"Cookies, Molasses",7,"Scoop into 1 to 1 1/2 tablespoon portions, roll into balls, and coat lightly in granulated sugar."
+SWEET_037,"Cookies, Molasses",8,"Place 2 inches apart and bake 9-11 minutes, until puffed and crackled with set edges."
+SWEET_037,"Cookies, Molasses",9,"Cool 5 minutes on the pan, then move to a wire rack to cool completely."
+SWEET_038,"Cookies, Peanut Butter",1,Preheat oven to 350°F and line baking sheets with parchment paper.
+SWEET_038,"Cookies, Peanut Butter",2,"Cream butter, granulated sugar, and brown sugar until smooth and fluffy."
+SWEET_038,"Cookies, Peanut Butter",3,"Beat in peanut butter, egg, and vanilla until fully combined."
+SWEET_038,"Cookies, Peanut Butter",4,"Whisk flour, baking soda, baking powder, and salt in a separate bowl."
+SWEET_038,"Cookies, Peanut Butter",5,Add dry mixture to wet and mix just until combined; do not overmix.
+SWEET_038,"Cookies, Peanut Butter",6,Chill dough 20-30 minutes if soft.
+SWEET_038,"Cookies, Peanut Butter",7,"Scoop 1 to 1 1/2 tablespoon portions, roll into balls, and roll in granulated sugar."
+SWEET_038,"Cookies, Peanut Butter",8,Place on baking sheet and press lightly with a fork to form crosshatch pattern.
+SWEET_038,"Cookies, Peanut Butter",9,"Bake 9-11 minutes until edges are set and tops are lightly cracked. Cool 5 minutes, then transfer to rack."
+SWEET_039,"Cookies, Shortbread",1,Preheat oven to 325°F and line a baking sheet with parchment paper.
+SWEET_039,"Cookies, Shortbread",2,"Cream butter and powdered sugar until smooth and fluffy, about 2 to 3 minutes."
+SWEET_039,"Cookies, Shortbread",3,Mix in vanilla and salt until combined.
+SWEET_039,"Cookies, Shortbread",4,Whisk flour and cornstarch together in a separate bowl.
+SWEET_039,"Cookies, Shortbread",5,Add dry ingredients to butter mixture and mix on low just until dough comes together.
+SWEET_039,"Cookies, Shortbread",6,"Turn dough onto a lightly floured surface, press into a disk, and roll to about 1/2-inch thickness."
+SWEET_039,"Cookies, Shortbread",7,Cut into rounds or fingers and place on baking sheet; chill 10 to 15 minutes if dough is soft.
+SWEET_039,"Cookies, Shortbread",8,Bake 18 to 24 minutes until tops are set and edges are just turning light golden.
+SWEET_039,"Cookies, Shortbread",9,"Cool on pan 5 minutes, then transfer to a rack to cool completely."
+SWEET_040,Buttermilk Pie,1,"For the crust, whisk the flour, salt, and sugar together. Cut in the cold butter until the mixture resembles coarse crumbs with some pea-sized pieces remaining."
+SWEET_040,Buttermilk Pie,2,"Sprinkle the ice water over the mixture and stir gently with a fork just until the dough comes together. Form into a disk, wrap, and refrigerate for at least 30 minutes."
+SWEET_040,Buttermilk Pie,3,"Roll the chilled dough out on a lightly floured surface to a 12-inch round and fit into a 9-inch pie plate. Trim, fold the edges under, and crimp. Refrigerate the shell for 15 minutes."
+SWEET_040,Buttermilk Pie,4,"Preheat the oven to 400 degrees F (205 degrees C). Line the chilled shell with parchment and fill with pie weights. Blind-bake for 12 minutes, then remove the weights and parchment and bake another 5 to 7 minutes until the bottom looks dry but not yet browned. Remove and reduce the oven to 325 degrees F (165 degrees C)."
+SWEET_040,Buttermilk Pie,5,"For the filling, whisk the flour, sugar, and salt together in a large bowl. Add the eggs and whisk until smooth and pale."
+SWEET_040,Buttermilk Pie,6,"Whisk in the melted and slightly cooled butter, then the buttermilk, vanilla, and lemon zest, until completely combined and the filling is uniform."
+SWEET_040,Buttermilk Pie,7,Pour the filling into the par-baked crust through a fine-mesh strainer to remove any lumps.
+SWEET_040,Buttermilk Pie,8,Grate a light dusting of nutmeg over the surface.
+SWEET_040,Buttermilk Pie,9,Bake at 325 degrees F (165 degrees C) for 45 to 55 minutes until the edges are puffed and set and the center jiggles only slightly when the pan is gently nudged. Tent the crust edges with foil if they brown too quickly.
+SWEET_040,Buttermilk Pie,10,Cool completely on a wire rack for at least 2 hours before slicing. Serve at room temperature or chilled.

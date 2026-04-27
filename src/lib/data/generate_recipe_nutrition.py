@@ -192,7 +192,24 @@ def main():
 
         ndb_no = dish_row.get('ndb_no', '').strip()
         if not ndb_no:
-            warnings.append(f'{recipe_id}: dish row has no ndb_no — skipped')
+            # No canonical NDB (Rule 3 recipe) — compute from ingredient sum
+            sc = parse_servings(recipe.get('servings', '')) or 1
+            totals, total_grams = build_ingredient_sum(db, rows)
+            if not totals:
+                warnings.append(f'{recipe_id}: no ndb_no and no valid ingredient rows — skipped')
+                continue
+            per_serving = {k: round2(totals[k] / sc) for k in NUTRIENT_COLS}
+            eff_grams = round2(total_grams / sc) if total_grams > 0 else 0.0
+            per_100g = {k: round2(totals[k] * 100.0 / total_grams) for k in NUTRIENT_COLS} if total_grams > 0 else {k: 0.0 for k in NUTRIENT_COLS}
+            output[recipe_id] = {
+                'ndb': 'ingredient-sum',
+                'long_desc': f'{recipe.get("recipe_name", recipe_id)} (ingredient-sum)',
+                'cook_method': None,
+                'gramsPerServing': eff_grams,
+                'servings': sc,
+                'perServing': per_serving,
+                'per100g': per_100g,
+            }
             continue
 
         portion_grams_str = dish_row.get('portion_grams', '').strip()

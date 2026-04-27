@@ -366,6 +366,14 @@ SWEET_028,5,flour_ap_white_enriched_bleached,2 cups,240.0,180.0,500.0,,false,all
 SWEET_028,6,baking_powder,1 teaspoon,4.0,2.0,12.0,,false,
 SWEET_028,7,salt_table,1/2 teaspoon,3.0,1.5,6.0,,false,
 SWEET_028,8,sour_cream,1/4 cup,58.0,50.0,115.0,,false,room temperature
+SWEET_029,1,vegetable_shortening,2/3 cup,130,120,140,batter,false,vegetable shortening
+SWEET_029,2,butter_unsalted,1/4 cup,57,50,65,batter,false,unsalted butter
+SWEET_029,3,sugar_granulated,1 cup + 1 tablespoon,210,185,260,batter,false,granulated sugar
+SWEET_029,4,egg_whole_raw,2 large,100,95,105,batter,false,large eggs
+SWEET_029,5,vanilla_extract,1 teaspoon,4.2,4,5,batter,false,pure vanilla extract
+SWEET_029,6,flour_ap_white_enriched_bleached,2/3 cup,80,70,95,batter,false,all-purpose flour
+SWEET_029,7,cocoa_powder_unsweetened,1 cup + 1 tablespoon,95,85,105,batter,false,unsweetened cocoa powder
+SWEET_029,8,salt_table,scant 1 teaspoon,5.5,5.0,6.0,batter,false,table salt
 SWEET_030,1,butter_unsalted,1/2 cup + 6 tbsp,199,180,220,,false,
 SWEET_030,2,sugar_brown,3/4 cup packed,165,145,185,,false,
 SWEET_030,3,sugar_granulated,1/2 cup,100,85,115,,false,
