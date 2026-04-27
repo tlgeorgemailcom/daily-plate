@@ -1,7 +1,7 @@
 {
   "recipe_id": "SWEET_014",
-  "recorded_at": "2026-04-25T13:56:22.741961+00:00",
-  "fingerprint": "7214609f5c4684121ca8e83c4180bd64ddf20761463a49f6bdb869874fc72ba6",
+  "recorded_at": "2026-04-27T14:25:57.783886+00:00",
+  "fingerprint": "a6d171366ba6212d0de198b030182e4a210b4ab8e8fbf0819400a522cfb90d1a",
   "disclosure": "Authentic homemade coconut cream pie spec: blind-baked single pie crust, coconut milk + dairy pastry cream with toasted flaked coconut, fresh whipped cream topping. NOT validated against USDA SR Legacy NDB 18314 because that record is a mix-based no-bake commercial product (instant pudding mix + non-dairy whipped topping) with no egg yolks, far less fat and protein, and dramatically higher sodium from added phosphates. No homemade recipe can represent it. Free-tier nutrient values are computed from the ingredients in this recipe; paid-tier values may substitute canonical fields where appropriate.",
   "canonical_payload": {
     "recipe_id": "SWEET_014",
@@ -33,7 +33,7 @@
       },
       {
         "ingredient_key": "coconut_milk_canned",
-        "grams": 226.0,
+        "grams": 400.0,
         "is_optional": false
       },
       {
@@ -52,13 +52,13 @@
         "is_optional": false
       },
       {
-        "ingredient_key": "heavy_cream",
-        "grams": 180.0,
+        "ingredient_key": "half_and_half",
+        "grams": 242.0,
         "is_optional": false
       },
       {
-        "ingredient_key": "milk_whole",
-        "grams": 366.0,
+        "ingredient_key": "heavy_cream",
+        "grams": 345.0,
         "is_optional": false
       },
       {
@@ -73,7 +73,7 @@
       },
       {
         "ingredient_key": "sugar_granulated",
-        "grams": 100.0,
+        "grams": 133.0,
         "is_optional": false
       },
       {
@@ -101,7 +101,7 @@
       "For the crust, whisk the flour and salt together in a bowl. Cut in the cold butter with a pastry cutter or your fingertips until the mixture resembles coarse crumbs with some pea-sized pieces. Sprinkle the ice water over and stir gently with a fork until the dough just comes together, adding a few more drops of water if needed.",
       "Shape the dough into a disk, wrap, and chill for at least 30 minutes. Roll out on a lightly floured surface to a 12-inch round, transfer to a 9-inch pie plate, trim, and crimp the edges. Prick the bottom all over with a fork and chill for another 15 minutes.",
       "Preheat the oven to 400 degrees F (205 degrees C). Line the chilled shell with parchment and fill with pie weights or dried beans. Bake for 15 minutes, then remove the weights and parchment and bake another 8-10 minutes, until the crust is fully baked and lightly golden. Cool completely on a rack.",
-      "For the filling, whisk the sugar, cornstarch, and salt together in a heavy saucepan. Gradually whisk in the whole milk and coconut milk until smooth.",
+      "For the filling, whisk the sugar, cornstarch, and salt together in a heavy saucepan. Gradually whisk in the half-and-half and coconut milk until smooth.",
       "Set over medium heat and cook, whisking constantly, until the mixture thickens, comes to a gentle boil, and bubbles for about 1 minute.",
       "Whisk a ladleful of the hot custard into the egg yolks to temper them, then return the yolks to the saucepan. Cook 1-2 minutes more, whisking constantly, until thick and glossy.",
       "Remove from the heat and whisk in the butter and vanilla until smooth. Stir in the flaked coconut.",
@@ -121,27 +121,27 @@
     "sodium": 329.0
   },
   "built": {
-    "raw_grams_total": 1437.3,
-    "cooked_grams_total": 1378.52,
+    "raw_grams_total": 1685.3,
+    "cooked_grams_total": 1618.82,
     "whole_cooked": {
-      "cal": 3998.904,
-      "pro": 55.3385,
-      "fat": 262.3593,
-      "carb": 367.4733,
+      "cal": 5104.794,
+      "pro": 59.5849,
+      "fat": 372.2543,
+      "carb": 403.7556,
       "fib": 14.472,
-      "h2o": 676.0113,
-      "sug": 173.7737,
-      "sodium": 2878.417
+      "h2o": 764.5606,
+      "sug": 203.0373,
+      "sodium": 2936.157
     },
     "per100g_cooked": {
-      "cal": 290.0875,
-      "pro": 4.0144,
-      "fat": 19.032,
-      "carb": 26.6572,
-      "fib": 1.0498,
-      "h2o": 49.039,
-      "sug": 12.6058,
-      "sodium": 208.8054
+      "cal": 315.3411,
+      "pro": 3.6808,
+      "fat": 22.9955,
+      "carb": 24.9414,
+      "fib": 0.894,
+      "h2o": 47.2296,
+      "sug": 12.5423,
+      "sodium": 181.3768
     }
   }
 }

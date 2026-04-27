@@ -202,16 +202,16 @@ SWEET_014,1,flour_ap_white_enriched_bleached,1 1/2 cups,188.0,120.0,250.0,crust,
 SWEET_014,2,salt_table,1/2 teaspoon,3.0,0.5,6.0,crust,false,
 SWEET_014,3,butter_unsalted,6 tablespoons,85.0,60.0,120.0,crust,false,"cold unsalted butter, cubed"
 SWEET_014,4,water_tap,3 tablespoons,45.0,30.0,75.0,crust,false,ice water (more as needed)
-SWEET_014,5,milk_whole,1 1/2 cups,366.0,250.0,500.0,filling,false,
-SWEET_014,6,coconut_milk_canned,1 cup,226.0,180.0,320.0,filling,false,"canned coconut milk (full-fat, well shaken)"
-SWEET_014,7,sugar_granulated,1/2 cup,100.0,60.0,200.0,filling,false,
+SWEET_014,5,half_and_half,1 cup,242.0,180.0,360.0,filling,false,
+SWEET_014,6,coconut_milk_canned,1 can (13.5 oz),400.0,350.0,450.0,filling,false,"canned coconut milk (full-fat, well shaken)"
+SWEET_014,7,sugar_granulated,2/3 cup,133.0,60.0,200.0,filling,false,
 SWEET_014,8,cornstarch,4 tablespoons,32.0,15.0,60.0,filling,false,
 SWEET_014,9,salt_table,1/2 teaspoon,3.0,0.5,6.0,filling,false,
 SWEET_014,10,egg_yolk_raw,4 large yolks,68.0,40.0,120.0,filling,false,egg yolks (lightly beaten)
 SWEET_014,11,butter_unsalted,2 tablespoons,28.0,15.0,60.0,filling,false,butter
 SWEET_014,12,vanilla_extract,1 teaspoon,4.2,0.0,12.0,filling,false,
 SWEET_014,13,coconut_flaked_sweetened,1 cup,74.0,50.0,100.0,filling,false,sweetened flaked coconut
-SWEET_014,14,heavy_cream,3/4 cup,180.0,150.0,350.0,topping,false,
+SWEET_014,14,heavy_cream,1 1/2 cups,345.0,230.0,460.0,topping,false,
 SWEET_014,15,sugar_powdered,2 tablespoons,15.0,8.0,40.0,topping,false,
 SWEET_014,16,vanilla_extract,1/2 teaspoon,2.1,0.0,8.0,topping,true,
 SWEET_014,17,coconut_flaked_sweetened,1/4 cup,18.0,10.0,30.0,topping,true,"sweetened flaked coconut, lightly toasted (for garnish)"
