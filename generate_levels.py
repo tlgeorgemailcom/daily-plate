@@ -434,6 +434,40 @@ def get_canonical_serving_grams(comboo_cur, dish_ndb_no, servings_count):
     return None
 
 
+def ingredient_sum_per_serving(comboo_cur, ingredient_rows, servings_count):
+    """Sum macros from ingredient rows when no canonical dish NDB exists (Rule 3)."""
+    if not servings_count or servings_count <= 0:
+        return None
+    cols = ', '.join(CANONICAL_NUTRIENT_COLS.keys())
+    totals = {k: 0.0 for k in CANONICAL_NUTRIENT_COLS.values()}
+    hit = 0
+    for row in ingredient_rows:
+        if row.get('row_type') not in ('dish_ingredient', 'ingredient'):
+            continue
+        ndb = row.get('ndb_no', '').strip()
+        if not ndb:
+            continue
+        try:
+            grams = float(row.get('portion_grams', 0) or 0)
+        except ValueError:
+            grams = 0.0
+        if grams <= 0:
+            continue
+        comboo_cur.execute(
+            f'SELECT {cols} FROM DataCentralCombo WHERE NDB_NO = ?', (ndb,)
+        )
+        sr = comboo_cur.fetchone()
+        if not sr:
+            continue
+        scale = grams / 100.0
+        for i, out_key in enumerate(CANONICAL_NUTRIENT_COLS.values()):
+            totals[out_key] += (sr[i] or 0.0) * scale
+        hit += 1
+    if hit == 0:
+        return None
+    return {k: round(v / servings_count, 2) for k, v in totals.items()}
+
+
 def get_canonical_per_serving_from_density(comboo_cur, dish_ndb_no, grams_per_serving):
     if not dish_ndb_no or not grams_per_serving:
         return None
@@ -573,6 +607,10 @@ for recipe in recipes:
     )
     built_per_serving = normalize_built_per_serving(dev_nutrition_by_recipe.get(rid), servings_count)
     nutrition_per_serving = merge_canonical_with_built_fallback(canonical_per_serving, built_per_serving)
+    if not nutrition_per_serving and servings_count:
+        nutrition_per_serving = ingredient_sum_per_serving(
+            comboo_cur, ingredients_by_recipe.get(rid, []), servings_count
+        )
     nutrition_json = ts_nutrition_json(nutrition_per_serving, servings_count)
 
     block = f"""  {{
