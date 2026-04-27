@@ -1,0 +1,123 @@
+{
+  "recipe_id": "SWEET_040",
+  "recorded_at": "2026-04-27T11:59:09.575455+00:00",
+  "fingerprint": "5b02c7bc3371f1f06e6549880dc7a7ad728f0d3681fdc63ccc2f287360ee0e4c",
+  "disclosure": "No canonical USDA SR Legacy NDB exists for Buttermilk Pie. Nutrient values are computed from the ingredient build using USDA SR Legacy data for each ingredient and yield assumptions based on published cooking-yield ranges from USDA Agricultural Handbook 102.",
+  "canonical_payload": {
+    "recipe_id": "SWEET_040",
+    "canonical_ndb_no": "",
+    "cook_method": "bake",
+    "yield_factor_water": 0.9,
+    "yield_factor_fat": 1.0,
+    "yield_factor_other": 1.0,
+    "ingredients": [
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 113.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "butter_unsalted",
+        "grams": 135.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "egg_whole_raw",
+        "grams": 150.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 24.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "flour_ap_white_enriched_bleached",
+        "grams": 188.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "lemon_peel_raw",
+        "grams": 2.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "milk_buttermilk_whole",
+        "grams": 244.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "nutmeg_ground",
+        "grams": 0.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 1.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "salt_table",
+        "grams": 3.6,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 2.5,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "sugar_granulated",
+        "grams": 300.0,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "vanilla_extract",
+        "grams": 4.2,
+        "is_optional": false
+      },
+      {
+        "ingredient_key": "water_tap",
+        "grams": 72.0,
+        "is_optional": false
+      }
+    ],
+    "instructions": [
+      "For the crust, whisk the flour, salt, and sugar together. Cut in the cold butter until the mixture resembles coarse crumbs with some pea-sized pieces remaining.",
+      "Sprinkle the ice water over the mixture and stir gently with a fork just until the dough comes together. Form into a disk, wrap, and refrigerate for at least 30 minutes.",
+      "Roll the chilled dough out on a lightly floured surface to a 12-inch round and fit into a 9-inch pie plate. Trim, fold the edges under, and crimp. Refrigerate the shell for 15 minutes.",
+      "Preheat the oven to 400 degrees F (205 degrees C). Line the chilled shell with parchment and fill with pie weights. Blind-bake for 12 minutes, then remove the weights and parchment and bake another 5 to 7 minutes until the bottom looks dry but not yet browned. Remove and reduce the oven to 325 degrees F (165 degrees C).",
+      "For the filling, whisk the flour, sugar, and salt together in a large bowl. Add the eggs and whisk until smooth and pale.",
+      "Whisk in the melted and slightly cooled butter, then the buttermilk, vanilla, and lemon zest, until completely combined and the filling is uniform.",
+      "Pour the filling into the par-baked crust through a fine-mesh strainer to remove any lumps.",
+      "Grate a light dusting of nutmeg over the surface.",
+      "Bake at 325 degrees F (165 degrees C) for 45 to 55 minutes until the edges are puffed and set and the center jiggles only slightly when the pan is gently nudged. Tent the crust edges with foil if they brown too quickly.",
+      "Cool completely on a wire rack for at least 2 hours before slicing. Serve at room temperature or chilled."
+    ]
+  },
+  "canonical_per100g": {},
+  "built": {
+    "raw_grams_total": 1240.3,
+    "cooked_grams_total": 1192.86,
+    "whole_cooked": {
+      "cal": 4101.956,
+      "pro": 50.7417,
+      "fat": 225.7619,
+      "carb": 478.4504,
+      "fib": 6.04,
+      "h2o": 426.9215,
+      "sug": 315.708,
+      "sodium": 2483.861
+    },
+    "per100g_cooked": {
+      "cal": 343.8745,
+      "pro": 4.2538,
+      "fat": 18.926,
+      "carb": 40.1094,
+      "fib": 0.5063,
+      "h2o": 35.7896,
+      "sug": 26.4664,
+      "sodium": 208.2266
+    }
+  }
+}

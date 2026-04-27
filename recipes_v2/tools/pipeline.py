@@ -68,15 +68,22 @@ def cmd(recipe_id: str, args: argparse.Namespace) -> int:
     print(f"ingredients: {len(ingredients)}   instructions: {len(instructions)}")
 
     # --- canonical -----------------------------------------------------------
-    canonical_combo = canonical_per100g_from_combo(meta.canonical_ndb_no)
-    canonical_portion = canonical_per100g_from_food_portion(meta.food_word)
-    if canonical_combo is None and canonical_portion is None:
-        print("ERROR: no canonical row found (combo or food-portions)", file=sys.stderr)
-        return 3
-    canonical_per100g = canonical_combo or canonical_portion
-    canonical_source = "DataCentralCombo" if canonical_combo else "food-portions-complete.csv"
-    serving_grams = canonical_serving_grams(meta.food_word)
-    print(f"canonical_source: {canonical_source}   canonical_serving_grams: {serving_grams}")
+    is_rule3 = (meta.sr_rule or "").strip() == "Rule 3"
+    if is_rule3:
+        canonical_per100g = None
+        canonical_source = "none (Rule 3 — no canonical NDB)"
+        serving_grams = None
+        print(f"Rule 3: no canonical target — nutrients are ingredient-derived only")
+    else:
+        canonical_combo = canonical_per100g_from_combo(meta.canonical_ndb_no)
+        canonical_portion = canonical_per100g_from_food_portion(meta.food_word)
+        if canonical_combo is None and canonical_portion is None:
+            print("ERROR: no canonical row found (combo or food-portions)", file=sys.stderr)
+            return 3
+        canonical_per100g = canonical_combo or canonical_portion
+        canonical_source = "DataCentralCombo" if canonical_combo else "food-portions-complete.csv"
+        serving_grams = canonical_serving_grams(meta.food_word)
+        print(f"canonical_source: {canonical_source}   canonical_serving_grams: {serving_grams}")
 
     # --- build ---------------------------------------------------------------
     build_result = build_recipe(meta, ingredients, ledger)
@@ -86,20 +93,29 @@ def cmd(recipe_id: str, args: argparse.Namespace) -> int:
           f"cooked_grams_total={build_result.cooked_grams_total:.2f}")
 
     # --- delta report --------------------------------------------------------
-    delta_path = write_delta_report(
-        recipe_id=meta.recipe_id,
-        canonical_per100g=canonical_per100g,
-        built_per100g=build_result.per100g_cooked,
-        canonical_source=canonical_source,
-        extra={
-            "raw_grams_total": round(build_result.raw_grams_total, 2),
-            "cooked_grams_total": round(build_result.cooked_grams_total, 2),
-            "cook_method": meta.cook_method,
-        },
-    )
-    print(f"\nDelta report: {delta_path}")
-    from lib.delta import compute_delta
-    print(format_delta_table(compute_delta(canonical_per100g, build_result.per100g_cooked)))
+    if not is_rule3:
+        delta_path = write_delta_report(
+            recipe_id=meta.recipe_id,
+            canonical_per100g=canonical_per100g,
+            built_per100g=build_result.per100g_cooked,
+            canonical_source=canonical_source,
+            extra={
+                "raw_grams_total": round(build_result.raw_grams_total, 2),
+                "cooked_grams_total": round(build_result.cooked_grams_total, 2),
+                "cook_method": meta.cook_method,
+            },
+        )
+        print(f"\nDelta report: {delta_path}")
+        from lib.delta import compute_delta
+        print(format_delta_table(compute_delta(canonical_per100g, build_result.per100g_cooked)))
+    else:
+        print(f"\nBuilt nutrients per 100g (ingredient-derived):")
+        n = build_result.per100g_cooked
+        def _fmt(v, fmt='.3f'): return format(v, fmt) if isinstance(v, (int, float)) else str(v)
+        print(f"  cal={_fmt(n.get('cal','?'),'.1f')}  pro={_fmt(n.get('pro','?'))}  "
+              f"fat={_fmt(n.get('fat','?'))}  carb={_fmt(n.get('carb','?'))}  "
+              f"fib={_fmt(n.get('fib','?'))}  h2o={_fmt(n.get('h2o','?'))}  "
+              f"sug={_fmt(n.get('sug','?'))}  sodium={_fmt(n.get('sodium','?'))}")
 
     # --- fingerprint ---------------------------------------------------------
     new_fp = compute_fingerprint(meta, ingredients, instructions)
@@ -114,42 +130,48 @@ def cmd(recipe_id: str, args: argparse.Namespace) -> int:
 
     # --- solver --------------------------------------------------------------
     if args.solve:
-        from lib.solver import solve_grams
-        print("\n--- Solver ---")
-        try:
-            optimized, diag = solve_grams(meta, ingredients, ledger, canonical_per100g)
-        except RuntimeError as e:
-            print(f"SOLVER UNAVAILABLE: {e}", file=sys.stderr)
+        if is_rule3:
+            print("\nRule 3: --solve skipped (no canonical target)")
         else:
-            print(f"converged={diag['converged']}  iterations={diag['iterations']}")
-            print(f"objective: {diag['initial_objective']:.4f} -> {diag['final_objective']:.4f}")
-            for old, new in zip(ingredients, optimized):
-                if abs(old.grams - new.grams) > 0.5:
-                    print(f"  {old.ingredient_key}: {old.grams:.2f} -> {new.grams:.2f}g")
-            if args.write_solver:
-                save_recipe_ingredients(recipe_id, optimized)
-                # rebuild and rewrite delta after solver
-                build_after = build_recipe(meta, optimized, ledger)
-                write_delta_report(
-                    recipe_id, canonical_per100g, build_after.per100g_cooked,
-                    canonical_source, extra={"post_solver": True},
-                )
-                meta.fingerprint = compute_fingerprint(meta, optimized, instructions)
-                save_recipes(recipes)
-                print("Solver output written. Delta and fingerprint refreshed.")
+            from lib.solver import solve_grams
+            print("\n--- Solver ---")
+            try:
+                optimized, diag = solve_grams(meta, ingredients, ledger, canonical_per100g)
+            except RuntimeError as e:
+                print(f"SOLVER UNAVAILABLE: {e}", file=sys.stderr)
             else:
-                print("(re-run with --write-solver to persist)")
+                print(f"converged={diag['converged']}  iterations={diag['iterations']}")
+                print(f"objective: {diag['initial_objective']:.4f} -> {diag['final_objective']:.4f}")
+                for old, new in zip(ingredients, optimized):
+                    if abs(old.grams - new.grams) > 0.5:
+                        print(f"  {old.ingredient_key}: {old.grams:.2f} -> {new.grams:.2f}g")
+                if args.write_solver:
+                    save_recipe_ingredients(recipe_id, optimized)
+                    build_after = build_recipe(meta, optimized, ledger)
+                    write_delta_report(
+                        recipe_id, canonical_per100g, build_after.per100g_cooked,
+                        canonical_source, extra={"post_solver": True},
+                    )
+                    meta.fingerprint = compute_fingerprint(meta, optimized, instructions)
+                    save_recipes(recipes)
+                    print("Solver output written. Delta and fingerprint refreshed.")
+                else:
+                    print("(re-run with --write-solver to persist)")
 
     # --- suggest -------------------------------------------------------------
     if args.suggest:
-        from lib.suggest import format_suggestions_table, suggest_ingredients
-        print("\n--- Candidate ingredients (top 15) ---")
-        sugg = suggest_ingredients(canonical_per100g, top_n=15)
-        print(format_suggestions_table(sugg))
+        if is_rule3:
+            print("\nRule 3: --suggest skipped (no canonical target)")
+        else:
+            from lib.suggest import format_suggestions_table, suggest_ingredients
+            print("\n--- Candidate ingredients (top 15) ---")
+            sugg = suggest_ingredients(canonical_per100g, top_n=15)
+            print(format_suggestions_table(sugg))
 
     # --- snapshot ------------------------------------------------------------
     if args.snapshot:
-        sp = write_snapshot(meta, ingredients, instructions, build_result, canonical_per100g)
+        sp = write_snapshot(meta, ingredients, instructions, build_result,
+                            canonical_per100g if not is_rule3 else {})
         print(f"\nSnapshot written: {sp}")
 
     if args.test_snapshot:
@@ -160,9 +182,12 @@ def cmd(recipe_id: str, args: argparse.Namespace) -> int:
 
     # --- probes --------------------------------------------------------------
     if args.probe:
-        print("\n--- Probe vs food-portions-complete.csv ---")
-        probe = compare_to_food_portions(meta, build_result.per100g_cooked)
-        print(format_probe_table(probe))
+        if is_rule3:
+            print("\nRule 3: --probe skipped (no canonical target)")
+        else:
+            print("\n--- Probe vs food-portions-complete.csv ---")
+            probe = compare_to_food_portions(meta, build_result.per100g_cooked)
+            print(format_probe_table(probe))
 
     if args.compare_v1:
         print("\n--- Compare vs v1 recipes_dev.db ---")
