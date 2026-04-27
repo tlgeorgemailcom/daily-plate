@@ -609,16 +609,18 @@ for recipe in recipes:
     )
     sr_rule = recipe.get('sr28_rule', '').strip()
     built_per_serving = normalize_built_per_serving(dev_nutrition_by_recipe.get(rid), servings_count)
-    # Rule 1: SR28 canonical dish NDB, zeros filled by ingredient build.
-    # Rule 2: SR28 NDB exists but commercial product too far off — use ingredient
-    #         build only (canonical discarded).
-    # Rule 3: no canonical NDB — ingredient-sum fallback below.
-    if sr_rule == 'Rule 1':
+    # Rule A: full SR28 dish match — pure canonical (all macros lab-verified).
+    # Rule B: partial SR28 dish match (fiber/sugar gaps) — canonical + built fills zeros.
+    # Rule C: commercial NDB too far from homemade — built only, canonical discarded.
+    # Rule D: no matching NDB — ingredient-sum fallback below.
+    if sr_rule == 'Rule A':
+        nutrition_per_serving = canonical_per_serving
+    elif sr_rule == 'Rule B':
         nutrition_per_serving = merge_canonical_with_built_fallback(canonical_per_serving, built_per_serving)
-    elif sr_rule == 'Rule 2':
+    elif sr_rule == 'Rule C':
         nutrition_per_serving = built_per_serving
     else:
-        nutrition_per_serving = None  # Rule 3 — falls through to ingredient-sum
+        nutrition_per_serving = None  # Rule D — falls through to ingredient-sum
     ingredient_sum_grams = None
     if not nutrition_per_serving and servings_count:
         nutrition_per_serving, ingredient_sum_grams = ingredient_sum_per_serving(
@@ -639,7 +641,8 @@ for recipe in recipes:
     servings: '{esc(recipe.get('servings',''))}',
     prepTime: '{esc(recipe.get('prep_time',''))}',
     linkType: '{esc(link_type)}',
-        nutritionJson: {nutrition_json},
+    sr28Rule: '{esc(sr_rule)}',
+    nutritionJson: {nutrition_json},
     recipeIngredients: {ts_recipe_ingredients(recipe_ings)},
     recipeInstructions: {ts_instructions(instr_texts)},
   }}"""

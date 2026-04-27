@@ -50,7 +50,7 @@ export const RECIPES: Recipe[] = [
     "dietary_category": "veggie",
     "link_type": "dish",
     "servings": "8 slices",
-    "sr28_rule": "Rule 1",
+    "sr28_rule": "Rule B",
     "sr28_notes": "The nutrient values reflect water loss during the saucepan pre-cook and oven bake. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18302 within an average macro discrepancy of 1.9%.",
     "status": "published",
     "ingredients": [
@@ -268,7 +268,7 @@ export const RECIPES: Recipe[] = [
     "dietary_category": "veggie",
     "link_type": "dish",
     "servings": "12 pieces",
-    "sr28_rule": "Rule 1",
+    "sr28_rule": "Rule A",
     "sr28_notes": "The nutrient values reflect water loss during the saucepan pre-cook and oven bake. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18354 within an average macro discrepancy of 1.8%.",
     "status": "published",
     "ingredients": [
@@ -494,7 +494,7 @@ export const RECIPES: Recipe[] = [
     "dietary_category": "veggie",
     "link_type": "dish",
     "servings": "8 slices",
-    "sr28_rule": "Rule 1",
+    "sr28_rule": "Rule A",
     "sr28_notes": "The nutrient values reflect water loss during the bake of the crust and the cream filling set. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18304 within an average macro discrepancy of 4.5%.",
     "status": "published",
     "ingredients": [
@@ -744,7 +744,7 @@ export const RECIPES: Recipe[] = [
     "dietary_category": "veggie",
     "link_type": "dish",
     "servings": "8 slices",
-    "sr28_rule": "Rule 1",
+    "sr28_rule": "Rule B",
     "sr28_notes": "The nutrient values reflect water loss during the double-crust bake. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18306 within an average macro discrepancy of 1.4%.",
     "status": "published",
     "ingredients": [
@@ -970,7 +970,7 @@ export const RECIPES: Recipe[] = [
     "dietary_category": "veggie",
     "link_type": "dish",
     "servings": "8 slices",
-    "sr28_rule": "Rule 1",
+    "sr28_rule": "Rule B",
     "sr28_notes": "The nutrient values reflect water loss during the double-crust bake. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18309 within an average macro discrepancy of 1.4%.",
     "status": "published",
     "ingredients": [
@@ -1188,7 +1188,7 @@ export const RECIPES: Recipe[] = [
     "dietary_category": "veggie",
     "link_type": "dish",
     "servings": "8 slices",
-    "sr28_rule": "Rule 1",
+    "sr28_rule": "Rule B",
     "sr28_notes": "The nutrient values reflect water loss during the bake. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18321 within an average macro discrepancy of 4.4%.",
     "status": "published",
     "ingredients": [
@@ -1430,7 +1430,7 @@ export const RECIPES: Recipe[] = [
     "dietary_category": "veggie",
     "link_type": "dish",
     "servings": "8 slices",
-    "sr28_rule": "Rule 1",
+    "sr28_rule": "Rule A",
     "sr28_notes": "The nutrient values reflect water loss during the pre-cooked mincemeat simmer and the double-crust bake. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18322 within an average macro discrepancy of 4.4%.",
     "status": "published",
     "ingredients": [
@@ -1800,7 +1800,7 @@ export const RECIPES: Recipe[] = [
     "dietary_category": "veggie",
     "link_type": "dish",
     "servings": "8 slices",
-    "sr28_rule": "Rule 2",
+    "sr28_rule": "Rule C",
     "sr28_notes": "Authentic homemade peach pie spec. NOT validated against USDA SR Legacy NDB 18323 because that canonical entry's protein (1.9 g/100g) and fiber (0.8 g/100g) are inconsistent with any double-crust pie made with a standard wheat-flour shell \u2014 the crust alone exceeds those totals. Free-tier nutrient values are computed from the ingredients in this recipe; paid-tier values may substitute canonical fields where appropriate.",
     "status": "published",
     "ingredients": [
@@ -2063,7 +2063,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "30 min",
     "servings": "8 slices",
-    "sr28_rule": "Rule 1",
+    "sr28_rule": "Rule B",
     "sr28_notes": "The nutrient values reflect water loss during the bake. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18325 within an average macro discrepancy of 2.0%.",
     "status": "published",
     "ingredients": [
@@ -2270,7 +2270,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "20 min",
     "servings": "8 slices",
-    "sr28_rule": "Rule 1",
+    "sr28_rule": "Rule B",
     "sr28_notes": "The nutrient values reflect water loss during the bake. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18327 within an average macro discrepancy of 2.9%.",
     "status": "published",
     "ingredients": [
@@ -2469,7 +2469,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "30 min",
     "servings": "8 slices",
-    "sr28_rule": "Rule 1",
+    "sr28_rule": "Rule A",
     "sr28_notes": "The nutrient values reflect water loss during the bake and stovetop cooking. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18328 within an average macro discrepancy of 4.9%.",
     "status": "published",
     "ingredients": [
@@ -2716,7 +2716,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "45 min",
     "servings": "10 slices",
-    "sr28_rule": "Rule 2",
+    "sr28_rule": "Rule C",
     "sr28_notes": "Authentic homemade Boston cream pie spec: 2-layer butter yellow cake, vanilla pastry cream filling, semisweet chocolate ganache glaze. NOT validated against USDA SR Legacy NDB 18090 because that record is for a commercially prepared sponge-cake version with much less fat and protein and much more glaze sugar; no homemade butter-cake recipe can represent it. Free-tier nutrient values are computed from the ingredients in this recipe; paid-tier values may substitute canonical fields where appropriate.",
     "status": "published",
     "ingredients": [
@@ -3003,7 +3003,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "30 min",
     "servings": "8 slices",
-    "sr28_rule": "Rule 2",
+    "sr28_rule": "Rule C",
     "sr28_notes": "Authentic homemade chocolate cream pie spec: chocolate cookie crumb crust, egg-yolk-thickened chocolate pastry cream, fresh whipped cream topping. NOT validated against USDA SR Legacy NDB 18310 because that record is for a commercially prepared product made with non-dairy whipped topping and a no-egg starch/gelatin filling (cholesterol only 12 mg/100 g vs ~70-80 mg in any homemade version with egg yolks and dairy). Free-tier nutrient values are computed from the ingredients in this recipe; paid-tier values may substitute canonical fields where appropriate.",
     "status": "published",
     "ingredients": [
@@ -3242,7 +3242,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "30 min",
     "servings": "8 slices",
-    "sr28_rule": "Rule 2",
+    "sr28_rule": "Rule C",
     "sr28_notes": "Authentic homemade coconut cream pie spec: blind-baked single pie crust, coconut milk + dairy pastry cream with toasted flaked coconut, fresh whipped cream topping. NOT validated against USDA SR Legacy NDB 18314 because that record is a mix-based no-bake commercial product (instant pudding mix + non-dairy whipped topping) with no egg yolks, far less fat and protein, and dramatically higher sodium from added phosphates. No homemade recipe can represent it. Free-tier nutrient values are computed from the ingredients in this recipe; paid-tier values may substitute canonical fields where appropriate.",
     "status": "published",
     "ingredients": [
@@ -3513,7 +3513,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "20 min",
     "servings": "8 slices",
-    "sr28_rule": "Rule 2",
+    "sr28_rule": "Rule C",
     "sr28_notes": "Authentic homemade egg custard pie spec: blind-baked single pie crust filled with whole milk + whole egg custard, sweetened, lightly nutmegged. NOT validated against USDA SR Legacy NDB 18317 because that record is a commercially prepared pie that uses added starches, gums, and milk solids (evidenced by ~1.6 g/100g fiber and elevated protein and carbohydrate at lower sugar) that no authentic homemade custard pie contains. No homemade recipe can represent it. Free-tier nutrient values are computed from the ingredients in this recipe; paid-tier values may substitute canonical fields where appropriate.",
     "status": "published",
     "ingredients": [
@@ -3692,7 +3692,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "20 min",
     "servings": "12 slices",
-    "sr28_rule": "Rule 1",
+    "sr28_rule": "Rule A",
     "sr28_notes": "The nutrient values reflect water loss during baking. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18139 within an average macro discrepancy of 1.8%.",
     "status": "published",
     "ingredients": [
@@ -3851,7 +3851,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "30 min",
     "servings": "12 slices",
-    "sr28_rule": "Rule 1",
+    "sr28_rule": "Rule A",
     "sr28_notes": "The nutrient values reflect water loss during baking and the boiled-frosting reduction. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18102 within an average macro discrepancy of 4.5%.",
     "status": "published",
     "ingredients": [
@@ -4126,7 +4126,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "25 min",
     "servings": "12 slices",
-    "sr28_rule": "Rule 1",
+    "sr28_rule": "Rule B",
     "sr28_notes": "The nutrient values reflect water loss during baking. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18146 within an average macro discrepancy of 1.8%.",
     "status": "published",
     "ingredients": [
@@ -4309,7 +4309,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "10 min",
     "servings": "16 tablespoons",
-    "sr28_rule": "Rule 1",
+    "sr28_rule": "Rule A",
     "sr28_notes": "The nutrient values reflect this glaze prepared from scratch and validated against USDA SR Legacy NDB 19409 (NFSMI Recipe No. C-32) within an average macro discrepancy of 3.0%.",
     "status": "published",
     "ingredients": [
@@ -4432,7 +4432,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "45 min",
     "servings": "12 slices",
-    "sr28_rule": "Rule 2",
+    "sr28_rule": "Rule C",
     "sr28_notes": "Authentic homemade yellow layer cake with chocolate glaze. NOT validated against USDA SR Legacy NDB 18140 because the canonical entry reflects commercial in-store-bakery production using hydrogenated shortening, reduced-egg formulations, and industrial frosting bases. Proportions aligned to classic homemade two-layer yellow cake references: butter + oil, buttermilk, 3 whole eggs + 2 yolks, and a cocoa powdered-sugar glaze.",
     "status": "published",
     "ingredients": [
@@ -4719,7 +4719,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "15 min",
     "servings": "9 servings",
-    "sr28_rule": "Rule 1",
+    "sr28_rule": "Rule B",
     "sr28_notes": "The nutrient values reflect water loss during baking. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18116 within an average macro discrepancy of 2.3%.",
     "status": "published",
     "ingredients": [
@@ -4934,7 +4934,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "25 min",
     "servings": "9 servings",
-    "sr28_rule": "Rule 1",
+    "sr28_rule": "Rule B",
     "sr28_notes": "The nutrient values reflect water loss during baking. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18119 within an average macro discrepancy of 3.2%.",
     "status": "published",
     "ingredients": [
@@ -5181,7 +5181,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "15 min",
     "servings": "8 biscuits",
-    "sr28_rule": "Rule 1",
+    "sr28_rule": "Rule B",
     "sr28_notes": "The nutrient values reflect water loss during baking. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18126 within an average macro discrepancy of 1.5%.",
     "status": "published",
     "ingredients": [
@@ -5316,7 +5316,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "30 min",
     "servings": "10 servings",
-    "sr28_rule": "Rule 1",
+    "sr28_rule": "Rule B",
     "sr28_notes": "The nutrient values reflect water loss during baking. The water loss was calculated using published cooking-yield ranges from USDA Agricultural Handbook 102 and validated against USDA SR Legacy NDB 18134 within an average macro discrepancy of 3.0%.",
     "status": "published",
     "ingredients": [
@@ -5499,7 +5499,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "30 min",
     "servings": "12 servings",
-    "sr28_rule": "Rule 2",
+    "sr28_rule": "Rule C",
     "sr28_notes": "Authentic homemade angel food cake. NOT validated against USDA SR Legacy NDB 18086 because the canonical entry reflects commercially prepared cake with industrial sodium-based preservatives, gums, and stabilizers (sodium 749 mg/100g vs ~189 mg/100g for the authentic from-scratch recipe). Built entirely from USDA single-NDB ingredients (egg whites, sugar, cake flour, cream of tartar, salt, vanilla, lemon juice) with no composite components.",
     "status": "published",
     "ingredients": [
@@ -5646,7 +5646,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "45 min",
     "servings": "12 servings",
-    "sr28_rule": "Rule 2",
+    "sr28_rule": "Rule C",
     "sr28_notes": "Authentic homemade NY-style cheesecake. NOT validated against USDA SR Legacy NDB 18147 because the canonical entry reflects commercially prepared cheesecake with industrial gums, modified starch, gelatin, and reduced-egg formulations (cholesterol 55 mg/100g vs ~121 mg/100g for the authentic full-fat recipe; sodium 438 mg/100g vs ~263 mg/100g without preservatives). Built entirely from USDA single-NDB ingredients (graham crackers, butter, cream cheese, sour cream, sugar, eggs, vanilla, salt) with no composite components.",
     "status": "published",
     "ingredients": [
@@ -5885,7 +5885,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "30 min",
     "servings": "10 servings",
-    "sr28_rule": "Rule 2",
+    "sr28_rule": "Rule C",
     "sr28_notes": "Authentic homemade sour cream coffee cake with cinnamon crumb topping. NOT validated against USDA SR Legacy NDB 18104 because the canonical entry reflects commercially prepared coffee cake with hydrogenated shortening, reduced-egg formulations, low-moisture shelf-stable formulation, and sodium-based preservatives (cholesterol 32 mg/100g vs ~88 mg/100g for the authentic recipe; protein 6.8 g vs 5.0 g, fat 23.3 g vs 18.6 g; sodium 351 mg/100g vs ~255 mg/100g without preservatives). Built entirely from USDA single-NDB ingredients (AP flour, baking powder, baking soda, salt, butter, sugars, eggs, vanilla, sour cream, cinnamon) with no composite components.",
     "status": "published",
     "ingredients": [
@@ -6120,7 +6120,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "20 min",
     "servings": "10 servings",
-    "sr28_rule": "Rule 2",
+    "sr28_rule": "Rule C",
     "sr28_notes": "Authentic homemade American pound cake built in the classic 1:1 butter-to-sugar ratio. NOT validated against USDA SR Legacy NDB 18120 because the canonical entry reflects commercially prepared pound cake with reduced butter padded by corn syrup/water, reduced-egg formulations, and sodium-based preservatives (fat 14 g/100g vs ~22 g/100g for an authentic butter-rich pound cake; cholesterol 66 mg/100g vs ~131 mg/100g; sodium 377 mg/100g vs ~225 mg/100g without preservatives; sugar 33 g/100g vs ~22 g/100g without sugar/corn-syrup padding). Built entirely from USDA single-NDB ingredients (butter, granulated sugar, eggs, AP flour, baking powder, salt, whole milk, vanilla) with no composite components.",
     "status": "published",
     "ingredients": [
@@ -6275,7 +6275,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "20 min",
     "servings": "16 brownies",
-    "sr28_rule": "Rule 1",
+    "sr28_rule": "Rule B",
     "sr28_notes": "The nutrient values reflect water loss during baking and were validated against USDA SR Legacy NDB 18154 on all usable nutrients. Sugar and fiber are excluded from strict validation because the canonical entry reports both as 0.0 g/100g despite a high-carbohydrate brownie profile.",
     "status": "published",
     "ingredients": [
@@ -6434,7 +6434,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "15 min",
     "servings": "24 cookies",
-    "sr28_rule": "Rule 2",
+    "sr28_rule": "Rule C",
     "sr28_notes": "Built from an authentic Quaker-style home recipe and treated as Rule 2. USDA SR Legacy NDB 18184 appears to reflect a different formulation with materially higher sodium and lower moisture than this batch profile.",
     "status": "published",
     "ingredients": [
@@ -6618,7 +6618,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "20 min",
     "servings": "24 cookies",
-    "sr28_rule": "Rule 1",
+    "sr28_rule": "Rule A",
     "sr28_notes": "Rule 1 validated. All 8 nutrients within \u00b15%: cal +0.58%, pro +2.46%, fat +3.25%, carb -2.06%, fib -2.84%, h2o +0.60%, sug +2.28%, sodium -2.99%. Formula: 2\u00be cups flour, 1 cup margarine, \u00be cup sugar + \u00bc cup rolling, 2 eggs, \u00bd tsp salt, 2 tsp baking powder. Yield 0.46 (54% water loss for thin rolled cookies). Recipe consensus from 5 reference sources; \u00bd tsp salt aligns with Recipes 1, 3, 4.",
     "status": "published",
     "ingredients": [
@@ -6770,7 +6770,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "15 min",
     "servings": "48 cookies",
-    "sr28_rule": "Rule 2",
+    "sr28_rule": "Rule C",
     "sr28_notes": "Built from authentic home gingersnap recipe consensus (5 reference sources). USDA SR Legacy NDB 18172 reflects a commercial packaged product with lower fat, analytically lower sugar, higher apparent fiber, and higher protein than achievable from home recipe formula.",
     "status": "published",
     "ingredients": [
@@ -6955,7 +6955,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "15 min",
     "servings": "60 cookies",
-    "sr28_rule": "Rule 2",
+    "sr28_rule": "Rule C",
     "sr28_notes": "Built from authentic home butter cookie recipe consensus (Recipes 2, 4, 5). USDA SR Legacy NDB 18155 is a commercially prepared butter wafer with significantly lower fat, sugar, water, and sodium content than any home-based formula would produce. Not comparable to home recipe profile.",
     "status": "published",
     "ingredients": [
@@ -7080,7 +7080,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "15 min",
     "servings": "48 cookies",
-    "sr28_rule": "Rule 2",
+    "sr28_rule": "Rule C",
     "sr28_notes": "Built from authentic home chocolate chip cookie recipe consensus (Recipes 2, 5). USDA SR Legacy NDB 18164 is a commercially prepared refrigerated dough product with stabilizers and very low moisture content not achievable in home formula. Canonical water (3.0g/100g) and sugar (0.0g) are product-specific anomalies. Not comparable to home recipe.",
     "status": "published",
     "ingredients": [
@@ -7253,7 +7253,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "20 min",
     "servings": "16 bars",
-    "sr28_rule": "Rule 2",
+    "sr28_rule": "Rule C",
     "sr28_notes": "Built from authentic home fig bar recipe consensus (Recipes 1, 3, 4, 5). USDA SR Legacy NDB 18170 is a commercially prepared fig bar with very high fig-to-flour ratio and minimal fat binding not achievable in traditional home crust-based formula. Home recipes necessarily use more butter/flour for structure and yield higher protein/fat.",
     "status": "published",
     "ingredients": [
@@ -7424,7 +7424,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "15 min",
     "servings": "24 macaroons",
-    "sr28_rule": "Rule 2",
+    "sr28_rule": "Rule C",
     "sr28_notes": "Built from authentic home coconut-macaroon references using classic egg-white method. Despite corrected ingredient proportions, USDA SR Legacy NDB 28309 remains non-convergent across key macros, indicating a commercial product profile not fully reproducible with home supermarket formulations.",
     "status": "published",
     "ingredients": [
@@ -7543,7 +7543,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "20 min",
     "servings": "30 cookies",
-    "sr28_rule": "Rule 2",
+    "sr28_rule": "Rule C",
     "sr28_notes": "Built from authentic home molasses-cookie references (Recipes 1-5) using standard pantry ingredients and classic crackle-cookie method. USDA SR Legacy NDB 18177 appears nutritionally non-equivalent to these home formulas, especially on sugar/fat/water profile, so this recipe is classified as Rule 2.",
     "status": "published",
     "ingredients": [
@@ -7738,7 +7738,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "20 min",
     "servings": "30 cookies",
-    "sr28_rule": "Rule 2",
+    "sr28_rule": "Rule C",
     "sr28_notes": "Built from authentic home peanut-butter cookie references with proportions intentionally preserved when Rule 1 was not fully attainable. USDA SR Legacy NDB 18188 appears to represent a commercial refrigerated-dough profile with canonical sugar=0 artifact; therefore recipe is classified as Rule 2 while maintaining realistic home-recipe ratios.",
     "status": "published",
     "ingredients": [
@@ -7933,7 +7933,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "20 min",
     "servings": "36 cookies",
-    "sr28_rule": "Rule 1",
+    "sr28_rule": "Rule A",
     "sr28_notes": "Validated against USDA SR Legacy NDB 18192 within Rule 1 tolerance bands using authentic shortbread ingredient structure.",
     "status": "published",
     "ingredients": [
@@ -8068,7 +8068,7 @@ export const RECIPES: Recipe[] = [
     "link_type": "dish",
     "prep_time": "25 min",
     "servings": "8 slices",
-    "sr28_rule": "Rule 3",
+    "sr28_rule": "Rule D",
     "sr28_notes": "No canonical USDA SR Legacy NDB exists for Buttermilk Pie. Nutrient values are computed from the ingredient build using USDA SR Legacy data for each ingredient and yield assumptions based on published cooking-yield ranges from USDA Agricultural Handbook 102.",
     "status": "published",
     "ingredients": [
