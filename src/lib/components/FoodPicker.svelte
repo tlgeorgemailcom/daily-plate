@@ -498,7 +498,6 @@
       </div>
       <p class="tooltip-description">
         <span class="usda-desc">{tooltipFood.desc}</span>
-        <span class="nutrient-info">{Math.round(tooltipFood.cal)} cal · {tooltipFood.pro}g protein · {tooltipFood.fat}g fat · {tooltipFood.carb}g carbs · {tooltipFood.fib}g fiber · {tooltipFood.h2o}g water · {tooltipFood.sug}g sugar per 100g</span>
         <span class="group-info">Groups: {tooltipFood.groups.join(', ')}</span>
         <span class="ndb-info">{'isRecipe' in tooltipFood ? `${recipeIcon(tooltipFood as RecipeFood)} ${(tooltipFood as RecipeFood).recipeType === 'developer' ? 'Developer recipe' : (tooltipFood as RecipeFood).recipeType === 'community' ? 'Community recipe' : 'Recipe'}${isRecipeFallback(tooltipFood as RecipeFood) ? ' · Fallback source' : ''} · ${recipeSourceBadges(tooltipFood as RecipeFood).map((b) => b.label).join(' · ')}` : `USDA NDB#${tooltipFood.ndb}`}</span>
       </p>
@@ -972,11 +971,6 @@
     border-bottom: 1px solid #e5e7eb;
     padding-bottom: 0.5rem;
     margin-bottom: 0.25rem;
-  }
-
-  .tooltip-description .nutrient-info {
-    font-weight: 500;
-    color: #166534;
   }
 
   .tooltip-description .group-info {
