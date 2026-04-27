@@ -607,8 +607,15 @@ for recipe in recipes:
         dish_ndb_no,
         canonical_serving_grams or grams_per_serving,
     )
+    sr_rule = recipe.get('sr28_rule', '').strip()
     built_per_serving = normalize_built_per_serving(dev_nutrition_by_recipe.get(rid), servings_count)
-    nutrition_per_serving = merge_canonical_with_built_fallback(canonical_per_serving, built_per_serving)
+    # Merge (canonical + built fallback for zeros) only for Rule 1.
+    # Rule 2: pure canonical (dish NDB fully represents the recipe).
+    # Rule 3: no canonical NDB — ingredient-sum below.
+    if sr_rule == 'Rule 1':
+        nutrition_per_serving = merge_canonical_with_built_fallback(canonical_per_serving, built_per_serving)
+    else:
+        nutrition_per_serving = canonical_per_serving
     ingredient_sum_grams = None
     if not nutrition_per_serving and servings_count:
         nutrition_per_serving, ingredient_sum_grams = ingredient_sum_per_serving(
