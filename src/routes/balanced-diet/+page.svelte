@@ -425,6 +425,7 @@
         recipeOrigin?: 'turso-dev' | 'turso-community' | 'ts-builtin' | null;
         cal: number; pro: number; fat: number;
         carb: number; fib: number; h2o: number; sug: number;
+        micros?: Record<string, number | null> | null;
       }): RecipeFood => ({
         word:     r.name,
         display:  r.name,
@@ -450,6 +451,7 @@
         sr28Rule: r.sr28Rule ?? null,
         isCommunityRecipe: r.isCommunityRecipe ?? r.type === 'community',
         recipeOrigin: r.recipeOrigin ?? null,
+        micros: r.micros ?? null,
       }));
     } catch {
       if (loadVersion === recipeLoadVersion) {

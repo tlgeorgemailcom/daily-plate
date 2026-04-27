@@ -12,6 +12,7 @@
     sr28Rule?: 'Rule A' | 'Rule B' | 'Rule C' | 'Rule D' | null;
     isCommunityRecipe?: boolean;
     recipeOrigin?: 'turso-dev' | 'turso-community' | 'ts-builtin' | null;
+    micros?: Record<string, number | null> | null;
   };
   type SearchScope = 'all' | 'baby';
 
@@ -501,6 +502,49 @@
         <span class="group-info">Groups: {tooltipFood.groups.join(', ')}</span>
         <span class="ndb-info">{'isRecipe' in tooltipFood ? `${recipeIcon(tooltipFood as RecipeFood)} ${(tooltipFood as RecipeFood).recipeType === 'developer' ? 'Developer recipe' : (tooltipFood as RecipeFood).recipeType === 'community' ? 'Community recipe' : 'Recipe'}${isRecipeFallback(tooltipFood as RecipeFood) ? ' · Fallback source' : ''} · ${recipeSourceBadges(tooltipFood as RecipeFood).map((b) => b.label).join(' · ')}` : `USDA NDB#${tooltipFood.ndb}`}</span>
       </p>
+      {#if 'isRecipe' in tooltipFood && (tooltipFood as RecipeFood).micros}
+        {@const micros = (tooltipFood as RecipeFood).micros!}
+        {@const LABELS: Record<string, string> = {
+          Energy_KCal: 'Energy (kcal)', Water: 'Water (g)', Protein: 'Protein (g)',
+          TotalLipidFat: 'Fat (g)', Carbohydrate: 'Carbs (g)', FiberTotalDietary: 'Fiber (g)',
+          SugarsTotal: 'Sugar (g)', Cholesterol: 'Cholesterol (mg)',
+          FattyAcids_totalSaturated: 'Saturated fat (g)', FattyAcids_totalMonounsaturated: 'Mono fat (g)',
+          FattyAcids_totalPolyunsaturated: 'Poly fat (g)', LinoleicAcid: 'Linoleic (g)',
+          alphaLinolenicAcid: 'ALA (g)', EPA_20_5n3: 'EPA (g)', DPA_22_5n3: 'DPA (g)',
+          DHA_22_6n3: 'DHA (g)', omega3: 'Omega-3 (g)', omega6: 'Omega-6 (g)',
+          VitaminA_RAE: 'Vitamin A (mcg)', Retinol: 'Retinol (mcg)', Carotene_beta: 'β-carotene (mcg)',
+          VitaminD: 'Vitamin D (mcg)', VitaminE_alphaTocopherol: 'Vitamin E (mg)',
+          VitaminK_phylloquinone: 'Vitamin K (mcg)', VitaminC_totalAscorbicAcid: 'Vitamin C (mg)',
+          Thiamin: 'Thiamin (mg)', Riboflavin: 'Riboflavin (mg)', Niacin: 'Niacin (mg)',
+          PantothenicAcid: 'Pantothenic acid (mg)', VitaminB6: 'Vitamin B6 (mg)',
+          Folate_total: 'Folate total (mcg)', Folate_food: 'Folate food (mcg)',
+          Folate_DFE: 'Folate DFE (mcg)', FolicAcid: 'Folic acid (mcg)',
+          VitaminB12: 'Vitamin B12 (mcg)', Choline_total: 'Choline (mg)',
+          Betaine: 'Betaine (mg)', LuteinZeaxanthin: 'Lutein+Zeaxanthin (mcg)',
+          Lycopene: 'Lycopene (mcg)',
+          Calcium_Ca: 'Calcium (mg)', Iron_Fe: 'Iron (mg)', Magnesium_Mg: 'Magnesium (mg)',
+          Phosphorus_P: 'Phosphorus (mg)', Potassium_K: 'Potassium (mg)', Sodium_Na: 'Sodium (mg)',
+          Zinc_Zn: 'Zinc (mg)', Copper_Cu: 'Copper (mg)', Manganese_Mn: 'Manganese (mg)',
+          Selenium_Se: 'Selenium (mcg)',
+          Tryptophan: 'Tryptophan (g)', Threonine: 'Threonine (g)', Isoleucine: 'Isoleucine (g)',
+          Leucine: 'Leucine (g)', Lysine: 'Lysine (g)', Methionine: 'Methionine (g)',
+          Cystine: 'Cystine (g)', Phenylalanine: 'Phenylalanine (g)', Tyrosine: 'Tyrosine (g)',
+          Valine: 'Valine (g)', Arginine: 'Arginine (g)', Histidine: 'Histidine (g)',
+          Alanine: 'Alanine (g)', AsparticAcid: 'Aspartic acid (g)', GlutamicAcid: 'Glutamic acid (g)',
+          Glycine: 'Glycine (g)', Proline: 'Proline (g)', Serine: 'Serine (g)',
+        }}
+        <div class="micros-grid">
+          <div class="micros-title">Full nutrient data per 100g</div>
+          {#each Object.keys(LABELS) as key (key)}
+            {#if micros[key] != null}
+              <div class="micro-row">
+                <span class="micro-label">{LABELS[key]}</span>
+                <span class="micro-value">{(micros[key] as number).toFixed(2)}</span>
+              </div>
+            {/if}
+          {/each}
+        </div>
+      {/if}
     </div>
   </div>
 {/if}
@@ -886,5 +930,46 @@
   .tooltip-description .ndb-info {
     font-size: 0.8rem;
     color: #9ca3af;
+  }
+
+  .micros-grid {
+    margin-top: 0.75rem;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 0.5rem;
+    max-height: 260px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .micros-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #374151;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding-bottom: 0.35rem;
+  }
+
+  .micro-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 0.75rem;
+    padding: 0.1rem 0;
+    border-bottom: 1px solid #f3f4f6;
+  }
+
+  .micro-label {
+    color: #4b5563;
+    flex: 1;
+  }
+
+  .micro-value {
+    color: #111827;
+    font-weight: 500;
+    min-width: 4.5rem;
+    text-align: right;
   }
 </style>
