@@ -578,9 +578,14 @@
           { key: 'Proline', label: 'Proline (g)', rule: 'other' },
           { key: 'Serine', label: 'Serine (g)', rule: 'other' },
         ]}
+        {@const satFat = Number(micros.FattyAcids_totalSaturated ?? 0)}
+        {@const monoFat = Number(micros.FattyAcids_totalMonounsaturated ?? 0)}
+        {@const polyFat = Number(micros.FattyAcids_totalPolyunsaturated ?? 0)}
+        {@const totalFat = Number(micros.TotalLipidFat ?? 0)}
+        {@const otherFat = Math.max(0, totalFat - satFat - monoFat - polyFat)}
         <div class="micros-grid">
           <div class="micros-title">Full nutrient data per 100g (ordered by food-label priority)</div>
-          <div class="micros-subtitle">Required and optional label nutrients are listed first.</div>
+          <div class="micros-subtitle">Required and optional label nutrients are listed first. Fat subtypes may not fully sum to total fat due source-data rounding and unclassified fatty components.</div>
           {#each NUTRIENT_ROWS as row (row.key)}
             {#if micros[row.key] != null}
               <div class="micro-row">
@@ -589,6 +594,12 @@
               </div>
             {/if}
           {/each}
+          {#if totalFat > 0 && otherFat > 0.01}
+            <div class="micro-row">
+              <span class="micro-label">Other / unspecified fat (g) <span class="micro-rule other">other nutrient</span></span>
+              <span class="micro-value">{otherFat.toFixed(2)}</span>
+            </div>
+          {/if}
         </div>
       {/if}
     </div>
