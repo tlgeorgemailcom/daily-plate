@@ -1,7 +1,7 @@
 {
   "recipe_id": "SWEET_013",
-  "recorded_at": "2026-04-25T13:56:22.684861+00:00",
-  "fingerprint": "c22731f9d19109304feebca5fd93c01d52d353dc8cfe1320d7671e1e3437dca3",
+  "recorded_at": "2026-04-27T14:09:00.863484+00:00",
+  "fingerprint": "b4846031ff098c0ec967675f0169f2adc8725cf73bdbed5d674ca164f7905cad",
   "disclosure": "Authentic homemade chocolate cream pie spec: chocolate cookie crumb crust, egg-yolk-thickened chocolate pastry cream, fresh whipped cream topping. NOT validated against USDA SR Legacy NDB 18310 because that record is for a commercially prepared product made with non-dairy whipped topping and a no-egg starch/gelatin filling (cholesterol only 12 mg/100 g vs ~70-80 mg in any homemade version with egg yolks and dairy). Free-tier nutrient values are computed from the ingredients in this recipe; paid-tier values may substitute canonical fields where appropriate.",
   "canonical_payload": {
     "recipe_id": "SWEET_013",
@@ -18,17 +18,17 @@
       },
       {
         "ingredient_key": "butter_unsalted",
-        "grams": 57.0,
+        "grams": 71.0,
         "is_optional": false
       },
       {
         "ingredient_key": "chocolate_sandwich_cookies",
-        "grams": 280.0,
+        "grams": 240.0,
         "is_optional": false
       },
       {
         "ingredient_key": "chocolate_semisweet",
-        "grams": 170.0,
+        "grams": 227.0,
         "is_optional": false
       },
       {
@@ -52,13 +52,18 @@
         "is_optional": false
       },
       {
+        "ingredient_key": "heavy_cream",
+        "grams": 230.0,
+        "is_optional": false
+      },
+      {
         "ingredient_key": "milk_whole",
         "grams": 488.0,
         "is_optional": false
       },
       {
         "ingredient_key": "salt_table",
-        "grams": 6.0,
+        "grams": 0.75,
         "is_optional": false
       },
       {
@@ -85,7 +90,7 @@
     "instructions": [
       "Preheat the oven to 350 degrees F (175 degrees C).",
       "For the crust, pulse the cookies in a food processor to fine crumbs (or crush in a sealed bag with a rolling pin). Combine with the melted butter and stir until evenly moistened. Press firmly into the bottom and up the sides of a 9-inch pie plate. Bake for 8-10 minutes, then cool on a rack while you make the filling.",
-      "For the filling, whisk the sugar, cornstarch, cocoa, and salt together in a heavy saucepan. Gradually whisk in the milk until smooth and no lumps remain.",
+      "For the filling, whisk the sugar, cornstarch, cocoa, and salt together in a heavy saucepan. Gradually whisk in the milk and heavy cream until smooth and no lumps remain.",
       "Set over medium heat and cook, whisking constantly, until the mixture thickens, comes to a gentle boil, and bubbles for about 1 minute.",
       "Whisk a ladleful of the hot custard into the egg yolks to temper them, then return the yolks to the saucepan. Cook 1-2 minutes more, whisking constantly, until thick and glossy.",
       "Remove from the heat and add the chopped chocolate, butter, and vanilla. Whisk until completely smooth and the chocolate is fully melted.",
@@ -104,27 +109,27 @@
     "sodium": 266.0
   },
   "built": {
-    "raw_grams_total": 1414.3,
-    "cooked_grams_total": 1289.9,
+    "raw_grams_total": 1670.05,
+    "cooked_grams_total": 1516.03,
     "whole_cooked": {
-      "cal": 4438.114,
-      "pro": 54.0185,
-      "fat": 261.6759,
-      "carb": 512.9363,
-      "fib": 22.066,
-      "h2o": 441.0648,
-      "sug": 383.3456,
-      "sodium": 3721.457
+      "cal": 5408.494,
+      "pro": 60.9795,
+      "fat": 365.4593,
+      "carb": 527.2697,
+      "fib": 24.269,
+      "h2o": 546.0677,
+      "sug": 404.8671,
+      "sodium": 1601.372
     },
     "per100g_cooked": {
-      "cal": 344.0673,
-      "pro": 4.1878,
-      "fat": 20.2866,
-      "carb": 39.7657,
-      "fib": 1.7107,
-      "h2o": 34.1938,
-      "sug": 29.7191,
-      "sodium": 288.5081
+      "cal": 356.7535,
+      "pro": 4.0223,
+      "fat": 24.1063,
+      "carb": 34.7796,
+      "fib": 1.6008,
+      "h2o": 36.0196,
+      "sug": 26.7057,
+      "sodium": 105.6292
     }
   }
 }
