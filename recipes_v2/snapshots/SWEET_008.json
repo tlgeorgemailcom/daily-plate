@@ -1,7 +1,7 @@
 {
   "recipe_id": "SWEET_008",
-  "recorded_at": "2026-04-25T13:56:22.403857+00:00",
-  "fingerprint": "fbc5f2320600bb7319163fe9db18c35e57143c7b56a33dd4b5ec49b22cca284d",
+  "recorded_at": "2026-04-27T13:12:00.318880+00:00",
+  "fingerprint": "6e5261ee2416eeff70acf62d3ed9a4166f68ddd58b8358b7511d5756418474bb",
   "disclosure": "Authentic homemade peach pie spec. NOT validated against USDA SR Legacy NDB 18323 because that canonical entry's protein (1.9 g/100g) and fiber (0.8 g/100g) are inconsistent with any double-crust pie made with a standard wheat-flour shell \u2014 the crust alone exceeds those totals. Free-tier nutrient values are computed from the ingredients in this recipe; paid-tier values may substitute canonical fields where appropriate.",
   "canonical_payload": {
     "recipe_id": "SWEET_008",
@@ -53,7 +53,7 @@
       },
       {
         "ingredient_key": "peach_yellow_raw",
-        "grams": 900.0,
+        "grams": 1360.0,
         "is_optional": false
       },
       {
@@ -67,13 +67,18 @@
         "is_optional": false
       },
       {
+        "ingredient_key": "sugar_brown",
+        "grams": 55.0,
+        "is_optional": false
+      },
+      {
         "ingredient_key": "sugar_granulated",
         "grams": 8.0,
         "is_optional": false
       },
       {
         "ingredient_key": "sugar_granulated",
-        "grams": 150.0,
+        "grams": 100.0,
         "is_optional": false
       },
       {
@@ -112,27 +117,27 @@
     "sodium": 217.0
   },
   "built": {
-    "raw_grams_total": 1653.3,
-    "cooked_grams_total": 1438.07,
+    "raw_grams_total": 2118.3,
+    "cooked_grams_total": 1812.97,
     "whole_cooked": {
-      "cal": 3358.546,
-      "pro": 38.9358,
-      "fat": 156.5696,
-      "carb": 466.4293,
-      "fib": 21.3773,
-      "h2o": 763.0906,
-      "sug": 234.4931,
-      "sodium": 2975.61
+      "cal": 3553.446,
+      "pro": 43.1878,
+      "fat": 157.7196,
+      "carb": 514.2728,
+      "fib": 28.2773,
+      "h2o": 1082.5232,
+      "sug": 276.5481,
+      "sodium": 2990.51
     },
     "per100g_cooked": {
-      "cal": 233.5455,
-      "pro": 2.7075,
-      "fat": 10.8875,
-      "carb": 32.4344,
-      "fib": 1.4865,
-      "h2o": 53.0635,
-      "sug": 16.3061,
-      "sodium": 206.917
+      "cal": 196.0011,
+      "pro": 2.3822,
+      "fat": 8.6995,
+      "carb": 28.3663,
+      "fib": 1.5597,
+      "h2o": 59.7098,
+      "sug": 15.2538,
+      "sodium": 164.9506
     }
   }
 }

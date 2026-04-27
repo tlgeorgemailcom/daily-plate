@@ -116,16 +116,17 @@ SWEET_008,2,salt_table,1 teaspoon,6.0,3.0,9.0,crust,false,
 SWEET_008,3,butter_unsalted,3/4 cup,170.0,85.0,255.0,crust,false,"chilled, cubed"
 SWEET_008,4,water_tap,5 tablespoons,75.0,37.5,112.5,crust,false,ice water
 SWEET_008,5,sugar_granulated,2 teaspoons,8.0,4.0,12.0,crust,false,
-SWEET_008,6,peach_yellow_raw,6 cups sliced,900.0,450.0,1350.0,filling,false,"peeled, pitted, sliced (about 6-8 medium peaches)"
-SWEET_008,7,sugar_granulated,3/4 cup,150.0,75.0,225.0,filling,false,
-SWEET_008,8,cornstarch,1/4 cup,32.0,16.0,48.0,filling,false,
-SWEET_008,9,lemon_juice_raw,1 tablespoon,15.0,7.5,22.5,filling,false,
-SWEET_008,10,cinnamon_ground,1/2 teaspoon,1.3,0.65,1.9500000000000002,filling,false,
-SWEET_008,11,nutmeg_ground,1/4 teaspoon,0.5,0.25,0.75,filling,false,
-SWEET_008,12,salt_table,1/4 teaspoon,1.5,0.75,2.25,filling,false,
-SWEET_008,13,butter_unsalted,1 tablespoon,14.0,7.0,21.0,filling,false,"cut into small pieces, dotted on top"
-SWEET_008,14,egg_whole_raw,1 large egg,25.0,12.5,37.5,wash,false,~25g of beaten egg adheres to lattice
-SWEET_008,15,water_tap,1 teaspoon,5.0,2.5,7.5,wash,false,
+SWEET_008,6,peach_yellow_raw,about 7 cups sliced (about 3 lb),1360.0,680.0,2040.0,filling,false,"peeled, pitted, sliced"
+SWEET_008,7,sugar_granulated,1/2 cup,100.0,50.0,150.0,filling,false,
+SWEET_008,8,sugar_brown,1/4 cup packed,55.0,27.5,82.5,filling,false,
+SWEET_008,9,cornstarch,1/4 cup,32.0,16.0,48.0,filling,false,
+SWEET_008,10,lemon_juice_raw,1 tablespoon,15.0,7.5,22.5,filling,false,
+SWEET_008,11,cinnamon_ground,1/2 teaspoon,1.3,0.65,1.9500000000000002,filling,false,
+SWEET_008,12,nutmeg_ground,1/4 teaspoon,0.5,0.25,0.75,filling,false,
+SWEET_008,13,salt_table,1/4 teaspoon,1.5,0.75,2.25,filling,false,
+SWEET_008,14,butter_unsalted,1 tablespoon,14.0,7.0,21.0,filling,false,"cut into small pieces, dotted on top"
+SWEET_008,15,egg_whole_raw,1 large egg,25.0,12.5,37.5,wash,false,~25g of beaten egg adheres to lattice
+SWEET_008,16,water_tap,1 teaspoon,5.0,2.5,7.5,wash,false,
 SWEET_009,1,flour_ap_white_enriched_bleached,1 1/2 cups,188.0,100.0,250.0,crust,false,
 SWEET_009,2,salt_table,1/2 teaspoon,3.0,1.0,8.0,crust,false,
 SWEET_009,3,butter_unsalted,6 tablespoons,85.0,60.0,200.0,crust,false,
