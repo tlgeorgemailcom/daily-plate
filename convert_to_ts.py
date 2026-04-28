@@ -3,7 +3,7 @@
 import csv
 import json
 
-INPUT_CSV = "/Volumes/training/Daily Food Chain/daily-food-chain/food-portions-complete.csv"
+INPUT_CSV = "/Volumes/training/Daily Food Chain/daily-food-chain/src/lib/data/food-portions-complete.csv"
 OUTPUT_TS = "/Volumes/training/Daily Food Chain/daily-food-chain/src/lib/data/food-portions.ts"
 
 # Nutrient columns per 100g
@@ -72,6 +72,22 @@ def main():
                 'sug': nutrients['sug_100g'],
                 'portions': portions
             }
+
+            # Optional pipe-delimited synonyms for search matching.
+            # Example: "ice water|tap water|cold water"
+            raw_synonyms = row.get('synonyms', '') or ''
+            if raw_synonyms.strip():
+                seen = set()
+                synonyms = []
+                for token in raw_synonyms.split('|'):
+                    s = token.strip().lower()
+                    if not s or s in seen:
+                        continue
+                    seen.add(s)
+                    synonyms.append(s)
+                if synonyms:
+                    food['synonyms'] = synonyms
+
             foods.append(food)
     
     # Generate TypeScript
@@ -95,6 +111,7 @@ export interface Food {
   groups: FoodGroup[];
   ndb: string;       // USDA NDB number (primary key)
   desc: string;      // USDA LONG_DESC
+  synonyms?: string[]; // Optional search-only aliases from CSV
   // Nutrients per 100g
   cal: number;      // Calories (Energy_KCal)
   pro: number;      // Protein (g)

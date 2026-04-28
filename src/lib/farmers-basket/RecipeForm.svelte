@@ -195,7 +195,8 @@
     const scored = FOODS.map((f) => {
       const displayNorm = normalizeSearchText(f.display);
       const descNorm = normalizeSearchText(f.desc);
-      const searchSpace = `${displayNorm} ${descNorm}`;
+      const synonymsNorm = (f.synonyms ?? []).map(s => normalizeSearchText(s)).join(' ');
+      const searchSpace = `${displayNorm} ${descNorm} ${synonymsNorm}`;
       const overlap = words.filter(w => searchSpace.includes(w)).length;
       if (overlap === 0) return null;
 
