@@ -48,7 +48,7 @@ export const GET: RequestHandler = async ({ url }) => {
   }
 
   try {
-    // Fetch all approved recipes from both tables. We filter and rank in JS
+    // Fetch all published/approved recipes from both tables. We filter and rank in JS
     // to keep the SQL simple and avoid LIKE coupling to the split format.
     const rows = await queryAll<SuggestionRow>(
       `SELECT recipe_id AS id, recipe_name AS title, category, dietary_category,
@@ -57,7 +57,7 @@ export const GET: RequestHandler = async ({ url }) => {
               recipe_instructions_json AS recipe_instructions,
               'dev' AS source_type
        FROM dev_recipes
-       WHERE status = 'approved'
+        WHERE status = 'published'
        UNION ALL
        SELECT id, title, category, dietary_category,
               prep_time, servings,
