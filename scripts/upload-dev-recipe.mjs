@@ -4,6 +4,7 @@ import { createClient } from '@libsql/client';
 import { readFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { ADDED_SUGAR_RULES } from './added-sugar-rules.mjs';
 
 const BASE = '/Volumes/training/Daily Food Chain/daily-food-chain';
 const RECIPES_CSV = resolve(BASE, 'src/lib/data/recipes.csv');
@@ -271,7 +272,15 @@ async function estimateAddedSugarWhole(combooDb, ingredientRows) {
     if (sugarsWhole <= 0) continue;
 
     const override = parseAddedSugarOverride(row.notes);
-    const decision = override || inferAddedSugarRatio(nutrient.longDesc);
+    const ndbRule = ADDED_SUGAR_RULES.get(ndbNo);
+    const ndbDecision = ndbRule
+      ? {
+          ratio: ndbRule.policy === 'all_added' ? 1 : ndbRule.policy === 'none_added' ? 0 : (ndbRule.ratio ?? 0),
+          estimated: false,
+          reason: `ndb_rule:${ndbRule.reason}`,
+        }
+      : null;
+    const decision = override || ndbDecision || inferAddedSugarRatio(nutrient.longDesc);
     if (decision.estimated) estimated = true;
     reasons.add(decision.reason);
     addedWhole += sugarsWhole * decision.ratio;
