@@ -432,6 +432,79 @@
     ingredients.some(i => i.name.trim()) &&
     instructions.some(i => i.text.trim())
   );
+
+  // ── Recipe Suggestion ──────────────────────────────────────────────────────
+  interface RecipeSuggestion {
+    id: string;
+    dishName: string;
+    version: string;
+    category: string;
+    dietaryCategory: string | null;
+    prepTime: string | null;
+    servings: string | null;
+    ingredientCount: number;
+    ingredients: RecipeIngredient[];
+    instructions: RecipeInstruction[];
+    sourceType: 'dev' | 'player';
+  }
+
+  let suggestions = $state<RecipeSuggestion[]>([]);
+  let suggestionsLoading = $state(false);
+  let suggestionsDismissed = $state(false);
+  let expandedSuggestionId = $state<string | null>(null);
+
+  // Reset suggestions when the dish name changes after they were loaded
+  $effect(() => {
+    dishName; // track
+    suggestionsDismissed = false;
+    expandedSuggestionId = null;
+    suggestions = [];
+  });
+
+  // Fetch suggestions when nameReady becomes true
+  $effect(() => {
+    if (!nameReady) return;
+    const currentDish = dishName.trim();
+    suggestionsLoading = true;
+    fetch(`/api/recipes/suggest?dish=${encodeURIComponent(currentDish)}`)
+      .then(r => r.json())
+      .then((data: { suggestions: RecipeSuggestion[] }) => {
+        suggestions = data.suggestions ?? [];
+      })
+      .catch(() => { suggestions = []; })
+      .finally(() => { suggestionsLoading = false; });
+  });
+
+  function fillFromSuggestion(suggestion: RecipeSuggestion) {
+    category = suggestion.category ?? category;
+    if (suggestion.dietaryCategory) dietaryCategory = suggestion.dietaryCategory as never;
+    if (suggestion.prepTime) prepTime = suggestion.prepTime;
+    if (suggestion.servings) servings = suggestion.servings;
+    const rawIngredients = suggestion.ingredients;
+    if (Array.isArray(rawIngredients) && rawIngredients.length > 0) {
+      ingredients = rawIngredients.map((ing, idx) => ({
+        id: idx + 1,
+        name: (ing as RecipeIngredient).name ?? '',
+        quantity: (ing as RecipeIngredient).quantity ?? '',
+        gameFood: (ing as RecipeIngredient).gameFood,
+        animal: (ing as RecipeIngredient).animal,
+        foodWord: (ing as RecipeIngredient).foodWord,
+        ndbNo: (ing as RecipeIngredient).ndbNo,
+        portionDesc: (ing as RecipeIngredient).portionDesc,
+        portionGrams: (ing as RecipeIngredient).portionGrams,
+        servingCount: (ing as RecipeIngredient).servingCount,
+        exempt: (ing as RecipeIngredient).exempt,
+      }));
+    }
+    const rawInstructions = suggestion.instructions;
+    if (Array.isArray(rawInstructions) && rawInstructions.length > 0) {
+      instructions = rawInstructions.map((ins, idx) => ({
+        id: idx + 1,
+        text: (ins as RecipeInstruction).text ?? '',
+      }));
+    }
+    suggestionsDismissed = true;
+  }
   
   // Current form data (for customActions snippet)
   let formData = $derived<RecipeFormData>({
@@ -524,10 +597,63 @@
     {/if}
   </div>
   
-  <!-- Lock hint -->
+  <!-- Lock hint / Suggestion panel -->
   {#if !nameReady}
     <div class="name-lock-hint">
       Name your recipe first to unlock the rest
+    </div>
+  {:else if suggestionsLoading}
+    <div class="name-lock-hint">Searching for similar recipes…</div>
+  {:else if !suggestionsDismissed && suggestions.length > 0}
+    <div class="suggestion-panel">
+      <div class="suggestion-header">
+        <span class="suggestion-title">Similar recipes found — tap to preview</span>
+        <button type="button" class="suggestion-dismiss" onclick={() => suggestionsDismissed = true}>
+          Start blank ✕
+        </button>
+      </div>
+      {#each suggestions as s}
+        <div class="suggestion-row">
+          <button
+            type="button"
+            class="suggestion-row-btn"
+            class:expanded={expandedSuggestionId === s.id}
+            onclick={() => expandedSuggestionId = expandedSuggestionId === s.id ? null : s.id}
+          >
+            <span class="suggestion-name">{s.dishName} — {s.version}</span>
+            <span class="suggestion-meta">{s.category}{s.servings ? ' · ' + s.servings : ''} · {s.ingredientCount} ingredient{s.ingredientCount === 1 ? '' : 's'}</span>
+            <span class="suggestion-chevron">{expandedSuggestionId === s.id ? '▲' : '▼'}</span>
+          </button>
+          {#if expandedSuggestionId === s.id}
+            <div class="suggestion-preview">
+              {#if s.ingredients.length > 0}
+                <p class="suggestion-preview-heading">Ingredients</p>
+                <ul class="suggestion-preview-list">
+                  {#each s.ingredients as ing}
+                    <li>{ing.quantity ? ing.quantity + ' ' : ''}{ing.name}</li>
+                  {/each}
+                </ul>
+              {/if}
+              {#if s.instructions.length > 0}
+                <p class="suggestion-preview-heading">Instructions</p>
+                <ol class="suggestion-preview-list">
+                  {#each s.instructions as ins}
+                    <li>{ins.text}</li>
+                  {/each}
+                </ol>
+              {/if}
+              <div class="suggestion-actions">
+                <button type="button" class="suggestion-fill-btn" onclick={() => fillFromSuggestion(s)}>
+                  Fill Entire Recipe
+                </button>
+                <button type="button" class="suggestion-skip-btn" onclick={() => suggestionsDismissed = true}>
+                  Start Blank
+                </button>
+              </div>
+            </div>
+          {/if}
+        </div>
+      {/each}
     </div>
   {/if}
 
@@ -1055,6 +1181,132 @@
     padding: 6px 0 2px;
     letter-spacing: 0.01em;
   }
+
+  /* ── Suggestion panel ───────────────────────────────────────────────────── */
+  .suggestion-panel {
+    border: 1px solid #d4e4c0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 4px 0 8px;
+    background: #f8fbf4;
+  }
+
+  .suggestion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: #edf5e0;
+    border-bottom: 1px solid #d4e4c0;
+  }
+
+  .suggestion-title {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #4a6c2a;
+  }
+
+  .suggestion-dismiss {
+    font-size: 0.78rem;
+    color: #888;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 2px 4px;
+  }
+  .suggestion-dismiss:hover { color: #444; }
+
+  .suggestion-row {
+    border-bottom: 1px solid #e4eeda;
+  }
+  .suggestion-row:last-child { border-bottom: none; }
+
+  .suggestion-row-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+  }
+  .suggestion-row-btn:hover { background: #f0f7e8; }
+  .suggestion-row-btn.expanded { background: #f0f7e8; }
+
+  .suggestion-name {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #2e4a12;
+    flex: 1;
+  }
+
+  .suggestion-meta {
+    font-size: 0.76rem;
+    color: #7a9a58;
+    white-space: nowrap;
+  }
+
+  .suggestion-chevron {
+    font-size: 0.7rem;
+    color: #aaa;
+    margin-left: 4px;
+  }
+
+  .suggestion-preview {
+    padding: 10px 14px 14px;
+    border-top: 1px solid #e4eeda;
+    background: #fcfff8;
+  }
+
+  .suggestion-preview-heading {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #4a6c2a;
+    margin: 8px 0 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .suggestion-preview-heading:first-child { margin-top: 0; }
+
+  .suggestion-preview-list {
+    margin: 0 0 6px 16px;
+    padding: 0;
+    font-size: 0.83rem;
+    color: #333;
+    line-height: 1.55;
+  }
+
+  .suggestion-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .suggestion-fill-btn {
+    flex: 1;
+    padding: 8px 12px;
+    background: #4a7c2a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.84rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .suggestion-fill-btn:hover { background: #3a6020; }
+
+  .suggestion-skip-btn {
+    padding: 8px 12px;
+    background: none;
+    color: #888;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.84rem;
+    cursor: pointer;
+  }
+  .suggestion-skip-btn:hover { color: #444; border-color: #999; }
 
   .form-body {
     display: flex;
