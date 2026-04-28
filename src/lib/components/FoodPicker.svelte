@@ -503,7 +503,7 @@
       <p class="tooltip-description">
         <span class="usda-desc">{tooltipFood.desc}</span>
         <span class="group-info">Groups: {tooltipFood.groups.join(', ')}</span>
-        <span class="ndb-info">{'isRecipe' in tooltipFood ? `${recipeIcon(tooltipFood as RecipeFood)} ${(tooltipFood as RecipeFood).recipeType === 'developer' ? 'Developer recipe' : (tooltipFood as RecipeFood).recipeType === 'community' ? 'Community recipe' : 'Recipe'}${isRecipeFallback(tooltipFood as RecipeFood) ? ' · Fallback source' : ''} · ${recipeSourceBadges(tooltipFood as RecipeFood).map((b) => b.label).join(' · ')}` : `USDA NDB#${tooltipFood.ndb}`}</span>
+        <span class="ndb-info">{'isRecipe' in tooltipFood ? ((tooltipFood as RecipeFood).recipeType === 'developer' ? 'Nutrient values estimated from ingredient data. Not independently verified. For guidance only.' : `${recipeIcon(tooltipFood as RecipeFood)} ${(tooltipFood as RecipeFood).recipeType === 'community' ? 'Community recipe' : 'Recipe'}${isRecipeFallback(tooltipFood as RecipeFood) ? ' · Fallback source' : ''} · ${recipeSourceBadges(tooltipFood as RecipeFood).map((b) => b.label).join(' · ')}`) : `USDA NDB#${tooltipFood.ndb}`}</span>
       </p>
       {#if 'isRecipe' in tooltipFood && (tooltipFood as RecipeFood).micros}
         {@const micros = (tooltipFood as RecipeFood).micros!}
