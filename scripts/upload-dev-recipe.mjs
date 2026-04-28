@@ -175,13 +175,28 @@ function inferAddedSugarRatio(longDesc) {
   const text = String(longDesc || '').toLowerCase();
   if (!text) return { ratio: 0, estimated: true, reason: 'missing_long_desc' };
 
-  const allAddedKeywords = [
-    ' sugar', 'sugar,', 'sugar ', 'brown sugar', 'powdered sugar', 'confectioners sugar',
-    'corn syrup', 'high fructose', 'hfcs', 'molasses', 'honey', 'maple syrup', 'agave',
-    'fructose', 'dextrose', 'glucose', 'sucrose', 'maltose', 'cane syrup', 'invert sugar',
-    'simple syrup'
+  const allAddedSugarPatterns = [
+    /\bsugars?\b/,
+    /\bbrown\s+sugars?\b/,
+    /\bpowdered\s+sugars?\b/,
+    /\bconfectioners?\s+sugars?\b/,
+    /\bcorn\s+syrup\b/,
+    /\bhigh\s+fructose\b/,
+    /\bhfcs\b/,
+    /\bmolasses\b/,
+    /\bhoney\b/,
+    /\bmaple\s+syrup\b/,
+    /\bagave\b/,
+    /\bfructose\b/,
+    /\bdextrose\b/,
+    /\bglucose\b/,
+    /\bsucrose\b/,
+    /\bmaltose\b/,
+    /\bcane\s+syrup\b/,
+    /\binvert\s+sugar\b/,
+    /\bsimple\s+syrup\b/
   ];
-  if (allAddedKeywords.some((k) => text.includes(k))) {
+  if (allAddedSugarPatterns.some((pattern) => pattern.test(text))) {
     return { ratio: 1, estimated: false, reason: 'keyword_all_added' };
   }
 
