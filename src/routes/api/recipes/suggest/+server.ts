@@ -14,6 +14,21 @@ interface SuggestionRow {
   source_type: 'dev' | 'player';
 }
 
+interface CanonicalIngredient {
+  name: string;
+  quantity: string;
+  foodWord?: string;
+  ndbNo?: string;
+  portionDesc?: string;
+  portionGrams?: number;
+  servingCount?: number;
+  exempt?: boolean;
+}
+
+interface CanonicalInstruction {
+  text: string;
+}
+
 // Normalise a dish name for comparison: lowercase, strip punctuation, collapse spaces
 function normalise(s: string): string {
   return s.toLowerCase().replace(/[^a-z0-9\s]/g, '').replace(/\s+/g, ' ').trim();
@@ -39,6 +54,76 @@ function score(storedTitle: string, queryDish: string): number {
   const overlap = queryTokens.filter(t => storedTokens.has(t)).length;
   if (overlap === 0) return 0;
   return Math.round((overlap / queryTokens.length) * 60);
+}
+
+function toCanonicalIngredients(raw: unknown[]): CanonicalIngredient[] {
+  return raw
+    .filter((item): item is Record<string, unknown> => typeof item === 'object' && item !== null)
+    .filter(item => item.row_type !== 'dish' && item.isDish !== true)
+    .map((item) => {
+      const name =
+        (typeof item.name === 'string' && item.name.trim()) ||
+        (typeof item.ing_name === 'string' && item.ing_name.trim()) ||
+        (typeof item.sr28_long_desc === 'string' && item.sr28_long_desc.trim()) ||
+        '';
+      const quantity =
+        (typeof item.quantity === 'string' && item.quantity.trim()) ||
+        (typeof item.ing_qty === 'string' && item.ing_qty.trim()) ||
+        '';
+
+      const portionGrams = typeof item.portionGrams === 'number'
+        ? item.portionGrams
+        : typeof item.portion_grams === 'number'
+        ? item.portion_grams
+        : undefined;
+
+      const servingCount = typeof item.servingCount === 'number'
+        ? item.servingCount
+        : typeof item.serving_count === 'number'
+        ? item.serving_count
+        : undefined;
+
+      return {
+        name,
+        quantity,
+        foodWord: typeof item.foodWord === 'string' ? item.foodWord : undefined,
+        ndbNo:
+          typeof item.ndbNo === 'string'
+            ? item.ndbNo
+            : typeof item.ndb_no === 'string'
+            ? item.ndb_no
+            : undefined,
+        portionDesc:
+          typeof item.portionDesc === 'string'
+            ? item.portionDesc
+            : typeof item.portion_desc === 'string'
+            ? item.portion_desc
+            : undefined,
+        portionGrams,
+        servingCount,
+        exempt: item.exempt === true,
+      };
+    })
+    .filter(item => item.name.length > 0 || item.quantity.length > 0);
+}
+
+function toCanonicalInstructions(raw: unknown[]): CanonicalInstruction[] {
+  return raw
+    .map((item) => {
+      if (typeof item === 'string') {
+        return { text: item.trim() };
+      }
+      if (typeof item === 'object' && item !== null) {
+        const row = item as Record<string, unknown>;
+        const text =
+          (typeof row.text === 'string' && row.text.trim()) ||
+          (typeof row.step_text === 'string' && row.step_text.trim()) ||
+          '';
+        return { text };
+      }
+      return { text: '' };
+    })
+    .filter(step => step.text.length > 0);
 }
 
 export const GET: RequestHandler = async ({ url }) => {
@@ -80,10 +165,13 @@ export const GET: RequestHandler = async ({ url }) => {
       const dishName = titleParts[0].trim();
       const version = titleParts.slice(1).join(' — ').trim();
 
-      let ingredients: unknown[] = [];
-      let instructions: unknown[] = [];
-      try { ingredients = JSON.parse(row.recipe_ingredients ?? '[]'); } catch { /* leave empty */ }
-      try { instructions = JSON.parse(row.recipe_instructions ?? '[]'); } catch { /* leave empty */ }
+      let rawIngredients: unknown[] = [];
+      let rawInstructions: unknown[] = [];
+      try { rawIngredients = JSON.parse(row.recipe_ingredients ?? '[]'); } catch { /* leave empty */ }
+      try { rawInstructions = JSON.parse(row.recipe_instructions ?? '[]'); } catch { /* leave empty */ }
+
+      const ingredients = Array.isArray(rawIngredients) ? toCanonicalIngredients(rawIngredients) : [];
+      const instructions = Array.isArray(rawInstructions) ? toCanonicalInstructions(rawInstructions) : [];
 
       return {
         id: row.id,
@@ -93,7 +181,7 @@ export const GET: RequestHandler = async ({ url }) => {
         dietaryCategory: row.dietary_category,
         prepTime: row.prep_time,
         servings: row.servings,
-        ingredientCount: Array.isArray(ingredients) ? ingredients.length : 0,
+        ingredientCount: ingredients.length,
         ingredients,
         instructions,
         sourceType: row.source_type,

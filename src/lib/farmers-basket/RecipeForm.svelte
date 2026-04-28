@@ -484,15 +484,27 @@
     if (Array.isArray(rawIngredients) && rawIngredients.length > 0) {
       ingredients = rawIngredients.map((ing, idx) => ({
         id: idx + 1,
-        name: (ing as RecipeIngredient).name ?? '',
-        quantity: (ing as RecipeIngredient).quantity ?? '',
+        name:
+          (ing as RecipeIngredient).name ??
+          (ing as { ing_name?: string }).ing_name ??
+          '',
+        quantity:
+          (ing as RecipeIngredient).quantity ??
+          (ing as { ing_qty?: string }).ing_qty ??
+          '',
         gameFood: (ing as RecipeIngredient).gameFood,
         animal: (ing as RecipeIngredient).animal,
         foodWord: (ing as RecipeIngredient).foodWord,
-        ndbNo: (ing as RecipeIngredient).ndbNo,
-        portionDesc: (ing as RecipeIngredient).portionDesc,
-        portionGrams: (ing as RecipeIngredient).portionGrams,
-        servingCount: (ing as RecipeIngredient).servingCount,
+        ndbNo: (ing as RecipeIngredient).ndbNo ?? (ing as { ndb_no?: string }).ndb_no,
+        portionDesc:
+          (ing as RecipeIngredient).portionDesc ??
+          (ing as { portion_desc?: string }).portion_desc,
+        portionGrams:
+          (ing as RecipeIngredient).portionGrams ??
+          (ing as { portion_grams?: number }).portion_grams,
+        servingCount:
+          (ing as RecipeIngredient).servingCount ??
+          (ing as { serving_count?: number }).serving_count,
         exempt: (ing as RecipeIngredient).exempt,
       }));
     }
@@ -500,7 +512,10 @@
     if (Array.isArray(rawInstructions) && rawInstructions.length > 0) {
       instructions = rawInstructions.map((ins, idx) => ({
         id: idx + 1,
-        text: (ins as RecipeInstruction).text ?? '',
+        text:
+          (ins as RecipeInstruction).text ??
+          (ins as { step_text?: string }).step_text ??
+          '',
       }));
     }
     suggestionsDismissed = true;
