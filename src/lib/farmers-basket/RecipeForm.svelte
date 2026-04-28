@@ -187,33 +187,44 @@
 
   function searchFoods(query: string): FoodData[] {
     if (!query.trim()) return [];
-    const words = normalizeSearchText(query).split(/\s+/).filter(w => w.length > 0);
+    const words = Array.from(
+      new Set(normalizeSearchText(query).split(/\s+/).filter(w => w.length > 0))
+    );
     if (words.length === 0) return [];
-    const escaped = words.map(w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
-    const matches = FOODS.filter(f => {
-      const searchSpace = `${normalizeSearchText(f.display)} ${normalizeSearchText(f.desc)}`;
-      return escaped.every(w => searchSpace.includes(w));
+    const queryNorm = normalizeSearchText(query);
+    const scored = FOODS.map((f) => {
+      const displayNorm = normalizeSearchText(f.display);
+      const descNorm = normalizeSearchText(f.desc);
+      const searchSpace = `${displayNorm} ${descNorm}`;
+      const overlap = words.filter(w => searchSpace.includes(w)).length;
+      if (overlap === 0) return null;
+
+      // Encourage broader matches for verbose ingredient names.
+      // For 1-word queries require 1 hit; otherwise allow >=1 token but rank higher by overlap.
+      const requires = words.length <= 1 ? 1 : 1;
+      if (overlap < requires) return null;
+
+      const firstPos = words.reduce((best, w) => {
+        const p = searchSpace.indexOf(w);
+        if (p === -1) return best;
+        return best === -1 ? p : Math.min(best, p);
+      }, -1);
+
+      let score = overlap * 100;
+      if (searchSpace.includes(queryNorm)) score += 220;
+      if (displayNorm.includes(queryNorm)) score += 120;
+      if (firstPos >= 0) score += Math.max(0, 80 - firstPos);
+      score -= Math.max(0, displayNorm.split(/\s+/).length - words.length) * 2;
+
+      return { food: f, score };
+    }).filter((x): x is { food: FoodData; score: number } => x !== null);
+
+    scored.sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      return a.food.display.localeCompare(b.food.display);
     });
-    // rank: exact word match > prefix match, then by position (earlier = better),
-    // then shorter name (more specific), then alphabetical
-    const q0 = words[0];
-    const matchScore = (s: string) => {
-      const ws = s.toLowerCase().split(/\s+/);
-      const idx = ws.findIndex(w => w.startsWith(q0));
-      if (idx === -1) return { pos: 999, exact: false };
-      return { pos: idx, exact: ws[idx] === q0 };
-    };
-    matches.sort((a, b) => {
-      const sa = matchScore(a.display), sb = matchScore(b.display);
-      // Exact word match beats prefix-only match
-      if (sa.exact !== sb.exact) return sa.exact ? -1 : 1;
-      const posDiff = sa.pos - sb.pos;
-      if (posDiff !== 0) return posDiff;
-      const lenDiff = a.display.split(/\s+/).length - b.display.split(/\s+/).length;
-      if (lenDiff !== 0) return lenDiff;
-      return a.display.localeCompare(b.display);
-    });
-    return matches.slice(0, 20);
+
+    return scored.slice(0, 20).map(s => s.food);
   }
 
   function openNutritionSearchFresh(ing: RecipeIngredient) {
@@ -491,10 +502,16 @@
     const rawIngredients = suggestion.ingredients;
     if (Array.isArray(rawIngredients) && rawIngredients.length > 0) {
       ingredients = rawIngredients.map((ing, idx) => {
+        const name =
+          (ing as RecipeIngredient).name ??
+          (ing as { ing_name?: string }).ing_name ??
+          '';
         const ndbNo =
           (ing as RecipeIngredient).ndbNo ??
           (ing as { ndb_no?: string }).ndb_no;
         const byNdb = ndbNo ? (FOODS.find(f => f.ndb === ndbNo) ?? null) : null;
+        const byText = !byNdb && name ? (searchFoods(name)[0] ?? null) : null;
+        const linkFood = byNdb ?? byText;
         const portionGramsRaw =
           (ing as RecipeIngredient).portionGrams ??
           (ing as { portion_grams?: number | string }).portion_grams;
@@ -507,25 +524,22 @@
 
         return {
           id: idx + 1,
-          name:
-            (ing as RecipeIngredient).name ??
-            (ing as { ing_name?: string }).ing_name ??
-            '',
+          name,
           quantity:
             (ing as RecipeIngredient).quantity ??
             (ing as { ing_qty?: string }).ing_qty ??
             '',
           gameFood: (ing as RecipeIngredient).gameFood,
           animal: (ing as RecipeIngredient).animal,
-          foodWord: (ing as RecipeIngredient).foodWord ?? byNdb?.word,
-          ndbNo,
+          foodWord: (ing as RecipeIngredient).foodWord ?? linkFood?.word,
+          ndbNo: ndbNo ?? linkFood?.ndb,
           portionDesc:
             (ing as RecipeIngredient).portionDesc ??
             (ing as { portion_desc?: string }).portion_desc ??
-            (portionGrams && portionGrams > 0 ? 'g' : byNdb?.portions[0]?.desc),
+            (portionGrams && portionGrams > 0 ? 'g' : linkFood?.portions[0]?.desc),
           portionGrams:
             (portionGrams && portionGrams > 0 ? portionGrams : undefined) ??
-            byNdb?.portions[0]?.gm,
+            linkFood?.portions[0]?.gm,
           servingCount:
             (ing as RecipeIngredient).servingCount ??
             (ing as { serving_count?: number }).serving_count ??
