@@ -130,4 +130,88 @@ export const ADDED_SUGAR_RULES = new Map([
   ['2010',  { policy: 'none_added', reason: 'Spices, cinnamon, ground' }],
   ['2011',  { policy: 'none_added', reason: 'Spices, cloves, ground' }],
   ['2001',  { policy: 'none_added', reason: 'Spices, allspice, ground' }],
+
+  // ── Candied / sweetened fruit products — added sugar dominant ────────────
+  ['9426',  { policy: 'all_added', reason: 'Candied fruit (sugar-coated)' }],
+  ['9079',  { policy: 'all_added', reason: 'Cranberries, dried, sweetened' }],
+  ['9328',  { policy: 'all_added', reason: 'Maraschino cherries, canned, drained' }],
+
+  // ── Sweetened coconut ──────────────────────────────────────────────────────
+  ['12179', { policy: 'all_added', reason: 'Coconut meat, dried, sweetened, shredded' }],
+  ['12109', { policy: 'all_added', reason: 'Coconut meat, dried, sweetened, flaked' }],
+
+  // ── Chocolate / confectionery ─────────────────────────────────────────────
+  ['19080', { policy: 'all_added', reason: 'Candies, semisweet chocolate' }],
+  ['18166', { policy: 'all_added', reason: 'Cookies, chocolate sandwich with creme filling (Oreo-type)' }],
+  ['18173', { policy: 'all_added', reason: 'Cookies, graham crackers, plain or honey' }],
+
+  // ── Vanilla extract — sugar carrier, but used in tiny amounts ────────────
+  // Most of the sugar in vanilla extract is intrinsic to the ethanol/water base;
+  // commercially it often has no added sugar. Classify as none_added.
+  ['2050',  { policy: 'none_added', reason: 'Vanilla extract (no significant added sugar)' }],
+
+  // ── Dried fruit — concentrated intrinsic sugar, no added sugar ───────────
+  ['9298',  { policy: 'none_added', reason: 'Raisins, seedless (natural dried fruit)' }],
+  ['9297',  { policy: 'none_added', reason: 'Raisins, golden seedless (natural dried fruit)' }],
+  ['9085',  { policy: 'none_added', reason: 'Currants, zante, dried (natural dried fruit)' }],
+  ['9421',  { policy: 'none_added', reason: 'Dates, medjool (natural dried fruit)' }],
+  ['9032',  { policy: 'none_added', reason: 'Apricots, dried, sulfured, uncooked (no added sugar)' }],
+  ['9354',  { policy: 'none_added', reason: 'Pineapple, canned, juice pack, drained (no syrup)' }],
+
+  // ── Raw / plain fruit ─────────────────────────────────────────────────────
+  ['9063',  { policy: 'none_added', reason: 'Cherries, sour, red, raw' }],
+  ['9236',  { policy: 'none_added', reason: 'Peaches, yellow, raw' }],
+  ['9156',  { policy: 'none_added', reason: 'Lemon peel, raw' }],
+
+  // ── Plain dairy ───────────────────────────────────────────────────────────
+  ['1096',  { policy: 'none_added', reason: 'Milk, canned, evaporated, plain (no added sugar)' }],
+  ['1230',  { policy: 'none_added', reason: 'Milk, buttermilk, fluid, whole' }],
+  ['1049',  { policy: 'none_added', reason: 'Cream, fluid, half and half' }],
+  ['1053',  { policy: 'none_added', reason: 'Cream, fluid, heavy whipping' }],
+  ['1017',  { policy: 'none_added', reason: 'Cheese, cream (plain)' }],
+  ['1056',  { policy: 'none_added', reason: 'Cream, sour, cultured' }],
+
+  // ── Peanut butter — no added sugar in plain variety ───────────────────────
+  ['16098', { policy: 'none_added', reason: 'Peanut butter, smooth style, with salt (no added sugar)' }],
+
+  // ── Nuts ──────────────────────────────────────────────────────────────────
+  ['12142', { policy: 'none_added', reason: 'Nuts, pecans' }],
+
+  // ── Spices and flavourings ────────────────────────────────────────────────
+  ['2021',  { policy: 'none_added', reason: 'Spices, ginger, ground' }],
+  ['2025',  { policy: 'none_added', reason: 'Spices, nutmeg, ground' }],
+  ['2035',  { policy: 'none_added', reason: 'Spices, pumpkin pie spice' }],
+
+  // ── Vegetables ────────────────────────────────────────────────────────────
+  ['11424', { policy: 'none_added', reason: 'Pumpkin, canned, without salt' }],
+
+  // ── Grain products ────────────────────────────────────────────────────────
+  ['18079', { policy: 'none_added', reason: 'Bread crumbs, dry, grated, plain' }],
+
+  // ── Cocoa ─────────────────────────────────────────────────────────────────
+  ['19165', { policy: 'none_added', reason: 'Cocoa, dry powder, unsweetened' }],
+
+  // ── Eggs ──────────────────────────────────────────────────────────────────
+  ['1123',  { policy: 'none_added', reason: 'Egg, whole, raw, fresh' }],
+  ['1124',  { policy: 'none_added', reason: 'Egg, white, raw, fresh' }],
+  ['1125',  { policy: 'none_added', reason: 'Egg, yolk, raw, fresh' }],
+
+  // ── Oats / grain ──────────────────────────────────────────────────────────
+  ['8120',  { policy: 'none_added', reason: 'Cereals, oats, regular and quick, not fortified, dry' }],
+  ['20084', { policy: 'none_added', reason: 'Wheat flour, white, cake, enriched' }],
+  ['18211', { policy: 'none_added', reason: 'Puff pastry, frozen, ready-to-bake, baked' }],
+
+  // ── Baking agents ─────────────────────────────────────────────────────────
+  ['18369', { policy: 'none_added', reason: 'Baking powder, double-acting, sodium aluminium' }],
+  ['18372', { policy: 'none_added', reason: 'Leavening agents, baking soda' }],
+  ['18373', { policy: 'none_added', reason: 'Leavening agents, cream of tartar' }],
+
+  // ── Fats / oils ───────────────────────────────────────────────────────────
+  ['4610',  { policy: 'none_added', reason: 'Margarine, regular, 80% fat, composite, stick' }],
+
+  // ── Beverages ─────────────────────────────────────────────────────────────
+  ['14106', { policy: 'none_added', reason: 'Alcoholic beverage, wine, table, white' }],
+
+  // ── Coconut products ──────────────────────────────────────────────────────
+  ['12118', { policy: 'none_added', reason: 'Coconut milk, canned (no added sugar)' }],
 ]);
