@@ -177,14 +177,22 @@
   let nutritionPendingCount = $state<Record<number, number>>({});
   let nutritionCustomGrams = $state<Record<number, number | null>>({});
 
+  function normalizeSearchText(value: string): string {
+    return value
+      .toLowerCase()
+      .replace(/[^a-z0-9\s]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
   function searchFoods(query: string): FoodData[] {
     if (!query.trim()) return [];
-    const words = query.toLowerCase().split(/\s+/).filter(w => w.length > 0);
+    const words = normalizeSearchText(query).split(/\s+/).filter(w => w.length > 0);
     if (words.length === 0) return [];
     const escaped = words.map(w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
     const matches = FOODS.filter(f => {
-      const d = f.display.toLowerCase();
-      return escaped.every(w => d.includes(w));
+      const searchSpace = `${normalizeSearchText(f.display)} ${normalizeSearchText(f.desc)}`;
+      return escaped.every(w => searchSpace.includes(w));
     });
     // rank: exact word match > prefix match, then by position (earlier = better),
     // then shorter name (more specific), then alphabetical
@@ -482,31 +490,49 @@
     if (suggestion.servings) servings = suggestion.servings;
     const rawIngredients = suggestion.ingredients;
     if (Array.isArray(rawIngredients) && rawIngredients.length > 0) {
-      ingredients = rawIngredients.map((ing, idx) => ({
-        id: idx + 1,
-        name:
-          (ing as RecipeIngredient).name ??
-          (ing as { ing_name?: string }).ing_name ??
-          '',
-        quantity:
-          (ing as RecipeIngredient).quantity ??
-          (ing as { ing_qty?: string }).ing_qty ??
-          '',
-        gameFood: (ing as RecipeIngredient).gameFood,
-        animal: (ing as RecipeIngredient).animal,
-        foodWord: (ing as RecipeIngredient).foodWord,
-        ndbNo: (ing as RecipeIngredient).ndbNo ?? (ing as { ndb_no?: string }).ndb_no,
-        portionDesc:
-          (ing as RecipeIngredient).portionDesc ??
-          (ing as { portion_desc?: string }).portion_desc,
-        portionGrams:
+      ingredients = rawIngredients.map((ing, idx) => {
+        const ndbNo =
+          (ing as RecipeIngredient).ndbNo ??
+          (ing as { ndb_no?: string }).ndb_no;
+        const byNdb = ndbNo ? (FOODS.find(f => f.ndb === ndbNo) ?? null) : null;
+        const portionGramsRaw =
           (ing as RecipeIngredient).portionGrams ??
-          (ing as { portion_grams?: number }).portion_grams,
-        servingCount:
-          (ing as RecipeIngredient).servingCount ??
-          (ing as { serving_count?: number }).serving_count,
-        exempt: (ing as RecipeIngredient).exempt,
-      }));
+          (ing as { portion_grams?: number | string }).portion_grams;
+        const portionGrams =
+          typeof portionGramsRaw === 'number'
+            ? portionGramsRaw
+            : typeof portionGramsRaw === 'string'
+            ? Number(portionGramsRaw)
+            : undefined;
+
+        return {
+          id: idx + 1,
+          name:
+            (ing as RecipeIngredient).name ??
+            (ing as { ing_name?: string }).ing_name ??
+            '',
+          quantity:
+            (ing as RecipeIngredient).quantity ??
+            (ing as { ing_qty?: string }).ing_qty ??
+            '',
+          gameFood: (ing as RecipeIngredient).gameFood,
+          animal: (ing as RecipeIngredient).animal,
+          foodWord: (ing as RecipeIngredient).foodWord ?? byNdb?.word,
+          ndbNo,
+          portionDesc:
+            (ing as RecipeIngredient).portionDesc ??
+            (ing as { portion_desc?: string }).portion_desc ??
+            (portionGrams && portionGrams > 0 ? 'g' : byNdb?.portions[0]?.desc),
+          portionGrams:
+            (portionGrams && portionGrams > 0 ? portionGrams : undefined) ??
+            byNdb?.portions[0]?.gm,
+          servingCount:
+            (ing as RecipeIngredient).servingCount ??
+            (ing as { serving_count?: number }).serving_count ??
+            1,
+          exempt: (ing as RecipeIngredient).exempt,
+        };
+      });
     }
     const rawInstructions = suggestion.instructions;
     if (Array.isArray(rawInstructions) && rawInstructions.length > 0) {
