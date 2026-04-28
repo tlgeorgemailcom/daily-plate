@@ -520,6 +520,7 @@
           { key: 'Carbohydrate', label: 'Total carbohydrate (g)', rule: 'required' },
           { key: 'FiberTotalDietary', label: 'Dietary fiber (g)', rule: 'required' },
           { key: 'SugarsTotal', label: 'Total sugars (g)', rule: 'required' },
+          { key: 'AddedSugars', label: 'Added sugars (g)', rule: 'required' },
           { key: 'Protein', label: 'Protein (g)', rule: 'required' },
           { key: 'VitaminD', label: 'Vitamin D (mcg)', rule: 'required' },
           { key: 'Calcium_Ca', label: 'Calcium (mg)', rule: 'required' },

@@ -147,6 +147,128 @@ function round2(value) {
   return Math.round((value + Number.EPSILON) * 100) / 100;
 }
 
+function clamp(value, min, max) {
+  return Math.min(max, Math.max(min, value));
+}
+
+function parseAddedSugarOverride(notes) {
+  const { values } = parseNotes(notes);
+  const rawRatio = values.addedsugar_ratio || values.added_sugar_ratio;
+  if (rawRatio != null) {
+    const ratio = Number.parseFloat(String(rawRatio));
+    if (Number.isFinite(ratio)) {
+      return { ratio: clamp(ratio, 0, 1), estimated: false, reason: 'notes_ratio' };
+    }
+  }
+
+  const rawFlag = String(values.addedsugar || values.added_sugar || '').toLowerCase();
+  if (rawFlag === 'all' || rawFlag === 'true' || rawFlag === 'yes') {
+    return { ratio: 1, estimated: false, reason: 'notes_all' };
+  }
+  if (rawFlag === 'none' || rawFlag === 'false' || rawFlag === 'no') {
+    return { ratio: 0, estimated: false, reason: 'notes_none' };
+  }
+  return null;
+}
+
+function inferAddedSugarRatio(longDesc) {
+  const text = String(longDesc || '').toLowerCase();
+  if (!text) return { ratio: 0, estimated: true, reason: 'missing_long_desc' };
+
+  const allAddedKeywords = [
+    ' sugar', 'sugar,', 'sugar ', 'brown sugar', 'powdered sugar', 'confectioners sugar',
+    'corn syrup', 'high fructose', 'hfcs', 'molasses', 'honey', 'maple syrup', 'agave',
+    'fructose', 'dextrose', 'glucose', 'sucrose', 'maltose', 'cane syrup', 'invert sugar',
+    'simple syrup'
+  ];
+  if (allAddedKeywords.some((k) => text.includes(k))) {
+    return { ratio: 1, estimated: false, reason: 'keyword_all_added' };
+  }
+
+  const noneAddedKeywords = [
+    'apple', 'banana', 'berry', 'orange', 'grape', 'date', 'raisin', 'fig',
+    'milk', 'yogurt, plain', 'plain yogurt', 'lactose', 'fruit', 'vegetable'
+  ];
+  if (noneAddedKeywords.some((k) => text.includes(k))) {
+    return { ratio: 0, estimated: false, reason: 'keyword_intrinsic' };
+  }
+
+  const partialKeywords = [
+    'ketchup', 'barbecue sauce', 'teriyaki', 'sweetened', 'jam', 'jelly', 'preserves'
+  ];
+  if (partialKeywords.some((k) => text.includes(k))) {
+    return { ratio: 0.5, estimated: true, reason: 'keyword_partial' };
+  }
+
+  return { ratio: 0, estimated: true, reason: 'default_intrinsic' };
+}
+
+async function estimateAddedSugarWhole(combooDb, ingredientRows) {
+  const ndbNos = Array.from(
+    new Set(
+      ingredientRows
+        .filter((row) => ['ingredient', 'dish_ingredient', 'exempt'].includes(row.row_type))
+        .map((row) => String(row.ndb_no || '').trim())
+        .filter(Boolean)
+    )
+  );
+
+  const nutrientByNdb = new Map();
+  if (ndbNos.length > 0) {
+    const placeholders = ndbNos.map(() => '?').join(', ');
+    const result = await combooDb.execute({
+      sql: `SELECT NDB_NO, SugarsTotal, Long_Desc FROM DataCentralCombo WHERE NDB_NO IN (${placeholders})`,
+      args: ndbNos,
+    });
+    for (const row of result.rows) {
+      nutrientByNdb.set(String(row.NDB_NO), {
+        sugarsPer100g: Number(row.SugarsTotal || 0),
+        longDesc: String(row.Long_Desc || ''),
+      });
+    }
+  }
+
+  let addedWhole = 0;
+  let estimated = false;
+  const reasons = new Set();
+
+  for (const row of ingredientRows) {
+    if (!['ingredient', 'dish_ingredient', 'exempt'].includes(row.row_type)) continue;
+    const { flags, values } = parseNotes(row.notes);
+    if (flags.has('optional')) continue;
+
+    const portionGrams = Number.parseFloat(row.portion_grams || '0');
+    if (!Number.isFinite(portionGrams) || portionGrams <= 0) continue;
+    const servingCount = Number.parseFloat(row.serving_count || '1');
+    let grams = portionGrams;
+    if (values.retained) {
+      const retained = Number.parseFloat(values.retained);
+      if (Number.isFinite(retained)) grams *= retained;
+    }
+    const gramsUsed = grams * (Number.isFinite(servingCount) && servingCount > 0 ? servingCount : 1);
+    if (gramsUsed <= 0) continue;
+
+    const ndbNo = String(row.ndb_no || '').trim();
+    const nutrient = nutrientByNdb.get(ndbNo);
+    if (!nutrient) continue;
+
+    const sugarsWhole = round2((nutrient.sugarsPer100g || 0) * gramsUsed / 100);
+    if (sugarsWhole <= 0) continue;
+
+    const override = parseAddedSugarOverride(row.notes);
+    const decision = override || inferAddedSugarRatio(nutrient.longDesc);
+    if (decision.estimated) estimated = true;
+    reasons.add(decision.reason);
+    addedWhole += sugarsWhole * decision.ratio;
+  }
+
+  return {
+    addedWhole: round2(addedWhole),
+    estimated,
+    reasons: Array.from(reasons),
+  };
+}
+
 function pickCanonicalServingGrams(foodRow) {
   if (!foodRow) return null;
   let fallback = null;
@@ -305,6 +427,19 @@ async function main() {
     mergedPerServing[col] = round2((mergedPer100g[col] || 0) * gramsPerServing / 100);
   }
 
+  const addedSugarEstimate = await estimateAddedSugarWhole(combooDb, ingredientRows);
+  const totalSugarPer100g = Number(mergedPer100g.SugarsTotal || 0);
+  const addedSugarsPer100g = round2(
+    totalRecipeGrams > 0
+      ? clamp((addedSugarEstimate.addedWhole * 100) / totalRecipeGrams, 0, totalSugarPer100g)
+      : 0
+  );
+  const intrinsicSugarsPer100g = round2(Math.max(0, totalSugarPer100g - addedSugarsPer100g));
+  mergedPer100g.AddedSugars = addedSugarsPer100g;
+  mergedPer100g.IntrinsicSugars = intrinsicSugarsPer100g;
+  mergedPerServing.AddedSugars = round2(addedSugarsPer100g * gramsPerServing / 100);
+  mergedPerServing.IntrinsicSugars = round2(intrinsicSugarsPer100g * gramsPerServing / 100);
+
   const perServingMacros = macroSnapshot(mergedPerServing);
   // Keep micros aligned to per100g units for UI consistency.
   const micros = Object.fromEntries(
@@ -313,13 +448,23 @@ async function main() {
     ].includes(key))
   );
 
+  const perServing = {
+    ...perServingMacros,
+    AddedSugars: mergedPerServing.AddedSugars,
+    IntrinsicSugars: mergedPerServing.IntrinsicSugars,
+  };
+
   const nutritionJson = {
     ...perServingMacros,
-    perServing: perServingMacros,
+    perServing,
     micros,
     gramsPerServing,
     servings: servingsCount,
     per100g: mergedPer100g,
+    addedSugars: mergedPerServing.AddedSugars,
+    intrinsicSugars: mergedPerServing.IntrinsicSugars,
+    isAddedSugarsEstimated: addedSugarEstimate.estimated,
+    addedSugarsBasis: addedSugarEstimate.reasons,
     nutrientVersion: NUTRIENT_VERSION,
     retentionModelVersion: RETENTION_MODEL_VERSION,
     sourceMatchVersion: SOURCE_MATCH_VERSION,
