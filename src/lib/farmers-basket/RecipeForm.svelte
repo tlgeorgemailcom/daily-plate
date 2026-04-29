@@ -360,13 +360,24 @@
   // ─── Live macro totals from linked ingredients ───────────────────────────────
   const FOOD_MAP_LOCAL = new Map(FOODS.map(f => [f.word, f]));
 
-  function parseServingsCount(s: string): number {
-    if (!s) return 1;
-    const n = parseInt(s.replace(/[^0-9]/g, ''));
-    return n > 0 ? n : 1;
+  function parseServingsCount(s: string): number | null {
+    if (!s) return null;
+    // Keep decimal values (e.g. "1.5") so per-serving math is accurate.
+    const cleaned = s.replace(/[^0-9.]/g, '');
+    if (!cleaned) return null;
+    const n = parseFloat(cleaned);
+    return Number.isFinite(n) && n > 0 ? n : null;
   }
 
+  let hasValidServings = $derived(parseServingsCount(servings) !== null);
+
   let macroPer = $state<'serving' | '100g'>('serving');
+
+  $effect(() => {
+    if (!hasValidServings && macroPer === 'serving') {
+      macroPer = '100g';
+    }
+  });
 
   let macroTotals = $derived.by(() => {
     let cal = 0, pro = 0, fat = 0, carb = 0, fib = 0, sug = 0;
@@ -389,14 +400,17 @@
     }
     const srv = parseServingsCount(servings);
     const r1 = (v: number) => Math.round(v * 10) / 10;
-    const divisor = macroPer === '100g' ? (totalGrams / 100) : srv;
+    const divisor = macroPer === '100g'
+      ? (totalGrams > 0 ? totalGrams / 100 : null)
+      : srv;
+    const divide = (v: number) => (divisor ? r1(v / divisor) : null);
     return {
-      cal:  r1(cal  / divisor),
-      pro:  r1(pro  / divisor),
-      fat:  r1(fat  / divisor),
-      carb: r1(carb / divisor),
-      fib:  r1(fib  / divisor),
-      sug:  r1(sug  / divisor),
+      cal:  divide(cal),
+      pro:  divide(pro),
+      fat:  divide(fat),
+      carb: divide(carb),
+      fib:  divide(fib),
+      sug:  divide(sug),
       linkedCount,
       totalGrams,
     };
@@ -1061,7 +1075,7 @@
                 {#if macroPer === '100g'}
                   Per 100g
                 {:else if nutritionComplete}
-                  Per serving{servings ? ` (${parseServingsCount(servings)} servings)` : ''}
+                  Per serving{hasValidServings ? ` (${parseServingsCount(servings)} servings)` : ''}
                 {:else}
                   {macroTotals.linkedCount} linked ingredient{macroTotals.linkedCount === 1 ? '' : 's'} · per serving
                 {/if}
@@ -1071,6 +1085,7 @@
                   type="button"
                   class="macro-per-btn"
                   class:active={macroPer === 'serving'}
+                  disabled={!hasValidServings}
                   onclick={() => macroPer = 'serving'}
                 >Per serving</button>
                 <button
@@ -1082,12 +1097,12 @@
               </div>
             </div>
             <div class="macro-preview-values">
-              <span><strong>{macroTotals.cal}</strong> cal</span>
-              <span><strong>{macroTotals.pro}g</strong> protein</span>
-              <span><strong>{macroTotals.fat}g</strong> fat</span>
-              <span><strong>{macroTotals.carb}g</strong> carbs</span>
-              <span><strong>{macroTotals.fib}g</strong> fibre</span>
-              <span><strong>{macroTotals.sug}g</strong> sugar</span>
+              <span><strong>{macroTotals.cal ?? '--'}</strong> cal</span>
+              <span><strong>{macroTotals.pro === null ? '--' : `${macroTotals.pro}g`}</strong> protein</span>
+              <span><strong>{macroTotals.fat === null ? '--' : `${macroTotals.fat}g`}</strong> fat</span>
+              <span><strong>{macroTotals.carb === null ? '--' : `${macroTotals.carb}g`}</strong> carbs</span>
+              <span><strong>{macroTotals.fib === null ? '--' : `${macroTotals.fib}g`}</strong> fibre</span>
+              <span><strong>{macroTotals.sug === null ? '--' : `${macroTotals.sug}g`}</strong> sugar</span>
             </div>
           </div>
         {/if}
@@ -2129,6 +2144,11 @@
     border-radius: 4px;
     cursor: pointer;
     line-height: 1.4;
+  }
+
+  .macro-per-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 
   .macro-per-btn.active {
