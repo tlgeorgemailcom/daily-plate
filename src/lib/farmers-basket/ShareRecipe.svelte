@@ -709,6 +709,7 @@
               <button type="button" class="info-close-btn" onclick={() => showNutrientInfo = false}>×</button>
             </div>
             <div class="info-panel-body">
+              <p><strong>💡 Dish Name tip:</strong> Use the common name everyone recognises — <em>Apple Pie</em>, <em>Chicken Stir Fry</em>, <em>Bean Tacos</em>. Put your personal touch in <strong>Your Version</strong>. A recognisable Dish Name helps match your recipe to existing ones so you can start from a known base.</p>
               <p>Most recipes — in cookbooks, on food blogs, on websites — list ingredients in their raw or pre-cooked state — "1 cup dry lentils" or "1 cup dry rice" — We appreciate you sharing recipes in this format, and your recipe submission will be visible to all players once reviewed.</p>
               <p>You also have the option to link each ingredient to the nutrition database.</p>
               <p>The nutrition database only contains food <strong>"as eaten"</strong> — the way it actually arrives on your plate, ready to consume.</p>
@@ -727,6 +728,7 @@
               <button type="button" class="info-close-btn" onclick={() => showLinkingMethodsInfo = false}>×</button>
             </div>
             <div class="info-panel-body">
+              <p><strong>💡 Dish Name tip:</strong> Use the common name everyone recognises — <em>Apple Pie</em>, <em>Pancakes</em>, <em>Macaroni and Cheese</em>. Your Dish Name is how the game finds and matches your recipe. Keep your personal style in <strong>Your Version</strong>.</p>
               <p>There are three ways to link your recipe to the nutrition database.</p>
               <p><strong>Ingredient by ingredient</strong><br>Match each ingredient to its cooked or ready-to-eat form in the database. Best for recipes where the individual ingredients are the nutrition story — a salad, a grain bowl, a stir-fry.</p>
               <p><strong>Baking ingredients</strong> (eggs, flour, butter, sugar) should be linked to their raw or plain form — not a cooked version. Nutrient losses from baking heat will be automatically corrected for your recipe using USDA retention data. Water evaporates during baking, concentrating the finished product — but this should be within normal recipe estimation range.</p>

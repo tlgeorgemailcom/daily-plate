@@ -452,6 +452,41 @@
     instructions.some(i => i.text.trim())
   );
 
+  // ── Dish Name typeahead ────────────────────────────────────────────────────
+  let dishNameTypeahead = $state<string[]>([]);
+  let dishNameTypeaheadOpen = $state(false);
+  let dishNameTypeaheadTimer = $state<ReturnType<typeof setTimeout> | null>(null);
+
+  function onDishNameInput() {
+    const q = dishName.trim();
+    if (q.length < 2) {
+      dishNameTypeahead = [];
+      dishNameTypeaheadOpen = false;
+      return;
+    }
+    if (dishNameTypeaheadTimer) clearTimeout(dishNameTypeaheadTimer);
+    dishNameTypeaheadTimer = setTimeout(async () => {
+      try {
+        const res = await fetch(`/api/recipes/suggest?dish=${encodeURIComponent(q)}`);
+        const data: { suggestions: Array<{ dishName: string }> } = await res.json();
+        const names = Array.from(
+          new Set((data.suggestions ?? []).map((s) => s.dishName).filter(Boolean))
+        );
+        dishNameTypeahead = names;
+        dishNameTypeaheadOpen = names.length > 0;
+      } catch {
+        dishNameTypeahead = [];
+        dishNameTypeaheadOpen = false;
+      }
+    }, 220);
+  }
+
+  function selectDishNameTypeahead(name: string) {
+    dishName = name;
+    dishNameTypeaheadOpen = false;
+    dishNameTypeahead = [];
+  }
+
   // ── Recipe Suggestion ──────────────────────────────────────────────────────
   interface RecipeSuggestion {
     id: string;
@@ -633,13 +668,32 @@
     <div class="form-row">
       <label class="form-label flex-2">
         Dish Name *
-        <input 
-          type="text" 
-          bind:value={dishName}
-          placeholder="e.g., Apple Pie"
-          class="form-input"
-          required
-        />
+        <div class="dish-name-wrap">
+          <input
+            type="text"
+            bind:value={dishName}
+            oninput={onDishNameInput}
+            onblur={() => setTimeout(() => { dishNameTypeaheadOpen = false; }, 150)}
+            placeholder="e.g., Apple Pie"
+            class="form-input"
+            autocomplete="off"
+            required
+          />
+          {#if dishNameTypeaheadOpen && dishNameTypeahead.length > 0}
+            <ul class="dish-typeahead-list">
+              {#each dishNameTypeahead as name}
+                <li>
+                  <button
+                    type="button"
+                    class="dish-typeahead-item"
+                    onmousedown={() => selectDishNameTypeahead(name)}
+                  >{name}</button>
+                </li>
+              {/each}
+            </ul>
+          {/if}
+        </div>
+        <span class="field-hint">Use the common dish name (e.g. "Apple Pie") — your personal touch goes in <strong>Your Version</strong></span>
         {#if dishNameTooGeneric}
           <span class="field-hint">More specific names improve matches (example: "Apple Pie")</span>
         {/if}
@@ -1321,6 +1375,44 @@
   .suggestion-reopen-btn:hover {
     background: #e8f5d8;
     border-color: #9ec27d;
+  }
+
+  /* ── Dish Name typeahead ────────────────────────────────────────────────────── */
+  .dish-name-wrap {
+    position: relative;
+  }
+
+  .dish-typeahead-list {
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #c6dbad;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 0;
+    padding: 4px 0;
+    list-style: none;
+    z-index: 200;
+    max-height: 220px;
+    overflow-y: auto;
+  }
+
+  .dish-typeahead-item {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 9px 14px;
+    font-size: 0.88rem;
+    color: #2e4a12;
+    cursor: pointer;
+  }
+
+  .dish-typeahead-item:hover {
+    background: #f0f7e8;
   }
 
   .suggestion-header {
