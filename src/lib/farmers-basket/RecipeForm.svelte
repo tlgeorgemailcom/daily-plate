@@ -494,69 +494,109 @@
       .finally(() => { suggestionsLoading = false; });
   });
 
-  function fillFromSuggestion(suggestion: RecipeSuggestion) {
+  function applySuggestionMeta(suggestion: RecipeSuggestion) {
     category = suggestion.category ?? category;
     if (suggestion.dietaryCategory) dietaryCategory = suggestion.dietaryCategory as never;
     if (suggestion.prepTime) prepTime = suggestion.prepTime;
     if (suggestion.servings) servings = suggestion.servings;
+  }
+
+  function toMappedIngredient(ing: RecipeIngredient, id: number): RecipeIngredient {
+    const name =
+      (ing as RecipeIngredient).name ??
+      (ing as { ing_name?: string }).ing_name ??
+      '';
+    const ndbNo =
+      (ing as RecipeIngredient).ndbNo ??
+      (ing as { ndb_no?: string }).ndb_no;
+    const byNdb = ndbNo ? (FOODS.find(f => f.ndb === ndbNo) ?? null) : null;
+    const byText = !byNdb && name ? (searchFoods(name)[0] ?? null) : null;
+    const linkFood = byNdb ?? byText;
+    const portionGramsRaw =
+      (ing as RecipeIngredient).portionGrams ??
+      (ing as { portion_grams?: number | string }).portion_grams;
+    const portionGrams =
+      typeof portionGramsRaw === 'number'
+        ? portionGramsRaw
+        : typeof portionGramsRaw === 'string'
+        ? Number(portionGramsRaw)
+        : undefined;
+
+    return {
+      id,
+      name,
+      quantity:
+        (ing as RecipeIngredient).quantity ??
+        (ing as { ing_qty?: string }).ing_qty ??
+        '',
+      gameFood: (ing as RecipeIngredient).gameFood,
+      animal: (ing as RecipeIngredient).animal,
+      foodWord: (ing as RecipeIngredient).foodWord ?? linkFood?.word,
+      ndbNo: ndbNo ?? linkFood?.ndb,
+      portionDesc:
+        (ing as RecipeIngredient).portionDesc ??
+        (ing as { portion_desc?: string }).portion_desc ??
+        (portionGrams && portionGrams > 0 ? 'g' : linkFood?.portions[0]?.desc),
+      portionGrams:
+        (portionGrams && portionGrams > 0 ? portionGrams : undefined) ??
+        linkFood?.portions[0]?.gm,
+      servingCount:
+        (ing as RecipeIngredient).servingCount ??
+        (ing as { serving_count?: number }).serving_count ??
+        1,
+      exempt: (ing as RecipeIngredient).exempt,
+    };
+  }
+
+  function toMappedInstruction(ins: RecipeInstruction, id: number): RecipeInstruction {
+    return {
+      id,
+      text:
+        (ins as RecipeInstruction).text ??
+        (ins as { step_text?: string }).step_text ??
+        '',
+    };
+  }
+
+  function fillSuggestionIngredient(ing: RecipeIngredient, suggestion: RecipeSuggestion) {
+    const blankIndex = ingredients.findIndex(i => !i.name.trim() && !i.quantity.trim());
+    if (blankIndex >= 0) {
+      const targetId = ingredients[blankIndex].id;
+      const mapped = toMappedIngredient(ing, targetId);
+      ingredients = ingredients.map((item, idx) => idx === blankIndex ? mapped : item);
+    } else {
+      const targetId = ++nextIngredientId;
+      ingredients = [...ingredients, toMappedIngredient(ing, targetId)];
+    }
+    applySuggestionMeta(suggestion);
+  }
+
+  function fillSuggestionInstruction(ins: RecipeInstruction, suggestion: RecipeSuggestion) {
+    const mappedText = ((ins as RecipeInstruction).text ?? (ins as { step_text?: string }).step_text ?? '').trim();
+    if (!mappedText) return;
+    const blankIndex = instructions.findIndex(i => !i.text.trim());
+    if (blankIndex >= 0) {
+      const targetId = instructions[blankIndex].id;
+      const mapped = toMappedInstruction(ins, targetId);
+      instructions = instructions.map((item, idx) => idx === blankIndex ? mapped : item);
+    } else {
+      const targetId = ++nextInstructionId;
+      instructions = [...instructions, toMappedInstruction(ins, targetId)];
+    }
+    applySuggestionMeta(suggestion);
+  }
+
+  function fillFromSuggestion(suggestion: RecipeSuggestion) {
+    applySuggestionMeta(suggestion);
     const rawIngredients = suggestion.ingredients;
     if (Array.isArray(rawIngredients) && rawIngredients.length > 0) {
-      ingredients = rawIngredients.map((ing, idx) => {
-        const name =
-          (ing as RecipeIngredient).name ??
-          (ing as { ing_name?: string }).ing_name ??
-          '';
-        const ndbNo =
-          (ing as RecipeIngredient).ndbNo ??
-          (ing as { ndb_no?: string }).ndb_no;
-        const byNdb = ndbNo ? (FOODS.find(f => f.ndb === ndbNo) ?? null) : null;
-        const byText = !byNdb && name ? (searchFoods(name)[0] ?? null) : null;
-        const linkFood = byNdb ?? byText;
-        const portionGramsRaw =
-          (ing as RecipeIngredient).portionGrams ??
-          (ing as { portion_grams?: number | string }).portion_grams;
-        const portionGrams =
-          typeof portionGramsRaw === 'number'
-            ? portionGramsRaw
-            : typeof portionGramsRaw === 'string'
-            ? Number(portionGramsRaw)
-            : undefined;
-
-        return {
-          id: idx + 1,
-          name,
-          quantity:
-            (ing as RecipeIngredient).quantity ??
-            (ing as { ing_qty?: string }).ing_qty ??
-            '',
-          gameFood: (ing as RecipeIngredient).gameFood,
-          animal: (ing as RecipeIngredient).animal,
-          foodWord: (ing as RecipeIngredient).foodWord ?? linkFood?.word,
-          ndbNo: ndbNo ?? linkFood?.ndb,
-          portionDesc:
-            (ing as RecipeIngredient).portionDesc ??
-            (ing as { portion_desc?: string }).portion_desc ??
-            (portionGrams && portionGrams > 0 ? 'g' : linkFood?.portions[0]?.desc),
-          portionGrams:
-            (portionGrams && portionGrams > 0 ? portionGrams : undefined) ??
-            linkFood?.portions[0]?.gm,
-          servingCount:
-            (ing as RecipeIngredient).servingCount ??
-            (ing as { serving_count?: number }).serving_count ??
-            1,
-          exempt: (ing as RecipeIngredient).exempt,
-        };
-      });
+      ingredients = rawIngredients.map((ing, idx) => toMappedIngredient(ing, idx + 1));
+      nextIngredientId = ingredients.length;
     }
     const rawInstructions = suggestion.instructions;
     if (Array.isArray(rawInstructions) && rawInstructions.length > 0) {
-      instructions = rawInstructions.map((ins, idx) => ({
-        id: idx + 1,
-        text:
-          (ins as RecipeInstruction).text ??
-          (ins as { step_text?: string }).step_text ??
-          '',
-      }));
+      instructions = rawInstructions.map((ins, idx) => toMappedInstruction(ins, idx + 1));
+      nextInstructionId = instructions.length;
     }
     suggestionsDismissed = true;
   }
@@ -684,7 +724,12 @@
                 <p class="suggestion-preview-heading">Ingredients</p>
                 <ul class="suggestion-preview-list">
                   {#each s.ingredients as ing}
-                    <li>{ing.quantity ? ing.quantity + ' ' : ''}{ing.name}</li>
+                    <li class="suggestion-preview-item">
+                      <span>{ing.quantity ? ing.quantity + ' ' : ''}{ing.name}</span>
+                      <button type="button" class="suggestion-add-item-btn" onclick={() => fillSuggestionIngredient(ing, s)}>
+                        Add
+                      </button>
+                    </li>
                   {/each}
                 </ul>
               {/if}
@@ -692,7 +737,12 @@
                 <p class="suggestion-preview-heading">Instructions</p>
                 <ol class="suggestion-preview-list">
                   {#each s.instructions as ins}
-                    <li>{ins.text}</li>
+                    <li class="suggestion-preview-item">
+                      <span>{ins.text}</span>
+                      <button type="button" class="suggestion-add-item-btn" onclick={() => fillSuggestionInstruction(ins, s)}>
+                        Add
+                      </button>
+                    </li>
                   {/each}
                 </ol>
               {/if}
@@ -1330,6 +1380,31 @@
     font-size: 0.83rem;
     color: #333;
     line-height: 1.55;
+  }
+
+  .suggestion-preview-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 6px;
+  }
+
+  .suggestion-add-item-btn {
+    flex-shrink: 0;
+    padding: 3px 8px;
+    border: 1px solid #b7d2a0;
+    border-radius: 6px;
+    background: #f2fae8;
+    color: #3f6b1e;
+    font-size: 0.74rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .suggestion-add-item-btn:hover {
+    background: #e8f5d8;
+    border-color: #9ec27d;
   }
 
   .suggestion-actions {
