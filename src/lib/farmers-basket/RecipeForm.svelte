@@ -698,6 +698,12 @@
     </div>
   {:else if suggestionsLoading}
     <div class="name-lock-hint">Searching for similar recipes…</div>
+  {:else if suggestionsDismissed && suggestions.length > 0}
+    <div class="suggestion-reopen-wrap">
+      <button type="button" class="suggestion-reopen-btn" onclick={() => suggestionsDismissed = false}>
+        Show Similar Recipes Again
+      </button>
+    </div>
   {:else if !suggestionsDismissed && suggestions.length > 0}
     <div class="suggestion-panel">
       <div class="suggestion-header">
@@ -1293,6 +1299,28 @@
     overflow: hidden;
     margin: 4px 0 8px;
     background: #f8fbf4;
+  }
+
+  .suggestion-reopen-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 4px 0 8px;
+  }
+
+  .suggestion-reopen-btn {
+    border: 1px solid #c6dbad;
+    background: #f2fae8;
+    color: #3f6b1e;
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .suggestion-reopen-btn:hover {
+    background: #e8f5d8;
+    border-color: #9ec27d;
   }
 
   .suggestion-header {
