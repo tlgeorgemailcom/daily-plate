@@ -1,7 +1,15 @@
 import { FOODS } from '$lib/data/food-portions';
+import { mapDishMethodToCookingMethod, getRetentionFactor } from '$lib/data/cookingLossModel';
 
 // Built once per cold start — avoids O(n) scan per ingredient
 const FOOD_MAP = new Map(FOODS.map(f => [f.word, f]));
+
+// Mapping from food-portions field names to SR28 / cookingLossModel nutrient keys.
+// Only nutrients that appear in the retention model are listed (others stay 1.0).
+const RETENTION_KEY: Partial<Record<'pro' | 'fat', string>> = {
+  pro: 'Protein',
+  fat: 'TotalLipidFat',
+};
 
 export interface NutritionSource {
   ndb: string;   // USDA NDB number — use to query SR Legacy for deeper nutrients
@@ -44,11 +52,17 @@ function parseServings(s: string | null | undefined): number {
  * dish mode  — uses the single isDish row; portionGrams = 1 serving; servingCount = total servings.
  * ingredient — sums all non-exempt, linked rows; divides by parsed servings string.
  * mixed      — sums isDish row + all non-exempt linked component rows; divides by isDish.servingCount.
+ *
+ * cookMethod — optional cooking method string (e.g. 'bake', 'boil').  When provided
+ *   and linkType is 'ingredient' or 'mixed', USDA retention factors from cookingLossModel
+ *   are applied to heat-sensitive macros (Protein, TotalLipidFat) before summing.
+ *   Dish link type is skipped — dish rows point to already-cooked USDA entries.
  */
 export function calcNutritionJson(
   ingredients: IngRow[],
   linkType: string,
-  servingsStr: string | null | undefined
+  servingsStr: string | null | undefined,
+  cookMethod?: string | null
 ): NutritionJson | null {
   if (linkType === 'dish') {
     const dish = ingredients.find(i => i.isDish);
@@ -78,6 +92,11 @@ export function calcNutritionJson(
   const servings = dishRow?.servingCount ?? parseServings(servingsStr);
   if (servings === 0) return null;
 
+  // Resolve cooking method retention factors (only applied for ingredient/mixed).
+  const method = mapDishMethodToCookingMethod(cookMethod ?? null);
+  const proFactor = getRetentionFactor(method, RETENTION_KEY.pro!);
+  const fatFactor = getRetentionFactor(method, RETENTION_KEY.fat!);
+
   let totals = { cal: 0, pro: 0, fat: 0, carb: 0, fib: 0, h2o: 0, sug: 0 };
   let totalGrams = 0;
   const sources: NutritionSource[] = [];
@@ -96,8 +115,8 @@ export function calcNutritionJson(
     const scale = g / 100;
     totalGrams     += g;
     totals.cal     += food.cal  * scale;
-    totals.pro     += food.pro  * scale;
-    totals.fat     += food.fat  * scale;
+    totals.pro     += food.pro  * scale * proFactor;
+    totals.fat     += food.fat  * scale * fatFactor;
     totals.carb    += food.carb * scale;
     totals.fib     += food.fib  * scale;
     totals.h2o     += food.h2o  * scale;

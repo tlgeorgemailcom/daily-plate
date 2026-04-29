@@ -356,6 +356,45 @@
           : (nutritionLinkedCount + nutritionExemptCount) === nutritionTotalCount
     )
   );
+
+  // ─── Live macro totals from linked ingredients ───────────────────────────────
+  const FOOD_MAP_LOCAL = new Map(FOODS.map(f => [f.word, f]));
+
+  function parseServingsCount(s: string): number {
+    if (!s) return 1;
+    const n = parseInt(s.replace(/[^0-9]/g, ''));
+    return n > 0 ? n : 1;
+  }
+
+  let macroTotals = $derived.by(() => {
+    let cal = 0, pro = 0, fat = 0, carb = 0, fib = 0, sug = 0;
+    let linkedCount = 0;
+    for (const ing of ingredients) {
+      if (!ing.foodWord || !ing.portionGrams) continue;
+      const food = FOOD_MAP_LOCAL.get(ing.foodWord);
+      if (!food) continue;
+      const g = ing.portionGrams * (ing.servingCount ?? 1);
+      const scale = g / 100;
+      cal  += food.cal  * scale;
+      pro  += food.pro  * scale;
+      fat  += food.fat  * scale;
+      carb += food.carb * scale;
+      fib  += food.fib  * scale;
+      sug  += food.sug  * scale;
+      linkedCount++;
+    }
+    const srv = parseServingsCount(servings);
+    const r1 = (v: number) => Math.round(v * 10) / 10;
+    return {
+      cal:  r1(cal  / srv),
+      pro:  r1(pro  / srv),
+      fat:  r1(fat  / srv),
+      carb: r1(carb / srv),
+      fib:  r1(fib  / srv),
+      sug:  r1(sug  / srv),
+      linkedCount,
+    };
+  });
   // ────────────────────────────────────────────────────────────────────────────
 
   // Update next IDs based on initial data
@@ -1009,6 +1048,25 @@
             🔗 Nutrition: {nutritionLinkedCount + nutritionExemptCount}/{nutritionTotalCount} ingredient{nutritionTotalCount === 1 ? '' : 's'} accounted for
           {/if}
         </div>
+        {#if macroTotals.linkedCount > 0}
+          <div class="macro-preview" class:complete={nutritionComplete}>
+            <span class="macro-preview-label">
+              {#if nutritionComplete}
+                Per serving{servings ? ` (${parseServingsCount(servings)} servings)` : ''}
+              {:else}
+                {macroTotals.linkedCount} linked ingredient{macroTotals.linkedCount === 1 ? '' : 's'} · per serving
+              {/if}
+            </span>
+            <div class="macro-preview-values">
+              <span><strong>{macroTotals.cal}</strong> cal</span>
+              <span><strong>{macroTotals.pro}g</strong> protein</span>
+              <span><strong>{macroTotals.fat}g</strong> fat</span>
+              <span><strong>{macroTotals.carb}g</strong> carbs</span>
+              <span><strong>{macroTotals.fib}g</strong> fibre</span>
+              <span><strong>{macroTotals.sug}g</strong> sugar</span>
+            </div>
+          </div>
+        {/if}
       {/if}
     {/if}
 
@@ -2004,6 +2062,38 @@
     background: #E8F5E9;
     border-color: #81C784;
     color: #2E7D32;
+  }
+
+  .macro-preview {
+    margin-top: 6px;
+    padding: 8px 12px;
+    background: #FFF8E1;
+    border: 1px solid #FFD54F;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    color: #5D4037;
+  }
+
+  .macro-preview.complete {
+    background: #F1F8E9;
+    border-color: #AED581;
+  }
+
+  .macro-preview-label {
+    display: block;
+    font-size: 0.78rem;
+    color: #888;
+    margin-bottom: 5px;
+  }
+
+  .macro-preview-values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+  }
+
+  .macro-preview-values span {
+    white-space: nowrap;
   }
 
   .nutrition-row {

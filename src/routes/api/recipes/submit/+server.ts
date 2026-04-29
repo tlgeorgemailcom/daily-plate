@@ -52,7 +52,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
     const newStatus = submit ? 'pending' : 'draft';
 
     const nutritionJson = (fields.linkType && Array.isArray(fields.ingredients) && fields.ingredients.length > 0)
-      ? calcNutritionJson(fields.ingredients, fields.linkType, fields.servings)
+      ? calcNutritionJson(fields.ingredients, fields.linkType, fields.servings, fields.cookMethod ?? null)
       : null;
 
     if (fields.recipeName) {
@@ -63,6 +63,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
           recipe_ingredients_json = ?, recipe_instructions_json = ?,
           image_url = COALESCE(?, image_url),
           link_type = COALESCE(?, link_type),
+          cook_method = COALESCE(?, cook_method),
           nutrition_json = ?,
           updated_at = datetime('now'),
           status = ?
@@ -77,6 +78,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
           JSON.stringify(fields.instructions || []),
           fields.imageUrl || null,
           fields.linkType || null,
+          fields.cookMethod || null,
           nutritionJson ? JSON.stringify(nutritionJson) : EMPTY_NUTRITION_JSON,
           newStatus,
           recipeId
@@ -144,10 +146,10 @@ export const POST: RequestHandler = async ({ request }) => {
         id, user_id, title, category, dietary_category,
         prep_time, servings,
         recipe_ingredients_json, recipe_instructions_json,
-        image_url, link_type, nutrition_json,
+        image_url, link_type, cook_method, nutrition_json,
         submitter_name, status, created_at, updated_at,
         grams_per_serving, nutrient_version, retention_model_version, source_match_version
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'), datetime('now'), ?, ?, ?, ?)`,
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'), datetime('now'), ?, ?, ?, ?)`,
       [
         recipeId,
         submittedBy,
@@ -160,6 +162,7 @@ export const POST: RequestHandler = async ({ request }) => {
         JSON.stringify(body.instructions),
         body.imageUrl || null,
         body.linkType || null,
+        body.cookMethod || null,
         EMPTY_NUTRITION_JSON,
         submitterName,
         status

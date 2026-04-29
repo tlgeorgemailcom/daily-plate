@@ -91,7 +91,7 @@ export const POST: RequestHandler = async ({ request }) => {
     if (linkType && rawIngs.length > 0) {
       const dishLinkEntry = draftData?.dishLink ? { isDish: true, ...draftData.dishLink } : null;
       const ingRows = (dishLinkEntry ? [dishLinkEntry, ...rawIngs] : rawIngs) as Parameters<typeof calcNutritionJson>[0];
-      const computed = calcNutritionJson(ingRows, linkType, draftData?.servings ?? null);
+      const computed = calcNutritionJson(ingRows, linkType, draftData?.servings ?? null, draftData?.cookMethod ?? null);
       if (computed) nutritionJson = JSON.stringify(computed);
     }
 

@@ -5,9 +5,10 @@ generate_recipe_nutrition.py
 Reads recipes.csv + recipe_ingredients.csv, queries DataCentralCombo for each
 dish-row NDB, and writes src/lib/data/recipe-nutrition.ts.
 
-All 116 recipes are link_type='dish', so nutrition is derived from the SR28
-dish-level NDB entry (already represents the cooked/finished state).
-Cooking-loss retention factors apply when ingredient-type recipes are added.
+Rule A / Rule B recipes use the SR Legacy dish row as the nutrition source.
+Rule C / Rule D recipes use the authored ingredient build, with recipe-level
+yield factors from recipes_v2/data/recipes.csv and nutrient retention applied
+without shrinking water twice.
 
 Run:
     python3 src/lib/data/generate_recipe_nutrition.py
@@ -26,7 +27,9 @@ DB_PATH      = Path('/Users/macminidata/vscode/jetfooddata/jetcool/assets/comboo
 RECIPES_CSV  = SCRIPT_DIR / 'recipes.csv'
 INGR_CSV     = SCRIPT_DIR / 'recipe_ingredients.csv'
 FOODS_CSV    = REPO_ROOT / 'food-portions-complete.csv'
+V2_RECIPES_CSV = REPO_ROOT / 'recipes_v2' / 'data' / 'recipes.csv'
 OUT_TS       = SCRIPT_DIR / 'recipe-nutrition.ts'
+AUDIT_OUT    = SCRIPT_DIR / 'rule_b_fallback_audit.txt'
 
 # ── Nutrient columns to extract from DataCentralCombo ─────────────────────────
 # Ordered: macros → fat quality → fat-soluble vitamins → water-soluble vitamins
@@ -61,9 +64,136 @@ NUTRIENT_COLS = [
     'Alanine', 'AsparticAcid', 'GlutamicAcid', 'Glycine', 'Proline', 'Serine',
 ]
 
+BUILD_RULES = {'Rule C', 'Rule D'}
+
+COOKING_RETENTION = {
+    'raw': {},
+    'boiled': {
+        'Protein': 0.94, 'TotalLipidFat': 1.00, 'Carbohydrate': 1.00, 'Cholesterol': 0.94,
+        'VitaminA_RAE': 0.88, 'Retinol': 0.87, 'VitaminD': 1.00, 'VitaminE_alphaTocopherol': 0.92,
+        'VitaminK_phylloquinone': 0.94, 'VitaminC_totalAscorbicAcid': 0.50, 'Thiamin': 0.80,
+        'Riboflavin': 1.00, 'Niacin': 0.80, 'PantothenicAcid': 0.85, 'VitaminB6': 0.66,
+        'Folate_total': 0.88, 'Folate_food': 0.88, 'Folate_DFE': 0.88, 'VitaminB12': 1.00,
+        'Choline_total': 0.94, 'Betaine': 1.00, 'LuteinZeaxanthin': 0.66, 'Lycopene': 0.90,
+        'Calcium_Ca': 0.84, 'Iron_Fe': 0.64, 'Magnesium_Mg': 0.78, 'Phosphorus_P': 0.82,
+        'Potassium_K': 0.86, 'Sodium_Na': 0.82, 'Zinc_Zn': 0.77, 'Copper_Cu': 0.85,
+        'Manganese_Mn': 0.94, 'Selenium_Se': 0.94, 'FattyAcids_totalSaturated': 0.98,
+        'FattyAcids_totalMonounsaturated': 1.00, 'FattyAcids_totalPolyunsaturated': 0.69,
+        'LinoleicAcid': 0.88, 'alphaLinolenicAcid': 0.78, 'EPA_20_5n3': 0.70,
+        'DPA_22_5n3': 0.70, 'DHA_22_6n3': 0.56, 'omega3': 0.72, 'omega6': 0.88,
+        'Tryptophan': 0.94, 'Threonine': 0.94, 'Isoleucine': 0.94, 'Leucine': 0.94,
+        'Lysine': 0.94, 'Methionine': 0.94, 'Cystine': 0.90, 'Phenylalanine': 0.94,
+        'Tyrosine': 0.94, 'Valine': 0.94, 'Arginine': 0.94, 'Histidine': 0.94,
+    },
+    'steamed': {
+        'Protein': 0.95, 'VitaminA_RAE': 0.90, 'VitaminD': 1.00, 'VitaminE_alphaTocopherol': 0.94,
+        'VitaminK_phylloquinone': 0.95, 'VitaminC_totalAscorbicAcid': 0.60, 'Thiamin': 0.85,
+        'Riboflavin': 1.00, 'Niacin': 0.85, 'PantothenicAcid': 0.90, 'VitaminB6': 0.75,
+        'Folate_total': 0.92, 'Folate_food': 0.92, 'Folate_DFE': 0.92, 'VitaminB12': 1.00,
+        'Choline_total': 0.96, 'LuteinZeaxanthin': 0.70, 'Calcium_Ca': 0.92, 'Iron_Fe': 0.80,
+        'Magnesium_Mg': 0.88, 'Phosphorus_P': 0.90, 'Potassium_K': 0.92, 'Sodium_Na': 0.92,
+        'Zinc_Zn': 0.88, 'Copper_Cu': 0.90, 'Selenium_Se': 0.96, 'FattyAcids_totalPolyunsaturated': 0.72,
+        'LinoleicAcid': 0.90, 'alphaLinolenicAcid': 0.80, 'DHA_22_6n3': 0.60, 'omega3': 0.75,
+        'omega6': 0.90, 'Cystine': 0.92,
+    },
+    'baked': {
+        'Protein': 0.94, 'TotalLipidFat': 1.00, 'Cholesterol': 0.94, 'VitaminA_RAE': 0.85,
+        'Retinol': 0.84, 'Carotene_beta': 0.80, 'VitaminD': 0.95, 'VitaminE_alphaTocopherol': 0.88,
+        'VitaminK_phylloquinone': 0.92, 'VitaminC_totalAscorbicAcid': 0.55, 'Thiamin': 0.75,
+        'Riboflavin': 0.95, 'Niacin': 0.90, 'PantothenicAcid': 0.88, 'VitaminB6': 0.75,
+        'Folate_total': 0.90, 'Folate_food': 0.90, 'Folate_DFE': 0.90, 'VitaminB12': 0.96,
+        'Choline_total': 0.92, 'LuteinZeaxanthin': 0.62, 'Lycopene': 0.85, 'Calcium_Ca': 0.96,
+        'Iron_Fe': 0.90, 'Magnesium_Mg': 0.94, 'Phosphorus_P': 0.94, 'Potassium_K': 0.92,
+        'Sodium_Na': 0.96, 'Zinc_Zn': 0.92, 'Copper_Cu': 0.92, 'Selenium_Se': 0.96,
+        'FattyAcids_totalSaturated': 0.98, 'FattyAcids_totalMonounsaturated': 0.96,
+        'FattyAcids_totalPolyunsaturated': 0.65, 'LinoleicAcid': 0.82, 'alphaLinolenicAcid': 0.72,
+        'EPA_20_5n3': 0.65, 'DPA_22_5n3': 0.65, 'DHA_22_6n3': 0.55, 'omega3': 0.68,
+        'omega6': 0.82, 'Tryptophan': 0.93, 'Threonine': 0.93, 'Isoleucine': 0.93,
+        'Leucine': 0.93, 'Lysine': 0.90, 'Methionine': 0.92, 'Cystine': 0.86,
+        'Phenylalanine': 0.93, 'Tyrosine': 0.93, 'Valine': 0.93, 'Arginine': 0.90,
+        'Histidine': 0.93,
+    },
+    'fried': {
+        'Protein': 0.85, 'TotalLipidFat': 1.00, 'Cholesterol': 0.84, 'VitaminA_RAE': 0.84,
+        'Retinol': 0.84, 'VitaminD': 0.84, 'VitaminE_alphaTocopherol': 0.88, 'VitaminK_phylloquinone': 0.92,
+        'VitaminC_totalAscorbicAcid': 0.45, 'Thiamin': 0.78, 'Riboflavin': 0.90, 'Niacin': 0.88,
+        'PantothenicAcid': 0.85, 'VitaminB6': 0.83, 'Folate_total': 0.85, 'Folate_food': 0.85,
+        'Folate_DFE': 0.85, 'VitaminB12': 0.90, 'Choline_total': 0.84, 'LuteinZeaxanthin': 0.84,
+        'Calcium_Ca': 0.84, 'Iron_Fe': 0.84, 'Magnesium_Mg': 0.85, 'Phosphorus_P': 0.85,
+        'Potassium_K': 0.85, 'Sodium_Na': 0.85, 'Zinc_Zn': 0.84, 'Copper_Cu': 0.78,
+        'Selenium_Se': 0.84, 'FattyAcids_totalSaturated': 0.95, 'FattyAcids_totalMonounsaturated': 0.95,
+        'FattyAcids_totalPolyunsaturated': 0.60, 'LinoleicAcid': 0.76, 'alphaLinolenicAcid': 0.68,
+        'EPA_20_5n3': 0.60, 'DPA_22_5n3': 0.78, 'DHA_22_6n3': 0.58, 'omega3': 0.59,
+        'omega6': 0.78, 'Tryptophan': 0.85, 'Threonine': 0.85, 'Isoleucine': 0.85,
+        'Leucine': 0.85, 'Lysine': 0.82, 'Methionine': 0.84, 'Cystine': 0.80,
+        'Phenylalanine': 0.85, 'Tyrosine': 0.85, 'Valine': 0.85, 'Arginine': 0.82,
+        'Histidine': 0.85,
+    },
+    'grilled': {
+        'Protein': 0.85, 'TotalLipidFat': 0.90, 'VitaminA_RAE': 0.82, 'Retinol': 0.82,
+        'Carotene_beta': 0.78, 'VitaminD': 0.88, 'VitaminE_alphaTocopherol': 0.82,
+        'VitaminK_phylloquinone': 0.88, 'VitaminC_totalAscorbicAcid': 0.40, 'Thiamin': 0.70,
+        'Riboflavin': 0.88, 'Niacin': 0.88, 'PantothenicAcid': 0.82, 'VitaminB6': 0.72,
+        'Folate_total': 0.80, 'Folate_food': 0.80, 'Folate_DFE': 0.80, 'VitaminB12': 0.88,
+        'Choline_total': 0.84, 'LuteinZeaxanthin': 0.60, 'Lycopene': 0.80, 'Calcium_Ca': 0.90,
+        'Iron_Fe': 0.88, 'Magnesium_Mg': 0.88, 'Phosphorus_P': 0.88, 'Potassium_K': 0.88,
+        'Sodium_Na': 0.90, 'Zinc_Zn': 0.88, 'Copper_Cu': 0.84, 'Selenium_Se': 0.90,
+        'FattyAcids_totalSaturated': 0.88, 'FattyAcids_totalMonounsaturated': 0.88,
+        'FattyAcids_totalPolyunsaturated': 0.55, 'LinoleicAcid': 0.72, 'alphaLinolenicAcid': 0.62,
+        'EPA_20_5n3': 0.58, 'DPA_22_5n3': 0.58, 'DHA_22_6n3': 0.50, 'omega3': 0.60,
+        'omega6': 0.72, 'Lysine': 0.80, 'Cystine': 0.76, 'Arginine': 0.80, 'Tryptophan': 0.84,
+        'Threonine': 0.84, 'Methionine': 0.82,
+    },
+    'microwave': {
+        'Protein': 0.96, 'VitaminA_RAE': 0.92, 'VitaminD': 1.00, 'VitaminE_alphaTocopherol': 0.94,
+        'VitaminK_phylloquinone': 0.96, 'VitaminC_totalAscorbicAcid': 0.72, 'Thiamin': 0.84,
+        'Riboflavin': 0.98, 'Niacin': 0.92, 'PantothenicAcid': 0.92, 'VitaminB6': 0.80,
+        'Folate_total': 0.92, 'Folate_food': 0.92, 'Folate_DFE': 0.92, 'VitaminB12': 0.98,
+        'Choline_total': 0.96, 'LuteinZeaxanthin': 0.78, 'Calcium_Ca': 0.96, 'Iron_Fe': 0.92,
+        'Magnesium_Mg': 0.94, 'Phosphorus_P': 0.96, 'Potassium_K': 0.94, 'Selenium_Se': 0.96,
+        'FattyAcids_totalPolyunsaturated': 0.78, 'LinoleicAcid': 0.88, 'alphaLinolenicAcid': 0.82,
+        'DHA_22_6n3': 0.72, 'omega3': 0.80, 'omega6': 0.88,
+    },
+    'no_heat': {},
+}
+
+LOSS_COVERED_NUTRIENTS = {
+    nutrient
+    for factors in COOKING_RETENTION.values()
+    for nutrient in factors.keys()
+}
+
+RAW_COOK_METHODS = {
+    'Raw', 'raw', 'Unprepared', 'Uncooked', 'Unheated', 'Unroasted',
+    'Not Prepared', 'Raw or Unheated', 'z', 'null', 'N/A',
+}
+
+COOKED_DESC_KEYWORDS = [
+    'cooked', 'baked', 'roasted', 'fried', 'boiled', 'grilled', 'broiled',
+    'steamed', 'smoked', 'canned', 'microwaved', 'sauteed', 'stewed',
+    'braised', 'poached', 'heated', 'toasted', 'blanched', 'parboiled',
+    'scrambled', 'kippered', 'pickled', 'prepared from recipe', 'commercially prepared',
+    'restaurant,', 'restaurant', 'fast foods,', 'frozen entree', 'frozen, prepared',
+    'home-prepared', 'ready-to-serve', 'ready-to-eat', 'ready to eat', ', prepared',
+    'commercial', 'cookies,', 'doughnut', 'strudel', 'pie,', 'rolls,', ' salad',
+    'shake', 'sandwich', 'submarine', 'burrito', 'sauce,',
+]
+
 def load_csv(path):
     with open(path, newline='', encoding='utf-8') as f:
         return list(csv.DictReader(f))
+
+def load_v2_recipe_meta(path):
+    if not path.exists():
+        return {}
+    rows = load_csv(path)
+    meta = {}
+    for row in rows:
+        recipe_id = (row.get('recipe_id') or '').strip()
+        if not recipe_id:
+            continue
+        meta[recipe_id] = row
+    return meta
 
 def query_ndb(db, ndb_no):
     """Return nutrient row for a single NDB number, or None."""
@@ -90,6 +220,74 @@ def parse_servings(s):
 
 def round2(v):
     return round(v * 100) / 100
+
+def to_float(value, default=1.0):
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return default
+
+def map_recipe_cook_method(cook_method):
+    if not cook_method:
+        return 'raw'
+
+    m = cook_method.lower()
+
+    if 'microwav' in m:
+        return 'microwave'
+    if 'steam' in m:
+        return 'steamed'
+    if any(token in m for token in ('grill', 'broil', 'barbecue', 'bbq')):
+        return 'grilled'
+    if any(token in m for token in ('fry', 'fried', 'stir-fry', 'stir_fry', 'saute', 'saut', 'pan-fry', 'pan_fry')):
+        return 'fried'
+    if any(token in m for token in ('bake', 'baked', 'roast', 'roasted', 'oven', 'dry heat', 'dry_heat', 'toasted')):
+        return 'baked'
+    if any(token in m for token in ('boil', 'boiled', 'braise', 'braised', 'stew', 'stovetop', 'simmer', 'poach', 'parboil', 'blanch')):
+        return 'boiled'
+
+    return 'raw'
+
+def get_retention_factor(method, nutrient_key):
+    return COOKING_RETENTION.get(method, {}).get(nutrient_key, 1.0)
+
+def resolve_ingredient_state(cook_method, cured_fresh, long_desc):
+    if cured_fresh and 'canned' in cured_fresh.lower():
+        return 'no_heat'
+
+    method = cook_method or 'z'
+    if method not in RAW_COOK_METHODS:
+        return 'no_heat'
+
+    if method in ('z', 'null'):
+        desc = f'{long_desc} {cured_fresh or ""}'.lower()
+        if any(keyword in desc for keyword in COOKED_DESC_KEYWORDS):
+            return 'no_heat'
+
+    return 'raw'
+
+def apply_rule_b_missing_fallback(canonical_per100g, build_per100g):
+    """
+    Rule B policy: only replace canonical-zero nutrients that are explicitly
+    covered by cooking-loss factors (typically vitamins/micros and selected
+    heat-sensitive compounds). Sugar-only gaps stay canonical.
+
+    Returns (merged_dict, all_replaced, loss_covered_replaced):
+      all_replaced          — any canonical-zero nutrient where built value > 0
+      loss_covered_replaced — subset that was actually written into merged (loss-covered only)
+    """
+    merged = dict(canonical_per100g)
+    all_replaced = []
+    loss_covered_replaced = []
+    for nutrient in NUTRIENT_COLS:
+        canonical_value = float(canonical_per100g.get(nutrient) or 0.0)
+        build_value = float(build_per100g.get(nutrient) or 0.0)
+        if canonical_value <= 0.0 and build_value > 0.0:
+            all_replaced.append(nutrient)
+            if nutrient in LOSS_COVERED_NUTRIENTS:
+                merged[nutrient] = round2(build_value)
+                loss_covered_replaced.append(nutrient)
+    return merged, sorted(all_replaced), sorted(loss_covered_replaced)
 
 def pick_canonical_serving_grams(food_row):
     if not food_row:
@@ -119,13 +317,20 @@ def build_per_serving(sr28_row, portion_grams):
     scale = portion_grams / 100.0
     return {k: round2((sr28_row[k] or 0.0) * scale) for k in NUTRIENT_COLS}
 
-def build_ingredient_sum(db, ingr_rows):
+def build_ingredient_sum(db, ingr_rows, cooking_method='raw', yield_factor_water=1.0, yield_factor_fat=1.0):
     """
     Sum nutrient contributions from dish_ingredient + ingredient rows.
-    Returns (totals_dict, total_grams) or (None, 0) if no rows have valid NBDs.
+
+    Finished mass is handled once at the recipe level using v2 yield factors.
+    Water is reduced via yield_factor_water, not per-ingredient retention, so
+    evaporation is not counted twice.
+
+    Returns (totals_dict, cooked_total_grams) or (None, 0) if no rows have valid NBDs.
     """
     totals = {k: 0.0 for k in NUTRIENT_COLS}
-    total_grams = 0.0
+    raw_total_grams = 0.0
+    raw_water_total = 0.0
+    raw_fat_total = 0.0
     hit = 0
     for row in ingr_rows:
         row_type = row.get('row_type', '')
@@ -151,19 +356,43 @@ def build_ingredient_sum(db, ingr_rows):
             continue
         grams = pg * sc
         scale = grams / 100.0
+        raw_total_grams += grams
+        raw_water_total += (sr28.get('Water') or 0.0) * scale
+        raw_fat_total += (sr28.get('TotalLipidFat') or 0.0) * scale
+
+        ingredient_state = resolve_ingredient_state(
+            sr28.get('_cookMethod'),
+            sr28.get('_curedFresh'),
+            sr28.get('_Long_Desc') or '',
+        )
+
         for k in NUTRIENT_COLS:
-            totals[k] = round2(totals[k] + (sr28[k] or 0.0) * scale)
-        total_grams += grams
+            amount = (sr28[k] or 0.0) * scale
+            if k == 'Water':
+                retained = amount * yield_factor_water
+            elif k == 'TotalLipidFat':
+                retained = amount * yield_factor_fat
+            elif ingredient_state == 'no_heat':
+                retained = amount
+            else:
+                retained = amount * get_retention_factor(cooking_method, k)
+
+            totals[k] = round2(totals[k] + retained)
         hit += 1
     if hit == 0:
         return None, 0
-    return totals, total_grams
+
+    water_lost = raw_water_total * (1.0 - yield_factor_water)
+    fat_lost = raw_fat_total * (1.0 - yield_factor_fat)
+    cooked_total_grams = max(raw_total_grams - water_lost - fat_lost, 1e-6)
+    return totals, round2(cooked_total_grams)
 
 def main():
     print(f'Reading CSVs...')
     recipes = {r['recipe_id']: r for r in load_csv(RECIPES_CSV)}
     ingr_rows = load_csv(INGR_CSV)
     food_rows = load_csv(FOODS_CSV)
+    v2_recipe_meta = load_v2_recipe_meta(V2_RECIPES_CSV)
     foods_by_ndb = {row['NDB_NO']: row for row in food_rows if row.get('NDB_NO')}
     foods_by_word = {row['word']: row for row in food_rows if row.get('word')}
 
@@ -177,6 +406,7 @@ def main():
 
     output = {}      # recipe_id → nutrition data
     warnings = []
+    rule_b_audit = []
 
     for recipe_id, recipe in recipes.items():
         rows = by_recipe.get(recipe_id, [])
@@ -190,23 +420,40 @@ def main():
             warnings.append(f'{recipe_id}: no dish row found — skipped')
             continue
 
+        sr_rule = (recipe.get('sr28_rule') or '').strip()
+        v2_meta = v2_recipe_meta.get(recipe_id, {})
+        if v2_meta.get('sr_rule'):
+            sr_rule = v2_meta['sr_rule'].strip()
+
         ndb_no = dish_row.get('ndb_no', '').strip()
+        link_type = recipe.get('link_type', 'dish').strip()
+        servings_count = parse_servings(recipe.get('servings', '')) or 1
+        rule_prefers_build = sr_rule in BUILD_RULES
+        build_method_label = (v2_meta.get('cook_method') or '').strip() or None
+        model_method = map_recipe_cook_method(build_method_label or None)
+        yield_factor_water = to_float(v2_meta.get('yield_factor_water'), 1.0)
+        yield_factor_fat = to_float(v2_meta.get('yield_factor_fat'), 1.0)
+
         if not ndb_no:
-            # No canonical NDB (Rule 3 recipe) — compute from ingredient sum
-            sc = parse_servings(recipe.get('servings', '')) or 1
-            totals, total_grams = build_ingredient_sum(db, rows)
+            totals, total_grams = build_ingredient_sum(
+                db,
+                rows,
+                cooking_method=model_method,
+                yield_factor_water=yield_factor_water,
+                yield_factor_fat=yield_factor_fat,
+            )
             if not totals:
                 warnings.append(f'{recipe_id}: no ndb_no and no valid ingredient rows — skipped')
                 continue
-            per_serving = {k: round2(totals[k] / sc) for k in NUTRIENT_COLS}
-            eff_grams = round2(total_grams / sc) if total_grams > 0 else 0.0
+            eff_grams = round2(total_grams / servings_count) if total_grams > 0 else 0.0
             per_100g = {k: round2(totals[k] * 100.0 / total_grams) for k in NUTRIENT_COLS} if total_grams > 0 else {k: 0.0 for k in NUTRIENT_COLS}
+            per_serving = {k: round2(per_100g[k] * eff_grams / 100.0) for k in NUTRIENT_COLS}
             output[recipe_id] = {
                 'ndb': 'ingredient-sum',
-                'long_desc': f'{recipe.get("recipe_name", recipe_id)} (ingredient-sum)',
-                'cook_method': None,
+                'long_desc': f'{recipe.get("recipe_name", recipe_id)} (ingredient-build)',
+                'cook_method': build_method_label,
                 'gramsPerServing': eff_grams,
-                'servings': sc,
+                'servings': servings_count,
                 'perServing': per_serving,
                 'per100g': per_100g,
             }
@@ -228,24 +475,31 @@ def main():
             warnings.append(f'{recipe_id}: invalid portion_grams={portion_grams_str!r} — skipped')
             continue
 
-        link_type = recipe.get('link_type', 'dish').strip()
-
-        # 'mixed' recipes: always use ingredient-sum (dish NDB is just a reference)
-        if link_type == 'mixed':
-            totals, total_grams = build_ingredient_sum(db, rows)
+        # Rule C / Rule D prefer the authored build even if a canonical dish row exists.
+        # 'mixed' recipes always use the ingredient build.
+        if rule_prefers_build or link_type == 'mixed':
+            totals, total_grams = build_ingredient_sum(
+                db,
+                rows,
+                cooking_method=model_method,
+                yield_factor_water=yield_factor_water,
+                yield_factor_fat=yield_factor_fat,
+            )
             if not totals:
-                warnings.append(f'{recipe_id}: mixed link_type but no valid ingredient rows — skipped')
+                warnings.append(f'{recipe_id}: build-preferred recipe but no valid ingredient rows — skipped')
                 continue
-            per_serving = totals
-            eff_grams = total_grams if total_grams > 0 else portion_grams
-            per_100g = {k: round2(per_serving[k] * 100.0 / eff_grams) for k in NUTRIENT_COLS}
-            sr28_ref = query_ndb(db, ndb_no)
+
+            canonical_food_row = foods_by_ndb.get(ndb_no) or foods_by_word.get(recipe.get('food_word', '').strip())
+            serving_grams = pick_canonical_serving_grams(canonical_food_row)
+            eff_grams = round2(serving_grams or (total_grams / serving_count)) if total_grams > 0 else round2(portion_grams)
+            per_100g = {k: round2(totals[k] * 100.0 / total_grams) for k in NUTRIENT_COLS} if total_grams > 0 else {k: 0.0 for k in NUTRIENT_COLS}
+            per_serving = {k: round2(per_100g[k] * eff_grams / 100.0) for k in NUTRIENT_COLS}
             output[recipe_id] = {
-                'ndb': ndb_no,
-                'long_desc': sr28_ref['_Long_Desc'] if sr28_ref else f'{recipe_id} (ingredient-sum)',
-                'cook_method': None,
-                'gramsPerServing': round2(eff_grams),
-                'servings': serving_count,
+                'ndb': ndb_no or 'ingredient-sum',
+                'long_desc': f'{recipe.get("recipe_name", recipe_id)} (ingredient-build)',
+                'cook_method': build_method_label,
+                'gramsPerServing': eff_grams,
+                'servings': servings_count,
                 'perServing': per_serving,
                 'per100g': per_100g,
             }
@@ -254,7 +508,13 @@ def main():
         sr28_row = query_ndb(db, ndb_no)
         if not sr28_row:
             # Fallback: sum dish_ingredient/ingredient rows
-            totals, total_grams = build_ingredient_sum(db, rows)
+            totals, total_grams = build_ingredient_sum(
+                db,
+                rows,
+                cooking_method=model_method,
+                yield_factor_water=yield_factor_water,
+                yield_factor_fat=yield_factor_fat,
+            )
             if not totals:
                 warnings.append(f'{recipe_id}: NDB {ndb_no} not found in SR28 and no ingredient fallback — skipped')
                 continue
@@ -266,7 +526,7 @@ def main():
                 'long_desc': f'{recipe_id} (ingredient-sum fallback)',
                 'cook_method': None,
                 'gramsPerServing': portion_grams,
-                'servings': serving_count,
+                'servings': servings_count,
                 'perServing': per_serving,
                 'per100g': per_100g,
             }
@@ -274,17 +534,48 @@ def main():
 
         canonical_food_row = foods_by_ndb.get(ndb_no) or foods_by_word.get(recipe.get('food_word', '').strip())
         serving_grams = pick_canonical_serving_grams(canonical_food_row) or portion_grams
-        per_serving = build_per_serving(sr28_row, serving_grams)
 
         # Canonical SR rows are already per 100g; keep that basis independent of serving size.
         per_100g = {k: round2(float(sr28_row.get(k) or 0.0)) for k in NUTRIENT_COLS}
+
+        # Rule B: fill only canonical-zero nutrients covered by cooking-loss model.
+        if sr_rule == 'Rule B':
+            build_totals, build_total_grams = build_ingredient_sum(
+                db,
+                rows,
+                cooking_method=model_method,
+                yield_factor_water=yield_factor_water,
+                yield_factor_fat=yield_factor_fat,
+            )
+            if build_totals and build_total_grams > 0:
+                build_per_100g = {
+                    k: round2(build_totals[k] * 100.0 / build_total_grams)
+                    for k in NUTRIENT_COLS
+                }
+                per_100g, all_replaced, loss_covered_replaced = apply_rule_b_missing_fallback(per_100g, build_per_100g)
+                if all_replaced or loss_covered_replaced:
+                    recipe_name = recipe.get('recipe_name', recipe_id)
+                    line1 = (
+                        f"{recipe_id} ({recipe_name}): All canonical-zero → built-non-zero ({len(all_replaced)}): "
+                        f"{', '.join(all_replaced) if all_replaced else 'none'}"
+                    )
+                    line2 = (
+                        f"{recipe_id} ({recipe_name}): Loss-covered replaced ({len(loss_covered_replaced)}): "
+                        f"{', '.join(loss_covered_replaced) if loss_covered_replaced else 'none'}"
+                    )
+                    warnings.append(line1)
+                    warnings.append(line2)
+                    rule_b_audit.append(line1)
+                    rule_b_audit.append(line2)
+
+        per_serving = {k: round2(per_100g[k] * serving_grams / 100.0) for k in NUTRIENT_COLS}
 
         output[recipe_id] = {
             'ndb': ndb_no,
             'long_desc': sr28_row['_Long_Desc'],
             'cook_method': sr28_row['_cookMethod'],
             'gramsPerServing': round2(serving_grams),
-            'servings': serving_count,
+            'servings': servings_count,
             'perServing': per_serving,
             'per100g': per_100g,
         }
@@ -296,14 +587,30 @@ def main():
         for w in warnings:
             print(f'  ⚠ {w}')
 
+    # Persist Rule B fallback replacements for accounting/audit review.
+    audit_lines = [
+        'Rule B Fallback Audit',
+        'Generated by generate_recipe_nutrition.py',
+        f'Total Rule B fallback recipes this run: {len(rule_b_audit)}',
+        '',
+    ]
+    if rule_b_audit:
+        audit_lines.extend(rule_b_audit)
+    else:
+        audit_lines.append('No Rule B fallback replacements in this run.')
+    audit_lines.append('')
+    AUDIT_OUT.write_text('\n'.join(audit_lines), encoding='utf-8')
+    print(f'Written → {AUDIT_OUT}')
+
     print(f'\nBuilt nutrition for {len(output)}/{len(recipes)} recipes.')
 
     # ── Write TypeScript output ────────────────────────────────────────────────
     lines = [
         '// Auto-generated by generate_recipe_nutrition.py — do not edit manually.',
-        '// Nutrient values are derived from SR28 DataCentralCombo dish-level NDB entries.',
-        '// perServing: nutrients scaled to one serving (portion_grams).',
-        '// per100g: nutrients per 100g of finished dish (for display/search normalisation).',
+        '// Rule A / Rule B use canonical dish rows; Rule C / Rule D use ingredient builds.',
+        '// Build-preferred recipes use v2 cook method + yield factors and keep evaporation at recipe level only.',
+        '// perServing: nutrients scaled to one serving.',
+        '// per100g: nutrients per 100g of finished dish.',
         '// All numerical values in the standard SR28 units (g, mg, µg, kcal, IU).',
         '',
         'export interface RecipeNutritionEntry {',
