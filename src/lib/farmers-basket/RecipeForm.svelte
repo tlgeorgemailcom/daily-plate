@@ -366,9 +366,12 @@
     return n > 0 ? n : 1;
   }
 
+  let macroPer = $state<'serving' | '100g'>('serving');
+
   let macroTotals = $derived.by(() => {
     let cal = 0, pro = 0, fat = 0, carb = 0, fib = 0, sug = 0;
     let linkedCount = 0;
+    let totalGrams = 0;
     for (const ing of ingredients) {
       if (!ing.foodWord || !ing.portionGrams) continue;
       const food = FOOD_MAP_LOCAL.get(ing.foodWord);
@@ -381,18 +384,21 @@
       carb += food.carb * scale;
       fib  += food.fib  * scale;
       sug  += food.sug  * scale;
+      totalGrams += g;
       linkedCount++;
     }
     const srv = parseServingsCount(servings);
     const r1 = (v: number) => Math.round(v * 10) / 10;
+    const divisor = macroPer === '100g' ? (totalGrams / 100) : srv;
     return {
-      cal:  r1(cal  / srv),
-      pro:  r1(pro  / srv),
-      fat:  r1(fat  / srv),
-      carb: r1(carb / srv),
-      fib:  r1(fib  / srv),
-      sug:  r1(sug  / srv),
+      cal:  r1(cal  / divisor),
+      pro:  r1(pro  / divisor),
+      fat:  r1(fat  / divisor),
+      carb: r1(carb / divisor),
+      fib:  r1(fib  / divisor),
+      sug:  r1(sug  / divisor),
       linkedCount,
+      totalGrams,
     };
   });
   // ────────────────────────────────────────────────────────────────────────────
@@ -1050,13 +1056,31 @@
         </div>
         {#if macroTotals.linkedCount > 0}
           <div class="macro-preview" class:complete={nutritionComplete}>
-            <span class="macro-preview-label">
-              {#if nutritionComplete}
-                Per serving{servings ? ` (${parseServingsCount(servings)} servings)` : ''}
-              {:else}
-                {macroTotals.linkedCount} linked ingredient{macroTotals.linkedCount === 1 ? '' : 's'} · per serving
-              {/if}
-            </span>
+            <div class="macro-preview-header">
+              <span class="macro-preview-label">
+                {#if macroPer === '100g'}
+                  Per 100g
+                {:else if nutritionComplete}
+                  Per serving{servings ? ` (${parseServingsCount(servings)} servings)` : ''}
+                {:else}
+                  {macroTotals.linkedCount} linked ingredient{macroTotals.linkedCount === 1 ? '' : 's'} · per serving
+                {/if}
+              </span>
+              <div class="macro-per-toggle">
+                <button
+                  type="button"
+                  class="macro-per-btn"
+                  class:active={macroPer === 'serving'}
+                  onclick={() => macroPer = 'serving'}
+                >Per serving</button>
+                <button
+                  type="button"
+                  class="macro-per-btn"
+                  class:active={macroPer === '100g'}
+                  onclick={() => macroPer = '100g'}
+                >100g</button>
+              </div>
+            </div>
             <div class="macro-preview-values">
               <span><strong>{macroTotals.cal}</strong> cal</span>
               <span><strong>{macroTotals.pro}g</strong> protein</span>
@@ -2079,11 +2103,48 @@
     border-color: #AED581;
   }
 
+  .macro-preview-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+
   .macro-preview-label {
-    display: block;
     font-size: 0.78rem;
     color: #888;
-    margin-bottom: 5px;
+  }
+
+  .macro-per-toggle {
+    display: flex;
+    gap: 2px;
+  }
+
+  .macro-per-btn {
+    font-size: 0.72rem;
+    padding: 2px 7px;
+    border: 1px solid #FFD54F;
+    background: transparent;
+    color: #888;
+    border-radius: 4px;
+    cursor: pointer;
+    line-height: 1.4;
+  }
+
+  .macro-per-btn.active {
+    background: #FFD54F;
+    color: #5D4037;
+    border-color: #FFB300;
+  }
+
+  .macro-preview.complete .macro-per-btn {
+    border-color: #AED581;
+  }
+
+  .macro-preview.complete .macro-per-btn.active {
+    background: #AED581;
+    color: #33691E;
+    border-color: #7CB342;
   }
 
   .macro-preview-values {
