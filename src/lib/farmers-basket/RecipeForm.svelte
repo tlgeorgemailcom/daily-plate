@@ -750,8 +750,8 @@
                 <button type="button" class="suggestion-fill-btn" onclick={() => fillFromSuggestion(s)}>
                   Fill Entire Recipe
                 </button>
-                <button type="button" class="suggestion-skip-btn" onclick={() => suggestionsDismissed = true}>
-                  Start Blank
+                <button type="button" class="suggestion-skip-btn" onclick={() => expandedSuggestionId = null}>
+                  Close
                 </button>
               </div>
             </div>
