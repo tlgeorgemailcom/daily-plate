@@ -443,11 +443,10 @@
     dishName.trim().split(/\s+/).length < 2 && dishName.trim().length > 0
   );
   let nameReady = $derived(
-    dishName.trim().split(/\s+/).length >= 2 && recipeSuffix.trim().length > 0
+    dishName.trim().length > 0 && recipeSuffix.trim().length > 0
   );
   let isValid = $derived(
     dishName.trim().length > 0 &&
-    !dishNameTooGeneric &&
     recipeSuffix.trim().length > 0 &&
     ingredients.some(i => i.name.trim()) &&
     instructions.some(i => i.text.trim())
@@ -599,11 +598,10 @@
           bind:value={dishName}
           placeholder="e.g., Apple Pie"
           class="form-input"
-          class:input-error={dishNameTooGeneric}
           required
         />
         {#if dishNameTooGeneric}
-          <span class="field-hint field-hint-warn">Use a dish name like "Apple Pie" or "Chicken Stir Fry"</span>
+          <span class="field-hint">More specific names improve matches (example: "Apple Pie")</span>
         {/if}
       </label>
 

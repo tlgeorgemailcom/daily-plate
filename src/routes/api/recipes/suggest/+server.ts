@@ -128,7 +128,7 @@ function toCanonicalInstructions(raw: unknown[]): CanonicalInstruction[] {
 
 export const GET: RequestHandler = async ({ url }) => {
   const dish = url.searchParams.get('dish')?.trim() ?? '';
-  if (!dish || dish.length < 3) {
+  if (!dish || dish.length < 2) {
     return json({ suggestions: [] });
   }
 
