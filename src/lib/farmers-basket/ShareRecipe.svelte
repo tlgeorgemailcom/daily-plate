@@ -710,13 +710,11 @@
             </div>
             <div class="info-panel-body">
               <p><strong>💡 Dish Name tip:</strong> Use the common name everyone recognises — <em>Apple Pie</em>, <em>Chicken Stir Fry</em>, <em>Bean Tacos</em>. Put your personal touch in <strong>Your Version</strong>. A recognisable Dish Name helps match your recipe to existing ones so you can start from a known base.</p>
-              <p>Most recipes — in cookbooks, on food blogs, on websites — list ingredients in their raw or pre-cooked state — "1 cup dry lentils" or "1 cup dry rice" — We appreciate you sharing recipes in this format, and your recipe submission will be visible to all players once reviewed.</p>
+              <p>Most recipes — in cookbooks, on food blogs, on websites — list ingredients in their raw or pre-cooked state: "1 cup dry lentils", "1 cup dry rice", "2 eggs". We appreciate you sharing recipes in this format, and your submission will be visible to all players once reviewed.</p>
               <p>You also have the option to link each ingredient to the nutrition database.</p>
-              <p>The nutrition database only contains food <strong>"as eaten"</strong> — the way it actually arrives on your plate, ready to consume.</p>
-              <p>Nutrition science measures food the way your body actually receives it — after it has been cooked, prepared, and is ready to eat. That is the only measurement that tells you what your body actually got.</p>
-              <p>The dataset used in the Basket game draws from the USDA SR Legacy Foods dataset — one of the most comprehensive nutrition references available — filtered to include only foods as they are actually eaten.</p>
-              <p>If you choose to link, match every ingredient to its cooked or ready-to-eat form. Your recipe stays exactly as you wrote it — only the nutrition connection is added.</p>
-              <p><strong>Linking is an enhancement, never a requirement.</strong> If you'd like to add nutrition links later, you can always come back and connect each ingredient to its as-eaten equivalent. Linked recipes earn a higher ranking and are guaranteed a rotation in the daily Recipe of the Day — but that's entirely your choice, whenever you're ready.</p>
+              <p><strong>Link ingredients exactly as your recipe writes them</strong> — raw, dry, or uncooked. The game automatically adjusts for cooking losses and water evaporation using USDA retention data, so the nutrition shown to players reflects what is actually eaten. Your recipe text stays exactly as you wrote it — only the nutrition connection is added behind the scenes.</p>
+              <p>The dataset used in the Basket game draws from the USDA SR Legacy Foods dataset — one of the most comprehensive nutrition references available.</p>
+              <p><strong>Linking is an enhancement, never a requirement.</strong> You can always come back and add links later. Linked recipes earn a higher ranking and are guaranteed a rotation in the daily Recipe of the Day — but that is entirely your choice, whenever you are ready.</p>
             </div>
           </div>
         {/if}
@@ -729,11 +727,10 @@
             </div>
             <div class="info-panel-body">
               <p><strong>💡 Dish Name tip:</strong> Use the common name everyone recognises — <em>Apple Pie</em>, <em>Pancakes</em>, <em>Macaroni and Cheese</em>. Your Dish Name is how the game finds and matches your recipe. Keep your personal style in <strong>Your Version</strong>.</p>
-              <p>There are three ways to link your recipe to the nutrition database.</p>
-              <p><strong>Ingredient by ingredient</strong><br>Match each ingredient to its cooked or ready-to-eat form in the database. Best for recipes where the individual ingredients are the nutrition story — a salad, a grain bowl, a stir-fry.</p>
-              <p><strong>Baking ingredients</strong> (eggs, flour, butter, sugar) should be linked to their raw or plain form — not a cooked version. Nutrient losses from baking heat will be automatically corrected for your recipe using USDA retention data. Water evaporates during baking, concentrating the finished product — but this should be within normal recipe estimation range.</p>
-              <p><strong>Whole dish</strong><br>Some recipes produce a dish that already exists in the database exactly as eaten — pancakes, apple pie, bean tacos, macaroons. Link the entire recipe to that single database entry. Your full recipe — all ingredients and instructions — is always preserved exactly as you wrote it. A macaroon recipe can list raw eggs; the link connects the finished macaroon, not each ingredient. There is no requirement to match individual ingredients separately.</p>
-              <p><strong>Mixed</strong><br>Some recipes combine a whole dish with additional components that exist separately — apple pie à la mode, for example. Apple pie is in the database and so is vanilla ice cream. Link the main dish as a whole and link only the extra components individually. The main dish ingredients do not need separate matching.</p>
+              <p>There are three ways to link your recipe to the nutrition database. In all three methods, <strong>link ingredients exactly as your recipe writes them</strong> — raw, dry, or uncooked. The game applies USDA retention factors automatically so nutrition reflects what is actually eaten.</p>
+              <p><strong>Ingredient by ingredient</strong><br>Link each ingredient to its raw or uncooked entry in the database. Best for recipes where individual ingredients tell the nutrition story — a salad, a grain bowl, a stir-fry. The game handles cooking losses for you.</p>
+              <p><strong>Whole dish</strong><br>Some recipes produce a finished dish that already exists in the database — pancakes, apple pie, bean tacos, macaroons. Link the entire recipe to that single entry. Your full recipe — all ingredients and instructions — is always preserved exactly as you wrote it. There is no requirement to match individual ingredients separately.</p>
+              <p><strong>Mixed</strong><br>Some recipes combine a whole dish with additional components — apple pie à la mode, for example. Link the main dish as a whole entry and link only the extra components individually. The main dish ingredients do not need separate matching.</p>
               <p>All three methods qualify your recipe for Tier 1 and the daily Recipe of the Day rotation. Choose whichever fits your recipe best.</p>
             </div>
           </div>
