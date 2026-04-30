@@ -1,6 +1,7 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { queryOne } from '$lib/server/turso';
+import { toDisplayRecipeCategory } from '$lib/farmers-basket/recipe-categories';
 
 // GET ?code=ABC123 — look up a draft recipe by its edit code
 // Used by collaborators entering a code in the Share Your Recipe screen.
@@ -37,7 +38,7 @@ export const GET: RequestHandler = async ({ url }) => {
   return json({
     recipeId: recipe.id,
     name: recipe.title,
-    category: recipe.category,
+    category: toDisplayRecipeCategory(recipe.category),
     dietaryCategory: recipe.dietary_category ?? 'all',
     prepTime: recipe.prep_time ?? '',
     servings: recipe.servings ?? '',

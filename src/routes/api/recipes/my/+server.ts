@@ -2,6 +2,7 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { queryAll, execute } from '$lib/server/turso';
 import { calcNutritionJson } from '$lib/server/calcNutrition';
+import { toDisplayRecipeCategory, toStoredRecipeCategory } from '$lib/farmers-basket/recipe-categories';
 
 interface RecipeRow {
   id: string;
@@ -45,7 +46,7 @@ export const GET: RequestHandler = async ({ url }) => {
       const recipes = rows.map(row => ({
         id: row.id,
         recipeName: row.title,
-        category: row.category,
+        category: toDisplayRecipeCategory(row.category),
         dietaryCategory: row.dietary_category || 'all',
         prepTime: row.prep_time || '',
         servings: row.servings || '',
@@ -94,7 +95,7 @@ export const GET: RequestHandler = async ({ url }) => {
     const recipes = rows.map(row => ({
       id: row.id,
       recipeName: row.title,
-      category: row.category,
+      category: toDisplayRecipeCategory(row.category),
       dietaryCategory: row.dietary_category || 'all',
       prepTime: row.prep_time || '',
       servings: row.servings || '',
@@ -199,7 +200,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
     await execute(sql,
       [
         updates.recipeName || null,
-        updates.category || null,
+        (updates.category ? toStoredRecipeCategory(updates.category) : null),
         updates.dietaryCategory || null,
         updates.prepTime || null,
         updates.servings || null,

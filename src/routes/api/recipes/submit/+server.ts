@@ -2,6 +2,7 @@ import { json, error } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { execute, queryOne } from '$lib/server/turso';
 import { calcNutritionJson } from '$lib/server/calcNutrition';
+import { toStoredRecipeCategory } from '$lib/farmers-basket/recipe-categories';
 
 const EMPTY_NUTRITION_JSON = '{}';
 const DEFAULT_VERSION = 'pending';
@@ -18,6 +19,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
   try {
     const body = await request.json();
     const { recipeId, playerId, code, submit, ...fields } = body;
+    const normalizedCategory = fields.category ? toStoredRecipeCategory(fields.category) : null;
 
     if (!recipeId || (!playerId && !code)) {
       return json({ error: 'Missing recipeId and playerId or code' }, { status: 400 });
@@ -70,7 +72,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
         WHERE id = ?`,
         [
           fields.recipeName,
-          fields.category,
+          normalizedCategory,
           fields.dietaryCategory || null,
           fields.prepTime || null,
           fields.servings || null,
@@ -108,6 +110,7 @@ interface RecipeRow {
 export const POST: RequestHandler = async ({ request }) => {
   try {
     const body = await request.json();
+    const normalizedCategory = toStoredRecipeCategory(body.category);
     
     // Require player ID and paid subscription - free users cannot submit recipes
     if (!body.playerId) {
@@ -127,7 +130,7 @@ export const POST: RequestHandler = async ({ request }) => {
     // Validate required fields
     // Drafts only need a recipe name — collaborators fill in the rest.
     // Full submissions require ingredients and instructions too.
-    if (!body.recipeName || !body.category) {
+    if (!body.recipeName || !normalizedCategory) {
       return json({ error: 'Missing required fields' }, { status: 400 });
     }
     if (body.draft !== true && (!body.ingredients?.length || !body.instructions?.length)) {
@@ -154,7 +157,7 @@ export const POST: RequestHandler = async ({ request }) => {
         recipeId,
         submittedBy,
         body.recipeName,
-        body.category,
+        normalizedCategory,
         body.dietaryCategory || null,
         body.prepTime || null,
         body.servings || null,

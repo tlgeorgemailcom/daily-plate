@@ -1,5 +1,6 @@
 <script lang="ts">
   import { FOOD_EMOJI } from '$lib/farmers-basket/types';
+  import { RECIPE_CATEGORY_OPTIONS, toStoredRecipeCategory } from '$lib/farmers-basket/recipe-categories';
   import type { FoodType, AnimalType, DietaryCategory } from '$lib/farmers-basket/types';
   import FoodIcon from '$lib/farmers-basket/FoodIcon.svelte';
   import { FOODS } from '$lib/data/food-portions';
@@ -82,19 +83,6 @@
   }: Props = $props();
   
   // Constants
-  const CATEGORIES = [
-    'Breakfast',
-    'Soups & Stews',
-    'Sandwiches & Burgers',
-    'Salads',
-    'Pasta & Pizza',
-    'Entrees & Main Courses',
-    'Sides',
-    'Desserts',
-    'Beverages',
-    'Sauces & Condiments'
-  ];
-  
   const DIETARY_CATEGORIES = [
     { id: 'all' as DietaryCategory, name: 'All Foods', emoji: '🍽️', description: 'No restrictions' },
     { id: 'pollo-pesca' as DietaryCategory, name: 'Pollo-Pesca', emoji: '🍗🐟', description: 'No red meat' },
@@ -115,7 +103,7 @@
   let dishName = $state(initialData.dishName || (initialData.recipeName?.includes(' — ') ? initialData.recipeName.split(' — ')[0] : initialData.recipeName || ''));
   let recipeSuffix = $state(initialData.recipeSuffix || (initialData.recipeName?.includes(' — ') ? initialData.recipeName.split(' — ')[1] : ''));
   let cookingMethod = $state(initialData.cookingMethod || 'Bake');
-  let category = $state(initialData.category || 'Entrees & Main Courses');
+  let category = $state(toStoredRecipeCategory(initialData.category));
   let dietaryCategory = $state<DietaryCategory>(initialData.dietaryCategory || 'all');
   let submitterName = $state(initialData.submitterName || '');
   let prepTime = $state(initialData.prepTime || '');
@@ -589,7 +577,7 @@
   });
 
   function applySuggestionMeta(suggestion: RecipeSuggestion) {
-    category = suggestion.category ?? category;
+    category = toStoredRecipeCategory(suggestion.category);
     if (suggestion.dietaryCategory) dietaryCategory = suggestion.dietaryCategory as never;
     if (suggestion.prepTime) prepTime = suggestion.prepTime;
     if (suggestion.servings) servings = suggestion.servings;
@@ -774,8 +762,8 @@
       <label class="form-label">
         Dish Family *
         <select bind:value={category} class="form-select">
-          {#each CATEGORIES as cat}
-            <option value={cat}>{cat}</option>
+          {#each RECIPE_CATEGORY_OPTIONS as cat}
+            <option value={cat.id}>{cat.label}</option>
           {/each}
         </select>
       </label>

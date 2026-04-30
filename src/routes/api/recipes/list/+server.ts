@@ -1,6 +1,7 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { queryAll } from '$lib/server/turso';
+import { toDisplayRecipeCategory } from '$lib/farmers-basket/recipe-categories';
 
 interface RecipeRow {
   id: string;
@@ -63,7 +64,7 @@ export const GET: RequestHandler = async ({ url }) => {
     const recipes = rows.map(row => ({
       id: row.id,
       recipeName: row.name,
-      category: row.category,
+      category: toDisplayRecipeCategory(row.category),
       dietaryCategory: row.dietary_category,
       submitterName: row.submitted_by || 'System',
       prepTime: row.prep_time || '',

@@ -1,6 +1,7 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { execute, queryAll } from '$lib/server/turso';
+import { toDisplayRecipeCategory, toStoredRecipeCategory } from '$lib/farmers-basket/recipe-categories';
 
 interface RecipeSubmission {
   id: string;
@@ -44,7 +45,7 @@ function buildPlayerSubmission(row: Record<string, unknown>): RecipeSubmission {
   return {
     id: row.id as string,
     recipeName: row.recipeName as string,
-    category: (row.category as string) || 'Other',
+    category: toDisplayRecipeCategory((row.category as string) || 'Other'),
     dietaryCategory: (row.dietaryCategory as string | null) || 'all',
     submitterName: (row.submitterName as string | null) || 'Player',
     prepTime: (row.prepTime as string | null) || '',
@@ -68,7 +69,7 @@ function buildDevSubmission(row: Record<string, unknown>): RecipeSubmission {
   return {
     id: row.id as string,
     recipeName: row.recipeName as string,
-    category: (row.category as string) || 'Other',
+    category: toDisplayRecipeCategory((row.category as string) || 'Other'),
     dietaryCategory: (row.dietaryCategory as string | null) || 'all',
     submitterName: (row.submitterName as string | null) || 'System',
     prepTime: (row.prepTime as string | null) || '',
@@ -183,7 +184,7 @@ export const POST: RequestHandler = async ({ request }) => {
           newId,
           newId,
           recipeName,
-          category || 'Dinner',
+          toStoredRecipeCategory(category),
           dietaryCategory || 'all',
           prepTime || '',
           servings || '',
@@ -249,7 +250,7 @@ export const POST: RequestHandler = async ({ request }) => {
          WHERE id = ?`,
         [
           recipeName || null,
-          category || null,
+          (category ? toStoredRecipeCategory(category) : null),
           dietaryCategory || null,
           prepTime !== undefined ? prepTime : null,
           servings !== undefined ? servings : null,
@@ -322,7 +323,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
          WHERE id = ?`,
         [
           updates.recipeName || null,
-          updates.category || null,
+          (updates.category ? toStoredRecipeCategory(updates.category) : null),
           updates.dietaryCategory || null,
           updates.prepTime || null,
           updates.servings || null,
@@ -363,7 +364,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
        WHERE recipe_id = ?`,
       [
         updates.recipeName || null,
-        updates.category || null,
+        (updates.category ? toStoredRecipeCategory(updates.category) : null),
         updates.dietaryCategory || null,
         updates.prepTime || null,
         updates.servings || null,

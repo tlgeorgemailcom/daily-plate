@@ -2,24 +2,14 @@
   import { onMount, onDestroy } from 'svelte';
   import { canUseStorage } from '$lib/stores/playerStore';
   import type { Level, FoodType, DietaryCategory } from './types';
+  import { RECIPE_CATEGORY_OPTIONS, toDisplayRecipeCategory, toStoredRecipeCategory } from './recipe-categories';
   import FoodIcon from './FoodIcon.svelte';
   import RecipeBadges from './RecipeBadges.svelte';
   import RecipeForm, { type RecipeFormData, type RecipeIngredient } from './RecipeForm.svelte';
   import { clearOverrideCache } from './level-overrides';
   
   // All available meal categories (shown even if empty)
-  const BASE_CATEGORIES = [
-    'Breakfast',
-    'Soups & Stews',
-    'Sandwiches & Burgers',
-    'Salads',
-    'Pasta & Pizza',
-    'Entrees & Main Courses',
-    'Sides',
-    'Desserts',
-    'Beverages',
-    'Sauces & Condiments'
-  ];
+  const BASE_CATEGORIES = RECIPE_CATEGORY_OPTIONS.map((category) => category.id);
   
   // Dietary preference categories
   // Using cooked food emojis (not live animals) for child-friendly display
@@ -207,7 +197,7 @@
 
   $effect(() => {
     const baseCategories = hasInfantProfile ? [...BASE_CATEGORIES, 'Baby Food'] : BASE_CATEGORIES;
-    const levelCategories = Array.from(new Set(levels.map((level) => level.category).filter(Boolean)));
+    const levelCategories = Array.from(new Set(levels.map((level) => toStoredRecipeCategory(level.category)).filter(Boolean)));
     const extraCategories = levelCategories.filter((category) => !baseCategories.includes(category));
     categories = [...baseCategories, ...extraCategories];
   });
@@ -224,9 +214,10 @@
     }
     // Fill with filtered levels
     for (const level of filteredLevels) {
-      const categoryLevels = groups.get(level.category) || [];
+      const normalizedCategory = toStoredRecipeCategory(level.category);
+      const categoryLevels = groups.get(normalizedCategory) || [];
       categoryLevels.push(level);
-      groups.set(level.category, categoryLevels);
+      groups.set(normalizedCategory, categoryLevels);
     }
     return groups;
   });
@@ -248,7 +239,7 @@
     isSearching
       ? filteredLevels.filter(l => 
           l.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          l.category.toLowerCase().includes(searchQuery.toLowerCase())
+          toDisplayRecipeCategory(l.category).toLowerCase().includes(searchQuery.toLowerCase())
         )
       : []
   );
@@ -1363,7 +1354,7 @@
 
   let currentCategory = $derived(
     currentLevelId 
-      ? levels.find(l => l.id === currentLevelId)?.category ?? '' 
+      ? toStoredRecipeCategory(levels.find(l => l.id === currentLevelId)?.category ?? '')
       : ''
   );
 </script>
@@ -1433,7 +1424,7 @@
         
         <div class="cotd-card">
           <h3 class="cotd-name">{todaysRecipe.name}</h3>
-          <span class="cotd-category">{todaysRecipe.category}</span>
+          <span class="cotd-category">{toDisplayRecipeCategory(todaysRecipe.category)}</span>
           <RecipeBadges sr28Rule={todaysRecipe.sr28Rule} isCommunityRecipe={todaysRecipe.isCommunityRecipe} compact={true} />
           
           {#if todaysRecipe.imageUrl}
@@ -1721,7 +1712,7 @@
           <div class="recipe-header">
             <span class="recipe-number">#{selectedLevel.levelNum}</span>
             <h3 class="recipe-name">{selectedLevel.name}</h3>
-            <span class="recipe-category">{selectedLevel.category}</span>
+            <span class="recipe-category">{toDisplayRecipeCategory(selectedLevel.category)}</span>
             <RecipeBadges sr28Rule={selectedLevel.sr28Rule} isCommunityRecipe={selectedLevel.isCommunityRecipe} compact={true} />
           </div>
           
@@ -1902,9 +1893,9 @@
               class:complete={stats && stats.total > 0 && stats.completed === stats.total}
               class:empty={isEmpty}
               onclick={() => scrollToCategory(category)}
-              title="{category}: {isEmpty ? 'Coming soon' : `${stats?.completed}/${stats?.total} completed`}"
+              title="{toDisplayRecipeCategory(category)}: {isEmpty ? 'Coming soon' : `${stats?.completed}/${stats?.total} completed`}"
             >
-              <span class="category-name">{category}</span>
+              <span class="category-name">{toDisplayRecipeCategory(category)}</span>
               {#if isEmpty}
                 <span class="category-progress empty">—</span>
               {:else if stats && stats.completed === stats.total}
@@ -1968,11 +1959,11 @@
                 {@const stats = categoryStats().get(category)}
                 {@const isCollapsed = collapsedCategories.has(category)}
                 {@const isEmpty = categoryLevels.length === 0}
-                <div class="category-section" id="category-{category.replace(/\s+/g, '-')}">
+                <div class="category-section" id="category-{category}">
                   <button class="category-header" class:empty={isEmpty} onclick={() => toggleCategory(category)}>
                     <span class="category-title">
                       <span class="expand-icon">{isCollapsed ? '▶' : '▼'}</span>
-                      {category}
+                      {toDisplayRecipeCategory(category)}
                     </span>
                     <div class="category-stats">
                       {#if isEmpty}
