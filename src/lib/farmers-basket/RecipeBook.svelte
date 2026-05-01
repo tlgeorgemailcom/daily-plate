@@ -765,6 +765,9 @@
   function handleAddNewBuiltinClick() {
     const password = prompt('Enter moderator password:');
     if (password === MODERATOR_PASSWORD) {
+      // Force add-new mode to render even when opening from Recipe of the Day.
+      showRecipeOfDay = false;
+      showDietarySelect = false;
       isAddingNewBuiltin = true;
       saveError = null;
       saveSuccess = false;
@@ -1420,7 +1423,7 @@
         
         <p class="dietary-hint">You can change this anytime in the Recipe Book</p>
       </div>
-    {:else if showRecipeOfDay && !selectedLevel && recipeOfTheDay()}
+    {:else if showRecipeOfDay && !selectedLevel && !isAddingNewBuiltin && recipeOfTheDay()}
       <!-- RECIPE OF THE DAY VIEW -->
       {@const todaysRecipe = recipeOfTheDay()}
       {@const currentDiet = DIETARY_CATEGORIES.find(d => d.id === dietaryPreference)}
