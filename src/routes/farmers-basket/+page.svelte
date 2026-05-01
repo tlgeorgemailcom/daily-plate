@@ -784,7 +784,7 @@
       </div>
     </div>
     <div class="level-info">
-      Level {game.currentLevel?.id ?? '?'}: {game.currentLevel?.name ?? 'Loading...'} 
+      {game.currentLevel?.name ?? 'Loading...'}
       <span style="color: {game.gameStatus === 'playing' ? 'green' : 'red'}; font-weight: bold;">
         [{game.gameStatus}]
       </span>
