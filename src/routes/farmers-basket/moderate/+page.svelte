@@ -104,11 +104,14 @@
     loading = true;
     error = null;
     try {
-      const res = await fetch('/api/recipes/list?status=pending');
+      const res = await fetch('/api/recipes/moderate?filter=pending');
       const data = await res.json();
+      if (!res.ok) {
+        throw new Error((data?.error as string) || `Failed to load pending recipes (${res.status})`);
+      }
       recipes = data.recipes || [];
     } catch (err) {
-      error = 'Failed to load recipes';
+      error = err instanceof Error ? err.message : 'Failed to load pending recipes';
     } finally {
       loading = false;
     }
@@ -119,9 +122,13 @@
     try {
       const res = await fetch('/api/recipes/moderate?filter=approved');
       const data = await res.json();
+      if (!res.ok) {
+        throw new Error((data?.error as string) || `Failed to load published recipes (${res.status})`);
+      }
       publishedRecipes = data.recipes || [];
     } catch (err) {
       console.error('Failed to load published recipes', err);
+      error = err instanceof Error ? err.message : 'Failed to load published recipes';
     } finally {
       loadingPublished = false;
     }
