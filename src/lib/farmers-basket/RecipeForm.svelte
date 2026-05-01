@@ -1476,7 +1476,7 @@
                 {/each}
               </select>
               <select bind:value={ingredient.animal} class="form-select animal-select">
-                <option value="">— Select animal —</option>
+                <option value="">— Select chaser —</option>
                 {#each ANIMAL_TYPES as animal}
                   <option value={animal}>🐾 {animal}</option>
                 {/each}
@@ -1487,7 +1487,7 @@
       </div>
       
       {#if ingredients.filter(i => i.name.trim() && i.gameFood).length === 0}
-        <p class="mapping-warning">⚠️ Select at least one game food to enable gameplay</p>
+        <p class="mapping-warning">⚠️ Select at least one food and chaser to enable gameplay</p>
       {/if}
     </div>
     
