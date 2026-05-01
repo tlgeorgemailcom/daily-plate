@@ -2086,7 +2086,7 @@
   
   .game-mapping-row {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 12px;
     padding: 10px 12px;
@@ -2097,7 +2097,7 @@
   
   .mapping-ingredient {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
     flex: 1;
     min-width: 0;
@@ -2109,9 +2109,9 @@
   }
   
   .mapping-name {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
   }
   
   .mapping-selects {
