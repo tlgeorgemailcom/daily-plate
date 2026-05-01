@@ -288,7 +288,7 @@ export const POST: RequestHandler = async ({ request }) => {
       );
     } else {
       await execute(
-        `UPDATE player_recipes SET status = 'rejected', updated_at = datetime('now') WHERE recipe_id = ?`,
+        `DELETE FROM player_recipes WHERE recipe_id = ?`,
         [id]
       );
     }
@@ -423,7 +423,7 @@ export const DELETE: RequestHandler = async ({ request }) => {
       if (playerRows.length === 0) {
         return json({ error: 'Player recipe not found' }, { status: 404 });
       }
-      await execute(`UPDATE player_recipes SET status = 'rejected', updated_at = datetime('now') WHERE recipe_id = ?`, [id]);
+      await execute(`DELETE FROM player_recipes WHERE recipe_id = ?`, [id]);
       return json({ success: true, recipe: playerRows[0].recipe_name, action: 'unpublished' });
     }
 
