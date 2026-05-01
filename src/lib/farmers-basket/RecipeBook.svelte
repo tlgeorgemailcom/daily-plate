@@ -1389,6 +1389,11 @@
             ▶️ Play
           </button>
         {/if}
+        {#if canReadAllRecipes && !selectedLevel && showRecipeOfDay && recipeOfTheDay()}
+          <button class="share-btn" onclick={() => handlePlay(recipeOfTheDay()!.id)} aria-label="Play recipe of the day">
+            ▶️ Play
+          </button>
+        {/if}
         {#if onshare}
           <button class="share-btn" onclick={onshare} aria-label="Share a recipe">
             📝 Share
