@@ -2088,6 +2088,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 12px;
     padding: 10px 12px;
     background: white;
@@ -2099,7 +2100,7 @@
     display: flex;
     align-items: flex-start;
     gap: 8px;
-    flex: 1;
+    flex: 1 1 120px;
     min-width: 0;
   }
   
@@ -2116,18 +2117,23 @@
   
   .mapping-selects {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
     flex-shrink: 0;
   }
   
   .game-food-select {
     width: 130px;
+    min-width: 100px;
+    flex: 1 1 100px;
     padding: 6px 8px;
     font-size: 0.9rem;
   }
   
   .animal-select {
     width: 130px;
+    min-width: 100px;
+    flex: 1 1 100px;
     padding: 6px 8px;
     font-size: 0.9rem;
   }
