@@ -1092,9 +1092,10 @@
     }}
     onclose={() => { 
       if ($isPremium && !premiumGameMode) {
-        // Keep premium users in recipe-first mode until they explicitly tap Play.
-        showRecipeBook = true;
+        // In recipe-first mode, close exits back to home instead of showing gameplay.
+        showRecipeBook = false;
         showRecipeOfDay = true;
+        void goto('/');
         return;
       }
       showRecipeBook = false;
