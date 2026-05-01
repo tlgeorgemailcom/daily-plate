@@ -5,8 +5,8 @@ import { calcNutritionJson } from '$lib/server/calcNutrition';
 import { toDisplayRecipeCategory, toStoredRecipeCategory } from '$lib/farmers-basket/recipe-categories';
 
 interface RecipeRow {
-  id: string;
-  title: string;
+  recipe_id: string;
+  recipe_name: string;
   category: string;
   dietary_category: string | null;
   prep_time: string | null;
@@ -14,13 +14,15 @@ interface RecipeRow {
   recipe_ingredients_json: string | null;
   recipe_instructions_json: string | null;
   image_url: string | null;
-  user_id: string;
+  submitted_by: string;
   submitter_name: string | null;
   status: string;
   created_at: string;
   moderator_note: string | null;
   nutrition_json: string | null;
   link_type: string | null;
+  cooking_method: string | null;
+  dish_family: string | null;
 }
 
 const EMPTY_NUTRITION_JSON = '{}';
@@ -34,18 +36,18 @@ export const GET: RequestHandler = async ({ url }) => {
     if (playerId) {
       // Subscriber: fetch all their recipes across devices
       const rows = await queryAll<RecipeRow>(
-        `SELECT id, title, category, dietary_category, prep_time, servings,
-          recipe_ingredients_json, recipe_instructions_json, image_url, user_id, submitter_name, status, created_at,
-                moderator_note, nutrition_json, link_type
+        `SELECT recipe_id, recipe_name, category, dietary_category, prep_time, servings,
+          recipe_ingredients_json, recipe_instructions_json, image_url, submitted_by, submitter_name, status, created_at,
+                moderator_note, nutrition_json, link_type, cooking_method, dish_family
          FROM player_recipes 
-         WHERE user_id = ?
+         WHERE submitted_by = ?
          ORDER BY created_at DESC`,
         [playerId]
       );
       
       const recipes = rows.map(row => ({
-        id: row.id,
-        recipeName: row.title,
+        id: row.recipe_id,
+        recipeName: row.recipe_name,
         category: toDisplayRecipeCategory(row.category),
         dietaryCategory: row.dietary_category || 'all',
         prepTime: row.prep_time || '',
@@ -53,11 +55,13 @@ export const GET: RequestHandler = async ({ url }) => {
         ingredients: row.recipe_ingredients_json ? JSON.parse(row.recipe_ingredients_json) : [],
         instructions: row.recipe_instructions_json ? JSON.parse(row.recipe_instructions_json) : [],
         imageUrl: row.image_url || null,
-        submitterName: row.submitter_name || row.user_id,
+        submitterName: row.submitter_name || row.submitted_by,
         status: row.status,
         moderatorNote: row.moderator_note || null,
         submittedAt: row.created_at,
         linkType: row.link_type ?? null,
+        cookingMethod: row.cooking_method || 'Bake',
+        dishFamily: row.dish_family || null,
         nutritionJson: row.nutrition_json && row.nutrition_json !== EMPTY_NUTRITION_JSON
           ? JSON.parse(row.nutrition_json)
           : null
@@ -82,19 +86,19 @@ export const GET: RequestHandler = async ({ url }) => {
     // Build query with placeholders
     const placeholders = ids.map(() => '?').join(', ');
     const rows = await queryAll<RecipeRow>(
-      `SELECT id, title, category, dietary_category, prep_time, servings,
-              recipe_ingredients_json, recipe_instructions_json, image_url, user_id, submitter_name, status, created_at,
-              moderator_note, nutrition_json, link_type
+      `SELECT recipe_id, recipe_name, category, dietary_category, prep_time, servings,
+              recipe_ingredients_json, recipe_instructions_json, image_url, submitted_by, submitter_name, status, created_at,
+              moderator_note, nutrition_json, link_type, cooking_method, dish_family
        FROM player_recipes 
-       WHERE id IN (${placeholders})
+       WHERE recipe_id IN (${placeholders})
        ORDER BY created_at DESC`,
       ids
     );
     
     // Convert to frontend format
     const recipes = rows.map(row => ({
-      id: row.id,
-      recipeName: row.title,
+      id: row.recipe_id,
+      recipeName: row.recipe_name,
       category: toDisplayRecipeCategory(row.category),
       dietaryCategory: row.dietary_category || 'all',
       prepTime: row.prep_time || '',
@@ -102,11 +106,13 @@ export const GET: RequestHandler = async ({ url }) => {
       ingredients: row.recipe_ingredients_json ? JSON.parse(row.recipe_ingredients_json) : [],
       instructions: row.recipe_instructions_json ? JSON.parse(row.recipe_instructions_json) : [],
       imageUrl: row.image_url || null,
-      submitterName: row.submitter_name || row.user_id,
+      submitterName: row.submitter_name || row.submitted_by,
       status: row.status,
       moderatorNote: row.moderator_note || null,
       submittedAt: row.created_at,
       linkType: row.link_type ?? null,
+      cookingMethod: row.cooking_method || 'Bake',
+      dishFamily: row.dish_family || null,
     }));
     
     return json({ recipes });
@@ -133,7 +139,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
     
     // Verify the recipe exists, is pending, and belongs to this submitter
     const existing = await queryAll<RecipeRow>(
-      'SELECT id, status, user_id, title, category, dietary_category, prep_time, servings, recipe_ingredients_json, recipe_instructions_json, image_url, submitter_name, moderator_note, nutrition_json, link_type, created_at FROM player_recipes WHERE id = ?',
+      'SELECT recipe_id, status, submitted_by, recipe_name, category, dietary_category, prep_time, servings, recipe_ingredients_json, recipe_instructions_json, image_url, submitter_name, moderator_note, nutrition_json, link_type, created_at FROM player_recipes WHERE recipe_id = ?',
       [id]
     );
     
@@ -169,7 +175,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
     // Update the recipe and reset to pending (clears any needs_changes or approved state)
     const sql = shouldResetToPending
       ? `UPDATE player_recipes SET
-        title = COALESCE(?, title),
+        recipe_name = COALESCE(?, recipe_name),
           category = COALESCE(?, category),
           dietary_category = COALESCE(?, dietary_category),
           prep_time = COALESCE(?, prep_time),
@@ -178,13 +184,15 @@ export const PATCH: RequestHandler = async ({ request }) => {
         recipe_instructions_json = COALESCE(?, recipe_instructions_json),
           image_url = COALESCE(?, image_url),
           link_type = COALESCE(?, link_type),
+          cooking_method = COALESCE(?, cooking_method),
+          dish_family = COALESCE(?, dish_family),
           nutrition_json = ?,
         updated_at = datetime('now'),
           status = 'pending',
           moderator_note = NULL
-         WHERE id = ?`
+         WHERE recipe_id = ?`
       : `UPDATE player_recipes SET
-        title = COALESCE(?, title),
+        recipe_name = COALESCE(?, recipe_name),
           category = COALESCE(?, category),
           dietary_category = COALESCE(?, dietary_category),
           prep_time = COALESCE(?, prep_time),
@@ -193,10 +201,12 @@ export const PATCH: RequestHandler = async ({ request }) => {
         recipe_instructions_json = COALESCE(?, recipe_instructions_json),
           image_url = COALESCE(?, image_url),
           link_type = COALESCE(?, link_type),
+          cooking_method = COALESCE(?, cooking_method),
+          dish_family = COALESCE(?, dish_family),
           nutrition_json = ?,
         updated_at = datetime('now'),
           status = 'pending'
-         WHERE id = ?`;
+         WHERE recipe_id = ?`;
     await execute(sql,
       [
         updates.recipeName || null,
@@ -208,6 +218,8 @@ export const PATCH: RequestHandler = async ({ request }) => {
         updates.instructions ? JSON.stringify(updates.instructions) : null,
         updates.imageUrl || null,
         linkType,
+        updates.cookingMethod || null,
+        updates.dishFamily || null,
         nutritionJson || EMPTY_NUTRITION_JSON,
         id
       ]
@@ -240,7 +252,7 @@ export const DELETE: RequestHandler = async ({ request }) => {
     
     // Verify the recipe exists and is pending
     const existing = await queryAll<RecipeRow>(
-      'SELECT id, title, status, user_id, category, dietary_category, prep_time, servings, recipe_ingredients_json, recipe_instructions_json, image_url, submitter_name, moderator_note, nutrition_json, link_type, created_at FROM player_recipes WHERE id = ?',
+      'SELECT recipe_id, recipe_name, status, submitted_by, category, dietary_category, prep_time, servings, recipe_ingredients_json, recipe_instructions_json, image_url, submitter_name, moderator_note, nutrition_json, link_type, created_at FROM player_recipes WHERE recipe_id = ?',
       [id]
     );
     
@@ -255,9 +267,9 @@ export const DELETE: RequestHandler = async ({ request }) => {
     }
     
     // Delete the recipe
-    await execute('DELETE FROM player_recipes WHERE id = ? AND status = ?', [id, 'pending']);
+    await execute('DELETE FROM player_recipes WHERE recipe_id = ? AND status = ?', [id, 'pending']);
     
-    console.log(`🗑️ Player withdrew pending recipe: "${recipe.title}"`);
+    console.log(`🗑️ Player withdrew pending recipe: "${recipe.recipe_name}"`);
     
     return json({ 
       success: true, 

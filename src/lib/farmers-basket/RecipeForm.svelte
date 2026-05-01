@@ -43,6 +43,7 @@
     nutritionComplete?: boolean;           // true when all ingredients have nutrition links
     linkMode?: 'ingredient' | 'dish' | 'mixed';
     dishLink?: { foodWord: string; ndbNo: string; portionDesc: string; portionGrams: number; servingCount: number };
+    dishFamily?: string;
   }
   
   // Props
@@ -61,6 +62,8 @@
     submitLabel?: string;
     /** Whether submission is in progress (disables submit) */
     submitting?: boolean;
+    /** If true, suppresses the suggestion panel (useful in edit mode) */
+    disableSuggestions?: boolean;
     /** Error message to display */
     errorMessage?: string;
     /** Hide default action buttons (for custom actions snippet) */
@@ -79,7 +82,8 @@
     submitting = false,
     errorMessage = '',
     hideDefaultActions = false,
-    customActions
+    customActions,
+    disableSuggestions = false
   }: Props = $props();
   
   // Constants
@@ -104,6 +108,7 @@
   let dishName = $state(initialData.dishName || (initialData.recipeName?.includes(' — ') ? initialData.recipeName.split(' — ')[0] : initialData.recipeName || ''));
   let recipeSuffix = $state(initialData.recipeSuffix || (initialData.recipeName?.includes(' — ') ? initialData.recipeName.split(' — ')[1] : ''));
   let cookingMethod = $state(initialData.cookingMethod || 'Bake');
+  let dishFamily = $state(initialData.dishFamily || '');
   let category = $state(toStoredRecipeCategory(initialData.category));
   let dietaryCategory = $state<DietaryCategory>(initialData.dietaryCategory || 'all');
   let submitterName = $state(initialData.submitterName || '');
@@ -561,6 +566,7 @@
       dishName: dishName.trim(),
       recipeSuffix: recipeSuffix.trim(),
       cookingMethod,
+      dishFamily: dishFamily || undefined,
       category,
       dietaryCategory,
       submitterName,
@@ -653,6 +659,7 @@
     ingredients: RecipeIngredient[];
     instructions: RecipeInstruction[];
     sourceType: 'dev' | 'player';
+    dishFamily?: string | null;
   }
 
   let suggestions = $state<RecipeSuggestion[]>([]);
@@ -670,7 +677,7 @@
 
   // Fetch suggestions when nameReady becomes true
   $effect(() => {
-    if (!nameReady) return;
+    if (!nameReady || disableSuggestions) return;
     const currentDish = dishName.trim();
     suggestionsLoading = true;
     fetch(`/api/recipes/suggest?dish=${encodeURIComponent(currentDish)}`)
@@ -687,6 +694,7 @@
     if (suggestion.dietaryCategory) dietaryCategory = suggestion.dietaryCategory as never;
     if (suggestion.prepTime) prepTime = suggestion.prepTime;
     if (suggestion.servings) servings = suggestion.servings;
+    if (suggestion.dishFamily) dishFamily = suggestion.dishFamily;
   }
 
   function toMappedIngredient(ing: RecipeIngredient, id: number): RecipeIngredient {
@@ -795,6 +803,7 @@
     dishName: dishName.trim(),
     recipeSuffix: recipeSuffix.trim(),
     cookingMethod,
+    dishFamily: dishFamily || undefined,
     category,
     dietaryCategory,
     submitterName,

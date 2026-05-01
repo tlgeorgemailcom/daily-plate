@@ -13,6 +13,7 @@ interface SuggestionRow {
   recipe_ingredients: string | null;
   recipe_instructions: string | null;
   source_type: 'dev' | 'player';
+  dish_family: string | null;
 }
 
 interface CanonicalIngredient {
@@ -141,6 +142,7 @@ export const GET: RequestHandler = async ({ url }) => {
               prep_time, servings,
               recipe_ingredients_json AS recipe_ingredients,
               recipe_instructions_json AS recipe_instructions,
+              dish_family,
               'dev' AS source_type
        FROM dev_recipes
         WHERE status = 'published'
@@ -149,6 +151,7 @@ export const GET: RequestHandler = async ({ url }) => {
               prep_time, servings,
               recipe_ingredients_json AS recipe_ingredients,
               recipe_instructions_json AS recipe_instructions,
+              dish_family,
               'player' AS source_type
        FROM player_recipes
        WHERE status = 'approved'`,
@@ -186,6 +189,7 @@ export const GET: RequestHandler = async ({ url }) => {
         ingredients,
         instructions,
         sourceType: row.source_type,
+        dishFamily: row.dish_family || null,
         matchScore: s,
       };
     });

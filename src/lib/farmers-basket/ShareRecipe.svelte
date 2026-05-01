@@ -485,6 +485,7 @@
       dishName: data.dishName?.trim() || '',
       recipeSuffix: data.recipeSuffix?.trim() || '',
       cookingMethod: data.cookingMethod || 'Bake',
+      dishFamily: data.dishFamily || null,
       category: data.category,
       dietaryCategory: data.dietaryCategory,
       submitterName: data.submitterName.trim() || 'Anonymous',

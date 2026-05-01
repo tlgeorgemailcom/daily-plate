@@ -18,6 +18,8 @@
     moderatorNote?: string | null;
     submittedAt: string;
     linkType?: string | null;
+    cookingMethod?: string;
+    dishFamily?: string | null;
     nutritionJson?: { perServing: { cal: number; pro: number; fat: number; carb: number; fib: number; sug: number; h2o: number }; gramsPerServing: number; servings: number; sources: { ndb: string; name: string; grams: number }[] } | null;
   }
   
@@ -282,6 +284,8 @@
         dietaryCategory: data.dietaryCategory,
         prepTime: data.prepTime,
         servings: data.servings,
+        cookingMethod: data.cookingMethod,
+        dishFamily: data.dishFamily || null,
         ingredients: ingredientsPayload,
         instructions: data.instructions.filter(i => i.text.trim()).map(i => i.text),
         ...(isLinked && data.linkMode ? { linkType: data.linkMode } : {})
@@ -455,6 +459,8 @@
             submitterName: editingRecipe.submitterName,
             prepTime: editingRecipe.prepTime,
             servings: editingRecipe.servings,
+            cookingMethod: editingRecipe.cookingMethod || 'Bake',
+            dishFamily: editingRecipe.dishFamily || '',
             linkMode: (editingRecipe.linkType as any) ?? 'ingredient',
             ...((() => {
               const dish = editingRecipe.ingredients.find(i => i.isDish);
@@ -485,6 +491,7 @@
           submitLabel={isUploadingImage ? '⏳ Uploading...' : editingRecipe?.status === 'approved' ? 'Submit for Re-approval' : 'Save Changes'}
           submitting={saving || isUploadingImage}
           errorMessage={saveError}
+          disableSuggestions={true}
         />
       </div>
     </div>
@@ -523,6 +530,9 @@
             
             <div class="recipe-meta">
               <span class="category">{recipe.category}</span>
+              {#if recipe.dishFamily}
+                <span class="dish-family">{recipe.dishFamily}</span>
+              {/if}
               <span class="date">Submitted {formatDate(recipe.submittedAt)}</span>
             </div>
             
