@@ -9,6 +9,7 @@ interface BuiltinRecipeRow {
   category: string;
   dietary_category: string | null;
   cooking_method: string | null;
+  dish_family: string | null;
   prep_time: string | null;
   servings: string | null;
   recipe: string | null;
@@ -41,6 +42,7 @@ interface BuiltinOverride {
   category?: string;
   dietaryCategory?: string;
   cookingMethod?: string;
+  dishFamily?: string;
   prepTime?: string;
   servings?: string;
   recipe?: string[];
@@ -59,6 +61,7 @@ interface NewBuiltinRecipe {
   category: string;
   dietaryCategory: string;
   cookingMethod?: string;
+  dishFamily?: string;
   prepTime?: string;
   servings?: string;
   recipe: string[];
@@ -157,7 +160,7 @@ export const GET: RequestHandler = async () => {
   try {
     // Get published dev recipes that override existing local LEVELS rows.
     const overrideRows = await queryAll<BuiltinRecipeRow>(
-      `SELECT recipe_id, recipe_name, category, dietary_category, cooking_method, prep_time, servings, 
+      `SELECT recipe_id, recipe_name, category, dietary_category, cooking_method, dish_family, prep_time, servings, 
               recipe, animal_spawns, recipe_instructions_json, recipe_ingredients_json,
               nutrition_json, image_url, created_at, submitted_by
        FROM dev_recipes 
@@ -168,7 +171,7 @@ export const GET: RequestHandler = async () => {
 
     // Get admin-added new dev recipes.
     const newRows = await queryAll<BuiltinRecipeRow>(
-      `SELECT recipe_id, recipe_name, category, dietary_category, cooking_method, prep_time, servings, 
+      `SELECT recipe_id, recipe_name, category, dietary_category, cooking_method, dish_family, prep_time, servings, 
               recipe, animal_spawns, recipe_instructions_json, recipe_ingredients_json,
               nutrition_json, image_url, created_at, submitted_by
        FROM dev_recipes 
@@ -189,6 +192,7 @@ export const GET: RequestHandler = async () => {
       if (row.category) override.category = toDisplayRecipeCategory(row.category);
       if (row.dietary_category) override.dietaryCategory = row.dietary_category;
       if (row.cooking_method) override.cookingMethod = row.cooking_method;
+      if (row.dish_family) override.dishFamily = row.dish_family;
       if (row.prep_time) override.prepTime = row.prep_time;
       if (row.servings) override.servings = row.servings;
       if (row.recipe) override.recipe = JSON.parse(row.recipe);
@@ -208,6 +212,7 @@ export const GET: RequestHandler = async () => {
       category: toDisplayRecipeCategory(row.category || 'Other'),
       dietaryCategory: row.dietary_category || 'all',
       cookingMethod: row.cooking_method ?? undefined,
+      dishFamily: row.dish_family ?? undefined,
       prepTime: row.prep_time ?? undefined,
       servings: row.servings ?? undefined,
       recipe: row.recipe ? JSON.parse(row.recipe) : [],
@@ -255,11 +260,11 @@ export const PATCH: RequestHandler = async ({ request }) => {
       // Create new dev recipe row.
       await db.execute({
         sql: `INSERT INTO dev_recipes (
-              recipe_id, food_word, recipe_name, category, dietary_category, cooking_method, prep_time, servings,
+              recipe_id, food_word, recipe_name, category, dietary_category, cooking_method, dish_family, prep_time, servings,
               recipe, animal_spawns, recipe_instructions_json, recipe_ingredients_json,
               image_url, submitted_by, status, created_at, updated_at,
               grams_per_serving, nutrition_json, nutrient_version, retention_model_version, source_match_version
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'published', ?, ?, ?, ?, ?, ?, ?)`,
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'published', ?, ?, ?, ?, ?, ?, ?)`,
         args: [
           id,
           id,
@@ -267,6 +272,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
           (updates.category ? toStoredRecipeCategory(updates.category) : null),
           updates.dietaryCategory || null,
           updates.cookingMethod || null,
+          updates.dishFamily || null,
           updates.prepTime || null,
           updates.servings || null,
           updates.recipe ? JSON.stringify(updates.recipe) : null,
@@ -291,7 +297,8 @@ export const PATCH: RequestHandler = async ({ request }) => {
               recipe_name = COALESCE(?, recipe_name),
               category = COALESCE(?, category),
               dietary_category = COALESCE(?, dietary_category),
-            cooking_method = COALESCE(?, cooking_method),
+              cooking_method = COALESCE(?, cooking_method),
+              dish_family = COALESCE(?, dish_family),
               prep_time = COALESCE(?, prep_time),
               servings = COALESCE(?, servings),
               recipe = COALESCE(?, recipe),
@@ -307,6 +314,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
           (updates.category ? toStoredRecipeCategory(updates.category) : null),
           updates.dietaryCategory || null,
           updates.cookingMethod || null,
+          updates.dishFamily || null,
           updates.prepTime || null,
           updates.servings || null,
           updates.recipe ? JSON.stringify(updates.recipe) : null,
@@ -351,11 +359,11 @@ export const POST: RequestHandler = async ({ request }) => {
 
     await db.execute({
       sql: `INSERT INTO dev_recipes (
-            recipe_id, food_word, recipe_name, category, dietary_category, cooking_method, prep_time, servings,
+            recipe_id, food_word, recipe_name, category, dietary_category, cooking_method, dish_family, prep_time, servings,
             recipe, animal_spawns, recipe_instructions_json, recipe_ingredients_json,
             image_url, submitted_by, status, created_at, updated_at,
             grams_per_serving, nutrition_json, nutrient_version, retention_model_version, source_match_version
-          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'published', ?, ?, ?, ?, ?, ?, ?)`,
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'published', ?, ?, ?, ?, ?, ?, ?)`,
       args: [
         id,
         id,
@@ -363,6 +371,7 @@ export const POST: RequestHandler = async ({ request }) => {
         toStoredRecipeCategory(data.category),
         data.dietaryCategory || 'all',
         data.cookingMethod || null,
+        data.dishFamily || null,
         data.prepTime || null,
         data.servings || null,
         data.recipe ? JSON.stringify(data.recipe) : null,

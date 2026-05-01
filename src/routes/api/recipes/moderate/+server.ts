@@ -29,6 +29,8 @@ interface RecipeSubmission {
   reviewedBy?: string;
   editedAt?: string;
   editedBy?: string;
+  cookingMethod?: string;
+  dishFamily?: string | null;
 }
 
 function parseJson<T>(value: string | null | undefined, fallback: T): T {
@@ -60,7 +62,9 @@ function buildPlayerSubmission(row: Record<string, unknown>): RecipeSubmission {
     modIngredients: ingredients,
     imageUrl: (row.imageUrl as string | null) || undefined,
     reviewedAt: (row.updatedAt as string | null) || undefined,
-    editedAt: (row.updatedAt as string | null) || undefined
+    editedAt: (row.updatedAt as string | null) || undefined,
+    cookingMethod: (row.cookingMethod as string | null) || undefined,
+    dishFamily: (row.dishFamily as string | null) || null
   };
 }
 
@@ -86,7 +90,9 @@ function buildDevSubmission(row: Record<string, unknown>): RecipeSubmission {
     reviewedAt: (row.updatedAt as string | null) || undefined,
     reviewedBy: (row.submitterName as string | null) || undefined,
     editedAt: (row.updatedAt as string | null) || undefined,
-    editedBy: (row.submitterName as string | null) || undefined
+    editedBy: (row.submitterName as string | null) || undefined,
+    cookingMethod: (row.cookingMethod as string | null) || undefined,
+    dishFamily: (row.dishFamily as string | null) || null
   };
 }
 
@@ -95,12 +101,13 @@ export const GET: RequestHandler = async ({ url }) => {
     const filter = url.searchParams.get('filter');
 
     const pending = await queryAll(`
-      SELECT id, title AS recipeName, category, dietary_category AS dietaryCategory,
-             COALESCE(submitter_name, user_id) AS submitterName, prep_time AS prepTime,
+          SELECT recipe_id AS id, recipe_name AS recipeName, category, dietary_category AS dietaryCategory,
+            COALESCE(submitter_name, submitted_by) AS submitterName, prep_time AS prepTime,
              servings, recipe_ingredients_json AS ingredients,
              recipe_instructions_json AS instructions, created_at AS submittedAt,
              status, recipe AS gameFoods, animal_spawns AS animalSpawns,
-             food_supply AS foodSupply, image_url AS imageUrl, updated_at AS updatedAt
+             food_supply AS foodSupply, image_url AS imageUrl, updated_at AS updatedAt,
+             cooking_method AS cookingMethod, dish_family AS dishFamily
       FROM player_recipes
       WHERE status IN ('pending', 'needs_changes')
       ORDER BY created_at ASC
@@ -112,7 +119,8 @@ export const GET: RequestHandler = async ({ url }) => {
              prep_time AS prepTime, servings, recipe_ingredients_json AS ingredients,
              recipe_instructions_json AS instructions, created_at AS submittedAt,
              status, recipe AS gameFoods, animal_spawns AS animalSpawns,
-             food_supply AS foodSupply, image_url AS imageUrl, updated_at AS updatedAt
+             food_supply AS foodSupply, image_url AS imageUrl, updated_at AS updatedAt,
+             cooking_method AS cookingMethod, dish_family AS dishFamily
       FROM dev_recipes
       WHERE status = 'published'
       ORDER BY created_at ASC
@@ -153,6 +161,8 @@ export const POST: RequestHandler = async ({ request }) => {
       recipeName,
       category,
       dietaryCategory,
+      cookingMethod,
+      dishFamily,
       prepTime,
       servings,
       ingredients,
@@ -175,17 +185,19 @@ export const POST: RequestHandler = async ({ request }) => {
       const now = new Date().toISOString();
       await execute(
         `INSERT INTO dev_recipes (
-          recipe_id, food_word, recipe_name, category, dietary_category, prep_time, servings,
+          recipe_id, food_word, recipe_name, category, dietary_category, cooking_method, dish_family, prep_time, servings,
           recipe, animal_spawns, recipe_ingredients_json, recipe_instructions_json,
           food_supply, image_url, submitted_by, status, created_at, updated_at,
           grams_per_serving, nutrition_json, nutrient_version, retention_model_version, source_match_version
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'published', ?, ?, ?, ?, ?, ?, ?)`,
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'published', ?, ?, ?, ?, ?, ?, ?)`,
         [
           newId,
           newId,
           recipeName,
           toStoredRecipeCategory(category),
           dietaryCategory || 'all',
+          cookingMethod || null,
+          dishFamily || null,
           prepTime || '',
           servings || '',
           JSON.stringify(gameFoods),
@@ -216,7 +228,7 @@ export const POST: RequestHandler = async ({ request }) => {
     }
 
     const existing = await queryAll<{ id: string; recipeName: string; status: string }>(
-      `SELECT id, title AS recipeName, status FROM player_recipes WHERE id = ?`,
+      `SELECT recipe_id AS id, recipe_name AS recipeName, status FROM player_recipes WHERE recipe_id = ?`,
       [id]
     );
     if (existing.length === 0) {
@@ -236,9 +248,11 @@ export const POST: RequestHandler = async ({ request }) => {
       await execute(
         `UPDATE player_recipes SET
           status = 'approved',
-          title = COALESCE(?, title),
+          recipe_name = COALESCE(?, recipe_name),
           category = COALESCE(?, category),
           dietary_category = COALESCE(?, dietary_category),
+          cooking_method = COALESCE(?, cooking_method),
+          dish_family = COALESCE(?, dish_family),
           prep_time = COALESCE(?, prep_time),
           servings = COALESCE(?, servings),
           recipe_ingredients_json = COALESCE(?, recipe_ingredients_json),
@@ -247,11 +261,13 @@ export const POST: RequestHandler = async ({ request }) => {
           animal_spawns = ?,
           food_supply = ?,
           updated_at = datetime('now')
-         WHERE id = ?`,
+         WHERE recipe_id = ?`,
         [
           recipeName || null,
           (category ? toStoredRecipeCategory(category) : null),
           dietaryCategory || null,
+          cookingMethod || null,
+          dishFamily || null,
           prepTime !== undefined ? prepTime : null,
           servings !== undefined ? servings : null,
           ingredients ? JSON.stringify(ingredients) : null,
@@ -267,12 +283,12 @@ export const POST: RequestHandler = async ({ request }) => {
         return json({ error: 'Moderator note is required for requesting changes' }, { status: 400 });
       }
       await execute(
-        `UPDATE player_recipes SET status = 'needs_changes', moderator_note = ?, updated_at = datetime('now') WHERE id = ?`,
+        `UPDATE player_recipes SET status = 'needs_changes', moderator_note = ?, updated_at = datetime('now') WHERE recipe_id = ?`,
         [moderatorNote.trim(), id]
       );
     } else {
       await execute(
-        `UPDATE player_recipes SET status = 'rejected', updated_at = datetime('now') WHERE id = ?`,
+        `UPDATE player_recipes SET status = 'rejected', updated_at = datetime('now') WHERE recipe_id = ?`,
         [id]
       );
     }
@@ -300,7 +316,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
 
     if (isPlayerRecipe) {
       const existing = await queryAll<{ id: string; recipeName: string }>(
-        'SELECT id, title AS recipeName FROM player_recipes WHERE id = ?',
+        'SELECT recipe_id AS id, recipe_name AS recipeName FROM player_recipes WHERE recipe_id = ?',
         [id]
       );
       if (existing.length === 0) {
@@ -309,9 +325,11 @@ export const PATCH: RequestHandler = async ({ request }) => {
 
       await execute(
         `UPDATE player_recipes SET
-          title = COALESCE(?, title),
+          recipe_name = COALESCE(?, recipe_name),
           category = COALESCE(?, category),
           dietary_category = COALESCE(?, dietary_category),
+          cooking_method = COALESCE(?, cooking_method),
+          dish_family = COALESCE(?, dish_family),
           prep_time = COALESCE(?, prep_time),
           servings = COALESCE(?, servings),
           recipe = COALESCE(?, recipe),
@@ -320,11 +338,13 @@ export const PATCH: RequestHandler = async ({ request }) => {
           animal_spawns = COALESCE(?, animal_spawns),
           image_url = COALESCE(?, image_url),
           updated_at = datetime('now')
-         WHERE id = ?`,
+         WHERE recipe_id = ?`,
         [
           updates.recipeName || null,
           (updates.category ? toStoredRecipeCategory(updates.category) : null),
           updates.dietaryCategory || null,
+          updates.cookingMethod || null,
+          updates.dishFamily || null,
           updates.prepTime || null,
           updates.servings || null,
           updates.gameFoods ? JSON.stringify(updates.gameFoods) : null,
@@ -352,6 +372,8 @@ export const PATCH: RequestHandler = async ({ request }) => {
         recipe_name = COALESCE(?, recipe_name),
         category = COALESCE(?, category),
         dietary_category = COALESCE(?, dietary_category),
+        cooking_method = COALESCE(?, cooking_method),
+        dish_family = COALESCE(?, dish_family),
         prep_time = COALESCE(?, prep_time),
         servings = COALESCE(?, servings),
         recipe = COALESCE(?, recipe),
@@ -366,6 +388,8 @@ export const PATCH: RequestHandler = async ({ request }) => {
         updates.recipeName || null,
         (updates.category ? toStoredRecipeCategory(updates.category) : null),
         updates.dietaryCategory || null,
+        updates.cookingMethod || null,
+        updates.dishFamily || null,
         updates.prepTime || null,
         updates.servings || null,
         updates.gameFoods ? JSON.stringify(updates.gameFoods) : null,
@@ -395,12 +419,12 @@ export const DELETE: RequestHandler = async ({ request }) => {
     }
 
     if (id.startsWith('recipe-')) {
-      const playerRows = await queryAll<{ id: string; title: string }>('SELECT id, title FROM player_recipes WHERE id = ?', [id]);
+      const playerRows = await queryAll<{ id: string; recipe_name: string }>('SELECT recipe_id AS id, recipe_name FROM player_recipes WHERE recipe_id = ?', [id]);
       if (playerRows.length === 0) {
         return json({ error: 'Player recipe not found' }, { status: 404 });
       }
-      await execute(`UPDATE player_recipes SET status = 'rejected', updated_at = datetime('now') WHERE id = ?`, [id]);
-      return json({ success: true, recipe: playerRows[0].title, action: 'unpublished' });
+      await execute(`UPDATE player_recipes SET status = 'rejected', updated_at = datetime('now') WHERE recipe_id = ?`, [id]);
+      return json({ success: true, recipe: playerRows[0].recipe_name, action: 'unpublished' });
     }
 
     const devRows = await queryAll<{ recipe_id: string; recipe_name: string }>('SELECT recipe_id, recipe_name FROM dev_recipes WHERE recipe_id = ?', [id]);

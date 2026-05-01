@@ -8,6 +8,7 @@ export interface BuiltinOverride {
   category?: string;
   dietaryCategory?: string;
   cookingMethod?: string;
+  dishFamily?: string;
   prepTime?: string;
   servings?: string;
   recipe?: FoodType[];
@@ -26,6 +27,7 @@ interface NewBuiltinRecipe {
   category: string;
   dietaryCategory: string;
   cookingMethod?: string;
+  dishFamily?: string;
   prepTime?: string;
   servings?: string;
   recipe: FoodType[];
@@ -96,6 +98,7 @@ export async function getLevelsWithOverrides(): Promise<Level[]> {
       category: override.category ?? level.category,
       dietaryCategory: override.dietaryCategory ?? level.dietaryCategory,
       cookingMethod: override.cookingMethod ?? level.cookingMethod,
+      dishFamily: override.dishFamily ?? level.dishFamily,
       prepTime: override.prepTime ?? level.prepTime,
       servings: override.servings ?? level.servings,
       recipe: override.recipe ?? level.recipe,
@@ -124,6 +127,7 @@ export async function getLevelsWithOverrides(): Promise<Level[]> {
     prepTime: r.prepTime,
     servings: r.servings,
     cookingMethod: r.cookingMethod,
+    dishFamily: r.dishFamily,
     recipeInstructions: r.recipeInstructions,
     recipeIngredients: r.recipeIngredients,
     nutritionJson: r.nutritionJson,

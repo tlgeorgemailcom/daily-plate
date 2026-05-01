@@ -38,6 +38,8 @@
     editedAt?: string;
     editedBy?: string;
     linkType?: 'ingredient' | 'dish' | 'mixed';
+    cookingMethod?: string;
+    dishFamily?: string | null;
   }
   
   // Password protection
@@ -150,6 +152,8 @@
       submitterName: recipe.submitterName,
       prepTime: recipe.prepTime || '',
       servings: recipe.servings || '',
+      cookingMethod: recipe.cookingMethod || 'Bake',
+      dishFamily: recipe.dishFamily || '',
       ingredients: ingredients.map((ing, i) => ({
         id: i + 1,
         name: ing.name,
@@ -279,6 +283,8 @@
           recipeName: data.recipeName,
           category: data.category,
           dietaryCategory: data.dietaryCategory,
+          cookingMethod: data.cookingMethod || 'Bake',
+          dishFamily: data.dishFamily || null,
           prepTime: data.prepTime,
           servings: data.servings,
           ingredients: data.ingredients.filter(i => i.name.trim()).map(i => ({
@@ -406,18 +412,32 @@
             recipeName: data.recipeName,
             category: data.category,
             dietaryCategory: data.dietaryCategory,
+            cookingMethod: data.cookingMethod,
+            dishFamily: data.dishFamily || null,
             prepTime: data.prepTime,
             servings: data.servings,
             gameFoods,
             ingredients: data.ingredients.filter(i => i.name.trim()).map(i => ({
               name: i.name,
-              quantity: i.quantity
+              quantity: i.quantity,
+              foodWord: i.foodWord,
+              ndbNo: i.ndbNo,
+              portionDesc: i.portionDesc,
+              portionGrams: i.portionGrams,
+              servingCount: i.servingCount,
+              exempt: i.exempt
             })),
             modIngredients: data.ingredients.filter(i => i.name.trim()).map(i => ({
               name: i.name,
               quantity: i.quantity,
               gameFood: i.gameFood || null,
-              animal: i.animal || null
+              animal: i.animal || null,
+              foodWord: i.foodWord,
+              ndbNo: i.ndbNo,
+              portionDesc: i.portionDesc,
+              portionGrams: i.portionGrams,
+              servingCount: i.servingCount,
+              exempt: i.exempt
             })),
             instructions: data.instructions.filter(i => i.text.trim()).map(i => i.text),
             imageUrl
@@ -501,6 +521,8 @@
           recipeName: data.recipeName,
           category: data.category,
           dietaryCategory: data.dietaryCategory,
+          cookingMethod: data.cookingMethod || 'Bake',
+          dishFamily: data.dishFamily || null,
           prepTime: data.prepTime,
           servings: data.servings,
           ingredients: data.ingredients.filter(i => i.name.trim()).map(i => ({
@@ -682,6 +704,7 @@
                   submitLabel="✅ Approve"
                   submitting={isSaving}
                   errorMessage={saveError || ''}
+                  disableSuggestions={true}
                 >
                   {#snippet customActions({ formData, isValid })}
                     {#if showRequestChangesPanel}
@@ -809,6 +832,7 @@
                   submitLabel="💾 Save"
                   submitting={isSaving}
                   errorMessage={saveError || ''}
+                  disableSuggestions={true}
                 >
                   {#snippet customActions({ formData, isValid })}
                     <button 

@@ -120,6 +120,7 @@ export interface Level {
   servings?: string;              // e.g., "Serves 2"
   prepTime?: string;              // e.g., "10 minutes"
   cookingMethod?: string;         // e.g., "Bake"
+  dishFamily?: string;            // e.g., "Pasta", "Salad", "Soup"
   imageUrl?: string;              // Cloudinary URL for community recipe photos
   isCommunityRecipe?: boolean;    // True if this is a community-submitted recipe
   submittedBy?: string;           // Submitter player ID for community recipes
