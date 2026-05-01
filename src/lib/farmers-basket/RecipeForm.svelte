@@ -2123,9 +2123,9 @@
   }
   
   .game-food-select {
-    width: 130px;
-    min-width: 100px;
-    flex: 1 1 100px;
+    width: 150px;
+    min-width: 150px;
+    flex: 1 1 150px;
     padding: 6px 8px;
     font-size: 0.9rem;
   }
