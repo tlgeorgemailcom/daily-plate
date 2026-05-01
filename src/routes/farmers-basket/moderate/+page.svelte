@@ -49,7 +49,7 @@
   const MODERATOR_PASSWORD = '4444';
   
   // View state
-  let activeView = $state<'pending' | 'published' | 'new'>('pending');
+  let activeView = $state<'pending' | 'published' | 'community' | 'new'>('pending');
   
   // Pending recipes
   let recipes = $state<RecipeSubmission[]>([]);
@@ -62,8 +62,10 @@
   let loadingPublished = $state(false);
   let selectedPublished = $state<RecipeSubmission | null>(null);
 
-  const devRecipesCount = $derived(publishedRecipes.filter(r => !r.id.startsWith('recipe-')).length);
-  const communityRecipesCount = $derived(publishedRecipes.filter(r => r.id.startsWith('recipe-')).length);
+  const devRecipes = $derived(publishedRecipes.filter(r => !r.id.startsWith('recipe-')));
+  const communityRecipes = $derived(publishedRecipes.filter(r => r.id.startsWith('recipe-')));
+  const devRecipesCount = $derived(devRecipes.length);
+  const communityRecipesCount = $derived(communityRecipes.length);
   
   // Form state
   let isSaving = $state(false);
@@ -623,7 +625,14 @@
         class:active={activeView === 'published'}
         onclick={() => { activeView = 'published'; selectedRecipe = null; }}
       >
-        ✅ Published ({devRecipesCount}{communityRecipesCount > 0 ? ` + ${communityRecipesCount} community` : ''})
+        ✅ Published ({devRecipesCount})
+      </button>
+      <button 
+        class="view-tab" 
+        class:active={activeView === 'community'}
+        onclick={() => { activeView = 'community'; selectedRecipe = null; }}
+      >
+        👥 Community ({communityRecipesCount})
       </button>
       <button 
         class="view-tab new-tab" 
@@ -634,7 +643,7 @@
       </button>
     </div>
     
-    <div class="mod-layout" class:full-width={activeView === 'new'}>
+    <div class="mod-layout" class:full-width={activeView === 'new'} class:community-view={activeView === 'community'}>
       {#if activeView !== 'new'}
       <aside class="recipe-list">
         {#if activeView === 'pending'}
@@ -664,14 +673,40 @@
           {/if}
           <button class="refresh-btn" onclick={loadRecipes}>🔄 Refresh</button>
         {:else}
-          <h2>Published ({devRecipesCount}{communityRecipesCount > 0 ? ` + ${communityRecipesCount} community` : ''})</h2>
+          <h2>Published ({devRecipesCount})</h2>
           {#if loadingPublished}
             <p class="status">Loading...</p>
-          {:else if publishedRecipes.length === 0}
+          {:else if devRecipes.length === 0}
             <p class="status">No published recipes</p>
           {:else}
             <ul>
-              {#each publishedRecipes as recipe (recipe.id)}
+              {#each devRecipes as recipe (recipe.id)}
+                <li>
+                  <button 
+                    class="recipe-item" 
+                    class:selected={selectedPublished?.id === recipe.id}
+                    onclick={() => selectPublished(recipe)}
+                  >
+                    <span class="recipe-name">{recipe.recipeName}</span>
+                    <span class="recipe-meta">{recipe.dietaryCategory || 'all'} • {recipe.submitterName}</span>
+                    {#if recipe.editedAt}
+                      <span class="recipe-date">✏️ {formatDate(recipe.editedAt)}</span>
+                    {/if}
+                  </button>
+                </li>
+              {/each}
+            </ul>
+          {/if}
+          <button class="refresh-btn" onclick={loadPublishedRecipes}>🔄 Refresh</button>
+        {:else if activeView === 'community'}
+          <h2>Community ({communityRecipesCount})</h2>
+          {#if loadingPublished}
+            <p class="status">Loading...</p>
+          {:else if communityRecipes.length === 0}
+            <p class="status">No approved community recipes</p>
+          {:else}
+            <ul>
+              {#each communityRecipes as recipe (recipe.id)}
                 <li>
                   <button 
                     class="recipe-item" 
@@ -776,10 +811,10 @@
               </div>
             </div>
           {/if}
-        {:else if activeView === 'published'}
+        {:else if activeView === 'published' || activeView === 'community'}
           {#if !selectedPublished}
             <div class="empty-state">
-              <p>Select a published recipe to edit</p>
+              <p>Select a {activeView === 'community' ? 'community' : 'published'} recipe to edit</p>
             </div>
           {:else}
             <div class="detail-content">
