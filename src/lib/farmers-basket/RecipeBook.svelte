@@ -613,6 +613,7 @@
       recipeName: level.name,
       category: level.category,
       dietaryCategory: level.dietaryCategory,
+      cookingMethod: level.cookingMethod || 'Bake',
       prepTime: level.prepTime || '',
       servings: level.servings || '',
       ingredients,
@@ -679,6 +680,7 @@
               recipeName: data.recipeName,
               category: data.category,
               dietaryCategory: data.dietaryCategory,
+              cookingMethod: data.cookingMethod,
               prepTime: data.prepTime,
               servings: data.servings,
               gameFoods,
@@ -710,6 +712,7 @@
               name: data.recipeName,
               category: data.category,
               dietaryCategory: data.dietaryCategory,
+              cookingMethod: data.cookingMethod,
               prepTime: data.prepTime,
               servings: data.servings,
               recipe: gameFoods,
@@ -811,6 +814,7 @@
             name: data.recipeName,
             category: data.category,
             dietaryCategory: data.dietaryCategory,
+            cookingMethod: data.cookingMethod,
             prepTime: data.prepTime,
             servings: data.servings,
             recipe: gameFoods,
@@ -1528,6 +1532,7 @@
               submitLabel="💾 Save Changes"
               submitting={isSaving}
               errorMessage={saveError || ''}
+              disableSuggestions={true}
             />
           </div>
         </div>
@@ -1593,6 +1598,7 @@
               oncancel={handlePlayerEditCancel}
               submitting={playerEditSaving || playerDraftSaving}
               errorMessage={playerEditError || playerDraftError || ''}
+              disableSuggestions={true}
             >
               {#snippet customActions({ formData, isValid })}
                 <div class="creator-form-actions">
@@ -1699,6 +1705,7 @@
               submitLabel={collabEditSaving ? '⏳ Saving...' : '💾 Save Draft'}
               submitting={collabEditSaving}
               errorMessage={collabEditError || ''}
+              disableSuggestions={true}
             />
           </div>
         </div>
