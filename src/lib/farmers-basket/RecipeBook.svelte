@@ -1916,6 +1916,10 @@
               {/if}
             </button>
           {/each}
+          <a href="/farmers-basket/my-recipes" class="category-tab my-recipes-tab" title="View and edit your submitted recipes">
+            <span class="category-name">📝 My Recipes</span>
+            <span class="category-progress">Submissions</span>
+          </a>
         </div>
         
         <div class="main-content">
@@ -2417,6 +2421,19 @@
   
   .category-tab.empty:hover {
     background: #e8e8e8;
+  }
+
+  .my-recipes-tab {
+    margin-top: 6px;
+    text-decoration: none;
+    background: #E8F5E9;
+    color: #1B5E20;
+    border: 1px solid #A5D6A7;
+  }
+
+  .my-recipes-tab:hover {
+    background: #DCEDC8;
+    transform: translateX(-2px);
   }
   
   .category-name {
