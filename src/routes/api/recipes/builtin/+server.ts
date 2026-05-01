@@ -152,7 +152,7 @@ function normalizeRecipeIngredients(value: string | null): BuiltinOverride['reci
           : source.row_type === 'dish'
       };
     })
-    .filter((item): item is NonNullable<BuiltinOverride['recipeIngredients']>[number] => Boolean(item && (item.name || item.isDish)));
+    .filter((item): item is NonNullable<typeof item> => item !== null && Boolean(item.name || item.isDish)) as NonNullable<BuiltinOverride['recipeIngredients']>;
 }
 
 // GET: Fetch all built-in recipe overrides and admin-added recipes from Turso

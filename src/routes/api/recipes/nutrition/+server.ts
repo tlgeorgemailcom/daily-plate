@@ -26,15 +26,15 @@ export const GET: RequestHandler = async () => {
   let communityRecipes: Array<Record<string, unknown>> = [];
   try {
     const rows = await queryAll(`
-      SELECT id, title, category, nutrition_json
+      SELECT recipe_id, recipe_name, category, nutrition_json
       FROM player_recipes
       WHERE status = 'approved' AND nutrition_json IS NOT NULL AND nutrition_json != '{}'
-      ORDER BY title ASC
+      ORDER BY recipe_name ASC
     `);
 
     communityRecipes = (rows as Record<string, unknown>[])
       .filter((row) => {
-        const name = row.title as string | null;
+        const name = row.recipe_name as string | null;
         return name && name.trim().length > 0 && !autoIdPattern.test(name.trim());
       })
       .map((row) => {
@@ -44,8 +44,8 @@ export const GET: RequestHandler = async () => {
         // Normalise to per-100g so calculateNutrientsForGrams works correctly
         const scale = 100 / gpS;
         return {
-          id:             row.id as string,
-          name:           row.title as string,
+          id:             row.recipe_id as string,
+          name:           row.recipe_name as string,
           type:           'community',
           recipeOrigin:   'turso-community',
           isCommunityRecipe: true,
@@ -148,7 +148,7 @@ export const GET: RequestHandler = async () => {
         sug: Math.round((Number(per100.SugarsTotal ?? 0)) * 10) / 10,
       };
     })
-    .filter((recipe): recipe is Record<string, unknown> => recipe !== null);
+    .filter((recipe): recipe is NonNullable<typeof recipe> => recipe !== null);
 
   const seenNames = new Set<string>();
   const combinedRecipes = [...devRecipes, ...builtInRecipes, ...communityRecipes].filter((recipe) => {

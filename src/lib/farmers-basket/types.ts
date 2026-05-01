@@ -89,7 +89,7 @@ export interface NutritionJson {
     cal: number; pro: number; fat: number;
     carb: number; fib: number; h2o: number; sug: number;
   };
-  gramsPerServing: number;
+  gramsPerServing: number | null;
   servings: number;
 }
 

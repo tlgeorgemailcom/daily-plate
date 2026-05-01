@@ -28,6 +28,7 @@ export interface Food {
   h2o: number;      // Water (g)
   sug: number;      // Total Sugar (g)
   portions: Portion[];  // [0] is always custom (100g base)
+  micros?: Record<string, number | null> | null;  // per-100g micronutrients (recipe foods only)
 }
 
 export interface NutrientValues {
