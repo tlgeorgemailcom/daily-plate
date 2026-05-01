@@ -72,6 +72,8 @@
   // Recipe book modal state - show on mount (suppressed when joining via link)
   let showRecipeBook = $state(!_urlJoinCode);
   let showRecipeOfDay = $state(!_urlJoinCode);
+  // Premium users see recipe-first UI and only enter game after tapping Play.
+  let premiumGameMode = $state(false);
 
   // Share recipe modal state
   let showShareRecipe = $state(!!_urlJoinCode);
@@ -766,6 +768,7 @@
 </svelte:head>
 
 <!-- Main Game -->
+{#if !$isPremium || premiumGameMode}
 <div class="game-container">
   
     <header class="header">
@@ -775,7 +778,7 @@
           <button class="rules-btn" onclick={() => showRules = true}>
             Rules
           </button>
-          <button class="recipe-book-btn" onclick={() => { showRecipeOfDay = false; showRecipeBook = true; }}>
+          <button class="recipe-book-btn" onclick={() => { premiumGameMode = false; showRecipeOfDay = false; showRecipeBook = true; }}>
             📖 Recipes
         </button>
       </div>
@@ -1002,7 +1005,7 @@
         
         <div class="win-buttons">
           <a href="/stats" class="stats-link">📊 Share/View Stats</a>
-          <button onclick={() => { game.initLevel(game.levelIndex); showRecipeBook = true; }}>📖 Choose Next Recipe</button>
+          <button onclick={() => { premiumGameMode = false; game.initLevel(game.levelIndex); showRecipeBook = true; }}>📖 Choose Next Recipe</button>
           <button class="secondary" onclick={() => { game.initLevel(game.levelIndex); game.startLevel(); }}>🔄 Play Again</button>
         </div>
       </div>
@@ -1016,7 +1019,7 @@
         <p>Don't worry, try again!</p>
         <div class="lose-buttons">
           <button onclick={() => { game.initLevel(game.levelIndex); game.startLevel(); }}>🔄 Try Again</button>
-          <button class="secondary" onclick={() => { game.initLevel(game.levelIndex); showRecipeBook = true; }}>📖 Choose Another Recipe</button>
+          <button class="secondary" onclick={() => { premiumGameMode = false; game.initLevel(game.levelIndex); showRecipeBook = true; }}>📖 Choose Another Recipe</button>
         </div>
       </div>
     </div>
@@ -1068,6 +1071,7 @@
     <span class="scroll-arrow down">▼</span>
   </div>
 </div>
+{/if}
 
 <!-- Recipe Book Modal -->
 {#if showRecipeBook}
@@ -1079,8 +1083,20 @@
     {hasInfantProfile}
     startWithRecipeOfDay={showRecipeOfDay}
     onselect={(id) => { if ($isPremium) game.completeLevel(id); }}
-    onplay={(id) => { game.loadLevel(id); game.startLevel(); showRecipeBook = false; showRecipeOfDay = true; }}
+    onplay={(id) => {
+      premiumGameMode = true;
+      game.loadLevel(id);
+      game.startLevel();
+      showRecipeBook = false;
+      showRecipeOfDay = true;
+    }}
     onclose={() => { 
+      if ($isPremium && !premiumGameMode) {
+        // Keep premium users in recipe-first mode until they explicitly tap Play.
+        showRecipeBook = true;
+        showRecipeOfDay = true;
+        return;
+      }
       showRecipeBook = false;
       showRecipeOfDay = true;
     }}
@@ -1092,7 +1108,7 @@
 <!-- Share Recipe Modal -->
 {#if showShareRecipe}
   <ShareRecipe 
-    onclose={() => { showShareRecipe = false; showRecipeBook = true; initialJoinCode = ''; }}
+    onclose={() => { showShareRecipe = false; showRecipeBook = true; premiumGameMode = false; initialJoinCode = ''; }}
     onsubmit={() => { /* Recipe submitted successfully */ }}
     joinCode={initialJoinCode || undefined}
   />

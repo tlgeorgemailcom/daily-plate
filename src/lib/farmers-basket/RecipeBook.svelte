@@ -1384,6 +1384,11 @@
       {/if}
       <div class="header-actions">
         <span class="level-count">{completedLevels.size}/{filteredLevels.length} ✓</span>
+        {#if canReadAllRecipes && selectedLevel}
+          <button class="share-btn" onclick={() => handlePlay(selectedLevel.id)} aria-label="Play this recipe">
+            ▶️ Play
+          </button>
+        {/if}
         {#if onshare}
           <button class="share-btn" onclick={onshare} aria-label="Share a recipe">
             📝 Share
