@@ -61,6 +61,9 @@
   let publishedRecipes = $state<RecipeSubmission[]>([]);
   let loadingPublished = $state(false);
   let selectedPublished = $state<RecipeSubmission | null>(null);
+
+  const devRecipesCount = $derived(publishedRecipes.filter(r => !r.id.startsWith('recipe-')).length);
+  const communityRecipesCount = $derived(publishedRecipes.filter(r => r.id.startsWith('recipe-')).length);
   
   // Form state
   let isSaving = $state(false);
@@ -620,7 +623,7 @@
         class:active={activeView === 'published'}
         onclick={() => { activeView = 'published'; selectedRecipe = null; }}
       >
-        ✅ Published ({publishedRecipes.length})
+        ✅ Published ({devRecipesCount}{communityRecipesCount > 0 ? ` + ${communityRecipesCount} community` : ''})
       </button>
       <button 
         class="view-tab new-tab" 
@@ -661,7 +664,7 @@
           {/if}
           <button class="refresh-btn" onclick={loadRecipes}>🔄 Refresh</button>
         {:else}
-          <h2>Published ({publishedRecipes.length})</h2>
+          <h2>Published ({devRecipesCount}{communityRecipesCount > 0 ? ` + ${communityRecipesCount} community` : ''})</h2>
           {#if loadingPublished}
             <p class="status">Loading...</p>
           {:else if publishedRecipes.length === 0}

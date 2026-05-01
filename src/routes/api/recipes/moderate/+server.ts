@@ -113,7 +113,7 @@ export const GET: RequestHandler = async ({ url }) => {
       ORDER BY created_at ASC
     `).then((rows) => rows.map((row) => buildPlayerSubmission(row as Record<string, unknown>)));
 
-    const approved = await queryAll(`
+    const approvedDev = await queryAll(`
       SELECT recipe_id AS id, recipe_name AS recipeName, category,
              dietary_category AS dietaryCategory, COALESCE(submitted_by, 'System') AS submitterName,
              prep_time AS prepTime, servings, recipe_ingredients_json AS ingredients,
@@ -125,6 +125,21 @@ export const GET: RequestHandler = async ({ url }) => {
       WHERE status = 'published'
       ORDER BY created_at ASC
     `).then((rows) => rows.map((row) => buildDevSubmission(row as Record<string, unknown>)));
+
+    const approvedPlayer = await queryAll(`
+      SELECT recipe_id AS id, recipe_name AS recipeName, category, dietary_category AS dietaryCategory,
+             COALESCE(submitter_name, submitted_by) AS submitterName, prep_time AS prepTime,
+             servings, recipe_ingredients_json AS ingredients,
+             recipe_instructions_json AS instructions, created_at AS submittedAt,
+             status, recipe AS gameFoods, animal_spawns AS animalSpawns,
+             food_supply AS foodSupply, image_url AS imageUrl, updated_at AS updatedAt,
+             cooking_method AS cookingMethod, dish_family AS dishFamily
+      FROM player_recipes
+      WHERE status = 'approved'
+      ORDER BY created_at ASC
+    `).then((rows) => rows.map((row) => buildPlayerSubmission(row as Record<string, unknown>)));
+
+    const approved = [...approvedDev, ...approvedPlayer];
 
     if (filter === 'pending') {
       return json({ recipes: pending });
