@@ -1395,7 +1395,7 @@
         {#if selectedLevel}
           <button class="settings-btn" onclick={handleSettingsClick} aria-label="Edit recipe">⚙️</button>
         {/if}
-        <button class="close-btn" onclick={onclose} aria-label="Close">✕</button>
+        <button class="close-btn" onclick={handleClose} aria-label="Close">✕</button>
       </div>
     </header>
     
