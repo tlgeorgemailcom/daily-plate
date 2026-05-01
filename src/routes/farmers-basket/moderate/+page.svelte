@@ -672,7 +672,7 @@
             </ul>
           {/if}
           <button class="refresh-btn" onclick={loadRecipes}>🔄 Refresh</button>
-        {:else}
+        {:else if activeView === 'published'}
           <h2>Published ({devRecipesCount})</h2>
           {#if loadingPublished}
             <p class="status">Loading...</p>
