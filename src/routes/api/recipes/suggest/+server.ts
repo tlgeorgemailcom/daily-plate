@@ -145,7 +145,7 @@ export const GET: RequestHandler = async ({ url }) => {
        FROM dev_recipes
         WHERE status = 'published'
        UNION ALL
-       SELECT id, title, category, dietary_category,
+      SELECT recipe_id AS id, recipe_name AS title, category, dietary_category,
               prep_time, servings,
               recipe_ingredients_json AS recipe_ingredients,
               recipe_instructions_json AS recipe_instructions,

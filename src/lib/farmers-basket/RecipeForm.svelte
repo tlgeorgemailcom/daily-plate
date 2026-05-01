@@ -96,6 +96,7 @@
   const ANIMAL_TYPES: AnimalType[] = ['rabbit', 'squirrel', 'raccoon', 'bird', 'mouse', 'fox'];
   
   const COOKING_METHODS = ['Bake', 'Boil', 'Grill', 'Fry', 'No heat'];
+  const LOCAL_FOODS_BY_NDB = new Map(FOODS.map(food => [food.ndb, food]));
 
   // Form state
   let recipeName = $state(initialData.recipeName || '');
@@ -164,6 +165,16 @@
   let nutritionPendingPortionIdx = $state<Record<number, number>>({});
   let nutritionPendingCount = $state<Record<number, number>>({});
   let nutritionCustomGrams = $state<Record<number, number | null>>({});
+  let dishSearchResults = $state<FoodData[]>([]);
+  let dishSearchLoading = $state(false);
+  let nutritionSearchResults = $state<Record<number, FoodData[]>>({});
+  let nutritionSearchLoading = $state<Record<number, boolean>>({});
+  let dishSearchUsingFallback = $state(false);
+  let nutritionSearchUsingFallback = $state<Record<number, boolean>>({});
+  let dishSearchTimer: ReturnType<typeof setTimeout> | null = null;
+  let dishSearchRequestId = 0;
+  let nutritionSearchTimers = new Map<number, ReturnType<typeof setTimeout>>();
+  let nutritionSearchRequestIds = new Map<number, number>();
 
   function normalizeSearchText(value: string): string {
     return value
@@ -216,12 +227,106 @@
     return scored.slice(0, 20).map(s => s.food);
   }
 
+  function hydrateRemoteFoods(foods: FoodData[]): FoodData[] {
+    return foods.map((food) => {
+      const local = LOCAL_FOODS_BY_NDB.get(food.ndb);
+      if (!local) return food;
+      return {
+        ...food,
+        word: local.word,
+        portions: local.portions?.length ? local.portions : food.portions,
+        synonyms: local.synonyms ?? food.synonyms
+      };
+    });
+  }
+
+  async function fetchRemoteFoods(query: string, limit = 20): Promise<FoodData[]> {
+    const params = new URLSearchParams({ q: query.trim(), limit: String(limit) });
+    const res = await fetch(`/api/recipes/food-search?${params.toString()}`);
+    const data = await res.json() as { foods?: FoodData[] };
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return hydrateRemoteFoods(data.foods ?? []);
+  }
+
+  function queueDishFoodSearch(query: string) {
+    if (dishSearchTimer) clearTimeout(dishSearchTimer);
+    if (query.trim().length < 2) {
+      dishSearchResults = [];
+      dishSearchLoading = false;
+      dishSearchUsingFallback = false;
+      return;
+    }
+
+    const requestId = ++dishSearchRequestId;
+    dishSearchLoading = true;
+    dishSearchTimer = setTimeout(async () => {
+      try {
+        const foods = await fetchRemoteFoods(query, 20);
+        if (requestId !== dishSearchRequestId) return;
+        dishSearchResults = foods;
+        dishSearchUsingFallback = false;
+      } catch {
+        if (requestId !== dishSearchRequestId) return;
+        // Keep search usable if the SR28 endpoint is temporarily unavailable.
+        dishSearchResults = searchFoods(query);
+        dishSearchUsingFallback = true;
+      } finally {
+        if (requestId === dishSearchRequestId) {
+          dishSearchLoading = false;
+        }
+      }
+    }, 180);
+  }
+
+  function queueNutritionFoodSearch(ingredientId: number, query: string) {
+    const existingTimer = nutritionSearchTimers.get(ingredientId);
+    if (existingTimer) clearTimeout(existingTimer);
+
+    if (query.trim().length < 2) {
+      nutritionSearchResults = { ...nutritionSearchResults, [ingredientId]: [] };
+      nutritionSearchLoading = { ...nutritionSearchLoading, [ingredientId]: false };
+      nutritionSearchUsingFallback = { ...nutritionSearchUsingFallback, [ingredientId]: false };
+      return;
+    }
+
+    const requestId = (nutritionSearchRequestIds.get(ingredientId) ?? 0) + 1;
+    nutritionSearchRequestIds.set(ingredientId, requestId);
+    nutritionSearchLoading = { ...nutritionSearchLoading, [ingredientId]: true };
+
+    const timer = setTimeout(async () => {
+      try {
+        const foods = await fetchRemoteFoods(query, 20);
+        if (nutritionSearchRequestIds.get(ingredientId) !== requestId) return;
+        nutritionSearchResults = { ...nutritionSearchResults, [ingredientId]: foods };
+        nutritionSearchUsingFallback = { ...nutritionSearchUsingFallback, [ingredientId]: false };
+      } catch {
+        if (nutritionSearchRequestIds.get(ingredientId) !== requestId) return;
+        // Keep search usable if the SR28 endpoint is temporarily unavailable.
+        nutritionSearchResults = {
+          ...nutritionSearchResults,
+          [ingredientId]: searchFoods(query)
+        };
+        nutritionSearchUsingFallback = {
+          ...nutritionSearchUsingFallback,
+          [ingredientId]: true
+        };
+      } finally {
+        if (nutritionSearchRequestIds.get(ingredientId) === requestId) {
+          nutritionSearchLoading = { ...nutritionSearchLoading, [ingredientId]: false };
+        }
+      }
+    }, 180);
+
+    nutritionSearchTimers.set(ingredientId, timer);
+  }
+
   function openNutritionSearchFresh(ing: RecipeIngredient) {
     // Always go to search screen (change food)
     nutritionSearchQ = { ...nutritionSearchQ, [ing.id]: ing.name };
     nutritionPendingFood = { ...nutritionPendingFood, [ing.id]: null };
     nutritionCustomGrams = { ...nutritionCustomGrams, [ing.id]: null };
     nutritionOpen = { ...nutritionOpen, [ing.id]: true };
+    queueNutritionFoodSearch(ing.id, ing.name);
   }
 
   function openNutritionSearch(ing: RecipeIngredient) {
@@ -241,6 +346,7 @@
       }
     } else {
       nutritionPendingFood = { ...nutritionPendingFood, [ing.id]: null };
+      queueNutritionFoodSearch(ing.id, ing.name);
     }
   }
 
@@ -965,12 +1071,21 @@
                   class="nutrition-search-input"
                   placeholder="e.g. pancakes, apple pie…"
                   value={dishSearchQ}
-                  oninput={(e) => { dishSearchQ = (e.target as HTMLInputElement).value; }}
+                  oninput={(e) => {
+                    dishSearchQ = (e.target as HTMLInputElement).value;
+                    queueDishFoodSearch(dishSearchQ);
+                  }}
                 />
-                {@const results = searchFoods(dishSearchQ)}
-                {#if results.length > 0}
+                {#if dishSearchLoading}
+                  <p class="nutrition-search-hint">Searching USDA foods…</p>
+                {:else if dishSearchUsingFallback}
+                  <p class="nutrition-fallback-indicator" title="API unavailable; showing local fallback results">
+                    <span class="origin-fallback-dot" aria-hidden="true"></span>
+                    API unavailable; showing local fallback results
+                  </p>
+                {:else if dishSearchResults.length > 0}
                   <div class="nutrition-results">
-                    {#each results as food}
+                    {#each dishSearchResults as food}
                       <button type="button" class="nutrition-result-btn" onclick={() => {
                         dishPendingFood = food;
                         dishPendingPortionIdx = food.portions.length > 1 ? 1 : 0;
@@ -1200,12 +1315,22 @@
                       class="nutrition-search-input"
                       placeholder="Search food (e.g. flour, chicken)..."
                       value={nutritionSearchQ[ingredient.id] ?? ''}
-                      oninput={(e) => { nutritionSearchQ = { ...nutritionSearchQ, [ingredient.id]: (e.target as HTMLInputElement).value }; }}
+                      oninput={(e) => {
+                        const value = (e.target as HTMLInputElement).value;
+                        nutritionSearchQ = { ...nutritionSearchQ, [ingredient.id]: value };
+                        queueNutritionFoodSearch(ingredient.id, value);
+                      }}
                     />
-                    {@const results = searchFoods(nutritionSearchQ[ingredient.id] ?? '')}
-                    {#if results.length > 0}
+                    {#if nutritionSearchLoading[ingredient.id]}
+                      <p class="nutrition-search-hint">Searching USDA foods…</p>
+                    {:else if nutritionSearchUsingFallback[ingredient.id]}
+                      <p class="nutrition-fallback-indicator" title="API unavailable; showing local fallback results">
+                        <span class="origin-fallback-dot" aria-hidden="true"></span>
+                        API unavailable; showing local fallback results
+                      </p>
+                    {:else if (nutritionSearchResults[ingredient.id] ?? []).length > 0}
                       <div class="nutrition-results">
-                        {#each results as food}
+                        {#each nutritionSearchResults[ingredient.id] ?? [] as food}
                           <button type="button" class="nutrition-result-btn" onclick={() => selectPendingFood(ingredient.id, food)}>
                             <span class="result-name">{food.display}</span>
                             <span class="result-cal">{food.cal} cal/100g</span>
@@ -2309,6 +2434,28 @@
     margin: 0;
     padding: 2px 4px;
     font-style: italic;
+  }
+
+  .nutrition-fallback-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    color: #9a3412;
+    margin: 0;
+    padding: 2px 4px;
+  }
+
+  .origin-fallback-dot {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    inline-size: 8px;
+    block-size: 8px;
+    border-radius: 999px;
+    border: 1px solid #fb923c;
+    background: #fdba74;
+    box-sizing: border-box;
   }
 
   .portion-picker {
