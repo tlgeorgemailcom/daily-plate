@@ -154,6 +154,17 @@
     imagePreviewUrl = recipe.imageUrl || null;
     imageUploadError = null;
   }
+
+  function closeSelectedRecipe() {
+    selectedRecipe = null;
+    selectedPublished = null;
+    saveError = null;
+    showRequestChangesPanel = false;
+    requestChangesNote = '';
+    selectedImageFile = null;
+    imagePreviewUrl = null;
+    imageUploadError = null;
+  }
   
   function recipeToFormData(recipe: RecipeSubmission): Partial<RecipeFormData> {
     const ingredients = recipe.modIngredients || recipe.ingredients;
@@ -738,76 +749,79 @@
             <div class="detail-content">
               <div class="detail-header">
                 <h2>📝 Review Submission</h2>
+                <button type="button" class="close-detail-btn" onclick={closeSelectedRecipe}>Close</button>
                 <p class="submitted-info">By {selectedRecipe.submitterName} on {formatDate(selectedRecipe.submittedAt)}</p>
               </div>
               
               <div class="form-container">
-                <RecipeForm
-                  moderatorMode={true}
-                  initialData={recipeToFormData(selectedRecipe)}
-                  onsubmit={handleApprove}
-                  submitLabel="✅ Approve"
-                  submitting={isSaving}
-                  errorMessage={saveError || ''}
-                  disableSuggestions={true}
-                >
-                  {#snippet customActions({ formData, isValid })}
-                    {#if showRequestChangesPanel}
-                      <div class="request-changes-panel">
-                        <label class="mod-note-label">💬 What needs to change?</label>
-                        <textarea
-                          class="mod-note-textarea"
-                          bind:value={requestChangesNote}
-                          placeholder="Describe what the player should fix before resubmitting..."
-                          rows="3"
-                          disabled={isSaving}
-                        ></textarea>
-                        <div class="request-changes-actions">
-                          <button
-                            type="button"
-                            class="cancel-changes-btn"
-                            onclick={() => { showRequestChangesPanel = false; requestChangesNote = ''; }}
+                {#key selectedRecipe.id}
+                  <RecipeForm
+                    moderatorMode={true}
+                    initialData={recipeToFormData(selectedRecipe)}
+                    onsubmit={handleApprove}
+                    submitLabel="✅ Approve"
+                    submitting={isSaving}
+                    errorMessage={saveError || ''}
+                    disableSuggestions={true}
+                  >
+                    {#snippet customActions({ formData, isValid })}
+                      {#if showRequestChangesPanel}
+                        <div class="request-changes-panel">
+                          <label class="mod-note-label">💬 What needs to change?</label>
+                          <textarea
+                            class="mod-note-textarea"
+                            bind:value={requestChangesNote}
+                            placeholder="Describe what the player should fix before resubmitting..."
+                            rows="3"
                             disabled={isSaving}
-                          >
-                            Cancel
-                          </button>
-                          <button
-                            type="button"
-                            class="send-changes-btn"
-                            onclick={handleRequestChanges}
-                            disabled={isSaving || !requestChangesNote.trim()}
-                          >
-                            {isSaving ? 'Sending...' : '💬 Send Feedback'}
-                          </button>
+                          ></textarea>
+                          <div class="request-changes-actions">
+                            <button
+                              type="button"
+                              class="cancel-changes-btn"
+                              onclick={() => { showRequestChangesPanel = false; requestChangesNote = ''; }}
+                              disabled={isSaving}
+                            >
+                              Cancel
+                            </button>
+                            <button
+                              type="button"
+                              class="send-changes-btn"
+                              onclick={handleRequestChanges}
+                              disabled={isSaving || !requestChangesNote.trim()}
+                            >
+                              {isSaving ? 'Sending...' : '💬 Send Feedback'}
+                            </button>
+                          </div>
                         </div>
-                      </div>
-                    {:else}
+                      {:else}
+                        <button 
+                          type="button" 
+                          class="request-changes-btn"
+                          onclick={() => { showRequestChangesPanel = true; saveError = null; }}
+                          disabled={isSaving}
+                        >
+                          💬 Request Changes
+                        </button>
+                        <button 
+                          type="button" 
+                          class="reject-btn"
+                          onclick={handleReject}
+                          disabled={isSaving}
+                        >
+                          ❌ Reject
+                        </button>
+                      {/if}
                       <button 
-                        type="button" 
-                        class="request-changes-btn"
-                        onclick={() => { showRequestChangesPanel = true; saveError = null; }}
-                        disabled={isSaving}
+                        type="submit" 
+                        class="approve-btn"
+                        disabled={isSaving || !isValid || formData.ingredients.filter(i => i.gameFood && i.name.trim()).length === 0}
                       >
-                        💬 Request Changes
+                        {isSaving ? 'Approving...' : '✅ Approve'}
                       </button>
-                      <button 
-                        type="button" 
-                        class="reject-btn"
-                        onclick={handleReject}
-                        disabled={isSaving}
-                      >
-                        ❌ Reject
-                      </button>
-                    {/if}
-                    <button 
-                      type="submit" 
-                      class="approve-btn"
-                      disabled={isSaving || !isValid || formData.ingredients.filter(i => i.gameFood && i.name.trim()).length === 0}
-                    >
-                      {isSaving ? 'Approving...' : '✅ Approve'}
-                    </button>
-                  {/snippet}
-                </RecipeForm>
+                    {/snippet}
+                  </RecipeForm>
+                {/key}
               </div>
             </div>
           {/if}
@@ -820,6 +834,7 @@
             <div class="detail-content">
               <div class="detail-header">
                 <h2>✏️ Edit Published Recipe</h2>
+                <button type="button" class="close-detail-btn" onclick={closeSelectedRecipe}>Close</button>
                 <p class="submitted-info">
                   By {selectedPublished.submitterName}
                   {#if selectedPublished.editedAt}
@@ -871,32 +886,35 @@
                 </div>
                 
                 <RecipeForm
-                  moderatorMode={true}
-                  initialData={recipeToFormData(selectedPublished)}
-                  onsubmit={handleSavePublished}
-                  submitLabel="💾 Save"
-                  submitting={isSaving}
-                  errorMessage={saveError || ''}
-                  disableSuggestions={true}
-                >
-                  {#snippet customActions({ formData, isValid })}
-                    <button 
-                      type="button" 
-                      class="unpublish-btn"
-                      onclick={handleUnpublish}
-                      disabled={isSaving}
-                    >
-                      🗑️ Unpublish
-                    </button>
-                    <button 
-                      type="submit" 
-                      class="save-btn"
-                      disabled={isSaving || !isValid}
-                    >
-                      {isSaving ? 'Saving...' : '💾 Save'}
-                    </button>
-                  {/snippet}
-                </RecipeForm>
+                {#key selectedPublished.id}
+                  <RecipeForm
+                    moderatorMode={true}
+                    initialData={recipeToFormData(selectedPublished)}
+                    onsubmit={handleSavePublished}
+                    submitLabel="💾 Save"
+                    submitting={isSaving}
+                    errorMessage={saveError || ''}
+                    disableSuggestions={true}
+                  >
+                    {#snippet customActions({ formData, isValid })}
+                      <button 
+                        type="button" 
+                        class="unpublish-btn"
+                        onclick={handleUnpublish}
+                        disabled={isSaving}
+                      >
+                        🗑️ Unpublish
+                      </button>
+                      <button 
+                        type="submit" 
+                        class="save-btn"
+                        disabled={isSaving || !isValid}
+                      >
+                        {isSaving ? 'Saving...' : '💾 Save'}
+                      </button>
+                    {/snippet}
+                  </RecipeForm>
+                {/key}
               </div>
             </div>
           {/if}
@@ -1215,14 +1233,35 @@
     padding: 16px 20px;
     background: #FAFAFA;
     border-bottom: 1px solid #EEE;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 8px 12px;
   }
   
   .detail-header h2 {
     margin: 0 0 4px;
     font-size: 1.2rem;
   }
+
+  .close-detail-btn {
+    justify-self: end;
+    border: 1px solid #DDD;
+    background: #FFF;
+    color: #555;
+    border-radius: 8px;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .close-detail-btn:hover {
+    background: #F7F7F7;
+    border-color: #CCC;
+  }
   
   .submitted-info {
+    grid-column: 1 / -1;
     margin: 0;
     font-size: 0.85rem;
     color: #666;
