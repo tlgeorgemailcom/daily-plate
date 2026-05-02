@@ -602,11 +602,11 @@
     dishName.trim().split(/\s+/).length < 2 && dishName.trim().length > 0
   );
   let nameReady = $derived(
-    dishName.trim().length > 0 && recipeSuffix.trim().length > 0
+    dishName.trim().length > 0 && (moderatorMode || recipeSuffix.trim().length > 0)
   );
   let isValid = $derived(
     dishName.trim().length > 0 &&
-    recipeSuffix.trim().length > 0 &&
+    (moderatorMode || recipeSuffix.trim().length > 0) &&
     ingredients.some(i => i.name.trim()) &&
     instructions.some(i => i.text.trim())
   );

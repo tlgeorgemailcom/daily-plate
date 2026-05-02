@@ -167,7 +167,34 @@
   }
   
   function recipeToFormData(recipe: RecipeSubmission): Partial<RecipeFormData> {
-    const ingredients = recipe.modIngredients || recipe.ingredients;
+    const rawIngredients = (recipe.modIngredients || recipe.ingredients || []) as Array<Record<string, unknown>>;
+    const dishRow = rawIngredients.find((ing) => ing.row_type === 'dish' || ing.isDish === true);
+    const ingredientRows = rawIngredients.filter((ing) => !(ing.row_type === 'dish' || ing.isDish === true));
+
+    const dishLink = dishRow && dishRow.ndb_no
+      ? {
+          foodWord: String(dishRow.food_word || ''),
+          ndbNo: String(dishRow.ndb_no || ''),
+          portionDesc: String(dishRow.portion_desc || dishRow.ing_qty || 'custom (g)'),
+          portionGrams: Number(dishRow.portion_grams || 100),
+          servingCount: Number(dishRow.serving_count || 1)
+        }
+      : undefined;
+
+    const mappedIngredients = ingredientRows.map((ing, i) => ({
+      id: i + 1,
+      name: String(ing.name || ing.ing_name || ''),
+      quantity: String(ing.quantity || ing.ing_qty || ''),
+      gameFood: String(ing.gameFood || ing.game_food || ''),
+      animal: String(ing.animal || ''),
+      foodWord: ing.foodWord || ing.food_word,
+      ndbNo: ing.ndbNo || ing.ndb_no,
+      portionDesc: ing.portionDesc || ing.portion_desc,
+      portionGrams: typeof ing.portionGrams === 'number' ? ing.portionGrams : (typeof ing.portion_grams === 'number' ? ing.portion_grams : undefined),
+      servingCount: typeof ing.servingCount === 'number' ? ing.servingCount : (typeof ing.serving_count === 'number' ? ing.serving_count : undefined),
+      exempt: ing.exempt === true
+    }));
+
     return {
       recipeName: recipe.recipeName,
       category: recipe.category,
@@ -177,25 +204,18 @@
       servings: recipe.servings || '',
       cookingMethod: recipe.cookingMethod || 'Bake',
       dishFamily: recipe.dishFamily || '',
-      ingredients: ingredients.map((ing, i) => ({
-        id: i + 1,
-        name: ing.name,
-        quantity: ing.quantity,
+      ingredients: mappedIngredients.map((ing) => ({
+        ...ing,
         gameFood: (ing.gameFood || '') as FoodType | '',
-        animal: (ing.animal || '') as AnimalType | '',
-        foodWord: ing.foodWord,
-        ndbNo: ing.ndbNo,
-        portionDesc: ing.portionDesc,
-        portionGrams: ing.portionGrams,
-        servingCount: ing.servingCount,
-        exempt: ing.exempt
+        animal: (ing.animal || '') as AnimalType | ''
       })),
       instructions: recipe.instructions.map((text, i) => ({
         id: i + 1,
         text
       })),
       foodSupply: recipe.foodSupply,
-      linkMode: recipe.linkType
+      linkMode: recipe.linkType || (dishLink ? 'dish' : 'ingredient'),
+      ...(dishLink ? { dishLink } : {})
     };
   }
   
