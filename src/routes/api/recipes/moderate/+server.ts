@@ -2,6 +2,7 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { execute, queryAll } from '$lib/server/turso';
 import { toDisplayRecipeCategory, toStoredRecipeCategory } from '$lib/farmers-basket/recipe-categories';
+import { deleteRecipeImage, extractPublicId } from '$lib/server/cloudinary';
 
 interface RecipeSubmission {
   id: string;
@@ -327,15 +328,32 @@ export const PATCH: RequestHandler = async ({ request }) => {
       return json({ error: 'Missing updates object' }, { status: 400 });
     }
 
+    const hasImageUrlUpdate = Object.prototype.hasOwnProperty.call(updates, 'imageUrl');
+    const shouldClearImage = hasImageUrlUpdate && (updates.imageUrl === null || updates.imageUrl === '');
+    const nextImageUrl = hasImageUrlUpdate && typeof updates.imageUrl === 'string' && updates.imageUrl.trim().length > 0
+      ? updates.imageUrl.trim()
+      : null;
+
     const isPlayerRecipe = id.startsWith('recipe-');
 
     if (isPlayerRecipe) {
-      const existing = await queryAll<{ id: string; recipeName: string }>(
-        'SELECT recipe_id AS id, recipe_name AS recipeName FROM player_recipes WHERE recipe_id = ?',
+      const existing = await queryAll<{ id: string; recipeName: string; imageUrl: string | null }>(
+        'SELECT recipe_id AS id, recipe_name AS recipeName, image_url AS imageUrl FROM player_recipes WHERE recipe_id = ?',
         [id]
       );
       if (existing.length === 0) {
         return json({ error: 'Player recipe not found' }, { status: 404 });
+      }
+
+      if (shouldClearImage && existing[0].imageUrl) {
+        const oldPublicId = extractPublicId(existing[0].imageUrl);
+        if (oldPublicId) {
+          try {
+            await deleteRecipeImage(oldPublicId);
+          } catch (err) {
+            console.warn('Failed to delete old player recipe image:', oldPublicId, err);
+          }
+        }
       }
 
       await execute(
@@ -351,7 +369,11 @@ export const PATCH: RequestHandler = async ({ request }) => {
           recipe_ingredients_json = COALESCE(?, recipe_ingredients_json),
           recipe_instructions_json = COALESCE(?, recipe_instructions_json),
           animal_spawns = COALESCE(?, animal_spawns),
-          image_url = COALESCE(?, image_url),
+          image_url = CASE
+            WHEN ? = 1 THEN NULL
+            WHEN ? IS NOT NULL THEN ?
+            ELSE image_url
+          END,
           updated_at = datetime('now')
          WHERE recipe_id = ?`,
         [
@@ -366,7 +388,9 @@ export const PATCH: RequestHandler = async ({ request }) => {
           updates.ingredients ? JSON.stringify(updates.ingredients) : (updates.modIngredients ? JSON.stringify(updates.modIngredients) : null),
           updates.instructions ? JSON.stringify(updates.instructions) : null,
           updates.animalSpawns ? JSON.stringify(updates.animalSpawns) : null,
-          updates.imageUrl !== undefined ? (updates.imageUrl || null) : null,
+          shouldClearImage ? 1 : 0,
+          nextImageUrl,
+          nextImageUrl,
           id
         ]
       );
@@ -374,12 +398,23 @@ export const PATCH: RequestHandler = async ({ request }) => {
       return json({ success: true, recipe: updates.recipeName || existing[0].recipeName, editedAt: new Date().toISOString() });
     }
 
-    const existingDev = await queryAll<{ recipe_id: string; recipe_name: string }>(
-      'SELECT recipe_id, recipe_name FROM dev_recipes WHERE recipe_id = ?',
+    const existingDev = await queryAll<{ recipe_id: string; recipe_name: string; image_url: string | null }>(
+      'SELECT recipe_id, recipe_name, image_url FROM dev_recipes WHERE recipe_id = ?',
       [id]
     );
     if (existingDev.length === 0) {
       return json({ error: 'Dev recipe not found' }, { status: 404 });
+    }
+
+    if (shouldClearImage && existingDev[0].image_url) {
+      const oldPublicId = extractPublicId(existingDev[0].image_url);
+      if (oldPublicId) {
+        try {
+          await deleteRecipeImage(oldPublicId);
+        } catch (err) {
+          console.warn('Failed to delete old dev recipe image:', oldPublicId, err);
+        }
+      }
     }
 
     await execute(
@@ -395,7 +430,11 @@ export const PATCH: RequestHandler = async ({ request }) => {
         recipe_ingredients_json = COALESCE(?, recipe_ingredients_json),
         recipe_instructions_json = COALESCE(?, recipe_instructions_json),
         animal_spawns = COALESCE(?, animal_spawns),
-        image_url = COALESCE(?, image_url),
+        image_url = CASE
+          WHEN ? = 1 THEN NULL
+          WHEN ? IS NOT NULL THEN ?
+          ELSE image_url
+        END,
         updated_at = datetime('now'),
         submitted_by = COALESCE(?, submitted_by)
        WHERE recipe_id = ?`,
@@ -411,7 +450,9 @@ export const PATCH: RequestHandler = async ({ request }) => {
         updates.ingredients ? JSON.stringify(updates.ingredients) : (updates.modIngredients ? JSON.stringify(updates.modIngredients) : null),
         updates.instructions ? JSON.stringify(updates.instructions) : null,
         updates.animalSpawns ? JSON.stringify(updates.animalSpawns) : null,
-        updates.imageUrl !== undefined ? (updates.imageUrl || null) : null,
+        shouldClearImage ? 1 : 0,
+        nextImageUrl,
+        nextImageUrl,
         editedBy || 'Moderator',
         id
       ]

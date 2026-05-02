@@ -454,7 +454,7 @@
         }
       } else if (!imagePreviewUrl) {
         // Image was removed
-        imageUrl = undefined;
+        imageUrl = null;
       }
       
       const res = await fetch('/api/recipes/moderate', {

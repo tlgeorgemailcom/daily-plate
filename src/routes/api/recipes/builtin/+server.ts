@@ -2,6 +2,7 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { queryAll, getGameDb } from '$lib/server/turso';
 import { toDisplayRecipeCategory, toStoredRecipeCategory } from '$lib/farmers-basket/recipe-categories';
+import { deleteRecipeImage, extractPublicId } from '$lib/server/cloudinary';
 
 interface BuiltinRecipeRow {
   recipe_id: string;
@@ -249,10 +250,15 @@ export const PATCH: RequestHandler = async ({ request }) => {
 
     const db = getGameDb();
     const now = new Date().toISOString();
+    const hasImageUrlUpdate = Object.prototype.hasOwnProperty.call(updates, 'imageUrl');
+    const shouldClearImage = hasImageUrlUpdate && (updates.imageUrl === null || updates.imageUrl === '');
+    const nextImageUrl = hasImageUrlUpdate && typeof updates.imageUrl === 'string' && updates.imageUrl.trim().length > 0
+      ? updates.imageUrl.trim()
+      : null;
 
     // Check if dev recipe exists
     const existing = await db.execute({
-      sql: 'SELECT recipe_id FROM dev_recipes WHERE recipe_id = ?',
+      sql: 'SELECT recipe_id, image_url FROM dev_recipes WHERE recipe_id = ?',
       args: [id]
     });
 
@@ -291,6 +297,20 @@ export const PATCH: RequestHandler = async ({ request }) => {
         ]
       });
     } else {
+      if (shouldClearImage) {
+        const currentImageUrl = existing.rows[0].image_url as string | null;
+        if (currentImageUrl) {
+          const oldPublicId = extractPublicId(currentImageUrl);
+          if (oldPublicId) {
+            try {
+              await deleteRecipeImage(oldPublicId);
+            } catch (err) {
+              console.warn('Failed to delete old builtin recipe image:', oldPublicId, err);
+            }
+          }
+        }
+      }
+
       // Update existing dev recipe row.
       await db.execute({
         sql: `UPDATE dev_recipes SET
@@ -305,7 +325,11 @@ export const PATCH: RequestHandler = async ({ request }) => {
               animal_spawns = COALESCE(?, animal_spawns),
               recipe_instructions_json = COALESCE(?, recipe_instructions_json),
               recipe_ingredients_json = COALESCE(?, recipe_ingredients_json),
-              image_url = ?,
+              image_url = CASE
+                WHEN ? = 1 THEN NULL
+                WHEN ? IS NOT NULL THEN ?
+                ELSE image_url
+              END,
               updated_at = ?,
               submitted_by = COALESCE(?, submitted_by)
               WHERE recipe_id = ?`,
@@ -321,7 +345,9 @@ export const PATCH: RequestHandler = async ({ request }) => {
           updates.animalSpawns ? JSON.stringify(updates.animalSpawns) : null,
           updates.recipeInstructions ? JSON.stringify(updates.recipeInstructions) : null,
           updates.recipeIngredients ? JSON.stringify(updates.recipeIngredients) : null,
-          updates.imageUrl || null,
+          shouldClearImage ? 1 : 0,
+          nextImageUrl,
+          nextImageUrl,
           now,
           editedBy || 'Moderator',
           id

@@ -649,7 +649,7 @@
         }
       } else if (!imagePreviewUrl) {
         // Image was removed
-        imageUrl = undefined;
+        imageUrl = null;
       }
       
       // Build the updates
