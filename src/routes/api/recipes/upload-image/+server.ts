@@ -1,6 +1,6 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import { uploadRecipeImage } from '$lib/server/cloudinary';
+import { uploadRecipeImage, deleteRecipeImage, extractPublicId } from '$lib/server/cloudinary';
 
 // Maximum file size: 5MB
 const MAX_FILE_SIZE = 5 * 1024 * 1024;
@@ -34,6 +34,20 @@ export const POST: RequestHandler = async ({ request }) => {
     // Convert File to Buffer
     const arrayBuffer = await file.arrayBuffer();
     const buffer = Buffer.from(arrayBuffer);
+
+    // Delete old Cloudinary asset if an existing URL was provided
+    const oldImageUrl = formData.get('oldImageUrl') as string | null;
+    if (oldImageUrl) {
+      const oldPublicId = extractPublicId(oldImageUrl);
+      if (oldPublicId) {
+        try {
+          await deleteRecipeImage(oldPublicId);
+        } catch (deleteErr) {
+          // Non-fatal: log and continue with the upload
+          console.warn('Failed to delete old recipe image:', oldPublicId, deleteErr);
+        }
+      }
+    }
 
     // Upload to Cloudinary
     const result = await uploadRecipeImage(buffer, file.name);

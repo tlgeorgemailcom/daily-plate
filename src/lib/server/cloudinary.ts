@@ -102,6 +102,26 @@ export async function uploadRecipeImage(
 }
 
 /**
+ * Delete a recipe image from Cloudinary by its public_id.
+ * Silently succeeds if the asset does not exist.
+ */
+export async function deleteRecipeImage(publicId: string): Promise<void> {
+  const cloud = getCloudinary();
+  await cloud.uploader.destroy(publicId, { resource_type: 'image' });
+}
+
+/**
+ * Extract the Cloudinary public_id from a delivery URL.
+ * Handles URLs with or without transformation params and version segments.
+ * Returns null if the URL is not a recognised Cloudinary recipe URL.
+ */
+export function extractPublicId(url: string): string | null {
+  // Match the public_id that starts with the 'recipes/' folder
+  const match = url.match(/\/upload\/(?:[^/]+\/)*?(recipes\/[^?#]+)/);
+  return match ? match[1] : null;
+}
+
+/**
  * Upload a Feather & Spag cartoon strip to Cloudinary
  * @param fileBuffer - The strip PNG as a Buffer
  * @param publishDate - 'YYYY-MM-DD' — used as the public_id and file name

@@ -272,6 +272,9 @@
     try {
       const formData = new FormData();
       formData.append('image', selectedImageFile);
+      if (selectedPublished?.imageUrl) {
+        formData.append('oldImageUrl', selectedPublished.imageUrl);
+      }
       
       const res = await fetch('/api/recipes/upload-image', {
         method: 'POST',
