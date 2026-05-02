@@ -134,7 +134,7 @@ export async function uploadCartoonStrip(
   const cloud = getCloudinary();
 
   const [year, month] = publishDate.split('-');
-  const publicId = `feather-spag/${year}/${month}/feather-spag-${publishDate}`;
+  const publicId = `cartoons/feather-spag/${year}/${month}/feather-spag-${publishDate}`;
 
   return new Promise((resolve, reject) => {
     const uploadStream = cloud.uploader.upload_stream(
@@ -169,8 +169,13 @@ export async function uploadCartoonStrip(
 export async function deleteCartoonStrip(publishDate: string): Promise<void> {
   const cloud = getCloudinary();
   const [year, month] = publishDate.split('-');
-  const publicId = `feather-spag/${year}/${month}/feather-spag-${publishDate}`;
-  await cloud.uploader.destroy(publicId, { invalidate: true });
+  const currentPublicId = `cartoons/feather-spag/${year}/${month}/feather-spag-${publishDate}`;
+  const legacyPublicId = `feather-spag/${year}/${month}/feather-spag-${publishDate}`;
+
+  const currentResult = await cloud.uploader.destroy(currentPublicId, { invalidate: true });
+  if (currentResult?.result === 'not found') {
+    await cloud.uploader.destroy(legacyPublicId, { invalidate: true });
+  }
 }
 
 /**
