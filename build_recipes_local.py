@@ -193,24 +193,26 @@ def main():
         # ── Build recipe_ingredients JSON ─────────────────────────────────────
         recipe_ingredients_json = []
         for r in sorted(ing_rows, key=lambda x: int(x['row_order'])):
+            is_dish = r['row_type'] == 'dish'
             entry = {
-                'row_order':    int(r['row_order']),
-                'row_type':     r['row_type'],
-                'ing_name':     r['ing_name'],
-                'ing_qty':      r['ing_qty'],
-                'ndb_no':       r['ndb_no'],
-                'portion_desc': r['portion_desc'],
-                'portion_grams': float(r['portion_grams']) if r['portion_grams'] else None,
-                'serving_count': float(r['serving_count']) if r['serving_count'] else None,
-                'notes':        r['notes'],
-                'game_food':    r['game_food'],
-                'animal':       r['animal'],
+                'rowOrder':    int(r['row_order']),
+                'rowType':     r['row_type'],
+                'isDish':      is_dish,
+                'name':        r['ing_name'],
+                'quantity':    r['ing_qty'],
+                'ndbNo':       r['ndb_no'],
+                'portionDesc': r['portion_desc'],
+                'portionGrams': float(r['portion_grams']) if r['portion_grams'] else None,
+                'servingCount': float(r['serving_count']) if r['serving_count'] else None,
+                'notes':       r['notes'],
+                'gameFood':    r['game_food'],
+                'animal':      r['animal'],
             }
             recipe_ingredients_json.append(entry)
 
         # ── Build instructions JSON ───────────────────────────────────────────
         recipe_instructions_json = [
-            {'step': int(r['step_order']), 'text': r['step_text']}
+            r['step_text']
             for r in sorted(instructions.get(recipe_id, []), key=lambda x: int(x['step_order']))
         ]
 
