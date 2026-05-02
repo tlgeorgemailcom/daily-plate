@@ -87,6 +87,33 @@ type NutritionLinkIngredient = {
   isDish?: boolean;
 };
 
+function toFoodWord(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .replace(/-{2,}/g, '-');
+}
+
+function parseServingMeta(servings: string | null | undefined): { servingsCount: number | null; servingLabel: string | null } {
+  if (!servings || !servings.trim()) {
+    return { servingsCount: null, servingLabel: null };
+  }
+
+  const raw = servings.trim();
+  const match = raw.match(/^(\d+(?:\.\d+)?)\s*(.*)$/);
+  if (!match) {
+    return { servingsCount: null, servingLabel: raw };
+  }
+
+  const count = Number(match[1]);
+  const label = match[2]?.trim() || 'serving';
+  return {
+    servingsCount: Number.isFinite(count) ? count : null,
+    servingLabel: label
+  };
+}
+
 function deriveLinkType(ingredients: NutritionLinkIngredient[]): 'ingredient' | 'dish' | 'mixed' {
   const hasDish = ingredients.some((ing) => ing.isDish === true);
   const hasIngredientLinks = ingredients.some((ing) => ing.isDish !== true && !!ing.foodWord);
@@ -322,6 +349,11 @@ export const PATCH: RequestHandler = async ({ request }) => {
     const nextImageUrl = hasImageUrlUpdate && typeof updates.imageUrl === 'string' && updates.imageUrl.trim().length > 0
       ? updates.imageUrl.trim()
       : null;
+    const nextName = typeof updates.name === 'string' && updates.name.trim().length > 0
+      ? updates.name.trim()
+      : null;
+    const nextFoodWord = nextName ? toFoodWord(nextName) : null;
+    const servingMeta = parseServingMeta((updates.servings as string | null | undefined) ?? null);
     const recipeIngredientsForNutrition = updates.recipeIngredients as NutritionLinkIngredient[] | undefined;
     const computedNutrition = resolveBuiltinNutrition(
       updates.nutritionJson,
@@ -341,20 +373,23 @@ export const PATCH: RequestHandler = async ({ request }) => {
       await db.execute({
         sql: `INSERT INTO dev_recipes (
               recipe_id, food_word, recipe_name, category, dietary_category, cooking_method, dish_family, prep_time, servings,
+              servings_count, serving_label,
               recipe, animal_spawns, recipe_instructions_json, recipe_ingredients_json,
               image_url, submitted_by, status, created_at, updated_at,
               grams_per_serving, nutrition_json, nutrient_version, retention_model_version, source_match_version
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'published', ?, ?, ?, ?, ?, ?, ?)`,
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'published', ?, ?, ?, ?, ?, ?, ?)`,
         args: [
           id,
-          id,
-          updates.name || null,
+          nextFoodWord || id,
+          nextName,
           (updates.category ? toStoredRecipeCategory(updates.category) : null),
           updates.dietaryCategory || null,
           updates.cookingMethod || null,
           updates.dishFamily || null,
           updates.prepTime || null,
           updates.servings || null,
+          servingMeta.servingsCount,
+          servingMeta.servingLabel,
           updates.recipe ? JSON.stringify(updates.recipe) : null,
           updates.animalSpawns ? JSON.stringify(updates.animalSpawns) : null,
           updates.recipeInstructions ? JSON.stringify(updates.recipeInstructions) : null,
@@ -389,12 +424,15 @@ export const PATCH: RequestHandler = async ({ request }) => {
       await db.execute({
         sql: `UPDATE dev_recipes SET
               recipe_name = COALESCE(?, recipe_name),
+            food_word = COALESCE(?, food_word),
               category = COALESCE(?, category),
               dietary_category = COALESCE(?, dietary_category),
               cooking_method = COALESCE(?, cooking_method),
               dish_family = COALESCE(?, dish_family),
               prep_time = COALESCE(?, prep_time),
               servings = COALESCE(?, servings),
+            servings_count = CASE WHEN ? IS NOT NULL THEN ? ELSE servings_count END,
+            serving_label = COALESCE(?, serving_label),
               recipe = COALESCE(?, recipe),
               animal_spawns = COALESCE(?, animal_spawns),
               recipe_instructions_json = COALESCE(?, recipe_instructions_json),
@@ -410,13 +448,17 @@ export const PATCH: RequestHandler = async ({ request }) => {
               submitted_by = COALESCE(?, submitted_by)
               WHERE recipe_id = ?`,
         args: [
-          updates.name || null,
+          nextName,
+          nextFoodWord,
           (updates.category ? toStoredRecipeCategory(updates.category) : null),
           updates.dietaryCategory || null,
           updates.cookingMethod || null,
           updates.dishFamily || null,
           updates.prepTime || null,
           updates.servings || null,
+          servingMeta.servingsCount,
+          servingMeta.servingsCount,
+          servingMeta.servingLabel,
           updates.recipe ? JSON.stringify(updates.recipe) : null,
           updates.animalSpawns ? JSON.stringify(updates.animalSpawns) : null,
           updates.recipeInstructions ? JSON.stringify(updates.recipeInstructions) : null,
@@ -462,6 +504,20 @@ export const POST: RequestHandler = async ({ request }) => {
     const db = getGameDb();
     const now = new Date().toISOString();
     const id = `admin-${Date.now()}`;
+    const servingMeta = parseServingMeta((data.servings as string | null | undefined) ?? null);
+    const baseFoodWord = toFoodWord(data.name.trim());
+    let foodWord = baseFoodWord || id;
+
+    if (foodWord !== id) {
+      const duplicate = await db.execute({
+        sql: 'SELECT 1 FROM dev_recipes WHERE food_word = ? LIMIT 1',
+        args: [foodWord]
+      });
+      if (duplicate.rows.length > 0) {
+        foodWord = `${foodWord}-${id.replace('admin-', '')}`;
+      }
+    }
+
     const recipeIngredientsForNutrition = data.recipeIngredients as NutritionLinkIngredient[] | undefined;
     const computedNutrition = resolveBuiltinNutrition(
       data.nutritionJson,
@@ -473,13 +529,14 @@ export const POST: RequestHandler = async ({ request }) => {
     await db.execute({
       sql: `INSERT INTO dev_recipes (
             recipe_id, food_word, recipe_name, category, dietary_category, cooking_method, dish_family, prep_time, servings,
+            servings_count, serving_label,
             recipe, animal_spawns, recipe_instructions_json, recipe_ingredients_json,
             image_url, submitted_by, status, created_at, updated_at,
             grams_per_serving, nutrition_json, nutrient_version, retention_model_version, source_match_version
-          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'published', ?, ?, ?, ?, ?, ?, ?)`,
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'published', ?, ?, ?, ?, ?, ?, ?)`,
       args: [
         id,
-        id,
+        foodWord,
         data.name.trim(),
         toStoredRecipeCategory(data.category),
         data.dietaryCategory || 'all',
@@ -487,6 +544,8 @@ export const POST: RequestHandler = async ({ request }) => {
         data.dishFamily || null,
         data.prepTime || null,
         data.servings || null,
+        servingMeta.servingsCount,
+        servingMeta.servingLabel,
         data.recipe ? JSON.stringify(data.recipe) : null,
         data.animalSpawns ? JSON.stringify(data.animalSpawns) : null,
         data.recipeInstructions ? JSON.stringify(data.recipeInstructions) : null,
