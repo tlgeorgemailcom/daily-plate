@@ -356,6 +356,8 @@ export const PATCH: RequestHandler = async ({ request }) => {
         }
       }
 
+      const playerImageUrl = shouldClearImage ? null : (nextImageUrl !== null ? nextImageUrl : (existing[0].imageUrl ?? null));
+
       await execute(
         `UPDATE player_recipes SET
           recipe_name = COALESCE(?, recipe_name),
@@ -369,11 +371,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
           recipe_ingredients_json = COALESCE(?, recipe_ingredients_json),
           recipe_instructions_json = COALESCE(?, recipe_instructions_json),
           animal_spawns = COALESCE(?, animal_spawns),
-          image_url = CASE
-            WHEN ? = 1 THEN NULL
-            WHEN ? IS NOT NULL THEN ?
-            ELSE image_url
-          END,
+          image_url = ?,
           updated_at = datetime('now')
          WHERE recipe_id = ?`,
         [
@@ -388,9 +386,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
           updates.ingredients ? JSON.stringify(updates.ingredients) : (updates.modIngredients ? JSON.stringify(updates.modIngredients) : null),
           updates.instructions ? JSON.stringify(updates.instructions) : null,
           updates.animalSpawns ? JSON.stringify(updates.animalSpawns) : null,
-          shouldClearImage ? 1 : 0,
-          nextImageUrl,
-          nextImageUrl,
+          playerImageUrl,
           id
         ]
       );
@@ -417,6 +413,8 @@ export const PATCH: RequestHandler = async ({ request }) => {
       }
     }
 
+    const devImageUrl = shouldClearImage ? null : (nextImageUrl !== null ? nextImageUrl : (existingDev[0].image_url ?? null));
+
     await execute(
       `UPDATE dev_recipes SET
         recipe_name = COALESCE(?, recipe_name),
@@ -430,11 +428,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
         recipe_ingredients_json = COALESCE(?, recipe_ingredients_json),
         recipe_instructions_json = COALESCE(?, recipe_instructions_json),
         animal_spawns = COALESCE(?, animal_spawns),
-        image_url = CASE
-          WHEN ? = 1 THEN NULL
-          WHEN ? IS NOT NULL THEN ?
-          ELSE image_url
-        END,
+        image_url = ?,
         updated_at = datetime('now'),
         submitted_by = COALESCE(?, submitted_by)
        WHERE recipe_id = ?`,
@@ -450,9 +444,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
         updates.ingredients ? JSON.stringify(updates.ingredients) : (updates.modIngredients ? JSON.stringify(updates.modIngredients) : null),
         updates.instructions ? JSON.stringify(updates.instructions) : null,
         updates.animalSpawns ? JSON.stringify(updates.animalSpawns) : null,
-        shouldClearImage ? 1 : 0,
-        nextImageUrl,
-        nextImageUrl,
+        devImageUrl,
         editedBy || 'Moderator',
         id
       ]
