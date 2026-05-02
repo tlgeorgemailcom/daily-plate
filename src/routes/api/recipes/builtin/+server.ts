@@ -3,6 +3,7 @@ import type { RequestHandler } from './$types';
 import { queryAll, getGameDb } from '$lib/server/turso';
 import { toDisplayRecipeCategory, toStoredRecipeCategory } from '$lib/farmers-basket/recipe-categories';
 import { deleteRecipeImage, extractPublicId } from '$lib/server/cloudinary';
+import { calcNutritionJson } from '$lib/server/calcNutrition';
 
 interface BuiltinRecipeRow {
   recipe_id: string;
@@ -72,6 +73,72 @@ interface NewBuiltinRecipe {
   nutritionJson?: NutritionJson | null;
   imageUrl?: string;
   createdAt: string;
+}
+
+type NutritionLinkIngredient = {
+  name?: string;
+  quantity?: string;
+  foodWord?: string;
+  ndbNo?: string;
+  portionDesc?: string;
+  portionGrams?: number;
+  servingCount?: number;
+  exempt?: boolean;
+  isDish?: boolean;
+};
+
+function deriveLinkType(ingredients: NutritionLinkIngredient[]): 'ingredient' | 'dish' | 'mixed' {
+  const hasDish = ingredients.some((ing) => ing.isDish === true);
+  const hasIngredientLinks = ingredients.some((ing) => ing.isDish !== true && !!ing.foodWord);
+  if (hasDish && hasIngredientLinks) return 'mixed';
+  if (hasDish) return 'dish';
+  return 'ingredient';
+}
+
+function computeBuiltinNutrition(
+  recipeIngredients: NutritionLinkIngredient[] | undefined,
+  servings: string | null | undefined,
+  cookingMethod: string | null | undefined
+): { gramsPerServing: number; nutritionJson: string } {
+  if (!recipeIngredients || recipeIngredients.length === 0) {
+    return { gramsPerServing: 0, nutritionJson: '{}' };
+  }
+
+  const linkedRows = recipeIngredients.map((ing) => ({
+    foodWord: ing.foodWord,
+    portionGrams: typeof ing.portionGrams === 'number' ? ing.portionGrams : undefined,
+    servingCount: typeof ing.servingCount === 'number' ? ing.servingCount : undefined,
+    exempt: ing.exempt === true,
+    isDish: ing.isDish === true
+  }));
+
+  const linkType = deriveLinkType(recipeIngredients);
+  const nutrition = calcNutritionJson(linkedRows, linkType, servings, cookingMethod);
+
+  if (!nutrition) {
+    return { gramsPerServing: 0, nutritionJson: '{}' };
+  }
+
+  return {
+    gramsPerServing: Number(nutrition.gramsPerServing) || 0,
+    nutritionJson: JSON.stringify(nutrition)
+  };
+}
+
+function resolveBuiltinNutrition(
+  explicitNutrition: unknown,
+  recipeIngredients: NutritionLinkIngredient[] | undefined,
+  servings: string | null | undefined,
+  cookingMethod: string | null | undefined
+): { gramsPerServing: number; nutritionJson: string } {
+  if (explicitNutrition && typeof explicitNutrition === 'object') {
+    const grams = Number((explicitNutrition as { gramsPerServing?: unknown }).gramsPerServing ?? 0);
+    return {
+      gramsPerServing: Number.isFinite(grams) && grams > 0 ? grams : 0,
+      nutritionJson: JSON.stringify(explicitNutrition)
+    };
+  }
+  return computeBuiltinNutrition(recipeIngredients, servings, cookingMethod);
 }
 
 function normalizeRecipeInstructions(value: string | null): string[] | undefined {
@@ -255,6 +322,13 @@ export const PATCH: RequestHandler = async ({ request }) => {
     const nextImageUrl = hasImageUrlUpdate && typeof updates.imageUrl === 'string' && updates.imageUrl.trim().length > 0
       ? updates.imageUrl.trim()
       : null;
+    const recipeIngredientsForNutrition = updates.recipeIngredients as NutritionLinkIngredient[] | undefined;
+    const computedNutrition = resolveBuiltinNutrition(
+      updates.nutritionJson,
+      recipeIngredientsForNutrition,
+      (updates.servings as string | null | undefined) ?? null,
+      (updates.cookingMethod as string | null | undefined) ?? null
+    );
 
     // Check if dev recipe exists
     const existing = await db.execute({
@@ -289,8 +363,8 @@ export const PATCH: RequestHandler = async ({ request }) => {
           editedBy || 'Moderator',
           now,
           now,
-          0,
-          '{}',
+          computedNutrition.gramsPerServing,
+          computedNutrition.nutritionJson,
           'legacy',
           'legacy',
           'legacy'
@@ -325,6 +399,8 @@ export const PATCH: RequestHandler = async ({ request }) => {
               animal_spawns = COALESCE(?, animal_spawns),
               recipe_instructions_json = COALESCE(?, recipe_instructions_json),
               recipe_ingredients_json = COALESCE(?, recipe_ingredients_json),
+              grams_per_serving = CASE WHEN ? > 0 THEN ? ELSE grams_per_serving END,
+              nutrition_json = CASE WHEN ? != '{}' THEN ? ELSE nutrition_json END,
               image_url = CASE
                 WHEN ? = 1 THEN NULL
                 WHEN ? IS NOT NULL THEN ?
@@ -345,6 +421,10 @@ export const PATCH: RequestHandler = async ({ request }) => {
           updates.animalSpawns ? JSON.stringify(updates.animalSpawns) : null,
           updates.recipeInstructions ? JSON.stringify(updates.recipeInstructions) : null,
           updates.recipeIngredients ? JSON.stringify(updates.recipeIngredients) : null,
+          computedNutrition.gramsPerServing,
+          computedNutrition.gramsPerServing,
+          computedNutrition.nutritionJson,
+          computedNutrition.nutritionJson,
           shouldClearImage ? 1 : 0,
           nextImageUrl,
           nextImageUrl,
@@ -382,6 +462,13 @@ export const POST: RequestHandler = async ({ request }) => {
     const db = getGameDb();
     const now = new Date().toISOString();
     const id = `admin-${Date.now()}`;
+    const recipeIngredientsForNutrition = data.recipeIngredients as NutritionLinkIngredient[] | undefined;
+    const computedNutrition = resolveBuiltinNutrition(
+      data.nutritionJson,
+      recipeIngredientsForNutrition,
+      (data.servings as string | null | undefined) ?? null,
+      (data.cookingMethod as string | null | undefined) ?? null
+    );
 
     await db.execute({
       sql: `INSERT INTO dev_recipes (
@@ -408,8 +495,8 @@ export const POST: RequestHandler = async ({ request }) => {
         'Moderator',
         now,
         now,
-        0,
-        '{}',
+        computedNutrition.gramsPerServing,
+        computedNutrition.nutritionJson,
         'legacy',
         'legacy',
         'legacy'

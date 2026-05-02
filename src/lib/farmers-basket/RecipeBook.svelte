@@ -726,7 +726,14 @@
               recipeInstructions: data.instructions.map(i => i.text),
               recipeIngredients: data.ingredients.filter(i => i.name.trim()).map(i => ({
                 name: i.name,
-                quantity: i.quantity || ''
+                quantity: i.quantity || '',
+                foodWord: i.foodWord,
+                ndbNo: i.ndbNo,
+                portionDesc: i.portionDesc,
+                portionGrams: i.portionGrams,
+                servingCount: i.servingCount,
+                exempt: i.exempt === true,
+                isDish: i.isDish === true
               })),
               imageUrl
             },
@@ -832,7 +839,14 @@
             recipeInstructions: data.instructions.map(i => i.text),
             recipeIngredients: data.ingredients.filter(i => i.name.trim()).map(i => ({
               name: i.name,
-              quantity: i.quantity || ''
+              quantity: i.quantity || '',
+              foodWord: i.foodWord,
+              ndbNo: i.ndbNo,
+              portionDesc: i.portionDesc,
+              portionGrams: i.portionGrams,
+              servingCount: i.servingCount,
+              exempt: i.exempt === true,
+              isDish: i.isDish === true
             })),
             imageUrl
           }
