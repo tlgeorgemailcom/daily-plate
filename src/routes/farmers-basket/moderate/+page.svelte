@@ -885,7 +885,6 @@
                   {/if}
                 </div>
                 
-                <RecipeForm
                 {#key selectedPublished.id}
                   <RecipeForm
                     moderatorMode={true}
