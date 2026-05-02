@@ -50,7 +50,7 @@ interface BuiltinOverride {
   recipe?: string[];
   animalSpawns?: { type: string; delay: number }[];
   recipeInstructions?: string[];
-  recipeIngredients?: { name: string; quantity?: string }[];
+  recipeIngredients?: NutritionLinkIngredient[];
   nutritionJson?: NutritionJson | null;
   imageUrl?: string;
   editedAt: string;
@@ -69,7 +69,7 @@ interface NewBuiltinRecipe {
   recipe: string[];
   animalSpawns: { type: string; delay: number }[];
   recipeInstructions?: string[];
-  recipeIngredients?: { name: string; quantity?: string }[];
+  recipeIngredients?: NutritionLinkIngredient[];
   nutritionJson?: NutritionJson | null;
   imageUrl?: string;
   createdAt: string;

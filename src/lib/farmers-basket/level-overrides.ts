@@ -14,7 +14,7 @@ export interface BuiltinOverride {
   recipe?: FoodType[];
   animalSpawns?: { type: AnimalType; delay: number }[];
   recipeInstructions?: string[];
-  recipeIngredients?: { name: string; quantity?: string }[];
+  recipeIngredients?: Level['recipeIngredients'];
   nutritionJson?: Level['nutritionJson'];
   imageUrl?: string;
   editedAt?: string;
@@ -33,7 +33,7 @@ interface NewBuiltinRecipe {
   recipe: FoodType[];
   animalSpawns: { type: AnimalType; delay: number }[];
   recipeInstructions?: string[];
-  recipeIngredients?: { name: string; quantity?: string }[];
+  recipeIngredients?: Level['recipeIngredients'];
   nutritionJson?: Level['nutritionJson'];
   imageUrl?: string;
   createdAt: string;
@@ -82,6 +82,44 @@ async function fetchOverridesAndNew(): Promise<OverridesCache> {
 }
 
 /**
+ * Merge override ingredients with original level ingredients.
+ * Preserves portionGrams/foodWord/ndbNo from the original when the override
+ * ingredient (saved before the full-metadata schema) lacks nutrition link data.
+ * Matching is done by normalised name so reordering and minor edits still work.
+ */
+function mergeRecipeIngredients(
+  overrideIngs: Level['recipeIngredients'],
+  originalIngs: Level['recipeIngredients']
+): Level['recipeIngredients'] {
+  if (!overrideIngs) return originalIngs;
+  if (!originalIngs || originalIngs.length === 0) return overrideIngs;
+
+  const normalize = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+  const origByName = new Map(originalIngs.map(o => [normalize(o.name), o]));
+
+  return overrideIngs.map(ing => {
+    // If the override ingredient already carries nutrition data, use it as-is.
+    if (ing.portionGrams || ing.foodWord || ing.exempt || ing.isDish) return ing;
+
+    // Otherwise try to find a matching original ingredient and copy its nutrition links.
+    const orig = origByName.get(normalize(ing.name));
+    if (!orig) return ing;
+
+    return {
+      ...ing,
+      foodWord: orig.foodWord,
+      ndbNo: orig.ndbNo,
+      portionDesc: orig.portionDesc,
+      portionGrams: orig.portionGrams,
+      servingCount: orig.servingCount,
+      exempt: orig.exempt,
+      isDish: orig.isDish,
+      section: ing.section ?? orig.section,
+    };
+  });
+}
+
+/**
  * Get all LEVELS with any overrides applied, plus admin-added new recipes
  */
 export async function getLevelsWithOverrides(): Promise<Level[]> {
@@ -104,7 +142,7 @@ export async function getLevelsWithOverrides(): Promise<Level[]> {
       recipe: override.recipe ?? level.recipe,
       animalSpawns: override.animalSpawns ?? level.animalSpawns,
       recipeInstructions: override.recipeInstructions ?? level.recipeInstructions,
-      recipeIngredients: override.recipeIngredients ?? level.recipeIngredients,
+      recipeIngredients: mergeRecipeIngredients(override.recipeIngredients, level.recipeIngredients),
       nutritionJson: override.nutritionJson ?? level.nutritionJson,
       imageUrl: override.imageUrl ?? level.imageUrl
     } as Level;
