@@ -1302,6 +1302,8 @@
         dietaryCategory?: string;
         prepTime?: string;
         servings?: string;
+        cookingMethod?: string;
+        dishFamily?: string;
         ingredients?: { name: string; quantity: string; foodWord?: string; ndbNo?: string; portionDesc?: string; portionGrams?: number; servingCount?: number }[];
         instructions?: string[];
       };
@@ -1311,6 +1313,8 @@
         dietaryCategory: (d.dietaryCategory as DietaryCategory) || selectedLevel.dietaryCategory,
         prepTime: d.prepTime || selectedLevel.prepTime || '',
         servings: d.servings || selectedLevel.servings || '',
+        cookingMethod: d.cookingMethod || selectedLevel.cookingMethod || 'Bake',
+        dishFamily: d.dishFamily || selectedLevel.dishFamily || '',
         ingredients: (d.ingredients || []).map((ing, i) => ({
           id: i + 1,
           name: ing.name,
@@ -1339,6 +1343,8 @@
         dietaryCategory?: string;
         prepTime?: string;
         servings?: string;
+        cookingMethod?: string;
+        dishFamily?: string;
         ingredients?: { name: string; quantity: string; foodWord?: string; ndbNo?: string; portionDesc?: string; portionGrams?: number; servingCount?: number }[];
         instructions?: string[];
       };
@@ -1348,6 +1354,8 @@
         dietaryCategory: (d.dietaryCategory as DietaryCategory) || selectedLevel.dietaryCategory,
         prepTime: d.prepTime || selectedLevel.prepTime || '',
         servings: d.servings || selectedLevel.servings || '',
+        cookingMethod: d.cookingMethod || selectedLevel.cookingMethod || 'Bake',
+        dishFamily: d.dishFamily || selectedLevel.dishFamily || '',
         ingredients: (d.ingredients || []).map((ing, i) => ({
           id: i + 1,
           name: ing.name,

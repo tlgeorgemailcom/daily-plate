@@ -894,6 +894,13 @@
                     • Edited {formatDate(selectedPublished.editedAt)}
                   {/if}
                 </p>
+                <p class="review-meta">
+                  <span>Dish Family: {selectedPublished.dishFamily || 'Unspecified'}</span>
+                  <span>Cooking Method: {selectedPublished.cookingMethod || 'Unspecified'}</span>
+                  {#if shouldReviewName(selectedPublished)}
+                    <span class="needs-name-badge">needs_name_review</span>
+                  {/if}
+                </p>
               </div>
               
               <div class="form-container">
