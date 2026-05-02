@@ -48,13 +48,14 @@ export async function uploadRecipeImage(
     .toLowerCase()
     .slice(0, 50); // Limit length
   
-  const publicId = `recipes/${timestamp}-${sanitizedName}`;
+  const publicId = `${timestamp}-${sanitizedName}`;
 
   return new Promise((resolve, reject) => {
     const uploadStream = cloud.uploader.upload_stream(
       {
         public_id: publicId,
-        folder: '', // Already included in public_id
+        folder: 'recipes',
+        asset_folder: 'recipes',
         resource_type: 'image',
         transformation: [
           { quality: 'auto', fetch_format: 'auto' }
@@ -116,8 +117,8 @@ export async function deleteRecipeImage(publicId: string): Promise<void> {
  * Returns null if the URL is not a recognised Cloudinary recipe URL.
  */
 export function extractPublicId(url: string): string | null {
-  // Match the public_id that starts with the 'recipes/' folder
-  const match = url.match(/\/upload\/(?:[^/]+\/)*?(recipes\/[^?#]+)/);
+  // Extract full public_id path from any Cloudinary delivery URL.
+  const match = url.match(/\/image\/upload\/(?:[^/]+\/)*(?:v\d+\/)?([^?#]+)/);
   return match ? match[1] : null;
 }
 
@@ -134,12 +135,15 @@ export async function uploadCartoonStrip(
   const cloud = getCloudinary();
 
   const [year, month] = publishDate.split('-');
-  const publicId = `cartoons/feather-spag/${year}/${month}/feather-spag-${publishDate}`;
+  const folder = `cartoons/feather-spag/${year}/${month}`;
+  const publicId = `feather-spag-${publishDate}`;
 
   return new Promise((resolve, reject) => {
     const uploadStream = cloud.uploader.upload_stream(
       {
         public_id: publicId,
+        folder,
+        asset_folder: 'cartoons',
         resource_type: 'image',
         overwrite: true,
         invalidate: true,
