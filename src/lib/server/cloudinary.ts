@@ -174,15 +174,6 @@ export async function deleteCartoonStrip(publishDate: string): Promise<void> {
 }
 
 /**
- * Delete an image from Cloudinary
- * @param publicId - The public_id of the image to delete
- */
-export async function deleteRecipeImage(publicId: string): Promise<void> {
-  const cloud = getCloudinary();
-  await cloud.uploader.destroy(publicId);
-}
-
-/**
  * Generate a thumbnail URL from a full image URL
  * @param url - The full Cloudinary URL
  * @param width - Thumbnail width (default 200)
