@@ -225,7 +225,7 @@ export const GET: RequestHandler = async () => {
     }));
 
     return json({ overrides, newBuiltins }, {
-      headers: { 'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400' }
+      headers: { 'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=120' }
     });
   } catch (err) {
     console.error('Failed to load builtin overrides:', err);
