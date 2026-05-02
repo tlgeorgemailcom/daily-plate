@@ -173,13 +173,14 @@
     const dishRow = rawIngredients.find((ing) => ing.row_type === 'dish' || ing.isDish === true);
     const ingredientRows = rawIngredients.filter((ing) => !(ing.row_type === 'dish' || ing.isDish === true));
 
-    const dishLink = dishRow && dishRow.ndb_no
+    const dishNdbNo = dishRow?.ndb_no || dishRow?.ndbNo;
+    const dishLink = dishRow && dishNdbNo
       ? {
-          foodWord: String(dishRow.food_word || ''),
-          ndbNo: String(dishRow.ndb_no || ''),
-          portionDesc: String(dishRow.portion_desc || dishRow.ing_qty || 'custom (g)'),
-          portionGrams: Number(dishRow.portion_grams || 100),
-          servingCount: Number(dishRow.serving_count || 1)
+          foodWord: String(dishRow.food_word || dishRow.foodWord || ''),
+          ndbNo: String(dishNdbNo),
+          portionDesc: String(dishRow.portion_desc || dishRow.portionDesc || dishRow.ing_qty || 'custom (g)'),
+          portionGrams: Number(dishRow.portion_grams ?? dishRow.portionGrams ?? 100),
+          servingCount: Number(dishRow.serving_count ?? dishRow.servingCount ?? 1)
         }
       : undefined;
 
