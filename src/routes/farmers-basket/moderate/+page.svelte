@@ -40,6 +40,7 @@
     linkType?: 'ingredient' | 'dish' | 'mixed';
     cookingMethod?: string;
     dishFamily?: string | null;
+    needsNameReview?: boolean;
   }
   
   // Password protection
@@ -609,6 +610,16 @@
       hour: '2-digit', minute: '2-digit'
     });
   }
+
+  function shouldReviewName(recipe: RecipeSubmission): boolean {
+    if (recipe.needsNameReview === true) return true;
+
+    // Fallback heuristic for legacy rows where explicit flag is not present.
+    const name = (recipe.recipeName || '').trim();
+    if (!name) return true;
+    if (name.split(/\s+/).filter(Boolean).length < 2) return true;
+    return !name.includes(' — ');
+  }
 </script>
 
 <svelte:head>
@@ -700,7 +711,12 @@
                     class:selected={selectedRecipe?.id === recipe.id}
                     onclick={() => selectRecipe(recipe)}
                   >
-                    <span class="recipe-name">{recipe.recipeName}</span>
+                    <span class="recipe-name-row">
+                      <span class="recipe-name">{recipe.recipeName}</span>
+                      {#if shouldReviewName(recipe)}
+                        <span class="needs-name-badge">needs_name_review</span>
+                      {/if}
+                    </span>
                     <span class="recipe-meta">{recipe.category} • {recipe.submitterName}</span>
                     <span class="recipe-date">{formatDate(recipe.submittedAt)}</span>
                   </button>
@@ -777,6 +793,13 @@
                 <h2>📝 Review Submission</h2>
                 <button type="button" class="close-detail-btn" onclick={closeSelectedRecipe}>Close</button>
                 <p class="submitted-info">By {selectedRecipe.submitterName} on {formatDate(selectedRecipe.submittedAt)}</p>
+                <p class="review-meta">
+                  <span>Dish Family: {selectedRecipe.dishFamily || 'Unspecified'}</span>
+                  <span>Cooking Method: {selectedRecipe.cookingMethod || 'Unspecified'}</span>
+                  {#if shouldReviewName(selectedRecipe)}
+                    <span class="needs-name-badge">needs_name_review</span>
+                  {/if}
+                </p>
               </div>
               
               <div class="form-container">
@@ -1193,9 +1216,29 @@
     border-left: 3px solid #FF9800;
   }
   
+  .recipe-name-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
   .recipe-name {
     font-weight: bold;
     color: #333;
+  }
+
+  .needs-name-badge {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #8a4b08;
+    background: #fff2d9;
+    border: 1px solid #f0c891;
+    border-radius: 999px;
+    padding: 2px 8px;
   }
   
   .recipe-meta {
@@ -1290,6 +1333,17 @@
     margin: 0;
     font-size: 0.85rem;
     color: #666;
+  }
+
+  .review-meta {
+    grid-column: 1 / -1;
+    margin: 6px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #555;
   }
   
   .form-container {
