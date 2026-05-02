@@ -152,6 +152,12 @@ function clamp(value, min, max) {
   return Math.min(max, Math.max(min, value));
 }
 
+function parseGapPct(raw) {
+  if (raw == null) return null;
+  const value = Number.parseFloat(String(raw).trim());
+  return Number.isFinite(value) ? round2(value) : null;
+}
+
 function parseAddedSugarOverride(notes) {
   const { values } = parseNotes(notes);
   const rawRatio = values.addedsugar_ratio || values.added_sugar_ratio;
@@ -416,6 +422,19 @@ async function main() {
   const combooDb = createClient({ url: pathToFileURL(COMBOO_DB).href });
   const remoteDb = createClient({ url, authToken });
 
+  // Lock check — abort if recipe is finalised unless --force is passed
+  const forceUpload = process.argv.includes('--force');
+  const lockCheck = await remoteDb.execute({
+    sql: 'SELECT locked FROM dev_recipes WHERE recipe_id = ? LIMIT 1',
+    args: [recipeId]
+  });
+  if (lockCheck.rows.length > 0 && Number(lockCheck.rows[0].locked) === 1 && !forceUpload) {
+    throw new Error(
+      `Recipe ${recipeId} is locked (status=published). Re-upload is blocked.\n` +
+      `To intentionally override, run: node scripts/upload-dev-recipe.mjs ${recipeId} --force`
+    );
+  }
+
   const builtRow = await loadBuiltRecipe(localDb, recipeId);
   const builtNutrition = JSON.parse(String(builtRow.nutrition_json || '{}'));
 
@@ -499,9 +518,10 @@ async function main() {
 
   const sourceKcal = hasCanonicalNdb ? round2(canonicalWhole.Energy_KCal || 0) : 0;
   const reconstructedKcal = round2(Number(builtNutrition.kcal || 0));
-  const gapPct = hasCanonicalNdb && sourceKcal !== 0
-    ? round2(((reconstructedKcal - sourceKcal) / sourceKcal) * 100)
-    : null;
+  const gapPct = parseGapPct(recipeMeta.gap_pct);
+  if (['Rule A', 'Rule B'].includes(String(recipeMeta.sr28_rule || '').trim()) && gapPct == null) {
+    throw new Error(`Missing gap_pct in recipes.csv for ${recipeId} (${String(recipeMeta.sr28_rule || '').trim()})`);
+  }
 
   let gapStatus, validationNotes;
   if (!hasCanonicalNdb) {
@@ -549,6 +569,32 @@ async function main() {
     ].join('; ');
   }
 
+  // Normalize recipe_ingredients JSON to camelCase keys so Turso data matches
+  // the TypeScript interface used by RecipeForm, moderate, and my-recipes pages.
+  const rawIngredients = JSON.parse(String(builtRow.recipe_ingredients || '[]'));
+  const normalizedIngredients = rawIngredients.map((ing) => ({
+    rowOrder:     ing.rowOrder    ?? ing.row_order    ?? 0,
+    rowType:      ing.rowType     ?? ing.row_type     ?? 'ingredient',
+    isDish:       ing.isDish      ?? (ing.row_type === 'dish') ?? false,
+    name:         ing.name        ?? ing.ing_name     ?? '',
+    quantity:     ing.quantity    ?? ing.ing_qty      ?? '',
+    ndbNo:        ing.ndbNo       ?? ing.ndb_no       ?? '',
+    foodWord:     ing.foodWord    ?? ing.food_word    ?? '',
+    portionDesc:  ing.portionDesc ?? ing.portion_desc ?? '',
+    portionGrams: ing.portionGrams ?? ing.portion_grams ?? null,
+    servingCount: ing.servingCount ?? ing.serving_count ?? null,
+    notes:        ing.notes       ?? '',
+    gameFood:     ing.gameFood    ?? ing.game_food    ?? '',
+    animal:       ing.animal      ?? '',
+    exempt:       ing.exempt      ?? false,
+  }));
+
+  // Normalize recipe_instructions to plain strings
+  const rawInstructions = JSON.parse(String(builtRow.recipe_instructions || '[]'));
+  const normalizedInstructions = rawInstructions.map((step) =>
+    typeof step === 'string' ? step : (step.text ?? step.step_text ?? '')
+  );
+
   const existing = await loadRemoteExisting(remoteDb, recipeId);
 
   const args = [
@@ -561,8 +607,8 @@ async function main() {
     gramsPerServing,
     String(recipeMeta.servings || ''),
     null,
-    String(builtRow.recipe_ingredients || '[]'),
-    String(builtRow.recipe_instructions || '[]'),
+    JSON.stringify(normalizedIngredients),
+    JSON.stringify(normalizedInstructions),
     JSON.stringify(nutritionJson),
     NUTRIENT_VERSION,
     RETENTION_MODEL_VERSION,
