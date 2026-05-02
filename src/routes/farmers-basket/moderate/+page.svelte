@@ -168,6 +168,7 @@
   
   function recipeToFormData(recipe: RecipeSubmission): Partial<RecipeFormData> {
     const rawIngredients = (recipe.modIngredients || recipe.ingredients || []) as Array<Record<string, unknown>>;
+    const rawInstructions = (recipe.instructions || []) as unknown[];
     const dishRow = rawIngredients.find((ing) => ing.row_type === 'dish' || ing.isDish === true);
     const ingredientRows = rawIngredients.filter((ing) => !(ing.row_type === 'dish' || ing.isDish === true));
 
@@ -209,9 +210,14 @@
         gameFood: (ing.gameFood || '') as FoodType | '',
         animal: (ing.animal || '') as AnimalType | ''
       })),
-      instructions: recipe.instructions.map((text, i) => ({
+      instructions: rawInstructions.map((step, i) => ({
         id: i + 1,
-        text
+        text:
+          typeof step === 'string'
+            ? step
+            : typeof step === 'object' && step !== null && 'text' in step
+              ? String((step as { text?: unknown }).text || '')
+              : ''
       })),
       foodSupply: recipe.foodSupply,
       linkMode: recipe.linkType || (dishLink ? 'dish' : 'ingredient'),
