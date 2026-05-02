@@ -65,7 +65,8 @@ function buildPlayerSubmission(row: Record<string, unknown>): RecipeSubmission {
     reviewedAt: (row.updatedAt as string | null) || undefined,
     editedAt: (row.updatedAt as string | null) || undefined,
     cookingMethod: (row.cookingMethod as string | null) || undefined,
-    dishFamily: (row.dishFamily as string | null) || null
+    dishFamily: (row.dishFamily as string | null) || null,
+    linkType: (row.linkType as 'ingredient' | 'dish' | 'mixed' | null) || undefined
   };
 }
 
@@ -93,7 +94,8 @@ function buildDevSubmission(row: Record<string, unknown>): RecipeSubmission {
     editedAt: (row.updatedAt as string | null) || undefined,
     editedBy: (row.submitterName as string | null) || undefined,
     cookingMethod: (row.cookingMethod as string | null) || undefined,
-    dishFamily: (row.dishFamily as string | null) || null
+    dishFamily: (row.dishFamily as string | null) || null,
+    linkType: (row.linkType as 'ingredient' | 'dish' | 'mixed' | null) || undefined
   };
 }
 
@@ -108,7 +110,8 @@ export const GET: RequestHandler = async ({ url }) => {
              recipe_instructions_json AS instructions, created_at AS submittedAt,
              status, recipe AS gameFoods, animal_spawns AS animalSpawns,
              food_supply AS foodSupply, image_url AS imageUrl, updated_at AS updatedAt,
-             cooking_method AS cookingMethod, dish_family AS dishFamily
+             cooking_method AS cookingMethod, dish_family AS dishFamily,
+             link_type AS linkType
       FROM player_recipes
       WHERE status IN ('pending', 'needs_changes')
       ORDER BY created_at ASC
@@ -121,7 +124,8 @@ export const GET: RequestHandler = async ({ url }) => {
              recipe_instructions_json AS instructions, created_at AS submittedAt,
              status, recipe AS gameFoods, animal_spawns AS animalSpawns,
              food_supply AS foodSupply, image_url AS imageUrl, updated_at AS updatedAt,
-             cooking_method AS cookingMethod, dish_family AS dishFamily
+             cooking_method AS cookingMethod, dish_family AS dishFamily,
+             link_type AS linkType
       FROM dev_recipes
       WHERE status = 'published'
       ORDER BY created_at ASC
@@ -134,7 +138,8 @@ export const GET: RequestHandler = async ({ url }) => {
              recipe_instructions_json AS instructions, created_at AS submittedAt,
              status, recipe AS gameFoods, animal_spawns AS animalSpawns,
              food_supply AS foodSupply, image_url AS imageUrl, updated_at AS updatedAt,
-             cooking_method AS cookingMethod, dish_family AS dishFamily
+             cooking_method AS cookingMethod, dish_family AS dishFamily,
+             link_type AS linkType
       FROM player_recipes
       WHERE status = 'approved'
       ORDER BY created_at ASC
