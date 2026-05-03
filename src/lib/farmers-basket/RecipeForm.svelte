@@ -1411,14 +1411,12 @@
         <div class="ingredient-entry">
           <div class="ingredient-row">
             <span class="row-num">{i + 1}.</span>
-            {#if !nutritionMode || !ingredient.foodWord}
-              <input 
-                type="text"
-                bind:value={ingredient.quantity}
-                placeholder="Qty (e.g., 2 cups)"
-                class="form-input qty-input"
-              />
-            {/if}
+            <input 
+              type="text"
+              bind:value={ingredient.quantity}
+              placeholder="Qty (e.g., 2 cups)"
+              class="form-input qty-input"
+            />
             <input 
               type="text"
               bind:value={ingredient.name}
