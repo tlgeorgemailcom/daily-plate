@@ -458,6 +458,7 @@
 
   // ─── Live macro totals from linked ingredients ───────────────────────────────
   const FOOD_MAP_LOCAL = new Map(FOODS.map(f => [f.word, f]));
+  const FOOD_MAP_BY_NDB = new Map(FOODS.map(f => [f.ndb, f]));
 
   function parseServingsCount(s: string): number | null {
     if (!s) return null;
@@ -483,8 +484,9 @@
     let linkedCount = 0;
     let totalGrams = 0;
     for (const ing of ingredients) {
-      if (!ing.foodWord || !ing.portionGrams) continue;
-      const food = FOOD_MAP_LOCAL.get(ing.foodWord);
+      if (!ing.portionGrams) continue;
+      const food = (ing.foodWord ? FOOD_MAP_LOCAL.get(ing.foodWord) : undefined)
+        ?? (ing.ndbNo ? FOOD_MAP_BY_NDB.get(ing.ndbNo) : undefined);
       if (!food) continue;
       const g = ing.portionGrams * (ing.servingCount ?? 1);
       const scale = g / 100;

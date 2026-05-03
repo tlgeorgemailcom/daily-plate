@@ -1,6 +1,7 @@
 // Utility to load and apply built-in recipe overrides from the server
 import type { Level, FoodType, AnimalType } from './types';
 import { LEVELS } from './game-state.svelte';
+import { FOODS } from '$lib/data/food-portions';
 
 export interface BuiltinOverride {
   id: string;
@@ -96,10 +97,12 @@ function mergeRecipeIngredients(
 
   const normalize = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
   const origByName = new Map(originalIngs.map(o => [normalize(o.name), o]));
+  const validFoodWords = new Set(FOODS.map((f) => f.word));
 
   return overrideIngs.map(ing => {
-    // If the override ingredient already carries nutrition data, use it as-is.
-    if (ing.portionGrams || ing.foodWord || ing.exempt || ing.isDish) return ing;
+    const hasValidFoodWord = !!ing.foodWord && validFoodWords.has(ing.foodWord);
+    // Only preserve override nutrition links when they can actually map to FOODS.
+    if ((ing.portionGrams && hasValidFoodWord) || ing.exempt || ing.isDish) return ing;
 
     // Otherwise try to find a matching original ingredient and copy its nutrition links.
     const orig = origByName.get(normalize(ing.name));
