@@ -1,7 +1,7 @@
 import { json, error } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { execute, queryOne } from '$lib/server/turso';
-import { calcNutritionJson } from '$lib/server/calcNutrition';
+import { calcNutritionSR28 } from '$lib/server/calcNutritionSR28';
 import { toStoredRecipeCategory } from '$lib/farmers-basket/recipe-categories';
 
 const EMPTY_NUTRITION_JSON = '{}';
@@ -54,7 +54,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
     const newStatus = submit ? 'pending' : 'draft';
 
     const nutritionJson = (fields.linkType && Array.isArray(fields.ingredients) && fields.ingredients.length > 0)
-      ? calcNutritionJson(fields.ingredients, fields.linkType, fields.servings, fields.cookingMethod ?? fields.cookMethod ?? null)
+      ? await calcNutritionSR28(fields.ingredients, fields.linkType, fields.servings, fields.cookingMethod ?? fields.cookMethod ?? null)
       : null;
 
     if (fields.recipeName) {

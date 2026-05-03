@@ -1,6 +1,6 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import { calcNutritionJson } from '$lib/server/calcNutrition';
+import { calcNutritionSR28 } from '$lib/server/calcNutritionSR28';
 
 /**
  * POST /api/recipes/preview-nutrition
@@ -53,12 +53,12 @@ export const POST: RequestHandler = async ({ request }) => {
   const dishLinkEntry = dishLink && typeof dishLink === 'object'
     ? { isDish: true, ...(dishLink as object) }
     : null;
-  const ingRows = (dishLinkEntry ? [dishLinkEntry, ...rawIngs] : rawIngs) as Parameters<typeof calcNutritionJson>[0];
+  const ingRows = (dishLinkEntry ? [dishLinkEntry, ...rawIngs] : rawIngs) as Parameters<typeof calcNutritionSR28>[0];
 
   const servingsStr = typeof servings === 'string' ? servings : null;
   const cookMethod = typeof cookingMethod === 'string' ? cookingMethod : null;
 
-  const result = calcNutritionJson(ingRows, linkType, servingsStr, cookMethod);
+  const result = await calcNutritionSR28(ingRows, linkType, servingsStr, cookMethod);
 
   return json({ nutritionJson: result });
 };

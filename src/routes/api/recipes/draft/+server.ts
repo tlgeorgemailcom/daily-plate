@@ -1,7 +1,7 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { execute, queryAll, queryOne } from '$lib/server/turso';
-import { calcNutritionJson } from '$lib/server/calcNutrition';
+import { calcNutritionSR28 } from '$lib/server/calcNutritionSR28';
 
 // Safe migration — add draft columns if they don't exist yet
 async function ensureDraftColumns() {
@@ -90,8 +90,8 @@ export const POST: RequestHandler = async ({ request }) => {
     let nutritionJson: string | null = null;
     if (linkType && rawIngs.length > 0) {
       const dishLinkEntry = draftData?.dishLink ? { isDish: true, ...draftData.dishLink } : null;
-      const ingRows = (dishLinkEntry ? [dishLinkEntry, ...rawIngs] : rawIngs) as Parameters<typeof calcNutritionJson>[0];
-      const computed = calcNutritionJson(ingRows, linkType, draftData?.servings ?? null, draftData?.cookingMethod ?? draftData?.cookMethod ?? null);
+      const ingRows = (dishLinkEntry ? [dishLinkEntry, ...rawIngs] : rawIngs) as Parameters<typeof calcNutritionSR28>[0];
+      const computed = await calcNutritionSR28(ingRows, linkType, draftData?.servings ?? null, draftData?.cookingMethod ?? draftData?.cookMethod ?? null);
       if (computed) nutritionJson = JSON.stringify(computed);
     }
 

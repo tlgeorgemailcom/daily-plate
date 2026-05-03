@@ -523,6 +523,7 @@
       ingredients: ingredients
         .filter((i) => i.name.trim())
         .map((i) => ({
+          ndbNo: i.ndbNo,
           foodWord: i.foodWord,
           portionGrams: i.portionGrams,
           servingCount: i.servingCount,
@@ -1402,7 +1403,7 @@
               <div class="macro-preview-header">
                 <span class="macro-preview-label">
                   {#if macroPer === '100g'}
-                    Per 100g
+                    Per 100g of linked ingredients
                   {:else}
                     Per serving{hasValidServings ? ` (${parseServingsCount(servings)} servings)` : ''}
                   {/if}

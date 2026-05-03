@@ -1,7 +1,7 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { queryAll, execute } from '$lib/server/turso';
-import { calcNutritionJson } from '$lib/server/calcNutrition';
+import { calcNutritionSR28 } from '$lib/server/calcNutritionSR28';
 import { toDisplayRecipeCategory, toStoredRecipeCategory } from '$lib/farmers-basket/recipe-categories';
 
 interface RecipeRow {
@@ -164,8 +164,8 @@ export const PATCH: RequestHandler = async ({ request }) => {
     const rawIngs: unknown[] = Array.isArray(updates.ingredients) ? updates.ingredients : [];
     let nutritionJson: string | null = null;
     if (linkType && rawIngs.length > 0) {
-      const computed = calcNutritionJson(
-        rawIngs as Parameters<typeof calcNutritionJson>[0],
+      const computed = await calcNutritionSR28(
+        rawIngs as Parameters<typeof calcNutritionSR28>[0],
         linkType,
         typeof updates.servings === 'string' ? updates.servings : null,
         typeof updates.cookingMethod === 'string' ? updates.cookingMethod : null
