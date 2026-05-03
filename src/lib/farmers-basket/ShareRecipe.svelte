@@ -446,6 +446,8 @@
   function buildPayload(data: RecipeFormData, imageUrl: string | null): Record<string, unknown> {
     const isLinked = data.nutritionComplete === true;
     const linkMode = data.linkMode ?? 'ingredient';
+    const hasNutritionLinkMeta = (ingredient: RecipeFormData['ingredients'][number]) =>
+      Boolean((ingredient.foodWord || ingredient.ndbNo) && ingredient.portionGrams);
 
     let ingredientsPayload: Record<string, unknown>[];
     if (isLinked && (linkMode === 'dish' || linkMode === 'mixed') && data.dishLink) {
@@ -463,7 +465,7 @@
           ...data.ingredients.map(i => ({
             name: i.name.trim(),
             quantity: i.quantity.trim(),
-            ...(i.foodWord ? { foodWord: i.foodWord, ndbNo: i.ndbNo, portionDesc: i.portionDesc, portionGrams: i.portionGrams, servingCount: i.servingCount } : {}),
+            ...(hasNutritionLinkMeta(i) ? { foodWord: i.foodWord, ndbNo: i.ndbNo, portionDesc: i.portionDesc, portionGrams: i.portionGrams, servingCount: i.servingCount } : {}),
             ...(i.exempt ? { exempt: true } : {})
           }))
         ];
@@ -474,7 +476,7 @@
         name: i.name.trim(),
         quantity: i.quantity.trim(),
         ...(isLinked ? {
-          ...(i.foodWord ? { foodWord: i.foodWord, ndbNo: i.ndbNo, portionDesc: i.portionDesc, portionGrams: i.portionGrams, servingCount: i.servingCount } : {}),
+          ...(hasNutritionLinkMeta(i) ? { foodWord: i.foodWord, ndbNo: i.ndbNo, portionDesc: i.portionDesc, portionGrams: i.portionGrams, servingCount: i.servingCount } : {}),
           ...(i.exempt ? { exempt: true } : {})
         } : {})
       }));
