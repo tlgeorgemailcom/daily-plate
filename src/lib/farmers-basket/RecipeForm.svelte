@@ -2071,8 +2071,10 @@
   }
   
   .name-input {
-    flex: 1 1 auto;
-    min-width: 0;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    min-width: 80px;
   }
   
   .instruction-row .form-textarea {
