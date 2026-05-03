@@ -3,7 +3,7 @@ import type { RequestHandler } from './$types';
 import { queryAll, getGameDb } from '$lib/server/turso';
 import { toDisplayRecipeCategory, toStoredRecipeCategory } from '$lib/farmers-basket/recipe-categories';
 import { deleteRecipeImage, extractPublicId } from '$lib/server/cloudinary';
-import { calcNutritionJson } from '$lib/server/calcNutrition';
+import { calcNutritionSR28 } from '$lib/server/calcNutritionSR28';
 
 interface BuiltinRecipeRow {
   recipe_id: string;
@@ -122,16 +122,17 @@ function deriveLinkType(ingredients: NutritionLinkIngredient[]): 'ingredient' | 
   return 'ingredient';
 }
 
-function computeBuiltinNutrition(
+async function computeBuiltinNutrition(
   recipeIngredients: NutritionLinkIngredient[] | undefined,
   servings: string | null | undefined,
   cookingMethod: string | null | undefined
-): { gramsPerServing: number; nutritionJson: string } {
+): Promise<{ gramsPerServing: number; nutritionJson: string }> {
   if (!recipeIngredients || recipeIngredients.length === 0) {
     return { gramsPerServing: 0, nutritionJson: '{}' };
   }
 
   const linkedRows = recipeIngredients.map((ing) => ({
+    ndbNo: ing.ndbNo,
     foodWord: ing.foodWord,
     portionGrams: typeof ing.portionGrams === 'number' ? ing.portionGrams : undefined,
     servingCount: typeof ing.servingCount === 'number' ? ing.servingCount : undefined,
@@ -140,7 +141,7 @@ function computeBuiltinNutrition(
   }));
 
   const linkType = deriveLinkType(recipeIngredients);
-  const nutrition = calcNutritionJson(linkedRows, linkType, servings, cookingMethod);
+  const nutrition = await calcNutritionSR28(linkedRows, linkType, servings, cookingMethod);
 
   if (!nutrition) {
     return { gramsPerServing: 0, nutritionJson: '{}' };
@@ -152,12 +153,12 @@ function computeBuiltinNutrition(
   };
 }
 
-function resolveBuiltinNutrition(
+async function resolveBuiltinNutrition(
   explicitNutrition: unknown,
   recipeIngredients: NutritionLinkIngredient[] | undefined,
   servings: string | null | undefined,
   cookingMethod: string | null | undefined
-): { gramsPerServing: number; nutritionJson: string } {
+): Promise<{ gramsPerServing: number; nutritionJson: string }> {
   if (explicitNutrition && typeof explicitNutrition === 'object') {
     const grams = Number((explicitNutrition as { gramsPerServing?: unknown }).gramsPerServing ?? 0);
     return {
@@ -165,7 +166,7 @@ function resolveBuiltinNutrition(
       nutritionJson: JSON.stringify(explicitNutrition)
     };
   }
-  return computeBuiltinNutrition(recipeIngredients, servings, cookingMethod);
+  return await computeBuiltinNutrition(recipeIngredients, servings, cookingMethod);
 }
 
 function normalizeRecipeInstructions(value: string | null): string[] | undefined {
@@ -355,7 +356,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
     const nextFoodWord = nextName ? toFoodWord(nextName) : null;
     const servingMeta = parseServingMeta((updates.servings as string | null | undefined) ?? null);
     const recipeIngredientsForNutrition = updates.recipeIngredients as NutritionLinkIngredient[] | undefined;
-    const computedNutrition = resolveBuiltinNutrition(
+    const computedNutrition = await resolveBuiltinNutrition(
       updates.nutritionJson,
       recipeIngredientsForNutrition,
       (updates.servings as string | null | undefined) ?? null,
@@ -519,7 +520,7 @@ export const POST: RequestHandler = async ({ request }) => {
     }
 
     const recipeIngredientsForNutrition = data.recipeIngredients as NutritionLinkIngredient[] | undefined;
-    const computedNutrition = resolveBuiltinNutrition(
+    const computedNutrition = await resolveBuiltinNutrition(
       data.nutritionJson,
       recipeIngredientsForNutrition,
       (data.servings as string | null | undefined) ?? null,
