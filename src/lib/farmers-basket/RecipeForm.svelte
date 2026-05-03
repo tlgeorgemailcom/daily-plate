@@ -776,7 +776,15 @@
     (moderatorMode || recipeSuffix.trim().length > 0) &&
     ingredients.some(i => i.name.trim()) &&
     instructions.some(i => i.text.trim()) &&
-    !(nutritionMode && nutritionComplete && previewLoading)
+    (
+      !nutritionMode ||
+      !nutritionComplete ||
+      (
+        !previewLoading &&
+        !previewError &&
+        !!liveNutritionJson?.perServing
+      )
+    )
   );
 
   // ── Dish Name typeahead ────────────────────────────────────────────────────
