@@ -1255,7 +1255,7 @@
         {#if showStoredNutrition}
           <div class="macro-preview stored">
             <div class="macro-preview-header">
-              <span class="macro-preview-label">Stored nutrition (recipe record)</span>
+              <span class="macro-preview-label">Stored nutrition from dev_recipes/player_recipes (saved values)</span>
             </div>
             <div class="macro-preview-values">
               <span><strong>{persistedNutrition?.perServing?.cal ?? '--'}</strong> cal</span>
@@ -1278,7 +1278,7 @@
                   {macroTotals.linkedCount} linked ingredient{macroTotals.linkedCount === 1 ? '' : 's'} · per serving
                 {/if}
               </span>
-              <span class="macro-preview-label">Updated estimate</span>
+              <span class="macro-preview-label">Unsaved recalculation preview (updates with your edits)</span>
               <div class="macro-per-toggle">
                 <button
                   type="button"
