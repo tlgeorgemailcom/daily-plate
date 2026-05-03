@@ -493,6 +493,7 @@
       servings: servings.trim(),
       cookingMethod,
       linkMode,
+      ingredients: ingredientSignature,
       dishLink: dishLink
         ? {
             foodWord: dishLink.foodWord,
