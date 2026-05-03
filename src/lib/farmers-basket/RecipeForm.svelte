@@ -562,10 +562,6 @@
     capturedNutritionSignature && buildNutritionSignature() !== initialNutritionSignature
   );
 
-  let showStoredNutrition = $derived(
-    !!persistedNutrition?.perServing && !nutritionFieldsDirty
-  );
-
   // ─── Canonical live preview ──────────────────────────────────────────────────
   type PreviewNutrition = {
     perServing: { cal: number; pro: number; fat: number; carb: number; fib: number; sug: number };
@@ -578,8 +574,12 @@
   let previewTimer: ReturnType<typeof setTimeout> | null = null;
   let previewRequestId = 0;
 
+  let showStoredNutrition = $derived(
+    !!persistedNutrition?.perServing && !nutritionFieldsDirty && !previewLoading && !liveNutritionJson
+  );
+
   $effect(() => {
-    if (!nutritionFieldsDirty) {
+    if (!nutritionComplete) {
       liveNutritionJson = null;
       previewLoading = false;
       previewError = false;
@@ -960,11 +960,8 @@
       nextInstructionId = instructions.length;
     }
     suggestionsDismissed = true;
-    // Use the suggestion's stored nutrition as the baseline so the user sees
-    // the source recipe's nutrition immediately rather than auto-computed defaults.
-    if (suggestion.nutritionJson?.perServing) {
-      persistedNutrition = suggestion.nutritionJson;
-    }
+    // Avoid stale baseline values from suggested recipes; canonical preview is authoritative.
+    persistedNutrition = null;
     // Reset the dirty signature so the form shows as clean after fill.
     initialNutritionSignature = buildNutritionSignature();
   }
@@ -1390,7 +1387,7 @@
               <span><strong>{showStoredPer100 ? (persistedNutrition?.per100g?.SugarsTotal ?? '--') : (persistedNutrition?.perServing?.sug ?? '--')}g</strong> sugar</span>
             </div>
           </div>
-        {:else if nutritionFieldsDirty}
+        {:else if nutritionComplete}
           {#if previewLoading}
             <div class="macro-preview loading">
               <div class="macro-preview-header">
