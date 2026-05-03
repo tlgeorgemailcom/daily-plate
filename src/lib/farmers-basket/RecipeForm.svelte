@@ -1411,11 +1411,12 @@
         <div class="ingredient-entry">
           <div class="ingredient-row">
             <span class="row-num">{i + 1}.</span>
-            <textarea
+            <input 
+              type="text"
               bind:value={ingredient.quantity}
               placeholder="Qty (e.g., 2 cups)"
-              class="form-textarea qty-input"
-            ></textarea>
+              class="form-input qty-input"
+            />
             <input 
               type="text"
               bind:value={ingredient.name}
@@ -2049,34 +2050,37 @@
     gap: 8px;
   }
   
-  .ingredient-row, .instruction-row {
+  .ingredient-row {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: flex-start;
     gap: 8px;
     width: 100%;
   }
-  
+
+  .instruction-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+  }
+
   .row-num {
     min-width: 24px;
     padding-top: 10px;
     font-weight: bold;
     color: #8B4513;
   }
-  
+
   .qty-input {
-    flex: 0 1 260px;
+    width: clamp(180px, 26vw, 320px);
     min-width: 180px;
-    max-width: 100%;
-    min-height: 42px;
-    resize: vertical;
-    overflow-wrap: anywhere;
+    flex: 0 0 clamp(180px, 26vw, 320px);
   }
-  
+
   .name-input {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: 300px;
+    flex: 1 1 auto;
+    min-width: 0;
   }
   
   .instruction-row .form-textarea {
@@ -2224,13 +2228,21 @@
     .form-row {
       flex-direction: column;
     }
-    
-    .qty-input {
-      width: 80px;
+
+    .ingredient-row {
+      flex-wrap: wrap;
     }
-    
-    .name-input {
+
+    .qty-input {
+      width: 100%;
       min-width: 0;
+      flex: 1 1 100%;
+    }
+
+    .name-input {
+      width: 100%;
+      min-width: 0;
+      flex: 1 1 100%;
     }
     
     .dietary-grid {
