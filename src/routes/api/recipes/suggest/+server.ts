@@ -176,6 +176,7 @@ export const GET: RequestHandler = async ({ url }) => {
   try {
     // Fetch all published/approved recipes from both tables. We filter and rank in JS
     // to keep the SQL simple and avoid LIKE coupling to the split format.
+    console.log(`[SUGGEST] Fetching recipes for dish="${dish}"`);
     const rows = await queryAll<SuggestionRow>(
       `SELECT recipe_id AS id, recipe_name AS title, category, dietary_category,
               prep_time, servings,
@@ -198,6 +199,7 @@ export const GET: RequestHandler = async ({ url }) => {
        WHERE status = 'approved'`,
             []
     );
+    console.log(`[SUGGEST] Found ${rows.length} total recipes`);
 
 
     const scored = rows
@@ -243,7 +245,8 @@ export const GET: RequestHandler = async ({ url }) => {
 
     return json({ suggestions });
   } catch (err) {
-    console.error('Recipe suggest error:', err);
-    return json({ suggestions: [] });
+    console.error('[SUGGEST] Error:', err instanceof Error ? err.message : String(err));
+    if (err instanceof Error && err.stack) console.error('[SUGGEST] Stack:', err.stack);
+    return json({ error: 'Failed to fetch suggestions', suggestions: [] }, { status: 500 });
   }
 };
