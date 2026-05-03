@@ -169,6 +169,7 @@
   
   // Initialize food supply (default 3 of each selected food)
   let foodSupply = $state<Record<FoodType, number>>(initialData.foodSupply || {} as Record<FoodType, number>);
+  let linkMode = $state(
     (initialData as RecipeFormData).linkMode ?? 'ingredient'
   );
   // ─── Dish-level link state (for 'dish' and 'mixed' modes) ───────────────────
@@ -500,7 +501,9 @@
             portionGrams: dishLink.portionGrams,
             servingCount: dishLink.servingCount
           }
-        : null,
+        : null
+    });
+  }
 
   function buildNutritionPayload() {
     return {
