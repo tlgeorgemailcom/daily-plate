@@ -1239,7 +1239,7 @@
         ingredients: data.ingredients.filter(i => i.name.trim()).map(i => ({
           name: i.name,
           quantity: i.quantity,
-          ...(i.foodWord ? {
+          ...(((i.foodWord || i.ndbNo) && i.portionGrams) ? {
             foodWord: i.foodWord,
             ndbNo: i.ndbNo,
             portionDesc: i.portionDesc,

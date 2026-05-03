@@ -116,7 +116,9 @@ function parseServingMeta(servings: string | null | undefined): { servingsCount:
 
 function deriveLinkType(ingredients: NutritionLinkIngredient[]): 'ingredient' | 'dish' | 'mixed' {
   const hasDish = ingredients.some((ing) => ing.isDish === true);
-  const hasIngredientLinks = ingredients.some((ing) => ing.isDish !== true && !!ing.foodWord);
+  const hasIngredientLinks = ingredients.some(
+    (ing) => ing.isDish !== true && !!(ing.foodWord || ing.ndbNo) && typeof ing.portionGrams === 'number'
+  );
   if (hasDish && hasIngredientLinks) return 'mixed';
   if (hasDish) return 'dish';
   return 'ingredient';

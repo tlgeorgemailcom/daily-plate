@@ -474,7 +474,7 @@
               quantity: ing.quantity,
               gameFood: '',
               animal: '',
-              ...(ing.foodWord ? {
+              ...(((ing.foodWord || ing.ndbNo) && ing.portionGrams) ? {
                 foodWord: ing.foodWord,
                 ndbNo: ing.ndbNo,
                 portionDesc: ing.portionDesc,
