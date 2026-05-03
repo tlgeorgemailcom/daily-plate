@@ -2052,6 +2052,7 @@
   
   .ingredient-row, .instruction-row {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     gap: 8px;
   }
