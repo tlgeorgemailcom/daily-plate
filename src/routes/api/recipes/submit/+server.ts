@@ -144,6 +144,12 @@ export const POST: RequestHandler = async ({ request }) => {
     const submittedBy = body.playerId;
     const submitterName = body.submitterName || 'Player';
     const status = body.draft === true ? 'draft' : 'pending';
+
+    const computedNutrition = (body.linkType && Array.isArray(body.ingredients) && body.ingredients.length > 0)
+      ? await calcNutritionSR28(body.ingredients, body.linkType, body.servings, body.cookingMethod ?? body.cookMethod ?? null)
+      : null;
+    const nutritionJson = computedNutrition ? JSON.stringify(computedNutrition) : EMPTY_NUTRITION_JSON;
+    const gramsPerServing = computedNutrition?.gramsPerServing ?? 0;
     
     // Insert into Turso
     await execute(
@@ -169,10 +175,10 @@ export const POST: RequestHandler = async ({ request }) => {
         body.linkType || null,
         body.cookingMethod || body.cookMethod || null,
         body.dishFamily || null,
-        EMPTY_NUTRITION_JSON,
+        nutritionJson,
         submitterName,
         status
-        ,0,
+        ,gramsPerServing,
         DEFAULT_VERSION,
         DEFAULT_VERSION,
         DEFAULT_VERSION
