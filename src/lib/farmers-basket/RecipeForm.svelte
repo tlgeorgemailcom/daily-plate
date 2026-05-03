@@ -580,7 +580,11 @@
   let previewRequestId = 0;
 
   let showStoredNutrition = $derived(
-    !!persistedNutrition?.perServing && !nutritionFieldsDirty && !previewLoading && !liveNutritionJson
+    !!persistedNutrition?.perServing &&
+    !nutritionComplete &&
+    !nutritionFieldsDirty &&
+    !previewLoading &&
+    !liveNutritionJson
   );
 
   $effect(() => {
