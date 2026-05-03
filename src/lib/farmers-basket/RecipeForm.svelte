@@ -2055,6 +2055,7 @@
     flex-wrap: wrap;
     align-items: flex-start;
     gap: 8px;
+    width: 100%;
   }
   
   .row-num {
@@ -2070,8 +2071,8 @@
   }
   
   .name-input {
-    flex: 1;
-    min-width: 120px;
+    flex: 1 1 auto;
+    min-width: 0;
   }
   
   .instruction-row .form-textarea {
