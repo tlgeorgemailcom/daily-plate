@@ -26,6 +26,26 @@
     id: number;
     text: string;
   }
+
+  interface PersistedNutritionJson {
+    perServing?: {
+      cal?: number;
+      pro?: number;
+      fat?: number;
+      carb?: number;
+      fib?: number;
+      sug?: number;
+      h2o?: number;
+    };
+    per100g?: {
+      Energy_KCal?: number;
+      Protein?: number;
+      TotalLipidFat?: number;
+      Carbohydrate?: number;
+      FiberTotalDietary?: number;
+      SugarsTotal?: number;
+    };
+  }
   
   export interface RecipeFormData {
     recipeName: string;     // combined: "Dish Name — Suffix"
@@ -44,6 +64,7 @@
     linkMode?: 'ingredient' | 'dish' | 'mixed';
     dishLink?: { foodWord: string; ndbNo: string; portionDesc: string; portionGrams: number; servingCount: number };
     dishFamily?: string;
+    nutritionJson?: PersistedNutritionJson;
   }
   
   // Props
@@ -454,6 +475,55 @@
           ? dishLink !== null && ingredients.filter(i => i.name.trim()).every(i => i.foodWord || i.exempt)
           : (nutritionLinkedCount + nutritionExemptCount) === nutritionTotalCount
     )
+  );
+
+  const persistedNutrition = initialData.nutritionJson;
+
+  function buildNutritionSignature(): string {
+    const ingredientSignature = ingredients
+      .filter((i) => i.name.trim())
+      .map((i) => ({
+        name: i.name.trim(),
+        quantity: i.quantity?.trim() || '',
+        foodWord: i.foodWord || '',
+        ndbNo: i.ndbNo || '',
+        portionDesc: i.portionDesc || '',
+        portionGrams: i.portionGrams ?? null,
+        servingCount: i.servingCount ?? null,
+        exempt: i.exempt === true
+      }));
+
+    return JSON.stringify({
+      servings: servings.trim(),
+      linkMode,
+      dishLink: dishLink
+        ? {
+            foodWord: dishLink.foodWord,
+            ndbNo: dishLink.ndbNo,
+            portionDesc: dishLink.portionDesc,
+            portionGrams: dishLink.portionGrams,
+            servingCount: dishLink.servingCount
+          }
+        : null,
+      ingredients: ingredientSignature
+    });
+  }
+
+  let initialNutritionSignature = $state('');
+  let capturedNutritionSignature = $state(false);
+
+  $effect(() => {
+    if (capturedNutritionSignature) return;
+    initialNutritionSignature = buildNutritionSignature();
+    capturedNutritionSignature = true;
+  });
+
+  let nutritionFieldsDirty = $derived(
+    capturedNutritionSignature && buildNutritionSignature() !== initialNutritionSignature
+  );
+
+  let showStoredNutrition = $derived(
+    !!persistedNutrition?.perServing && !nutritionFieldsDirty
   );
 
   // ─── Live macro totals from linked ingredients ───────────────────────────────
@@ -1182,7 +1252,21 @@
             🔗 Nutrition: {nutritionLinkedCount + nutritionExemptCount}/{nutritionTotalCount} ingredient{nutritionTotalCount === 1 ? '' : 's'} accounted for
           {/if}
         </div>
-        {#if macroTotals.linkedCount > 0}
+        {#if showStoredNutrition}
+          <div class="macro-preview stored">
+            <div class="macro-preview-header">
+              <span class="macro-preview-label">Stored nutrition (recipe record)</span>
+            </div>
+            <div class="macro-preview-values">
+              <span><strong>{persistedNutrition?.perServing?.cal ?? '--'}</strong> cal</span>
+              <span><strong>{persistedNutrition?.perServing?.pro ?? '--'}g</strong> protein</span>
+              <span><strong>{persistedNutrition?.perServing?.fat ?? '--'}g</strong> fat</span>
+              <span><strong>{persistedNutrition?.perServing?.carb ?? '--'}g</strong> carbs</span>
+              <span><strong>{persistedNutrition?.perServing?.fib ?? '--'}g</strong> fibre</span>
+              <span><strong>{persistedNutrition?.perServing?.sug ?? '--'}g</strong> sugar</span>
+            </div>
+          </div>
+        {:else if macroTotals.linkedCount > 0}
           <div class="macro-preview" class:complete={nutritionComplete}>
             <div class="macro-preview-header">
               <span class="macro-preview-label">
@@ -1194,6 +1278,7 @@
                   {macroTotals.linkedCount} linked ingredient{macroTotals.linkedCount === 1 ? '' : 's'} · per serving
                 {/if}
               </span>
+              <span class="macro-preview-label">Updated estimate</span>
               <div class="macro-per-toggle">
                 <button
                   type="button"
@@ -2246,6 +2331,12 @@
   .macro-preview.complete {
     background: #F1F8E9;
     border-color: #AED581;
+  }
+
+  .macro-preview.stored {
+    background: #E3F2FD;
+    border-color: #90CAF9;
+    color: #0D47A1;
   }
 
   .macro-preview-header {

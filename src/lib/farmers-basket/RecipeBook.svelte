@@ -620,6 +620,7 @@
       dishFamily: level.dishFamily || '',
       prepTime: level.prepTime || '',
       servings: level.servings || '',
+      nutritionJson: level.nutritionJson || undefined,
       ingredients,
       instructions: (level.recipeInstructions || []).map((text, i) => ({
         id: i + 1,
@@ -1329,6 +1330,7 @@
         servings: d.servings || selectedLevel.servings || '',
         cookingMethod: d.cookingMethod || selectedLevel.cookingMethod || 'Bake',
         dishFamily: d.dishFamily || selectedLevel.dishFamily || '',
+        nutritionJson: selectedLevel.nutritionJson || undefined,
         ingredients: (d.ingredients || []).map((ing, i) => ({
           id: i + 1,
           name: ing.name,
@@ -1370,6 +1372,7 @@
         servings: d.servings || selectedLevel.servings || '',
         cookingMethod: d.cookingMethod || selectedLevel.cookingMethod || 'Bake',
         dishFamily: d.dishFamily || selectedLevel.dishFamily || '',
+        nutritionJson: selectedLevel.nutritionJson || undefined,
         ingredients: (d.ingredients || []).map((ing, i) => ({
           id: i + 1,
           name: ing.name,
