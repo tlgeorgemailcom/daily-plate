@@ -14,6 +14,13 @@ interface SuggestionRow {
   recipe_instructions: string | null;
   source_type: 'dev' | 'player';
   dish_family: string | null;
+  nutrition_json: string | null;
+}
+
+interface StoredNutritionJson {
+  perServing: { cal: number; pro: number; fat: number; carb: number; fib: number; h2o: number; sug: number };
+  gramsPerServing: number;
+  servings: number;
 }
 
 interface CanonicalIngredient {
@@ -143,6 +150,7 @@ export const GET: RequestHandler = async ({ url }) => {
               recipe_ingredients_json AS recipe_ingredients,
               recipe_instructions_json AS recipe_instructions,
               dish_family,
+              nutrition_json,
               'dev' AS source_type
        FROM dev_recipes
         WHERE status = 'published'
@@ -152,11 +160,13 @@ export const GET: RequestHandler = async ({ url }) => {
               recipe_ingredients_json AS recipe_ingredients,
               recipe_instructions_json AS recipe_instructions,
               dish_family,
+              nutrition_json,
               'player' AS source_type
        FROM player_recipes
        WHERE status = 'approved'`,
-      []
+            []
     );
+
 
     const scored = rows
       .map(row => ({ row, s: score(row.title, dish) }))
@@ -191,6 +201,7 @@ export const GET: RequestHandler = async ({ url }) => {
         sourceType: row.source_type,
         dishFamily: row.dish_family || null,
         matchScore: s,
+        nutritionJson: (() => { try { return row.nutrition_json ? (JSON.parse(row.nutrition_json) as StoredNutritionJson) : null; } catch { return null; } })(),
       };
     });
 

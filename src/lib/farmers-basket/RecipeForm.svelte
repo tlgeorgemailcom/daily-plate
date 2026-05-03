@@ -169,9 +169,6 @@
   
   // Initialize food supply (default 3 of each selected food)
   let foodSupply = $state<Record<FoodType, number>>(initialData.foodSupply || {} as Record<FoodType, number>);
-
-  // ─── Link mode ──────────────────────────────────────────────────────────────
-  let linkMode = $state<'ingredient' | 'dish' | 'mixed'>(
     (initialData as RecipeFormData).linkMode ?? 'ingredient'
   );
   // ─── Dish-level link state (for 'dish' and 'mixed' modes) ───────────────────
@@ -477,8 +474,6 @@
     )
   );
 
-  const persistedNutrition = initialData.nutritionJson;
-
   function buildNutritionSignature(): string {
     const ingredientSignature = ingredients
       .filter((i) => i.name.trim())
@@ -506,9 +501,6 @@
             servingCount: dishLink.servingCount
           }
         : null,
-      ingredients: ingredientSignature
-    });
-  }
 
   function buildNutritionPayload() {
     return {
@@ -798,7 +790,10 @@
     instructions: RecipeInstruction[];
     sourceType: 'dev' | 'player';
     dishFamily?: string | null;
+    nutritionJson?: PersistedNutritionJson | null;
   }
+
+  let persistedNutrition = $state<PersistedNutritionJson | null | undefined>(initialData.nutritionJson);
 
   let suggestions = $state<RecipeSuggestion[]>([]);
   let suggestionsLoading = $state(false);
@@ -933,11 +928,17 @@
       nextInstructionId = instructions.length;
     }
     suggestionsDismissed = true;
+    // Use the suggestion's stored nutrition as the baseline so the user sees
+    // the source recipe's nutrition immediately rather than auto-computed defaults.
+    if (suggestion.nutritionJson?.perServing) {
+      persistedNutrition = suggestion.nutritionJson;
+    }
+    // Reset the dirty signature so the form shows as clean after fill.
+    initialNutritionSignature = buildNutritionSignature();
   }
   
   // Current form data (for customActions snippet)
   let formData = $derived<RecipeFormData>({
-    recipeName: recipeSuffix.trim() ? `${dishName.trim()} — ${recipeSuffix.trim()}` : dishName.trim(),
     dishName: dishName.trim(),
     recipeSuffix: recipeSuffix.trim(),
     cookingMethod,
