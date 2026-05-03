@@ -1465,24 +1465,13 @@
                 <span><strong>{r1(ps.sug * s)}g</strong> sugar</span>
               </div>
             </div>
-          {:else if macroTotals.linkedCount > 0 && macroTotals.cal !== null}
-            <div class="macro-preview complete">
-              <div class="macro-preview-header">
-                <span class="macro-preview-label">Built recipe estimate</span>
-                <span class="macro-preview-label">Fallback only while canonical preview is unavailable</span>
-              </div>
-              <div class="macro-preview-values">
-                <span><strong>{macroTotals.cal ?? '--'}</strong> cal</span>
-                <span><strong>{macroTotals.pro ?? '--'}g</strong> protein</span>
-                <span><strong>{macroTotals.fat ?? '--'}g</strong> fat</span>
-                <span><strong>{macroTotals.carb ?? '--'}g</strong> carbs</span>
-                <span><strong>{macroTotals.fib ?? '--'}g</strong> fibre</span>
-                <span><strong>{macroTotals.sug ?? '--'}g</strong> sugar</span>
-              </div>
-            </div>
           {:else if previewError}
             <div class="macro-preview-error">
               ⚠️ Nutrition preview unavailable — will be calculated on save
+            </div>
+          {:else}
+            <div class="macro-preview-error">
+              ⚠️ Nutrition preview unavailable — please wait and retry
             </div>
           {/if}
         {/if}
