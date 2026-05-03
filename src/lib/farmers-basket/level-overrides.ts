@@ -99,7 +99,7 @@ function mergeRecipeIngredients(
   const origByName = new Map(originalIngs.map(o => [normalize(o.name), o]));
   const validFoodWords = new Set(FOODS.map((f) => f.word));
 
-  return overrideIngs.map(ing => {
+  const merged = overrideIngs.map(ing => {
     const hasValidFoodWord = !!ing.foodWord && validFoodWords.has(ing.foodWord);
     // Only preserve override nutrition links when they can actually map to FOODS.
     if ((ing.portionGrams && hasValidFoodWord) || ing.exempt || ing.isDish) return ing;
@@ -120,6 +120,14 @@ function mergeRecipeIngredients(
       section: ing.section ?? orig.section,
     };
   });
+
+  const overrideNames = new Set(overrideIngs.map((ing) => normalize(ing.name)));
+  const missingOriginals = originalIngs.filter((ing) => !overrideNames.has(normalize(ing.name)));
+
+  // Some persisted override rows were saved before the full built-in ingredient payload existed.
+  // Preserve any original generated rows that the sparse override does not mention so recalculation
+  // continues to use the full recipe instead of a truncated subset.
+  return [...merged, ...missingOriginals];
 }
 
 /**
