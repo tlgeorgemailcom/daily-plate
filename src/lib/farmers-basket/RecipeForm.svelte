@@ -1406,17 +1406,39 @@
             </div>
           </div>
         {:else if nutritionComplete}
-          {#if macroTotals.linkedCount > 0 && macroTotals.cal !== null}
+          {#if previewLoading}
+            <div class="macro-preview loading">
+              <div class="macro-preview-header">
+                <span class="macro-preview-label">Recalculating…</span>
+              </div>
+              {#if liveNutritionJson?.perServing}
+                {@const ps = liveNutritionJson.perServing}
+                <div class="macro-preview-values">
+                  <span><strong>{ps.cal}</strong> cal</span>
+                  <span><strong>{ps.pro}g</strong> protein</span>
+                  <span><strong>{ps.fat}g</strong> fat</span>
+                  <span><strong>{ps.carb}g</strong> carbs</span>
+                  <span><strong>{ps.fib}g</strong> fibre</span>
+                  <span><strong>{ps.sug}g</strong> sugar</span>
+                </div>
+              {/if}
+            </div>
+          {:else if liveNutritionJson?.perServing}
+            {@const ps = liveNutritionJson.perServing}
+            {@const gpS = liveNutritionJson.gramsPerServing}
+            {@const per100Scale = gpS && gpS > 0 ? 100 / gpS : null}
+            {@const r1 = (v: number) => Math.round(v * 10) / 10}
+            {@const s = macroPer === '100g' && per100Scale ? per100Scale : 1}
             <div class="macro-preview complete">
               <div class="macro-preview-header">
                 <span class="macro-preview-label">
                   {#if macroPer === '100g'}
-                    Per 100g of built recipe
+                    Per 100g
                   {:else}
                     Per serving{hasValidServings ? ` (${parseServingsCount(servings)} servings)` : ''}
                   {/if}
                 </span>
-                <span class="macro-preview-label">Built recipe values (current linked ingredients)</span>
+                <span class="macro-preview-label">Canonical preview (matches what Save will store)</span>
                 <div class="macro-per-toggle">
                   <button
                     type="button"
@@ -1429,10 +1451,25 @@
                     type="button"
                     class="macro-per-btn"
                     class:active={macroPer === '100g'}
-                    disabled={macroTotals.totalGrams <= 0}
+                    disabled={!per100Scale}
                     onclick={() => macroPer = '100g'}
                   >100g</button>
                 </div>
+              </div>
+              <div class="macro-preview-values">
+                <span><strong>{r1(ps.cal * s)}</strong> cal</span>
+                <span><strong>{r1(ps.pro * s)}g</strong> protein</span>
+                <span><strong>{r1(ps.fat * s)}g</strong> fat</span>
+                <span><strong>{r1(ps.carb * s)}g</strong> carbs</span>
+                <span><strong>{r1(ps.fib * s)}g</strong> fibre</span>
+                <span><strong>{r1(ps.sug * s)}g</strong> sugar</span>
+              </div>
+            </div>
+          {:else if macroTotals.linkedCount > 0 && macroTotals.cal !== null}
+            <div class="macro-preview complete">
+              <div class="macro-preview-header">
+                <span class="macro-preview-label">Built recipe estimate</span>
+                <span class="macro-preview-label">Fallback only while canonical preview is unavailable</span>
               </div>
               <div class="macro-preview-values">
                 <span><strong>{macroTotals.cal ?? '--'}</strong> cal</span>
