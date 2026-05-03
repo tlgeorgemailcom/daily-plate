@@ -1324,17 +1324,42 @@
           {/if}
         </div>
         {#if showStoredNutrition}
+          {@const hasStoredPer100 = !!persistedNutrition?.per100g}
+          {@const showStoredPer100 = macroPer === '100g' && hasStoredPer100}
           <div class="macro-preview stored">
             <div class="macro-preview-header">
+              <span class="macro-preview-label">
+                {#if showStoredPer100}
+                  Per 100g
+                {:else}
+                  Per serving{hasValidServings ? ` (${parseServingsCount(servings)} servings)` : ''}
+                {/if}
+              </span>
               <span class="macro-preview-label">Stored nutrition from dev_recipes/player_recipes (saved values)</span>
+              <div class="macro-per-toggle">
+                <button
+                  type="button"
+                  class="macro-per-btn"
+                  class:active={macroPer === 'serving'}
+                  disabled={!hasValidServings}
+                  onclick={() => macroPer = 'serving'}
+                >Per serving</button>
+                <button
+                  type="button"
+                  class="macro-per-btn"
+                  class:active={macroPer === '100g'}
+                  disabled={!hasStoredPer100}
+                  onclick={() => macroPer = '100g'}
+                >100g</button>
+              </div>
             </div>
             <div class="macro-preview-values">
-              <span><strong>{persistedNutrition?.perServing?.cal ?? '--'}</strong> cal</span>
-              <span><strong>{persistedNutrition?.perServing?.pro ?? '--'}g</strong> protein</span>
-              <span><strong>{persistedNutrition?.perServing?.fat ?? '--'}g</strong> fat</span>
-              <span><strong>{persistedNutrition?.perServing?.carb ?? '--'}g</strong> carbs</span>
-              <span><strong>{persistedNutrition?.perServing?.fib ?? '--'}g</strong> fibre</span>
-              <span><strong>{persistedNutrition?.perServing?.sug ?? '--'}g</strong> sugar</span>
+              <span><strong>{showStoredPer100 ? (persistedNutrition?.per100g?.Energy_KCal ?? '--') : (persistedNutrition?.perServing?.cal ?? '--')}</strong> cal</span>
+              <span><strong>{showStoredPer100 ? (persistedNutrition?.per100g?.Protein ?? '--') : (persistedNutrition?.perServing?.pro ?? '--')}g</strong> protein</span>
+              <span><strong>{showStoredPer100 ? (persistedNutrition?.per100g?.TotalLipidFat ?? '--') : (persistedNutrition?.perServing?.fat ?? '--')}g</strong> fat</span>
+              <span><strong>{showStoredPer100 ? (persistedNutrition?.per100g?.Carbohydrate ?? '--') : (persistedNutrition?.perServing?.carb ?? '--')}g</strong> carbs</span>
+              <span><strong>{showStoredPer100 ? (persistedNutrition?.per100g?.FiberTotalDietary ?? '--') : (persistedNutrition?.perServing?.fib ?? '--')}g</strong> fibre</span>
+              <span><strong>{showStoredPer100 ? (persistedNutrition?.per100g?.SugarsTotal ?? '--') : (persistedNutrition?.perServing?.sug ?? '--')}g</strong> sugar</span>
             </div>
           </div>
         {:else if nutritionFieldsDirty}
