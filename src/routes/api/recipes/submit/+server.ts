@@ -7,6 +7,10 @@ import { toStoredRecipeCategory } from '$lib/farmers-basket/recipe-categories';
 const EMPTY_NUTRITION_JSON = '{}';
 const DEFAULT_VERSION = 'pending';
 
+function isNutritionPreview(value: unknown): value is { perServing?: { cal?: number } } {
+  return typeof value === 'object' && value !== null;
+}
+
 // Generate unique ID
 function generateId(): string {
   return `recipe-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
@@ -53,9 +57,12 @@ export const PATCH: RequestHandler = async ({ request }) => {
 
     const newStatus = submit ? 'pending' : 'draft';
 
-    const nutritionJson = (fields.linkType && Array.isArray(fields.ingredients) && fields.ingredients.length > 0)
-      ? await calcNutritionSR28(fields.ingredients, fields.linkType, fields.servings, fields.cookingMethod ?? fields.cookMethod ?? null)
-      : null;
+    const canonicalPreview = isNutritionPreview(fields.nutritionJsonPreview) ? fields.nutritionJsonPreview : null;
+    const nutritionJson = canonicalPreview ?? (
+      (fields.linkType && Array.isArray(fields.ingredients) && fields.ingredients.length > 0)
+        ? await calcNutritionSR28(fields.ingredients, fields.linkType, fields.servings, fields.cookingMethod ?? fields.cookMethod ?? null)
+        : null
+    );
 
     if (fields.recipeName) {
       await execute(
@@ -145,9 +152,12 @@ export const POST: RequestHandler = async ({ request }) => {
     const submitterName = body.submitterName || 'Player';
     const status = body.draft === true ? 'draft' : 'pending';
 
-    const computedNutrition = (body.linkType && Array.isArray(body.ingredients) && body.ingredients.length > 0)
-      ? await calcNutritionSR28(body.ingredients, body.linkType, body.servings, body.cookingMethod ?? body.cookMethod ?? null)
-      : null;
+    const canonicalPreview = isNutritionPreview(body.nutritionJsonPreview) ? body.nutritionJsonPreview : null;
+    const computedNutrition = canonicalPreview ?? (
+      (body.linkType && Array.isArray(body.ingredients) && body.ingredients.length > 0)
+        ? await calcNutritionSR28(body.ingredients, body.linkType, body.servings, body.cookingMethod ?? body.cookMethod ?? null)
+        : null
+    );
     const nutritionJson = computedNutrition ? JSON.stringify(computedNutrition) : EMPTY_NUTRITION_JSON;
     const ingHash = Array.isArray(body.ingredients) ? body.ingredients.map(r => `${r.ndbNo || r.foodWord || 'unlinked'}:${r.portionGrams}`).join('|') : '';
     console.log(`[SUBMIT] linkType=${body.linkType} rows=${body.ingredients?.length ?? 0} cal=${computedNutrition?.perServing?.cal ?? 'null'} ings=[${ingHash}]`);

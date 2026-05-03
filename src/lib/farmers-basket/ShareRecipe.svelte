@@ -123,7 +123,7 @@
         imageUrl = await uploadImage();
         if (imageUploadError) { draftError = imageUploadError; return; }
       }
-      const payload = buildPayload(data, imageUrl);
+      const payload = await attachCanonicalNutrition(buildPayload(data, imageUrl));
       const res = await fetch('/api/recipes/submit', {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
@@ -246,7 +246,7 @@
         if (imageUploadError) { draftError = imageUploadError; return; }
       }
 
-      const payload = buildPayload(data, imageUrl);
+      const payload = await attachCanonicalNutrition(buildPayload(data, imageUrl));
 
       let id = draftRecipeId;
       if (!id) {
@@ -501,6 +501,31 @@
       ...(imageUrl ? { imageUrl } : {})
     };
   }
+
+  async function attachCanonicalNutrition(payload: Record<string, unknown>): Promise<Record<string, unknown>> {
+    const linkType = typeof payload.linkType === 'string' ? payload.linkType : null;
+    const ingredients = Array.isArray(payload.ingredients) ? payload.ingredients : [];
+    if (!linkType || ingredients.length === 0) return payload;
+
+    try {
+      const res = await fetch('/api/recipes/preview-nutrition', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ingredients,
+          linkType,
+          servings: typeof payload.servings === 'string' ? payload.servings : null,
+          cookingMethod: typeof payload.cookingMethod === 'string' ? payload.cookingMethod : null,
+        })
+      });
+      if (!res.ok) return payload;
+      const data = await res.json() as { nutritionJson?: unknown | null };
+      if (!data?.nutritionJson) return payload;
+      return { ...payload, nutritionJsonPreview: data.nutritionJson };
+    } catch {
+      return payload;
+    }
+  }
   
   async function handleFormSubmit(data: RecipeFormData) {
     isSubmitting = true;
@@ -525,7 +550,7 @@
         }
       }
       
-      const payload = buildPayload(data, imageUrl);
+      const payload = await attachCanonicalNutrition(buildPayload(data, imageUrl));
       let recipeId: string;
 
       if (draftRecipeId) {
