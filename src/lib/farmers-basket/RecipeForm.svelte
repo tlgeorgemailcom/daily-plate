@@ -1411,12 +1411,11 @@
         <div class="ingredient-entry">
           <div class="ingredient-row">
             <span class="row-num">{i + 1}.</span>
-            <input 
-              type="text"
+            <textarea
               bind:value={ingredient.quantity}
               placeholder="Qty (e.g., 2 cups)"
-              class="form-input qty-input"
-            />
+              class="form-textarea qty-input"
+            ></textarea>
             <input 
               type="text"
               bind:value={ingredient.name}
@@ -2066,8 +2065,12 @@
   }
   
   .qty-input {
-    width: 100px;
-    flex-shrink: 0;
+    flex: 0 1 260px;
+    min-width: 180px;
+    max-width: 100%;
+    min-height: 42px;
+    resize: vertical;
+    overflow-wrap: anywhere;
   }
   
   .name-input {
