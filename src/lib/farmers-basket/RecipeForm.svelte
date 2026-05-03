@@ -535,13 +535,18 @@
     return {
       ingredients: ingredients
         .filter((i) => i.name.trim())
-        .map((i) => ({
-          ndbNo: i.ndbNo,
-          foodWord: i.foodWord,
-          portionGrams: i.portionGrams,
-          servingCount: i.servingCount,
-          exempt: i.exempt,
-        })),
+        .map((i) => {
+          const hasNutritionLinkMeta = Boolean((i.foodWord || i.ndbNo) && i.portionGrams);
+          return {
+            ...(hasNutritionLinkMeta ? {
+              ndbNo: i.ndbNo,
+              foodWord: i.foodWord,
+              portionGrams: i.portionGrams,
+              servingCount: i.servingCount,
+            } : {}),
+            ...(i.exempt ? { exempt: true } : {}),
+          };
+        }),
       dishLink: dishLink ?? undefined,
       linkType: linkMode,
       servings,
