@@ -149,6 +149,8 @@ export const POST: RequestHandler = async ({ request }) => {
       ? await calcNutritionSR28(body.ingredients, body.linkType, body.servings, body.cookingMethod ?? body.cookMethod ?? null)
       : null;
     const nutritionJson = computedNutrition ? JSON.stringify(computedNutrition) : EMPTY_NUTRITION_JSON;
+    const ingHash = Array.isArray(body.ingredients) ? body.ingredients.map(r => `${r.ndbNo || r.foodWord || 'unlinked'}:${r.portionGrams}`).join('|') : '';
+    console.log(`[SUBMIT] linkType=${body.linkType} rows=${body.ingredients?.length ?? 0} cal=${computedNutrition?.perServing?.cal ?? 'null'} ings=[${ingHash}]`);
     const gramsPerServing = computedNutrition?.gramsPerServing ?? 0;
     
     // Insert into Turso

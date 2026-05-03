@@ -64,6 +64,8 @@ export const POST: RequestHandler = async ({ request }) => {
   const cookMethod = typeof cookingMethod === 'string' ? cookingMethod : null;
 
   const result = await calcNutritionSR28(ingRows, linkType, servingsStr, cookMethod);
+  const ingHash = ingRows.map(r => `${r.ndbNo || r.foodWord || 'unlinked'}:${r.portionGrams}`).join('|');
+  console.log(`[PREVIEW] linkType=${linkType} rows=${ingRows.length} cal=${result?.perServing?.cal ?? 'null'} ings=[${ingHash}]`);
 
   return json({ nutritionJson: result });
 };
