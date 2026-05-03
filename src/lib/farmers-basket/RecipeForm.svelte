@@ -1411,18 +1411,20 @@
         <div class="ingredient-entry">
           <div class="ingredient-row">
             <span class="row-num">{i + 1}.</span>
-            <input 
-              type="text"
-              bind:value={ingredient.quantity}
-              placeholder="Qty (e.g., 2 cups)"
-              class="form-input qty-input"
-            />
-            <input 
-              type="text"
-              bind:value={ingredient.name}
-              placeholder="Ingredient (e.g., flour)"
-              class="form-input name-input"
-            />
+            <div class="ingredient-fields">
+              <input 
+                type="text"
+                bind:value={ingredient.quantity}
+                placeholder="Qty (e.g., 2 cups)"
+                class="form-input qty-input"
+              />
+              <input 
+                type="text"
+                bind:value={ingredient.name}
+                placeholder="Ingredient (e.g., flour)"
+                class="form-input name-input"
+              />
+            </div>
             <button 
               type="button"
               class="remove-btn"
@@ -2058,6 +2060,14 @@
     width: 100%;
   }
 
+  .ingredient-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
   .instruction-row {
     display: flex;
     align-items: flex-start;
@@ -2072,14 +2082,9 @@
     color: #8B4513;
   }
 
-  .qty-input {
-    width: clamp(180px, 26vw, 320px);
-    min-width: 180px;
-    flex: 0 0 clamp(180px, 26vw, 320px);
-  }
-
+  .qty-input,
   .name-input {
-    flex: 1 1 auto;
+    width: 100%;
     min-width: 0;
   }
   
