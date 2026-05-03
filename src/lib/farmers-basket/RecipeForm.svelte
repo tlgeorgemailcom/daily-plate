@@ -363,7 +363,13 @@
       if (existing) {
         // Restore current portion selection if possible
         const matchIdx = existing.portions.findIndex(p => p.desc === ing.portionDesc);
-        nutritionPendingPortionIdx = { ...nutritionPendingPortionIdx, [ing.id]: matchIdx >= 0 ? matchIdx : (existing.portions.length > 1 ? 1 : 0) };
+        const firstNamedIdx = existing.portions.findIndex(p => p.desc !== 'custom (g)');
+        const fallbackIdx = firstNamedIdx >= 0 ? firstNamedIdx : 0;
+        const resolvedIdx = matchIdx >= 0 ? matchIdx : fallbackIdx;
+        const useIdx = existing.portions[resolvedIdx]?.desc === 'custom (g)' && firstNamedIdx >= 0
+          ? firstNamedIdx
+          : resolvedIdx;
+        nutritionPendingPortionIdx = { ...nutritionPendingPortionIdx, [ing.id]: useIdx };
         nutritionPendingCount = { ...nutritionPendingCount, [ing.id]: ing.servingCount ?? 1 };
         // Restore custom grams if the previous link used a custom gram amount
         nutritionCustomGrams = { ...nutritionCustomGrams, [ing.id]: ing.portionDesc === 'g' ? (ing.portionGrams ?? null) : null };
@@ -376,7 +382,8 @@
 
   function selectPendingFood(ingId: number, food: FoodData) {
     nutritionPendingFood = { ...nutritionPendingFood, [ingId]: food };
-    const defaultIdx = food.portions.length > 1 ? 1 : 0;
+    const firstNamedIdx = food.portions.findIndex(p => p.desc !== 'custom (g)');
+    const defaultIdx = firstNamedIdx >= 0 ? firstNamedIdx : 0;
     nutritionPendingPortionIdx = { ...nutritionPendingPortionIdx, [ingId]: defaultIdx };
     nutritionPendingCount = { ...nutritionPendingCount, [ingId]: 1 };
     nutritionCustomGrams = { ...nutritionCustomGrams, [ingId]: null };
@@ -393,7 +400,12 @@
       portionDesc = 'g';
       portionGrams = customG;
     } else {
-      const portionIdx = nutritionPendingPortionIdx[ingId] ?? (food.portions.length > 1 ? 1 : 0);
+      const firstNamedIdx = food.portions.findIndex(p => p.desc !== 'custom (g)');
+      const fallbackIdx = firstNamedIdx >= 0 ? firstNamedIdx : 0;
+      const rawIdx = nutritionPendingPortionIdx[ingId] ?? fallbackIdx;
+      const portionIdx = food.portions[rawIdx]?.desc === 'custom (g)' && firstNamedIdx >= 0
+        ? firstNamedIdx
+        : rawIdx;
       const portion = food.portions[portionIdx] ?? food.portions[0];
       portionDesc = portion.desc;
       portionGrams = portion.gm;
