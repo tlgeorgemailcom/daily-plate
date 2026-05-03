@@ -44,13 +44,18 @@ export const POST: RequestHandler = async ({ request }) => {
     return json({ nutritionJson: null });
   }
 
+  if (linkType !== 'ingredient' && linkType !== 'dish' && linkType !== 'mixed') {
+    return json({ nutritionJson: null });
+  }
+
   const rawIngs: unknown[] = Array.isArray(ingredients) ? ingredients : [];
   if (rawIngs.length === 0 && !dishLink) {
     return json({ nutritionJson: null });
   }
 
-  // Build ingredient rows — mirror what draft/+server.ts and submit/+server.ts do.
-  const dishLinkEntry = dishLink && typeof dishLink === 'object'
+  // Build ingredient rows using the same mode semantics as save/submit payloads.
+  // Ingredient mode must not include dishLink; dish/mixed may include it.
+  const dishLinkEntry = (linkType === 'dish' || linkType === 'mixed') && dishLink && typeof dishLink === 'object'
     ? { isDish: true, ...(dishLink as object) }
     : null;
   const ingRows = (dishLinkEntry ? [dishLinkEntry, ...rawIngs] : rawIngs) as Parameters<typeof calcNutritionSR28>[0];
