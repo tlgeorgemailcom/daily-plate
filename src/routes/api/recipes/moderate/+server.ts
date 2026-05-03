@@ -32,6 +32,7 @@ interface RecipeSubmission {
   editedBy?: string;
   cookingMethod?: string;
   dishFamily?: string | null;
+  linkType?: 'ingredient' | 'dish' | 'mixed';
 }
 
 function parseJson<T>(value: string | null | undefined, fallback: T): T {
