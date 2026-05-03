@@ -495,6 +495,7 @@
 
     return JSON.stringify({
       servings: servings.trim(),
+      cookingMethod,
       linkMode,
       dishLink: dishLink
         ? {
@@ -507,6 +508,23 @@
         : null,
       ingredients: ingredientSignature
     });
+  }
+
+  function buildNutritionPayload() {
+    return {
+      ingredients: ingredients
+        .filter((i) => i.name.trim())
+        .map((i) => ({
+          foodWord: i.foodWord,
+          portionGrams: i.portionGrams,
+          servingCount: i.servingCount,
+          exempt: i.exempt,
+        })),
+      dishLink: dishLink ?? undefined,
+      linkType: linkMode,
+      servings,
+      cookingMethod,
+    };
   }
 
   let initialNutritionSignature = $state('');
@@ -525,6 +543,54 @@
   let showStoredNutrition = $derived(
     !!persistedNutrition?.perServing && !nutritionFieldsDirty
   );
+
+  // ─── Canonical live preview ──────────────────────────────────────────────────
+  type PreviewNutrition = {
+    perServing: { cal: number; pro: number; fat: number; carb: number; fib: number; sug: number };
+    gramsPerServing: number | null;
+    servings: number;
+  };
+  let liveNutritionJson = $state<PreviewNutrition | null>(null);
+  let previewLoading = $state(false);
+  let previewError = $state(false);
+  let previewTimer: ReturnType<typeof setTimeout> | null = null;
+  let previewRequestId = 0;
+
+  $effect(() => {
+    if (!nutritionFieldsDirty) {
+      liveNutritionJson = null;
+      previewLoading = false;
+      previewError = false;
+      if (previewTimer) { clearTimeout(previewTimer); previewTimer = null; }
+      return;
+    }
+    const payload = buildNutritionPayload();
+    if (previewTimer) clearTimeout(previewTimer);
+    const id = ++previewRequestId;
+    previewLoading = true;
+    previewError = false;
+    previewTimer = setTimeout(async () => {
+      try {
+        const res = await fetch('/api/recipes/preview-nutrition', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        if (previewRequestId !== id) return;
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json() as { nutritionJson: PreviewNutrition | null };
+        if (previewRequestId !== id) return;
+        liveNutritionJson = data.nutritionJson ?? null;
+        previewError = false;
+      } catch {
+        if (previewRequestId !== id) return;
+        previewError = true;
+      } finally {
+        if (previewRequestId === id) previewLoading = false;
+      }
+    }, 400);
+  });
+  // ─────────────────────────────────────────────────────────────────────────────
 
   // ─── Live macro totals from linked ingredients ───────────────────────────────
   const FOOD_MAP_LOCAL = new Map(FOODS.map(f => [f.word, f]));
@@ -1266,44 +1332,71 @@
               <span><strong>{persistedNutrition?.perServing?.sug ?? '--'}g</strong> sugar</span>
             </div>
           </div>
-        {:else if macroTotals.linkedCount > 0}
-          <div class="macro-preview" class:complete={nutritionComplete}>
-            <div class="macro-preview-header">
-              <span class="macro-preview-label">
-                {#if macroPer === '100g'}
-                  Per 100g
-                {:else if nutritionComplete}
-                  Per serving{hasValidServings ? ` (${parseServingsCount(servings)} servings)` : ''}
-                {:else}
-                  {macroTotals.linkedCount} linked ingredient{macroTotals.linkedCount === 1 ? '' : 's'} · per serving
-                {/if}
-              </span>
-              <span class="macro-preview-label">Unsaved recalculation preview (updates with your edits)</span>
-              <div class="macro-per-toggle">
-                <button
-                  type="button"
-                  class="macro-per-btn"
-                  class:active={macroPer === 'serving'}
-                  disabled={!hasValidServings}
-                  onclick={() => macroPer = 'serving'}
-                >Per serving</button>
-                <button
-                  type="button"
-                  class="macro-per-btn"
-                  class:active={macroPer === '100g'}
-                  onclick={() => macroPer = '100g'}
-                >100g</button>
+        {:else if nutritionFieldsDirty}
+          {#if previewLoading}
+            <div class="macro-preview loading">
+              <div class="macro-preview-header">
+                <span class="macro-preview-label">Recalculating…</span>
+              </div>
+              {#if liveNutritionJson?.perServing}
+                {@const ps = liveNutritionJson.perServing}
+                <div class="macro-preview-values">
+                  <span><strong>{ps.cal}</strong> cal</span>
+                  <span><strong>{ps.pro}g</strong> protein</span>
+                  <span><strong>{ps.fat}g</strong> fat</span>
+                  <span><strong>{ps.carb}g</strong> carbs</span>
+                  <span><strong>{ps.fib}g</strong> fibre</span>
+                  <span><strong>{ps.sug}g</strong> sugar</span>
+                </div>
+              {/if}
+            </div>
+          {:else if liveNutritionJson?.perServing}
+            {@const ps = liveNutritionJson.perServing}
+            {@const gpS = liveNutritionJson.gramsPerServing}
+            {@const per100Scale = gpS && gpS > 0 ? 100 / gpS : null}
+            {@const r1 = (v: number) => Math.round(v * 10) / 10}
+            {@const s = macroPer === '100g' && per100Scale ? per100Scale : 1}
+            <div class="macro-preview complete">
+              <div class="macro-preview-header">
+                <span class="macro-preview-label">
+                  {#if macroPer === '100g'}
+                    Per 100g
+                  {:else}
+                    Per serving{hasValidServings ? ` (${parseServingsCount(servings)} servings)` : ''}
+                  {/if}
+                </span>
+                <span class="macro-preview-label">Canonical preview (matches what Save will store)</span>
+                <div class="macro-per-toggle">
+                  <button
+                    type="button"
+                    class="macro-per-btn"
+                    class:active={macroPer === 'serving'}
+                    disabled={!hasValidServings}
+                    onclick={() => macroPer = 'serving'}
+                  >Per serving</button>
+                  <button
+                    type="button"
+                    class="macro-per-btn"
+                    class:active={macroPer === '100g'}
+                    disabled={!per100Scale}
+                    onclick={() => macroPer = '100g'}
+                  >100g</button>
+                </div>
+              </div>
+              <div class="macro-preview-values">
+                <span><strong>{r1(ps.cal * s)}</strong> cal</span>
+                <span><strong>{r1(ps.pro * s)}g</strong> protein</span>
+                <span><strong>{r1(ps.fat * s)}g</strong> fat</span>
+                <span><strong>{r1(ps.carb * s)}g</strong> carbs</span>
+                <span><strong>{r1(ps.fib * s)}g</strong> fibre</span>
+                <span><strong>{r1(ps.sug * s)}g</strong> sugar</span>
               </div>
             </div>
-            <div class="macro-preview-values">
-              <span><strong>{macroTotals.cal ?? '--'}</strong> cal</span>
-              <span><strong>{macroTotals.pro === null ? '--' : `${macroTotals.pro}g`}</strong> protein</span>
-              <span><strong>{macroTotals.fat === null ? '--' : `${macroTotals.fat}g`}</strong> fat</span>
-              <span><strong>{macroTotals.carb === null ? '--' : `${macroTotals.carb}g`}</strong> carbs</span>
-              <span><strong>{macroTotals.fib === null ? '--' : `${macroTotals.fib}g`}</strong> fibre</span>
-              <span><strong>{macroTotals.sug === null ? '--' : `${macroTotals.sug}g`}</strong> sugar</span>
+          {:else if previewError}
+            <div class="macro-preview-error">
+              ⚠️ Nutrition preview unavailable — will be calculated on save
             </div>
-          </div>
+          {/if}
         {/if}
       {/if}
     {/if}

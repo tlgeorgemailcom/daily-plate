@@ -167,7 +167,8 @@ export const PATCH: RequestHandler = async ({ request }) => {
       const computed = calcNutritionJson(
         rawIngs as Parameters<typeof calcNutritionJson>[0],
         linkType,
-        typeof updates.servings === 'string' ? updates.servings : null
+        typeof updates.servings === 'string' ? updates.servings : null,
+        typeof updates.cookingMethod === 'string' ? updates.cookingMethod : null
       );
       if (computed) nutritionJson = JSON.stringify(computed);
     }

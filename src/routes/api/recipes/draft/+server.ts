@@ -21,7 +21,7 @@ export const GET: RequestHandler = async ({ url }) => {
   // No recipeId: return all recipe IDs where creator has unseen collaborator drafts
   if (!recipeId && playerId) {
     const rows = await queryAll<{ id: string }>(
-      `SELECT id FROM player_recipes WHERE user_id = ? AND draft_data IS NOT NULL AND draft_seen_by_creator = 0 AND draft_is_creator_draft = 0`,
+      `SELECT recipe_id AS id FROM player_recipes WHERE submitted_by = ? AND draft_data IS NOT NULL AND draft_seen_by_creator = 0 AND draft_is_creator_draft = 0`,
       [playerId]
     );
     return json({ unseenDraftIds: rows.map(r => r.id) });
@@ -32,20 +32,20 @@ export const GET: RequestHandler = async ({ url }) => {
   }
 
   const recipe = await queryOne<{
-    user_id: string;
+    submitted_by: string;
     edit_code: string | null;
     draft_data: string | null;
     draft_updated_at: string | null;
     draft_is_creator_draft: number | null;
   }>(
-    'SELECT user_id, edit_code, draft_data, draft_updated_at, draft_is_creator_draft FROM player_recipes WHERE id = ?',
+    'SELECT submitted_by, edit_code, draft_data, draft_updated_at, draft_is_creator_draft FROM player_recipes WHERE recipe_id = ?',
     [recipeId]
   );
 
   if (!recipe) return json({ error: 'Recipe not found' }, { status: 404 });
 
   // Auth: creator by playerId, or collaborator by matching edit_code
-  const isCreator = playerId && recipe.user_id === playerId;
+  const isCreator = playerId && recipe.submitted_by === playerId;
   const isCollaborator = code && recipe.edit_code && recipe.edit_code === code.toUpperCase().trim();
 
   if (!isCreator && !isCollaborator) {
@@ -76,7 +76,7 @@ export const POST: RequestHandler = async ({ request }) => {
   if (playerId) {
     // Creator saves their own draft
     const recipe = await queryOne<{ submitted_by: string; status: string }>(
-      'SELECT user_id AS submitted_by, status FROM player_recipes WHERE id = ?',
+      'SELECT submitted_by, status FROM player_recipes WHERE recipe_id = ?',
       [recipeId]
     );
     if (!recipe) return json({ error: 'Recipe not found' }, { status: 404 });
@@ -91,18 +91,18 @@ export const POST: RequestHandler = async ({ request }) => {
     if (linkType && rawIngs.length > 0) {
       const dishLinkEntry = draftData?.dishLink ? { isDish: true, ...draftData.dishLink } : null;
       const ingRows = (dishLinkEntry ? [dishLinkEntry, ...rawIngs] : rawIngs) as Parameters<typeof calcNutritionJson>[0];
-      const computed = calcNutritionJson(ingRows, linkType, draftData?.servings ?? null, draftData?.cookMethod ?? null);
+      const computed = calcNutritionJson(ingRows, linkType, draftData?.servings ?? null, draftData?.cookingMethod ?? draftData?.cookMethod ?? null);
       if (computed) nutritionJson = JSON.stringify(computed);
     }
 
     if (nutritionJson) {
       await execute(
-        `UPDATE player_recipes SET draft_data = ?, draft_updated_at = ?, draft_seen_by_creator = 1, draft_is_creator_draft = 1, nutrition_json = ?, updated_at = datetime('now') WHERE id = ?`,
+        `UPDATE player_recipes SET draft_data = ?, draft_updated_at = ?, draft_seen_by_creator = 1, draft_is_creator_draft = 1, nutrition_json = ?, updated_at = datetime('now') WHERE recipe_id = ?`,
         [JSON.stringify(draftData), new Date().toISOString(), nutritionJson, recipeId]
       );
     } else {
       await execute(
-        `UPDATE player_recipes SET draft_data = ?, draft_updated_at = ?, draft_seen_by_creator = 1, draft_is_creator_draft = 1, updated_at = datetime('now') WHERE id = ?`,
+        `UPDATE player_recipes SET draft_data = ?, draft_updated_at = ?, draft_seen_by_creator = 1, draft_is_creator_draft = 1, updated_at = datetime('now') WHERE recipe_id = ?`,
         [JSON.stringify(draftData), new Date().toISOString(), recipeId]
       );
     }
@@ -111,7 +111,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
   // Collaborator saves draft
   const recipe = await queryOne<{ edit_code: string | null; status: string }>(
-    'SELECT edit_code, status FROM player_recipes WHERE id = ?',
+    'SELECT edit_code, status FROM player_recipes WHERE recipe_id = ?',
     [recipeId]
   );
 
@@ -124,7 +124,7 @@ export const POST: RequestHandler = async ({ request }) => {
   }
 
   await execute(
-    `UPDATE player_recipes SET draft_data = ?, draft_updated_at = ?, draft_seen_by_creator = 0, draft_is_creator_draft = 0, updated_at = datetime('now') WHERE id = ?`,
+    `UPDATE player_recipes SET draft_data = ?, draft_updated_at = ?, draft_seen_by_creator = 0, draft_is_creator_draft = 0, updated_at = datetime('now') WHERE recipe_id = ?`,
     [JSON.stringify(draftData), new Date().toISOString(), recipeId]
   );
 
@@ -144,7 +144,7 @@ export const DELETE: RequestHandler = async ({ request }) => {
   }
 
   const recipe = await queryOne<{ submitted_by: string }>(
-    'SELECT user_id AS submitted_by FROM player_recipes WHERE id = ?',
+    'SELECT submitted_by FROM player_recipes WHERE recipe_id = ?',
     [recipeId]
   );
 
@@ -152,7 +152,7 @@ export const DELETE: RequestHandler = async ({ request }) => {
   if (recipe.submitted_by !== playerId) return json({ error: 'Not authorized' }, { status: 403 });
 
   await execute(
-    `UPDATE player_recipes SET draft_data = NULL, draft_updated_at = NULL, draft_seen_by_creator = 1, updated_at = datetime('now') WHERE id = ?`,
+    `UPDATE player_recipes SET draft_data = NULL, draft_updated_at = NULL, draft_seen_by_creator = 1, updated_at = datetime('now') WHERE recipe_id = ?`,
     [recipeId]
   );
 
@@ -172,7 +172,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
   }
 
   const recipe = await queryOne<{ submitted_by: string }>(
-    'SELECT user_id AS submitted_by FROM player_recipes WHERE id = ?',
+    'SELECT submitted_by FROM player_recipes WHERE recipe_id = ?',
     [recipeId]
   );
 
@@ -180,7 +180,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
   if (recipe.submitted_by !== playerId) return json({ error: 'Not authorized' }, { status: 403 });
 
   await execute(
-    `UPDATE player_recipes SET draft_seen_by_creator = 1, updated_at = datetime('now') WHERE id = ?`,
+    `UPDATE player_recipes SET draft_seen_by_creator = 1, updated_at = datetime('now') WHERE recipe_id = ?`,
     [recipeId]
   );
 
