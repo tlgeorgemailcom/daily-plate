@@ -2,6 +2,7 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { queryAll } from '$lib/server/turso';
 import { toDisplayRecipeCategory } from '$lib/farmers-basket/recipe-categories';
+import { LEVELS } from '$lib/farmers-basket/generated-levels';
 
 interface SuggestionRow {
   id: string;
@@ -36,6 +37,37 @@ interface CanonicalIngredient {
 
 interface CanonicalInstruction {
   text: string;
+}
+
+const builtInRecipeById = new Map(
+  LEVELS
+    .filter((level) => /^SWEET_\d+$/i.test(level.id))
+    .map((level) => [level.id, level])
+);
+
+function toCanonicalIngredientsFromLevel(recipeId: string): CanonicalIngredient[] {
+  const level = builtInRecipeById.get(recipeId);
+  if (!level?.recipeIngredients?.length) return [];
+  return level.recipeIngredients
+    .filter((item) => item.isDish !== true)
+    .map((item) => ({
+      name: item.name,
+      quantity: item.quantity || '',
+      foodWord: item.foodWord,
+      ndbNo: item.ndbNo,
+      portionDesc: item.portionDesc,
+      portionGrams: item.portionGrams,
+      servingCount: item.servingCount,
+      exempt: item.exempt === true,
+    }));
+}
+
+function toCanonicalInstructionsFromLevel(recipeId: string): CanonicalInstruction[] {
+  const level = builtInRecipeById.get(recipeId);
+  if (!level?.recipeInstructions?.length) return [];
+  return level.recipeInstructions
+    .map((text) => ({ text: text.trim() }))
+    .filter((step) => step.text.length > 0);
 }
 
 // Normalise a dish name for comparison: lowercase, strip punctuation, collapse spaces
@@ -184,8 +216,12 @@ export const GET: RequestHandler = async ({ url }) => {
       try { rawIngredients = JSON.parse(row.recipe_ingredients ?? '[]'); } catch { /* leave empty */ }
       try { rawInstructions = JSON.parse(row.recipe_instructions ?? '[]'); } catch { /* leave empty */ }
 
-      const ingredients = Array.isArray(rawIngredients) ? toCanonicalIngredients(rawIngredients) : [];
-      const instructions = Array.isArray(rawInstructions) ? toCanonicalInstructions(rawInstructions) : [];
+      const dbIngredients = Array.isArray(rawIngredients) ? toCanonicalIngredients(rawIngredients) : [];
+      const dbInstructions = Array.isArray(rawInstructions) ? toCanonicalInstructions(rawInstructions) : [];
+      const builtInIngredients = row.source_type === 'dev' ? toCanonicalIngredientsFromLevel(row.id) : [];
+      const builtInInstructions = row.source_type === 'dev' ? toCanonicalInstructionsFromLevel(row.id) : [];
+      const ingredients = builtInIngredients.length > dbIngredients.length ? builtInIngredients : dbIngredients;
+      const instructions = builtInInstructions.length > dbInstructions.length ? builtInInstructions : dbInstructions;
 
       return {
         id: row.id,

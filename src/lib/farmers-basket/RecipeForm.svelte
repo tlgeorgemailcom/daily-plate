@@ -357,8 +357,10 @@
     nutritionSearchQ = { ...nutritionSearchQ, [ing.id]: ing.name };
     nutritionOpen = { ...nutritionOpen, [ing.id]: true };
     // If already linked, skip search and pre-load the portion picker
-    if (ing.foodWord) {
-      const existing = FOODS.find(f => f.word === ing.foodWord) ?? null;
+    if (ing.foodWord || ing.ndbNo) {
+      const existing = (ing.foodWord ? FOODS.find(f => f.word === ing.foodWord) : undefined)
+        ?? (ing.ndbNo ? FOODS.find(f => f.ndb === ing.ndbNo) : undefined)
+        ?? null;
       nutritionPendingFood = { ...nutritionPendingFood, [ing.id]: existing };
       if (existing) {
         // Restore current portion selection if possible
@@ -378,6 +380,17 @@
       nutritionPendingFood = { ...nutritionPendingFood, [ing.id]: null };
       queueNutritionFoodSearch(ing.id, ing.name);
     }
+  }
+
+  function hasIngredientNutritionLink(ingredient: RecipeIngredient): boolean {
+    return Boolean((ingredient.foodWord || ingredient.ndbNo) && ingredient.portionGrams);
+  }
+
+  function getIngredientNutritionLabel(ingredient: RecipeIngredient): string {
+    return FOODS.find((food) => food.word === ingredient.foodWord || food.ndb === ingredient.ndbNo)?.display
+      ?? ingredient.name
+      ?? ingredient.ndbNo
+      ?? 'Linked ingredient';
   }
 
   function selectPendingFood(ingId: number, food: FoodData) {
@@ -471,10 +484,10 @@
   }
 
   let nutritionLinkedCount = $derived(
-    ingredients.filter(i => i.name.trim() && i.foodWord && i.portionGrams).length
+    ingredients.filter(i => i.name.trim() && hasIngredientNutritionLink(i)).length
   );
   let nutritionExemptCount = $derived(
-    ingredients.filter(i => i.name.trim() && i.exempt && !i.foodWord).length
+    ingredients.filter(i => i.name.trim() && i.exempt && !hasIngredientNutritionLink(i)).length
   );
   let nutritionTotalCount = $derived(ingredients.filter(i => i.name.trim()).length);
   let nutritionComplete = $derived(
@@ -482,7 +495,7 @@
       linkMode === 'dish'
         ? dishLink !== null
         : linkMode === 'mixed'
-          ? dishLink !== null && ingredients.filter(i => i.name.trim()).every(i => i.foodWord || i.exempt)
+          ? dishLink !== null && ingredients.filter(i => i.name.trim()).every(i => hasIngredientNutritionLink(i) || i.exempt)
           : (nutritionLinkedCount + nutritionExemptCount) === nutritionTotalCount
     )
   );
@@ -728,11 +741,13 @@
         gameFood: i.gameFood,
         animal: i.animal,
         ...(linked && linkMode !== 'dish' ? {
-          foodWord: i.foodWord,
-          ndbNo: i.ndbNo,
-          portionDesc: i.portionDesc,
-          portionGrams: i.portionGrams,
-          servingCount: i.servingCount,
+          ...(hasIngredientNutritionLink(i) ? {
+            foodWord: i.foodWord,
+            ndbNo: i.ndbNo,
+            portionDesc: i.portionDesc,
+            portionGrams: i.portionGrams,
+            servingCount: i.servingCount,
+          } : {}),
           ...(i.exempt ? { exempt: true } : {})
         } : {})
       })),
@@ -1477,10 +1492,10 @@
 
           {#if nutritionMode && linkMode !== 'dish'}
             <div class="nutrition-row">
-              {#if ingredient.foodWord}
+              {#if hasIngredientNutritionLink(ingredient)}
                 <div class="nutrition-badge">
                   <span class="nutrition-badge-text">
-                    ✓ {FOODS.find(f => f.word === ingredient.foodWord)?.display}
+                    ✓ {getIngredientNutritionLabel(ingredient)}
                     · {ingredient.portionDesc === 'g'
                         ? `${(ingredient.servingCount ?? 1) * (ingredient.portionGrams ?? 0)}g`
                         : `${ingredient.servingCount}×${ingredient.portionDesc}`}
