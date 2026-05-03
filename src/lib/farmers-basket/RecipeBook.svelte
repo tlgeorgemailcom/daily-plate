@@ -942,18 +942,49 @@
         dietaryCategory: data.dietaryCategory,
         prepTime: data.prepTime,
         servings: data.servings,
-        ingredients: data.ingredients.filter(i => i.name.trim()).map(i => ({
-          name: i.name,
-          quantity: i.quantity,
-          // Preserve nutrition links
-          ...(i.foodWord ? {
-            foodWord: i.foodWord,
-            ndbNo: i.ndbNo,
-            portionDesc: i.portionDesc,
-            portionGrams: i.portionGrams,
-            servingCount: i.servingCount
-          } : {})
-        })),
+        cookingMethod: data.cookingMethod,
+        dishFamily: data.dishFamily || null,
+        ...(data.nutritionComplete && data.linkMode ? { linkType: data.linkMode } : {}),
+        ingredients: (() => {
+          const isLinked = data.nutritionComplete === true;
+          const linkMode = data.linkMode ?? 'ingredient';
+          if (isLinked && (linkMode === 'dish' || linkMode === 'mixed') && data.dishLink) {
+            const dishEntry = { isDish: true, ...data.dishLink };
+            if (linkMode === 'dish') {
+              return [
+                dishEntry,
+                ...data.ingredients.filter(i => i.name.trim()).map(i => ({ name: i.name, quantity: i.quantity }))
+              ];
+            }
+            return [
+              dishEntry,
+              ...data.ingredients.filter(i => i.name.trim()).map(i => ({
+                name: i.name,
+                quantity: i.quantity,
+                ...(hasNutritionLinkMeta(i) ? {
+                  foodWord: i.foodWord,
+                  ndbNo: i.ndbNo,
+                  portionDesc: i.portionDesc,
+                  portionGrams: i.portionGrams,
+                  servingCount: i.servingCount
+                } : {}),
+                ...(i.exempt ? { exempt: true } : {})
+              }))
+            ];
+          }
+          return data.ingredients.filter(i => i.name.trim()).map(i => ({
+            name: i.name,
+            quantity: i.quantity,
+            ...(isLinked && hasNutritionLinkMeta(i) ? {
+              foodWord: i.foodWord,
+              ndbNo: i.ndbNo,
+              portionDesc: i.portionDesc,
+              portionGrams: i.portionGrams,
+              servingCount: i.servingCount
+            } : {}),
+            ...(isLinked && i.exempt ? { exempt: true } : {})
+          }));
+        })(),
         instructions: data.instructions.filter(i => i.text.trim()).map(i => i.text)
       };
 
@@ -1007,12 +1038,14 @@
         dietaryCategory: data.dietaryCategory,
         prepTime: data.prepTime,
         servings: data.servings,
+        cookingMethod: data.cookingMethod,
+        dishFamily: data.dishFamily || '',
         linkMode: data.linkMode ?? 'ingredient',
         ...(data.dishLink ? { dishLink: data.dishLink } : {}),
         ingredients: data.ingredients.filter(i => i.name.trim()).map(i => ({
           name: i.name,
           quantity: i.quantity,
-          ...(i.foodWord ? {
+          ...(hasNutritionLinkMeta(i) ? {
             foodWord: i.foodWord,
             ndbNo: i.ndbNo,
             portionDesc: i.portionDesc,
@@ -1304,6 +1337,71 @@
     } catch { /* non-critical */ }
   }
 
+  function hasNutritionLinkMeta(ing: {
+    foodWord?: string;
+    ndbNo?: string;
+    portionGrams?: number;
+  }): boolean {
+    return Boolean((ing.foodWord || ing.ndbNo) && ing.portionGrams);
+  }
+
+  function getLevelDishLink(level: Level): RecipeFormData['dishLink'] | undefined {
+    const dish = level.recipeIngredients?.find((ing) => ing.isDish);
+    if (!dish?.ndbNo || !dish.portionDesc || !dish.portionGrams || !dish.servingCount) return undefined;
+    return {
+      foodWord: dish.foodWord || '',
+      ndbNo: dish.ndbNo,
+      portionDesc: dish.portionDesc,
+      portionGrams: dish.portionGrams,
+      servingCount: dish.servingCount
+    };
+  }
+
+  function mergeDraftIngredientsWithLevel(
+    level: Level,
+    draftIngredients: Array<{ name: string; quantity: string; foodWord?: string; ndbNo?: string; portionDesc?: string; portionGrams?: number; servingCount?: number; exempt?: boolean }> | undefined
+  ): NonNullable<Partial<RecipeFormData>['ingredients']> {
+    const originalIngredients = (level.recipeIngredients || []).filter((ing) => !ing.isDish);
+    const normalize = (value: string) => value.toLowerCase().replace(/[^a-z0-9]/g, '');
+    const originalByName = new Map(originalIngredients.map((ing) => [normalize(ing.name), ing]));
+
+    const mappedDraft = (draftIngredients || []).map((ing, i) => {
+      const original = originalByName.get(normalize(ing.name));
+      return {
+        id: i + 1,
+        name: ing.name,
+        quantity: ing.quantity || '',
+        gameFood: level.recipe[i] || '',
+        animal: level.animalSpawns[i]?.type || '',
+        foodWord: ing.foodWord ?? original?.foodWord,
+        ndbNo: ing.ndbNo ?? original?.ndbNo,
+        portionDesc: ing.portionDesc ?? original?.portionDesc,
+        portionGrams: ing.portionGrams ?? original?.portionGrams,
+        servingCount: ing.servingCount ?? original?.servingCount,
+        exempt: ing.exempt ?? original?.exempt
+      };
+    });
+
+    const draftNames = new Set((draftIngredients || []).map((ing) => normalize(ing.name)));
+    const missingOriginals = originalIngredients
+      .filter((ing) => !draftNames.has(normalize(ing.name)))
+      .map((ing, idx) => ({
+        id: mappedDraft.length + idx + 1,
+        name: ing.name,
+        quantity: ing.quantity || '',
+        gameFood: level.recipe[mappedDraft.length + idx] || '',
+        animal: level.animalSpawns[mappedDraft.length + idx]?.type || '',
+        foodWord: ing.foodWord,
+        ndbNo: ing.ndbNo,
+        portionDesc: ing.portionDesc,
+        portionGrams: ing.portionGrams,
+        servingCount: ing.servingCount,
+        exempt: ing.exempt
+      }));
+
+    return [...mappedDraft, ...missingOriginals];
+  }
+
   // Derive initial form data for collaborator: use draft if available, else live level
   let collabDraft = $state<Record<string, unknown> | null>(null);
 
@@ -1319,9 +1417,12 @@
         servings?: string;
         cookingMethod?: string;
         dishFamily?: string;
+        linkMode?: 'ingredient' | 'dish' | 'mixed';
+        dishLink?: RecipeFormData['dishLink'];
         ingredients?: { name: string; quantity: string; foodWord?: string; ndbNo?: string; portionDesc?: string; portionGrams?: number; servingCount?: number }[];
         instructions?: string[];
       };
+      const levelDishLink = getLevelDishLink(selectedLevel);
       return {
         recipeName: d.recipeName || selectedLevel.name,
         category: d.category || selectedLevel.category,
@@ -1331,18 +1432,9 @@
         cookingMethod: d.cookingMethod || selectedLevel.cookingMethod || 'Bake',
         dishFamily: d.dishFamily || selectedLevel.dishFamily || '',
         nutritionJson: selectedLevel.nutritionJson || undefined,
-        ingredients: (d.ingredients || []).map((ing, i) => ({
-          id: i + 1,
-          name: ing.name,
-          quantity: ing.quantity || '',
-          gameFood: selectedLevel.recipe[i] || '',
-          animal: selectedLevel.animalSpawns[i]?.type || '',
-          foodWord: ing.foodWord,
-          ndbNo: ing.ndbNo,
-          portionDesc: ing.portionDesc,
-          portionGrams: ing.portionGrams,
-          servingCount: ing.servingCount
-        })),
+        linkMode: d.linkMode || selectedLevel.linkType || (levelDishLink ? 'dish' : 'ingredient'),
+        ...(d.dishLink || levelDishLink ? { dishLink: d.dishLink || levelDishLink } : {}),
+        ingredients: mergeDraftIngredientsWithLevel(selectedLevel, d.ingredients),
         instructions: (d.instructions || []).map((text, i) => ({ id: i + 1, text }))
       };
     }
@@ -1361,9 +1453,12 @@
         servings?: string;
         cookingMethod?: string;
         dishFamily?: string;
+        linkMode?: 'ingredient' | 'dish' | 'mixed';
+        dishLink?: RecipeFormData['dishLink'];
         ingredients?: { name: string; quantity: string; foodWord?: string; ndbNo?: string; portionDesc?: string; portionGrams?: number; servingCount?: number }[];
         instructions?: string[];
       };
+      const levelDishLink = getLevelDishLink(selectedLevel);
       return {
         recipeName: d.recipeName || selectedLevel.name,
         category: d.category || selectedLevel.category,
@@ -1373,18 +1468,9 @@
         cookingMethod: d.cookingMethod || selectedLevel.cookingMethod || 'Bake',
         dishFamily: d.dishFamily || selectedLevel.dishFamily || '',
         nutritionJson: selectedLevel.nutritionJson || undefined,
-        ingredients: (d.ingredients || []).map((ing, i) => ({
-          id: i + 1,
-          name: ing.name,
-          quantity: ing.quantity || '',
-          gameFood: selectedLevel.recipe[i] || '',
-          animal: selectedLevel.animalSpawns[i]?.type || '',
-          foodWord: ing.foodWord,
-          ndbNo: ing.ndbNo,
-          portionDesc: ing.portionDesc,
-          portionGrams: ing.portionGrams,
-          servingCount: ing.servingCount
-        })),
+        linkMode: d.linkMode || selectedLevel.linkType || (levelDishLink ? 'dish' : 'ingredient'),
+        ...(d.dishLink || levelDishLink ? { dishLink: d.dishLink || levelDishLink } : {}),
+        ingredients: mergeDraftIngredientsWithLevel(selectedLevel, d.ingredients),
         instructions: (d.instructions || []).map((text, i) => ({ id: i + 1, text }))
       };
     }
