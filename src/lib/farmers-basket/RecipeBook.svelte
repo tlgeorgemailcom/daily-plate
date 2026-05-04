@@ -740,6 +740,9 @@
                 exempt: i.exempt === true,
                 isDish: i.isDish === true
               })),
+              // Pass existing nutritionJson so the server stores it as-is without
+              // recomputing from NDB lookups (which may lack fiber/sugar data).
+              nutritionJson: selectedLevel.nutritionJson,
               ...(typeof data.yieldFactorWater === 'number' ? { yieldFactorWater: data.yieldFactorWater } : {}),
               ...(typeof data.yieldFactorFat   === 'number' ? { yieldFactorFat:   data.yieldFactorFat   } : {}),
               imageUrl
