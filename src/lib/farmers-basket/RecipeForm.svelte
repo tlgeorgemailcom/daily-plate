@@ -612,7 +612,12 @@
 
   let showStoredNutrition = $derived(
     !!persistedNutrition?.perServing &&
-    !nutritionFieldsDirty
+    (
+      !nutritionFieldsDirty ||
+      // Keep stored visible while the user is still linking new ingredient rows.
+      // Switching to the partial live preview mid-edit produced confusing swaps.
+      nutritionLinkedCount < nutritionTotalCount
+    )
   );
 
   $effect(() => {
@@ -1420,6 +1425,10 @@
               <span><strong>{showStoredPer100 ? (persistedNutrition?.per100g?.FiberTotalDietary ?? '--') : (persistedNutrition?.perServing?.fib ?? '--')}g</strong> fibre</span>
               <span><strong>{showStoredPer100 ? (persistedNutrition?.per100g?.SugarsTotal ?? '--') : (persistedNutrition?.perServing?.sug ?? '--')}g</strong> sugar</span>
             </div>
+            {#if nutritionLinkedCount < nutritionTotalCount}
+              {@const pending = nutritionTotalCount - nutritionLinkedCount}
+              <p class="macro-preview-note">Showing stored values — link {pending} new ingredient{pending === 1 ? '' : 's'} to update the live calculation.</p>
+            {/if}
           </div>
         {:else if liveNutritionJson?.perServing}
           {@const p100 = liveNutritionJson.per100g}
