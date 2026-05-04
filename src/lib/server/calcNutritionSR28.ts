@@ -206,8 +206,74 @@ export async function calcNutritionSR28(
   }
 
   // ── ingredient / mixed mode ──────────────────────────────────────────────────
-  const dishRow = linkType === 'mixed' ? ingredients.find(i => i.isDish) : null;
-  const servings = dishRow?.servingCount ?? parseServings(servingsStr);
+  // In 'mixed' mode: if a canonical dish row (isDish=true) is present, use it
+  // directly for nutrition (same path as 'dish' mode). The ingredient rows exist
+  // for editing UI only — they must NOT be summed into the dish-row totals.
+  if (linkType === 'mixed') {
+    const dish = ingredients.find(i => i.isDish);
+    if (dish?.ndbNo && dish.portionGrams && dish.servingCount) {
+      if (sr28Map.has(dish.ndbNo)) {
+        const food = sr28Map.get(dish.ndbNo)!;
+        const g = dish.portionGrams;
+        const scale = g / 100;
+        return {
+          perServing: {
+            cal:  round1(food.Energy_KCal       * scale),
+            pro:  round1(food.Protein           * scale),
+            fat:  round1(food.TotalLipidFat     * scale),
+            carb: round1(food.Carbohydrate      * scale),
+            fib:  round1(food.FiberTotalDietary * scale),
+            h2o:  round1(food.Water             * scale),
+            sug:  round1(food.SugarsTotal       * scale),
+          },
+          per100g: {
+            Energy_KCal:       round2(food.Energy_KCal),
+            Protein:           round2(food.Protein),
+            TotalLipidFat:     round2(food.TotalLipidFat),
+            Carbohydrate:      round2(food.Carbohydrate),
+            FiberTotalDietary: round2(food.FiberTotalDietary),
+            SugarsTotal:       round2(food.SugarsTotal),
+            Water:             round2(food.Water),
+          },
+          gramsPerServing: g,
+          servings: dish.servingCount,
+          sources: [{ ndb: dish.ndbNo, name: food.longDesc, grams: round1(g) }],
+        };
+      }
+      // Fallback: food-portions.ts
+      if (dish.foodWord) {
+        const food = FOOD_MAP_BY_WORD.get(dish.foodWord);
+        if (food) {
+          const g = dish.portionGrams;
+          const scale = g / 100;
+          return {
+            perServing: {
+              cal: round1(food.cal * scale), pro: round1(food.pro * scale),
+              fat: round1(food.fat * scale), carb: round1(food.carb * scale),
+              fib: round1(food.fib * scale), h2o: round1(food.h2o * scale),
+              sug: round1(food.sug * scale),
+            },
+            per100g: {
+              Energy_KCal:       round2(food.cal),
+              Protein:           round2(food.pro),
+              TotalLipidFat:     round2(food.fat),
+              Carbohydrate:      round2(food.carb),
+              FiberTotalDietary: round2(food.fib),
+              SugarsTotal:       round2(food.sug),
+              Water:             round2(food.h2o),
+            },
+            gramsPerServing: g,
+            servings: dish.servingCount,
+            sources: [{ ndb: food.ndb, name: food.display, grams: round1(g) }],
+          };
+        }
+      }
+    }
+  }
+
+  // ── pure ingredient mode ─────────────────────────────────────────────────────
+  const dishRow = null; // unused sentinel — kept for servings fallback below
+  const servings = parseServings(servingsStr);
   if (servings === 0) return null;
 
   const proFactor = getRetentionFactor(method, 'Protein');
@@ -222,6 +288,7 @@ export async function calcNutritionSR28(
 
   for (const ing of ingredients) {
     if (ing.exempt) continue;
+    if (ing.isDish) continue; // dish rows are handled above; skip in ingredient sum
     if (!ing.portionGrams || !ing.servingCount) continue;
 
     const g = ing.portionGrams * ing.servingCount;
