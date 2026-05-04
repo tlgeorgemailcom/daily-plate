@@ -9,12 +9,21 @@ function hasValidLink(row: unknown): boolean {
   const hasFood = (typeof obj.foodWord === 'string' && obj.foodWord.trim().length > 0)
     || (typeof obj.ndbNo === 'string' && obj.ndbNo.trim().length > 0);
   const portion = Number(obj.portionGrams ?? 0);
-  const count = Number(obj.servingCount ?? 0);
-  return hasFood && Number.isFinite(portion) && portion > 0 && Number.isFinite(count) && count > 0;
+  return hasFood && Number.isFinite(portion) && portion > 0;
 }
 
 function hasAllIngredientLinks(ingredients: unknown[]): boolean {
   return ingredients.length > 0 && ingredients.every((row) => hasValidLink(row));
+}
+
+function withDefaultServingCount(row: unknown): unknown {
+  if (!row || typeof row !== 'object') return row;
+  const obj = row as Record<string, unknown>;
+  const count = Number(obj.servingCount ?? 1);
+  return {
+    ...obj,
+    servingCount: Number.isFinite(count) && count > 0 ? count : 1,
+  };
 }
 
 // Safe migration — add draft columns if they don't exist yet
@@ -105,8 +114,9 @@ export const POST: RequestHandler = async ({ request }) => {
     const hasCompleteIngredientLinks = hasAllIngredientLinks(rawIngs);
     const hasCompleteDishLink = (linkType !== 'dish' && linkType !== 'mixed') || hasValidLink(draftData?.dishLink);
     if (linkType && hasCompleteIngredientLinks && hasCompleteDishLink) {
-      const dishLinkEntry = draftData?.dishLink ? { isDish: true, ...draftData.dishLink } : null;
-      const ingRows = (dishLinkEntry ? [dishLinkEntry, ...rawIngs] : rawIngs) as Parameters<typeof calcNutritionSR28>[0];
+      const normalizedIngs = rawIngs.map((row) => withDefaultServingCount(row));
+      const dishLinkEntry = draftData?.dishLink ? { isDish: true, ...(withDefaultServingCount(draftData.dishLink) as object) } : null;
+      const ingRows = (dishLinkEntry ? [dishLinkEntry, ...normalizedIngs] : normalizedIngs) as Parameters<typeof calcNutritionSR28>[0];
       const computed = await calcNutritionSR28(ingRows, linkType, draftData?.servings ?? null, draftData?.cookingMethod ?? draftData?.cookMethod ?? null);
       if (computed) nutritionJson = JSON.stringify(computed);
     }

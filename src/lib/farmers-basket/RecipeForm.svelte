@@ -385,8 +385,7 @@
   function hasIngredientNutritionLink(ingredient: RecipeIngredient): boolean {
     return Boolean(
       (ingredient.foodWord || ingredient.ndbNo) &&
-      ingredient.portionGrams && ingredient.portionGrams > 0 &&
-      ingredient.servingCount && ingredient.servingCount > 0
+      ingredient.portionGrams && ingredient.portionGrams > 0
     );
   }
 
@@ -536,14 +535,17 @@
     return {
       ingredients: ingredients
         .filter((i) => i.name.trim())
-        .map((i) => ({
-          name: i.name.trim(),
-          ndbNo: i.ndbNo,
-          foodWord: i.foodWord,
-          portionGrams: i.portionGrams,
-          servingCount: i.servingCount,
-          exempt: i.exempt === true,
-        })),
+        .map((i) => {
+          const linked = hasIngredientNutritionLink(i);
+          return {
+            name: i.name.trim(),
+            ndbNo: i.ndbNo,
+            foodWord: i.foodWord,
+            portionGrams: i.portionGrams,
+            servingCount: linked ? (i.servingCount ?? 1) : i.servingCount,
+            exempt: i.exempt === true,
+          };
+        }),
       dishLink: dishLink ?? undefined,
       linkType: linkMode,
       servings,
@@ -749,7 +751,7 @@
             ndbNo: i.ndbNo,
             portionDesc: i.portionDesc,
             portionGrams: i.portionGrams,
-            servingCount: i.servingCount,
+            servingCount: i.servingCount ?? 1,
           } : {}),
           ...(i.exempt ? { exempt: true } : {})
         } : {})

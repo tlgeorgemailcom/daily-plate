@@ -33,12 +33,21 @@ function hasValidLink(row: unknown): boolean {
   const hasFood = (typeof obj.foodWord === 'string' && obj.foodWord.trim().length > 0)
     || (typeof obj.ndbNo === 'string' && obj.ndbNo.trim().length > 0);
   const portion = Number(obj.portionGrams ?? 0);
-  const count = Number(obj.servingCount ?? 0);
-  return hasFood && Number.isFinite(portion) && portion > 0 && Number.isFinite(count) && count > 0;
+  return hasFood && Number.isFinite(portion) && portion > 0;
 }
 
 function hasAllIngredientLinks(ingredients: unknown[]): boolean {
   return ingredients.length > 0 && ingredients.every((row) => hasValidLink(row));
+}
+
+function withDefaultServingCount(row: unknown): unknown {
+  if (!row || typeof row !== 'object') return row;
+  const obj = row as Record<string, unknown>;
+  const count = Number(obj.servingCount ?? 1);
+  return {
+    ...obj,
+    servingCount: Number.isFinite(count) && count > 0 ? count : 1,
+  };
 }
 
 // GET: Fetch recipes by IDs (anonymous) OR by player_id (subscribers)
@@ -182,10 +191,14 @@ export const PATCH: RequestHandler = async ({ request }) => {
     if ((linkType === 'dish' || linkType === 'mixed') && !hasValidLink((updates as { dishLink?: unknown }).dishLink)) {
       return json({ error: 'Dish link is required and must be complete for this link mode' }, { status: 400 });
     }
+    const normalizedIngs = rawIngs.map((row) => withDefaultServingCount(row));
+    const normalizedDish = withDefaultServingCount((updates as { dishLink?: unknown }).dishLink);
     let nutritionJson: string | null = null;
     if (linkType && rawIngs.length > 0) {
       const computed = await calcNutritionSR28(
-        rawIngs as Parameters<typeof calcNutritionSR28>[0],
+        ((linkType === 'dish' || linkType === 'mixed')
+          ? [{ isDish: true, ...(normalizedDish as object) }, ...normalizedIngs]
+          : normalizedIngs) as Parameters<typeof calcNutritionSR28>[0],
         linkType,
         typeof updates.servings === 'string' ? updates.servings : null,
         typeof updates.cookingMethod === 'string' ? updates.cookingMethod : null

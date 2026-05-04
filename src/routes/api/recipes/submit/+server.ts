@@ -17,12 +17,21 @@ function hasValidLink(row: unknown): boolean {
   const hasFood = (typeof obj.foodWord === 'string' && obj.foodWord.trim().length > 0)
     || (typeof obj.ndbNo === 'string' && obj.ndbNo.trim().length > 0);
   const portion = Number(obj.portionGrams ?? 0);
-  const count = Number(obj.servingCount ?? 0);
-  return hasFood && Number.isFinite(portion) && portion > 0 && Number.isFinite(count) && count > 0;
+  return hasFood && Number.isFinite(portion) && portion > 0;
 }
 
 function hasAllIngredientLinks(ingredients: unknown[]): boolean {
   return ingredients.length > 0 && ingredients.every((row) => hasValidLink(row));
+}
+
+function withDefaultServingCount(row: unknown): unknown {
+  if (!row || typeof row !== 'object') return row;
+  const obj = row as Record<string, unknown>;
+  const count = Number(obj.servingCount ?? 1);
+  return {
+    ...obj,
+    servingCount: Number.isFinite(count) && count > 0 ? count : 1,
+  };
 }
 
 // Generate unique ID
@@ -80,10 +89,20 @@ export const PATCH: RequestHandler = async ({ request }) => {
       return json({ error: 'Dish link is required and must be complete for this link mode' }, { status: 400 });
     }
 
+    const normalizedPatchIngs = patchIngredients.map((row: unknown) => withDefaultServingCount(row));
+    const normalizedPatchDish = withDefaultServingCount(fields.dishLink);
+
     const canonicalPreview = isNutritionPreview(fields.nutritionJsonPreview) ? fields.nutritionJsonPreview : null;
     const nutritionJson = canonicalPreview ?? (
       (patchLinkType && patchIngredients.length > 0)
-        ? await calcNutritionSR28(fields.ingredients, fields.linkType, fields.servings, fields.cookingMethod ?? fields.cookMethod ?? null)
+        ? await calcNutritionSR28(
+            ((patchLinkType === 'dish' || patchLinkType === 'mixed')
+              ? [{ isDish: true, ...(normalizedPatchDish as object) }, ...normalizedPatchIngs]
+              : normalizedPatchIngs) as Parameters<typeof calcNutritionSR28>[0],
+            fields.linkType,
+            fields.servings,
+            fields.cookingMethod ?? fields.cookMethod ?? null
+          )
         : null
     );
 
@@ -184,10 +203,20 @@ export const POST: RequestHandler = async ({ request }) => {
       return json({ error: 'Dish link is required and must be complete for this link mode' }, { status: 400 });
     }
 
+    const normalizedPostIngs = postIngredients.map((row: unknown) => withDefaultServingCount(row));
+    const normalizedPostDish = withDefaultServingCount(body.dishLink);
+
     const canonicalPreview = isNutritionPreview(body.nutritionJsonPreview) ? body.nutritionJsonPreview : null;
     const computedNutrition = canonicalPreview ?? (
       (postLinkType && postIngredients.length > 0)
-        ? await calcNutritionSR28(body.ingredients, body.linkType, body.servings, body.cookingMethod ?? body.cookMethod ?? null)
+        ? await calcNutritionSR28(
+            ((postLinkType === 'dish' || postLinkType === 'mixed')
+              ? [{ isDish: true, ...(normalizedPostDish as object) }, ...normalizedPostIngs]
+              : normalizedPostIngs) as Parameters<typeof calcNutritionSR28>[0],
+            body.linkType,
+            body.servings,
+            body.cookingMethod ?? body.cookMethod ?? null
+          )
         : null
     );
     const nutritionJson = computedNutrition ? JSON.stringify(computedNutrition) : EMPTY_NUTRITION_JSON;

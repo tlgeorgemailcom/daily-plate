@@ -8,8 +8,17 @@ function hasValidLink(row: unknown): boolean {
   const hasFood = (typeof obj.foodWord === 'string' && obj.foodWord.trim().length > 0)
     || (typeof obj.ndbNo === 'string' && obj.ndbNo.trim().length > 0);
   const portion = Number(obj.portionGrams ?? 0);
-  const count = Number(obj.servingCount ?? 0);
-  return hasFood && Number.isFinite(portion) && portion > 0 && Number.isFinite(count) && count > 0;
+  return hasFood && Number.isFinite(portion) && portion > 0;
+}
+
+function withDefaultServingCount(row: unknown): unknown {
+  if (!row || typeof row !== 'object') return row;
+  const obj = row as Record<string, unknown>;
+  const count = Number(obj.servingCount ?? 1);
+  return {
+    ...obj,
+    servingCount: Number.isFinite(count) && count > 0 ? count : 1,
+  };
 }
 
 /**
@@ -75,9 +84,10 @@ export const POST: RequestHandler = async ({ request }) => {
   // Build ingredient rows using the same mode semantics as save/submit payloads.
   // Ingredient mode must not include dishLink; dish/mixed may include it.
   const dishLinkEntry = (linkType === 'dish' || linkType === 'mixed') && dishLink && typeof dishLink === 'object'
-    ? { isDish: true, ...(dishLink as object) }
+    ? { isDish: true, ...(withDefaultServingCount(dishLink) as object) }
     : null;
-  const ingRows = (dishLinkEntry ? [dishLinkEntry, ...rawIngs] : rawIngs) as Parameters<typeof calcNutritionSR28>[0];
+  const normalizedIngs = rawIngs.map((row) => withDefaultServingCount(row));
+  const ingRows = (dishLinkEntry ? [dishLinkEntry, ...normalizedIngs] : normalizedIngs) as Parameters<typeof calcNutritionSR28>[0];
 
   const servingsStr = typeof servings === 'string' ? servings : null;
   const cookMethod = typeof cookingMethod === 'string' ? cookingMethod : null;
