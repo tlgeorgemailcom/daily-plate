@@ -1471,6 +1471,28 @@
               <span><strong>{macroTotals.sug === null ? '--' : `${macroTotals.sug}g`}</strong> sugar</span>
             </div>
           </div>
+        {:else if macroTotals.linkedCount > 0}
+          <!-- Fallback when preview unavailable but ingredients are linked -->
+          <div class="macro-preview" class:complete={false}>
+            <div class="macro-preview-header">
+              <span class="macro-preview-label">
+                {#if macroPer === '100g'}
+                  Per 100g
+                {:else}
+                  Per serving{hasValidServings ? ` (${parseServingsCount(servings)} servings)` : ''}
+                {/if}
+              </span>
+              <span class="macro-preview-label">Local estimate</span>
+            </div>
+            <div class="macro-preview-values">
+              <span><strong>{macroTotals.cal ?? '--'}</strong> cal</span>
+              <span><strong>{macroTotals.pro === null ? '--' : `${macroTotals.pro}g`}</strong> protein</span>
+              <span><strong>{macroTotals.fat === null ? '--' : `${macroTotals.fat}g`}</strong> fat</span>
+              <span><strong>{macroTotals.carb === null ? '--' : `${macroTotals.carb}g`}</strong> carbs</span>
+              <span><strong>{macroTotals.fib === null ? '--' : `${macroTotals.fib}g`}</strong> fibre</span>
+              <span><strong>{macroTotals.sug === null ? '--' : `${macroTotals.sug}g`}</strong> sugar</span>
+            </div>
+          </div>
         {/if}
       {/if}
     {/if}
