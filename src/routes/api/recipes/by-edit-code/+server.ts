@@ -15,8 +15,8 @@ export const GET: RequestHandler = async ({ url }) => {
   }
 
   const recipe = await queryOne<{
-    id: string;
-    title: string;
+    recipe_id: string;
+    recipe_name: string;
     category: string;
     dietary_category: string | null;
     prep_time: string | null;
@@ -25,7 +25,7 @@ export const GET: RequestHandler = async ({ url }) => {
     recipe_instructions_json: string | null;
     status: string;
   }>(
-    `SELECT id, title, category, dietary_category, prep_time, servings,
+    `SELECT recipe_id, recipe_name, category, dietary_category, prep_time, servings,
             recipe_ingredients_json, recipe_instructions_json, status
      FROM player_recipes WHERE edit_code = ? AND status = 'draft'`,
     [code]
@@ -36,8 +36,8 @@ export const GET: RequestHandler = async ({ url }) => {
   }
 
   return json({
-    recipeId: recipe.id,
-    name: recipe.title,
+    recipeId: recipe.recipe_id,
+    name: recipe.recipe_name,
     category: toDisplayRecipeCategory(recipe.category),
     dietaryCategory: recipe.dietary_category ?? 'all',
     prepTime: recipe.prep_time ?? '',

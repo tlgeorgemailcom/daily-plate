@@ -623,7 +623,7 @@
       prepTime: level.prepTime || '',
       servings: level.servings || '',
       nutritionJson: level.nutritionJson || undefined,
-      linkMode: level.linkType || (levelDishLink ? 'dish' : 'ingredient'),
+      linkMode: level.linkType || (levelDishLink ? 'mixed' : 'ingredient'),
       ...(levelDishLink ? { dishLink: levelDishLink } : {}),
       ingredients,
       instructions: (level.recipeInstructions || []).map((text, i) => ({

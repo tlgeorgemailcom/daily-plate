@@ -47,11 +47,11 @@ export const GET: RequestHandler = async ({ url }) => {
       if (status) args.push(status);
     }
     if (wantPlayer) {
-      queries.push(`SELECT id, title AS name, category, dietary_category,
+      queries.push(`SELECT recipe_id AS id, recipe_name AS name, category, dietary_category,
               prep_time, servings, recipe, recipe_ingredients_json AS recipe_ingredients,
               recipe_instructions_json AS recipe_instructions, food_supply, NULL AS tools,
-              animal_spawns, user_id AS submitted_by, status, created_at, updated_at AS edited_at,
-              user_id AS edited_by, link_type, 'player' AS source_type
+              animal_spawns, submitted_by, status, created_at, updated_at AS edited_at,
+              submitted_by AS edited_by, link_type, 'player' AS source_type
        FROM player_recipes${status ? ' WHERE status = ?' : ''}`);
       if (status) args.push(status);
     }

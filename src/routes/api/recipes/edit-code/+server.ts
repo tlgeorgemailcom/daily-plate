@@ -22,7 +22,7 @@ export const GET: RequestHandler = async ({ url }) => {
   }
 
   const recipe = await queryOne<{ submitted_by: string; edit_code: string | null }>(
-    'SELECT user_id AS submitted_by, edit_code FROM player_recipes WHERE id = ?',
+    'SELECT submitted_by, edit_code FROM player_recipes WHERE recipe_id = ?',
     [recipeId]
   );
 
@@ -42,7 +42,7 @@ export const POST: RequestHandler = async ({ request }) => {
   }
 
   const recipe = await queryOne<{ submitted_by: string; edit_code: string | null }>(
-    'SELECT user_id AS submitted_by, edit_code FROM player_recipes WHERE id = ?',
+    'SELECT submitted_by, edit_code FROM player_recipes WHERE recipe_id = ?',
     [recipeId]
   );
 
@@ -52,7 +52,7 @@ export const POST: RequestHandler = async ({ request }) => {
   let code = recipe.edit_code;
   if (!code) {
     code = generateCode();
-    await execute('UPDATE player_recipes SET edit_code = ?, updated_at = datetime(\'now\') WHERE id = ?', [code, recipeId]);
+    await execute('UPDATE player_recipes SET edit_code = ?, updated_at = datetime(\'now\') WHERE recipe_id = ?', [code, recipeId]);
   }
 
   return json({ code });
@@ -68,14 +68,14 @@ export const DELETE: RequestHandler = async ({ request }) => {
   }
 
   const recipe = await queryOne<{ submitted_by: string }>(
-    'SELECT user_id AS submitted_by FROM player_recipes WHERE id = ?',
+    'SELECT submitted_by FROM player_recipes WHERE recipe_id = ?',
     [recipeId]
   );
 
   if (!recipe) return json({ error: 'Recipe not found' }, { status: 404 });
   if (recipe.submitted_by !== playerId) return json({ error: 'Not authorized' }, { status: 403 });
 
-  await execute('UPDATE player_recipes SET edit_code = NULL, updated_at = datetime(\'now\') WHERE id = ?', [recipeId]);
+  await execute('UPDATE player_recipes SET edit_code = NULL, updated_at = datetime(\'now\') WHERE recipe_id = ?', [recipeId]);
 
   return json({ success: true });
 };
