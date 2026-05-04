@@ -614,6 +614,7 @@
       }));
     }
     
+    const nj = level.nutritionJson as (typeof level.nutritionJson & { yieldFactorWater?: number; yieldFactorFat?: number }) | undefined;
     return {
       recipeName: level.name,
       category: level.category,
@@ -623,6 +624,8 @@
       prepTime: level.prepTime || '',
       servings: level.servings || '',
       nutritionJson: level.nutritionJson || undefined,
+      ...(typeof nj?.yieldFactorWater === 'number' ? { yieldFactorWater: nj.yieldFactorWater } : {}),
+      ...(typeof nj?.yieldFactorFat   === 'number' ? { yieldFactorFat:   nj.yieldFactorFat   } : {}),
       linkMode: (level.linkType === 'dish') ? 'mixed' : (level.linkType || (levelDishLink ? 'mixed' : 'ingredient')),
       ...(levelDishLink ? { dishLink: levelDishLink } : {}),
       ingredients,
