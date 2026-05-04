@@ -1411,45 +1411,6 @@
               <span><strong>{showStoredPer100 ? (persistedNutrition?.per100g?.SugarsTotal ?? '--') : (persistedNutrition?.perServing?.sug ?? '--')}g</strong> sugar</span>
             </div>
           </div>
-        {:else if persistedNutrition?.perServing}
-          {@const hasStoredPer100 = !!persistedNutrition?.per100g}
-          {@const showStoredPer100 = macroPer === '100g' && hasStoredPer100}
-          <div class="macro-preview stored">
-            <div class="macro-preview-header">
-              <span class="macro-preview-label">Stored nutrition (recipe record){isCanonicalRule ? ` · ${sr28Rule}` : ''}</span>
-              <div class="macro-per-toggle">
-                <button
-                  type="button"
-                  class="macro-per-btn"
-                  class:active={macroPer === 'serving'}
-                  disabled={!hasValidServings}
-                  onclick={() => macroPer = 'serving'}
-                >Per serving</button>
-                <button
-                  type="button"
-                  class="macro-per-btn"
-                  class:active={macroPer === '100g'}
-                  disabled={!hasStoredPer100}
-                  onclick={() => macroPer = '100g'}
-                >100g</button>
-              </div>
-            </div>
-            <div class="macro-preview-values">
-              <span><strong>{showStoredPer100 ? (persistedNutrition?.per100g?.Energy_KCal ?? '--') : (persistedNutrition?.perServing?.cal ?? '--')}</strong> cal</span>
-              <span><strong>{showStoredPer100 ? (persistedNutrition?.per100g?.Protein ?? '--') : (persistedNutrition?.perServing?.pro ?? '--')}g</strong> protein</span>
-              <span><strong>{showStoredPer100 ? (persistedNutrition?.per100g?.TotalLipidFat ?? '--') : (persistedNutrition?.perServing?.fat ?? '--')}g</strong> fat</span>
-              <span><strong>{showStoredPer100 ? (persistedNutrition?.per100g?.Carbohydrate ?? '--') : (persistedNutrition?.perServing?.carb ?? '--')}g</strong> carbs</span>
-              <span><strong>{showStoredPer100 ? (persistedNutrition?.per100g?.FiberTotalDietary ?? '--') : (persistedNutrition?.perServing?.fib ?? '--')}g</strong> fibre</span>
-              <span><strong>{showStoredPer100 ? (persistedNutrition?.per100g?.SugarsTotal ?? '--') : (persistedNutrition?.perServing?.sug ?? '--')}g</strong> sugar</span>
-            </div>
-            {#if previewError}
-              <p class="macro-preview-note">Could not load recalculated nutrition. Showing stored values.</p>
-            {:else if nutritionComplete}
-              <p class="macro-preview-note">Recalculation in progress. Showing stored values until preview is ready.</p>
-            {:else}
-              <p class="macro-preview-note">Edit ingredients and relink all nutrition entries to recalculate.</p>
-            {/if}
-          </div>
         {:else if liveNutritionJson?.perServing}
           {@const p100 = liveNutritionJson.per100g}
           {@const gps = liveNutritionJson.gramsPerServing}
@@ -1498,6 +1459,55 @@
             </div>
             {#if isCanonicalRule}
               <p class="macro-preview-note">⚠️ {sr28Rule} recipe — stored values use USDA canonical data with cooking-loss adjustments. This preview uses raw SR28 and may differ.</p>
+            {/if}
+          </div>
+        {:else if persistedNutrition?.perServing}
+          {@const hasStoredPer100 = !!persistedNutrition?.per100g}
+          {@const showStoredPer100 = macroPer === '100g' && hasStoredPer100}
+          <div class="macro-preview stored">
+            <div class="macro-preview-header">
+              <span class="macro-preview-label">Stored nutrition (recipe record){isCanonicalRule ? ` · ${sr28Rule}` : ''}</span>
+              <div class="macro-per-toggle">
+                <button
+                  type="button"
+                  class="macro-per-btn"
+                  class:active={macroPer === 'serving'}
+                  disabled={!hasValidServings}
+                  onclick={() => macroPer = 'serving'}
+                >Per serving</button>
+                <button
+                  type="button"
+                  class="macro-per-btn"
+                  class:active={macroPer === '100g'}
+                  disabled={!hasStoredPer100}
+                  onclick={() => macroPer = '100g'}
+                >100g</button>
+              </div>
+            </div>
+            <div class="macro-preview-values">
+              <span><strong>{showStoredPer100 ? (persistedNutrition?.per100g?.Energy_KCal ?? '--') : (persistedNutrition?.perServing?.cal ?? '--')}</strong> cal</span>
+              <span><strong>{showStoredPer100 ? (persistedNutrition?.per100g?.Protein ?? '--') : (persistedNutrition?.perServing?.pro ?? '--')}g</strong> protein</span>
+              <span><strong>{showStoredPer100 ? (persistedNutrition?.per100g?.TotalLipidFat ?? '--') : (persistedNutrition?.perServing?.fat ?? '--')}g</strong> fat</span>
+              <span><strong>{showStoredPer100 ? (persistedNutrition?.per100g?.Carbohydrate ?? '--') : (persistedNutrition?.perServing?.carb ?? '--')}g</strong> carbs</span>
+              <span><strong>{showStoredPer100 ? (persistedNutrition?.per100g?.FiberTotalDietary ?? '--') : (persistedNutrition?.perServing?.fib ?? '--')}g</strong> fibre</span>
+              <span><strong>{showStoredPer100 ? (persistedNutrition?.per100g?.SugarsTotal ?? '--') : (persistedNutrition?.perServing?.sug ?? '--')}g</strong> sugar</span>
+            </div>
+            {#if previewError}
+              <p class="macro-preview-note">Could not load recalculated nutrition. Showing stored values.</p>
+            {:else if nutritionComplete}
+              <p class="macro-preview-note">Recalculation in progress. Showing stored values until preview is ready.</p>
+            {:else}
+              {@const remainingLinks = Math.max(0, nutritionTotalCount - nutritionLinkedCount)}
+              {@const needsDishLink = (linkMode === 'dish' || linkMode === 'mixed') && dishLink === null}
+              {#if needsDishLink && remainingLinks > 0}
+                <p class="macro-preview-note">Showing saved nutrition for now. Link the dish entry and {remainingLinks} ingredient{remainingLinks === 1 ? '' : 's'} to refresh.</p>
+              {:else if needsDishLink}
+                <p class="macro-preview-note">Showing saved nutrition for now. Link the dish entry to refresh the calculation.</p>
+              {:else if remainingLinks > 0}
+                <p class="macro-preview-note">Showing saved nutrition for now. Link {remainingLinks} more ingredient{remainingLinks === 1 ? '' : 's'} to refresh the calculation.</p>
+              {:else}
+                <p class="macro-preview-note">Showing saved nutrition for now while recalculation gets ready.</p>
+              {/if}
             {/if}
           </div>
         {:else if previewLoading && nutritionComplete}
