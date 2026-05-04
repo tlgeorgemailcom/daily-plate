@@ -577,11 +577,12 @@
   
   // Convert Level to RecipeFormData for editing
   function levelToFormData(level: Level): Partial<RecipeFormData> {
+    const levelDishLink = getLevelDishLink(level);
     // Use recipeIngredients if available (has real quantities), otherwise fall back to recipe array
     let ingredients;
     if (level.recipeIngredients && level.recipeIngredients.length > 0) {
       // Map recipeIngredients to form ingredients, matching with game foods from recipe array
-      ingredients = level.recipeIngredients.map((ing, i) => {
+      ingredients = level.recipeIngredients.filter((ing) => !ing.isDish).map((ing, i) => {
         // Try to match this ingredient to a game food
         const matchedFood = level.recipe.find(food => 
           ing.name.toLowerCase().includes(food.toLowerCase()) ||
@@ -598,7 +599,8 @@
           ndbNo: ing.ndbNo,
           portionDesc: ing.portionDesc,
           portionGrams: ing.portionGrams,
-          servingCount: ing.servingCount
+          servingCount: ing.servingCount,
+          exempt: ing.exempt
         };
       });
     } else {
@@ -621,6 +623,8 @@
       prepTime: level.prepTime || '',
       servings: level.servings || '',
       nutritionJson: level.nutritionJson || undefined,
+      linkMode: level.linkType || (levelDishLink ? 'dish' : 'ingredient'),
+      ...(levelDishLink ? { dishLink: levelDishLink } : {}),
       ingredients,
       instructions: (level.recipeInstructions || []).map((text, i) => ({
         id: i + 1,
