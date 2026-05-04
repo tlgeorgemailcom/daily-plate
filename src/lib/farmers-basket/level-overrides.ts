@@ -96,17 +96,43 @@ function mergeRecipeIngredients(
   if (!originalIngs || originalIngs.length === 0) return overrideIngs;
 
   const normalize = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
-  const origByName = new Map(originalIngs.map(o => [normalize(o.name), o]));
+  // Group originals by normalized name so duplicate-named ingredients (e.g.
+  // flour appearing in both crust and filling) are preserved as a queue and
+  // each override row consumes the next matching original — preventing
+  // collapse of grams/links to the LAST occurrence.
+  type OrigIng = NonNullable<Level['recipeIngredients']>[number];
+  const origsByName = new Map<string, OrigIng[]>();
+  for (const o of originalIngs) {
+    const key = normalize(o.name);
+    const list = origsByName.get(key);
+    if (list) list.push(o); else origsByName.set(key, [o]);
+  }
+  const consumedOrigs = new Set<OrigIng>();
   const validFoodWords = new Set(FOODS.map((f) => f.word));
 
   const merged = overrideIngs.map(ing => {
     const hasValidFoodWord = !!ing.foodWord && validFoodWords.has(ing.foodWord);
     // Only preserve override nutrition links when they can actually map to FOODS.
-    if ((ing.portionGrams && hasValidFoodWord) || ing.exempt || ing.isDish) return ing;
+    if ((ing.portionGrams && hasValidFoodWord) || ing.exempt || ing.isDish) {
+      // Still consume one original by name so subsequent duplicates don't reuse it.
+      const queue = origsByName.get(normalize(ing.name));
+      if (queue) {
+        const draftQty = (ing.quantity || '').trim();
+        const next = queue.find((o) => !consumedOrigs.has(o) && (o.quantity || '').trim() === draftQty)
+          ?? queue.find((o) => !consumedOrigs.has(o));
+        if (next) consumedOrigs.add(next);
+      }
+      return ing;
+    }
 
     // Otherwise try to find a matching original ingredient and copy its nutrition links.
-    const orig = origByName.get(normalize(ing.name));
+    const queue = origsByName.get(normalize(ing.name));
+    if (!queue || queue.length === 0) return ing;
+    const draftQty = (ing.quantity || '').trim();
+    const orig = queue.find((o) => !consumedOrigs.has(o) && (o.quantity || '').trim() === draftQty)
+      ?? queue.find((o) => !consumedOrigs.has(o));
     if (!orig) return ing;
+    consumedOrigs.add(orig);
 
     return {
       ...ing,
@@ -121,8 +147,7 @@ function mergeRecipeIngredients(
     };
   });
 
-  const overrideNames = new Set(overrideIngs.map((ing) => normalize(ing.name)));
-  const missingOriginals = originalIngs.filter((ing) => !overrideNames.has(normalize(ing.name)));
+  const missingOriginals = originalIngs.filter((ing) => !consumedOrigs.has(ing));
 
   // Some persisted override rows were saved before the full built-in ingredient payload existed.
   // Preserve any original generated rows that the sparse override does not mention so recalculation
