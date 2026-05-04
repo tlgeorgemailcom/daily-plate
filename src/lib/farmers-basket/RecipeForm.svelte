@@ -505,6 +505,15 @@
           : nutritionLinkedCount === nutritionTotalCount
     )
   );
+  // Preview can run as soon as we have ANY linked ingredient (or a dishLink for 'dish' mode).
+  // Unlinked rows are simply excluded from the live calculation rather than blocking it.
+  let nutritionPreviewReady = $derived(
+    nutritionMode && (
+      linkMode === 'dish'
+        ? dishLink !== null
+        : nutritionLinkedCount > 0
+    )
+  );
 
   function buildNutritionSignature(): string {
     const ingredientSignature = ingredients
@@ -552,10 +561,11 @@
 
   function buildNutritionPayload() {
     return {
+      // Only send linked rows to the preview API. Unlinked rows are not yet
+      // calculable and are excluded from the live preview rather than blocking it.
       ingredients: ingredients
-        .filter((i) => i.name.trim())
+        .filter((i) => i.name.trim() && hasIngredientNutritionLink(i))
         .map((i) => {
-          const linked = hasIngredientNutritionLink(i);
           return {
             name: i.name.trim(),
             ndbNo: i.ndbNo,
@@ -606,7 +616,7 @@
   );
 
   $effect(() => {
-    if (!nutritionComplete) {
+    if (!nutritionPreviewReady) {
       liveNutritionJson = null;
       previewLoading = false;
       previewError = false;
@@ -1457,6 +1467,10 @@
               <span><strong>{fibVal}g</strong> fibre</span>
               <span><strong>{sugVal}g</strong> sugar</span>
             </div>
+            {#if nutritionLinkedCount < nutritionTotalCount}
+              {@const excluded = nutritionTotalCount - nutritionLinkedCount}
+              <p class="macro-preview-note">{excluded} ingredient{excluded === 1 ? '' : 's'} not yet linked — not included in this calculation.</p>
+            {/if}
             {#if isCanonicalRule}
               <p class="macro-preview-note">⚠️ {sr28Rule} recipe — stored values use USDA canonical data with cooking-loss adjustments. This preview uses raw SR28 and may differ.</p>
             {/if}

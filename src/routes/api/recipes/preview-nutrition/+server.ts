@@ -74,8 +74,10 @@ export const POST: RequestHandler = async ({ request }) => {
     return json({ nutritionJson: null });
   }
 
-  // Enforce full-link semantics: every named ingredient row must be linked.
-  if (rawIngs.some((row) => !hasValidLink(row))) {
+  // Drop any rows that are not yet nutritionally linked. Live preview computes
+  // from whatever IS linked rather than blocking on partial data.
+  const linkedIngs = rawIngs.filter((row) => hasValidLink(row));
+  if (linkedIngs.length === 0 && !hasValidLink(dishLink)) {
     return json({ nutritionJson: null });
   }
 
@@ -87,8 +89,8 @@ export const POST: RequestHandler = async ({ request }) => {
   // The isDish row (e.g. a USDA composite NDB) is a UI reference only — never
   // use it as the nutrition source for a live preview. This matches the v2
   // pipeline which always derived nutrition from the ingredient list.
-  const normalizedIngs = rawIngs.map((row) => withDefaultServingCount(row));
-  const hasRealIngredients = normalizedIngs.some((r) => hasValidLink(r));
+  const normalizedIngs = linkedIngs.map((row) => withDefaultServingCount(row));
+  const hasRealIngredients = normalizedIngs.length > 0;
 
   let ingRows: Parameters<typeof calcNutritionSR28>[0];
   let resolvedLinkType: string;
