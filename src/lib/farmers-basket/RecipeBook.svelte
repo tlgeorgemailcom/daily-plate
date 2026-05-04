@@ -1351,13 +1351,14 @@
 
   function getLevelDishLink(level: Level): RecipeFormData['dishLink'] | undefined {
     const dish = level.recipeIngredients?.find((ing) => ing.isDish);
-    if (!dish?.ndbNo || !dish.portionDesc || !dish.portionGrams || !dish.servingCount) return undefined;
+    // Require at least ndbNo and portionGrams; use defaults for optional fields
+    if (!dish?.ndbNo || !dish.portionGrams) return undefined;
     return {
       foodWord: dish.foodWord || '',
       ndbNo: dish.ndbNo,
-      portionDesc: dish.portionDesc,
+      portionDesc: dish.portionDesc || 'g',
       portionGrams: dish.portionGrams,
-      servingCount: dish.servingCount
+      servingCount: dish.servingCount ?? 1
     };
   }
 
