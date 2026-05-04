@@ -158,11 +158,9 @@ export async function getLevelsWithOverrides(): Promise<Level[]> {
         ? {
             ...override.nutritionJson,
             // Preserve yield factors from the TS LEVELS entry when dev_recipes doesn't carry them.
-            // These are calculation-config values set by the v2 pipeline — not nutrient values.
-            yieldFactorWater: (override.nutritionJson as Record<string, unknown>).yieldFactorWater
-              ?? (level.nutritionJson as Record<string, unknown> | undefined)?.yieldFactorWater,
-            yieldFactorFat: (override.nutritionJson as Record<string, unknown>).yieldFactorFat
-              ?? (level.nutritionJson as Record<string, unknown> | undefined)?.yieldFactorFat,
+            // NutritionJson already declares these as optional number fields — no cast needed.
+            yieldFactorWater: override.nutritionJson.yieldFactorWater ?? level.nutritionJson?.yieldFactorWater,
+            yieldFactorFat:   override.nutritionJson.yieldFactorFat   ?? level.nutritionJson?.yieldFactorFat,
           }
         : level.nutritionJson,
       imageUrl: override.imageUrl ?? level.imageUrl
