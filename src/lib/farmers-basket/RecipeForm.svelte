@@ -1394,6 +1394,23 @@
             🔗 Nutrition: {nutritionLinkedCount}/{nutritionTotalCount} ingredient{nutritionTotalCount === 1 ? '' : 's'} linked
           {/if}
         </div>
+        <!-- TEMP DEBUG START -->
+        <div style="background:#fffbe6;border:2px solid #f59e0b;padding:10px;margin:8px 0;font-family:monospace;font-size:11px;line-height:1.4;color:#000;border-radius:4px;">
+          <div><strong>🐛 DEBUG (temporary)</strong></div>
+          <div>linkMode={linkMode} | nutritionMode={String(nutritionMode)} | macroPer={macroPer}</div>
+          <div>linked={nutritionLinkedCount} / total={nutritionTotalCount} | nutritionComplete={String(nutritionComplete)}</div>
+          <div>previewReady={String(nutritionPreviewReady)} | previewLoading={String(previewLoading)} | previewError={String(previewError)}</div>
+          <div>showStored={String(showStoredNutrition)} | dirty={String(nutritionFieldsDirty)}</div>
+          <div>persistedNut.perServing.cal={persistedNutrition?.perServing?.cal ?? 'null'} | per100g.kcal={persistedNutrition?.per100g?.Energy_KCal ?? 'null'} | gps={persistedNutrition?.gramsPerServing ?? 'null'}</div>
+          <div>liveNut.perServing.cal={liveNutritionJson?.perServing?.cal ?? 'null'} | per100g.kcal={liveNutritionJson?.per100g?.Energy_KCal ?? 'null'} | gps={liveNutritionJson?.gramsPerServing ?? 'null'}</div>
+          <div>macroTotals.linkedCount={macroTotals.linkedCount} | totalGrams={macroTotals.totalGrams} | cal={macroTotals.cal} sug={macroTotals.sug}</div>
+          <div>servings="{servings}" | yieldFactorWater={yieldFactorWater ?? 'null'} | yieldFactorFat={yieldFactorFat ?? 'null'} | dishLink.ndb={dishLink?.ndbNo ?? 'null'}</div>
+          <div style="margin-top:6px;"><strong>Ingredient rows ({ingredients.length}):</strong></div>
+          {#each ingredients as ing, i}
+            <div style="padding-left:8px;">[{i}] name="{ing.name}" qty="{ing.quantity}" ndb={ing.ndbNo ?? '-'} word={ing.foodWord ?? '-'} g={ing.portionGrams ?? '-'} sCount={ing.servingCount ?? '-'} {ing.isDish ? '🍽dish' : ''} {ing.exempt ? '⊘exempt' : ''}</div>
+          {/each}
+        </div>
+        <!-- TEMP DEBUG END -->
         {#if showStoredNutrition}
           {@const hasStoredPer100 = !!persistedNutrition?.per100g}
           {@const showStoredPer100 = macroPer === '100g' && hasStoredPer100}
