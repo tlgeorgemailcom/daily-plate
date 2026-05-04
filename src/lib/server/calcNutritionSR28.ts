@@ -219,6 +219,13 @@ export async function calcNutritionSR28(
 
   let totCal = 0, totPro = 0, totFat = 0, totCarb = 0, totFib = 0, totH2o = 0, totSug = 0;
   let rawTotalGrams = 0;
+  // Raw water and fat totals (BEFORE yield factors) — used to compute mass lost
+  // during cooking, per v2 spec:
+  //   cooked_grams = raw - water_lost - fat_lost
+  //   water_lost   = sum(ing_water_g) * (1 - yieldFactorWater)
+  //   fat_lost     = sum(ing_fat_g)   * (1 - yieldFactorFat)
+  let rawWaterTotal = 0;
+  let rawFatTotal   = 0;
   const sources: NutritionSource[] = [];
 
   for (const ing of ingredients) {
@@ -244,6 +251,8 @@ export async function calcNutritionSR28(
       totFib  += food.FiberTotalDietary * scale;
       totH2o  += food.Water             * scale * yieldFactorWater;
       totSug  += food.SugarsTotal       * scale;
+      rawWaterTotal += food.Water         * scale;
+      rawFatTotal   += food.TotalLipidFat * scale;
       sources.push({ ndb: ing.ndbNo, name: food.longDesc, grams: round1(g / servings) });
 
     } else if (ing.foodWord) {
@@ -258,6 +267,8 @@ export async function calcNutritionSR28(
       totFib  += food.fib  * scale;
       totH2o  += food.h2o  * scale * yieldFactorWater;
       totSug  += food.sug  * scale;
+      rawWaterTotal += food.h2o * scale;
+      rawFatTotal   += food.fat * scale;
       sources.push({ ndb: food.ndb, name: food.display, grams: round1(g / servings) });
     }
     // Skip ingredients with neither ndbNo nor foodWord.
@@ -265,12 +276,15 @@ export async function calcNutritionSR28(
 
   if (rawTotalGrams === 0) return null;
 
-  // gramsPerServing uses RAW total mass — matches the v2 Python pipeline that
-  // produced the stored nutrition_json values. The yield factors only adjust
-  // the Water and Fat nutrient amounts, not the serving weight divisor.
-  // (Subtracting evaporated water from total mass shifts per-100g values away
-  // from stored data, e.g. 343.87 vs stored 330.72 for SWEET_040.)
-  const totalGrams = rawTotalGrams;
+  // Per v2 spec (docs/recipes_v2.md):
+  //   "Each recipe is per-100g cooked to align with the canonical NDB row."
+  //   cooked_grams = raw - water_lost - fat_lost
+  // So per-100g divisor and gramsPerServing both use cooked mass. Per-serving
+  // values are unaffected (per100g × gramsPS/100 cancels the divisor change).
+  const waterLost = rawWaterTotal * (1 - yieldFactorWater);
+  const fatLost   = rawFatTotal   * (1 - yieldFactorFat);
+  const cookedTotalGrams = Math.max(rawTotalGrams - waterLost - fatLost, 1);
+  const totalGrams = cookedTotalGrams;
 
   const gramsPS = round1(totalGrams / servings);
   const per100g = {
