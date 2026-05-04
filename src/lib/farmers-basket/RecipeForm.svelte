@@ -1390,6 +1390,52 @@
               <span><strong>{showStoredPer100 ? (persistedNutrition?.per100g?.SugarsTotal ?? '--') : (persistedNutrition?.perServing?.sug ?? '--')}g</strong> sugar</span>
             </div>
           </div>
+        {:else if liveNutritionJson?.perServing}
+          {@const gps = liveNutritionJson.gramsPerServing}
+          {@const hasLive100g = gps != null && gps > 0}
+          {@const showLive100g = macroPer === '100g' && hasLive100g}
+          <div class="macro-preview" class:complete={true}>
+            <div class="macro-preview-header">
+              <span class="macro-preview-label">
+                {#if showLive100g}
+                  Per 100g
+                {:else}
+                  Per serving{hasValidServings ? ` (${parseServingsCount(servings)} servings)` : ''}
+                {/if}
+              </span>
+              <span class="macro-preview-label">Calculated nutrition</span>
+              <div class="macro-per-toggle">
+                <button
+                  type="button"
+                  class="macro-per-btn"
+                  class:active={macroPer === 'serving'}
+                  disabled={!hasValidServings}
+                  onclick={() => macroPer = 'serving'}
+                >Per serving</button>
+                <button
+                  type="button"
+                  class="macro-per-btn"
+                  class:active={macroPer === '100g'}
+                  disabled={!hasLive100g}
+                  onclick={() => macroPer = '100g'}
+                >100g</button>
+              </div>
+            </div>
+            <div class="macro-preview-values">
+              <span><strong>{showLive100g ? Math.round(liveNutritionJson.perServing.cal / gps! * 100) : liveNutritionJson.perServing.cal}</strong> cal</span>
+              <span><strong>{showLive100g ? Math.round(liveNutritionJson.perServing.pro / gps! * 100) : liveNutritionJson.perServing.pro}g</strong> protein</span>
+              <span><strong>{showLive100g ? Math.round(liveNutritionJson.perServing.fat / gps! * 100) : liveNutritionJson.perServing.fat}g</strong> fat</span>
+              <span><strong>{showLive100g ? Math.round(liveNutritionJson.perServing.carb / gps! * 100) : liveNutritionJson.perServing.carb}g</strong> carbs</span>
+              <span><strong>{showLive100g ? Math.round(liveNutritionJson.perServing.fib / gps! * 100) : liveNutritionJson.perServing.fib}g</strong> fibre</span>
+              <span><strong>{showLive100g ? Math.round(liveNutritionJson.perServing.sug / gps! * 100) : liveNutritionJson.perServing.sug}g</strong> sugar</span>
+            </div>
+          </div>
+        {:else if previewLoading && nutritionComplete}
+          <div class="macro-preview">
+            <div class="macro-preview-header">
+              <span class="macro-preview-label">⏳ Recalculating nutrition…</span>
+            </div>
+          </div>
         {:else if macroTotals.linkedCount > 0}
           <div class="macro-preview" class:complete={nutritionComplete}>
             <div class="macro-preview-header">
