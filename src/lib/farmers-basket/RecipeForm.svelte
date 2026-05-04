@@ -557,7 +557,7 @@
             ndbNo: i.ndbNo,
             foodWord: i.foodWord,
             portionGrams: i.portionGrams,
-            servingCount: linked ? (i.servingCount ?? 1) : i.servingCount,
+            servingCount: i.servingCount ?? 1,
             exempt: i.exempt === true,
           };
         }),
