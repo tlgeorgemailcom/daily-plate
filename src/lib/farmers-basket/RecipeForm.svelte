@@ -1464,9 +1464,56 @@
             <div class="macro-preview-error">
               ⚠️ Nutrition preview unavailable — will be calculated on save
             </div>
+            {#if macroTotals.linkedCount > 0}
+              <div class="macro-preview estimate">
+                <div class="macro-preview-header">
+                  <span class="macro-preview-label">Estimate (local data — not SR28, actual save value may differ)</span>
+                </div>
+                <div class="macro-preview-values">
+                  <span><strong>{macroTotals.cal ?? '--'}</strong> cal</span>
+                  <span><strong>{macroTotals.pro ?? '--'}g</strong> protein</span>
+                  <span><strong>{macroTotals.fat ?? '--'}g</strong> fat</span>
+                  <span><strong>{macroTotals.carb ?? '--'}g</strong> carbs</span>
+                  <span><strong>{macroTotals.fib ?? '--'}g</strong> fibre</span>
+                  <span><strong>{macroTotals.sug ?? '--'}g</strong> sugar</span>
+                </div>
+              </div>
+            {/if}
           {:else}
-            <div class="macro-preview-error">
-              ⚠️ Nutrition preview unavailable — please wait and retry
+            {#if macroTotals.linkedCount > 0}
+              <div class="macro-preview estimate">
+                <div class="macro-preview-header">
+                  <span class="macro-preview-label">Estimate (local data — not SR28, actual save value may differ)</span>
+                </div>
+                <div class="macro-preview-values">
+                  <span><strong>{macroTotals.cal ?? '--'}</strong> cal</span>
+                  <span><strong>{macroTotals.pro ?? '--'}g</strong> protein</span>
+                  <span><strong>{macroTotals.fat ?? '--'}g</strong> fat</span>
+                  <span><strong>{macroTotals.carb ?? '--'}g</strong> carbs</span>
+                  <span><strong>{macroTotals.fib ?? '--'}g</strong> fibre</span>
+                  <span><strong>{macroTotals.sug ?? '--'}g</strong> sugar</span>
+                </div>
+              </div>
+            {:else}
+              <div class="macro-preview-error">
+                ⚠️ Nutrition preview unavailable — please wait and retry
+              </div>
+            {/if}
+          {/if}
+        {:else}
+          {#if macroTotals.linkedCount > 0}
+            <div class="macro-preview estimate">
+              <div class="macro-preview-header">
+                <span class="macro-preview-label">Estimate (local data — not SR28, actual save value may differ)</span>
+              </div>
+              <div class="macro-preview-values">
+                <span><strong>{macroTotals.cal ?? '--'}</strong> cal</span>
+                <span><strong>{macroTotals.pro ?? '--'}g</strong> protein</span>
+                <span><strong>{macroTotals.fat ?? '--'}g</strong> fat</span>
+                <span><strong>{macroTotals.carb ?? '--'}g</strong> carbs</span>
+                <span><strong>{macroTotals.fib ?? '--'}g</strong> fibre</span>
+                <span><strong>{macroTotals.sug ?? '--'}g</strong> sugar</span>
+              </div>
             </div>
           {/if}
         {/if}
@@ -2523,6 +2570,13 @@
     background: #E3F2FD;
     border-color: #90CAF9;
     color: #0D47A1;
+  }
+
+  .macro-preview.estimate {
+    background: #FFF8E1;
+    border-color: #FFD54F;
+    color: #5D4037;
+    opacity: 0.9;
   }
 
   .macro-preview-header {
