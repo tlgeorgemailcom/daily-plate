@@ -623,7 +623,7 @@
       prepTime: level.prepTime || '',
       servings: level.servings || '',
       nutritionJson: level.nutritionJson || undefined,
-      linkMode: level.linkType || (levelDishLink ? 'mixed' : 'ingredient'),
+      linkMode: (level.linkType === 'dish') ? 'mixed' : (level.linkType || (levelDishLink ? 'mixed' : 'ingredient')),
       ...(levelDishLink ? { dishLink: levelDishLink } : {}),
       ingredients,
       instructions: (level.recipeInstructions || []).map((text, i) => ({
@@ -1436,7 +1436,7 @@
         cookingMethod: d.cookingMethod || selectedLevel.cookingMethod || 'Bake',
         dishFamily: d.dishFamily || selectedLevel.dishFamily || '',
         nutritionJson: selectedLevel.nutritionJson || undefined,
-        linkMode: d.linkMode || selectedLevel.linkType || (levelDishLink ? 'dish' : 'ingredient'),
+        linkMode: d.linkMode ? (d.linkMode === 'dish' && levelDishLink ? 'mixed' : d.linkMode) : (selectedLevel.linkType === 'dish' && levelDishLink ? 'mixed' : selectedLevel.linkType || (levelDishLink ? 'mixed' : 'ingredient')),
         ...(d.dishLink || levelDishLink ? { dishLink: d.dishLink || levelDishLink } : {}),
         ingredients: mergeDraftIngredientsWithLevel(selectedLevel, d.ingredients),
         instructions: (d.instructions || []).map((text, i) => ({ id: i + 1, text }))
@@ -1472,7 +1472,7 @@
         cookingMethod: d.cookingMethod || selectedLevel.cookingMethod || 'Bake',
         dishFamily: d.dishFamily || selectedLevel.dishFamily || '',
         nutritionJson: selectedLevel.nutritionJson || undefined,
-        linkMode: d.linkMode || selectedLevel.linkType || (levelDishLink ? 'dish' : 'ingredient'),
+        linkMode: d.linkMode ? (d.linkMode === 'dish' && levelDishLink ? 'mixed' : d.linkMode) : (selectedLevel.linkType === 'dish' && levelDishLink ? 'mixed' : selectedLevel.linkType || (levelDishLink ? 'mixed' : 'ingredient')),
         ...(d.dishLink || levelDishLink ? { dishLink: d.dishLink || levelDishLink } : {}),
         ingredients: mergeDraftIngredientsWithLevel(selectedLevel, d.ingredients),
         instructions: (d.instructions || []).map((text, i) => ({ id: i + 1, text }))
