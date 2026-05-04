@@ -486,7 +486,8 @@
             instructions: editingRecipe.instructions.map((text, i) => ({
               id: i + 1,
               text: typeof text === 'string' ? text : (text as any).text || ''
-            }))
+            })),
+            nutritionJson: editingRecipe.nutritionJson || undefined
           }}
           onsubmit={handleSaveEdit}
           oncancel={() => editingRecipe = null}

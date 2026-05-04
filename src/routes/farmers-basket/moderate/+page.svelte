@@ -41,6 +41,7 @@
     cookingMethod?: string;
     dishFamily?: string | null;
     needsNameReview?: boolean;
+    nutritionJson?: unknown | null;
   }
   
   // Password protection
@@ -223,7 +224,8 @@
       })),
       foodSupply: recipe.foodSupply,
       linkMode: recipe.linkType || (dishLink ? 'dish' : 'ingredient'),
-      ...(dishLink ? { dishLink } : {})
+      ...(dishLink ? { dishLink } : {}),
+      nutritionJson: (recipe.nutritionJson as any) || undefined
     };
   }
   
