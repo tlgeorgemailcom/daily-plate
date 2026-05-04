@@ -83,13 +83,28 @@ export const POST: RequestHandler = async ({ request }) => {
     return json({ nutritionJson: null });
   }
 
-  // Build ingredient rows using the same mode semantics as save/submit payloads.
-  // Ingredient mode must not include dishLink; dish/mixed may include it.
-  const dishLinkEntry = (linkType === 'dish' || linkType === 'mixed') && dishLink && typeof dishLink === 'object'
-    ? { isDish: true, ...(withDefaultServingCount(dishLink) as object) }
-    : null;
+  // When real ingredient rows are present, always sum them directly.
+  // The isDish row (e.g. a USDA composite NDB) is a UI reference only — never
+  // use it as the nutrition source for a live preview. This matches the v2
+  // pipeline which always derived nutrition from the ingredient list.
   const normalizedIngs = rawIngs.map((row) => withDefaultServingCount(row));
-  const ingRows = (dishLinkEntry ? [dishLinkEntry, ...normalizedIngs] : normalizedIngs) as Parameters<typeof calcNutritionSR28>[0];
+  const hasRealIngredients = normalizedIngs.some((r) => hasValidLink(r));
+
+  let ingRows: Parameters<typeof calcNutritionSR28>[0];
+  let resolvedLinkType: string;
+
+  if (hasRealIngredients) {
+    // Strip any isDish rows — sum the actual ingredients only.
+    ingRows = normalizedIngs.filter((r) => !(r as Record<string, unknown>).isDish) as Parameters<typeof calcNutritionSR28>[0];
+    resolvedLinkType = 'ingredient';
+  } else {
+    // No ingredient rows — fall back to dishLink lookup as before.
+    const dishLinkEntry = (linkType === 'dish' || linkType === 'mixed') && dishLink && typeof dishLink === 'object'
+      ? { isDish: true, ...(withDefaultServingCount(dishLink) as object) }
+      : null;
+    ingRows = (dishLinkEntry ? [dishLinkEntry, ...normalizedIngs] : normalizedIngs) as Parameters<typeof calcNutritionSR28>[0];
+    resolvedLinkType = linkType;
+  }
 
   const servingsStr = typeof servings === 'string' ? servings : null;
   const cookMethod = typeof cookingMethod === 'string' ? cookingMethod : null;
@@ -98,9 +113,9 @@ export const POST: RequestHandler = async ({ request }) => {
     ...(typeof yieldFactorWater === 'number' ? { yieldFactorWater } : {}),
     ...(typeof yieldFactorFat   === 'number' ? { yieldFactorFat }   : {}),
   };
-  const result = await calcNutritionSR28(ingRows, linkType, servingsStr, cookMethod, yieldOpts);
+  const result = await calcNutritionSR28(ingRows, resolvedLinkType, servingsStr, cookMethod, yieldOpts);
   const ingHash = ingRows.map(r => `${r.ndbNo || r.foodWord || 'unlinked'}:${r.portionGrams}`).join('|');
-  console.log(`[PREVIEW] linkType=${linkType} rows=${ingRows.length} cal=${result?.perServing?.cal ?? 'null'} ings=[${ingHash}]`);
+  console.log(`[PREVIEW] linkType=${resolvedLinkType} rows=${ingRows.length} cal=${result?.perServing?.cal ?? 'null'} ings=[${ingHash}]`);
 
   return json({ nutritionJson: result });
 };

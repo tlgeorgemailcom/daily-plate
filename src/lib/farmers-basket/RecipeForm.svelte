@@ -596,12 +596,12 @@
   let previewRequestId = 0;
 
   let showStoredNutrition = $derived(
-    !!persistedNutrition?.perServing
+    !!persistedNutrition?.perServing &&
+    !nutritionFieldsDirty
   );
 
   $effect(() => {
-    // Skip NDB-based preview when stored nutrition already exists (dev_recipes is authoritative).
-    if (!nutritionComplete || persistedNutrition?.perServing) {
+    if (!nutritionComplete) {
       liveNutritionJson = null;
       previewLoading = false;
       previewError = false;
