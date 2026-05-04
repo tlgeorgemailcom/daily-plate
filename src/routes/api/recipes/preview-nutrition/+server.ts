@@ -2,6 +2,16 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { calcNutritionSR28 } from '$lib/server/calcNutritionSR28';
 
+function hasValidLink(row: unknown): boolean {
+  if (!row || typeof row !== 'object') return false;
+  const obj = row as Record<string, unknown>;
+  const hasFood = (typeof obj.foodWord === 'string' && obj.foodWord.trim().length > 0)
+    || (typeof obj.ndbNo === 'string' && obj.ndbNo.trim().length > 0);
+  const portion = Number(obj.portionGrams ?? 0);
+  const count = Number(obj.servingCount ?? 0);
+  return hasFood && Number.isFinite(portion) && portion > 0 && Number.isFinite(count) && count > 0;
+}
+
 /**
  * POST /api/recipes/preview-nutrition
  *
@@ -50,6 +60,15 @@ export const POST: RequestHandler = async ({ request }) => {
 
   const rawIngs: unknown[] = Array.isArray(ingredients) ? ingredients : [];
   if (rawIngs.length === 0 && !dishLink) {
+    return json({ nutritionJson: null });
+  }
+
+  // Enforce full-link semantics: every named ingredient row must be linked.
+  if (rawIngs.some((row) => !hasValidLink(row))) {
+    return json({ nutritionJson: null });
+  }
+
+  if ((linkType === 'dish' || linkType === 'mixed') && !hasValidLink(dishLink)) {
     return json({ nutritionJson: null });
   }
 

@@ -27,6 +27,20 @@ interface RecipeRow {
 
 const EMPTY_NUTRITION_JSON = '{}';
 
+function hasValidLink(row: unknown): boolean {
+  if (!row || typeof row !== 'object') return false;
+  const obj = row as Record<string, unknown>;
+  const hasFood = (typeof obj.foodWord === 'string' && obj.foodWord.trim().length > 0)
+    || (typeof obj.ndbNo === 'string' && obj.ndbNo.trim().length > 0);
+  const portion = Number(obj.portionGrams ?? 0);
+  const count = Number(obj.servingCount ?? 0);
+  return hasFood && Number.isFinite(portion) && portion > 0 && Number.isFinite(count) && count > 0;
+}
+
+function hasAllIngredientLinks(ingredients: unknown[]): boolean {
+  return ingredients.length > 0 && ingredients.every((row) => hasValidLink(row));
+}
+
 // GET: Fetch recipes by IDs (anonymous) OR by player_id (subscribers)
 export const GET: RequestHandler = async ({ url }) => {
   try {
@@ -162,6 +176,12 @@ export const PATCH: RequestHandler = async ({ request }) => {
     // Compute nutrition_json if linkType is provided
     const linkType = typeof updates.linkType === 'string' ? updates.linkType : null;
     const rawIngs: unknown[] = Array.isArray(updates.ingredients) ? updates.ingredients : [];
+    if (linkType && !hasAllIngredientLinks(rawIngs)) {
+      return json({ error: 'All ingredients must be linked before saving' }, { status: 400 });
+    }
+    if ((linkType === 'dish' || linkType === 'mixed') && !hasValidLink((updates as { dishLink?: unknown }).dishLink)) {
+      return json({ error: 'Dish link is required and must be complete for this link mode' }, { status: 400 });
+    }
     let nutritionJson: string | null = null;
     if (linkType && rawIngs.length > 0) {
       const computed = await calcNutritionSR28(

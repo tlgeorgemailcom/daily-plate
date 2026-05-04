@@ -383,7 +383,11 @@
   }
 
   function hasIngredientNutritionLink(ingredient: RecipeIngredient): boolean {
-    return Boolean((ingredient.foodWord || ingredient.ndbNo) && ingredient.portionGrams);
+    return Boolean(
+      (ingredient.foodWord || ingredient.ndbNo) &&
+      ingredient.portionGrams && ingredient.portionGrams > 0 &&
+      ingredient.servingCount && ingredient.servingCount > 0
+    );
   }
 
   function getIngredientNutritionLabel(ingredient: RecipeIngredient): string {
@@ -486,17 +490,14 @@
   let nutritionLinkedCount = $derived(
     ingredients.filter(i => i.name.trim() && hasIngredientNutritionLink(i)).length
   );
-  let nutritionExemptCount = $derived(
-    ingredients.filter(i => i.name.trim() && i.exempt && !hasIngredientNutritionLink(i)).length
-  );
   let nutritionTotalCount = $derived(ingredients.filter(i => i.name.trim()).length);
   let nutritionComplete = $derived(
     nutritionMode && nutritionTotalCount > 0 && (
       linkMode === 'dish'
-        ? dishLink !== null
+        ? dishLink !== null && ingredients.filter(i => i.name.trim()).every(i => hasIngredientNutritionLink(i))
         : linkMode === 'mixed'
-          ? dishLink !== null && ingredients.filter(i => i.name.trim()).every(i => hasIngredientNutritionLink(i) || i.exempt)
-          : (nutritionLinkedCount + nutritionExemptCount) === nutritionTotalCount
+          ? dishLink !== null && ingredients.filter(i => i.name.trim()).every(i => hasIngredientNutritionLink(i))
+          : nutritionLinkedCount === nutritionTotalCount
     )
   );
 
@@ -535,18 +536,14 @@
     return {
       ingredients: ingredients
         .filter((i) => i.name.trim())
-        .map((i) => {
-          const hasNutritionLinkMeta = Boolean((i.foodWord || i.ndbNo) && i.portionGrams);
-          return {
-            ...(hasNutritionLinkMeta ? {
-              ndbNo: i.ndbNo,
-              foodWord: i.foodWord,
-              portionGrams: i.portionGrams,
-              servingCount: i.servingCount,
-            } : {}),
-            ...(i.exempt ? { exempt: true } : {}),
-          };
-        }),
+        .map((i) => ({
+          name: i.name.trim(),
+          ndbNo: i.ndbNo,
+          foodWord: i.foodWord,
+          portionGrams: i.portionGrams,
+          servingCount: i.servingCount,
+          exempt: i.exempt === true,
+        })),
       dishLink: dishLink ?? undefined,
       linkType: linkMode,
       servings,
@@ -746,7 +743,7 @@
         quantity: i.quantity,
         gameFood: i.gameFood,
         animal: i.animal,
-        ...(linked && linkMode !== 'dish' ? {
+        ...(linked ? {
           ...(hasIngredientNutritionLink(i) ? {
             foodWord: i.foodWord,
             ndbNo: i.ndbNo,
@@ -1350,12 +1347,12 @@
         </div>
       {/if}
 
-      {#if nutritionTotalCount > 0 && linkMode !== 'dish'}
+      {#if nutritionTotalCount > 0}
         <div class="nutrition-progress" class:complete={nutritionComplete}>
           {#if nutritionComplete}
             ✅ Nutrition complete — all {nutritionTotalCount} ingredient{nutritionTotalCount === 1 ? '' : 's'} accounted for
           {:else}
-            🔗 Nutrition: {nutritionLinkedCount + nutritionExemptCount}/{nutritionTotalCount} ingredient{nutritionTotalCount === 1 ? '' : 's'} accounted for
+            🔗 Nutrition: {nutritionLinkedCount}/{nutritionTotalCount} ingredient{nutritionTotalCount === 1 ? '' : 's'} linked
           {/if}
         </div>
         {#if showStoredNutrition}
@@ -1436,16 +1433,14 @@
               <span class="macro-preview-label">⏳ Recalculating nutrition…</span>
             </div>
           </div>
-        {:else if macroTotals.linkedCount > 0}
+        {:else if nutritionComplete && macroTotals.linkedCount > 0}
           <div class="macro-preview" class:complete={nutritionComplete}>
             <div class="macro-preview-header">
               <span class="macro-preview-label">
                 {#if macroPer === '100g'}
                   Per 100g
-                {:else if nutritionComplete}
-                  Per serving{hasValidServings ? ` (${parseServingsCount(servings)} servings)` : ''}
                 {:else}
-                  {macroTotals.linkedCount} linked ingredient{macroTotals.linkedCount === 1 ? '' : 's'} · per serving
+                  Per serving{hasValidServings ? ` (${parseServingsCount(servings)} servings)` : ''}
                 {/if}
               </span>
               <span class="macro-preview-label">Updated estimate</span>
