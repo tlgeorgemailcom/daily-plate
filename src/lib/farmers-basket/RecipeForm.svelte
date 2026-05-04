@@ -67,6 +67,7 @@
     nutritionJson?: PersistedNutritionJson;
     yieldFactorWater?: number;
     yieldFactorFat?: number;
+    sr28Rule?: 'Rule A' | 'Rule B' | 'Rule C' | 'Rule D';
   }
   
   // Props
@@ -170,6 +171,9 @@
   );
   
   // Initialize food supply (default 3 of each selected food)
+  const sr28Rule = initialData.sr28Rule ?? undefined;
+  const isCanonicalRule = sr28Rule === 'Rule A' || sr28Rule === 'Rule B';
+
   let foodSupply = $state<Record<FoodType, number>>(initialData.foodSupply || {} as Record<FoodType, number>);
   let linkMode = $state(
     (initialData as RecipeFormData).linkMode ?? 'ingredient'
@@ -1380,7 +1384,7 @@
           {@const showStoredPer100 = macroPer === '100g' && hasStoredPer100}
           <div class="macro-preview stored">
             <div class="macro-preview-header">
-              <span class="macro-preview-label">Stored nutrition (recipe record)</span>
+              <span class="macro-preview-label">Stored nutrition (recipe record){isCanonicalRule ? ` · ${sr28Rule}` : ''}</span>
               <div class="macro-per-toggle">
                 <button
                   type="button"
@@ -1453,6 +1457,9 @@
               <span><strong>{fibVal}g</strong> fibre</span>
               <span><strong>{sugVal}g</strong> sugar</span>
             </div>
+            {#if isCanonicalRule}
+              <p class="macro-preview-note">⚠️ {sr28Rule} recipe — stored values use USDA canonical data with cooking-loss adjustments. This preview uses raw SR28 and may differ.</p>
+            {/if}
           </div>
         {:else if previewLoading && nutritionComplete}
           <div class="macro-preview">
@@ -2638,6 +2645,13 @@
 
   .macro-preview-values span {
     white-space: nowrap;
+  }
+
+  .macro-preview-note {
+    margin: 6px 0 0;
+    font-size: 0.78rem;
+    color: #b45309;
+    line-height: 1.4;
   }
 
   .nutrition-row {

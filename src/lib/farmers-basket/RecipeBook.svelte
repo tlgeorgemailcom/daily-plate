@@ -632,7 +632,8 @@
       instructions: (level.recipeInstructions || []).map((text, i) => ({
         id: i + 1,
         text
-      }))
+      })),
+      sr28Rule: level.sr28Rule
     };
   }
   
