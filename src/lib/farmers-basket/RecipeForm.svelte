@@ -581,10 +581,7 @@
 
   let showStoredNutrition = $derived(
     !!persistedNutrition?.perServing &&
-    !nutritionComplete &&
-    !nutritionFieldsDirty &&
-    !previewLoading &&
-    !liveNutritionJson
+    !nutritionFieldsDirty
   );
 
   $effect(() => {
@@ -1366,14 +1363,7 @@
           {@const showStoredPer100 = macroPer === '100g' && hasStoredPer100}
           <div class="macro-preview stored">
             <div class="macro-preview-header">
-              <span class="macro-preview-label">
-                {#if showStoredPer100}
-                  Per 100g
-                {:else}
-                  Per serving{hasValidServings ? ` (${parseServingsCount(servings)} servings)` : ''}
-                {/if}
-              </span>
-              <span class="macro-preview-label">Stored nutrition from dev_recipes/player_recipes (saved values)</span>
+              <span class="macro-preview-label">Stored nutrition (recipe record)</span>
               <div class="macro-per-toggle">
                 <button
                   type="button"
@@ -1400,122 +1390,44 @@
               <span><strong>{showStoredPer100 ? (persistedNutrition?.per100g?.SugarsTotal ?? '--') : (persistedNutrition?.perServing?.sug ?? '--')}g</strong> sugar</span>
             </div>
           </div>
-        {:else if nutritionComplete}
-          {#if previewLoading}
-            <div class="macro-preview loading">
-              <div class="macro-preview-header">
-                <span class="macro-preview-label">Recalculating…</span>
-              </div>
-              {#if liveNutritionJson?.perServing}
-                {@const ps = liveNutritionJson.perServing}
-                <div class="macro-preview-values">
-                  <span><strong>{ps.cal}</strong> cal</span>
-                  <span><strong>{ps.pro}g</strong> protein</span>
-                  <span><strong>{ps.fat}g</strong> fat</span>
-                  <span><strong>{ps.carb}g</strong> carbs</span>
-                  <span><strong>{ps.fib}g</strong> fibre</span>
-                  <span><strong>{ps.sug}g</strong> sugar</span>
-                </div>
-              {/if}
-            </div>
-          {:else if liveNutritionJson?.perServing}
-            {@const ps = liveNutritionJson.perServing}
-            {@const gpS = liveNutritionJson.gramsPerServing}
-            {@const per100Scale = gpS && gpS > 0 ? 100 / gpS : null}
-            {@const r1 = (v: number) => Math.round(v * 10) / 10}
-            {@const s = macroPer === '100g' && per100Scale ? per100Scale : 1}
-            <div class="macro-preview complete">
-              <div class="macro-preview-header">
-                <span class="macro-preview-label">
-                  {#if macroPer === '100g'}
-                    Per 100g
-                  {:else}
-                    Per serving{hasValidServings ? ` (${parseServingsCount(servings)} servings)` : ''}
-                  {/if}
-                </span>
-                <span class="macro-preview-label">Canonical preview (matches what Save will store)</span>
-                <div class="macro-per-toggle">
-                  <button
-                    type="button"
-                    class="macro-per-btn"
-                    class:active={macroPer === 'serving'}
-                    disabled={!hasValidServings}
-                    onclick={() => macroPer = 'serving'}
-                  >Per serving</button>
-                  <button
-                    type="button"
-                    class="macro-per-btn"
-                    class:active={macroPer === '100g'}
-                    disabled={!per100Scale}
-                    onclick={() => macroPer = '100g'}
-                  >100g</button>
-                </div>
-              </div>
-              <div class="macro-preview-values">
-                <span><strong>{r1(ps.cal * s)}</strong> cal</span>
-                <span><strong>{r1(ps.pro * s)}g</strong> protein</span>
-                <span><strong>{r1(ps.fat * s)}g</strong> fat</span>
-                <span><strong>{r1(ps.carb * s)}g</strong> carbs</span>
-                <span><strong>{r1(ps.fib * s)}g</strong> fibre</span>
-                <span><strong>{r1(ps.sug * s)}g</strong> sugar</span>
+        {:else if macroTotals.linkedCount > 0}
+          <div class="macro-preview" class:complete={nutritionComplete}>
+            <div class="macro-preview-header">
+              <span class="macro-preview-label">
+                {#if macroPer === '100g'}
+                  Per 100g
+                {:else if nutritionComplete}
+                  Per serving{hasValidServings ? ` (${parseServingsCount(servings)} servings)` : ''}
+                {:else}
+                  {macroTotals.linkedCount} linked ingredient{macroTotals.linkedCount === 1 ? '' : 's'} · per serving
+                {/if}
+              </span>
+              <span class="macro-preview-label">Updated estimate</span>
+              <div class="macro-per-toggle">
+                <button
+                  type="button"
+                  class="macro-per-btn"
+                  class:active={macroPer === 'serving'}
+                  disabled={!hasValidServings}
+                  onclick={() => macroPer = 'serving'}
+                >Per serving</button>
+                <button
+                  type="button"
+                  class="macro-per-btn"
+                  class:active={macroPer === '100g'}
+                  onclick={() => macroPer = '100g'}
+                >100g</button>
               </div>
             </div>
-          {:else if previewError}
-            <div class="macro-preview-error">
-              ⚠️ Nutrition preview unavailable — will be calculated on save
+            <div class="macro-preview-values">
+              <span><strong>{macroTotals.cal ?? '--'}</strong> cal</span>
+              <span><strong>{macroTotals.pro === null ? '--' : `${macroTotals.pro}g`}</strong> protein</span>
+              <span><strong>{macroTotals.fat === null ? '--' : `${macroTotals.fat}g`}</strong> fat</span>
+              <span><strong>{macroTotals.carb === null ? '--' : `${macroTotals.carb}g`}</strong> carbs</span>
+              <span><strong>{macroTotals.fib === null ? '--' : `${macroTotals.fib}g`}</strong> fibre</span>
+              <span><strong>{macroTotals.sug === null ? '--' : `${macroTotals.sug}g`}</strong> sugar</span>
             </div>
-            {#if macroTotals.linkedCount > 0}
-              <div class="macro-preview estimate">
-                <div class="macro-preview-header">
-                  <span class="macro-preview-label">Estimate (local data — not SR28, actual save value may differ)</span>
-                </div>
-                <div class="macro-preview-values">
-                  <span><strong>{macroTotals.cal ?? '--'}</strong> cal</span>
-                  <span><strong>{macroTotals.pro ?? '--'}g</strong> protein</span>
-                  <span><strong>{macroTotals.fat ?? '--'}g</strong> fat</span>
-                  <span><strong>{macroTotals.carb ?? '--'}g</strong> carbs</span>
-                  <span><strong>{macroTotals.fib ?? '--'}g</strong> fibre</span>
-                  <span><strong>{macroTotals.sug ?? '--'}g</strong> sugar</span>
-                </div>
-              </div>
-            {/if}
-          {:else}
-            {#if macroTotals.linkedCount > 0}
-              <div class="macro-preview estimate">
-                <div class="macro-preview-header">
-                  <span class="macro-preview-label">Estimate (local data — not SR28, actual save value may differ)</span>
-                </div>
-                <div class="macro-preview-values">
-                  <span><strong>{macroTotals.cal ?? '--'}</strong> cal</span>
-                  <span><strong>{macroTotals.pro ?? '--'}g</strong> protein</span>
-                  <span><strong>{macroTotals.fat ?? '--'}g</strong> fat</span>
-                  <span><strong>{macroTotals.carb ?? '--'}g</strong> carbs</span>
-                  <span><strong>{macroTotals.fib ?? '--'}g</strong> fibre</span>
-                  <span><strong>{macroTotals.sug ?? '--'}g</strong> sugar</span>
-                </div>
-              </div>
-            {:else}
-              <div class="macro-preview-error">
-                ⚠️ Nutrition preview unavailable — please wait and retry
-              </div>
-            {/if}
-          {/if}
-        {:else}
-          {#if macroTotals.linkedCount > 0}
-            <div class="macro-preview estimate">
-              <div class="macro-preview-header">
-                <span class="macro-preview-label">Estimate (local data — not SR28, actual save value may differ)</span>
-              </div>
-              <div class="macro-preview-values">
-                <span><strong>{macroTotals.cal ?? '--'}</strong> cal</span>
-                <span><strong>{macroTotals.pro ?? '--'}g</strong> protein</span>
-                <span><strong>{macroTotals.fat ?? '--'}g</strong> fat</span>
-                <span><strong>{macroTotals.carb ?? '--'}g</strong> carbs</span>
-                <span><strong>{macroTotals.fib ?? '--'}g</strong> fibre</span>
-                <span><strong>{macroTotals.sug ?? '--'}g</strong> sugar</span>
-              </div>
-            </div>
-          {/if}
+          </div>
         {/if}
       {/if}
     {/if}
