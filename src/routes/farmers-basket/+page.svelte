@@ -142,12 +142,16 @@
     window.addEventListener('resize', updateGameScale);
     window.addEventListener('orientationchange', updateGameScale);
     
-    // Load levels with dev_recipes overrides for all users
-    try {
-      const levelsWithOverrides = await getLevelsWithOverrides();
-      game.setLevelsWithOverrides(levelsWithOverrides);
-    } catch (err) {
-      console.warn('Could not load level overrides, using defaults:', err);
+    // Premium users: load Turso overrides, images, and admin-added recipes
+    // Guest/free users: use TypeScript LEVELS only (zero Turso reads)
+    if (get(isPremium)) {
+      try {
+        const levelsWithOverrides = await getLevelsWithOverrides();
+        game.setLevelsWithOverrides(levelsWithOverrides);
+      } catch (err) {
+        console.warn('Could not load level overrides:', err);
+      }
+    } else {
       game.setLevelsWithOverrides(getCanonicalLevels());
     }
 
