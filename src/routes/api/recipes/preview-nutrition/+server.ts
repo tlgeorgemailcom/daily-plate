@@ -79,7 +79,7 @@ export const POST: RequestHandler = async ({ request }) => {
     return json({ nutritionJson: null });
   }
 
-  if ((linkType === 'dish' || linkType === 'mixed') && !hasValidLink(dishLink)) {
+  if (linkType === 'dish' && !hasValidLink(dishLink)) {
     return json({ nutritionJson: null });
   }
 

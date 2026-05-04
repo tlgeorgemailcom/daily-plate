@@ -501,7 +501,7 @@
       linkMode === 'dish'
         ? dishLink !== null && ingredients.filter(i => i.name.trim()).every(i => hasIngredientNutritionLink(i))
         : linkMode === 'mixed'
-          ? dishLink !== null && ingredients.filter(i => i.name.trim()).every(i => hasIngredientNutritionLink(i))
+          ? ingredients.filter(i => i.name.trim()).every(i => hasIngredientNutritionLink(i))
           : nutritionLinkedCount === nutritionTotalCount
     )
   );
@@ -1498,12 +1498,7 @@
               <p class="macro-preview-note">Recalculation in progress. Showing stored values until preview is ready.</p>
             {:else}
               {@const remainingLinks = Math.max(0, nutritionTotalCount - nutritionLinkedCount)}
-              {@const needsDishLink = (linkMode === 'dish' || linkMode === 'mixed') && dishLink === null}
-              {#if needsDishLink && remainingLinks > 0}
-                <p class="macro-preview-note">Showing saved nutrition for now. Link the dish entry and {remainingLinks} ingredient{remainingLinks === 1 ? '' : 's'} to refresh.</p>
-              {:else if needsDishLink}
-                <p class="macro-preview-note">Showing saved nutrition for now. Link the dish entry to refresh the calculation.</p>
-              {:else if remainingLinks > 0}
+              {#if remainingLinks > 0}
                 <p class="macro-preview-note">Showing saved nutrition for now. Link {remainingLinks} more ingredient{remainingLinks === 1 ? '' : 's'} to refresh the calculation.</p>
               {:else}
                 <p class="macro-preview-note">Showing saved nutrition for now while recalculation gets ready.</p>
