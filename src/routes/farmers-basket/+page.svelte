@@ -126,9 +126,9 @@
             pro: Number(perServing.Protein ?? 0),
             fat: Number(perServing.TotalLipidFat ?? 0),
             carb: Number(perServing.Carbohydrate ?? 0),
-            fib: Number(perServing.FiberTotalDietary ?? 0),
+            fib: Number(perServing.FiberTotalDietary ?? level.nutritionJson?.perServing?.fib ?? 0),
             h2o: Number(perServing.Water ?? 0),
-            sug: Number(perServing.SugarsTotal ?? 0)
+            sug: Number(perServing.SugarsTotal ?? level.nutritionJson?.perServing?.sug ?? 0)
           },
           gramsPerServing: canonicalNutrition.gramsPerServing,
           servings: canonicalNutrition.servings
