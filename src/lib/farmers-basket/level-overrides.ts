@@ -154,7 +154,17 @@ export async function getLevelsWithOverrides(): Promise<Level[]> {
       animalSpawns: override.animalSpawns ?? level.animalSpawns,
       recipeInstructions: override.recipeInstructions ?? level.recipeInstructions,
       recipeIngredients: mergeRecipeIngredients(override.recipeIngredients, level.recipeIngredients),
-      nutritionJson: override.nutritionJson ?? level.nutritionJson,
+      nutritionJson: override.nutritionJson
+        ? {
+            ...override.nutritionJson,
+            // Preserve yield factors from the TS LEVELS entry when dev_recipes doesn't carry them.
+            // These are calculation-config values set by the v2 pipeline — not nutrient values.
+            yieldFactorWater: (override.nutritionJson as Record<string, unknown>).yieldFactorWater
+              ?? (level.nutritionJson as Record<string, unknown> | undefined)?.yieldFactorWater,
+            yieldFactorFat: (override.nutritionJson as Record<string, unknown>).yieldFactorFat
+              ?? (level.nutritionJson as Record<string, unknown> | undefined)?.yieldFactorFat,
+          }
+        : level.nutritionJson,
       imageUrl: override.imageUrl ?? level.imageUrl
     } as Level;
   });

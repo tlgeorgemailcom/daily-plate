@@ -586,6 +586,7 @@
   // ─── Canonical live preview ──────────────────────────────────────────────────
   type PreviewNutrition = {
     perServing: { cal: number; pro: number; fat: number; carb: number; fib: number; sug: number };
+    per100g?: { Energy_KCal: number; Protein: number; TotalLipidFat: number; Carbohydrate: number; FiberTotalDietary: number; SugarsTotal: number; Water: number };
     gramsPerServing: number | null;
     servings: number;
   };
@@ -1407,8 +1408,9 @@
             </div>
           </div>
         {:else if liveNutritionJson?.perServing}
+          {@const p100 = liveNutritionJson.per100g}
           {@const gps = liveNutritionJson.gramsPerServing}
-          {@const hasLive100g = gps != null && gps > 0}
+          {@const hasLive100g = !!p100 || (gps != null && gps > 0)}
           {@const showLive100g = macroPer === '100g' && hasLive100g}
           <div class="macro-preview" class:complete={true}>
             <div class="macro-preview-header">
@@ -1438,12 +1440,12 @@
               </div>
             </div>
             <div class="macro-preview-values">
-              <span><strong>{showLive100g ? Math.round(liveNutritionJson.perServing.cal / gps! * 100) : liveNutritionJson.perServing.cal}</strong> cal</span>
-              <span><strong>{showLive100g ? Math.round(liveNutritionJson.perServing.pro / gps! * 100) : liveNutritionJson.perServing.pro}g</strong> protein</span>
-              <span><strong>{showLive100g ? Math.round(liveNutritionJson.perServing.fat / gps! * 100) : liveNutritionJson.perServing.fat}g</strong> fat</span>
-              <span><strong>{showLive100g ? Math.round(liveNutritionJson.perServing.carb / gps! * 100) : liveNutritionJson.perServing.carb}g</strong> carbs</span>
-              <span><strong>{showLive100g ? Math.round(liveNutritionJson.perServing.fib / gps! * 100) : liveNutritionJson.perServing.fib}g</strong> fibre</span>
-              <span><strong>{showLive100g ? Math.round(liveNutritionJson.perServing.sug / gps! * 100) : liveNutritionJson.perServing.sug}g</strong> sugar</span>
+              <span><strong>{showLive100g ? (p100 ? Math.round(p100.Energy_KCal) : Math.round(liveNutritionJson.perServing.cal / gps! * 100)) : liveNutritionJson.perServing.cal}</strong> cal</span>
+              <span><strong>{showLive100g ? (p100 ? Math.round(p100.Protein * 10) / 10 : Math.round(liveNutritionJson.perServing.pro / gps! * 100)) : liveNutritionJson.perServing.pro}g</strong> protein</span>
+              <span><strong>{showLive100g ? (p100 ? Math.round(p100.TotalLipidFat * 10) / 10 : Math.round(liveNutritionJson.perServing.fat / gps! * 100)) : liveNutritionJson.perServing.fat}g</strong> fat</span>
+              <span><strong>{showLive100g ? (p100 ? Math.round(p100.Carbohydrate * 10) / 10 : Math.round(liveNutritionJson.perServing.carb / gps! * 100)) : liveNutritionJson.perServing.carb}g</strong> carbs</span>
+              <span><strong>{showLive100g ? (p100 ? Math.round(p100.FiberTotalDietary * 10) / 10 : Math.round(liveNutritionJson.perServing.fib / gps! * 100)) : liveNutritionJson.perServing.fib}g</strong> fibre</span>
+              <span><strong>{showLive100g ? (p100 ? Math.round(p100.SugarsTotal * 10) / 10 : Math.round(liveNutritionJson.perServing.sug / gps! * 100)) : liveNutritionJson.perServing.sug}g</strong> sugar</span>
             </div>
           </div>
         {:else if previewLoading && nutritionComplete}
