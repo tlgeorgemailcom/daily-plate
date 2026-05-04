@@ -970,8 +970,8 @@
       nextInstructionId = instructions.length;
     }
     suggestionsDismissed = true;
-    // Avoid stale baseline values from suggested recipes; canonical preview is authoritative.
-    persistedNutrition = null;
+    // Load stored nutrition from the source recipe (comes from dev_recipes).
+    persistedNutrition = suggestion.nutritionJson ?? null;
     // Reset the dirty signature so the form shows as clean after fill.
     initialNutritionSignature = buildNutritionSignature();
   }
