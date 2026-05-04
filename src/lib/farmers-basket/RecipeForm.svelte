@@ -888,9 +888,9 @@
     const ndbNo =
       (ing as RecipeIngredient).ndbNo ??
       (ing as { ndb_no?: string }).ndb_no;
-    const byNdb = ndbNo ? (FOODS.find(f => f.ndb === ndbNo) ?? null) : null;
-    const byText = !byNdb && name ? (searchFoods(name)[0] ?? null) : null;
-    const linkFood = byNdb ?? byText;
+    const portionDesc =
+      (ing as RecipeIngredient).portionDesc ??
+      (ing as { portion_desc?: string }).portion_desc;
     const portionGramsRaw =
       (ing as RecipeIngredient).portionGrams ??
       (ing as { portion_grams?: number | string }).portion_grams;
@@ -910,19 +910,14 @@
         '',
       gameFood: (ing as RecipeIngredient).gameFood,
       animal: (ing as RecipeIngredient).animal,
-      foodWord: (ing as RecipeIngredient).foodWord ?? linkFood?.word,
-      ndbNo: ndbNo ?? linkFood?.ndb,
-      portionDesc:
-        (ing as RecipeIngredient).portionDesc ??
-        (ing as { portion_desc?: string }).portion_desc ??
-        (portionGrams && portionGrams > 0 ? 'g' : linkFood?.portions[0]?.desc),
-      portionGrams:
-        (portionGrams && portionGrams > 0 ? portionGrams : undefined) ??
-        linkFood?.portions[0]?.gm,
+      foodWord: (ing as RecipeIngredient).foodWord ?? (ing as { food_word?: string }).food_word,
+      ndbNo,
+      portionDesc,
+      portionGrams,
       servingCount:
         (ing as RecipeIngredient).servingCount ??
         (ing as { serving_count?: number }).serving_count ??
-        1,
+        undefined,
       exempt: (ing as RecipeIngredient).exempt,
     };
   }
