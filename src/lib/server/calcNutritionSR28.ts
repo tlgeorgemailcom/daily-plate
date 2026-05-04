@@ -219,8 +219,6 @@ export async function calcNutritionSR28(
 
   let totCal = 0, totPro = 0, totFat = 0, totCarb = 0, totFib = 0, totH2o = 0, totSug = 0;
   let rawTotalGrams = 0;
-  let rawWaterTotal = 0;
-  let rawFatTotal   = 0;
   const sources: NutritionSource[] = [];
 
   for (const ing of ingredients) {
@@ -234,8 +232,6 @@ export async function calcNutritionSR28(
 
     if (ing.ndbNo && sr28Map.has(ing.ndbNo)) {
       const food = sr28Map.get(ing.ndbNo)!;
-      rawWaterTotal += food.Water          * scale;
-      rawFatTotal   += food.TotalLipidFat  * scale;
 
       // Already-cooked SR28 entries (e.g. canned goods, pre-made stock):
       // skip re-applying retention — the nutrient values already reflect cooking.
@@ -254,8 +250,6 @@ export async function calcNutritionSR28(
       // Fallback: food-portions.ts (less accurate but keeps incomplete recipes working).
       const food = FOOD_MAP_BY_WORD.get(ing.foodWord);
       if (!food) continue;
-      rawWaterTotal += food.h2o * scale;
-      rawFatTotal   += food.fat * scale;
       const pf = proFactor;
       totCal  += food.cal  * scale;
       totPro  += food.pro  * scale * pf;
@@ -271,20 +265,22 @@ export async function calcNutritionSR28(
 
   if (rawTotalGrams === 0) return null;
 
-  // Cooked mass = raw mass minus evaporated water minus fat drip.
-  const waterLost = rawWaterTotal * (1.0 - yieldFactorWater);
-  const fatLost   = rawFatTotal   * (1.0 - yieldFactorFat);
-  const cookedTotalGrams = Math.max(rawTotalGrams - waterLost - fatLost, 1e-6);
+  // gramsPerServing uses RAW total mass — matches the v2 Python pipeline that
+  // produced the stored nutrition_json values. The yield factors only adjust
+  // the Water and Fat nutrient amounts, not the serving weight divisor.
+  // (Subtracting evaporated water from total mass shifts per-100g values away
+  // from stored data, e.g. 343.87 vs stored 330.72 for SWEET_040.)
+  const totalGrams = rawTotalGrams;
 
-  const gramsPS = round1(cookedTotalGrams / servings);
+  const gramsPS = round1(totalGrams / servings);
   const per100g = {
-    Energy_KCal:       round2(totCal  * 100 / cookedTotalGrams),
-    Protein:           round2(totPro  * 100 / cookedTotalGrams),
-    TotalLipidFat:     round2(totFat  * 100 / cookedTotalGrams),
-    Carbohydrate:      round2(totCarb * 100 / cookedTotalGrams),
-    FiberTotalDietary: round2(totFib  * 100 / cookedTotalGrams),
-    SugarsTotal:       round2(totSug  * 100 / cookedTotalGrams),
-    Water:             round2(totH2o  * 100 / cookedTotalGrams),
+    Energy_KCal:       round2(totCal  * 100 / totalGrams),
+    Protein:           round2(totPro  * 100 / totalGrams),
+    TotalLipidFat:     round2(totFat  * 100 / totalGrams),
+    Carbohydrate:      round2(totCarb * 100 / totalGrams),
+    FiberTotalDietary: round2(totFib  * 100 / totalGrams),
+    SugarsTotal:       round2(totSug  * 100 / totalGrams),
+    Water:             round2(totH2o  * 100 / totalGrams),
   };
   const s = gramsPS / 100;
   return {
