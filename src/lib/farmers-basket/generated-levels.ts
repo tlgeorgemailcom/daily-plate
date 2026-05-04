@@ -23,7 +23,7 @@ export const LEVELS: Level[] = [
     prepTime: '45 min',
     linkType: 'dish',
     sr28Rule: 'Rule B',
-    nutritionJson: {"perServing": {"cal": 410.75, "pro": 3.72, "fat": 19.38, "carb": 57.51, "fib": 3.45, "sug": 25.34, "h2o": 73.31}, "gramsPerServing": null, "servings": 8.0},
+    nutritionJson: {"perServing": {"cal": 410.75,"pro": 3.72,"fat": 19.38,"carb": 57.51,"fib": 3.45,"sug": 25.34,"h2o": 73.31},"gramsPerServing": null,"servings": 8.0,"yieldFactorWater": 0.71},
     recipeIngredients: [
       { name: 'Pie, apple, prepared from recipe', quantity: 'custom (g)', foodWord: 'APPLEPIE', ndbNo: '18302', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'all-purpose enriched white flour', quantity: '1 3/4 cups + 2 tbsp', section: 'crust', ndbNo: '20081', portionDesc: 'g', portionGrams: 234.4 },
@@ -71,7 +71,7 @@ export const LEVELS: Level[] = [
     prepTime: '40 min',
     linkType: 'dish',
     sr28Rule: 'Rule A',
-    nutritionJson: {"perServing": {"cal": 300.77, "pro": 3.62, "fat": 12.29, "carb": 45.12, "fib": 2.41, "sug": 28.27, "h2o": 47.75}, "gramsPerServing": null, "servings": 12.0},
+    nutritionJson: {"perServing": {"cal": 300.77,"pro": 3.62,"fat": 12.29,"carb": 45.12,"fib": 2.41,"sug": 28.27,"h2o": 47.75},"gramsPerServing": null,"servings": 12.0,"yieldFactorWater": 0.83},
     recipeIngredients: [
       { name: 'Strudel, apple', quantity: 'custom (g)', foodWord: 'APPLESTRUDEL', ndbNo: '18354', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'puff pastry sheet', quantity: '1 sheet', section: 'pastry', ndbNo: '18211', portionDesc: 'g', portionGrams: 245.0 },
@@ -121,7 +121,7 @@ export const LEVELS: Level[] = [
     prepTime: '40 min',
     linkType: 'dish',
     sr28Rule: 'Rule A',
-    nutritionJson: {"perServing": {"cal": 387.36, "pro": 6.34, "fat": 19.58, "carb": 47.38, "fib": 1.01, "sug": 17.37, "h2o": 68.98}, "gramsPerServing": null, "servings": 8.0},
+    nutritionJson: {"perServing": {"cal": 387.36,"pro": 6.34,"fat": 19.58,"carb": 47.38,"fib": 1.01,"sug": 17.37,"h2o": 68.98},"gramsPerServing": null,"servings": 8.0,"yieldFactorWater": 0.7},
     recipeIngredients: [
       { name: 'Pie, banana cream, prepared from recipe', quantity: 'custom (g)', foodWord: 'BANANACREAMPIE', ndbNo: '18304', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'all-purpose enriched white flour', quantity: '1 1/2 cups', section: 'crust', ndbNo: '20081', portionDesc: 'g', portionGrams: 188.0 },
@@ -174,7 +174,7 @@ export const LEVELS: Level[] = [
     prepTime: '30 min',
     linkType: 'dish',
     sr28Rule: 'Rule B',
-    nutritionJson: {"perServing": {"cal": 360.15, "pro": 3.97, "fat": 17.49, "carb": 49.24, "fib": 3.19, "sug": 22.85, "h2o": 75.26}, "gramsPerServing": null, "servings": 8.0},
+    nutritionJson: {"perServing": {"cal": 360.15,"pro": 3.97,"fat": 17.49,"carb": 49.24,"fib": 3.19,"sug": 22.85,"h2o": 75.26},"gramsPerServing": null,"servings": 8.0,"yieldFactorWater": 0.82},
     recipeIngredients: [
       { name: 'Pie, blueberry, prepared from recipe', quantity: 'custom (g)', foodWord: 'BLUEBERRYPIE', ndbNo: '18306', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'all-purpose enriched white flour', quantity: '2 cups', section: 'crust', ndbNo: '20081', portionDesc: 'g', portionGrams: 250.0 },
@@ -225,7 +225,7 @@ export const LEVELS: Level[] = [
     prepTime: '45 min',
     linkType: 'dish',
     sr28Rule: 'Rule B',
-    nutritionJson: {"perServing": {"cal": 486.0, "pro": 5.04, "fat": 21.96, "carb": 69.3, "fib": 2.12, "sug": 32.69, "h2o": 82.44}, "gramsPerServing": null, "servings": 8.0},
+    nutritionJson: {"perServing": {"cal": 486.0,"pro": 5.04,"fat": 21.96,"carb": 69.3,"fib": 2.12,"sug": 32.69,"h2o": 82.44},"gramsPerServing": null,"servings": 8.0,"yieldFactorWater": 0.82},
     recipeIngredients: [
       { name: 'Pie, cherry, prepared from recipe', quantity: 'custom (g)', foodWord: 'CHERRYPIE', ndbNo: '18309', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'all-purpose enriched white flour', quantity: '2 cups', section: 'crust', ndbNo: '20081', portionDesc: 'g', portionGrams: 250.0 },
@@ -276,7 +276,7 @@ export const LEVELS: Level[] = [
     prepTime: '45 min',
     linkType: 'dish',
     sr28Rule: 'Rule B',
-    nutritionJson: {"perServing": {"cal": 361.95, "pro": 4.83, "fat": 16.38, "carb": 49.66, "fib": 0.81, "sug": 42.36, "h2o": 54.99}, "gramsPerServing": null, "servings": 8.0},
+    nutritionJson: {"perServing": {"cal": 361.95,"pro": 4.83,"fat": 16.38,"carb": 49.66,"fib": 0.81,"sug": 42.36,"h2o": 54.99},"gramsPerServing": null,"servings": 8.0,"yieldFactorWater": 0.78},
     recipeIngredients: [
       { name: 'Pie, lemon meringue, prepared from recipe', quantity: 'custom (g)', foodWord: 'LEMONMERINGUEPIE', ndbNo: '18321', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'all-purpose enriched white flour', quantity: '1 1/2 cups', section: 'crust', ndbNo: '20081', portionDesc: 'g', portionGrams: 188.0 },
@@ -329,7 +329,7 @@ export const LEVELS: Level[] = [
     prepTime: '60 min',
     linkType: 'dish',
     sr28Rule: 'Rule A',
-    nutritionJson: {"perServing": {"cal": 476.85, "pro": 4.29, "fat": 17.82, "carb": 79.2, "fib": 4.29, "sug": 46.71, "h2o": 61.71}, "gramsPerServing": null, "servings": 8.0},
+    nutritionJson: {"perServing": {"cal": 476.85,"pro": 4.29,"fat": 17.82,"carb": 79.2,"fib": 4.29,"sug": 46.71,"h2o": 61.71},"gramsPerServing": null,"servings": 8.0,"yieldFactorWater": 0.82},
     recipeIngredients: [
       { name: 'Pie, mince, prepared from recipe', quantity: 'custom (g)', foodWord: 'MINCEPIE', ndbNo: '18322', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'all-purpose enriched white flour', quantity: '2 cups', section: 'crust', ndbNo: '20081', portionDesc: 'g', portionGrams: 250.0 },
@@ -392,7 +392,7 @@ export const LEVELS: Level[] = [
     prepTime: '60 min',
     linkType: 'dish',
     sr28Rule: 'Rule C',
-    nutritionJson: {"perServing": {"cal": 444.18, "pro": 5.4, "fat": 19.72, "carb": 64.28, "fib": 3.53, "sug": 34.57, "h2o": 173.48}, "gramsPerServing": null, "servings": 8.0},
+    nutritionJson: {"perServing": {"cal": 444.18,"pro": 5.4,"fat": 19.72,"carb": 64.28,"fib": 3.53,"sug": 34.57,"h2o": 173.48},"gramsPerServing": null,"servings": 8.0,"yieldFactorWater": 0.78},
     recipeIngredients: [
       { name: 'Pie, peach', quantity: 'custom (g)', foodWord: 'PEACHPIE', ndbNo: '18323', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'all-purpose enriched white flour', quantity: '2 cups', section: 'crust', ndbNo: '20081', portionDesc: 'g', portionGrams: 250.0 },
@@ -448,7 +448,7 @@ export const LEVELS: Level[] = [
     prepTime: '30 min',
     linkType: 'dish',
     sr28Rule: 'Rule B',
-    nutritionJson: {"perServing": {"cal": 502.64, "pro": 5.98, "fat": 27.08, "carb": 63.68, "fib": 3.06, "sug": 59.36, "h2o": 23.79}, "gramsPerServing": null, "servings": 8.0},
+    nutritionJson: {"perServing": {"cal": 502.64,"pro": 5.98,"fat": 27.08,"carb": 63.68,"fib": 3.06,"sug": 59.36,"h2o": 23.79},"gramsPerServing": null,"servings": 8.0,"yieldFactorWater": 0.78},
     recipeIngredients: [
       { name: 'Pie, pecan, prepared from recipe', quantity: 'custom (g)', foodWord: 'pecan', ndbNo: '18325', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'all-purpose enriched white flour', quantity: '1 1/2 cups', section: 'crust', ndbNo: '20081', portionDesc: 'g', portionGrams: 188.0 },
@@ -498,7 +498,7 @@ export const LEVELS: Level[] = [
     prepTime: '20 min',
     linkType: 'dish',
     sr28Rule: 'Rule B',
-    nutritionJson: {"perServing": {"cal": 316.2, "pro": 6.98, "fat": 14.42, "carb": 40.92, "fib": 2.27, "sug": 25.07, "h2o": 90.67}, "gramsPerServing": null, "servings": 8.0},
+    nutritionJson: {"perServing": {"cal": 316.2,"pro": 6.98,"fat": 14.42,"carb": 40.92,"fib": 2.27,"sug": 25.07,"h2o": 90.67},"gramsPerServing": null,"servings": 8.0,"yieldFactorWater": 0.95},
     recipeIngredients: [
       { name: 'Pie, pumpkin, prepared from recipe', quantity: 'custom (g)', foodWord: 'pumpkin', ndbNo: '18327', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'all-purpose enriched white flour', quantity: '1 1/2 cups', section: 'crust', ndbNo: '20081', portionDesc: 'g', portionGrams: 188.0 },
@@ -548,7 +548,7 @@ export const LEVELS: Level[] = [
     prepTime: '30 min',
     linkType: 'dish',
     sr28Rule: 'Rule A',
-    nutritionJson: {"perServing": {"cal": 350.28, "pro": 6.05, "fat": 18.14, "carb": 41.08, "fib": 0.76, "sug": 15.98, "h2o": 59.22}, "gramsPerServing": null, "servings": 8.0},
+    nutritionJson: {"perServing": {"cal": 350.28,"pro": 6.05,"fat": 18.14,"carb": 41.08,"fib": 0.76,"sug": 15.98,"h2o": 59.22},"gramsPerServing": null,"servings": 8.0,"yieldFactorWater": 0.86},
     recipeIngredients: [
       { name: 'Pie, vanilla cream, prepared from recipe', quantity: 'custom (g)', foodWord: 'vanilla', ndbNo: '18328', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'all-purpose enriched white flour', quantity: '1 1/2 cups', section: 'crust', ndbNo: '20081', portionDesc: 'g', portionGrams: 188.0 },
@@ -602,7 +602,7 @@ export const LEVELS: Level[] = [
     prepTime: '45 min',
     linkType: 'dish',
     sr28Rule: 'Rule C',
-    nutritionJson: {"perServing": {"cal": 428.3, "pro": 7.13, "fat": 21.74, "carb": 53.12, "fib": 1.19, "sug": 36.03, "h2o": 71.51}, "gramsPerServing": null, "servings": 10.0},
+    nutritionJson: {"perServing": {"cal": 428.3,"pro": 7.13,"fat": 21.74,"carb": 53.12,"fib": 1.19,"sug": 36.03,"h2o": 71.51},"gramsPerServing": null,"servings": 10.0,"yieldFactorWater": 0.92},
     recipeIngredients: [
       { name: 'Cake, boston cream pie, commercially prepared', quantity: 'custom (g)', foodWord: 'boston', ndbNo: '18090', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'all-purpose enriched white flour', quantity: '1 1/2 cups', section: 'cake', ndbNo: '20081', portionDesc: 'g', portionGrams: 188.0 },
@@ -660,7 +660,7 @@ export const LEVELS: Level[] = [
     prepTime: '30 min',
     linkType: 'dish',
     sr28Rule: 'Rule C',
-    nutritionJson: {"perServing": {"cal": 675.31, "pro": 7.62, "fat": 45.68, "carb": 65.87, "fib": 3.03, "sug": 50.58, "h2o": 87.37}, "gramsPerServing": null, "servings": 8.0},
+    nutritionJson: {"perServing": {"cal": 675.31,"pro": 7.62,"fat": 45.68,"carb": 65.87,"fib": 3.03,"sug": 50.58,"h2o": 87.37},"gramsPerServing": null,"servings": 8.0,"yieldFactorWater": 0.78},
     recipeIngredients: [
       { name: 'Pie, chocolate creme, commercially prepared', quantity: 'custom (g)', foodWord: 'chocolate', ndbNo: '18310', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'chocolate sandwich cookies (such as Oreos), finely crushed', quantity: '24 cookies', section: 'crust', ndbNo: '18166', portionDesc: 'g', portionGrams: 240.0 },
@@ -712,7 +712,7 @@ export const LEVELS: Level[] = [
     prepTime: '30 min',
     linkType: 'dish',
     sr28Rule: 'Rule C',
-    nutritionJson: {"perServing": {"cal": 627.08, "pro": 7.38, "fat": 45.9, "carb": 49.27, "fib": 1.59, "sug": 24.52, "h2o": 103.39}, "gramsPerServing": null, "servings": 8.0},
+    nutritionJson: {"perServing": {"cal": 627.08,"pro": 7.38,"fat": 45.9,"carb": 49.27,"fib": 1.59,"sug": 24.52,"h2o": 103.39},"gramsPerServing": null,"servings": 8.0,"yieldFactorWater": 0.92},
     recipeIngredients: [
       { name: 'Pie, coconut cream, prepared from mix, no-bake type', quantity: 'custom (g)', foodWord: 'coconut', ndbNo: '18314', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'all-purpose flour', quantity: '1 1/2 cups', section: 'crust', ndbNo: '20081', portionDesc: 'g', portionGrams: 188.0 },
@@ -768,7 +768,7 @@ export const LEVELS: Level[] = [
     prepTime: '20 min',
     linkType: 'dish',
     sr28Rule: 'Rule C',
-    nutritionJson: {"perServing": {"cal": 319.93, "pro": 8.06, "fat": 13.73, "carb": 40.69, "fib": 0.65, "sug": 22.86, "h2o": 97.12}, "gramsPerServing": null, "servings": 8.0},
+    nutritionJson: {"perServing": {"cal": 319.93,"pro": 8.06,"fat": 13.73,"carb": 40.69,"fib": 0.65,"sug": 22.86,"h2o": 97.12},"gramsPerServing": null,"servings": 8.0,"yieldFactorWater": 0.92},
     recipeIngredients: [
       { name: 'Pie, egg custard, commercially prepared', quantity: 'custom (g)', foodWord: 'custard', ndbNo: '18317', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'all-purpose flour', quantity: '1 1/2 cups', section: 'crust', ndbNo: '20081', portionDesc: 'g', portionGrams: 188.0 },
@@ -815,7 +815,7 @@ export const LEVELS: Level[] = [
     prepTime: '20 min',
     linkType: 'dish',
     sr28Rule: 'Rule A',
-    nutritionJson: {"perServing": {"cal": 264.18, "pro": 4.0, "fat": 9.18, "carb": 42.33, "fib": 0.59, "sug": 26.26, "h2o": 17.24}, "gramsPerServing": null, "servings": 12.0},
+    nutritionJson: {"perServing": {"cal": 264.18,"pro": 4.0,"fat": 9.18,"carb": 42.33,"fib": 0.59,"sug": 26.26,"h2o": 17.24},"gramsPerServing": null,"servings": 12.0,"yieldFactorWater": 0.62},
     recipeIngredients: [
       { name: 'Cake, white, prepared from recipe without frosting', quantity: 'custom (g)', foodWord: 'CAKEWHITE', ndbNo: '18139', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'all-purpose flour, sifted', quantity: '2 1/4 cups', section: 'cake', ndbNo: '20081', portionDesc: 'g', portionGrams: 281.0 },
@@ -861,7 +861,7 @@ export const LEVELS: Level[] = [
     prepTime: '30 min',
     linkType: 'dish',
     sr28Rule: 'Rule A',
-    nutritionJson: {"perServing": {"cal": 398.72, "pro": 4.93, "fat": 11.54, "carb": 70.78, "fib": 1.12, "sug": 64.28, "h2o": 23.18}, "gramsPerServing": null, "servings": 12.0},
+    nutritionJson: {"perServing": {"cal": 398.72,"pro": 4.93,"fat": 11.54,"carb": 70.78,"fib": 1.12,"sug": 64.28,"h2o": 23.18},"gramsPerServing": null,"servings": 12.0,"yieldFactorWater": 0.58},
     recipeIngredients: [
       { name: 'Cake, white, prepared from recipe with coconut frosting', quantity: 'custom (g)', foodWord: 'CAKEWHITECOCONUTFROSTING', ndbNo: '18102', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'all-purpose flour, sifted', quantity: '2 1/4 cups', section: 'cake', ndbNo: '20081', portionDesc: 'g', portionGrams: 281.0 },
@@ -921,7 +921,7 @@ export const LEVELS: Level[] = [
     prepTime: '25 min',
     linkType: 'dish',
     sr28Rule: 'Rule B',
-    nutritionJson: {"perServing": {"cal": 245.48, "pro": 3.6, "fat": 9.93, "carb": 36.04, "fib": 0.48, "sug": 21.71, "h2o": 17.07}, "gramsPerServing": null, "servings": 12.0},
+    nutritionJson: {"perServing": {"cal": 245.48,"pro": 3.6,"fat": 9.93,"carb": 36.04,"fib": 0.48,"sug": 21.71,"h2o": 17.07},"gramsPerServing": null,"servings": 12.0,"yieldFactorWater": 0.78},
     recipeIngredients: [
       { name: 'Cake, yellow, prepared from recipe without frosting', quantity: 'custom (g)', foodWord: 'CAKEYELLOW', ndbNo: '18146', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'all-purpose flour, sifted', quantity: '1 1/2 cups', section: 'cake', ndbNo: '20081', portionDesc: 'g', portionGrams: 187.0 },
@@ -1007,7 +1007,7 @@ export const LEVELS: Level[] = [
     prepTime: '45 min',
     linkType: 'dish',
     sr28Rule: 'Rule C',
-    nutritionJson: {"perServing": {"cal": 558.81, "pro": 6.89, "fat": 22.89, "carb": 84.95, "fib": 2.51, "sug": 60.2, "h2o": 43.51}, "gramsPerServing": null, "servings": 12.0},
+    nutritionJson: {"perServing": {"cal": 558.81,"pro": 6.89,"fat": 22.89,"carb": 84.95,"fib": 2.51,"sug": 60.2,"h2o": 43.51},"gramsPerServing": null,"servings": 12.0,"yieldFactorWater": 0.83},
     recipeIngredients: [
       { name: 'Cake, yellow, commercially prepared, with chocolate frosting, in-store bakery', quantity: 'custom (g)', foodWord: 'CAKEYELLOWCHOCOLATEFROSTING', ndbNo: '18140', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'all-purpose flour, sifted', quantity: '2 2/3 cups', section: 'cake', ndbNo: '20081', portionDesc: 'g', portionGrams: 333.0 },
@@ -1066,7 +1066,7 @@ export const LEVELS: Level[] = [
     prepTime: '15 min',
     linkType: 'dish',
     sr28Rule: 'Rule B',
-    nutritionJson: {"perServing": {"cal": 263.44, "pro": 2.89, "fat": 12.14, "carb": 36.41, "fib": 1.08, "sug": 28.92, "h2o": 20.72}, "gramsPerServing": null, "servings": 9.0},
+    nutritionJson: {"perServing": {"cal": 263.44,"pro": 2.89,"fat": 12.14,"carb": 36.41,"fib": 1.08,"sug": 28.92,"h2o": 20.72},"gramsPerServing": null,"servings": 9.0,"yieldFactorWater": 0.88},
     recipeIngredients: [
       { name: 'Cake, gingerbread, prepared from recipe', quantity: 'custom (g)', foodWord: 'CAKEGINGERBREAD', ndbNo: '18116', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'all-purpose flour, sifted', quantity: '2 1/4 cups', section: 'cake', ndbNo: '20081', portionDesc: 'g', portionGrams: 281.0 },
@@ -1115,7 +1115,7 @@ export const LEVELS: Level[] = [
     prepTime: '25 min',
     linkType: 'dish',
     sr28Rule: 'Rule B',
-    nutritionJson: {"perServing": {"cal": 366.85, "pro": 4.02, "fat": 13.91, "carb": 58.07, "fib": 0.92, "sug": 37.55, "h2o": 37.14}, "gramsPerServing": null, "servings": 9.0},
+    nutritionJson: {"perServing": {"cal": 366.85,"pro": 4.02,"fat": 13.91,"carb": 58.07,"fib": 0.92,"sug": 37.55,"h2o": 37.14},"gramsPerServing": null,"servings": 9.0,"yieldFactorWater": 0.86},
     recipeIngredients: [
       { name: 'Cake, pineapple upside-down, prepared from recipe', quantity: 'custom (g)', foodWord: 'CAKEPINEAPPLE', ndbNo: '18119', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'unsalted butter, melted (for the topping)', quantity: '3 tablespoons', section: 'topping', ndbNo: '1145', portionDesc: 'g', portionGrams: 43.0 },
@@ -1168,7 +1168,7 @@ export const LEVELS: Level[] = [
     prepTime: '15 min',
     linkType: 'dish',
     sr28Rule: 'Rule B',
-    nutritionJson: {"perServing": {"cal": 228.78, "pro": 4.03, "fat": 9.39, "carb": 32.07, "fib": 0.85, "sug": 5.73, "h2o": 18.78}, "gramsPerServing": null, "servings": 8.0},
+    nutritionJson: {"perServing": {"cal": 228.78,"pro": 4.03,"fat": 9.39,"carb": 32.07,"fib": 0.85,"sug": 5.73,"h2o": 18.78},"gramsPerServing": null,"servings": 8.0,"yieldFactorWater": 0.85},
     recipeIngredients: [
       { name: 'Cake, shortcake, biscuit-type, prepared from recipe', quantity: 'custom (g)', foodWord: 'CAKESHORTCAKE', ndbNo: '18126', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'all-purpose flour', quantity: '2 cups', section: 'biscuit', ndbNo: '20081', portionDesc: 'g', portionGrams: 250.0 },
@@ -1212,7 +1212,7 @@ export const LEVELS: Level[] = [
     prepTime: '30 min',
     linkType: 'dish',
     sr28Rule: 'Rule B',
-    nutritionJson: {"perServing": {"cal": 191.92, "pro": 4.72, "fat": 2.78, "carb": 37.29, "fib": 0.2, "sug": 20.25, "h2o": 19.0}, "gramsPerServing": null, "servings": 10.0},
+    nutritionJson: {"perServing": {"cal": 191.92,"pro": 4.72,"fat": 2.78,"carb": 37.29,"fib": 0.2,"sug": 20.25,"h2o": 19.0},"gramsPerServing": null,"servings": 10.0,"yieldFactorWater": 0.55},
     recipeIngredients: [
       { name: 'Cake, sponge, prepared from recipe', quantity: 'custom (g)', foodWord: 'CAKESPONGE', ndbNo: '18134', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: '5 large egg yolks', quantity: '5 large yolks', section: 'cake', ndbNo: '1125', portionDesc: 'g', portionGrams: 85.0 },
@@ -1262,7 +1262,7 @@ export const LEVELS: Level[] = [
     prepTime: '30 min',
     linkType: 'dish',
     sr28Rule: 'Rule C',
-    nutritionJson: {"perServing": {"cal": 150.78, "pro": 4.38, "fat": 0.14, "carb": 32.95, "fib": 0.16, "sug": 25.28, "h2o": 30.37}, "gramsPerServing": null, "servings": 12.0},
+    nutritionJson: {"perServing": {"cal": 150.78,"pro": 4.38,"fat": 0.14,"carb": 32.95,"fib": 0.16,"sug": 25.28,"h2o": 30.37},"gramsPerServing": null,"servings": 12.0,"yieldFactorWater": 0.55},
     recipeIngredients: [
       { name: 'Cake, angelfood, commercially prepared', quantity: 'custom (g)', foodWord: 'CAKEANGELFOOD', ndbNo: '18086', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: '12 large egg whites (about 1 1/2 cups)', quantity: '12 large whites', section: 'cake', ndbNo: '1124', portionDesc: 'g', portionGrams: 396.0 },
@@ -1308,7 +1308,7 @@ export const LEVELS: Level[] = [
     prepTime: '45 min',
     linkType: 'dish',
     sr28Rule: 'Rule C',
-    nutritionJson: {"perServing": {"cal": 502.41, "pro": 8.23, "fat": 35.95, "carb": 38.5, "fib": 0.48, "sug": 29.28, "h2o": 62.21}, "gramsPerServing": null, "servings": 12.0},
+    nutritionJson: {"perServing": {"cal": 502.41,"pro": 8.23,"fat": 35.95,"carb": 38.5,"fib": 0.48,"sug": 29.28,"h2o": 62.21},"gramsPerServing": null,"servings": 12.0,"yieldFactorWater": 0.92},
     recipeIngredients: [
       { name: 'Cheesecake commercially prepared', quantity: 'custom (g)', foodWord: 'CAKECHEESECAKE', ndbNo: '18147', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'graham cracker crumbs (about 12 crackers)', quantity: '1 1/2 cups crushed', section: 'crust', ndbNo: '18173', portionDesc: 'g', portionGrams: 150.0 },
@@ -1363,7 +1363,7 @@ export const LEVELS: Level[] = [
     prepTime: '30 min',
     linkType: 'dish',
     sr28Rule: 'Rule C',
-    nutritionJson: {"perServing": {"cal": 380.48, "pro": 5.07, "fat": 18.35, "carb": 49.61, "fib": 0.95, "sug": 26.07, "h2o": 31.14}, "gramsPerServing": null, "servings": 10.0},
+    nutritionJson: {"perServing": {"cal": 380.48,"pro": 5.07,"fat": 18.35,"carb": 49.61,"fib": 0.95,"sug": 26.07,"h2o": 31.14},"gramsPerServing": null,"servings": 10.0,"yieldFactorWater": 0.83},
     recipeIngredients: [
       { name: 'Coffeecake, cinnamon with crumb topping, commercially prepared, enriched', quantity: 'custom (g)', foodWord: 'CAKECOFFEECAKE', ndbNo: '18104', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'all-purpose flour', quantity: '2 cups', section: 'cake', ndbNo: '20081', portionDesc: 'g', portionGrams: 240.0 },
@@ -1416,7 +1416,7 @@ export const LEVELS: Level[] = [
     prepTime: '20 min',
     linkType: 'dish',
     sr28Rule: 'Rule C',
-    nutritionJson: {"perServing": {"cal": 368.25, "pro": 5.33, "fat": 21.67, "carb": 38.7, "fib": 0.65, "sug": 20.16, "h2o": 26.65}, "gramsPerServing": null, "servings": 10.0},
+    nutritionJson: {"perServing": {"cal": 368.25,"pro": 5.33,"fat": 21.67,"carb": 38.7,"fib": 0.65,"sug": 20.16,"h2o": 26.65},"gramsPerServing": null,"servings": 10.0,"yieldFactorWater": 0.85},
     recipeIngredients: [
       { name: 'Cake, pound, commercially prepared, butter (includes fresh and frozen)', quantity: 'custom (g)', foodWord: 'CAKEPOUND', ndbNo: '18120', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'unsalted butter (room temperature)', quantity: '1 cup', ndbNo: '1145', portionDesc: 'g', portionGrams: 227.0 },
@@ -1463,7 +1463,7 @@ export const LEVELS: Level[] = [
     prepTime: '20 min',
     linkType: 'dish',
     sr28Rule: 'Rule B',
-    nutritionJson: {"perServing": {"cal": 198.56, "pro": 2.64, "fat": 12.4, "carb": 21.39, "fib": 2.33, "sug": 13.27, "h2o": 5.37}, "gramsPerServing": null, "servings": 16.0},
+    nutritionJson: {"perServing": {"cal": 198.56,"pro": 2.64,"fat": 12.4,"carb": 21.39,"fib": 2.33,"sug": 13.27,"h2o": 5.37},"gramsPerServing": null,"servings": 16.0,"yieldFactorWater": 0.79},
     recipeIngredients: [
       { name: 'Cookies, brownies, prepared from recipe', quantity: 'custom (g)', foodWord: 'COOKIESBROWNIES', ndbNo: '18154', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'vegetable shortening', quantity: '2/3 cup', section: 'batter', ndbNo: '4031', portionDesc: 'g', portionGrams: 130.0 },
@@ -1508,7 +1508,7 @@ export const LEVELS: Level[] = [
     prepTime: '15 min',
     linkType: 'dish',
     sr28Rule: 'Rule C',
-    nutritionJson: {"perServing": {"cal": 201.31, "pro": 3.23, "fat": 8.04, "carb": 30.02, "fib": 1.74, "sug": 14.47, "h2o": 8.03}, "gramsPerServing": null, "servings": 24.0},
+    nutritionJson: {"perServing": {"cal": 201.31,"pro": 3.23,"fat": 8.04,"carb": 30.02,"fib": 1.74,"sug": 14.47,"h2o": 8.03},"gramsPerServing": null,"servings": 24.0,"yieldFactorWater": 0.7},
     recipeIngredients: [
       { name: 'Cookies, oatmeal, prepared from recipe, with raisins', quantity: 'custom (g)', foodWord: 'COOKIESOATMEAL', ndbNo: '18184', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'unsalted butter', quantity: '1/2 cup + 6 tbsp', ndbNo: '1145', portionDesc: 'g', portionGrams: 199.0 },
@@ -1556,7 +1556,7 @@ export const LEVELS: Level[] = [
     prepTime: '20 min',
     linkType: 'dish',
     sr28Rule: 'Rule A',
-    nutritionJson: {"perServing": {"cal": 176.43, "pro": 2.21, "fat": 8.75, "carb": 22.43, "fib": 0.45, "sug": 9.29, "h2o": 3.33}, "gramsPerServing": null, "servings": 24.0},
+    nutritionJson: {"perServing": {"cal": 176.43,"pro": 2.21,"fat": 8.75,"carb": 22.43,"fib": 0.45,"sug": 9.29,"h2o": 3.33},"gramsPerServing": null,"servings": 24.0,"yieldFactorWater": 0.46},
     recipeIngredients: [
       { name: 'Cookies, sugar, prepared from recipe, made with margarine', quantity: 'custom (g)', foodWord: 'COOKIESSUGAR', ndbNo: '18208', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'all-purpose enriched white flour', quantity: '2¾ cups', ndbNo: '20081', portionDesc: 'g', portionGrams: 350.0 },
@@ -1602,7 +1602,7 @@ export const LEVELS: Level[] = [
     prepTime: '15 min',
     linkType: 'dish',
     sr28Rule: 'Rule C',
-    nutritionJson: {"perServing": {"cal": 69.78, "pro": 0.74, "fat": 2.08, "carb": 12.28, "fib": 0.21, "sug": 7.87, "h2o": 2.68}, "gramsPerServing": null, "servings": 48.0},
+    nutritionJson: {"perServing": {"cal": 69.78,"pro": 0.74,"fat": 2.08,"carb": 12.28,"fib": 0.21,"sug": 7.87,"h2o": 2.68},"gramsPerServing": null,"servings": 48.0,"yieldFactorWater": 0.4},
     recipeIngredients: [
       { name: 'Cookies, gingersnaps', quantity: 'custom (g)', foodWord: 'COOKIESGINGERSNAP', ndbNo: '18172', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'all-purpose enriched white flour', quantity: '2¼ cups', ndbNo: '20081', portionDesc: 'g', portionGrams: 270.0 },
@@ -1650,7 +1650,7 @@ export const LEVELS: Level[] = [
     prepTime: '15 min',
     linkType: 'dish',
     sr28Rule: 'Rule C',
-    nutritionJson: {"perServing": {"cal": 58.61, "pro": 0.62, "fat": 3.19, "carb": 6.92, "fib": 0.13, "sug": 3.36, "h2o": 1.94}, "gramsPerServing": null, "servings": 60.0},
+    nutritionJson: {"perServing": {"cal": 58.61,"pro": 0.62,"fat": 3.19,"carb": 6.92,"fib": 0.13,"sug": 3.36,"h2o": 1.94},"gramsPerServing": null,"servings": 60.0,"yieldFactorWater": 0.38},
     recipeIngredients: [
       { name: 'Cookies, butter, commercially prepared, enriched', quantity: 'custom (g)', foodWord: 'COOKIESBUTTER', ndbNo: '18155', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'unsalted butter', quantity: '1 cup (2 sticks)', ndbNo: '1145', portionDesc: 'g', portionGrams: 227.0 },
@@ -1693,7 +1693,7 @@ export const LEVELS: Level[] = [
     prepTime: '15 min',
     linkType: 'dish',
     sr28Rule: 'Rule C',
-    nutritionJson: {"perServing": {"cal": 75.57, "pro": 0.83, "fat": 3.13, "carb": 9.83, "fib": 0.16, "sug": 5.22, "h2o": 8.61}, "gramsPerServing": null, "servings": 48.0},
+    nutritionJson: {"perServing": {"cal": 75.57,"pro": 0.83,"fat": 3.13,"carb": 9.83,"fib": 0.16,"sug": 5.22,"h2o": 8.61},"gramsPerServing": null,"servings": 48.0,"yieldFactorWater": 0.33},
     recipeIngredients: [
       { name: 'Cookies, chocolate chip, refrigerated dough, baked', quantity: 'custom (g)', foodWord: 'COOKIESCHOCOLATECHIP', ndbNo: '18164', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'all-purpose enriched white flour', quantity: '2¼ cups', ndbNo: '20081', portionDesc: 'g', portionGrams: 280.0 },
@@ -1740,7 +1740,7 @@ export const LEVELS: Level[] = [
     prepTime: '20 min',
     linkType: 'dish',
     sr28Rule: 'Rule C',
-    nutritionJson: {"perServing": {"cal": 143.36, "pro": 2.22, "fat": 4.13, "carb": 25.59, "fib": 2.14, "sug": 13.91, "h2o": 21.6}, "gramsPerServing": null, "servings": 16.0},
+    nutritionJson: {"perServing": {"cal": 143.36,"pro": 2.22,"fat": 4.13,"carb": 25.59,"fib": 2.14,"sug": 13.91,"h2o": 21.6},"gramsPerServing": null,"servings": 16.0,"yieldFactorWater": 0.62},
     recipeIngredients: [
       { name: 'Cookies, fig bars', quantity: 'custom (g)', foodWord: 'COOKIESFIGBAR', ndbNo: '18170', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'dried figs', quantity: '2 cups', section: 'filling', ndbNo: '9094', portionDesc: 'g', portionGrams: 300.0 },
@@ -1786,7 +1786,7 @@ export const LEVELS: Level[] = [
     prepTime: '15 min',
     linkType: 'dish',
     sr28Rule: 'Rule C',
-    nutritionJson: {"perServing": {"cal": 102.36, "pro": 1.08, "fat": 5.88, "carb": 12.11, "fib": 0.74, "sug": 11.36, "h2o": 6.98}, "gramsPerServing": null, "servings": 24.0},
+    nutritionJson: {"perServing": {"cal": 102.36,"pro": 1.08,"fat": 5.88,"carb": 12.11,"fib": 0.74,"sug": 11.36,"h2o": 6.98},"gramsPerServing": null,"servings": 24.0,"yieldFactorWater": 0.55},
     recipeIngredients: [
       { name: 'Cookies, coconut macaroon', quantity: 'custom (g)', foodWord: 'COOKIESMACAROON', ndbNo: '28309', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'egg whites', quantity: '4 large', section: 'macaroons', ndbNo: '1124', portionDesc: 'g', portionGrams: 132.0 },
@@ -1827,7 +1827,7 @@ export const LEVELS: Level[] = [
     prepTime: '20 min',
     linkType: 'dish',
     sr28Rule: 'Rule C',
-    nutritionJson: {"perServing": {"cal": 109.12, "pro": 1.24, "fat": 4.86, "carb": 15.43, "fib": 0.31, "sug": 8.12, "h2o": 4.3}, "gramsPerServing": null, "servings": 30.0},
+    nutritionJson: {"perServing": {"cal": 109.12,"pro": 1.24,"fat": 4.86,"carb": 15.43,"fib": 0.31,"sug": 8.12,"h2o": 4.3},"gramsPerServing": null,"servings": 30.0,"yieldFactorWater": 0.46},
     recipeIngredients: [
       { name: 'Cookies, molasses', quantity: 'custom (g)', foodWord: 'COOKIESMOLASSES', ndbNo: '18177', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'unsalted butter', quantity: '3/4 cup', section: 'cookies', ndbNo: '1145', portionDesc: 'g', portionGrams: 170.0 },
@@ -1875,7 +1875,7 @@ export const LEVELS: Level[] = [
     prepTime: '20 min',
     linkType: 'dish',
     sr28Rule: 'Rule C',
-    nutritionJson: {"perServing": {"cal": 117.03, "pro": 2.33, "fat": 6.66, "carb": 12.86, "fib": 0.49, "sug": 7.47, "h2o": 2.79}, "gramsPerServing": null, "servings": 30.0},
+    nutritionJson: {"perServing": {"cal": 117.03,"pro": 2.33,"fat": 6.66,"carb": 12.86,"fib": 0.49,"sug": 7.47,"h2o": 2.79},"gramsPerServing": null,"servings": 30.0,"yieldFactorWater": 0.42},
     recipeIngredients: [
       { name: 'Cookies, peanut butter, refrigerated dough, baked', quantity: 'custom (g)', foodWord: 'COOKIESPEANUTBUTTER', ndbNo: '18188', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'unsalted butter', quantity: '1/2 cup', section: 'cookies', ndbNo: '1145', portionDesc: 'g', portionGrams: 113.0 },
@@ -1923,7 +1923,7 @@ export const LEVELS: Level[] = [
     prepTime: '20 min',
     linkType: 'dish',
     sr28Rule: 'Rule A',
-    nutritionJson: {"perServing": {"cal": 100.54, "pro": 1.05, "fat": 5.13, "carb": 12.48, "fib": 0.25, "sug": 4.23, "h2o": 0.7}, "gramsPerServing": null, "servings": 36.0},
+    nutritionJson: {"perServing": {"cal": 100.54,"pro": 1.05,"fat": 5.13,"carb": 12.48,"fib": 0.25,"sug": 4.23,"h2o": 0.7},"gramsPerServing": null,"servings": 36.0,"yieldFactorWater": 0.3},
     recipeIngredients: [
       { name: 'Cookies, shortbread, commercially prepared, plain', quantity: 'custom (g)', foodWord: 'COOKIESSHORTBREAD', ndbNo: '18192', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'unsalted butter', quantity: '1 cup (slightly scant)', section: 'shortbread', ndbNo: '1145', portionDesc: 'g', portionGrams: 224.0 },
@@ -1966,7 +1966,7 @@ export const LEVELS: Level[] = [
     prepTime: '25 min',
     linkType: 'dish',
     sr28Rule: 'Rule D',
-    nutritionJson: {"perServing": {"cal": 512.74, "pro": 6.34, "fat": 28.22, "carb": 59.81, "fib": 0.75, "sug": 39.46, "h2o": 59.29}, "gramsPerServing": 155.04, "servings": 8.0},
+    nutritionJson: {"perServing": {"cal": 512.74,"pro": 6.34,"fat": 28.22,"carb": 59.81,"fib": 0.75,"sug": 39.46,"h2o": 59.29},"gramsPerServing": 155.04,"servings": 8.0,"yieldFactorWater": 0.9},
     recipeIngredients: [
       { name: 'Buttermilk Pie', quantity: 'custom (g)', foodWord: 'BUTTERMILKPIE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'all-purpose enriched white flour', quantity: '1 1/2 cups', section: 'crust', ndbNo: '20081', portionDesc: 'g', portionGrams: 188.0 },

@@ -65,6 +65,8 @@
     dishLink?: { foodWord: string; ndbNo: string; portionDesc: string; portionGrams: number; servingCount: number };
     dishFamily?: string;
     nutritionJson?: PersistedNutritionJson;
+    yieldFactorWater?: number;
+    yieldFactorFat?: number;
   }
   
   // Props
@@ -531,6 +533,19 @@
     });
   }
 
+  const yieldFactorWater = $state<number | undefined>(
+    typeof initialData.yieldFactorWater === 'number' ? initialData.yieldFactorWater
+    : typeof (initialData.nutritionJson as Record<string, unknown> | undefined)?.yieldFactorWater === 'number'
+      ? (initialData.nutritionJson as Record<string, unknown>).yieldFactorWater as number
+      : undefined
+  );
+  const yieldFactorFat = $state<number | undefined>(
+    typeof initialData.yieldFactorFat === 'number' ? initialData.yieldFactorFat
+    : typeof (initialData.nutritionJson as Record<string, unknown> | undefined)?.yieldFactorFat === 'number'
+      ? (initialData.nutritionJson as Record<string, unknown>).yieldFactorFat as number
+      : undefined
+  );
+
   function buildNutritionPayload() {
     return {
       ingredients: ingredients
@@ -550,6 +565,8 @@
       linkType: linkMode,
       servings,
       cookingMethod,
+      ...(typeof yieldFactorWater === 'number' ? { yieldFactorWater } : {}),
+      ...(typeof yieldFactorFat   === 'number' ? { yieldFactorFat }   : {}),
     };
   }
 

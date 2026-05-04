@@ -33,6 +33,10 @@ export interface NutritionJson {
   gramsPerServing: number;
   servings: number;
   sources: NutritionSource[];
+  /** Fraction of raw water retained after cooking (0–1). Used by server-side recalculation. */
+  yieldFactorWater?: number;
+  /** Fraction of raw fat retained after cooking (0–1). Used by server-side recalculation. */
+  yieldFactorFat?: number;
 }
 
 interface IngRow {

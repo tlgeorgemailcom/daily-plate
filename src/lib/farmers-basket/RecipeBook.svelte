@@ -740,6 +740,8 @@
                 exempt: i.exempt === true,
                 isDish: i.isDish === true
               })),
+              ...(typeof data.yieldFactorWater === 'number' ? { yieldFactorWater: data.yieldFactorWater } : {}),
+              ...(typeof data.yieldFactorFat   === 'number' ? { yieldFactorFat:   data.yieldFactorFat   } : {}),
               imageUrl
             },
             editedBy: 'Moderator'

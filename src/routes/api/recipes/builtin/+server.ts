@@ -127,7 +127,9 @@ function deriveLinkType(ingredients: NutritionLinkIngredient[]): 'ingredient' | 
 async function computeBuiltinNutrition(
   recipeIngredients: NutritionLinkIngredient[] | undefined,
   servings: string | null | undefined,
-  cookingMethod: string | null | undefined
+  cookingMethod: string | null | undefined,
+  yieldFactorWater?: number,
+  yieldFactorFat?: number
 ): Promise<{ gramsPerServing: number; nutritionJson: string }> {
   if (!recipeIngredients || recipeIngredients.length === 0) {
     return { gramsPerServing: 0, nutritionJson: '{}' };
@@ -143,7 +145,11 @@ async function computeBuiltinNutrition(
   }));
 
   const linkType = deriveLinkType(recipeIngredients);
-  const nutrition = await calcNutritionSR28(linkedRows, linkType, servings, cookingMethod);
+  const yieldOpts = {
+    ...(typeof yieldFactorWater === 'number' ? { yieldFactorWater } : {}),
+    ...(typeof yieldFactorFat   === 'number' ? { yieldFactorFat }   : {}),
+  };
+  const nutrition = await calcNutritionSR28(linkedRows, linkType, servings, cookingMethod, yieldOpts);
 
   if (!nutrition) {
     return { gramsPerServing: 0, nutritionJson: '{}' };
@@ -159,7 +165,9 @@ async function resolveBuiltinNutrition(
   explicitNutrition: unknown,
   recipeIngredients: NutritionLinkIngredient[] | undefined,
   servings: string | null | undefined,
-  cookingMethod: string | null | undefined
+  cookingMethod: string | null | undefined,
+  yieldFactorWater?: number,
+  yieldFactorFat?: number
 ): Promise<{ gramsPerServing: number; nutritionJson: string }> {
   if (explicitNutrition && typeof explicitNutrition === 'object') {
     const grams = Number((explicitNutrition as { gramsPerServing?: unknown }).gramsPerServing ?? 0);
@@ -168,7 +176,7 @@ async function resolveBuiltinNutrition(
       nutritionJson: JSON.stringify(explicitNutrition)
     };
   }
-  return await computeBuiltinNutrition(recipeIngredients, servings, cookingMethod);
+  return await computeBuiltinNutrition(recipeIngredients, servings, cookingMethod, yieldFactorWater, yieldFactorFat);
 }
 
 function normalizeRecipeInstructions(value: string | null): string[] | undefined {
@@ -358,11 +366,15 @@ export const PATCH: RequestHandler = async ({ request }) => {
     const nextFoodWord = nextName ? toFoodWord(nextName) : null;
     const servingMeta = parseServingMeta((updates.servings as string | null | undefined) ?? null);
     const recipeIngredientsForNutrition = updates.recipeIngredients as NutritionLinkIngredient[] | undefined;
+    const updateYieldWater = typeof updates.yieldFactorWater === 'number' ? updates.yieldFactorWater as number : undefined;
+    const updateYieldFat   = typeof updates.yieldFactorFat   === 'number' ? updates.yieldFactorFat   as number : undefined;
     const computedNutrition = await resolveBuiltinNutrition(
       updates.nutritionJson,
       recipeIngredientsForNutrition,
       (updates.servings as string | null | undefined) ?? null,
-      (updates.cookingMethod as string | null | undefined) ?? null
+      (updates.cookingMethod as string | null | undefined) ?? null,
+      updateYieldWater,
+      updateYieldFat
     );
 
     // Check if dev recipe exists
@@ -522,11 +534,15 @@ export const POST: RequestHandler = async ({ request }) => {
     }
 
     const recipeIngredientsForNutrition = data.recipeIngredients as NutritionLinkIngredient[] | undefined;
+    const dataYieldWater = typeof data.yieldFactorWater === 'number' ? data.yieldFactorWater as number : undefined;
+    const dataYieldFat   = typeof data.yieldFactorFat   === 'number' ? data.yieldFactorFat   as number : undefined;
     const computedNutrition = await resolveBuiltinNutrition(
       data.nutritionJson,
       recipeIngredientsForNutrition,
       (data.servings as string | null | undefined) ?? null,
-      (data.cookingMethod as string | null | undefined) ?? null
+      (data.cookingMethod as string | null | undefined) ?? null,
+      dataYieldWater,
+      dataYieldFat
     );
 
     await db.execute({

@@ -56,7 +56,9 @@ export const POST: RequestHandler = async ({ request }) => {
     dishLink,
     linkType,
     servings,
-    cookingMethod
+    cookingMethod,
+    yieldFactorWater,
+    yieldFactorFat,
   } = body as Record<string, unknown>;
 
   if (typeof linkType !== 'string' || !linkType) {
@@ -92,7 +94,11 @@ export const POST: RequestHandler = async ({ request }) => {
   const servingsStr = typeof servings === 'string' ? servings : null;
   const cookMethod = typeof cookingMethod === 'string' ? cookingMethod : null;
 
-  const result = await calcNutritionSR28(ingRows, linkType, servingsStr, cookMethod);
+  const yieldOpts = {
+    ...(typeof yieldFactorWater === 'number' ? { yieldFactorWater } : {}),
+    ...(typeof yieldFactorFat   === 'number' ? { yieldFactorFat }   : {}),
+  };
+  const result = await calcNutritionSR28(ingRows, linkType, servingsStr, cookMethod, yieldOpts);
   const ingHash = ingRows.map(r => `${r.ndbNo || r.foodWord || 'unlinked'}:${r.portionGrams}`).join('|');
   console.log(`[PREVIEW] linkType=${linkType} rows=${ingRows.length} cal=${result?.perServing?.cal ?? 'null'} ings=[${ingHash}]`);
 

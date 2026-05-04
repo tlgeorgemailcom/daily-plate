@@ -95,6 +95,10 @@ export interface NutritionJson {
   };
   gramsPerServing: number | null;
   servings: number;
+  /** Fraction of raw water retained after cooking (0–1). Used for live ingredient-sum recalculation. */
+  yieldFactorWater?: number;
+  /** Fraction of raw fat retained after cooking (0–1). Used for live ingredient-sum recalculation. */
+  yieldFactorFat?: number;
 }
 
 export interface Level {
