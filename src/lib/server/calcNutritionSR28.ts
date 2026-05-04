@@ -64,6 +64,10 @@ function round1(v: number): number {
   return Math.round(v * 10) / 10;
 }
 
+function round2(v: number): number {
+  return Math.round(v * 100) / 100;
+}
+
 function parseServings(s: string | null | undefined): number {
   if (!s) return 1;
   const n = parseInt(s.replace(/[^0-9]/g, ''));
@@ -155,6 +159,15 @@ export async function calcNutritionSR28(
           h2o:  round1(food.Water            * scale),
           sug:  round1(food.SugarsTotal      * scale),
         },
+        per100g: {
+          Energy_KCal:       round2(food.Energy_KCal),
+          Protein:           round2(food.Protein),
+          TotalLipidFat:     round2(food.TotalLipidFat),
+          Carbohydrate:      round2(food.Carbohydrate),
+          FiberTotalDietary: round2(food.FiberTotalDietary),
+          SugarsTotal:       round2(food.SugarsTotal),
+          Water:             round2(food.Water),
+        },
         gramsPerServing: g,
         servings: dish.servingCount,
         sources: [{ ndb: dish.ndbNo, name: food.longDesc, grams: round1(g) }],
@@ -173,6 +186,15 @@ export async function calcNutritionSR28(
             fat: round1(food.fat * scale), carb: round1(food.carb * scale),
             fib: round1(food.fib * scale), h2o: round1(food.h2o * scale),
             sug: round1(food.sug * scale),
+          },
+          per100g: {
+            Energy_KCal:       round2(food.cal),
+            Protein:           round2(food.pro),
+            TotalLipidFat:     round2(food.fat),
+            Carbohydrate:      round2(food.carb),
+            FiberTotalDietary: round2(food.fib),
+            SugarsTotal:       round2(food.sug),
+            Water:             round2(food.h2o),
           },
           gramsPerServing: g,
           servings: dish.servingCount,
@@ -250,17 +272,29 @@ export async function calcNutritionSR28(
   const fatLost   = rawFatTotal   * (1.0 - yieldFactorFat);
   const cookedTotalGrams = Math.max(rawTotalGrams - waterLost - fatLost, 1e-6);
 
+  const gramsPS = round1(cookedTotalGrams / servings);
+  const per100g = {
+    Energy_KCal:       round2(totCal  * 100 / cookedTotalGrams),
+    Protein:           round2(totPro  * 100 / cookedTotalGrams),
+    TotalLipidFat:     round2(totFat  * 100 / cookedTotalGrams),
+    Carbohydrate:      round2(totCarb * 100 / cookedTotalGrams),
+    FiberTotalDietary: round2(totFib  * 100 / cookedTotalGrams),
+    SugarsTotal:       round2(totSug  * 100 / cookedTotalGrams),
+    Water:             round2(totH2o  * 100 / cookedTotalGrams),
+  };
+  const s = gramsPS / 100;
   return {
     perServing: {
-      cal:  round1(totCal  / servings),
-      pro:  round1(totPro  / servings),
-      fat:  round1(totFat  / servings),
-      carb: round1(totCarb / servings),
-      fib:  round1(totFib  / servings),
-      h2o:  round1(totH2o  / servings),
-      sug:  round1(totSug  / servings),
+      cal:  round1(per100g.Energy_KCal       * s),
+      pro:  round1(per100g.Protein           * s),
+      fat:  round1(per100g.TotalLipidFat     * s),
+      carb: round1(per100g.Carbohydrate      * s),
+      fib:  round1(per100g.FiberTotalDietary * s),
+      h2o:  round1(per100g.Water             * s),
+      sug:  round1(per100g.SugarsTotal       * s),
     },
-    gramsPerServing: round1(cookedTotalGrams / servings),
+    per100g,
+    gramsPerServing: gramsPS,
     servings,
     sources,
   };

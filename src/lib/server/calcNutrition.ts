@@ -4,12 +4,16 @@ import { mapDishMethodToCookingMethod, getRetentionFactor } from '$lib/data/cook
 // Built once per cold start — avoids O(n) scan per ingredient
 const FOOD_MAP = new Map(FOODS.map(f => [f.word, f]));
 
-// Mapping from food-portions field names to SR28 / cookingLossModel nutrient keys.
-// Only nutrients that appear in the retention model are listed (others stay 1.0).
-const RETENTION_KEY: Partial<Record<'pro' | 'fat', string>> = {
-  pro: 'Protein',
-  fat: 'TotalLipidFat',
-};
+// Maps food-portions short keys to SR28 column names used by cookingLossModel.
+const MACRO_SR_KEY = {
+  cal:  'Energy_KCal',
+  pro:  'Protein',
+  fat:  'TotalLipidFat',
+  carb: 'Carbohydrate',
+  fib:  'FiberTotalDietary',
+  h2o:  'Water',
+  sug:  'SugarsTotal',
+} as const;
 
 export interface NutritionSource {
   ndb: string;   // USDA NDB number — use to query SR Legacy for deeper nutrients
@@ -21,6 +25,10 @@ export interface NutritionJson {
   perServing: {
     cal: number; pro: number; fat: number;
     carb: number; fib: number; h2o: number; sug: number;
+  };
+  per100g: {
+    Energy_KCal: number; Protein: number; TotalLipidFat: number;
+    Carbohydrate: number; FiberTotalDietary: number; SugarsTotal: number; Water: number;
   };
   gramsPerServing: number;
   servings: number;
@@ -37,6 +45,10 @@ interface IngRow {
 
 function round1(v: number): number {
   return Math.round(v * 10) / 10;
+}
+
+function round2(v: number): number {
+  return Math.round(v * 100) / 100;
 }
 
 function parseServings(s: string | null | undefined): number {
@@ -81,6 +93,15 @@ export function calcNutritionJson(
         h2o:  round1(food.h2o  * scale),
         sug:  round1(food.sug  * scale),
       },
+      per100g: {
+        Energy_KCal:       round2(food.cal),
+        Protein:           round2(food.pro),
+        TotalLipidFat:     round2(food.fat),
+        Carbohydrate:      round2(food.carb),
+        FiberTotalDietary: round2(food.fib),
+        SugarsTotal:       round2(food.sug),
+        Water:             round2(food.h2o),
+      },
       gramsPerServing: g,
       servings: dish.servingCount,
       sources: [{ ndb: food.ndb, name: food.display, grams: round1(g) }],
@@ -92,13 +113,21 @@ export function calcNutritionJson(
   const servings = dishRow?.servingCount ?? parseServings(servingsStr);
   if (servings === 0) return null;
 
-  // Resolve cooking method retention factors (only applied for ingredient/mixed).
+  // Cooking method retention factors — applied to all macros.
   const method = mapDishMethodToCookingMethod(cookMethod ?? null);
-  const proFactor = getRetentionFactor(method, RETENTION_KEY.pro!);
-  const fatFactor = getRetentionFactor(method, RETENTION_KEY.fat!);
+  const factors = {
+    cal:  getRetentionFactor(method, MACRO_SR_KEY.cal),
+    pro:  getRetentionFactor(method, MACRO_SR_KEY.pro),
+    fat:  getRetentionFactor(method, MACRO_SR_KEY.fat),
+    carb: getRetentionFactor(method, MACRO_SR_KEY.carb),
+    fib:  getRetentionFactor(method, MACRO_SR_KEY.fib),
+    h2o:  getRetentionFactor(method, MACRO_SR_KEY.h2o),
+    sug:  getRetentionFactor(method, MACRO_SR_KEY.sug),
+  };
 
   let totals = { cal: 0, pro: 0, fat: 0, carb: 0, fib: 0, h2o: 0, sug: 0 };
-  let totalGrams = 0;
+  let totalRawGrams = 0;
+  let rawH2o = 0, rawFat = 0; // pre-retention totals needed for cooked weight
   const sources: NutritionSource[] = [];
 
   for (const ing of ingredients) {
@@ -113,30 +142,50 @@ export function calcNutritionJson(
 
     const g = ing.portionGrams * ing.servingCount; // total grams for whole recipe
     const scale = g / 100;
-    totalGrams     += g;
-    totals.cal     += food.cal  * scale;
-    totals.pro     += food.pro  * scale * proFactor;
-    totals.fat     += food.fat  * scale * fatFactor;
-    totals.carb    += food.carb * scale;
-    totals.fib     += food.fib  * scale;
-    totals.h2o     += food.h2o  * scale;
-    totals.sug     += food.sug  * scale;
+    totalRawGrams  += g;
+    rawH2o         += food.h2o * scale;
+    rawFat         += food.fat * scale;
+    totals.cal     += food.cal  * scale * factors.cal;
+    totals.pro     += food.pro  * scale * factors.pro;
+    totals.fat     += food.fat  * scale * factors.fat;
+    totals.carb    += food.carb * scale * factors.carb;
+    totals.fib     += food.fib  * scale * factors.fib;
+    totals.h2o     += food.h2o  * scale * factors.h2o;
+    totals.sug     += food.sug  * scale * factors.sug;
     sources.push({ ndb: food.ndb, name: food.display, grams: round1(g / servings) });
   }
 
-  if (totalGrams === 0) return null;
+  if (totalRawGrams === 0) return null;
 
+  // Cooked mass = raw mass minus evaporated water and fat drip.
+  const waterLost   = rawH2o * (1 - factors.h2o);
+  const fatLost     = rawFat  * (1 - factors.fat);
+  const cookedGrams = Math.max(totalRawGrams - waterLost - fatLost, 1e-6);
+  const gramsPerServing = round1(cookedGrams / servings);
+
+  const per100g = {
+    Energy_KCal:       round2(totals.cal  * 100 / cookedGrams),
+    Protein:           round2(totals.pro  * 100 / cookedGrams),
+    TotalLipidFat:     round2(totals.fat  * 100 / cookedGrams),
+    Carbohydrate:      round2(totals.carb * 100 / cookedGrams),
+    FiberTotalDietary: round2(totals.fib  * 100 / cookedGrams),
+    SugarsTotal:       round2(totals.sug  * 100 / cookedGrams),
+    Water:             round2(totals.h2o  * 100 / cookedGrams),
+  };
+
+  const s = gramsPerServing / 100;
   return {
     perServing: {
-      cal:  round1(totals.cal  / servings),
-      pro:  round1(totals.pro  / servings),
-      fat:  round1(totals.fat  / servings),
-      carb: round1(totals.carb / servings),
-      fib:  round1(totals.fib  / servings),
-      h2o:  round1(totals.h2o  / servings),
-      sug:  round1(totals.sug  / servings),
+      cal:  round1(per100g.Energy_KCal       * s),
+      pro:  round1(per100g.Protein           * s),
+      fat:  round1(per100g.TotalLipidFat     * s),
+      carb: round1(per100g.Carbohydrate      * s),
+      fib:  round1(per100g.FiberTotalDietary * s),
+      h2o:  round1(per100g.Water             * s),
+      sug:  round1(per100g.SugarsTotal       * s),
     },
-    gramsPerServing: round1(totalGrams / servings),
+    per100g,
+    gramsPerServing,
     servings,
     sources,
   };

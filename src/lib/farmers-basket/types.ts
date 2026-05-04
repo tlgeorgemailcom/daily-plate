@@ -89,6 +89,10 @@ export interface NutritionJson {
     cal: number; pro: number; fat: number;
     carb: number; fib: number; h2o: number; sug: number;
   };
+  per100g?: {
+    Energy_KCal: number; Protein: number; TotalLipidFat: number;
+    Carbohydrate: number; FiberTotalDietary: number; SugarsTotal: number; Water: number;
+  };
   gramsPerServing: number | null;
   servings: number;
 }
