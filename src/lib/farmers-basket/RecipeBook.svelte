@@ -1377,10 +1377,30 @@
   ): NonNullable<Partial<RecipeFormData>['ingredients']> {
     const originalIngredients = (level.recipeIngredients || []).filter((ing) => !ing.isDish);
     const normalize = (value: string) => value.toLowerCase().replace(/[^a-z0-9]/g, '');
-    const originalByName = new Map(originalIngredients.map((ing) => [normalize(ing.name), ing]));
+    // Group originals by normalized name so duplicates (e.g. flour appearing
+    // in both crust and filling sections) are preserved as a queue and each
+    // draft row consumes the next matching original — preventing collapse to
+    // the last-occurring quantity/grams.
+    const originalsByName = new Map<string, typeof originalIngredients>();
+    for (const ing of originalIngredients) {
+      const key = normalize(ing.name);
+      const list = originalsByName.get(key);
+      if (list) list.push(ing); else originalsByName.set(key, [ing]);
+    }
+    const consumedOriginals = new Set<typeof originalIngredients[number]>();
 
     const mappedDraft = (draftIngredients || []).map((ing, i) => {
-      const original = originalByName.get(normalize(ing.name));
+      const key = normalize(ing.name);
+      const queue = originalsByName.get(key);
+      // Prefer an original matching name AND quantity if available (handles
+      // out-of-order drafts), otherwise take the next unconsumed one.
+      let original: typeof originalIngredients[number] | undefined;
+      if (queue && queue.length) {
+        const draftQty = (ing.quantity || '').trim();
+        original = queue.find((o) => !consumedOriginals.has(o) && (o.quantity || '').trim() === draftQty)
+          ?? queue.find((o) => !consumedOriginals.has(o));
+        if (original) consumedOriginals.add(original);
+      }
       return {
         id: i + 1,
         name: ing.name,
@@ -1396,9 +1416,8 @@
       };
     });
 
-    const draftNames = new Set((draftIngredients || []).map((ing) => normalize(ing.name)));
     const missingOriginals = originalIngredients
-      .filter((ing) => !draftNames.has(normalize(ing.name)))
+      .filter((ing) => !consumedOriginals.has(ing))
       .map((ing, idx) => ({
         id: mappedDraft.length + idx + 1,
         name: ing.name,
