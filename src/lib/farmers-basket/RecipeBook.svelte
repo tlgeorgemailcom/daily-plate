@@ -1395,12 +1395,18 @@
       // Prefer an original matching name AND quantity if available (handles
       // out-of-order drafts), otherwise take the next unconsumed one.
       let original: typeof originalIngredients[number] | undefined;
+      let quantityMatch = false;
       if (queue && queue.length) {
         const draftQty = (ing.quantity || '').trim();
-        original = queue.find((o) => !consumedOriginals.has(o) && (o.quantity || '').trim() === draftQty)
-          ?? queue.find((o) => !consumedOriginals.has(o));
+        const exact = queue.find((o) => !consumedOriginals.has(o) && (o.quantity || '').trim() === draftQty);
+        original = exact ?? queue.find((o) => !consumedOriginals.has(o));
+        quantityMatch = !!exact;
         if (original) consumedOriginals.add(original);
       }
+      // When draft quantity matches original verbatim, trust the LEVEL's
+      // portionGrams/ndbNo as the source of truth — this self-heals drafts
+      // that were saved with the duplicate-name collapse bug.
+      const trustOriginal = quantityMatch && original;
       return {
         id: i + 1,
         name: ing.name,
@@ -1408,9 +1414,9 @@
         gameFood: level.recipe[i] || '',
         animal: level.animalSpawns[i]?.type || '',
         foodWord: ing.foodWord ?? original?.foodWord,
-        ndbNo: ing.ndbNo ?? original?.ndbNo,
-        portionDesc: ing.portionDesc ?? original?.portionDesc,
-        portionGrams: ing.portionGrams ?? original?.portionGrams,
+        ndbNo: trustOriginal ? (original?.ndbNo ?? ing.ndbNo) : (ing.ndbNo ?? original?.ndbNo),
+        portionDesc: trustOriginal ? (original?.portionDesc ?? ing.portionDesc) : (ing.portionDesc ?? original?.portionDesc),
+        portionGrams: trustOriginal ? (original?.portionGrams ?? ing.portionGrams) : (ing.portionGrams ?? original?.portionGrams),
         servingCount: ing.servingCount ?? original?.servingCount,
         exempt: ing.exempt ?? original?.exempt
       };
