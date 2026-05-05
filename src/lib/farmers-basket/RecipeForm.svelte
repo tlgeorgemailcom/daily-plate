@@ -1629,6 +1629,8 @@
           ]}
           {@const missingMajor = macros.filter(m => m.major && m.canon === 0 && m.built > 0)}
           {@const missingMinor = macros.filter(m => !m.major && m.canon === 0 && m.built > 0)}
+          {@const gapsOver5 = macros.filter(m => m.canon > 0 && Math.abs((m.built - m.canon) / m.canon * 100) >= 5)}
+          {@const allWithin5 = gapsOver5.length === 0 && missingMajor.length === 0 && missingMinor.length === 0}
           {@const ruleAdvice =
             sr28Rule === 'Rule A' && (missingMajor.length > 0 || missingMinor.length > 0)
               ? `⚠ Mislabel suspected: canonical is missing ${[...missingMajor, ...missingMinor].map(m => m.label).join(', ')}. A canonical with missing macros should be Rule B (fill from build), not Rule A.`
@@ -1639,6 +1641,13 @@
             <div class="audit-gap-header">
               <span class="audit-gap-title">Audit · Canonical vs Built (per 100g)</span>
               <span class="audit-gap-rule">{sr28Rule}</span>
+            </div>
+            <div class="audit-gap-summary {allWithin5 ? 'pass' : 'fail'}">
+              {#if allWithin5}
+                ✓ All 7 macros within ±5% of canonical
+              {:else}
+                {gapsOver5.length} macro{gapsOver5.length === 1 ? '' : 's'} exceed ±5% gap{gapsOver5.length > 0 ? `: ${gapsOver5.map(m => m.label).join(', ')}` : ''}
+              {/if}
             </div>
             <table class="audit-gap-table">
               <thead>
@@ -1658,7 +1667,7 @@
                   {@const canonMissing = m.canon === 0 && m.built > 0}
                   {@const status = canonMissing
                     ? (sr28Rule === 'Rule B' ? 'Rule B fill (canonical missing)' : '⚠ canonical missing — should be Rule B')
-                    : (Math.abs(pct) < 5 ? 'match' : Math.abs(pct) < 15 ? 'recipe drift' : 'recipe drift (major)')}
+                    : (Math.abs(pct) < 5 ? 'match' : Math.abs(pct) < 15 ? '⚠ adjust ingredients' : '🔴 large gap — adjust or reclassify')}
                   {@const rowClass = canonMissing
                     ? (sr28Rule === 'Rule B' ? 'fill' : 'bad')
                     : (Math.abs(pct) < 5 ? 'ok' : Math.abs(pct) < 15 ? 'warn' : 'bad')}
@@ -1677,8 +1686,8 @@
               <p class="audit-gap-advice">{ruleAdvice}</p>
             {/if}
             <p class="audit-gap-note">
-              <strong>Rule A</strong>: canonical has all macros present; recipe ingredients should match canonical (drift = recipe deviates from USDA reference, not a build bug).<br>
-              <strong>Rule B</strong>: canonical exists but a major macro (cal/pro/fat/carb/h2o) or minor macro (fib/sug) is missing — fill the missing one from build.
+              <strong>Goal: every macro within ±5% of canonical.</strong> Adjust ingredient grams to close gaps.
+              If a macro can't be brought within 5% (e.g. canonical reference is arithmetically impossible), reclassify the recipe as Rule B by hand and fill from build.
             </p>
           </div>
         {:else if isCanonicalRule}
@@ -2880,6 +2889,23 @@
     font-size: 0.8rem;
     font-weight: 600;
     line-height: 1.4;
+  }
+  .audit-gap-summary {
+    margin: 4px 0 8px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  .audit-gap-summary.pass {
+    background: #dcfce7;
+    color: #166534;
+    border: 1px solid #86efac;
+  }
+  .audit-gap-summary.fail {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
   }
   .audit-gap-note {
     margin: 8px 0 0;
