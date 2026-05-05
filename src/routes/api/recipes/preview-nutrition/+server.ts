@@ -119,5 +119,17 @@ export const POST: RequestHandler = async ({ request }) => {
   const ingHash = ingRows.map(r => `${r.ndbNo || r.foodWord || 'unlinked'}:${r.portionGrams}`).join('|');
   console.log(`[PREVIEW] linkType=${resolvedLinkType} rows=${ingRows.length} cal=${result?.perServing?.cal ?? 'null'} ings=[${ingHash}]`);
 
-  return json({ nutritionJson: result });
+  // ── Canonical sidecar for Rule A/B audit gap chart ────────────────────────
+  // When a dishLink is present, also compute pure canonical nutrition (single
+  // SR28 row scaled to its portion) so the form can chart the gap between
+  // canonical and the ingredient-summed build. Independent of linkType — we
+  // always want canonical when it exists, even in 'ingredient' mode where it
+  // would normally be unused.
+  let canonical: typeof result = null;
+  if (hasValidLink(dishLink)) {
+    const dishOnly = [{ isDish: true, ...(withDefaultServingCount(dishLink) as object) }] as Parameters<typeof calcNutritionSR28>[0];
+    canonical = await calcNutritionSR28(dishOnly, 'dish', servingsStr, cookMethod, yieldOpts);
+  }
+
+  return json({ nutritionJson: result, canonical });
 };

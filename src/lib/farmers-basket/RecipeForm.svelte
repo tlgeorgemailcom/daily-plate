@@ -605,6 +605,7 @@
     servings: number;
   };
   let liveNutritionJson = $state<PreviewNutrition | null>(null);
+  let canonicalNutritionJson = $state<PreviewNutrition | null>(null);
   let previewLoading = $state(false);
   let previewError = $state(false);
   let previewTimer: ReturnType<typeof setTimeout> | null = null;
@@ -623,6 +624,7 @@
   $effect(() => {
     if (!nutritionPreviewReady) {
       liveNutritionJson = null;
+      canonicalNutritionJson = null;
       previewLoading = false;
       previewError = false;
       if (previewTimer) { clearTimeout(previewTimer); previewTimer = null; }
@@ -642,9 +644,10 @@
         });
         if (previewRequestId !== id) return;
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const data = await res.json() as { nutritionJson: PreviewNutrition | null };
+        const data = await res.json() as { nutritionJson: PreviewNutrition | null; canonical?: PreviewNutrition | null };
         if (previewRequestId !== id) return;
         liveNutritionJson = data.nutritionJson ?? null;
+        canonicalNutritionJson = data.canonical ?? null;
         previewError = false;
       } catch {
         if (previewRequestId !== id) return;
@@ -1501,6 +1504,57 @@
               <p class="macro-preview-note">⚠️ {sr28Rule} recipe — stored values use USDA canonical data with cooking-loss adjustments. This preview uses raw SR28 and may differ.</p>
             {/if}
           </div>
+          {#if isCanonicalRule && canonicalNutritionJson?.per100g && liveNutritionJson?.per100g}
+            {@const c = canonicalNutritionJson.per100g}
+            {@const b = liveNutritionJson.per100g}
+            {@const macros = [
+              { key: 'cal',  label: 'Calories', unit: 'kcal', canon: c.Energy_KCal,       built: b.Energy_KCal },
+              { key: 'pro',  label: 'Protein',  unit: 'g',    canon: c.Protein,           built: b.Protein },
+              { key: 'fat',  label: 'Fat',      unit: 'g',    canon: c.TotalLipidFat,     built: b.TotalLipidFat },
+              { key: 'carb', label: 'Carbs',    unit: 'g',    canon: c.Carbohydrate,      built: b.Carbohydrate },
+              { key: 'fib',  label: 'Fiber',    unit: 'g',    canon: c.FiberTotalDietary, built: b.FiberTotalDietary },
+              { key: 'sug',  label: 'Sugars',   unit: 'g',    canon: c.SugarsTotal,       built: b.SugarsTotal },
+              { key: 'h2o',  label: 'Water',    unit: 'g',    canon: c.Water,             built: b.Water },
+            ]}
+            <div class="audit-gap-card">
+              <div class="audit-gap-header">
+                <span class="audit-gap-title">Audit · Canonical vs Built (per 100g)</span>
+                <span class="audit-gap-rule">{sr28Rule}</span>
+              </div>
+              <table class="audit-gap-table">
+                <thead>
+                  <tr>
+                    <th>Macro</th>
+                    <th class="num">Canonical</th>
+                    <th class="num">Built</th>
+                    <th class="num">Δ (built − canonical)</th>
+                    <th class="num">% gap</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {#each macros as m}
+                    {@const delta = m.built - m.canon}
+                    {@const pct = m.canon > 0 ? (delta / m.canon) * 100 : (m.built > 0 ? Infinity : 0)}
+                    {@const canonZero = m.canon === 0}
+                    {@const builtZero = m.built === 0}
+                    {@const status = canonZero && !builtZero
+                      ? 'canonical missing → fill from build'
+                      : (Math.abs(pct) < 5 ? 'match' : Math.abs(pct) < 15 ? 'close' : 'diverges')}
+                    <tr class="audit-row {status === 'match' ? 'ok' : status === 'close' ? 'warn' : status === 'diverges' ? 'bad' : 'fill'}">
+                      <td>{m.label}</td>
+                      <td class="num">{m.canon.toFixed(2)} {m.unit}</td>
+                      <td class="num">{m.built.toFixed(2)} {m.unit}</td>
+                      <td class="num">{delta >= 0 ? '+' : ''}{delta.toFixed(2)}</td>
+                      <td class="num">{!Number.isFinite(pct) ? '∞' : (pct >= 0 ? '+' : '') + pct.toFixed(1) + '%'}</td>
+                      <td>{status}</td>
+                    </tr>
+                  {/each}
+                </tbody>
+              </table>
+              <p class="audit-gap-note">Per-100g basis avoids serving-size confusion. Rule A expects all macros to match canonical. Rule B uses canonical and fills only where it shows 0.</p>
+            </div>
+          {/if}
         {:else if persistedNutrition?.perServing}
           {@const hasStoredPer100 = !!persistedNutrition?.per100g}
           {@const showStoredPer100 = macroPer === '100g' && hasStoredPer100}
@@ -2735,6 +2789,64 @@
     margin: 6px 0 0;
     font-size: 0.78rem;
     color: #b45309;
+    line-height: 1.4;
+  }
+
+  .audit-gap-card {
+    margin-top: 10px;
+    padding: 10px 12px;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+  }
+  .audit-gap-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 6px;
+  }
+  .audit-gap-title {
+    font-weight: 600;
+    font-size: 0.82rem;
+    color: #1e293b;
+  }
+  .audit-gap-rule {
+    font-size: 0.72rem;
+    padding: 2px 6px;
+    background: #e0e7ff;
+    color: #3730a3;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  .audit-gap-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.78rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  .audit-gap-table th,
+  .audit-gap-table td {
+    padding: 4px 6px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .audit-gap-table th {
+    font-weight: 600;
+    color: #475569;
+    background: #f1f5f9;
+  }
+  .audit-gap-table .num {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  .audit-row.ok td   { color: #166534; }
+  .audit-row.warn td { color: #b45309; background: #fffbeb; }
+  .audit-row.bad td  { color: #b91c1c; background: #fef2f2; font-weight: 600; }
+  .audit-row.fill td { color: #1e40af; background: #eff6ff; font-style: italic; }
+  .audit-gap-note {
+    margin: 8px 0 0;
+    font-size: 0.72rem;
+    color: #64748b;
     line-height: 1.4;
   }
 
