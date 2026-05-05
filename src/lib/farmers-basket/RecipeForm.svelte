@@ -1619,14 +1619,22 @@
           {@const c = canonicalNutritionJson.per100g}
           {@const b = liveNutritionJson.per100g}
           {@const macros = [
-            { key: 'cal',  label: 'Calories', unit: 'kcal', canon: c.Energy_KCal,       built: b.Energy_KCal },
-            { key: 'pro',  label: 'Protein',  unit: 'g',    canon: c.Protein,           built: b.Protein },
-            { key: 'fat',  label: 'Fat',      unit: 'g',    canon: c.TotalLipidFat,     built: b.TotalLipidFat },
-            { key: 'carb', label: 'Carbs',    unit: 'g',    canon: c.Carbohydrate,      built: b.Carbohydrate },
-            { key: 'fib',  label: 'Fiber',    unit: 'g',    canon: c.FiberTotalDietary, built: b.FiberTotalDietary },
-            { key: 'sug',  label: 'Sugars',   unit: 'g',    canon: c.SugarsTotal,       built: b.SugarsTotal },
-            { key: 'h2o',  label: 'Water',    unit: 'g',    canon: c.Water,             built: b.Water },
+            { key: 'cal',  label: 'Calories', unit: 'kcal', canon: c.Energy_KCal,       built: b.Energy_KCal,       major: true  },
+            { key: 'pro',  label: 'Protein',  unit: 'g',    canon: c.Protein,           built: b.Protein,           major: true  },
+            { key: 'fat',  label: 'Fat',      unit: 'g',    canon: c.TotalLipidFat,     built: b.TotalLipidFat,     major: true  },
+            { key: 'carb', label: 'Carbs',    unit: 'g',    canon: c.Carbohydrate,      built: b.Carbohydrate,      major: true  },
+            { key: 'fib',  label: 'Fiber',    unit: 'g',    canon: c.FiberTotalDietary, built: b.FiberTotalDietary, major: false },
+            { key: 'sug',  label: 'Sugars',   unit: 'g',    canon: c.SugarsTotal,       built: b.SugarsTotal,       major: false },
+            { key: 'h2o',  label: 'Water',    unit: 'g',    canon: c.Water,             built: b.Water,             major: true  },
           ]}
+          {@const missingMajor = macros.filter(m => m.major && m.canon === 0 && m.built > 0)}
+          {@const missingMinor = macros.filter(m => !m.major && m.canon === 0 && m.built > 0)}
+          {@const ruleAdvice =
+            sr28Rule === 'Rule A' && (missingMajor.length > 0 || missingMinor.length > 0)
+              ? `⚠ Mislabel suspected: canonical is missing ${[...missingMajor, ...missingMinor].map(m => m.label).join(', ')}. A canonical with missing macros should be Rule B (fill from build), not Rule A.`
+              : sr28Rule === 'Rule B' && missingMajor.length === 0 && missingMinor.length === 0
+                ? `⚠ Mislabel suspected: canonical has all macros present. Rule B is reserved for canonicals with missing macros — this should likely be Rule A.`
+                : ''}
           <div class="audit-gap-card">
             <div class="audit-gap-header">
               <span class="audit-gap-title">Audit · Canonical vs Built (per 100g)</span>
@@ -1647,13 +1655,15 @@
                 {#each macros as m}
                   {@const delta = m.built - m.canon}
                   {@const pct = m.canon > 0 ? (delta / m.canon) * 100 : (m.built > 0 ? Infinity : 0)}
-                  {@const canonZero = m.canon === 0}
-                  {@const builtZero = m.built === 0}
-                  {@const status = canonZero && !builtZero
-                    ? 'canonical missing → fill from build'
-                    : (Math.abs(pct) < 5 ? 'match' : Math.abs(pct) < 15 ? 'close' : 'diverges')}
-                  <tr class="audit-row {status === 'match' ? 'ok' : status === 'close' ? 'warn' : status === 'diverges' ? 'bad' : 'fill'}">
-                    <td>{m.label}</td>
+                  {@const canonMissing = m.canon === 0 && m.built > 0}
+                  {@const status = canonMissing
+                    ? (sr28Rule === 'Rule B' ? 'Rule B fill (canonical missing)' : '⚠ canonical missing — should be Rule B')
+                    : (Math.abs(pct) < 5 ? 'match' : Math.abs(pct) < 15 ? 'recipe drift' : 'recipe drift (major)')}
+                  {@const rowClass = canonMissing
+                    ? (sr28Rule === 'Rule B' ? 'fill' : 'bad')
+                    : (Math.abs(pct) < 5 ? 'ok' : Math.abs(pct) < 15 ? 'warn' : 'bad')}
+                  <tr class="audit-row {rowClass}">
+                    <td>{m.label}{m.major ? '' : ' (minor)'}</td>
                     <td class="num">{m.canon.toFixed(2)} {m.unit}</td>
                     <td class="num">{m.built.toFixed(2)} {m.unit}</td>
                     <td class="num">{delta >= 0 ? '+' : ''}{delta.toFixed(2)}</td>
@@ -1663,7 +1673,13 @@
                 {/each}
               </tbody>
             </table>
-            <p class="audit-gap-note">Per-100g basis avoids serving-size confusion. Rule A expects all macros to match canonical. Rule B uses canonical and fills only where it shows 0.</p>
+            {#if ruleAdvice}
+              <p class="audit-gap-advice">{ruleAdvice}</p>
+            {/if}
+            <p class="audit-gap-note">
+              <strong>Rule A</strong>: canonical has all macros present; recipe ingredients should match canonical (drift = recipe deviates from USDA reference, not a build bug).<br>
+              <strong>Rule B</strong>: canonical exists but a major macro (cal/pro/fat/carb/h2o) or minor macro (fib/sug) is missing — fill the missing one from build.
+            </p>
           </div>
         {:else if isCanonicalRule}
           <div class="audit-gap-card" style="background:#fef3c7;border-color:#f59e0b;">
@@ -2855,6 +2871,16 @@
   .audit-row.warn td { color: #b45309; background: #fffbeb; }
   .audit-row.bad td  { color: #b91c1c; background: #fef2f2; font-weight: 600; }
   .audit-row.fill td { color: #1e40af; background: #eff6ff; font-style: italic; }
+  .audit-gap-advice {
+    margin: 8px 0 0;
+    padding: 6px 10px;
+    background: #fef3c7;
+    border-left: 3px solid #f59e0b;
+    color: #92400e;
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
   .audit-gap-note {
     margin: 8px 0 0;
     font-size: 0.72rem;
