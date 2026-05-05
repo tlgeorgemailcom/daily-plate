@@ -1504,57 +1504,6 @@
               <p class="macro-preview-note">⚠️ {sr28Rule} recipe — stored values use USDA canonical data with cooking-loss adjustments. This preview uses raw SR28 and may differ.</p>
             {/if}
           </div>
-          {#if isCanonicalRule && canonicalNutritionJson?.per100g && liveNutritionJson?.per100g}
-            {@const c = canonicalNutritionJson.per100g}
-            {@const b = liveNutritionJson.per100g}
-            {@const macros = [
-              { key: 'cal',  label: 'Calories', unit: 'kcal', canon: c.Energy_KCal,       built: b.Energy_KCal },
-              { key: 'pro',  label: 'Protein',  unit: 'g',    canon: c.Protein,           built: b.Protein },
-              { key: 'fat',  label: 'Fat',      unit: 'g',    canon: c.TotalLipidFat,     built: b.TotalLipidFat },
-              { key: 'carb', label: 'Carbs',    unit: 'g',    canon: c.Carbohydrate,      built: b.Carbohydrate },
-              { key: 'fib',  label: 'Fiber',    unit: 'g',    canon: c.FiberTotalDietary, built: b.FiberTotalDietary },
-              { key: 'sug',  label: 'Sugars',   unit: 'g',    canon: c.SugarsTotal,       built: b.SugarsTotal },
-              { key: 'h2o',  label: 'Water',    unit: 'g',    canon: c.Water,             built: b.Water },
-            ]}
-            <div class="audit-gap-card">
-              <div class="audit-gap-header">
-                <span class="audit-gap-title">Audit · Canonical vs Built (per 100g)</span>
-                <span class="audit-gap-rule">{sr28Rule}</span>
-              </div>
-              <table class="audit-gap-table">
-                <thead>
-                  <tr>
-                    <th>Macro</th>
-                    <th class="num">Canonical</th>
-                    <th class="num">Built</th>
-                    <th class="num">Δ (built − canonical)</th>
-                    <th class="num">% gap</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {#each macros as m}
-                    {@const delta = m.built - m.canon}
-                    {@const pct = m.canon > 0 ? (delta / m.canon) * 100 : (m.built > 0 ? Infinity : 0)}
-                    {@const canonZero = m.canon === 0}
-                    {@const builtZero = m.built === 0}
-                    {@const status = canonZero && !builtZero
-                      ? 'canonical missing → fill from build'
-                      : (Math.abs(pct) < 5 ? 'match' : Math.abs(pct) < 15 ? 'close' : 'diverges')}
-                    <tr class="audit-row {status === 'match' ? 'ok' : status === 'close' ? 'warn' : status === 'diverges' ? 'bad' : 'fill'}">
-                      <td>{m.label}</td>
-                      <td class="num">{m.canon.toFixed(2)} {m.unit}</td>
-                      <td class="num">{m.built.toFixed(2)} {m.unit}</td>
-                      <td class="num">{delta >= 0 ? '+' : ''}{delta.toFixed(2)}</td>
-                      <td class="num">{!Number.isFinite(pct) ? '∞' : (pct >= 0 ? '+' : '') + pct.toFixed(1) + '%'}</td>
-                      <td>{status}</td>
-                    </tr>
-                  {/each}
-                </tbody>
-              </table>
-              <p class="audit-gap-note">Per-100g basis avoids serving-size confusion. Rule A expects all macros to match canonical. Rule B uses canonical and fills only where it shows 0.</p>
-            </div>
-          {/if}
         {:else if persistedNutrition?.perServing}
           {@const hasStoredPer100 = !!persistedNutrition?.per100g}
           {@const showStoredPer100 = macroPer === '100g' && hasStoredPer100}
@@ -1662,6 +1611,69 @@
               <span><strong>{macroTotals.fib === null ? '--' : `${macroTotals.fib}g`}</strong> fibre</span>
               <span><strong>{macroTotals.sug === null ? '--' : `${macroTotals.sug}g`}</strong> sugar</span>
             </div>
+          </div>
+        {/if}
+
+        <!-- Audit gap chart: independent of which preview is showing -->
+        {#if isCanonicalRule && canonicalNutritionJson?.per100g && liveNutritionJson?.per100g}
+          {@const c = canonicalNutritionJson.per100g}
+          {@const b = liveNutritionJson.per100g}
+          {@const macros = [
+            { key: 'cal',  label: 'Calories', unit: 'kcal', canon: c.Energy_KCal,       built: b.Energy_KCal },
+            { key: 'pro',  label: 'Protein',  unit: 'g',    canon: c.Protein,           built: b.Protein },
+            { key: 'fat',  label: 'Fat',      unit: 'g',    canon: c.TotalLipidFat,     built: b.TotalLipidFat },
+            { key: 'carb', label: 'Carbs',    unit: 'g',    canon: c.Carbohydrate,      built: b.Carbohydrate },
+            { key: 'fib',  label: 'Fiber',    unit: 'g',    canon: c.FiberTotalDietary, built: b.FiberTotalDietary },
+            { key: 'sug',  label: 'Sugars',   unit: 'g',    canon: c.SugarsTotal,       built: b.SugarsTotal },
+            { key: 'h2o',  label: 'Water',    unit: 'g',    canon: c.Water,             built: b.Water },
+          ]}
+          <div class="audit-gap-card">
+            <div class="audit-gap-header">
+              <span class="audit-gap-title">Audit · Canonical vs Built (per 100g)</span>
+              <span class="audit-gap-rule">{sr28Rule}</span>
+            </div>
+            <table class="audit-gap-table">
+              <thead>
+                <tr>
+                  <th>Macro</th>
+                  <th class="num">Canonical</th>
+                  <th class="num">Built</th>
+                  <th class="num">Δ (built − canonical)</th>
+                  <th class="num">% gap</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                {#each macros as m}
+                  {@const delta = m.built - m.canon}
+                  {@const pct = m.canon > 0 ? (delta / m.canon) * 100 : (m.built > 0 ? Infinity : 0)}
+                  {@const canonZero = m.canon === 0}
+                  {@const builtZero = m.built === 0}
+                  {@const status = canonZero && !builtZero
+                    ? 'canonical missing → fill from build'
+                    : (Math.abs(pct) < 5 ? 'match' : Math.abs(pct) < 15 ? 'close' : 'diverges')}
+                  <tr class="audit-row {status === 'match' ? 'ok' : status === 'close' ? 'warn' : status === 'diverges' ? 'bad' : 'fill'}">
+                    <td>{m.label}</td>
+                    <td class="num">{m.canon.toFixed(2)} {m.unit}</td>
+                    <td class="num">{m.built.toFixed(2)} {m.unit}</td>
+                    <td class="num">{delta >= 0 ? '+' : ''}{delta.toFixed(2)}</td>
+                    <td class="num">{!Number.isFinite(pct) ? '∞' : (pct >= 0 ? '+' : '') + pct.toFixed(1) + '%'}</td>
+                    <td>{status}</td>
+                  </tr>
+                {/each}
+              </tbody>
+            </table>
+            <p class="audit-gap-note">Per-100g basis avoids serving-size confusion. Rule A expects all macros to match canonical. Rule B uses canonical and fills only where it shows 0.</p>
+          </div>
+        {:else if isCanonicalRule}
+          <div class="audit-gap-card" style="background:#fef3c7;border-color:#f59e0b;">
+            <div class="audit-gap-title">Audit gap chart unavailable</div>
+            <p class="audit-gap-note">
+              {sr28Rule} recipe. Need both canonical and built per-100g data.
+              canonical={canonicalNutritionJson?.per100g ? '✓' : '✗ (no dishLink or canonical fetch failed)'} ·
+              built={liveNutritionJson?.per100g ? '✓' : '✗ (live preview not yet computed)'} ·
+              previewReady={String(nutritionPreviewReady)} · dishLink.ndb={dishLink?.ndbNo ?? 'null'}
+            </p>
           </div>
         {/if}
       {/if}
