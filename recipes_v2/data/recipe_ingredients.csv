@@ -28,21 +28,20 @@ SWEET_002,12,salt_table,1/4 teaspoon (heaping),1.3,0.0,4.0,filling,false,salt (p
 SWEET_002,13,cinnamon_ground,1 teaspoon,3.0,0.0,8.0,filling,true,
 SWEET_002,14,egg_whole_raw,1 large egg,50.0,40.0,60.0,finish,false,beaten (for sealing and basting the pastry)
 SWEET_003,1,flour_ap_white_enriched_bleached,1 1/2 cups,188.0,100.0,250.0,crust,false,
-SWEET_003,2,salt_table,1/2 teaspoon,3.0,1.0,8.0,crust,false,
+SWEET_003,2,salt_table,1/4 teaspoon,1.5,1.0,8.0,crust,false,
 SWEET_003,3,butter_unsalted,6 tablespoons,85.0,60.0,200.0,crust,false,
 SWEET_003,4,water_tap,3 tablespoon ice water,45.0,20.0,90.0,crust,false,
-SWEET_003,5,milk_whole,2 cups,488.0,300.0,700.0,filling,false,
-SWEET_003,6,sugar_granulated,1/3 cup + 1 tablespoon,80.0,60.0,200.0,filling,false,
+SWEET_003,5,milk_whole,1 3/4 cups,420.0,300.0,700.0,filling,false,
+SWEET_003,6,sugar_granulated,1/3 cup,68.0,60.0,200.0,filling,false,
 SWEET_003,7,cornstarch,4 tablespoons,32.0,15.0,60.0,filling,false,
-SWEET_003,8,flour_ap_white_enriched_bleached,2 tablespoons,16.0,5.0,40.0,filling,false,
-SWEET_003,9,salt_table,1/2 teaspoon heaping,3.5,0.0,2.0,filling,false,
-SWEET_003,10,egg_yolk_raw,3 large yolks,51.0,30.0,120.0,filling,false,egg yolks (lightly beaten)
-SWEET_003,11,butter_unsalted,1 tablespoon,14.0,15.0,60.0,filling,false,butter (cut into pieces)
-SWEET_003,12,vanilla_extract,1 teaspoon,4.2,0.0,12.0,filling,false,
-SWEET_003,13,banana_raw,2 1/2 medium (sliced),295.0,200.0,500.0,assembly,false,bananas (sliced ~1/4 inch thick)
-SWEET_003,14,heavy_cream,3/4 cup,180.0,150.0,350.0,topping,false,
-SWEET_003,15,sugar_powdered,2 tablespoons,15.0,5.0,40.0,topping,false,
-SWEET_003,16,vanilla_extract,1/2 teaspoon,2.1,0.0,8.0,topping,true,
+SWEET_003,8,salt_table,1/4 teaspoon,1.5,0.0,2.0,filling,false,
+SWEET_003,9,egg_yolk_raw,2 large yolks,35.0,30.0,120.0,filling,false,egg yolks (lightly beaten)
+SWEET_003,10,butter_unsalted,1 tablespoon,14.0,15.0,60.0,filling,false,butter (cut into pieces)
+SWEET_003,11,vanilla_extract,1 teaspoon,4.2,0.0,12.0,filling,false,
+SWEET_003,12,banana_raw,1 3/4 medium (sliced),195.0,200.0,500.0,assembly,false,bananas (sliced ~1/4 inch thick)
+SWEET_003,13,heavy_cream,1/3 cup,90.0,150.0,350.0,topping,false,
+SWEET_003,14,sugar_powdered,3/4 tablespoon,6.0,5.0,40.0,topping,false,
+SWEET_003,15,vanilla_extract,1/2 teaspoon,2.1,0.0,8.0,topping,true,
 SWEET_004,1,flour_ap_white_enriched_bleached,2 cups,250.0,100.0,500.0,crust,false,
 SWEET_004,2,salt_table,3/4 teaspoon,4.5,1.0,12.0,crust,false,
 SWEET_004,3,butter_unsalted,3/4 cup,170.0,100.0,300.0,crust,false,chilled
@@ -155,15 +154,15 @@ SWEET_011,2,salt_table,1/2 teaspoon,3.0,1.0,8.0,crust,false,
 SWEET_011,3,butter_unsalted,6 tablespoons,85.0,60.0,200.0,crust,false,
 SWEET_011,4,water_tap,3 tablespoons ice water,45.0,20.0,90.0,crust,false,
 SWEET_011,5,milk_whole,2 cups,488.0,300.0,700.0,filling,false,
-SWEET_011,6,sugar_granulated,1/2 cup + 1 tablespoon,113.0,60.0,200.0,filling,false,
-SWEET_011,7,cornstarch,7 tablespoons,56.0,15.0,60.0,filling,false,
-SWEET_011,8,flour_ap_white_enriched_bleached,3 tablespoons,24.0,5.0,40.0,filling,false,
+SWEET_011,6,sugar_granulated,1/2 cup + 1 tablespoon,108.0,60.0,200.0,filling,false,
+SWEET_011,7,cornstarch,1/4 cup,32.0,15.0,60.0,filling,false,
+SWEET_011,8,flour_ap_white_enriched_bleached,6 1/2 tablespoons,55.0,5.0,40.0,filling,false,
 SWEET_011,9,salt_table,3/4 teaspoon,4.5,1.0,8.0,filling,false,
-SWEET_011,10,egg_yolk_raw,4 large yolks,68.0,40.0,120.0,filling,false,egg yolks (lightly beaten)
+SWEET_011,10,egg_yolk_raw,4 large yolks,80.0,40.0,120.0,filling,false,egg yolks (lightly beaten)
 SWEET_011,11,butter_unsalted,1 tablespoon,14.0,15.0,60.0,filling,false,butter (cut into pieces)
 SWEET_011,12,vanilla_extract,2 teaspoons,8.4,0.0,20.0,filling,false,pure vanilla extract
-SWEET_011,13,heavy_cream,3/4 cup,180.0,150.0,350.0,topping,false,
-SWEET_011,14,sugar_powdered,2 tablespoons,15.0,5.0,40.0,topping,false,
+SWEET_011,13,heavy_cream,1/2 cup,130.0,150.0,350.0,topping,false,
+SWEET_011,14,sugar_powdered,1 1/4 tablespoons,10.0,5.0,40.0,topping,false,
 SWEET_011,15,vanilla_extract,1/2 teaspoon,2.1,0.0,8.0,topping,true,
 SWEET_012,1,flour_ap_white_enriched_bleached,1 1/2 cups,188.0,100.0,250.0,cake,false,
 SWEET_012,2,baking_powder,1 1/2 teaspoons,6.0,2.0,12.0,cake,false,
@@ -228,37 +227,36 @@ SWEET_015,10,vanilla_extract,2 teaspoons,8.4,0.0,16.0,filling,false,
 SWEET_016,1,flour_ap_white_enriched_bleached,2 1/4 cups,281.0,200.0,350.0,cake,false,"all-purpose flour, sifted"
 SWEET_016,2,baking_powder,1 tablespoon,12.0,8.0,18.0,cake,false,baking powder
 SWEET_016,3,salt_table,5/8 teaspoon,3.75,2.0,8.0,cake,false,
-SWEET_016,4,vegetable_shortening,1/2 cup + 2 1/4 teaspoons,105.0,60.0,160.0,cake,false,"vegetable shortening, room temperature"
-SWEET_016,5,sugar_granulated,1 1/2 cups + 1 tablespoon,312.5,200.0,400.0,cake,false,
+SWEET_016,4,vegetable_shortening,1/2 cup + 1 tablespoon,115.0,60.0,160.0,cake,false,"vegetable shortening, room temperature"
+SWEET_016,5,sugar_granulated,1 3/4 cups,350.0,200.0,400.0,cake,false,
 SWEET_016,6,milk_whole,1 cup,244.0,180.0,320.0,cake,false,"whole milk, room temperature"
 SWEET_016,7,vanilla_extract,2 teaspoons,8.4,4.0,16.0,cake,false,pure vanilla extract
-SWEET_016,8,egg_white_raw,4 large whites,132.0,90.0,200.0,cake,false,"egg whites, room temperature"
+SWEET_016,8,egg_white_raw,5 large whites,165.0,90.0,200.0,cake,false,"egg whites, room temperature"
 SWEET_017,1,flour_ap_white_enriched_bleached,2 1/4 cups,281.0,200.0,350.0,cake,false,"all-purpose flour, sifted"
 SWEET_017,2,baking_powder,1 tablespoon,12.0,8.0,18.0,cake,false,baking powder
 SWEET_017,3,salt_table,5/8 teaspoon,3.75,2.0,8.0,cake,false,
-SWEET_017,4,vegetable_shortening,1/2 cup + 2 tablespoons + 1/2 teaspoon,124.0,60.0,160.0,cake,false,"vegetable shortening, room temperature"
-SWEET_017,5,sugar_granulated,1 1/2 cups + 1 tablespoon,312.5,200.0,400.0,cake,false,
+SWEET_017,4,vegetable_shortening,1/2 cup + 1 tablespoon,115.0,60.0,160.0,cake,false,"vegetable shortening, room temperature"
+SWEET_017,5,sugar_granulated,1 3/4 cups,350.0,200.0,400.0,cake,false,
 SWEET_017,6,milk_whole,1 cup,244.0,180.0,320.0,cake,false,"whole milk, room temperature"
 SWEET_017,7,vanilla_extract,2 teaspoons,8.4,4.0,16.0,cake,false,pure vanilla extract
-SWEET_017,8,egg_white_raw,4 large whites,132.0,90.0,200.0,cake,false,"egg whites, room temperature"
-SWEET_017,9,sugar_granulated,2 1/2 cups,500.0,200.0,400.0,frosting,false,granulated sugar (for frosting)
+SWEET_017,8,egg_white_raw,5 large whites,165.0,90.0,200.0,cake,false,"egg whites, room temperature"
+SWEET_017,9,sugar_granulated,1 1/2 cups,300.0,180.0,420.0,frosting,false,granulated sugar
 SWEET_017,10,corn_syrup_light,2 tablespoons,41.0,20.0,80.0,frosting,false,light corn syrup
-SWEET_017,11,water_tap,1/3 cup,79.0,40.0,120.0,frosting,false,water
-SWEET_017,12,egg_white_raw,6 large whites,198.0,60.0,150.0,frosting,false,egg whites
-SWEET_017,13,salt_table,1/2 teaspoon,3.0,0.0,2.0,frosting,false,pinch of salt
-SWEET_017,14,vanilla_extract,1 teaspoon,4.2,0.0,8.0,frosting,false,pure vanilla extract
-SWEET_017,15,coconut_flaked_sweetened,1 1/2 cups,111.0,100.0,220.0,frosting,false,"sweetened flaked coconut (about 1/2 cup folded into frosting, remainder pressed onto top and sides)"
+SWEET_017,11,egg_white_raw,5 large whites,165.0,60.0,250.0,frosting,false,"egg whites, room temperature"
+SWEET_017,12,vanilla_extract,1 teaspoon,4.2,0.0,8.0,frosting,false,pure vanilla extract
+SWEET_017,13,salt_table,pinch,1.5,0.0,2.0,frosting,false,pinch of salt
+SWEET_017,14,coconut_flaked_sweetened,1 1/3 cups,99.0,60.0,220.0,frosting,false,"sweetened flaked coconut, folded in & pressed on top"
 SWEET_018,1,flour_ap_white_enriched_bleached,1 1/2 cups,187.0,200,350,cake,false,"all-purpose flour, sifted"
-SWEET_018,1b,flour_cake_white_enriched,1/2 cup,62.5,40,120,cake,false,sifted cake flour
+SWEET_018,1b,flour_cake_white_enriched,3/4 cup,93.75,40,120,cake,false,sifted cake flour
 SWEET_018,2,sugar_granulated,1 1/4 cups,250.0,200,400,cake,false,granulated sugar
 SWEET_018,3,baking_powder,2 teaspoons,8.0,6,15,cake,false,baking powder
 SWEET_018,4,salt_table,3/4 teaspoon,4.5,2,6,cake,false,
 SWEET_018,5,butter_unsalted,1/4 cup,57.0,60,200,cake,false,"unsalted butter, soft"
 SWEET_018,5b,vegetable_shortening,1/4 cup + 1 tablespoon,61.0,0,100,cake,false,"vegetable shortening, soft"
-SWEET_018,6,milk_whole,3/4 cup,183.0,120,244,cake,false,whole milk
+SWEET_018,6,milk_whole,2/3 cup,163.0,120,244,cake,false,whole milk
 SWEET_018,7,vanilla_extract,1 1/4 teaspoons,5.25,4,16,cake,false,pure vanilla extract
-SWEET_018,8,egg_whole_raw,2 large,100.0,100,200,cake,false,"large eggs, unbeaten"
-SWEET_019,1,sugar_powdered,1 cup,120.0,350,450,frosting,false,powdered sugar
+SWEET_018,8,egg_whole_raw,3 large,150.0,100,200,cake,false,"large eggs, unbeaten"
+SWEET_019,1,sugar_powdered,15/16 cup,115.0,350,450,frosting,false,powdered sugar
 SWEET_019,2,cocoa_powder_unsweetened,1 tablespoon,5.0,5,20,frosting,false,unsweetened cocoa powder
 SWEET_019,3,butter_unsalted,2 1/2 teaspoons,12.0,60,200,frosting,false,"unsalted butter, melted"
 SWEET_019,4,milk_evaporated,1 tablespoon + 1 teaspoon,21.0,5,25,frosting,false,evaporated milk
@@ -288,7 +286,7 @@ SWEET_021,3,vegetable_shortening,1/2 cup,96.0,0,100,cake,false,vegetable shorten
 SWEET_021,4,sugar_brown,1/3 cup,73.0,200,400,cake,false,packed light brown sugar
 SWEET_021,5,molasses,3/4 cup,252.0,0,100,cake,false,unsulphured molasses
 SWEET_021,6,egg_whole_raw,1 large,50.0,100,200,cake,false,large egg
-SWEET_021,7,water_tap,3/4 cup,170.0,0,0,cake,false,hot water
+SWEET_021,7,water_tap,5/8 cup,148.0,0,0,cake,false,hot water
 SWEET_021,8,baking_soda,1 teaspoon,4.6,0,5,cake,false,baking soda
 SWEET_021,9,ginger_ground,1 1/2 teaspoons,2.7,0,5,cake,false,ground ginger
 SWEET_021,10,cinnamon_ground,1 teaspoon,2.6,0,5,cake,false,ground cinnamon
@@ -306,7 +304,7 @@ SWEET_022,8,salt_table,7/8 teaspoon,5.25,0,5,cake,false,salt
 SWEET_022,9,vegetable_shortening,6 tablespoons,77.0,0,100,cake,false,vegetable shortening
 SWEET_022,10,milk_whole,1/2 cup,122.0,120,244,cake,false,whole milk
 SWEET_022,11,vanilla_extract,1 teaspoon,4.2,4,16,cake,false,pure vanilla extract
-SWEET_022,12,egg_whole_raw,1 large,50.0,100,200,cake,false,large egg
+SWEET_022,12,egg_whole_raw,2 large,100.0,100,200,cake,false,large egg
 SWEET_022,13,cinnamon_ground,1/2 teaspoon,1.3,0,5,cake,true,ground cinnamon (optional)
 SWEET_022,14,cloves_ground,1/4 teaspoon,0.5,0,5,cake,true,ground cloves (optional)
 SWEET_022,15,ginger_ground,1/2 teaspoon,0.9,0,5,cake,true,ground ginger (optional)
@@ -340,7 +338,7 @@ SWEET_026,6,sugar_granulated,1 1/4 cups,250.0,200.0,400.0,filling,false,
 SWEET_026,7,salt_table,1/4 teaspoon,1.5,0.5,4.0,filling,false,
 SWEET_026,8,sour_cream,1/2 cup,115.0,80.0,230.0,filling,false,"full-fat sour cream, room temperature"
 SWEET_026,9,vanilla_extract,1 teaspoon,4.2,3.0,12.0,filling,false,
-SWEET_026,10,egg_whole_raw,4 large eggs,200.0,150.0,300.0,filling,false,"room temperature"
+SWEET_026,10,egg_whole_raw,4 large eggs,200.0,150.0,300.0,filling,false,room temperature
 SWEET_026,11,egg_yolk_raw,1 large yolk,17.0,15.0,20.0,filling,false,
 SWEET_026,12,flour_ap_white_enriched_bleached,2 tablespoons,16.0,8.0,24.0,filling,false,all-purpose flour
 SWEET_026,13,lemon_peel_raw,1 teaspoon,2.0,0.0,6.0,filling,false,freshly grated lemon zest
@@ -369,11 +367,12 @@ SWEET_028,8,sour_cream,1/4 cup,58.0,50.0,115.0,,false,room temperature
 SWEET_029,1,vegetable_shortening,2/3 cup,130,120,140,batter,false,vegetable shortening
 SWEET_029,2,butter_unsalted,1/4 cup,57,50,65,batter,false,unsalted butter
 SWEET_029,3,sugar_granulated,1 cup + 1 tablespoon,210,185,260,batter,false,granulated sugar
-SWEET_029,4,egg_whole_raw,2 large,100,95,105,batter,false,large eggs
+SWEET_029,4,egg_whole_raw,3 large,150,95,160,batter,false,large eggs
 SWEET_029,5,vanilla_extract,1 teaspoon,4.2,4,5,batter,false,pure vanilla extract
-SWEET_029,6,flour_ap_white_enriched_bleached,2/3 cup,80,70,95,batter,false,all-purpose flour
+SWEET_029,6,flour_ap_white_enriched_bleached,2/3 cup,80,70,140,batter,false,all-purpose flour
 SWEET_029,7,cocoa_powder_unsweetened,1 cup + 1 tablespoon,95,85,105,batter,false,unsweetened cocoa powder
 SWEET_029,8,salt_table,scant 1 teaspoon,5.5,5.0,6.0,batter,false,table salt
+SWEET_029,9,chocolate_chips_semisweet,1/2 cup,85,70,100,batter,false,semi-sweet chocolate chips
 SWEET_030,1,butter_unsalted,1/2 cup + 6 tbsp,199,180,220,,false,
 SWEET_030,2,sugar_brown,3/4 cup packed,165,145,185,,false,
 SWEET_030,3,sugar_granulated,1/2 cup,100,85,115,,false,
