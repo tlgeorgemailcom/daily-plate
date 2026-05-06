@@ -1115,7 +1115,7 @@ export const LEVELS: Level[] = [
     prepTime: '25 min',
     linkType: 'dish',
     sr28Rule: 'Rule B',
-    nutritionJson: {"perServing": {"cal": 366.85,"pro": 4.02,"fat": 13.91,"carb": 58.07,"fib": 0.92,"sug": 37.55,"h2o": 37.14},"gramsPerServing": null,"servings": 9.0,"yieldFactorWater": 0.86},
+    nutritionJson: {"perServing": {"cal": 366.85,"pro": 4.02,"fat": 13.91,"carb": 58.07,"fib": 0.92,"sug": 37.55,"h2o": 37.14},"gramsPerServing": null,"servings": 9.0,"yieldFactorWater": 0.84},
     recipeIngredients: [
       { name: 'Cake, pineapple upside-down, prepared from recipe', quantity: 'custom (g)', foodWord: 'CAKEPINEAPPLE', ndbNo: '18119', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'unsalted butter, melted (for the topping)', quantity: '3 tablespoons', section: 'topping', ndbNo: '1145', portionDesc: 'g', portionGrams: 43.0 },
