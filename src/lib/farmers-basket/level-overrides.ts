@@ -112,8 +112,12 @@ function mergeRecipeIngredients(
 
   const merged = overrideIngs.map(ing => {
     const hasValidFoodWord = !!ing.foodWord && validFoodWords.has(ing.foodWord);
-    // Only preserve override nutrition links when they can actually map to FOODS.
-    if ((ing.portionGrams && hasValidFoodWord) || ing.exempt || ing.isDish) {
+    const hasNdbNo = !!ing.ndbNo;
+    // Preserve override nutrition links when the override row already carries enough
+    // metadata to compute nutrition (NDB number + portionGrams, OR a valid foodWord,
+    // OR exempt/dish flag). Only fall back to the original LEVELS entry for legacy
+    // sparse overrides that lack nutrition metadata.
+    if ((ing.portionGrams && (hasValidFoodWord || hasNdbNo)) || ing.exempt || ing.isDish) {
       // Still consume one original by name so subsequent duplicates don't reuse it.
       const queue = origsByName.get(normalize(ing.name));
       if (queue) {
@@ -136,18 +140,33 @@ function mergeRecipeIngredients(
 
     return {
       ...ing,
-      foodWord: orig.foodWord,
-      ndbNo: orig.ndbNo,
-      portionDesc: orig.portionDesc,
-      portionGrams: orig.portionGrams,
-      servingCount: orig.servingCount,
-      exempt: orig.exempt,
-      isDish: orig.isDish,
+      foodWord: ing.foodWord || orig.foodWord,
+      ndbNo: ing.ndbNo || orig.ndbNo,
+      portionDesc: ing.portionDesc || orig.portionDesc,
+      portionGrams: ing.portionGrams ?? orig.portionGrams,
+      servingCount: ing.servingCount ?? orig.servingCount,
+      exempt: ing.exempt ?? orig.exempt,
+      isDish: ing.isDish ?? orig.isDish,
       section: ing.section ?? orig.section,
     };
   });
 
-  const missingOriginals = originalIngs.filter((ing) => !consumedOrigs.has(ing));
+  // Only append originals that the override did NOT mention by name. If the
+  // override has fewer rows of a given name than the original, the extras are
+  // intentionally removed (e.g. SWEET_003 dropped a duplicate 16g flour entry)
+  // and must NOT be appended back.
+  const overrideNameCounts = new Map<string, number>();
+  for (const ing of overrideIngs) {
+    const k = normalize(ing.name);
+    overrideNameCounts.set(k, (overrideNameCounts.get(k) || 0) + 1);
+  }
+  const missingOriginals = originalIngs.filter((ing) => {
+    if (consumedOrigs.has(ing)) return false;
+    // If the override mentioned this name at all, treat the original as
+    // intentionally removed/superseded — do not re-append.
+    if (overrideNameCounts.has(normalize(ing.name))) return false;
+    return true;
+  });
 
   // Some persisted override rows were saved before the full built-in ingredient payload existed.
   // Preserve any original generated rows that the sparse override does not mention so recalculation
