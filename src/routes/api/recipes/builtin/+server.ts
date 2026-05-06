@@ -331,7 +331,7 @@ export const GET: RequestHandler = async () => {
     }));
 
     return json({ overrides, newBuiltins }, {
-      headers: { 'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=120' }
+      headers: { 'Cache-Control': 'no-store, max-age=0, must-revalidate' }
     });
   } catch (err) {
     console.error('Failed to load builtin overrides:', err);

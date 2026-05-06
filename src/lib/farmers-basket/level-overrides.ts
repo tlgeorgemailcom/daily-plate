@@ -67,7 +67,9 @@ async function fetchOverridesAndNew(): Promise<OverridesCache> {
   }
 
   try {
-    const res = await fetch('/api/recipes/builtin');
+    // Bust both browser and CDN caches so newly-saved overrides are reflected
+    // immediately without needing a hard reload / private window.
+    const res = await fetch(`/api/recipes/builtin?t=${now}`, { cache: 'no-store' });
     if (!res.ok) throw new Error('Failed to fetch overrides');
     const data = await res.json();
     cachedData = {
