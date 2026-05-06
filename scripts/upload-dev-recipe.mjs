@@ -8,6 +8,7 @@ import { ADDED_SUGAR_RULES } from './added-sugar-rules.mjs';
 
 const BASE = '/Volumes/training/Daily Food Chain/daily-food-chain';
 const RECIPES_CSV = resolve(BASE, 'src/lib/data/recipes.csv');
+const RECIPES_V2_CSV = resolve(BASE, 'recipes_v2/data/recipes.csv');
 const INGREDIENTS_CSV = resolve(BASE, 'src/lib/data/recipe_ingredients.csv');
 const FOOD_PORTIONS_CSV = resolve(BASE, 'food-portions-complete.csv');
 const COMBOO_DB = '/Users/macminidata/vscode/jetfooddata/jetcool/assets/comboo.db';
@@ -301,19 +302,105 @@ async function estimateAddedSugarWhole(combooDb, ingredientRows) {
 
 function pickCanonicalServingGrams(foodRow) {
   if (!foodRow) return null;
+  // Pass 1: prefer per-piece / per-slice descriptors (single serving).
+  // These typically read like "piece (1/8 of 9\" dia)", "slice", "1 cookie", etc.
+  let perPiece = null;
   let fallback = null;
   for (let idx = 0; idx <= 12; idx += 1) {
     const desc = String(foodRow[`M${idx}_Desc`] || '').trim().toLowerCase();
     const grams = Number.parseFloat(String(foodRow[`M${idx}_Gm`] || ''));
     if (!desc || !Number.isFinite(grams) || grams <= 0) continue;
     if (desc === 'custom (g)') {
-      fallback = grams;
+      fallback = fallback ?? grams;
       continue;
     }
     if (desc === 'oz') continue;
-    return grams;
+    // Whole-product descriptors to skip ("pie (9\" dia)", "loaf", "cake (whole)", etc.)
+    if (/^(pie|loaf|cake|tart|pizza)\b/.test(desc) && !/(piece|slice|wedge|\b1\/\d)/.test(desc)) {
+      continue;
+    }
+    if (/(piece|slice|wedge|cookie|bar|muffin|cupcake|roll|biscuit|\b1\/\d)/.test(desc)) {
+      if (perPiece == null) perPiece = grams;
+      continue;
+    }
+    if (fallback == null) fallback = grams;
   }
-  return fallback;
+  return perPiece ?? fallback;
+}
+
+// ── Recipe category mapping (mirrors src/lib/farmers-basket/recipe-categories.ts) ──
+const RECIPE_CATEGORY_OPTIONS = [
+  { id: 'breakfast', label: 'Breakfast' },
+  { id: 'soups-stews', label: 'Soups & Stews' },
+  { id: 'sandwiches-burgers', label: 'Sandwiches & Burgers' },
+  { id: 'salads', label: 'Salads' },
+  { id: 'pasta-pizza', label: 'Pasta & Pizza' },
+  { id: 'entrees-main-courses', label: 'Entrees & Main Courses' },
+  { id: 'sides', label: 'Sides' },
+  { id: 'sweets-desserts', label: 'Sweets & Desserts' },
+  { id: 'beverages', label: 'Beverages' },
+  { id: 'sauces-condiments', label: 'Sauces & Condiments' }
+];
+const DEFAULT_RECIPE_CATEGORY = 'entrees-main-courses';
+const CATEGORY_ID_BY_INPUT = Object.fromEntries([
+  ...RECIPE_CATEGORY_OPTIONS.map((o) => [o.id, o.id]),
+  ...RECIPE_CATEGORY_OPTIONS.map((o) => [o.label.toLowerCase(), o.id]),
+  ['desserts', 'sweets-desserts'],
+  ['sweets & desserts', 'sweets-desserts'],
+  ['dinner', 'entrees-main-courses'],
+  ['other', 'entrees-main-courses']
+]);
+function toStoredRecipeCategory(category) {
+  const value = (category || '').trim().toLowerCase();
+  if (!value) return DEFAULT_RECIPE_CATEGORY;
+  return CATEGORY_ID_BY_INPUT[value] ?? DEFAULT_RECIPE_CATEGORY;
+}
+
+// Map recipes.csv cook_method tokens to the Final Dish Preparation dropdown.
+// Allowed values: Bake, Boil, Grill, Fry, No heat. Compound methods like
+// "bake+stovetop+chill" collapse to the first heat-applying segment ("Bake").
+const COOKING_METHOD_MAP = {
+  bake: 'Bake',
+  baked: 'Bake',
+  roast: 'Bake',
+  roasted: 'Bake',
+  boil: 'Boil',
+  boiled: 'Boil',
+  simmer: 'Boil',
+  stovetop: 'Boil',
+  steam: 'Boil',
+  poach: 'Boil',
+  grill: 'Grill',
+  grilled: 'Grill',
+  broil: 'Grill',
+  broiled: 'Grill',
+  sear: 'Grill',
+  fry: 'Fry',
+  fried: 'Fry',
+  saute: 'Fry',
+  sautee: 'Fry',
+  'saute\u0301': 'Fry',
+  'sauté': 'Fry',
+  'pan-fry': 'Fry',
+  panfry: 'Fry',
+  'deep-fry': 'Fry',
+  none: 'No heat',
+  raw: 'No heat',
+  chill: 'No heat',
+  chilled: 'No heat',
+  freeze: 'No heat',
+  frozen: 'No heat',
+  'no heat': 'No heat',
+  noheat: 'No heat'
+};
+function normalizeCookingMethodLabel(cookMethod) {
+  const value = (cookMethod || '').trim();
+  if (!value) return null;
+  for (const part of value.split('+')) {
+    const key = part.trim().toLowerCase();
+    if (key && COOKING_METHOD_MAP[key]) return COOKING_METHOD_MAP[key];
+  }
+  return null;
 }
 
 function isDefectiveCanonical(canonicalValue, builtValue) {
@@ -382,10 +469,24 @@ async function main() {
   }
 
   const recipes = parseCsv(readFileSync(RECIPES_CSV, 'utf8'));
+  const recipesV2 = parseCsv(readFileSync(RECIPES_V2_CSV, 'utf8'));
   const ingredients = parseCsv(readFileSync(INGREDIENTS_CSV, 'utf8'));
   const foodPortions = parseCsv(readFileSync(FOOD_PORTIONS_CSV, 'utf8'));
   const recipeMeta = recipes.find(row => row.recipe_id === recipeId);
   if (!recipeMeta) throw new Error(`Recipe ${recipeId} not found in recipes.csv`);
+  const recipeMetaV2 = recipesV2.find(row => row.recipe_id === recipeId);
+  if (recipeMetaV2) {
+    // Merge fields that exist only in the v2 audit CSV (e.g. cook_method).
+    if (!recipeMeta.cook_method && recipeMetaV2.cook_method) {
+      recipeMeta.cook_method = recipeMetaV2.cook_method;
+    }
+    if (recipeMetaV2.yield_factor_water) {
+      recipeMeta.yield_factor_water = recipeMetaV2.yield_factor_water;
+    }
+    if (recipeMetaV2.yield_factor_fat) {
+      recipeMeta.yield_factor_fat = recipeMetaV2.yield_factor_fat;
+    }
+  }
   const ingredientRows = ingredients.filter(row => row.recipe_id === recipeId);
   if (ingredientRows.length === 0) throw new Error(`No ingredient rows found for ${recipeId}`);
 
@@ -428,9 +529,11 @@ async function main() {
     sql: 'SELECT locked FROM dev_recipes WHERE recipe_id = ? LIMIT 1',
     args: [recipeId]
   });
-  if (lockCheck.rows.length > 0 && Number(lockCheck.rows[0].locked) === 1 && !forceUpload) {
+  const lockedLevel = lockCheck.rows.length > 0 ? Number(lockCheck.rows[0].locked) : 0;
+  if (lockedLevel >= 1 && !forceUpload) {
+    const tier = lockedLevel === 2 ? 'human-verified (locked=2)' : 'published (locked=1)';
     throw new Error(
-      `Recipe ${recipeId} is locked (status=published). Re-upload is blocked.\n` +
+      `Recipe ${recipeId} is locked: ${tier}. Re-upload is blocked.\n` +
       `To intentionally override, run: node scripts/upload-dev-recipe.mjs ${recipeId} --force`
     );
   }
@@ -513,7 +616,18 @@ async function main() {
     sourceMatchVersion: SOURCE_MATCH_VERSION,
     sourceNdbNo: dishRow.ndb_no || null,
     sourceLongDesc: longDesc || null,
-    mergeBasis: hasCanonicalNdb ? 'whole_recipe' : 'ingredient_build'
+    mergeBasis: hasCanonicalNdb ? 'whole_recipe' : 'ingredient_build',
+    // Persist v2 cooking yield factors so the live RecipeForm preview applies
+    // the same water/fat loss model as the build pipeline. Without these the
+    // form defaults to 1.0/1.0 and the per-100g audit chart drifts ~5–7%.
+    yieldFactorWater: (() => {
+      const v = Number.parseFloat(recipeMeta.yield_factor_water || '');
+      return Number.isFinite(v) ? v : undefined;
+    })(),
+    yieldFactorFat: (() => {
+      const v = Number.parseFloat(recipeMeta.yield_factor_fat || '');
+      return Number.isFinite(v) ? v : undefined;
+    })()
   };
 
   const sourceKcal = hasCanonicalNdb ? round2(canonicalWhole.Energy_KCal || 0) : 0;
@@ -601,8 +715,8 @@ async function main() {
     recipeId,
     String(recipeMeta.food_word || ''),
     String(recipeMeta.recipe_name || builtRow.name || ''),
-    null,
-    null,
+    toStoredRecipeCategory(recipeMeta.category || builtRow.category || ''),
+    normalizeCookingMethodLabel(recipeMeta.cook_method || builtRow.cooking_method || ''),
     servingsCount,
     gramsPerServing,
     String(recipeMeta.servings || ''),
@@ -622,7 +736,7 @@ async function main() {
     gapStatus,
     validationNotes,
     'published',
-    String(recipeMeta.category || builtRow.category || ''),
+    toStoredRecipeCategory(recipeMeta.category || builtRow.category || ''),
     String(recipeMeta.dietary_category || builtRow.dietary_category || ''),
     String(recipeMeta.prep_time || builtRow.prep_time || ''),
     String(recipeMeta.servings || builtRow.servings || ''),
