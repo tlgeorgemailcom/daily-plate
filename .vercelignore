@@ -1,0 +1,43 @@
+# Quarantined / historical
+_archived/
+
+# Python pipeline (runs locally, never on Vercel)
+recipes_v3/
+__pycache__/
+*.pyc
+
+# Documentation
+docs/
+*.md
+!README.md
+
+# Database migrations (manual SQL, run out-of-band)
+migrations/
+*.sql
+schema.sql
+
+# Local SQLite / WAL artifacts
+*.db
+*.sqlite
+migration_006*
+
+# Source spreadsheets and generator-input CSVs (consumed only by local scripts/dev/)
+*.numbers
+food-portions-complete.csv
+food-groups-with-ndb-no.csv
+food-groups-with-ndb.csv
+food-groups-edit.csv
+
+# Local dev scripts not invoked by Vercel build
+scripts/dev/
+
+# Tests
+tests/
+test/
+*.test.ts
+*.spec.ts
+
+# Editor / OS junk
+.DS_Store
+.vscode/
+.idea/

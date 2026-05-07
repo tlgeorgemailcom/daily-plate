@@ -11,3 +11,13 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vercel
 __pycache__/
+*.pyc
+
+# Local SQLite / dev DB artifacts
+*.db
+*.sqlite
+recipes_dev.db
+migration_006
+migration_006-wal
+migration_006-shm
+migration_006-info
