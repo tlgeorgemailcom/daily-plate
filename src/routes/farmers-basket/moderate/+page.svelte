@@ -169,7 +169,7 @@
   }
   
   function recipeToFormData(recipe: RecipeSubmission): Partial<RecipeFormData> {
-    const rawIngredients = (recipe.modIngredients || recipe.ingredients || []) as Array<Record<string, unknown>>;
+    const rawIngredients = (recipe.modIngredients || recipe.ingredients || []) as unknown as Array<Record<string, unknown>>;
     const rawInstructions = (recipe.instructions || []) as unknown[];
     const dishRow = rawIngredients.find((ing) => ing.row_type === 'dish' || ing.isDish === true);
     const ingredientRows = rawIngredients.filter((ing) => !(ing.row_type === 'dish' || ing.isDish === true));
@@ -191,9 +191,9 @@
       quantity: String(ing.quantity || ing.ing_qty || ''),
       gameFood: String(ing.gameFood || ing.game_food || ''),
       animal: String(ing.animal || ''),
-      foodWord: ing.foodWord || ing.food_word,
-      ndbNo: ing.ndbNo || ing.ndb_no,
-      portionDesc: ing.portionDesc || ing.portion_desc,
+      foodWord: ing.foodWord != null ? String(ing.foodWord) : (ing.food_word != null ? String(ing.food_word) : undefined),
+      ndbNo: ing.ndbNo != null ? String(ing.ndbNo) : (ing.ndb_no != null ? String(ing.ndb_no) : undefined),
+      portionDesc: ing.portionDesc != null ? String(ing.portionDesc) : (ing.portion_desc != null ? String(ing.portion_desc) : undefined),
       portionGrams: typeof ing.portionGrams === 'number' ? ing.portionGrams : (typeof ing.portion_grams === 'number' ? ing.portion_grams : undefined),
       servingCount: typeof ing.servingCount === 'number' ? ing.servingCount : (typeof ing.serving_count === 'number' ? ing.serving_count : undefined),
       exempt: ing.exempt === true
@@ -456,7 +456,7 @@
         }
       } else if (!imagePreviewUrl) {
         // Image was removed
-        imageUrl = null;
+        imageUrl = undefined;
       }
       
       const res = await fetch('/api/recipes/moderate', {

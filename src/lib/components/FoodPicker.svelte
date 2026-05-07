@@ -8,6 +8,7 @@
   export type RecipeFood = Food & {
     isRecipe: true;
     gramsPerServing: number;
+    type?: 'developer' | 'community';
     recipeType?: 'developer' | 'community';
     sr28Rule?: 'Rule A' | 'Rule B' | 'Rule C' | 'Rule D' | null;
     isCommunityRecipe?: boolean;

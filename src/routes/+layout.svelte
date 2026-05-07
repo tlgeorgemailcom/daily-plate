@@ -63,8 +63,11 @@
   });
   
   // Validate session on app load to ensure tier accuracy
-  onMount(async () => {
-    await playerStore.validateSession();
+  onMount(() => {
+    let cleanupVisibility: (() => void) | null = null;
+
+    (async () => {
+      await playerStore.validateSession();
 
     // --- Visitor tracking ---
     const visitCount = parseInt(localStorage.getItem('va_visit_count') || '0') + 1;
@@ -128,7 +131,10 @@
       }
     }
     document.addEventListener('visibilitychange', handleVisibilityHidden);
-    return () => document.removeEventListener('visibilitychange', handleVisibilityHidden);
+      cleanupVisibility = () => document.removeEventListener('visibilitychange', handleVisibilityHidden);
+    })();
+
+    return () => { cleanupVisibility?.(); };
   });
   
   // Enable auto-sync for returning paid users
@@ -340,7 +346,7 @@
       <a href="/cartoon" class:active={$page.url.pathname.startsWith('/cartoon')}>
         🐦 Strip
       </a>
-      {#if ['plus', 'allin', 'moderator'].includes(player?.tier)}
+      {#if ['plus', 'allin', 'moderator'].includes(player?.tier ?? '')}
         <a href="/stats" class:active={$page.url.pathname.startsWith('/stats')}>
           📊 Share/Stats
         </a>

@@ -20,6 +20,7 @@
     portionGrams?: number;   // grams per one portion
     servingCount?: number;   // number of portions used in recipe
     exempt?: boolean;        // explicitly marked as not nutritionally significant
+    isDish?: boolean;        // marks the synthesized dish-level row (Rule A/B/C)
   }
   
   export interface RecipeInstruction {
@@ -45,6 +46,8 @@
       FiberTotalDietary?: number;
       SugarsTotal?: number;
     };
+    gramsPerServing?: number | null;
+    [key: string]: unknown;
   }
   
   export interface RecipeFormData {
@@ -616,6 +619,8 @@
   let previewTimer: ReturnType<typeof setTimeout> | null = null;
   let previewRequestId = 0;
 
+  let persistedNutrition = $state<PersistedNutritionJson | null | undefined>(initialData.nutritionJson);
+
   let showStoredNutrition = $derived(
     !!persistedNutrition?.perServing &&
     (
@@ -1044,8 +1049,6 @@
     nutritionJson?: PersistedNutritionJson | null;
   }
 
-  let persistedNutrition = $state<PersistedNutritionJson | null | undefined>(initialData.nutritionJson);
-
   let suggestions = $state<RecipeSuggestion[]>([]);
   let suggestionsLoading = $state(false);
   let suggestionsDismissed = $state(false);
@@ -1182,6 +1185,7 @@
   
   // Current form data (for customActions snippet)
   let formData = $derived<RecipeFormData>({
+    recipeName: `${dishName.trim()}${recipeSuffix.trim() ? ` — ${recipeSuffix.trim()}` : ''}`,
     dishName: dishName.trim(),
     recipeSuffix: recipeSuffix.trim(),
     cookingMethod,

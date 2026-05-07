@@ -277,7 +277,7 @@
       const finalScore = calculateScore();
       const uniqueGroups = new Set(chain.map(c => c.group)).size;
       saveGameScore('chain', finalScore, {
-        difficulty: difficultyMode,
+        difficulty: difficultyMode ?? undefined,
         wordsUsed: chain.length,
         groupsHit: uniqueGroups,
         streak,

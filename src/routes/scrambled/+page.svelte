@@ -450,7 +450,7 @@
     // Check if complete
     const allClassified = foundWords.every(w => {
       const c = classifiedWords.get(w);
-      return c && c.group !== '';
+      return c && (c.group as string) !== '';
     });
     if (allClassified) {
       setTimeout(() => {
@@ -532,7 +532,7 @@
   let unclassifiedWords = $derived(() => {
     return foundWords.filter(word => {
       const c = classifiedWords.get(word);
-      return !c || c.group === '';
+      return !c || (c.group as string) === '';
     });
   });
   

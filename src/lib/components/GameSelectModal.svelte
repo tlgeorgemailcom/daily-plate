@@ -101,6 +101,8 @@
     </div>
   </div>
 {/if}
+
+<style>
   .modal-overlay {
     position: fixed;
     inset: 0;

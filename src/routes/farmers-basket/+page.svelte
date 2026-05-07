@@ -964,7 +964,7 @@
                 <div class="ingredient-icons-win">
                   {#each Object.entries(foodCounts) as [food, count]}
                     <span class="ingredient-item">
-                      <FoodIcon food={food} size={24} />
+                      <FoodIcon food={food as FoodType} size={24} />
                       <span class="food-name">{count > 1 ? `${count}x ` : ''}{food}</span>
                     </span>
                   {/each}

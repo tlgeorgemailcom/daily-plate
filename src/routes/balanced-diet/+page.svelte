@@ -255,6 +255,10 @@
     height: string; height_unit: string;
     weight: string; weight_unit: string;
     activity_level: string;
+    custom_kcal?: number | '' | null;
+    custom_water_cups?: number | '' | null;
+    custom_sugar_max?: number | '' | null;
+    custom_fiber_g?: number | '' | null;
   }>>([]);
   let showAddMember = $state(false);
   let activeMemberId = $state<string>('');
@@ -683,10 +687,10 @@
       editingMemberWeight = member.weight ?? '';
       editingMemberWeightUnit = member.weight_unit ?? 'kilos';
       editingMemberActivityLevel = member.activity_level ?? 'Sedentary';
-      editingMemberCustomKcal = member.custom_kcal ?? '';
-      editingMemberCustomWaterCups = member.custom_water_cups ?? '';
-      editingMemberCustomSugarMax = member.custom_sugar_max ?? '';
-      editingMemberCustomFiberG = member.custom_fiber_g ?? '';
+      editingMemberCustomKcal = String(member.custom_kcal ?? '');
+      editingMemberCustomWaterCups = String(member.custom_water_cups ?? '');
+      editingMemberCustomSugarMax = String(member.custom_sugar_max ?? '');
+      editingMemberCustomFiberG = String(member.custom_fiber_g ?? '');
       memberProfileDirty = false;
       editingMemberUseDRIMacros = true;
     }
@@ -2281,7 +2285,7 @@
       <div class="foods-columns-view">
         <MealColumns
           allUserIds={[$playerStore.id, ...householdMembers.filter(m => m.id).map(m => m.id)].filter((id): id is string => !!id)}
-          householdMembers={householdMembers.filter(m => m.id).map(m => ({ id: m.id, name: m.name, icon: m.icon ?? '👤' }))}
+          householdMembers={householdMembers.filter((m): m is typeof m & { id: string } => !!m.id).map(m => ({ id: m.id, name: m.name, icon: m.icon ?? '👤' }))}
         />
       </div>
       <div class="foods-list-view">

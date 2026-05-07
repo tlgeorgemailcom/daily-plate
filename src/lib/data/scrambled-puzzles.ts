@@ -2,6 +2,7 @@
 // Each puzzle has 10-16 valid food words
 
 import type { FoodGroup } from './food-portions';
+export type { FoodGroup };
 import scrambledWordsCsv from './scrambled-words.csv?raw';
 import scrambledWordsCombinedCsv from './scrambled-words-combined.csv?raw';
 

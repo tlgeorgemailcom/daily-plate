@@ -658,7 +658,7 @@
         }
       } else if (!imagePreviewUrl) {
         // Image was removed
-        imageUrl = null;
+        imageUrl = undefined;
       }
       
       // Build the updates
@@ -1538,7 +1538,7 @@
       <div class="header-actions">
         <span class="level-count">{completedLevels.size}/{filteredLevels.length} ✓</span>
         {#if canReadAllRecipes && selectedLevel}
-          <button class="share-btn" onclick={() => handlePlay(selectedLevel.id)} aria-label="Play this recipe">
+          <button class="share-btn" onclick={() => selectedLevel && handlePlay(selectedLevel.id)} aria-label="Play this recipe">
             ▶️ Play
           </button>
         {/if}

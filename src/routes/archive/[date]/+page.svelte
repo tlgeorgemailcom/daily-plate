@@ -9,7 +9,7 @@
   let isToday = $state(false);
 
   onMount(() => {
-    dateString = $page.params.date;
+    dateString = $page.params.date ?? '';
     displayDate = formatDateDisplay(dateString);
     
     // Parse date and get puzzle

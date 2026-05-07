@@ -78,6 +78,8 @@
     ndbId?: number;
     note: string;
     unit?: string;
+    nutrientKey?: string;
+    inferred?: string;
   };
 
   const SYMPTOM_TRIGGERS: Record<string, TriggerEntry[]> = {

@@ -1580,7 +1580,7 @@
       const finalScore = calculateScore();
       const uniqueGroups = new Set(placedWords.map(p => p.group)).size;
       saveGameScore('plate', finalScore, {
-        difficulty: difficultyMode,
+        difficulty: difficultyMode ?? undefined,
         wordsUsed: placedWords.length,
         groupsHit: uniqueGroups,
         streak,

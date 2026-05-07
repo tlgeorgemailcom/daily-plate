@@ -286,7 +286,7 @@
       saveHighScore();
       // Save score to cloud for premium users
       saveGameScore('matching', score, {
-        level,
+        level: String(level),
         wordsMatched,
         mode: gameMode
       });
