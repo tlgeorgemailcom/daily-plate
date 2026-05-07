@@ -1,11 +1,18 @@
 #!/usr/bin/env python3
-"""Generate src/lib/farmers-basket/generated-levels.ts from recipe CSVs.
+"""Generate the SvelteKit bundle (`generated-levels.ts`) from v3 data.
 
-Phase 7 (v3): for any recipe with a build at recipes_v3/output/builds/<id>.json,
-the bundled ``nutritionJson`` is sourced from the v3 pipeline instead of the
-legacy CSV/canonical/Pipeline-B path. v3 owns the rich ~70-nutrient panel that
-the Balanced Diet game needs. Non-v3 recipes continue on the existing path.
-See docs/v3.md §14b.
+Reads exclusively from ``recipes_v3/data/`` (CSVs + game_design.csv) and
+``recipes_v3/output/builds/`` (per-recipe JSON). The only external file
+touched is ``comboo.db``, used solely to look up SR-Legacy ``Long_Desc``
+for the bundled dish-row display name. All paths come from
+``recipes_v3.config``; no absolute paths in this file.
+
+Phase 8b-1 (2026-05-07): moved from project root to recipes_v3/tools/;
+game-design literals lifted to recipes_v3/lib/game_design.py +
+recipes_v3/data/game_design.csv. See docs/v3.md.
+
+Run:
+    python3 recipes_v3/tools/generate_bundle.py
 """
 
 import csv
@@ -14,22 +21,36 @@ import os
 import re
 import sqlite3
 import sys
+from pathlib import Path
 
-BASE = '/Volumes/training/Daily Food Chain/daily-food-chain'
-RECIPES_V3_DIR = f'{BASE}/recipes_v3'
-V3_BUILDS_DIR  = f'{RECIPES_V3_DIR}/output/builds'
-sys.path.insert(0, RECIPES_V3_DIR)
+# Make recipes_v3/ (config + lib) importable when run as a script.
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-# Phase 8a: all CSVs sourced from recipes_v3/data/. v1 src/lib/data/*.csv archived.
-RECIPES_CSV      = f'{RECIPES_V3_DIR}/data/recipes.csv'
-INGREDIENTS_CSV  = f'{RECIPES_V3_DIR}/data/recipe_ingredients.csv'
-INSTRUCTIONS_CSV = f'{RECIPES_V3_DIR}/data/recipe_instructions.csv'
-LEDGER_CSV       = f'{RECIPES_V3_DIR}/data/ingredients_ledger.csv'
-OUTPUT           = f'{BASE}/src/lib/farmers-basket/generated-levels.ts'
-# comboo.db is read only to look up SR-Legacy Long_Desc for the bundled dish row
-# display name (preserves the v1 bundle's dish-row name shape). All nutrition
-# math lives in recipes_v3/, not here.
-COMBOO_DB        = '/Users/macminidata/vscode/jetfooddata/jetcool/assets/comboo.db'
+from config import (  # noqa: E402
+    BUILDS_DIR,
+    BUNDLE_OUTPUT,
+    COMBOO_DB,
+    INGREDIENTS_LEDGER_CSV,
+    RECIPE_INGREDIENTS_CSV,
+    RECIPE_INSTRUCTIONS_CSV,
+    RECIPES_CSV,
+)
+from lib.game_design import (  # noqa: E402
+    CATEGORY_DIFFICULTY,
+    get_animal_spawns,
+    get_food_supply,
+    get_tools,
+    load_recipe_foods,
+)
+
+# Local aliases preserved so the rest of the file reads unchanged.
+V3_BUILDS_DIR    = str(BUILDS_DIR)
+RECIPES_CSV      = str(RECIPES_CSV)
+INGREDIENTS_CSV  = str(RECIPE_INGREDIENTS_CSV)
+INSTRUCTIONS_CSV = str(RECIPE_INSTRUCTIONS_CSV)
+LEDGER_CSV       = str(INGREDIENTS_LEDGER_CSV)
+OUTPUT           = str(BUNDLE_OUTPUT)
+COMBOO_DB        = str(COMBOO_DB)
 
 # Long-form (SR28 column) → short (game) nutrition keys.
 # Used when sourcing perServing from recipe-nutrition.json (Pipeline B output),
@@ -54,193 +75,6 @@ CANONICAL_NUTRIENT_COLS = {
     'SugarsTotal': 'sug',
     'Water': 'h2o',
 }
-
-ALL_FOODS = ['lettuce','tomato','carrot','cheese','egg','bread','apple','grapes','bacon','butter','chicken','fish']
-
-FOOD_ANIMAL = {
-    'lettuce': 'rabbit', 'carrot': 'rabbit',
-    'cheese':  'mouse',  'bread':  'mouse',
-    'grapes':  'bird',   'fish':   'bird',
-    'egg':     'fox',    'bacon':  'fox',    'chicken': 'fox',
-    'apple':   'squirrel',
-    'tomato':  'raccoon', 'butter': 'raccoon',
-}
-
-# Semantic mapping: recipe_id → FoodType[] for the game board
-RECIPE_FOODS = {
-    # Beverages
-    'BEV_001': ['grapes', 'butter'],
-    'BEV_002': ['grapes', 'butter'],
-    # Breakfast
-    'BFAST_001': ['carrot', 'butter'],
-    'BFAST_002': ['egg', 'bread', 'butter'],
-    'BFAST_003': ['egg', 'grapes', 'bread'],
-    'BFAST_004': ['egg', 'butter', 'bread'],
-    'BFAST_005': ['egg', 'grapes', 'bread'],
-    'BFAST_006': ['egg', 'butter', 'bread'],
-    'BFAST_007': ['egg', 'butter', 'bread'],
-    # Dinner
-    'DINR_001': ['bacon', 'carrot', 'butter'],
-    'DINR_002': ['bacon', 'carrot', 'tomato'],
-    'DINR_003': ['bacon', 'cheese', 'bread'],
-    'DINR_004': ['cheese', 'bread', 'tomato'],
-    'DINR_005': ['bacon', 'cheese', 'bread'],
-    'DINR_006': ['bread', 'tomato'],
-    'DINR_007': ['chicken', 'cheese', 'tomato'],
-    'DINR_008': ['chicken', 'carrot', 'butter'],
-    'DINR_009': ['chicken', 'tomato'],
-    'DINR_010': ['chicken', 'carrot'],
-    'DINR_011': ['bacon', 'tomato', 'carrot'],
-    'DINR_012': ['tomato', 'carrot'],
-    'DINR_013': ['bacon', 'carrot', 'tomato'],
-    'DINR_014': ['chicken', 'carrot', 'bread'],
-    'DINR_015': ['chicken', 'carrot'],
-    'DINR_016': ['chicken', 'carrot', 'grapes'],
-    'DINR_017': ['chicken', 'carrot'],
-    'DINR_018': ['fish', 'carrot'],
-    'DINR_019': ['chicken', 'grapes', 'carrot'],
-    'DINR_020': ['bacon', 'grapes', 'carrot'],
-    'DINR_021': ['carrot', 'lettuce', 'bread'],
-    'DINR_022': ['carrot', 'lettuce', 'bread'],
-    'DINR_023': ['cheese', 'bread', 'tomato'],
-    'DINR_024': ['cheese', 'egg', 'tomato'],
-    'DINR_025': ['bacon', 'cheese', 'tomato'],
-    'DINR_026': ['bacon', 'egg', 'bread'],
-    'DINR_027': ['chicken', 'tomato', 'butter'],
-    'DINR_029': ['tomato', 'bread'],
-    'DINR_031': ['cheese', 'egg', 'tomato'],
-    'DINR_032': ['bacon', 'cheese', 'lettuce'],
-    'DINR_033': ['chicken', 'cheese', 'lettuce'],
-    'DINR_034': ['cheese', 'bread'],
-    'DINR_035': ['bacon', 'bread'],
-    'DINR_036': ['bacon', 'carrot'],
-    'DINR_037': ['chicken', 'carrot', 'butter'],
-    # Japan
-    'JAPAN_003': ['bread', 'butter', 'carrot'],  # miso paste — fermented soybean
-    # Lunch
-    'LUNCH_001': ['bacon', 'cheese', 'bread'],
-    'LUNCH_002': ['bacon', 'bread', 'tomato'],
-    'LUNCH_003': ['bacon', 'bread', 'lettuce'],
-    'LUNCH_004': ['carrot', 'egg', 'bread'],
-    'LUNCH_005': ['bacon', 'bread', 'tomato'],
-    'LUNCH_006': ['cheese', 'bread'],
-    'LUNCH_007': ['bacon', 'lettuce', 'bread'],
-    'LUNCH_008': ['egg', 'carrot'],
-    'LUNCH_009': ['egg', 'carrot', 'tomato'],
-    # Salads
-    'SALAD_001': ['carrot', 'egg', 'tomato'],
-    'SALAD_002': ['lettuce', 'bacon', 'tomato'],
-    'SALAD_003': ['fish', 'carrot', 'tomato'],
-    # Sides
-    'SIDE_001': ['butter', 'bread'],
-    'SIDE_002': ['egg', 'bread', 'butter'],
-    'SIDE_003': ['egg', 'bread', 'butter'],
-    'SIDE_004': ['cheese', 'butter', 'bread'],
-    'SIDE_005': ['tomato', 'carrot'],
-    'SIDE_006': ['butter', 'carrot'],
-    'SIDE_007': ['carrot', 'butter'],
-    'SIDE_008': ['egg', 'carrot', 'butter'],
-    'SIDE_009': ['egg', 'butter', 'bread'],
-    'SIDE_010': ['egg', 'butter', 'bread'],
-    'SIDE_011': ['egg', 'butter', 'bread'],
-    'SIDE_012': ['cheese', 'butter', 'bread'],
-    # Snacks
-    'SNACK_001': ['bacon', 'bread', 'egg'],
-    'SNACK_002': ['carrot', 'bread', 'bacon'],
-    'SNACK_003': ['chicken', 'carrot', 'bread'],
-    'SNACK_004': ['bacon', 'carrot', 'bread'],
-    'SNACK_005': ['carrot', 'butter'],
-    # Sweets
-    'SWEET_001': ['apple', 'bread'],
-    'SWEET_002': ['apple', 'butter'],
-    'SWEET_003': ['egg', 'bread'],
-    'SWEET_004': ['egg', 'butter', 'cheese'],
-    'SWEET_005': ['egg', 'butter', 'bread'],
-    'SWEET_006': ['egg', 'butter', 'bread'],
-    'SWEET_007': ['egg', 'butter', 'bread'],
-    'SWEET_008': ['egg', 'butter', 'bread'],
-    'SWEET_009': ['egg', 'grapes', 'butter'],
-    'SWEET_010': ['egg', 'butter', 'bread'],
-    'SWEET_011': ['egg', 'butter', 'bread'],
-    'SWEET_012': ['egg', 'butter', 'bread'],
-    'SWEET_013': ['egg', 'butter', 'bread'],
-    'SWEET_014': ['egg', 'butter', 'bread'],
-    'SWEET_015': ['egg', 'butter', 'bread'],
-    'SWEET_016': ['egg', 'butter', 'bread'],
-    'SWEET_017': ['egg', 'butter', 'bread'],
-    'SWEET_018': ['butter', 'bread'],
-    'SWEET_019': ['egg', 'butter', 'bread'],
-    'SWEET_020': ['grapes', 'butter'],
-    'SWEET_021': ['butter', 'bread'],
-    'SWEET_022': ['egg', 'grapes'],
-    'SWEET_023': ['butter', 'bread'],
-    'SWEET_024': ['egg', 'butter', 'bread'],
-    'SWEET_025': ['egg', 'grapes', 'butter'],
-    'SWEET_026': ['butter', 'bread'],
-    'SWEET_027': ['butter', 'bread'],
-    'SWEET_028': ['egg', 'butter', 'bread'],
-    'SWEET_029': ['egg', 'butter', 'bread'],
-    'SWEET_030': ['grapes', 'butter'],
-    'SWEET_031': ['grapes', 'butter'],
-    'SWEET_032': ['egg', 'butter', 'bread'],
-    'SWEET_033': ['grapes', 'butter'],
-    'SWEET_034': ['egg', 'butter', 'bread'],
-    'SWEET_035': ['grapes', 'butter'],
-    'SWEET_036': ['apple', 'butter'],
-    'SWEET_037': ['egg', 'butter'],
-    'SWEET_038': ['grapes', 'butter'],
-    'SWEET_039': ['grapes', 'butter'],
-    'SWEET_040': ['grapes', 'butter'],
-    'SWEET_041': ['egg', 'butter'],
-}
-
-# Difficulty 1=easiest 4=hardest
-CATEGORY_DIFFICULTY = {
-    'Beverages':         1,
-    'Breakfast':         2,
-    'Salads':            2,
-    'Sides':             2,
-    'Snacks':            3,
-    'Lunch':             3,
-    'Sweets & Desserts': 3,
-    'Dinner':            4,
-    'Japan':             3,
-}
-
-def get_tools(difficulty):
-    wall = min(3 + difficulty, 7)
-    fence = 2 if difficulty >= 2 else 1
-    tools = [
-        {'type': 'wall',  'count': wall,  'emoji': '🧱'},
-        {'type': 'fence', 'count': fence, 'emoji': '🚧'},
-    ]
-    if difficulty >= 3:
-        tools.append({'type': 'scarecrow', 'count': 1, 'emoji': '🧹'})
-    if difficulty >= 4:
-        tools.append({'type': 'cat', 'count': 1, 'emoji': '🐱'})
-    return tools
-
-def get_animal_spawns(foods, difficulty):
-    seen = set()
-    spawns = []
-    base_delay = max(8000 - difficulty * 1500, 2500)
-    for food in foods:
-        animal = FOOD_ANIMAL.get(food)
-        if animal and animal not in seen:
-            seen.add(animal)
-            spawns.append({'type': animal, 'delay': base_delay})
-            base_delay += 1500
-    # Add raccoon on hardest if not already present
-    if difficulty >= 4 and 'raccoon' not in seen and len(spawns) < 4:
-        spawns.append({'type': 'raccoon', 'delay': base_delay + 1000})
-    return spawns
-
-def get_food_supply(foods, difficulty):
-    supply = {f: 0 for f in ALL_FOODS}
-    base = 2 + difficulty
-    for i, food in enumerate(foods):
-        supply[food] = max(2, base - i)
-    return supply
 
 def esc(s):
     """Escape a string for TypeScript single-quoted string."""
@@ -531,6 +365,9 @@ recipes = list(csv.DictReader(open(RECIPES_CSV)))
 
 ledger = {r['ingredient_key']: r for r in csv.DictReader(open(LEDGER_CSV))}
 
+# Per-recipe board foods (game_design.csv, Phase 8b-1).
+recipe_foods = load_recipe_foods()
+
 # Long_Desc lookup (dish-row display name only). Cached at startup.
 _comboo = sqlite3.connect(COMBOO_DB)
 _long_desc_by_ndb = {}
@@ -586,7 +423,7 @@ for recipe in recipes:
     if rid not in authored_recipe_ids:
         continue
     level_num += 1
-    foods = RECIPE_FOODS.get(rid, ['bread'])
+    foods = recipe_foods.get(rid, ['bread'])
     difficulty = CATEGORY_DIFFICULTY.get(recipe.get('category', ''), 3)
 
     tools        = get_tools(difficulty)
@@ -672,7 +509,7 @@ for recipe in recipes:
   }}"""
     level_blocks.append(block)
 
-output = """// Auto-generated — do not edit. Run generate_levels.py to regenerate.
+output = """// Auto-generated — do not edit. Run recipes_v3/tools/generate_bundle.py to regenerate.
 import type { Level } from './types';
 
 export const LEVELS: Level[] = [

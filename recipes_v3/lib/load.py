@@ -11,9 +11,10 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
 
-ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "data"
-COMBOO_DB = Path("/Users/macminidata/vscode/jetfooddata/jetcool/assets/comboo.db")
+from config import COMBOO_DB, DATA_DIR, RECIPES_V3_ROOT
+
+ROOT = RECIPES_V3_ROOT
+DATA = DATA_DIR
 
 # 7 macro nutrients (legacy MACROS tuple — preserved for back-compat with audit
 # code that reasons only over macros). Names match comboo.db column names exactly.

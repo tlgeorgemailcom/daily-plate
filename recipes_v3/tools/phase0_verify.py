@@ -16,9 +16,12 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "data"
-COMBOO_DB = Path("/Users/macminidata/vscode/jetfooddata/jetcool/assets/comboo.db")
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+from config import COMBOO_DB, DATA_DIR, RECIPES_V3_ROOT  # noqa: E402
+
+ROOT = RECIPES_V3_ROOT
+DATA = DATA_DIR
 
 
 def load_csv(path: Path) -> list[dict]:

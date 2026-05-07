@@ -1,4 +1,4 @@
-// Auto-generated — do not edit. Run generate_levels.py to regenerate.
+// Auto-generated — do not edit. Run recipes_v3/tools/generate_bundle.py to regenerate.
 import type { Level } from './types';
 
 export const LEVELS: Level[] = [
