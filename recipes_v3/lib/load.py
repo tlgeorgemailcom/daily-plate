@@ -127,6 +127,7 @@ class Recipe:
 class LedgerEntry:
     ingredient_key: str
     ndb_no: str
+    food_word: str
     default_long_desc: str
     default_display_name: str
 
@@ -190,6 +191,7 @@ def load_ledger() -> dict[str, LedgerEntry]:
             out[key] = LedgerEntry(
                 ingredient_key=key,
                 ndb_no=row["ndb_no"].strip(),
+                food_word=row.get("food_word", "").strip(),
                 default_long_desc=row.get("default_long_desc", "").strip(),
                 default_display_name=row.get("default_display_name", "").strip(),
             )

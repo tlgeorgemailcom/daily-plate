@@ -28,7 +28,6 @@ export interface Food {
   h2o: number;      // Water (g)
   sug: number;      // Total Sugar (g)
   portions: Portion[];  // [0] is always custom (100g base)
-  micros?: Record<string, number | null> | null;  // per-100g micronutrients (recipe foods only)
 }
 
 export interface NutrientValues {
@@ -49649,6 +49648,73 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "package (7 oz)",
         "gm": 199.0
+      }
+    ]
+  },
+  {
+    "word": "COCONUTCREAMSWEET",
+    "display": "Coconut Cream Sweetened",
+    "groups": [],
+    "ndb": "12116",
+    "desc": "Nuts, coconut cream, canned, sweetened",
+    "cal": 357.0,
+    "pro": 1.17,
+    "fat": 16.31,
+    "carb": 53.21,
+    "fib": 0.2,
+    "h2o": 28.97,
+    "sug": 51.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 15.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 240.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.0
+      }
+    ]
+  },
+  {
+    "word": "FLOURPASTRY",
+    "display": "Pastry Flour",
+    "groups": [],
+    "ndb": "20623",
+    "desc": "Wheat flour, white (industrial), 9% protein, bleached, enriched",
+    "cal": 367.0,
+    "pro": 8.89,
+    "fat": 1.43,
+    "carb": 77.32,
+    "fib": 0.0,
+    "h2o": 11.85,
+    "sug": 0.54,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 125.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 8.0
       }
     ]
   }

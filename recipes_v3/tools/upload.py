@@ -101,7 +101,7 @@ def _build_payload(rid: str, recipes, ings, ledger) -> dict:
             "name": r.display_name_override or entry.default_display_name or r.ingredient_key,
             "quantity": r.qty_display,
             "section": r.section,
-            "foodWord": "",
+            "foodWord": entry.food_word,
             "ndbNo": entry.ndb_no,
             "portionDesc": "g",
             "portionGrams": r.grams,
