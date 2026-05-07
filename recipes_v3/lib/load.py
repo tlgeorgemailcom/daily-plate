@@ -1,0 +1,297 @@
+"""Schema-validated CSV + comboo.db loaders.
+
+All CSV files are read once; data is returned as plain dicts/lists for
+downstream modules. No globals, no mutation.
+"""
+from __future__ import annotations
+
+import csv
+import sqlite3
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Iterable
+
+ROOT = Path(__file__).resolve().parents[1]
+DATA = ROOT / "data"
+COMBOO_DB = Path("/Users/macminidata/vscode/jetfooddata/jetcool/assets/comboo.db")
+
+# 7 macro nutrients (legacy MACROS tuple — preserved for back-compat with audit
+# code that reasons only over macros). Names match comboo.db column names exactly.
+MACROS = (
+    "Energy_KCal",
+    "Protein",
+    "TotalLipidFat",
+    "Carbohydrate",
+    "FiberTotalDietary",
+    "SugarsTotal",
+    "Water",
+)
+
+# Full nutrient panel v3 builds for the Balanced Diet game (~60+ nutrients).
+# Order matches the historical Turso nutrition_json.per100g key order from
+# scripts/upload-dev-recipe.mjs so consumers see no key reordering.
+# omega3 and omega6 are DERIVED in build.py (not direct comboo columns).
+EXTENDED_NUTRIENTS = (
+    "Energy_KCal",
+    "Water",
+    "Protein",
+    "TotalLipidFat",
+    "Carbohydrate",
+    "FiberTotalDietary",
+    "SugarsTotal",
+    "Cholesterol",
+    "FattyAcids_totalSaturated",
+    "FattyAcids_totalMonounsaturated",
+    "FattyAcids_totalPolyunsaturated",
+    "LinoleicAcid",
+    "alphaLinolenicAcid",
+    "EPA_20_5n3",
+    "DPA_22_5n3",
+    "DHA_22_6n3",
+    "VitaminA_RAE",
+    "Retinol",
+    "Carotene_beta",
+    "VitaminD",
+    "VitaminE_alphaTocopherol",
+    "VitaminK_phylloquinone",
+    "VitaminC_totalAscorbicAcid",
+    "Thiamin",
+    "Riboflavin",
+    "Niacin",
+    "PantothenicAcid",
+    "VitaminB6",
+    "Folate_total",
+    "Folate_food",
+    "Folate_DFE",
+    "FolicAcid",
+    "VitaminB12",
+    "Choline_total",
+    "Betaine",
+    "LuteinZeaxanthin",
+    "Lycopene",
+    "Calcium_Ca",
+    "Iron_Fe",
+    "Magnesium_Mg",
+    "Phosphorus_P",
+    "Potassium_K",
+    "Sodium_Na",
+    "Zinc_Zn",
+    "Copper_Cu",
+    "Manganese_Mn",
+    "Selenium_Se",
+    "Tryptophan",
+    "Threonine",
+    "Isoleucine",
+    "Leucine",
+    "Lysine",
+    "Methionine",
+    "Cystine",
+    "Phenylalanine",
+    "Tyrosine",
+    "Valine",
+    "Arginine",
+    "Histidine",
+    "Alanine",
+    "AsparticAcid",
+    "GlutamicAcid",
+    "Glycine",
+    "Proline",
+    "Serine",
+)
+
+# Derived nutrients computed from EXTENDED_NUTRIENTS in build.py.
+DERIVED_NUTRIENTS = ("omega3", "omega6")
+
+
+@dataclass(frozen=True)
+class Recipe:
+    recipe_id: str
+    recipe_name: str
+    food_word: str
+    category: str
+    canonical_ndb_no: str | None
+    servings_label: str
+    servings_count: int
+    sr_rule: str
+    cook_method: str
+    yield_factor_water: float
+    yield_factor_fat: float
+    yield_factor_other: float
+    status: str
+    audit_status: str = ""
+    audit_notes: str = ""
+
+
+@dataclass(frozen=True)
+class LedgerEntry:
+    ingredient_key: str
+    ndb_no: str
+    default_long_desc: str
+    default_display_name: str
+
+
+@dataclass(frozen=True)
+class IngredientRow:
+    recipe_id: str
+    row_order: str  # e.g. "1", "1b", "12" — sorted naturally
+    ingredient_key: str
+    qty_display: str
+    grams: float
+    section: str
+    is_optional: bool
+    display_name_override: str | None
+
+
+def _parse_float(s: str, default: float = 0.0) -> float:
+    s = (s or "").strip()
+    if not s:
+        return default
+    return float(s)
+
+
+def _parse_int(s: str, default: int = 0) -> int:
+    s = (s or "").strip()
+    if not s:
+        return default
+    return int(float(s))
+
+
+def load_recipes() -> dict[str, Recipe]:
+    out: dict[str, Recipe] = {}
+    with open(DATA / "recipes.csv", newline="", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            rid = row["recipe_id"].strip()
+            out[rid] = Recipe(
+                recipe_id=rid,
+                recipe_name=row["recipe_name"].strip(),
+                food_word=row.get("food_word", "").strip(),
+                category=row.get("category", "").strip(),
+                canonical_ndb_no=(row.get("canonical_ndb_no") or "").strip() or None,
+                servings_label=row.get("servings_label", "").strip(),
+                servings_count=_parse_int(row.get("servings_count", "1"), 1),
+                sr_rule=row.get("sr_rule", "").strip(),
+                cook_method=row.get("cook_method", "raw").strip().lower(),
+                yield_factor_water=_parse_float(row.get("yield_factor_water"), 1.0),
+                yield_factor_fat=_parse_float(row.get("yield_factor_fat"), 1.0),
+                yield_factor_other=_parse_float(row.get("yield_factor_other"), 1.0),
+                status=row.get("status", "").strip(),
+                audit_status=row.get("audit_status", "").strip(),
+                audit_notes=row.get("audit_notes", "").strip(),
+            )
+    return out
+
+
+def load_ledger() -> dict[str, LedgerEntry]:
+    out: dict[str, LedgerEntry] = {}
+    with open(DATA / "ingredients_ledger.csv", newline="", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            key = row["ingredient_key"].strip()
+            out[key] = LedgerEntry(
+                ingredient_key=key,
+                ndb_no=row["ndb_no"].strip(),
+                default_long_desc=row.get("default_long_desc", "").strip(),
+                default_display_name=row.get("default_display_name", "").strip(),
+            )
+    return out
+
+
+def load_ingredients() -> dict[str, list[IngredientRow]]:
+    """Return {recipe_id: [rows...]}, rows sorted by row_order (natural)."""
+    def sort_key(s: str) -> tuple[int, str]:
+        # Natural sort: leading digits as int, trailing letters as suffix
+        digits = ""
+        rest = ""
+        for i, ch in enumerate(s):
+            if ch.isdigit():
+                digits += ch
+            else:
+                rest = s[i:]
+                break
+        return (int(digits) if digits else 0, rest)
+
+    out: dict[str, list[IngredientRow]] = {}
+    with open(DATA / "recipe_ingredients.csv", newline="", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            rid = row["recipe_id"].strip()
+            ingr = IngredientRow(
+                recipe_id=rid,
+                row_order=str(row.get("row_order", "")).strip(),
+                ingredient_key=row["ingredient_key"].strip(),
+                qty_display=row.get("qty_display", "").strip(),
+                grams=_parse_float(row.get("grams"), 0.0),
+                section=row.get("section", "main").strip(),
+                is_optional=row.get("is_optional", "false").strip().lower() == "true",
+                display_name_override=(row.get("display_name_override") or "").strip() or None,
+            )
+            out.setdefault(rid, []).append(ingr)
+    for rid in out:
+        out[rid].sort(key=lambda r: sort_key(r.row_order))
+    return out
+
+
+def load_instructions() -> dict[str, list[str]]:
+    """Return {recipe_id: [step_text in order]}."""
+    out: dict[str, list[str]] = {}
+    with open(DATA / "recipe_instructions.csv", newline="", encoding="utf-8") as f:
+        # Detect column names — v2 may use 'step_order'/'step_text' or other.
+        reader = csv.DictReader(f)
+        fieldnames = reader.fieldnames or []
+        order_col = next((c for c in fieldnames if "order" in c.lower() or c.lower() == "row_order"), None)
+        text_col = next((c for c in fieldnames if "text" in c.lower() or c.lower() in ("instruction", "step")), None)
+        if not order_col or not text_col:
+            raise RuntimeError(f"Unrecognized instruction columns: {fieldnames}")
+        rows: list[tuple[str, str, str]] = []
+        for r in reader:
+            rid = r["recipe_id"].strip()
+            order = str(r.get(order_col, "")).strip()
+            text = r.get(text_col, "").strip()
+            rows.append((rid, order, text))
+        rows.sort(key=lambda x: (x[0], x[1]))
+        for rid, _, text in rows:
+            out.setdefault(rid, []).append(text)
+    return out
+
+
+def load_comboo_nutrients(ndb_nos: Iterable[str]) -> dict[str, dict[str, float]]:
+    """Return {ndb_no: {macro_name: value_per_100g}} for the requested NDBs.
+
+    Missing nutrients default to 0.0 (rare; comboo.db is dense for macros).
+    """
+    ndbs = sorted(set(str(n) for n in ndb_nos if n))
+    if not ndbs:
+        return {}
+    # Build column list: include every EXTENDED nutrient PLUS Long_Desc (used for
+    # added-sugar text-heuristic fallback). Wrap names in double quotes since
+    # comboo.db uses quoted identifiers.
+    conn = sqlite3.connect(str(COMBOO_DB))
+    try:
+        cur = conn.cursor()
+        nutrient_cols = list(EXTENDED_NUTRIENTS)
+        quoted = ['"NDB_NO"', '"Long_Desc"', *(f'"{c}"' for c in nutrient_cols)]
+        placeholders = ",".join("?" * len(ndbs))
+        sql = f"SELECT {', '.join(quoted)} FROM DataCentralCombo WHERE NDB_NO IN ({placeholders})"
+        out: dict[str, dict[str, float]] = {}
+        for row in cur.execute(sql, ndbs).fetchall():
+            ndb = str(row[0])
+            long_desc = row[1] or ""
+            nuts: dict[str, float] = {}
+            for i, m in enumerate(nutrient_cols):
+                nuts[m] = float(row[i + 2] or 0.0)
+            # Stash Long_Desc under a non-conflicting key for downstream use.
+            nuts["_long_desc"] = long_desc  # type: ignore[assignment]
+            out[ndb] = nuts
+        return out
+    finally:
+        conn.close()
+
+
+def load_canonical_per100g(ndb_no: str) -> dict[str, float] | None:
+    """Single canonical NDB lookup for Rule A/B audit."""
+    if not ndb_no:
+        return None
+    nuts = load_comboo_nutrients([ndb_no])
+    rec = nuts.get(str(ndb_no))
+    if rec is None:
+        return None
+    # Strip the internal _long_desc key so callers receive a pure macro/nutrient dict.
+    return {k: v for k, v in rec.items() if not k.startswith("_")}  # type: ignore[misc]

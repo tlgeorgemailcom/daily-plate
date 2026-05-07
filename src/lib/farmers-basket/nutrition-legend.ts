@@ -11,32 +11,32 @@ export const NUTRITION_LEGEND_ITEMS: NutritionLegendItem[] = [
   {
     key: 'usda',
     label: 'USDA',
-    title: 'USDA exact dish data',
-    description: 'Direct USDA dish-level data for this recipe. The per-serving nutrients come from a matching SR Legacy dish entry.'
+    title: 'Matches USDA — full agreement',
+    description: 'Nutrients are calculated from the recipe ingredients, and the result agrees with USDA SR Legacy\u2019s matching dish entry within ±5% on every macro (calories, protein, fat, carbs, fiber, sugar, water).'
   },
   {
     key: 'usda-plus',
     label: 'USDA+',
-    title: 'USDA dish data with calculated fill-ins',
-    description: 'USDA dish-level data form SR Legacy is used first, then missing values such as sugar or fiber are filled from the recipe ingredients in SR Legacy.'
+    title: 'Matches USDA — fills gaps in USDA',
+    description: 'A matching USDA SR Legacy dish exists but is missing some values (commonly fiber or sugar are listed as zero). The recipe-ingredient calculation supplies those missing values; everything USDA does report agrees within ±5%.'
   },
   {
     key: 'calc',
     label: 'Calc',
-    title: 'Calculated from recipe ingredients',
-    description: 'The app calculates nutrients from the recipe ingredients in SR Legacy because the closest USDA commercial dish is too different from the homemade version.'
+    title: 'Recipe calculation differs from USDA',
+    description: 'A USDA SR Legacy dish with the same name exists, but it is a commercial-composite entry that differs from a from-scratch home version by more than ±5% on at least one macro. The displayed nutrients come from the recipe-ingredient calculation, which better reflects this homemade version.'
   },
   {
     key: 'calc-plus',
     label: 'Recipe',
-    title: 'Recipe-based estimate',
-    description: 'The app calculates nutrients directly from the recipe ingredients in SR Legacy because there is no matching USDA dish entry for this recipe.'
+    title: 'Recipe calculation only',
+    description: 'No USDA SR Legacy dish entry matches this recipe by name. Nutrients are calculated entirely from the recipe ingredients in SR Legacy.'
   },
   {
     key: 'shared',
     label: 'Shared',
     title: 'Shared recipe',
-    description: 'This recipe was submitted by a player rather than shipped as a built-in recipe. An attempted is made by both the player and moderator to link ingredients to SR Legacy'
+    description: 'This recipe was submitted by a player rather than shipped as a built-in. Both the player and a moderator link each ingredient to SR Legacy so the nutrient calculation uses real USDA composition data.'
   }
 ];
 

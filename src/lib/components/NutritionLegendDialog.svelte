@@ -149,7 +149,6 @@
   .legend-row.is-focused {
     border-color: #c67a2b;
     box-shadow: inset 0 0 0 2px rgba(198, 122, 43, 0.18);
-    background: #fff3de;
   }
 
   .legend-chip {

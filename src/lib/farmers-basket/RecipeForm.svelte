@@ -94,6 +94,10 @@
     hideDefaultActions?: boolean;
     /** Custom actions snippet - receives formData and isValid */
     customActions?: import('svelte').Snippet<[{ formData: RecipeFormData; isValid: boolean }]>;
+    /** SWEET_xxx recipe id — when supplied and Rule A/B, the audit chart
+     *  pulls the "Built" column from recipes_v3/output/builds/<id>.json
+     *  via /api/recipes/v3-build/<id>. Read-only; no Turso writes. */
+    recipeId?: string;
   }
   
   let { 
@@ -107,7 +111,8 @@
     errorMessage = '',
     hideDefaultActions = false,
     customActions,
-    disableSuggestions = false
+    disableSuggestions = false,
+    recipeId
   }: Props = $props();
   
   // Constants
@@ -659,6 +664,90 @@
   });
   // ─────────────────────────────────────────────────────────────────────────────
 
+  // ─── v3 pipeline build (read-only file artifact) ─────────────────────────────
+  // For Rule A/B SWEET_xxx recipes, fetch the v3 build's per-100g from
+  // /api/recipes/v3-build/<recipe_id> (which reads recipes_v3/output/builds/<id>.json).
+  // The audit gap chart prefers this over the live SR28 preview because v3 has
+  // been independently validated against canonical USDA. v3 is never uploaded
+  // to Turso here — this is read-only display.
+  type V3Ingredient = {
+    ingredient_key: string;
+    ndb_no: string;
+    long_desc: string;
+    grams: number;
+    section?: string;
+    qty_display?: string;
+  };
+  type V3Build = {
+    recipe_id: string;
+    per100g?: PreviewNutrition['per100g'];
+    perServing?: Record<string, number>;
+    gramsPerServing?: number;
+    yieldFactorWater?: number;
+    yieldFactorFat?: number;
+    srRule?: string;
+    cookMethod?: string;
+    auditStatus?: string;
+    auditNotes?: string;
+    ingredients?: V3Ingredient[];
+  };
+  let v3Build = $state<V3Build | null>(null);
+  let v3BuildMissing = $state(false);
+
+  $effect(() => {
+    const id = recipeId;
+    if (!id || !/^[A-Z]+_[0-9]+$/.test(id) || !isCanonicalRule) {
+      v3Build = null;
+      v3BuildMissing = false;
+      return;
+    }
+    let cancelled = false;
+    (async () => {
+      try {
+        const res = await fetch(`/api/recipes/v3-build/${encodeURIComponent(id)}`);
+        if (cancelled) return;
+        if (res.status === 404) { v3Build = null; v3BuildMissing = true; return; }
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json() as V3Build;
+        v3Build = data;
+        v3BuildMissing = false;
+        // ── v3 is source of truth: replace form ingredients with v3 ingredients ──
+        if (data.ingredients && data.ingredients.length > 0) {
+          const ndbToFood = new Map(FOODS.map(f => [f.ndb, f]));
+          ingredients = data.ingredients.map((ing, i) => {
+            const food = ndbToFood.get(ing.ndb_no);
+            return {
+              id: i + 1,
+              name: ing.long_desc || ing.ingredient_key,
+              quantity: ing.qty_display || `${ing.grams.toFixed(1)} g`,
+              gameFood: '' as FoodType | '',
+              animal: '' as AnimalType | '',
+              foodWord: food?.word,
+              ndbNo: ing.ndb_no,
+              portionDesc: ing.qty_display || `${ing.grams.toFixed(1)} g`,
+              portionGrams: ing.grams,
+              servingCount: 1,
+              exempt: false,
+            };
+          });
+          nextIngredientId = ingredients.length + 1;
+          if (data.cookMethod) {
+            const cm = data.cookMethod.trim();
+            const norm = cm.toLowerCase() === 'no heat' || cm.toLowerCase() === 'noheat' || cm.toLowerCase() === 'none'
+              ? 'No heat'
+              : cm.charAt(0).toUpperCase() + cm.slice(1).toLowerCase();
+            const match = COOKING_METHODS.find(m => m.toLowerCase() === norm.toLowerCase());
+            if (match) cookingMethod = match;
+          }
+        }
+      } catch {
+        if (!cancelled) { v3Build = null; v3BuildMissing = true; }
+      }
+    })();
+    return () => { cancelled = true; };
+  });
+  // ─────────────────────────────────────────────────────────────────────────────
+
   // ─── Live macro totals from linked ingredients ───────────────────────────────
   const FOOD_MAP_LOCAL = new Map(FOODS.map(f => [f.word, f]));
   const FOOD_MAP_BY_NDB = new Map(FOODS.map(f => [f.ndb, f]));
@@ -758,7 +847,83 @@
       instructions = instructions.filter(i => i.id !== id);
     }
   }
-  
+
+  // ── Edit/Preview dialog ────────────────────────────────────────────────
+  let showEditPreviewDialog = $state(false);
+  let dialogView: 'preview' | 'edit' = $state('preview');
+  let dialogIngredientsSnapshot: RecipeIngredient[] = [];
+  let dialogInstructionsSnapshot: RecipeInstruction[] = [];
+
+  function openEditPreviewDialog() {
+    // Deep copy current arrays so Close can revert
+    dialogIngredientsSnapshot = ingredients.map(i => ({ ...i }));
+    dialogInstructionsSnapshot = instructions.map(s => ({ ...s }));
+    dialogView = 'preview';
+    showEditPreviewDialog = true;
+  }
+
+  function closeEditPreviewDiscard() {
+    // Revert any reorders/edits made inside the dialog
+    ingredients = dialogIngredientsSnapshot.map(i => ({ ...i }));
+    instructions = dialogInstructionsSnapshot.map(s => ({ ...s }));
+    showEditPreviewDialog = false;
+  }
+
+  function closeEditPreviewSave() {
+    // Keep current ingredients/instructions order; user still has to hit
+    // the form's main Save/Submit to persist to the server
+    showEditPreviewDialog = false;
+  }
+
+  function moveIngredient(id: number, dir: -1 | 1) {
+    const idx = ingredients.findIndex(i => i.id === id);
+    if (idx < 0) return;
+    const target = idx + dir;
+    if (target < 0 || target >= ingredients.length) return;
+    const next = [...ingredients];
+    [next[idx], next[target]] = [next[target], next[idx]];
+    ingredients = next;
+  }
+
+  function moveInstruction(id: number, dir: -1 | 1) {
+    const idx = instructions.findIndex(s => s.id === id);
+    if (idx < 0) return;
+    const target = idx + dir;
+    if (target < 0 || target >= instructions.length) return;
+    const next = [...instructions];
+    [next[idx], next[target]] = [next[target], next[idx]];
+    instructions = next;
+  }
+
+  // "What changed" summary inside the dialog (snapshot vs current)
+  function dialogChangeSummary(): string[] {
+    const changes: string[] = [];
+    const sameOrder = (a: { id: number }[], b: { id: number }[]) =>
+      a.length === b.length && a.every((x, i) => x.id === b[i].id);
+    if (!sameOrder(dialogIngredientsSnapshot, ingredients)) {
+      changes.push('Ingredients reordered');
+    }
+    if (!sameOrder(dialogInstructionsSnapshot, instructions)) {
+      changes.push('Instructions reordered');
+    }
+    // Text edits
+    const ingTextChanges = ingredients.filter(cur => {
+      const prev = dialogIngredientsSnapshot.find(p => p.id === cur.id);
+      return prev && (prev.name !== cur.name || prev.quantity !== cur.quantity);
+    }).length;
+    if (ingTextChanges > 0) {
+      changes.push(`${ingTextChanges} ingredient${ingTextChanges === 1 ? '' : 's'} edited`);
+    }
+    const stepTextChanges = instructions.filter(cur => {
+      const prev = dialogInstructionsSnapshot.find(p => p.id === cur.id);
+      return prev && prev.text !== cur.text;
+    }).length;
+    if (stepTextChanges > 0) {
+      changes.push(`${stepTextChanges} step${stepTextChanges === 1 ? '' : 's'} edited`);
+    }
+    return changes;
+  }
+
   // Form submission
   function handleSubmit(e: Event) {
     e.preventDefault();
@@ -1615,9 +1780,10 @@
         {/if}
 
         <!-- Audit gap chart: independent of which preview is showing -->
-        {#if isCanonicalRule && canonicalNutritionJson?.per100g && liveNutritionJson?.per100g}
+        {#if isCanonicalRule && canonicalNutritionJson?.per100g && (v3Build?.per100g || liveNutritionJson?.per100g)}
           {@const c = canonicalNutritionJson.per100g}
-          {@const b = liveNutritionJson.per100g}
+          {@const builtSource = v3Build?.per100g ? 'v3' : 'live'}
+          {@const b = (v3Build?.per100g ?? liveNutritionJson!.per100g) as NonNullable<PreviewNutrition['per100g']>}
           {@const macros = [
             { key: 'cal',  label: 'Calories', unit: 'kcal', canon: c.Energy_KCal,       built: b.Energy_KCal,       major: true  },
             { key: 'pro',  label: 'Protein',  unit: 'g',    canon: c.Protein,           built: b.Protein,           major: true  },
@@ -1649,6 +1815,42 @@
                 {gapsOver5.length} macro{gapsOver5.length === 1 ? '' : 's'} exceed ±5% gap{gapsOver5.length > 0 ? `: ${gapsOver5.map(m => m.label).join(', ')}` : ''}
               {/if}
             </div>
+            <div class="audit-gap-source">
+              Built source: <strong>{builtSource === 'v3' ? `v3 pipeline (file)` : 'live SR28 preview'}</strong>
+              {#if builtSource === 'v3' && v3Build}
+                · yfW={v3Build.yieldFactorWater?.toFixed(2) ?? '—'} · gps={v3Build.gramsPerServing ?? '—'}g
+              {/if}
+              {#if v3BuildMissing && recipeId}
+                · <em>v3 build artifact not found for {recipeId} (run recipes_v3/tools/build_all.py)</em>
+              {/if}
+            </div>
+            {#if v3Build?.auditStatus === 'accepted'}
+              <div class="audit-gap-accepted">
+                <strong>✓ Accepted as-is</strong>
+                {#if v3Build.auditNotes}— {v3Build.auditNotes}{/if}
+              </div>
+            {/if}
+            {#if v3Build?.ingredients && v3Build.ingredients.length > 0}
+              <details class="v3-ingredients-panel">
+                <summary>v3 source ingredients ({v3Build.ingredients.length}) — read-only reference</summary>
+                <p class="v3-ingredients-note">
+                  These are the grams the v3 audit chart used. If the form's ingredient list above shows different quantities, edit the form to match (or accept the gap).
+                </p>
+                <table class="v3-ingredients-table">
+                  <thead><tr><th>Ingredient</th><th>NDB</th><th class="num">Grams</th><th>Display</th></tr></thead>
+                  <tbody>
+                    {#each v3Build.ingredients as ing}
+                      <tr>
+                        <td>{ing.long_desc || ing.ingredient_key}</td>
+                        <td class="mono">{ing.ndb_no}</td>
+                        <td class="num">{ing.grams.toFixed(1)}</td>
+                        <td>{ing.qty_display || ''}</td>
+                      </tr>
+                    {/each}
+                  </tbody>
+                </table>
+              </details>
+            {/if}
             <table class="audit-gap-table">
               <thead>
                 <tr>
@@ -1666,7 +1868,7 @@
                   {@const pct = m.canon > 0 ? (delta / m.canon) * 100 : (m.built > 0 ? Infinity : 0)}
                   {@const canonMissing = m.canon === 0 && m.built > 0}
                   {@const status = canonMissing
-                    ? (sr28Rule === 'Rule B' ? 'Rule B fill (canonical missing)' : '⚠ canonical missing — should be Rule B')
+                    ? (sr28Rule === 'Rule B' ? 'canonical missing — built value used' : '⚠ canonical missing — should be Rule B')
                     : (Math.abs(pct) < 5 ? 'match' : Math.abs(pct) < 15 ? '⚠ adjust ingredients' : '🔴 large gap — adjust or reclassify')}
                   {@const rowClass = canonMissing
                     ? (sr28Rule === 'Rule B' ? 'fill' : 'bad')
@@ -2007,6 +2209,9 @@
   
   <!-- Form Actions -->
   <div class="form-actions">
+    <button type="button" class="edit-preview-btn" onclick={openEditPreviewDialog}>
+      Edit / Preview
+    </button>
     {#if customActions}
       {@render customActions({ formData, isValid })}
     {:else if !hideDefaultActions}
@@ -2020,6 +2225,112 @@
   </div>
   </div> <!-- /form-body -->
 </form>
+
+{#if showEditPreviewDialog}
+  <div class="ep-dialog-backdrop" role="presentation" onclick={closeEditPreviewDiscard}>
+    <div
+      class="ep-dialog"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Edit and preview recipe"
+      onclick={(e) => e.stopPropagation()}
+    >
+      <div class="ep-dialog-header">
+        <div class="ep-toggle" role="tablist" aria-label="View mode">
+          <button
+            type="button"
+            class="ep-toggle-btn"
+            class:active={dialogView === 'preview'}
+            role="tab"
+            aria-selected={dialogView === 'preview'}
+            onclick={() => (dialogView = 'preview')}
+          >Preview</button>
+          <button
+            type="button"
+            class="ep-toggle-btn"
+            class:active={dialogView === 'edit'}
+            role="tab"
+            aria-selected={dialogView === 'edit'}
+            onclick={() => (dialogView = 'edit')}
+          >Edit</button>
+        </div>
+      </div>
+
+      <div class="ep-dialog-body">
+        {#if dialogView === 'preview'}
+          <div class="ep-preview">
+            <h2 class="ep-preview-title">{dishName.trim() || 'Untitled recipe'}{recipeSuffix.trim() ? ` — ${recipeSuffix.trim()}` : ''}</h2>
+            <div class="ep-preview-meta">
+              {#if prepTime}<span>⏱ {prepTime}</span>{/if}
+              {#if servings}<span>🍽 {servings}</span>{/if}
+              {#if cookingMethod}<span>🔥 {cookingMethod}</span>{/if}
+            </div>
+            <h3 class="ep-preview-h3">Ingredients</h3>
+            <ul class="ep-preview-list">
+              {#each ingredients.filter(i => i.name.trim() || i.quantity.trim()) as ing (ing.id)}
+                <li><strong>{ing.quantity}</strong> {ing.name}</li>
+              {/each}
+            </ul>
+            <h3 class="ep-preview-h3">Instructions</h3>
+            <ol class="ep-preview-list">
+              {#each instructions.filter(s => s.text.trim()) as step (step.id)}
+                <li>{step.text}</li>
+              {/each}
+            </ol>
+          </div>
+        {:else}
+          <div class="ep-edit">
+            <h3 class="ep-preview-h3">Ingredients</h3>
+            <p class="ep-edit-hint">Use the arrows to reorder. Edits stay local until you press Save Reorder.</p>
+            <div class="ep-edit-list">
+              {#each ingredients as ing, i (ing.id)}
+                <div class="ep-edit-row">
+                  <div class="ep-move-col">
+                    <button type="button" class="ep-move-btn" disabled={i === 0} onclick={() => moveIngredient(ing.id, -1)} aria-label="Move ingredient up">▲</button>
+                    <button type="button" class="ep-move-btn" disabled={i === ingredients.length - 1} onclick={() => moveIngredient(ing.id, 1)} aria-label="Move ingredient down">▼</button>
+                  </div>
+                  <span class="ep-row-num">{i + 1}.</span>
+                  <input type="text" class="form-input ep-qty-input" bind:value={ing.quantity} placeholder="Qty" />
+                  <input type="text" class="form-input ep-name-input" bind:value={ing.name} placeholder="Ingredient" />
+                </div>
+              {/each}
+            </div>
+
+            <h3 class="ep-preview-h3" style="margin-top: 18px;">Instructions</h3>
+            <div class="ep-edit-list">
+              {#each instructions as step, i (step.id)}
+                <div class="ep-edit-row ep-edit-row-step">
+                  <div class="ep-move-col">
+                    <button type="button" class="ep-move-btn" disabled={i === 0} onclick={() => moveInstruction(step.id, -1)} aria-label="Move step up">▲</button>
+                    <button type="button" class="ep-move-btn" disabled={i === instructions.length - 1} onclick={() => moveInstruction(step.id, 1)} aria-label="Move step down">▼</button>
+                  </div>
+                  <span class="ep-row-num">{i + 1}.</span>
+                  <textarea class="form-textarea" rows="2" bind:value={step.text}></textarea>
+                </div>
+              {/each}
+            </div>
+          </div>
+        {/if}
+      </div>
+
+      <div class="ep-dialog-footer">
+        {#if dialogChangeSummary().length > 0}
+          <div class="ep-changes">
+            <strong>What changed:</strong> {dialogChangeSummary().join(' · ')}
+          </div>
+        {:else}
+          <div class="ep-changes ep-changes-empty">No unsaved changes in this dialog.</div>
+        {/if}
+        <div class="ep-dialog-buttons">
+          <button type="button" class="cancel-btn" onclick={closeEditPreviewDiscard}>Close</button>
+          <button type="button" class="submit-btn" onclick={closeEditPreviewSave} disabled={dialogChangeSummary().length === 0}>
+            Save Reorder
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+{/if}
 
 <style>
   .recipe-form {
@@ -2907,6 +3218,64 @@
     color: #991b1b;
     border: 1px solid #fca5a5;
   }
+  .audit-gap-source {
+    margin: 6px 0 0;
+    font-size: 0.72rem;
+    color: #475569;
+    line-height: 1.4;
+  }
+  .audit-gap-source em {
+    color: #b45309;
+    font-style: italic;
+  }
+  .audit-gap-accepted {
+    margin: 8px 0 0;
+    padding: 8px 10px;
+    background: #ecfeff;
+    border: 1px solid #67e8f9;
+    border-radius: 6px;
+    font-size: 0.74rem;
+    color: #155e75;
+    line-height: 1.45;
+  }
+  .v3-ingredients-panel {
+    margin: 10px 0 0;
+    padding: 8px 10px;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.74rem;
+  }
+  .v3-ingredients-panel > summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #334155;
+  }
+  .v3-ingredients-note {
+    margin: 6px 0 8px;
+    font-size: 0.72rem;
+    color: #64748b;
+    line-height: 1.45;
+  }
+  .v3-ingredients-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.72rem;
+  }
+  .v3-ingredients-table th,
+  .v3-ingredients-table td {
+    padding: 4px 6px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+  }
+  .v3-ingredients-table th.num,
+  .v3-ingredients-table td.num {
+    text-align: right;
+  }
+  .v3-ingredients-table td.mono {
+    font-family: monospace;
+    color: #475569;
+  }
   .audit-gap-note {
     margin: 8px 0 0;
     font-size: 0.72rem;
@@ -3393,5 +3762,177 @@
     flex-direction: column;
     gap: 3px;
     margin-top: 4px;
+  }
+
+  /* ── Edit/Preview button + dialog ──────────────────────────────────────── */
+  .edit-preview-btn {
+    margin-right: auto; /* push siblings (Cancel / Submit) to the right */
+    padding: 9px 16px;
+    border: 1px solid #b8c8e0;
+    background: #f0f4fa;
+    color: #1A237E;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    cursor: pointer;
+  }
+  .edit-preview-btn:hover {
+    background: #e3ebf6;
+  }
+
+  .ep-dialog-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 16px;
+  }
+  .ep-dialog {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    width: min(720px, 100%);
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .ep-dialog-header {
+    padding: 14px 16px;
+    border-bottom: 1px solid #e6e6e6;
+    display: flex;
+    justify-content: center;
+  }
+  .ep-toggle {
+    display: inline-flex;
+    background: #f1f1f4;
+    border-radius: 999px;
+    padding: 3px;
+    gap: 0;
+  }
+  .ep-toggle-btn {
+    border: none;
+    background: transparent;
+    color: #555;
+    padding: 6px 18px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .ep-toggle-btn.active {
+    background: #1A237E;
+    color: #fff;
+  }
+  .ep-dialog-body {
+    padding: 16px 18px;
+    overflow-y: auto;
+    flex: 1;
+  }
+  .ep-preview-title {
+    font-size: 1.4rem;
+    margin: 0 0 6px;
+    color: #1A237E;
+  }
+  .ep-preview-meta {
+    color: #666;
+    font-size: 0.9rem;
+    display: flex;
+    gap: 14px;
+    margin-bottom: 12px;
+  }
+  .ep-preview-h3 {
+    font-size: 1rem;
+    margin: 14px 0 6px;
+    color: #1A237E;
+  }
+  .ep-preview-list {
+    margin: 0 0 8px;
+    padding-left: 22px;
+    line-height: 1.5;
+  }
+  .ep-preview-list li {
+    margin: 3px 0;
+  }
+  .ep-edit-hint {
+    font-size: 0.82rem;
+    color: #777;
+    margin: 0 0 8px;
+  }
+  .ep-edit-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .ep-edit-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .ep-edit-row-step {
+    align-items: flex-start;
+  }
+  .ep-move-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .ep-move-btn {
+    width: 28px;
+    height: 22px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.7rem;
+    padding: 0;
+    line-height: 1;
+    color: #444;
+  }
+  .ep-move-btn:hover:not(:disabled) {
+    background: #eef;
+    border-color: #99a;
+  }
+  .ep-move-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+  .ep-row-num {
+    color: #999;
+    min-width: 24px;
+    font-variant-numeric: tabular-nums;
+  }
+  .ep-qty-input {
+    flex: 0 0 110px;
+  }
+  .ep-name-input {
+    flex: 1 1 auto;
+  }
+  .ep-edit-row textarea.form-textarea {
+    flex: 1 1 auto;
+  }
+  .ep-dialog-footer {
+    border-top: 1px solid #e6e6e6;
+    padding: 12px 16px;
+    background: #fafafa;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .ep-changes {
+    font-size: 0.86rem;
+    color: #1A237E;
+  }
+  .ep-changes-empty {
+    color: #999;
+    font-style: italic;
+  }
+  .ep-dialog-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
   }
 </style>

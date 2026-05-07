@@ -1,19 +1,49 @@
 #!/usr/bin/env python3
-"""Generate src/lib/farmers-basket/generated-levels.ts from recipe CSVs."""
+"""Generate src/lib/farmers-basket/generated-levels.ts from recipe CSVs.
+
+Phase 7 (v3): for any recipe with a build at recipes_v3/output/builds/<id>.json,
+the bundled ``nutritionJson`` is sourced from the v3 pipeline instead of the
+legacy CSV/canonical/Pipeline-B path. v3 owns the rich ~70-nutrient panel that
+the Balanced Diet game needs. Non-v3 recipes continue on the existing path.
+See docs/v3.md §14b.
+"""
 
 import csv
 import json
 import os
 import re
 import sqlite3
+import sys
 
 BASE = '/Volumes/training/Daily Food Chain/daily-food-chain'
-RECIPES_CSV      = f'{BASE}/src/lib/data/recipes.csv'
-INGREDIENTS_CSV  = f'{BASE}/src/lib/data/recipe_ingredients.csv'
-INSTRUCTIONS_CSV = f'{BASE}/src/lib/data/recipe_instructions.csv'
+RECIPES_V3_DIR = f'{BASE}/recipes_v3'
+V3_BUILDS_DIR  = f'{RECIPES_V3_DIR}/output/builds'
+sys.path.insert(0, RECIPES_V3_DIR)
+
+# Phase 8a: all CSVs sourced from recipes_v3/data/. v1 src/lib/data/*.csv archived.
+RECIPES_CSV      = f'{RECIPES_V3_DIR}/data/recipes.csv'
+INGREDIENTS_CSV  = f'{RECIPES_V3_DIR}/data/recipe_ingredients.csv'
+INSTRUCTIONS_CSV = f'{RECIPES_V3_DIR}/data/recipe_instructions.csv'
+LEDGER_CSV       = f'{RECIPES_V3_DIR}/data/ingredients_ledger.csv'
 OUTPUT           = f'{BASE}/src/lib/farmers-basket/generated-levels.ts'
+# comboo.db is read only to look up SR-Legacy Long_Desc for the bundled dish row
+# display name (preserves the v1 bundle's dish-row name shape). All nutrition
+# math lives in recipes_v3/, not here.
 COMBOO_DB        = '/Users/macminidata/vscode/jetfooddata/jetcool/assets/comboo.db'
-DEV_DB           = f'{BASE}/recipes_dev.db'
+
+# Long-form (SR28 column) → short (game) nutrition keys.
+# Used when sourcing perServing from recipe-nutrition.json (Pipeline B output),
+# which is the v2-spec authoritative builder (recipe-level yield factors,
+# cooked-mass divisor, Rule A/B/C/D selection).
+LONG_TO_SHORT_NUTRIENT = {
+    'Energy_KCal': 'cal',
+    'Protein': 'pro',
+    'TotalLipidFat': 'fat',
+    'Carbohydrate': 'carb',
+    'FiberTotalDietary': 'fib',
+    'SugarsTotal': 'sug',
+    'Water': 'h2o',
+}
 
 CANONICAL_NUTRIENT_COLS = {
     'Energy_KCal': 'cal',
@@ -496,25 +526,18 @@ def divide_nutrition_by_servings(nutrition_json, servings_count):
         for key, value in nutrition_json.items()
     }
 
-# ── Load CSVs ──────────────────────────────────────────────────────────────────
+# ── Load CSVs (Phase 8a: all from recipes_v3/data/) ───────────────────────────
 recipes = list(csv.DictReader(open(RECIPES_CSV)))
 
-comboo = sqlite3.connect(COMBOO_DB)
-comboo_cur = comboo.cursor()
+ledger = {r['ingredient_key']: r for r in csv.DictReader(open(LEDGER_CSV))}
 
-dev_nutrition_by_recipe = {}
-if os.path.exists(DEV_DB):
-    dev = sqlite3.connect(DEV_DB)
-    dev_cur = dev.cursor()
-    dev_cur.execute("SELECT id, nutrition_json FROM recipes")
-    for rid, nutrition_json in dev_cur.fetchall():
-        if not nutrition_json:
-            continue
-        try:
-            dev_nutrition_by_recipe[rid] = json.loads(nutrition_json)
-        except json.JSONDecodeError:
-            continue
-    dev.close()
+# Long_Desc lookup (dish-row display name only). Cached at startup.
+_comboo = sqlite3.connect(COMBOO_DB)
+_long_desc_by_ndb = {}
+for _ndb, _ld in _comboo.execute('SELECT NDB_NO, Long_Desc FROM DataCentralCombo'):
+    if _ndb is not None and _ld:
+        _long_desc_by_ndb[str(_ndb).lstrip('0') or '0'] = _ld
+_comboo.close()
 
 ingredients_by_recipe = {}
 for row in csv.DictReader(open(INGREDIENTS_CSV)):
@@ -527,6 +550,33 @@ for row in csv.DictReader(open(INSTRUCTIONS_CSV)):
     instructions_by_recipe.setdefault(rid, []).append(row)
 
 authored_recipe_ids = set(ingredients_by_recipe) & set(instructions_by_recipe)
+
+# ── v3 nutrition overrides (Phase 7) ───────────────────────────────────────────
+# For any recipe with a v3 build JSON, source the bundled nutritionJson directly
+# from v3. This delivers the full ~70-nutrient panel (vitamins, minerals, fatty
+# acids, amino acids, derived omega-3/6, AddedSugars/IntrinsicSugars) used by
+# the Balanced Diet game. Bundled v1 consumers (perServing 7-macro shorthand)
+# remain compatible — v3's payload includes the same top-level cal/pro/fat/etc.
+v3_nutrition_overrides = {}
+v3_count = 0
+if os.path.isdir(V3_BUILDS_DIR):
+    try:
+        from lib.build import to_turso_nutrition_json  # noqa: E402
+    except ImportError as exc:
+        print(f"WARN: cannot import v3 build module ({exc}); skipping v3 overrides", file=sys.stderr)
+        to_turso_nutrition_json = None
+    if to_turso_nutrition_json is not None:
+        for fname in sorted(os.listdir(V3_BUILDS_DIR)):
+            if not fname.endswith('.json'):
+                continue
+            rid = fname[:-5]
+            try:
+                build = json.loads(open(os.path.join(V3_BUILDS_DIR, fname)).read())
+                v3_nutrition_overrides[rid] = to_turso_nutrition_json(build)
+                v3_count += 1
+            except Exception as exc:
+                print(f"WARN: failed to load v3 build {rid}: {exc}", file=sys.stderr)
+print(f"v3 overrides loaded: {v3_count} recipes")
 
 # ── Generate ───────────────────────────────────────────────────────────────────
 level_blocks = []
@@ -543,48 +593,41 @@ for recipe in recipes:
     animal_spawns = get_animal_spawns(foods, difficulty)
     food_supply  = get_food_supply(foods, difficulty)
 
-    # Build recipeIngredients
+    # Build recipeIngredients from v3 ledger + recipe_ingredients.
+    # First entry is a synthesized "dish" row pointing at the recipe's
+    # canonical NDB; subsequent entries are the per-ingredient rows.
+    canonical_ndb_no = (recipe.get('canonical_ndb_no', '') or '').lstrip('0') or recipe.get('canonical_ndb_no', '')
+    dish_long_desc = _long_desc_by_ndb.get(canonical_ndb_no, '') if canonical_ndb_no else ''
     recipe_ings = []
+    recipe_ings.append({
+        'name':        dish_long_desc or recipe.get('recipe_name', ''),
+        'quantity':    'custom (g)',
+        'foodWord':    recipe.get('food_word', ''),
+        'ndbNo':       recipe.get('canonical_ndb_no', ''),
+        'portionDesc': 'custom (g)',
+        'portionGrams': 100.0,
+        'isDish':      True,
+    })
     for ing in ingredients_by_recipe.get(rid, []):
-        rt = ing.get('row_type', '')
-        _, note_values = parse_notes(ing.get('notes', ''))
-        item = {}
-        if rt == 'dish':
-            item['name'] = ing.get('sr28_long_desc') or recipe.get('recipe_name', '')
-            item['quantity'] = ing.get('portion_desc', '')
-            item['foodWord'] = ing.get('game_food', '') or recipe.get('food_word', '')
-            item['ndbNo'] = ing.get('ndb_no', '')
-            item['portionDesc'] = ing.get('portion_desc', '')
-            pg = ing.get('portion_grams', '')
-            if pg:
-                try: item['portionGrams'] = float(pg)
-                except: pass
-            item['isDish'] = True
-        elif rt in ('ingredient', 'dish_ingredient', 'exempt'):
-            item['name'] = ing.get('ing_name', '')
-            item['quantity'] = ing.get('ing_qty', '')
-            if note_values.get('section'):
-                item['section'] = note_values['section']
-            if ing.get('ndb_no'):
-                item['ndbNo'] = ing['ndb_no']
-                item['portionDesc'] = ing.get('portion_desc', '')
-                pg = ing.get('portion_grams', '')
-                if pg:
-                    try: item['portionGrams'] = float(pg)
-                    except: pass
-                sc = ing.get('serving_count', '')
-                if sc:
-                    try:
-                        sc_f = float(sc)
-                        if sc_f != 1.0: item['servingCount'] = sc_f
-                    except: pass
-                if ing.get('game_food'):
-                    item['foodWord'] = ing['game_food']
-            if rt == 'exempt':
-                item['exempt'] = True
-        else:
-            continue
-        if item.get('name') or item.get('isDish'):
+        led = ledger.get(ing['ingredient_key'], {})
+        item = {
+            'name':        ing.get('display_name_override') or led.get('default_display_name', ''),
+            'quantity':    ing.get('qty_display', ''),
+            'ndbNo':       led.get('ndb_no', ''),
+            'portionDesc': 'g',
+        }
+        try:
+            item['portionGrams'] = float(ing.get('grams', '') or 0) or None
+            if item['portionGrams'] is None:
+                del item['portionGrams']
+        except ValueError:
+            pass
+        if ing.get('section'):
+            item['section'] = ing['section']
+        # Note: v3's is_optional is NOT mapped to bundle's `exempt` field.
+        # `exempt` in v1 meant "row_type=exempt" (excluded from nutrition);
+        # v3's is_optional means "may be omitted" — different semantics.
+        if item['name'] or item.get('isDish'):
             recipe_ings.append(item)
 
     # Build recipeInstructions
@@ -594,39 +637,20 @@ for recipe in recipes:
     )
     instr_texts = [r['step_text'] for r in instr_rows if r.get('step_text')]
 
-    link_type = recipe.get('link_type', 'ingredient')
-    servings_text = recipe.get('servings', '')
-    servings_count = parse_servings_count(servings_text)
-    total_recipe_grams = compute_total_recipe_grams(ingredients_by_recipe.get(rid, []))
-    grams_per_serving = round(total_recipe_grams / servings_count, 2) if servings_count and total_recipe_grams else None
-    dish_row = next((row for row in ingredients_by_recipe.get(rid, []) if row.get('row_type') == 'dish'), None)
-    dish_ndb_no = dish_row.get('ndb_no', '') if dish_row else ''
-    canonical_serving_grams = get_canonical_serving_grams(comboo_cur, dish_ndb_no, servings_count)
-    canonical_per_serving = get_canonical_per_serving_from_density(
-        comboo_cur,
-        dish_ndb_no,
-        canonical_serving_grams or grams_per_serving,
-    )
-    sr_rule = recipe.get('sr28_rule', '').strip()
-    built_per_serving = normalize_built_per_serving(dev_nutrition_by_recipe.get(rid), servings_count)
-    # Rule A: full SR28 dish match — pure canonical (all macros lab-verified).
-    # Rule B: partial SR28 dish match (fiber/sugar gaps) — canonical + built fills zeros.
-    # Rule C: commercial NDB too far from homemade — built only, canonical discarded.
-    # Rule D: no matching NDB — ingredient-sum fallback below.
-    if sr_rule == 'Rule A':
-        nutrition_per_serving = canonical_per_serving
-    elif sr_rule == 'Rule B':
-        nutrition_per_serving = merge_canonical_with_built_fallback(canonical_per_serving, built_per_serving)
-    elif sr_rule == 'Rule C':
-        nutrition_per_serving = built_per_serving
-    else:
-        nutrition_per_serving = None  # Rule D — falls through to ingredient-sum
-    ingredient_sum_grams = None
-    if not nutrition_per_serving and servings_count:
-        nutrition_per_serving, ingredient_sum_grams = ingredient_sum_per_serving(
-            comboo_cur, ingredients_by_recipe.get(rid, []), servings_count
+    link_type = recipe.get('link_type', 'ingredient') or 'ingredient'
+    servings_text = recipe.get('servings_label', '')
+    sr_rule = recipe.get('sr_rule', '').strip()
+
+    v3_payload = v3_nutrition_overrides.get(rid)
+    if v3_payload is None:
+        # Phase 8a hard requirement: every authored recipe must have a v3 build.
+        # The legacy canonical / Pipeline-B / dev_db fallbacks were retired
+        # together with the v1 CSVs.
+        raise SystemExit(
+            f"ERROR: {rid} has no v3 build at {V3_BUILDS_DIR}/{rid}.json. "
+            f"Run `python3 recipes_v3/tools/build_one.py {rid}` first."
         )
-    nutrition_json = ts_nutrition_json(nutrition_per_serving, servings_count, ingredient_sum_grams)
+    nutrition_json = json.dumps(v3_payload, ensure_ascii=False, separators=(',', ':'))
 
     block = f"""  {{
     id: '{esc(rid)}',
@@ -638,7 +662,7 @@ for recipe in recipes:
     tools: {ts_tools(tools)},
     animalSpawns: {ts_animal_spawns(animal_spawns)},
     foodSupply: {ts_food_supply(food_supply)},
-    servings: '{esc(recipe.get('servings',''))}',
+    servings: '{esc(servings_text)}',
     prepTime: '{esc(recipe.get('prep_time',''))}',
     linkType: '{esc(link_type)}',
     sr28Rule: '{esc(sr_rule)}',
@@ -658,7 +682,5 @@ export const LEVELS: Level[] = [
 
 with open(OUTPUT, 'w') as f:
     f.write(output)
-
-comboo.close()
 
 print(f"Generated {len(level_blocks)} levels → {OUTPUT}")

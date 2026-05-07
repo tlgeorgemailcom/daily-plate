@@ -88,10 +88,14 @@ export interface NutritionJson {
   perServing: {
     cal: number; pro: number; fat: number;
     carb: number; fib: number; h2o: number; sug: number;
+    /** v3 may add AddedSugars / IntrinsicSugars and other panel members. */
+    [key: string]: number;
   };
   per100g?: {
     Energy_KCal: number; Protein: number; TotalLipidFat: number;
     Carbohydrate: number; FiberTotalDietary: number; SugarsTotal: number; Water: number;
+    /** v3 emits a ~70-nutrient panel here (vitamins, minerals, fatty acids, amino acids). */
+    [key: string]: number;
   };
   gramsPerServing: number | null;
   servings: number;
@@ -99,6 +103,8 @@ export interface NutritionJson {
   yieldFactorWater?: number;
   /** Fraction of raw fat retained after cooking (0–1). Used for live ingredient-sum recalculation. */
   yieldFactorFat?: number;
+  /** v3 provenance + extras (micros, addedSugars, sources, etc.). Open shape. */
+  [key: string]: unknown;
 }
 
 export interface Level {

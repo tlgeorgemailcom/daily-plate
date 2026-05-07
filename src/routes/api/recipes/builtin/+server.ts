@@ -353,7 +353,27 @@ export const PATCH: RequestHandler = async ({ request }) => {
       return json({ error: 'Missing updates object' }, { status: 400 });
     }
 
+    // Phase 6 (v3) gate: dev_recipes is now owned by the v3 pipeline
+    // (recipes_v3/tools/upload.py). The PATCH path here recomputes
+    // nutrition_json via calcNutritionSR28 (7 macros only) and would silently
+    // strip v3's full ~60-nutrient panel. Block PATCHes for any row marked
+    // locked=2 unless an explicit v3 token is supplied.
+    // See docs/v3.md §14a / §14b.
     const db = getGameDb();
+    const lockCheck = await db.execute({
+      sql: 'SELECT locked FROM dev_recipes WHERE recipe_id = ?',
+      args: [id]
+    });
+    const lockedVal = lockCheck.rows[0]?.locked;
+    const isLocked2 = lockedVal === 2 || lockedVal === '2';
+    const v3Token = (updates as Record<string, unknown>)._v3_uploader_token;
+    const expectedToken = process.env.V3_UPLOADER_TOKEN;
+    if (isLocked2 && (!expectedToken || v3Token !== expectedToken)) {
+      return json({
+        error: 'Recipe is v3-managed (locked=2). Edit recipes_v3/data/*.csv and run tools/upload.py.',
+        code: 'V3_LOCKED'
+      }, { status: 423 });
+    }
     const now = new Date().toISOString();
     const hasImageUrlUpdate = Object.prototype.hasOwnProperty.call(updates, 'imageUrl');
     const shouldClearImage = hasImageUrlUpdate && (updates.imageUrl === null || updates.imageUrl === '');

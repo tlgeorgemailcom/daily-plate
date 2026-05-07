@@ -29,6 +29,7 @@ INGR_CSV     = SCRIPT_DIR / 'recipe_ingredients.csv'
 FOODS_CSV    = REPO_ROOT / 'food-portions-complete.csv'
 V2_RECIPES_CSV = REPO_ROOT / 'recipes_v2' / 'data' / 'recipes.csv'
 OUT_TS       = SCRIPT_DIR / 'recipe-nutrition.ts'
+OUT_JSON     = SCRIPT_DIR / 'recipe-nutrition.json'
 AUDIT_OUT    = SCRIPT_DIR / 'rule_b_fallback_audit.txt'
 
 # ── Nutrient columns to extract from DataCentralCombo ─────────────────────────
@@ -268,14 +269,19 @@ def resolve_ingredient_state(cook_method, cured_fresh, long_desc):
 
 def apply_rule_b_missing_fallback(canonical_per100g, build_per100g):
     """
-    Rule B policy: only replace canonical-zero nutrients that are explicitly
-    covered by cooking-loss factors (typically vitamins/micros and selected
-    heat-sensitive compounds). Sugar-only gaps stay canonical.
+    Rule B policy: replace canonical-zero nutrients with the ingredient build
+    value when one of:
+      - the nutrient is in LOSS_COVERED_NUTRIENTS (cooking-retention modeled), OR
+      - the nutrient is FiberTotalDietary / SugarsTotal — these are reliably
+        present in raw ingredients (esp. fruit, sugar) and survive baking
+        essentially unchanged, so the canonical 0 is a missing-data artifact
+        rather than a real value.
 
     Returns (merged_dict, all_replaced, loss_covered_replaced):
       all_replaced          — any canonical-zero nutrient where built value > 0
-      loss_covered_replaced — subset that was actually written into merged (loss-covered only)
+      loss_covered_replaced — subset actually written into merged
     """
+    fillable = LOSS_COVERED_NUTRIENTS | {'FiberTotalDietary', 'SugarsTotal'}
     merged = dict(canonical_per100g)
     all_replaced = []
     loss_covered_replaced = []
@@ -284,7 +290,7 @@ def apply_rule_b_missing_fallback(canonical_per100g, build_per100g):
         build_value = float(build_per100g.get(nutrient) or 0.0)
         if canonical_value <= 0.0 and build_value > 0.0:
             all_replaced.append(nutrient)
-            if nutrient in LOSS_COVERED_NUTRIENTS:
+            if nutrient in fillable:
                 merged[nutrient] = round2(build_value)
                 loss_covered_replaced.append(nutrient)
     return merged, sorted(all_replaced), sorted(loss_covered_replaced)
@@ -293,6 +299,7 @@ def pick_canonical_serving_grams(food_row):
     if not food_row:
         return None
     fallback = None
+    candidates = []
     for idx in range(13):
         desc = (food_row.get(f'M{idx}_Desc', '') or '').strip().lower()
         grams_str = (food_row.get(f'M{idx}_Gm', '') or '').strip()
@@ -309,7 +316,13 @@ def pick_canonical_serving_grams(food_row):
             continue
         if desc == 'oz':
             continue
-        return grams
+        candidates.append(grams)
+    if candidates:
+        # Prefer the smallest reasonable per-serving portion (>=5g) so we don't
+        # accidentally pick whole-product entries like 'pie (9" dia)' = 1186g
+        # when 'piece (1/8 of 9" dia)' = 144g is also available.
+        viable = sorted(g for g in candidates if g >= 5)
+        return viable[0] if viable else min(candidates)
     return fallback
 
 def build_per_serving(sr28_row, portion_grams):
@@ -489,9 +502,11 @@ def main():
                 warnings.append(f'{recipe_id}: build-preferred recipe but no valid ingredient rows — skipped')
                 continue
 
-            canonical_food_row = foods_by_ndb.get(ndb_no) or foods_by_word.get(recipe.get('food_word', '').strip())
-            serving_grams = pick_canonical_serving_grams(canonical_food_row)
-            eff_grams = round2(serving_grams or (total_grams / serving_count)) if total_grams > 0 else round2(portion_grams)
+            # Build-preferred recipes (Rule C / Rule D / mixed) own their own mass:
+            # divide cooked recipe grams by recipe-level servings_count.  Avoid
+            # pick_canonical_serving_grams here — it can return whole-product portions
+            # (e.g. M2='pie (9" dia)' = 1186g) that don't match the recipe's serving plan.
+            eff_grams = round2(total_grams / servings_count) if total_grams > 0 and servings_count else round2(portion_grams)
             per_100g = {k: round2(totals[k] * 100.0 / total_grams) for k in NUTRIENT_COLS} if total_grams > 0 else {k: 0.0 for k in NUTRIENT_COLS}
             per_serving = {k: round2(per_100g[k] * eff_grams / 100.0) for k in NUTRIENT_COLS}
             output[recipe_id] = {
@@ -663,6 +678,10 @@ def main():
     OUT_TS.write_text(ts_content, encoding='utf-8')
     print(f'Written → {OUT_TS}')
     print(f'File size: {OUT_TS.stat().st_size:,} bytes')
+
+    # ── Sidecar JSON for downstream pipelines (e.g. generate_levels.py) ────────
+    OUT_JSON.write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding='utf-8')
+    print(f'Written → {OUT_JSON}')
 
 if __name__ == '__main__':
     main()

@@ -1,0 +1,284 @@
+"""Upload v3 builds to Turso ``dev_recipes``.
+
+Phase-6 writer. Replaces scripts/upload-dev-recipe.mjs.
+
+Usage:
+    python tools/upload.py                            # dry-run all 40 (no writes)
+    python tools/upload.py --commit                   # actually write all 40
+    python tools/upload.py --recipe-id SWEET_001      # single recipe
+    python tools/upload.py --recipe-id SWEET_001 --commit
+    python tools/upload.py --diff-only                # only show recipes whose
+                                                      # nutrition_json would change
+    python tools/upload.py --force-locked --commit    # also overwrite locked=2
+                                                      # rows that disagree (default
+                                                      # behavior already overwrites
+                                                      # locked=2; flag is reserved
+                                                      # for future read-only mode)
+
+Reads .env.local from the daily-food-chain repo root for TURSO_DATABASE_URL +
+TURSO_AUTH_TOKEN.
+
+Writes a per-run audit log to ``recipes_v3/output/upload_log/<UTC>.json``.
+
+This script BYPASSES /api/recipes/builtin PATCH because that endpoint
+recomputes nutrition_json via calcNutritionSR28 (7 macros only) and would
+strip v3's full ~60-nutrient panel. v3 is now the source of truth; the
+endpoint is being gated in a follow-up commit.
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import sys
+import time
+from datetime import datetime, timezone
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+REPO_ROOT = ROOT.parent  # daily-food-chain/
+sys.path.insert(0, str(ROOT))
+
+from lib.build import to_turso_nutrition_json  # noqa: E402
+from lib.load import load_ingredients, load_ledger, load_recipes  # noqa: E402
+
+BUILDS_DIR = ROOT / "output" / "builds"
+LOG_DIR = ROOT / "output" / "upload_log"
+
+ENV_FILE = REPO_ROOT / ".env.local"
+
+
+def _load_env(path: Path) -> dict[str, str]:
+    """Minimal .env parser: KEY=value lines only, ignores quotes/comments."""
+    env: dict[str, str] = {}
+    if not path.exists():
+        return env
+    for line in path.read_text().splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if "=" not in line:
+            continue
+        k, v = line.split("=", 1)
+        env[k.strip()] = v.strip().strip('"').strip("'")
+    return env
+
+
+def _connect():
+    env = _load_env(ENV_FILE)
+    url = env.get("TURSO_DATABASE_URL") or os.environ.get("TURSO_DATABASE_URL")
+    token = env.get("TURSO_AUTH_TOKEN") or os.environ.get("TURSO_AUTH_TOKEN")
+    if not url or not token:
+        sys.exit(
+            "ERROR: TURSO_DATABASE_URL / TURSO_AUTH_TOKEN missing.\n"
+            f"Looked in {ENV_FILE} and process env."
+        )
+    try:
+        import libsql_experimental as libsql  # type: ignore
+    except ImportError:
+        sys.exit("ERROR: pip install libsql-experimental")
+    return libsql.connect(database=url, auth_token=token)
+
+
+def _build_payload(rid: str, recipes, ings, ledger) -> dict:
+    """Read v3 build JSON for `rid` and assemble Turso column updates."""
+    build_path = BUILDS_DIR / f"{rid}.json"
+    if not build_path.exists():
+        raise FileNotFoundError(f"No v3 build for {rid}: run tools/build_all.py first")
+    build = json.loads(build_path.read_text())
+    rec = recipes[rid]
+    nutrition_json = to_turso_nutrition_json(build)
+
+    # recipe_ingredients_json: shape consumed by /api/recipes/builtin GET +
+    # RecipeForm.svelte (matches normalizeRecipeIngredients in builtin/+server.ts).
+    ri_rows = ings.get(rid, [])
+    recipe_ingredients = []
+    for r in ri_rows:
+        entry = ledger.get(r.ingredient_key)
+        if not entry:
+            continue
+        recipe_ingredients.append({
+            "name": r.display_name_override or entry.default_display_name or r.ingredient_key,
+            "quantity": r.qty_display,
+            "section": r.section,
+            "foodWord": "",
+            "ndbNo": entry.ndb_no,
+            "portionDesc": "g",
+            "portionGrams": r.grams,
+            "servingCount": 1,
+            "exempt": False,
+            "isDish": False,
+        })
+
+    # v3 only writes the columns it owns. Identity / game-key / audit-history
+    # columns (food_word, category, cooking_method casing, serving_label,
+    # servings, submitted_by) are deliberately preserved as-is in Turso.
+    return {
+        "recipe_id": rid,
+        "recipe_name": rec.recipe_name,
+        "servings_count": float(rec.servings_count),
+        "grams_per_serving": float(build["grams_per_serving"]),
+        "recipe_ingredients_json": json.dumps(recipe_ingredients, separators=(",", ":")),
+        "nutrition_json": json.dumps(nutrition_json, separators=(",", ":")),
+        "nutrient_version": "v3",
+        "retention_model_version": "v3-r6",
+        "source_match_version": "v3-greenfield",
+        "source_ndb_no": rec.canonical_ndb_no or "",
+    }
+
+
+_UPDATE_SQL = """\
+UPDATE dev_recipes SET
+  recipe_name              = ?,
+  servings_count           = ?,
+  grams_per_serving        = ?,
+  recipe_ingredients_json  = ?,
+  nutrition_json           = ?,
+  nutrient_version         = ?,
+  retention_model_version  = ?,
+  source_match_version     = ?,
+  source_ndb_no            = ?,
+  updated_at               = ?
+WHERE recipe_id = ?
+"""
+
+_UPDATE_COLS = (
+    "recipe_name",
+    "servings_count",
+    "grams_per_serving",
+    "recipe_ingredients_json", "nutrition_json",
+    "nutrient_version", "retention_model_version", "source_match_version",
+    "source_ndb_no",
+)
+
+
+def _diff_payload(conn, payload: dict) -> dict | None:
+    """Return per-column diff (existing vs new) or None if row missing."""
+    cur = conn.execute(
+        "SELECT " + ", ".join(_UPDATE_COLS) + " FROM dev_recipes WHERE recipe_id = ?",
+        (payload["recipe_id"],),
+    )
+    row = cur.fetchone()
+    if row is None:
+        return None
+    existing = dict(zip(_UPDATE_COLS, row, strict=False))
+    diff: dict = {}
+    for col in _UPDATE_COLS:
+        old = existing.get(col)
+        new = payload.get(col)
+        if col in ("nutrition_json", "recipe_ingredients_json"):
+            try:
+                old_j = json.loads(old) if old else None
+                new_j = json.loads(new) if new else None
+                if old_j != new_j:
+                    diff[col] = {"old_len": len(old or ""), "new_len": len(new or "")}
+            except Exception:
+                if (old or "") != (new or ""):
+                    diff[col] = {"old_len": len(old or ""), "new_len": len(new or "")}
+        else:
+            if (old if old is not None else "") != (new if new is not None else ""):
+                diff[col] = {"old": old, "new": new}
+    return diff
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--commit", action="store_true",
+                    help="Actually write to Turso (default is dry-run)")
+    ap.add_argument("--recipe-id", action="append", default=[],
+                    help="Limit to specific recipe_id (may repeat)")
+    ap.add_argument("--diff-only", action="store_true",
+                    help="Only show recipes whose payload differs from Turso")
+    ap.add_argument("--force-locked", action="store_true",
+                    help="(Reserved) Currently a no-op; locked=2 are always overwritten "
+                         "in Phase 6 per docs/v3.md \u00a714a cutover decision.")
+    args = ap.parse_args()
+
+    recipes = load_recipes()
+    ings = load_ingredients()
+    ledger = load_ledger()
+
+    target_ids = sorted(args.recipe_id) if args.recipe_id else sorted(recipes)
+    missing = [r for r in target_ids if r not in recipes]
+    if missing:
+        sys.exit(f"Unknown recipe_id(s): {missing}")
+
+    conn = _connect()
+    log_entries: list[dict] = []
+    now_utc = datetime.now(timezone.utc).isoformat()
+    written = 0
+    diffs = 0
+
+    for rid in target_ids:
+        try:
+            payload = _build_payload(rid, recipes, ings, ledger)
+        except FileNotFoundError as e:
+            print(f"  {rid}  SKIP: {e}", file=sys.stderr)
+            continue
+
+        diff = _diff_payload(conn, payload)
+        if diff is None:
+            print(f"  {rid}  SKIP: no row in dev_recipes (Phase 6 expects pre-existing rows)")
+            continue
+        if not diff:
+            if not args.diff_only:
+                print(f"  {rid}  unchanged")
+            log_entries.append({"recipe_id": rid, "status": "unchanged"})
+            continue
+
+        diffs += 1
+        # Compact diff print
+        cols_changed = sorted(diff.keys())
+        print(f"  {rid}  changed cols: {', '.join(cols_changed)}")
+        for col in cols_changed:
+            d = diff[col]
+            if "old" in d:
+                print(f"      {col}: {d['old']!r} -> {d['new']!r}")
+            else:
+                print(f"      {col}: len {d['old_len']} -> {d['new_len']}")
+
+        if args.commit:
+            conn.execute(_UPDATE_SQL, (
+                payload["recipe_name"],
+                payload["servings_count"],
+                payload["grams_per_serving"],
+                payload["recipe_ingredients_json"],
+                payload["nutrition_json"],
+                payload["nutrient_version"],
+                payload["retention_model_version"],
+                payload["source_match_version"],
+                payload["source_ndb_no"],
+                now_utc,
+                payload["recipe_id"],
+            ))
+            written += 1
+            log_entries.append({
+                "recipe_id": rid, "status": "written",
+                "cols_changed": cols_changed,
+            })
+        else:
+            log_entries.append({
+                "recipe_id": rid, "status": "dry-run",
+                "cols_changed": cols_changed,
+            })
+
+    if args.commit:
+        conn.commit()
+        print(f"\nCOMMIT: wrote {written} recipe(s) to Turso")
+    else:
+        print(f"\nDRY-RUN: {diffs} recipe(s) would change. Re-run with --commit to write.")
+
+    LOG_DIR.mkdir(parents=True, exist_ok=True)
+    log_path = LOG_DIR / f"{int(time.time())}-{'commit' if args.commit else 'dryrun'}.json"
+    log_path.write_text(json.dumps({
+        "timestamp_utc": now_utc,
+        "mode": "commit" if args.commit else "dry-run",
+        "recipes": target_ids,
+        "entries": log_entries,
+    }, indent=2))
+    print(f"Audit log: {log_path}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
