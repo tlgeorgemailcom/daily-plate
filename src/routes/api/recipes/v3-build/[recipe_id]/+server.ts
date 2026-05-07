@@ -54,8 +54,8 @@ export const GET: RequestHandler = async ({ params }) => {
   return json({
     recipe_id: parsed.recipe_id,
     srRule: parsed.sr_rule,
-    cookMethod: parsed.cook_method,
-    cookMethodNormalized: parsed.cook_method_normalized,
+    cookMethod: parsed.cooking_method ?? parsed.cook_method,
+    cookMethodNormalized: parsed.cooking_method_normalized ?? parsed.cook_method_normalized,
     yieldFactorWater: parsed.yield_factor_water,
     yieldFactorFat: parsed.yield_factor_fat,
     servingsCount: parsed.servings_count,

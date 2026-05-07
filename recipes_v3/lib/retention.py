@@ -362,8 +362,8 @@ RETENTION: dict[str, dict[str, float]] = {
 MACRO_RETENTION = RETENTION
 
 
-def normalize_cook_method(raw: str) -> str:
-    """Map a freeform cook_method string to a canonical key.
+def normalize_cooking_method(raw: str) -> str:
+    """Map a freeform cooking_method string to a canonical key.
 
     Compound methods like 'bake+chill' collapse to the first heat-applying
     segment.
@@ -378,6 +378,10 @@ def normalize_cook_method(raw: str) -> str:
     return "raw"
 
 
+# Backwards-compatible alias for callers still using the old name.
+normalize_cook_method = normalize_cooking_method
+
+
 def get_retention(method: str, nutrient: str) -> float:
     """Return retention factor in [0..1] for (method, nutrient).
 
@@ -385,5 +389,5 @@ def get_retention(method: str, nutrient: str) -> float:
     Per design rule 1: macro nutrients always return 1.00 -- mass loss is
     handled by yield_factor_water and yield_factor_fat in build.py.
     """
-    canonical = normalize_cook_method(method)
+    canonical = normalize_cooking_method(method)
     return RETENTION.get(canonical, {}).get(nutrient, 1.0)

@@ -48,7 +48,7 @@ def main() -> int:
     if args.print:
         print()
         print(f"=== {build['recipe_id']}  {build['recipe_name']} ===")
-        print(f"  rule={build['sr_rule']}  method={build['cook_method']}→{build['cook_method_normalized']}")
+        print(f"  rule={build['sr_rule']}  method={build['cooking_method']}→{build['cooking_method_normalized']}")
         print(f"  yfW={build['yield_factor_water']}  yfF={build['yield_factor_fat']}")
         print(f"  raw={build['raw_total_grams']}g  cooked={build['cooked_total_grams']}g  servings={build['servings_count']}  gps={build['grams_per_serving']}g")
         print(f"  water_lost={build['water_lost_grams']}g  fat_lost={build['fat_lost_grams']}g")

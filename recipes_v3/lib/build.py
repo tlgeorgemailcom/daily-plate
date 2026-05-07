@@ -41,7 +41,7 @@ from .load import (
     Recipe,
     load_comboo_nutrients,
 )
-from .retention import get_retention, normalize_cook_method
+from .retention import get_retention, normalize_cooking_method
 from .yield_model import cooked_total_grams
 
 _MACRO_SET = set(MACROS)
@@ -137,7 +137,7 @@ def build_recipe(
     if raw_total_grams <= 0:
         raise RuntimeError(f"Recipe {recipe.recipe_id} has no usable ingredients")
 
-    method = normalize_cook_method(recipe.cook_method)
+    method = normalize_cooking_method(recipe.cooking_method)
     yfw = recipe.yield_factor_water
     yff = recipe.yield_factor_fat
 
@@ -186,8 +186,8 @@ def build_recipe(
         "recipe_name": recipe.recipe_name,
         "sr_rule": recipe.sr_rule,
         "canonical_ndb_no": recipe.canonical_ndb_no,
-        "cook_method": recipe.cook_method,
-        "cook_method_normalized": method,
+        "cooking_method": recipe.cooking_method,
+        "cooking_method_normalized": method,
         "yield_factor_water": yfw,
         "yield_factor_fat": yff,
         "servings_count": recipe.servings_count,
