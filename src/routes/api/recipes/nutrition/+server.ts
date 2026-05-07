@@ -2,7 +2,6 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { queryAll } from '$lib/server/turso';
 import { LEVELS } from '$lib/farmers-basket/generated-levels';
-import { RECIPE_NUTRITION } from '$lib/data/recipe-nutrition';
 
 // Pattern that matches auto-generated player IDs like "recipe-1771874787378-e6qosltqx"
 const autoIdPattern = /^recipe-\d{10,}-\w+$/i;
@@ -124,10 +123,14 @@ export const GET: RequestHandler = async () => {
   const builtInRecipes = LEVELS
     .filter((level) => /^SWEET_\d+$/i.test(level.id))
     .map((level) => {
-      const nutrition = RECIPE_NUTRITION[level.id];
+      const nutrition = level.nutritionJson as Record<string, unknown> | undefined;
       if (!nutrition) return null;
 
-      const per100 = nutrition.per100g ?? {};
+      const per100 = (nutrition.per100g ?? {}) as Record<string, unknown>;
+      const gramsPerServing = Number(nutrition.gramsPerServing ?? 100);
+      const servings = Number(nutrition.servings ?? 1);
+      const sourceNdb = (nutrition.sourceNdbNo ?? null) as string | null;
+      const sourceLongDesc = (nutrition.sourceLongDesc ?? '') as string;
       return {
         id: `dev-${level.id}`,
         name: level.name,
@@ -136,9 +139,9 @@ export const GET: RequestHandler = async () => {
         isCommunityRecipe: !!level.isCommunityRecipe,
         sr28Rule: level.sr28Rule ?? null,
         category: level.category ?? null,
-        gramsPerServing: nutrition.gramsPerServing,
-        servings: nutrition.servings,
-        sources: [{ ndb: nutrition.ndb ?? null, name: nutrition.long_desc || level.name, grams: nutrition.gramsPerServing }],
+        gramsPerServing,
+        servings,
+        sources: [{ ndb: sourceNdb, name: sourceLongDesc || level.name, grams: gramsPerServing }],
         cal: Math.round((Number(per100.Energy_KCal ?? 0)) * 10) / 10,
         pro: Math.round((Number(per100.Protein ?? 0)) * 10) / 10,
         fat: Math.round((Number(per100.TotalLipidFat ?? 0)) * 10) / 10,
