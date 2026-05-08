@@ -21,3 +21,9 @@ migration_006
 migration_006-wal
 migration_006-shm
 migration_006-info
+
+# libsql local replica scratch files (recipes_v3 upload tool)
+local.db
+local.db-info
+local.db-shm
+local.db-wal
