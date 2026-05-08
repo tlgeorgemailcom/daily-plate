@@ -3,10 +3,26 @@ _archived/
 
 # Python pipeline (runs locally, never on Vercel) — but keep the build JSONs,
 # which are read at runtime by /api/recipes/v3-build/[recipe_id].
-recipes_v3/
-!recipes_v3/output/
-!recipes_v3/output/builds/
-!recipes_v3/output/builds/*.json
+# NOTE: gitignore-style negation cannot re-include files under a directory
+# that is itself ignored, so we ignore the *contents* of recipes_v3/ rather
+# than the directory itself, then negate output/builds/ specifically.
+recipes_v3/data/
+recipes_v3/lib/
+recipes_v3/tools/
+recipes_v3/tests/
+recipes_v3/baselines/
+recipes_v3/__pycache__/
+recipes_v3/output/audit/
+recipes_v3/output/audits/
+recipes_v3/output/audit_summary.md
+recipes_v3/output/builds_pre_retention_v2/
+recipes_v3/output/compare/
+recipes_v3/output/discrepancies.json
+recipes_v3/output/discrepancies.md
+recipes_v3/output/upload_log/
+recipes_v3/*.md
+recipes_v3/*.py
+recipes_v3/PHASE_*
 __pycache__/
 *.pyc
 
