@@ -144,6 +144,18 @@ class IngredientRow:
     display_name_override: str | None
 
 
+@dataclass(frozen=True)
+class Section:
+    """Per-section cooking override. Phase 8b (see docs/v3.md §18)."""
+    recipe_id: str
+    section_key: str
+    section_label: str
+    cooking_method: str
+    yield_factor_water: float
+    yield_factor_fat: float
+    yield_factor_other: float
+
+
 def _parse_float(s: str, default: float = 0.0) -> float:
     s = (s or "").strip()
     if not s:
@@ -229,6 +241,37 @@ def load_ingredients() -> dict[str, list[IngredientRow]]:
             out.setdefault(rid, []).append(ingr)
     for rid in out:
         out[rid].sort(key=lambda r: sort_key(r.row_order))
+    return out
+
+
+def load_sections() -> dict[str, list[Section]]:
+    """Return {recipe_id: [Section...]} from recipes_v3/data/recipe_sections.csv.
+
+    Returns empty dict if the file doesn't exist (Phase 8b is opt-in;
+    zero rows for a recipe = synthetic-default single-section path).
+    """
+    path = DATA / "recipe_sections.csv"
+    out: dict[str, list[Section]] = {}
+    if not path.exists():
+        return out
+    with open(path, newline="", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            rid = (row.get("recipe_id") or "").strip()
+            if not rid:
+                continue
+            section_key = (row.get("section_key") or "").strip()
+            if not section_key:
+                continue
+            sec = Section(
+                recipe_id=rid,
+                section_key=section_key,
+                section_label=(row.get("section_label") or "").strip(),
+                cooking_method=(row.get("cooking_method") or "raw").strip().lower(),
+                yield_factor_water=_parse_float(row.get("yield_factor_water"), 1.0),
+                yield_factor_fat=_parse_float(row.get("yield_factor_fat"), 1.0),
+                yield_factor_other=_parse_float(row.get("yield_factor_other"), 1.0),
+            )
+            out.setdefault(rid, []).append(sec)
     return out
 
 

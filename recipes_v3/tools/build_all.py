@@ -20,6 +20,7 @@ from lib.load import (  # noqa: E402
     load_ingredients,
     load_ledger,
     load_recipes,
+    load_sections,
 )
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -34,6 +35,7 @@ def main() -> int:
     recipes = load_recipes()
     ledger = load_ledger()
     ings = load_ingredients()
+    sections_by_recipe = load_sections()
 
     # Pre-fetch all NDBs once
     all_ndbs = {entry.ndb_no for entry in ledger.values()}
@@ -47,7 +49,7 @@ def main() -> int:
         try:
             if rid not in ings:
                 raise RuntimeError("no ingredient rows")
-            build = build_recipe(recipes[rid], ings[rid], ledger, nutrients)
+            build = build_recipe(recipes[rid], ings[rid], ledger, nutrients, sections=sections_by_recipe.get(rid))
             (OUT_DIR / f"{rid}.json").write_text(json.dumps(build, indent=2))
             if not args.quiet:
                 p = build["per100g"]

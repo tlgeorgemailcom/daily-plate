@@ -39,6 +39,7 @@ from .load import (
     IngredientRow,
     LedgerEntry,
     Recipe,
+    Section,
     load_comboo_nutrients,
 )
 from .retention import get_retention, normalize_cooking_method
@@ -71,8 +72,15 @@ def build_recipe(
     ingredient_rows: list[IngredientRow],
     ledger: dict[str, LedgerEntry],
     nutrients_by_ndb: dict[str, dict[str, float]] | None = None,
+    sections: list[Section] | None = None,
 ) -> dict[str, Any]:
-    """Build a single recipe. Returns the v3 build JSON dict."""
+    """Build a single recipe. Returns the v3 build JSON dict.
+
+    When ``sections`` is None or empty, the build runs the original single-
+    section math (byte-identical with pre-Phase-8b output). When sections
+    are provided, retention and yield are applied per-section and summed
+    (see docs/v3.md §18).
+    """
     if nutrients_by_ndb is None:
         ndb_set = set()
         for row in ingredient_rows:
@@ -81,6 +89,19 @@ def build_recipe(
                 ndb_set.add(entry.ndb_no)
         nutrients_by_ndb = load_comboo_nutrients(ndb_set)
 
+    if sections:
+        return _build_recipe_multi(recipe, ingredient_rows, ledger, nutrients_by_ndb, sections)
+    return _build_recipe_single(recipe, ingredient_rows, ledger, nutrients_by_ndb)
+
+
+def _build_recipe_single(
+    recipe: Recipe,
+    ingredient_rows: list[IngredientRow],
+    ledger: dict[str, LedgerEntry],
+    nutrients_by_ndb: dict[str, dict[str, float]],
+) -> dict[str, Any]:
+    """Original single-section pipeline. Preserved byte-identical for
+    backward compatibility (acceptance gate per §18.3)."""
     ingredient_breakdown: list[dict[str, Any]] = []
     sums: dict[str, float] = {n: 0.0 for n in EXTENDED_NUTRIENTS}
     raw_total_grams = 0.0
@@ -207,6 +228,233 @@ def build_recipe(
     }
 
 
+def _build_recipe_multi(
+    recipe: Recipe,
+    ingredient_rows: list[IngredientRow],
+    ledger: dict[str, LedgerEntry],
+    nutrients_by_ndb: dict[str, dict[str, float]],
+    sections: list[Section],
+) -> dict[str, Any]:
+    """Per-section retention + yield accumulator (Phase 8b, see §18.2).
+
+    Each section S has its own cooking_method and yield factors. We:
+      1. Group ingredients by section_key.
+      2. Compute per-section sums, retention, yield, and final mass.
+      3. Sum retained nutrients across sections; sum final masses.
+      4. Convert to per-100g of the cooked dish.
+
+    Validator (§18.4 rule 5/6) guarantees every ingredient's section value
+    matches one of the section_keys before this function is called.
+    """
+    sections_by_key = {s.section_key: s for s in sections}
+
+    # Per-section accumulators
+    sec_state: dict[str, dict[str, Any]] = {
+        s.section_key: {
+            "section": s,
+            "sums": {n: 0.0 for n in EXTENDED_NUTRIENTS},
+            "raw_total": 0.0,
+            "raw_water": 0.0,
+            "raw_fat": 0.0,
+            "added_sugar": 0.0,
+            "intrinsic_sugar": 0.0,
+            "ingredient_count": 0,
+        }
+        for s in sections
+    }
+
+    ingredient_breakdown: list[dict[str, Any]] = []
+    skipped: list[dict[str, str]] = []
+
+    for row in ingredient_rows:
+        if row.is_optional:
+            skipped.append({"ingredient_key": row.ingredient_key, "reason": "optional"})
+            continue
+        entry = ledger.get(row.ingredient_key)
+        if not entry:
+            skipped.append({"ingredient_key": row.ingredient_key, "reason": "missing_ledger"})
+            continue
+        nuts = nutrients_by_ndb.get(entry.ndb_no)
+        if not nuts:
+            skipped.append({"ingredient_key": row.ingredient_key, "reason": f"missing_ndb_{entry.ndb_no}"})
+            continue
+        if row.section not in sec_state:
+            raise RuntimeError(
+                f"Recipe {recipe.recipe_id}: ingredient {row.ingredient_key} has "
+                f"section={row.section!r} but no matching section_key in recipe_sections.csv"
+            )
+
+        st = sec_state[row.section]
+        scale = row.grams / 100.0
+        st["raw_total"] += row.grams
+        st["raw_water"] += nuts.get("Water", 0.0) * scale
+        st["raw_fat"] += nuts.get("TotalLipidFat", 0.0) * scale
+        st["ingredient_count"] += 1
+
+        contrib_full: dict[str, float] = {}
+        for n in EXTENDED_NUTRIENTS:
+            c = nuts.get(n, 0.0) * scale
+            contrib_full[n] = c
+            st["sums"][n] += c
+
+        long_desc = str(nuts.get("_long_desc", entry.default_long_desc))
+        policy, _est = classify(entry.ndb_no, long_desc)
+        ing_sugar = contrib_full.get("SugarsTotal", 0.0)
+        added_g, intrinsic_g = split_sugar(ing_sugar, policy)
+        st["added_sugar"] += added_g
+        st["intrinsic_sugar"] += intrinsic_g
+
+        ingredient_breakdown.append({
+            "ingredient_key": row.ingredient_key,
+            "ndb_no": entry.ndb_no,
+            "long_desc": entry.default_long_desc,
+            "grams": _round(row.grams, 2),
+            "section": row.section,
+            "qty_display": row.qty_display,
+            "contribution": {m: _round(contrib_full.get(m, 0.0), 3) for m in MACROS},
+            "sugar_policy": policy.get("policy", "none_added"),
+            "added_sugar_g": _round(added_g, 3),
+            "intrinsic_sugar_g": _round(intrinsic_g, 3),
+        })
+
+    # Per-section retention + yield -> dish-level totals
+    retained_dish: dict[str, float] = {n: 0.0 for n in EXTENDED_NUTRIENTS}
+    retained_added_dish = 0.0
+    retained_intrinsic_dish = 0.0
+    final_grams = 0.0
+    raw_total_grams = 0.0
+    raw_water = 0.0
+    raw_fat = 0.0
+    sections_out: list[dict[str, Any]] = []
+
+    for sec_key in (s.section_key for s in sections):
+        st = sec_state[sec_key]
+        if st["ingredient_count"] == 0:
+            # Empty section is allowed (no ingredients assigned) — skip its mass/retention.
+            sections_out.append({
+                "section_key": sec_key,
+                "section_label": st["section"].section_label,
+                "cooking_method": st["section"].cooking_method,
+                "ingredient_count": 0,
+                "raw_grams": 0.0,
+                "final_grams": 0.0,
+            })
+            continue
+
+        s = st["section"]
+        method = normalize_cooking_method(s.cooking_method)
+        yfw = s.yield_factor_water
+        yff = s.yield_factor_fat
+        sums_S = st["sums"]
+        retained_S: dict[str, float] = {}
+        for n in EXTENDED_NUTRIENTS:
+            if n == "Water":
+                retained_S[n] = sums_S[n] * yfw
+            elif n == "TotalLipidFat":
+                retained_S[n] = sums_S[n] * yff
+            elif n in _MACRO_SET:
+                retained_S[n] = sums_S[n]
+            else:
+                retained_S[n] = sums_S[n] * get_retention(method, n)
+            retained_dish[n] += retained_S[n]
+
+        sugar_retention_S = get_retention(method, "SugarsTotal")
+        retained_added_dish += st["added_sugar"] * sugar_retention_S
+        retained_intrinsic_dish += st["intrinsic_sugar"] * sugar_retention_S
+
+        final_S = cooked_total_grams(st["raw_total"], st["raw_water"], st["raw_fat"], yfw, yff)
+        final_grams += final_S
+        raw_total_grams += st["raw_total"]
+        raw_water += st["raw_water"]
+        raw_fat += st["raw_fat"]
+
+        sections_out.append({
+            "section_key": sec_key,
+            "section_label": s.section_label,
+            "cooking_method": s.cooking_method,
+            "cooking_method_normalized": method,
+            "yield_factor_water": yfw,
+            "yield_factor_fat": yff,
+            "yield_factor_other": s.yield_factor_other,
+            "ingredient_count": st["ingredient_count"],
+            "raw_grams": _round(st["raw_total"], 2),
+            "raw_water_grams": _round(st["raw_water"], 2),
+            "raw_fat_grams": _round(st["raw_fat"], 2),
+            "final_grams": _round(final_S, 2),
+        })
+
+    if raw_total_grams <= 0:
+        raise RuntimeError(f"Recipe {recipe.recipe_id} has no usable ingredients")
+
+    final_grams = max(final_grams, 1.0)
+    grams_per_serving = final_grams / recipe.servings_count
+    per100g_scale = 100.0 / final_grams
+    serving_scale = grams_per_serving / 100.0
+
+    per100g: dict[str, float] = {}
+    per_serving: dict[str, float] = {}
+    for n in EXTENDED_NUTRIENTS:
+        v100 = retained_dish[n] * per100g_scale
+        per100g[n] = _round(v100, 2)
+        per_serving[n] = _round(v100 * serving_scale, 2)
+
+    o3_per100, o6_per100 = _derive_omegas(per100g)
+    per100g["omega3"] = _round(o3_per100, 2)
+    per100g["omega6"] = _round(o6_per100, 2)
+    per_serving["omega3"] = _round(o3_per100 * serving_scale, 2)
+    per_serving["omega6"] = _round(o6_per100 * serving_scale, 2)
+
+    added_per100 = retained_added_dish * per100g_scale
+    intrinsic_per100 = retained_intrinsic_dish * per100g_scale
+    per100g["AddedSugars"] = _round(added_per100, 2)
+    per100g["IntrinsicSugars"] = _round(intrinsic_per100, 2)
+    per_serving["AddedSugars"] = _round(added_per100 * serving_scale, 2)
+    per_serving["IntrinsicSugars"] = _round(intrinsic_per100 * serving_scale, 2)
+
+    # Recipe-level cooking_method label: if all sections share one method, use it;
+    # otherwise emit "multi" (see §18.5).
+    methods_used = sorted({s.cooking_method for s in sections})
+    dish_method_label = methods_used[0] if len(methods_used) == 1 else "multi"
+    dish_method_normalized = (
+        normalize_cooking_method(dish_method_label) if dish_method_label != "multi" else "multi"
+    )
+    # Dish-level water-lost / fat-lost are sums of per-section losses.
+    water_lost_total = sum(
+        st["raw_water"] * (1 - st["section"].yield_factor_water)
+        for st in sec_state.values() if st["ingredient_count"] > 0
+    )
+    fat_lost_total = sum(
+        st["raw_fat"] * (1 - st["section"].yield_factor_fat)
+        for st in sec_state.values() if st["ingredient_count"] > 0
+    )
+
+    return {
+        "recipe_id": recipe.recipe_id,
+        "recipe_name": recipe.recipe_name,
+        "sr_rule": recipe.sr_rule,
+        "canonical_ndb_no": recipe.canonical_ndb_no,
+        "cooking_method": dish_method_label,
+        "cooking_method_normalized": dish_method_normalized,
+        "yield_factor_water": recipe.yield_factor_water,
+        "yield_factor_fat": recipe.yield_factor_fat,
+        "servings_count": recipe.servings_count,
+        "audit_status": recipe.audit_status,
+        "audit_notes": recipe.audit_notes,
+        "raw_total_grams": _round(raw_total_grams, 2),
+        "raw_water_grams": _round(raw_water, 2),
+        "raw_fat_grams": _round(raw_fat, 2),
+        "water_lost_grams": _round(water_lost_total, 2),
+        "fat_lost_grams": _round(fat_lost_total, 2),
+        "cooked_total_grams": _round(final_grams, 2),
+        "grams_per_serving": _round(grams_per_serving, 2),
+        "ingredients": ingredient_breakdown,
+        "skipped_ingredients": skipped,
+        "per100g": per100g,
+        "per_serving": per_serving,
+        "sections": sections_out,
+    }
+
+
 # Map full per100g nutrient name -> shorthand key used in nutrition_json.perServing
 # (mirrors scripts/upload-dev-recipe.mjs / src/lib/server/calcNutritionSR28.ts).
 _SHORTHAND = {
@@ -306,4 +554,9 @@ def to_turso_nutrition_json(build: dict[str, Any]) -> dict[str, Any]:
         "yieldFactorWater": build["yield_factor_water"],
         "yieldFactorFat": build["yield_factor_fat"],
         "sources": sources,
+        **(
+            {"sections": build["sections"], "cookingMethod": build.get("cooking_method", "")}
+            if "sections" in build
+            else {}
+        ),
     }

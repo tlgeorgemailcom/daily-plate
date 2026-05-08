@@ -15,7 +15,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from lib.build import build_recipe  # noqa: E402
-from lib.load import load_ingredients, load_ledger, load_recipes  # noqa: E402
+from lib.load import load_ingredients, load_ledger, load_recipes, load_sections  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = ROOT / "output" / "builds"
@@ -30,6 +30,7 @@ def main() -> int:
     recipes = load_recipes()
     ledger = load_ledger()
     ings = load_ingredients()
+    sections_by_recipe = load_sections()
 
     if args.recipe_id not in recipes:
         print(f"ERROR: {args.recipe_id} not found in recipes.csv", file=sys.stderr)
@@ -38,7 +39,7 @@ def main() -> int:
         print(f"ERROR: no ingredient rows for {args.recipe_id}", file=sys.stderr)
         return 1
 
-    build = build_recipe(recipes[args.recipe_id], ings[args.recipe_id], ledger)
+    build = build_recipe(recipes[args.recipe_id], ings[args.recipe_id], ledger, sections=sections_by_recipe.get(args.recipe_id))
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     out_path = OUT_DIR / f"{args.recipe_id}.json"

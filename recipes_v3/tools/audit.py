@@ -28,6 +28,7 @@ from lib.load import (  # noqa: E402
     load_ingredients,
     load_ledger,
     load_recipes,
+    load_sections,
 )
 from lib.build import build_recipe  # noqa: E402
 
@@ -49,6 +50,7 @@ def main() -> int:
     recipes = load_recipes()
     ledger = load_ledger()
     ingredients = load_ingredients()
+    sections_by_recipe = load_sections()
 
     # Pre-load all NDBs we'll need (canonical + ingredients)
     needed_ndbs = set()
@@ -71,7 +73,7 @@ def main() -> int:
 
         rows_for_recipe = ingredients.get(rid, [])
         try:
-            built = build_recipe(r, rows_for_recipe, ledger, nuts_by_ndb)
+            built = build_recipe(r, rows_for_recipe, ledger, nuts_by_ndb, sections=sections_by_recipe.get(rid))
         except Exception as e:
             rows.append({
                 "recipe_id": rid,
