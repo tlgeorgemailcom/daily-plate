@@ -1,8 +1,12 @@
 # Quarantined / historical
 _archived/
 
-# Python pipeline (runs locally, never on Vercel)
+# Python pipeline (runs locally, never on Vercel) — but keep the build JSONs,
+# which are read at runtime by /api/recipes/v3-build/[recipe_id].
 recipes_v3/
+!recipes_v3/output/
+!recipes_v3/output/builds/
+!recipes_v3/output/builds/*.json
 __pycache__/
 *.pyc
 

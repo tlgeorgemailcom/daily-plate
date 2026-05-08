@@ -1,1 +1,7 @@
-output/
+output/audit/
+output/audit_summary.md
+output/compare/
+output/upload_log/
+# output/builds/ IS tracked — those JSONs are read at runtime by the
+# SvelteKit /api/recipes/v3-build/[id] endpoint and must be in git for
+# the Vercel deploy to serve them.
