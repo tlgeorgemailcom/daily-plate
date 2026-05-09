@@ -112,9 +112,13 @@ function mergeRecipeIngredients(
   const consumedOrigs = new Set<OrigIng>();
   const validFoodWords = new Set(FOODS.map((f) => f.word));
 
-  const merged = overrideIngs.map(ing => {
+  const merged = overrideIngs.map((ing, i) => {
     const hasValidFoodWord = !!ing.foodWord && validFoodWords.has(ing.foodWord);
     const hasNdbNo = !!ing.ndbNo;
+    // Positional fallback original — used to recover v3 §18 section assignment
+    // when overrides were saved before the section field existed (or with long
+    // USDA names that don't match the bundle's short names).
+    const positionalOrig = originalIngs[i];
     // Preserve override nutrition links when the override row already carries enough
     // metadata to compute nutrition (NDB number + portionGrams, OR a valid foodWord,
     // OR exempt/dish flag). Only fall back to the original LEVELS entry for legacy
@@ -122,23 +126,33 @@ function mergeRecipeIngredients(
     if ((ing.portionGrams && (hasValidFoodWord || hasNdbNo)) || ing.exempt || ing.isDish) {
       // Still consume one original by name so subsequent duplicates don't reuse it.
       const queue = origsByName.get(normalize(ing.name));
+      let nameOrig: OrigIng | undefined;
       if (queue) {
         const draftQty = (ing.quantity || '').trim();
-        const next = queue.find((o) => !consumedOrigs.has(o) && (o.quantity || '').trim() === draftQty)
+        nameOrig = queue.find((o) => !consumedOrigs.has(o) && (o.quantity || '').trim() === draftQty)
           ?? queue.find((o) => !consumedOrigs.has(o));
-        if (next) consumedOrigs.add(next);
+        if (nameOrig) consumedOrigs.add(nameOrig);
       }
-      return ing;
+      // Even when keeping override values, still attach section from the matched
+      // original (or from the positional fallback) so v3 §18 grouping renders.
+      const sectionSrc = ing.section ?? nameOrig?.section ?? positionalOrig?.section;
+      return sectionSrc !== undefined ? { ...ing, section: sectionSrc } : ing;
     }
 
     // Otherwise try to find a matching original ingredient and copy its nutrition links.
     const queue = origsByName.get(normalize(ing.name));
-    if (!queue || queue.length === 0) return ing;
-    const draftQty = (ing.quantity || '').trim();
-    const orig = queue.find((o) => !consumedOrigs.has(o) && (o.quantity || '').trim() === draftQty)
-      ?? queue.find((o) => !consumedOrigs.has(o));
-    if (!orig) return ing;
-    consumedOrigs.add(orig);
+    let orig: OrigIng | undefined;
+    if (queue && queue.length > 0) {
+      const draftQty = (ing.quantity || '').trim();
+      orig = queue.find((o) => !consumedOrigs.has(o) && (o.quantity || '').trim() === draftQty)
+        ?? queue.find((o) => !consumedOrigs.has(o));
+      if (orig) consumedOrigs.add(orig);
+    }
+    if (!orig) {
+      // No name match — still attach section positionally so the editor groups correctly.
+      const sectionSrc = ing.section ?? positionalOrig?.section;
+      return sectionSrc !== undefined ? { ...ing, section: sectionSrc } : ing;
+    }
 
     return {
       ...ing,
@@ -149,7 +163,7 @@ function mergeRecipeIngredients(
       servingCount: ing.servingCount ?? orig.servingCount,
       exempt: ing.exempt ?? orig.exempt,
       isDish: ing.isDish ?? orig.isDish,
-      section: ing.section ?? orig.section,
+      section: ing.section ?? orig.section ?? positionalOrig?.section,
     };
   });
 

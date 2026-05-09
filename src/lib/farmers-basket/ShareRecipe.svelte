@@ -101,6 +101,7 @@
         servings: data.servings || '',
         ingredients: data.ingredients?.length ? data.ingredients : [{ id: 1, name: '', quantity: '' }],
         instructions: data.instructions?.length ? data.instructions : [{ id: 1, text: '' }],
+        ...(Array.isArray(data.sections) && data.sections.length > 0 ? { sections: data.sections } : {}),
       };
       entryView = 'confirmed'; // data is now ready, button becomes active
     } catch {
@@ -456,7 +457,11 @@
         // Dish entry + original recipe text rows (name/qty only)
         ingredientsPayload = [
           dishEntry,
-          ...data.ingredients.map(i => ({ name: i.name.trim(), quantity: i.quantity.trim() }))
+          ...data.ingredients.map(i => ({
+            name: i.name.trim(),
+            quantity: i.quantity.trim(),
+            ...(i.section ? { section: i.section } : {})
+          }))
         ];
       } else {
         // Mixed: dish entry + individually-linked extra components
@@ -466,7 +471,8 @@
             name: i.name.trim(),
             quantity: i.quantity.trim(),
             ...(hasNutritionLinkMeta(i) ? { foodWord: i.foodWord, ndbNo: i.ndbNo, portionDesc: i.portionDesc, portionGrams: i.portionGrams, servingCount: i.servingCount } : {}),
-            ...(i.exempt ? { exempt: true } : {})
+            ...(i.exempt ? { exempt: true } : {}),
+            ...(i.section ? { section: i.section } : {})
           }))
         ];
       }
@@ -478,7 +484,8 @@
         ...(isLinked ? {
           ...(hasNutritionLinkMeta(i) ? { foodWord: i.foodWord, ndbNo: i.ndbNo, portionDesc: i.portionDesc, portionGrams: i.portionGrams, servingCount: i.servingCount } : {}),
           ...(i.exempt ? { exempt: true } : {})
-        } : {})
+        } : {}),
+        ...(i.section ? { section: i.section } : {})
       }));
     }
 
@@ -494,6 +501,10 @@
       prepTime: data.prepTime.trim(),
       servings: data.servings.trim(),
       ingredients: ingredientsPayload,
+      // v3.md §18 multi-section model — carry per-section labels, cooking
+      // methods and yield factors so the recipe round-trips with full
+      // section structure intact.
+      ...(data.sections && data.sections.length > 0 ? { sections: data.sections } : {}),
       ...(isLinked ? { nutritionComplete: true } : {}),
       ...(isLinked && data.linkMode ? { linkType: data.linkMode } : {}),
       instructions: data.instructions.map(i => i.text.trim()),

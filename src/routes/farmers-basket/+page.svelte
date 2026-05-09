@@ -946,11 +946,26 @@
             <div class="ingredients-section">
               <h4>📝 Ingredients</h4>
               {#if game.currentLevel.recipeIngredients && game.currentLevel.recipeIngredients.length > 0}
-                <ul class="ingredients-list">
-                  {#each game.currentLevel.recipeIngredients.filter(i => !i.isDish) as ing}
-                    <li>{ing.quantity ? `${ing.quantity} ` : ''}{ing.name}</li>
-                  {/each}
-                </ul>
+                {@const sectionsMeta = game.currentLevel.sections}
+                {@const ingredientList = game.currentLevel.recipeIngredients.filter(i => !i.isDish)}
+                {@const grouped = ingredientList.reduce((acc, ing) => {
+                  const last = acc[acc.length - 1];
+                  if (last && last.section === ing.section) last.items.push(ing);
+                  else acc.push({ section: ing.section, items: [ing] });
+                  return acc;
+                }, [] as Array<{ section?: string; items: typeof ingredientList }>)}
+                {#each grouped as group}
+                  {#if group.section}
+                    {@const meta = sectionsMeta?.find(s => s.key === group.section)}
+                    {@const label = meta?.label || (group.section.charAt(0).toUpperCase() + group.section.slice(1))}
+                    <div class="section-header">{meta?.cookingMethod ? `${label} \u2014 ${meta.cookingMethod}` : `${label}:`}</div>
+                  {/if}
+                  <ul class="ingredients-list">
+                    {#each group.items as ing}
+                      <li>{ing.quantity ? `${ing.quantity} ` : ''}{ing.name}</li>
+                    {/each}
+                  </ul>
+                {/each}
                 {#if game.currentLevel.nutritionJson}
                   <p class="recipe-nutrition">
                     Per serving: {game.currentLevel.nutritionJson.perServing.cal} cal&nbsp;|&nbsp;{game.currentLevel.nutritionJson.perServing.pro}g protein&nbsp;|&nbsp;{game.currentLevel.nutritionJson.perServing.fat}g fat&nbsp;|&nbsp;{game.currentLevel.nutritionJson.perServing.carb}g carbs&nbsp;|&nbsp;{game.currentLevel.nutritionJson.perServing.fib}g fiber&nbsp;|&nbsp;{game.currentLevel.nutritionJson.perServing.sug}g sugar&nbsp;|&nbsp;{game.currentLevel.nutritionJson.perServing.h2o}g water

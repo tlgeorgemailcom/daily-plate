@@ -13,6 +13,7 @@ interface RecipeRow {
   servings: string | null;
   recipe_ingredients_json: string | null;
   recipe_instructions_json: string | null;
+  sections_json: string | null;
   image_url: string | null;
   submitted_by: string;
   submitter_name: string | null;
@@ -60,7 +61,7 @@ export const GET: RequestHandler = async ({ url }) => {
       // Subscriber: fetch all their recipes across devices
       const rows = await queryAll<RecipeRow>(
         `SELECT recipe_id, recipe_name, category, dietary_category, prep_time, servings,
-          recipe_ingredients_json, recipe_instructions_json, image_url, submitted_by, submitter_name, status, created_at,
+          recipe_ingredients_json, recipe_instructions_json, sections_json, image_url, submitted_by, submitter_name, status, created_at,
                 moderator_note, nutrition_json, link_type, cooking_method, dish_family
          FROM player_recipes 
          WHERE submitted_by = ?
@@ -77,6 +78,7 @@ export const GET: RequestHandler = async ({ url }) => {
         servings: row.servings || '',
         ingredients: row.recipe_ingredients_json ? JSON.parse(row.recipe_ingredients_json) : [],
         instructions: row.recipe_instructions_json ? JSON.parse(row.recipe_instructions_json) : [],
+        sections: row.sections_json ? JSON.parse(row.sections_json) : [],
         imageUrl: row.image_url || null,
         submitterName: row.submitter_name || row.submitted_by,
         status: row.status,
@@ -110,7 +112,7 @@ export const GET: RequestHandler = async ({ url }) => {
     const placeholders = ids.map(() => '?').join(', ');
     const rows = await queryAll<RecipeRow>(
       `SELECT recipe_id, recipe_name, category, dietary_category, prep_time, servings,
-              recipe_ingredients_json, recipe_instructions_json, image_url, submitted_by, submitter_name, status, created_at,
+              recipe_ingredients_json, recipe_instructions_json, sections_json, image_url, submitted_by, submitter_name, status, created_at,
               moderator_note, nutrition_json, link_type, cooking_method, dish_family
        FROM player_recipes 
        WHERE recipe_id IN (${placeholders})
@@ -128,6 +130,7 @@ export const GET: RequestHandler = async ({ url }) => {
       servings: row.servings || '',
       ingredients: row.recipe_ingredients_json ? JSON.parse(row.recipe_ingredients_json) : [],
       instructions: row.recipe_instructions_json ? JSON.parse(row.recipe_instructions_json) : [],
+      sections: row.sections_json ? JSON.parse(row.sections_json) : [],
       imageUrl: row.image_url || null,
       submitterName: row.submitter_name || row.submitted_by,
       status: row.status,
@@ -216,6 +219,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
           servings = COALESCE(?, servings),
         recipe_ingredients_json = COALESCE(?, recipe_ingredients_json),
         recipe_instructions_json = COALESCE(?, recipe_instructions_json),
+        sections_json = COALESCE(?, sections_json),
           image_url = COALESCE(?, image_url),
           link_type = COALESCE(?, link_type),
           cooking_method = COALESCE(?, cooking_method),
@@ -233,6 +237,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
           servings = COALESCE(?, servings),
         recipe_ingredients_json = COALESCE(?, recipe_ingredients_json),
         recipe_instructions_json = COALESCE(?, recipe_instructions_json),
+        sections_json = COALESCE(?, sections_json),
           image_url = COALESCE(?, image_url),
           link_type = COALESCE(?, link_type),
           cooking_method = COALESCE(?, cooking_method),
@@ -250,6 +255,9 @@ export const PATCH: RequestHandler = async ({ request }) => {
         updates.servings || null,
         updates.ingredients ? JSON.stringify(updates.ingredients) : null,
         updates.instructions ? JSON.stringify(updates.instructions) : null,
+        Array.isArray(updates.sections) && updates.sections.length > 0
+          ? JSON.stringify(updates.sections)
+          : null,
         updates.imageUrl || null,
         linkType,
         updates.cookingMethod || null,

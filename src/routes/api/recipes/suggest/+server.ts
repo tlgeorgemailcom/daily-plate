@@ -15,6 +15,7 @@ interface SuggestionRow {
   source_type: 'dev' | 'player';
   dish_family: string | null;
   nutrition_json: string | null;
+  sections_json: string | null;
 }
 
 interface StoredNutritionJson {
@@ -32,6 +33,7 @@ interface CanonicalIngredient {
   portionGrams?: number;
   servingCount?: number;
   exempt?: boolean;
+  section?: string;
 }
 
 interface CanonicalInstruction {
@@ -111,6 +113,14 @@ function toCanonicalIngredients(raw: unknown[]): CanonicalIngredient[] {
         portionGrams,
         servingCount,
         exempt: item.exempt === true,
+        // v3.md §18 — preserve per-ingredient section assignment so the form
+        // can reconstruct section grouping when filled from a suggestion.
+        section:
+          typeof item.section === 'string' && item.section.trim()
+            ? item.section.trim()
+            : typeof item.section_key === 'string' && item.section_key.trim()
+            ? item.section_key.trim()
+            : undefined,
       };
     })
     .filter(item => item.name.length > 0 || item.quantity.length > 0);
@@ -152,6 +162,7 @@ export const GET: RequestHandler = async ({ url }) => {
               recipe_instructions_json AS recipe_instructions,
               dish_family,
               nutrition_json,
+              NULL AS sections_json,
               'dev' AS source_type
        FROM dev_recipes
         WHERE status = 'published'
@@ -162,6 +173,7 @@ export const GET: RequestHandler = async ({ url }) => {
               recipe_instructions_json AS recipe_instructions,
               dish_family,
               nutrition_json,
+              sections_json,
               'player' AS source_type
        FROM player_recipes
        WHERE status = 'approved'`,
@@ -204,6 +216,10 @@ export const GET: RequestHandler = async ({ url }) => {
         dishFamily: row.dish_family || null,
         matchScore: s,
         nutritionJson: (() => { try { return row.nutrition_json ? (JSON.parse(row.nutrition_json) as StoredNutritionJson) : null; } catch { return null; } })(),
+        // v3.md §18 — top-level section metadata (key/label/cookingMethod/yieldFactors).
+        // For dev recipes Turso has no sections_json column today; the form derives
+        // sections from per-row section keys with default cooking method.
+        sections: (() => { try { return row.sections_json ? JSON.parse(row.sections_json) : null; } catch { return null; } })(),
       };
     });
 

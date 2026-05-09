@@ -25,6 +25,7 @@ interface RecipeSubmission {
     gameFood?: string | null;
     animal?: string | null;
   }[];
+  srRule?: string;
   imageUrl?: string;
   reviewedAt?: string;
   reviewedBy?: string;
@@ -129,7 +130,8 @@ export const GET: RequestHandler = async ({ url }) => {
              status, recipe AS gameFoods, animal_spawns AS animalSpawns,
              food_supply AS foodSupply, image_url AS imageUrl, updated_at AS updatedAt,
              cooking_method AS cookingMethod, dish_family AS dishFamily,
-             link_type AS linkType, nutrition_json AS nutritionJson
+             link_type AS linkType, nutrition_json AS nutritionJson,
+             sr_rule AS srRule
       FROM dev_recipes
       WHERE status = 'published'
       ORDER BY created_at ASC

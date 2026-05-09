@@ -42,6 +42,7 @@
     dishFamily?: string | null;
     needsNameReview?: boolean;
     nutritionJson?: unknown | null;
+    srRule?: string;
   }
   
   // Password protection
@@ -225,7 +226,8 @@
       foodSupply: recipe.foodSupply,
       linkMode: recipe.linkType || (dishLink ? 'dish' : 'ingredient'),
       ...(dishLink ? { dishLink } : {}),
-      nutritionJson: (recipe.nutritionJson as any) || undefined
+      nutritionJson: (recipe.nutritionJson as any) || undefined,
+      sr28Rule: (recipe.srRule as 'Rule A' | 'Rule B' | 'Rule C' | 'Rule D' | undefined) || undefined,
     };
   }
   
@@ -812,6 +814,7 @@
                 {#key selectedRecipe.id}
                   <RecipeForm
                     moderatorMode={true}
+                    recipeId={selectedRecipe.id}
                     initialData={recipeToFormData(selectedRecipe)}
                     onsubmit={handleApprove}
                     submitLabel="✅ Approve"
@@ -950,6 +953,7 @@
                 {#key selectedPublished.id}
                   <RecipeForm
                     moderatorMode={true}
+                    recipeId={selectedPublished.id}
                     initialData={recipeToFormData(selectedPublished)}
                     onsubmit={handleSavePublished}
                     submitLabel="💾 Save"

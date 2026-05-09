@@ -23,10 +23,11 @@ export const GET: RequestHandler = async ({ url }) => {
     servings: string | null;
     recipe_ingredients_json: string | null;
     recipe_instructions_json: string | null;
+    sections_json: string | null;
     status: string;
   }>(
     `SELECT recipe_id, recipe_name, category, dietary_category, prep_time, servings,
-            recipe_ingredients_json, recipe_instructions_json, status
+            recipe_ingredients_json, recipe_instructions_json, sections_json, status
      FROM player_recipes WHERE edit_code = ? AND status = 'draft'`,
     [code]
   );
@@ -44,5 +45,6 @@ export const GET: RequestHandler = async ({ url }) => {
     servings: recipe.servings ?? '',
     ingredients: recipe.recipe_ingredients_json ? JSON.parse(recipe.recipe_ingredients_json) : [],
     instructions: recipe.recipe_instructions_json ? JSON.parse(recipe.recipe_instructions_json) : [],
+    sections: recipe.sections_json ? JSON.parse(recipe.sections_json) : [],
   });
 };

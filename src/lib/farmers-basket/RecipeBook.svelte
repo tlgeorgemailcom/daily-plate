@@ -279,6 +279,21 @@
     return section.charAt(0).toUpperCase() + section.slice(1) + ':';
   }
 
+  // Phase 8b (v3.md §18): when a recipe has per-section cooking methods,
+  // render the section header as "<Label> — <method>" so the multi-stage
+  // structure (e.g. baked crust + boiled filling + raw topping) is visible
+  // instead of being buried in nutritionJson.sections[].
+  function formatSectionHeader(
+    sectionKey: string | undefined,
+    sectionsMeta: Level['sections'],
+  ): string {
+    if (!sectionKey) return '';
+    const meta = sectionsMeta?.find((s) => s.key === sectionKey);
+    const label = meta?.label || (sectionKey.charAt(0).toUpperCase() + sectionKey.slice(1));
+    const method = meta?.cookingMethod;
+    return method ? `${label} — ${method}` : `${label}:`;
+  }
+
   function formatIngredientLine(ingredient: { name: string; quantity?: string }) {
     const quantity = ingredient.quantity?.trim();
     const name = ingredient.name.trim();
@@ -600,7 +615,8 @@
           portionDesc: ing.portionDesc,
           portionGrams: ing.portionGrams,
           servingCount: ing.servingCount,
-          exempt: ing.exempt
+          exempt: ing.exempt,
+          section: ing.section
         };
       });
     } else {
@@ -633,7 +649,8 @@
         id: i + 1,
         text
       })),
-      sr28Rule: level.sr28Rule
+      sr28Rule: level.sr28Rule,
+      ...(level.sections ? { sections: level.sections } : {})
     };
   }
   
@@ -742,7 +759,8 @@
                 portionGrams: i.portionGrams,
                 servingCount: i.servingCount,
                 exempt: i.exempt === true,
-                isDish: i.isDish === true
+                isDish: i.isDish === true,
+                ...(i.section ? { section: i.section } : {})
               })),
               // Pass existing nutritionJson so the server stores it as-is without
               // recomputing from NDB lookups (which may lack fiber/sugar data).
@@ -860,7 +878,8 @@
               portionGrams: i.portionGrams,
               servingCount: i.servingCount,
               exempt: i.exempt === true,
-              isDish: i.isDish === true
+              isDish: i.isDish === true,
+              ...(i.section ? { section: i.section } : {})
             })),
             imageUrl
           }
@@ -1373,7 +1392,7 @@
 
   function mergeDraftIngredientsWithLevel(
     level: Level,
-    draftIngredients: Array<{ name: string; quantity: string; foodWord?: string; ndbNo?: string; portionDesc?: string; portionGrams?: number; servingCount?: number; exempt?: boolean }> | undefined
+    draftIngredients: Array<{ name: string; quantity: string; foodWord?: string; ndbNo?: string; portionDesc?: string; portionGrams?: number; servingCount?: number; exempt?: boolean; section?: string }> | undefined
   ): NonNullable<Partial<RecipeFormData>['ingredients']> {
     const originalIngredients = (level.recipeIngredients || []).filter((ing) => !ing.isDish);
     const normalize = (value: string) => value.toLowerCase().replace(/[^a-z0-9]/g, '');
@@ -1407,6 +1426,13 @@
       // portionGrams/ndbNo as the source of truth — this self-heals drafts
       // that were saved with the duplicate-name collapse bug.
       const trustOriginal = quantityMatch && original;
+      // Positional fallback for section: when name-keyed lookup fails (drafts
+      // often store full USDA descriptions while the level uses short names),
+      // fall back to the level's ingredient at the same index so v3 §18
+      // section headers still render in the editor.
+      const positional = !original ? originalIngredients[i] : undefined;
+      const sectionFromLevel =
+        ing.section ?? original?.section ?? positional?.section;
       return {
         id: i + 1,
         name: ing.name,
@@ -1418,7 +1444,8 @@
         portionDesc: trustOriginal ? (original?.portionDesc ?? ing.portionDesc) : (ing.portionDesc ?? original?.portionDesc),
         portionGrams: trustOriginal ? (original?.portionGrams ?? ing.portionGrams) : (ing.portionGrams ?? original?.portionGrams),
         servingCount: ing.servingCount ?? original?.servingCount,
-        exempt: ing.exempt ?? original?.exempt
+        exempt: ing.exempt ?? original?.exempt,
+        section: sectionFromLevel
       };
     });
 
@@ -1435,7 +1462,8 @@
         portionDesc: ing.portionDesc,
         portionGrams: ing.portionGrams,
         servingCount: ing.servingCount,
-        exempt: ing.exempt
+        exempt: ing.exempt,
+        section: ing.section
       }));
 
     return [...mappedDraft, ...missingOriginals];
@@ -1474,7 +1502,9 @@
         linkMode: d.linkMode ? (d.linkMode === 'dish' && levelDishLink ? 'mixed' : d.linkMode) : (selectedLevel.linkType === 'dish' && levelDishLink ? 'mixed' : selectedLevel.linkType || (levelDishLink ? 'mixed' : 'ingredient')),
         ...(d.dishLink || levelDishLink ? { dishLink: d.dishLink || levelDishLink } : {}),
         ingredients: mergeDraftIngredientsWithLevel(selectedLevel, d.ingredients),
-        instructions: (d.instructions || []).map((text, i) => ({ id: i + 1, text }))
+        instructions: (d.instructions || []).map((text, i) => ({ id: i + 1, text })),
+        sr28Rule: selectedLevel.sr28Rule,
+        ...(selectedLevel.sections ? { sections: selectedLevel.sections } : {})
       };
     }
     return levelToFormData(selectedLevel);
@@ -1510,7 +1540,9 @@
         linkMode: d.linkMode ? (d.linkMode === 'dish' && levelDishLink ? 'mixed' : d.linkMode) : (selectedLevel.linkType === 'dish' && levelDishLink ? 'mixed' : selectedLevel.linkType || (levelDishLink ? 'mixed' : 'ingredient')),
         ...(d.dishLink || levelDishLink ? { dishLink: d.dishLink || levelDishLink } : {}),
         ingredients: mergeDraftIngredientsWithLevel(selectedLevel, d.ingredients),
-        instructions: (d.instructions || []).map((text, i) => ({ id: i + 1, text }))
+        instructions: (d.instructions || []).map((text, i) => ({ id: i + 1, text })),
+        sr28Rule: selectedLevel.sr28Rule,
+        ...(selectedLevel.sections ? { sections: selectedLevel.sections } : {})
       };
     }
     return levelToFormData(selectedLevel);
@@ -1926,7 +1958,7 @@
                   <span class="ingredients-label">📝 Full Ingredient List:</span>
                   {#each groupRecipeIngredients(selectedLevel) as group}
                     {#if group.section}
-                      <div class="ingredient-section-label">{formatIngredientSection(group.section)}</div>
+                      <div class="ingredient-section-label">{formatSectionHeader(group.section, selectedLevel.sections)}</div>
                     {/if}
                     <ul>
                       {#each group.items as ing}

@@ -112,6 +112,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
           recipe_name = ?, category = ?, dietary_category = ?,
           prep_time = ?, servings = ?,
           recipe_ingredients_json = ?, recipe_instructions_json = ?,
+          sections_json = ?,
           image_url = COALESCE(?, image_url),
           link_type = COALESCE(?, link_type),
           cooking_method = COALESCE(?, cooking_method),
@@ -128,6 +129,9 @@ export const PATCH: RequestHandler = async ({ request }) => {
           fields.servings || null,
           JSON.stringify(fields.ingredients || []),
           JSON.stringify(fields.instructions || []),
+          Array.isArray(fields.sections) && fields.sections.length > 0
+            ? JSON.stringify(fields.sections)
+            : null,
           fields.imageUrl || null,
           fields.linkType || null,
           fields.cookingMethod || fields.cookMethod || null,
@@ -232,10 +236,11 @@ export const POST: RequestHandler = async ({ request }) => {
         recipe_id, submitted_by, recipe_name, category, dietary_category,
         prep_time, servings,
         recipe_ingredients_json, recipe_instructions_json,
+        sections_json,
         image_url, link_type, cooking_method, dish_family, nutrition_json,
         submitter_name, status, created_at, updated_at,
         grams_per_serving, nutrient_version, retention_model_version, source_match_version
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'), datetime('now'), ?, ?, ?, ?)`,
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'), datetime('now'), ?, ?, ?, ?)`,
       [
         recipeId,
         submittedBy,
@@ -246,6 +251,9 @@ export const POST: RequestHandler = async ({ request }) => {
         body.servings || null,
         JSON.stringify(body.ingredients),
         JSON.stringify(body.instructions),
+        Array.isArray(body.sections) && body.sections.length > 0
+          ? JSON.stringify(body.sections)
+          : null,
         body.imageUrl || null,
         body.linkType || null,
         body.cookingMethod || body.cookMethod || null,
