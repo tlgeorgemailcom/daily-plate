@@ -24,6 +24,7 @@
       "long_desc": "Egg, white, raw, fresh",
       "grams": 396.0,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "12 large whites",
       "contribution": {
         "Energy_KCal": 205.92,
@@ -44,6 +45,7 @@
       "long_desc": "Sugars, granulated",
       "grams": 300.0,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "1 1/2 cups",
       "contribution": {
         "Energy_KCal": 1161.0,
@@ -64,6 +66,7 @@
       "long_desc": "Wheat flour, white, cake, enriched",
       "grams": 114.0,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "1 cup",
       "contribution": {
         "Energy_KCal": 412.68,
@@ -84,6 +87,7 @@
       "long_desc": "Leavening agents, cream of tartar",
       "grams": 4.5,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "1 1/2 teaspoons",
       "contribution": {
         "Energy_KCal": 11.61,
@@ -104,6 +108,7 @@
       "long_desc": "Salt, table",
       "grams": 1.5,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "1/4 teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -124,6 +129,7 @@
       "long_desc": "Vanilla extract",
       "grams": 6.3,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "1 1/2 teaspoons",
       "contribution": {
         "Energy_KCal": 18.144,

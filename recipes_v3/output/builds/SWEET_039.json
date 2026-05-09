@@ -24,6 +24,7 @@
       "long_desc": "Butter, without salt",
       "grams": 224.0,
       "section": "shortbread",
+      "ingredient_group": "shortbread",
       "qty_display": "1 cup (slightly scant)",
       "contribution": {
         "Energy_KCal": 1606.08,
@@ -44,6 +45,7 @@
       "long_desc": "Sugars, granulated",
       "grams": 150.0,
       "section": "shortbread",
+      "ingredient_group": "shortbread",
       "qty_display": "3/4 cup",
       "contribution": {
         "Energy_KCal": 580.5,
@@ -64,6 +66,7 @@
       "long_desc": "Vanilla extract",
       "grams": 4.2,
       "section": "shortbread",
+      "ingredient_group": "shortbread",
       "qty_display": "1 teaspoon",
       "contribution": {
         "Energy_KCal": 12.096,
@@ -84,6 +87,7 @@
       "long_desc": "Salt, table",
       "grams": 6.0,
       "section": "shortbread",
+      "ingredient_group": "shortbread",
       "qty_display": "1 teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -104,6 +108,7 @@
       "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
       "grams": 320.0,
       "section": "shortbread",
+      "ingredient_group": "shortbread",
       "qty_display": "2 1/2 cups + 1 tablespoon",
       "contribution": {
         "Energy_KCal": 1164.8,

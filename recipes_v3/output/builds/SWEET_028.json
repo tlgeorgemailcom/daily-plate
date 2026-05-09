@@ -24,6 +24,7 @@
       "long_desc": "Butter, without salt",
       "grams": 227.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "1 cup",
       "contribution": {
         "Energy_KCal": 1627.59,
@@ -44,6 +45,7 @@
       "long_desc": "Sugars, granulated",
       "grams": 198.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "1 cup",
       "contribution": {
         "Energy_KCal": 766.26,
@@ -64,6 +66,7 @@
       "long_desc": "Egg, whole, raw, fresh",
       "grams": 200.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "4 large eggs",
       "contribution": {
         "Energy_KCal": 286.0,
@@ -84,6 +87,7 @@
       "long_desc": "Vanilla extract",
       "grams": 4.2,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "1 teaspoon",
       "contribution": {
         "Energy_KCal": 12.096,
@@ -104,6 +108,7 @@
       "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
       "grams": 240.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "2 cups",
       "contribution": {
         "Energy_KCal": 873.6,
@@ -124,6 +129,7 @@
       "long_desc": "Leavening agents, baking powder, double-acting, sodium aluminum sulfate",
       "grams": 4.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "1 teaspoon",
       "contribution": {
         "Energy_KCal": 2.12,
@@ -144,6 +150,7 @@
       "long_desc": "Salt, table",
       "grams": 3.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "1/2 teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -164,6 +171,7 @@
       "long_desc": "Cream, sour, cultured",
       "grams": 58.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "1/4 cup",
       "contribution": {
         "Energy_KCal": 114.84,

@@ -24,6 +24,7 @@
       "long_desc": "Butter, without salt",
       "grams": 227.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "1 cup (2 sticks)",
       "contribution": {
         "Energy_KCal": 1627.59,
@@ -44,6 +45,7 @@
       "long_desc": "Sugars, granulated",
       "grams": 200.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "1 cup",
       "contribution": {
         "Energy_KCal": 774.0,
@@ -64,6 +66,7 @@
       "long_desc": "Egg, whole, raw, fresh",
       "grams": 50.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "1 large",
       "contribution": {
         "Energy_KCal": 71.5,
@@ -84,6 +87,7 @@
       "long_desc": "Vanilla extract",
       "grams": 8.4,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "2 teaspoons",
       "contribution": {
         "Energy_KCal": 24.192,
@@ -104,6 +108,7 @@
       "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
       "grams": 280.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "2\u00bc cups",
       "contribution": {
         "Energy_KCal": 1019.2,
@@ -124,6 +129,7 @@
       "long_desc": "Salt, table",
       "grams": 1.5,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "\u00bc teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,

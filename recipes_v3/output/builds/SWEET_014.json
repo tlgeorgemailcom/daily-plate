@@ -24,6 +24,7 @@
       "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
       "grams": 188.0,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "1 1/2 cups",
       "contribution": {
         "Energy_KCal": 684.32,
@@ -44,6 +45,7 @@
       "long_desc": "Salt, table",
       "grams": 3.0,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "1/2 teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -64,6 +66,7 @@
       "long_desc": "Butter, without salt",
       "grams": 85.0,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "6 tablespoons",
       "contribution": {
         "Energy_KCal": 609.45,
@@ -84,6 +87,7 @@
       "long_desc": "Water, tap, drinking",
       "grams": 45.0,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "3 tablespoons",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -104,6 +108,7 @@
       "long_desc": "Cream, fluid, half and half",
       "grams": 242.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1 cup",
       "contribution": {
         "Energy_KCal": 297.66,
@@ -124,6 +129,7 @@
       "long_desc": "Nuts, coconut milk, canned",
       "grams": 400.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1 can (13.5 oz)",
       "contribution": {
         "Energy_KCal": 788.0,
@@ -144,6 +150,7 @@
       "long_desc": "Sugars, granulated",
       "grams": 133.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "2/3 cup",
       "contribution": {
         "Energy_KCal": 514.71,
@@ -164,6 +171,7 @@
       "long_desc": "Cornstarch",
       "grams": 32.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "4 tablespoons",
       "contribution": {
         "Energy_KCal": 121.92,
@@ -184,6 +192,7 @@
       "long_desc": "Salt, table",
       "grams": 3.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1/2 teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -204,6 +213,7 @@
       "long_desc": "Egg, yolk, raw, fresh",
       "grams": 68.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "4 large yolks",
       "contribution": {
         "Energy_KCal": 218.96,
@@ -224,6 +234,7 @@
       "long_desc": "Butter, without salt",
       "grams": 28.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "2 tablespoons",
       "contribution": {
         "Energy_KCal": 200.76,
@@ -244,6 +255,7 @@
       "long_desc": "Vanilla extract",
       "grams": 4.2,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1 teaspoon",
       "contribution": {
         "Energy_KCal": 12.096,
@@ -264,6 +276,7 @@
       "long_desc": "Nuts, coconut meat, dried, sweetened, flaked",
       "grams": 74.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1 cup",
       "contribution": {
         "Energy_KCal": 337.44,
@@ -284,6 +297,7 @@
       "long_desc": "Cream, fluid, heavy whipping",
       "grams": 345.0,
       "section": "topping",
+      "ingredient_group": "topping",
       "qty_display": "1 1/2 cups",
       "contribution": {
         "Energy_KCal": 1173.0,
@@ -304,6 +318,7 @@
       "long_desc": "Sugars, powdered",
       "grams": 15.0,
       "section": "topping",
+      "ingredient_group": "topping",
       "qty_display": "2 tablespoons",
       "contribution": {
         "Energy_KCal": 58.35,

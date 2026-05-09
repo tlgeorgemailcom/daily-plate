@@ -24,6 +24,7 @@
       "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
       "grams": 188.0,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "1 1/2 cups",
       "contribution": {
         "Energy_KCal": 684.32,
@@ -44,6 +45,7 @@
       "long_desc": "Salt, table",
       "grams": 3.0,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "1/2 teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -64,6 +66,7 @@
       "long_desc": "Butter, without salt",
       "grams": 85.0,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "6 tablespoons",
       "contribution": {
         "Energy_KCal": 609.45,
@@ -84,6 +87,7 @@
       "long_desc": "Water, tap, drinking",
       "grams": 45.0,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "3 tablespoons",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -104,6 +108,7 @@
       "long_desc": "Egg, whole, raw, fresh",
       "grams": 200.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "4 large eggs",
       "contribution": {
         "Energy_KCal": 286.0,
@@ -124,6 +129,7 @@
       "long_desc": "Sugars, granulated",
       "grams": 150.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "3/4 cup",
       "contribution": {
         "Energy_KCal": 580.5,
@@ -144,6 +150,7 @@
       "long_desc": "Salt, table",
       "grams": 1.5,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1/4 teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -164,6 +171,7 @@
       "long_desc": "Spices, nutmeg, ground",
       "grams": 0.55,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1/4 teaspoon",
       "contribution": {
         "Energy_KCal": 2.888,
@@ -184,6 +192,7 @@
       "long_desc": "Milk, whole, 3.25% milkfat, with added vitamin D",
       "grams": 610.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "2 1/2 cups",
       "contribution": {
         "Energy_KCal": 372.1,
@@ -204,6 +213,7 @@
       "long_desc": "Vanilla extract",
       "grams": 8.4,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "2 teaspoons",
       "contribution": {
         "Energy_KCal": 24.192,

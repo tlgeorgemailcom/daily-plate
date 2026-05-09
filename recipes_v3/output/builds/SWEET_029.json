@@ -24,6 +24,7 @@
       "long_desc": "Shortening, household, soybean (partially hydrogenated)-cottonseed (partially hydrogenated)",
       "grams": 130.0,
       "section": "batter",
+      "ingredient_group": "batter",
       "qty_display": "2/3 cup",
       "contribution": {
         "Energy_KCal": 1149.2,
@@ -44,6 +45,7 @@
       "long_desc": "Butter, without salt",
       "grams": 57.0,
       "section": "batter",
+      "ingredient_group": "batter",
       "qty_display": "1/4 cup",
       "contribution": {
         "Energy_KCal": 408.69,
@@ -64,6 +66,7 @@
       "long_desc": "Sugars, granulated",
       "grams": 210.0,
       "section": "batter",
+      "ingredient_group": "batter",
       "qty_display": "1 cup + 1 tablespoon",
       "contribution": {
         "Energy_KCal": 812.7,
@@ -84,6 +87,7 @@
       "long_desc": "Egg, whole, raw, fresh",
       "grams": 150.0,
       "section": "batter",
+      "ingredient_group": "batter",
       "qty_display": "3 large",
       "contribution": {
         "Energy_KCal": 214.5,
@@ -104,6 +108,7 @@
       "long_desc": "Vanilla extract",
       "grams": 4.2,
       "section": "batter",
+      "ingredient_group": "batter",
       "qty_display": "1 teaspoon",
       "contribution": {
         "Energy_KCal": 12.096,
@@ -124,6 +129,7 @@
       "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
       "grams": 80.0,
       "section": "batter",
+      "ingredient_group": "batter",
       "qty_display": "2/3 cup",
       "contribution": {
         "Energy_KCal": 291.2,
@@ -144,6 +150,7 @@
       "long_desc": "Cocoa, dry powder, unsweetened",
       "grams": 95.0,
       "section": "batter",
+      "ingredient_group": "batter",
       "qty_display": "1 cup + 1 tablespoon",
       "contribution": {
         "Energy_KCal": 216.6,
@@ -164,6 +171,7 @@
       "long_desc": "Salt, table",
       "grams": 5.5,
       "section": "batter",
+      "ingredient_group": "batter",
       "qty_display": "scant 1 teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -184,6 +192,7 @@
       "long_desc": "Candies, semisweet chocolate",
       "grams": 85.0,
       "section": "batter",
+      "ingredient_group": "batter",
       "qty_display": "1/2 cup",
       "contribution": {
         "Energy_KCal": 408.0,

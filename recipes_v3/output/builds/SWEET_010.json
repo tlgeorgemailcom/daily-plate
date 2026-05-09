@@ -24,6 +24,7 @@
       "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
       "grams": 188.0,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "1 1/2 cups",
       "contribution": {
         "Energy_KCal": 684.32,
@@ -44,6 +45,7 @@
       "long_desc": "Salt, table",
       "grams": 3.0,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "1/2 teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -64,6 +66,7 @@
       "long_desc": "Butter, without salt",
       "grams": 85.0,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "6 tablespoons",
       "contribution": {
         "Energy_KCal": 609.45,
@@ -84,6 +87,7 @@
       "long_desc": "Water, tap, drinking",
       "grams": 45.0,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "3 tablespoons ice water",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -104,6 +108,7 @@
       "long_desc": "Pumpkin, canned, without salt",
       "grams": 425.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1 can (15 oz)",
       "contribution": {
         "Energy_KCal": 144.5,
@@ -124,6 +129,7 @@
       "long_desc": "Milk, canned, evaporated, with added vitamin D",
       "grams": 354.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1 can (12 oz)",
       "contribution": {
         "Energy_KCal": 474.36,
@@ -144,6 +150,7 @@
       "long_desc": "Sugars, granulated",
       "grams": 150.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "3/4 cup",
       "contribution": {
         "Energy_KCal": 580.5,
@@ -164,6 +171,7 @@
       "long_desc": "Egg, whole, raw, fresh",
       "grams": 100.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "2 large",
       "contribution": {
         "Energy_KCal": 143.0,
@@ -184,6 +192,7 @@
       "long_desc": "Spices, pumpkin pie spice",
       "grams": 5.1,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1 tablespoon",
       "contribution": {
         "Energy_KCal": 17.442,
@@ -204,6 +213,7 @@
       "long_desc": "Salt, table",
       "grams": 3.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1/2 teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -224,6 +234,7 @@
       "long_desc": "Butter, without salt",
       "grams": 14.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1 tablespoon",
       "contribution": {
         "Energy_KCal": 100.38,

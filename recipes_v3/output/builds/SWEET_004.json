@@ -24,6 +24,7 @@
       "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
       "grams": 250.0,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "2 cups",
       "contribution": {
         "Energy_KCal": 910.0,
@@ -44,6 +45,7 @@
       "long_desc": "Salt, table",
       "grams": 4.5,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "3/4 teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -64,6 +66,7 @@
       "long_desc": "Butter, without salt",
       "grams": 170.0,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "3/4 cup",
       "contribution": {
         "Energy_KCal": 1218.9,
@@ -84,6 +87,7 @@
       "long_desc": "Water, tap, drinking",
       "grams": 75.0,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "5 tablespoon ice water",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -104,6 +108,7 @@
       "long_desc": "Sugars, granulated",
       "grams": 8.0,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "2 teaspoons",
       "contribution": {
         "Energy_KCal": 30.96,
@@ -124,6 +129,7 @@
       "long_desc": "Blueberries, raw",
       "grams": 740.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "5 cups",
       "contribution": {
         "Energy_KCal": 421.8,
@@ -144,6 +150,7 @@
       "long_desc": "Sugars, granulated",
       "grams": 100.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1/2 cup",
       "contribution": {
         "Energy_KCal": 387.0,
@@ -164,6 +171,7 @@
       "long_desc": "Cornstarch",
       "grams": 32.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1/4 cup",
       "contribution": {
         "Energy_KCal": 121.92,
@@ -184,6 +192,7 @@
       "long_desc": "Lemon juice, raw",
       "grams": 15.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1 tablespoon",
       "contribution": {
         "Energy_KCal": 3.3,
@@ -204,6 +213,7 @@
       "long_desc": "Spices, cinnamon, ground",
       "grams": 1.3,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1/2 teaspoon",
       "contribution": {
         "Energy_KCal": 3.211,
@@ -224,6 +234,7 @@
       "long_desc": "Salt, table",
       "grams": 1.5,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1/4 teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -244,6 +255,7 @@
       "long_desc": "Butter, without salt",
       "grams": 14.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1 tablespoon",
       "contribution": {
         "Energy_KCal": 100.38,
@@ -264,6 +276,7 @@
       "long_desc": "Egg, whole, raw, fresh",
       "grams": 25.0,
       "section": "wash",
+      "ingredient_group": "wash",
       "qty_display": "1 large egg (for wash; ~half adheres)",
       "contribution": {
         "Energy_KCal": 35.75,
@@ -284,6 +297,7 @@
       "long_desc": "Water, tap, drinking",
       "grams": 5.0,
       "section": "wash",
+      "ingredient_group": "wash",
       "qty_display": "1 teaspoon (egg wash)",
       "contribution": {
         "Energy_KCal": 0.0,

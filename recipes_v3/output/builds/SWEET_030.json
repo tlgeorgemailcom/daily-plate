@@ -24,6 +24,7 @@
       "long_desc": "Butter, without salt",
       "grams": 199.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "1/2 cup + 6 tbsp",
       "contribution": {
         "Energy_KCal": 1426.83,
@@ -44,6 +45,7 @@
       "long_desc": "Sugars, brown",
       "grams": 165.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "3/4 cup packed",
       "contribution": {
         "Energy_KCal": 627.0,
@@ -64,6 +66,7 @@
       "long_desc": "Sugars, granulated",
       "grams": 100.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "1/2 cup",
       "contribution": {
         "Energy_KCal": 387.0,
@@ -84,6 +87,7 @@
       "long_desc": "Egg, whole, raw, fresh",
       "grams": 100.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "2 large",
       "contribution": {
         "Energy_KCal": 143.0,
@@ -104,6 +108,7 @@
       "long_desc": "Vanilla extract",
       "grams": 4.2,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "1 teaspoon",
       "contribution": {
         "Energy_KCal": 12.096,
@@ -124,6 +129,7 @@
       "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
       "grams": 185.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "1 1/2 cups",
       "contribution": {
         "Energy_KCal": 673.4,
@@ -144,6 +150,7 @@
       "long_desc": "Leavening agents, baking soda",
       "grams": 5.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "1 teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -164,6 +171,7 @@
       "long_desc": "Spices, cinnamon, ground",
       "grams": 2.6,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "1 teaspoon",
       "contribution": {
         "Energy_KCal": 6.422,
@@ -184,6 +192,7 @@
       "long_desc": "Salt, table",
       "grams": 3.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "1/2 teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -204,6 +213,7 @@
       "long_desc": "Cereals, oats, regular and quick, not fortified, dry",
       "grams": 300.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "3 cups",
       "contribution": {
         "Energy_KCal": 1137.0,
@@ -224,6 +234,7 @@
       "long_desc": "Raisins, seedless",
       "grams": 140.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "1 cup",
       "contribution": {
         "Energy_KCal": 418.6,

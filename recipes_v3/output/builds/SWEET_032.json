@@ -24,6 +24,7 @@
       "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
       "grams": 270.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "2\u00bc cups",
       "contribution": {
         "Energy_KCal": 982.8,
@@ -44,6 +45,7 @@
       "long_desc": "Leavening agents, baking soda",
       "grams": 10.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "2 teaspoons",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -64,6 +66,7 @@
       "long_desc": "Salt, table",
       "grams": 3.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "\u00bd teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -84,6 +87,7 @@
       "long_desc": "Butter, without salt",
       "grams": 113.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "\u00bd cup (1 stick)",
       "contribution": {
         "Energy_KCal": 810.21,
@@ -104,6 +108,7 @@
       "long_desc": "Sugars, granulated",
       "grams": 200.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "1 cup",
       "contribution": {
         "Energy_KCal": 774.0,
@@ -124,6 +129,7 @@
       "long_desc": "Molasses",
       "grams": 170.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "\u00bd cup",
       "contribution": {
         "Energy_KCal": 493.0,
@@ -144,6 +150,7 @@
       "long_desc": "Egg, whole, raw, fresh",
       "grams": 50.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "1 large",
       "contribution": {
         "Energy_KCal": 71.5,
@@ -164,6 +171,7 @@
       "long_desc": "Spices, ginger, ground",
       "grams": 3.6,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "2 teaspoons",
       "contribution": {
         "Energy_KCal": 12.06,
@@ -184,6 +192,7 @@
       "long_desc": "Spices, cinnamon, ground",
       "grams": 2.6,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "1 teaspoon",
       "contribution": {
         "Energy_KCal": 6.422,
@@ -204,6 +213,7 @@
       "long_desc": "Spices, cloves, ground",
       "grams": 2.1,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "\u00bd teaspoon",
       "contribution": {
         "Energy_KCal": 5.754,
@@ -224,6 +234,7 @@
       "long_desc": "Sugars, granulated",
       "grams": 50.0,
       "section": "rolling",
+      "ingredient_group": "rolling",
       "qty_display": "\u00bc cup for rolling",
       "contribution": {
         "Energy_KCal": 193.5,

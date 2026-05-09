@@ -24,6 +24,7 @@
       "long_desc": "Puff pastry, frozen, ready-to-bake, baked",
       "grams": 245.0,
       "section": "pastry",
+      "ingredient_group": "pastry",
       "qty_display": "1 sheet",
       "contribution": {
         "Energy_KCal": 1367.1,
@@ -44,6 +45,7 @@
       "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
       "grams": 16.0,
       "section": "pastry",
+      "ingredient_group": "pastry",
       "qty_display": "2 tablespoons (for dusting)",
       "contribution": {
         "Energy_KCal": 58.24,
@@ -64,6 +66,7 @@
       "long_desc": "Apples, raw, granny smith, with skin",
       "grams": 542.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "5 cups thinly sliced",
       "contribution": {
         "Energy_KCal": 314.36,
@@ -84,6 +87,7 @@
       "long_desc": "Sugars, granulated",
       "grams": 160.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "3/4 cup + 2 tablespoons",
       "contribution": {
         "Energy_KCal": 619.2,
@@ -104,6 +108,7 @@
       "long_desc": "Sugars, brown",
       "grams": 36.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1/4 cup",
       "contribution": {
         "Energy_KCal": 136.8,
@@ -124,6 +129,7 @@
       "long_desc": "Raisins, seedless",
       "grams": 80.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1/2 cup",
       "contribution": {
         "Energy_KCal": 239.2,
@@ -144,6 +150,7 @@
       "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
       "grams": 16.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "2 tablespoons (for thickening)",
       "contribution": {
         "Energy_KCal": 58.24,
@@ -164,6 +171,7 @@
       "long_desc": "Water, tap, drinking",
       "grams": 59.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1/4 cup",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -184,6 +192,7 @@
       "long_desc": "Bread crumbs, dry, grated, plain",
       "grams": 55.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1/2 cup",
       "contribution": {
         "Energy_KCal": 217.25,
@@ -204,6 +213,7 @@
       "long_desc": "Butter, without salt",
       "grams": 42.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "3 tablespoons",
       "contribution": {
         "Energy_KCal": 301.14,
@@ -224,6 +234,7 @@
       "long_desc": "Lemon juice, raw",
       "grams": 15.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1 tablespoon",
       "contribution": {
         "Energy_KCal": 3.3,
@@ -244,6 +255,7 @@
       "long_desc": "Salt, table",
       "grams": 1.3,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1/4 teaspoon (heaping)",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -264,6 +276,7 @@
       "long_desc": "Egg, whole, raw, fresh",
       "grams": 50.0,
       "section": "finish",
+      "ingredient_group": "finish",
       "qty_display": "1 large egg",
       "contribution": {
         "Energy_KCal": 71.5,

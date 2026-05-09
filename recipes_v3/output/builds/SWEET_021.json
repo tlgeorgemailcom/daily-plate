@@ -24,6 +24,7 @@
       "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
       "grams": 281.0,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "2 1/4 cups",
       "contribution": {
         "Energy_KCal": 1022.84,
@@ -44,6 +45,7 @@
       "long_desc": "Butter, without salt",
       "grams": 57.0,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "1/4 cup",
       "contribution": {
         "Energy_KCal": 408.69,
@@ -64,6 +66,7 @@
       "long_desc": "Shortening, household, soybean (partially hydrogenated)-cottonseed (partially hydrogenated)",
       "grams": 96.0,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "1/2 cup",
       "contribution": {
         "Energy_KCal": 848.64,
@@ -84,6 +87,7 @@
       "long_desc": "Sugars, brown",
       "grams": 73.0,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "1/3 cup",
       "contribution": {
         "Energy_KCal": 277.4,
@@ -104,6 +108,7 @@
       "long_desc": "Molasses",
       "grams": 252.0,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "3/4 cup",
       "contribution": {
         "Energy_KCal": 730.8,
@@ -124,6 +129,7 @@
       "long_desc": "Egg, whole, raw, fresh",
       "grams": 50.0,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "1 large",
       "contribution": {
         "Energy_KCal": 71.5,
@@ -144,6 +150,7 @@
       "long_desc": "Water, tap, drinking",
       "grams": 148.0,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "5/8 cup",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -164,6 +171,7 @@
       "long_desc": "Leavening agents, baking soda",
       "grams": 4.6,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "1 teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -184,6 +192,7 @@
       "long_desc": "Spices, ginger, ground",
       "grams": 2.7,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "1 1/2 teaspoons",
       "contribution": {
         "Energy_KCal": 9.045,
@@ -204,6 +213,7 @@
       "long_desc": "Spices, cinnamon, ground",
       "grams": 2.6,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "1 teaspoon",
       "contribution": {
         "Energy_KCal": 6.422,
@@ -224,6 +234,7 @@
       "long_desc": "Spices, cloves, ground",
       "grams": 1.0,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "1/2 teaspoon",
       "contribution": {
         "Energy_KCal": 2.74,
@@ -244,6 +255,7 @@
       "long_desc": "Salt, table",
       "grams": 4.5,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "3/4 teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,

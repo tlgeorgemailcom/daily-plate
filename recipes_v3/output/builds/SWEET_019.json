@@ -24,6 +24,7 @@
       "long_desc": "Sugars, powdered",
       "grams": 115.0,
       "section": "frosting",
+      "ingredient_group": "frosting",
       "qty_display": "15/16 cup",
       "contribution": {
         "Energy_KCal": 447.35,
@@ -44,6 +45,7 @@
       "long_desc": "Cocoa, dry powder, unsweetened",
       "grams": 5.0,
       "section": "frosting",
+      "ingredient_group": "frosting",
       "qty_display": "1 tablespoon",
       "contribution": {
         "Energy_KCal": 11.4,
@@ -64,6 +66,7 @@
       "long_desc": "Butter, without salt",
       "grams": 12.0,
       "section": "frosting",
+      "ingredient_group": "frosting",
       "qty_display": "2 1/2 teaspoons",
       "contribution": {
         "Energy_KCal": 86.04,
@@ -84,6 +87,7 @@
       "long_desc": "Milk, canned, evaporated, with added vitamin D",
       "grams": 21.0,
       "section": "frosting",
+      "ingredient_group": "frosting",
       "qty_display": "1 tablespoon + 1 teaspoon",
       "contribution": {
         "Energy_KCal": 28.14,
@@ -104,6 +108,7 @@
       "long_desc": "Water, tap, drinking",
       "grams": 12.0,
       "section": "frosting",
+      "ingredient_group": "frosting",
       "qty_display": "2 1/2 teaspoons",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -124,6 +129,7 @@
       "long_desc": "Vanilla extract",
       "grams": 2.1,
       "section": "frosting",
+      "ingredient_group": "frosting",
       "qty_display": "1/2 teaspoon",
       "contribution": {
         "Energy_KCal": 6.048,
@@ -144,6 +150,7 @@
       "long_desc": "Salt, table",
       "grams": 0.5,
       "section": "frosting",
+      "ingredient_group": "frosting",
       "qty_display": "scant 1/8 teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,

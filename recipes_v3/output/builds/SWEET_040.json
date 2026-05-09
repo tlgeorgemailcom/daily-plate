@@ -24,6 +24,7 @@
       "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
       "grams": 188.0,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "1 1/2 cups",
       "contribution": {
         "Energy_KCal": 684.32,
@@ -44,6 +45,7 @@
       "long_desc": "Butter, without salt",
       "grams": 135.0,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "9 1/2 tablespoons, chilled",
       "contribution": {
         "Energy_KCal": 967.95,
@@ -64,6 +66,7 @@
       "long_desc": "Salt, table",
       "grams": 3.6,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "1/2 teaspoon + pinch",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -84,6 +87,7 @@
       "long_desc": "Sugars, granulated",
       "grams": 2.5,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "1/2 teaspoon + pinch",
       "contribution": {
         "Energy_KCal": 9.675,
@@ -104,6 +108,7 @@
       "long_desc": "Water, tap, drinking",
       "grams": 72.0,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "4 tablespoons + 1 teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -124,6 +129,7 @@
       "long_desc": "Sugars, granulated",
       "grams": 300.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1 1/2 cups",
       "contribution": {
         "Energy_KCal": 1161.0,
@@ -144,6 +150,7 @@
       "long_desc": "Butter, without salt",
       "grams": 113.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1/2 cup, melted",
       "contribution": {
         "Energy_KCal": 810.21,
@@ -164,6 +171,7 @@
       "long_desc": "Egg, whole, raw, fresh",
       "grams": 150.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "3 large eggs",
       "contribution": {
         "Energy_KCal": 214.5,
@@ -184,6 +192,7 @@
       "long_desc": "Milk, buttermilk, fluid, whole",
       "grams": 244.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1 cup",
       "contribution": {
         "Energy_KCal": 151.28,
@@ -204,6 +213,7 @@
       "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
       "grams": 24.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "3 tablespoons",
       "contribution": {
         "Energy_KCal": 87.36,
@@ -224,6 +234,7 @@
       "long_desc": "Vanilla extract",
       "grams": 4.2,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1 teaspoon",
       "contribution": {
         "Energy_KCal": 12.096,
@@ -244,6 +255,7 @@
       "long_desc": "Salt, table",
       "grams": 1.5,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1/4 teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -264,6 +276,7 @@
       "long_desc": "Spices, nutmeg, ground",
       "grams": 0.5,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1/4 teaspoon",
       "contribution": {
         "Energy_KCal": 2.625,
@@ -284,6 +297,7 @@
       "long_desc": "Lemon peel, raw",
       "grams": 2.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "1 teaspoon",
       "contribution": {
         "Energy_KCal": 0.94,

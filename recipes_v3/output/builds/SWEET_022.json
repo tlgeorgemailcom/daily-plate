@@ -24,6 +24,7 @@
       "long_desc": "Butter, without salt",
       "grams": 43.0,
       "section": "topping",
+      "ingredient_group": "topping",
       "qty_display": "3 tablespoons",
       "contribution": {
         "Energy_KCal": 308.31,
@@ -44,6 +45,7 @@
       "long_desc": "Sugars, brown",
       "grams": 147.0,
       "section": "topping",
+      "ingredient_group": "topping",
       "qty_display": "2/3 cup",
       "contribution": {
         "Energy_KCal": 558.6,
@@ -64,6 +66,7 @@
       "long_desc": "Pineapple, canned, juice pack, drained",
       "grams": 200.0,
       "section": "topping",
+      "ingredient_group": "topping",
       "qty_display": "5 slices",
       "contribution": {
         "Energy_KCal": 120.0,
@@ -84,6 +87,7 @@
       "long_desc": "Maraschino cherries, canned, drained",
       "grams": 25.0,
       "section": "topping",
+      "ingredient_group": "topping",
       "qty_display": "5 cherries",
       "contribution": {
         "Energy_KCal": 41.25,
@@ -104,6 +108,7 @@
       "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
       "grams": 187.0,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "1 1/2 cups",
       "contribution": {
         "Energy_KCal": 680.68,
@@ -124,6 +129,7 @@
       "long_desc": "Sugars, granulated",
       "grams": 150.0,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "3/4 cup",
       "contribution": {
         "Energy_KCal": 580.5,
@@ -144,6 +150,7 @@
       "long_desc": "Leavening agents, baking powder, double-acting, sodium aluminum sulfate",
       "grams": 8.0,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "2 teaspoons",
       "contribution": {
         "Energy_KCal": 4.24,
@@ -164,6 +171,7 @@
       "long_desc": "Salt, table",
       "grams": 5.25,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "7/8 teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -184,6 +192,7 @@
       "long_desc": "Shortening, household, soybean (partially hydrogenated)-cottonseed (partially hydrogenated)",
       "grams": 77.0,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "6 tablespoons",
       "contribution": {
         "Energy_KCal": 680.68,
@@ -204,6 +213,7 @@
       "long_desc": "Milk, whole, 3.25% milkfat, with added vitamin D",
       "grams": 122.0,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "1/2 cup",
       "contribution": {
         "Energy_KCal": 74.42,
@@ -224,6 +234,7 @@
       "long_desc": "Vanilla extract",
       "grams": 4.2,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "1 teaspoon",
       "contribution": {
         "Energy_KCal": 12.096,
@@ -244,6 +255,7 @@
       "long_desc": "Egg, whole, raw, fresh",
       "grams": 100.0,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "2 large",
       "contribution": {
         "Energy_KCal": 143.0,

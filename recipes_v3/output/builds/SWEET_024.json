@@ -24,6 +24,7 @@
       "long_desc": "Egg, yolk, raw, fresh",
       "grams": 85.0,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "5 large yolks",
       "contribution": {
         "Energy_KCal": 273.7,
@@ -44,6 +45,7 @@
       "long_desc": "Egg, white, raw, fresh",
       "grams": 165.0,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "5 large whites",
       "contribution": {
         "Energy_KCal": 85.8,
@@ -64,6 +66,7 @@
       "long_desc": "Sugars, granulated",
       "grams": 200.0,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "1 cup",
       "contribution": {
         "Energy_KCal": 774.0,
@@ -84,6 +87,7 @@
       "long_desc": "Wheat flour, white, cake, enriched",
       "grams": 114.0,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "1 cup",
       "contribution": {
         "Energy_KCal": 412.68,
@@ -104,6 +108,7 @@
       "long_desc": "Water, tap, drinking",
       "grams": 60.0,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "1/4 cup hot",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -124,6 +129,7 @@
       "long_desc": "Lemon juice, raw",
       "grams": 15.0,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "1 tablespoon",
       "contribution": {
         "Energy_KCal": 3.3,
@@ -144,6 +150,7 @@
       "long_desc": "Vanilla extract",
       "grams": 4.2,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "1 teaspoon",
       "contribution": {
         "Energy_KCal": 12.096,
@@ -164,6 +171,7 @@
       "long_desc": "Salt, table",
       "grams": 2.25,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "scant 1/2 teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -184,6 +192,7 @@
       "long_desc": "Leavening agents, cream of tartar",
       "grams": 0.75,
       "section": "cake",
+      "ingredient_group": "cake",
       "qty_display": "1/4 teaspoon",
       "contribution": {
         "Energy_KCal": 1.935,

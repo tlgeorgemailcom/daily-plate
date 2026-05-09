@@ -24,6 +24,7 @@
       "long_desc": "Figs, dried, uncooked",
       "grams": 300.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "2 cups",
       "contribution": {
         "Energy_KCal": 747.0,
@@ -44,6 +45,7 @@
       "long_desc": "Water, tap, drinking",
       "grams": 180.0,
       "section": "filling",
+      "ingredient_group": "filling",
       "qty_display": "\u00be cup",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -64,6 +66,7 @@
       "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
       "grams": 180.0,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "1\u2153 cups",
       "contribution": {
         "Energy_KCal": 655.2,
@@ -84,6 +87,7 @@
       "long_desc": "Butter, without salt",
       "grams": 70.0,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "\u2153 cup + 2 tbsp",
       "contribution": {
         "Energy_KCal": 501.9,
@@ -104,6 +108,7 @@
       "long_desc": "Sugars, brown",
       "grams": 80.0,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "\u2153 cup packed",
       "contribution": {
         "Energy_KCal": 304.0,
@@ -124,6 +129,7 @@
       "long_desc": "Egg, whole, raw, fresh",
       "grams": 50.0,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "1 large",
       "contribution": {
         "Energy_KCal": 71.5,
@@ -144,6 +150,7 @@
       "long_desc": "Vanilla extract",
       "grams": 4.2,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "1 teaspoon",
       "contribution": {
         "Energy_KCal": 12.096,
@@ -164,6 +171,7 @@
       "long_desc": "Leavening agents, baking powder, double-acting, sodium aluminum sulfate",
       "grams": 4.0,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "1 teaspoon",
       "contribution": {
         "Energy_KCal": 2.12,
@@ -184,6 +192,7 @@
       "long_desc": "Salt, table",
       "grams": 1.5,
       "section": "crust",
+      "ingredient_group": "crust",
       "qty_display": "\u00bc teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,

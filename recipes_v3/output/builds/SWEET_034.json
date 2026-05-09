@@ -24,6 +24,7 @@
       "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
       "grams": 280.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "2\u00bc cups",
       "contribution": {
         "Energy_KCal": 1019.2,
@@ -44,6 +45,7 @@
       "long_desc": "Leavening agents, baking soda",
       "grams": 5.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "1 teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -64,6 +66,7 @@
       "long_desc": "Salt, table",
       "grams": 3.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "\u00bd teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -84,6 +87,7 @@
       "long_desc": "Butter, without salt",
       "grams": 170.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "\u00be cup (1\u00bd sticks, melted)",
       "contribution": {
         "Energy_KCal": 1218.9,
@@ -104,6 +108,7 @@
       "long_desc": "Sugars, brown",
       "grams": 150.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "\u00be cup packed",
       "contribution": {
         "Energy_KCal": 570.0,
@@ -124,6 +129,7 @@
       "long_desc": "Sugars, granulated",
       "grams": 100.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "\u00bd cup",
       "contribution": {
         "Energy_KCal": 387.0,
@@ -144,6 +150,7 @@
       "long_desc": "Egg, whole, raw, fresh",
       "grams": 50.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "1 large",
       "contribution": {
         "Energy_KCal": 71.5,
@@ -164,6 +171,7 @@
       "long_desc": "Egg, yolk, raw, fresh",
       "grams": 18.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "1 egg yolk",
       "contribution": {
         "Energy_KCal": 57.96,
@@ -184,6 +192,7 @@
       "long_desc": "Vanilla extract",
       "grams": 8.4,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "2 teaspoons",
       "contribution": {
         "Energy_KCal": 24.192,
@@ -204,6 +213,7 @@
       "long_desc": "Candies, semisweet chocolate",
       "grams": 340.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "2 cups",
       "contribution": {
         "Energy_KCal": 1632.0,

@@ -24,6 +24,7 @@
       "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
       "grams": 350.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "2\u00be cups",
       "contribution": {
         "Energy_KCal": 1274.0,
@@ -44,6 +45,7 @@
       "long_desc": "Leavening agents, baking powder, double-acting, sodium aluminum sulfate",
       "grams": 8.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "2 teaspoons",
       "contribution": {
         "Energy_KCal": 4.24,
@@ -64,6 +66,7 @@
       "long_desc": "Salt, table",
       "grams": 3.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "\u00bd teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -84,6 +87,7 @@
       "long_desc": "Margarine, regular, 80% fat, composite, stick, with salt",
       "grams": 227.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "1 cup (2 sticks)",
       "contribution": {
         "Energy_KCal": 1627.59,
@@ -104,6 +108,7 @@
       "long_desc": "Sugars, granulated",
       "grams": 155.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "\u00be cup",
       "contribution": {
         "Energy_KCal": 599.85,
@@ -124,6 +129,7 @@
       "long_desc": "Egg, whole, raw, fresh",
       "grams": 100.0,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "2 large",
       "contribution": {
         "Energy_KCal": 143.0,
@@ -144,6 +150,7 @@
       "long_desc": "Vanilla extract",
       "grams": 4.2,
       "section": "",
+      "ingredient_group": "",
       "qty_display": "1 teaspoon",
       "contribution": {
         "Energy_KCal": 12.096,
@@ -164,6 +171,7 @@
       "long_desc": "Sugars, granulated",
       "grams": 50.0,
       "section": "rolling",
+      "ingredient_group": "rolling",
       "qty_display": "\u00bc cup for rolling",
       "contribution": {
         "Energy_KCal": 193.5,
