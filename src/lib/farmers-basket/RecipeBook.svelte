@@ -758,8 +758,9 @@
                 portionDesc: i.portionDesc,
                 portionGrams: i.portionGrams,
                 servingCount: i.servingCount,
-                exempt: i.exempt === true,
+                exempt: i.ingredientStatus === 'exempt',
                 isDish: i.isDish === true,
+                ...(i.ingredientStatus === 'optional' ? { is_optional: true } : {}),
                 ...(i.section ? { section: i.section } : {})
               })),
               // Pass existing nutritionJson so the server stores it as-is without
@@ -772,6 +773,51 @@
             editedBy: 'Moderator'
           })
         });
+
+        // If builtin API rejects due to v3 lock, fall back to moderate PATCH
+        // which updates recipe_ingredients_json without recomputing nutrition_json
+        // (correct for v3-managed recipes where the nutrient panel must be preserved).
+        if (res.status === 423) {
+          const errBody = await res.json().catch(() => ({ code: '' }));
+          if (errBody.code === 'V3_LOCKED') {
+            const modIngredients = data.ingredients.filter(i => i.name.trim()).map(i => ({
+              name: i.name,
+              quantity: i.quantity,
+              gameFood: i.gameFood || null,
+              animal: i.animal || null,
+              foodWord: i.foodWord,
+              ndbNo: i.ndbNo,
+              portionDesc: i.portionDesc,
+              portionGrams: i.portionGrams,
+              servingCount: i.servingCount,
+              ...(i.ingredientStatus === 'exempt' ? { exempt: true } : {}),
+              ...(i.ingredientStatus === 'optional' ? { is_optional: true } : {}),
+              ...(i.section ? { section: i.section } : {})
+            }));
+            res = await fetch('/api/recipes/moderate', {
+              method: 'PATCH',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                id: selectedLevel.id,
+                updates: {
+                  recipeName: data.recipeName,
+                  category: data.category,
+                  dietaryCategory: data.dietaryCategory,
+                  cookingMethod: data.cookingMethod,
+                  dishFamily: data.dishFamily || null,
+                  prepTime: data.prepTime,
+                  servings: data.servings,
+                  gameFoods,
+                  ingredients: modIngredients,
+                  modIngredients,
+                  instructions: data.instructions.filter(i => i.text.trim()).map(i => i.text),
+                  imageUrl
+                },
+                editedBy: 'Moderator'
+              })
+            });
+          }
+        }
       }
       
       if (!res.ok) throw new Error('Failed to save');
