@@ -903,6 +903,34 @@
             };
           });
           nextIngredientId = ingredients.length + 1;
+          // Append moderator-added ingredients from stored data that aren't in the v3 build
+          // (e.g. optional spices added via the Edit Recipe UI).
+          const v3NdbNos = new Set(data.ingredients.map((i) => i.ndb_no).filter(Boolean));
+          const storedExtras = (initialData.ingredients ?? []).filter(
+            (ing) => !ing.isDish && (ing.ndbNo ? !v3NdbNos.has(ing.ndbNo) : true)
+          );
+          if (storedExtras.length > 0) {
+            let extraIdx = ingredients.length + 1;
+            ingredients = [
+              ...ingredients,
+              ...storedExtras.map((ing) => ({
+                id: extraIdx++,
+                name: ing.name,
+                quantity: ing.quantity || '',
+                gameFood: '' as FoodType | '',
+                animal: '' as AnimalType | '',
+                foodWord: ing.foodWord,
+                ndbNo: ing.ndbNo,
+                portionDesc: ing.portionDesc,
+                portionGrams: ing.portionGrams,
+                servingCount: ing.servingCount ?? 1,
+                ingredientStatus: (ing as RecipeIngredient).ingredientStatus ?? 'required' as 'required' | 'optional' | 'exempt',
+                section: ing.section,
+                ingredient_group: (ing as RecipeIngredient).ingredient_group || ing.section,
+              })),
+            ];
+            nextIngredientId = extraIdx;
+          }
           // Append any ingredients the build skipped due to missing ledger/NDB
           // data so the moderator can see and action them. These are shown with
           // exempt=true and a name that states the data-quality reason.

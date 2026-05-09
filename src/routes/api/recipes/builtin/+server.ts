@@ -255,7 +255,10 @@ function normalizeRecipeIngredients(value: string | null): BuiltinOverride['reci
           : source.row_type === 'exempt',
         isDish: typeof source.isDish === 'boolean'
           ? source.isDish
-          : source.row_type === 'dish'
+          : source.row_type === 'dish',
+        is_optional: typeof source.is_optional === 'boolean'
+          ? source.is_optional
+          : undefined
       };
     })
     .filter((item): item is NonNullable<typeof item> => item !== null && Boolean(item.name || item.isDish)) as NonNullable<BuiltinOverride['recipeIngredients']>;

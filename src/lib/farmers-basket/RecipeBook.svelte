@@ -615,6 +615,7 @@
           portionDesc: ing.portionDesc,
           portionGrams: ing.portionGrams,
           servingCount: ing.servingCount,
+          ingredientStatus: ing.is_optional ? 'optional' as const : ing.exempt ? 'exempt' as const : 'required' as const,
           exempt: ing.exempt,
           section: ing.section
         };

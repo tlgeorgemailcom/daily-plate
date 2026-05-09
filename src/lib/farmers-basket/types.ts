@@ -130,6 +130,7 @@ export interface Level {
     servingCount?: number;  // number of portions
     exempt?: boolean;       // true = no nutrition link needed (e.g. salt, water)
     isDish?: boolean;       // true = this row is the dish-level USDA entry
+    is_optional?: boolean;  // true = moderator-added optional ingredient (excluded from nutrition math)
   }[];
   servings?: string;              // e.g., "Serves 2"
   prepTime?: string;              // e.g., "10 minutes"
