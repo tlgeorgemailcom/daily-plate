@@ -65,6 +65,8 @@ export const GET: RequestHandler = async ({ params }) => {
     skippedIngredients: parsed.skipped_ingredients ?? [],
     auditStatus: parsed.audit_status ?? '',
     auditNotes: parsed.audit_notes ?? '',
+    recipeName: (parsed.recipe_name as string) ?? '',
     ingredients: parsed.ingredients ?? [],
+    sections: parsed.sections ?? [],
   });
 };

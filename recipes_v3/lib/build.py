@@ -112,6 +112,9 @@ def _build_recipe_single(
     skipped: list[dict[str, str]] = []
 
     for row in ingredient_rows:
+        # is_optional means "cook may omit" — excluded from nutrition math
+        # so the canonical nutrition panel reflects the base recipe only.
+        # Display-only: the moderator UI still shows optional ingredients.
         if row.is_optional:
             skipped.append({"ingredient_key": row.ingredient_key, "reason": "optional"})
             continue
@@ -148,6 +151,7 @@ def _build_recipe_single(
             "long_desc": entry.default_long_desc,
             "grams": _round(row.grams, 2),
             "section": row.section,
+            "ingredient_group": row.ingredient_group,
             "qty_display": row.qty_display,
             "contribution": {m: _round(contrib_full.get(m, 0.0), 3) for m in MACROS},
             "sugar_policy": policy.get("policy", "none_added"),
@@ -267,6 +271,7 @@ def _build_recipe_multi(
     skipped: list[dict[str, str]] = []
 
     for row in ingredient_rows:
+        # is_optional means "cook may omit" — excluded from nutrition math.
         if row.is_optional:
             skipped.append({"ingredient_key": row.ingredient_key, "reason": "optional"})
             continue
@@ -310,6 +315,7 @@ def _build_recipe_multi(
             "long_desc": entry.default_long_desc,
             "grams": _round(row.grams, 2),
             "section": row.section,
+            "ingredient_group": row.ingredient_group,
             "qty_display": row.qty_display,
             "contribution": {m: _round(contrib_full.get(m, 0.0), 3) for m in MACROS},
             "sugar_policy": policy.get("policy", "none_added"),

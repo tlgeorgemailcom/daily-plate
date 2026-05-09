@@ -33,6 +33,7 @@ from config import (  # noqa: E402
     INGREDIENTS_LEDGER_CSV,
     RECIPE_INGREDIENTS_CSV,
     RECIPE_INSTRUCTIONS_CSV,
+    RECIPE_SECTIONS_CSV,
     RECIPES_CSV,
 )
 from lib.game_design import (  # noqa: E402
@@ -48,6 +49,7 @@ V3_BUILDS_DIR    = str(BUILDS_DIR)
 RECIPES_CSV      = str(RECIPES_CSV)
 INGREDIENTS_CSV  = str(RECIPE_INGREDIENTS_CSV)
 INSTRUCTIONS_CSV = str(RECIPE_INSTRUCTIONS_CSV)
+SECTIONS_CSV     = str(RECIPE_SECTIONS_CSV)
 LEDGER_CSV       = str(INGREDIENTS_LEDGER_CSV)
 OUTPUT           = str(BUNDLE_OUTPUT)
 COMBOO_DB        = str(COMBOO_DB)
@@ -125,6 +127,32 @@ def ts_instructions(instr_list):
     if not instr_list:
         return '[]'
     lines = [f"      '{esc(t)}'" for t in instr_list]
+    return '[\n' + ',\n'.join(lines) + '\n    ]'
+
+def ts_sections(sections):
+    """Format per-section cooking-method/yield rows for the bundle.
+
+    Surfaces the data already in nutritionJson.sections[] at the top level
+    of the Level so UI layouts can render section headers like
+    'Crust — baked' grouping the matching recipeIngredients rows by
+    `section` (which equals `key`).
+    """
+    if not sections:
+        return '[]'
+    lines = []
+    for s in sections:
+        parts = [
+            f"key: '{esc(s['key'])}'",
+            f"label: '{esc(s.get('label', ''))}'",
+            f"cookingMethod: '{esc(s['cookingMethod'])}'",
+        ]
+        if s.get('yieldFactorWater') is not None:
+            parts.append(f"yieldFactorWater: {s['yieldFactorWater']}")
+        if s.get('yieldFactorFat') is not None and s['yieldFactorFat'] != 1.0:
+            parts.append(f"yieldFactorFat: {s['yieldFactorFat']}")
+        if s.get('yieldFactorOther') is not None and s['yieldFactorOther'] != 1.0:
+            parts.append(f"yieldFactorOther: {s['yieldFactorOther']}")
+        lines.append('      { ' + ', '.join(parts) + ' }')
     return '[\n' + ',\n'.join(lines) + '\n    ]'
 
 
@@ -386,6 +414,16 @@ for row in csv.DictReader(open(INSTRUCTIONS_CSV)):
     rid = row['recipe_id']
     instructions_by_recipe.setdefault(rid, []).append(row)
 
+sections_by_recipe = {}
+try:
+    for row in csv.DictReader(open(SECTIONS_CSV)):
+        rid = (row.get('recipe_id') or '').strip()
+        if not rid:
+            continue
+        sections_by_recipe.setdefault(rid, []).append(row)
+except FileNotFoundError:
+    pass
+
 authored_recipe_ids = set(ingredients_by_recipe) & set(instructions_by_recipe)
 
 # ── v3 nutrition overrides (Phase 7) ───────────────────────────────────────────
@@ -489,6 +527,25 @@ for recipe in recipes:
         )
     nutrition_json = json.dumps(v3_payload, ensure_ascii=False, separators=(',', ':'))
 
+    # Per-section cooking methods (Phase 8b layout surfacing).
+    # Built from recipe_sections.csv when present; empty otherwise.
+    section_rows = sections_by_recipe.get(rid, [])
+    sections_meta = [
+        {
+            'key':              (s.get('section_key') or '').strip(),
+            'label':            (s.get('section_label') or '').strip(),
+            'cookingMethod':    (s.get('cooking_method') or '').strip().lower(),
+            'yieldFactorWater': (lambda v: float(v) if v not in (None, '') else None)(s.get('yield_factor_water')),
+            'yieldFactorFat':   (lambda v: float(v) if v not in (None, '') else None)(s.get('yield_factor_fat')),
+            'yieldFactorOther': (lambda v: float(v) if v not in (None, '') else None)(s.get('yield_factor_other')),
+        }
+        for s in section_rows
+    ]
+    sections_field = (
+        f"\n    sections: {ts_sections(sections_meta)},"
+        if sections_meta else ''
+    )
+
     block = f"""  {{
     id: '{esc(rid)}',
     name: '{esc(recipe.get('recipe_name',''))}',
@@ -505,7 +562,7 @@ for recipe in recipes:
     sr28Rule: '{esc(sr_rule)}',
     nutritionJson: {nutrition_json},
     recipeIngredients: {ts_recipe_ingredients(recipe_ings)},
-    recipeInstructions: {ts_instructions(instr_texts)},
+    recipeInstructions: {ts_instructions(instr_texts)},{sections_field}
   }}"""
     level_blocks.append(block)
 

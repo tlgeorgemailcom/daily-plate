@@ -1,6 +1,7 @@
 recipe_id,section_key,section_label,cooking_method,yield_factor_water,yield_factor_fat,yield_factor_other
-SWEET_003,crust,Pie crust,baked,0.84,1.0,1.0
-SWEET_003,filling,Vanilla custard filling,boiled,0.95,1.0,1.0
+SWEET_001,baked,Baked,baked,0.71,1.0,1.0
+SWEET_003,crust,Pie crust,baked,0.75,1.0,1.0
+SWEET_003,filling,Vanilla custard filling,boiled,0.72,1.0,1.0
 SWEET_003,assembly,Banana layer,raw,1.0,1.0,1.0
 SWEET_003,topping,Whipped cream topping,raw,1.0,1.0,1.0
 SWEET_006,crust,Pie crust,baked,0.84,1.0,1.0

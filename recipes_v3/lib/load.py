@@ -139,7 +139,8 @@ class IngredientRow:
     ingredient_key: str
     qty_display: str
     grams: float
-    section: str
+    section: str          # FK → recipe_sections.csv::section_key (cooking math)
+    ingredient_group: str  # display-only label shown in UI (may differ from section)
     is_optional: bool
     display_name_override: str | None
 
@@ -235,6 +236,7 @@ def load_ingredients() -> dict[str, list[IngredientRow]]:
                 qty_display=row.get("qty_display", "").strip(),
                 grams=_parse_float(row.get("grams"), 0.0),
                 section=row.get("section", "main").strip(),
+                ingredient_group=(row.get("ingredient_group") or row.get("section") or "").strip(),
                 is_optional=row.get("is_optional", "false").strip().lower() == "true",
                 display_name_override=(row.get("display_name_override") or "").strip() or None,
             )

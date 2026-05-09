@@ -30,6 +30,7 @@ RECIPES_CSV: Path = DATA_DIR / "recipes.csv"
 INGREDIENTS_LEDGER_CSV: Path = DATA_DIR / "ingredients_ledger.csv"
 RECIPE_INGREDIENTS_CSV: Path = DATA_DIR / "recipe_ingredients.csv"
 RECIPE_INSTRUCTIONS_CSV: Path = DATA_DIR / "recipe_instructions.csv"
+RECIPE_SECTIONS_CSV: Path = DATA_DIR / "recipe_sections.csv"
 GAME_DESIGN_CSV: Path = DATA_DIR / "game_design.csv"
 
 # ── External read-only references ────────────────────────────────────────────
