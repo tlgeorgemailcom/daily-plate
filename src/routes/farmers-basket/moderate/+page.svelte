@@ -478,16 +478,19 @@
             ingredients: data.ingredients.filter(i => i.name.trim()).map(i => ({
               name: i.name,
               quantity: i.quantity,
+              ...(i.section ? { section: i.section } : {}),
               foodWord: i.foodWord,
               ndbNo: i.ndbNo,
               portionDesc: i.portionDesc,
               portionGrams: i.portionGrams,
               servingCount: i.servingCount,
-              exempt: i.exempt
+              ...(i.exempt ? { exempt: true } : {}),
+              ...(i.is_optional ? { is_optional: true } : {})
             })),
             modIngredients: data.ingredients.filter(i => i.name.trim()).map(i => ({
               name: i.name,
               quantity: i.quantity,
+              ...(i.section ? { section: i.section } : {}),
               gameFood: i.gameFood || null,
               animal: i.animal || null,
               foodWord: i.foodWord,
@@ -495,7 +498,8 @@
               portionDesc: i.portionDesc,
               portionGrams: i.portionGrams,
               servingCount: i.servingCount,
-              exempt: i.exempt
+              ...(i.exempt ? { exempt: true } : {}),
+              ...(i.is_optional ? { is_optional: true } : {})
             })),
             instructions: data.instructions.filter(i => i.text.trim()).map(i => i.text),
             imageUrl

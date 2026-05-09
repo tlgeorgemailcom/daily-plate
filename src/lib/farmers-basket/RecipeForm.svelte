@@ -633,9 +633,11 @@
   }
 
   let nutritionLinkedCount = $derived(
-    ingredients.filter(i => i.name.trim() && hasIngredientNutritionLink(i)).length
+    ingredients.filter(i => i.name.trim() && i.ingredientStatus !== 'exempt' && i.ingredientStatus !== 'optional' && hasIngredientNutritionLink(i)).length
   );
-  let nutritionTotalCount = $derived(ingredients.filter(i => i.name.trim()).length);
+  let nutritionTotalCount = $derived(
+    ingredients.filter(i => i.name.trim() && i.ingredientStatus !== 'exempt' && i.ingredientStatus !== 'optional').length
+  );
   let nutritionComplete = $derived(
     nutritionMode && nutritionTotalCount > 0 && (
       linkMode === 'dish'
@@ -1142,7 +1144,7 @@
     
     const combined = recipeSuffix.trim() ? `${dishName.trim()} — ${recipeSuffix.trim()}` : dishName.trim();
     recipeName = combined;
-    const linked = nutritionMode && nutritionComplete;
+    const linked = nutritionMode; // per-ingredient NDB inclusion gated by hasIngredientNutritionLink; don't strip existing links if completeness drops
     const data: RecipeFormData = {
       recipeName: combined,
       dishName: dishName.trim(),
