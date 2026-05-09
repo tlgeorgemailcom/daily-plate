@@ -19,8 +19,20 @@
     portionDesc?: string;    // e.g. "1 cup"
     portionGrams?: number;   // grams per one portion
     servingCount?: number;   // number of portions used in recipe
-    exempt?: boolean;        // explicitly marked as not nutritionally significant
+    ingredientStatus?: 'required' | 'optional' | 'exempt'; // Required (in math) | Optional (cook may omit, not in math) | Exempt (no NDB, not in math)
     isDish?: boolean;        // marks the synthesized dish-level row (Rule A/B/C)
+    section?: string;        // v3 §18: section_key linking ingredient to a recipe section (cooking math FK)
+    ingredient_group?: string; // v3 §19: display-only sub-label within a section (e.g. 'crust', 'filling')
+  }
+
+  // v3.md §18 — per-section cooking method metadata for multi-stage recipes.
+  export interface RecipeSection {
+    key: string;
+    label: string;
+    cookingMethod: string;
+    yieldFactorWater?: number;
+    yieldFactorFat?: number;
+    yieldFactorOther?: number;
   }
   
   export interface RecipeInstruction {
@@ -71,6 +83,7 @@
     yieldFactorWater?: number;
     yieldFactorFat?: number;
     sr28Rule?: 'Rule A' | 'Rule B' | 'Rule C' | 'Rule D';
+    sections?: RecipeSection[];
   }
   
   // Props
@@ -132,6 +145,14 @@
   const ANIMAL_TYPES: AnimalType[] = ['rabbit', 'squirrel', 'raccoon', 'bird', 'mouse', 'fox'];
   
   const COOKING_METHODS = ['Bake', 'Boil', 'Grill', 'Fry', 'No heat'];
+  // v3.md §18.1 — lowercase enum stored in recipe_sections.csv::cooking_method.
+  const SECTION_COOKING_METHODS = ['raw', 'boiled', 'steamed', 'baked', 'fried', 'grilled', 'microwave'];
+  // v3.md §18.6 — datalist suggestions; free-typing is always allowed.
+  const SECTION_LABEL_VOCAB = [
+    'base', 'batter', 'broth', 'cold prep', 'crust', 'dough', 'filling',
+    'frosting', 'garnish', 'glaze', 'hot prep', 'marinade', 'raw assembly',
+    'sauce', 'stage 1', 'stage 2', 'stage 3', 'topping'
+  ];
   const LOCAL_FOODS_BY_NDB = new Map(FOODS.map(food => [food.ndb, food]));
 
   // Form state
@@ -162,10 +183,39 @@
           portionDesc: ing.portionDesc,
           portionGrams: ing.portionGrams,
           servingCount: ing.servingCount,
-          exempt: ing.exempt
+          ingredientStatus: ing.exempt ? 'exempt' : 'required',
+          section: ing.section
         }))
       : [{ id: 1, name: '', quantity: '', gameFood: '', animal: '' }]
   );
+  let sections = $state<RecipeSection[]>(initialData.sections ?? []);
+  let sectionAdvancedOpen = $state<Record<number, boolean>>({});
+
+  // Backfill missing/unknown ingredient.section assignments by carrying forward
+  // the most recently-seen valid section (falls back to first section). This
+  // eliminates "Unsectioned ingredients" for sectioned recipes whose drafts
+  // pre-date section support or whose positional fallback didn't reach every
+  // row. Run once at init AND whenever sections/ingredients shape changes.
+  function fillMissingSections() {
+    if (!sections.length) return;
+    const validKeys = new Set(sections.map((s) => s.key));
+    let lastSeen: string | undefined = undefined;
+    for (const ing of ingredients) {
+      if (ing.section && validKeys.has(ing.section)) {
+        lastSeen = ing.section;
+      } else {
+        ing.section = lastSeen ?? sections[0].key;
+        lastSeen = ing.section;
+      }
+    }
+  }
+  fillMissingSections();
+  $effect(() => {
+    // Re-run when section count or ingredient count changes
+    sections.length;
+    ingredients.length;
+    fillMissingSections();
+  });
   
   // Initialize instructions
   let nextInstructionId = $state(1);
@@ -467,11 +517,9 @@
     }
   }
 
-  function toggleExempt(ingId: number) {
-    ingredients = ingredients.map(i => i.id === ingId ? { ...i, exempt: !i.exempt } : i);
+  function setIngredientStatus(ingId: number, status: 'required' | 'optional' | 'exempt') {
+    ingredients = ingredients.map(i => i.id === ingId ? { ...i, ingredientStatus: status } : i);
   }
-
-  let exemptInfoOpen = $state(false);
   let linkNutritionInfoOpen = $state(false);
 
   function confirmDishLink() {
@@ -498,6 +546,90 @@
     };
     dishSearchOpen = false;
     dishPendingFood = null;
+  }
+
+  // v3.md §18/§19 — group ingredients for header rendering.
+  // Groups by ingredient_group (display sub-label) when present; falls back to
+  // section (cooking-math FK). Returns an array of { section, header, items[] }.
+  // `header` is empty when there is no section/group data for the recipe.
+  function buildIngredientGroups<T extends { section?: string; ingredient_group?: string; name?: string; quantity?: string }>(
+    list: T[]
+  ): Array<{ section: string | undefined; header: string; items: T[] }> {
+    const groups: Array<{ section: string | undefined; header: string; items: T[] }> = [];
+    for (const ing of list) {
+      const groupKey = ing.ingredient_group || ing.section;
+      const last = groups[groups.length - 1];
+      if (last && last.section === groupKey) {
+        last.items.push(ing);
+      } else {
+        groups.push({ section: groupKey, header: formatSectionHeader(groupKey), items: [ing] });
+      }
+    }
+    return groups;
+  }
+
+  function formatSectionHeader(sectionKey: string | undefined): string {
+    if (!sectionKey) return '';
+    const meta = sections.find((s) => s.key === sectionKey);
+    if (meta) {
+      const label = meta.label || (sectionKey.charAt(0).toUpperCase() + sectionKey.slice(1));
+      return meta.cookingMethod ? `${label} — ${meta.cookingMethod}` : `${label}:`;
+    }
+    return sectionKey.charAt(0).toUpperCase() + sectionKey.slice(1) + ':';
+  }
+
+  // v3.md §18.6 — sections editor helpers.
+  function slugifySectionKey(label: string): string {
+    return label.toLowerCase().trim().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
+  }
+  function uniqueSectionKey(base: string, excludeIdx: number = -1): string {
+    const taken = new Set(sections.map((s, i) => i === excludeIdx ? '' : s.key).filter(Boolean));
+    if (!taken.has(base)) return base;
+    let n = 2;
+    while (taken.has(`${base}_${n}`)) n++;
+    return `${base}_${n}`;
+  }
+  function addSection() {
+    const key = uniqueSectionKey('section_' + (sections.length + 1));
+    sections = [...sections, { key, label: '', cookingMethod: 'baked', yieldFactorWater: 1.0 }];
+  }
+  function removeSection(idx: number) {
+    const removedKey = sections[idx]?.key;
+    sections = sections.filter((_, i) => i !== idx);
+    // Detach ingredients from the removed section (keep them in the recipe,
+    // unsectioned) so the author doesn't lose data on an accidental click.
+    if (removedKey) {
+      ingredients = ingredients.map((ing) =>
+        ing.section === removedKey ? { ...ing, section: undefined } : ing
+      );
+    }
+  }
+  function onSectionLabelChange(idx: number, newLabel: string) {
+    const old = sections[idx];
+    if (!old) return;
+    // If key was auto-derived from old label (or empty), re-derive.
+    const wasAutoKey = !old.key || old.key === slugifySectionKey(old.label);
+    const next = { ...old, label: newLabel };
+    if (wasAutoKey) {
+      const newKey = uniqueSectionKey(slugifySectionKey(newLabel) || `section_${idx + 1}`, idx);
+      // Re-key any ingredients pointing at the old key.
+      if (old.key && old.key !== newKey) {
+        ingredients = ingredients.map((ing) =>
+          ing.section === old.key ? { ...ing, section: newKey } : ing
+        );
+      }
+      next.key = newKey;
+    }
+    sections = sections.map((s, i) => (i === idx ? next : s));
+  }
+
+  // v3.md §18.6 — add a new empty section AND a starter ingredient row inside
+  // it, so the author sees an editable target immediately.
+  function addSectionWithRow() {
+    const idx = sections.length;
+    const key = uniqueSectionKey(`section_${idx + 1}`);
+    sections = [...sections, { key, label: '', cookingMethod: 'baked', yieldFactorWater: 1.0 }];
+    addIngredientToSection(key);
   }
 
   let nutritionLinkedCount = $derived(
@@ -534,7 +666,7 @@
         portionDesc: i.portionDesc || '',
         portionGrams: i.portionGrams ?? null,
         servingCount: i.servingCount ?? null,
-        exempt: i.exempt === true
+        exempt: i.ingredientStatus === 'exempt' || i.ingredientStatus === 'optional'
       }));
 
     return JSON.stringify({
@@ -580,7 +712,7 @@
             foodWord: i.foodWord,
             portionGrams: i.portionGrams,
             servingCount: i.servingCount ?? 1,
-            exempt: i.exempt === true,
+            exempt: i.ingredientStatus === 'exempt' || i.ingredientStatus === 'optional',
           };
         }),
       dishLink: dishLink ?? undefined,
@@ -681,10 +813,12 @@
     long_desc: string;
     grams: number;
     section?: string;
+    ingredient_group?: string;
     qty_display?: string;
   };
   type V3Build = {
     recipe_id: string;
+    recipeName?: string;
     per100g?: PreviewNutrition['per100g'];
     perServing?: Record<string, number>;
     gramsPerServing?: number;
@@ -695,13 +829,24 @@
     auditStatus?: string;
     auditNotes?: string;
     ingredients?: V3Ingredient[];
+    skippedIngredients?: Array<{ ingredient_key: string; reason: string }>;
+    sections?: Array<{
+      section_key: string;
+      section_label: string;
+      cooking_method: string;
+      yield_factor_water?: number;
+      yield_factor_fat?: number;
+      yield_factor_other?: number;
+    }>;
   };
   let v3Build = $state<V3Build | null>(null);
   let v3BuildMissing = $state(false);
 
   $effect(() => {
     const id = recipeId;
-    if (!id || !/^[A-Z]+_[0-9]+$/.test(id) || !isCanonicalRule) {
+    // In moderatorMode we always want v3 data when a build exists (ingredient
+    // groups, audit chart, etc.) regardless of canonical rule.
+    if (!id || !/^[A-Z]+_[0-9]+$/.test(id) || (!isCanonicalRule && !moderatorMode)) {
       v3Build = null;
       v3BuildMissing = false;
       return;
@@ -717,6 +862,24 @@
         v3Build = data;
         v3BuildMissing = false;
         // ── v3 is source of truth: replace form ingredients with v3 ingredients ──
+        // Also import per-section metadata (label, cooking_method, yield factors)
+        // so the inline section-headers-as-group-headers UI renders correctly.
+        if (data.sections && data.sections.length > 0) {
+          // For single-section recipes, use the live recipe name instead of
+          // the section_label from the CSV (which would just be a cooking
+          // method or a hardcoded name that drifts from the stored title).
+          const autoLabel = data.sections.length === 1
+            ? (recipeName || data.recipeName || data.sections[0].section_label)
+            : null;
+          sections = data.sections.map((s) => ({
+            key: s.section_key,
+            label: autoLabel ?? s.section_label,
+            cookingMethod: s.cooking_method,
+            yieldFactorWater: s.yield_factor_water,
+            yieldFactorFat: s.yield_factor_fat,
+            yieldFactorOther: s.yield_factor_other,
+          }));
+        }
         if (data.ingredients && data.ingredients.length > 0) {
           const ndbToFood = new Map(FOODS.map(f => [f.ndb, f]));
           ingredients = data.ingredients.map((ing, i) => {
@@ -732,11 +895,43 @@
               portionDesc: ing.qty_display || `${ing.grams.toFixed(1)} g`,
               portionGrams: ing.grams,
               servingCount: 1,
-              exempt: false,
+              ingredientStatus: 'required' as const,
+              section: ing.section,
+              ingredient_group: ing.ingredient_group || ing.section,
             };
           });
           nextIngredientId = ingredients.length + 1;
-          if (data.cookMethod) {
+          // Append any ingredients the build skipped due to missing ledger/NDB
+          // data so the moderator can see and action them. These are shown with
+          // exempt=true and a name that states the data-quality reason.
+          if (data.skippedIngredients && data.skippedIngredients.length > 0) {
+            let idx = ingredients.length + 1;
+            for (const sk of data.skippedIngredients) {
+              ingredients = [
+                ...ingredients,
+                {
+                  id: idx++,
+                  name: `⚠ ${sk.ingredient_key} [${sk.reason}]`,
+                  quantity: '',
+                  gameFood: '' as FoodType | '',
+                  animal: '' as AnimalType | '',
+                  foodWord: undefined,
+                  ndbNo: undefined,
+                  portionDesc: '',
+                  portionGrams: 0,
+                  servingCount: 1,
+                  ingredientStatus: 'exempt' as const,
+                  section: '',
+                  ingredient_group: '',
+                },
+              ];
+            }
+            nextIngredientId = idx;
+          }
+          // When sections drive per-stage cooking methods, the recipe-wide
+          // cookingMethod field is meaningless — leave it untouched (the UI
+          // hides the field when sections.length > 0).
+          if (data.cookMethod && (!data.sections || data.sections.length === 0)) {
             const cm = data.cookMethod.trim();
             const norm = cm.toLowerCase() === 'no heat' || cm.toLowerCase() === 'noheat' || cm.toLowerCase() === 'none'
               ? 'No heat'
@@ -833,6 +1028,18 @@
       quantity: '', 
       gameFood: '', 
       animal: '' 
+    }];
+  }
+
+  // v3.md §18.6 — add an ingredient already assigned to a section.
+  function addIngredientToSection(sectionKey: string) {
+    ingredients = [...ingredients, {
+      id: ++nextIngredientId,
+      name: '',
+      quantity: '',
+      gameFood: '',
+      animal: '',
+      section: sectionKey
     }];
   }
   
@@ -955,6 +1162,7 @@
         quantity: i.quantity,
         gameFood: i.gameFood,
         animal: i.animal,
+        ...(i.section ? { section: i.section } : {}),
         ...(linked ? {
           ...(hasIngredientNutritionLink(i) ? {
             foodWord: i.foodWord,
@@ -963,12 +1171,14 @@
             portionGrams: i.portionGrams,
             servingCount: i.servingCount ?? 1,
           } : {}),
-          ...(i.exempt ? { exempt: true } : {})
+          ...(i.ingredientStatus === 'exempt' ? { exempt: true } : {}),
+          ...(i.ingredientStatus === 'optional' ? { is_optional: true } : {})
         } : {})
       })),
       instructions: instructions.filter(i => i.text.trim()),
       foodSupply: moderatorMode ? foodSupply : undefined,
-      nutritionComplete: linked || undefined
+      nutritionComplete: linked || undefined,
+      ...(sections.length > 0 ? { sections } : {})
     };
     
     onsubmit(data);
@@ -1047,6 +1257,7 @@
     sourceType: 'dev' | 'player';
     dishFamily?: string | null;
     nutritionJson?: PersistedNutritionJson | null;
+    sections?: RecipeSection[] | null;
   }
 
   let suggestions = $state<RecipeSuggestion[]>([]);
@@ -1122,7 +1333,13 @@
         (ing as RecipeIngredient).servingCount ??
         (ing as { serving_count?: number }).serving_count ??
         undefined,
-      exempt: (ing as RecipeIngredient).exempt,
+      ingredientStatus: (ing as RecipeIngredient).ingredientStatus ?? 'required',
+      // v3.md §18 — carry per-row section assignment so suggestion-fills
+      // can reconstruct section grouping in the editor.
+      section:
+        (ing as RecipeIngredient).section ??
+        (ing as { section_key?: string }).section_key ??
+        undefined,
     };
   }
 
@@ -1164,7 +1381,7 @@
     applySuggestionMeta(suggestion);
   }
 
-  function fillFromSuggestion(suggestion: RecipeSuggestion) {
+  async function fillFromSuggestion(suggestion: RecipeSuggestion) {
     applySuggestionMeta(suggestion);
     const rawIngredients = suggestion.ingredients;
     if (Array.isArray(rawIngredients) && rawIngredients.length > 0) {
@@ -1176,6 +1393,57 @@
       instructions = rawInstructions.map((ins, idx) => toMappedInstruction(ins, idx + 1));
       nextInstructionId = instructions.length;
     }
+
+    // v3.md §18 — reconstruct section metadata so the editor shows the same
+    // section header bars (label / cooking method / yield factors) the
+    // moderator screen does. Player-source suggestions carry sections inline;
+    // dev-source suggestions need the v3 build artifact (Turso has no
+    // sections_json column on dev_recipes today).
+    let nextSections: RecipeSection[] | null = null;
+    if (Array.isArray(suggestion.sections) && suggestion.sections.length > 0) {
+      nextSections = suggestion.sections;
+    } else if (suggestion.sourceType === 'dev') {
+      try {
+        const res = await fetch(`/api/recipes/v3-build/${encodeURIComponent(suggestion.id)}`);
+        if (res.ok) {
+          const data = await res.json();
+          if (Array.isArray(data?.sections) && data.sections.length > 0) {
+            nextSections = data.sections.map((s: Record<string, unknown>) => ({
+              key: String(s.section_key ?? s.key ?? ''),
+              label: String(s.section_label ?? s.label ?? ''),
+              cookingMethod: String(s.cooking_method ?? s.cookingMethod ?? 'baked'),
+              yieldFactorWater: typeof s.yield_factor_water === 'number' ? s.yield_factor_water : (typeof s.yieldFactorWater === 'number' ? s.yieldFactorWater : undefined),
+              yieldFactorFat: typeof s.yield_factor_fat === 'number' ? s.yield_factor_fat : (typeof s.yieldFactorFat === 'number' ? s.yieldFactorFat : undefined),
+              yieldFactorOther: typeof s.yield_factor_other === 'number' ? s.yield_factor_other : (typeof s.yieldFactorOther === 'number' ? s.yieldFactorOther : undefined),
+            })).filter((s: RecipeSection) => s.key);
+          }
+        }
+      } catch {
+        /* network error — fall through to per-row derivation */
+      }
+    }
+    if ((!nextSections || nextSections.length === 0) && ingredients.some((i) => i.section)) {
+      // Last-resort derivation: synthesise minimal section objects from the
+      // unique per-row keys so grouping at least renders.
+      const seen = new Set<string>();
+      const derived: RecipeSection[] = [];
+      for (const ing of ingredients) {
+        const k = ing.section;
+        if (k && !seen.has(k)) {
+          seen.add(k);
+          derived.push({
+            key: k,
+            label: formatSectionHeader(k),
+            cookingMethod: 'baked',
+          });
+        }
+      }
+      nextSections = derived;
+    }
+    if (nextSections) {
+      sections = nextSections;
+    }
+
     suggestionsDismissed = true;
     // Load stored nutrition from the source recipe (comes from dev_recipes).
     persistedNutrition = suggestion.nutritionJson ?? null;
@@ -1269,15 +1537,10 @@
         </select>
       </label>
 
-      <label class="form-label">
-        Final Dish Preparation
-        <select bind:value={cookingMethod} class="form-select">
-          {#each COOKING_METHODS as m}
-            <option value={m}>{m}</option>
-          {/each}
-        </select>
-        <span class="field-hint">Choose how the finished dish is prepared, not each ingredient step</span>
-      </label>
+      <div class="form-label sections-cooking-note">
+        <span class="field-label-text">Cooking Method</span>
+        <span class="field-hint">Driven per section below — each section has its own method (raw, baked, boiled, etc.). Add a section to start adding ingredients.</span>
+      </div>
     </div>
     
     {#if !moderatorMode}
@@ -1579,7 +1842,7 @@
           <div>servings="{servings}" | yieldFactorWater={yieldFactorWater ?? 'null'} | yieldFactorFat={yieldFactorFat ?? 'null'} | dishLink.ndb={dishLink?.ndbNo ?? 'null'}</div>
           <div style="margin-top:6px;"><strong>Ingredient rows ({ingredients.length}):</strong></div>
           {#each ingredients as ing, i}
-            <div style="padding-left:8px;">[{i}] name="{ing.name}" qty="{ing.quantity}" ndb={ing.ndbNo ?? '-'} word={ing.foodWord ?? '-'} g={ing.portionGrams ?? '-'} sCount={ing.servingCount ?? '-'} {ing.isDish ? '🍽dish' : ''} {ing.exempt ? '⊘exempt' : ''}</div>
+            <div style="padding-left:8px;">[{i}] name="{ing.name}" qty="{ing.quantity}" ndb={ing.ndbNo ?? '-'} word={ing.foodWord ?? '-'} g={ing.portionGrams ?? '-'} sCount={ing.servingCount ?? '-'} {ing.isDish ? '🍽dish' : ''} {ing.ingredientStatus === 'exempt' ? '⊘exempt' : ing.ingredientStatus === 'optional' ? 'optional' : ''}</div>
           {/each}
         </div>
         <!-- TEMP DEBUG END -->
@@ -1912,10 +2175,74 @@
 
     <div class="ingredients-list">
       <p class="section-hint" style="margin: 0 0 8px 0;">List all ingredients with quantities (e.g., "2 cups flour", "1 tsp salt")</p>
-      {#each ingredients as ingredient, i (ingredient.id)}
+
+      <datalist id="section-label-vocab">
+        {#each SECTION_LABEL_VOCAB as v}
+          <option value={v}></option>
+        {/each}
+      </datalist>
+
+      {#snippet sectionHeaderBar(sec: RecipeSection, sIdx: number)}
+        <div class="section-header-bar">
+          <input
+            type="text"
+            list="section-label-vocab"
+            placeholder="e.g. Pie crust"
+            value={sec.label}
+            oninput={(e) => onSectionLabelChange(sIdx, (e.currentTarget as HTMLInputElement).value)}
+            class="form-input section-label-input"
+          />
+          <span class="section-card-dash">—</span>
+          <select bind:value={sec.cookingMethod} class="form-input section-method-select">
+            {#each SECTION_COOKING_METHODS as m}
+              <option value={m}>{m}</option>
+            {/each}
+          </select>
+          {#if moderatorMode}
+            <button
+              type="button"
+              class="section-gear-btn"
+              onclick={() => (sectionAdvancedOpen[sIdx] = !sectionAdvancedOpen[sIdx])}
+              title="Yield factors"
+              aria-label="Toggle advanced section settings"
+            >⚙</button>
+          {/if}
+          <button
+            type="button"
+            class="remove-btn section-remove-btn"
+            onclick={() => removeSection(sIdx)}
+            aria-label="Remove section"
+          >✕</button>
+        </div>
+        {#if moderatorMode && sectionAdvancedOpen[sIdx]}
+          <div class="section-card-advanced">
+            <label class="advanced-field">
+              <span>Key</span>
+              <input type="text" bind:value={sec.key} class="form-input" />
+            </label>
+            <label class="advanced-field">
+              <span>Yield H₂O</span>
+              <input type="number" step="0.01" min="0" max="2"
+                bind:value={sec.yieldFactorWater} placeholder="1.00" class="form-input" />
+            </label>
+            <label class="advanced-field">
+              <span>Yield Fat</span>
+              <input type="number" step="0.01" min="0" max="2"
+                bind:value={sec.yieldFactorFat} placeholder="1.00" class="form-input" />
+            </label>
+            <label class="advanced-field">
+              <span>Yield Other</span>
+              <input type="number" step="0.01" min="0" max="2"
+                bind:value={sec.yieldFactorOther} placeholder="1.00" class="form-input" />
+            </label>
+          </div>
+        {/if}
+      {/snippet}
+
+      {#snippet ingredientRow(ingredient: RecipeIngredient, displayNum: number)}
         <div class="ingredient-entry">
           <div class="ingredient-row">
-            <span class="row-num">{i + 1}.</span>
+            <span class="row-num">{displayNum}.</span>
             <div class="ingredient-fields">
               <input 
                 type="text"
@@ -1923,12 +2250,19 @@
                 placeholder="Qty (e.g., 2 cups)"
                 class="form-input qty-input"
               />
-              <input 
-                type="text"
-                bind:value={ingredient.name}
-                placeholder="Ingredient (e.g., flour)"
-                class="form-input name-input"
-              />
+              <div class="name-input-row">
+                <input 
+                  type="text"
+                  bind:value={ingredient.name}
+                  placeholder="Ingredient (e.g., flour)"
+                  class="form-input name-input"
+                />
+                {#if ingredient.ingredientStatus === 'optional'}
+                  <span class="name-status-label name-status-label--optional">(Optional)</span>
+                {:else if ingredient.ingredientStatus === 'exempt'}
+                  <span class="name-status-label name-status-label--exempt">(Exempt)</span>
+                {/if}
+              </div>
             </div>
             <button 
               type="button"
@@ -1956,22 +2290,21 @@
                   <button type="button" class="nutrition-relink-btn" onclick={() => openNutritionSearchFresh(ingredient)}>food</button>
                   <button type="button" class="nutrition-unlink-btn" onclick={() => unlinkNutrition(ingredient.id)}>✕</button>
                 </div>
-              {:else if ingredient.exempt}
-                <div class="exempt-badge">
-                  <span class="exempt-badge-text">⊘ Exempt</span>
-                  <button type="button" class="exempt-info-btn" title="What can be exempted?" onclick={() => exemptInfoOpen = !exemptInfoOpen}>ℹ️</button>
-                  <button type="button" class="nutrition-unlink-btn" title="Remove exemption" onclick={() => toggleExempt(ingredient.id)}>✕</button>
-                </div>
               {:else}
                 <div class="nutrition-actions-row">
                   <button type="button" class="link-nutrition-info-btn" onclick={() => linkNutritionInfoOpen = !linkNutritionInfoOpen} title="How to link nutrition">How to link ℹ️</button>
                   <button type="button" class="link-nutrition-btn" onclick={() => openNutritionSearch(ingredient)}>
                     🔗 Link nutrition
                   </button>
-                  <button type="button" class="exempt-btn" onclick={() => toggleExempt(ingredient.id)}>
-                    Exempt
-                  </button>
-                  <button type="button" class="exempt-info-btn" title="What can be exempted?" onclick={() => exemptInfoOpen = !exemptInfoOpen}>ℹ️</button>
+                  <select
+                    class="ingredient-status-select"
+                    value={ingredient.ingredientStatus ?? 'required'}
+                    onchange={(e) => setIngredientStatus(ingredient.id, (e.target as HTMLSelectElement).value as 'required' | 'optional' | 'exempt')}
+                  >
+                    <option value="required">Required</option>
+                    <option value="optional">Optional</option>
+                    <option value="exempt">Exempt</option>
+                  </select>
                 </div>
               {/if}
 
@@ -1986,22 +2319,6 @@
                   <p class="exempt-info-section">3 · Pick the right portion</p>
                   <p class="exempt-info-body">After selecting a food, choose the portion size that matches your recipe quantity — cup, ounce, tablespoon, or enter grams directly.</p>
                   <p class="exempt-info-note">Nutrition uses USDA SR28 data with cooking retention factors applied — values reflect what ends up in the finished dish.</p>
-                </div>
-              {/if}
-
-              {#if exemptInfoOpen}
-                <div class="exempt-info-panel">
-                  <button type="button" class="exempt-info-close" onclick={() => exemptInfoOpen = false}>✕</button>
-                  <p class="exempt-info-heading">What can be exempted?</p>
-                  <p class="exempt-info-note">Moderators review all exemptions. When in doubt, link it.</p>
-                  <p class="exempt-info-section">✅ Spices &amp; seasonings (not salt)</p>
-                  <p class="exempt-info-body">Black pepper, cumin, paprika, cinnamon, dried herbs, vanilla extract, spice blends used in trace amounts. <strong>Salt is not exempt</strong> — sodium is tracked.</p>
-                  <p class="exempt-info-section">✅ Leavening agents</p>
-                  <p class="exempt-info-body">Baking powder, baking soda, cream of tartar, yeast used for rising.</p>
-                  <p class="exempt-info-section">✅ Functional cooking agents</p>
-                  <p class="exempt-info-body">Cooking spray, parchment paper, water used only for blanching or processing (discarded), food coloring.</p>
-                  <p class="exempt-info-section">❌ Not exempt</p>
-                  <p class="exempt-info-body">Salt · butter/oil/fat · sugar/honey · flour/starch · dairy · any protein (meat, fish, eggs, legumes, tofu)</p>
                 </div>
               {/if}
 
@@ -2103,12 +2420,64 @@
             </div>
           {/if}
         </div>
-      {/each}
+      {/snippet}
+
+      {#if sections.length === 0}
+        {@const unsectioned = ingredients.filter((ing) => ing.name.trim() || ing.quantity.trim())}
+        {#if unsectioned.length > 0}
+          <div class="section-block needs-sectioning">
+            <div class="ingredient-orphan-header">⚠ Needs sectioning</div>
+            <p class="section-hint" style="margin: 4px 0 8px 0;">
+              v3.md §18: each ingredient must live in a section with its own cooking method.
+              Add sections below (e.g. <em>crust</em> baked, <em>filling</em> boiled, <em>topping</em> raw)
+              and reassign each ingredient. <strong>Do not</strong> lump everything under one method —
+              that's exactly what §18 was built to fix.
+            </p>
+            {#each unsectioned as ingredient (ingredient.id)}
+              {@render ingredientRow(ingredient, ingredients.indexOf(ingredient) + 1)}
+            {/each}
+          </div>
+        {:else}
+          <div class="sections-empty-state">
+            <p class="section-hint">Click <strong>+ Add a new section</strong> below to start (e.g. “Crust”, “Filling”, “Topping”). Each section carries its own cooking method.</p>
+          </div>
+        {/if}
+      {:else}
+        {#each sections as sec, sIdx (sIdx)}
+          <div class="section-block">
+            {@render sectionHeaderBar(sec, sIdx)}
+            {#each buildIngredientGroups(ingredients.filter((ing) => ing.section === sec.key)) as subGroup}
+              {#if subGroup.section !== sec.key && subGroup.section}
+                <div class="ingredient-subgroup-header">{subGroup.header}</div>
+              {/if}
+              {#each subGroup.items as ingredient (ingredient.id)}
+                {@render ingredientRow(ingredient, ingredients.indexOf(ingredient) + 1)}
+              {/each}
+            {/each}
+            <button
+              type="button"
+              class="add-ingredient-to-section-btn"
+              onclick={() => addIngredientToSection(sec.key)}
+            >+ Add ingredient to {sec.label || sec.key}</button>
+          </div>
+        {/each}
+        {@const orphanIngredients = ingredients.filter((ing) => !sections.some((s) => s.key === ing.section))}
+        {#if orphanIngredients.length > 0}
+          <div class="section-block">
+            <div class="ingredient-orphan-header">Unsectioned ingredients</div>
+            {#each orphanIngredients as ingredient (ingredient.id)}
+              {@render ingredientRow(ingredient, ingredients.indexOf(ingredient) + 1)}
+            {/each}
+          </div>
+        {/if}
+      {/if}
     </div>
     
-    <button type="button" class="add-btn" onclick={addIngredient}>
-      + Add Ingredient
-    </button>
+    <div class="ingredients-add-row">
+      <button type="button" class="add-section-btn" onclick={addSectionWithRow}>
+        + Add a new section
+      </button>
+    </div>
   </div>
   
   <!-- Instructions Section -->
@@ -2271,8 +2640,13 @@
             </div>
             <h3 class="ep-preview-h3">Ingredients</h3>
             <ul class="ep-preview-list">
-              {#each ingredients.filter(i => i.name.trim() || i.quantity.trim()) as ing (ing.id)}
-                <li><strong>{ing.quantity}</strong> {ing.name}</li>
+              {#each buildIngredientGroups(ingredients.filter(i => i.name.trim() || i.quantity.trim())) as group}
+                {#if group.header}
+                  <li class="ep-preview-section-header"><strong>{group.header}</strong></li>
+                {/if}
+                {#each group.items as ing (ing.id)}
+                  <li><strong>{ing.quantity}</strong> {ing.name}</li>
+                {/each}
               {/each}
             </ul>
             <h3 class="ep-preview-h3">Instructions</h3>
@@ -2288,6 +2662,11 @@
             <p class="ep-edit-hint">Use the arrows to reorder. Edits stay local until you press Save Reorder.</p>
             <div class="ep-edit-list">
               {#each ingredients as ing, i (ing.id)}
+                {#if i === 0 ? ing.section : ing.section !== ingredients[i - 1].section}
+                  {#if ing.section}
+                    <div class="ep-edit-section-header">{formatSectionHeader(ing.section)}</div>
+                  {/if}
+                {/if}
                 <div class="ep-edit-row">
                   <div class="ep-move-col">
                     <button type="button" class="ep-move-btn" disabled={i === 0} onclick={() => moveIngredient(ing.id, -1)} aria-label="Move ingredient up">▲</button>
@@ -2616,6 +2995,141 @@
     font-size: 0.85rem;
     color: #888;
     font-style: italic;
+  }
+
+  .ingredient-section-header,
+  .ep-edit-section-header {
+    margin: 12px 0 4px;
+    padding: 4px 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #4a5568;
+    text-transform: capitalize;
+    border-left: 3px solid #38a169;
+    background: #f0fff4;
+  }
+  .ep-preview-section-header {
+    list-style: none;
+    margin-left: -20px;
+    margin-top: 8px;
+    color: #4a5568;
+  }
+
+  /* Sections editor (v3.md §18.6) — inline group header pattern.
+     Sections ARE the ingredient list — each section's header sits directly
+     above its own ingredient rows, followed by a per-section "+ Add" button. */
+  .section-block {
+    margin: 12px 0;
+    padding: 8px 8px 6px;
+    background: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 3px solid #38a169;
+    border-radius: 4px;
+  }
+  .section-header-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    padding: 4px 0 8px;
+    border-bottom: 1px dashed #cbd5e0;
+    margin-bottom: 8px;
+  }
+  .section-header-bar .section-label-input {
+    flex: 1 1 180px;
+    min-width: 140px;
+    padding: 5px 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #2d3748;
+  }
+  .section-header-bar .section-method-select {
+    flex: 0 0 110px;
+    padding: 5px 6px;
+    font-size: 0.85rem;
+    background: white;
+  }
+  .section-card-dash {
+    color: #a0aec0;
+    font-weight: 600;
+  }
+  .section-gear-btn {
+    background: transparent;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    padding: 2px 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  .section-gear-btn:hover { background: #edf2f7; }
+  .section-remove-btn { padding: 2px 8px; }
+  .section-card-advanced {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 8px;
+    padding: 8px;
+    background: white;
+    border-radius: 4px;
+  }
+  .advanced-field {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 0.75rem;
+    color: #4a5568;
+  }
+  .advanced-field .form-input {
+    padding: 3px 6px;
+    font-size: 0.85rem;
+  }
+  .add-ingredient-to-section-btn {
+    margin-top: 4px;
+    padding: 5px 10px;
+    background: white;
+    color: #38a169;
+    border: 1px dashed #38a169;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+  }
+  .add-ingredient-to-section-btn:hover { background: #f0fff4; }
+  .ingredient-orphan-header {
+    padding: 4px 0 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #718096;
+    border-bottom: 1px dashed #cbd5e0;
+    margin-bottom: 8px;
+  }
+  .ingredient-subgroup-header {
+    padding: 6px 0 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #4a5568;
+    border-bottom: 1px dotted #e2e8f0;
+    margin: 8px 0 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .ingredients-add-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+  }
+  .add-section-btn {
+    padding: 6px 10px;
+    background: #38a169;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+  }
+  .add-section-btn:hover { background: #2f855a; }
+  @media (max-width: 600px) {
+    .section-card-advanced { grid-template-columns: repeat(2, 1fr); }
   }
   
   .form-row {
@@ -3646,6 +4160,37 @@
     font-size: 0.78rem;
     cursor: pointer;
     transition: all 0.15s;
+  }
+
+  .ingredient-status-select {
+    padding: 4px 6px;
+    border: 1px solid #BDBDBD;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    color: #555;
+    background: #fff;
+    cursor: pointer;
+  }
+
+  .name-input-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+  }
+
+  .name-status-label {
+    font-size: 0.75rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .name-status-label--optional {
+    color: #999;
+  }
+
+  .name-status-label--exempt {
+    color: #E65100;
   }
 
   .exempt-btn:hover {
