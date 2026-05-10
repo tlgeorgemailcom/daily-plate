@@ -29,7 +29,12 @@
   export interface RecipeSection {
     key: string;
     label: string;
-    cookingMethod: string;
+    /** What the cook does to prepare this section — shown in the UI.
+     *  e.g. 'simmered', 'boiled', 'raw'. Free-form; no calculation role. */
+    prepMethod: string;
+    /** Dominant heat stage used for USDA retention table lookup + yield factors.
+     *  Falls back to prepMethod when absent. Strict enum: raw|boiled|steamed|baked|fried|grilled|microwave */
+    cookMethod?: string;
     yieldFactorWater?: number;
     yieldFactorFat?: number;
     yieldFactorOther?: number;
@@ -145,8 +150,10 @@
   const ANIMAL_TYPES: AnimalType[] = ['rabbit', 'squirrel', 'raccoon', 'bird', 'mouse', 'fox'];
   
   const COOKING_METHODS = ['Bake', 'Boil', 'Chill', 'Fry', 'Grill', 'No heat'];
-  // v3.md §18.1 — lowercase enum stored in recipe_sections.csv::cooking_method.
-  const SECTION_COOKING_METHODS = ['raw', 'boiled', 'steamed', 'baked', 'fried', 'grilled', 'microwave'];
+  // v3.md §18.1 — what the cook does (shown in header bar). Richer than cook methods.
+  const SECTION_PREP_METHODS = ['raw', 'simmered', 'boiled', 'steamed', 'blanched', 'baked', 'par-baked', 'fried', 'grilled', 'marinated', 'chilled', 'microwave'];
+  // v3.md §18.1 — strict enum matching USDA retention table; used for nutrition calculation only.
+  const SECTION_COOK_METHODS = ['raw', 'boiled', 'steamed', 'baked', 'fried', 'grilled', 'microwave'];
   // v3.md §18.6 — datalist suggestions; free-typing is always allowed.
   const SECTION_LABEL_VOCAB = [
     'base', 'batter', 'broth', 'cold prep', 'crust', 'dough', 'filling',
@@ -573,7 +580,7 @@
     const meta = sections.find((s) => s.key === sectionKey);
     if (meta) {
       const label = meta.label || (sectionKey.charAt(0).toUpperCase() + sectionKey.slice(1));
-      return meta.cookingMethod ? `${label} — ${meta.cookingMethod}` : `${label}:`;
+      return meta.prepMethod ? `${label} — ${meta.prepMethod}` : `${label}:`;
     }
     return sectionKey.charAt(0).toUpperCase() + sectionKey.slice(1) + ':';
   }
@@ -591,7 +598,7 @@
   }
   function addSection() {
     const key = uniqueSectionKey('section_' + (sections.length + 1));
-    sections = [...sections, { key, label: '', cookingMethod: 'baked', yieldFactorWater: 1.0 }];
+    sections = [...sections, { key, label: '', prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 1.0 }];
   }
   function removeSection(idx: number) {
     const removedKey = sections[idx]?.key;
@@ -628,7 +635,7 @@
   function addSectionWithRow() {
     const idx = sections.length;
     const key = uniqueSectionKey(`section_${idx + 1}`);
-    sections = [...sections, { key, label: '', cookingMethod: 'baked', yieldFactorWater: 1.0 }];
+    sections = [...sections, { key, label: '', prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 1.0 }];
     addIngredientToSection(key);
   }
 
@@ -876,7 +883,8 @@
           sections = data.sections.map((s) => ({
             key: s.section_key,
             label: autoLabel ?? s.section_label,
-            cookingMethod: s.cooking_method,
+            prepMethod: s.prep_method ?? s.cooking_method,
+            cookMethod: s.cook_method ?? s.cooking_method,
             yieldFactorWater: s.yield_factor_water,
             yieldFactorFat: s.yield_factor_fat,
             yieldFactorOther: s.yield_factor_other,
@@ -1447,7 +1455,8 @@
           derived.push({
             key: k,
             label: formatSectionHeader(k),
-            cookingMethod: 'baked',
+            prepMethod: 'baked',
+            cookMethod: 'baked',
           });
         }
       }
@@ -1464,7 +1473,8 @@
             nextSections = data.sections.map((s: Record<string, unknown>) => ({
               key: String(s.section_key ?? s.key ?? ''),
               label: String(s.section_label ?? s.label ?? ''),
-              cookingMethod: String(s.cooking_method ?? s.cookingMethod ?? 'baked'),
+              prepMethod: String(s.prep_method ?? s.cooking_method ?? s.prepMethod ?? s.cookingMethod ?? 'baked'),
+              cookMethod: String(s.cook_method ?? s.cooking_method ?? s.cookMethod ?? s.cookingMethod ?? 'baked'),
               yieldFactorWater: typeof s.yield_factor_water === 'number' ? s.yield_factor_water : (typeof s.yieldFactorWater === 'number' ? s.yieldFactorWater : undefined),
               yieldFactorFat: typeof s.yield_factor_fat === 'number' ? s.yield_factor_fat : (typeof s.yieldFactorFat === 'number' ? s.yieldFactorFat : undefined),
               yieldFactorOther: typeof s.yield_factor_other === 'number' ? s.yield_factor_other : (typeof s.yieldFactorOther === 'number' ? s.yieldFactorOther : undefined),
@@ -2228,8 +2238,8 @@
             class="form-input section-label-input"
           />
           <span class="section-card-dash">—</span>
-          <select bind:value={sec.cookingMethod} class="form-input section-method-select">
-            {#each SECTION_COOKING_METHODS as m}
+          <select bind:value={sec.prepMethod} class="form-input section-method-select">
+            {#each SECTION_PREP_METHODS as m}
               <option value={m}>{m}</option>
             {/each}
           </select>
@@ -2254,6 +2264,14 @@
             <label class="advanced-field">
               <span>Key</span>
               <input type="text" bind:value={sec.key} class="form-input" />
+            </label>
+            <label class="advanced-field">
+              <span title="Method used for USDA retention table lookup. Defaults to prep method when not set.">Cook method ℹ</span>
+              <select bind:value={sec.cookMethod} class="form-input">
+                {#each SECTION_COOK_METHODS as m}
+                  <option value={m}>{m}</option>
+                {/each}
+              </select>
             </label>
             <label class="advanced-field">
               <span>Yield H₂O</span>

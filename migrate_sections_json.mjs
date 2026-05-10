@@ -70,110 +70,110 @@ const MANUAL = {
   // Crust: raw (goes into oven uncooked; dish-level "Bake" covers the final bake)
   // Filling: apples simmered first (boiled), then placed in raw crust and baked together
   SWEET_001: [
-    { key: 'crust',   label: 'Pie crust',    cookingMethod: 'raw',    yieldFactorWater: 0.82, yieldFactorFat: 1.0 },
-    { key: 'filling', label: 'Apple filling', cookingMethod: 'boiled', yieldFactorWater: 0.85, yieldFactorFat: 1.0 },
+    { key: 'crust',   label: 'Pie crust',    prepMethod: 'raw',    cookMethod: 'baked',  yieldFactorWater: 0.82, yieldFactorFat: 1.0 },
+    { key: 'filling', label: 'Apple filling', prepMethod: 'boiled', cookMethod: 'baked',  yieldFactorWater: 0.85, yieldFactorFat: 1.0 },
   ],
 
   // SWEET_002 (Apple Strudel) — puff pastry baked, apple filling simmered, egg wash raw
   SWEET_002: [
-    { key: 'pastry',  label: 'Puff pastry',   cookingMethod: 'baked',  yieldFactorWater: 0.83, yieldFactorFat: 1.0 },
-    { key: 'filling', label: 'Apple filling',  cookingMethod: 'boiled', yieldFactorWater: 0.88, yieldFactorFat: 1.0 },
-    { key: 'finish',  label: 'Egg wash',       cookingMethod: 'raw',    yieldFactorWater: 1.0,  yieldFactorFat: 1.0 },
+    { key: 'pastry',  label: 'Puff pastry',   prepMethod: 'baked', cookMethod: 'baked',  yieldFactorWater: 0.83, yieldFactorFat: 1.0 },
+    { key: 'filling', label: 'Apple filling',  prepMethod: 'boiled', cookMethod: 'boiled', yieldFactorWater: 0.88, yieldFactorFat: 1.0 },
+    { key: 'finish',  label: 'Egg wash',       prepMethod: 'raw', cookMethod: 'raw',    yieldFactorWater: 1.0,  yieldFactorFat: 1.0 },
   ],
 
   // SWEET_004 (Pie Blueberry) — crust baked, blueberry filling bakes in-crust, wash raw
   SWEET_004: [
-    { key: 'crust',   label: 'Pie crust',         cookingMethod: 'baked', yieldFactorWater: 0.82, yieldFactorFat: 1.0 },
-    { key: 'filling', label: 'Blueberry filling',  cookingMethod: 'baked', yieldFactorWater: 0.85, yieldFactorFat: 1.0 },
-    { key: 'wash',    label: 'Egg wash',           cookingMethod: 'raw',   yieldFactorWater: 1.0,  yieldFactorFat: 1.0 },
+    { key: 'crust',   label: 'Pie crust',         prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.82, yieldFactorFat: 1.0 },
+    { key: 'filling', label: 'Blueberry filling',  prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.85, yieldFactorFat: 1.0 },
+    { key: 'wash',    label: 'Egg wash',           prepMethod: 'raw', cookMethod: 'raw',   yieldFactorWater: 1.0,  yieldFactorFat: 1.0 },
   ],
 
   // SWEET_005 (Pie Cherry) — same structure as blueberry
   SWEET_005: [
-    { key: 'crust',   label: 'Pie crust',       cookingMethod: 'baked', yieldFactorWater: 0.82, yieldFactorFat: 1.0 },
-    { key: 'filling', label: 'Cherry filling',   cookingMethod: 'baked', yieldFactorWater: 0.85, yieldFactorFat: 1.0 },
-    { key: 'wash',    label: 'Egg wash',         cookingMethod: 'raw',   yieldFactorWater: 1.0,  yieldFactorFat: 1.0 },
+    { key: 'crust',   label: 'Pie crust',       prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.82, yieldFactorFat: 1.0 },
+    { key: 'filling', label: 'Cherry filling',   prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.85, yieldFactorFat: 1.0 },
+    { key: 'wash',    label: 'Egg wash',         prepMethod: 'raw', cookMethod: 'raw',   yieldFactorWater: 1.0,  yieldFactorFat: 1.0 },
   ],
 
   // SWEET_007 (Pie Mince) — mincemeat filling bakes in-crust
   SWEET_007: [
-    { key: 'crust',   label: 'Pie crust',          cookingMethod: 'baked', yieldFactorWater: 0.82, yieldFactorFat: 1.0 },
-    { key: 'filling', label: 'Mincemeat filling',   cookingMethod: 'baked', yieldFactorWater: 0.85, yieldFactorFat: 1.0 },
-    { key: 'wash',    label: 'Egg wash',            cookingMethod: 'raw',   yieldFactorWater: 1.0,  yieldFactorFat: 1.0 },
+    { key: 'crust',   label: 'Pie crust',          prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.82, yieldFactorFat: 1.0 },
+    { key: 'filling', label: 'Mincemeat filling',   prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.85, yieldFactorFat: 1.0 },
+    { key: 'wash',    label: 'Egg wash',            prepMethod: 'raw', cookMethod: 'raw',   yieldFactorWater: 1.0,  yieldFactorFat: 1.0 },
   ],
 
   // SWEET_008 (Pie Peach) — peach filling bakes in-crust
   SWEET_008: [
-    { key: 'crust',   label: 'Pie crust',       cookingMethod: 'baked', yieldFactorWater: 0.82, yieldFactorFat: 1.0 },
-    { key: 'filling', label: 'Peach filling',    cookingMethod: 'baked', yieldFactorWater: 0.85, yieldFactorFat: 1.0 },
-    { key: 'wash',    label: 'Egg wash',         cookingMethod: 'raw',   yieldFactorWater: 1.0,  yieldFactorFat: 1.0 },
+    { key: 'crust',   label: 'Pie crust',       prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.82, yieldFactorFat: 1.0 },
+    { key: 'filling', label: 'Peach filling',    prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.85, yieldFactorFat: 1.0 },
+    { key: 'wash',    label: 'Egg wash',         prepMethod: 'raw', cookMethod: 'raw',   yieldFactorWater: 1.0,  yieldFactorFat: 1.0 },
   ],
 
   // SWEET_009 (Pecan Pie) — custard-style filling bakes in-crust (both sections baked)
   SWEET_009: [
-    { key: 'crust',   label: 'Pie crust',    cookingMethod: 'baked', yieldFactorWater: 0.82, yieldFactorFat: 1.0 },
-    { key: 'filling', label: 'Pecan filling', cookingMethod: 'baked', yieldFactorWater: 0.88, yieldFactorFat: 1.0 },
+    { key: 'crust',   label: 'Pie crust',    prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.82, yieldFactorFat: 1.0 },
+    { key: 'filling', label: 'Pecan filling', prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.88, yieldFactorFat: 1.0 },
   ],
 
   // SWEET_010 (Pumpkin Pie) — custard filling bakes in shell
   SWEET_010: [
-    { key: 'crust',   label: 'Pie crust',       cookingMethod: 'baked', yieldFactorWater: 0.82, yieldFactorFat: 1.0 },
-    { key: 'filling', label: 'Pumpkin filling',  cookingMethod: 'baked', yieldFactorWater: 0.90, yieldFactorFat: 1.0 },
+    { key: 'crust',   label: 'Pie crust',       prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.82, yieldFactorFat: 1.0 },
+    { key: 'filling', label: 'Pumpkin filling',  prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.90, yieldFactorFat: 1.0 },
   ],
 
   // SWEET_012 (Boston Cream Pie) — cake baked, pastry cream boiled, chocolate glaze raw
   SWEET_012: [
-    { key: 'cake',    label: 'Sponge cake',      cookingMethod: 'baked',  yieldFactorWater: 0.85, yieldFactorFat: 1.0 },
-    { key: 'filling', label: 'Pastry cream',      cookingMethod: 'boiled', yieldFactorWater: 0.92, yieldFactorFat: 1.0 },
-    { key: 'glaze',   label: 'Chocolate glaze',   cookingMethod: 'raw',    yieldFactorWater: 1.0,  yieldFactorFat: 1.0 },
+    { key: 'cake',    label: 'Sponge cake',      prepMethod: 'baked', cookMethod: 'baked',  yieldFactorWater: 0.85, yieldFactorFat: 1.0 },
+    { key: 'filling', label: 'Pastry cream',      prepMethod: 'boiled', cookMethod: 'boiled', yieldFactorWater: 0.92, yieldFactorFat: 1.0 },
+    { key: 'glaze',   label: 'Chocolate glaze',   prepMethod: 'raw', cookMethod: 'raw',    yieldFactorWater: 1.0,  yieldFactorFat: 1.0 },
   ],
 
   // SWEET_015 (Egg Custard Pie) — blind-baked crust, custard filling bakes in shell
   SWEET_015: [
-    { key: 'crust',   label: 'Pie crust',          cookingMethod: 'baked', yieldFactorWater: 0.82, yieldFactorFat: 1.0 },
-    { key: 'filling', label: 'Egg custard filling', cookingMethod: 'baked', yieldFactorWater: 0.90, yieldFactorFat: 1.0 },
+    { key: 'crust',   label: 'Pie crust',          prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.82, yieldFactorFat: 1.0 },
+    { key: 'filling', label: 'Egg custard filling', prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.90, yieldFactorFat: 1.0 },
   ],
 
   // SWEET_017 (White Cake with Coconut Frosting) — cake baked, frosting applied raw
   SWEET_017: [
-    { key: 'cake',     label: 'White cake',       cookingMethod: 'baked', yieldFactorWater: 0.85, yieldFactorFat: 1.0 },
-    { key: 'frosting', label: 'Coconut frosting', cookingMethod: 'raw',   yieldFactorWater: 1.0,  yieldFactorFat: 1.0 },
+    { key: 'cake',     label: 'White cake',       prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.85, yieldFactorFat: 1.0 },
+    { key: 'frosting', label: 'Coconut frosting', prepMethod: 'raw', cookMethod: 'raw',   yieldFactorWater: 1.0,  yieldFactorFat: 1.0 },
   ],
 
   // SWEET_020 (Yellow Cake with Chocolate Glaze) — cake baked, glaze applied raw
   SWEET_020: [
-    { key: 'cake',     label: 'Yellow cake',      cookingMethod: 'baked', yieldFactorWater: 0.85, yieldFactorFat: 1.0 },
-    { key: 'frosting', label: 'Chocolate glaze',  cookingMethod: 'raw',   yieldFactorWater: 1.0,  yieldFactorFat: 1.0 },
+    { key: 'cake',     label: 'Yellow cake',      prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.85, yieldFactorFat: 1.0 },
+    { key: 'frosting', label: 'Chocolate glaze',  prepMethod: 'raw', cookMethod: 'raw',   yieldFactorWater: 1.0,  yieldFactorFat: 1.0 },
   ],
 
   // SWEET_022 (Pineapple Upside-Down Cake) — caramelised topping and cake both bake together
   SWEET_022: [
-    { key: 'topping', label: 'Pineapple topping', cookingMethod: 'baked', yieldFactorWater: 0.88, yieldFactorFat: 1.0 },
-    { key: 'cake',    label: 'Cake batter',        cookingMethod: 'baked', yieldFactorWater: 0.85, yieldFactorFat: 1.0 },
+    { key: 'topping', label: 'Pineapple topping', prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.88, yieldFactorFat: 1.0 },
+    { key: 'cake',    label: 'Cake batter',        prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.85, yieldFactorFat: 1.0 },
   ],
 
   // SWEET_026 (Cheesecake NY-Style) — graham cracker crust baked, cheesecake filling baked
   SWEET_026: [
-    { key: 'crust',   label: 'Graham cracker crust', cookingMethod: 'baked', yieldFactorWater: 0.95, yieldFactorFat: 1.0 },
-    { key: 'filling', label: 'Cheesecake filling',    cookingMethod: 'baked', yieldFactorWater: 0.88, yieldFactorFat: 1.0 },
+    { key: 'crust',   label: 'Graham cracker crust', prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.95, yieldFactorFat: 1.0 },
+    { key: 'filling', label: 'Cheesecake filling',    prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.88, yieldFactorFat: 1.0 },
   ],
 
   // SWEET_027 (Sour Cream Coffee Cake) — cake and streusel topping both bake together
   SWEET_027: [
-    { key: 'cake',    label: 'Coffee cake',      cookingMethod: 'baked', yieldFactorWater: 0.85, yieldFactorFat: 1.0 },
-    { key: 'topping', label: 'Streusel topping', cookingMethod: 'baked', yieldFactorWater: 0.90, yieldFactorFat: 1.0 },
+    { key: 'cake',    label: 'Coffee cake',      prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.85, yieldFactorFat: 1.0 },
+    { key: 'topping', label: 'Streusel topping', prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.90, yieldFactorFat: 1.0 },
   ],
 
   // SWEET_035 (Fig Bars) — fig filling simmered, cookie crust baked around it
   SWEET_035: [
-    { key: 'filling', label: 'Fig filling',   cookingMethod: 'boiled', yieldFactorWater: 0.88, yieldFactorFat: 1.0 },
-    { key: 'crust',   label: 'Cookie crust',  cookingMethod: 'baked',  yieldFactorWater: 0.90, yieldFactorFat: 1.0 },
+    { key: 'filling', label: 'Fig filling',   prepMethod: 'boiled', cookMethod: 'boiled', yieldFactorWater: 0.88, yieldFactorFat: 1.0 },
+    { key: 'crust',   label: 'Cookie crust',  prepMethod: 'baked', cookMethod: 'baked',  yieldFactorWater: 0.90, yieldFactorFat: 1.0 },
   ],
 
   // SWEET_040 (Buttermilk Pie) — blind-baked crust, custard filling bakes in shell
   SWEET_040: [
-    { key: 'crust',   label: 'Pie crust',           cookingMethod: 'baked', yieldFactorWater: 0.82, yieldFactorFat: 1.0 },
-    { key: 'filling', label: 'Buttermilk filling',   cookingMethod: 'baked', yieldFactorWater: 0.90, yieldFactorFat: 1.0 },
+    { key: 'crust',   label: 'Pie crust',           prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.82, yieldFactorFat: 1.0 },
+    { key: 'filling', label: 'Buttermilk filling',   prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.90, yieldFactorFat: 1.0 },
   ],
 };
 

@@ -340,7 +340,9 @@ def _build_recipe_multi(
             sections_out.append({
                 "section_key": sec_key,
                 "section_label": st["section"].section_label,
-                "cooking_method": st["section"].cooking_method,
+                "prep_method": st["section"].prep_method,
+                "cook_method": st["section"].cook_method,
+                "cooking_method": st["section"].cook_method,  # backward-compat
                 "ingredient_count": 0,
                 "raw_grams": 0.0,
                 "final_grams": 0.0,
@@ -348,7 +350,7 @@ def _build_recipe_multi(
             continue
 
         s = st["section"]
-        method = normalize_cooking_method(s.cooking_method)
+        method = normalize_cooking_method(s.cook_method)
         yfw = s.yield_factor_water
         yff = s.yield_factor_fat
         sums_S = st["sums"]
@@ -377,7 +379,9 @@ def _build_recipe_multi(
         sections_out.append({
             "section_key": sec_key,
             "section_label": s.section_label,
-            "cooking_method": s.cooking_method,
+            "prep_method": s.prep_method,
+            "cook_method": s.cook_method,
+            "cooking_method": s.cook_method,  # backward-compat
             "cooking_method_normalized": method,
             "yield_factor_water": yfw,
             "yield_factor_fat": yff,
@@ -417,9 +421,10 @@ def _build_recipe_multi(
     per_serving["AddedSugars"] = _round(added_per100 * serving_scale, 2)
     per_serving["IntrinsicSugars"] = _round(intrinsic_per100 * serving_scale, 2)
 
-    # Recipe-level cooking_method label: if all sections share one method, use it;
-    # otherwise emit "multi" (see §18.5).
-    methods_used = sorted({s.cooking_method for s in sections})
+    # Recipe-level cooking_method label: if all sections share one cook_method, use it;
+    # otherwise emit "multi" (see §18.5). Uses cook_method (the retention driver),
+    # not prep_method (the authoring label).
+    methods_used = sorted({s.cook_method for s in sections})
     dish_method_label = methods_used[0] if len(methods_used) == 1 else "multi"
     dish_method_normalized = (
         normalize_cooking_method(dish_method_label) if dish_method_label != "multi" else "multi"

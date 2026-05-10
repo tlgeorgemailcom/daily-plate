@@ -1,18 +1,19 @@
-recipe_id,section_key,section_label,cooking_method,yield_factor_water,yield_factor_fat,yield_factor_other
-SWEET_001,baked,Baked,baked,0.71,1.0,1.0
-SWEET_003,crust,Pie crust,baked,0.75,1.0,1.0
-SWEET_003,filling,Vanilla custard filling,boiled,0.72,1.0,1.0
-SWEET_003,assembly,Banana layer,raw,1.0,1.0,1.0
-SWEET_003,topping,Whipped cream topping,raw,1.0,1.0,1.0
-SWEET_006,crust,Pie crust,baked,0.84,1.0,1.0
-SWEET_006,filling,Lemon curd filling,boiled,0.92,1.0,1.0
-SWEET_006,topping,Meringue topping,baked,0.85,1.0,1.0
-SWEET_011,crust,Pie crust,baked,0.84,1.0,1.0
-SWEET_011,filling,Vanilla pastry cream,boiled,0.95,1.0,1.0
-SWEET_011,topping,Whipped cream topping,raw,1.0,1.0,1.0
-SWEET_013,crust,Chocolate cookie crumb crust,baked,0.97,1.0,1.0
-SWEET_013,filling,Chocolate pastry cream,boiled,0.95,1.0,1.0
-SWEET_013,topping,Whipped cream topping,raw,1.0,1.0,1.0
-SWEET_014,crust,Pie crust,baked,0.84,1.0,1.0
-SWEET_014,filling,Coconut pastry cream,boiled,0.95,1.0,1.0
-SWEET_014,topping,Whipped cream topping,raw,1.0,1.0,1.0
+recipe_id,section_key,section_label,prep_method,cook_method,yield_factor_water,yield_factor_fat,yield_factor_other
+SWEET_001,crust,Pie crust,raw,baked,0.82,1.0,1.0
+SWEET_001,filling,Apple filling,boiled,baked,0.85,1.0,1.0
+SWEET_003,crust,Pie crust,baked,baked,0.75,1.0,1.0
+SWEET_003,filling,Vanilla custard filling,boiled,boiled,0.72,1.0,1.0
+SWEET_003,assembly,Banana layer,raw,raw,1.0,1.0,1.0
+SWEET_003,topping,Whipped cream topping,raw,raw,1.0,1.0,1.0
+SWEET_006,crust,Pie crust,baked,baked,0.84,1.0,1.0
+SWEET_006,filling,Lemon curd filling,boiled,boiled,0.92,1.0,1.0
+SWEET_006,topping,Meringue topping,baked,baked,0.85,1.0,1.0
+SWEET_011,crust,Pie crust,baked,baked,0.84,1.0,1.0
+SWEET_011,filling,Vanilla pastry cream,boiled,boiled,0.95,1.0,1.0
+SWEET_011,topping,Whipped cream topping,raw,raw,1.0,1.0,1.0
+SWEET_013,crust,Chocolate cookie crumb crust,baked,baked,0.97,1.0,1.0
+SWEET_013,filling,Chocolate pastry cream,boiled,boiled,0.95,1.0,1.0
+SWEET_013,topping,Whipped cream topping,raw,raw,1.0,1.0,1.0
+SWEET_014,crust,Pie crust,baked,baked,0.84,1.0,1.0
+SWEET_014,filling,Coconut pastry cream,boiled,boiled,0.95,1.0,1.0
+SWEET_014,topping,Whipped cream topping,raw,raw,1.0,1.0,1.0

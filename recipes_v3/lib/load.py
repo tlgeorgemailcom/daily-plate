@@ -151,10 +151,16 @@ class Section:
     recipe_id: str
     section_key: str
     section_label: str
-    cooking_method: str
+    prep_method: str   # what the cook does — shown in UI (e.g. 'simmered', 'boiled')
+    cook_method: str   # dominant heat stage for USDA retention table lookup
     yield_factor_water: float
     yield_factor_fat: float
     yield_factor_other: float
+
+    @property
+    def cooking_method(self) -> str:
+        """Backward-compat alias — returns cook_method."""
+        return self.cook_method
 
 
 def _parse_float(s: str, default: float = 0.0) -> float:
@@ -268,7 +274,8 @@ def load_sections() -> dict[str, list[Section]]:
                 recipe_id=rid,
                 section_key=section_key,
                 section_label=(row.get("section_label") or "").strip(),
-                cooking_method=(row.get("cooking_method") or "raw").strip().lower(),
+                prep_method=(row.get("prep_method") or row.get("cooking_method") or "raw").strip().lower(),
+                cook_method=(row.get("cook_method") or row.get("cooking_method") or "raw").strip().lower(),
                 yield_factor_water=_parse_float(row.get("yield_factor_water"), 1.0),
                 yield_factor_fat=_parse_float(row.get("yield_factor_fat"), 1.0),
                 yield_factor_other=_parse_float(row.get("yield_factor_other"), 1.0),
