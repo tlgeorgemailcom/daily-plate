@@ -2446,8 +2446,8 @@
                   <span class="nutrition-badge-text">
                     ✓ {getIngredientNutritionLabel(ingredient)}
                     · {ingredient.portionDesc === 'g'
-                        ? `${(ingredient.servingCount ?? 1) * (ingredient.portionGrams ?? 0)}g`
-                        : `${ingredient.servingCount}×${ingredient.portionDesc}`}
+                        ? `${Math.round((ingredient.servingCount ?? 1) * (ingredient.portionGrams ?? 0))}g`
+                        : `${ingredient.servingCount}×${ingredient.portionDesc} (${Math.round((ingredient.servingCount ?? 1) * (ingredient.portionGrams ?? 0))}g)`}
                   </span>
                   <span class="nutrition-badge-edit-label">Edit:</span>
                   <button type="button" class="nutrition-relink-btn" onclick={() => openNutritionSearch(ingredient)}>qty</button>
