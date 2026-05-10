@@ -2481,16 +2481,9 @@
         <div class="dish-cooking-header">
           <span class="dish-header-name">{dishName || recipeName}</span>
           <span class="dish-header-dash"> — </span>
-          <input
-            type="text"
-            list="dish-cooking-method-list"
-            bind:value={cookingMethod}
-            class="dish-header-method-input"
-            placeholder="e.g. Bake"
-          />
-          <datalist id="dish-cooking-method-list">
+          <select bind:value={cookingMethod} class="dish-header-method-input form-input section-method-select">
             {#each COOKING_METHODS as m}<option value={m}>{m}</option>{/each}
-          </datalist>
+          </select>
         </div>
         {#each sections as sec, sIdx (sIdx)}
           <div class="section-block">
@@ -3095,19 +3088,8 @@
     color: #4a5568;
   }
   .dish-header-method-input {
-    border: none;
-    background: transparent;
-    font-size: 0.95rem;
+    flex: 0 0 auto;
     font-weight: 700;
-    color: #2d3748;
-    width: 9ch;
-    min-width: 6ch;
-    padding: 0;
-    outline: none;
-    border-bottom: 1px dashed #a0aec0;
-  }
-  .dish-header-method-input:focus {
-    border-bottom-color: #4a5568;
   }
   .section-header-bar {
     display: flex;
