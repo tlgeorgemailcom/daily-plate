@@ -1427,12 +1427,35 @@
     // v3.md §18 — reconstruct section metadata so the editor shows the same
     // section header bars (label / cooking method / yield factors) the
     // moderator screen does. Player-source suggestions carry sections inline;
-    // dev-source suggestions need the v3 build artifact (Turso has no
-    // sections_json column on dev_recipes today).
+    // dev-source suggestions fall back to per-ingredient derivation, and only
+    // use the v3 build artifact when its section keys fully cover every
+    // ingredient section key (guards against coarse single-section builds like
+    // SWEET_001 which has one "baked" section but ingredients carry "crust"/"filling").
     let nextSections: RecipeSection[] | null = null;
     if (Array.isArray(suggestion.sections) && suggestion.sections.length > 0) {
       nextSections = suggestion.sections;
-    } else if (suggestion.sourceType === 'dev') {
+    }
+    if (!nextSections && ingredients.some((i) => i.section)) {
+      // Derive sections from per-ingredient section keys first — these always
+      // reflect the actual grouping stored in the recipe.
+      const seen = new Set<string>();
+      const derived: RecipeSection[] = [];
+      for (const ing of ingredients) {
+        const k = ing.section;
+        if (k && !seen.has(k)) {
+          seen.add(k);
+          derived.push({
+            key: k,
+            label: formatSectionHeader(k),
+            cookingMethod: 'baked',
+          });
+        }
+      }
+      if (derived.length > 0) nextSections = derived;
+    }
+    if (!nextSections && suggestion.sourceType === 'dev') {
+      // Last resort: fetch the v3 build artifact for cooking method / yield
+      // factors when no per-ingredient section keys exist.
       try {
         const res = await fetch(`/api/recipes/v3-build/${encodeURIComponent(suggestion.id)}`);
         if (res.ok) {
@@ -1449,26 +1472,8 @@
           }
         }
       } catch {
-        /* network error — fall through to per-row derivation */
+        /* network error — no sections */
       }
-    }
-    if ((!nextSections || nextSections.length === 0) && ingredients.some((i) => i.section)) {
-      // Last-resort derivation: synthesise minimal section objects from the
-      // unique per-row keys so grouping at least renders.
-      const seen = new Set<string>();
-      const derived: RecipeSection[] = [];
-      for (const ing of ingredients) {
-        const k = ing.section;
-        if (k && !seen.has(k)) {
-          seen.add(k);
-          derived.push({
-            key: k,
-            label: formatSectionHeader(k),
-            cookingMethod: 'baked',
-          });
-        }
-      }
-      nextSections = derived;
     }
     if (nextSections) {
       sections = nextSections;
