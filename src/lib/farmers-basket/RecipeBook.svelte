@@ -2114,7 +2114,6 @@
             submitLabel="➕ Add Recipe"
             submitting={isSaving}
             errorMessage={saveError || ''}
-            disableSuggestions={true}
           />
         </div>
       </div>
