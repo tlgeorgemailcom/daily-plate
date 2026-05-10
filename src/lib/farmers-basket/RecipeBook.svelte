@@ -924,10 +924,14 @@
               portionDesc: i.portionDesc,
               portionGrams: i.portionGrams,
               servingCount: i.servingCount,
-              exempt: i.exempt === true,
+              exempt: i.ingredientStatus === 'exempt',
               isDish: i.isDish === true,
+              ...(i.ingredientStatus === 'optional' ? { is_optional: true } : {}),
               ...(i.section ? { section: i.section } : {})
             })),
+            ...(data.sections && data.sections.length > 0 ? { sections: data.sections } : {}),
+            ...(typeof data.yieldFactorWater === 'number' ? { yieldFactorWater: data.yieldFactorWater } : {}),
+            ...(typeof data.yieldFactorFat   === 'number' ? { yieldFactorFat:   data.yieldFactorFat   } : {}),
             imageUrl
           }
         })
@@ -2110,6 +2114,7 @@
             submitLabel="➕ Add Recipe"
             submitting={isSaving}
             errorMessage={saveError || ''}
+            disableSuggestions={true}
           />
         </div>
       </div>

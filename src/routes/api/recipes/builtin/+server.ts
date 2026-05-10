@@ -573,9 +573,10 @@ export const POST: RequestHandler = async ({ request }) => {
             recipe_id, food_word, recipe_name, category, dietary_category, cooking_method, dish_family, prep_time, servings,
             servings_count, serving_label,
             recipe, animal_spawns, recipe_instructions_json, recipe_ingredients_json,
+            sections_json,
             image_url, submitted_by, status, created_at, updated_at,
             grams_per_serving, nutrition_json, nutrient_version, retention_model_version, source_match_version
-          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'published', ?, ?, ?, ?, ?, ?, ?)`,
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'published', ?, ?, ?, ?, ?, ?, ?)`,
       args: [
         id,
         foodWord,
@@ -592,6 +593,7 @@ export const POST: RequestHandler = async ({ request }) => {
         data.animalSpawns ? JSON.stringify(data.animalSpawns) : null,
         data.recipeInstructions ? JSON.stringify(data.recipeInstructions) : null,
         data.recipeIngredients ? JSON.stringify(data.recipeIngredients) : null,
+        data.sections && Array.isArray(data.sections) && data.sections.length > 0 ? JSON.stringify(data.sections) : null,
         data.imageUrl || null,
         'Moderator',
         now,
