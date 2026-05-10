@@ -905,24 +905,10 @@
           nextIngredientId = ingredients.length + 1;
           // Append moderator-added ingredients from stored data that aren't in the v3 build
           // (e.g. optional spices added via the Edit Recipe UI).
-          //
-          // Count-based filter: the same NDB can appear multiple times in one recipe
-          // (e.g. AP flour in both crust and filling). A stored ingredient is an "extra"
-          // only when the stored list has MORE occurrences of that NDB than the v3 build.
-          const v3NdbCounts = new Map<string, number>();
-          for (const bi of data.ingredients) {
-            if (bi.ndb_no) v3NdbCounts.set(bi.ndb_no, (v3NdbCounts.get(bi.ndb_no) ?? 0) + 1);
-          }
-          const consumedCounts = new Map<string, number>();
-          const storedExtras = (initialData.ingredients ?? []).filter((ing) => {
-            if (ing.isDish) return false;
-            if (!ing.ndbNo) return true; // no NDB (exempt-style) — always include
-            const v3Count = v3NdbCounts.get(ing.ndbNo) ?? 0;
-            const seen = consumedCounts.get(ing.ndbNo) ?? 0;
-            consumedCounts.set(ing.ndbNo, seen + 1);
-            // Only include once we have accounted for all v3-build occurrences of this NDB
-            return seen >= v3Count;
-          });
+          const v3NdbNos = new Set(data.ingredients.map((i) => i.ndb_no).filter(Boolean));
+          const storedExtras = (initialData.ingredients ?? []).filter(
+            (ing) => !ing.isDish && (ing.ndbNo ? !v3NdbNos.has(ing.ndbNo) : true)
+          );
           if (storedExtras.length > 0) {
             let extraIdx = ingredients.length + 1;
             ingredients = [
