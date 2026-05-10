@@ -162,7 +162,7 @@ export const GET: RequestHandler = async ({ url }) => {
               recipe_instructions_json AS recipe_instructions,
               dish_family,
               nutrition_json,
-              NULL AS sections_json,
+              sections_json,
               'dev' AS source_type
        FROM dev_recipes
         WHERE status = 'published'
