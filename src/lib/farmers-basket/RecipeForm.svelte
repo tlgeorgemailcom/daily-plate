@@ -212,6 +212,7 @@
   );
   let sections = $state<RecipeSection[]>(initialData.sections ?? []);
   let sectionAdvancedOpen = $state<Record<number, boolean>>({});
+  let sectionTipOpen = $state<Record<number, boolean>>({});
 
   // Backfill missing/unknown ingredient.section assignments by carrying forward
   // the most recently-seen valid section (falls back to first section). This
@@ -2311,15 +2312,32 @@
           <div class="section-method-row section-final-cook-row">
             <span class="section-method-label">
               Final cook method
-              <button type="button" class="tip-btn" title="The dominant heat stage when the assembled dish is complete. This drives the USDA nutrient retention calculation. Prep steps inherit the dish-level method above.">💡</button>
+              <button
+                type="button"
+                class="tip-btn"
+                aria-label="About final cook method"
+                onclick={() => (sectionTipOpen[sIdx] = !sectionTipOpen[sIdx])}
+              >💡</button>
             </span>
             <span class="section-final-cook-inherited">{dishCookMethodEnum} <span class="inherited-note">(inherited from dish)</span></span>
           </div>
+          {#if sectionTipOpen[sIdx]}
+            <div class="final-cook-tip">
+              The dominant heat stage when the assembled dish is complete. This drives the USDA nutrient retention calculation — not the prep step before assembly.
+              <br /><br />
+              Cooking method inherits the dish-level method above unless specified differently here.
+            </div>
+          {/if}
         {:else}
           <div class="section-method-row section-final-cook-row">
             <label class="section-method-label">
               Final cook method
-              <button type="button" class="tip-btn" title="The dominant heat stage when the assembled dish is complete. This drives the USDA nutrient retention calculation.">💡</button>
+              <button
+                type="button"
+                class="tip-btn"
+                aria-label="About final cook method"
+                onclick={() => (sectionTipOpen[sIdx] = !sectionTipOpen[sIdx])}
+              >💡</button>
             </label>
             <select bind:value={sec.cookMethod} class="form-input section-method-select">
               {#each SECTION_COOK_METHODS as m}
@@ -2327,6 +2345,13 @@
               {/each}
             </select>
           </div>
+          {#if sectionTipOpen[sIdx]}
+            <div class="final-cook-tip">
+              The dominant heat stage when the assembled dish is complete. This drives the USDA nutrient retention calculation — not the prep step before assembly.
+              <br /><br />
+              Cooking method inherits the dish-level method above unless specified differently here.
+            </div>
+          {/if}
         {/if}
 
         {#if moderatorMode && sectionAdvancedOpen[sIdx]}
@@ -3272,6 +3297,16 @@
     line-height: 1;
   }
   .tip-btn:focus { outline: 2px solid #63b3ed; border-radius: 2px; }
+  .final-cook-tip {
+    background: #fffbeb;
+    border: 1px solid #f6e05e;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 0.82rem;
+    color: #744210;
+    line-height: 1.5;
+    margin: 2px 0 8px;
+  }
   .section-card-advanced {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
