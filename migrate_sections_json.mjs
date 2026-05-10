@@ -67,9 +67,10 @@ const KEY_LABEL = {
 const MANUAL = {
 
   // SWEET_001 (Pie Apple) — ALSO needs ingredient key fix (first 5 → crust, rest → filling)
+  // Filling: apples simmered first (boiled), then placed in crust and baked together
   SWEET_001: [
-    { key: 'crust',   label: 'Pie crust',    cookingMethod: 'baked', yieldFactorWater: 0.82, yieldFactorFat: 1.0 },
-    { key: 'filling', label: 'Apple filling', cookingMethod: 'baked', yieldFactorWater: 0.85, yieldFactorFat: 1.0 },
+    { key: 'crust',   label: 'Pie crust',    cookingMethod: 'baked',  yieldFactorWater: 0.82, yieldFactorFat: 1.0 },
+    { key: 'filling', label: 'Apple filling', cookingMethod: 'boiled', yieldFactorWater: 0.85, yieldFactorFat: 1.0 },
   ],
 
   // SWEET_002 (Apple Strudel) — puff pastry baked, apple filling simmered, egg wash raw
