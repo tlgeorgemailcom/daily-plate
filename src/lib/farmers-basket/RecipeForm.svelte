@@ -2478,6 +2478,9 @@
           </div>
         {/if}
       {:else}
+        <div class="dish-cooking-header">
+          {dishName || recipeName} — {cookingMethod}
+        </div>
         {#each sections as sec, sIdx (sIdx)}
           <div class="section-block">
             {@render sectionHeaderBar(sec, sIdx)}
@@ -3060,6 +3063,16 @@
     border: 1px solid #e2e8f0;
     border-left: 3px solid #38a169;
     border-radius: 4px;
+  }
+  .dish-cooking-header {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #2d3748;
+    padding: 6px 10px;
+    margin-bottom: 6px;
+    background: #edf2f7;
+    border-radius: 4px;
+    border-left: 3px solid #4a5568;
   }
   .section-header-bar {
     display: flex;
