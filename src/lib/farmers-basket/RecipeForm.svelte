@@ -3092,7 +3092,7 @@
     white-space: nowrap;
   }
   .dish-header-dash {
-    color: #a0aec0;
+    color: #4a5568;
   }
   .dish-header-method-input {
     border: none;
