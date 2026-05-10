@@ -2324,7 +2324,7 @@
           {#if sectionTipOpen[sIdx]}
             <div class="final-cook-tip">
               The dominant heat stage when the assembled dish is complete. This drives the USDA nutrient retention calculation — not the prep step before assembly.
-              <br /><br />
+              <br />
               Cooking method inherits the dish-level method above unless specified differently here.
             </div>
           {/if}
@@ -2348,7 +2348,7 @@
           {#if sectionTipOpen[sIdx]}
             <div class="final-cook-tip">
               The dominant heat stage when the assembled dish is complete. This drives the USDA nutrient retention calculation — not the prep step before assembly.
-              <br /><br />
+              <br />
               Cooking method inherits the dish-level method above unless specified differently here.
             </div>
           {/if}
@@ -2599,6 +2599,9 @@
             {#each COOKING_METHODS as m}<option value={m}>{m}</option>{/each}
           </select>
         </div>
+        {#if Object.values(sectionTipOpen).some(Boolean)}
+          <div class="tip-backdrop" onclick={() => (sectionTipOpen = {})} role="presentation" aria-hidden="true"></div>
+        {/if}
         {#each sections as sec, sIdx (sIdx)}
           <div class="section-block">
             {@render sectionHeaderBar(sec, sIdx)}
