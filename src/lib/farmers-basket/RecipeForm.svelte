@@ -530,9 +530,7 @@
     }
     const quantity = portionDesc === 'g'
       ? `${portionGrams}g`
-      : count === 1
-        ? portionDesc
-        : `${count} ${portionDesc}`;
+      : `${count} ${portionDesc}`;
     ingredients = ingredients.map(i => i.id === ingId ? {
       ...i,
       foodWord: food.word,
