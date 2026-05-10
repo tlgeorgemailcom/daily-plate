@@ -2489,7 +2489,7 @@
             placeholder="e.g. Bake"
           />
           <datalist id="dish-cooking-method-list">
-            {#each COOKING_METHODS as m}<option value={m}>{/each}
+            {#each COOKING_METHODS as m}<option value={m}>{m}</option>{/each}
           </datalist>
         </div>
         {#each sections as sec, sIdx (sIdx)}
