@@ -498,6 +498,20 @@
       ?? 'Linked ingredient';
   }
 
+  /** Shorten spelled-out units in USDA portion descs for compact badge display. */
+  function abbreviatePortion(desc: string): string {
+    return desc
+      .replace(/\btablespoon\b/gi, 'tbsp')
+      .replace(/\bteaspoon\b/gi, 'tsp');
+  }
+
+  /** Expand USDA abbreviations to full words for the qty text field. */
+  function expandPortion(desc: string): string {
+    return desc
+      .replace(/\btbsp\b/gi, 'Tablespoon')
+      .replace(/\btsp\b/gi, 'Teaspoon');
+  }
+
   function selectPendingFood(ingId: number, food: FoodData) {
     nutritionPendingFood = { ...nutritionPendingFood, [ingId]: food };
     const firstNamedIdx = food.portions.findIndex(p => p.desc !== 'custom (g)');
@@ -530,7 +544,7 @@
     }
     const quantity = portionDesc === 'g'
       ? `${portionGrams}g`
-      : `${count} ${portionDesc}`;
+      : `${count} ${expandPortion(portionDesc)}`;
     ingredients = ingredients.map(i => i.id === ingId ? {
       ...i,
       foodWord: food.word,
@@ -2451,7 +2465,7 @@
                     ✓ {getIngredientNutritionLabel(ingredient)}
                     · {ingredient.portionDesc === 'g'
                         ? `${Math.round((ingredient.servingCount ?? 1) * (ingredient.portionGrams ?? 0))}g`
-                        : `${ingredient.servingCount}×${ingredient.portionDesc} (${Math.round((ingredient.servingCount ?? 1) * (ingredient.portionGrams ?? 0))}g)`}
+                        : `${ingredient.servingCount}×${abbreviatePortion(ingredient.portionDesc ?? '')} (${Math.round((ingredient.servingCount ?? 1) * (ingredient.portionGrams ?? 0))}g)`}
                   </span>
                   <span class="nutrition-badge-edit-label">Edit:</span>
                   <button type="button" class="nutrition-relink-btn" onclick={() => openNutritionSearch(ingredient)}>qty</button>
