@@ -145,7 +145,10 @@ export interface Level {
   sections?: {                    // Per-section cooking breakdown (v3 §18; multi-stage recipes only)
     key: string;                  // matches recipeIngredients[].section
     label: string;                // human label, e.g. "Pie crust"
-    cookingMethod: string;        // 'baked' | 'boiled' | 'raw' | 'steamed' | 'fried' | 'grilled' | 'microwave'
+    isPrepStep?: boolean;         // true = inherits dish cookMethod; false = own cookMethod
+    prepMethod?: string;          // UI label (simmered, chilled, par-baked...)
+    cookMethod?: string;          // USDA retention enum (baked|boiled|raw|steamed|fried|grilled|microwave)
+    cookingMethod?: string;       // backward-compat alias for cookMethod
     yieldFactorWater?: number;
     yieldFactorFat?: number;
     yieldFactorOther?: number;

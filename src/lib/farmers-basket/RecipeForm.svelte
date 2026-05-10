@@ -29,12 +29,19 @@
   export interface RecipeSection {
     key: string;
     label: string;
+    /** true = prep step — cookMethod inherits dish-level cookingMethod.
+     *  false = primary cook — cookMethod is set independently per section.
+     *  Defaults to true when absent. */
+    isPrepStep?: boolean;
     /** What the cook does to prepare this section — shown in the UI.
      *  e.g. 'simmered', 'boiled', 'raw'. Free-form; no calculation role. */
-    prepMethod: string;
+    prepMethod?: string;
     /** Dominant heat stage used for USDA retention table lookup + yield factors.
-     *  Falls back to prepMethod when absent. Strict enum: raw|boiled|steamed|baked|fried|grilled|microwave */
+     *  Falls back to dish-level cookingMethod when isPrepStep=true.
+     *  Strict enum: raw|boiled|steamed|baked|fried|grilled|microwave */
     cookMethod?: string;
+    /** Backward-compat alias accepted from older API responses. */
+    cookingMethod?: string;
     yieldFactorWater?: number;
     yieldFactorFat?: number;
     yieldFactorOther?: number;
@@ -150,6 +157,11 @@
   const ANIMAL_TYPES: AnimalType[] = ['rabbit', 'squirrel', 'raccoon', 'bird', 'mouse', 'fox'];
   
   const COOKING_METHODS = ['Bake', 'Boil', 'Chill', 'Fry', 'Grill', 'No heat'];
+  // Maps dish-level cookingMethod label → USDA retention enum used when a section isPrepStep.
+  const DISH_TO_COOK_METHOD: Record<string, string> = {
+    'Bake': 'baked', 'Boil': 'boiled', 'Chill': 'raw',
+    'Fry': 'fried', 'Grill': 'grilled', 'No heat': 'raw',
+  };
   // v3.md §18.1 — what the cook does (shown in header bar). Richer than cook methods.
   const SECTION_PREP_METHODS = ['raw', 'simmered', 'boiled', 'steamed', 'blanched', 'baked', 'par-baked', 'fried', 'grilled', 'marinated', 'chilled', 'microwave'];
   // v3.md §18.1 — strict enum matching USDA retention table; used for nutrition calculation only.
@@ -168,6 +180,9 @@
   let dishName = $state(initialData.dishName || (initialData.recipeName?.includes(' — ') ? initialData.recipeName.split(' — ')[0] : initialData.recipeName || ''));
   let recipeSuffix = $state(initialData.recipeSuffix || (initialData.recipeName?.includes(' — ') ? initialData.recipeName.split(' — ')[1] : ''));
   let cookingMethod = $state(initialData.cookingMethod || 'Bake');
+  // USDA retention enum resolved from dish-level cookingMethod label.
+  // Used as the inherited cookMethod for all isPrepStep sections.
+  let dishCookMethodEnum = $derived(DISH_TO_COOK_METHOD[cookingMethod] ?? 'baked');
   let dishFamily = $state(initialData.dishFamily || '');
   let category = $state(toStoredRecipeCategory(initialData.category));
   let dietaryCategory = $state<DietaryCategory>(initialData.dietaryCategory || 'all');
@@ -580,7 +595,9 @@
     const meta = sections.find((s) => s.key === sectionKey);
     if (meta) {
       const label = meta.label || (sectionKey.charAt(0).toUpperCase() + sectionKey.slice(1));
-      return meta.prepMethod ? `${label} — ${meta.prepMethod}` : `${label}:`;
+      // Show prepMethod for prep steps; show cookMethod for primary cook sections.
+      const method = meta.isPrepStep !== false ? meta.prepMethod : (meta.cookMethod ?? meta.prepMethod);
+      return method ? `${label} — ${method}` : `${label}:`;
     }
     return sectionKey.charAt(0).toUpperCase() + sectionKey.slice(1) + ':';
   }
@@ -598,7 +615,7 @@
   }
   function addSection() {
     const key = uniqueSectionKey('section_' + (sections.length + 1));
-    sections = [...sections, { key, label: '', prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 1.0 }];
+    sections = [...sections, { key, label: '', isPrepStep: true, prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 1.0 }];
   }
   function removeSection(idx: number) {
     const removedKey = sections[idx]?.key;
@@ -635,7 +652,7 @@
   function addSectionWithRow() {
     const idx = sections.length;
     const key = uniqueSectionKey(`section_${idx + 1}`);
-    sections = [...sections, { key, label: '', prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 1.0 }];
+    sections = [...sections, { key, label: '', isPrepStep: true, prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 1.0 }];
     addIngredientToSection(key);
   }
 
@@ -842,7 +859,9 @@
     sections?: Array<{
       section_key: string;
       section_label: string;
-      cooking_method: string;
+      prep_method?: string;
+      cook_method?: string;
+      cooking_method?: string;
       yield_factor_water?: number;
       yield_factor_fat?: number;
       yield_factor_other?: number;
@@ -1441,7 +1460,17 @@
     // SWEET_001 which has one "baked" section but ingredients carry "crust"/"filling").
     let nextSections: RecipeSection[] | null = null;
     if (Array.isArray(suggestion.sections) && suggestion.sections.length > 0) {
-      nextSections = suggestion.sections;
+      // Normalize incoming sections to always have isPrepStep + prepMethod + cookMethod.
+      nextSections = suggestion.sections.map(s => ({
+        key: s.key,
+        label: s.label,
+        isPrepStep: typeof (s as {isPrepStep?: boolean}).isPrepStep === 'boolean' ? (s as {isPrepStep?: boolean}).isPrepStep : true,
+        prepMethod: (s as {prepMethod?: string}).prepMethod ?? (s as {cookingMethod?: string}).cookingMethod ?? 'baked',
+        cookMethod: (s as {cookMethod?: string}).cookMethod ?? (s as {cookingMethod?: string}).cookingMethod ?? 'baked',
+        yieldFactorWater: s.yieldFactorWater,
+        yieldFactorFat: s.yieldFactorFat,
+        yieldFactorOther: (s as {yieldFactorOther?: number}).yieldFactorOther,
+      })) as RecipeSection[];
     }
     if (!nextSections && ingredients.some((i) => i.section)) {
       // Derive sections from per-ingredient section keys first — these always
@@ -1455,6 +1484,7 @@
           derived.push({
             key: k,
             label: formatSectionHeader(k),
+            isPrepStep: true,
             prepMethod: 'baked',
             cookMethod: 'baked',
           });
@@ -1473,6 +1503,7 @@
             nextSections = data.sections.map((s: Record<string, unknown>) => ({
               key: String(s.section_key ?? s.key ?? ''),
               label: String(s.section_label ?? s.label ?? ''),
+              isPrepStep: typeof s.isPrepStep === 'boolean' ? s.isPrepStep : true,
               prepMethod: String(s.prep_method ?? s.cooking_method ?? s.prepMethod ?? s.cookingMethod ?? 'baked'),
               cookMethod: String(s.cook_method ?? s.cooking_method ?? s.cookMethod ?? s.cookingMethod ?? 'baked'),
               yieldFactorWater: typeof s.yield_factor_water === 'number' ? s.yield_factor_water : (typeof s.yieldFactorWater === 'number' ? s.yieldFactorWater : undefined),
@@ -2237,21 +2268,6 @@
             oninput={(e) => onSectionLabelChange(sIdx, (e.currentTarget as HTMLInputElement).value)}
             class="form-input section-label-input"
           />
-          <span class="section-card-dash">—</span>
-          <select bind:value={sec.prepMethod} class="form-input section-method-select">
-            {#each SECTION_PREP_METHODS as m}
-              <option value={m}>{m}</option>
-            {/each}
-          </select>
-          {#if moderatorMode}
-            <button
-              type="button"
-              class="section-gear-btn"
-              onclick={() => (sectionAdvancedOpen[sIdx] = !sectionAdvancedOpen[sIdx])}
-              title="Yield factors"
-              aria-label="Toggle advanced section settings"
-            >⚙</button>
-          {/if}
           <button
             type="button"
             class="remove-btn section-remove-btn"
@@ -2259,19 +2275,65 @@
             aria-label="Remove section"
           >✕</button>
         </div>
+
+        <div class="section-step-type-row">
+          <label class="step-type-option">
+            <input
+              type="radio"
+              name="step-type-{sIdx}"
+              value={true}
+              checked={sec.isPrepStep !== false}
+              onchange={() => { sections = sections.map((s, i) => i === sIdx ? { ...s, isPrepStep: true } : s); }}
+            />
+            Prep step
+          </label>
+          <label class="step-type-option">
+            <input
+              type="radio"
+              name="step-type-{sIdx}"
+              value={false}
+              checked={sec.isPrepStep === false}
+              onchange={() => { sections = sections.map((s, i) => i === sIdx ? { ...s, isPrepStep: false } : s); }}
+            />
+            Primary cook
+          </label>
+        </div>
+
+        {#if sec.isPrepStep !== false}
+          <div class="section-method-row">
+            <label class="section-method-label">Prep label</label>
+            <select bind:value={sec.prepMethod} class="form-input section-method-select">
+              {#each SECTION_PREP_METHODS as m}
+                <option value={m}>{m}</option>
+              {/each}
+            </select>
+          </div>
+          <div class="section-method-row section-final-cook-row">
+            <span class="section-method-label">
+              Final cook method
+              <button type="button" class="tip-btn" title="The dominant heat stage when the assembled dish is complete. This drives the USDA nutrient retention calculation. Prep steps inherit the dish-level method above.">💡</button>
+            </span>
+            <span class="section-final-cook-inherited">{dishCookMethodEnum} <span class="inherited-note">(inherited from dish)</span></span>
+          </div>
+        {:else}
+          <div class="section-method-row section-final-cook-row">
+            <label class="section-method-label">
+              Final cook method
+              <button type="button" class="tip-btn" title="The dominant heat stage when the assembled dish is complete. This drives the USDA nutrient retention calculation.">💡</button>
+            </label>
+            <select bind:value={sec.cookMethod} class="form-input section-method-select">
+              {#each SECTION_COOK_METHODS as m}
+                <option value={m}>{m}</option>
+              {/each}
+            </select>
+          </div>
+        {/if}
+
         {#if moderatorMode && sectionAdvancedOpen[sIdx]}
           <div class="section-card-advanced">
             <label class="advanced-field">
               <span>Key</span>
               <input type="text" bind:value={sec.key} class="form-input" />
-            </label>
-            <label class="advanced-field">
-              <span title="Method used for USDA retention table lookup. Defaults to prep method when not set.">Cook method ℹ</span>
-              <select bind:value={sec.cookMethod} class="form-input">
-                {#each SECTION_COOK_METHODS as m}
-                  <option value={m}>{m}</option>
-                {/each}
-              </select>
             </label>
             <label class="advanced-field">
               <span>Yield H₂O</span>
@@ -2289,6 +2351,15 @@
                 bind:value={sec.yieldFactorOther} placeholder="1.00" class="form-input" />
             </label>
           </div>
+        {/if}
+        {#if moderatorMode}
+          <button
+            type="button"
+            class="section-gear-btn"
+            onclick={() => (sectionAdvancedOpen[sIdx] = !sectionAdvancedOpen[sIdx])}
+            title="Yield factors"
+            aria-label="Toggle advanced section settings"
+          >⚙</button>
         {/if}
       {/snippet}
 
@@ -3146,6 +3217,61 @@
   }
   .section-gear-btn:hover { background: #edf2f7; }
   .section-remove-btn { padding: 2px 8px; }
+
+  /* Step type toggle row */
+  .section-step-type-row {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 4px 0 6px;
+    font-size: 0.85rem;
+    color: #4a5568;
+  }
+  .step-type-option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  .step-type-option input[type="radio"] { cursor: pointer; }
+
+  /* Prep label / Final cook method rows */
+  .section-method-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 3px 0;
+    font-size: 0.85rem;
+  }
+  .section-method-label {
+    flex: 0 0 130px;
+    color: #4a5568;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .section-final-cook-row { margin-bottom: 6px; }
+  .section-final-cook-inherited {
+    color: #2d3748;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  .inherited-note {
+    color: #a0aec0;
+    font-weight: 400;
+    font-size: 0.8rem;
+  }
+  .tip-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 0.9rem;
+    line-height: 1;
+  }
+  .tip-btn:focus { outline: 2px solid #63b3ed; border-radius: 2px; }
   .section-card-advanced {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

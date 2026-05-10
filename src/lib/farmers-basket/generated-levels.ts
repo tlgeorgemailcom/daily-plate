@@ -151,10 +151,10 @@ export const LEVELS: Level[] = [
       'Just before serving, beat the heavy cream with the powdered sugar and vanilla until soft peaks form, then spread or pipe over the chilled pie. Slice with a clean knife and serve immediately.'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', yieldFactorWater: 0.75 },
-      { key: 'filling', label: 'Vanilla custard filling', cookingMethod: 'boiled', yieldFactorWater: 0.72 },
-      { key: 'assembly', label: 'Banana layer', cookingMethod: 'raw', yieldFactorWater: 1.0 },
-      { key: 'topping', label: 'Whipped cream topping', cookingMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'crust', label: 'Pie crust', isPrepStep: false, prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.75 },
+      { key: 'filling', label: 'Vanilla custard filling', isPrepStep: false, prepMethod: 'boiled', cookMethod: 'boiled', yieldFactorWater: 0.72 },
+      { key: 'assembly', label: 'Banana layer', isPrepStep: false, prepMethod: 'raw', cookMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'topping', label: 'Whipped cream topping', isPrepStep: false, prepMethod: 'raw', cookMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -312,9 +312,9 @@ export const LEVELS: Level[] = [
       'Cool the pie on a wire rack for at least 1 hour, then refrigerate for at least 3 hours before slicing to allow the filling to set fully.'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', yieldFactorWater: 0.84 },
-      { key: 'filling', label: 'Lemon curd filling', cookingMethod: 'boiled', yieldFactorWater: 0.92 },
-      { key: 'topping', label: 'Meringue topping', cookingMethod: 'baked', yieldFactorWater: 0.85 }
+      { key: 'crust', label: 'Pie crust', isPrepStep: false, prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.84 },
+      { key: 'filling', label: 'Lemon curd filling', isPrepStep: false, prepMethod: 'boiled', cookMethod: 'boiled', yieldFactorWater: 0.92 },
+      { key: 'topping', label: 'Meringue topping', isPrepStep: false, prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -590,9 +590,9 @@ export const LEVELS: Level[] = [
       'Just before serving, whip the heavy cream with the powdered sugar and vanilla (if using) to soft peaks. Spread or pipe over the chilled pie and serve.'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', yieldFactorWater: 0.84 },
-      { key: 'filling', label: 'Vanilla pastry cream', cookingMethod: 'boiled', yieldFactorWater: 0.95 },
-      { key: 'topping', label: 'Whipped cream topping', cookingMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'crust', label: 'Pie crust', isPrepStep: false, prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.84 },
+      { key: 'filling', label: 'Vanilla pastry cream', isPrepStep: false, prepMethod: 'boiled', cookMethod: 'boiled', yieldFactorWater: 0.95 },
+      { key: 'topping', label: 'Whipped cream topping', isPrepStep: false, prepMethod: 'raw', cookMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -705,9 +705,9 @@ export const LEVELS: Level[] = [
       'Just before serving, whip the heavy cream with the powdered sugar and vanilla (if using) to soft peaks. Spread or pipe over the chilled pie and serve.'
     ],
     sections: [
-      { key: 'crust', label: 'Chocolate cookie crumb crust', cookingMethod: 'baked', yieldFactorWater: 0.97 },
-      { key: 'filling', label: 'Chocolate pastry cream', cookingMethod: 'boiled', yieldFactorWater: 0.95 },
-      { key: 'topping', label: 'Whipped cream topping', cookingMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'crust', label: 'Chocolate cookie crumb crust', isPrepStep: false, prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.97 },
+      { key: 'filling', label: 'Chocolate pastry cream', isPrepStep: false, prepMethod: 'boiled', cookMethod: 'boiled', yieldFactorWater: 0.95 },
+      { key: 'topping', label: 'Whipped cream topping', isPrepStep: false, prepMethod: 'raw', cookMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -766,9 +766,9 @@ export const LEVELS: Level[] = [
       'Just before serving, whip the heavy cream with the powdered sugar and vanilla (if using) to soft peaks. Spread or pipe over the chilled pie. Sprinkle with toasted coconut and serve.'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', yieldFactorWater: 0.84 },
-      { key: 'filling', label: 'Coconut pastry cream', cookingMethod: 'boiled', yieldFactorWater: 0.95 },
-      { key: 'topping', label: 'Whipped cream topping', cookingMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'crust', label: 'Pie crust', isPrepStep: false, prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.84 },
+      { key: 'filling', label: 'Coconut pastry cream', isPrepStep: false, prepMethod: 'boiled', cookMethod: 'boiled', yieldFactorWater: 0.95 },
+      { key: 'topping', label: 'Whipped cream topping', isPrepStep: false, prepMethod: 'raw', cookMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
