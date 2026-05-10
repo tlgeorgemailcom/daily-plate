@@ -214,6 +214,21 @@
   let sectionAdvancedOpen = $state<Record<number, boolean>>({});
   let sectionTipOpen = $state<Record<number, boolean>>({});
 
+  $effect(() => {
+    const hasOpen = Object.values(sectionTipOpen).some(Boolean);
+    if (!hasOpen) return;
+    function handleDocClick() {
+      sectionTipOpen = {};
+    }
+    const timer = setTimeout(() => {
+      document.addEventListener('click', handleDocClick);
+    }, 0);
+    return () => {
+      clearTimeout(timer);
+      document.removeEventListener('click', handleDocClick);
+    };
+  });
+
   // Backfill missing/unknown ingredient.section assignments by carrying forward
   // the most recently-seen valid section (falls back to first section). This
   // eliminates "Unsectioned ingredients" for sectioned recipes whose drafts
@@ -2322,7 +2337,7 @@
             <span class="section-final-cook-inherited">{dishCookMethodEnum} <span class="inherited-note">(inherited from dish)</span></span>
           </div>
           {#if sectionTipOpen[sIdx]}
-            <div class="final-cook-tip">
+            <div class="final-cook-tip" onclick={(e) => e.stopPropagation()}>
               The dominant heat stage when the assembled dish is complete. This drives the USDA nutrient retention calculation — not the prep step before assembly.
               <br />
               Cooking method inherits the dish-level method above unless specified differently here.
@@ -2346,7 +2361,7 @@
             </select>
           </div>
           {#if sectionTipOpen[sIdx]}
-            <div class="final-cook-tip">
+            <div class="final-cook-tip" onclick={(e) => e.stopPropagation()}>
               The dominant heat stage when the assembled dish is complete. This drives the USDA nutrient retention calculation — not the prep step before assembly.
               <br />
               Cooking method inherits the dish-level method above unless specified differently here.
@@ -2599,9 +2614,6 @@
             {#each COOKING_METHODS as m}<option value={m}>{m}</option>{/each}
           </select>
         </div>
-        {#if Object.values(sectionTipOpen).some(Boolean)}
-          <div class="tip-backdrop" onclick={() => (sectionTipOpen = {})} role="presentation" aria-hidden="true"></div>
-        {/if}
         {#each sections as sec, sIdx (sIdx)}
           <div class="section-block">
             {@render sectionHeaderBar(sec, sIdx)}
