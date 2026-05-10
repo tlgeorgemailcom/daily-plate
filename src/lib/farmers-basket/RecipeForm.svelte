@@ -144,7 +144,7 @@
   const GAME_FOODS = Object.keys(FOOD_EMOJI) as FoodType[];
   const ANIMAL_TYPES: AnimalType[] = ['rabbit', 'squirrel', 'raccoon', 'bird', 'mouse', 'fox'];
   
-  const COOKING_METHODS = ['Bake', 'Boil', 'Grill', 'Fry', 'No heat'];
+  const COOKING_METHODS = ['Bake', 'Boil', 'Chill', 'Fry', 'Grill', 'No heat'];
   // v3.md §18.1 — lowercase enum stored in recipe_sections.csv::cooking_method.
   const SECTION_COOKING_METHODS = ['raw', 'boiled', 'steamed', 'baked', 'fried', 'grilled', 'microwave'];
   // v3.md §18.6 — datalist suggestions; free-typing is always allowed.
@@ -2479,7 +2479,18 @@
         {/if}
       {:else}
         <div class="dish-cooking-header">
-          {dishName || recipeName} — {cookingMethod}
+          <span class="dish-header-name">{dishName || recipeName}</span>
+          <span class="dish-header-dash"> — </span>
+          <input
+            type="text"
+            list="dish-cooking-method-list"
+            bind:value={cookingMethod}
+            class="dish-header-method-input"
+            placeholder="e.g. Bake"
+          />
+          <datalist id="dish-cooking-method-list">
+            {#each COOKING_METHODS as m}<option value={m}>{/each}
+          </datalist>
         </div>
         {#each sections as sec, sIdx (sIdx)}
           <div class="section-block">
@@ -3065,6 +3076,9 @@
     border-radius: 4px;
   }
   .dish-cooking-header {
+    display: flex;
+    align-items: center;
+    gap: 4px;
     font-size: 0.95rem;
     font-weight: 700;
     color: #2d3748;
@@ -3073,6 +3087,27 @@
     background: #edf2f7;
     border-radius: 4px;
     border-left: 3px solid #4a5568;
+  }
+  .dish-header-name {
+    white-space: nowrap;
+  }
+  .dish-header-dash {
+    color: #a0aec0;
+  }
+  .dish-header-method-input {
+    border: none;
+    background: transparent;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #2d3748;
+    width: 9ch;
+    min-width: 6ch;
+    padding: 0;
+    outline: none;
+    border-bottom: 1px dashed #a0aec0;
+  }
+  .dish-header-method-input:focus {
+    border-bottom-color: #4a5568;
   }
   .section-header-bar {
     display: flex;
