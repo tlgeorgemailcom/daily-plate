@@ -198,14 +198,20 @@ export const PATCH: RequestHandler = async ({ request }) => {
     // Compute nutrition_json if linkType is provided
     const linkType = typeof updates.linkType === 'string' ? updates.linkType : null;
     const rawIngs: unknown[] = Array.isArray(updates.ingredients) ? updates.ingredients : [];
+    // dishLink may be sent explicitly or embedded as the isDish entry in ingredients
+    const explicitDishLink = (updates as { dishLink?: unknown }).dishLink;
+    const embeddedDishLink = rawIngs.find(
+      (r) => r && typeof r === 'object' && (r as Record<string, unknown>).isDish === true
+    );
+    const resolvedDishLink = explicitDishLink ?? embeddedDishLink;
     if (linkType && !hasAllIngredientLinks(rawIngs, linkType)) {
       return json({ error: 'All ingredients must be linked before saving' }, { status: 400 });
     }
-    if ((linkType === 'dish' || linkType === 'mixed') && !hasValidLink((updates as { dishLink?: unknown }).dishLink)) {
+    if ((linkType === 'dish' || linkType === 'mixed') && !hasValidLink(resolvedDishLink)) {
       return json({ error: 'Dish link is required and must be complete for this link mode' }, { status: 400 });
     }
     const normalizedIngs = rawIngs.map((row) => withDefaultServingCount(row));
-    const normalizedDish = withDefaultServingCount((updates as { dishLink?: unknown }).dishLink);
+    const normalizedDish = withDefaultServingCount(resolvedDishLink);
     let nutritionJson: string | null = null;
     if (linkType && rawIngs.length > 0) {
       const computed = await calcNutritionSR28(
