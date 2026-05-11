@@ -176,7 +176,9 @@
   $effect(() => {
     if (!selectedLevel) return;
     const refreshedLevel = levels.find((level) => level.id === selectedLevel?.id);
-    if (refreshedLevel && refreshedLevel !== selectedLevel) {
+    // Only sync when selectedLevel is already from the levels array.
+    // Do NOT overwrite a freshly-fetched Turso level with the stale TS bundle.
+    if (refreshedLevel && refreshedLevel !== selectedLevel && levels.some(l => l === selectedLevel)) {
       selectedLevel = refreshedLevel;
     }
   });
