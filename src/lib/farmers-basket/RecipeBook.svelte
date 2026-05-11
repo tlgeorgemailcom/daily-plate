@@ -613,8 +613,10 @@
           id: i + 1,
           name: ing.name,
           quantity: ing.quantity || '',
-          gameFood: matchedFood,
-          animal: level.animalSpawns[i]?.type || '',
+          // Prefer the stored moderator-assigned gameFood/animal over a fuzzy match.
+          // After first approval, recipeIngredients carries these values in the Level.
+          gameFood: (ing as Record<string, unknown>).gameFood as string || matchedFood || '',
+          animal: (ing as Record<string, unknown>).animal as string || level.animalSpawns[i]?.type || '',
           // Preserve existing nutrition links so the creator can see and update them
           foodWord: ing.foodWord,
           ndbNo: ing.ndbNo,
@@ -1042,7 +1044,12 @@
             if (linkMode === 'dish') {
               return [
                 dishEntry,
-                ...data.ingredients.filter(i => i.name.trim()).map(i => ({ name: i.name, quantity: i.quantity }))
+                ...data.ingredients.filter(i => i.name.trim()).map(i => ({
+                  name: i.name,
+                  quantity: i.quantity,
+                  ...(i.gameFood ? { gameFood: i.gameFood } : {}),
+                  ...(i.animal ? { animal: i.animal } : {})
+                }))
               ];
             }
             return [
@@ -1050,6 +1057,8 @@
               ...data.ingredients.filter(i => i.name.trim()).map(i => ({
                 name: i.name,
                 quantity: i.quantity,
+                ...(i.gameFood ? { gameFood: i.gameFood } : {}),
+                ...(i.animal ? { animal: i.animal } : {}),
                 ...(hasNutritionLinkMeta(i) ? {
                   foodWord: i.foodWord,
                   ndbNo: i.ndbNo,
@@ -1064,6 +1073,8 @@
           return data.ingredients.filter(i => i.name.trim()).map(i => ({
             name: i.name,
             quantity: i.quantity,
+            ...(i.gameFood ? { gameFood: i.gameFood } : {}),
+            ...(i.animal ? { animal: i.animal } : {}),
             ...(isLinked && hasNutritionLinkMeta(i) ? {
               foodWord: i.foodWord,
               ndbNo: i.ndbNo,

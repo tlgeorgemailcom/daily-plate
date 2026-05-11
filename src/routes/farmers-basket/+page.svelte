@@ -160,6 +160,8 @@
     } catch (err) {
       console.warn('Could not reload level overrides:', err);
     }
+    // Refresh community recipes so re-approved animal_spawns/food_supply are picked up
+    await loadCommunityRecipes();
   }
   
   onDestroy(() => {
