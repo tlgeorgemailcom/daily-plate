@@ -506,7 +506,9 @@
         // Ensure Turso data is loaded before mounting the edit form so
         // RecipeForm.$state initialises from fresh data, not the stale TS bundle.
         const fresh = await getLevelWithOverrides(selectedLevel.id);
-        console.log('[handleSettingsClick] fresh ing[0]:', fresh?.recipeIngredients?.[0]);
+        const f0 = fresh?.recipeIngredients?.[0];
+        console.log('[handleSettingsClick] fresh ing[0] portionDesc/portionGrams:', f0?.portionDesc, f0?.portionGrams);
+        console.log('[handleSettingsClick] same object?', fresh === selectedLevel);
         console.log('[handleSettingsClick] selectedLevel ing[0] before:', selectedLevel?.recipeIngredients?.[0]);
         if (fresh && fresh !== selectedLevel) {
           selectedLevel = fresh;
