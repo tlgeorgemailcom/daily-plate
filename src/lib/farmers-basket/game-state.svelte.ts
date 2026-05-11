@@ -1228,10 +1228,11 @@ export function createGameState() {
   
   // Replace built-in levels with overridden versions (from moderator edits)
   function setLevelsWithOverrides(overriddenLevels: Level[]) {
-    // Keep any community recipes that were added
-    const communityRecipes = allLevels.filter(l => 
-      !LEVELS.find(bl => bl.id === l.id)
-    );
+    // Keep only community (player) recipes — exclude anything already in overriddenLevels.
+    // Using LEVELS (TS source) is wrong because admin-added newBuiltins are in
+    // overriddenLevels but NOT in LEVELS, causing them to be appended twice.
+    const overriddenIds = new Set(overriddenLevels.map(l => l.id));
+    const communityRecipes = allLevels.filter(l => !overriddenIds.has(l.id));
     allLevels = [...overriddenLevels, ...communityRecipes];
     if (currentLevel) {
       const refreshedCurrentLevel = allLevels.find((level) => level.id === currentLevel?.id);
