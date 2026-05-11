@@ -23,19 +23,19 @@ export const LEVELS: Level[] = [
     prepTime: '45 min',
     linkType: 'dish',
     sr28Rule: 'Rule B',
-    nutritionJson: {"cal":398.2,"pro":3.6,"fat":18.9,"carb":54.2,"fib":3.5,"h2o":74.3,"sug":25.3,"perServing":{"cal":398.2,"pro":3.6,"fat":18.9,"carb":54.2,"fib":3.5,"h2o":74.3,"sug":25.3,"AddedSugars":16.2,"IntrinsicSugars":9.1},"micros":{"vitaminA":51.51,"vitaminC":0.26,"vitaminD":0.0,"vitaminE":0.55,"vitaminK":4.63,"vitaminB6":0.02,"vitaminB12":0.01,"thiamin":0.12,"riboflavin":0.1,"niacin":1.03,"folate":30.06,"calcium":8.66,"iron":1.0,"magnesium":7.73,"phosphorus":30.56,"potassium":98.12,"sodium":209.57,"zinc":0.17,"copper":0.05,"selenium":6.79,"cholesterol":18.08,"saturatedFat":5.59,"monoFat":4.11,"polyFat":1.36,"omega3":0.02,"omega6":0.15},"gramsPerServing":152.2,"servings":8,"per100g":{"Energy_KCal":261.67,"Water":48.81,"Protein":2.34,"TotalLipidFat":12.39,"Carbohydrate":35.64,"FiberTotalDietary":2.27,"SugarsTotal":16.65,"Cholesterol":18.08,"FattyAcids_totalSaturated":5.59,"FattyAcids_totalMonounsaturated":4.11,"FattyAcids_totalPolyunsaturated":1.36,"LinoleicAcid":0.15,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":51.51,"Retinol":47.97,"Carotene_beta":39.71,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.55,"VitaminK_phylloquinone":4.63,"VitaminC_totalAscorbicAcid":0.26,"Thiamin":0.12,"Riboflavin":0.1,"Niacin":1.03,"PantothenicAcid":0.11,"VitaminB6":0.02,"Folate_total":30.06,"Folate_food":6.34,"Folate_DFE":45.22,"FolicAcid":29.65,"VitaminB12":0.01,"Choline_total":5.18,"Betaine":13.53,"LuteinZeaxanthin":30.15,"Lycopene":0.0,"Calcium_Ca":8.66,"Iron_Fe":1.0,"Magnesium_Mg":7.73,"Phosphorus_P":30.56,"Potassium_K":98.12,"Sodium_Na":209.57,"Zinc_Zn":0.17,"Copper_Cu":0.05,"Manganese_Mn":0.16,"Selenium_Se":6.79,"Tryptophan":0.02,"Threonine":0.06,"Isoleucine":0.07,"Leucine":0.14,"Lysine":0.05,"Methionine":0.04,"Cystine":0.04,"Phenylalanine":0.1,"Tyrosine":0.06,"Valine":0.08,"Arginine":0.08,"Histidine":0.05,"Alanine":0.07,"AsparticAcid":0.09,"GlutamicAcid":0.68,"Glycine":0.07,"Proline":0.24,"Serine":0.1,"omega3":0.02,"omega6":0.15,"AddedSugars":10.66,"IntrinsicSugars":6.0},"addedSugars":16.2,"intrinsicSugars":9.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"18302","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.71,"yieldFactorFat":1.0,"sources":[{"ndb":"20081","name":"Wheat flour, white, all-purpose, enriched, bleached","grams":29.3},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"1145","name":"Butter, without salt","grams":9.2},{"ndb":"4031","name":"Shortening, household, soybean (partially hydrogenated)-cottonseed (partially hydrogenated)","grams":8.0},{"ndb":"14411","name":"Water, tap, drinking","grams":9.2},{"ndb":"9502","name":"Apples, raw, granny smith, with skin","grams":93.8},{"ndb":"19335","name":"Sugars, granulated","grams":16.2},{"ndb":"9152","name":"Lemon juice, raw","grams":1.9},{"ndb":"1145","name":"Butter, without salt","grams":3.5},{"ndb":"20027","name":"Cornstarch","grams":3.0},{"ndb":"14411","name":"Water, tap, drinking","grams":7.5}]},
+    nutritionJson: {"cal":479.6,"pro":4.6,"fat":23.1,"carb":64.1,"fib":4.0,"h2o":89.3,"sug":25.4,"perServing":{"cal":479.6,"pro":4.6,"fat":23.1,"carb":64.1,"fib":4.0,"h2o":89.3,"sug":25.4,"AddedSugars":16.2,"IntrinsicSugars":9.2},"micros":{"vitaminA":35.98,"vitaminC":0.25,"vitaminD":0.0,"vitaminE":0.62,"vitaminK":5.36,"vitaminB6":0.02,"vitaminB12":0.01,"thiamin":0.13,"riboflavin":0.11,"niacin":1.14,"folate":32.95,"calcium":11.36,"iron":1.13,"magnesium":8.3,"phosphorus":31.53,"potassium":90.97,"sodium":175.38,"zinc":0.19,"copper":0.05,"selenium":7.52,"cholesterol":12.47,"saturatedFat":4.87,"monoFat":4.52,"polyFat":1.8,"omega3":0.01,"omega6":0.11},"gramsPerServing":182.5,"servings":8,"per100g":{"Energy_KCal":262.82,"Water":48.95,"Protein":2.52,"TotalLipidFat":12.65,"Carbohydrate":35.14,"FiberTotalDietary":2.22,"SugarsTotal":13.91,"Cholesterol":12.47,"FattyAcids_totalSaturated":4.87,"FattyAcids_totalMonounsaturated":4.52,"FattyAcids_totalPolyunsaturated":1.8,"LinoleicAcid":0.11,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":35.98,"Retinol":33.09,"Carotene_beta":31.8,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.62,"VitaminK_phylloquinone":5.36,"VitaminC_totalAscorbicAcid":0.25,"Thiamin":0.13,"Riboflavin":0.11,"Niacin":1.14,"PantothenicAcid":0.11,"VitaminB6":0.02,"Folate_total":32.95,"Folate_food":6.58,"Folate_DFE":50.21,"FolicAcid":32.97,"VitaminB12":0.01,"Choline_total":4.69,"Betaine":15.06,"LuteinZeaxanthin":26.1,"Lycopene":0.02,"Calcium_Ca":11.36,"Iron_Fe":1.13,"Magnesium_Mg":8.3,"Phosphorus_P":31.53,"Potassium_K":90.97,"Sodium_Na":175.38,"Zinc_Zn":0.19,"Copper_Cu":0.05,"Manganese_Mn":0.29,"Selenium_Se":7.52,"Tryptophan":0.03,"Threonine":0.06,"Isoleucine":0.08,"Leucine":0.16,"Lysine":0.05,"Methionine":0.04,"Cystine":0.04,"Phenylalanine":0.11,"Tyrosine":0.07,"Valine":0.09,"Arginine":0.09,"Histidine":0.05,"Alanine":0.07,"AsparticAcid":0.1,"GlutamicAcid":0.76,"Glycine":0.08,"Proline":0.26,"Serine":0.11,"omega3":0.01,"omega6":0.11,"AddedSugars":8.89,"IntrinsicSugars":5.02},"addedSugars":16.2,"intrinsicSugars":9.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"18302","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.71,"yieldFactorFat":1.0,"sources":[{"ndb":"20081","name":"Wheat flour, white, all-purpose, enriched, bleached","grams":39.1},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"1145","name":"Butter, without salt","grams":8.8},{"ndb":"4031","name":"Shortening, household, soybean (partially hydrogenated)-cottonseed (partially hydrogenated)","grams":13.9},{"ndb":"14411","name":"Water, tap, drinking","grams":9.2},{"ndb":"9502","name":"Apples, raw, granny smith, with skin","grams":93.8},{"ndb":"19335","name":"Sugars, granulated","grams":16.2},{"ndb":"9152","name":"Lemon juice, raw","grams":1.9},{"ndb":"1145","name":"Butter, without salt","grams":1.8},{"ndb":"20027","name":"Cornstarch","grams":5.0},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.3},{"ndb":"2011","name":"Spices, cloves, ground","grams":0.3},{"ndb":"2001","name":"Spices, allspice, ground","grams":0.2},{"ndb":"14411","name":"Water, tap, drinking","grams":7.5}],"sections":[{"section_key":"crust","section_label":"Pie crust","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":574.44,"raw_water_grams":123.84,"raw_fat_grams":171.19,"final_grams":552.15},{"section_key":"filling","section_label":"Apple filling","prep_method":"boiled","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":1015.9,"raw_water_grams":721.29,"raw_fat_grams":13.48,"final_grams":907.71}],"cookingMethod":"baked"},
     recipeIngredients: [
       { name: 'Pie, apple, prepared from recipe', quantity: 'custom (g)', foodWord: 'APPLEPIE', ndbNo: '18302', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
-      { name: 'all-purpose enriched white flour', quantity: '1 3/4 cups + 2 tbsp', section: 'crust', ndbNo: '20081', portionDesc: 'g', portionGrams: 234.4 },
+      { name: 'all-purpose enriched white flour', quantity: '2 1/2 cups', section: 'crust', ndbNo: '20081', portionDesc: 'g', portionGrams: 312.5 },
       { name: 'salt', quantity: '1 1/8 teaspoon', section: 'crust', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.5 },
-      { name: 'unsalted butter', quantity: '5 1/4 tablespoon (0.6 stick)', section: 'crust', ndbNo: '1145', portionDesc: 'g', portionGrams: 74.0 },
-      { name: 'vegetable shortening', quantity: '5 tablespoon (2.25 oz)', section: 'crust', ndbNo: '4031', portionDesc: 'g', portionGrams: 64.0 },
+      { name: 'unsalted butter', quantity: '5 tablespoon', section: 'crust', ndbNo: '1145', portionDesc: 'g', portionGrams: 70.5 },
+      { name: 'vegetable shortening', quantity: '8 tablespoon + 2 teaspoon', section: 'crust', ndbNo: '4031', portionDesc: 'g', portionGrams: 110.94 },
       { name: 'ice water', quantity: '5 tablespoon ice water', section: 'crust', ndbNo: '14411', portionDesc: 'g', portionGrams: 74.0 },
       { name: 'Granny Smith apples (peeled and cored)', quantity: '6 medium apples (peeled and cored)', section: 'filling', ndbNo: '9502', portionDesc: 'g', portionGrams: 750.0 },
       { name: 'sugar', quantity: '2/3 cup', section: 'filling', ndbNo: '19335', portionDesc: 'g', portionGrams: 130.0 },
       { name: 'lemon juice', quantity: '1 tablespoon', section: 'filling', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
-      { name: 'unsalted butter (cut into pieces)', quantity: '2 tablespoon', section: 'filling', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
-      { name: 'cornstarch', quantity: '3 tablespoon', section: 'filling', ndbNo: '20027', portionDesc: 'g', portionGrams: 24.0 },
+      { name: 'unsalted butter (cut into pieces)', quantity: '1 tablespoon', section: 'filling', ndbNo: '1145', portionDesc: 'g', portionGrams: 14.2 },
+      { name: 'cornstarch', quantity: '5 tablespoon', section: 'filling', ndbNo: '20027', portionDesc: 'g', portionGrams: 40.0 },
       { name: 'ground cinnamon', quantity: '1 teaspoon', section: 'filling', ndbNo: '2010', portionDesc: 'g', portionGrams: 2.6 },
       { name: 'ground cloves', quantity: '1 teaspoon', section: 'filling', ndbNo: '2011', portionDesc: 'g', portionGrams: 2.1 },
       { name: 'allspice', quantity: '1 teaspoon', section: 'filling', ndbNo: '2001', portionDesc: 'g', portionGrams: 2.0 },
@@ -48,6 +48,10 @@ export const LEVELS: Level[] = [
       'Roll out one disc and line the bottom of a 9-inch pie plate. Spoon the cooled apple filling into the crust, mounding slightly in the center.',
       'Roll out the second disc and cut into 1/2-inch strips. Lay the strips over the filling in a lattice pattern, weaving them over and under. Trim and crimp the edges to seal.',
       'Bake for 15 minutes. Lower the oven to 350 degrees F (175 degrees C) and bake 35 to 40 minutes more until the crust is golden brown and the filling is bubbling. Cool on a rack before slicing.'
+    ],
+    sections: [
+      { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.82 },
+      { key: 'filling', label: 'Apple filling', cookingMethod: '', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -151,10 +155,10 @@ export const LEVELS: Level[] = [
       'Just before serving, beat the heavy cream with the powdered sugar and vanilla until soft peaks form, then spread or pipe over the chilled pie. Slice with a clean knife and serve immediately.'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', isPrepStep: false, prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.75 },
-      { key: 'filling', label: 'Vanilla custard filling', isPrepStep: false, prepMethod: 'boiled', cookMethod: 'boiled', yieldFactorWater: 0.72 },
-      { key: 'assembly', label: 'Banana layer', isPrepStep: false, prepMethod: 'raw', cookMethod: 'raw', yieldFactorWater: 1.0 },
-      { key: 'topping', label: 'Whipped cream topping', isPrepStep: false, prepMethod: 'raw', cookMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'filling', label: 'Vanilla custard filling', cookingMethod: '', yieldFactorWater: 0.72 },
+      { key: 'assembly', label: 'Banana layer', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'topping', label: 'Whipped cream topping', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -312,9 +316,9 @@ export const LEVELS: Level[] = [
       'Cool the pie on a wire rack for at least 1 hour, then refrigerate for at least 3 hours before slicing to allow the filling to set fully.'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', isPrepStep: false, prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.84 },
-      { key: 'filling', label: 'Lemon curd filling', isPrepStep: false, prepMethod: 'boiled', cookMethod: 'boiled', yieldFactorWater: 0.92 },
-      { key: 'topping', label: 'Meringue topping', isPrepStep: false, prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.85 }
+      { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.84 },
+      { key: 'filling', label: 'Lemon curd filling', cookingMethod: '', yieldFactorWater: 0.92 },
+      { key: 'topping', label: 'Meringue topping', cookingMethod: '', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -590,9 +594,9 @@ export const LEVELS: Level[] = [
       'Just before serving, whip the heavy cream with the powdered sugar and vanilla (if using) to soft peaks. Spread or pipe over the chilled pie and serve.'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', isPrepStep: false, prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.84 },
-      { key: 'filling', label: 'Vanilla pastry cream', isPrepStep: false, prepMethod: 'boiled', cookMethod: 'boiled', yieldFactorWater: 0.95 },
-      { key: 'topping', label: 'Whipped cream topping', isPrepStep: false, prepMethod: 'raw', cookMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.84 },
+      { key: 'filling', label: 'Vanilla pastry cream', cookingMethod: '', yieldFactorWater: 0.95 },
+      { key: 'topping', label: 'Whipped cream topping', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -705,9 +709,9 @@ export const LEVELS: Level[] = [
       'Just before serving, whip the heavy cream with the powdered sugar and vanilla (if using) to soft peaks. Spread or pipe over the chilled pie and serve.'
     ],
     sections: [
-      { key: 'crust', label: 'Chocolate cookie crumb crust', isPrepStep: false, prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.97 },
-      { key: 'filling', label: 'Chocolate pastry cream', isPrepStep: false, prepMethod: 'boiled', cookMethod: 'boiled', yieldFactorWater: 0.95 },
-      { key: 'topping', label: 'Whipped cream topping', isPrepStep: false, prepMethod: 'raw', cookMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'crust', label: 'Chocolate cookie crumb crust', cookingMethod: '', yieldFactorWater: 0.97 },
+      { key: 'filling', label: 'Chocolate pastry cream', cookingMethod: '', yieldFactorWater: 0.95 },
+      { key: 'topping', label: 'Whipped cream topping', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -766,9 +770,9 @@ export const LEVELS: Level[] = [
       'Just before serving, whip the heavy cream with the powdered sugar and vanilla (if using) to soft peaks. Spread or pipe over the chilled pie. Sprinkle with toasted coconut and serve.'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', isPrepStep: false, prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 0.84 },
-      { key: 'filling', label: 'Coconut pastry cream', isPrepStep: false, prepMethod: 'boiled', cookMethod: 'boiled', yieldFactorWater: 0.95 },
-      { key: 'topping', label: 'Whipped cream topping', isPrepStep: false, prepMethod: 'raw', cookMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.84 },
+      { key: 'filling', label: 'Coconut pastry cream', cookingMethod: '', yieldFactorWater: 0.95 },
+      { key: 'topping', label: 'Whipped cream topping', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
