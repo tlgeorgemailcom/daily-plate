@@ -20,6 +20,9 @@ interface RecipeRow {
   cooking_method: string | null;
   dish_family: string | null;
   nutrition_json: string | null;
+  recipe: string | null;
+  animal_spawns: string | null;
+  food_supply: string | null;
 }
 
 export const GET: RequestHandler = async () => {
@@ -29,7 +32,8 @@ export const GET: RequestHandler = async () => {
       `SELECT recipe_id, recipe_name, category, dietary_category, prep_time, servings,
               recipe_ingredients_json, recipe_instructions_json,
               image_url, submitted_by, status, created_at,
-              link_type, cooking_method, dish_family, nutrition_json
+              link_type, cooking_method, dish_family, nutrition_json,
+              recipe, animal_spawns, food_supply
        FROM player_recipes 
        WHERE status = 'approved'
        ORDER BY created_at ASC`
@@ -40,15 +44,18 @@ export const GET: RequestHandler = async () => {
       const ingredients = row.recipe_ingredients_json ? JSON.parse(row.recipe_ingredients_json) : [];
       const instructions = row.recipe_instructions_json ? JSON.parse(row.recipe_instructions_json) : [];
       
+      const gameFoods = row.recipe ? JSON.parse(row.recipe) : [];
+      const animalSpawns = row.animal_spawns ? JSON.parse(row.animal_spawns) : [];
+      const foodSupply = row.food_supply ? JSON.parse(row.food_supply) : {};
       return {
         id: row.recipe_id,
         levelNum: 100 + index + 1,
         name: row.recipe_name,
         category: toDisplayRecipeCategory(row.category),
         dietaryCategory: row.dietary_category,
-        recipe: [],
-        foodSupply: {},
-        animalSpawns: [],
+        recipe: gameFoods,
+        foodSupply,
+        animalSpawns,
         tools: [],
         prepTime: row.prep_time,
         servings: row.servings,

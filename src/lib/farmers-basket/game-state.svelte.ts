@@ -1214,10 +1214,14 @@ export function createGameState() {
   
   // Add community recipes (from approved submissions)
   function addCommunityRecipes(recipes: Level[]) {
-    // Filter out any duplicates
     const newRecipes = recipes.filter(r => !allLevels.find(l => l.id === r.id));
+    // Also update existing community recipes that may have changed (re-edit/re-approval)
+    const updatedLevels = allLevels.map(l => {
+      const updated = recipes.find(r => r.id === l.id);
+      return updated ?? l;
+    });
+    allLevels = [...updatedLevels, ...newRecipes];
     if (newRecipes.length > 0) {
-      allLevels = [...allLevels, ...newRecipes];
       console.log(`✅ Added ${newRecipes.length} community recipes`);
     }
   }
