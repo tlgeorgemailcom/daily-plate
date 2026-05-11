@@ -1191,7 +1191,7 @@
       })),
       instructions: instructions.filter(i => i.text.trim()),
       foodSupply: moderatorMode ? foodSupply : undefined,
-      nutritionComplete: linked || undefined,
+      nutritionComplete: nutritionMode ? (nutritionComplete || undefined) : undefined,
       ...(sections.length > 0 ? { sections } : {})
     };
     
