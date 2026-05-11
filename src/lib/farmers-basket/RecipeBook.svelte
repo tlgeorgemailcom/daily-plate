@@ -178,7 +178,9 @@
     const refreshedLevel = levels.find((level) => level.id === selectedLevel?.id);
     // Only sync when selectedLevel is already from the levels array.
     // Do NOT overwrite a freshly-fetched Turso level with the stale TS bundle.
-    if (refreshedLevel && refreshedLevel !== selectedLevel && levels.some(l => l === selectedLevel)) {
+    const inLevels = levels.some(l => l === selectedLevel);
+    console.log('[effect] refreshedLevel ing[0]:', refreshedLevel?.recipeIngredients?.[0], '| selectedLevel in levels:', inLevels);
+    if (refreshedLevel && refreshedLevel !== selectedLevel && inLevels) {
       selectedLevel = refreshedLevel;
     }
   });
@@ -504,9 +506,12 @@
         // Ensure Turso data is loaded before mounting the edit form so
         // RecipeForm.$state initialises from fresh data, not the stale TS bundle.
         const fresh = await getLevelWithOverrides(selectedLevel.id);
+        console.log('[handleSettingsClick] fresh ing[0]:', fresh?.recipeIngredients?.[0]);
+        console.log('[handleSettingsClick] selectedLevel ing[0] before:', selectedLevel?.recipeIngredients?.[0]);
         if (fresh && fresh !== selectedLevel) {
           selectedLevel = fresh;
         }
+        console.log('[handleSettingsClick] selectedLevel ing[0] after:', selectedLevel?.recipeIngredients?.[0]);
         isModeratorMode = true;
         saveError = null;
         saveSuccess = false;
