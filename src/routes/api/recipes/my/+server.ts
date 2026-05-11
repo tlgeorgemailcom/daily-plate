@@ -37,8 +37,18 @@ function hasValidLink(row: unknown): boolean {
   return hasFood && Number.isFinite(portion) && portion > 0;
 }
 
-function hasAllIngredientLinks(ingredients: unknown[]): boolean {
-  return ingredients.length > 0 && ingredients.every((row) => hasValidLink(row));
+function hasAllIngredientLinks(ingredients: unknown[], linkType: string): boolean {
+  if (linkType === 'dish') {
+    // In dish mode, regular ingredients are bare display items — only the dishLink matters.
+    return true;
+  }
+  // Skip exempt items and isDish entries; they don't need individual nutrition links.
+  const required = ingredients.filter((row) => {
+    if (!row || typeof row !== 'object') return true;
+    const obj = row as Record<string, unknown>;
+    return !obj.exempt && !obj.isDish;
+  });
+  return required.length > 0 && required.every((row) => hasValidLink(row));
 }
 
 function withDefaultServingCount(row: unknown): unknown {
@@ -188,7 +198,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
     // Compute nutrition_json if linkType is provided
     const linkType = typeof updates.linkType === 'string' ? updates.linkType : null;
     const rawIngs: unknown[] = Array.isArray(updates.ingredients) ? updates.ingredients : [];
-    if (linkType && !hasAllIngredientLinks(rawIngs)) {
+    if (linkType && !hasAllIngredientLinks(rawIngs, linkType)) {
       return json({ error: 'All ingredients must be linked before saving' }, { status: 400 });
     }
     if ((linkType === 'dish' || linkType === 'mixed') && !hasValidLink((updates as { dishLink?: unknown }).dishLink)) {
