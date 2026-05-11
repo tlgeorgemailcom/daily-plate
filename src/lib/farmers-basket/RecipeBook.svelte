@@ -176,10 +176,7 @@
   $effect(() => {
     if (!selectedLevel) return;
     const refreshedLevel = levels.find((level) => level.id === selectedLevel?.id);
-    // Only sync when selectedLevel is already from the levels array.
-    // Do NOT overwrite a freshly-fetched Turso level with the stale TS bundle.
-    const inLevels = levels.some(l => l === selectedLevel);
-    if (refreshedLevel && refreshedLevel !== selectedLevel && inLevels) {
+    if (refreshedLevel && refreshedLevel !== selectedLevel) {
       selectedLevel = refreshedLevel;
     }
   });
@@ -1811,7 +1808,9 @@
             {/if}
             <RecipeBadges sr28Rule={selectedLevel.sr28Rule} isCommunityRecipe={selectedLevel.isCommunityRecipe} compact={true} />
             {#if selectedLevel.nutritionJson}
+              {#if selectedLevel.nutritionJson.perServing}
               <p class="recipe-nutrition recipe-nutrition-edit">Per serving: {selectedLevel.nutritionJson.perServing.cal} cal&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.pro}g protein&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.fat}g fat&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.carb}g carbs&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.fib}g fiber&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.sug}g sugar&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.h2o}g water</p>
+              {/if}
             {/if}
           </div>
 
@@ -2030,7 +2029,9 @@
                   {/each}
                 </div>
                 {#if selectedLevel.nutritionJson}
+                  {#if selectedLevel.nutritionJson.perServing}
                   <p class="recipe-nutrition">{formatPerServingLabel(selectedLevel)}: {selectedLevel.nutritionJson.perServing.cal} cal&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.pro}g protein&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.fat}g fat&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.carb}g carbs&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.fib}g fiber&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.sug}g sugar&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.h2o}g water</p>
+                  {/if}
                 {/if}
               {/if}
               
