@@ -999,6 +999,8 @@
       // Clear the unseen badge immediately
       unseenDraftIds = new Set([...unseenDraftIds].filter(id => id !== level.id));
     } else {
+      // Non-owner: show the collab edit code dialog.
+      // Premium users get the code input; free users see the upgrade prompt.
       showEditCodeModal = true;
       editCodeInput = '';
       editCodeError = '';
@@ -2322,14 +2324,9 @@
 {#if showEditCodeModal && selectedLevel}
   <div class="edit-code-overlay" role="dialog" aria-modal="true" aria-label="Edit code required">
     <div class="edit-code-modal">
-      <h3>🔑 Enter Edit Code</h3>
-      {#if editCodeValidated}
-        <p class="edit-code-accepted">✅ Code accepted! Collaborative editing is coming soon — your access has been noted.</p>
-        <div class="edit-code-actions">
-          <button class="edit-code-cancel" onclick={() => { showEditCodeModal = false; editCodeValidated = false; editCodeInput = ''; }}>Close</button>
-        </div>
-      {:else}
-        <p>Ask the recipe creator for their edit code to suggest changes.</p>
+      {#if canReadAllRecipes}
+        <h3>✏️ Suggest Changes</h3>
+        <p>Ask the recipe creator for their edit code, then enter it below to suggest changes to <strong>{selectedLevel.name}</strong>.</p>
         <input
           type="text"
           class="edit-code-input"
@@ -2347,7 +2344,13 @@
             class="edit-code-submit"
             onclick={handleValidateEditCode}
             disabled={editCodeValidating || !editCodeInput.trim()}
-          >{editCodeValidating ? 'Checking...' : 'Continue'}</button>
+          >{editCodeValidating ? 'Checking...' : 'Open Editor'}</button>
+        </div>
+      {:else}
+        <h3>🔒 Subscriber Feature</h3>
+        <p>Collaborating on community recipes is available to subscribers. Upgrade to suggest changes to other players' recipes.</p>
+        <div class="edit-code-actions">
+          <button class="edit-code-cancel" onclick={() => { showEditCodeModal = false; }}>Close</button>
         </div>
       {/if}
     </div>

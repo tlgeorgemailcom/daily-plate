@@ -11,12 +11,12 @@ export const POST: RequestHandler = async ({ request }) => {
     return json({ error: 'Missing code' }, { status: 400 });
   }
 
-  const recipe = await queryOne<{ id: string; name: string; submitted_by: string }>(
-    'SELECT id, name, submitted_by FROM recipes WHERE edit_code = ?',
+  const recipe = await queryOne<{ recipe_id: string; recipe_name: string; submitted_by: string }>(
+    `SELECT recipe_id, recipe_name, submitted_by FROM player_recipes WHERE edit_code = ?`,
     [code.toUpperCase().trim()]
   );
 
   if (!recipe) return json({ error: 'Invalid or expired edit code' }, { status: 404 });
 
-  return json({ recipeId: recipe.id, recipeName: recipe.name });
+  return json({ recipeId: recipe.recipe_id, recipeName: recipe.recipe_name });
 };
