@@ -192,6 +192,7 @@
   
   // Initialize ingredients from initialData or create empty one
   let nextIngredientId = $state(1);
+  console.log('[RecipeForm] mount ing[0]:', initialData.ingredients?.[0], '| total:', initialData.ingredients?.length);
   let ingredients = $state<RecipeIngredient[]>(
     initialData.ingredients?.length 
       ? initialData.ingredients.map((ing, i) => ({

@@ -645,7 +645,7 @@
     }
     
     const nj = level.nutritionJson as (typeof level.nutritionJson & { yieldFactorWater?: number; yieldFactorFat?: number }) | undefined;
-    return {
+    const result = {
       recipeName: level.name,
       category: level.category,
       dietaryCategory: level.dietaryCategory,
@@ -666,6 +666,12 @@
       sr28Rule: level.sr28Rule,
       ...(level.sections ? { sections: level.sections } : {})
     };
+    if (level.id === 'SWEET_001') {
+      console.log('[levelToFormData] ing[0]:', result.ingredients?.[0]);
+      console.log('[levelToFormData] ing[1]:', result.ingredients?.[1]);
+      console.log('[levelToFormData] total:', result.ingredients?.length);
+    }
+    return result;
   }
   
   // Handle moderator save
