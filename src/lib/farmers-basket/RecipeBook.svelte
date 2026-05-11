@@ -1777,17 +1777,19 @@
               {/if}
             </div>
             
-            <RecipeForm
-              moderatorMode={true}
-              initialData={levelToFormData(selectedLevel)}
-              onsubmit={handleModeratorSave}
-              oncancel={handleModeratorCancel}
-              submitLabel="💾 Save Changes"
-              submitting={isSaving}
-              errorMessage={saveError || ''}
-              disableSuggestions={true}
-              recipeId={selectedLevel.id}
-            />
+            {#key selectedLevel}
+              <RecipeForm
+                moderatorMode={true}
+                initialData={levelToFormData(selectedLevel)}
+                onsubmit={handleModeratorSave}
+                oncancel={handleModeratorCancel}
+                submitLabel="💾 Save Changes"
+                submitting={isSaving}
+                errorMessage={saveError || ''}
+                disableSuggestions={true}
+                recipeId={selectedLevel.id}
+              />
+            {/key}
           </div>
         </div>
       {:else if isPlayerEditing}
