@@ -215,16 +215,9 @@ export async function getLevelsWithOverrides(): Promise<Level[]> {
       recipeInstructions: override.recipeInstructions ?? level.recipeInstructions,
       // v3-managed recipes: Turso recipe_ingredients_json is the complete authoritative record.
       // Skip the TS-base merge entirely — it was designed for sparse community overrides, not v3.
-      recipeIngredients: (() => {
-        const nv = (override.nutritionJson as { nutrientVersion?: string } | undefined)?.nutrientVersion;
-        const isV3 = nv === 'v3';
-        if (level.id === 'SWEET_001') {
-          console.log('[level-overrides] SWEET_001 v3 check:', { nv, isV3, overrideIngCount: override.recipeIngredients?.length, overrideIng0: override.recipeIngredients?.[0] });
-        }
-        return isV3
-          ? override.recipeIngredients
-          : mergeRecipeIngredients(override.recipeIngredients, level.recipeIngredients);
-      })(),
+      recipeIngredients: (override.nutritionJson as { nutrientVersion?: string } | undefined)?.nutrientVersion === 'v3'
+        ? override.recipeIngredients
+        : mergeRecipeIngredients(override.recipeIngredients, level.recipeIngredients),
       nutritionJson: override.nutritionJson
         ? {
             ...override.nutritionJson,

@@ -179,7 +179,6 @@
     // Only sync when selectedLevel is already from the levels array.
     // Do NOT overwrite a freshly-fetched Turso level with the stale TS bundle.
     const inLevels = levels.some(l => l === selectedLevel);
-    console.log('[effect] refreshedLevel ing[0]:', refreshedLevel?.recipeIngredients?.[0], '| selectedLevel in levels:', inLevels);
     if (refreshedLevel && refreshedLevel !== selectedLevel && inLevels) {
       selectedLevel = refreshedLevel;
     }
@@ -506,14 +505,9 @@
         // Ensure Turso data is loaded before mounting the edit form so
         // RecipeForm.$state initialises from fresh data, not the stale TS bundle.
         const fresh = await getLevelWithOverrides(selectedLevel.id);
-        const f0 = fresh?.recipeIngredients?.[0];
-        console.log('[handleSettingsClick] fresh ing[0] portionDesc/portionGrams:', f0?.portionDesc, f0?.portionGrams);
-        console.log('[handleSettingsClick] same object?', fresh === selectedLevel);
-        console.log('[handleSettingsClick] selectedLevel ing[0] before:', selectedLevel?.recipeIngredients?.[0]);
         if (fresh && fresh !== selectedLevel) {
           selectedLevel = fresh;
         }
-        console.log('[handleSettingsClick] selectedLevel ing[0] after:', selectedLevel?.recipeIngredients?.[0]);
         isModeratorMode = true;
         saveError = null;
         saveSuccess = false;
@@ -647,7 +641,7 @@
     }
     
     const nj = level.nutritionJson as (typeof level.nutritionJson & { yieldFactorWater?: number; yieldFactorFat?: number }) | undefined;
-    const result = {
+    return {
       recipeName: level.name,
       category: level.category,
       dietaryCategory: level.dietaryCategory,
@@ -668,12 +662,6 @@
       sr28Rule: level.sr28Rule,
       ...(level.sections ? { sections: level.sections } : {})
     };
-    if (level.id === 'SWEET_001') {
-      console.log('[levelToFormData] ing[0]:', result.ingredients?.[0]);
-      console.log('[levelToFormData] ing[1]:', result.ingredients?.[1]);
-      console.log('[levelToFormData] total:', result.ingredients?.length);
-    }
-    return result;
   }
   
   // Handle moderator save

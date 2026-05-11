@@ -192,8 +192,6 @@
   
   // Initialize ingredients from initialData or create empty one
   let nextIngredientId = $state(1);
-  const _i0 = initialData.ingredients?.[0];
-  console.log('[RecipeForm] mount portionDesc/portionGrams:', _i0?.portionDesc, _i0?.portionGrams, '| total:', initialData.ingredients?.length);
   let ingredients = $state<RecipeIngredient[]>(
     initialData.ingredients?.length 
       ? initialData.ingredients.map((ing, i) => ({
@@ -945,93 +943,16 @@
             yieldFactorOther: s.yield_factor_other,
           }));
         }
-        if (data.ingredients && data.ingredients.length > 0) {
-          const ndbToFood = new Map(FOODS.map(f => [f.ndb, f]));
-          ingredients = data.ingredients.map((ing, i) => {
-            const food = ndbToFood.get(ing.ndb_no);
-            return {
-              id: i + 1,
-              name: ing.long_desc || ing.ingredient_key,
-              quantity: ing.qty_display || `${ing.grams.toFixed(1)} g`,
-              gameFood: '' as FoodType | '',
-              animal: '' as AnimalType | '',
-              foodWord: food?.word,
-              ndbNo: ing.ndb_no,
-              portionDesc: ing.qty_display || `${ing.grams.toFixed(1)} g`,
-              portionGrams: ing.grams,
-              servingCount: 1,
-              ingredientStatus: 'required' as const,
-              section: ing.section,
-              ingredient_group: ing.ingredient_group || ing.section,
-            };
-          });
-          nextIngredientId = ingredients.length + 1;
-          // Append moderator-added ingredients from stored data that aren't in the v3 build
-          // (e.g. optional spices added via the Edit Recipe UI).
-          const v3NdbNos = new Set(data.ingredients.map((i) => i.ndb_no).filter(Boolean));
-          const storedExtras = (initialData.ingredients ?? []).filter(
-            (ing) => !ing.isDish && (ing.ndbNo ? !v3NdbNos.has(ing.ndbNo) : true)
-          );
-          if (storedExtras.length > 0) {
-            let extraIdx = ingredients.length + 1;
-            ingredients = [
-              ...ingredients,
-              ...storedExtras.map((ing) => ({
-                id: extraIdx++,
-                name: ing.name,
-                quantity: ing.quantity || '',
-                gameFood: '' as FoodType | '',
-                animal: '' as AnimalType | '',
-                foodWord: ing.foodWord,
-                ndbNo: ing.ndbNo,
-                portionDesc: ing.portionDesc,
-                portionGrams: ing.portionGrams,
-                servingCount: ing.servingCount ?? 1,
-                ingredientStatus: (ing as RecipeIngredient).ingredientStatus ?? 'required' as 'required' | 'optional' | 'exempt',
-                section: ing.section,
-                ingredient_group: (ing as RecipeIngredient).ingredient_group || ing.section,
-              })),
-            ];
-            nextIngredientId = extraIdx;
-          }
-          // Append any ingredients the build skipped due to missing ledger/NDB
-          // data so the moderator can see and action them. These are shown with
-          // exempt=true and a name that states the data-quality reason.
-          if (data.skippedIngredients && data.skippedIngredients.length > 0) {
-            let idx = ingredients.length + 1;
-            for (const sk of data.skippedIngredients) {
-              ingredients = [
-                ...ingredients,
-                {
-                  id: idx++,
-                  name: `⚠ ${sk.ingredient_key} [${sk.reason}]`,
-                  quantity: '',
-                  gameFood: '' as FoodType | '',
-                  animal: '' as AnimalType | '',
-                  foodWord: undefined,
-                  ndbNo: undefined,
-                  portionDesc: '',
-                  portionGrams: 0,
-                  servingCount: 1,
-                  ingredientStatus: 'exempt' as const,
-                  section: '',
-                  ingredient_group: '',
-                },
-              ];
-            }
-            nextIngredientId = idx;
-          }
-          // When sections drive per-stage cooking methods, the recipe-wide
-          // cookingMethod field is meaningless — leave it untouched (the UI
-          // hides the field when sections.length > 0).
-          if (data.cookMethod && (!data.sections || data.sections.length === 0)) {
-            const cm = data.cookMethod.trim();
-            const norm = cm.toLowerCase() === 'no heat' || cm.toLowerCase() === 'noheat' || cm.toLowerCase() === 'none'
-              ? 'No heat'
-              : cm.charAt(0).toUpperCase() + cm.slice(1).toLowerCase();
-            const match = COOKING_METHODS.find(m => m.toLowerCase() === norm.toLowerCase());
-            if (match) cookingMethod = match;
-          }
+        // v3 build artifact is used for audit/per100g only.
+        // Turso (recipe_ingredients_json) is the authoritative ingredient source.
+        // When sections drive per-stage cooking methods, leave cookingMethod untouched.
+        if (data.cookMethod && (!data.sections || data.sections.length === 0)) {
+          const cm = data.cookMethod.trim();
+          const norm = cm.toLowerCase() === 'no heat' || cm.toLowerCase() === 'noheat' || cm.toLowerCase() === 'none'
+            ? 'No heat'
+            : cm.charAt(0).toUpperCase() + cm.slice(1).toLowerCase();
+          const match = COOKING_METHODS.find(m => m.toLowerCase() === norm.toLowerCase());
+          if (match) cookingMethod = match;
         }
       } catch {
         if (!cancelled) { v3Build = null; v3BuildMissing = true; }
