@@ -205,7 +205,13 @@ export const PATCH: RequestHandler = async ({ request }) => {
     );
     const resolvedDishLink = explicitDishLink ?? embeddedDishLink;
     if (linkType && !hasAllIngredientLinks(rawIngs, linkType)) {
-      return json({ error: 'All ingredients must be linked before saving' }, { status: 400 });
+      const unlinked = rawIngs.filter((r) => {
+        if (!r || typeof r !== 'object') return true;
+        const obj = r as Record<string, unknown>;
+        if (obj.exempt || obj.isDish) return false;
+        return !hasValidLink(r);
+      }).map((r) => (r as Record<string, unknown>).name ?? '?');
+      return json({ error: `All ingredients must be linked before saving (unlinked: ${unlinked.join(', ')})` }, { status: 400 });
     }
     if ((linkType === 'dish' || linkType === 'mixed') && !hasValidLink(resolvedDishLink)) {
       return json({ error: 'Dish link is required and must be complete for this link mode' }, { status: 400 });
