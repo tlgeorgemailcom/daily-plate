@@ -6,7 +6,7 @@
   import FoodIcon from './FoodIcon.svelte';
   import RecipeBadges from './RecipeBadges.svelte';
   import RecipeForm, { type RecipeFormData, type RecipeIngredient } from './RecipeForm.svelte';
-  import { clearOverrideCache } from './level-overrides';
+  import { clearOverrideCache, getLevelWithOverrides } from './level-overrides';
   
   // All available meal categories (shown even if empty)
   const BASE_CATEGORIES = RECIPE_CATEGORY_OPTIONS.map((category) => category.id);
@@ -488,7 +488,7 @@
     }
   }
   
-  function handleSettingsClick() {
+  async function handleSettingsClick() {
     // If already in moderator mode, toggle off
     if (isModeratorMode && selectedLevel) {
       isModeratorMode = false;
@@ -499,6 +499,12 @@
     if (selectedLevel) {
       const password = prompt('Enter moderator password:');
       if (password === MODERATOR_PASSWORD) {
+        // Ensure Turso data is loaded before mounting the edit form so
+        // RecipeForm.$state initialises from fresh data, not the stale TS bundle.
+        const fresh = await getLevelWithOverrides(selectedLevel.id);
+        if (fresh && fresh !== selectedLevel) {
+          selectedLevel = fresh;
+        }
         isModeratorMode = true;
         saveError = null;
         saveSuccess = false;
