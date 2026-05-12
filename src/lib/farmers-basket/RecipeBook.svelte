@@ -249,7 +249,7 @@
   );
   
   // Reference to scroll container
-  let scrollContainer: HTMLDivElement;
+  let scrollContainer = $state<HTMLDivElement | undefined>(undefined);
   
   function toggleCategory(category: string) {
     const newSet = new Set(collapsedCategories);
@@ -1928,6 +1928,7 @@
               {/if}
             </div>
 
+            {#key selectedLevel?.id}
             <RecipeForm
               initialData={creatorInitialData()}
               onsubmit={handlePlayerSave}
@@ -1957,6 +1958,7 @@
                 </div>
               {/snippet}
             </RecipeForm>
+            {/key}
 
             <!-- Collaborator Edit Code -->
             <div class="creator-edit-code-section">

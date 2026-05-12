@@ -42,7 +42,7 @@
   let lastTime = 0;
   
   // Game area dimensions
-  let gameAreaEl: HTMLDivElement;
+  let gameAreaEl = $state<HTMLDivElement | undefined>(undefined);
   let gameAreaHeight = $state(400);
   let gameAreaWidth = $state(300);
   
@@ -168,7 +168,8 @@
     
     draggingContainer = container;
     const rect = (e.target as HTMLElement).getBoundingClientRect();
-    const gameRect = gameAreaEl.getBoundingClientRect();
+    const gameRect = gameAreaEl?.getBoundingClientRect();
+    if (!gameRect) return;
     
     // Calculate offset from click point to button's top-left corner
     dragOffsetX = e.clientX - rect.left;
@@ -188,7 +189,8 @@
   function handleContainerDrag(e: PointerEvent) {
     if (!draggingContainer || gameState !== 'playing') return;
     
-    const gameRect = gameAreaEl.getBoundingClientRect();
+    const gameRect = gameAreaEl?.getBoundingClientRect();
+    if (!gameRect) return;
     
     // Viewport coords (for fixed positioning) - subtract offset to keep cursor at click point
     dragX = e.clientX - dragOffsetX;

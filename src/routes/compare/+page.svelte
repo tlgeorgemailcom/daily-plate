@@ -38,8 +38,8 @@
   let clickLog = $state<string[]>([]);
 
   // Image refs for coordinate calculation
-  let imageARef: HTMLImageElement;
-  let imageBRef: HTMLImageElement;
+  let imageARef = $state<HTMLImageElement | undefined>(undefined);
+  let imageBRef = $state<HTMLImageElement | undefined>(undefined);
 
   function initGame() {
     // Check for archive date in URL

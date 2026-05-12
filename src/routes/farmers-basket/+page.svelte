@@ -83,7 +83,7 @@
   
   // Touch controls - target position for farmer to walk toward
   let touchTarget: { x: number; y: number } | null = $state(null);
-  let gameAreaElement: HTMLDivElement | null = null;
+  let gameAreaElement = $state<HTMLDivElement | null>(null);
   
   // Responsive scaling for mobile
   let gameScale = $state(1);
@@ -172,7 +172,7 @@
   });
   
   // Mouse controls for desktop farmer movement
-  let isDraggingFarmerMouse = false;
+  let isDraggingFarmerMouse = $state(false);
   let mouseTarget: { x: number; y: number } | null = $state(null);
   
   // Tap gesture detection
