@@ -21,16 +21,18 @@ export const POST: RequestHandler = async ({ request, cookies }) => {
   }
 
   try {
-    // Clear self-referencing billing_owner_id FK before deleting
-    await execute(
-      'UPDATE players SET billing_owner_id = NULL WHERE billing_owner_id = ?',
-      [player_id]
-    );
+    // Remove all child rows that reference this player before deleting.
+    // household_members has ON DELETE CASCADE so it handles itself.
+    await execute('UPDATE players SET billing_owner_id = NULL WHERE billing_owner_id = ?', [player_id]);
+    await execute('DELETE FROM game_stats WHERE player_id = ?', [player_id]);
+    await execute('DELETE FROM leaderboard WHERE player_id = ?', [player_id]);
+    await execute('DELETE FROM player_settings WHERE player_id = ?', [player_id]);
+    await execute('DELETE FROM custom_foods WHERE player_id = ?', [player_id]);
+    await execute('DELETE FROM meal_logs WHERE player_id = ?', [player_id]);
+    await execute('DELETE FROM recipes WHERE submitted_by = ?', [player_id]);
+    await execute('DELETE FROM player_recipes WHERE submitted_by = ?', [player_id]);
 
-    const affected = await execute(
-      'DELETE FROM players WHERE id = ?',
-      [player_id]
-    );
+    const affected = await execute('DELETE FROM players WHERE id = ?', [player_id]);
 
     if (affected === 0) {
       return json({ error: 'Player not found' }, { status: 404 });
