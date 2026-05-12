@@ -644,6 +644,23 @@
     }
     
     const nj = level.nutritionJson as (typeof level.nutritionJson & { yieldFactorWater?: number; yieldFactorFat?: number }) | undefined;
+    // sections can live at Level.sections (typed) or embedded in nutritionJson.sections
+    // (v3 build artifact shape). Prefer Level.sections; fall back to nutritionJson so
+    // initialData.sections is populated immediately without waiting for the async v3-build fetch.
+    type NjSection = { section_key: string; section_label: string; prep_method?: string; cook_method?: string; cooking_method?: string; yield_factor_water?: number; yield_factor_fat?: number };
+    const njSections = !level.sections
+      ? ((nj as Record<string, unknown> | undefined)?.['sections'] as NjSection[] | undefined)
+      : undefined;
+    const resolvedSections = level.sections
+      ?? (njSections?.length ? njSections.map(s => ({
+          key: s.section_key,
+          label: s.section_label,
+          isPrepStep: true as const,
+          prepMethod: s.prep_method ?? s.cooking_method,
+          cookMethod: s.cook_method ?? s.cooking_method,
+          yieldFactorWater: s.yield_factor_water,
+          yieldFactorFat: s.yield_factor_fat,
+        })) : undefined);
     return {
       recipeName: level.name,
       category: level.category,
@@ -663,7 +680,7 @@
         text
       })),
       sr28Rule: level.sr28Rule,
-      ...(level.sections ? { sections: level.sections } : {})
+      ...(resolvedSections ? { sections: resolvedSections } : {})
     };
   }
   
