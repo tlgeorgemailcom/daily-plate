@@ -197,7 +197,8 @@
       portionDesc: ing.portionDesc != null ? String(ing.portionDesc) : (ing.portion_desc != null ? String(ing.portion_desc) : undefined),
       portionGrams: typeof ing.portionGrams === 'number' ? ing.portionGrams : (typeof ing.portion_grams === 'number' ? ing.portion_grams : undefined),
       servingCount: typeof ing.servingCount === 'number' ? ing.servingCount : (typeof ing.serving_count === 'number' ? ing.serving_count : undefined),
-      exempt: ing.exempt === true
+      exempt: ing.exempt === true,
+      section: ing.section != null ? String(ing.section) : undefined
     }));
 
     return {
@@ -228,6 +229,7 @@
       ...(dishLink ? { dishLink } : {}),
       nutritionJson: (recipe.nutritionJson as any) || undefined,
       sr28Rule: (recipe.srRule as 'Rule A' | 'Rule B' | 'Rule C' | 'Rule D' | undefined) || undefined,
+      sections: (recipe.sections as any[] | undefined) || undefined,
     };
   }
   
