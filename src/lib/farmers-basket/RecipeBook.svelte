@@ -66,6 +66,7 @@
   // Player edit mode - creator editing their own approved recipe
   let myRecipeIds = $state<string[]>([]);
   let currentPlayerId = $state<string | null>(null);
+  let currentPlayerName = $state<string | null>(null);
   let isPlayerEditing = $state(false);
   let playerEditSaving = $state(false);
   let playerEditError = $state<string | null>(null);
@@ -94,6 +95,7 @@
   let creatorDraftUpdatedAt = $state<string | null>(null);
   let creatorDraftIsOwn = $state(false);
   let creatorDraftIsCollabAutoLoaded = $state(false);
+  let creatorDraftSavedByName = $state<string | null>(null);
   let creatorDraftLoading = $state(false);
   let creatorDraftLoadingIntoForm = $state(false);
   // Player (creator) save-draft state
@@ -140,6 +142,7 @@
         try {
           const parsed = JSON.parse(storedPlayer);
           currentPlayerId = parsed.id || null;
+          currentPlayerName = parsed.displayName || null;
         } catch { /* ignore */ }
       }
       // Load which of the creator's recipes have unseen collaborator drafts
@@ -994,6 +997,7 @@
       creatorDraftUpdatedAt = null;
       creatorDraftIsOwn = false;
       creatorDraftIsCollabAutoLoaded = false;
+      creatorDraftSavedByName = null;
       // Server-side auth only works when submitted_by === currentPlayerId.
       // If ownership was detected via myRecipeIds only (stale localStorage),
       // skip the server calls to avoid 403s.
@@ -1367,7 +1371,8 @@
         body: JSON.stringify({
           recipeId: collabRecipeId,
           code: collabValidatedCode,
-          draftData
+          draftData,
+          ...(currentPlayerName ? { collabName: currentPlayerName } : {})
         })
       });
 
@@ -1432,6 +1437,7 @@
         creatorDraftUpdatedAt = data.draftUpdatedAt ?? null;
         const isOwnDraft = !!(data.draftIsCreatorDraft);
         creatorDraftIsOwn = isOwnDraft;
+        creatorDraftSavedByName = data.draftSavedByName ?? null;
         // Auto-load collaborator drafts into the form immediately
         if (!isOwnDraft && creatorDraft) {
           creatorDraftIsOwn = true;
@@ -1460,6 +1466,7 @@
       creatorDraft = null;
       creatorDraftUpdatedAt = null;
       creatorDraftIsCollabAutoLoaded = false;
+      creatorDraftSavedByName = null;
     } catch { /* non-critical */ }
   }
 
@@ -1850,6 +1857,22 @@
               {/if}
             {/if}
           </div>
+
+          {#if creatorDraftIsCollabAutoLoaded}
+            <div class="collab-draft-top-banner">
+              <span class="collab-draft-top-icon">📝</span>
+              <div class="collab-draft-top-text">
+                <strong>Collaborator draft loaded</strong>
+                {#if creatorDraftSavedByName}
+                  <span>— edited by <em>{creatorDraftSavedByName}</em></span>
+                {/if}
+                {#if creatorDraftUpdatedAt}
+                  <span class="collab-draft-top-time">{new Date(creatorDraftUpdatedAt).toLocaleString()}</span>
+                {/if}
+              </div>
+              <button class="collab-draft-top-discard" onclick={handleDiscardCreatorDraft} title="Discard this draft and restore live recipe">✕ Discard</button>
+            </div>
+          {/if}
 
           <div class="mod-form-container">
             <!-- Image Upload Section -->
@@ -4175,5 +4198,65 @@
 
   .creator-own-draft-discard:hover {
     color: #b71c1c;
+  }
+
+  /* Prominent collab draft banner at the TOP of the creator edit form */
+  .collab-draft-top-banner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: #fff8e1;
+    border: 2px solid #f9a825;
+    border-radius: 10px;
+    font-size: 0.88rem;
+    color: #5d4037;
+    margin: 0 0 14px 0;
+  }
+
+  .collab-draft-top-icon {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+  }
+
+  .collab-draft-top-text {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .collab-draft-top-text strong {
+    color: #e65100;
+    font-size: 0.92rem;
+  }
+
+  .collab-draft-top-text em {
+    font-style: normal;
+    font-weight: 600;
+    color: #bf360c;
+  }
+
+  .collab-draft-top-time {
+    font-size: 0.78rem;
+    color: #8d6e63;
+    margin-left: 4px;
+  }
+
+  .collab-draft-top-discard {
+    flex-shrink: 0;
+    background: none;
+    border: 1px solid #e65100;
+    color: #e65100;
+    font-size: 0.78rem;
+    border-radius: 6px;
+    padding: 4px 10px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .collab-draft-top-discard:hover {
+    background: #fff3e0;
   }
 </style>

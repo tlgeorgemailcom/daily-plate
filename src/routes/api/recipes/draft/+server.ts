@@ -28,7 +28,9 @@ function withDefaultServingCount(row: unknown): unknown {
 
 // Safe migration — add draft columns if they don't exist yet
 async function ensureDraftColumns() {
-  return;
+  try {
+    await execute(`ALTER TABLE player_recipes ADD COLUMN draft_saved_by_name TEXT`, []);
+  } catch { /* column already exists */ }
 }
 
 // GET ?recipeId=xxx&code=xxx  — collaborator loads latest draft
@@ -60,8 +62,9 @@ export const GET: RequestHandler = async ({ url }) => {
     draft_data: string | null;
     draft_updated_at: string | null;
     draft_is_creator_draft: number | null;
+    draft_saved_by_name: string | null;
   }>(
-    'SELECT submitted_by, edit_code, draft_data, draft_updated_at, draft_is_creator_draft FROM player_recipes WHERE recipe_id = ?',
+    'SELECT submitted_by, edit_code, draft_data, draft_updated_at, draft_is_creator_draft, draft_saved_by_name FROM player_recipes WHERE recipe_id = ?',
     [recipeId]
   );
 
@@ -79,7 +82,8 @@ export const GET: RequestHandler = async ({ url }) => {
   return json({
     draft,
     draftUpdatedAt: recipe.draft_updated_at ?? null,
-    draftIsCreatorDraft: !!(recipe.draft_is_creator_draft)
+    draftIsCreatorDraft: !!(recipe.draft_is_creator_draft),
+    draftSavedByName: recipe.draft_saved_by_name ?? null
   });
 };
 
@@ -90,7 +94,7 @@ export const POST: RequestHandler = async ({ request }) => {
   await ensureDraftColumns();
 
   const body = await request.json();
-  const { recipeId, code, playerId, draftData } = body;
+  const { recipeId, code, playerId, draftData, collabName } = body;
 
   if (!recipeId || !draftData || (!code && !playerId)) {
     return json({ error: 'Missing recipeId, draftData, and either code or playerId' }, { status: 400 });
@@ -149,9 +153,10 @@ export const POST: RequestHandler = async ({ request }) => {
     return json({ error: 'Recipe is not approved — drafts only apply to live recipes' }, { status: 409 });
   }
 
+  const savedByName = (typeof collabName === 'string' && collabName.trim()) ? collabName.trim().slice(0, 80) : null;
   await execute(
-    `UPDATE player_recipes SET draft_data = ?, draft_updated_at = ?, draft_seen_by_creator = 0, draft_is_creator_draft = 0, updated_at = datetime('now') WHERE recipe_id = ?`,
-    [JSON.stringify(draftData), new Date().toISOString(), recipeId]
+    `UPDATE player_recipes SET draft_data = ?, draft_updated_at = ?, draft_seen_by_creator = 0, draft_is_creator_draft = 0, draft_saved_by_name = ?, updated_at = datetime('now') WHERE recipe_id = ?`,
+    [JSON.stringify(draftData), new Date().toISOString(), savedByName, recipeId]
   );
 
   return json({ success: true });
