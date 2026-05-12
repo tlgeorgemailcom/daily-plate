@@ -349,8 +349,10 @@
             name: i.name,
             quantity: i.quantity,
             gameFood: i.gameFood || null,
-            animal: i.animal || null
+            animal: i.animal || null,
+            ...(i.section ? { section: i.section } : {})
           })),
+          ...(data.sections && data.sections.length > 0 ? { sections: data.sections } : {}),
           instructions: data.instructions.filter(i => i.text.trim()).map(i => i.text),
           gameFoods,
           animalSpawns,
