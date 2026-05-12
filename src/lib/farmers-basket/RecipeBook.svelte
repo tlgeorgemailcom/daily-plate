@@ -278,11 +278,6 @@
     }, 50);
   }
 
-  function formatIngredientSection(section: string | undefined) {
-    if (!section) return '';
-    return section.charAt(0).toUpperCase() + section.slice(1) + ':';
-  }
-
   // Phase 8b (v3.md §18): when a recipe has per-section cooking methods,
   // render the section header as "<Label> — <method>" so the multi-stage
   // structure (e.g. baked crust + boiled filling + raw topping) is visible
@@ -526,7 +521,7 @@
   function handleSecretAdmin(e: MouseEvent) {
     e.stopPropagation();
     const code = prompt('');
-    if (code === '4444') {
+    if (code === MODERATOR_PASSWORD) {
       window.open('/farmers-basket/moderate', '_blank');
     }
   }
@@ -753,10 +748,8 @@
                 name: i.name,
                 quantity: i.quantity,
                 gameFood: i.gameFood || null,
-                animal: i.animal || null,
-                ...(i.section ? { section: i.section } : {})
+                animal: i.animal || null
               })),
-              ...(data.sections && data.sections.length > 0 ? { sections: data.sections } : {}),
               instructions: data.instructions.map(i => i.text),
               animalSpawns: animalSpawns.map(s => ({ type: s.type, delay: s.delay / 1000 })),
               imageUrl
@@ -842,7 +835,6 @@
                   gameFoods,
                   ingredients: modIngredients,
                   modIngredients,
-                  ...(data.sections && data.sections.length > 0 ? { sections: data.sections } : {}),
                   instructions: data.instructions.filter(i => i.text.trim()).map(i => i.text),
                   imageUrl
                 },

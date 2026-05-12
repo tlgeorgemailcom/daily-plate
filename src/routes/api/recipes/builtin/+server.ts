@@ -5,6 +5,15 @@ import { toDisplayRecipeCategory, toStoredRecipeCategory } from '$lib/farmers-ba
 import { deleteRecipeImage, extractPublicId } from '$lib/server/cloudinary';
 import { calcNutritionSR28 } from '$lib/server/calcNutritionSR28';
 
+function safeJsonParse<T>(value: string | null | undefined, fallback: T): T {
+  if (!value) return fallback;
+  try {
+    return JSON.parse(value) as T;
+  } catch {
+    return fallback;
+  }
+}
+
 interface BuiltinRecipeRow {
   recipe_id: string;
   recipe_name: string;
@@ -183,7 +192,7 @@ async function resolveBuiltinNutrition(
 
 function normalizeRecipeInstructions(value: string | null): string[] | undefined {
   if (!value) return undefined;
-  const parsed = JSON.parse(value);
+  const parsed = safeJsonParse<unknown>(value, null);
   if (!Array.isArray(parsed)) return undefined;
 
   return parsed
@@ -199,7 +208,7 @@ function normalizeRecipeInstructions(value: string | null): string[] | undefined
 
 function normalizeRecipeIngredients(value: string | null): BuiltinOverride['recipeIngredients'] {
   if (!value) return undefined;
-  const parsed = JSON.parse(value);
+  const parsed = safeJsonParse<unknown>(value, null);
   if (!Array.isArray(parsed)) return undefined;
 
   return parsed
@@ -306,11 +315,11 @@ export const GET: RequestHandler = async () => {
       if (row.dish_family) override.dishFamily = row.dish_family;
       if (row.prep_time) override.prepTime = row.prep_time;
       if (row.servings) override.servings = row.servings;
-      if (row.recipe) override.recipe = JSON.parse(row.recipe);
-      if (row.animal_spawns) override.animalSpawns = JSON.parse(row.animal_spawns);
+      if (row.recipe) override.recipe = safeJsonParse(row.recipe, undefined);
+      if (row.animal_spawns) override.animalSpawns = safeJsonParse(row.animal_spawns, undefined);
       if (row.recipe_instructions_json) override.recipeInstructions = normalizeRecipeInstructions(row.recipe_instructions_json);
       if (row.recipe_ingredients_json) override.recipeIngredients = normalizeRecipeIngredients(row.recipe_ingredients_json);
-      if (row.nutrition_json && row.nutrition_json !== '{}') override.nutritionJson = JSON.parse(row.nutrition_json);
+      if (row.nutrition_json && row.nutrition_json !== '{}') override.nutritionJson = safeJsonParse(row.nutrition_json, null);
       if (row.image_url) override.imageUrl = row.image_url;
 
       overrides[row.recipe_id] = override;
@@ -326,12 +335,12 @@ export const GET: RequestHandler = async () => {
       dishFamily: row.dish_family ?? undefined,
       prepTime: row.prep_time ?? undefined,
       servings: row.servings ?? undefined,
-      recipe: row.recipe ? JSON.parse(row.recipe) : [],
-      animalSpawns: row.animal_spawns ? JSON.parse(row.animal_spawns) : [{ type: 'rabbit', delay: 3000 }],
+      recipe: safeJsonParse<string[]>(row.recipe, []),
+      animalSpawns: safeJsonParse(row.animal_spawns, [{ type: 'rabbit', delay: 3000 }]),
       recipeInstructions: normalizeRecipeInstructions(row.recipe_instructions_json),
       recipeIngredients: normalizeRecipeIngredients(row.recipe_ingredients_json),
-      nutritionJson: row.nutrition_json && row.nutrition_json !== '{}' ? JSON.parse(row.nutrition_json) : undefined,
-      sections: row.sections_json ? JSON.parse(row.sections_json) : undefined,
+      nutritionJson: row.nutrition_json && row.nutrition_json !== '{}' ? safeJsonParse(row.nutrition_json, undefined) : undefined,
+      sections: row.sections_json ? safeJsonParse(row.sections_json, undefined) : undefined,
       imageUrl: row.image_url ?? undefined,
       createdAt: row.created_at
     }));
