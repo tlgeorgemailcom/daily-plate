@@ -20,6 +20,9 @@ export const POST: RequestHandler = async ({ request, cookies }) => {
     return json({ error: 'player_id required' }, { status: 400 });
   }
 
+  // Clear self-referencing billing_owner_id FK before deleting
+  await execute('UPDATE players SET billing_owner_id = NULL WHERE billing_owner_id = ?', [player_id]);
+
   const affected = await execute('DELETE FROM players WHERE id = ?', [player_id]);
 
   if (affected === 0) {
