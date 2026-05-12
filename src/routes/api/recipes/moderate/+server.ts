@@ -221,8 +221,9 @@ export const POST: RequestHandler = async ({ request }) => {
           recipe_id, food_word, recipe_name, category, dietary_category, cooking_method, dish_family, prep_time, servings,
           recipe, animal_spawns, recipe_ingredients_json, recipe_instructions_json,
           food_supply, image_url, submitted_by, status, created_at, updated_at,
-          grams_per_serving, nutrition_json, nutrient_version, retention_model_version, source_match_version
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'published', ?, ?, ?, ?, ?, ?, ?)`,
+          grams_per_serving, nutrition_json, nutrient_version, retention_model_version, source_match_version,
+          sections_json
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'published', ?, ?, ?, ?, ?, ?, ?, ?)`,
         [
           newId,
           newId,
@@ -246,7 +247,8 @@ export const POST: RequestHandler = async ({ request }) => {
           '{}',
           'legacy',
           'legacy',
-          'legacy'
+          'legacy',
+          sections ? JSON.stringify(sections) : null
         ]
       );
 
