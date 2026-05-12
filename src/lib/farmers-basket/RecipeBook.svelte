@@ -992,10 +992,17 @@
       creatorDraft = null;
       creatorDraftUpdatedAt = null;
       creatorDraftIsOwn = false;
-      // Load draft first so creatorInitialData is ready before form mounts
-      await handleCheckCreatorDraft(level.id);
+      // Server-side auth only works when submitted_by === currentPlayerId.
+      // If ownership was detected via myRecipeIds only (stale localStorage),
+      // skip the server calls to avoid 403s.
+      const hasServerAuth = !!(currentPlayerId && level.submittedBy === currentPlayerId);
+      if (hasServerAuth) {
+        await handleCheckCreatorDraft(level.id);
+      }
       isPlayerEditing = true;
-      handleLoadCreatorEditCode(level.id);
+      if (hasServerAuth) {
+        handleLoadCreatorEditCode(level.id);
+      }
       // Clear the unseen badge immediately
       unseenDraftIds = new Set([...unseenDraftIds].filter(id => id !== level.id));
     } else {
