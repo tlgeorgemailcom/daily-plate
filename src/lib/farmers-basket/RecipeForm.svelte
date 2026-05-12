@@ -20,6 +20,8 @@
     portionGrams?: number;   // grams per one portion
     servingCount?: number;   // number of portions used in recipe
     ingredientStatus?: 'required' | 'optional' | 'exempt'; // Required (in math) | Optional (cook may omit, not in math) | Exempt (no NDB, not in math)
+    exempt?: boolean;        // wire-format alias for ingredientStatus === 'exempt' (used in API payloads)
+    is_optional?: boolean;   // wire-format alias for ingredientStatus === 'optional' (used in API payloads)
     isDish?: boolean;        // marks the synthesized dish-level row (Rule A/B/C)
     section?: string;        // v3 §18: section_key linking ingredient to a recipe section (cooking math FK)
     ingredient_group?: string; // v3 §19: display-only sub-label within a section (e.g. 'crust', 'filling')

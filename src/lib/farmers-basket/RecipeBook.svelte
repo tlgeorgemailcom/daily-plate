@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount, onDestroy } from 'svelte';
   import { canUseStorage } from '$lib/stores/playerStore';
-  import type { Level, FoodType, DietaryCategory } from './types';
+  import type { Level, FoodType, AnimalType, DietaryCategory } from './types';
   import { RECIPE_CATEGORY_OPTIONS, toDisplayRecipeCategory, toStoredRecipeCategory } from './recipe-categories';
   import FoodIcon from './FoodIcon.svelte';
   import RecipeBadges from './RecipeBadges.svelte';
@@ -614,8 +614,8 @@
           quantity: ing.quantity || '',
           // Prefer the stored moderator-assigned gameFood/animal over a fuzzy match.
           // After first approval, recipeIngredients carries these values in the Level.
-          gameFood: (ing as Record<string, unknown>).gameFood as string || matchedFood || '',
-          animal: (ing as Record<string, unknown>).animal as string || level.animalSpawns[i]?.type || '',
+          gameFood: ((ing as Record<string, unknown>).gameFood as string || matchedFood || '') as FoodType | '',
+          animal: ((ing as Record<string, unknown>).animal as string || level.animalSpawns[i]?.type || '') as AnimalType | '',
           // Preserve existing nutrition links so the creator can see and update them
           foodWord: ing.foodWord,
           ndbNo: ing.ndbNo,

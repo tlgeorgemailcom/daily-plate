@@ -15,6 +15,8 @@
     portionGrams?: number;
     servingCount?: number;
     exempt?: boolean;
+    is_optional?: boolean;
+    section?: string;
   }
   
   interface RecipeSubmission {
@@ -43,6 +45,7 @@
     needsNameReview?: boolean;
     nutritionJson?: unknown | null;
     srRule?: string;
+    sections?: unknown[];
   }
   
   // Password protection
