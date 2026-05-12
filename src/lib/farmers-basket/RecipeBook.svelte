@@ -93,6 +93,7 @@
   let creatorDraft = $state<Record<string, unknown> | null>(null);
   let creatorDraftUpdatedAt = $state<string | null>(null);
   let creatorDraftIsOwn = $state(false);
+  let creatorDraftIsCollabAutoLoaded = $state(false);
   let creatorDraftLoading = $state(false);
   let creatorDraftLoadingIntoForm = $state(false);
   // Player (creator) save-draft state
@@ -978,7 +979,7 @@
     selectedLevel = level;
     showRecipeOfDay = false;
     searchQuery = '';
-    if ((currentPlayerId && level.submittedBy === currentPlayerId) || (!currentPlayerId && myRecipeIds.includes(level.id))) {
+    if (myRecipeIds.includes(level.id) || (currentPlayerId && level.submittedBy === currentPlayerId)) {
       playerEditError = null;
       playerEditSuccess = false;
       playerDraftError = null;
@@ -992,6 +993,7 @@
       creatorDraft = null;
       creatorDraftUpdatedAt = null;
       creatorDraftIsOwn = false;
+      creatorDraftIsCollabAutoLoaded = false;
       // Server-side auth only works when submitted_by === currentPlayerId.
       // If ownership was detected via myRecipeIds only (stale localStorage),
       // skip the server calls to avoid 403s.
@@ -1401,6 +1403,8 @@
         const data = await res.json();
         creatorDraft = data.draft ?? null;
         creatorDraftUpdatedAt = data.draftUpdatedAt ?? null;
+        // Treat as own draft so creatorInitialData feeds it into the form
+        creatorDraftIsOwn = true;
       }
     } catch { /* non-critical */ }
     creatorDraftLoadingIntoForm = false;
@@ -1426,7 +1430,19 @@
         const data = await res.json();
         creatorDraft = data.draft ?? null;
         creatorDraftUpdatedAt = data.draftUpdatedAt ?? null;
-        creatorDraftIsOwn = !!(data.draftIsCreatorDraft);
+        const isOwnDraft = !!(data.draftIsCreatorDraft);
+        creatorDraftIsOwn = isOwnDraft;
+        // Auto-load collaborator drafts into the form immediately
+        if (!isOwnDraft && creatorDraft) {
+          creatorDraftIsOwn = true;
+          creatorDraftIsCollabAutoLoaded = true;
+          // Mark as seen
+          fetch('/api/recipes/draft', {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ recipeId, playerId: currentPlayerId })
+          }).catch(() => {});
+        }
       }
     } catch { /* non-critical */ }
     creatorDraftLoading = false;
@@ -1443,6 +1459,7 @@
       });
       creatorDraft = null;
       creatorDraftUpdatedAt = null;
+      creatorDraftIsCollabAutoLoaded = false;
     } catch { /* non-critical */ }
   }
 
@@ -1938,7 +1955,11 @@
             <!-- Creator Own Draft Notice -->
             {#if creatorDraft && creatorDraftIsOwn}
               <div class="creator-own-draft-notice">
-                <span>💾 Draft restored</span>
+                {#if creatorDraftIsCollabAutoLoaded}
+                  <span>📝 Collaborator's draft loaded</span>
+                {:else}
+                  <span>💾 Draft restored</span>
+                {/if}
                 {#if creatorDraftUpdatedAt}<span class="creator-own-draft-time">· saved {new Date(creatorDraftUpdatedAt).toLocaleString()}</span>{/if}
                 <button class="creator-own-draft-discard" onclick={handleDiscardCreatorDraft}>Discard draft</button>
               </div>
