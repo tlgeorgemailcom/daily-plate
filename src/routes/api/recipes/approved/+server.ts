@@ -23,6 +23,7 @@ interface RecipeRow {
   recipe: string | null;
   animal_spawns: string | null;
   food_supply: string | null;
+  sections_json: string | null;
 }
 
 export const GET: RequestHandler = async () => {
@@ -33,7 +34,7 @@ export const GET: RequestHandler = async () => {
               recipe_ingredients_json, recipe_instructions_json,
               image_url, submitted_by, status, created_at,
               link_type, cooking_method, dish_family, nutrition_json,
-              recipe, animal_spawns, food_supply
+              recipe, animal_spawns, food_supply, sections_json
        FROM player_recipes 
        WHERE status = 'approved'
        ORDER BY created_at ASC`
@@ -67,7 +68,8 @@ export const GET: RequestHandler = async () => {
         submittedBy: row.submitted_by || 'Player',
         isCommunityRecipe: true,
         linkType: (row.link_type as 'ingredient' | 'dish' | 'mixed') ?? undefined,
-        nutritionJson: row.nutrition_json ? JSON.parse(row.nutrition_json) : null
+        nutritionJson: row.nutrition_json ? JSON.parse(row.nutrition_json) : null,
+        sections: row.sections_json ? JSON.parse(row.sections_json) : undefined
       };
     });
     

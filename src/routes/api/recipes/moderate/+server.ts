@@ -381,6 +381,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
           recipe_ingredients_json = COALESCE(?, recipe_ingredients_json),
           recipe_instructions_json = COALESCE(?, recipe_instructions_json),
           animal_spawns = COALESCE(?, animal_spawns),
+          sections_json = COALESCE(?, sections_json),
           image_url = ?,
           updated_at = datetime('now')
          WHERE recipe_id = ?`,
@@ -396,6 +397,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
           updates.ingredients ? JSON.stringify(updates.ingredients) : (updates.modIngredients ? JSON.stringify(updates.modIngredients) : null),
           updates.instructions ? JSON.stringify(updates.instructions) : null,
           updates.animalSpawns ? JSON.stringify(updates.animalSpawns) : null,
+          updates.sections ? JSON.stringify(updates.sections) : null,
           playerImageUrl,
           id
         ]
@@ -438,6 +440,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
         recipe_ingredients_json = COALESCE(?, recipe_ingredients_json),
         recipe_instructions_json = COALESCE(?, recipe_instructions_json),
         animal_spawns = COALESCE(?, animal_spawns),
+        sections_json = COALESCE(?, sections_json),
         image_url = ?,
         updated_at = datetime('now'),
         submitted_by = COALESCE(?, submitted_by)
@@ -454,6 +457,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
         updates.ingredients ? JSON.stringify(updates.ingredients) : (updates.modIngredients ? JSON.stringify(updates.modIngredients) : null),
         updates.instructions ? JSON.stringify(updates.instructions) : null,
         updates.animalSpawns ? JSON.stringify(updates.animalSpawns) : null,
+        updates.sections ? JSON.stringify(updates.sections) : null,
         devImageUrl,
         editedBy || 'Moderator',
         id
