@@ -490,6 +490,8 @@
     {
       "section_key": "crust",
       "section_label": "Pie crust",
+      "prep_method": "baked",
+      "cook_method": "baked",
       "cooking_method": "baked",
       "cooking_method_normalized": "baked",
       "yield_factor_water": 0.84,
@@ -504,6 +506,8 @@
     {
       "section_key": "filling",
       "section_label": "Coconut pastry cream",
+      "prep_method": "boiled",
+      "cook_method": "boiled",
       "cooking_method": "boiled",
       "cooking_method_normalized": "boiled",
       "yield_factor_water": 0.95,
@@ -518,6 +522,8 @@
     {
       "section_key": "topping",
       "section_label": "Whipped cream topping",
+      "prep_method": "raw",
+      "cook_method": "raw",
       "cooking_method": "raw",
       "cooking_method_normalized": "raw",
       "yield_factor_water": 1.0,

@@ -481,6 +481,8 @@
     {
       "section_key": "crust",
       "section_label": "Pie crust",
+      "prep_method": "baked",
+      "cook_method": "baked",
       "cooking_method": "baked",
       "cooking_method_normalized": "baked",
       "yield_factor_water": 0.84,
@@ -495,6 +497,8 @@
     {
       "section_key": "filling",
       "section_label": "Lemon curd filling",
+      "prep_method": "boiled",
+      "cook_method": "boiled",
       "cooking_method": "boiled",
       "cooking_method_normalized": "boiled",
       "yield_factor_water": 0.92,
@@ -509,6 +513,8 @@
     {
       "section_key": "topping",
       "section_label": "Meringue topping",
+      "prep_method": "baked",
+      "cook_method": "baked",
       "cooking_method": "baked",
       "cooking_method_normalized": "baked",
       "yield_factor_water": 0.85,
