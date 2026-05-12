@@ -3122,9 +3122,15 @@
   }
   .ep-preview-section-header {
     list-style: none;
-    margin-left: -20px;
-    margin-top: 8px;
-    color: #4a5568;
+    margin: 16px 0 4px -20px;
+    padding: 4px 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #276749;
+    background: #f0fff4;
+    border-left: 3px solid #38a169;
+    border-radius: 0 3px 3px 0;
+    text-transform: capitalize;
   }
 
   /* Sections editor (v3.md §18.6) — inline group header pattern.
