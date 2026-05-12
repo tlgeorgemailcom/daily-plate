@@ -17,3 +17,29 @@ SWEET_013,topping,Whipped cream topping,raw,raw,1.0,1.0,1.0
 SWEET_014,crust,Pie crust,baked,baked,0.84,1.0,1.0
 SWEET_014,filling,Coconut pastry cream,boiled,boiled,0.95,1.0,1.0
 SWEET_014,topping,Whipped cream topping,raw,raw,1.0,1.0,1.0
+SWEET_002,pastry,Puff pastry,raw,baked,0.82,1.0,1.0
+SWEET_002,filling,Apple-raisin filling,boiled,baked,0.85,1.0,1.0
+SWEET_002,finish,Egg wash finish,raw,raw,1.0,1.0,1.0
+SWEET_004,crust,Pie crust,raw,baked,0.82,1.0,1.0
+SWEET_004,filling,Blueberry filling,raw,baked,0.87,1.0,1.0
+SWEET_004,wash,Egg wash,raw,raw,1.0,1.0,1.0
+SWEET_005,crust,Pie crust,raw,baked,0.82,1.0,1.0
+SWEET_005,filling,Cherry filling,raw,baked,0.87,1.0,1.0
+SWEET_005,wash,Egg wash,raw,raw,1.0,1.0,1.0
+SWEET_007,crust,Pie crust,raw,baked,0.82,1.0,1.0
+SWEET_007,filling,Mincemeat filling,boiled,baked,0.80,1.0,1.0
+SWEET_007,wash,Egg wash,raw,raw,1.0,1.0,1.0
+SWEET_008,crust,Pie crust,raw,baked,0.82,1.0,1.0
+SWEET_008,filling,Peach filling,raw,baked,0.85,1.0,1.0
+SWEET_008,wash,Egg wash,raw,raw,1.0,1.0,1.0
+SWEET_009,crust,Pie crust,raw,baked,0.84,1.0,1.0
+SWEET_009,filling,Pecan custard filling,raw,baked,0.92,1.0,1.0
+SWEET_010,crust,Pie crust,raw,baked,0.84,1.0,1.0
+SWEET_010,filling,Pumpkin custard filling,raw,baked,0.95,1.0,1.0
+SWEET_012,cake,Yellow butter cake,raw,baked,0.87,1.0,1.0
+SWEET_012,filling,Vanilla pastry cream,boiled,boiled,0.95,1.0,1.0
+SWEET_012,glaze,Chocolate ganache glaze,raw,raw,1.0,1.0,1.0
+SWEET_015,crust,Pie crust,raw,baked,0.84,1.0,1.0
+SWEET_015,filling,Egg custard filling,raw,baked,0.92,1.0,1.0
+CRUST_001,crust,Double pie crust,raw,baked,0.38,1.0,1.0
+CRUST_002,crust,Single pie crust,raw,baked,0.38,1.0,1.0
