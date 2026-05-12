@@ -978,7 +978,7 @@
     selectedLevel = level;
     showRecipeOfDay = false;
     searchQuery = '';
-    if (myRecipeIds.includes(level.id) || (currentPlayerId && level.submittedBy === currentPlayerId)) {
+    if ((currentPlayerId && level.submittedBy === currentPlayerId) || (!currentPlayerId && myRecipeIds.includes(level.id))) {
       playerEditError = null;
       playerEditSuccess = false;
       playerDraftError = null;
