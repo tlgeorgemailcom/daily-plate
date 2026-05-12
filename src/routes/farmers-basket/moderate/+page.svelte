@@ -505,6 +505,7 @@
               ...(i.exempt ? { exempt: true } : {}),
               ...(i.is_optional ? { is_optional: true } : {})
             })),
+            ...(data.sections && data.sections.length > 0 ? { sections: data.sections } : {}),
             instructions: data.instructions.filter(i => i.text.trim()).map(i => i.text),
             imageUrl
           },
