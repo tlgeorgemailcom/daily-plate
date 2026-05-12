@@ -36,6 +36,7 @@ interface NewBuiltinRecipe {
   recipeInstructions?: string[];
   recipeIngredients?: Level['recipeIngredients'];
   nutritionJson?: Level['nutritionJson'];
+  sections?: Level['sections'];
   imageUrl?: string;
   createdAt: string;
 }
@@ -252,6 +253,7 @@ export async function getLevelsWithOverrides(): Promise<Level[]> {
     recipeInstructions: r.recipeInstructions,
     recipeIngredients: r.recipeIngredients,
     nutritionJson: r.nutritionJson,
+    sections: r.sections,
     imageUrl: r.imageUrl
   }));
 

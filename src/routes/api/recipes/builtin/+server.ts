@@ -19,6 +19,7 @@ interface BuiltinRecipeRow {
   recipe_instructions_json: string | null;
   recipe_ingredients_json: string | null;
   nutrition_json: string | null;
+  sections_json: string | null;
   image_url: string | null;
   created_at: string;
   submitted_by: string;
@@ -71,6 +72,7 @@ interface NewBuiltinRecipe {
   recipeInstructions?: string[];
   recipeIngredients?: NutritionLinkIngredient[];
   nutritionJson?: NutritionJson | null;
+  sections?: unknown[];
   imageUrl?: string;
   createdAt: string;
 }
@@ -282,7 +284,7 @@ export const GET: RequestHandler = async () => {
     const newRows = await queryAll<BuiltinRecipeRow>(
       `SELECT recipe_id, recipe_name, category, dietary_category, cooking_method, dish_family, prep_time, servings, 
               recipe, animal_spawns, recipe_instructions_json, recipe_ingredients_json,
-              nutrition_json, image_url, created_at, submitted_by
+              nutrition_json, sections_json, image_url, created_at, submitted_by
        FROM dev_recipes 
        WHERE status = 'published' AND recipe_id LIKE 'admin-%'
        ORDER BY created_at ASC`
@@ -329,6 +331,7 @@ export const GET: RequestHandler = async () => {
       recipeInstructions: normalizeRecipeInstructions(row.recipe_instructions_json),
       recipeIngredients: normalizeRecipeIngredients(row.recipe_ingredients_json),
       nutritionJson: row.nutrition_json && row.nutrition_json !== '{}' ? JSON.parse(row.nutrition_json) : undefined,
+      sections: row.sections_json ? JSON.parse(row.sections_json) : undefined,
       imageUrl: row.image_url ?? undefined,
       createdAt: row.created_at
     }));
