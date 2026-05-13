@@ -72,3 +72,5 @@ vegetable_shortening,4031,SHORTENING,"Shortening, household, soybean (partially 
 water_tap,14411,WATER,"Water, tap, drinking",ice water,tablespoon,15.0,
 coconut_cream_canned_sweetened,12116,COCONUTCREAMSWEET,"Nuts, coconut cream, canned, sweetened","coconut cream (canned, sweetened)",tablespoon,15,USDA SR Legacy 12116
 water,14411,WATER,"Water, tap, drinking",water,cup,237.0,Tap water; nutritionally inert (0 kcal)
+coconut_water,12119,COCONUTWATER,"Nuts, coconut water",coconut water,cup,240.0,Fresh coconut water; ~19 kcal/cup; NDB 12119
+coconut_extract,2050,VANILLA,Vanilla extract,coconut extract,teaspoon,4.2,Coconut-flavored extract; nutritionally equivalent to vanilla extract (NDB 2050 proxy)

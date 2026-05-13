@@ -43,7 +43,17 @@ from .load import (
     load_comboo_nutrients,
 )
 from .retention import get_retention, normalize_cooking_method
+from .yield_calc import calc_yield_water
 from .yield_model import cooked_total_grams
+
+
+def _parse_stages(cook_stages: str) -> list[tuple[int, int]]:
+    """Parse '425:15,350:37' → [(425, 15), (350, 37)]."""
+    return [
+        (int(p.split(":")[0]), int(p.split(":")[1]))
+        for p in cook_stages.split(",")
+        if ":" in p
+    ]
 
 _MACRO_SET = set(MACROS)
 
@@ -351,7 +361,19 @@ def _build_recipe_multi(
 
         s = st["section"]
         method = normalize_cooking_method(s.cook_method)
-        yfw = s.yield_factor_water
+        if s.yield_factor_water is not None:
+            # Manual override — used for locked recipes and meringue (algorithm doesn't apply).
+            yfw = s.yield_factor_water
+        elif s.filling_class and (s.cook_stages or s.boil_stages):
+            # Derive yield_water from physics-based model.
+            # boil_stages fires first (open-pot, BOIL_K_REF), then oven stages.
+            # Handles: oven-only, boil-only, and boil-then-bake sequences.
+            boil_min = float(s.boil_stages) if s.boil_stages else 0.0
+            stages   = _parse_stages(s.cook_stages) if s.cook_stages else []
+            yfw = calc_yield_water(stages, st["raw_water"], s.filling_class,
+                                   boil_minutes=boil_min)
+        else:
+            yfw = 1.0
         yff = s.yield_factor_fat
         sums_S = st["sums"]
         retained_S: dict[str, float] = {}
@@ -430,9 +452,11 @@ def _build_recipe_multi(
         normalize_cooking_method(dish_method_label) if dish_method_label != "multi" else "multi"
     )
     # Dish-level water-lost / fat-lost are sums of per-section losses.
+    # Use resolved yfw from sections_out (not section.yield_factor_water, which may be None
+    # for algorithm-derived sections).
     water_lost_total = sum(
-        st["raw_water"] * (1 - st["section"].yield_factor_water)
-        for st in sec_state.values() if st["ingredient_count"] > 0
+        sec["raw_water_grams"] * (1 - sec["yield_factor_water"])
+        for sec in sections_out if sec.get("ingredient_count", 0) > 0 and "yield_factor_water" in sec
     )
     fat_lost_total = sum(
         st["raw_fat"] * (1 - st["section"].yield_factor_fat)

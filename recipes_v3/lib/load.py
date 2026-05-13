@@ -121,6 +121,7 @@ class Recipe:
     status: str
     audit_status: str = ""
     audit_notes: str = ""
+    skip_macros: str = ""  # comma-sep USDA nutrient keys to exclude from scoring (defective canonical)
 
 
 @dataclass(frozen=True)
@@ -153,9 +154,12 @@ class Section:
     section_label: str
     prep_method: str   # what the cook does — shown in UI (e.g. 'simmered', 'boiled')
     cook_method: str   # dominant heat stage for USDA retention table lookup
-    yield_factor_water: float
+    yield_factor_water: float | None  # None = derive from filling_class + cook_stages
     yield_factor_fat: float
     yield_factor_other: float
+    filling_class: str = ""   # e.g. 'dense_fruit' — selects BINDING coefficient in yield_calc
+    cook_stages: str = ""     # e.g. '425:15,350:37' — temp_f:minutes pairs, comma-sep
+    boil_stages: str = ""     # e.g. '8' — stovetop boil minutes (temp fixed at 212°F)
 
     @property
     def cooking_method(self) -> str:
@@ -168,6 +172,12 @@ def _parse_float(s: str, default: float = 0.0) -> float:
     if not s:
         return default
     return float(s)
+
+
+def _parse_float_opt(s: str | None) -> float | None:
+    """Return None for blank/missing; float otherwise."""
+    s = (s or "").strip()
+    return float(s) if s else None
 
 
 def _parse_int(s: str, default: int = 0) -> int:
@@ -198,6 +208,7 @@ def load_recipes() -> dict[str, Recipe]:
                 status=row.get("status", "").strip(),
                 audit_status=row.get("audit_status", "").strip(),
                 audit_notes=row.get("audit_notes", "").strip(),
+                skip_macros=row.get("skip_macros", "").strip(),
             )
     return out
 
@@ -276,9 +287,12 @@ def load_sections() -> dict[str, list[Section]]:
                 section_label=(row.get("section_label") or "").strip(),
                 prep_method=(row.get("prep_method") or row.get("cooking_method") or "raw").strip().lower(),
                 cook_method=(row.get("cook_method") or row.get("cooking_method") or "raw").strip().lower(),
-                yield_factor_water=_parse_float(row.get("yield_factor_water"), 1.0),
+                yield_factor_water=_parse_float_opt(row.get("yield_factor_water")),
                 yield_factor_fat=_parse_float(row.get("yield_factor_fat"), 1.0),
                 yield_factor_other=_parse_float(row.get("yield_factor_other"), 1.0),
+                filling_class=(row.get("filling_class") or "").strip(),
+                cook_stages=(row.get("cook_stages") or "").strip(),
+                boil_stages=(row.get("boil_stages") or "").strip(),
             )
             out.setdefault(rid, []).append(sec)
     return out

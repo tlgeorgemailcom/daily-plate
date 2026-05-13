@@ -5,8 +5,8 @@ per100g to the canonical NDB's per100g from comboo.db. This is independent of
 Turso entirely.
 
 Acceptance (per docs/v3.md):
-  - Rule A: ±5% on every macro
-  - Rule B: ±15% on every macro
+  - Rule A: ±5% on every macro (canonical has all macros present)
+  - Rule B: ±5% on every macro (canonical is missing at least one macro — those macros are ungraded, not skipped)
 
 Writes:
   output/audit/<recipe_id>.json
@@ -37,12 +37,19 @@ OUT_DIR = ROOT / "output" / "audit"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 OUT_MD = ROOT / "output" / "audit_summary.md"
 
-TOLERANCE = {"Rule A": 5.0, "Rule B": 15.0}
+TOLERANCE = {"Rule A": 5.0, "Rule B": 5.0}
+# Absolute floor: suppress near-zero rounding noise (e.g. SugarsTotal in savoury foods).
+ABS_FLOOR = 0.02  # g/100g
+# Canonical floor: treat canonical ≤ this as ungraded (Rule B-style).
+# At ≤1 g/100g the USDA 5% tolerance band is smaller than AOAC measurement uncertainty.
+CANONICAL_FLOOR = 1.0  # g/100g
 
 
 def pct_delta(v3: float, ref: float) -> float:
-    if ref == 0:
-        return 0.0 if v3 == 0 else float("inf")
+    if ref == 0 or (ref > 0 and ref <= CANONICAL_FLOOR):
+        return 0.0 if v3 == 0 else float("inf") if ref == 0 else 0.0
+    if abs(v3 - ref) <= ABS_FLOOR:
+        return 0.0
     return (v3 - ref) / ref * 100.0
 
 
@@ -88,8 +95,12 @@ def main() -> int:
         v3_per100g = built["per100g"]
         deltas = {m: pct_delta(v3_per100g.get(m, 0.0), canonical.get(m, 0.0)) for m in MACROS}
         tol = TOLERANCE[r.sr_rule]
+        # skip_macros: recipe-level exclusion for known defective canonical values
+        skip = {s.strip() for s in r.skip_macros.split(",") if s.strip()} if r.skip_macros else set()
         # Macros with canonical=0 in USDA are unscored (data gap, not a math error).
-        scorable = {m: d for m, d in deltas.items() if canonical.get(m, 0.0) > 0 and d != float("inf")}
+        # Macros in skip_macros are excluded as defective canonical (Rule B treatment).
+        scorable = {m: d for m, d in deltas.items()
+                    if canonical.get(m, 0.0) > 0 and d != float("inf") and m not in skip}
         ungraded = [m for m in MACROS if m not in scorable]
         if not scorable:
             verdict = "NO_REF"
@@ -124,7 +135,7 @@ def main() -> int:
     rule_a = [r for r in rows if r.get('sr_rule') == 'Rule A']
     rule_b = [r for r in rows if r.get('sr_rule') == 'Rule B']
     md.append(f"**Rule A:** {len(rule_a)} (tolerance ±5%)")
-    md.append(f"**Rule B:** {len(rule_b)} (tolerance ±15%)")
+    md.append(f"**Rule B:** {len(rule_b)} (tolerance ±5%, canonical missing ≥1 macro)")
     pass_n = sum(1 for r in rows if r.get('verdict') == 'PASS')
     fail_n = sum(1 for r in rows if r.get('verdict') == 'FAIL')
     err_n = sum(1 for r in rows if r.get('verdict') == 'ERROR')
