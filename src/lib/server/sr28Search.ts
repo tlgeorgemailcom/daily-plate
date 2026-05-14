@@ -1,5 +1,6 @@
 import type { InValue, Row } from '@libsql/client';
 import type { Food, FoodGroup, Portion } from '$lib/data/food-portions';
+import type { NutrientRow } from '$lib/nutrition/types';
 import { getSR28Db } from '$lib/server/turso';
 
 export type Sr28SearchScope = 'all' | 'baby';
@@ -135,4 +136,97 @@ export async function searchSr28Foods(query: string, scope: Sr28SearchScope, lim
   });
 
   return result.rows.map(rowToFood);
+}
+
+/** Food with full per-100g NutrientRow embedded — used by recipe ingredient search */
+export type FoodWithNutrients = Food & { nutrients: NutrientRow };
+
+function rowToNutrientRow(row: Row, ndb: string, longDesc: string, fdGrpCd: string): NutrientRow {
+  const n = (key: string): number => {
+    const v = (row as Record<string, unknown>)[key];
+    if (v === null || v === undefined) return 0;
+    const num = Number(v);
+    return isNaN(num) ? 0 : num;
+  };
+  return {
+    ndbNo: ndb,
+    longDesc,
+    fdGrpCd,
+    energy_KCal:                    n('Energy_KCal'),
+    water:                          n('Water'),
+    protein:                        n('Protein'),
+    totalLipidFat:                  n('TotalLipidFat'),
+    carbohydrate:                   n('Carbohydrate'),
+    sugarsTotal:                    n('SugarsTotal'),
+    fiberTotalDietary:              n('FiberTotalDietary'),
+    ash:                            n('Ash'),
+    fattyAcids_totalSaturated:     n('FattyAcids_totalSaturated'),
+    fattyAcids_totalMonounsaturated: n('FattyAcids_totalMonounsaturated'),
+    fattyAcids_totalPolyunsaturated: n('FattyAcids_totalPolyunsaturated'),
+    cholesterol:                    n('Cholesterol'),
+    calcium_Ca:                     n('Calcium_Ca'),
+    iron_Fe:                        n('Iron_Fe'),
+    magnesium_Mg:                   n('Magnesium_Mg'),
+    phosphorus_P:                   n('Phosphorus_P'),
+    potassium_K:                    n('Potassium_K'),
+    sodium_Na:                      n('Sodium_Na'),
+    zinc_Zn:                        n('Zinc_Zn'),
+    vitaminC_totalAscorbicAcid:    n('VitaminC_totalAscorbicAcid'),
+    thiamin:                        n('Thiamin'),
+    riboflavin:                     n('Riboflavin'),
+    niacin:                         n('Niacin'),
+    vitaminB6:                      n('VitaminB6'),
+    folateDFE:                      n('Folate_DFE'),
+    vitaminB12:                     n('VitaminB12'),
+    vitaminA_RAE:                   n('VitaminA_RAE'),
+    vitaminD:                       n('VitaminD'),
+    vitaminE_alphaTocopherol:      n('VitaminE_alphaTocopherol'),
+    vitaminK_phylloquinone:        n('VitaminK_phylloquinone'),
+  };
+}
+
+/**
+ * Search SR28 foods and embed full NutrientRow in each result.
+ * Used by the recipe ingredient food-search endpoint so the browser can cache
+ * nutrient data for live community recipe build without extra Turso reads.
+ */
+export async function searchSr28FoodsWithNutrients(
+  query: string,
+  scope: Sr28SearchScope,
+  limit = DEFAULT_LIMIT,
+): Promise<FoodWithNutrients[]> {
+  const db = getSR28Db();
+  const safeLimit = Math.max(1, Math.min(limit, 100));
+  const trimmedQuery = query.trim();
+  const { sql, args } = buildSearchWhere(trimmedQuery, scope);
+
+  const result = await db.execute({
+    sql: `
+      SELECT
+        "NDB_NO", "FdGrp_Cd", "Long_Desc",
+        "Energy_KCal", Protein, TotalLipidFat, Carbohydrate, FiberTotalDietary,
+        Water, SugarsTotal, Ash,
+        FattyAcids_totalSaturated, FattyAcids_totalMonounsaturated, FattyAcids_totalPolyunsaturated,
+        Cholesterol, Calcium_Ca, Iron_Fe, Magnesium_Mg, Phosphorus_P, Potassium_K,
+        Sodium_Na, Zinc_Zn, VitaminC_totalAscorbicAcid, Thiamin, Riboflavin,
+        Niacin, VitaminB6, Folate_DFE, VitaminB12, VitaminA_RAE, VitaminD,
+        VitaminE_alphaTocopherol, VitaminK_phylloquinone,
+        key10
+      FROM DataCentralCombo
+      ${sql}
+      ORDER BY
+        CAST(COALESCE(key10, '0') AS INTEGER) DESC,
+        "Long_Desc" ASC
+      LIMIT ?
+    `,
+    args: [...args, safeLimit],
+  });
+
+  return result.rows.map((row) => {
+    const ndb      = String((row as Record<string, unknown>)['NDB_NO'] ?? '');
+    const longDesc = String((row as Record<string, unknown>)['Long_Desc'] ?? '');
+    const fdGrpCd  = String((row as Record<string, unknown>)['FdGrp_Cd'] ?? '');
+    const food     = rowToFood(row);
+    return { ...food, nutrients: rowToNutrientRow(row, ndb, longDesc, fdGrpCd) };
+  });
 }

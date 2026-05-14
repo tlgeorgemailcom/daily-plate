@@ -2,6 +2,9 @@ import { json, error } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { execute, queryOne } from '$lib/server/turso';
 import { calcNutritionSR28 } from '$lib/server/calcNutritionSR28';
+import { buildRecipeCommunity } from '$lib/nutrition/buildRecipeCommunity';
+import type { CommunitySection, CommunityIngredient } from '$lib/nutrition/types';
+import { fetchNutrientsByNdb } from '$lib/server/nutrition/fetchNutrients';
 import { toStoredRecipeCategory } from '$lib/farmers-basket/recipe-categories';
 
 const EMPTY_NUTRITION_JSON = '{}';
@@ -37,6 +40,77 @@ function withDefaultServingCount(row: unknown): unknown {
 // Generate unique ID
 function generateId(): string {
   return `recipe-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+}
+
+// ── Community nutrition builder ────────────────────────────────────────────────
+// Called when sections[] are present and ingredients have ndbNo.
+// Returns { nutritionJson, plausibilityFlags } or null if insufficient data.
+async function calcCommunityNutrition(
+  ingredientsRaw: unknown[],
+  sectionsRaw: unknown[],
+  servings: unknown,
+  gramsPerServing: unknown,
+): Promise<{ nutritionJson: object | null; plausibilityFlags: string[] }> {
+  const sections = (sectionsRaw as unknown[]).filter(
+    (s): s is CommunitySection =>
+      !!s && typeof s === 'object' && typeof (s as Record<string, unknown>).sectionKey === 'string',
+  );
+  const ingredients: CommunityIngredient[] = (ingredientsRaw as unknown[]).map(r => {
+    const obj = r as Record<string, unknown>;
+    return {
+      ndbNo:        String(obj.ndbNo ?? ''),
+      portionGrams: Number(obj.portionGrams ?? 0),
+      sectionKey:   typeof obj.section === 'string' ? obj.section : undefined,
+      isOptional:   obj.ingredientStatus === 'optional' || obj.exempt === true,
+      exempt:       obj.ingredientStatus === 'exempt',
+    };
+  }).filter(i => i.ndbNo && i.portionGrams > 0);
+
+  if (ingredients.length === 0) return { nutritionJson: null, plausibilityFlags: [] };
+
+  const ndbNos = ingredients
+    .filter(i => !i.isOptional && !i.exempt)
+    .map(i => i.ndbNo);
+
+  const nutrientMap = await fetchNutrientsByNdb(ndbNos);
+
+  const servingsNum        = Math.max(1, Number(servings ?? 1));
+  const gramsPerServingNum = Math.max(1, Number(gramsPerServing ?? 100));
+
+  const result = buildRecipeCommunity(
+    sections,
+    ingredients,
+    nutrientMap,
+    servingsNum,
+    gramsPerServingNum,
+  );
+
+  const p100  = result.per100g;
+  const gps   = result.gramsPerServing;
+  const scale = gps / 100;
+  const nutritionJson = {
+    perServing: {
+      cal:  (p100.energy_KCal    ?? 0) * scale,
+      pro:  (p100.protein        ?? 0) * scale,
+      fat:  (p100.totalLipidFat  ?? 0) * scale,
+      carb: (p100.carbohydrate   ?? 0) * scale,
+      fib:  (p100.fiberTotalDietary ?? 0) * scale,
+      sug:  (p100.sugarsTotal    ?? 0) * scale,
+    },
+    per100g: {
+      Energy_KCal:       p100.energy_KCal       ?? 0,
+      Protein:           p100.protein           ?? 0,
+      TotalLipidFat:     p100.totalLipidFat     ?? 0,
+      Carbohydrate:      p100.carbohydrate      ?? 0,
+      FiberTotalDietary: p100.fiberTotalDietary ?? 0,
+      SugarsTotal:       p100.sugarsTotal       ?? 0,
+      Water:             p100.water             ?? 0,
+    },
+    gramsPerServing: gps,
+    servings:        servingsNum,
+  };
+
+  return { nutritionJson, plausibilityFlags: result.plausibility.flags };
 }
 
 // PATCH — promote a draft recipe to pending, or update its data
@@ -93,18 +167,42 @@ export const PATCH: RequestHandler = async ({ request }) => {
     const normalizedPatchDish = withDefaultServingCount(fields.dishLink);
 
     const canonicalPreview = isNutritionPreview(fields.nutritionJsonPreview) ? fields.nutritionJsonPreview : null;
-    const nutritionJson = canonicalPreview ?? (
-      (patchLinkType && patchIngredients.length > 0)
-        ? await calcNutritionSR28(
-            ((patchLinkType === 'dish' || patchLinkType === 'mixed')
-              ? [{ isDish: true, ...(normalizedPatchDish as object) }, ...normalizedPatchIngs]
-              : normalizedPatchIngs) as Parameters<typeof calcNutritionSR28>[0],
-            fields.linkType,
-            fields.servings,
-            fields.cookingMethod ?? fields.cookMethod ?? null
-          )
-        : null
-    );
+
+    // Community recipe path: when sections are present and all active ingredients
+    // have ndbNo, use buildRecipeCommunity for authoritative nutrition.
+    const patchSections = Array.isArray(fields.sections) ? fields.sections : [];
+    const patchHasCommunityBuild =
+      patchSections.length > 0 &&
+      patchIngredients.length > 0 &&
+      patchIngredients
+        .filter((r: unknown) => {
+          const obj = r as Record<string, unknown>;
+          return obj.ingredientStatus !== 'exempt' && obj.ingredientStatus !== 'optional' && obj.exempt !== true;
+        })
+        .every((r: unknown) => {
+          const obj = r as Record<string, unknown>;
+          return typeof obj.ndbNo === 'string' && (obj.ndbNo as string).trim().length > 0;
+        });
+
+    let patchNutritionJson: object | null = null;
+    let patchPlausibilityFlags: string[] = [];
+    if (canonicalPreview) {
+      patchNutritionJson = canonicalPreview;
+    } else if (patchHasCommunityBuild) {
+      const comm = await calcCommunityNutrition(patchIngredients, patchSections, fields.servings, fields.gramsPerServing ?? 100);
+      patchNutritionJson = comm.nutritionJson;
+      patchPlausibilityFlags = comm.plausibilityFlags;
+    } else if (patchLinkType && patchIngredients.length > 0) {
+      patchNutritionJson = await calcNutritionSR28(
+        ((patchLinkType === 'dish' || patchLinkType === 'mixed')
+          ? [{ isDish: true, ...(normalizedPatchDish as object) }, ...normalizedPatchIngs]
+          : normalizedPatchIngs) as Parameters<typeof calcNutritionSR28>[0],
+        fields.linkType,
+        fields.servings,
+        fields.cookingMethod ?? fields.cookMethod ?? null
+      );
+    }
+    const nutritionJson = patchNutritionJson;
 
     if (fields.recipeName) {
       await execute(
@@ -118,6 +216,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
           cooking_method = COALESCE(?, cooking_method),
           dish_family = COALESCE(?, dish_family),
           nutrition_json = ?,
+          plausibility_flags = ?,
           updated_at = datetime('now'),
           status = ?
         WHERE recipe_id = ?`,
@@ -137,6 +236,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
           fields.cookingMethod || fields.cookMethod || null,
           fields.dishFamily || null,
           nutritionJson ? JSON.stringify(nutritionJson) : EMPTY_NUTRITION_JSON,
+          patchPlausibilityFlags.length > 0 ? JSON.stringify(patchPlausibilityFlags) : null,
           newStatus,
           recipeId
         ]
@@ -211,24 +311,47 @@ export const POST: RequestHandler = async ({ request }) => {
     const normalizedPostDish = withDefaultServingCount(body.dishLink);
 
     const canonicalPreview = isNutritionPreview(body.nutritionJsonPreview) ? body.nutritionJsonPreview : null;
-    const computedNutrition = canonicalPreview ?? (
-      (postLinkType && postIngredients.length > 0)
-        ? await calcNutritionSR28(
-            ((postLinkType === 'dish' || postLinkType === 'mixed')
-              ? [{ isDish: true, ...(normalizedPostDish as object) }, ...normalizedPostIngs]
-              : normalizedPostIngs) as Parameters<typeof calcNutritionSR28>[0],
-            body.linkType,
-            body.servings,
-            body.cookingMethod ?? body.cookMethod ?? null
-          )
-        : null
-    );
+
+    // Community recipe path: sections present + all active ingredients have ndbNo.
+    const postSections = Array.isArray(body.sections) ? body.sections : [];
+    const postHasCommunityBuild =
+      postSections.length > 0 &&
+      postIngredients.length > 0 &&
+      postIngredients
+        .filter((r: unknown) => {
+          const obj = r as Record<string, unknown>;
+          return obj.ingredientStatus !== 'exempt' && obj.ingredientStatus !== 'optional' && obj.exempt !== true;
+        })
+        .every((r: unknown) => {
+          const obj = r as Record<string, unknown>;
+          return typeof obj.ndbNo === 'string' && (obj.ndbNo as string).trim().length > 0;
+        });
+
+    let computedNutrition: object | null = null;
+    let postPlausibilityFlags: string[] = [];
+    if (canonicalPreview) {
+      computedNutrition = canonicalPreview;
+    } else if (postHasCommunityBuild) {
+      const comm = await calcCommunityNutrition(postIngredients, postSections, body.servings, body.gramsPerServing ?? 100);
+      computedNutrition = comm.nutritionJson;
+      postPlausibilityFlags = comm.plausibilityFlags;
+    } else if (postLinkType && postIngredients.length > 0) {
+      computedNutrition = await calcNutritionSR28(
+        ((postLinkType === 'dish' || postLinkType === 'mixed')
+          ? [{ isDish: true, ...(normalizedPostDish as object) }, ...normalizedPostIngs]
+          : normalizedPostIngs) as Parameters<typeof calcNutritionSR28>[0],
+        body.linkType,
+        body.servings,
+        body.cookingMethod ?? body.cookMethod ?? null
+      );
+    }
+
     const nutritionJson = computedNutrition ? JSON.stringify(computedNutrition) : EMPTY_NUTRITION_JSON;
     const ingHash = Array.isArray(body.ingredients)
       ? body.ingredients.map((r: any) => `${r.ndbNo || r.foodWord || 'unlinked'}:${r.portionGrams}`).join('|')
       : '';
-    console.log(`[SUBMIT] linkType=${body.linkType} rows=${body.ingredients?.length ?? 0} cal=${computedNutrition?.perServing?.cal ?? 'null'} ings=[${ingHash}]`);
-    const gramsPerServing = computedNutrition?.gramsPerServing ?? 0;
+    console.log(`[SUBMIT] linkType=${body.linkType} community=${postHasCommunityBuild} rows=${body.ingredients?.length ?? 0} cal=${(computedNutrition as any)?.perServing?.cal ?? 'null'} ings=[${ingHash}]`);
+    const gramsPerServing = (computedNutrition as any)?.gramsPerServing ?? 0;
     
     // Insert into Turso
     await execute(
@@ -238,6 +361,7 @@ export const POST: RequestHandler = async ({ request }) => {
         recipe_ingredients_json, recipe_instructions_json,
         sections_json,
         image_url, link_type, cooking_method, dish_family, nutrition_json,
+        plausibility_flags,
         submitter_name, status, created_at, updated_at,
         grams_per_serving, nutrient_version, retention_model_version, source_match_version
       ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'), datetime('now'), ?, ?, ?, ?)`,
@@ -259,6 +383,7 @@ export const POST: RequestHandler = async ({ request }) => {
         body.cookingMethod || body.cookMethod || null,
         body.dishFamily || null,
         nutritionJson,
+        postPlausibilityFlags.length > 0 ? JSON.stringify(postPlausibilityFlags) : null,
         submitterName,
         status
         ,gramsPerServing,

@@ -44,6 +44,12 @@
     cookMethod?: string;
     /** Backward-compat alias accepted from older API responses. */
     cookingMethod?: string;
+    /** Oven temperature °F — used by community recipe yield model for baked sections. */
+    cookTempF?: number;
+    /** Oven time in minutes — used by community recipe yield model for baked sections. */
+    cookMinutes?: number;
+    /** Stovetop boil/simmer time in minutes — used for boiled sections. */
+    boilMinutes?: number;
     yieldFactorWater?: number;
     yieldFactorFat?: number;
     yieldFactorOther?: number;
@@ -304,6 +310,25 @@
   let nutritionSearchTimers = new Map<number, ReturnType<typeof setTimeout>>();
   let nutritionSearchRequestIds = new Map<number, number>();
 
+  // NutrientRow cache — populated when ingredient search results come back from
+  // /api/recipes/food-search. Used by buildNutritionPayload() to send community
+  // build data to preview-nutrition without extra round-trips.
+  // Key: ndbNo string.
+  type NutrientRowCache = {
+    ndbNo: string; longDesc: string; fdGrpCd: string;
+    energy_KCal: number; water: number; protein: number; totalLipidFat: number;
+    carbohydrate: number; sugarsTotal: number; fiberTotalDietary: number; ash: number;
+    fattyAcids_totalSaturated: number; fattyAcids_totalMonounsaturated: number;
+    fattyAcids_totalPolyunsaturated: number; cholesterol: number;
+    calcium_Ca: number; iron_Fe: number; magnesium_Mg: number; phosphorus_P: number;
+    potassium_K: number; sodium_Na: number; zinc_Zn: number;
+    vitaminC_totalAscorbicAcid: number; thiamin: number; riboflavin: number;
+    niacin: number; vitaminB6: number; folateDFE: number; vitaminB12: number;
+    vitaminA_RAE: number; vitaminD: number; vitaminE_alphaTocopherol: number;
+    vitaminK_phylloquinone: number;
+  };
+  let nutrientCache = $state(new Map<string, NutrientRowCache>());
+
   function normalizeSearchText(value: string): string {
     return value
       .toLowerCase()
@@ -371,9 +396,15 @@
   async function fetchRemoteFoods(query: string, limit = 20): Promise<FoodData[]> {
     const params = new URLSearchParams({ q: query.trim(), limit: String(limit) });
     const res = await fetch(`/api/recipes/food-search?${params.toString()}`);
-    const data = await res.json() as { foods?: FoodData[] };
+    const data = await res.json() as { foods?: Array<FoodData & { nutrients?: NutrientRowCache }> };
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    return hydrateRemoteFoods(data.foods ?? []);
+    // Cache NutrientRow for each result so buildNutritionPayload can include them.
+    for (const f of data.foods ?? []) {
+      if (f.nutrients && f.ndb) {
+        nutrientCache = new Map(nutrientCache).set(f.ndb, f.nutrients);
+      }
+    }
+    return hydrateRemoteFoods((data.foods ?? []).map(f => ({ ...f, nutrients: undefined })));
   }
 
   function queueDishFoodSearch(query: string) {
@@ -762,27 +793,58 @@
   );
 
   function buildNutritionPayload() {
+    const mappedIngredients = ingredients
+      .filter((i) => i.name.trim() && hasIngredientNutritionLink(i))
+      .map((i) => {
+        return {
+          name: i.name.trim(),
+          ndbNo: i.ndbNo,
+          foodWord: i.foodWord,
+          portionGrams: i.portionGrams,
+          servingCount: i.servingCount ?? 1,
+          section: i.section,
+          exempt: i.ingredientStatus === 'exempt' || i.ingredientStatus === 'optional',
+        };
+      });
+
+    // Community recipe path: sections defined, all active ingredients have ndbNo.
+    // Send sections + per-ingredient nutrients so preview-nutrition can use buildRecipeCommunity.
+    const activeMapped = mappedIngredients.filter(i => !i.exempt);
+    const isCommunityBuild =
+      sections.length > 0 &&
+      activeMapped.length > 0 &&
+      activeMapped.every(i => typeof i.ndbNo === 'string' && i.ndbNo.trim().length > 0);
+
+    const communityNutrients: Record<string, NutrientRowCache> = {};
+    if (isCommunityBuild) {
+      for (const i of activeMapped) {
+        const nr = i.ndbNo ? nutrientCache.get(i.ndbNo) : undefined;
+        if (nr) communityNutrients[i.ndbNo!] = nr;
+      }
+    }
+
     return {
-      // Only send linked rows to the preview API. Unlinked rows are not yet
-      // calculable and are excluded from the live preview rather than blocking it.
-      ingredients: ingredients
-        .filter((i) => i.name.trim() && hasIngredientNutritionLink(i))
-        .map((i) => {
-          return {
-            name: i.name.trim(),
-            ndbNo: i.ndbNo,
-            foodWord: i.foodWord,
-            portionGrams: i.portionGrams,
-            servingCount: i.servingCount ?? 1,
-            exempt: i.ingredientStatus === 'exempt' || i.ingredientStatus === 'optional',
-          };
-        }),
+      ingredients: mappedIngredients,
       dishLink: dishLink ?? undefined,
       linkType: linkMode,
       servings,
       cookingMethod,
       ...(typeof yieldFactorWater === 'number' ? { yieldFactorWater } : {}),
       ...(typeof yieldFactorFat   === 'number' ? { yieldFactorFat }   : {}),
+      ...(isCommunityBuild ? {
+        communityBuild: true,
+        sections: sections
+          .filter(s => s.isPrepStep === false)
+          .map(s => ({
+            sectionKey:   s.key,
+            sectionLabel: s.label || s.key,
+            cookMethod:   s.cookMethod ?? 'raw',
+            cookTempF:    s.cookTempF,
+            cookMinutes:  s.cookMinutes,
+            boilMinutes:  s.boilMinutes,
+          })),
+        nutrientMap: communityNutrients,
+      } : {}),
     };
   }
 
@@ -2303,6 +2365,43 @@
               {/each}
             </select>
           </div>
+          {#if sec.cookMethod === 'baked'}
+            <div class="section-cook-params-row">
+              <label class="section-method-label">
+                Oven temp (°F)
+                <input
+                  type="number"
+                  min="200" max="550" step="25"
+                  placeholder="e.g. 350"
+                  bind:value={sec.cookTempF}
+                  class="form-input section-cook-param-input"
+                />
+              </label>
+              <label class="section-method-label">
+                Time (min)
+                <input
+                  type="number"
+                  min="1" max="300" step="1"
+                  placeholder="e.g. 45"
+                  bind:value={sec.cookMinutes}
+                  class="form-input section-cook-param-input"
+                />
+              </label>
+            </div>
+          {:else if sec.cookMethod === 'boiled' || sec.cookMethod === 'steamed'}
+            <div class="section-cook-params-row">
+              <label class="section-method-label">
+                Simmer time (min)
+                <input
+                  type="number"
+                  min="1" max="300" step="1"
+                  placeholder="e.g. 20"
+                  bind:value={sec.boilMinutes}
+                  class="form-input section-cook-param-input"
+                />
+              </label>
+            </div>
+          {/if}
           {#if sectionTipOpen[sIdx]}
             <div class="final-cook-tip" onclick={(e) => e.stopPropagation()}>
               The dominant heat stage when the assembled dish is complete. This drives the USDA nutrient retention calculation — not the prep step before assembly.

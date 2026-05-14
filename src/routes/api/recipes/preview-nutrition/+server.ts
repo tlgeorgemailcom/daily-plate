@@ -1,6 +1,8 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { calcNutritionSR28 } from '$lib/server/calcNutritionSR28';
+import { buildRecipeCommunity } from '$lib/nutrition/buildRecipeCommunity';
+import type { CommunitySection, CommunityIngredient, NutrientRow } from '$lib/nutrition/types';
 
 function hasValidLink(row: unknown): boolean {
   if (!row || typeof row !== 'object') return false;
@@ -59,6 +61,9 @@ export const POST: RequestHandler = async ({ request }) => {
     cookingMethod,
     yieldFactorWater,
     yieldFactorFat,
+    communityBuild,
+    sections: sectionsRaw,
+    nutrientMap: nutrientMapRaw,
   } = body as Record<string, unknown>;
 
   if (typeof linkType !== 'string' || !linkType) {
@@ -72,6 +77,71 @@ export const POST: RequestHandler = async ({ request }) => {
   const rawIngs: unknown[] = Array.isArray(ingredients) ? ingredients : [];
   if (rawIngs.length === 0 && !dishLink) {
     return json({ nutritionJson: null });
+  }
+
+  // ── Community recipe fast-path ──────────────────────────────────────────────
+  // When the form sends communityBuild=true with sections + embedded NutrientRow
+  // data (nutrientMap), use buildRecipeCommunity for the live preview.
+  // This avoids an extra Turso round-trip because the browser cached nutrients
+  // from the ingredient search results.
+  if (communityBuild === true && Array.isArray(sectionsRaw) && sectionsRaw.length > 0) {
+    const rawMap = (nutrientMapRaw && typeof nutrientMapRaw === 'object') ? nutrientMapRaw as Record<string, NutrientRow> : {};
+    const nutrientMap = new Map<string, NutrientRow>(Object.entries(rawMap));
+    const sectionsList = (sectionsRaw as unknown[]).filter(
+      (s): s is CommunitySection =>
+        !!s && typeof s === 'object' &&
+        typeof (s as Record<string, unknown>).sectionKey === 'string'
+    );
+    const ingList: CommunityIngredient[] = (rawIngs as unknown[]).map(r => {
+      const obj = r as Record<string, unknown>;
+      return {
+        ndbNo:         String(obj.ndbNo ?? ''),
+        portionGrams:  Number(obj.portionGrams ?? 0),
+        sectionKey:    typeof obj.section === 'string' ? obj.section : undefined,
+        isOptional:    obj.exempt === true,
+        exempt:        false,
+      };
+    }).filter(i => i.ndbNo && i.portionGrams > 0);
+
+    const servingsNum = Number(servings ?? 1);
+    const gramsPerServing = 100; // placeholder; refined at save time
+
+    const buildResult = buildRecipeCommunity(
+      sectionsList,
+      ingList,
+      nutrientMap,
+      servingsNum > 0 ? servingsNum : 1,
+      gramsPerServing,
+    );
+
+    // Map BuildResult → PreviewNutrition shape for the form
+    const p100 = buildResult.per100g;
+    const gps  = buildResult.gramsPerServing;
+    const srv  = buildResult.servings;
+    const scale = gps / 100;
+    const nutritionJson = {
+      perServing: {
+        cal:  ((p100.energy_KCal ?? 0) * scale),
+        pro:  ((p100.protein     ?? 0) * scale),
+        fat:  ((p100.totalLipidFat ?? 0) * scale),
+        carb: ((p100.carbohydrate ?? 0) * scale),
+        fib:  ((p100.fiberTotalDietary ?? 0) * scale),
+        sug:  ((p100.sugarsTotal  ?? 0) * scale),
+      },
+      per100g: {
+        Energy_KCal:       p100.energy_KCal       ?? 0,
+        Protein:           p100.protein           ?? 0,
+        TotalLipidFat:     p100.totalLipidFat     ?? 0,
+        Carbohydrate:      p100.carbohydrate      ?? 0,
+        FiberTotalDietary: p100.fiberTotalDietary ?? 0,
+        SugarsTotal:       p100.sugarsTotal       ?? 0,
+        Water:             p100.water             ?? 0,
+      },
+      gramsPerServing: gps,
+      servings: srv,
+    };
+    console.log(`[PREVIEW/community] sections=${sectionsList.length} ings=${ingList.length} cal=${nutritionJson.perServing.cal.toFixed(1)}`);
+    return json({ nutritionJson, canonical: null });
   }
 
   // Drop any rows that are not yet nutritionally linked. Live preview computes

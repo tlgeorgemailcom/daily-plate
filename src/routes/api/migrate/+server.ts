@@ -300,6 +300,16 @@ export const GET: RequestHandler = async () => {
       results['stripe_subscription_id_already_exists'] = true;
     }
 
+    // player_recipes: plausibility_flags (JSON array of warning strings from community recipe build)
+    const playerRecipesSchema = await db.execute('PRAGMA table_info(player_recipes)');
+    const playerRecipesCols = playerRecipesSchema.rows.map((r: Record<string, unknown>) => r['name'] as string);
+    if (!playerRecipesCols.includes('plausibility_flags')) {
+      await db.execute('ALTER TABLE player_recipes ADD COLUMN plausibility_flags TEXT');
+      results['added_player_recipes_plausibility_flags'] = true;
+    } else {
+      results['player_recipes_plausibility_flags_already_exists'] = true;
+    }
+
     return json({ success: true, ...results });
   } catch (err) {
     return json({ success: false, error: String(err) });

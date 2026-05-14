@@ -1,0 +1,150 @@
+/**
+ * yieldCalc.ts — Physics-based water yield calculator.
+ *
+ * TypeScript port of recipes_v3/lib/yield_calc.py (Python, curator pipeline).
+ * Constants seeded from yield_calc.py calibration values, 2026-05-14.
+ * The two pipelines are independent — constants evolve separately.
+ *
+ * ALGORITHM
+ * ─────────
+ * Moisture loss follows first-order exponential decay applied only to the
+ * "free" water fraction of the filling:
+ *
+ *   yield_water = (bound_water + free_water_after_stages) / initial_water
+ *   free_water[i] = free_water[i-1] × exp(−k(T) × t)
+ *   k(T) = K_REF × (T_°F / T_REF) ^ N_TEMP
+ *
+ * Processing order: stovetop boil first (Stage 0), then oven stages in sequence.
+ *
+ * See docs/vercel_pipeline.md §5 for full specification.
+ */
+
+// ── Calibration constants ─────────────────────────────────────────────────────
+
+const K_REF      = 0.008;   // base evaporation rate constant at T_REF (per min)
+const N_TEMP     = 1.8;     // temperature sensitivity exponent
+const T_REF      = 350.0;   // reference temperature °F
+const BOIL_K_REF = 0.236;   // open-pot stovetop evaporation rate constant
+                             // ~29× higher than oven k — convective surface evap
+
+// ── Binding coefficients ──────────────────────────────────────────────────────
+// Fraction of initial water that is free to evaporate (0 = none, 1 = all).
+// Back-calculated from locked curated recipes (May 2026).
+
+export const BINDING: Record<string, number> = {
+  dense_fruit:       0.94,   // apple/pear baked open
+  strudel_fruit:     0.55,   // fruit in wrapped pastry
+  thickened_fruit:   0.25,   // cornstarch-thickened berry/cherry
+  mincemeat:         0.57,   // dried/cooked fruit + fat + spirits
+  moderate_fruit:    0.40,   // partially thickened stone fruit
+  syrup_custard:     0.53,   // corn syrup / egg matrix
+  vegetable_custard: 0.12,   // pumpkin/squash purée
+  dairy_custard:     0.33,   // cream/milk/egg custard
+  starch_custard:    0.099,  // cornstarch-thickened custard (crème pâtissière)
+  cake_batter:       0.74,   // flour/butter/egg batter
+  pastry:            0.782,  // blind-baked pie crust
+  crumb_crust:       0.432,  // baked cookie/cracker crumb crust
+  none:              0.00,   // stovetop cold-set or no-bake — no evaporation
+  // meringue: NOT included — model invalid for surface-browning sections.
+  // Never pass 'meringue' to this function. inferFillingClass() never emits it.
+};
+
+// ── Core functions ────────────────────────────────────────────────────────────
+
+/**
+ * Evaporation rate constant k at temperature tempF (°F).
+ */
+export function rateConstant(tempF: number): number {
+  return K_REF * Math.pow(tempF / T_REF, N_TEMP);
+}
+
+/**
+ * Compute yield_water for a filling section cooked through optional stovetop
+ * boiling followed by zero or more oven-bake stages.
+ *
+ * @param stages        Ordered list of oven [tempF, minutes] pairs.
+ *                      Single stage:    [[350, 55]]
+ *                      Two-stage:       [[425, 15], [350, 45]]
+ *                      Boil-only:       []
+ * @param initialWaterG Total water mass (g) in the raw filling ingredients.
+ * @param fillingClass  Key from BINDING. Defaults to 'none' (yfw = 1.0).
+ * @param boilMinutes   Minutes of open-pot stovetop boiling BEFORE oven stages.
+ *
+ * @returns yield_water (0 < value ≤ 1.0)
+ *
+ * @example
+ * // Pumpkin pie: two-stage bake, vegetable custard
+ * calcYieldWater([[425, 15], [350, 45]], 756.0, 'vegetable_custard') // ≈ 0.959
+ *
+ * // Vanilla custard: stovetop boil only
+ * calcYieldWater([], 380.0, 'dairy_custard', 8.0) // ≈ 0.720
+ */
+export function calcYieldWater(
+  stages: Array<[tempF: number, minutes: number]>,
+  initialWaterG: number,
+  fillingClass: string = 'none',
+  boilMinutes: number = 0,
+): number {
+  if (initialWaterG <= 0) return 1.0;
+
+  const binding    = BINDING[fillingClass] ?? BINDING['none'];
+  let freeWater    = initialWaterG * binding;
+  const boundWater = initialWaterG * (1.0 - binding);
+
+  // Stage 0: stovetop boil (open-pot, convective evaporation)
+  if (boilMinutes > 0) {
+    freeWater *= Math.exp(-BOIL_K_REF * boilMinutes);
+  }
+
+  // Stages 1-N: oven bake (diffusion-limited, temperature-dependent)
+  for (const [tempF, minutes] of stages) {
+    if (minutes <= 0) continue;
+    const k = rateConstant(tempF);
+    freeWater *= Math.exp(-k * minutes);
+  }
+
+  return (freeWater + boundWater) / initialWaterG;
+}
+
+// ── Validation (run with: npx tsx src/lib/nutrition/yieldCalc.ts) ─────────────
+
+const CALIBRATION_CASES: Array<{
+  recipe: string;
+  fillingClass: string;
+  stages: Array<[number, number]>;
+  boilMinutes?: number;
+  initialWater: number;
+  expected: number;
+}> = [
+  { recipe: 'SWEET_001 Apple Pie',             fillingClass: 'dense_fruit',       stages: [[425, 15], [350, 37]], initialWater: 722.5, expected: 0.65 },
+  { recipe: 'SWEET_002 Apple Strudel',         fillingClass: 'strudel_fruit',     stages: [[375, 35]],            initialWater: 380.0, expected: 0.85 },
+  { recipe: 'SWEET_004 Blueberry Pie',         fillingClass: 'thickened_fruit',   stages: [[425, 25], [375, 52]], initialWater: 420.0, expected: 0.87 },
+  { recipe: 'SWEET_005 Cherry Pie',            fillingClass: 'thickened_fruit',   stages: [[425, 25], [375, 52]], initialWater: 380.0, expected: 0.87 },
+  { recipe: 'SWEET_007 Mince Pie',             fillingClass: 'mincemeat',         stages: [[425, 20], [375, 32]], initialWater: 320.0, expected: 0.77 },
+  { recipe: 'SWEET_008 Peach Pie',             fillingClass: 'moderate_fruit',    stages: [[425, 20], [375, 27]], initialWater: 480.0, expected: 0.85 },
+  { recipe: 'SWEET_009 Pecan Pie',             fillingClass: 'syrup_custard',     stages: [[350, 55]],            initialWater: 213.3, expected: 0.81 },
+  { recipe: 'SWEET_010 Pumpkin Pie',           fillingClass: 'vegetable_custard', stages: [[425, 15], [350, 45]], initialWater: 756.0, expected: 0.95 },
+  { recipe: 'SWEET_012 Pineapple Upside-Down', fillingClass: 'cake_batter',       stages: [[350, 24]],            initialWater: 310.0, expected: 0.87 },
+  { recipe: 'SWEET_015 Egg Custard Pie',       fillingClass: 'dairy_custard',     stages: [[325, 40]],            initialWater: 380.0, expected: 0.92 },
+];
+
+export function validateCalibration(tolerance = 0.02): void {
+  const pad = (s: string, n: number) => s.padEnd(n);
+  console.log(`${pad('Recipe', 30)} ${pad('Class', 22)} ${'Calc'.padStart(6)} ${'Exp'.padStart(6)} ${'Δ'.padStart(7)}  OK`);
+  console.log('─'.repeat(78));
+  let allPass = true;
+  for (const c of CALIBRATION_CASES) {
+    const calc  = calcYieldWater(c.stages, c.initialWater, c.fillingClass, c.boilMinutes ?? 0);
+    const delta = calc - c.expected;
+    const ok    = Math.abs(delta) <= tolerance;
+    if (!ok) allPass = false;
+    console.log(`${pad(c.recipe, 30)} ${pad(c.fillingClass, 22)} ${calc.toFixed(3).padStart(6)} ${c.expected.toFixed(3).padStart(6)} ${(delta >= 0 ? '+' : '') + delta.toFixed(3).padStart(6)}  ${ok ? '✓' : '✗'}`);
+  }
+  console.log();
+  console.log(allPass ? 'All calibration cases pass.' : '⚠ One or more cases failed.');
+}
+
+// Allow running directly: npx tsx src/lib/nutrition/yieldCalc.ts
+if (typeof process !== 'undefined' && process.argv[1]?.endsWith('yieldCalc.ts')) {
+  validateCalibration();
+}

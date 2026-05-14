@@ -1,6 +1,6 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import { searchSr28Foods } from '$lib/server/sr28Search';
+import { searchSr28FoodsWithNutrients } from '$lib/server/sr28Search';
 
 export const GET: RequestHandler = async ({ url }) => {
   const query = url.searchParams.get('q')?.trim() ?? '';
@@ -11,7 +11,7 @@ export const GET: RequestHandler = async ({ url }) => {
   }
 
   try {
-    const foods = await searchSr28Foods(query, 'all', limitParam);
+    const foods = await searchSr28FoodsWithNutrients(query, 'all', limitParam);
     return json({ foods });
   } catch (error) {
     console.error('[/api/recipes/food-search] sr28 search error:', error);
