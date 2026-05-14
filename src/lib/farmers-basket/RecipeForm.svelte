@@ -962,6 +962,7 @@
         }));
         const ci: CommunityIngredient[] = activeIngs.map(i => ({
           ndbNo:        i.ndbNo!,
+          displayName:  i.name,
           portionGrams: i.portionGrams!,
           sectionKey:   i.section ?? undefined,
           isOptional:   false,

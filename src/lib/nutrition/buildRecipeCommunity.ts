@@ -191,10 +191,10 @@ export function buildRecipeCommunity(
     // Separate active from skipped
     const active: Array<{ grams: number; nutrients: NutrientRow }> = [];
     for (const ing of bucket) {
-      if (ing.isOptional) { skipped.push({ ndbNo: ing.ndbNo, reason: 'optional' }); continue; }
-      if (ing.exempt)     { skipped.push({ ndbNo: ing.ndbNo, reason: 'exempt'   }); continue; }
+      if (ing.isOptional) { skipped.push({ ndbNo: ing.ndbNo, displayName: ing.displayName, reason: 'optional' }); continue; }
+      if (ing.exempt)     { skipped.push({ ndbNo: ing.ndbNo, displayName: ing.displayName, reason: 'exempt'   }); continue; }
       const nr = nutrientMap.get(ing.ndbNo);
-      if (!nr)            { skipped.push({ ndbNo: ing.ndbNo, reason: 'missing_ndb' }); continue; }
+      if (!nr)            { skipped.push({ ndbNo: ing.ndbNo, displayName: ing.displayName, reason: 'missing_ndb' }); continue; }
       active.push({ grams: ing.portionGrams, nutrients: nr });
     }
     globalSkipped.push(...skipped);

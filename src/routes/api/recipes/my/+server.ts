@@ -59,7 +59,7 @@ async function calcCommunityNutrition(
   sectionsRaw: unknown[],
   servings: unknown,
   gramsPerServing: unknown,
-): Promise<{ nutritionJson: object | null; plausibilityFlags: string[] }> {
+): Promise<{ nutritionJson: object | null; plausibilityFlags: string[]; blocked: boolean; missingIngredients: Array<{ ndbNo: string; displayName?: string }> }> {
   const sections = (sectionsRaw as unknown[]).filter(
     (s): s is CommunitySection =>
       !!s && typeof s === 'object' && typeof (s as Record<string, unknown>).sectionKey === 'string',
@@ -68,6 +68,7 @@ async function calcCommunityNutrition(
     const obj = r as Record<string, unknown>;
     return {
       ndbNo:        String(obj.ndbNo ?? ''),
+      displayName:  String(obj.name ?? obj.displayName ?? ''),
       portionGrams: Number(obj.portionGrams ?? 0),
       sectionKey:   typeof obj.section === 'string' ? obj.section : undefined,
       isOptional:   obj.ingredientStatus === 'optional' || obj.exempt === true,
@@ -75,7 +76,7 @@ async function calcCommunityNutrition(
     };
   }).filter(i => i.ndbNo && i.portionGrams > 0);
 
-  if (ingredients.length === 0) return { nutritionJson: null, plausibilityFlags: [] };
+  if (ingredients.length === 0) return { nutritionJson: null, plausibilityFlags: [], blocked: false, missingIngredients: [] };
 
   const ndbNos = ingredients
     .filter(i => !i.isOptional && !i.exempt)
@@ -111,7 +112,7 @@ async function calcCommunityNutrition(
     gramsPerServing: gps,
     servings:        servingsNum,
   };
-  return { nutritionJson, plausibilityFlags: result.plausibility.flags };
+  return { nutritionJson, plausibilityFlags: result.plausibility.flags, blocked: result.plausibility.blocked, missingIngredients: result.plausibility.missingIngredients };
 }
 
 // GET: Fetch recipes by IDs (anonymous) OR by player_id (subscribers)
@@ -291,6 +292,9 @@ export const PATCH: RequestHandler = async ({ request }) => {
         updates.servings,
         (updates as { gramsPerServing?: unknown }).gramsPerServing ?? 100
       );
+      if (comm.blocked) {
+        return json({ error: 'missing_ndb', missingIngredients: comm.missingIngredients }, { status: 422 });
+      }
       if (comm.nutritionJson) nutritionJson = JSON.stringify(comm.nutritionJson);
       plausibilityFlags = comm.plausibilityFlags;
     }

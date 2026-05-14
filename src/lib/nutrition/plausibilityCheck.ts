@@ -66,9 +66,10 @@ export function plausibilityCheck(
   }
 
   // ── Check 4: missing NDB ─────────────────────────────────────────────────────
-  const missingNdbs = skipped.filter(s => s.reason === 'missing_ndb').map(s => s.ndbNo);
-  if (missingNdbs.length > 0) {
-    flags.push(`MISSING_NDB: ${missingNdbs.length} ingredient(s) have no NDB match: ${missingNdbs.join(', ')}`);
+  const missingEntries = skipped.filter(s => s.reason === 'missing_ndb');
+  if (missingEntries.length > 0) {
+    const labels = missingEntries.map(s => s.displayName ? `${s.displayName} (${s.ndbNo})` : s.ndbNo);
+    flags.push(`MISSING_NDB: ${missingEntries.length} ingredient(s) have no NDB match: ${labels.join(', ')}`);
     blocked = true;   // recipe cannot be published until these are resolved
   }
 
@@ -88,5 +89,6 @@ export function plausibilityCheck(
     passed:  flags.length === 0,
     flags,
     blocked,
+    missingIngredients: missingEntries.map(s => ({ ndbNo: s.ndbNo, displayName: s.displayName })),
   };
 }

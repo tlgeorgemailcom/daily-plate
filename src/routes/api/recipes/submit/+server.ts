@@ -33,13 +33,13 @@ function generateId(): string {
 
 // ── Community nutrition builder ────────────────────────────────────────────────
 // Called when sections[] are present and ingredients have ndbNo.
-// Returns { nutritionJson, plausibilityFlags } or null if insufficient data.
+// Returns { nutritionJson, plausibilityFlags, blocked, missingIngredients } or null if insufficient data.
 async function calcCommunityNutrition(
   ingredientsRaw: unknown[],
   sectionsRaw: unknown[],
   servings: unknown,
   gramsPerServing: unknown,
-): Promise<{ nutritionJson: object | null; plausibilityFlags: string[] }> {
+): Promise<{ nutritionJson: object | null; plausibilityFlags: string[]; blocked: boolean; missingIngredients: Array<{ ndbNo: string; displayName?: string }> }> {
   const sections = (sectionsRaw as unknown[]).filter(
     (s): s is CommunitySection =>
       !!s && typeof s === 'object' && typeof (s as Record<string, unknown>).sectionKey === 'string',
@@ -48,6 +48,7 @@ async function calcCommunityNutrition(
     const obj = r as Record<string, unknown>;
     return {
       ndbNo:        String(obj.ndbNo ?? ''),
+      displayName:  String(obj.name ?? obj.displayName ?? ''),
       portionGrams: Number(obj.portionGrams ?? 0),
       sectionKey:   typeof obj.section === 'string' ? obj.section : undefined,
       isOptional:   obj.ingredientStatus === 'optional' || obj.exempt === true,
@@ -55,7 +56,7 @@ async function calcCommunityNutrition(
     };
   }).filter(i => i.ndbNo && i.portionGrams > 0);
 
-  if (ingredients.length === 0) return { nutritionJson: null, plausibilityFlags: [] };
+  if (ingredients.length === 0) return { nutritionJson: null, plausibilityFlags: [], blocked: false, missingIngredients: [] };
 
   const ndbNos = ingredients
     .filter(i => !i.isOptional && !i.exempt)
@@ -99,7 +100,7 @@ async function calcCommunityNutrition(
     servings:        servingsNum,
   };
 
-  return { nutritionJson, plausibilityFlags: result.plausibility.flags };
+  return { nutritionJson, plausibilityFlags: result.plausibility.flags, blocked: result.plausibility.blocked, missingIngredients: result.plausibility.missingIngredients };
 }
 
 // PATCH — promote a draft recipe to pending, or update its data
@@ -176,6 +177,9 @@ export const PATCH: RequestHandler = async ({ request }) => {
       patchNutritionJson = canonicalPreview;
     } else if (patchHasCommunityBuild) {
       const comm = await calcCommunityNutrition(patchIngredients, patchSections, fields.servings, fields.gramsPerServing ?? 100);
+      if (comm.blocked) {
+        return json({ error: 'missing_ndb', missingIngredients: comm.missingIngredients }, { status: 422 });
+      }
       patchNutritionJson = comm.nutritionJson;
       patchPlausibilityFlags = comm.plausibilityFlags;
     }
@@ -307,6 +311,9 @@ export const POST: RequestHandler = async ({ request }) => {
       computedNutrition = canonicalPreview;
     } else if (postHasCommunityBuild) {
       const comm = await calcCommunityNutrition(postIngredients, postSections, body.servings, body.gramsPerServing ?? 100);
+      if (comm.blocked) {
+        return json({ error: 'missing_ndb', missingIngredients: comm.missingIngredients }, { status: 422 });
+      }
       computedNutrition = comm.nutritionJson;
       postPlausibilityFlags = comm.plausibilityFlags;
     }

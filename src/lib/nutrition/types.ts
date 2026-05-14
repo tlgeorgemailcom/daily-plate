@@ -95,6 +95,7 @@ export type MacroMap = Partial<Record<keyof Omit<NutrientRow, 'ndbNo' | 'longDes
 /** What was skipped and why, for transparency */
 export interface SkippedIngredient {
   ndbNo: string;
+  displayName?: string;   // ingredient name for user-facing error messages
   reason: 'optional' | 'exempt' | 'missing_ndb';
 }
 
@@ -132,4 +133,6 @@ export interface PlausibilityResult {
    * false = plausibility issues are warnings only; recipe can be stored.
    */
   blocked: boolean;
+  /** Ingredients that triggered the MISSING_NDB block — used for player-facing error */
+  missingIngredients: Array<{ ndbNo: string; displayName?: string }>;
 }

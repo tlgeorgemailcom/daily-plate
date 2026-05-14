@@ -678,7 +678,18 @@
       ...(resolvedSections ? { sections: resolvedSections } : {})
     };
   }
-  
+
+  /** Format a 422 missing_ndb error body into a player-facing message */
+  function formatMissingNdbError(body: Record<string, unknown>): string {
+    const missing = body.missingIngredients as Array<{ ndbNo: string; displayName?: string }> | undefined;
+    if (missing && missing.length > 0) {
+      const names = missing.map(m => m.displayName || m.ndbNo).join(', ');
+      const verb = missing.length === 1 ? 'has' : 'have';
+      return `Can't save — ${names} ${verb} no food data linked. Use the link button (🔗) next to each ingredient to search for a match, or mark the ingredient as exempt.`;
+    }
+    return `Can't save — one or more ingredients have no food data linked. Please link each ingredient to an NDB food entry or mark it as exempt.`;
+  }
+
   // Handle moderator save
   async function handleModeratorSave(data: RecipeFormData) {
     if (!selectedLevel) return;
@@ -1125,6 +1136,7 @@
 
       if (!res.ok) {
         const body = await res.json().catch(() => ({}));
+        if (body.error === 'missing_ndb') throw new Error(formatMissingNdbError(body));
         throw new Error(body.error || 'Failed to save');
       }
 
@@ -1190,6 +1202,7 @@
       });
       if (!res.ok) {
         const body = await res.json().catch(() => ({}));
+        if (body.error === 'missing_ndb') throw new Error(formatMissingNdbError(body));
         throw new Error(body.error || 'Failed to save draft');
       }
       const result = await res.json().catch(() => ({}));
@@ -1390,6 +1403,7 @@
 
       if (!res.ok) {
         const body = await res.json().catch(() => ({}));
+        if (body.error === 'missing_ndb') throw new Error(formatMissingNdbError(body));
         throw new Error(body.error || 'Failed to save draft');
       }
 
