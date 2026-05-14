@@ -1056,7 +1056,7 @@ export const LEVELS: Level[] = [
       { name: 'light corn syrup', quantity: '1 tablespoon', section: 'glaze', ndbNo: '19350', portionDesc: 'g', portionGrams: 22.0 },
       { name: 'pure vanilla extract', quantity: '1 teaspoon', section: 'glaze', ndbNo: '2050', portionDesc: 'g', portionGrams: 4.2 },
       { name: 'bittersweet chocolate, finely chopped; semisweet proxy', quantity: '4 ounces', section: 'glaze', ndbNo: '19080', portionDesc: 'g', portionGrams: 113.0 },
-      { name: 'confectioners sugar, sifted', quantity: '1/2 pound', section: 'glaze', ndbNo: '19336', portionDesc: 'g', portionGrams: 227.0 }
+      { name: 'powdered sugar', quantity: '2 cups', section: 'glaze', ndbNo: '19336', portionDesc: 'g', portionGrams: 227.0 }
     ],
     recipeInstructions: [
       'Sift the powdered sugar and cocoa powder together into a medium bowl.',
