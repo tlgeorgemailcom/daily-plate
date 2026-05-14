@@ -1,0 +1,228 @@
+{
+  "recipe_id": "SWEET_010",
+  "recipe_name": "Pumpkin Pie",
+  "sr_rule": "Rule B",
+  "canonical_ndb_no": "18327",
+  "cook_method": "bake",
+  "cook_method_normalized": "baked",
+  "yield_factor_water": 0.95,
+  "yield_factor_fat": 1.0,
+  "servings_count": 8,
+  "audit_status": "",
+  "audit_notes": "",
+  "raw_total_grams": 1372.1,
+  "raw_water_grams": 806.22,
+  "raw_fat_grams": 120.25,
+  "water_lost_grams": 40.31,
+  "fat_lost_grams": 0.0,
+  "cooked_total_grams": 1331.79,
+  "grams_per_serving": 166.47,
+  "ingredients": [
+    {
+      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ndb_no": "20081",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
+      "grams": 188.0,
+      "section": "crust",
+      "qty_display": "1 1/2 cups",
+      "contribution": {
+        "Energy_KCal": 684.32,
+        "Protein": 19.42,
+        "TotalLipidFat": 1.842,
+        "Carbohydrate": 143.463,
+        "FiberTotalDietary": 5.076,
+        "SugarsTotal": 0.508,
+        "Water": 22.41
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 3.0,
+      "section": "crust",
+      "qty_display": "1/2 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.006
+      }
+    },
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 85.0,
+      "section": "crust",
+      "qty_display": "6 tablespoons",
+      "contribution": {
+        "Energy_KCal": 609.45,
+        "Protein": 0.722,
+        "TotalLipidFat": 68.944,
+        "Carbohydrate": 0.051,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.051,
+        "Water": 15.249
+      }
+    },
+    {
+      "ingredient_key": "water_tap",
+      "ndb_no": "14411",
+      "long_desc": "Water, tap, drinking",
+      "grams": 45.0,
+      "section": "crust",
+      "qty_display": "3 tablespoons ice water",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 44.955
+      }
+    },
+    {
+      "ingredient_key": "pumpkin_canned",
+      "ndb_no": "11424",
+      "long_desc": "Pumpkin, canned, without salt",
+      "grams": 425.0,
+      "section": "filling",
+      "qty_display": "1 can (15 oz)",
+      "contribution": {
+        "Energy_KCal": 144.5,
+        "Protein": 4.675,
+        "TotalLipidFat": 1.19,
+        "Carbohydrate": 34.383,
+        "FiberTotalDietary": 12.325,
+        "SugarsTotal": 14.025,
+        "Water": 382.373
+      }
+    },
+    {
+      "ingredient_key": "milk_evaporated",
+      "ndb_no": "1096",
+      "long_desc": "Milk, canned, evaporated, with added vitamin D",
+      "grams": 354.0,
+      "section": "filling",
+      "qty_display": "1 can (12 oz)",
+      "contribution": {
+        "Energy_KCal": 474.36,
+        "Protein": 24.107,
+        "TotalLipidFat": 26.762,
+        "Carbohydrate": 35.542,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 35.542,
+        "Water": 262.102
+      }
+    },
+    {
+      "ingredient_key": "sugar_granulated",
+      "ndb_no": "19335",
+      "long_desc": "Sugars, granulated",
+      "grams": 150.0,
+      "section": "filling",
+      "qty_display": "3/4 cup",
+      "contribution": {
+        "Energy_KCal": 580.5,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 149.97,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 149.7,
+        "Water": 0.03
+      }
+    },
+    {
+      "ingredient_key": "egg_whole_raw",
+      "ndb_no": "1123",
+      "long_desc": "Egg, whole, raw, fresh",
+      "grams": 100.0,
+      "section": "filling",
+      "qty_display": "2 large",
+      "contribution": {
+        "Energy_KCal": 143.0,
+        "Protein": 12.56,
+        "TotalLipidFat": 9.51,
+        "Carbohydrate": 0.72,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.37,
+        "Water": 76.15
+      }
+    },
+    {
+      "ingredient_key": "pumpkin_pie_spice",
+      "ndb_no": "2035",
+      "long_desc": "Spices, pumpkin pie spice",
+      "grams": 5.1,
+      "section": "filling",
+      "qty_display": "1 tablespoon",
+      "contribution": {
+        "Energy_KCal": 17.442,
+        "Protein": 0.294,
+        "TotalLipidFat": 0.643,
+        "Carbohydrate": 3.533,
+        "FiberTotalDietary": 0.755,
+        "SugarsTotal": 0.396,
+        "Water": 0.431
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 3.0,
+      "section": "filling",
+      "qty_display": "1/2 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.006
+      }
+    },
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 14.0,
+      "section": "filling",
+      "qty_display": "1 tablespoon",
+      "contribution": {
+        "Energy_KCal": 100.38,
+        "Protein": 0.119,
+        "TotalLipidFat": 11.355,
+        "Carbohydrate": 0.008,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.008,
+        "Water": 2.512
+      }
+    }
+  ],
+  "skipped_ingredients": [],
+  "per100g": {
+    "Energy_KCal": 206.79,
+    "Protein": 4.37,
+    "TotalLipidFat": 9.03,
+    "Carbohydrate": 27.61,
+    "FiberTotalDietary": 1.36,
+    "SugarsTotal": 15.06,
+    "Water": 57.51
+  },
+  "per_serving": {
+    "Energy_KCal": 344.25,
+    "Protein": 7.27,
+    "TotalLipidFat": 15.03,
+    "Carbohydrate": 45.96,
+    "FiberTotalDietary": 2.26,
+    "SugarsTotal": 25.07,
+    "Water": 95.74
+  }
+}

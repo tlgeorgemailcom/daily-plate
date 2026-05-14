@@ -1,0 +1,194 @@
+{
+  "recipe_id": "SWEET_038",
+  "recipe_name": "Cookies, Peanut Butter",
+  "sr_rule": "Rule C",
+  "canonical_ndb_no": "18188",
+  "cook_method": "bake",
+  "cook_method_normalized": "baked",
+  "yield_factor_water": 0.35,
+  "yield_factor_fat": 1.0,
+  "servings_count": 30,
+  "audit_status": "",
+  "audit_notes": "",
+  "raw_total_grams": 1332.5,
+  "raw_water_grams": 160.33,
+  "raw_fat_grams": 325.54,
+  "water_lost_grams": 104.22,
+  "fat_lost_grams": 0.0,
+  "cooked_total_grams": 1228.28,
+  "grams_per_serving": 40.94,
+  "ingredients": [
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 227.0,
+      "section": "cookies",
+      "qty_display": "1 cup",
+      "contribution": {
+        "Energy_KCal": 1627.59,
+        "Protein": 1.929,
+        "TotalLipidFat": 184.12,
+        "Carbohydrate": 0.136,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.136,
+        "Water": 40.724
+      }
+    },
+    {
+      "ingredient_key": "peanut_butter_chunky",
+      "ndb_no": "16097",
+      "long_desc": "Peanut butter, chunk style, with salt",
+      "grams": 258.0,
+      "section": "cookies",
+      "qty_display": "1 cup",
+      "contribution": {
+        "Energy_KCal": 1519.62,
+        "Protein": 62.075,
+        "TotalLipidFat": 128.845,
+        "Carbohydrate": 55.651,
+        "FiberTotalDietary": 20.64,
+        "SugarsTotal": 21.698,
+        "Water": 2.941
+      }
+    },
+    {
+      "ingredient_key": "sugar_granulated",
+      "ndb_no": "19335",
+      "long_desc": "Sugars, granulated",
+      "grams": 200.0,
+      "section": "cookies",
+      "qty_display": "1 cup",
+      "contribution": {
+        "Energy_KCal": 774.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 199.96,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 199.6,
+        "Water": 0.04
+      }
+    },
+    {
+      "ingredient_key": "sugar_brown",
+      "ndb_no": "19334",
+      "long_desc": "Sugars, brown",
+      "grams": 220.0,
+      "section": "cookies",
+      "qty_display": "1 cup packed",
+      "contribution": {
+        "Energy_KCal": 836.0,
+        "Protein": 0.264,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 215.798,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 213.444,
+        "Water": 2.948
+      }
+    },
+    {
+      "ingredient_key": "egg_whole_raw",
+      "ndb_no": "1123",
+      "long_desc": "Egg, whole, raw, fresh",
+      "grams": 100.0,
+      "section": "cookies",
+      "qty_display": "2 large",
+      "contribution": {
+        "Energy_KCal": 143.0,
+        "Protein": 12.56,
+        "TotalLipidFat": 9.51,
+        "Carbohydrate": 0.72,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.37,
+        "Water": 76.15
+      }
+    },
+    {
+      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ndb_no": "20081",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
+      "grams": 313.0,
+      "section": "cookies",
+      "qty_display": "2 1/2 cups",
+      "contribution": {
+        "Energy_KCal": 1139.32,
+        "Protein": 32.333,
+        "TotalLipidFat": 3.067,
+        "Carbohydrate": 238.85,
+        "FiberTotalDietary": 8.451,
+        "SugarsTotal": 0.845,
+        "Water": 37.31
+      }
+    },
+    {
+      "ingredient_key": "baking_soda",
+      "ndb_no": "18372",
+      "long_desc": "Leavening agents, baking soda",
+      "grams": 7.5,
+      "section": "cookies",
+      "qty_display": "1 1/2 teaspoons",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.015
+      }
+    },
+    {
+      "ingredient_key": "baking_powder",
+      "ndb_no": "18369",
+      "long_desc": "Leavening agents, baking powder, double-acting, sodium aluminum sulfate",
+      "grams": 4.0,
+      "section": "cookies",
+      "qty_display": "1 teaspoon",
+      "contribution": {
+        "Energy_KCal": 2.12,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 1.108,
+        "FiberTotalDietary": 0.008,
+        "SugarsTotal": 0.0,
+        "Water": 0.2
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 3.0,
+      "section": "cookies",
+      "qty_display": "1/2 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.006
+      }
+    }
+  ],
+  "skipped_ingredients": [],
+  "per100g": {
+    "Energy_KCal": 491.88,
+    "Protein": 8.35,
+    "TotalLipidFat": 26.5,
+    "Carbohydrate": 57.99,
+    "FiberTotalDietary": 2.37,
+    "SugarsTotal": 35.5,
+    "Water": 4.57
+  },
+  "per_serving": {
+    "Energy_KCal": 201.39,
+    "Protein": 3.42,
+    "TotalLipidFat": 10.85,
+    "Carbohydrate": 23.74,
+    "FiberTotalDietary": 0.97,
+    "SugarsTotal": 14.53,
+    "Water": 1.87
+  }
+}

@@ -1,0 +1,284 @@
+{
+  "recipe_id": "SWEET_011",
+  "recipe_name": "Vanilla Cream Pie",
+  "sr_rule": "Rule A",
+  "canonical_ndb_no": "18328",
+  "cook_method": "stovetop_then_chill",
+  "cook_method_normalized": "raw",
+  "yield_factor_water": 0.86,
+  "yield_factor_fat": 1.0,
+  "servings_count": 8,
+  "audit_status": "accepted",
+  "audit_notes": "Rule A. PASS \u2014 all graded macros within \u00b15% of canonical (worst Carbohydrate -3.9%). Clean match. Accepted May 6 2026.",
+  "raw_total_grams": 1250.9,
+  "raw_water_grams": 645.9,
+  "raw_fat_grams": 166.7,
+  "water_lost_grams": 90.43,
+  "fat_lost_grams": 0.0,
+  "cooked_total_grams": 1160.47,
+  "grams_per_serving": 145.06,
+  "ingredients": [
+    {
+      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ndb_no": "20081",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
+      "grams": 188.0,
+      "section": "crust",
+      "qty_display": "1 1/2 cups",
+      "contribution": {
+        "Energy_KCal": 684.32,
+        "Protein": 19.42,
+        "TotalLipidFat": 1.842,
+        "Carbohydrate": 143.463,
+        "FiberTotalDietary": 5.076,
+        "SugarsTotal": 0.508,
+        "Water": 22.41
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 3.0,
+      "section": "crust",
+      "qty_display": "1/2 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.006
+      }
+    },
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 85.0,
+      "section": "crust",
+      "qty_display": "6 tablespoons",
+      "contribution": {
+        "Energy_KCal": 609.45,
+        "Protein": 0.722,
+        "TotalLipidFat": 68.944,
+        "Carbohydrate": 0.051,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.051,
+        "Water": 15.249
+      }
+    },
+    {
+      "ingredient_key": "water_tap",
+      "ndb_no": "14411",
+      "long_desc": "Water, tap, drinking",
+      "grams": 45.0,
+      "section": "crust",
+      "qty_display": "3 tablespoons ice water",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 44.955
+      }
+    },
+    {
+      "ingredient_key": "milk_whole",
+      "ndb_no": "1077",
+      "long_desc": "Milk, whole, 3.25% milkfat, with added vitamin D",
+      "grams": 488.0,
+      "section": "filling",
+      "qty_display": "2 cups",
+      "contribution": {
+        "Energy_KCal": 297.68,
+        "Protein": 15.372,
+        "TotalLipidFat": 15.86,
+        "Carbohydrate": 23.424,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 24.644,
+        "Water": 430.074
+      }
+    },
+    {
+      "ingredient_key": "sugar_granulated",
+      "ndb_no": "19335",
+      "long_desc": "Sugars, granulated",
+      "grams": 108.0,
+      "section": "filling",
+      "qty_display": "1/2 cup + 1 tablespoon",
+      "contribution": {
+        "Energy_KCal": 417.96,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 107.978,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 107.784,
+        "Water": 0.022
+      }
+    },
+    {
+      "ingredient_key": "cornstarch",
+      "ndb_no": "20027",
+      "long_desc": "Cornstarch",
+      "grams": 32.0,
+      "section": "filling",
+      "qty_display": "1/4 cup",
+      "contribution": {
+        "Energy_KCal": 121.92,
+        "Protein": 0.083,
+        "TotalLipidFat": 0.016,
+        "Carbohydrate": 29.206,
+        "FiberTotalDietary": 0.288,
+        "SugarsTotal": 0.0,
+        "Water": 2.662
+      }
+    },
+    {
+      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ndb_no": "20081",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
+      "grams": 55.0,
+      "section": "filling",
+      "qty_display": "6 1/2 tablespoons",
+      "contribution": {
+        "Energy_KCal": 200.2,
+        "Protein": 5.682,
+        "TotalLipidFat": 0.539,
+        "Carbohydrate": 41.971,
+        "FiberTotalDietary": 1.485,
+        "SugarsTotal": 0.149,
+        "Water": 6.556
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 4.5,
+      "section": "filling",
+      "qty_display": "3/4 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.009
+      }
+    },
+    {
+      "ingredient_key": "egg_yolk_raw",
+      "ndb_no": "1125",
+      "long_desc": "Egg, yolk, raw, fresh",
+      "grams": 80.0,
+      "section": "filling",
+      "qty_display": "4 large yolks",
+      "contribution": {
+        "Energy_KCal": 257.6,
+        "Protein": 12.688,
+        "TotalLipidFat": 21.232,
+        "Carbohydrate": 2.872,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.448,
+        "Water": 41.848
+      }
+    },
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 14.0,
+      "section": "filling",
+      "qty_display": "1 tablespoon",
+      "contribution": {
+        "Energy_KCal": 100.38,
+        "Protein": 0.119,
+        "TotalLipidFat": 11.355,
+        "Carbohydrate": 0.008,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.008,
+        "Water": 2.512
+      }
+    },
+    {
+      "ingredient_key": "vanilla_extract",
+      "ndb_no": "2050",
+      "long_desc": "Vanilla extract",
+      "grams": 8.4,
+      "section": "filling",
+      "qty_display": "2 teaspoons",
+      "contribution": {
+        "Energy_KCal": 24.192,
+        "Protein": 0.005,
+        "TotalLipidFat": 0.005,
+        "Carbohydrate": 1.063,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 1.063,
+        "Water": 4.417
+      }
+    },
+    {
+      "ingredient_key": "heavy_cream",
+      "ndb_no": "1053",
+      "long_desc": "Cream, fluid, heavy whipping",
+      "grams": 130.0,
+      "section": "topping",
+      "qty_display": "1/2 cup",
+      "contribution": {
+        "Energy_KCal": 442.0,
+        "Protein": 3.692,
+        "TotalLipidFat": 46.904,
+        "Carbohydrate": 3.562,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 3.796,
+        "Water": 75.153
+      }
+    },
+    {
+      "ingredient_key": "sugar_powdered",
+      "ndb_no": "19336",
+      "long_desc": "Sugars, powdered",
+      "grams": 10.0,
+      "section": "topping",
+      "qty_display": "1 1/4 tablespoons",
+      "contribution": {
+        "Energy_KCal": 38.9,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 9.977,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 9.781,
+        "Water": 0.023
+      }
+    }
+  ],
+  "skipped_ingredients": [
+    {
+      "ingredient_key": "vanilla_extract",
+      "reason": "optional"
+    }
+  ],
+  "per100g": {
+    "Energy_KCal": 275.28,
+    "Protein": 4.98,
+    "TotalLipidFat": 14.36,
+    "Carbohydrate": 31.33,
+    "FiberTotalDietary": 0.59,
+    "SugarsTotal": 12.77,
+    "Water": 47.87
+  },
+  "per_serving": {
+    "Energy_KCal": 399.32,
+    "Protein": 7.22,
+    "TotalLipidFat": 20.83,
+    "Carbohydrate": 45.45,
+    "FiberTotalDietary": 0.86,
+    "SugarsTotal": 18.52,
+    "Water": 69.44
+  }
+}

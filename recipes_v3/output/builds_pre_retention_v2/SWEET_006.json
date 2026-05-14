@@ -1,0 +1,296 @@
+{
+  "recipe_id": "SWEET_006",
+  "recipe_name": "Pie Lemon Meringue",
+  "sr_rule": "Rule B",
+  "canonical_ndb_no": "18321",
+  "cook_method": "bake+stovetop",
+  "cook_method_normalized": "baked",
+  "yield_factor_water": 0.78,
+  "yield_factor_fat": 1.0,
+  "servings_count": 8,
+  "audit_status": "",
+  "audit_notes": "",
+  "raw_total_grams": 1428.5,
+  "raw_water_grams": 678.92,
+  "raw_fat_grams": 162.99,
+  "water_lost_grams": 149.36,
+  "fat_lost_grams": 0.0,
+  "cooked_total_grams": 1279.14,
+  "grams_per_serving": 159.89,
+  "ingredients": [
+    {
+      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ndb_no": "20081",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
+      "grams": 188.0,
+      "section": "crust",
+      "qty_display": "1 1/2 cups",
+      "contribution": {
+        "Energy_KCal": 684.32,
+        "Protein": 19.42,
+        "TotalLipidFat": 1.842,
+        "Carbohydrate": 143.463,
+        "FiberTotalDietary": 5.076,
+        "SugarsTotal": 0.508,
+        "Water": 22.41
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 3.0,
+      "section": "crust",
+      "qty_display": "1/2 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.006
+      }
+    },
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 85.0,
+      "section": "crust",
+      "qty_display": "6 tablespoons",
+      "contribution": {
+        "Energy_KCal": 609.45,
+        "Protein": 0.722,
+        "TotalLipidFat": 68.944,
+        "Carbohydrate": 0.051,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.051,
+        "Water": 15.249
+      }
+    },
+    {
+      "ingredient_key": "water_tap",
+      "ndb_no": "14411",
+      "long_desc": "Water, tap, drinking",
+      "grams": 45.0,
+      "section": "crust",
+      "qty_display": "3 tablespoon ice water",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 44.955
+      }
+    },
+    {
+      "ingredient_key": "sugar_granulated",
+      "ndb_no": "19335",
+      "long_desc": "Sugars, granulated",
+      "grams": 200.0,
+      "section": "filling",
+      "qty_display": "1 cup",
+      "contribution": {
+        "Energy_KCal": 774.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 199.96,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 199.6,
+        "Water": 0.04
+      }
+    },
+    {
+      "ingredient_key": "lemon_peel_raw",
+      "ndb_no": "9156",
+      "long_desc": "Lemon peel, raw",
+      "grams": 6.0,
+      "section": "filling",
+      "qty_display": "1 tablespoon",
+      "contribution": {
+        "Energy_KCal": 2.82,
+        "Protein": 0.09,
+        "TotalLipidFat": 0.018,
+        "Carbohydrate": 0.96,
+        "FiberTotalDietary": 0.636,
+        "SugarsTotal": 0.25,
+        "Water": 4.896
+      }
+    },
+    {
+      "ingredient_key": "egg_yolk_raw",
+      "ndb_no": "1125",
+      "long_desc": "Egg, yolk, raw, fresh",
+      "grams": 85.0,
+      "section": "filling",
+      "qty_display": "5 large yolks",
+      "contribution": {
+        "Energy_KCal": 273.7,
+        "Protein": 13.481,
+        "TotalLipidFat": 22.559,
+        "Carbohydrate": 3.051,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.476,
+        "Water": 44.464
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 3.0,
+      "section": "filling",
+      "qty_display": "1/2 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.006
+      }
+    },
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 85.0,
+      "section": "filling",
+      "qty_display": "6 tablespoons",
+      "contribution": {
+        "Energy_KCal": 609.45,
+        "Protein": 0.722,
+        "TotalLipidFat": 68.944,
+        "Carbohydrate": 0.051,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.051,
+        "Water": 15.249
+      }
+    },
+    {
+      "ingredient_key": "lemon_juice_raw",
+      "ndb_no": "9152",
+      "long_desc": "Lemon juice, raw",
+      "grams": 160.0,
+      "section": "filling",
+      "qty_display": "2/3 cup",
+      "contribution": {
+        "Energy_KCal": 35.2,
+        "Protein": 0.56,
+        "TotalLipidFat": 0.384,
+        "Carbohydrate": 11.04,
+        "FiberTotalDietary": 0.48,
+        "SugarsTotal": 4.032,
+        "Water": 147.696
+      }
+    },
+    {
+      "ingredient_key": "water_tap",
+      "ndb_no": "14411",
+      "long_desc": "Water, tap, drinking",
+      "grams": 237.0,
+      "section": "filling",
+      "qty_display": "1 cup",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 236.763
+      }
+    },
+    {
+      "ingredient_key": "cornstarch",
+      "ndb_no": "20027",
+      "long_desc": "Cornstarch",
+      "grams": 32.0,
+      "section": "filling",
+      "qty_display": "1/4 cup",
+      "contribution": {
+        "Energy_KCal": 121.92,
+        "Protein": 0.083,
+        "TotalLipidFat": 0.016,
+        "Carbohydrate": 29.206,
+        "FiberTotalDietary": 0.288,
+        "SugarsTotal": 0.0,
+        "Water": 2.662
+      }
+    },
+    {
+      "ingredient_key": "egg_white_raw",
+      "ndb_no": "1124",
+      "long_desc": "Egg, white, raw, fresh",
+      "grams": 165.0,
+      "section": "topping",
+      "qty_display": "5 large whites",
+      "contribution": {
+        "Energy_KCal": 85.8,
+        "Protein": 17.985,
+        "TotalLipidFat": 0.281,
+        "Carbohydrate": 1.204,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 1.171,
+        "Water": 144.49
+      }
+    },
+    {
+      "ingredient_key": "sugar_granulated",
+      "ndb_no": "19335",
+      "long_desc": "Sugars, granulated",
+      "grams": 133.0,
+      "section": "topping",
+      "qty_display": "2/3 cup",
+      "contribution": {
+        "Energy_KCal": 514.71,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 132.973,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 132.734,
+        "Water": 0.027
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 1.5,
+      "section": "topping",
+      "qty_display": "1/4 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.003
+      }
+    }
+  ],
+  "skipped_ingredients": [],
+  "per100g": {
+    "Energy_KCal": 290.15,
+    "Protein": 3.9,
+    "TotalLipidFat": 12.74,
+    "Carbohydrate": 40.81,
+    "FiberTotalDietary": 0.51,
+    "SugarsTotal": 26.49,
+    "Water": 41.4
+  },
+  "per_serving": {
+    "Energy_KCal": 463.93,
+    "Protein": 6.24,
+    "TotalLipidFat": 20.37,
+    "Carbohydrate": 65.25,
+    "FiberTotalDietary": 0.82,
+    "SugarsTotal": 42.36,
+    "Water": 66.2
+  }
+}

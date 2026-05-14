@@ -1,0 +1,143 @@
+{
+  "recipe_id": "SWEET_025",
+  "recipe_name": "Angel Food Cake",
+  "sr_rule": "Rule C",
+  "canonical_ndb_no": "18086",
+  "cook_method": "bake",
+  "cook_method_normalized": "baked",
+  "yield_factor_water": 0.55,
+  "yield_factor_fat": 1.0,
+  "servings_count": 12,
+  "audit_status": "",
+  "audit_notes": "",
+  "raw_total_grams": 822.3,
+  "raw_water_grams": 364.49,
+  "raw_fat_grams": 1.66,
+  "water_lost_grams": 164.02,
+  "fat_lost_grams": 0.0,
+  "cooked_total_grams": 658.28,
+  "grams_per_serving": 54.86,
+  "ingredients": [
+    {
+      "ingredient_key": "egg_white_raw",
+      "ndb_no": "1124",
+      "long_desc": "Egg, white, raw, fresh",
+      "grams": 396.0,
+      "section": "cake",
+      "qty_display": "12 large whites",
+      "contribution": {
+        "Energy_KCal": 205.92,
+        "Protein": 43.164,
+        "TotalLipidFat": 0.673,
+        "Carbohydrate": 2.891,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 2.812,
+        "Water": 346.777
+      }
+    },
+    {
+      "ingredient_key": "sugar_granulated",
+      "ndb_no": "19335",
+      "long_desc": "Sugars, granulated",
+      "grams": 300.0,
+      "section": "cake",
+      "qty_display": "1 1/2 cups",
+      "contribution": {
+        "Energy_KCal": 1161.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 299.94,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 299.4,
+        "Water": 0.06
+      }
+    },
+    {
+      "ingredient_key": "flour_cake_white_enriched",
+      "ndb_no": "20084",
+      "long_desc": "Wheat flour, white, cake, enriched",
+      "grams": 114.0,
+      "section": "cake",
+      "qty_display": "1 cup",
+      "contribution": {
+        "Energy_KCal": 412.68,
+        "Protein": 9.348,
+        "TotalLipidFat": 0.98,
+        "Carbohydrate": 88.954,
+        "FiberTotalDietary": 1.938,
+        "SugarsTotal": 0.353,
+        "Water": 14.261
+      }
+    },
+    {
+      "ingredient_key": "cream_of_tartar",
+      "ndb_no": "18373",
+      "long_desc": "Leavening agents, cream of tartar",
+      "grams": 4.5,
+      "section": "cake",
+      "qty_display": "1 1/2 teaspoons",
+      "contribution": {
+        "Energy_KCal": 11.61,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 2.768,
+        "FiberTotalDietary": 0.009,
+        "SugarsTotal": 0.0,
+        "Water": 0.076
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 1.5,
+      "section": "cake",
+      "qty_display": "1/4 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.003
+      }
+    },
+    {
+      "ingredient_key": "vanilla_extract",
+      "ndb_no": "2050",
+      "long_desc": "Vanilla extract",
+      "grams": 6.3,
+      "section": "cake",
+      "qty_display": "1 1/2 teaspoons",
+      "contribution": {
+        "Energy_KCal": 18.144,
+        "Protein": 0.004,
+        "TotalLipidFat": 0.004,
+        "Carbohydrate": 0.797,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.797,
+        "Water": 3.313
+      }
+    }
+  ],
+  "skipped_ingredients": [],
+  "per100g": {
+    "Energy_KCal": 274.86,
+    "Protein": 7.5,
+    "TotalLipidFat": 0.25,
+    "Carbohydrate": 60.06,
+    "FiberTotalDietary": 0.3,
+    "SugarsTotal": 46.08,
+    "Water": 30.45
+  },
+  "per_serving": {
+    "Energy_KCal": 150.78,
+    "Protein": 4.11,
+    "TotalLipidFat": 0.14,
+    "Carbohydrate": 32.95,
+    "FiberTotalDietary": 0.16,
+    "SugarsTotal": 25.28,
+    "Water": 16.7
+  }
+}

@@ -1,0 +1,305 @@
+{
+  "recipe_id": "SWEET_014",
+  "recipe_name": "Coconut Cream Pie",
+  "sr_rule": "Rule C",
+  "canonical_ndb_no": "18314",
+  "cook_method": "stovetop_then_chill",
+  "cook_method_normalized": "raw",
+  "yield_factor_water": 0.92,
+  "yield_factor_fat": 1.0,
+  "servings_count": 8,
+  "audit_status": "",
+  "audit_notes": "",
+  "raw_total_grams": 1665.2,
+  "raw_water_grams": 827.16,
+  "raw_fat_grams": 367.21,
+  "water_lost_grams": 66.17,
+  "fat_lost_grams": 0.0,
+  "cooked_total_grams": 1599.03,
+  "grams_per_serving": 199.88,
+  "ingredients": [
+    {
+      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ndb_no": "20081",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
+      "grams": 188.0,
+      "section": "crust",
+      "qty_display": "1 1/2 cups",
+      "contribution": {
+        "Energy_KCal": 684.32,
+        "Protein": 19.42,
+        "TotalLipidFat": 1.842,
+        "Carbohydrate": 143.463,
+        "FiberTotalDietary": 5.076,
+        "SugarsTotal": 0.508,
+        "Water": 22.41
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 3.0,
+      "section": "crust",
+      "qty_display": "1/2 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.006
+      }
+    },
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 85.0,
+      "section": "crust",
+      "qty_display": "6 tablespoons",
+      "contribution": {
+        "Energy_KCal": 609.45,
+        "Protein": 0.722,
+        "TotalLipidFat": 68.944,
+        "Carbohydrate": 0.051,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.051,
+        "Water": 15.249
+      }
+    },
+    {
+      "ingredient_key": "water_tap",
+      "ndb_no": "14411",
+      "long_desc": "Water, tap, drinking",
+      "grams": 45.0,
+      "section": "crust",
+      "qty_display": "3 tablespoons",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 44.955
+      }
+    },
+    {
+      "ingredient_key": "half_and_half",
+      "ndb_no": "1049",
+      "long_desc": "Cream, fluid, half and half",
+      "grams": 242.0,
+      "section": "filling",
+      "qty_display": "1 cup",
+      "contribution": {
+        "Energy_KCal": 297.66,
+        "Protein": 7.575,
+        "TotalLipidFat": 25.144,
+        "Carbohydrate": 11.447,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 9.995,
+        "Water": 196.601
+      }
+    },
+    {
+      "ingredient_key": "coconut_milk_canned",
+      "ndb_no": "12118",
+      "long_desc": "Nuts, coconut milk, canned",
+      "grams": 400.0,
+      "section": "filling",
+      "qty_display": "1 can (13.5 oz)",
+      "contribution": {
+        "Energy_KCal": 788.0,
+        "Protein": 8.08,
+        "TotalLipidFat": 85.32,
+        "Carbohydrate": 11.24,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 291.52
+      }
+    },
+    {
+      "ingredient_key": "sugar_granulated",
+      "ndb_no": "19335",
+      "long_desc": "Sugars, granulated",
+      "grams": 133.0,
+      "section": "filling",
+      "qty_display": "2/3 cup",
+      "contribution": {
+        "Energy_KCal": 514.71,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 132.973,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 132.734,
+        "Water": 0.027
+      }
+    },
+    {
+      "ingredient_key": "cornstarch",
+      "ndb_no": "20027",
+      "long_desc": "Cornstarch",
+      "grams": 32.0,
+      "section": "filling",
+      "qty_display": "4 tablespoons",
+      "contribution": {
+        "Energy_KCal": 121.92,
+        "Protein": 0.083,
+        "TotalLipidFat": 0.016,
+        "Carbohydrate": 29.206,
+        "FiberTotalDietary": 0.288,
+        "SugarsTotal": 0.0,
+        "Water": 2.662
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 3.0,
+      "section": "filling",
+      "qty_display": "1/2 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.006
+      }
+    },
+    {
+      "ingredient_key": "egg_yolk_raw",
+      "ndb_no": "1125",
+      "long_desc": "Egg, yolk, raw, fresh",
+      "grams": 68.0,
+      "section": "filling",
+      "qty_display": "4 large yolks",
+      "contribution": {
+        "Energy_KCal": 218.96,
+        "Protein": 10.785,
+        "TotalLipidFat": 18.047,
+        "Carbohydrate": 2.441,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.381,
+        "Water": 35.571
+      }
+    },
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 28.0,
+      "section": "filling",
+      "qty_display": "2 tablespoons",
+      "contribution": {
+        "Energy_KCal": 200.76,
+        "Protein": 0.238,
+        "TotalLipidFat": 22.711,
+        "Carbohydrate": 0.017,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.017,
+        "Water": 5.023
+      }
+    },
+    {
+      "ingredient_key": "vanilla_extract",
+      "ndb_no": "2050",
+      "long_desc": "Vanilla extract",
+      "grams": 4.2,
+      "section": "filling",
+      "qty_display": "1 teaspoon",
+      "contribution": {
+        "Energy_KCal": 12.096,
+        "Protein": 0.003,
+        "TotalLipidFat": 0.003,
+        "Carbohydrate": 0.531,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.531,
+        "Water": 2.208
+      }
+    },
+    {
+      "ingredient_key": "coconut_flaked_sweetened",
+      "ndb_no": "12109",
+      "long_desc": "Nuts, coconut meat, dried, sweetened, flaked",
+      "grams": 74.0,
+      "section": "filling",
+      "qty_display": "1 cup",
+      "contribution": {
+        "Energy_KCal": 337.44,
+        "Protein": 2.316,
+        "TotalLipidFat": 20.713,
+        "Carbohydrate": 38.369,
+        "FiberTotalDietary": 7.326,
+        "SugarsTotal": 27.195,
+        "Water": 11.44
+      }
+    },
+    {
+      "ingredient_key": "heavy_cream",
+      "ndb_no": "1053",
+      "long_desc": "Cream, fluid, heavy whipping",
+      "grams": 345.0,
+      "section": "topping",
+      "qty_display": "1 1/2 cups",
+      "contribution": {
+        "Energy_KCal": 1173.0,
+        "Protein": 9.798,
+        "TotalLipidFat": 124.476,
+        "Carbohydrate": 9.453,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 10.074,
+        "Water": 199.445
+      }
+    },
+    {
+      "ingredient_key": "sugar_powdered",
+      "ndb_no": "19336",
+      "long_desc": "Sugars, powdered",
+      "grams": 15.0,
+      "section": "topping",
+      "qty_display": "2 tablespoons",
+      "contribution": {
+        "Energy_KCal": 58.35,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 14.965,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 14.671,
+        "Water": 0.035
+      }
+    }
+  ],
+  "skipped_ingredients": [
+    {
+      "ingredient_key": "vanilla_extract",
+      "reason": "optional"
+    },
+    {
+      "ingredient_key": "coconut_flaked_sweetened",
+      "reason": "optional"
+    }
+  ],
+  "per100g": {
+    "Energy_KCal": 313.73,
+    "Protein": 3.69,
+    "TotalLipidFat": 22.96,
+    "Carbohydrate": 24.65,
+    "FiberTotalDietary": 0.79,
+    "SugarsTotal": 12.27,
+    "Water": 47.59
+  },
+  "per_serving": {
+    "Energy_KCal": 627.08,
+    "Protein": 7.38,
+    "TotalLipidFat": 45.89,
+    "Carbohydrate": 49.27,
+    "FiberTotalDietary": 1.58,
+    "SugarsTotal": 24.53,
+    "Water": 95.12
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "recipe_id": "SWEET_029",
+  "recipe_name": "Brownies (Fudgy)",
+  "sr_rule": "Rule B",
+  "canonical_ndb_no": "18154",
+  "cook_method": "bake",
+  "cook_method_normalized": "baked",
+  "yield_factor_water": 0.79,
+  "yield_factor_fat": 1.0,
+  "servings_count": 16,
+  "audit_status": "accepted",
+  "audit_notes": "Rule B (\u00b115%). All 4 graded macros within \u00b15% (Cal -3.4%",
+  "raw_total_grams": 816.7,
+  "raw_water_grams": 140.18,
+  "raw_fat_grams": 226.53,
+  "water_lost_grams": 29.44,
+  "fat_lost_grams": 0.0,
+  "cooked_total_grams": 787.26,
+  "grams_per_serving": 49.2,
+  "ingredients": [
+    {
+      "ingredient_key": "vegetable_shortening",
+      "ndb_no": "4031",
+      "long_desc": "Shortening, household, soybean (partially hydrogenated)-cottonseed (partially hydrogenated)",
+      "grams": 130.0,
+      "section": "batter",
+      "qty_display": "2/3 cup",
+      "contribution": {
+        "Energy_KCal": 1149.2,
+        "Protein": 0.0,
+        "TotalLipidFat": 130.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.0
+      }
+    },
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 57.0,
+      "section": "batter",
+      "qty_display": "1/4 cup",
+      "contribution": {
+        "Energy_KCal": 408.69,
+        "Protein": 0.484,
+        "TotalLipidFat": 46.233,
+        "Carbohydrate": 0.034,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.034,
+        "Water": 10.226
+      }
+    },
+    {
+      "ingredient_key": "sugar_granulated",
+      "ndb_no": "19335",
+      "long_desc": "Sugars, granulated",
+      "grams": 210.0,
+      "section": "batter",
+      "qty_display": "1 cup + 1 tablespoon",
+      "contribution": {
+        "Energy_KCal": 812.7,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 209.958,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 209.58,
+        "Water": 0.042
+      }
+    },
+    {
+      "ingredient_key": "egg_whole_raw",
+      "ndb_no": "1123",
+      "long_desc": "Egg, whole, raw, fresh",
+      "grams": 150.0,
+      "section": "batter",
+      "qty_display": "3 large",
+      "contribution": {
+        "Energy_KCal": 214.5,
+        "Protein": 18.84,
+        "TotalLipidFat": 14.265,
+        "Carbohydrate": 1.08,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.555,
+        "Water": 114.225
+      }
+    },
+    {
+      "ingredient_key": "vanilla_extract",
+      "ndb_no": "2050",
+      "long_desc": "Vanilla extract",
+      "grams": 4.2,
+      "section": "batter",
+      "qty_display": "1 teaspoon",
+      "contribution": {
+        "Energy_KCal": 12.096,
+        "Protein": 0.003,
+        "TotalLipidFat": 0.003,
+        "Carbohydrate": 0.531,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.531,
+        "Water": 2.208
+      }
+    },
+    {
+      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ndb_no": "20081",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
+      "grams": 80.0,
+      "section": "batter",
+      "qty_display": "2/3 cup",
+      "contribution": {
+        "Energy_KCal": 291.2,
+        "Protein": 8.264,
+        "TotalLipidFat": 0.784,
+        "Carbohydrate": 61.048,
+        "FiberTotalDietary": 2.16,
+        "SugarsTotal": 0.216,
+        "Water": 9.536
+      }
+    },
+    {
+      "ingredient_key": "cocoa_powder_unsweetened",
+      "ndb_no": "19165",
+      "long_desc": "Cocoa, dry powder, unsweetened",
+      "grams": 95.0,
+      "section": "batter",
+      "qty_display": "1 cup + 1 tablespoon",
+      "contribution": {
+        "Energy_KCal": 216.6,
+        "Protein": 18.62,
+        "TotalLipidFat": 13.015,
+        "Carbohydrate": 55.005,
+        "FiberTotalDietary": 35.15,
+        "SugarsTotal": 1.662,
+        "Water": 2.85
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 5.5,
+      "section": "batter",
+      "qty_display": "scant 1 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.011
+      }
+    },
+    {
+      "ingredient_key": "chocolate_chips_semisweet",
+      "ndb_no": "19139",
+      "long_desc": "Baking chocolate, MARS SNACKFOOD US, M&M's Semisweet Chocolate Mini Baking Bits",
+      "grams": 85.0,
+      "section": "batter",
+      "qty_display": "1/2 cup",
+      "contribution": {
+        "Energy_KCal": 439.45,
+        "Protein": 3.774,
+        "TotalLipidFat": 22.227,
+        "Carbohydrate": 56.066,
+        "FiberTotalDietary": 5.695,
+        "SugarsTotal": 0.0,
+        "Water": 1.079
+      }
+    }
+  ],
+  "skipped_ingredients": [],
+  "per100g": {
+    "Energy_KCal": 450.22,
+    "Protein": 5.97,
+    "TotalLipidFat": 28.77,
+    "Carbohydrate": 48.74,
+    "FiberTotalDietary": 5.46,
+    "SugarsTotal": 27.0,
+    "Water": 14.07
+  },
+  "per_serving": {
+    "Energy_KCal": 221.53,
+    "Protein": 2.94,
+    "TotalLipidFat": 14.16,
+    "Carbohydrate": 23.98,
+    "FiberTotalDietary": 2.69,
+    "SugarsTotal": 13.29,
+    "Water": 6.92
+  }
+}

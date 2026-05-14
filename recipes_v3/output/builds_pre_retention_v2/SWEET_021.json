@@ -1,0 +1,250 @@
+{
+  "recipe_id": "SWEET_021",
+  "recipe_name": "Gingerbread",
+  "sr_rule": "Rule B",
+  "canonical_ndb_no": "18116",
+  "cook_method": "bake",
+  "cook_method_normalized": "baked",
+  "yield_factor_water": 0.88,
+  "yield_factor_fat": 1.0,
+  "servings_count": 9,
+  "audit_status": "",
+  "audit_notes": "",
+  "raw_total_grams": 972.4,
+  "raw_water_grams": 286.4,
+  "raw_fat_grams": 150.27,
+  "water_lost_grams": 34.37,
+  "fat_lost_grams": 0.0,
+  "cooked_total_grams": 938.03,
+  "grams_per_serving": 104.23,
+  "ingredients": [
+    {
+      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ndb_no": "20081",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
+      "grams": 281.0,
+      "section": "cake",
+      "qty_display": "2 1/4 cups",
+      "contribution": {
+        "Energy_KCal": 1022.84,
+        "Protein": 29.027,
+        "TotalLipidFat": 2.754,
+        "Carbohydrate": 214.431,
+        "FiberTotalDietary": 7.587,
+        "SugarsTotal": 0.759,
+        "Water": 33.495
+      }
+    },
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 57.0,
+      "section": "cake",
+      "qty_display": "1/4 cup",
+      "contribution": {
+        "Energy_KCal": 408.69,
+        "Protein": 0.484,
+        "TotalLipidFat": 46.233,
+        "Carbohydrate": 0.034,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.034,
+        "Water": 10.226
+      }
+    },
+    {
+      "ingredient_key": "vegetable_shortening",
+      "ndb_no": "4031",
+      "long_desc": "Shortening, household, soybean (partially hydrogenated)-cottonseed (partially hydrogenated)",
+      "grams": 96.0,
+      "section": "cake",
+      "qty_display": "1/2 cup",
+      "contribution": {
+        "Energy_KCal": 848.64,
+        "Protein": 0.0,
+        "TotalLipidFat": 96.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.0
+      }
+    },
+    {
+      "ingredient_key": "sugar_brown",
+      "ndb_no": "19334",
+      "long_desc": "Sugars, brown",
+      "grams": 73.0,
+      "section": "cake",
+      "qty_display": "1/3 cup",
+      "contribution": {
+        "Energy_KCal": 277.4,
+        "Protein": 0.088,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 71.606,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 70.825,
+        "Water": 0.978
+      }
+    },
+    {
+      "ingredient_key": "molasses",
+      "ndb_no": "19304",
+      "long_desc": "Molasses",
+      "grams": 252.0,
+      "section": "cake",
+      "qty_display": "3/4 cup",
+      "contribution": {
+        "Energy_KCal": 730.8,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.252,
+        "Carbohydrate": 188.32,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 188.294,
+        "Water": 55.112
+      }
+    },
+    {
+      "ingredient_key": "egg_whole_raw",
+      "ndb_no": "1123",
+      "long_desc": "Egg, whole, raw, fresh",
+      "grams": 50.0,
+      "section": "cake",
+      "qty_display": "1 large",
+      "contribution": {
+        "Energy_KCal": 71.5,
+        "Protein": 6.28,
+        "TotalLipidFat": 4.755,
+        "Carbohydrate": 0.36,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.185,
+        "Water": 38.075
+      }
+    },
+    {
+      "ingredient_key": "water_tap",
+      "ndb_no": "14411",
+      "long_desc": "Water, tap, drinking",
+      "grams": 148.0,
+      "section": "cake",
+      "qty_display": "5/8 cup",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 147.852
+      }
+    },
+    {
+      "ingredient_key": "baking_soda",
+      "ndb_no": "18372",
+      "long_desc": "Leavening agents, baking soda",
+      "grams": 4.6,
+      "section": "cake",
+      "qty_display": "1 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.009
+      }
+    },
+    {
+      "ingredient_key": "ginger_ground",
+      "ndb_no": "2021",
+      "long_desc": "Spices, ginger, ground",
+      "grams": 2.7,
+      "section": "cake",
+      "qty_display": "1 1/2 teaspoons",
+      "contribution": {
+        "Energy_KCal": 9.045,
+        "Protein": 0.242,
+        "TotalLipidFat": 0.114,
+        "Carbohydrate": 1.934,
+        "FiberTotalDietary": 0.381,
+        "SugarsTotal": 0.092,
+        "Water": 0.268
+      }
+    },
+    {
+      "ingredient_key": "cinnamon_ground",
+      "ndb_no": "2010",
+      "long_desc": "Spices, cinnamon, ground",
+      "grams": 2.6,
+      "section": "cake",
+      "qty_display": "1 teaspoon",
+      "contribution": {
+        "Energy_KCal": 6.422,
+        "Protein": 0.104,
+        "TotalLipidFat": 0.032,
+        "Carbohydrate": 2.095,
+        "FiberTotalDietary": 1.381,
+        "SugarsTotal": 0.056,
+        "Water": 0.275
+      }
+    },
+    {
+      "ingredient_key": "cloves_ground",
+      "ndb_no": "2011",
+      "long_desc": "Spices, cloves, ground",
+      "grams": 1.0,
+      "section": "cake",
+      "qty_display": "1/2 teaspoon",
+      "contribution": {
+        "Energy_KCal": 2.74,
+        "Protein": 0.06,
+        "TotalLipidFat": 0.13,
+        "Carbohydrate": 0.655,
+        "FiberTotalDietary": 0.339,
+        "SugarsTotal": 0.024,
+        "Water": 0.099
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 4.5,
+      "section": "cake",
+      "qty_display": "3/4 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.009
+      }
+    }
+  ],
+  "skipped_ingredients": [
+    {
+      "ingredient_key": "ginger_root_fresh",
+      "reason": "optional"
+    }
+  ],
+  "per100g": {
+    "Energy_KCal": 360.12,
+    "Protein": 3.64,
+    "TotalLipidFat": 16.02,
+    "Carbohydrate": 51.11,
+    "FiberTotalDietary": 1.03,
+    "SugarsTotal": 27.75,
+    "Water": 26.87
+  },
+  "per_serving": {
+    "Energy_KCal": 375.34,
+    "Protein": 3.79,
+    "TotalLipidFat": 16.7,
+    "Carbohydrate": 53.27,
+    "FiberTotalDietary": 1.07,
+    "SugarsTotal": 28.92,
+    "Water": 28.01
+  }
+}

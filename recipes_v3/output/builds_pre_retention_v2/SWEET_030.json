@@ -1,0 +1,228 @@
+{
+  "recipe_id": "SWEET_030",
+  "recipe_name": "Cookies, Oatmeal with Raisins",
+  "sr_rule": "Rule C",
+  "canonical_ndb_no": "18184",
+  "cook_method": "bake",
+  "cook_method_normalized": "baked",
+  "yield_factor_water": 0.7,
+  "yield_factor_fat": 1.0,
+  "servings_count": 24,
+  "audit_status": "",
+  "audit_notes": "",
+  "raw_total_grams": 1203.8,
+  "raw_water_grams": 192.76,
+  "raw_fat_grams": 192.97,
+  "water_lost_grams": 57.83,
+  "fat_lost_grams": 0.0,
+  "cooked_total_grams": 1145.97,
+  "grams_per_serving": 47.75,
+  "ingredients": [
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 199.0,
+      "section": "",
+      "qty_display": "1/2 cup + 6 tbsp",
+      "contribution": {
+        "Energy_KCal": 1426.83,
+        "Protein": 1.692,
+        "TotalLipidFat": 161.409,
+        "Carbohydrate": 0.119,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.119,
+        "Water": 35.701
+      }
+    },
+    {
+      "ingredient_key": "sugar_brown",
+      "ndb_no": "19334",
+      "long_desc": "Sugars, brown",
+      "grams": 165.0,
+      "section": "",
+      "qty_display": "3/4 cup packed",
+      "contribution": {
+        "Energy_KCal": 627.0,
+        "Protein": 0.198,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 161.849,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 160.083,
+        "Water": 2.211
+      }
+    },
+    {
+      "ingredient_key": "sugar_granulated",
+      "ndb_no": "19335",
+      "long_desc": "Sugars, granulated",
+      "grams": 100.0,
+      "section": "",
+      "qty_display": "1/2 cup",
+      "contribution": {
+        "Energy_KCal": 387.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 99.98,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 99.8,
+        "Water": 0.02
+      }
+    },
+    {
+      "ingredient_key": "egg_whole_raw",
+      "ndb_no": "1123",
+      "long_desc": "Egg, whole, raw, fresh",
+      "grams": 100.0,
+      "section": "",
+      "qty_display": "2 large",
+      "contribution": {
+        "Energy_KCal": 143.0,
+        "Protein": 12.56,
+        "TotalLipidFat": 9.51,
+        "Carbohydrate": 0.72,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.37,
+        "Water": 76.15
+      }
+    },
+    {
+      "ingredient_key": "vanilla_extract",
+      "ndb_no": "2050",
+      "long_desc": "Vanilla extract",
+      "grams": 4.2,
+      "section": "",
+      "qty_display": "1 teaspoon",
+      "contribution": {
+        "Energy_KCal": 12.096,
+        "Protein": 0.003,
+        "TotalLipidFat": 0.003,
+        "Carbohydrate": 0.531,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.531,
+        "Water": 2.208
+      }
+    },
+    {
+      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ndb_no": "20081",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
+      "grams": 185.0,
+      "section": "",
+      "qty_display": "1 1/2 cups",
+      "contribution": {
+        "Energy_KCal": 673.4,
+        "Protein": 19.111,
+        "TotalLipidFat": 1.813,
+        "Carbohydrate": 141.174,
+        "FiberTotalDietary": 4.995,
+        "SugarsTotal": 0.5,
+        "Water": 22.052
+      }
+    },
+    {
+      "ingredient_key": "baking_soda",
+      "ndb_no": "18372",
+      "long_desc": "Leavening agents, baking soda",
+      "grams": 5.0,
+      "section": "",
+      "qty_display": "1 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.01
+      }
+    },
+    {
+      "ingredient_key": "cinnamon_ground",
+      "ndb_no": "2010",
+      "long_desc": "Spices, cinnamon, ground",
+      "grams": 2.6,
+      "section": "",
+      "qty_display": "1 teaspoon",
+      "contribution": {
+        "Energy_KCal": 6.422,
+        "Protein": 0.104,
+        "TotalLipidFat": 0.032,
+        "Carbohydrate": 2.095,
+        "FiberTotalDietary": 1.381,
+        "SugarsTotal": 0.056,
+        "Water": 0.275
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 3.0,
+      "section": "",
+      "qty_display": "1/2 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.006
+      }
+    },
+    {
+      "ingredient_key": "oats_rolled_old_fashioned_dry",
+      "ndb_no": "8120",
+      "long_desc": "Cereals, oats, regular and quick, not fortified, dry",
+      "grams": 300.0,
+      "section": "",
+      "qty_display": "3 cups",
+      "contribution": {
+        "Energy_KCal": 1137.0,
+        "Protein": 39.45,
+        "TotalLipidFat": 19.56,
+        "Carbohydrate": 203.1,
+        "FiberTotalDietary": 30.3,
+        "SugarsTotal": 2.97,
+        "Water": 32.52
+      }
+    },
+    {
+      "ingredient_key": "raisins_seedless",
+      "ndb_no": "9298",
+      "long_desc": "Raisins, seedless",
+      "grams": 140.0,
+      "section": "",
+      "qty_display": "1 cup",
+      "contribution": {
+        "Energy_KCal": 418.6,
+        "Protein": 4.298,
+        "TotalLipidFat": 0.644,
+        "Carbohydrate": 110.852,
+        "FiberTotalDietary": 5.18,
+        "SugarsTotal": 82.866,
+        "Water": 21.602
+      }
+    }
+  ],
+  "skipped_ingredients": [],
+  "per100g": {
+    "Energy_KCal": 421.59,
+    "Protein": 6.35,
+    "TotalLipidFat": 16.84,
+    "Carbohydrate": 62.87,
+    "FiberTotalDietary": 3.65,
+    "SugarsTotal": 30.31,
+    "Water": 11.77
+  },
+  "per_serving": {
+    "Energy_KCal": 201.3,
+    "Protein": 3.03,
+    "TotalLipidFat": 8.04,
+    "Carbohydrate": 30.02,
+    "FiberTotalDietary": 1.74,
+    "SugarsTotal": 14.47,
+    "Water": 5.62
+  }
+}

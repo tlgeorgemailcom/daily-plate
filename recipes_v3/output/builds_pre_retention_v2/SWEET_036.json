@@ -1,0 +1,126 @@
+{
+  "recipe_id": "SWEET_036",
+  "recipe_name": "Cookies, Coconut Macaroon",
+  "sr_rule": "Rule C",
+  "canonical_ndb_no": "28309",
+  "cook_method": "bake",
+  "cook_method_normalized": "baked",
+  "yield_factor_water": 0.55,
+  "yield_factor_fat": 1.0,
+  "servings_count": 24,
+  "audit_status": "",
+  "audit_notes": "",
+  "raw_total_grams": 633.95,
+  "raw_water_grams": 167.65,
+  "raw_fat_grams": 141.12,
+  "water_lost_grams": 75.44,
+  "fat_lost_grams": 0.0,
+  "cooked_total_grams": 558.51,
+  "grams_per_serving": 23.27,
+  "ingredients": [
+    {
+      "ingredient_key": "egg_white_raw",
+      "ndb_no": "1124",
+      "long_desc": "Egg, white, raw, fresh",
+      "grams": 132.0,
+      "section": "macaroons",
+      "qty_display": "4 large",
+      "contribution": {
+        "Energy_KCal": 68.64,
+        "Protein": 14.388,
+        "TotalLipidFat": 0.224,
+        "Carbohydrate": 0.964,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.937,
+        "Water": 115.592
+      }
+    },
+    {
+      "ingredient_key": "sugar_granulated",
+      "ndb_no": "19335",
+      "long_desc": "Sugars, granulated",
+      "grams": 100.0,
+      "section": "macaroons",
+      "qty_display": "1/2 cup",
+      "contribution": {
+        "Energy_KCal": 387.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 99.98,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 99.8,
+        "Water": 0.02
+      }
+    },
+    {
+      "ingredient_key": "vanilla_extract",
+      "ndb_no": "2050",
+      "long_desc": "Vanilla extract",
+      "grams": 4.2,
+      "section": "macaroons",
+      "qty_display": "1 teaspoon",
+      "contribution": {
+        "Energy_KCal": 12.096,
+        "Protein": 0.003,
+        "TotalLipidFat": 0.003,
+        "Carbohydrate": 0.531,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.531,
+        "Water": 2.208
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 0.75,
+      "section": "macaroons",
+      "qty_display": "1/8 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.002
+      }
+    },
+    {
+      "ingredient_key": "coconut_shredded_sweetened",
+      "ndb_no": "12179",
+      "long_desc": "Nuts, coconut meat, dried (desiccated), sweetened, shredded",
+      "grams": 397.0,
+      "section": "macaroons",
+      "qty_display": "1 (14-ounce) bag (about 5 1/3 cups)",
+      "contribution": {
+        "Energy_KCal": 1988.97,
+        "Protein": 11.434,
+        "TotalLipidFat": 140.895,
+        "Carbohydrate": 189.25,
+        "FiberTotalDietary": 17.865,
+        "SugarsTotal": 171.385,
+        "Water": 49.824
+      }
+    }
+  ],
+  "skipped_ingredients": [],
+  "per100g": {
+    "Energy_KCal": 439.87,
+    "Protein": 4.35,
+    "TotalLipidFat": 25.27,
+    "Carbohydrate": 52.05,
+    "FiberTotalDietary": 3.2,
+    "SugarsTotal": 48.82,
+    "Water": 16.51
+  },
+  "per_serving": {
+    "Energy_KCal": 102.36,
+    "Protein": 1.01,
+    "TotalLipidFat": 5.88,
+    "Carbohydrate": 12.11,
+    "FiberTotalDietary": 0.74,
+    "SugarsTotal": 11.36,
+    "Water": 3.84
+  }
+}

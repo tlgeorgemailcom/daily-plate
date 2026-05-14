@@ -1,0 +1,245 @@
+{
+  "recipe_id": "SWEET_009",
+  "recipe_name": "Pecan Pie",
+  "sr_rule": "Rule B",
+  "canonical_ndb_no": "18325",
+  "cook_method": "bake",
+  "cook_method_normalized": "baked",
+  "yield_factor_water": 0.78,
+  "yield_factor_fat": 1.0,
+  "servings_count": 8,
+  "audit_status": "",
+  "audit_notes": "",
+  "raw_total_grams": 1291.95,
+  "raw_water_grams": 295.04,
+  "raw_fat_grams": 275.96,
+  "water_lost_grams": 64.91,
+  "fat_lost_grams": 0.0,
+  "cooked_total_grams": 1227.04,
+  "grams_per_serving": 153.38,
+  "ingredients": [
+    {
+      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ndb_no": "20081",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
+      "grams": 188.0,
+      "section": "crust",
+      "qty_display": "1 1/2 cups",
+      "contribution": {
+        "Energy_KCal": 684.32,
+        "Protein": 19.42,
+        "TotalLipidFat": 1.842,
+        "Carbohydrate": 143.463,
+        "FiberTotalDietary": 5.076,
+        "SugarsTotal": 0.508,
+        "Water": 22.41
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 3.0,
+      "section": "crust",
+      "qty_display": "1/2 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.006
+      }
+    },
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 85.0,
+      "section": "crust",
+      "qty_display": "6 tablespoons",
+      "contribution": {
+        "Energy_KCal": 609.45,
+        "Protein": 0.722,
+        "TotalLipidFat": 68.944,
+        "Carbohydrate": 0.051,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.051,
+        "Water": 15.249
+      }
+    },
+    {
+      "ingredient_key": "water_tap",
+      "ndb_no": "14411",
+      "long_desc": "Water, tap, drinking",
+      "grams": 45.0,
+      "section": "crust",
+      "qty_display": "3 tablespoons ice water",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 44.955
+      }
+    },
+    {
+      "ingredient_key": "corn_syrup_light",
+      "ndb_no": "19350",
+      "long_desc": "Syrups, corn, light",
+      "grams": 328.0,
+      "section": "filling",
+      "qty_display": "1 cup",
+      "contribution": {
+        "Energy_KCal": 928.24,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.656,
+        "Carbohydrate": 251.871,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 251.806,
+        "Water": 74.817
+      }
+    },
+    {
+      "ingredient_key": "sugar_brown",
+      "ndb_no": "19334",
+      "long_desc": "Sugars, brown",
+      "grams": 220.0,
+      "section": "filling",
+      "qty_display": "1 cup packed",
+      "contribution": {
+        "Energy_KCal": 836.0,
+        "Protein": 0.264,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 215.798,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 213.444,
+        "Water": 2.948
+      }
+    },
+    {
+      "ingredient_key": "egg_whole_raw",
+      "ndb_no": "1123",
+      "long_desc": "Egg, whole, raw, fresh",
+      "grams": 150.0,
+      "section": "filling",
+      "qty_display": "3 large",
+      "contribution": {
+        "Energy_KCal": 214.5,
+        "Protein": 18.84,
+        "TotalLipidFat": 14.265,
+        "Carbohydrate": 1.08,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.555,
+        "Water": 114.225
+      }
+    },
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 57.0,
+      "section": "filling",
+      "qty_display": "1/4 cup",
+      "contribution": {
+        "Energy_KCal": 408.69,
+        "Protein": 0.484,
+        "TotalLipidFat": 46.233,
+        "Carbohydrate": 0.034,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.034,
+        "Water": 10.226
+      }
+    },
+    {
+      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ndb_no": "20081",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
+      "grams": 8.0,
+      "section": "filling",
+      "qty_display": "1 tablespoon",
+      "contribution": {
+        "Energy_KCal": 29.12,
+        "Protein": 0.826,
+        "TotalLipidFat": 0.078,
+        "Carbohydrate": 6.105,
+        "FiberTotalDietary": 0.216,
+        "SugarsTotal": 0.022,
+        "Water": 0.954
+      }
+    },
+    {
+      "ingredient_key": "vanilla_extract",
+      "ndb_no": "2050",
+      "long_desc": "Vanilla extract",
+      "grams": 4.2,
+      "section": "filling",
+      "qty_display": "1 teaspoon",
+      "contribution": {
+        "Energy_KCal": 12.096,
+        "Protein": 0.003,
+        "TotalLipidFat": 0.003,
+        "Carbohydrate": 0.531,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.531,
+        "Water": 2.208
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 3.75,
+      "section": "filling",
+      "qty_display": "5/8 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.007
+      }
+    },
+    {
+      "ingredient_key": "pecans_raw",
+      "ndb_no": "12142",
+      "long_desc": "Nuts, pecans",
+      "grams": 200.0,
+      "section": "filling",
+      "qty_display": "2 cups halves, coarsely chopped (save enough halves to line the top)",
+      "contribution": {
+        "Energy_KCal": 1382.0,
+        "Protein": 18.34,
+        "TotalLipidFat": 143.94,
+        "Carbohydrate": 27.72,
+        "FiberTotalDietary": 19.2,
+        "SugarsTotal": 7.94,
+        "Water": 7.04
+      }
+    }
+  ],
+  "skipped_ingredients": [],
+  "per100g": {
+    "Energy_KCal": 415.99,
+    "Protein": 4.51,
+    "TotalLipidFat": 22.49,
+    "Carbohydrate": 52.7,
+    "FiberTotalDietary": 2.0,
+    "SugarsTotal": 38.7,
+    "Water": 18.76
+  },
+  "per_serving": {
+    "Energy_KCal": 638.05,
+    "Protein": 6.92,
+    "TotalLipidFat": 34.5,
+    "Carbohydrate": 80.83,
+    "FiberTotalDietary": 3.07,
+    "SugarsTotal": 59.36,
+    "Water": 28.77
+  }
+}

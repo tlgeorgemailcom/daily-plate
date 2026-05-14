@@ -1,0 +1,279 @@
+{
+  "recipe_id": "SWEET_004",
+  "recipe_name": "Pie Blueberry",
+  "sr_rule": "Rule B",
+  "canonical_ndb_no": "18306",
+  "cook_method": "bake",
+  "cook_method_normalized": "baked",
+  "yield_factor_water": 0.82,
+  "yield_factor_fat": 1.0,
+  "servings_count": 8,
+  "audit_status": "",
+  "audit_notes": "",
+  "raw_total_grams": 1441.3,
+  "raw_water_grams": 801.6,
+  "raw_fat_grams": 156.58,
+  "water_lost_grams": 144.29,
+  "fat_lost_grams": 0.0,
+  "cooked_total_grams": 1297.01,
+  "grams_per_serving": 162.13,
+  "ingredients": [
+    {
+      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ndb_no": "20081",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
+      "grams": 250.0,
+      "section": "crust",
+      "qty_display": "2 cups",
+      "contribution": {
+        "Energy_KCal": 910.0,
+        "Protein": 25.825,
+        "TotalLipidFat": 2.45,
+        "Carbohydrate": 190.775,
+        "FiberTotalDietary": 6.75,
+        "SugarsTotal": 0.675,
+        "Water": 29.8
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 4.5,
+      "section": "crust",
+      "qty_display": "3/4 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.009
+      }
+    },
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 170.0,
+      "section": "crust",
+      "qty_display": "3/4 cup",
+      "contribution": {
+        "Energy_KCal": 1218.9,
+        "Protein": 1.445,
+        "TotalLipidFat": 137.887,
+        "Carbohydrate": 0.102,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.102,
+        "Water": 30.498
+      }
+    },
+    {
+      "ingredient_key": "water_tap",
+      "ndb_no": "14411",
+      "long_desc": "Water, tap, drinking",
+      "grams": 75.0,
+      "section": "crust",
+      "qty_display": "5 tablespoon ice water",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 74.925
+      }
+    },
+    {
+      "ingredient_key": "sugar_granulated",
+      "ndb_no": "19335",
+      "long_desc": "Sugars, granulated",
+      "grams": 8.0,
+      "section": "crust",
+      "qty_display": "2 teaspoons",
+      "contribution": {
+        "Energy_KCal": 30.96,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 7.998,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 7.984,
+        "Water": 0.002
+      }
+    },
+    {
+      "ingredient_key": "blueberries_raw",
+      "ndb_no": "9050",
+      "long_desc": "Blueberries, raw",
+      "grams": 740.0,
+      "section": "filling",
+      "qty_display": "5 cups",
+      "contribution": {
+        "Energy_KCal": 421.8,
+        "Protein": 5.476,
+        "TotalLipidFat": 2.442,
+        "Carbohydrate": 107.226,
+        "FiberTotalDietary": 17.76,
+        "SugarsTotal": 73.704,
+        "Water": 623.154
+      }
+    },
+    {
+      "ingredient_key": "sugar_granulated",
+      "ndb_no": "19335",
+      "long_desc": "Sugars, granulated",
+      "grams": 100.0,
+      "section": "filling",
+      "qty_display": "1/2 cup",
+      "contribution": {
+        "Energy_KCal": 387.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 99.98,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 99.8,
+        "Water": 0.02
+      }
+    },
+    {
+      "ingredient_key": "cornstarch",
+      "ndb_no": "20027",
+      "long_desc": "Cornstarch",
+      "grams": 32.0,
+      "section": "filling",
+      "qty_display": "1/4 cup",
+      "contribution": {
+        "Energy_KCal": 121.92,
+        "Protein": 0.083,
+        "TotalLipidFat": 0.016,
+        "Carbohydrate": 29.206,
+        "FiberTotalDietary": 0.288,
+        "SugarsTotal": 0.0,
+        "Water": 2.662
+      }
+    },
+    {
+      "ingredient_key": "lemon_juice_raw",
+      "ndb_no": "9152",
+      "long_desc": "Lemon juice, raw",
+      "grams": 15.0,
+      "section": "filling",
+      "qty_display": "1 tablespoon",
+      "contribution": {
+        "Energy_KCal": 3.3,
+        "Protein": 0.052,
+        "TotalLipidFat": 0.036,
+        "Carbohydrate": 1.035,
+        "FiberTotalDietary": 0.045,
+        "SugarsTotal": 0.378,
+        "Water": 13.847
+      }
+    },
+    {
+      "ingredient_key": "cinnamon_ground",
+      "ndb_no": "2010",
+      "long_desc": "Spices, cinnamon, ground",
+      "grams": 1.3,
+      "section": "filling",
+      "qty_display": "1/2 teaspoon",
+      "contribution": {
+        "Energy_KCal": 3.211,
+        "Protein": 0.052,
+        "TotalLipidFat": 0.016,
+        "Carbohydrate": 1.048,
+        "FiberTotalDietary": 0.69,
+        "SugarsTotal": 0.028,
+        "Water": 0.138
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 1.5,
+      "section": "filling",
+      "qty_display": "1/4 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.003
+      }
+    },
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 14.0,
+      "section": "filling",
+      "qty_display": "1 tablespoon",
+      "contribution": {
+        "Energy_KCal": 100.38,
+        "Protein": 0.119,
+        "TotalLipidFat": 11.355,
+        "Carbohydrate": 0.008,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.008,
+        "Water": 2.512
+      }
+    },
+    {
+      "ingredient_key": "egg_whole_raw",
+      "ndb_no": "1123",
+      "long_desc": "Egg, whole, raw, fresh",
+      "grams": 25.0,
+      "section": "wash",
+      "qty_display": "1 large egg (for wash; ~half adheres)",
+      "contribution": {
+        "Energy_KCal": 35.75,
+        "Protein": 3.14,
+        "TotalLipidFat": 2.377,
+        "Carbohydrate": 0.18,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.092,
+        "Water": 19.038
+      }
+    },
+    {
+      "ingredient_key": "water_tap",
+      "ndb_no": "14411",
+      "long_desc": "Water, tap, drinking",
+      "grams": 5.0,
+      "section": "wash",
+      "qty_display": "1 teaspoon (egg wash)",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 4.995
+      }
+    }
+  ],
+  "skipped_ingredients": [],
+  "per100g": {
+    "Energy_KCal": 249.28,
+    "Protein": 2.62,
+    "TotalLipidFat": 12.07,
+    "Carbohydrate": 33.74,
+    "FiberTotalDietary": 1.97,
+    "SugarsTotal": 14.09,
+    "Water": 50.68
+  },
+  "per_serving": {
+    "Energy_KCal": 404.15,
+    "Protein": 4.25,
+    "TotalLipidFat": 19.57,
+    "Carbohydrate": 54.7,
+    "FiberTotalDietary": 3.19,
+    "SugarsTotal": 22.84,
+    "Water": 82.17
+  }
+}

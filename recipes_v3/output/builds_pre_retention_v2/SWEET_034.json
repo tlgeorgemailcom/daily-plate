@@ -1,0 +1,211 @@
+{
+  "recipe_id": "SWEET_034",
+  "recipe_name": "Cookies, Chocolate Chip, Homemade",
+  "sr_rule": "Rule C",
+  "canonical_ndb_no": "18164",
+  "cook_method": "bake",
+  "cook_method_normalized": "baked",
+  "yield_factor_water": 0.33,
+  "yield_factor_fat": 1.0,
+  "servings_count": 48,
+  "audit_status": "",
+  "audit_notes": "",
+  "raw_total_grams": 1124.4,
+  "raw_water_grams": 122.15,
+  "raw_fat_grams": 239.08,
+  "water_lost_grams": 81.84,
+  "fat_lost_grams": 0.0,
+  "cooked_total_grams": 1042.56,
+  "grams_per_serving": 21.72,
+  "ingredients": [
+    {
+      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ndb_no": "20081",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
+      "grams": 280.0,
+      "section": "",
+      "qty_display": "2\u00bc cups",
+      "contribution": {
+        "Energy_KCal": 1019.2,
+        "Protein": 28.924,
+        "TotalLipidFat": 2.744,
+        "Carbohydrate": 213.668,
+        "FiberTotalDietary": 7.56,
+        "SugarsTotal": 0.756,
+        "Water": 33.376
+      }
+    },
+    {
+      "ingredient_key": "baking_soda",
+      "ndb_no": "18372",
+      "long_desc": "Leavening agents, baking soda",
+      "grams": 5.0,
+      "section": "",
+      "qty_display": "1 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.01
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 3.0,
+      "section": "",
+      "qty_display": "\u00bd teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.006
+      }
+    },
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 170.0,
+      "section": "",
+      "qty_display": "\u00be cup (1\u00bd sticks, melted)",
+      "contribution": {
+        "Energy_KCal": 1218.9,
+        "Protein": 1.445,
+        "TotalLipidFat": 137.887,
+        "Carbohydrate": 0.102,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.102,
+        "Water": 30.498
+      }
+    },
+    {
+      "ingredient_key": "sugar_brown",
+      "ndb_no": "19334",
+      "long_desc": "Sugars, brown",
+      "grams": 150.0,
+      "section": "",
+      "qty_display": "\u00be cup packed",
+      "contribution": {
+        "Energy_KCal": 570.0,
+        "Protein": 0.18,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 147.135,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 145.53,
+        "Water": 2.01
+      }
+    },
+    {
+      "ingredient_key": "sugar_granulated",
+      "ndb_no": "19335",
+      "long_desc": "Sugars, granulated",
+      "grams": 100.0,
+      "section": "",
+      "qty_display": "\u00bd cup",
+      "contribution": {
+        "Energy_KCal": 387.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 99.98,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 99.8,
+        "Water": 0.02
+      }
+    },
+    {
+      "ingredient_key": "egg_whole_raw",
+      "ndb_no": "1123",
+      "long_desc": "Egg, whole, raw, fresh",
+      "grams": 50.0,
+      "section": "",
+      "qty_display": "1 large",
+      "contribution": {
+        "Energy_KCal": 71.5,
+        "Protein": 6.28,
+        "TotalLipidFat": 4.755,
+        "Carbohydrate": 0.36,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.185,
+        "Water": 38.075
+      }
+    },
+    {
+      "ingredient_key": "egg_yolk_raw",
+      "ndb_no": "1125",
+      "long_desc": "Egg, yolk, raw, fresh",
+      "grams": 18.0,
+      "section": "",
+      "qty_display": "1 egg yolk",
+      "contribution": {
+        "Energy_KCal": 57.96,
+        "Protein": 2.855,
+        "TotalLipidFat": 4.777,
+        "Carbohydrate": 0.646,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.101,
+        "Water": 9.416
+      }
+    },
+    {
+      "ingredient_key": "vanilla_extract",
+      "ndb_no": "2050",
+      "long_desc": "Vanilla extract",
+      "grams": 8.4,
+      "section": "",
+      "qty_display": "2 teaspoons",
+      "contribution": {
+        "Energy_KCal": 24.192,
+        "Protein": 0.005,
+        "TotalLipidFat": 0.005,
+        "Carbohydrate": 1.063,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 1.063,
+        "Water": 4.417
+      }
+    },
+    {
+      "ingredient_key": "chocolate_chips_semisweet",
+      "ndb_no": "19139",
+      "long_desc": "Baking chocolate, MARS SNACKFOOD US, M&M's Semisweet Chocolate Mini Baking Bits",
+      "grams": 340.0,
+      "section": "",
+      "qty_display": "2 cups",
+      "contribution": {
+        "Energy_KCal": 1757.8,
+        "Protein": 15.096,
+        "TotalLipidFat": 88.91,
+        "Carbohydrate": 224.264,
+        "FiberTotalDietary": 22.78,
+        "SugarsTotal": 0.0,
+        "Water": 4.318
+      }
+    }
+  ],
+  "skipped_ingredients": [],
+  "per100g": {
+    "Energy_KCal": 489.81,
+    "Protein": 4.94,
+    "TotalLipidFat": 22.93,
+    "Carbohydrate": 65.92,
+    "FiberTotalDietary": 2.91,
+    "SugarsTotal": 23.74,
+    "Water": 3.87
+  },
+  "per_serving": {
+    "Energy_KCal": 106.39,
+    "Protein": 1.07,
+    "TotalLipidFat": 4.98,
+    "Carbohydrate": 14.32,
+    "FiberTotalDietary": 0.63,
+    "SugarsTotal": 5.16,
+    "Water": 0.84
+  }
+}

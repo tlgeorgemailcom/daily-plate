@@ -1,0 +1,143 @@
+{
+  "recipe_id": "SWEET_033",
+  "recipe_name": "Cookies, Butter, Homemade",
+  "sr_rule": "Rule C",
+  "canonical_ndb_no": "18155",
+  "cook_method": "bake",
+  "cook_method_normalized": "baked",
+  "yield_factor_water": 0.38,
+  "yield_factor_fat": 1.0,
+  "servings_count": 60,
+  "audit_status": "",
+  "audit_notes": "",
+  "raw_total_grams": 766.9,
+  "raw_water_grams": 116.63,
+  "raw_fat_grams": 191.62,
+  "water_lost_grams": 72.31,
+  "fat_lost_grams": 0.0,
+  "cooked_total_grams": 694.59,
+  "grams_per_serving": 11.58,
+  "ingredients": [
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 227.0,
+      "section": "",
+      "qty_display": "1 cup (2 sticks)",
+      "contribution": {
+        "Energy_KCal": 1627.59,
+        "Protein": 1.929,
+        "TotalLipidFat": 184.12,
+        "Carbohydrate": 0.136,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.136,
+        "Water": 40.724
+      }
+    },
+    {
+      "ingredient_key": "sugar_granulated",
+      "ndb_no": "19335",
+      "long_desc": "Sugars, granulated",
+      "grams": 200.0,
+      "section": "",
+      "qty_display": "1 cup",
+      "contribution": {
+        "Energy_KCal": 774.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 199.96,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 199.6,
+        "Water": 0.04
+      }
+    },
+    {
+      "ingredient_key": "egg_whole_raw",
+      "ndb_no": "1123",
+      "long_desc": "Egg, whole, raw, fresh",
+      "grams": 50.0,
+      "section": "",
+      "qty_display": "1 large",
+      "contribution": {
+        "Energy_KCal": 71.5,
+        "Protein": 6.28,
+        "TotalLipidFat": 4.755,
+        "Carbohydrate": 0.36,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.185,
+        "Water": 38.075
+      }
+    },
+    {
+      "ingredient_key": "vanilla_extract",
+      "ndb_no": "2050",
+      "long_desc": "Vanilla extract",
+      "grams": 8.4,
+      "section": "",
+      "qty_display": "2 teaspoons",
+      "contribution": {
+        "Energy_KCal": 24.192,
+        "Protein": 0.005,
+        "TotalLipidFat": 0.005,
+        "Carbohydrate": 1.063,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 1.063,
+        "Water": 4.417
+      }
+    },
+    {
+      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ndb_no": "20081",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
+      "grams": 280.0,
+      "section": "",
+      "qty_display": "2\u00bc cups",
+      "contribution": {
+        "Energy_KCal": 1019.2,
+        "Protein": 28.924,
+        "TotalLipidFat": 2.744,
+        "Carbohydrate": 213.668,
+        "FiberTotalDietary": 7.56,
+        "SugarsTotal": 0.756,
+        "Water": 33.376
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 1.5,
+      "section": "",
+      "qty_display": "\u00bc teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.003
+      }
+    }
+  ],
+  "skipped_ingredients": [],
+  "per100g": {
+    "Energy_KCal": 506.27,
+    "Protein": 5.03,
+    "TotalLipidFat": 27.59,
+    "Carbohydrate": 59.77,
+    "FiberTotalDietary": 1.09,
+    "SugarsTotal": 29.04,
+    "Water": 6.38
+  },
+  "per_serving": {
+    "Energy_KCal": 58.61,
+    "Protein": 0.58,
+    "TotalLipidFat": 3.19,
+    "Carbohydrate": 6.92,
+    "FiberTotalDietary": 0.13,
+    "SugarsTotal": 3.36,
+    "Water": 0.74
+  }
+}

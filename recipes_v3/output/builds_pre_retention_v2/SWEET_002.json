@@ -1,0 +1,267 @@
+{
+  "recipe_id": "SWEET_002",
+  "recipe_name": "Apple Strudel",
+  "sr_rule": "Rule A",
+  "canonical_ndb_no": "18354",
+  "cook_method": "bake",
+  "cook_method_normalized": "baked",
+  "yield_factor_water": 0.83,
+  "yield_factor_fat": 1.0,
+  "servings_count": 12,
+  "audit_status": "accepted",
+  "audit_notes": "Rule A tolerance \u00b15%. Fiber -5.45% and Protein -5.15% just outside; all other macros within \u00b12.4%. Strudel pastry composition varies by source. Accepted as-is May 6 2026.",
+  "raw_total_grams": 1317.3,
+  "raw_water_grams": 619.98,
+  "raw_fat_grams": 137.81,
+  "water_lost_grams": 105.4,
+  "fat_lost_grams": 0.0,
+  "cooked_total_grams": 1211.9,
+  "grams_per_serving": 100.99,
+  "ingredients": [
+    {
+      "ingredient_key": "puff_pastry_baked",
+      "ndb_no": "18211",
+      "long_desc": "Puff pastry, frozen, ready-to-bake, baked",
+      "grams": 245.0,
+      "section": "pastry",
+      "qty_display": "1 sheet",
+      "contribution": {
+        "Energy_KCal": 1367.1,
+        "Protein": 18.13,
+        "TotalLipidFat": 94.325,
+        "Carbohydrate": 111.965,
+        "FiberTotalDietary": 3.675,
+        "SugarsTotal": 1.838,
+        "Water": 18.13
+      }
+    },
+    {
+      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ndb_no": "20081",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
+      "grams": 16.0,
+      "section": "pastry",
+      "qty_display": "2 tablespoons (for dusting)",
+      "contribution": {
+        "Energy_KCal": 58.24,
+        "Protein": 1.653,
+        "TotalLipidFat": 0.157,
+        "Carbohydrate": 12.21,
+        "FiberTotalDietary": 0.432,
+        "SugarsTotal": 0.043,
+        "Water": 1.907
+      }
+    },
+    {
+      "ingredient_key": "apple_granny_smith_raw",
+      "ndb_no": "9502",
+      "long_desc": "Apples, raw, granny smith, with skin",
+      "grams": 542.0,
+      "section": "filling",
+      "qty_display": "5 cups thinly sliced",
+      "contribution": {
+        "Energy_KCal": 314.36,
+        "Protein": 2.385,
+        "TotalLipidFat": 1.03,
+        "Carbohydrate": 73.766,
+        "FiberTotalDietary": 15.176,
+        "SugarsTotal": 51.978,
+        "Water": 463.193
+      }
+    },
+    {
+      "ingredient_key": "sugar_granulated",
+      "ndb_no": "19335",
+      "long_desc": "Sugars, granulated",
+      "grams": 160.0,
+      "section": "filling",
+      "qty_display": "3/4 cup + 2 tablespoons",
+      "contribution": {
+        "Energy_KCal": 619.2,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 159.968,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 159.68,
+        "Water": 0.032
+      }
+    },
+    {
+      "ingredient_key": "sugar_brown",
+      "ndb_no": "19334",
+      "long_desc": "Sugars, brown",
+      "grams": 36.0,
+      "section": "filling",
+      "qty_display": "1/4 cup",
+      "contribution": {
+        "Energy_KCal": 136.8,
+        "Protein": 0.043,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 35.312,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 34.927,
+        "Water": 0.482
+      }
+    },
+    {
+      "ingredient_key": "raisins_seedless",
+      "ndb_no": "9298",
+      "long_desc": "Raisins, seedless",
+      "grams": 80.0,
+      "section": "filling",
+      "qty_display": "1/2 cup",
+      "contribution": {
+        "Energy_KCal": 239.2,
+        "Protein": 2.456,
+        "TotalLipidFat": 0.368,
+        "Carbohydrate": 63.344,
+        "FiberTotalDietary": 2.96,
+        "SugarsTotal": 47.352,
+        "Water": 12.344
+      }
+    },
+    {
+      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ndb_no": "20081",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
+      "grams": 16.0,
+      "section": "filling",
+      "qty_display": "2 tablespoons (for thickening)",
+      "contribution": {
+        "Energy_KCal": 58.24,
+        "Protein": 1.653,
+        "TotalLipidFat": 0.157,
+        "Carbohydrate": 12.21,
+        "FiberTotalDietary": 0.432,
+        "SugarsTotal": 0.043,
+        "Water": 1.907
+      }
+    },
+    {
+      "ingredient_key": "water_tap",
+      "ndb_no": "14411",
+      "long_desc": "Water, tap, drinking",
+      "grams": 59.0,
+      "section": "filling",
+      "qty_display": "1/4 cup",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 58.941
+      }
+    },
+    {
+      "ingredient_key": "bread_crumbs_dry",
+      "ndb_no": "18079",
+      "long_desc": "Bread crumbs, dry, grated, plain",
+      "grams": 55.0,
+      "section": "filling",
+      "qty_display": "1/2 cup",
+      "contribution": {
+        "Energy_KCal": 217.25,
+        "Protein": 7.343,
+        "TotalLipidFat": 2.915,
+        "Carbohydrate": 39.589,
+        "FiberTotalDietary": 2.475,
+        "SugarsTotal": 3.41,
+        "Water": 3.581
+      }
+    },
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 42.0,
+      "section": "filling",
+      "qty_display": "3 tablespoons",
+      "contribution": {
+        "Energy_KCal": 301.14,
+        "Protein": 0.357,
+        "TotalLipidFat": 34.066,
+        "Carbohydrate": 0.025,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.025,
+        "Water": 7.535
+      }
+    },
+    {
+      "ingredient_key": "lemon_juice_raw",
+      "ndb_no": "9152",
+      "long_desc": "Lemon juice, raw",
+      "grams": 15.0,
+      "section": "filling",
+      "qty_display": "1 tablespoon",
+      "contribution": {
+        "Energy_KCal": 3.3,
+        "Protein": 0.052,
+        "TotalLipidFat": 0.036,
+        "Carbohydrate": 1.035,
+        "FiberTotalDietary": 0.045,
+        "SugarsTotal": 0.378,
+        "Water": 13.847
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 1.3,
+      "section": "filling",
+      "qty_display": "1/4 teaspoon (heaping)",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.003
+      }
+    },
+    {
+      "ingredient_key": "egg_whole_raw",
+      "ndb_no": "1123",
+      "long_desc": "Egg, whole, raw, fresh",
+      "grams": 50.0,
+      "section": "finish",
+      "qty_display": "1 large egg",
+      "contribution": {
+        "Energy_KCal": 71.5,
+        "Protein": 6.28,
+        "TotalLipidFat": 4.755,
+        "Carbohydrate": 0.36,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.185,
+        "Water": 38.075
+      }
+    }
+  ],
+  "skipped_ingredients": [
+    {
+      "ingredient_key": "cinnamon_ground",
+      "reason": "optional"
+    }
+  ],
+  "per100g": {
+    "Energy_KCal": 279.42,
+    "Protein": 3.13,
+    "TotalLipidFat": 11.37,
+    "Carbohydrate": 42.06,
+    "FiberTotalDietary": 2.08,
+    "SugarsTotal": 24.74,
+    "Water": 42.46
+  },
+  "per_serving": {
+    "Energy_KCal": 282.19,
+    "Protein": 3.16,
+    "TotalLipidFat": 11.48,
+    "Carbohydrate": 42.48,
+    "FiberTotalDietary": 2.1,
+    "SugarsTotal": 24.99,
+    "Water": 42.88
+  }
+}

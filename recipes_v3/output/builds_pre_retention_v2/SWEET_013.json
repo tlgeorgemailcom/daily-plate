@@ -1,0 +1,284 @@
+{
+  "recipe_id": "SWEET_013",
+  "recipe_name": "Chocolate Cream Pie",
+  "sr_rule": "Rule C",
+  "canonical_ndb_no": "18310",
+  "cook_method": "stovetop_then_chill",
+  "cook_method_normalized": "raw",
+  "yield_factor_water": 0.78,
+  "yield_factor_fat": 1.0,
+  "servings_count": 8,
+  "audit_status": "",
+  "audit_notes": "",
+  "raw_total_grams": 1667.95,
+  "raw_water_grams": 698.98,
+  "raw_fat_grams": 365.46,
+  "water_lost_grams": 153.78,
+  "fat_lost_grams": 0.0,
+  "cooked_total_grams": 1514.17,
+  "grams_per_serving": 189.27,
+  "ingredients": [
+    {
+      "ingredient_key": "chocolate_sandwich_cookies",
+      "ndb_no": "18166",
+      "long_desc": "Cookies, chocolate sandwich, with creme filling, regular",
+      "grams": 240.0,
+      "section": "crust",
+      "qty_display": "24 cookies",
+      "contribution": {
+        "Energy_KCal": 1113.6,
+        "Protein": 12.504,
+        "TotalLipidFat": 45.936,
+        "Carbohydrate": 170.4,
+        "FiberTotalDietary": 6.96,
+        "SugarsTotal": 97.608,
+        "Water": 7.464
+      }
+    },
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 71.0,
+      "section": "crust",
+      "qty_display": "5 tablespoons",
+      "contribution": {
+        "Energy_KCal": 509.07,
+        "Protein": 0.603,
+        "TotalLipidFat": 57.588,
+        "Carbohydrate": 0.043,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.043,
+        "Water": 12.737
+      }
+    },
+    {
+      "ingredient_key": "milk_whole",
+      "ndb_no": "1077",
+      "long_desc": "Milk, whole, 3.25% milkfat, with added vitamin D",
+      "grams": 488.0,
+      "section": "filling",
+      "qty_display": "2 cups",
+      "contribution": {
+        "Energy_KCal": 297.68,
+        "Protein": 15.372,
+        "TotalLipidFat": 15.86,
+        "Carbohydrate": 23.424,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 24.644,
+        "Water": 430.074
+      }
+    },
+    {
+      "ingredient_key": "heavy_cream",
+      "ndb_no": "1053",
+      "long_desc": "Cream, fluid, heavy whipping",
+      "grams": 115.0,
+      "section": "filling",
+      "qty_display": "1/2 cup",
+      "contribution": {
+        "Energy_KCal": 391.0,
+        "Protein": 3.266,
+        "TotalLipidFat": 41.492,
+        "Carbohydrate": 3.151,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 3.358,
+        "Water": 66.481
+      }
+    },
+    {
+      "ingredient_key": "sugar_granulated",
+      "ndb_no": "19335",
+      "long_desc": "Sugars, granulated",
+      "grams": 133.0,
+      "section": "filling",
+      "qty_display": "2/3 cup",
+      "contribution": {
+        "Energy_KCal": 514.71,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 132.973,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 132.734,
+        "Water": 0.027
+      }
+    },
+    {
+      "ingredient_key": "cornstarch",
+      "ndb_no": "20027",
+      "long_desc": "Cornstarch",
+      "grams": 24.0,
+      "section": "filling",
+      "qty_display": "3 tablespoons",
+      "contribution": {
+        "Energy_KCal": 91.44,
+        "Protein": 0.062,
+        "TotalLipidFat": 0.012,
+        "Carbohydrate": 21.905,
+        "FiberTotalDietary": 0.216,
+        "SugarsTotal": 0.0,
+        "Water": 1.997
+      }
+    },
+    {
+      "ingredient_key": "cocoa_powder_unsweetened",
+      "ndb_no": "19165",
+      "long_desc": "Cocoa, dry powder, unsweetened",
+      "grams": 10.0,
+      "section": "filling",
+      "qty_display": "2 tablespoons",
+      "contribution": {
+        "Energy_KCal": 22.8,
+        "Protein": 1.96,
+        "TotalLipidFat": 1.37,
+        "Carbohydrate": 5.79,
+        "FiberTotalDietary": 3.7,
+        "SugarsTotal": 0.175,
+        "Water": 0.3
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 0.75,
+      "section": "filling",
+      "qty_display": "1/8 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.002
+      }
+    },
+    {
+      "ingredient_key": "egg_yolk_raw",
+      "ndb_no": "1125",
+      "long_desc": "Egg, yolk, raw, fresh",
+      "grams": 68.0,
+      "section": "filling",
+      "qty_display": "4 large yolks",
+      "contribution": {
+        "Energy_KCal": 218.96,
+        "Protein": 10.785,
+        "TotalLipidFat": 18.047,
+        "Carbohydrate": 2.441,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.381,
+        "Water": 35.571
+      }
+    },
+    {
+      "ingredient_key": "chocolate_semisweet",
+      "ndb_no": "19080",
+      "long_desc": "Candies, semisweet chocolate",
+      "grams": 227.0,
+      "section": "filling",
+      "qty_display": "8 ounces",
+      "contribution": {
+        "Energy_KCal": 1089.6,
+        "Protein": 9.534,
+        "TotalLipidFat": 68.1,
+        "Carbohydrate": 145.053,
+        "FiberTotalDietary": 13.393,
+        "SugarsTotal": 123.715,
+        "Water": 1.589
+      }
+    },
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 42.0,
+      "section": "filling",
+      "qty_display": "3 tablespoons",
+      "contribution": {
+        "Energy_KCal": 301.14,
+        "Protein": 0.357,
+        "TotalLipidFat": 34.066,
+        "Carbohydrate": 0.025,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.025,
+        "Water": 7.535
+      }
+    },
+    {
+      "ingredient_key": "vanilla_extract",
+      "ndb_no": "2050",
+      "long_desc": "Vanilla extract",
+      "grams": 4.2,
+      "section": "filling",
+      "qty_display": "1 teaspoon",
+      "contribution": {
+        "Energy_KCal": 12.096,
+        "Protein": 0.003,
+        "TotalLipidFat": 0.003,
+        "Carbohydrate": 0.531,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.531,
+        "Water": 2.208
+      }
+    },
+    {
+      "ingredient_key": "heavy_cream",
+      "ndb_no": "1053",
+      "long_desc": "Cream, fluid, heavy whipping",
+      "grams": 230.0,
+      "section": "topping",
+      "qty_display": "1 cup",
+      "contribution": {
+        "Energy_KCal": 782.0,
+        "Protein": 6.532,
+        "TotalLipidFat": 82.984,
+        "Carbohydrate": 6.302,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 6.716,
+        "Water": 132.963
+      }
+    },
+    {
+      "ingredient_key": "sugar_powdered",
+      "ndb_no": "19336",
+      "long_desc": "Sugars, powdered",
+      "grams": 15.0,
+      "section": "topping",
+      "qty_display": "2 tablespoons",
+      "contribution": {
+        "Energy_KCal": 58.35,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 14.965,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 14.671,
+        "Water": 0.035
+      }
+    }
+  ],
+  "skipped_ingredients": [
+    {
+      "ingredient_key": "vanilla_extract",
+      "reason": "optional"
+    }
+  ],
+  "per100g": {
+    "Energy_KCal": 356.79,
+    "Protein": 4.03,
+    "TotalLipidFat": 24.14,
+    "Carbohydrate": 34.8,
+    "FiberTotalDietary": 1.6,
+    "SugarsTotal": 26.72,
+    "Water": 36.01
+  },
+  "per_serving": {
+    "Energy_KCal": 675.3,
+    "Protein": 7.63,
+    "TotalLipidFat": 45.69,
+    "Carbohydrate": 65.87,
+    "FiberTotalDietary": 3.03,
+    "SugarsTotal": 50.57,
+    "Water": 68.16
+  }
+}

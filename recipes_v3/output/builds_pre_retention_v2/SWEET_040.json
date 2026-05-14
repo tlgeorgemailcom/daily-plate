@@ -1,0 +1,279 @@
+{
+  "recipe_id": "SWEET_040",
+  "recipe_name": "Buttermilk Pie",
+  "sr_rule": "Rule D",
+  "canonical_ndb_no": null,
+  "cook_method": "bake",
+  "cook_method_normalized": "baked",
+  "yield_factor_water": 0.9,
+  "yield_factor_fat": 1.0,
+  "servings_count": 8,
+  "audit_status": "",
+  "audit_notes": "",
+  "raw_total_grams": 1240.3,
+  "raw_water_grams": 474.36,
+  "raw_fat_grams": 225.76,
+  "water_lost_grams": 47.44,
+  "fat_lost_grams": 0.0,
+  "cooked_total_grams": 1192.86,
+  "grams_per_serving": 149.11,
+  "ingredients": [
+    {
+      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ndb_no": "20081",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
+      "grams": 188.0,
+      "section": "crust",
+      "qty_display": "1 1/2 cups",
+      "contribution": {
+        "Energy_KCal": 684.32,
+        "Protein": 19.42,
+        "TotalLipidFat": 1.842,
+        "Carbohydrate": 143.463,
+        "FiberTotalDietary": 5.076,
+        "SugarsTotal": 0.508,
+        "Water": 22.41
+      }
+    },
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 135.0,
+      "section": "crust",
+      "qty_display": "9 1/2 tablespoons, chilled",
+      "contribution": {
+        "Energy_KCal": 967.95,
+        "Protein": 1.147,
+        "TotalLipidFat": 109.499,
+        "Carbohydrate": 0.081,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.081,
+        "Water": 24.219
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 3.6,
+      "section": "crust",
+      "qty_display": "1/2 teaspoon + pinch",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.007
+      }
+    },
+    {
+      "ingredient_key": "sugar_granulated",
+      "ndb_no": "19335",
+      "long_desc": "Sugars, granulated",
+      "grams": 2.5,
+      "section": "crust",
+      "qty_display": "1/2 teaspoon + pinch",
+      "contribution": {
+        "Energy_KCal": 9.675,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 2.5,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 2.495,
+        "Water": 0.001
+      }
+    },
+    {
+      "ingredient_key": "water_tap",
+      "ndb_no": "14411",
+      "long_desc": "Water, tap, drinking",
+      "grams": 72.0,
+      "section": "crust",
+      "qty_display": "4 tablespoons + 1 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 71.928
+      }
+    },
+    {
+      "ingredient_key": "sugar_granulated",
+      "ndb_no": "19335",
+      "long_desc": "Sugars, granulated",
+      "grams": 300.0,
+      "section": "filling",
+      "qty_display": "1 1/2 cups",
+      "contribution": {
+        "Energy_KCal": 1161.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 299.94,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 299.4,
+        "Water": 0.06
+      }
+    },
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 113.0,
+      "section": "filling",
+      "qty_display": "1/2 cup, melted",
+      "contribution": {
+        "Energy_KCal": 810.21,
+        "Protein": 0.96,
+        "TotalLipidFat": 91.654,
+        "Carbohydrate": 0.068,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.068,
+        "Water": 20.272
+      }
+    },
+    {
+      "ingredient_key": "egg_whole_raw",
+      "ndb_no": "1123",
+      "long_desc": "Egg, whole, raw, fresh",
+      "grams": 150.0,
+      "section": "filling",
+      "qty_display": "3 large eggs",
+      "contribution": {
+        "Energy_KCal": 214.5,
+        "Protein": 18.84,
+        "TotalLipidFat": 14.265,
+        "Carbohydrate": 1.08,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.555,
+        "Water": 114.225
+      }
+    },
+    {
+      "ingredient_key": "milk_buttermilk_whole",
+      "ndb_no": "1230",
+      "long_desc": "Milk, buttermilk, fluid, whole",
+      "grams": 244.0,
+      "section": "filling",
+      "qty_display": "1 cup",
+      "contribution": {
+        "Energy_KCal": 151.28,
+        "Protein": 7.832,
+        "TotalLipidFat": 8.076,
+        "Carbohydrate": 11.907,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 11.907,
+        "Water": 214.5
+      }
+    },
+    {
+      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ndb_no": "20081",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
+      "grams": 24.0,
+      "section": "filling",
+      "qty_display": "3 tablespoons",
+      "contribution": {
+        "Energy_KCal": 87.36,
+        "Protein": 2.479,
+        "TotalLipidFat": 0.235,
+        "Carbohydrate": 18.314,
+        "FiberTotalDietary": 0.648,
+        "SugarsTotal": 0.065,
+        "Water": 2.861
+      }
+    },
+    {
+      "ingredient_key": "vanilla_extract",
+      "ndb_no": "2050",
+      "long_desc": "Vanilla extract",
+      "grams": 4.2,
+      "section": "filling",
+      "qty_display": "1 teaspoon",
+      "contribution": {
+        "Energy_KCal": 12.096,
+        "Protein": 0.003,
+        "TotalLipidFat": 0.003,
+        "Carbohydrate": 0.531,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.531,
+        "Water": 2.208
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 1.5,
+      "section": "filling",
+      "qty_display": "1/4 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.003
+      }
+    },
+    {
+      "ingredient_key": "nutmeg_ground",
+      "ndb_no": "2025",
+      "long_desc": "Spices, nutmeg, ground",
+      "grams": 0.5,
+      "section": "filling",
+      "qty_display": "1/4 teaspoon",
+      "contribution": {
+        "Energy_KCal": 2.625,
+        "Protein": 0.029,
+        "TotalLipidFat": 0.182,
+        "Carbohydrate": 0.246,
+        "FiberTotalDietary": 0.104,
+        "SugarsTotal": 0.015,
+        "Water": 0.031
+      }
+    },
+    {
+      "ingredient_key": "lemon_peel_raw",
+      "ndb_no": "9156",
+      "long_desc": "Lemon peel, raw",
+      "grams": 2.0,
+      "section": "filling",
+      "qty_display": "1 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.94,
+        "Protein": 0.03,
+        "TotalLipidFat": 0.006,
+        "Carbohydrate": 0.32,
+        "FiberTotalDietary": 0.212,
+        "SugarsTotal": 0.083,
+        "Water": 1.632
+      }
+    }
+  ],
+  "skipped_ingredients": [],
+  "per100g": {
+    "Energy_KCal": 343.87,
+    "Protein": 4.0,
+    "TotalLipidFat": 18.93,
+    "Carbohydrate": 40.11,
+    "FiberTotalDietary": 0.51,
+    "SugarsTotal": 26.47,
+    "Water": 35.79
+  },
+  "per_serving": {
+    "Energy_KCal": 512.74,
+    "Protein": 5.96,
+    "TotalLipidFat": 28.23,
+    "Carbohydrate": 59.81,
+    "FiberTotalDietary": 0.76,
+    "SugarsTotal": 39.47,
+    "Water": 53.37
+  }
+}

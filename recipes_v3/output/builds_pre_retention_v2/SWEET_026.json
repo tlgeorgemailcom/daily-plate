@@ -1,0 +1,262 @@
+{
+  "recipe_id": "SWEET_026",
+  "recipe_name": "Cheesecake (NY-Style)",
+  "sr_rule": "Rule C",
+  "canonical_ndb_no": "18147",
+  "cook_method": "bake",
+  "cook_method_normalized": "baked",
+  "yield_factor_water": 0.92,
+  "yield_factor_fat": 1.0,
+  "servings_count": 12,
+  "audit_status": "",
+  "audit_notes": "",
+  "raw_total_grams": 1759.45,
+  "raw_water_grams": 746.46,
+  "raw_fat_grams": 431.34,
+  "water_lost_grams": 59.72,
+  "fat_lost_grams": 0.0,
+  "cooked_total_grams": 1699.73,
+  "grams_per_serving": 141.64,
+  "ingredients": [
+    {
+      "ingredient_key": "graham_crackers",
+      "ndb_no": "18173",
+      "long_desc": "Cookies, graham crackers, plain or honey",
+      "grams": 150.0,
+      "section": "crust",
+      "qty_display": "1 1/2 cups crushed",
+      "contribution": {
+        "Energy_KCal": 645.0,
+        "Protein": 10.035,
+        "TotalLipidFat": 15.9,
+        "Carbohydrate": 116.49,
+        "FiberTotalDietary": 5.1,
+        "SugarsTotal": 37.275,
+        "Water": 5.085
+      }
+    },
+    {
+      "ingredient_key": "sugar_granulated",
+      "ndb_no": "19335",
+      "long_desc": "Sugars, granulated",
+      "grams": 25.0,
+      "section": "crust",
+      "qty_display": "2 tablespoons",
+      "contribution": {
+        "Energy_KCal": 96.75,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 24.995,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 24.95,
+        "Water": 0.005
+      }
+    },
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 70.0,
+      "section": "crust",
+      "qty_display": "5 tablespoons",
+      "contribution": {
+        "Energy_KCal": 501.9,
+        "Protein": 0.595,
+        "TotalLipidFat": 56.777,
+        "Carbohydrate": 0.042,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.042,
+        "Water": 12.558
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 0.75,
+      "section": "crust",
+      "qty_display": "pinch",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.002
+      }
+    },
+    {
+      "ingredient_key": "cream_cheese",
+      "ndb_no": "1017",
+      "long_desc": "Cheese, cream",
+      "grams": 908.0,
+      "section": "filling",
+      "qty_display": "32 oz (4 blocks)",
+      "contribution": {
+        "Energy_KCal": 3178.0,
+        "Protein": 55.842,
+        "TotalLipidFat": 312.715,
+        "Carbohydrate": 50.122,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 34.141,
+        "Water": 477.79
+      }
+    },
+    {
+      "ingredient_key": "sugar_granulated",
+      "ndb_no": "19335",
+      "long_desc": "Sugars, granulated",
+      "grams": 250.0,
+      "section": "filling",
+      "qty_display": "1 1/4 cups",
+      "contribution": {
+        "Energy_KCal": 967.5,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 249.95,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 249.5,
+        "Water": 0.05
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 1.5,
+      "section": "filling",
+      "qty_display": "1/4 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.003
+      }
+    },
+    {
+      "ingredient_key": "sour_cream",
+      "ndb_no": "1056",
+      "long_desc": "Cream, sour, cultured",
+      "grams": 115.0,
+      "section": "filling",
+      "qty_display": "1/2 cup",
+      "contribution": {
+        "Energy_KCal": 227.7,
+        "Protein": 2.806,
+        "TotalLipidFat": 22.253,
+        "Carbohydrate": 5.324,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 3.921,
+        "Water": 84.03
+      }
+    },
+    {
+      "ingredient_key": "vanilla_extract",
+      "ndb_no": "2050",
+      "long_desc": "Vanilla extract",
+      "grams": 4.2,
+      "section": "filling",
+      "qty_display": "1 teaspoon",
+      "contribution": {
+        "Energy_KCal": 12.096,
+        "Protein": 0.003,
+        "TotalLipidFat": 0.003,
+        "Carbohydrate": 0.531,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.531,
+        "Water": 2.208
+      }
+    },
+    {
+      "ingredient_key": "egg_whole_raw",
+      "ndb_no": "1123",
+      "long_desc": "Egg, whole, raw, fresh",
+      "grams": 200.0,
+      "section": "filling",
+      "qty_display": "4 large eggs",
+      "contribution": {
+        "Energy_KCal": 286.0,
+        "Protein": 25.12,
+        "TotalLipidFat": 19.02,
+        "Carbohydrate": 1.44,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.74,
+        "Water": 152.3
+      }
+    },
+    {
+      "ingredient_key": "egg_yolk_raw",
+      "ndb_no": "1125",
+      "long_desc": "Egg, yolk, raw, fresh",
+      "grams": 17.0,
+      "section": "filling",
+      "qty_display": "1 large yolk",
+      "contribution": {
+        "Energy_KCal": 54.74,
+        "Protein": 2.696,
+        "TotalLipidFat": 4.512,
+        "Carbohydrate": 0.61,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.095,
+        "Water": 8.893
+      }
+    },
+    {
+      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ndb_no": "20081",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
+      "grams": 16.0,
+      "section": "filling",
+      "qty_display": "2 tablespoons",
+      "contribution": {
+        "Energy_KCal": 58.24,
+        "Protein": 1.653,
+        "TotalLipidFat": 0.157,
+        "Carbohydrate": 12.21,
+        "FiberTotalDietary": 0.432,
+        "SugarsTotal": 0.043,
+        "Water": 1.907
+      }
+    },
+    {
+      "ingredient_key": "lemon_peel_raw",
+      "ndb_no": "9156",
+      "long_desc": "Lemon peel, raw",
+      "grams": 2.0,
+      "section": "filling",
+      "qty_display": "1 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.94,
+        "Protein": 0.03,
+        "TotalLipidFat": 0.006,
+        "Carbohydrate": 0.32,
+        "FiberTotalDietary": 0.212,
+        "SugarsTotal": 0.083,
+        "Water": 1.632
+      }
+    }
+  ],
+  "skipped_ingredients": [],
+  "per100g": {
+    "Energy_KCal": 354.69,
+    "Protein": 5.46,
+    "TotalLipidFat": 25.38,
+    "Carbohydrate": 27.18,
+    "FiberTotalDietary": 0.34,
+    "SugarsTotal": 20.67,
+    "Water": 40.4
+  },
+  "per_serving": {
+    "Energy_KCal": 502.4,
+    "Protein": 7.73,
+    "TotalLipidFat": 35.95,
+    "Carbohydrate": 38.5,
+    "FiberTotalDietary": 0.48,
+    "SugarsTotal": 29.28,
+    "Water": 57.22
+  }
+}

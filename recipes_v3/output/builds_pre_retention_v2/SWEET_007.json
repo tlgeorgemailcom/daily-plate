@@ -1,0 +1,483 @@
+{
+  "recipe_id": "SWEET_007",
+  "recipe_name": "Pie Mince",
+  "sr_rule": "Rule A",
+  "canonical_ndb_no": "18322",
+  "cook_method": "bake",
+  "cook_method_normalized": "baked",
+  "yield_factor_water": 0.82,
+  "yield_factor_fat": 1.0,
+  "servings_count": 8,
+  "audit_status": "accepted",
+  "audit_notes": "Rule A. All graded macros within \u00b15% EXCEPT FiberTotalDietary +5.77% (just outside \u00b15%). All other macros within \u00b14.8%. Mince pie fiber varies by raisin/dried-fruit blend. Same pattern as canonical-vs-real-ingredient gap. Accepted as-is May 6 2026.",
+  "raw_total_grams": 1740.8,
+  "raw_water_grams": 761.56,
+  "raw_fat_grams": 179.92,
+  "water_lost_grams": 137.08,
+  "fat_lost_grams": 0.0,
+  "cooked_total_grams": 1603.72,
+  "grams_per_serving": 200.46,
+  "ingredients": [
+    {
+      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ndb_no": "20081",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
+      "grams": 250.0,
+      "section": "crust",
+      "qty_display": "2 cups",
+      "contribution": {
+        "Energy_KCal": 910.0,
+        "Protein": 25.825,
+        "TotalLipidFat": 2.45,
+        "Carbohydrate": 190.775,
+        "FiberTotalDietary": 6.75,
+        "SugarsTotal": 0.675,
+        "Water": 29.8
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 6.0,
+      "section": "crust",
+      "qty_display": "1 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.012
+      }
+    },
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 170.0,
+      "section": "crust",
+      "qty_display": "3/4 cup",
+      "contribution": {
+        "Energy_KCal": 1218.9,
+        "Protein": 1.445,
+        "TotalLipidFat": 137.887,
+        "Carbohydrate": 0.102,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.102,
+        "Water": 30.498
+      }
+    },
+    {
+      "ingredient_key": "water_tap",
+      "ndb_no": "14411",
+      "long_desc": "Water, tap, drinking",
+      "grams": 75.0,
+      "section": "crust",
+      "qty_display": "5 tablespoons",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 74.925
+      }
+    },
+    {
+      "ingredient_key": "sugar_granulated",
+      "ndb_no": "19335",
+      "long_desc": "Sugars, granulated",
+      "grams": 8.0,
+      "section": "crust",
+      "qty_display": "2 teaspoons",
+      "contribution": {
+        "Energy_KCal": 30.96,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 7.998,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 7.984,
+        "Water": 0.002
+      }
+    },
+    {
+      "ingredient_key": "raisins_seedless",
+      "ndb_no": "9298",
+      "long_desc": "Raisins, seedless",
+      "grams": 75.0,
+      "section": "filling",
+      "qty_display": "1/2 cup",
+      "contribution": {
+        "Energy_KCal": 224.25,
+        "Protein": 2.302,
+        "TotalLipidFat": 0.345,
+        "Carbohydrate": 59.385,
+        "FiberTotalDietary": 2.775,
+        "SugarsTotal": 44.392,
+        "Water": 11.572
+      }
+    },
+    {
+      "ingredient_key": "raisins_golden",
+      "ndb_no": "9297",
+      "long_desc": "Raisins, golden seedless",
+      "grams": 75.0,
+      "section": "filling",
+      "qty_display": "1/2 cup",
+      "contribution": {
+        "Energy_KCal": 226.5,
+        "Protein": 2.542,
+        "TotalLipidFat": 0.345,
+        "Carbohydrate": 59.64,
+        "FiberTotalDietary": 3.0,
+        "SugarsTotal": 44.392,
+        "Water": 11.228
+      }
+    },
+    {
+      "ingredient_key": "currants_zante_dried",
+      "ndb_no": "9085",
+      "long_desc": "Currants, zante, dried",
+      "grams": 75.0,
+      "section": "filling",
+      "qty_display": "1/2 cup",
+      "contribution": {
+        "Energy_KCal": 212.25,
+        "Protein": 3.06,
+        "TotalLipidFat": 0.203,
+        "Carbohydrate": 55.56,
+        "FiberTotalDietary": 5.1,
+        "SugarsTotal": 50.46,
+        "Water": 14.408
+      }
+    },
+    {
+      "ingredient_key": "cranberries_dried_sweetened",
+      "ndb_no": "9079",
+      "long_desc": "Cranberries, dried, sweetened",
+      "grams": 60.0,
+      "section": "filling",
+      "qty_display": "1/2 cup",
+      "contribution": {
+        "Energy_KCal": 184.8,
+        "Protein": 0.102,
+        "TotalLipidFat": 0.654,
+        "Carbohydrate": 49.68,
+        "FiberTotalDietary": 3.18,
+        "SugarsTotal": 43.536,
+        "Water": 9.474
+      }
+    },
+    {
+      "ingredient_key": "dates_medjool",
+      "ndb_no": "9421",
+      "long_desc": "Dates, medjool",
+      "grams": 75.0,
+      "section": "filling",
+      "qty_display": "1/2 cup",
+      "contribution": {
+        "Energy_KCal": 207.75,
+        "Protein": 1.357,
+        "TotalLipidFat": 0.112,
+        "Carbohydrate": 56.227,
+        "FiberTotalDietary": 5.025,
+        "SugarsTotal": 49.852,
+        "Water": 15.99
+      }
+    },
+    {
+      "ingredient_key": "apricots_dried",
+      "ndb_no": "9032",
+      "long_desc": "Apricots, dried, sulfured, uncooked",
+      "grams": 65.0,
+      "section": "filling",
+      "qty_display": "1/2 cup",
+      "contribution": {
+        "Energy_KCal": 156.65,
+        "Protein": 2.204,
+        "TotalLipidFat": 0.332,
+        "Carbohydrate": 40.716,
+        "FiberTotalDietary": 4.745,
+        "SugarsTotal": 34.736,
+        "Water": 20.079
+      }
+    },
+    {
+      "ingredient_key": "candied_fruit_mixed",
+      "ndb_no": "9426",
+      "long_desc": "Candied fruit",
+      "grams": 60.0,
+      "section": "filling",
+      "qty_display": "1/3 cup",
+      "contribution": {
+        "Energy_KCal": 193.2,
+        "Protein": 0.204,
+        "TotalLipidFat": 0.042,
+        "Carbohydrate": 49.644,
+        "FiberTotalDietary": 0.96,
+        "SugarsTotal": 48.408,
+        "Water": 10.02
+      }
+    },
+    {
+      "ingredient_key": "apple_granny_smith_raw",
+      "ndb_no": "9502",
+      "long_desc": "Apples, raw, granny smith, with skin",
+      "grams": 360.0,
+      "section": "filling",
+      "qty_display": "3 medium apples",
+      "contribution": {
+        "Energy_KCal": 208.8,
+        "Protein": 1.584,
+        "TotalLipidFat": 0.684,
+        "Carbohydrate": 48.996,
+        "FiberTotalDietary": 10.08,
+        "SugarsTotal": 34.524,
+        "Water": 307.656
+      }
+    },
+    {
+      "ingredient_key": "sugar_brown",
+      "ndb_no": "19334",
+      "long_desc": "Sugars, brown",
+      "grams": 110.0,
+      "section": "filling",
+      "qty_display": "1/2 cup",
+      "contribution": {
+        "Energy_KCal": 418.0,
+        "Protein": 0.132,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 107.899,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 106.722,
+        "Water": 1.474
+      }
+    },
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 42.0,
+      "section": "filling",
+      "qty_display": "3 tablespoons",
+      "contribution": {
+        "Energy_KCal": 301.14,
+        "Protein": 0.357,
+        "TotalLipidFat": 34.066,
+        "Carbohydrate": 0.025,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.025,
+        "Water": 7.535
+      }
+    },
+    {
+      "ingredient_key": "water_tap",
+      "ndb_no": "14411",
+      "long_desc": "Water, tap, drinking",
+      "grams": 160.0,
+      "section": "filling",
+      "qty_display": "2/3 cup",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 159.84
+      }
+    },
+    {
+      "ingredient_key": "lemon_peel_raw",
+      "ndb_no": "9156",
+      "long_desc": "Lemon peel, raw",
+      "grams": 6.0,
+      "section": "filling",
+      "qty_display": "zest of 1 lemon",
+      "contribution": {
+        "Energy_KCal": 2.82,
+        "Protein": 0.09,
+        "TotalLipidFat": 0.018,
+        "Carbohydrate": 0.96,
+        "FiberTotalDietary": 0.636,
+        "SugarsTotal": 0.25,
+        "Water": 4.896
+      }
+    },
+    {
+      "ingredient_key": "lemon_juice_raw",
+      "ndb_no": "9152",
+      "long_desc": "Lemon juice, raw",
+      "grams": 30.0,
+      "section": "filling",
+      "qty_display": "2 tablespoons",
+      "contribution": {
+        "Energy_KCal": 6.6,
+        "Protein": 0.105,
+        "TotalLipidFat": 0.072,
+        "Carbohydrate": 2.07,
+        "FiberTotalDietary": 0.09,
+        "SugarsTotal": 0.756,
+        "Water": 27.693
+      }
+    },
+    {
+      "ingredient_key": "cinnamon_ground",
+      "ndb_no": "2010",
+      "long_desc": "Spices, cinnamon, ground",
+      "grams": 2.6,
+      "section": "filling",
+      "qty_display": "1 teaspoon",
+      "contribution": {
+        "Energy_KCal": 6.422,
+        "Protein": 0.104,
+        "TotalLipidFat": 0.032,
+        "Carbohydrate": 2.095,
+        "FiberTotalDietary": 1.381,
+        "SugarsTotal": 0.056,
+        "Water": 0.275
+      }
+    },
+    {
+      "ingredient_key": "nutmeg_ground",
+      "ndb_no": "2025",
+      "long_desc": "Spices, nutmeg, ground",
+      "grams": 0.5,
+      "section": "filling",
+      "qty_display": "1/4 teaspoon",
+      "contribution": {
+        "Energy_KCal": 2.625,
+        "Protein": 0.029,
+        "TotalLipidFat": 0.182,
+        "Carbohydrate": 0.246,
+        "FiberTotalDietary": 0.104,
+        "SugarsTotal": 0.015,
+        "Water": 0.031
+      }
+    },
+    {
+      "ingredient_key": "cloves_ground",
+      "ndb_no": "2011",
+      "long_desc": "Spices, cloves, ground",
+      "grams": 0.5,
+      "section": "filling",
+      "qty_display": "1/4 teaspoon",
+      "contribution": {
+        "Energy_KCal": 1.37,
+        "Protein": 0.03,
+        "TotalLipidFat": 0.065,
+        "Carbohydrate": 0.328,
+        "FiberTotalDietary": 0.169,
+        "SugarsTotal": 0.012,
+        "Water": 0.049
+      }
+    },
+    {
+      "ingredient_key": "ginger_ground",
+      "ndb_no": "2021",
+      "long_desc": "Spices, ginger, ground",
+      "grams": 0.2,
+      "section": "filling",
+      "qty_display": "1/8 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.67,
+        "Protein": 0.018,
+        "TotalLipidFat": 0.008,
+        "Carbohydrate": 0.143,
+        "FiberTotalDietary": 0.028,
+        "SugarsTotal": 0.007,
+        "Water": 0.02
+      }
+    },
+    {
+      "ingredient_key": "allspice_ground",
+      "ndb_no": "2001",
+      "long_desc": "Spices, allspice, ground",
+      "grams": 0.5,
+      "section": "filling",
+      "qty_display": "1/4 teaspoon",
+      "contribution": {
+        "Energy_KCal": 1.315,
+        "Protein": 0.03,
+        "TotalLipidFat": 0.043,
+        "Carbohydrate": 0.361,
+        "FiberTotalDietary": 0.108,
+        "SugarsTotal": 0.0,
+        "Water": 0.042
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 4.5,
+      "section": "filling",
+      "qty_display": "3/4 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.009
+      }
+    },
+    {
+      "ingredient_key": "egg_whole_raw",
+      "ndb_no": "1123",
+      "long_desc": "Egg, whole, raw, fresh",
+      "grams": 25.0,
+      "section": "wash",
+      "qty_display": "1 large egg",
+      "contribution": {
+        "Energy_KCal": 35.75,
+        "Protein": 3.14,
+        "TotalLipidFat": 2.377,
+        "Carbohydrate": 0.18,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.092,
+        "Water": 19.038
+      }
+    },
+    {
+      "ingredient_key": "water_tap",
+      "ndb_no": "14411",
+      "long_desc": "Water, tap, drinking",
+      "grams": 5.0,
+      "section": "wash",
+      "qty_display": "1 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 4.995
+      }
+    }
+  ],
+  "skipped_ingredients": [],
+  "per100g": {
+    "Energy_KCal": 283.76,
+    "Protein": 2.62,
+    "TotalLipidFat": 11.22,
+    "Carbohydrate": 45.71,
+    "FiberTotalDietary": 2.75,
+    "SugarsTotal": 29.12,
+    "Water": 38.94
+  },
+  "per_serving": {
+    "Energy_KCal": 568.84,
+    "Protein": 5.25,
+    "TotalLipidFat": 22.49,
+    "Carbohydrate": 91.63,
+    "FiberTotalDietary": 5.51,
+    "SugarsTotal": 58.38,
+    "Water": 78.06
+  }
+}

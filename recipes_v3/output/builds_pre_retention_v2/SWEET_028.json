@@ -1,0 +1,177 @@
+{
+  "recipe_id": "SWEET_028",
+  "recipe_name": "Pound Cake",
+  "sr_rule": "Rule C",
+  "canonical_ndb_no": "18120",
+  "cook_method": "bake",
+  "cook_method_normalized": "baked",
+  "yield_factor_water": 0.85,
+  "yield_factor_fat": 1.0,
+  "servings_count": 10,
+  "audit_status": "",
+  "audit_notes": "",
+  "raw_total_grams": 934.2,
+  "raw_water_grams": 266.47,
+  "raw_fat_grams": 216.72,
+  "water_lost_grams": 39.97,
+  "fat_lost_grams": 0.0,
+  "cooked_total_grams": 894.23,
+  "grams_per_serving": 89.42,
+  "ingredients": [
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 227.0,
+      "section": "",
+      "qty_display": "1 cup",
+      "contribution": {
+        "Energy_KCal": 1627.59,
+        "Protein": 1.929,
+        "TotalLipidFat": 184.12,
+        "Carbohydrate": 0.136,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.136,
+        "Water": 40.724
+      }
+    },
+    {
+      "ingredient_key": "sugar_granulated",
+      "ndb_no": "19335",
+      "long_desc": "Sugars, granulated",
+      "grams": 198.0,
+      "section": "",
+      "qty_display": "1 cup",
+      "contribution": {
+        "Energy_KCal": 766.26,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 197.96,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 197.604,
+        "Water": 0.04
+      }
+    },
+    {
+      "ingredient_key": "egg_whole_raw",
+      "ndb_no": "1123",
+      "long_desc": "Egg, whole, raw, fresh",
+      "grams": 200.0,
+      "section": "",
+      "qty_display": "4 large eggs",
+      "contribution": {
+        "Energy_KCal": 286.0,
+        "Protein": 25.12,
+        "TotalLipidFat": 19.02,
+        "Carbohydrate": 1.44,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.74,
+        "Water": 152.3
+      }
+    },
+    {
+      "ingredient_key": "vanilla_extract",
+      "ndb_no": "2050",
+      "long_desc": "Vanilla extract",
+      "grams": 4.2,
+      "section": "",
+      "qty_display": "1 teaspoon",
+      "contribution": {
+        "Energy_KCal": 12.096,
+        "Protein": 0.003,
+        "TotalLipidFat": 0.003,
+        "Carbohydrate": 0.531,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.531,
+        "Water": 2.208
+      }
+    },
+    {
+      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ndb_no": "20081",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
+      "grams": 240.0,
+      "section": "",
+      "qty_display": "2 cups",
+      "contribution": {
+        "Energy_KCal": 873.6,
+        "Protein": 24.792,
+        "TotalLipidFat": 2.352,
+        "Carbohydrate": 183.144,
+        "FiberTotalDietary": 6.48,
+        "SugarsTotal": 0.648,
+        "Water": 28.608
+      }
+    },
+    {
+      "ingredient_key": "baking_powder",
+      "ndb_no": "18369",
+      "long_desc": "Leavening agents, baking powder, double-acting, sodium aluminum sulfate",
+      "grams": 4.0,
+      "section": "",
+      "qty_display": "1 teaspoon",
+      "contribution": {
+        "Energy_KCal": 2.12,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 1.108,
+        "FiberTotalDietary": 0.008,
+        "SugarsTotal": 0.0,
+        "Water": 0.2
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 3.0,
+      "section": "",
+      "qty_display": "1/2 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.006
+      }
+    },
+    {
+      "ingredient_key": "sour_cream",
+      "ndb_no": "1056",
+      "long_desc": "Cream, sour, cultured",
+      "grams": 58.0,
+      "section": "",
+      "qty_display": "1/4 cup",
+      "contribution": {
+        "Energy_KCal": 114.84,
+        "Protein": 1.415,
+        "TotalLipidFat": 11.223,
+        "Carbohydrate": 2.685,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 1.978,
+        "Water": 42.381
+      }
+    }
+  ],
+  "skipped_ingredients": [],
+  "per100g": {
+    "Energy_KCal": 411.81,
+    "Protein": 5.6,
+    "TotalLipidFat": 24.24,
+    "Carbohydrate": 43.28,
+    "FiberTotalDietary": 0.73,
+    "SugarsTotal": 22.55,
+    "Water": 25.33
+  },
+  "per_serving": {
+    "Energy_KCal": 368.25,
+    "Protein": 5.01,
+    "TotalLipidFat": 21.68,
+    "Carbohydrate": 38.7,
+    "FiberTotalDietary": 0.65,
+    "SugarsTotal": 20.16,
+    "Water": 22.65
+  }
+}

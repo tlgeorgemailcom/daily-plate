@@ -1,0 +1,160 @@
+{
+  "recipe_id": "SWEET_019",
+  "recipe_name": "Chocolate Glaze with Butter",
+  "sr_rule": "Rule A",
+  "canonical_ndb_no": "19409",
+  "cook_method": "boil",
+  "cook_method_normalized": "boiled",
+  "yield_factor_water": 1.0,
+  "yield_factor_fat": 1.0,
+  "servings_count": 16,
+  "audit_status": "",
+  "audit_notes": "",
+  "raw_total_grams": 167.6,
+  "raw_water_grams": 31.21,
+  "raw_fat_grams": 12.01,
+  "water_lost_grams": 0.0,
+  "fat_lost_grams": 0.0,
+  "cooked_total_grams": 167.6,
+  "grams_per_serving": 10.47,
+  "ingredients": [
+    {
+      "ingredient_key": "sugar_powdered",
+      "ndb_no": "19336",
+      "long_desc": "Sugars, powdered",
+      "grams": 115.0,
+      "section": "frosting",
+      "qty_display": "15/16 cup",
+      "contribution": {
+        "Energy_KCal": 447.35,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 114.735,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 112.481,
+        "Water": 0.265
+      }
+    },
+    {
+      "ingredient_key": "cocoa_powder_unsweetened",
+      "ndb_no": "19165",
+      "long_desc": "Cocoa, dry powder, unsweetened",
+      "grams": 5.0,
+      "section": "frosting",
+      "qty_display": "1 tablespoon",
+      "contribution": {
+        "Energy_KCal": 11.4,
+        "Protein": 0.98,
+        "TotalLipidFat": 0.685,
+        "Carbohydrate": 2.895,
+        "FiberTotalDietary": 1.85,
+        "SugarsTotal": 0.088,
+        "Water": 0.15
+      }
+    },
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 12.0,
+      "section": "frosting",
+      "qty_display": "2 1/2 teaspoons",
+      "contribution": {
+        "Energy_KCal": 86.04,
+        "Protein": 0.102,
+        "TotalLipidFat": 9.733,
+        "Carbohydrate": 0.007,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.007,
+        "Water": 2.153
+      }
+    },
+    {
+      "ingredient_key": "milk_evaporated",
+      "ndb_no": "1096",
+      "long_desc": "Milk, canned, evaporated, with added vitamin D",
+      "grams": 21.0,
+      "section": "frosting",
+      "qty_display": "1 tablespoon + 1 teaspoon",
+      "contribution": {
+        "Energy_KCal": 28.14,
+        "Protein": 1.43,
+        "TotalLipidFat": 1.588,
+        "Carbohydrate": 2.108,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 2.108,
+        "Water": 15.548
+      }
+    },
+    {
+      "ingredient_key": "water_tap",
+      "ndb_no": "14411",
+      "long_desc": "Water, tap, drinking",
+      "grams": 12.0,
+      "section": "frosting",
+      "qty_display": "2 1/2 teaspoons",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 11.988
+      }
+    },
+    {
+      "ingredient_key": "vanilla_extract",
+      "ndb_no": "2050",
+      "long_desc": "Vanilla extract",
+      "grams": 2.1,
+      "section": "frosting",
+      "qty_display": "1/2 teaspoon",
+      "contribution": {
+        "Energy_KCal": 6.048,
+        "Protein": 0.001,
+        "TotalLipidFat": 0.001,
+        "Carbohydrate": 0.266,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.266,
+        "Water": 1.104
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 0.5,
+      "section": "frosting",
+      "qty_display": "scant 1/8 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.001
+      }
+    }
+  ],
+  "skipped_ingredients": [],
+  "per100g": {
+    "Energy_KCal": 345.45,
+    "Protein": 1.41,
+    "TotalLipidFat": 7.16,
+    "Carbohydrate": 71.61,
+    "FiberTotalDietary": 1.1,
+    "SugarsTotal": 68.59,
+    "Water": 18.62
+  },
+  "per_serving": {
+    "Energy_KCal": 36.19,
+    "Protein": 0.15,
+    "TotalLipidFat": 0.75,
+    "Carbohydrate": 7.5,
+    "FiberTotalDietary": 0.12,
+    "SugarsTotal": 7.18,
+    "Water": 1.95
+  }
+}

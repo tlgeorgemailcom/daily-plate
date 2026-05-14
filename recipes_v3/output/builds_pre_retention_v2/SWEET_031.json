@@ -1,0 +1,177 @@
+{
+  "recipe_id": "SWEET_031",
+  "recipe_name": "Cookies, Sugar, from Recipe with Margarine",
+  "sr_rule": "Rule A",
+  "canonical_ndb_no": "18208",
+  "cook_method": "bake",
+  "cook_method_normalized": "baked",
+  "yield_factor_water": 0.46,
+  "yield_factor_fat": 1.0,
+  "servings_count": 24,
+  "audit_status": "",
+  "audit_notes": "",
+  "raw_total_grams": 897.2,
+  "raw_water_grams": 158.03,
+  "raw_fat_grams": 196.15,
+  "water_lost_grams": 85.33,
+  "fat_lost_grams": 0.0,
+  "cooked_total_grams": 811.87,
+  "grams_per_serving": 33.83,
+  "ingredients": [
+    {
+      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ndb_no": "20081",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
+      "grams": 350.0,
+      "section": "",
+      "qty_display": "2\u00be cups",
+      "contribution": {
+        "Energy_KCal": 1274.0,
+        "Protein": 36.155,
+        "TotalLipidFat": 3.43,
+        "Carbohydrate": 267.085,
+        "FiberTotalDietary": 9.45,
+        "SugarsTotal": 0.945,
+        "Water": 41.72
+      }
+    },
+    {
+      "ingredient_key": "baking_powder",
+      "ndb_no": "18369",
+      "long_desc": "Leavening agents, baking powder, double-acting, sodium aluminum sulfate",
+      "grams": 8.0,
+      "section": "",
+      "qty_display": "2 teaspoons",
+      "contribution": {
+        "Energy_KCal": 4.24,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 2.216,
+        "FiberTotalDietary": 0.016,
+        "SugarsTotal": 0.0,
+        "Water": 0.4
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 3.0,
+      "section": "",
+      "qty_display": "\u00bd teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.006
+      }
+    },
+    {
+      "ingredient_key": "margarine_stick_salted",
+      "ndb_no": "4610",
+      "long_desc": "Margarine, regular, 80% fat, composite, stick, with salt",
+      "grams": 227.0,
+      "section": "",
+      "qty_display": "1 cup (2 sticks)",
+      "contribution": {
+        "Energy_KCal": 1627.59,
+        "Protein": 0.363,
+        "TotalLipidFat": 183.212,
+        "Carbohydrate": 1.589,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 37.5
+      }
+    },
+    {
+      "ingredient_key": "sugar_granulated",
+      "ndb_no": "19335",
+      "long_desc": "Sugars, granulated",
+      "grams": 155.0,
+      "section": "",
+      "qty_display": "\u00be cup",
+      "contribution": {
+        "Energy_KCal": 599.85,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 154.969,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 154.69,
+        "Water": 0.031
+      }
+    },
+    {
+      "ingredient_key": "egg_whole_raw",
+      "ndb_no": "1123",
+      "long_desc": "Egg, whole, raw, fresh",
+      "grams": 100.0,
+      "section": "",
+      "qty_display": "2 large",
+      "contribution": {
+        "Energy_KCal": 143.0,
+        "Protein": 12.56,
+        "TotalLipidFat": 9.51,
+        "Carbohydrate": 0.72,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.37,
+        "Water": 76.15
+      }
+    },
+    {
+      "ingredient_key": "vanilla_extract",
+      "ndb_no": "2050",
+      "long_desc": "Vanilla extract",
+      "grams": 4.2,
+      "section": "",
+      "qty_display": "1 teaspoon",
+      "contribution": {
+        "Energy_KCal": 12.096,
+        "Protein": 0.003,
+        "TotalLipidFat": 0.003,
+        "Carbohydrate": 0.531,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.531,
+        "Water": 2.208
+      }
+    },
+    {
+      "ingredient_key": "sugar_granulated",
+      "ndb_no": "19335",
+      "long_desc": "Sugars, granulated",
+      "grams": 50.0,
+      "section": "rolling",
+      "qty_display": "\u00bc cup for rolling",
+      "contribution": {
+        "Energy_KCal": 193.5,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 49.99,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 49.9,
+        "Water": 0.01
+      }
+    }
+  ],
+  "skipped_ingredients": [],
+  "per100g": {
+    "Energy_KCal": 474.74,
+    "Protein": 5.68,
+    "TotalLipidFat": 24.16,
+    "Carbohydrate": 58.77,
+    "FiberTotalDietary": 1.17,
+    "SugarsTotal": 25.43,
+    "Water": 8.95
+  },
+  "per_serving": {
+    "Energy_KCal": 160.59,
+    "Protein": 1.92,
+    "TotalLipidFat": 8.17,
+    "Carbohydrate": 19.88,
+    "FiberTotalDietary": 0.4,
+    "SugarsTotal": 8.6,
+    "Water": 3.03
+  }
+}

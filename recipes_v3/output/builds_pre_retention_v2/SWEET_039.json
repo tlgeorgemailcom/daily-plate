@@ -1,0 +1,126 @@
+{
+  "recipe_id": "SWEET_039",
+  "recipe_name": "Cookies, Shortbread",
+  "sr_rule": "Rule A",
+  "canonical_ndb_no": "18192",
+  "cook_method": "bake",
+  "cook_method_normalized": "baked",
+  "yield_factor_water": 0.3,
+  "yield_factor_fat": 1.0,
+  "servings_count": 36,
+  "audit_status": "",
+  "audit_notes": "",
+  "raw_total_grams": 704.2,
+  "raw_water_grams": 80.58,
+  "raw_fat_grams": 184.82,
+  "water_lost_grams": 56.41,
+  "fat_lost_grams": 0.0,
+  "cooked_total_grams": 647.79,
+  "grams_per_serving": 17.99,
+  "ingredients": [
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 224.0,
+      "section": "shortbread",
+      "qty_display": "1 cup (slightly scant)",
+      "contribution": {
+        "Energy_KCal": 1606.08,
+        "Protein": 1.904,
+        "TotalLipidFat": 181.686,
+        "Carbohydrate": 0.134,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.134,
+        "Water": 40.186
+      }
+    },
+    {
+      "ingredient_key": "sugar_granulated",
+      "ndb_no": "19335",
+      "long_desc": "Sugars, granulated",
+      "grams": 150.0,
+      "section": "shortbread",
+      "qty_display": "3/4 cup",
+      "contribution": {
+        "Energy_KCal": 580.5,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 149.97,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 149.7,
+        "Water": 0.03
+      }
+    },
+    {
+      "ingredient_key": "vanilla_extract",
+      "ndb_no": "2050",
+      "long_desc": "Vanilla extract",
+      "grams": 4.2,
+      "section": "shortbread",
+      "qty_display": "1 teaspoon",
+      "contribution": {
+        "Energy_KCal": 12.096,
+        "Protein": 0.003,
+        "TotalLipidFat": 0.003,
+        "Carbohydrate": 0.531,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.531,
+        "Water": 2.208
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 6.0,
+      "section": "shortbread",
+      "qty_display": "1 teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.012
+      }
+    },
+    {
+      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ndb_no": "20081",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
+      "grams": 320.0,
+      "section": "shortbread",
+      "qty_display": "2 1/2 cups + 1 tablespoon",
+      "contribution": {
+        "Energy_KCal": 1164.8,
+        "Protein": 33.056,
+        "TotalLipidFat": 3.136,
+        "Carbohydrate": 244.192,
+        "FiberTotalDietary": 8.64,
+        "SugarsTotal": 0.864,
+        "Water": 38.144
+      }
+    }
+  ],
+  "skipped_ingredients": [],
+  "per100g": {
+    "Energy_KCal": 519.22,
+    "Protein": 5.07,
+    "TotalLipidFat": 28.53,
+    "Carbohydrate": 60.95,
+    "FiberTotalDietary": 1.33,
+    "SugarsTotal": 23.35,
+    "Water": 3.73
+  },
+  "per_serving": {
+    "Energy_KCal": 93.43,
+    "Protein": 0.91,
+    "TotalLipidFat": 5.13,
+    "Carbohydrate": 10.97,
+    "FiberTotalDietary": 0.24,
+    "SugarsTotal": 4.2,
+    "Water": 0.67
+  }
+}

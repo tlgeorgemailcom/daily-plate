@@ -1,0 +1,228 @@
+{
+  "recipe_id": "SWEET_032",
+  "recipe_name": "Cookies, Gingersnaps",
+  "sr_rule": "Rule C",
+  "canonical_ndb_no": "18172",
+  "cook_method": "bake",
+  "cook_method_normalized": "baked",
+  "yield_factor_water": 0.4,
+  "yield_factor_fat": 1.0,
+  "servings_count": 48,
+  "audit_status": "",
+  "audit_notes": "",
+  "raw_total_grams": 874.3,
+  "raw_water_grams": 128.63,
+  "raw_fat_grams": 99.68,
+  "water_lost_grams": 77.18,
+  "fat_lost_grams": 0.0,
+  "cooked_total_grams": 797.12,
+  "grams_per_serving": 16.61,
+  "ingredients": [
+    {
+      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ndb_no": "20081",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, bleached",
+      "grams": 270.0,
+      "section": "",
+      "qty_display": "2\u00bc cups",
+      "contribution": {
+        "Energy_KCal": 982.8,
+        "Protein": 27.891,
+        "TotalLipidFat": 2.646,
+        "Carbohydrate": 206.037,
+        "FiberTotalDietary": 7.29,
+        "SugarsTotal": 0.729,
+        "Water": 32.184
+      }
+    },
+    {
+      "ingredient_key": "baking_soda",
+      "ndb_no": "18372",
+      "long_desc": "Leavening agents, baking soda",
+      "grams": 10.0,
+      "section": "",
+      "qty_display": "2 teaspoons",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.02
+      }
+    },
+    {
+      "ingredient_key": "salt_table",
+      "ndb_no": "2047",
+      "long_desc": "Salt, table",
+      "grams": 3.0,
+      "section": "",
+      "qty_display": "\u00bd teaspoon",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.006
+      }
+    },
+    {
+      "ingredient_key": "butter_unsalted",
+      "ndb_no": "1145",
+      "long_desc": "Butter, without salt",
+      "grams": 113.0,
+      "section": "",
+      "qty_display": "\u00bd cup (1 stick)",
+      "contribution": {
+        "Energy_KCal": 810.21,
+        "Protein": 0.96,
+        "TotalLipidFat": 91.654,
+        "Carbohydrate": 0.068,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.068,
+        "Water": 20.272
+      }
+    },
+    {
+      "ingredient_key": "sugar_granulated",
+      "ndb_no": "19335",
+      "long_desc": "Sugars, granulated",
+      "grams": 200.0,
+      "section": "",
+      "qty_display": "1 cup",
+      "contribution": {
+        "Energy_KCal": 774.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 199.96,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 199.6,
+        "Water": 0.04
+      }
+    },
+    {
+      "ingredient_key": "molasses",
+      "ndb_no": "19304",
+      "long_desc": "Molasses",
+      "grams": 170.0,
+      "section": "",
+      "qty_display": "\u00bd cup",
+      "contribution": {
+        "Energy_KCal": 493.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.17,
+        "Carbohydrate": 127.041,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 127.024,
+        "Water": 37.179
+      }
+    },
+    {
+      "ingredient_key": "egg_whole_raw",
+      "ndb_no": "1123",
+      "long_desc": "Egg, whole, raw, fresh",
+      "grams": 50.0,
+      "section": "",
+      "qty_display": "1 large",
+      "contribution": {
+        "Energy_KCal": 71.5,
+        "Protein": 6.28,
+        "TotalLipidFat": 4.755,
+        "Carbohydrate": 0.36,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.185,
+        "Water": 38.075
+      }
+    },
+    {
+      "ingredient_key": "ginger_ground",
+      "ndb_no": "2021",
+      "long_desc": "Spices, ginger, ground",
+      "grams": 3.6,
+      "section": "",
+      "qty_display": "2 teaspoons",
+      "contribution": {
+        "Energy_KCal": 12.06,
+        "Protein": 0.323,
+        "TotalLipidFat": 0.153,
+        "Carbohydrate": 2.578,
+        "FiberTotalDietary": 0.508,
+        "SugarsTotal": 0.122,
+        "Water": 0.358
+      }
+    },
+    {
+      "ingredient_key": "cinnamon_ground",
+      "ndb_no": "2010",
+      "long_desc": "Spices, cinnamon, ground",
+      "grams": 2.6,
+      "section": "",
+      "qty_display": "1 teaspoon",
+      "contribution": {
+        "Energy_KCal": 6.422,
+        "Protein": 0.104,
+        "TotalLipidFat": 0.032,
+        "Carbohydrate": 2.095,
+        "FiberTotalDietary": 1.381,
+        "SugarsTotal": 0.056,
+        "Water": 0.275
+      }
+    },
+    {
+      "ingredient_key": "cloves_ground",
+      "ndb_no": "2011",
+      "long_desc": "Spices, cloves, ground",
+      "grams": 2.1,
+      "section": "",
+      "qty_display": "\u00bd teaspoon",
+      "contribution": {
+        "Energy_KCal": 5.754,
+        "Protein": 0.125,
+        "TotalLipidFat": 0.273,
+        "Carbohydrate": 1.376,
+        "FiberTotalDietary": 0.712,
+        "SugarsTotal": 0.05,
+        "Water": 0.207
+      }
+    },
+    {
+      "ingredient_key": "sugar_granulated",
+      "ndb_no": "19335",
+      "long_desc": "Sugars, granulated",
+      "grams": 50.0,
+      "section": "rolling",
+      "qty_display": "\u00bc cup for rolling",
+      "contribution": {
+        "Energy_KCal": 193.5,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 49.99,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 49.9,
+        "Water": 0.01
+      }
+    }
+  ],
+  "skipped_ingredients": [],
+  "per100g": {
+    "Energy_KCal": 420.17,
+    "Protein": 4.21,
+    "TotalLipidFat": 12.51,
+    "Carbohydrate": 73.95,
+    "FiberTotalDietary": 1.24,
+    "SugarsTotal": 47.39,
+    "Water": 6.45
+  },
+  "per_serving": {
+    "Energy_KCal": 69.78,
+    "Protein": 0.7,
+    "TotalLipidFat": 2.08,
+    "Carbohydrate": 12.28,
+    "FiberTotalDietary": 0.21,
+    "SugarsTotal": 7.87,
+    "Water": 1.07
+  }
+}
