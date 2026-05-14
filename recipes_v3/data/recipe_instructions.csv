@@ -1,4 +1,29 @@
 recipe_id,step_order,step_text
+CRUST_001,1,Whisk flour and salt together in a large bowl.
+CRUST_001,2,Cut in chilled butter and shortening until the mixture resembles coarse crumbs with a few pea-sized pieces.
+CRUST_001,3,"Add ice water 1 tablespoon at a time, stirring until the dough just comes together."
+CRUST_001,4,"Divide dough into two equal pieces, shape each into a disc, and wrap in plastic."
+CRUST_001,5,Refrigerate at least 30 minutes before rolling.
+CRUST_001,6,Roll each disc on a lightly floured surface to about 1/8-inch thickness for a 9-inch pie plate.
+CRUST_002,1,Whisk flour and salt together in a large bowl.
+CRUST_002,2,Cut in chilled butter and shortening until the mixture resembles coarse crumbs with a few pea-sized pieces.
+CRUST_002,3,"Add ice water 1 tablespoon at a time, stirring until the dough just comes together."
+CRUST_002,4,"Shape into a disc, wrap in plastic, and refrigerate at least 30 minutes."
+CRUST_002,5,Roll dough on a lightly floured surface to about 1/8-inch thickness and fit into a 9-inch pie plate.
+CRUST_002,6,Trim and crimp the edges; chill 15 minutes.
+CRUST_002,7,Line with parchment and fill with pie weights. Bake at 375 degrees F (190 degrees C) for 20 minutes. Remove weights and bake 8 to 10 minutes more until golden.
+CRUST_003,1,Whisk flour and salt together in a large bowl.
+CRUST_003,2,Cut in chilled butter and shortening until the mixture resembles coarse crumbs with a few pea-sized pieces.
+CRUST_003,3,"Add ice water 1 tablespoon at a time, stirring until the dough just comes together."
+CRUST_003,4,"Shape into a disc, wrap in plastic, and refrigerate at least 30 minutes."
+CRUST_003,5,Roll dough on a lightly floured surface to about 1/8-inch thickness and fit into a 9-inch pie plate.
+CRUST_003,6,Trim and crimp the edges; chill until ready to fill and bake with filling.
+CRUST_004,1,Whisk flour and salt together in a large bowl.
+CRUST_004,2,Cut in chilled butter and shortening until the mixture resembles coarse crumbs with a few pea-sized pieces.
+CRUST_004,3,"Add ice water 1 tablespoon at a time, stirring until the dough just comes together."
+CRUST_004,4,"Divide dough into two equal pieces, shape each into a disc, and wrap in plastic."
+CRUST_004,5,Refrigerate at least 30 minutes before rolling.
+CRUST_004,6,Roll each disc on a lightly floured surface to about 1/8-inch thickness and fit into the pie plate; chill until ready to fill and bake.
 SWEET_001,1,Preheat the oven to 425 degrees F (220 degrees C).
 SWEET_001,2,"For the crust whisk the flour and salt together. Cut in the chilled butter and shortening until the mixture resembles coarse crumbs, then add the ice water 1 tablespoon at a time just until the dough comes together. Divide into two discs and chill for at least 30 minutes."
 SWEET_001,3,"In a large saucepan, combine the peeled and cored Granny Smith apple slices with the sugar, lemon juice, cornstarch, butter, and 1/4 cup water, plus any optional cinnamon, cloves, or allspice. Bring to a boil over medium heat, then reduce heat, cover, and simmer for 5 minutes, stirring occasionally. Uncover and simmer 5 minutes more, until the apples are slightly softened and the juices have thickened. Remove from heat and let cool while you roll out the crust."
@@ -167,8 +192,8 @@ SWEET_018,6,"Add about a third of the sifted dry ingredients to the bowl, follow
 SWEET_018,7,Divide the batter evenly between the prepared pans and smooth the top. Tap the pans gently on the counter once or twice to release any large air bubbles.
 SWEET_018,8,"Bake until the tops are golden, spring back when lightly pressed, and a toothpick inserted in the center comes out clean, about 25-30 minutes."
 SWEET_018,9,"Cool in the pans on a rack for 10 minutes, then turn the layers out onto the rack and cool completely before slicing."
-SWEET_019,1,Sift the powdered sugar and cocoa powder together into a medium bowl.
-SWEET_019,2,"Whisk in the melted butter, then the milk, vanilla, and salt. Beat until smooth, glossy, and pourable. If too thick, add milk a teaspoon at a time; if too thin, add powdered sugar a tablespoon at a time."
+SWEET_019,1,Combine the butter, milk, and corn syrup in a small saucepan over medium heat. Stir until the butter is melted and the mixture just comes to a simmer. Add chopped chocolate whisking until melted.
+SWEET_019,2,"Remove from heat. Let sit 1 minute, then whisk until completely smooth. Whisk in the vanilla extract, then sift in the powdered sugar and whisk until glossy and pourable. If too thick, add milk a teaspoon at a time."
 SWEET_019,3,Pour or drizzle over a fully cooled cake. Let set 10–15 minutes before slicing.
 SWEET_020,1,"Preheat the oven to 350°F (175°C). Grease two 9-inch round cake pans, then dust with flour or line the bottoms with parchment."
 SWEET_020,2,"Sift together the flour, baking powder, baking soda, and salt into a medium bowl and set aside."
@@ -376,28 +401,3 @@ SWEET_040,7,Pour the filling into the par-baked crust through a fine-mesh strain
 SWEET_040,8,Grate a light dusting of nutmeg over the surface.
 SWEET_040,9,Bake at 325 degrees F (165 degrees C) for 45 to 55 minutes until the edges are puffed and set and the center jiggles only slightly when the pan is gently nudged. Tent the crust edges with foil if they brown too quickly.
 SWEET_040,10,Cool completely on a wire rack for at least 2 hours before slicing. Serve at room temperature or chilled.
-CRUST_001,1,Whisk flour and salt together in a large bowl.
-CRUST_001,2,Cut in chilled butter and shortening until the mixture resembles coarse crumbs with a few pea-sized pieces.
-CRUST_001,3,"Add ice water 1 tablespoon at a time, stirring until the dough just comes together."
-CRUST_001,4,"Divide dough into two equal pieces, shape each into a disc, and wrap in plastic."
-CRUST_001,5,Refrigerate at least 30 minutes before rolling.
-CRUST_001,6,Roll each disc on a lightly floured surface to about 1/8-inch thickness for a 9-inch pie plate.
-CRUST_002,1,Whisk flour and salt together in a large bowl.
-CRUST_002,2,Cut in chilled butter and shortening until the mixture resembles coarse crumbs with a few pea-sized pieces.
-CRUST_002,3,"Add ice water 1 tablespoon at a time, stirring until the dough just comes together."
-CRUST_002,4,"Shape into a disc, wrap in plastic, and refrigerate at least 30 minutes."
-CRUST_002,5,Roll dough on a lightly floured surface to about 1/8-inch thickness and fit into a 9-inch pie plate.
-CRUST_002,6,Trim and crimp the edges; chill 15 minutes.
-CRUST_002,7,Line with parchment and fill with pie weights. Bake at 375 degrees F (190 degrees C) for 20 minutes. Remove weights and bake 8 to 10 minutes more until golden.
-CRUST_003,1,Whisk flour and salt together in a large bowl.
-CRUST_003,2,Cut in chilled butter and shortening until the mixture resembles coarse crumbs with a few pea-sized pieces.
-CRUST_003,3,"Add ice water 1 tablespoon at a time, stirring until the dough just comes together."
-CRUST_003,4,"Shape into a disc, wrap in plastic, and refrigerate at least 30 minutes."
-CRUST_003,5,Roll dough on a lightly floured surface to about 1/8-inch thickness and fit into a 9-inch pie plate.
-CRUST_003,6,Trim and crimp the edges; chill until ready to fill and bake with filling.
-CRUST_004,1,Whisk flour and salt together in a large bowl.
-CRUST_004,2,Cut in chilled butter and shortening until the mixture resembles coarse crumbs with a few pea-sized pieces.
-CRUST_004,3,"Add ice water 1 tablespoon at a time, stirring until the dough just comes together."
-CRUST_004,4,"Divide dough into two equal pieces, shape each into a disc, and wrap in plastic."
-CRUST_004,5,Refrigerate at least 30 minutes before rolling.
-CRUST_004,6,Roll each disc on a lightly floured surface to about 1/8-inch thickness and fit into the pie plate; chill until ready to fill and bake.

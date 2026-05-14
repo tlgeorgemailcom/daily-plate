@@ -1059,8 +1059,8 @@ export const LEVELS: Level[] = [
       { name: 'powdered sugar', quantity: '2 cups', section: 'glaze', ndbNo: '19336', portionDesc: 'g', portionGrams: 227.0 }
     ],
     recipeInstructions: [
-      'Sift the powdered sugar and cocoa powder together into a medium bowl.',
-      'Whisk in the melted butter, then the milk, vanilla, and salt. Beat until smooth, glossy, and pourable. If too thick, add milk a teaspoon at a time; if too thin, add powdered sugar a tablespoon at a time.',
+      'Combine the butter',
+      'Remove from heat. Let sit 1 minute, then whisk until completely smooth. Whisk in the vanilla extract, then sift in the powdered sugar and whisk until glossy and pourable. If too thick, add milk a teaspoon at a time.',
       'Pour or drizzle over a fully cooled cake. Let set 10–15 minutes before slicing.'
     ],
   },
