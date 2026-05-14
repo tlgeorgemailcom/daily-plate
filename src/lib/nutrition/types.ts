@@ -65,9 +65,14 @@ export interface CommunitySection {
   sectionKey: string;       // e.g. "crust", "filling", "topping"
   sectionLabel: string;     // display name shown in UI
   cookMethod: string;       // "baked" | "boiled" | "simmered" | "raw" | ...
-  cookTempF?: number;       // oven temp °F — required when cookMethod = "baked"
-  cookMinutes?: number;     // oven time in minutes
+  cookTempF?: number;       // oven temp °F — used when stages[] is absent
+  cookMinutes?: number;     // oven time in minutes — used when stages[] is absent
   boilMinutes?: number;     // stovetop boil/simmer time in minutes
+  /** Multi-stage oven sequence.  When present, overrides cookTempF/cookMinutes.
+   *  Each element is one sequential oven stage: [tempF, minutes].
+   *  Example: twice-baked potato — stage 1 [400,60] then stage 2 [375,30].
+   */
+  stages?: Array<{ tempF: number; minutes: number }>;
 }
 
 /**

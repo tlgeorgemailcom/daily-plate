@@ -8,15 +8,13 @@
  * Checks performed
  * ────────────────
  *  1. MACRO_SUM  — Σ(protein + fat + carbs + water + ash) / per-100g ≈ 100g.
- *                  Flag if ± 5g from expected mass (loose; SR28 data gaps exist).
+ *                  Flag if ± 5g from expected mass (loose; SR Legacy data gaps exist).
  *  2. WATER_PCT  — Water fraction must be 0–98%. > 95% is suspicious for non-liquids.
  *  3. ENERGY     — Atwater re-estimate from macros; compare to declared energy.
  *                  Flag if deviation > 15 kcal/100g.
  *  4. MISSING    — Any ingredient with reason 'missing_ndb' → blocked=true.
  *  5. NEG        — Any negative macro (floating-point accumulation artifact).
  *  6. GRAMS      — Total cooked grams < 50 (tiny recipe, likely grams entry error).
- *  7. SHARED_COOK — Multiple sections sharing identical cookTempF+cookMinutes
- *                   (shared-cook-event approximation warning).
  *
  * Returns PlausibilityResult from types.ts.
  */
@@ -84,20 +82,6 @@ export function plausibilityCheck(
   // ── Check 6: suspiciously small total ────────────────────────────────────────
   if (totalCookedGrams > 0 && totalCookedGrams < 50) {
     flags.push(`GRAMS: total cooked grams ${totalCookedGrams.toFixed(1)}g — very small; check portion entries`);
-  }
-
-  // ── Check 7: shared cook event ───────────────────────────────────────────────
-  // Warn when two or more oven sections have the exact same temp+time. The model
-  // treats each section independently. If they were truly cooked together, there
-  // may be moisture-migration between sections that the model cannot capture.
-  const ovens = sections
-    .filter(s => s.cookMethod === 'baked')
-    .map(s => `${s.sectionKey}`);
-  if (ovens.length >= 2) {
-    flags.push(
-      `SHARED_COOK: ${ovens.length} baked sections (${ovens.join(', ')}) — ` +
-      `sections are treated independently; moisture migration between sections is not modelled`
-    );
   }
 
   return {

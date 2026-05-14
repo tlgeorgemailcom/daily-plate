@@ -209,13 +209,17 @@ export function buildRecipeCommunity(
       sum + (a.nutrients.water / 100) * a.grams, 0
     );
 
-    // Build oven stages from section metadata
-    const stages: Array<[number, number]> = [];
-    if (sec.cookTempF && sec.cookMinutes && sec.cookTempF > 0) {
-      stages.push([sec.cookTempF, sec.cookMinutes]);
-    }
-    // Note: multi-stage (two-step bake) requires extended CommunitySection.stages[]
-    // field — not yet in the UI. Single-stage is the current community standard.
+    // Build oven stages from section metadata.
+    // If sec.stages[] is present use it (multi-stage sequential bake).
+    // Otherwise fall back to the single cookTempF / cookMinutes pair.
+    const stages: Array<[number, number]> =
+      sec.stages && sec.stages.length > 0
+        ? sec.stages
+            .filter(st => st.tempF > 0 && st.minutes > 0)
+            .map(st => [st.tempF, st.minutes] as [number, number])
+        : sec.cookTempF && sec.cookMinutes && sec.cookTempF > 0
+          ? [[sec.cookTempF, sec.cookMinutes]]
+          : [];
 
     const boilMinutes = (sec as CommunitySection & { boilMinutes?: number }).boilMinutes ?? 0;
     const yieldWater  = calcYieldWater(stages, initialWaterG, fillingClass, boilMinutes);

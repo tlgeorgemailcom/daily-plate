@@ -52,6 +52,10 @@
     cookMinutes?: number;
     /** Stovetop boil/simmer time in minutes — used for boiled sections. */
     boilMinutes?: number;
+    /** Multi-stage oven sequence. When present, overrides cookTempF/cookMinutes.
+     *  Each element is one sequential stage: { tempF, minutes }.
+     *  Example: twice-baked — [{ tempF:400, minutes:60 }, { tempF:375, minutes:30 }] */
+    stages?: Array<{ tempF: number; minutes: number }>;
     yieldFactorWater?: number;
     yieldFactorFat?: number;
     yieldFactorOther?: number;
@@ -686,6 +690,39 @@
     const key = uniqueSectionKey('section_' + (sections.length + 1));
     sections = [...sections, { key, label: '', isPrepStep: true, prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 1.0 }];
   }
+  // ── Multi-stage bake helpers ─────────────────────────────────────────────────
+  function addBakeStage(sIdx: number) {
+    const sec = sections[sIdx];
+    const current = sec.stages && sec.stages.length > 0
+      ? sec.stages
+      : [{ tempF: sec.cookTempF ?? 350, minutes: sec.cookMinutes ?? 45 }];
+    sections = sections.map((s, i) => i === sIdx
+      ? { ...s, stages: [...current, { tempF: 350, minutes: 30 }], cookTempF: undefined, cookMinutes: undefined }
+      : s
+    );
+  }
+  function removeBakeStage(sIdx: number, stIdx: number) {
+    const sec = sections[sIdx];
+    if (!sec.stages) return;
+    const next = sec.stages.filter((_, i) => i !== stIdx);
+    if (next.length === 1) {
+      sections = sections.map((s, i) => i === sIdx
+        ? { ...s, stages: undefined, cookTempF: next[0].tempF, cookMinutes: next[0].minutes }
+        : s
+      );
+    } else {
+      sections = sections.map((s, i) => i === sIdx ? { ...s, stages: next } : s);
+    }
+  }
+  function updateBakeStage(sIdx: number, stIdx: number, field: 'tempF' | 'minutes', value: number) {
+    const sec = sections[sIdx];
+    if (!sec.stages) return;
+    sections = sections.map((s, i) => i === sIdx
+      ? { ...s, stages: s.stages!.map((st, j) => j === stIdx ? { ...st, [field]: value } : st) }
+      : s
+    );
+  }
+
   function removeSection(idx: number) {
     const removedKey = sections[idx]?.key;
     sections = sections.filter((_, i) => i !== idx);
@@ -844,8 +881,7 @@
             cookTempF:    s.cookTempF,
             cookMinutes:  s.cookMinutes,
             boilMinutes:  s.boilMinutes,
-          })),
-        nutrientMap: communityNutrients,
+            stages:       s.stages,
       } : {}),
     };
   }
@@ -922,6 +958,7 @@
           cookTempF:    s.cookTempF,
           cookMinutes:  s.cookMinutes,
           boilMinutes:  s.boilMinutes,
+          stages:       s.stages,
         }));
         const ci: CommunityIngredient[] = activeIngs.map(i => ({
           ndbNo:        i.ndbNo!,
@@ -2435,28 +2472,62 @@
             </select>
           </div>
           {#if sec.cookMethod === 'baked'}
-            <div class="section-cook-params-row">
-              <label class="section-method-label">
-                Oven temp (°F)
-                <input
-                  type="number"
-                  min="200" max="550" step="25"
-                  placeholder="e.g. 350"
-                  bind:value={sec.cookTempF}
-                  class="form-input section-cook-param-input"
-                />
-              </label>
-              <label class="section-method-label">
-                Time (min)
-                <input
-                  type="number"
-                  min="1" max="300" step="1"
-                  placeholder="e.g. 45"
-                  bind:value={sec.cookMinutes}
-                  class="form-input section-cook-param-input"
-                />
-              </label>
-            </div>
+            {#if sec.stages && sec.stages.length >= 1}
+              <!-- Multi-stage bake editor -->
+              {#each sec.stages as stage, stIdx (stIdx)}
+                <div class="section-cook-params-row">
+                  <label class="section-method-label">
+                    Stage {stIdx + 1} temp (°F)
+                    <input
+                      type="number"
+                      min="200" max="550" step="25"
+                      value={stage.tempF}
+                      oninput={(e) => updateBakeStage(sIdx, stIdx, 'tempF', Number(e.currentTarget.value))}
+                      class="form-input section-cook-param-input"
+                    />
+                  </label>
+                  <label class="section-method-label">
+                    Time (min)
+                    <input
+                      type="number"
+                      min="1" max="300" step="1"
+                      value={stage.minutes}
+                      oninput={(e) => updateBakeStage(sIdx, stIdx, 'minutes', Number(e.currentTarget.value))}
+                      class="form-input section-cook-param-input"
+                    />
+                  </label>
+                  {#if sec.stages.length > 1}
+                    <button type="button" class="remove-stage-btn" onclick={() => removeBakeStage(sIdx, stIdx)}>×</button>
+                  {/if}
+                </div>
+              {/each}
+              <button type="button" class="add-stage-btn" onclick={() => addBakeStage(sIdx)}>+ Add stage</button>
+            {:else}
+              <!-- Single-stage (default) -->
+              <div class="section-cook-params-row">
+                <label class="section-method-label">
+                  Oven temp (°F)
+                  <input
+                    type="number"
+                    min="200" max="550" step="25"
+                    placeholder="e.g. 350"
+                    bind:value={sec.cookTempF}
+                    class="form-input section-cook-param-input"
+                  />
+                </label>
+                <label class="section-method-label">
+                  Time (min)
+                  <input
+                    type="number"
+                    min="1" max="300" step="1"
+                    placeholder="e.g. 45"
+                    bind:value={sec.cookMinutes}
+                    class="form-input section-cook-param-input"
+                  />
+                </label>
+                <button type="button" class="add-stage-btn" onclick={() => addBakeStage(sIdx)}>+ Add stage</button>
+              </div>
+            {/if}
           {:else if sec.cookMethod === 'boiled' || sec.cookMethod === 'steamed'}
             <div class="section-cook-params-row">
               <label class="section-method-label">
@@ -3409,6 +3480,30 @@
     align-items: center;
     gap: 4px;
   }
+  .add-stage-btn {
+    align-self: flex-end;
+    background: none;
+    border: 1px dashed #93c5fd;
+    border-radius: 6px;
+    color: #2563eb;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    margin-top: 2px;
+  }
+  .add-stage-btn:hover { background: #eff6ff; }
+  .remove-stage-btn {
+    align-self: flex-end;
+    background: none;
+    border: 1px solid #fca5a5;
+    border-radius: 6px;
+    color: #dc2626;
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 2px 8px;
+    line-height: 1.4;
+  }
+  .remove-stage-btn:hover { background: #fef2f2; }
   .section-final-cook-row { margin-bottom: 6px; }
   .section-final-cook-inherited {
     color: #2d3748;
