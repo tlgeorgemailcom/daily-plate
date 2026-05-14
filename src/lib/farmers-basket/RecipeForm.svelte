@@ -5,6 +5,8 @@
   import FoodIcon from '$lib/farmers-basket/FoodIcon.svelte';
   import { FOODS } from '$lib/data/food-portions';
   import type { Food as FoodData } from '$lib/data/food-portions';
+  import { buildRecipeCommunity } from '$lib/nutrition/buildRecipeCommunity';
+  import type { CommunitySection, CommunityIngredient, NutrientRow } from '$lib/nutrition/types';
   
   // Types for ingredients and instructions
   export interface RecipeIngredient {
@@ -896,6 +898,73 @@
       if (previewTimer) { clearTimeout(previewTimer); previewTimer = null; }
       return;
     }
+
+    // ── Community fast-path: run buildRecipeCommunity synchronously in browser ──
+    // Fires instantly — no network call, no debounce — whenever all active
+    // ingredients have a cached NutrientRow and sections are defined.
+    const activeIngs = ingredients.filter(
+      i => i.name.trim() &&
+           i.ingredientStatus !== 'exempt' &&
+           i.ingredientStatus !== 'optional' &&
+           i.ndbNo && i.portionGrams && i.portionGrams > 0
+    );
+    const allCached = activeIngs.length > 0 && activeIngs.every(i => nutrientCache.has(i.ndbNo!));
+    const commSections = sections.filter(s => s.isPrepStep === false);
+    if (commSections.length > 0 && allCached) {
+      if (previewTimer) { clearTimeout(previewTimer); previewTimer = null; }
+      try {
+        const nutrientMap = new Map<string, NutrientRow>();
+        for (const [ndb, nr] of nutrientCache.entries()) nutrientMap.set(ndb, nr as NutrientRow);
+        const cs: CommunitySection[] = commSections.map(s => ({
+          sectionKey:   s.key,
+          sectionLabel: s.label || s.key,
+          cookMethod:   s.cookMethod || 'raw',
+          cookTempF:    s.cookTempF,
+          cookMinutes:  s.cookMinutes,
+          boilMinutes:  s.boilMinutes,
+        }));
+        const ci: CommunityIngredient[] = activeIngs.map(i => ({
+          ndbNo:        i.ndbNo!,
+          portionGrams: i.portionGrams!,
+          sectionKey:   i.section ?? undefined,
+          isOptional:   false,
+          exempt:       false,
+        }));
+        const servingsNum = Math.max(1, Number(servings) || 1);
+        const result = buildRecipeCommunity(cs, ci, nutrientMap, servingsNum, 100);
+        const p100  = result.per100g;
+        const gps   = result.gramsPerServing;
+        const scale = gps / 100;
+        liveNutritionJson = {
+          perServing: {
+            cal:  Math.round((p100.energy_KCal       ?? 0) * scale * 10) / 10,
+            pro:  Math.round((p100.protein           ?? 0) * scale * 10) / 10,
+            fat:  Math.round((p100.totalLipidFat     ?? 0) * scale * 10) / 10,
+            carb: Math.round((p100.carbohydrate      ?? 0) * scale * 10) / 10,
+            fib:  Math.round((p100.fiberTotalDietary ?? 0) * scale * 10) / 10,
+            sug:  Math.round((p100.sugarsTotal       ?? 0) * scale * 10) / 10,
+          },
+          per100g: {
+            Energy_KCal:       Math.round(p100.energy_KCal       ?? 0),
+            Protein:           Math.round((p100.protein           ?? 0) * 10) / 10,
+            TotalLipidFat:     Math.round((p100.totalLipidFat     ?? 0) * 10) / 10,
+            Carbohydrate:      Math.round((p100.carbohydrate      ?? 0) * 10) / 10,
+            FiberTotalDietary: Math.round((p100.fiberTotalDietary ?? 0) * 10) / 10,
+            SugarsTotal:       Math.round((p100.sugarsTotal       ?? 0) * 10) / 10,
+            Water:             Math.round((p100.water             ?? 0) * 10) / 10,
+          },
+          gramsPerServing: gps,
+          servings:        servingsNum,
+        };
+        previewLoading = false;
+        previewError   = false;
+      } catch {
+        // Build failed — fall through to server call below
+      }
+      return;
+    }
+    // ── End community fast-path ────────────────────────────────────────────────
+
     const payload = buildNutritionPayload();
     if (previewTimer) clearTimeout(previewTimer);
     const id = ++previewRequestId;

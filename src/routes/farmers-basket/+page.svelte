@@ -942,7 +942,7 @@
             <div class="recipe-meta-win">
               {#if game.currentLevel.prepTime}<span>⏱️ {game.currentLevel.prepTime}</span>{/if}
               {#if game.currentLevel.servings}<span>🍽️ {game.currentLevel.servings}</span>{/if}
-              <RecipeBadges sr28Rule={game.currentLevel.sr28Rule} isCommunityRecipe={game.currentLevel.isCommunityRecipe} compact={true} />
+              <RecipeBadges sr28Rule={game.currentLevel.sr28Rule} isCommunityRecipe={game.currentLevel.isCommunityRecipe} plausibilityFlags={game.currentLevel.plausibilityFlags} compact={true} />
             </div>
             
             <div class="ingredients-section">

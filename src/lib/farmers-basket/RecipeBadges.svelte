@@ -5,12 +5,13 @@
   interface Props {
     sr28Rule?: string | null;
     isCommunityRecipe?: boolean;
+    plausibilityFlags?: string[] | null;
     compact?: boolean;
   }
 
-  let { sr28Rule = null, isCommunityRecipe = false, compact = false }: Props = $props();
+  let { sr28Rule = null, isCommunityRecipe = false, plausibilityFlags = null, compact = false }: Props = $props();
 
-  const badges = $derived(getRecipeLegendItems({ sr28Rule, isCommunityRecipe }));
+  const badges = $derived(getRecipeLegendItems({ sr28Rule, isCommunityRecipe, plausibilityFlags }));
 
   function handleBadgeClick(key: NutritionLegendKey, event: MouseEvent) {
     event.preventDefault();

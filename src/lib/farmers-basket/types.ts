@@ -141,6 +141,7 @@ export interface Level {
   submittedBy?: string;           // Submitter player ID for community recipes
   linkType?: 'ingredient' | 'dish' | 'mixed';  // How ingredients were USDA-linked
   sr28Rule?: 'Rule A' | 'Rule B' | 'Rule C' | 'Rule D'; // Nutrient data confidence tier
+  plausibilityFlags?: string[];                 // Community build plausibility check failures
   nutritionJson?: NutritionJson | null;         // Per-serving nutrients (null = unlinked)
   sections?: {                    // Per-section cooking breakdown (v3 §18; multi-stage recipes only)
     key: string;                  // matches recipeIngredients[].section
