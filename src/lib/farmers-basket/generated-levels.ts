@@ -1059,7 +1059,7 @@ export const LEVELS: Level[] = [
       { name: 'powdered sugar', quantity: '2 cups', section: 'glaze', ndbNo: '19336', portionDesc: 'g', portionGrams: 227.0 }
     ],
     recipeInstructions: [
-      'Combine the butter',
+      'Combine the butter, milk, and corn syrup in a small saucepan over medium heat. Stir until the butter is melted and the mixture just comes to a simmer. Add chopped chocolate whisking until melted.',
       'Remove from heat. Let sit 1 minute, then whisk until completely smooth. Whisk in the vanilla extract, then sift in the powdered sugar and whisk until glossy and pourable. If too thick, add milk a teaspoon at a time.',
       'Pour or drizzle over a fully cooled cake. Let set 10–15 minutes before slicing.'
     ],
