@@ -1055,7 +1055,7 @@ export const LEVELS: Level[] = [
       { name: 'whole milk', quantity: '1/4 cup', section: 'glaze', ndbNo: '1077', portionDesc: 'g', portionGrams: 61.0 },
       { name: 'light corn syrup', quantity: '1 tablespoon', section: 'glaze', ndbNo: '19350', portionDesc: 'g', portionGrams: 22.0 },
       { name: 'pure vanilla extract', quantity: '1 teaspoon', section: 'glaze', ndbNo: '2050', portionDesc: 'g', portionGrams: 4.2 },
-      { name: 'bittersweet chocolate, finely chopped; semisweet proxy', quantity: '4 ounces', section: 'glaze', ndbNo: '19080', portionDesc: 'g', portionGrams: 113.0 },
+      { name: 'semisweet chocolate, finely chopped', quantity: '4 ounces', section: 'glaze', ndbNo: '19080', portionDesc: 'g', portionGrams: 113.0 },
       { name: 'powdered sugar', quantity: '2 cups', section: 'glaze', ndbNo: '19336', portionDesc: 'g', portionGrams: 227.0 }
     ],
     recipeInstructions: [
