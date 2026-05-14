@@ -259,7 +259,7 @@ SWEET_018,6,milk_whole,2/3 cup,163.0,120,244,cake,cake,false,whole milk
 SWEET_018,7,vanilla_extract,1 1/4 teaspoons,5.25,4,16,cake,cake,false,pure vanilla extract
 SWEET_018,8,egg_whole_raw,2 large,100.0,100,200,cake,cake,false,"large eggs, unbeaten"
 SWEET_018,9,egg_yolk_raw,1 large yolk,17.0,0,0,cake,cake,false,extra yolk for richness
-SWEET_019,1,butter_unsalted,8 tablespoons,113.0,80.0,140.0,glaze,glaze,false,"unsalted butter"
+SWEET_019,1,butter_unsalted,8 tablespoons,113.0,80.0,140.0,glaze,glaze,false,unsalted butter
 SWEET_019,2,milk_whole,1/4 cup,61.0,40.0,80.0,glaze,glaze,false,whole milk
 SWEET_019,3,corn_syrup_light,1 tablespoon,21.0,10.0,30.0,glaze,glaze,false,light corn syrup
 SWEET_019,4,vanilla_extract,1 teaspoon,4.2,2.0,8.0,glaze,glaze,false,pure vanilla extract
@@ -275,7 +275,7 @@ SWEET_020,6,milk_buttermilk_whole,1 cup,244.0,180,300,cake,cake,false,whole butt
 SWEET_020,7,vanilla_extract,1 tablespoon,12.6,8,20,cake,cake,false,pure vanilla extract
 SWEET_020,8,egg_whole_raw,3 large,150.0,100,220,cake,cake,false,"large eggs, unbeaten"
 SWEET_020,8b,egg_yolk_raw,2 large yolks,34.0,20,60,cake,cake,false,large egg yolks
-SWEET_020,9,butter_unsalted,8 tablespoons,113.0,80.0,140.0,frosting,frosting,false,"unsalted butter"
+SWEET_020,9,butter_unsalted,8 tablespoons,113.0,80.0,140.0,frosting,frosting,false,unsalted butter
 SWEET_020,10,milk_whole,1/4 cup,61.0,40.0,80.0,frosting,frosting,false,whole milk
 SWEET_020,11,corn_syrup_light,1 tablespoon,21.0,10.0,30.0,frosting,frosting,false,light corn syrup
 SWEET_020,12,vanilla_extract,1 teaspoon,4.2,2.0,8.0,frosting,frosting,false,pure vanilla extract
@@ -483,3 +483,8 @@ CRUST_002,2,salt_table,1/2 teaspoon,3.3,0.5,6.0,crust,crust,false,
 CRUST_002,3,butter_unsalted,2 1/2 tablespoon,35.3,20.0,80.0,crust,crust,false,
 CRUST_002,4,vegetable_shortening,4 tablespoon + 1 teaspoon,55.47,20.0,80.0,crust,crust,false,
 CRUST_002,5,water_tap,2 1/2 tablespoon ice water,37.0,15.0,80.0,crust,crust,false,
+CRUST_003,1,flour_ap_white_enriched_bleached,1 1/4 cups,156.3,100.0,250.0,crust,crust,false,
+CRUST_003,2,salt_table,1/2 teaspoon,3.3,0.5,6.0,crust,crust,false,
+CRUST_003,3,butter_unsalted,2 1/2 tablespoon,35.3,20.0,80.0,crust,crust,false,
+CRUST_003,4,vegetable_shortening,4 tablespoon + 1 teaspoon,55.47,20.0,80.0,crust,crust,false,
+CRUST_003,5,water_tap,2 tablespoon ice water,29.57,15.0,60.0,crust,crust,false,
