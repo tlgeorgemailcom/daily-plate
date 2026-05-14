@@ -1,29 +1,69 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { execute, queryAll, queryOne } from '$lib/server/turso';
-import { calcNutritionSR28 } from '$lib/server/calcNutritionSR28';
+import { buildRecipeCommunity } from '$lib/nutrition/buildRecipeCommunity';
+import type { CommunitySection, CommunityIngredient } from '$lib/nutrition/types';
+import { fetchNutrientsByNdb } from '$lib/server/nutrition/fetchNutrients';
 
-function hasValidLink(row: unknown): boolean {
-  if (!row || typeof row !== 'object') return false;
-  const obj = row as Record<string, unknown>;
-  const hasFood = (typeof obj.foodWord === 'string' && obj.foodWord.trim().length > 0)
-    || (typeof obj.ndbNo === 'string' && obj.ndbNo.trim().length > 0);
-  const portion = Number(obj.portionGrams ?? 0);
-  return hasFood && Number.isFinite(portion) && portion > 0;
-}
+// ── Community nutrition builder ────────────────────────────────────────────────
+async function calcCommunityNutrition(
+  ingredientsRaw: unknown[],
+  sectionsRaw: unknown[],
+  servings: unknown,
+  gramsPerServing: unknown,
+): Promise<{ nutritionJson: object | null; plausibilityFlags: string[] }> {
+  const sections = (sectionsRaw as unknown[]).filter(
+    (s): s is CommunitySection =>
+      !!s && typeof s === 'object' && typeof (s as Record<string, unknown>).sectionKey === 'string',
+  );
+  const ingredients: CommunityIngredient[] = (ingredientsRaw as unknown[]).map(r => {
+    const obj = r as Record<string, unknown>;
+    return {
+      ndbNo:        String(obj.ndbNo ?? ''),
+      portionGrams: Number(obj.portionGrams ?? 0),
+      sectionKey:   typeof obj.section === 'string' ? obj.section : undefined,
+      isOptional:   obj.ingredientStatus === 'optional' || obj.exempt === true,
+      exempt:       obj.ingredientStatus === 'exempt',
+    };
+  }).filter(i => i.ndbNo && i.portionGrams > 0);
 
-function hasAllIngredientLinks(ingredients: unknown[]): boolean {
-  return ingredients.length > 0 && ingredients.every((row) => hasValidLink(row));
-}
+  if (ingredients.length === 0) return { nutritionJson: null, plausibilityFlags: [] };
 
-function withDefaultServingCount(row: unknown): unknown {
-  if (!row || typeof row !== 'object') return row;
-  const obj = row as Record<string, unknown>;
-  const count = Number(obj.servingCount ?? 1);
-  return {
-    ...obj,
-    servingCount: Number.isFinite(count) && count > 0 ? count : 1,
+  const ndbNos = ingredients
+    .filter(i => !i.isOptional && !i.exempt)
+    .map(i => i.ndbNo);
+
+  const nutrientMap = await fetchNutrientsByNdb(ndbNos);
+  const servingsNum        = Math.max(1, Number(servings ?? 1));
+  const gramsPerServingNum = Math.max(1, Number(gramsPerServing ?? 100));
+
+  const result = buildRecipeCommunity(sections, ingredients, nutrientMap, servingsNum, gramsPerServingNum);
+
+  const p100  = result.per100g;
+  const gps   = result.gramsPerServing;
+  const scale = gps / 100;
+  const nutritionJson = {
+    perServing: {
+      cal:  (p100.energy_KCal       ?? 0) * scale,
+      pro:  (p100.protein           ?? 0) * scale,
+      fat:  (p100.totalLipidFat     ?? 0) * scale,
+      carb: (p100.carbohydrate      ?? 0) * scale,
+      fib:  (p100.fiberTotalDietary ?? 0) * scale,
+      sug:  (p100.sugarsTotal       ?? 0) * scale,
+    },
+    per100g: {
+      Energy_KCal:       p100.energy_KCal       ?? 0,
+      Protein:           p100.protein           ?? 0,
+      TotalLipidFat:     p100.totalLipidFat     ?? 0,
+      Carbohydrate:      p100.carbohydrate      ?? 0,
+      FiberTotalDietary: p100.fiberTotalDietary ?? 0,
+      SugarsTotal:       p100.sugarsTotal       ?? 0,
+      Water:             p100.water             ?? 0,
+    },
+    gramsPerServing: gps,
+    servings:        servingsNum,
   };
+  return { nutritionJson, plausibilityFlags: result.plausibility.flags };
 }
 
 // Safe migration — add draft columns if they don't exist yet
@@ -112,17 +152,24 @@ export const POST: RequestHandler = async ({ request }) => {
       return json({ error: 'Recipe is not approved — drafts only apply to live recipes' }, { status: 409 });
     }
     // Compute nutrition_json from draft data if all ingredients are linked
-    const linkType = typeof draftData?.linkMode === 'string' ? draftData.linkMode : null;
     const rawIngs: unknown[] = Array.isArray(draftData?.ingredients) ? draftData.ingredients : [];
     let nutritionJson: string | null = null;
-    const hasCompleteIngredientLinks = hasAllIngredientLinks(rawIngs);
-    const hasCompleteDishLink = (linkType !== 'dish' && linkType !== 'mixed') || hasValidLink(draftData?.dishLink);
-    if (linkType && hasCompleteIngredientLinks && hasCompleteDishLink) {
-      const normalizedIngs = rawIngs.map((row) => withDefaultServingCount(row));
-      const dishLinkEntry = draftData?.dishLink ? { isDish: true, ...(withDefaultServingCount(draftData.dishLink) as object) } : null;
-      const ingRows = (dishLinkEntry ? [dishLinkEntry, ...normalizedIngs] : normalizedIngs) as Parameters<typeof calcNutritionSR28>[0];
-      const computed = await calcNutritionSR28(ingRows, linkType, draftData?.servings ?? null, draftData?.cookingMethod ?? draftData?.cookMethod ?? null);
-      if (computed) nutritionJson = JSON.stringify(computed);
+    const draftSections = Array.isArray(draftData?.sections) ? draftData.sections : [];
+    const hasCommunityBuild =
+      draftSections.length > 0 &&
+      rawIngs.length > 0 &&
+      rawIngs
+        .filter((r: unknown) => {
+          const obj = r as Record<string, unknown>;
+          return obj.ingredientStatus !== 'exempt' && obj.ingredientStatus !== 'optional' && obj.exempt !== true;
+        })
+        .every((r: unknown) => {
+          const obj = r as Record<string, unknown>;
+          return typeof obj.ndbNo === 'string' && (obj.ndbNo as string).trim().length > 0;
+        });
+    if (hasCommunityBuild) {
+      const comm = await calcCommunityNutrition(rawIngs, draftSections, draftData?.servings, draftData?.gramsPerServing ?? 100);
+      if (comm.nutritionJson) nutritionJson = JSON.stringify(comm.nutritionJson);
     }
 
     if (nutritionJson) {

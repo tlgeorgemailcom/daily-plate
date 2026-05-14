@@ -1,7 +1,6 @@
 import { json, error } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { execute, queryOne } from '$lib/server/turso';
-import { calcNutritionSR28 } from '$lib/server/calcNutritionSR28';
 import { buildRecipeCommunity } from '$lib/nutrition/buildRecipeCommunity';
 import type { CommunitySection, CommunityIngredient } from '$lib/nutrition/types';
 import { fetchNutrientsByNdb } from '$lib/server/nutrition/fetchNutrients';
@@ -25,16 +24,6 @@ function hasValidLink(row: unknown): boolean {
 
 function hasAllIngredientLinks(ingredients: unknown[]): boolean {
   return ingredients.length > 0 && ingredients.every((row) => hasValidLink(row));
-}
-
-function withDefaultServingCount(row: unknown): unknown {
-  if (!row || typeof row !== 'object') return row;
-  const obj = row as Record<string, unknown>;
-  const count = Number(obj.servingCount ?? 1);
-  return {
-    ...obj,
-    servingCount: Number.isFinite(count) && count > 0 ? count : 1,
-  };
 }
 
 // Generate unique ID
@@ -163,9 +152,6 @@ export const PATCH: RequestHandler = async ({ request }) => {
       return json({ error: 'Dish link is required and must be complete for this link mode' }, { status: 400 });
     }
 
-    const normalizedPatchIngs = patchIngredients.map((row: unknown) => withDefaultServingCount(row));
-    const normalizedPatchDish = withDefaultServingCount(fields.dishLink);
-
     const canonicalPreview = isNutritionPreview(fields.nutritionJsonPreview) ? fields.nutritionJsonPreview : null;
 
     // Community recipe path: when sections are present and all active ingredients
@@ -192,15 +178,6 @@ export const PATCH: RequestHandler = async ({ request }) => {
       const comm = await calcCommunityNutrition(patchIngredients, patchSections, fields.servings, fields.gramsPerServing ?? 100);
       patchNutritionJson = comm.nutritionJson;
       patchPlausibilityFlags = comm.plausibilityFlags;
-    } else if (patchLinkType && patchIngredients.length > 0) {
-      patchNutritionJson = await calcNutritionSR28(
-        ((patchLinkType === 'dish' || patchLinkType === 'mixed')
-          ? [{ isDish: true, ...(normalizedPatchDish as object) }, ...normalizedPatchIngs]
-          : normalizedPatchIngs) as Parameters<typeof calcNutritionSR28>[0],
-        fields.linkType,
-        fields.servings,
-        fields.cookingMethod ?? fields.cookMethod ?? null
-      );
     }
     const nutritionJson = patchNutritionJson;
 
@@ -307,9 +284,6 @@ export const POST: RequestHandler = async ({ request }) => {
       return json({ error: 'Dish link is required and must be complete for this link mode' }, { status: 400 });
     }
 
-    const normalizedPostIngs = postIngredients.map((row: unknown) => withDefaultServingCount(row));
-    const normalizedPostDish = withDefaultServingCount(body.dishLink);
-
     const canonicalPreview = isNutritionPreview(body.nutritionJsonPreview) ? body.nutritionJsonPreview : null;
 
     // Community recipe path: sections present + all active ingredients have ndbNo.
@@ -335,15 +309,6 @@ export const POST: RequestHandler = async ({ request }) => {
       const comm = await calcCommunityNutrition(postIngredients, postSections, body.servings, body.gramsPerServing ?? 100);
       computedNutrition = comm.nutritionJson;
       postPlausibilityFlags = comm.plausibilityFlags;
-    } else if (postLinkType && postIngredients.length > 0) {
-      computedNutrition = await calcNutritionSR28(
-        ((postLinkType === 'dish' || postLinkType === 'mixed')
-          ? [{ isDish: true, ...(normalizedPostDish as object) }, ...normalizedPostIngs]
-          : normalizedPostIngs) as Parameters<typeof calcNutritionSR28>[0],
-        body.linkType,
-        body.servings,
-        body.cookingMethod ?? body.cookMethod ?? null
-      );
     }
 
     const nutritionJson = computedNutrition ? JSON.stringify(computedNutrition) : EMPTY_NUTRITION_JSON;

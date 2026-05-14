@@ -1,7 +1,9 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { queryAll, execute } from '$lib/server/turso';
-import { calcNutritionSR28 } from '$lib/server/calcNutritionSR28';
+import { buildRecipeCommunity } from '$lib/nutrition/buildRecipeCommunity';
+import type { CommunitySection, CommunityIngredient } from '$lib/nutrition/types';
+import { fetchNutrientsByNdb } from '$lib/server/nutrition/fetchNutrients';
 import { toDisplayRecipeCategory, toStoredRecipeCategory } from '$lib/farmers-basket/recipe-categories';
 
 interface RecipeRow {
@@ -51,14 +53,65 @@ function hasAllIngredientLinks(ingredients: unknown[], linkType: string): boolea
   return required.length > 0 && required.every((row) => hasValidLink(row));
 }
 
-function withDefaultServingCount(row: unknown): unknown {
-  if (!row || typeof row !== 'object') return row;
-  const obj = row as Record<string, unknown>;
-  const count = Number(obj.servingCount ?? 1);
-  return {
-    ...obj,
-    servingCount: Number.isFinite(count) && count > 0 ? count : 1,
+// ── Community nutrition builder ────────────────────────────────────────────────
+async function calcCommunityNutrition(
+  ingredientsRaw: unknown[],
+  sectionsRaw: unknown[],
+  servings: unknown,
+  gramsPerServing: unknown,
+): Promise<{ nutritionJson: object | null; plausibilityFlags: string[] }> {
+  const sections = (sectionsRaw as unknown[]).filter(
+    (s): s is CommunitySection =>
+      !!s && typeof s === 'object' && typeof (s as Record<string, unknown>).sectionKey === 'string',
+  );
+  const ingredients: CommunityIngredient[] = (ingredientsRaw as unknown[]).map(r => {
+    const obj = r as Record<string, unknown>;
+    return {
+      ndbNo:        String(obj.ndbNo ?? ''),
+      portionGrams: Number(obj.portionGrams ?? 0),
+      sectionKey:   typeof obj.section === 'string' ? obj.section : undefined,
+      isOptional:   obj.ingredientStatus === 'optional' || obj.exempt === true,
+      exempt:       obj.ingredientStatus === 'exempt',
+    };
+  }).filter(i => i.ndbNo && i.portionGrams > 0);
+
+  if (ingredients.length === 0) return { nutritionJson: null, plausibilityFlags: [] };
+
+  const ndbNos = ingredients
+    .filter(i => !i.isOptional && !i.exempt)
+    .map(i => i.ndbNo);
+
+  const nutrientMap = await fetchNutrientsByNdb(ndbNos);
+  const servingsNum        = Math.max(1, Number(servings ?? 1));
+  const gramsPerServingNum = Math.max(1, Number(gramsPerServing ?? 100));
+
+  const result = buildRecipeCommunity(sections, ingredients, nutrientMap, servingsNum, gramsPerServingNum);
+
+  const p100  = result.per100g;
+  const gps   = result.gramsPerServing;
+  const scale = gps / 100;
+  const nutritionJson = {
+    perServing: {
+      cal:  (p100.energy_KCal       ?? 0) * scale,
+      pro:  (p100.protein           ?? 0) * scale,
+      fat:  (p100.totalLipidFat     ?? 0) * scale,
+      carb: (p100.carbohydrate      ?? 0) * scale,
+      fib:  (p100.fiberTotalDietary ?? 0) * scale,
+      sug:  (p100.sugarsTotal       ?? 0) * scale,
+    },
+    per100g: {
+      Energy_KCal:       p100.energy_KCal       ?? 0,
+      Protein:           p100.protein           ?? 0,
+      TotalLipidFat:     p100.totalLipidFat     ?? 0,
+      Carbohydrate:      p100.carbohydrate      ?? 0,
+      FiberTotalDietary: p100.fiberTotalDietary ?? 0,
+      SugarsTotal:       p100.sugarsTotal       ?? 0,
+      Water:             p100.water             ?? 0,
+    },
+    gramsPerServing: gps,
+    servings:        servingsNum,
   };
+  return { nutritionJson, plausibilityFlags: result.plausibility.flags };
 }
 
 // GET: Fetch recipes by IDs (anonymous) OR by player_id (subscribers)
@@ -216,19 +269,30 @@ export const PATCH: RequestHandler = async ({ request }) => {
     if ((linkType === 'dish' || linkType === 'mixed') && !hasValidLink(resolvedDishLink)) {
       return json({ error: 'Dish link is required and must be complete for this link mode' }, { status: 400 });
     }
-    const normalizedIngs = rawIngs.map((row) => withDefaultServingCount(row));
-    const normalizedDish = withDefaultServingCount(resolvedDishLink);
     let nutritionJson: string | null = null;
-    if (linkType && rawIngs.length > 0) {
-      const computed = await calcNutritionSR28(
-        ((linkType === 'dish' || linkType === 'mixed')
-          ? [{ isDish: true, ...(normalizedDish as object) }, ...normalizedIngs]
-          : normalizedIngs) as Parameters<typeof calcNutritionSR28>[0],
-        linkType,
-        typeof updates.servings === 'string' ? updates.servings : null,
-        typeof updates.cookingMethod === 'string' ? updates.cookingMethod : null
+    let plausibilityFlags: string[] = [];
+    const updateSections = Array.isArray(updates.sections) ? updates.sections : [];
+    const hasCommunityBuild =
+      updateSections.length > 0 &&
+      rawIngs.length > 0 &&
+      rawIngs
+        .filter((r: unknown) => {
+          const obj = r as Record<string, unknown>;
+          return obj.ingredientStatus !== 'exempt' && obj.ingredientStatus !== 'optional' && obj.exempt !== true;
+        })
+        .every((r: unknown) => {
+          const obj = r as Record<string, unknown>;
+          return typeof obj.ndbNo === 'string' && (obj.ndbNo as string).trim().length > 0;
+        });
+    if (hasCommunityBuild) {
+      const comm = await calcCommunityNutrition(
+        rawIngs,
+        updateSections,
+        updates.servings,
+        (updates as { gramsPerServing?: unknown }).gramsPerServing ?? 100
       );
-      if (computed) nutritionJson = JSON.stringify(computed);
+      if (comm.nutritionJson) nutritionJson = JSON.stringify(comm.nutritionJson);
+      plausibilityFlags = comm.plausibilityFlags;
     }
 
     // Update the recipe and reset to pending (clears any needs_changes or approved state)
@@ -247,6 +311,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
           cooking_method = COALESCE(?, cooking_method),
           dish_family = COALESCE(?, dish_family),
           nutrition_json = ?,
+          plausibility_flags = ?,
         updated_at = datetime('now'),
           status = 'pending',
           moderator_note = NULL
@@ -265,6 +330,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
           cooking_method = COALESCE(?, cooking_method),
           dish_family = COALESCE(?, dish_family),
           nutrition_json = ?,
+          plausibility_flags = ?,
         updated_at = datetime('now'),
           status = 'pending'
          WHERE recipe_id = ?`;
@@ -285,6 +351,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
         updates.cookingMethod || null,
         updates.dishFamily || null,
         nutritionJson || EMPTY_NUTRITION_JSON,
+        plausibilityFlags.length > 0 ? JSON.stringify(plausibilityFlags) : null,
         id
       ]
     );
@@ -295,7 +362,8 @@ export const PATCH: RequestHandler = async ({ request }) => {
       success: true,
       id,
       message: 'Recipe updated!',
-      nutritionJson: nutritionJson ? JSON.parse(nutritionJson) : null
+      nutritionJson: nutritionJson ? JSON.parse(nutritionJson) : null,
+      plausibilityFlags
     });
     
   } catch (err) {
