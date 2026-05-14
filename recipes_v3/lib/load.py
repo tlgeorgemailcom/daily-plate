@@ -315,7 +315,7 @@ def load_instructions() -> dict[str, list[str]]:
             order = str(r.get(order_col, "")).strip()
             text = r.get(text_col, "").strip()
             rows.append((rid, order, text))
-        rows.sort(key=lambda x: (x[0], x[1]))
+        rows.sort(key=lambda x: (x[0], int(x[1]) if x[1].isdigit() else 0))
         for rid, _, text in rows:
             out.setdefault(rid, []).append(text)
     return out

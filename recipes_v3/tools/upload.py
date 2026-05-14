@@ -40,7 +40,7 @@ REPO_ROOT = ROOT.parent  # daily-food-chain/
 sys.path.insert(0, str(ROOT))
 
 from lib.build import to_turso_nutrition_json  # noqa: E402
-from lib.load import load_ingredients, load_ledger, load_recipes  # noqa: E402
+from lib.load import load_ingredients, load_instructions, load_ledger, load_recipes  # noqa: E402
 
 BUILDS_DIR = ROOT / "output" / "builds"
 LOG_DIR = ROOT / "output" / "upload_log"
@@ -80,7 +80,7 @@ def _connect():
     return libsql.connect(database=url, auth_token=token)
 
 
-def _build_payload(rid: str, recipes, ings, ledger) -> dict:
+def _build_payload(rid: str, recipes, ings, ledger, instrs) -> dict:
     """Read v3 build JSON for `rid` and assemble Turso column updates."""
     build_path = BUILDS_DIR / f"{rid}.json"
     if not build_path.exists():
@@ -110,6 +110,9 @@ def _build_payload(rid: str, recipes, ings, ledger) -> dict:
             "isDish": False,
         })
 
+    # recipe_instructions_json: ordered list of step strings from recipe_instructions.csv.
+    recipe_instructions = json.dumps(instrs.get(rid, []), separators=(",", ":"))
+
     # v3 only writes the columns it owns. Identity / game-key / audit-history
     # columns (food_word, category, cooking_method casing, serving_label,
     # servings, submitted_by) are deliberately preserved as-is in Turso.
@@ -119,7 +122,9 @@ def _build_payload(rid: str, recipes, ings, ledger) -> dict:
         "servings_count": float(rec.servings_count),
         "grams_per_serving": float(build["grams_per_serving"]),
         "recipe_ingredients_json": json.dumps(recipe_ingredients, separators=(",", ":")),
+        "recipe_instructions_json": recipe_instructions,
         "nutrition_json": json.dumps(nutrition_json, separators=(",", ":")),
+
         "nutrient_version": "v3",
         "retention_model_version": "v3-r6",
         "source_match_version": "v3-greenfield",
@@ -133,6 +138,7 @@ UPDATE dev_recipes SET
   servings_count           = ?,
   grams_per_serving        = ?,
   recipe_ingredients_json  = ?,
+  recipe_instructions_json = ?,
   nutrition_json           = ?,
   nutrient_version         = ?,
   retention_model_version  = ?,
@@ -146,7 +152,7 @@ _UPDATE_COLS = (
     "recipe_name",
     "servings_count",
     "grams_per_serving",
-    "recipe_ingredients_json", "nutrition_json",
+    "recipe_ingredients_json", "recipe_instructions_json", "nutrition_json",
     "nutrient_version", "retention_model_version", "source_match_version",
     "source_ndb_no",
 )
@@ -197,6 +203,7 @@ def main() -> int:
     recipes = load_recipes()
     ings = load_ingredients()
     ledger = load_ledger()
+    instrs = load_instructions()
 
     target_ids = sorted(args.recipe_id) if args.recipe_id else sorted(recipes)
     missing = [r for r in target_ids if r not in recipes]
@@ -211,7 +218,7 @@ def main() -> int:
 
     for rid in target_ids:
         try:
-            payload = _build_payload(rid, recipes, ings, ledger)
+            payload = _build_payload(rid, recipes, ings, ledger, instrs)
         except FileNotFoundError as e:
             print(f"  {rid}  SKIP: {e}", file=sys.stderr)
             continue
@@ -243,6 +250,7 @@ def main() -> int:
                 payload["servings_count"],
                 payload["grams_per_serving"],
                 payload["recipe_ingredients_json"],
+                payload["recipe_instructions_json"],
                 payload["nutrition_json"],
                 payload["nutrient_version"],
                 payload["retention_model_version"],
