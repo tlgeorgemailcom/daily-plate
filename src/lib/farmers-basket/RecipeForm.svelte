@@ -882,6 +882,7 @@
             cookMinutes:  s.cookMinutes,
             boilMinutes:  s.boilMinutes,
             stages:       s.stages,
+          })),
       } : {}),
     };
   }
