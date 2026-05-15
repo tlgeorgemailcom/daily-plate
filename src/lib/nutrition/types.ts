@@ -53,6 +53,7 @@ export interface NutrientRow {
   vitaminD: number;
   vitaminE_alphaTocopherol: number;
   vitaminK_phylloquinone: number;
+  alcholEthyl?: number;          // alcohol — absent for non-alcoholic foods
 }
 
 // ── Recipe structure ──────────────────────────────────────────────────────────

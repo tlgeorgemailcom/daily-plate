@@ -124,7 +124,7 @@ export const POST: RequestHandler = async ({ request }) => {
     return json({ error: 'gramsPerServing must be a positive number' }, { status: 400 });
   }
 
-  // ── Fetch nutrients from Turso (SR28 comboo.db) ─────────────────────────────
+  // ── Fetch nutrients from Turso (SR Legacy comboo.db) ───────────────────────────
   const ndbNos = (ingredients as CommunityIngredient[])
     .filter(i => !i.exempt && !i.isOptional)
     .map(i => i.ndbNo);

@@ -10,7 +10,7 @@
  *  fetchNutrientsByNdb(ndbNos)          → Map<ndbNo, NutrientRow>
  *  fetchWaterNdb()                      → NutrientRow | null   (NDB 14429 = water)
  *
- * Query pattern: uses getSR28Db().execute() directly (not queryOne/queryAll which
+ * Query pattern: uses getSR28Db().execute() directly — SR Legacy comboo.db — (not queryOne/queryAll which
  * target the game DB). Columns match DataCentralCombo exactly.
  *
  * See docs/vercel_pipeline.md §3 for architecture.
@@ -55,7 +55,8 @@ const SELECT_COLUMNS = `
   VitaminA_RAE,
   VitaminD,
   VitaminE_alphaTocopherol,
-  VitaminK_phylloquinone
+  VitaminK_phylloquinone,
+  AlcholEthyl
 `.trim();
 
 // ── Row mapper ────────────────────────────────────────────────────────────────
@@ -101,6 +102,7 @@ function rowToNutrientRow(row: Record<string, unknown>): NutrientRow {
     vitaminD:                       n('VitaminD'),
     vitaminE_alphaTocopherol:      n('VitaminE_alphaTocopherol'),
     vitaminK_phylloquinone:        n('VitaminK_phylloquinone'),
+    ...(row['AlcholEthyl'] != null ? { alcholEthyl: n('AlcholEthyl') } : {}),
   };
 }
 

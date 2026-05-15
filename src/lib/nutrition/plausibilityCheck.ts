@@ -7,7 +7,7 @@
  *
  * Checks performed
  * ────────────────
- *  1. MACRO_SUM  — Σ(protein + fat + carbs + water + ash) / per-100g ≈ 100g.
+ *  1. MACRO_SUM  — Σ(protein + fat + carbs + water + ash + alcohol) / per-100g ≈ 100g.
  *                  Flag if ± 5g from expected mass (loose; SR Legacy data gaps exist).
  *  2. WATER_PCT  — Water fraction must be 0–98%. > 95% is suspicious for non-liquids.
  *  3. ENERGY     — Atwater re-estimate from macros; compare to declared energy.
@@ -25,7 +25,7 @@ import type { MacroMap, PlausibilityResult, SkippedIngredient, SectionBuildResul
 const AW_PROTEIN = 4.0;
 const AW_FAT     = 9.0;
 const AW_CARBS   = 4.0;
-const AW_ALCOHOL = 7.0; // not in NutrientRow — kept for completeness
+const AW_ALCOHOL = 7.0; // ethanol — included when AlcholEthyl is present in NutrientRow
 
 export function plausibilityCheck(
   per100g:       MacroMap,
@@ -42,7 +42,8 @@ export function plausibilityCheck(
   const c  = (per100g.carbohydrate       ?? 0);
   const w  = (per100g.water              ?? 0);
   const a  = (per100g.ash                ?? 0);
-  const macroSum = p + f + c + w + a;
+  const al = (per100g.alcholEthyl        ?? 0);
+  const macroSum = p + f + c + w + a + al;
   if (macroSum < 80 || macroSum > 115) {
     flags.push(`MACRO_SUM: macro+water+ash sums to ${macroSum.toFixed(1)}g/100g (expected ~100g)`);
   }
@@ -56,7 +57,7 @@ export function plausibilityCheck(
 
   // ── Check 3: energy estimate ─────────────────────────────────────────────────
   const declaredKcal   = per100g.energy_KCal ?? 0;
-  const estimatedKcal  = p * AW_PROTEIN + f * AW_FAT + c * AW_CARBS;
+  const estimatedKcal  = p * AW_PROTEIN + f * AW_FAT + c * AW_CARBS + al * AW_ALCOHOL;
   const energyDelta    = Math.abs(declaredKcal - estimatedKcal);
   if (declaredKcal > 0 && energyDelta > 15) {
     flags.push(
