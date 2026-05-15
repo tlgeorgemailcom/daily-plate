@@ -590,7 +590,7 @@
       ndbNo: food.ndb,
       portionDesc,
       portionGrams,
-      servingCount: count,
+      servingCount: portionDesc === 'g' ? 1 : count,
       quantity,
     } : i);
     nutritionOpen = { ...nutritionOpen, [ingId]: false };
@@ -1166,7 +1166,7 @@
       const food = (ing.foodWord ? FOOD_MAP_LOCAL.get(ing.foodWord) : undefined)
         ?? (ing.ndbNo ? FOOD_MAP_BY_NDB.get(ing.ndbNo) : undefined);
       if (!food) continue;
-      const g = ing.portionGrams * (ing.servingCount ?? 1);
+      const g = ing.portionDesc === 'g' ? ing.portionGrams : ing.portionGrams * (ing.servingCount ?? 1);
       const scale = g / 100;
       cal  += food.cal  * scale;
       pro  += food.pro  * scale;
@@ -2718,6 +2718,7 @@
                             class="portion-count-input"
                             value={nutritionPendingCount[ingredient.id] ?? 1}
                             oninput={(e) => {
+                              nutritionCustomGrams = { ...nutritionCustomGrams, [ingredient.id]: null };
                               nutritionPendingCount = { ...nutritionPendingCount, [ingredient.id]: parseFloat((e.target as HTMLInputElement).value) || 1 };
                             }}
                           />
