@@ -2343,8 +2343,8 @@ export const FOODS: Food[] = [
     "groups": [
       "condiment"
     ],
-    "ndb": "18369",
-    "desc": "Leavening agents, baking powder, double-acting, sodium aluminum sulfate",
+    "ndb": "18370",
+    "desc": "Leavening agents, baking powder, double-acting, straight phosphate",
     "cal": 53.0,
     "pro": 0.0,
     "fat": 0.0,
@@ -20435,8 +20435,8 @@ export const FOODS: Food[] = [
     "groups": [
       "grain"
     ],
-    "ndb": "20081",
-    "desc": "Wheat flour, white, all-purpose, enriched, bleached",
+    "ndb": "20581",
+    "desc": "Wheat flour, white, all-purpose, enriched",
     "cal": 364.0,
     "pro": 10.3,
     "fat": 1.0,

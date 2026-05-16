@@ -166,7 +166,7 @@ UNITS = {
         "tsp":  337.0 / 48,    # 7.0208
     },
     "flour_ap_white_enriched_bleached": {
-        # USDA 20081: 1 cup=125.0g (only cup in DB)
+        # USDA 20581: 1 cup=125.0g (only cup in DB)
         "cup":  125.0,
         "tbsp": 125.0 / 16,    # 7.8125
         "tsp":  125.0 / 48,    # 2.6042
@@ -205,7 +205,7 @@ UNITS = {
         "dash": 0.4,
     },
     "baking_powder": {
-        # USDA 18369: 1 tsp=4.6g (measured)
+        # USDA 18370: 1 tsp=4.6g (measured)
         "tsp":  4.6,
         "tbsp": 4.6 * 3,       # 13.8
         "cup":  4.6 * 48,      # 220.8

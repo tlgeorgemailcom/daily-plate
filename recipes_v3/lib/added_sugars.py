@@ -105,7 +105,7 @@ ADDED_SUGAR_RULES: dict[str, SugarPolicy] = {
     "1145":  {"policy": "none_added", "reason": "Butter, without salt"},
     "1001":  {"policy": "none_added", "reason": "Butter, salted"},
     # Plain grains / starches / vegetables
-    "20081": {"policy": "none_added", "reason": "Wheat flour, white, AP, enriched"},
+    "20581": {"policy": "none_added", "reason": "Wheat flour, white, AP, enriched"},
     "20080": {"policy": "none_added", "reason": "Wheat flour, white, AP, unenriched"},
     "20027": {"policy": "none_added", "reason": "Cornstarch"},
     "11124": {"policy": "none_added", "reason": "Carrots, raw"},
@@ -172,7 +172,7 @@ ADDED_SUGAR_RULES: dict[str, SugarPolicy] = {
     "20084": {"policy": "none_added", "reason": "Wheat flour, white, cake"},
     "18211": {"policy": "none_added", "reason": "Puff pastry, baked"},
     # Baking agents
-    "18369": {"policy": "none_added", "reason": "Baking powder"},
+    "18370": {"policy": "none_added", "reason": "Baking powder"},
     "18372": {"policy": "none_added", "reason": "Baking soda"},
     "18373": {"policy": "none_added", "reason": "Cream of tartar"},
     # Fats / oils
