@@ -5,15 +5,6 @@ import { toDisplayRecipeCategory, toStoredRecipeCategory } from '$lib/farmers-ba
 import { deleteRecipeImage, extractPublicId } from '$lib/server/cloudinary';
 import { calcNutritionSR28 } from '$lib/server/calcNutritionSR28';
 
-function safeJsonParse<T>(value: string | null | undefined, fallback: T): T {
-  if (!value) return fallback;
-  try {
-    return JSON.parse(value) as T;
-  } catch {
-    return fallback;
-  }
-}
-
 interface BuiltinRecipeRow {
   recipe_id: string;
   recipe_name: string;
@@ -28,7 +19,6 @@ interface BuiltinRecipeRow {
   recipe_instructions_json: string | null;
   recipe_ingredients_json: string | null;
   nutrition_json: string | null;
-  sections_json: string | null;
   image_url: string | null;
   created_at: string;
   submitted_by: string;
@@ -81,7 +71,6 @@ interface NewBuiltinRecipe {
   recipeInstructions?: string[];
   recipeIngredients?: NutritionLinkIngredient[];
   nutritionJson?: NutritionJson | null;
-  sections?: unknown[];
   imageUrl?: string;
   createdAt: string;
 }
@@ -192,7 +181,7 @@ async function resolveBuiltinNutrition(
 
 function normalizeRecipeInstructions(value: string | null): string[] | undefined {
   if (!value) return undefined;
-  const parsed = safeJsonParse<unknown>(value, null);
+  const parsed = JSON.parse(value);
   if (!Array.isArray(parsed)) return undefined;
 
   return parsed
@@ -208,7 +197,7 @@ function normalizeRecipeInstructions(value: string | null): string[] | undefined
 
 function normalizeRecipeIngredients(value: string | null): BuiltinOverride['recipeIngredients'] {
   if (!value) return undefined;
-  const parsed = safeJsonParse<unknown>(value, null);
+  const parsed = JSON.parse(value);
   if (!Array.isArray(parsed)) return undefined;
 
   return parsed
@@ -293,7 +282,7 @@ export const GET: RequestHandler = async () => {
     const newRows = await queryAll<BuiltinRecipeRow>(
       `SELECT recipe_id, recipe_name, category, dietary_category, cooking_method, dish_family, prep_time, servings, 
               recipe, animal_spawns, recipe_instructions_json, recipe_ingredients_json,
-              nutrition_json, sections_json, image_url, created_at, submitted_by
+              nutrition_json, image_url, created_at, submitted_by
        FROM dev_recipes 
        WHERE status = 'published' AND recipe_id LIKE 'admin-%'
        ORDER BY created_at ASC`
@@ -315,11 +304,11 @@ export const GET: RequestHandler = async () => {
       if (row.dish_family) override.dishFamily = row.dish_family;
       if (row.prep_time) override.prepTime = row.prep_time;
       if (row.servings) override.servings = row.servings;
-      if (row.recipe) override.recipe = safeJsonParse(row.recipe, undefined);
-      if (row.animal_spawns) override.animalSpawns = safeJsonParse(row.animal_spawns, undefined);
+      if (row.recipe) override.recipe = JSON.parse(row.recipe);
+      if (row.animal_spawns) override.animalSpawns = JSON.parse(row.animal_spawns);
       if (row.recipe_instructions_json) override.recipeInstructions = normalizeRecipeInstructions(row.recipe_instructions_json);
       if (row.recipe_ingredients_json) override.recipeIngredients = normalizeRecipeIngredients(row.recipe_ingredients_json);
-      if (row.nutrition_json && row.nutrition_json !== '{}') override.nutritionJson = safeJsonParse(row.nutrition_json, null);
+      if (row.nutrition_json && row.nutrition_json !== '{}') override.nutritionJson = JSON.parse(row.nutrition_json);
       if (row.image_url) override.imageUrl = row.image_url;
 
       overrides[row.recipe_id] = override;
@@ -335,12 +324,11 @@ export const GET: RequestHandler = async () => {
       dishFamily: row.dish_family ?? undefined,
       prepTime: row.prep_time ?? undefined,
       servings: row.servings ?? undefined,
-      recipe: safeJsonParse<string[]>(row.recipe, []),
-      animalSpawns: safeJsonParse(row.animal_spawns, [{ type: 'rabbit', delay: 3000 }]),
+      recipe: row.recipe ? JSON.parse(row.recipe) : [],
+      animalSpawns: row.animal_spawns ? JSON.parse(row.animal_spawns) : [{ type: 'rabbit', delay: 3000 }],
       recipeInstructions: normalizeRecipeInstructions(row.recipe_instructions_json),
       recipeIngredients: normalizeRecipeIngredients(row.recipe_ingredients_json),
-      nutritionJson: row.nutrition_json && row.nutrition_json !== '{}' ? safeJsonParse(row.nutrition_json, undefined) : undefined,
-      sections: row.sections_json ? safeJsonParse(row.sections_json, undefined) : undefined,
+      nutritionJson: row.nutrition_json && row.nutrition_json !== '{}' ? JSON.parse(row.nutrition_json) : undefined,
       imageUrl: row.image_url ?? undefined,
       createdAt: row.created_at
     }));
@@ -585,10 +573,9 @@ export const POST: RequestHandler = async ({ request }) => {
             recipe_id, food_word, recipe_name, category, dietary_category, cooking_method, dish_family, prep_time, servings,
             servings_count, serving_label,
             recipe, animal_spawns, recipe_instructions_json, recipe_ingredients_json,
-            sections_json,
             image_url, submitted_by, status, created_at, updated_at,
             grams_per_serving, nutrition_json, nutrient_version, retention_model_version, source_match_version
-          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'published', ?, ?, ?, ?, ?, ?, ?)`,
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'published', ?, ?, ?, ?, ?, ?, ?)`,
       args: [
         id,
         foodWord,
@@ -605,7 +592,6 @@ export const POST: RequestHandler = async ({ request }) => {
         data.animalSpawns ? JSON.stringify(data.animalSpawns) : null,
         data.recipeInstructions ? JSON.stringify(data.recipeInstructions) : null,
         data.recipeIngredients ? JSON.stringify(data.recipeIngredients) : null,
-        data.sections && Array.isArray(data.sections) && data.sections.length > 0 ? JSON.stringify(data.sections) : null,
         data.imageUrl || null,
         'Moderator',
         now,

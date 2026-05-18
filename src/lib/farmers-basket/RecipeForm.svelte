@@ -5,8 +5,6 @@
   import FoodIcon from '$lib/farmers-basket/FoodIcon.svelte';
   import { FOODS } from '$lib/data/food-portions';
   import type { Food as FoodData } from '$lib/data/food-portions';
-  import { buildRecipeCommunity } from '$lib/nutrition/buildRecipeCommunity';
-  import type { CommunitySection, CommunityIngredient, NutrientRow } from '$lib/nutrition/types';
   
   // Types for ingredients and instructions
   export interface RecipeIngredient {
@@ -22,8 +20,6 @@
     portionGrams?: number;   // grams per one portion
     servingCount?: number;   // number of portions used in recipe
     ingredientStatus?: 'required' | 'optional' | 'exempt'; // Required (in math) | Optional (cook may omit, not in math) | Exempt (no NDB, not in math)
-    exempt?: boolean;        // wire-format alias for ingredientStatus === 'exempt' (used in API payloads)
-    is_optional?: boolean;   // wire-format alias for ingredientStatus === 'optional' (used in API payloads)
     isDish?: boolean;        // marks the synthesized dish-level row (Rule A/B/C)
     section?: string;        // v3 §18: section_key linking ingredient to a recipe section (cooking math FK)
     ingredient_group?: string; // v3 §19: display-only sub-label within a section (e.g. 'crust', 'filling')
@@ -33,29 +29,7 @@
   export interface RecipeSection {
     key: string;
     label: string;
-    /** true = prep step — cookMethod inherits dish-level cookingMethod.
-     *  false = primary cook — cookMethod is set independently per section.
-     *  Defaults to true when absent. */
-    isPrepStep?: boolean;
-    /** What the cook does to prepare this section — shown in the UI.
-     *  e.g. 'simmered', 'boiled', 'raw'. Free-form; no calculation role. */
-    prepMethod?: string;
-    /** Dominant heat stage used for USDA retention table lookup + yield factors.
-     *  Falls back to dish-level cookingMethod when isPrepStep=true.
-     *  Strict enum: raw|boiled|steamed|baked|fried|grilled|microwave */
-    cookMethod?: string;
-    /** Backward-compat alias accepted from older API responses. */
-    cookingMethod?: string;
-    /** Oven temperature °F — used by community recipe yield model for baked sections. */
-    cookTempF?: number;
-    /** Oven time in minutes — used by community recipe yield model for baked sections. */
-    cookMinutes?: number;
-    /** Stovetop boil/simmer time in minutes — used for boiled sections. */
-    boilMinutes?: number;
-    /** Multi-stage oven sequence. When present, overrides cookTempF/cookMinutes.
-     *  Each element is one sequential stage: { tempF, minutes }.
-     *  Example: twice-baked — [{ tempF:400, minutes:60 }, { tempF:375, minutes:30 }] */
-    stages?: Array<{ tempF: number; minutes: number }>;
+    cookingMethod: string;
     yieldFactorWater?: number;
     yieldFactorFat?: number;
     yieldFactorOther?: number;
@@ -170,16 +144,9 @@
   const GAME_FOODS = Object.keys(FOOD_EMOJI) as FoodType[];
   const ANIMAL_TYPES: AnimalType[] = ['rabbit', 'squirrel', 'raccoon', 'bird', 'mouse', 'fox'];
   
-  const COOKING_METHODS = ['Bake', 'Boil', 'Chill', 'Fry', 'Grill', 'No heat'];
-  // Maps dish-level cookingMethod label → USDA retention enum used when a section isPrepStep.
-  const DISH_TO_COOK_METHOD: Record<string, string> = {
-    'Bake': 'baked', 'Boil': 'boiled', 'Chill': 'raw',
-    'Fry': 'fried', 'Grill': 'grilled', 'No heat': 'raw',
-  };
-  // v3.md §18.1 — what the cook does (shown in header bar). Richer than cook methods.
-  const SECTION_PREP_METHODS = ['raw', 'simmered', 'boiled', 'steamed', 'blanched', 'baked', 'par-baked', 'fried', 'grilled', 'marinated', 'chilled', 'microwave'];
-  // v3.md §18.1 — strict enum matching USDA retention table; used for nutrition calculation only.
-  const SECTION_COOK_METHODS = ['raw', 'boiled', 'steamed', 'baked', 'fried', 'grilled', 'microwave'];
+  const COOKING_METHODS = ['Bake', 'Boil', 'Grill', 'Fry', 'No heat'];
+  // v3.md §18.1 — lowercase enum stored in recipe_sections.csv::cooking_method.
+  const SECTION_COOKING_METHODS = ['raw', 'boiled', 'steamed', 'baked', 'fried', 'grilled', 'microwave'];
   // v3.md §18.6 — datalist suggestions; free-typing is always allowed.
   const SECTION_LABEL_VOCAB = [
     'base', 'batter', 'broth', 'cold prep', 'crust', 'dough', 'filling',
@@ -194,9 +161,6 @@
   let dishName = $state(initialData.dishName || (initialData.recipeName?.includes(' — ') ? initialData.recipeName.split(' — ')[0] : initialData.recipeName || ''));
   let recipeSuffix = $state(initialData.recipeSuffix || (initialData.recipeName?.includes(' — ') ? initialData.recipeName.split(' — ')[1] : ''));
   let cookingMethod = $state(initialData.cookingMethod || 'Bake');
-  // USDA retention enum resolved from dish-level cookingMethod label.
-  // Used as the inherited cookMethod for all isPrepStep sections.
-  let dishCookMethodEnum = $derived(DISH_TO_COOK_METHOD[cookingMethod] ?? 'baked');
   let dishFamily = $state(initialData.dishFamily || '');
   let category = $state(toStoredRecipeCategory(initialData.category));
   let dietaryCategory = $state<DietaryCategory>(initialData.dietaryCategory || 'all');
@@ -226,22 +190,6 @@
   );
   let sections = $state<RecipeSection[]>(initialData.sections ?? []);
   let sectionAdvancedOpen = $state<Record<number, boolean>>({});
-  let sectionTipOpen = $state<Record<number, boolean>>({});
-
-  $effect(() => {
-    const hasOpen = Object.values(sectionTipOpen).some(Boolean);
-    if (!hasOpen) return;
-    function handleDocClick() {
-      sectionTipOpen = {};
-    }
-    const timer = setTimeout(() => {
-      document.addEventListener('click', handleDocClick);
-    }, 0);
-    return () => {
-      clearTimeout(timer);
-      document.removeEventListener('click', handleDocClick);
-    };
-  });
 
   // Backfill missing/unknown ingredient.section assignments by carrying forward
   // the most recently-seen valid section (falls back to first section). This
@@ -316,25 +264,6 @@
   let nutritionSearchTimers = new Map<number, ReturnType<typeof setTimeout>>();
   let nutritionSearchRequestIds = new Map<number, number>();
 
-  // NutrientRow cache — populated when ingredient search results come back from
-  // /api/recipes/food-search. Used by buildNutritionPayload() to send community
-  // build data to preview-nutrition without extra round-trips.
-  // Key: ndbNo string.
-  type NutrientRowCache = {
-    ndbNo: string; longDesc: string; fdGrpCd: string;
-    energy_KCal: number; water: number; protein: number; totalLipidFat: number;
-    carbohydrate: number; sugarsTotal: number; fiberTotalDietary: number; ash: number;
-    fattyAcids_totalSaturated: number; fattyAcids_totalMonounsaturated: number;
-    fattyAcids_totalPolyunsaturated: number; cholesterol: number;
-    calcium_Ca: number; iron_Fe: number; magnesium_Mg: number; phosphorus_P: number;
-    potassium_K: number; sodium_Na: number; zinc_Zn: number;
-    vitaminC_totalAscorbicAcid: number; thiamin: number; riboflavin: number;
-    niacin: number; vitaminB6: number; folateDFE: number; vitaminB12: number;
-    vitaminA_RAE: number; vitaminD: number; vitaminE_alphaTocopherol: number;
-    vitaminK_phylloquinone: number;
-  };
-  let nutrientCache = $state(new Map<string, NutrientRowCache>());
-
   function normalizeSearchText(value: string): string {
     return value
       .toLowerCase()
@@ -402,15 +331,9 @@
   async function fetchRemoteFoods(query: string, limit = 20): Promise<FoodData[]> {
     const params = new URLSearchParams({ q: query.trim(), limit: String(limit) });
     const res = await fetch(`/api/recipes/food-search?${params.toString()}`);
-    const data = await res.json() as { foods?: Array<FoodData & { nutrients?: NutrientRowCache }> };
+    const data = await res.json() as { foods?: FoodData[] };
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    // Cache NutrientRow for each result so buildNutritionPayload can include them.
-    for (const f of data.foods ?? []) {
-      if (f.nutrients && f.ndb) {
-        nutrientCache = new Map(nutrientCache).set(f.ndb, f.nutrients);
-      }
-    }
-    return hydrateRemoteFoods((data.foods ?? []).map(f => ({ ...f, nutrients: undefined })));
+    return hydrateRemoteFoods(data.foods ?? []);
   }
 
   function queueDishFoodSearch(query: string) {
@@ -537,20 +460,6 @@
       ?? 'Linked ingredient';
   }
 
-  /** Shorten spelled-out units in USDA portion descs for compact badge display. */
-  function abbreviatePortion(desc: string): string {
-    return desc
-      .replace(/\btablespoon\b/gi, 'tbsp')
-      .replace(/\bteaspoon\b/gi, 'tsp');
-  }
-
-  /** Expand USDA abbreviations to full words for the qty text field. */
-  function expandPortion(desc: string): string {
-    return desc
-      .replace(/\btbsp\b/gi, 'Tablespoon')
-      .replace(/\btsp\b/gi, 'Teaspoon');
-  }
-
   function selectPendingFood(ingId: number, food: FoodData) {
     nutritionPendingFood = { ...nutritionPendingFood, [ingId]: food };
     const firstNamedIdx = food.portions.findIndex(p => p.desc !== 'custom (g)');
@@ -581,17 +490,13 @@
       portionDesc = portion.desc;
       portionGrams = portion.gm;
     }
-    const quantity = portionDesc === 'g'
-      ? `${portionGrams}g`
-      : `${count} ${expandPortion(portionDesc)}`;
     ingredients = ingredients.map(i => i.id === ingId ? {
       ...i,
       foodWord: food.word,
       ndbNo: food.ndb,
       portionDesc,
       portionGrams,
-      servingCount: portionDesc === 'g' ? 1 : count,
-      quantity,
+      servingCount: count
     } : i);
     nutritionOpen = { ...nutritionOpen, [ingId]: false };
   }
@@ -668,9 +573,7 @@
     const meta = sections.find((s) => s.key === sectionKey);
     if (meta) {
       const label = meta.label || (sectionKey.charAt(0).toUpperCase() + sectionKey.slice(1));
-      // Show prepMethod for prep steps; show cookMethod for primary cook sections.
-      const method = meta.isPrepStep !== false ? meta.prepMethod : (meta.cookMethod ?? meta.prepMethod);
-      return method ? `${label} — ${method}` : `${label}:`;
+      return meta.cookingMethod ? `${label} — ${meta.cookingMethod}` : `${label}:`;
     }
     return sectionKey.charAt(0).toUpperCase() + sectionKey.slice(1) + ':';
   }
@@ -688,41 +591,8 @@
   }
   function addSection() {
     const key = uniqueSectionKey('section_' + (sections.length + 1));
-    sections = [...sections, { key, label: '', isPrepStep: true, prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 1.0 }];
+    sections = [...sections, { key, label: '', cookingMethod: 'baked', yieldFactorWater: 1.0 }];
   }
-  // ── Multi-stage bake helpers ─────────────────────────────────────────────────
-  function addBakeStage(sIdx: number) {
-    const sec = sections[sIdx];
-    const current = sec.stages && sec.stages.length > 0
-      ? sec.stages
-      : [{ tempF: sec.cookTempF ?? 350, minutes: sec.cookMinutes ?? 45 }];
-    sections = sections.map((s, i) => i === sIdx
-      ? { ...s, stages: [...current, { tempF: 350, minutes: 30 }], cookTempF: undefined, cookMinutes: undefined }
-      : s
-    );
-  }
-  function removeBakeStage(sIdx: number, stIdx: number) {
-    const sec = sections[sIdx];
-    if (!sec.stages) return;
-    const next = sec.stages.filter((_, i) => i !== stIdx);
-    if (next.length === 1) {
-      sections = sections.map((s, i) => i === sIdx
-        ? { ...s, stages: undefined, cookTempF: next[0].tempF, cookMinutes: next[0].minutes }
-        : s
-      );
-    } else {
-      sections = sections.map((s, i) => i === sIdx ? { ...s, stages: next } : s);
-    }
-  }
-  function updateBakeStage(sIdx: number, stIdx: number, field: 'tempF' | 'minutes', value: number) {
-    const sec = sections[sIdx];
-    if (!sec.stages) return;
-    sections = sections.map((s, i) => i === sIdx
-      ? { ...s, stages: s.stages!.map((st, j) => j === stIdx ? { ...st, [field]: value } : st) }
-      : s
-    );
-  }
-
   function removeSection(idx: number) {
     const removedKey = sections[idx]?.key;
     sections = sections.filter((_, i) => i !== idx);
@@ -758,7 +628,7 @@
   function addSectionWithRow() {
     const idx = sections.length;
     const key = uniqueSectionKey(`section_${idx + 1}`);
-    sections = [...sections, { key, label: '', isPrepStep: true, prepMethod: 'baked', cookMethod: 'baked', yieldFactorWater: 1.0 }];
+    sections = [...sections, { key, label: '', cookingMethod: 'baked', yieldFactorWater: 1.0 }];
     addIngredientToSection(key);
   }
 
@@ -832,58 +702,27 @@
   );
 
   function buildNutritionPayload() {
-    const mappedIngredients = ingredients
-      .filter((i) => i.name.trim() && hasIngredientNutritionLink(i))
-      .map((i) => {
-        return {
-          name: i.name.trim(),
-          ndbNo: i.ndbNo,
-          foodWord: i.foodWord,
-          portionGrams: i.portionGrams,
-          servingCount: i.servingCount ?? 1,
-          section: i.section,
-          exempt: i.ingredientStatus === 'exempt' || i.ingredientStatus === 'optional',
-        };
-      });
-
-    // Community recipe path: sections defined, all active ingredients have ndbNo.
-    // Send sections + per-ingredient nutrients so preview-nutrition can use buildRecipeCommunity.
-    const activeMapped = mappedIngredients.filter(i => !i.exempt);
-    const isCommunityBuild =
-      sections.length > 0 &&
-      activeMapped.length > 0 &&
-      activeMapped.every(i => typeof i.ndbNo === 'string' && i.ndbNo.trim().length > 0);
-
-    const communityNutrients: Record<string, NutrientRowCache> = {};
-    if (isCommunityBuild) {
-      for (const i of activeMapped) {
-        const nr = i.ndbNo ? nutrientCache.get(i.ndbNo) : undefined;
-        if (nr) communityNutrients[i.ndbNo!] = nr;
-      }
-    }
-
     return {
-      ingredients: mappedIngredients,
+      // Only send linked rows to the preview API. Unlinked rows are not yet
+      // calculable and are excluded from the live preview rather than blocking it.
+      ingredients: ingredients
+        .filter((i) => i.name.trim() && hasIngredientNutritionLink(i))
+        .map((i) => {
+          return {
+            name: i.name.trim(),
+            ndbNo: i.ndbNo,
+            foodWord: i.foodWord,
+            portionGrams: i.portionGrams,
+            servingCount: i.servingCount ?? 1,
+            exempt: i.ingredientStatus === 'exempt' || i.ingredientStatus === 'optional',
+          };
+        }),
       dishLink: dishLink ?? undefined,
       linkType: linkMode,
       servings,
       cookingMethod,
       ...(typeof yieldFactorWater === 'number' ? { yieldFactorWater } : {}),
       ...(typeof yieldFactorFat   === 'number' ? { yieldFactorFat }   : {}),
-      ...(isCommunityBuild ? {
-        communityBuild: true,
-        sections: sections
-          .filter(s => s.isPrepStep === false)
-          .map(s => ({
-            sectionKey:   s.key,
-            sectionLabel: s.label || s.key,
-            cookMethod:   s.cookMethod ?? 'raw',
-            cookTempF:    s.cookTempF,
-            cookMinutes:  s.cookMinutes,
-            boilMinutes:  s.boilMinutes,
-            stages:       s.stages,
-          })),
-      } : {}),
     };
   }
 
@@ -935,75 +774,6 @@
       if (previewTimer) { clearTimeout(previewTimer); previewTimer = null; }
       return;
     }
-
-    // ── Community fast-path: run buildRecipeCommunity synchronously in browser ──
-    // Fires instantly — no network call, no debounce — whenever all active
-    // ingredients have a cached NutrientRow and sections are defined.
-    const activeIngs = ingredients.filter(
-      i => i.name.trim() &&
-           i.ingredientStatus !== 'exempt' &&
-           i.ingredientStatus !== 'optional' &&
-           i.ndbNo && i.portionGrams && i.portionGrams > 0
-    );
-    const allCached = activeIngs.length > 0 && activeIngs.every(i => nutrientCache.has(i.ndbNo!));
-    const commSections = sections.filter(s => s.isPrepStep === false);
-    if (commSections.length > 0 && allCached) {
-      if (previewTimer) { clearTimeout(previewTimer); previewTimer = null; }
-      try {
-        const nutrientMap = new Map<string, NutrientRow>();
-        for (const [ndb, nr] of nutrientCache.entries()) nutrientMap.set(ndb, nr as NutrientRow);
-        const cs: CommunitySection[] = commSections.map(s => ({
-          sectionKey:   s.key,
-          sectionLabel: s.label || s.key,
-          cookMethod:   s.cookMethod || 'raw',
-          cookTempF:    s.cookTempF,
-          cookMinutes:  s.cookMinutes,
-          boilMinutes:  s.boilMinutes,
-          stages:       s.stages,
-        }));
-        const ci: CommunityIngredient[] = activeIngs.map(i => ({
-          ndbNo:        i.ndbNo!,
-          displayName:  i.name,
-          portionGrams: i.portionGrams!,
-          sectionKey:   i.section ?? undefined,
-          isOptional:   false,
-          exempt:       false,
-        }));
-        const servingsNum = Math.max(1, Number(servings) || 1);
-        const result = buildRecipeCommunity(cs, ci, nutrientMap, servingsNum, 100);
-        const p100  = result.per100g;
-        const gps   = result.gramsPerServing;
-        const scale = gps / 100;
-        liveNutritionJson = {
-          perServing: {
-            cal:  Math.round((p100.energy_KCal       ?? 0) * scale * 10) / 10,
-            pro:  Math.round((p100.protein           ?? 0) * scale * 10) / 10,
-            fat:  Math.round((p100.totalLipidFat     ?? 0) * scale * 10) / 10,
-            carb: Math.round((p100.carbohydrate      ?? 0) * scale * 10) / 10,
-            fib:  Math.round((p100.fiberTotalDietary ?? 0) * scale * 10) / 10,
-            sug:  Math.round((p100.sugarsTotal       ?? 0) * scale * 10) / 10,
-          },
-          per100g: {
-            Energy_KCal:       Math.round(p100.energy_KCal       ?? 0),
-            Protein:           Math.round((p100.protein           ?? 0) * 10) / 10,
-            TotalLipidFat:     Math.round((p100.totalLipidFat     ?? 0) * 10) / 10,
-            Carbohydrate:      Math.round((p100.carbohydrate      ?? 0) * 10) / 10,
-            FiberTotalDietary: Math.round((p100.fiberTotalDietary ?? 0) * 10) / 10,
-            SugarsTotal:       Math.round((p100.sugarsTotal       ?? 0) * 10) / 10,
-            Water:             Math.round((p100.water             ?? 0) * 10) / 10,
-          },
-          gramsPerServing: gps,
-          servings:        servingsNum,
-        };
-        previewLoading = false;
-        previewError   = false;
-      } catch {
-        // Build failed — fall through to server call below
-      }
-      return;
-    }
-    // ── End community fast-path ────────────────────────────────────────────────
-
     const payload = buildNutritionPayload();
     if (previewTimer) clearTimeout(previewTimer);
     const id = ++previewRequestId;
@@ -1065,9 +835,7 @@
     sections?: Array<{
       section_key: string;
       section_label: string;
-      prep_method?: string;
-      cook_method?: string;
-      cooking_method?: string;
+      cooking_method: string;
       yield_factor_water?: number;
       yield_factor_fat?: number;
       yield_factor_other?: number;
@@ -1108,23 +876,99 @@
           sections = data.sections.map((s) => ({
             key: s.section_key,
             label: autoLabel ?? s.section_label,
-            prepMethod: s.prep_method ?? s.cooking_method,
-            cookMethod: s.cook_method ?? s.cooking_method,
+            cookingMethod: s.cooking_method,
             yieldFactorWater: s.yield_factor_water,
             yieldFactorFat: s.yield_factor_fat,
             yieldFactorOther: s.yield_factor_other,
           }));
         }
-        // v3 build artifact is used for audit/per100g only.
-        // Turso (recipe_ingredients_json) is the authoritative ingredient source.
-        // When sections drive per-stage cooking methods, leave cookingMethod untouched.
-        if (data.cookMethod && (!data.sections || data.sections.length === 0)) {
-          const cm = data.cookMethod.trim();
-          const norm = cm.toLowerCase() === 'no heat' || cm.toLowerCase() === 'noheat' || cm.toLowerCase() === 'none'
-            ? 'No heat'
-            : cm.charAt(0).toUpperCase() + cm.slice(1).toLowerCase();
-          const match = COOKING_METHODS.find(m => m.toLowerCase() === norm.toLowerCase());
-          if (match) cookingMethod = match;
+        if (data.ingredients && data.ingredients.length > 0) {
+          const ndbToFood = new Map(FOODS.map(f => [f.ndb, f]));
+          ingredients = data.ingredients.map((ing, i) => {
+            const food = ndbToFood.get(ing.ndb_no);
+            return {
+              id: i + 1,
+              name: ing.long_desc || ing.ingredient_key,
+              quantity: ing.qty_display || `${ing.grams.toFixed(1)} g`,
+              gameFood: '' as FoodType | '',
+              animal: '' as AnimalType | '',
+              foodWord: food?.word,
+              ndbNo: ing.ndb_no,
+              portionDesc: ing.qty_display || `${ing.grams.toFixed(1)} g`,
+              portionGrams: ing.grams,
+              servingCount: 1,
+              ingredientStatus: 'required' as const,
+              section: ing.section,
+              ingredient_group: ing.ingredient_group || ing.section,
+            };
+          });
+          nextIngredientId = ingredients.length + 1;
+          // Append moderator-added ingredients from stored data that aren't in the v3 build
+          // (e.g. optional spices added via the Edit Recipe UI).
+          const v3NdbNos = new Set(data.ingredients.map((i) => i.ndb_no).filter(Boolean));
+          const storedExtras = (initialData.ingredients ?? []).filter(
+            (ing) => !ing.isDish && (ing.ndbNo ? !v3NdbNos.has(ing.ndbNo) : true)
+          );
+          if (storedExtras.length > 0) {
+            let extraIdx = ingredients.length + 1;
+            ingredients = [
+              ...ingredients,
+              ...storedExtras.map((ing) => ({
+                id: extraIdx++,
+                name: ing.name,
+                quantity: ing.quantity || '',
+                gameFood: '' as FoodType | '',
+                animal: '' as AnimalType | '',
+                foodWord: ing.foodWord,
+                ndbNo: ing.ndbNo,
+                portionDesc: ing.portionDesc,
+                portionGrams: ing.portionGrams,
+                servingCount: ing.servingCount ?? 1,
+                ingredientStatus: (ing as RecipeIngredient).ingredientStatus ?? 'required' as 'required' | 'optional' | 'exempt',
+                section: ing.section,
+                ingredient_group: (ing as RecipeIngredient).ingredient_group || ing.section,
+              })),
+            ];
+            nextIngredientId = extraIdx;
+          }
+          // Append any ingredients the build skipped due to missing ledger/NDB
+          // data so the moderator can see and action them. These are shown with
+          // exempt=true and a name that states the data-quality reason.
+          if (data.skippedIngredients && data.skippedIngredients.length > 0) {
+            let idx = ingredients.length + 1;
+            for (const sk of data.skippedIngredients) {
+              ingredients = [
+                ...ingredients,
+                {
+                  id: idx++,
+                  name: `⚠ ${sk.ingredient_key} [${sk.reason}]`,
+                  quantity: '',
+                  gameFood: '' as FoodType | '',
+                  animal: '' as AnimalType | '',
+                  foodWord: undefined,
+                  ndbNo: undefined,
+                  portionDesc: '',
+                  portionGrams: 0,
+                  servingCount: 1,
+                  ingredientStatus: 'exempt' as const,
+                  section: '',
+                  ingredient_group: '',
+                },
+              ];
+            }
+            nextIngredientId = idx;
+          }
+          // When sections drive per-stage cooking methods, the recipe-wide
+          // cookingMethod field is meaningless — leave it untouched (the UI
+          // hides the field when sections.length > 0).
+          if (data.cookMethod && (!data.sections || data.sections.length === 0)) {
+            const cm = data.cookMethod.trim();
+            const norm = cm.toLowerCase() === 'no heat' || cm.toLowerCase() === 'noheat' || cm.toLowerCase() === 'none'
+              ? 'No heat'
+              : cm.charAt(0).toUpperCase() + cm.slice(1).toLowerCase();
+            const match = COOKING_METHODS.find(m => m.toLowerCase() === norm.toLowerCase());
+            if (match) cookingMethod = match;
+          }
         }
       } catch {
         if (!cancelled) { v3Build = null; v3BuildMissing = true; }
@@ -1166,7 +1010,7 @@
       const food = (ing.foodWord ? FOOD_MAP_LOCAL.get(ing.foodWord) : undefined)
         ?? (ing.ndbNo ? FOOD_MAP_BY_NDB.get(ing.ndbNo) : undefined);
       if (!food) continue;
-      const g = ing.portionDesc === 'g' ? ing.portionGrams : ing.portionGrams * (ing.servingCount ?? 1);
+      const g = ing.portionGrams * (ing.servingCount ?? 1);
       const scale = g / 100;
       cal  += food.cal  * scale;
       pro  += food.pro  * scale;
@@ -1363,7 +1207,7 @@
       })),
       instructions: instructions.filter(i => i.text.trim()),
       foodSupply: moderatorMode ? foodSupply : undefined,
-      nutritionComplete: nutritionMode ? (nutritionComplete || undefined) : undefined,
+      nutritionComplete: linked || undefined,
       ...(sections.length > 0 ? { sections } : {})
     };
     
@@ -1583,27 +1427,34 @@
     // v3.md §18 — reconstruct section metadata so the editor shows the same
     // section header bars (label / cooking method / yield factors) the
     // moderator screen does. Player-source suggestions carry sections inline;
-    // dev-source suggestions fall back to per-ingredient derivation, and only
-    // use the v3 build artifact when its section keys fully cover every
-    // ingredient section key (guards against coarse single-section builds like
-    // SWEET_001 which has one "baked" section but ingredients carry "crust"/"filling").
+    // dev-source suggestions need the v3 build artifact (Turso has no
+    // sections_json column on dev_recipes today).
     let nextSections: RecipeSection[] | null = null;
     if (Array.isArray(suggestion.sections) && suggestion.sections.length > 0) {
-      // Normalize incoming sections to always have isPrepStep + prepMethod + cookMethod.
-      nextSections = suggestion.sections.map(s => ({
-        key: s.key,
-        label: s.label,
-        isPrepStep: typeof (s as {isPrepStep?: boolean}).isPrepStep === 'boolean' ? (s as {isPrepStep?: boolean}).isPrepStep : true,
-        prepMethod: (s as {prepMethod?: string}).prepMethod ?? (s as {cookingMethod?: string}).cookingMethod ?? 'baked',
-        cookMethod: (s as {cookMethod?: string}).cookMethod ?? (s as {cookingMethod?: string}).cookingMethod ?? 'baked',
-        yieldFactorWater: s.yieldFactorWater,
-        yieldFactorFat: s.yieldFactorFat,
-        yieldFactorOther: (s as {yieldFactorOther?: number}).yieldFactorOther,
-      })) as RecipeSection[];
+      nextSections = suggestion.sections;
+    } else if (suggestion.sourceType === 'dev') {
+      try {
+        const res = await fetch(`/api/recipes/v3-build/${encodeURIComponent(suggestion.id)}`);
+        if (res.ok) {
+          const data = await res.json();
+          if (Array.isArray(data?.sections) && data.sections.length > 0) {
+            nextSections = data.sections.map((s: Record<string, unknown>) => ({
+              key: String(s.section_key ?? s.key ?? ''),
+              label: String(s.section_label ?? s.label ?? ''),
+              cookingMethod: String(s.cooking_method ?? s.cookingMethod ?? 'baked'),
+              yieldFactorWater: typeof s.yield_factor_water === 'number' ? s.yield_factor_water : (typeof s.yieldFactorWater === 'number' ? s.yieldFactorWater : undefined),
+              yieldFactorFat: typeof s.yield_factor_fat === 'number' ? s.yield_factor_fat : (typeof s.yieldFactorFat === 'number' ? s.yieldFactorFat : undefined),
+              yieldFactorOther: typeof s.yield_factor_other === 'number' ? s.yield_factor_other : (typeof s.yieldFactorOther === 'number' ? s.yieldFactorOther : undefined),
+            })).filter((s: RecipeSection) => s.key);
+          }
+        }
+      } catch {
+        /* network error — fall through to per-row derivation */
+      }
     }
-    if (!nextSections && ingredients.some((i) => i.section)) {
-      // Derive sections from per-ingredient section keys first — these always
-      // reflect the actual grouping stored in the recipe.
+    if ((!nextSections || nextSections.length === 0) && ingredients.some((i) => i.section)) {
+      // Last-resort derivation: synthesise minimal section objects from the
+      // unique per-row keys so grouping at least renders.
       const seen = new Set<string>();
       const derived: RecipeSection[] = [];
       for (const ing of ingredients) {
@@ -1613,37 +1464,11 @@
           derived.push({
             key: k,
             label: formatSectionHeader(k),
-            isPrepStep: true,
-            prepMethod: 'baked',
-            cookMethod: 'baked',
+            cookingMethod: 'baked',
           });
         }
       }
-      if (derived.length > 0) nextSections = derived;
-    }
-    if (!nextSections && suggestion.sourceType === 'dev') {
-      // Last resort: fetch the v3 build artifact for cooking method / yield
-      // factors when no per-ingredient section keys exist.
-      try {
-        const res = await fetch(`/api/recipes/v3-build/${encodeURIComponent(suggestion.id)}`);
-        if (res.ok) {
-          const data = await res.json();
-          if (Array.isArray(data?.sections) && data.sections.length > 0) {
-            nextSections = data.sections.map((s: Record<string, unknown>) => ({
-              key: String(s.section_key ?? s.key ?? ''),
-              label: String(s.section_label ?? s.label ?? ''),
-              isPrepStep: typeof s.isPrepStep === 'boolean' ? s.isPrepStep : true,
-              prepMethod: String(s.prep_method ?? s.cooking_method ?? s.prepMethod ?? s.cookingMethod ?? 'baked'),
-              cookMethod: String(s.cook_method ?? s.cooking_method ?? s.cookMethod ?? s.cookingMethod ?? 'baked'),
-              yieldFactorWater: typeof s.yield_factor_water === 'number' ? s.yield_factor_water : (typeof s.yieldFactorWater === 'number' ? s.yieldFactorWater : undefined),
-              yieldFactorFat: typeof s.yield_factor_fat === 'number' ? s.yield_factor_fat : (typeof s.yieldFactorFat === 'number' ? s.yieldFactorFat : undefined),
-              yieldFactorOther: typeof s.yield_factor_other === 'number' ? s.yield_factor_other : (typeof s.yieldFactorOther === 'number' ? s.yieldFactorOther : undefined),
-            })).filter((s: RecipeSection) => s.key);
-          }
-        }
-      } catch {
-        /* network error — no sections */
-      }
+      nextSections = derived;
     }
     if (nextSections) {
       sections = nextSections;
@@ -2397,6 +2222,21 @@
             oninput={(e) => onSectionLabelChange(sIdx, (e.currentTarget as HTMLInputElement).value)}
             class="form-input section-label-input"
           />
+          <span class="section-card-dash">—</span>
+          <select bind:value={sec.cookingMethod} class="form-input section-method-select">
+            {#each SECTION_COOKING_METHODS as m}
+              <option value={m}>{m}</option>
+            {/each}
+          </select>
+          {#if moderatorMode}
+            <button
+              type="button"
+              class="section-gear-btn"
+              onclick={() => (sectionAdvancedOpen[sIdx] = !sectionAdvancedOpen[sIdx])}
+              title="Yield factors"
+              aria-label="Toggle advanced section settings"
+            >⚙</button>
+          {/if}
           <button
             type="button"
             class="remove-btn section-remove-btn"
@@ -2404,155 +2244,6 @@
             aria-label="Remove section"
           >✕</button>
         </div>
-
-        <div class="section-step-type-row">
-          <label class="step-type-option">
-            <input
-              type="radio"
-              name="step-type-{sIdx}"
-              value={true}
-              checked={sec.isPrepStep !== false}
-              onchange={() => { sections = sections.map((s, i) => i === sIdx ? { ...s, isPrepStep: true } : s); }}
-            />
-            Prep step
-          </label>
-          <label class="step-type-option">
-            <input
-              type="radio"
-              name="step-type-{sIdx}"
-              value={false}
-              checked={sec.isPrepStep === false}
-              onchange={() => { sections = sections.map((s, i) => i === sIdx ? { ...s, isPrepStep: false } : s); }}
-            />
-            Primary cook
-          </label>
-        </div>
-
-        {#if sec.isPrepStep !== false}
-          <div class="section-method-row">
-            <label class="section-method-label">Prep label</label>
-            <select bind:value={sec.prepMethod} class="form-input section-method-select">
-              {#each SECTION_PREP_METHODS as m}
-                <option value={m}>{m}</option>
-              {/each}
-            </select>
-          </div>
-          <div class="section-method-row section-final-cook-row">
-            <span class="section-method-label">
-              Final cook method
-              <button
-                type="button"
-                class="tip-btn"
-                aria-label="About final cook method"
-                onclick={() => (sectionTipOpen[sIdx] = !sectionTipOpen[sIdx])}
-              >💡</button>
-            </span>
-            <span class="section-final-cook-inherited">{dishCookMethodEnum} <span class="inherited-note">(inherited from dish)</span></span>
-          </div>
-          {#if sectionTipOpen[sIdx]}
-            <div class="final-cook-tip" onclick={(e) => e.stopPropagation()}>
-              The dominant heat stage when the assembled dish is complete. This drives the USDA nutrient retention calculation — not the prep step before assembly.
-              <br />
-              Cooking method inherits the dish-level method above unless specified differently here.
-            </div>
-          {/if}
-        {:else}
-          <div class="section-method-row section-final-cook-row">
-            <label class="section-method-label">
-              Final cook method
-              <button
-                type="button"
-                class="tip-btn"
-                aria-label="About final cook method"
-                onclick={() => (sectionTipOpen[sIdx] = !sectionTipOpen[sIdx])}
-              >💡</button>
-            </label>
-            <select bind:value={sec.cookMethod} class="form-input section-method-select">
-              {#each SECTION_COOK_METHODS as m}
-                <option value={m}>{m}</option>
-              {/each}
-            </select>
-          </div>
-          {#if sec.cookMethod === 'baked'}
-            {#if sec.stages && sec.stages.length >= 1}
-              <!-- Multi-stage bake editor -->
-              {#each sec.stages as stage, stIdx (stIdx)}
-                <div class="section-cook-params-row">
-                  <label class="section-method-label">
-                    Stage {stIdx + 1} temp (°F)
-                    <input
-                      type="number"
-                      min="200" max="550" step="25"
-                      value={stage.tempF}
-                      oninput={(e) => updateBakeStage(sIdx, stIdx, 'tempF', Number(e.currentTarget.value))}
-                      class="form-input section-cook-param-input"
-                    />
-                  </label>
-                  <label class="section-method-label">
-                    Time (min)
-                    <input
-                      type="number"
-                      min="1" max="300" step="1"
-                      value={stage.minutes}
-                      oninput={(e) => updateBakeStage(sIdx, stIdx, 'minutes', Number(e.currentTarget.value))}
-                      class="form-input section-cook-param-input"
-                    />
-                  </label>
-                  {#if sec.stages.length > 1}
-                    <button type="button" class="remove-stage-btn" onclick={() => removeBakeStage(sIdx, stIdx)}>×</button>
-                  {/if}
-                </div>
-              {/each}
-              <button type="button" class="add-stage-btn" onclick={() => addBakeStage(sIdx)}>+ Add stage</button>
-            {:else}
-              <!-- Single-stage (default) -->
-              <div class="section-cook-params-row">
-                <label class="section-method-label">
-                  Oven temp (°F)
-                  <input
-                    type="number"
-                    min="200" max="550" step="25"
-                    placeholder="e.g. 350"
-                    bind:value={sec.cookTempF}
-                    class="form-input section-cook-param-input"
-                  />
-                </label>
-                <label class="section-method-label">
-                  Time (min)
-                  <input
-                    type="number"
-                    min="1" max="300" step="1"
-                    placeholder="e.g. 45"
-                    bind:value={sec.cookMinutes}
-                    class="form-input section-cook-param-input"
-                  />
-                </label>
-                <button type="button" class="add-stage-btn" onclick={() => addBakeStage(sIdx)}>+ Add stage</button>
-              </div>
-            {/if}
-          {:else if sec.cookMethod === 'boiled' || sec.cookMethod === 'steamed'}
-            <div class="section-cook-params-row">
-              <label class="section-method-label">
-                Simmer time (min)
-                <input
-                  type="number"
-                  min="1" max="300" step="1"
-                  placeholder="e.g. 20"
-                  bind:value={sec.boilMinutes}
-                  class="form-input section-cook-param-input"
-                />
-              </label>
-            </div>
-          {/if}
-          {#if sectionTipOpen[sIdx]}
-            <div class="final-cook-tip" onclick={(e) => e.stopPropagation()}>
-              The dominant heat stage when the assembled dish is complete. This drives the USDA nutrient retention calculation — not the prep step before assembly.
-              <br />
-              Cooking method inherits the dish-level method above unless specified differently here.
-            </div>
-          {/if}
-        {/if}
-
         {#if moderatorMode && sectionAdvancedOpen[sIdx]}
           <div class="section-card-advanced">
             <label class="advanced-field">
@@ -2575,15 +2266,6 @@
                 bind:value={sec.yieldFactorOther} placeholder="1.00" class="form-input" />
             </label>
           </div>
-        {/if}
-        {#if moderatorMode}
-          <button
-            type="button"
-            class="section-gear-btn"
-            onclick={() => (sectionAdvancedOpen[sIdx] = !sectionAdvancedOpen[sIdx])}
-            title="Yield factors"
-            aria-label="Toggle advanced section settings"
-          >⚙</button>
         {/if}
       {/snippet}
 
@@ -2630,8 +2312,8 @@
                   <span class="nutrition-badge-text">
                     ✓ {getIngredientNutritionLabel(ingredient)}
                     · {ingredient.portionDesc === 'g'
-                        ? `${Math.round((ingredient.servingCount ?? 1) * (ingredient.portionGrams ?? 0))}g`
-                        : `${ingredient.servingCount}×${abbreviatePortion(ingredient.portionDesc ?? '')} (${Math.round((ingredient.servingCount ?? 1) * (ingredient.portionGrams ?? 0))}g)`}
+                        ? `${(ingredient.servingCount ?? 1) * (ingredient.portionGrams ?? 0)}g`
+                        : `${ingredient.servingCount}×${ingredient.portionDesc}`}
                   </span>
                   <span class="nutrition-badge-edit-label">Edit:</span>
                   <button type="button" class="nutrition-relink-btn" onclick={() => openNutritionSearch(ingredient)}>qty</button>
@@ -2718,7 +2400,6 @@
                             class="portion-count-input"
                             value={nutritionPendingCount[ingredient.id] ?? 1}
                             oninput={(e) => {
-                              nutritionCustomGrams = { ...nutritionCustomGrams, [ingredient.id]: null };
                               nutritionPendingCount = { ...nutritionPendingCount, [ingredient.id]: parseFloat((e.target as HTMLInputElement).value) || 1 };
                             }}
                           />
@@ -2792,13 +2473,6 @@
           </div>
         {/if}
       {:else}
-        <div class="dish-cooking-header">
-          <span class="dish-header-name">{dishName || recipeName}</span>
-          <span class="dish-header-dash"> — </span>
-          <select bind:value={cookingMethod} class="dish-header-method-input form-input section-method-select">
-            {#each COOKING_METHODS as m}<option value={m}>{m}</option>{/each}
-          </select>
-        </div>
         {#each sections as sec, sIdx (sIdx)}
           <div class="section-block">
             {@render sectionHeaderBar(sec, sIdx)}
@@ -3366,15 +3040,9 @@
   }
   .ep-preview-section-header {
     list-style: none;
-    margin: 16px 0 4px -20px;
-    padding: 4px 8px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: #276749;
-    background: #f0fff4;
-    border-left: 3px solid #38a169;
-    border-radius: 0 3px 3px 0;
-    text-transform: capitalize;
+    margin-left: -20px;
+    margin-top: 8px;
+    color: #4a5568;
   }
 
   /* Sections editor (v3.md §18.6) — inline group header pattern.
@@ -3387,29 +3055,6 @@
     border: 1px solid #e2e8f0;
     border-left: 3px solid #38a169;
     border-radius: 4px;
-  }
-  .dish-cooking-header {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: #2d3748;
-    padding: 6px 10px;
-    margin-bottom: 6px;
-    background: #edf2f7;
-    border-radius: 4px;
-    border-left: 3px solid #4a5568;
-  }
-  .dish-header-name {
-    white-space: nowrap;
-  }
-  .dish-header-dash {
-    color: #4a5568;
-  }
-  .dish-header-method-input {
-    flex: 0 0 auto;
-    font-weight: 700;
   }
   .section-header-bar {
     display: flex;
@@ -3448,95 +3093,6 @@
   }
   .section-gear-btn:hover { background: #edf2f7; }
   .section-remove-btn { padding: 2px 8px; }
-
-  /* Step type toggle row */
-  .section-step-type-row {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    padding: 4px 0 6px;
-    font-size: 0.85rem;
-    color: #4a5568;
-  }
-  .step-type-option {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    cursor: pointer;
-    font-weight: 500;
-  }
-  .step-type-option input[type="radio"] { cursor: pointer; }
-
-  /* Prep label / Final cook method rows */
-  .section-method-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 3px 0;
-    font-size: 0.85rem;
-  }
-  .section-method-label {
-    flex: 0 0 130px;
-    color: #4a5568;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
-  .add-stage-btn {
-    align-self: flex-end;
-    background: none;
-    border: 1px dashed #93c5fd;
-    border-radius: 6px;
-    color: #2563eb;
-    cursor: pointer;
-    font-size: 0.75rem;
-    padding: 3px 10px;
-    margin-top: 2px;
-  }
-  .add-stage-btn:hover { background: #eff6ff; }
-  .remove-stage-btn {
-    align-self: flex-end;
-    background: none;
-    border: 1px solid #fca5a5;
-    border-radius: 6px;
-    color: #dc2626;
-    cursor: pointer;
-    font-size: 0.85rem;
-    padding: 2px 8px;
-    line-height: 1.4;
-  }
-  .remove-stage-btn:hover { background: #fef2f2; }
-  .section-final-cook-row { margin-bottom: 6px; }
-  .section-final-cook-inherited {
-    color: #2d3748;
-    font-weight: 600;
-    font-size: 0.9rem;
-  }
-  .inherited-note {
-    color: #a0aec0;
-    font-weight: 400;
-    font-size: 0.8rem;
-  }
-  .tip-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    font-size: 0.9rem;
-    line-height: 1;
-  }
-  .tip-btn:focus { outline: 2px solid #63b3ed; border-radius: 2px; }
-  .final-cook-tip {
-    background: #fffbeb;
-    border: 1px solid #f6e05e;
-    border-radius: 6px;
-    padding: 10px 12px;
-    font-size: 0.82rem;
-    color: #744210;
-    line-height: 1.5;
-    margin: 2px 0 8px;
-  }
   .section-card-advanced {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

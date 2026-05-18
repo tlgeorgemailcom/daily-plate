@@ -1,12 +1,12 @@
 <script lang="ts">
   import { onMount, onDestroy } from 'svelte';
   import { canUseStorage } from '$lib/stores/playerStore';
-  import type { Level, FoodType, AnimalType, DietaryCategory } from './types';
+  import type { Level, FoodType, DietaryCategory } from './types';
   import { RECIPE_CATEGORY_OPTIONS, toDisplayRecipeCategory, toStoredRecipeCategory } from './recipe-categories';
   import FoodIcon from './FoodIcon.svelte';
   import RecipeBadges from './RecipeBadges.svelte';
   import RecipeForm, { type RecipeFormData, type RecipeIngredient } from './RecipeForm.svelte';
-  import { clearOverrideCache, getLevelWithOverrides } from './level-overrides';
+  import { clearOverrideCache } from './level-overrides';
   
   // All available meal categories (shown even if empty)
   const BASE_CATEGORIES = RECIPE_CATEGORY_OPTIONS.map((category) => category.id);
@@ -66,7 +66,6 @@
   // Player edit mode - creator editing their own approved recipe
   let myRecipeIds = $state<string[]>([]);
   let currentPlayerId = $state<string | null>(null);
-  let currentPlayerName = $state<string | null>(null);
   let isPlayerEditing = $state(false);
   let playerEditSaving = $state(false);
   let playerEditError = $state<string | null>(null);
@@ -94,8 +93,6 @@
   let creatorDraft = $state<Record<string, unknown> | null>(null);
   let creatorDraftUpdatedAt = $state<string | null>(null);
   let creatorDraftIsOwn = $state(false);
-  let creatorDraftIsCollabAutoLoaded = $state(false);
-  let creatorDraftSavedByName = $state<string | null>(null);
   let creatorDraftLoading = $state(false);
   let creatorDraftLoadingIntoForm = $state(false);
   // Player (creator) save-draft state
@@ -142,7 +139,6 @@
         try {
           const parsed = JSON.parse(storedPlayer);
           currentPlayerId = parsed.id || null;
-          currentPlayerName = parsed.displayName || null;
         } catch { /* ignore */ }
       }
       // Load which of the creator's recipes have unseen collaborator drafts
@@ -249,7 +245,7 @@
   );
   
   // Reference to scroll container
-  let scrollContainer = $state<HTMLDivElement | undefined>(undefined);
+  let scrollContainer: HTMLDivElement;
   
   function toggleCategory(category: string) {
     const newSet = new Set(collapsedCategories);
@@ -276,6 +272,11 @@
         });
       }
     }, 50);
+  }
+
+  function formatIngredientSection(section: string | undefined) {
+    if (!section) return '';
+    return section.charAt(0).toUpperCase() + section.slice(1) + ':';
   }
 
   // Phase 8b (v3.md §18): when a recipe has per-section cooking methods,
@@ -487,7 +488,7 @@
     }
   }
   
-  async function handleSettingsClick() {
+  function handleSettingsClick() {
     // If already in moderator mode, toggle off
     if (isModeratorMode && selectedLevel) {
       isModeratorMode = false;
@@ -498,12 +499,6 @@
     if (selectedLevel) {
       const password = prompt('Enter moderator password:');
       if (password === MODERATOR_PASSWORD) {
-        // Ensure Turso data is loaded before mounting the edit form so
-        // RecipeForm.$state initialises from fresh data, not the stale TS bundle.
-        const fresh = await getLevelWithOverrides(selectedLevel.id);
-        if (fresh && fresh !== selectedLevel) {
-          selectedLevel = fresh;
-        }
         isModeratorMode = true;
         saveError = null;
         saveSuccess = false;
@@ -521,7 +516,7 @@
   function handleSecretAdmin(e: MouseEvent) {
     e.stopPropagation();
     const code = prompt('');
-    if (code === MODERATOR_PASSWORD) {
+    if (code === '4444') {
       window.open('/farmers-basket/moderate', '_blank');
     }
   }
@@ -612,10 +607,8 @@
           id: i + 1,
           name: ing.name,
           quantity: ing.quantity || '',
-          // Prefer the stored moderator-assigned gameFood/animal over a fuzzy match.
-          // After first approval, recipeIngredients carries these values in the Level.
-          gameFood: ((ing as Record<string, unknown>).gameFood as string || matchedFood || '') as FoodType | '',
-          animal: ((ing as Record<string, unknown>).animal as string || level.animalSpawns[i]?.type || '') as AnimalType | '',
+          gameFood: matchedFood,
+          animal: level.animalSpawns[i]?.type || '',
           // Preserve existing nutrition links so the creator can see and update them
           foodWord: ing.foodWord,
           ndbNo: ing.ndbNo,
@@ -639,23 +632,6 @@
     }
     
     const nj = level.nutritionJson as (typeof level.nutritionJson & { yieldFactorWater?: number; yieldFactorFat?: number }) | undefined;
-    // sections can live at Level.sections (typed) or embedded in nutritionJson.sections
-    // (v3 build artifact shape). Prefer Level.sections; fall back to nutritionJson so
-    // initialData.sections is populated immediately without waiting for the async v3-build fetch.
-    type NjSection = { section_key: string; section_label: string; prep_method?: string; cook_method?: string; cooking_method?: string; yield_factor_water?: number; yield_factor_fat?: number };
-    const njSections = !level.sections
-      ? ((nj as Record<string, unknown> | undefined)?.['sections'] as NjSection[] | undefined)
-      : undefined;
-    const resolvedSections = level.sections
-      ?? (njSections?.length ? njSections.map(s => ({
-          key: s.section_key,
-          label: s.section_label,
-          isPrepStep: true as const,
-          prepMethod: s.prep_method ?? s.cooking_method,
-          cookMethod: s.cook_method ?? s.cooking_method,
-          yieldFactorWater: s.yield_factor_water,
-          yieldFactorFat: s.yield_factor_fat,
-        })) : undefined);
     return {
       recipeName: level.name,
       category: level.category,
@@ -675,21 +651,10 @@
         text
       })),
       sr28Rule: level.sr28Rule,
-      ...(resolvedSections ? { sections: resolvedSections } : {})
+      ...(level.sections ? { sections: level.sections } : {})
     };
   }
-
-  /** Format a 422 missing_ndb error body into a player-facing message */
-  function formatMissingNdbError(body: Record<string, unknown>): string {
-    const missing = body.missingIngredients as Array<{ ndbNo: string; displayName?: string }> | undefined;
-    if (missing && missing.length > 0) {
-      const names = missing.map(m => m.displayName || m.ndbNo).join(', ');
-      const verb = missing.length === 1 ? 'has' : 'have';
-      return `Can't save — ${names} ${verb} no food data linked. Use the link button (🔗) next to each ingredient to search for a match, or mark the ingredient as exempt.`;
-    }
-    return `Can't save — one or more ingredients have no food data linked. Please link each ingredient to an NDB food entry or mark it as exempt.`;
-  }
-
+  
   // Handle moderator save
   async function handleModeratorSave(data: RecipeFormData) {
     if (!selectedLevel) return;
@@ -959,14 +924,10 @@
               portionDesc: i.portionDesc,
               portionGrams: i.portionGrams,
               servingCount: i.servingCount,
-              exempt: i.ingredientStatus === 'exempt',
+              exempt: i.exempt === true,
               isDish: i.isDish === true,
-              ...(i.ingredientStatus === 'optional' ? { is_optional: true } : {}),
               ...(i.section ? { section: i.section } : {})
             })),
-            ...(data.sections && data.sections.length > 0 ? { sections: data.sections } : {}),
-            ...(typeof data.yieldFactorWater === 'number' ? { yieldFactorWater: data.yieldFactorWater } : {}),
-            ...(typeof data.yieldFactorFat   === 'number' ? { yieldFactorFat:   data.yieldFactorFat   } : {}),
             imageUrl
           }
         })
@@ -1019,24 +980,13 @@
       creatorDraft = null;
       creatorDraftUpdatedAt = null;
       creatorDraftIsOwn = false;
-      creatorDraftIsCollabAutoLoaded = false;
-      creatorDraftSavedByName = null;
-      // Server-side auth only works when submitted_by === currentPlayerId.
-      // If ownership was detected via myRecipeIds only (stale localStorage),
-      // skip the server calls to avoid 403s.
-      const hasServerAuth = !!(currentPlayerId && level.submittedBy === currentPlayerId);
-      if (hasServerAuth) {
-        await handleCheckCreatorDraft(level.id);
-      }
+      // Load draft first so creatorInitialData is ready before form mounts
+      await handleCheckCreatorDraft(level.id);
       isPlayerEditing = true;
-      if (hasServerAuth) {
-        handleLoadCreatorEditCode(level.id);
-      }
+      handleLoadCreatorEditCode(level.id);
       // Clear the unseen badge immediately
       unseenDraftIds = new Set([...unseenDraftIds].filter(id => id !== level.id));
     } else {
-      // Non-owner: show the collab edit code dialog.
-      // Premium users get the code input; free users see the upgrade prompt.
       showEditCodeModal = true;
       editCodeInput = '';
       editCodeError = '';
@@ -1082,12 +1032,7 @@
             if (linkMode === 'dish') {
               return [
                 dishEntry,
-                ...data.ingredients.filter(i => i.name.trim()).map(i => ({
-                  name: i.name,
-                  quantity: i.quantity,
-                  ...(i.gameFood ? { gameFood: i.gameFood } : {}),
-                  ...(i.animal ? { animal: i.animal } : {})
-                }))
+                ...data.ingredients.filter(i => i.name.trim()).map(i => ({ name: i.name, quantity: i.quantity }))
               ];
             }
             return [
@@ -1095,8 +1040,6 @@
               ...data.ingredients.filter(i => i.name.trim()).map(i => ({
                 name: i.name,
                 quantity: i.quantity,
-                ...(i.gameFood ? { gameFood: i.gameFood } : {}),
-                ...(i.animal ? { animal: i.animal } : {}),
                 ...(hasNutritionLinkMeta(i) ? {
                   foodWord: i.foodWord,
                   ndbNo: i.ndbNo,
@@ -1111,8 +1054,6 @@
           return data.ingredients.filter(i => i.name.trim()).map(i => ({
             name: i.name,
             quantity: i.quantity,
-            ...(i.gameFood ? { gameFood: i.gameFood } : {}),
-            ...(i.animal ? { animal: i.animal } : {}),
             ...(isLinked && hasNutritionLinkMeta(i) ? {
               foodWord: i.foodWord,
               ndbNo: i.ndbNo,
@@ -1136,7 +1077,6 @@
 
       if (!res.ok) {
         const body = await res.json().catch(() => ({}));
-        if (body.error === 'missing_ndb') throw new Error(formatMissingNdbError(body));
         throw new Error(body.error || 'Failed to save');
       }
 
@@ -1202,7 +1142,6 @@
       });
       if (!res.ok) {
         const body = await res.json().catch(() => ({}));
-        if (body.error === 'missing_ndb') throw new Error(formatMissingNdbError(body));
         throw new Error(body.error || 'Failed to save draft');
       }
       const result = await res.json().catch(() => ({}));
@@ -1396,14 +1335,12 @@
         body: JSON.stringify({
           recipeId: collabRecipeId,
           code: collabValidatedCode,
-          draftData,
-          ...(currentPlayerName ? { collabName: currentPlayerName } : {})
+          draftData
         })
       });
 
       if (!res.ok) {
         const body = await res.json().catch(() => ({}));
-        if (body.error === 'missing_ndb') throw new Error(formatMissingNdbError(body));
         throw new Error(body.error || 'Failed to save draft');
       }
 
@@ -1434,8 +1371,6 @@
         const data = await res.json();
         creatorDraft = data.draft ?? null;
         creatorDraftUpdatedAt = data.draftUpdatedAt ?? null;
-        // Treat as own draft so creatorInitialData feeds it into the form
-        creatorDraftIsOwn = true;
       }
     } catch { /* non-critical */ }
     creatorDraftLoadingIntoForm = false;
@@ -1461,20 +1396,7 @@
         const data = await res.json();
         creatorDraft = data.draft ?? null;
         creatorDraftUpdatedAt = data.draftUpdatedAt ?? null;
-        const isOwnDraft = !!(data.draftIsCreatorDraft);
-        creatorDraftIsOwn = isOwnDraft;
-        creatorDraftSavedByName = data.draftSavedByName ?? null;
-        // Auto-load collaborator drafts into the form immediately
-        if (!isOwnDraft && creatorDraft) {
-          creatorDraftIsOwn = true;
-          creatorDraftIsCollabAutoLoaded = true;
-          // Mark as seen
-          fetch('/api/recipes/draft', {
-            method: 'PATCH',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ recipeId, playerId: currentPlayerId })
-          }).catch(() => {});
-        }
+        creatorDraftIsOwn = !!(data.draftIsCreatorDraft);
       }
     } catch { /* non-critical */ }
     creatorDraftLoading = false;
@@ -1491,8 +1413,6 @@
       });
       creatorDraft = null;
       creatorDraftUpdatedAt = null;
-      creatorDraftIsCollabAutoLoaded = false;
-      creatorDraftSavedByName = null;
     } catch { /* non-critical */ }
   }
 
@@ -1758,7 +1678,7 @@
         <div class="cotd-card">
           <h3 class="cotd-name">{todaysRecipe.name}</h3>
           <span class="cotd-category">{toDisplayRecipeCategory(todaysRecipe.category)}</span>
-          <RecipeBadges sr28Rule={todaysRecipe.sr28Rule} isCommunityRecipe={todaysRecipe.isCommunityRecipe} plausibilityFlags={todaysRecipe.plausibilityFlags} compact={true} />
+          <RecipeBadges sr28Rule={todaysRecipe.sr28Rule} isCommunityRecipe={todaysRecipe.isCommunityRecipe} compact={true} />
           
           {#if todaysRecipe.imageUrl}
             <div class="cotd-image-container">
@@ -1853,19 +1773,17 @@
               {/if}
             </div>
             
-            {#key selectedLevel}
-              <RecipeForm
-                moderatorMode={true}
-                initialData={levelToFormData(selectedLevel)}
-                onsubmit={handleModeratorSave}
-                oncancel={handleModeratorCancel}
-                submitLabel="💾 Save Changes"
-                submitting={isSaving}
-                errorMessage={saveError || ''}
-                disableSuggestions={true}
-                recipeId={selectedLevel.id}
-              />
-            {/key}
+            <RecipeForm
+              moderatorMode={true}
+              initialData={levelToFormData(selectedLevel)}
+              onsubmit={handleModeratorSave}
+              oncancel={handleModeratorCancel}
+              submitLabel="💾 Save Changes"
+              submitting={isSaving}
+              errorMessage={saveError || ''}
+              disableSuggestions={true}
+              recipeId={selectedLevel.id}
+            />
           </div>
         </div>
       {:else if isPlayerEditing}
@@ -1876,29 +1794,11 @@
             {#if playerEditSuccess}
               <span class="save-success">✓ Submitted for re-approval!</span>
             {/if}
-            <RecipeBadges sr28Rule={selectedLevel.sr28Rule} isCommunityRecipe={selectedLevel.isCommunityRecipe} plausibilityFlags={selectedLevel.plausibilityFlags} compact={true} />
+            <RecipeBadges sr28Rule={selectedLevel.sr28Rule} isCommunityRecipe={selectedLevel.isCommunityRecipe} compact={true} />
             {#if selectedLevel.nutritionJson}
-              {#if selectedLevel.nutritionJson.perServing}
               <p class="recipe-nutrition recipe-nutrition-edit">Per serving: {selectedLevel.nutritionJson.perServing.cal} cal&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.pro}g protein&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.fat}g fat&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.carb}g carbs&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.fib}g fiber&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.sug}g sugar&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.h2o}g water</p>
-              {/if}
             {/if}
           </div>
-
-          {#if creatorDraftIsCollabAutoLoaded}
-            <div class="collab-draft-top-banner">
-              <span class="collab-draft-top-icon">📝</span>
-              <div class="collab-draft-top-text">
-                <strong>Collaborator draft loaded</strong>
-                {#if creatorDraftSavedByName}
-                  <span>— edited by <em>{creatorDraftSavedByName}</em></span>
-                {/if}
-                {#if creatorDraftUpdatedAt}
-                  <span class="collab-draft-top-time">{new Date(creatorDraftUpdatedAt).toLocaleString()}</span>
-                {/if}
-              </div>
-              <button class="collab-draft-top-discard" onclick={handleDiscardCreatorDraft} title="Discard this draft and restore live recipe">✕ Discard</button>
-            </div>
-          {/if}
 
           <div class="mod-form-container">
             <!-- Image Upload Section -->
@@ -1942,7 +1842,6 @@
               {/if}
             </div>
 
-            {#key selectedLevel?.id}
             <RecipeForm
               initialData={creatorInitialData()}
               onsubmit={handlePlayerSave}
@@ -1972,7 +1871,6 @@
                 </div>
               {/snippet}
             </RecipeForm>
-            {/key}
 
             <!-- Collaborator Edit Code -->
             <div class="creator-edit-code-section">
@@ -2006,11 +1904,7 @@
             <!-- Creator Own Draft Notice -->
             {#if creatorDraft && creatorDraftIsOwn}
               <div class="creator-own-draft-notice">
-                {#if creatorDraftIsCollabAutoLoaded}
-                  <span>📝 Collaborator's draft loaded</span>
-                {:else}
-                  <span>💾 Draft restored</span>
-                {/if}
+                <span>💾 Draft restored</span>
                 {#if creatorDraftUpdatedAt}<span class="creator-own-draft-time">· saved {new Date(creatorDraftUpdatedAt).toLocaleString()}</span>{/if}
                 <button class="creator-own-draft-discard" onclick={handleDiscardCreatorDraft}>Discard draft</button>
               </div>
@@ -2076,7 +1970,7 @@
             <span class="recipe-number">#{selectedLevel.levelNum}</span>
             <h3 class="recipe-name">{selectedLevel.name}</h3>
             <span class="recipe-category">{toDisplayRecipeCategory(selectedLevel.category)}</span>
-            <RecipeBadges sr28Rule={selectedLevel.sr28Rule} isCommunityRecipe={selectedLevel.isCommunityRecipe} plausibilityFlags={selectedLevel.plausibilityFlags} compact={true} />
+            <RecipeBadges sr28Rule={selectedLevel.sr28Rule} isCommunityRecipe={selectedLevel.isCommunityRecipe} compact={true} />
           </div>
           
           {#if selectedLevel.imageUrl}
@@ -2121,12 +2015,7 @@
                   {/each}
                 </div>
                 {#if selectedLevel.nutritionJson}
-                  {#if selectedLevel.nutritionJson.perServing}
                   <p class="recipe-nutrition">{formatPerServingLabel(selectedLevel)}: {selectedLevel.nutritionJson.perServing.cal} cal&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.pro}g protein&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.fat}g fat&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.carb}g carbs&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.fib}g fiber&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.sug}g sugar&nbsp;|&nbsp;{selectedLevel.nutritionJson.perServing.h2o}g water</p>
-                  {/if}
-                  {#if selectedLevel.isCommunityRecipe}
-                  <p class="recipe-nutrition-disclosure">Community recipe — nutrition estimated from ingredients, not USDA-validated.</p>
-                  {/if}
                 {/if}
               {/if}
               
@@ -2312,7 +2201,7 @@
                     {#if isCurrent}🎮{:else if isCompleted}✓{:else}🔒{/if}
                   </span>
                 </button>
-                <RecipeBadges sr28Rule={level.sr28Rule} isCommunityRecipe={level.isCommunityRecipe} plausibilityFlags={level.plausibilityFlags} compact={true} />
+                <RecipeBadges sr28Rule={level.sr28Rule} isCommunityRecipe={level.isCommunityRecipe} compact={true} />
                 {#if level.isCommunityRecipe}
                   <button class="edit-icon-btn" onclick={(e) => handleEditIconClick(level, e)} title="Edit recipe" aria-label="Edit recipe">
                     ✏️
@@ -2381,7 +2270,7 @@
                               {/if}
                           </span>
                         </button>
-                        <RecipeBadges sr28Rule={level.sr28Rule} isCommunityRecipe={level.isCommunityRecipe} plausibilityFlags={level.plausibilityFlags} compact={true} />
+                        <RecipeBadges sr28Rule={level.sr28Rule} isCommunityRecipe={level.isCommunityRecipe} compact={true} />
                         {#if level.isCommunityRecipe}
                           <button class="edit-icon-btn" onclick={(e) => handleEditIconClick(level, e)} title="Edit recipe" aria-label="Edit recipe">
                             ✏️
@@ -2406,9 +2295,14 @@
 {#if showEditCodeModal && selectedLevel}
   <div class="edit-code-overlay" role="dialog" aria-modal="true" aria-label="Edit code required">
     <div class="edit-code-modal">
-      {#if canReadAllRecipes}
-        <h3>✏️ Suggest Changes</h3>
-        <p>Ask the recipe creator for their edit code, then enter it below to suggest changes to <strong>{selectedLevel.name}</strong>.</p>
+      <h3>🔑 Enter Edit Code</h3>
+      {#if editCodeValidated}
+        <p class="edit-code-accepted">✅ Code accepted! Collaborative editing is coming soon — your access has been noted.</p>
+        <div class="edit-code-actions">
+          <button class="edit-code-cancel" onclick={() => { showEditCodeModal = false; editCodeValidated = false; editCodeInput = ''; }}>Close</button>
+        </div>
+      {:else}
+        <p>Ask the recipe creator for their edit code to suggest changes.</p>
         <input
           type="text"
           class="edit-code-input"
@@ -2426,13 +2320,7 @@
             class="edit-code-submit"
             onclick={handleValidateEditCode}
             disabled={editCodeValidating || !editCodeInput.trim()}
-          >{editCodeValidating ? 'Checking...' : 'Open Editor'}</button>
-        </div>
-      {:else}
-        <h3>🔒 Subscriber Feature</h3>
-        <p>Collaborating on community recipes is available to subscribers. Upgrade to suggest changes to other players' recipes.</p>
-        <div class="edit-code-actions">
-          <button class="edit-code-cancel" onclick={() => { showEditCodeModal = false; }}>Close</button>
+          >{editCodeValidating ? 'Checking...' : 'Continue'}</button>
         </div>
       {/if}
     </div>
@@ -3315,14 +3203,6 @@
     padding: 5px 10px;
     text-align: center;
     line-height: 1.5;
-  }
-
-  .recipe-nutrition-disclosure {
-    margin: 3px 0 0;
-    font-size: 0.68rem;
-    color: #6b7280;
-    text-align: center;
-    font-style: italic;
   }
   
   .instructions {
@@ -4237,65 +4117,5 @@
 
   .creator-own-draft-discard:hover {
     color: #b71c1c;
-  }
-
-  /* Prominent collab draft banner at the TOP of the creator edit form */
-  .collab-draft-top-banner {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 16px;
-    background: #fff8e1;
-    border: 2px solid #f9a825;
-    border-radius: 10px;
-    font-size: 0.88rem;
-    color: #5d4037;
-    margin: 0 0 14px 0;
-  }
-
-  .collab-draft-top-icon {
-    font-size: 1.3rem;
-    flex-shrink: 0;
-  }
-
-  .collab-draft-top-text {
-    flex: 1;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 4px;
-  }
-
-  .collab-draft-top-text strong {
-    color: #e65100;
-    font-size: 0.92rem;
-  }
-
-  .collab-draft-top-text em {
-    font-style: normal;
-    font-weight: 600;
-    color: #bf360c;
-  }
-
-  .collab-draft-top-time {
-    font-size: 0.78rem;
-    color: #8d6e63;
-    margin-left: 4px;
-  }
-
-  .collab-draft-top-discard {
-    flex-shrink: 0;
-    background: none;
-    border: 1px solid #e65100;
-    color: #e65100;
-    font-size: 0.78rem;
-    border-radius: 6px;
-    padding: 4px 10px;
-    cursor: pointer;
-    white-space: nowrap;
-  }
-
-  .collab-draft-top-discard:hover {
-    background: #fff3e0;
   }
 </style>

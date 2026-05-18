@@ -141,15 +141,11 @@ export interface Level {
   submittedBy?: string;           // Submitter player ID for community recipes
   linkType?: 'ingredient' | 'dish' | 'mixed';  // How ingredients were USDA-linked
   sr28Rule?: 'Rule A' | 'Rule B' | 'Rule C' | 'Rule D'; // Nutrient data confidence tier
-  plausibilityFlags?: string[];                 // Community build plausibility check failures
   nutritionJson?: NutritionJson | null;         // Per-serving nutrients (null = unlinked)
   sections?: {                    // Per-section cooking breakdown (v3 §18; multi-stage recipes only)
     key: string;                  // matches recipeIngredients[].section
     label: string;                // human label, e.g. "Pie crust"
-    isPrepStep?: boolean;         // true = inherits dish cookMethod; false = own cookMethod
-    prepMethod?: string;          // UI label (simmered, chilled, par-baked...)
-    cookMethod?: string;          // USDA retention enum (baked|boiled|raw|steamed|fried|grilled|microwave)
-    cookingMethod?: string;       // backward-compat alias for cookMethod
+    cookingMethod: string;        // 'baked' | 'boiled' | 'raw' | 'steamed' | 'fried' | 'grilled' | 'microwave'
     yieldFactorWater?: number;
     yieldFactorFat?: number;
     yieldFactorOther?: number;
