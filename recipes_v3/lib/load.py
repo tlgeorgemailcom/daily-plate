@@ -160,11 +160,30 @@ class Section:
     filling_class: str = ""   # e.g. 'dense_fruit' — selects BINDING coefficient in yield_calc
     cook_stages: str = ""     # e.g. '425:15,350:37' — temp_f:minutes pairs, comma-sep
     boil_stages: str = ""     # e.g. '8' — stovetop boil minutes (temp fixed at 212°F)
+    source_recipe: str = ""   # Phase 8c: when non-empty, this section's nutrition is sourced
+                              # from the named child recipe's already-built per100g panel.
+                              # Validator requires matching @<child_id> ingredient row(s) and
+                              # yfw=yff=1.0 (no double-applied retention/yield).
 
     @property
     def cooking_method(self) -> str:
         """Backward-compat alias — returns cook_method."""
         return self.cook_method
+
+
+def is_component_ref(ingredient_key: str) -> bool:
+    """Phase 8c: True if ingredient_key references a child recipe (e.g. '@BKFST_001').
+
+    Component-ref ingredients pull nutrition from the named recipe's cooked
+    per-100g panel rather than from a ledger NDB lookup. The grams column is
+    the cooked weight of the component contribution per the parent recipe.
+    """
+    return ingredient_key.startswith("@")
+
+
+def child_recipe_id(ingredient_key: str) -> str:
+    """Strip the '@' prefix from a component-ref key. Returns '' for non-refs."""
+    return ingredient_key[1:] if is_component_ref(ingredient_key) else ""
 
 
 def _parse_float(s: str, default: float = 0.0) -> float:
@@ -293,6 +312,7 @@ def load_sections() -> dict[str, list[Section]]:
                 filling_class=(row.get("filling_class") or "").strip(),
                 cook_stages=(row.get("cook_stages") or "").strip(),
                 boil_stages=(row.get("boil_stages") or "").strip(),
+                source_recipe=(row.get("source_recipe") or "").strip(),
             )
             out.setdefault(rid, []).append(sec)
     return out

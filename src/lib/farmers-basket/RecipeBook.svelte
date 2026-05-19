@@ -320,8 +320,22 @@
     return 'Per serving';
   }
 
+  function getChildIngredientLines(componentRef: string): string[] {
+    const child = levels.find((l) => l.id === componentRef);
+    if (!child?.recipeIngredients) return [];
+    return child.recipeIngredients
+      // Skip the child's own parent-dish header row; keep everything else,
+      // including any nested component-refs (rendered as their own line).
+      .filter((ing) => !ing.isDish || !!ing.componentRef)
+      .map((ing) => formatIngredientLine(ing));
+  }
+
   function groupRecipeIngredients(level: Level) {
-    const ingredients = (level.recipeIngredients || []).filter((ingredient) => !ingredient.isDish);
+    // Hide the parent dish-header row (isDish without componentRef), but keep
+    // component-ref children — they're real ingredients for a composite recipe.
+    const ingredients = (level.recipeIngredients || []).filter(
+      (ingredient) => !ingredient.isDish || !!ingredient.componentRef
+    );
     const groups: Array<{ section?: string; items: typeof ingredients }> = [];
     for (const ingredient of ingredients) {
       const lastGroup = groups[groups.length - 1];
@@ -596,8 +610,40 @@
     // Use recipeIngredients if available (has real quantities), otherwise fall back to recipe array
     let ingredients;
     if (level.recipeIngredients && level.recipeIngredients.length > 0) {
+      // Inline-expand any component-ref rows (composite recipes like Biscuits & Gravy)
+      // so the player gets a flat, fully-editable ingredient list. The clone loses
+      // the component link, which is acceptable since player recipes are saved as
+      // Rule C/D and the source recipes are not modified.
+      type Ing = NonNullable<Level['recipeIngredients']>[number];
+      const expanded: Ing[] = [];
+      for (const ing of level.recipeIngredients) {
+        if (ing.isDish && !ing.componentRef) continue; // strip parent dish-header
+        if (ing.componentRef) {
+          const child = levels.find((l) => l.id === ing.componentRef);
+          const childIngs = child?.recipeIngredients?.filter((c) => !c.isDish || !!c.componentRef);
+          if (!childIngs || childIngs.length === 0) {
+            expanded.push(ing); // fallback: keep ref as-is
+            continue;
+          }
+          const childBatch = childIngs.reduce((s, c) => s + (c.portionGrams || 0), 0);
+          const parentGrams = ing.portionGrams || 0;
+          const scale = childBatch > 0 && parentGrams > 0 ? parentGrams / childBatch : 1;
+          for (const c of childIngs) {
+            expanded.push({
+              ...c,
+              section: ing.section, // inherit parent's section
+              portionGrams:
+                typeof c.portionGrams === 'number'
+                  ? Math.round(c.portionGrams * scale * 100) / 100
+                  : c.portionGrams
+            });
+          }
+        } else {
+          expanded.push(ing);
+        }
+      }
       // Map recipeIngredients to form ingredients, matching with game foods from recipe array
-      ingredients = level.recipeIngredients.filter((ing) => !ing.isDish).map((ing, i) => {
+      ingredients = expanded.map((ing, i) => {
         // Try to match this ingredient to a game food
         const matchedFood = level.recipe.find(food => 
           ing.name.toLowerCase().includes(food.toLowerCase()) ||
@@ -2009,7 +2055,20 @@
                     {/if}
                     <ul>
                       {#each group.items as ing}
-                        <li>{formatIngredientLine(ing)}</li>
+                        <li>
+                          {formatIngredientLine(ing)}
+                          {#if ing.componentRef}
+                            {@const childLines = getChildIngredientLines(ing.componentRef)}
+                            {#if childLines.length > 0}
+                              <div class="component-sublist-label">Made from (per recipe batch):</div>
+                              <ul class="component-sublist">
+                                {#each childLines as line}
+                                  <li>{line}</li>
+                                {/each}
+                              </ul>
+                            {/if}
+                          {/if}
+                        </li>
                       {/each}
                     </ul>
                   {/each}
@@ -3192,6 +3251,25 @@
   
   .full-ingredients li {
     margin-bottom: 4px;
+  }
+
+  .component-sublist-label {
+    margin-top: 4px;
+    font-size: 0.78rem;
+    font-style: italic;
+    color: #888;
+  }
+
+  .component-sublist {
+    margin: 2px 0 6px !important;
+    padding-left: 18px !important;
+    font-size: 0.8rem !important;
+    color: #777 !important;
+    list-style: circle;
+  }
+
+  .component-sublist li {
+    margin-bottom: 2px !important;
   }
 
   .recipe-nutrition {

@@ -3,7 +3,7 @@
   "recipe_name": "Cookies, Gingersnaps",
   "sr_rule": "Rule C",
   "canonical_ndb_no": "18172",
-  "cooking_method": "bake",
+  "cooking_method": "baked",
   "cooking_method_normalized": "baked",
   "yield_factor_water": 0.4,
   "yield_factor_fat": 1.0,
@@ -19,12 +19,12 @@
   "grams_per_serving": 16.77,
   "ingredients": [
     {
-      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ingredient_key": "flour_ap_white_enriched_unbleached",
       "ndb_no": "20581",
-      "long_desc": "Wheat flour, white, all-purpose, enriched",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, unbleached",
       "grams": 281.25,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "2\u00bc cups",
       "contribution": {
         "Energy_KCal": 1023.75,
@@ -44,8 +44,8 @@
       "ndb_no": "18372",
       "long_desc": "Leavening agents, baking soda",
       "grams": 9.2,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "2 teaspoons",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -65,8 +65,8 @@
       "ndb_no": "2047",
       "long_desc": "Salt, table",
       "grams": 3.0,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "\u00bd teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -86,8 +86,8 @@
       "ndb_no": "1145",
       "long_desc": "Butter, without salt",
       "grams": 113.5,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "\u00bd cup (1 stick)",
       "contribution": {
         "Energy_KCal": 813.795,
@@ -107,8 +107,8 @@
       "ndb_no": "19335",
       "long_desc": "Sugars, granulated",
       "grams": 200.0,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "1 cup",
       "contribution": {
         "Energy_KCal": 774.0,
@@ -128,8 +128,8 @@
       "ndb_no": "19304",
       "long_desc": "Molasses",
       "grams": 168.5,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "\u00bd cup",
       "contribution": {
         "Energy_KCal": 488.65,
@@ -149,8 +149,8 @@
       "ndb_no": "1123",
       "long_desc": "Egg, whole, raw, fresh",
       "grams": 50.0,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "1 large",
       "contribution": {
         "Energy_KCal": 71.5,
@@ -170,8 +170,8 @@
       "ndb_no": "2021",
       "long_desc": "Spices, ginger, ground",
       "grams": 3.6,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "2 teaspoons",
       "contribution": {
         "Energy_KCal": 12.06,
@@ -191,8 +191,8 @@
       "ndb_no": "2010",
       "long_desc": "Spices, cinnamon, ground",
       "grams": 2.6,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "1 teaspoon",
       "contribution": {
         "Energy_KCal": 6.422,
@@ -212,8 +212,8 @@
       "ndb_no": "2011",
       "long_desc": "Spices, cloves, ground",
       "grams": 1.05,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "\u00bd teaspoon",
       "contribution": {
         "Energy_KCal": 2.877,
@@ -392,5 +392,39 @@
     "omega6": 0.06,
     "AddedSugars": 7.82,
     "IntrinsicSugars": 0.03
-  }
+  },
+  "sections": [
+    {
+      "section_key": "rolling",
+      "section_label": "Cookies",
+      "prep_method": "rolled",
+      "cook_method": "baked",
+      "cooking_method": "baked",
+      "cooking_method_normalized": "baked",
+      "yield_factor_water": 0.4,
+      "yield_factor_fat": 1.0,
+      "yield_factor_other": 1.0,
+      "ingredient_count": 1,
+      "raw_grams": 50.0,
+      "raw_water_grams": 0.01,
+      "raw_fat_grams": 0.0,
+      "final_grams": 49.99
+    },
+    {
+      "section_key": "dough",
+      "section_label": "Dough",
+      "prep_method": "rolled",
+      "cook_method": "baked",
+      "cooking_method": "baked",
+      "cooking_method_normalized": "baked",
+      "yield_factor_water": 0.4,
+      "yield_factor_fat": 1.0,
+      "yield_factor_other": 1.0,
+      "ingredient_count": 10,
+      "raw_grams": 832.7,
+      "raw_water_grams": 129.61,
+      "raw_fat_grams": 100.06,
+      "final_grams": 754.93
+    }
+  ]
 }

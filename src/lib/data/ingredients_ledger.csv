@@ -33,7 +33,7 @@ egg_white_raw,1124,EGGWHITE,"Egg, white, raw, fresh",egg whites,large_white,33.0
 egg_whole_raw,1123,EGGRAW,"Egg, whole, raw, fresh",large egg,large_egg,50.0,Large egg ~50g without shell
 egg_yolk_raw,1125,YOLK,"Egg, yolk, raw, fresh",egg yolks,large_yolk,17.0,Large egg yolk ~17g
 figs_dried_uncooked,9094,FIG,"Figs, dried, uncooked",dried figs,cup,150,Dried figs uncooked; 1 cup ~150g
-flour_ap_white_enriched_bleached,20581,FLOURAPENRICHED,"Wheat flour, white, all-purpose, enriched",all-purpose enriched white flour,cup,125.0,
+flour_ap_white_enriched_unbleached,20581,FLOURAPENRICHED,"Wheat flour, white, all-purpose, enriched, unbleached",all-purpose enriched unbleached white flour,cup,125.0,
 flour_cake_white_enriched,20084,FLOURCAKE,"Wheat flour, white, cake, enriched",cake flour,cup,125.0,Home-cook accessible enriched flour; lower protein than AP for tender crust
 flour_pastry_white_enriched_bleached,20623,FLOURPASTRY,"Wheat flour, white (industrial), 9% protein, bleached, enriched",pastry flour (9% protein),cup,125.0,Lower-protein enriched flour for pie crust; same enrichment as AP
 flour_whole_wheat,20080,WHEATWHOLE,"Wheat flour, whole-grain",whole wheat flour,cup,120.0,Whole wheat flour; ~120g per cup
@@ -75,3 +75,11 @@ water,14411,WATER,"Water, tap, drinking",water,cup,237.0,Tap water; nutritionall
 coconut_water,12119,COCONUTWATER,"Nuts, coconut water",coconut water,cup,240.0,Fresh coconut water; ~19 kcal/cup; NDB 12119
 coconut_extract,2050,VANILLA,Vanilla extract,coconut extract,teaspoon,4.2,Coconut-flavored extract; nutritionally equivalent to vanilla extract (NDB 2050 proxy)
 pineapple_juice_canned,9273,PINEAPPLEJUICE,"Pineapple juice, canned, unsweetened",pineapple juice (reserved),tablespoon,15.0,Reserved juice from canned pineapple; 1 tbsp = ~15g
+ground_pork_raw,10219,GROUNDPORK,"Pork, fresh, ground, raw",raw ground pork,oz,28.35,
+sage_ground,2038,SAGE,"Spices, sage, ground",ground sage,teaspoon,0.7,
+black_pepper_ground,2030,BLACKPEPPER,"Spices, pepper, black",ground black pepper,teaspoon,2.3,
+oregano_dried_ground,2027,OREGANO,"Spices, oregano, dried",dried oregano,teaspoon,1.8,
+garlic_powder,2020,GARLICPOWDER,"Spices, garlic powder",garlic powder,teaspoon,3.1,
+onion_powder,2026,ONIONPOWDER,"Spices, onion powder",onion powder,teaspoon,2.4,
+paprika_ground,2028,PAPRIKA,"Spices, paprika",paprika,teaspoon,2.3,
+pork_backfat_raw,10004,PORKBACKFAT,"Pork, fresh, backfat, raw",pork backfat (finely chopped),tbsp,14.0,Raw pork fatback used to enrich lean ground pork in homemade sausage recipes

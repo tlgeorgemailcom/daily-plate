@@ -3,7 +3,7 @@
   "recipe_name": "Buttermilk Pie",
   "sr_rule": "Rule D",
   "canonical_ndb_no": null,
-  "cooking_method": "bake",
+  "cooking_method": "baked",
   "cooking_method_normalized": "baked",
   "yield_factor_water": 0.9,
   "yield_factor_fat": 1.0,
@@ -19,9 +19,9 @@
   "grams_per_serving": 148.27,
   "ingredients": [
     {
-      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ingredient_key": "flour_ap_white_enriched_unbleached",
       "ndb_no": "20581",
-      "long_desc": "Wheat flour, white, all-purpose, enriched",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, unbleached",
       "grams": 187.5,
       "section": "crust",
       "ingredient_group": "crust",
@@ -208,9 +208,9 @@
       "intrinsic_sugar_g": 11.956
     },
     {
-      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ingredient_key": "flour_ap_white_enriched_unbleached",
       "ndb_no": "20581",
-      "long_desc": "Wheat flour, white, all-purpose, enriched",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, unbleached",
       "grams": 23.44,
       "section": "filling",
       "ingredient_group": "filling",
@@ -405,7 +405,7 @@
     "VitaminA_RAE": 218.27,
     "Retinol": 214.57,
     "Carotene_beta": 41.2,
-    "VitaminD": 29.73,
+    "VitaminD": 29.74,
     "VitaminE_alphaTocopherol": 0.85,
     "VitaminK_phylloquinone": 2.28,
     "VitaminC_totalAscorbicAcid": 0.18,
@@ -455,5 +455,39 @@
     "omega6": 0.82,
     "AddedSugars": 37.74,
     "IntrinsicSugars": 1.73
-  }
+  },
+  "sections": [
+    {
+      "section_key": "crust",
+      "section_label": "Crust",
+      "prep_method": "rolled",
+      "cook_method": "baked",
+      "cooking_method": "baked",
+      "cooking_method_normalized": "baked",
+      "yield_factor_water": 0.9,
+      "yield_factor_fat": 1.0,
+      "yield_factor_other": 1.0,
+      "ingredient_count": 5,
+      "raw_grams": 392.69,
+      "raw_water_grams": 110.68,
+      "raw_fat_grams": 111.25,
+      "final_grams": 381.62
+    },
+    {
+      "section_key": "filling",
+      "section_label": "Filling",
+      "prep_method": "whisked",
+      "cook_method": "baked",
+      "cooking_method": "baked",
+      "cooking_method_normalized": "baked",
+      "yield_factor_water": 0.9,
+      "yield_factor_fat": 1.0,
+      "yield_factor_other": 1.0,
+      "ingredient_count": 9,
+      "raw_grams": 840.19,
+      "raw_water_grams": 356.7,
+      "raw_fat_grams": 114.87,
+      "final_grams": 804.52
+    }
+  ]
 }

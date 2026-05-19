@@ -94,6 +94,31 @@ def _build_payload(rid: str, recipes, ings, ledger, instrs) -> dict:
     ri_rows = ings.get(rid, [])
     recipe_ingredients = []
     for r in ri_rows:
+        # Phase 8c: component-ref ingredient — pull display data from the child
+        # build/recipe rather than the ledger (no NDB exists for a child dish).
+        if r.ingredient_key.startswith("@"):
+            child_id = r.ingredient_key[1:]
+            child_rec = recipes.get(child_id)
+            child_path = BUILDS_DIR / f"{child_id}.json"
+            child_build = json.loads(child_path.read_text()) if child_path.exists() else {}
+            child_name = (
+                r.display_name_override
+                or (child_rec.recipe_name if child_rec else child_build.get("recipe_name", child_id))
+            )
+            recipe_ingredients.append({
+                "name": child_name,
+                "quantity": r.qty_display,
+                "section": r.section,
+                "foodWord": child_rec.food_word if child_rec else "",
+                "ndbNo": child_rec.canonical_ndb_no if child_rec else "",
+                "portionDesc": "g",
+                "portionGrams": r.grams,
+                "servingCount": 1,
+                "exempt": False,
+                "isDish": True,
+                "componentRef": child_id,
+            })
+            continue
         entry = ledger.get(r.ingredient_key)
         if not entry:
             continue

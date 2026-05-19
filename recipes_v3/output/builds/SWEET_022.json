@@ -3,7 +3,7 @@
   "recipe_name": "Pineapple Upside-Down Cake",
   "sr_rule": "Rule B",
   "canonical_ndb_no": "18119",
-  "cooking_method": "bake",
+  "cooking_method": "baked",
   "cooking_method_normalized": "baked",
   "yield_factor_water": 0.86,
   "yield_factor_fat": 1.0,
@@ -103,9 +103,9 @@
       "intrinsic_sugar_g": 0.0
     },
     {
-      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ingredient_key": "flour_ap_white_enriched_unbleached",
       "ndb_no": "20581",
-      "long_desc": "Wheat flour, white, all-purpose, enriched",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, unbleached",
       "grams": 187.5,
       "section": "cake",
       "ingredient_group": "cake",
@@ -426,5 +426,39 @@
     "omega6": 0.23,
     "AddedSugars": 34.94,
     "IntrinsicSugars": 4.01
-  }
+  },
+  "sections": [
+    {
+      "section_key": "cake",
+      "section_label": "Cake",
+      "prep_method": "batter",
+      "cook_method": "baked",
+      "cooking_method": "baked",
+      "cooking_method_normalized": "baked",
+      "yield_factor_water": 0.86,
+      "yield_factor_fat": 1.0,
+      "yield_factor_other": 1.0,
+      "ingredient_count": 8,
+      "raw_grams": 667.45,
+      "raw_water_grams": 208.64,
+      "raw_fat_grams": 92.12,
+      "final_grams": 638.24
+    },
+    {
+      "section_key": "topping",
+      "section_label": "Topping",
+      "prep_method": "combined",
+      "cook_method": "baked",
+      "cooking_method": "baked",
+      "cooking_method_normalized": "baked",
+      "yield_factor_water": 0.86,
+      "yield_factor_fat": 1.0,
+      "yield_factor_other": 1.0,
+      "ingredient_count": 4,
+      "raw_grams": 414.6,
+      "raw_water_grams": 190.95,
+      "raw_fat_grams": 34.83,
+      "final_grams": 387.87
+    }
+  ]
 }

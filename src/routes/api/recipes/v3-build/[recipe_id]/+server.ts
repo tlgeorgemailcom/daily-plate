@@ -50,6 +50,45 @@ export const GET: RequestHandler = async ({ params }) => {
     throw error(404, `No v3 build for ${recipeId}`);
   }
 
+  // For composite recipes (Rule D with component_ref ingredients), the
+  // recipe_sections.csv records cook_method='raw' because at the composite
+  // assembly step the components are already cooked. For display in the
+  // editor we want the SOURCE recipe's cook_method (e.g. baked for biscuit,
+  // boiled for milk gravy) so each section header shows how that component
+  // was actually prepared.
+  type SectionRow = Record<string, unknown>;
+  type IngredientRow = Record<string, unknown>;
+  const rawIngredients = (parsed.ingredients ?? []) as IngredientRow[];
+  const sectionToComponentRef = new Map<string, string>();
+  for (const ing of rawIngredients) {
+    const ref = ing.component_ref as string | undefined;
+    const sec = ing.section as string | undefined;
+    if (ref && sec && !sectionToComponentRef.has(sec)) {
+      sectionToComponentRef.set(sec, ref);
+    }
+  }
+  const enrichedSections = ((parsed.sections ?? []) as SectionRow[]).map((sec) => {
+    const ref = sectionToComponentRef.get(sec.section_key as string);
+    if (!ref) return sec;
+    const childBuild = BUILDS_BY_ID[ref];
+    if (!childBuild) return sec;
+    // Prefer the child's top-level cooking_method; when the child is itself
+    // multi-section (e.g. sausage gravy = fry sausage + simmer gravy), pick
+    // the section with the largest final_grams as the dominant cook step.
+    let childCook =
+      (childBuild.cooking_method as string | undefined) ??
+      (childBuild.cook_method as string | undefined);
+    if (!childCook || childCook === 'multi') {
+      const childSecs = (childBuild.sections as SectionRow[] | undefined) ?? [];
+      const dominant = childSecs
+        .slice()
+        .sort((a, b) => ((b.final_grams as number) ?? 0) - ((a.final_grams as number) ?? 0))[0];
+      childCook = dominant?.cook_method as string | undefined;
+    }
+    if (!childCook || childCook === 'multi') return sec;
+    return { ...sec, cook_method: childCook, cooking_method: childCook, cooking_method_normalized: childCook };
+  });
+
   return json({
     recipe_id: parsed.recipe_id,
     srRule: parsed.sr_rule,
@@ -66,7 +105,7 @@ export const GET: RequestHandler = async ({ params }) => {
     auditStatus: parsed.audit_status ?? '',
     auditNotes: parsed.audit_notes ?? '',
     recipeName: (parsed.recipe_name as string) ?? '',
-    ingredients: parsed.ingredients ?? [],
-    sections: parsed.sections ?? [],
+    ingredients: rawIngredients,
+    sections: enrichedSections,
   });
 };

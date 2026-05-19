@@ -43,9 +43,40 @@ def main() -> int:
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
+    # Phase 8c: topological order — recipes that reference @<child> in their ingredient
+    # rows must be built after the children. Kahn's algorithm; ties broken alphabetically
+    # so the output ordering stays deterministic.
+    deps: dict[str, set[str]] = {rid: set() for rid in recipes}
+    for rid, rows in ings.items():
+        if rid not in deps:
+            continue
+        for r in rows:
+            ik = r.ingredient_key
+            if ik.startswith("@"):
+                child = ik[1:]
+                if child in deps:
+                    deps[rid].add(child)
+    indeg: dict[str, int] = {rid: len(deps[rid]) for rid in deps}
+    ready = sorted([rid for rid, d in indeg.items() if d == 0])
+    order: list[str] = []
+    while ready:
+        rid = ready.pop(0)
+        order.append(rid)
+        for parent in sorted(deps):
+            if rid in deps[parent]:
+                deps[parent].discard(rid)
+                indeg[parent] -= 1
+                if indeg[parent] == 0:
+                    ready.append(parent)
+                    ready.sort()
+    if len(order) != len(recipes):
+        missing = sorted(set(recipes) - set(order))
+        print(f"ERROR: composite cycle prevents build of {missing}", file=sys.stderr)
+        return 1
+
     ok, failed = 0, 0
     failures: list[tuple[str, str]] = []
-    for rid in sorted(recipes):
+    for rid in order:
         try:
             if rid not in ings:
                 raise RuntimeError("no ingredient rows")

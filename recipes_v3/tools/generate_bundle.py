@@ -119,6 +119,7 @@ def ts_recipe_ingredients(ings):
         if ing.get('portionGrams') is not None: parts.append(f"portionGrams: {ing['portionGrams']}")
         if ing.get('servingCount') is not None and ing['servingCount'] != 1: parts.append(f"servingCount: {ing['servingCount']}")
         if ing.get('isDish'):    parts.append('isDish: true')
+        if ing.get('componentRef'): parts.append(f"componentRef: '{esc(ing['componentRef'])}'")
         if ing.get('exempt'):    parts.append('exempt: true')
         lines.append('      { ' + ', '.join(parts) + ' }')
     return '[\n' + ',\n'.join(lines) + '\n    ]'
@@ -484,7 +485,38 @@ for recipe in recipes:
         'isDish':      True,
     })
     for ing in ingredients_by_recipe.get(rid, []):
-        led = ledger.get(ing['ingredient_key'], {})
+        ing_key = ing['ingredient_key']
+        # Phase 8c: component-ref ingredient (@<child_id>) — render as an isDish
+        # row referencing the child recipe. The front-end already filters isDish
+        # rows out of per-ingredient nutrition tallies; the parent's nutrition_json
+        # already encodes the composite totals.
+        if ing_key.startswith('@'):
+            child_id = ing_key[1:]
+            child_rec = next((r for r in recipes if r['recipe_id'] == child_id), None)
+            child_name = (
+                ing.get('display_name_override')
+                or (child_rec.get('recipe_name', child_id) if child_rec else child_id)
+            )
+            item = {
+                'name':        child_name,
+                'quantity':    ing.get('qty_display', ''),
+                'foodWord':    (child_rec.get('food_word', '') if child_rec else ''),
+                'ndbNo':       (child_rec.get('canonical_ndb_no', '') if child_rec else ''),
+                'portionDesc': 'g',
+                'isDish':      True,
+                'componentRef': child_id,
+            }
+            try:
+                item['portionGrams'] = float(ing.get('grams', '') or 0) or None
+                if item['portionGrams'] is None:
+                    del item['portionGrams']
+            except ValueError:
+                pass
+            if ing.get('section'):
+                item['section'] = ing['section']
+            recipe_ings.append(item)
+            continue
+        led = ledger.get(ing_key, {})
         item = {
             'name':        ing.get('display_name_override') or led.get('default_display_name', ''),
             'quantity':    ing.get('qty_display', ''),

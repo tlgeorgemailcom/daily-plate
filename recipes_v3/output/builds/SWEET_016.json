@@ -3,7 +3,7 @@
   "recipe_name": "White Cake (No Frosting)",
   "sr_rule": "Rule A",
   "canonical_ndb_no": "18139",
-  "cooking_method": "bake",
+  "cooking_method": "baked",
   "cooking_method_normalized": "baked",
   "yield_factor_water": 0.62,
   "yield_factor_fat": 1.0,
@@ -13,15 +13,15 @@
   "raw_total_grams": 1184.0,
   "raw_water_grams": 400.12,
   "raw_fat_grams": 125.34,
-  "water_lost_grams": 152.04,
+  "water_lost_grams": 152.05,
   "fat_lost_grams": 0.0,
   "cooked_total_grams": 1031.96,
   "grams_per_serving": 86.0,
   "ingredients": [
     {
-      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ingredient_key": "flour_ap_white_enriched_unbleached",
       "ndb_no": "20581",
-      "long_desc": "Wheat flour, white, all-purpose, enriched",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, unbleached",
       "grams": 281.25,
       "section": "cake",
       "ingredient_group": "cake",
@@ -329,5 +329,23 @@
     "omega6": 0.0,
     "AddedSugars": 29.11,
     "IntrinsicSugars": 1.17
-  }
+  },
+  "sections": [
+    {
+      "section_key": "cake",
+      "section_label": "Cake",
+      "prep_method": "mixed",
+      "cook_method": "baked",
+      "cooking_method": "baked",
+      "cooking_method_normalized": "baked",
+      "yield_factor_water": 0.62,
+      "yield_factor_fat": 1.0,
+      "yield_factor_other": 1.0,
+      "ingredient_count": 8,
+      "raw_grams": 1184.0,
+      "raw_water_grams": 400.12,
+      "raw_fat_grams": 125.34,
+      "final_grams": 1031.96
+    }
+  ]
 }

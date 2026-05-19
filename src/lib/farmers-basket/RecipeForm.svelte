@@ -817,6 +817,7 @@
     section?: string;
     ingredient_group?: string;
     qty_display?: string;
+    component_ref?: string;
   };
   type V3Build = {
     recipe_id: string;
@@ -882,9 +883,13 @@
             yieldFactorOther: s.yield_factor_other,
           }));
         }
-        if (data.ingredients && data.ingredients.length > 0) {
+        // Composite recipes (Rule D) reference child recipes via `component_ref`
+        // rows that have no NDB. We skip those here and rely on initialData's
+        // pre-expanded children (from levelToFormData) to populate the editor.
+        const v3LeafIngredients = (data.ingredients ?? []).filter((ing) => !ing.component_ref);
+        if (v3LeafIngredients.length > 0) {
           const ndbToFood = new Map(FOODS.map(f => [f.ndb, f]));
-          ingredients = data.ingredients.map((ing, i) => {
+          ingredients = v3LeafIngredients.map((ing, i) => {
             const food = ndbToFood.get(ing.ndb_no);
             return {
               id: i + 1,
@@ -905,7 +910,7 @@
           nextIngredientId = ingredients.length + 1;
           // Append moderator-added ingredients from stored data that aren't in the v3 build
           // (e.g. optional spices added via the Edit Recipe UI).
-          const v3NdbNos = new Set(data.ingredients.map((i) => i.ndb_no).filter(Boolean));
+          const v3NdbNos = new Set(v3LeafIngredients.map((i) => i.ndb_no).filter(Boolean));
           const storedExtras = (initialData.ingredients ?? []).filter(
             (ing) => !ing.isDish && (ing.ndbNo ? !v3NdbNos.has(ing.ndbNo) : true)
           );

@@ -3,7 +3,7 @@
   "recipe_name": "Cheesecake (NY-Style)",
   "sr_rule": "Rule C",
   "canonical_ndb_no": "18147",
-  "cooking_method": "bake",
+  "cooking_method": "baked",
   "cooking_method_normalized": "baked",
   "yield_factor_water": 0.92,
   "yield_factor_fat": 1.0,
@@ -250,9 +250,9 @@
       "intrinsic_sugar_g": 0.095
     },
     {
-      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ingredient_key": "flour_ap_white_enriched_unbleached",
       "ndb_no": "20581",
-      "long_desc": "Wheat flour, white, all-purpose, enriched",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, unbleached",
       "grams": 15.62,
       "section": "filling",
       "ingredient_group": "filling",
@@ -434,5 +434,39 @@
     "omega6": 1.37,
     "AddedSugars": 25.98,
     "IntrinsicSugars": 3.3
-  }
+  },
+  "sections": [
+    {
+      "section_key": "crust",
+      "section_label": "Crust",
+      "prep_method": "pressed",
+      "cook_method": "baked",
+      "cooking_method": "baked",
+      "cooking_method_normalized": "baked",
+      "yield_factor_water": 0.92,
+      "yield_factor_fat": 1.0,
+      "yield_factor_other": 1.0,
+      "ingredient_count": 4,
+      "raw_grams": 246.75,
+      "raw_water_grams": 17.83,
+      "raw_fat_grams": 73.49,
+      "final_grams": 245.32
+    },
+    {
+      "section_key": "filling",
+      "section_label": "Filling",
+      "prep_method": "whisked",
+      "cook_method": "baked",
+      "cooking_method": "baked",
+      "cooking_method_normalized": "baked",
+      "yield_factor_water": 0.92,
+      "yield_factor_fat": 1.0,
+      "yield_factor_other": 1.0,
+      "ingredient_count": 9,
+      "raw_grams": 1513.33,
+      "raw_water_grams": 728.77,
+      "raw_fat_grams": 358.66,
+      "final_grams": 1455.02
+    }
+  ]
 }

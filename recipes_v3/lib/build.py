@@ -27,9 +27,19 @@ Added/Intrinsic sugar split per ingredient (see lib/added_sugars.py):
 Derived nutrients (not direct comboo columns):
     omega3 = ALA + EPA + DPA + DHA
     omega6 = LinoleicAcid (until further species are added)
+
+Phase 8c — composite "recipe-within-recipe" support:
+    Ingredient rows whose ``ingredient_key`` starts with ``@`` reference a
+    previously-built child recipe (e.g. ``@BKFST_001`` = Biscuit). Their
+    nutrition is sourced from the child's already-cooked per-100g panel and
+    bypasses retention/yield (the child already applied them at its own build
+    time). To keep the math passthrough-clean, the validator requires any
+    section that hosts component-ref rows to set yfw=yff=yfo=1.0 and
+    cook_method=raw (so all retention factors collapse to 1.0).
 """
 from __future__ import annotations
 
+import json
 from typing import Any
 
 from .added_sugars import classify, split_sugar
@@ -40,6 +50,8 @@ from .load import (
     LedgerEntry,
     Recipe,
     Section,
+    child_recipe_id,
+    is_component_ref,
     load_comboo_nutrients,
 )
 from .retention import get_retention, normalize_cooking_method
@@ -75,6 +87,34 @@ def _derive_omegas(d: dict[str, float]) -> tuple[float, float]:
     )
     o6 = d.get("LinoleicAcid", 0.0)
     return o3, o6
+
+
+def _load_child_build(child_id: str) -> dict[str, Any]:
+    """Load a previously-built child recipe JSON for composite/component-ref use.
+
+    Raises a clear error if the child has not been built yet.
+    """
+    # The build directory lives at recipes_v3/output/builds/ relative to this file.
+    from pathlib import Path
+    builds_dir = Path(__file__).resolve().parents[1] / "output" / "builds"
+    path = builds_dir / f"{child_id}.json"
+    if not path.exists():
+        raise RuntimeError(
+            f"Composite reference @{child_id} requires {path} to exist. "
+            f"Build the child first: python3 recipes_v3/tools/build_one.py {child_id}"
+        )
+    return json.loads(path.read_text())
+
+
+def _component_contribution(child_build: dict[str, Any], grams: float) -> dict[str, float]:
+    """Return per-nutrient contribution of `grams` of an already-cooked child component.
+
+    The child's per100g panel is treated as the authoritative nutrient density of
+    the cooked product. We multiply by grams/100 — no retention, no yield.
+    """
+    p100 = child_build.get("per100g", {})
+    scale = grams / 100.0
+    return {n: float(p100.get(n, 0.0)) * scale for n in EXTENDED_NUTRIENTS}
 
 
 def build_recipe(
@@ -127,6 +167,40 @@ def _build_recipe_single(
         # Display-only: the moderator UI still shows optional ingredients.
         if row.is_optional:
             skipped.append({"ingredient_key": row.ingredient_key, "reason": "optional"})
+            continue
+        # Phase 8c: component-ref ingredient (@<child_id>) — load child build,
+        # contribute child.per100g[N] × grams/100 directly. Bypasses ledger/NDB
+        # lookup, retention, and yield (child already applied them).
+        if is_component_ref(row.ingredient_key):
+            cid = child_recipe_id(row.ingredient_key)
+            child = _load_child_build(cid)
+            p100 = child.get("per100g", {})
+            scale = row.grams / 100.0
+            raw_total_grams += row.grams
+            raw_water += float(p100.get("Water", 0.0)) * scale
+            raw_fat += float(p100.get("TotalLipidFat", 0.0)) * scale
+            contrib_full: dict[str, float] = {}
+            for n in EXTENDED_NUTRIENTS:
+                c = float(p100.get(n, 0.0)) * scale
+                contrib_full[n] = c
+                sums[n] += c
+            # Added/intrinsic sugars come straight from the child (already split).
+            sum_added_sugar += float(p100.get("AddedSugars", 0.0)) * scale
+            sum_intrinsic_sugar += float(p100.get("IntrinsicSugars", 0.0)) * scale
+            ingredient_breakdown.append({
+                "ingredient_key": row.ingredient_key,
+                "component_ref": cid,
+                "ndb_no": "",
+                "long_desc": child.get("recipe_name", cid),
+                "grams": _round(row.grams, 2),
+                "section": row.section,
+                "ingredient_group": row.ingredient_group,
+                "qty_display": row.qty_display,
+                "contribution": {m: _round(contrib_full.get(m, 0.0), 3) for m in MACROS},
+                "sugar_policy": "component",
+                "added_sugar_g": _round(float(p100.get("AddedSugars", 0.0)) * scale, 3),
+                "intrinsic_sugar_g": _round(float(p100.get("IntrinsicSugars", 0.0)) * scale, 3),
+            })
             continue
         entry = ledger.get(row.ingredient_key)
         if not entry:
@@ -284,6 +358,44 @@ def _build_recipe_multi(
         # is_optional means "cook may omit" — excluded from nutrition math.
         if row.is_optional:
             skipped.append({"ingredient_key": row.ingredient_key, "reason": "optional"})
+            continue
+        # Phase 8c: component-ref ingredient (@<child_id>).
+        if is_component_ref(row.ingredient_key):
+            if row.section not in sec_state:
+                raise RuntimeError(
+                    f"Recipe {recipe.recipe_id}: component-ref {row.ingredient_key} has "
+                    f"section={row.section!r} but no matching section_key in recipe_sections.csv"
+                )
+            cid = child_recipe_id(row.ingredient_key)
+            child = _load_child_build(cid)
+            p100 = child.get("per100g", {})
+            st = sec_state[row.section]
+            scale = row.grams / 100.0
+            st["raw_total"] += row.grams
+            st["raw_water"] += float(p100.get("Water", 0.0)) * scale
+            st["raw_fat"] += float(p100.get("TotalLipidFat", 0.0)) * scale
+            st["ingredient_count"] += 1
+            contrib_full: dict[str, float] = {}
+            for n in EXTENDED_NUTRIENTS:
+                c = float(p100.get(n, 0.0)) * scale
+                contrib_full[n] = c
+                st["sums"][n] += c
+            st["added_sugar"] += float(p100.get("AddedSugars", 0.0)) * scale
+            st["intrinsic_sugar"] += float(p100.get("IntrinsicSugars", 0.0)) * scale
+            ingredient_breakdown.append({
+                "ingredient_key": row.ingredient_key,
+                "component_ref": cid,
+                "ndb_no": "",
+                "long_desc": child.get("recipe_name", cid),
+                "grams": _round(row.grams, 2),
+                "section": row.section,
+                "ingredient_group": row.ingredient_group,
+                "qty_display": row.qty_display,
+                "contribution": {m: _round(contrib_full.get(m, 0.0), 3) for m in MACROS},
+                "sugar_policy": "component",
+                "added_sugar_g": _round(float(p100.get("AddedSugars", 0.0)) * scale, 3),
+                "intrinsic_sugar_g": _round(float(p100.get("IntrinsicSugars", 0.0)) * scale, 3),
+            })
             continue
         entry = ledger.get(row.ingredient_key)
         if not entry:
@@ -446,8 +558,15 @@ def _build_recipe_multi(
     # Recipe-level cooking_method label: if all sections share one cook_method, use it;
     # otherwise emit "multi" (see §18.5). Uses cook_method (the retention driver),
     # not prep_method (the authoring label).
+    # Phase 8c: composite recipes (any section sourced from a child build) are always
+    # labelled "multi" even if every wrapper section reads cook_method=raw, so the UI
+    # presents them as assembled dishes rather than a single raw food.
+    has_composite_section = any(s.source_recipe for s in sections)
     methods_used = sorted({s.cook_method for s in sections})
-    dish_method_label = methods_used[0] if len(methods_used) == 1 else "multi"
+    if has_composite_section:
+        dish_method_label = "multi"
+    else:
+        dish_method_label = methods_used[0] if len(methods_used) == 1 else "multi"
     dish_method_normalized = (
         normalize_cooking_method(dish_method_label) if dish_method_label != "multi" else "multi"
     )

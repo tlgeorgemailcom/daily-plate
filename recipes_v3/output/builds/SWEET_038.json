@@ -124,9 +124,9 @@
       "intrinsic_sugar_g": 0.37
     },
     {
-      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ingredient_key": "flour_ap_white_enriched_unbleached",
       "ndb_no": "20581",
-      "long_desc": "Wheat flour, white, all-purpose, enriched",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, unbleached",
       "grams": 312.5,
       "section": "cookies",
       "ingredient_group": "cookies",

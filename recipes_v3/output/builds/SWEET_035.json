@@ -3,7 +3,7 @@
   "recipe_name": "Cookies, Fig Bars",
   "sr_rule": "Rule C",
   "canonical_ndb_no": "18170",
-  "cooking_method": "bake",
+  "cooking_method": "baked",
   "cooking_method_normalized": "baked",
   "yield_factor_water": 0.62,
   "yield_factor_fat": 1.0,
@@ -61,9 +61,9 @@
       "intrinsic_sugar_g": 0.0
     },
     {
-      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ingredient_key": "flour_ap_white_enriched_unbleached",
       "ndb_no": "20581",
-      "long_desc": "Wheat flour, white, all-purpose, enriched",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, unbleached",
       "grams": 166.67,
       "section": "crust",
       "ingredient_group": "crust",
@@ -350,5 +350,39 @@
     "omega6": 0.16,
     "AddedSugars": 4.85,
     "IntrinsicSugars": 9.06
-  }
+  },
+  "sections": [
+    {
+      "section_key": "crust",
+      "section_label": "Crust",
+      "prep_method": "pressed",
+      "cook_method": "baked",
+      "cooking_method": "baked",
+      "cooking_method_normalized": "baked",
+      "yield_factor_water": 0.62,
+      "yield_factor_fat": 1.0,
+      "yield_factor_other": 1.0,
+      "ingredient_count": 7,
+      "raw_grams": 411.03,
+      "raw_water_grams": 80.08,
+      "raw_fat_grams": 90.8,
+      "final_grams": 380.6
+    },
+    {
+      "section_key": "filling",
+      "section_label": "Filling",
+      "prep_method": "simmered",
+      "cook_method": "baked",
+      "cooking_method": "baked",
+      "cooking_method_normalized": "baked",
+      "yield_factor_water": 0.62,
+      "yield_factor_fat": 1.0,
+      "yield_factor_other": 1.0,
+      "ingredient_count": 2,
+      "raw_grams": 477.75,
+      "raw_water_grams": 267.72,
+      "raw_fat_grams": 2.79,
+      "final_grams": 376.02
+    }
+  ]
 }

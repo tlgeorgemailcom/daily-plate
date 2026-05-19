@@ -3,7 +3,7 @@
   "recipe_name": "Cookies, Sugar, from Recipe with Margarine",
   "sr_rule": "Rule A",
   "canonical_ndb_no": "18208",
-  "cooking_method": "bake",
+  "cooking_method": "baked",
   "cooking_method_normalized": "baked",
   "yield_factor_water": 0.46,
   "yield_factor_fat": 1.0,
@@ -13,18 +13,18 @@
   "raw_total_grams": 887.15,
   "raw_water_grams": 157.25,
   "raw_fat_grams": 196.09,
-  "water_lost_grams": 84.91,
+  "water_lost_grams": 84.92,
   "fat_lost_grams": 0.0,
   "cooked_total_grams": 802.24,
   "grams_per_serving": 33.43,
   "ingredients": [
     {
-      "ingredient_key": "flour_ap_white_enriched_bleached",
+      "ingredient_key": "flour_ap_white_enriched_unbleached",
       "ndb_no": "20581",
-      "long_desc": "Wheat flour, white, all-purpose, enriched",
+      "long_desc": "Wheat flour, white, all-purpose, enriched, unbleached",
       "grams": 343.75,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "2\u00be cups",
       "contribution": {
         "Energy_KCal": 1251.25,
@@ -44,8 +44,8 @@
       "ndb_no": "18370",
       "long_desc": "Leavening agents, baking powder, double-acting, straight phosphate",
       "grams": 9.2,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "2 teaspoons",
       "contribution": {
         "Energy_KCal": 4.692,
@@ -65,8 +65,8 @@
       "ndb_no": "2047",
       "long_desc": "Salt, table",
       "grams": 3.0,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "\u00bd teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -86,8 +86,8 @@
       "ndb_no": "4610",
       "long_desc": "Margarine, regular, 80% fat, composite, stick, with salt",
       "grams": 227.0,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "1 cup (2 sticks)",
       "contribution": {
         "Energy_KCal": 1627.59,
@@ -107,8 +107,8 @@
       "ndb_no": "19335",
       "long_desc": "Sugars, granulated",
       "grams": 150.0,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "\u00be cup",
       "contribution": {
         "Energy_KCal": 580.5,
@@ -128,8 +128,8 @@
       "ndb_no": "1123",
       "long_desc": "Egg, whole, raw, fresh",
       "grams": 100.0,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "2 large",
       "contribution": {
         "Energy_KCal": 143.0,
@@ -149,8 +149,8 @@
       "ndb_no": "2050",
       "long_desc": "Vanilla extract",
       "grams": 4.2,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "1 teaspoon",
       "contribution": {
         "Energy_KCal": 12.096,
@@ -329,5 +329,39 @@
     "omega6": 0.05,
     "AddedSugars": 8.32,
     "IntrinsicSugars": 0.08
-  }
+  },
+  "sections": [
+    {
+      "section_key": "rolling",
+      "section_label": "Cookies",
+      "prep_method": "rolled",
+      "cook_method": "baked",
+      "cooking_method": "baked",
+      "cooking_method_normalized": "baked",
+      "yield_factor_water": 0.46,
+      "yield_factor_fat": 1.0,
+      "yield_factor_other": 1.0,
+      "ingredient_count": 1,
+      "raw_grams": 50.0,
+      "raw_water_grams": 0.01,
+      "raw_fat_grams": 0.0,
+      "final_grams": 49.99
+    },
+    {
+      "section_key": "dough",
+      "section_label": "Dough",
+      "prep_method": "rolled",
+      "cook_method": "baked",
+      "cooking_method": "baked",
+      "cooking_method_normalized": "baked",
+      "yield_factor_water": 0.46,
+      "yield_factor_fat": 1.0,
+      "yield_factor_other": 1.0,
+      "ingredient_count": 7,
+      "raw_grams": 837.15,
+      "raw_water_grams": 157.24,
+      "raw_fat_grams": 196.09,
+      "final_grams": 752.24
+    }
+  ]
 }

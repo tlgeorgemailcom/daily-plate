@@ -77,9 +77,11 @@ def main() -> int:
 
     # Rules 4–9: recipe_sections.csv (§18.4)
     valid_recipe_ids: set[str] = set()
+    recipe_status: dict[str, str] = {}
     with RECIPES.open() as f:
         for r in csv.DictReader(f):
             valid_recipe_ids.add(r["recipe_id"])
+            recipe_status[r["recipe_id"]] = (r.get("status") or "").strip()
 
     sections_by_recipe: dict[str, list[dict]] = {}
     if SECTIONS.exists():
@@ -119,6 +121,11 @@ def main() -> int:
                     "section_key": section_key,
                     "section_label": section_label,
                     "cooking_method": cooking_method,
+                    "cook_method": (r.get("cook_method") or "").strip().lower(),
+                    "source_recipe": (r.get("source_recipe") or "").strip(),
+                    "yield_factor_water": (r.get("yield_factor_water") or "").strip(),
+                    "yield_factor_fat": (r.get("yield_factor_fat") or "").strip(),
+                    "yield_factor_other": (r.get("yield_factor_other") or "").strip(),
                 })
 
     # Rules 5+6: ingredient.section coverage (all-or-nothing)
@@ -131,12 +138,111 @@ def main() -> int:
                     continue
                 ings_by_recipe.setdefault(rid, []).append(r)
 
+        # Rules 10–14: Phase 8c component-ref ingredients (@<child_id>)
+        # Build the dependency graph first so we can run cycle detection.
+        dep_graph: dict[str, set[str]] = {}
+        for rid, ings in ings_by_recipe.items():
+            for r in ings:
+                ik = (r.get("ingredient_key") or "").strip()
+                if not ik.startswith("@"):
+                    continue
+                child = ik[1:]
+                # 10: child must be a known recipe
+                if child not in valid_recipe_ids:
+                    errors.append(
+                        f"  recipe_ingredients {rid}: component-ref @{child} "
+                        f"does not match any recipe_id"
+                    )
+                    continue
+                # 11: no self-reference
+                if child == rid:
+                    errors.append(
+                        f"  recipe_ingredients {rid}: component-ref @{child} is a self-reference"
+                    )
+                    continue
+                # 12: child must be approved (composites build only from approved children)
+                cstatus = recipe_status.get(child, "")
+                if cstatus != "approved":
+                    errors.append(
+                        f"  recipe_ingredients {rid}: component-ref @{child} status="
+                        f"{cstatus!r} (must be 'approved')"
+                    )
+                dep_graph.setdefault(rid, set()).add(child)
+
+        # 13: no circular references (DFS)
+        WHITE, GRAY, BLACK = 0, 1, 2
+        color: dict[str, int] = {n: WHITE for n in dep_graph}
+        def _dfs(n: str, path: list[str]) -> bool:
+            color[n] = GRAY
+            for child in dep_graph.get(n, ()):
+                if color.get(child, WHITE) == GRAY:
+                    cycle = " → ".join(path + [n, child])
+                    errors.append(f"  recipe_ingredients: composite cycle detected: {cycle}")
+                    return True
+                if color.get(child, WHITE) == WHITE and _dfs(child, path + [n]):
+                    return True
+            color[n] = BLACK
+            return False
+        for node in list(dep_graph):
+            if color.get(node, WHITE) == WHITE:
+                _dfs(node, [])
+
+        # 14: section that hosts component-ref rows must be yfw=yff=yfo=1.0 + cook_method=raw,
+        #     and its source_recipe (if set) must equal the @-ref child id.
+        for rid, ings in ings_by_recipe.items():
+            comp_rows = [r for r in ings if (r.get("ingredient_key") or "").startswith("@")]
+            if not comp_rows:
+                continue
+            sec_index = {s["section_key"]: s for s in sections_by_recipe.get(rid, [])}
+            for r in comp_rows:
+                sec_key = (r.get("section") or "").strip()
+                if not sec_key or sec_key not in sec_index:
+                    errors.append(
+                        f"  recipe_ingredients {rid}: component-ref {r.get('ingredient_key')} "
+                        f"requires a matching recipe_sections row (section={sec_key!r})"
+                    )
+                    continue
+                s = sec_index[sec_key]
+                child = (r.get("ingredient_key") or "")[1:]
+                if s.get("cook_method") and s["cook_method"] != "raw":
+                    errors.append(
+                        f"  recipe_sections {rid}/{sec_key}: hosts component-ref @{child} "
+                        f"so cook_method must be 'raw' (got {s['cook_method']!r})"
+                    )
+                for fld in ("yield_factor_water", "yield_factor_fat", "yield_factor_other"):
+                    v = s.get(fld, "")
+                    if v not in ("", "1", "1.0", "1.00"):
+                        try:
+                            if abs(float(v) - 1.0) > 1e-9:
+                                errors.append(
+                                    f"  recipe_sections {rid}/{sec_key}: hosts component-ref "
+                                    f"@{child} so {fld} must be 1.0 (got {v!r})"
+                                )
+                        except ValueError:
+                            errors.append(
+                                f"  recipe_sections {rid}/{sec_key}: {fld}={v!r} not numeric"
+                            )
+                src = s.get("source_recipe", "")
+                if src and src != child:
+                    errors.append(
+                        f"  recipe_sections {rid}/{sec_key}: source_recipe={src!r} but "
+                        f"component-ref row points at @{child}"
+                    )
+
         for rid, ings in ings_by_recipe.items():
             section_keys = {s["section_key"] for s in sections_by_recipe.get(rid, [])}
-            if not section_keys:
-                continue  # recipe has no sections defined → no per-row check
             section_values = [(r.get("section") or "").strip() for r in ings]
             populated = [v for v in section_values if v]
+            if not section_keys:
+                # Rule 6b: ingredient rows reference section values but recipe has
+                # no recipe_sections rows declared.
+                if populated:
+                    refd = sorted(set(populated))
+                    errors.append(
+                        f"  recipe_ingredients {rid}: ingredients reference section(s) "
+                        f"{refd} but no matching rows exist in recipe_sections.csv"
+                    )
+                continue  # recipe has no sections defined → skip per-row checks
             # Rule 6: all-or-nothing
             if populated and len(populated) != len(section_values):
                 errors.append(

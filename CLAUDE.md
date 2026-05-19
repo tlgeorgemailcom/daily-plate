@@ -39,6 +39,7 @@ Always commit `recipes_bundle.json` after generating.
 - `step_order` must be plain integers (not "1a", "2b").
 - `cooking_method` must be one of: `raw`, `boiled`, `steamed`, `baked`, `fried`, `grilled`, `microwave`. Compound strings not supported — use `recipe_sections.csv` for multi-stage.
 - `food_word` must exist in `food-portions-complete.csv` (except Rule D).
+- **Every `section` value used in `recipe_ingredients.csv` must have a matching row in `recipe_sections.csv`.** Single-section recipes may mirror the recipe-level yield factors; multi-stage recipes set per-section yields. Enforced by `validate_ledger.py` Rule 6b.
 
 ## Key Data Sources
 - **SR Legacy DB**: `/Users/macminidata/vscode/jetfooddata/jetcool/assets/comboo.db` — table `DataCentralCombo`
@@ -50,7 +51,7 @@ Always commit `recipes_bundle.json` after generating.
 | Prefix | Status | Count |
 |---|---|---|
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
-| `BKFST_NNN` | 🔧 In progress — none built yet | 0 |
+| `BKFST_NNN` | 🔧 In progress | 1 |
 
 ## SR Legacy Rules
 - **Rule A** — All 7 macros within ±5% of canonical NDB entry
@@ -66,7 +67,7 @@ Planned BKFST order (standalone components first, composites last):
 
 | ID | Recipe | NDB | Notes |
 |---|---|---|---|
-| BKFST_001 | Biscuit (savory) | 18016 | Rule A/B — ingredient list from SWEET_023 minus sugar; audit pending |
+| BKFST_001 | Biscuit (savory) | 18016 | Rule A ✅ — yfw=0.75, 1g sugar trim to hit canonical |
 | BKFST_002 | Biscuits & Gravy | composite | 🧩 BKFST_001 + BKFST_012 |
 | BKFST_003 | Eggs Benedict | composite | 🧩 NDB 10998 (direct) + BKFST_004 + BKFST_006 + BKFST_011 |
 | BKFST_004 | English Muffin | 18433 | Rule A ✅ component |
@@ -90,6 +91,12 @@ Planned BKFST order (standalone components first, composites last):
 - **All ingredient ledger changes require human approval** before committing. Never add or modify a row in `ingredients_ledger.csv` without showing the proposed entry and waiting for explicit confirmation.
 - **All `recipe_ingredients.csv` changes require human approval.** Present the full ingredient list before writing anything to the CSV.
 
+## Error Handling Policy
+
+- **There are no "pre-existing" or "acceptable" errors.** If `validate_ledger.py`, `build_all.py`, or any other tool surfaces an error or warning, surface it to the human immediately.
+- Finish the current task first, then fix every reported error before moving on. Do not silently defer, downgrade, or rationalize errors as "unrelated."
+- The only acceptable warning is the `Rule D — bespoke key OK` note for recipes explicitly authored under Rule D.
+
 ## Recipe Audit Protocol
 
 For any recipe with a `canonical_ndb_no` and `sr_rule` of **A or B**, show a full audit before finalizing the recipe. Do not write CSV rows until the human approves.
@@ -104,7 +111,7 @@ For any recipe with a `canonical_ndb_no` and `sr_rule` of **A or B**, show a ful
 Example format:
 ```
 --- Ingredient List ---
-2 cups   flour_ap_white_enriched_bleached   250.0g
+2 cups   flour_ap_white_enriched_unbleached   250.0g
 1 tbsp   baking_powder                       13.8g
 ½ tsp    salt_table                           3.0g
 5 tbsp   vegetable_shortening                64.0g
@@ -128,6 +135,24 @@ Rule B — some canonical macros may be null/zero (acceptable).
 - Use **raw** NDB for meat ingredients (not cooked), set `cooking_method` so pipeline applies retention
 - FNDDS canonical targets are per-100g of the finished dish
 - Multi-stage recipes (e.g. gravy: cook sausage → make white sauce → combine) require `recipe_sections.csv` entries
+
+## Authoring Lessons (from BKFST_001)
+- **Yield factors for baked goods**: default `yfw=0.85` left macros too dilute for biscuits. `yfw=0.75` hit Rule A. Expect baked breads/biscuits to need 0.70–0.78.
+- **Sugar fine-tuning**: when 6 macros pass but sugar is slightly under, adding 1g (¼ tsp) sugar shifts only the sugar column meaningfully without disturbing others. Don't add a full tbsp — overshoots by >100%.
+- **Ingredient key naming must match NDB long_desc**: NDB 20581 is *unbleached* per `comboo.db`, despite the legacy `flour_ap_white_enriched_bleached` key. Always verify `Long_Desc` before naming a new ledger key.
+- **`food-portions-complete.csv` lives in 3 places** — root, `src/lib/data/`, `docs/` — all must stay in sync. Edit all three together.
+- **Duplicate NDB mappings in food-portions cause silent validator errors**: validator picks one `food_word` per NDB and flags ledger keys as "mismatched". Before adding a food-portions row, `grep ",NDB,"` to check for duplicates.
+- **CSV field-count discipline**: a single missing/extra comma in a manual edit breaks the row. After editing, verify `awk -F, '{print NF}'` matches the header field count.
+
+## Composite Recipes (Rule D, `component_ref`)
+
+Composite recipes (e.g. BKFST_002 Biscuits & Gravy) reference child recipes via `component_ref` rows in `recipe_ingredients.csv` instead of listing leaf ingredients directly. The editor must inline-expand these refs in 3 places — miss any one and the form will either drop ingredients or duplicate them:
+
+1. **`RecipeBook.svelte::levelToFormData`** — expand each `componentRef` ingredient into the child's leaf ingredients, scaling `portionGrams` by `parentGrams / childBatchGrams` and inheriting the parent's `section`. Strip parent dish-header rows (`isDish && !componentRef`).
+2. **`RecipeForm.svelte` v3-build effect** — when consuming `/api/recipes/v3-build/<id>`, filter out `component_ref` ingredients (`v3LeafIngredients = data.ingredients.filter(i => !i.component_ref)`). Without this, the form replaces the expanded children with the 2 ref rows and then re-appends the children as "stored extras", producing duplicates.
+3. **`/api/recipes/v3-build/[recipe_id]/+server.ts`** — for sections whose ingredient has `component_ref`, substitute the section's `cook_method` with the child recipe's dominant cook method (top-level `cooking_method`, or the child section with the largest `final_grams` when the child is itself multi-section). The CSV records `cook_method='raw'` for composite assembly steps because the components are already cooked, but the editor needs the original method (baked, boiled, etc.) for the section header.
+
+**Authoring rule**: `recipe_sections.csv` for a composite recipe should set `cook_method='raw'` and `yield_factor_*=1.0` with the source recipe id in column 12 (`source_recipe`). The display layer handles the rest.
 
 ## v3 Full Spec
 `/Users/macminidata/vscode/jetfooddata/jetcool/docs/v3.md` — authoritative pipeline spec (phases, math contract, CSV schemas, authoring runbook §17)
