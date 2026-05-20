@@ -2522,5 +2522,49 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'main', label: 'English muffin dough', cookingMethod: '', yieldFactorWater: 0.8 }
     ],
+  },
+  {
+    id: 'BKFST_016',
+    name: 'English Muffin (Thomas Style)',
+    category: 'Breakfast',
+    dietaryCategory: 'veggie',
+    levelNum: 50,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '11 muffins',
+    prepTime: '1 hr 30 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule B',
+    nutritionJson: {"cal":141.1,"pro":4.5,"fat":1.1,"carb":27.7,"fib":1.1,"h2o":25.1,"sug":1.2,"perServing":{"cal":141.1,"pro":4.5,"fat":1.1,"carb":27.7,"fib":1.1,"h2o":25.1,"sug":1.2,"AddedSugars":0.0,"IntrinsicSugars":1.2},"micros":{"vitaminA":13.54,"vitaminC":0.0,"vitaminD":17.83,"vitaminE":0.12,"vitaminK":0.26,"vitaminB6":0.04,"vitaminB12":0.14,"thiamin":0.41,"riboflavin":0.35,"niacin":3.12,"folate":100.17,"calcium":51.09,"iron":2.74,"magnesium":17.16,"phosphorus":100.66,"potassium":121.22,"sodium":374.35,"zinc":0.63,"copper":0.09,"selenium":21.2,"cholesterol":3.68,"saturatedFat":0.78,"monoFat":0.39,"polyFat":0.23,"omega3":0.0,"omega6":0.0},"gramsPerServing":59.3,"servings":11,"per100g":{"Energy_KCal":237.99,"Water":42.38,"Protein":7.61,"TotalLipidFat":1.85,"Carbohydrate":46.66,"FiberTotalDietary":1.86,"SugarsTotal":2.02,"Cholesterol":3.68,"FattyAcids_totalSaturated":0.78,"FattyAcids_totalMonounsaturated":0.39,"FattyAcids_totalPolyunsaturated":0.23,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":13.54,"Retinol":13.25,"Carotene_beta":2.53,"VitaminD":17.83,"VitaminE_alphaTocopherol":0.12,"VitaminK_phylloquinone":0.26,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.41,"Riboflavin":0.35,"Niacin":3.12,"PantothenicAcid":0.43,"VitaminB6":0.04,"Folate_total":100.17,"Folate_food":32.88,"Folate_DFE":147.36,"FolicAcid":89.72,"VitaminB12":0.14,"Choline_total":5.04,"Betaine":0.26,"LuteinZeaxanthin":29.91,"Lycopene":0.0,"Calcium_Ca":51.09,"Iron_Fe":2.74,"Magnesium_Mg":17.16,"Phosphorus_P":100.66,"Potassium_K":121.22,"Sodium_Na":374.35,"Zinc_Zn":0.63,"Copper_Cu":0.09,"Manganese_Mn":0.4,"Selenium_Se":21.2,"Tryptophan":0.09,"Threonine":0.23,"Isoleucine":0.28,"Leucine":0.55,"Lysine":0.26,"Methionine":0.14,"Cystine":0.11,"Phenylalanine":0.38,"Tyrosine":0.25,"Valine":0.34,"Arginine":0.29,"Histidine":0.18,"Alanine":0.25,"AsparticAcid":0.39,"GlutamicAcid":2.35,"Glycine":0.26,"Proline":0.83,"Serine":0.39,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":2.02},"addedSugars":0.0,"intrinsicSugars":1.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"18639","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.9,"yieldFactorFat":1.0,"sources":[{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":34.5},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":21.8},{"ndb":"14411","name":"Water, tap, drinking","grams":4.5},{"ndb":"18375","name":"Leavening agents, yeast, baker's, active dry","grams":0.6},{"ndb":"2047","name":"Salt, table","grams":0.5}],"sections":[{"section_key":"muffin","section_label":"English muffin dough","prep_method":"formed","cook_method":"grilled","cooking_method":"grilled","cooking_method_normalized":"grilled","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":683.0,"raw_water_grams":307.13,"raw_fat_grams":12.06,"final_grams":652.29}],"cookingMethod":"grilled"},
+    recipeIngredients: [
+      { name: 'GEORGE WESTON BAKERIES, Thomas English Muffins', quantity: 'custom (g)', foodWord: 'ENGLISHMUFFIN', ndbNo: '18639', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'all-purpose flour', quantity: '3 cups', section: 'muffin', ndbNo: '20581', portionDesc: 'g', portionGrams: 380.0 },
+      { name: 'whole milk', quantity: '1 cup', section: 'muffin', ndbNo: '1077', portionDesc: 'g', portionGrams: 240.0 },
+      { name: 'warm water', quantity: '3 tablespoons + 1 teaspoon', section: 'muffin', ndbNo: '14411', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'active dry yeast', quantity: '1 packet (2 1/4 tsp)', section: 'muffin', ndbNo: '18375', portionDesc: 'g', portionGrams: 7.0 },
+      { name: 'table salt', quantity: '1 teaspoon', section: 'muffin', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 }
+    ],
+    recipeInstructions: [
+      'Warm the milk to about 110°F — it should feel warm but not hot. Add the 3 tablespoons + 1 teaspoon warm water. Sprinkle the yeast over the warm liquid and let stand 5 minutes until foamy and fragrant.',
+      'In a large bowl, whisk together the flour and salt. Make a well in the center.',
+      'Pour the yeast-milk mixture into the well. Stir with a wooden spoon until a shaggy dough forms, then continue mixing until no dry flour remains.',
+      'Turn the dough onto a lightly floured surface and knead 5–7 minutes until smooth and slightly tacky but not sticky. The dough will be soft.',
+      'Shape dough into a ball and place in a lightly oiled bowl. Cover with plastic wrap or a damp towel and let rise in a warm spot until doubled, about 1 hour.',
+      'Punch down the dough. On a lightly floured surface, pat or roll to 3/4-inch thickness.',
+      'Cut rounds with a floured 3-inch round cutter or glass. Re-pat scraps gently and cut remaining muffins. You should get about 11 muffins.',
+      'Place rounds on the work surface, cover loosely, and let rest 15 minutes.',
+      'Heat a dry cast-iron skillet or griddle over medium-low heat. Cook muffins in batches 7–8 minutes per side until both sides are deep golden brown and the centers feel firm. Adjust heat so they don\'t brown too quickly before cooking through.',
+      'Transfer to a wire rack and cool at least 5 minutes. Split with a fork — never a knife — to preserve the classic nooks and crannies. Serve toasted or as-is.'
+    ],
+    sections: [
+      { key: 'muffin', label: 'English muffin dough', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];

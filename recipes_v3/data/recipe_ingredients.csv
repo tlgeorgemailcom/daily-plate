@@ -532,3 +532,8 @@ BKFST_004,4,water_tap,1/2 cup + 1 tablespoon,136.0,133,139,main,main,false,water
 BKFST_004,5,yeast_active_dry,4 teaspoons,12.0,11,13,main,main,false,active dry yeast
 BKFST_004,6,salt_table,2 teaspoons,12.0,11.5,12.5,main,main,false,table salt
 BKFST_004,7,sugar_granulated,1/4 teaspoon,1.0,0.8,1.2,main,main,false,granulated sugar
+BKFST_016,1,flour_ap_white_enriched_unbleached,3 cups,380.0,373,387,muffin,muffin,false,all-purpose flour
+BKFST_016,2,milk_whole,1 cup,240.0,235,245,muffin,muffin,false,whole milk
+BKFST_016,3,water_tap,3 tablespoons + 1 teaspoon,50.0,45,55,muffin,muffin,false,warm water
+BKFST_016,4,yeast_active_dry,1 packet (2 1/4 tsp),7.0,6.5,7.5,muffin,muffin,false,active dry yeast
+BKFST_016,5,salt_table,1 teaspoon,6.0,5.8,6.2,muffin,muffin,false,table salt
