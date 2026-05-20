@@ -25,7 +25,7 @@ Legend:
 | Oatmeal, cooked | 1 | **08121** | Cereals, oats, regular and quick, unenriched, cooked with water (includes boiling and microwaving), without salt | ✅ |
 | Biscuits | 1 | **18016** | Biscuits, plain or buttermilk, prepared from recipe | ✅ |
 | Biscuits & Gravy | 2 | — | Biscuit (18016) + sausage gravy (FNDDS FC 27120120) | 🧩 Gravy ✅ FNDDS canonical: 180 kcal · 6.78g P · 13.61g F · 7.65g C per 100g |
-| Eggs Benedict | 2 | — | English muffin (18433) + Canadian bacon (10998) + poached egg + hollandaise (FNDDS FC 81302010) | 🧩 Hollandaise ✅ FNDDS: 60g butter (1001) + 30g egg yolk (1125) + 10g lemon juice (9152) per 100g |
+| Eggs Benedict | 2 | — | English muffin (28320) + Canadian bacon (10998) + poached egg + hollandaise (FNDDS FC 81302010) | 🧩 Hollandaise ✅ FNDDS: 60g butter (1001) + 30g egg yolk (1125) + 10g lemon juice (9152) per 100g |
 | Breakfast Burrito | 2 | **21519** | Fast foods, breakfast burrito, with egg, cheese, and sausage | ✅ |
 | Breakfast Sandwich (biscuit/egg/bacon) | 2 | **21007** | Fast foods, biscuit, with egg, cheese, and bacon | ✅ |
 | Breakfast Sandwich (biscuit/egg/sausage) | 2 | **21005** | Fast foods, biscuit, with egg and sausage | ✅ |
@@ -351,7 +351,7 @@ Legend:
 |---|---|---|
 | White rice, cooked | 20045 | Rice, white, long-grain, regular, cooked |
 | Pasta, cooked | 20108 | Spaghetti, cooked, enriched |
-| English muffin | 18433 | English muffins, plain |
+| English muffin | 28320 | English muffins, whole grain white |
 | Canadian bacon, cooked | 10998 | Canadian bacon, cooked, pan-fried |
 | Corned beef | 13330 | Beef, cured, corned beef, canned |
 | Imitation crab | 15167 | Crustaceans, crab, alaska king, imitation |

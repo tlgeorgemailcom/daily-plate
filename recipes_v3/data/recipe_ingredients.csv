@@ -525,3 +525,10 @@ BKFST_012,13,black_pepper_ground,1/2 teaspoon,1.15,1.1,1.2,gravy,gravy,false,fre
 BKFST_012,14,butter_salted,2 tablespoons,28.4,28.0,28.8,gravy,gravy,false,salted butter (for richness)
 BKFST_002,1,@BKFST_001,8 biscuits,451.2,,,biscuit,Biscuit,false,"Biscuit (x8 total; 2 per serving x 4 servings, 56.4 g ea.)"
 BKFST_002,2,@BKFST_012,2 cups,460.8,,,gravy,Sausage gravy,false,Sausage gravy (2 cups total; 1/2 cup per serving x 4 servings)
+BKFST_004,1,flour_whole_wheat,1 1/4 cups,154.0,150,158,main,main,false,whole wheat flour
+BKFST_004,2,flour_ap_white_enriched_unbleached,1 1/4 cups,154.0,150,158,main,main,false,all-purpose flour (unbleached)
+BKFST_004,3,milk_whole,1/2 cup + 1 tablespoon,134.0,130,138,main,main,false,whole milk
+BKFST_004,4,water_tap,1/2 cup + 1 tablespoon,136.0,133,139,main,main,false,water
+BKFST_004,5,yeast_active_dry,4 teaspoons,12.0,11,13,main,main,false,active dry yeast
+BKFST_004,6,salt_table,2 teaspoons,12.0,11.5,12.5,main,main,false,table salt
+BKFST_004,7,sugar_granulated,1/4 teaspoon,1.0,0.8,1.2,main,main,false,granulated sugar

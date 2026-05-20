@@ -3,7 +3,7 @@
   "recipe_name": "Yellow Cake (No Frosting)",
   "sr_rule": "Rule B",
   "canonical_ndb_no": "18146",
-  "cooking_method": "bake",
+  "cooking_method": "baked",
   "cooking_method_normalized": "baked",
   "yield_factor_water": 0.78,
   "yield_factor_fat": 1.0,
@@ -392,5 +392,23 @@
     "omega6": 0.19,
     "AddedSugars": 20.79,
     "IntrinsicSugars": 0.85
-  }
+  },
+  "sections": [
+    {
+      "section_key": "cake",
+      "section_label": "Cake",
+      "prep_method": "mixed",
+      "cook_method": "baked",
+      "cooking_method": "baked",
+      "cooking_method_normalized": "baked",
+      "yield_factor_water": 0.78,
+      "yield_factor_fat": 1.0,
+      "yield_factor_other": 1.0,
+      "ingredient_count": 11,
+      "raw_grams": 950.67,
+      "raw_water_grams": 275.85,
+      "raw_fat_grams": 132.04,
+      "final_grams": 889.98
+    }
+  ]
 }

@@ -266,5 +266,23 @@
     "omega6": 1.51,
     "AddedSugars": 0.0,
     "IntrinsicSugars": 0.89
-  }
+  },
+  "sections": [
+    {
+      "section_key": "crust",
+      "section_label": "Crust",
+      "prep_method": "rolled",
+      "cook_method": "raw",
+      "cooking_method": "raw",
+      "cooking_method_normalized": "raw",
+      "yield_factor_water": 1.0,
+      "yield_factor_fat": 1.0,
+      "yield_factor_other": 1.0,
+      "ingredient_count": 5,
+      "raw_grams": 559.57,
+      "raw_water_grams": 109.08,
+      "raw_fat_grams": 171.58,
+      "final_grams": 559.57
+    }
+  ]
 }

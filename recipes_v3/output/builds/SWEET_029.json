@@ -3,7 +3,7 @@
   "recipe_name": "Brownies (Fudgy)",
   "sr_rule": "Rule B",
   "canonical_ndb_no": "18154",
-  "cooking_method": "bake",
+  "cooking_method": "baked",
   "cooking_method_normalized": "baked",
   "yield_factor_water": 0.79,
   "yield_factor_fat": 1.0,
@@ -350,5 +350,23 @@
     "omega6": 0.19,
     "AddedSugars": 18.75,
     "IntrinsicSugars": 0.18
-  }
+  },
+  "sections": [
+    {
+      "section_key": "batter",
+      "section_label": "Batter",
+      "prep_method": "mixed",
+      "cook_method": "baked",
+      "cooking_method": "baked",
+      "cooking_method_normalized": "baked",
+      "yield_factor_water": 0.79,
+      "yield_factor_fat": 1.0,
+      "yield_factor_other": 1.0,
+      "ingredient_count": 9,
+      "raw_grams": 867.05,
+      "raw_water_grams": 139.95,
+      "raw_fat_grams": 235.8,
+      "final_grams": 837.66
+    }
+  ]
 }

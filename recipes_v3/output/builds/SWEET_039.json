@@ -3,7 +3,7 @@
   "recipe_name": "Cookies, Shortbread",
   "sr_rule": "Rule C",
   "canonical_ndb_no": "18192",
-  "cooking_method": "bake",
+  "cooking_method": "baked",
   "cooking_method_normalized": "baked",
   "yield_factor_water": 0.3,
   "yield_factor_fat": 1.0,
@@ -266,5 +266,23 @@
     "omega6": 0.11,
     "AddedSugars": 4.16,
     "IntrinsicSugars": 0.04
-  }
+  },
+  "sections": [
+    {
+      "section_key": "shortbread",
+      "section_label": "Shortbread",
+      "prep_method": "formed",
+      "cook_method": "baked",
+      "cooking_method": "baked",
+      "cooking_method_normalized": "baked",
+      "yield_factor_water": 0.3,
+      "yield_factor_fat": 1.0,
+      "yield_factor_other": 1.0,
+      "ingredient_count": 5,
+      "raw_grams": 704.51,
+      "raw_water_grams": 80.62,
+      "raw_fat_grams": 184.83,
+      "final_grams": 648.08
+    }
+  ]
 }

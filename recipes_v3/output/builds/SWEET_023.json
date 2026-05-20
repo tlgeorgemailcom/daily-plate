@@ -3,7 +3,7 @@
   "recipe_name": "Shortcake (Biscuit-Type)",
   "sr_rule": "Rule B",
   "canonical_ndb_no": "18126",
-  "cooking_method": "bake",
+  "cooking_method": "baked",
   "cooking_method_normalized": "baked",
   "yield_factor_water": 0.85,
   "yield_factor_fat": 1.0,
@@ -287,5 +287,23 @@
     "omega6": 0.0,
     "AddedSugars": 4.68,
     "IntrinsicSugars": 1.11
-  }
+  },
+  "sections": [
+    {
+      "section_key": "biscuit",
+      "section_label": "Biscuit",
+      "prep_method": "formed",
+      "cook_method": "baked",
+      "cooking_method": "baked",
+      "cooking_method_normalized": "baked",
+      "yield_factor_water": 0.85,
+      "yield_factor_fat": 1.0,
+      "yield_factor_other": 1.0,
+      "ingredient_count": 6,
+      "raw_grams": 530.97,
+      "raw_water_grams": 173.72,
+      "raw_fat_grams": 71.74,
+      "final_grams": 504.91
+    }
+  ]
 }

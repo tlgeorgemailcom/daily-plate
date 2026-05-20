@@ -3,7 +3,7 @@
   "recipe_name": "Cookies, Molasses",
   "sr_rule": "Rule C",
   "canonical_ndb_no": "18177",
-  "cooking_method": "bake",
+  "cooking_method": "baked",
   "cooking_method_normalized": "baked",
   "yield_factor_water": 0.46,
   "yield_factor_fat": 1.0,
@@ -376,5 +376,23 @@
     "omega6": 0.13,
     "AddedSugars": 8.13,
     "IntrinsicSugars": 0.04
-  }
+  },
+  "sections": [
+    {
+      "section_key": "cookies",
+      "section_label": "Cookies",
+      "prep_method": "scooped",
+      "cook_method": "baked",
+      "cooking_method": "baked",
+      "cooking_method_normalized": "baked",
+      "yield_factor_water": 0.46,
+      "yield_factor_fat": 1.0,
+      "yield_factor_other": 1.0,
+      "ingredient_count": 10,
+      "raw_grams": 792.16,
+      "raw_water_grams": 129.44,
+      "raw_fat_grams": 145.89,
+      "final_grams": 722.26
+    }
+  ]
 }

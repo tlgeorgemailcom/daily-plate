@@ -3,7 +3,7 @@
   "recipe_name": "Cookies, Peanut Butter",
   "sr_rule": "Rule C",
   "canonical_ndb_no": "18188",
-  "cooking_method": "bake",
+  "cooking_method": "baked",
   "cooking_method_normalized": "baked",
   "yield_factor_water": 0.35,
   "yield_factor_fat": 1.0,
@@ -350,5 +350,23 @@
     "omega6": 0.18,
     "AddedSugars": 13.77,
     "IntrinsicSugars": 0.77
-  }
+  },
+  "sections": [
+    {
+      "section_key": "cookies",
+      "section_label": "Cookies",
+      "prep_method": "scooped",
+      "cook_method": "baked",
+      "cooking_method": "baked",
+      "cooking_method_normalized": "baked",
+      "yield_factor_water": 0.35,
+      "yield_factor_fat": 1.0,
+      "yield_factor_other": 1.0,
+      "ingredient_count": 9,
+      "raw_grams": 1332.0,
+      "raw_water_grams": 160.26,
+      "raw_fat_grams": 325.54,
+      "final_grams": 1227.83
+    }
+  ]
 }

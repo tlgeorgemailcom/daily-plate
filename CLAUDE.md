@@ -51,7 +51,7 @@ Always commit `recipes_bundle.json` after generating.
 | Prefix | Status | Count |
 |---|---|---|
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
-| `BKFST_NNN` | 🔧 In progress | 1 |
+| `BKFST_NNN` | 🔧 In progress | 5 (001, 002, 004, 012, 015) |
 
 ## SR Legacy Rules
 - **Rule A** — All 7 macros within ±5% of canonical NDB entry
@@ -70,7 +70,7 @@ Planned BKFST order (standalone components first, composites last):
 | BKFST_001 | Biscuit (savory) | 18016 | Rule A ✅ — yfw=0.75, 1g sugar trim to hit canonical |
 | BKFST_002 | Biscuits & Gravy | composite | 🧩 BKFST_001 + BKFST_012 |
 | BKFST_003 | Eggs Benedict | composite | 🧩 NDB 10998 (direct) + BKFST_004 + BKFST_006 + BKFST_011 |
-| BKFST_004 | English Muffin | 18433 | Rule A ✅ component |
+| BKFST_004 | English Muffin | 18264 | Rule A ✅ component |
 | BKFST_005 | French Toast | 18269 | Rule A ✅ |
 | BKFST_006 | Hollandaise Sauce | FNDDS 81302010 | Rule C — 60g butter(1001)+30g egg yolk(1125)+10g lemon juice(9152) per 100g |
 | BKFST_007 | Oatmeal, cooked | 08121 | Rule A ✅ |
@@ -83,8 +83,7 @@ Planned BKFST order (standalone components first, composites last):
 | BKFST_014 | Waffles, plain | 18367 | Rule A ✅ |
 
 **Ingredients needed in ledger before building:**
-- `pork_sausage_cooked` → NDB **7064** (not yet in ledger)
-- `black_pepper_ground` → NDB **2030** (not yet in ledger)
+- (none outstanding — sausage and black pepper ingredients added during BKFST_015 build)
 
 ## Human Approval Requirements
 
