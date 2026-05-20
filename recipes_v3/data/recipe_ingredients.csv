@@ -537,3 +537,6 @@ BKFST_016,2,milk_whole,1 cup,240.0,235,245,muffin,muffin,false,whole milk
 BKFST_016,3,water_tap,3 tablespoons + 1 teaspoon,50.0,45,55,muffin,muffin,false,warm water
 BKFST_016,4,yeast_active_dry,1 packet (2 1/4 tsp),7.0,6.5,7.5,muffin,muffin,false,active dry yeast
 BKFST_016,5,salt_table,1 teaspoon,6.0,5.8,6.2,muffin,muffin,false,table salt
+BKFST_006,1,butter_salted,7 tablespoons,102.0,99,105,sauce,sauce,false,salted butter
+BKFST_006,2,egg_yolk_raw,3 large yolks,51.0,48,54,sauce,sauce,false,egg yolks
+BKFST_006,3,lemon_juice_raw,1 tablespoon + 1 teaspoon,17.0,15,19,sauce,sauce,false,fresh lemon juice

@@ -2566,5 +2566,43 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'muffin', label: 'English muffin dough', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'BKFST_006',
+    name: 'Hollandaise Sauce',
+    category: 'Breakfast',
+    dietaryCategory: 'veggie',
+    levelNum: 51,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '4 servings',
+    prepTime: '20 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":224.8,"pro":2.2,"fat":24.1,"carb":0.8,"fib":0.0,"h2o":14.6,"sug":0.2,"perServing":{"cal":224.8,"pro":2.2,"fat":24.1,"carb":0.8,"fib":0.0,"h2o":14.6,"sug":0.2,"AddedSugars":0.0,"IntrinsicSugars":0.2},"micros":{"vitaminA":498.46,"vitaminC":2.9,"vitaminD":65.4,"vitaminE":2.07,"vitaminK":4.19,"vitaminB6":0.09,"vitaminB12":0.65,"thiamin":0.05,"riboflavin":0.17,"niacin":0.03,"folate":40.46,"calcium":51.02,"iron":0.8,"magnesium":3.13,"phosphorus":125.59,"potassium":54.53,"sodium":380.28,"zinc":0.71,"copper":0.02,"selenium":16.54,"cholesterol":454.5,"saturatedFat":33.69,"monoFat":16.13,"polyFat":2.78,"omega3":0.18,"omega6":1.23},"gramsPerServing":42.5,"servings":4,"per100g":{"Energy_KCal":529.0,"Water":34.45,"Protein":5.3,"TotalLipidFat":56.65,"Carbohydrate":1.8,"FiberTotalDietary":0.03,"SugarsTotal":0.46,"Cholesterol":454.5,"FattyAcids_totalSaturated":33.69,"FattyAcids_totalMonounsaturated":16.13,"FattyAcids_totalPolyunsaturated":2.78,"LinoleicAcid":1.23,"alphaLinolenicAcid":0.16,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.02,"VitaminA_RAE":498.46,"Retinol":488.2,"Carotene_beta":115.23,"VitaminD":65.4,"VitaminE_alphaTocopherol":2.07,"VitaminK_phylloquinone":4.19,"VitaminC_totalAscorbicAcid":2.9,"Thiamin":0.05,"Riboflavin":0.17,"Niacin":0.03,"PantothenicAcid":0.83,"VitaminB6":0.09,"Folate_total":40.46,"Folate_food":40.46,"Folate_DFE":40.46,"FolicAcid":0.0,"VitaminB12":0.65,"Choline_total":244.96,"Betaine":0.45,"LuteinZeaxanthin":280.25,"Lycopene":0.0,"Calcium_Ca":51.02,"Iron_Fe":0.8,"Magnesium_Mg":3.13,"Phosphorus_P":125.59,"Potassium_K":54.53,"Sodium_Na":380.28,"Zinc_Zn":0.71,"Copper_Cu":0.02,"Manganese_Mn":0.02,"Selenium_Se":16.54,"Tryptophan":0.06,"Threonine":0.22,"Isoleucine":0.29,"Leucine":0.47,"Lysine":0.4,"Methionine":0.12,"Cystine":0.08,"Phenylalanine":0.23,"Tyrosine":0.23,"Valine":0.31,"Arginine":0.35,"Histidine":0.13,"Alanine":0.26,"AsparticAcid":0.5,"GlutamicAcid":0.69,"Glycine":0.15,"Proline":0.24,"Serine":0.42,"omega3":0.18,"omega6":1.23,"AddedSugars":0.0,"IntrinsicSugars":0.46},"addedSugars":0.0,"intrinsicSugars":0.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"1001","name":"Butter, salted","grams":25.5},{"ndb":"1125","name":"Egg, yolk, raw, fresh","grams":12.8},{"ndb":"9152","name":"Lemon juice, raw","grams":4.2}],"sections":[{"section_key":"sauce","section_label":"Hollandaise sauce","prep_method":"whisked","cook_method":"steamed","cooking_method":"steamed","cooking_method_normalized":"steamed","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":170.0,"raw_water_grams":58.56,"raw_fat_grams":96.31,"final_grams":170.0}],"cookingMethod":"steamed"},
+    recipeIngredients: [
+      { name: 'Hollandaise Sauce', quantity: 'custom (g)', foodWord: 'HOLLANDAISESAUCE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'salted butter', quantity: '7 tablespoons', section: 'sauce', ndbNo: '1001', portionDesc: 'g', portionGrams: 102.0 },
+      { name: 'egg yolks', quantity: '3 large yolks', section: 'sauce', ndbNo: '1125', portionDesc: 'g', portionGrams: 51.0 },
+      { name: 'fresh lemon juice', quantity: '1 tablespoon + 1 teaspoon', section: 'sauce', ndbNo: '9152', portionDesc: 'g', portionGrams: 17.0 }
+    ],
+    recipeInstructions: [
+      'Fill a small saucepan with 2 inches of water and bring to a gentle simmer. Place a heatproof bowl over the pan — the bottom should not touch the water.',
+      'Separate 3 large eggs, keeping only the yolks. Add the yolks and lemon juice to the bowl. Whisk vigorously until pale, thick, and about doubled in volume, about 2 minutes.',
+      'Melt the butter in a small saucepan over low heat. Keep warm but not hot.',
+      'With the bowl over the barely simmering water, slowly drizzle the melted butter into the yolk mixture one tablespoon at a time, whisking constantly. Adding it too fast will break the emulsion.',
+      'Once all the butter is incorporated, the sauce should be thick enough to coat the back of a spoon. Remove from heat immediately.',
+      'Season with a pinch of salt. Serve right away over poached eggs, or keep warm by setting the bowl over the hot water (heat off) for up to 15 minutes, whisking occasionally.'
+    ],
+    sections: [
+      { key: 'sauce', label: 'Hollandaise sauce', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
