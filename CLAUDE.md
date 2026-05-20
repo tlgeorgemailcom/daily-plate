@@ -73,11 +73,13 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
 | `BKFST_NNN` | 🔧 In progress | 8 (001, 002, 003, 004, 006, 012, 015, 016) |
 
-## SR Legacy Rules
-- **Rule A** — All 7 macros within ±5% of canonical NDB entry
-- **Rule B** — Canonical has some missing/null macros (acceptable divergence)
-- **Rule C** — Canonical present but >±5% (commercial composite divergence)
-- **Rule D** — No canonical match; raw-ingredient calc only
+## Validation Rules
+- **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
+- **Rule B** — SR Legacy NDB canonical; some macros null/zero (acceptable divergence)
+- **Rule C** — SR Legacy NDB canonical; >±5% (commercial composite divergence)
+- **Rule F** — FNDDS FC canonical; all graded macros ±5%
+- **Rule G** — FNDDS FC canonical; >±5% divergence
+- **Rule D** — No canonical match anywhere; raw-ingredient calc only
 
 ## Current Work: BKFST Recipes
 
@@ -88,17 +90,17 @@ Planned BKFST order (standalone components first, composites last):
 | ID | Recipe | NDB | Notes |
 |---|---|---|---|
 | BKFST_001 | Biscuit (savory) | 18016 | Rule A ✅ — yfw=0.75, 1g sugar trim to hit canonical |
-| BKFST_002 | Biscuits & Gravy | composite | 🧩 BKFST_001 + BKFST_012 |
-| BKFST_003 | Eggs Benedict | composite | Rule D ✅ — FNDDS FC 32101500; NDB 1129 (poached egg direct) + NDB 10998 (Canadian bacon direct) + NDB 1001 (butter direct) + @BKFST_004 + @BKFST_006 |
+| BKFST_002 | Biscuits & Gravy | composite | Rule D ✅ — 🧩 BKFST_001 (Rule A) + BKFST_012 (Rule G); no FNDDS canonical for the combined dish |
+| BKFST_003 | Eggs Benedict | composite | Rule F ✅ — FNDDS FC 32101500; NDB 1129 (poached egg direct) + NDB 10998 (Canadian bacon direct) + NDB 1001 (butter direct) + @BKFST_004 + @BKFST_006; all macros ≤±3% |
 | BKFST_004 | English Muffin | 18264 | Rule A ✅ component |
 | BKFST_005 | French Toast | 18269 | Rule A ✅ |
-| BKFST_006 | Hollandaise Sauce | FNDDS 81302010 | Rule D — no SR Legacy canonical; raw-ingredient calc: 60g butter(1001)+30g egg yolk(1125)+10g lemon juice(9152) per 100g |
+| BKFST_006 | Hollandaise Sauce | FNDDS 81302010 | Rule F ✅ — no SR Legacy canonical; FNDDS FC 81302010 decomposition: 60g butter(1001)+30g egg yolk(1125)+10g lemon juice(9152) per 100g |
 | BKFST_007 | Oatmeal, cooked | 08121 | Rule A ✅ |
 | BKFST_008 | Pancakes, blueberry | 18294 | Rule A ✅ |
 | BKFST_009 | Pancakes, buttermilk | 18390 | Rule A ✅ |
 | BKFST_010 | Pancakes, plain | 18293 | Rule A ✅ |
 | BKFST_011 | Poached Egg | 1129 | Not built as standalone — `egg_cooked_poached` ledger key (NDB 1129) used directly in composites |
-| BKFST_012 | Sausage Gravy | FNDDS 27120120 | Rule C canonical: 180 kcal·6.78P·13.61F·7.65C per 100g |
+| BKFST_012 | Sausage Gravy | FNDDS 27120120 | Rule G ✅ — FNDDS FC canonical: 180 kcal·6.78P·13.61F·7.65C per 100g; >±5% (no SR Legacy analog for homemade) |
 | BKFST_013 | Scrambled Eggs | 01132 | Rule A ✅ |
 | BKFST_014 | Waffles, plain | 18367 | Rule A ✅ |
 | BKFST_015 | Breakfast Sausage | 7064 | Rule B ✅ — yfw=0.73, yff=0.91; whole-spice form drives Energy +9% and Carbs +50% vs canonical; P/F/Sugar/Water all ±5% |
@@ -120,13 +122,13 @@ Planned BKFST order (standalone components first, composites last):
 
 ## Recipe Audit Protocol
 
-For any recipe with a `canonical_ndb_no` and `sr_rule` of **A or B**, show a full audit before finalizing the recipe. Do not write CSV rows until the human approves.
+For any recipe with a `canonical_ndb_no` and `sr_rule` of **A, B, F, or G**, show a full audit before finalizing the recipe. Do not write CSV rows until the human approves.
 
 **When the user says "show recipe audit"**, display:
 
 1. **Ingredient list** — every ingredient in recipe units (display qty + grams), plus the total pre-yield gram weight
 2. **Computed per-100g macros** — after applying yield model: Energy (kcal), Protein, Total Fat, Carbs, Fiber, Sugar, Water
-3. **Canonical NDB values** — the 7 macros from `comboo.db / DataCentralCombo` for the `canonical_ndb_no`
+3. **Canonical values** — the 7 macros from `comboo.db / DataCentralCombo` for the `canonical_ndb_no` (Rules A/B/C), or from the FNDDS Ingredients CSV for the FC code (Rules F/G)
 4. **Gap table** — side-by-side diff showing computed vs canonical with % deviation; flag any macro outside ±5%
 
 Example format:
