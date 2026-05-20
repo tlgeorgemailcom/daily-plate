@@ -31,6 +31,26 @@ python recipes_v3/generate_bundle.py         # write src/lib/data/recipes_bundle
 ```
 Always commit `recipes_bundle.json` after generating.
 
+**⚠️ `generate_bundle.py` silently excludes any recipe that has no rows in `recipe_instructions.csv`.** A recipe can pass audit and upload successfully yet be completely absent from the bundle and the UI. Always write instruction rows *before* generating the bundle.
+
+**For brand-new recipes, also run `insert_new.py` before `generate_bundle.py`** (see § insert_new.py below).
+
+## insert_new.py — Initial Turso Insert
+
+`recipes_v3/tools/insert_new.py` inserts a recipe row into Turso's `dev_recipes` table for the **first time**. It is NOT called by `upload.py`.
+
+**Run it once per new recipe:**
+```
+python recipes_v3/tools/insert_new.py --recipe BKFST_XXX --dry-run   # preview
+python recipes_v3/tools/insert_new.py --recipe BKFST_XXX --commit    # write
+```
+
+**Before running `--commit`, verify the `_CATEGORY_MAP` covers the recipe's `category` value** (the column in `recipes.csv`). The map is near the top of `insert_new.py`. If the value is not in the map, it silently falls back to `"entrees-main-courses"`. Valid stored category IDs are defined in `src/lib/farmers-basket/recipe-categories.ts`.
+
+Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soups & stews`, `soups-stews`, `salads`, `pasta & pizza`, `pasta-pizza`, `entrees & main courses`, `entrees-main-courses`, `sides`, `sweets & desserts`, `sweets-desserts`, `beverages`, `sauces & condiments`, `sauces-condiments`, `sandwiches & burgers`, `sandwiches-burgers`.
+
+**`upload.py` deliberately does NOT update `category`, `food_word`, or `cooking_method`** — these identity columns are set once at insert time and preserved on every subsequent upload. To correct one of these columns in Turso after the fact, use a direct SQL UPDATE via the `libsql_experimental` Python client (same pattern as `insert_new.py`'s `_connect()`).
+
 ## Critical Invariants
 - **Never edit a v3 recipe row in the Turso UI** — it returns 423 and blocks re-uploads. Edit the CSV only.
 - **Turso is the sole ingredient source** — no hardcoded nutrition values in code.
