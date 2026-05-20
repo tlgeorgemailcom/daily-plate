@@ -9,7 +9,7 @@
   "yield_factor_fat": 1.0,
   "servings_count": 11,
   "audit_status": "PASS",
-  "audit_notes": "Rule B. All 5 graded macros within \u00b14.2% of canonical NDB 18639. Max delta: Total Fat +4.2%. Fiber and Sugar ungraded (canonical=0). yfw=0.90 (griddle-cooked). Locked May 20 2026.",
+  "audit_notes": "Rule B. All 5 graded macros within \u00b14.9% of canonical NDB 18639. Max delta: Protein -4.9%. Fiber and Sugar ungraded (canonical=0). yfw=0.90 (griddle-cooked). Flour adjusted to 380g for protein tolerance. Locked May 20 2026.",
   "raw_total_grams": 683.0,
   "raw_water_grams": 307.13,
   "raw_fat_grams": 12.06,

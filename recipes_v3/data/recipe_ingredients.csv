@@ -540,3 +540,8 @@ BKFST_016,5,salt_table,1 teaspoon,6.0,5.8,6.2,muffin,muffin,false,table salt
 BKFST_006,1,butter_salted,7 tablespoons,102.0,99,105,sauce,sauce,false,salted butter
 BKFST_006,2,egg_yolk_raw,3 large yolks,51.0,48,54,sauce,sauce,false,egg yolks
 BKFST_006,3,lemon_juice_raw,1 tablespoon + 1 teaspoon,17.0,15,19,sauce,sauce,false,fresh lemon juice
+BKFST_003,1,egg_cooked_poached,4 large eggs,200.0,180,220,egg,egg,false,poached eggs
+BKFST_003,2,@BKFST_004,2 muffins,114.0,102,126,muffin,muffin,false,English muffin
+BKFST_003,3,butter_salted,1 tablespoon,14.0,12,16,muffin,muffin,false,butter for toasting
+BKFST_003,4,canadian_bacon_cooked,6 slices,170.0,153,187,bacon,bacon,false,Canadian bacon
+BKFST_003,5,@BKFST_006,6¾ oz,192.75,173,212,hollandaise,hollandaise,false,hollandaise sauce

@@ -2604,5 +2604,48 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sauce', label: 'Hollandaise sauce', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BKFST_003',
+    name: 'Eggs Benedict',
+    category: 'Breakfast',
+    dietaryCategory: 'all',
+    levelNum: 52,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 servings',
+    prepTime: '30 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":965.5,"pro":46.5,"fat":74.4,"carb":29.6,"fib":2.5,"h2o":186.3,"sug":3.5,"perServing":{"cal":965.5,"pro":46.5,"fat":74.4,"carb":29.6,"fib":2.5,"h2o":186.3,"sug":3.5,"AddedSugars":0.1,"IntrinsicSugars":3.4},"micros":{"vitaminA":197.59,"vitaminC":0.81,"vitaminD":47.62,"vitaminE":1.06,"vitaminK":1.55,"vitaminB6":0.15,"vitaminB12":0.63,"thiamin":0.26,"riboflavin":0.29,"niacin":3.01,"folate":39.54,"calcium":38.11,"iron":1.1,"magnesium":18.51,"phosphorus":188.78,"potassium":328.82,"sodium":542.53,"zinc":1.13,"copper":0.05,"selenium":30.6,"cholesterol":256.08,"saturatedFat":11.74,"monoFat":6.48,"polyFat":1.42,"omega3":0.06,"omega6":0.48},"gramsPerServing":345.4,"servings":2,"per100g":{"Energy_KCal":279.55,"Water":53.93,"Protein":13.48,"TotalLipidFat":21.53,"Carbohydrate":8.56,"FiberTotalDietary":0.73,"SugarsTotal":1.02,"Cholesterol":256.08,"FattyAcids_totalSaturated":11.74,"FattyAcids_totalMonounsaturated":6.48,"FattyAcids_totalPolyunsaturated":1.42,"LinoleicAcid":0.48,"alphaLinolenicAcid":0.05,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":197.59,"Retinol":194.14,"Carotene_beta":38.99,"VitaminD":47.62,"VitaminE_alphaTocopherol":1.06,"VitaminK_phylloquinone":1.55,"VitaminC_totalAscorbicAcid":0.81,"Thiamin":0.26,"Riboflavin":0.29,"Niacin":3.01,"PantothenicAcid":0.9,"VitaminB6":0.15,"Folate_total":39.54,"Folate_food":34.16,"Folate_DFE":43.32,"FolicAcid":7.18,"VitaminB12":0.63,"Choline_total":181.53,"Betaine":4.89,"LuteinZeaxanthin":189.47,"Lycopene":0.0,"Calcium_Ca":38.11,"Iron_Fe":1.1,"Magnesium_Mg":18.51,"Phosphorus_P":188.78,"Potassium_K":328.82,"Sodium_Na":542.53,"Zinc_Zn":1.13,"Copper_Cu":0.05,"Manganese_Mn":0.24,"Selenium_Se":30.6,"Tryptophan":0.16,"Threonine":0.58,"Isoleucine":0.65,"Leucine":1.1,"Lysine":1.03,"Methionine":0.36,"Cystine":0.2,"Phenylalanine":0.61,"Tyrosine":0.52,"Valine":0.72,"Arginine":0.82,"Histidine":0.43,"Alanine":0.72,"AsparticAcid":1.22,"GlutamicAcid":2.13,"Glycine":0.53,"Proline":0.66,"Serine":0.74,"omega3":0.06,"omega6":0.48,"AddedSugars":0.03,"IntrinsicSugars":0.99},"addedSugars":0.1,"intrinsicSugars":3.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"1129","name":"Egg, whole, cooked, hard-boiled","grams":100.0},{"ndb":"","name":"English Muffin (Wheat)","grams":57.0},{"ndb":"1001","name":"Butter, salted","grams":7.0},{"ndb":"10998","name":"Canadian bacon, cooked, pan-fried","grams":85.0},{"ndb":"","name":"Hollandaise Sauce","grams":96.4}],"sections":[{"section_key":"egg","section_label":"Poached egg","prep_method":"poached","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":200.0,"raw_water_grams":149.24,"raw_fat_grams":21.22,"final_grams":200.0},{"section_key":"muffin","section_label":"English muffin","prep_method":"toasted","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":128.0,"raw_water_grams":50.66,"raw_fat_grams":13.58,"final_grams":128.0},{"section_key":"bacon","section_label":"Canadian bacon","prep_method":"pan-fried","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":170.0,"raw_water_grams":106.25,"raw_fat_grams":4.73,"final_grams":170.0},{"section_key":"hollandaise","section_label":"Hollandaise sauce","prep_method":"spooned","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":192.75,"raw_water_grams":66.4,"raw_fat_grams":109.19,"final_grams":192.75}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Eggs Benedict', quantity: 'custom (g)', foodWord: 'EGGSBENEDICT', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'poached eggs', quantity: '4 large eggs', section: 'egg', ndbNo: '1129', portionDesc: 'g', portionGrams: 200.0 },
+      { name: 'English muffin', quantity: '2 muffins', section: 'muffin', foodWord: 'ENGLISHMUFFINWT', ndbNo: '18264', portionDesc: 'g', portionGrams: 114.0, isDish: true, componentRef: 'BKFST_004' },
+      { name: 'butter for toasting', quantity: '1 tablespoon', section: 'muffin', ndbNo: '1001', portionDesc: 'g', portionGrams: 14.0 },
+      { name: 'Canadian bacon', quantity: '6 slices', section: 'bacon', ndbNo: '10998', portionDesc: 'g', portionGrams: 170.0 },
+      { name: 'hollandaise sauce', quantity: '6¾ oz', section: 'hollandaise', foodWord: 'HOLLANDAISESAUCE', portionDesc: 'g', portionGrams: 192.75, isDish: true, componentRef: 'BKFST_006' }
+    ],
+    recipeInstructions: [
+      'Fill a wide saucepan with about 3 inches of water, add a splash of white vinegar, and bring to a gentle simmer over medium heat. One at a time, crack each egg into a small cup and slide it gently into the simmering water. Poach for 3–4 minutes until the whites are fully set but the yolks are still runny. Remove with a slotted spoon and set aside on a warm plate.',
+      'Split the English muffins in half. Spread a thin layer of butter on the cut sides and toast in a skillet over medium heat or under the broiler until golden brown.',
+      'Heat a skillet over medium heat. Add the Canadian bacon slices and cook 1–2 minutes per side until lightly browned and heated through.',
+      'If the hollandaise sauce has cooled, gently rewarm it by setting the bowl over a pot of warm (not simmering) water for a minute, stirring constantly. Do not overheat or the sauce will break.',
+      'Place two toasted muffin halves on each plate. Lay a slice of Canadian bacon on each half, then set a poached egg on top.',
+      'Spoon hollandaise sauce generously over each egg. Season with a pinch of salt, white pepper, and paprika if desired. Serve immediately.'
+    ],
+    sections: [
+      { key: 'egg', label: 'Poached egg', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'muffin', label: 'English muffin', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'bacon', label: 'Canadian bacon', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'hollandaise', label: 'Hollandaise sauce', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

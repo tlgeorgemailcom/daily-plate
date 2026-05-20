@@ -84,3 +84,5 @@ onion_powder,2026,ONIONPOWDER,"Spices, onion powder",onion powder,teaspoon,2.4,
 paprika_ground,2028,PAPRIKA,"Spices, paprika",paprika,teaspoon,2.3,
 pork_backfat_raw,10004,PORKBACKFAT,"Pork, fresh, backfat, raw",pork backfat (finely chopped),tbsp,14.0,Raw pork fatback used to enrich lean ground pork in homemade sausage recipes
 yeast_active_dry,18375,YEAST,"Leavening agents, yeast, baker's, active dry",active dry yeast,teaspoon,3.0,Active dry yeast; 1 tsp ≈ 3g (1 packet = 7g = 2¼ tsp)
+canadian_bacon_cooked,10998,CANADIANBACON,"Canadian bacon, cooked, pan-fried",Canadian bacon,slice,28.4,Cooked pan-fried Canadian bacon; NDB 10998
+egg_cooked_poached,1129,EGGBOILED,"Egg, whole, cooked, hard-boiled",egg cooked,large_egg,50.0,Cooked egg (hard-boiled/poached equivalent); NDB 1129

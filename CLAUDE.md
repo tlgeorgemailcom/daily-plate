@@ -25,9 +25,9 @@ SvelteKit + Svelte 5 + TypeScript food/word game. Nutrition data comes from a Py
 **Edit-build-upload loop:**
 ```
 python recipes_v3/tools/validate_ledger.py   # check ingredient_key integrity
-python recipes_v3/build_all.py               # compute macros → output/
-python recipes_v3/upload.py                  # push to Turso
-python recipes_v3/generate_bundle.py         # write src/lib/data/recipes_bundle.json
+python recipes_v3/tools/build_all.py         # compute macros → output/
+python recipes_v3/tools/upload.py            # push to Turso
+python recipes_v3/tools/generate_bundle.py  # write src/lib/farmers-basket/generated-levels.ts
 ```
 Always commit `recipes_bundle.json` after generating.
 
@@ -41,8 +41,8 @@ Always commit `recipes_bundle.json` after generating.
 
 **Run it once per new recipe:**
 ```
-python recipes_v3/tools/insert_new.py --recipe BKFST_XXX --dry-run   # preview
-python recipes_v3/tools/insert_new.py --recipe BKFST_XXX --commit    # write
+python recipes_v3/tools/insert_new.py --recipe-id BKFST_XXX           # preview (dry-run by default)
+python recipes_v3/tools/insert_new.py --recipe-id BKFST_XXX --commit  # write
 ```
 
 **Before running `--commit`, verify the `_CATEGORY_MAP` covers the recipe's `category` value** (the column in `recipes.csv`). The map is near the top of `insert_new.py`. If the value is not in the map, it silently falls back to `"entrees-main-courses"`. Valid stored category IDs are defined in `src/lib/farmers-basket/recipe-categories.ts`.
@@ -71,7 +71,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | Prefix | Status | Count |
 |---|---|---|
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
-| `BKFST_NNN` | 🔧 In progress | 5 (001, 002, 004, 012, 015) |
+| `BKFST_NNN` | 🔧 In progress | 8 (001, 002, 003, 004, 006, 012, 015, 016) |
 
 ## SR Legacy Rules
 - **Rule A** — All 7 macros within ±5% of canonical NDB entry
@@ -89,18 +89,20 @@ Planned BKFST order (standalone components first, composites last):
 |---|---|---|---|
 | BKFST_001 | Biscuit (savory) | 18016 | Rule A ✅ — yfw=0.75, 1g sugar trim to hit canonical |
 | BKFST_002 | Biscuits & Gravy | composite | 🧩 BKFST_001 + BKFST_012 |
-| BKFST_003 | Eggs Benedict | composite | 🧩 NDB 10998 (direct) + BKFST_004 + BKFST_006 + BKFST_011 |
+| BKFST_003 | Eggs Benedict | composite | Rule D ✅ — FNDDS FC 32101500; NDB 1129 (poached egg direct) + NDB 10998 (Canadian bacon direct) + NDB 1001 (butter direct) + @BKFST_004 + @BKFST_006 |
 | BKFST_004 | English Muffin | 18264 | Rule A ✅ component |
 | BKFST_005 | French Toast | 18269 | Rule A ✅ |
-| BKFST_006 | Hollandaise Sauce | FNDDS 81302010 | Rule C — 60g butter(1001)+30g egg yolk(1125)+10g lemon juice(9152) per 100g |
+| BKFST_006 | Hollandaise Sauce | FNDDS 81302010 | Rule D — no SR Legacy canonical; raw-ingredient calc: 60g butter(1001)+30g egg yolk(1125)+10g lemon juice(9152) per 100g |
 | BKFST_007 | Oatmeal, cooked | 08121 | Rule A ✅ |
 | BKFST_008 | Pancakes, blueberry | 18294 | Rule A ✅ |
 | BKFST_009 | Pancakes, buttermilk | 18390 | Rule A ✅ |
 | BKFST_010 | Pancakes, plain | 18293 | Rule A ✅ |
-| BKFST_011 | Poached Egg | 1129 | Rule A ✅ component |
+| BKFST_011 | Poached Egg | 1129 | Not built as standalone — `egg_cooked_poached` ledger key (NDB 1129) used directly in composites |
 | BKFST_012 | Sausage Gravy | FNDDS 27120120 | Rule C canonical: 180 kcal·6.78P·13.61F·7.65C per 100g |
 | BKFST_013 | Scrambled Eggs | 01132 | Rule A ✅ |
 | BKFST_014 | Waffles, plain | 18367 | Rule A ✅ |
+| BKFST_015 | Breakfast Sausage | 7064 | Rule B ✅ — yfw=0.73, yff=0.91; whole-spice form drives Energy +9% and Carbs +50% vs canonical; P/F/Sugar/Water all ±5% |
+| BKFST_016 | English Muffin (Thomas Style) | 18639 | Rule B ✅ — yfw=0.90 (griddle); Fiber+Sugar unscored (canonical=0); all 5 scored macros ≤±4.9% |
 
 **Ingredients needed in ledger before building:**
 - (none outstanding — sausage and black pepper ingredients added during BKFST_015 build)
@@ -161,6 +163,7 @@ Rule B — some canonical macros may be null/zero (acceptable).
 - **Ingredient key naming must match NDB long_desc**: NDB 20581 is *unbleached* per `comboo.db`, despite the legacy `flour_ap_white_enriched_bleached` key. Always verify `Long_Desc` before naming a new ledger key.
 - **`food-portions-complete.csv` lives in 3 places** — root, `src/lib/data/`, `docs/` — all must stay in sync. Edit all three together.
 - **Duplicate NDB mappings in food-portions cause silent validator errors**: validator picks one `food_word` per NDB and flags ledger keys as "mismatched". Before adding a food-portions row, `grep ",NDB,"` to check for duplicates.
+- **`food-portions-complete.csv` has a `synonyms` column at index 2** (between `display` and `group1`). When manually writing a new row, leave `synonyms` empty (`,,`) or the `group1`/`NDB_NO` values shift left, causing the validator to fail with "ndb_no not in food-portions". Correct column order: `word,display,synonyms,group1,group2,group3,group4,has_recipe,NDB_NO,usda_desc,...`
 - **CSV field-count discipline**: a single missing/extra comma in a manual edit breaks the row. After editing, verify `awk -F, '{print NF}'` matches the header field count.
 
 ## Composite Recipes (Rule D, `component_ref`)
