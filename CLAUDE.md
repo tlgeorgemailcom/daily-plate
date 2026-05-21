@@ -194,6 +194,7 @@ Composite recipes (e.g. BKFST_002 Biscuits & Gravy) reference child recipes via 
 
 **Section labels — two separate paths depending on recipe type**:
 - **Builtin recipes (SWEET/BKFST)**: `formatSectionHeader` in `RecipeBook.svelte` reads `level.sections[].label` from the generated-levels.ts bundle (generated from `recipe_sections.csv`). `upload.py` does NOT write section labels to Turso. To rename a section header: edit `recipe_sections.csv` → run `generate_bundle.py` → git push. The Turso upload will report "0 changes" — that is correct and expected.
+- **Composite builtin recipes (e.g. BKFST_003 Eggs Benedict)**: These are still builtins — section labels still come entirely from the bundle. The `component_ref` rows in Turso carry only the section *key* (e.g. `"muffin"`); the *label* ("English muffin (wheat):") is resolved at display time from the bundle's `level.sections[]`. Renaming a composite section header follows the same path: `recipe_sections.csv` → `generate_bundle.py` → git push. Turso will report "0 changes" — correct and expected.
 - **Player/community recipes**: Section labels are stored directly in Turso's `sections_json` column as a `CommunitySection[]` array (`{ sectionKey, sectionLabel }`). `RecipeForm.svelte` serialises the form's `sections` state into the submit payload; `my/+server.ts` writes it to Turso and reads it back via `JSON.parse(row.sections_json)`. The TypeScript bundle is irrelevant for player recipes — no bundle entry exists or is needed.
 
 ## v3 Full Spec
