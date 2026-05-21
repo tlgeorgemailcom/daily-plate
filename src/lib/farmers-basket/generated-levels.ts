@@ -2638,7 +2638,7 @@ export const LEVELS: Level[] = [
       'Heat a skillet over medium heat. Add the Canadian bacon slices and cook 1–2 minutes per side until lightly browned and heated through.',
       'If the hollandaise sauce has cooled, gently rewarm it by setting the bowl over a pot of warm (not simmering) water for a minute, stirring constantly. Do not overheat or the sauce will break.',
       'Place two toasted muffin halves on each plate. Lay a slice of Canadian bacon on each half, then set a poached egg on top.',
-      'Spoon hollandaise sauce generously over each egg. Season with a pinch of salt, white pepper, and paprika if desired. Serve immediately.'
+      'Spoon about 1/4 cup hollandaise sauce over each egg. Season with a pinch of salt, white pepper, and paprika if desired. Serve immediately.'
     ],
     sections: [
       { key: 'egg', label: 'Poached egg', cookingMethod: '', yieldFactorWater: 1.0 },

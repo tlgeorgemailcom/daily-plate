@@ -256,6 +256,9 @@ function normalizeRecipeIngredients(value: string | null): BuiltinOverride['reci
         isDish: typeof source.isDish === 'boolean'
           ? source.isDish
           : source.row_type === 'dish',
+        componentRef: typeof source.componentRef === 'string'
+          ? source.componentRef
+          : undefined,
         is_optional: typeof source.is_optional === 'boolean'
           ? source.is_optional
           : undefined

@@ -2059,8 +2059,9 @@
                           {formatIngredientLine(ing)}
                           {#if ing.componentRef}
                             {@const childLines = getChildIngredientLines(ing.componentRef)}
+                            {@const childLevel = levels.find(l => l.id === ing.componentRef)}
                             {#if childLines.length > 0}
-                              <div class="component-sublist-label">Made from (per recipe batch):</div>
+                              <div class="component-sublist-label">Made from this recipe{childLevel?.servings ? ` (makes ${childLevel.servings})` : ''}:</div>
                               <ul class="component-sublist">
                                 {#each childLines as line}
                                   <li>{line}</li>
