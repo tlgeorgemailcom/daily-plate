@@ -159,6 +159,18 @@ Rule B — some canonical macros may be null/zero (acceptable).
 - FNDDS canonical targets are per-100g of the finished dish
 - Multi-stage recipes (e.g. gravy: cook sausage → make white sauce → combine) require `recipe_sections.csv` entries
 
+## SR Legacy vs Foundation Foods Divergence
+
+FNDDS published nutrient profiles use **Foundation Foods** values for common ingredients, not SR Legacy. SR Legacy and Foundation Foods can diverge significantly for "by difference" nutrients in egg products:
+
+| NDB | Ingredient | SR Legacy carbs | Foundation Foods carbs |
+|---|---|---|---|
+| 1125 | Egg yolk, raw | 3.59g/100g | 1.02g/100g |
+
+**Impact**: any recipe that uses egg yolk and targets an FNDDS FC canonical will have inflated computed carbs relative to the official published value. This is the root cause of BKFST_006's Carbs +74.8% gap. The recipe is internally correct (SR Legacy–sourced); the divergence is a database version mismatch → Rule G classification is appropriate.
+
+**Lesson**: when Carbs or Sugar diverge significantly between computed and FNDDS canonical on an egg-rich recipe, check whether FNDDS is using Foundation Foods values that differ from SR Legacy "by difference" calculations.
+
 ## Authoring Lessons (from BKFST_001)
 - **Yield factors for baked goods**: default `yfw=0.85` left macros too dilute for biscuits. `yfw=0.75` hit Rule A. Expect baked breads/biscuits to need 0.70–0.78.
 - **Sugar fine-tuning**: when 6 macros pass but sugar is slightly under, adding 1g (¼ tsp) sugar shifts only the sugar column meaningfully without disturbing others. Don't add a full tbsp — overshoots by >100%.
