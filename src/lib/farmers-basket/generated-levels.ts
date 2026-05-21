@@ -2686,5 +2686,40 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'main', label: 'French toast', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'BKFST_007',
+    name: 'Oatmeal',
+    category: 'Breakfast',
+    dietaryCategory: 'veggie',
+    levelNum: 54,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving',
+    prepTime: '5 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule C',
+    nutritionJson: {"cal":151.6,"pro":5.3,"fat":2.6,"carb":27.1,"fib":4.0,"h2o":183.2,"sug":0.4,"perServing":{"cal":151.6,"pro":5.3,"fat":2.6,"carb":27.1,"fib":4.0,"h2o":183.2,"sug":0.4,"AddedSugars":0.0,"IntrinsicSugars":0.4},"micros":{"vitaminA":0.0,"vitaminC":0.0,"vitaminD":0.0,"vitaminE":0.07,"vitaminK":0.35,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.05,"riboflavin":0.02,"niacin":0.13,"folate":3.8,"calcium":10.83,"iron":0.62,"magnesium":21.02,"phosphorus":63.61,"potassium":52.86,"sodium":4.61,"zinc":0.57,"copper":0.07,"selenium":5.01,"cholesterol":0.0,"saturatedFat":0.2,"monoFat":0.36,"polyFat":0.36,"omega3":0.0,"omega6":0.0},"gramsPerServing":219.1,"servings":1,"per100g":{"Energy_KCal":69.18,"Water":83.62,"Protein":2.4,"TotalLipidFat":1.19,"Carbohydrate":12.36,"FiberTotalDietary":1.84,"SugarsTotal":0.18,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.2,"FattyAcids_totalMonounsaturated":0.36,"FattyAcids_totalPolyunsaturated":0.36,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.0,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.07,"VitaminK_phylloquinone":0.35,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.05,"Riboflavin":0.02,"Niacin":0.13,"PantothenicAcid":0.14,"VitaminB6":0.01,"Folate_total":3.8,"Folate_food":3.8,"Folate_DFE":3.8,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":6.27,"Betaine":0.0,"LuteinZeaxanthin":24.64,"Lycopene":0.0,"Calcium_Ca":10.83,"Iron_Fe":0.62,"Magnesium_Mg":21.02,"Phosphorus_P":63.61,"Potassium_K":52.86,"Sodium_Na":4.61,"Zinc_Zn":0.57,"Copper_Cu":0.07,"Manganese_Mn":0.63,"Selenium_Se":5.01,"Tryptophan":0.03,"Threonine":0.07,"Isoleucine":0.09,"Leucine":0.18,"Lysine":0.11,"Methionine":0.04,"Cystine":0.08,"Phenylalanine":0.12,"Tyrosine":0.07,"Valine":0.12,"Arginine":0.16,"Histidine":0.05,"Alanine":0.1,"AsparticAcid":0.22,"GlutamicAcid":0.52,"Glycine":0.12,"Proline":0.08,"Serine":0.13,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.18},"addedSugars":0.0,"intrinsicSugars":0.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"8121","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.76,"yieldFactorFat":1.0,"sources":[{"ndb":"8120","name":"Cereals, oats, regular and quick, not fortified, dry","grams":40.0},{"ndb":"14411","name":"Water, tap, drinking","grams":237.0}],"sections":[{"section_key":"oatmeal","section_label":"Oatmeal","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.76,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":277.0,"raw_water_grams":241.1,"raw_fat_grams":2.61,"final_grams":219.14}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Cereals, oats, regular and quick, unenriched, cooked with water (includes boiling and microwaving), without salt', quantity: 'custom (g)', foodWord: 'CEREALOATS', ndbNo: '8121', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'rolled oats', quantity: '½ cup', section: 'oatmeal', ndbNo: '8120', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'water', quantity: '1 cup', section: 'oatmeal', ndbNo: '14411', portionDesc: 'g', portionGrams: 237.0 }
+    ],
+    recipeInstructions: [
+      'Bring the water to a boil in a small saucepan over medium-high heat.',
+      'Stir in the rolled oats. Reduce heat to medium-low.',
+      'Cook, stirring occasionally, for 5 minutes until the oats are tender and most of the water is absorbed.',
+      'Remove from heat and let stand 1–2 minutes before serving.'
+    ],
+    sections: [
+      { key: 'oatmeal', label: 'Oatmeal', cookingMethod: '', yieldFactorWater: 0.76 }
+    ],
   }
 ];

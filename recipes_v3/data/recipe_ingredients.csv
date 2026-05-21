@@ -549,3 +549,5 @@ BKFST_005,2,egg_whole_raw,"1 large egg, beaten",50.0,48,52,main,main,false,"larg
 BKFST_005,3,milk_lowfat_2pct,¼ cup,70.0,65,75,main,main,false,2% milk
 BKFST_005,4,butter_salted,1½ tablespoons,21.0,19,23,main,main,false,butter
 BKFST_005,5,salt_table,⅛ tsp,0.75,0.5,1.0,main,main,false,salt
+BKFST_007,1,oats_rolled_old_fashioned_dry,½ cup,40.0,38,42,oatmeal,oatmeal,false,rolled oats
+BKFST_007,2,water,1 cup,237.0,230,244,oatmeal,oatmeal,false,water

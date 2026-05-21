@@ -73,7 +73,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | Prefix | Status | Count |
 |---|---|---|
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
-| `BKFST_NNN` | 🔧 In progress | 9 (001, 002, 003, 004, 005, 006, 012, 015, 016) |
+| `BKFST_NNN` | 🔧 In progress | 10 (001, 002, 003, 004, 005, 006, 007, 012, 015, 016) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -97,7 +97,7 @@ Planned BKFST order (standalone components first, composites last):
 | BKFST_004 | English Muffin | 18264 | Rule A ✅ component |
 | BKFST_005 | French Toast | 18269 | Rule B ✅ — 4 slices white bread(18069)+1 egg(1123)+¼ cup 2% milk(1079)+1½ tbsp butter(1001)+⅛ tsp salt(2047); yfw=0.90 (pan-fried); Fiber+Sugar unscored (canonical=0); all 5 scored macros ≤±2.4%; Na ~474 mg/100g vs canonical 479 (-1%) |
 | BKFST_006 | Hollandaise Sauce | FNDDS 81302010 | Rule G ✅ — FNDDS FC 81302010 decomposition: 60g butter(1001)+30g egg yolk(1125)+10g lemon juice(9152) per 100g; Carbs +74.8% ❌ Sugar -40.3% ❌ vs official FDC (absolute: 0.77g C, 0.31g S per 100g sauce); SR Legacy NDB 1125 carb/sugar values differ from FNDDS updated FDC values; E/P/F/W all ≤±3% |
-| BKFST_007 | Oatmeal, cooked | 08121 | Rule A ✅ |
+| BKFST_007 | Oatmeal, cooked | 8121 | Rule C ✅ — 40g rolled oats (NDB 8120) + 237g water; yfw=0.76; Fat -21.7% ❌ Fiber +8.5% ⚠️ Sugar -33% ❌ vs NDB 8121 (SR Legacy dry/cooked P/F ratio artifact — NDB 8120 P/F=2.017 vs NDB 8121 implied P/F=1.671; structurally irreducible) |
 | BKFST_008 | Pancakes, blueberry | 18294 | Rule A ✅ |
 | BKFST_009 | Pancakes, buttermilk | 18390 | Rule A ✅ |
 | BKFST_010 | Pancakes, plain | 18293 | Rule A ✅ |
