@@ -2643,7 +2643,7 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'egg', label: 'Poached egg', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'muffin', label: 'English muffin', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'muffin', label: 'English muffin (wheat)', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'bacon', label: 'Canadian bacon', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'hollandaise', label: 'Hollandaise sauce', cookingMethod: '', yieldFactorWater: 1.0 }
     ],

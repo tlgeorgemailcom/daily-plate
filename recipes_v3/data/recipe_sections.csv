@@ -85,6 +85,6 @@ BKFST_004,main,English muffin dough,formed,grilled,0.80,1.0,1.0,,,,
 BKFST_016,muffin,English muffin dough,formed,grilled,0.90,1.0,1.0,,,,
 BKFST_006,sauce,Hollandaise sauce,whisked,steamed,1.0,1.0,1.0,,,,
 BKFST_003,egg,Poached egg,poached,boiled,1.0,1.0,1.0,,,,
-BKFST_003,muffin,English muffin,toasted,raw,1.0,1.0,1.0,,,,BKFST_004
+BKFST_003,muffin,English muffin (wheat),toasted,raw,1.0,1.0,1.0,,,,BKFST_004
 BKFST_003,bacon,Canadian bacon,pan-fried,fried,1.0,1.0,1.0,,,,
 BKFST_003,hollandaise,Hollandaise sauce,spooned,raw,1.0,1.0,1.0,,,,BKFST_006
