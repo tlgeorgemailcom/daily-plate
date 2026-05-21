@@ -33,6 +33,8 @@ Always commit `recipes_bundle.json` after generating.
 
 **⚠️ `generate_bundle.py` silently excludes any recipe that has no rows in `recipe_instructions.csv`.** A recipe can pass audit and upload successfully yet be completely absent from the bundle and the UI. Always write instruction rows *before* generating the bundle.
 
+**⚠️ Instruction text changes require BOTH `upload.py --commit` (updates Turso/runtime) AND `generate_bundle.py` (updates static bundle).** Running only `generate_bundle.py` after editing `recipe_instructions.csv` will leave the old text in Turso and the local app will not reflect the change.
+
 **For brand-new recipes, also run `insert_new.py` before `generate_bundle.py`** (see § insert_new.py below).
 
 ## insert_new.py — Initial Turso Insert
