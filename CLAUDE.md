@@ -93,7 +93,7 @@ Planned BKFST order (standalone components first, composites last):
 | BKFST_002 | Biscuits & Gravy | composite | Rule D ✅ — 🧩 BKFST_001 (Rule A) + BKFST_012 (Rule G); no FNDDS canonical for the combined dish |
 | BKFST_003 | Eggs Benedict | composite | Rule G ✅ — FNDDS FC 32101500; NDB 1131 (poached egg direct) + NDB 10130 (Canadian bacon raw) + @BKFST_004 + @BKFST_006; Protein −23.7% ❌ Fat +13.6% ❌ vs FNDDS canonical (FNDDS recipe not authored by a cook — excess Canadian bacon, margarine separate, insufficient hollandaise) |
 | BKFST_004 | English Muffin | 18264 | Rule A ✅ component |
-| BKFST_005 | French Toast | 18269 | Rule B ✅ — 4 slices white bread(18069)+1 egg(1123)+¼ cup 2% milk(1079)+1½ tbsp butter(1001); yfw=0.90 (pan-fried); Fiber+Sugar unscored (canonical=0); all 5 scored macros ≤±2.4% |
+| BKFST_005 | French Toast | 18269 | Rule B ✅ — 4 slices white bread(18069)+1 egg(1123)+¼ cup 2% milk(1079)+1½ tbsp butter(1001)+⅛ tsp salt(2047); yfw=0.90 (pan-fried); Fiber+Sugar unscored (canonical=0); all 5 scored macros ≤±2.4%; Na ~474 mg/100g vs canonical 479 (-1%) |
 | BKFST_006 | Hollandaise Sauce | FNDDS 81302010 | Rule G ✅ — FNDDS FC 81302010 decomposition: 60g butter(1001)+30g egg yolk(1125)+10g lemon juice(9152) per 100g; Carbs +74.8% ❌ Sugar -40.3% ❌ vs official FDC (absolute: 0.77g C, 0.31g S per 100g sauce); SR Legacy NDB 1125 carb/sugar values differ from FNDDS updated FDC values; E/P/F/W all ≤±3% |
 | BKFST_007 | Oatmeal, cooked | 08121 | Rule A ✅ |
 | BKFST_008 | Pancakes, blueberry | 18294 | Rule A ✅ |
