@@ -94,7 +94,7 @@ Planned BKFST order (standalone components first, composites last):
 | BKFST_003 | Eggs Benedict | composite | Rule F ✅ — FNDDS FC 32101500; NDB 1129 (poached egg direct) + NDB 10998 (Canadian bacon direct) + NDB 1001 (butter direct) + @BKFST_004 + @BKFST_006; all macros ≤±3% |
 | BKFST_004 | English Muffin | 18264 | Rule A ✅ component |
 | BKFST_005 | French Toast | 18269 | Rule A ✅ |
-| BKFST_006 | Hollandaise Sauce | FNDDS 81302010 | Rule F ✅ — no SR Legacy canonical; FNDDS FC 81302010 decomposition: 60g butter(1001)+30g egg yolk(1125)+10g lemon juice(9152) per 100g |
+| BKFST_006 | Hollandaise Sauce | FNDDS 81302010 | Rule G ✅ — FNDDS FC 81302010 decomposition: 60g butter(1001)+30g egg yolk(1125)+10g lemon juice(9152) per 100g; Carbs +74.8% ❌ Sugar -40.3% ❌ vs official FDC (absolute: 0.77g C, 0.31g S per 100g sauce); SR Legacy NDB 1125 carb/sugar values differ from FNDDS updated FDC values; E/P/F/W all ≤±3% |
 | BKFST_007 | Oatmeal, cooked | 08121 | Rule A ✅ |
 | BKFST_008 | Pancakes, blueberry | 18294 | Rule A ✅ |
 | BKFST_009 | Pancakes, buttermilk | 18390 | Rule A ✅ |
