@@ -71,7 +71,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | Prefix | Status | Count |
 |---|---|---|
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
-| `BKFST_NNN` | 🔧 In progress | 8 (001, 002, 003, 004, 006, 012, 015, 016) |
+| `BKFST_NNN` | 🔧 In progress | 9 (001, 002, 003, 004, 005, 006, 012, 015, 016) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -93,7 +93,7 @@ Planned BKFST order (standalone components first, composites last):
 | BKFST_002 | Biscuits & Gravy | composite | Rule D ✅ — 🧩 BKFST_001 (Rule A) + BKFST_012 (Rule G); no FNDDS canonical for the combined dish |
 | BKFST_003 | Eggs Benedict | composite | Rule G ✅ — FNDDS FC 32101500; NDB 1131 (poached egg direct) + NDB 10130 (Canadian bacon raw) + @BKFST_004 + @BKFST_006; Protein −23.7% ❌ Fat +13.6% ❌ vs FNDDS canonical (FNDDS recipe not authored by a cook — excess Canadian bacon, margarine separate, insufficient hollandaise) |
 | BKFST_004 | English Muffin | 18264 | Rule A ✅ component |
-| BKFST_005 | French Toast | 18269 | Rule A ✅ |
+| BKFST_005 | French Toast | 18269 | Rule B ✅ — 4 slices white bread(18069)+1 egg(1123)+¼ cup 2% milk(1079)+1½ tbsp butter(1001); yfw=0.90 (pan-fried); Fiber+Sugar unscored (canonical=0); all 5 scored macros ≤±2.4% |
 | BKFST_006 | Hollandaise Sauce | FNDDS 81302010 | Rule G ✅ — FNDDS FC 81302010 decomposition: 60g butter(1001)+30g egg yolk(1125)+10g lemon juice(9152) per 100g; Carbs +74.8% ❌ Sugar -40.3% ❌ vs official FDC (absolute: 0.77g C, 0.31g S per 100g sauce); SR Legacy NDB 1125 carb/sugar values differ from FNDDS updated FDC values; E/P/F/W all ≤±3% |
 | BKFST_007 | Oatmeal, cooked | 08121 | Rule A ✅ |
 | BKFST_008 | Pancakes, blueberry | 18294 | Rule A ✅ |
@@ -179,6 +179,7 @@ FNDDS published nutrient profiles use **Foundation Foods** values for common ing
 - **Duplicate NDB mappings in food-portions cause silent validator errors**: validator picks one `food_word` per NDB and flags ledger keys as "mismatched". Before adding a food-portions row, `grep ",NDB,"` to check for duplicates.
 - **`food-portions-complete.csv` has a `synonyms` column at index 2** (between `display` and `group1`). When manually writing a new row, leave `synonyms` empty (`,,`) or the `group1`/`NDB_NO` values shift left, causing the validator to fail with "ndb_no not in food-portions". Correct column order: `word,display,synonyms,group1,group2,group3,group4,has_recipe,NDB_NO,usda_desc,...`
 - **CSV field-count discipline**: a single missing/extra comma in a manual edit breaks the row. After editing, verify `awk -F, '{print NF}'` matches the header field count.
+- **Rounding is forbidden until final display**: two-part rule — (1) when adding a new NDB entry to `food-portions-complete.csv`, always query `comboo.db` directly and copy the stored value verbatim; never hand-approximate or truncate it. (2) During pre-build macro estimation, carry full precision through every intermediate step. Rounding nutrient values at either stage accumulates error that can shift a passing macro (e.g. Carbs +4.0% estimated) into a failing one (+6.7% actual). Always use the pipeline's built output to determine the final rule classification — never the hand-estimated audit.
 
 ## Composite Recipes (Rule D, `component_ref`)
 

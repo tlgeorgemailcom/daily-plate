@@ -88,3 +88,4 @@ BKFST_003,egg,Poached egg,poached,boiled,1.0,1.0,1.0,,,,
 BKFST_003,muffin,English muffin (wheat),toasted,raw,1.0,1.0,1.0,,,,BKFST_004
 BKFST_003,bacon,Canadian bacon,pan-fried,fried,1.0,1.0,1.0,,,,
 BKFST_003,hollandaise,Hollandaise sauce,spooned,raw,1.0,1.0,1.0,,,,BKFST_006
+BKFST_005,main,French toast,dipped,fried,0.90,1.0,1.0,,,,

@@ -1487,3 +1487,5 @@ BISCUITSGRAVY,Biscuits & Gravy,prepared,,,,,,"Biscuits and gravy, prepared from 
 EGGSBENEDICT,Eggs Benedict,prepared,,,,,,"Eggs Benedict, prepared from recipe",288.0,13.81,21.10,8.48,0.60,53.51,1.17,1.0,custom (g),100.0,1.0,oz,28.35,1.0,serving,345.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 CANADIANBACON,Canadian Bacon,,protein,,,,,10998,"Canadian bacon, cooked, pan-fried",146.0,28.31,2.78,1.80,0.0,62.5,1.2,1.0,custom (g),100.0,1.0,oz,28.35,1.0,slice,28.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 CANADIANBACONRAW,Canadian Bacon (raw),,protein,,,,,10130,"Canadian bacon, unprepared",110.0,20.31,2.62,1.34,0.0,72.34,0.9,1.0,custom (g),100.0,1.0,oz,28.35,1.0,slice,28.5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+BREADWHITE,White Bread,grain,prepared,,,0,18069,"Bread, white, commercially prepared (includes soft bread crumbs)",266.0,8.85,3.33,49.42,2.7,36.42,5.67,1.0,custom (g),100.0,1.0,slice,28.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MILK2PCT,Milk 2%,dairy,beverage,,,0,1079,"Milk, reduced fat, fluid, 2% milkfat, with added vitamin A and vitamin D",50.0,3.3,1.98,4.8,0.0,89.21,5.06,1.0,custom (g),100.0,1.0,cup,244.0,1.0,fl oz,30.5,1.0,tbsp,15.0,,,,,,,,,,,,,,,,,,,,,,,,,,,
