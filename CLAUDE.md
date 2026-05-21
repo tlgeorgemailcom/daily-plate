@@ -192,7 +192,9 @@ Composite recipes (e.g. BKFST_002 Biscuits & Gravy) reference child recipes via 
 
 **Critical invariant — `normalizeRecipeIngredients` in `src/routes/api/recipes/builtin/+server.ts`**: This function must include `componentRef` in its return object. If `componentRef` is omitted, `groupRecipeIngredients`'s filter `!isDish || !!componentRef` silently drops every composite section row from the RecipeBook display — sections like "English muffin:" and "Hollandaise sauce:" disappear entirely with no error. If composite sections go missing in production, this is the first place to check.
 
-**Section labels come from the TypeScript bundle, NOT Turso**: `formatSectionHeader` in `RecipeBook.svelte` reads `level.sections[].label`, which comes from the generated-levels.ts bundle (generated from `recipe_sections.csv`). `upload.py` does NOT write section labels to Turso. To rename a section header: edit `recipe_sections.csv` → run `generate_bundle.py` → git push. The Turso upload will report "0 changes" — that is correct and expected.
+**Section labels — two separate paths depending on recipe type**:
+- **Builtin recipes (SWEET/BKFST)**: `formatSectionHeader` in `RecipeBook.svelte` reads `level.sections[].label` from the generated-levels.ts bundle (generated from `recipe_sections.csv`). `upload.py` does NOT write section labels to Turso. To rename a section header: edit `recipe_sections.csv` → run `generate_bundle.py` → git push. The Turso upload will report "0 changes" — that is correct and expected.
+- **Player/community recipes**: Section labels are stored directly in Turso's `sections_json` column as a `CommunitySection[]` array (`{ sectionKey, sectionLabel }`). `RecipeForm.svelte` serialises the form's `sections` state into the submit payload; `my/+server.ts` writes it to Turso and reads it back via `JSON.parse(row.sections_json)`. The TypeScript bundle is irrelevant for player recipes — no bundle entry exists or is needed.
 
 ## v3 Full Spec
 `/Users/macminidata/vscode/jetfooddata/jetcool/docs/v3.md` — authoritative pipeline spec (phases, math contract, CSV schemas, authoring runbook §17)
