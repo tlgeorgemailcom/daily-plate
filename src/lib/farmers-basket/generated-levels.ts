@@ -2471,7 +2471,8 @@ export const LEVELS: Level[] = [
       { name: 'Sausage gravy (2 cups total; 1/2 cup per serving x 4 servings)', quantity: '2 cups', section: 'gravy', foodWord: 'SAUSAGEGRAVY', portionDesc: 'g', portionGrams: 460.8, isDish: true, componentRef: 'BKFST_012' }
     ],
     recipeInstructions: [
-      'For each serving',
+      'For each serving:',
+      'Split 2 warm biscuits open and arrange on a plate.',
       'Ladle about 1/2 cup (115 g) of hot sausage gravy over the split biscuits. Serve immediately.'
     ],
     sections: [
