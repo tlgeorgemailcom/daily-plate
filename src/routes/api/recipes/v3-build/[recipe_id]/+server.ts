@@ -89,6 +89,45 @@ export const GET: RequestHandler = async ({ params }) => {
     return { ...sec, cook_method: childCook, cooking_method: childCook, cooking_method_normalized: childCook };
   });
 
+  // Inline-expand component_ref rows so the edit form gets a flat,
+  // fully-editable ingredient list (same as RecipeBook::levelToFormData).
+  // Each component_ref's child leaf ingredients are scaled to the grams
+  // used in this recipe and inherit the parent row's section key.
+  const expandedIngredients: IngredientRow[] = [];
+  for (const ing of rawIngredients) {
+    const ref = ing.component_ref as string | undefined;
+    if (!ref) {
+      expandedIngredients.push(ing);
+      continue;
+    }
+    const childBuild = BUILDS_BY_ID[ref];
+    if (!childBuild) {
+      expandedIngredients.push(ing); // unknown child: keep ref as-is
+      continue;
+    }
+    const childLeafs = ((childBuild.ingredients ?? []) as IngredientRow[]).filter(
+      (c) => !c.component_ref,
+    );
+    if (childLeafs.length === 0) {
+      expandedIngredients.push(ing); // empty child: keep ref as-is
+      continue;
+    }
+    const childBatch = childLeafs.reduce((s, c) => s + ((c.grams as number) || 0), 0);
+    const parentGrams = (ing.grams as number) || 0;
+    const scale = childBatch > 0 && parentGrams > 0 ? parentGrams / childBatch : 1;
+    for (const c of childLeafs) {
+      expandedIngredients.push({
+        ingredient_key: c.ingredient_key,
+        ndb_no: c.ndb_no,
+        long_desc: c.long_desc,
+        grams: Math.round(((c.grams as number) || 0) * scale * 100) / 100,
+        section: ing.section,
+        ingredient_group: ing.ingredient_group ?? ing.section,
+        // qty_display omitted intentionally — the scaled gram weight is shown
+      });
+    }
+  }
+
   return json({
     recipe_id: parsed.recipe_id,
     srRule: parsed.sr_rule,
@@ -105,7 +144,7 @@ export const GET: RequestHandler = async ({ params }) => {
     auditStatus: parsed.audit_status ?? '',
     auditNotes: parsed.audit_notes ?? '',
     recipeName: (parsed.recipe_name as string) ?? '',
-    ingredients: rawIngredients,
+    ingredients: expandedIngredients,
     sections: enrichedSections,
   });
 };

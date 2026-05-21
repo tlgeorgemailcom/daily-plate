@@ -204,6 +204,7 @@
       portionGrams: typeof ing.portionGrams === 'number' ? ing.portionGrams : (typeof ing.portion_grams === 'number' ? ing.portion_grams : undefined),
       servingCount: typeof ing.servingCount === 'number' ? ing.servingCount : (typeof ing.serving_count === 'number' ? ing.serving_count : undefined),
       exempt: ing.exempt === true,
+      isDish: Boolean(ing.isDish),
       section: ing.section != null ? String(ing.section) : undefined
     }));
 
