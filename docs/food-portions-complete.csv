@@ -1486,3 +1486,4 @@ PORKBACKFAT,Pork Backfat,,protein,,,,,10004,"Pork, fresh, backfat, raw",812.0,2.
 BISCUITSGRAVY,Biscuits & Gravy,prepared,,,,,,"Biscuits and gravy, prepared from recipe",262.64,7.83,13.85,25.61,0.88,50.18,2.97,1.0,custom (g),100.0,1.0,oz,28.35,1.0,serving,228.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 EGGSBENEDICT,Eggs Benedict,prepared,,,,,,"Eggs Benedict, prepared from recipe",288.0,13.81,21.10,8.48,0.60,53.51,1.17,1.0,custom (g),100.0,1.0,oz,28.35,1.0,serving,345.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 CANADIANBACON,Canadian Bacon,,protein,,,,,10998,"Canadian bacon, cooked, pan-fried",146.0,28.31,2.78,1.80,0.0,62.5,1.2,1.0,custom (g),100.0,1.0,oz,28.35,1.0,slice,28.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+CANADIANBACONRAW,Canadian Bacon (raw),,protein,,,,,10130,"Canadian bacon, unprepared",110.0,20.31,2.62,1.34,0.0,72.34,0.9,1.0,custom (g),100.0,1.0,oz,28.35,1.0,slice,28.5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

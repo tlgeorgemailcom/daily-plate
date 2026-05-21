@@ -91,7 +91,7 @@ Planned BKFST order (standalone components first, composites last):
 |---|---|---|---|
 | BKFST_001 | Biscuit (savory) | 18016 | Rule A ✅ — yfw=0.75, 1g sugar trim to hit canonical |
 | BKFST_002 | Biscuits & Gravy | composite | Rule D ✅ — 🧩 BKFST_001 (Rule A) + BKFST_012 (Rule G); no FNDDS canonical for the combined dish |
-| BKFST_003 | Eggs Benedict | composite | Rule F ✅ — FNDDS FC 32101500; NDB 1129 (poached egg direct) + NDB 10998 (Canadian bacon direct) + NDB 1001 (butter direct) + @BKFST_004 + @BKFST_006; all macros ≤±3% |
+| BKFST_003 | Eggs Benedict | composite | Rule G ✅ — FNDDS FC 32101500; NDB 1131 (poached egg direct) + NDB 10130 (Canadian bacon raw) + @BKFST_004 + @BKFST_006; Protein −23.7% ❌ Fat +13.6% ❌ vs FNDDS canonical (FNDDS recipe not authored by a cook — excess Canadian bacon, margarine separate, insufficient hollandaise) |
 | BKFST_004 | English Muffin | 18264 | Rule A ✅ component |
 | BKFST_005 | French Toast | 18269 | Rule A ✅ |
 | BKFST_006 | Hollandaise Sauce | FNDDS 81302010 | Rule G ✅ — FNDDS FC 81302010 decomposition: 60g butter(1001)+30g egg yolk(1125)+10g lemon juice(9152) per 100g; Carbs +74.8% ❌ Sugar -40.3% ❌ vs official FDC (absolute: 0.77g C, 0.31g S per 100g sauce); SR Legacy NDB 1125 carb/sugar values differ from FNDDS updated FDC values; E/P/F/W all ≤±3% |
@@ -99,7 +99,7 @@ Planned BKFST order (standalone components first, composites last):
 | BKFST_008 | Pancakes, blueberry | 18294 | Rule A ✅ |
 | BKFST_009 | Pancakes, buttermilk | 18390 | Rule A ✅ |
 | BKFST_010 | Pancakes, plain | 18293 | Rule A ✅ |
-| BKFST_011 | Poached Egg | 1129 | Not built as standalone — `egg_cooked_poached` ledger key (NDB 1129) used directly in composites |
+| BKFST_011 | Poached Egg | 1131 | Not built as standalone — `egg_cooked_poached` ledger key (NDB 1131) used directly in composites |
 | BKFST_012 | Sausage Gravy | FNDDS 27120120 | Rule G ✅ — FNDDS FC canonical: 180 kcal·6.78P·13.61F·7.65C per 100g; >±5% (no SR Legacy analog for homemade) |
 | BKFST_013 | Scrambled Eggs | 01132 | Rule A ✅ |
 | BKFST_014 | Waffles, plain | 18367 | Rule A ✅ |

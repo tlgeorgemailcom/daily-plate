@@ -175,8 +175,11 @@
   function recipeToFormData(recipe: RecipeSubmission): Partial<RecipeFormData> {
     const rawIngredients = (recipe.modIngredients || recipe.ingredients || []) as unknown as Array<Record<string, unknown>>;
     const rawInstructions = (recipe.instructions || []) as unknown[];
-    const dishRow = rawIngredients.find((ing) => ing.row_type === 'dish' || ing.isDish === true);
-    const ingredientRows = rawIngredients.filter((ing) => !(ing.row_type === 'dish' || ing.isDish === true));
+    // Component-ref rows (isDish=true AND componentRef set) are child-recipe
+    // references, not dish-link rows — keep them in ingredientRows so they
+    // appear in the form (English muffin, hollandaise, etc.).
+    const dishRow = rawIngredients.find((ing) => (ing.row_type === 'dish' || ing.isDish === true) && !ing.componentRef);
+    const ingredientRows = rawIngredients.filter((ing) => !(ing.row_type === 'dish' || (ing.isDish === true && !ing.componentRef)));
 
     const dishNdbNo = dishRow?.ndb_no || dishRow?.ndbNo;
     const dishLink = dishRow && dishNdbNo
