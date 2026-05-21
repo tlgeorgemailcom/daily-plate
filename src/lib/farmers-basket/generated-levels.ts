@@ -2677,7 +2677,7 @@ export const LEVELS: Level[] = [
       { name: 'salt', quantity: '⅛ tsp', section: 'main', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.75 }
     ],
     recipeInstructions: [
-      'Whisk together the egg, milk, and a pinch of salt in a shallow bowl until well combined.',
+      'Whisk together the egg, milk, and salt in a shallow bowl until well combined.',
       'Dip each slice of bread into the egg mixture, letting it soak for about 10–15 seconds per side so the bread absorbs the custard.',
       'Melt the butter in a skillet or griddle over medium heat until foamy.',
       'Place the soaked bread slices in the pan and cook until golden brown on the bottom, about 2–3 minutes.',
