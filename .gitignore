@@ -27,3 +27,8 @@ local.db
 local.db-info
 local.db-shm
 local.db-wal
+
+# Backup/scratch files
+*.bak
+*.bak2
+NOT SET
