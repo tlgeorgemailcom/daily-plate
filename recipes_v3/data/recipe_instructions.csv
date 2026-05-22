@@ -414,7 +414,7 @@ BKFST_015,1,"In a medium bowl, combine the ground sage, salt, black pepper, oreg
 BKFST_015,2,"Add the raw ground pork to the bowl with the spice mix. If using 80/20 ground pork, also add the finely chopped pork backfat. Using clean hands or a fork, mix gently but thoroughly until the spices and fat are evenly distributed — do not overwork, or the patties will be tough."
 BKFST_015,3,"Divide the seasoned pork into 12 equal portions (about 1.5 oz / 42 g each raw — they shrink to about 35 g cooked). Roll each into a ball, then flatten into a patty roughly 2 1/2 inches across and 1/3-inch thick. Press a small dimple into the center of each patty to prevent doming during cooking."
 BKFST_015,4,"For best flavor, cover and refrigerate the patties for at least 30 minutes (or overnight) to let the spices bloom and the pork firm up."
-BKFST_015,5,"Heat a large heavy skillet (cast iron preferred) over medium heat until hot. The pork has enough fat that no additional oil is needed."
+BKFST_015,5,Heat a large heavy skillet (cast iron preferred) over medium heat until hot. The pork has enough fat that no additional oil is needed.
 BKFST_015,6,"Place patties in the skillet without crowding. Cook 3–4 minutes per side, turning once, until deeply browned on both faces and an instant-read thermometer reads 160°F at the center. Total cook time about 7–8 minutes."
 BKFST_015,7,"Transfer cooked patties to a paper-towel-lined plate to drain briefly. Serve hot alongside eggs, biscuits, or as the protein in biscuits & gravy."
 BKFST_012,1,"In a large heavy skillet over medium heat, crumble in the seasoned ground pork (or pre-made BKFST_015 sausage). Cook 6–8 minutes, breaking into small pieces with a wooden spoon, until well-browned with no pink remaining."
@@ -422,17 +422,17 @@ BKFST_012,2,"Transfer the browned sausage to a paper-towel-lined plate, leaving 
 BKFST_012,3,"Add 2 tablespoons of butter to the rendered sausage fat over medium heat and let it melt. Whisk in the flour and cook the roux for about 1 minute, stirring constantly, until pale blonde and smooth."
 BKFST_012,4,"Gradually pour in the whole milk, whisking continuously to prevent lumps. Whisk in the salt and black pepper."
 BKFST_012,5,"Bring the gravy to a gentle simmer, whisking often, and cook 4–6 minutes until thickened to a pourable sauce that coats the back of a spoon."
-BKFST_012,6,"Return the browned sausage to the skillet and stir to combine. Simmer 1–2 minutes more to reheat. Taste and adjust salt and pepper."
-BKFST_012,7,"Serve hot over split biscuits."
+BKFST_012,6,Return the browned sausage to the skillet and stir to combine. Simmer 1–2 minutes more to reheat. Taste and adjust salt and pepper.
+BKFST_012,7,Serve hot over split biscuits.
 BKFST_002,1,For each serving:
 BKFST_002,2,Split 2 warm biscuits open and arrange on a plate.
-BKFST_002,3,"Ladle about 1/2 cup (115 g) of hot sausage gravy over the split biscuits. Serve immediately."
+BKFST_002,3,Ladle about 1/2 cup (115 g) of hot sausage gravy over the split biscuits. Serve immediately.
 BKFST_004,1,"In a large bowl, whisk together the whole wheat flour, all-purpose flour, salt, and sugar."
 BKFST_004,2,Warm the milk and water together to 110°F (just warm to the touch — not hot). Sprinkle in the active dry yeast and let stand 5 minutes until foamy.
 BKFST_004,3,"Pour the yeast mixture into the flour bowl. Stir with a wooden spoon until a shaggy, slightly sticky dough forms. Do not add extra flour — the dough should be soft."
 BKFST_004,4,"Turn dough out onto a lightly floured surface and knead 6–8 minutes until smooth and elastic. Shape into a ball, place in a lightly oiled bowl, cover with plastic wrap, and let rise in a warm spot 1–1.5 hours until doubled."
 BKFST_004,5,"Punch down the dough. On a lightly floured surface, pat or roll to about ½-inch thickness. Cut into rounds with a 3-inch biscuit cutter. You should get about 10 muffins."
-BKFST_004,6,"Arrange cut rounds on a cornmeal-dusted sheet pan. Cover loosely and let rest 20–30 minutes until slightly puffed."
+BKFST_004,6,Arrange cut rounds on a cornmeal-dusted sheet pan. Cover loosely and let rest 20–30 minutes until slightly puffed.
 BKFST_004,7,"Heat a cast-iron skillet or griddle over medium-low heat. Cook muffins in batches 5–7 minutes per side, pressing gently, until deep golden brown on both faces and cooked through. Adjust heat as needed — too high scorches the outside before the center sets."
 BKFST_004,8,"Cool on a rack. To serve, split with a fork (never a knife) to preserve the characteristic nooks and crannies. Toast before eating."
 BKFST_016,1,Warm the milk to about 110°F — it should feel warm but not hot. Add the 3 tablespoons + 1 teaspoon warm water. Sprinkle the yeast over the warm liquid and let stand 5 minutes until foamy and fragrant.
@@ -468,11 +468,11 @@ BKFST_007,3,"Cook, stirring occasionally, for 5 minutes until the oats are tende
 BKFST_007,4,Remove from heat and let stand 1–2 minutes before serving.
 BKFST_010,1,"Whisk together the flour, baking powder, sugar, and salt in a large bowl."
 BKFST_010,2,"In a separate bowl, beat the egg, then stir in the milk and melted butter."
-BKFST_010,3,"Pour the wet ingredients into the dry and stir just until combined; a few lumps are fine."
+BKFST_010,3,Pour the wet ingredients into the dry and stir just until combined; a few lumps are fine.
 BKFST_010,4,"Heat a lightly greased griddle or skillet over medium heat. Pour ¼ cup batter per pancake and cook until bubbles form on the surface and edges look set, about 2 minutes. Flip and cook until golden brown, about 1–2 minutes more."
 BKFST_008,1,"Whisk together the flour, baking powder, sugar, and salt in a large bowl."
 BKFST_008,2,"In a separate bowl, beat the egg, then stir in the milk and melted butter."
-BKFST_008,3,"Pour the wet ingredients into the dry and stir just until combined; a few lumps are fine. Gently fold in the blueberries."
+BKFST_008,3,Pour the wet ingredients into the dry and stir just until combined; a few lumps are fine. Gently fold in the blueberries.
 BKFST_008,4,"Heat a lightly greased griddle or skillet over medium heat. Pour ¼ cup batter per pancake and cook until bubbles form on the surface and edges look set, about 2 minutes. Flip and cook until golden brown, about 1–2 minutes more."
 BKFST_009,1,"Whisk together the flour, baking powder, sugar, and salt in a large bowl."
 BKFST_009,2,"In a separate bowl, beat the egg, then stir in the buttermilk and melted butter."
@@ -482,7 +482,7 @@ BKFST_014,1,"Whisk together the flour, baking powder, sugar, and salt in a large
 BKFST_014,2,"In a separate bowl, beat the eggs, then stir in the milk and melted butter."
 BKFST_014,3,Pour the wet ingredients into the dry and stir just until combined; a few lumps are fine.
 BKFST_014,4,"Preheat a waffle iron and lightly grease it. Pour batter into the center and cook until the waffle is golden brown and crisp, about 4–5 minutes."
-BKFST_013,1,"Place the potatoes in a saucepan, cover with cold water, and bring to a boil. Cook until just tender when pierced with a fork, about 15–18 minutes. Drain, let cool slightly, then peel and coarsely shred."
+BKFST_013,1,"Place the potatoes in a saucepan, cover with cold water, and bring to a boil. Turn off heat and let potatoes sit in water for 5 minutes. Drain, let cool slightly, then peel and coarsely shred."
 BKFST_013,2,Season the shredded potato with the salt and toss to combine.
 BKFST_013,3,Heat the olive oil in a large skillet over medium-high heat until shimmering.
 BKFST_013,4,"Add the potato in an even layer and press down firmly. Cook undisturbed until the bottom is deep golden brown, about 5–6 minutes. Flip in sections and cook the second side until crisp and golden, 4–5 minutes more."

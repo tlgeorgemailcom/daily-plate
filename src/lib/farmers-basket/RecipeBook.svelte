@@ -2078,7 +2078,9 @@
                     <ul>
                       {#each group.items as ing}
                         <li>
-                          {formatIngredientLine(ing)}
+                          {@const ingLine = formatIngredientLine(ing)}
+                          {@const ingLineParts = ingLine.split('\n')}
+                          {ingLineParts[0]}{#each ingLineParts.slice(1) as note}<div class="ingredient-note">{note}</div>{/each}
                           {#if ing.componentRef}
                             {@const childLines = getChildIngredientLines(ing.componentRef)}
                             {@const childLevel = levels.find(l => l.id === ing.componentRef)}
@@ -3274,6 +3276,14 @@
   
   .full-ingredients li {
     margin-bottom: 4px;
+  }
+
+  .ingredient-note {
+    margin-top: 1px;
+    padding-left: 1.2em;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
   }
 
   .component-sublist-label {

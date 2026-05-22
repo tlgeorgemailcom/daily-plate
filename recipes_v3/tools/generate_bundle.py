@@ -80,7 +80,7 @@ CANONICAL_NUTRIENT_COLS = {
 
 def esc(s):
     """Escape a string for TypeScript single-quoted string."""
-    return s.replace('\\', '\\\\').replace("'", "\\'")
+    return s.replace('\\', '\\\\').replace("'", "\\'").replace('\r', '').replace('\n', '\\n')
 
 def ts_string(s):
     return f"'{esc(str(s))}'"
