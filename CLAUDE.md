@@ -73,7 +73,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | Prefix | Status | Count |
 |---|---|---|
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
-| `BKFST_NNN` | 🔧 In progress | 10 (001, 002, 003, 004, 005, 006, 007, 012, 015, 016) |
+| `BKFST_NNN` | 🔧 In progress | 11 (001, 002, 003, 004, 005, 006, 007, 010, 012, 015, 016) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -100,7 +100,7 @@ Planned BKFST order (standalone components first, composites last):
 | BKFST_007 | Oatmeal, cooked | 8121 | Rule C ✅ — 40g rolled oats (NDB 8120) + 237g water; yfw=0.76; Fat -21.7% ❌ Fiber +8.5% ⚠️ Sugar -33% ❌ vs NDB 8121 (SR Legacy dry/cooked P/F ratio artifact — NDB 8120 P/F=2.017 vs NDB 8121 implied P/F=1.671; structurally irreducible) |
 | BKFST_008 | Pancakes, blueberry | 18294 | Rule A ✅ |
 | BKFST_009 | Pancakes, buttermilk | 18390 | Rule A ✅ |
-| BKFST_010 | Pancakes, plain | 18293 | Rule A ✅ |
+| BKFST_010 | Pancakes, plain | 18293 | Rule B ✅ — yfw=0.96 (griddled); Fiber+Sugar unscored (canonical=0); all 5 scored macros ≤±3.4%; 1 cup flour+2 tsp bp+1 tbsp sugar+¼ tsp salt+1 egg+¾ cup milk+2 tbsp+1 tsp butter(1001) |
 | BKFST_011 | Poached Egg | 1131 | Not built as standalone — `egg_cooked_poached` ledger key (NDB 1131) used directly in composites |
 | BKFST_012 | Sausage Gravy | FNDDS 27120120 | Rule G ✅ — FNDDS FC canonical: 180 kcal·6.78P·13.61F·7.65C per 100g; >±5% (no SR Legacy analog for homemade) |
 | BKFST_013 | Scrambled Eggs | 01132 | Rule A ✅ |
