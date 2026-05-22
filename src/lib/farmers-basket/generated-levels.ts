@@ -2842,5 +2842,45 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'batter', label: 'Pancake batter', cookingMethod: '', yieldFactorWater: 0.78 }
     ],
+  },
+  {
+    id: 'BKFST_014',
+    name: 'Waffles plain',
+    category: 'Breakfast',
+    dietaryCategory: 'veggie',
+    levelNum: 58,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '4 waffles',
+    prepTime: '20 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule B',
+    nutritionJson: {"cal":476.1,"pro":12.4,"fat":23.2,"carb":54.2,"fib":1.6,"h2o":68.4,"sug":7.9,"perServing":{"cal":476.1,"pro":12.4,"fat":23.2,"carb":54.2,"fib":1.6,"h2o":68.4,"sug":7.9,"AddedSugars":3.0,"IntrinsicSugars":4.9},"micros":{"vitaminA":111.49,"vitaminC":0.0,"vitaminD":39.04,"vitaminE":0.44,"vitaminK":1.11,"vitaminB6":0.04,"vitaminB12":0.35,"thiamin":0.22,"riboflavin":0.31,"niacin":1.78,"folate":58.17,"calcium":236.09,"iron":2.23,"magnesium":16.6,"phosphorus":329.44,"potassium":137.61,"sodium":563.73,"zinc":0.67,"copper":0.07,"selenium":19.36,"cholesterol":90.52,"saturatedFat":8.27,"monoFat":3.78,"polyFat":0.71,"omega3":0.03,"omega6":0.41},"gramsPerServing":163.4,"servings":4,"per100g":{"Energy_KCal":291.27,"Water":41.86,"Protein":7.59,"TotalLipidFat":14.2,"Carbohydrate":33.16,"FiberTotalDietary":1.0,"SugarsTotal":4.82,"Cholesterol":90.52,"FattyAcids_totalSaturated":8.27,"FattyAcids_totalMonounsaturated":3.78,"FattyAcids_totalPolyunsaturated":0.71,"LinoleicAcid":0.41,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":111.49,"Retinol":109.69,"Carotene_beta":19.9,"VitaminD":39.04,"VitaminE_alphaTocopherol":0.44,"VitaminK_phylloquinone":1.11,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.22,"Riboflavin":0.31,"Niacin":1.78,"PantothenicAcid":0.49,"VitaminB6":0.04,"Folate_total":58.17,"Folate_food":15.77,"Folate_DFE":87.9,"FolicAcid":56.53,"VitaminB12":0.35,"Choline_total":49.86,"Betaine":0.42,"LuteinZeaxanthin":68.86,"Lycopene":0.0,"Calcium_Ca":236.09,"Iron_Fe":2.23,"Magnesium_Mg":16.6,"Phosphorus_P":329.44,"Potassium_K":137.61,"Sodium_Na":563.73,"Zinc_Zn":0.67,"Copper_Cu":0.07,"Manganese_Mn":0.26,"Selenium_Se":19.36,"Tryptophan":0.09,"Threonine":0.26,"Isoleucine":0.33,"Leucine":0.6,"Lysine":0.37,"Methionine":0.17,"Cystine":0.11,"Phenylalanine":0.39,"Tyrosine":0.28,"Valine":0.4,"Arginine":0.33,"Histidine":0.18,"Alanine":0.29,"AsparticAcid":0.52,"GlutamicAcid":1.94,"Glycine":0.24,"Proline":0.7,"Serine":0.45,"omega3":0.03,"omega6":0.41,"AddedSugars":1.83,"IntrinsicSugars":2.99},"addedSugars":3.0,"intrinsicSugars":4.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"18367","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.62,"yieldFactorFat":1.0,"sources":[{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":60.0},{"ndb":"18370","name":"Leavening agents, baking powder, double-acting, straight phosphate","grams":3.5},{"ndb":"19335","name":"Sugars, granulated","grams":3.0},{"ndb":"2047","name":"Salt, table","grams":1.1},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":25.0},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":91.5},{"ndb":"1001","name":"Butter, salted","grams":21.3}],"sections":[{"section_key":"batter","section_label":"Waffle batter","prep_method":"raw","cook_method":"grilled","cooking_method":"grilled","cooking_method_normalized":"grilled","yield_factor_water":0.62,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":821.5,"raw_water_grams":441.4,"raw_fat_grams":92.86,"final_grams":653.77}],"cookingMethod":"grilled"},
+    recipeIngredients: [
+      { name: 'Waffles, plain, prepared from recipe', quantity: 'custom (g)', foodWord: 'WAFFLE', ndbNo: '18367', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'flour (AP)', quantity: '2 cups', section: 'batter', ndbNo: '20581', portionDesc: 'g', portionGrams: 240.0 },
+      { name: 'baking powder', quantity: '1 tbsp', section: 'batter', ndbNo: '18370', portionDesc: 'g', portionGrams: 13.8 },
+      { name: 'sugar', quantity: '1 tbsp', section: 'batter', ndbNo: '19335', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'salt', quantity: '¾ tsp', section: 'batter', ndbNo: '2047', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'eggs', quantity: '2 large', section: 'batter', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'whole milk', quantity: '1½ cups', section: 'batter', ndbNo: '1077', portionDesc: 'g', portionGrams: 366.0 },
+      { name: 'butter (melted)', quantity: '6 tbsp', section: 'batter', ndbNo: '1001', portionDesc: 'g', portionGrams: 85.2 }
+    ],
+    recipeInstructions: [
+      'Whisk together the flour, baking powder, sugar, and salt in a large bowl.',
+      'In a separate bowl, beat the eggs, then stir in the milk and melted butter.',
+      'Pour the wet ingredients into the dry and stir just until combined; a few lumps are fine.',
+      'Preheat a waffle iron and lightly grease it. Pour batter into the center and cook until the waffle is golden brown and crisp, about 4–5 minutes.'
+    ],
+    sections: [
+      { key: 'batter', label: 'Waffle batter', cookingMethod: '', yieldFactorWater: 0.62 }
+    ],
   }
 ];

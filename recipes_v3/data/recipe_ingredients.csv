@@ -573,3 +573,10 @@ BKFST_009,4,salt_table,¼ tsp,1.5,1.3,1.8,batter,batter,false,salt
 BKFST_009,5,egg_whole_raw,1 large,50.0,48,52,batter,batter,false,egg
 BKFST_009,6,milk_buttermilk_whole,1 cup,245.0,233,257,batter,batter,false,whole buttermilk
 BKFST_009,7,butter_salted,2 tbsp,28.4,27,30,batter,batter,false,butter (melted)
+BKFST_014,1,flour_ap_white_enriched_unbleached,2 cups,240.0,228,252,batter,batter,false,flour (AP)
+BKFST_014,2,baking_powder,1 tbsp,13.8,13.1,14.5,batter,batter,false,baking powder
+BKFST_014,3,sugar_granulated,1 tbsp,12.0,11,13,batter,batter,false,sugar
+BKFST_014,4,salt_table,¾ tsp,4.5,4.3,4.8,batter,batter,false,salt
+BKFST_014,5,egg_whole_raw,2 large,100.0,95,105,batter,batter,false,eggs
+BKFST_014,6,milk_whole,1½ cups,366.0,348,384,batter,batter,false,whole milk
+BKFST_014,7,butter_salted,6 tbsp,85.2,81,90,batter,batter,false,butter (melted)
