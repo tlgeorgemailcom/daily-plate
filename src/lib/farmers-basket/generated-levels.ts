@@ -2993,5 +2993,39 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'burrito', label: 'Bean and cheese burrito', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BKFST_019',
+    name: 'Burrito with cheese',
+    category: 'Breakfast',
+    dietaryCategory: 'veggie',
+    levelNum: 62,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 burrito',
+    prepTime: '5 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule G',
+    nutritionJson: {"cal":326.8,"pro":14.3,"fat":16.2,"carb":30.3,"fib":2.1,"h2o":36.2,"sug":2.7,"perServing":{"cal":326.8,"pro":14.3,"fat":16.2,"carb":30.3,"fib":2.1,"h2o":36.2,"sug":2.7,"AddedSugars":0.0,"IntrinsicSugars":2.7},"micros":{"vitaminA":69.6,"vitaminC":0.0,"vitaminD":8.4,"vitaminE":0.1,"vitaminK":5.32,"vitaminB6":0.05,"vitaminB12":0.49,"thiamin":0.31,"riboflavin":0.29,"niacin":2.69,"folate":61.6,"calcium":351.2,"iron":2.41,"magnesium":23.2,"phosphorus":298.8,"potassium":109.0,"sodium":576.8,"zinc":1.52,"copper":0.07,"selenium":19.38,"cholesterol":38.0,"saturatedFat":8.56,"monoFat":4.2,"polyFat":1.72,"omega3":0.13,"omega6":1.22},"gramsPerServing":100.0,"servings":1,"per100g":{"Energy_KCal":326.8,"Water":36.18,"Protein":14.34,"TotalLipidFat":16.2,"Carbohydrate":30.33,"FiberTotalDietary":2.1,"SugarsTotal":2.72,"Cholesterol":38.0,"FattyAcids_totalSaturated":8.56,"FattyAcids_totalMonounsaturated":4.2,"FattyAcids_totalPolyunsaturated":1.72,"LinoleicAcid":1.22,"alphaLinolenicAcid":0.13,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":69.6,"Retinol":68.0,"Carotene_beta":22.4,"VitaminD":8.4,"VitaminE_alphaTocopherol":0.1,"VitaminK_phylloquinone":5.32,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.31,"Riboflavin":0.29,"Niacin":2.69,"PantothenicAcid":0.43,"VitaminB6":0.05,"Folate_total":61.6,"Folate_food":14.2,"Folate_DFE":94.6,"FolicAcid":47.4,"VitaminB12":0.49,"Choline_total":11.02,"Betaine":3.26,"LuteinZeaxanthin":5.4,"Lycopene":0.0,"Calcium_Ca":351.2,"Iron_Fe":2.41,"Magnesium_Mg":23.2,"Phosphorus_P":298.8,"Potassium_K":109.0,"Sodium_Na":576.8,"Zinc_Zn":1.52,"Copper_Cu":0.07,"Manganese_Mn":0.33,"Selenium_Se":19.38,"Tryptophan":0.18,"Threonine":0.43,"Isoleucine":0.65,"Leucine":1.08,"Lysine":0.73,"Methionine":0.29,"Cystine":0.11,"Phenylalanine":0.64,"Tyrosine":0.54,"Valine":0.73,"Arginine":0.44,"Histidine":0.36,"Alanine":0.36,"AsparticAcid":0.76,"GlutamicAcid":3.22,"Glycine":0.27,"Proline":1.4,"Serine":0.63,"omega3":0.13,"omega6":1.22,"AddedSugars":0.0,"IntrinsicSugars":2.72},"addedSugars":0.0,"intrinsicSugars":2.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18364","name":"Tortillas, ready-to-bake or -fry, flour, refrigerated","grams":60.0},{"ndb":"1251","name":"Cheese, Mexican blend","grams":40.0}],"sections":[{"section_key":"burrito","section_label":"Cheese burrito","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":100.0,"raw_water_grams":36.18,"raw_fat_grams":16.2,"final_grams":100.0}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Burrito with cheese', quantity: 'custom (g)', foodWord: 'BURRITOCHEESE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'flour tortilla', quantity: '1 flour tortilla (60g)', section: 'burrito', ndbNo: '18364', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'Mexican cheese blend', quantity: '~3 tbsp shredded', section: 'burrito', ndbNo: '1251', portionDesc: 'g', portionGrams: 40.0 }
+    ],
+    recipeInstructions: [
+      'Warm the flour tortilla in a dry skillet over medium heat for 30 seconds per side, or microwave for 15–20 seconds, until soft and pliable.',
+      'Sprinkle the shredded Mexican cheese blend evenly over the center of the warm tortilla.',
+      'Fold the sides in and roll tightly into a burrito.'
+    ],
+    sections: [
+      { key: 'burrito', label: 'Cheese burrito', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

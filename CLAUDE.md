@@ -73,7 +73,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | Prefix | Status | Count |
 |---|---|---|
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
-| `BKFST_NNN` | 🔧 In progress | 17 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 012, 013, 014, 015, 016, 017, 018) |
+| `BKFST_NNN` | 🔧 In progress | 18 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 012, 013, 014, 015, 016, 017, 018, 019) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -109,6 +109,7 @@ Planned BKFST order (standalone components first, composites last):
 | BKFST_016 | English Muffin (Thomas Style) | 18639 | Rule B ✅ — yfw=0.90 (griddle); Fiber+Sugar unscored (canonical=0); all 5 scored macros ≤±4.9% |
 | BKFST_017 | Burrito with beans | FNDDS 58102605 | Rule F ✅ — FNDDS FC 58102605 decomposition verbatim; all 7 macros Δ=0.0% |
 | BKFST_018 | Burrito with beans and cheese | FNDDS 58102610 | Rule F ✅ — FNDDS FC 58102610; 40g tortilla(18364)+30g refried beans(16403)+30g black beans(16015)+5g cheese(1251)+0.3g salt; all 7 macros ≤±1.3%; beans dilute tortilla SR Legacy sugar inflation |
+| BKFST_019 | Burrito with cheese | FNDDS 58102680 | Rule G ✅ — FNDDS FC 58102680 ("Burrito, cheese only"); 60g tortilla(18364)+40g cheese(1251); FNDDS uses 99991410 aggregate for cheese; Sugar +7.3% ❌ (NDB 1251 Sugar=1.23 vs 99991410 est. 0.77g/100g); all other 6 macros ≤±4.5% |
 
 **Ingredients needed in ledger before building:**
 - (none outstanding — sausage and black pepper ingredients added during BKFST_015 build)
@@ -181,7 +182,7 @@ FNDDS published nutrient profiles use **Foundation Foods** values for common ing
 - **Ingredient key naming must match NDB long_desc**: NDB 20581 is *unbleached* per `comboo.db`, despite the legacy `flour_ap_white_enriched_bleached` key. Always verify `Long_Desc` before naming a new ledger key.
 - **`food-portions-complete.csv` lives in 3 places** — root, `src/lib/data/`, `docs/` — all must stay in sync. Edit all three together.
 - **Duplicate NDB mappings in food-portions cause silent validator errors**: validator picks one `food_word` per NDB and flags ledger keys as "mismatched". Before adding a food-portions row, `grep ",NDB,"` to check for duplicates.
-- **`food-portions-complete.csv` has a `synonyms` column at index 2** (between `display` and `group1`). When manually writing a new row, leave `synonyms` empty (`,,`) or the `group1`/`NDB_NO` values shift left, causing the validator to fail with "ndb_no not in food-portions". Correct column order: `word,display,synonyms,group1,group2,group3,group4,has_recipe,NDB_NO,usda_desc,...`
+- **`food-portions-complete.csv` column layouts differ across copies** — `src/lib/data/` has 56 columns (`word,display,synonyms,group1,group2,group3,group4,has_recipe,NDB_NO,usda_desc,...`) while root and `docs/` have 55 columns (no `synonyms` column: `word,display,group1,group2,group3,group4,has_recipe,NDB_NO,usda_desc,...`). When scripting changes, use Python's `csv` module and verify column offsets per file — never assume the same integer index applies to all three copies.
 - **CSV field-count discipline**: a single missing/extra comma in a manual edit breaks the row. After editing, verify `awk -F, '{print NF}'` matches the header field count.
 - **Rounding is forbidden until final display**: two-part rule — (1) when adding a new NDB entry to `food-portions-complete.csv`, always query `comboo.db` directly and copy the stored value verbatim; never hand-approximate or truncate it. (2) During pre-build macro estimation, carry full precision through every intermediate step. Rounding nutrient values at either stage accumulates error that can shift a passing macro (e.g. Carbs +4.0% estimated) into a failing one (+6.7% actual). Always use the pipeline's built output to determine the final rule classification — never the hand-estimated audit.
 
