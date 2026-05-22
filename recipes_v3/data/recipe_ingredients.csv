@@ -580,3 +580,6 @@ BKFST_014,4,salt_table,¾ tsp,4.5,4.3,4.8,batter,batter,false,salt
 BKFST_014,5,egg_whole_raw,2 large,100.0,95,105,batter,batter,false,eggs
 BKFST_014,6,milk_whole,1½ cups,366.0,348,384,batter,batter,false,whole milk
 BKFST_014,7,butter_salted,6 tbsp,85.2,81,90,batter,batter,false,butter (melted)
+BKFST_013,1,potato_boiled_no_skin,2 medium,225.0,214,236,hashbrown,hashbrown,false,boiled potato (shredded)
+BKFST_013,2,olive_oil,1 tbsp + 1 tsp,16.0,15,17,hashbrown,hashbrown,false,olive oil
+BKFST_013,3,salt_table,½ tsp,3.0,2.8,3.2,hashbrown,hashbrown,false,salt
