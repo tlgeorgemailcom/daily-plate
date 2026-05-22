@@ -2077,9 +2077,8 @@
                     {/if}
                     <ul>
                       {#each group.items as ing}
+                        {@const ingLineParts = formatIngredientLine(ing).split('\n')}
                         <li>
-                          {@const ingLine = formatIngredientLine(ing)}
-                          {@const ingLineParts = ingLine.split('\n')}
                           {ingLineParts[0]}{#each ingLineParts.slice(1) as note}<div class="ingredient-note">{note}</div>{/each}
                           {#if ing.componentRef}
                             {@const childLines = getChildIngredientLines(ing.componentRef)}
