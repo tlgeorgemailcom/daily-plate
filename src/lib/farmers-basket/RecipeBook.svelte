@@ -312,12 +312,34 @@
     return `${quantity} ${name}`;
   }
 
+  function singularizeUnit(unit: string): string {
+    const SINGULAR: Record<string, string> = {
+      pancakes: 'pancake', waffles: 'waffle', biscuits: 'biscuit',
+      slices: 'slice', muffins: 'muffin', patties: 'patty',
+      pieces: 'piece', bars: 'bar', brownies: 'brownie',
+      tablespoons: 'tablespoon', cookies: 'cookie', macaroons: 'macaroon',
+      servings: 'serving',
+    };
+    return SINGULAR[unit.toLowerCase()] ?? (unit.endsWith('s') ? unit.slice(0, -1) : unit);
+  }
+
   function formatPerServingLabel(level: Level) {
     const gramsPerServing = level.nutritionJson?.gramsPerServing;
-    if (typeof gramsPerServing === 'number' && Number.isFinite(gramsPerServing) && gramsPerServing > 0) {
-      return `Per serving(${gramsPerServing}g piece)`;
+    const gStr = (typeof gramsPerServing === 'number' && Number.isFinite(gramsPerServing) && gramsPerServing > 0)
+      ? `${gramsPerServing}g` : null;
+
+    const servingsStr = level.servings?.trim();
+    if (servingsStr) {
+      const m = servingsStr.match(/^(\d+(?:\.\d+)?)\s+(.+)$/);
+      if (m) {
+        const count = parseFloat(m[1]);
+        const unit = m[2].trim();
+        const singular = count > 1 ? singularizeUnit(unit) : unit;
+        const label = `1 ${singular}`;
+        return gStr ? `${label} (${gStr})` : label;
+      }
     }
-    return 'Per serving';
+    return gStr ? `Per serving (${gStr})` : 'Per serving';
   }
 
   function getChildIngredientLines(componentRef: string): string[] {
