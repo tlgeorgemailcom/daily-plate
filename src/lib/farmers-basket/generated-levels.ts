@@ -2802,5 +2802,45 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'batter', label: 'Pancake batter', cookingMethod: '', yieldFactorWater: 0.81 }
     ],
+  },
+  {
+    id: 'BKFST_009',
+    name: 'Pancakes buttermilk',
+    category: 'Breakfast',
+    dietaryCategory: 'veggie',
+    levelNum: 57,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '4 pancakes',
+    prepTime: '15 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule B',
+    nutritionJson: {"cal":228.7,"pro":6.7,"fat":9.3,"carb":29.5,"fib":0.8,"h2o":53.2,"sug":6.1,"perServing":{"cal":228.7,"pro":6.7,"fat":9.3,"carb":29.5,"fib":0.8,"h2o":53.2,"sug":6.1,"AddedSugars":3.0,"IntrinsicSugars":3.1},"micros":{"vitaminA":76.71,"vitaminC":0.0,"vitaminD":39.39,"vitaminE":0.3,"vitaminK":0.72,"vitaminB6":0.04,"vitaminB12":0.34,"thiamin":0.18,"riboflavin":0.27,"niacin":1.45,"folate":47.31,"calcium":249.32,"iron":1.86,"magnesium":15.04,"phosphorus":333.92,"potassium":131.93,"sodium":448.37,"zinc":0.6,"copper":0.06,"selenium":16.12,"cholesterol":67.47,"saturatedFat":5.16,"monoFat":2.44,"polyFat":0.51,"omega3":0.02,"omega6":0.27},"gramsPerServing":101.5,"servings":4,"per100g":{"Energy_KCal":225.29,"Water":52.36,"Protein":6.6,"TotalLipidFat":9.13,"Carbohydrate":29.09,"FiberTotalDietary":0.8,"SugarsTotal":6.02,"Cholesterol":67.47,"FattyAcids_totalSaturated":5.16,"FattyAcids_totalMonounsaturated":2.44,"FattyAcids_totalPolyunsaturated":0.51,"LinoleicAcid":0.27,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":76.71,"Retinol":75.5,"Carotene_beta":12.45,"VitaminD":39.39,"VitaminE_alphaTocopherol":0.3,"VitaminK_phylloquinone":0.72,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.18,"Riboflavin":0.27,"Niacin":1.45,"PantothenicAcid":0.44,"VitaminB6":0.04,"Folate_total":47.31,"Folate_food":13.19,"Folate_DFE":71.25,"FolicAcid":45.5,"VitaminB12":0.34,"Choline_total":41.66,"Betaine":0.06,"LuteinZeaxanthin":55.43,"Lycopene":0.0,"Calcium_Ca":249.32,"Iron_Fe":1.86,"Magnesium_Mg":15.04,"Phosphorus_P":333.92,"Potassium_K":131.93,"Sodium_Na":448.37,"Zinc_Zn":0.6,"Copper_Cu":0.06,"Manganese_Mn":0.21,"Selenium_Se":16.12,"Tryptophan":0.08,"Threonine":0.23,"Isoleucine":0.29,"Leucine":0.53,"Lysine":0.34,"Methionine":0.15,"Cystine":0.09,"Phenylalanine":0.34,"Tyrosine":0.25,"Valine":0.36,"Arginine":0.28,"Histidine":0.16,"Alanine":0.25,"AsparticAcid":0.46,"GlutamicAcid":1.68,"Glycine":0.2,"Proline":0.61,"Serine":0.39,"omega3":0.02,"omega6":0.27,"AddedSugars":2.95,"IntrinsicSugars":3.07},"addedSugars":3.0,"intrinsicSugars":3.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"18390","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.78,"yieldFactorFat":1.0,"sources":[{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":30.0},{"ndb":"18370","name":"Leavening agents, baking powder, double-acting, straight phosphate","grams":2.3},{"ndb":"19335","name":"Sugars, granulated","grams":3.0},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":12.5},{"ndb":"1230","name":"Milk, buttermilk, fluid, whole","grams":61.2},{"ndb":"1001","name":"Butter, salted","grams":7.1}],"sections":[{"section_key":"batter","section_label":"Pancake batter","prep_method":"raw","cook_method":"grilled","cooking_method":"grilled","cooking_method_normalized":"grilled","yield_factor_water":0.78,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":466.1,"raw_water_grams":272.64,"raw_fat_grams":37.08,"final_grams":406.12}],"cookingMethod":"grilled"},
+    recipeIngredients: [
+      { name: 'Pancakes, buttermilk, prepared from recipe', quantity: 'custom (g)', foodWord: 'PANCAKE', ndbNo: '18390', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'flour (AP)', quantity: '1 cup', section: 'batter', ndbNo: '20581', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'baking powder', quantity: '2 tsp', section: 'batter', ndbNo: '18370', portionDesc: 'g', portionGrams: 9.2 },
+      { name: 'sugar', quantity: '1 tbsp', section: 'batter', ndbNo: '19335', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'salt', quantity: '¼ tsp', section: 'batter', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'egg', quantity: '1 large', section: 'batter', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'whole buttermilk', quantity: '1 cup', section: 'batter', ndbNo: '1230', portionDesc: 'g', portionGrams: 245.0 },
+      { name: 'butter (melted)', quantity: '2 tbsp', section: 'batter', ndbNo: '1001', portionDesc: 'g', portionGrams: 28.4 }
+    ],
+    recipeInstructions: [
+      'Whisk together the flour, baking powder, sugar, and salt in a large bowl.',
+      'In a separate bowl, beat the egg, then stir in the buttermilk and melted butter.',
+      'Pour the wet ingredients into the dry and stir just until combined; a few lumps are fine.',
+      'Heat a lightly greased griddle or skillet over medium heat. Pour ¼ cup batter per pancake and cook until bubbles form on the surface and edges look set, about 2 minutes. Flip and cook until golden brown, about 1–2 minutes more.'
+    ],
+    sections: [
+      { key: 'batter', label: 'Pancake batter', cookingMethod: '', yieldFactorWater: 0.78 }
+    ],
   }
 ];
