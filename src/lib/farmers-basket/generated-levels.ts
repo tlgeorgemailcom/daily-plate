@@ -2761,5 +2761,46 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'batter', label: 'Pancake batter', cookingMethod: '', yieldFactorWater: 0.96 }
     ],
+  },
+  {
+    id: 'BKFST_008',
+    name: 'Pancakes blueberry',
+    category: 'Breakfast',
+    dietaryCategory: 'veggie',
+    levelNum: 56,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '4 pancakes',
+    prepTime: '15 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule B',
+    nutritionJson: {"cal":237.5,"pro":6.3,"fat":9.7,"carb":31.4,"fib":1.3,"h2o":57.0,"sug":7.3,"perServing":{"cal":237.5,"pro":6.3,"fat":9.7,"carb":31.4,"fib":1.3,"h2o":57.0,"sug":7.3,"AddedSugars":3.0,"IntrinsicSugars":4.3},"micros":{"vitaminA":73.09,"vitaminC":0.84,"vitaminD":29.73,"vitaminE":0.37,"vitaminK":3.7,"vitaminB6":0.04,"vitaminB12":0.26,"thiamin":0.17,"riboflavin":0.24,"niacin":1.41,"folate":45.03,"calcium":219.74,"iron":1.81,"magnesium":13.84,"phosphorus":305.59,"potassium":117.59,"sodium":389.72,"zinc":0.54,"copper":0.06,"selenium":14.75,"cholesterol":64.13,"saturatedFat":5.15,"monoFat":2.42,"polyFat":0.51,"omega3":0.02,"omega6":0.28},"gramsPerServing":107.3,"servings":4,"per100g":{"Energy_KCal":221.31,"Water":53.14,"Protein":5.89,"TotalLipidFat":9.06,"Carbohydrate":29.28,"FiberTotalDietary":1.17,"SugarsTotal":6.78,"Cholesterol":64.13,"FattyAcids_totalSaturated":5.15,"FattyAcids_totalMonounsaturated":2.42,"FattyAcids_totalPolyunsaturated":0.51,"LinoleicAcid":0.28,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":73.09,"Retinol":71.53,"Carotene_beta":16.74,"VitaminD":29.73,"VitaminE_alphaTocopherol":0.37,"VitaminK_phylloquinone":3.7,"VitaminC_totalAscorbicAcid":0.84,"Thiamin":0.17,"Riboflavin":0.24,"Niacin":1.41,"PantothenicAcid":0.39,"VitaminB6":0.04,"Folate_total":45.03,"Folate_food":12.74,"Folate_DFE":67.67,"FolicAcid":43.06,"VitaminB12":0.26,"Choline_total":38.52,"Betaine":0.35,"LuteinZeaxanthin":61.41,"Lycopene":0.0,"Calcium_Ca":219.74,"Iron_Fe":1.81,"Magnesium_Mg":13.84,"Phosphorus_P":305.59,"Potassium_K":117.59,"Sodium_Na":389.72,"Zinc_Zn":0.54,"Copper_Cu":0.06,"Manganese_Mn":0.25,"Selenium_Se":14.75,"Tryptophan":0.07,"Threonine":0.2,"Isoleucine":0.25,"Leucine":0.46,"Lysine":0.28,"Methionine":0.13,"Cystine":0.08,"Phenylalanine":0.3,"Tyrosine":0.21,"Valine":0.31,"Arginine":0.26,"Histidine":0.14,"Alanine":0.23,"AsparticAcid":0.4,"GlutamicAcid":1.49,"Glycine":0.19,"Proline":0.53,"Serine":0.34,"omega3":0.02,"omega6":0.28,"AddedSugars":2.79,"IntrinsicSugars":3.99},"addedSugars":3.0,"intrinsicSugars":4.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"18294","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.81,"yieldFactorFat":1.0,"sources":[{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":30.0},{"ndb":"18370","name":"Leavening agents, baking powder, double-acting, straight phosphate","grams":2.3},{"ndb":"19335","name":"Sugars, granulated","grams":3.0},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":12.5},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":45.8},{"ndb":"1001","name":"Butter, salted","grams":8.2},{"ndb":"9050","name":"Blueberries, raw","grams":18.5}],"sections":[{"section_key":"batter","section_label":"Pancake batter","prep_method":"raw","cook_method":"grilled","cooking_method":"grilled","cooking_method_normalized":"grilled","yield_factor_water":0.81,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":482.7,"raw_water_grams":281.58,"raw_fat_grams":38.89,"final_grams":429.2}],"cookingMethod":"grilled"},
+    recipeIngredients: [
+      { name: 'Pancakes, blueberry, prepared from recipe', quantity: 'custom (g)', foodWord: 'PANCAKEBLUEBERRY', ndbNo: '18294', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'all-purpose flour', quantity: '1 cup', section: 'batter', ndbNo: '20581', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'baking powder', quantity: '2 tsp', section: 'batter', ndbNo: '18370', portionDesc: 'g', portionGrams: 9.2 },
+      { name: 'sugar', quantity: '1 tbsp', section: 'batter', ndbNo: '19335', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'salt', quantity: '¼ tsp', section: 'batter', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'egg', quantity: '1 large', section: 'batter', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'whole milk', quantity: '¾ cup', section: 'batter', ndbNo: '1077', portionDesc: 'g', portionGrams: 183.0 },
+      { name: 'butter (melted)', quantity: '2 tbsp + 1 tsp', section: 'batter', ndbNo: '1001', portionDesc: 'g', portionGrams: 33.0 },
+      { name: 'fresh blueberries', quantity: '½ cup', section: 'batter', ndbNo: '9050', portionDesc: 'g', portionGrams: 74.0 }
+    ],
+    recipeInstructions: [
+      'Whisk together the flour, baking powder, sugar, and salt in a large bowl.',
+      'In a separate bowl, beat the egg, then stir in the milk and melted butter.',
+      'Pour the wet ingredients into the dry and stir just until combined; a few lumps are fine. Gently fold in the blueberries.',
+      'Heat a lightly greased griddle or skillet over medium heat. Pour ¼ cup batter per pancake and cook until bubbles form on the surface and edges look set, about 2 minutes. Flip and cook until golden brown, about 1–2 minutes more.'
+    ],
+    sections: [
+      { key: 'batter', label: 'Pancake batter', cookingMethod: '', yieldFactorWater: 0.81 }
+    ],
   }
 ];
