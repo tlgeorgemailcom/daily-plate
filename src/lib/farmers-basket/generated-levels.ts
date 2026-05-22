@@ -2955,5 +2955,43 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'burrito', label: 'Bean burrito', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BKFST_018',
+    name: 'Burrito with beans and cheese',
+    category: 'Breakfast',
+    dietaryCategory: 'veggie',
+    levelNum: 61,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 burrito',
+    prepTime: '10 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule F',
+    nutritionJson: {"cal":206.6,"pro":8.6,"fat":5.4,"carb":31.0,"fib":5.1,"h2o":58.0,"sug":1.8,"perServing":{"cal":206.6,"pro":8.6,"fat":5.4,"carb":31.0,"fib":5.1,"h2o":58.0,"sug":1.8,"AddedSugars":0.0,"IntrinsicSugars":1.8},"micros":{"vitaminA":8.26,"vitaminC":0.23,"vitaminD":1.0,"vitaminE":0.29,"vitaminK":4.45,"vitaminB6":0.07,"vitaminB12":0.06,"thiamin":0.28,"riboflavin":0.16,"niacin":1.93,"folate":86.18,"calcium":102.77,"iron":2.42,"magnesium":39.46,"phosphorus":165.15,"potassium":243.57,"sodium":445.65,"zinc":0.83,"copper":0.13,"selenium":11.18,"cholesterol":4.51,"saturatedFat":2.13,"monoFat":1.22,"polyFat":1.13,"omega3":0.13,"omega6":0.88},"gramsPerServing":105.3,"servings":1,"per100g":{"Energy_KCal":196.2,"Water":55.05,"Protein":8.18,"TotalLipidFat":5.12,"Carbohydrate":29.46,"FiberTotalDietary":4.86,"SugarsTotal":1.71,"Cholesterol":4.51,"FattyAcids_totalSaturated":2.13,"FattyAcids_totalMonounsaturated":1.22,"FattyAcids_totalPolyunsaturated":1.13,"LinoleicAcid":0.88,"alphaLinolenicAcid":0.13,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":8.26,"Retinol":8.07,"Carotene_beta":2.66,"VitaminD":1.0,"VitaminE_alphaTocopherol":0.29,"VitaminK_phylloquinone":4.45,"VitaminC_totalAscorbicAcid":0.23,"Thiamin":0.28,"Riboflavin":0.16,"Niacin":1.93,"PantothenicAcid":0.34,"VitaminB6":0.07,"Folate_total":86.18,"Folate_food":56.17,"Folate_DFE":107.08,"FolicAcid":30.01,"VitaminB12":0.06,"Choline_total":19.5,"Betaine":2.02,"LuteinZeaxanthin":3.42,"Lycopene":0.0,"Calcium_Ca":102.77,"Iron_Fe":2.42,"Magnesium_Mg":39.46,"Phosphorus_P":165.15,"Potassium_K":243.57,"Sodium_Na":445.65,"Zinc_Zn":0.83,"Copper_Cu":0.13,"Manganese_Mn":0.41,"Selenium_Se":11.18,"Tryptophan":0.08,"Threonine":0.25,"Isoleucine":0.31,"Leucine":0.56,"Lysine":0.39,"Methionine":0.12,"Cystine":0.08,"Phenylalanine":0.37,"Tyrosine":0.21,"Valine":0.36,"Arginine":0.35,"Histidine":0.18,"Alanine":0.26,"AsparticAcid":0.64,"GlutamicAcid":1.54,"Glycine":0.24,"Proline":0.54,"Serine":0.38,"omega3":0.13,"omega6":0.88,"AddedSugars":0.0,"IntrinsicSugars":1.71},"addedSugars":0.0,"intrinsicSugars":1.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18364","name":"Tortillas, ready-to-bake or -fry, flour, refrigerated","grams":40.0},{"ndb":"16403","name":"Refried beans, canned, traditional style, reduced sodium","grams":30.0},{"ndb":"16015","name":"Beans, black, mature seeds, cooked, boiled, without salt","grams":30.0},{"ndb":"1251","name":"Cheese, Mexican blend","grams":5.0},{"ndb":"2047","name":"Salt, table","grams":0.3}],"sections":[{"section_key":"burrito","section_label":"Bean and cheese burrito","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":105.3,"raw_water_grams":57.96,"raw_fat_grams":5.39,"final_grams":105.3}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Burrito with beans and cheese', quantity: 'custom (g)', foodWord: 'BURRITOBEANCHEESE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'flour tortilla', quantity: '1 flour tortilla', section: 'burrito', ndbNo: '18364', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'refried beans', quantity: '2 tbsp', section: 'burrito', ndbNo: '16403', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'black beans', quantity: '2 tbsp', section: 'burrito', ndbNo: '16015', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'Mexican cheese blend', quantity: '1 tsp shredded', section: 'burrito', ndbNo: '1251', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'salt', quantity: 'pinch', section: 'burrito', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.3 }
+    ],
+    recipeInstructions: [
+      'Warm the flour tortilla in a dry skillet over medium heat for 30 seconds per side, or microwave for 15–20 seconds, until soft and pliable.',
+      'Warm the refried beans and black beans together in a small saucepan over medium heat, stirring until heated through, about 3 minutes.',
+      'Spoon the bean mixture onto the center of the tortilla, top with the shredded cheese, and season with a pinch of salt.',
+      'Fold the sides in and roll tightly into a burrito.'
+    ],
+    sections: [
+      { key: 'burrito', label: 'Bean and cheese burrito', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

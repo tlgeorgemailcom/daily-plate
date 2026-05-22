@@ -588,3 +588,8 @@ BKFST_017,1,tortilla_flour_refrigerated,1 flour tortilla,40.0,38,42,burrito,burr
 BKFST_017,2,beans_refried_canned,2 tbsp,30.0,28,32,burrito,burrito,false,refried beans
 BKFST_017,3,beans_black_cooked,2 tbsp,30.0,28,32,burrito,burrito,false,black beans
 BKFST_017,4,salt_table,pinch,0.3,0.2,0.4,burrito,burrito,false,salt
+BKFST_018,1,tortilla_flour_refrigerated,1 flour tortilla,40.0,38,42,burrito,burrito,false,flour tortilla
+BKFST_018,2,beans_refried_canned,2 tbsp,30.0,28,32,burrito,burrito,false,refried beans
+BKFST_018,3,beans_black_cooked,2 tbsp,30.0,28,32,burrito,burrito,false,black beans
+BKFST_018,4,cheese_mexican_blend,1 tsp shredded,5.0,4.5,5.5,burrito,burrito,false,Mexican cheese blend
+BKFST_018,5,salt_table,pinch,0.3,0.2,0.4,burrito,burrito,false,salt

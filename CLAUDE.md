@@ -73,7 +73,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | Prefix | Status | Count |
 |---|---|---|
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
-| `BKFST_NNN` | 🔧 In progress | 15 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 012, 013, 014, 015, 016) |
+| `BKFST_NNN` | 🔧 In progress | 17 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 012, 013, 014, 015, 016, 017, 018) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -107,6 +107,8 @@ Planned BKFST order (standalone components first, composites last):
 | BKFST_014 | Waffles, plain | 18367 | Rule B ✅ — yfw=0.62 (waffle iron presses both sides); Fiber+Sugar unscored (canonical=0); all 5 scored macros ≤±3.9%; 2 cups flour+1 tbsp bp+1 tbsp sugar+¾ tsp salt+2 eggs+1½ cups milk_whole(1077)+6 tbsp butter(1001) |
 | BKFST_015 | Breakfast Sausage | 7064 | Rule B ✅ — yfw=0.73, yff=0.91; whole-spice form drives Energy +9% and Carbs +50% vs canonical; P/F/Sugar/Water all ±5% |
 | BKFST_016 | English Muffin (Thomas Style) | 18639 | Rule B ✅ — yfw=0.90 (griddle); Fiber+Sugar unscored (canonical=0); all 5 scored macros ≤±4.9% |
+| BKFST_017 | Burrito with beans | FNDDS 58102605 | Rule F ✅ — FNDDS FC 58102605 decomposition verbatim; all 7 macros Δ=0.0% |
+| BKFST_018 | Burrito with beans and cheese | FNDDS 58102610 | Rule F ✅ — FNDDS FC 58102610; 40g tortilla(18364)+30g refried beans(16403)+30g black beans(16015)+5g cheese(1251)+0.3g salt; all 7 macros ≤±1.3%; beans dilute tortilla SR Legacy sugar inflation |
 
 **Ingredients needed in ledger before building:**
 - (none outstanding — sausage and black pepper ingredients added during BKFST_015 build)
