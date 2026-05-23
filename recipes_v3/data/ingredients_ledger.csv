@@ -96,3 +96,6 @@ cheese_mexican_blend,1251,MEXICANBLEND,"Cheese, Mexican blend",Mexican blend che
 beans_refried_canned,16403,REFRIEDBEAN,"Refried beans, canned, traditional style, reduced sodium",refried beans,cup,238.0,canned
 beans_black_cooked,16015,BLACKBEAN,"Beans, black, mature seeds, cooked, boiled, without salt",black beans,cup,172.0,cooked
 beef_ground_80lean_raw,23572,BEEFGROUND80RAW,"Beef, ground, 80% lean meat / 20% fat, raw",ground beef (80% lean),oz,28.35,raw
+ham_diced_cooked,10136,HAM,"Pork, cured, ham, boneless, regular (approximately 11% fat), roasted",diced ham,oz,28.0,Cooked cured ham; NDB is already a roasted/cooked value
+bell_pepper_green_raw,11333,BELLPEPPER,"Peppers, sweet, green, raw",green bell pepper,cup,149.0,
+onion_raw,11282,ONION,"Onions, raw",onion,cup,160.0,

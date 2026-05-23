@@ -619,3 +619,10 @@ BKFST_023,1,egg_whole_raw,2 large,100.0,95,105,omelette,omelette,false,eggs
 BKFST_023,2,salt_table,⅛ tsp,0.3,0.2,0.4,omelette,omelette,false,salt
 BKFST_023,3,butter_salted,1½ tsp,7.0,6,8,omelette,omelette,false,butter
 BKFST_023,4,cheese_mexican_blend,3 tbsp,15.0,12,18,omelette,omelette,false,shredded cheese
+BKFST_024,1,egg_whole_raw,3 large,150.0,140,160,omelette,omelette,false,eggs
+BKFST_024,2,ham_diced_cooked,1½ oz,42.0,35,50,omelette,omelette,false,diced ham
+BKFST_024,3,bell_pepper_green_raw,¼ cup,37.0,30,45,omelette,omelette,false,green bell pepper
+BKFST_024,4,onion_raw,2 tbsp,20.0,15,25,omelette,omelette,false,onion
+BKFST_024,5,cheese_mexican_blend,1 oz,28.0,24,32,omelette,omelette,false,shredded cheese
+BKFST_024,6,butter_salted,1½ tsp,7.0,6,8,omelette,omelette,false,butter
+BKFST_024,7,salt_table,¼ tsp,1.5,1.0,2.0,omelette,omelette,false,salt
