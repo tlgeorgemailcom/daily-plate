@@ -51,7 +51,7 @@ python recipes_v3/tools/insert_new.py --recipe-id BKFST_XXX --commit  # write
 
 Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soups & stews`, `soups-stews`, `salads`, `pasta & pizza`, `pasta-pizza`, `entrees & main courses`, `entrees-main-courses`, `sides`, `sweets & desserts`, `sweets-desserts`, `beverages`, `sauces & condiments`, `sauces-condiments`, `sandwiches & burgers`, `sandwiches-burgers`.
 
-**`upload.py` deliberately does NOT update `category`, `food_word`, or `cooking_method`** — these identity columns are set once at insert time and preserved on every subsequent upload. To correct one of these columns in Turso after the fact, use a direct SQL UPDATE via the `libsql_experimental` Python client (same pattern as `insert_new.py`'s `_connect()`).
+**`upload.py` deliberately does NOT update `category`, `food_word`, `cooking_method`, or `dietary_category`** — these identity columns are set once at insert time and preserved on every subsequent upload. To correct one of these columns in Turso after the fact, use a direct SQL UPDATE via the `libsql_experimental` Python client (same pattern as `insert_new.py`'s `_connect()`). **Always call `conn.commit()` after the UPDATE** — without it the change is visible only within the same connection and is not persisted to the remote database.
 
 ## Critical Invariants
 - **Never edit a v3 recipe row in the Turso UI** — it returns 423 and blocks re-uploads. Edit the CSV only.
@@ -74,7 +74,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | Prefix | Status | Count |
 |---|---|---|
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
-| `BKFST_NNN` | 🔧 In progress | 19 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 012, 013, 014, 015, 016, 017, 018, 019, 020) |
+| `BKFST_NNN` | 🔧 In progress | 20 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -103,15 +103,16 @@ Planned BKFST order (standalone components first, composites last):
 | BKFST_009 | Pancakes, buttermilk | 18390 | Rule B ✅ — yfw=0.78 (buttermilk batter more watery); Fiber+Sugar unscored (canonical=0); all 5 scored macros ≤±2.9%; 1 cup flour+2 tsp bp+1 tbsp sugar+¼ tsp salt+1 egg+1 cup milk_buttermilk_whole(1230)+2 tbsp butter(1001) |
 | BKFST_010 | Pancakes, plain | 18293 | Rule B ✅ — yfw=0.96 (griddled); Fiber+Sugar unscored (canonical=0); all 5 scored macros ≤±3.4%; 1 cup flour+2 tsp bp+1 tbsp sugar+¼ tsp salt+1 egg+¾ cup milk+2 tbsp+1 tsp butter(1001) |
 | BKFST_011 | Poached Egg | 1131 | Not built as standalone — `egg_cooked_poached` ledger key (NDB 1131) used directly in composites |
-| BKFST_012 | Sausage Gravy | FNDDS 27120120 | Rule G ✅ — FNDDS FC canonical: 180 kcal·6.78P·13.61F·7.65C per 100g; >±5% (no SR Legacy analog for homemade) |
+| BKFST_012 | Sausage Gravy | FNDDS 27120120 | Rule G ✅ — FNDDS FC canonical: 180 kcal·6.78P·13.61F·7.65C per 100g; E=-3.2% ✅ P=+28.6% ❌ F=-8.4% ❌ C=-13.9% ❌; sausage section yff=1.0 (fat renders into roux, stays in dish); Atwater fix applied |
 | BKFST_013 | Hash Brown Potatoes | 11370 | Rule A ✅ — yfw=0.358 (pan-fried from boiled); all 7 macros ≤±4.4%; 225g boiled potato flesh(11367)+16g olive oil(4053)+3g salt; NDB 11367 P/C=0.0855 matches canonical 0.0854 |
 | BKFST_014 | Waffles, plain | 18367 | Rule B ✅ — yfw=0.62 (waffle iron presses both sides); Fiber+Sugar unscored (canonical=0); all 5 scored macros ≤±3.9%; 2 cups flour+1 tbsp bp+1 tbsp sugar+¾ tsp salt+2 eggs+1½ cups milk_whole(1077)+6 tbsp butter(1001) |
-| BKFST_015 | Breakfast Sausage | 7064 | Rule B ✅ — yfw=0.73, yff=0.91; whole-spice form drives Energy +9% and Carbs +50% vs canonical; P/F/Sugar/Water all ±5% |
+| BKFST_015 | Breakfast Sausage | 7064 | Rule B ✅ — yfw=0.73, yff=0.91 (fat-drain); Atwater energy recomputation → Energy now +1.5% ✅; Carbs +62.7% ❌ whole-spice form (structurally irreducible); P/F/Su/W all ✅ |
 | BKFST_016 | English Muffin (Thomas Style) | 18639 | Rule B ✅ — yfw=0.90 (griddle); Fiber+Sugar unscored (canonical=0); all 5 scored macros ≤±4.9% |
 | BKFST_017 | Burrito with beans | FNDDS 58102605 | Rule F ✅ — FNDDS FC 58102605 decomposition verbatim; all 7 macros Δ=0.0% |
 | BKFST_018 | Burrito with beans and cheese | FNDDS 58102610 | Rule F ✅ — FNDDS FC 58102610; 40g tortilla(18364)+30g refried beans(16403)+30g black beans(16015)+5g cheese(1251)+0.3g salt; all 7 macros ≤±1.3%; beans dilute tortilla SR Legacy sugar inflation |
 | BKFST_019 | Burrito with cheese | FNDDS 58102680 | Rule G ✅ — FNDDS FC 58102680 ("Burrito, cheese only"); 60g tortilla(18364)+40g cheese(1251); FNDDS uses 99991410 aggregate for cheese; Sugar +7.3% ❌ (NDB 1251 Sugar=1.23 vs 99991410 est. 0.77g/100g); all other 6 macros ≤±4.5% |
 | BKFST_020 | Egg burrito | FNDDS 34003100 | Rule F ✅ — FNDDS FC 34003100; 70g tortilla(18364)+110g eggs(1123)+7.7g olive oil(4053)+16.5g cheese(1251)+0.33g salt(2047); FNDDS 32130110 (egg omelet) inline-expanded ×1.1; yfw=0.783 (→180g cooked); all 7 macros Δ≤±0.11% |
+| BKFST_021 | Beef and Cheese Burrito | FNDDS 58102310 | Rule F ✅ — FNDDS FC 58102310; 45g beef_ground_80lean_raw(23572)+60g tortilla(18364)+10g water(14411)+5g cheese_mexican_blend(1251); beef section yff=0.593 (fat drained); Atwater energy recomputation; all 7 macros ≤±5%: E=-2.0% P=-2.8% F=+1.0% C=-2.0% Fi=-2.0% Su=-0.9% W=+1.4% |
 
 **Ingredients needed in ledger before building:**
 - (none outstanding — sausage and black pepper ingredients added during BKFST_015 build)
@@ -187,6 +188,8 @@ FNDDS published nutrient profiles use **Foundation Foods** values for common ing
 - **`food-portions-complete.csv` column layouts differ across copies** — `src/lib/data/` has 56 columns (`word,display,synonyms,group1,group2,group3,group4,has_recipe,NDB_NO,usda_desc,...`) while root and `docs/` have 55 columns (no `synonyms` column: `word,display,group1,group2,group3,group4,has_recipe,NDB_NO,usda_desc,...`). When scripting changes, use Python's `csv` module and verify column offsets per file — never assume the same integer index applies to all three copies.
 - **CSV field-count discipline**: a single missing/extra comma in a manual edit breaks the row. After editing, verify `awk -F, '{print NF}'` matches the header field count.
 - **Rounding is forbidden until final display**: two-part rule — (1) when adding a new NDB entry to `food-portions-complete.csv`, always query `comboo.db` directly and copy the stored value verbatim; never hand-approximate or truncate it. (2) During pre-build macro estimation, carry full precision through every intermediate step. Rounding nutrient values at either stage accumulates error that can shift a passing macro (e.g. Carbs +4.0% estimated) into a failing one (+6.7% actual). Always use the pipeline's built output to determine the final rule classification — never the hand-estimated audit.
+- **Atwater energy correction for fat-drain recipes** (`yff < 1.0`): `build.py` passes `Energy_KCal` through `_MACRO_SET` unchanged, which overcounts calories when fat drains away. The fix (implemented May 2026) recomputes `Energy_KCal = P×4 + F×9 + C×4` after the retained-macro loop whenever `yff < 1.0`. Only three sections ever had `yff < 1.0`: BKFST_012.sausage (corrected to 1.0 — fat stays in the roux), BKFST_015.sausage (0.91), BKFST_021.beef (0.593). SWEET_* recipes are unaffected (all have `yff=1.0`).
+- **`yff` for gravy/stew sausage**: fat rendered from sausage that becomes the roux base stays in the dish — `yff=1.0`, not <1.0. Only use `yff<1.0` when fat is physically drained away and discarded (e.g. ground beef patties, pan-fried sausage links). Getting this wrong is masked until the Atwater fix is applied, at which point energy plummets unexpectedly.
 
 ## Composite Recipes (Rule D, `component_ref`)
 

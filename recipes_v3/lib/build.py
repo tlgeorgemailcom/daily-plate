@@ -261,6 +261,16 @@ def _build_recipe_single(
         else:
             retained[n] = sums[n] * get_retention(method, n)
 
+    # When fat renders out (yff < 1), the raw Energy_KCal from the database
+    # still reflects pre-drain calories.  Recompute from Atwater of retained
+    # macros so the energy that left with the drained fat is not counted.
+    if yff < 1.0:
+        retained["Energy_KCal"] = (
+            retained.get("Protein", 0.0)       * 4.0
+            + retained.get("TotalLipidFat", 0.0) * 9.0
+            + retained.get("Carbohydrate", 0.0)  * 4.0
+        )
+
     sugar_retention = get_retention(method, "SugarsTotal")
     retained_added = sum_added_sugar * sugar_retention
     retained_intrinsic = sum_intrinsic_sugar * sugar_retention
@@ -499,6 +509,17 @@ def _build_recipe_multi(
             else:
                 retained_S[n] = sums_S[n] * get_retention(method, n)
             retained_dish[n] += retained_S[n]
+
+        # When fat renders out (yff < 1), patch Energy_KCal from Atwater of
+        # retained macros — the energy that left with drained fat must not count.
+        if yff < 1.0:
+            atwater_S = (
+                retained_S.get("Protein", 0.0)       * 4.0
+                + retained_S.get("TotalLipidFat", 0.0) * 9.0
+                + retained_S.get("Carbohydrate", 0.0)  * 4.0
+            )
+            retained_dish["Energy_KCal"] += atwater_S - retained_S["Energy_KCal"]
+            retained_S["Energy_KCal"] = atwater_S
 
         sugar_retention_S = get_retention(method, "SugarsTotal")
         retained_added_dish += st["added_sugar"] * sugar_retention_S

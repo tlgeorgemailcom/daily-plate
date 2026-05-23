@@ -49,7 +49,7 @@ SWEET_019,glaze,Chocolate glaze,raw,raw,,1.0,1.0,,,
 SWEET_020,cake,Butter-buttermilk yellow cake,raw,baked,,1.0,1.0,cake_batter,350:32,
 SWEET_020,frosting,Bittersweet chocolate glaze,raw,raw,,1.0,1.0,,,
 CRUST_003,crust,Single pie crust (unbaked),raw,raw,1.0,1.0,1.0,,,
-BKFST_012,sausage,Browned pork sausage crumbles,crumbled,fried,0.73,0.91,1.0,,,
+BKFST_012,sausage,Browned pork sausage crumbles,crumbled,fried,0.73,1.0,1.0,,,
 BKFST_012,gravy,Milk gravy,raw,boiled,0.92,1.0,1.0,,,
 BKFST_002,biscuit,Biscuit,split,raw,1.0,1.0,1.0,,,,BKFST_001
 BKFST_002,gravy,Sausage gravy,ladled,raw,1.0,1.0,1.0,,,,BKFST_012
@@ -99,3 +99,7 @@ BKFST_017,burrito,Bean burrito,,raw,1.00,1.00,1.00,,,,
 BKFST_018,burrito,Bean and cheese burrito,,raw,1.00,1.00,1.00,,,,
 BKFST_019,burrito,Cheese burrito,,raw,1.00,1.00,1.00,,,,
 BKFST_020,burrito,Egg burrito,,fried,0.783,1.00,1.00,,,,
+BKFST_021,beef,Ground beef,,fried,0.6669,0.593,1.00,,,,
+
+BKFST_021,assembly,Burrito assembly,,raw,1.00,1.00,1.00,,,,
+
