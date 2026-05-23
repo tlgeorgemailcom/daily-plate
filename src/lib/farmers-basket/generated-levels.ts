@@ -3149,5 +3149,44 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'burrito', label: 'Breakfast burrito', cookingMethod: '', yieldFactorWater: 0.82 }
     ],
+  },
+  {
+    id: 'BKFST_023',
+    name: 'Cheese omelette',
+    category: 'Breakfast',
+    dietaryCategory: 'veggie',
+    levelNum: 66,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 omelette',
+    prepTime: '15 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":246.9,"pro":16.1,"fat":19.5,"carb":1.0,"fib":0.0,"h2o":83.6,"sug":0.6,"perServing":{"cal":246.9,"pro":16.1,"fat":19.5,"carb":1.0,"fib":0.0,"h2o":83.6,"sug":0.6,"AddedSugars":0.0,"IntrinsicSugars":0.6},"micros":{"vitaminA":153.05,"vitaminC":0.0,"vitaminD":66.14,"vitaminE":0.77,"vitaminK":0.86,"vitaminB6":0.11,"vitaminB12":0.76,"thiamin":0.03,"riboflavin":0.37,"niacin":0.06,"folate":30.15,"calcium":128.05,"iron":1.51,"magnesium":13.0,"phosphorus":216.99,"potassium":124.66,"sodium":289.44,"zinc":1.43,"copper":0.06,"selenium":27.0,"cholesterol":328.13,"saturatedFat":7.58,"monoFat":5.15,"polyFat":1.38,"omega3":0.05,"omega6":1.1},"gramsPerServing":122.3,"servings":1,"per100g":{"Energy_KCal":201.87,"Water":68.38,"Protein":13.21,"TotalLipidFat":15.92,"Carbohydrate":0.81,"FiberTotalDietary":0.0,"SugarsTotal":0.46,"Cholesterol":328.13,"FattyAcids_totalSaturated":7.58,"FattyAcids_totalMonounsaturated":5.15,"FattyAcids_totalPolyunsaturated":1.38,"LinoleicAcid":1.1,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.02,"VitaminA_RAE":153.05,"Retinol":152.07,"Carotene_beta":12.73,"VitaminD":66.14,"VitaminE_alphaTocopherol":0.77,"VitaminK_phylloquinone":0.86,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.03,"Riboflavin":0.37,"Niacin":0.06,"PantothenicAcid":1.03,"VitaminB6":0.11,"Folate_total":30.15,"Folate_food":30.15,"Folate_DFE":30.15,"FolicAcid":0.0,"VitaminB12":0.76,"Choline_total":218.91,"Betaine":0.29,"LuteinZeaxanthin":267.33,"Lycopene":0.0,"Calcium_Ca":128.05,"Iron_Fe":1.51,"Magnesium_Mg":13.0,"Phosphorus_P":216.99,"Potassium_K":124.66,"Sodium_Na":289.44,"Zinc_Zn":1.43,"Copper_Cu":0.06,"Manganese_Mn":0.02,"Selenium_Se":27.0,"Tryptophan":0.17,"Threonine":0.56,"Isoleucine":0.72,"Leucine":1.15,"Lysine":0.95,"Methionine":0.39,"Cystine":0.2,"Phenylalanine":0.71,"Tyrosine":0.54,"Valine":0.88,"Arginine":0.77,"Histidine":0.34,"Alanine":0.68,"AsparticAcid":1.28,"GlutamicAcid":2.04,"Glycine":0.4,"Proline":0.74,"Serine":0.94,"omega3":0.05,"omega6":1.1,"AddedSugars":0.0,"IntrinsicSugars":0.46},"addedSugars":0.0,"intrinsicSugars":0.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":100.0},{"ndb":"2047","name":"Salt, table","grams":0.3},{"ndb":"1001","name":"Butter, salted","grams":7.0},{"ndb":"1251","name":"Cheese, Mexican blend","grams":15.0}],"sections":[{"section_key":"omelette","section_label":"Cheese omelette","prep_method":"raw","cook_method":"fried","cooking_method":"fried","cooking_method_normalized":"fried","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":122.3,"raw_water_grams":83.63,"raw_fat_grams":19.46,"final_grams":122.3}],"cookingMethod":"fried"},
+    recipeIngredients: [
+      { name: 'Cheese omelette', quantity: 'custom (g)', foodWord: 'OMELETCHEESE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'eggs', quantity: '2 large', section: 'omelette', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'salt', quantity: '⅛ tsp', section: 'omelette', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'butter', quantity: '1½ tsp', section: 'omelette', ndbNo: '1001', portionDesc: 'g', portionGrams: 7.0 },
+      { name: 'shredded cheese', quantity: '3 tbsp', section: 'omelette', ndbNo: '1251', portionDesc: 'g', portionGrams: 15.0 }
+    ],
+    recipeInstructions: [
+      'Beat eggs with salt in a bowl until lightly combined.',
+      'Melt butter in a nonstick skillet over medium heat until foamy.',
+      'Pour in the egg mixture; let the edges set, then gently push cooked edges toward the center.',
+      'When eggs are nearly set but still glossy on top, sprinkle cheese over one half.',
+      'Fold the omelette in half over the cheese, press lightly, and slide onto a plate.',
+      '1 omelette (122 g): 247 cal | 16.2g protein | 19.5g fat | 1.0g carbs | 0g fiber | 0.6g sugar | 83.6g water'
+    ],
+    sections: [
+      { key: 'omelette', label: 'Cheese omelette', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
