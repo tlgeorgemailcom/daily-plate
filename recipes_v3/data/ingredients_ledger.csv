@@ -102,3 +102,9 @@ onion_raw,11282,ONION,"Onions, raw",onion,cup,160.0,
 cheese_swiss,1040,SWISSCHEESE,"Cheese, swiss",Swiss cheese,oz,28.35,
 bacon_cooked_pan_fried,10862,BACON,"Pork, cured, bacon, pre-sliced, cooked, pan-fried",cooked bacon,slice,11.5,NDB is already cooked pan-fried value
 spinach_cooked,11458,SPINACH,"Spinach, cooked, boiled, drained, without salt",cooked spinach,cup,180.0,
+scallion_raw,11291,SCALLION,"Onions, spring or scallions (includes tops and bulb), raw",scallion (green onion),each,15.0,Medium scallion ~15g
+parsley_fresh,11297,PARSLEY,"Parsley, fresh",fresh parsley,cup,60.0,1 cup loose-packed ~60g
+chives_raw,11156,CHIVE,"Chives, raw",fresh chives,tablespoon,3.0,1 tablespoon chopped ~3g
+cilantro_raw,11165,CORIANDER,"Coriander (cilantro) leaves, raw",fresh cilantro,cup,16.0,1 cup loose-packed ~16g
+thyme_fresh,2049,THYME,"Thyme, fresh",fresh thyme leaves,teaspoon,0.8,1 tsp leaves ~0.8g
+cheese_parmesan_hard,1033,PARMESAN,"Cheese, parmesan, hard",Parmesan cheese,oz,28.35,Hard block; freshly grated

@@ -3596,5 +3596,52 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'filling', label: 'Bacon filling', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'BKFST_033',
+    name: 'Frittata Herbs and Cheese',
+    category: 'Breakfast',
+    dietaryCategory: 'veggie',
+    levelNum: 76,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '4 slices',
+    prepTime: '25 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":185.1,"pro":11.3,"fat":14.6,"carb":1.9,"fib":0.5,"h2o":62.3,"sug":0.7,"perServing":{"cal":185.1,"pro":11.3,"fat":14.6,"carb":1.9,"fib":0.5,"h2o":62.3,"sug":0.7,"AddedSugars":0.0,"IntrinsicSugars":0.7},"micros":{"vitaminA":162.78,"vitaminC":4.91,"vitaminD":59.54,"vitaminE":1.3,"vitaminK":90.81,"vitaminB6":0.11,"vitaminB12":0.68,"thiamin":0.03,"riboflavin":0.36,"niacin":0.18,"folate":38.93,"calcium":153.98,"iron":1.88,"magnesium":18.15,"phosphorus":208.41,"potassium":176.5,"sodium":258.07,"zinc":1.26,"copper":0.08,"selenium":24.14,"cholesterol":282.03,"saturatedFat":6.08,"monoFat":6.54,"polyFat":1.56,"omega3":0.05,"omega6":1.01},"gramsPerServing":91.6,"servings":4,"per100g":{"Energy_KCal":202.09,"Water":68.0,"Protein":12.36,"TotalLipidFat":15.92,"Carbohydrate":2.13,"FiberTotalDietary":0.53,"SugarsTotal":0.8,"Cholesterol":282.03,"FattyAcids_totalSaturated":6.08,"FattyAcids_totalMonounsaturated":6.54,"FattyAcids_totalPolyunsaturated":1.56,"LinoleicAcid":1.01,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.02,"VitaminA_RAE":162.78,"Retinol":134.9,"Carotene_beta":312.31,"VitaminD":59.54,"VitaminE_alphaTocopherol":1.3,"VitaminK_phylloquinone":90.81,"VitaminC_totalAscorbicAcid":4.91,"Thiamin":0.03,"Riboflavin":0.36,"Niacin":0.18,"PantothenicAcid":1.02,"VitaminB6":0.11,"Folate_total":38.93,"Folate_food":38.93,"Folate_DFE":38.93,"FolicAcid":0.0,"VitaminB12":0.68,"Choline_total":193.98,"Betaine":0.25,"LuteinZeaxanthin":493.54,"Lycopene":0.01,"Calcium_Ca":153.98,"Iron_Fe":1.88,"Magnesium_Mg":18.15,"Phosphorus_P":208.41,"Potassium_K":176.5,"Sodium_Na":258.07,"Zinc_Zn":1.26,"Copper_Cu":0.08,"Manganese_Mn":0.07,"Selenium_Se":24.14,"Tryptophan":0.16,"Threonine":0.52,"Isoleucine":0.65,"Leucine":1.08,"Lysine":0.94,"Methionine":0.35,"Cystine":0.19,"Phenylalanine":0.66,"Tyrosine":0.52,"Valine":0.83,"Arginine":0.71,"Histidine":0.33,"Alanine":0.63,"AsparticAcid":1.17,"GlutamicAcid":1.92,"Glycine":0.38,"Proline":0.73,"Serine":0.88,"omega3":0.05,"omega6":1.01,"AddedSugars":0.0,"IntrinsicSugars":0.8},"addedSugars":0.0,"intrinsicSugars":0.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.9,"yieldFactorFat":1.0,"sources":[{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":66.0},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":3.8},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":7.5},{"ndb":"11297","name":"Parsley, fresh","grams":3.8},{"ndb":"11165","name":"Coriander (cilantro) leaves, raw","grams":2.0},{"ndb":"11156","name":"Chives, raw","grams":0.8},{"ndb":"2049","name":"Thyme, fresh","grams":0.5},{"ndb":"2047","name":"Salt, table","grams":0.1},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":7.1},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"1145","name":"Butter, without salt","grams":3.5}],"sections":[{"section_key":"frittata","section_label":"Frittata","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":12,"raw_grams":394.1,"raw_water_grams":276.83,"raw_fat_grams":58.32,"final_grams":366.42}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Frittata Herbs and Cheese', quantity: 'custom (g)', foodWord: 'FRITTATA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'large egg', quantity: '6 medium eggs', section: 'frittata', ndbNo: '1123', portionDesc: 'g', portionGrams: 264.0 },
+      { name: 'whole milk', quantity: '1 tablespoon', section: 'frittata', ndbNo: '1077', portionDesc: 'g', portionGrams: 15.25 },
+      { name: 'scallion (green onion)', quantity: '2 scallions chopped', section: 'frittata', ndbNo: '11291', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'fresh parsley', quantity: '4 tablespoons chopped', section: 'frittata', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'fresh cilantro', quantity: '3 tablespoons chopped', section: 'frittata', ndbNo: '11165', portionDesc: 'g', portionGrams: 8.0 },
+      { name: 'fresh chives', quantity: '1 tablespoon chopped', section: 'frittata', ndbNo: '11156', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'fresh thyme leaves', quantity: '2 teaspoons leaves', section: 'frittata', ndbNo: '2049', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'salt', quantity: '1 pinch', section: 'frittata', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.4 },
+      { name: 'ground black pepper', quantity: '1 pinch', section: 'frittata', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'Parmesan cheese', quantity: '1 oz freshly grated', section: 'frittata', ndbNo: '1033', portionDesc: 'g', portionGrams: 28.35 },
+      { name: 'olive oil', quantity: '1 tablespoon', section: 'frittata', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'unsalted butter', quantity: '1 tablespoon', section: 'frittata', ndbNo: '1145', portionDesc: 'g', portionGrams: 14.2 }
+    ],
+    recipeInstructions: [
+      'Heat olive oil and butter in a 10-inch oven-safe skillet over medium heat until the butter is melted.',
+      'Add the scallions and cook for 2 minutes until softened. Stir in the parsley, cilantro, chives, and thyme and cook for 1 minute.',
+      'Whisk the eggs with the milk, salt, and pepper in a bowl until well combined.',
+      'Pour the egg mixture over the herbs in the skillet. Sprinkle the grated Parmesan evenly over the top. Cook undisturbed for 2 to 3 minutes until the edges begin to set.',
+      'Transfer the skillet to a broiler set to high and broil for 3 to 4 minutes until the top is set and lightly golden. Let rest for 2 minutes before slicing into 4 wedges.',
+      '1 slice (91.6 g): 185.1 cal | 11.3g protein | 14.6g fat | 1.9g carbs | 0.5g fiber | 0.7g sugar | 62.3g water'
+    ],
+    sections: [
+      { key: 'frittata', label: 'Frittata', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];
