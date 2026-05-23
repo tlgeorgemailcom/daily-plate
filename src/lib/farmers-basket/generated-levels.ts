@@ -3179,7 +3179,7 @@ export const LEVELS: Level[] = [
     ],
     recipeInstructions: [
       'Beat eggs with salt in a bowl until lightly combined.',
-      'Melt butter in a nonstick skillet over medium heat until foamy.',
+      'Melt butter in a non-toxic nonstick skillet over medium heat until foamy.',
       'Pour in the egg mixture; let the edges set, then gently push cooked edges toward the center.',
       'When eggs are nearly set but still glossy on top, sprinkle cheese over one half.',
       'Fold the omelette in half over the cheese, press lightly, and slide onto a plate.',
@@ -3220,11 +3220,11 @@ export const LEVELS: Level[] = [
       { name: 'salt', quantity: '¼ tsp', section: 'omelette', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 }
     ],
     recipeInstructions: [
-      'Dice the ham',
+      'Dice the ham, green bell pepper, and onion into small pieces.',
       'Beat eggs with salt in a bowl until lightly combined.',
-      'Melt butter in a nonstick skillet over medium heat; add ham',
-      'Pour the egg mixture over the filling; let the edges set',
-      'When eggs are nearly set but still glossy on top',
+      'Melt butter in a non-toxic nonstick skillet over medium heat; add ham, bell pepper, and onion and sauté 2–3 minutes until softened.',
+      'Pour the egg mixture over the filling; let the edges set, then gently push cooked edges toward the center.',
+      'When eggs are nearly set but still glossy on top, sprinkle cheese over one half; fold the omelette in half and slide onto a plate.',
       '1 omelette (286 g): 455 cal | 35.5g protein | 31.8g fat | 5.2g carbs | 1.0g fiber | 2.6g sugar | 206.9g water'
     ],
     sections: [
