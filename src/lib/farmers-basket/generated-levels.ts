@@ -3032,7 +3032,7 @@ export const LEVELS: Level[] = [
     id: 'BKFST_020',
     name: 'Egg burrito',
     category: 'Breakfast',
-    dietaryCategory: 'omni',
+    dietaryCategory: 'veggie',
     levelNum: 63,
     recipe: ['bread'],
     tools: [
