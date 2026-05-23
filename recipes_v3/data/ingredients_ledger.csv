@@ -99,3 +99,6 @@ beef_ground_80lean_raw,23572,BEEFGROUND80RAW,"Beef, ground, 80% lean meat / 20% 
 ham_diced_cooked,10136,HAM,"Pork, cured, ham, boneless, regular (approximately 11% fat), roasted",diced ham,oz,28.0,Cooked cured ham; NDB is already a roasted/cooked value
 bell_pepper_green_raw,11333,BELLPEPPER,"Peppers, sweet, green, raw",green bell pepper,cup,149.0,
 onion_raw,11282,ONION,"Onions, raw",onion,cup,160.0,
+cheese_swiss,1040,SWISSCHEESE,"Cheese, swiss",Swiss cheese,oz,28.35,
+bacon_cooked_pan_fried,10862,BACON,"Pork, cured, bacon, pre-sliced, cooked, pan-fried",cooked bacon,slice,11.5,NDB is already cooked pan-fried value
+spinach_cooked,11458,SPINACH,"Spinach, cooked, boiled, drained, without salt",cooked spinach,cup,180.0,

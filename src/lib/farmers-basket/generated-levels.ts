@@ -3230,5 +3230,242 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'omelette', label: 'Denver omelette', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BKFST_025',
+    name: 'Cheese Quiche',
+    category: 'Breakfast',
+    dietaryCategory: 'veggie',
+    levelNum: 68,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '8 slices',
+    prepTime: '1 hr',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":373.8,"pro":10.8,"fat":29.5,"carb":16.6,"fib":0.6,"h2o":41.3,"sug":1.2,"perServing":{"cal":373.8,"pro":10.8,"fat":29.5,"carb":16.6,"fib":0.6,"h2o":41.3,"sug":1.2,"AddedSugars":0.0,"IntrinsicSugars":1.2},"micros":{"vitaminA":204.78,"vitaminC":0.28,"vitaminD":32.41,"vitaminE":0.99,"vitaminK":4.48,"vitaminB6":0.05,"vitaminB12":0.76,"thiamin":0.13,"riboflavin":0.28,"niacin":1.02,"folate":39.01,"calcium":215.84,"iron":1.31,"magnesium":16.01,"phosphorus":194.14,"potassium":97.73,"sodium":364.36,"zinc":1.35,"copper":0.05,"selenium":19.41,"cholesterol":131.72,"saturatedFat":15.14,"monoFat":8.7,"polyFat":2.5,"omega3":0.08,"omega6":0.67},"gramsPerServing":100.0,"servings":8,"per100g":{"Energy_KCal":373.71,"Water":41.29,"Protein":10.77,"TotalLipidFat":29.53,"Carbohydrate":16.6,"FiberTotalDietary":0.62,"SugarsTotal":1.18,"Cholesterol":131.72,"FattyAcids_totalSaturated":15.14,"FattyAcids_totalMonounsaturated":8.7,"FattyAcids_totalPolyunsaturated":2.5,"LinoleicAcid":0.67,"alphaLinolenicAcid":0.06,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.01,"VitaminA_RAE":204.78,"Retinol":201.9,"Carotene_beta":32.91,"VitaminD":32.41,"VitaminE_alphaTocopherol":0.99,"VitaminK_phylloquinone":4.48,"VitaminC_totalAscorbicAcid":0.28,"Thiamin":0.13,"Riboflavin":0.28,"Niacin":1.02,"PantothenicAcid":0.51,"VitaminB6":0.05,"Folate_total":39.01,"Folate_food":14.95,"Folate_DFE":55.88,"FolicAcid":30.07,"VitaminB12":0.76,"Choline_total":57.9,"Betaine":0.19,"LuteinZeaxanthin":78.18,"Lycopene":0.18,"Calcium_Ca":215.84,"Iron_Fe":1.31,"Magnesium_Mg":16.01,"Phosphorus_P":194.14,"Potassium_K":97.73,"Sodium_Na":364.36,"Zinc_Zn":1.35,"Copper_Cu":0.05,"Manganese_Mn":0.15,"Selenium_Se":19.41,"Tryptophan":0.15,"Threonine":0.4,"Isoleucine":0.55,"Leucine":1.01,"Lysine":0.78,"Methionine":0.28,"Cystine":0.14,"Phenylalanine":0.61,"Tyrosine":0.54,"Valine":0.72,"Arginine":0.44,"Histidine":0.33,"Alanine":0.41,"AsparticAcid":0.71,"GlutamicAcid":2.33,"Glycine":0.27,"Proline":1.17,"Serine":0.64,"omega3":0.08,"omega6":0.67,"AddedSugars":0.0,"IntrinsicSugars":1.18},"addedSugars":0.0,"intrinsicSugars":1.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.8,"yieldFactorFat":1.0,"sources":[{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":19.5},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"1145","name":"Butter, without salt","grams":4.4},{"ndb":"4031","name":"Shortening, household, soybean (partially hydrogenated)-cottonseed (partially hydrogenated)","grams":6.9},{"ndb":"14411","name":"Water, tap, drinking","grams":3.7},{"ndb":"1040","name":"Cheese, swiss","grams":20.2},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":29.8},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":18.8},{"ndb":"11282","name":"Onions, raw","grams":4.4},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.0},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.0}],"sections":[{"section_key":"crust","section_label":"Pie crust","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.38,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":279.79,"raw_water_grams":54.54,"raw_fat_grams":85.8,"final_grams":245.98},{"section_key":"filling","section_label":"Cheese filling","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":588.57,"raw_water_grams":344.02,"raw_fat_grams":150.48,"final_grams":554.17}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Cheese Quiche', quantity: 'custom (g)', foodWord: 'CHESEQUICHE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'all-purpose flour', quantity: '1 1/4 cups', section: 'crust', ndbNo: '20581', portionDesc: 'g', portionGrams: 156.25 },
+      { name: 'table salt', quantity: '1/2 teaspoon', section: 'crust', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'cold unsalted butter (diced)', quantity: '2 1/2 tablespoon', section: 'crust', ndbNo: '1145', portionDesc: 'g', portionGrams: 35.5 },
+      { name: 'vegetable shortening', quantity: '4 tablespoons + 1 teaspoon', section: 'crust', ndbNo: '4031', portionDesc: 'g', portionGrams: 55.47 },
+      { name: 'ice water', quantity: '2 tablespoon ice water', section: 'crust', ndbNo: '14411', portionDesc: 'g', portionGrams: 29.57 },
+      { name: 'shredded Swiss cheese', quantity: '1 1/2 cups shredded', section: 'filling', ndbNo: '1040', portionDesc: 'g', portionGrams: 162.0 },
+      { name: 'heavy cream', quantity: '1 cup', section: 'filling', ndbNo: '1053', portionDesc: 'g', portionGrams: 238.0 },
+      { name: 'large egg', quantity: '3 large', section: 'filling', ndbNo: '1123', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'onion', quantity: '1/4 cup diced', section: 'filling', ndbNo: '11282', portionDesc: 'g', portionGrams: 35.0 },
+      { name: 'ground nutmeg', quantity: '1/8 teaspoon', section: 'filling', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.275 },
+      { name: 'salt', quantity: '1/2 teaspoon', section: 'filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/8 teaspoon', section: 'filling', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 }
+    ],
+    recipeInstructions: [
+      'Preheat the oven to 375 degrees F (190 degrees C).',
+      'Whisk the flour and salt together. Cut in the cold diced butter and shortening until the mixture resembles coarse crumbs. Add the ice water 1 tablespoon at a time, mixing just until the dough comes together. Flatten into a disc and refrigerate for 30 minutes.',
+      'Roll the chilled dough out on a lightly floured surface and fit it into a 9-inch pie pan. Fold over and crimp the edges. Line with parchment and fill with pie weights or dried beans. Blind-bake for 15 minutes; remove the weights and parchment and bake 5 minutes more until just beginning to brown.',
+      'Whisk the eggs, heavy cream, salt, pepper, and nutmeg until smooth. Scatter the shredded Swiss cheese and diced onion evenly over the warm crust.',
+      'Pour the custard over the cheese and onion. Bake for 35 to 40 minutes until the custard is just set in the center and the top is lightly golden. Cool on a rack for at least 10 minutes before slicing.',
+      '1 slice (100.0 g): 373.8 cal | 10.8g protein | 29.5g fat | 16.6g carbs | 0.6g fiber | 1.2g sugar | 41.3g water'
+    ],
+    sections: [
+      { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.38 },
+      { key: 'filling', label: 'Cheese filling', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
+  },
+  {
+    id: 'BKFST_026',
+    name: 'Spinach Quiche',
+    category: 'Breakfast',
+    dietaryCategory: 'veggie',
+    levelNum: 69,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '8 slices',
+    prepTime: '1 hr',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":378.9,"pro":11.4,"fat":29.6,"carb":17.4,"fib":1.2,"h2o":59.8,"sug":1.3,"perServing":{"cal":378.9,"pro":11.4,"fat":29.6,"carb":17.4,"fib":1.2,"h2o":59.8,"sug":1.3,"AddedSugars":0.0,"IntrinsicSugars":1.3},"micros":{"vitaminA":253.21,"vitaminC":1.24,"vitaminD":26.91,"vitaminE":1.15,"vitaminK":91.31,"vitaminB6":0.08,"vitaminB12":0.63,"thiamin":0.12,"riboflavin":0.27,"niacin":0.93,"folate":54.2,"calcium":204.61,"iron":1.75,"magnesium":29.54,"phosphorus":171.65,"potassium":168.18,"sodium":315.59,"zinc":1.26,"copper":0.08,"selenium":16.4,"cholesterol":109.36,"saturatedFat":12.58,"monoFat":7.23,"polyFat":2.09,"omega3":0.07,"omega6":0.56},"gramsPerServing":120.5,"servings":8,"per100g":{"Energy_KCal":314.57,"Water":49.61,"Protein":9.49,"TotalLipidFat":24.57,"Carbohydrate":14.48,"FiberTotalDietary":0.96,"SugarsTotal":1.06,"Cholesterol":109.36,"FattyAcids_totalSaturated":12.58,"FattyAcids_totalMonounsaturated":7.23,"FattyAcids_totalPolyunsaturated":2.09,"LinoleicAcid":0.56,"alphaLinolenicAcid":0.05,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.01,"VitaminA_RAE":253.21,"Retinol":167.63,"Carotene_beta":966.88,"VitaminD":26.91,"VitaminE_alphaTocopherol":1.15,"VitaminK_phylloquinone":91.31,"VitaminC_totalAscorbicAcid":1.24,"Thiamin":0.12,"Riboflavin":0.27,"Niacin":0.93,"PantothenicAcid":0.44,"VitaminB6":0.08,"Folate_total":54.2,"Folate_food":34.23,"Folate_DFE":68.21,"FolicAcid":24.97,"VitaminB12":0.63,"Choline_total":51.38,"Betaine":16.78,"LuteinZeaxanthin":1543.34,"Lycopene":0.15,"Calcium_Ca":204.61,"Iron_Fe":1.75,"Magnesium_Mg":29.54,"Phosphorus_P":171.65,"Potassium_K":168.18,"Sodium_Na":315.59,"Zinc_Zn":1.26,"Copper_Cu":0.08,"Manganese_Mn":0.3,"Selenium_Se":16.4,"Tryptophan":0.13,"Threonine":0.36,"Isoleucine":0.48,"Leucine":0.88,"Lysine":0.68,"Methionine":0.24,"Cystine":0.12,"Phenylalanine":0.53,"Tyrosine":0.47,"Valine":0.63,"Arginine":0.4,"Histidine":0.29,"Alanine":0.37,"AsparticAcid":0.64,"GlutamicAcid":2.0,"Glycine":0.25,"Proline":0.99,"Serine":0.55,"omega3":0.07,"omega6":0.56,"AddedSugars":0.0,"IntrinsicSugars":1.06},"addedSugars":0.0,"intrinsicSugars":1.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.8,"yieldFactorFat":1.0,"sources":[{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":19.5},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"1145","name":"Butter, without salt","grams":4.4},{"ndb":"4031","name":"Shortening, household, soybean (partially hydrogenated)-cottonseed (partially hydrogenated)","grams":6.9},{"ndb":"14411","name":"Water, tap, drinking","grams":3.7},{"ndb":"1040","name":"Cheese, swiss","grams":20.2},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":29.8},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":18.8},{"ndb":"11282","name":"Onions, raw","grams":4.4},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.0},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.0},{"ndb":"11458","name":"Spinach, cooked, boiled, drained, without salt","grams":22.5}],"sections":[{"section_key":"crust","section_label":"Pie crust","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.38,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":279.79,"raw_water_grams":54.54,"raw_fat_grams":85.8,"final_grams":245.98},{"section_key":"filling","section_label":"Spinach cheese filling","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":768.57,"raw_water_grams":508.2,"raw_fat_grams":150.95,"final_grams":717.75}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Spinach Quiche', quantity: 'custom (g)', foodWord: 'SPINACHQUICHE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'all-purpose flour', quantity: '1 1/4 cups', section: 'crust', ndbNo: '20581', portionDesc: 'g', portionGrams: 156.25 },
+      { name: 'table salt', quantity: '1/2 teaspoon', section: 'crust', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'cold unsalted butter (diced)', quantity: '2 1/2 tablespoon', section: 'crust', ndbNo: '1145', portionDesc: 'g', portionGrams: 35.5 },
+      { name: 'vegetable shortening', quantity: '4 tablespoons + 1 teaspoon', section: 'crust', ndbNo: '4031', portionDesc: 'g', portionGrams: 55.47 },
+      { name: 'ice water', quantity: '2 tablespoon ice water', section: 'crust', ndbNo: '14411', portionDesc: 'g', portionGrams: 29.57 },
+      { name: 'shredded Swiss cheese', quantity: '1 1/2 cups shredded', section: 'filling', ndbNo: '1040', portionDesc: 'g', portionGrams: 162.0 },
+      { name: 'heavy cream', quantity: '1 cup', section: 'filling', ndbNo: '1053', portionDesc: 'g', portionGrams: 238.0 },
+      { name: 'large egg', quantity: '3 large', section: 'filling', ndbNo: '1123', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'onion', quantity: '1/4 cup diced', section: 'filling', ndbNo: '11282', portionDesc: 'g', portionGrams: 35.0 },
+      { name: 'ground nutmeg', quantity: '1/8 teaspoon', section: 'filling', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.275 },
+      { name: 'salt', quantity: '1/2 teaspoon', section: 'filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/8 teaspoon', section: 'filling', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'cooked spinach', quantity: '1 cup', section: 'filling', ndbNo: '11458', portionDesc: 'g', portionGrams: 180.0 }
+    ],
+    recipeInstructions: [
+      'Preheat the oven to 375 degrees F (190 degrees C).',
+      'Whisk the flour and salt together. Cut in the cold diced butter and shortening until the mixture resembles coarse crumbs. Add the ice water 1 tablespoon at a time, mixing just until the dough comes together. Flatten into a disc and refrigerate for 30 minutes.',
+      'Roll the chilled dough out on a lightly floured surface and fit it into a 9-inch pie pan. Fold over and crimp the edges. Line with parchment and fill with pie weights or dried beans. Blind-bake for 15 minutes; remove the weights and parchment and bake 5 minutes more until just beginning to brown.',
+      'Whisk the eggs, heavy cream, salt, pepper, and nutmeg until smooth. Squeeze any excess moisture from the cooked spinach and scatter it with the shredded Swiss cheese and diced onion evenly over the warm crust.',
+      'Pour the custard over the cheese and onion. Bake for 35 to 40 minutes until the custard is just set in the center and the top is lightly golden. Cool on a rack for at least 10 minutes before slicing.',
+      '1 slice (120.5 g): 378.9 cal | 11.4g protein | 29.6g fat | 17.4g carbs | 1.2g fiber | 1.3g sugar | 59.8g water'
+    ],
+    sections: [
+      { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.38 },
+      { key: 'filling', label: 'Spinach cheese filling', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
+  },
+  {
+    id: 'BKFST_027',
+    name: 'Ham and Cheese Quiche',
+    category: 'Breakfast',
+    dietaryCategory: 'all',
+    levelNum: 70,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '8 slices',
+    prepTime: '1 hr',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":400.5,"pro":14.2,"fat":30.9,"carb":16.6,"fib":0.6,"h2o":50.0,"sug":1.2,"perServing":{"cal":400.5,"pro":14.2,"fat":30.9,"carb":16.6,"fib":0.6,"h2o":50.0,"sug":1.2,"AddedSugars":0.0,"IntrinsicSugars":1.2},"micros":{"vitaminA":179.58,"vitaminC":0.24,"vitaminD":32.42,"vitaminE":0.9,"vitaminK":3.93,"vitaminB6":0.08,"vitaminB12":0.75,"thiamin":0.18,"riboflavin":0.29,"niacin":1.58,"folate":34.52,"calcium":190.34,"iron":1.32,"magnesium":16.93,"phosphorus":207.21,"potassium":139.5,"sodium":516.81,"zinc":1.51,"copper":0.07,"selenium":19.63,"cholesterol":123.27,"saturatedFat":13.69,"monoFat":8.19,"polyFat":2.34,"omega3":0.07,"omega6":0.59},"gramsPerServing":114.0,"servings":8,"per100g":{"Energy_KCal":351.14,"Water":43.85,"Protein":12.42,"TotalLipidFat":27.08,"Carbohydrate":14.55,"FiberTotalDietary":0.54,"SugarsTotal":1.03,"Cholesterol":123.27,"FattyAcids_totalSaturated":13.69,"FattyAcids_totalMonounsaturated":8.19,"FattyAcids_totalPolyunsaturated":2.34,"LinoleicAcid":0.59,"alphaLinolenicAcid":0.05,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.01,"VitaminA_RAE":179.58,"Retinol":177.06,"Carotene_beta":28.86,"VitaminD":32.42,"VitaminE_alphaTocopherol":0.9,"VitaminK_phylloquinone":3.93,"VitaminC_totalAscorbicAcid":0.24,"Thiamin":0.18,"Riboflavin":0.29,"Niacin":1.58,"PantothenicAcid":0.53,"VitaminB6":0.08,"Folate_total":34.52,"Folate_food":13.42,"Folate_DFE":49.32,"FolicAcid":26.37,"VitaminB12":0.75,"Choline_total":61.24,"Betaine":0.94,"LuteinZeaxanthin":68.56,"Lycopene":0.16,"Calcium_Ca":190.34,"Iron_Fe":1.32,"Magnesium_Mg":16.93,"Phosphorus_P":207.21,"Potassium_K":139.5,"Sodium_Na":516.81,"Zinc_Zn":1.51,"Copper_Cu":0.07,"Manganese_Mn":0.14,"Selenium_Se":19.63,"Tryptophan":0.16,"Threonine":0.47,"Isoleucine":0.6,"Leucine":1.09,"Lysine":0.9,"Methionine":0.32,"Cystine":0.16,"Phenylalanine":0.64,"Tyrosine":0.56,"Valine":0.75,"Arginine":0.56,"Histidine":0.39,"Alanine":0.52,"AsparticAcid":0.87,"GlutamicAcid":2.47,"Glycine":0.38,"Proline":1.14,"Serine":0.67,"omega3":0.07,"omega6":0.59,"AddedSugars":0.0,"IntrinsicSugars":1.03},"addedSugars":0.0,"intrinsicSugars":1.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.8,"yieldFactorFat":1.0,"sources":[{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":19.5},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"1145","name":"Butter, without salt","grams":4.4},{"ndb":"4031","name":"Shortening, household, soybean (partially hydrogenated)-cottonseed (partially hydrogenated)","grams":6.9},{"ndb":"14411","name":"Water, tap, drinking","grams":3.7},{"ndb":"1040","name":"Cheese, swiss","grams":20.2},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":29.8},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":18.8},{"ndb":"11282","name":"Onions, raw","grams":4.4},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.0},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.0},{"ndb":"10136","name":"Pork, cured, ham, boneless, regular (approximately 11% fat), roasted","grams":15.0}],"sections":[{"section_key":"crust","section_label":"Pie crust","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.38,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":279.79,"raw_water_grams":54.54,"raw_fat_grams":85.8,"final_grams":245.98},{"section_key":"filling","section_label":"Ham and cheese filling","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":708.57,"raw_water_grams":421.47,"raw_fat_grams":161.31,"final_grams":666.43}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Ham and Cheese Quiche', quantity: 'custom (g)', foodWord: 'HAMCHEESEQUICHE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'all-purpose flour', quantity: '1 1/4 cups', section: 'crust', ndbNo: '20581', portionDesc: 'g', portionGrams: 156.25 },
+      { name: 'table salt', quantity: '1/2 teaspoon', section: 'crust', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'cold unsalted butter (diced)', quantity: '2 1/2 tablespoon', section: 'crust', ndbNo: '1145', portionDesc: 'g', portionGrams: 35.5 },
+      { name: 'vegetable shortening', quantity: '4 tablespoons + 1 teaspoon', section: 'crust', ndbNo: '4031', portionDesc: 'g', portionGrams: 55.47 },
+      { name: 'ice water', quantity: '2 tablespoon ice water', section: 'crust', ndbNo: '14411', portionDesc: 'g', portionGrams: 29.57 },
+      { name: 'shredded Swiss cheese', quantity: '1 1/2 cups shredded', section: 'filling', ndbNo: '1040', portionDesc: 'g', portionGrams: 162.0 },
+      { name: 'heavy cream', quantity: '1 cup', section: 'filling', ndbNo: '1053', portionDesc: 'g', portionGrams: 238.0 },
+      { name: 'large egg', quantity: '3 large', section: 'filling', ndbNo: '1123', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'onion', quantity: '1/4 cup diced', section: 'filling', ndbNo: '11282', portionDesc: 'g', portionGrams: 35.0 },
+      { name: 'ground nutmeg', quantity: '1/8 teaspoon', section: 'filling', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.275 },
+      { name: 'salt', quantity: '1/2 teaspoon', section: 'filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/8 teaspoon', section: 'filling', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'diced cooked ham', quantity: '4 1/4 oz', section: 'filling', ndbNo: '10136', portionDesc: 'g', portionGrams: 120.0 }
+    ],
+    recipeInstructions: [
+      'Preheat the oven to 375 degrees F (190 degrees C).',
+      'Whisk the flour and salt together. Cut in the cold diced butter and shortening until the mixture resembles coarse crumbs. Add the ice water 1 tablespoon at a time, mixing just until the dough comes together. Flatten into a disc and refrigerate for 30 minutes.',
+      'Roll the chilled dough out on a lightly floured surface and fit it into a 9-inch pie pan. Fold over and crimp the edges. Line with parchment and fill with pie weights or dried beans. Blind-bake for 15 minutes; remove the weights and parchment and bake 5 minutes more until just beginning to brown.',
+      'Whisk the eggs, heavy cream, salt, pepper, and nutmeg until smooth. Scatter the diced ham, shredded Swiss cheese, and diced onion evenly over the warm crust.',
+      'Pour the custard over the cheese and onion. Bake for 35 to 40 minutes until the custard is just set in the center and the top is lightly golden. Cool on a rack for at least 10 minutes before slicing.',
+      '1 slice (114.0 g): 400.5 cal | 14.2g protein | 30.9g fat | 16.6g carbs | 0.6g fiber | 1.2g sugar | 50.0g water'
+    ],
+    sections: [
+      { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.38 },
+      { key: 'filling', label: 'Ham and cheese filling', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
+  },
+  {
+    id: 'BKFST_028',
+    name: 'Quiche Lorraine',
+    category: 'Breakfast',
+    dietaryCategory: 'all',
+    levelNum: 71,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '8 slices',
+    prepTime: '1 hr',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":440.1,"pro":15.6,"fat":34.5,"carb":16.8,"fib":0.6,"h2o":44.3,"sug":1.2,"perServing":{"cal":440.1,"pro":15.6,"fat":34.5,"carb":16.8,"fib":0.6,"h2o":44.3,"sug":1.2,"AddedSugars":0.0,"IntrinsicSugars":1.2},"micros":{"vitaminA":181.05,"vitaminC":0.24,"vitaminD":30.48,"vitaminE":0.92,"vitaminK":3.94,"vitaminB6":0.09,"vitaminB12":0.79,"thiamin":0.16,"riboflavin":0.27,"niacin":2.0,"folate":34.26,"calcium":190.97,"iron":1.27,"magnesium":17.92,"phosphorus":218.85,"potassium":147.97,"sodium":529.72,"zinc":1.57,"copper":0.06,"selenium":23.36,"cholesterol":128.03,"saturatedFat":14.79,"monoFat":9.48,"polyFat":2.8,"omega3":0.09,"omega6":1.14},"gramsPerServing":113.9,"servings":8,"per100g":{"Energy_KCal":386.55,"Water":38.92,"Protein":13.68,"TotalLipidFat":30.31,"Carbohydrate":14.79,"FiberTotalDietary":0.54,"SugarsTotal":1.04,"Cholesterol":128.03,"FattyAcids_totalSaturated":14.79,"FattyAcids_totalMonounsaturated":9.48,"FattyAcids_totalPolyunsaturated":2.8,"LinoleicAcid":1.14,"alphaLinolenicAcid":0.07,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.01,"VitaminA_RAE":181.05,"Retinol":178.52,"Carotene_beta":28.91,"VitaminD":30.48,"VitaminE_alphaTocopherol":0.92,"VitaminK_phylloquinone":3.94,"VitaminC_totalAscorbicAcid":0.24,"Thiamin":0.16,"Riboflavin":0.27,"Niacin":2.0,"PantothenicAcid":0.56,"VitaminB6":0.09,"Folate_total":34.26,"Folate_food":13.13,"Folate_DFE":49.09,"FolicAcid":26.42,"VitaminB12":0.79,"Choline_total":60.89,"Betaine":1.17,"LuteinZeaxanthin":68.68,"Lycopene":0.16,"Calcium_Ca":190.97,"Iron_Fe":1.27,"Magnesium_Mg":17.92,"Phosphorus_P":218.85,"Potassium_K":147.97,"Sodium_Na":529.72,"Zinc_Zn":1.57,"Copper_Cu":0.06,"Manganese_Mn":0.14,"Selenium_Se":23.36,"Tryptophan":0.18,"Threonine":0.54,"Isoleucine":0.68,"Leucine":1.24,"Lysine":1.06,"Methionine":0.36,"Cystine":0.16,"Phenylalanine":0.71,"Tyrosine":0.64,"Valine":0.85,"Arginine":0.66,"Histidine":0.47,"Alanine":0.61,"AsparticAcid":1.02,"GlutamicAcid":2.7,"Glycine":0.43,"Proline":1.2,"Serine":0.74,"omega3":0.09,"omega6":1.14,"AddedSugars":0.0,"IntrinsicSugars":1.04},"addedSugars":0.0,"intrinsicSugars":1.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.8,"yieldFactorFat":1.0,"sources":[{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":19.5},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"1145","name":"Butter, without salt","grams":4.4},{"ndb":"4031","name":"Shortening, household, soybean (partially hydrogenated)-cottonseed (partially hydrogenated)","grams":6.9},{"ndb":"14411","name":"Water, tap, drinking","grams":3.7},{"ndb":"1040","name":"Cheese, swiss","grams":20.2},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":29.8},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":18.8},{"ndb":"11282","name":"Onions, raw","grams":4.4},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.0},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.0},{"ndb":"10862","name":"Pork, cured, bacon, pre-sliced, cooked, pan-fried","grams":14.2}],"sections":[{"section_key":"crust","section_label":"Pie crust","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.38,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":279.79,"raw_water_grams":54.54,"raw_fat_grams":85.8,"final_grams":245.98},{"section_key":"filling","section_label":"Bacon and cheese filling","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":701.97,"raw_water_grams":370.84,"raw_fat_grams":190.28,"final_grams":664.89}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Quiche Lorraine', quantity: 'custom (g)', foodWord: 'QUICHELORRAINE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'all-purpose flour', quantity: '1 1/4 cups', section: 'crust', ndbNo: '20581', portionDesc: 'g', portionGrams: 156.25 },
+      { name: 'table salt', quantity: '1/2 teaspoon', section: 'crust', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'cold unsalted butter (diced)', quantity: '2 1/2 tablespoon', section: 'crust', ndbNo: '1145', portionDesc: 'g', portionGrams: 35.5 },
+      { name: 'vegetable shortening', quantity: '4 tablespoons + 1 teaspoon', section: 'crust', ndbNo: '4031', portionDesc: 'g', portionGrams: 55.47 },
+      { name: 'ice water', quantity: '2 tablespoon ice water', section: 'crust', ndbNo: '14411', portionDesc: 'g', portionGrams: 29.57 },
+      { name: 'shredded Swiss cheese', quantity: '1 1/2 cups shredded', section: 'filling', ndbNo: '1040', portionDesc: 'g', portionGrams: 162.0 },
+      { name: 'heavy cream', quantity: '1 cup', section: 'filling', ndbNo: '1053', portionDesc: 'g', portionGrams: 238.0 },
+      { name: 'large egg', quantity: '3 large', section: 'filling', ndbNo: '1123', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'onion', quantity: '1/4 cup diced', section: 'filling', ndbNo: '11282', portionDesc: 'g', portionGrams: 35.0 },
+      { name: 'ground nutmeg', quantity: '1/8 teaspoon', section: 'filling', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.275 },
+      { name: 'salt', quantity: '1/2 teaspoon', section: 'filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/8 teaspoon', section: 'filling', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'cooked bacon, crumbled', quantity: 'about 10 strips', section: 'filling', ndbNo: '10862', portionDesc: 'g', portionGrams: 113.4 }
+    ],
+    recipeInstructions: [
+      'Preheat the oven to 375 degrees F (190 degrees C).',
+      'Whisk the flour and salt together. Cut in the cold diced butter and shortening until the mixture resembles coarse crumbs. Add the ice water 1 tablespoon at a time, mixing just until the dough comes together. Flatten into a disc and refrigerate for 30 minutes.',
+      'Roll the chilled dough out on a lightly floured surface and fit it into a 9-inch pie pan. Fold over and crimp the edges. Line with parchment and fill with pie weights or dried beans. Blind-bake for 15 minutes; remove the weights and parchment and bake 5 minutes more until just beginning to brown.',
+      'Whisk the eggs, heavy cream, salt, pepper, and nutmeg until smooth. Break the cooked bacon into small crumbles and scatter with the shredded Swiss cheese and diced onion evenly over the warm crust.',
+      'Pour the custard over the cheese and onion. Bake for 35 to 40 minutes until the custard is just set in the center and the top is lightly golden. Cool on a rack for at least 10 minutes before slicing.',
+      '1 slice (113.9 g): 440.1 cal | 15.6g protein | 34.5g fat | 16.8g carbs | 0.6g fiber | 1.2g sugar | 44.3g water'
+    ],
+    sections: [
+      { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.38 },
+      { key: 'filling', label: 'Bacon and cheese filling', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
+  },
+  {
+    id: 'BKFST_029',
+    name: 'Crustless Quiche',
+    category: 'Breakfast',
+    dietaryCategory: 'veggie',
+    levelNum: 72,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '8 slices',
+    prepTime: '50 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":209.6,"pro":8.7,"fat":18.8,"carb":1.7,"fib":0.1,"h2o":38.7,"sug":1.1,"perServing":{"cal":209.6,"pro":8.7,"fat":18.8,"carb":1.7,"fib":0.1,"h2o":38.7,"sug":1.1,"AddedSugars":0.0,"IntrinsicSugars":1.1},"micros":{"vitaminA":258.42,"vitaminC":0.4,"vitaminD":46.79,"vitaminE":0.73,"vitaminK":1.88,"vitaminB6":0.07,"vitaminB12":1.08,"thiamin":0.02,"riboflavin":0.27,"niacin":0.06,"folate":14.89,"calcium":305.59,"iron":0.58,"magnesium":16.72,"phosphorus":248.32,"potassium":109.36,"sodium":314.78,"zinc":1.74,"copper":0.04,"selenium":18.4,"cholesterol":176.41,"saturatedFat":16.08,"monoFat":6.89,"polyFat":1.27,"omega3":0.09,"omega6":0.85},"gramsPerServing":69.3,"servings":8,"per100g":{"Energy_KCal":302.53,"Water":55.87,"Protein":12.58,"TotalLipidFat":27.15,"Carbohydrate":2.44,"FiberTotalDietary":0.13,"SugarsTotal":1.62,"Cholesterol":176.41,"FattyAcids_totalSaturated":16.08,"FattyAcids_totalMonounsaturated":6.89,"FattyAcids_totalPolyunsaturated":1.27,"LinoleicAcid":0.85,"alphaLinolenicAcid":0.07,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.01,"VitaminA_RAE":258.42,"Retinol":254.98,"Carotene_beta":39.2,"VitaminD":46.79,"VitaminE_alphaTocopherol":0.73,"VitaminK_phylloquinone":1.88,"VitaminC_totalAscorbicAcid":0.4,"Thiamin":0.02,"Riboflavin":0.27,"Niacin":0.06,"PantothenicAcid":0.62,"VitaminB6":0.07,"Folate_total":14.89,"Folate_food":14.89,"Folate_DFE":14.89,"FolicAcid":0.0,"VitaminB12":1.08,"Choline_total":82.5,"Betaine":0.27,"LuteinZeaxanthin":97.29,"Lycopene":0.26,"Calcium_Ca":305.59,"Iron_Fe":0.58,"Magnesium_Mg":16.72,"Phosphorus_P":248.32,"Potassium_K":109.36,"Sodium_Na":314.78,"Zinc_Zn":1.74,"Copper_Cu":0.04,"Manganese_Mn":0.03,"Selenium_Se":18.4,"Tryptophan":0.19,"Threonine":0.5,"Isoleucine":0.69,"Leucine":1.26,"Lysine":1.05,"Methionine":0.36,"Cystine":0.15,"Phenylalanine":0.73,"Tyrosine":0.68,"Valine":0.93,"Arginine":0.52,"Histidine":0.42,"Alanine":0.5,"AsparticAcid":0.91,"GlutamicAcid":2.38,"Glycine":0.29,"Proline":1.35,"Serine":0.78,"omega3":0.09,"omega6":0.85,"AddedSugars":0.0,"IntrinsicSugars":1.62},"addedSugars":0.0,"intrinsicSugars":1.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.9,"yieldFactorFat":1.0,"sources":[{"ndb":"1040","name":"Cheese, swiss","grams":20.2},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":29.8},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":18.8},{"ndb":"11282","name":"Onions, raw","grams":4.4},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.0},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.0}],"sections":[{"section_key":"filling","section_label":"Cheese filling","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":588.57,"raw_water_grams":344.02,"raw_fat_grams":150.48,"final_grams":554.17}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Crustless Quiche', quantity: 'custom (g)', foodWord: 'CRUSTLESSQUICHE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'shredded Swiss cheese', quantity: '1 1/2 cups shredded', section: 'filling', ndbNo: '1040', portionDesc: 'g', portionGrams: 162.0 },
+      { name: 'heavy cream', quantity: '1 cup', section: 'filling', ndbNo: '1053', portionDesc: 'g', portionGrams: 238.0 },
+      { name: 'large egg', quantity: '3 large', section: 'filling', ndbNo: '1123', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'onion', quantity: '1/4 cup diced', section: 'filling', ndbNo: '11282', portionDesc: 'g', portionGrams: 35.0 },
+      { name: 'ground nutmeg', quantity: '1/8 teaspoon', section: 'filling', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.275 },
+      { name: 'salt', quantity: '1/2 teaspoon', section: 'filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/8 teaspoon', section: 'filling', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 }
+    ],
+    recipeInstructions: [
+      'Preheat the oven to 375 degrees F (190 degrees C). Generously butter a 9-inch pie pan or baking dish.',
+      'Whisk the eggs, heavy cream, salt, pepper, and nutmeg together until smooth.',
+      'Scatter the shredded Swiss cheese and diced onion evenly over the bottom of the prepared pan.',
+      'Pour the egg custard over the cheese and onion.',
+      'Bake for 35 to 40 minutes until the custard is just set in the center and the top is lightly golden. Cool on a rack for at least 10 minutes before slicing.',
+      '1 slice (69.3 g): 209.6 cal | 8.7g protein | 18.8g fat | 1.7g carbs | 0.1g fiber | 1.1g sugar | 38.7g water'
+    ],
+    sections: [
+      { key: 'filling', label: 'Cheese filling', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];

@@ -74,7 +74,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | Prefix | Status | Count |
 |---|---|---|
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
-| `BKFST_NNN` | 🔧 In progress | 23 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024) |
+| `BKFST_NNN` | 🔧 In progress | 28 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -116,6 +116,11 @@ Planned BKFST order (standalone components first, composites last):
 | BKFST_022 | Breakfast Burrito (eggs, cheese, potatoes) | (none) | Rule D ✅ — no canonical; 70g tortilla(18364)+100g eggs(1123)+130g potato_raw(11352)+28g cheese_mexican_blend(1251)+13.6g olive oil(4053)+1.5g salt(2047); yfw=0.82 → 305g cooked; 222 kcal·9.0P·12.1F·19.2C per 100g; dietary_category=veggie |
 | BKFST_023 | Cheese Omelette | (none) | Rule D ✅ — no canonical match used (FNDDS FC 32130120 rejected — Foundation Foods cheese divergence, Carbs −42.8%); 100g eggs(1123)+0.3g salt(2047)+7g butter(1001)+15g cheese_mexican_blend(1251); yfw=1.00 → 122g cooked; 202 kcal·13.2P·15.9F·0.8C per 100g; dietary_category=veggie |
 | BKFST_024 | Denver Omelette | (none) | Rule D ✅ — no canonical; 150g eggs(1123)+42g ham_diced_cooked(10136)+37g bell_pepper_green_raw(11333)+20g onion_raw(11282)+28g cheese_mexican_blend(1251)+7g butter(1001)+1.5g salt(2047); yfw=1.00 → 285.5g cooked; 159 kcal·12.4P·11.1F·1.8C per 100g; dietary_category=all |
+| BKFST_025 | Cheese Quiche | (none) | Rule D ✅ — no canonical; homemade pie crust (156.25g flour+35.5g butter_unsalted+55.47g vegetable_shortening+3g salt+29.57g water) + filling (162g cheese_swiss+238g heavy_cream+150g eggs+35g onion+nutmeg+salt+pepper); crust yfw=0.38, filling yfw=0.90; 100g/slice; 374 kcal·10.8P·29.5F·16.6C per 100g; dietary_category=veggie |
+| BKFST_026 | Spinach Quiche | (none) | Rule D ✅ — same crust as 025 + filling adds 180g spinach_cooked(11458); crust yfw=0.38, filling yfw=0.90; 120.5g/slice; 315 kcal·9.5P·24.6F·14.5C per 100g; dietary_category=veggie |
+| BKFST_027 | Ham and Cheese Quiche | (none) | Rule D ✅ — same crust as 025 + filling adds 120g ham_diced_cooked(10136); crust yfw=0.38, filling yfw=0.90; 114g/slice; 351 kcal·12.4P·27.1F·14.6C per 100g; dietary_category=all |
+| BKFST_028 | Quiche Lorraine | (none) | Rule D ✅ — same crust as 025 + filling adds 113.4g bacon_cooked_pan_fried(10862); crust yfw=0.38, filling yfw=0.90; 113.9g/slice; 387 kcal·13.7P·30.3F·14.8C per 100g; dietary_category=all |
+| BKFST_029 | Crustless Quiche | (none) | Rule D ✅ — no crust; same filling as BKFST_025 (cheese_swiss+heavy_cream+eggs+onion+nutmeg+salt+pepper); single filling section yfw=0.90; 69.3g/slice; 303 kcal·12.6P·27.2F·2.4C per 100g; dietary_category=veggie |
 
 **Ingredients needed in ledger before building:**
 - (none outstanding — ham_diced_cooked (NDB 10136), bell_pepper_green_raw (NDB 11333), onion_raw (NDB 11282) added during BKFST_024 build)
