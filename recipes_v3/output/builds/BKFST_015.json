@@ -231,7 +231,7 @@
   ],
   "skipped_ingredients": [],
   "per100g": {
-    "Energy_KCal": 358.03,
+    "Energy_KCal": 329.73,
     "Water": 49.06,
     "Protein": 18.81,
     "TotalLipidFat": 27.25,
@@ -302,7 +302,7 @@
     "IntrinsicSugars": 0.06
   },
   "per_serving": {
-    "Energy_KCal": 124.38,
+    "Energy_KCal": 114.55,
     "Water": 17.04,
     "Protein": 6.53,
     "TotalLipidFat": 9.47,
