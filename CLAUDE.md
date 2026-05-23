@@ -74,7 +74,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | Prefix | Status | Count |
 |---|---|---|
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
-| `BKFST_NNN` | 🔧 In progress | 28 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029) |
+| `BKFST_NNN` | 🔧 In progress | 31 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -121,6 +121,9 @@ Planned BKFST order (standalone components first, composites last):
 | BKFST_027 | Ham and Cheese Quiche | (none) | Rule D ✅ — same crust as 025 + filling adds 120g ham_diced_cooked(10136); crust yfw=0.38, filling yfw=0.90; 114g/slice; 351 kcal·12.4P·27.1F·14.6C per 100g; dietary_category=all |
 | BKFST_028 | Quiche Lorraine | (none) | Rule D ✅ — same crust as 025 + filling adds 113.4g bacon_cooked_pan_fried(10862); crust yfw=0.38, filling yfw=0.90; 113.9g/slice; 387 kcal·13.7P·30.3F·14.8C per 100g; dietary_category=all |
 | BKFST_029 | Crustless Quiche | (none) | Rule D ✅ — no crust; same filling as BKFST_025 (cheese_swiss+heavy_cream+eggs+onion+nutmeg+salt+pepper); single filling section yfw=0.90; 69.3g/slice; 303 kcal·12.6P·27.2F·2.4C per 100g; dietary_category=veggie |
+| BKFST_030 | Crustless Spinach Quiche | (none) | Rule D ✅ — same filling as BKFST_026 + spinach_cooked(11458); single filling section yfw=0.90; 89.7g/slice; 239 kcal·10.5P·21.0F·2.8C per 100g; dietary_category=veggie |
+| BKFST_031 | Crustless Ham and Cheese Quiche | (none) | Rule D ✅ — same filling as BKFST_027 + ham_diced_cooked(10136); single filling section yfw=0.90; 83.3g/slice; 284 kcal·14.5P·24.2F·2.0C per 100g; dietary_category=all |
+| BKFST_032 | Crustless Quiche Lorraine | (none) | Rule D ✅ — same filling as BKFST_028 + bacon_cooked_pan_fried(10862); single filling section yfw=0.90; 83.1g/slice; 332 kcal·16.3P·28.6F·2.3C per 100g; dietary_category=all |
 
 **Ingredients needed in ledger before building:**
 - (none outstanding — ham_diced_cooked (NDB 10136), bell_pepper_green_raw (NDB 11333), onion_raw (NDB 11282) added during BKFST_024 build)

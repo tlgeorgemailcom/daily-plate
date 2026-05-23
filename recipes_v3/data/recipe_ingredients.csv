@@ -684,3 +684,27 @@ BKFST_029,4,onion_raw,1/4 cup diced,35.0,0.0,80.0,filling,filling,false,
 BKFST_029,5,nutmeg_ground,1/8 teaspoon,0.275,0.0,1.0,filling,filling,false,ground nutmeg
 BKFST_029,6,salt_table,1/2 teaspoon,3.0,1.0,6.0,filling,filling,false,
 BKFST_029,7,black_pepper_ground,1/8 teaspoon,0.3,0.0,2.0,filling,filling,false,
+BKFST_030,1,cheese_swiss,1 1/2 cups shredded,162.0,80.0,250.0,filling,filling,false,shredded Swiss cheese
+BKFST_030,2,heavy_cream,1 cup,238.0,120.0,350.0,filling,filling,false,
+BKFST_030,3,egg_whole_raw,3 large,150.0,100.0,220.0,filling,filling,false,
+BKFST_030,4,onion_raw,1/4 cup diced,35.0,0.0,80.0,filling,filling,false,
+BKFST_030,5,nutmeg_ground,1/8 teaspoon,0.275,0.0,1.0,filling,filling,false,ground nutmeg
+BKFST_030,6,salt_table,1/2 teaspoon,3.0,1.0,6.0,filling,filling,false,
+BKFST_030,7,black_pepper_ground,1/8 teaspoon,0.3,0.0,2.0,filling,filling,false,
+BKFST_030,8,spinach_cooked,1 cup,180.0,80.0,280.0,filling,filling,false,cooked spinach
+BKFST_031,1,cheese_swiss,1 1/2 cups shredded,162.0,80.0,250.0,filling,filling,false,shredded Swiss cheese
+BKFST_031,2,heavy_cream,1 cup,238.0,120.0,350.0,filling,filling,false,
+BKFST_031,3,egg_whole_raw,3 large,150.0,100.0,220.0,filling,filling,false,
+BKFST_031,4,onion_raw,1/4 cup diced,35.0,0.0,80.0,filling,filling,false,
+BKFST_031,5,nutmeg_ground,1/8 teaspoon,0.275,0.0,1.0,filling,filling,false,ground nutmeg
+BKFST_031,6,salt_table,1/2 teaspoon,3.0,1.0,6.0,filling,filling,false,
+BKFST_031,7,black_pepper_ground,1/8 teaspoon,0.3,0.0,2.0,filling,filling,false,
+BKFST_031,8,ham_diced_cooked,4 1/4 oz,120.0,60.0,200.0,filling,filling,false,diced cooked ham
+BKFST_032,1,cheese_swiss,1 1/2 cups shredded,162.0,80.0,250.0,filling,filling,false,shredded Swiss cheese
+BKFST_032,2,heavy_cream,1 cup,238.0,120.0,350.0,filling,filling,false,
+BKFST_032,3,egg_whole_raw,3 large,150.0,100.0,220.0,filling,filling,false,
+BKFST_032,4,onion_raw,1/4 cup diced,35.0,0.0,80.0,filling,filling,false,
+BKFST_032,5,nutmeg_ground,1/8 teaspoon,0.275,0.0,1.0,filling,filling,false,ground nutmeg
+BKFST_032,6,salt_table,1/2 teaspoon,3.0,1.0,6.0,filling,filling,false,
+BKFST_032,7,black_pepper_ground,1/8 teaspoon,0.3,0.0,2.0,filling,filling,false,
+BKFST_032,8,bacon_cooked_pan_fried,about 10 strips,113.4,60.0,200.0,filling,filling,false,"cooked bacon, crumbled"
