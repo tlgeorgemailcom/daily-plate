@@ -34,6 +34,9 @@ from lib.retention import COOK_METHOD_ALIASES  # noqa: E402
 SUPPORTED_METHODS = set(COOK_METHOD_ALIASES.keys())
 SECTION_KEY_RE = re.compile(r"^[a-z0-9_]+$")
 
+# Valid dietary_category values — must match DIETARY_INCLUDES keys in RecipeBook.svelte
+VALID_DIETARY_CATEGORIES = {"all", "pollo-pesca", "pollo", "pesca", "veggie", "vegan"}
+
 
 def main() -> int:
     # Load food-portions: NDB -> word
@@ -80,8 +83,15 @@ def main() -> int:
     recipe_status: dict[str, str] = {}
     with RECIPES.open() as f:
         for r in csv.DictReader(f):
-            valid_recipe_ids.add(r["recipe_id"])
-            recipe_status[r["recipe_id"]] = (r.get("status") or "").strip()
+            rid = r["recipe_id"]
+            valid_recipe_ids.add(rid)
+            recipe_status[rid] = (r.get("status") or "").strip()
+            dc = (r.get("dietary_category") or "").strip()
+            if dc and dc not in VALID_DIETARY_CATEGORIES:
+                errors.append(
+                    f"  recipes {rid}: dietary_category={dc!r} not in valid set "
+                    f"{sorted(VALID_DIETARY_CATEGORIES)}"
+                )
 
     sections_by_recipe: dict[str, list[dict]] = {}
     if SECTIONS.exists():
