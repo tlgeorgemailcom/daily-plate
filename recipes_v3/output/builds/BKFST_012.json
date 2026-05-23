@@ -9,7 +9,7 @@
   "yield_factor_fat": 0.94,
   "servings_count": 8,
   "audit_status": "NO_CANON",
-  "audit_notes": "Rule C \u2014 no SR Legacy canonical for homemade sausage gravy. FNDDS reference: FC 27120120 = 180 kcal / 6.78g P / 13.61g F / 7.65g C per 100g. Multi-section build: sausage section = 3/4 lb raw ground pork + BKFST_015 spice blend (scaled 0.75), gravy section = 2 tbsp butter + 1/4 cup AP flour + 2 1/2 cups whole milk + 1/2 tsp salt + 1/2 tsp black pepper. Sausage yfw=0.73 yff=0.91 (matches BKFST_015 pan-fry validated Rule B). Gravy yfw=0.92 yff=1.00 (milk gravy simmer). Drafted 2026-05-19.",
+  "audit_notes": "Rule G \u2014 FNDDS FC 27120120 (canonical 180 kcal\u00b76.78P\u00b713.61F\u00b77.65C per 100g). E=-3.2% \u2705 P=+28.6% \u274c F=-8.4% \u274c C=-13.9% \u274c. Sausage section yff corrected to 1.0 (rendered fat stays in gravy roux, does not drain). Protein inflation from SR Legacy lean pork vs FNDDS composite; fat/carb gaps reflect no homemade analog in SR Legacy. Rule G retained. Locked May 23 2026.",
   "raw_total_grams": 1027.64,
   "raw_water_grams": 754.27,
   "raw_fat_grams": 115.55,

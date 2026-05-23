@@ -1,7 +1,7 @@
 {
   "recipe_id": "BKFST_021",
   "recipe_name": "Beef and cheese burrito",
-  "sr_rule": "Rule G",
+  "sr_rule": "Rule F",
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
@@ -9,7 +9,7 @@
   "yield_factor_fat": 1.0,
   "servings_count": 1,
   "audit_status": "PASS",
-  "audit_notes": "Rule G \u2014 FNDDS FC 58102310. Energy +10.4% \u274c (pipeline uses raw Energy_KCal for fat-rendered beef; does not subtract calories leaving with rendered fat \u2014 same artifact as BKFST_012 Sausage Gravy). All other 6 macros \u2264\u00b15%: P=-2.8% F=+1.0% C=-2.0% Fi=-2.0% Su=-0.9% W=+1.4%. Locked May 23 2026.",
+  "audit_notes": "Rule F \u2014 FNDDS FC 58102310. All 7 macros \u2264\u00b15%: E=-2.0% \u2705 P=-2.8% \u2705 F=+1.0% \u2705 C=-2.0% \u2705 Fi=-2.0% \u2705 Su=-0.9% \u2705 W=+1.4% \u2705. Beef section yff=0.593 (fat drained after browning); Atwater energy recomputation applied. Locked May 23 2026.",
   "raw_total_grams": 120.0,
   "raw_water_grams": 59.14,
   "raw_fat_grams": 15.22,
@@ -25,7 +25,7 @@
       "grams": 45.0,
       "section": "beef",
       "ingredient_group": "beef",
-      "qty_display": "1\u00bd oz raw beef",
+      "qty_display": "1\u00bd oz",
       "contribution": {
         "Energy_KCal": 114.3,
         "Protein": 7.727,
@@ -46,7 +46,7 @@
       "grams": 60.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "1 large flour tortilla",
+      "qty_display": "1 large",
       "contribution": {
         "Energy_KCal": 183.6,
         "Protein": 4.92,
@@ -67,7 +67,7 @@
       "grams": 10.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "10g water",
+      "qty_display": "2 tsp",
       "contribution": {
         "Energy_KCal": 0.0,
         "Protein": 0.0,

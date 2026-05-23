@@ -89,6 +89,7 @@ egg_cooked_poached,1131,EGGPOACHED,"Egg, whole, cooked, poached",egg poached,lar
 bread_white_commercial,18069,BREADWHITE,"Bread, white, commercially prepared (includes soft bread crumbs)",white bread,slice,28.0,
 milk_lowfat_2pct,1079,MILK2PCT,"Milk, reduced fat, fluid, 2% milkfat, with added vitamin A and vitamin D",2% milk,cup,244.0,
 potato_boiled_no_skin,11367,POTATOESBOILED,"Potatoes, boiled, cooked without skin, flesh, without salt",boiled potato (flesh),medium_potato,150.0,Pre-boiled potato flesh; grate or shred before pan-frying
+potato_raw,11352,POTATOESRAW,"Potatoes, flesh and skin, raw",raw potato (diced),medium_potato,150.0,
 olive_oil,4053,OILOLIVE,"Oil, olive, salad or cooking",olive oil,tablespoon,13.6,
 tortilla_flour_refrigerated,18364,TORTILLAFLOUR,"Tortillas, ready-to-bake or -fry, flour, refrigerated",flour tortilla,each,45.0,
 cheese_mexican_blend,1251,MEXICANBLEND,"Cheese, Mexican blend",Mexican blend cheese,cup,113.0,shredded

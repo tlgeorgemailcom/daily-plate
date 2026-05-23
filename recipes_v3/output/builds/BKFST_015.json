@@ -9,7 +9,7 @@
   "yield_factor_fat": 0.91,
   "servings_count": 12,
   "audit_status": "APPROVED",
-  "audit_notes": "Rule B accepted; spice-form divergence (whole spices vs commercial oleoresins) drives Energy +9% and Carbs +50% over canonical NDB 7064 while P/F/Sugar/Water all pass \u00b15%.",
+  "audit_notes": "Rule B accepted; spice-form divergence (whole spices vs commercial oleoresins) drives Carbs +62.7% above canonical NDB 7064 (structurally irreducible). Energy corrected to +1.5% \u2705 via Atwater recomputation (yff=0.91 fat-drain). P +1.5% F 0.0% Su +3.7% W -1.7% all \u2705. Fiber unscored (canonical=0). Locked May 23 2026.",
   "raw_total_grams": 503.77,
   "raw_water_grams": 280.19,
   "raw_fat_grams": 124.84,

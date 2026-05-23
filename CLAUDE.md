@@ -74,7 +74,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | Prefix | Status | Count |
 |---|---|---|
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
-| `BKFST_NNN` | 🔧 In progress | 20 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021) |
+| `BKFST_NNN` | 🔧 In progress | 21 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -113,9 +113,10 @@ Planned BKFST order (standalone components first, composites last):
 | BKFST_019 | Burrito with cheese | FNDDS 58102680 | Rule G ✅ — FNDDS FC 58102680 ("Burrito, cheese only"); 60g tortilla(18364)+40g cheese(1251); FNDDS uses 99991410 aggregate for cheese; Sugar +7.3% ❌ (NDB 1251 Sugar=1.23 vs 99991410 est. 0.77g/100g); all other 6 macros ≤±4.5% |
 | BKFST_020 | Egg burrito | FNDDS 34003100 | Rule F ✅ — FNDDS FC 34003100; 70g tortilla(18364)+110g eggs(1123)+7.7g olive oil(4053)+16.5g cheese(1251)+0.33g salt(2047); FNDDS 32130110 (egg omelet) inline-expanded ×1.1; yfw=0.783 (→180g cooked); all 7 macros Δ≤±0.11% |
 | BKFST_021 | Beef and Cheese Burrito | FNDDS 58102310 | Rule F ✅ — FNDDS FC 58102310; 45g beef_ground_80lean_raw(23572)+60g tortilla(18364)+10g water(14411)+5g cheese_mexican_blend(1251); beef section yff=0.593 (fat drained); Atwater energy recomputation; all 7 macros ≤±5%: E=-2.0% P=-2.8% F=+1.0% C=-2.0% Fi=-2.0% Su=-0.9% W=+1.4% |
+| BKFST_022 | Breakfast Burrito (eggs, cheese, potatoes) | (none) | Rule D ✅ — no canonical; 70g tortilla(18364)+100g eggs(1123)+130g potato_raw(11352)+28g cheese_mexican_blend(1251)+13.6g olive oil(4053)+1.5g salt(2047); yfw=0.82 → 305g cooked; 222 kcal·9.0P·12.1F·19.2C per 100g; dietary_category=veggie |
 
 **Ingredients needed in ledger before building:**
-- (none outstanding — sausage and black pepper ingredients added during BKFST_015 build)
+- (none outstanding — potato_raw (NDB 11352) added during BKFST_022 build)
 
 ## Human Approval Requirements
 

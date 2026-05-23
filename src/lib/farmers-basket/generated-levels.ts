@@ -3108,5 +3108,46 @@ export const LEVELS: Level[] = [
       { key: 'beef', label: 'Ground beef', cookingMethod: '', yieldFactorWater: 0.6669, yieldFactorFat: 0.593 },
       { key: 'assembly', label: 'Burrito assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BKFST_022',
+    name: 'Breakfast burrito with eggs, cheese, and potatoes',
+    category: 'Breakfast',
+    dietaryCategory: 'veggie',
+    levelNum: 65,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 burrito',
+    prepTime: '20 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":677.8,"pro":27.6,"fat":36.8,"carb":58.5,"fib":5.2,"h2o":175.0,"sug":4.4,"perServing":{"cal":677.8,"pro":27.6,"fat":36.8,"carb":58.5,"fib":5.2,"h2o":175.0,"sug":4.4,"AddedSugars":0.0,"IntrinsicSugars":4.4},"micros":{"vitaminA":54.8,"vitaminC":4.2,"vitaminD":27.4,"vitaminE":0.76,"vitaminK":4.97,"vitaminB6":0.15,"vitaminB12":0.34,"thiamin":0.12,"riboflavin":0.23,"niacin":1.2,"folate":33.46,"calcium":117.77,"iron":1.83,"magnesium":21.11,"phosphorus":176.89,"potassium":263.25,"sodium":440.23,"zinc":0.95,"copper":0.09,"selenium":16.75,"cholesterol":130.83,"saturatedFat":3.88,"monoFat":5.58,"polyFat":1.29,"omega3":0.05,"omega6":0.78},"gramsPerServing":304.7,"servings":1,"per100g":{"Energy_KCal":222.45,"Water":57.45,"Protein":9.04,"TotalLipidFat":12.08,"Carbohydrate":19.2,"FiberTotalDietary":1.7,"SugarsTotal":1.44,"Cholesterol":130.83,"FattyAcids_totalSaturated":3.88,"FattyAcids_totalMonounsaturated":5.58,"FattyAcids_totalPolyunsaturated":1.29,"LinoleicAcid":0.78,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":54.8,"Retinol":54.51,"Carotene_beta":4.46,"VitaminD":27.4,"VitaminE_alphaTocopherol":0.76,"VitaminK_phylloquinone":4.97,"VitaminC_totalAscorbicAcid":4.2,"Thiamin":0.12,"Riboflavin":0.23,"Niacin":1.2,"PantothenicAcid":0.62,"VitaminB6":0.15,"Folate_total":33.46,"Folate_food":19.85,"Folate_DFE":42.94,"FolicAcid":18.15,"VitaminB12":0.34,"Choline_total":94.38,"Betaine":1.42,"LuteinZeaxanthin":111.15,"Lycopene":0.0,"Calcium_Ca":117.77,"Iron_Fe":1.83,"Magnesium_Mg":21.11,"Phosphorus_P":176.89,"Potassium_K":263.25,"Sodium_Na":440.23,"Zinc_Zn":0.95,"Copper_Cu":0.09,"Manganese_Mn":0.19,"Selenium_Se":16.75,"Tryptophan":0.11,"Threonine":0.32,"Isoleucine":0.41,"Leucine":0.68,"Lysine":0.52,"Methionine":0.21,"Cystine":0.11,"Phenylalanine":0.43,"Tyrosine":0.32,"Valine":0.51,"Arginine":0.43,"Histidine":0.2,"Alanine":0.36,"AsparticAcid":0.83,"GlutamicAcid":1.6,"Glycine":0.24,"Proline":0.57,"Serine":0.52,"omega3":0.05,"omega6":0.78,"AddedSugars":0.0,"IntrinsicSugars":1.44},"addedSugars":0.0,"intrinsicSugars":4.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.82,"yieldFactorFat":1.0,"sources":[{"ndb":"18364","name":"Tortillas, ready-to-bake or -fry, flour, refrigerated","grams":70.0},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":100.0},{"ndb":"11352","name":"Potatoes, flesh and skin, raw","grams":130.0},{"ndb":"1251","name":"Cheese, Mexican blend","grams":28.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":13.6},{"ndb":"2047","name":"Salt, table","grams":1.5}],"sections":[{"section_key":"burrito","section_label":"Breakfast burrito","prep_method":"raw","cook_method":"fried","cooking_method":"fried","cooking_method_normalized":"fried","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":343.1,"raw_water_grams":213.46,"raw_fat_grams":36.8,"final_grams":304.68}],"cookingMethod":"fried"},
+    recipeIngredients: [
+      { name: 'Breakfast burrito with eggs, cheese, and potatoes', quantity: 'custom (g)', foodWord: 'BURRITOBREAKFAST', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'flour tortilla', quantity: '1 large', section: 'burrito', ndbNo: '18364', portionDesc: 'g', portionGrams: 70.0 },
+      { name: 'eggs', quantity: '2 large', section: 'burrito', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'potato (diced)', quantity: '1 cup', section: 'burrito', ndbNo: '11352', portionDesc: 'g', portionGrams: 130.0 },
+      { name: 'Mexican cheese blend', quantity: '¼ cup', section: 'burrito', ndbNo: '1251', portionDesc: 'g', portionGrams: 28.0 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'burrito', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'salt', quantity: '¼ tsp', section: 'burrito', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 }
+    ],
+    recipeInstructions: [
+      'Scrub the potato and cut into ½-inch dice. Heat ½ tbsp of the olive oil in a medium skillet over medium-high heat. Add the potato and salt, and cook, stirring occasionally, until golden and tender, about 8–10 minutes.',
+      'Push the potatoes to one side of the pan. Add the remaining ½ tbsp olive oil, then crack in the eggs and scramble gently until just set, about 2 minutes. Fold the eggs into the potatoes.',
+      'Warm the flour tortilla in a dry skillet over medium heat for 30 seconds per side, or microwave for 15–20 seconds, until pliable.',
+      'Spoon the potato-egg mixture onto the center of the warm tortilla.',
+      'Sprinkle the Mexican cheese blend evenly over the filling. Fold in the sides and roll up tightly into a burrito.',
+      '1 burrito (305g): 678 cal | 27.6g protein | 36.8g fat | 58.5g carbs | 5.2g fiber | 4.4g sugar | 175.0g water'
+    ],
+    sections: [
+      { key: 'burrito', label: 'Breakfast burrito', cookingMethod: '', yieldFactorWater: 0.82 }
+    ],
   }
 ];

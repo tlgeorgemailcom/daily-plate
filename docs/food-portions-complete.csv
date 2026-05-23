@@ -1500,3 +1500,4 @@ BREADWHITE,White Bread,grain,prepared,,,0,18069,"Bread, white, commercially prep
 MILK2PCT,Milk 2%,dairy,beverage,,,0,1079,"Milk, reduced fat, fluid, 2% milkfat, with added vitamin A and vitamin D",50.0,3.3,1.98,4.8,0.0,89.21,5.06,1.0,custom (g),100.0,1.0,cup,244.0,1.0,fl oz,30.5,1.0,tbsp,15.0,,,,,,,,,,,,,,,,,,,,,,,,,,,
 REFRIEDBEANVEG,Refried Bean (Veg),legume,,,,,16171,"Refried beans, canned, vegetarian",83.0,5.28,0.87,13.5,4.7,78.39,0.59,1.0,custom (g),100.0,1.0,cup,238.0,1.0,tablespoon,16.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 BEEFGROUND80RAW,"Ground Beef (80% lean, raw)",protein,,,,,23572,"Beef, ground, 80% lean meat / 20% fat, raw",254.0,17.17,20.0,0.0,0.0,61.87,0.0,1.0,custom (g),100.0,3.0,oz,85.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+POTATOESRAW,Raw Potatoes,vegetable,,,,,11352,"Potatoes, flesh and skin, raw",77.0,2.05,0.09,17.49,2.1,79.25,0.82,1.0,custom (g),100.0,1.0,medium potato,150.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
