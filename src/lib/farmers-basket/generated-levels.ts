@@ -3093,7 +3093,7 @@ export const LEVELS: Level[] = [
       { name: 'Beef and cheese burrito', quantity: 'custom (g)', foodWord: 'BURRITOBEEF', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'ground beef', quantity: '1½ oz', section: 'beef', ndbNo: '23572', portionDesc: 'g', portionGrams: 45.0 },
       { name: 'flour tortilla', quantity: '1 large', section: 'assembly', ndbNo: '18364', portionDesc: 'g', portionGrams: 60.0 },
-      { name: 'water', quantity: '10g', section: 'assembly', ndbNo: '14411', portionDesc: 'g', portionGrams: 10.0 },
+      { name: 'water', quantity: '2 tsp', section: 'assembly', ndbNo: '14411', portionDesc: 'g', portionGrams: 10.0 },
       { name: 'Mexican cheese blend', quantity: '1 tbsp', section: 'assembly', ndbNo: '1251', portionDesc: 'g', portionGrams: 5.0 }
     ],
     recipeInstructions: [
