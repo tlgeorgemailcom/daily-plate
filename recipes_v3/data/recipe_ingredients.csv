@@ -595,3 +595,8 @@ BKFST_018,4,cheese_mexican_blend,1 tsp shredded,5.0,4.5,5.5,burrito,burrito,fals
 BKFST_018,5,salt_table,pinch,0.3,0.2,0.4,burrito,burrito,false,salt
 BKFST_019,1,tortilla_flour_refrigerated,1 flour tortilla (60g),60.0,57,63,burrito,burrito,false,flour tortilla
 BKFST_019,2,cheese_mexican_blend,~3 tbsp shredded,40.0,38,42,burrito,burrito,false,Mexican cheese blend
+BKFST_020,1,tortilla_flour_refrigerated,1 large flour tortilla,70.0,68,72,burrito,burrito,false,flour tortilla
+BKFST_020,2,egg_whole_raw,2 large eggs,110.0,100,120,burrito,burrito,false,eggs
+BKFST_020,3,olive_oil,1¾ tsp,7.7,6,9,burrito,burrito,false,olive oil
+BKFST_020,4,cheese_mexican_blend,2 tbsp,16.5,14,19,burrito,burrito,false,Mexican cheese blend
+BKFST_020,5,salt_table,pinch,0.33,0.2,0.5,burrito,burrito,false,salt

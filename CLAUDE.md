@@ -73,7 +73,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | Prefix | Status | Count |
 |---|---|---|
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
-| `BKFST_NNN` | 🔧 In progress | 18 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 012, 013, 014, 015, 016, 017, 018, 019) |
+| `BKFST_NNN` | 🔧 In progress | 19 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 012, 013, 014, 015, 016, 017, 018, 019, 020) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -110,6 +110,7 @@ Planned BKFST order (standalone components first, composites last):
 | BKFST_017 | Burrito with beans | FNDDS 58102605 | Rule F ✅ — FNDDS FC 58102605 decomposition verbatim; all 7 macros Δ=0.0% |
 | BKFST_018 | Burrito with beans and cheese | FNDDS 58102610 | Rule F ✅ — FNDDS FC 58102610; 40g tortilla(18364)+30g refried beans(16403)+30g black beans(16015)+5g cheese(1251)+0.3g salt; all 7 macros ≤±1.3%; beans dilute tortilla SR Legacy sugar inflation |
 | BKFST_019 | Burrito with cheese | FNDDS 58102680 | Rule G ✅ — FNDDS FC 58102680 ("Burrito, cheese only"); 60g tortilla(18364)+40g cheese(1251); FNDDS uses 99991410 aggregate for cheese; Sugar +7.3% ❌ (NDB 1251 Sugar=1.23 vs 99991410 est. 0.77g/100g); all other 6 macros ≤±4.5% |
+| BKFST_020 | Egg burrito | FNDDS 34003100 | Rule F ✅ — FNDDS FC 34003100; 70g tortilla(18364)+110g eggs(1123)+7.7g olive oil(4053)+16.5g cheese(1251)+0.33g salt(2047); FNDDS 32130110 (egg omelet) inline-expanded ×1.1; yfw=0.783 (→180g cooked); all 7 macros Δ≤±0.11% |
 
 **Ingredients needed in ledger before building:**
 - (none outstanding — sausage and black pepper ingredients added during BKFST_015 build)

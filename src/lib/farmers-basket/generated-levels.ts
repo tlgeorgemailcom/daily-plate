@@ -3027,5 +3027,46 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'burrito', label: 'Cheese burrito', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BKFST_020',
+    name: 'Egg burrito',
+    category: 'Breakfast',
+    dietaryCategory: 'omni',
+    levelNum: 63,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 burrito',
+    prepTime: '10 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule F',
+    nutritionJson: {"cal":498.6,"pro":23.4,"fat":28.5,"carb":35.6,"fib":2.5,"h2o":88.6,"sug":3.2,"perServing":{"cal":498.6,"pro":23.4,"fat":28.5,"carb":35.6,"fib":2.5,"h2o":88.6,"sug":3.2,"AddedSugars":0.0,"IntrinsicSugars":3.2},"micros":{"vitaminA":91.0,"vitaminC":0.0,"vitaminD":49.44,"vitaminE":0.96,"vitaminK":5.21,"vitaminB6":0.1,"vitaminB12":0.56,"thiamin":0.17,"riboflavin":0.37,"niacin":1.41,"folate":49.86,"calcium":151.52,"iron":2.56,"magnesium":18.19,"phosphorus":241.3,"potassium":140.81,"sodium":475.19,"zinc":1.27,"copper":0.08,"selenium":28.81,"cholesterol":236.08,"saturatedFat":5.19,"monoFat":6.75,"polyFat":1.94,"omega3":0.09,"omega6":1.38},"gramsPerServing":180.0,"servings":1,"per100g":{"Energy_KCal":277.06,"Water":49.23,"Protein":13.02,"TotalLipidFat":15.81,"Carbohydrate":19.81,"FiberTotalDietary":1.36,"SugarsTotal":1.78,"Cholesterol":236.08,"FattyAcids_totalSaturated":5.19,"FattyAcids_totalMonounsaturated":6.75,"FattyAcids_totalPolyunsaturated":1.94,"LinoleicAcid":1.38,"alphaLinolenicAcid":0.07,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.02,"VitaminA_RAE":91.0,"Retinol":90.7,"Carotene_beta":4.11,"VitaminD":49.44,"VitaminE_alphaTocopherol":0.96,"VitaminK_phylloquinone":5.21,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.17,"Riboflavin":0.37,"Niacin":1.41,"PantothenicAcid":0.94,"VitaminB6":0.1,"Folate_total":49.86,"Folate_food":26.81,"Folate_DFE":65.9,"FolicAcid":30.73,"VitaminB12":0.56,"Choline_total":165.69,"Betaine":2.27,"LuteinZeaxanthin":202.11,"Lycopene":0.0,"Calcium_Ca":151.52,"Iron_Fe":2.56,"Magnesium_Mg":18.19,"Phosphorus_P":241.3,"Potassium_K":140.81,"Sodium_Na":475.19,"Zinc_Zn":1.27,"Copper_Cu":0.08,"Manganese_Mn":0.22,"Selenium_Se":28.81,"Tryptophan":0.15,"Threonine":0.47,"Isoleucine":0.6,"Leucine":1.0,"Lysine":0.75,"Methionine":0.32,"Cystine":0.19,"Phenylalanine":0.63,"Tyrosine":0.46,"Valine":0.74,"Arginine":0.65,"Histidine":0.29,"Alanine":0.57,"AsparticAcid":1.04,"GlutamicAcid":2.2,"Glycine":0.37,"Proline":0.79,"Serine":0.8,"omega3":0.09,"omega6":1.38,"AddedSugars":0.0,"IntrinsicSugars":1.78},"addedSugars":0.0,"intrinsicSugars":3.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.783,"yieldFactorFat":1.0,"sources":[{"ndb":"18364","name":"Tortillas, ready-to-bake or -fry, flour, refrigerated","grams":70.0},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":110.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":7.7},{"ndb":"1251","name":"Cheese, Mexican blend","grams":16.5},{"ndb":"2047","name":"Salt, table","grams":0.3}],"sections":[{"section_key":"burrito","section_label":"Egg burrito","prep_method":"raw","cook_method":"fried","cooking_method":"fried","cooking_method_normalized":"fried","yield_factor_water":0.783,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":204.53,"raw_water_grams":113.16,"raw_fat_grams":28.46,"final_grams":179.97}],"cookingMethod":"fried"},
+    recipeIngredients: [
+      { name: 'Egg burrito', quantity: 'custom (g)', foodWord: 'BURRITOEGG', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'flour tortilla', quantity: '1 large flour tortilla', section: 'burrito', ndbNo: '18364', portionDesc: 'g', portionGrams: 70.0 },
+      { name: 'eggs', quantity: '2 large eggs', section: 'burrito', ndbNo: '1123', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'olive oil', quantity: '1¾ tsp', section: 'burrito', ndbNo: '4053', portionDesc: 'g', portionGrams: 7.7 },
+      { name: 'Mexican cheese blend', quantity: '2 tbsp', section: 'burrito', ndbNo: '1251', portionDesc: 'g', portionGrams: 16.5 },
+      { name: 'salt', quantity: 'pinch', section: 'burrito', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.33 }
+    ],
+    recipeInstructions: [
+      'Crack the eggs into a bowl and beat lightly.',
+      'Heat olive oil in a small skillet over medium heat.',
+      'Pour in the beaten eggs and add a pinch of salt. Scramble gently until just set.',
+      'Sprinkle the Mexican cheese blend over the eggs and fold to melt, about 30 seconds.',
+      'Warm the flour tortilla in a dry skillet for 30 seconds per side, or microwave for 15–20 seconds.',
+      'Spoon the egg and cheese mixture onto the center of the tortilla. Fold in the sides and roll up tightly.',
+      '1 burrito (180g): 498.6 cal | 23.4g protein | 28.5g fat | 35.7g carbs | 2.4g fiber | 3.2g sugar | 88.6g water'
+    ],
+    sections: [
+      { key: 'burrito', label: 'Egg burrito', cookingMethod: '', yieldFactorWater: 0.783 }
+    ],
   }
 ];
