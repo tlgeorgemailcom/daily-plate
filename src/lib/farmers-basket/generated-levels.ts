@@ -3643,5 +3643,46 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'frittata', label: 'Frittata', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'BKFST_034',
+    name: 'Avocado Toast Basic',
+    category: 'Breakfast',
+    dietaryCategory: 'vegan',
+    levelNum: 77,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 toast',
+    prepTime: '10 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":276.5,"pro":7.0,"fat":17.9,"carb":24.9,"fib":8.3,"h2o":70.8,"sug":3.0,"perServing":{"cal":276.5,"pro":7.0,"fat":17.9,"carb":24.9,"fib":8.3,"h2o":70.8,"sug":3.0,"AddedSugars":0.0,"IntrinsicSugars":3.0},"micros":{"vitaminA":9.33,"vitaminC":7.14,"vitaminD":0.0,"vitaminE":1.93,"vitaminK":15.64,"vitaminB6":0.26,"vitaminB12":0.0,"thiamin":0.12,"riboflavin":0.13,"niacin":2.54,"folate":76.84,"calcium":42.87,"iron":1.25,"magnesium":44.49,"phosphorus":110.1,"potassium":394.9,"sodium":258.59,"zinc":0.99,"copper":0.2,"selenium":11.31,"cholesterol":0.0,"saturatedFat":2.09,"monoFat":8.88,"polyFat":2.13,"omega3":0.07,"omega6":0.0},"gramsPerServing":123.2,"servings":1,"per100g":{"Energy_KCal":224.45,"Water":57.5,"Protein":5.72,"TotalLipidFat":14.5,"Carbohydrate":20.21,"FiberTotalDietary":6.72,"SugarsTotal":2.45,"Cholesterol":0.0,"FattyAcids_totalSaturated":2.09,"FattyAcids_totalMonounsaturated":8.88,"FattyAcids_totalPolyunsaturated":2.13,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.07,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":9.33,"Retinol":0.0,"Carotene_beta":91.57,"VitaminD":0.0,"VitaminE_alphaTocopherol":1.93,"VitaminK_phylloquinone":15.64,"VitaminC_totalAscorbicAcid":7.14,"Thiamin":0.12,"Riboflavin":0.13,"Niacin":2.54,"PantothenicAcid":1.01,"VitaminB6":0.26,"Folate_total":76.84,"Folate_food":76.84,"Folate_DFE":76.84,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":17.87,"Betaine":0.43,"LuteinZeaxanthin":227.54,"Lycopene":0.0,"Calcium_Ca":42.87,"Iron_Fe":1.25,"Magnesium_Mg":44.49,"Phosphorus_P":110.1,"Potassium_K":394.9,"Sodium_Na":258.59,"Zinc_Zn":0.99,"Copper_Cu":0.2,"Manganese_Mn":0.77,"Selenium_Se":11.31,"Tryptophan":0.05,"Threonine":0.13,"Isoleucine":0.16,"Leucine":0.27,"Lysine":0.17,"Methionine":0.06,"Cystine":0.07,"Phenylalanine":0.18,"Tyrosine":0.1,"Valine":0.19,"Arginine":0.21,"Histidine":0.09,"Alanine":0.18,"AsparticAcid":0.33,"GlutamicAcid":0.9,"Glycine":0.18,"Proline":0.29,"Serine":0.19,"omega3":0.07,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":2.45},"addedSugars":0.0,"intrinsicSugars":3.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18036","name":"Bread, multi-grain, toasted (includes whole-grain)","grams":38.0},{"ndb":"9038","name":"Avocados, raw, California","grams":75.0},{"ndb":"9152","name":"Lemon juice, raw","grams":5.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":4.5},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.3}],"sections":[{"section_key":"toast","section_label":"Avocado Toast","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":123.2,"raw_water_grams":70.84,"raw_fat_grams":17.87,"final_grams":123.2}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Avocado Toast Basic', quantity: 'custom (g)', foodWord: 'AVOCADOTOAST', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'multigrain toast', quantity: '1 thick slice', section: 'toast', ndbNo: '18036', portionDesc: 'g', portionGrams: 38.0 },
+      { name: 'avocado', quantity: '½ avocado', section: 'toast', ndbNo: '9038', portionDesc: 'g', portionGrams: 75.0 },
+      { name: 'lemon juice', quantity: '1 teaspoon', section: 'toast', ndbNo: '9152', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'olive oil', quantity: '1 teaspoon', section: 'toast', ndbNo: '4053', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'salt', quantity: '1 pinch', section: 'toast', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.4 },
+      { name: 'red pepper flakes', quantity: '1 pinch', section: 'toast', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.3 }
+    ],
+    recipeInstructions: [
+      'Toast the bread until golden and crisp.',
+      'Halve the avocado and scoop the flesh of one half into a small bowl.',
+      'Add the lemon juice and a pinch of salt. Mash with a fork to your preferred texture — smooth or slightly chunky.',
+      'Drizzle the olive oil over the toasted bread, then spread the mashed avocado evenly on top.',
+      'Finish with a pinch of flaked salt and red pepper flakes.',
+      '1 toast (123.2 g): 276.5 cal | 7.0g protein | 17.9g fat | 24.9g carbs | 8.3g fiber | 3.0g sugar | 70.8g water'
+    ],
+    sections: [
+      { key: 'toast', label: 'Avocado Toast', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

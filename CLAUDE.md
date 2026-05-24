@@ -74,7 +74,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | Prefix | Status | Count |
 |---|---|---|
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
-| `BKFST_NNN` | 🔧 In progress | 32 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033) |
+| `BKFST_NNN` | 🔧 In progress | 33 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -125,9 +125,10 @@ Planned BKFST order (standalone components first, composites last):
 | BKFST_031 | Crustless Ham and Cheese Quiche | (none) | Rule D ✅ — same filling as BKFST_027 + ham_diced_cooked(10136); single filling section yfw=0.90; 83.3g/slice; 284 kcal·14.5P·24.2F·2.0C per 100g; dietary_category=all |
 | BKFST_032 | Crustless Quiche Lorraine | (none) | Rule D ✅ — same filling as BKFST_028 + bacon_cooked_pan_fried(10862); single filling section yfw=0.90; 83.1g/slice; 332 kcal·16.3P·28.6F·2.3C per 100g; dietary_category=all |
 | BKFST_033 | Frittata Herbs and Cheese | (none) | Rule D ✅ — no canonical; 264g eggs(1123)+15.25g milk_whole(1077)+30g scallion_raw(11291)+15g parsley_fresh(11297)+8g cilantro_raw(11165)+3g chives_raw(11156)+2g thyme_fresh(2049)+0.4g salt+0.3g pepper+28.35g cheese_parmesan_hard(1033)+13.6g olive_oil(4053)+14.2g butter_unsalted(1145); yfw=0.90 → 354.7g cooked; 88.7g/slice (4 slices); 202 kcal·12.4P·15.9F·2.1C per 100g; dietary_category=veggie |
+| BKFST_034 | Avocado Toast Basic | (none) | Rule D ✅ — no canonical; 38g bread_multigrain_toasted(18036)+75g avocado_raw(9038)+5g lemon_juice_raw(9152)+4.5g olive_oil(4053)+0.4g salt(2047)+0.3g red_pepper_flakes(2031); yfw=1.00 → 123.2g; 1 toast/serving; 224 kcal·5.7P·14.5F·20.2C per 100g; dietary_category=vegan |
 
 **Ingredients needed in ledger before building:**
-- (none outstanding — scallion_raw (NDB 11291), parsley_fresh (NDB 11297), cilantro_raw (NDB 11165), chives_raw (NDB 11156), thyme_fresh (NDB 2049), cheese_parmesan_hard (NDB 1033) added during BKFST_033 build)
+- (none outstanding — bread_multigrain_toasted (NDB 18036), avocado_raw (NDB 9038), red_pepper_flakes (NDB 2031) added during BKFST_034 build)
 
 ## Human Approval Requirements
 
