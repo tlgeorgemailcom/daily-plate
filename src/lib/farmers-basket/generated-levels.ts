@@ -3712,7 +3712,7 @@ export const LEVELS: Level[] = [
       { name: 'lemon juice', quantity: '1 teaspoon', section: 'toast', ndbNo: '9152', portionDesc: 'g', portionGrams: 5.0 },
       { name: 'olive oil', quantity: '1 teaspoon', section: 'toast', ndbNo: '4053', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'cherry tomatoes', quantity: '4', section: 'toast', ndbNo: '11529', portionDesc: 'g', portionGrams: 68.0 },
-      { name: 'poached egg', quantity: '1 large egg', section: 'toast', ndbNo: '1131', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'poached egg', quantity: '1', section: 'toast', ndbNo: '1131', portionDesc: 'g', portionGrams: 50.0 },
       { name: 'salt', quantity: '1 pinch', section: 'toast', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.4 },
       { name: 'red pepper flakes', quantity: '1 pinch', section: 'toast', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.3 }
     ],
