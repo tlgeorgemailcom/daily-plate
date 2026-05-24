@@ -3676,9 +3676,9 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Toast the bread until golden and crisp.',
       'Halve the avocado and scoop the flesh of one half into a small bowl.',
-      'Add the lemon juice and a pinch of salt. Mash with a fork to your preferred texture — smooth or slightly chunky.',
-      'Drizzle the olive oil over the toasted bread, then spread the mashed avocado evenly on top.',
-      'Finish with a pinch of flaked salt and red pepper flakes.',
+      'Add the lemon juice and mash with a fork to your preferred texture — smooth or slightly chunky.',
+      'Spread the mashed avocado evenly on top of the warm toast.',
+      'Drizzle with olive oil, then finish with a pinch of flaked salt and red pepper flakes.',
       '1 toast (123.2 g): 276.5 cal | 7.0g protein | 17.9g fat | 24.9g carbs | 8.3g fiber | 3.0g sugar | 70.8g water'
     ],
     sections: [
