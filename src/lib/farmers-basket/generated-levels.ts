@@ -3684,5 +3684,49 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'toast', label: 'Avocado Toast', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BKFST_035',
+    name: 'Avocado Toast Tomato and Egg',
+    category: 'Breakfast',
+    dietaryCategory: 'veggie',
+    levelNum: 78,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 toast',
+    prepTime: '15 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":360.3,"pro":13.9,"fat":22.7,"carb":27.9,"fib":9.1,"h2o":173.0,"sug":5.0,"perServing":{"cal":360.3,"pro":13.9,"fat":22.7,"carb":27.9,"fib":9.1,"h2o":173.0,"sug":5.0,"AddedSugars":0.0,"IntrinsicSugars":5.0},"micros":{"vitaminA":49.77,"vitaminC":7.51,"vitaminD":17.0,"vitaminE":1.35,"vitaminK":10.28,"vitaminB6":0.19,"vitaminB12":0.15,"thiamin":0.08,"riboflavin":0.15,"niacin":1.48,"folate":50.73,"calcium":36.32,"iron":1.08,"magnesium":28.31,"phosphorus":103.84,"potassium":297.13,"sodium":195.06,"zinc":0.82,"copper":0.13,"selenium":12.12,"cholesterol":76.7,"saturatedFat":1.72,"monoFat":5.3,"polyFat":1.51,"omega3":0.04,"omega6":0.0},"gramsPerServing":241.2,"servings":1,"per100g":{"Energy_KCal":149.36,"Water":71.74,"Protein":5.76,"TotalLipidFat":9.43,"Carbohydrate":11.57,"FiberTotalDietary":3.77,"SugarsTotal":2.07,"Cholesterol":76.7,"FattyAcids_totalSaturated":1.72,"FattyAcids_totalMonounsaturated":5.3,"FattyAcids_totalPolyunsaturated":1.51,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":49.77,"Retinol":32.96,"Carotene_beta":173.36,"VitaminD":17.0,"VitaminE_alphaTocopherol":1.35,"VitaminK_phylloquinone":10.28,"VitaminC_totalAscorbicAcid":7.51,"Thiamin":0.08,"Riboflavin":0.15,"Niacin":1.48,"PantothenicAcid":0.85,"VitaminB6":0.19,"Folate_total":50.73,"Folate_food":50.73,"Folate_DFE":50.73,"FolicAcid":0.0,"VitaminB12":0.15,"Choline_total":59.55,"Betaine":0.31,"LuteinZeaxanthin":254.76,"Lycopene":725.39,"Calcium_Ca":36.32,"Iron_Fe":1.08,"Magnesium_Mg":28.31,"Phosphorus_P":103.84,"Potassium_K":297.13,"Sodium_Na":195.06,"Zinc_Zn":0.82,"Copper_Cu":0.13,"Manganese_Mn":0.43,"Selenium_Se":12.12,"Tryptophan":0.06,"Threonine":0.19,"Isoleucine":0.22,"Leucine":0.37,"Lysine":0.28,"Methionine":0.11,"Cystine":0.09,"Phenylalanine":0.24,"Tyrosine":0.16,"Valine":0.28,"Arginine":0.28,"Histidine":0.11,"Alanine":0.25,"AsparticAcid":0.48,"GlutamicAcid":0.93,"Glycine":0.19,"Proline":0.26,"Serine":0.3,"omega3":0.04,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":2.07},"addedSugars":0.0,"intrinsicSugars":5.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18036","name":"Bread, multi-grain, toasted (includes whole-grain)","grams":38.0},{"ndb":"9038","name":"Avocados, raw, California","grams":75.0},{"ndb":"9152","name":"Lemon juice, raw","grams":5.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":4.5},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":68.0},{"ndb":"1131","name":"Egg, whole, cooked, poached","grams":50.0},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.3}],"sections":[{"section_key":"toast","section_label":"Avocado Egg Toast","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":241.2,"raw_water_grams":173.04,"raw_fat_grams":22.74,"final_grams":241.2}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Avocado Toast Tomato and Egg', quantity: 'custom (g)', foodWord: 'AVOCADOEGGTOAST', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'multigrain toast', quantity: '1 thick slice', section: 'toast', ndbNo: '18036', portionDesc: 'g', portionGrams: 38.0 },
+      { name: 'avocado', quantity: '½ avocado', section: 'toast', ndbNo: '9038', portionDesc: 'g', portionGrams: 75.0 },
+      { name: 'lemon juice', quantity: '1 teaspoon', section: 'toast', ndbNo: '9152', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'olive oil', quantity: '1 teaspoon', section: 'toast', ndbNo: '4053', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'cherry tomatoes', quantity: '4 cherry tomatoes halved', section: 'toast', ndbNo: '11529', portionDesc: 'g', portionGrams: 68.0 },
+      { name: 'egg poached', quantity: '1 poached egg', section: 'toast', ndbNo: '1131', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'salt', quantity: '1 pinch', section: 'toast', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.4 },
+      { name: 'red pepper flakes', quantity: '1 pinch', section: 'toast', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.3 }
+    ],
+    recipeInstructions: [
+      'Bring a small saucepan of water to a gentle simmer and add a splash of white vinegar. Crack the egg into a small cup, then gently slide it into the simmering water. Poach for 3 to 4 minutes until the white is set and the yolk is still soft. Remove with a slotted spoon and blot dry.',
+      'Toast the bread until golden and crisp.',
+      'Halve the avocado and scoop the flesh of one half into a small bowl. Add the lemon juice and mash with a fork to your preferred texture — smooth or slightly chunky.',
+      'Spread the mashed avocado evenly on top of the warm toast.',
+      'Drizzle with olive oil. Place the poached egg on top of the avocado, then arrange the cherry tomato halves around the egg.',
+      'Finish with a pinch of flaked salt and red pepper flakes.',
+      '1 toast (241.2 g): 360 cal | 13.9g protein | 22.7g fat | 27.9g carbs | 9.1g fiber | 5.0g sugar | 173.0g water'
+    ],
+    sections: [
+      { key: 'toast', label: 'Avocado Egg Toast', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
