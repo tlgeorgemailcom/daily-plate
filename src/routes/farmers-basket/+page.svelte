@@ -1022,19 +1022,6 @@
     </div>
   {/if}
   
-  {#if (!game.gameStatus || game.gameStatus === 'ready') && !$isPremium}
-    <div class="overlay start">
-      <div class="overlay-content">
-        <h2>{game.currentLevel?.name ?? 'Loading'}</h2>
-        <p>Collect: {#each game.currentLevel?.recipe ?? [] as food}<FoodIcon {food} size={24} />{/each}</p>
-        <p class="hint desktop-hint">Use arrow keys to move, Space to pick up food</p>
-        <p class="hint mobile-hint">Drag farmer to move • Tap when near food/basket</p>
-        <button onclick={() => game.startLevel()}>▶️ Play</button>
-        <button class="secondary" onclick={() => { showRecipeBook = true; showRecipeOfDay = true; }}>📖 Browse Recipes</button>
-      </div>
-    </div>
-  {/if}
-  
   <footer class="controls-help desktop-only">
     {#if selectedBarrierId}
       <span class="mode-indicator">✋ Move Tool</span>
