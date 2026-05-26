@@ -146,7 +146,7 @@
   
   const COOKING_METHODS = ['Bake', 'Boil', 'Grill', 'Fry', 'No heat'];
   // v3.md §18.1 — lowercase enum stored in recipe_sections.csv::cooking_method.
-  const SECTION_COOKING_METHODS = ['raw', 'boiled', 'steamed', 'baked', 'fried', 'grilled', 'microwave'];
+  const SECTION_COOKING_METHODS = ['raw', 'boiled', 'steamed', 'baked', 'fried', 'pan grilled', 'grilled', 'microwave'];
   // v3.md §18.6 — datalist suggestions; free-typing is always allowed.
   const SECTION_LABEL_VOCAB = [
     'base', 'batter', 'broth', 'cold prep', 'crust', 'dough', 'filling',

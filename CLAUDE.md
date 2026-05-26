@@ -59,7 +59,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 - **fat column in `comboo.db`** is literal `'n'` for recipe entries — always use `TotalLipidFat`.
 - **NDB_No is stored as integer** in `comboo.db` (no leading zeros).
 - `step_order` must be plain integers (not "1a", "2b").
-- `cooking_method` must be one of: `raw`, `boiled`, `steamed`, `baked`, `fried`, `grilled`, `microwave`. Compound strings not supported — use `recipe_sections.csv` for multi-stage.
+- `cooking_method` must be one of: `raw`, `boiled`, `steamed`, `baked`, `fried`, `pan grilled`, `grilled`, `microwave`. (`pan grilled` is an alias for `fried` — same retention factors, friendlier display label.) Compound strings not supported — use `recipe_sections.csv` for multi-stage.
 - `dietary_category` must be one of: `all`, `pollo-pesca`, `pollo`, `pesca`, `veggie`, `vegan`. These are the keys in `DIETARY_INCLUDES` in `RecipeBook.svelte`; any other value silently hides the recipe from all users. Enforced by `validate_ledger.py`.
 - `food_word` must exist in `food-portions-complete.csv` (except Rule D).
 - **Every `section` value used in `recipe_ingredients.csv` must have a matching row in `recipe_sections.csv`.** Single-section recipes may mirror the recipe-level yield factors; multi-stage recipes set per-section yields. Enforced by `validate_ledger.py` Rule 6b.

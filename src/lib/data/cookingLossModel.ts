@@ -600,7 +600,7 @@ export function mapDishMethodToCookingMethod(cookMethod: string | null): Cooking
 
   if (
     /pan.?fr|stir.?fr|saut|scrambl|pan.?brow|pan.?broil|fast.?fr|fr.*flour|fr.*batt|batter.*fr|french.?fr|breaded.*fr|reheated.*bread|par.?fr|home.?prep/.test(m) ||
-    m === 'fried' || m === 'fry'
+    m === 'fried' || m === 'fry' || m === 'pan grilled' || m === 'pan_grilled'
   ) return 'fried';
 
   if (
