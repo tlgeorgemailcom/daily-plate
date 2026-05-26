@@ -3728,5 +3728,46 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'toast', label: 'Avocado Egg Toast', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_001',
+    name: 'Grilled Cheese Cheddar & Gruyere',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'veggie',
+    levelNum: 79,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 sandwich',
+    prepTime: '15 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":589.1,"pro":20.3,"fat":43.1,"carb":30.6,"fib":1.6,"h2o":41.4,"sug":3.6,"perServing":{"cal":589.1,"pro":20.3,"fat":43.1,"carb":30.6,"fib":1.6,"h2o":41.4,"sug":3.6,"AddedSugars":0.0,"IntrinsicSugars":3.6},"micros":{"vitaminA":206.48,"vitaminC":0.0,"vitaminD":9.16,"vitaminE":0.57,"vitaminK":2.26,"vitaminB6":0.05,"vitaminB12":0.49,"thiamin":0.18,"riboflavin":0.22,"niacin":1.68,"folate":41.86,"calcium":412.47,"iron":1.62,"magnesium":22.95,"phosphorus":259.91,"potassium":90.59,"sodium":614.61,"zinc":1.85,"copper":0.06,"selenium":18.31,"cholesterol":85.16,"saturatedFat":18.2,"monoFat":8.35,"polyFat":1.45,"omega3":0.09,"omega6":0.35},"gramsPerServing":139.4,"servings":1,"per100g":{"Energy_KCal":422.6,"Water":29.67,"Protein":14.56,"TotalLipidFat":30.91,"Carbohydrate":21.98,"FiberTotalDietary":1.16,"SugarsTotal":2.62,"Cholesterol":85.16,"FattyAcids_totalSaturated":18.2,"FattyAcids_totalMonounsaturated":8.35,"FattyAcids_totalPolyunsaturated":1.45,"LinoleicAcid":0.35,"alphaLinolenicAcid":0.09,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":206.48,"Retinol":203.91,"Carotene_beta":44.35,"VitaminD":9.16,"VitaminE_alphaTocopherol":0.57,"VitaminK_phylloquinone":2.26,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.18,"Riboflavin":0.22,"Niacin":1.68,"PantothenicAcid":0.36,"VitaminB6":0.05,"Folate_total":41.86,"Folate_food":14.1,"Folate_DFE":61.22,"FolicAcid":37.01,"VitaminB12":0.49,"Choline_total":14.82,"Betaine":44.06,"LuteinZeaxanthin":12.31,"Lycopene":0.0,"Calcium_Ca":412.47,"Iron_Fe":1.62,"Magnesium_Mg":22.95,"Phosphorus_P":259.91,"Potassium_K":90.59,"Sodium_Na":614.61,"Zinc_Zn":1.85,"Copper_Cu":0.06,"Manganese_Mn":0.23,"Selenium_Se":18.31,"Tryptophan":0.19,"Threonine":0.43,"Isoleucine":0.57,"Leucine":1.03,"Lysine":0.76,"Methionine":0.28,"Cystine":0.07,"Phenylalanine":0.57,"Tyrosine":0.58,"Valine":0.74,"Arginine":0.31,"Histidine":0.34,"Alanine":0.35,"AsparticAcid":0.69,"GlutamicAcid":2.19,"Glycine":0.22,"Proline":1.29,"Serine":0.51,"omega3":0.09,"omega6":0.35,"AddedSugars":0.0,"IntrinsicSugars":2.62},"addedSugars":0.0,"intrinsicSugars":3.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.9,"yieldFactorFat":1.0,"sources":[{"ndb":"18069","name":"Bread, white, commercially prepared (includes soft bread crumbs)","grams":60.0},{"ndb":"1009","name":"Cheese, cheddar","grams":28.0},{"ndb":"1023","name":"Cheese, gruyere","grams":28.0},{"ndb":"1001","name":"Butter, salted","grams":28.0}],"sections":[{"section_key":"sandwich","section_label":"Grilled Cheese","prep_method":"raw","cook_method":"fried","cooking_method":"fried","cooking_method_normalized":"fried","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":144.0,"raw_water_grams":45.95,"raw_fat_grams":43.09,"final_grams":139.4}],"cookingMethod":"fried"},
+    recipeIngredients: [
+      { name: 'Grilled Cheese Cheddar & Gruyere', quantity: 'custom (g)', foodWord: 'GRILLEDCHEESE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white bread', quantity: '2 slices', section: 'sandwich', ndbNo: '18069', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'Cheddar cheese', quantity: '1 oz', section: 'sandwich', ndbNo: '1009', portionDesc: 'g', portionGrams: 28.0 },
+      { name: 'Gruyere cheese', quantity: '1 oz', section: 'sandwich', ndbNo: '1023', portionDesc: 'g', portionGrams: 28.0 },
+      { name: 'salted butter', quantity: '2 tbsp', section: 'sandwich', ndbNo: '1001', portionDesc: 'g', portionGrams: 28.0 }
+    ],
+    recipeInstructions: [
+      'Butter one side of each bread slice, using about 1 tablespoon per slice.',
+      'Heat a skillet or griddle over medium-low to medium heat.',
+      'Place one slice of bread butter-side down in the pan. Evenly distribute the shredded cheddar and gruyère over the bread.',
+      'Top with the second bread slice, butter-side up.',
+      'Cook until the bottom is deep golden brown, about 3–4 minutes. Flip carefully and cook the second side until golden and the cheese is fully melted, about 2–3 more minutes.',
+      'Transfer to a cutting board, rest 1 minute, then cut diagonally and serve.',
+      '1 sandwich (139.4 g): 589.1 cal | 20.3g protein | 43.1g fat | 30.6g carbs | 1.6g fiber | 3.7g sugar | 41.4g water'
+    ],
+    sections: [
+      { key: 'sandwich', label: 'Grilled Cheese', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];

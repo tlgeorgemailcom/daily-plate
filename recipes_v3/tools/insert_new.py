@@ -74,6 +74,10 @@ _CATEGORY_MAP = {
     "beverages": "beverages",
     "sauces & condiments": "sauces-condiments",
     "sauces-condiments": "sauces-condiments",
+    "sandwiches & burgers": "sandwiches-burgers",
+    "sandwiches-burgers": "sandwiches-burgers",
+    "pasta & pizza": "pasta-pizza",
+    "pasta-pizza": "pasta-pizza",
 }
 
 
