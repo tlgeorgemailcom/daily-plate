@@ -1096,6 +1096,11 @@
         void goto('/');
         return;
       }
+      if (!game.gameStatus || game.gameStatus === 'ready') {
+        // Guest hasn't started playing yet — return to hub rather than show redundant start overlay.
+        void goto('/');
+        return;
+      }
       showRecipeBook = false;
       showRecipeOfDay = true;
     }}
