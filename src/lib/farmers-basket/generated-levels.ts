@@ -3769,5 +3769,44 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sandwich', label: 'Grilled Cheese', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'SAND_002',
+    name: 'Grilled Cheese American',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'veggie',
+    levelNum: 80,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 sandwich',
+    prepTime: '15 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":415.8,"pro":13.0,"fat":26.7,"carb":31.2,"fib":1.6,"h2o":36.6,"sug":4.4,"perServing":{"cal":415.8,"pro":13.0,"fat":26.7,"carb":31.2,"fib":1.6,"h2o":36.6,"sug":4.4,"AddedSugars":0.0,"IntrinsicSugars":4.4},"micros":{"vitaminA":143.49,"vitaminC":0.0,"vitaminD":8.2,"vitaminE":0.53,"vitaminK":1.76,"vitaminB6":0.05,"vitaminB12":0.5,"thiamin":0.22,"riboflavin":0.2,"niacin":2.07,"folate":47.16,"calcium":472.32,"iron":2.17,"magnesium":22.34,"phosphorus":296.06,"potassium":120.08,"sodium":970.11,"zinc":1.34,"copper":0.07,"selenium":19.5,"cholesterol":64.42,"saturatedFat":13.57,"monoFat":6.03,"polyFat":1.29,"omega3":0.11,"omega6":0.45},"gramsPerServing":111.9,"servings":1,"per100g":{"Energy_KCal":371.49,"Water":32.73,"Protein":11.65,"TotalLipidFat":23.86,"Carbohydrate":27.89,"FiberTotalDietary":1.45,"SugarsTotal":3.89,"Cholesterol":64.42,"FattyAcids_totalSaturated":13.57,"FattyAcids_totalMonounsaturated":6.03,"FattyAcids_totalPolyunsaturated":1.29,"LinoleicAcid":0.45,"alphaLinolenicAcid":0.11,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":143.49,"Retinol":140.09,"Carotene_beta":39.83,"VitaminD":8.2,"VitaminE_alphaTocopherol":0.53,"VitaminK_phylloquinone":1.76,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.22,"Riboflavin":0.2,"Niacin":2.07,"PantothenicAcid":0.36,"VitaminB6":0.05,"Folate_total":47.16,"Folate_food":12.58,"Folate_DFE":71.28,"FolicAcid":46.1,"VitaminB12":0.5,"Choline_total":21.39,"Betaine":54.66,"LuteinZeaxanthin":15.33,"Lycopene":0.0,"Calcium_Ca":472.32,"Iron_Fe":2.17,"Magnesium_Mg":22.34,"Phosphorus_P":296.06,"Potassium_K":120.08,"Sodium_Na":970.11,"Zinc_Zn":1.34,"Copper_Cu":0.07,"Manganese_Mn":0.3,"Selenium_Se":19.5,"Tryptophan":0.09,"Threonine":0.29,"Isoleucine":0.36,"Leucine":0.65,"Lysine":0.57,"Methionine":0.18,"Cystine":0.04,"Phenylalanine":0.35,"Tyrosine":0.35,"Valine":0.45,"Arginine":0.2,"Histidine":0.21,"Alanine":0.23,"AsparticAcid":0.59,"GlutamicAcid":1.55,"Glycine":0.13,"Proline":0.68,"Serine":0.41,"omega3":0.11,"omega6":0.45,"AddedSugars":0.0,"IntrinsicSugars":3.89},"addedSugars":0.0,"intrinsicSugars":4.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.9,"yieldFactorFat":1.0,"sources":[{"ndb":"18069","name":"Bread, white, commercially prepared (includes soft bread crumbs)","grams":60.0},{"ndb":"1253","name":"Cheese, pasteurized process, American, without added vitamin D","grams":42.0},{"ndb":"1001","name":"Butter, salted","grams":14.0}],"sections":[{"section_key":"sandwich","section_label":"Grilled Cheese","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":116.0,"raw_water_grams":40.71,"raw_fat_grams":26.71,"final_grams":111.93}],"cookingMethod":"pan grilled"},
+    recipeIngredients: [
+      { name: 'Grilled Cheese American', quantity: 'custom (g)', foodWord: 'GRILLEDCHEESEAMERICAN', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white bread', quantity: '2 slices', section: 'sandwich', ndbNo: '18069', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'American cheese', quantity: '1½ oz', section: 'sandwich', ndbNo: '1253', portionDesc: 'g', portionGrams: 42.0 },
+      { name: 'salted butter', quantity: '1 tbsp', section: 'sandwich', ndbNo: '1001', portionDesc: 'g', portionGrams: 14.0 }
+    ],
+    recipeInstructions: [
+      'Spread softened butter on one side of each bread slice.',
+      'Heat a skillet or griddle over medium heat.',
+      'Place one slice butter-side down in the pan. Layer the American cheese over the top, then cover with the second slice, butter-side up.',
+      'Cook until the bottom is deep golden brown, about 3–4 minutes. Flip carefully and cook the second side until golden and the cheese is fully melted, about 2–3 more minutes.',
+      'Transfer to a cutting board, rest 1 minute, then cut diagonally and serve.',
+      '1 sandwich (111.9 g): 415.8 cal | 13.0g protein | 26.7g fat | 31.2g carbs | 1.6g fiber | 4.4g sugar | 36.6g water'
+    ],
+    sections: [
+      { key: 'sandwich', label: 'Grilled Cheese', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];

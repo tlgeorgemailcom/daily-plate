@@ -75,7 +75,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 |---|---|---|
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
 | `BKFST_NNN` | 🔧 In progress | 34 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035) |
-| `SAND_NNN` | 🔧 In progress | 1 (001) |
+| `SAND_NNN` | 🔧 In progress | 2 (001, 002) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -130,7 +130,7 @@ Planned BKFST order (standalone components first, composites last):
 | BKFST_035 | Avocado Toast Tomato & Egg | (none) | Rule D ✅ — no canonical; 38g bread_multigrain_toasted(18036)+75g avocado_raw(9038)+5g lemon_juice_raw(9152)+4.5g olive_oil(4053)+68g cherry_tomato_raw(11529)+50g egg_cooked_poached(1131)+0.4g salt(2047)+0.3g red_pepper_flakes(2031); yfw=1.00 → 241.2g; 1 toast/serving; 149 kcal·5.8P·9.4F·11.6C per 100g; dietary_category=veggie |
 
 **Ingredients needed in ledger before building:**
-- (none outstanding — cherry_tomato_raw (NDB 11529) added during BKFST_035 build; cheese_cheddar NDB 1009 + cheese_gruyere NDB 1023 added during SAND_001 build)
+- (none outstanding — cherry_tomato_raw (NDB 11529) added during BKFST_035 build; cheese_cheddar NDB 1009 + cheese_gruyere NDB 1023 added during SAND_001 build; cheese_american NDB 1253 added during SAND_002 build)
 
 ## Current Work: SAND Recipes
 
@@ -139,6 +139,7 @@ Planned BKFST order (standalone components first, composites last):
 | ID | Recipe | NDB | Notes |
 |---|---|---|---|
 | SAND_001 | Grilled Cheese Cheddar & Gruyere, Restaurant Style | (none) | Rule D ✅ — no canonical; 60g bread_white_commercial(18069)+28g cheese_cheddar(1009)+28g cheese_gruyere(1023)+28g butter_salted(1001); yfw=0.90 → 139.4g; 1 sandwich/serving; 422.6 kcal·14.6P·30.9F·22.0C per 100g; dietary_category=veggie |
+| SAND_002 | Grilled Cheese American | (none) | Rule D ✅ — no canonical; 60g bread_white_commercial(18069)+42g cheese_american(1253)+14g butter_salted(1001); yfw=0.90 → 111.9g; 1 sandwich/serving; 371.5 kcal·11.7P·23.9F·27.9C per 100g; dietary_category=veggie; food_word=GRILLEDCHEESEAMERICAN |
 
 ## Human Approval Requirements
 
