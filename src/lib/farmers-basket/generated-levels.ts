@@ -3758,10 +3758,10 @@ export const LEVELS: Level[] = [
       { name: 'salted butter', quantity: '2 tbsp', section: 'sandwich', ndbNo: '1001', portionDesc: 'g', portionGrams: 28.0 }
     ],
     recipeInstructions: [
-      'Butter one side of each bread slice, using about 1 tablespoon per slice.',
+      'Spread softened butter on both sides of each bread slice — all four faces — dividing the 2 tablespoons evenly.',
       'Heat a skillet or griddle over medium-low to medium heat.',
-      'Place one slice of bread butter-side down in the pan. Evenly distribute the shredded cheddar and gruyère over the bread.',
-      'Top with the second bread slice, butter-side up.',
+      'Place one slice of bread in the pan. Evenly distribute the shredded cheddar and gruyère over the bread.',
+      'Top with the second bread slice.',
       'Cook until the bottom is deep golden brown, about 3–4 minutes. Flip carefully and cook the second side until golden and the cheese is fully melted, about 2–3 more minutes.',
       'Transfer to a cutting board, rest 1 minute, then cut diagonally and serve.',
       '1 sandwich (139.4 g): 589.1 cal | 20.3g protein | 43.1g fat | 30.6g carbs | 1.6g fiber | 3.7g sugar | 41.4g water'
