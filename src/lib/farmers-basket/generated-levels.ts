@@ -3808,5 +3808,44 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sandwich', label: 'Grilled Cheese', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'SAND_003',
+    name: 'Grilled Cheese Cheddar',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'veggie',
+    levelNum: 81,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 sandwich',
+    prepTime: '15 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":429.7,"pro":15.0,"fat":27.3,"carb":31.0,"fib":1.6,"h2o":35.7,"sug":3.6,"perServing":{"cal":429.7,"pro":15.0,"fat":27.3,"carb":31.0,"fib":1.6,"h2o":35.7,"sug":3.6,"AddedSugars":0.0,"IntrinsicSugars":3.6},"micros":{"vitaminA":167.34,"vitaminC":0.0,"vitaminD":8.55,"vitaminE":0.51,"vitaminK":1.69,"vitaminB6":0.05,"vitaminB12":0.37,"thiamin":0.22,"riboflavin":0.26,"niacin":2.07,"folate":52.46,"calcium":346.28,"iron":1.99,"magnesium":22.69,"phosphorus":226.05,"potassium":98.97,"sodium":587.55,"zinc":1.77,"copper":0.06,"selenium":22.59,"cholesterol":63.98,"saturatedFat":13.86,"monoFat":6.41,"polyFat":1.33,"omega3":0.08,"omega6":0.22},"gramsPerServing":112.0,"servings":1,"per100g":{"Energy_KCal":383.5,"Water":31.83,"Protein":13.42,"TotalLipidFat":24.41,"Carbohydrate":27.63,"FiberTotalDietary":1.45,"SugarsTotal":3.22,"Cholesterol":63.98,"FattyAcids_totalSaturated":13.86,"FattyAcids_totalMonounsaturated":6.41,"FattyAcids_totalPolyunsaturated":1.33,"LinoleicAcid":0.22,"alphaLinolenicAcid":0.08,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":167.34,"Retinol":166.04,"Carotene_beta":41.29,"VitaminD":8.55,"VitaminE_alphaTocopherol":0.51,"VitaminK_phylloquinone":1.69,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.22,"Riboflavin":0.26,"Niacin":2.07,"PantothenicAcid":0.36,"VitaminB6":0.05,"Folate_total":52.46,"Folate_food":17.91,"Folate_DFE":76.55,"FolicAcid":46.06,"VitaminB12":0.37,"Choline_total":14.72,"Betaine":54.87,"LuteinZeaxanthin":15.32,"Lycopene":0.0,"Calcium_Ca":346.28,"Iron_Fe":1.99,"Magnesium_Mg":22.69,"Phosphorus_P":226.05,"Potassium_K":98.97,"Sodium_Na":587.55,"Zinc_Zn":1.77,"Copper_Cu":0.06,"Manganese_Mn":0.29,"Selenium_Se":22.59,"Tryptophan":0.2,"Threonine":0.39,"Isoleucine":0.46,"Leucine":0.73,"Lysine":0.39,"Methionine":0.2,"Cystine":0.04,"Phenylalanine":0.41,"Tyrosine":0.42,"Valine":0.53,"Arginine":0.21,"Histidine":0.2,"Alanine":0.28,"AsparticAcid":0.66,"GlutamicAcid":1.79,"Glycine":0.2,"Proline":0.94,"Serine":0.3,"omega3":0.08,"omega6":0.22,"AddedSugars":0.0,"IntrinsicSugars":3.22},"addedSugars":0.0,"intrinsicSugars":3.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.9,"yieldFactorFat":1.0,"sources":[{"ndb":"18069","name":"Bread, white, commercially prepared (includes soft bread crumbs)","grams":60.0},{"ndb":"1009","name":"Cheese, cheddar","grams":42.0},{"ndb":"1001","name":"Butter, salted","grams":14.0}],"sections":[{"section_key":"sandwich","section_label":"Grilled Cheese","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":116.0,"raw_water_grams":39.62,"raw_fat_grams":27.34,"final_grams":112.04}],"cookingMethod":"pan grilled"},
+    recipeIngredients: [
+      { name: 'Grilled Cheese Cheddar', quantity: 'custom (g)', foodWord: 'GRILLEDCHEESECHEDDAR', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white bread', quantity: '2 slices', section: 'sandwich', ndbNo: '18069', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'Cheddar cheese', quantity: '1½ oz', section: 'sandwich', ndbNo: '1009', portionDesc: 'g', portionGrams: 42.0 },
+      { name: 'salted butter', quantity: '1 tbsp', section: 'sandwich', ndbNo: '1001', portionDesc: 'g', portionGrams: 14.0 }
+    ],
+    recipeInstructions: [
+      'Spread softened butter on one side of each bread slice.',
+      'Heat a skillet or griddle over medium heat.',
+      'Place one slice butter-side down in the pan. Layer the cheddar over the top, then cover with the second slice, butter-side up.',
+      'Cook until the bottom is deep golden brown, about 3–4 minutes. Flip carefully and cook the second side until golden and the cheese is fully melted, about 2–3 more minutes.',
+      'Transfer to a cutting board, rest 1 minute, then cut diagonally and serve.',
+      '1 sandwich (112.0 g): 429.7 cal | 15.0g protein | 27.3g fat | 31.0g carbs | 1.6g fiber | 3.6g sugar | 35.7g water'
+    ],
+    sections: [
+      { key: 'sandwich', label: 'Grilled Cheese', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];

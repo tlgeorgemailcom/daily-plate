@@ -75,7 +75,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 |---|---|---|
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
 | `BKFST_NNN` | 🔧 In progress | 34 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035) |
-| `SAND_NNN` | 🔧 In progress | 2 (001, 002) |
+| `SAND_NNN` | 🔧 In progress | 3 (001, 002, 003) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -140,6 +140,7 @@ Planned BKFST order (standalone components first, composites last):
 |---|---|---|---|
 | SAND_001 | Grilled Cheese Cheddar & Gruyere, Restaurant Style | (none) | Rule D ✅ — no canonical; 60g bread_white_commercial(18069)+28g cheese_cheddar(1009)+28g cheese_gruyere(1023)+28g butter_salted(1001); yfw=0.90 → 139.4g; 1 sandwich/serving; 422.6 kcal·14.6P·30.9F·22.0C per 100g; dietary_category=veggie |
 | SAND_002 | Grilled Cheese American | (none) | Rule D ✅ — no canonical; 60g bread_white_commercial(18069)+42g cheese_american(1253)+14g butter_salted(1001); yfw=0.90 → 111.9g; 1 sandwich/serving; 371.5 kcal·11.7P·23.9F·27.9C per 100g; dietary_category=veggie; food_word=GRILLEDCHEESEAMERICAN |
+| SAND_003 | Grilled Cheese Cheddar | (none) | Rule D ✅ — no canonical; 60g bread_white_commercial(18069)+42g cheese_cheddar(1009)+14g butter_salted(1001); yfw=0.90 → 112.0g; 1 sandwich/serving; 383.5 kcal·13.4P·24.4F·27.6C per 100g; dietary_category=veggie; food_word=GRILLEDCHEESECHEDDAR |
 
 ## Human Approval Requirements
 
