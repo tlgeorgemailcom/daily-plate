@@ -1030,6 +1030,7 @@
         <p class="hint desktop-hint">Use arrow keys to move, Space to pick up food</p>
         <p class="hint mobile-hint">Drag farmer to move • Tap when near food/basket</p>
         <button onclick={() => game.startLevel()}>▶️ Play</button>
+        <button class="secondary" onclick={() => { showRecipeBook = true; showRecipeOfDay = true; }}>📖 Browse Recipes</button>
       </div>
     </div>
   {/if}

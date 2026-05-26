@@ -518,6 +518,9 @@
       }
       if (selectedLevel) {
         selectedLevel = null;
+      } else if (showRecipeOfDay) {
+        // Clicking outside while ROTD is showing → go to recipe list, don't close book
+        showRecipeOfDay = false;
       } else {
         onclose();
       }
