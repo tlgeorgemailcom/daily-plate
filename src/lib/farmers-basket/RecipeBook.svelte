@@ -2344,14 +2344,7 @@
                             <span class="tab-status">
                               {#if isCurrent}🎮{:else if isCompleted}✓{:else}🔒{/if}
                             </span>
-                            <span class="tab-ingredients">
-                              {#each level.recipe.slice(0, 3) as food}
-                                <span class="mini-emoji"><FoodIcon {food} size={14} /></span>
-                              {/each}
-                              {#if level.recipe.length > 3}
-                                <span class="more">+{level.recipe.length - 3}</span>
-                              {/if}
-                          </span>
+              
                         </button>
                         <RecipeBadges sr28Rule={level.sr28Rule} isCommunityRecipe={level.isCommunityRecipe} compact={true} />
                         {#if level.isCommunityRecipe}
@@ -2913,7 +2906,7 @@
   
   .recipe-tab {
     display: grid;
-    grid-template-columns: auto 1fr auto auto;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
     gap: 8px;
     padding: 8px 10px;
@@ -2964,9 +2957,8 @@
     font-size: 0.85rem;
     font-weight: 600;
     color: #5D4037;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal;
+    word-break: break-word;
   }
   
   .tab-status {

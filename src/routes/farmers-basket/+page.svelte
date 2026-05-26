@@ -1550,10 +1550,13 @@
     position: fixed;
     inset: 0;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     background: rgba(0,0,0,0.6);
     z-index: 100;
+    overflow-y: auto;
+    padding: 20px 0;
+    box-sizing: border-box;
   }
   
   .overlay-content {
@@ -1601,7 +1604,8 @@
   .win .overlay-content {
     border-color: #FFD700;
     background: linear-gradient(180deg, #FFF8E1, #FFFDE7);
-    max-width: 450px;
+    max-width: 560px;
+    width: calc(100% - 32px);
   }
   
   .recipe-title {
