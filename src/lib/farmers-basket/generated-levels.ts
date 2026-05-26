@@ -3760,8 +3760,8 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Spread softened butter on both sides of each bread slice — all four faces — dividing the 2 tablespoons evenly.',
       'Heat a skillet or griddle over medium-low to medium heat.',
-      'Place one slice of bread in the pan. Evenly distribute the shredded cheddar and gruyère over the bread.',
-      'Top with the second bread slice.',
+      'Place both slices of bread in the pan. Toast the bottom sides until deep golden brown.',
+      'Flip both slices over and evenly distribute the shredded cheddar and gruyère over one of the toasted slices. Top with the second toasted slice',
       'Cook until the bottom is deep golden brown, about 3–4 minutes. Flip carefully and cook the second side until golden and the cheese is fully melted, about 2–3 more minutes.',
       'Transfer to a cutting board, rest 1 minute, then cut diagonally and serve.',
       '1 sandwich (139.4 g): 589.1 cal | 20.3g protein | 43.1g fat | 30.6g carbs | 1.6g fiber | 3.7g sugar | 41.4g water'
