@@ -130,7 +130,7 @@ Planned BKFST order (standalone components first, composites last):
 | BKFST_035 | Avocado Toast Tomato & Egg | (none) | Rule D ✅ — no canonical; 38g bread_multigrain_toasted(18036)+75g avocado_raw(9038)+5g lemon_juice_raw(9152)+4.5g olive_oil(4053)+68g tomato_red_raw(11529)+50g egg_cooked_poached(1131)+0.4g salt(2047)+0.3g red_pepper_flakes(2031); yfw=1.00 → 241.2g; 1 toast/serving; 149 kcal·5.8P·9.4F·11.6C per 100g; dietary_category=veggie |
 
 **Ingredients needed in ledger before building:**
-- (none outstanding — tomato_red_raw (NDB 11529) added during BKFST_035 build (formerly cherry_tomato_raw); cheese_cheddar NDB 1009 + cheese_gruyere NDB 1023 added during SAND_001 build; cheese_american NDB 1253 added during SAND_002 build; mayonnaise NDB 4025 + lettuce_iceberg_raw NDB 11252 added during SAND_004 build; turkey_breast_deli NDB 7081 added during SAND_005 build)
+- (none outstanding — tomato_red_raw (NDB 11529) added during BKFST_035 build (formerly cherry_tomato_raw); cheese_cheddar NDB 1009 + cheese_gruyere NDB 1023 added during SAND_001 build; cheese_american NDB 1253 added during SAND_002 build; mayonnaise NDB 4025 + lettuce_iceberg_raw NDB 11252 added during SAND_004 build; turkey_breast_deli NDB 7081 added during SAND_005 build; egg_cooked_hardboiled NDB 1129 + mustard_yellow NDB 2046 added during SAND_006 build)
 
 ## Current Work: SAND Recipes
 
@@ -143,6 +143,7 @@ Planned BKFST order (standalone components first, composites last):
 | SAND_003 | Grilled Cheese Cheddar | (none) | Rule D ✅ — no canonical; 60g bread_white_commercial(18069)+42g cheese_cheddar(1009)+14g butter_salted(1001); yfw=0.90 → 112.0g; 1 sandwich/serving; 383.5 kcal·13.4P·24.4F·27.6C per 100g; dietary_category=veggie; food_word=GRILLEDCHEESECHEDDAR |
 | SAND_004 | BLT Sandwich | (none) | Rule D ✅ — no canonical; 50g bread_white_commercial(18069)+34.5g bacon_cooked_pan_fried(10862)+60g tomato_red_raw(11529)+21g mayonnaise(4025)+28g lettuce_iceberg_raw(11252); yfw=1.00 → 193.5g; 1 sandwich/serving; 233.6 kcal·8.8P·15.3F·14.8C per 100g; dietary_category=all; food_word=BLT |
 | SAND_005 | Club Sandwich | (none) | Rule D ✅ — no canonical; 90g bread_white_commercial(18069)+80g turkey_breast_deli(7081)+23g bacon_cooked_pan_fried(10862)+60g tomato_red_raw(11529)+28g lettuce_iceberg_raw(11252)+21g mayonnaise(4025); yfw=1.00 → 302.0g; 1 sandwich/serving; 195.2 kcal·9.5P·9.9F·16.5C per 100g; dietary_category=all; food_word=CLUBSANDWICH |
+| SAND_006 | Egg Salad Sandwich | (none) | Rule D ✅ — no canonical; 60g bread_white_commercial(18069)+100g egg_cooked_hardboiled(1129)+27.6g mayonnaise(4025)+6g scallion_raw(11291)+2.5g mustard_yellow(2046)+1.5g salt_table(2047); yfw=1.00 → 197.6g; 1 sandwich/serving; 255.9 kcal·9.3P·16.9F·15.9C per 100g; dietary_category=veggie; food_word=EGGSALAD |
 
 ## Human Approval Requirements
 

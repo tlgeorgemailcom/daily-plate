@@ -3931,5 +3931,46 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sandwich', label: 'Club Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_006',
+    name: 'Egg Salad Sandwich',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'veggie',
+    levelNum: 84,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 sandwich',
+    prepTime: '15 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":505.7,"pro":18.4,"fat":33.4,"carb":31.5,"fib":1.9,"h2o":109.9,"sug":4.8,"perServing":{"cal":505.7,"pro":18.4,"fat":33.4,"carb":31.5,"fib":1.9,"h2o":109.9,"sug":4.8,"AddedSugars":0.0,"IntrinsicSugars":4.8},"micros":{"vitaminA":79.22,"vitaminC":0.57,"vitaminD":45.01,"vitaminE":1.07,"vitaminK":29.28,"vitaminB6":0.09,"vitaminB12":0.58,"thiamin":0.2,"riboflavin":0.34,"niacin":1.5,"folate":58.7,"calcium":73.31,"iron":1.8,"magnesium":13.41,"phosphorus":122.22,"potassium":115.18,"sodium":608.9,"zinc":0.8,"copper":0.04,"selenium":23.03,"cholesterol":194.63,"saturatedFat":3.5,"monoFat":4.62,"polyFat":7.45,"omega3":0.82,"omega6":5.44},"gramsPerServing":197.6,"servings":1,"per100g":{"Energy_KCal":255.92,"Water":55.63,"Protein":9.29,"TotalLipidFat":16.88,"Carbohydrate":15.95,"FiberTotalDietary":0.95,"SugarsTotal":2.45,"Cholesterol":194.63,"FattyAcids_totalSaturated":3.5,"FattyAcids_totalMonounsaturated":4.62,"FattyAcids_totalPolyunsaturated":7.45,"LinoleicAcid":5.44,"alphaLinolenicAcid":0.8,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.02,"VitaminA_RAE":79.22,"Retinol":76.99,"Carotene_beta":25.21,"VitaminD":45.01,"VitaminE_alphaTocopherol":1.07,"VitaminK_phylloquinone":29.28,"VitaminC_totalAscorbicAcid":0.57,"Thiamin":0.2,"Riboflavin":0.34,"Niacin":1.5,"PantothenicAcid":0.89,"VitaminB6":0.09,"Folate_total":58.7,"Folate_food":32.59,"Folate_DFE":76.92,"FolicAcid":26.11,"VitaminB12":0.58,"Choline_total":158.35,"Betaine":31.25,"LuteinZeaxanthin":229.63,"Lycopene":0.0,"Calcium_Ca":73.31,"Iron_Fe":1.8,"Magnesium_Mg":13.41,"Phosphorus_P":122.22,"Potassium_K":115.18,"Sodium_Na":608.9,"Zinc_Zn":0.8,"Copper_Cu":0.04,"Manganese_Mn":0.18,"Selenium_Se":23.03,"Tryptophan":0.08,"Threonine":0.31,"Isoleucine":0.36,"Leucine":0.56,"Lysine":0.47,"Methionine":0.2,"Cystine":0.15,"Phenylalanine":0.34,"Tyrosine":0.27,"Valine":0.4,"Arginine":0.4,"Histidine":0.15,"Alanine":0.37,"AsparticAcid":0.66,"GlutamicAcid":0.87,"Glycine":0.22,"Proline":0.27,"Serine":0.49,"omega3":0.82,"omega6":5.44,"AddedSugars":0.0,"IntrinsicSugars":2.45},"addedSugars":0.0,"intrinsicSugars":4.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18069","name":"Bread, white, commercially prepared (includes soft bread crumbs)","grams":60.0},{"ndb":"1129","name":"Egg, whole, cooked, hard-boiled","grams":100.0},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":27.6},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":6.0},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":2.5},{"ndb":"2047","name":"Salt, table","grams":1.5}],"sections":[{"section_key":"sandwich","section_label":"Egg Salad","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":197.6,"raw_water_grams":109.93,"raw_fat_grams":33.36,"final_grams":197.6}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Egg Salad Sandwich', quantity: 'custom (g)', foodWord: 'EGGSALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white bread', quantity: '2 slices (30g each)', section: 'sandwich', ndbNo: '18069', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'hard-boiled egg', quantity: '2 large eggs', section: 'sandwich', ndbNo: '1129', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'mayonnaise', quantity: '2 tbsp', section: 'sandwich', ndbNo: '4025', portionDesc: 'g', portionGrams: 27.6 },
+      { name: 'scallion (green onion)', quantity: '2 tsp chopped', section: 'sandwich', ndbNo: '11291', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'yellow mustard', quantity: '½ tsp', section: 'sandwich', ndbNo: '2046', portionDesc: 'g', portionGrams: 2.5 },
+      { name: 'salt', quantity: '¼ tsp', section: 'sandwich', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 }
+    ],
+    recipeInstructions: [
+      'Hard boil the eggs: place in a saucepan, cover with cold water, bring to a boil, then cover and remove from heat. Let sit 10 minutes, then transfer to an ice bath. Peel and chop.',
+      'In a bowl, combine the chopped eggs, mayonnaise, green onion, mustard, and salt. Mix well.',
+      'Spread the egg salad evenly over one bread slice and top with the second slice.',
+      'Cut diagonally and serve immediately, or refrigerate the egg salad up to 2 days.',
+      '1 sandwich (197.6 g): 505.7 cal | 18.4g protein | 33.4g fat | 31.5g carbs | 1.9g fiber | 4.8g sugar | 109.9g water'
+    ],
+    sections: [
+      { key: 'sandwich', label: 'Egg Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
