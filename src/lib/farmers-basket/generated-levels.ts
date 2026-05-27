@@ -3972,5 +3972,47 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sandwich', label: 'Egg Salad', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_007',
+    name: 'Tuna Salad Sandwich',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'pesca',
+    levelNum: 85,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 sandwich',
+    prepTime: '10 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":582.9,"pro":33.5,"fat":34.4,"carb":35.1,"fib":2.6,"h2o":179.2,"sug":7.2,"perServing":{"cal":582.9,"pro":33.5,"fat":34.4,"carb":35.1,"fib":2.6,"h2o":179.2,"sug":7.2,"AddedSugars":0.0,"IntrinsicSugars":7.2},"micros":{"vitaminA":12.06,"vitaminC":1.58,"vitaminD":24.19,"vitaminE":0.71,"vitaminK":28.14,"vitaminB6":0.18,"vitaminB12":1.27,"thiamin":0.13,"riboflavin":0.09,"niacin":6.01,"folate":27.84,"calcium":41.94,"iron":1.63,"magnesium":17.36,"phosphorus":94.13,"potassium":136.9,"sodium":517.66,"zinc":0.53,"copper":0.05,"selenium":39.75,"cholesterol":23.8,"saturatedFat":1.93,"monoFat":2.6,"polyFat":6.9,"omega3":0.9,"omega6":5.6},"gramsPerServing":287.9,"servings":1,"per100g":{"Energy_KCal":202.47,"Water":62.23,"Protein":11.64,"TotalLipidFat":11.96,"Carbohydrate":12.19,"FiberTotalDietary":0.89,"SugarsTotal":2.51,"Cholesterol":23.8,"FattyAcids_totalSaturated":1.93,"FattyAcids_totalMonounsaturated":2.6,"FattyAcids_totalPolyunsaturated":6.9,"LinoleicAcid":5.6,"alphaLinolenicAcid":0.8,"EPA_20_5n3":0.01,"DPA_22_5n3":0.0,"DHA_22_6n3":0.09,"VitaminA_RAE":12.06,"Retinol":10.54,"Carotene_beta":16.34,"VitaminD":24.19,"VitaminE_alphaTocopherol":0.71,"VitaminK_phylloquinone":28.14,"VitaminC_totalAscorbicAcid":1.58,"Thiamin":0.13,"Riboflavin":0.09,"Niacin":6.01,"PantothenicAcid":0.21,"VitaminB6":0.18,"Folate_total":27.84,"Folate_food":9.92,"Folate_DFE":40.34,"FolicAcid":17.92,"VitaminB12":1.27,"Choline_total":23.0,"Betaine":22.58,"LuteinZeaxanthin":38.08,"Lycopene":0.0,"Calcium_Ca":41.94,"Iron_Fe":1.63,"Magnesium_Mg":17.36,"Phosphorus_P":94.13,"Potassium_K":136.9,"Sodium_Na":517.66,"Zinc_Zn":0.53,"Copper_Cu":0.05,"Manganese_Mn":0.12,"Selenium_Se":39.75,"Tryptophan":0.1,"Threonine":0.41,"Isoleucine":0.43,"Leucine":0.76,"Lysine":0.86,"Methionine":0.28,"Cystine":0.1,"Phenylalanine":0.36,"Tyrosine":0.31,"Valine":0.48,"Arginine":0.56,"Histidine":0.27,"Alanine":0.56,"AsparticAcid":0.96,"GlutamicAcid":1.4,"Glycine":0.45,"Proline":0.33,"Serine":0.39,"omega3":0.9,"omega6":5.6,"AddedSugars":0.0,"IntrinsicSugars":2.51},"addedSugars":0.0,"intrinsicSugars":7.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18069","name":"Bread, white, commercially prepared (includes soft bread crumbs)","grams":60.0},{"ndb":"15121","name":"Fish, tuna, light, canned in water, drained solids","grams":142.0},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":41.4},{"ndb":"9003","name":"Apples, raw, with skin","grams":32.0},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":6.0},{"ndb":"9152","name":"Lemon juice, raw","grams":5.0},{"ndb":"2047","name":"Salt, table","grams":1.5}],"sections":[{"section_key":"sandwich","section_label":"Tuna Salad","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":287.9,"raw_water_grams":179.16,"raw_fat_grams":34.43,"final_grams":287.9}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Tuna Salad Sandwich', quantity: 'custom (g)', foodWord: 'TUNASALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white bread', quantity: '2 slices (30g each)', section: 'sandwich', ndbNo: '18069', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'canned light tuna', quantity: '1 can drained (5 oz)', section: 'sandwich', ndbNo: '15121', portionDesc: 'g', portionGrams: 142.0 },
+      { name: 'mayonnaise', quantity: '3 tbsp', section: 'sandwich', ndbNo: '4025', portionDesc: 'g', portionGrams: 41.4 },
+      { name: 'apple', quantity: '¼ cup chopped', section: 'sandwich', ndbNo: '9003', portionDesc: 'g', portionGrams: 32.0 },
+      { name: 'scallion (green onion)', quantity: '2 tsp chopped', section: 'sandwich', ndbNo: '11291', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'lemon juice', quantity: '1 tsp', section: 'sandwich', ndbNo: '9152', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'salt', quantity: '¼ tsp', section: 'sandwich', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 }
+    ],
+    recipeInstructions: [
+      'Open and drain the tuna well. Flake into a mixing bowl.',
+      'Add the mayonnaise, diced apple, green onion, lemon juice, and salt. Mix to combine.',
+      'Spread the tuna salad evenly over one bread slice and top with the second slice.',
+      'Cut diagonally and serve immediately, or refrigerate the tuna salad up to 2 days.',
+      '1 sandwich (287.9 g): 582.9 cal | 33.5g protein | 34.4g fat | 35.1g carbs | 2.6g fiber | 7.2g sugar | 179.2g water'
+    ],
+    sections: [
+      { key: 'sandwich', label: 'Tuna Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
