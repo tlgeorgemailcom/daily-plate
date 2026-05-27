@@ -4014,5 +4014,48 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sandwich', label: 'Tuna Salad', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_008',
+    name: 'Chicken Salad Sandwich',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 86,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 sandwich',
+    prepTime: '15 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":413.4,"pro":44.8,"fat":8.4,"carb":37.4,"fib":3.0,"h2o":193.4,"sug":9.1,"perServing":{"cal":413.4,"pro":44.8,"fat":8.4,"carb":37.4,"fib":3.0,"h2o":193.4,"sug":9.1,"AddedSugars":0.0,"IntrinsicSugars":9.1},"micros":{"vitaminA":5.96,"vitaminC":1.85,"vitaminD":1.97,"vitaminE":0.21,"vitaminK":7.27,"vitaminB6":0.27,"vitaminB12":0.25,"thiamin":0.15,"riboflavin":0.14,"niacin":6.47,"folate":30.67,"calcium":57.48,"iron":1.23,"magnesium":19.96,"phosphorus":135.42,"potassium":191.1,"sodium":346.46,"zinc":0.65,"copper":0.04,"selenium":17.01,"cholesterol":35.44,"saturatedFat":0.92,"monoFat":0.95,"polyFat":0.72,"omega3":0.05,"omega6":0.03},"gramsPerServing":287.5,"servings":1,"per100g":{"Energy_KCal":143.78,"Water":67.28,"Protein":15.58,"TotalLipidFat":2.92,"Carbohydrate":13.01,"FiberTotalDietary":1.03,"SugarsTotal":3.17,"Cholesterol":35.44,"FattyAcids_totalSaturated":0.92,"FattyAcids_totalMonounsaturated":0.95,"FattyAcids_totalPolyunsaturated":0.72,"LinoleicAcid":0.03,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":5.96,"Retinol":2.51,"Carotene_beta":40.08,"VitaminD":1.97,"VitaminE_alphaTocopherol":0.21,"VitaminK_phylloquinone":7.27,"VitaminC_totalAscorbicAcid":1.85,"Thiamin":0.15,"Riboflavin":0.14,"Niacin":6.47,"PantothenicAcid":0.57,"VitaminB6":0.27,"Folate_total":30.67,"Folate_food":12.72,"Folate_DFE":43.19,"FolicAcid":17.95,"VitaminB12":0.25,"Choline_total":40.05,"Betaine":23.72,"LuteinZeaxanthin":61.01,"Lycopene":0.0,"Calcium_Ca":57.48,"Iron_Fe":1.23,"Magnesium_Mg":19.96,"Phosphorus_P":135.42,"Potassium_K":191.1,"Sodium_Na":346.46,"Zinc_Zn":0.65,"Copper_Cu":0.04,"Manganese_Mn":0.13,"Selenium_Se":17.01,"Tryptophan":0.14,"Threonine":0.52,"Isoleucine":0.64,"Leucine":0.92,"Lysine":1.04,"Methionine":0.34,"Cystine":0.15,"Phenylalanine":0.49,"Tyrosine":0.41,"Valine":0.61,"Arginine":0.74,"Histidine":0.38,"Alanine":0.67,"AsparticAcid":1.11,"GlutamicAcid":1.84,"Glycine":0.6,"Proline":0.5,"Serine":0.42,"omega3":0.05,"omega6":0.03,"AddedSugars":0.0,"IntrinsicSugars":3.17},"addedSugars":0.0,"intrinsicSugars":9.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18069","name":"Bread, white, commercially prepared (includes soft bread crumbs)","grams":60.0},{"ndb":"5064","name":"Chicken, broilers or fryers, breast, meat only, cooked, roasted","grams":113.0},{"ndb":"1293","name":"Yogurt, Greek, plain, whole milk","grams":45.0},{"ndb":"9003","name":"Apples, raw, with skin","grams":32.0},{"ndb":"11143","name":"Celery, raw","grams":25.0},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":6.0},{"ndb":"9152","name":"Lemon juice, raw","grams":5.0},{"ndb":"2047","name":"Salt, table","grams":1.5}],"sections":[{"section_key":"sandwich","section_label":"Chicken Salad","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":287.5,"raw_water_grams":193.43,"raw_fat_grams":8.4,"final_grams":287.5}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Chicken Salad Sandwich', quantity: 'custom (g)', foodWord: 'CHICKENSALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white bread', quantity: '2 slices (30g each)', section: 'sandwich', ndbNo: '18069', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'cooked chicken breast', quantity: '4 oz cooked', section: 'sandwich', ndbNo: '5064', portionDesc: 'g', portionGrams: 113.0 },
+      { name: 'Greek whole milk yogurt', quantity: '3 tbsp', section: 'sandwich', ndbNo: '1293', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'apple', quantity: '¼ cup chopped', section: 'sandwich', ndbNo: '9003', portionDesc: 'g', portionGrams: 32.0 },
+      { name: 'celery stalk', quantity: '¼ cup chopped', section: 'sandwich', ndbNo: '11143', portionDesc: 'g', portionGrams: 25.0 },
+      { name: 'scallion (green onion)', quantity: '2 tsp chopped', section: 'sandwich', ndbNo: '11291', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'lemon juice', quantity: '1 tsp', section: 'sandwich', ndbNo: '9152', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'salt', quantity: '¼ tsp', section: 'sandwich', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 }
+    ],
+    recipeInstructions: [
+      'In a bowl, combine the Greek yogurt, lemon juice, and salt. Stir to mix.',
+      'Add the shredded chicken, diced apple, chopped celery, and green onion. Toss to coat evenly.',
+      'Spread the chicken salad evenly over one bread slice and top with the second slice.',
+      'Cut diagonally and serve immediately, or refrigerate the chicken salad up to 3 days.',
+      '1 sandwich (287.5 g): 413.4 cal | 44.8g protein | 8.4g fat | 37.4g carbs | 3.0g fiber | 9.1g sugar | 193.4g water'
+    ],
+    sections: [
+      { key: 'sandwich', label: 'Chicken Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

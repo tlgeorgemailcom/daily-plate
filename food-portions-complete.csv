@@ -171,7 +171,6 @@ BURRITOBEANCHEESE,Burrito Bean Cheese,prepared,,,,1,,"Burrito with beans and che
 BURRITOBEANCHEESEBEEF,Burrito Bean Cheese Beef,prepared,,,,1,21064,"Fast foods, burrito, with beans, cheese, and beef",180.0,7.0,6.8,23.4,3.7,60.9,2.1,1.0,custom (g),100.0,1.0,burrito,241.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 BURRITOBEANS,Burrito Bean,prepared,,,,1,,"Burrito with beans, prepared from recipe",188.14,7.41,3.95,30.84,5.1,55.67,1.74,1.0,custom (g),100.0,1.0,each burrito,100.3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 BURRITOBEEF,Burrito Beef,prepared,,,,1,,"Burrito with beef, prepared from recipe",261.94,12.91,10.79,27.76,1.96,46.58,2.14,1.0,custom (g),100.0,1.0,each burrito,107.1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-
 BURRITOCHEESE,Burrito Cheese,prepared,,,,1,,"Burrito with cheese, prepared from recipe",326.8,14.34,16.2,30.33,2.1,36.18,2.72,1.0,custom (g),100.0,1.0,each burrito,100.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 BURRITOEGG,Burrito Egg,prepared,,,,1,,"Egg burrito, prepared from recipe",277.06,13.02,15.81,19.81,1.36,49.23,1.78,1.0,custom (g),100.0,1.0,each burrito,180.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 BUTTERBUR,Butterbur Cooked,vegetable,,,,,11107,"Butterbur, cooked, boiled, drained, without salt",8.0,0.2,0.0,2.2,0.0,96.7,0.0,1.0,custom (g),100.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -1506,3 +1505,4 @@ BEEFGROUND80RAW,"Ground Beef (80% lean, raw)",protein,,,,,23572,"Beef, ground, 8
 POTATOESRAW,Raw Potatoes,vegetable,,,,,11352,"Potatoes, flesh and skin, raw",77.0,2.05,0.09,17.49,2.1,79.25,0.82,1.0,custom (g),100.0,1.0,medium potato,150.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 HAM,Ham,protein,,,,0,10136,"Pork, cured, ham, boneless, regular (approximately 11% fat), roasted",178.0,22.62,9.02,0.0,0.0,64.54,0.0,1.0,custom (g),100.0,1.0,oz,28.0,3.0,oz,85.0,1.0,"cup, diced",135.0,,,,,,,,,,,,,,,,,,,,,,,,,,,
 BELLPEPPER,Bell Pepper Green,vegetable,fruit,,,0,11333,"Peppers, sweet, green, raw",20.0,0.86,0.17,4.64,1.7,93.89,2.4,1.0,custom (g),100.0,1.0,medium,119.0,1.0,"cup, chopped",149.0,0.5,"cup, chopped",75.0,0.25,"cup, chopped",37.0,,,,,,,,,,,,,,,,,,,,,,,,
+GREEKYOGURT,Greek Yogurt,dairy,,,,,1293,"Yogurt, Greek, plain, whole milk",97.0,9.0,5.0,3.98,0.0,81.3,4.0,1.0,custom (g),100.0,1.0,cup,245.0,1.0,tbsp,15.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
