@@ -3913,7 +3913,7 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Club Sandwich', quantity: 'custom (g)', foodWord: 'CLUBSANDWICH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'white bread', quantity: '3 slices (30g each)', section: 'sandwich', ndbNo: '18069', portionDesc: 'g', portionGrams: 90.0 },
-      { name: 'deli turkey breast', quantity: '5 slices', section: 'sandwich', ndbNo: '7081', portionDesc: 'g', portionGrams: 80.0 },
+      { name: 'deli turkey breast', quantity: '5 slices (80g)', section: 'sandwich', ndbNo: '7081', portionDesc: 'g', portionGrams: 80.0 },
       { name: 'cooked bacon', quantity: '2 strips', section: 'sandwich', ndbNo: '10862', portionDesc: 'g', portionGrams: 23.0 },
       { name: 'tomato raw', quantity: '4 thin slices', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 60.0 },
       { name: 'iceberg lettuce', quantity: '1 leaf', section: 'sandwich', ndbNo: '11252', portionDesc: 'g', portionGrams: 28.0 },
