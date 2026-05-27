@@ -2,7 +2,8 @@
 
 Usage:
     python tools/build_all.py
-    python tools/build_all.py --quiet     # suppress per-recipe lines
+    python tools/build_all.py --quiet             # suppress per-recipe lines
+    python tools/build_all.py --recipe SAND_004   # build one recipe only
 """
 from __future__ import annotations
 
@@ -30,6 +31,8 @@ OUT_DIR = ROOT / "output" / "builds"
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--quiet", action="store_true")
+    ap.add_argument("--recipe", action="append", dest="recipes", metavar="RECIPE_ID",
+                    help="Build only this recipe ID (repeatable). Composite deps built automatically.")
     args = ap.parse_args()
 
     recipes = load_recipes()
@@ -73,6 +76,21 @@ def main() -> int:
         missing = sorted(set(recipes) - set(order))
         print(f"ERROR: composite cycle prevents build of {missing}", file=sys.stderr)
         return 1
+
+    if args.recipes:
+        # Expand to include transitive @child dependencies
+        needed: set[str] = set(args.recipes)
+        changed = True
+        while changed:
+            changed = False
+            for rid in list(needed):
+                for r in ings.get(rid, []):
+                    if r.ingredient_key.startswith("@"):
+                        child = r.ingredient_key[1:]
+                        if child not in needed:
+                            needed.add(child)
+                            changed = True
+        order = [rid for rid in order if rid in needed]
 
     ok, failed = 0, 0
     failures: list[tuple[str, str]] = []
