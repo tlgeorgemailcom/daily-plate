@@ -4173,5 +4173,48 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sandwich', label: 'Pimento Cheese', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_012',
+    name: 'Cucumber Tea Sandwich',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'veggie',
+    levelNum: 90,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (4 finger sandwiches)',
+    prepTime: '10 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":213.5,"pro":5.7,"fat":11.1,"carb":23.1,"fib":1.6,"h2o":91.0,"sug":4.2,"perServing":{"cal":213.5,"pro":5.7,"fat":11.1,"carb":23.1,"fib":1.6,"h2o":91.0,"sug":4.2,"AddedSugars":0.0,"IntrinsicSugars":4.2},"micros":{"vitaminA":70.59,"vitaminC":3.04,"vitaminD":0.0,"vitaminE":0.27,"vitaminK":4.93,"vitaminB6":0.06,"vitaminB12":0.05,"thiamin":0.18,"riboflavin":0.13,"niacin":1.49,"folate":43.63,"calcium":73.3,"iron":1.29,"magnesium":15.33,"phosphorus":62.84,"potassium":138.97,"sodium":332.22,"zinc":0.42,"copper":0.07,"selenium":8.51,"cholesterol":21.31,"saturatedFat":4.48,"monoFat":2.06,"polyFat":0.8,"omega3":0.07,"omega6":0.17},"gramsPerServing":132.7,"servings":1,"per100g":{"Energy_KCal":160.88,"Water":68.57,"Protein":4.3,"TotalLipidFat":8.37,"Carbohydrate":17.38,"FiberTotalDietary":1.22,"SugarsTotal":3.18,"Cholesterol":21.31,"FattyAcids_totalSaturated":4.48,"FattyAcids_totalMonounsaturated":2.06,"FattyAcids_totalPolyunsaturated":0.8,"LinoleicAcid":0.17,"alphaLinolenicAcid":0.07,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":70.59,"Retinol":63.93,"Carotene_beta":37.03,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.27,"VitaminK_phylloquinone":4.93,"VitaminC_totalAscorbicAcid":3.04,"Thiamin":0.18,"Riboflavin":0.13,"Niacin":1.49,"PantothenicAcid":0.39,"VitaminB6":0.06,"Folate_total":43.63,"Folate_food":17.71,"Folate_DFE":61.72,"FolicAcid":25.92,"VitaminB12":0.05,"Choline_total":12.86,"Betaine":30.93,"LuteinZeaxanthin":24.5,"Lycopene":0.05,"Calcium_Ca":73.3,"Iron_Fe":1.29,"Magnesium_Mg":15.33,"Phosphorus_P":62.84,"Potassium_K":138.97,"Sodium_Na":332.22,"Zinc_Zn":0.42,"Copper_Cu":0.07,"Manganese_Mn":0.23,"Selenium_Se":8.51,"Tryptophan":0.02,"Threonine":0.05,"Isoleucine":0.07,"Leucine":0.15,"Lysine":0.13,"Methionine":0.05,"Cystine":0.01,"Phenylalanine":0.08,"Tyrosine":0.07,"Valine":0.09,"Arginine":0.06,"Histidine":0.04,"Alanine":0.06,"AsparticAcid":0.13,"GlutamicAcid":0.37,"Glycine":0.04,"Proline":0.15,"Serine":0.09,"omega3":0.07,"omega6":0.17,"AddedSugars":0.0,"IntrinsicSugars":3.18},"addedSugars":0.0,"intrinsicSugars":4.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18069","name":"Bread, white, commercially prepared (includes soft bread crumbs)","grams":40.0},{"ndb":"11206","name":"Cucumber, peeled, raw","grams":60.0},{"ndb":"1017","name":"Cheese, cream","grams":28.0},{"ndb":"11156","name":"Chives, raw","grams":0.5},{"ndb":"2045","name":"Dill weed, fresh","grams":1.0},{"ndb":"9152","name":"Lemon juice, raw","grams":2.5},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3}],"sections":[{"section_key":"sandwich","section_label":"Cucumber Tea","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":132.7,"raw_water_grams":91.0,"raw_fat_grams":11.1,"final_grams":132.7}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Cucumber Tea Sandwich', quantity: 'custom (g)', foodWord: 'CUCUMBERTEA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white bread', quantity: '2 slices crusts removed (~20g each)', section: 'sandwich', ndbNo: '18069', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'cucumber peeled', quantity: '½ medium cucumber thin sliced', section: 'sandwich', ndbNo: '11206', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'cream cheese', quantity: '2 tbsp (1 oz)', section: 'sandwich', ndbNo: '1017', portionDesc: 'g', portionGrams: 28.0 },
+      { name: 'fresh chives', quantity: '½ tsp chopped', section: 'sandwich', ndbNo: '11156', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'fresh dill', quantity: '1 tsp', section: 'sandwich', ndbNo: '2045', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'lemon juice', quantity: '½ tsp', section: 'sandwich', ndbNo: '9152', portionDesc: 'g', portionGrams: 2.5 },
+      { name: 'salt', quantity: 'pinch', section: 'sandwich', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.4 },
+      { name: 'ground black pepper', quantity: 'pinch', section: 'sandwich', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 }
+    ],
+    recipeInstructions: [
+      'Mix softened cream cheese with chopped chives',
+      'Remove crusts from bread slices and spread cream cheese mixture evenly on one side of each slice.',
+      'Layer thin cucumber slices over the spread on two bread slices',
+      'Cut each sandwich into three fingers or four triangles and serve.',
+      '1 serving (132.7 g): 213.5 cal | 5.7g protein | 11.1g fat | 23.1g carbs | 1.6g fiber | 4.2g sugar | 91.0g water'
+    ],
+    sections: [
+      { key: 'sandwich', label: 'Cucumber Tea', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
