@@ -4263,5 +4263,52 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sandwich', label: 'Croque Monsieur', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'SAND_014',
+    name: 'Croque Madame',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 92,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 sandwich',
+    prepTime: '15 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":895.3,"pro":43.7,"fat":59.8,"carb":45.0,"fib":2.9,"h2o":203.3,"sug":10.1,"perServing":{"cal":895.3,"pro":43.7,"fat":59.8,"carb":45.0,"fib":2.9,"h2o":203.3,"sug":10.1,"AddedSugars":0.0,"IntrinsicSugars":10.1},"micros":{"vitaminA":113.7,"vitaminC":0.32,"vitaminD":35.98,"vitaminE":0.37,"vitaminK":1.8,"vitaminB6":0.09,"vitaminB12":0.53,"thiamin":0.18,"riboflavin":0.22,"niacin":1.16,"folate":25.82,"calcium":238.16,"iron":1.2,"magnesium":19.76,"phosphorus":200.61,"potassium":152.43,"sodium":527.23,"zinc":1.31,"copper":0.06,"selenium":16.38,"cholesterol":102.2,"saturatedFat":8.82,"monoFat":5.18,"polyFat":1.08,"omega3":0.04,"omega6":0.14},"gramsPerServing":360.2,"servings":1,"per100g":{"Energy_KCal":248.57,"Water":56.44,"Protein":12.13,"TotalLipidFat":16.6,"Carbohydrate":12.49,"FiberTotalDietary":0.8,"SugarsTotal":2.79,"Cholesterol":102.2,"FattyAcids_totalSaturated":8.82,"FattyAcids_totalMonounsaturated":5.18,"FattyAcids_totalPolyunsaturated":1.08,"LinoleicAcid":0.14,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":113.7,"Retinol":111.84,"Carotene_beta":20.53,"VitaminD":35.98,"VitaminE_alphaTocopherol":0.37,"VitaminK_phylloquinone":1.8,"VitaminC_totalAscorbicAcid":0.32,"Thiamin":0.18,"Riboflavin":0.22,"Niacin":1.16,"PantothenicAcid":0.5,"VitaminB6":0.09,"Folate_total":25.82,"Folate_food":12.51,"Folate_DFE":35.11,"FolicAcid":17.75,"VitaminB12":0.53,"Choline_total":61.63,"Betaine":18.11,"LuteinZeaxanthin":56.08,"Lycopene":0.01,"Calcium_Ca":238.16,"Iron_Fe":1.2,"Magnesium_Mg":19.76,"Phosphorus_P":200.61,"Potassium_K":152.43,"Sodium_Na":527.23,"Zinc_Zn":1.31,"Copper_Cu":0.06,"Manganese_Mn":0.21,"Selenium_Se":16.38,"Tryptophan":0.13,"Threonine":0.4,"Isoleucine":0.51,"Leucine":0.93,"Lysine":0.84,"Methionine":0.27,"Cystine":0.1,"Phenylalanine":0.53,"Tyrosine":0.48,"Valine":0.67,"Arginine":0.45,"Histidine":0.33,"Alanine":0.42,"AsparticAcid":0.75,"GlutamicAcid":1.84,"Glycine":0.29,"Proline":0.92,"Serine":0.58,"omega3":0.04,"omega6":0.14,"AddedSugars":0.0,"IntrinsicSugars":2.79},"addedSugars":0.0,"intrinsicSugars":10.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.88,"yieldFactorFat":1.0,"sources":[{"ndb":"18069","name":"Bread, white, commercially prepared (includes soft bread crumbs)","grams":60.0},{"ndb":"7029","name":"Ham, sliced, regular (approximately 11% fat)","grams":57.0},{"ndb":"1023","name":"Cheese, gruyere","grams":57.0},{"ndb":"1001","name":"Butter, salted","grams":28.0},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":8.0},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":122.0},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":5.0},{"ndb":"1128","name":"Egg, whole, cooked, fried","grams":50.0},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.2}],"sections":[{"section_key":"sandwich","section_label":"Croque Madame","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":387.9,"raw_water_grams":231.0,"raw_fat_grams":59.79,"final_grams":360.18}],"cookingMethod":"pan grilled"},
+    recipeIngredients: [
+      { name: 'Croque Madame', quantity: 'custom (g)', foodWord: 'CROQUEMADAME', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white bread', quantity: '2 slices (30g each)', section: 'sandwich', ndbNo: '18069', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'sliced ham', quantity: '2 oz', section: 'sandwich', ndbNo: '7029', portionDesc: 'g', portionGrams: 57.0 },
+      { name: 'Gruyere cheese', quantity: '2 oz', section: 'sandwich', ndbNo: '1023', portionDesc: 'g', portionGrams: 57.0 },
+      { name: 'salted butter', quantity: '2 tbsp', section: 'sandwich', ndbNo: '1001', portionDesc: 'g', portionGrams: 28.0 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '1 tbsp', section: 'sandwich', ndbNo: '20581', portionDesc: 'g', portionGrams: 8.0 },
+      { name: 'whole milk', quantity: '½ cup', section: 'sandwich', ndbNo: '1077', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'yellow mustard', quantity: '1 tsp', section: 'sandwich', ndbNo: '2046', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'fried egg', quantity: '1 large egg', section: 'sandwich', ndbNo: '1128', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'ground nutmeg', quantity: 'pinch', section: 'sandwich', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'salt', quantity: 'pinch', section: 'sandwich', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.4 },
+      { name: 'ground black pepper', quantity: 'pinch', section: 'sandwich', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.2 }
+    ],
+    recipeInstructions: [
+      'Melt 1 tablespoon of butter in a small saucepan over medium heat, whisk in flour, and cook for 1 minute. Gradually whisk in milk and cook, stirring constantly, until thickened, about 3 minutes. Season with nutmeg, salt, and pepper. The sauce should be a spreadable thickness and as it cools it becomes thicker.',
+      'Spread mustard on the inside of both bread slices, then spread a layer of béchamel over the mustard. Layer ham over one slice, add half the Gruyère, and close the sandwich.',
+      'Melt remaining butter in a skillet over medium heat. Place the sandwich in the pan and cook 3 minutes until the bottom is golden.',
+      'Flip the sandwich, spoon remaining béchamel over the top, and scatter remaining Gruyère over it. Cover the pan and cook 2–3 minutes until the bottom is golden and the cheese on top is melted. Remove to a plate.',
+      'In the same pan, fry the egg sunny side up until the white is set but the yolk is still runny. Place on top of the sandwich and serve immediately.',
+      '1 sandwich (360.2 g): 895 cal | 43.6g protein | 59.8g fat | 45.0g carbs | 2.9g fiber | 10.1g sugar | 203.2g water'
+    ],
+    sections: [
+      { key: 'sandwich', label: 'Croque Madame', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];
