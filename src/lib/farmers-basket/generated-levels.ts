@@ -4355,5 +4355,52 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sandwich', label: 'Monte Cristo Sandwich', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'SAND_016',
+    name: 'Hot Brown',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 94,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving',
+    prepTime: '20 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":1051.4,"pro":45.5,"fat":76.6,"carb":45.6,"fib":2.8,"h2o":230.6,"sug":9.8,"perServing":{"cal":1051.4,"pro":45.5,"fat":76.6,"carb":45.6,"fib":2.8,"h2o":230.6,"sug":9.8,"AddedSugars":0.0,"IntrinsicSugars":9.8},"micros":{"vitaminA":143.15,"vitaminC":1.21,"vitaminD":21.28,"vitaminE":0.49,"vitaminK":2.54,"vitaminB6":0.14,"vitaminB12":0.27,"thiamin":0.11,"riboflavin":0.17,"niacin":3.0,"folate":20.07,"calcium":135.1,"iron":0.95,"magnesium":18.09,"phosphorus":180.15,"potassium":225.14,"sodium":576.26,"zinc":0.86,"copper":0.04,"selenium":12.93,"cholesterol":64.5,"saturatedFat":10.72,"monoFat":4.95,"polyFat":1.2,"omega3":0.08,"omega6":0.73},"gramsPerServing":407.9,"servings":1,"per100g":{"Energy_KCal":257.74,"Water":56.53,"Protein":11.16,"TotalLipidFat":18.79,"Carbohydrate":11.18,"FiberTotalDietary":0.68,"SugarsTotal":2.4,"Cholesterol":64.5,"FattyAcids_totalSaturated":10.72,"FattyAcids_totalMonounsaturated":4.95,"FattyAcids_totalPolyunsaturated":1.2,"LinoleicAcid":0.73,"alphaLinolenicAcid":0.07,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.0,"VitaminA_RAE":143.15,"Retinol":133.08,"Carotene_beta":103.64,"VitaminD":21.28,"VitaminE_alphaTocopherol":0.49,"VitaminK_phylloquinone":2.54,"VitaminC_totalAscorbicAcid":1.21,"Thiamin":0.11,"Riboflavin":0.17,"Niacin":3.0,"PantothenicAcid":0.37,"VitaminB6":0.14,"Folate_total":20.07,"Folate_food":7.53,"Folate_DFE":28.82,"FolicAcid":15.67,"VitaminB12":0.27,"Choline_total":20.94,"Betaine":16.51,"LuteinZeaxanthin":34.69,"Lycopene":321.67,"Calcium_Ca":135.1,"Iron_Fe":0.95,"Magnesium_Mg":18.09,"Phosphorus_P":180.15,"Potassium_K":225.14,"Sodium_Na":576.26,"Zinc_Zn":0.86,"Copper_Cu":0.04,"Manganese_Mn":0.12,"Selenium_Se":12.93,"Tryptophan":0.13,"Threonine":0.43,"Isoleucine":0.48,"Leucine":0.87,"Lysine":0.86,"Methionine":0.28,"Cystine":0.08,"Phenylalanine":0.45,"Tyrosine":0.43,"Valine":0.55,"Arginine":0.58,"Histidine":0.34,"Alanine":0.5,"AsparticAcid":0.87,"GlutamicAcid":1.93,"Glycine":0.41,"Proline":0.7,"Serine":0.46,"omega3":0.08,"omega6":0.73,"AddedSugars":0.0,"IntrinsicSugars":2.4},"addedSugars":0.0,"intrinsicSugars":9.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.92,"yieldFactorFat":1.0,"sources":[{"ndb":"18069","name":"Bread, white, commercially prepared (includes soft bread crumbs)","grams":60.0},{"ndb":"7081","name":"Turkey breast, sliced, prepackaged","grams":113.0},{"ndb":"10862","name":"Pork, cured, bacon, pre-sliced, cooked, pan-fried","grams":23.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":60.0},{"ndb":"1001","name":"Butter, salted","grams":14.0},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":8.0},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":119.0},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":30.0},{"ndb":"2028","name":"Spices, paprika","grams":0.5},{"ndb":"2047","name":"Salt, table","grams":0.3},{"ndb":"2030","name":"Spices, pepper, black","grams":0.2}],"sections":[{"section_key":"sandwich","section_label":"Hot Brown","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.92,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":428.0,"raw_water_grams":250.66,"raw_fat_grams":76.64,"final_grams":407.95}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Hot Brown', quantity: 'custom (g)', foodWord: 'HOTBROWN', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white bread', quantity: '2 slices (30g each)', section: 'sandwich', ndbNo: '18069', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'deli turkey breast', quantity: '4 oz', section: 'sandwich', ndbNo: '7081', portionDesc: 'g', portionGrams: 113.0 },
+      { name: 'cooked bacon', quantity: '2 strips', section: 'sandwich', ndbNo: '10862', portionDesc: 'g', portionGrams: 23.0 },
+      { name: 'tomato raw', quantity: '3 slices', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'salted butter', quantity: '1 tbsp', section: 'sandwich', ndbNo: '1001', portionDesc: 'g', portionGrams: 14.0 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '1 tbsp', section: 'sandwich', ndbNo: '20581', portionDesc: 'g', portionGrams: 8.0 },
+      { name: 'heavy cream', quantity: '½ cup', section: 'sandwich', ndbNo: '1053', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'Parmesan cheese', quantity: '¼ cup + 1 tbsp', section: 'sandwich', ndbNo: '1033', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'paprika', quantity: 'pinch', section: 'sandwich', ndbNo: '2028', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'salt', quantity: 'pinch', section: 'sandwich', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'ground black pepper', quantity: 'pinch', section: 'sandwich', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.2 }
+    ],
+    recipeInstructions: [
+      'Melt butter in a small saucepan over medium heat, whisk in flour, and cook 1 minute or until lightly brown. Gradually whisk in heavy cream and cook, stirring constantly, until thickened, about 3–4 minutes. Remove from heat, stir in parmesan, and season with salt, pepper, and paprika.',
+      'Toast the bread slices and arrange them open-faced side by side in a broiler-safe baking dish.',
+      'Top evenly with the sliced turkey, tomato slices and cheese sauce. Sprinkle with the remaining 1 tablespoon of parmesan.',
+      'Broil 3–4 minutes until the sauce is bubbling and parmesan lightly browned on top.',
+      'Remove from the oven and transfer to serving plate. Cross two bacon strips over the top of each slice and serve immediately.',
+      '1 serving (407.9 g): 1051 cal | 45.5g protein | 76.6g fat | 45.6g carbs | 2.8g fiber | 9.8g sugar | 230.6g water'
+    ],
+    sections: [
+      { key: 'sandwich', label: 'Hot Brown', cookingMethod: '', yieldFactorWater: 0.92 }
+    ],
   }
 ];
