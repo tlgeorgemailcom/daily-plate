@@ -3888,5 +3888,48 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sandwich', label: 'BLT', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_005',
+    name: 'Club Sandwich',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 83,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 sandwich',
+    prepTime: '15 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":589.4,"pro":28.6,"fat":30.0,"carb":49.9,"fib":3.5,"h2o":187.0,"sug":8.1,"perServing":{"cal":589.4,"pro":28.6,"fat":30.0,"carb":49.9,"fib":3.5,"h2o":187.0,"sug":8.1,"AddedSugars":0.0,"IntrinsicSugars":8.1},"micros":{"vitaminA":12.61,"vitaminC":2.98,"vitaminD":3.37,"vitaminE":0.48,"vitaminK":15.2,"vitaminB6":0.19,"vitaminB12":0.19,"thiamin":0.22,"riboflavin":0.13,"niacin":4.24,"folate":40.16,"calcium":51.67,"iron":1.37,"magnesium":17.15,"phosphorus":132.8,"potassium":235.38,"sodium":558.24,"zinc":0.76,"copper":0.06,"selenium":14.03,"cholesterol":23.44,"saturatedFat":2.17,"monoFat":2.84,"polyFat":4.34,"omega3":0.45,"omega6":3.34},"gramsPerServing":302.0,"servings":1,"per100g":{"Energy_KCal":195.15,"Water":61.93,"Protein":9.47,"TotalLipidFat":9.92,"Carbohydrate":16.53,"FiberTotalDietary":1.15,"SugarsTotal":2.68,"Cholesterol":23.44,"FattyAcids_totalSaturated":2.17,"FattyAcids_totalMonounsaturated":2.84,"FattyAcids_totalPolyunsaturated":4.34,"LinoleicAcid":3.34,"alphaLinolenicAcid":0.45,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":12.61,"Retinol":1.88,"Carotene_beta":117.34,"VitaminD":3.37,"VitaminE_alphaTocopherol":0.48,"VitaminK_phylloquinone":15.2,"VitaminC_totalAscorbicAcid":2.98,"Thiamin":0.22,"Riboflavin":0.13,"Niacin":4.24,"PantothenicAcid":0.36,"VitaminB6":0.19,"Folate_total":40.16,"Folate_food":14.53,"Folate_DFE":58.04,"FolicAcid":25.63,"VitaminB12":0.19,"Choline_total":23.47,"Betaine":31.99,"LuteinZeaxanthin":64.07,"Lycopene":511.19,"Calcium_Ca":51.67,"Iron_Fe":1.37,"Magnesium_Mg":17.15,"Phosphorus_P":132.8,"Potassium_K":235.38,"Sodium_Na":558.24,"Zinc_Zn":0.76,"Copper_Cu":0.06,"Manganese_Mn":0.2,"Selenium_Se":14.03,"Tryptophan":0.08,"Threonine":0.32,"Isoleucine":0.32,"Leucine":0.58,"Lysine":0.63,"Methionine":0.2,"Cystine":0.08,"Phenylalanine":0.28,"Tyrosine":0.26,"Valine":0.34,"Arginine":0.49,"Histidine":0.24,"Alanine":0.43,"AsparticAcid":0.7,"GlutamicAcid":1.2,"Glycine":0.36,"Proline":0.3,"Serine":0.3,"omega3":0.45,"omega6":3.34,"AddedSugars":0.0,"IntrinsicSugars":2.68},"addedSugars":0.0,"intrinsicSugars":8.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18069","name":"Bread, white, commercially prepared (includes soft bread crumbs)","grams":90.0},{"ndb":"7081","name":"Turkey breast, sliced, prepackaged","grams":80.0},{"ndb":"10862","name":"Pork, cured, bacon, pre-sliced, cooked, pan-fried","grams":23.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":60.0},{"ndb":"11252","name":"Lettuce, iceberg (includes crisphead types), raw","grams":28.0},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":21.0}],"sections":[{"section_key":"sandwich","section_label":"Club Sandwich","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":302.0,"raw_water_grams":187.04,"raw_fat_grams":29.96,"final_grams":302.0}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Club Sandwich', quantity: 'custom (g)', foodWord: 'CLUBSANDWICH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white bread', quantity: '3 slices (30g each)', section: 'sandwich', ndbNo: '18069', portionDesc: 'g', portionGrams: 90.0 },
+      { name: 'deli turkey breast', quantity: '5 slices', section: 'sandwich', ndbNo: '7081', portionDesc: 'g', portionGrams: 80.0 },
+      { name: 'cooked bacon', quantity: '2 strips', section: 'sandwich', ndbNo: '10862', portionDesc: 'g', portionGrams: 23.0 },
+      { name: 'tomato raw', quantity: '4 thin slices', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'iceberg lettuce', quantity: '1 leaf', section: 'sandwich', ndbNo: '11252', portionDesc: 'g', portionGrams: 28.0 },
+      { name: 'mayonnaise', quantity: '1½ tbsp', section: 'sandwich', ndbNo: '4025', portionDesc: 'g', portionGrams: 21.0 }
+    ],
+    recipeInstructions: [
+      'Cook the bacon in a skillet over medium heat until crisp and browned, about 6–8 minutes. Drain on paper towels.',
+      'Toast all 3 bread slices until golden.',
+      'Spread mayonnaise evenly on one side of each slice.',
+      'On the bottom slice (mayo side up), layer the lettuce leaf and 4 thin tomato slices.',
+      'Place the middle slice on top, mayo-side down. Spread mayo on the top of the middle slice, then layer the thin-sliced turkey (prepackaged thin-sliced or deli-sliced) and bacon.',
+      'Top with the third slice, mayo-side down. Secure with 4 toothpicks, cut diagonally into 4 triangles, and serve immediately.',
+      '1 sandwich (302.0 g): 589.4 cal | 28.6g protein | 30.0g fat | 49.9g carbs | 3.5g fiber | 8.1g sugar | 187.0g water'
+    ],
+    sections: [
+      { key: 'sandwich', label: 'Club Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
