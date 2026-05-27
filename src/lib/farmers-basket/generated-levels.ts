@@ -3847,5 +3847,46 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sandwich', label: 'Grilled Cheese', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'SAND_004',
+    name: 'BLT Sandwich',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 82,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 sandwich',
+    prepTime: '10 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":452.0,"pro":17.1,"fat":29.6,"carb":28.6,"fib":2.4,"h2o":114.4,"sug":5.1,"perServing":{"cal":452.0,"pro":17.1,"fat":29.6,"carb":28.6,"fib":2.4,"h2o":114.4,"sug":5.1,"AddedSugars":0.0,"IntrinsicSugars":5.1},"micros":{"vitaminA":20.34,"vitaminC":4.65,"vitaminD":3.79,"vitaminE":0.68,"vitaminK":23.68,"vitaminB6":0.15,"vitaminB12":0.21,"thiamin":0.25,"riboflavin":0.11,"niacin":3.3,"folate":38.07,"calcium":45.74,"iron":1.27,"magnesium":16.0,"phosphorus":107.12,"potassium":217.59,"sodium":498.78,"zinc":0.83,"copper":0.06,"selenium":14.99,"cholesterol":22.21,"saturatedFat":3.59,"monoFat":4.76,"polyFat":6.39,"omega3":0.66,"omega6":5.16},"gramsPerServing":193.5,"servings":1,"per100g":{"Energy_KCal":233.58,"Water":59.13,"Protein":8.84,"TotalLipidFat":15.32,"Carbohydrate":14.77,"FiberTotalDietary":1.24,"SugarsTotal":2.63,"Cholesterol":22.21,"FattyAcids_totalSaturated":3.59,"FattyAcids_totalMonounsaturated":4.76,"FattyAcids_totalPolyunsaturated":6.39,"LinoleicAcid":5.16,"alphaLinolenicAcid":0.66,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":20.34,"Retinol":3.59,"Carotene_beta":183.14,"VitaminD":3.79,"VitaminE_alphaTocopherol":0.68,"VitaminK_phylloquinone":23.68,"VitaminC_totalAscorbicAcid":4.65,"Thiamin":0.25,"Riboflavin":0.11,"Niacin":3.3,"PantothenicAcid":0.39,"VitaminB6":0.15,"Folate_total":38.07,"Folate_food":15.85,"Folate_DFE":53.58,"FolicAcid":22.22,"VitaminB12":0.21,"Choline_total":26.49,"Betaine":27.82,"LuteinZeaxanthin":90.89,"Lycopene":797.83,"Calcium_Ca":45.74,"Iron_Fe":1.27,"Magnesium_Mg":16.0,"Phosphorus_P":107.12,"Potassium_K":217.59,"Sodium_Na":498.78,"Zinc_Zn":0.83,"Copper_Cu":0.06,"Manganese_Mn":0.19,"Selenium_Se":14.99,"Tryptophan":0.08,"Threonine":0.28,"Isoleucine":0.3,"Leucine":0.52,"Lysine":0.56,"Methionine":0.17,"Cystine":0.07,"Phenylalanine":0.27,"Tyrosine":0.25,"Valine":0.32,"Arginine":0.41,"Histidine":0.25,"Alanine":0.36,"AsparticAcid":0.64,"GlutamicAcid":1.11,"Glycine":0.28,"Proline":0.25,"Serine":0.27,"omega3":0.66,"omega6":5.16,"AddedSugars":0.0,"IntrinsicSugars":2.63},"addedSugars":0.0,"intrinsicSugars":5.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18069","name":"Bread, white, commercially prepared (includes soft bread crumbs)","grams":50.0},{"ndb":"10862","name":"Pork, cured, bacon, pre-sliced, cooked, pan-fried","grams":34.5},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":60.0},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":21.0},{"ndb":"11252","name":"Lettuce, iceberg (includes crisphead types), raw","grams":28.0}],"sections":[{"section_key":"sandwich","section_label":"BLT","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":193.5,"raw_water_grams":114.41,"raw_fat_grams":29.65,"final_grams":193.5}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'BLT Sandwich', quantity: 'custom (g)', foodWord: 'BLT', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white bread', quantity: '2 slices', section: 'sandwich', ndbNo: '18069', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'cooked bacon', quantity: '3 strips', section: 'sandwich', ndbNo: '10862', portionDesc: 'g', portionGrams: 34.5 },
+      { name: 'tomato raw', quantity: '3 slices', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'mayonnaise', quantity: '1½ tbsp', section: 'sandwich', ndbNo: '4025', portionDesc: 'g', portionGrams: 21.0 },
+      { name: 'iceberg lettuce', quantity: '1 leaf', section: 'sandwich', ndbNo: '11252', portionDesc: 'g', portionGrams: 28.0 }
+    ],
+    recipeInstructions: [
+      'Cook the bacon in a skillet over medium heat until crisp and browned, about 6–8 minutes. Drain on paper towels.',
+      'Toast the bread slices until golden.',
+      'Spread mayonnaise evenly over one side of each toast slice.',
+      'On one slice (mayo side up), layer the lettuce leaf, tomato slices, and bacon. Top with the second slice, mayo side down.',
+      'Cut diagonally and serve immediately.',
+      '1 sandwich (193.5 g): 452.0 cal | 17.1g protein | 29.7g fat | 28.6g carbs | 2.4g fiber | 5.1g sugar | 114.4g water'
+    ],
+    sections: [
+      { key: 'sandwich', label: 'BLT', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

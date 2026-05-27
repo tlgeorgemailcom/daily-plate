@@ -115,3 +115,5 @@ tomato_red_raw,11529,TOMATO,"Tomatoes, red, ripe, raw, year round average",tomat
 cheese_cheddar,1009,CHEDDAR,"Cheese, cheddar",Cheddar cheese,oz,28.35,
 cheese_gruyere,1023,GRUYERE,"Cheese, gruyere",Gruyere cheese,oz,28.35,
 cheese_american,1253,AMERICANFAT,"Cheese, pasteurized process, American, without added vitamin D",American cheese,oz,28.35,
+mayonnaise,4025,MAYOREGULAR,"Salad dressing, mayonnaise, regular",mayonnaise,tablespoon,13.8,
+lettuce_iceberg_raw,11252,LETTUCE,"Lettuce, iceberg (includes crisphead types), raw",iceberg lettuce,cup,72.0,
