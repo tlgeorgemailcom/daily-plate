@@ -781,3 +781,6 @@ SAND_009,2,ham_sliced_regular,3 oz sliced,85.0,57.0,113.0,sandwich,sandwich,fals
 SAND_009,3,cheese_swiss,1 oz (1 slice),28.0,14.0,56.0,sandwich,sandwich,false,
 SAND_009,4,mustard_yellow,1 tsp,5.0,3.0,10.0,sandwich,sandwich,false,
 SAND_009,5,mayonnaise,1 tbsp,13.8,7.0,21.0,sandwich,sandwich,false,
+SAND_010,1,bread_white_commercial,2 slices (30g each),60.0,48.0,72.0,sandwich,sandwich,false,
+SAND_010,2,peanut_butter_smooth,2 tbsp,32.0,16.0,48.0,sandwich,sandwich,false,
+SAND_010,3,jam_preserves,1 tbsp,20.0,10.0,30.0,sandwich,sandwich,false,

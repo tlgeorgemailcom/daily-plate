@@ -4096,5 +4096,41 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sandwich', label: 'Ham and Cheese', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_010',
+    name: 'Peanut Butter & Jelly Sandwich',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'vegan',
+    levelNum: 88,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 sandwich',
+    prepTime: '5 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":406.6,"pro":12.5,"fat":18.4,"carb":50.6,"fib":3.4,"h2o":28.3,"sug":16.5,"perServing":{"cal":406.6,"pro":12.5,"fat":18.4,"carb":50.6,"fib":3.4,"h2o":28.3,"sug":16.5,"AddedSugars":0.0,"IntrinsicSugars":16.5},"micros":{"vitaminA":0.0,"vitaminC":1.57,"vitaminD":0.0,"vitaminE":2.74,"vitaminK":0.19,"vitaminB6":0.17,"vitaminB12":0.0,"thiamin":0.33,"riboflavin":0.2,"niacin":6.31,"folate":86.29,"calcium":94.71,"iron":2.52,"magnesium":61.04,"phosphorus":151.61,"potassium":240.68,"sodium":389.93,"zinc":1.12,"copper":0.19,"selenium":13.31,"cholesterol":0.0,"saturatedFat":3.32,"monoFat":7.73,"polyFat":4.44,"omega3":0.09,"omega6":3.49},"gramsPerServing":112.0,"servings":1,"per100g":{"Energy_KCal":363.0,"Water":25.3,"Protein":11.15,"TotalLipidFat":16.47,"Carbohydrate":45.15,"FiberTotalDietary":3.07,"SugarsTotal":14.7,"Cholesterol":0.0,"FattyAcids_totalSaturated":3.32,"FattyAcids_totalMonounsaturated":7.73,"FattyAcids_totalPolyunsaturated":4.44,"LinoleicAcid":3.49,"alphaLinolenicAcid":0.09,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.0,"VitaminD":0.0,"VitaminE_alphaTocopherol":2.74,"VitaminK_phylloquinone":0.19,"VitaminC_totalAscorbicAcid":1.57,"Thiamin":0.33,"Riboflavin":0.2,"Niacin":6.31,"PantothenicAcid":0.61,"VitaminB6":0.17,"Folate_total":86.29,"Folate_food":40.21,"Folate_DFE":118.43,"FolicAcid":46.07,"VitaminB12":0.0,"Choline_total":27.64,"Betaine":54.82,"LuteinZeaxanthin":23.57,"Lycopene":0.0,"Calcium_Ca":94.71,"Iron_Fe":2.52,"Magnesium_Mg":61.04,"Phosphorus_P":151.61,"Potassium_K":240.68,"Sodium_Na":389.93,"Zinc_Zn":1.12,"Copper_Cu":0.19,"Manganese_Mn":0.77,"Selenium_Se":13.31,"Tryptophan":0.07,"Threonine":0.15,"Isoleucine":0.18,"Leucine":0.45,"Lysine":0.2,"Methionine":0.07,"Cystine":0.06,"Phenylalanine":0.35,"Tyrosine":0.24,"Valine":0.23,"Arginine":0.79,"Histidine":0.16,"Alanine":0.27,"AsparticAcid":0.9,"GlutamicAcid":1.47,"Glycine":0.41,"Proline":0.4,"Serine":0.43,"omega3":0.09,"omega6":3.49,"AddedSugars":0.0,"IntrinsicSugars":14.7},"addedSugars":0.0,"intrinsicSugars":16.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18069","name":"Bread, white, commercially prepared (includes soft bread crumbs)","grams":60.0},{"ndb":"16098","name":"Peanut butter, smooth style, with salt","grams":32.0},{"ndb":"19297","name":"Jams and preserves","grams":20.0}],"sections":[{"section_key":"sandwich","section_label":"Peanut Butter & Jelly","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":112.0,"raw_water_grams":28.34,"raw_fat_grams":18.45,"final_grams":112.0}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Peanut Butter & Jelly Sandwich', quantity: 'custom (g)', foodWord: 'PBJ', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white bread', quantity: '2 slices (30g each)', section: 'sandwich', ndbNo: '18069', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'smooth peanut butter', quantity: '2 tbsp', section: 'sandwich', ndbNo: '16098', portionDesc: 'g', portionGrams: 32.0 },
+      { name: 'jelly or jam', quantity: '1 tbsp', section: 'sandwich', ndbNo: '19297', portionDesc: 'g', portionGrams: 20.0 }
+    ],
+    recipeInstructions: [
+      'Spread peanut butter evenly on one bread slice and jelly on the other.',
+      'Press the slices together and cut diagonally.',
+      '1 sandwich (112.0 g): 406.6 cal | 12.5g protein | 18.4g fat | 50.6g carbs | 3.4g fiber | 16.5g sugar | 28.3g water'
+    ],
+    sections: [
+      { key: 'sandwich', label: 'Peanut Butter & Jelly', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
