@@ -4310,5 +4310,50 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sandwich', label: 'Croque Madame', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'SAND_015',
+    name: 'Monte Cristo Sandwich',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 93,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 sandwich',
+    prepTime: '15 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":784.1,"pro":42.0,"fat":50.5,"carb":39.5,"fib":2.4,"h2o":165.7,"sug":9.6,"perServing":{"cal":784.1,"pro":42.0,"fat":50.5,"carb":39.5,"fib":2.4,"h2o":165.7,"sug":9.6,"AddedSugars":3.9,"IntrinsicSugars":5.6},"micros":{"vitaminA":106.42,"vitaminC":0.37,"vitaminD":23.72,"vitaminE":0.42,"vitaminK":0.86,"vitaminB6":0.14,"vitaminB12":0.66,"thiamin":0.18,"riboflavin":0.21,"niacin":2.28,"folate":25.27,"calcium":180.26,"iron":1.29,"magnesium":19.84,"phosphorus":216.09,"potassium":195.25,"sodium":589.35,"zinc":1.43,"copper":0.06,"selenium":20.23,"cholesterol":114.17,"saturatedFat":8.76,"monoFat":4.85,"polyFat":1.08,"omega3":0.07,"omega6":0.57},"gramsPerServing":305.4,"servings":1,"per100g":{"Energy_KCal":256.74,"Water":54.25,"Protein":13.75,"TotalLipidFat":16.54,"Carbohydrate":12.93,"FiberTotalDietary":0.77,"SugarsTotal":3.13,"Cholesterol":114.17,"FattyAcids_totalSaturated":8.76,"FattyAcids_totalMonounsaturated":4.85,"FattyAcids_totalPolyunsaturated":1.08,"LinoleicAcid":0.57,"alphaLinolenicAcid":0.06,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":106.42,"Retinol":104.84,"Carotene_beta":18.85,"VitaminD":23.72,"VitaminE_alphaTocopherol":0.42,"VitaminK_phylloquinone":0.86,"VitaminC_totalAscorbicAcid":0.37,"Thiamin":0.18,"Riboflavin":0.21,"Niacin":2.28,"PantothenicAcid":0.47,"VitaminB6":0.14,"Folate_total":25.27,"Folate_food":12.6,"Folate_DFE":34.11,"FolicAcid":16.9,"VitaminB12":0.66,"Choline_total":69.42,"Betaine":21.94,"LuteinZeaxanthin":59.86,"Lycopene":0.11,"Calcium_Ca":180.26,"Iron_Fe":1.29,"Magnesium_Mg":19.84,"Phosphorus_P":216.09,"Potassium_K":195.25,"Sodium_Na":589.35,"Zinc_Zn":1.43,"Copper_Cu":0.06,"Manganese_Mn":0.22,"Selenium_Se":20.23,"Tryptophan":0.15,"Threonine":0.49,"Isoleucine":0.58,"Leucine":1.05,"Lysine":1.01,"Methionine":0.33,"Cystine":0.13,"Phenylalanine":0.57,"Tyrosine":0.52,"Valine":0.72,"Arginine":0.65,"Histidine":0.38,"Alanine":0.58,"AsparticAcid":0.97,"GlutamicAcid":1.99,"Glycine":0.44,"Proline":0.86,"Serine":0.63,"omega3":0.07,"omega6":0.57,"AddedSugars":1.28,"IntrinsicSugars":1.85},"addedSugars":3.9,"intrinsicSugars":5.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.88,"yieldFactorFat":1.0,"sources":[{"ndb":"18069","name":"Bread, white, commercially prepared (includes soft bread crumbs)","grams":60.0},{"ndb":"7029","name":"Ham, sliced, regular (approximately 11% fat)","grams":57.0},{"ndb":"7081","name":"Turkey breast, sliced, prepackaged","grams":57.0},{"ndb":"1040","name":"Cheese, swiss","grams":42.0},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":50.0},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":30.0},{"ndb":"1001","name":"Butter, salted","grams":28.0},{"ndb":"19336","name":"Sugars, powdered","grams":4.0}],"sections":[{"section_key":"sandwich","section_label":"Monte Cristo Sandwich","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":328.0,"raw_water_grams":188.28,"raw_fat_grams":50.51,"final_grams":305.41}],"cookingMethod":"pan grilled"},
+    recipeIngredients: [
+      { name: 'Monte Cristo Sandwich', quantity: 'custom (g)', foodWord: 'MONTECRISTO', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white bread', quantity: '2 slices (30g each)', section: 'sandwich', ndbNo: '18069', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'sliced ham', quantity: '2 oz', section: 'sandwich', ndbNo: '7029', portionDesc: 'g', portionGrams: 57.0 },
+      { name: 'deli turkey breast', quantity: '2 oz', section: 'sandwich', ndbNo: '7081', portionDesc: 'g', portionGrams: 57.0 },
+      { name: 'Swiss cheese', quantity: '1½ oz', section: 'sandwich', ndbNo: '1040', portionDesc: 'g', portionGrams: 42.0 },
+      { name: 'large egg', quantity: '1 large', section: 'sandwich', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'whole milk', quantity: '2 tbsp', section: 'sandwich', ndbNo: '1077', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'salted butter', quantity: '2 tbsp', section: 'sandwich', ndbNo: '1001', portionDesc: 'g', portionGrams: 28.0 },
+      { name: 'powdered sugar', quantity: '1 tsp', section: 'sandwich', ndbNo: '19336', portionDesc: 'g', portionGrams: 4.0 }
+    ],
+    recipeInstructions: [
+      'Beat egg and milk together in a shallow dish until well combined.',
+      'Layer ham, turkey, and Swiss cheese between the two slices of bread and press firmly together.',
+      'Dip the assembled sandwich in the egg batter, turning to coat all sides evenly. Let any excess drip off.',
+      'Melt butter in a skillet over medium heat. Place the sandwich in the pan, cover with a lid or foil, and cook 3 minutes until the bottom is deep golden brown.',
+      'Flip and cook another 2–3 minutes uncovered until both sides are golden and the cheese is melted through.',
+      'Transfer to a plate, dust with powdered sugar, and serve immediately with raspberry jam alongside for dipping.',
+      '1 sandwich (305.4 g): 784 cal | 42.0g protein | 50.5g fat | 39.5g carbs | 2.4g fiber | 9.6g sugar | 165.7g water'
+    ],
+    sections: [
+      { key: 'sandwich', label: 'Monte Cristo Sandwich', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];
