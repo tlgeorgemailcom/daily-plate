@@ -4132,5 +4132,46 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sandwich', label: 'Peanut Butter & Jelly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_011',
+    name: 'Pimento Cheese Sandwich',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'veggie',
+    levelNum: 89,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 sandwich',
+    prepTime: '10 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":679.5,"pro":20.5,"fat":51.1,"carb":34.9,"fib":2.3,"h2o":89.4,"sug":5.6,"perServing":{"cal":679.5,"pro":20.5,"fat":51.1,"carb":34.9,"fib":2.3,"h2o":89.4,"sug":5.6,"AddedSugars":0.0,"IntrinsicSugars":5.6},"micros":{"vitaminA":155.96,"vitaminC":11.85,"vitaminD":7.66,"vitaminE":0.93,"vitaminK":25.1,"vitaminB6":0.08,"vitaminB12":0.35,"thiamin":0.17,"riboflavin":0.23,"niacin":1.54,"folate":43.57,"calcium":258.13,"iron":1.43,"magnesium":17.16,"phosphorus":177.0,"potassium":106.12,"sodium":539.35,"zinc":1.36,"copper":0.05,"selenium":16.1,"cholesterol":47.51,"saturatedFat":9.91,"monoFat":6.32,"polyFat":7.26,"omega3":0.81,"omega6":5.47},"gramsPerServing":200.6,"servings":1,"per100g":{"Energy_KCal":338.72,"Water":44.58,"Protein":10.21,"TotalLipidFat":25.45,"Carbohydrate":17.4,"FiberTotalDietary":1.15,"SugarsTotal":2.81,"Cholesterol":47.51,"FattyAcids_totalSaturated":9.91,"FattyAcids_totalMonounsaturated":6.32,"FattyAcids_totalPolyunsaturated":7.26,"LinoleicAcid":5.47,"alphaLinolenicAcid":0.8,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.0,"VitaminA_RAE":155.96,"Retinol":136.48,"Carotene_beta":239.46,"VitaminD":7.66,"VitaminE_alphaTocopherol":0.93,"VitaminK_phylloquinone":25.1,"VitaminC_totalAscorbicAcid":11.85,"Thiamin":0.17,"Riboflavin":0.23,"Niacin":1.54,"PantothenicAcid":0.37,"VitaminB6":0.08,"Folate_total":43.57,"Folate_food":17.85,"Folate_DFE":61.52,"FolicAcid":25.72,"VitaminB12":0.35,"Choline_total":18.39,"Betaine":30.8,"LuteinZeaxanthin":68.23,"Lycopene":0.06,"Calcium_Ca":258.13,"Iron_Fe":1.43,"Magnesium_Mg":17.16,"Phosphorus_P":177.0,"Potassium_K":106.12,"Sodium_Na":539.35,"Zinc_Zn":1.36,"Copper_Cu":0.05,"Manganese_Mn":0.22,"Selenium_Se":16.1,"Tryptophan":0.16,"Threonine":0.34,"Isoleucine":0.39,"Leucine":0.65,"Lysine":0.38,"Methionine":0.18,"Cystine":0.05,"Phenylalanine":0.35,"Tyrosine":0.36,"Valine":0.46,"Arginine":0.2,"Histidine":0.18,"Alanine":0.25,"AsparticAcid":0.59,"GlutamicAcid":1.54,"Glycine":0.18,"Proline":0.8,"Serine":0.29,"omega3":0.81,"omega6":5.47,"AddedSugars":0.0,"IntrinsicSugars":2.81},"addedSugars":0.0,"intrinsicSugars":5.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18069","name":"Bread, white, commercially prepared (includes soft bread crumbs)","grams":60.0},{"ndb":"1009","name":"Cheese, cheddar","grams":56.0},{"ndb":"1017","name":"Cheese, cream","grams":28.0},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":27.6},{"ndb":"11943","name":"Pimento, canned","grams":28.0},{"ndb":"2030","name":"Spices, pepper, black","grams":0.6},{"ndb":"2047","name":"Salt, table","grams":0.4}],"sections":[{"section_key":"sandwich","section_label":"Pimento Cheese","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":200.6,"raw_water_grams":89.44,"raw_fat_grams":51.06,"final_grams":200.6}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Pimento Cheese Sandwich', quantity: 'custom (g)', foodWord: 'PIMENTOCHEESE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white bread', quantity: '2 slices (30g each)', section: 'sandwich', ndbNo: '18069', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'Cheddar cheese', quantity: '2 oz shredded', section: 'sandwich', ndbNo: '1009', portionDesc: 'g', portionGrams: 56.0 },
+      { name: 'cream cheese', quantity: '1 oz', section: 'sandwich', ndbNo: '1017', portionDesc: 'g', portionGrams: 28.0 },
+      { name: 'mayonnaise', quantity: '2 tbsp', section: 'sandwich', ndbNo: '4025', portionDesc: 'g', portionGrams: 27.6 },
+      { name: 'canned pimentos', quantity: '2 tbsp drained', section: 'sandwich', ndbNo: '11943', portionDesc: 'g', portionGrams: 28.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'sandwich', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.6 },
+      { name: 'salt', quantity: 'pinch', section: 'sandwich', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.4 }
+    ],
+    recipeInstructions: [
+      'Mix shredded cheddar',
+      'Spread generously on both slices of white bread.',
+      'Press the slices together and serve. Cut diagonally if desired.',
+      '1 sandwich (200.6 g): 679.5 cal | 20.5g protein | 51.1g fat | 34.9g carbs | 2.3g fiber | 5.6g sugar | 89.4g water'
+    ],
+    sections: [
+      { key: 'sandwich', label: 'Pimento Cheese', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
