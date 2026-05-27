@@ -505,24 +505,17 @@ BKFST_020,5,"Warm the flour tortilla in a dry skillet for 30 seconds per side, o
 BKFST_020,6,Spoon the egg and cheese mixture onto the center of the tortilla. Fold in the sides and roll up tightly.
 BKFST_020,7,1 burrito (180g): 498.6 cal | 23.4g protein | 28.5g fat | 35.7g carbs | 2.4g fiber | 3.2g sugar | 88.6g water
 BKFST_021,1,"Cook the ground beef with 2 tsp water in a skillet over medium-high heat, breaking it apart, until browned and no longer pink, about 5–7 minutes. Drain off any excess fat."
-
 BKFST_021,2,"Warm the flour tortilla in a dry skillet over medium heat for 30 seconds per side, or microwave for 15–20 seconds."
-
 BKFST_021,3,Spoon the cooked beef onto the center of the warm tortilla.
-
 BKFST_021,4,Sprinkle the Mexican cheese blend over the beef.
-
 BKFST_021,5,Fold in the sides and roll up tightly into a burrito.
-
 BKFST_021,6,1 burrito (107g): 280 cal | 13.8g protein | 11.6g fat | 29.7g carbs | 2.1g fiber | 2.3g sugar | 49.9g water
-
 BKFST_022,1,"Scrub the potato and cut into ½-inch dice. Heat ½ tbsp of the olive oil in a medium skillet over medium-high heat. Add the potato and salt, and cook, stirring occasionally, until golden and tender, about 8–10 minutes."
 BKFST_022,2,"Push the potatoes to one side of the pan. Add the remaining ½ tbsp olive oil, then crack in the eggs and scramble gently until just set, about 2 minutes. Fold the eggs into the potatoes."
 BKFST_022,3,"Warm the flour tortilla in a dry skillet over medium heat for 30 seconds per side, or microwave for 15–20 seconds, until pliable."
 BKFST_022,4,Spoon the potato-egg mixture onto the center of the warm tortilla.
 BKFST_022,5,Sprinkle the Mexican cheese blend evenly over the filling. Fold in the sides and roll up tightly into a burrito.
 BKFST_022,6,1 burrito (305g): 678 cal | 27.6g protein | 36.8g fat | 58.5g carbs | 5.2g fiber | 4.4g sugar | 175.0g water
-
 BKFST_023,1,Beat eggs with salt in a bowl until lightly combined.
 BKFST_023,2,Melt butter in a non-toxic nonstick skillet over medium heat until foamy.
 BKFST_023,3,"Pour in the egg mixture; let the edges set, then gently push cooked edges toward the center."
@@ -597,11 +590,11 @@ BKFST_034,5,"Drizzle with olive oil, then finish with a pinch of flaked salt and
 BKFST_034,6,1 toast (123.2 g): 276.5 cal | 7.0g protein | 17.9g fat | 24.9g carbs | 8.3g fiber | 3.0g sugar | 70.8g water
 BKFST_035,1,"Bring a small saucepan of water to a gentle simmer and add a splash of white vinegar. Crack the egg into a small cup, then gently slide it into the simmering water. Poach for 3 to 4 minutes until the white is set and the yolk is still soft. Remove with a slotted spoon and blot dry."
 BKFST_035,2,Toast the bread until golden and crisp.
-BKFST_035,3,"Halve the avocado and scoop the flesh of one half into a small bowl. Add the lemon juice and mash with a fork to your preferred texture — smooth or slightly chunky."
+BKFST_035,3,Halve the avocado and scoop the flesh of one half into a small bowl. Add the lemon juice and mash with a fork to your preferred texture — smooth or slightly chunky.
 BKFST_035,4,Spread the mashed avocado evenly on top of the warm toast.
 BKFST_035,5,"Drizzle with olive oil. Place the poached egg on top of the avocado, then arrange the cherry tomato halves around the egg."
 BKFST_035,6,Finish with a pinch of flaked salt and red pepper flakes.
-BKFST_035,7,"1 toast (241.2 g): 360 cal | 13.9g protein | 22.7g fat | 27.9g carbs | 9.1g fiber | 5.0g sugar | 173.0g water"
+BKFST_035,7,1 toast (241.2 g): 360 cal | 13.9g protein | 22.7g fat | 27.9g carbs | 9.1g fiber | 5.0g sugar | 173.0g water
 SAND_001,1,Spread softened butter on both sides of each bread slice — all four faces — dividing the 2 tablespoons evenly.
 SAND_001,2,Heat a skillet or griddle over medium-low to medium heat.
 SAND_001,3,Place both slices of bread in the pan. Toast the bottom sides until deep golden brown.
@@ -625,7 +618,7 @@ SAND_004,1,"Cook the bacon in a skillet over medium heat until crisp and browned
 SAND_004,2,Toast the bread slices until golden.
 SAND_004,3,Spread mayonnaise evenly over one side of each toast slice.
 SAND_004,4,"On one slice (mayo side up), layer the lettuce leaf, tomato slices, and bacon. Top with the second slice, mayo side down."
-SAND_004,5,"Cut diagonally and serve immediately."
+SAND_004,5,Cut diagonally and serve immediately.
 SAND_004,6,1 sandwich (193.5 g): 452.0 cal | 17.1g protein | 29.7g fat | 28.6g carbs | 2.4g fiber | 5.1g sugar | 114.4g water
 SAND_005,1,"Cook the bacon in a skillet over medium heat until crisp and browned, about 6–8 minutes. Drain on paper towels."
 SAND_005,2,Toast all 3 bread slices until golden.
@@ -656,12 +649,12 @@ SAND_009,4,1 sandwich (191.8 g): 505.0 cal | 27.3g protein | 28.5g fat | 33.7g c
 SAND_010,1,Spread peanut butter evenly on one bread slice and jelly on the other.
 SAND_010,2,Press the slices together and cut diagonally.
 SAND_010,3,1 sandwich (112.0 g): 406.6 cal | 12.5g protein | 18.4g fat | 50.6g carbs | 3.4g fiber | 16.5g sugar | 28.3g water
-SAND_011,1,Mix shredded cheddar, softened cream cheese, mayonnaise, drained pimentos, salt, and pepper until well combined.
+SAND_011,1,"Mix shredded cheddar, softened cream cheese, mayonnaise, drained pimentos, salt, and pepper until well combined."
 SAND_011,2,Spread generously on both slices of white bread.
 SAND_011,3,Press the slices together and serve. Cut diagonally if desired.
 SAND_011,4,1 sandwich (200.6 g): 679.5 cal | 20.5g protein | 51.1g fat | 34.9g carbs | 2.3g fiber | 5.6g sugar | 89.4g water
-SAND_012,1,Mix softened cream cheese with chopped chives, dill, lemon juice, salt, and pepper until smooth.
+SAND_012,1,"Mix cream cheese with lemon juice, salt, black pepper, and finely chopped herbs until smooth."
 SAND_012,2,Remove crusts from bread slices and spread cream cheese mixture evenly on one side of each slice.
-SAND_012,3,Layer thin cucumber slices over the spread on two bread slices, then top with the remaining slices.
+SAND_012,3,"Layer thin cucumber slices over the spread on two bread slices, then top with the remaining slices."
 SAND_012,4,Cut each sandwich into three fingers or four triangles and serve.
 SAND_012,5,1 serving (132.7 g): 213.5 cal | 5.7g protein | 11.1g fat | 23.1g carbs | 1.6g fiber | 4.2g sugar | 91.0g water

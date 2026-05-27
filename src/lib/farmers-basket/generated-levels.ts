@@ -4165,7 +4165,7 @@ export const LEVELS: Level[] = [
       { name: 'salt', quantity: 'pinch', section: 'sandwich', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.4 }
     ],
     recipeInstructions: [
-      'Mix shredded cheddar',
+      'Mix shredded cheddar, softened cream cheese, mayonnaise, drained pimentos, salt, and pepper until well combined.',
       'Spread generously on both slices of white bread.',
       'Press the slices together and serve. Cut diagonally if desired.',
       '1 sandwich (200.6 g): 679.5 cal | 20.5g protein | 51.1g fat | 34.9g carbs | 2.3g fiber | 5.6g sugar | 89.4g water'
@@ -4207,9 +4207,9 @@ export const LEVELS: Level[] = [
       { name: 'ground black pepper', quantity: 'pinch', section: 'sandwich', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 }
     ],
     recipeInstructions: [
-      'Mix softened cream cheese with chopped chives',
+      'Mix cream cheese with lemon juice, salt, black pepper, and finely chopped herbs until smooth.',
       'Remove crusts from bread slices and spread cream cheese mixture evenly on one side of each slice.',
-      'Layer thin cucumber slices over the spread on two bread slices',
+      'Layer thin cucumber slices over the spread on two bread slices, then top with the remaining slices.',
       'Cut each sandwich into three fingers or four triangles and serve.',
       '1 serving (132.7 g): 213.5 cal | 5.7g protein | 11.1g fat | 23.1g carbs | 1.6g fiber | 4.2g sugar | 91.0g water'
     ],
