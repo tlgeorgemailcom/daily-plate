@@ -5,8 +5,9 @@ Phase-6 writer. Replaces scripts/upload-dev-recipe.mjs.
 Usage:
     python tools/upload.py                            # dry-run all 40 (no writes)
     python tools/upload.py --commit                   # actually write all 40
-    python tools/upload.py --recipe-id SWEET_001      # single recipe
+    python tools/upload.py --recipe SWEET_001              # single recipe (alias)
     python tools/upload.py --recipe-id SWEET_001 --commit
+    python tools/upload.py --recipe SWEET_001 --commit
     python tools/upload.py --diff-only                # only show recipes whose
                                                       # nutrition_json would change
     python tools/upload.py --force-locked --commit    # also overwrite locked=2
@@ -216,7 +217,8 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--commit", action="store_true",
                     help="Actually write to Turso (default is dry-run)")
-    ap.add_argument("--recipe-id", action="append", default=[],
+    ap.add_argument("--recipe-id", "--recipe", action="append", default=[],
+                    dest="recipe_id",
                     help="Limit to specific recipe_id (may repeat)")
     ap.add_argument("--diff-only", action="store_true",
                     help="Only show recipes whose payload differs from Turso")
