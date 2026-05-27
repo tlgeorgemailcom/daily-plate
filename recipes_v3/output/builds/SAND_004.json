@@ -25,7 +25,7 @@
       "grams": 50.0,
       "section": "sandwich",
       "ingredient_group": "sandwich",
-      "qty_display": "2 slices",
+      "qty_display": "2 slices (25g each)",
       "contribution": {
         "Energy_KCal": 133.0,
         "Protein": 4.425,
