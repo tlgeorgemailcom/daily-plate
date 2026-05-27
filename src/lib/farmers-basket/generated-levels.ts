@@ -4210,7 +4210,8 @@ export const LEVELS: Level[] = [
       'Mix cream cheese with lemon juice, salt, black pepper, and finely chopped herbs until smooth.',
       'Remove crusts from bread slices and spread cream cheese mixture evenly on one side of each slice.',
       'Layer thin cucumber slices over the spread on two bread slices, then top with the remaining slices.',
-      'Cut each sandwich into three fingers or four triangles and serve.',
+      'Cut each sandwich into three fingers or four triangles.',
+      'Chill sandwiches in the refrigerator briefly so they firm up slightly and maintain their shape when served.',
       '1 serving (132.7 g): 213.5 cal | 5.7g protein | 11.1g fat | 23.1g carbs | 1.6g fiber | 4.2g sugar | 91.0g water'
     ],
     sections: [
