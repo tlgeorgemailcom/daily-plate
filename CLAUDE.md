@@ -127,10 +127,10 @@ Planned BKFST order (standalone components first, composites last):
 | BKFST_032 | Crustless Quiche Lorraine | (none) | Rule D ✅ — same filling as BKFST_028 + bacon_cooked_pan_fried(10862); single filling section yfw=0.90; 83.1g/slice; 332 kcal·16.3P·28.6F·2.3C per 100g; dietary_category=all |
 | BKFST_033 | Frittata Herbs and Cheese | (none) | Rule D ✅ — no canonical; 264g eggs(1123)+15.25g milk_whole(1077)+30g scallion_raw(11291)+15g parsley_fresh(11297)+8g cilantro_raw(11165)+3g chives_raw(11156)+2g thyme_fresh(2049)+0.4g salt+0.3g pepper+28.35g cheese_parmesan_hard(1033)+13.6g olive_oil(4053)+14.2g butter_unsalted(1145); yfw=0.90 → 354.7g cooked; 88.7g/slice (4 slices); 202 kcal·12.4P·15.9F·2.1C per 100g; dietary_category=veggie |
 | BKFST_034 | Avocado Toast Basic | (none) | Rule D ✅ — no canonical; 38g bread_multigrain_toasted(18036)+75g avocado_raw(9038)+5g lemon_juice_raw(9152)+4.5g olive_oil(4053)+0.4g salt(2047)+0.3g red_pepper_flakes(2031); yfw=1.00 → 123.2g; 1 toast/serving; 224 kcal·5.7P·14.5F·20.2C per 100g; dietary_category=vegan |
-| BKFST_035 | Avocado Toast Tomato & Egg | (none) | Rule D ✅ — no canonical; 38g bread_multigrain_toasted(18036)+75g avocado_raw(9038)+5g lemon_juice_raw(9152)+4.5g olive_oil(4053)+68g cherry_tomato_raw(11529)+50g egg_cooked_poached(1131)+0.4g salt(2047)+0.3g red_pepper_flakes(2031); yfw=1.00 → 241.2g; 1 toast/serving; 149 kcal·5.8P·9.4F·11.6C per 100g; dietary_category=veggie |
+| BKFST_035 | Avocado Toast Tomato & Egg | (none) | Rule D ✅ — no canonical; 38g bread_multigrain_toasted(18036)+75g avocado_raw(9038)+5g lemon_juice_raw(9152)+4.5g olive_oil(4053)+68g tomato_red_raw(11529)+50g egg_cooked_poached(1131)+0.4g salt(2047)+0.3g red_pepper_flakes(2031); yfw=1.00 → 241.2g; 1 toast/serving; 149 kcal·5.8P·9.4F·11.6C per 100g; dietary_category=veggie |
 
 **Ingredients needed in ledger before building:**
-- (none outstanding — cherry_tomato_raw (NDB 11529) added during BKFST_035 build; cheese_cheddar NDB 1009 + cheese_gruyere NDB 1023 added during SAND_001 build; cheese_american NDB 1253 added during SAND_002 build)
+- (none outstanding — tomato_red_raw (NDB 11529) added during BKFST_035 build (formerly cherry_tomato_raw); cheese_cheddar NDB 1009 + cheese_gruyere NDB 1023 added during SAND_001 build; cheese_american NDB 1253 added during SAND_002 build)
 
 ## Current Work: SAND Recipes
 
