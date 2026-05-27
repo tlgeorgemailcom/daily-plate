@@ -4294,7 +4294,7 @@ export const LEVELS: Level[] = [
       { name: 'all-purpose enriched unbleached white flour', quantity: '1 tbsp', section: 'sandwich', ndbNo: '20581', portionDesc: 'g', portionGrams: 8.0 },
       { name: 'whole milk', quantity: '½ cup', section: 'sandwich', ndbNo: '1077', portionDesc: 'g', portionGrams: 122.0 },
       { name: 'yellow mustard', quantity: '1 tsp', section: 'sandwich', ndbNo: '2046', portionDesc: 'g', portionGrams: 5.0 },
-      { name: 'fried egg', quantity: '1 large egg', section: 'sandwich', ndbNo: '1128', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'fried egg', quantity: '1 large', section: 'sandwich', ndbNo: '1128', portionDesc: 'g', portionGrams: 50.0 },
       { name: 'ground nutmeg', quantity: 'pinch', section: 'sandwich', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.3 },
       { name: 'salt', quantity: 'pinch', section: 'sandwich', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.4 },
       { name: 'ground black pepper', quantity: 'pinch', section: 'sandwich', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.2 }
