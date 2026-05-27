@@ -4057,5 +4057,44 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sandwich', label: 'Chicken Salad', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_009',
+    name: 'Ham and Cheese Sandwich',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 87,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 sandwich',
+    prepTime: '10 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":505.0,"pro":27.3,"fat":28.5,"carb":33.7,"fib":2.9,"h2o":96.7,"sug":3.5,"perServing":{"cal":505.0,"pro":27.3,"fat":28.5,"carb":33.7,"fib":2.9,"h2o":96.7,"sug":3.5,"AddedSugars":0.0,"IntrinsicSugars":3.5},"micros":{"vitaminA":43.33,"vitaminC":1.78,"vitaminD":13.36,"vitaminE":0.44,"vitaminK":12.03,"vitaminB6":0.18,"vitaminB12":0.64,"thiamin":0.45,"riboflavin":0.2,"niacin":2.8,"folate":39.83,"calcium":187.83,"iron":1.66,"magnesium":23.09,"phosphorus":186.58,"potassium":182.52,"sodium":761.6,"zinc":1.5,"copper":0.08,"selenium":21.47,"cholesterol":41.86,"saturatedFat":5.02,"monoFat":4.55,"polyFat":4.28,"omega3":0.46,"omega6":2.92},"gramsPerServing":191.8,"servings":1,"per100g":{"Energy_KCal":263.31,"Water":50.44,"Protein":14.23,"TotalLipidFat":14.85,"Carbohydrate":17.56,"FiberTotalDietary":1.53,"SugarsTotal":1.84,"Cholesterol":41.86,"FattyAcids_totalSaturated":5.02,"FattyAcids_totalMonounsaturated":4.55,"FattyAcids_totalPolyunsaturated":4.28,"LinoleicAcid":2.92,"alphaLinolenicAcid":0.46,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":43.33,"Retinol":42.39,"Carotene_beta":10.67,"VitaminD":13.36,"VitaminE_alphaTocopherol":0.44,"VitaminK_phylloquinone":12.03,"VitaminC_totalAscorbicAcid":1.78,"Thiamin":0.45,"Riboflavin":0.2,"Niacin":2.8,"PantothenicAcid":0.43,"VitaminB6":0.18,"Folate_total":39.83,"Folate_food":12.92,"Folate_DFE":58.6,"FolicAcid":26.9,"VitaminB12":0.64,"Choline_total":46.17,"Betaine":34.36,"LuteinZeaxanthin":18.74,"Lycopene":0.15,"Calcium_Ca":187.83,"Iron_Fe":1.66,"Magnesium_Mg":23.09,"Phosphorus_P":186.58,"Potassium_K":182.52,"Sodium_Na":761.6,"Zinc_Zn":1.5,"Copper_Cu":0.08,"Manganese_Mn":0.42,"Selenium_Se":21.47,"Tryptophan":0.13,"Threonine":0.4,"Isoleucine":0.48,"Leucine":0.88,"Lysine":0.88,"Methionine":0.26,"Cystine":0.12,"Phenylalanine":0.47,"Tyrosine":0.44,"Valine":0.62,"Arginine":0.51,"Histidine":0.37,"Alanine":0.46,"AsparticAcid":0.75,"GlutamicAcid":1.72,"Glycine":0.38,"Proline":0.79,"Serine":0.48,"omega3":0.46,"omega6":2.92,"AddedSugars":0.0,"IntrinsicSugars":1.84},"addedSugars":0.0,"intrinsicSugars":3.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18069","name":"Bread, white, commercially prepared (includes soft bread crumbs)","grams":60.0},{"ndb":"7029","name":"Ham, sliced, regular (approximately 11% fat)","grams":85.0},{"ndb":"1040","name":"Cheese, swiss","grams":28.0},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":5.0},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":13.8}],"sections":[{"section_key":"sandwich","section_label":"Ham and Cheese","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":191.8,"raw_water_grams":96.74,"raw_fat_grams":28.48,"final_grams":191.8}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Ham and Cheese Sandwich', quantity: 'custom (g)', foodWord: 'HAMANDCHEESE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white bread', quantity: '2 slices (30g each)', section: 'sandwich', ndbNo: '18069', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'sliced ham', quantity: '3 oz sliced', section: 'sandwich', ndbNo: '7029', portionDesc: 'g', portionGrams: 85.0 },
+      { name: 'Swiss cheese', quantity: '1 oz (1 slice)', section: 'sandwich', ndbNo: '1040', portionDesc: 'g', portionGrams: 28.0 },
+      { name: 'yellow mustard', quantity: '1 tsp', section: 'sandwich', ndbNo: '2046', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'mayonnaise', quantity: '1 tbsp', section: 'sandwich', ndbNo: '4025', portionDesc: 'g', portionGrams: 13.8 }
+    ],
+    recipeInstructions: [
+      'Spread mustard and mayonnaise on one or both bread slices.',
+      'Layer the sliced ham and Swiss cheese on one slice, then top with the second slice.',
+      'Cut diagonally and serve.',
+      '1 sandwich (191.8 g): 505.0 cal | 27.3g protein | 28.5g fat | 33.7g carbs | 2.9g fiber | 3.5g sugar | 96.7g water'
+    ],
+    sections: [
+      { key: 'sandwich', label: 'Ham and Cheese', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
