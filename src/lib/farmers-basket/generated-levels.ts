@@ -4657,5 +4657,46 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sandwich', label: 'Turkey & Avocado with Bacon Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_023',
+    name: 'Roast Beef Sandwich',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 101,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving',
+    prepTime: '5 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":364.1,"pro":28.1,"fat":16.7,"carb":24.6,"fib":3.9,"h2o":167.0,"sug":4.1,"perServing":{"cal":364.1,"pro":28.1,"fat":16.7,"carb":24.6,"fib":3.9,"h2o":167.0,"sug":4.1,"AddedSugars":0.0,"IntrinsicSugars":4.1},"micros":{"vitaminA":11.44,"vitaminC":2.5,"vitaminD":0.87,"vitaminE":1.08,"vitaminK":15.11,"vitaminB6":0.28,"vitaminB12":0.96,"thiamin":0.11,"riboflavin":0.14,"niacin":3.64,"folate":16.32,"calcium":40.5,"iron":1.59,"magnesium":28.28,"phosphorus":165.87,"potassium":409.71,"sodium":553.51,"zinc":1.92,"copper":0.09,"selenium":13.01,"cholesterol":26.24,"saturatedFat":1.45,"monoFat":1.86,"polyFat":3.07,"omega3":0.35,"omega6":2.62},"gramsPerServing":242.0,"servings":1,"per100g":{"Energy_KCal":150.48,"Water":68.99,"Protein":11.62,"TotalLipidFat":6.89,"Carbohydrate":10.17,"FiberTotalDietary":1.62,"SugarsTotal":1.68,"Cholesterol":26.24,"FattyAcids_totalSaturated":1.45,"FattyAcids_totalMonounsaturated":1.86,"FattyAcids_totalPolyunsaturated":3.07,"LinoleicAcid":2.62,"alphaLinolenicAcid":0.35,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":11.44,"Retinol":2.27,"Carotene_beta":100.74,"VitaminD":0.87,"VitaminE_alphaTocopherol":1.08,"VitaminK_phylloquinone":15.11,"VitaminC_totalAscorbicAcid":2.5,"Thiamin":0.11,"Riboflavin":0.14,"Niacin":3.64,"PantothenicAcid":0.43,"VitaminB6":0.28,"Folate_total":16.32,"Folate_food":16.32,"Folate_DFE":16.32,"FolicAcid":0.0,"VitaminB12":0.96,"Choline_total":30.22,"Betaine":26.17,"LuteinZeaxanthin":64.23,"Lycopene":425.29,"Calcium_Ca":40.5,"Iron_Fe":1.59,"Magnesium_Mg":28.28,"Phosphorus_P":165.87,"Potassium_K":409.71,"Sodium_Na":553.51,"Zinc_Zn":1.92,"Copper_Cu":0.09,"Manganese_Mn":0.49,"Selenium_Se":13.01,"Tryptophan":0.0,"Threonine":0.01,"Isoleucine":0.01,"Leucine":0.02,"Lysine":0.01,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.01,"Tyrosine":0.01,"Valine":0.01,"Arginine":0.01,"Histidine":0.01,"Alanine":0.01,"AsparticAcid":0.04,"GlutamicAcid":0.11,"Glycine":0.01,"Proline":0.01,"Serine":0.01,"omega3":0.35,"omega6":2.62,"AddedSugars":0.0,"IntrinsicSugars":1.68},"addedSugars":0.0,"intrinsicSugars":4.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18075","name":"Bread, whole-wheat, commercially prepared","grams":50.0},{"ndb":"7043","name":"Roast beef, deli style, prepackaged, sliced","grams":113.0},{"ndb":"11252","name":"Lettuce, iceberg (includes crisphead types), raw","grams":20.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":40.0},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":14.0},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":5.0}],"sections":[{"section_key":"sandwich","section_label":"Roast Beef Sandwich","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":242.0,"raw_water_grams":166.96,"raw_fat_grams":16.67,"final_grams":242.0}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Roast Beef Sandwich', quantity: 'custom (g)', foodWord: 'ROASTBEEFSANDWICH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'whole wheat bread', quantity: '2 slices', section: 'sandwich', ndbNo: '18075', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'deli roast beef', quantity: '4 oz', section: 'sandwich', ndbNo: '7043', portionDesc: 'g', portionGrams: 113.0 },
+      { name: 'iceberg lettuce', quantity: '1 leaf', section: 'sandwich', ndbNo: '11252', portionDesc: 'g', portionGrams: 20.0 },
+      { name: 'tomato raw', quantity: '2 slices', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'mayonnaise', quantity: '1 tbsp', section: 'sandwich', ndbNo: '4025', portionDesc: 'g', portionGrams: 14.0 },
+      { name: 'yellow mustard', quantity: '1 tsp', section: 'sandwich', ndbNo: '2046', portionDesc: 'g', portionGrams: 5.0 }
+    ],
+    recipeInstructions: [
+      'Spread mayonnaise on one slice of whole wheat bread and mustard on the other.',
+      'Layer the roast beef slices on the mustard side.',
+      'Top with the lettuce and tomato slices.',
+      'Close the sandwich with the mayo slice, press gently, and cut in half to serve.',
+      '1 serving (242.0 g): 364 cal | 28.1g protein | 16.7g fat | 24.6g carbs | 3.9g fiber | 4.1g sugar | 167.0g water'
+    ],
+    sections: [
+      { key: 'sandwich', label: 'Roast Beef Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
