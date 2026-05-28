@@ -5225,5 +5225,58 @@ export const LEVELS: Level[] = [
       { key: 'chicken', label: 'Fried chicken', cookingMethod: '', yieldFactorWater: 0.82 },
       { key: 'assembly', label: 'Toppings & bun', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_036',
+    name: 'Buffalo Chicken Sandwich',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 114,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving',
+    prepTime: '30 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":785.3,"pro":39.8,"fat":46.5,"carb":50.7,"fib":2.7,"h2o":184.8,"sug":6.5,"perServing":{"cal":785.3,"pro":39.8,"fat":46.5,"carb":50.7,"fib":2.7,"h2o":184.8,"sug":6.5,"AddedSugars":0.0,"IntrinsicSugars":6.5},"micros":{"vitaminA":57.14,"vitaminC":0.59,"vitaminD":9.9,"vitaminE":1.07,"vitaminK":16.98,"vitaminB6":0.27,"vitaminB12":0.2,"thiamin":0.16,"riboflavin":0.2,"niacin":3.84,"folate":33.23,"calcium":42.12,"iron":1.44,"magnesium":20.24,"phosphorus":145.74,"potassium":212.27,"sodium":611.17,"zinc":0.61,"copper":0.06,"selenium":18.11,"cholesterol":66.91,"saturatedFat":4.08,"monoFat":5.48,"polyFat":3.17,"omega3":0.31,"omega6":2.35},"gramsPerServing":329.2,"servings":1,"per100g":{"Energy_KCal":238.53,"Water":56.14,"Protein":12.09,"TotalLipidFat":14.12,"Carbohydrate":15.4,"FiberTotalDietary":0.83,"SugarsTotal":1.97,"Cholesterol":66.91,"FattyAcids_totalSaturated":4.08,"FattyAcids_totalMonounsaturated":5.48,"FattyAcids_totalPolyunsaturated":3.17,"LinoleicAcid":2.35,"alphaLinolenicAcid":0.31,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":57.14,"Retinol":42.58,"Carotene_beta":161.59,"VitaminD":9.9,"VitaminE_alphaTocopherol":1.07,"VitaminK_phylloquinone":16.98,"VitaminC_totalAscorbicAcid":0.59,"Thiamin":0.16,"Riboflavin":0.2,"Niacin":3.84,"PantothenicAcid":0.7,"VitaminB6":0.27,"Folate_total":33.23,"Folate_food":15.72,"Folate_DFE":45.52,"FolicAcid":21.05,"VitaminB12":0.2,"Choline_total":54.37,"Betaine":2.75,"LuteinZeaxanthin":91.55,"Lycopene":0.02,"Calcium_Ca":42.12,"Iron_Fe":1.44,"Magnesium_Mg":20.24,"Phosphorus_P":145.74,"Potassium_K":212.27,"Sodium_Na":611.17,"Zinc_Zn":0.61,"Copper_Cu":0.06,"Manganese_Mn":0.19,"Selenium_Se":18.11,"Tryptophan":0.13,"Threonine":0.45,"Isoleucine":0.51,"Leucine":0.86,"Lysine":0.91,"Methionine":0.27,"Cystine":0.11,"Phenylalanine":0.45,"Tyrosine":0.38,"Valine":0.55,"Arginine":0.69,"Histidine":0.36,"Alanine":0.58,"AsparticAcid":0.98,"GlutamicAcid":1.77,"Glycine":0.44,"Proline":0.45,"Serine":0.46,"omega3":0.31,"omega6":2.35,"AddedSugars":0.0,"IntrinsicSugars":1.97},"addedSugars":0.0,"intrinsicSugars":6.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.82,"yieldFactorFat":1.0,"sources":[{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":120.0},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":30.0},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":25.0},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":23.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":14.0},{"ndb":"2047","name":"Salt, table","grams":3.0},{"ndb":"2030","name":"Spices, pepper, black","grams":0.5},{"ndb":"2020","name":"Spices, garlic powder","grams":2.0},{"ndb":"2028","name":"Spices, paprika","grams":1.0},{"ndb":"6169","name":"Sauce, ready-to-serve, pepper, TABASCO","grams":30.0},{"ndb":"1001","name":"Butter, salted","grams":14.0},{"ndb":"18350","name":"Rolls, hamburger or hotdog, plain","grams":43.0},{"ndb":"4639","name":"Salad dressing, ranch dressing, regular","grams":28.0},{"ndb":"11252","name":"Lettuce, iceberg (includes crisphead types), raw","grams":25.0}],"sections":[{"section_key":"chicken","section_label":"Fried chicken","prep_method":"raw","cook_method":"fried","cooking_method":"fried","cooking_method_normalized":"fried","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":262.5,"raw_water_grams":162.65,"raw_fat_grams":32.31,"final_grams":233.22},{"section_key":"assembly","section_label":"Toppings & bun","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":96.0,"raw_water_grams":51.47,"raw_fat_grams":14.19,"final_grams":96.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Buffalo Chicken Sandwich', quantity: 'custom (g)', foodWord: 'BUFFALOCHICKENSANDWICH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chicken breast raw', quantity: '4¼ oz', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '¼ cup', section: 'chicken', ndbNo: '20581', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'large egg', quantity: '½ egg', section: 'chicken', ndbNo: '1123', portionDesc: 'g', portionGrams: 25.0 },
+      { name: 'whole milk', quantity: '1½ tbsp', section: 'chicken', ndbNo: '1077', portionDesc: 'g', portionGrams: 23.0 },
+      { name: 'olive oil', quantity: '1 tbsp olive oil (absorbed into crust)', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 14.0 },
+      { name: 'salt', quantity: '½ tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'garlic powder', quantity: '½ tsp', section: 'chicken', ndbNo: '2020', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'paprika', quantity: '½ tsp', section: 'chicken', ndbNo: '2028', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'hot sauce', quantity: '2 tbsp', section: 'chicken', ndbNo: '6169', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'salted butter', quantity: '1 tbsp', section: 'chicken', ndbNo: '1001', portionDesc: 'g', portionGrams: 14.0 },
+      { name: 'hamburger bun', quantity: '1 bun', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 43.0 },
+      { name: 'ranch dressing', quantity: '2 tbsp', section: 'assembly', ndbNo: '4639', portionDesc: 'g', portionGrams: 28.0 },
+      { name: 'iceberg lettuce', quantity: '25g', section: 'assembly', ndbNo: '11252', portionDesc: 'g', portionGrams: 25.0 }
+    ],
+    recipeInstructions: [
+      'In a shallow bowl, whisk together the egg and milk. In a separate bowl, combine the flour, salt, pepper, garlic powder, and paprika.',
+      'Dip the chicken breast in the egg wash, letting the excess drip off, then dredge thoroughly in the seasoned flour.',
+      'Heat ½ inch of olive oil to 350°F in a deep skillet. Fry the chicken for 5–6 minutes per side until golden brown and cooked through (internal temperature 165°F). Transfer to a rack to drain.',
+      'Melt the butter in a small saucepan over low heat. Stir in the hot sauce until combined. Toss the fried chicken in the buffalo sauce to coat.',
+      'Spread ranch dressing on both buns, then place the lettuce on the bottom bun.',
+      'Place the buffalo chicken on top of the lettuce, close with the top bun, and serve.',
+      '(Oil in the ingredient list reflects only the amount absorbed into the crust.)',
+      '1 serving (329g): 785 cal | 39.8g protein | 46.5g fat | 50.7g carbs | 2.7g fiber | 6.5g sugar | 185g water'
+    ],
+    sections: [
+      { key: 'chicken', label: 'Fried chicken', cookingMethod: '', yieldFactorWater: 0.82 },
+      { key: 'assembly', label: 'Toppings & bun', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
