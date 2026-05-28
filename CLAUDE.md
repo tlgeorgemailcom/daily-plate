@@ -77,7 +77,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 |---|---|---|
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
 | `BKFST_NNN` | 🔧 In progress | 34 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035) |
-| `SAND_NNN` | 🔧 In progress | 3 (001, 002, 003) |
+| `SAND_NNN` | 🔧 In progress | 30 (001–030) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -146,6 +146,30 @@ Planned BKFST order (standalone components first, composites last):
 | SAND_004 | BLT Sandwich | (none) | Rule D ✅ — no canonical; 50g bread_white_commercial(18069)+34.5g bacon_cooked_pan_fried(10862)+60g tomato_red_raw(11529)+21g mayonnaise(4025)+28g lettuce_iceberg_raw(11252); yfw=1.00 → 193.5g; 1 sandwich/serving; 233.6 kcal·8.8P·15.3F·14.8C per 100g; dietary_category=all; food_word=BLT |
 | SAND_005 | Club Sandwich | (none) | Rule D ✅ — no canonical; 90g bread_white_commercial(18069)+80g turkey_breast_deli(7081)+23g bacon_cooked_pan_fried(10862)+60g tomato_red_raw(11529)+28g lettuce_iceberg_raw(11252)+21g mayonnaise(4025); yfw=1.00 → 302.0g; 1 sandwich/serving; 195.2 kcal·9.5P·9.9F·16.5C per 100g; dietary_category=all; food_word=CLUBSANDWICH |
 | SAND_006 | Egg Salad Sandwich | (none) | Rule D ✅ — no canonical; 60g bread_white_commercial(18069)+100g egg_cooked_hardboiled(1129)+27.6g mayonnaise(4025)+6g scallion_raw(11291)+2.5g mustard_yellow(2046)+1.5g salt_table(2047); yfw=1.00 → 197.6g; 1 sandwich/serving; 255.9 kcal·9.3P·16.9F·15.9C per 100g; dietary_category=veggie; food_word=EGGSALAD |
+| SAND_007 | Tuna Salad Sandwich | (none) | Rule D ✅ |
+| SAND_008 | Chicken Salad Sandwich | (none) | Rule D ✅ |
+| SAND_009 | Ham and Cheese Sandwich | (none) | Rule D ✅ |
+| SAND_010 | Peanut Butter & Jelly | (none) | Rule D ✅ |
+| SAND_011 | Pimento Cheese Sandwich | (none) | Rule D ✅ |
+| SAND_012 | Cucumber Tea Sandwich | (none) | Rule D ✅ |
+| SAND_013 | Croque Monsieur | (none) | Rule D ✅ |
+| SAND_014 | Monte Cristo | (none) | Rule D ✅ |
+| SAND_015 | Hot Brown | (none) | Rule D ✅ |
+| SAND_016 | Open-Faced Roast Beef with Gravy | (none) | Rule D ✅ |
+| SAND_017 | Dagwood | (none) | Rule D ✅ |
+| SAND_018 | Turkey Sandwich | (none) | Rule D ✅ |
+| SAND_019 | Turkey & Avocado | (none) | Rule D ✅ |
+| SAND_020 | Avocado with Sprouts & Tomato | (none) | Rule D ✅ |
+| SAND_021 | Reuben | (none) | Rule D ✅ |
+| SAND_022 | Pastrami Sandwich | (none) | Rule D ✅ |
+| SAND_023 | Corned Beef Sandwich | (none) | Rule D ✅ |
+| SAND_024 | Liverwurst Sandwich | (none) | Rule D ✅ |
+| SAND_025 | Reuben Sandwich | (none) | Rule D ✅ |
+| SAND_026 | Pastrami Sandwich | (none) | Rule D ✅ |
+| SAND_027 | Corned Beef Sandwich | (none) | Rule D ✅ |
+| SAND_028 | Liverwurst Sandwich | (none) | Rule D ✅ |
+| SAND_029 | Limburger Sandwich | (none) | Rule D ✅ — 64g bread_rye(18023)+57g limburger_cheese(1024)+20g onion_raw(11282)+5g mustard_yellow(2046); yfw=1.00 → 146g; 363 cal/serving; 248.7 kcal·10.5P·14.4F·20.0C per 100g; dietary_category=all; food_word=LIMBURGERSANDWICH |
+| SAND_030 | Patty Melt | (none) | Rule D ✅ — 64g bread_rye(18023)+113g beef_ground_80lean_raw(23572)+56g cheese_swiss(1040)+80g onion_raw(11282)+14g butter_salted(1001)+3g salt(2047)+0.3g black_pepper_ground(2030); yfw=0.82 → 296.4g; 806 cal/serving; 271.9 kcal·13.8P·18.1F·13.3C per 100g; dietary_category=all; food_word=PATTYMELT; pan grilled |
 
 ## Human Approval Requirements
 
@@ -222,6 +246,7 @@ FNDDS published nutrient profiles use **Foundation Foods** values for common ing
 - **`yff` for gravy/stew sausage**: fat rendered from sausage that becomes the roux base stays in the dish — `yff=1.0`, not <1.0. Only use `yff<1.0` when fat is physically drained away and discarded (e.g. ground beef patties, pan-fried sausage links). Getting this wrong is masked until the Atwater fix is applied, at which point energy plummets unexpectedly.
 - **Use `pan grilled` for griddle-cooked sandwiches**: any sandwich or flatbread item cooked in a skillet/griddle should use `cooking_method = pan grilled`. This alias resolves to `fried` retention factors internally (all macros = 1.00 for both) but displays as “pan grilled” in the RecipeBook section header instead of “fried”, which is confusing for cheese sandwiches. Implemented in `retention.py` (alias map), `cookingLossModel.ts` (community recipe path), and `RecipeForm.svelte` (dropdown).
 - **`food_word` naming for SAND series variants**: same-dish variants (e.g. grilled cheese with different cheeses) each need a unique `food_word` in `dev_recipes`. Follow the `GRILLEDCHEESE{VARIANT}` pattern: `GRILLEDCHEESE` (restaurant style), `GRILLEDCHEESEAMERICAN`, `GRILLEDCHEESECHEDDAR`. The base word (`GRILLEDCHEESE`) goes to the most distinctive/original variant; all others append the differentiator. For Rule D recipes the food_word need not exist in `food-portions-complete.csv`.
+- **Always use `BASE = "recipes_v3/data"` for all CSV writes in append scripts**: a root-level `recipe_instructions.csv` (dead legacy file, 4-column format) exists and will silently accept writes if the path prefix is omitted. Every pipeline CSV write must use `f"{BASE}/recipe_instructions.csv"`, `f"{BASE}/recipe_ingredients.csv"`, etc. Never use a bare filename for any `recipes_v3/data/` file.
 
 ## Composite Recipes (Rule D, `component_ref`)
 
