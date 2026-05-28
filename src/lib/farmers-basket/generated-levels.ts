@@ -5126,5 +5126,52 @@ export const LEVELS: Level[] = [
       { key: 'brisket', label: 'Barbecue brisket', cookingMethod: '', yieldFactorWater: 0.62, yieldFactorFat: 0.92 },
       { key: 'assembly', label: 'Toppings & bun', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_034',
+    name: 'Grilled Chicken Sandwich',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 112,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving',
+    prepTime: '30 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":445.5,"pro":38.9,"fat":21.1,"carb":25.1,"fib":1.9,"h2o":177.7,"sug":4.7,"perServing":{"cal":445.5,"pro":38.9,"fat":21.1,"carb":25.1,"fib":1.9,"h2o":177.7,"sug":4.7,"AddedSugars":0.0,"IntrinsicSugars":4.7},"micros":{"vitaminA":17.06,"vitaminC":2.18,"vitaminD":0.9,"vitaminE":0.73,"vitaminK":15.02,"vitaminB6":0.37,"vitaminB12":0.14,"thiamin":0.14,"riboflavin":0.14,"niacin":5.07,"folate":24.29,"calcium":34.7,"iron":0.91,"magnesium":22.46,"phosphorus":144.31,"potassium":263.34,"sodium":417.3,"zinc":0.56,"copper":0.05,"selenium":17.38,"cholesterol":43.11,"saturatedFat":1.33,"monoFat":2.75,"polyFat":2.97,"omega3":0.31,"omega6":2.43},"gramsPerServing":267.6,"servings":1,"per100g":{"Energy_KCal":166.46,"Water":66.4,"Protein":14.53,"TotalLipidFat":7.88,"Carbohydrate":9.37,"FiberTotalDietary":0.69,"SugarsTotal":1.77,"Cholesterol":43.11,"FattyAcids_totalSaturated":1.33,"FattyAcids_totalMonounsaturated":2.75,"FattyAcids_totalPolyunsaturated":2.97,"LinoleicAcid":2.43,"alphaLinolenicAcid":0.31,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":17.06,"Retinol":9.48,"Carotene_beta":84.13,"VitaminD":0.9,"VitaminE_alphaTocopherol":0.73,"VitaminK_phylloquinone":15.02,"VitaminC_totalAscorbicAcid":2.18,"Thiamin":0.14,"Riboflavin":0.14,"Niacin":5.07,"PantothenicAcid":0.8,"VitaminB6":0.37,"Folate_total":24.29,"Folate_food":15.78,"Folate_DFE":30.24,"FolicAcid":8.52,"VitaminB12":0.14,"Choline_total":47.43,"Betaine":3.99,"LuteinZeaxanthin":43.9,"Lycopene":288.46,"Calcium_Ca":34.7,"Iron_Fe":0.91,"Magnesium_Mg":22.46,"Phosphorus_P":144.31,"Potassium_K":263.34,"Sodium_Na":417.3,"Zinc_Zn":0.56,"Copper_Cu":0.05,"Manganese_Mn":0.14,"Selenium_Se":17.38,"Tryptophan":0.16,"Threonine":0.57,"Isoleucine":0.62,"Leucine":1.06,"Lysine":1.22,"Methionine":0.33,"Cystine":0.11,"Phenylalanine":0.51,"Tyrosine":0.46,"Valine":0.66,"Arginine":0.87,"Histidine":0.47,"Alanine":0.75,"AsparticAcid":1.23,"GlutamicAcid":1.97,"Glycine":0.56,"Proline":0.41,"Serine":0.49,"omega3":0.31,"omega6":2.43,"AddedSugars":0.0,"IntrinsicSugars":1.77},"addedSugars":0.0,"intrinsicSugars":4.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.8,"yieldFactorFat":0.98,"sources":[{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":150.0},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.5},{"ndb":"2020","name":"Spices, garlic powder","grams":1.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":5.0},{"ndb":"18350","name":"Rolls, hamburger or hotdog, plain","grams":43.0},{"ndb":"11252","name":"Lettuce, iceberg (includes crisphead types), raw","grams":25.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":30.0},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":14.0},{"ndb":"11937","name":"Pickles, cucumber, dill or kosher dill","grams":20.0}],"sections":[{"section_key":"chicken","section_label":"Grilled chicken","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.8,"yield_factor_fat":0.98,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":158.0,"raw_water_grams":110.98,"raw_fat_grams":8.95,"final_grams":135.62},{"section_key":"assembly","section_label":"Toppings & bun","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":132.0,"raw_water_grams":88.93,"raw_fat_grams":12.32,"final_grams":132.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Grilled Chicken Sandwich', quantity: 'custom (g)', foodWord: 'GRILLEDCHICKENSANDWICH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chicken breast raw', quantity: '5¼ oz', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'salt', quantity: '¼ tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '⅛ tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'garlic powder', quantity: '¼ tsp', section: 'chicken', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'olive oil', quantity: '1 tsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'hamburger bun', quantity: '1 bun', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 43.0 },
+      { name: 'iceberg lettuce', quantity: '25g', section: 'assembly', ndbNo: '11252', portionDesc: 'g', portionGrams: 25.0 },
+      { name: 'tomato raw', quantity: '30g', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'mayonnaise', quantity: '1 tbsp', section: 'assembly', ndbNo: '4025', portionDesc: 'g', portionGrams: 14.0 },
+      { name: 'dill pickle', quantity: '20g', section: 'assembly', ndbNo: '11937', portionDesc: 'g', portionGrams: 20.0 }
+    ],
+    recipeInstructions: [
+      'Season the chicken breast with salt, pepper, and garlic powder.',
+      'Heat a grill pan or skillet over medium-high heat with the olive oil. Grill the chicken for 5–6 minutes per side until cooked through and grill marks form (internal temperature 165°F).',
+      'Let the chicken rest for a few minutes, then place it on the bottom bun.',
+      'Top with lettuce, tomato, and pickle slices.',
+      'Spread mayonnaise on the top bun, close the sandwich, and serve.',
+      '1 serving (268g): 446 cal | 39g protein | 21g fat | 25g carbs | 2g fiber | 5g sugar | 178g water'
+    ],
+    sections: [
+      { key: 'chicken', label: 'Grilled chicken', cookingMethod: '', yieldFactorWater: 0.8, yieldFactorFat: 0.98 },
+      { key: 'assembly', label: 'Toppings & bun', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
