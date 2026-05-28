@@ -67,7 +67,7 @@
       "grams": 20.0,
       "section": "sandwich",
       "ingredient_group": "sandwich",
-      "qty_display": "2 thin slices",
+      "qty_display": "2 thin slices onion (20g)",
       "contribution": {
         "Energy_KCal": 8.0,
         "Protein": 0.22,
@@ -88,7 +88,7 @@
       "grams": 30.0,
       "section": "sandwich",
       "ingredient_group": "sandwich",
-      "qty_display": "\u00bd pickle sliced thin",
+      "qty_display": "\u00bd dill pickle sliced thin (30g)",
       "contribution": {
         "Energy_KCal": 3.6,
         "Protein": 0.15,

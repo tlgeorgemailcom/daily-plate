@@ -4884,8 +4884,8 @@ export const LEVELS: Level[] = [
       { name: 'Liverwurst Sandwich', quantity: 'custom (g)', foodWord: 'LIVERWURST', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'rye bread', quantity: '2 slices', section: 'sandwich', ndbNo: '18060', portionDesc: 'g', portionGrams: 64.0 },
       { name: 'liverwurst', quantity: '3 oz', section: 'sandwich', ndbNo: '7041', portionDesc: 'g', portionGrams: 85.0 },
-      { name: 'onion', quantity: '2 thin slices', section: 'sandwich', ndbNo: '11282', portionDesc: 'g', portionGrams: 20.0 },
-      { name: 'dill pickle sliced thin', quantity: '½', section: 'sandwich', ndbNo: '11937', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'onion', quantity: '2 thin slices onion (20g)', section: 'sandwich', ndbNo: '11282', portionDesc: 'g', portionGrams: 20.0 },
+      { name: 'dill pickle sliced thin', quantity: '½ dill pickle sliced thin (30g)', section: 'sandwich', ndbNo: '11937', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'yellow mustard', quantity: '1 tbsp', section: 'sandwich', ndbNo: '2046', portionDesc: 'g', portionGrams: 15.0 }
     ],
     recipeInstructions: [
