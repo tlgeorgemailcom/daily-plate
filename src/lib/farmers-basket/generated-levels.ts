@@ -4447,5 +4447,45 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sandwich', label: 'Open-Faced Roast Beef with Gravy', cookingMethod: '', yieldFactorWater: 0.87 }
     ],
+  },
+  {
+    id: 'SAND_018',
+    name: 'Turkey Sandwich',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 96,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving',
+    prepTime: '10 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":416.5,"pro":19.6,"fat":26.0,"carb":25.5,"fib":3.7,"h2o":147.1,"sug":4.5,"perServing":{"cal":416.5,"pro":19.6,"fat":26.0,"carb":25.5,"fib":3.7,"h2o":147.1,"sug":4.5,"AddedSugars":0.0,"IntrinsicSugars":4.5},"micros":{"vitaminA":11.78,"vitaminC":2.71,"vitaminD":3.17,"vitaminE":1.17,"vitaminK":25.79,"vitaminB6":0.22,"vitaminB12":0.16,"thiamin":0.11,"riboflavin":0.09,"niacin":3.84,"folate":16.86,"calcium":45.85,"iron":0.83,"magnesium":26.78,"phosphorus":151.18,"potassium":256.03,"sodium":525.83,"zinc":0.82,"copper":0.07,"selenium":11.02,"cholesterol":23.95,"saturatedFat":1.98,"monoFat":2.69,"polyFat":6.38,"omega3":0.72,"omega6":5.54},"gramsPerServing":223.0,"servings":1,"per100g":{"Energy_KCal":186.77,"Water":65.96,"Protein":8.8,"TotalLipidFat":11.67,"Carbohydrate":11.45,"FiberTotalDietary":1.67,"SugarsTotal":2.04,"Cholesterol":23.95,"FattyAcids_totalSaturated":1.98,"FattyAcids_totalMonounsaturated":2.69,"FattyAcids_totalPolyunsaturated":6.38,"LinoleicAcid":5.54,"alphaLinolenicAcid":0.72,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":11.78,"Retinol":1.88,"Carotene_beta":108.56,"VitaminD":3.17,"VitaminE_alphaTocopherol":1.17,"VitaminK_phylloquinone":25.79,"VitaminC_totalAscorbicAcid":2.71,"Thiamin":0.11,"Riboflavin":0.09,"Niacin":3.84,"PantothenicAcid":0.31,"VitaminB6":0.22,"Folate_total":16.86,"Folate_food":16.86,"Folate_DFE":16.86,"FolicAcid":0.0,"VitaminB12":0.16,"Choline_total":23.67,"Betaine":29.8,"LuteinZeaxanthin":67.92,"Lycopene":461.52,"Calcium_Ca":45.85,"Iron_Fe":0.83,"Magnesium_Mg":26.78,"Phosphorus_P":151.18,"Potassium_K":256.03,"Sodium_Na":525.83,"Zinc_Zn":0.82,"Copper_Cu":0.07,"Manganese_Mn":0.52,"Selenium_Se":11.02,"Tryptophan":0.07,"Threonine":0.29,"Isoleucine":0.29,"Leucine":0.53,"Lysine":0.57,"Methionine":0.19,"Cystine":0.07,"Phenylalanine":0.25,"Tyrosine":0.22,"Valine":0.3,"Arginine":0.46,"Histidine":0.19,"Alanine":0.4,"AsparticAcid":0.64,"GlutamicAcid":1.11,"Glycine":0.35,"Proline":0.28,"Serine":0.28,"omega3":0.72,"omega6":5.54,"AddedSugars":0.0,"IntrinsicSugars":2.04},"addedSugars":0.0,"intrinsicSugars":4.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18075","name":"Bread, whole-wheat, commercially prepared","grams":50.0},{"ndb":"7081","name":"Turkey breast, sliced, prepackaged","grams":85.0},{"ndb":"11252","name":"Lettuce, iceberg (includes crisphead types), raw","grams":20.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":40.0},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":28.0}],"sections":[{"section_key":"sandwich","section_label":"Turkey Sandwich","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":223.0,"raw_water_grams":147.09,"raw_fat_grams":26.02,"final_grams":223.0}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Turkey Sandwich', quantity: 'custom (g)', foodWord: 'TURKEYSANDWICH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'whole wheat bread', quantity: '2 slices', section: 'sandwich', ndbNo: '18075', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'deli turkey breast', quantity: '3 oz', section: 'sandwich', ndbNo: '7081', portionDesc: 'g', portionGrams: 85.0 },
+      { name: 'iceberg lettuce', quantity: '1 leaf', section: 'sandwich', ndbNo: '11252', portionDesc: 'g', portionGrams: 20.0 },
+      { name: 'tomato raw', quantity: '2 slices', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'mayonnaise', quantity: '2 tbsp', section: 'sandwich', ndbNo: '4025', portionDesc: 'g', portionGrams: 28.0 }
+    ],
+    recipeInstructions: [
+      'Spread mayonnaise evenly on both slices of whole wheat bread.',
+      'Layer the turkey breast slices on one slice of bread.',
+      'Top the turkey with the lettuce and tomato slices.',
+      'Close the sandwich with the second bread slice, press gently, and cut in half to serve.',
+      '1 serving (223.0 g): 416 cal | 19.6g protein | 26.0g fat | 25.5g carbs | 3.7g fiber | 4.5g sugar | 147.1g water'
+    ],
+    sections: [
+      { key: 'sandwich', label: 'Turkey Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
