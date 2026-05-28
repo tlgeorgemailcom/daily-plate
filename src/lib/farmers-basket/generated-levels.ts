@@ -5173,5 +5173,57 @@ export const LEVELS: Level[] = [
       { key: 'chicken', label: 'Grilled chicken', cookingMethod: '', yieldFactorWater: 0.8, yieldFactorFat: 0.98 },
       { key: 'assembly', label: 'Toppings & bun', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_035',
+    name: 'Fried Chicken Sandwich',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 113,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving',
+    prepTime: '30 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":759.1,"pro":39.5,"fat":43.5,"carb":50.6,"fib":3.1,"h2o":200.1,"sug":6.3,"perServing":{"cal":759.1,"pro":39.5,"fat":43.5,"carb":50.6,"fib":3.1,"h2o":200.1,"sug":6.3,"AddedSugars":0.0,"IntrinsicSugars":6.3},"micros":{"vitaminA":31.08,"vitaminC":1.72,"vitaminD":9.9,"vitaminE":1.1,"vitaminK":20.2,"vitaminB6":0.26,"vitaminB12":0.18,"thiamin":0.16,"riboflavin":0.18,"niacin":3.75,"folate":33.82,"calcium":41.23,"iron":1.32,"magnesium":19.46,"phosphorus":127.29,"potassium":216.94,"sodium":534.39,"zinc":0.59,"copper":0.06,"selenium":17.31,"cholesterol":57.12,"saturatedFat":2.22,"monoFat":5.05,"polyFat":4.51,"omega3":0.46,"omega6":3.58},"gramsPerServing":340.8,"servings":1,"per100g":{"Energy_KCal":222.77,"Water":58.72,"Protein":11.61,"TotalLipidFat":12.77,"Carbohydrate":14.85,"FiberTotalDietary":0.91,"SugarsTotal":1.84,"Cholesterol":57.12,"FattyAcids_totalSaturated":2.22,"FattyAcids_totalMonounsaturated":5.05,"FattyAcids_totalPolyunsaturated":4.51,"LinoleicAcid":3.58,"alphaLinolenicAcid":0.46,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":31.08,"Retinol":19.25,"Carotene_beta":128.18,"VitaminD":9.9,"VitaminE_alphaTocopherol":1.1,"VitaminK_phylloquinone":20.2,"VitaminC_totalAscorbicAcid":1.72,"Thiamin":0.16,"Riboflavin":0.18,"Niacin":3.75,"PantothenicAcid":0.68,"VitaminB6":0.26,"Folate_total":33.82,"Folate_food":16.97,"Folate_DFE":45.62,"FolicAcid":20.25,"VitaminB12":0.18,"Choline_total":52.74,"Betaine":2.62,"LuteinZeaxanthin":99.61,"Lycopene":226.54,"Calcium_Ca":41.23,"Iron_Fe":1.32,"Magnesium_Mg":19.46,"Phosphorus_P":127.29,"Potassium_K":216.94,"Sodium_Na":534.39,"Zinc_Zn":0.59,"Copper_Cu":0.06,"Manganese_Mn":0.18,"Selenium_Se":17.31,"Tryptophan":0.13,"Threonine":0.44,"Isoleucine":0.49,"Leucine":0.84,"Lysine":0.88,"Methionine":0.26,"Cystine":0.11,"Phenylalanine":0.44,"Tyrosine":0.37,"Valine":0.54,"Arginine":0.67,"Histidine":0.35,"Alanine":0.57,"AsparticAcid":0.95,"GlutamicAcid":1.75,"Glycine":0.43,"Proline":0.44,"Serine":0.44,"omega3":0.46,"omega6":3.58,"AddedSugars":0.0,"IntrinsicSugars":1.84},"addedSugars":0.0,"intrinsicSugars":6.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.82,"yieldFactorFat":1.0,"sources":[{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":120.0},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":30.0},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":25.0},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":23.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":14.0},{"ndb":"2047","name":"Salt, table","grams":3.0},{"ndb":"2030","name":"Spices, pepper, black","grams":0.5},{"ndb":"2020","name":"Spices, garlic powder","grams":2.0},{"ndb":"2028","name":"Spices, paprika","grams":1.0},{"ndb":"18350","name":"Rolls, hamburger or hotdog, plain","grams":43.0},{"ndb":"11252","name":"Lettuce, iceberg (includes crisphead types), raw","grams":25.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":30.0},{"ndb":"11937","name":"Pickles, cucumber, dill or kosher dill","grams":20.0},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":28.0}],"sections":[{"section_key":"chicken","section_label":"Fried chicken","prep_method":"raw","cook_method":"fried","cooking_method":"fried","cooking_method_normalized":"fried","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":218.5,"raw_water_grams":131.87,"raw_fat_grams":20.72,"final_grams":194.76},{"section_key":"assembly","section_label":"Toppings & bun","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":146.0,"raw_water_grams":91.96,"raw_fat_grams":22.79,"final_grams":146.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Fried Chicken Sandwich', quantity: 'custom (g)', foodWord: 'FRIEDCHICKENSANDWICH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chicken breast raw', quantity: '4¼ oz', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '¼ cup', section: 'chicken', ndbNo: '20581', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'large egg', quantity: '½ egg', section: 'chicken', ndbNo: '1123', portionDesc: 'g', portionGrams: 25.0 },
+      { name: 'whole milk', quantity: '1½ tbsp', section: 'chicken', ndbNo: '1077', portionDesc: 'g', portionGrams: 23.0 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 14.0 },
+      { name: 'salt', quantity: '½ tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'garlic powder', quantity: '½ tsp', section: 'chicken', ndbNo: '2020', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'paprika', quantity: '½ tsp', section: 'chicken', ndbNo: '2028', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'hamburger bun', quantity: '1 bun', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 43.0 },
+      { name: 'iceberg lettuce', quantity: '25g', section: 'assembly', ndbNo: '11252', portionDesc: 'g', portionGrams: 25.0 },
+      { name: 'tomato raw', quantity: '30g sliced', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'dill pickle', quantity: '20g sliced', section: 'assembly', ndbNo: '11937', portionDesc: 'g', portionGrams: 20.0 },
+      { name: 'mayonnaise', quantity: '2 tbsp', section: 'assembly', ndbNo: '4025', portionDesc: 'g', portionGrams: 28.0 }
+    ],
+    recipeInstructions: [
+      'In a shallow bowl, whisk together the egg and milk. In a separate bowl, combine the flour, salt, pepper, garlic powder, and paprika.',
+      'Dip the chicken breast in the egg wash, letting the excess drip off, then dredge thoroughly in the seasoned flour.',
+      'Heat ½ inch of olive oil to 350°F in a deep skillet. Fry the chicken for 5–6 minutes per side until golden brown and cooked through (internal temperature 165°F). Transfer to a rack to drain.',
+      'Spread mayonnaise on both buns, then layer the lettuce, sliced tomato, and sliced pickles on the bottom bun.',
+      'Place the fried chicken on top of the toppings, close with the top bun, and serve.',
+      '(Oil in the ingredient list reflects only the amount absorbed into the crust.)',
+      '1 serving (341g): 759 cal | 39.6g protein | 43.5g fat | 50.6g carbs | 3.1g fiber | 6.3g sugar | 200g water'
+    ],
+    sections: [
+      { key: 'chicken', label: 'Fried chicken', cookingMethod: '', yieldFactorWater: 0.82 },
+      { key: 'assembly', label: 'Toppings & bun', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
