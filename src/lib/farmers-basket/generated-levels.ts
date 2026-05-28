@@ -4773,7 +4773,7 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Butter one side of each rye bread slice.',
       'Spread thousand island dressing on the unbuttered side of each slice.',
-      'Layer the corned beef, swiss cheese, and drained sauerkraut on one slice.',
+      'Layer one slice of swiss cheese, then the corned beef, then drained sauerkraut and then the other slice of swiss cheese on one slice of bread.',
       'Close the sandwich butter-side out and pan grill over medium heat 3-4 minutes per side until the bread is golden and the cheese melts.',
       '1 serving (278.8 g): 770 cal | 33.2g protein | 53.2g fat | 38.9g carbs | 5.7g fiber | 8.1g sugar | 146.0g water'
     ],
