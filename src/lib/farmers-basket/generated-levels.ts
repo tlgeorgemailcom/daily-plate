@@ -4980,5 +4980,56 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sandwich', label: 'Patty Melt', cookingMethod: '', yieldFactorWater: 0.82 }
     ],
+  },
+  {
+    id: 'SAND_031',
+    name: 'Sloppy Joe',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 109,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving',
+    prepTime: '20 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":461.2,"pro":20.7,"fat":22.7,"carb":44.9,"fib":2.5,"h2o":190.7,"sug":19.6,"perServing":{"cal":461.2,"pro":20.7,"fat":22.7,"carb":44.9,"fib":2.5,"h2o":190.7,"sug":19.6,"AddedSugars":1.9,"IntrinsicSugars":17.7},"micros":{"vitaminA":21.83,"vitaminC":4.53,"vitaminD":0.85,"vitaminE":0.5,"vitaminK":3.01,"vitaminB6":0.13,"vitaminB12":0.57,"thiamin":0.08,"riboflavin":0.12,"niacin":1.9,"folate":15.85,"calcium":38.3,"iron":1.46,"magnesium":15.93,"phosphorus":78.4,"potassium":245.17,"sodium":491.51,"zinc":1.47,"copper":0.08,"selenium":9.33,"cholesterol":24.75,"saturatedFat":3.26,"monoFat":3.12,"polyFat":0.38,"omega3":0.03,"omega6":0.22},"gramsPerServing":284.6,"servings":1,"per100g":{"Energy_KCal":162.05,"Water":66.98,"Protein":7.28,"TotalLipidFat":7.99,"Carbohydrate":15.79,"FiberTotalDietary":0.89,"SugarsTotal":6.89,"Cholesterol":24.75,"FattyAcids_totalSaturated":3.26,"FattyAcids_totalMonounsaturated":3.12,"FattyAcids_totalPolyunsaturated":0.38,"LinoleicAcid":0.22,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":21.83,"Retinol":13.33,"Carotene_beta":102.45,"VitaminD":0.85,"VitaminE_alphaTocopherol":0.5,"VitaminK_phylloquinone":3.01,"VitaminC_totalAscorbicAcid":4.53,"Thiamin":0.08,"Riboflavin":0.12,"Niacin":1.9,"PantothenicAcid":0.21,"VitaminB6":0.13,"Folate_total":15.85,"Folate_food":9.84,"Folate_DFE":20.04,"FolicAcid":8.01,"VitaminB12":0.57,"Choline_total":22.52,"Betaine":2.56,"LuteinZeaxanthin":37.64,"Lycopene":3022.5,"Calcium_Ca":38.3,"Iron_Fe":1.46,"Magnesium_Mg":15.93,"Phosphorus_P":78.4,"Potassium_K":245.17,"Sodium_Na":491.51,"Zinc_Zn":1.47,"Copper_Cu":0.08,"Manganese_Mn":0.15,"Selenium_Se":9.33,"Tryptophan":0.03,"Threonine":0.21,"Isoleucine":0.24,"Leucine":0.42,"Lysine":0.44,"Methionine":0.14,"Cystine":0.05,"Phenylalanine":0.22,"Tyrosine":0.16,"Valine":0.27,"Arginine":0.36,"Histidine":0.17,"Alanine":0.34,"AsparticAcid":0.55,"GlutamicAcid":1.0,"Glycine":0.36,"Proline":0.28,"Serine":0.22,"omega3":0.03,"omega6":0.22,"AddedSugars":0.68,"IntrinsicSugars":6.21},"addedSugars":1.9,"intrinsicSugars":17.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.8,"yieldFactorFat":1.0,"sources":[{"ndb":"18350","name":"Rolls, hamburger or hotdog, plain","grams":43.0},{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":85.0},{"ndb":"11282","name":"Onions, raw","grams":22.0},{"ndb":"11333","name":"Peppers, sweet, green, raw","grams":22.0},{"ndb":"11935","name":"Catsup","grams":51.0},{"ndb":"11546","name":"Tomato products, canned, paste, without salt added","grams":16.0},{"ndb":"14411","name":"Water, tap, drinking","grams":80.0},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":1.5},{"ndb":"6971","name":"Sauce, worcestershire","grams":2.5},{"ndb":"19334","name":"Sugars, brown","grams":2.0},{"ndb":"2020","name":"Spices, garlic powder","grams":0.8},{"ndb":"1001","name":"Butter, salted","grams":4.7},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3}],"sections":[{"section_key":"sandwich","section_label":"Sloppy Joe","prep_method":"pan grilled","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.8,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":14,"raw_grams":332.3,"raw_water_grams":238.32,"raw_fat_grams":22.74,"final_grams":284.64}],"cookingMethod":"pan grilled"},
+    recipeIngredients: [
+      { name: 'Sloppy Joe', quantity: 'custom (g)', foodWord: 'SLOPPYJOE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'hamburger bun', quantity: '1 bun', section: 'sandwich', ndbNo: '18350', portionDesc: 'g', portionGrams: 43.0 },
+      { name: 'ground beef (80/20)', quantity: '3 oz', section: 'sandwich', ndbNo: '23572', portionDesc: 'g', portionGrams: 85.0 },
+      { name: 'onion', quantity: '2 tbsp minced', section: 'sandwich', ndbNo: '11282', portionDesc: 'g', portionGrams: 22.0 },
+      { name: 'green bell pepper', quantity: '2 tbsp minced', section: 'sandwich', ndbNo: '11333', portionDesc: 'g', portionGrams: 22.0 },
+      { name: 'ketchup', quantity: '3 tbsp', section: 'sandwich', ndbNo: '11935', portionDesc: 'g', portionGrams: 51.0 },
+      { name: 'tomato paste', quantity: '1 tbsp', section: 'sandwich', ndbNo: '11546', portionDesc: 'g', portionGrams: 16.0 },
+      { name: 'water', quantity: '⅓ cup', section: 'sandwich', ndbNo: '14411', portionDesc: 'g', portionGrams: 80.0 },
+      { name: 'yellow mustard', quantity: '¼ tsp', section: 'sandwich', ndbNo: '2046', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'Worcestershire sauce', quantity: '½ tsp', section: 'sandwich', ndbNo: '6971', portionDesc: 'g', portionGrams: 2.5 },
+      { name: 'brown sugar', quantity: '½ tsp', section: 'sandwich', ndbNo: '19334', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'garlic powder', quantity: '¼ tsp', section: 'sandwich', ndbNo: '2020', portionDesc: 'g', portionGrams: 0.8 },
+      { name: 'salted butter', quantity: '1 tsp', section: 'sandwich', ndbNo: '1001', portionDesc: 'g', portionGrams: 4.7 },
+      { name: 'salt', quantity: '¼ tsp', section: 'sandwich', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: 'pinch', section: 'sandwich', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 }
+    ],
+    recipeInstructions: [
+      'Melt the butter in a skillet over medium-high heat. Add the onion and bell pepper and cook, stirring, until softened, about 5 minutes.',
+      'Add the ground beef and cook, breaking it up, until browned throughout, about 5–7 minutes. Drain any excess fat.',
+      'Stir in the garlic powder, salt, and pepper.',
+      'Push the meat to one side, add the tomato paste to the center of the pan, and cook for 1 minute, stirring, until it darkens slightly.',
+      'Stir in the ketchup, water, Worcestershire sauce, mustard, and brown sugar. Reduce heat to medium-low and simmer, stirring occasionally, until the sauce thickens, about 8–10 minutes.',
+      'Spoon the meat mixture onto the bottom bun and close with the top bun.',
+      '1 serving (284.6 g): 461 cal | 20.7g protein | 22.7g fat | 44.9g carbs | 2.5g fiber | 19.6g sugar | 190.7g water'
+    ],
+    sections: [
+      { key: 'sandwich', label: 'Sloppy Joe', cookingMethod: '', yieldFactorWater: 0.8 }
+    ],
   }
 ];
