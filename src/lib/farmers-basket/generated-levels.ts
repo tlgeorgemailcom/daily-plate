@@ -4698,5 +4698,46 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sandwich', label: 'Roast Beef Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_024',
+    name: 'Avocado with Sprouts & Tomato Sandwich',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'vegan',
+    levelNum: 102,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving',
+    prepTime: '5 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":283.8,"pro":9.6,"fat":14.1,"carb":32.8,"fib":9.9,"h2o":124.8,"sug":5.0,"perServing":{"cal":283.8,"pro":9.6,"fat":14.1,"carb":32.8,"fib":9.9,"h2o":124.8,"sug":5.0,"AddedSugars":0.0,"IntrinsicSugars":5.0},"micros":{"vitaminA":12.3,"vitaminC":7.98,"vitaminD":0.0,"vitaminE":1.04,"vitaminK":12.0,"vitaminB6":0.21,"vitaminB12":0.0,"thiamin":0.12,"riboflavin":0.1,"niacin":2.15,"folate":64.3,"calcium":40.33,"iron":1.11,"magnesium":39.18,"phosphorus":99.61,"potassium":333.53,"sodium":225.3,"zinc":0.87,"copper":0.17,"selenium":10.18,"cholesterol":0.0,"saturatedFat":1.13,"monoFat":4.22,"polyFat":1.34,"omega3":0.04,"omega6":0.0},"gramsPerServing":184.5,"servings":1,"per100g":{"Energy_KCal":153.82,"Water":67.63,"Protein":5.23,"TotalLipidFat":7.63,"Carbohydrate":17.79,"FiberTotalDietary":5.36,"SugarsTotal":2.71,"Cholesterol":0.0,"FattyAcids_totalSaturated":1.13,"FattyAcids_totalMonounsaturated":4.22,"FattyAcids_totalPolyunsaturated":1.34,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":12.3,"Retinol":0.0,"Carotene_beta":127.06,"VitaminD":0.0,"VitaminE_alphaTocopherol":1.04,"VitaminK_phylloquinone":12.0,"VitaminC_totalAscorbicAcid":7.98,"Thiamin":0.12,"Riboflavin":0.1,"Niacin":2.15,"PantothenicAcid":0.74,"VitaminB6":0.21,"Folate_total":64.3,"Folate_food":64.3,"Folate_DFE":64.3,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":14.67,"Betaine":0.32,"LuteinZeaxanthin":165.77,"Lycopene":557.83,"Calcium_Ca":40.33,"Iron_Fe":1.11,"Magnesium_Mg":39.18,"Phosphorus_P":99.61,"Potassium_K":333.53,"Sodium_Na":225.3,"Zinc_Zn":0.87,"Copper_Cu":0.17,"Manganese_Mn":0.7,"Selenium_Se":10.18,"Tryptophan":0.05,"Threonine":0.12,"Isoleucine":0.14,"Leucine":0.24,"Lysine":0.15,"Methionine":0.05,"Cystine":0.06,"Phenylalanine":0.16,"Tyrosine":0.09,"Valine":0.17,"Arginine":0.18,"Histidine":0.08,"Alanine":0.15,"AsparticAcid":0.29,"GlutamicAcid":0.87,"Glycine":0.16,"Proline":0.25,"Serine":0.16,"omega3":0.04,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":2.71},"addedSugars":0.0,"intrinsicSugars":5.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"28397","name":"Bread, multi-grain (includes whole-grain)","grams":56.0},{"ndb":"9038","name":"Avocados, raw, California","grams":75.0},{"ndb":"11001","name":"Alfalfa seeds, sprouted, raw","grams":8.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":40.0},{"ndb":"9152","name":"Lemon juice, raw","grams":5.0},{"ndb":"2047","name":"Salt, table","grams":0.5}],"sections":[{"section_key":"sandwich","section_label":"Avocado with Sprouts & Tomato Sandwich","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":184.5,"raw_water_grams":124.78,"raw_fat_grams":14.07,"final_grams":184.5}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Avocado with Sprouts & Tomato Sandwich', quantity: 'custom (g)', foodWord: 'AVOCADOSPROUTS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'multigrain bread', quantity: '2 slices', section: 'sandwich', ndbNo: '28397', portionDesc: 'g', portionGrams: 56.0 },
+      { name: 'avocado', quantity: '½ avocado', section: 'sandwich', ndbNo: '9038', portionDesc: 'g', portionGrams: 75.0 },
+      { name: 'alfalfa sprouts', quantity: '¼ cup', section: 'sandwich', ndbNo: '11001', portionDesc: 'g', portionGrams: 8.0 },
+      { name: 'tomato raw', quantity: '2 slices', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'lemon juice', quantity: '1 tsp', section: 'sandwich', ndbNo: '9152', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'salt', quantity: 'pinch', section: 'sandwich', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.5 }
+    ],
+    recipeInstructions: [
+      'Mash the avocado with lemon juice and a pinch of salt until smooth.',
+      'Spread the mashed avocado evenly on both slices of multigrain bread.',
+      'Layer the alfalfa sprouts on one slice, then top with the tomato slices.',
+      'Close the sandwich with the second bread slice, press gently, and cut in half to serve.',
+      '1 serving (184.5 g): 284 cal | 9.6g protein | 14.1g fat | 32.8g carbs | 9.9g fiber | 5.0g sugar | 124.8g water'
+    ],
+    sections: [
+      { key: 'sandwich', label: 'Avocado with Sprouts & Tomato Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
