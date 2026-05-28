@@ -4858,5 +4858,45 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sandwich', label: 'Corned Beef Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_028',
+    name: 'Liverwurst Sandwich',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 106,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving',
+    prepTime: '5 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":463.5,"pro":18.4,"fat":26.9,"carb":36.2,"fib":5.0,"h2o":126.8,"sug":3.8,"perServing":{"cal":463.5,"pro":18.4,"fat":26.9,"carb":36.2,"fib":5.0,"h2o":126.8,"sug":3.8,"AddedSugars":0.0,"IntrinsicSugars":3.8},"micros":{"vitaminA":3301.1,"vitaminC":1.15,"vitaminD":0.0,"vitaminE":0.13,"vitaminK":2.92,"vitaminB6":0.12,"vitaminB12":5.35,"thiamin":0.26,"riboflavin":0.52,"niacin":2.91,"folate":48.2,"calcium":46.71,"iron":3.56,"magnesium":22.01,"phosphorus":141.26,"potassium":157.87,"sodium":713.09,"zinc":1.33,"copper":0.16,"selenium":34.67,"cholesterol":62.76,"saturatedFat":4.42,"monoFat":5.84,"polyFat":1.34,"omega3":0.03,"omega6":0.02},"gramsPerServing":214.0,"servings":1,"per100g":{"Energy_KCal":216.57,"Water":59.27,"Protein":8.58,"TotalLipidFat":12.59,"Carbohydrate":16.94,"FiberTotalDietary":2.31,"SugarsTotal":1.76,"Cholesterol":62.76,"FattyAcids_totalSaturated":4.42,"FattyAcids_totalMonounsaturated":5.84,"FattyAcids_totalPolyunsaturated":1.34,"LinoleicAcid":0.02,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":3301.1,"Retinol":3299.91,"Carotene_beta":12.29,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.13,"VitaminK_phylloquinone":2.92,"VitaminC_totalAscorbicAcid":1.15,"Thiamin":0.26,"Riboflavin":0.52,"Niacin":2.91,"PantothenicAcid":1.36,"VitaminB6":0.12,"Folate_total":48.2,"Folate_food":30.56,"Folate_DFE":60.46,"FolicAcid":17.64,"VitaminB12":5.35,"Choline_total":6.98,"Betaine":0.02,"LuteinZeaxanthin":28.37,"Lycopene":0.0,"Calcium_Ca":46.71,"Iron_Fe":3.56,"Magnesium_Mg":22.01,"Phosphorus_P":141.26,"Potassium_K":157.87,"Sodium_Na":713.09,"Zinc_Zn":1.33,"Copper_Cu":0.16,"Manganese_Mn":0.35,"Selenium_Se":34.67,"Tryptophan":0.09,"Threonine":0.36,"Isoleucine":0.36,"Leucine":0.64,"Lysine":0.55,"Methionine":0.16,"Cystine":0.11,"Phenylalanine":0.38,"Tyrosine":0.22,"Valine":0.47,"Arginine":0.45,"Histidine":0.24,"Alanine":0.43,"AsparticAcid":0.63,"GlutamicAcid":1.75,"Glycine":0.54,"Proline":0.63,"Serine":0.41,"omega3":0.03,"omega6":0.02,"AddedSugars":0.0,"IntrinsicSugars":1.76},"addedSugars":0.0,"intrinsicSugars":3.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18060","name":"Bread, rye","grams":64.0},{"ndb":"7041","name":"Liver sausage, liverwurst, pork","grams":85.0},{"ndb":"11282","name":"Onions, raw","grams":20.0},{"ndb":"11937","name":"Pickles, cucumber, dill or kosher dill","grams":30.0},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":15.0}],"sections":[{"section_key":"sandwich","section_label":"Liverwurst Sandwich","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":214.0,"raw_water_grams":126.84,"raw_fat_grams":26.95,"final_grams":214.0}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Liverwurst Sandwich', quantity: 'custom (g)', foodWord: 'LIVERWURST', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'rye bread', quantity: '2 slices', section: 'sandwich', ndbNo: '18060', portionDesc: 'g', portionGrams: 64.0 },
+      { name: 'liverwurst', quantity: '3 oz', section: 'sandwich', ndbNo: '7041', portionDesc: 'g', portionGrams: 85.0 },
+      { name: 'onion', quantity: '2 thin slices', section: 'sandwich', ndbNo: '11282', portionDesc: 'g', portionGrams: 20.0 },
+      { name: 'dill pickle', quantity: '½ pickle sliced thin', section: 'sandwich', ndbNo: '11937', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'yellow mustard', quantity: '1 tbsp', section: 'sandwich', ndbNo: '2046', portionDesc: 'g', portionGrams: 15.0 }
+    ],
+    recipeInstructions: [
+      'Spread yellow mustard on one side of each rye bread slice.',
+      'Spread the liverwurst evenly on top of the mustard on one slice.',
+      'Top with the onion slices and dill pickle slices.',
+      'Close the sandwich with the second slice of bread, press gently, and cut in half to serve.',
+      '1 serving (214.0 g): 463 cal | 18.4g protein | 26.9g fat | 36.3g carbs | 4.9g fiber | 3.8g sugar | 126.8g water'
+    ],
+    sections: [
+      { key: 'sandwich', label: 'Liverwurst Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
