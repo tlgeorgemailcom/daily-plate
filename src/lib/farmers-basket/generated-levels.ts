@@ -5278,5 +5278,59 @@ export const LEVELS: Level[] = [
       { key: 'chicken', label: 'Fried chicken', cookingMethod: '', yieldFactorWater: 0.82 },
       { key: 'assembly', label: 'Toppings & bun', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_037',
+    name: 'Nashville Hot Chicken Sandwich',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 115,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving',
+    prepTime: '30 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":784.2,"pro":39.4,"fat":44.8,"carb":55.2,"fib":3.3,"h2o":146.8,"sug":10.0,"perServing":{"cal":784.2,"pro":39.4,"fat":44.8,"carb":55.2,"fib":3.3,"h2o":146.8,"sug":10.0,"AddedSugars":4.8,"IntrinsicSugars":5.2},"micros":{"vitaminA":72.13,"vitaminC":0.74,"vitaminD":11.24,"vitaminE":1.36,"vitaminK":13.86,"vitaminB6":0.31,"vitaminB12":0.21,"thiamin":0.18,"riboflavin":0.22,"niacin":4.36,"folate":35.98,"calcium":49.19,"iron":1.56,"magnesium":22.65,"phosphorus":147.0,"potassium":239.07,"sodium":625.5,"zinc":0.68,"copper":0.06,"selenium":20.15,"cholesterol":74.7,"saturatedFat":4.5,"monoFat":6.1,"polyFat":3.27,"omega3":0.29,"omega6":2.38},"gramsPerServing":293.3,"servings":1,"per100g":{"Energy_KCal":267.34,"Water":50.06,"Protein":13.44,"TotalLipidFat":15.28,"Carbohydrate":18.83,"FiberTotalDietary":1.11,"SugarsTotal":3.42,"Cholesterol":74.7,"FattyAcids_totalSaturated":4.5,"FattyAcids_totalMonounsaturated":6.1,"FattyAcids_totalPolyunsaturated":3.27,"LinoleicAcid":2.38,"alphaLinolenicAcid":0.29,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":72.13,"Retinol":47.33,"Carotene_beta":261.96,"VitaminD":11.24,"VitaminE_alphaTocopherol":1.36,"VitaminK_phylloquinone":13.86,"VitaminC_totalAscorbicAcid":0.74,"Thiamin":0.18,"Riboflavin":0.22,"Niacin":4.36,"PantothenicAcid":0.77,"VitaminB6":0.31,"Folate_total":35.98,"Folate_food":16.4,"Folate_DFE":49.69,"FolicAcid":23.52,"VitaminB12":0.21,"Choline_total":59.72,"Betaine":2.99,"LuteinZeaxanthin":166.43,"Lycopene":0.03,"Calcium_Ca":49.19,"Iron_Fe":1.56,"Magnesium_Mg":22.65,"Phosphorus_P":147.0,"Potassium_K":239.07,"Sodium_Na":625.5,"Zinc_Zn":0.68,"Copper_Cu":0.06,"Manganese_Mn":0.21,"Selenium_Se":20.15,"Tryptophan":0.15,"Threonine":0.5,"Isoleucine":0.57,"Leucine":0.97,"Lysine":1.02,"Methionine":0.3,"Cystine":0.12,"Phenylalanine":0.5,"Tyrosine":0.43,"Valine":0.62,"Arginine":0.77,"Histidine":0.4,"Alanine":0.65,"AsparticAcid":1.08,"GlutamicAcid":1.98,"Glycine":0.49,"Proline":0.51,"Serine":0.51,"omega3":0.29,"omega6":2.38,"AddedSugars":1.65,"IntrinsicSugars":1.77},"addedSugars":4.8,"intrinsicSugars":5.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.82,"yieldFactorFat":1.0,"sources":[{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":120.0},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":30.0},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":25.0},{"ndb":"1230","name":"Milk, buttermilk, fluid, whole","grams":23.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":14.0},{"ndb":"2047","name":"Salt, table","grams":3.0},{"ndb":"2030","name":"Spices, pepper, black","grams":0.5},{"ndb":"2020","name":"Spices, garlic powder","grams":2.0},{"ndb":"2028","name":"Spices, paprika","grams":1.0},{"ndb":"1001","name":"Butter, salted","grams":14.0},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":3.0},{"ndb":"19334","name":"Sugars, brown","grams":5.0},{"ndb":"18350","name":"Rolls, hamburger or hotdog, plain","grams":43.0},{"ndb":"11937","name":"Pickles, cucumber, dill or kosher dill","grams":20.0},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":14.0}],"sections":[{"section_key":"chicken","section_label":"Fried chicken","prep_method":"raw","cook_method":"fried","cooking_method":"fried","cooking_method_normalized":"fried","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":12,"raw_grams":240.5,"raw_water_grams":134.35,"raw_fat_grams":32.61,"final_grams":216.32},{"section_key":"assembly","section_label":"Toppings & bun","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":77.0,"raw_water_grams":36.67,"raw_fat_grams":12.22,"final_grams":77.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Nashville Hot Chicken Sandwich', quantity: 'custom (g)', foodWord: 'NASHVILLEHOTCHICKENSANDWICH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chicken breast raw', quantity: '4¼ oz', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '¼ cup', section: 'chicken', ndbNo: '20581', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'large egg', quantity: '½ egg', section: 'chicken', ndbNo: '1123', portionDesc: 'g', portionGrams: 25.0 },
+      { name: 'whole buttermilk', quantity: '1½ tbsp', section: 'chicken', ndbNo: '1230', portionDesc: 'g', portionGrams: 23.0 },
+      { name: 'olive oil', quantity: '1 tbsp olive oil (absorbed into crust)', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 14.0 },
+      { name: 'salt', quantity: '½ tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'garlic powder', quantity: '½ tsp', section: 'chicken', ndbNo: '2020', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'paprika', quantity: '½ tsp', section: 'chicken', ndbNo: '2028', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'salted butter', quantity: '1 tbsp', section: 'chicken', ndbNo: '1001', portionDesc: 'g', portionGrams: 14.0 },
+      { name: 'red pepper flakes', quantity: '1 tsp cayenne', section: 'chicken', ndbNo: '2031', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'brown sugar', quantity: '1 tsp', section: 'chicken', ndbNo: '19334', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'hamburger bun', quantity: '1 bun', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 43.0 },
+      { name: 'dill pickle', quantity: '20g sliced', section: 'assembly', ndbNo: '11937', portionDesc: 'g', portionGrams: 20.0 },
+      { name: 'mayonnaise', quantity: '1 tbsp', section: 'assembly', ndbNo: '4025', portionDesc: 'g', portionGrams: 14.0 }
+    ],
+    recipeInstructions: [
+      'In a shallow bowl, whisk together the egg and buttermilk. In a separate bowl, combine the flour, salt, pepper, garlic powder, and paprika.',
+      'Dip the chicken breast in the egg wash, letting the excess drip off, then dredge thoroughly in the seasoned flour.',
+      'Heat ½ inch of olive oil to 350°F in a deep skillet. Fry the chicken for 5–6 minutes per side until golden brown and cooked through (internal temperature 165°F). Transfer to a rack to drain.',
+      'Melt the butter in a small saucepan over low heat. Stir in the cayenne pepper and brown sugar until a smooth paste forms. Brush the hot paste over the fried chicken while still warm.',
+      'Spread mayonnaise on both buns. Place the sliced pickles on the bottom bun.',
+      'Place the Nashville hot chicken on top of the pickles, close with the top bun, and serve.',
+      '(Oil in the ingredient list reflects only the amount absorbed into the crust.)',
+      '1 serving (293g): 784 cal | 39.4g protein | 44.8g fat | 55.2g carbs | 3.3g fiber | 10.0g sugar | 147g water'
+    ],
+    sections: [
+      { key: 'chicken', label: 'Fried chicken', cookingMethod: '', yieldFactorWater: 0.82 },
+      { key: 'assembly', label: 'Toppings & bun', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
