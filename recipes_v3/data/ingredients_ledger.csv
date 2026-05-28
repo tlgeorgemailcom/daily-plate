@@ -132,3 +132,6 @@ cucumber_peeled_raw,11206,CUCUMBER,"Cucumber, peeled, raw",cucumber peeled,cup_s
 dill_fresh,2045,DILL,"Dill weed, fresh",fresh dill,sprigs,1.0,
 egg_fried,1128,EGGFRIED,"Egg, whole, cooked, fried",fried egg,large_egg,50.0,
 powdered_sugar,19336,SUGARPOWDERED,"Sugars, powdered",powdered sugar,tsp,4.0,
+roast_beef_deli,7043,BEEFROASTBEEF,"Roast beef, deli style, prepackaged, sliced",deli roast beef,oz,28.35,
+beef_broth_canned,6008,SOUPBEEFBROTH,"Soup, beef broth or bouillon canned, ready-to-serve",beef broth,cup,245.0,
+worcestershire_sauce,6971,WORCESTERSHIRE,"Sauce, worcestershire",Worcestershire sauce,teaspoon,5.0,
