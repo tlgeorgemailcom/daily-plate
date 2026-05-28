@@ -4487,5 +4487,46 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sandwich', label: 'Turkey Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_019',
+    name: 'Turkey with Provolone Sandwich',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 97,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving',
+    prepTime: '10 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":613.1,"pro":33.9,"fat":40.9,"carb":26.7,"fib":3.7,"h2o":170.0,"sug":4.9,"perServing":{"cal":613.1,"pro":33.9,"fat":40.9,"carb":26.7,"fib":3.7,"h2o":170.0,"sug":4.9,"AddedSugars":0.0,"IntrinsicSugars":4.9},"micros":{"vitaminA":56.79,"vitaminC":2.16,"vitaminD":6.54,"vitaminE":0.98,"vitaminK":21.06,"vitaminB6":0.19,"vitaminB12":0.42,"thiamin":0.09,"riboflavin":0.14,"niacin":3.1,"folate":15.48,"calcium":188.39,"iron":0.76,"magnesium":27.03,"phosphorus":220.39,"potassium":232.34,"sodium":596.11,"zinc":1.3,"copper":0.06,"selenium":11.71,"cholesterol":32.99,"saturatedFat":5.01,"monoFat":3.64,"polyFat":5.25,"omega3":0.57,"omega6":4.43},"gramsPerServing":279.0,"servings":1,"per100g":{"Energy_KCal":219.73,"Water":60.94,"Protein":12.16,"TotalLipidFat":14.67,"Carbohydrate":9.58,"FiberTotalDietary":1.33,"SugarsTotal":1.74,"Cholesterol":32.99,"FattyAcids_totalSaturated":5.01,"FattyAcids_totalMonounsaturated":3.64,"FattyAcids_totalPolyunsaturated":5.25,"LinoleicAcid":4.43,"alphaLinolenicAcid":0.57,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":56.79,"Retinol":47.67,"Carotene_beta":100.42,"VitaminD":6.54,"VitaminE_alphaTocopherol":0.98,"VitaminK_phylloquinone":21.06,"VitaminC_totalAscorbicAcid":2.16,"Thiamin":0.09,"Riboflavin":0.14,"Niacin":3.1,"PantothenicAcid":0.34,"VitaminB6":0.19,"Folate_total":15.48,"Folate_food":15.48,"Folate_DFE":15.48,"FolicAcid":0.0,"VitaminB12":0.42,"Choline_total":22.01,"Betaine":23.82,"LuteinZeaxanthin":54.29,"Lycopene":368.89,"Calcium_Ca":188.39,"Iron_Fe":0.76,"Magnesium_Mg":27.03,"Phosphorus_P":220.39,"Potassium_K":232.34,"Sodium_Na":596.11,"Zinc_Zn":1.3,"Copper_Cu":0.06,"Manganese_Mn":0.42,"Selenium_Se":11.71,"Tryptophan":0.13,"Threonine":0.43,"Isoleucine":0.45,"Leucine":0.88,"Lysine":0.99,"Methionine":0.29,"Cystine":0.08,"Phenylalanine":0.46,"Tyrosine":0.48,"Valine":0.57,"Arginine":0.57,"Histidine":0.37,"Alanine":0.46,"AsparticAcid":0.86,"GlutamicAcid":2.13,"Glycine":0.36,"Proline":0.78,"Serine":0.52,"omega3":0.57,"omega6":4.43,"AddedSugars":0.0,"IntrinsicSugars":1.74},"addedSugars":0.0,"intrinsicSugars":4.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18075","name":"Bread, whole-wheat, commercially prepared","grams":50.0},{"ndb":"7081","name":"Turkey breast, sliced, prepackaged","grams":85.0},{"ndb":"1035","name":"Cheese, provolone","grams":56.0},{"ndb":"11252","name":"Lettuce, iceberg (includes crisphead types), raw","grams":20.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":40.0},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":28.0}],"sections":[{"section_key":"sandwich","section_label":"Turkey with Provolone Sandwich","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":279.0,"raw_water_grams":170.02,"raw_fat_grams":40.93,"final_grams":279.0}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Turkey with Provolone Sandwich', quantity: 'custom (g)', foodWord: 'TURKEYPROVOLONE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'whole wheat bread', quantity: '2 slices', section: 'sandwich', ndbNo: '18075', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'deli turkey breast', quantity: '3 oz', section: 'sandwich', ndbNo: '7081', portionDesc: 'g', portionGrams: 85.0 },
+      { name: 'provolone cheese', quantity: '2 slices', section: 'sandwich', ndbNo: '1035', portionDesc: 'g', portionGrams: 56.0 },
+      { name: 'iceberg lettuce', quantity: '1 leaf', section: 'sandwich', ndbNo: '11252', portionDesc: 'g', portionGrams: 20.0 },
+      { name: 'tomato raw', quantity: '2 slices', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'mayonnaise', quantity: '2 tbsp', section: 'sandwich', ndbNo: '4025', portionDesc: 'g', portionGrams: 28.0 }
+    ],
+    recipeInstructions: [
+      'Spread mayonnaise evenly on both slices of whole wheat bread.',
+      'Layer the turkey breast slices on one slice of bread.',
+      'Top the turkey with both slices of provolone, then add the lettuce and tomato.',
+      'Close the sandwich with the second bread slice, press gently, and cut in half to serve.',
+      '1 serving (279.0 g): 613 cal | 33.9g protein | 40.9g fat | 26.7g carbs | 3.7g fiber | 4.9g sugar | 170.0g water'
+    ],
+    sections: [
+      { key: 'sandwich', label: 'Turkey with Provolone Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
