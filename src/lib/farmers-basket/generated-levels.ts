@@ -4898,5 +4898,44 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sandwich', label: 'Liverwurst Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_029',
+    name: 'Limburger Sandwich',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 107,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving',
+    prepTime: '5 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":363.1,"pro":17.3,"fat":17.8,"carb":33.4,"fib":4.2,"h2o":73.5,"sug":3.6,"perServing":{"cal":363.1,"pro":17.3,"fat":17.8,"carb":33.4,"fib":4.2,"h2o":73.5,"sug":3.6,"AddedSugars":0.0,"IntrinsicSugars":3.6},"micros":{"vitaminA":132.91,"vitaminC":1.2,"vitaminD":7.81,"vitaminE":0.25,"vitaminK":1.53,"vitaminB6":0.08,"vitaminB12":0.41,"thiamin":0.23,"riboflavin":0.34,"niacin":1.76,"folate":73.71,"calcium":231.34,"iron":1.38,"magnesium":28.75,"phosphorus":215.9,"potassium":147.95,"sodium":615.01,"zinc":1.36,"copper":0.09,"selenium":20.42,"cholesterol":35.14,"saturatedFat":6.82,"monoFat":4.01,"polyFat":0.57,"omega3":0.01,"omega6":0.01},"gramsPerServing":146.0,"servings":1,"per100g":{"Energy_KCal":248.73,"Water":50.33,"Protein":11.83,"TotalLipidFat":12.21,"Carbohydrate":22.84,"FiberTotalDietary":2.91,"SugarsTotal":2.49,"Cholesterol":35.14,"FattyAcids_totalSaturated":6.82,"FattyAcids_totalMonounsaturated":4.01,"FattyAcids_totalPolyunsaturated":0.57,"LinoleicAcid":0.01,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":132.91,"Retinol":132.35,"Carotene_beta":9.49,"VitaminD":7.81,"VitaminE_alphaTocopherol":0.25,"VitaminK_phylloquinone":1.53,"VitaminC_totalAscorbicAcid":1.2,"Thiamin":0.23,"Riboflavin":0.34,"Niacin":1.76,"PantothenicAcid":0.67,"VitaminB6":0.08,"Folate_total":73.71,"Folate_food":47.84,"Folate_DFE":91.68,"FolicAcid":25.86,"VitaminB12":0.41,"Choline_total":14.02,"Betaine":0.02,"LuteinZeaxanthin":28.09,"Lycopene":0.0,"Calcium_Ca":231.34,"Iron_Fe":1.38,"Magnesium_Mg":28.75,"Phosphorus_P":215.9,"Potassium_K":147.95,"Sodium_Na":615.01,"Zinc_Zn":1.36,"Copper_Cu":0.09,"Manganese_Mn":0.4,"Selenium_Se":20.42,"Tryptophan":0.15,"Threonine":0.4,"Isoleucine":0.61,"Leucine":1.08,"Lysine":0.77,"Methionine":0.3,"Cystine":0.12,"Phenylalanine":0.62,"Tyrosine":0.56,"Valine":0.73,"Arginine":0.43,"Histidine":0.31,"Alanine":0.39,"AsparticAcid":0.79,"GlutamicAcid":2.96,"Glycine":0.3,"Proline":1.36,"Serine":0.63,"omega3":0.01,"omega6":0.01,"AddedSugars":0.0,"IntrinsicSugars":2.49},"addedSugars":0.0,"intrinsicSugars":3.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18060","name":"Bread, rye","grams":64.0},{"ndb":"1024","name":"Cheese, limburger","grams":57.0},{"ndb":"11282","name":"Onions, raw","grams":20.0},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":5.0}],"sections":[{"section_key":"sandwich","section_label":"Limburger Sandwich","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":146.0,"raw_water_grams":73.48,"raw_fat_grams":17.83,"final_grams":146.0}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Limburger Sandwich', quantity: 'custom (g)', foodWord: 'LIMBURGERSANDWICH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'rye bread', quantity: '2 slices (32g each)', section: 'sandwich', ndbNo: '18060', portionDesc: 'g', portionGrams: 64.0 },
+      { name: 'limburger cheese', quantity: '2 oz', section: 'sandwich', ndbNo: '1024', portionDesc: 'g', portionGrams: 57.0 },
+      { name: 'onion (20g)', quantity: '2 thin slices', section: 'sandwich', ndbNo: '11282', portionDesc: 'g', portionGrams: 20.0 },
+      { name: 'yellow mustard', quantity: '1 tsp', section: 'sandwich', ndbNo: '2046', portionDesc: 'g', portionGrams: 5.0 }
+    ],
+    recipeInstructions: [
+      'Spread mustard on one side of each rye bread slice.',
+      'Lay the limburger cheese on top of the mustard on one slice.',
+      'Top with the thin onion slices.',
+      'Close the sandwich with the second bread slice, press gently, and serve.',
+      '1 serving (146.0 g): 363 cal | 17.3g protein | 17.8g fat | 33.4g carbs | 4.2g fiber | 3.6g sugar | 73.5g water'
+    ],
+    sections: [
+      { key: 'sandwich', label: 'Limburger Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
