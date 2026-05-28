@@ -4739,5 +4739,46 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sandwich', label: 'Avocado with Sprouts & Tomato Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_025',
+    name: 'Reuben Sandwich',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 103,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving',
+    prepTime: '10 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":769.6,"pro":33.2,"fat":53.2,"carb":38.9,"fib":5.7,"h2o":146.0,"sug":8.1,"perServing":{"cal":769.6,"pro":33.2,"fat":53.2,"carb":38.9,"fib":5.7,"h2o":146.0,"sug":8.1,"AddedSugars":0.0,"IntrinsicSugars":8.1},"micros":{"vitaminA":63.57,"vitaminC":1.63,"vitaminD":1.16,"vitaminE":0.59,"vitaminK":10.38,"vitaminB6":0.09,"vitaminB12":0.82,"thiamin":0.2,"riboflavin":0.17,"niacin":1.51,"folate":25.43,"calcium":162.77,"iron":1.68,"magnesium":21.57,"phosphorus":161.7,"potassium":142.47,"sodium":741.34,"zinc":2.39,"copper":0.11,"selenium":21.95,"cholesterol":57.49,"saturatedFat":7.95,"monoFat":6.23,"polyFat":2.04,"omega3":0.02,"omega6":0.17},"gramsPerServing":278.8,"servings":1,"per100g":{"Energy_KCal":276.08,"Water":52.36,"Protein":11.91,"TotalLipidFat":19.09,"Carbohydrate":13.95,"FiberTotalDietary":2.04,"SugarsTotal":2.9,"Cholesterol":57.49,"FattyAcids_totalSaturated":7.95,"FattyAcids_totalMonounsaturated":6.23,"FattyAcids_totalPolyunsaturated":2.04,"LinoleicAcid":0.17,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":63.57,"Retinol":61.41,"Carotene_beta":23.73,"VitaminD":1.16,"VitaminE_alphaTocopherol":0.59,"VitaminK_phylloquinone":10.38,"VitaminC_totalAscorbicAcid":1.63,"Thiamin":0.2,"Riboflavin":0.17,"Niacin":1.51,"PantothenicAcid":0.25,"VitaminB6":0.09,"Folate_total":25.43,"Folate_food":15.27,"Folate_DFE":32.49,"FolicAcid":13.54,"VitaminB12":0.82,"Choline_total":27.42,"Betaine":2.99,"LuteinZeaxanthin":52.14,"Lycopene":223.69,"Calcium_Ca":162.77,"Iron_Fe":1.68,"Magnesium_Mg":21.57,"Phosphorus_P":161.7,"Potassium_K":142.47,"Sodium_Na":741.34,"Zinc_Zn":2.39,"Copper_Cu":0.11,"Manganese_Mn":0.23,"Selenium_Se":21.95,"Tryptophan":0.12,"Threonine":0.44,"Isoleucine":0.56,"Leucine":1.02,"Lysine":0.92,"Methionine":0.29,"Cystine":0.13,"Phenylalanine":0.57,"Tyrosine":0.48,"Valine":0.69,"Arginine":0.58,"Histidine":0.38,"Alanine":0.55,"AsparticAcid":0.87,"GlutamicAcid":2.36,"Glycine":0.48,"Proline":1.04,"Serine":0.57,"omega3":0.02,"omega6":0.17,"AddedSugars":0.0,"IntrinsicSugars":2.9},"addedSugars":0.0,"intrinsicSugars":8.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.9,"yieldFactorFat":1.0,"sources":[{"ndb":"18060","name":"Bread, rye","grams":64.0},{"ndb":"13347","name":"Beef, cured, corned beef, brisket, cooked","grams":85.0},{"ndb":"1040","name":"Cheese, swiss","grams":42.0},{"ndb":"11439","name":"Sauerkraut, canned, solids and liquids","grams":60.0},{"ndb":"4017","name":"Salad dressing, thousand island, commercial, regular","grams":30.0},{"ndb":"1001","name":"Butter, salted","grams":14.0}],"sections":[{"section_key":"sandwich","section_label":"Reuben Sandwich","prep_method":"pan grilled","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":295.0,"raw_water_grams":162.18,"raw_fat_grams":53.22,"final_grams":278.78}],"cookingMethod":"pan grilled"},
+    recipeIngredients: [
+      { name: 'Reuben Sandwich', quantity: 'custom (g)', foodWord: 'REUBEN', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'rye bread', quantity: '2 slices', section: 'sandwich', ndbNo: '18060', portionDesc: 'g', portionGrams: 64.0 },
+      { name: 'corned beef', quantity: '3 oz', section: 'sandwich', ndbNo: '13347', portionDesc: 'g', portionGrams: 85.0 },
+      { name: 'Swiss cheese', quantity: '2 slices', section: 'sandwich', ndbNo: '1040', portionDesc: 'g', portionGrams: 42.0 },
+      { name: 'sauerkraut', quantity: '¼ cup', section: 'sandwich', ndbNo: '11439', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'thousand island dressing', quantity: '2 tbsp', section: 'sandwich', ndbNo: '4017', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'salted butter', quantity: '1 tbsp', section: 'sandwich', ndbNo: '1001', portionDesc: 'g', portionGrams: 14.0 }
+    ],
+    recipeInstructions: [
+      'Butter one side of each rye bread slice.',
+      'Spread thousand island dressing on the unbuttered side of each slice.',
+      'Layer the corned beef, swiss cheese, and drained sauerkraut on one slice.',
+      'Close the sandwich butter-side out and pan grill over medium heat 3-4 minutes per side until the bread is golden and the cheese melts.',
+      '1 serving (278.8 g): 770 cal | 33.2g protein | 53.2g fat | 38.9g carbs | 5.7g fiber | 8.1g sugar | 146.0g water'
+    ],
+    sections: [
+      { key: 'sandwich', label: 'Reuben Sandwich', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];
