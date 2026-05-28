@@ -4528,5 +4528,47 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sandwich', label: 'Turkey with Provolone Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_020',
+    name: 'Turkey & Avocado Sandwich',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 98,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving',
+    prepTime: '10 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":541.8,"pro":21.1,"fat":37.6,"carb":32.0,"fib":8.8,"h2o":201.3,"sug":4.8,"perServing":{"cal":541.8,"pro":21.1,"fat":37.6,"carb":32.0,"fib":8.8,"h2o":201.3,"sug":4.8,"AddedSugars":0.0,"IntrinsicSugars":4.8},"micros":{"vitaminA":10.58,"vitaminC":4.24,"vitaminD":2.37,"vitaminE":1.37,"vitaminK":24.59,"vitaminB6":0.24,"vitaminB12":0.12,"thiamin":0.1,"riboflavin":0.11,"niacin":3.35,"folate":35.02,"calcium":37.58,"iron":0.77,"magnesium":27.34,"phosphorus":126.72,"potassium":319.19,"sodium":395.5,"zinc":0.78,"copper":0.09,"selenium":8.34,"cholesterol":17.92,"saturatedFat":2.01,"monoFat":4.48,"polyFat":5.23,"omega3":0.56,"omega6":4.15},"gramsPerServing":298.0,"servings":1,"per100g":{"Energy_KCal":181.8,"Water":67.56,"Protein":7.08,"TotalLipidFat":12.61,"Carbohydrate":10.74,"FiberTotalDietary":2.96,"SugarsTotal":1.6,"Cholesterol":17.92,"FattyAcids_totalSaturated":2.01,"FattyAcids_totalMonounsaturated":4.48,"FattyAcids_totalPolyunsaturated":5.23,"LinoleicAcid":4.15,"alphaLinolenicAcid":0.56,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":10.58,"Retinol":1.41,"Carotene_beta":97.09,"VitaminD":2.37,"VitaminE_alphaTocopherol":1.37,"VitaminK_phylloquinone":24.59,"VitaminC_totalAscorbicAcid":4.24,"Thiamin":0.1,"Riboflavin":0.11,"Niacin":3.35,"PantothenicAcid":0.6,"VitaminB6":0.24,"Folate_total":35.02,"Folate_food":35.02,"Folate_DFE":35.02,"FolicAcid":0.0,"VitaminB12":0.12,"Choline_total":21.29,"Betaine":22.48,"LuteinZeaxanthin":119.03,"Lycopene":345.37,"Calcium_Ca":37.58,"Iron_Fe":0.77,"Magnesium_Mg":27.34,"Phosphorus_P":126.72,"Potassium_K":319.19,"Sodium_Na":395.5,"Zinc_Zn":0.78,"Copper_Cu":0.09,"Manganese_Mn":0.43,"Selenium_Se":8.34,"Tryptophan":0.06,"Threonine":0.24,"Isoleucine":0.24,"Leucine":0.43,"Lysine":0.46,"Methionine":0.15,"Cystine":0.06,"Phenylalanine":0.21,"Tyrosine":0.18,"Valine":0.25,"Arginine":0.37,"Histidine":0.15,"Alanine":0.32,"AsparticAcid":0.54,"GlutamicAcid":0.9,"Glycine":0.28,"Proline":0.23,"Serine":0.24,"omega3":0.56,"omega6":4.15,"AddedSugars":0.0,"IntrinsicSugars":1.6},"addedSugars":0.0,"intrinsicSugars":4.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18075","name":"Bread, whole-wheat, commercially prepared","grams":50.0},{"ndb":"7081","name":"Turkey breast, sliced, prepackaged","grams":85.0},{"ndb":"9038","name":"Avocados, raw, California","grams":75.0},{"ndb":"11252","name":"Lettuce, iceberg (includes crisphead types), raw","grams":20.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":40.0},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":28.0}],"sections":[{"section_key":"sandwich","section_label":"Turkey & Avocado Sandwich","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":298.0,"raw_water_grams":201.33,"raw_fat_grams":37.58,"final_grams":298.0}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Turkey & Avocado Sandwich', quantity: 'custom (g)', foodWord: 'TURKEYAVOCADO', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'whole wheat bread', quantity: '2 slices', section: 'sandwich', ndbNo: '18075', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'deli turkey breast', quantity: '3 oz', section: 'sandwich', ndbNo: '7081', portionDesc: 'g', portionGrams: 85.0 },
+      { name: 'avocado', quantity: '½ avocado', section: 'sandwich', ndbNo: '9038', portionDesc: 'g', portionGrams: 75.0 },
+      { name: 'iceberg lettuce', quantity: '1 leaf', section: 'sandwich', ndbNo: '11252', portionDesc: 'g', portionGrams: 20.0 },
+      { name: 'tomato raw', quantity: '2 slices', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'mayonnaise', quantity: '2 tbsp', section: 'sandwich', ndbNo: '4025', portionDesc: 'g', portionGrams: 28.0 }
+    ],
+    recipeInstructions: [
+      'Spread mayonnaise evenly on both slices of whole wheat bread.',
+      'Slice or mash the avocado and layer it on one slice of bread.',
+      'Top the avocado with the turkey breast slices.',
+      'Add the lettuce and tomato slices.',
+      'Close the sandwich with the second bread slice, press gently, and cut in half to serve.',
+      '1 serving (298.0 g): 542 cal | 21.1g protein | 37.6g fat | 32.0g carbs | 8.8g fiber | 4.8g sugar | 201.3g water'
+    ],
+    sections: [
+      { key: 'sandwich', label: 'Turkey & Avocado Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
