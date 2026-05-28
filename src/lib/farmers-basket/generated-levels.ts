@@ -4819,5 +4819,44 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sandwich', label: 'Pastrami Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_027',
+    name: 'Corned Beef Sandwich',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 105,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving',
+    prepTime: '5 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":568.4,"pro":34.1,"fat":32.7,"carb":32.7,"fib":4.3,"h2o":114.5,"sug":2.6,"perServing":{"cal":568.4,"pro":34.1,"fat":32.7,"carb":32.7,"fib":4.3,"h2o":114.5,"sug":2.6,"AddedSugars":0.0,"IntrinsicSugars":2.6},"micros":{"vitaminA":37.0,"vitaminC":0.14,"vitaminD":2.05,"vitaminE":0.28,"vitaminK":1.39,"vitaminB6":0.15,"vitaminB12":1.23,"thiamin":0.15,"riboflavin":0.23,"niacin":2.71,"folate":36.83,"calcium":142.91,"iron":1.9,"magnesium":25.27,"phosphorus":180.99,"potassium":142.3,"sodium":774.26,"zinc":3.28,"copper":0.14,"selenium":31.94,"cholesterol":62.17,"saturatedFat":5.77,"monoFat":6.29,"polyFat":0.8,"omega3":0.04,"omega6":0.12},"gramsPerServing":220.0,"servings":1,"per100g":{"Energy_KCal":258.38,"Water":52.06,"Protein":15.49,"TotalLipidFat":14.88,"Carbohydrate":14.87,"FiberTotalDietary":1.96,"SugarsTotal":1.18,"Cholesterol":62.17,"FattyAcids_totalSaturated":5.77,"FattyAcids_totalMonounsaturated":6.29,"FattyAcids_totalPolyunsaturated":0.8,"LinoleicAcid":0.12,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":37.0,"Retinol":36.02,"Carotene_beta":12.4,"VitaminD":2.05,"VitaminE_alphaTocopherol":0.28,"VitaminK_phylloquinone":1.39,"VitaminC_totalAscorbicAcid":0.14,"Thiamin":0.15,"Riboflavin":0.23,"Niacin":2.71,"PantothenicAcid":0.41,"VitaminB6":0.15,"Folate_total":36.83,"Folate_food":19.67,"Folate_DFE":48.76,"FolicAcid":17.16,"VitaminB12":1.23,"Choline_total":43.29,"Betaine":4.76,"LuteinZeaxanthin":24.43,"Lycopene":0.13,"Calcium_Ca":142.91,"Iron_Fe":1.9,"Magnesium_Mg":25.27,"Phosphorus_P":180.99,"Potassium_K":142.3,"Sodium_Na":774.26,"Zinc_Zn":3.28,"Copper_Cu":0.14,"Manganese_Mn":0.28,"Selenium_Se":31.94,"Tryptophan":0.13,"Threonine":0.58,"Isoleucine":0.72,"Leucine":1.3,"Lysine":1.2,"Methionine":0.38,"Cystine":0.21,"Phenylalanine":0.71,"Tyrosine":0.58,"Valine":0.85,"Arginine":0.83,"Histidine":0.49,"Alanine":0.78,"AsparticAcid":1.2,"GlutamicAcid":2.93,"Glycine":0.73,"Proline":1.2,"Serine":0.71,"omega3":0.04,"omega6":0.12,"AddedSugars":0.0,"IntrinsicSugars":1.18},"addedSugars":0.0,"intrinsicSugars":2.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18060","name":"Bread, rye","grams":64.0},{"ndb":"13347","name":"Beef, cured, corned beef, brisket, cooked","grams":113.0},{"ndb":"1040","name":"Cheese, swiss","grams":28.0},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":15.0}],"sections":[{"section_key":"sandwich","section_label":"Corned Beef Sandwich","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":220.0,"raw_water_grams":114.53,"raw_fat_grams":32.74,"final_grams":220.0}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Corned Beef Sandwich', quantity: 'custom (g)', foodWord: 'CORNEDBEEF', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'rye bread', quantity: '2 slices', section: 'sandwich', ndbNo: '18060', portionDesc: 'g', portionGrams: 64.0 },
+      { name: 'corned beef', quantity: '4 oz', section: 'sandwich', ndbNo: '13347', portionDesc: 'g', portionGrams: 113.0 },
+      { name: 'Swiss cheese', quantity: '1 slice', section: 'sandwich', ndbNo: '1040', portionDesc: 'g', portionGrams: 28.0 },
+      { name: 'yellow mustard', quantity: '1 tbsp', section: 'sandwich', ndbNo: '2046', portionDesc: 'g', portionGrams: 15.0 }
+    ],
+    recipeInstructions: [
+      'Spread yellow mustard on one side of each rye bread slice.',
+      'Layer the swiss cheese on one slice of bread.',
+      'Pile the corned beef on top of the swiss cheese.',
+      'Close the sandwich with the second slice of bread, press gently, and cut in half to serve.',
+      '1 serving (220.0 g): 568 cal | 34.1g protein | 32.7g fat | 32.7g carbs | 4.3g fiber | 2.6g sugar | 114.5g water'
+    ],
+    sections: [
+      { key: 'sandwich', label: 'Corned Beef Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
