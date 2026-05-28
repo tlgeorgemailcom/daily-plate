@@ -5079,5 +5079,52 @@ export const LEVELS: Level[] = [
       { key: 'pork', label: 'Pulled pork', cookingMethod: '', yieldFactorWater: 0.6, yieldFactorFat: 0.88 },
       { key: 'slaw', label: 'Coleslaw & bun', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_033',
+    name: 'Barbecue Brisket',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 111,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving',
+    prepTime: '45 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":573.0,"pro":33.2,"fat":28.5,"carb":45.7,"fib":2.6,"h2o":128.7,"sug":19.2,"perServing":{"cal":573.0,"pro":33.2,"fat":28.5,"carb":45.7,"fib":2.6,"h2o":128.7,"sug":19.2,"AddedSugars":0.0,"IntrinsicSugars":19.2},"micros":{"vitaminA":16.24,"vitaminC":1.1,"vitaminD":0.0,"vitaminE":0.31,"vitaminK":3.28,"vitaminB6":0.23,"vitaminB12":1.28,"thiamin":0.15,"riboflavin":0.16,"niacin":2.72,"folate":22.6,"calcium":47.13,"iron":1.99,"magnesium":21.95,"phosphorus":140.91,"potassium":285.97,"sodium":862.59,"zinc":2.54,"copper":0.09,"selenium":15.24,"cholesterol":41.76,"saturatedFat":4.8,"monoFat":5.13,"polyFat":0.7,"omega3":0.04,"omega6":0.29},"gramsPerServing":244.2,"servings":1,"per100g":{"Energy_KCal":234.63,"Water":52.69,"Protein":13.59,"TotalLipidFat":11.67,"Carbohydrate":18.7,"FiberTotalDietary":1.06,"SugarsTotal":7.87,"Cholesterol":41.76,"FattyAcids_totalSaturated":4.8,"FattyAcids_totalMonounsaturated":5.13,"FattyAcids_totalPolyunsaturated":0.7,"LinoleicAcid":0.29,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":16.24,"Retinol":5.11,"Carotene_beta":116.35,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.31,"VitaminK_phylloquinone":3.28,"VitaminC_totalAscorbicAcid":1.1,"Thiamin":0.15,"Riboflavin":0.16,"Niacin":2.72,"PantothenicAcid":0.33,"VitaminB6":0.23,"Folate_total":22.6,"Folate_food":13.27,"Folate_DFE":29.12,"FolicAcid":9.33,"VitaminB12":1.28,"Choline_total":48.04,"Betaine":7.12,"LuteinZeaxanthin":74.76,"Lycopene":838.4,"Calcium_Ca":47.13,"Iron_Fe":1.99,"Magnesium_Mg":21.95,"Phosphorus_P":140.91,"Potassium_K":285.97,"Sodium_Na":862.59,"Zinc_Zn":2.54,"Copper_Cu":0.09,"Manganese_Mn":0.18,"Selenium_Se":15.24,"Tryptophan":0.13,"Threonine":0.5,"Isoleucine":0.51,"Leucine":0.91,"Lysine":0.96,"Methionine":0.29,"Cystine":0.11,"Phenylalanine":0.45,"Tyrosine":0.38,"Valine":0.56,"Arginine":0.77,"Histidine":0.39,"Alanine":0.69,"AsparticAcid":1.08,"GlutamicAcid":1.78,"Glycine":0.63,"Proline":0.53,"Serine":0.44,"omega3":0.04,"omega6":0.29,"AddedSugars":0.0,"IntrinsicSugars":7.87},"addedSugars":0.0,"intrinsicSugars":19.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.62,"yieldFactorFat":0.92,"sources":[{"ndb":"13803","name":"Beef, brisket, whole, separable lean and fat, trimmed to 1/8\" fat, all grades, raw","grams":150.0},{"ndb":"2047","name":"Salt, table","grams":3.0},{"ndb":"2030","name":"Spices, pepper, black","grams":0.5},{"ndb":"2020","name":"Spices, garlic powder","grams":2.0},{"ndb":"2026","name":"Spices, onion powder","grams":2.0},{"ndb":"2028","name":"Spices, paprika","grams":1.0},{"ndb":"18350","name":"Rolls, hamburger or hotdog, plain","grams":43.0},{"ndb":"6150","name":"Sauce, barbecue","grams":45.0},{"ndb":"11282","name":"Onions, raw","grams":15.0},{"ndb":"11937","name":"Pickles, cucumber, dill or kosher dill","grams":20.0}],"sections":[{"section_key":"brisket","section_label":"Barbecue brisket","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.62,"yield_factor_fat":0.92,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":158.5,"raw_water_grams":92.04,"raw_fat_grams":28.77,"final_grams":121.22},{"section_key":"assembly","section_label":"Toppings & bun","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":123.0,"raw_water_grams":71.62,"raw_fat_grams":2.04,"final_grams":123.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Barbecue Brisket', quantity: 'custom (g)', foodWord: 'BBQBRISKET', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'beef brisket', quantity: '5¼ oz', section: 'brisket', ndbNo: '13803', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'salt', quantity: '½ tsp', section: 'brisket', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'brisket', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'garlic powder', quantity: '½ tsp', section: 'brisket', ndbNo: '2020', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'onion powder', quantity: '½ tsp', section: 'brisket', ndbNo: '2026', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'paprika', quantity: '½ tsp', section: 'brisket', ndbNo: '2028', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'hamburger bun', quantity: '1 bun', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 43.0 },
+      { name: 'BBQ sauce', quantity: '3 tbsp', section: 'assembly', ndbNo: '6150', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'onion', quantity: '15g', section: 'assembly', ndbNo: '11282', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'dill pickle', quantity: '20g', section: 'assembly', ndbNo: '11937', portionDesc: 'g', portionGrams: 20.0 }
+    ],
+    recipeInstructions: [
+      'Combine the salt, pepper, garlic powder, onion powder, and paprika, then rub the mixture all over the brisket.',
+      'Place the brisket fat-side up in a covered roasting pan or Dutch oven. Roast at 275°F until fork-tender and easily sliced, about 3½–4 hours.',
+      'Remove the brisket from the pan and let it rest for 10 minutes, then slice thinly against the grain.',
+      'Spread the BBQ sauce on the bottom bun and pile on the sliced brisket.',
+      'Top with the sliced onion and pickle slices, then close with the top bun.',
+      '1 serving (244g): 573 cal | 33g protein | 29g fat | 46g carbs | 3g fiber | 19g sugar | 129g water'
+    ],
+    sections: [
+      { key: 'brisket', label: 'Barbecue brisket', cookingMethod: '', yieldFactorWater: 0.62, yieldFactorFat: 0.92 },
+      { key: 'assembly', label: 'Toppings & bun', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

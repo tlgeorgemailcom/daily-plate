@@ -1,5 +1,7 @@
 # Daily Food Chain — AI Handoff
 
+> Claude AI is not required to ask permission to query the DataCentralCombo table in the comboo.db
+
 ## Project
 SvelteKit + Svelte 5 + TypeScript food/word game. Nutrition data comes from a Python pipeline (`recipes_v3/`) that computes per-100g macros from raw ingredients using USDA SR Legacy data and FNDDS canonical references.
 
