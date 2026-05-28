@@ -5201,7 +5201,7 @@ export const LEVELS: Level[] = [
       { name: 'all-purpose enriched unbleached white flour', quantity: '¼ cup', section: 'chicken', ndbNo: '20581', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'large egg', quantity: '½ egg', section: 'chicken', ndbNo: '1123', portionDesc: 'g', portionGrams: 25.0 },
       { name: 'whole milk', quantity: '1½ tbsp', section: 'chicken', ndbNo: '1077', portionDesc: 'g', portionGrams: 23.0 },
-      { name: 'olive oil', quantity: '1 tbsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 14.0 },
+      { name: 'olive oil', quantity: '1 tbsp (retained after frying)', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 14.0 },
       { name: 'salt', quantity: '½ tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'ground black pepper', quantity: '¼ tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.5 },
       { name: 'garlic powder', quantity: '½ tsp', section: 'chicken', ndbNo: '2020', portionDesc: 'g', portionGrams: 2.0 },
