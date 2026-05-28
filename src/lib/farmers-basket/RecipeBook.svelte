@@ -309,6 +309,10 @@
       }
     }
 
+    if (quantity.toLowerCase().includes(name.toLowerCase())) {
+      return quantity;
+    }
+
     return `${quantity} ${name}`;
   }
 
