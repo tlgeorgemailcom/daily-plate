@@ -5332,5 +5332,54 @@ export const LEVELS: Level[] = [
       { key: 'chicken', label: 'Fried chicken', cookingMethod: '', yieldFactorWater: 0.82 },
       { key: 'assembly', label: 'Toppings & bun', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_038',
+    name: 'Fish Sandwich',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'pesca',
+    levelNum: 116,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving',
+    prepTime: '25 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":640.5,"pro":35.4,"fat":27.1,"carb":62.4,"fib":4.0,"h2o":168.3,"sug":5.2,"perServing":{"cal":640.5,"pro":35.4,"fat":27.1,"carb":62.4,"fib":4.0,"h2o":168.3,"sug":5.2,"AddedSugars":0.0,"IntrinsicSugars":5.2},"micros":{"vitaminA":33.0,"vitaminC":0.79,"vitaminD":26.22,"vitaminE":1.07,"vitaminK":9.94,"vitaminB6":0.14,"vitaminB12":0.45,"thiamin":0.17,"riboflavin":0.17,"niacin":1.79,"folate":33.02,"calcium":42.49,"iron":1.64,"magnesium":33.1,"phosphorus":160.38,"potassium":257.36,"sodium":443.12,"zinc":0.75,"copper":0.07,"selenium":25.15,"cholesterol":79.36,"saturatedFat":1.72,"monoFat":4.62,"polyFat":1.93,"omega3":0.07,"omega6":0.43},"gramsPerServing":298.1,"servings":1,"per100g":{"Energy_KCal":214.88,"Water":56.45,"Protein":11.88,"TotalLipidFat":9.11,"Carbohydrate":20.94,"FiberTotalDietary":1.35,"SugarsTotal":1.75,"Cholesterol":79.36,"FattyAcids_totalSaturated":1.72,"FattyAcids_totalMonounsaturated":4.62,"FattyAcids_totalPolyunsaturated":1.93,"LinoleicAcid":0.43,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.01,"DPA_22_5n3":0.0,"DHA_22_6n3":0.03,"VitaminA_RAE":33.0,"Retinol":29.58,"Carotene_beta":36.47,"VitaminD":26.22,"VitaminE_alphaTocopherol":1.07,"VitaminK_phylloquinone":9.94,"VitaminC_totalAscorbicAcid":0.79,"Thiamin":0.17,"Riboflavin":0.17,"Niacin":1.79,"PantothenicAcid":0.4,"VitaminB6":0.14,"Folate_total":33.02,"Folate_food":19.56,"Folate_DFE":42.43,"FolicAcid":15.4,"VitaminB12":0.45,"Choline_total":72.32,"Betaine":1.28,"LuteinZeaxanthin":171.92,"Lycopene":0.02,"Calcium_Ca":42.49,"Iron_Fe":1.64,"Magnesium_Mg":33.1,"Phosphorus_P":160.38,"Potassium_K":257.36,"Sodium_Na":443.12,"Zinc_Zn":0.75,"Copper_Cu":0.07,"Manganese_Mn":0.2,"Selenium_Se":25.15,"Tryptophan":0.11,"Threonine":0.44,"Isoleucine":0.47,"Leucine":0.87,"Lysine":0.81,"Methionine":0.29,"Cystine":0.12,"Phenylalanine":0.45,"Tyrosine":0.36,"Valine":0.56,"Arginine":0.62,"Histidine":0.29,"Alanine":0.61,"AsparticAcid":1.01,"GlutamicAcid":1.65,"Glycine":0.45,"Proline":0.47,"Serine":0.5,"omega3":0.07,"omega6":0.43,"AddedSugars":0.0,"IntrinsicSugars":1.75},"addedSugars":0.0,"intrinsicSugars":5.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.85,"yieldFactorFat":1.0,"sources":[{"ndb":"15015","name":"Fish, cod, Atlantic, raw","grams":113.0},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":15.0},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":50.0},{"ndb":"20020","name":"Cornmeal, whole-grain, yellow","grams":30.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":14.0},{"ndb":"2047","name":"Salt, table","grams":2.0},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"2020","name":"Spices, garlic powder","grams":2.0},{"ndb":"18350","name":"Rolls, hamburger or hotdog, plain","grams":43.0},{"ndb":"27049","name":"Sauce, tartar, ready-to-serve","grams":28.0},{"ndb":"11252","name":"Lettuce, iceberg (includes crisphead types), raw","grams":21.0}],"sections":[{"section_key":"fish","section_label":"Fried cod","prep_method":"raw","cook_method":"fried","cooking_method":"fried","cooking_method_normalized":"fried","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":226.3,"raw_water_grams":134.89,"raw_fat_grams":20.76,"final_grams":206.07},{"section_key":"assembly","section_label":"Toppings & bun","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":92.0,"raw_water_grams":53.61,"raw_fat_grams":6.39,"final_grams":92.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Fish Sandwich', quantity: 'custom (g)', foodWord: 'FISHSANDWICH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'cod fillet', quantity: '4 oz', section: 'fish', ndbNo: '15015', portionDesc: 'g', portionGrams: 113.0 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '2 tbsp', section: 'fish', ndbNo: '20581', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'large egg', quantity: '1 egg', section: 'fish', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'cornmeal', quantity: '¼ cup', section: 'fish', ndbNo: '20020', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'olive oil', quantity: '1 tbsp olive oil (absorbed into crust)', section: 'fish', ndbNo: '4053', portionDesc: 'g', portionGrams: 14.0 },
+      { name: 'salt', quantity: '½ tsp', section: 'fish', ndbNo: '2047', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'fish', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'garlic powder', quantity: '½ tsp', section: 'fish', ndbNo: '2020', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'hamburger bun', quantity: '1 bun', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 43.0 },
+      { name: 'tartar sauce', quantity: '2 tbsp', section: 'assembly', ndbNo: '27049', portionDesc: 'g', portionGrams: 28.0 },
+      { name: 'iceberg lettuce', quantity: '1 leaf', section: 'assembly', ndbNo: '11252', portionDesc: 'g', portionGrams: 21.0 }
+    ],
+    recipeInstructions: [
+      'Pat the cod fillet dry. In a shallow bowl, combine the cornmeal, salt, pepper, and garlic powder. In a second bowl, whisk the egg with 1 tablespoon of water until frothy. Place flour in a third bowl.',
+      'Dredge the cod in flour, dip into the egg mixture, then coat in the seasoned cornmeal. Place on a rack until ready to fry.',
+      'Heat ½ inch of olive oil to 350°F in a skillet. Fry the cod for 3–4 minutes per side until golden and the fish flakes easily. Transfer to a rack to drain.',
+      'Spread tartar sauce on both halves of the bun.',
+      'Place the lettuce on the bottom bun, top with the fried cod fillet, close with the top bun, and serve.',
+      '(Oil in the ingredient list reflects only the amount absorbed into the crust.)',
+      '1 serving (298g): 641 cal | 35.4g protein | 27.1g fat | 62.4g carbs | 4.0g fiber | 5.2g sugar | 168g water'
+    ],
+    sections: [
+      { key: 'fish', label: 'Fried cod', cookingMethod: '', yieldFactorWater: 0.85 },
+      { key: 'assembly', label: 'Toppings & bun', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
