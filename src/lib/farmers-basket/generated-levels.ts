@@ -5157,16 +5157,16 @@ export const LEVELS: Level[] = [
       { name: 'olive oil', quantity: '1 tsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 5.0 },
       { name: 'hamburger bun', quantity: '1 bun', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 43.0 },
       { name: 'iceberg lettuce', quantity: '25g', section: 'assembly', ndbNo: '11252', portionDesc: 'g', portionGrams: 25.0 },
-      { name: 'tomato raw', quantity: '30g', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'tomato raw', quantity: '30g sliced', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'mayonnaise', quantity: '1 tbsp', section: 'assembly', ndbNo: '4025', portionDesc: 'g', portionGrams: 14.0 },
-      { name: 'dill pickle', quantity: '20g', section: 'assembly', ndbNo: '11937', portionDesc: 'g', portionGrams: 20.0 }
+      { name: 'dill pickle', quantity: '20g sliced', section: 'assembly', ndbNo: '11937', portionDesc: 'g', portionGrams: 20.0 }
     ],
     recipeInstructions: [
       'Season the chicken breast with salt, pepper, and garlic powder.',
       'Heat a grill pan or skillet over medium-high heat with the olive oil. Grill the chicken for 5–6 minutes per side until cooked through and grill marks form (internal temperature 165°F).',
-      'Let the chicken rest for a few minutes, then place it on the bottom bun.',
-      'Top with lettuce, tomato, and pickle slices.',
-      'Spread mayonnaise on the top bun, close the sandwich, and serve.',
+      'Spread mayonnaise on the bottom bun, then layer on the lettuce, sliced tomato, and sliced pickles.',
+      'Place the grilled chicken on top of the toppings.',
+      'Close with the top bun and serve.',
       '1 serving (268g): 446 cal | 39g protein | 21g fat | 25g carbs | 2g fiber | 5g sugar | 178g water'
     ],
     sections: [
