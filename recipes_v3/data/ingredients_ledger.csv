@@ -150,3 +150,8 @@ limburger_cheese,1024,LIMBURGERCHEESE,"Cheese, limburger",limburger cheese,oz,28
 hamburger_bun,18350,ROLLHOTDOG,"Rolls, hamburger or hotdog, plain",hamburger bun,bun,43.0,
 ketchup,11935,KETCHUP,Catsup,ketchup,tablespoon,17.0,
 tomato_paste,11546,TOMATOPASTE,"Tomato products, canned, paste, without salt added",tomato paste,tablespoon,16.0,
+pork_boston_butt_raw,10080,PORKBOSTONBUTT,"Pork, fresh, shoulder, (Boston butt), blade (steaks), separable lean and fat, raw",pork shoulder,oz,28.35,
+bbq_sauce,6150,BBQSAUCE,"Sauce, barbecue",BBQ sauce,tablespoon,15.0,
+cabbage_raw,11109,CABBAGE,"Cabbage, raw",green cabbage,cup shredded,89.0,
+paprika,2028,PAPRIKA,"Spices, paprika",paprika,teaspoon,2.3,
+apple_cider_vinegar,2048,VINEGARCIDER,"Vinegar, cider",apple cider vinegar,tablespoon,15.0,

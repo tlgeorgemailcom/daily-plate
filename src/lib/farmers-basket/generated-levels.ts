@@ -5030,5 +5030,54 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sandwich', label: 'Sloppy Joe', cookingMethod: '', yieldFactorWater: 0.8 }
     ],
+  },
+  {
+    id: 'SAND_032',
+    name: 'Pulled Pork',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 110,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving',
+    prepTime: '30 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":516.5,"pro":28.4,"fat":27.4,"carb":39.0,"fib":3.1,"h2o":148.5,"sug":15.3,"perServing":{"cal":516.5,"pro":28.4,"fat":27.4,"carb":39.0,"fib":3.1,"h2o":148.5,"sug":15.3,"AddedSugars":0.0,"IntrinsicSugars":15.3},"micros":{"vitaminA":17.81,"vitaminC":9.1,"vitaminD":15.27,"vitaminE":0.58,"vitaminK":29.74,"vitaminB6":0.25,"vitaminB12":0.47,"thiamin":0.32,"riboflavin":0.25,"niacin":2.76,"folate":27.42,"calcium":49.68,"iron":1.51,"magnesium":20.37,"phosphorus":129.73,"potassium":274.83,"sodium":594.29,"zinc":1.84,"copper":0.08,"selenium":18.84,"cholesterol":34.83,"saturatedFat":3.13,"monoFat":3.73,"polyFat":3.7,"omega3":0.38,"omega6":3.23},"gramsPerServing":249.5,"servings":1,"per100g":{"Energy_KCal":207.01,"Water":59.54,"Protein":11.37,"TotalLipidFat":11.0,"Carbohydrate":15.62,"FiberTotalDietary":1.25,"SugarsTotal":6.12,"Cholesterol":34.83,"FattyAcids_totalSaturated":3.13,"FattyAcids_totalMonounsaturated":3.73,"FattyAcids_totalPolyunsaturated":3.7,"LinoleicAcid":3.23,"alphaLinolenicAcid":0.38,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":17.81,"Retinol":6.79,"Carotene_beta":112.05,"VitaminD":15.27,"VitaminE_alphaTocopherol":0.58,"VitaminK_phylloquinone":29.74,"VitaminC_totalAscorbicAcid":9.1,"Thiamin":0.32,"Riboflavin":0.25,"Niacin":2.76,"PantothenicAcid":0.83,"VitaminB6":0.25,"Folate_total":27.42,"Folate_food":18.28,"Folate_DFE":33.8,"FolicAcid":9.13,"VitaminB12":0.47,"Choline_total":42.82,"Betaine":2.25,"LuteinZeaxanthin":73.34,"Lycopene":547.17,"Calcium_Ca":49.68,"Iron_Fe":1.51,"Magnesium_Mg":20.37,"Phosphorus_P":129.73,"Potassium_K":274.83,"Sodium_Na":594.29,"Zinc_Zn":1.84,"Copper_Cu":0.08,"Manganese_Mn":0.19,"Selenium_Se":18.84,"Tryptophan":0.1,"Threonine":0.42,"Isoleucine":0.46,"Leucine":0.79,"Lysine":0.86,"Methionine":0.26,"Cystine":0.1,"Phenylalanine":0.4,"Tyrosine":0.35,"Valine":0.49,"Arginine":0.64,"Histidine":0.4,"Alanine":0.55,"AsparticAcid":0.94,"GlutamicAcid":1.55,"Glycine":0.42,"Proline":0.39,"Serine":0.41,"omega3":0.38,"omega6":3.23,"AddedSugars":0.0,"IntrinsicSugars":6.12},"addedSugars":0.0,"intrinsicSugars":15.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.6,"yieldFactorFat":0.88,"sources":[{"ndb":"10080","name":"Pork, fresh, shoulder, (Boston butt), blade (steaks), separable lean and fat, raw","grams":130.0},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.5},{"ndb":"2020","name":"Spices, garlic powder","grams":1.0},{"ndb":"2028","name":"Spices, paprika","grams":1.0},{"ndb":"18350","name":"Rolls, hamburger or hotdog, plain","grams":43.0},{"ndb":"6150","name":"Sauce, barbecue","grams":30.0},{"ndb":"11109","name":"Cabbage, raw","grams":60.0},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":15.0},{"ndb":"2048","name":"Vinegar, cider","grams":5.0},{"ndb":"2047","name":"Salt, table","grams":0.5}],"sections":[{"section_key":"pork","section_label":"Pulled pork","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.6,"yield_factor_fat":0.88,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":134.0,"raw_water_grams":90.18,"raw_fat_grams":16.22,"final_grams":95.98},{"section_key":"slaw","section_label":"Coleslaw & bun","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":153.5,"raw_water_grams":94.43,"raw_fat_grams":13.16,"final_grams":153.5}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Pulled Pork', quantity: 'custom (g)', foodWord: 'PULLEDPORK', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'pork shoulder', quantity: '4½ oz', section: 'pork', ndbNo: '10080', portionDesc: 'g', portionGrams: 130.0 },
+      { name: 'salt', quantity: '¼ tsp', section: 'pork', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '⅛ tsp', section: 'pork', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'garlic powder', quantity: '¼ tsp', section: 'pork', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'paprika', quantity: '¼ tsp', section: 'pork', ndbNo: '2028', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'hamburger bun', quantity: '1 bun', section: 'slaw', ndbNo: '18350', portionDesc: 'g', portionGrams: 43.0 },
+      { name: 'BBQ sauce', quantity: '2 tbsp', section: 'slaw', ndbNo: '6150', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'green cabbage', quantity: '¾ cup shredded', section: 'slaw', ndbNo: '11109', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'mayonnaise', quantity: '1 tbsp', section: 'slaw', ndbNo: '4025', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'apple cider vinegar', quantity: '1 tsp', section: 'slaw', ndbNo: '2048', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'salt', quantity: 'pinch', section: 'slaw', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.5 }
+    ],
+    recipeInstructions: [
+      'Combine the salt, pepper, garlic powder, and paprika, then rub the mixture all over the pork shoulder.',
+      'Place the pork in a covered Dutch oven or roasting pan. Roast at 300°F until fork-tender and falling apart, about 3–4 hours.',
+      'Remove the pork and shred it using two forks, discarding any large pieces of fat.',
+      'Toss the shredded cabbage with the mayonnaise, apple cider vinegar, and a pinch of salt until evenly coated.',
+      'Spread the BBQ sauce over the bottom bun, pile on the pulled pork, and top with the slaw.',
+      'Close with the top bun and serve.',
+      '1 serving (250g): 516 cal | 28g protein | 27g fat | 39g carbs | 3g fiber | 15g sugar | 149g water'
+    ],
+    sections: [
+      { key: 'pork', label: 'Pulled pork', cookingMethod: '', yieldFactorWater: 0.6, yieldFactorFat: 0.88 },
+      { key: 'slaw', label: 'Coleslaw & bun', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
