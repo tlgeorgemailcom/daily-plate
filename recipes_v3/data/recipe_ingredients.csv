@@ -913,7 +913,7 @@ SAND_030,1,bread_rye,2 slices (32g each),64,60,68,sandwich,sandwich,false,
 SAND_030,2,beef_ground_80lean_raw,4 oz,113,105,120,sandwich,sandwich,false,ground beef (80/20)
 SAND_030,3,cheese_swiss,2 slices,56,50,62,sandwich,sandwich,false,
 SAND_030,4,onion_raw,1 medium (caramelized),80,70,90,sandwich,sandwich,false,
-SAND_030,5,butter_salted,1 tbsp,14,12,16,sandwich,sandwich,false,
+SAND_030,5,butter_salted,1 tbsp,14.2,12,16,sandwich,sandwich,false,
 SAND_030,6,salt_table,½ tsp,3,2,4,sandwich,sandwich,false,
 SAND_030,7,black_pepper_ground,pinch,0.3,0,1,sandwich,sandwich,false,
 SAND_031,1,hamburger_bun,1 bun,43,38,48,sandwich,sandwich,false,
