@@ -601,20 +601,15 @@ BKFST_020,3,olive_oil,1¾ tsp,7.7,6,9,burrito,burrito,false,olive oil
 BKFST_020,4,cheese_mexican_blend,2 tbsp,16.5,14,19,burrito,burrito,false,Mexican cheese blend
 BKFST_020,5,salt_table,pinch,0.33,0.2,0.5,burrito,burrito,false,salt
 BKFST_021,1,beef_ground_80lean_raw,1½ oz,45.0,40,50,beef,beef,false,ground beef
-
 BKFST_021,2,tortilla_flour_refrigerated,1 large,60.0,55,65,assembly,assembly,false,flour tortilla
-
 BKFST_021,3,water,2 tsp,10.0,10,10,assembly,assembly,false,water
-
 BKFST_021,4,cheese_mexican_blend,1 tbsp,5.0,4,6,assembly,assembly,false,Mexican cheese blend
-
 BKFST_022,1,tortilla_flour_refrigerated,1 large,70.0,65,75,burrito,burrito,false,flour tortilla
 BKFST_022,2,egg_whole_raw,2 large,100.0,95,105,burrito,burrito,false,eggs
 BKFST_022,3,potato_raw,1 cup,130.0,120,140,burrito,burrito,false,potato (diced)
 BKFST_022,4,cheese_mexican_blend,¼ cup,28.0,25,30,burrito,burrito,false,Mexican cheese blend
 BKFST_022,5,olive_oil,1 tbsp,13.6,12,15,burrito,burrito,false,olive oil
 BKFST_022,6,salt_table,¼ tsp,1.5,1,2,burrito,burrito,false,salt
-
 BKFST_023,1,egg_whole_raw,2 large,100.0,95,105,omelette,omelette,false,eggs
 BKFST_023,2,salt_table,⅛ tsp,0.3,0.2,0.4,omelette,omelette,false,salt
 BKFST_023,3,butter_salted,1½ tsp,7.0,6,8,omelette,omelette,false,butter
@@ -746,9 +741,9 @@ SAND_003,2,cheese_cheddar,1½ oz,42.0,21.0,56.0,sandwich,sandwich,false,
 SAND_003,3,butter_salted,1 tbsp,14.0,7.0,21.0,sandwich,sandwich,false,
 SAND_004,1,bread_white_commercial,2 slices (25g each),50.0,44.0,56.0,sandwich,sandwich,false,
 SAND_004,2,bacon_cooked_pan_fried,3 strips,34.5,23.0,46.0,sandwich,sandwich,false,
-SAND_004,3,tomato_red_raw,3 slices,60.0,40.0,80.0,sandwich,sandwich,false,
+SAND_004,3,tomato_red_raw,3 thin slices (45g),45.0,40.0,80.0,sandwich,sandwich,false,
 SAND_004,4,mayonnaise,1½ tbsp,21.0,14.0,28.0,sandwich,sandwich,false,
-SAND_004,5,lettuce_iceberg_raw,1 leaf,28.0,15.0,40.0,sandwich,sandwich,false,
+SAND_004,5,lettuce_iceberg_raw,1 large leaf (15g),15.0,15.0,40.0,sandwich,sandwich,false,
 SAND_005,1,bread_white_commercial,3 slices (30g each),90.0,72.0,108.0,sandwich,sandwich,false,
 SAND_005,2,turkey_breast_deli,5 slices (80g),80.0,64.0,96.0,sandwich,sandwich,false,
 SAND_005,3,bacon_cooked_pan_fried,2 strips,23.0,15.0,31.0,sandwich,sandwich,false,
