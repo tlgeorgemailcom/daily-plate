@@ -5617,7 +5617,7 @@ export const LEVELS: Level[] = [
       'In a small saucepan, combine the beef broth, garlic powder, dried oregano, dried basil, red pepper flakes, and salt. Bring to a gentle simmer over medium heat, stirring to combine.',
       'Add the sliced roast beef to the simmering broth. Warm through for 2–3 minutes, then remove with tongs and set aside. Keep the au jus warm on low heat.',
       'Heat 1 tsp olive oil in a skillet over medium-high heat. Add the sliced green peppers and sauté 4–5 minutes until softened and lightly charred.',
-      'Split the French roll and pile on the roast beef. Top with the sautéed peppers. Serve with the au jus in a small ramekin alongside for dipping. (Add hot or mild giardiniera if desired.)',
+      'Split the French roll and pile on the roast beef on both sides of the split roll. Top with the sautéed peppers. Serve with the au jus in a small ramekin alongside for dipping or ladle over the sandwich. (Add hot or mild giardiniera if desired.)',
       '1 sandwich (286g): 325 cal | 30.9g protein | 11.6g fat | 22.8g carbs | 2.2g fiber | 1.5g sugar | 213.9g water'
     ],
     sections: [
