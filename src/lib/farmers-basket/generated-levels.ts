@@ -5435,5 +5435,52 @@ export const LEVELS: Level[] = [
       { key: 'crab_cake', label: 'Crab cake', cookingMethod: '', yieldFactorWater: 0.9 },
       { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_040',
+    name: 'Lobster Roll',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'pesca',
+    levelNum: 118,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 sandwich',
+    prepTime: '15 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":324.7,"pro":26.2,"fat":13.5,"carb":23.1,"fib":1.2,"h2o":121.1,"sug":3.6,"perServing":{"cal":324.7,"pro":26.2,"fat":13.5,"carb":23.1,"fib":1.2,"h2o":121.1,"sug":3.6,"AddedSugars":0.0,"IntrinsicSugars":3.6},"micros":{"vitaminA":28.69,"vitaminC":2.22,"vitaminD":0.94,"vitaminE":0.92,"vitaminK":14.02,"vitaminB6":0.09,"vitaminB12":0.91,"thiamin":0.11,"riboflavin":0.07,"niacin":1.92,"folate":27.06,"calcium":96.61,"iron":1.07,"magnesium":33.09,"phosphorus":139.04,"potassium":191.55,"sodium":749.22,"zinc":2.64,"copper":0.96,"selenium":50.41,"cholesterol":95.05,"saturatedFat":2.15,"monoFat":1.73,"polyFat":2.77,"omega3":0.43,"omega6":2.25},"gramsPerServing":188.9,"servings":1,"per100g":{"Energy_KCal":171.91,"Water":64.1,"Protein":13.88,"TotalLipidFat":7.14,"Carbohydrate":12.26,"FiberTotalDietary":0.62,"SugarsTotal":1.89,"Cholesterol":95.05,"FattyAcids_totalSaturated":2.15,"FattyAcids_totalMonounsaturated":1.73,"FattyAcids_totalPolyunsaturated":2.77,"LinoleicAcid":2.25,"alphaLinolenicAcid":0.32,"EPA_20_5n3":0.07,"DPA_22_5n3":0.0,"DHA_22_6n3":0.04,"VitaminA_RAE":28.69,"Retinol":20.09,"Carotene_beta":99.0,"VitaminD":0.94,"VitaminE_alphaTocopherol":0.92,"VitaminK_phylloquinone":14.02,"VitaminC_totalAscorbicAcid":2.22,"Thiamin":0.11,"Riboflavin":0.07,"Niacin":1.92,"PantothenicAcid":1.13,"VitaminB6":0.09,"Folate_total":27.06,"Folate_food":17.8,"Folate_DFE":33.52,"FolicAcid":12.35,"VitaminB12":0.91,"Choline_total":54.27,"Betaine":0.03,"LuteinZeaxanthin":49.04,"Lycopene":0.03,"Calcium_Ca":96.61,"Iron_Fe":1.07,"Magnesium_Mg":33.09,"Phosphorus_P":139.04,"Potassium_K":191.55,"Sodium_Na":749.22,"Zinc_Zn":2.64,"Copper_Cu":0.96,"Manganese_Mn":0.19,"Selenium_Se":50.41,"Tryptophan":0.15,"Threonine":0.46,"Isoleucine":0.51,"Leucine":0.84,"Lysine":0.86,"Methionine":0.29,"Cystine":0.12,"Phenylalanine":0.48,"Tyrosine":0.41,"Valine":0.52,"Arginine":1.06,"Histidine":0.29,"Alanine":0.61,"AsparticAcid":1.13,"GlutamicAcid":1.71,"Glycine":0.76,"Proline":0.52,"Serine":0.45,"omega3":0.43,"omega6":2.25,"AddedSugars":0.0,"IntrinsicSugars":1.89},"addedSugars":0.0,"intrinsicSugars":3.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"15148","name":"Crustaceans, lobster, northern, cooked, moist heat","grams":113.4},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":9.2},{"ndb":"11143","name":"Celery, raw","grams":7.5},{"ndb":"9152","name":"Lemon juice, raw","grams":5.0},{"ndb":"11156","name":"Chives, raw","grams":3.0},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"2028","name":"Spices, paprika","grams":0.3},{"ndb":"18350","name":"Rolls, hamburger or hotdog, plain","grams":44.0},{"ndb":"1145","name":"Butter, without salt","grams":4.7}],"sections":[{"section_key":"lobster_salad","section_label":"Lobster salad","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":140.19,"raw_water_grams":105.13,"raw_fat_grams":7.96,"final_grams":140.19},{"section_key":"assembly","section_label":"Assembly","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":48.7,"raw_water_grams":15.95,"raw_fat_grams":5.53,"final_grams":48.7}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Lobster Roll', quantity: 'custom (g)', foodWord: 'LOBSTERROLL', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'lobster meat', quantity: '4 oz', section: 'lobster_salad', ndbNo: '15148', portionDesc: 'g', portionGrams: 113.4 },
+      { name: 'mayonnaise', quantity: '2 tsp', section: 'lobster_salad', ndbNo: '4025', portionDesc: 'g', portionGrams: 9.2 },
+      { name: 'celery stalk', quantity: '1 tbsp diced', section: 'lobster_salad', ndbNo: '11143', portionDesc: 'g', portionGrams: 7.5 },
+      { name: 'lemon juice', quantity: '1 tsp', section: 'lobster_salad', ndbNo: '9152', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'fresh chives', quantity: '1 tbsp chopped', section: 'lobster_salad', ndbNo: '11156', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'salt', quantity: '¼ tsp', section: 'lobster_salad', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '⅛ tsp', section: 'lobster_salad', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.29 },
+      { name: 'paprika', quantity: 'pinch', section: 'lobster_salad', ndbNo: '2028', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'hot dog bun', quantity: '1 hot dog bun', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 44.0 },
+      { name: 'unsalted butter', quantity: '1 tsp', section: 'assembly', ndbNo: '1145', portionDesc: 'g', portionGrams: 4.7 }
+    ],
+    recipeInstructions: [
+      'In a bowl, combine 4 oz cooked lobster meat, 2 tsp mayonnaise, 1 tbsp diced celery, 1 tsp lemon juice, 1 tbsp chopped chives, ¼ tsp salt, ⅛ tsp black pepper, and a pinch of paprika.',
+      'Gently fold until just combined — avoid over-mixing so the lobster stays in chunks.',
+      'Melt 1 tsp butter in a skillet over medium heat. Place the hot dog bun cut-side down and toast 1–2 minutes until golden.',
+      'Fill the toasted bun generously with the lobster salad.',
+      'Serve immediately.',
+      '1 sandwich (189g): 325 cal | 26.2g protein | 13.5g fat | 23.1g carbs | 1.2g fiber | 3.6g sugar | 121.1g water'
+    ],
+    sections: [
+      { key: 'lobster_salad', label: 'Lobster salad', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

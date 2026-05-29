@@ -490,13 +490,19 @@
       portionDesc = portion.desc;
       portionGrams = portion.gm;
     }
+    const quantity = portionDesc === 'g'
+      ? `${portionGrams}g`
+      : count === 1
+        ? portionDesc
+        : `${count} ${portionDesc}`;
     ingredients = ingredients.map(i => i.id === ingId ? {
       ...i,
       foodWord: food.word,
       ndbNo: food.ndb,
       portionDesc,
       portionGrams,
-      servingCount: count
+      servingCount: portionDesc === 'g' ? 1 : count,
+      quantity,
     } : i);
     nutritionOpen = { ...nutritionOpen, [ingId]: false };
   }
