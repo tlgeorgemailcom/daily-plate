@@ -5528,5 +5528,54 @@ export const LEVELS: Level[] = [
       { key: 'tuna_salad', label: 'Tuna salad', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'SAND_042',
+    name: 'French Dip',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 120,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 sandwich',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":438.4,"pro":39.8,"fat":19.2,"carb":25.1,"fib":1.9,"h2o":277.8,"sug":2.1,"perServing":{"cal":438.4,"pro":39.8,"fat":19.2,"carb":25.1,"fib":1.9,"h2o":277.8,"sug":2.1,"AddedSugars":0.0,"IntrinsicSugars":2.1},"micros":{"vitaminA":16.26,"vitaminC":0.3,"vitaminD":1.81,"vitaminE":0.33,"vitaminK":1.6,"vitaminB6":0.16,"vitaminB12":0.82,"thiamin":0.06,"riboflavin":0.14,"niacin":2.55,"folate":13.66,"calcium":73.58,"iron":1.27,"magnesium":14.5,"phosphorus":149.88,"potassium":309.19,"sodium":760.62,"zinc":1.59,"copper":0.05,"selenium":9.93,"cholesterol":24.68,"saturatedFat":2.1,"monoFat":2.19,"polyFat":0.3,"omega3":0.0,"omega6":0.05},"gramsPerServing":372.2,"servings":1,"per100g":{"Energy_KCal":117.76,"Water":74.63,"Protein":10.69,"TotalLipidFat":5.16,"Carbohydrate":6.73,"FiberTotalDietary":0.51,"SugarsTotal":0.58,"Cholesterol":24.68,"FattyAcids_totalSaturated":2.1,"FattyAcids_totalMonounsaturated":2.19,"FattyAcids_totalPolyunsaturated":0.3,"LinoleicAcid":0.05,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":16.26,"Retinol":15.86,"Carotene_beta":4.3,"VitaminD":1.81,"VitaminE_alphaTocopherol":0.33,"VitaminK_phylloquinone":1.6,"VitaminC_totalAscorbicAcid":0.3,"Thiamin":0.06,"Riboflavin":0.14,"Niacin":2.55,"PantothenicAcid":0.28,"VitaminB6":0.16,"Folate_total":13.66,"Folate_food":7.12,"Folate_DFE":18.23,"FolicAcid":8.17,"VitaminB12":0.82,"Choline_total":19.99,"Betaine":0.03,"LuteinZeaxanthin":3.86,"Lycopene":0.0,"Calcium_Ca":73.58,"Iron_Fe":1.27,"Magnesium_Mg":14.5,"Phosphorus_P":149.88,"Potassium_K":309.19,"Sodium_Na":760.62,"Zinc_Zn":1.59,"Copper_Cu":0.05,"Manganese_Mn":0.09,"Selenium_Se":9.93,"Tryptophan":0.04,"Threonine":0.11,"Isoleucine":0.13,"Leucine":0.26,"Lysine":0.25,"Methionine":0.07,"Cystine":0.03,"Phenylalanine":0.16,"Tyrosine":0.15,"Valine":0.18,"Arginine":0.14,"Histidine":0.11,"Alanine":0.1,"AsparticAcid":0.21,"GlutamicAcid":0.85,"Glycine":0.08,"Proline":0.33,"Serine":0.17,"omega3":0.0,"omega6":0.05,"AddedSugars":0.0,"IntrinsicSugars":0.58},"addedSugars":0.0,"intrinsicSugars":2.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":4.5},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"2020","name":"Spices, garlic powder","grams":1.6},{"ndb":"2047","name":"Salt, table","grams":0.5},{"ndb":"6971","name":"Sauce, worcestershire","grams":1.1},{"ndb":"6008","name":"Soup, beef broth or bouillon canned, ready-to-serve","grams":120.0},{"ndb":"16124","name":"Soy sauce made from soy (tamari)","grams":9.0},{"ndb":"18349","name":"Rolls, french","grams":38.0},{"ndb":"7043","name":"Roast beef, deli style, prepackaged, sliced","grams":141.8},{"ndb":"1035","name":"Cheese, provolone","grams":28.4}],"sections":[{"section_key":"onion_saute","section_label":"Sautéed onion","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":35.15,"raw_water_grams":25.47,"raw_fat_grams":4.54,"final_grams":35.15},{"section_key":"au_jus","section_label":"Au jus","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":129.0,"raw_water_grams":123.0,"raw_fat_grams":0.27,"final_grams":129.0},{"section_key":"assembly","section_label":"Assembly","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":208.1,"raw_water_grams":129.33,"raw_fat_grams":14.41,"final_grams":208.1}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'French Dip', quantity: 'custom (g)', foodWord: 'FRENCHDIP', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'olive oil', quantity: '1 tsp', section: 'onion_saute', ndbNo: '4053', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'onion', quantity: '¼ medium onion, sliced', section: 'onion_saute', ndbNo: '11282', portionDesc: 'g', portionGrams: 27.5 },
+      { name: 'garlic powder', quantity: '½ tsp', section: 'onion_saute', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.55 },
+      { name: 'salt', quantity: 'pinch', section: 'onion_saute', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'Worcestershire sauce', quantity: '¼ tsp', section: 'onion_saute', ndbNo: '6971', portionDesc: 'g', portionGrams: 1.1 },
+      { name: 'beef broth', quantity: '½ cup', section: 'au_jus', ndbNo: '6008', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'tamari', quantity: '½ tbsp', section: 'au_jus', ndbNo: '16124', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'French roll', quantity: '1 roll', section: 'assembly', ndbNo: '18349', portionDesc: 'g', portionGrams: 38.0 },
+      { name: 'deli roast beef', quantity: '5 oz, thinly sliced', section: 'assembly', ndbNo: '7043', portionDesc: 'g', portionGrams: 141.75 },
+      { name: 'provolone cheese', quantity: '1 slice', section: 'assembly', ndbNo: '1035', portionDesc: 'g', portionGrams: 28.35 }
+    ],
+    recipeInstructions: [
+      'Heat 1 tsp olive oil in a skillet over medium heat. Add the sliced onion, ½ tsp garlic powder, and a pinch of salt. Sauté 8–10 minutes, stirring occasionally, until soft and golden.',
+      'Stir in ¼ tsp Worcestershire sauce and cook 1 minute more. Transfer onions to a small bowl and set aside.',
+      'Pour ½ cup beef broth and ½ tbsp tamari into the same skillet over low heat. Add the roast beef and warm through, about 3–4 minutes.',
+      'Split the French roll and place cut-side up on a baking sheet. Using tongs, pile the roast beef onto the bottom half of the roll.',
+      'Top with the sautéed onions and 1 slice of provolone. Bake at 400°F for 4–6 minutes until the cheese melts and the roll is lightly toasted.',
+      'Ladle the warm au jus into a small ramekin and serve alongside for dipping.',
+      '1 sandwich (372g): 438 cal | 39.8g protein | 19.2g fat | 25.1g carbs | 1.9g fiber | 2.1g sugar | 277.8g water'
+    ],
+    sections: [
+      { key: 'onion_saute', label: 'Sautéed onion', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'au_jus', label: 'Au jus', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
