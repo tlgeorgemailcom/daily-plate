@@ -5407,7 +5407,7 @@ export const LEVELS: Level[] = [
       { name: 'Crab Cake Sandwich', quantity: 'custom (g)', foodWord: 'CRABCAKESANDWICH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'crab meat', quantity: '4 oz', section: 'crab_cake', ndbNo: '15140', portionDesc: 'g', portionGrams: 113.4 },
       { name: 'dry bread crumbs', quantity: '2 tbsp', section: 'crab_cake', ndbNo: '18079', portionDesc: 'g', portionGrams: 13.5 },
-      { name: 'large egg', quantity: '½ small egg', section: 'crab_cake', ndbNo: '1123', portionDesc: 'g', portionGrams: 19.0 },
+      { name: 'egg', quantity: '½ small egg', section: 'crab_cake', ndbNo: '1123', portionDesc: 'g', portionGrams: 19.0 },
       { name: 'mayonnaise', quantity: '1 tbsp', section: 'crab_cake', ndbNo: '4025', portionDesc: 'g', portionGrams: 13.8 },
       { name: 'scallion (green onion)', quantity: '1 scallion, chopped', section: 'crab_cake', ndbNo: '11291', portionDesc: 'g', portionGrams: 15.0 },
       { name: 'Worcestershire sauce', quantity: '1 tsp', section: 'crab_cake', ndbNo: '6971', portionDesc: 'g', portionGrams: 5.0 },
