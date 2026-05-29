@@ -737,7 +737,7 @@ SAND_002,1,bread_white_commercial,2 slices (30g each),60.0,50.0,70.0,sandwich,sa
 SAND_002,2,cheese_american,2 oz,56.7,21.0,56.0,sandwich,sandwich,false,
 SAND_002,3,butter_salted,1 tbsp,14.2,7.0,21.0,sandwich,sandwich,false,
 SAND_003,1,bread_white_commercial,2 slices (30g each),60.0,50.0,70.0,sandwich,sandwich,false,
-SAND_003,2,cheese_cheddar,1½ oz,42.525,21.0,56.0,sandwich,sandwich,false,
+SAND_003,2,cheese_cheddar,2 oz,56.7,21.0,56.0,sandwich,sandwich,false,
 SAND_003,3,butter_salted,1 tbsp,14.2,7.0,21.0,sandwich,sandwich,false,
 SAND_004,1,bread_white_commercial,2 slices (25g each),50.0,44.0,56.0,sandwich,sandwich,false,
 SAND_004,2,bacon_cooked_pan_fried,3 strips,34.5,23.0,46.0,sandwich,sandwich,false,
