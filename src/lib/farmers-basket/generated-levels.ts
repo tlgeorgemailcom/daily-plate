@@ -5568,7 +5568,7 @@ export const LEVELS: Level[] = [
       'Stir in ¼ tsp Worcestershire sauce and cook 1 minute more. Transfer onions to a small bowl and set aside.',
       'Pour ½ cup beef broth and ½ tbsp tamari into the same skillet over low heat. Add the roast beef and warm through, about 3–4 minutes.',
       'Split the French roll and place cut-side up on a baking sheet. Using tongs, pile the roast beef onto the bottom half of the roll.',
-      'Top with the sautéed onions and 1 slice of provolone. Bake at 400°F for 4–6 minutes until the cheese melts and the top half of the roll is lightly toasted.',
+      'Top the beef with the sautéed onions and 1 slice of provolone. Broil on high for 2–3 minutes until the cheese is melted and bubbly and the top roll is lightly golden.',
       'Remove from oven and fold the top half of the roll over the melted cheese.',
       'Ladle the warm au jus into a small ramekin and serve alongside for dipping.',
       '1 sandwich (372g): 438 cal | 39.8g protein | 19.2g fat | 25.1g carbs | 1.9g fiber | 2.1g sugar | 277.8g water'
