@@ -906,8 +906,8 @@ SAND_028,3,onion_raw,2 thin slices (20g),20,15,25,sandwich,sandwich,false,onion 
 SAND_028,4,pickle_dill,dill pickle sliced thin (30g),30,20,40,sandwich,sandwich,false,dill pickle sliced thin (30g)
 SAND_028,5,mustard_yellow,1 tbsp,15,10,20,sandwich,sandwich,false,
 SAND_029,1,bread_rye,2 slices (32g each),64,60,68,sandwich,sandwich,false,
-SAND_029,2,limburger_cheese,2 oz,57,50,64,sandwich,sandwich,false,
-SAND_029,3,onion_raw,2 thin slices,20,15,25,sandwich,sandwich,false,onion (20g)
+SAND_029,2,limburger_cheese,2 oz,56.7,50,64,sandwich,sandwich,false,
+SAND_029,3,onion_raw,2 thin slices (20g),20,15,25,sandwich,sandwich,false,onion (20g)
 SAND_029,4,mustard_yellow,1 tsp,5,3,8,sandwich,sandwich,false,
 SAND_030,1,bread_rye,2 slices (32g each),64,60,68,sandwich,sandwich,false,
 SAND_030,2,beef_ground_80lean_raw,4 oz,113,105,120,sandwich,sandwich,false,ground beef (80/20)
