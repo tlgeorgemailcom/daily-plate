@@ -5578,5 +5578,52 @@ export const LEVELS: Level[] = [
       { key: 'au_jus', label: 'Au jus', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_043',
+    name: 'Italian Beef',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 121,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 sandwich',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":324.6,"pro":30.9,"fat":11.6,"carb":22.8,"fib":2.2,"h2o":213.9,"sug":1.5,"perServing":{"cal":324.6,"pro":30.9,"fat":11.6,"carb":22.8,"fib":2.2,"h2o":213.9,"sug":1.5,"AddedSugars":0.0,"IntrinsicSugars":1.5},"micros":{"vitaminA":5.27,"vitaminC":5.69,"vitaminD":0.5,"vitaminE":0.54,"vitaminK":4.5,"vitaminB6":0.27,"vitaminB12":1.03,"thiamin":0.1,"riboflavin":0.15,"niacin":3.57,"folate":19.56,"calcium":20.41,"iron":1.58,"magnesium":15.4,"phosphorus":138.2,"potassium":379.03,"sodium":645.12,"zinc":1.74,"copper":0.07,"selenium":11.21,"cholesterol":25.26,"saturatedFat":1.03,"monoFat":2.18,"polyFat":0.39,"omega3":0.01,"omega6":0.07},"gramsPerServing":286.2,"servings":1,"per100g":{"Energy_KCal":113.44,"Water":74.75,"Protein":10.8,"TotalLipidFat":4.06,"Carbohydrate":7.97,"FiberTotalDietary":0.77,"SugarsTotal":0.54,"Cholesterol":25.26,"FattyAcids_totalSaturated":1.03,"FattyAcids_totalMonounsaturated":2.18,"FattyAcids_totalPolyunsaturated":0.39,"LinoleicAcid":0.07,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":5.27,"Retinol":1.49,"Carotene_beta":41.93,"VitaminD":0.5,"VitaminE_alphaTocopherol":0.54,"VitaminK_phylloquinone":4.5,"VitaminC_totalAscorbicAcid":5.69,"Thiamin":0.1,"Riboflavin":0.15,"Niacin":3.57,"PantothenicAcid":0.35,"VitaminB6":0.27,"Folate_total":19.56,"Folate_food":8.94,"Folate_DFE":27.0,"FolicAcid":10.62,"VitaminB12":1.03,"Choline_total":25.3,"Betaine":0.05,"LuteinZeaxanthin":50.57,"Lycopene":0.25,"Calcium_Ca":20.41,"Iron_Fe":1.58,"Magnesium_Mg":15.4,"Phosphorus_P":138.2,"Potassium_K":379.03,"Sodium_Na":645.12,"Zinc_Zn":1.74,"Copper_Cu":0.07,"Manganese_Mn":0.11,"Selenium_Se":11.21,"Tryptophan":0.01,"Threonine":0.04,"Isoleucine":0.05,"Leucine":0.09,"Lysine":0.04,"Methionine":0.02,"Cystine":0.03,"Phenylalanine":0.07,"Tyrosine":0.04,"Valine":0.06,"Arginine":0.06,"Histidine":0.03,"Alanine":0.05,"AsparticAcid":0.09,"GlutamicAcid":0.41,"Glycine":0.05,"Proline":0.13,"Serine":0.06,"omega3":0.01,"omega6":0.07,"AddedSugars":0.0,"IntrinsicSugars":0.54},"addedSugars":0.0,"intrinsicSugars":1.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"6008","name":"Soup, beef broth or bouillon canned, ready-to-serve","grams":60.0},{"ndb":"2020","name":"Spices, garlic powder","grams":0.8},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.2},{"ndb":"2003","name":"Spices, basil, dried","grams":0.2},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":0.5},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":4.5},{"ndb":"11333","name":"Peppers, sweet, green, raw","grams":40.0},{"ndb":"18349","name":"Rolls, french","grams":38.0},{"ndb":"7043","name":"Roast beef, deli style, prepackaged, sliced","grams":141.8}],"sections":[{"section_key":"au_jus","section_label":"Au jus","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":61.94,"raw_water_grams":58.64,"raw_fat_grams":0.2,"final_grams":61.94},{"section_key":"sweet_peppers","section_label":"Sweet peppers","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":44.5,"raw_water_grams":37.56,"raw_fat_grams":4.57,"final_grams":44.5},{"section_key":"assembly","section_label":"Assembly","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":179.75,"raw_water_grams":117.72,"raw_fat_grams":6.86,"final_grams":179.75}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Italian Beef', quantity: 'custom (g)', foodWord: 'ITALIANBEEF', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'beef broth', quantity: '¼ cup', section: 'au_jus', ndbNo: '6008', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'garlic powder', quantity: '¼ tsp', section: 'au_jus', ndbNo: '2020', portionDesc: 'g', portionGrams: 0.78 },
+      { name: 'dried oregano', quantity: '¼ tsp', section: 'au_jus', ndbNo: '2027', portionDesc: 'g', portionGrams: 0.25 },
+      { name: 'dried basil', quantity: '¼ tsp', section: 'au_jus', ndbNo: '2003', portionDesc: 'g', portionGrams: 0.18 },
+      { name: 'red pepper flakes', quantity: '⅛ tsp', section: 'au_jus', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.23 },
+      { name: 'salt', quantity: 'pinch', section: 'au_jus', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'olive oil', quantity: '1 tsp', section: 'sweet_peppers', ndbNo: '4053', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'green bell pepper', quantity: '½ medium pepper, sliced', section: 'sweet_peppers', ndbNo: '11333', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'French roll', quantity: '1 roll', section: 'assembly', ndbNo: '18349', portionDesc: 'g', portionGrams: 38.0 },
+      { name: 'deli roast beef', quantity: '5 oz, thinly sliced', section: 'assembly', ndbNo: '7043', portionDesc: 'g', portionGrams: 141.75 }
+    ],
+    recipeInstructions: [
+      'In a small saucepan, combine the beef broth, garlic powder, dried oregano, dried basil, red pepper flakes, and salt. Bring to a gentle simmer over medium heat, stirring to combine.',
+      'Add the sliced roast beef to the simmering broth. Warm through for 2–3 minutes, then remove with tongs and set aside. Keep the au jus warm on low heat.',
+      'Heat 1 tsp olive oil in a skillet over medium-high heat. Add the sliced green peppers and sauté 4–5 minutes until softened and lightly charred.',
+      'Split the French roll and pile on the roast beef. Top with the sautéed peppers. Serve with the au jus in a small ramekin alongside for dipping. (Add hot or mild giardiniera if desired.)',
+      '1 sandwich (286g): 325 cal | 30.9g protein | 11.6g fat | 22.8g carbs | 2.2g fiber | 1.5g sugar | 213.9g water'
+    ],
+    sections: [
+      { key: 'au_jus', label: 'Au jus', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'sweet_peppers', label: 'Sweet peppers', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
