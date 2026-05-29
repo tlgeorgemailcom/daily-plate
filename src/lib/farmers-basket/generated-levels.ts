@@ -5381,5 +5381,59 @@ export const LEVELS: Level[] = [
       { key: 'fish', label: 'Fried cod', cookingMethod: '', yieldFactorWater: 0.85 },
       { key: 'assembly', label: 'Toppings & bun', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_039',
+    name: 'Crab Cake Sandwich',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 117,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 sandwich',
+    prepTime: '30 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":607.8,"pro":31.1,"fat":34.9,"carb":41.2,"fib":3.0,"h2o":206.5,"sug":7.6,"perServing":{"cal":607.8,"pro":31.1,"fat":34.9,"carb":41.2,"fib":3.0,"h2o":206.5,"sug":7.6,"AddedSugars":0.0,"IntrinsicSugars":7.6},"micros":{"vitaminA":26.8,"vitaminC":4.0,"vitaminD":6.52,"vitaminE":1.4,"vitaminK":42.36,"vitaminB6":0.08,"vitaminB12":1.1,"thiamin":0.12,"riboflavin":0.13,"niacin":1.69,"folate":39.86,"calcium":77.22,"iron":1.36,"magnesium":23.5,"phosphorus":130.19,"potassium":202.57,"sodium":734.22,"zinc":1.7,"copper":0.34,"selenium":23.07,"cholesterol":65.54,"saturatedFat":1.89,"monoFat":4.65,"polyFat":3.12,"omega3":0.21,"omega6":1.65},"gramsPerServing":321.8,"servings":1,"per100g":{"Energy_KCal":188.9,"Water":64.18,"Protein":9.66,"TotalLipidFat":10.86,"Carbohydrate":12.82,"FiberTotalDietary":0.93,"SugarsTotal":2.37,"Cholesterol":65.54,"FattyAcids_totalSaturated":1.89,"FattyAcids_totalMonounsaturated":4.65,"FattyAcids_totalPolyunsaturated":3.12,"LinoleicAcid":1.65,"alphaLinolenicAcid":0.18,"EPA_20_5n3":0.02,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":26.8,"Retinol":15.0,"Carotene_beta":134.28,"VitaminD":6.52,"VitaminE_alphaTocopherol":1.4,"VitaminK_phylloquinone":42.36,"VitaminC_totalAscorbicAcid":4.0,"Thiamin":0.12,"Riboflavin":0.13,"Niacin":1.69,"PantothenicAcid":0.51,"VitaminB6":0.08,"Folate_total":39.86,"Folate_food":30.03,"Folate_DFE":46.71,"FolicAcid":10.69,"VitaminB12":1.1,"Choline_total":52.66,"Betaine":0.07,"LuteinZeaxanthin":134.98,"Lycopene":239.93,"Calcium_Ca":77.22,"Iron_Fe":1.36,"Magnesium_Mg":23.5,"Phosphorus_P":130.19,"Potassium_K":202.57,"Sodium_Na":734.22,"Zinc_Zn":1.7,"Copper_Cu":0.34,"Manganese_Mn":0.2,"Selenium_Se":23.07,"Tryptophan":0.1,"Threonine":0.33,"Isoleucine":0.36,"Leucine":0.6,"Lysine":0.59,"Methionine":0.2,"Cystine":0.08,"Phenylalanine":0.34,"Tyrosine":0.29,"Valine":0.39,"Arginine":0.72,"Histidine":0.18,"Alanine":0.41,"AsparticAcid":0.77,"GlutamicAcid":1.32,"Glycine":0.44,"Proline":0.35,"Serine":0.36,"omega3":0.21,"omega6":1.65,"AddedSugars":0.0,"IntrinsicSugars":2.37},"addedSugars":0.0,"intrinsicSugars":7.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.9,"yieldFactorFat":1.0,"sources":[{"ndb":"15140","name":"Crustaceans, crab, blue, cooked, moist heat","grams":113.4},{"ndb":"18079","name":"Bread crumbs, dry, grated, plain","grams":13.5},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":25.0},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":13.8},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":15.0},{"ndb":"6971","name":"Sauce, worcestershire","grams":5.0},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":5.0},{"ndb":"9152","name":"Lemon juice, raw","grams":5.0},{"ndb":"11297","name":"Parsley, fresh","grams":3.8},{"ndb":"2020","name":"Spices, garlic powder","grams":0.4},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":13.6},{"ndb":"2047","name":"Salt, table","grams":3.0},{"ndb":"2030","name":"Spices, pepper, black","grams":0.6},{"ndb":"18350","name":"Rolls, hamburger or hotdog, plain","grams":44.0},{"ndb":"27049","name":"Sauce, tartar, ready-to-serve","grams":30.0},{"ndb":"11252","name":"Lettuce, iceberg (includes crisphead types), raw","grams":15.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":30.0}],"sections":[{"section_key":"crab_cake","section_label":"Crab cake","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":13,"raw_grams":217.05,"raw_water_grams":142.87,"raw_fat_grams":28.12,"final_grams":202.76},{"section_key":"assembly","section_label":"Assembly","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":119.0,"raw_water_grams":77.91,"raw_fat_grams":6.81,"final_grams":119.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Crab Cake Sandwich', quantity: 'custom (g)', foodWord: 'CRABCAKESANDWICH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'crab meat', quantity: '4 oz', section: 'crab_cake', ndbNo: '15140', portionDesc: 'g', portionGrams: 113.4 },
+      { name: 'dry bread crumbs', quantity: '2 tbsp', section: 'crab_cake', ndbNo: '18079', portionDesc: 'g', portionGrams: 13.5 },
+      { name: 'large egg', quantity: '½ egg', section: 'crab_cake', ndbNo: '1123', portionDesc: 'g', portionGrams: 25.0 },
+      { name: 'mayonnaise', quantity: '1 tbsp', section: 'crab_cake', ndbNo: '4025', portionDesc: 'g', portionGrams: 13.8 },
+      { name: 'scallion (green onion)', quantity: '1 scallion, chopped', section: 'crab_cake', ndbNo: '11291', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'Worcestershire sauce', quantity: '1 tsp', section: 'crab_cake', ndbNo: '6971', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'yellow mustard', quantity: '1 tsp', section: 'crab_cake', ndbNo: '2046', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'lemon juice', quantity: '1 tsp', section: 'crab_cake', ndbNo: '9152', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'fresh parsley', quantity: '1 tbsp chopped', section: 'crab_cake', ndbNo: '11297', portionDesc: 'g', portionGrams: 3.75 },
+      { name: 'garlic powder', quantity: '⅛ tsp', section: 'crab_cake', ndbNo: '2020', portionDesc: 'g', portionGrams: 0.4 },
+      { name: 'olive oil', quantity: '1 tbsp olive oil (absorbed into crust)', section: 'crab_cake', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'salt', quantity: '½ tsp', section: 'crab_cake', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'crab_cake', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.6 },
+      { name: 'hamburger bun', quantity: '1 bun', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 44.0 },
+      { name: 'tartar sauce', quantity: '2 tbsp', section: 'assembly', ndbNo: '27049', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'iceberg lettuce', quantity: '1 large leaf (15g)', section: 'assembly', ndbNo: '11252', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'tomato raw', quantity: '2 thin slices (30g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 30.0 }
+    ],
+    recipeInstructions: [
+      'In a large bowl, gently combine crab meat, dry bread crumbs, egg, mayonnaise, scallion, Worcestershire sauce, mustard, lemon juice, parsley, garlic powder, salt, and pepper. Do not overmix — fold just until the mixture holds together.',
+      'Shape into one large cake (about 1 inch thick). Refrigerate for 15 minutes to firm up.',
+      'Heat olive oil in a skillet over medium-high heat until shimmering.',
+      'Cook the crab cake until deeply golden on the bottom, about 4 minutes. Flip carefully and cook the second side until golden and heated through, about 3–4 more minutes.',
+      'Spread tartar sauce on both halves of the hamburger bun. Place the crab cake on the bottom bun, then top with the lettuce leaf and tomato slices. (Oil in the ingredient list reflects only the amount absorbed into the crab cake.)',
+      '1 sandwich (322g): 608 cal | 31.1g protein | 34.9g fat | 41.2g carbs | 3.0g fiber | 7.6g sugar | 206.5g water'
+    ],
+    sections: [
+      { key: 'crab_cake', label: 'Crab cake', cookingMethod: '', yieldFactorWater: 0.9 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
