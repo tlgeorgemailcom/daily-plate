@@ -5482,5 +5482,51 @@ export const LEVELS: Level[] = [
       { key: 'lobster_salad', label: 'Lobster salad', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_041',
+    name: 'Tuna Melt',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'pesca',
+    levelNum: 119,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 sandwich',
+    prepTime: '15 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":839.5,"pro":41.2,"fat":59.3,"carb":36.4,"fib":2.5,"h2o":191.5,"sug":8.1,"perServing":{"cal":839.5,"pro":41.2,"fat":59.3,"carb":36.4,"fib":2.5,"h2o":191.5,"sug":8.1,"AddedSugars":0.0,"IntrinsicSugars":8.1},"micros":{"vitaminA":57.94,"vitaminC":1.22,"vitaminD":23.37,"vitaminE":0.74,"vitaminK":23.34,"vitaminB6":0.15,"vitaminB12":1.25,"thiamin":0.09,"riboflavin":0.1,"niacin":4.97,"folate":19.28,"calcium":166.5,"iron":1.46,"magnesium":18.01,"phosphorus":160.94,"potassium":132.43,"sodium":676.93,"zinc":0.76,"copper":0.05,"selenium":36.49,"cholesterol":41.82,"saturatedFat":6.06,"monoFat":4.12,"polyFat":6.03,"omega3":0.78,"omega6":4.94},"gramsPerServing":337.3,"servings":1,"per100g":{"Energy_KCal":248.91,"Water":56.79,"Protein":12.22,"TotalLipidFat":17.58,"Carbohydrate":10.79,"FiberTotalDietary":0.74,"SugarsTotal":2.39,"Cholesterol":41.82,"FattyAcids_totalSaturated":6.06,"FattyAcids_totalMonounsaturated":4.12,"FattyAcids_totalPolyunsaturated":6.03,"LinoleicAcid":4.94,"alphaLinolenicAcid":0.69,"EPA_20_5n3":0.01,"DPA_22_5n3":0.0,"DHA_22_6n3":0.08,"VitaminA_RAE":57.94,"Retinol":55.81,"Carotene_beta":23.64,"VitaminD":23.37,"VitaminE_alphaTocopherol":0.74,"VitaminK_phylloquinone":23.34,"VitaminC_totalAscorbicAcid":1.22,"Thiamin":0.09,"Riboflavin":0.1,"Niacin":4.97,"PantothenicAcid":0.21,"VitaminB6":0.15,"Folate_total":19.28,"Folate_food":7.81,"Folate_DFE":27.29,"FolicAcid":15.3,"VitaminB12":1.25,"Choline_total":24.1,"Betaine":19.29,"LuteinZeaxanthin":22.95,"Lycopene":0.0,"Calcium_Ca":166.5,"Iron_Fe":1.46,"Magnesium_Mg":18.01,"Phosphorus_P":160.94,"Potassium_K":132.43,"Sodium_Na":676.93,"Zinc_Zn":0.76,"Copper_Cu":0.05,"Manganese_Mn":0.11,"Selenium_Se":36.49,"Tryptophan":0.11,"Threonine":0.45,"Isoleucine":0.48,"Leucine":0.87,"Lysine":0.92,"Methionine":0.29,"Cystine":0.1,"Phenylalanine":0.43,"Tyrosine":0.38,"Valine":0.56,"Arginine":0.54,"Histidine":0.3,"Alanine":0.56,"AsparticAcid":1.01,"GlutamicAcid":1.71,"Glycine":0.42,"Proline":0.51,"Serine":0.47,"omega3":0.78,"omega6":4.94,"AddedSugars":0.0,"IntrinsicSugars":2.39},"addedSugars":0.0,"intrinsicSugars":8.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"15121","name":"Fish, tuna, light, canned in water, drained solids","grams":142.0},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":41.4},{"ndb":"9003","name":"Apples, raw, with skin","grams":31.2},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":4.0},{"ndb":"9152","name":"Lemon juice, raw","grams":5.0},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"18069","name":"Bread, white, commercially prepared (includes soft bread crumbs)","grams":60.0},{"ndb":"1253","name":"Cheese, pasteurized process, American, without added vitamin D","grams":42.0},{"ndb":"1001","name":"Butter, salted","grams":14.2}],"sections":[{"section_key":"tuna_salad","section_label":"Tuna salad","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":225.15,"raw_water_grams":154.87,"raw_fat_grams":32.42,"final_grams":225.15},{"section_key":"assembly","section_label":"Assembly","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":116.2,"raw_water_grams":40.74,"raw_fat_grams":26.87,"final_grams":112.13}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Tuna Melt', quantity: 'custom (g)', foodWord: 'TUNAMELT', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'canned light tuna', quantity: '1 can drained (5 oz)', section: 'tuna_salad', ndbNo: '15121', portionDesc: 'g', portionGrams: 142.0 },
+      { name: 'mayonnaise', quantity: '3 tbsp', section: 'tuna_salad', ndbNo: '4025', portionDesc: 'g', portionGrams: 41.4 },
+      { name: 'apple', quantity: '¼ cup chopped', section: 'tuna_salad', ndbNo: '9003', portionDesc: 'g', portionGrams: 31.25 },
+      { name: 'scallion (green onion)', quantity: '2 tsp chopped', section: 'tuna_salad', ndbNo: '11291', portionDesc: 'g', portionGrams: 4.0 },
+      { name: 'lemon juice', quantity: '1 tsp', section: 'tuna_salad', ndbNo: '9152', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'salt', quantity: '¼ tsp', section: 'tuna_salad', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'white bread', quantity: '2 slices (30g each)', section: 'assembly', ndbNo: '18069', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'American cheese', quantity: '2 slices', section: 'assembly', ndbNo: '1253', portionDesc: 'g', portionGrams: 42.0 },
+      { name: 'salted butter', quantity: '1 tbsp', section: 'assembly', ndbNo: '1001', portionDesc: 'g', portionGrams: 14.2 }
+    ],
+    recipeInstructions: [
+      'Mix tuna, mayonnaise, chopped apple, scallion, lemon juice, and salt in a bowl until combined.',
+      'Butter one side of each bread slice.',
+      'Heat a skillet over medium heat. Place one slice butter-side down.',
+      'Layer one slice of American cheese, the tuna salad, then the second slice of American cheese on top.',
+      'Place the second bread slice on top, butter-side up. Cook 3–4 minutes until golden, then flip and cook another 2–3 minutes until cheese is melted.',
+      '1 sandwich (337g): 840 cal | 41.2g protein | 59.3g fat | 36.4g carbs | 2.5g fiber | 8.1g sugar | 191.5g water'
+    ],
+    sections: [
+      { key: 'tuna_salad', label: 'Tuna salad', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];
