@@ -79,7 +79,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 |---|---|---|
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
 | `BKFST_NNN` | 🔧 In progress | 34 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035) |
-| `SAND_NNN` | 🔧 In progress | 30 (001–030) |
+| `SAND_NNN` | 🔧 In progress | 32 (001–030, 040–043) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -134,7 +134,7 @@ Planned BKFST order (standalone components first, composites last):
 | BKFST_035 | Avocado Toast Tomato & Egg | (none) | Rule D ✅ — no canonical; 38g bread_multigrain_toasted(18036)+75g avocado_raw(9038)+5g lemon_juice_raw(9152)+4.5g olive_oil(4053)+68g tomato_red_raw(11529)+50g egg_cooked_poached(1131)+0.4g salt(2047)+0.3g red_pepper_flakes(2031); yfw=1.00 → 241.2g; 1 toast/serving; 149 kcal·5.8P·9.4F·11.6C per 100g; dietary_category=veggie |
 
 **Ingredients needed in ledger before building:**
-- (none outstanding — tomato_red_raw (NDB 11529) added during BKFST_035 build (formerly cherry_tomato_raw); cheese_cheddar NDB 1009 + cheese_gruyere NDB 1023 added during SAND_001 build; cheese_american NDB 1253 added during SAND_002 build; mayonnaise NDB 4025 + lettuce_iceberg_raw NDB 11252 added during SAND_004 build; turkey_breast_deli NDB 7081 added during SAND_005 build; egg_cooked_hardboiled NDB 1129 + mustard_yellow NDB 2046 added during SAND_006 build)
+- (none outstanding — tomato_red_raw (NDB 11529) added during BKFST_035 build (formerly cherry_tomato_raw); cheese_cheddar NDB 1009 + cheese_gruyere NDB 1023 added during SAND_001 build; cheese_american NDB 1253 added during SAND_002 build; mayonnaise NDB 4025 + lettuce_iceberg_raw NDB 11252 added during SAND_004 build; turkey_breast_deli NDB 7081 added during SAND_005 build; egg_cooked_hardboiled NDB 1129 + mustard_yellow NDB 2046 added during SAND_006 build; french_roll NDB 18349 + provolone_cheese NDB 1035 + tamari NDB 16124 added during SAND_042 build; oregano_dried NDB 2027 + basil_dried NDB 2003 added during SAND_043 build)
 
 ## Current Work: SAND Recipes
 
@@ -172,6 +172,8 @@ Planned BKFST order (standalone components first, composites last):
 | SAND_028 | Liverwurst Sandwich | (none) | Rule D ✅ |
 | SAND_029 | Limburger Sandwich | (none) | Rule D ✅ — 64g bread_rye(18023)+57g limburger_cheese(1024)+20g onion_raw(11282)+5g mustard_yellow(2046); yfw=1.00 → 146g; 363 cal/serving; 248.7 kcal·10.5P·14.4F·20.0C per 100g; dietary_category=all; food_word=LIMBURGERSANDWICH |
 | SAND_030 | Patty Melt | (none) | Rule D ✅ — 64g bread_rye(18023)+113g beef_ground_80lean_raw(23572)+56g cheese_swiss(1040)+80g onion_raw(11282)+14g butter_salted(1001)+3g salt(2047)+0.3g black_pepper_ground(2030); yfw=0.82 → 296.4g; 806 cal/serving; 271.9 kcal·13.8P·18.1F·13.3C per 100g; dietary_category=all; food_word=PATTYMELT; pan grilled |
+| SAND_042 | French Dip | (none) | Rule D ✅ — 3 sections: onion_saute (pan grilled): olive_oil(4053)+onion_raw(11282)+garlic_powder(2020)+salt_table(2047)+worcestershire_sauce(6971); au_jus (raw): beef_broth_canned(6008)+tamari(16124); assembly (raw): french_roll(18349)+roast_beef_deli(7043)+provolone_cheese(1035); yfw=1.00 → 372.2g; 438 cal/serving; 117.8 kcal·10.69P·5.16F·6.73C per 100g; dietary_category=all; food_word=FRENCHDIP |
+| SAND_043 | Italian Beef Sandwich | (none) | Rule D ✅ — 3 sections: au_jus (raw): beef_broth_canned(6008)+garlic_powder(2020)+oregano_dried(2027)+basil_dried(2003)+red_pepper_flakes(2031)+salt_table(2047); sweet_peppers (pan grilled): olive_oil(4053)+bell_pepper_green_raw(11333); assembly (raw): french_roll(18349)+roast_beef_deli(7043); yfw=1.00 → 286.2g; 325 cal/serving; 113.4 kcal·10.80P·4.06F·7.97C per 100g; dietary_category=all; food_word=ITALIANBEEF |
 
 ## Human Approval Requirements
 
