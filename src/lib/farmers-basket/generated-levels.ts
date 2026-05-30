@@ -5681,5 +5681,61 @@ export const LEVELS: Level[] = [
       { key: 'shrimp', label: 'Fried shrimp:', cookingMethod: '', yieldFactorWater: 0.85 },
       { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_045',
+    name: 'Oyster Po\' Boy',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'pesca',
+    levelNum: 123,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving',
+    prepTime: '20 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":936.2,"pro":22.6,"fat":61.1,"carb":75.4,"fib":4.8,"h2o":255.7,"sug":11.6,"perServing":{"cal":936.2,"pro":22.6,"fat":61.1,"carb":75.4,"fib":4.8,"h2o":255.7,"sug":11.6,"AddedSugars":0.0,"IntrinsicSugars":11.6},"micros":{"vitaminA":31.04,"vitaminC":2.73,"vitaminD":5.65,"vitaminE":1.36,"vitaminK":26.7,"vitaminB6":0.06,"vitaminB12":2.26,"thiamin":0.17,"riboflavin":0.16,"niacin":1.5,"folate":40.57,"calcium":36.83,"iron":2.72,"magnesium":17.75,"phosphorus":77.48,"potassium":145.86,"sodium":397.89,"zinc":12.05,"copper":0.9,"selenium":15.09,"cholesterol":38.43,"saturatedFat":2.35,"monoFat":5.69,"polyFat":5.59,"omega3":0.64,"omega6":4.37},"gramsPerServing":421.3,"servings":1,"per100g":{"Energy_KCal":222.25,"Water":60.71,"Protein":5.37,"TotalLipidFat":14.51,"Carbohydrate":17.89,"FiberTotalDietary":1.15,"SugarsTotal":2.76,"Cholesterol":38.43,"FattyAcids_totalSaturated":2.35,"FattyAcids_totalMonounsaturated":5.69,"FattyAcids_totalPolyunsaturated":5.59,"LinoleicAcid":4.37,"alphaLinolenicAcid":0.59,"EPA_20_5n3":0.03,"DPA_22_5n3":0.0,"DHA_22_6n3":0.02,"VitaminA_RAE":31.04,"Retinol":12.28,"Carotene_beta":196.4,"VitaminD":5.65,"VitaminE_alphaTocopherol":1.36,"VitaminK_phylloquinone":26.7,"VitaminC_totalAscorbicAcid":2.73,"Thiamin":0.17,"Riboflavin":0.16,"Niacin":1.5,"PantothenicAcid":0.27,"VitaminB6":0.06,"Folate_total":40.57,"Folate_food":20.22,"Folate_DFE":54.86,"FolicAcid":23.35,"VitaminB12":2.26,"Choline_total":40.72,"Betaine":0.13,"LuteinZeaxanthin":172.63,"Lycopene":366.49,"Calcium_Ca":36.83,"Iron_Fe":2.72,"Magnesium_Mg":17.75,"Phosphorus_P":77.48,"Potassium_K":145.86,"Sodium_Na":397.89,"Zinc_Zn":12.05,"Copper_Cu":0.9,"Manganese_Mn":0.27,"Selenium_Se":15.09,"Tryptophan":0.04,"Threonine":0.07,"Isoleucine":0.14,"Leucine":0.25,"Lysine":0.2,"Methionine":0.08,"Cystine":0.04,"Phenylalanine":0.15,"Tyrosine":0.12,"Valine":0.17,"Arginine":0.2,"Histidine":0.07,"Alanine":0.17,"AsparticAcid":0.31,"GlutamicAcid":0.59,"Glycine":0.14,"Proline":0.19,"Serine":0.17,"omega3":0.64,"omega6":4.37,"AddedSugars":0.0,"IntrinsicSugars":2.76},"addedSugars":0.0,"intrinsicSugars":11.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":45.0},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":8.0},{"ndb":"11945","name":"Pickle relish, sweet","grams":15.0},{"ndb":"9152","name":"Lemon juice, raw","grams":5.0},{"ndb":"6169","name":"Sauce, ready-to-serve, pepper, TABASCO","grams":2.4},{"ndb":"2028","name":"Spices, paprika","grams":1.0},{"ndb":"2020","name":"Spices, garlic powder","grams":0.5},{"ndb":"15167","name":"Mollusks, oyster, eastern, wild, raw","grams":125.0},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":15.0},{"ndb":"20022","name":"Cornmeal, degermed, enriched, yellow","grams":15.0},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":25.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":20.0},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.5},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.5},{"ndb":"18029","name":"Bread, french or vienna (includes sourdough)","grams":72.0},{"ndb":"11252","name":"Lettuce, iceberg (includes crisphead types), raw","grams":30.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":60.0}],"sections":[{"section_key":"remoulade","section_label":"Remoulade sauce:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":76.85,"raw_water_grams":32.75,"raw_fat_grams":34.18,"final_grams":76.85},{"section_key":"oyster","section_label":"Fried oysters:","prep_method":"raw","cook_method":"fried","cooking_method":"fried","cooking_method_normalized":"fried","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":202.5,"raw_water_grams":133.91,"raw_fat_grams":25.03,"final_grams":182.41},{"section_key":"assembly","section_label":"Assembly:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":162.0,"raw_water_grams":109.16,"raw_fat_grams":1.9,"final_grams":162.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Oyster Po\' Boy', quantity: 'custom (g)', foodWord: 'OYSTERPOBOY', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'mayonnaise', quantity: '3 tbsp', section: 'remoulade', ndbNo: '4025', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'yellow mustard', quantity: '1½ tsp', section: 'remoulade', ndbNo: '2046', portionDesc: 'g', portionGrams: 8.0 },
+      { name: 'Pickle relish, sweet', quantity: '1 tbsp (15g)', section: 'remoulade', ndbNo: '11945', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'lemon juice', quantity: '1 tsp', section: 'remoulade', ndbNo: '9152', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'Hot sauce (Tabasco)', quantity: '½ tsp', section: 'remoulade', ndbNo: '6169', portionDesc: 'g', portionGrams: 2.35 },
+      { name: 'paprika', quantity: '¼ tsp', section: 'remoulade', ndbNo: '2028', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'garlic powder', quantity: '⅛ tsp', section: 'remoulade', ndbNo: '2020', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'Oyster, eastern, wild, raw', quantity: '10 medium eastern oysters (125g)', section: 'oyster', ndbNo: '15167', portionDesc: 'g', portionGrams: 125.0 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '2 tbsp', section: 'oyster', ndbNo: '20581', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'Cornmeal, enriched, yellow', quantity: '2 tbsp', section: 'oyster', ndbNo: '20022', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'large egg', quantity: '½ large egg (25g)', section: 'oyster', ndbNo: '1123', portionDesc: 'g', portionGrams: 25.0 },
+      { name: 'olive oil', quantity: '1½ tbsp', section: 'oyster', ndbNo: '4053', portionDesc: 'g', portionGrams: 20.0 },
+      { name: 'salt', quantity: '¼ tsp', section: 'oyster', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'oyster', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'red pepper flakes', quantity: '¼ tsp', section: 'oyster', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'French bread', quantity: '1 piece (8", 72g)', section: 'assembly', ndbNo: '18029', portionDesc: 'g', portionGrams: 72.0 },
+      { name: 'iceberg lettuce', quantity: '½ cup shredded (loosely packed, 30g)', section: 'assembly', ndbNo: '11252', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'tomato raw', quantity: '3 medium slices, ¼" thick (60g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 60.0 }
+    ],
+    recipeInstructions: [
+      'Make the remoulade: In a small bowl, whisk together the mayonnaise, yellow mustard, sweet pickle relish, lemon juice, hot sauce, paprika, and garlic powder. Cover and refrigerate until ready to serve.',
+      'Set up the dredging station: Combine the flour and cornmeal in a shallow bowl. Beat the egg in a separate shallow bowl.',
+      'Season the oysters with salt, black pepper, and red pepper flakes. Dip each oyster in the beaten egg, then dredge in the flour-cornmeal mixture, pressing to coat.',
+      'Heat the olive oil in a skillet over medium-high heat until shimmering. Working in batches, cook the oysters 1–2 minutes per side until golden and cooked through. Transfer to a plate.',
+      'Slice the French bread roll and lightly toast the cut sides if desired. Spread the remoulade generously on both cut sides.',
+      'Layer the shredded lettuce and tomato slices on the bottom half of the roll. Top with the fried oysters and close the sandwich.'
+    ],
+    sections: [
+      { key: 'remoulade', label: 'Remoulade sauce:', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'oyster', label: 'Fried oysters:', cookingMethod: '', yieldFactorWater: 0.85 },
+      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
