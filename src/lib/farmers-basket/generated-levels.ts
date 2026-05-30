@@ -6069,5 +6069,47 @@ export const LEVELS: Level[] = [
       { key: 'eggs', label: 'Eggs:', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BKFST_036',
+    name: 'Croissant Bacon, Egg & Cheese Sandwich',
+    category: 'breakfast & brunch',
+    dietaryCategory: 'all',
+    levelNum: 131,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 sandwich',
+    prepTime: '15 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":709.4,"pro":31.1,"fat":50.1,"carb":32.3,"fib":1.8,"h2o":107.0,"sug":8.0,"perServing":{"cal":709.4,"pro":31.1,"fat":50.1,"carb":32.3,"fib":1.8,"h2o":107.0,"sug":8.0,"AddedSugars":0.0,"IntrinsicSugars":8.0},"micros":{"vitaminA":177.64,"vitaminC":0.06,"vitaminD":40.12,"vitaminE":0.82,"vitaminK":1.34,"vitaminB6":0.13,"vitaminB12":0.59,"thiamin":0.19,"riboflavin":0.32,"niacin":1.74,"folate":44.46,"calcium":104.93,"iron":1.5,"magnesium":15.96,"phosphorus":203.06,"potassium":156.39,"sodium":525.18,"zinc":1.46,"copper":0.07,"selenium":28.24,"cholesterol":217.64,"saturatedFat":11.06,"monoFat":6.94,"polyFat":1.86,"omega3":0.06,"omega6":1.26},"gramsPerServing":225.4,"servings":1,"per100g":{"Energy_KCal":314.73,"Water":47.45,"Protein":13.79,"TotalLipidFat":22.23,"Carbohydrate":14.34,"FiberTotalDietary":0.78,"SugarsTotal":3.54,"Cholesterol":217.64,"FattyAcids_totalSaturated":11.06,"FattyAcids_totalMonounsaturated":6.94,"FattyAcids_totalPolyunsaturated":1.86,"LinoleicAcid":1.26,"alphaLinolenicAcid":0.05,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":177.64,"Retinol":175.15,"Carotene_beta":27.18,"VitaminD":40.12,"VitaminE_alphaTocopherol":0.82,"VitaminK_phylloquinone":1.34,"VitaminC_totalAscorbicAcid":0.06,"Thiamin":0.19,"Riboflavin":0.32,"Niacin":1.74,"PantothenicAcid":0.96,"VitaminB6":0.13,"Folate_total":44.46,"Folate_food":26.62,"Folate_DFE":56.94,"FolicAcid":17.83,"VitaminB12":0.59,"Choline_total":140.57,"Betaine":0.98,"LuteinZeaxanthin":167.18,"Lycopene":0.01,"Calcium_Ca":104.93,"Iron_Fe":1.5,"Magnesium_Mg":15.96,"Phosphorus_P":203.06,"Potassium_K":156.39,"Sodium_Na":525.18,"Zinc_Zn":1.46,"Copper_Cu":0.07,"Manganese_Mn":0.12,"Selenium_Se":28.24,"Tryptophan":0.17,"Threonine":0.58,"Isoleucine":0.69,"Leucine":1.18,"Lysine":1.0,"Methionine":0.37,"Cystine":0.2,"Phenylalanine":0.69,"Tyrosine":0.56,"Valine":0.83,"Arginine":0.79,"Histidine":0.4,"Alanine":0.7,"AsparticAcid":1.25,"GlutamicAcid":2.5,"Glycine":0.48,"Proline":0.85,"Serine":0.84,"omega3":0.06,"omega6":1.26,"AddedSugars":0.0,"IntrinsicSugars":3.54},"addedSugars":0.0,"intrinsicSugars":8.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":100.0},{"ndb":"1001","name":"Butter, salted","grams":14.0},{"ndb":"2047","name":"Salt, table","grams":0.3},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"18239","name":"Croissants, butter","grams":67.0},{"ndb":"1270","name":"Cheese, cheddar, sharp, sliced","grams":21.0},{"ndb":"10862","name":"Pork, cured, bacon, pre-sliced, cooked, pan-fried","grams":23.0}],"sections":[{"section_key":"eggs","section_label":"Eggs:","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":114.4,"raw_water_grams":78.38,"raw_fat_grams":20.87,"final_grams":114.4},{"section_key":"assembly","section_label":"Assembly:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":111.0,"raw_water_grams":28.57,"raw_fat_grams":29.24,"final_grams":111.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Croissant Bacon, Egg & Cheese Sandwich', quantity: 'custom (g)', foodWord: 'CROISSANTBACONEGGCHEESE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'large egg', quantity: '2 large (100g)', section: 'eggs', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'salted butter', quantity: '1 tbsp (14g)', section: 'eggs', ndbNo: '1001', portionDesc: 'g', portionGrams: 14.0 },
+      { name: 'salt', quantity: 'pinch (0.3g)', section: 'eggs', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'ground black pepper', quantity: 'pinch (0.1g)', section: 'eggs', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.1 },
+      { name: 'croissant', quantity: '1 large (67g)', section: 'assembly', ndbNo: '18239', portionDesc: 'g', portionGrams: 67.0 },
+      { name: 'sharp cheddar cheese', quantity: '1 slice (21g)', section: 'assembly', ndbNo: '1270', portionDesc: 'g', portionGrams: 21.0 },
+      { name: 'cooked bacon', quantity: '2 strips (23g)', section: 'assembly', ndbNo: '10862', portionDesc: 'g', portionGrams: 23.0 }
+    ],
+    recipeInstructions: [
+      'Cook the bacon in a non-toxic nonstick skillet over medium heat until crisp, about 3–4 minutes per side. Transfer to a paper towel to drain.',
+      'Discard excess bacon fat, leaving a thin film. Reduce heat to medium-low and add butter. Whisk the eggs with salt and pepper, pour into the pan, and scramble gently until just set. Remove from heat while still slightly glossy.',
+      'Split the croissant in half horizontally. Lay the cheddar slice on the bottom half.',
+      'Spoon the scrambled eggs over the cheese, then lay the bacon strips on top. Close the sandwich and serve immediately.'
+    ],
+    sections: [
+      { key: 'eggs', label: 'Eggs:', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
