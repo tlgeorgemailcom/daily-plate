@@ -5737,5 +5737,58 @@ export const LEVELS: Level[] = [
       { key: 'oyster', label: 'Fried oysters:', cookingMethod: '', yieldFactorWater: 0.85 },
       { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_046',
+    name: 'Meatball Sub',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 124,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving',
+    prepTime: '30 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":913.6,"pro":49.5,"fat":50.0,"carb":64.0,"fib":5.0,"h2o":204.7,"sug":8.2,"perServing":{"cal":913.6,"pro":49.5,"fat":50.0,"carb":64.0,"fib":5.0,"h2o":204.7,"sug":8.2,"AddedSugars":0.0,"IntrinsicSugars":8.2},"micros":{"vitaminA":40.07,"vitaminC":0.74,"vitaminD":8.08,"vitaminE":0.81,"vitaminK":7.41,"vitaminB6":0.16,"vitaminB12":0.83,"thiamin":0.21,"riboflavin":0.22,"niacin":3.08,"folate":31.82,"calcium":138.12,"iron":1.97,"magnesium":23.68,"phosphorus":165.27,"potassium":228.49,"sodium":523.78,"zinc":2.01,"copper":0.09,"selenium":19.96,"cholesterol":59.93,"saturatedFat":5.1,"monoFat":5.36,"polyFat":1.08,"omega3":0.03,"omega6":0.2},"gramsPerServing":376.7,"servings":1,"per100g":{"Energy_KCal":242.5,"Water":54.35,"Protein":13.13,"TotalLipidFat":13.26,"Carbohydrate":16.99,"FiberTotalDietary":1.32,"SugarsTotal":2.17,"Cholesterol":59.93,"FattyAcids_totalSaturated":5.1,"FattyAcids_totalMonounsaturated":5.36,"FattyAcids_totalPolyunsaturated":1.08,"LinoleicAcid":0.2,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":40.07,"Retinol":33.06,"Carotene_beta":83.15,"VitaminD":8.08,"VitaminE_alphaTocopherol":0.81,"VitaminK_phylloquinone":7.41,"VitaminC_totalAscorbicAcid":0.74,"Thiamin":0.21,"Riboflavin":0.22,"Niacin":3.08,"PantothenicAcid":0.38,"VitaminB6":0.16,"Folate_total":31.82,"Folate_food":13.11,"Folate_DFE":44.91,"FolicAcid":19.86,"VitaminB12":0.83,"Choline_total":37.97,"Betaine":1.93,"LuteinZeaxanthin":70.89,"Lycopene":2532.08,"Calcium_Ca":138.12,"Iron_Fe":1.97,"Magnesium_Mg":23.68,"Phosphorus_P":165.27,"Potassium_K":228.49,"Sodium_Na":523.78,"Zinc_Zn":2.01,"Copper_Cu":0.09,"Manganese_Mn":0.21,"Selenium_Se":19.96,"Tryptophan":0.15,"Threonine":0.5,"Isoleucine":0.59,"Leucine":1.01,"Lysine":0.82,"Methionine":0.3,"Cystine":0.14,"Phenylalanine":0.57,"Tyrosine":0.46,"Valine":0.68,"Arginine":0.63,"Histidine":0.37,"Alanine":0.6,"AsparticAcid":1.0,"GlutamicAcid":2.6,"Glycine":0.55,"Proline":0.98,"Serine":0.56,"omega3":0.03,"omega6":0.2,"AddedSugars":0.0,"IntrinsicSugars":2.17},"addedSugars":0.0,"intrinsicSugars":8.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":85.0},{"ndb":"10219","name":"Pork, fresh, ground, raw","grams":43.0},{"ndb":"18079","name":"Bread crumbs, dry, grated, plain","grams":21.0},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":25.0},{"ndb":"11282","name":"Onions, raw","grams":30.0},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":10.0},{"ndb":"2020","name":"Spices, garlic powder","grams":0.5},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.5},{"ndb":"2003","name":"Spices, basil, dried","grams":0.5},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":4.0},{"ndb":"18353","name":"Rolls, hard (includes kaiser)","grams":72.0},{"ndb":"6931","name":"Sauce, pasta, spaghetti/marinara, ready-to-serve","grams":75.0},{"ndb":"1026","name":"Cheese, mozzarella, whole milk","grams":42.0}],"sections":[{"section_key":"meatballs","section_label":"Meatballs:","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.74,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":12,"raw_grams":221.3,"raw_water_grams":129.07,"raw_fat_grams":36.27,"final_grams":187.74},{"section_key":"assembly","section_label":"Assembly:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":189.0,"raw_water_grams":109.23,"raw_fat_grams":13.69,"final_grams":189.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Meatball Sub', quantity: 'custom (g)', foodWord: 'MEATBALLSUB', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'ground beef (80% lean)', quantity: '3 oz raw (85g)', section: 'meatballs', ndbNo: '23572', portionDesc: 'g', portionGrams: 85.0 },
+      { name: 'Ground pork (raw)', quantity: '1½ oz raw (43g)', section: 'meatballs', ndbNo: '10219', portionDesc: 'g', portionGrams: 43.0 },
+      { name: 'Bread crumbs, dry plain', quantity: '3 tbsp (21g)', section: 'meatballs', ndbNo: '18079', portionDesc: 'g', portionGrams: 21.0 },
+      { name: 'large egg', quantity: '½ large egg (25g)', section: 'meatballs', ndbNo: '1123', portionDesc: 'g', portionGrams: 25.0 },
+      { name: 'onion', quantity: '3 tbsp grated (30g)', section: 'meatballs', ndbNo: '11282', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'Parmesan cheese', quantity: '2 tbsp (10g)', section: 'meatballs', ndbNo: '1033', portionDesc: 'g', portionGrams: 10.0 },
+      { name: 'garlic powder', quantity: '¼ tsp', section: 'meatballs', ndbNo: '2020', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'dried oregano', quantity: '¼ tsp', section: 'meatballs', ndbNo: '2027', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'dried basil', quantity: '¼ tsp', section: 'meatballs', ndbNo: '2003', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'salt', quantity: '¼ tsp', section: 'meatballs', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'meatballs', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'olive oil', quantity: '1 tsp', section: 'meatballs', ndbNo: '4053', portionDesc: 'g', portionGrams: 4.0 },
+      { name: 'Hoagie roll', quantity: '1 roll (6", 72g)', section: 'assembly', ndbNo: '18353', portionDesc: 'g', portionGrams: 72.0 },
+      { name: 'Marinara sauce', quantity: '¼ cup + 2 tbsp (75g)', section: 'assembly', ndbNo: '6931', portionDesc: 'g', portionGrams: 75.0 },
+      { name: 'Mozzarella, whole milk', quantity: '1½ oz (42g)', section: 'assembly', ndbNo: '1026', portionDesc: 'g', portionGrams: 42.0 }
+    ],
+    recipeInstructions: [
+      'In a large bowl, combine the beef, pork, breadcrumbs, egg, grated onion, Parmesan, garlic powder, oregano, basil, salt, and pepper. Mix gently until just combined — do not overwork.',
+      'Form into 5 meatballs (about 40g each). Wet your hands lightly to prevent sticking.',
+      'Heat olive oil in an oven-safe skillet over medium-high heat. Brown the meatballs on all sides, about 2–3 minutes per side. (They will finish cooking in the sauce.)',
+      'Pour marinara sauce over the meatballs in the skillet. Reduce heat to medium-low, cover, and simmer 10–12 minutes until cooked through (internal temp 165°F).',
+      'Split the hoagie roll lengthwise (do not cut all the way through). Lightly toast cut-side down in a dry skillet over medium heat, about 1 minute.',
+      'Arrange the meatballs on the roll and spoon sauce generously over them. Top with shredded mozzarella.',
+      'Place the open sandwich under the broiler for 2–3 minutes until the mozzarella is melted and bubbly. Serve immediately.'
+    ],
+    sections: [
+      { key: 'meatballs', label: 'Meatballs:', cookingMethod: '', yieldFactorWater: 0.74 },
+      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
