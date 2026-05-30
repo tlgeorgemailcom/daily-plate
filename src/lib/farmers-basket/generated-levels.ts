@@ -6028,5 +6028,46 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BKFST_011',
+    name: 'Croissant Egg & Cheese Sandwich',
+    category: 'breakfast & brunch',
+    dietaryCategory: 'veggie',
+    levelNum: 130,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 sandwich',
+    prepTime: '10 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":515.7,"pro":23.2,"fat":32.3,"carb":31.9,"fib":1.8,"h2o":99.6,"sug":8.0,"perServing":{"cal":515.7,"pro":23.2,"fat":32.3,"carb":31.9,"fib":1.8,"h2o":99.6,"sug":8.0,"AddedSugars":0.0,"IntrinsicSugars":8.0},"micros":{"vitaminA":174.48,"vitaminC":0.07,"vitaminD":45.44,"vitaminE":0.81,"vitaminK":1.18,"vitaminB6":0.09,"vitaminB12":0.55,"thiamin":0.15,"riboflavin":0.34,"niacin":0.8,"folate":52.49,"calcium":121.37,"iron":1.66,"magnesium":15.02,"phosphorus":192.01,"potassium":123.35,"sodium":377.78,"zinc":1.36,"copper":0.07,"selenium":27.25,"cholesterol":232.13,"saturatedFat":8.41,"monoFat":5.01,"polyFat":1.32,"omega3":0.04,"omega6":0.75},"gramsPerServing":190.4,"servings":1,"per100g":{"Energy_KCal":270.86,"Water":52.32,"Protein":12.17,"TotalLipidFat":16.97,"Carbohydrate":16.76,"FiberTotalDietary":0.93,"SugarsTotal":4.19,"Cholesterol":232.13,"FattyAcids_totalSaturated":8.41,"FattyAcids_totalMonounsaturated":5.01,"FattyAcids_totalPolyunsaturated":1.32,"LinoleicAcid":0.75,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.02,"VitaminA_RAE":174.48,"Retinol":172.18,"Carotene_beta":24.2,"VitaminD":45.44,"VitaminE_alphaTocopherol":0.81,"VitaminK_phylloquinone":1.18,"VitaminC_totalAscorbicAcid":0.07,"Thiamin":0.15,"Riboflavin":0.34,"Niacin":0.8,"PantothenicAcid":1.0,"VitaminB6":0.09,"Folate_total":52.49,"Folate_food":31.37,"Folate_DFE":67.27,"FolicAcid":21.11,"VitaminB12":0.55,"Choline_total":154.53,"Betaine":0.17,"LuteinZeaxanthin":197.91,"Lycopene":0.01,"Calcium_Ca":121.37,"Iron_Fe":1.66,"Magnesium_Mg":15.02,"Phosphorus_P":192.01,"Potassium_K":123.35,"Sodium_Na":377.78,"Zinc_Zn":1.36,"Copper_Cu":0.07,"Manganese_Mn":0.14,"Selenium_Se":27.25,"Tryptophan":0.15,"Threonine":0.51,"Isoleucine":0.62,"Leucine":1.05,"Lysine":0.82,"Methionine":0.32,"Cystine":0.2,"Phenylalanine":0.64,"Tyrosine":0.5,"Valine":0.77,"Arginine":0.67,"Histidine":0.3,"Alanine":0.59,"AsparticAcid":1.09,"GlutamicAcid":2.31,"Glycine":0.38,"Proline":0.84,"Serine":0.82,"omega3":0.04,"omega6":0.75,"AddedSugars":0.0,"IntrinsicSugars":4.19},"addedSugars":0.0,"intrinsicSugars":8.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":100.0},{"ndb":"1001","name":"Butter, salted","grams":2.0},{"ndb":"2047","name":"Salt, table","grams":0.3},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"18239","name":"Croissants, butter","grams":67.0},{"ndb":"1270","name":"Cheese, cheddar, sharp, sliced","grams":21.0}],"sections":[{"section_key":"eggs","section_label":"Eggs:","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":102.4,"raw_water_grams":76.48,"raw_fat_grams":11.14,"final_grams":102.4},{"section_key":"assembly","section_label":"Assembly:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":88.0,"raw_water_grams":23.14,"raw_fat_grams":21.17,"final_grams":88.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Croissant Egg & Cheese Sandwich', quantity: 'custom (g)', foodWord: 'CROISSANTEGGCHEESE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'large egg', quantity: '2 large (100g)', section: 'eggs', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'salted butter', quantity: '½ tsp (2g)', section: 'eggs', ndbNo: '1001', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'salt', quantity: 'pinch (0.3g)', section: 'eggs', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'ground black pepper', quantity: 'pinch (0.1g)', section: 'eggs', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.1 },
+      { name: 'croissant', quantity: '1 large (67g)', section: 'assembly', ndbNo: '18239', portionDesc: 'g', portionGrams: 67.0 },
+      { name: 'sharp cheddar cheese', quantity: '1 slice (21g)', section: 'assembly', ndbNo: '1270', portionDesc: 'g', portionGrams: 21.0 }
+    ],
+    recipeInstructions: [
+      'Crack the eggs into a bowl, season with salt and pepper, and whisk until combined.',
+      'Melt butter in a nonstick skillet over medium-low heat. Add the eggs and scramble gently, stirring slowly, until just set. Remove from heat while still slightly glossy.',
+      'Split the croissant in half horizontally. Lay the cheddar slice on the bottom half.',
+      'Spoon the scrambled eggs over the cheese. Close the sandwich and serve immediately.'
+    ],
+    sections: [
+      { key: 'eggs', label: 'Eggs:', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
