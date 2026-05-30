@@ -131,6 +131,7 @@ milk_buttermilk_whole,1230,BUTTERMILK,"Milk, buttermilk, fluid, whole",whole but
 milk_evaporated,1096,EVAPORATEDMILK,"Milk, canned, evaporated, with added vitamin D",evaporated milk,cup,252.0,
 milk_lowfat_2pct,1079,MILK2PCT,"Milk, reduced fat, fluid, 2% milkfat, with added vitamin A and vitamin D",2% milk,cup,244.0,
 milk_whole,1077,MILK,"Milk, whole, 3.25% milkfat, with added vitamin D",whole milk,cup,244.0,Whole milk 3.25% milkfat
+mint_fresh,2065,SPEARMINT,"Spearmint, fresh",fresh mint,teaspoon,0.7,Spearmint fresh; standard culinary fresh mint
 molasses,19304,MOLASSES,Molasses,molasses,cup,337.0,1 cup ~337g; 1 Tbsp ~20g
 mustard_yellow,2046,MUSTARD,"Mustard, prepared, yellow",yellow mustard,teaspoon,5.0,
 nutmeg_ground,2025,NUTMEG,"Spices, nutmeg, ground",ground nutmeg,teaspoon,2.2,Ground nutmeg; ~2.2g per tsp
