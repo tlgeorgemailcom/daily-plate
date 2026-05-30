@@ -180,3 +180,6 @@ breadcrumbs_plain_dry,18079,BREADCRUMBSDRY,"Bread crumbs, dry, grated, plain","B
 cheese_mozzarella_wholemilk,1026,MOZZARELLA,"Cheese, mozzarella, whole milk","Mozzarella, whole milk",oz,28.35,
 marinara_sauce,6931,MARINARASAUCE,"Sauce, pasta, spaghetti/marinara, ready-to-serve",Marinara sauce,tbsp,15.0,
 hoagie_roll,18353,HOAGIEROLL,"Rolls, hard (includes kaiser)",Hoagie roll,oz,28.35,
+prosciutto,10141,PROSCIUTTO,"Pork, cured, ham, center slice, country-style, separable lean only, raw",Prosciutto,oz,28.35,FNDDS proxy for prosciutto; SR Legacy has no direct entry
+salami_italian_dry,7926,SALAMIITALIAN,"Salami, Italian, pork","Salami, Italian dry",slice,10.0,
+vinegar_red_wine,2068,VINEGARREDWINE,"Vinegar, red wine",Red wine vinegar,tbsp,15.0,

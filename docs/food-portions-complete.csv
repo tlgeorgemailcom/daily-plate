@@ -1097,7 +1097,7 @@ PRAWN,Prawn,protein,,,,,15151,"Crustaceans, shrimp, mixed species, cooked, moist
 PRESERVES,Preserves,sweets,,,,,19920,"Jams, preserves, marmalades, sweetened with fruit juice",212.0,0.0,0.0,52.9,0.9,46.8,42.0,1.0,custom (g),100.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 PRETZEL,Pretzel,prepared,,,,,25024,"Pretzels, soft, unsalted",345.0,8.2,3.1,71.0,1.7,15.0,0.2,1.0,custom (g),100.0,1.0,large,143.0,1.0,medium,115.0,1.0,small,62.0,,,,,,,,,,,,,,,,,,,,,,,,,,,
 PRICKLYPEAR,Prickly Pear,fruit,,,,,9287,"Prickly pears, raw",41.0,0.7,0.5,9.6,3.6,87.5,0.0,1.0,custom (g),100.0,1.0,cup,149.0,1.0,fruit without refuse,103.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-PROSCIUTTO,Prosciutto,protein,,,,,7057,"Pepperoni, beef and pork, sliced",504.0,19.2,46.3,1.2,0.0,28.6,0.0,1.0,custom (g),100.0,3.0,oz,85.0,1.0,piece,2.0,1.0,oz,28.0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PROSCIUTTO,Prosciutto,protein,,,,,10141,"Pork, cured, ham, center slice, country-style, separable lean only, raw",195.0,27.8,8.32,0.3,0.0,55.93,0.0,1.0,custom (g),100.0,3.0,oz,85.0,1.0,piece,2.0,1.0,oz,28.0,,,,,,,,,,,,,,,,,,,,,,,,,,,
 PROVOLONE,Provolone,dairy,,,,,1035,"Cheese, provolone",351.0,25.6,26.6,2.1,0.0,41.0,0.6,1.0,custom (g),100.0,1.0,"cup, diced",132.0,1.0,oz,28.35,1.0,cubic inch,17.0,1.0,slice (1 oz),28.0,1.0,package (6 oz),170.0,,,,,,,,,,,,,,,,,,,,,
 PRUNE,Prune,fruit,,,,,9289,"Prunes, dehydrated (low-moisture), uncooked",339.0,3.7,0.7,89.1,0.0,4.0,0.0,1.0,custom (g),100.0,1.0,cup,132.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 PRUNEJUICE,Prune Juice,beverage,,,,,9294,"Prune juice, canned",71.0,0.6,0.0,17.4,1.0,81.2,16.4,1.0,custom (g),100.0,1.0,cup,256.0,1.0,fl oz,32.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -1522,3 +1522,4 @@ OYSTER,Oyster,seafood,,,,0,15167,"Mollusks, oyster, eastern, wild, raw",51.0,5.7
 CORNMEAL,Cornmeal,grains,,,,0,20022,"Cornmeal, degermed, enriched, yellow",370.0,7.11,1.75,79.45,3.9,11.18,1.61,,,,1,cup,138.0,1,tbsp,8.6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 PICKLERELISH,Pickle Relish,condiments,,,,0,11945,"Pickle relish, sweet",130.0,0.37,0.47,35.06,1.1,62.07,29.13,,,,1,tbsp,15.0,1,tsp,5.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 HOAGIEROLL,Hoagie Roll,prepared,,,,,18353,"Rolls, hard (includes kaiser)",293.0,9.9,4.3,52.7,2.3,31.0,1.77,1.0,custom (g),100.0,1.0,oz,28.35,1.0,"roll (6"")",72.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SALAMIITALIAN,Salami Italian,prepared,,,,,7926,"Salami, Italian, pork",425.0,21.7,37.0,1.2,0.0,34.6,1.2,1.0,custom (g),100.0,1.0,oz,28.35,1.0,slice,10.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
