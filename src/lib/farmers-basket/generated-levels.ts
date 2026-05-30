@@ -6274,7 +6274,7 @@ export const LEVELS: Level[] = [
     ],
     recipeInstructions: [
       'Rinse the chickpeas and place them in a large bowl. Cover with cold water, adding enough to allow the chickpeas to at least triple in volume. Cover and let stand at room temperature overnight. The next day, drain, rinse, and carefully dry the chickpeas with paper towels — excess moisture will prevent the patties from holding together.',
-      'Combine the soaked chickpeas, parsley, cilantro, onion, garlic powder, cumin, ground coriander, and salt in a food processor. Pulse until the mixture is coarsely ground — it should hold together when pressed but not be smooth. Do not over-process into a paste.',
+      'Combine the soaked chickpeas, parsley, cilantro, onion, garlic powder, cumin, ground coriander, and salt in a food processor. Pulse until the mixture is like coarse sand — it should hold together when pressed but not be smooth. Pulse until it does hold together. Do not over-process into a paste.',
       'Shape the mixture into 4 equal patties, about ½ inch thick. (Oil in the ingredient list reflects only the amount absorbed into the patties.)',
       'Heat the olive oil in a non-toxic nonstick skillet over medium heat. Cook the patties for 3–4 minutes per side until golden brown and crisp on the outside. Transfer to a plate.',
       'Stir together the tahini and lemon juice until smooth to make the sauce.',
