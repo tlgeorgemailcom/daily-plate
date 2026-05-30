@@ -79,7 +79,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 |---|---|---|
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
 | `BKFST_NNN` | 🔧 In progress | 34 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035) |
-| `SAND_NNN` | 🔧 In progress | 32 (001–030, 040–043) |
+| `SAND_NNN` | 🔧 In progress | 43 (001–043) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -148,30 +148,41 @@ Planned BKFST order (standalone components first, composites last):
 | SAND_004 | BLT Sandwich | (none) | Rule D ✅ — no canonical; 50g bread_white_commercial(18069)+34.5g bacon_cooked_pan_fried(10862)+60g tomato_red_raw(11529)+21g mayonnaise(4025)+28g lettuce_iceberg_raw(11252); yfw=1.00 → 193.5g; 1 sandwich/serving; 233.6 kcal·8.8P·15.3F·14.8C per 100g; dietary_category=all; food_word=BLT |
 | SAND_005 | Club Sandwich | (none) | Rule D ✅ — no canonical; 90g bread_white_commercial(18069)+80g turkey_breast_deli(7081)+23g bacon_cooked_pan_fried(10862)+60g tomato_red_raw(11529)+28g lettuce_iceberg_raw(11252)+21g mayonnaise(4025); yfw=1.00 → 302.0g; 1 sandwich/serving; 195.2 kcal·9.5P·9.9F·16.5C per 100g; dietary_category=all; food_word=CLUBSANDWICH |
 | SAND_006 | Egg Salad Sandwich | (none) | Rule D ✅ — no canonical; 60g bread_white_commercial(18069)+100g egg_cooked_hardboiled(1129)+27.6g mayonnaise(4025)+6g scallion_raw(11291)+2.5g mustard_yellow(2046)+1.5g salt_table(2047); yfw=1.00 → 197.6g; 1 sandwich/serving; 255.9 kcal·9.3P·16.9F·15.9C per 100g; dietary_category=veggie; food_word=EGGSALAD |
-| SAND_007 | Tuna Salad Sandwich | (none) | Rule D ✅ |
-| SAND_008 | Chicken Salad Sandwich | (none) | Rule D ✅ |
-| SAND_009 | Ham and Cheese Sandwich | (none) | Rule D ✅ |
-| SAND_010 | Peanut Butter & Jelly | (none) | Rule D ✅ |
-| SAND_011 | Pimento Cheese Sandwich | (none) | Rule D ✅ |
-| SAND_012 | Cucumber Tea Sandwich | (none) | Rule D ✅ |
-| SAND_013 | Croque Monsieur | (none) | Rule D ✅ |
-| SAND_014 | Monte Cristo | (none) | Rule D ✅ |
-| SAND_015 | Hot Brown | (none) | Rule D ✅ |
-| SAND_016 | Open-Faced Roast Beef with Gravy | (none) | Rule D ✅ |
-| SAND_017 | Dagwood | (none) | Rule D ✅ |
-| SAND_018 | Turkey Sandwich | (none) | Rule D ✅ |
-| SAND_019 | Turkey & Avocado | (none) | Rule D ✅ |
-| SAND_020 | Avocado with Sprouts & Tomato | (none) | Rule D ✅ |
-| SAND_021 | Reuben | (none) | Rule D ✅ |
-| SAND_022 | Pastrami Sandwich | (none) | Rule D ✅ |
-| SAND_023 | Corned Beef Sandwich | (none) | Rule D ✅ |
-| SAND_024 | Liverwurst Sandwich | (none) | Rule D ✅ |
-| SAND_025 | Reuben Sandwich | (none) | Rule D ✅ |
-| SAND_026 | Pastrami Sandwich | (none) | Rule D ✅ |
-| SAND_027 | Corned Beef Sandwich | (none) | Rule D ✅ |
-| SAND_028 | Liverwurst Sandwich | (none) | Rule D ✅ |
+| SAND_007 | Tuna Salad Sandwich | (none) | Rule D ✅ — 285.1g → 582 cal/serving; 204.1 kcal·11.7P·12.1F·12.2C per 100g; dietary_category=pesca; food_word=TUNASALAD |
+| SAND_008 | Chicken Salad Sandwich | (none) | Rule D ✅ — 284.8g → 412 cal/serving; 144.8 kcal·15.7P·3.0F·13.0C per 100g; dietary_category=all; food_word=CHICKENSALAD |
+| SAND_009 | Ham and Cheese Sandwich | (none) | Rule D ✅ — 191.8g → 505 cal/serving; 263.3 kcal·14.2P·14.8F·17.6C per 100g; dietary_category=all; food_word=HAMANDCHEESE |
+| SAND_010 | Peanut Butter & Jelly Sandwich | (none) | Rule D ✅ — 112.0g → 407 cal/serving; 363.0 kcal·11.2P·16.5F·45.1C per 100g; dietary_category=vegan; food_word=PBJ |
+| SAND_011 | Pimento Cheese Sandwich | (none) | Rule D ✅ — 201.7g → 684 cal/serving; 339.0 kcal·10.2P·25.5F·17.3C per 100g; dietary_category=veggie; food_word=PIMENTOCHEESE |
+| SAND_012 | Cucumber Tea Sandwich | (none) | Rule D ✅ — 133.7g → 217 cal/serving; 162.3 kcal·4.3P·8.6F·17.3C per 100g; dietary_category=veggie; food_word=CUCUMBERTEA |
+| SAND_013 | Croque Monsieur | (none) | Rule D ✅ — 313.5g → 797 cal/serving; 254.3 kcal·11.7P·16.8F·14.2C per 100g; dietary_category=all; food_word=CROQUEMONSIEUR; pan grilled |
+| SAND_014 | Croque Madame | (none) | Rule D ✅ — 355.7g → 887 cal/serving; 249.5 kcal·12.1P·16.7F·12.6C per 100g; dietary_category=all; food_word=CROQUEMADAME; pan grilled |
+| SAND_015 | Monte Cristo Sandwich | (none) | Rule D ✅ — 303.6g → 781 cal/serving; 257.3 kcal·13.8P·16.8F·12.5C per 100g; dietary_category=all; food_word=MONTECRISTO; pan grilled |
+| SAND_016 | Hot Brown | (none) | Rule D ✅ — 408.3g → 1053 cal/serving; 257.8 kcal·11.2P·18.8F·11.1C per 100g; dietary_category=all; food_word=HOTBROWN; baked |
+| SAND_017 | Open-Faced Roast Beef with Gravy | (none) | Rule D ✅ — 249.3g → 287 cal/serving; 115.0 kcal·10.3P·4.5F·7.8C per 100g; dietary_category=all; food_word=OPENFACEDROASTBEEF |
+| SAND_018 | Turkey Sandwich | (none) | Rule D ✅ — 221.6g → 447 cal/serving; 201.5 kcal·9.6P·11.8F·14.0C per 100g; dietary_category=all; food_word=TURKEYSANDWICH |
+| SAND_019 | Turkey with Provolone Sandwich | (none) | Rule D ✅ — 278.3g → 646 cal/serving; 232.0 kcal·12.8P·14.8F·11.6C per 100g; dietary_category=all; food_word=TURKEYPROVOLONE |
+| SAND_020 | Turkey & Avocado Sandwich | (none) | Rule D ✅ — 289.6g → 560 cal/serving; 193.4 kcal·7.8P·12.7F·12.7C per 100g; dietary_category=all; food_word=TURKEYAVOCADO |
+| SAND_021 | Turkey & Avocado with Provolone Sandwich | (none) | Rule D ✅ — 346.3g → 759 cal/serving; 219.2 kcal·10.7P·14.9F·11.0C per 100g; dietary_category=all; food_word=TURKEYAVOCADOPROVOLONE |
+| SAND_022 | Turkey & Avocado with Bacon Sandwich | (none) | Rule D ✅ — 312.6g → 668 cal/serving; 213.6 kcal·9.7P·14.3F·11.9C per 100g; dietary_category=all; food_word=TURKEYAVOCADOBACON |
+| SAND_023 | Roast Beef Sandwich | (none) | Rule D ✅ — 241.2g → 396 cal/serving; 164.2 kcal·12.4P·7.0F·12.5C per 100g; dietary_category=all; food_word=ROASTBEEFSANDWICH |
+| SAND_024 | Avocado with Sprouts & Tomato Sandwich | (none) | Rule D ✅ — 168.2g → 272 cal/serving; 161.8 kcal·5.7P·7.7F·19.1C per 100g; dietary_category=vegan; food_word=AVOCADOSPROUTS |
+| SAND_025 | Reuben Sandwich | (none) | Rule D ✅ — 291.5g → 826 cal/serving; 283.3 kcal·12.7P·19.8F·13.4C per 100g; dietary_category=all; food_word=REUBEN; pan grilled |
+| SAND_026 | Pastrami Sandwich | (none) | Rule D ✅ — 219.0g → 449 cal/serving; 205.2 kcal·17.3P·8.1F·14.9C per 100g; dietary_category=all; food_word=PASTRAMI |
+| SAND_027 | Corned Beef Sandwich | (none) | Rule D ✅ — 220.3g → 569 cal/serving; 258.4 kcal·15.5P·14.9F·14.8C per 100g; dietary_category=all; food_word=CORNEDBEEF |
+| SAND_028 | Liverwurst Sandwich | (none) | Rule D ✅ — 214.1g → 464 cal/serving; 216.6 kcal·8.6P·12.6F·16.9C per 100g; dietary_category=all; food_word=LIVERWURST |
 | SAND_029 | Limburger Sandwich | (none) | Rule D ✅ — 64g bread_rye(18023)+57g limburger_cheese(1024)+20g onion_raw(11282)+5g mustard_yellow(2046); yfw=1.00 → 146g; 363 cal/serving; 248.7 kcal·10.5P·14.4F·20.0C per 100g; dietary_category=all; food_word=LIMBURGERSANDWICH |
 | SAND_030 | Patty Melt | (none) | Rule D ✅ — 64g bread_rye(18023)+113g beef_ground_80lean_raw(23572)+56g cheese_swiss(1040)+80g onion_raw(11282)+14g butter_salted(1001)+3g salt(2047)+0.3g black_pepper_ground(2030); yfw=0.82 → 296.4g; 806 cal/serving; 271.9 kcal·13.8P·18.1F·13.3C per 100g; dietary_category=all; food_word=PATTYMELT; pan grilled |
+| SAND_031 | Sloppy Joe | (none) | Rule D ✅ — 249.2g → 421 cal/serving; 169.0 kcal·8.2P·9.1F·13.6C per 100g; dietary_category=all; food_word=SLOPPYJOE; pan grilled |
+| SAND_032 | Pulled Pork Sandwich | (none) | Rule D ✅ — 243.2g → 509 cal/serving; 209.3 kcal·11.4P·10.8F·16.5C per 100g; dietary_category=all; food_word=PULLEDPORK; baked |
+| SAND_033 | Barbecue Brisket Sandwich | (none) | Rule D ✅ — 249.3g → 580 cal/serving; 232.5 kcal·13.2P·11.4F·19.2C per 100g; dietary_category=all; food_word=BBQBRISKET; baked |
+| SAND_034 | Grilled Chicken Sandwich | (none) | Rule D ✅ — 270.3g → 532 cal/serving; 196.9 kcal·14.3P·11.4F·9.3C per 100g; dietary_category=all; food_word=GRILLEDCHICKENSANDWICH; pan grilled |
+| SAND_035 | Fried Chicken Sandwich | (none) | Rule D ✅ — 331.9g → 757 cal/serving; 228.2 kcal·12.0P·12.9F·15.5C per 100g; dietary_category=all; food_word=FRIEDCHICKENSANDWICH; fried |
+| SAND_036 | Buffalo Chicken Sandwich | (none) | Rule D ✅ — 321.4g → 796 cal/serving; 247.7 kcal·12.4P·14.7F·16.1C per 100g; dietary_category=all; food_word=BUFFALOCHICKENSANDWICH; fried |
+| SAND_037 | Nashville Hot Chicken Sandwich | (none) | Rule D ✅ — 293.7g → 781 cal/serving; 266.1 kcal·13.5P·15.1F·18.9C per 100g; dietary_category=all; food_word=NASHVILLEHOTCHICKENSANDWICH; fried |
+| SAND_038 | Fish Sandwich | (none) | Rule D ✅ — 296.8g → 646 cal/serving; 217.6 kcal·12.0P·9.1F·21.5C per 100g; dietary_category=pesca; food_word=FISHSANDWICH; fried |
+| SAND_039 | Crab Cake Sandwich | (none) | Rule D ✅ — 316.2g → 599 cal/serving; 189.5 kcal·9.6P·10.9F·13.0C per 100g; dietary_category=all; food_word=CRABCAKESANDWICH; pan grilled |
+| SAND_040 | Lobster Roll | (none) | Rule D ✅ — 186.9g → 324 cal/serving; 173.4 kcal·14.0P·7.2F·12.3C per 100g; dietary_category=pesca; food_word=LOBSTERROLL; pan grilled |
+| SAND_041 | Tuna Melt | (none) | Rule D ✅ — 337.3g → 839 cal/serving; 248.9 kcal·12.2P·17.6F·10.8C per 100g; dietary_category=pesca; food_word=TUNAMELT; pan grilled |
 | SAND_042 | French Dip | (none) | Rule D ✅ — 3 sections: onion_saute (pan grilled): olive_oil(4053)+onion_raw(11282)+garlic_powder(2020)+salt_table(2047)+worcestershire_sauce(6971); au_jus (raw): beef_broth_canned(6008)+tamari(16124); assembly (raw): french_roll(18349)+roast_beef_deli(7043)+provolone_cheese(1035); yfw=1.00 → 372.2g; 438 cal/serving; 117.8 kcal·10.69P·5.16F·6.73C per 100g; dietary_category=all; food_word=FRENCHDIP |
 | SAND_043 | Italian Beef Sandwich | (none) | Rule D ✅ — 3 sections: au_jus (raw): beef_broth_canned(6008)+garlic_powder(2020)+oregano_dried(2027)+basil_dried(2003)+red_pepper_flakes(2031)+salt_table(2047); sweet_peppers (pan grilled): olive_oil(4053)+bell_pepper_green_raw(11333); assembly (raw): french_roll(18349)+roast_beef_deli(7043); yfw=1.00 → 286.2g; 325 cal/serving; 113.4 kcal·10.80P·4.06F·7.97C per 100g; dietary_category=all; food_word=ITALIANBEEF |
 
