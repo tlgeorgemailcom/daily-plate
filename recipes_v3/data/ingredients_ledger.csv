@@ -52,6 +52,7 @@ cherries_sour_red_raw,9063,CHERRYSOUR,"Cherries, sour, red, raw",sour cherries (
 chicken_breast_cooked_roasted,5064,CHICKENBREAST,"Chicken, broilers or fryers, breast, meat only, cooked, roasted",cooked chicken breast,oz,28.35,
 chicken_breast_raw,5062,CHICKENBREASTRAW,"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",chicken breast raw,oz,28.35,
 chickpeas_cooked,16057,CHICKPEA,"Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt","chickpeas, cooked",cup,164.0,"Canned or home-cooked chickpeas, drained; ~164g per cup"
+chickpeas_raw_dried,16056,CHICKPEADRIED,"Chickpeas (garbanzo beans, bengal gram), mature seeds, raw","chickpeas, dried (soaked overnight)",cup,200.0,Raw dried; weigh before soaking. Soaking adds water that cooks off during frying.
 chives_raw,11156,CHIVE,"Chives, raw",fresh chives,tablespoon,3.0,1 tablespoon chopped ~3g
 chocolate_chips_semisweet,19080,CANDCHOCSEMI,"Candies, semisweet chocolate",chocolate chips semi-sweet,cup,170,Semisweet chocolate chips; 1 cup ~170g
 chocolate_sandwich_cookies,18166,COOKIESCHOCOLATESANDWICH,"Cookies, chocolate sandwich, with creme filling, regular",chocolate sandwich cookies,cookie,11.0,
