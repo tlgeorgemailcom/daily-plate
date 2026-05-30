@@ -6290,5 +6290,57 @@ export const LEVELS: Level[] = [
       { key: 'falafel', label: 'Falafel:', cookingMethod: '', yieldFactorWater: 0.8 },
       { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_053',
+    name: 'Gyro',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 136,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 pita',
+    prepTime: '20 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":635.1,"pro":30.9,"fat":37.4,"carb":42.9,"fib":3.2,"h2o":218.0,"sug":5.2,"perServing":{"cal":635.1,"pro":30.9,"fat":37.4,"carb":42.9,"fib":3.2,"h2o":218.0,"sug":5.2,"AddedSugars":0.0,"IntrinsicSugars":5.2},"micros":{"vitaminA":8.07,"vitaminC":3.56,"vitaminD":0.65,"vitaminE":0.41,"vitaminK":5.92,"vitaminB6":0.08,"vitaminB12":0.8,"thiamin":0.09,"riboflavin":0.14,"niacin":2.16,"folate":15.85,"calcium":49.35,"iron":1.03,"magnesium":18.73,"phosphorus":105.48,"potassium":193.68,"sodium":217.95,"zinc":1.48,"copper":0.09,"selenium":8.32,"cholesterol":27.13,"saturatedFat":4.22,"monoFat":5.21,"polyFat":0.83,"omega3":0.01,"omega6":0.04},"gramsPerServing":332.8,"servings":1,"per100g":{"Energy_KCal":190.87,"Water":65.5,"Protein":9.28,"TotalLipidFat":11.25,"Carbohydrate":12.88,"FiberTotalDietary":0.95,"SugarsTotal":1.56,"Cholesterol":27.13,"FattyAcids_totalSaturated":4.22,"FattyAcids_totalMonounsaturated":5.21,"FattyAcids_totalPolyunsaturated":0.83,"LinoleicAcid":0.04,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":8.07,"Retinol":0.18,"Carotene_beta":74.25,"VitaminD":0.65,"VitaminE_alphaTocopherol":0.41,"VitaminK_phylloquinone":5.92,"VitaminC_totalAscorbicAcid":3.56,"Thiamin":0.09,"Riboflavin":0.14,"Niacin":2.16,"PantothenicAcid":0.36,"VitaminB6":0.08,"Folate_total":15.85,"Folate_food":15.85,"Folate_DFE":15.85,"FolicAcid":0.0,"VitaminB12":0.8,"Choline_total":26.31,"Betaine":3.57,"LuteinZeaxanthin":24.36,"Lycopene":386.64,"Calcium_Ca":49.35,"Iron_Fe":1.03,"Magnesium_Mg":18.73,"Phosphorus_P":105.48,"Potassium_K":193.68,"Sodium_Na":217.95,"Zinc_Zn":1.48,"Copper_Cu":0.09,"Manganese_Mn":0.16,"Selenium_Se":8.32,"Tryptophan":0.09,"Threonine":0.29,"Isoleucine":0.34,"Leucine":0.56,"Lysine":0.55,"Methionine":0.17,"Cystine":0.09,"Phenylalanine":0.32,"Tyrosine":0.24,"Valine":0.38,"Arginine":0.42,"Histidine":0.22,"Alanine":0.4,"AsparticAcid":0.61,"GlutamicAcid":1.48,"Glycine":0.34,"Proline":0.43,"Serine":0.3,"omega3":0.01,"omega6":0.04,"AddedSugars":0.0,"IntrinsicSugars":1.56},"addedSugars":0.0,"intrinsicSugars":5.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"17224","name":"Lamb, ground, raw","grams":113.0},{"ndb":"2020","name":"Spices, garlic powder","grams":1.0},{"ndb":"2027","name":"Spices, oregano, dried","grams":1.0},{"ndb":"2047","name":"Salt, table","grams":0.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":7.0},{"ndb":"1293","name":"Yogurt, Greek, plain, whole milk","grams":60.0},{"ndb":"11206","name":"Cucumber, peeled, raw","grams":30.0},{"ndb":"2045","name":"Dill weed, fresh","grams":0.7},{"ndb":"2020","name":"Spices, garlic powder","grams":0.8},{"ndb":"9152","name":"Lemon juice, raw","grams":5.0},{"ndb":"2047","name":"Salt, table","grams":0.3},{"ndb":"18413","name":"Bread, pita, white, enriched","grams":60.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":50.0},{"ndb":"11282","name":"Onions, raw","grams":20.0}],"sections":[{"section_key":"lamb","section_label":"Lamb:","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":122.8,"raw_water_grams":67.4,"raw_fat_grams":33.51,"final_grams":105.95},{"section_key":"tzatziki","section_label":"Tzatziki:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":96.8,"raw_water_grams":83.07,"raw_fat_grams":3.07,"final_grams":96.8},{"section_key":"assembly","section_label":"Assembly:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":130.0,"raw_water_grams":84.34,"raw_fat_grams":0.84,"final_grams":130.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Gyro', quantity: 'custom (g)', foodWord: 'GYRO', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'ground lamb', quantity: '4 oz raw (113g)', section: 'lamb', ndbNo: '17224', portionDesc: 'g', portionGrams: 113.0 },
+      { name: 'garlic powder', quantity: '½ tsp (1g)', section: 'lamb', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'dried oregano', quantity: '½ tsp (1g)', section: 'lamb', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'salt', quantity: '¼ tsp (0.5g)', section: 'lamb', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'ground black pepper', quantity: '⅛ tsp (0.3g)', section: 'lamb', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'olive oil', quantity: '1½ tsp olive oil (absorbed into patties)', section: 'lamb', ndbNo: '4053', portionDesc: 'g', portionGrams: 7.0 },
+      { name: 'Greek whole milk yogurt', quantity: '¼ cup (60g)', section: 'tzatziki', ndbNo: '1293', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'cucumber', quantity: '2 tbsp grated & drained (30g)', section: 'tzatziki', ndbNo: '11206', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'fresh dill', quantity: '1 tsp chopped (0.7g)', section: 'tzatziki', ndbNo: '2045', portionDesc: 'g', portionGrams: 0.7 },
+      { name: 'garlic powder', quantity: '¼ tsp (0.8g)', section: 'tzatziki', ndbNo: '2020', portionDesc: 'g', portionGrams: 0.8 },
+      { name: 'lemon juice', quantity: '1 tsp (5g)', section: 'tzatziki', ndbNo: '9152', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'salt', quantity: 'pinch (0.3g)', section: 'tzatziki', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'pita bread, white', quantity: '1 pita (60g)', section: 'assembly', ndbNo: '18413', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'tomato raw', quantity: '1 small, sliced (50g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'red onion', quantity: '¼ small red onion, thinly sliced (20g)', section: 'assembly', ndbNo: '11282', portionDesc: 'g', portionGrams: 20.0 }
+    ],
+    recipeInstructions: [
+      'In a large bowl, combine the ground lamb with garlic powder, oregano, salt, and pepper. Mix well. Shape into 4 thin oval patties, about ¼ inch thick.',
+      'Heat olive oil in a non-toxic nonstick skillet over medium-high heat. Cook patties 3 minutes per side until browned and cooked through. Transfer to a plate. (Oil reflects only the amount absorbed into the patties.)',
+      'Make the tzatziki: grate cucumber and squeeze out as much liquid as possible with a paper towel. In a small bowl, stir together yogurt, drained cucumber, dill, garlic powder, lemon juice, and salt until combined. Set aside.',
+      'Warm pita briefly in skillet or microwave. Slice off the top third to open a pocket.',
+      'Fill the pita with tomato slices and red onion. Add the lamb patties. Spoon tzatziki generously over the top. Serve immediately.'
+    ],
+    sections: [
+      { key: 'lamb', label: 'Lamb:', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'tzatziki', label: 'Tzatziki:', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
