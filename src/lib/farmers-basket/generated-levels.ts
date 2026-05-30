@@ -5837,5 +5837,57 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_048',
+    name: 'Chicken Parm Sub',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 126,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving',
+    prepTime: '30 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":966.2,"pro":66.9,"fat":44.2,"carb":71.7,"fib":4.6,"h2o":211.3,"sug":6.3,"perServing":{"cal":966.2,"pro":66.9,"fat":44.2,"carb":71.7,"fib":4.6,"h2o":211.3,"sug":6.3,"AddedSugars":0.0,"IntrinsicSugars":6.3},"micros":{"vitaminA":35.27,"vitaminC":0.17,"vitaminD":7.27,"vitaminE":1.2,"vitaminK":8.15,"vitaminB6":0.3,"vitaminB12":0.38,"thiamin":0.16,"riboflavin":0.23,"niacin":4.88,"folate":30.79,"calcium":124.01,"iron":1.65,"magnesium":27.83,"phosphorus":193.15,"potassium":249.79,"sodium":474.57,"zinc":1.06,"copper":0.08,"selenium":23.68,"cholesterol":64.11,"saturatedFat":3.11,"monoFat":5.26,"polyFat":1.11,"omega3":0.01,"omega6":0.26},"gramsPerServing":402.9,"servings":1,"per100g":{"Energy_KCal":239.78,"Water":52.45,"Protein":16.6,"TotalLipidFat":10.97,"Carbohydrate":17.79,"FiberTotalDietary":1.15,"SugarsTotal":1.57,"Cholesterol":64.11,"FattyAcids_totalSaturated":3.11,"FattyAcids_totalMonounsaturated":5.26,"FattyAcids_totalPolyunsaturated":1.11,"LinoleicAcid":0.26,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":35.27,"Retinol":30.51,"Carotene_beta":53.2,"VitaminD":7.27,"VitaminE_alphaTocopherol":1.2,"VitaminK_phylloquinone":8.15,"VitaminC_totalAscorbicAcid":0.17,"Thiamin":0.16,"Riboflavin":0.23,"Niacin":4.88,"PantothenicAcid":0.71,"VitaminB6":0.3,"Folate_total":30.79,"Folate_food":11.85,"Folate_DFE":44.04,"FolicAcid":24.3,"VitaminB12":0.38,"Choline_total":54.49,"Betaine":3.02,"LuteinZeaxanthin":51.08,"Lycopene":1663.66,"Calcium_Ca":124.01,"Iron_Fe":1.65,"Magnesium_Mg":27.83,"Phosphorus_P":193.15,"Potassium_K":249.79,"Sodium_Na":474.57,"Zinc_Zn":1.06,"Copper_Cu":0.08,"Manganese_Mn":0.21,"Selenium_Se":23.68,"Tryptophan":0.23,"Threonine":0.68,"Isoleucine":0.78,"Leucine":1.33,"Lysine":1.23,"Methionine":0.39,"Cystine":0.17,"Phenylalanine":0.72,"Tyrosine":0.61,"Valine":0.87,"Arginine":0.89,"Histidine":0.52,"Alanine":0.8,"AsparticAcid":1.34,"GlutamicAcid":3.12,"Glycine":0.62,"Proline":1.0,"Serine":0.69,"omega3":0.01,"omega6":0.26,"AddedSugars":0.0,"IntrinsicSugars":1.57},"addedSugars":0.0,"intrinsicSugars":6.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":170.0},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":15.0},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":25.0},{"ndb":"18079","name":"Bread crumbs, dry, grated, plain","grams":21.0},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":5.0},{"ndb":"2020","name":"Spices, garlic powder","grams":0.5},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.5},{"ndb":"2003","name":"Spices, basil, dried","grams":0.5},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":20.0},{"ndb":"18353","name":"Rolls, hard (includes kaiser)","grams":72.0},{"ndb":"6931","name":"Sauce, pasta, spaghetti/marinara, ready-to-serve","grams":62.0},{"ndb":"1026","name":"Cheese, mozzarella, whole milk","grams":42.0},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":5.0}],"sections":[{"section_key":"chicken","section_label":"Breaded chicken:","prep_method":"raw","cook_method":"fried","cooking_method":"fried","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":259.3,"raw_water_grams":149.45,"raw_fat_grams":29.44,"final_grams":221.94},{"section_key":"assembly","section_label":"Assembly:","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":181.0,"raw_water_grams":99.26,"raw_fat_grams":14.77,"final_grams":181.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken Parm Sub', quantity: 'custom (g)', foodWord: 'CHICKENPARM', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chicken breast raw', quantity: '1 medium breast (6 oz raw)', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 170.0 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '2 tbsp', section: 'chicken', ndbNo: '20581', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'large egg', quantity: '½ large egg (25g)', section: 'chicken', ndbNo: '1123', portionDesc: 'g', portionGrams: 25.0 },
+      { name: 'Bread crumbs, dry plain', quantity: '3 tbsp (21g)', section: 'chicken', ndbNo: '18079', portionDesc: 'g', portionGrams: 21.0 },
+      { name: 'Parmesan cheese', quantity: '1 tbsp (5g)', section: 'chicken', ndbNo: '1033', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'garlic powder', quantity: '¼ tsp', section: 'chicken', ndbNo: '2020', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'dried oregano', quantity: '¼ tsp', section: 'chicken', ndbNo: '2027', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'dried basil', quantity: '¼ tsp', section: 'chicken', ndbNo: '2003', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'salt', quantity: '¼ tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'olive oil', quantity: '1½ tbsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 20.0 },
+      { name: 'Hoagie roll', quantity: '1 roll (6", 72g)', section: 'assembly', ndbNo: '18353', portionDesc: 'g', portionGrams: 72.0 },
+      { name: 'Marinara sauce', quantity: '¼ cup (62g)', section: 'assembly', ndbNo: '6931', portionDesc: 'g', portionGrams: 62.0 },
+      { name: 'Mozzarella, whole milk', quantity: '1½ oz (42g)', section: 'assembly', ndbNo: '1026', portionDesc: 'g', portionGrams: 42.0 },
+      { name: 'Parmesan cheese', quantity: '1 tbsp (5g)', section: 'assembly', ndbNo: '1033', portionDesc: 'g', portionGrams: 5.0 }
+    ],
+    recipeInstructions: [
+      'Pound the chicken breast to an even ½" thickness. Pat dry with paper towels.',
+      'Set up a breading station: flour in one shallow dish, beaten egg in a second, and breadcrumbs mixed with Parmesan, garlic powder, oregano, basil, salt, and pepper in a third.',
+      'Dredge the chicken in flour (shake off excess), dip in egg, then press firmly into the breadcrumb mixture to coat both sides.',
+      'Heat olive oil in a skillet over medium-high heat. Pan-fry the cutlet 3–4 minutes per side until golden brown and cooked through (internal temp 165°F). Transfer to a paper-towel-lined plate.',
+      'Preheat broiler. Place the hoagie roll cut-side up on a baking sheet. Spoon marinara sauce over the bottom half. Set the chicken cutlet on top, then spoon more sauce over the chicken. Layer mozzarella and Parmesan over the top.',
+      'Broil 2–3 minutes until the cheese is melted and bubbling. Close the sandwich and serve immediately.'
+    ],
+    sections: [
+      { key: 'chicken', label: 'Breaded chicken:', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
