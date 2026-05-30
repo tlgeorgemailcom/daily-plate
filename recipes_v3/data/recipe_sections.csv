@@ -196,3 +196,6 @@ BKFST_011,eggs,Eggs:,,pan grilled,1.00,1.00,1.00,,,,
 BKFST_011,assembly,Assembly:,,raw,1.00,1.00,1.00,,,,
 BKFST_036,eggs,Eggs:,,pan grilled,1.00,1.00,1.00,,,,
 BKFST_036,assembly,Assembly:,,raw,1.00,1.00,1.00,,,,
+BKFST_037,sausage,Sausage:,,raw,1.00,1.00,1.00,,,,BKFST_015
+BKFST_037,eggs,Eggs:,,pan grilled,1.00,1.00,1.00,,,,
+BKFST_037,assembly,Assembly:,,raw,1.00,1.00,1.00,,,,

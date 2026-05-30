@@ -6110,5 +6110,47 @@ export const LEVELS: Level[] = [
       { key: 'eggs', label: 'Eggs:', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BKFST_037',
+    name: 'Croissant Sausage, Egg & Cheese Sandwich',
+    category: 'breakfast & brunch',
+    dietaryCategory: 'all',
+    levelNum: 132,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 sandwich',
+    prepTime: '20 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":716.3,"pro":29.8,"fat":51.5,"carb":32.7,"fib":1.9,"h2o":118.6,"sug":8.4,"perServing":{"cal":716.3,"pro":29.8,"fat":51.5,"carb":32.7,"fib":1.9,"h2o":118.6,"sug":8.4,"AddedSugars":0.4,"IntrinsicSugars":8.0},"micros":{"vitaminA":168.61,"vitaminC":0.12,"vitaminD":37.78,"vitaminE":0.75,"vitaminK":2.15,"vitaminB6":0.12,"vitaminB12":0.55,"thiamin":0.21,"riboflavin":0.31,"niacin":1.21,"folate":43.05,"calcium":102.83,"iron":1.51,"magnesium":15.74,"phosphorus":184.34,"potassium":150.36,"sodium":426.77,"zinc":1.46,"copper":0.06,"selenium":25.97,"cholesterol":209.38,"saturatedFat":10.98,"monoFat":7.06,"polyFat":1.49,"omega3":0.04,"omega6":0.69},"gramsPerServing":237.1,"servings":1,"per100g":{"Energy_KCal":302.06,"Water":50.0,"Protein":12.57,"TotalLipidFat":21.72,"Carbohydrate":13.8,"FiberTotalDietary":0.81,"SugarsTotal":3.53,"Cholesterol":209.38,"FattyAcids_totalSaturated":10.98,"FattyAcids_totalMonounsaturated":7.06,"FattyAcids_totalPolyunsaturated":1.49,"LinoleicAcid":0.69,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":168.61,"Retinol":165.71,"Carotene_beta":31.58,"VitaminD":37.78,"VitaminE_alphaTocopherol":0.75,"VitaminK_phylloquinone":2.15,"VitaminC_totalAscorbicAcid":0.12,"Thiamin":0.21,"Riboflavin":0.31,"Niacin":1.21,"PantothenicAcid":0.9,"VitaminB6":0.12,"Folate_total":43.05,"Folate_food":26.1,"Folate_DFE":54.92,"FolicAcid":16.95,"VitaminB12":0.55,"Choline_total":125.18,"Betaine":0.17,"LuteinZeaxanthin":162.5,"Lycopene":0.02,"Calcium_Ca":102.83,"Iron_Fe":1.51,"Magnesium_Mg":15.74,"Phosphorus_P":184.34,"Potassium_K":150.36,"Sodium_Na":426.77,"Zinc_Zn":1.46,"Copper_Cu":0.06,"Manganese_Mn":0.13,"Selenium_Se":25.97,"Tryptophan":0.16,"Threonine":0.53,"Isoleucine":0.63,"Leucine":1.07,"Lysine":0.9,"Methionine":0.33,"Cystine":0.19,"Phenylalanine":0.62,"Tyrosine":0.5,"Valine":0.77,"Arginine":0.71,"Histidine":0.35,"Alanine":0.63,"AsparticAcid":1.13,"GlutamicAcid":2.3,"Glycine":0.43,"Proline":0.79,"Serine":0.77,"omega3":0.04,"omega6":0.69,"AddedSugars":0.16,"IntrinsicSugars":3.37},"addedSugars":0.4,"intrinsicSugars":8.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Breakfast Sausage","grams":34.7},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":100.0},{"ndb":"1001","name":"Butter, salted","grams":14.0},{"ndb":"2047","name":"Salt, table","grams":0.3},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"18239","name":"Croissants, butter","grams":67.0},{"ndb":"1270","name":"Cheese, cheddar, sharp, sliced","grams":21.0}],"sections":[{"section_key":"sausage","section_label":"Sausage:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":34.74,"raw_water_grams":17.04,"raw_fat_grams":9.47,"final_grams":34.74},{"section_key":"eggs","section_label":"Eggs:","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":114.4,"raw_water_grams":78.38,"raw_fat_grams":20.87,"final_grams":114.4},{"section_key":"assembly","section_label":"Assembly:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":88.0,"raw_water_grams":23.14,"raw_fat_grams":21.17,"final_grams":88.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Croissant Sausage, Egg & Cheese Sandwich', quantity: 'custom (g)', foodWord: 'CROISSANTSAUSAGEEGGCHEESE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Breakfast Sausage', quantity: 'Recipe: Breakfast Sausage (1 patty, 34.7g)', section: 'sausage', foodWord: 'PORKSAUSAGE', ndbNo: '7064', portionDesc: 'g', portionGrams: 34.74, isDish: true, componentRef: 'BKFST_015' },
+      { name: 'large egg', quantity: '2 large (100g)', section: 'eggs', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'salted butter', quantity: '1 tbsp (14g)', section: 'eggs', ndbNo: '1001', portionDesc: 'g', portionGrams: 14.0 },
+      { name: 'salt', quantity: 'pinch (0.3g)', section: 'eggs', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'ground black pepper', quantity: 'pinch (0.1g)', section: 'eggs', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.1 },
+      { name: 'croissant', quantity: '1 large (67g)', section: 'assembly', ndbNo: '18239', portionDesc: 'g', portionGrams: 67.0 },
+      { name: 'sharp cheddar cheese', quantity: '1 slice (21g)', section: 'assembly', ndbNo: '1270', portionDesc: 'g', portionGrams: 21.0 }
+    ],
+    recipeInstructions: [
+      'Form the sausage into a round patty sized to fit the croissant. Cook in a non-toxic nonstick skillet over medium heat until browned and cooked through, about 3–4 minutes per side. Set aside.',
+      'Melt the butter in the same skillet over medium-low heat. Whisk the eggs with salt and pepper, pour into the pan, and scramble gently until just set. Remove from heat while still slightly glossy.',
+      'Split the croissant in half horizontally. Lay the cheddar slice on the bottom half, spoon the scrambled eggs over the cheese, and top with the sausage patty. Close the sandwich and serve immediately.'
+    ],
+    sections: [
+      { key: 'sausage', label: 'Sausage:', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'eggs', label: 'Eggs:', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
