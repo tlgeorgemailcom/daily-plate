@@ -5933,5 +5933,57 @@ export const LEVELS: Level[] = [
       { key: 'filling', label: 'Beef filling:', cookingMethod: '', yieldFactorWater: 0.82 },
       { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_050',
+    name: 'Banh Mi Sandwich',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 128,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving',
+    prepTime: '30 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":553.7,"pro":35.1,"fat":19.6,"carb":58.9,"fib":4.1,"h2o":237.9,"sug":15.7,"perServing":{"cal":553.7,"pro":35.1,"fat":19.6,"carb":58.9,"fib":4.1,"h2o":237.9,"sug":15.7,"AddedSugars":8.0,"IntrinsicSugars":7.7},"micros":{"vitaminA":76.85,"vitaminC":7.48,"vitaminD":2.66,"vitaminE":0.44,"vitaminK":13.99,"vitaminB6":0.25,"vitaminB12":0.14,"thiamin":0.41,"riboflavin":0.21,"niacin":3.05,"folate":35.38,"calcium":23.78,"iron":1.45,"magnesium":22.64,"phosphorus":117.99,"potassium":248.93,"sodium":578.76,"zinc":0.93,"copper":0.09,"selenium":16.36,"cholesterol":22.03,"saturatedFat":0.98,"monoFat":1.49,"polyFat":2.42,"omega3":0.22,"omega6":1.76},"gramsPerServing":360.1,"servings":1,"per100g":{"Energy_KCal":153.75,"Water":66.05,"Protein":9.76,"TotalLipidFat":5.45,"Carbohydrate":16.35,"FiberTotalDietary":1.13,"SugarsTotal":4.35,"Cholesterol":22.03,"FattyAcids_totalSaturated":0.98,"FattyAcids_totalMonounsaturated":1.49,"FattyAcids_totalPolyunsaturated":2.42,"LinoleicAcid":1.76,"alphaLinolenicAcid":0.22,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":76.85,"Retinol":0.58,"Carotene_beta":765.34,"VitaminD":2.66,"VitaminE_alphaTocopherol":0.44,"VitaminK_phylloquinone":13.99,"VitaminC_totalAscorbicAcid":7.48,"Thiamin":0.41,"Riboflavin":0.21,"Niacin":3.05,"PantothenicAcid":0.41,"VitaminB6":0.25,"Folate_total":35.38,"Folate_food":20.49,"Folate_DFE":45.82,"FolicAcid":14.88,"VitaminB12":0.14,"Choline_total":30.16,"Betaine":1.02,"LuteinZeaxanthin":69.63,"Lycopene":0.08,"Calcium_Ca":23.78,"Iron_Fe":1.45,"Magnesium_Mg":22.64,"Phosphorus_P":117.99,"Potassium_K":248.93,"Sodium_Na":578.76,"Zinc_Zn":0.93,"Copper_Cu":0.09,"Manganese_Mn":0.18,"Selenium_Se":16.36,"Tryptophan":0.08,"Threonine":0.33,"Isoleucine":0.36,"Leucine":0.61,"Lysine":0.66,"Methionine":0.19,"Cystine":0.08,"Phenylalanine":0.31,"Tyrosine":0.27,"Valine":0.38,"Arginine":0.48,"Histidine":0.3,"Alanine":0.42,"AsparticAcid":0.71,"GlutamicAcid":1.22,"Glycine":0.32,"Proline":0.31,"Serine":0.32,"omega3":0.22,"omega6":1.76,"AddedSugars":2.22,"IntrinsicSugars":2.13},"addedSugars":8.0,"intrinsicSugars":7.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"10060","name":"Pork, fresh, loin, tenderloin, separable lean only, raw","grams":113.0},{"ndb":"16124","name":"Soy sauce made from soy (tamari)","grams":15.0},{"ndb":"4058","name":"Oil, sesame, salad or cooking","grams":4.5},{"ndb":"9160","name":"Lime juice, raw","grams":15.0},{"ndb":"19335","name":"Sugars, granulated","grams":4.0},{"ndb":"2020","name":"Spices, garlic powder","grams":1.0},{"ndb":"18029","name":"Bread, french or vienna (includes sourdough)","grams":80.0},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":14.0},{"ndb":"11430","name":"Radishes, oriental, raw","grams":40.0},{"ndb":"11124","name":"Carrots, raw","grams":30.0},{"ndb":"2068","name":"Vinegar, red wine","grams":15.0},{"ndb":"19335","name":"Sugars, granulated","grams":4.0},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"11205","name":"Cucumber, with peel, raw","grams":30.0},{"ndb":"11979","name":"Peppers, jalapeno, raw","grams":10.0},{"ndb":"11165","name":"Coriander (cilantro) leaves, raw","grams":5.0}],"sections":[{"section_key":"pork","section_label":"Pork:","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.8,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":152.5,"raw_water_grams":109.46,"raw_fat_grams":6.98,"final_grams":130.61},{"section_key":"assembly","section_label":"Assembly:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":229.5,"raw_water_grams":150.29,"raw_fat_grams":12.62,"final_grams":229.5}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Banh Mi Sandwich', quantity: 'custom (g)', foodWord: 'BANHMI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Pork tenderloin, raw', quantity: '4 oz (113g)', section: 'pork', ndbNo: '10060', portionDesc: 'g', portionGrams: 113.0 },
+      { name: 'tamari', quantity: '1 tbsp (15g)', section: 'pork', ndbNo: '16124', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'Sesame oil', quantity: '1 tsp (4.5g)', section: 'pork', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'Lime juice, raw', quantity: '1 tbsp (15g)', section: 'pork', ndbNo: '9160', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'sugar', quantity: '1 tsp (4g)', section: 'pork', ndbNo: '19335', portionDesc: 'g', portionGrams: 4.0 },
+      { name: 'garlic powder', quantity: '½ tsp (1g)', section: 'pork', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'French bread', quantity: '1/3 baguette (80g)', section: 'assembly', ndbNo: '18029', portionDesc: 'g', portionGrams: 80.0 },
+      { name: 'mayonnaise', quantity: '1 tbsp (14g)', section: 'assembly', ndbNo: '4025', portionDesc: 'g', portionGrams: 14.0 },
+      { name: 'Daikon radish, raw', quantity: 'pickled (40g)', section: 'assembly', ndbNo: '11430', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'Carrot, raw', quantity: 'pickled (30g)', section: 'assembly', ndbNo: '11124', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'Red wine vinegar', quantity: '1 tbsp pickle brine', section: 'assembly', ndbNo: '2068', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'sugar', quantity: '1 tsp pickle brine', section: 'assembly', ndbNo: '19335', portionDesc: 'g', portionGrams: 4.0 },
+      { name: 'salt', quantity: '¼ tsp (1.5g)', section: 'assembly', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'Cucumber, raw', quantity: '6 slices (30g)', section: 'assembly', ndbNo: '11205', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'Jalapeño, raw', quantity: '3 slices (10g)', section: 'assembly', ndbNo: '11979', portionDesc: 'g', portionGrams: 10.0 },
+      { name: 'fresh cilantro', quantity: 'small handful (5g)', section: 'assembly', ndbNo: '11165', portionDesc: 'g', portionGrams: 5.0 }
+    ],
+    recipeInstructions: [
+      'Combine tamari, sesame oil, lime juice, sugar, and garlic powder in a bowl. Add the pork tenderloin, toss to coat, and marinate for at least 15 minutes (or up to 2 hours in the refrigerator).',
+      'Make the quick pickles: combine daikon and carrot with red wine vinegar, sugar, and a pinch of salt. Toss well and let sit at least 10 minutes while the pork marinates.',
+      'Heat a skillet over medium-high heat. Remove the pork from the marinade, pat lightly dry, and cook 3–4 minutes per side until cooked through (internal temp 145°F). Rest 5 minutes, then slice thinly.',
+      'Split the baguette lengthwise and lightly toast the cut sides in the pan. Spread mayonnaise on both sides.',
+      'Layer the sliced pork on the bottom half. Top with pickled daikon and carrot, cucumber slices, jalapeño, and cilantro. Close the sandwich and serve immediately.'
+    ],
+    sections: [
+      { key: 'pork', label: 'Pork:', cookingMethod: '', yieldFactorWater: 0.8 },
+      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
