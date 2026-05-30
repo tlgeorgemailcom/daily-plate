@@ -5625,5 +5625,61 @@ export const LEVELS: Level[] = [
       { key: 'sweet_peppers', label: 'Sweet peppers', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_044',
+    name: 'Shrimp Po\' Boy',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'pesca',
+    levelNum: 122,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving',
+    prepTime: '20 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":1093.6,"pro":54.3,"fat":62.6,"carb":79.7,"fib":4.7,"h2o":254.1,"sug":10.6,"perServing":{"cal":1093.6,"pro":54.3,"fat":62.6,"carb":79.7,"fib":4.7,"h2o":254.1,"sug":10.6,"AddedSugars":0.0,"IntrinsicSugars":10.6},"micros":{"vitaminA":28.57,"vitaminC":1.16,"vitaminD":9.19,"vitaminE":1.07,"vitaminK":23.57,"vitaminB6":0.06,"vitaminB12":0.09,"thiamin":0.18,"riboflavin":0.16,"niacin":1.31,"folate":41.16,"calcium":45.64,"iron":1.66,"magnesium":25.23,"phosphorus":136.77,"potassium":178.38,"sodium":417.78,"zinc":0.95,"copper":0.2,"selenium":11.3,"cholesterol":104.48,"saturatedFat":2.26,"monoFat":5.41,"polyFat":5.18,"omega3":0.57,"omega6":4.13},"gramsPerServing":458.1,"servings":1,"per100g":{"Energy_KCal":238.73,"Water":55.46,"Protein":11.86,"TotalLipidFat":13.66,"Carbohydrate":17.41,"FiberTotalDietary":1.02,"SugarsTotal":2.32,"Cholesterol":104.48,"FattyAcids_totalSaturated":2.26,"FattyAcids_totalMonounsaturated":5.41,"FattyAcids_totalPolyunsaturated":5.18,"LinoleicAcid":4.13,"alphaLinolenicAcid":0.55,"EPA_20_5n3":0.01,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":28.57,"Retinol":15.44,"Carotene_beta":136.5,"VitaminD":9.19,"VitaminE_alphaTocopherol":1.07,"VitaminK_phylloquinone":23.57,"VitaminC_totalAscorbicAcid":1.16,"Thiamin":0.18,"Riboflavin":0.16,"Niacin":1.31,"PantothenicAcid":0.28,"VitaminB6":0.06,"Folate_total":41.16,"Folate_food":19.81,"Folate_DFE":56.14,"FolicAcid":24.1,"VitaminB12":0.09,"Choline_total":35.57,"Betaine":0.13,"LuteinZeaxanthin":166.28,"Lycopene":84.27,"Calcium_Ca":45.64,"Iron_Fe":1.66,"Magnesium_Mg":25.23,"Phosphorus_P":136.77,"Potassium_K":178.38,"Sodium_Na":417.78,"Zinc_Zn":0.95,"Copper_Cu":0.2,"Manganese_Mn":0.19,"Selenium_Se":11.3,"Tryptophan":0.02,"Threonine":0.09,"Isoleucine":0.1,"Leucine":0.19,"Lysine":0.13,"Methionine":0.06,"Cystine":0.04,"Phenylalanine":0.12,"Tyrosine":0.08,"Valine":0.13,"Arginine":0.13,"Histidine":0.05,"Alanine":0.12,"AsparticAcid":0.21,"GlutamicAcid":0.41,"Glycine":0.08,"Proline":0.14,"Serine":0.15,"omega3":0.57,"omega6":4.13,"AddedSugars":0.0,"IntrinsicSugars":2.32},"addedSugars":0.0,"intrinsicSugars":10.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":45.0},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":8.0},{"ndb":"11945","name":"Pickle relish, sweet","grams":15.0},{"ndb":"9152","name":"Lemon juice, raw","grams":5.0},{"ndb":"6169","name":"Sauce, ready-to-serve, pepper, TABASCO","grams":2.4},{"ndb":"2028","name":"Spices, paprika","grams":1.0},{"ndb":"2020","name":"Spices, garlic powder","grams":0.5},{"ndb":"15270","name":"Crustaceans, shrimp, raw (not previously frozen)","grams":170.0},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":15.0},{"ndb":"20022","name":"Cornmeal, degermed, enriched, yellow","grams":15.0},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":50.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":20.0},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.5},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.5},{"ndb":"18029","name":"Bread, french or vienna (includes sourdough)","grams":90.0},{"ndb":"11252","name":"Lettuce, iceberg (includes crisphead types), raw","grams":30.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":15.0}],"sections":[{"section_key":"remoulade","section_label":"Remoulade sauce:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":76.85,"raw_water_grams":32.75,"raw_fat_grams":34.18,"final_grams":76.85},{"section_key":"shrimp","section_label":"Fried shrimp:","prep_method":"raw","cook_method":"fried","cooking_method":"fried","cooking_method_normalized":"fried","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":272.5,"raw_water_grams":175.01,"raw_fat_grams":26.13,"final_grams":246.25},{"section_key":"assembly","section_label":"Assembly:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":135.0,"raw_water_grams":72.57,"raw_fat_grams":2.25,"final_grams":135.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Shrimp Po\' Boy', quantity: 'custom (g)', foodWord: 'SHRIMPPOBOY', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'mayonnaise', quantity: '3 tbsp', section: 'remoulade', ndbNo: '4025', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'yellow mustard', quantity: '1½ tsp', section: 'remoulade', ndbNo: '2046', portionDesc: 'g', portionGrams: 8.0 },
+      { name: 'Pickle relish, sweet', quantity: '1 tbsp (15g)', section: 'remoulade', ndbNo: '11945', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'lemon juice', quantity: '1 tsp', section: 'remoulade', ndbNo: '9152', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'Hot sauce (Tabasco)', quantity: '½ tsp', section: 'remoulade', ndbNo: '6169', portionDesc: 'g', portionGrams: 2.35 },
+      { name: 'paprika', quantity: '¼ tsp', section: 'remoulade', ndbNo: '2028', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'garlic powder', quantity: '⅛ tsp', section: 'remoulade', ndbNo: '2020', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'Shrimp, raw', quantity: '6 oz', section: 'shrimp', ndbNo: '15270', portionDesc: 'g', portionGrams: 170.0 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '2 tbsp', section: 'shrimp', ndbNo: '20581', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'Cornmeal, enriched, yellow', quantity: '2 tbsp', section: 'shrimp', ndbNo: '20022', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'large egg', quantity: '1 large', section: 'shrimp', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'olive oil', quantity: '1½ tbsp', section: 'shrimp', ndbNo: '4053', portionDesc: 'g', portionGrams: 20.0 },
+      { name: 'salt', quantity: '¼ tsp', section: 'shrimp', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'shrimp', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'red pepper flakes', quantity: '¼ tsp', section: 'shrimp', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'French bread', quantity: '1 piece (90g)', section: 'assembly', ndbNo: '18029', portionDesc: 'g', portionGrams: 90.0 },
+      { name: 'iceberg lettuce', quantity: '½ cup shredded (loosely packed, 30g)', section: 'assembly', ndbNo: '11252', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'tomato raw', quantity: '2 thin slices (15g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 15.0 }
+    ],
+    recipeInstructions: [
+      'Make the remoulade: In a small bowl, whisk together the mayonnaise, yellow mustard, sweet pickle relish, lemon juice, hot sauce, paprika, and garlic powder. Cover and refrigerate until ready to serve.',
+      'Set up the dredging station: Combine the flour and cornmeal in a shallow bowl. Beat the egg in a separate shallow bowl.',
+      'Season the shrimp with salt, black pepper, and red pepper flakes. Dip each shrimp in the beaten egg, then dredge in the flour-cornmeal mixture, pressing to coat.',
+      'Heat the olive oil in a skillet over medium-high heat until shimmering. Working in batches, cook the shrimp 1–2 minutes per side until golden and cooked through. Transfer to a plate.',
+      'Slice the French bread roll and lightly toast the cut sides if desired. Spread the remoulade generously on both cut sides.',
+      'Layer the shredded lettuce and tomato slices on the bottom half of the roll. Top with the fried shrimp and close the sandwich.'
+    ],
+    sections: [
+      { key: 'remoulade', label: 'Remoulade sauce:', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'shrimp', label: 'Fried shrimp:', cookingMethod: '', yieldFactorWater: 0.85 },
+      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

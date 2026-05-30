@@ -1522,3 +1522,7 @@ RANCHDRESSING,Ranch Dressing,,condiment,,,,,4639,"Salad dressing, ranch dressing
 CODRAW,Cod (raw),,protein,,,,,15015,"Fish, cod, Atlantic, raw",82.0,17.81,0.67,0.0,0.0,81.22,0.0,1.0,custom (g),100.0,3.0,oz,85.0,1.0,fillet,180.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 TAMARI,Tamari,,condiment,,,,,16124,Soy sauce made from soy (tamari),60.0,10.51,0.1,5.57,0.8,66.0,1.7,1.0,custom (g),100.0,1.0,tbsp,18.0,1.0,tsp,6.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 BASIL,Basil (Dried),,spice,,,,,2003,"Spices, basil, dried",233.0,22.98,4.07,47.75,37.7,10.35,1.71,1.0,custom (g),100.0,1.0,"tsp, leaves",0.7,1.0,"tbsp, leaves",2.1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SHRIMP,Shrimp,,seafood,,,,0,15270,"Crustaceans, shrimp, raw (not previously frozen)",85.0,20.1,0.51,0.0,0.0,78.45,0.0,,,,3,oz,85.0,6,oz,170.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+OYSTER,Oyster,,seafood,,,,0,15167,"Mollusks, oyster, eastern, wild, raw",51.0,5.71,1.71,2.72,0.0,89.04,0.62,,,,3,oz,85.0,6,oz,170.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+CORNMEAL,Cornmeal,,grains,,,,0,20022,"Cornmeal, degermed, enriched, yellow",370.0,7.11,1.75,79.45,3.9,11.18,1.61,,,,1,cup,138.0,1,tbsp,8.6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PICKLERELISH,Pickle Relish,,condiments,,,,0,11945,"Pickle relish, sweet",130.0,0.37,0.47,35.06,1.1,62.07,29.13,,,,1,tbsp,15.0,1,tsp,5.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
