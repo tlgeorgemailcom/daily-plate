@@ -6194,5 +6194,44 @@ export const LEVELS: Level[] = [
       { key: 'eggs', label: 'Eggs:', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BKFST_039',
+    name: 'Croissant Smoked Salmon & Cream Cheese',
+    category: 'breakfast & brunch',
+    dietaryCategory: 'pesca',
+    levelNum: 134,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 sandwich',
+    prepTime: '5 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":444.7,"pro":17.8,"fat":26.9,"carb":32.7,"fib":1.8,"h2o":75.3,"sug":8.7,"perServing":{"cal":444.7,"pro":17.8,"fat":26.9,"carb":32.7,"fib":1.8,"h2o":75.3,"sug":8.7,"AddedSugars":0.0,"IntrinsicSugars":8.7},"micros":{"vitaminA":158.29,"vitaminC":1.24,"vitaminD":246.84,"vitaminE":1.01,"vitaminK":1.36,"vitaminB6":0.13,"vitaminB12":1.28,"thiamin":0.17,"riboflavin":0.18,"niacin":2.66,"folate":41.19,"calcium":40.05,"iron":1.24,"magnesium":15.62,"phosphorus":124.9,"potassium":146.07,"sodium":501.29,"zinc":0.53,"copper":0.12,"selenium":22.99,"cholesterol":56.07,"saturatedFat":9.15,"monoFat":4.78,"polyFat":1.1,"omega3":0.21,"omega6":0.15},"gramsPerServing":157.3,"servings":1,"per100g":{"Energy_KCal":282.63,"Water":47.88,"Protein":11.29,"TotalLipidFat":17.08,"Carbohydrate":20.77,"FiberTotalDietary":1.15,"SugarsTotal":5.55,"Cholesterol":56.07,"FattyAcids_totalSaturated":9.15,"FattyAcids_totalMonounsaturated":4.78,"FattyAcids_totalPolyunsaturated":1.1,"LinoleicAcid":0.15,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.07,"DPA_22_5n3":0.03,"DHA_22_6n3":0.09,"VitaminA_RAE":158.29,"Retinol":153.15,"Carotene_beta":27.74,"VitaminD":246.84,"VitaminE_alphaTocopherol":1.01,"VitaminK_phylloquinone":1.36,"VitaminC_totalAscorbicAcid":1.24,"Thiamin":0.17,"Riboflavin":0.18,"Niacin":2.66,"PantothenicAcid":0.78,"VitaminB6":0.13,"Folate_total":41.19,"Folate_food":15.65,"Folate_DFE":59.08,"FolicAcid":25.55,"VitaminB12":1.28,"Choline_total":53.87,"Betaine":0.14,"LuteinZeaxanthin":33.52,"Lycopene":0.02,"Calcium_Ca":40.05,"Iron_Fe":1.24,"Magnesium_Mg":15.62,"Phosphorus_P":124.9,"Potassium_K":146.07,"Sodium_Na":501.29,"Zinc_Zn":0.53,"Copper_Cu":0.12,"Manganese_Mn":0.17,"Selenium_Se":22.99,"Tryptophan":0.12,"Threonine":0.45,"Isoleucine":0.52,"Leucine":0.92,"Lysine":0.85,"Methionine":0.3,"Cystine":0.15,"Phenylalanine":0.49,"Tyrosine":0.39,"Valine":0.59,"Arginine":0.58,"Histidine":0.3,"Alanine":0.57,"AsparticAcid":0.99,"GlutamicAcid":2.21,"Glycine":0.46,"Proline":0.69,"Serine":0.53,"omega3":0.21,"omega6":0.15,"AddedSugars":0.0,"IntrinsicSugars":5.55},"addedSugars":0.0,"intrinsicSugars":8.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"15077","name":"Fish, salmon, chinook, smoked","grams":56.7},{"ndb":"1017","name":"Cheese, cream","grams":30.0},{"ndb":"18239","name":"Croissants, butter","grams":67.0},{"ndb":"2045","name":"Dill weed, fresh","grams":1.0},{"ndb":"9152","name":"Lemon juice, raw","grams":2.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"assembly","section_label":"Assembly:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":157.35,"raw_water_grams":75.34,"raw_fat_grams":26.87,"final_grams":157.35}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Croissant Smoked Salmon & Cream Cheese', quantity: 'custom (g)', foodWord: 'CROISSANTSMOKEDSALMON', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'smoked salmon', quantity: '2 oz (56.7g)', section: 'assembly', ndbNo: '15077', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'cream cheese', quantity: '2 tbsp (30g)', section: 'assembly', ndbNo: '1017', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'croissant', quantity: '1 regular (67g)', section: 'assembly', ndbNo: '18239', portionDesc: 'g', portionGrams: 67.0 },
+      { name: 'fresh dill', quantity: '1 sprig chopped (1g)', section: 'assembly', ndbNo: '2045', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'lemon juice', quantity: '½ tsp (2.5g)', section: 'assembly', ndbNo: '9152', portionDesc: 'g', portionGrams: 2.5 },
+      { name: 'ground black pepper', quantity: '⅛ tsp (0.15g)', section: 'assembly', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.15 }
+    ],
+    recipeInstructions: [
+      'Split the croissant in half horizontally. Spread 2 tablespoons of cream cheese evenly over the cut sides.',
+      'Layer the smoked salmon slices on the bottom half. Squeeze lemon juice over the salmon, scatter the chopped dill on top, and finish with a pinch of black pepper.',
+      'Close the sandwich and serve immediately.'
+    ],
+    sections: [
+      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

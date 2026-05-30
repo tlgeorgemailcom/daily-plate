@@ -196,3 +196,4 @@ basil_fresh,2044,BASILFRESH,"Basil, fresh",fresh basil,leaves,2.5,
 balsamic_vinegar,2069,VINEGARBALSAMIC,"Vinegar, balsamic",balsamic vinegar,tbsp,15,
 croissant,18239,CROISSANT,"Croissants, butter",croissant,piece,67,
 cheese_cheddar_sharp_sliced,1270,CHEDDARSHARPCHEESE,"Cheese, cheddar, sharp, sliced",sharp cheddar cheese,slice,21,
+smoked_salmon,15077,SMOKEDSALMON,"Fish, salmon, chinook, smoked",smoked salmon,oz,28.35,NDB is already a smoked/cured value
