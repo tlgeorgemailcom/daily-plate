@@ -6102,8 +6102,7 @@ export const LEVELS: Level[] = [
       { name: 'cooked bacon', quantity: '2 strips (23g)', section: 'assembly', ndbNo: '10862', portionDesc: 'g', portionGrams: 23.0 }
     ],
     recipeInstructions: [
-      'Cook the bacon in a non-toxic nonstick skillet over medium heat until crisp, about 3–4 minutes per side. Transfer to a paper towel to drain.',
-      'Discard excess bacon fat, leaving a thin film. Reduce heat to medium-low and add butter. Whisk the eggs with salt and pepper, pour into the pan, and scramble gently until just set. Remove from heat while still slightly glossy.',
+      'Melt the butter in a non-toxic nonstick skillet over medium-low heat. Whisk the eggs with salt and pepper, pour into the pan, and scramble gently until just set. Remove from heat while still slightly glossy.',
       'Split the croissant in half horizontally. Lay the cheddar slice on the bottom half.',
       'Spoon the scrambled eggs over the cheese, then lay the bacon strips on top. Close the sandwich and serve immediately.'
     ],
