@@ -5712,7 +5712,7 @@ export const LEVELS: Level[] = [
       { name: 'Hot sauce (Tabasco)', quantity: '½ tsp', section: 'remoulade', ndbNo: '6169', portionDesc: 'g', portionGrams: 2.35 },
       { name: 'paprika', quantity: '¼ tsp', section: 'remoulade', ndbNo: '2028', portionDesc: 'g', portionGrams: 1.0 },
       { name: 'garlic powder', quantity: '⅛ tsp', section: 'remoulade', ndbNo: '2020', portionDesc: 'g', portionGrams: 0.5 },
-      { name: 'Oyster, eastern, wild, raw', quantity: '10 medium eastern oysters (125g)', section: 'oyster', ndbNo: '15167', portionDesc: 'g', portionGrams: 125.0 },
+      { name: 'Oyster, eastern, wild, raw', quantity: '10 medium oysters (125g)', section: 'oyster', ndbNo: '15167', portionDesc: 'g', portionGrams: 125.0 },
       { name: 'all-purpose enriched unbleached white flour', quantity: '2 tbsp', section: 'oyster', ndbNo: '20581', portionDesc: 'g', portionGrams: 15.0 },
       { name: 'Cornmeal, enriched, yellow', quantity: '2 tbsp', section: 'oyster', ndbNo: '20022', portionDesc: 'g', portionGrams: 15.0 },
       { name: 'large egg', quantity: '½ large egg (25g)', section: 'oyster', ndbNo: '1123', portionDesc: 'g', portionGrams: 25.0 },
