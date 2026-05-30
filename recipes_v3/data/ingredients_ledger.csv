@@ -191,3 +191,6 @@ cucumber_raw,11205,CUCUMBERPEEL,"Cucumber, with peel, raw","Cucumber, raw",cup s
 jalapeno_raw,11979,JALAPENO,"Peppers, jalapeno, raw","Jalapeño, raw",pepper,14.0,
 lime_juice_raw,9160,LIMEJUICE,"Lime juice, raw","Lime juice, raw",tbsp,15.0,
 sesame_oil,4058,OILSESAME,"Oil, sesame, salad or cooking",Sesame oil,tsp,4.5,
+focaccia_bread,18973,FOCACCIA,"Focaccia, Italian flatbread, plain",focaccia,piece,120,
+basil_fresh,2044,BASILFRESH,"Basil, fresh",fresh basil,leaves,2.5,
+balsamic_vinegar,2069,VINEGARBALSAMIC,"Vinegar, balsamic",balsamic vinegar,tbsp,15,

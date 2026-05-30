@@ -5985,5 +5985,48 @@ export const LEVELS: Level[] = [
       { key: 'pork', label: 'Pork:', cookingMethod: '', yieldFactorWater: 0.8 },
       { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_051',
+    name: 'Caprese Sandwich',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'veggie',
+    levelNum: 129,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving',
+    prepTime: '10 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":710.7,"pro":30.5,"fat":42.7,"carb":51.6,"fib":3.5,"h2o":208.2,"sug":7.9,"perServing":{"cal":710.7,"pro":30.5,"fat":42.7,"carb":51.6,"fib":3.5,"h2o":208.2,"sug":7.9,"AddedSugars":0.0,"IntrinsicSugars":7.9},"micros":{"vitaminA":60.87,"vitaminC":4.28,"vitaminD":3.99,"vitaminE":1.31,"vitaminK":13.6,"vitaminB6":0.07,"vitaminB12":0.57,"thiamin":0.18,"riboflavin":0.18,"niacin":1.5,"folate":55.75,"calcium":145.53,"iron":1.41,"magnesium":16.88,"phosphorus":142.2,"potassium":139.14,"sodium":527.14,"zinc":1.26,"copper":0.06,"selenium":9.85,"cholesterol":19.7,"saturatedFat":4.16,"monoFat":6.64,"polyFat":1.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":340.8,"servings":1,"per100g":{"Energy_KCal":208.53,"Water":61.1,"Protein":8.95,"TotalLipidFat":12.53,"Carbohydrate":15.15,"FiberTotalDietary":1.03,"SugarsTotal":2.31,"Cholesterol":19.7,"FattyAcids_totalSaturated":4.16,"FattyAcids_totalMonounsaturated":6.64,"FattyAcids_totalPolyunsaturated":1.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":60.87,"Retinol":43.4,"Carotene_beta":192.69,"VitaminD":3.99,"VitaminE_alphaTocopherol":1.31,"VitaminK_phylloquinone":13.6,"VitaminC_totalAscorbicAcid":4.28,"Thiamin":0.18,"Riboflavin":0.18,"Niacin":1.5,"PantothenicAcid":0.29,"VitaminB6":0.07,"Folate_total":55.75,"Folate_food":36.74,"Folate_DFE":68.78,"FolicAcid":19.01,"VitaminB12":0.57,"Choline_total":7.02,"Betaine":0.05,"LuteinZeaxanthin":134.17,"Lycopene":755.01,"Calcium_Ca":145.53,"Iron_Fe":1.41,"Magnesium_Mg":16.88,"Phosphorus_P":142.2,"Potassium_K":139.14,"Sodium_Na":527.14,"Zinc_Zn":1.26,"Copper_Cu":0.06,"Manganese_Mn":0.2,"Selenium_Se":9.85,"Tryptophan":0.13,"Threonine":0.25,"Isoleucine":0.29,"Leucine":0.46,"Lysine":0.25,"Methionine":0.13,"Cystine":0.03,"Phenylalanine":0.26,"Tyrosine":0.26,"Valine":0.33,"Arginine":0.13,"Histidine":0.13,"Alanine":0.18,"AsparticAcid":0.45,"GlutamicAcid":1.24,"Glycine":0.13,"Proline":0.59,"Serine":0.19,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":2.31},"addedSugars":0.0,"intrinsicSugars":7.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18973","name":"Focaccia, Italian flatbread, plain","grams":120.0},{"ndb":"1026","name":"Cheese, mozzarella, whole milk","grams":85.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":100.0},{"ndb":"2044","name":"Basil, fresh","grams":5.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":14.0},{"ndb":"2069","name":"Vinegar, balsamic","grams":15.0},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3}],"sections":[{"section_key":"assembly","section_label":"Assembly:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":340.8,"raw_water_grams":208.23,"raw_fat_grams":42.71,"final_grams":340.8}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Caprese Sandwich', quantity: 'custom (g)', foodWord: 'CAPRESE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'focaccia', quantity: '1 piece (120g)', section: 'assembly', ndbNo: '18973', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'Mozzarella, whole milk', quantity: '3 oz (85g)', section: 'assembly', ndbNo: '1026', portionDesc: 'g', portionGrams: 85.0 },
+      { name: 'tomato raw', quantity: '2 thick slices (100g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'fresh basil', quantity: 'small handful (5g)', section: 'assembly', ndbNo: '2044', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'olive oil', quantity: '1 tbsp (14g)', section: 'assembly', ndbNo: '4053', portionDesc: 'g', portionGrams: 14.0 },
+      { name: 'balsamic vinegar', quantity: '1 tbsp (15g)', section: 'assembly', ndbNo: '2069', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'salt', quantity: '¼ tsp (1.5g)', section: 'assembly', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: 'pinch (0.3g)', section: 'assembly', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 }
+    ],
+    recipeInstructions: [
+      'Slice the focaccia in half horizontally to open it like a book.',
+      'Drizzle olive oil on both cut sides. Season lightly with salt and pepper.',
+      'Layer mozzarella slices on the bottom half, followed by tomato slices. Season the tomatoes with a pinch of salt and pepper.',
+      'Scatter fresh basil leaves over the tomatoes. Drizzle balsamic vinegar over the filling.',
+      'Close the sandwich, press gently, and slice in half. Serve immediately.'
+    ],
+    sections: [
+      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
