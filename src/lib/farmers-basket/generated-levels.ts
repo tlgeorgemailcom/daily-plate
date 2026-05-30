@@ -6143,7 +6143,7 @@ export const LEVELS: Level[] = [
       { name: 'sharp cheddar cheese', quantity: '1 slice (21g)', section: 'assembly', ndbNo: '1270', portionDesc: 'g', portionGrams: 21.0 }
     ],
     recipeInstructions: [
-      'Form about 2 oz (48g) of the sausage mixture into a patty sized to fit the croissant. Cook in a non-toxic nonstick skillet over medium heat until browned and cooked through, about 3–4 minutes per side. Set aside.',
+      'Form about 2 oz (48g) of the sausage mixture into a patty sized to fit the croissant. Cook in a non-toxic nonstick skillet over medium heat until browned and cooked through to an internal temperature of 160°F (71°C), about 3–4 minutes per side. Set aside.',
       'Melt the butter in the same skillet over medium-low heat. Whisk the eggs with salt and pepper, pour into the pan, and scramble gently until just set. Remove from heat while still slightly glossy.',
       'Split the croissant in half horizontally. Lay the cheddar slice on the bottom half, spoon the scrambled eggs over the cheese, and top with the sausage patty. Close the sandwich and serve immediately.'
     ],
