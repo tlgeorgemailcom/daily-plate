@@ -6233,5 +6233,56 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_052',
+    name: 'Falafel Pita',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'vegan',
+    levelNum: 135,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 pita',
+    prepTime: '25 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":691.1,"pro":24.5,"fat":28.5,"carb":90.1,"fib":17.7,"h2o":198.7,"sug":11.2,"perServing":{"cal":691.1,"pro":24.5,"fat":28.5,"carb":90.1,"fib":17.7,"h2o":198.7,"sug":11.2,"AddedSugars":0.0,"IntrinsicSugars":11.2},"micros":{"vitaminA":21.37,"vitaminC":7.06,"vitaminD":0.0,"vitaminE":0.62,"vitaminK":68.28,"vitaminB6":0.09,"vitaminB12":0.0,"thiamin":0.17,"riboflavin":0.08,"niacin":1.04,"folate":75.56,"calcium":81.23,"iron":2.86,"magnesium":40.33,"phosphorus":148.61,"potassium":274.65,"sodium":274.43,"zinc":1.23,"copper":0.3,"selenium":3.94,"cholesterol":0.0,"saturatedFat":1.08,"monoFat":4.13,"polyFat":2.13,"omega3":0.0,"omega6":0.0},"gramsPerServing":347.9,"servings":1,"per100g":{"Energy_KCal":198.67,"Water":57.12,"Protein":7.03,"TotalLipidFat":8.18,"Carbohydrate":25.91,"FiberTotalDietary":5.1,"SugarsTotal":3.22,"Cholesterol":0.0,"FattyAcids_totalSaturated":1.08,"FattyAcids_totalMonounsaturated":4.13,"FattyAcids_totalPolyunsaturated":2.13,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":21.37,"Retinol":0.0,"Carotene_beta":250.35,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.62,"VitaminK_phylloquinone":68.28,"VitaminC_totalAscorbicAcid":7.06,"Thiamin":0.17,"Riboflavin":0.08,"Niacin":1.04,"PantothenicAcid":0.25,"VitaminB6":0.09,"Folate_total":75.56,"Folate_food":75.56,"Folate_DFE":75.56,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":20.92,"Betaine":0.06,"LuteinZeaxanthin":176.1,"Lycopene":369.82,"Calcium_Ca":81.23,"Iron_Fe":2.86,"Magnesium_Mg":40.33,"Phosphorus_P":148.61,"Potassium_K":274.65,"Sodium_Na":274.43,"Zinc_Zn":1.23,"Copper_Cu":0.3,"Manganese_Mn":0.69,"Selenium_Se":3.94,"Tryptophan":0.08,"Threonine":0.23,"Isoleucine":0.27,"Leucine":0.47,"Lysine":0.34,"Methionine":0.11,"Cystine":0.1,"Phenylalanine":0.34,"Tyrosine":0.19,"Valine":0.3,"Arginine":0.59,"Histidine":0.17,"Alanine":0.28,"AsparticAcid":0.66,"GlutamicAcid":1.53,"Glycine":0.29,"Proline":0.39,"Serine":0.33,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":3.22},"addedSugars":0.0,"intrinsicSugars":11.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"16057","name":"Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt","grams":150.0},{"ndb":"11297","name":"Parsley, fresh","grams":15.0},{"ndb":"11282","name":"Onions, raw","grams":30.0},{"ndb":"2020","name":"Spices, garlic powder","grams":1.5},{"ndb":"2014","name":"Spices, cumin seed","grams":2.0},{"ndb":"2013","name":"Spices, coriander seed","grams":2.0},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":12.0},{"ndb":"18413","name":"Bread, pita, white, enriched","grams":60.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":50.0},{"ndb":"11282","name":"Onions, raw","grams":20.0},{"ndb":"12166","name":"Seeds, sesame butter, tahini, from roasted and toasted kernels (most common type)","grams":20.0},{"ndb":"9152","name":"Lemon juice, raw","grams":10.0}],"sections":[{"section_key":"falafel","section_label":"Falafel:","prep_method":"raw","cook_method":"fried","cooking_method":"fried","cooking_method_normalized":"fried","yield_factor_water":0.8,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":214.0,"raw_water_grams":130.64,"raw_fat_grams":16.85,"final_grams":187.87},{"section_key":"assembly","section_label":"Assembly:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":160.0,"raw_water_grams":94.18,"raw_fat_grams":11.62,"final_grams":160.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Falafel Pita', quantity: 'custom (g)', foodWord: 'FALAFELPITA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chickpeas, cooked', quantity: '1½ cups cooked (150g)', section: 'falafel', ndbNo: '16057', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'fresh parsley', quantity: '¼ cup fresh (15g)', section: 'falafel', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'onion', quantity: '½ medium, rough chopped (30g)', section: 'falafel', ndbNo: '11282', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'garlic powder', quantity: '½ tsp (1.5g)', section: 'falafel', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground cumin', quantity: '1 tsp (2g)', section: 'falafel', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'ground coriander', quantity: '1 tsp ground (2g)', section: 'falafel', ndbNo: '2013', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'salt', quantity: '¼ tsp (1.5g)', section: 'falafel', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'olive oil', quantity: '1 tbsp olive oil (absorbed into patties)', section: 'falafel', ndbNo: '4053', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'pita bread, white', quantity: '1 pita (60g)', section: 'assembly', ndbNo: '18413', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'tomato raw', quantity: '1 small, sliced (50g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'red onion', quantity: '¼ small red onion, thinly sliced (20g)', section: 'assembly', ndbNo: '11282', portionDesc: 'g', portionGrams: 20.0 },
+      { name: 'tahini', quantity: '4 tsp (20g)', section: 'assembly', ndbNo: '12166', portionDesc: 'g', portionGrams: 20.0 },
+      { name: 'lemon juice', quantity: '2 tsp (10g)', section: 'assembly', ndbNo: '9152', portionDesc: 'g', portionGrams: 10.0 }
+    ],
+    recipeInstructions: [
+      'Drain and rinse the chickpeas thoroughly. Pat dry with paper towels — excess moisture will prevent the patties from holding together.',
+      'Combine the chickpeas, parsley, onion, garlic powder, cumin, ground coriander, and salt in a food processor. Pulse until the mixture is coarsely ground — it should hold together when pressed but not be smooth. Do not over-process into a paste.',
+      'Shape the mixture into 4 equal patties, about ½ inch thick. (Oil in the ingredient list reflects only the amount absorbed into the patties.)',
+      'Heat the olive oil in a non-toxic nonstick skillet over medium heat. Cook the patties for 3–4 minutes per side until golden brown and crisp on the outside. Transfer to a plate.',
+      'Stir together the tahini and lemon juice until smooth to make the sauce.',
+      'Warm the pita briefly in the skillet or microwave. Slice off the top third to open a pocket, or split in half.',
+      'Spread the tahini-lemon sauce inside the pita. Add the tomato slices, red onion, and falafel patties. Serve immediately.'
+    ],
+    sections: [
+      { key: 'falafel', label: 'Falafel:', cookingMethod: '', yieldFactorWater: 0.8 },
+      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
