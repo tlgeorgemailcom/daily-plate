@@ -6061,7 +6061,7 @@ export const LEVELS: Level[] = [
     ],
     recipeInstructions: [
       'Crack the eggs into a bowl, season with salt and pepper, and whisk until combined.',
-      'Melt butter in a nonstick skillet over medium-low heat. Add the eggs and scramble gently, stirring slowly, until just set. Remove from heat while still slightly glossy.',
+      'Melt butter in a non-toxic nonstick skillet over medium-low heat. Add the eggs and scramble gently, stirring slowly, until just set. Remove from heat while still slightly glossy.',
       'Split the croissant in half horizontally. Lay the cheddar slice on the bottom half.',
       'Spoon the scrambled eggs over the cheese. Close the sandwich and serve immediately.'
     ],
