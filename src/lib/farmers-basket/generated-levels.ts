@@ -5889,5 +5889,49 @@ export const LEVELS: Level[] = [
       { key: 'chicken', label: 'Breaded chicken:', cookingMethod: '', yieldFactorWater: 0.75 },
       { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_049',
+    name: 'Philly Cheesesteak',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 127,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving',
+    prepTime: '20 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":671.5,"pro":51.5,"fat":30.1,"carb":49.4,"fib":4.1,"h2o":227.5,"sug":6.3,"perServing":{"cal":671.5,"pro":51.5,"fat":30.1,"carb":49.4,"fib":4.1,"h2o":227.5,"sug":6.3,"AddedSugars":0.0,"IntrinsicSugars":6.3},"micros":{"vitaminA":30.12,"vitaminC":7.41,"vitaminD":3.41,"vitaminE":0.42,"vitaminK":3.52,"vitaminB6":0.25,"vitaminB12":1.15,"thiamin":0.12,"riboflavin":0.17,"niacin":2.73,"folate":25.39,"calcium":114.68,"iron":1.72,"magnesium":22.61,"phosphorus":174.25,"potassium":255.13,"sodium":393.93,"zinc":2.67,"copper":0.09,"selenium":18.77,"cholesterol":33.18,"saturatedFat":3.09,"monoFat":3.71,"polyFat":0.68,"omega3":0.0,"omega6":0.04},"gramsPerServing":365.5,"servings":1,"per100g":{"Energy_KCal":183.72,"Water":62.25,"Protein":14.08,"TotalLipidFat":8.23,"Carbohydrate":13.5,"FiberTotalDietary":1.12,"SugarsTotal":1.74,"Cholesterol":33.18,"FattyAcids_totalSaturated":3.09,"FattyAcids_totalMonounsaturated":3.71,"FattyAcids_totalPolyunsaturated":0.68,"LinoleicAcid":0.04,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":30.12,"Retinol":27.05,"Carotene_beta":35.51,"VitaminD":3.41,"VitaminE_alphaTocopherol":0.42,"VitaminK_phylloquinone":3.52,"VitaminC_totalAscorbicAcid":7.41,"Thiamin":0.12,"Riboflavin":0.17,"Niacin":2.73,"PantothenicAcid":0.17,"VitaminB6":0.25,"Folate_total":25.39,"Folate_food":9.63,"Folate_DFE":36.42,"FolicAcid":15.76,"VitaminB12":1.15,"Choline_total":6.67,"Betaine":0.05,"LuteinZeaxanthin":48.62,"Lycopene":0.01,"Calcium_Ca":114.68,"Iron_Fe":1.72,"Magnesium_Mg":22.61,"Phosphorus_P":174.25,"Potassium_K":255.13,"Sodium_Na":393.93,"Zinc_Zn":2.67,"Copper_Cu":0.09,"Manganese_Mn":0.15,"Selenium_Se":18.77,"Tryptophan":0.17,"Threonine":0.63,"Isoleucine":0.65,"Leucine":1.24,"Lysine":1.29,"Methionine":0.37,"Cystine":0.14,"Phenylalanine":0.64,"Tyrosine":0.59,"Valine":0.76,"Arginine":0.86,"Histidine":0.53,"Alanine":0.73,"AsparticAcid":1.27,"GlutamicAcid":3.02,"Glycine":0.54,"Proline":0.94,"Serine":0.66,"omega3":0.0,"omega6":0.04,"AddedSugars":0.0,"IntrinsicSugars":1.74},"addedSugars":0.0,"intrinsicSugars":6.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"23263","name":"Beef, ribeye petite roast/filet, boneless, separable lean only, trimmed to 0\" fat, all grades, raw","grams":142.0},{"ndb":"11282","name":"Onions, raw","grams":80.0},{"ndb":"11333","name":"Peppers, sweet, green, raw","grams":60.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":9.0},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"18353","name":"Rolls, hard (includes kaiser)","grams":72.0},{"ndb":"1035","name":"Cheese, provolone","grams":42.0}],"sections":[{"section_key":"filling","section_label":"Beef filling:","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":292.8,"raw_water_grams":229.29,"raw_fat_grams":15.81,"final_grams":251.53},{"section_key":"assembly","section_label":"Assembly:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":114.0,"raw_water_grams":39.52,"raw_fat_grams":14.28,"final_grams":114.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Philly Cheesesteak', quantity: 'custom (g)', foodWord: 'PHILLYCHEESESTEAK', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Beef ribeye, raw', quantity: '5 oz thinly sliced', section: 'filling', ndbNo: '23263', portionDesc: 'g', portionGrams: 142.0 },
+      { name: 'onion', quantity: '½ medium (80g)', section: 'filling', ndbNo: '11282', portionDesc: 'g', portionGrams: 80.0 },
+      { name: 'green bell pepper', quantity: '½ medium (60g)', section: 'filling', ndbNo: '11333', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'olive oil', quantity: '2 tsp (9g)', section: 'filling', ndbNo: '4053', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'salt', quantity: '¼ tsp', section: 'filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'filling', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'Hoagie roll', quantity: '1 roll (6", 72g)', section: 'assembly', ndbNo: '18353', portionDesc: 'g', portionGrams: 72.0 },
+      { name: 'provolone cheese', quantity: '2 slices (1.5 oz, 42g)', section: 'assembly', ndbNo: '1035', portionDesc: 'g', portionGrams: 42.0 }
+    ],
+    recipeInstructions: [
+      'Slice the beef as thinly as possible (partially freezing it for 20–30 minutes makes this easier). Season with salt and pepper.',
+      'Heat olive oil in a large cast-iron skillet or flat-top griddle over high heat. Add the onion and bell pepper; cook 5–6 minutes, stirring, until softened and lightly charred. Push to one side of the pan.',
+      'Add the beef to the empty side of the pan. Cook 2–3 minutes, breaking apart with a spatula, until browned and just cooked through. Mix the beef together with the onions and peppers.',
+      'Lay the provolone slices over the beef mixture. Cover loosely with a lid or foil for 30–60 seconds to melt the cheese.',
+      'Split the hoagie roll and lightly toast the cut sides on the griddle for 1 minute. Scoop the cheesy beef filling into the roll and serve immediately.'
+    ],
+    sections: [
+      { key: 'filling', label: 'Beef filling:', cookingMethod: '', yieldFactorWater: 0.82 },
+      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
