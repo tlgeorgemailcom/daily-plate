@@ -6152,5 +6152,47 @@ export const LEVELS: Level[] = [
       { key: 'eggs', label: 'Eggs:', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BKFST_038',
+    name: 'Croissant Ham, Egg & Cheese Sandwich',
+    category: 'breakfast & brunch',
+    dietaryCategory: 'all',
+    levelNum: 133,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 sandwich',
+    prepTime: '15 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":694.2,"pro":32.7,"fat":46.9,"carb":34.1,"fib":2.5,"h2o":139.7,"sug":8.0,"perServing":{"cal":694.2,"pro":32.7,"fat":46.9,"carb":34.1,"fib":2.5,"h2o":139.7,"sug":8.0,"AddedSugars":0.0,"IntrinsicSugars":8.0},"micros":{"vitaminA":153.56,"vitaminC":0.93,"vitaminD":39.73,"vitaminE":0.7,"vitaminK":1.16,"vitaminB6":0.14,"vitaminB12":0.5,"thiamin":0.25,"riboflavin":0.29,"niacin":1.22,"folate":40.21,"calcium":95.55,"iron":1.44,"magnesium":15.95,"phosphorus":175.69,"potassium":154.56,"sodium":557.52,"zinc":1.3,"copper":0.07,"selenium":24.6,"cholesterol":193.01,"saturatedFat":9.2,"monoFat":5.61,"polyFat":1.24,"omega3":0.04,"omega6":0.63},"gramsPerServing":259.1,"servings":1,"per100g":{"Energy_KCal":267.92,"Water":53.9,"Protein":12.62,"TotalLipidFat":18.11,"Carbohydrate":13.16,"FiberTotalDietary":0.97,"SugarsTotal":3.08,"Cholesterol":193.01,"FattyAcids_totalSaturated":9.2,"FattyAcids_totalMonounsaturated":5.61,"FattyAcids_totalPolyunsaturated":1.24,"LinoleicAcid":0.63,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":153.56,"Retinol":151.39,"Carotene_beta":23.64,"VitaminD":39.73,"VitaminE_alphaTocopherol":0.7,"VitaminK_phylloquinone":1.16,"VitaminC_totalAscorbicAcid":0.93,"Thiamin":0.25,"Riboflavin":0.29,"Niacin":1.22,"PantothenicAcid":0.83,"VitaminB6":0.14,"Folate_total":40.21,"Folate_food":24.69,"Folate_DFE":51.07,"FolicAcid":15.52,"VitaminB12":0.5,"Choline_total":132.26,"Betaine":1.32,"LuteinZeaxanthin":145.44,"Lycopene":0.01,"Calcium_Ca":95.55,"Iron_Fe":1.44,"Magnesium_Mg":15.95,"Phosphorus_P":175.69,"Potassium_K":154.56,"Sodium_Na":557.52,"Zinc_Zn":1.3,"Copper_Cu":0.07,"Manganese_Mn":0.22,"Selenium_Se":24.6,"Tryptophan":0.14,"Threonine":0.5,"Isoleucine":0.58,"Leucine":0.99,"Lysine":0.84,"Methionine":0.31,"Cystine":0.18,"Phenylalanine":0.58,"Tyrosine":0.46,"Valine":0.72,"Arginine":0.67,"Histidine":0.32,"Alanine":0.59,"AsparticAcid":1.05,"GlutamicAcid":2.13,"Glycine":0.43,"Proline":0.74,"Serine":0.71,"omega3":0.04,"omega6":0.63,"AddedSugars":0.0,"IntrinsicSugars":3.08},"addedSugars":0.0,"intrinsicSugars":8.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"7029","name":"Ham, sliced, regular (approximately 11% fat)","grams":56.7},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":100.0},{"ndb":"1001","name":"Butter, salted","grams":14.0},{"ndb":"2047","name":"Salt, table","grams":0.3},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"18239","name":"Croissants, butter","grams":67.0},{"ndb":"1270","name":"Cheese, cheddar, sharp, sliced","grams":21.0}],"sections":[{"section_key":"ham","section_label":"Ham:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":56.7,"raw_water_grams":38.14,"raw_fat_grams":4.88,"final_grams":56.7},{"section_key":"eggs","section_label":"Eggs:","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":114.4,"raw_water_grams":78.38,"raw_fat_grams":20.87,"final_grams":114.4},{"section_key":"assembly","section_label":"Assembly:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":88.0,"raw_water_grams":23.14,"raw_fat_grams":21.17,"final_grams":88.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Croissant Ham, Egg & Cheese Sandwich', quantity: 'custom (g)', foodWord: 'CROISSANTHAMEGGCHEESE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'sliced ham', quantity: '2 slices (56.7g)', section: 'ham', ndbNo: '7029', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'large egg', quantity: '2 large (100g)', section: 'eggs', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'salted butter', quantity: '1 tbsp (14g)', section: 'eggs', ndbNo: '1001', portionDesc: 'g', portionGrams: 14.0 },
+      { name: 'salt', quantity: 'pinch (0.3g)', section: 'eggs', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'ground black pepper', quantity: 'pinch (0.1g)', section: 'eggs', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.1 },
+      { name: 'croissant', quantity: '1 large (67g)', section: 'assembly', ndbNo: '18239', portionDesc: 'g', portionGrams: 67.0 },
+      { name: 'sharp cheddar cheese', quantity: '1 slice (21g)', section: 'assembly', ndbNo: '1270', portionDesc: 'g', portionGrams: 21.0 }
+    ],
+    recipeInstructions: [
+      'Warm the ham slices in a non-toxic nonstick skillet over medium heat for about 1 minute per side until lightly browned. Set aside.',
+      'Melt the butter in the same skillet over medium-low heat. Whisk the eggs with salt and pepper, pour into the pan, and scramble gently until just set. Remove from heat while still slightly glossy.',
+      'Split the croissant in half horizontally. Lay the cheddar slice on the bottom half, spoon the scrambled eggs over the cheese, and top with the ham slices. Close the sandwich and serve immediately.'
+    ],
+    sections: [
+      { key: 'ham', label: 'Ham:', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'eggs', label: 'Eggs:', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
