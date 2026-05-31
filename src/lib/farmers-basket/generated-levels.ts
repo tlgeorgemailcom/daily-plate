@@ -6418,7 +6418,7 @@ export const LEVELS: Level[] = [
       { name: 'onion', quantity: '2 thin slices (20g)', section: 'assembly', ndbNo: '11282', portionDesc: 'g', portionGrams: 20.0 }
     ],
     recipeInstructions: [
-      'Divide beef into one 4 oz portion and shape into a patty a little larger than the bun due to shrinkage. Do not overwork the meat or pack tightly. Season both sides with salt and pepper.',
+      'Shape the ground beef into a patty a little larger than the bun due to shrinkage. Do not overwork the meat or pack tightly. Season both sides with salt and pepper.',
       'Heat a skillet over medium-high heat. Cook patty 3–4 minutes per side until cooked through (160°F / 71°C internal temperature). For best results use a pan where the meat sticks to the pan to prevent shrinkage. Then carefully release all sides of the patty from the pan with the back of a spatula before flipping. Serve immediately on prepared bun.',
       'Prepare the bun by grilling the inside of each half until golden. Then spread ketchup on one bun and mustard on the other bun. Add the pickle slices and onion on the bottom bun and then top with the patty.'
     ],
