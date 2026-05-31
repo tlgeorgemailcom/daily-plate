@@ -6426,5 +6426,49 @@ export const LEVELS: Level[] = [
       { key: 'patty', label: 'Patty:', cookingMethod: '', yieldFactorWater: 0.75 },
       { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_056',
+    name: 'Cheeseburger',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 139,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 burger',
+    prepTime: '15 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":516.3,"pro":28.1,"fat":31.2,"carb":29.8,"fib":1.6,"h2o":129.0,"sug":8.3,"perServing":{"cal":516.3,"pro":28.1,"fat":31.2,"carb":29.8,"fib":1.6,"h2o":129.0,"sug":8.3,"AddedSugars":0.0,"IntrinsicSugars":8.3},"micros":{"vitaminA":33.4,"vitaminC":1.45,"vitaminD":3.61,"vitaminE":0.32,"vitaminK":4.11,"vitaminB6":0.16,"vitaminB12":1.1,"thiamin":0.13,"riboflavin":0.17,"niacin":2.66,"folate":24.82,"calcium":145.73,"iron":1.82,"magnesium":19.33,"phosphorus":168.39,"potassium":223.21,"sodium":542.67,"zinc":2.54,"copper":0.07,"selenium":15.58,"cholesterol":45.33,"saturatedFat":5.71,"monoFat":5.44,"polyFat":0.69,"omega3":0.07,"omega6":0.39},"gramsPerServing":223.3,"servings":1,"per100g":{"Energy_KCal":231.22,"Water":57.77,"Protein":12.6,"TotalLipidFat":13.99,"Carbohydrate":13.36,"FiberTotalDietary":0.74,"SugarsTotal":3.74,"Cholesterol":45.33,"FattyAcids_totalSaturated":5.71,"FattyAcids_totalMonounsaturated":5.44,"FattyAcids_totalPolyunsaturated":0.69,"LinoleicAcid":0.39,"alphaLinolenicAcid":0.07,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":33.4,"Retinol":30.05,"Carotene_beta":39.48,"VitaminD":3.61,"VitaminE_alphaTocopherol":0.32,"VitaminK_phylloquinone":4.11,"VitaminC_totalAscorbicAcid":1.45,"Thiamin":0.13,"Riboflavin":0.17,"Niacin":2.66,"PantothenicAcid":0.38,"VitaminB6":0.16,"Folate_total":24.82,"Folate_food":14.62,"Folate_DFE":31.95,"FolicAcid":10.21,"VitaminB12":1.1,"Choline_total":34.23,"Betaine":4.19,"LuteinZeaxanthin":19.33,"Lycopene":918.26,"Calcium_Ca":145.73,"Iron_Fe":1.82,"Magnesium_Mg":19.33,"Phosphorus_P":168.39,"Potassium_K":223.21,"Sodium_Na":542.67,"Zinc_Zn":2.54,"Copper_Cu":0.07,"Manganese_Mn":0.16,"Selenium_Se":15.58,"Tryptophan":0.06,"Threonine":0.41,"Isoleucine":0.47,"Leucine":0.85,"Lysine":0.87,"Methionine":0.27,"Cystine":0.09,"Phenylalanine":0.43,"Tyrosine":0.35,"Valine":0.55,"Arginine":0.63,"Histidine":0.33,"Alanine":0.61,"AsparticAcid":0.96,"GlutamicAcid":1.77,"Glycine":0.63,"Proline":0.62,"Serine":0.46,"omega3":0.07,"omega6":0.39,"AddedSugars":0.0,"IntrinsicSugars":3.74},"addedSugars":0.0,"intrinsicSugars":8.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":113.0},{"ndb":"2047","name":"Salt, table","grams":0.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"18350","name":"Rolls, hamburger or hotdog, plain","grams":43.0},{"ndb":"1253","name":"Cheese, pasteurized process, American, without added vitamin D","grams":21.0},{"ndb":"11935","name":"Catsup","grams":17.0},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":5.0},{"ndb":"11937","name":"Pickles, cucumber, dill or kosher dill","grams":21.0},{"ndb":"11282","name":"Onions, raw","grams":20.0}],"sections":[{"section_key":"patty","section_label":"Patty:","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":113.8,"raw_water_grams":69.95,"raw_fat_grams":22.61,"final_grams":96.31},{"section_key":"assembly","section_label":"Assembly:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":127.0,"raw_water_grams":76.55,"raw_fat_grams":8.62,"final_grams":127.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Cheeseburger', quantity: 'custom (g)', foodWord: 'CHEESEBURGER', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'ground beef (80% lean)', quantity: '4 oz raw (113g)', section: 'patty', ndbNo: '23572', portionDesc: 'g', portionGrams: 113.0 },
+      { name: 'salt', quantity: '¼ tsp (0.5g)', section: 'patty', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'ground black pepper', quantity: '⅛ tsp (0.3g)', section: 'patty', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'hamburger bun', quantity: '1 bun (43g)', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 43.0 },
+      { name: 'American cheese', quantity: '1 slice (21g)', section: 'assembly', ndbNo: '1253', portionDesc: 'g', portionGrams: 21.0 },
+      { name: 'ketchup', quantity: '1 tbsp (17g)', section: 'assembly', ndbNo: '11935', portionDesc: 'g', portionGrams: 17.0 },
+      { name: 'yellow mustard', quantity: '1 tsp (5g)', section: 'assembly', ndbNo: '2046', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'dill pickle', quantity: '3 slices (21g)', section: 'assembly', ndbNo: '11937', portionDesc: 'g', portionGrams: 21.0 },
+      { name: 'onion', quantity: '2 thin slices (20g)', section: 'assembly', ndbNo: '11282', portionDesc: 'g', portionGrams: 20.0 }
+    ],
+    recipeInstructions: [
+      'Shape the ground meat into a patty a little larger than the bun due to shrinkage. Do not overwork the meat or pack tightly. Season both sides with salt and pepper.',
+      'Heat a skillet over medium-high heat. Cook patty 3–4 minutes per side until cooked through (160°F / 71°C internal temperature). For best results use a pan where the meat sticks to the pan to prevent shrinkage. Then carefully release all sides of the patty from the pan with the back of a spatula before flipping.',
+      'After flipping lay the cheese on top of the patty and continue cooking. Serve immediately on prepared bun.',
+      'Prepare the bun by grilling the inside of each half until golden. Then spread ketchup on one bun and mustard on the other bun. Add the pickle slices and onion on the bottom bun and then top with the patty cheese side up.'
+    ],
+    sections: [
+      { key: 'patty', label: 'Patty:', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
