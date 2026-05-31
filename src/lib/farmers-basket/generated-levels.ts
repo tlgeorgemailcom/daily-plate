@@ -6384,5 +6384,47 @@ export const LEVELS: Level[] = [
       { key: 'coleslaw', label: 'Coleslaw:', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'SAND_055',
+    name: 'Hamburger',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 138,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 burger',
+    prepTime: '15 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":438.4,"pro":24.3,"fat":24.6,"carb":29.1,"fib":1.6,"h2o":120.7,"sug":7.9,"perServing":{"cal":438.4,"pro":24.3,"fat":24.6,"carb":29.1,"fib":1.6,"h2o":120.7,"sug":7.9,"AddedSugars":0.0,"IntrinsicSugars":7.9},"micros":{"vitaminA":10.91,"vitaminC":1.6,"vitaminD":1.59,"vitaminE":0.27,"vitaminK":4.27,"vitaminB6":0.18,"vitaminB12":1.06,"thiamin":0.14,"riboflavin":0.16,"niacin":2.93,"folate":26.57,"calcium":52.38,"iron":1.94,"magnesium":18.63,"phosphorus":119.33,"potassium":232.67,"sodium":425.55,"zinc":2.55,"copper":0.07,"selenium":15.1,"cholesterol":39.66,"saturatedFat":4.43,"monoFat":5.15,"polyFat":0.63,"omega3":0.06,"omega6":0.34},"gramsPerServing":202.3,"servings":1,"per100g":{"Energy_KCal":216.71,"Water":59.66,"Protein":12.02,"TotalLipidFat":12.14,"Carbohydrate":14.37,"FiberTotalDietary":0.82,"SugarsTotal":3.89,"Cholesterol":39.66,"FattyAcids_totalSaturated":4.43,"FattyAcids_totalMonounsaturated":5.15,"FattyAcids_totalPolyunsaturated":0.63,"LinoleicAcid":0.34,"alphaLinolenicAcid":0.06,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":10.91,"Retinol":7.95,"Carotene_beta":35.27,"VitaminD":1.59,"VitaminE_alphaTocopherol":0.27,"VitaminK_phylloquinone":4.27,"VitaminC_totalAscorbicAcid":1.6,"Thiamin":0.14,"Riboflavin":0.16,"Niacin":2.93,"PantothenicAcid":0.38,"VitaminB6":0.18,"Folate_total":26.57,"Folate_food":15.3,"Folate_DFE":34.43,"FolicAcid":11.26,"VitaminB12":1.06,"Choline_total":34.03,"Betaine":4.62,"LuteinZeaxanthin":21.34,"Lycopene":1013.58,"Calcium_Ca":52.38,"Iron_Fe":1.94,"Magnesium_Mg":18.63,"Phosphorus_P":119.33,"Potassium_K":232.67,"Sodium_Na":425.55,"Zinc_Zn":2.55,"Copper_Cu":0.07,"Manganese_Mn":0.17,"Selenium_Se":15.1,"Tryptophan":0.05,"Threonine":0.38,"Isoleucine":0.43,"Leucine":0.76,"Lysine":0.81,"Methionine":0.25,"Cystine":0.08,"Phenylalanine":0.38,"Tyrosine":0.3,"Valine":0.48,"Arginine":0.64,"Histidine":0.31,"Alanine":0.61,"AsparticAcid":0.89,"GlutamicAcid":1.53,"Glycine":0.66,"Proline":0.5,"Serine":0.39,"omega3":0.06,"omega6":0.34,"AddedSugars":0.0,"IntrinsicSugars":3.89},"addedSugars":0.0,"intrinsicSugars":7.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":113.0},{"ndb":"2047","name":"Salt, table","grams":0.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"18350","name":"Rolls, hamburger or hotdog, plain","grams":43.0},{"ndb":"11935","name":"Catsup","grams":17.0},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":5.0},{"ndb":"11937","name":"Pickles, cucumber, dill or kosher dill","grams":21.0},{"ndb":"11282","name":"Onions, raw","grams":20.0}],"sections":[{"section_key":"patty","section_label":"Patty:","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":113.8,"raw_water_grams":69.95,"raw_fat_grams":22.61,"final_grams":96.31},{"section_key":"assembly","section_label":"Assembly:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":106.0,"raw_water_grams":68.23,"raw_fat_grams":1.95,"final_grams":106.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Hamburger', quantity: 'custom (g)', foodWord: 'HAMBURGER', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'ground beef (80% lean)', quantity: '4 oz raw (113g)', section: 'patty', ndbNo: '23572', portionDesc: 'g', portionGrams: 113.0 },
+      { name: 'salt', quantity: '¼ tsp (0.5g)', section: 'patty', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'ground black pepper', quantity: '⅛ tsp (0.3g)', section: 'patty', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'hamburger bun', quantity: '1 bun (43g)', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 43.0 },
+      { name: 'ketchup', quantity: '1 tbsp (17g)', section: 'assembly', ndbNo: '11935', portionDesc: 'g', portionGrams: 17.0 },
+      { name: 'yellow mustard', quantity: '1 tsp (5g)', section: 'assembly', ndbNo: '2046', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'dill pickle', quantity: '3 slices (21g)', section: 'assembly', ndbNo: '11937', portionDesc: 'g', portionGrams: 21.0 },
+      { name: 'onion', quantity: '2 thin slices (20g)', section: 'assembly', ndbNo: '11282', portionDesc: 'g', portionGrams: 20.0 }
+    ],
+    recipeInstructions: [
+      'Divide beef into one 4 oz portion and shape into a patty about ¾ inch thick. Season both sides with salt and pepper.',
+      'Heat a non-toxic nonstick skillet over medium-high heat. Cook patty 3–4 minutes per side until cooked through (160°F / 71°C internal temperature). Transfer to a plate and rest 1 minute.',
+      'Spread ketchup and mustard on the bun. Add the patty, pickle slices, and onion. Serve immediately.'
+    ],
+    sections: [
+      { key: 'patty', label: 'Patty:', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

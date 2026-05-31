@@ -1255,3 +1255,11 @@ SAND_054,5,bread_rye,2 slices (64g),64.0,,,assembly,,,
 SAND_054,6,turkey_breast_deli,3 oz (85g),85.0,,,assembly,,,
 SAND_054,7,cheese_swiss,2 slices (42g),42.0,,,assembly,,,
 SAND_054,8,butter_salted,1 tbsp (14g),14.0,,,assembly,,,
+SAND_055,1,beef_ground_80lean_raw,4 oz raw (113g),113.0,,,patty,,,
+SAND_055,2,salt_table,¼ tsp (0.5g),0.5,,,patty,,,
+SAND_055,3,black_pepper_ground,⅛ tsp (0.3g),0.3,,,patty,,,
+SAND_055,4,hamburger_bun,1 bun (43g),43.0,,,assembly,,,
+SAND_055,5,ketchup,1 tbsp (17g),17.0,,,assembly,,,
+SAND_055,6,mustard_yellow,1 tsp (5g),5.0,,,assembly,,,
+SAND_055,7,pickle_dill,3 slices (21g),21.0,,,assembly,,,dill pickle
+SAND_055,8,onion_raw,2 thin slices (20g),20.0,,,assembly,,,onion
