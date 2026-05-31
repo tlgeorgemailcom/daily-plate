@@ -68,3 +68,34 @@ One bread per sandwich — the most commonly used version.
 |---|---|---|
 | Falafel Pita | Pita, white | 18041 |
 | Gyro | Pita, white | 18041 |
+
+---
+
+## Burgers (SAND_055+)
+
+All burgers use a hamburger bun. SR Legacy NDB 18350 (Rolls, hamburger or hotdog, plain).
+
+Planned order — build simplest (plain patty) first, composites last:
+
+| ID | Recipe | food_word | dietary_category | Notes |
+|---|---|---|---|---|
+| SAND_055 | Classic Hamburger | HAMBURGER | all | Classic plain beef patty + bun + ketchup + mustard + pickle + onion; 80/20 ground beef |
+| SAND_056 | Cheeseburger | CHEESEBURGER | all | SAND_055 base + American cheese slice |
+| SAND_057 | Bacon Cheeseburger | BACONCHEESEBURGER | all | SAND_056 base + bacon |
+| SAND_058 | Double Cheeseburger | DOUBLECHEESEBURGER | all | Two patties + two cheese slices; fast-food style |
+| SAND_059 | Mushroom Swiss Burger | MUSHROOMSWISSBURGER | all | Beef patty + sautéed mushrooms + Swiss cheese |
+| SAND_060 | BBQ Bacon Burger | BBQBACONBURGER | all | Beef patty + BBQ sauce + bacon + cheddar + onion rings |
+| SAND_061 | Turkey Burger | TURKEYBURGER | all | Ground turkey patty + bun + lettuce + tomato + mayo |
+| SAND_062 | Veggie Burger | VEGGIEBURGER | veggie | Bean/veggie patty + bun + standard toppings |
+
+## Hot Dogs (SAND_063+)
+
+Bun: same NDB 18350 (hamburger/hot dog bun). Frank: SR Legacy NDB 7037 (Frankfurter, beef).
+
+| ID | Recipe | food_word | dietary_category | Notes |
+|---|---|---|---|---|
+| SAND_063 | Classic Hot Dog | HOTDOG | all | Beef frank + bun + ketchup + mustard + relish |
+| SAND_064 | Chicago Style Hot Dog | CHICAGOSTYLEHOTDOG | all | Beef frank + bun + yellow mustard + sweet relish + tomato + pickle spear + sport peppers + celery salt; no ketchup |
+| SAND_065 | Chili Dog | CHILIDOG | all | Beef frank + bun + beef chili + onion + cheddar |
+| SAND_066 | Corn Dog | CORNDOG | all | Beef frank dipped in cornmeal batter and deep-fried; no bun |
+| SAND_067 | Slaw Dog | SLAWDOG | all | Beef frank + bun + coleslaw + mustard (Southern style) |
