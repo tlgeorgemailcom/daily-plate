@@ -6584,7 +6584,7 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Mushroom Swiss Burger', quantity: 'custom (g)', foodWord: 'MUSHROOMSWISSBURGER', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'salted butter', quantity: '1 tbsp (14g)', section: 'mushrooms', ndbNo: '1001', portionDesc: 'g', portionGrams: 14.0 },
-      { name: 'onion', quantity: '½ medium (55g)', section: 'mushrooms', ndbNo: '11282', portionDesc: 'g', portionGrams: 55.0 },
+      { name: 'onion', quantity: '½ medium (55g) sliced', section: 'mushrooms', ndbNo: '11282', portionDesc: 'g', portionGrams: 55.0 },
       { name: 'crimini mushrooms', quantity: '3 oz sliced (85g)', section: 'mushrooms', ndbNo: '11266', portionDesc: 'g', portionGrams: 85.0 },
       { name: 'garlic cloves', quantity: '1 clove minced (3g)', section: 'mushrooms', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'salt', quantity: '¼ tsp (0.5g)', section: 'mushrooms', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.5 },
@@ -6596,7 +6596,7 @@ export const LEVELS: Level[] = [
       { name: 'Swiss cheese', quantity: '1 slice (28g)', section: 'assembly', ndbNo: '1040', portionDesc: 'g', portionGrams: 28.0 }
     ],
     recipeInstructions: [
-      'Heat butter in a large frying pan over medium heat until shimmering, then add the onions and a pinch of salt. Sauté until the onions start to brown. Then lower heat and cook until caramelized.',
+      'Heat butter in a large frying pan over medium heat until foam subsides, then add the onions and a pinch of salt. Sauté until the onions start to brown. Then lower heat and cook until caramelized.',
       'Shape the ground meat into a patty a little larger than the bun due to shrinkage. Do not overwork the meat or pack tightly. Season both sides with salt and pepper.',
       'Heat a skillet over medium-high heat. Cook patty 3–4 minutes per side until cooked through (160°F / 71°C internal temperature). For best results use a pan where the meat sticks to the pan to prevent shrinkage. Then carefully release all sides of the patty from the pan with the back of a spatula before flipping.',
       'After flipping continue cooking the patty and lay the cheese on top the last 30–60 seconds.',
