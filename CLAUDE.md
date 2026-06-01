@@ -79,7 +79,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 |---|---|---|
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
 | `BKFST_NNN` | 🔧 In progress | 39 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039) |
-| `SAND_NNN` | 🔧 In progress | 61 (001–061) |
+| `SAND_NNN` | 🔧 In progress | 62 (001–062) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -203,6 +203,7 @@ Planned BKFST order (standalone components first, composites last):
 | SAND_059 | Mushroom Swiss Burger | (none) | Rule D ✅ — 3 sections: mushrooms (pan grilled, yfw=0.90): butter_salted(1001)+onion_raw(11282)+mushroom_crimini_raw(11266)+garlic_raw(11215)+salt_table(2047)+black_pepper_ground(2030); patty (pan grilled, yfw=0.75): beef_ground_80lean_raw(23572)+salt_table+black_pepper_ground; assembly (raw): hamburger_bun(18350)+cheese_swiss(1040); yfw=1.00 → 312.0g; dietary_category=all; food_word=MUSHROOMSWISSBURGER; pan grilled |
 | SAND_060 | BBQ Bacon Burger | (none) | Rule D ✅ — 2 sections: patty (pan grilled, yfw=0.75): beef_ground_80lean_raw(23572)+salt_table(2047)+black_pepper_ground(2030); assembly (raw): hamburger_bun(18350)+bbq_sauce(6150)+cheese_cheddar(1009)+bacon_cooked_pan_fried(10862)+onion_rings_fried(21130); yfw=1.00 → 253.3g; 322.2 kcal/100g; dietary_category=all; food_word=BBQBACONBURGER; pan grilled |
 | SAND_061 | Turkey Burger | (none) | Rule D ✅ — 2 sections: patty (pan grilled, yfw=0.75): ground_turkey_raw(5665)+poultry_seasoning(2034)+salt_table(2047)+black_pepper_ground(2030); assembly (raw): hamburger_bun(18350)+lettuce_iceberg_raw(11252)+tomato_red_raw(11529)+mayonnaise(4025); yfw=1.00 → 219.0g; 182.1 kcal/100g; dietary_category=all; food_word=TURKEYBURGER; pan grilled |
+| SAND_062 | Veggie Burger | (none) | Rule D ✅ — 2 sections: patty (pan grilled, yfw=0.85): beans_black_cooked(16015)+bread_crumbs_dry(18079)+onion_raw(11282)+garlic_raw(11215)+cumin_ground(2014)+salt_table(2047)+black_pepper_ground(2030)+olive_oil(4053); assembly (raw): hamburger_bun(18350)+lettuce_iceberg_raw(11252)+tomato_red_raw(11529)+mayonnaise(4025); yfw=1.00 → 233.3g; 225.6 kcal/100g; dietary_category=veggie; food_word=VEGGIEBURGER; pan grilled |
 
 ## Human Approval Requirements
 

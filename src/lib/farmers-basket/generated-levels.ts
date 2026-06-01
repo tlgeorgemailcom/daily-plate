@@ -6693,5 +6693,51 @@ export const LEVELS: Level[] = [
       { key: 'patty', label: 'Patty', cookingMethod: '', yieldFactorWater: 0.75 },
       { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_062',
+    name: 'Veggie Burger',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'veggie',
+    levelNum: 145,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 burger',
+    prepTime: '15 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":526.2,"pro":14.9,"fat":27.1,"carb":57.0,"fib":10.0,"h2o":128.3,"sug":6.2,"perServing":{"cal":526.2,"pro":14.9,"fat":27.1,"carb":57.0,"fib":10.0,"h2o":128.3,"sug":6.2,"AddedSugars":0.0,"IntrinsicSugars":6.2},"micros":{"vitaminA":15.52,"vitaminC":3.15,"vitaminD":0.41,"vitaminE":1.23,"vitaminK":18.46,"vitaminB6":0.07,"vitaminB12":0.06,"thiamin":0.22,"riboflavin":0.1,"niacin":1.38,"folate":69.02,"calcium":60.26,"iron":2.19,"magnesium":37.96,"phosphorus":92.83,"potassium":239.56,"sodium":674.8,"zinc":0.73,"copper":0.13,"selenium":7.42,"cholesterol":2.48,"saturatedFat":1.78,"monoFat":5.51,"polyFat":3.62,"omega3":0.35,"omega6":2.6},"gramsPerServing":233.3,"servings":1,"per100g":{"Energy_KCal":225.58,"Water":54.99,"Protein":6.39,"TotalLipidFat":11.63,"Carbohydrate":24.45,"FiberTotalDietary":4.3,"SugarsTotal":2.67,"Cholesterol":2.48,"FattyAcids_totalSaturated":1.78,"FattyAcids_totalMonounsaturated":5.51,"FattyAcids_totalPolyunsaturated":3.62,"LinoleicAcid":2.6,"alphaLinolenicAcid":0.35,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":15.52,"Retinol":6.36,"Carotene_beta":101.5,"VitaminD":0.41,"VitaminE_alphaTocopherol":1.23,"VitaminK_phylloquinone":18.46,"VitaminC_totalAscorbicAcid":3.15,"Thiamin":0.22,"Riboflavin":0.1,"Niacin":1.38,"PantothenicAcid":0.24,"VitaminB6":0.07,"Folate_total":69.02,"Folate_food":55.46,"Folate_DFE":78.47,"FolicAcid":14.74,"VitaminB12":0.06,"Choline_total":18.59,"Betaine":0.06,"LuteinZeaxanthin":43.12,"Lycopene":441.26,"Calcium_Ca":60.26,"Iron_Fe":2.19,"Magnesium_Mg":37.96,"Phosphorus_P":92.83,"Potassium_K":239.56,"Sodium_Na":674.8,"Zinc_Zn":0.73,"Copper_Cu":0.13,"Manganese_Mn":0.41,"Selenium_Se":7.42,"Tryptophan":0.05,"Threonine":0.17,"Isoleucine":0.19,"Leucine":0.33,"Lysine":0.26,"Methionine":0.07,"Cystine":0.05,"Phenylalanine":0.22,"Tyrosine":0.12,"Valine":0.22,"Arginine":0.25,"Histidine":0.11,"Alanine":0.18,"AsparticAcid":0.49,"GlutamicAcid":0.86,"Glycine":0.16,"Proline":0.23,"Serine":0.23,"omega3":0.35,"omega6":2.6,"AddedSugars":0.0,"IntrinsicSugars":2.67},"addedSugars":0.0,"intrinsicSugars":6.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"16015","name":"Beans, black, mature seeds, cooked, boiled, without salt","grams":86.0},{"ndb":"18079","name":"Bread crumbs, dry, grated, plain","grams":13.5},{"ndb":"11282","name":"Onions, raw","grams":10.0},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"2014","name":"Spices, cumin seed","grams":1.1},{"ndb":"2047","name":"Salt, table","grams":3.0},{"ndb":"2030","name":"Spices, pepper, black","grams":0.6},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":13.5},{"ndb":"18350","name":"Rolls, hamburger or hotdog, plain","grams":44.0},{"ndb":"11252","name":"Lettuce, iceberg (includes crisphead types), raw","grams":15.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":40.0},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":13.8}],"sections":[{"section_key":"patty","section_label":"Patty:","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":130.7,"raw_water_grams":68.25,"raw_fat_grams":14.97,"final_grams":120.46},{"section_key":"assembly","section_label":"Assembly:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":112.8,"raw_water_grams":70.25,"raw_fat_grams":12.15,"final_grams":112.8}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Veggie Burger', quantity: 'custom (g)', foodWord: 'VEGGIEBURGER', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'black beans', quantity: '½ cup mashed (86g)', section: 'patty', ndbNo: '16015', portionDesc: 'g', portionGrams: 86.0 },
+      { name: 'dry bread crumbs', quantity: '2 tbsp (13.5g)', section: 'patty', ndbNo: '18079', portionDesc: 'g', portionGrams: 13.5 },
+      { name: 'onion', quantity: '1 tbsp minced (10g)', section: 'patty', ndbNo: '11282', portionDesc: 'g', portionGrams: 10.0 },
+      { name: 'garlic', quantity: '1 clove minced (3g)', section: 'patty', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground cumin', quantity: '½ tsp (1.1g)', section: 'patty', ndbNo: '2014', portionDesc: 'g', portionGrams: 1.1 },
+      { name: 'salt', quantity: '½ tsp (3.0g)', section: 'patty', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp (0.6g)', section: 'patty', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.6 },
+      { name: 'olive oil', quantity: '1 tbsp for pan (13.5g)', section: 'patty', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.5 },
+      { name: 'hamburger bun', quantity: '1 bun (44g)', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 44.0 },
+      { name: 'iceberg lettuce', quantity: '1 large leaf (15g)', section: 'assembly', ndbNo: '11252', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'tomato raw', quantity: '2 slices (40g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'mayonnaise', quantity: '1 tbsp (13.8g)', section: 'assembly', ndbNo: '4025', portionDesc: 'g', portionGrams: 13.8 }
+    ],
+    recipeInstructions: [
+      'Mash the black beans in a bowl with a fork until mostly smooth — a few whole beans add texture. Mix in bread crumbs, minced onion, minced garlic, cumin, salt, and pepper until combined. The mixture should hold together when pressed; if too wet, add a pinch more bread crumbs. Form into a patty slightly wider than the bun.',
+      'Heat olive oil in a skillet over medium heat. Cook the patty 4–5 minutes per side until a firm, golden crust forms. Handle gently — the patty is more fragile than a meat burger.',
+      'Spread mayonnaise on the inside of both buns. Place the patty, then top with lettuce and tomato slices. Close with the bun top.'
+    ],
+    sections: [
+      { key: 'patty', label: 'Patty:', cookingMethod: '', yieldFactorWater: 0.85 },
+      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
