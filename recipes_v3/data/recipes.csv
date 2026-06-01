@@ -142,3 +142,4 @@ SAND_057,BACONCHEESEBURGER,Bacon Cheeseburger,sandwiches & burgers,all,dish,,15 
 SAND_058,DOUBLECHEESEBURGER,Double Cheeseburger,sandwiches & burgers,all,dish,,15 min,1 burger,1,Rule D,pan grilled,1.00,1.00,1.00,,,Rule D — no canonical match used.,Double Cheeseburger computed from SR Legacy values only.,,,
 SAND_059,MUSHROOMSWISSBURGER,Mushroom Swiss Burger,sandwiches & burgers,all,dish,,20 min,1 burger,1,Rule D,pan grilled,1.00,1.00,1.00,,,Rule D — no canonical match used.,Mushroom Swiss Burger computed from SR Legacy values only.,,,
 SAND_060,BBQBACONBURGER,BBQ Bacon Burger,sandwiches & burgers,all,dish,,15 min,1 burger,1,Rule D,pan grilled,1.00,1.00,1.00,,,Rule D — no canonical match used.,BBQ Bacon Burger computed from SR Legacy values only.,,,
+SAND_061,TURKEYBURGER,Turkey Burger,sandwiches & burgers,all,builtin,,,1 burger,1,D,pan grilled,1.0,1.0,1.0,active,,,,,,

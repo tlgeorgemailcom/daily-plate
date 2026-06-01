@@ -6651,5 +6651,47 @@ export const LEVELS: Level[] = [
       { key: 'patty', label: 'Patty:', cookingMethod: '', yieldFactorWater: 0.75 },
       { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_061',
+    name: 'Turkey Burger',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 144,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 burger',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":398.9,"pro":26.2,"fat":21.8,"carb":24.7,"fib":1.8,"h2o":144.0,"sug":4.8,"perServing":{"cal":398.9,"pro":26.2,"fat":21.8,"carb":24.7,"fib":1.8,"h2o":144.0,"sug":4.8,"AddedSugars":0.0,"IntrinsicSugars":4.8},"micros":{"vitaminA":27.06,"vitaminC":3.14,"vitaminD":7.31,"vitaminE":0.43,"vitaminK":18.57,"vitaminB6":0.17,"vitaminB12":0.57,"thiamin":0.14,"riboflavin":0.15,"niacin":3.19,"folate":28.3,"calcium":47.82,"iron":1.53,"magnesium":19.32,"phosphorus":128.5,"potassium":200.63,"sodium":263.99,"zinc":1.52,"copper":0.09,"selenium":15.34,"cholesterol":40.87,"saturatedFat":2.05,"monoFat":2.7,"polyFat":4.21,"omega3":0.41,"omega6":3.7},"gramsPerServing":219.0,"servings":1,"per100g":{"Energy_KCal":182.12,"Water":65.76,"Protein":11.97,"TotalLipidFat":9.94,"Carbohydrate":11.28,"FiberTotalDietary":0.8,"SugarsTotal":2.21,"Cholesterol":40.87,"FattyAcids_totalSaturated":2.05,"FattyAcids_totalMonounsaturated":2.7,"FattyAcids_totalPolyunsaturated":4.21,"LinoleicAcid":3.7,"alphaLinolenicAcid":0.41,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":27.06,"Retinol":15.73,"Carotene_beta":126.63,"VitaminD":7.31,"VitaminE_alphaTocopherol":0.43,"VitaminK_phylloquinone":18.57,"VitaminC_totalAscorbicAcid":3.14,"Thiamin":0.14,"Riboflavin":0.15,"Niacin":3.19,"PantothenicAcid":0.56,"VitaminB6":0.17,"Folate_total":28.3,"Folate_food":17.9,"Folate_DFE":35.57,"FolicAcid":10.41,"VitaminB12":0.57,"Choline_total":31.85,"Betaine":3.71,"LuteinZeaxanthin":62.69,"Lycopene":469.98,"Calcium_Ca":47.82,"Iron_Fe":1.53,"Magnesium_Mg":19.32,"Phosphorus_P":128.5,"Potassium_K":200.63,"Sodium_Na":263.99,"Zinc_Zn":1.52,"Copper_Cu":0.09,"Manganese_Mn":0.18,"Selenium_Se":15.34,"Tryptophan":0.11,"Threonine":0.45,"Isoleucine":0.44,"Leucine":0.81,"Lysine":0.87,"Methionine":0.29,"Cystine":0.09,"Phenylalanine":0.38,"Tyrosine":0.35,"Valine":0.45,"Arginine":0.71,"Histidine":0.29,"Alanine":0.61,"AsparticAcid":0.98,"GlutamicAcid":1.66,"Glycine":0.53,"Proline":0.43,"Serine":0.42,"omega3":0.41,"omega6":3.7,"AddedSugars":0.0,"IntrinsicSugars":2.21},"addedSugars":0.0,"intrinsicSugars":4.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"5665","name":"Ground turkey, 93% lean, 7% fat, raw","grams":113.0},{"ndb":"2034","name":"Spices, poultry seasoning","grams":0.8},{"ndb":"2047","name":"Salt, table","grams":0.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"18350","name":"Rolls, hamburger or hotdog, plain","grams":43.0},{"ndb":"11252","name":"Lettuce, iceberg (includes crisphead types), raw","grams":28.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":40.0},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":14.0}],"sections":[{"section_key":"patty","section_label":"Patty","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":114.55,"raw_water_grams":82.18,"raw_fat_grams":9.49,"final_grams":94.0},{"section_key":"assembly","section_label":"Assembly","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":125.0,"raw_water_grams":82.38,"raw_fat_grams":12.28,"final_grams":125.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Turkey Burger', quantity: 'custom (g)', foodWord: 'TURKEYBURGER', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'ground turkey', quantity: '4 oz raw (113g)', section: 'patty', ndbNo: '5665', portionDesc: 'g', portionGrams: 113.0 },
+      { name: 'poultry seasoning', quantity: '½ tsp (0.75g)', section: 'patty', ndbNo: '2034', portionDesc: 'g', portionGrams: 0.75 },
+      { name: 'salt', quantity: '¼ tsp (0.5g)', section: 'patty', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'ground black pepper', quantity: '⅛ tsp (0.3g)', section: 'patty', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'hamburger bun', quantity: '1 bun (43g)', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 43.0 },
+      { name: 'iceberg lettuce', quantity: '1 leaf (28g)', section: 'assembly', ndbNo: '11252', portionDesc: 'g', portionGrams: 28.0 },
+      { name: 'tomato raw', quantity: '2 slices (40g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'mayonnaise', quantity: '1 tbsp (14g)', section: 'assembly', ndbNo: '4025', portionDesc: 'g', portionGrams: 14.0 }
+    ],
+    recipeInstructions: [
+      'In a bowl, combine the ground turkey with poultry seasoning, salt, and pepper. Mix gently — do not overwork. Shape into a patty slightly larger than the bun to account for shrinkage. Press indentation in patty with your thumb or a spoon to prevent doming.',
+      'Heat a skillet over medium heat. Cook the patty 5–6 minutes per side until cooked through (165°F / 74°C). Do not press down on the patty.',
+      'Spread mayonnaise on the bun bottom. Place the patty, then top with lettuce and tomato slices. Close with the bun top.'
+    ],
+    sections: [
+      { key: 'patty', label: 'Patty', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
