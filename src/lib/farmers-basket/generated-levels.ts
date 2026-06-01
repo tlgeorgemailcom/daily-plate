@@ -6559,5 +6559,54 @@ export const LEVELS: Level[] = [
       { key: 'patty', label: 'Patties:', cookingMethod: '', yieldFactorWater: 0.75 },
       { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_059',
+    name: 'Mushroom Swiss Burger',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 142,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 burger',
+    prepTime: '20 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":664.1,"pro":34.2,"fat":44.5,"carb":32.1,"fib":2.4,"h2o":196.0,"sug":7.0,"perServing":{"cal":664.1,"pro":34.2,"fat":44.5,"carb":32.1,"fib":2.4,"h2o":196.0,"sug":7.0,"AddedSugars":0.0,"IntrinsicSugars":7.0},"micros":{"vitaminA":55.6,"vitaminC":0.98,"vitaminD":1.81,"vitaminE":0.22,"vitaminK":2.02,"vitaminB6":0.15,"vitaminB12":0.99,"thiamin":0.11,"riboflavin":0.24,"niacin":2.66,"folate":23.52,"calcium":118.95,"iron":1.37,"magnesium":17.17,"phosphorus":163.32,"potassium":276.39,"sodium":264.41,"zinc":2.35,"copper":0.19,"selenium":19.24,"cholesterol":43.71,"saturatedFat":6.81,"monoFat":4.97,"polyFat":0.62,"omega3":0.06,"omega6":0.36},"gramsPerServing":312.0,"servings":1,"per100g":{"Energy_KCal":212.86,"Water":62.81,"Protein":10.98,"TotalLipidFat":14.26,"Carbohydrate":10.3,"FiberTotalDietary":0.78,"SugarsTotal":2.23,"Cholesterol":43.71,"FattyAcids_totalSaturated":6.81,"FattyAcids_totalMonounsaturated":4.97,"FattyAcids_totalPolyunsaturated":0.62,"LinoleicAcid":0.36,"alphaLinolenicAcid":0.06,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":55.6,"Retinol":54.64,"Carotene_beta":12.77,"VitaminD":1.81,"VitaminE_alphaTocopherol":0.22,"VitaminK_phylloquinone":2.02,"VitaminC_totalAscorbicAcid":0.98,"Thiamin":0.11,"Riboflavin":0.24,"Niacin":2.66,"PantothenicAcid":0.6,"VitaminB6":0.15,"Folate_total":23.52,"Folate_food":16.22,"Folate_DFE":28.62,"FolicAcid":7.3,"VitaminB12":0.99,"Choline_total":29.16,"Betaine":6.1,"LuteinZeaxanthin":2.67,"Lycopene":0.12,"Calcium_Ca":118.95,"Iron_Fe":1.37,"Magnesium_Mg":17.17,"Phosphorus_P":163.32,"Potassium_K":276.39,"Sodium_Na":264.41,"Zinc_Zn":2.35,"Copper_Cu":0.19,"Manganese_Mn":0.18,"Selenium_Se":19.24,"Tryptophan":0.08,"Threonine":0.37,"Isoleucine":0.44,"Leucine":0.8,"Lysine":0.83,"Methionine":0.24,"Cystine":0.08,"Phenylalanine":0.42,"Tyrosine":0.36,"Valine":0.53,"Arginine":0.54,"Histidine":0.31,"Alanine":0.53,"AsparticAcid":0.78,"GlutamicAcid":1.62,"Glycine":0.5,"Proline":0.7,"Serine":0.43,"omega3":0.06,"omega6":0.36,"AddedSugars":0.0,"IntrinsicSugars":2.23},"addedSugars":0.0,"intrinsicSugars":7.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"1001","name":"Butter, salted","grams":14.0},{"ndb":"11282","name":"Onions, raw","grams":55.0},{"ndb":"11266","name":"Mushrooms, brown, italian, or crimini, raw","grams":85.0},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"2047","name":"Salt, table","grams":0.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":113.0},{"ndb":"2047","name":"Salt, table","grams":0.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"18350","name":"Rolls, hamburger or hotdog, plain","grams":43.0},{"ndb":"1040","name":"Cheese, swiss","grams":28.0}],"sections":[{"section_key":"mushrooms","section_label":"Mushrooms:","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":157.8,"raw_water_grams":131.33,"raw_fat_grams":11.52,"final_grams":144.67},{"section_key":"patty","section_label":"Patty:","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":113.8,"raw_water_grams":69.95,"raw_fat_grams":22.61,"final_grams":96.31},{"section_key":"assembly","section_label":"Assembly:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":71.0,"raw_water_grams":25.3,"raw_fat_grams":10.36,"final_grams":71.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Mushroom Swiss Burger', quantity: 'custom (g)', foodWord: 'MUSHROOMSWISSBURGER', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'salted butter', quantity: '1 tbsp (14g)', section: 'mushrooms', ndbNo: '1001', portionDesc: 'g', portionGrams: 14.0 },
+      { name: 'onion', quantity: '½ medium (55g)', section: 'mushrooms', ndbNo: '11282', portionDesc: 'g', portionGrams: 55.0 },
+      { name: 'crimini mushrooms', quantity: '3 oz sliced (85g)', section: 'mushrooms', ndbNo: '11266', portionDesc: 'g', portionGrams: 85.0 },
+      { name: 'garlic cloves', quantity: '1 clove minced (3g)', section: 'mushrooms', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'salt', quantity: '¼ tsp (0.5g)', section: 'mushrooms', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'ground black pepper', quantity: '⅛ tsp (0.3g)', section: 'mushrooms', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'ground beef (80% lean)', quantity: '4 oz raw (113g)', section: 'patty', ndbNo: '23572', portionDesc: 'g', portionGrams: 113.0 },
+      { name: 'salt', quantity: '¼ tsp (0.5g)', section: 'patty', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'ground black pepper', quantity: '⅛ tsp (0.3g)', section: 'patty', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'hamburger bun', quantity: '1 bun (43g)', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 43.0 },
+      { name: 'Swiss cheese', quantity: '1 slice (28g)', section: 'assembly', ndbNo: '1040', portionDesc: 'g', portionGrams: 28.0 }
+    ],
+    recipeInstructions: [
+      'Heat butter in a large frying pan over medium heat until shimmering, then add the onions and a pinch of salt. Sauté until the onions start to brown. Then lower heat and cook until caramelized.',
+      'Shape the ground meat into a patty a little larger than the bun due to shrinkage. Do not overwork the meat or pack tightly. Season both sides with salt and pepper.',
+      'Heat a skillet over medium-high heat. Cook patty 3–4 minutes per side until cooked through (160°F / 71°C internal temperature). For best results use a pan where the meat sticks to the pan to prevent shrinkage. Then carefully release all sides of the patty from the pan with the back of a spatula before flipping.',
+      'After flipping continue cooking the patty and lay the cheese on top the last 30–60 seconds.',
+      'Remove the patty and add the sliced mushrooms to the same pan and cook until browning. Lower to medium-low heat and add the minced garlic. Sauté for 30–60 seconds and deglaze the pan with 1 tablespoon of water while scraping with a spatula.',
+      'Place patty on the bun cheese side up then top with caramelized onion and then the sautéed mushrooms. Close with top bun.'
+    ],
+    sections: [
+      { key: 'mushrooms', label: 'Mushrooms:', cookingMethod: '', yieldFactorWater: 0.9 },
+      { key: 'patty', label: 'Patty:', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

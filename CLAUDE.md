@@ -79,7 +79,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 |---|---|---|
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
 | `BKFST_NNN` | 🔧 In progress | 39 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039) |
-| `SAND_NNN` | 🔧 In progress | 58 (001–058) |
+| `SAND_NNN` | 🔧 In progress | 59 (001–059) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -200,6 +200,7 @@ Planned BKFST order (standalone components first, composites last):
 | SAND_056 | Cheeseburger | (none) | Rule D ✅ — SAND_055 + cheese_american(1253); yfw=1.00 → 223.3g; 516 cal/serving; 231.2 kcal·12.6P·14.0F·13.4C per 100g; dietary_category=all; food_word=CHEESEBURGER; pan grilled |
 | SAND_057 | Bacon Cheeseburger | (none) | Rule D ✅ — SAND_056 + bacon_cooked_pan_fried(10862) 2 slices; yfw=1.00 → 246.3g; 624 cal/serving; 253.3 kcal·14.6P·16.0F·12.3C per 100g; dietary_category=all; food_word=BACONCHEESEBURGER; pan grilled |
 | SAND_058 | Double Cheeseburger | (none) | Rule D ✅ — 2 × 2 oz patties + 2 cheese_american slices; yfw=1.00 → 245.2g; 597 cal/serving; 243.4 kcal·13.1P·15.6F·12.5C per 100g; dietary_category=all; food_word=DOUBLECHEESEBURGER; pan grilled |
+| SAND_059 | Mushroom Swiss Burger | (none) | Rule D ✅ — 3 sections: mushrooms (pan grilled, yfw=0.90): butter_salted(1001)+onion_raw(11282)+mushroom_crimini_raw(11266)+garlic_raw(11215)+salt_table(2047)+black_pepper_ground(2030); patty (pan grilled, yfw=0.75): beef_ground_80lean_raw(23572)+salt_table+black_pepper_ground; assembly (raw): hamburger_bun(18350)+cheese_swiss(1040); yfw=1.00 → 312.0g; dietary_category=all; food_word=MUSHROOMSWISSBURGER; pan grilled |
 
 ## Human Approval Requirements
 
