@@ -6813,7 +6813,7 @@ export const LEVELS: Level[] = [
     ],
     recipeInstructions: [
       'Grill the frank over medium-high heat, turning occasionally, until lightly charred and heated through, about 4–5 minutes.',
-      'Place the frank in the bun. Top with yellow mustard, sweet relish, 2 tomato wedges, a dill pickle spear, 2 sport peppers, and a pinch of celery salt (⅛ tsp celery seed + 1 dash salt). Do not add ketchup.'
+      'Place the frank in the bun. Top with yellow mustard, sweet relish, 2 tomato wedges, the dill pickle spear (quartered lengthwise), 2 sport peppers (slivered), and a pinch of celery salt (⅛ tsp celery seed + 1 dash salt). Do not add ketchup.'
     ],
     sections: [
       { key: 'frank', label: 'Frank:', cookingMethod: '', yieldFactorWater: 1.0 },
