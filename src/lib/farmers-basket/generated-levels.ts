@@ -6739,5 +6739,43 @@ export const LEVELS: Level[] = [
       { key: 'patty', label: 'Patty:', cookingMethod: '', yieldFactorWater: 0.85 },
       { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_063',
+    name: 'Classic Hot Dog',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 146,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 hot dog',
+    prepTime: '10 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":313.6,"pro":10.3,"fat":15.5,"carb":33.7,"fib":1.2,"h2o":66.4,"sug":11.8,"perServing":{"cal":313.6,"pro":10.3,"fat":15.5,"carb":33.7,"fib":1.2,"h2o":66.4,"sug":11.8,"AddedSugars":0.0,"IntrinsicSugars":11.8},"micros":{"vitaminA":21.5,"vitaminC":1.11,"vitaminD":12.73,"vitaminE":0.51,"vitaminK":12.43,"vitaminB6":0.08,"vitaminB12":0.37,"thiamin":0.2,"riboflavin":0.18,"niacin":2.32,"folate":33.64,"calcium":59.09,"iron":1.8,"magnesium":16.09,"phosphorus":93.55,"potassium":222.88,"sodium":746.98,"zinc":1.06,"copper":0.07,"selenium":14.5,"cholesterol":21.58,"saturatedFat":4.57,"monoFat":5.4,"polyFat":0.96,"omega3":0.09,"omega6":0.74},"gramsPerServing":129.0,"servings":1,"per100g":{"Energy_KCal":243.12,"Water":51.47,"Protein":8.01,"TotalLipidFat":11.99,"Carbohydrate":26.11,"FiberTotalDietary":0.94,"SugarsTotal":9.14,"Cholesterol":21.58,"FattyAcids_totalSaturated":4.57,"FattyAcids_totalMonounsaturated":5.4,"FattyAcids_totalPolyunsaturated":0.96,"LinoleicAcid":0.74,"alphaLinolenicAcid":0.09,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":21.5,"Retinol":10.78,"Carotene_beta":106.36,"VitaminD":12.73,"VitaminE_alphaTocopherol":0.51,"VitaminK_phylloquinone":12.43,"VitaminC_totalAscorbicAcid":1.11,"Thiamin":0.2,"Riboflavin":0.18,"Niacin":2.32,"PantothenicAcid":0.28,"VitaminB6":0.08,"Folate_total":33.64,"Folate_food":15.56,"Folate_DFE":46.26,"FolicAcid":18.08,"VitaminB12":0.37,"Choline_total":18.75,"Betaine":2.05,"LuteinZeaxanthin":59.16,"Lycopene":1589.57,"Calcium_Ca":59.09,"Iron_Fe":1.8,"Magnesium_Mg":16.09,"Phosphorus_P":93.55,"Potassium_K":222.88,"Sodium_Na":746.98,"Zinc_Zn":1.06,"Copper_Cu":0.07,"Manganese_Mn":0.21,"Selenium_Se":14.5,"Tryptophan":0.05,"Threonine":0.2,"Isoleucine":0.22,"Leucine":0.38,"Lysine":0.4,"Methionine":0.12,"Cystine":0.04,"Phenylalanine":0.19,"Tyrosine":0.16,"Valine":0.23,"Arginine":0.29,"Histidine":0.14,"Alanine":0.26,"AsparticAcid":0.45,"GlutamicAcid":0.75,"Glycine":0.21,"Proline":0.19,"Serine":0.18,"omega3":0.09,"omega6":0.74,"AddedSugars":0.0,"IntrinsicSugars":9.14},"addedSugars":0.0,"intrinsicSugars":11.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"7022","name":"Frankfurter, beef, unheated","grams":48.0},{"ndb":"18350","name":"Rolls, hamburger or hotdog, plain","grams":44.0},{"ndb":"11935","name":"Catsup","grams":17.0},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":5.0},{"ndb":"11945","name":"Pickle relish, sweet","grams":15.0}],"sections":[{"section_key":"frank","section_label":"Grilled frank","prep_method":"raw","cook_method":"grilled","cooking_method":"grilled","cooking_method_normalized":"grilled","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":48.0,"raw_water_grams":26.15,"raw_fat_grams":13.49,"final_grams":48.0},{"section_key":"assembly","section_label":"Assembly","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":81.0,"raw_water_grams":40.25,"raw_fat_grams":1.97,"final_grams":81.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Classic Hot Dog', quantity: 'custom (g)', foodWord: 'HOTDOG', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Beef frankfurter', quantity: '1 frank (48g)', section: 'frank', ndbNo: '7022', portionDesc: 'g', portionGrams: 48.0 },
+      { name: 'hamburger bun', quantity: '1 bun (44g)', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 44.0 },
+      { name: 'ketchup', quantity: '1 tbsp (17g)', section: 'assembly', ndbNo: '11935', portionDesc: 'g', portionGrams: 17.0 },
+      { name: 'yellow mustard', quantity: '1 tsp (5g)', section: 'assembly', ndbNo: '2046', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'Pickle relish, sweet', quantity: '1 tbsp (15g)', section: 'assembly', ndbNo: '11945', portionDesc: 'g', portionGrams: 15.0 }
+    ],
+    recipeInstructions: [
+      'Grill or pan-sear the frank over medium-high heat, turning occasionally, until heated through and lightly charred, about 4–5 minutes.',
+      'Place the frank in the bun. Top with ketchup, yellow mustard, and sweet relish.'
+    ],
+    sections: [
+      { key: 'frank', label: 'Grilled frank', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

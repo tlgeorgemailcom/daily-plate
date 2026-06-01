@@ -90,7 +90,7 @@ Planned order — build simplest (plain patty) first, composites last:
 
 ## Hot Dogs (SAND_063+)
 
-Bun: same NDB 18350 (hamburger/hot dog bun). Frank: SR Legacy NDB 7037 (Frankfurter, beef).
+Bun: same NDB 18350 (hamburger/hot dog bun). Frank: SR Legacy NDB 7022 (Frankfurter, beef, unheated).
 
 | ID | Recipe | food_word | dietary_category | Notes |
 |---|---|---|---|---|
