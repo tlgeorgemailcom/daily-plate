@@ -6777,5 +6777,47 @@ export const LEVELS: Level[] = [
       { key: 'frank', label: 'Grilled frank', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_064',
+    name: 'Chicago Style Hot Dog',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 147,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 hot dog',
+    prepTime: '10 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":315.4,"pro":11.0,"fat":15.8,"carb":32.9,"fib":2.6,"h2o":157.2,"sug":10.4,"perServing":{"cal":315.4,"pro":11.0,"fat":15.8,"carb":32.9,"fib":2.6,"h2o":157.2,"sug":10.4,"AddedSugars":0.0,"IntrinsicSugars":10.4},"micros":{"vitaminA":25.54,"vitaminC":5.21,"vitaminD":7.41,"vitaminE":0.39,"vitaminK":13.13,"vitaminB6":0.07,"vitaminB12":0.22,"thiamin":0.13,"riboflavin":0.1,"niacin":1.44,"folate":25.06,"calcium":50.38,"iron":1.2,"magnesium":13.37,"phosphorus":63.01,"potassium":200.65,"sodium":641.86,"zinc":0.68,"copper":0.06,"selenium":8.42,"cholesterol":12.56,"saturatedFat":2.68,"monoFat":3.17,"polyFat":0.61,"omega3":0.05,"omega6":0.43},"gramsPerServing":221.7,"servings":1,"per100g":{"Energy_KCal":142.31,"Water":70.93,"Protein":4.97,"TotalLipidFat":7.12,"Carbohydrate":14.86,"FiberTotalDietary":1.17,"SugarsTotal":4.68,"Cholesterol":12.56,"FattyAcids_totalSaturated":2.68,"FattyAcids_totalMonounsaturated":3.17,"FattyAcids_totalPolyunsaturated":0.61,"LinoleicAcid":0.43,"alphaLinolenicAcid":0.05,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":25.54,"Retinol":6.28,"Carotene_beta":195.48,"VitaminD":7.41,"VitaminE_alphaTocopherol":0.39,"VitaminK_phylloquinone":13.13,"VitaminC_totalAscorbicAcid":5.21,"Thiamin":0.13,"Riboflavin":0.1,"Niacin":1.44,"PantothenicAcid":0.22,"VitaminB6":0.07,"Folate_total":25.06,"Folate_food":14.54,"Folate_DFE":32.4,"FolicAcid":10.52,"VitaminB12":0.22,"Choline_total":12.87,"Betaine":1.21,"LuteinZeaxanthin":92.58,"Lycopene":719.72,"Calcium_Ca":50.38,"Iron_Fe":1.2,"Magnesium_Mg":13.37,"Phosphorus_P":63.01,"Potassium_K":200.65,"Sodium_Na":641.86,"Zinc_Zn":0.68,"Copper_Cu":0.06,"Manganese_Mn":0.17,"Selenium_Se":8.42,"Tryptophan":0.03,"Threonine":0.12,"Isoleucine":0.13,"Leucine":0.23,"Lysine":0.24,"Methionine":0.07,"Cystine":0.03,"Phenylalanine":0.12,"Tyrosine":0.1,"Valine":0.14,"Arginine":0.18,"Histidine":0.09,"Alanine":0.16,"AsparticAcid":0.29,"GlutamicAcid":0.56,"Glycine":0.13,"Proline":0.11,"Serine":0.11,"omega3":0.05,"omega6":0.43,"AddedSugars":0.0,"IntrinsicSugars":4.68},"addedSugars":0.0,"intrinsicSugars":10.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"7022","name":"Frankfurter, beef, unheated","grams":48.0},{"ndb":"18350","name":"Rolls, hamburger or hotdog, plain","grams":44.0},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":5.0},{"ndb":"11945","name":"Pickle relish, sweet","grams":15.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":62.0},{"ndb":"11937","name":"Pickles, cucumber, dill or kosher dill","grams":35.0},{"ndb":"31034","name":"Peppers, hot pickled, canned","grams":12.0},{"ndb":"2007","name":"Spices, celery seed","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":0.4}],"sections":[{"section_key":"frank","section_label":"Frank:","prep_method":"raw","cook_method":"grilled","cooking_method":"grilled","cooking_method_normalized":"grilled","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":48.0,"raw_water_grams":26.15,"raw_fat_grams":13.49,"final_grams":48.0},{"section_key":"assembly","section_label":"Assembly:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":173.65,"raw_water_grams":131.07,"raw_fat_grams":2.3,"final_grams":173.65}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicago Style Hot Dog', quantity: 'custom (g)', foodWord: 'CHICAGOSTYLEHOTDOG', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Beef frankfurter', quantity: '1 frank (48g)', section: 'frank', ndbNo: '7022', portionDesc: 'g', portionGrams: 48.0 },
+      { name: 'hamburger bun', quantity: '1 bun (44g)', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 44.0 },
+      { name: 'yellow mustard', quantity: '1 tsp (5g)', section: 'assembly', ndbNo: '2046', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'Pickle relish, sweet', quantity: '1 tbsp (15g)', section: 'assembly', ndbNo: '11945', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'tomato raw', quantity: '2 wedges (62g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 62.0 },
+      { name: 'dill pickle', quantity: '1 small spear (35g)', section: 'assembly', ndbNo: '11937', portionDesc: 'g', portionGrams: 35.0 },
+      { name: 'Pickled hot peppers', quantity: '2 peppers (12g)', section: 'assembly', ndbNo: '31034', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'Celery seed', quantity: '⅛ tsp (0.25g)', section: 'assembly', ndbNo: '2007', portionDesc: 'g', portionGrams: 0.25 },
+      { name: 'salt', quantity: '1 dash (0.4g)', section: 'assembly', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.4 }
+    ],
+    recipeInstructions: [
+      'Grill the frank over medium-high heat, turning occasionally, until lightly charred and heated through, about 4–5 minutes.',
+      'Place the frank in the bun. Top with yellow mustard, sweet relish, 2 tomato wedges, a dill pickle spear, 2 sport peppers, and a pinch of celery salt (⅛ tsp celery seed + 1 dash salt). Do not add ketchup.'
+    ],
+    sections: [
+      { key: 'frank', label: 'Frank:', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
