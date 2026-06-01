@@ -6902,5 +6902,46 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'corn_dog', label: 'Corn Dog:', cookingMethod: '', yieldFactorWater: 0.85 }
     ],
+  },
+  {
+    id: 'SAND_067',
+    name: 'Slaw Dog',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 150,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 hot dog',
+    prepTime: '10 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":312.9,"pro":10.4,"fat":18.8,"carb":24.8,"fib":1.4,"h2o":63.7,"sug":4.4,"perServing":{"cal":312.9,"pro":10.4,"fat":18.8,"carb":24.8,"fib":1.4,"h2o":63.7,"sug":4.4,"AddedSugars":0.0,"IntrinsicSugars":4.4},"micros":{"vitaminA":10.91,"vitaminC":5.55,"vitaminD":13.86,"vitaminE":0.38,"vitaminK":19.49,"vitaminB6":0.07,"vitaminB12":0.39,"thiamin":0.16,"riboflavin":0.16,"niacin":1.97,"folate":32.33,"calcium":66.9,"iron":1.84,"magnesium":16.57,"phosphorus":99.19,"potassium":221.63,"sodium":724.82,"zinc":1.12,"copper":0.06,"selenium":15.53,"cholesterol":24.66,"saturatedFat":5.32,"monoFat":6.39,"polyFat":2.54,"omega3":0.27,"omega6":2.15},"gramsPerServing":120.8,"servings":1,"per100g":{"Energy_KCal":259.11,"Water":52.79,"Protein":8.58,"TotalLipidFat":15.6,"Carbohydrate":20.56,"FiberTotalDietary":1.18,"SugarsTotal":3.65,"Cholesterol":24.66,"FattyAcids_totalSaturated":5.32,"FattyAcids_totalMonounsaturated":6.39,"FattyAcids_totalPolyunsaturated":2.54,"LinoleicAcid":2.15,"alphaLinolenicAcid":0.27,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":10.91,"Retinol":9.98,"Carotene_beta":10.05,"VitaminD":13.86,"VitaminE_alphaTocopherol":0.38,"VitaminK_phylloquinone":19.49,"VitaminC_totalAscorbicAcid":5.55,"Thiamin":0.16,"Riboflavin":0.16,"Niacin":1.97,"PantothenicAcid":0.29,"VitaminB6":0.07,"Folate_total":32.33,"Folate_food":17.84,"Folate_DFE":42.44,"FolicAcid":19.31,"VitaminB12":0.39,"Choline_total":19.89,"Betaine":2.17,"LuteinZeaxanthin":9.27,"Lycopene":0.0,"Calcium_Ca":66.9,"Iron_Fe":1.84,"Magnesium_Mg":16.57,"Phosphorus_P":99.19,"Potassium_K":221.63,"Sodium_Na":724.82,"Zinc_Zn":1.12,"Copper_Cu":0.06,"Manganese_Mn":0.24,"Selenium_Se":15.53,"Tryptophan":0.05,"Threonine":0.22,"Isoleucine":0.24,"Leucine":0.41,"Lysine":0.44,"Methionine":0.13,"Cystine":0.05,"Phenylalanine":0.2,"Tyrosine":0.17,"Valine":0.25,"Arginine":0.32,"Histidine":0.15,"Alanine":0.28,"AsparticAcid":0.48,"GlutamicAcid":0.79,"Glycine":0.23,"Proline":0.21,"Serine":0.2,"omega3":0.27,"omega6":2.15,"AddedSugars":0.0,"IntrinsicSugars":3.65},"addedSugars":0.0,"intrinsicSugars":4.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"11109","name":"Cabbage, raw","grams":17.5},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":4.6},{"ndb":"2048","name":"Vinegar, cider","grams":1.2},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"7022","name":"Frankfurter, beef, unheated","grams":48.0},{"ndb":"18350","name":"Rolls, hamburger or hotdog, plain","grams":44.0},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":5.0}],"sections":[{"section_key":"coleslaw","section_label":"Coleslaw:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":23.75,"raw_water_grams":18.3,"raw_fat_grams":3.46,"final_grams":23.75},{"section_key":"assembly","section_label":"Assembly:","prep_method":"raw","cook_method":"grilled","cooking_method":"grilled","cooking_method_normalized":"grilled","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":97.0,"raw_water_grams":45.44,"raw_fat_grams":15.38,"final_grams":97.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Slaw Dog', quantity: 'custom (g)', foodWord: 'SLAWDOG', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'green cabbage', quantity: '¼ cup shredded (17.5g)', section: 'coleslaw', ndbNo: '11109', portionDesc: 'g', portionGrams: 17.5 },
+      { name: 'mayonnaise', quantity: '1 tsp (4.6g)', section: 'coleslaw', ndbNo: '4025', portionDesc: 'g', portionGrams: 4.6 },
+      { name: 'apple cider vinegar', quantity: '¼ tsp (1.25g)', section: 'coleslaw', ndbNo: '2048', portionDesc: 'g', portionGrams: 1.25 },
+      { name: 'salt', quantity: 'pinch (0.4g)', section: 'coleslaw', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.4 },
+      { name: 'Beef frankfurter', quantity: '1 frank (48g)', section: 'assembly', ndbNo: '7022', portionDesc: 'g', portionGrams: 48.0 },
+      { name: 'hamburger bun', quantity: '1 bun (44g)', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 44.0 },
+      { name: 'yellow mustard', quantity: '1 tsp (5g)', section: 'assembly', ndbNo: '2046', portionDesc: 'g', portionGrams: 5.0 }
+    ],
+    recipeInstructions: [
+      'In a small bowl, toss the shredded cabbage with the mayonnaise, apple cider vinegar, and a pinch of salt. Let the coleslaw rest for 5 minutes to soften slightly.',
+      'Grill the frank over medium-high heat, turning occasionally, until lightly charred and heated through, about 4–5 minutes.',
+      'Place the frank in the bun. Spread mustard along the frank. Pile the coleslaw on top and serve immediately.'
+    ],
+    sections: [
+      { key: 'coleslaw', label: 'Coleslaw:', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
