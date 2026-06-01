@@ -6687,7 +6687,7 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'In a bowl, combine the ground turkey with poultry seasoning, salt, and pepper. Mix gently — do not overwork. Shape into a patty slightly larger than the bun to account for shrinkage. Press indentation in patty with your thumb or a spoon to prevent doming.',
       'Heat a skillet over medium heat. Cook the patty 5–6 minutes per side until cooked through (165°F / 74°C). Do not press down on the patty.',
-      'Spread mayonnaise on the bun bottom. Place the patty, then top with lettuce and tomato slices. Close with the bun top.'
+      'Spread mayonnaise on the inside of both buns. Place the patty, then top with lettuce and tomato slices. Close with the bun top.'
     ],
     sections: [
       { key: 'patty', label: 'Patty', cookingMethod: '', yieldFactorWater: 0.75 },
