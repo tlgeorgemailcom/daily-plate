@@ -6894,8 +6894,8 @@ export const LEVELS: Level[] = [
     ],
     recipeInstructions: [
       'Heat 3 to 4 inches of oil in a large deep pot to 375°F (190°C).',
-      'In a bowl, whisk together the cornmeal, flour, baking powder, sugar, and salt. Add the egg and milk; stir until a thick, smooth batter forms.',
-      'Pat the frankfurters dry. Insert a wooden skewer into each frank. Dip each frank into the batter, letting excess drip off, then carefully lower into the hot oil.',
+      'In a bowl, whisk together the cornmeal, flour, baking powder, sugar, and salt. Add the egg and milk; stir until a thick, smooth batter forms. Pour batter into a glass taller than the frankfurter is long.',
+      'Pat the frankfurters dry. Insert a wooden skewer into each frank. Dip each frank into the batter turning to coat. Raise and let excess drip off. Then carefully lower into the hot oil, releasing just before it is fully submerged.',
       'Fry 2 to 3 corn dogs at a time for 2 to 3 minutes, turning once, until deep golden brown all over.',
       'Lift out and drain on a paper towel-lined rack. Serve with mustard or ketchup for dipping.'
     ],
