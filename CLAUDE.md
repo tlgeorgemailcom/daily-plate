@@ -79,7 +79,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 |---|---|---|
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
 | `BKFST_NNN` | 🔧 In progress | 39 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039) |
-| `SAND_NNN` | 🔧 In progress | 65 (001–065) |
+| `SAND_NNN` | 🔧 In progress | 66 (001–066) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -207,6 +207,7 @@ Planned BKFST order (standalone components first, composites last):
 | SAND_063 | Classic Hot Dog | (none) | Rule D ✅ — 2 sections: frank (grilled, yfw=1.00): frankfurter_beef(7022); assembly (raw): hamburger_bun(18350)+ketchup(11935)+mustard_yellow(2046)+pickle_relish_sweet(11945); yfw=1.00 → 129.0g; 313 kcal/serving; 243.1 kcal·8.0P·12.0F·26.1C per 100g; dietary_category=all; food_word=HOTDOG; grilled |
 | SAND_064 | Chicago Style Hot Dog | (none) | Rule D ✅ — 2 sections: frank (grilled, yfw=1.00): frankfurter_beef(7022); assembly (raw): hamburger_bun(18350)+mustard_yellow(2046)+pickle_relish_sweet(11945)+tomato_red_raw(11529)+pickle_dill(11937)+peppers_hot_pickled(31034)+celery_seed(2007)+salt_table(2047); yfw=1.00 → 190.7g; 310 kcal/serving; 162.5 kcal·5.6P·8.2F·16.6C per 100g; dietary_category=all; food_word=CHICAGOSTYLEHOTDOG; grilled |
 | SAND_065 | Chili Dog | (none) | Rule D ✅ — 2 sections: frank (grilled, yfw=1.00): frankfurter_beef(7022); assembly (raw): hamburger_bun(18350)+beef_chili_no_beans(22911)+onion_raw(11282)+cheese_cheddar(1009); yfw=1.00 → 190.2g; 463 kcal/serving; 243.3 kcal·11.0P·15.2F·15.2C per 100g; dietary_category=all; food_word=CHILIDOG; grilled |
+| SAND_066 | Corn Dog | (none) | Rule D ✅ — 1 section: corn_dog (fried, yfw=0.85): frankfurter_beef(7022)+cornmeal_enriched_yellow(20022)+flour_ap_white_enriched_unbleached(20581)+baking_powder(18370)+sugar_granulated(19335)+salt_table(2047)+egg_whole_raw(1123)+milk_whole(1077)+olive_oil(4053); batch of 6; 99.0g/corn dog; 307 kcal/serving; 309.6 kcal·9.2P·20.0F·22.6C per 100g; dietary_category=all; food_word=CORNDOG; fried |
 
 ## Human Approval Requirements
 
