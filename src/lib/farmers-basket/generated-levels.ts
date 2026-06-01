@@ -6608,5 +6608,48 @@ export const LEVELS: Level[] = [
       { key: 'patty', label: 'Patty:', cookingMethod: '', yieldFactorWater: 0.75 },
       { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_060',
+    name: 'BBQ Bacon Burger',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 143,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 burger',
+    prepTime: '15 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":816.2,"pro":38.0,"fat":49.6,"carb":52.5,"fib":2.2,"h2o":106.7,"sug":15.4,"perServing":{"cal":816.2,"pro":38.0,"fat":49.6,"carb":52.5,"fib":2.2,"h2o":106.7,"sug":15.4,"AddedSugars":0.0,"IntrinsicSugars":15.4},"micros":{"vitaminA":36.03,"vitaminC":0.51,"vitaminD":4.8,"vitaminE":1.07,"vitaminK":10.94,"vitaminB6":0.2,"vitaminB12":1.04,"thiamin":0.18,"riboflavin":0.18,"niacin":3.35,"folate":27.42,"calcium":114.97,"iron":1.76,"magnesium":21.29,"phosphorus":188.08,"potassium":248.2,"sodium":641.03,"zinc":2.67,"copper":0.08,"selenium":19.33,"cholesterol":48.87,"saturatedFat":6.84,"monoFat":7.34,"polyFat":3.08,"omega3":0.16,"omega6":2.54},"gramsPerServing":253.3,"servings":1,"per100g":{"Energy_KCal":322.22,"Water":42.11,"Protein":15.01,"TotalLipidFat":19.6,"Carbohydrate":20.7,"FiberTotalDietary":0.87,"SugarsTotal":6.07,"Cholesterol":48.87,"FattyAcids_totalSaturated":6.84,"FattyAcids_totalMonounsaturated":7.34,"FattyAcids_totalPolyunsaturated":3.08,"LinoleicAcid":2.54,"alphaLinolenicAcid":0.16,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":36.03,"Retinol":34.71,"Carotene_beta":24.6,"VitaminD":4.8,"VitaminE_alphaTocopherol":1.07,"VitaminK_phylloquinone":10.94,"VitaminC_totalAscorbicAcid":0.51,"Thiamin":0.18,"Riboflavin":0.18,"Niacin":3.35,"PantothenicAcid":0.47,"VitaminB6":0.2,"Folate_total":27.42,"Folate_food":18.42,"Folate_DFE":33.7,"FolicAcid":9.0,"VitaminB12":1.04,"Choline_total":36.8,"Betaine":7.13,"LuteinZeaxanthin":17.79,"Lycopene":538.88,"Calcium_Ca":114.97,"Iron_Fe":1.76,"Magnesium_Mg":21.29,"Phosphorus_P":188.08,"Potassium_K":248.2,"Sodium_Na":641.03,"Zinc_Zn":2.67,"Copper_Cu":0.08,"Manganese_Mn":0.18,"Selenium_Se":19.33,"Tryptophan":0.12,"Threonine":0.52,"Isoleucine":0.58,"Leucine":1.01,"Lysine":0.99,"Methionine":0.33,"Cystine":0.11,"Phenylalanine":0.52,"Tyrosine":0.45,"Valine":0.65,"Arginine":0.74,"Histidine":0.42,"Alanine":0.72,"AsparticAcid":1.12,"GlutamicAcid":2.01,"Glycine":0.7,"Proline":0.72,"Serine":0.5,"omega3":0.16,"omega6":2.54,"AddedSugars":0.0,"IntrinsicSugars":6.07},"addedSugars":0.0,"intrinsicSugars":15.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":113.0},{"ndb":"2047","name":"Salt, table","grams":0.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"18350","name":"Rolls, hamburger or hotdog, plain","grams":43.0},{"ndb":"6150","name":"Sauce, barbecue","grams":30.0},{"ndb":"1009","name":"Cheese, cheddar","grams":21.0},{"ndb":"10862","name":"Pork, cured, bacon, pre-sliced, cooked, pan-fried","grams":23.0},{"ndb":"21130","name":"Fast foods, onion rings, breaded and fried","grams":40.0}],"sections":[{"section_key":"patty","section_label":"Patty:","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":113.8,"raw_water_grams":69.95,"raw_fat_grams":22.61,"final_grams":96.31},{"section_key":"assembly","section_label":"Assembly:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":157.0,"raw_water_grams":54.2,"raw_fat_grams":27.03,"final_grams":157.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'BBQ Bacon Burger', quantity: 'custom (g)', foodWord: 'BBQBACONBURGER', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'ground beef (80% lean)', quantity: '4 oz raw (113g)', section: 'patty', ndbNo: '23572', portionDesc: 'g', portionGrams: 113.0 },
+      { name: 'salt', quantity: '¼ tsp (0.5g)', section: 'patty', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'ground black pepper', quantity: '⅛ tsp (0.3g)', section: 'patty', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'hamburger bun', quantity: '1 bun (43g)', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 43.0 },
+      { name: 'BBQ sauce', quantity: '2 tbsp (30g)', section: 'assembly', ndbNo: '6150', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'Cheddar cheese', quantity: '1 slice (21g)', section: 'assembly', ndbNo: '1009', portionDesc: 'g', portionGrams: 21.0 },
+      { name: 'cooked bacon', quantity: '2 slices (23g)', section: 'assembly', ndbNo: '10862', portionDesc: 'g', portionGrams: 23.0 },
+      { name: 'onion rings', quantity: '4 rings (40g)', section: 'assembly', ndbNo: '21130', portionDesc: 'g', portionGrams: 40.0 }
+    ],
+    recipeInstructions: [
+      'Season the ground beef patty with salt and pepper. Shape into a patty slightly larger than the bun to account for shrinkage.',
+      'Heat a skillet over medium-high heat. Cook the patty 3–4 minutes per side until cooked through (160°F / 71°C). Lay the cheddar slice on top during the last 30–60 seconds; cover to melt.',
+      'While the patty rests, heat the onion rings according to package directions if frozen, or use pre-fried rings.',
+      'Spread BBQ sauce on the bun bottom. Place the patty cheese side up, top with bacon strips and onion rings. Close with the bun top.'
+    ],
+    sections: [
+      { key: 'patty', label: 'Patty:', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
