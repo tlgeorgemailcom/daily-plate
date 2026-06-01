@@ -6586,7 +6586,7 @@ export const LEVELS: Level[] = [
       { name: 'salted butter', quantity: '1 tbsp (14g)', section: 'mushrooms', ndbNo: '1001', portionDesc: 'g', portionGrams: 14.0 },
       { name: 'onion', quantity: '½ medium (55g) sliced', section: 'mushrooms', ndbNo: '11282', portionDesc: 'g', portionGrams: 55.0 },
       { name: 'crimini mushrooms', quantity: '3 oz sliced (85g)', section: 'mushrooms', ndbNo: '11266', portionDesc: 'g', portionGrams: 85.0 },
-      { name: 'garlic cloves', quantity: '1 clove minced (3g)', section: 'mushrooms', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'garlic', quantity: '1 clove minced (3g)', section: 'mushrooms', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'salt', quantity: '¼ tsp (0.5g)', section: 'mushrooms', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.5 },
       { name: 'ground black pepper', quantity: '⅛ tsp (0.3g)', section: 'mushrooms', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
       { name: 'ground beef (80% lean)', quantity: '4 oz raw (113g)', section: 'patty', ndbNo: '23572', portionDesc: 'g', portionGrams: 113.0 },
