@@ -7019,7 +7019,7 @@ export const LEVELS: Level[] = [
       { name: 'Parmesan cheese', quantity: '2 oz, grated (Parmigiano-Reggiano)', section: 'cheese', ndbNo: '1033', portionDesc: 'g', portionGrams: 56.7 }
     ],
     recipeInstructions: [
-      'Prepare one full recipe of Béchamel sauce.',
+      'Prepare one full recipe of Béchamel sauce (see instructions in the recipe: Béchamel Sauce).',
       'Finely grate the Gruyère and Parmigiano-Reggiano separately and combine them.',
       'Reduce the finished Béchamel heat to the lowest setting — the sauce should be hot but not simmering.',
       'Add the cheese in two or three additions, stirring gently with a wooden spoon or silicone spatula after each addition until just melted.',
