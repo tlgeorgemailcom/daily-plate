@@ -8,7 +8,7 @@
   "yield_factor_water": 0.88,
   "yield_factor_fat": 1.0,
   "servings_count": 16,
-  "audit_status": "",
+  "audit_status": "PASS",
   "audit_notes": "",
   "raw_total_grams": 1080.97,
   "raw_water_grams": 876.73,

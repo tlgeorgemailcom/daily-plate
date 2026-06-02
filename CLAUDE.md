@@ -55,6 +55,8 @@ python recipes_v3/tools/insert_new.py --recipe-id BKFST_XXX --commit  # write
 
 Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soups & stews`, `soups-stews`, `salads`, `pasta & pizza`, `pasta-pizza`, `entrees & main courses`, `entrees-main-courses`, `sides`, `sweets & desserts`, `sweets-desserts`, `beverages`, `sauces & condiments`, `sauces-condiments`, `sandwiches & burgers`, `sandwiches-burgers`. (**`pasta & pizza` and `sandwiches & burgers` were added during SAND_001 build — May 2026.**)
 
+**Component-ref child recipe must have `status='approved'` in `recipes.csv`** — otherwise `validate_ledger.py` raises `component-ref @RECIPE_ID status='' (must be 'approved')`. Set `status='approved'` and `audit_status='PASS'` on the child recipe before running the composite build. (Found during SAUCE_002 build — June 2026.)
+
 **`upload.py` deliberately does NOT update `category`, `food_word`, `cooking_method`, or `dietary_category`** — these identity columns are set once at insert time and preserved on every subsequent upload. To correct one of these columns in Turso after the fact, use a direct SQL UPDATE via the `libsql_experimental` Python client (same pattern as `insert_new.py`'s `_connect()`). **Always call `conn.commit()` after the UPDATE** — without it the change is visible only within the same connection and is not persisted to the remote database.
 
 ## Critical Invariants
@@ -80,7 +82,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
 | `BKFST_NNN` | 🔧 In progress | 39 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039) |
 | `SAND_NNN` | 🔧 In progress | 67 (001–067) |
-| `SAUCE_NNN` | 🔧 In progress | 1 (001) |
+| `SAUCE_NNN` | 🔧 In progress | 2 (001–002) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -146,6 +148,7 @@ Planned BKFST order (standalone components first, composites last):
 | ID | Recipe | NDB | Notes |
 |---|---|---|---|
 | SAUCE_001 | Béchamel Sauce | (none) | Rule D ✅ — no canonical; 976g milk_whole(1077)+71g butter_unsalted(1145)+31.25g flour_ap(20581)+1.5g salt+0.6g white_pepper_ground(2032)+0.275g nutmeg_ground(2025)+0.35g cloves_ground(2011); yfw=0.88 → 975.8g; 16 servings × 61g (~¼ cup); 125.3 kcal·3.55P·9.20F·7.33C per 100g; dietary_category=veggie |
+| SAUCE_002 | Mornay Sauce | (none) | Rule D ✅ — no canonical; @SAUCE_001(975.8g)+56.7g cheese_gruyere(1023)+56.7g cheese_parmesan_hard(1033); yfw=1.00, yff=1.00 → 1089.2g; 16 servings × 68g (~¼ cup); 154.1 kcal·6.59P·11.27F·6.75C per 100g; dietary_category=veggie |
 
 ## Current Work: SAND Recipes
 

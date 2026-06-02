@@ -6990,5 +6990,45 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sauce', label: 'Sauce:', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'SAUCE_002',
+    name: 'Mornay Sauce',
+    category: 'sauces & condiments',
+    dietaryCategory: 'veggie',
+    levelNum: 152,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1/4 cup',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":104.9,"pro":4.5,"fat":7.7,"carb":4.6,"fib":0.1,"h2o":50.4,"sug":3.1,"perServing":{"cal":104.9,"pro":4.5,"fat":7.7,"carb":4.6,"fib":0.1,"h2o":50.4,"sug":3.1,"AddedSugars":0.0,"IntrinsicSugars":3.1},"micros":{"vitaminA":102.12,"vitaminC":0.01,"vitaminD":47.94,"vitaminE":0.24,"vitaminK":0.97,"vitaminB6":0.03,"vitaminB12":0.5,"thiamin":0.04,"riboflavin":0.17,"niacin":0.18,"folate":7.36,"calcium":202.4,"iron":0.19,"magnesium":12.08,"phosphorus":135.73,"potassium":107.71,"sodium":187.67,"zinc":0.65,"copper":0.02,"selenium":6.07,"cholesterol":32.25,"saturatedFat":6.81,"monoFat":3.17,"polyFat":0.44,"omega3":0.02,"omega6":0.13},"gramsPerServing":68.1,"servings":16,"per100g":{"Energy_KCal":154.13,"Water":74.08,"Protein":6.59,"TotalLipidFat":11.27,"Carbohydrate":6.75,"FiberTotalDietary":0.11,"SugarsTotal":4.6,"Cholesterol":32.25,"FattyAcids_totalSaturated":6.81,"FattyAcids_totalMonounsaturated":3.17,"FattyAcids_totalPolyunsaturated":0.44,"LinoleicAcid":0.13,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":102.12,"Retinol":100.07,"Carotene_beta":20.12,"VitaminD":47.94,"VitaminE_alphaTocopherol":0.24,"VitaminK_phylloquinone":0.97,"VitaminC_totalAscorbicAcid":0.01,"Thiamin":0.04,"Riboflavin":0.17,"Niacin":0.18,"PantothenicAcid":0.29,"VitaminB6":0.03,"Folate_total":7.36,"Folate_food":4.49,"Folate_DFE":9.37,"FolicAcid":4.42,"VitaminB12":0.5,"Choline_total":13.55,"Betaine":0.54,"LuteinZeaxanthin":1.7,"Lycopene":0.0,"Calcium_Ca":202.4,"Iron_Fe":0.19,"Magnesium_Mg":12.08,"Phosphorus_P":135.73,"Potassium_K":107.71,"Sodium_Na":187.67,"Zinc_Zn":0.65,"Copper_Cu":0.02,"Manganese_Mn":0.05,"Selenium_Se":6.07,"Tryptophan":0.08,"Threonine":0.25,"Isoleucine":0.33,"Leucine":0.63,"Lysine":0.55,"Methionine":0.17,"Cystine":0.05,"Phenylalanine":0.35,"Tyrosine":0.34,"Valine":0.44,"Arginine":0.22,"Histidine":0.22,"Alanine":0.2,"AsparticAcid":0.46,"GlutamicAcid":1.47,"Glycine":0.12,"Proline":0.73,"Serine":0.38,"omega3":0.02,"omega6":0.13,"AddedSugars":0.0,"IntrinsicSugars":4.6},"addedSugars":0.0,"intrinsicSugars":3.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Béchamel Sauce","grams":61.0},{"ndb":"1023","name":"Cheese, gruyere","grams":3.5},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":3.5}],"sections":[{"section_key":"bechamel","section_label":"Béchamel sauce","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":975.77,"raw_water_grams":771.54,"raw_fat_grams":89.77,"final_grams":975.77},{"section_key":"cheese","section_label":"Cheese","prep_method":"grated","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":113.4,"raw_water_grams":35.35,"raw_fat_grams":32.98,"final_grams":113.4}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Mornay Sauce', quantity: 'custom (g)', foodWord: 'MORNAYSAUCE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Béchamel Sauce', quantity: '1 recipe Béchamel (4 cups, 975.8g)', section: 'bechamel', foodWord: 'BECHAMEL', portionDesc: 'g', portionGrams: 975.77, isDish: true, componentRef: 'SAUCE_001' },
+      { name: 'Gruyere cheese', quantity: '2 oz, grated', section: 'cheese', ndbNo: '1023', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'Parmesan cheese', quantity: '2 oz, grated (Parmigiano-Reggiano)', section: 'cheese', ndbNo: '1033', portionDesc: 'g', portionGrams: 56.7 }
+    ],
+    recipeInstructions: [
+      'Prepare one full recipe of Béchamel sauce.',
+      'Finely grate the Gruyère and Parmigiano-Reggiano separately and combine them.',
+      'Reduce the finished Béchamel heat to the lowest setting — the sauce should be hot but not simmering.',
+      'Add the cheese in two or three additions, stirring gently with a wooden spoon or silicone spatula after each addition until just melted.',
+      'Do not allow the sauce to boil after adding the cheese; boiling causes the proteins to seize and the sauce to become grainy or stringy.',
+      'Taste and adjust seasoning. Serve immediately, or keep warm over a bain-marie with plastic wrap pressed directly onto the surface to prevent skinning.'
+    ],
+    sections: [
+      { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'cheese', label: 'Cheese', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
