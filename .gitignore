@@ -27,6 +27,8 @@ local.db
 local.db-info
 local.db-shm
 local.db-wal
+:memory:
+:memory:-info
 
 # Backup/scratch files
 *.bak
