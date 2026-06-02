@@ -150,7 +150,7 @@ Planned BKFST order (standalone components first, composites last):
 | SAUCE_001 | Béchamel Sauce | (none) | Rule D ✅ — no canonical; 976g milk_whole(1077)+71g butter_unsalted(1145)+31.25g flour_ap(20581)+1.5g salt+0.6g white_pepper_ground(2032)+0.275g nutmeg_ground(2025)+0.35g cloves_ground(2011); yfw=0.88 → 975.8g; 16 servings × 61g (~¼ cup); 125.3 kcal·3.55P·9.20F·7.33C per 100g; dietary_category=veggie |
 | SAUCE_002 | Mornay Sauce | (none) | Rule D ✅ — no canonical; @SAUCE_001(975.8g)+56.7g cheese_gruyere(1023)+56.7g cheese_parmesan_hard(1033); yfw=1.00, yff=1.00 → 1089.2g; 16 servings × 68g (~¼ cup); 154.1 kcal·6.59P·11.27F·6.75C per 100g; dietary_category=veggie |
 | SAUCE_003 | Soubise Sauce | (none) | Rule D ✅ — no canonical; onion section: onion_raw(11282) 907.2g+butter_unsalted(1145) 56.8g+salt+white_pepper, pan grilled yfw=0.45 → 517.3g; @SAUCE_001(975.8g) raw; 1493.1g total; 24 servings × 62g (~¼ cup); 133.6 kcal·3.02P·9.16F·10.50C per 100g; dietary_category=veggie |
-| SAUCE_004 | Sauce Crème | (none) | Rule D ✅ — no canonical; bechamel section @SAUCE_001(975.8g) raw yfw=1.0; cream section: heavy_cream(1053) 238g+lemon_juice_raw(9152) 5g+salt+white_pepper, pan grilled yfw=0.82; 1195.0g total; 16 servings × 74.7g (~¼ cup); 170.2 kcal·3.47P·14.70F·6.58C per 100g; dietary_category=veggie |
+| SAUCE_004 | Sauce Crème | (none) | Rule D ✅ — no canonical; bechamel section @SAUCE_001(975.8g) raw yfw=1.0; cream section: heavy_cream(1053) 238g+lemon_juice_raw(9152) 5g+salt+white_pepper, boiled yfw=0.82; 1195.0g total; 16 servings × 74.7g (~¼ cup); 170.2 kcal·3.47P·14.70F·6.58C per 100g; dietary_category=veggie |
 
 ## Current Work: SAND Recipes
 
