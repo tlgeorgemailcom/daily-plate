@@ -6943,5 +6943,52 @@ export const LEVELS: Level[] = [
       { key: 'coleslaw', label: 'Coleslaw:', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAUCE_001',
+    name: 'Béchamel Sauce',
+    category: 'sauces & condiments',
+    dietaryCategory: 'veggie',
+    levelNum: 151,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1/4 cup',
+    prepTime: '30 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":76.4,"pro":2.2,"fat":5.6,"carb":4.5,"fib":0.1,"h2o":48.2,"sug":3.1,"perServing":{"cal":76.4,"pro":2.2,"fat":5.6,"carb":4.5,"fib":0.1,"h2o":48.2,"sug":3.1,"AddedSugars":0.0,"IntrinsicSugars":3.1},"micros":{"vitaminA":86.21,"vitaminC":0.01,"vitaminD":51.01,"vitaminE":0.24,"vitaminK":0.83,"vitaminB6":0.02,"vitaminB12":0.39,"thiamin":0.04,"riboflavin":0.15,"niacin":0.18,"folate":7.23,"calcium":98.37,"iron":0.16,"magnesium":8.84,"phosphorus":76.02,"potassium":110.18,"sodium":88.03,"zinc":0.34,"copper":0.02,"selenium":4.62,"cholesterol":25.65,"saturatedFat":5.55,"monoFat":2.52,"polyFat":0.36,"omega3":0.02,"omega6":0.14},"gramsPerServing":61.0,"servings":16,"per100g":{"Energy_KCal":125.27,"Water":79.07,"Protein":3.55,"TotalLipidFat":9.2,"Carbohydrate":7.33,"FiberTotalDietary":0.12,"SugarsTotal":5.07,"Cholesterol":25.65,"FattyAcids_totalSaturated":5.55,"FattyAcids_totalMonounsaturated":2.52,"FattyAcids_totalPolyunsaturated":0.36,"LinoleicAcid":0.14,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":86.21,"Retinol":84.45,"Carotene_beta":16.7,"VitaminD":51.01,"VitaminE_alphaTocopherol":0.24,"VitaminK_phylloquinone":0.83,"VitaminC_totalAscorbicAcid":0.01,"Thiamin":0.04,"Riboflavin":0.15,"Niacin":0.18,"PantothenicAcid":0.27,"VitaminB6":0.02,"Folate_total":7.23,"Folate_food":4.02,"Folate_DFE":9.47,"FolicAcid":4.93,"VitaminB12":0.39,"Choline_total":13.33,"Betaine":0.6,"LuteinZeaxanthin":1.9,"Lycopene":0.0,"Calcium_Ca":98.37,"Iron_Fe":0.16,"Magnesium_Mg":8.84,"Phosphorus_P":76.02,"Potassium_K":110.18,"Sodium_Na":88.03,"Zinc_Zn":0.34,"Copper_Cu":0.02,"Manganese_Mn":0.05,"Selenium_Se":4.62,"Tryptophan":0.04,"Threonine":0.14,"Isoleucine":0.17,"Leucine":0.32,"Lysine":0.27,"Methionine":0.09,"Cystine":0.02,"Phenylalanine":0.18,"Tyrosine":0.16,"Valine":0.22,"Arginine":0.11,"Histidine":0.1,"Alanine":0.11,"AsparticAcid":0.29,"GlutamicAcid":0.82,"Glycine":0.07,"Proline":0.35,"Serine":0.21,"omega3":0.02,"omega6":0.14,"AddedSugars":0.0,"IntrinsicSugars":5.07},"addedSugars":0.0,"intrinsicSugars":3.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.88,"yieldFactorFat":1.0,"sources":[{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":61.0},{"ndb":"1145","name":"Butter, without salt","grams":4.4},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":2.0},{"ndb":"2047","name":"Salt, table","grams":0.1},{"ndb":"2032","name":"Spices, pepper, white","grams":0.0},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.0},{"ndb":"2011","name":"Spices, cloves, ground","grams":0.0}],"sections":[{"section_key":"sauce","section_label":"Sauce:","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":1080.97,"raw_water_grams":876.73,"raw_fat_grams":89.77,"final_grams":975.77}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Béchamel Sauce', quantity: 'custom (g)', foodWord: 'BECHAMEL', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'whole milk', quantity: '1 quart (4 cups)', section: 'sauce', ndbNo: '1077', portionDesc: 'g', portionGrams: 976.0 },
+      { name: 'unsalted butter', quantity: '5 tbsp', section: 'sauce', ndbNo: '1145', portionDesc: 'g', portionGrams: 71.0 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '1/4 cup', section: 'sauce', ndbNo: '20581', portionDesc: 'g', portionGrams: 31.25 },
+      { name: 'salt', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'White pepper, ground', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2032', portionDesc: 'g', portionGrams: 0.6 },
+      { name: 'ground nutmeg', quantity: '1/8 tsp', section: 'sauce', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.275 },
+      { name: 'ground cloves', quantity: 'pinch (or 2 whole cloves)', section: 'sauce', ndbNo: '2011', portionDesc: 'g', portionGrams: 0.35 }
+    ],
+    recipeInstructions: [
+      'Place the peeled and halved onion in a saucepan along with the pinch of ground cloves (or 2 whole cloves) and the bay leaves. Pour in the quart of milk. Heat over medium-low heat until the milk just begins to simmer. Remove from heat, cover, and let steep for about 20 minutes. Strain the milk, discarding the aromatics, and set aside.',
+      'Melt the butter in a heavy-bottomed saucepan over low heat.',
+      'Add the flour all at once and whisk vigorously until fully combined into a smooth paste. Do not allow the roux to brown.',
+      'Remove the pan from heat for about 30 seconds. Slowly stream in a small amount of the warm strained milk while whisking constantly until the mixture is smooth with no lumps.',
+      'Return the pan to medium-low heat. Gradually stream in the remaining milk while whisking constantly until all the milk is incorporated and the sauce is smooth.',
+      'Increase heat slightly if necessary to bring the sauce just to a boil, then reduce to a slow simmer.',
+      'Continue cooking, stirring frequently and scraping the bottom and sides of the pan with a spatula. Remove any skin that develops on the surface.',
+      'Cook 15–30 minutes until the sauce is thick enough to coat the back of a wooden spoon and hold a clear line when wiped.',
+      'If the sauce becomes too thick, whisk in additional milk a little at a time to reach the desired consistency.',
+      'Remove from heat. Season with the salt, white pepper, and freshly grated nutmeg, then strain through a fine-mesh strainer. Stir occasionally while cooling to prevent skinning.'
+    ],
+    sections: [
+      { key: 'sauce', label: 'Sauce:', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];

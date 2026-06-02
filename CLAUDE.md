@@ -80,6 +80,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
 | `BKFST_NNN` | 🔧 In progress | 39 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039) |
 | `SAND_NNN` | 🔧 In progress | 67 (001–067) |
+| `SAUCE_NNN` | 🔧 In progress | 1 (001) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -134,7 +135,17 @@ Planned BKFST order (standalone components first, composites last):
 | BKFST_035 | Avocado Toast Tomato & Egg | (none) | Rule D ✅ — no canonical; 38g bread_multigrain_toasted(18036)+75g avocado_raw(9038)+5g lemon_juice_raw(9152)+4.5g olive_oil(4053)+68g tomato_red_raw(11529)+50g egg_cooked_poached(1131)+0.4g salt(2047)+0.3g red_pepper_flakes(2031); yfw=1.00 → 241.2g; 1 toast/serving; 149 kcal·5.8P·9.4F·11.6C per 100g; dietary_category=veggie |
 
 **Ingredients needed in ledger before building:**
-- (none outstanding — beef_chili_no_beans (NDB 22911) added during SAND_065 build; celery_seed (NDB 2007) + peppers_hot_pickled (NDB 31034) added during SAND_064 build; frankfurter_beef (NDB 7022) added during SAND_063 build; tomato_red_raw (NDB 11529) added during BKFST_035 build (formerly cherry_tomato_raw); cheese_cheddar NDB 1009 + cheese_gruyere NDB 1023 added during SAND_001 build; cheese_american NDB 1253 added during SAND_002 build; mayonnaise NDB 4025 + lettuce_iceberg_raw NDB 11252 added during SAND_004 build; turkey_breast_deli NDB 7081 added during SAND_005 build; egg_cooked_hardboiled NDB 1129 + mustard_yellow NDB 2046 added during SAND_006 build; french_roll NDB 18349 + provolone_cheese NDB 1035 + tamari NDB 16124 added during SAND_042 build; oregano_dried NDB 2027 + basil_dried NDB 2003 added during SAND_043 build; pork_tenderloin_raw NDB 10214 + daikon_radish_raw NDB 11429 + carrot_raw NDB 11124 + cucumber_raw NDB 11205 + jalapeno_raw NDB 11979 + lime_juice_raw NDB 9160 + sesame_oil NDB 4058 added during SAND_050 build; focaccia_bread NDB 18414 + basil_fresh NDB 2044 + balsamic_vinegar NDB 2068 added during SAND_051 build; pita_white NDB 18413 + chickpeas_cooked NDB 16057 + chickpeas_raw_dried NDB 16056 + tahini NDB 12166 + coriander_seed NDB 2013 + cumin_ground NDB 2014 + mint_fresh NDB 2065 added during SAND_052 build; lamb_ground_raw NDB 17224 added during SAND_052/053 builds; smoked_salmon NDB 15086 added during BKFST_039 build; hamburger_bun NDB 18350 + ketchup NDB 11935 + pickle_dill NDB 11937 already in ledger — confirmed during SAND_055 build)
+- (none outstanding — white_pepper_ground (NDB 2032) added during SAUCE_001 build; beef_chili_no_beans (NDB 22911) added during SAND_065 build; celery_seed (NDB 2007) + peppers_hot_pickled (NDB 31034) added during SAND_064 build; frankfurter_beef (NDB 7022) added during SAND_063 build; tomato_red_raw (NDB 11529) added during BKFST_035 build (formerly cherry_tomato_raw); cheese_cheddar NDB 1009 + cheese_gruyere NDB 1023 added during SAND_001 build; cheese_american NDB 1253 added during SAND_002 build; mayonnaise NDB 4025 + lettuce_iceberg_raw NDB 11252 added during SAND_004 build; turkey_breast_deli NDB 7081 added during SAND_005 build; egg_cooked_hardboiled NDB 1129 + mustard_yellow NDB 2046 added during SAND_006 build; french_roll NDB 18349 + provolone_cheese NDB 1035 + tamari NDB 16124 added during SAND_042 build; oregano_dried NDB 2027 + basil_dried NDB 2003 added during SAND_043 build; pork_tenderloin_raw NDB 10214 + daikon_radish_raw NDB 11429 + carrot_raw NDB 11124 + cucumber_raw NDB 11205 + jalapeno_raw NDB 11979 + lime_juice_raw NDB 9160 + sesame_oil NDB 4058 added during SAND_050 build; focaccia_bread NDB 18414 + basil_fresh NDB 2044 + balsamic_vinegar NDB 2068 added during SAND_051 build; pita_white NDB 18413 + chickpeas_cooked NDB 16057 + chickpeas_raw_dried NDB 16056 + tahini NDB 12166 + coriander_seed NDB 2013 + cumin_ground NDB 2014 + mint_fresh NDB 2065 added during SAND_052 build; lamb_ground_raw NDB 17224 added during SAND_052/053 builds; smoked_salmon NDB 15086 added during BKFST_039 build; hamburger_bun NDB 18350 + ketchup NDB 11935 + pickle_dill NDB 11937 already in ledger — confirmed during SAND_055 build)
+
+## Current Work: SAND Recipes
+
+## Current Work: SAUCE Recipes
+
+**Sauces planning**: `/Volumes/training/Daily Food Chain/daily-food-chain/docs/sauces_condiments.md`
+
+| ID | Recipe | NDB | Notes |
+|---|---|---|---|
+| SAUCE_001 | Béchamel Sauce | (none) | Rule D ✅ — no canonical; 976g milk_whole(1077)+71g butter_unsalted(1145)+31.25g flour_ap(20581)+1.5g salt+0.6g white_pepper_ground(2032)+0.275g nutmeg_ground(2025)+0.35g cloves_ground(2011); yfw=0.88 → 975.8g; 16 servings × 61g (~¼ cup); 125.3 kcal·3.55P·9.20F·7.33C per 100g; dietary_category=veggie |
 
 ## Current Work: SAND Recipes
 
