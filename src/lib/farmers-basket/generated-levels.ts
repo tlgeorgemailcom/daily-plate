@@ -7113,5 +7113,43 @@ export const LEVELS: Level[] = [
       { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'cream', label: 'Cream', cookingMethod: '', yieldFactorWater: 0.82 }
     ],
+  },
+  {
+    id: 'SAUCE_005',
+    name: 'Sauce Aurore — Béchamel',
+    category: 'sauces & condiments',
+    dietaryCategory: 'veggie',
+    levelNum: 155,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1/4 cup',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":80.0,"pro":2.3,"fat":5.6,"carb":5.3,"fib":0.3,"h2o":56.5,"sug":3.5,"perServing":{"cal":80.0,"pro":2.3,"fat":5.6,"carb":5.3,"fib":0.3,"h2o":56.5,"sug":3.5,"AddedSugars":0.0,"IntrinsicSugars":3.5},"micros":{"vitaminA":78.06,"vitaminC":1.42,"vitaminD":44.14,"vitaminE":0.47,"vitaminK":1.17,"vitaminB6":0.03,"vitaminB12":0.34,"thiamin":0.04,"riboflavin":0.14,"niacin":0.35,"folate":7.72,"calcium":87.62,"iron":0.38,"magnesium":10.73,"phosphorus":71.15,"potassium":153.78,"sodium":131.46,"zinc":0.34,"copper":0.05,"selenium":4.09,"cholesterol":22.2,"saturatedFat":4.81,"monoFat":2.18,"polyFat":0.32,"omega3":0.02,"omega6":0.12},"gramsPerServing":70.5,"servings":16,"per100g":{"Energy_KCal":113.54,"Water":80.12,"Protein":3.29,"TotalLipidFat":7.99,"Carbohydrate":7.56,"FiberTotalDietary":0.36,"SugarsTotal":5.03,"Cholesterol":22.2,"FattyAcids_totalSaturated":4.81,"FattyAcids_totalMonounsaturated":2.18,"FattyAcids_totalPolyunsaturated":0.32,"LinoleicAcid":0.12,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":78.06,"Retinol":73.08,"Carotene_beta":55.16,"VitaminD":44.14,"VitaminE_alphaTocopherol":0.47,"VitaminK_phylloquinone":1.17,"VitaminC_totalAscorbicAcid":1.42,"Thiamin":0.04,"Riboflavin":0.14,"Niacin":0.35,"PantothenicAcid":0.29,"VitaminB6":0.03,"Folate_total":7.72,"Folate_food":4.94,"Folate_DFE":9.66,"FolicAcid":4.27,"VitaminB12":0.34,"Choline_total":13.88,"Betaine":0.55,"LuteinZeaxanthin":1.64,"Lycopene":2893.92,"Calcium_Ca":87.62,"Iron_Fe":0.38,"Magnesium_Mg":10.73,"Phosphorus_P":71.15,"Potassium_K":153.78,"Sodium_Na":131.46,"Zinc_Zn":0.34,"Copper_Cu":0.05,"Manganese_Mn":0.07,"Selenium_Se":4.09,"Tryptophan":0.04,"Threonine":0.13,"Isoleucine":0.15,"Leucine":0.28,"Lysine":0.24,"Methionine":0.08,"Cystine":0.02,"Phenylalanine":0.16,"Tyrosine":0.14,"Valine":0.19,"Arginine":0.1,"Histidine":0.09,"Alanine":0.1,"AsparticAcid":0.28,"GlutamicAcid":0.8,"Glycine":0.06,"Proline":0.31,"Serine":0.19,"omega3":0.02,"omega6":0.12,"AddedSugars":0.0,"IntrinsicSugars":5.03},"addedSugars":0.0,"intrinsicSugars":3.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Béchamel Sauce","grams":61.0},{"ndb":"11547","name":"Tomato products, canned, puree, without salt added","grams":9.4},{"ndb":"2047","name":"Salt, table","grams":0.1},{"ndb":"2032","name":"Spices, pepper, white","grams":0.0}],"sections":[{"section_key":"bechamel","section_label":"Béchamel sauce","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":975.77,"raw_water_grams":771.54,"raw_fat_grams":89.77,"final_grams":975.77},{"section_key":"aurore","section_label":"Tomato purée","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":151.8,"raw_water_grams":131.86,"raw_fat_grams":0.32,"final_grams":151.8}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Sauce Aurore — Béchamel', quantity: 'custom (g)', foodWord: 'AUROREBECHAMEL', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Béchamel Sauce', quantity: '1 recipe Béchamel (4 cups, 975.8g)', section: 'bechamel', foodWord: 'BECHAMEL', portionDesc: 'g', portionGrams: 975.77, isDish: true, componentRef: 'SAUCE_001' },
+      { name: 'tomato purée', quantity: '⅔ cup', section: 'aurore', ndbNo: '11547', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'salt', quantity: '¼ tsp', section: 'aurore', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'White pepper, ground', quantity: '⅛ tsp', section: 'aurore', ndbNo: '2032', portionDesc: 'g', portionGrams: 0.3 }
+    ],
+    recipeInstructions: [
+      'Prepare one full recipe of Béchamel sauce (see instructions in the recipe: Béchamel Sauce).',
+      'Stir in the tomato purée until the sauce is evenly tinted a pale rosy pink.',
+      'Taste and adjust seasoning with salt and white pepper. Serve immediately.'
+    ],
+    sections: [
+      { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'aurore', label: 'Tomato purée', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
