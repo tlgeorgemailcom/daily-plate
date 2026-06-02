@@ -239,3 +239,5 @@ SAND_067,assembly,Assembly:,,grilled,1.00,1.00,1.00,,,,
 SAUCE_001,sauce,Sauce:,,boiled,0.88,1.00,1.00,,,,
 SAUCE_002,bechamel,Béchamel sauce,,raw,1.0,1.0,1.0,,,,SAUCE_001
 SAUCE_002,cheese,Cheese for Mornay Sauce,grated,raw,1.0,1.0,1.0,,,,
+SAUCE_003,onion,Sweated onion purée,thinly sliced,pan grilled,0.45,1.0,1.0,,,,
+SAUCE_003,bechamel,Béchamel sauce,,raw,1.0,1.0,1.0,,,,SAUCE_001

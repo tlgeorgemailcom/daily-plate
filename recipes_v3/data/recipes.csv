@@ -151,3 +151,4 @@ SAND_066,CORNDOG,Corn Dog,sandwiches & burgers,all,dish,,15 min,1 corn dog,6,Rul
 SAND_067,SLAWDOG,Slaw Dog,sandwiches & burgers,all,dish,,10 min,1 hot dog,1,Rule D,grilled,1.00,1.00,1.00,,,Rule D — no canonical match used.,Slaw Dog computed from SR Legacy values only.,,,
 SAUCE_001,BECHAMEL,Béchamel Sauce,sauces & condiments,veggie,dish,,30 min,1/4 cup,16,Rule D,boiled,0.88,1.00,1.00,approved,,Rule D — no canonical match used.,Béchamel Sauce computed from SR Legacy values only.,PASS,,
 SAUCE_002,MORNAYSAUCE,Mornay Sauce,sauces & condiments,veggie,builtin,,,1/4 cup,16,Rule D,raw,1.00,1.00,1.00,complete,,Béchamel + 2 oz Gruyère + 2 oz Parmesan; Rule D composite,,approved,154.1 kcal 6.59P 11.27F 6.75C per 100g,
+SAUCE_003,SOUBISESAUCE,Soubise Sauce,sauces & condiments,veggie,builtin,,,1/4 cup,24,Rule D,raw,1.00,1.00,1.00,approved,,Béchamel + sweated onion purée; onion section yfw=0.45; Rule D composite,,PASS,133.6 kcal 3.02P 9.16F 10.50C per 100g,
