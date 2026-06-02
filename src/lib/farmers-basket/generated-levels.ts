@@ -7028,7 +7028,7 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'cheese', label: 'Cheese', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cheese', label: 'Cheese for Mornay Sauce', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   }
 ];
