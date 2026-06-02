@@ -7151,5 +7151,44 @@ export const LEVELS: Level[] = [
       { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'aurore', label: 'Tomato purée', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAUCE_006',
+    name: 'Velouté',
+    category: 'sauces & condiments',
+    dietaryCategory: 'all',
+    levelNum: 156,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1/4 cup',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":36.0,"pro":0.6,"fat":3.0,"carb":1.7,"fib":0.1,"h2o":51.6,"sug":0.3,"perServing":{"cal":36.0,"pro":0.6,"fat":3.0,"carb":1.7,"fib":0.1,"h2o":51.6,"sug":0.3,"AddedSugars":0.0,"IntrinsicSugars":0.3},"micros":{"vitaminA":38.05,"vitaminC":0.0,"vitaminD":0.0,"vitaminE":0.18,"vitaminK":0.42,"vitaminB6":0.0,"vitaminB12":0.03,"thiamin":0.03,"riboflavin":0.06,"niacin":0.27,"folate":3.99,"calcium":5.27,"iron":0.18,"magnesium":1.52,"phosphorus":7.78,"potassium":18.77,"sodium":377.75,"zinc":0.09,"copper":0.01,"selenium":1.5,"cholesterol":15.34,"saturatedFat":3.14,"monoFat":1.46,"polyFat":0.18,"omega3":0.02,"omega6":0.12},"gramsPerServing":57.6,"servings":16,"per100g":{"Energy_KCal":62.42,"Water":89.62,"Protein":1.05,"TotalLipidFat":5.26,"Carbohydrate":2.96,"FiberTotalDietary":0.1,"SugarsTotal":0.45,"Cholesterol":15.34,"FattyAcids_totalSaturated":3.14,"FattyAcids_totalMonounsaturated":1.46,"FattyAcids_totalPolyunsaturated":0.18,"LinoleicAcid":0.12,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":38.05,"Retinol":37.33,"Carotene_beta":9.74,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.18,"VitaminK_phylloquinone":0.42,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.03,"Riboflavin":0.06,"Niacin":0.27,"PantothenicAcid":0.01,"VitaminB6":0.0,"Folate_total":3.99,"Folate_food":0.74,"Folate_DFE":6.28,"FolicAcid":5.01,"VitaminB12":0.03,"Choline_total":1.86,"Betaine":1.23,"LuteinZeaxanthin":1.93,"Lycopene":0.0,"Calcium_Ca":5.27,"Iron_Fe":0.18,"Magnesium_Mg":1.52,"Phosphorus_P":7.78,"Potassium_K":18.77,"Sodium_Na":377.75,"Zinc_Zn":0.09,"Copper_Cu":0.01,"Manganese_Mn":0.03,"Selenium_Se":1.5,"Tryptophan":0.0,"Threonine":0.01,"Isoleucine":0.01,"Leucine":0.03,"Lysine":0.01,"Methionine":0.01,"Cystine":0.01,"Phenylalanine":0.02,"Tyrosine":0.01,"Valine":0.02,"Arginine":0.02,"Histidine":0.01,"Alanine":0.01,"AsparticAcid":0.02,"GlutamicAcid":0.12,"Glycine":0.01,"Proline":0.04,"Serine":0.02,"omega3":0.02,"omega6":0.12,"AddedSugars":0.0,"IntrinsicSugars":0.45},"addedSugars":0.0,"intrinsicSugars":0.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.88,"yieldFactorFat":1.0,"sources":[{"ndb":"6194","name":"Soup, chicken broth, ready-to-serve","grams":59.1},{"ndb":"1145","name":"Butter, without salt","grams":3.6},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":1.9},{"ndb":"2047","name":"Salt, table","grams":0.1},{"ndb":"2032","name":"Spices, pepper, white","grams":0.0}],"sections":[{"section_key":"sauce","section_label":"Sauce","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":1034.8,"raw_water_grams":939.12,"raw_fat_grams":48.52,"final_grams":922.11}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Velouté', quantity: 'custom (g)', foodWord: 'VELOUTE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chicken broth', quantity: '1 quart (4 cups)', section: 'sauce', ndbNo: '6194', portionDesc: 'g', portionGrams: 946.0 },
+      { name: 'unsalted butter', quantity: '4 tbsp', section: 'sauce', ndbNo: '1145', portionDesc: 'g', portionGrams: 57.0 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '¼ cup', section: 'sauce', ndbNo: '20581', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'salt', quantity: '¼ tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'White pepper, ground', quantity: '⅛ tsp', section: 'sauce', ndbNo: '2032', portionDesc: 'g', portionGrams: 0.3 }
+    ],
+    recipeInstructions: [
+      'In a heavy saucepan over medium heat, melt the butter. Add the flour all at once and whisk constantly for 2–3 minutes until the roux turns a pale golden color — do not let it brown. Remove from heat.',
+      'Gradually whisk in the chicken broth, a little at a time, making sure each addition is fully incorporated before adding more. Return to heat.',
+      'Bring to a gentle simmer, whisking frequently, and cook for 20–30 minutes, skimming skin that forms on the surface.',
+      'Season with salt and white pepper. Strain through a fine-mesh sieve before serving.'
+    ],
+    sections: [
+      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];
