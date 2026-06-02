@@ -67,7 +67,7 @@
       "grams": 20.0,
       "section": "sandwich",
       "ingredient_group": "sandwich",
-      "qty_display": "2 thin slices (20g)",
+      "qty_display": "2 thin slices",
       "contribution": {
         "Energy_KCal": 8.0,
         "Protein": 0.22,
