@@ -7339,5 +7339,54 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089 }
     ],
+  },
+  {
+    id: 'STOCK_004',
+    name: 'Beef Stock',
+    category: 'sauces & condiments',
+    dietaryCategory: 'all',
+    levelNum: 160,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 qt (makes 3+)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":216.5,"pro":49.0,"fat":2.1,"carb":0.3,"fib":4.1,"h2o":1050.0,"sug":7.1,"perServing":{"cal":216.5,"pro":49.0,"fat":2.1,"carb":0.3,"fib":4.1,"h2o":1050.0,"sug":7.1,"AddedSugars":0.0,"IntrinsicSugars":7.1},"micros":{"vitaminA":33.18,"vitaminC":1.03,"vitaminD":0.0,"vitaminE":0.1,"vitaminK":11.23,"vitaminB6":0.17,"vitaminB12":1.54,"thiamin":0.04,"riboflavin":0.11,"niacin":2.09,"folate":6.46,"calcium":17.5,"iron":1.15,"magnesium":9.13,"phosphorus":99.1,"potassium":205.37,"sodium":37.96,"zinc":3.25,"copper":0.05,"selenium":9.26,"cholesterol":21.2,"saturatedFat":0.7,"monoFat":0.96,"polyFat":0.08,"omega3":0.0,"omega6":0.0},"gramsPerServing":1112.4,"servings":3,"per100g":{"Energy_KCal":19.46,"Water":94.39,"Protein":4.41,"TotalLipidFat":0.19,"Carbohydrate":0.03,"FiberTotalDietary":0.37,"SugarsTotal":0.64,"Cholesterol":21.2,"FattyAcids_totalSaturated":0.7,"FattyAcids_totalMonounsaturated":0.96,"FattyAcids_totalPolyunsaturated":0.08,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":33.18,"Retinol":0.0,"Carotene_beta":340.07,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.1,"VitaminK_phylloquinone":11.23,"VitaminC_totalAscorbicAcid":1.03,"Thiamin":0.04,"Riboflavin":0.11,"Niacin":2.09,"PantothenicAcid":0.16,"VitaminB6":0.17,"Folate_total":6.46,"Folate_food":6.46,"Folate_DFE":6.46,"FolicAcid":0.0,"VitaminB12":1.54,"Choline_total":1.28,"Betaine":0.03,"LuteinZeaxanthin":75.4,"Lycopene":248.26,"Calcium_Ca":17.5,"Iron_Fe":1.15,"Magnesium_Mg":9.13,"Phosphorus_P":99.1,"Potassium_K":205.37,"Sodium_Na":37.96,"Zinc_Zn":3.25,"Copper_Cu":0.05,"Manganese_Mn":0.04,"Selenium_Se":9.26,"Tryptophan":0.13,"Threonine":0.53,"Isoleucine":0.53,"Leucine":0.94,"Lysine":0.99,"Methionine":0.3,"Cystine":0.13,"Phenylalanine":0.46,"Tyrosine":0.4,"Valine":0.58,"Arginine":0.76,"Histidine":0.41,"Alanine":0.72,"AsparticAcid":1.1,"GlutamicAcid":1.83,"Glycine":0.65,"Proline":0.53,"Serine":0.46,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.64},"addedSugars":0.0,"intrinsicSugars":7.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.68,"yieldFactorFat":0.089,"sources":[{"ndb":"13227","name":"Beef, shank crosscuts, separable lean only, trimmed to 1/4\" fat, choice, raw","grams":604.8},{"ndb":"14411","name":"Water, tap, drinking","grams":946.4},{"ndb":"11282","name":"Onions, raw","grams":50.0},{"ndb":"11124","name":"Carrots, raw","grams":40.7},{"ndb":"11143","name":"Celery, raw","grams":40.0},{"ndb":"11246","name":"Leeks, (bulb and lower leaf-portion), raw","grams":29.7},{"ndb":"11546","name":"Tomato products, canned, paste, without salt added","grams":10.7},{"ndb":"11297","name":"Parsley, fresh","grams":6.0},{"ndb":"2049","name":"Thyme, fresh","grams":1.0},{"ndb":"2004","name":"Spices, bay leaf","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.4}],"sections":[{"section_key":"stock","section_label":"Stock:","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.68,"yield_factor_fat":0.089,"yield_factor_protein":0.366,"yield_factor_carbohydrate":0.02,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":5189.82,"raw_water_grams":4632.53,"raw_fat_grams":71.25,"raw_protein_grams":401.87,"raw_carb_grams":51.41,"final_grams":3337.33}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Beef Stock', quantity: 'custom (g)', foodWord: 'BEEFSTOCK', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Beef shank crosscuts, raw', quantity: '4 lb', section: 'stock', ndbNo: '13227', portionDesc: 'g', portionGrams: 1814.368 },
+      { name: 'water', quantity: '12 cups', section: 'stock', ndbNo: '14411', portionDesc: 'g', portionGrams: 2839.1 },
+      { name: 'onion', quantity: '1 large, quartered', section: 'stock', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'Carrot, raw', quantity: '2 medium', section: 'stock', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'celery stalk', quantity: '3 stalks', section: 'stock', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'Leek, raw', quantity: '1 leek, halved lengthwise', section: 'stock', ndbNo: '11246', portionDesc: 'g', portionGrams: 89.0 },
+      { name: 'tomato paste', quantity: '2 tbsp', section: 'stock', ndbNo: '11546', portionDesc: 'g', portionGrams: 32.0 },
+      { name: 'fresh parsley', quantity: '6 sprigs', section: 'stock', ndbNo: '11297', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'fresh thyme leaves', quantity: '3 sprigs', section: 'stock', ndbNo: '2049', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'Bay leaf, dried', quantity: '2 leaves', section: 'stock', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'ground black pepper', quantity: '½ tsp', section: 'stock', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
+    ],
+    recipeInstructions: [
+      'Pat the beef shanks dry with paper towels. Heat a thin film of oil in a large stockpot over high heat. Working in batches, sear the shanks on all sides until deeply browned, 3 to 4 minutes per side. Do not burn. Transfer to a plate.',
+      'If the leavings in the pan are burned, clean the bottom of the pan rather than deglazing. Otherwise reduce heat to medium. Add the tomato paste to the pot and cook, stirring, for 1 to 2 minutes until it darkens slightly and coats the bottom.',
+      'Return the shanks to the pot. Add the onion, carrot, celery, leek, parsley, thyme, bay leaves, and black pepper. Pour in the water.',
+      'Bring to a boil over high heat. As soon as a boil is reached, reduce to a bare simmer.',
+      'Skim the gray foam and fat that rise to the surface during the first 20 to 30 minutes of simmering.',
+      'Simmer uncovered for 6 to 8 hours, skimming any fat and foam occasionally. Keep at a gentle simmer — do not let it boil hard.',
+      'Strain the stock through a fine-mesh strainer or cheesecloth-lined colander. Discard the solids.',
+      'Cool to room temperature, then refrigerate. Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid.'
+    ],
+    sections: [
+      { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089 }
+    ],
   }
 ];

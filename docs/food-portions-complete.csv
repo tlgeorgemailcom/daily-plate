@@ -1545,3 +1545,4 @@ CHICKENBACKRAW,Chicken Back Raw,meat,,,,0,5048,"Chicken, broilers or fryers, bac
 CHICKENNECKRAW,Chicken Neck Raw,meat,,,,0,5084,"Chicken, broilers or fryers, neck, meat and skin, raw",297.0,14.07,26.24,0.0,0.0,59.99,0.0,1.0,custom (g),100.0,1.0,lb,453.592,1.0,"neck, bone removed",50.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 CHICKENFEETBOILED,Chicken Feet Boiled,meat,,,,0,5335,"Chicken, feet, boiled",215.0,19.4,14.6,0.2,0.0,65.8,0.0,1.0,custom (g),100.0,1.0,oz,28.35,1.0,lb,453.6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 CHICKENWINGRAW,Chicken Wing Raw,meat,,,,0,5100,"Chicken, broilers or fryers, wing, meat and skin, raw",191.0,17.52,12.85,0.0,0.0,69.19,0.0,1.0,custom (g),100.0,1.0,lb,453.592,1.0,unit (yield from 1 lb),68.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+BEEFSHANKRAW,Beef Shank Raw,meat,,,,0,13227,"Beef, shank crosscuts, separable lean only, trimmed to 1/4"" fat, choice, raw",128.0,21.75,3.85,0.0,0.0,73.03,0.0,1.0,custom (g),100.0,1.0,lb,453.592,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

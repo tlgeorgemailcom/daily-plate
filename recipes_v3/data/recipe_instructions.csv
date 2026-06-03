@@ -1027,3 +1027,11 @@ STOCK_003,5,Add boiling water if needed to keep the vegetables covered.
 STOCK_003,6,"Simmer uncovered for 2 to 3 hours, skimming any fat and foam occasionally. Do not let the broth boil — it will cloud."
 STOCK_003,7,"Strain through a fine-mesh strainer, pressing lightly on the solids. Discard solids."
 STOCK_003,8,"Cool to room temperature, then refrigerate. Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid."
+STOCK_004,1,"Pat the beef shanks dry with paper towels. Heat a thin film of oil in a large stockpot over high heat. Working in batches, sear the shanks on all sides until deeply browned, 3 to 4 minutes per side. Do not burn. Transfer to a plate.",stock
+STOCK_004,2,"If the leavings in the pan are burned, clean the bottom of the pan rather than deglazing. Otherwise reduce heat to medium. Add the tomato paste to the pot and cook, stirring, for 1 to 2 minutes until it darkens slightly and coats the bottom.",stock
+STOCK_004,3,"Return the shanks to the pot. Add the onion, carrot, celery, leek, parsley, thyme, bay leaves, and black pepper. Pour in the water.",stock
+STOCK_004,4,"Bring to a boil over high heat. As soon as a boil is reached, reduce to a bare simmer.",stock
+STOCK_004,5,Skim the gray foam and fat that rise to the surface during the first 20 to 30 minutes of simmering.,stock
+STOCK_004,6,"Simmer uncovered for 6 to 8 hours, skimming any fat and foam occasionally. Keep at a gentle simmer — do not let it boil hard.",stock
+STOCK_004,7,Strain the stock through a fine-mesh strainer or cheesecloth-lined colander. Discard the solids.,stock
+STOCK_004,8,"Cool to room temperature, then refrigerate. Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid.",stock
