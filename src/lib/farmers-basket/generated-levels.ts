@@ -6960,7 +6960,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '1/4 cup (makes 4+)',
+    servings: '1/4 cup (makes 4)',
     prepTime: '30 min',
     linkType: 'dish',
     sr28Rule: 'Rule D',
@@ -7091,7 +7091,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '1/4 cup (makes 5+)',
+    servings: '1/4 cup (makes 5)',
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
