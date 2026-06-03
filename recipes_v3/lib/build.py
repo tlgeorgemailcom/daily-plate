@@ -249,6 +249,8 @@ def _build_recipe_single(
     method = normalize_cooking_method(recipe.cooking_method)
     yfw = recipe.yield_factor_water
     yff = recipe.yield_factor_fat
+    yfp = recipe.yield_factor_protein
+    yfc = recipe.yield_factor_carbohydrate
 
     retained: dict[str, float] = {}
     for n in EXTENDED_NUTRIENTS:
@@ -256,15 +258,18 @@ def _build_recipe_single(
             retained[n] = sums[n] * yfw
         elif n == "TotalLipidFat":
             retained[n] = sums[n] * yff
+        elif n == "Protein":
+            retained[n] = sums[n] * yfp
+        elif n == "Carbohydrate":
+            retained[n] = sums[n] * yfc
         elif n in _MACRO_SET:
             retained[n] = sums[n]
         else:
             retained[n] = sums[n] * get_retention(method, n)
 
-    # When fat renders out (yff < 1), the raw Energy_KCal from the database
-    # still reflects pre-drain calories.  Recompute from Atwater of retained
-    # macros so the energy that left with the drained fat is not counted.
-    if yff < 1.0:
+    # When fat, protein, or carbs drain out (yff/yfp/yfc < 1), the raw
+    # Energy_KCal from the database overcounts calories. Recompute from Atwater.
+    if yff < 1.0 or yfp < 1.0 or yfc < 1.0:
         retained["Energy_KCal"] = (
             retained.get("Protein", 0.0)       * 4.0
             + retained.get("TotalLipidFat", 0.0) * 9.0
@@ -275,7 +280,7 @@ def _build_recipe_single(
     retained_added = sum_added_sugar * sugar_retention
     retained_intrinsic = sum_intrinsic_sugar * sugar_retention
 
-    final_grams = cooked_total_grams(raw_total_grams, raw_water, raw_fat, yfw, yff)
+    final_grams = cooked_total_grams(raw_total_grams, raw_water, raw_fat, yfw, yff, sums.get("Protein", 0.0), yfp, sums.get("Carbohydrate", 0.0), yfc)
     grams_per_serving = final_grams / recipe.servings_count
     per100g_scale = 100.0 / final_grams
     serving_scale = grams_per_serving / 100.0
@@ -309,14 +314,20 @@ def _build_recipe_single(
         "cooking_method_normalized": method,
         "yield_factor_water": yfw,
         "yield_factor_fat": yff,
+        "yield_factor_protein": yfp,
+        "yield_factor_carbohydrate": yfc,
         "servings_count": recipe.servings_count,
         "audit_status": recipe.audit_status,
         "audit_notes": recipe.audit_notes,
         "raw_total_grams": _round(raw_total_grams, 2),
         "raw_water_grams": _round(raw_water, 2),
         "raw_fat_grams": _round(raw_fat, 2),
+        "raw_protein_grams": _round(sums.get("Protein", 0.0), 2),
+        "raw_carb_grams": _round(sums.get("Carbohydrate", 0.0), 2),
         "water_lost_grams": _round(raw_water * (1 - yfw), 2),
         "fat_lost_grams": _round(raw_fat * (1 - yff), 2),
+        "protein_lost_grams": _round(sums.get("Protein", 0.0) * (1 - yfp), 2),
+        "carb_lost_grams": _round(sums.get("Carbohydrate", 0.0) * (1 - yfc), 2),
         "cooked_total_grams": _round(final_grams, 2),
         "grams_per_serving": _round(grams_per_serving, 2),
         "ingredients": ingredient_breakdown,
@@ -354,6 +365,8 @@ def _build_recipe_multi(
             "raw_total": 0.0,
             "raw_water": 0.0,
             "raw_fat": 0.0,
+            "raw_protein": 0.0,
+            "raw_carb": 0.0,
             "added_sugar": 0.0,
             "intrinsic_sugar": 0.0,
             "ingredient_count": 0,
@@ -384,6 +397,8 @@ def _build_recipe_multi(
             st["raw_total"] += row.grams
             st["raw_water"] += float(p100.get("Water", 0.0)) * scale
             st["raw_fat"] += float(p100.get("TotalLipidFat", 0.0)) * scale
+            st["raw_protein"] += float(p100.get("Protein", 0.0)) * scale
+            st["raw_carb"] += float(p100.get("Carbohydrate", 0.0)) * scale
             st["ingredient_count"] += 1
             contrib_full: dict[str, float] = {}
             for n in EXTENDED_NUTRIENTS:
@@ -426,6 +441,8 @@ def _build_recipe_multi(
         st["raw_total"] += row.grams
         st["raw_water"] += nuts.get("Water", 0.0) * scale
         st["raw_fat"] += nuts.get("TotalLipidFat", 0.0) * scale
+        st["raw_protein"] += nuts.get("Protein", 0.0) * scale
+        st["raw_carb"] += nuts.get("Carbohydrate", 0.0) * scale
         st["ingredient_count"] += 1
 
         contrib_full: dict[str, float] = {}
@@ -497,6 +514,8 @@ def _build_recipe_multi(
         else:
             yfw = 1.0
         yff = s.yield_factor_fat
+        yfp = s.yield_factor_protein
+        yfc = s.yield_factor_carbohydrate
         sums_S = st["sums"]
         retained_S: dict[str, float] = {}
         for n in EXTENDED_NUTRIENTS:
@@ -504,15 +523,20 @@ def _build_recipe_multi(
                 retained_S[n] = sums_S[n] * yfw
             elif n == "TotalLipidFat":
                 retained_S[n] = sums_S[n] * yff
+            elif n == "Protein":
+                retained_S[n] = sums_S[n] * yfp
+            elif n == "Carbohydrate":
+                retained_S[n] = sums_S[n] * yfc
             elif n in _MACRO_SET:
                 retained_S[n] = sums_S[n]
             else:
                 retained_S[n] = sums_S[n] * get_retention(method, n)
             retained_dish[n] += retained_S[n]
 
-        # When fat renders out (yff < 1), patch Energy_KCal from Atwater of
-        # retained macros — the energy that left with drained fat must not count.
-        if yff < 1.0:
+        # When fat, protein, or carbs drain out (yff/yfp/yfc < 1), patch
+        # Energy_KCal from Atwater — calories that left with the drained mass
+        # must not be counted.
+        if yff < 1.0 or yfp < 1.0 or yfc < 1.0:
             atwater_S = (
                 retained_S.get("Protein", 0.0)       * 4.0
                 + retained_S.get("TotalLipidFat", 0.0) * 9.0
@@ -525,7 +549,7 @@ def _build_recipe_multi(
         retained_added_dish += st["added_sugar"] * sugar_retention_S
         retained_intrinsic_dish += st["intrinsic_sugar"] * sugar_retention_S
 
-        final_S = cooked_total_grams(st["raw_total"], st["raw_water"], st["raw_fat"], yfw, yff)
+        final_S = cooked_total_grams(st["raw_total"], st["raw_water"], st["raw_fat"], yfw, yff, st["raw_protein"], yfp, st["raw_carb"], yfc)
         final_grams += final_S
         raw_total_grams += st["raw_total"]
         raw_water += st["raw_water"]
@@ -540,11 +564,15 @@ def _build_recipe_multi(
             "cooking_method_normalized": method,
             "yield_factor_water": yfw,
             "yield_factor_fat": yff,
+            "yield_factor_protein": yfp,
+            "yield_factor_carbohydrate": yfc,
             "yield_factor_other": s.yield_factor_other,
             "ingredient_count": st["ingredient_count"],
             "raw_grams": _round(st["raw_total"], 2),
             "raw_water_grams": _round(st["raw_water"], 2),
             "raw_fat_grams": _round(st["raw_fat"], 2),
+            "raw_protein_grams": _round(st["raw_protein"], 2),
+            "raw_carb_grams": _round(st["raw_carb"], 2),
             "final_grams": _round(final_S, 2),
         })
 
@@ -591,7 +619,7 @@ def _build_recipe_multi(
     dish_method_normalized = (
         normalize_cooking_method(dish_method_label) if dish_method_label != "multi" else "multi"
     )
-    # Dish-level water-lost / fat-lost are sums of per-section losses.
+    # Dish-level water-lost / fat-lost / protein-lost are sums of per-section losses.
     # Use resolved yfw from sections_out (not section.yield_factor_water, which may be None
     # for algorithm-derived sections).
     water_lost_total = sum(
@@ -601,6 +629,20 @@ def _build_recipe_multi(
     fat_lost_total = sum(
         st["raw_fat"] * (1 - st["section"].yield_factor_fat)
         for st in sec_state.values() if st["ingredient_count"] > 0
+    )
+    protein_lost_total = sum(
+        st["raw_protein"] * (1 - st["section"].yield_factor_protein)
+        for st in sec_state.values() if st["ingredient_count"] > 0
+    )
+    carb_lost_total = sum(
+        st["raw_carb"] * (1 - st["section"].yield_factor_carbohydrate)
+        for st in sec_state.values() if st["ingredient_count"] > 0
+    )
+    raw_protein_total = sum(
+        st["raw_protein"] for st in sec_state.values()
+    )
+    raw_carb_total = sum(
+        st["raw_carb"] for st in sec_state.values()
     )
 
     return {
@@ -612,14 +654,20 @@ def _build_recipe_multi(
         "cooking_method_normalized": dish_method_normalized,
         "yield_factor_water": recipe.yield_factor_water,
         "yield_factor_fat": recipe.yield_factor_fat,
+        "yield_factor_protein": recipe.yield_factor_protein,
+        "yield_factor_carbohydrate": recipe.yield_factor_carbohydrate,
         "servings_count": recipe.servings_count,
         "audit_status": recipe.audit_status,
         "audit_notes": recipe.audit_notes,
         "raw_total_grams": _round(raw_total_grams, 2),
         "raw_water_grams": _round(raw_water, 2),
         "raw_fat_grams": _round(raw_fat, 2),
+        "raw_protein_grams": _round(raw_protein_total, 2),
+        "raw_carb_grams": _round(raw_carb_total, 2),
         "water_lost_grams": _round(water_lost_total, 2),
         "fat_lost_grams": _round(fat_lost_total, 2),
+        "protein_lost_grams": _round(protein_lost_total, 2),
+        "carb_lost_grams": _round(carb_lost_total, 2),
         "cooked_total_grams": _round(final_grams, 2),
         "grams_per_serving": _round(grams_per_serving, 2),
         "ingredients": ingredient_breakdown,

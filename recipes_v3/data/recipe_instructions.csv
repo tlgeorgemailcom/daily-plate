@@ -1003,3 +1003,11 @@ SAUCE_006,1,"In a heavy saucepan over medium heat, melt the butter. Add the flou
 SAUCE_006,2,"Gradually whisk in the chicken broth, a little at a time, making sure each addition is fully incorporated before adding more. Return to heat."
 SAUCE_006,3,"Bring to a gentle simmer, whisking frequently, and cook for 20–30 minutes, skimming skin that forms on the surface."
 SAUCE_006,4,Season with salt and white pepper. Strain through a fine-mesh sieve before serving.
+STOCK_001,1,Place chicken backs and necks in a large stockpot. Cover with 1 gallon of cold water.
+STOCK_001,2,"Bring to a boil over high heat, skimming any foam and impurities that rise to the surface."
+STOCK_001,3,"Reduce heat to a bare simmer. Add onion, carrot, celery, and leek."
+STOCK_001,4,"Add parsley, thyme, bay leaves, and black pepper."
+STOCK_001,5,Add boiling water to cover the top of the vegetables.
+STOCK_001,6,"Simmer uncovered for 3 to 4 hours, skimming occasionally. You're clarifying the stock by skimming the oil, as well. Do not let the stock boil — it will cloud."
+STOCK_001,7,"Strain through a fine-mesh strainer, pressing lightly on the solids. Discard solids."
+STOCK_001,8,"Cool to room temperature, then refrigerate. Skim and discard any solidified fat from the surface before using."

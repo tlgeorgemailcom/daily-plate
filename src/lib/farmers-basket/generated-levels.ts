@@ -7191,5 +7191,54 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'STOCK_001',
+    name: 'White Chicken Stock',
+    category: 'sauces & condiments',
+    dietaryCategory: 'all',
+    levelNum: 157,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 qt (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":198.8,"pro":23.9,"fat":11.4,"carb":0.2,"fib":2.8,"h2o":899.6,"sug":4.3,"perServing":{"cal":198.8,"pro":23.9,"fat":11.4,"carb":0.2,"fib":2.8,"h2o":899.6,"sug":4.3,"AddedSugars":0.0,"IntrinsicSugars":4.3},"micros":{"vitaminA":60.76,"vitaminC":1.12,"vitaminD":0.0,"vitaminE":0.22,"vitaminK":10.77,"vitaminB6":0.06,"vitaminB12":0.1,"thiamin":0.02,"riboflavin":0.06,"niacin":1.47,"folate":5.0,"calcium":13.64,"iron":0.57,"magnesium":8.27,"phosphorus":50.27,"potassium":81.45,"sodium":34.76,"zinc":0.62,"copper":0.04,"selenium":5.63,"cholesterol":40.81,"saturatedFat":3.93,"monoFat":5.75,"polyFat":2.5,"omega3":0.02,"omega6":0.0},"gramsPerServing":933.7,"servings":4,"per100g":{"Energy_KCal":21.29,"Water":96.35,"Protein":2.56,"TotalLipidFat":1.22,"Carbohydrate":0.02,"FiberTotalDietary":0.3,"SugarsTotal":0.47,"Cholesterol":40.81,"FattyAcids_totalSaturated":3.93,"FattyAcids_totalMonounsaturated":5.75,"FattyAcids_totalPolyunsaturated":2.5,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.01,"VitaminA_RAE":60.76,"Retinol":31.7,"Carotene_beta":296.94,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.22,"VitaminK_phylloquinone":10.77,"VitaminC_totalAscorbicAcid":1.12,"Thiamin":0.02,"Riboflavin":0.06,"Niacin":1.47,"PantothenicAcid":0.3,"VitaminB6":0.06,"Folate_total":5.0,"Folate_food":5.0,"Folate_DFE":5.0,"FolicAcid":0.0,"VitaminB12":0.1,"Choline_total":0.87,"Betaine":0.02,"LuteinZeaxanthin":67.38,"Lycopene":0.03,"Calcium_Ca":13.64,"Iron_Fe":0.57,"Magnesium_Mg":8.27,"Phosphorus_P":50.27,"Potassium_K":81.45,"Sodium_Na":34.76,"Zinc_Zn":0.62,"Copper_Cu":0.04,"Manganese_Mn":0.04,"Selenium_Se":5.63,"Tryptophan":0.07,"Threonine":0.28,"Isoleucine":0.32,"Leucine":0.48,"Lysine":0.53,"Methionine":0.17,"Cystine":0.09,"Phenylalanine":0.26,"Tyrosine":0.21,"Valine":0.33,"Arginine":0.46,"Histidine":0.19,"Alanine":0.44,"AsparticAcid":0.63,"GlutamicAcid":1.0,"Glycine":0.59,"Proline":0.4,"Serine":0.25,"omega3":0.02,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.47},"addedSugars":0.0,"intrinsicSugars":4.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.68,"yieldFactorFat":0.089,"sources":[{"ndb":"5048","name":"Chicken, broilers or fryers, back, meat and skin, raw","grams":340.2},{"ndb":"5084","name":"Chicken, broilers or fryers, neck, meat and skin, raw","grams":113.4},{"ndb":"14411","name":"Water, tap, drinking","grams":946.2},{"ndb":"11282","name":"Onions, raw","grams":37.5},{"ndb":"11124","name":"Carrots, raw","grams":30.5},{"ndb":"11143","name":"Celery, raw","grams":30.0},{"ndb":"11246","name":"Leeks, (bulb and lower leaf-portion), raw","grams":22.2},{"ndb":"11297","name":"Parsley, fresh","grams":4.5},{"ndb":"2049","name":"Thyme, fresh","grams":0.8},{"ndb":"2004","name":"Spices, bay leaf","grams":0.3},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3}],"sections":[{"section_key":"stock","section_label":"Stock:","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.68,"yield_factor_fat":0.089,"yield_factor_protein":0.366,"yield_factor_carbohydrate":0.02,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":6103.72,"raw_water_grams":5291.65,"raw_fat_grams":511.35,"raw_protein_grams":260.87,"raw_carb_grams":45.36,"final_grams":3734.7}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'White Chicken Stock', quantity: 'custom (g)', foodWord: 'WHITECHICKENSTOCK', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Chicken back, raw', quantity: '3 lbs', section: 'stock', ndbNo: '5048', portionDesc: 'g', portionGrams: 1360.776 },
+      { name: 'Chicken neck, raw', quantity: '1 lb', section: 'stock', ndbNo: '5084', portionDesc: 'g', portionGrams: 453.592 },
+      { name: 'water', quantity: '1 gallon (cold start)', section: 'stock', ndbNo: '14411', portionDesc: 'g', portionGrams: 3785.0 },
+      { name: 'onion', quantity: '1 large, quartered', section: 'stock', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'Carrot, raw', quantity: '2 medium', section: 'stock', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'celery stalk', quantity: '3 stalks', section: 'stock', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'Leek, raw', quantity: '1 leek, halved lengthwise', section: 'stock', ndbNo: '11246', portionDesc: 'g', portionGrams: 89.0 },
+      { name: 'fresh parsley', quantity: '6 sprigs', section: 'stock', ndbNo: '11297', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'fresh thyme leaves', quantity: '3 sprigs', section: 'stock', ndbNo: '2049', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'Bay leaf, dried', quantity: '2 leaves', section: 'stock', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'ground black pepper', quantity: '½ tsp', section: 'stock', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
+    ],
+    recipeInstructions: [
+      'Place chicken backs and necks in a large stockpot. Cover with 1 gallon of cold water.',
+      'Bring to a boil over high heat, skimming any foam and impurities that rise to the surface.',
+      'Reduce heat to a bare simmer. Add onion, carrot, celery, and leek.',
+      'Add parsley, thyme, bay leaves, and black pepper.',
+      'Add boiling water to cover the top of the vegetables.',
+      'Simmer uncovered for 3 to 4 hours, skimming occasionally. You\'re clarifying the stock by skimming the oil, as well. Do not let the stock boil — it will cloud.',
+      'Strain through a fine-mesh strainer, pressing lightly on the solids. Discard solids.',
+      'Cool to room temperature, then refrigerate. Skim and discard any solidified fat from the surface before using.'
+    ],
+    sections: [
+      { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089 }
+    ],
   }
 ];
