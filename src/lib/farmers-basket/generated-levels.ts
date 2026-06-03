@@ -7438,5 +7438,56 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089 }
     ],
+  },
+  {
+    id: 'STOCK_006',
+    name: 'Fish Stock',
+    category: 'sauces & condiments',
+    dietaryCategory: 'pesca',
+    levelNum: 162,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 qt (makes 3+)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule C',
+    nutritionJson: {"cal":150.2,"pro":19.7,"fat":6.2,"carb":4.0,"fib":2.4,"h2o":950.6,"sug":4.7,"perServing":{"cal":150.2,"pro":19.7,"fat":6.2,"carb":4.0,"fib":2.4,"h2o":950.6,"sug":4.7,"AddedSugars":0.0,"IntrinsicSugars":4.7},"micros":{"vitaminA":11.58,"vitaminC":1.24,"vitaminD":10.97,"vitaminE":0.24,"vitaminK":11.66,"vitaminB6":0.06,"vitaminB12":0.24,"thiamin":0.02,"riboflavin":0.02,"niacin":0.44,"folate":4.73,"calcium":11.35,"iron":0.23,"magnesium":10.77,"phosphorus":57.12,"potassium":125.64,"sodium":85.68,"zinc":0.15,"copper":0.02,"selenium":9.66,"cholesterol":14.13,"saturatedFat":0.29,"monoFat":0.14,"polyFat":0.08,"omega3":0.04,"omega6":0.01},"gramsPerServing":993.3,"servings":3,"per100g":{"Energy_KCal":15.12,"Water":95.7,"Protein":1.98,"TotalLipidFat":0.62,"Carbohydrate":0.4,"FiberTotalDietary":0.24,"SugarsTotal":0.47,"Cholesterol":14.13,"FattyAcids_totalSaturated":0.29,"FattyAcids_totalMonounsaturated":0.14,"FattyAcids_totalPolyunsaturated":0.08,"LinoleicAcid":0.01,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.01,"DPA_22_5n3":0.0,"DHA_22_6n3":0.03,"VitaminA_RAE":11.58,"Retinol":6.17,"Carotene_beta":64.3,"VitaminD":10.97,"VitaminE_alphaTocopherol":0.24,"VitaminK_phylloquinone":11.66,"VitaminC_totalAscorbicAcid":1.24,"Thiamin":0.02,"Riboflavin":0.02,"Niacin":0.44,"PantothenicAcid":0.05,"VitaminB6":0.06,"Folate_total":4.73,"Folate_food":4.73,"Folate_DFE":4.73,"FolicAcid":0.0,"VitaminB12":0.24,"Choline_total":18.01,"Betaine":0.01,"LuteinZeaxanthin":73.85,"Lycopene":0.01,"Calcium_Ca":11.35,"Iron_Fe":0.23,"Magnesium_Mg":10.77,"Phosphorus_P":57.12,"Potassium_K":125.64,"Sodium_Na":85.68,"Zinc_Zn":0.15,"Copper_Cu":0.02,"Manganese_Mn":0.04,"Selenium_Se":9.66,"Tryptophan":0.06,"Threonine":0.24,"Isoleucine":0.25,"Leucine":0.45,"Lysine":0.5,"Methionine":0.16,"Cystine":0.06,"Phenylalanine":0.21,"Tyrosine":0.19,"Valine":0.28,"Arginine":0.33,"Histidine":0.16,"Alanine":0.33,"AsparticAcid":0.57,"GlutamicAcid":0.83,"Glycine":0.26,"Proline":0.2,"Serine":0.22,"omega3":0.04,"omega6":0.01,"AddedSugars":0.0,"IntrinsicSugars":0.47},"addedSugars":0.0,"intrinsicSugars":4.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"6963","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.9,"yieldFactorFat":1.0,"sources":[{"ndb":"15015","name":"Fish, cod, Atlantic, raw","grams":302.7},{"ndb":"14411","name":"Water, tap, drinking","grams":630.9},{"ndb":"14106","name":"Alcoholic beverage, wine, table, white","grams":80.0},{"ndb":"1145","name":"Butter, without salt","grams":4.7},{"ndb":"11282","name":"Onions, raw","grams":50.0},{"ndb":"11246","name":"Leeks, (bulb and lower leaf-portion), raw","grams":29.7},{"ndb":"11143","name":"Celery, raw","grams":26.7},{"ndb":"11297","name":"Parsley, fresh","grams":6.0},{"ndb":"2049","name":"Thyme, fresh","grams":1.0},{"ndb":"2004","name":"Spices, bay leaf","grams":0.3},{"ndb":"2030","name":"Spices, pepper, black","grams":0.4},{"ndb":"9152","name":"Lemon juice, raw","grams":10.0},{"ndb":"2047","name":"Salt, table","grams":2.0}],"sections":[{"section_key":"stock","section_label":"Stock:","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_protein":0.355,"yield_factor_carbohydrate":0.293,"yield_factor_other":1.0,"ingredient_count":13,"raw_grams":3432.85,"raw_water_grams":3168.81,"raw_fat_grams":18.52,"raw_protein_grams":166.53,"raw_carb_grams":40.51,"final_grams":2979.92}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Fish broth', quantity: 'custom (g)', foodWord: 'FISHBROTH', ndbNo: '6963', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'cod fillet', quantity: '2 lb', section: 'stock', ndbNo: '15015', portionDesc: 'g', portionGrams: 908.0 },
+      { name: 'water', quantity: '8 cups', section: 'stock', ndbNo: '14411', portionDesc: 'g', portionGrams: 1892.7 },
+      { name: 'White wine, dry', quantity: '1 cup', section: 'stock', ndbNo: '14106', portionDesc: 'g', portionGrams: 240.0 },
+      { name: 'unsalted butter', quantity: '1 tbsp', section: 'stock', ndbNo: '1145', portionDesc: 'g', portionGrams: 14.2 },
+      { name: 'onion', quantity: '1 medium', section: 'stock', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'Leek, raw', quantity: '1 medium', section: 'stock', ndbNo: '11246', portionDesc: 'g', portionGrams: 89.0 },
+      { name: 'celery stalk', quantity: '2 stalks', section: 'stock', ndbNo: '11143', portionDesc: 'g', portionGrams: 80.0 },
+      { name: 'fresh parsley', quantity: '¾ oz', section: 'stock', ndbNo: '11297', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'fresh thyme leaves', quantity: '3 sprigs', section: 'stock', ndbNo: '2049', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'Bay leaf, dried', quantity: '2 leaves', section: 'stock', ndbNo: '2004', portionDesc: 'g', portionGrams: 0.8 },
+      { name: 'ground black pepper', quantity: '½ tsp', section: 'stock', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'lemon juice', quantity: 'juice of 1 lemon', section: 'stock', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'salt', quantity: '1 tsp', section: 'stock', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 }
+    ],
+    recipeInstructions: [
+      'Melt the butter in a large stockpot over medium heat. Add the leek, onion, and celery and sweat, stirring occasionally, for 3 to 4 minutes until softened but not browned.',
+      'Add the cod and white wine. Cook for 2 minutes to allow the alcohol to begin evaporating.',
+      'Add the water, lemon juice, parsley, thyme, bay leaves, black pepper, and salt. Bring to a simmer over high heat.',
+      'Skim any foam that rises to the surface during the first few minutes.',
+      'Reduce heat to maintain a bare simmer. Cook uncovered for 20 to 30 minutes. Do not simmer longer — prolonged cooking makes fish stock bitter.',
+      'Do not stir — stirring emulsifies fats and impurities back into the liquid.',
+      'Strain the stock through a fine-mesh strainer or cheesecloth-lined colander. Discard the solids.',
+      'Cool to room temperature and refrigerate for up to 3 days, or freeze for up to 3 months.'
+    ],
+    sections: [
+      { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];
