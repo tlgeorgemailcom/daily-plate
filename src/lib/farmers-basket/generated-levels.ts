@@ -6973,7 +6973,7 @@ export const LEVELS: Level[] = [
       { name: 'salt', quantity: 'pinch', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.375 },
       { name: 'White pepper, ground', quantity: 'tiny pinch', section: 'sauce', ndbNo: '2032', portionDesc: 'g', portionGrams: 0.15 },
       { name: 'ground nutmeg', quantity: 'tiny pinch', section: 'sauce', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.06875 },
-      { name: 'ground cloves', quantity: 'tiny pinch (or 1 whole clove)', section: 'sauce', ndbNo: '2011', portionDesc: 'g', portionGrams: 0.0875 },
+      { name: 'ground cloves', quantity: 'tiny pinch (or 1 whole clove, discarded)', section: 'sauce', ndbNo: '2011', portionDesc: 'g', portionGrams: 0.0875 },
       { name: 'onion', quantity: '1/4 small onion + 1 bay leaf (for steeping, discarded)', section: 'sauce', ndbNo: '11282', portionDesc: 'g' }
     ],
     recipeInstructions: [
