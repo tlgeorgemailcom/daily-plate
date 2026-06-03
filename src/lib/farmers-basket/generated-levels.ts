@@ -7290,5 +7290,54 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089 }
     ],
+  },
+  {
+    id: 'STOCK_003',
+    name: 'Chicken Broth',
+    category: 'sauces & condiments',
+    dietaryCategory: 'all',
+    levelNum: 159,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 qt (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":233.1,"pro":32.6,"fat":11.3,"carb":0.2,"fib":2.8,"h2o":799.4,"sug":4.3,"perServing":{"cal":233.1,"pro":32.6,"fat":11.3,"carb":0.2,"fib":2.8,"h2o":799.4,"sug":4.3,"AddedSugars":0.0,"IntrinsicSugars":4.3},"micros":{"vitaminA":61.59,"vitaminC":1.24,"vitaminD":1.34,"vitaminE":0.37,"vitaminK":11.93,"vitaminB6":0.14,"vitaminB12":0.14,"thiamin":0.03,"riboflavin":0.07,"niacin":2.31,"folate":6.32,"calcium":14.85,"iron":0.52,"magnesium":10.97,"phosphorus":70.98,"potassium":115.68,"sodium":49.43,"zinc":0.74,"copper":0.04,"selenium":9.2,"cholesterol":61.73,"saturatedFat":4.32,"monoFat":6.4,"polyFat":2.69,"omega3":0.04,"omega6":0.53},"gramsPerServing":843.2,"servings":4,"per100g":{"Energy_KCal":27.64,"Water":94.8,"Protein":3.86,"TotalLipidFat":1.34,"Carbohydrate":0.03,"FiberTotalDietary":0.33,"SugarsTotal":0.52,"Cholesterol":61.73,"FattyAcids_totalSaturated":4.32,"FattyAcids_totalMonounsaturated":6.4,"FattyAcids_totalPolyunsaturated":2.69,"LinoleicAcid":0.53,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.01,"VitaminA_RAE":61.59,"Retinol":29.41,"Carotene_beta":328.79,"VitaminD":1.34,"VitaminE_alphaTocopherol":0.37,"VitaminK_phylloquinone":11.93,"VitaminC_totalAscorbicAcid":1.24,"Thiamin":0.03,"Riboflavin":0.07,"Niacin":2.31,"PantothenicAcid":0.37,"VitaminB6":0.14,"Folate_total":6.32,"Folate_food":6.32,"Folate_DFE":6.32,"FolicAcid":0.0,"VitaminB12":0.14,"Choline_total":19.71,"Betaine":2.45,"LuteinZeaxanthin":74.6,"Lycopene":0.04,"Calcium_Ca":14.85,"Iron_Fe":0.52,"Magnesium_Mg":10.97,"Phosphorus_P":70.98,"Potassium_K":115.68,"Sodium_Na":49.43,"Zinc_Zn":0.74,"Copper_Cu":0.04,"Manganese_Mn":0.04,"Selenium_Se":9.2,"Tryptophan":0.12,"Threonine":0.45,"Isoleucine":0.5,"Leucine":0.8,"Lysine":0.9,"Methionine":0.27,"Cystine":0.12,"Phenylalanine":0.41,"Tyrosine":0.35,"Valine":0.52,"Arginine":0.69,"Histidine":0.34,"Alanine":0.63,"AsparticAcid":0.97,"GlutamicAcid":1.54,"Glycine":0.65,"Proline":0.46,"Serine":0.39,"omega3":0.04,"omega6":0.53,"AddedSugars":0.0,"IntrinsicSugars":0.52},"addedSugars":0.0,"intrinsicSugars":4.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.68,"yieldFactorFat":0.089,"sources":[{"ndb":"5048","name":"Chicken, broilers or fryers, back, meat and skin, raw","grams":340.2},{"ndb":"5100","name":"Chicken, broilers or fryers, wing, meat and skin, raw","grams":226.8},{"ndb":"14411","name":"Water, tap, drinking","grams":709.8},{"ndb":"11282","name":"Onions, raw","grams":37.5},{"ndb":"11124","name":"Carrots, raw","grams":30.5},{"ndb":"11143","name":"Celery, raw","grams":30.0},{"ndb":"11246","name":"Leeks, (bulb and lower leaf-portion), raw","grams":22.2},{"ndb":"11297","name":"Parsley, fresh","grams":4.5},{"ndb":"2049","name":"Thyme, fresh","grams":0.8},{"ndb":"2004","name":"Spices, bay leaf","grams":0.3},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3}],"sections":[{"section_key":"stock","section_label":"Stock:","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.68,"yield_factor_fat":0.089,"yield_factor_protein":0.366,"yield_factor_carbohydrate":0.02,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":5611.41,"raw_water_grams":4702.27,"raw_fat_grams":508.9,"raw_protein_grams":355.99,"raw_carb_grams":45.36,"final_grams":3372.92}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Chicken Broth', quantity: 'custom (g)', foodWord: 'CHICKENBROTH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Chicken back, raw', quantity: '3 lb', section: 'stock', ndbNo: '5048', portionDesc: 'g', portionGrams: 1360.776 },
+      { name: 'Chicken wing, raw', quantity: '2 lb', section: 'stock', ndbNo: '5100', portionDesc: 'g', portionGrams: 907.184 },
+      { name: 'water', quantity: '12 cups', section: 'stock', ndbNo: '14411', portionDesc: 'g', portionGrams: 2839.1 },
+      { name: 'onion', quantity: '1 medium', section: 'stock', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'Carrot, raw', quantity: '2 medium', section: 'stock', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'celery stalk', quantity: '3 stalks', section: 'stock', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'Leek, raw', quantity: '1 medium', section: 'stock', ndbNo: '11246', portionDesc: 'g', portionGrams: 89.0 },
+      { name: 'fresh parsley', quantity: '1/4 cup', section: 'stock', ndbNo: '11297', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'fresh thyme leaves', quantity: '4 sprigs', section: 'stock', ndbNo: '2049', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'Bay leaf, dried', quantity: '2 leaves', section: 'stock', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'stock', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
+    ],
+    recipeInstructions: [
+      'Place chicken backs and wings in a large stockpot. Cover with 12 cups of cold water.',
+      'Bring to a boil over high heat, skimming any foam and impurities that rise to the surface.',
+      'Reduce heat to a bare simmer. Add onion, carrot, celery, and leek.',
+      'Add parsley, thyme, bay leaves, and black pepper.',
+      'Add boiling water if needed to keep the vegetables covered.',
+      'Simmer uncovered for 2 to 3 hours, skimming any fat and foam occasionally. Do not let the broth boil — it will cloud.',
+      'Strain through a fine-mesh strainer, pressing lightly on the solids. Discard solids.',
+      'Cool to room temperature, then refrigerate. Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid.'
+    ],
+    sections: [
+      { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089 }
+    ],
   }
 ];
