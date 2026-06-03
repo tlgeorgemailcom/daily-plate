@@ -7235,7 +7235,7 @@ export const LEVELS: Level[] = [
       'Add boiling water to cover the top of the vegetables.',
       'Simmer uncovered for 3 to 4 hours, skimming occasionally. You\'re clarifying the stock by skimming the oil, as well. Do not let the stock boil — it will cloud.',
       'Strain through a fine-mesh strainer, pressing lightly on the solids. Discard solids.',
-      'Cool to room temperature, then refrigerate. Skim and discard any solidified fat from the surface before using.'
+      'Cool to room temperature, then refrigerate. Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid.'
     ],
     sections: [
       { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089 }
@@ -7285,7 +7285,7 @@ export const LEVELS: Level[] = [
       'Bring to a boil over high heat, skimming any foam that rises to the surface.',
       'Reduce heat to a bare simmer. Simmer uncovered for 4 hours, skimming any fat and foam that rise to the surface occasionally. Do not let the stock boil — it will cloud.',
       'Strain through a fine-mesh strainer, pressing lightly on the solids. Discard solids.',
-      'Cool to room temperature, then refrigerate. Skim and discard any solidified fat from the surface before using.'
+      'Cool to room temperature, then refrigerate. Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid.'
     ],
     sections: [
       { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089 }
