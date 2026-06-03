@@ -26,10 +26,10 @@ SvelteKit + Svelte 5 + TypeScript food/word game. Nutrition data comes from a Py
 
 **Edit-build-upload loop:**
 ```
-python recipes_v3/tools/validate_ledger.py   # check ingredient_key integrity
-python recipes_v3/tools/build_all.py         # compute macros → output/
-python recipes_v3/tools/upload.py            # push to Turso
-python recipes_v3/tools/generate_bundle.py  # write src/lib/farmers-basket/generated-levels.ts
+python recipes_v3/tools/validate_ledger.py              # check ingredient_key integrity
+python recipes_v3/tools/build_all.py --recipe RECIPE_ID  # compute macros → output/ (ALWAYS use --recipe; bare build_all.py rebuilds all 156 recipes and dirties unrelated JSON files)
+python recipes_v3/tools/upload.py --recipe RECIPE_ID     # push to Turso
+python recipes_v3/tools/generate_bundle.py               # write src/lib/farmers-basket/generated-levels.ts
 ```
 Always commit `recipes_bundle.json` after generating.
 
