@@ -7240,5 +7240,55 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089 }
     ],
+  },
+  {
+    id: 'STOCK_002',
+    name: 'Brown Chicken Stock',
+    category: 'sauces & condiments',
+    dietaryCategory: 'all',
+    levelNum: 158,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 qt (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":199.4,"pro":24.0,"fat":11.4,"carb":0.3,"fib":3.1,"h2o":903.6,"sug":5.3,"perServing":{"cal":199.4,"pro":24.0,"fat":11.4,"carb":0.3,"fib":3.1,"h2o":903.6,"sug":5.3,"AddedSugars":0.0,"IntrinsicSugars":5.3},"micros":{"vitaminA":61.06,"vitaminC":1.21,"vitaminD":0.0,"vitaminE":0.25,"vitaminK":10.81,"vitaminB6":0.07,"vitaminB12":0.1,"thiamin":0.02,"riboflavin":0.06,"niacin":1.48,"folate":5.04,"calcium":13.84,"iron":0.58,"magnesium":8.51,"phosphorus":50.63,"potassium":87.98,"sodium":35.03,"zinc":0.62,"copper":0.04,"selenium":5.65,"cholesterol":40.62,"saturatedFat":3.91,"monoFat":5.72,"polyFat":2.49,"omega3":0.02,"omega6":0.0},"gramsPerServing":938.1,"servings":4,"per100g":{"Energy_KCal":21.26,"Water":96.32,"Protein":2.56,"TotalLipidFat":1.21,"Carbohydrate":0.03,"FiberTotalDietary":0.33,"SugarsTotal":0.57,"Cholesterol":40.62,"FattyAcids_totalSaturated":3.91,"FattyAcids_totalMonounsaturated":5.72,"FattyAcids_totalPolyunsaturated":2.49,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.01,"VitaminA_RAE":61.06,"Retinol":31.55,"Carotene_beta":302.47,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.25,"VitaminK_phylloquinone":10.81,"VitaminC_totalAscorbicAcid":1.21,"Thiamin":0.02,"Riboflavin":0.06,"Niacin":1.48,"PantothenicAcid":0.3,"VitaminB6":0.07,"Folate_total":5.04,"Folate_food":5.04,"Folate_DFE":5.04,"FolicAcid":0.0,"VitaminB12":0.1,"Choline_total":1.14,"Betaine":0.03,"LuteinZeaxanthin":67.06,"Lycopene":220.81,"Calcium_Ca":13.84,"Iron_Fe":0.58,"Magnesium_Mg":8.51,"Phosphorus_P":50.63,"Potassium_K":87.98,"Sodium_Na":35.03,"Zinc_Zn":0.62,"Copper_Cu":0.04,"Manganese_Mn":0.04,"Selenium_Se":5.65,"Tryptophan":0.07,"Threonine":0.28,"Isoleucine":0.32,"Leucine":0.48,"Lysine":0.53,"Methionine":0.17,"Cystine":0.09,"Phenylalanine":0.26,"Tyrosine":0.21,"Valine":0.33,"Arginine":0.45,"Histidine":0.19,"Alanine":0.44,"AsparticAcid":0.63,"GlutamicAcid":1.01,"Glycine":0.58,"Proline":0.4,"Serine":0.25,"omega3":0.02,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.57},"addedSugars":0.0,"intrinsicSugars":5.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.68,"yieldFactorFat":0.089,"sources":[{"ndb":"5048","name":"Chicken, broilers or fryers, back, meat and skin, raw","grams":340.2},{"ndb":"5084","name":"Chicken, broilers or fryers, neck, meat and skin, raw","grams":113.4},{"ndb":"14411","name":"Water, tap, drinking","grams":946.2},{"ndb":"11282","name":"Onions, raw","grams":37.5},{"ndb":"11124","name":"Carrots, raw","grams":30.5},{"ndb":"11143","name":"Celery, raw","grams":30.0},{"ndb":"11246","name":"Leeks, (bulb and lower leaf-portion), raw","grams":22.2},{"ndb":"11546","name":"Tomato products, canned, paste, without salt added","grams":8.0},{"ndb":"11297","name":"Parsley, fresh","grams":4.5},{"ndb":"2049","name":"Thyme, fresh","grams":0.8},{"ndb":"2004","name":"Spices, bay leaf","grams":0.3},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3}],"sections":[{"section_key":"stock","section_label":"Stock:","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.68,"yield_factor_fat":0.089,"yield_factor_protein":0.366,"yield_factor_carbohydrate":0.02,"yield_factor_other":1.0,"ingredient_count":12,"raw_grams":6135.72,"raw_water_grams":5315.17,"raw_fat_grams":511.5,"raw_protein_grams":262.25,"raw_carb_grams":51.41,"final_grams":3752.23}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Brown Chicken Stock', quantity: 'custom (g)', foodWord: 'BROWNCHICKENSTOCK', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Chicken back, raw', quantity: '3 lbs', section: 'stock', ndbNo: '5048', portionDesc: 'g', portionGrams: 1360.776 },
+      { name: 'Chicken neck, raw', quantity: '1 lb', section: 'stock', ndbNo: '5084', portionDesc: 'g', portionGrams: 453.592 },
+      { name: 'water', quantity: '1 gallon', section: 'stock', ndbNo: '14411', portionDesc: 'g', portionGrams: 3785.0 },
+      { name: 'onion', quantity: '1 large, quartered', section: 'stock', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'Carrot, raw', quantity: '2 medium', section: 'stock', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'celery stalk', quantity: '3 stalks', section: 'stock', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'Leek, raw', quantity: '1 leek, halved lengthwise', section: 'stock', ndbNo: '11246', portionDesc: 'g', portionGrams: 89.0 },
+      { name: 'tomato paste', quantity: '2 tbsp', section: 'stock', ndbNo: '11546', portionDesc: 'g', portionGrams: 32.0 },
+      { name: 'fresh parsley', quantity: '6 sprigs', section: 'stock', ndbNo: '11297', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'fresh thyme leaves', quantity: '3 sprigs', section: 'stock', ndbNo: '2049', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'Bay leaf, dried', quantity: '2 leaves', section: 'stock', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'ground black pepper', quantity: '½ tsp', section: 'stock', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
+    ],
+    recipeInstructions: [
+      'Preheat oven to 450°F. Spread chicken backs and necks in a roasting pan. Roast for 30 minutes, turning once, until deeply browned.',
+      'Add onion, carrot, celery, and leek to the pan. Roast for another 20 minutes until the vegetables are caramelized.',
+      'Transfer roasted bones and vegetables to a large stockpot. Pour off excess fat from the roasting pan, then deglaze with a ladleful of water, scraping up all browned bits. Add to the pot.',
+      'Stir in tomato paste. Add 1 gallon of cold water, parsley, thyme, bay leaves, and black pepper.',
+      'Bring to a boil over high heat, skimming any foam that rises to the surface.',
+      'Reduce heat to a bare simmer. Simmer uncovered for 4 hours, skimming any fat and foam that rise to the surface occasionally. Do not let the stock boil — it will cloud.',
+      'Strain through a fine-mesh strainer, pressing lightly on the solids. Discard solids.',
+      'Cool to room temperature, then refrigerate. Skim and discard any solidified fat from the surface before using.'
+    ],
+    sections: [
+      { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089 }
+    ],
   }
 ];
