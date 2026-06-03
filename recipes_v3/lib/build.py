@@ -69,6 +69,21 @@ def _parse_stages(cook_stages: str) -> list[tuple[int, int]]:
 
 _MACRO_SET = set(MACROS)
 
+# Fat-soluble vitamins and carotenoids partition into fat/solids and leave
+# with the discard when a stock or broth is strained. yield_factor_other (yfo)
+# is multiplied against these nutrients only; all water-soluble vitamins and
+# minerals are unaffected. Default yfo=1.0 preserves existing behaviour for
+# all non-stock recipes.
+_FAT_SOLUBLE_NUTRIENTS = {
+    "VitaminA_RAE", "Retinol",
+    "Carotene_beta", "Carotene_alpha", "Cryptoxanthin_beta",
+    "LuteinZeaxanthin", "Lycopene",
+    "VitaminD", "VitaminD2_ergocalciferol", "VitaminD3_cholecalciferol", "VitaminD2D3",
+    "VitaminE_alphaTocopherol", "Tocopherol_beta", "Tocopherol_gamma", "Tocopherol_delta",
+    "Tocotrienol_aplha", "Tocotrienol_beta", "Tocotrienol_gamma", "Tocotrienol_delta",
+    "VitaminK_phylloquinone",
+}
+
 
 def _round(x: float, ndigits: int = 2) -> float:
     return round(float(x), ndigits)
@@ -251,6 +266,7 @@ def _build_recipe_single(
     yff = recipe.yield_factor_fat
     yfp = recipe.yield_factor_protein
     yfc = recipe.yield_factor_carbohydrate
+    yfo = recipe.yield_factor_other
 
     retained: dict[str, float] = {}
     for n in EXTENDED_NUTRIENTS:
@@ -264,6 +280,8 @@ def _build_recipe_single(
             retained[n] = sums[n] * yfc
         elif n in _MACRO_SET:
             retained[n] = sums[n]
+        elif n in _FAT_SOLUBLE_NUTRIENTS:
+            retained[n] = sums[n] * get_retention(method, n) * yfo
         else:
             retained[n] = sums[n] * get_retention(method, n)
 
@@ -516,6 +534,7 @@ def _build_recipe_multi(
         yff = s.yield_factor_fat
         yfp = s.yield_factor_protein
         yfc = s.yield_factor_carbohydrate
+        yfo_S = s.yield_factor_other
         sums_S = st["sums"]
         retained_S: dict[str, float] = {}
         for n in EXTENDED_NUTRIENTS:
@@ -529,6 +548,8 @@ def _build_recipe_multi(
                 retained_S[n] = sums_S[n] * yfc
             elif n in _MACRO_SET:
                 retained_S[n] = sums_S[n]
+            elif n in _FAT_SOLUBLE_NUTRIENTS:
+                retained_S[n] = sums_S[n] * get_retention(method, n) * yfo_S
             else:
                 retained_S[n] = sums_S[n] * get_retention(method, n)
             retained_dish[n] += retained_S[n]
