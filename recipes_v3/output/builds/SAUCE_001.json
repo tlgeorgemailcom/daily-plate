@@ -151,7 +151,7 @@
       "grams": 0.09,
       "section": "sauce",
       "ingredient_group": "sauce",
-      "qty_display": "tiny pinch (or 1 whole clove)",
+      "qty_display": "tiny pinch (or 1 whole clove, discarded)",
       "contribution": {
         "Energy_KCal": 0.24,
         "Protein": 0.005,
