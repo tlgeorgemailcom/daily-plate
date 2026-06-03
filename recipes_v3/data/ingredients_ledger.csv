@@ -217,3 +217,8 @@ beef_chili_no_beans,22911,CHILI,"Chili, no beans, canned entree","Beef chili, no
 white_pepper_ground,2032,WHITEPEPPERCORN,"Spices, pepper, white","White pepper, ground",tsp,2.4,
 tomato_puree,11547,TOMATOPUREE,"Tomato products, canned, puree, without salt added",tomato purée,cup,244.0,"canned tomato purée, unsalted"
 chicken_broth_canned,6194,CHICKENBROTH,"Soup, chicken broth, ready-to-serve",chicken broth,cup,245.0,"canned chicken broth, ready-to-serve"
+leek_raw,11246,LEEKRAW,"Leeks, (bulb and lower leaf-portion), raw","Leek, raw",leek,89.0,1 medium leek (bulb + lower leaf) ~89g
+bay_leaf_dried,2004,BAYLEAF,"Spices, bay leaf","Bay leaf, dried",leaf,0.6,1 dried bay leaf ~0.6g (SR Legacy M1 tsp crumbled = 0.6g)
+chicken_back_raw,5048,CHICKENBACKRAW,"Chicken, broilers or fryers, back, meat and skin, raw","Chicken back, raw",lb,453.592,Bone-in back with skin; 1 lb ~454g
+chicken_neck_raw,5084,CHICKENNECKRAW,"Chicken, broilers or fryers, neck, meat and skin, raw","Chicken neck, raw",lb,453.592,Bone-in neck with skin; 1 lb ~454g
+chicken_feet_boiled,5335,CHICKENFEETBOILED,"Chicken, feet, boiled","Chicken feet, boiled",lb,453.592,Pre-cleaned/boiled feet; 1 lb ~454g
