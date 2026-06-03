@@ -1,6 +1,6 @@
 recipe_id,row_order,ingredient_key,qty_display,grams,grams_min,grams_max,section,ingredient_group,is_optional,display_name_override
 SAUCE_005,1,@SAUCE_001,"1 recipe Béchamel (1 cup, 245.08g)",245.08,,,bechamel,,,
-SAUCE_005,2,tomato_puree,scant 1/4 cup,37.5,,,aurore,,,
+SAUCE_005,2,tomato_puree,1/4 cup,37.5,,,aurore,,,
 SAUCE_005,3,salt_table,pinch,0.375,,,aurore,,,
 SAUCE_005,4,white_pepper_ground,tiny pinch,0.075,,,aurore,,,
 SAUCE_004,1,@SAUCE_001,"1 recipe Béchamel (1 cup, 245.08g)",245.08,,,bechamel,,,

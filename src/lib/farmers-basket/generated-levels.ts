@@ -7139,7 +7139,7 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Sauce Aurore — Béchamel', quantity: 'custom (g)', foodWord: 'AUROREBECHAMEL', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'Béchamel Sauce', quantity: '1 recipe Béchamel (1 cup, 245.08g)', section: 'bechamel', foodWord: 'BECHAMEL', portionDesc: 'g', portionGrams: 245.08, isDish: true, componentRef: 'SAUCE_001' },
-      { name: 'tomato purée', quantity: 'scant 1/4 cup', section: 'aurore', ndbNo: '11547', portionDesc: 'g', portionGrams: 37.5 },
+      { name: 'tomato purée', quantity: '1/4 cup', section: 'aurore', ndbNo: '11547', portionDesc: 'g', portionGrams: 37.5 },
       { name: 'salt', quantity: 'pinch', section: 'aurore', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.375 },
       { name: 'White pepper, ground', quantity: 'tiny pinch', section: 'aurore', ndbNo: '2032', portionDesc: 'g', portionGrams: 0.075 }
     ],
