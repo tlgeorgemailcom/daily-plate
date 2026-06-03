@@ -164,6 +164,27 @@
       "sugar_policy": "none_added",
       "added_sugar_g": 0.0,
       "intrinsic_sugar_g": 0.008
+    },
+    {
+      "ingredient_key": "onion_raw",
+      "ndb_no": "11282",
+      "long_desc": "Onions, raw",
+      "grams": 0.0,
+      "section": "sauce",
+      "ingredient_group": "sauce",
+      "qty_display": "1 small onion + 2 bay leaves (for steeping, discarded)",
+      "contribution": {
+        "Energy_KCal": 0.0,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 0.0
+      },
+      "sugar_policy": "none_added",
+      "added_sugar_g": 0.0,
+      "intrinsic_sugar_g": 0.0
     }
   ],
   "skipped_ingredients": [],
@@ -320,7 +341,7 @@
       "yield_factor_water": 0.88,
       "yield_factor_fat": 1.0,
       "yield_factor_other": 1.0,
-      "ingredient_count": 7,
+      "ingredient_count": 8,
       "raw_grams": 1080.97,
       "raw_water_grams": 876.73,
       "raw_fat_grams": 89.77,
