@@ -7489,5 +7489,56 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'STOCK_007',
+    name: 'Vegetable Stock',
+    category: 'sauces & condiments',
+    dietaryCategory: 'vegan',
+    levelNum: 163,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 qt (makes 2+)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule C',
+    nutritionJson: {"cal":56.4,"pro":2.5,"fat":0.7,"carb":9.9,"fib":7.4,"h2o":1047.8,"sug":13.5,"perServing":{"cal":56.4,"pro":2.5,"fat":0.7,"carb":9.9,"fib":7.4,"h2o":1047.8,"sug":13.5,"AddedSugars":0.0,"IntrinsicSugars":13.5},"micros":{"vitaminA":51.28,"vitaminC":1.85,"vitaminD":0.1,"vitaminE":0.13,"vitaminK":17.5,"vitaminB6":0.03,"vitaminB12":0.0,"thiamin":0.01,"riboflavin":0.03,"niacin":0.18,"folate":7.03,"calcium":14.0,"iron":0.23,"magnesium":5.02,"phosphorus":12.71,"potassium":73.4,"sodium":104.96,"zinc":0.1,"copper":0.04,"selenium":1.06,"cholesterol":0.0,"saturatedFat":0.02,"monoFat":0.01,"polyFat":0.02,"omega3":0.0,"omega6":0.0},"gramsPerServing":1067.9,"servings":2,"per100g":{"Energy_KCal":5.28,"Water":98.12,"Protein":0.24,"TotalLipidFat":0.07,"Carbohydrate":0.93,"FiberTotalDietary":0.69,"SugarsTotal":1.27,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.02,"FattyAcids_totalMonounsaturated":0.01,"FattyAcids_totalPolyunsaturated":0.02,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":51.28,"Retinol":0.0,"Carotene_beta":525.41,"VitaminD":0.1,"VitaminE_alphaTocopherol":0.13,"VitaminK_phylloquinone":17.5,"VitaminC_totalAscorbicAcid":1.85,"Thiamin":0.01,"Riboflavin":0.03,"Niacin":0.18,"PantothenicAcid":0.08,"VitaminB6":0.03,"Folate_total":7.03,"Folate_food":7.03,"Folate_DFE":7.03,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":2.84,"Betaine":0.42,"LuteinZeaxanthin":118.08,"Lycopene":194.0,"Calcium_Ca":14.0,"Iron_Fe":0.23,"Magnesium_Mg":5.02,"Phosphorus_P":12.71,"Potassium_K":73.4,"Sodium_Na":104.96,"Zinc_Zn":0.1,"Copper_Cu":0.04,"Manganese_Mn":0.07,"Selenium_Se":1.06,"Tryptophan":0.01,"Threonine":0.02,"Isoleucine":0.01,"Leucine":0.02,"Lysine":0.03,"Methionine":0.0,"Cystine":0.01,"Phenylalanine":0.02,"Tyrosine":0.01,"Valine":0.02,"Arginine":0.03,"Histidine":0.01,"Alanine":0.02,"AsparticAcid":0.05,"GlutamicAcid":0.11,"Glycine":0.02,"Proline":0.02,"Serine":0.02,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":1.27},"addedSugars":0.0,"intrinsicSugars":13.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"6700","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.82,"yieldFactorFat":0.95,"sources":[{"ndb":"14411","name":"Water, tap, drinking","grams":946.4},{"ndb":"11282","name":"Onions, raw","grams":150.0},{"ndb":"11124","name":"Carrots, raw","grams":61.0},{"ndb":"11143","name":"Celery, raw","grams":60.0},{"ndb":"11246","name":"Leeks, (bulb and lower leaf-portion), raw","grams":44.5},{"ndb":"11266","name":"Mushrooms, brown, italian, or crimini, raw","grams":36.0},{"ndb":"11215","name":"Garlic, raw","grams":4.5},{"ndb":"11546","name":"Tomato products, canned, paste, without salt added","grams":8.0},{"ndb":"11297","name":"Parsley, fresh","grams":9.0},{"ndb":"2049","name":"Thyme, fresh","grams":1.5},{"ndb":"2004","name":"Spices, bay leaf","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.6},{"ndb":"2047","name":"Salt, table","grams":3.0}],"sections":[{"section_key":"stock","section_label":"Stock:","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.82,"yield_factor_fat":0.95,"yield_factor_protein":0.484,"yield_factor_carbohydrate":0.29,"yield_factor_other":1.0,"ingredient_count":13,"raw_grams":2649.65,"raw_water_grams":2555.54,"raw_fat_grams":1.55,"raw_protein_grams":10.54,"raw_carb_grams":68.17,"final_grams":2135.73}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Soup, vegetable broth, ready to serve', quantity: 'custom (g)', foodWord: 'VEGETABLEBROTH', ndbNo: '6700', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'water', quantity: '8 cups', section: 'stock', ndbNo: '14411', portionDesc: 'g', portionGrams: 1892.7 },
+      { name: 'onion', quantity: '2 medium', section: 'stock', ndbNo: '11282', portionDesc: 'g', portionGrams: 300.0 },
+      { name: 'Carrot, raw', quantity: '2 medium', section: 'stock', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'celery stalk', quantity: '3 stalks', section: 'stock', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'Leek, raw', quantity: '1 medium', section: 'stock', ndbNo: '11246', portionDesc: 'g', portionGrams: 89.0 },
+      { name: 'crimini mushrooms', quantity: '1 cup sliced', section: 'stock', ndbNo: '11266', portionDesc: 'g', portionGrams: 72.0 },
+      { name: 'garlic', quantity: '3 cloves', section: 'stock', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'tomato paste', quantity: '1 tbsp', section: 'stock', ndbNo: '11546', portionDesc: 'g', portionGrams: 16.0 },
+      { name: 'fresh parsley', quantity: '¾ oz', section: 'stock', ndbNo: '11297', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'fresh thyme leaves', quantity: '3 sprigs', section: 'stock', ndbNo: '2049', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'Bay leaf, dried', quantity: '2 leaves', section: 'stock', ndbNo: '2004', portionDesc: 'g', portionGrams: 0.8 },
+      { name: 'ground black pepper', quantity: '½ tsp', section: 'stock', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'salt', quantity: '1 tsp', section: 'stock', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 }
+    ],
+    recipeInstructions: [
+      'Add the onion, carrot, celery, leek, mushrooms, garlic, and tomato paste to a large stockpot. Pour in the water.',
+      'Bring to a boil over high heat. Skim any foam that rises to the surface.',
+      'Add the parsley, thyme, bay leaves, black pepper, and salt.',
+      'Reduce heat to a bare simmer. Cook uncovered for 45 minutes to 1 hour.',
+      'Do not stir — stirring emulsifies fine particles back into the liquid.',
+      'Strain the stock through a fine-mesh strainer or cheesecloth-lined colander. Press gently on the solids to extract remaining liquid, then discard the solids.',
+      'Taste and adjust salt. Cool to room temperature.',
+      'Refrigerate for up to 5 days, or freeze for up to 6 months.'
+    ],
+    sections: [
+      { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.82, yieldFactorFat: 0.95 }
+    ],
   }
 ];
