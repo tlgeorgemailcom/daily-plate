@@ -7388,5 +7388,55 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089 }
     ],
+  },
+  {
+    id: 'STOCK_005',
+    name: 'Beef Bone Broth',
+    category: 'sauces & condiments',
+    dietaryCategory: 'all',
+    levelNum: 161,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 qt (makes 2+)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":323.3,"pro":73.3,"fat":3.2,"carb":0.4,"fib":5.7,"h2o":1893.4,"sug":8.5,"perServing":{"cal":323.3,"pro":73.3,"fat":3.2,"carb":0.4,"fib":5.7,"h2o":1893.4,"sug":8.5,"AddedSugars":0.0,"IntrinsicSugars":8.5},"micros":{"vitaminA":37.11,"vitaminC":0.74,"vitaminD":0.0,"vitaminE":0.04,"vitaminK":8.52,"vitaminB6":0.14,"vitaminB12":1.29,"thiamin":0.03,"riboflavin":0.09,"niacin":1.75,"folate":4.62,"calcium":14.88,"iron":0.92,"magnesium":7.31,"phosphorus":82.75,"potassium":167.77,"sodium":82.48,"zinc":2.72,"copper":0.04,"selenium":7.74,"cholesterol":17.78,"saturatedFat":0.59,"monoFat":0.81,"polyFat":0.07,"omega3":0.0,"omega6":0.0},"gramsPerServing":1990.3,"servings":2,"per100g":{"Energy_KCal":16.24,"Water":95.13,"Protein":3.68,"TotalLipidFat":0.16,"Carbohydrate":0.02,"FiberTotalDietary":0.29,"SugarsTotal":0.43,"Cholesterol":17.78,"FattyAcids_totalSaturated":0.59,"FattyAcids_totalMonounsaturated":0.81,"FattyAcids_totalPolyunsaturated":0.07,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":37.11,"Retinol":0.0,"Carotene_beta":372.74,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.04,"VitaminK_phylloquinone":8.52,"VitaminC_totalAscorbicAcid":0.74,"Thiamin":0.03,"Riboflavin":0.09,"Niacin":1.75,"PantothenicAcid":0.13,"VitaminB6":0.14,"Folate_total":4.62,"Folate_food":4.62,"Folate_DFE":4.62,"FolicAcid":0.0,"VitaminB12":1.29,"Choline_total":0.81,"Betaine":0.03,"LuteinZeaxanthin":34.33,"Lycopene":0.05,"Calcium_Ca":14.88,"Iron_Fe":0.92,"Magnesium_Mg":7.31,"Phosphorus_P":82.75,"Potassium_K":167.77,"Sodium_Na":82.48,"Zinc_Zn":2.72,"Copper_Cu":0.04,"Manganese_Mn":0.03,"Selenium_Se":7.74,"Tryptophan":0.11,"Threonine":0.44,"Isoleucine":0.45,"Leucine":0.79,"Lysine":0.83,"Methionine":0.25,"Cystine":0.11,"Phenylalanine":0.39,"Tyrosine":0.34,"Valine":0.48,"Arginine":0.64,"Histidine":0.34,"Alanine":0.6,"AsparticAcid":0.92,"GlutamicAcid":1.52,"Glycine":0.54,"Proline":0.44,"Serine":0.38,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.43},"addedSugars":0.0,"intrinsicSugars":8.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.68,"yieldFactorFat":0.089,"sources":[{"ndb":"13227","name":"Beef, shank crosscuts, separable lean only, trimmed to 1/4\" fat, choice, raw","grams":907.2},{"ndb":"14411","name":"Water, tap, drinking","grams":1892.5},{"ndb":"2048","name":"Vinegar, cider","grams":14.8},{"ndb":"11282","name":"Onions, raw","grams":75.0},{"ndb":"11124","name":"Carrots, raw","grams":91.5},{"ndb":"11143","name":"Celery, raw","grams":60.0},{"ndb":"11215","name":"Garlic, raw","grams":6.0},{"ndb":"11297","name":"Parsley, fresh","grams":9.0},{"ndb":"2049","name":"Thyme, fresh","grams":1.5},{"ndb":"2004","name":"Spices, bay leaf","grams":0.6},{"ndb":"2030","name":"Spices, pepper, black","grams":0.6},{"ndb":"2047","name":"Salt, table","grams":3.0}],"sections":[{"section_key":"stock","section_label":"Stock:","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.68,"yield_factor_fat":0.089,"yield_factor_protein":0.366,"yield_factor_carbohydrate":0.02,"yield_factor_other":1.0,"ingredient_count":12,"raw_grams":6123.32,"raw_water_grams":5568.76,"raw_fat_grams":71.04,"raw_protein_grams":400.48,"raw_carb_grams":42.86,"final_grams":3980.7}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Beef Bone Broth', quantity: 'custom (g)', foodWord: 'BEEFBONEBROTH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Beef shank crosscuts, raw', quantity: '4 lb', section: 'stock', ndbNo: '13227', portionDesc: 'g', portionGrams: 1814.369 },
+      { name: 'water', quantity: '1 gallon (cold start)', section: 'stock', ndbNo: '14411', portionDesc: 'g', portionGrams: 3785.0 },
+      { name: 'apple cider vinegar', quantity: '2 tbsp', section: 'stock', ndbNo: '2048', portionDesc: 'g', portionGrams: 29.6 },
+      { name: 'onion', quantity: '1 large, quartered', section: 'stock', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'Carrot, raw', quantity: '3 medium', section: 'stock', ndbNo: '11124', portionDesc: 'g', portionGrams: 183.0 },
+      { name: 'celery stalk', quantity: '3 stalks', section: 'stock', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'garlic', quantity: '4 cloves', section: 'stock', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'fresh parsley', quantity: '6 sprigs', section: 'stock', ndbNo: '11297', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'fresh thyme leaves', quantity: '3 sprigs', section: 'stock', ndbNo: '2049', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'Bay leaf, dried', quantity: '2 leaves', section: 'stock', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'ground black pepper', quantity: '½ tsp', section: 'stock', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'salt', quantity: '1 tsp', section: 'stock', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 }
+    ],
+    recipeInstructions: [
+      'Place the beef shanks in a large stockpot. Pour the apple cider vinegar over the bones and let sit for 30 minutes before adding the water. The vinegar helps draw minerals from the bones.',
+      'Add the water and bring to a boil over high heat. Skim any gray foam and impurities that rise to the surface during the first 20 to 30 minutes.',
+      'Reduce heat to a bare simmer. Add the onion, carrot, celery, garlic, parsley, thyme, bay leaves, black pepper, and salt.',
+      'Simmer uncovered for 12 to 24 hours, skimming any fat and foam occasionally. The longer the simmer, the richer and more gelatinous the broth. Do not let it boil hard. Do not stir — stirring emulsifies fats and impurities back into the liquid.',
+      'Add water as needed to keep the bones mostly submerged during the simmer.',
+      'Strain the broth through a fine-mesh strainer or cheesecloth-lined colander. Discard the solids.',
+      'Cool to room temperature, then refrigerate. The broth will gel when cold — this is normal and desirable.',
+      'Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid.'
+    ],
+    sections: [
+      { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089 }
+    ],
   }
 ];
