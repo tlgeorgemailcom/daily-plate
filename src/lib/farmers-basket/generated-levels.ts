@@ -7233,7 +7233,7 @@ export const LEVELS: Level[] = [
       'Reduce heat to a bare simmer. Add onion, carrot, celery, and leek.',
       'Add parsley, thyme, bay leaves, and black pepper.',
       'Add boiling water to cover the top of the vegetables.',
-      'Simmer uncovered for 3 to 4 hours, skimming occasionally. You\'re clarifying the stock by skimming the oil, as well. Do not let the stock boil — it will cloud.',
+      'Simmer uncovered for 3 to 4 hours, skimming occasionally. You\'re clarifying the stock by skimming the oil, as well. Do not let the stock boil — it will cloud. Do not stir — stirring emulsifies fats and impurities back into the liquid.',
       'Strain through a fine-mesh strainer, pressing lightly on the solids. Discard solids.',
       'Cool to room temperature, then refrigerate. Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid.'
     ],
@@ -7283,7 +7283,7 @@ export const LEVELS: Level[] = [
       'Transfer roasted bones and vegetables to a large stockpot. Pour off excess fat from the roasting pan, then deglaze with a ladleful of water, scraping up all browned bits. Add to the pot.',
       'Stir in tomato paste. Add 1 gallon of cold water, parsley, thyme, bay leaves, and black pepper.',
       'Bring to a boil over high heat, skimming any foam that rises to the surface.',
-      'Reduce heat to a bare simmer. Simmer uncovered for 4 hours, skimming any fat and foam that rise to the surface occasionally. Do not let the stock boil — it will cloud.',
+      'Reduce heat to a bare simmer. Simmer uncovered for 4 hours, skimming any fat and foam that rise to the surface occasionally. Do not let the stock boil — it will cloud. Do not stir — stirring emulsifies fats and impurities back into the liquid.',
       'Strain through a fine-mesh strainer, pressing lightly on the solids. Discard solids.',
       'Cool to room temperature, then refrigerate. Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid.'
     ],
@@ -7332,7 +7332,7 @@ export const LEVELS: Level[] = [
       'Reduce heat to a bare simmer. Add onion, carrot, celery, and leek.',
       'Add parsley, thyme, bay leaves, and black pepper.',
       'Add boiling water if needed to keep the vegetables covered.',
-      'Simmer uncovered for 2 to 3 hours, skimming any fat and foam occasionally. Do not let the broth boil — it will cloud.',
+      'Simmer uncovered for 2 to 3 hours, skimming any fat and foam occasionally. Do not let the broth boil — it will cloud. Do not stir — stirring emulsifies fats and impurities back into the liquid.',
       'Strain through a fine-mesh strainer, pressing lightly on the solids. Discard solids.',
       'Cool to room temperature, then refrigerate. Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid.'
     ],
@@ -7381,7 +7381,7 @@ export const LEVELS: Level[] = [
       'Return the shanks to the pot. Add the onion, carrot, celery, leek, parsley, thyme, bay leaves, and black pepper. Pour in the water.',
       'Bring to a boil over high heat. As soon as a boil is reached, reduce to a bare simmer.',
       'Skim the gray foam and fat that rise to the surface during the first 20 to 30 minutes of simmering.',
-      'Simmer uncovered for 6 to 8 hours, skimming any fat and foam occasionally. Keep at a gentle simmer — do not let it boil hard.',
+      'Simmer uncovered for 6 to 8 hours, skimming any fat and foam occasionally. Keep at a gentle simmer — do not let it boil hard. Do not stir — stirring emulsifies fats and impurities back into the liquid.',
       'Strain the stock through a fine-mesh strainer or cheesecloth-lined colander. Discard the solids.',
       'Cool to room temperature, then refrigerate. Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid.'
     ],

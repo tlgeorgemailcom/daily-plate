@@ -1008,7 +1008,7 @@ STOCK_001,2,"Bring to a boil over high heat, skimming any foam and impurities th
 STOCK_001,3,"Reduce heat to a bare simmer. Add onion, carrot, celery, and leek."
 STOCK_001,4,"Add parsley, thyme, bay leaves, and black pepper."
 STOCK_001,5,Add boiling water to cover the top of the vegetables.
-STOCK_001,6,"Simmer uncovered for 3 to 4 hours, skimming occasionally. You're clarifying the stock by skimming the oil, as well. Do not let the stock boil — it will cloud."
+STOCK_001,6,"Simmer uncovered for 3 to 4 hours, skimming occasionally. You're clarifying the stock by skimming the oil, as well. Do not let the stock boil — it will cloud. Do not stir — stirring emulsifies fats and impurities back into the liquid."
 STOCK_001,7,"Strain through a fine-mesh strainer, pressing lightly on the solids. Discard solids."
 STOCK_001,8,"Cool to room temperature, then refrigerate. Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid."
 STOCK_002,1,"Preheat oven to 450°F. Spread chicken backs and necks in a roasting pan. Roast for 30 minutes, turning once, until deeply browned."
@@ -1016,7 +1016,7 @@ STOCK_002,2,"Add onion, carrot, celery, and leek to the pan. Roast for another 2
 STOCK_002,3,"Transfer roasted bones and vegetables to a large stockpot. Pour off excess fat from the roasting pan, then deglaze with a ladleful of water, scraping up all browned bits. Add to the pot."
 STOCK_002,4,"Stir in tomato paste. Add 1 gallon of cold water, parsley, thyme, bay leaves, and black pepper."
 STOCK_002,5,"Bring to a boil over high heat, skimming any foam that rises to the surface."
-STOCK_002,6,"Reduce heat to a bare simmer. Simmer uncovered for 4 hours, skimming any fat and foam that rise to the surface occasionally. Do not let the stock boil — it will cloud."
+STOCK_002,6,"Reduce heat to a bare simmer. Simmer uncovered for 4 hours, skimming any fat and foam that rise to the surface occasionally. Do not let the stock boil — it will cloud. Do not stir — stirring emulsifies fats and impurities back into the liquid."
 STOCK_002,7,"Strain through a fine-mesh strainer, pressing lightly on the solids. Discard solids."
 STOCK_002,8,"Cool to room temperature, then refrigerate. Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid."
 STOCK_003,1,Place chicken backs and wings in a large stockpot. Cover with 12 cups of cold water.
@@ -1024,14 +1024,14 @@ STOCK_003,2,"Bring to a boil over high heat, skimming any foam and impurities th
 STOCK_003,3,"Reduce heat to a bare simmer. Add onion, carrot, celery, and leek."
 STOCK_003,4,"Add parsley, thyme, bay leaves, and black pepper."
 STOCK_003,5,Add boiling water if needed to keep the vegetables covered.
-STOCK_003,6,"Simmer uncovered for 2 to 3 hours, skimming any fat and foam occasionally. Do not let the broth boil — it will cloud."
+STOCK_003,6,"Simmer uncovered for 2 to 3 hours, skimming any fat and foam occasionally. Do not let the broth boil — it will cloud. Do not stir — stirring emulsifies fats and impurities back into the liquid."
 STOCK_003,7,"Strain through a fine-mesh strainer, pressing lightly on the solids. Discard solids."
 STOCK_003,8,"Cool to room temperature, then refrigerate. Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid."
-STOCK_004,1,"Pat the beef shanks dry with paper towels. Heat a thin film of oil in a large stockpot over high heat. Working in batches, sear the shanks on all sides until deeply browned, 3 to 4 minutes per side. Do not burn. Transfer to a plate.",stock
-STOCK_004,2,"If the leavings in the pan are burned, clean the bottom of the pan rather than deglazing. Otherwise reduce heat to medium. Add the tomato paste to the pot and cook, stirring, for 1 to 2 minutes until it darkens slightly and coats the bottom.",stock
-STOCK_004,3,"Return the shanks to the pot. Add the onion, carrot, celery, leek, parsley, thyme, bay leaves, and black pepper. Pour in the water.",stock
-STOCK_004,4,"Bring to a boil over high heat. As soon as a boil is reached, reduce to a bare simmer.",stock
-STOCK_004,5,Skim the gray foam and fat that rise to the surface during the first 20 to 30 minutes of simmering.,stock
-STOCK_004,6,"Simmer uncovered for 6 to 8 hours, skimming any fat and foam occasionally. Keep at a gentle simmer — do not let it boil hard.",stock
-STOCK_004,7,Strain the stock through a fine-mesh strainer or cheesecloth-lined colander. Discard the solids.,stock
-STOCK_004,8,"Cool to room temperature, then refrigerate. Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid.",stock
+STOCK_004,1,"Pat the beef shanks dry with paper towels. Heat a thin film of oil in a large stockpot over high heat. Working in batches, sear the shanks on all sides until deeply browned, 3 to 4 minutes per side. Do not burn. Transfer to a plate."
+STOCK_004,2,"If the leavings in the pan are burned, clean the bottom of the pan rather than deglazing. Otherwise reduce heat to medium. Add the tomato paste to the pot and cook, stirring, for 1 to 2 minutes until it darkens slightly and coats the bottom."
+STOCK_004,3,"Return the shanks to the pot. Add the onion, carrot, celery, leek, parsley, thyme, bay leaves, and black pepper. Pour in the water."
+STOCK_004,4,"Bring to a boil over high heat. As soon as a boil is reached, reduce to a bare simmer."
+STOCK_004,5,Skim the gray foam and fat that rise to the surface during the first 20 to 30 minutes of simmering.
+STOCK_004,6,"Simmer uncovered for 6 to 8 hours, skimming any fat and foam occasionally. Keep at a gentle simmer — do not let it boil hard. Do not stir — stirring emulsifies fats and impurities back into the liquid."
+STOCK_004,7,Strain the stock through a fine-mesh strainer or cheesecloth-lined colander. Discard the solids.
+STOCK_004,8,"Cool to room temperature, then refrigerate. Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid."
