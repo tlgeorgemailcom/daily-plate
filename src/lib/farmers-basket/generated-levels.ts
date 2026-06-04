@@ -7469,12 +7469,13 @@ export const LEVELS: Level[] = [
       { name: 'dried tarragon', quantity: '1½ tsp dried (or stems for small bunch of fresh tarragon)', section: 'reduction', ndbNo: '2041', portionDesc: 'g', portionGrams: 2.25 },
       { name: 'ground black pepper', quantity: '¼ tsp', section: 'reduction', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.75 },
       { name: 'egg yolks', quantity: '3 large yolks', section: 'emulsion', ndbNo: '1125', portionDesc: 'g', portionGrams: 54.0 },
-      { name: 'unsalted butter', quantity: '2 sticks (1 cup), clarified', section: 'emulsion', ndbNo: '1145', portionDesc: 'g', portionGrams: 227.0 },
+      { name: 'unsalted butter', quantity: '~2¾ sticks raw (yields ~1 cup clarified; see step 1)', section: 'emulsion', ndbNo: '1145', portionDesc: 'g', portionGrams: 227.0 },
       { name: 'salt', quantity: '½ tsp', section: 'emulsion', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'fresh chives', quantity: '1 tbsp, chopped', section: 'emulsion', ndbNo: '11156', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'dried tarragon', quantity: '1 tsp (finish) (or 1 tbsp of fresh chopped tarragon)', section: 'emulsion', ndbNo: '2041', portionDesc: 'g', portionGrams: 1.5 }
     ],
     recipeInstructions: [
+      'To clarify the butter: melt 2¾ sticks (about 310g) of unsalted butter in a small saucepan over low heat without stirring. Skim the white foam from the surface and discard. Slowly pour the clear golden liquid into a bowl, leaving the milky white solids behind on the bottom of the pan; discard the solids. You should have about 1 cup (8 oz / 227g) of clarified butter. Keep it warm while you prepare the sauce. (Note: it takes roughly 16 oz of butter to yield 12 oz clarified; this recipe uses about 8 oz clarified, so ~11 oz raw unsalted butter is sufficient.)',
       'Combine the shallots, apple cider vinegar, white wine, tarragon, and black pepper in a small saucepan. Bring to a boil over medium-high heat, then reduce to a brisk simmer. Cook until the liquid is reduced to about 2–3 tablespoons, roughly 5–7 minutes. Strain through a fine-mesh sieve, pressing on the solids; discard the solids. Let the reduction cool slightly.',
       'Set a heatproof bowl over a saucepan of barely simmering water (bain-marie). The bowl should not touch the water. Add the egg yolks and the strained reduction to the bowl. Whisk constantly over gentle heat until the yolks thicken and nearly double in volume, and you can see the bottom of the bowl between strokes, about 3–5 minutes. Remove from heat immediately if the mixture gets too hot — it should never exceed 160°F (70°C).',
       'Begin adding the clarified butter very slowly — drop by drop at first — while whisking constantly. Once the emulsion is established (after the first few tablespoons), you can add the butter in a thin, steady stream. Continue whisking until all the butter is incorporated and the sauce is thick and creamy.',
