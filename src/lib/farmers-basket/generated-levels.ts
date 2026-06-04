@@ -7464,15 +7464,15 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Béarnaise Sauce', quantity: 'custom (g)', foodWord: 'BEARNAISE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'shallots', quantity: '2 medium shallots, minced', section: 'reduction', ndbNo: '11677', portionDesc: 'g', portionGrams: 60.0 },
-      { name: 'apple cider vinegar', quantity: '3 tbsp', section: 'reduction', ndbNo: '2048', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'apple cider vinegar', quantity: '3 tbsp (or white wine vinegar)', section: 'reduction', ndbNo: '2048', portionDesc: 'g', portionGrams: 45.0 },
       { name: 'White wine, dry', quantity: '3 tbsp', section: 'reduction', ndbNo: '14106', portionDesc: 'g', portionGrams: 45.0 },
-      { name: 'dried tarragon', quantity: '1½ tsp dried (or stems for small bunch of tarragon)', section: 'reduction', ndbNo: '2041', portionDesc: 'g', portionGrams: 2.25 },
+      { name: 'dried tarragon', quantity: '1½ tsp dried (or stems for small bunch of fresh tarragon)', section: 'reduction', ndbNo: '2041', portionDesc: 'g', portionGrams: 2.25 },
       { name: 'ground black pepper', quantity: '¼ tsp', section: 'reduction', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.75 },
       { name: 'egg yolks', quantity: '3 large yolks', section: 'emulsion', ndbNo: '1125', portionDesc: 'g', portionGrams: 54.0 },
       { name: 'unsalted butter', quantity: '2 sticks (1 cup), clarified', section: 'emulsion', ndbNo: '1145', portionDesc: 'g', portionGrams: 227.0 },
       { name: 'salt', quantity: '½ tsp', section: 'emulsion', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'fresh chives', quantity: '1 tbsp, chopped', section: 'emulsion', ndbNo: '11156', portionDesc: 'g', portionGrams: 3.0 },
-      { name: 'dried tarragon', quantity: '1 tsp (finish) (or leaves from small bunch of tarragon)', section: 'emulsion', ndbNo: '2041', portionDesc: 'g', portionGrams: 1.5 }
+      { name: 'dried tarragon', quantity: '1 tsp (finish) (or 1 tbsp of fresh chopped tarragon)', section: 'emulsion', ndbNo: '2041', portionDesc: 'g', portionGrams: 1.5 }
     ],
     recipeInstructions: [
       'Combine the shallots, apple cider vinegar, white wine, tarragon, and black pepper in a small saucepan. Bring to a boil over medium-high heat, then reduce to a brisk simmer. Cook until the liquid is reduced to about 2–3 tablespoons, roughly 5–7 minutes. Strain through a fine-mesh sieve, pressing on the solids; discard the solids. Let the reduction cool slightly.',
@@ -7484,6 +7484,108 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'reduction', label: 'Tarragon reduction', cookingMethod: '', yieldFactorWater: 0.2 },
       { key: 'emulsion', label: 'Egg & butter emulsion', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
+    id: 'STOCK_006',
+    name: 'Fish Stock',
+    category: 'sauces & condiments',
+    dietaryCategory: 'pesca',
+    levelNum: 163,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 qt (makes 3+)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule C',
+    nutritionJson: {"cal":150.2,"pro":19.7,"fat":6.2,"carb":4.0,"fib":2.4,"h2o":950.6,"sug":4.7,"perServing":{"cal":150.2,"pro":19.7,"fat":6.2,"carb":4.0,"fib":2.4,"h2o":950.6,"sug":4.7,"AddedSugars":0.0,"IntrinsicSugars":4.7},"micros":{"vitaminA":0.23,"vitaminC":1.24,"vitaminD":0.22,"vitaminE":0.0,"vitaminK":0.23,"vitaminB6":0.06,"vitaminB12":0.24,"thiamin":0.02,"riboflavin":0.02,"niacin":0.44,"folate":4.73,"calcium":11.35,"iron":0.23,"magnesium":10.77,"phosphorus":57.12,"potassium":125.64,"sodium":85.68,"zinc":0.15,"copper":0.02,"selenium":9.66,"cholesterol":14.13,"saturatedFat":0.29,"monoFat":0.14,"polyFat":0.08,"omega3":0.04,"omega6":0.01},"gramsPerServing":993.3,"servings":3,"per100g":{"Energy_KCal":15.12,"Water":95.7,"Protein":1.98,"TotalLipidFat":0.62,"Carbohydrate":0.4,"FiberTotalDietary":0.24,"SugarsTotal":0.47,"Cholesterol":14.13,"FattyAcids_totalSaturated":0.29,"FattyAcids_totalMonounsaturated":0.14,"FattyAcids_totalPolyunsaturated":0.08,"LinoleicAcid":0.01,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.01,"DPA_22_5n3":0.0,"DHA_22_6n3":0.03,"VitaminA_RAE":0.23,"Retinol":0.12,"Carotene_beta":1.29,"VitaminD":0.22,"VitaminE_alphaTocopherol":0.0,"VitaminK_phylloquinone":0.23,"VitaminC_totalAscorbicAcid":1.24,"Thiamin":0.02,"Riboflavin":0.02,"Niacin":0.44,"PantothenicAcid":0.05,"VitaminB6":0.06,"Folate_total":4.73,"Folate_food":4.73,"Folate_DFE":4.73,"FolicAcid":0.0,"VitaminB12":0.24,"Choline_total":18.01,"Betaine":0.01,"LuteinZeaxanthin":1.48,"Lycopene":0.0,"Calcium_Ca":11.35,"Iron_Fe":0.23,"Magnesium_Mg":10.77,"Phosphorus_P":57.12,"Potassium_K":125.64,"Sodium_Na":85.68,"Zinc_Zn":0.15,"Copper_Cu":0.02,"Manganese_Mn":0.04,"Selenium_Se":9.66,"Tryptophan":0.06,"Threonine":0.24,"Isoleucine":0.25,"Leucine":0.45,"Lysine":0.5,"Methionine":0.16,"Cystine":0.06,"Phenylalanine":0.21,"Tyrosine":0.19,"Valine":0.28,"Arginine":0.33,"Histidine":0.16,"Alanine":0.33,"AsparticAcid":0.57,"GlutamicAcid":0.83,"Glycine":0.26,"Proline":0.2,"Serine":0.22,"omega3":0.04,"omega6":0.01,"AddedSugars":0.0,"IntrinsicSugars":0.47},"addedSugars":0.0,"intrinsicSugars":4.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"6963","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.9,"yieldFactorFat":1.0,"sources":[{"ndb":"15015","name":"Fish, cod, Atlantic, raw","grams":302.7},{"ndb":"14411","name":"Water, tap, drinking","grams":630.9},{"ndb":"14106","name":"Alcoholic beverage, wine, table, white","grams":80.0},{"ndb":"1145","name":"Butter, without salt","grams":4.7},{"ndb":"11282","name":"Onions, raw","grams":50.0},{"ndb":"11246","name":"Leeks, (bulb and lower leaf-portion), raw","grams":29.7},{"ndb":"11143","name":"Celery, raw","grams":26.7},{"ndb":"11297","name":"Parsley, fresh","grams":6.0},{"ndb":"2049","name":"Thyme, fresh","grams":1.0},{"ndb":"2004","name":"Spices, bay leaf","grams":0.3},{"ndb":"2030","name":"Spices, pepper, black","grams":0.4},{"ndb":"9152","name":"Lemon juice, raw","grams":10.0},{"ndb":"2047","name":"Salt, table","grams":2.0}],"sections":[{"section_key":"stock","section_label":"Stock:","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_protein":0.355,"yield_factor_carbohydrate":0.293,"yield_factor_other":0.02,"ingredient_count":13,"raw_grams":3432.85,"raw_water_grams":3168.81,"raw_fat_grams":18.52,"raw_protein_grams":166.53,"raw_carb_grams":40.51,"final_grams":2979.92}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Fish broth', quantity: 'custom (g)', foodWord: 'FISHBROTH', ndbNo: '6963', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'cod fillet', quantity: '2 lb', section: 'stock', ndbNo: '15015', portionDesc: 'g', portionGrams: 908.0 },
+      { name: 'water', quantity: '8 cups', section: 'stock', ndbNo: '14411', portionDesc: 'g', portionGrams: 1892.7 },
+      { name: 'White wine, dry', quantity: '1 cup', section: 'stock', ndbNo: '14106', portionDesc: 'g', portionGrams: 240.0 },
+      { name: 'unsalted butter', quantity: '1 tbsp', section: 'stock', ndbNo: '1145', portionDesc: 'g', portionGrams: 14.2 },
+      { name: 'onion', quantity: '1 medium', section: 'stock', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'Leek, raw', quantity: '1 medium', section: 'stock', ndbNo: '11246', portionDesc: 'g', portionGrams: 89.0 },
+      { name: 'celery stalk', quantity: '2 stalks', section: 'stock', ndbNo: '11143', portionDesc: 'g', portionGrams: 80.0 },
+      { name: 'fresh parsley', quantity: '¾ oz', section: 'stock', ndbNo: '11297', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'fresh thyme leaves', quantity: '3 sprigs', section: 'stock', ndbNo: '2049', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'Bay leaf, dried', quantity: '2 leaves', section: 'stock', ndbNo: '2004', portionDesc: 'g', portionGrams: 0.8 },
+      { name: 'ground black pepper', quantity: '½ tsp', section: 'stock', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'lemon juice', quantity: 'juice of 1 lemon', section: 'stock', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'salt', quantity: '1 tsp', section: 'stock', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 }
+    ],
+    recipeInstructions: [
+      'Melt the butter in a large stockpot over medium heat. Add the leek, onion, and celery and sweat, stirring occasionally, for 3 to 4 minutes until softened but not browned.',
+      'Add the cod and white wine. Cook for 2 minutes to allow the alcohol to begin evaporating.',
+      'Add the water, lemon juice, parsley, thyme, bay leaves, black pepper, and salt. Bring to a simmer over high heat.',
+      'Skim any foam that rises to the surface during the first few minutes.',
+      'Reduce heat to maintain a bare simmer. Cook uncovered for 20 to 30 minutes. Do not simmer longer — prolonged cooking makes fish stock bitter.',
+      'Do not stir — stirring emulsifies fats and impurities back into the liquid.',
+      'Strain the stock through a fine-mesh strainer or cheesecloth-lined colander. Discard the solids.',
+      'Cool to room temperature and refrigerate for up to 3 days, or freeze for up to 3 months.'
+    ],
+    sections: [
+      { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.9, yieldFactorOther: 0.02 }
+    ],
+  },
+  {
+    id: 'STOCK_007',
+    name: 'Vegetable Stock',
+    category: 'sauces & condiments',
+    dietaryCategory: 'vegan',
+    levelNum: 164,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 qt (makes 2+)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule C',
+    nutritionJson: {"cal":56.4,"pro":2.5,"fat":0.7,"carb":9.9,"fib":7.4,"h2o":1047.8,"sug":13.5,"perServing":{"cal":56.4,"pro":2.5,"fat":0.7,"carb":9.9,"fib":7.4,"h2o":1047.8,"sug":13.5,"AddedSugars":0.0,"IntrinsicSugars":13.5},"micros":{"vitaminA":1.03,"vitaminC":1.85,"vitaminD":0.0,"vitaminE":0.0,"vitaminK":0.35,"vitaminB6":0.03,"vitaminB12":0.0,"thiamin":0.01,"riboflavin":0.03,"niacin":0.18,"folate":7.03,"calcium":14.0,"iron":0.23,"magnesium":5.02,"phosphorus":12.71,"potassium":73.4,"sodium":104.96,"zinc":0.1,"copper":0.04,"selenium":1.06,"cholesterol":0.0,"saturatedFat":0.02,"monoFat":0.01,"polyFat":0.02,"omega3":0.0,"omega6":0.0},"gramsPerServing":1067.9,"servings":2,"per100g":{"Energy_KCal":5.28,"Water":98.12,"Protein":0.24,"TotalLipidFat":0.07,"Carbohydrate":0.93,"FiberTotalDietary":0.69,"SugarsTotal":1.27,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.02,"FattyAcids_totalMonounsaturated":0.01,"FattyAcids_totalPolyunsaturated":0.02,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":1.03,"Retinol":0.0,"Carotene_beta":10.51,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.0,"VitaminK_phylloquinone":0.35,"VitaminC_totalAscorbicAcid":1.85,"Thiamin":0.01,"Riboflavin":0.03,"Niacin":0.18,"PantothenicAcid":0.08,"VitaminB6":0.03,"Folate_total":7.03,"Folate_food":7.03,"Folate_DFE":7.03,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":2.84,"Betaine":0.42,"LuteinZeaxanthin":2.36,"Lycopene":3.88,"Calcium_Ca":14.0,"Iron_Fe":0.23,"Magnesium_Mg":5.02,"Phosphorus_P":12.71,"Potassium_K":73.4,"Sodium_Na":104.96,"Zinc_Zn":0.1,"Copper_Cu":0.04,"Manganese_Mn":0.07,"Selenium_Se":1.06,"Tryptophan":0.01,"Threonine":0.02,"Isoleucine":0.01,"Leucine":0.02,"Lysine":0.03,"Methionine":0.0,"Cystine":0.01,"Phenylalanine":0.02,"Tyrosine":0.01,"Valine":0.02,"Arginine":0.03,"Histidine":0.01,"Alanine":0.02,"AsparticAcid":0.05,"GlutamicAcid":0.11,"Glycine":0.02,"Proline":0.02,"Serine":0.02,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":1.27},"addedSugars":0.0,"intrinsicSugars":13.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"6700","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.82,"yieldFactorFat":0.95,"sources":[{"ndb":"14411","name":"Water, tap, drinking","grams":946.4},{"ndb":"11282","name":"Onions, raw","grams":150.0},{"ndb":"11124","name":"Carrots, raw","grams":61.0},{"ndb":"11143","name":"Celery, raw","grams":60.0},{"ndb":"11246","name":"Leeks, (bulb and lower leaf-portion), raw","grams":44.5},{"ndb":"11266","name":"Mushrooms, brown, italian, or crimini, raw","grams":36.0},{"ndb":"11215","name":"Garlic, raw","grams":4.5},{"ndb":"11546","name":"Tomato products, canned, paste, without salt added","grams":8.0},{"ndb":"11297","name":"Parsley, fresh","grams":9.0},{"ndb":"2049","name":"Thyme, fresh","grams":1.5},{"ndb":"2004","name":"Spices, bay leaf","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.6},{"ndb":"2047","name":"Salt, table","grams":3.0}],"sections":[{"section_key":"stock","section_label":"Stock:","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.82,"yield_factor_fat":0.95,"yield_factor_protein":0.484,"yield_factor_carbohydrate":0.29,"yield_factor_other":0.02,"ingredient_count":13,"raw_grams":2649.65,"raw_water_grams":2555.54,"raw_fat_grams":1.55,"raw_protein_grams":10.54,"raw_carb_grams":68.17,"final_grams":2135.73}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Soup, vegetable broth, ready to serve', quantity: 'custom (g)', foodWord: 'VEGETABLEBROTH', ndbNo: '6700', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'water', quantity: '8 cups', section: 'stock', ndbNo: '14411', portionDesc: 'g', portionGrams: 1892.7 },
+      { name: 'onion', quantity: '2 medium', section: 'stock', ndbNo: '11282', portionDesc: 'g', portionGrams: 300.0 },
+      { name: 'Carrot, raw', quantity: '2 medium', section: 'stock', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'celery stalk', quantity: '3 stalks', section: 'stock', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'Leek, raw', quantity: '1 medium', section: 'stock', ndbNo: '11246', portionDesc: 'g', portionGrams: 89.0 },
+      { name: 'crimini mushrooms', quantity: '1 cup sliced', section: 'stock', ndbNo: '11266', portionDesc: 'g', portionGrams: 72.0 },
+      { name: 'garlic', quantity: '3 cloves', section: 'stock', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'tomato paste', quantity: '1 tbsp', section: 'stock', ndbNo: '11546', portionDesc: 'g', portionGrams: 16.0 },
+      { name: 'fresh parsley', quantity: '¾ oz', section: 'stock', ndbNo: '11297', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'fresh thyme leaves', quantity: '3 sprigs', section: 'stock', ndbNo: '2049', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'Bay leaf, dried', quantity: '2 leaves', section: 'stock', ndbNo: '2004', portionDesc: 'g', portionGrams: 0.8 },
+      { name: 'ground black pepper', quantity: '½ tsp', section: 'stock', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'salt', quantity: '1 tsp', section: 'stock', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 }
+    ],
+    recipeInstructions: [
+      'Add the onion, carrot, celery, leek, mushrooms, garlic, and tomato paste to a large stockpot. Pour in the water.',
+      'Bring to a boil over high heat. Skim any foam that rises to the surface.',
+      'Add the parsley, thyme, bay leaves, black pepper, and salt.',
+      'Reduce heat to a bare simmer. Cook uncovered for 45 minutes to 1 hour.',
+      'Do not stir — stirring emulsifies fine particles back into the liquid.',
+      'Strain the stock through a fine-mesh strainer or cheesecloth-lined colander. Press gently on the solids to extract remaining liquid, then discard the solids.',
+      'Taste and adjust salt. Cool to room temperature.',
+      'Refrigerate for up to 5 days, or freeze for up to 6 months.'
+    ],
+    sections: [
+      { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.82, yieldFactorFat: 0.95, yieldFactorOther: 0.02 }
     ],
   }
 ];

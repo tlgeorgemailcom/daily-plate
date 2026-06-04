@@ -52,7 +52,7 @@
       "grams": 45.0,
       "section": "reduction",
       "ingredient_group": "reduction",
-      "qty_display": "3 tbsp",
+      "qty_display": "3 tbsp (or white wine vinegar)",
       "contribution": {
         "Energy_KCal": 9.45,
         "Protein": 0.0,
@@ -94,7 +94,7 @@
       "grams": 2.25,
       "section": "reduction",
       "ingredient_group": "reduction",
-      "qty_display": "1\u00bd tsp dried (or stems for small bunch of tarragon)",
+      "qty_display": "1\u00bd tsp dried (or stems for small bunch of fresh tarragon)",
       "contribution": {
         "Energy_KCal": 6.638,
         "Protein": 0.512,
@@ -220,7 +220,7 @@
       "grams": 1.5,
       "section": "emulsion",
       "ingredient_group": "emulsion",
-      "qty_display": "1 tsp (finish) (or leaves from small bunch of tarragon)",
+      "qty_display": "1 tsp (finish) (or 1 tbsp of fresh chopped tarragon)",
       "contribution": {
         "Energy_KCal": 4.425,
         "Protein": 0.342,
