@@ -2571,18 +2571,19 @@ export const LEVELS: Level[] = [
   {
     id: 'BKFST_006',
     name: 'Hollandaise Sauce',
-    category: 'Breakfast',
+    category: 'sauces & condiments',
     dietaryCategory: 'veggie',
     levelNum: 51,
     recipe: ['bread'],
     tools: [
-      { type: 'wall', count: 5, emoji: '🧱' },
-      { type: 'fence', count: 2, emoji: '🚧' }
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
     ],
     animalSpawns: [
-      { type: 'mouse', delay: 5000 }
+      { type: 'mouse', delay: 3500 }
     ],
-    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
     servings: '4 servings',
     prepTime: '20 min',
     linkType: 'dish',
