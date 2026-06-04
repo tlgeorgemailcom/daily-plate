@@ -2595,12 +2595,12 @@ export const LEVELS: Level[] = [
       { name: 'fresh lemon juice', quantity: '1 tablespoon + 1 teaspoon', section: 'sauce', ndbNo: '9152', portionDesc: 'g', portionGrams: 17.0 }
     ],
     recipeInstructions: [
-      'Fill a small saucepan with 2 inches of water and bring to a gentle simmer. Place a heatproof bowl over the pan — the bottom should not touch the water.',
-      'Separate 3 large eggs, keeping only the yolks. Add the yolks and lemon juice to the bowl. Whisk vigorously until pale, thick, and about doubled in volume, about 2 minutes.',
+      'Fill a small saucepan with 2 inches of water and bring to a gentle simmer. Place a heatproof bowl over the pan — the bottom should not touch the water. You can also use a double boiler.',
       'Melt the butter in a small saucepan over low heat. Keep warm but not hot.',
-      'With the bowl over the barely simmering water, slowly drizzle the melted butter into the yolk mixture one tablespoon at a time, whisking constantly. Adding it too fast will break the emulsion.',
-      'Once all the butter is incorporated, the sauce should be thick enough to coat the back of a spoon. Remove from heat immediately.',
-      'Season with a pinch of salt. Serve right away over poached eggs, or keep warm by setting the bowl over the hot water (heat off) for up to 15 minutes, whisking occasionally.'
+      'Separate 3 large eggs, keeping only the yolks. Add the egg yolks to the top bowl. Whisk vigorously until pale, thick, and about doubled in volume, about 2-3 minutes. The whisk should leave a trail that slowly closes when thick enough.',
+      'With the top bowl over the barely simmering water, slowly drizzle the melted butter into the yolk mixture one tablespoon at a time, whisking constantly. Adding it too fast will break the emulsion.',
+      'Once all the butter is incorporated, the sauce should be thick enough to coat the back of a spoon. To thin add a little water. Remove from heat immediately.',
+      'Season with a pinch of salt and lemon juice. Serve right away over poached eggs, or keep warm by setting the bowl over the hot water (heat off) for up to 15 minutes, whisking occasionally.'
     ],
     sections: [
       { key: 'sauce', label: 'Hollandaise sauce', cookingMethod: '', yieldFactorWater: 1.0 }
