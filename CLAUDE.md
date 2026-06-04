@@ -21,8 +21,13 @@ SvelteKit + Svelte 5 + TypeScript food/word game. Nutrition data comes from a Py
 **Math contract** (order is mandatory):
 1. Sum raw ingredient grams
 2. Apply retention factors (all macros = 1.00; micronutrients vary)
-3. Apply yield model (`yield_factor_water`, `yield_factor_fat`)
+3. Apply yield model (`yield_factor_water`, `yield_factor_fat`, `yield_factor_protein`, `yield_factor_carbohydrate`, `yield_factor_other`)
 4. Normalize to per-100g
+
+**Yield factor reference:**
+- `yfw` — water; `yff` — fat; `yfp` — protein; `yfc` — carbohydrate (Phase 8e); `yfo` — fat-soluble vitamins only (Phase 8f)
+- When `yff`, `yfp`, or `yfc` < 1.0, Atwater energy is recomputed from retained P/F/C to avoid overcounting drained calories
+- `yfo` applies only to `_FAT_SOLUBLE_NUTRIENTS` (VitK, VitA/RAE, carotenoids, VitD, VitE, tocopherols). Default `yfo=1.0` is a no-op for all non-stock recipes
 
 **Edit-build-upload loop:**
 ```
@@ -83,6 +88,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | `BKFST_NNN` | 🔧 In progress | 39 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039) |
 | `SAND_NNN` | 🔧 In progress | 67 (001–067) |
 | `SAUCE_NNN` | 🔧 In progress | 6 (001–006) |
+| `STOCK_NNN` | 🔧 In progress | 7 (001–007) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -152,8 +158,23 @@ Planned BKFST order (standalone components first, composites last):
 | SAUCE_003 | Soubise Sauce | (none) | Rule D ✅ — no canonical; onion section: onion_raw(11282) 907.2g+butter_unsalted(1145) 56.8g+salt+white_pepper, pan grilled yfw=0.45 → 517.3g; @SAUCE_001(975.8g) raw; 1493.1g total; 24 servings × 62g (~¼ cup); 133.6 kcal·3.02P·9.16F·10.50C per 100g; dietary_category=veggie |
 | SAUCE_004 | Sauce Crème | (none) | Rule D ✅ — no canonical; bechamel section @SAUCE_001(975.8g) raw yfw=1.0; cream section: heavy_cream(1053) 238g+lemon_juice_raw(9152) 5g+salt+white_pepper, boiled yfw=0.82; 1195.0g total; 16 servings × 74.7g (~¼ cup); 170.2 kcal·3.47P·14.70F·6.58C per 100g; dietary_category=veggie |
 | SAUCE_005 | Sauce Aurore — Béchamel | (none) | Rule D ✅ — no canonical; @SAUCE_001(975.8g) raw + tomato_puree(11547) 150g+salt+white_pepper; 1127.6g total; 16 servings × 70.5g (~¼ cup); 113.5 kcal·3.29P·7.99F·7.56C per 100g; dietary_category=veggie |
-| SAUCE_006 | Velouté | (none) | Rule D ✅ — no canonical; chicken_broth_canned(6194) 946g+butter_unsalted(1145) 57g+flour_ap_white_enriched_unbleached(20581) 30g+salt+white_pepper; boiled yfw=0.88; 1034.8g raw → 922.1g cooked; 16 servings × 57.6g (~¼ cup); 62.4 kcal·1.05P·5.26F·2.96C per 100g; dietary_category=all |
+| SAUCE_006 | Velouté | (none) | Rule D ✅ — no canonical; 2 sections: stock (raw yfw=1.0): @STOCK_001(249g); roux (boiled yfw=0.88): butter_unsalted(1145) 14.2g+flour_ap_white_enriched_unbleached(20581) 7.8g+salt+white_pepper; 271g cooked; 4 servings × 67.8g (~¼ cup); 67.7 kcal·2.70P·5.40F·2.24C per 100g; dietary_category=all |
+## Current Work: STOCK Recipes
 
+**Stock/broth yield factor tiers:**
+- `yfp=0.366` — standard 3–4h simmer (STOCK_001–004)
+- `yfp=0.395` — 24h bone broth (STOCK_005), calibrated vs Kettle & Fire commercial label (19g P / 479g serving)
+- `yfo=0.02` — all stocks (fat-soluble vitamins leave with strained solids; VK: 10.77→0.22 µg/100g vs NDB 6172 canonical 0.20 µg)
+
+| ID | Recipe | NDB | Notes |
+|---|---|---|---|
+| STOCK_001 | White Chicken Stock | (none) | Rule D ✅ — no canonical; yfw=0.680, yff=0.089, yfp=0.366, yfc=0.02, yfo=0.02; boiled; dietary_category=all; cooked≈3735g, 4 servings × 933g (~1 qt) |
+| STOCK_002 | Brown Chicken Stock | (none) | Rule D ✅ — same yield factors as STOCK_001; dietary_category=all |
+| STOCK_003 | Chicken Broth | (none) | Rule D ✅ — lighter, boneless chicken; same yield factors as STOCK_001; dietary_category=all |
+| STOCK_004 | Beef Stock | (none) | Rule D ✅ — same yield factors as STOCK_001–003; dietary_category=all; 3 servings |
+| STOCK_005 | Beef Bone Broth | (none) | Rule D ✅ — 24h simmer; **yfp=0.395** (calibrated vs Kettle & Fire label); yfo=0.02; dietary_category=all; 2 servings × 1996g |
+| STOCK_006 | Fish Stock | 6963 | Rule C ✅ — NDB 6963 Fish broth; yfw=0.900, yff=1.000, yfp=0.355, **yfc=0.293**, yfo=0.02; yfc captures soluble wine carbs (C=0.0% vs canonical); Su=+422% structural (wine sugars vs bare broth); E=−5.5% structural (ethanol evaporation); dietary_category=pesca; 3 servings |
+| STOCK_007 | Vegetable Stock | 6700 | Rule C ✅ — NDB 6700; yfw=0.820, yff=0.950, yfp=0.484, yfc=0.290, yfo=0.02; P/F/C=0.0%; E=+5.6% structural (fiber Atwater); Su=+131% structural (fresh veg vs commercial broth); dietary_category=vegan; 2 servings |
 ## Current Work: SAND Recipes
 
 **Sandwiches planning**: `/Volumes/training/Daily Food Chain/daily-food-chain/docs/sandwiches.md`
@@ -306,6 +327,10 @@ FNDDS published nutrient profiles use **Foundation Foods** values for common ing
 - **`food_word` naming for SAND series variants**: same-dish variants (e.g. grilled cheese with different cheeses) each need a unique `food_word` in `dev_recipes`. Follow the `GRILLEDCHEESE{VARIANT}` pattern: `GRILLEDCHEESE` (restaurant style), `GRILLEDCHEESEAMERICAN`, `GRILLEDCHEESECHEDDAR`. The base word (`GRILLEDCHEESE`) goes to the most distinctive/original variant; all others append the differentiator. For Rule D recipes the food_word need not exist in `food-portions-complete.csv`.
 - **Always use `BASE = "recipes_v3/data"` for all CSV writes in append scripts**: a root-level `recipe_instructions.csv` (dead legacy file, 4-column format) exists and will silently accept writes if the path prefix is omitted. Every pipeline CSV write must use `f"{BASE}/recipe_instructions.csv"`, `f"{BASE}/recipe_ingredients.csv"`, etc. Never use a bare filename for any `recipes_v3/data/` file.
 - **`formatIngredientLine` name-deduplication guard**: `RecipeBook.svelte::formatIngredientLine` checks whether `quantity` already contains the ingredient `name` (case-insensitive). If so, it returns `quantity` as-is instead of appending `name` again. For absorbed oil, use `qty_display="1 tbsp olive oil (absorbed into crust)"` — the guard ensures it renders exactly as written without doubling the name. Also put the absorption note in the instructions (e.g. step: "(Oil in the ingredient list reflects only the amount absorbed into the crust.)"). Embedding the name is intentional here; the guard exists specifically to support this display pattern.
+- **Phase 8e `yfc` (yield_factor_carbohydrate)**: Controls carbohydrate extraction from solids into the liquid phase. Essential for stocks with wine or other high-sugar liquid ingredients — set `yfc` to the fraction of carbs that actually leach into the finished stock. When `yfc < 1.0`, Atwater energy recompute fires automatically (same as `yff`/`yfp`). Lives in both `recipes.csv` col 16 and `recipe_sections.csv` col 8.
+- **Phase 8f `yfo` (yield_factor_other)**: Applied only to fat-soluble vitamins and carotenoids (`_FAT_SOLUBLE_NUTRIENTS` set in `build.py`: VitK, VitA/RAE, carotenoids, VitD, VitE/tocopherols). These partition into fat/solids and leave with the discard when a stock is strained. Water-soluble vitamins (B vitamins, VitC) and minerals are unaffected. Default `yfo=1.0` is a no-op. Set `yfo=0.02` for all STOCK recipes (calibrated: VK 10.77→0.22 µg/100g vs NDB 6172 canonical 0.20 µg). Lives in both `recipes.csv` col 16 and `recipe_sections.csv` col 9.
+- **`white_wine_dry` food_word collision**: NDB 14106 maps to `WINE` in `food-portions-complete.csv`, not `WHITEWINE`. Using `food_word=WHITEWINE` in the ledger causes a validator "mismatched food_word" error because no `WHITEWINE` entry exists in food-portions. Always use `food_word=WINE` for NDB 14106.
+- **Two-tier yfp for stock simmer depth**: `yfp=0.366` for 3–4h simmers (chicken/beef stocks); `yfp=0.395` for 24h bone broth. Calibrated against Kettle & Fire bone broth label. Do not apply the bone broth yfp to regular stocks — it overstates protein extraction.
 - **Serving count (10/90 rounding rule)**: `servings_count` must equal the number of full serving-unit measures a cook can pour from the finished recipe. Use `cooked_total_grams / serving_unit_grams` (e.g. 60g per ¼ cup) with this rule: if the leftover is **≤ 10%** of the serving unit (≤ 6g for a 60g ¼ cup) it is negligible — use floor, no `+`. If leftover is **≥ 90%** (≥ 54g) it rounds up to a full serving, no `+`. If leftover is in the **middle zone (10–90%)** use floor and append `+` to `servings_label` (e.g. `"1/4 cup (makes 4+)"`); the `+` signals at-least-N to the cook and absorbs cooking variation. **`servings_label` is NOT written by `upload.py`** — changes require both `generate_bundle.py` (bundle) and a direct Turso SQL UPDATE on the `servings` column (runtime), followed by `conn.commit()`. (Established June 2026, SAUCE_001–006.)
 
 ## Composite Recipes (Rule D, `component_ref`)
