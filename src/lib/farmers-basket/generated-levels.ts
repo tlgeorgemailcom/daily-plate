@@ -7195,11 +7195,58 @@ export const LEVELS: Level[] = [
     ],
   },
   {
+    id: 'SAUCE_007',
+    name: 'Béarnaise Sauce',
+    category: 'sauces & condiments',
+    dietaryCategory: 'all',
+    levelNum: 157,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1/3 cup (makes 4+)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":476.2,"pro":3.3,"fat":49.7,"carb":4.1,"fib":0.6,"h2o":24.4,"sug":1.5,"perServing":{"cal":476.2,"pro":3.3,"fat":49.7,"carb":4.1,"fib":0.6,"h2o":24.4,"sug":1.5,"AddedSugars":0.0,"IntrinsicSugars":1.5},"micros":{"vitaminA":524.51,"vitaminC":1.61,"vitaminD":34.83,"vitaminE":1.98,"vitaminK":7.23,"vitaminB6":0.12,"vitaminB12":0.43,"thiamin":0.04,"riboflavin":0.12,"niacin":0.15,"folate":32.71,"calcium":57.5,"iron":1.02,"magnesium":10.8,"phosphorus":94.41,"potassium":130.87,"sodium":362.76,"zinc":0.55,"copper":0.04,"selenium":9.91,"cholesterol":317.79,"saturatedFat":35.46,"monoFat":17.62,"polyFat":2.74,"omega3":0.23,"omega6":1.45},"gramsPerServing":84.5,"servings":4,"per100g":{"Energy_KCal":563.67,"Water":28.91,"Protein":3.86,"TotalLipidFat":58.84,"Carbohydrate":4.8,"FiberTotalDietary":0.73,"SugarsTotal":1.73,"Cholesterol":317.79,"FattyAcids_totalSaturated":35.46,"FattyAcids_totalMonounsaturated":17.62,"FattyAcids_totalPolyunsaturated":2.74,"LinoleicAcid":1.45,"alphaLinolenicAcid":0.21,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.02,"VitaminA_RAE":524.51,"Retinol":510.0,"Carotene_beta":144.48,"VitaminD":34.83,"VitaminE_alphaTocopherol":1.98,"VitaminK_phylloquinone":7.23,"VitaminC_totalAscorbicAcid":1.61,"Thiamin":0.04,"Riboflavin":0.12,"Niacin":0.15,"PantothenicAcid":0.6,"VitaminB6":0.12,"Folate_total":32.71,"Folate_food":32.71,"Folate_DFE":32.71,"FolicAcid":0.0,"VitaminB12":0.43,"Choline_total":145.95,"Betaine":0.16,"LuteinZeaxanthin":179.5,"Lycopene":0.04,"Calcium_Ca":57.5,"Iron_Fe":1.02,"Magnesium_Mg":10.8,"Phosphorus_P":94.41,"Potassium_K":130.87,"Sodium_Na":362.76,"Zinc_Zn":0.55,"Copper_Cu":0.04,"Manganese_Mn":0.22,"Selenium_Se":9.91,"Tryptophan":0.04,"Threonine":0.15,"Isoleucine":0.19,"Leucine":0.3,"Lysine":0.26,"Methionine":0.08,"Cystine":0.05,"Phenylalanine":0.15,"Tyrosine":0.15,"Valine":0.21,"Arginine":0.23,"Histidine":0.09,"Alanine":0.17,"AsparticAcid":0.33,"GlutamicAcid":0.53,"Glycine":0.11,"Proline":0.19,"Serine":0.26,"omega3":0.23,"omega6":1.45,"AddedSugars":0.0,"IntrinsicSugars":1.73},"addedSugars":0.0,"intrinsicSugars":1.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.2,"yieldFactorFat":1.0,"sources":[{"ndb":"11677","name":"Shallots, raw","grams":15.0},{"ndb":"2048","name":"Vinegar, cider","grams":11.2},{"ndb":"14106","name":"Alcoholic beverage, wine, table, white","grams":11.2},{"ndb":"2041","name":"Spices, tarragon, dried","grams":0.6},{"ndb":"2030","name":"Spices, pepper, black","grams":0.2},{"ndb":"1125","name":"Egg, yolk, raw, fresh","grams":13.5},{"ndb":"1145","name":"Butter, without salt","grams":56.8},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"11156","name":"Chives, raw","grams":0.8},{"ndb":"2041","name":"Spices, tarragon, dried","grams":0.4}],"sections":[{"section_key":"reduction","section_label":"Tarragon reduction","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.2,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":153.0,"raw_water_grams":129.45,"raw_fat_grams":0.25,"raw_protein_grams":2.12,"raw_carb_grams":13.28,"final_grams":49.44},{"section_key":"emulsion","section_label":"Egg & butter emulsion","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":288.5,"raw_water_grams":71.81,"raw_fat_grams":198.58,"raw_protein_grams":10.93,"raw_carb_grams":2.96,"final_grams":288.5}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Béarnaise Sauce', quantity: 'custom (g)', foodWord: 'BEARNAISE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'shallots', quantity: '2 medium shallots, minced', section: 'reduction', ndbNo: '11677', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'apple cider vinegar', quantity: '3 tbsp (or white wine vinegar)', section: 'reduction', ndbNo: '2048', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'White wine, dry', quantity: '3 tbsp', section: 'reduction', ndbNo: '14106', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'dried tarragon', quantity: '1½ tsp dried (or stems for small bunch of fresh tarragon)', section: 'reduction', ndbNo: '2041', portionDesc: 'g', portionGrams: 2.25 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'reduction', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.75 },
+      { name: 'egg yolks', quantity: '3 large yolks', section: 'emulsion', ndbNo: '1125', portionDesc: 'g', portionGrams: 54.0 },
+      { name: 'unsalted butter', quantity: '~2¾ sticks raw (yields ~1 cup clarified; see step 1)', section: 'emulsion', ndbNo: '1145', portionDesc: 'g', portionGrams: 227.0 },
+      { name: 'salt', quantity: '½ tsp', section: 'emulsion', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'fresh chives', quantity: '1 tbsp, chopped', section: 'emulsion', ndbNo: '11156', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'dried tarragon', quantity: '1 tsp (finish) (or 1 tbsp of fresh chopped tarragon)', section: 'emulsion', ndbNo: '2041', portionDesc: 'g', portionGrams: 1.5 }
+    ],
+    recipeInstructions: [
+      'To clarify the butter: melt 2¾ sticks (about 310g) of unsalted butter in a small saucepan over low heat without stirring. Skim the white foam from the surface and discard. Slowly pour the clear golden liquid into a bowl, leaving the milky white solids behind on the bottom of the pan; discard the solids. You should have about 1 cup (8 oz / 227g) of clarified butter. Keep it warm while you prepare the sauce. (Note: it takes roughly 16 oz of butter to yield 12 oz clarified; this recipe uses about 8 oz clarified, so ~11 oz raw unsalted butter is sufficient.)',
+      'Combine the shallots, apple cider vinegar, white wine, tarragon, and black pepper in a small saucepan. Bring to a boil over medium-high heat, then reduce to a brisk simmer. Cook until the liquid is reduced to about 2–3 tablespoons, roughly 5–7 minutes. Strain through a fine-mesh sieve, pressing on the solids; discard the solids. Let the reduction cool slightly.',
+      'Set a heatproof bowl over a saucepan of barely simmering water (bain-marie). The bowl should not touch the water. Add the egg yolks and the strained reduction to the bowl. Whisk constantly over gentle heat until the yolks thicken and nearly double in volume, and you can see the bottom of the bowl between strokes, about 3–5 minutes. Remove from heat immediately if the mixture gets too hot — it should never exceed 160°F (70°C).',
+      'Begin adding the clarified butter very slowly — drop by drop at first — while whisking constantly. Once the emulsion is established (after the first few tablespoons), you can add the butter in a thin, steady stream. Continue whisking until all the butter is incorporated and the sauce is thick and creamy.',
+      'Season with salt. Stir in the finishing tarragon and chopped chives. Taste and adjust seasoning. Serve immediately, or keep warm in the bain-marie with the heat off, whisking occasionally, for up to 30 minutes.',
+      '(The tarragon in the ingredient list appears twice: the first portion infuses the reduction and is strained out; the second portion is stirred in at the end as a fresh finish.)'
+    ],
+    sections: [
+      { key: 'reduction', label: 'Tarragon reduction', cookingMethod: '', yieldFactorWater: 0.2 },
+      { key: 'emulsion', label: 'Egg & butter emulsion', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
     id: 'STOCK_001',
     name: 'White Chicken Stock',
     category: 'sauces & condiments',
     dietaryCategory: 'all',
-    levelNum: 157,
+    levelNum: 158,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -7248,7 +7295,7 @@ export const LEVELS: Level[] = [
     name: 'Brown Chicken Stock',
     category: 'sauces & condiments',
     dietaryCategory: 'all',
-    levelNum: 158,
+    levelNum: 159,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -7298,7 +7345,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken Broth',
     category: 'sauces & condiments',
     dietaryCategory: 'all',
-    levelNum: 159,
+    levelNum: 160,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -7347,7 +7394,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Stock',
     category: 'sauces & condiments',
     dietaryCategory: 'all',
-    levelNum: 160,
+    levelNum: 161,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -7396,7 +7443,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Bone Broth',
     category: 'sauces & condiments',
     dietaryCategory: 'all',
-    levelNum: 161,
+    levelNum: 162,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -7439,53 +7486,6 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
-    ],
-  },
-  {
-    id: 'SAUCE_007',
-    name: 'Béarnaise Sauce',
-    category: 'sauces & condiments',
-    dietaryCategory: 'all',
-    levelNum: 162,
-    recipe: ['bread'],
-    tools: [
-      { type: 'wall', count: 6, emoji: '🧱' },
-      { type: 'fence', count: 2, emoji: '🚧' },
-      { type: 'scarecrow', count: 1, emoji: '🧹' }
-    ],
-    animalSpawns: [
-      { type: 'mouse', delay: 3500 }
-    ],
-    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '1/3 cup (makes 4+)',
-    prepTime: '',
-    linkType: 'builtin',
-    sr28Rule: 'Rule D',
-    nutritionJson: {"cal":476.2,"pro":3.3,"fat":49.7,"carb":4.1,"fib":0.6,"h2o":24.4,"sug":1.5,"perServing":{"cal":476.2,"pro":3.3,"fat":49.7,"carb":4.1,"fib":0.6,"h2o":24.4,"sug":1.5,"AddedSugars":0.0,"IntrinsicSugars":1.5},"micros":{"vitaminA":524.51,"vitaminC":1.61,"vitaminD":34.83,"vitaminE":1.98,"vitaminK":7.23,"vitaminB6":0.12,"vitaminB12":0.43,"thiamin":0.04,"riboflavin":0.12,"niacin":0.15,"folate":32.71,"calcium":57.5,"iron":1.02,"magnesium":10.8,"phosphorus":94.41,"potassium":130.87,"sodium":362.76,"zinc":0.55,"copper":0.04,"selenium":9.91,"cholesterol":317.79,"saturatedFat":35.46,"monoFat":17.62,"polyFat":2.74,"omega3":0.23,"omega6":1.45},"gramsPerServing":84.5,"servings":4,"per100g":{"Energy_KCal":563.67,"Water":28.91,"Protein":3.86,"TotalLipidFat":58.84,"Carbohydrate":4.8,"FiberTotalDietary":0.73,"SugarsTotal":1.73,"Cholesterol":317.79,"FattyAcids_totalSaturated":35.46,"FattyAcids_totalMonounsaturated":17.62,"FattyAcids_totalPolyunsaturated":2.74,"LinoleicAcid":1.45,"alphaLinolenicAcid":0.21,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.02,"VitaminA_RAE":524.51,"Retinol":510.0,"Carotene_beta":144.48,"VitaminD":34.83,"VitaminE_alphaTocopherol":1.98,"VitaminK_phylloquinone":7.23,"VitaminC_totalAscorbicAcid":1.61,"Thiamin":0.04,"Riboflavin":0.12,"Niacin":0.15,"PantothenicAcid":0.6,"VitaminB6":0.12,"Folate_total":32.71,"Folate_food":32.71,"Folate_DFE":32.71,"FolicAcid":0.0,"VitaminB12":0.43,"Choline_total":145.95,"Betaine":0.16,"LuteinZeaxanthin":179.5,"Lycopene":0.04,"Calcium_Ca":57.5,"Iron_Fe":1.02,"Magnesium_Mg":10.8,"Phosphorus_P":94.41,"Potassium_K":130.87,"Sodium_Na":362.76,"Zinc_Zn":0.55,"Copper_Cu":0.04,"Manganese_Mn":0.22,"Selenium_Se":9.91,"Tryptophan":0.04,"Threonine":0.15,"Isoleucine":0.19,"Leucine":0.3,"Lysine":0.26,"Methionine":0.08,"Cystine":0.05,"Phenylalanine":0.15,"Tyrosine":0.15,"Valine":0.21,"Arginine":0.23,"Histidine":0.09,"Alanine":0.17,"AsparticAcid":0.33,"GlutamicAcid":0.53,"Glycine":0.11,"Proline":0.19,"Serine":0.26,"omega3":0.23,"omega6":1.45,"AddedSugars":0.0,"IntrinsicSugars":1.73},"addedSugars":0.0,"intrinsicSugars":1.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.2,"yieldFactorFat":1.0,"sources":[{"ndb":"11677","name":"Shallots, raw","grams":15.0},{"ndb":"2048","name":"Vinegar, cider","grams":11.2},{"ndb":"14106","name":"Alcoholic beverage, wine, table, white","grams":11.2},{"ndb":"2041","name":"Spices, tarragon, dried","grams":0.6},{"ndb":"2030","name":"Spices, pepper, black","grams":0.2},{"ndb":"1125","name":"Egg, yolk, raw, fresh","grams":13.5},{"ndb":"1145","name":"Butter, without salt","grams":56.8},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"11156","name":"Chives, raw","grams":0.8},{"ndb":"2041","name":"Spices, tarragon, dried","grams":0.4}],"sections":[{"section_key":"reduction","section_label":"Tarragon reduction","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.2,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":153.0,"raw_water_grams":129.45,"raw_fat_grams":0.25,"raw_protein_grams":2.12,"raw_carb_grams":13.28,"final_grams":49.44},{"section_key":"emulsion","section_label":"Egg & butter emulsion","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":288.5,"raw_water_grams":71.81,"raw_fat_grams":198.58,"raw_protein_grams":10.93,"raw_carb_grams":2.96,"final_grams":288.5}],"cookingMethod":"multi"},
-    recipeIngredients: [
-      { name: 'Béarnaise Sauce', quantity: 'custom (g)', foodWord: 'BEARNAISE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
-      { name: 'shallots', quantity: '2 medium shallots, minced', section: 'reduction', ndbNo: '11677', portionDesc: 'g', portionGrams: 60.0 },
-      { name: 'apple cider vinegar', quantity: '3 tbsp (or white wine vinegar)', section: 'reduction', ndbNo: '2048', portionDesc: 'g', portionGrams: 45.0 },
-      { name: 'White wine, dry', quantity: '3 tbsp', section: 'reduction', ndbNo: '14106', portionDesc: 'g', portionGrams: 45.0 },
-      { name: 'dried tarragon', quantity: '1½ tsp dried (or stems for small bunch of fresh tarragon)', section: 'reduction', ndbNo: '2041', portionDesc: 'g', portionGrams: 2.25 },
-      { name: 'ground black pepper', quantity: '¼ tsp', section: 'reduction', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.75 },
-      { name: 'egg yolks', quantity: '3 large yolks', section: 'emulsion', ndbNo: '1125', portionDesc: 'g', portionGrams: 54.0 },
-      { name: 'unsalted butter', quantity: '~2¾ sticks raw (yields ~1 cup clarified; see step 1)', section: 'emulsion', ndbNo: '1145', portionDesc: 'g', portionGrams: 227.0 },
-      { name: 'salt', quantity: '½ tsp', section: 'emulsion', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
-      { name: 'fresh chives', quantity: '1 tbsp, chopped', section: 'emulsion', ndbNo: '11156', portionDesc: 'g', portionGrams: 3.0 },
-      { name: 'dried tarragon', quantity: '1 tsp (finish) (or 1 tbsp of fresh chopped tarragon)', section: 'emulsion', ndbNo: '2041', portionDesc: 'g', portionGrams: 1.5 }
-    ],
-    recipeInstructions: [
-      'To clarify the butter: melt 2¾ sticks (about 310g) of unsalted butter in a small saucepan over low heat without stirring. Skim the white foam from the surface and discard. Slowly pour the clear golden liquid into a bowl, leaving the milky white solids behind on the bottom of the pan; discard the solids. You should have about 1 cup (8 oz / 227g) of clarified butter. Keep it warm while you prepare the sauce. (Note: it takes roughly 16 oz of butter to yield 12 oz clarified; this recipe uses about 8 oz clarified, so ~11 oz raw unsalted butter is sufficient.)',
-      'Combine the shallots, apple cider vinegar, white wine, tarragon, and black pepper in a small saucepan. Bring to a boil over medium-high heat, then reduce to a brisk simmer. Cook until the liquid is reduced to about 2–3 tablespoons, roughly 5–7 minutes. Strain through a fine-mesh sieve, pressing on the solids; discard the solids. Let the reduction cool slightly.',
-      'Set a heatproof bowl over a saucepan of barely simmering water (bain-marie). The bowl should not touch the water. Add the egg yolks and the strained reduction to the bowl. Whisk constantly over gentle heat until the yolks thicken and nearly double in volume, and you can see the bottom of the bowl between strokes, about 3–5 minutes. Remove from heat immediately if the mixture gets too hot — it should never exceed 160°F (70°C).',
-      'Begin adding the clarified butter very slowly — drop by drop at first — while whisking constantly. Once the emulsion is established (after the first few tablespoons), you can add the butter in a thin, steady stream. Continue whisking until all the butter is incorporated and the sauce is thick and creamy.',
-      'Season with salt. Stir in the finishing tarragon and chopped chives. Taste and adjust seasoning. Serve immediately, or keep warm in the bain-marie with the heat off, whisking occasionally, for up to 30 minutes.',
-      '(The tarragon in the ingredient list appears twice: the first portion infuses the reduction and is strained out; the second portion is stirred in at the end as a fresh finish.)'
-    ],
-    sections: [
-      { key: 'reduction', label: 'Tarragon reduction', cookingMethod: '', yieldFactorWater: 0.2 },
-      { key: 'emulsion', label: 'Egg & butter emulsion', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
