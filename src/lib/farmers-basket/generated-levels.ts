@@ -7665,6 +7665,7 @@ export const LEVELS: Level[] = [
       { name: 'White pepper, ground', quantity: 'pinch', section: 'sauce', ndbNo: '2032', portionDesc: 'g', portionGrams: 0.3 }
     ],
     recipeInstructions: [
+      'Do not use aluminum to prepare or store. It will gray the mixture.',
       'In a small heatproof bowl, whisk together the egg yolks and lemon juice until smooth and combined.',
       'Set the bowl over a saucepan of barely simmering water, ensuring the bottom of the bowl does not touch the water.',
       'Whisk constantly over gentle heat until the yolk mixture thickens, turns pale yellow, and reaches 160°F (71°C), about 3–4 minutes. When the whisk is lifted, the mixture should ribbon and hold a trail briefly.',
