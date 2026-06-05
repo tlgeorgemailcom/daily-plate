@@ -7709,13 +7709,13 @@ export const LEVELS: Level[] = [
       { name: 'White pepper, ground', quantity: 'pinch', section: 'sauce', ndbNo: '2032', portionDesc: 'g', portionGrams: 0.3 }
     ],
     recipeInstructions: [
-      'sauce',
-      'sauce',
-      'sauce',
-      'sauce',
-      'sauce',
-      'sauce',
-      'sauce'
+      'Combine the ground mustard, white wine, and apple cider vinegar in a small non-reactive bowl and whisk until smooth.',
+      'Let stand uncovered at room temperature for 30 minutes to hydrate the mustard powder.',
+      'Whisk again until the paste is uniform and no dry clumps remain.',
+      'Season with salt and white pepper. Taste and adjust salt.',
+      'Transfer to a clean glass jar.',
+      'Refrigerate uncovered until fully cooled, then seal.',
+      'Rest in the refrigerator at least 24 hours before using — the sharpness mellows and the flavor develops considerably.'
     ],
     sections: [
       { key: 'sauce', label: 'Sauce:', cookingMethod: '', yieldFactorWater: 1.0 }
