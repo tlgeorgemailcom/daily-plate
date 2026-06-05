@@ -7815,5 +7815,46 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sauce', label: 'Sauce:', cookingMethod: '', yieldFactorWater: 0.63 }
     ],
+  },
+  {
+    id: 'SAUCE_013',
+    name: 'Russian Dressing',
+    category: 'sauces & condiments',
+    dietaryCategory: 'veggie',
+    levelNum: 170,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 tbsp (makes 6+)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":156.8,"pro":0.6,"fat":16.8,"carb":1.6,"fib":0.3,"h2o":13.2,"sug":1.0,"perServing":{"cal":156.8,"pro":0.6,"fat":16.8,"carb":1.6,"fib":0.3,"h2o":13.2,"sug":1.0,"AddedSugars":0.3,"IntrinsicSugars":0.7},"micros":{"vitaminA":41.39,"vitaminC":8.31,"vitaminD":16.78,"vitaminE":14.59,"vitaminK":2.64,"vitaminB6":0.06,"vitaminB12":0.15,"thiamin":0.02,"riboflavin":0.05,"niacin":0.18,"folate":20.51,"calcium":22.68,"iron":0.49,"magnesium":6.6,"phosphorus":42.18,"potassium":120.4,"sodium":395.0,"zinc":0.3,"copper":0.03,"selenium":4.58,"cholesterol":83.48,"saturatedFat":5.49,"monoFat":8.87,"polyFat":34.86,"omega3":0.01,"omega6":0.0},"gramsPerServing":32.7,"servings":6,"per100g":{"Energy_KCal":479.85,"Water":40.51,"Protein":1.67,"TotalLipidFat":51.53,"Carbohydrate":4.78,"FiberTotalDietary":0.81,"SugarsTotal":2.99,"Cholesterol":83.48,"FattyAcids_totalSaturated":5.49,"FattyAcids_totalMonounsaturated":8.87,"FattyAcids_totalPolyunsaturated":34.86,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":41.39,"Retinol":28.57,"Carotene_beta":136.08,"VitaminD":16.78,"VitaminE_alphaTocopherol":14.59,"VitaminK_phylloquinone":2.64,"VitaminC_totalAscorbicAcid":8.31,"Thiamin":0.02,"Riboflavin":0.05,"Niacin":0.18,"PantothenicAcid":0.27,"VitaminB6":0.06,"Folate_total":20.51,"Folate_food":20.51,"Folate_DFE":20.51,"FolicAcid":0.0,"VitaminB12":0.15,"Choline_total":66.0,"Betaine":0.11,"LuteinZeaxanthin":127.51,"Lycopene":643.41,"Calcium_Ca":22.68,"Iron_Fe":0.49,"Magnesium_Mg":6.6,"Phosphorus_P":42.18,"Potassium_K":120.4,"Sodium_Na":395.0,"Zinc_Zn":0.3,"Copper_Cu":0.03,"Manganese_Mn":0.08,"Selenium_Se":4.58,"Tryptophan":0.01,"Threonine":0.06,"Isoleucine":0.07,"Leucine":0.11,"Lysine":0.1,"Methionine":0.03,"Cystine":0.02,"Phenylalanine":0.07,"Tyrosine":0.05,"Valine":0.08,"Arginine":0.1,"Histidine":0.03,"Alanine":0.07,"AsparticAcid":0.17,"GlutamicAcid":0.29,"Glycine":0.04,"Proline":0.05,"Serine":0.11,"omega3":0.01,"omega6":0.0,"AddedSugars":0.92,"IntrinsicSugars":2.07},"addedSugars":0.3,"intrinsicSugars":0.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Mayonnaise","grams":20.0},{"ndb":"","name":"Chili Sauce","grams":8.5},{"ndb":"2055","name":"Horseradish, prepared","grams":2.5},{"ndb":"6971","name":"Sauce, worcestershire","grams":0.8},{"ndb":"9152","name":"Lemon juice, raw","grams":0.8}],"sections":[{"section_key":"sauce","section_label":"Sauce:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":196.0,"raw_water_grams":79.41,"raw_fat_grams":100.99,"raw_protein_grams":3.27,"raw_carb_grams":9.36,"final_grams":196.0}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Russian Dressing', quantity: 'custom (g)', foodWord: 'RUSSIANDRESSING', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Mayonnaise', quantity: '½ cup (8 tbsp, 120g)', section: 'sauce', foodWord: 'MAYONNAISE', portionDesc: 'g', portionGrams: 120.0, isDish: true, componentRef: 'SAUCE_009' },
+      { name: 'Chili Sauce', quantity: '3 tbsp (51g)', section: 'sauce', foodWord: 'CHILISAUCE', portionDesc: 'g', portionGrams: 51.0, isDish: true, componentRef: 'SAUCE_012' },
+      { name: 'prepared horseradish', quantity: '1 tbsp', section: 'sauce', ndbNo: '2055', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'Worcestershire sauce', quantity: '1 tsp', section: 'sauce', ndbNo: '6971', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'lemon juice', quantity: '1 tsp', section: 'sauce', ndbNo: '9152', portionDesc: 'g', portionGrams: 5.0 }
+    ],
+    recipeInstructions: [
+      'Combine the prepared horseradish, Worcestershire sauce, and lemon juice in a medium bowl; stir briefly to blend.',
+      'Add the Mayonnaise and fold in gently until the mixture is smooth and evenly incorporated.',
+      'Add the Chili Sauce and stir until the dressing is uniformly red-orange with no streaks.',
+      'Taste and adjust: add more horseradish for extra bite, a splash of lemon juice for brightness, or a small pinch of salt if needed.',
+      'Cover tightly and refrigerate for at least 30 minutes before serving to allow the flavors to meld.',
+      'Serve as a sandwich spread, salad dressing, or dipping sauce. Store covered in the refrigerator for up to 1 week; stir before each use.'
+    ],
+    sections: [
+      { key: 'sauce', label: 'Sauce:', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
