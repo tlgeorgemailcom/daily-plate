@@ -7846,7 +7846,7 @@ export const LEVELS: Level[] = [
       { name: 'lemon juice', quantity: '1 tsp', section: 'seasoning', ndbNo: '9152', portionDesc: 'g', portionGrams: 5.0 }
     ],
     recipeInstructions: [
-      'Prepare one full recipe of Mayonnaise (see instructions in the recipe: Mayonnaise) and one full recipe of Chili Sauce (see instructions in the recipe: Chili Sauce), or use store-bought equivalents.',
+      'Prepare one full recipe of Mayonnaise (see instructions in the recipe: Mayonnaise) and one full recipe of Chili Sauce (see instructions in the recipe: Chili Sauce). Note: store-bought substitutes will have a different nutrient profile.',
       'Combine the prepared horseradish, Worcestershire sauce, and lemon juice in a medium bowl; stir briefly to blend.',
       'Add the 1/2 cup of Mayonnaise and fold in gently until the mixture is smooth and evenly incorporated.',
       'Add the 3 tbsp of Chili Sauce and stir until the dressing is uniformly red-orange with no streaks.',
