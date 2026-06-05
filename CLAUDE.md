@@ -260,6 +260,7 @@ Planned BKFST order (standalone components first, composites last):
 
 - **All ingredient ledger changes require human approval** before committing. Never add or modify a row in `ingredients_ledger.csv` without showing the proposed entry and waiting for explicit confirmation.
 - **All `recipe_ingredients.csv` changes require human approval.** Present the full ingredient list before writing anything to the CSV.
+- **Never select ingredients based on what is already in the ledger.** Design the recipe with the culinarily correct ingredients first; then identify any ledger entries that need to be added and propose them for approval. Silently substituting an ingredient because it happens to already be in the ledger (e.g. using `tomato_puree` instead of `tomato_red_raw`, or `sugar_granulated` instead of `brown_sugar`) is an error. The ledger serves the recipe; the recipe does not serve the ledger.
 
 ## Error Handling Policy
 
