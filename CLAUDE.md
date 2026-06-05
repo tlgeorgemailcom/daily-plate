@@ -87,7 +87,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
 | `BKFST_NNN` | 🔧 In progress | 39 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039) |
 | `SAND_NNN` | 🔧 In progress | 67 (001–067) |
-| SAUCE_NNN` | 🔧 In progress | 7 (001–007) |
+| `SAUCE_NNN` | 🔧 In progress | 8 (001–008) |
 | `STOCK_NNN` | 🔧 In progress | 7 (001–007) |
 
 ## Validation Rules
@@ -160,6 +160,7 @@ Planned BKFST order (standalone components first, composites last):
 | SAUCE_005 | Sauce Aurore — Béchamel | (none) | Rule D ✅ — no canonical; @SAUCE_001(975.8g) raw + tomato_puree(11547) 150g+salt+white_pepper; 1127.6g total; 16 servings × 70.5g (~¼ cup); 113.5 kcal·3.29P·7.99F·7.56C per 100g; dietary_category=veggie |
 | SAUCE_006 | Velouté | (none) | Rule D ✅ — no canonical; 2 sections: stock (raw yfw=1.0): @STOCK_001(249g); roux (boiled yfw=0.88): butter_unsalted(1145) 14.2g+flour_ap_white_enriched_unbleached(20581) 7.8g+salt+white_pepper; 271g cooked; 4 servings × 67.8g (~¼ cup); 67.7 kcal·2.70P·5.40F·2.24C per 100g; dietary_category=all |
 | SAUCE_007 | Béarnaise Sauce | (none) | Rule D ✅ — no canonical; 2 sections: reduction (boiled yfw=0.20, strained): shallots_raw(11677) 60g+apple_cider_vinegar(2048) 45g+white_wine_dry(14106) 45g+tarragon_dried(2041) 2.25g+black_pepper_ground(2030) 0.75g; emulsion (raw yfw=1.0): egg_yolk_raw(1125) 54g+butter_unsalted(1145) 227g+salt_table(2047) 3g+chives_raw(11156) 3g+tarragon_dried(2041) 1.5g; 337.9g cooked; 4 servings × 84.5g (~⅓ cup); 563.7 kcal·3.86P·58.84F·4.80C per 100g; dietary_category=all |
+| SAUCE_008 | Alfredo Sauce | (none) | Rule D ✅ — no canonical; butter_unsalted(1145) 28.4g+heavy_cream(1053) 120.0g+cheese_parmesan_hard(1033) 50.0g+garlic_raw(11215) 4.5g+salt_table(2047) 0.75g+white_pepper_ground(2032) 0.6g+nutmeg_ground(2025) 0.14g; yfw=0.88 → 193.4g cooked; 3 servings × 64.5g (~¼ cup); 422.4 kcal·11.32P·41.02F·3.56C per 100g; dietary_category=veggie |
 ## Current Work: STOCK Recipes
 
 **Stock/broth yield factor tiers:**

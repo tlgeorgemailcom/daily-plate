@@ -7589,5 +7589,50 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.82, yieldFactorFat: 0.95, yieldFactorOther: 0.02 }
     ],
+  },
+  {
+    id: 'SAUCE_008',
+    name: 'Alfredo Sauce',
+    category: 'sauces & condiments',
+    dietaryCategory: 'veggie',
+    levelNum: 165,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1/4 cup (makes 3+)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":272.3,"pro":7.3,"fat":26.4,"carb":2.3,"fib":0.1,"h2o":26.9,"sug":1.3,"perServing":{"cal":272.3,"pro":7.3,"fat":26.4,"carb":2.3,"fib":0.1,"h2o":26.9,"sug":1.3,"AddedSugars":0.0,"IntrinsicSugars":1.3},"micros":{"vitaminA":368.12,"vitaminC":0.58,"vitaminD":44.01,"vitaminE":0.92,"vitaminK":3.32,"vitaminB6":0.04,"vitaminB12":0.37,"thiamin":0.02,"riboflavin":0.17,"niacin":0.09,"folate":3.18,"calcium":302.49,"iron":0.29,"magnesium":13.61,"phosphorus":189.74,"potassium":76.89,"sodium":446.16,"zinc":0.77,"copper":0.02,"selenium":7.76,"cholesterol":119.28,"saturatedFat":25.97,"monoFat":11.03,"polyFat":1.33,"omega3":0.11,"omega6":0.77},"gramsPerServing":64.5,"servings":3,"per100g":{"Energy_KCal":422.41,"Water":41.76,"Protein":11.32,"TotalLipidFat":41.02,"Carbohydrate":3.56,"FiberTotalDietary":0.15,"SugarsTotal":2.05,"Cholesterol":119.28,"FattyAcids_totalSaturated":25.97,"FattyAcids_totalMonounsaturated":11.03,"FattyAcids_totalPolyunsaturated":1.33,"LinoleicAcid":0.77,"alphaLinolenicAcid":0.1,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.0,"VitaminA_RAE":368.12,"Retinol":361.65,"Carotene_beta":76.58,"VitaminD":44.01,"VitaminE_alphaTocopherol":0.92,"VitaminK_phylloquinone":3.32,"VitaminC_totalAscorbicAcid":0.58,"Thiamin":0.02,"Riboflavin":0.17,"Niacin":0.09,"PantothenicAcid":0.32,"VitaminB6":0.04,"Folate_total":3.18,"Folate_food":3.18,"Folate_DFE":3.18,"FolicAcid":0.0,"VitaminB12":0.37,"Choline_total":15.06,"Betaine":0.0,"LuteinZeaxanthin":0.28,"Lycopene":0.0,"Calcium_Ca":302.49,"Iron_Fe":0.29,"Magnesium_Mg":13.61,"Phosphorus_P":189.74,"Potassium_K":76.89,"Sodium_Na":446.16,"Zinc_Zn":0.77,"Copper_Cu":0.02,"Manganese_Mn":0.06,"Selenium_Se":7.76,"Tryptophan":0.16,"Threonine":0.42,"Isoleucine":0.59,"Leucine":1.05,"Lysine":0.94,"Methionine":0.29,"Cystine":0.06,"Phenylalanine":0.59,"Tyrosine":0.6,"Valine":0.75,"Arginine":0.4,"Histidine":0.4,"Alanine":0.33,"AsparticAcid":0.72,"GlutamicAcid":2.52,"Glycine":0.2,"Proline":1.28,"Serine":0.6,"omega3":0.11,"omega6":0.77,"AddedSugars":0.0,"IntrinsicSugars":2.05},"addedSugars":0.0,"intrinsicSugars":1.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.88,"yieldFactorFat":1.0,"sources":[{"ndb":"1145","name":"Butter, without salt","grams":9.5},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":40.0},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":16.7},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"2047","name":"Salt, table","grams":0.2},{"ndb":"2032","name":"Spices, pepper, white","grams":0.2},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.0}],"sections":[{"section_key":"sauce","section_label":"Sauce:","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":204.39,"raw_water_grams":91.76,"raw_fat_grams":79.33,"raw_protein_grams":21.88,"raw_carb_grams":6.88,"final_grams":193.38}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Alfredo Sauce', quantity: 'custom (g)', foodWord: 'ALFREDO', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'unsalted butter', quantity: '2 tbsp', section: 'sauce', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
+      { name: 'heavy cream', quantity: '½ cup', section: 'sauce', ndbNo: '1053', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'Parmesan cheese', quantity: '½ cup, finely grated', section: 'sauce', ndbNo: '1033', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'garlic', quantity: '1 clove', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'salt', quantity: '⅛ tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.75 },
+      { name: 'White pepper, ground', quantity: '⅛ tsp', section: 'sauce', ndbNo: '2032', portionDesc: 'g', portionGrams: 0.6 },
+      { name: 'ground nutmeg', quantity: 'pinch', section: 'sauce', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.14 }
+    ],
+    recipeInstructions: [
+      'Mince or press the garlic clove.',
+      'Melt butter in a small saucepan over medium-low heat.',
+      'Add garlic and cook, stirring, about 1 minute until fragrant but not browned.',
+      'Pour in heavy cream and bring to a gentle simmer, stirring occasionally.',
+      'Simmer 3 to 4 minutes until the cream has reduced slightly and coats the back of a spoon.',
+      'Remove from heat. Add Parmesan a little at a time, stirring until fully melted and smooth.',
+      'Season with salt, white pepper, and a pinch of nutmeg. Stir to combine.',
+      'Serve immediately over pasta, or hold warm over very low heat, stirring occasionally.'
+    ],
+    sections: [
+      { key: 'sauce', label: 'Sauce:', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];
