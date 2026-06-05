@@ -7720,5 +7720,50 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sauce', label: 'Sauce:', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAUCE_011',
+    name: 'Tomato Ketchup',
+    category: 'sauces & condiments',
+    dietaryCategory: 'vegan',
+    levelNum: 168,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 tbsp (makes 40)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":18.2,"pro":0.3,"fat":0.1,"carb":4.4,"fib":0.4,"h2o":11.6,"sug":3.4,"perServing":{"cal":18.2,"pro":0.3,"fat":0.1,"carb":4.4,"fib":0.4,"h2o":11.6,"sug":3.4,"AddedSugars":2.5,"IntrinsicSugars":0.9},"micros":{"vitaminA":25.91,"vitaminC":5.99,"vitaminD":0.0,"vitaminE":2.08,"vitaminK":3.7,"vitaminB6":0.09,"vitaminB12":0.0,"thiamin":0.02,"riboflavin":0.08,"niacin":1.06,"folate":8.4,"calcium":22.84,"iron":1.67,"magnesium":22.41,"phosphorus":42.61,"potassium":411.16,"sodium":319.13,"zinc":0.39,"copper":0.27,"selenium":1.05,"cholesterol":0.0,"saturatedFat":0.03,"monoFat":0.04,"polyFat":0.09,"omega3":0.0,"omega6":0.0},"gramsPerServing":17.0,"servings":40,"per100g":{"Energy_KCal":107.47,"Water":68.51,"Protein":1.99,"TotalLipidFat":0.28,"Carbohydrate":25.94,"FiberTotalDietary":2.33,"SugarsTotal":20.15,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.03,"FattyAcids_totalMonounsaturated":0.04,"FattyAcids_totalPolyunsaturated":0.09,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":25.91,"Retinol":0.0,"Carotene_beta":304.06,"VitaminD":0.0,"VitaminE_alphaTocopherol":2.08,"VitaminK_phylloquinone":3.7,"VitaminC_totalAscorbicAcid":5.99,"Thiamin":0.02,"Riboflavin":0.08,"Niacin":1.06,"PantothenicAcid":0.35,"VitaminB6":0.09,"Folate_total":8.4,"Folate_food":8.4,"Folate_DFE":8.4,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":17.04,"Betaine":0.25,"LuteinZeaxanthin":0.0,"Lycopene":21613.81,"Calcium_Ca":22.84,"Iron_Fe":1.67,"Magnesium_Mg":22.41,"Phosphorus_P":42.61,"Potassium_K":411.16,"Sodium_Na":319.13,"Zinc_Zn":0.39,"Copper_Cu":0.27,"Manganese_Mn":0.27,"Selenium_Se":1.05,"Tryptophan":0.01,"Threonine":0.04,"Isoleucine":0.04,"Leucine":0.05,"Lysine":0.05,"Methionine":0.01,"Cystine":0.01,"Phenylalanine":0.04,"Tyrosine":0.03,"Valine":0.04,"Arginine":0.06,"Histidine":0.02,"Alanine":0.06,"AsparticAcid":0.23,"GlutamicAcid":0.75,"Glycine":0.03,"Proline":0.04,"Serine":0.04,"omega3":0.0,"omega6":0.0,"AddedSugars":14.69,"IntrinsicSugars":5.46},"addedSugars":2.5,"intrinsicSugars":0.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.603,"yieldFactorFat":1.0,"sources":[{"ndb":"11547","name":"Tomato products, canned, puree, without salt added","grams":18.8},{"ndb":"2048","name":"Vinegar, cider","grams":3.0},{"ndb":"19335","name":"Sugars, granulated","grams":2.5},{"ndb":"2047","name":"Salt, table","grams":0.1},{"ndb":"2026","name":"Spices, onion powder","grams":0.1},{"ndb":"2020","name":"Spices, garlic powder","grams":0.1},{"ndb":"2001","name":"Spices, allspice, ground","grams":0.0},{"ndb":"2011","name":"Spices, cloves, ground","grams":0.0}],"sections":[{"section_key":"sauce","section_label":"Sauce:","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.603,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":985.82,"raw_water_grams":771.91,"raw_fat_grams":1.88,"raw_protein_grams":13.53,"raw_carb_grams":176.21,"final_grams":679.38}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Tomato Ketchup', quantity: 'custom (g)', foodWord: 'KETCHUP', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'tomato purée', quantity: '3 cups', section: 'sauce', ndbNo: '11547', portionDesc: 'g', portionGrams: 750.0 },
+      { name: 'apple cider vinegar', quantity: '1/2 cup', section: 'sauce', ndbNo: '2048', portionDesc: 'g', portionGrams: 119.5 },
+      { name: 'sugar', quantity: '1/2 cup', section: 'sauce', ndbNo: '19335', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'salt', quantity: '1 tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'onion powder', quantity: '2 tsp', section: 'sauce', ndbNo: '2026', portionDesc: 'g', portionGrams: 4.8 },
+      { name: 'garlic powder', quantity: '1 tsp', section: 'sauce', ndbNo: '2020', portionDesc: 'g', portionGrams: 3.1 },
+      { name: 'allspice', quantity: '1 tsp', section: 'sauce', ndbNo: '2001', portionDesc: 'g', portionGrams: 1.9 },
+      { name: 'ground cloves', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2011', portionDesc: 'g', portionGrams: 0.525 }
+    ],
+    recipeInstructions: [
+      'Combine the tomato puree, apple cider vinegar, sugar, salt, onion powder, garlic powder, allspice, and cloves in a medium saucepan.',
+      'Bring to a boil over medium-high heat, stirring to dissolve the sugar.',
+      'Reduce heat to medium-low and simmer uncovered, stirring occasionally, until the ketchup thickens and reduces by about one-third — approximately 25 to 35 minutes.',
+      'The ketchup is ready when a spoon dragged across the bottom of the pan leaves a clear trail that holds for several seconds.',
+      'Taste and adjust seasoning — add a pinch more salt or a splash more vinegar if needed.',
+      'Let cool for 10 minutes, then blend until smooth with an immersion blender (or transfer to a blender in batches).',
+      'Transfer to clean glass jars and refrigerate. The ketchup keeps for up to 3 weeks.'
+    ],
+    sections: [
+      { key: 'sauce', label: 'Sauce:', cookingMethod: '', yieldFactorWater: 0.603 }
+    ],
   }
 ];
