@@ -89,7 +89,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
 | `BKFST_NNN` | 🔧 In progress | 39 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039) |
 | `SAND_NNN` | 🔧 In progress | 67 (001–067) |
-| `SAUCE_NNN` | 🔧 In progress | 11 (001–011) |
+| `SAUCE_NNN` | 🔧 In progress | 12 (001–012) |
 | `STOCK_NNN` | 🔧 In progress | 7 (001–007) |
 
 ## Validation Rules
@@ -166,6 +166,7 @@ Planned BKFST order (standalone components first, composites last):
 | SAUCE_009 | Mayonnaise | (none) | Rule D ✅ — no canonical; sabayon method (yolks whisked over double boiler to 160°F); egg_yolk_raw(1125) 34.0g+lemon_juice_raw(9152) 15.25g+grapeseed_oil(4517) 218.0g+salt_table(2047) 3.0g+white_pepper_ground(2032) 0.3g; yfw=1.00 → 270.55g cooked; 18 servings × 15.0g (1 tbsp); 754.3 kcal·3.5P·83.5F·1.3C per 100g; dietary_category=veggie |
 | SAUCE_010 | Dijon-Type Mustard | (none) | Rule D ✅ — no canonical; mustard_seed_ground(2024) 39.6g+white_wine_dry(14106) 58.8g+apple_cider_vinegar(2048) 29.8g+salt_table(2047) 3.0g+white_pepper_ground(2032) 0.3g; yfw=1.00 → 131.5g cooked; 26+ servings × 5g (1 tsp); 195.1 kcal·7.91P·10.92F·9.99C per 100g; dietary_category=vegan; cooking_method=raw (whisk-and-rest, no stovetop cook) |
 | SAUCE_011 | Tomato Ketchup | (none) | Rule D ✅ — no canonical; tomato_red_raw(11529) 794.0g+apple_cider_vinegar(2048) 119.5g+brown_sugar(19334) 55.0g+salt_table(2047) 6.0g+onion_powder(2026) 1.2g+garlic_powder(2020) 0.775g+allspice_ground(2001) 0.475g+cloves_ground(2011) 0.2625g+celery_seed(2007) 0.25g; yfw=0.603 → 634.6g cooked; 37+ servings × 17g (1 tbsp); 60.9 kcal·1.17P·0.270F·13.88C·1.58Fi·11.79Su per 100g; dietary_category=vegan; cooking_method=boiled |
+| SAUCE_012 | Chili Sauce | (none) | Rule D ✅ — no canonical; tomato_red_raw(11529) 794.0g+onion_raw(11282) 110.0g+bell_pepper_green_raw(11333) 119.0g+apple_cider_vinegar(2048) 60.0g+brown_sugar(19334) 27.0g+salt_table(2047) 6.0g+cinnamon_ground(2010) 1.3g+cloves_ground(2011) 0.525g+allspice_ground(2001) 1.0g+red_pepper_flakes(2031) 1.15g; yfw=0.63 → 743.6g cooked; 43+ servings × 17g (1 tbsp); 45.3 kcal·1.28P·0.310F·10.29C·1.99Fi·7.40Su per 100g; dietary_category=vegan; cooking_method=boiled |
 ## Current Work: STOCK Recipes
 
 **Stock/broth yield factor tiers:**

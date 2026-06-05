@@ -7766,5 +7766,54 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sauce', label: 'Sauce:', cookingMethod: '', yieldFactorWater: 0.603 }
     ],
+  },
+  {
+    id: 'SAUCE_012',
+    name: 'Chili Sauce',
+    category: 'sauces & condiments',
+    dietaryCategory: 'vegan',
+    levelNum: 169,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 tbsp (makes 43+)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":7.8,"pro":0.2,"fat":0.1,"carb":1.8,"fib":0.3,"h2o":14.9,"sug":1.3,"perServing":{"cal":7.8,"pro":0.2,"fat":0.1,"carb":1.8,"fib":0.3,"h2o":14.9,"sug":1.3,"AddedSugars":0.6,"IntrinsicSugars":0.7},"micros":{"vitaminA":45.91,"vitaminC":14.38,"vitaminD":0.0,"vitaminE":0.66,"vitaminK":9.46,"vitaminB6":0.09,"vitaminB12":0.0,"thiamin":0.03,"riboflavin":0.02,"niacin":0.49,"folate":13.46,"calcium":19.35,"iron":0.37,"magnesium":13.01,"phosphorus":29.49,"potassium":255.56,"sodium":272.79,"zinc":0.21,"copper":0.06,"selenium":0.15,"cholesterol":0.0,"saturatedFat":0.05,"monoFat":0.04,"polyFat":0.1,"omega3":0.0,"omega6":0.0},"gramsPerServing":17.3,"servings":43,"per100g":{"Energy_KCal":45.3,"Water":86.19,"Protein":1.28,"TotalLipidFat":0.31,"Carbohydrate":10.29,"FiberTotalDietary":1.99,"SugarsTotal":7.4,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.05,"FattyAcids_totalMonounsaturated":0.04,"FattyAcids_totalPolyunsaturated":0.1,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":45.91,"Retinol":0.0,"Carotene_beta":492.19,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.66,"VitaminK_phylloquinone":9.46,"VitaminC_totalAscorbicAcid":14.38,"Thiamin":0.03,"Riboflavin":0.02,"Niacin":0.49,"PantothenicAcid":0.09,"VitaminB6":0.09,"Folate_total":13.46,"Folate_food":13.46,"Folate_DFE":13.46,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":7.77,"Betaine":0.15,"LuteinZeaxanthin":155.43,"Lycopene":2472.72,"Calcium_Ca":19.35,"Iron_Fe":0.37,"Magnesium_Mg":13.01,"Phosphorus_P":29.49,"Potassium_K":255.56,"Sodium_Na":272.79,"Zinc_Zn":0.21,"Copper_Cu":0.06,"Manganese_Mn":0.24,"Selenium_Se":0.15,"Tryptophan":0.01,"Threonine":0.03,"Isoleucine":0.02,"Leucine":0.03,"Lysine":0.03,"Methionine":0.01,"Cystine":0.01,"Phenylalanine":0.04,"Tyrosine":0.01,"Valine":0.02,"Arginine":0.04,"Histidine":0.01,"Alanine":0.03,"AsparticAcid":0.19,"GlutamicAcid":0.53,"Glycine":0.02,"Proline":0.02,"Serine":0.03,"omega3":0.0,"omega6":0.0,"AddedSugars":3.52,"IntrinsicSugars":3.87},"addedSugars":0.6,"intrinsicSugars":0.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.63,"yieldFactorFat":1.0,"sources":[{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":18.5},{"ndb":"11282","name":"Onions, raw","grams":2.6},{"ndb":"11333","name":"Peppers, sweet, green, raw","grams":2.8},{"ndb":"2048","name":"Vinegar, cider","grams":1.4},{"ndb":"19334","name":"Sugars, brown","grams":0.6},{"ndb":"2047","name":"Salt, table","grams":0.1},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.0},{"ndb":"2011","name":"Spices, cloves, ground","grams":0.0},{"ndb":"2001","name":"Spices, allspice, ground","grams":0.0},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.0}],"sections":[{"section_key":"sauce","section_label":"Sauce:","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.63,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":1119.98,"raw_water_grams":1017.27,"raw_fat_grams":2.27,"raw_protein_grams":9.54,"raw_carb_grams":76.49,"final_grams":743.59}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Chili Sauce', quantity: 'custom (g)', foodWord: 'CHILISAUCE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'tomato raw', quantity: '5 to 6 cups fresh tomatoes, peeled and strained of seeds; or 1 can (28 oz) crushed tomatoes, strained', section: 'sauce', ndbNo: '11529', portionDesc: 'g', portionGrams: 794.0 },
+      { name: 'onion', quantity: '1 medium onion, finely diced', section: 'sauce', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'green bell pepper', quantity: '1 medium green bell pepper, finely diced', section: 'sauce', ndbNo: '11333', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'apple cider vinegar', quantity: '4 tbsp', section: 'sauce', ndbNo: '2048', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'brown sugar', quantity: '3 tbsp', section: 'sauce', ndbNo: '19334', portionDesc: 'g', portionGrams: 27.0 },
+      { name: 'salt', quantity: '1 tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground cinnamon', quantity: '1/2 tsp', section: 'sauce', ndbNo: '2010', portionDesc: 'g', portionGrams: 1.3 },
+      { name: 'ground cloves', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2011', portionDesc: 'g', portionGrams: 0.525 },
+      { name: 'allspice', quantity: '1/2 tsp', section: 'sauce', ndbNo: '2001', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'red pepper flakes', quantity: '1/2 tsp', section: 'sauce', ndbNo: '2031', portionDesc: 'g', portionGrams: 1.15 }
+    ],
+    recipeInstructions: [
+      'Score the base of each fresh tomato with an X. Blanch in boiling water for 30 seconds, then transfer to ice water. Peel and quarter the tomatoes, then press through a coarse strainer or food mill to remove the seeds (discard seeds; keep pulp and juice). If using canned crushed tomatoes, simply press through a coarse strainer to remove seeds.',
+      'Finely dice the onion and green bell pepper.',
+      'Combine the prepared tomatoes, diced onion, diced bell pepper, apple cider vinegar, brown sugar, salt, cinnamon, cloves, allspice, and red pepper flakes in a medium saucepan.',
+      'Bring to a boil over medium-high heat, stirring to dissolve the sugar.',
+      'Reduce heat to medium-low and simmer uncovered, stirring occasionally, until the sauce thickens and reduces by about a third — approximately 45 to 60 minutes.',
+      'The sauce is ready when a spoon dragged across the bottom of the pan leaves a clear trail that holds for several seconds. The onion and pepper pieces should be very soft.',
+      'Taste and adjust seasoning — add a pinch more salt, a splash more vinegar, or extra red pepper flakes if needed.',
+      'Remove from heat and let cool. Unlike ketchup, chili sauce is not blended — it keeps its chunky, relish-like texture.',
+      'Transfer to clean glass jars and refrigerate. The chili sauce keeps for up to 3 weeks.'
+    ],
+    sections: [
+      { key: 'sauce', label: 'Sauce:', cookingMethod: '', yieldFactorWater: 0.63 }
+    ],
   }
 ];
