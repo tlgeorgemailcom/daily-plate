@@ -7678,5 +7678,47 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sauce', label: 'Sauce:', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAUCE_010',
+    name: 'Dijon-Type Mustard',
+    category: 'sauces & condiments',
+    dietaryCategory: 'vegan',
+    levelNum: 167,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 tsp (makes 26+)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":9.9,"pro":0.4,"fat":0.6,"carb":0.5,"fib":0.2,"h2o":3.1,"sug":0.1,"perServing":{"cal":9.9,"pro":0.4,"fat":0.6,"carb":0.5,"fib":0.2,"h2o":3.1,"sug":0.1,"AddedSugars":0.0,"IntrinsicSugars":0.1},"micros":{"vitaminA":0.6,"vitaminC":2.19,"vitaminD":0.0,"vitaminE":1.53,"vitaminK":1.81,"vitaminB6":0.14,"vitaminB12":0.0,"thiamin":0.24,"riboflavin":0.08,"niacin":1.47,"folate":49.25,"calcium":86.87,"iron":2.98,"magnesium":117.25,"phosphorus":259.61,"potassium":270.88,"sodium":891.51,"zinc":1.9,"copper":0.2,"selenium":62.74,"cholesterol":0.0,"saturatedFat":0.6,"monoFat":6.78,"polyFat":3.04,"omega3":0.0,"omega6":0.0},"gramsPerServing":5.1,"servings":26,"per100g":{"Energy_KCal":195.08,"Water":61.72,"Protein":7.91,"TotalLipidFat":10.92,"Carbohydrate":9.99,"FiberTotalDietary":3.73,"SugarsTotal":2.56,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.6,"FattyAcids_totalMonounsaturated":6.78,"FattyAcids_totalPolyunsaturated":3.04,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.6,"Retinol":0.0,"Carotene_beta":5.42,"VitaminD":0.0,"VitaminE_alphaTocopherol":1.53,"VitaminK_phylloquinone":1.81,"VitaminC_totalAscorbicAcid":2.19,"Thiamin":0.24,"Riboflavin":0.08,"Niacin":1.47,"PantothenicAcid":0.26,"VitaminB6":0.14,"Folate_total":49.25,"Folate_food":49.25,"Folate_DFE":49.25,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":38.87,"Betaine":0.57,"LuteinZeaxanthin":171.05,"Lycopene":0.0,"Calcium_Ca":86.87,"Iron_Fe":2.98,"Magnesium_Mg":117.25,"Phosphorus_P":259.61,"Potassium_K":270.88,"Sodium_Na":891.51,"Zinc_Zn":1.9,"Copper_Cu":0.2,"Manganese_Mn":0.85,"Selenium_Se":62.74,"Tryptophan":0.08,"Threonine":0.25,"Isoleucine":0.36,"Leucine":0.63,"Lysine":0.55,"Methionine":0.14,"Cystine":0.2,"Phenylalanine":0.35,"Tyrosine":0.24,"Valine":0.45,"Arginine":0.58,"Histidine":0.26,"Alanine":0.35,"AsparticAcid":0.73,"GlutamicAcid":1.58,"Glycine":0.48,"Proline":0.85,"Serine":0.23,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":2.56},"addedSugars":0.0,"intrinsicSugars":0.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"2024","name":"Spices, mustard seed, ground","grams":1.5},{"ndb":"14106","name":"Alcoholic beverage, wine, table, white","grams":2.3},{"ndb":"2048","name":"Vinegar, cider","grams":1.1},{"ndb":"2047","name":"Salt, table","grams":0.1},{"ndb":"2032","name":"Spices, pepper, white","grams":0.0}],"sections":[{"section_key":"sauce","section_label":"Sauce:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":131.5,"raw_water_grams":81.16,"raw_fat_grams":14.36,"raw_protein_grams":10.4,"raw_carb_grams":13.14,"final_grams":131.5}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Dijon-Type Mustard', quantity: 'custom (g)', foodWord: 'DIJONTYPEMUSTARD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'ground mustard', quantity: '¼ cup', section: 'sauce', ndbNo: '2024', portionDesc: 'g', portionGrams: 39.6 },
+      { name: 'White wine, dry', quantity: '¼ cup', section: 'sauce', ndbNo: '14106', portionDesc: 'g', portionGrams: 58.8 },
+      { name: 'apple cider vinegar', quantity: '2 tbsp', section: 'sauce', ndbNo: '2048', portionDesc: 'g', portionGrams: 29.8 },
+      { name: 'salt', quantity: '½ tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'White pepper, ground', quantity: 'pinch', section: 'sauce', ndbNo: '2032', portionDesc: 'g', portionGrams: 0.3 }
+    ],
+    recipeInstructions: [
+      'sauce',
+      'sauce',
+      'sauce',
+      'sauce',
+      'sauce',
+      'sauce',
+      'sauce'
+    ],
+    sections: [
+      { key: 'sauce', label: 'Sauce:', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
