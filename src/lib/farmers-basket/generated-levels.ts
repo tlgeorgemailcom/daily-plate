@@ -7755,9 +7755,9 @@ export const LEVELS: Level[] = [
       { name: 'Celery seed', quantity: '1/8 tsp', section: 'sauce', ndbNo: '2007', portionDesc: 'g', portionGrams: 0.25 }
     ],
     recipeInstructions: [
-      'Combine the tomato puree, apple cider vinegar, sugar, salt, onion powder, garlic powder, allspice, and cloves in a medium saucepan.',
+      'Combine the chopped fresh tomatoes (or crushed canned tomatoes), apple cider vinegar, brown sugar, salt, onion powder, garlic powder, allspice, cloves, and celery seed in a medium saucepan.',
       'Bring to a boil over medium-high heat, stirring to dissolve the sugar.',
-      'Reduce heat to medium-low and simmer uncovered, stirring occasionally, until the ketchup thickens and reduces by about one-third — approximately 25 to 35 minutes.',
+      'Reduce heat to medium-low and simmer uncovered, stirring occasionally, until the ketchup thickens and reduces by about half — approximately 45 to 60 minutes.',
       'The ketchup is ready when a spoon dragged across the bottom of the pan leaves a clear trail that holds for several seconds.',
       'Taste and adjust seasoning — add a pinch more salt or a splash more vinegar if needed.',
       'Let cool for 10 minutes, then blend until smooth with an immersion blender (or transfer to a blender in batches).',
