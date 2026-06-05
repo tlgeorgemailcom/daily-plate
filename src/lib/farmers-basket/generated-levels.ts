@@ -7634,5 +7634,48 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sauce', label: 'Sauce:', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'SAUCE_009',
+    name: 'Mayonnaise',
+    category: 'sauces & condiments',
+    dietaryCategory: 'veggie',
+    levelNum: 166,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 tbsp (makes 18)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":113.4,"pro":0.3,"fat":12.6,"carb":0.1,"fib":0.0,"h2o":1.8,"sug":0.0,"perServing":{"cal":113.4,"pro":0.3,"fat":12.6,"carb":0.1,"fib":0.0,"h2o":1.8,"sug":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.0},"micros":{"vitaminA":47.88,"vitaminC":2.2,"vitaminD":27.4,"vitaminE":23.54,"vitaminK":0.09,"vitaminB6":0.05,"vitaminB12":0.25,"thiamin":0.02,"riboflavin":0.07,"niacin":0.01,"folate":19.49,"calcium":17.11,"iron":0.37,"magnesium":1.08,"phosphorus":49.66,"potassium":19.67,"sodium":435.86,"zinc":0.29,"copper":0.01,"selenium":7.05,"cholesterol":136.35,"saturatedFat":8.94,"monoFat":14.45,"polyFat":56.85,"omega3":0.01,"omega6":0.0},"gramsPerServing":15.0,"servings":18,"per100g":{"Energy_KCal":754.33,"Water":11.79,"Protein":2.02,"TotalLipidFat":83.93,"Carbohydrate":0.92,"FiberTotalDietary":0.05,"SugarsTotal":0.21,"Cholesterol":136.35,"FattyAcids_totalSaturated":8.94,"FattyAcids_totalMonounsaturated":14.45,"FattyAcids_totalPolyunsaturated":56.85,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":47.88,"Retinol":46.62,"Carotene_beta":11.12,"VitaminD":27.4,"VitaminE_alphaTocopherol":23.54,"VitaminK_phylloquinone":0.09,"VitaminC_totalAscorbicAcid":2.2,"Thiamin":0.02,"Riboflavin":0.07,"Niacin":0.01,"PantothenicAcid":0.38,"VitaminB6":0.05,"Folate_total":19.49,"Folate_food":19.49,"Folate_DFE":19.49,"FolicAcid":0.0,"VitaminB12":0.25,"Choline_total":103.36,"Betaine":0.11,"LuteinZeaxanthin":138.33,"Lycopene":0.0,"Calcium_Ca":17.11,"Iron_Fe":0.37,"Magnesium_Mg":1.08,"Phosphorus_P":49.66,"Potassium_K":19.67,"Sodium_Na":435.86,"Zinc_Zn":0.29,"Copper_Cu":0.01,"Manganese_Mn":0.01,"Selenium_Se":7.05,"Tryptophan":0.02,"Threonine":0.09,"Isoleucine":0.11,"Leucine":0.17,"Lysine":0.15,"Methionine":0.05,"Cystine":0.03,"Phenylalanine":0.09,"Tyrosine":0.08,"Valine":0.12,"Arginine":0.14,"Histidine":0.05,"Alanine":0.1,"AsparticAcid":0.19,"GlutamicAcid":0.25,"Glycine":0.06,"Proline":0.08,"Serine":0.17,"omega3":0.01,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.21},"addedSugars":0.0,"intrinsicSugars":0.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"1125","name":"Egg, yolk, raw, fresh","grams":1.9},{"ndb":"9152","name":"Lemon juice, raw","grams":0.8},{"ndb":"4517","name":"Oil, grapeseed","grams":12.1},{"ndb":"2047","name":"Salt, table","grams":0.2},{"ndb":"2032","name":"Spices, pepper, white","grams":0.0}],"sections":[{"section_key":"sauce","section_label":"Sauce:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":270.55,"raw_water_grams":31.9,"raw_fat_grams":227.07,"raw_protein_grams":5.48,"raw_carb_grams":2.48,"final_grams":270.55}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Mayonnaise', quantity: 'custom (g)', foodWord: 'MAYONNAISE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'egg yolks', quantity: '2 large', section: 'sauce', ndbNo: '1125', portionDesc: 'g', portionGrams: 34.0 },
+      { name: 'lemon juice', quantity: '1 tbsp', section: 'sauce', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.25 },
+      { name: 'grapeseed oil', quantity: '1 cup', section: 'sauce', ndbNo: '4517', portionDesc: 'g', portionGrams: 218.0 },
+      { name: 'salt', quantity: '½ tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'White pepper, ground', quantity: 'pinch', section: 'sauce', ndbNo: '2032', portionDesc: 'g', portionGrams: 0.3 }
+    ],
+    recipeInstructions: [
+      'In a small heatproof bowl, whisk together the egg yolks and lemon juice until smooth and combined.',
+      'Set the bowl over a saucepan of barely simmering water, ensuring the bottom of the bowl does not touch the water.',
+      'Whisk constantly over gentle heat until the yolk mixture thickens, turns pale yellow, and reaches 160°F (71°C), about 3–4 minutes. When the whisk is lifted, the mixture should ribbon and hold a trail briefly.',
+      'Remove from heat and continue whisking for 1 minute to cool slightly.',
+      'Begin adding the grapeseed oil one drop at a time, whisking constantly to establish the emulsion.',
+      'Once the mayonnaise begins to thicken and hold its shape, add the remaining oil in a thin, steady stream, whisking continuously.',
+      'Season with salt and white pepper. Taste and adjust seasoning.',
+      'Transfer to a jar and refrigerate immediately. Use within 5 days.'
+    ],
+    sections: [
+      { key: 'sauce', label: 'Sauce:', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
