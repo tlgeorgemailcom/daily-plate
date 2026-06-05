@@ -44,6 +44,8 @@ Always commit `recipes_bundle.json` after generating.
 
 **⚠️ Always use Python's `csv.writer` / `csv.DictWriter` to write rows to `recipe_instructions.csv`.** Instruction text frequently contains commas (e.g., "Mix salt, pepper, and herbs…"). Writing rows via shell heredoc (`cat >> file << 'EOF'`) produces unquoted CSV; `csv.DictReader` then splits the text at the first embedded comma, silently truncating the instruction. This bug will corrupt Turso after the next `upload.py --commit`. Never use heredoc for instruction rows.
 
+**⚠️ `recipe_instructions.csv` has exactly 3 columns: `recipe_id,step_order,step_text`.** There is no `section_key` column. Writing a 4-column row (e.g. `[recipe_id, step_order, section_key, step_text]`) silently places the section key in `step_text` and discards the actual instruction text. Always write exactly `[recipe_id, str(step_num), step_text]`.
+
 **For brand-new recipes, also run `insert_new.py` before `generate_bundle.py`** (see § insert_new.py below).
 
 ## insert_new.py — Initial Turso Insert
