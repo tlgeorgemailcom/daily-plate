@@ -89,7 +89,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
 | `BKFST_NNN` | 🔧 In progress | 39 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039) |
 | `SAND_NNN` | 🔧 In progress | 67 (001–067) |
-| `SAUCE_NNN` | 🔧 In progress | 10 (001–010) |
+| `SAUCE_NNN` | 🔧 In progress | 11 (001–011) |
 | `STOCK_NNN` | 🔧 In progress | 7 (001–007) |
 
 ## Validation Rules
@@ -165,6 +165,7 @@ Planned BKFST order (standalone components first, composites last):
 | SAUCE_008 | Alfredo Sauce | (none) | Rule D ✅ — no canonical; butter_unsalted(1145) 28.4g+heavy_cream(1053) 120.0g+cheese_parmesan_hard(1033) 50.0g+garlic_raw(11215) 4.5g+salt_table(2047) 0.75g+white_pepper_ground(2032) 0.6g+nutmeg_ground(2025) 0.14g; yfw=0.88 → 193.4g cooked; 3 servings × 64.5g (~¼ cup); 422.4 kcal·11.32P·41.02F·3.56C per 100g; dietary_category=veggie |
 | SAUCE_009 | Mayonnaise | (none) | Rule D ✅ — no canonical; sabayon method (yolks whisked over double boiler to 160°F); egg_yolk_raw(1125) 34.0g+lemon_juice_raw(9152) 15.25g+grapeseed_oil(4517) 218.0g+salt_table(2047) 3.0g+white_pepper_ground(2032) 0.3g; yfw=1.00 → 270.55g cooked; 18 servings × 15.0g (1 tbsp); 754.3 kcal·3.5P·83.5F·1.3C per 100g; dietary_category=veggie |
 | SAUCE_010 | Dijon-Type Mustard | (none) | Rule D ✅ — no canonical; mustard_seed_ground(2024) 39.6g+white_wine_dry(14106) 58.8g+apple_cider_vinegar(2048) 29.8g+salt_table(2047) 3.0g+white_pepper_ground(2032) 0.3g; yfw=1.00 → 131.5g cooked; 26+ servings × 5g (1 tsp); 195.1 kcal·7.91P·10.92F·9.99C per 100g; dietary_category=vegan; cooking_method=raw (whisk-and-rest, no stovetop cook) |
+| SAUCE_011 | Tomato Ketchup | (none) | Rule D ✅ — no canonical; tomato_puree(11547) 750.0g+apple_cider_vinegar(2048) 119.5g+sugar_granulated(19335) 100.0g+salt_table(2047) 6.0g+onion_powder(2026) 4.8g+garlic_powder(2020) 3.1g+allspice_ground(2001) 1.9g+cloves_ground(2011) 0.525g; yfw=0.603 → 679.4g cooked; 40 servings × 17g (1 tbsp); 107.5 kcal·1.99P·0.280F·25.94C·2.33Fi·20.15Su per 100g; dietary_category=vegan; cooking_method=boiled; P/F/C/Su/W structurally diverge from commercial NDB 11935 (commercial is strained concentrate; homemade retains tomato fiber) |
 ## Current Work: STOCK Recipes
 
 **Stock/broth yield factor tiers:**
