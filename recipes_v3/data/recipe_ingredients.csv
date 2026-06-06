@@ -1541,3 +1541,7 @@ ENTR_001,10,flour_ap_white_enriched_unbleached,2 tbsp,15.6,13,18,gravy,gravy,fal
 ENTR_001,11,milk_whole,1 cup,244.0,230,255,gravy,gravy,false,
 ENTR_001,12,salt_table,¼ tsp,1.5,1,2,gravy,gravy,false,
 ENTR_001,13,black_pepper_ground,½ tsp,1.15,1,2,gravy,gravy,false,
+SIDE_001,1,potato_white_raw,2 lb,907.2,,,puree,,,
+SIDE_001,2,butter_unsalted,1 cup (16 tbsp),227.2,,,puree,,,
+SIDE_001,3,milk_whole,1 cup,244.0,,,puree,,,
+SIDE_001,4,salt_table,1 tsp,6.0,,,puree,,,

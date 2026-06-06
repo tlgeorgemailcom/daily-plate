@@ -92,6 +92,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | `SAUCE_NNN` | 🔧 In progress | 13 (001–013) |
 | `STOCK_NNN` | 🔧 In progress | 7 (001–007) |
 | `ENTR_NNN` | 🔧 In progress | 1 (001) |
+| `SIDE_NNN` | 🔧 In progress | 1 (001) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -190,6 +191,12 @@ Planned BKFST order (standalone components first, composites last):
 | ID | Recipe | NDB | Notes |
 |---|---|---|---|
 | ENTR_001 | Chicken Fried Steak | (none) | Rule D ✅ — no canonical; steak section: sirloin_tip_raw(23061) 226.7g+flour(20581) 62.5g+egg_whole_raw(1123) 50g+paprika(2028)+garlic_powder(2020)+salt+black_pepper+vegetable_oil(4513) 27.2g absorbed; fried yfw=0.82 → 337.7g; gravy section: butter_unsalted(1145) 14.2g+flour(20581) 15.6g+milk_whole(1077) 244g+salt+black_pepper; boiled yfw=0.88 → 250.1g; cooked total 587.8g; 2 servings × 293.9g; 201.7 kcal·12.0P·11.2F·13.0C per 100g; dietary_category=all |
+
+## Current Work: SIDE Recipes
+
+| ID | Recipe | NDB | Notes |
+|---|---|---|---|
+| SIDE_001 | Mashed Potatoes, Robuchon Style | (none) | Rule D ✅ — no canonical; potato_white_raw(11354) 907.2g+butter_unsalted(1145) 227.2g+milk_whole(1077) 244.0g+salt_table(2047) 6.0g; yfw=0.96 → ~1329g cooked; 6+ servings × 210g (1 cup); ~179 kcal·1.85P·14.36F·11.48C per 100g; dietary_category=veggie |
 
 ## Current Work: SAND Recipes
 
