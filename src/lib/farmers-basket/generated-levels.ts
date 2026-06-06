@@ -8070,7 +8070,7 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Use Yukon Gold potatoes — their waxy, buttery flesh gives the smoothest, creamiest result. White potatoes are listed in the ingredients since they are a close nutritional match and they are in the database while Yukon Gold is not. Put the unpeeled potatoes in a large pot — uniform size matters so they cook evenly. Cover with cold salted water, bring to a boil, then drop to a gentle simmer. Cook 20–30 minutes until a knife slides through without any resistance.',
       'While potatoes cook, cut the butter into small pieces and let it come to room temperature.',
-      'Drain the potatoes and peel them while still hot. Pass through a ricer or food mill back into the warm pot.',
+      'Drain the potatoes and peel them while still hot. Pass through a ricer or food mill then put back into the warm pot.',
       'Over low heat, beat in the softened butter a piece at a time, then stir in the sour cream. Fold in the prepared horseradish and season with salt. Taste and adjust horseradish as desired. Serve immediately.'
     ],
     sections: [
