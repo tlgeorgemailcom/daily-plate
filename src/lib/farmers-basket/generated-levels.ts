@@ -8030,7 +8030,7 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Use Yukon Gold potatoes — their waxy, buttery flesh gives the smoothest, creamiest result. White potatoes are listed in the ingredients since they are a close nutritional match and they are in the database while Yukon Gold is not. Put the unpeeled potatoes in a large pot — uniform size matters so they cook evenly. Cover with cold salted water, bring to a boil, then drop to a gentle simmer. Cook 20–30 minutes until a knife slides through without any resistance.',
       'While potatoes cook, cut the butter into small pieces and let it come to room temperature.',
-      'Drain the potatoes and peel them while still hot — hold each one with a clean towel and pull off the skin. Pass through a ricer or fine-mesh food mill back into the warm pot.',
+      'Drain the potatoes and peel them while still hot — hold each one with a clean towel and pull off the skin. Pass through a ricer or fine-mesh food mill back into the warm pot. For chunky potatoes use a hand masher.',
       'Over low heat, beat in the softened butter a few pieces at a time using a wooden spoon or rubber spatula, working each addition fully in before adding the next. Season with salt and serve immediately.'
     ],
     sections: [
