@@ -7941,7 +7941,7 @@ export const LEVELS: Level[] = [
       { name: 'salt', quantity: '1 tsp', section: 'puree', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 }
     ],
     recipeInstructions: [
-      'Use Yukon Gold potatoes — their waxy, buttery flesh gives the smoothest, creamiest result. Put the unpeeled potatoes in a large pot — uniform size matters so they cook evenly. Cover with cold salted water, bring to a boil, then drop to a gentle simmer. Cook 20–30 minutes until a knife slides through without any resistance.',
+      'Use Yukon Gold potatoes — their waxy, buttery flesh gives the smoothest, creamiest result. White potatoes are listed in the ingredients since they are a close nutritional match and they are in the database while Yukon Gold is not. Put the unpeeled potatoes in a large pot — uniform size matters so they cook evenly. Cover with cold salted water, bring to a boil, then drop to a gentle simmer. Cook 20–30 minutes until a knife slides through without any resistance.',
       'Drain and let the potatoes sit uncovered for a few minutes so surface steam escapes. Peel them while still hot — the skins slip off easily. Pass through a potato ricer into a wide, heavy-bottomed pot. A food processor is not a substitute; it shears the starch and turns the purée gummy.',
       'Put the pot over low heat and stir continuously with a wooden spoon for 2–3 minutes. The goal is a visibly drier, slightly fluffy mass — any residual water left in now will fight the emulsion later.',
       'Take the pot off the heat. Add the cold, cubed butter a few pieces at a time, whisking vigorously after each addition. The temperature contrast between cold butter and hot potato is what creates the emulsion — add it too fast or while the pot is still on the flame and you get grease instead of cream.',
@@ -7986,7 +7986,7 @@ export const LEVELS: Level[] = [
     ],
     recipeInstructions: [
       'Heat oven to 400°F. Cut the top off the garlic head to expose the cloves, drizzle with olive oil, wrap in foil, and roast 40–45 minutes until cloves are golden and very soft.',
-      'Use Yukon Gold potatoes — their waxy, buttery flesh gives the smoothest result. Meanwhile, place potatoes in a pot of cold salted water, bring to a boil, and cook 20–25 minutes until tender when pierced.',
+      'Use Yukon Gold potatoes — their waxy, buttery flesh gives the smoothest, creamiest result. White potatoes are listed in the ingredients since they are a close nutritional match and they are in the database while Yukon Gold is not. Put the unpeeled potatoes in a large pot — uniform size matters so they cook evenly. Cover with cold salted water, bring to a boil, then drop to a gentle simmer. Cook 20–30 minutes until a knife slides through without any resistance.',
       'Squeeze the roasted garlic cloves out of their skins and mash to a paste with a fork.',
       'Drain potatoes; peel while hot. Pass through a potato ricer or food mill into the pot.',
       'Dry the riced potato over low heat 1–2 minutes, stirring with a wooden spoon to drive off excess moisture.',
