@@ -7997,5 +7997,84 @@ export const LEVELS: Level[] = [
       { key: 'garlic', label: 'Roasted garlic', cookingMethod: '', yieldFactorWater: 0.62 },
       { key: 'puree', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 }
     ],
+  },
+  {
+    id: 'SIDE_003',
+    name: 'Mashed Potatoes, Butter Only',
+    category: 'sides',
+    dietaryCategory: 'veggie',
+    levelNum: 174,
+    recipe: ['egg', 'bread', 'butter'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'fox', delay: 3500 },
+      { type: 'mouse', delay: 5000 },
+      { type: 'raccoon', delay: 6500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 5, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 3, chicken: 0, fish: 0 },
+    servings: '1 cup (makes 4+)',
+    prepTime: '30 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":359.8,"pro":4.0,"fat":23.2,"carb":35.6,"fib":5.4,"h2o":182.5,"sug":2.6,"perServing":{"cal":359.8,"pro":4.0,"fat":23.2,"carb":35.6,"fib":5.4,"h2o":182.5,"sug":2.6,"AddedSugars":0.0,"IntrinsicSugars":2.6},"micros":{"vitaminA":70.08,"vitaminC":4.14,"vitaminD":0.0,"vitaminE":0.26,"vitaminK":2.14,"vitaminB6":0.11,"vitaminB12":0.02,"thiamin":0.04,"riboflavin":0.03,"niacin":0.63,"folate":10.88,"calcium":9.41,"iron":0.38,"magnesium":15.49,"phosphorus":50.31,"potassium":298.74,"sodium":211.87,"zinc":0.23,"copper":0.09,"selenium":0.37,"cholesterol":24.47,"saturatedFat":5.76,"monoFat":2.67,"polyFat":0.32,"omega3":0.03,"omega6":0.22},"gramsPerServing":249.1,"servings":4,"per100g":{"Energy_KCal":144.46,"Water":73.28,"Protein":1.63,"TotalLipidFat":9.32,"Carbohydrate":14.31,"FiberTotalDietary":2.19,"SugarsTotal":1.05,"Cholesterol":24.47,"FattyAcids_totalSaturated":5.76,"FattyAcids_totalMonounsaturated":2.67,"FattyAcids_totalPolyunsaturated":0.32,"LinoleicAcid":0.22,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":70.08,"Retinol":68.74,"Carotene_beta":20.29,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.26,"VitaminK_phylloquinone":2.14,"VitaminC_totalAscorbicAcid":4.14,"Thiamin":0.04,"Riboflavin":0.03,"Niacin":0.63,"PantothenicAcid":0.19,"VitaminB6":0.11,"Folate_total":10.88,"Folate_food":10.88,"Folate_DFE":10.88,"FolicAcid":0.0,"VitaminB12":0.02,"Choline_total":10.33,"Betaine":0.18,"LuteinZeaxanthin":8.88,"Lycopene":0.0,"Calcium_Ca":9.41,"Iron_Fe":0.38,"Magnesium_Mg":15.49,"Phosphorus_P":50.31,"Potassium_K":298.74,"Sodium_Na":211.87,"Zinc_Zn":0.23,"Copper_Cu":0.09,"Manganese_Mn":0.12,"Selenium_Se":0.37,"Tryptophan":0.01,"Threonine":0.05,"Isoleucine":0.05,"Leucine":0.08,"Lysine":0.08,"Methionine":0.02,"Cystine":0.02,"Phenylalanine":0.06,"Tyrosine":0.03,"Valine":0.08,"Arginine":0.08,"Histidine":0.02,"Alanine":0.05,"AsparticAcid":0.36,"GlutamicAcid":0.27,"Glycine":0.04,"Proline":0.05,"Serine":0.06,"omega3":0.03,"omega6":0.22,"AddedSugars":0.0,"IntrinsicSugars":1.05},"addedSugars":0.0,"intrinsicSugars":2.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.96,"yieldFactorFat":1.0,"sources":[{"ndb":"11354","name":"Potatoes, white, flesh and skin, raw","grams":226.8},{"ndb":"1145","name":"Butter, without salt","grams":28.4},{"ndb":"2047","name":"Salt, table","grams":1.5}],"sections":[{"section_key":"puree","section_label":"Potatoes","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.96,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":1026.6,"raw_water_grams":760.45,"raw_fat_grams":92.89,"raw_protein_grams":16.2,"raw_carb_grams":142.59,"final_grams":996.18}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Mashed Potatoes, Butter Only', quantity: 'custom (g)', foodWord: 'MASHEDPOTATOESBUTTER', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Yukon Gold potatoes (White potatoes in the database)', quantity: '2 lb', section: 'puree', ndbNo: '11354', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'unsalted butter', quantity: '8 tbsp', section: 'puree', ndbNo: '1145', portionDesc: 'g', portionGrams: 113.4 },
+      { name: 'salt', quantity: '1 tsp', section: 'puree', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 }
+    ],
+    recipeInstructions: [
+      'Use Yukon Gold potatoes — their waxy, buttery flesh gives the smoothest, creamiest result. White potatoes are listed in the ingredients since they are a close nutritional match and they are in the database while Yukon Gold is not. Put the unpeeled potatoes in a large pot — uniform size matters so they cook evenly. Cover with cold salted water, bring to a boil, then drop to a gentle simmer. Cook 20–30 minutes until a knife slides through without any resistance.',
+      'While potatoes cook, cut the butter into small pieces and let it come to room temperature.',
+      'Drain the potatoes and peel them while still hot — hold each one with a clean towel and pull off the skin. Pass through a ricer or fine-mesh food mill back into the warm pot.',
+      'Over low heat, beat in the softened butter a few pieces at a time using a wooden spoon or rubber spatula, working each addition fully in before adding the next. Season with salt and serve immediately.'
+    ],
+    sections: [
+      { key: 'puree', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 }
+    ],
+  },
+  {
+    id: 'SIDE_004',
+    name: 'Horseradish Mashed Potatoes',
+    category: 'sides',
+    dietaryCategory: 'veggie',
+    levelNum: 175,
+    recipe: ['cheese', 'butter', 'bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 },
+      { type: 'raccoon', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 5, egg: 0, bread: 3, apple: 0, grapes: 0, bacon: 0, butter: 4, chicken: 0, fish: 0 },
+    servings: '1 cup (makes 5+)',
+    prepTime: '30 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":256.5,"pro":3.8,"fat":13.9,"carb":30.6,"fib":4.7,"h2o":167.5,"sug":3.6,"perServing":{"cal":256.5,"pro":3.8,"fat":13.9,"carb":30.6,"fib":4.7,"h2o":167.5,"sug":3.6,"AddedSugars":0.0,"IntrinsicSugars":3.6},"micros":{"vitaminA":43.65,"vitaminC":4.33,"vitaminD":0.0,"vitaminE":0.16,"vitaminK":1.8,"vitaminB6":0.1,"vitaminB12":0.03,"thiamin":0.04,"riboflavin":0.04,"niacin":0.59,"folate":11.73,"calcium":18.48,"iron":0.37,"magnesium":15.73,"phosphorus":52.58,"potassium":289.35,"sodium":209.69,"zinc":0.27,"copper":0.08,"selenium":0.76,"cholesterol":17.35,"saturatedFat":3.7,"monoFat":1.7,"polyFat":0.24,"omega3":0.02,"omega6":0.14},"gramsPerServing":219.0,"servings":5,"per100g":{"Energy_KCal":117.12,"Water":76.5,"Protein":1.74,"TotalLipidFat":6.35,"Carbohydrate":13.97,"FiberTotalDietary":2.12,"SugarsTotal":1.64,"Cholesterol":17.35,"FattyAcids_totalSaturated":3.7,"FattyAcids_totalMonounsaturated":1.7,"FattyAcids_totalPolyunsaturated":0.24,"LinoleicAcid":0.14,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":43.65,"Retinol":42.76,"Carotene_beta":13.5,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.16,"VitaminK_phylloquinone":1.8,"VitaminC_totalAscorbicAcid":4.33,"Thiamin":0.04,"Riboflavin":0.04,"Niacin":0.59,"PantothenicAcid":0.2,"VitaminB6":0.1,"Folate_total":11.73,"Folate_food":11.73,"Folate_DFE":11.73,"FolicAcid":0.0,"VitaminB12":0.03,"Choline_total":10.52,"Betaine":0.23,"LuteinZeaxanthin":8.7,"Lycopene":0.0,"Calcium_Ca":18.48,"Iron_Fe":0.37,"Magnesium_Mg":15.73,"Phosphorus_P":52.58,"Potassium_K":289.35,"Sodium_Na":209.69,"Zinc_Zn":0.27,"Copper_Cu":0.08,"Manganese_Mn":0.12,"Selenium_Se":0.76,"Tryptophan":0.01,"Threonine":0.06,"Isoleucine":0.06,"Leucine":0.1,"Lysine":0.1,"Methionine":0.02,"Cystine":0.02,"Phenylalanine":0.07,"Tyrosine":0.04,"Valine":0.09,"Arginine":0.08,"Histidine":0.03,"Alanine":0.05,"AsparticAcid":0.35,"GlutamicAcid":0.31,"Glycine":0.04,"Proline":0.08,"Serine":0.07,"omega3":0.02,"omega6":0.14,"AddedSugars":0.0,"IntrinsicSugars":1.64},"addedSugars":0.0,"intrinsicSugars":3.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.96,"yieldFactorFat":1.0,"sources":[{"ndb":"11354","name":"Potatoes, white, flesh and skin, raw","grams":181.4},{"ndb":"1145","name":"Butter, without salt","grams":11.4},{"ndb":"1056","name":"Cream, sour, cultured","grams":23.0},{"ndb":"2055","name":"Horseradish, prepared","grams":9.0},{"ndb":"2047","name":"Salt, table","grams":1.2}],"sections":[{"section_key":"puree","section_label":"Potatoes","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.96,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":1130.0,"raw_water_grams":872.61,"raw_fat_grams":69.54,"raw_protein_grams":19.06,"raw_carb_grams":152.96,"final_grams":1095.1}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Horseradish Mashed Potatoes', quantity: 'custom (g)', foodWord: 'HORSERADISHMASHEDPOTATOES', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Yukon Gold potatoes (White potatoes in the database)', quantity: '2 lb', section: 'puree', ndbNo: '11354', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'unsalted butter', quantity: '4 tbsp', section: 'puree', ndbNo: '1145', portionDesc: 'g', portionGrams: 56.8 },
+      { name: 'sour cream', quantity: '½ cup', section: 'puree', ndbNo: '1056', portionDesc: 'g', portionGrams: 115.0 },
+      { name: 'prepared horseradish', quantity: '3 tbsp', section: 'puree', ndbNo: '2055', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'salt', quantity: '1 tsp', section: 'puree', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 }
+    ],
+    recipeInstructions: [
+      'Use Yukon Gold potatoes — their waxy, buttery flesh gives the smoothest, creamiest result. White potatoes are listed in the ingredients since they are a close nutritional match and they are in the database while Yukon Gold is not. Put the unpeeled potatoes in a large pot — uniform size matters so they cook evenly. Cover with cold salted water, bring to a boil, then drop to a gentle simmer. Cook 20–30 minutes until a knife slides through without any resistance.',
+      'While potatoes cook, cut the butter into small pieces and let it come to room temperature.',
+      'Drain the potatoes and peel them while still hot. Pass through a ricer or food mill back into the warm pot.',
+      'Over low heat, beat in the softened butter a piece at a time, then stir in the sour cream. Fold in the prepared horseradish and season with salt. Taste and adjust horseradish as desired. Serve immediately.'
+    ],
+    sections: [
+      { key: 'puree', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 }
+    ],
   }
 ];
