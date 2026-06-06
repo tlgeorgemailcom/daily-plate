@@ -7859,5 +7859,56 @@ export const LEVELS: Level[] = [
       { key: 'chili_sauce', label: 'Chili Sauce', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'seasoning', label: 'To finish', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'ENTR_001',
+    name: 'Chicken Fried Steak',
+    category: 'Entrees & Main Courses',
+    dietaryCategory: 'all',
+    levelNum: 171,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 steaks',
+    prepTime: '30 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":592.7,"pro":35.3,"fat":33.0,"carb":38.1,"fib":2.0,"h2o":182.9,"sug":6.5,"perServing":{"cal":592.7,"pro":35.3,"fat":33.0,"carb":38.1,"fib":2.0,"h2o":182.9,"sug":6.5,"AddedSugars":0.0,"IntrinsicSugars":6.5},"micros":{"vitaminA":50.79,"vitaminC":0.0,"vitaminD":27.8,"vitaminE":0.46,"vitaminK":2.53,"vitaminB6":0.18,"vitaminB12":1.7,"thiamin":0.11,"riboflavin":0.22,"niacin":2.21,"folate":25.64,"calcium":52.74,"iron":1.66,"magnesium":18.29,"phosphorus":147.02,"potassium":229.1,"sodium":330.99,"zinc":2.42,"copper":0.07,"selenium":20.24,"cholesterol":63.75,"saturatedFat":6.9,"monoFat":2.66,"polyFat":0.47,"omega3":0.01,"omega6":0.21},"gramsPerServing":293.9,"servings":2,"per100g":{"Energy_KCal":201.67,"Water":62.23,"Protein":12.0,"TotalLipidFat":11.22,"Carbohydrate":12.97,"FiberTotalDietary":0.67,"SugarsTotal":2.22,"Cholesterol":63.75,"FattyAcids_totalSaturated":6.9,"FattyAcids_totalMonounsaturated":2.66,"FattyAcids_totalPolyunsaturated":0.47,"LinoleicAcid":0.21,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":50.79,"Retinol":42.29,"Carotene_beta":89.57,"VitaminD":27.8,"VitaminE_alphaTocopherol":0.46,"VitaminK_phylloquinone":2.53,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.11,"Riboflavin":0.22,"Niacin":2.21,"PantothenicAcid":0.5,"VitaminB6":0.18,"Folate_total":25.64,"Folate_food":10.7,"Folate_DFE":36.11,"FolicAcid":20.46,"VitaminB12":1.7,"Choline_total":57.35,"Betaine":6.08,"LuteinZeaxanthin":84.85,"Lycopene":0.1,"Calcium_Ca":52.74,"Iron_Fe":1.66,"Magnesium_Mg":18.29,"Phosphorus_P":147.02,"Potassium_K":229.1,"Sodium_Na":330.99,"Zinc_Zn":2.42,"Copper_Cu":0.07,"Manganese_Mn":0.18,"Selenium_Se":20.24,"Tryptophan":0.1,"Threonine":0.46,"Isoleucine":0.54,"Leucine":0.96,"Lysine":0.9,"Methionine":0.3,"Cystine":0.14,"Phenylalanine":0.52,"Tyrosine":0.41,"Valine":0.62,"Arginine":0.7,"Histidine":0.35,"Alanine":0.65,"AsparticAcid":1.04,"GlutamicAcid":2.14,"Glycine":0.61,"Proline":0.73,"Serine":0.55,"omega3":0.01,"omega6":0.21,"AddedSugars":0.0,"IntrinsicSugars":2.22},"addedSugars":0.0,"intrinsicSugars":6.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"23061","name":"Beef, round, knuckle, tip center, steak, separable lean and fat, trimmed to 0\" fat, all grades, raw","grams":113.3},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":31.2},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":25.0},{"ndb":"2028","name":"Spices, paprika","grams":1.1},{"ndb":"2020","name":"Spices, garlic powder","grams":0.8},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":1.1},{"ndb":"4513","name":"Vegetable oil, palm kernel","grams":13.6},{"ndb":"1145","name":"Butter, without salt","grams":7.1},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":7.8},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":122.0},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.6}],"sections":[{"section_key":"steak","section_label":"Chicken fried steak","prep_method":"raw","cook_method":"fried","cooking_method":"fried","cooking_method_normalized":"fried","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":375.55,"raw_water_grams":210.42,"raw_fat_grams":46.3,"raw_protein_grams":61.01,"raw_carb_grams":51.89,"final_grams":337.67},{"section_key":"gravy","section_label":"Cream gravy","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":276.45,"raw_water_grams":219.59,"raw_fat_grams":19.64,"raw_protein_grams":9.54,"raw_carb_grams":24.36,"final_grams":250.1}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken Fried Steak', quantity: 'custom (g)', foodWord: 'CHICKENFRIEDSTEAK', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'sirloin tip steak', quantity: '2 steaks (4 oz each)', section: 'steak', ndbNo: '23061', portionDesc: 'g', portionGrams: 226.7 },
+      { name: 'flour', quantity: '½ cup', section: 'steak', ndbNo: '20581', portionDesc: 'g', portionGrams: 62.5 },
+      { name: 'large egg', quantity: '1 large', section: 'steak', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'paprika', quantity: '1 tsp', section: 'steak', ndbNo: '2028', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'garlic powder', quantity: '½ tsp', section: 'steak', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.55 },
+      { name: 'salt', quantity: '½ tsp', section: 'steak', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1 tsp', section: 'steak', ndbNo: '2030', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'vegetable oil', quantity: '2 tbsp vegetable oil (absorbed)', section: 'steak', ndbNo: '4513', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'unsalted butter', quantity: '1 tbsp', section: 'gravy', ndbNo: '1145', portionDesc: 'g', portionGrams: 14.2 },
+      { name: 'flour', quantity: '2 tbsp', section: 'gravy', ndbNo: '20581', portionDesc: 'g', portionGrams: 15.6 },
+      { name: 'whole milk', quantity: '1 cup', section: 'gravy', ndbNo: '1077', portionDesc: 'g', portionGrams: 244.0 },
+      { name: 'salt', quantity: '¼ tsp', section: 'gravy', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '½ tsp', section: 'gravy', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
+    ],
+    recipeInstructions: [
+      'Using a meat mallet pound one side of each sirloin tip steak with the spiky side of the mallet. Flip and pound the other side to ¼-inch thickness. Pound firmly but do not shred the meat. Lightly seasoning the steaks before pounding will push the seasoning into the steaks.',
+      'In a shallow dish, whisk together the flour, paprika, garlic powder, salt, and black pepper. In a second shallow dish, beat the egg.',
+      'Dredge each steak in the seasoned flour, shaking off the excess. Dip in the beaten egg, then dredge in the flour again, pressing firmly so the coating adheres. Set aside on a wire rack.',
+      'Heat the vegetable oil in a large cast iron or heavy-bottomed skillet over medium-high heat until shimmering. Add the steaks and fry 3 to 4 minutes per side until deep golden brown and cooked through. Transfer to a clean wire rack. (The oil in the ingredient list reflects only the amount absorbed into the crust.)',
+      'Pour off all but 2 tablespoons of drippings from the skillet. Whisk in the flour and cook over medium heat, stirring constantly, 1 to 2 minutes until the roux turns light golden.',
+      'Gradually pour in the milk while whisking, scraping up any browned bits from the bottom of the pan. Continue to cook, stirring frequently, 4 to 6 minutes until the gravy thickens to a pourable consistency.',
+      'Season the gravy with salt and black pepper. Plate the steaks and ladle the cream gravy over the top. Serve immediately.'
+    ],
+    sections: [
+      { key: 'steak', label: 'Chicken fried steak', cookingMethod: '', yieldFactorWater: 0.82 },
+      { key: 'gravy', label: 'Cream gravy', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];

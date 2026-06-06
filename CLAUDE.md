@@ -91,6 +91,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | `SAND_NNN` | 🔧 In progress | 67 (001–067) |
 | `SAUCE_NNN` | 🔧 In progress | 13 (001–013) |
 | `STOCK_NNN` | 🔧 In progress | 7 (001–007) |
+| `ENTR_NNN` | 🔧 In progress | 1 (001) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -184,6 +185,12 @@ Planned BKFST order (standalone components first, composites last):
 | STOCK_005 | Beef Bone Broth | (none) | Rule D ✅ — 24h simmer; **yfp=0.395** (calibrated vs Kettle & Fire label); yfo=0.02; dietary_category=all; 2 servings × 1996g |
 | STOCK_006 | Fish Stock | 6963 | Rule C ✅ — NDB 6963 Fish broth; yfw=0.900, yff=1.000, yfp=0.355, **yfc=0.293**, yfo=0.02; yfc captures soluble wine carbs (C=0.0% vs canonical); Su=+422% structural (wine sugars vs bare broth); E=−5.5% structural (ethanol evaporation); dietary_category=pesca; 3 servings |
 | STOCK_007 | Vegetable Stock | 6700 | Rule C ✅ — NDB 6700; yfw=0.820, yff=0.950, yfp=0.484, yfc=0.290, yfo=0.02; P/F/C=0.0%; E=+5.6% structural (fiber Atwater); Su=+131% structural (fresh veg vs commercial broth); dietary_category=vegan; 2 servings |
+## Current Work: ENTR Recipes
+
+| ID | Recipe | NDB | Notes |
+|---|---|---|---|
+| ENTR_001 | Chicken Fried Steak | (none) | Rule D ✅ — no canonical; steak section: sirloin_tip_raw(23061) 226.7g+flour(20581) 62.5g+egg_whole_raw(1123) 50g+paprika(2028)+garlic_powder(2020)+salt+black_pepper+vegetable_oil(4513) 27.2g absorbed; fried yfw=0.82 → 337.7g; gravy section: butter_unsalted(1145) 14.2g+flour(20581) 15.6g+milk_whole(1077) 244g+salt+black_pepper; boiled yfw=0.88 → 250.1g; cooked total 587.8g; 2 servings × 293.9g; 201.7 kcal·12.0P·11.2F·13.0C per 100g; dietary_category=all |
+
 ## Current Work: SAND Recipes
 
 **Sandwiches planning**: `/Volumes/training/Daily Food Chain/daily-food-chain/docs/sandwiches.md`
