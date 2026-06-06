@@ -92,7 +92,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | `SAUCE_NNN` | 🔧 In progress | 13 (001–013) |
 | `STOCK_NNN` | 🔧 In progress | 7 (001–007) |
 | `ENTR_NNN` | 🔧 In progress | 1 (001) |
-| `SIDE_NNN` | 🔧 In progress | 1 (001) |
+| `SIDE_NNN` | 🔧 In progress | 2 (001–002) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -196,8 +196,7 @@ Planned BKFST order (standalone components first, composites last):
 
 | ID | Recipe | NDB | Notes |
 |---|---|---|---|
-| SIDE_001 | Mashed Potatoes, Robuchon Style | (none) | Rule D ✅ — no canonical; potato_white_raw(11354) 907.2g+butter_unsalted(1145) 227.2g+milk_whole(1077) 244.0g+salt_table(2047) 6.0g; yfw=0.96 → ~1329g cooked; 6+ servings × 210g (1 cup); ~179 kcal·1.85P·14.36F·11.48C per 100g; dietary_category=veggie |
-
+| SIDE_001 | Mashed Potatoes, Robuchon Style | (none) | Rule D ✅ — no canonical; potato_white_raw(11354) 907.2g+butter_unsalted(1145) 227.2g+milk_whole(1077) 244.0g+salt_table(2047) 6.0g; yfw=0.96 → ~1329g cooked; 6+ servings × 210g (1 cup); ~179 kcal·1.85P·14.36F·11.48C per 100g; dietary_category=veggie || SIDE_002 | Garlic Mashed Potatoes | (none) | Rule D ✅ — no canonical; 2-section: garlic_raw(11215) 30.0g+olive_oil(4053) 2.25g baked yfw=0.62 + potato_white_raw(11354) 907.2g+butter_unsalted(1145) 56.8g+milk_whole(1077) 122.0g+salt_table(2047) 6.0g boiled yfw=0.96; 1083.3g cooked; 5+ servings × 210g (1 cup); 108.2 kcal·1.98P·4.92F·14.62C per 100g; dietary_category=veggie |
 ## Current Work: SAND Recipes
 
 **Sandwiches planning**: `/Volumes/training/Daily Food Chain/daily-food-chain/docs/sandwiches.md`

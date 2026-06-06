@@ -7951,5 +7951,51 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'puree', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 }
     ],
+  },
+  {
+    id: 'SIDE_002',
+    name: 'Garlic Mashed Potatoes',
+    category: 'sides',
+    dietaryCategory: 'veggie',
+    levelNum: 173,
+    recipe: ['egg', 'bread', 'butter'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'fox', delay: 3500 },
+      { type: 'mouse', delay: 5000 },
+      { type: 'raccoon', delay: 6500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 5, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 3, chicken: 0, fish: 0 },
+    servings: '1 cup (makes 5+)',
+    prepTime: '1 hr',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":234.4,"pro":4.3,"fat":10.7,"carb":31.7,"fib":4.5,"h2o":166.9,"sug":3.4,"perServing":{"cal":234.4,"pro":4.3,"fat":10.7,"carb":31.7,"fib":4.5,"h2o":166.9,"sug":3.4,"AddedSugars":0.0,"IntrinsicSugars":3.4},"micros":{"vitaminA":36.94,"vitaminC":4.29,"vitaminD":5.74,"vitaminE":0.16,"vitaminK":1.82,"vitaminB6":0.13,"vitaminB12":0.05,"thiamin":0.05,"riboflavin":0.04,"niacin":0.6,"folate":10.33,"calcium":23.42,"iron":0.4,"magnesium":15.75,"phosphorus":57.48,"potassium":296.72,"sodium":198.94,"zinc":0.28,"copper":0.09,"selenium":1.08,"cholesterol":12.4,"saturatedFat":2.9,"monoFat":1.47,"polyFat":0.2,"omega3":0.01,"omega6":0.1},"gramsPerServing":216.7,"servings":5,"per100g":{"Energy_KCal":108.21,"Water":77.03,"Protein":1.98,"TotalLipidFat":4.92,"Carbohydrate":14.62,"FiberTotalDietary":2.07,"SugarsTotal":1.56,"Cholesterol":12.4,"FattyAcids_totalSaturated":2.9,"FattyAcids_totalMonounsaturated":1.47,"FattyAcids_totalPolyunsaturated":0.2,"LinoleicAcid":0.1,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":36.94,"Retinol":36.23,"Carotene_beta":12.05,"VitaminD":5.74,"VitaminE_alphaTocopherol":0.16,"VitaminK_phylloquinone":1.82,"VitaminC_totalAscorbicAcid":4.29,"Thiamin":0.05,"Riboflavin":0.04,"Niacin":0.6,"PantothenicAcid":0.21,"VitaminB6":0.13,"Folate_total":10.33,"Folate_food":10.33,"Folate_DFE":10.33,"FolicAcid":0.0,"VitaminB12":0.05,"Choline_total":10.62,"Betaine":0.24,"LuteinZeaxanthin":8.48,"Lycopene":0.0,"Calcium_Ca":23.42,"Iron_Fe":0.4,"Magnesium_Mg":15.75,"Phosphorus_P":57.48,"Potassium_K":296.72,"Sodium_Na":198.94,"Zinc_Zn":0.28,"Copper_Cu":0.09,"Manganese_Mn":0.16,"Selenium_Se":1.08,"Tryptophan":0.02,"Threonine":0.06,"Isoleucine":0.07,"Leucine":0.11,"Lysine":0.11,"Methionine":0.03,"Cystine":0.02,"Phenylalanine":0.08,"Tyrosine":0.05,"Valine":0.1,"Arginine":0.1,"Histidine":0.03,"Alanine":0.06,"AsparticAcid":0.37,"GlutamicAcid":0.34,"Glycine":0.05,"Proline":0.08,"Serine":0.08,"omega3":0.01,"omega6":0.1,"AddedSugars":0.0,"IntrinsicSugars":1.56},"addedSugars":0.0,"intrinsicSugars":3.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.96,"yieldFactorFat":1.0,"sources":[{"ndb":"11215","name":"Garlic, raw","grams":6.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":0.5},{"ndb":"11354","name":"Potatoes, white, flesh and skin, raw","grams":181.4},{"ndb":"1145","name":"Butter, without salt","grams":11.4},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":24.4},{"ndb":"2047","name":"Salt, table","grams":1.2}],"sections":[{"section_key":"garlic","section_label":"Roasted garlic","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.62,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":32.25,"raw_water_grams":17.57,"raw_fat_grams":2.4,"raw_protein_grams":1.91,"raw_carb_grams":9.92,"final_grams":25.57},{"section_key":"puree","section_label":"Potatoes","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.96,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":1092.0,"raw_water_grams":857.81,"raw_fat_grams":50.94,"raw_protein_grams":19.57,"raw_carb_grams":148.41,"final_grams":1057.69}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Garlic Mashed Potatoes', quantity: 'custom (g)', foodWord: 'GARLICMASHED', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'garlic', quantity: '1 head (10 cloves)', section: 'garlic', ndbNo: '11215', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'olive oil', quantity: '½ tsp', section: 'garlic', ndbNo: '4053', portionDesc: 'g', portionGrams: 2.25 },
+      { name: 'white potatoes (raw)', quantity: '2 lb', section: 'puree', ndbNo: '11354', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'unsalted butter', quantity: '4 tbsp', section: 'puree', ndbNo: '1145', portionDesc: 'g', portionGrams: 56.8 },
+      { name: 'whole milk', quantity: '½ cup', section: 'puree', ndbNo: '1077', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'salt', quantity: '1 tsp', section: 'puree', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 }
+    ],
+    recipeInstructions: [
+      'Heat oven to 400°F. Cut the top off the garlic head to expose the cloves, drizzle with olive oil, wrap in foil, and roast 40–45 minutes until cloves are golden and very soft.',
+      'Meanwhile, place potatoes in a pot of cold salted water, bring to a boil, and cook 20–25 minutes until tender when pierced.',
+      'Squeeze the roasted garlic cloves out of their skins and mash to a paste with a fork.',
+      'Drain potatoes; peel while hot. Pass through a potato ricer or food mill into the pot.',
+      'Dry the riced potato over low heat 1–2 minutes, stirring with a wooden spoon to drive off excess moisture.',
+      'Remove from heat. Stir in garlic paste, then add butter in pieces, stirring vigorously to incorporate.',
+      'Warm the milk gently and stir in gradually until potatoes reach desired consistency. Season with salt and serve at once.'
+    ],
+    sections: [
+      { key: 'garlic', label: 'Roasted garlic', cookingMethod: '', yieldFactorWater: 0.62 },
+      { key: 'puree', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 }
+    ],
   }
 ];
