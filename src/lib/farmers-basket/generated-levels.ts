@@ -8401,7 +8401,7 @@ export const LEVELS: Level[] = [
   },
   {
     id: 'SIDE_012',
-    name: 'Cornbread',
+    name: 'Cornbread (2% Milk)',
     category: 'sides',
     dietaryCategory: 'veggie',
     levelNum: 183,
