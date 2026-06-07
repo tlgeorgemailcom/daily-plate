@@ -8388,7 +8388,7 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Place whole unpeeled potatoes in a large pot. Cover with cold salted water. Bring to a boil, then simmer 20–25 minutes until tender when pierced with a knife. Drain and let cool slightly.',
       'While still warm, peel the potatoes and pass through a potato ricer or food mill onto a lightly floured work surface. Spread out and let steam escape for 2–3 minutes — dry potatoes make lighter gnocchi.',
-      'Make a well in the center of the riced potatoes. Beat the eggs lightly, then pour into the well along with the salt. Gradually fold in the flour, working gently until a soft dough just comes together. Do not overwork.',
+      'Make a well in the center of the riced potatoes. Beat the eggs lightly with the salt, then pour into the well. Starting with 1/2 cup flour, gradually fold the flour into the egg and potatoes. Work gently until a soft dough just comes together. Do not overwork.',
       'Divide the dough into 6–8 portions. On a lightly floured surface, roll each portion into a rope about 3/4-inch thick. Cut into 1-inch pieces.',
       'Optional: roll each piece off the back of a fork or over a gnocchi board to create ridges.',
       'Bring a large pot of salted water to a boil. Cook gnocchi in batches — they are ready about 30 seconds after they float to the surface (2–3 minutes total). Remove with a slotted spoon.',
