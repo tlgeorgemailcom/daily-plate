@@ -92,7 +92,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | `SAUCE_NNN` | 🔧 In progress | 13 (001–013) |
 | `STOCK_NNN` | 🔧 In progress | 7 (001–007) |
 | `ENTR_NNN` | 🔧 In progress | 1 (001) |
-| `SIDE_NNN` | 🔧 In progress | 10 (001–010) |
+| `SIDE_NNN` | 🔧 In progress | 11 (001–011) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -206,6 +206,7 @@ Planned BKFST order (standalone components first, composites last):
 | SIDE_008 | Potatoes au Gratin | (none) | Rule D ✅ — no canonical; potato_white_raw(11354) 907.2g+heavy_cream(1053) 238.0g+milk_whole(1077) 122.0g+cheese_gruyere(1023) 108.0g+butter_unsalted(1145) 14.2g+garlic_raw(11215) 6.0g+salt+pepper+nutmeg; single section baked yfw=0.85 → 1248g cooked; 6+ servings × 200g (¾ cup); 165.8 kcal·4.69P·11.00F·12.61C per 100g; dietary_category=veggie |
 | SIDE_009 | Pommes Anna | (none) | Rule D ✅ — no canonical; potato_white_raw(11354) 907.2g+butter_unsalted(1145) 85.2g+salt+pepper; single section baked yfw=0.85 → 886g cooked; 4 servings × 220g (¾ cup); 139.8 kcal·1.80P·7.90F·16.10C per 100g; dietary_category=veggie |
 | SIDE_010 | Tartiflette | (none) | Rule D ✅ — no canonical; 2-section: potatoes(11354) 907.2g boiled yfw=0.96 + gratin: cheese_brie(1006) 396.9g+bacon_cooked_pan_fried(10862) 113.4g+onion_raw(11282) 150.0g+white_wine_dry(14106) 58.8g+heavy_cream(1053) 60.0g+garlic_raw(11215) 6.0g baked yfw=0.82; 1590g cooked; 6 servings × 265g (1 cup); 176.8 kcal·8.84P·10.90F·10.41C per 100g; dietary_category=all; cheese_brie=Reblochon analog (NDB 1006, Reblochon not in SR Legacy) |
+| SIDE_011 | Potato Gnocchi | (none) | Rule D ✅ — no canonical; 2-section: potatoes(11354) 907.2g boiled yfw=0.96 + dough: flour_ap_white_enriched_unbleached(20581) 250.0g+egg_whole_raw(1123) 100.0g+salt_table(2047) 6.0g boiled yfw=1.00; 1233.6g cooked; 6 servings × 205.6g (1 cup); 136.1 kcal·4.35P·1.04F·27.08C per 100g; dietary_category=veggie; food_word=GNOCCHI (bespoke Rule D) |
 ## Current Work: SAND Recipes
 
 **Sandwiches planning**: `/Volumes/training/Daily Food Chain/daily-food-chain/docs/sandwiches.md`

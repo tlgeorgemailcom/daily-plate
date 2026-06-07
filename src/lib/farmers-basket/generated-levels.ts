@@ -8354,5 +8354,49 @@ export const LEVELS: Level[] = [
       { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 },
       { key: 'gratin', label: 'Gratin', cookingMethod: '', yieldFactorWater: 0.82 }
     ],
+  },
+  {
+    id: 'SIDE_011',
+    name: 'Potato Gnocchi',
+    category: 'sides',
+    dietaryCategory: 'veggie',
+    levelNum: 182,
+    recipe: ['egg', 'butter', 'bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'fox', delay: 3500 },
+      { type: 'raccoon', delay: 5000 },
+      { type: 'mouse', delay: 6500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 5, bread: 3, apple: 0, grapes: 0, bacon: 0, butter: 4, chicken: 0, fish: 0 },
+    servings: '1 cup (makes 6+)',
+    prepTime: '45 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":279.8,"pro":8.9,"fat":2.1,"carb":55.7,"fib":4.8,"h2o":136.1,"sug":1.9,"perServing":{"cal":279.8,"pro":8.9,"fat":2.1,"carb":55.7,"fib":4.8,"h2o":136.1,"sug":1.9,"AddedSugars":0.0,"IntrinsicSugars":1.9},"micros":{"vitaminA":11.67,"vitaminC":3.35,"vitaminD":6.65,"vitaminE":0.13,"vitaminK":1.2,"vitaminB6":0.1,"vitaminB12":0.06,"thiamin":0.14,"riboflavin":0.13,"niacin":1.29,"folate":35.19,"calcium":12.17,"iron":1.17,"magnesium":16.7,"phosphorus":71.0,"potassium":265.78,"sodium":180.37,"zinc":0.39,"copper":0.1,"selenium":9.1,"cholesterol":30.16,"saturatedFat":0.3,"monoFat":0.31,"polyFat":0.23,"omega3":0.0,"omega6":0.11},"gramsPerServing":205.6,"servings":6,"per100g":{"Energy_KCal":136.1,"Water":66.18,"Protein":4.35,"TotalLipidFat":1.04,"Carbohydrate":27.08,"FiberTotalDietary":2.31,"SugarsTotal":0.93,"Cholesterol":30.16,"FattyAcids_totalSaturated":0.3,"FattyAcids_totalMonounsaturated":0.31,"FattyAcids_totalPolyunsaturated":0.23,"LinoleicAcid":0.11,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":11.67,"Retinol":11.67,"Carotene_beta":3.49,"VitaminD":6.65,"VitaminE_alphaTocopherol":0.13,"VitaminK_phylloquinone":1.2,"VitaminC_totalAscorbicAcid":3.35,"Thiamin":0.14,"Riboflavin":0.13,"Niacin":1.29,"PantothenicAcid":0.29,"VitaminB6":0.1,"Folate_total":35.19,"Folate_food":14.9,"Folate_DFE":49.41,"FolicAcid":31.21,"VitaminB12":0.06,"Choline_total":27.12,"Betaine":0.17,"LuteinZeaxanthin":49.76,"Lycopene":0.0,"Calcium_Ca":12.17,"Iron_Fe":1.17,"Magnesium_Mg":16.7,"Phosphorus_P":71.0,"Potassium_K":265.78,"Sodium_Na":180.37,"Zinc_Zn":0.39,"Copper_Cu":0.1,"Manganese_Mn":0.23,"Selenium_Se":9.1,"Tryptophan":0.04,"Threonine":0.14,"Isoleucine":0.16,"Leucine":0.29,"Lysine":0.18,"Methionine":0.08,"Cystine":0.08,"Phenylalanine":0.2,"Tyrosine":0.12,"Valine":0.21,"Arginine":0.21,"Histidine":0.09,"Alanine":0.16,"AsparticAcid":0.48,"GlutamicAcid":1.04,"Glycine":0.14,"Proline":0.32,"Serine":0.23,"omega3":0.0,"omega6":0.11,"AddedSugars":0.0,"IntrinsicSugars":0.93},"addedSugars":0.0,"intrinsicSugars":1.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.96,"yieldFactorFat":1.0,"sources":[{"ndb":"11354","name":"Potatoes, white, flesh and skin, raw","grams":151.2},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":41.7},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":16.7},{"ndb":"2047","name":"Salt, table","grams":1.0}],"sections":[{"section_key":"potatoes","section_label":"Potatoes","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.96,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":907.2,"raw_water_grams":740.09,"raw_fat_grams":0.91,"raw_protein_grams":15.24,"raw_carb_grams":142.52,"final_grams":877.6},{"section_key":"dough","section_label":"Dough","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":356.0,"raw_water_grams":105.96,"raw_fat_grams":11.96,"raw_protein_grams":38.38,"raw_carb_grams":191.5,"final_grams":356.0}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Potato Gnocchi', quantity: 'custom (g)', foodWord: 'GNOCCHI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white potatoes (raw)', quantity: '2 lbs', section: 'potatoes', ndbNo: '11354', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '2 cups', section: 'dough', ndbNo: '20581', portionDesc: 'g', portionGrams: 250.0 },
+      { name: 'large egg', quantity: '2 large', section: 'dough', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'salt', quantity: '1 tsp', section: 'dough', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 }
+    ],
+    recipeInstructions: [
+      'Place whole unpeeled potatoes in a large pot. Cover with cold salted water. Bring to a boil, then simmer 20–25 minutes until tender when pierced with a knife. Drain and let cool slightly.',
+      'While still warm, peel the potatoes and pass through a potato ricer or food mill onto a lightly floured work surface. Spread out and let steam escape for 2–3 minutes — dry potatoes make lighter gnocchi.',
+      'Make a well in the center of the riced potatoes. Beat the eggs lightly, then pour into the well along with the salt. Gradually fold in the flour, working gently until a soft dough just comes together. Do not overwork.',
+      'Divide the dough into 6–8 portions. On a lightly floured surface, roll each portion into a rope about 3/4-inch thick. Cut into 1-inch pieces.',
+      'Optional: roll each piece off the back of a fork or over a gnocchi board to create ridges.',
+      'Bring a large pot of salted water to a boil. Cook gnocchi in batches — they are ready about 30 seconds after they float to the surface (2–3 minutes total). Remove with a slotted spoon.',
+      'Serve immediately tossed with browned butter and sage, tomato sauce, or pesto.'
+    ],
+    sections: [
+      { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 },
+      { key: 'dough', label: 'Dough', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
