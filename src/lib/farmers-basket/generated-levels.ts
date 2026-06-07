@@ -8442,5 +8442,49 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'batter', label: 'Batter', cookingMethod: '', yieldFactorWater: 0.73 }
     ],
+  },
+  {
+    id: 'SIDE_013',
+    name: 'Cornbread, Buttermilk',
+    category: 'sides',
+    dietaryCategory: 'veggie',
+    levelNum: 184,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 piece (makes 8)',
+    prepTime: '35 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":203.9,"pro":4.5,"fat":7.9,"carb":28.5,"fib":1.2,"h2o":26.9,"sug":2.0,"perServing":{"cal":203.9,"pro":4.5,"fat":7.9,"carb":28.5,"fib":1.2,"h2o":26.9,"sug":2.0,"AddedSugars":0.0,"IntrinsicSugars":2.0},"micros":{"vitaminA":91.43,"vitaminC":0.0,"vitaminD":28.38,"vitaminE":0.36,"vitaminK":0.85,"vitaminB6":0.07,"vitaminB12":0.27,"thiamin":0.23,"riboflavin":0.3,"niacin":2.15,"folate":82.93,"calcium":240.62,"iron":2.56,"magnesium":20.76,"phosphorus":347.99,"potassium":137.52,"sodium":779.39,"zinc":0.61,"copper":0.06,"selenium":12.05,"cholesterol":59.43,"saturatedFat":6.28,"monoFat":3.03,"polyFat":0.72,"omega3":0.03,"omega6":0.3},"gramsPerServing":70.5,"servings":8,"per100g":{"Energy_KCal":289.3,"Water":38.17,"Protein":6.35,"TotalLipidFat":11.2,"Carbohydrate":40.41,"FiberTotalDietary":1.74,"SugarsTotal":2.78,"Cholesterol":59.43,"FattyAcids_totalSaturated":6.28,"FattyAcids_totalMonounsaturated":3.03,"FattyAcids_totalPolyunsaturated":0.72,"LinoleicAcid":0.3,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":91.43,"Retinol":86.51,"Carotene_beta":43.75,"VitaminD":28.38,"VitaminE_alphaTocopherol":0.36,"VitaminK_phylloquinone":0.85,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.23,"Riboflavin":0.3,"Niacin":2.15,"PantothenicAcid":0.38,"VitaminB6":0.07,"Folate_total":82.93,"Folate_food":16.7,"Folate_DFE":129.52,"FolicAcid":83.16,"VitaminB12":0.27,"Choline_total":33.71,"Betaine":0.39,"LuteinZeaxanthin":455.76,"Lycopene":0.0,"Calcium_Ca":240.62,"Iron_Fe":2.56,"Magnesium_Mg":20.76,"Phosphorus_P":347.99,"Potassium_K":137.52,"Sodium_Na":779.39,"Zinc_Zn":0.61,"Copper_Cu":0.06,"Manganese_Mn":0.14,"Selenium_Se":12.05,"Tryptophan":0.06,"Threonine":0.2,"Isoleucine":0.26,"Leucine":0.68,"Lysine":0.26,"Methionine":0.15,"Cystine":0.1,"Phenylalanine":0.32,"Tyrosine":0.22,"Valine":0.34,"Arginine":0.24,"Histidine":0.16,"Alanine":0.35,"AsparticAcid":0.46,"GlutamicAcid":1.4,"Glycine":0.18,"Proline":0.59,"Serine":0.35,"omega3":0.03,"omega6":0.3,"AddedSugars":0.0,"IntrinsicSugars":2.78},"addedSugars":0.0,"intrinsicSugars":2.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.73,"yieldFactorFat":1.0,"sources":[{"ndb":"20022","name":"Cornmeal, degermed, enriched, yellow","grams":25.9},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":7.8},{"ndb":"18370","name":"Leavening agents, baking powder, double-acting, straight phosphate","grams":1.7},{"ndb":"18372","name":"Leavening agents, baking soda","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":6.2},{"ndb":"1230","name":"Milk, buttermilk, fluid, whole","grams":30.6},{"ndb":"1145","name":"Butter, without salt","grams":7.1}],"sections":[{"section_key":"batter","section_label":"Batter","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.73,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":643.4,"raw_water_grams":294.81,"raw_fat_grams":63.17,"raw_protein_grams":35.82,"raw_carb_grams":227.83,"final_grams":563.8}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Cornbread, Buttermilk', quantity: 'custom (g)', foodWord: 'CORNBREADBUTTERMILK', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Cornmeal, enriched, yellow', quantity: '1½ cups', section: 'batter', ndbNo: '20022', portionDesc: 'g', portionGrams: 207.0 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '½ cup', section: 'batter', ndbNo: '20581', portionDesc: 'g', portionGrams: 62.5 },
+      { name: 'baking powder', quantity: '1 tbsp', section: 'batter', ndbNo: '18370', portionDesc: 'g', portionGrams: 13.8 },
+      { name: 'baking soda', quantity: '½ tsp', section: 'batter', ndbNo: '18372', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'salt', quantity: '1 tsp', section: 'batter', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'large egg', quantity: '1 large', section: 'batter', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'whole buttermilk', quantity: '1 cup', section: 'batter', ndbNo: '1230', portionDesc: 'g', portionGrams: 245.0 },
+      { name: 'unsalted butter', quantity: '4 tbsp', section: 'batter', ndbNo: '1145', portionDesc: 'g', portionGrams: 56.8 }
+    ],
+    recipeInstructions: [
+      'Preheat oven to 400°F. Grease an 8-inch square baking pan or a 9-inch cast iron skillet with butter.',
+      'In a large bowl, whisk together the cornmeal, flour, baking powder, baking soda, and salt.',
+      'In a separate bowl, whisk together the egg, buttermilk, and melted butter.',
+      'Pour the wet ingredients into the dry ingredients and stir until just combined — a few lumps are fine. Do not overmix; the baking soda reacts quickly with the buttermilk.',
+      'Pour the batter into the prepared pan. Bake for 20–25 minutes, until the top is golden and a toothpick inserted in the center comes out clean.',
+      'Let cool in the pan for 5 minutes before cutting into 7 pieces. Serve warm.'
+    ],
+    sections: [
+      { key: 'batter', label: 'Batter', cookingMethod: '', yieldFactorWater: 0.73 }
+    ],
   }
 ];
