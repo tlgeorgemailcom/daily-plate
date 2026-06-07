@@ -8172,5 +8172,187 @@ export const LEVELS: Level[] = [
       { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 },
       { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 0.8 }
     ],
+  },
+  {
+    id: 'SIDE_007',
+    name: 'Gratin Dauphinois',
+    category: 'sides',
+    dietaryCategory: 'veggie',
+    levelNum: 178,
+    recipe: ['carrot', 'butter'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'rabbit', delay: 3500 },
+      { type: 'raccoon', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 5, cheese: 0, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 4, chicken: 0, fish: 0 },
+    servings: '3/4 cup (makes 6+)',
+    prepTime: '1 hr 15 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":393.0,"pro":4.9,"fat":30.7,"carb":26.4,"fib":3.7,"h2o":144.7,"sug":4.1,"perServing":{"cal":393.0,"pro":4.9,"fat":30.7,"carb":26.4,"fib":3.7,"h2o":144.7,"sug":4.1,"AddedSugars":0.0,"IntrinsicSugars":4.1},"micros":{"vitaminA":138.86,"vitaminC":3.82,"vitaminD":22.66,"vitaminE":0.33,"vitaminK":2.41,"vitaminB6":0.12,"vitaminB12":0.06,"thiamin":0.04,"riboflavin":0.09,"niacin":0.67,"folate":11.66,"calcium":32.99,"iron":0.43,"magnesium":18.07,"phosphorus":67.83,"potassium":332.63,"sodium":206.98,"zinc":0.31,"copper":0.09,"selenium":1.43,"cholesterol":45.22,"saturatedFat":9.31,"monoFat":3.53,"polyFat":0.53,"omega3":0.05,"omega6":0.3},"gramsPerServing":209.5,"servings":6,"per100g":{"Energy_KCal":187.59,"Water":69.07,"Protein":2.33,"TotalLipidFat":14.66,"Carbohydrate":12.57,"FiberTotalDietary":1.76,"SugarsTotal":1.94,"Cholesterol":45.22,"FattyAcids_totalSaturated":9.31,"FattyAcids_totalMonounsaturated":3.53,"FattyAcids_totalPolyunsaturated":0.53,"LinoleicAcid":0.3,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.0,"VitaminA_RAE":138.86,"Retinol":136.8,"Carotene_beta":26.27,"VitaminD":22.66,"VitaminE_alphaTocopherol":0.33,"VitaminK_phylloquinone":2.41,"VitaminC_totalAscorbicAcid":3.82,"Thiamin":0.04,"Riboflavin":0.09,"Niacin":0.67,"PantothenicAcid":0.33,"VitaminB6":0.12,"Folate_total":11.66,"Folate_food":11.66,"Folate_DFE":11.66,"FolicAcid":0.0,"VitaminB12":0.06,"Choline_total":13.17,"Betaine":0.15,"LuteinZeaxanthin":6.77,"Lycopene":0.01,"Calcium_Ca":32.99,"Iron_Fe":0.43,"Magnesium_Mg":18.07,"Phosphorus_P":67.83,"Potassium_K":332.63,"Sodium_Na":206.98,"Zinc_Zn":0.31,"Copper_Cu":0.09,"Manganese_Mn":0.12,"Selenium_Se":1.43,"Tryptophan":0.03,"Threonine":0.08,"Isoleucine":0.09,"Leucine":0.15,"Lysine":0.11,"Methionine":0.04,"Cystine":0.02,"Phenylalanine":0.09,"Tyrosine":0.07,"Valine":0.12,"Arginine":0.08,"Histidine":0.04,"Alanine":0.07,"AsparticAcid":0.36,"GlutamicAcid":0.42,"Glycine":0.05,"Proline":0.15,"Serine":0.08,"omega3":0.05,"omega6":0.3,"AddedSugars":0.0,"IntrinsicSugars":1.94},"addedSugars":0.0,"intrinsicSugars":4.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.85,"yieldFactorFat":1.0,"sources":[{"ndb":"11354","name":"Potatoes, white, flesh and skin, raw","grams":151.2},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":79.3},{"ndb":"11215","name":"Garlic, raw","grams":1.0},{"ndb":"1145","name":"Butter, without salt","grams":2.4},{"ndb":"2047","name":"Salt, table","grams":1.0},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.0}],"sections":[{"section_key":"gratin","section_label":"Gratin","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":1410.28,"raw_water_grams":1021.44,"raw_fat_grams":184.32,"raw_protein_grams":29.34,"raw_carb_grams":158.07,"final_grams":1257.06}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Gratin Dauphinois', quantity: 'custom (g)', foodWord: 'GRATINDAUPHINOIS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Yukon Gold potatoes (White potatoes in the database)', quantity: '2 lb', section: 'gratin', ndbNo: '11354', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'heavy cream', quantity: '2 cups', section: 'gratin', ndbNo: '1053', portionDesc: 'g', portionGrams: 476.0 },
+      { name: 'garlic', quantity: '2 cloves', section: 'gratin', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'unsalted butter', quantity: '1 tbsp', section: 'gratin', ndbNo: '1145', portionDesc: 'g', portionGrams: 14.2 },
+      { name: 'salt', quantity: '1 tsp', section: 'gratin', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'gratin', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.6 },
+      { name: 'ground nutmeg', quantity: '1/8 tsp', section: 'gratin', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.275 }
+    ],
+    recipeInstructions: [
+      'Preheat oven to 325°F (163°C). Butter a 9x13-inch baking dish and rub with the cut side of a garlic clove.',
+      'Peel the potatoes and slice paper-thin (about 1/8 inch) on a mandoline or with a sharp knife. Do not rinse the slices — the surface starch helps bind the gratin.',
+      'In a large saucepan, combine the heavy cream, remaining garlic, salt, pepper, and nutmeg. Bring to a gentle simmer over medium heat. Add the potato slices and cook for 5 minutes, stirring gently, until the cream begins to thicken.',
+      'Transfer the potato mixture to the prepared baking dish, spreading evenly. Dot the top with small pieces of butter.',
+      'Bake uncovered for 60–70 minutes, until the top is deep golden brown and a knife inserted in the center meets no resistance.',
+      'Let rest 10 minutes before slicing and serving.'
+    ],
+    sections: [
+      { key: 'gratin', label: 'Gratin', cookingMethod: '', yieldFactorWater: 0.85 }
+    ],
+  },
+  {
+    id: 'SIDE_008',
+    name: 'Potatoes au Gratin',
+    category: 'sides',
+    dietaryCategory: 'veggie',
+    levelNum: 179,
+    recipe: ['egg', 'carrot', 'butter'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'fox', delay: 3500 },
+      { type: 'rabbit', delay: 5000 },
+      { type: 'raccoon', delay: 6500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 4, cheese: 0, egg: 5, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 3, chicken: 0, fish: 0 },
+    servings: '3/4 cup (makes 6+)',
+    prepTime: '1 hr 15 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":344.9,"pro":9.8,"fat":22.9,"carb":26.3,"fib":3.7,"h2o":145.5,"sug":4.0,"perServing":{"cal":344.9,"pro":9.8,"fat":22.9,"carb":26.3,"fib":3.7,"h2o":145.5,"sug":4.0,"AddedSugars":0.0,"IntrinsicSugars":4.0},"micros":{"vitaminA":96.99,"vitaminC":3.78,"vitaminD":18.12,"vitaminE":0.2,"vitaminK":2.09,"vitaminB6":0.13,"vitaminB12":0.19,"thiamin":0.05,"riboflavin":0.09,"niacin":0.68,"folate":12.22,"calcium":119.16,"iron":0.43,"magnesium":20.96,"phosphorus":117.81,"potassium":336.79,"sodium":269.29,"zinc":0.64,"copper":0.09,"selenium":2.49,"cholesterol":34.49,"saturatedFat":6.8,"monoFat":2.8,"polyFat":0.43,"omega3":0.02,"omega6":0.16},"gramsPerServing":208.0,"servings":6,"per100g":{"Energy_KCal":165.79,"Water":69.95,"Protein":4.7,"TotalLipidFat":11.0,"Carbohydrate":12.64,"FiberTotalDietary":1.77,"SugarsTotal":1.92,"Cholesterol":34.49,"FattyAcids_totalSaturated":6.8,"FattyAcids_totalMonounsaturated":2.8,"FattyAcids_totalPolyunsaturated":0.43,"LinoleicAcid":0.16,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":96.99,"Retinol":95.58,"Carotene_beta":18.3,"VitaminD":18.12,"VitaminE_alphaTocopherol":0.2,"VitaminK_phylloquinone":2.09,"VitaminC_totalAscorbicAcid":3.78,"Thiamin":0.05,"Riboflavin":0.09,"Niacin":0.68,"PantothenicAcid":0.33,"VitaminB6":0.13,"Folate_total":12.22,"Folate_food":12.22,"Folate_DFE":12.22,"FolicAcid":0.0,"VitaminB12":0.19,"Choline_total":12.84,"Betaine":0.21,"LuteinZeaxanthin":6.82,"Lycopene":0.01,"Calcium_Ca":119.16,"Iron_Fe":0.43,"Magnesium_Mg":20.96,"Phosphorus_P":117.81,"Potassium_K":336.79,"Sodium_Na":269.29,"Zinc_Zn":0.64,"Copper_Cu":0.09,"Manganese_Mn":0.12,"Selenium_Se":2.49,"Tryptophan":0.06,"Threonine":0.17,"Isoleucine":0.22,"Leucine":0.4,"Lysine":0.34,"Methionine":0.11,"Cystine":0.04,"Phenylalanine":0.24,"Tyrosine":0.22,"Valine":0.31,"Arginine":0.17,"Histidine":0.13,"Alanine":0.15,"AsparticAcid":0.49,"GlutamicAcid":0.9,"Glycine":0.09,"Proline":0.46,"Serine":0.23,"omega3":0.02,"omega6":0.16,"AddedSugars":0.0,"IntrinsicSugars":1.92},"addedSugars":0.0,"intrinsicSugars":4.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.85,"yieldFactorFat":1.0,"sources":[{"ndb":"11354","name":"Potatoes, white, flesh and skin, raw","grams":151.2},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":39.7},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":20.3},{"ndb":"1023","name":"Cheese, gruyere","grams":18.0},{"ndb":"1145","name":"Butter, without salt","grams":2.4},{"ndb":"11215","name":"Garlic, raw","grams":1.0},{"ndb":"2047","name":"Salt, table","grams":1.0},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.0}],"sections":[{"section_key":"gratin","section_label":"Gratin","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":1402.28,"raw_water_grams":1027.21,"raw_fat_grams":137.34,"raw_protein_grams":58.62,"raw_carb_grams":157.8,"final_grams":1248.19}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Potatoes au Gratin', quantity: 'custom (g)', foodWord: 'POTATOAUGRATIN', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Yukon Gold potatoes (White potatoes in the database)', quantity: '2 lb', section: 'gratin', ndbNo: '11354', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'heavy cream', quantity: '1 cup', section: 'gratin', ndbNo: '1053', portionDesc: 'g', portionGrams: 238.0 },
+      { name: 'whole milk', quantity: '1/2 cup', section: 'gratin', ndbNo: '1077', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'Gruyere cheese', quantity: '1 cup shredded', section: 'gratin', ndbNo: '1023', portionDesc: 'g', portionGrams: 108.0 },
+      { name: 'unsalted butter', quantity: '1 tbsp', section: 'gratin', ndbNo: '1145', portionDesc: 'g', portionGrams: 14.2 },
+      { name: 'garlic', quantity: '2 cloves', section: 'gratin', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'salt', quantity: '1 tsp', section: 'gratin', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'gratin', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.6 },
+      { name: 'ground nutmeg', quantity: '1/8 tsp', section: 'gratin', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.275 }
+    ],
+    recipeInstructions: [
+      'Preheat oven to 350°F (175°C). Butter a 9x13-inch baking dish and rub with the cut side of a garlic clove.',
+      'Peel the potatoes and slice 1/8 inch thick on a mandoline or with a sharp knife.',
+      'In a saucepan, combine the heavy cream, milk, salt, pepper, and nutmeg. Warm over medium heat until steaming; do not boil.',
+      'Arrange one-third of the potato slices in the prepared dish. Pour one-third of the cream mixture over the potatoes and sprinkle with one-third of the shredded Gruyère. Repeat for two more layers, finishing with cheese on top.',
+      'Cover with foil and bake for 45 minutes. Remove foil and bake an additional 25–30 minutes, until the top is golden and bubbling and the potatoes are completely tender.',
+      'Let rest 10 minutes before serving.'
+    ],
+    sections: [
+      { key: 'gratin', label: 'Gratin', cookingMethod: '', yieldFactorWater: 0.85 }
+    ],
+  },
+  {
+    id: 'SIDE_009',
+    name: 'Pommes Anna',
+    category: 'sides',
+    dietaryCategory: 'veggie',
+    levelNum: 180,
+    recipe: ['egg', 'butter', 'bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'fox', delay: 3500 },
+      { type: 'raccoon', delay: 5000 },
+      { type: 'mouse', delay: 6500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 5, bread: 3, apple: 0, grapes: 0, bacon: 0, butter: 4, chicken: 0, fish: 0 },
+    servings: '3/4 cup (makes 4)',
+    prepTime: '1 hr',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":309.6,"pro":4.0,"fat":17.5,"carb":35.7,"fib":5.5,"h2o":160.5,"sug":2.6,"perServing":{"cal":309.6,"pro":4.0,"fat":17.5,"carb":35.7,"fib":5.5,"h2o":160.5,"sug":2.6,"AddedSugars":0.0,"IntrinsicSugars":2.6},"micros":{"vitaminA":55.94,"vitaminC":5.13,"vitaminD":0.0,"vitaminE":0.2,"vitaminK":2.3,"vitaminB6":0.15,"vitaminB12":0.01,"thiamin":0.05,"riboflavin":0.03,"niacin":0.93,"folate":14.99,"calcium":11.99,"iron":0.54,"magnesium":21.83,"phosphorus":65.92,"potassium":420.15,"sodium":280.02,"zinc":0.31,"copper":0.11,"selenium":0.41,"cholesterol":20.68,"saturatedFat":4.88,"monoFat":2.14,"polyFat":0.26,"omega3":0.02,"omega6":0.18},"gramsPerServing":221.4,"servings":4,"per100g":{"Energy_KCal":139.82,"Water":72.5,"Protein":1.81,"TotalLipidFat":7.91,"Carbohydrate":16.14,"FiberTotalDietary":2.48,"SugarsTotal":1.18,"Cholesterol":20.68,"FattyAcids_totalSaturated":4.88,"FattyAcids_totalMonounsaturated":2.14,"FattyAcids_totalPolyunsaturated":0.26,"LinoleicAcid":0.18,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":55.94,"Retinol":54.87,"Carotene_beta":16.42,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.2,"VitaminK_phylloquinone":2.3,"VitaminC_totalAscorbicAcid":5.13,"Thiamin":0.05,"Riboflavin":0.03,"Niacin":0.93,"PantothenicAcid":0.25,"VitaminB6":0.15,"Folate_total":14.99,"Folate_food":14.99,"Folate_DFE":14.99,"FolicAcid":0.0,"VitaminB12":0.01,"Choline_total":11.78,"Betaine":0.21,"LuteinZeaxanthin":9.54,"Lycopene":0.01,"Calcium_Ca":11.99,"Iron_Fe":0.54,"Magnesium_Mg":21.83,"Phosphorus_P":65.92,"Potassium_K":420.15,"Sodium_Na":280.02,"Zinc_Zn":0.31,"Copper_Cu":0.11,"Manganese_Mn":0.15,"Selenium_Se":0.41,"Tryptophan":0.01,"Threonine":0.05,"Isoleucine":0.06,"Leucine":0.09,"Lysine":0.09,"Methionine":0.02,"Cystine":0.02,"Phenylalanine":0.07,"Tyrosine":0.03,"Valine":0.09,"Arginine":0.09,"Histidine":0.02,"Alanine":0.05,"AsparticAcid":0.41,"GlutamicAcid":0.3,"Glycine":0.04,"Proline":0.06,"Serine":0.07,"omega3":0.02,"omega6":0.18,"AddedSugars":0.0,"IntrinsicSugars":1.18},"addedSugars":0.0,"intrinsicSugars":2.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.85,"yieldFactorFat":1.0,"sources":[{"ndb":"11354","name":"Potatoes, white, flesh and skin, raw","grams":226.8},{"ndb":"1145","name":"Butter, without salt","grams":21.3},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"gratin","section_label":"Pommes Anna","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":999.0,"raw_water_grams":755.47,"raw_fat_grams":70.03,"raw_protein_grams":16.03,"raw_carb_grams":142.96,"final_grams":885.68}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Pommes Anna', quantity: 'custom (g)', foodWord: 'POMMESANNA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Yukon Gold potatoes (White potatoes in the database)', quantity: '2 lb', section: 'gratin', ndbNo: '11354', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'unsalted butter', quantity: '6 tbsp', section: 'gratin', ndbNo: '1145', portionDesc: 'g', portionGrams: 85.2 },
+      { name: 'salt', quantity: '1 tsp', section: 'gratin', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'gratin', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.6 }
+    ],
+    recipeInstructions: [
+      'Preheat oven to 425°F (220°C). Melt the butter in a small saucepan and clarify it by skimming off the foam.',
+      'Peel the potatoes and slice paper-thin (1/8 inch) on a mandoline. Pat slices dry with paper towels.',
+      'Brush the bottom and sides of a 10-inch oven-safe skillet (cast iron preferred) generously with clarified butter. Arrange a single overlapping layer of potato slices in a spiral pattern on the bottom; season with salt and pepper and brush with butter. Repeat layers until all potatoes are used.',
+      'Press the top firmly with a spatula. Cook on the stovetop over medium heat for 5 minutes until the bottom begins to brown.',
+      'Transfer to the oven and bake for 40–45 minutes until the potatoes are cooked through and the top is golden.',
+      'Invert onto a serving plate so the crispy bottom becomes the top. Cut into wedges and serve.'
+    ],
+    sections: [
+      { key: 'gratin', label: 'Pommes Anna', cookingMethod: '', yieldFactorWater: 0.85 }
+    ],
+  },
+  {
+    id: 'SIDE_010',
+    name: 'Tartiflette',
+    category: 'sides',
+    dietaryCategory: 'all',
+    levelNum: 181,
+    recipe: ['egg', 'butter', 'bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'fox', delay: 3500 },
+      { type: 'raccoon', delay: 5000 },
+      { type: 'mouse', delay: 6500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 5, bread: 3, apple: 0, grapes: 0, bacon: 0, butter: 4, chicken: 0, fish: 0 },
+    servings: '1 cup (makes 6)',
+    prepTime: '1 hr 15 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":467.5,"pro":23.3,"fat":28.7,"carb":27.6,"fib":4.1,"h2o":178.8,"sug":3.5,"perServing":{"cal":467.5,"pro":23.3,"fat":28.7,"carb":27.6,"fib":4.1,"h2o":178.8,"sug":3.5,"AddedSugars":0.0,"IntrinsicSugars":3.5},"micros":{"vitaminA":50.88,"vitaminC":3.06,"vitaminD":8.17,"vitaminE":0.11,"vitaminK":1.65,"vitaminB6":0.15,"vitaminB12":0.45,"thiamin":0.07,"riboflavin":0.16,"niacin":1.13,"folate":21.3,"calcium":57.09,"iron":0.48,"magnesium":18.57,"phosphorus":111.13,"potassium":281.9,"sodium":360.4,"zinc":0.99,"copper":0.07,"selenium":7.63,"cholesterol":36.36,"saturatedFat":6.1,"monoFat":3.29,"polyFat":0.58,"omega3":0.02,"omega6":0.35},"gramsPerServing":264.5,"servings":6,"per100g":{"Energy_KCal":176.78,"Water":67.62,"Protein":8.82,"TotalLipidFat":10.87,"Carbohydrate":10.45,"FiberTotalDietary":1.55,"SugarsTotal":1.32,"Cholesterol":36.36,"FattyAcids_totalSaturated":6.1,"FattyAcids_totalMonounsaturated":3.29,"FattyAcids_totalPolyunsaturated":0.58,"LinoleicAcid":0.35,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":50.88,"Retinol":50.47,"Carotene_beta":6.74,"VitaminD":8.17,"VitaminE_alphaTocopherol":0.11,"VitaminK_phylloquinone":1.65,"VitaminC_totalAscorbicAcid":3.06,"Thiamin":0.07,"Riboflavin":0.16,"Niacin":1.13,"PantothenicAcid":0.35,"VitaminB6":0.15,"Folate_total":21.3,"Folate_food":21.3,"Folate_DFE":21.3,"FolicAcid":0.0,"VitaminB12":0.45,"Choline_total":15.89,"Betaine":0.71,"LuteinZeaxanthin":6.0,"Lycopene":0.01,"Calcium_Ca":57.09,"Iron_Fe":0.48,"Magnesium_Mg":18.57,"Phosphorus_P":111.13,"Potassium_K":281.9,"Sodium_Na":360.4,"Zinc_Zn":0.99,"Copper_Cu":0.07,"Manganese_Mn":0.11,"Selenium_Se":7.63,"Tryptophan":0.12,"Threonine":0.33,"Isoleucine":0.4,"Leucine":0.74,"Lysine":0.73,"Methionine":0.23,"Cystine":0.06,"Phenylalanine":0.43,"Tyrosine":0.42,"Valine":0.51,"Arginine":0.4,"Histidine":0.29,"Alanine":0.39,"AsparticAcid":0.81,"GlutamicAcid":1.68,"Glycine":0.24,"Proline":0.75,"Serine":0.43,"omega3":0.02,"omega6":0.35,"AddedSugars":0.0,"IntrinsicSugars":1.32},"addedSugars":0.0,"intrinsicSugars":3.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.85,"yieldFactorFat":1.0,"sources":[{"ndb":"11354","name":"Potatoes, white, flesh and skin, raw","grams":151.2},{"ndb":"1006","name":"Cheese, brie","grams":66.1},{"ndb":"10862","name":"Pork, cured, bacon, pre-sliced, cooked, pan-fried","grams":18.9},{"ndb":"11282","name":"Onions, raw","grams":25.0},{"ndb":"14106","name":"Alcoholic beverage, wine, table, white","grams":9.8},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":10.0},{"ndb":"11215","name":"Garlic, raw","grams":1.0},{"ndb":"2047","name":"Salt, table","grams":0.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"potatoes","section_label":"Potatoes","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.96,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":907.2,"raw_water_grams":740.09,"raw_fat_grams":0.91,"raw_protein_grams":15.24,"raw_carb_grams":142.52,"final_grams":877.6},{"section_key":"gratin","section_label":"Gratin","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":788.7,"raw_water_grams":442.02,"raw_fat_grams":171.5,"raw_protein_grams":124.66,"raw_carb_grams":23.26,"final_grams":709.14}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Tartiflette', quantity: 'custom (g)', foodWord: 'TARTIFLETTE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Yukon Gold potatoes (White potatoes in the database)', quantity: '2 lb', section: 'potatoes', ndbNo: '11354', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'Brie cheese (Reblochon substitute — not in SR Legacy)', quantity: '14 oz', section: 'gratin', ndbNo: '1006', portionDesc: 'g', portionGrams: 396.9 },
+      { name: 'cooked bacon', quantity: '4 oz', section: 'gratin', ndbNo: '10862', portionDesc: 'g', portionGrams: 113.4 },
+      { name: 'onion', quantity: '1 large', section: 'gratin', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'White wine, dry', quantity: '2 fl oz', section: 'gratin', ndbNo: '14106', portionDesc: 'g', portionGrams: 58.8 },
+      { name: 'heavy cream', quantity: '4 tbsp', section: 'gratin', ndbNo: '1053', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'garlic', quantity: '2 cloves', section: 'gratin', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'gratin', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'gratin', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.6 }
+    ],
+    recipeInstructions: [
+      'Preheat oven to 375°F (190°C). Butter a 9x13-inch baking dish.',
+      'Scrub the potatoes (leave skins on). Boil in salted water for 20–25 minutes until just tender but still firm. Drain, cool slightly, then peel and cut into 1/4-inch rounds.',
+      'In a skillet over medium heat, cook the bacon lardons until lightly browned but not crispy. Add the onion and garlic and cook until softened, about 5 minutes.',
+      'Add the white wine to the skillet, scraping up any browned bits. Cook 1–2 minutes until mostly evaporated. Stir in the heavy cream and season with salt and pepper.',
+      'Layer half the potato rounds in the baking dish. Spread the bacon and onion mixture over the top. Add the remaining potatoes.',
+      'Slice the Brie (or Reblochon if available) in half horizontally through the rind. Place it cut-side down on top of the potatoes, covering as much surface as possible.',
+      'Bake for 25–30 minutes until the cheese is melted and bubbling and the top is golden. Serve immediately directly from the baking dish.'
+    ],
+    sections: [
+      { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 },
+      { key: 'gratin', label: 'Gratin', cookingMethod: '', yieldFactorWater: 0.82 }
+    ],
   }
 ];
