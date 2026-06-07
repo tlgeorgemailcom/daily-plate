@@ -8486,5 +8486,52 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'batter', label: 'Batter', cookingMethod: '', yieldFactorWater: 0.73 }
     ],
+  },
+  {
+    id: 'SIDE_014',
+    name: 'Rainbow Coleslaw',
+    category: 'sides',
+    dietaryCategory: 'veggie',
+    levelNum: 185,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cup (makes 8+)',
+    prepTime: '15 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":133.8,"pro":1.2,"fat":10.7,"carb":9.0,"fib":2.3,"h2o":89.0,"sug":5.8,"perServing":{"cal":133.8,"pro":1.2,"fat":10.7,"carb":9.0,"fib":2.3,"h2o":89.0,"sug":5.8,"AddedSugars":2.2,"IntrinsicSugars":3.6},"micros":{"vitaminA":240.04,"vitaminC":36.71,"vitaminD":0.88,"vitaminE":0.86,"vitaminK":56.54,"vitaminB6":0.13,"vitaminB12":0.02,"thiamin":0.05,"riboflavin":0.05,"niacin":0.51,"folate":26.95,"calcium":31.62,"iron":0.51,"magnesium":11.49,"phosphorus":27.88,"potassium":204.01,"sodium":366.2,"zinc":0.22,"copper":0.02,"selenium":0.55,"cholesterol":5.25,"saturatedFat":1.49,"monoFat":2.13,"polyFat":5.65,"omega3":0.67,"omega6":4.87},"gramsPerServing":111.9,"servings":8,"per100g":{"Energy_KCal":119.61,"Water":79.58,"Protein":1.11,"TotalLipidFat":9.54,"Carbohydrate":8.08,"FiberTotalDietary":2.02,"SugarsTotal":5.18,"Cholesterol":5.25,"FattyAcids_totalSaturated":1.49,"FattyAcids_totalMonounsaturated":2.13,"FattyAcids_totalPolyunsaturated":5.65,"LinoleicAcid":4.87,"alphaLinolenicAcid":0.67,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":240.04,"Retinol":1.88,"Carotene_beta":2391.66,"VitaminD":0.88,"VitaminE_alphaTocopherol":0.86,"VitaminK_phylloquinone":56.54,"VitaminC_totalAscorbicAcid":36.71,"Thiamin":0.05,"Riboflavin":0.05,"Niacin":0.51,"PantothenicAcid":0.21,"VitaminB6":0.13,"Folate_total":26.95,"Folate_food":26.95,"Folate_DFE":26.95,"FolicAcid":0.0,"VitaminB12":0.02,"Choline_total":12.68,"Betaine":0.27,"LuteinZeaxanthin":175.76,"Lycopene":3.39,"Calcium_Ca":31.62,"Iron_Fe":0.51,"Magnesium_Mg":11.49,"Phosphorus_P":27.88,"Potassium_K":204.01,"Sodium_Na":366.2,"Zinc_Zn":0.22,"Copper_Cu":0.02,"Manganese_Mn":0.16,"Selenium_Se":0.55,"Tryptophan":0.01,"Threonine":0.07,"Isoleucine":0.04,"Leucine":0.06,"Lysine":0.06,"Methionine":0.01,"Cystine":0.03,"Phenylalanine":0.04,"Tyrosine":0.02,"Valine":0.05,"Arginine":0.07,"Histidine":0.02,"Alanine":0.06,"AsparticAcid":0.15,"GlutamicAcid":0.27,"Glycine":0.03,"Proline":0.05,"Serine":0.05,"omega3":0.67,"omega6":4.87,"AddedSugars":1.93,"IntrinsicSugars":3.25},"addedSugars":2.2,"intrinsicSugars":3.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"11109","name":"Cabbage, raw","grams":26.2},{"ndb":"11112","name":"Cabbage, red, raw","grams":17.5},{"ndb":"11124","name":"Carrots, raw","grams":27.5},{"ndb":"11821","name":"Peppers, sweet, red, raw","grams":14.9},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":4.5},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":14.0},{"ndb":"2048","name":"Vinegar, cider","grams":3.7},{"ndb":"19296","name":"Honey","grams":2.6},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"2007","name":"Spices, celery seed","grams":0.1}],"sections":[{"section_key":"slaw","section_label":"Slaw","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":895.2,"raw_water_grams":712.37,"raw_fat_grams":85.42,"raw_protein_grams":9.91,"raw_carb_grams":72.35,"final_grams":895.2}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Rainbow Coleslaw', quantity: 'custom (g)', foodWord: 'RAINBOWCOLESLAW', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'green cabbage', quantity: '3 cups shredded', section: 'slaw', ndbNo: '11109', portionDesc: 'g', portionGrams: 210.0 },
+      { name: 'red cabbage', quantity: '2 cups shredded', section: 'slaw', ndbNo: '11112', portionDesc: 'g', portionGrams: 140.0 },
+      { name: 'Carrot, raw', quantity: '2 cups shredded', section: 'slaw', ndbNo: '11124', portionDesc: 'g', portionGrams: 220.0 },
+      { name: 'red bell pepper', quantity: '1 medium', section: 'slaw', ndbNo: '11821', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'scallion (green onion)', quantity: '3 stalks', section: 'slaw', ndbNo: '11291', portionDesc: 'g', portionGrams: 36.0 },
+      { name: 'mayonnaise', quantity: '1/2 cup', section: 'slaw', ndbNo: '4025', portionDesc: 'g', portionGrams: 112.0 },
+      { name: 'apple cider vinegar', quantity: '2 tbsp', section: 'slaw', ndbNo: '2048', portionDesc: 'g', portionGrams: 29.8 },
+      { name: 'honey', quantity: '1 tbsp', section: 'slaw', ndbNo: '19296', portionDesc: 'g', portionGrams: 21.0 },
+      { name: 'salt', quantity: '1 tsp', section: 'slaw', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'slaw', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.7 },
+      { name: 'Celery seed', quantity: '1/4 tsp', section: 'slaw', ndbNo: '2007', portionDesc: 'g', portionGrams: 0.7 }
+    ],
+    recipeInstructions: [
+      'Shred the green cabbage, red cabbage, and carrots; thinly slice the red bell pepper and scallions.',
+      'In a large bowl, whisk together the mayonnaise, apple cider vinegar, honey, salt, black pepper, and celery seed until smooth.',
+      'Add the shredded vegetables to the dressing and toss well to coat.',
+      'Taste and adjust seasoning with additional salt or vinegar as needed.',
+      'Cover and refrigerate for at least 30 minutes before serving to allow flavors to meld.',
+      'Toss again before serving. Store covered in the refrigerator for up to 3 days.'
+    ],
+    sections: [
+      { key: 'slaw', label: 'Slaw', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
