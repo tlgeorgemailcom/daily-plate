@@ -92,7 +92,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | `SAUCE_NNN` | 🔧 In progress | 13 (001–013) |
 | `STOCK_NNN` | 🔧 In progress | 7 (001–007) |
 | `ENTR_NNN` | 🔧 In progress | 1 (001) |
-| `SIDE_NNN` | 🔧 In progress | 2 (001–002) |
+| `SIDE_NNN` | 🔧 In progress | 6 (001–006) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -196,7 +196,12 @@ Planned BKFST order (standalone components first, composites last):
 
 | ID | Recipe | NDB | Notes |
 |---|---|---|---|
-| SIDE_001 | Mashed Potatoes, Robuchon Style | (none) | Rule D ✅ — no canonical; potato_white_raw(11354) 907.2g+butter_unsalted(1145) 227.2g+milk_whole(1077) 244.0g+salt_table(2047) 6.0g; yfw=0.96 → ~1329g cooked; 6+ servings × 210g (1 cup); ~179 kcal·1.85P·14.36F·11.48C per 100g; dietary_category=veggie || SIDE_002 | Garlic Mashed Potatoes | (none) | Rule D ✅ — no canonical; 2-section: garlic_raw(11215) 30.0g+olive_oil(4053) 2.25g baked yfw=0.62 + potato_white_raw(11354) 907.2g+butter_unsalted(1145) 56.8g+milk_whole(1077) 122.0g+salt_table(2047) 6.0g boiled yfw=0.96; 1083.3g cooked; 5+ servings × 210g (1 cup); 108.2 kcal·1.98P·4.92F·14.62C per 100g; dietary_category=veggie |
+| SIDE_001 | Mashed Potatoes, Robuchon Style | (none) | Rule D ✅ — no canonical; potato_white_raw(11354) 907.2g+butter_unsalted(1145) 227.2g+milk_whole(1077) 244.0g+salt_table(2047) 6.0g; yfw=0.96 → ~1329g cooked; 6+ servings × 210g (1 cup); ~179 kcal·1.85P·14.36F·11.48C per 100g; dietary_category=veggie |
+| SIDE_002 | Garlic Mashed Potatoes | (none) | Rule D ✅ — no canonical; 2-section: garlic_raw(11215) 30.0g+olive_oil(4053) 2.25g baked yfw=0.62 + potato_white_raw(11354) 907.2g+butter_unsalted(1145) 56.8g+milk_whole(1077) 122.0g+salt_table(2047) 6.0g boiled yfw=0.96; 1083.3g cooked; 5+ servings × 210g (1 cup); 108.2 kcal·1.98P·4.92F·14.62C per 100g; dietary_category=veggie |
+| SIDE_003 | Mashed Potatoes, Butter Only | (none) | Rule D ✅ — see recipes.csv |
+| SIDE_004 | Horseradish Mashed Potatoes | (none) | Rule D ✅ — see recipes.csv |
+| SIDE_005 | Potato Salad (American Style) | 11414 | Rule C ✅ — canonical NDB 11414; 2-section: potato_white_raw(11354) 907.2g boiled yfw=0.96 + mayonnaise(4025) 165.0g+egg_cooked_hardboiled(1129) 150.0g+celery_raw(11143) 120.0g+onion_raw(11282) 40.0g+mustard_yellow(2046) 15.0g+apple_cider_vinegar(2048) 14.9g+salt+pepper dressing raw yfw=1.00; 1389g cooked; 5+ servings × 250g (1 cup); 146.1 kcal·2.71P·10.16F·11.07C per 100g; Fat +23.9% ❌ (mayo ratio); Fiber +39.2% ❌ (skin inclusion); both structurally irreducible; dietary_category=veggie |
+| SIDE_006 | Potato Salad (German Style) | (none) | Rule D ✅ — no canonical; 2-section: potato_white_raw(11354) 907.2g boiled yfw=0.96 + bacon_cooked_pan_fried(10862) 113.4g+onion_raw(11282) 150.0g+apple_cider_vinegar(2048) 59.6g+sugar_granulated(19335) 12.6g+celery_seed(2007) 2.0g+salt+pepper+parsley_fresh(11297) 7.6g dressing pan grilled yfw=0.80; 1185g cooked; 4+ servings × 250g (1 cup); 108.9 kcal·4.73P·3.50F·14.63C per 100g; dietary_category=all |
 ## Current Work: SAND Recipes
 
 **Sandwiches planning**: `/Volumes/training/Daily Food Chain/daily-food-chain/docs/sandwiches.md`

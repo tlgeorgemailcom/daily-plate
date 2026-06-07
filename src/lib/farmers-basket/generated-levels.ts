@@ -8076,5 +8076,101 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'puree', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 }
     ],
+  },
+  {
+    id: 'SIDE_005',
+    name: 'Potato Salad (American Style)',
+    category: 'sides',
+    dietaryCategory: 'veggie',
+    levelNum: 176,
+    recipe: ['tomato', 'carrot'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'raccoon', delay: 3500 },
+      { type: 'rabbit', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 5, carrot: 4, cheese: 0, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cup (makes 5+)',
+    prepTime: '30 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule C',
+    nutritionJson: {"cal":405.9,"pro":7.5,"fat":28.2,"carb":30.8,"fib":5.0,"h2o":207.0,"sug":3.3,"perServing":{"cal":405.9,"pro":7.5,"fat":28.2,"carb":30.8,"fib":5.0,"h2o":207.0,"sug":3.3,"AddedSugars":0.0,"IntrinsicSugars":3.3},"micros":{"vitaminA":19.96,"vitaminC":3.46,"vitaminD":10.23,"vitaminE":0.54,"vitaminK":23.02,"vitaminB6":0.1,"vitaminB12":0.13,"thiamin":0.04,"riboflavin":0.08,"niacin":0.49,"folate":16.73,"calcium":16.51,"iron":0.47,"magnesium":14.06,"phosphorus":59.71,"potassium":258.32,"sodium":284.12,"zinc":0.32,"copper":0.07,"selenium":4.2,"cholesterol":45.27,"saturatedFat":1.76,"monoFat":2.47,"polyFat":5.5,"omega3":0.64,"omega6":4.63},"gramsPerServing":277.8,"servings":5,"per100g":{"Energy_KCal":146.09,"Water":74.5,"Protein":2.71,"TotalLipidFat":10.16,"Carbohydrate":11.07,"FiberTotalDietary":1.81,"SugarsTotal":1.19,"Cholesterol":45.27,"FattyAcids_totalSaturated":1.76,"FattyAcids_totalMonounsaturated":2.47,"FattyAcids_totalPolyunsaturated":5.5,"LinoleicAcid":4.63,"alphaLinolenicAcid":0.64,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":19.96,"Retinol":17.76,"Carotene_beta":28.88,"VitaminD":10.23,"VitaminE_alphaTocopherol":0.54,"VitaminK_phylloquinone":23.02,"VitaminC_totalAscorbicAcid":3.46,"Thiamin":0.04,"Riboflavin":0.08,"Niacin":0.49,"PantothenicAcid":0.33,"VitaminB6":0.1,"Folate_total":16.73,"Folate_food":16.73,"Folate_DFE":16.73,"FolicAcid":0.0,"VitaminB12":0.13,"Choline_total":42.84,"Betaine":0.21,"LuteinZeaxanthin":71.89,"Lycopene":0.01,"Calcium_Ca":16.51,"Iron_Fe":0.47,"Magnesium_Mg":14.06,"Phosphorus_P":59.71,"Potassium_K":258.32,"Sodium_Na":284.12,"Zinc_Zn":0.32,"Copper_Cu":0.07,"Manganese_Mn":0.11,"Selenium_Se":4.2,"Tryptophan":0.03,"Threonine":0.11,"Isoleucine":0.12,"Leucine":0.19,"Lysine":0.16,"Methionine":0.06,"Cystine":0.05,"Phenylalanine":0.12,"Tyrosine":0.08,"Valine":0.15,"Arginine":0.15,"Histidine":0.05,"Alanine":0.12,"AsparticAcid":0.42,"GlutamicAcid":0.4,"Glycine":0.08,"Proline":0.1,"Serine":0.15,"omega3":0.64,"omega6":4.63,"AddedSugars":0.0,"IntrinsicSugars":1.19},"addedSugars":0.0,"intrinsicSugars":3.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"11414","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.96,"yieldFactorFat":1.0,"sources":[{"ndb":"11354","name":"Potatoes, white, flesh and skin, raw","grams":181.4},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":33.0},{"ndb":"1129","name":"Egg, whole, cooked, hard-boiled","grams":30.0},{"ndb":"11143","name":"Celery, raw","grams":24.0},{"ndb":"11282","name":"Onions, raw","grams":8.0},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":3.0},{"ndb":"2048","name":"Vinegar, cider","grams":3.0},{"ndb":"2047","name":"Salt, table","grams":1.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"potatoes","section_label":"Potatoes","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.96,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":907.2,"raw_water_grams":740.09,"raw_fat_grams":0.91,"raw_protein_grams":15.24,"raw_carb_grams":142.52,"final_grams":877.6},{"section_key":"dressing","section_label":"Dressing","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":511.5,"raw_water_grams":324.43,"raw_fat_grams":140.18,"raw_protein_grams":22.35,"raw_carb_grams":11.32,"final_grams":511.5}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Potato salad, home-prepared', quantity: 'custom (g)', foodWord: 'POTATOSALAD', ndbNo: '11414', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Yukon Gold potatoes (White potatoes in the database)', quantity: '2 lb', section: 'potatoes', ndbNo: '11354', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'mayonnaise', quantity: '3/4 cup', section: 'dressing', ndbNo: '4025', portionDesc: 'g', portionGrams: 165.0 },
+      { name: 'hard-boiled egg', quantity: '3 large', section: 'dressing', ndbNo: '1129', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'celery stalk', quantity: '3 stalks', section: 'dressing', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'onion', quantity: '1/4 cup', section: 'dressing', ndbNo: '11282', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'yellow mustard', quantity: '1 tbsp', section: 'dressing', ndbNo: '2046', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'apple cider vinegar', quantity: '1 tbsp', section: 'dressing', ndbNo: '2048', portionDesc: 'g', portionGrams: 14.9 },
+      { name: 'salt', quantity: '1 tsp', section: 'dressing', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp (0.6g)', section: 'dressing', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.6 }
+    ],
+    recipeInstructions: [
+      'Use Yukon Gold potatoes — their waxy texture holds its shape well in potato salad. White potatoes are listed in the ingredients since they are a close nutritional match and they are in the database while Yukon Gold is not. Put the unpeeled potatoes in a large pot — uniform size matters so they cook evenly. Cover with cold salted water, bring to a boil, then drop to a gentle simmer. Cook 15–20 minutes until a knife slides through without any resistance.',
+      'Drain and let cool 10–15 minutes until comfortable to handle. Peel while still warm — the skins slip off easily. Cut into ¾-inch cubes and spread out on a sheet pan to cool to room temperature.',
+      'In a large bowl, whisk together the mayonnaise, yellow mustard, and apple cider vinegar until smooth and creamy. The vinegar brightens the dressing and balances the richness of the mayo.',
+      'Add the diced celery and onion to the dressing and stir to distribute evenly.',
+      'Add the warm potato cubes to the bowl and fold gently to coat. Season with salt and black pepper. Warm potatoes absorb the dressing better — do not wait until they are fully cold.',
+      'Fold in the chopped hard-boiled eggs last, being careful not to mash them. Taste and adjust salt, pepper, mustard, or vinegar as needed.',
+      'Cover and refrigerate at least 1 hour before serving. The flavors improve significantly as the salad rests. Serve cold or at cool room temperature.'
+    ],
+    sections: [
+      { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 },
+      { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
+    id: 'SIDE_006',
+    name: 'Potato Salad (German Style)',
+    category: 'sides',
+    dietaryCategory: 'all',
+    levelNum: 177,
+    recipe: ['butter', 'carrot'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'raccoon', delay: 3500 },
+      { type: 'rabbit', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 4, cheese: 0, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 5, chicken: 0, fish: 0 },
+    servings: '1 cup (makes 4+)',
+    prepTime: '45 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":322.5,"pro":14.0,"fat":10.4,"carb":43.3,"fib":6.2,"h2o":222.3,"sug":7.4,"perServing":{"cal":322.5,"pro":14.0,"fat":10.4,"carb":43.3,"fib":6.2,"h2o":222.3,"sug":7.4,"AddedSugars":3.1,"IntrinsicSugars":4.3},"micros":{"vitaminA":3.02,"vitaminC":4.39,"vitaminD":1.55,"vitaminE":0.04,"vitaminK":10.75,"vitaminB6":0.14,"vitaminB12":0.09,"thiamin":0.08,"riboflavin":0.04,"niacin":1.35,"folate":11.51,"calcium":14.4,"iron":0.57,"magnesium":18.5,"phosphorus":82.94,"potassium":325.9,"sodium":369.3,"zinc":0.52,"copper":0.09,"selenium":5.17,"cholesterol":9.48,"saturatedFat":1.17,"monoFat":1.52,"polyFat":0.47,"omega3":0.01,"omega6":0.4},"gramsPerServing":296.2,"servings":4,"per100g":{"Energy_KCal":108.89,"Water":75.05,"Protein":4.73,"TotalLipidFat":3.5,"Carbohydrate":14.63,"FiberTotalDietary":2.11,"SugarsTotal":2.51,"Cholesterol":9.48,"FattyAcids_totalSaturated":1.17,"FattyAcids_totalMonounsaturated":1.52,"FattyAcids_totalPolyunsaturated":0.47,"LinoleicAcid":0.4,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":3.02,"Retinol":0.84,"Carotene_beta":29.65,"VitaminD":1.55,"VitaminE_alphaTocopherol":0.04,"VitaminK_phylloquinone":10.75,"VitaminC_totalAscorbicAcid":4.39,"Thiamin":0.08,"Riboflavin":0.04,"Niacin":1.35,"PantothenicAcid":0.25,"VitaminB6":0.14,"Folate_total":11.51,"Folate_food":11.51,"Folate_DFE":11.51,"FolicAcid":0.0,"VitaminB12":0.09,"Choline_total":15.68,"Betaine":0.95,"LuteinZeaxanthin":31.13,"Lycopene":0.01,"Calcium_Ca":14.4,"Iron_Fe":0.57,"Magnesium_Mg":18.5,"Phosphorus_P":82.94,"Potassium_K":325.9,"Sodium_Na":369.3,"Zinc_Zn":0.52,"Copper_Cu":0.09,"Manganese_Mn":0.15,"Selenium_Se":5.17,"Tryptophan":0.05,"Threonine":0.19,"Isoleucine":0.19,"Leucine":0.33,"Lysine":0.36,"Methionine":0.1,"Cystine":0.05,"Phenylalanine":0.19,"Tyrosine":0.15,"Valine":0.23,"Arginine":0.29,"Histidine":0.15,"Alanine":0.23,"AsparticAcid":0.62,"GlutamicAcid":0.75,"Glycine":0.18,"Proline":0.17,"Serine":0.19,"omega3":0.01,"omega6":0.4,"AddedSugars":1.06,"IntrinsicSugars":1.44},"addedSugars":3.1,"intrinsicSugars":4.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.96,"yieldFactorFat":1.0,"sources":[{"ndb":"11354","name":"Potatoes, white, flesh and skin, raw","grams":226.8},{"ndb":"10862","name":"Pork, cured, bacon, pre-sliced, cooked, pan-fried","grams":28.4},{"ndb":"11282","name":"Onions, raw","grams":37.5},{"ndb":"2048","name":"Vinegar, cider","grams":14.9},{"ndb":"19335","name":"Sugars, granulated","grams":3.1},{"ndb":"2007","name":"Spices, celery seed","grams":0.5},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"11297","name":"Parsley, fresh","grams":1.9}],"sections":[{"section_key":"potatoes","section_label":"Potatoes","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.96,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":907.2,"raw_water_grams":740.09,"raw_fat_grams":0.91,"raw_protein_grams":15.24,"raw_carb_grams":142.52,"final_grams":877.6},{"section_key":"dressing","section_label":"Dressing","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.8,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":351.8,"raw_water_grams":223.27,"raw_fat_grams":40.53,"raw_protein_grams":40.76,"raw_carb_grams":30.78,"final_grams":307.15}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Potato Salad (German Style)', quantity: 'custom (g)', foodWord: 'GERMANPOTATOSALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Yukon Gold potatoes (White potatoes in the database)', quantity: '2 lb', section: 'potatoes', ndbNo: '11354', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'cooked bacon', quantity: '4 oz', section: 'dressing', ndbNo: '10862', portionDesc: 'g', portionGrams: 113.4 },
+      { name: 'onion', quantity: '1 large', section: 'dressing', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'apple cider vinegar', quantity: '4 tbsp', section: 'dressing', ndbNo: '2048', portionDesc: 'g', portionGrams: 59.6 },
+      { name: 'sugar', quantity: '3 tsp', section: 'dressing', ndbNo: '19335', portionDesc: 'g', portionGrams: 12.6 },
+      { name: 'Celery seed', quantity: '1 tsp', section: 'dressing', ndbNo: '2007', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'salt', quantity: '1 tsp', section: 'dressing', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp (0.6g)', section: 'dressing', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.6 },
+      { name: 'fresh parsley', quantity: '2 tbsp', section: 'dressing', ndbNo: '11297', portionDesc: 'g', portionGrams: 7.6 }
+    ],
+    recipeInstructions: [
+      'Use Yukon Gold potatoes — their waxy texture holds its shape well for a warm-dressed salad. White potatoes are listed in the ingredients since they are a close nutritional match and they are in the database while Yukon Gold is not. Put the unpeeled potatoes in a large pot — uniform size matters so they cook evenly. Cover with cold salted water, bring to a boil, then drop to a gentle simmer. Cook 15–20 minutes until a knife slides through without any resistance.',
+      'Drain and let cool just enough to handle, then peel and slice ¼ inch thick. Keep warm — the potatoes must be warm when they meet the hot dressing so they absorb it fully.',
+      'While the potatoes cook, fry the bacon in a large skillet over medium heat until crisp. Transfer to a paper towel-lined plate and crumble when cool. Drain most of the bacon drippings from the skillet, leaving about 1 tablespoon behind.',
+      'Add the sliced onion to the skillet and cook over medium heat, stirring occasionally, until softened and translucent, about 5 minutes.',
+      'Add the apple cider vinegar, sugar, celery seed, salt, and black pepper to the skillet. Stir well and bring to a simmer. Cook 2–3 minutes, stirring, until the dressing is slightly thickened and the sugar is fully dissolved.',
+      'Add the warm potato slices to the skillet and toss gently to coat with the hot dressing. Work carefully to keep the slices intact.',
+      'Add the crumbled bacon and toss once more. Taste and adjust salt, pepper, and vinegar as needed. Transfer to a serving dish, scatter the fresh parsley over the top, and serve warm.'
+    ],
+    sections: [
+      { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 },
+      { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 0.8 }
+    ],
   }
 ];
