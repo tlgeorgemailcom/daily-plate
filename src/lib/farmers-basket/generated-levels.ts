@@ -8343,7 +8343,7 @@ export const LEVELS: Level[] = [
     ],
     recipeInstructions: [
       'Preheat oven to 375°F (190°C). Butter a 9x13-inch baking dish.',
-      'Scrub the potatoes (leave skins on). Boil in salted water for 20–25 minutes until just tender but still firm. Drain, cool slightly, then peel and cut into 1/4-inch rounds.',
+      'Scrub the potatoes (leave skins on). Put in cold salted water. After bringing to a boil, simmer for 20–25 minutes until just tender but still firm. Drain, cool slightly, then peel and cut into 1/4-inch rounds.',
       'In a skillet over medium heat, cook the bacon lardons until lightly browned but not crispy. Add the onion and garlic and cook until softened, about 5 minutes.',
       'Add the white wine to the skillet, scraping up any browned bits. Cook 1–2 minutes until mostly evaporated. Stir in the heavy cream and season with salt and pepper.',
       'Layer half the potato rounds in the baking dish. Spread the bacon and onion mixture over the top. Add the remaining potatoes.',
