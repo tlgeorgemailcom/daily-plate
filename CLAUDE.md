@@ -92,7 +92,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | `SAUCE_NNN` | 🔧 In progress | 13 (001–013) |
 | `STOCK_NNN` | 🔧 In progress | 7 (001–007) |
 | `ENTR_NNN` | 🔧 In progress | 1 (001) |
-| `SIDE_NNN` | 🔧 In progress | 14 (001–014) |
+| `SIDE_NNN` | 🔧 In progress | 15 (001–015) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -210,6 +210,7 @@ Planned BKFST order (standalone components first, composites last):
 | SIDE_012 | Cornbread (2% Milk) | 18024 | Rule B ✅ — canonical NDB 18024 (2% milk); cornmeal_enriched_yellow(20022) 207.0g+flour_ap_white_enriched_unbleached(20581) 62.5g+baking_powder(18370) 13.8g+salt_table(2047) 6.0g+egg_whole_raw(1123) 50.0g+milk_lowfat_2pct(1079) 244.0g+butter_unsalted(1145) 28.4g; yfw=0.73 → 532.9g cooked; 8 servings × 66.6g (1 piece); 262.3 kcal·6.71P·6.92F·42.71C per 100g; Fiber+Sugar unscored (canonical=0); all 5 scored macros ≤±2.5%; dietary_category=veggie |
 | SIDE_013 | Cornbread, Buttermilk | (none) | Rule D ✅ — no canonical; cornmeal_enriched_yellow(20022) 207.0g+flour_ap_white_enriched_unbleached(20581) 62.5g+baking_powder(18370) 13.8g+baking_soda(18372) 2.3g+salt_table(2047) 6.0g+egg_whole_raw(1123) 50.0g+milk_buttermilk_whole(1230) 245.0g+butter_unsalted(1145) 56.8g; yfw=0.73 → 563.8g cooked; 8 servings × 70.5g (1 piece); 289.3 kcal·6.35P·11.20F·40.41C per 100g; dietary_category=veggie |
 | SIDE_014 | Rainbow Coleslaw | (none) | Rule D ✅ — no canonical; cabbage_raw(11109) 210.0g+cabbage_red_raw(11112) 140.0g+carrot_raw(11124) 220.0g+bell_pepper_red_raw(11821) 119.0g+scallion_raw(11291) 36.0g+mayonnaise(4025) 112.0g+apple_cider_vinegar(2048) 29.8g+honey(19296) 21.0g+salt_table(2047) 6.0g+black_pepper_ground(2030) 0.7g+celery_seed(2007) 0.7g; yfw=1.00 → 895.2g cooked; 8 servings × 111.9g (1 cup); 119.6 kcal·1.11P·9.54F·8.08C per 100g; dietary_category=veggie |
+| SIDE_015 | Hasselback Potatoes | (none) | Rule D ✅ — no canonical; potato_white_raw(11354) 600.0g+butter_unsalted(1145) 56.8g+olive_oil(4053) 27.0g+garlic_raw(11215) 12.0g+thyme_fresh(2049) 2.4g+salt_table(2047) 6.0g+black_pepper_ground(2030) 0.575g; yfw=0.85 → 628.5g cooked; 4 servings × 157.1g (1 potato); 172.1 kcal·1.83P·11.74F·15.79C per 100g; dietary_category=veggie |
 ## Current Work: SAND Recipes
 
 **Sandwiches planning**: `/Volumes/training/Daily Food Chain/daily-food-chain/docs/sandwiches.md`
