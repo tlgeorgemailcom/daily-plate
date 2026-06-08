@@ -8663,5 +8663,51 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.82 }
     ],
+  },
+  {
+    id: 'SIDE_018',
+    name: 'Baked Beans',
+    category: 'sides',
+    dietaryCategory: 'all',
+    levelNum: 189,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cup (makes 7+)',
+    prepTime: '60',
+    linkType: 'builtin',
+    sr28Rule: 'C',
+    nutritionJson: {"cal":401.5,"pro":15.3,"fat":13.9,"carb":55.7,"fib":13.6,"h2o":178.0,"sug":15.3,"perServing":{"cal":401.5,"pro":15.3,"fat":13.9,"carb":55.7,"fib":13.6,"h2o":178.0,"sug":15.3,"AddedSugars":12.4,"IntrinsicSugars":2.9},"micros":{"vitaminA":0.24,"vitaminC":1.05,"vitaminD":0.52,"vitaminE":0.06,"vitaminK":1.54,"vitaminB6":0.11,"vitaminB12":0.02,"thiamin":0.13,"riboflavin":0.06,"niacin":0.54,"folate":94.68,"calcium":57.26,"iron":1.6,"magnesium":58.52,"phosphorus":115.91,"potassium":419.86,"sodium":370.46,"zinc":0.65,"copper":0.24,"selenium":4.48,"cholesterol":5.2,"saturatedFat":1.87,"monoFat":2.2,"polyFat":0.55,"omega3":0.0,"omega6":0.0},"gramsPerServing":268.0,"servings":7,"per100g":{"Energy_KCal":149.78,"Water":66.39,"Protein":5.72,"TotalLipidFat":5.17,"Carbohydrate":20.79,"FiberTotalDietary":5.06,"SugarsTotal":5.7,"Cholesterol":5.2,"FattyAcids_totalSaturated":1.87,"FattyAcids_totalMonounsaturated":2.2,"FattyAcids_totalPolyunsaturated":0.55,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.24,"Retinol":0.0,"Carotene_beta":2.72,"VitaminD":0.52,"VitaminE_alphaTocopherol":0.06,"VitaminK_phylloquinone":1.54,"VitaminC_totalAscorbicAcid":1.05,"Thiamin":0.13,"Riboflavin":0.06,"Niacin":0.54,"PantothenicAcid":0.28,"VitaminB6":0.11,"Folate_total":94.68,"Folate_food":94.68,"Folate_DFE":94.68,"FolicAcid":0.0,"VitaminB12":0.02,"Choline_total":2.25,"Betaine":0.1,"LuteinZeaxanthin":1.86,"Lycopene":92.9,"Calcium_Ca":57.26,"Iron_Fe":1.6,"Magnesium_Mg":58.52,"Phosphorus_P":115.91,"Potassium_K":419.86,"Sodium_Na":370.46,"Zinc_Zn":0.65,"Copper_Cu":0.24,"Manganese_Mn":0.43,"Selenium_Se":4.48,"Tryptophan":0.06,"Threonine":0.23,"Isoleucine":0.24,"Leucine":0.45,"Lysine":0.39,"Methionine":0.08,"Cystine":0.05,"Phenylalanine":0.3,"Tyrosine":0.15,"Valine":0.29,"Arginine":0.37,"Histidine":0.15,"Alanine":0.24,"AsparticAcid":0.67,"GlutamicAcid":0.88,"Glycine":0.23,"Proline":0.24,"Serine":0.3,"omega3":0.0,"omega6":0.0,"AddedSugars":4.61,"IntrinsicSugars":1.08},"addedSugars":12.4,"intrinsicSugars":2.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"16005","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.88,"yieldFactorFat":1.0,"sources":[{"ndb":"16024","name":"Beans, great northern, mature seeds, raw","grams":64.9},{"ndb":"10165","name":"Pork, cured, salt pork, raw","grams":16.2},{"ndb":"11282","name":"Onions, raw","grams":21.4},{"ndb":"19304","name":"Molasses","grams":11.4},{"ndb":"19334","name":"Sugars, brown","grams":3.9},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":1.4},{"ndb":"11935","name":"Catsup","grams":2.4},{"ndb":"2047","name":"Salt, table","grams":1.3},{"ndb":"2030","name":"Spices, pepper, black","grams":0.2},{"ndb":"14411","name":"Water, tap, drinking","grams":169.1}],"sections":[{"section_key":"beans","section_label":"Beans","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":2046.15,"raw_water_grams":1415.58,"raw_fat_grams":97.08,"raw_protein_grams":107.32,"raw_carb_grams":390.0,"final_grams":1876.28}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Beans, baked, home prepared', quantity: 'custom (g)', foodWord: 'BAKEDBEANS', ndbNo: '16005', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'great northern beans, dry', quantity: '1 lb dry', section: 'beans', ndbNo: '16024', portionDesc: 'g', portionGrams: 454.0 },
+      { name: 'salt pork', quantity: '4 oz', section: 'beans', ndbNo: '10165', portionDesc: 'g', portionGrams: 113.4 },
+      { name: 'onion', quantity: '1 large', section: 'beans', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'molasses', quantity: '4 tbsp', section: 'beans', ndbNo: '19304', portionDesc: 'g', portionGrams: 80.0 },
+      { name: 'brown sugar', quantity: '6 tsp packed', section: 'beans', ndbNo: '19334', portionDesc: 'g', portionGrams: 27.6 },
+      { name: 'yellow mustard', quantity: '2 tsp', section: 'beans', ndbNo: '2046', portionDesc: 'g', portionGrams: 10.0 },
+      { name: 'ketchup', quantity: '1 tbsp', section: 'beans', ndbNo: '11935', portionDesc: 'g', portionGrams: 17.0 },
+      { name: 'salt', quantity: '1½ tsp', section: 'beans', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'ground black pepper', quantity: '½ tsp', section: 'beans', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'water', quantity: '40 fl oz (5 cups)', section: 'beans', ndbNo: '14411', portionDesc: 'g', portionGrams: 1184.0 }
+    ],
+    recipeInstructions: [
+      'The night before, sort and rinse the beans. Cover with cold water by 2 inches and soak overnight, at least 8 hours. Drain and discard the soaking water.',
+      'Place the soaked beans in a large pot and cover with fresh cold water by 2 inches. Bring to a boil over high heat, then reduce heat and simmer for 45 to 60 minutes, until the beans are just tender but not falling apart. Drain and set aside.',
+      'Preheat the oven to 300°F (150°C). Cut the salt pork into ½-inch cubes. Dice the onion.',
+      'In a Dutch oven or heavy oven-safe pot, cook pork over medium-high heat, stirring occasionally, until fat is rendered and pork is lightly browned, about 4–5 minutes. Add the onions and cook until tender, then add the beans. In a bowl, whisk together the molasses, brown sugar, yellow mustard, ketchup, salt, black pepper, and water until combined. Pour over the beans and stir to mix.',
+      'Cover and bake at 300°F for 4 to 5 hours, stirring every hour, until the beans are very tender and the sauce has thickened. Add a splash of water if the beans look dry at any stir. Uncover for the last 30 minutes to caramelize the top.',
+      'Taste and adjust salt before serving. Beans will thicken further as they cool.'
+    ],
+    sections: [
+      { key: 'beans', label: 'Beans', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];
