@@ -8533,5 +8533,48 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'slaw', label: 'Slaw', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SIDE_015',
+    name: 'Hasselback Potatoes',
+    category: 'sides',
+    dietaryCategory: 'veggie',
+    levelNum: 186,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 potato (makes 4)',
+    prepTime: '75 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":270.4,"pro":2.9,"fat":18.4,"carb":24.8,"fib":3.8,"h2o":108.0,"sug":1.8,"perServing":{"cal":270.4,"pro":2.9,"fat":18.4,"carb":24.8,"fib":3.8,"h2o":108.0,"sug":1.8,"AddedSugars":0.0,"IntrinsicSugars":1.8},"micros":{"vitaminA":53.33,"vitaminC":5.44,"vitaminD":0.0,"vitaminE":0.71,"vitaminK":4.68,"vitaminB6":0.16,"vitaminB12":0.01,"thiamin":0.05,"riboflavin":0.03,"niacin":0.88,"folate":14.16,"calcium":16.44,"iron":0.63,"magnesium":21.48,"phosphorus":64.83,"potassium":402.02,"sodium":386.72,"zinc":0.32,"copper":0.12,"selenium":0.65,"cholesterol":19.43,"saturatedFat":5.18,"monoFat":4.99,"polyFat":0.62,"omega3":0.02,"omega6":0.17},"gramsPerServing":157.1,"servings":4,"per100g":{"Energy_KCal":172.1,"Water":68.75,"Protein":1.83,"TotalLipidFat":11.74,"Carbohydrate":15.79,"FiberTotalDietary":2.41,"SugarsTotal":1.12,"Cholesterol":19.43,"FattyAcids_totalSaturated":5.18,"FattyAcids_totalMonounsaturated":4.99,"FattyAcids_totalPolyunsaturated":0.62,"LinoleicAcid":0.17,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":53.33,"Retinol":51.54,"Carotene_beta":24.25,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.71,"VitaminK_phylloquinone":4.68,"VitaminC_totalAscorbicAcid":5.44,"Thiamin":0.05,"Riboflavin":0.03,"Niacin":0.88,"PantothenicAcid":0.25,"VitaminB6":0.16,"Folate_total":14.16,"Folate_food":14.16,"Folate_DFE":14.16,"FolicAcid":0.0,"VitaminB12":0.01,"Choline_total":11.4,"Betaine":0.2,"LuteinZeaxanthin":9.19,"Lycopene":0.02,"Calcium_Ca":16.44,"Iron_Fe":0.63,"Magnesium_Mg":21.48,"Phosphorus_P":64.83,"Potassium_K":402.02,"Sodium_Na":386.72,"Zinc_Zn":0.32,"Copper_Cu":0.12,"Manganese_Mn":0.19,"Selenium_Se":0.65,"Tryptophan":0.01,"Threonine":0.05,"Isoleucine":0.06,"Leucine":0.09,"Lysine":0.09,"Methionine":0.02,"Cystine":0.02,"Phenylalanine":0.06,"Tyrosine":0.03,"Valine":0.09,"Arginine":0.09,"Histidine":0.02,"Alanine":0.05,"AsparticAcid":0.39,"GlutamicAcid":0.3,"Glycine":0.04,"Proline":0.06,"Serine":0.06,"omega3":0.02,"omega6":0.17,"AddedSugars":0.0,"IntrinsicSugars":1.12},"addedSugars":0.0,"intrinsicSugars":1.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.85,"yieldFactorFat":1.0,"sources":[{"ndb":"11354","name":"Potatoes, white, flesh and skin, raw","grams":150.0},{"ndb":"1145","name":"Butter, without salt","grams":14.2},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"2049","name":"Thyme, fresh","grams":0.6},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"potatoes","section_label":"Potatoes","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":704.77,"raw_water_grams":508.35,"raw_fat_grams":73.79,"raw_protein_grams":11.52,"raw_carb_grams":99.22,"final_grams":628.52}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Hasselback Potatoes', quantity: 'custom (g)', foodWord: 'HASSELBACKPOTATOES', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white potatoes (raw)', quantity: '4 medium', section: 'potatoes', ndbNo: '11354', portionDesc: 'g', portionGrams: 600.0 },
+      { name: 'unsalted butter', quantity: '4 tbsp', section: 'potatoes', ndbNo: '1145', portionDesc: 'g', portionGrams: 56.8 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'potatoes', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.0 },
+      { name: 'garlic', quantity: '4 cloves', section: 'potatoes', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'fresh thyme leaves', quantity: '1 tbsp', section: 'potatoes', ndbNo: '2049', portionDesc: 'g', portionGrams: 2.4 },
+      { name: 'salt', quantity: '1 tsp', section: 'potatoes', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'potatoes', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Preheat oven to 425°F (220°C).',
+      'Wash and dry the potatoes. Place each potato between two wooden chopsticks or spoon handles, then cut thin slices about 3mm apart across the potato, stopping just before the bottom so slices stay connected.',
+      'Melt the butter and mix with the olive oil. Brush generously between the potato slices and over the surface.',
+      'Tuck thin slices of garlic and thyme sprigs between the potato slices. Season with salt and black pepper.',
+      'Place potatoes on a baking sheet or in a baking dish and roast for 50 to 60 minutes, brushing with remaining butter mixture halfway through, until the tops are golden and crispy and the centers are tender.',
+      'Remove from the oven and let rest for 5 minutes before serving.'
+    ],
+    sections: [
+      { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.85 }
+    ],
   }
 ];
