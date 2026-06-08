@@ -8975,5 +8975,47 @@ export const LEVELS: Level[] = [
       { key: 'coating', label: 'Fried Squash', cookingMethod: '', yieldFactorWater: 0.75 },
       { key: 'seasoning', label: 'Creole Seasoning', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAUCE_015',
+    name: 'Cheese Sauce for Vegetables',
+    category: 'sauces & condiments',
+    dietaryCategory: 'veggie',
+    levelNum: 196,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1/4 cup (makes 6+)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":183.2,"pro":8.1,"fat":14.6,"carb":5.0,"fib":0.1,"h2o":41.8,"sug":2.2,"perServing":{"cal":183.2,"pro":8.1,"fat":14.6,"carb":5.0,"fib":0.1,"h2o":41.8,"sug":2.2,"AddedSugars":0.0,"IntrinsicSugars":2.2},"micros":{"vitaminA":182.73,"vitaminC":0.02,"vitaminD":38.72,"vitaminE":0.46,"vitaminK":1.64,"vitaminB6":0.03,"vitaminB12":0.6,"thiamin":0.04,"riboflavin":0.24,"niacin":0.19,"folate":13.44,"calcium":297.54,"iron":0.21,"magnesium":14.25,"phosphorus":200.39,"potassium":92.6,"sodium":358.25,"zinc":1.45,"copper":0.03,"selenium":14.08,"cholesterol":59.38,"saturatedFat":11.93,"monoFat":5.7,"polyFat":0.76,"omega3":0.02,"omega6":0.13},"gramsPerServing":71.1,"servings":6,"per100g":{"Energy_KCal":257.78,"Water":58.78,"Protein":11.38,"TotalLipidFat":20.54,"Carbohydrate":7.06,"FiberTotalDietary":0.15,"SugarsTotal":3.11,"Cholesterol":59.38,"FattyAcids_totalSaturated":11.93,"FattyAcids_totalMonounsaturated":5.7,"FattyAcids_totalPolyunsaturated":0.76,"LinoleicAcid":0.13,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":182.73,"Retinol":181.42,"Carotene_beta":43.71,"VitaminD":38.72,"VitaminE_alphaTocopherol":0.46,"VitaminK_phylloquinone":1.64,"VitaminC_totalAscorbicAcid":0.02,"Thiamin":0.04,"Riboflavin":0.24,"Niacin":0.19,"PantothenicAcid":0.28,"VitaminB6":0.03,"Folate_total":13.44,"Folate_food":9.78,"Folate_DFE":16.0,"FolicAcid":5.63,"VitaminB12":0.6,"Choline_total":13.75,"Betaine":0.64,"LuteinZeaxanthin":2.41,"Lycopene":0.01,"Calcium_Ca":297.54,"Iron_Fe":0.21,"Magnesium_Mg":14.25,"Phosphorus_P":200.39,"Potassium_K":92.6,"Sodium_Na":358.25,"Zinc_Zn":1.45,"Copper_Cu":0.03,"Manganese_Mn":0.05,"Selenium_Se":14.08,"Tryptophan":0.24,"Threonine":0.5,"Isoleucine":0.59,"Leucine":0.97,"Lysine":0.57,"Methionine":0.27,"Cystine":0.06,"Phenylalanine":0.54,"Tyrosine":0.54,"Valine":0.69,"Arginine":0.29,"Histidine":0.28,"Alanine":0.37,"AsparticAcid":0.87,"GlutamicAcid":2.43,"Glycine":0.26,"Proline":1.22,"Serine":0.44,"omega3":0.02,"omega6":0.13,"AddedSugars":0.0,"IntrinsicSugars":3.11},"addedSugars":0.0,"intrinsicSugars":2.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.88,"yieldFactorFat":1.0,"sources":[{"ndb":"1145","name":"Butter, without salt","grams":4.7},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":2.6},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":40.7},{"ndb":"1009","name":"Cheese, cheddar","grams":28.2},{"ndb":"2020","name":"Spices, garlic powder","grams":0.1},{"ndb":"2026","name":"Spices, onion powder","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":0.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.0}],"sections":[{"section_key":"sauce","section_label":"Cheese Sauce","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":460.68,"raw_water_grams":284.86,"raw_fat_grams":87.6,"raw_protein_grams":48.53,"raw_carb_grams":30.1,"final_grams":426.49}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Cheese Sauce for Vegetables', quantity: 'custom (g)', foodWord: 'CHEESESAUCE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'unsalted butter', quantity: '2 tbsp', section: 'sauce', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '2 tbsp', section: 'sauce', ndbNo: '20581', portionDesc: 'g', portionGrams: 15.6 },
+      { name: 'whole milk', quantity: '1 cup', section: 'sauce', ndbNo: '1077', portionDesc: 'g', portionGrams: 244.0 },
+      { name: 'Cheddar cheese', quantity: '1½ cups, shredded', section: 'sauce', ndbNo: '1009', portionDesc: 'g', portionGrams: 169.5 },
+      { name: 'garlic powder', quantity: '¼ tsp', section: 'sauce', ndbNo: '2020', portionDesc: 'g', portionGrams: 0.775 },
+      { name: 'onion powder', quantity: '¼ tsp', section: 'sauce', ndbNo: '2026', portionDesc: 'g', portionGrams: 0.6 },
+      { name: 'salt', quantity: '¼ tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: 'pinch', section: 'sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 }
+    ],
+    recipeInstructions: [
+      'Melt the butter in a small saucepan over medium heat. Whisk in the flour and cook, stirring constantly, for 1 to 2 minutes until the roux is pale golden and no longer smells raw.',
+      'Gradually whisk in the milk in a thin stream, whisking constantly to prevent lumps. Cook, stirring, for 3 to 4 minutes until the sauce thickens enough to coat the back of a spoon.',
+      'Remove from heat. Stir in the shredded cheddar a handful at a time until fully melted and smooth. Season with garlic powder, onion powder, salt, and black pepper.',
+      'Serve immediately over steamed broccoli, cauliflower, or other vegetables. Reheat gently over low heat, whisking in a splash of milk if needed to loosen.'
+    ],
+    sections: [
+      { key: 'sauce', label: 'Cheese Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];

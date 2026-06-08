@@ -89,7 +89,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
 | `BKFST_NNN` | 🔧 In progress | 39 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039) |
 | `SAND_NNN` | 🔧 In progress | 67 (001–067) |
-| SAUCE_NNN` | 🔧 In progress | 14 (001–014) |
+| SAUCE_NNN` | 🔧 In progress | 15 (001–015) |
 | `STOCK_NNN` | 🔧 In progress | 7 (001–007) |
 | `ENTR_NNN` | 🔧 In progress | 1 (001) |
 | `SIDE_NNN` | 🔧 In progress | 23 (001–023) |
@@ -171,6 +171,7 @@ Planned BKFST order (standalone components first, composites last):
 | SAUCE_012 | Chili Sauce | (none) | Rule D ✅ — no canonical; tomato_red_raw(11529) 794.0g+onion_raw(11282) 110.0g+bell_pepper_green_raw(11333) 119.0g+apple_cider_vinegar(2048) 60.0g+brown_sugar(19334) 27.0g+salt_table(2047) 6.0g+cinnamon_ground(2010) 1.3g+cloves_ground(2011) 0.525g+allspice_ground(2001) 1.0g+red_pepper_flakes(2031) 1.15g; yfw=0.63 → 743.6g cooked; 43+ servings × 17g (1 tbsp); 45.3 kcal·1.28P·0.310F·10.29C·1.99Fi·7.40Su per 100g; dietary_category=vegan; cooking_method=boiled |
 | SAUCE_013 | Russian Dressing | (none) | Rule D ✅ — no canonical; @SAUCE_009(120g)+@SAUCE_012(51g)+horseradish_prepared(2055) 15.0g+worcestershire_sauce(6971) 5.0g+lemon_juice_raw(9152) 5.0g; yfw=1.00 → 196g; 6+ servings × 30g (2 tbsp); 479.9 kcal·1.67P·51.53F·4.78C per 100g; dietary_category=veggie; cooking_method=raw |
 | SAUCE_014 | Creole Seasoning | (none) | Rule D ✅ — no canonical; paprika(2028) 17.0g+garlic_powder(2020) 19.4g+onion_powder(2026) 6.9g+black_pepper_ground(2030) 6.9g+cayenne_pepper(2031) 5.3g+oregano_dried(2027) 5.4g+thyme_dried(2042) 4.2g+celery_seed(2007) 6.5g+white_pepper_ground(2032) 7.2g; yfw=1.00 → 78.8g; 27+ servings × 2.9g (1 tsp); 193.6 kcal·8.46P·4.04F·42.11C·15.59Fi per 100g; Na=58 mg/100g; dietary_category=vegan; cooking_method=raw |
+| SAUCE_015 | Cheese Sauce for Vegetables | (none) | Rule D ✅ — no canonical; butter_unsalted(1145) 28.4g+flour_ap_white_enriched_unbleached(20581) 15.6g+milk_whole(1077) 244.0g+cheese_cheddar(1009) 169.5g+garlic_powder(2020) 0.775g+onion_powder(2026) 0.6g+salt_table(2047) 1.5g+black_pepper_ground(2030) 0.3g; yfw=0.88 → 426.5g; 6 servings × 71.1g (¼ cup); 257.8 kcal·11.38P·20.54F·7.06C per 100g; dietary_category=veggie; cooking_method=boiled |
 ## Current Work: STOCK Recipes
 
 **Stock/broth yield factor tiers:**
