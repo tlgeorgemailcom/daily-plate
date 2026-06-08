@@ -242,3 +242,5 @@ potato_russet_raw,11353,POTATOESRUSSET,"Potatoes, russet, flesh and skin, raw","
 rosemary_fresh,2063,ROSEMARY,"Rosemary, fresh",fresh rosemary,tbsp,1.7,
 great_northern_beans_raw,16024,NORTHERNBEANRAW,"Beans, great northern, mature seeds, raw","great northern beans, dry",cup,200,added during SIDE_018 build
 salt_pork_raw,10165,PORKSALT,"Pork, cured, salt pork, raw",salt pork,oz,28.35,added during SIDE_018 build
+pasta_cooked_unenriched_salted,20521,PASTACOOKED,"Pasta, cooked, unenriched, with added salt",cooked pasta (elbows),cup,120.0,added during SIDE_019 build
+tomatoes_canned_crushed,11693,TOMATOCAN,"Tomatoes, crushed, canned",canned crushed tomatoes,cup,240.0,added during SIDE_019/020 build
