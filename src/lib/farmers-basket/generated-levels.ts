@@ -8576,5 +8576,51 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.85 }
     ],
+  },
+  {
+    id: 'SIDE_016',
+    name: 'Twice Baked Potatoes',
+    category: 'sides',
+    dietaryCategory: 'all',
+    levelNum: 187,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 potato (makes 4)',
+    prepTime: '75 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":406.6,"pro":13.2,"fat":26.0,"carb":31.3,"fib":4.5,"h2o":178.4,"sug":4.1,"perServing":{"cal":406.6,"pro":13.2,"fat":26.0,"carb":31.3,"fib":4.5,"h2o":178.4,"sug":4.1,"AddedSugars":0.0,"IntrinsicSugars":4.1},"micros":{"vitaminA":64.42,"vitaminC":3.93,"vitaminD":5.55,"vitaminE":0.22,"vitaminK":10.49,"vitaminB6":0.13,"vitaminB12":0.18,"thiamin":0.06,"riboflavin":0.09,"niacin":1.06,"folate":14.84,"calcium":88.85,"iron":0.5,"magnesium":20.9,"phosphorus":114.85,"potassium":344.34,"sodium":378.16,"zinc":0.73,"copper":0.09,"selenium":5.63,"cholesterol":29.06,"saturatedFat":5.51,"monoFat":2.88,"polyFat":0.52,"omega3":0.02,"omega6":0.32},"gramsPerServing":253.8,"servings":4,"per100g":{"Energy_KCal":160.21,"Water":70.29,"Protein":5.2,"TotalLipidFat":10.24,"Carbohydrate":12.33,"FiberTotalDietary":1.78,"SugarsTotal":1.62,"Cholesterol":29.06,"FattyAcids_totalSaturated":5.51,"FattyAcids_totalMonounsaturated":2.88,"FattyAcids_totalPolyunsaturated":0.52,"LinoleicAcid":0.32,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":64.42,"Retinol":61.72,"Carotene_beta":37.66,"VitaminD":5.55,"VitaminE_alphaTocopherol":0.22,"VitaminK_phylloquinone":10.49,"VitaminC_totalAscorbicAcid":3.93,"Thiamin":0.06,"Riboflavin":0.09,"Niacin":1.06,"PantothenicAcid":0.31,"VitaminB6":0.13,"Folate_total":14.84,"Folate_food":14.84,"Folate_DFE":14.84,"FolicAcid":0.0,"VitaminB12":0.18,"Choline_total":15.4,"Betaine":0.68,"LuteinZeaxanthin":41.98,"Lycopene":0.01,"Calcium_Ca":88.85,"Iron_Fe":0.5,"Magnesium_Mg":20.9,"Phosphorus_P":114.85,"Potassium_K":344.34,"Sodium_Na":378.16,"Zinc_Zn":0.73,"Copper_Cu":0.09,"Manganese_Mn":0.12,"Selenium_Se":5.63,"Tryptophan":0.08,"Threonine":0.22,"Isoleucine":0.24,"Leucine":0.41,"Lysine":0.33,"Methionine":0.12,"Cystine":0.04,"Phenylalanine":0.23,"Tyrosine":0.2,"Valine":0.29,"Arginine":0.23,"Histidine":0.14,"Alanine":0.21,"AsparticAcid":0.61,"GlutamicAcid":0.97,"Glycine":0.16,"Proline":0.37,"Serine":0.21,"omega3":0.02,"omega6":0.32,"AddedSugars":0.0,"IntrinsicSugars":1.62},"addedSugars":0.0,"intrinsicSugars":4.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.9,"yieldFactorFat":1.0,"sources":[{"ndb":"11354","name":"Potatoes, white, flesh and skin, raw","grams":173.0},{"ndb":"1145","name":"Butter, without salt","grams":10.7},{"ndb":"1056","name":"Cream, sour, cultured","grams":28.8},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":15.2},{"ndb":"1009","name":"Cheese, cheddar","grams":21.2},{"ndb":"10862","name":"Pork, cured, bacon, pre-sliced, cooked, pan-fried","grams":11.5},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":11.2},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"2020","name":"Spices, garlic powder","grams":0.4}],"sections":[{"section_key":"potatoes","section_label":"Potatoes","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":1094.47,"raw_water_grams":792.83,"raw_fat_grams":103.97,"raw_protein_grams":52.84,"raw_carb_grams":125.19,"final_grams":1015.19}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Twice Baked Potatoes', quantity: 'custom (g)', foodWord: 'TWICEBAKEDPOTATO', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white potatoes (raw)', quantity: '4 medium potatoes', section: 'potatoes', ndbNo: '11354', portionDesc: 'g', portionGrams: 692.0 },
+      { name: 'unsalted butter', quantity: '3 tbsp', section: 'potatoes', ndbNo: '1145', portionDesc: 'g', portionGrams: 42.6 },
+      { name: 'sour cream', quantity: '½ cup', section: 'potatoes', ndbNo: '1056', portionDesc: 'g', portionGrams: 115.0 },
+      { name: 'whole milk', quantity: '¼ cup', section: 'potatoes', ndbNo: '1077', portionDesc: 'g', portionGrams: 61.0 },
+      { name: 'Cheddar cheese', quantity: '¾ cup shredded', section: 'potatoes', ndbNo: '1009', portionDesc: 'g', portionGrams: 84.75 },
+      { name: 'cooked bacon', quantity: '4 slices', section: 'potatoes', ndbNo: '10862', portionDesc: 'g', portionGrams: 46.0 },
+      { name: 'scallion (green onion)', quantity: '3 stalks', section: 'potatoes', ndbNo: '11291', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'salt', quantity: '1 tsp', section: 'potatoes', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'potatoes', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'garlic powder', quantity: '½ tsp', section: 'potatoes', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.55 }
+    ],
+    recipeInstructions: [
+      'Preheat oven to 400°F. Scrub potatoes and pat dry. Pierce each potato several times with a fork, then bake directly on the oven rack for 50 to 60 minutes until tender when pierced with a knife.',
+      'Remove potatoes from oven and let cool for 10 minutes. Cut each potato in half lengthwise. Scoop out the flesh into a large bowl, leaving a ¼-inch shell. Place the shells on a baking sheet.',
+      'Add butter, sour cream, milk, half the cheese, bacon, and scallions to the potato flesh. Season with salt, pepper, and garlic powder. Mash and mix until well combined but still slightly chunky.',
+      'Spoon the filling back into the potato shells, mounding generously. Top each with the remaining cheese.',
+      'Bake for 15 to 20 minutes until the tops are golden and the cheese is melted and bubbly.',
+      'Garnish with additional scallions and serve hot.'
+    ],
+    sections: [
+      { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];
