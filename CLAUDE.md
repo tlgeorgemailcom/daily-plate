@@ -92,7 +92,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | SAUCE_NNN` | 🔧 In progress | 14 (001–014) |
 | `STOCK_NNN` | 🔧 In progress | 7 (001–007) |
 | `ENTR_NNN` | 🔧 In progress | 1 (001) |
-| `SIDE_NNN` | 🔧 In progress | 21 (001–021) |
+| `SIDE_NNN` | 🔧 In progress | 22 (001–022) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -218,6 +218,7 @@ Planned BKFST order (standalone components first, composites last):
 | SIDE_019 | Mac and Cheese | (none) | Rule D ✅ — no canonical; 2-section: pasta (boiled yfw=0.3522): pasta_dry_unenriched(20420) 244.0g+water(14411) 1000.0g→581.2g cooked; sauce (boiled yfw=0.90): butter_unsalted(1145) 42.6g+flour_ap_white_enriched_unbleached(20581) 23.4g+milk_whole(1077) 488.0g+cheese_cheddar(1009) 170.0g+salt_table(2047) 6.0g+white_pepper_ground(2032) 0.6g; 1261.5g cooked; 6 servings × 210.2g (¾ cup); 180.9 kcal·7.05P·8.80F·18.17C per 100g; dietary_category=veggie; yfw=0.3522 calibrated to NDB 20521 water content (62.13%): dry_nonwater conserved, retained_water = cooked_total×0.6213 |
 | SIDE_020 | Mac and Tomato | (none) | Rule D ✅ — no canonical; 2-section: pasta (boiled yfw=0.3522): pasta_dry_unenriched(20420) 244.0g+water(14411) 1000.0g→581.2g cooked; mac_tomato (boiled yfw=0.95): tomatoes_canned_crushed(11693) 411.0g+butter_salted(1001) 28.4g+salt_table(2047) 3.0g+black_pepper_ground(2030) 0.575g→418g cooked; 1005.6g cooked; 4 servings × 251.4g (1 cup); 123.5 kcal·3.86P·2.77F·21.14C per 100g; dietary_category=veggie |
 | SIDE_021 | Stewed Okra and Tomatoes | (none) | Rule D ✅ — no canonical; 2-section: stew (boiled yfw=0.88): okra_raw(11278) 453.6g+tomatoes_canned_crushed(11693) 411.0g+onion_raw(11282) 150.0g+bell_pepper_green_raw(11333) 119.0g+celery_raw(11143) 75.0g+garlic_raw(11215) 12.0g+olive_oil(4053) 13.6g+salt+black_pepper; seasoning (raw yfw=1.0): @SAUCE_014 8.8g; 1114.8g cooked; 4 servings × 278.7g (1 cup); 47.9 kcal·1.82P·1.48F·8.39C·2.68Fi per 100g; dietary_category=vegan |
+| SIDE_022 | Fried Okra | (none) | Rule D ✅ — no canonical; 2-section: coating (fried yfw=0.75): okra_raw(11278) 453.6g+milk_buttermilk_whole(1230) 122.5g+cornmeal_enriched_yellow(20022) 138.0g+flour_ap_white_enriched_unbleached(20581) 31.25g+salt_table(2047) 3.0g+black_pepper_ground(2030) 0.575g+cayenne_pepper(2031) 0.45g+olive_oil(4053) 40.8g; seasoning (raw yfw=1.0): @SAUCE_014 8.7g; 665.5g cooked; 4 servings × 166.4g (1 cup); 186.4 kcal·4.06P·7.39F·26.96C·3.46Fi per 100g; dietary_category=veggie |
 ## Current Work: SAND Recipes
 
 **Sandwiches planning**: `/Volumes/training/Daily Food Chain/daily-food-chain/docs/sandwiches.md`
