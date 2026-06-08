@@ -8792,5 +8792,93 @@ export const LEVELS: Level[] = [
       { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'mac_tomato', label: 'Mac and Tomato', cookingMethod: '', yieldFactorWater: 0.95 }
     ],
+  },
+  {
+    id: 'SAUCE_014',
+    name: 'Creole Seasoning',
+    category: 'sauces & condiments',
+    dietaryCategory: 'vegan',
+    levelNum: 192,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 tsp (makes 34+)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":5.8,"pro":0.2,"fat":0.1,"carb":1.2,"fib":0.5,"h2o":0.2,"sug":0.1,"perServing":{"cal":5.8,"pro":0.2,"fat":0.1,"carb":1.2,"fib":0.5,"h2o":0.2,"sug":0.1,"AddedSugars":0.0,"IntrinsicSugars":0.1},"micros":{"vitaminA":537.52,"vitaminC":8.18,"vitaminD":0.0,"vitaminE":7.96,"vitaminK":133.67,"vitaminB6":0.95,"vitaminB12":0.0,"thiamin":0.22,"riboflavin":0.34,"niacin":2.85,"folate":52.38,"calcium":290.23,"iron":13.19,"magnesium":95.97,"phosphorus":196.62,"potassium":979.78,"sodium":13835.56,"zinc":2.23,"copper":0.45,"selenium":7.88,"cholesterol":0.0,"saturatedFat":0.88,"monoFat":0.57,"polyFat":1.99,"omega3":0.12,"omega6":0.0},"gramsPerServing":3.0,"servings":34,"per100g":{"Energy_KCal":193.63,"Water":5.69,"Protein":8.46,"TotalLipidFat":4.04,"Carbohydrate":42.11,"FiberTotalDietary":15.59,"SugarsTotal":3.53,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.88,"FattyAcids_totalMonounsaturated":0.57,"FattyAcids_totalPolyunsaturated":1.99,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.12,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":537.52,"Retinol":0.0,"Carotene_beta":5713.07,"VitaminD":0.0,"VitaminE_alphaTocopherol":7.96,"VitaminK_phylloquinone":133.67,"VitaminC_totalAscorbicAcid":8.18,"Thiamin":0.22,"Riboflavin":0.34,"Niacin":2.85,"PantothenicAcid":0.76,"VitaminB6":0.95,"Folate_total":52.38,"Folate_food":52.38,"Folate_DFE":52.38,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":31.28,"Betaine":3.52,"LuteinZeaxanthin":4086.1,"Lycopene":1.36,"Calcium_Ca":290.23,"Iron_Fe":13.19,"Magnesium_Mg":95.97,"Phosphorus_P":196.62,"Potassium_K":979.78,"Sodium_Na":13835.56,"Zinc_Zn":2.23,"Copper_Cu":0.45,"Manganese_Mn":2.15,"Selenium_Se":7.88,"Tryptophan":0.06,"Threonine":0.21,"Isoleucine":0.25,"Leucine":0.44,"Lysine":0.35,"Methionine":0.07,"Cystine":0.11,"Phenylalanine":0.27,"Tyrosine":0.21,"Valine":0.35,"Arginine":0.97,"Histidine":0.12,"Alanine":0.28,"AsparticAcid":1.04,"GlutamicAcid":1.37,"Glycine":0.31,"Proline":0.88,"Serine":0.25,"omega3":0.12,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":3.53},"addedSugars":0.0,"intrinsicSugars":0.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"2028","name":"Spices, paprika","grams":0.5},{"ndb":"2047","name":"Salt, table","grams":1.1},{"ndb":"2020","name":"Spices, garlic powder","grams":0.6},{"ndb":"2026","name":"Spices, onion powder","grams":0.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.2},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.2},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.2},{"ndb":"2042","name":"Spices, thyme, dried","grams":0.1}],"sections":[{"section_key":"blend","section_label":"Spice blend","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":101.1,"raw_water_grams":5.76,"raw_fat_grams":4.09,"raw_protein_grams":8.55,"raw_carb_grams":42.57,"final_grams":101.1}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Creole Seasoning', quantity: 'custom (g)', foodWord: 'CREOLESEASONING', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'paprika', quantity: '2½ tbsp', section: 'blend', ndbNo: '2028', portionDesc: 'g', portionGrams: 17.0 },
+      { name: 'salt', quantity: '2 tbsp', section: 'blend', ndbNo: '2047', portionDesc: 'g', portionGrams: 36.0 },
+      { name: 'garlic powder', quantity: '2 tbsp', section: 'blend', ndbNo: '2020', portionDesc: 'g', portionGrams: 19.4 },
+      { name: 'onion powder', quantity: '1 tbsp', section: 'blend', ndbNo: '2026', portionDesc: 'g', portionGrams: 6.9 },
+      { name: 'ground black pepper', quantity: '1 tbsp', section: 'blend', ndbNo: '2030', portionDesc: 'g', portionGrams: 6.9 },
+      { name: 'red pepper flakes', quantity: '1 tbsp', section: 'blend', ndbNo: '2031', portionDesc: 'g', portionGrams: 5.3 },
+      { name: 'dried oregano', quantity: '1 tbsp', section: 'blend', ndbNo: '2027', portionDesc: 'g', portionGrams: 5.4 },
+      { name: 'dried thyme', quantity: '1 tbsp', section: 'blend', ndbNo: '2042', portionDesc: 'g', portionGrams: 4.2 }
+    ],
+    recipeInstructions: [
+      'Measure all spices into a small bowl.',
+      'Stir with a fork or whisk until evenly blended.',
+      'Transfer to an airtight jar and store in a cool, dry place for up to 6 months.',
+      'To use, add 1 to 2 teaspoons per pound of protein, per cup of sauce, or to taste.'
+    ],
+    sections: [
+      { key: 'blend', label: 'Spice blend', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
+    id: 'SIDE_021',
+    name: 'Stewed Okra and Tomatoes',
+    category: 'sides',
+    dietaryCategory: 'vegan',
+    levelNum: 193,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cup (makes 4+)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":133.4,"pro":5.1,"fat":4.1,"carb":23.4,"fib":7.5,"h2o":241.7,"sug":8.9,"perServing":{"cal":133.4,"pro":5.1,"fat":4.1,"carb":23.4,"fib":7.5,"h2o":241.7,"sug":8.9,"AddedSugars":0.0,"IntrinsicSugars":8.9},"micros":{"vitaminA":24.15,"vitaminC":11.5,"vitaminD":0.0,"vitaminE":0.83,"vitaminK":18.48,"vitaminB6":0.13,"vitaminB12":0.0,"thiamin":0.08,"riboflavin":0.05,"niacin":0.64,"folate":23.35,"calcium":49.05,"iron":0.78,"magnesium":28.02,"phosphorus":40.65,"potassium":240.16,"sodium":264.07,"zinc":0.35,"copper":0.11,"selenium":0.78,"cholesterol":0.0,"saturatedFat":0.21,"monoFat":0.92,"polyFat":0.18,"omega3":0.0,"omega6":0.0},"gramsPerServing":278.7,"servings":4,"per100g":{"Energy_KCal":47.86,"Water":86.72,"Protein":1.82,"TotalLipidFat":1.48,"Carbohydrate":8.39,"FiberTotalDietary":2.68,"SugarsTotal":3.18,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.21,"FattyAcids_totalMonounsaturated":0.92,"FattyAcids_totalPolyunsaturated":0.18,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":24.15,"Retinol":0.0,"Carotene_beta":276.88,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.83,"VitaminK_phylloquinone":18.48,"VitaminC_totalAscorbicAcid":11.5,"Thiamin":0.08,"Riboflavin":0.05,"Niacin":0.64,"PantothenicAcid":0.18,"VitaminB6":0.13,"Folate_total":23.35,"Folate_food":23.35,"Folate_DFE":23.35,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":10.31,"Betaine":0.06,"LuteinZeaxanthin":203.68,"Lycopene":1694.21,"Calcium_Ca":49.05,"Iron_Fe":0.78,"Magnesium_Mg":28.02,"Phosphorus_P":40.65,"Potassium_K":240.16,"Sodium_Na":264.07,"Zinc_Zn":0.35,"Copper_Cu":0.11,"Manganese_Mn":0.44,"Selenium_Se":0.78,"Tryptophan":0.01,"Threonine":0.05,"Isoleucine":0.04,"Leucine":0.07,"Lysine":0.07,"Methionine":0.01,"Cystine":0.01,"Phenylalanine":0.06,"Tyrosine":0.05,"Valine":0.06,"Arginine":0.08,"Histidine":0.02,"Alanine":0.05,"AsparticAcid":0.19,"GlutamicAcid":0.4,"Glycine":0.04,"Proline":0.04,"Serine":0.04,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":3.18},"addedSugars":0.0,"intrinsicSugars":8.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.88,"yieldFactorFat":1.0,"sources":[{"ndb":"11278","name":"Okra, raw","grams":113.4},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":102.8},{"ndb":"11282","name":"Onions, raw","grams":37.5},{"ndb":"11333","name":"Peppers, sweet, green, raw","grams":29.8},{"ndb":"11143","name":"Celery, raw","grams":18.8},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"","name":"Creole Seasoning","grams":2.2}],"sections":[{"section_key":"stew","section_label":"Stewed Okra and Tomatoes","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":1237.77,"raw_water_grams":1098.01,"raw_fat_grams":16.17,"raw_protein_grams":19.51,"raw_carb_grams":89.85,"final_grams":1106.01},{"section_key":"seasoning","section_label":"Creole Seasoning","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":8.8,"raw_water_grams":0.5,"raw_fat_grams":0.36,"raw_protein_grams":0.74,"raw_carb_grams":3.71,"final_grams":8.8}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Stewed Okra and Tomatoes', quantity: 'custom (g)', foodWord: 'STEWEDOKRA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'okra', quantity: '1 lb, sliced', section: 'stew', ndbNo: '11278', portionDesc: 'g', portionGrams: 453.6 },
+      { name: 'canned crushed tomatoes', quantity: '1 can (14.5 oz)', section: 'stew', ndbNo: '11693', portionDesc: 'g', portionGrams: 411.0 },
+      { name: 'onion', quantity: '1 medium, diced', section: 'stew', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'green bell pepper', quantity: '1 medium, diced', section: 'stew', ndbNo: '11333', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'celery stalk', quantity: '2 stalks, diced', section: 'stew', ndbNo: '11143', portionDesc: 'g', portionGrams: 75.0 },
+      { name: 'garlic', quantity: '4 cloves, minced', section: 'stew', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'stew', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'salt', quantity: '½ tsp', section: 'stew', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'stew', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'Creole Seasoning', quantity: '1 tbsp seasoning blend (8.8g)', section: 'seasoning', foodWord: 'CREOLESEASONING', portionDesc: 'g', portionGrams: 8.8, isDish: true, componentRef: 'SAUCE_014' }
+    ],
+    recipeInstructions: [
+      'Warm the olive oil in a medium saucepan or Dutch oven over medium heat. Add the onion, bell pepper, and celery. Cook, stirring occasionally, for 5 to 6 minutes until softened.',
+      'Add the garlic and Creole seasoning. Stir and cook for 1 minute until fragrant.',
+      'Add the sliced okra and crushed tomatoes. Season with salt and black pepper and stir to combine.',
+      'Bring to a boil, then reduce heat to medium-low. Simmer uncovered, stirring occasionally, for 20 to 25 minutes until the okra is tender and the stew has thickened slightly.',
+      'Taste and adjust seasoning before serving. Serve over rice or as a side.'
+    ],
+    sections: [
+      { key: 'stew', label: 'Stewed Okra and Tomatoes', cookingMethod: '', yieldFactorWater: 0.88 },
+      { key: 'seasoning', label: 'Creole Seasoning', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

@@ -293,3 +293,6 @@ SIDE_019,pasta,Pasta,,boiled,1.0,1.0,1.0,1.0,1.0,,,,
 SIDE_019,sauce,Cheese Sauce,,boiled,0.90,1.0,1.0,1.0,1.0,,,,
 SIDE_020,pasta,Pasta,,boiled,1.0,1.0,1.0,1.0,1.0,,,,
 SIDE_020,mac_tomato,Mac and Tomato,,boiled,0.95,1.0,1.0,1.0,1.0,,,,
+SAUCE_014,blend,Spice blend,,raw,1.0,1.0,,,1.0,,,,
+SIDE_021,stew,Stewed Okra and Tomatoes,,boiled,0.88,1.0,,,1.0,,,,
+SIDE_021,seasoning,Creole Seasoning,,raw,1.0,1.0,,,1.0,,,,SAUCE_014
