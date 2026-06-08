@@ -8622,5 +8622,46 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'SIDE_017',
+    name: 'Smashed Potatoes',
+    category: 'sides',
+    dietaryCategory: 'vegan',
+    levelNum: 188,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '3 potatoes (makes 4)',
+    prepTime: '45 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":300.9,"pro":5.2,"fat":10.5,"carb":48.0,"fib":7.5,"h2o":201.2,"sug":3.5,"perServing":{"cal":300.9,"pro":5.2,"fat":10.5,"carb":48.0,"fib":7.5,"h2o":201.2,"sug":3.5,"AddedSugars":0.0,"IntrinsicSugars":3.5},"micros":{"vitaminA":0.41,"vitaminC":5.6,"vitaminD":0.0,"vitaminE":0.47,"vitaminK":4.0,"vitaminB6":0.17,"vitaminB12":0.0,"thiamin":0.06,"riboflavin":0.03,"niacin":1.01,"folate":16.39,"calcium":11.93,"iron":0.65,"magnesium":24.02,"phosphorus":70.42,"potassium":459.07,"sodium":340.97,"zinc":0.34,"copper":0.13,"selenium":0.41,"cholesterol":0.0,"saturatedFat":0.55,"monoFat":2.6,"polyFat":0.35,"omega3":0.0,"omega6":0.0},"gramsPerServing":270.1,"servings":4,"per100g":{"Energy_KCal":111.4,"Water":74.5,"Protein":1.93,"TotalLipidFat":3.88,"Carbohydrate":17.79,"FiberTotalDietary":2.76,"SugarsTotal":1.28,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.55,"FattyAcids_totalMonounsaturated":2.6,"FattyAcids_totalPolyunsaturated":0.35,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.41,"Retinol":0.0,"Carotene_beta":4.71,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.47,"VitaminK_phylloquinone":4.0,"VitaminC_totalAscorbicAcid":5.6,"Thiamin":0.06,"Riboflavin":0.03,"Niacin":1.01,"PantothenicAcid":0.27,"VitaminB6":0.17,"Folate_total":16.39,"Folate_food":16.39,"Folate_DFE":16.39,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":11.19,"Betaine":0.25,"LuteinZeaxanthin":10.45,"Lycopene":0.02,"Calcium_Ca":11.93,"Iron_Fe":0.65,"Magnesium_Mg":24.02,"Phosphorus_P":70.42,"Potassium_K":459.07,"Sodium_Na":340.97,"Zinc_Zn":0.34,"Copper_Cu":0.13,"Manganese_Mn":0.18,"Selenium_Se":0.41,"Tryptophan":0.01,"Threonine":0.06,"Isoleucine":0.06,"Leucine":0.09,"Lysine":0.09,"Methionine":0.02,"Cystine":0.02,"Phenylalanine":0.07,"Tyrosine":0.04,"Valine":0.09,"Arginine":0.1,"Histidine":0.02,"Alanine":0.06,"AsparticAcid":0.44,"GlutamicAcid":0.32,"Glycine":0.05,"Proline":0.06,"Serine":0.07,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":1.28},"addedSugars":0.0,"intrinsicSugars":3.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.82,"yieldFactorFat":1.0,"sources":[{"ndb":"11354","name":"Potatoes, white, flesh and skin, raw","grams":300.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":10.1},{"ndb":"2063","name":"Rosemary, fresh","grams":0.8},{"ndb":"2020","name":"Spices, garlic powder","grams":0.8},{"ndb":"2047","name":"Salt, table","grams":2.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3}],"sections":[{"section_key":"potatoes","section_label":"Potatoes","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":1257.15,"raw_water_grams":981.63,"raw_fat_grams":41.96,"raw_protein_grams":20.91,"raw_carb_grams":192.21,"final_grams":1080.46}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Smashed Potatoes', quantity: 'custom (g)', foodWord: 'SMASHEDPOTATOES', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white potatoes (raw)', quantity: '12 small potatoes', section: 'potatoes', ndbNo: '11354', portionDesc: 'g', portionGrams: 1200.0 },
+      { name: 'olive oil', quantity: '3 tbsp', section: 'potatoes', ndbNo: '4053', portionDesc: 'g', portionGrams: 40.5 },
+      { name: 'fresh rosemary', quantity: '2 tbsp', section: 'potatoes', ndbNo: '2063', portionDesc: 'g', portionGrams: 3.4 },
+      { name: 'garlic powder', quantity: '1 tsp', section: 'potatoes', ndbNo: '2020', portionDesc: 'g', portionGrams: 3.1 },
+      { name: 'salt', quantity: '1½ tsp', section: 'potatoes', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'ground black pepper', quantity: '½ tsp', section: 'potatoes', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
+    ],
+    recipeInstructions: [
+      'Preheat oven to 450°F. Boil potatoes in salted water until just tender when pierced, about 20 minutes. Drain and let steam dry for 5 minutes.',
+      'Transfer potatoes to a well-oiled baking sheet. Use the bottom of a glass or measuring cup to firmly smash each potato to about ½-inch thickness.',
+      'Drizzle olive oil over the smashed potatoes. Sprinkle with rosemary, garlic powder, salt, and black pepper.',
+      'Roast at 450°F for 20 to 25 minutes until edges are crisp and golden.',
+      'Serve hot. Optionally top with vegan sour cream or fresh herbs.'
+    ],
+    sections: [
+      { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.82 }
+    ],
   }
 ];
