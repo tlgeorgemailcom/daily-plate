@@ -54,6 +54,10 @@ export interface NutrientRow {
   vitaminE_alphaTocopherol: number;
   vitaminK_phylloquinone: number;
   alcholEthyl?: number;          // alcohol — absent for non-alcoholic foods
+  absorptionFactor?: number;     // cooked water fraction for submersion-boiled dry ingredients
+                                 // (pasta, rice, oats, legumes). Stored in DataCentralCombo.bin.
+                                 // When present, buildRecipeCommunity uses absorption model instead
+                                 // of evaporation model for sections with cookMethod=boiled.
 }
 
 // ── Recipe structure ──────────────────────────────────────────────────────────
@@ -91,7 +95,7 @@ export interface CommunityIngredient {
 // ── Build output ──────────────────────────────────────────────────────────────
 
 /** Per-nutrient map keyed by NutrientRow field name */
-export type MacroMap = Partial<Record<keyof Omit<NutrientRow, 'ndbNo' | 'longDesc' | 'fdGrpCd'>, number>>;
+export type MacroMap = Partial<Record<keyof Omit<NutrientRow, 'ndbNo' | 'longDesc' | 'fdGrpCd' | 'absorptionFactor'>, number>>;
 
 /** What was skipped and why, for transparency */
 export interface SkippedIngredient {

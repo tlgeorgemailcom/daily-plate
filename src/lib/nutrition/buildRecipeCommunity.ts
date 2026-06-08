@@ -224,41 +224,35 @@ export function buildRecipeCommunity(
 
     const boilMinutes = (sec as CommunitySection & { boilMinutes?: number }).boilMinutes ?? 0;
 
-    // ── Submersion-boil absorption override ──────────────────────────────────
-    // The evaporation model (calcYieldWater) is wrong when a boiled section
-    // contains a pure-water ingredient (≥99.5% water) alongside dry ingredients
-    // (avg moisture <20%) — e.g. dry pasta, rice, oats, or dried beans boiled
-    // in a large volume of water. In these cases the food ABSORBS water rather
-    // than losing it, and calcYieldWater returns 1.0 ('none' binding class),
-    // massively overcounting moisture in the cooked result.
+    // ── Submersion-boil absorption model ─────────────────────────────────────
+    // When a boiled section contains a dry absorber (pasta, rice, oats, beans)
+    // identified by a numeric absorptionFactor in DataCentralCombo.bin, use the
+    // absorption model instead of the evaporation model (calcYieldWater).
     //
-    // Detection: cookMethod=boiled + has a near-pure-water ingredient + the
-    // remaining ingredients are dry (avg water < 20%). This correctly excludes
-    // sauces (milk 88%), stocks (chicken ~66%), and soups (vegetables ~93%).
+    // absorptionFactor = cooked water fraction target from SR Legacy cooked NDB.
+    // Model: dry non-water solids are conserved; they absorb water to reach the
+    // target fraction. yieldWater = retainedWater / initialWaterG.
+    // Min(1.0) guard prevents yield > 1 when the boiling water pool is small.
     //
-    // Model: conserve dry non-water solids; let them absorb water to reach the
-    // standard cooked-grain water fraction of 62.13% (NDB 20521, calibrated for
-    // pasta/rice/oats/legumes). yieldWater = retainedWater / initialWaterG.
-    const BOIL_ABSORPTION_TARGET = 0.6213;
-    const pureWaterG  = active
-      .filter(a => a.nutrients.water >= 99.5)
-      .reduce((sum, a) => sum + a.grams, 0);
-    const dryIngredients = active.filter(a => a.nutrients.water < 99.5);
-    const dryAvgWaterFrac = dryIngredients.length > 0 && totalSectionRawG > pureWaterG
-      ? dryIngredients.reduce((sum, a) => sum + (a.nutrients.water / 100) * a.grams, 0) /
-        dryIngredients.reduce((sum, a) => sum + a.grams, 0)
-      : 1.0;
-
+    // If multiple absorbers are present, use the weighted average factor.
+    // Falls back to calcYieldWater when no absorber ingredient is detected.
     let yieldWater: number;
-    if (
-      cookMethod === 'boiled' &&
-      pureWaterG > 0 &&
-      dryAvgWaterFrac < 0.20
-    ) {
-      // Absorption model: dry non-water solids absorb to TARGET water fraction.
-      const dryNonWaterG   = totalSectionRawG - initialWaterG;
-      const retainedWaterG = dryNonWaterG * BOIL_ABSORPTION_TARGET / (1 - BOIL_ABSORPTION_TARGET);
-      yieldWater = Math.min(retainedWaterG / initialWaterG, 1.0);
+    if (cookMethod === 'boiled') {
+      const absorbers = active.filter(a => a.nutrients.absorptionFactor != null);
+      if (absorbers.length > 0) {
+        const absorberGrams = absorbers.reduce((sum, a) => sum + a.grams, 0);
+        const weightedFactor = absorbers.reduce(
+          (sum, a) => sum + (a.nutrients.absorptionFactor! * a.grams), 0
+        ) / absorberGrams;
+        const dryNonWaterG   = totalSectionRawG - initialWaterG;
+        const retainedWaterG = dryNonWaterG * weightedFactor / (1 - weightedFactor);
+        // yieldWater may be >> 1 when initialWaterG is only the dry ingredient's own moisture
+        // (no explicit water row). cooked mass formula handles this:
+        // cookedGrams = rawG - initialWaterG*(1-yieldWater) — negative term means water gained.
+        yieldWater = initialWaterG > 0 ? retainedWaterG / initialWaterG : 1.0;
+      } else {
+        yieldWater = calcYieldWater(stages, initialWaterG, fillingClass, boilMinutes);
+      }
     } else {
       yieldWater = calcYieldWater(stages, initialWaterG, fillingClass, boilMinutes);
     }

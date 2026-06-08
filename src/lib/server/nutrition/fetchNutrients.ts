@@ -56,7 +56,8 @@ const SELECT_COLUMNS = `
   VitaminD,
   VitaminE_alphaTocopherol,
   VitaminK_phylloquinone,
-  AlcholEthyl
+  AlcholEthyl,
+  bin
 `.trim();
 
 // ── Row mapper ────────────────────────────────────────────────────────────────
@@ -103,6 +104,7 @@ function rowToNutrientRow(row: Record<string, unknown>): NutrientRow {
     vitaminE_alphaTocopherol:      n('VitaminE_alphaTocopherol'),
     vitaminK_phylloquinone:        n('VitaminK_phylloquinone'),
     ...(row['AlcholEthyl'] != null ? { alcholEthyl: n('AlcholEthyl') } : {}),
+    ...(row['bin'] != null ? (() => { const f = parseFloat(String(row['bin'])); return isNaN(f) ? {} : { absorptionFactor: f }; })() : {}),
   };
 }
 

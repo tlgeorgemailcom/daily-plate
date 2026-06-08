@@ -388,6 +388,9 @@ def _build_recipe_multi(
             "added_sugar": 0.0,
             "intrinsic_sugar": 0.0,
             "ingredient_count": 0,
+            # List of (grams, absorption_factor) for submersion-boil absorbers
+            # (pasta, rice, oats, legumes). Populated from DataCentralCombo.bin.
+            "absorbers": [],
         }
         for s in sections
     }
@@ -463,6 +466,12 @@ def _build_recipe_multi(
         st["raw_carb"] += nuts.get("Carbohydrate", 0.0) * scale
         st["ingredient_count"] += 1
 
+        # Track submersion-boil absorbers (pasta, rice, oats, legumes).
+        # _absorption_factor is populated from DataCentralCombo.bin by load_comboo_nutrients().
+        absorb_factor = nuts.get("_absorption_factor")
+        if absorb_factor is not None:
+            st["absorbers"].append((row.grams, absorb_factor))
+
         contrib_full: dict[str, float] = {}
         for n in EXTENDED_NUTRIENTS:
             c = nuts.get(n, 0.0) * scale
@@ -518,7 +527,30 @@ def _build_recipe_multi(
 
         s = st["section"]
         method = normalize_cooking_method(s.cook_method)
-        if s.yield_factor_water is not None:
+        # ── Yield factor for water ─────────────────────────────────────────
+        # Priority order:
+        #   1. Submersion-boil absorption model — fires when cook_method=boiled
+        #      and the section contains dry absorbers (pasta, rice, oats, beans)
+        #      identified by a numeric _absorption_factor in DataCentralCombo.bin.
+        #      Conserves dry non-water solids; absorbed water brings cooked
+        #      moisture to the ingredient-specific target fraction.
+        #   2. Manual yield_factor_water override from recipe_sections.csv.
+        #   3. Physics-based evaporation model (calc_yield_water).
+        #   4. Default yfw=1.0 (no water change).
+        if s.cook_method in ('boiled', 'simmered') and st["absorbers"]:
+            total_absorber_g = sum(g for g, _ in st["absorbers"])
+            weighted_factor  = sum(g * f for g, f in st["absorbers"]) / total_absorber_g
+            dry_non_water_g  = st["raw_total"] - st["raw_water"]
+            if st["raw_water"] > 0 and weighted_factor < 1.0:
+                retained_water_g = dry_non_water_g * weighted_factor / (1.0 - weighted_factor)
+                # yfw may be >> 1.0 when there is no explicit water ingredient
+                # (raw_water is only the moisture already in the dry ingredient).
+                # cooked_total_grams() handles yfw > 1 correctly:
+                # water_lost = raw_water*(1-yfw) becomes negative, i.e. water gained.
+                yfw = retained_water_g / st["raw_water"]
+            else:
+                yfw = 1.0
+        elif s.yield_factor_water is not None:
             # Manual override — used for locked recipes and meringue (algorithm doesn't apply).
             yfw = s.yield_factor_water
         elif s.filling_class and (s.cook_stages or s.boil_stages):
