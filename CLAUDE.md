@@ -206,7 +206,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
 | `BKFST_NNN` | 🔧 In progress | 39 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039) |
 | `SAND_NNN` | 🔧 In progress | 67 (001–067) |
-| `SAUCE_NNN` | 🔧 In progress | 17 (001–017) |
+| `SAUCE_NNN` | 🔧 In progress | 18 (001–018) |
 | `STOCK_NNN` | 🔧 In progress | 7 (001–007) |
 | `ENTR_NNN` | 🔧 In progress | 1 (001) |
 | `SIDE_NNN` | 🔧 In progress | 26 (001–026) |
@@ -291,6 +291,7 @@ Planned BKFST order (standalone components first, composites last):
 | SAUCE_015 | Cheese Sauce for Vegetables | (none) | Rule D ✅ — no canonical; butter_unsalted(1145) 28.4g+flour_ap_white_enriched_unbleached(20581) 15.6g+milk_whole(1077) 244.0g+cheese_cheddar(1009) 169.5g+garlic_powder(2020) 0.775g+onion_powder(2026) 0.6g+salt_table(2047) 1.5g+black_pepper_ground(2030) 0.3g; yfw=0.88 → 426.5g; 6 servings × 71.1g (¼ cup); 257.8 kcal·11.38P·20.54F·7.06C per 100g; dietary_category=veggie; cooking_method=boiled |
 | SAUCE_016 | Basic Vinaigrette | (none) | Rule D ✅ — no canonical; olive_oil(4053) 163.2g+apple_cider_vinegar(2048) 59.6g+mustard_yellow(2046) 2.5g+honey(19296) 3.5g+garlic_raw(11215) 3.0g+salt_table(2047) 3.0g+black_pepper_ground(2030) 0.575g; yfw=1.00 → 235.4g; 7+ servings × 33.6g (2 tbsp); 625.9 kcal·0.15P·69.39F·2.10C per 100g; dietary_category=vegan; cooking_method=raw |
 | SAUCE_017 | Italian Vinaigrette | (none) | Rule D ✅ — no canonical; olive_oil(4053) 108.8g+vinegar_red_wine(2068) 60.0g+lemon_juice_raw(9152) 15.0g+garlic_raw(11215) 6.0g+oregano_dried(2027) 1.0g+basil_dried(2003) 0.7g+parsley_fresh(11297) 3.8g+mustard_yellow(2046) 2.5g+honey(19296) 3.5g+red_pepper_flakes(2031) 0.575g+salt_table(2047) 3.0g+black_pepper_ground(2030) 0.575g; yfw=1.00 → 205.4g; 6+ servings × 34.2g (2 tbsp); 489.9 kcal·0.51P·53.14F·3.98C per 100g; dietary_category=vegan; cooking_method=raw |
+| SAUCE_018 | Balsamic Vinaigrette | (none) | Rule D ✅ — no canonical; olive_oil(4053) 163.2g+balsamic_vinegar(2069) 60.0g+honey(19296) 21.0g+garlic_raw(11215) 3.0g+mustard_yellow(2046) 5.0g+salt_table(2047) 3.0g+black_pepper_ground(2030) 0.575g; yfw=1.00 → 255.8g; 7+ servings × 36.5g (2 tbsp); 613.1 kcal·0.31P·63.88F·11.41C per 100g; dietary_category=vegan; cooking_method=raw |
 ## Current Work: STOCK Recipes
 
 **Stock/broth yield factor tiers:**

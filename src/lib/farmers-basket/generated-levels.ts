@@ -9261,5 +9261,47 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAUCE_018',
+    name: 'Balsamic Vinaigrette',
+    category: 'sauces & condiments',
+    dietaryCategory: 'vegan',
+    levelNum: 202,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 tbsp (makes 7+)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":224.0,"pro":0.1,"fat":23.3,"carb":4.2,"fib":0.1,"h2o":7.9,"sug":3.8,"perServing":{"cal":224.0,"pro":0.1,"fat":23.3,"carb":4.2,"fib":0.1,"h2o":7.9,"sug":3.8,"AddedSugars":2.5,"IntrinsicSugars":1.3},"micros":{"vitaminA":0.16,"vitaminC":0.41,"vitaminD":0.0,"vitaminE":9.17,"vitaminK":38.83,"vitaminB6":0.02,"vitaminB12":0.0,"thiamin":0.01,"riboflavin":0.01,"niacin":0.03,"folate":0.37,"calcium":12.1,"iron":0.64,"magnesium":4.61,"phosphorus":9.05,"potassium":41.94,"sodium":483.42,"zinc":0.07,"copper":0.02,"selenium":0.9,"cholesterol":0.0,"saturatedFat":8.81,"monoFat":46.6,"polyFat":6.73,"omega3":0.01,"omega6":0.01},"gramsPerServing":36.5,"servings":7,"per100g":{"Energy_KCal":613.13,"Water":21.69,"Protein":0.31,"TotalLipidFat":63.88,"Carbohydrate":11.41,"FiberTotalDietary":0.18,"SugarsTotal":10.28,"Cholesterol":0.0,"FattyAcids_totalSaturated":8.81,"FattyAcids_totalMonounsaturated":46.6,"FattyAcids_totalPolyunsaturated":6.73,"LinoleicAcid":0.01,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.16,"Retinol":0.0,"Carotene_beta":1.75,"VitaminD":0.0,"VitaminE_alphaTocopherol":9.17,"VitaminK_phylloquinone":38.83,"VitaminC_totalAscorbicAcid":0.41,"Thiamin":0.01,"Riboflavin":0.01,"Niacin":0.03,"PantothenicAcid":0.02,"VitaminB6":0.02,"Folate_total":0.37,"Folate_food":0.37,"Folate_DFE":0.37,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":1.11,"Betaine":0.23,"LuteinZeaxanthin":3.42,"Lycopene":0.04,"Calcium_Ca":12.1,"Iron_Fe":0.64,"Magnesium_Mg":4.61,"Phosphorus_P":9.05,"Potassium_K":41.94,"Sodium_Na":483.42,"Zinc_Zn":0.07,"Copper_Cu":0.02,"Manganese_Mn":0.09,"Selenium_Se":0.9,"Tryptophan":0.0,"Threonine":0.01,"Isoleucine":0.01,"Leucine":0.01,"Lysine":0.01,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.01,"Tyrosine":0.01,"Valine":0.01,"Arginine":0.01,"Histidine":0.0,"Alanine":0.01,"AsparticAcid":0.02,"GlutamicAcid":0.03,"Glycine":0.01,"Proline":0.02,"Serine":0.01,"omega3":0.01,"omega6":0.01,"AddedSugars":6.74,"IntrinsicSugars":3.54},"addedSugars":2.5,"intrinsicSugars":1.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":23.3},{"ndb":"2069","name":"Vinegar, balsamic","grams":8.6},{"ndb":"19296","name":"Honey","grams":3.0},{"ndb":"11215","name":"Garlic, raw","grams":0.4},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":0.7},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"dressing","section_label":"Dressing","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":255.77,"raw_water_grams":55.48,"raw_fat_grams":163.4,"raw_protein_grams":0.79,"raw_carb_grams":29.17,"final_grams":255.77}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Balsamic Vinaigrette', quantity: 'custom (g)', foodWord: 'BALSAMICVINAIGRETTE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'olive oil', quantity: '¾ cup', section: 'dressing', ndbNo: '4053', portionDesc: 'g', portionGrams: 163.2 },
+      { name: 'balsamic vinegar', quantity: '¼ cup', section: 'dressing', ndbNo: '2069', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'honey', quantity: '1 tbsp', section: 'dressing', ndbNo: '19296', portionDesc: 'g', portionGrams: 21.0 },
+      { name: 'garlic', quantity: '1 clove', section: 'dressing', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'yellow mustard', quantity: '1 tsp', section: 'dressing', ndbNo: '2046', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'salt', quantity: '½ tsp', section: 'dressing', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'dressing', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Mince or grate the garlic clove.',
+      'In a small bowl or jar, combine the balsamic vinegar, honey, garlic, Dijon-style mustard, salt, and black pepper. Whisk until the honey dissolves.',
+      'Add the olive oil in a slow, steady stream while whisking constantly, or seal the jar and shake vigorously until the dressing emulsifies.',
+      'Taste and adjust salt, pepper, or honey as needed. The dressing will separate on standing — shake or whisk before each use.',
+      'Store in a sealed jar in the refrigerator for up to 2 weeks.'
+    ],
+    sections: [
+      { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
