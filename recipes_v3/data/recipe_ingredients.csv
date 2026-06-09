@@ -1850,3 +1850,7 @@ SAUCE_024,7,olive_oil,½ cup,108.8,,,dressing,,,
 SAUCE_024,8,cheese_parmesan_hard,¼ cup grated,25.0,,,dressing,,,
 SAUCE_024,9,salt_table,¼ tsp,1.5,,,dressing,,,
 SAUCE_024,10,black_pepper_ground,¼ tsp,0.575,,,dressing,,,
+SALAD_001,1,lettuce_romaine_raw,4 cups,188.0,,,salad,romaine,false,
+SALAD_001,2,croutons_plain,½ cup,15.0,,,salad,croutons,false,
+SALAD_001,3,cheese_parmesan_hard,¼ cup grated,25.0,,,salad,Parmesan,false,
+SALAD_001,4,@SAUCE_024,4 tbsp,61.7,,,dressing,Caesar dressing,false,Caesar dressing (4 tbsp total; 2 tbsp per serving)

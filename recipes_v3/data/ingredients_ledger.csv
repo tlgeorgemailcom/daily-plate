@@ -254,3 +254,8 @@ coconut_oil,4047,OILCOCONUT,"Oil, coconut",coconut oil,tablespoon,13.6,added dur
 marshmallow_mini,19116,MARSHMALLOW,"Candies, marshmallows",mini marshmallows,cup,50.0,added during SIDE_026 build
 cheese_blue,1004,BLUECHEESE,"Cheese, blue",blue cheese crumbles,oz,28.35,added during SAUCE_021 build
 anchovy_canned,15002,ANCHOVYCANNED,"Fish, anchovy, european, canned in oil, drained solids",anchovy canned,fillet,4.0,added during SAUCE_023 build
+lettuce_romaine_raw,11251,ROMAINE,"Lettuce, cos or romaine, raw",romaine lettuce,cup shredded,47.0,added during SALAD build
+croutons_plain,18242,CROUTON,"Croutons, plain",plain croutons,cup,30.0,added during SALAD build
+cheese_feta,1019,FETA,"Cheese, feta",feta cheese crumbles,oz,28.35,added during SALAD build
+olives_black_canned,9193,OLIVEBLACK,"Olives, ripe, canned (small-extra large)",black olives canned,large,4.4,added during SALAD build
+tortilla_chips_plain,19056,TORTILLACHIPWHITE,"Snacks, tortilla chips, plain, white corn, salted",tortilla chips,oz,28.35,added during SALAD build

@@ -9575,5 +9575,47 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SALAD_001',
+    name: 'Caesar Salad',
+    category: 'salads',
+    dietaryCategory: 'all',
+    levelNum: 209,
+    recipe: ['carrot', 'egg', 'tomato'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'rabbit', delay: 3500 },
+      { type: 'fox', delay: 5000 },
+      { type: 'raccoon', delay: 6500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 3, carrot: 5, cheese: 0, egg: 4, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 servings',
+    prepTime: '',
+    linkType: 'dish',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":262.2,"pro":8.8,"fat":21.4,"carb":10.1,"fib":2.5,"h2o":102.4,"sug":1.5,"perServing":{"cal":262.2,"pro":8.8,"fat":21.4,"carb":10.1,"fib":2.5,"h2o":102.4,"sug":1.5,"AddedSugars":0.0,"IntrinsicSugars":1.5},"micros":{"vitaminA":312.53,"vitaminC":3.99,"vitaminD":6.58,"vitaminE":1.74,"vitaminK":73.45,"vitaminB6":0.07,"vitaminB12":0.18,"thiamin":0.09,"riboflavin":0.1,"niacin":0.77,"folate":99.2,"calcium":164.43,"iron":1.15,"magnesium":17.44,"phosphorus":114.55,"potassium":196.93,"sodium":311.69,"zinc":0.58,"copper":0.05,"selenium":6.87,"cholesterol":26.75,"saturatedFat":3.59,"monoFat":9.09,"polyFat":1.47,"omega3":0.03,"omega6":0.0},"gramsPerServing":144.8,"servings":2,"per100g":{"Energy_KCal":181.03,"Water":70.69,"Protein":6.08,"TotalLipidFat":14.74,"Carbohydrate":6.95,"FiberTotalDietary":1.7,"SugarsTotal":1.01,"Cholesterol":26.75,"FattyAcids_totalSaturated":3.59,"FattyAcids_totalMonounsaturated":9.09,"FattyAcids_totalPolyunsaturated":1.47,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.01,"DPA_22_5n3":0.0,"DHA_22_6n3":0.02,"VitaminA_RAE":312.53,"Retinol":28.67,"Carotene_beta":3401.15,"VitaminD":6.58,"VitaminE_alphaTocopherol":1.74,"VitaminK_phylloquinone":73.45,"VitaminC_totalAscorbicAcid":3.99,"Thiamin":0.09,"Riboflavin":0.1,"Niacin":0.77,"PantothenicAcid":0.23,"VitaminB6":0.07,"Folate_total":99.2,"Folate_food":93.5,"Folate_DFE":103.19,"FolicAcid":5.7,"VitaminB12":0.18,"Choline_total":23.46,"Betaine":0.1,"LuteinZeaxanthin":1520.86,"Lycopene":0.01,"Calcium_Ca":164.43,"Iron_Fe":1.15,"Magnesium_Mg":17.44,"Phosphorus_P":114.55,"Potassium_K":196.93,"Sodium_Na":311.69,"Zinc_Zn":0.58,"Copper_Cu":0.05,"Manganese_Mn":0.15,"Selenium_Se":6.87,"Tryptophan":0.07,"Threonine":0.22,"Isoleucine":0.29,"Leucine":0.53,"Lysine":0.47,"Methionine":0.14,"Cystine":0.05,"Phenylalanine":0.31,"Tyrosine":0.28,"Valine":0.37,"Arginine":0.24,"Histidine":0.2,"Alanine":0.21,"AsparticAcid":0.43,"GlutamicAcid":1.32,"Glycine":0.14,"Proline":0.59,"Serine":0.33,"omega3":0.03,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":1.01},"addedSugars":0.0,"intrinsicSugars":1.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"11251","name":"Lettuce, cos or romaine, raw","grams":94.0},{"ndb":"18242","name":"Croutons, plain","grams":7.5},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":12.5},{"ndb":"","name":"Caesar Salad Dressing","grams":30.9}],"sections":[{"section_key":"salad","section_label":"Caesar Salad","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":228.0,"raw_water_grams":185.98,"raw_fat_grams":8.01,"raw_protein_grams":13.03,"raw_carb_grams":18.02,"final_grams":228.0},{"section_key":"dressing","section_label":"Caesar Dressing","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":61.7,"raw_water_grams":18.81,"raw_fat_grams":34.69,"raw_protein_grams":4.58,"raw_carb_grams":2.11,"final_grams":61.7}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Caesar Salad', quantity: 'custom (g)', foodWord: 'CAESARSALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'romaine lettuce', quantity: '4 cups', section: 'salad', ndbNo: '11251', portionDesc: 'g', portionGrams: 188.0 },
+      { name: 'plain croutons', quantity: '½ cup', section: 'salad', ndbNo: '18242', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'Parmesan cheese', quantity: '¼ cup grated', section: 'salad', ndbNo: '1033', portionDesc: 'g', portionGrams: 25.0 },
+      { name: 'Caesar dressing (4 tbsp total; 2 tbsp per serving)', quantity: '4 tbsp', section: 'dressing', foodWord: 'CAESARDRESSING', portionDesc: 'g', portionGrams: 61.7, isDish: true, componentRef: 'SAUCE_024' }
+    ],
+    recipeInstructions: [
+      'Wash and dry the romaine leaves. Tear or chop into bite-sized pieces and place in a large bowl.',
+      'Add the croutons and freshly grated Parmesan to the bowl.',
+      'Drizzle the Caesar dressing over the salad, starting with 2 tablespoons per serving. Toss well to coat every leaf evenly.',
+      'Taste and add more dressing if desired. Finish with an extra pinch of Parmesan and black pepper at the table.',
+      'Serve immediately — Caesar salad does not hold after dressing.'
+    ],
+    sections: [
+      { key: 'salad', label: 'Caesar Salad', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'dressing', label: 'Caesar Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
