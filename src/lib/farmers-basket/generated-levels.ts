@@ -3873,8 +3873,8 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'BLT Sandwich', quantity: 'custom (g)', foodWord: 'BLT', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'white bread', quantity: '2 slices (25g each)', section: 'sandwich', ndbNo: '18069', portionDesc: 'g', portionGrams: 50.0 },
-      { name: 'cooked bacon', quantity: '3 strips', section: 'sandwich', ndbNo: '10862', portionDesc: 'g', portionGrams: 34.5 },
-      { name: 'tomato raw', quantity: '3 thin slices (45g)', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'bacon', quantity: '3 strips', section: 'sandwich', ndbNo: '10862', portionDesc: 'g', portionGrams: 34.5 },
+      { name: 'tomato', quantity: '3 thin slices (45g)', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 45.0 },
       { name: 'mayonnaise', quantity: '1½ tbsp', section: 'sandwich', ndbNo: '4025', portionDesc: 'g', portionGrams: 21.0 },
       { name: 'iceberg lettuce', quantity: '1 large leaf (15g)', section: 'sandwich', ndbNo: '11252', portionDesc: 'g', portionGrams: 15.0 }
     ],
@@ -3915,8 +3915,8 @@ export const LEVELS: Level[] = [
       { name: 'Club Sandwich', quantity: 'custom (g)', foodWord: 'CLUBSANDWICH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'white bread', quantity: '3 slices (30g each)', section: 'sandwich', ndbNo: '18069', portionDesc: 'g', portionGrams: 90.0 },
       { name: 'deli turkey breast', quantity: '5 slices (80g)', section: 'sandwich', ndbNo: '7081', portionDesc: 'g', portionGrams: 80.0 },
-      { name: 'cooked bacon', quantity: '2 strips', section: 'sandwich', ndbNo: '10862', portionDesc: 'g', portionGrams: 23.0 },
-      { name: 'tomato raw', quantity: '4 thin slices (60g)', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'bacon', quantity: '2 strips', section: 'sandwich', ndbNo: '10862', portionDesc: 'g', portionGrams: 23.0 },
+      { name: 'tomato', quantity: '4 thin slices (60g)', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 60.0 },
       { name: 'iceberg lettuce', quantity: '1 large leaf (15g)', section: 'sandwich', ndbNo: '11252', portionDesc: 'g', portionGrams: 15.0 },
       { name: 'mayonnaise', quantity: '1½ tbsp', section: 'sandwich', ndbNo: '4025', portionDesc: 'g', portionGrams: 21.0 }
     ],
@@ -4382,8 +4382,8 @@ export const LEVELS: Level[] = [
       { name: 'Hot Brown', quantity: 'custom (g)', foodWord: 'HOTBROWN', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'white bread', quantity: '2 slices (30g each)', section: 'sandwich', ndbNo: '18069', portionDesc: 'g', portionGrams: 60.0 },
       { name: 'deli turkey breast', quantity: '4 oz', section: 'sandwich', ndbNo: '7081', portionDesc: 'g', portionGrams: 113.4 },
-      { name: 'cooked bacon', quantity: '2 strips', section: 'sandwich', ndbNo: '10862', portionDesc: 'g', portionGrams: 23.0 },
-      { name: 'tomato raw', quantity: '4 thin slices (60g)', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'bacon', quantity: '2 strips', section: 'sandwich', ndbNo: '10862', portionDesc: 'g', portionGrams: 23.0 },
+      { name: 'tomato', quantity: '4 thin slices (60g)', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 60.0 },
       { name: 'salted butter', quantity: '1 tbsp', section: 'sandwich', ndbNo: '1001', portionDesc: 'g', portionGrams: 14.2 },
       { name: 'all-purpose enriched unbleached white flour', quantity: '1 tbsp', section: 'sandwich', ndbNo: '20581', portionDesc: 'g', portionGrams: 8.0 },
       { name: 'heavy cream', quantity: '½ cup', section: 'sandwich', ndbNo: '1053', portionDesc: 'g', portionGrams: 119.0 },
@@ -4475,7 +4475,7 @@ export const LEVELS: Level[] = [
       { name: 'whole wheat bread', quantity: '2 slices (32g each)', section: 'sandwich', ndbNo: '18075', portionDesc: 'g', portionGrams: 64.0 },
       { name: 'deli turkey breast', quantity: '3 oz', section: 'sandwich', ndbNo: '7081', portionDesc: 'g', portionGrams: 85.0 },
       { name: 'iceberg lettuce', quantity: '1 large leaf (15g)', section: 'sandwich', ndbNo: '11252', portionDesc: 'g', portionGrams: 15.0 },
-      { name: 'tomato raw', quantity: '2 thin slices (30g)', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'tomato', quantity: '2 thin slices (30g)', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'mayonnaise', quantity: '2 tbsp', section: 'sandwich', ndbNo: '4025', portionDesc: 'g', portionGrams: 27.6 }
     ],
     recipeInstructions: [
@@ -4516,7 +4516,7 @@ export const LEVELS: Level[] = [
       { name: 'deli turkey breast', quantity: '3 oz', section: 'sandwich', ndbNo: '7081', portionDesc: 'g', portionGrams: 85.0 },
       { name: 'provolone cheese', quantity: '2 slices', section: 'sandwich', ndbNo: '1035', portionDesc: 'g', portionGrams: 56.7 },
       { name: 'iceberg lettuce', quantity: '1 large leaf (15g)', section: 'sandwich', ndbNo: '11252', portionDesc: 'g', portionGrams: 15.0 },
-      { name: 'tomato raw', quantity: '2 thin slices (30g)', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'tomato', quantity: '2 thin slices (30g)', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'mayonnaise', quantity: '2 tbsp', section: 'sandwich', ndbNo: '4025', portionDesc: 'g', portionGrams: 27.6 }
     ],
     recipeInstructions: [
@@ -4557,7 +4557,7 @@ export const LEVELS: Level[] = [
       { name: 'deli turkey breast', quantity: '3 oz', section: 'sandwich', ndbNo: '7081', portionDesc: 'g', portionGrams: 85.0 },
       { name: 'avocado', quantity: '½ avocado', section: 'sandwich', ndbNo: '9038', portionDesc: 'g', portionGrams: 68.0 },
       { name: 'iceberg lettuce', quantity: '1 large leaf (15g)', section: 'sandwich', ndbNo: '11252', portionDesc: 'g', portionGrams: 15.0 },
-      { name: 'tomato raw', quantity: '2 thin slices (30g)', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'tomato', quantity: '2 thin slices (30g)', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'mayonnaise', quantity: '2 tbsp', section: 'sandwich', ndbNo: '4025', portionDesc: 'g', portionGrams: 27.6 }
     ],
     recipeInstructions: [
@@ -4600,7 +4600,7 @@ export const LEVELS: Level[] = [
       { name: 'avocado', quantity: '½ avocado', section: 'sandwich', ndbNo: '9038', portionDesc: 'g', portionGrams: 68.0 },
       { name: 'provolone cheese', quantity: '2 slices', section: 'sandwich', ndbNo: '1035', portionDesc: 'g', portionGrams: 56.7 },
       { name: 'iceberg lettuce', quantity: '1 large leaf (15g)', section: 'sandwich', ndbNo: '11252', portionDesc: 'g', portionGrams: 15.0 },
-      { name: 'tomato raw', quantity: '2 thin slices (30g)', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'tomato', quantity: '2 thin slices (30g)', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'mayonnaise', quantity: '2 tbsp', section: 'sandwich', ndbNo: '4025', portionDesc: 'g', portionGrams: 27.6 }
     ],
     recipeInstructions: [
@@ -4641,9 +4641,9 @@ export const LEVELS: Level[] = [
       { name: 'whole wheat bread', quantity: '2 slices (32g each)', section: 'sandwich', ndbNo: '18075', portionDesc: 'g', portionGrams: 64.0 },
       { name: 'deli turkey breast', quantity: '3 oz', section: 'sandwich', ndbNo: '7081', portionDesc: 'g', portionGrams: 85.0 },
       { name: 'avocado', quantity: '½ avocado', section: 'sandwich', ndbNo: '9038', portionDesc: 'g', portionGrams: 68.0 },
-      { name: 'cooked bacon', quantity: '2 slices', section: 'sandwich', ndbNo: '10862', portionDesc: 'g', portionGrams: 23.0 },
+      { name: 'bacon', quantity: '2 slices', section: 'sandwich', ndbNo: '10862', portionDesc: 'g', portionGrams: 23.0 },
       { name: 'iceberg lettuce', quantity: '1 large leaf (15g)', section: 'sandwich', ndbNo: '11252', portionDesc: 'g', portionGrams: 15.0 },
-      { name: 'tomato raw', quantity: '2 thin slices (30g)', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'tomato', quantity: '2 thin slices (30g)', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'mayonnaise', quantity: '2 tbsp', section: 'sandwich', ndbNo: '4025', portionDesc: 'g', portionGrams: 27.6 }
     ],
     recipeInstructions: [
@@ -4685,7 +4685,7 @@ export const LEVELS: Level[] = [
       { name: 'whole wheat bread', quantity: '2 slices (32g each)', section: 'sandwich', ndbNo: '18075', portionDesc: 'g', portionGrams: 64.0 },
       { name: 'deli roast beef', quantity: '4 oz', section: 'sandwich', ndbNo: '7043', portionDesc: 'g', portionGrams: 113.4 },
       { name: 'iceberg lettuce', quantity: '1 large leaf (15g)', section: 'sandwich', ndbNo: '11252', portionDesc: 'g', portionGrams: 15.0 },
-      { name: 'tomato raw', quantity: '2 thin slices (30g)', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'tomato', quantity: '2 thin slices (30g)', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'mayonnaise', quantity: '1 tbsp', section: 'sandwich', ndbNo: '4025', portionDesc: 'g', portionGrams: 13.8 },
       { name: 'yellow mustard', quantity: '1 tsp', section: 'sandwich', ndbNo: '2046', portionDesc: 'g', portionGrams: 5.0 }
     ],
@@ -4726,7 +4726,7 @@ export const LEVELS: Level[] = [
       { name: 'multigrain bread', quantity: '2 slices (28g each)', section: 'sandwich', ndbNo: '28397', portionDesc: 'g', portionGrams: 56.7 },
       { name: 'avocado', quantity: '½ avocado', section: 'sandwich', ndbNo: '9038', portionDesc: 'g', portionGrams: 68.0 },
       { name: 'alfalfa sprouts', quantity: '¼ cup', section: 'sandwich', ndbNo: '11001', portionDesc: 'g', portionGrams: 8.25 },
-      { name: 'tomato raw', quantity: '2 thin slices (30g)', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'tomato', quantity: '2 thin slices (30g)', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'lemon juice', quantity: '1 tsp', section: 'sandwich', ndbNo: '9152', portionDesc: 'g', portionGrams: 5.0 },
       { name: 'salt', quantity: 'pinch', section: 'sandwich', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.3 }
     ],
@@ -5151,14 +5151,14 @@ export const LEVELS: Level[] = [
     nutritionJson: {"cal":532.1,"pro":38.7,"fat":30.8,"carb":25.1,"fib":1.7,"h2o":170.7,"sug":4.7,"perServing":{"cal":532.1,"pro":38.7,"fat":30.8,"carb":25.1,"fib":1.7,"h2o":170.7,"sug":4.7,"AddedSugars":0.0,"IntrinsicSugars":4.7},"micros":{"vitaminA":16.83,"vitaminC":2.06,"vitaminD":1.24,"vitaminE":0.86,"vitaminK":21.98,"vitaminB6":0.36,"vitaminB12":0.14,"thiamin":0.14,"riboflavin":0.14,"niacin":4.99,"folate":23.51,"calcium":34.19,"iron":0.89,"magnesium":21.8,"phosphorus":142.16,"potassium":253.47,"sodium":446.33,"zinc":0.55,"copper":0.05,"selenium":17.29,"cholesterol":44.48,"saturatedFat":1.88,"monoFat":3.43,"polyFat":5.18,"omega3":0.58,"omega6":4.37},"gramsPerServing":270.3,"servings":1,"per100g":{"Energy_KCal":196.86,"Water":63.15,"Protein":14.32,"TotalLipidFat":11.38,"Carbohydrate":9.27,"FiberTotalDietary":0.62,"SugarsTotal":1.73,"Cholesterol":44.48,"FattyAcids_totalSaturated":1.88,"FattyAcids_totalMonounsaturated":3.43,"FattyAcids_totalPolyunsaturated":5.18,"LinoleicAcid":4.37,"alphaLinolenicAcid":0.58,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":16.83,"Retinol":10.22,"Carotene_beta":72.37,"VitaminD":1.24,"VitaminE_alphaTocopherol":0.86,"VitaminK_phylloquinone":21.98,"VitaminC_totalAscorbicAcid":2.06,"Thiamin":0.14,"Riboflavin":0.14,"Niacin":4.99,"PantothenicAcid":0.79,"VitaminB6":0.36,"Folate_total":23.51,"Folate_food":14.88,"Folate_DFE":29.53,"FolicAcid":8.63,"VitaminB12":0.14,"Choline_total":48.1,"Betaine":3.9,"LuteinZeaxanthin":33.62,"Lycopene":285.6,"Calcium_Ca":34.19,"Iron_Fe":0.89,"Magnesium_Mg":21.8,"Phosphorus_P":142.16,"Potassium_K":253.47,"Sodium_Na":446.33,"Zinc_Zn":0.55,"Copper_Cu":0.05,"Manganese_Mn":0.13,"Selenium_Se":17.29,"Tryptophan":0.16,"Threonine":0.56,"Isoleucine":0.62,"Leucine":1.04,"Lysine":1.2,"Methionine":0.32,"Cystine":0.11,"Phenylalanine":0.51,"Tyrosine":0.45,"Valine":0.65,"Arginine":0.86,"Histidine":0.46,"Alanine":0.73,"AsparticAcid":1.2,"GlutamicAcid":1.93,"Glycine":0.55,"Proline":0.4,"Serine":0.48,"omega3":0.58,"omega6":4.37,"AddedSugars":0.0,"IntrinsicSugars":1.73},"addedSugars":0.0,"intrinsicSugars":4.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.8,"yieldFactorFat":0.98,"sources":[{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":148.8},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"2020","name":"Spices, garlic powder","grams":0.8},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":4.5},{"ndb":"18350","name":"Rolls, hamburger or hotdog, plain","grams":44.0},{"ndb":"11252","name":"Lettuce, iceberg (includes crisphead types), raw","grams":15.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":30.0},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":27.6},{"ndb":"11937","name":"Pickles, cucumber, dill or kosher dill","grams":20.0}],"sections":[{"section_key":"chicken","section_label":"Grilled chicken","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.8,"yield_factor_fat":0.98,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":155.87,"raw_water_grams":110.05,"raw_fat_grams":8.41,"raw_protein_grams":33.64,"raw_carb_grams":0.75,"final_grams":133.69},{"section_key":"assembly","section_label":"Toppings & bun","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":136.6,"raw_water_grams":82.66,"raw_fat_grams":22.52,"raw_protein_grams":5.06,"raw_carb_grams":24.3,"final_grams":136.6}],"cookingMethod":"multi"},
     recipeIngredients: [
       { name: 'Grilled Chicken Sandwich', quantity: 'custom (g)', foodWord: 'GRILLEDCHICKENSANDWICH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
-      { name: 'chicken breast raw', quantity: '5¼ oz', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 148.8 },
+      { name: 'chicken breast', quantity: '5¼ oz', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 148.8 },
       { name: 'salt', quantity: '¼ tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
       { name: 'ground black pepper', quantity: '⅛ tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.29 },
       { name: 'garlic powder', quantity: '¼ tsp', section: 'chicken', ndbNo: '2020', portionDesc: 'g', portionGrams: 0.775 },
       { name: 'olive oil', quantity: '1 tsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'hamburger bun', quantity: '1 bun', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 44.0 },
       { name: 'iceberg lettuce', quantity: '1 large leaf (15g)', section: 'assembly', ndbNo: '11252', portionDesc: 'g', portionGrams: 15.0 },
-      { name: 'tomato raw', quantity: '30g sliced', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'tomato', quantity: '30g sliced', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'mayonnaise', quantity: '2 tbsp', section: 'assembly', ndbNo: '4025', portionDesc: 'g', portionGrams: 27.6 },
       { name: 'dill pickle', quantity: '20g sliced', section: 'assembly', ndbNo: '11937', portionDesc: 'g', portionGrams: 20.0 }
     ],
@@ -5198,7 +5198,7 @@ export const LEVELS: Level[] = [
     nutritionJson: {"cal":757.3,"pro":39.7,"fat":42.8,"carb":51.5,"fib":3.1,"h2o":190.8,"sug":6.1,"perServing":{"cal":757.3,"pro":39.7,"fat":42.8,"carb":51.5,"fib":3.1,"h2o":190.8,"sug":6.1,"AddedSugars":0.0,"IntrinsicSugars":6.1},"micros":{"vitaminA":32.08,"vitaminC":1.68,"vitaminD":10.08,"vitaminE":1.12,"vitaminK":19.81,"vitaminB6":0.27,"vitaminB12":0.18,"thiamin":0.17,"riboflavin":0.19,"niacin":3.89,"folate":34.63,"calcium":42.2,"iron":1.38,"magnesium":19.97,"phosphorus":130.59,"potassium":219.27,"sodium":549.09,"zinc":0.6,"copper":0.06,"selenium":17.98,"cholesterol":58.7,"saturatedFat":2.24,"monoFat":5.06,"polyFat":4.57,"omega3":0.47,"omega6":3.63},"gramsPerServing":331.9,"servings":1,"per100g":{"Energy_KCal":228.2,"Water":57.51,"Protein":11.97,"TotalLipidFat":12.89,"Carbohydrate":15.53,"FiberTotalDietary":0.92,"SugarsTotal":1.85,"Cholesterol":58.7,"FattyAcids_totalSaturated":2.24,"FattyAcids_totalMonounsaturated":5.06,"FattyAcids_totalPolyunsaturated":4.57,"LinoleicAcid":3.63,"alphaLinolenicAcid":0.47,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":32.08,"Retinol":19.79,"Carotene_beta":132.13,"VitaminD":10.08,"VitaminE_alphaTocopherol":1.12,"VitaminK_phylloquinone":19.81,"VitaminC_totalAscorbicAcid":1.68,"Thiamin":0.17,"Riboflavin":0.19,"Niacin":3.89,"PantothenicAcid":0.7,"VitaminB6":0.27,"Folate_total":34.63,"Folate_food":16.72,"Folate_DFE":47.16,"FolicAcid":21.53,"VitaminB12":0.18,"Choline_total":53.99,"Betaine":2.69,"LuteinZeaxanthin":99.76,"Lycopene":232.62,"Calcium_Ca":42.2,"Iron_Fe":1.38,"Magnesium_Mg":19.97,"Phosphorus_P":130.59,"Potassium_K":219.27,"Sodium_Na":549.09,"Zinc_Zn":0.6,"Copper_Cu":0.06,"Manganese_Mn":0.19,"Selenium_Se":17.98,"Tryptophan":0.13,"Threonine":0.45,"Isoleucine":0.51,"Leucine":0.86,"Lysine":0.91,"Methionine":0.27,"Cystine":0.11,"Phenylalanine":0.45,"Tyrosine":0.38,"Valine":0.55,"Arginine":0.69,"Histidine":0.36,"Alanine":0.58,"AsparticAcid":0.97,"GlutamicAcid":1.81,"Glycine":0.44,"Proline":0.45,"Serine":0.46,"omega3":0.47,"omega6":3.63,"AddedSugars":0.0,"IntrinsicSugars":1.85},"addedSugars":0.0,"intrinsicSugars":6.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.82,"yieldFactorFat":1.0,"sources":[{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":120.5},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":31.2},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":25.0},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":22.5},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":13.5},{"ndb":"2047","name":"Salt, table","grams":3.0},{"ndb":"2030","name":"Spices, pepper, black","grams":0.6},{"ndb":"2020","name":"Spices, garlic powder","grams":1.6},{"ndb":"2028","name":"Spices, paprika","grams":1.1},{"ndb":"18350","name":"Rolls, hamburger or hotdog, plain","grams":44.0},{"ndb":"11252","name":"Lettuce, iceberg (includes crisphead types), raw","grams":15.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":30.0},{"ndb":"11937","name":"Pickles, cucumber, dill or kosher dill","grams":20.0},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":27.6}],"sections":[{"section_key":"chicken","section_label":"Fried chicken","prep_method":"raw","cook_method":"fried","cooking_method":"fried","cooking_method_normalized":"fried","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":219.03,"raw_water_grams":131.95,"raw_fat_grams":20.25,"raw_protein_grams":34.67,"raw_carb_grams":27.22,"final_grams":195.27},{"section_key":"assembly","section_label":"Toppings & bun","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":136.6,"raw_water_grams":82.66,"raw_fat_grams":22.52,"raw_protein_grams":5.06,"raw_carb_grams":24.3,"final_grams":136.6}],"cookingMethod":"multi"},
     recipeIngredients: [
       { name: 'Fried Chicken Sandwich', quantity: 'custom (g)', foodWord: 'FRIEDCHICKENSANDWICH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
-      { name: 'chicken breast raw', quantity: '4¼ oz', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 120.5 },
+      { name: 'chicken breast', quantity: '4¼ oz', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 120.5 },
       { name: 'all-purpose enriched unbleached white flour', quantity: '¼ cup', section: 'chicken', ndbNo: '20581', portionDesc: 'g', portionGrams: 31.25 },
       { name: 'large egg', quantity: '½ egg', section: 'chicken', ndbNo: '1123', portionDesc: 'g', portionGrams: 25.0 },
       { name: 'whole milk', quantity: '1½ tbsp', section: 'chicken', ndbNo: '1077', portionDesc: 'g', portionGrams: 22.5 },
@@ -5209,7 +5209,7 @@ export const LEVELS: Level[] = [
       { name: 'paprika', quantity: '½ tsp', section: 'chicken', ndbNo: '2028', portionDesc: 'g', portionGrams: 1.15 },
       { name: 'hamburger bun', quantity: '1 bun', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 44.0 },
       { name: 'iceberg lettuce', quantity: '1 large leaf (15g)', section: 'assembly', ndbNo: '11252', portionDesc: 'g', portionGrams: 15.0 },
-      { name: 'tomato raw', quantity: '30g sliced', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'tomato', quantity: '30g sliced', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'dill pickle', quantity: '20g sliced', section: 'assembly', ndbNo: '11937', portionDesc: 'g', portionGrams: 20.0 },
       { name: 'mayonnaise', quantity: '2 tbsp', section: 'assembly', ndbNo: '4025', portionDesc: 'g', portionGrams: 27.6 }
     ],
@@ -5250,7 +5250,7 @@ export const LEVELS: Level[] = [
     nutritionJson: {"cal":796.0,"pro":40.0,"fat":47.1,"carb":51.7,"fib":2.7,"h2o":175.2,"sug":6.4,"perServing":{"cal":796.0,"pro":40.0,"fat":47.1,"carb":51.7,"fib":2.7,"h2o":175.2,"sug":6.4,"AddedSugars":0.0,"IntrinsicSugars":6.4},"micros":{"vitaminA":58.78,"vitaminC":0.51,"vitaminD":10.09,"vitaminE":1.1,"vitaminK":17.48,"vitaminB6":0.28,"vitaminB12":0.2,"thiamin":0.17,"riboflavin":0.2,"niacin":3.98,"folate":33.96,"calcium":43.13,"iron":1.49,"magnesium":20.67,"phosphorus":150.23,"potassium":213.53,"sodium":629.62,"zinc":0.62,"copper":0.06,"selenium":18.78,"cholesterol":68.92,"saturatedFat":4.23,"monoFat":5.57,"polyFat":3.4,"omega3":0.34,"omega6":2.55},"gramsPerServing":321.4,"servings":1,"per100g":{"Energy_KCal":247.65,"Water":54.51,"Protein":12.44,"TotalLipidFat":14.65,"Carbohydrate":16.09,"FiberTotalDietary":0.83,"SugarsTotal":2.0,"Cholesterol":68.92,"FattyAcids_totalSaturated":4.23,"FattyAcids_totalMonounsaturated":5.57,"FattyAcids_totalPolyunsaturated":3.4,"LinoleicAcid":2.55,"alphaLinolenicAcid":0.34,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":58.78,"Retinol":44.07,"Carotene_beta":162.09,"VitaminD":10.09,"VitaminE_alphaTocopherol":1.1,"VitaminK_phylloquinone":17.48,"VitaminC_totalAscorbicAcid":0.51,"Thiamin":0.17,"Riboflavin":0.2,"Niacin":3.98,"PantothenicAcid":0.72,"VitaminB6":0.28,"Folate_total":33.96,"Folate_food":15.41,"Folate_DFE":46.97,"FolicAcid":22.31,"VitaminB12":0.2,"Choline_total":55.77,"Betaine":2.82,"LuteinZeaxanthin":91.28,"Lycopene":0.03,"Calcium_Ca":43.13,"Iron_Fe":1.49,"Magnesium_Mg":20.67,"Phosphorus_P":150.23,"Potassium_K":213.53,"Sodium_Na":629.62,"Zinc_Zn":0.62,"Copper_Cu":0.06,"Manganese_Mn":0.19,"Selenium_Se":18.78,"Tryptophan":0.13,"Threonine":0.46,"Isoleucine":0.52,"Leucine":0.89,"Lysine":0.93,"Methionine":0.27,"Cystine":0.11,"Phenylalanine":0.46,"Tyrosine":0.39,"Valine":0.57,"Arginine":0.71,"Histidine":0.37,"Alanine":0.6,"AsparticAcid":1.0,"GlutamicAcid":1.82,"Glycine":0.46,"Proline":0.47,"Serine":0.47,"omega3":0.34,"omega6":2.55,"AddedSugars":0.0,"IntrinsicSugars":2.0},"addedSugars":0.0,"intrinsicSugars":6.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.82,"yieldFactorFat":1.0,"sources":[{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":120.5},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":31.2},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":25.0},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":22.5},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":13.5},{"ndb":"2047","name":"Salt, table","grams":3.0},{"ndb":"2030","name":"Spices, pepper, black","grams":0.6},{"ndb":"2020","name":"Spices, garlic powder","grams":1.6},{"ndb":"2028","name":"Spices, paprika","grams":1.1},{"ndb":"6169","name":"Sauce, ready-to-serve, pepper, TABASCO","grams":28.2},{"ndb":"1001","name":"Butter, salted","grams":14.2},{"ndb":"18350","name":"Rolls, hamburger or hotdog, plain","grams":44.0},{"ndb":"4639","name":"Salad dressing, ranch dressing, regular","grams":30.0},{"ndb":"11252","name":"Lettuce, iceberg (includes crisphead types), raw","grams":15.0}],"sections":[{"section_key":"chicken","section_label":"Fried chicken","prep_method":"raw","cook_method":"fried","cooking_method":"fried","cooking_method_normalized":"fried","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":261.43,"raw_water_grams":161.04,"raw_fat_grams":31.98,"raw_protein_grams":35.15,"raw_carb_grams":27.46,"final_grams":232.44},{"section_key":"assembly","section_label":"Toppings & bun","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":89.0,"raw_water_grams":43.16,"raw_fat_grams":15.1,"raw_protein_grams":4.83,"raw_carb_grams":24.27,"final_grams":89.0}],"cookingMethod":"multi"},
     recipeIngredients: [
       { name: 'Buffalo Chicken Sandwich', quantity: 'custom (g)', foodWord: 'BUFFALOCHICKENSANDWICH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
-      { name: 'chicken breast raw', quantity: '4¼ oz', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 120.5 },
+      { name: 'chicken breast', quantity: '4¼ oz', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 120.5 },
       { name: 'all-purpose enriched unbleached white flour', quantity: '¼ cup', section: 'chicken', ndbNo: '20581', portionDesc: 'g', portionGrams: 31.25 },
       { name: 'large egg', quantity: '½ egg', section: 'chicken', ndbNo: '1123', portionDesc: 'g', portionGrams: 25.0 },
       { name: 'whole milk', quantity: '1½ tbsp', section: 'chicken', ndbNo: '1077', portionDesc: 'g', portionGrams: 22.5 },
@@ -5303,7 +5303,7 @@ export const LEVELS: Level[] = [
     nutritionJson: {"cal":781.5,"pro":39.6,"fat":44.2,"carb":55.4,"fib":3.0,"h2o":147.5,"sug":9.6,"perServing":{"cal":781.5,"pro":39.6,"fat":44.2,"carb":55.4,"fib":3.0,"h2o":147.5,"sug":9.6,"AddedSugars":4.5,"IntrinsicSugars":5.2},"micros":{"vitaminA":66.72,"vitaminC":0.59,"vitaminD":11.22,"vitaminE":1.26,"vitaminK":13.44,"vitaminB6":0.3,"vitaminB12":0.21,"thiamin":0.18,"riboflavin":0.22,"niacin":4.38,"folate":36.5,"calcium":49.1,"iron":1.56,"magnesium":22.22,"phosphorus":146.36,"potassium":231.49,"sodium":626.32,"zinc":0.67,"copper":0.06,"selenium":20.33,"cholesterol":74.86,"saturatedFat":4.49,"monoFat":5.96,"polyFat":3.21,"omega3":0.29,"omega6":2.36},"gramsPerServing":293.7,"servings":1,"per100g":{"Energy_KCal":266.13,"Water":50.23,"Protein":13.48,"TotalLipidFat":15.06,"Carbohydrate":18.87,"FiberTotalDietary":1.03,"SugarsTotal":3.27,"Cholesterol":74.86,"FattyAcids_totalSaturated":4.49,"FattyAcids_totalMonounsaturated":5.96,"FattyAcids_totalPolyunsaturated":3.21,"LinoleicAcid":2.36,"alphaLinolenicAcid":0.29,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":66.72,"Retinol":47.74,"Carotene_beta":201.12,"VitaminD":11.22,"VitaminE_alphaTocopherol":1.26,"VitaminK_phylloquinone":13.44,"VitaminC_totalAscorbicAcid":0.59,"Thiamin":0.18,"Riboflavin":0.22,"Niacin":4.38,"PantothenicAcid":0.78,"VitaminB6":0.3,"Folate_total":36.5,"Folate_food":16.26,"Folate_DFE":50.66,"FolicAcid":24.33,"VitaminB12":0.21,"Choline_total":59.55,"Betaine":3.0,"LuteinZeaxanthin":137.89,"Lycopene":0.03,"Calcium_Ca":49.1,"Iron_Fe":1.56,"Magnesium_Mg":22.22,"Phosphorus_P":146.36,"Potassium_K":231.49,"Sodium_Na":626.32,"Zinc_Zn":0.67,"Copper_Cu":0.06,"Manganese_Mn":0.21,"Selenium_Se":20.33,"Tryptophan":0.15,"Threonine":0.51,"Isoleucine":0.57,"Leucine":0.97,"Lysine":1.02,"Methionine":0.3,"Cystine":0.12,"Phenylalanine":0.51,"Tyrosine":0.43,"Valine":0.62,"Arginine":0.77,"Histidine":0.4,"Alanine":0.65,"AsparticAcid":1.08,"GlutamicAcid":1.99,"Glycine":0.5,"Proline":0.51,"Serine":0.51,"omega3":0.29,"omega6":2.36,"AddedSugars":1.52,"IntrinsicSugars":1.75},"addedSugars":4.5,"intrinsicSugars":5.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.82,"yieldFactorFat":1.0,"sources":[{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":120.5},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":31.2},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":25.0},{"ndb":"1230","name":"Milk, buttermilk, fluid, whole","grams":23.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":13.5},{"ndb":"2047","name":"Salt, table","grams":3.0},{"ndb":"2030","name":"Spices, pepper, black","grams":0.6},{"ndb":"2020","name":"Spices, garlic powder","grams":1.6},{"ndb":"2028","name":"Spices, paprika","grams":1.1},{"ndb":"1001","name":"Butter, salted","grams":14.2},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":1.8},{"ndb":"19334","name":"Sugars, brown","grams":4.6},{"ndb":"18350","name":"Rolls, hamburger or hotdog, plain","grams":44.0},{"ndb":"11937","name":"Pickles, cucumber, dill or kosher dill","grams":20.0},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":13.8}],"sections":[{"section_key":"chicken","section_label":"Fried chicken","prep_method":"raw","cook_method":"fried","cooking_method":"fried","cooking_method_normalized":"fried","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":12,"raw_grams":240.12,"raw_water_grams":134.8,"raw_fat_grams":32.11,"raw_protein_grams":35.04,"raw_carb_grams":32.81,"final_grams":215.86},{"section_key":"assembly","section_label":"Toppings & bun","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":77.8,"raw_water_grams":36.97,"raw_fat_grams":12.11,"raw_protein_grams":4.53,"raw_carb_grams":22.61,"final_grams":77.8}],"cookingMethod":"multi"},
     recipeIngredients: [
       { name: 'Nashville Hot Chicken Sandwich', quantity: 'custom (g)', foodWord: 'NASHVILLEHOTCHICKENSANDWICH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
-      { name: 'chicken breast raw', quantity: '4¼ oz', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 120.5 },
+      { name: 'chicken breast', quantity: '4¼ oz', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 120.5 },
       { name: 'all-purpose enriched unbleached white flour', quantity: '¼ cup', section: 'chicken', ndbNo: '20581', portionDesc: 'g', portionGrams: 31.25 },
       { name: 'large egg', quantity: '½ egg', section: 'chicken', ndbNo: '1123', portionDesc: 'g', portionGrams: 25.0 },
       { name: 'whole buttermilk', quantity: '1½ tbsp', section: 'chicken', ndbNo: '1230', portionDesc: 'g', portionGrams: 23.0 },
@@ -5422,7 +5422,7 @@ export const LEVELS: Level[] = [
       { name: 'hamburger bun', quantity: '1 bun', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 44.0 },
       { name: 'tartar sauce', quantity: '2 tbsp', section: 'assembly', ndbNo: '27049', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'iceberg lettuce', quantity: '1 large leaf (15g)', section: 'assembly', ndbNo: '11252', portionDesc: 'g', portionGrams: 15.0 },
-      { name: 'tomato raw', quantity: '2 thin slices (30g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 30.0 }
+      { name: 'tomato', quantity: '2 thin slices (30g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 30.0 }
     ],
     recipeInstructions: [
       'In a large bowl, gently combine crab meat, dry bread crumbs, egg, mayonnaise, scallion, Worcestershire sauce, mustard, lemon juice, parsley, garlic powder, salt, and pepper. Do not overmix — fold just until the mixture holds together.',
@@ -5667,7 +5667,7 @@ export const LEVELS: Level[] = [
       { name: 'red pepper flakes', quantity: '¼ tsp', section: 'shrimp', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.5 },
       { name: 'French bread', quantity: '1 piece (8", 72g)', section: 'assembly', ndbNo: '18029', portionDesc: 'g', portionGrams: 72.0 },
       { name: 'iceberg lettuce', quantity: '½ cup shredded (loosely packed, 30g)', section: 'assembly', ndbNo: '11252', portionDesc: 'g', portionGrams: 30.0 },
-      { name: 'tomato raw', quantity: '3 medium slices, ¼" thick (60g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 60.0 }
+      { name: 'tomato', quantity: '3 medium slices, ¼" thick (60g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 60.0 }
     ],
     recipeInstructions: [
       'Make the remoulade: In a small bowl, whisk together the mayonnaise, yellow mustard, sweet pickle relish, lemon juice, hot sauce, paprika, and garlic powder. Cover and refrigerate until ready to serve.',
@@ -5723,7 +5723,7 @@ export const LEVELS: Level[] = [
       { name: 'red pepper flakes', quantity: '¼ tsp', section: 'oyster', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.5 },
       { name: 'French bread', quantity: '1 piece (8", 72g)', section: 'assembly', ndbNo: '18029', portionDesc: 'g', portionGrams: 72.0 },
       { name: 'iceberg lettuce', quantity: '½ cup shredded (loosely packed, 30g)', section: 'assembly', ndbNo: '11252', portionDesc: 'g', portionGrams: 30.0 },
-      { name: 'tomato raw', quantity: '3 medium slices, ¼" thick (60g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 60.0 }
+      { name: 'tomato', quantity: '3 medium slices, ¼" thick (60g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 60.0 }
     ],
     recipeInstructions: [
       'Make the remoulade: In a small bowl, whisk together the mayonnaise, yellow mustard, sweet pickle relish, lemon juice, hot sauce, paprika, and garlic powder. Cover and refrigerate until ready to serve.',
@@ -5820,7 +5820,7 @@ export const LEVELS: Level[] = [
       { name: 'Prosciutto', quantity: '3 thin slices (30g)', section: 'assembly', ndbNo: '10141', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'provolone cheese', quantity: '2 slices (42g)', section: 'assembly', ndbNo: '1035', portionDesc: 'g', portionGrams: 42.0 },
       { name: 'iceberg lettuce', quantity: '½ cup shredded (30g)', section: 'assembly', ndbNo: '11252', portionDesc: 'g', portionGrams: 30.0 },
-      { name: 'tomato raw', quantity: '2 medium slices, ¼" thick (40g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'tomato', quantity: '2 medium slices, ¼" thick (40g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 40.0 },
       { name: 'onion', quantity: '3 thin rings (20g)', section: 'assembly', ndbNo: '11282', portionDesc: 'g', portionGrams: 20.0 },
       { name: 'olive oil', quantity: '1 tbsp', section: 'assembly', ndbNo: '4053', portionDesc: 'g', portionGrams: 14.0 },
       { name: 'Red wine vinegar', quantity: '1½ tsp (7g)', section: 'assembly', ndbNo: '2068', portionDesc: 'g', portionGrams: 7.0 },
@@ -5862,7 +5862,7 @@ export const LEVELS: Level[] = [
     nutritionJson: {"cal":966.2,"pro":66.9,"fat":44.2,"carb":71.7,"fib":4.6,"h2o":211.3,"sug":6.3,"perServing":{"cal":966.2,"pro":66.9,"fat":44.2,"carb":71.7,"fib":4.6,"h2o":211.3,"sug":6.3,"AddedSugars":0.0,"IntrinsicSugars":6.3},"micros":{"vitaminA":35.27,"vitaminC":0.17,"vitaminD":7.27,"vitaminE":1.2,"vitaminK":8.15,"vitaminB6":0.3,"vitaminB12":0.38,"thiamin":0.16,"riboflavin":0.23,"niacin":4.88,"folate":30.79,"calcium":124.01,"iron":1.65,"magnesium":27.83,"phosphorus":193.15,"potassium":249.79,"sodium":474.57,"zinc":1.06,"copper":0.08,"selenium":23.68,"cholesterol":64.11,"saturatedFat":3.11,"monoFat":5.26,"polyFat":1.11,"omega3":0.01,"omega6":0.26},"gramsPerServing":402.9,"servings":1,"per100g":{"Energy_KCal":239.78,"Water":52.45,"Protein":16.6,"TotalLipidFat":10.97,"Carbohydrate":17.79,"FiberTotalDietary":1.15,"SugarsTotal":1.57,"Cholesterol":64.11,"FattyAcids_totalSaturated":3.11,"FattyAcids_totalMonounsaturated":5.26,"FattyAcids_totalPolyunsaturated":1.11,"LinoleicAcid":0.26,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":35.27,"Retinol":30.51,"Carotene_beta":53.2,"VitaminD":7.27,"VitaminE_alphaTocopherol":1.2,"VitaminK_phylloquinone":8.15,"VitaminC_totalAscorbicAcid":0.17,"Thiamin":0.16,"Riboflavin":0.23,"Niacin":4.88,"PantothenicAcid":0.71,"VitaminB6":0.3,"Folate_total":30.79,"Folate_food":11.85,"Folate_DFE":44.04,"FolicAcid":24.3,"VitaminB12":0.38,"Choline_total":54.49,"Betaine":3.02,"LuteinZeaxanthin":51.08,"Lycopene":1663.66,"Calcium_Ca":124.01,"Iron_Fe":1.65,"Magnesium_Mg":27.83,"Phosphorus_P":193.15,"Potassium_K":249.79,"Sodium_Na":474.57,"Zinc_Zn":1.06,"Copper_Cu":0.08,"Manganese_Mn":0.21,"Selenium_Se":23.68,"Tryptophan":0.23,"Threonine":0.68,"Isoleucine":0.78,"Leucine":1.33,"Lysine":1.23,"Methionine":0.39,"Cystine":0.17,"Phenylalanine":0.72,"Tyrosine":0.61,"Valine":0.87,"Arginine":0.89,"Histidine":0.52,"Alanine":0.8,"AsparticAcid":1.34,"GlutamicAcid":3.12,"Glycine":0.62,"Proline":1.0,"Serine":0.69,"omega3":0.01,"omega6":0.26,"AddedSugars":0.0,"IntrinsicSugars":1.57},"addedSugars":0.0,"intrinsicSugars":6.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":170.0},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":15.0},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":25.0},{"ndb":"18079","name":"Bread crumbs, dry, grated, plain","grams":21.0},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":5.0},{"ndb":"2020","name":"Spices, garlic powder","grams":0.5},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.5},{"ndb":"2003","name":"Spices, basil, dried","grams":0.5},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":20.0},{"ndb":"18353","name":"Rolls, hard (includes kaiser)","grams":72.0},{"ndb":"6931","name":"Sauce, pasta, spaghetti/marinara, ready-to-serve","grams":62.0},{"ndb":"1026","name":"Cheese, mozzarella, whole milk","grams":42.0},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":5.0}],"sections":[{"section_key":"chicken","section_label":"Breaded chicken:","prep_method":"raw","cook_method":"fried","cooking_method":"fried","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":259.3,"raw_water_grams":149.45,"raw_fat_grams":29.44,"raw_protein_grams":47.8,"raw_carb_grams":28.04,"final_grams":221.94},{"section_key":"assembly","section_label":"Assembly:","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":181.0,"raw_water_grams":99.26,"raw_fat_grams":14.77,"raw_protein_grams":19.09,"raw_carb_grams":43.63,"final_grams":181.0}],"cookingMethod":"multi"},
     recipeIngredients: [
       { name: 'Chicken Parm Sub', quantity: 'custom (g)', foodWord: 'CHICKENPARM', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
-      { name: 'chicken breast raw', quantity: '1 medium breast (6 oz raw)', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 170.0 },
+      { name: 'chicken breast', quantity: '1 medium breast (6 oz raw)', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 170.0 },
       { name: 'all-purpose enriched unbleached white flour', quantity: '2 tbsp', section: 'chicken', ndbNo: '20581', portionDesc: 'g', portionGrams: 15.0 },
       { name: 'large egg', quantity: '½ large egg (25g)', section: 'chicken', ndbNo: '1123', portionDesc: 'g', portionGrams: 25.0 },
       { name: 'Bread crumbs, dry plain', quantity: '3 tbsp (21g)', section: 'chicken', ndbNo: '18079', portionDesc: 'g', portionGrams: 21.0 },
@@ -6012,7 +6012,7 @@ export const LEVELS: Level[] = [
       { name: 'Caprese Sandwich', quantity: 'custom (g)', foodWord: 'CAPRESE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'focaccia', quantity: '1 piece (120g)', section: 'assembly', ndbNo: '18973', portionDesc: 'g', portionGrams: 120.0 },
       { name: 'Mozzarella, whole milk', quantity: '3 oz (85g)', section: 'assembly', ndbNo: '1026', portionDesc: 'g', portionGrams: 85.0 },
-      { name: 'tomato raw', quantity: '2 thick slices (100g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'tomato', quantity: '2 thick slices (100g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 100.0 },
       { name: 'fresh basil', quantity: 'small handful (5g)', section: 'assembly', ndbNo: '2044', portionDesc: 'g', portionGrams: 5.0 },
       { name: 'olive oil', quantity: '1 tbsp (14g)', section: 'assembly', ndbNo: '4053', portionDesc: 'g', portionGrams: 14.0 },
       { name: 'balsamic vinegar', quantity: '1 tbsp (15g)', section: 'assembly', ndbNo: '2069', portionDesc: 'g', portionGrams: 15.0 },
@@ -6100,7 +6100,7 @@ export const LEVELS: Level[] = [
       { name: 'ground black pepper', quantity: 'pinch (0.1g)', section: 'eggs', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.1 },
       { name: 'croissant', quantity: '1 large (67g)', section: 'assembly', ndbNo: '18239', portionDesc: 'g', portionGrams: 67.0 },
       { name: 'sharp cheddar cheese', quantity: '1 slice (21g)', section: 'assembly', ndbNo: '1270', portionDesc: 'g', portionGrams: 21.0 },
-      { name: 'cooked bacon', quantity: '2 strips (23g)', section: 'assembly', ndbNo: '10862', portionDesc: 'g', portionGrams: 23.0 }
+      { name: 'bacon', quantity: '2 strips (23g)', section: 'assembly', ndbNo: '10862', portionDesc: 'g', portionGrams: 23.0 }
     ],
     recipeInstructions: [
       'Melt the butter in a non-toxic nonstick skillet over medium-low heat. Whisk the eggs with salt and pepper, pour into the pan, and scramble gently until just set. Remove from heat while still slightly glossy.',
@@ -6268,7 +6268,7 @@ export const LEVELS: Level[] = [
       { name: 'salt', quantity: '¼ tsp (1.5g)', section: 'falafel', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
       { name: 'olive oil', quantity: '1 tbsp olive oil (absorbed into patties)', section: 'falafel', ndbNo: '4053', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'pita bread, white', quantity: '1 pita (60g)', section: 'assembly', ndbNo: '18413', portionDesc: 'g', portionGrams: 60.0 },
-      { name: 'tomato raw', quantity: '1 small, sliced (50g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'tomato', quantity: '1 small, sliced (50g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 50.0 },
       { name: 'red onion', quantity: '¼ small red onion, thinly sliced (20g)', section: 'assembly', ndbNo: '11282', portionDesc: 'g', portionGrams: 20.0 },
       { name: 'tahini', quantity: '4 tsp (20g)', section: 'assembly', ndbNo: '12166', portionDesc: 'g', portionGrams: 20.0 },
       { name: 'Greek whole milk yogurt', quantity: '2 tbsp (30g)', section: 'assembly', ndbNo: '1293', portionDesc: 'g', portionGrams: 30.0 },
@@ -6328,7 +6328,7 @@ export const LEVELS: Level[] = [
       { name: 'lemon juice', quantity: '1 tsp (5g)', section: 'tzatziki', ndbNo: '9152', portionDesc: 'g', portionGrams: 5.0 },
       { name: 'salt', quantity: 'pinch (0.3g)', section: 'tzatziki', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.3 },
       { name: 'pita bread, white', quantity: '1 pita (60g)', section: 'assembly', ndbNo: '18413', portionDesc: 'g', portionGrams: 60.0 },
-      { name: 'tomato raw', quantity: '1 small, sliced (50g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'tomato', quantity: '1 small, sliced (50g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 50.0 },
       { name: 'red onion', quantity: '¼ small red onion, thinly sliced (20g)', section: 'assembly', ndbNo: '11282', portionDesc: 'g', portionGrams: 20.0 }
     ],
     recipeInstructions: [
@@ -6639,7 +6639,7 @@ export const LEVELS: Level[] = [
       { name: 'hamburger bun', quantity: '1 bun (44g)', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 44.0 },
       { name: 'BBQ sauce', quantity: '2 tbsp (30g)', section: 'assembly', ndbNo: '6150', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'Cheddar cheese', quantity: '1 slice (28g)', section: 'assembly', ndbNo: '1009', portionDesc: 'g', portionGrams: 28.0 },
-      { name: 'cooked bacon', quantity: '2 slices (23g)', section: 'assembly', ndbNo: '10862', portionDesc: 'g', portionGrams: 23.0 },
+      { name: 'bacon', quantity: '2 slices (23g)', section: 'assembly', ndbNo: '10862', portionDesc: 'g', portionGrams: 23.0 },
       { name: 'onion rings', quantity: '4 rings (40g)', section: 'assembly', ndbNo: '21130', portionDesc: 'g', portionGrams: 40.0 }
     ],
     recipeInstructions: [
@@ -6682,7 +6682,7 @@ export const LEVELS: Level[] = [
       { name: 'ground black pepper', quantity: '⅛ tsp (0.3g)', section: 'patty', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
       { name: 'hamburger bun', quantity: '1 bun (44g)', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 44.0 },
       { name: 'iceberg lettuce', quantity: '1 large leaf (15g)', section: 'assembly', ndbNo: '11252', portionDesc: 'g', portionGrams: 15.0 },
-      { name: 'tomato raw', quantity: '2 slices (40g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'tomato', quantity: '2 slices (40g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 40.0 },
       { name: 'mayonnaise', quantity: '1 tbsp (13.8g)', section: 'assembly', ndbNo: '4025', portionDesc: 'g', portionGrams: 13.8 }
     ],
     recipeInstructions: [
@@ -6728,7 +6728,7 @@ export const LEVELS: Level[] = [
       { name: 'olive oil', quantity: '1 tbsp for pan (13.5g)', section: 'patty', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.5 },
       { name: 'hamburger bun', quantity: '1 bun (44g)', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 44.0 },
       { name: 'iceberg lettuce', quantity: '1 large leaf (15g)', section: 'assembly', ndbNo: '11252', portionDesc: 'g', portionGrams: 15.0 },
-      { name: 'tomato raw', quantity: '2 slices (40g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'tomato', quantity: '2 slices (40g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 40.0 },
       { name: 'mayonnaise', quantity: '1 tbsp (13.8g)', section: 'assembly', ndbNo: '4025', portionDesc: 'g', portionGrams: 13.8 }
     ],
     recipeInstructions: [
@@ -6806,7 +6806,7 @@ export const LEVELS: Level[] = [
       { name: 'hamburger bun', quantity: '1 bun (44g)', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 44.0 },
       { name: 'yellow mustard', quantity: '1 tsp (5g)', section: 'assembly', ndbNo: '2046', portionDesc: 'g', portionGrams: 5.0 },
       { name: 'Pickle relish, sweet', quantity: '1 tbsp (15g)', section: 'assembly', ndbNo: '11945', portionDesc: 'g', portionGrams: 15.0 },
-      { name: 'tomato raw', quantity: '2 Roma wedges (31g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 31.0 },
+      { name: 'tomato', quantity: '2 Roma wedges (31g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 31.0 },
       { name: 'dill pickle', quantity: '1 small spear (35g)', section: 'assembly', ndbNo: '11937', portionDesc: 'g', portionGrams: 35.0 },
       { name: 'Pickled hot peppers', quantity: '2 peppers (12g)', section: 'assembly', ndbNo: '31034', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'Celery seed', quantity: '⅛ tsp (0.25g)', section: 'assembly', ndbNo: '2007', portionDesc: 'g', portionGrams: 0.25 },
@@ -8150,7 +8150,7 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Potato Salad (German Style)', quantity: 'custom (g)', foodWord: 'GERMANPOTATOSALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'Yukon Gold potatoes (White potatoes in the database)', quantity: '2 lb', section: 'potatoes', ndbNo: '11354', portionDesc: 'g', portionGrams: 907.2 },
-      { name: 'cooked bacon', quantity: '4 oz', section: 'dressing', ndbNo: '10862', portionDesc: 'g', portionGrams: 113.4 },
+      { name: 'bacon', quantity: '4 oz', section: 'dressing', ndbNo: '10862', portionDesc: 'g', portionGrams: 113.4 },
       { name: 'onion', quantity: '1 large', section: 'dressing', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
       { name: 'apple cider vinegar', quantity: '4 tbsp', section: 'dressing', ndbNo: '2048', portionDesc: 'g', portionGrams: 59.6 },
       { name: 'sugar', quantity: '3 tsp', section: 'dressing', ndbNo: '19335', portionDesc: 'g', portionGrams: 12.6 },
@@ -8333,7 +8333,7 @@ export const LEVELS: Level[] = [
       { name: 'Tartiflette', quantity: 'custom (g)', foodWord: 'TARTIFLETTE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'Yukon Gold potatoes (White potatoes in the database)', quantity: '2 lb', section: 'potatoes', ndbNo: '11354', portionDesc: 'g', portionGrams: 907.2 },
       { name: 'Brie cheese (Reblochon substitute — not in SR Legacy)', quantity: '14 oz', section: 'gratin', ndbNo: '1006', portionDesc: 'g', portionGrams: 396.9 },
-      { name: 'cooked bacon', quantity: '4 oz', section: 'gratin', ndbNo: '10862', portionDesc: 'g', portionGrams: 113.4 },
+      { name: 'bacon', quantity: '4 oz', section: 'gratin', ndbNo: '10862', portionDesc: 'g', portionGrams: 113.4 },
       { name: 'onion', quantity: '1 large', section: 'gratin', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
       { name: 'White wine, dry', quantity: '2 fl oz', section: 'gratin', ndbNo: '14106', portionDesc: 'g', portionGrams: 58.8 },
       { name: 'heavy cream', quantity: '4 tbsp', section: 'gratin', ndbNo: '1053', portionDesc: 'g', portionGrams: 60.0 },
@@ -8605,7 +8605,7 @@ export const LEVELS: Level[] = [
       { name: 'sour cream', quantity: '1 cup', section: 'potatoes', ndbNo: '1056', portionDesc: 'g', portionGrams: 230.0 },
       { name: 'whole milk', quantity: '½ cup', section: 'potatoes', ndbNo: '1077', portionDesc: 'g', portionGrams: 122.0 },
       { name: 'Cheddar cheese', quantity: '1 cup shredded', section: 'potatoes', ndbNo: '1009', portionDesc: 'g', portionGrams: 113.0 },
-      { name: 'cooked bacon', quantity: '8 slices', section: 'potatoes', ndbNo: '10862', portionDesc: 'g', portionGrams: 92.0 },
+      { name: 'bacon', quantity: '8 slices', section: 'potatoes', ndbNo: '10862', portionDesc: 'g', portionGrams: 92.0 },
       { name: 'scallion (green onion)', quantity: '6 medium scallions', section: 'potatoes', ndbNo: '11291', portionDesc: 'g', portionGrams: 90.0 },
       { name: 'salt', quantity: '2 tsp', section: 'potatoes', ndbNo: '2047', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'ground black pepper', quantity: '½ tsp', section: 'potatoes', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
@@ -9643,7 +9643,7 @@ export const LEVELS: Level[] = [
     nutritionJson: {"cal":398.3,"pro":34.3,"fat":24.3,"carb":10.1,"fib":2.5,"h2o":165.2,"sug":1.5,"perServing":{"cal":398.3,"pro":34.3,"fat":24.3,"carb":10.1,"fib":2.5,"h2o":165.2,"sug":1.5,"AddedSugars":0.0,"IntrinsicSugars":1.5},"micros":{"vitaminA":194.21,"vitaminC":2.44,"vitaminD":4.47,"vitaminE":1.26,"vitaminK":44.83,"vitaminB6":0.34,"vitaminB12":0.19,"thiamin":0.09,"riboflavin":0.14,"niacin":4.14,"folate":63.78,"calcium":102.76,"iron":0.88,"magnesium":24.02,"phosphorus":171.71,"potassium":279.82,"sodium":211.76,"zinc":0.68,"copper":0.04,"selenium":15.09,"cholesterol":51.21,"saturatedFat":2.46,"monoFat":5.88,"polyFat":1.05,"omega3":0.03,"omega6":0.12},"gramsPerServing":237.3,"servings":2,"per100g":{"Energy_KCal":167.85,"Water":69.64,"Protein":14.46,"TotalLipidFat":10.25,"Carbohydrate":4.24,"FiberTotalDietary":1.04,"SugarsTotal":0.62,"Cholesterol":51.21,"FattyAcids_totalSaturated":2.46,"FattyAcids_totalMonounsaturated":5.88,"FattyAcids_totalPolyunsaturated":1.05,"LinoleicAcid":0.12,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.01,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":194.21,"Retinol":20.94,"Carotene_beta":2076.1,"VitaminD":4.47,"VitaminE_alphaTocopherol":1.26,"VitaminK_phylloquinone":44.83,"VitaminC_totalAscorbicAcid":2.44,"Thiamin":0.09,"Riboflavin":0.14,"Niacin":4.14,"PantothenicAcid":0.71,"VitaminB6":0.34,"Folate_total":63.78,"Folate_food":60.3,"Folate_DFE":66.21,"FolicAcid":3.48,"VitaminB12":0.19,"Choline_total":49.63,"Betaine":3.4,"LuteinZeaxanthin":928.35,"Lycopene":0.01,"Calcium_Ca":102.76,"Iron_Fe":0.88,"Magnesium_Mg":24.02,"Phosphorus_P":171.71,"Potassium_K":279.82,"Sodium_Na":211.76,"Zinc_Zn":0.68,"Copper_Cu":0.04,"Manganese_Mn":0.1,"Selenium_Se":15.09,"Tryptophan":0.18,"Threonine":0.61,"Isoleucine":0.7,"Leucine":1.21,"Lysine":1.32,"Methionine":0.36,"Cystine":0.13,"Phenylalanine":0.62,"Tyrosine":0.56,"Valine":0.78,"Arginine":0.88,"Histidine":0.52,"Alanine":0.75,"AsparticAcid":1.27,"GlutamicAcid":2.4,"Glycine":0.56,"Proline":0.7,"Serine":0.61,"omega3":0.03,"omega6":0.12,"AddedSugars":0.0,"IntrinsicSugars":0.62},"addedSugars":0.0,"intrinsicSugars":1.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":113.4},{"ndb":"11251","name":"Lettuce, cos or romaine, raw","grams":94.0},{"ndb":"18242","name":"Croutons, plain","grams":7.5},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":12.5},{"ndb":"","name":"Caesar Salad Dressing","grams":30.9}],"sections":[{"section_key":"chicken","section_label":"Chicken","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":226.8,"raw_water_grams":167.61,"raw_fat_grams":5.94,"raw_protein_grams":51.03,"raw_carb_grams":0.0,"final_grams":184.9},{"section_key":"salad","section_label":"Caesar Salad","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":228.0,"raw_water_grams":185.98,"raw_fat_grams":8.01,"raw_protein_grams":13.03,"raw_carb_grams":18.02,"final_grams":228.0},{"section_key":"dressing","section_label":"Caesar Dressing","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":61.7,"raw_water_grams":18.81,"raw_fat_grams":34.69,"raw_protein_grams":4.58,"raw_carb_grams":2.11,"final_grams":61.7}],"cookingMethod":"multi"},
     recipeIngredients: [
       { name: 'Chicken Caesar Salad', quantity: 'custom (g)', foodWord: 'CHICKENCAESARSALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
-      { name: 'chicken breast raw', quantity: '2 × 4 oz raw', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'chicken breast', quantity: '2 × 4 oz', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 226.8 },
       { name: 'romaine lettuce', quantity: '4 cups', section: 'salad', ndbNo: '11251', portionDesc: 'g', portionGrams: 188.0 },
       { name: 'plain croutons', quantity: '½ cup', section: 'salad', ndbNo: '18242', portionDesc: 'g', portionGrams: 15.0 },
       { name: 'Parmesan cheese', quantity: '¼ cup grated', section: 'salad', ndbNo: '1033', portionDesc: 'g', portionGrams: 25.0 },
@@ -9689,11 +9689,11 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Cobb Salad', quantity: 'custom (g)', foodWord: 'COBBSALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'romaine lettuce', quantity: '4 cups shredded', section: 'salad', ndbNo: '11251', portionDesc: 'g', portionGrams: 188.0 },
-      { name: 'chicken breast raw', quantity: '6 oz raw', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 170.1 },
-      { name: 'cooked bacon', quantity: '4 slices', section: 'salad', ndbNo: '10862', portionDesc: 'g', portionGrams: 46.0 },
-      { name: 'avocado', quantity: '1 fruit', section: 'salad', ndbNo: '9038', portionDesc: 'g', portionGrams: 136.0 },
+      { name: 'chicken breast', quantity: '6 oz', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 170.1 },
+      { name: 'bacon', quantity: '4 slices', section: 'salad', ndbNo: '10862', portionDesc: 'g', portionGrams: 46.0 },
+      { name: 'avocado', quantity: '1', section: 'salad', ndbNo: '9038', portionDesc: 'g', portionGrams: 136.0 },
       { name: 'hard-boiled egg', quantity: '2 large', section: 'salad', ndbNo: '1129', portionDesc: 'g', portionGrams: 100.0 },
-      { name: 'tomato raw', quantity: '1 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'tomato', quantity: '1 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
       { name: 'blue cheese crumbles', quantity: '2 oz', section: 'salad', ndbNo: '1004', portionDesc: 'g', portionGrams: 56.7 },
       { name: 'onion', quantity: '⅛ cup', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 20.0 }
     ],

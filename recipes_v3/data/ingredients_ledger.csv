@@ -6,7 +6,7 @@ apple_granny_smith_raw,9502,APPLESMITH,"Apples, raw, granny smith, with skin",Gr
 apple_raw,9003,APPLE,"Apples, raw, with skin",apple,cup_chopped,125.0,
 apricots_dried,9032,APRICOTDRIED,"Apricots, dried, sulfured, uncooked",dried apricots,cup,130.0,"Dried apricots, chopped; ~130g per cup"
 avocado_raw,9038,AVOCADO,"Avocados, raw, California",avocado,avocado,150.0,Whole medium avocado; half provides ~75g flesh
-bacon_cooked_pan_fried,10862,BACON,"Pork, cured, bacon, pre-sliced, cooked, pan-fried",cooked bacon,slice,11.5,NDB is already cooked pan-fried value
+bacon_cooked_pan_fried,10862,BACON,"Pork, cured, bacon, pre-sliced, cooked, pan-fried",bacon,slice,11.5,NDB is already cooked pan-fried value
 baking_powder,18370,BAKINGPOWDER,"Leavening agents, baking powder, double-acting, straight phosphate",baking powder,teaspoon,4.0,
 baking_soda,18372,BAKINGSODA,"Leavening agents, baking soda",baking soda,teaspoon,4.6,1 tsp ~4.6g; very high sodium use carefully
 balsamic_vinegar,2069,VINEGARBALSAMIC,"Vinegar, balsamic",balsamic vinegar,tbsp,15,
@@ -50,7 +50,7 @@ cheese_swiss,1040,SWISSCHEESE,"Cheese, swiss",Swiss cheese,oz,28.35,
 cherries_maraschino_drained,9328,MARASCHINO,"Maraschino cherries, canned, drained",maraschino cherries,cherry,5.0,1 cherry ~5g
 cherries_sour_red_raw,9063,CHERRYSOUR,"Cherries, sour, red, raw",sour cherries (pitted),cup,155.0,Pitted sour/tart red cherries; 1 cup pitted ~155g
 chicken_breast_cooked_roasted,5064,CHICKENBREAST,"Chicken, broilers or fryers, breast, meat only, cooked, roasted",cooked chicken breast,oz,28.35,
-chicken_breast_raw,5062,CHICKENBREASTRAW,"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",chicken breast raw,oz,28.35,
+chicken_breast_raw,5062,CHICKENBREASTRAW,"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",chicken breast,oz,28.35,
 chickpeas_cooked,16057,CHICKPEA,"Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt","chickpeas, cooked",cup,164.0,"Canned or home-cooked chickpeas, drained; ~164g per cup"
 chickpeas_raw_dried,16056,CHICKPEADRIED,"Chickpeas (garbanzo beans, bengal gram), mature seeds, raw","chickpeas, dried (soaked overnight)",cup,200.0,Raw dried; weigh before soaking. Soaking adds water that cooks off during frying.
 chives_raw,11156,CHIVE,"Chives, raw",fresh chives,tablespoon,3.0,1 tablespoon chopped ~3g
@@ -193,7 +193,7 @@ tartar_sauce,27049,TARTARSAUCE,"Sauce, tartar, ready-to-serve",tartar sauce,tabl
 thousand_island_dressing,4017,DRESSINGTHOUSAND,"Salad dressing, thousand island, commercial, regular",thousand island dressing,tablespoon,15.6,
 thyme_fresh,2049,THYME,"Thyme, fresh",fresh thyme leaves,teaspoon,0.8,1 tsp leaves ~0.8g
 tomato_paste,11546,TOMATOPASTE,"Tomato products, canned, paste, without salt added",tomato paste,tablespoon,16.0,
-tomato_red_raw,11529,TOMATO,"Tomatoes, red, ripe, raw, year round average",tomato raw,each,17.0,red ripe raw tomato; 1 cherry tomato ~17g
+tomato_red_raw,11529,TOMATO,"Tomatoes, red, ripe, raw, year round average",tomato,each,17.0,red ripe raw tomato; 1 cherry tomato ~17g
 tortilla_flour_refrigerated,18364,TORTILLAFLOUR,"Tortillas, ready-to-bake or -fry, flour, refrigerated",flour tortilla,each,45.0,
 tuna_canned_light_water,15121,TUNALIGHT,"Fish, tuna, light, canned in water, drained solids",canned light tuna,oz,28.35,
 turkey_breast_deli,7081,TURKEYSLICED,"Turkey breast, sliced, prepackaged",deli turkey breast,slice,16.0,
