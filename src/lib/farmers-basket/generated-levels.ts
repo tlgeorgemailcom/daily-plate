@@ -9174,5 +9174,46 @@ export const LEVELS: Level[] = [
       { key: 'filling', label: 'Sweet Potato Filling', cookingMethod: '', yieldFactorWater: 0.85 },
       { key: 'topping', label: 'Marshmallow Topping', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAUCE_016',
+    name: 'Basic Vinaigrette',
+    category: 'sauces & condiments',
+    dietaryCategory: 'vegan',
+    levelNum: 200,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 tbsp (makes 7+)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":210.5,"pro":0.1,"fat":23.3,"carb":0.7,"fib":0.1,"h2o":8.6,"sug":0.5,"perServing":{"cal":210.5,"pro":0.1,"fat":23.3,"carb":0.7,"fib":0.1,"h2o":8.6,"sug":0.5,"AddedSugars":0.4,"IntrinsicSugars":0.0},"micros":{"vitaminA":0.12,"vitaminC":0.41,"vitaminD":0.0,"vitaminE":9.96,"vitaminK":42.18,"vitaminB6":0.02,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.0,"niacin":0.02,"folate":0.18,"calcium":6.92,"iron":0.51,"magnesium":2.55,"phosphorus":5.57,"potassium":30.03,"sodium":508.7,"zinc":0.04,"copper":0.01,"selenium":0.59,"cholesterol":0.0,"saturatedFat":9.58,"monoFat":50.61,"polyFat":7.31,"omega3":0.0,"omega6":0.0},"gramsPerServing":33.6,"servings":7,"per100g":{"Energy_KCal":625.92,"Water":25.68,"Protein":0.15,"TotalLipidFat":69.39,"Carbohydrate":2.1,"FiberTotalDietary":0.13,"SugarsTotal":1.35,"Cholesterol":0.0,"FattyAcids_totalSaturated":9.58,"FattyAcids_totalMonounsaturated":50.61,"FattyAcids_totalPolyunsaturated":7.31,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.12,"Retinol":0.0,"Carotene_beta":1.36,"VitaminD":0.0,"VitaminE_alphaTocopherol":9.96,"VitaminK_phylloquinone":42.18,"VitaminC_totalAscorbicAcid":0.41,"Thiamin":0.0,"Riboflavin":0.0,"Niacin":0.02,"PantothenicAcid":0.01,"VitaminB6":0.02,"Folate_total":0.18,"Folate_food":0.18,"Folate_DFE":0.18,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":0.8,"Betaine":0.12,"LuteinZeaxanthin":2.51,"Lycopene":0.05,"Calcium_Ca":6.92,"Iron_Fe":0.51,"Magnesium_Mg":2.55,"Phosphorus_P":5.57,"Potassium_K":30.03,"Sodium_Na":508.7,"Zinc_Zn":0.04,"Copper_Cu":0.01,"Manganese_Mn":0.12,"Selenium_Se":0.59,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.01,"Leucine":0.01,"Lysine":0.01,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.01,"Tyrosine":0.0,"Valine":0.01,"Arginine":0.01,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.01,"GlutamicAcid":0.02,"Glycine":0.01,"Proline":0.01,"Serine":0.01,"omega3":0.0,"omega6":0.0,"AddedSugars":1.22,"IntrinsicSugars":0.13},"addedSugars":0.4,"intrinsicSugars":0.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":23.3},{"ndb":"2048","name":"Vinegar, cider","grams":8.5},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":0.4},{"ndb":"19296","name":"Honey","grams":0.5},{"ndb":"11215","name":"Garlic, raw","grams":0.4},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"dressing","section_label":"Dressing","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":235.37,"raw_water_grams":60.44,"raw_fat_grams":163.32,"raw_protein_grams":0.35,"raw_carb_grams":4.94,"final_grams":235.37}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Basic Vinaigrette', quantity: 'custom (g)', foodWord: 'BASICVINAIGRETTE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'olive oil', quantity: '3/4 cup', section: 'dressing', ndbNo: '4053', portionDesc: 'g', portionGrams: 163.2 },
+      { name: 'apple cider vinegar', quantity: '1/4 cup', section: 'dressing', ndbNo: '2048', portionDesc: 'g', portionGrams: 59.6 },
+      { name: 'yellow mustard', quantity: '1/2 tsp', section: 'dressing', ndbNo: '2046', portionDesc: 'g', portionGrams: 2.5 },
+      { name: 'honey', quantity: '1/2 tsp', section: 'dressing', ndbNo: '19296', portionDesc: 'g', portionGrams: 3.5 },
+      { name: 'garlic', quantity: '1 clove, minced', section: 'dressing', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'dressing', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'dressing', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Mince the garlic clove finely or use a garlic press.',
+      'Combine apple cider vinegar, mustard, honey, minced garlic, salt, and black pepper in a small bowl or jar. Whisk or shake to combine.',
+      'Slowly drizzle in the olive oil while whisking constantly, or add olive oil to the jar and shake vigorously until the dressing is emulsified.',
+      'Taste and adjust seasoning. Use immediately or refrigerate in a sealed jar for up to 1 week. Shake well before each use.'
+    ],
+    sections: [
+      { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
