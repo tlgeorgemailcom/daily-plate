@@ -4051,7 +4051,7 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Heat a lightly oiled skillet over medium-high heat. Season the chicken breast with salt and pepper and pan-sear until cooked through (internal temperature 165°F / 74°C), about 6–7 minutes per side. Let rest 5 minutes, then shred or chop. Refrigerate until cool.',
       'In a bowl, combine the Greek yogurt, lemon juice, and salt. Stir to mix.',
-      'Add the cooled chicken, diced apple, chopped celery, and green onion. Toss to coat evenly.',
+      'Add the shredded chicken, diced apple, chopped celery, and green onion. Toss to coat evenly.',
       'Spread the chicken salad evenly over one bread slice and top with the second slice.',
       'Cut diagonally and serve immediately, or refrigerate the chicken salad up to 3 days.',
       '1 sandwich (291.4g): 391.5 cal | 40.8g protein | 8.0g fat | 37.1g carbs | 2.9g fiber | 9.0g sugar | 200.9g water'
