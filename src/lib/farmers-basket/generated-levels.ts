@@ -9303,5 +9303,50 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAUCE_019',
+    name: 'Lemon Vinaigrette',
+    category: 'sauces & condiments',
+    dietaryCategory: 'vegan',
+    levelNum: 203,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 tbsp (makes 6+)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":166.5,"pro":0.2,"fat":18.2,"carb":1.6,"fib":0.2,"h2o":11.5,"sug":0.8,"perServing":{"cal":166.5,"pro":0.2,"fat":18.2,"carb":1.6,"fib":0.2,"h2o":11.5,"sug":0.8,"AddedSugars":0.5,"IntrinsicSugars":0.3},"micros":{"vitaminA":9.98,"vitaminC":16.39,"vitaminD":0.0,"vitaminE":8.19,"vitaminK":41.25,"vitaminB6":0.04,"vitaminB12":0.0,"thiamin":0.02,"riboflavin":0.02,"niacin":0.1,"folate":10.4,"calcium":16.64,"iron":0.72,"magnesium":7.38,"phosphorus":11.37,"potassium":64.8,"sodium":635.48,"zinc":0.1,"copper":0.03,"selenium":1.18,"cholesterol":0.0,"saturatedFat":7.84,"monoFat":41.35,"polyFat":6.0,"omega3":0.01,"omega6":0.01},"gramsPerServing":32.0,"servings":6,"per100g":{"Energy_KCal":519.45,"Water":35.89,"Protein":0.51,"TotalLipidFat":56.81,"Carbohydrate":4.95,"FiberTotalDietary":0.56,"SugarsTotal":2.38,"Cholesterol":0.0,"FattyAcids_totalSaturated":7.84,"FattyAcids_totalMonounsaturated":41.35,"FattyAcids_totalPolyunsaturated":6.0,"LinoleicAcid":0.01,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":9.98,"Retinol":0.0,"Carotene_beta":119.74,"VitaminD":0.0,"VitaminE_alphaTocopherol":8.19,"VitaminK_phylloquinone":41.25,"VitaminC_totalAscorbicAcid":16.39,"Thiamin":0.02,"Riboflavin":0.02,"Niacin":0.1,"PantothenicAcid":0.08,"VitaminB6":0.04,"Folate_total":10.4,"Folate_food":10.4,"Folate_DFE":10.4,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":2.94,"Betaine":0.12,"LuteinZeaxanthin":19.31,"Lycopene":0.06,"Calcium_Ca":16.64,"Iron_Fe":0.72,"Magnesium_Mg":7.38,"Phosphorus_P":11.37,"Potassium_K":64.8,"Sodium_Na":635.48,"Zinc_Zn":0.1,"Copper_Cu":0.03,"Manganese_Mn":0.11,"Selenium_Se":1.18,"Tryptophan":0.0,"Threonine":0.01,"Isoleucine":0.02,"Leucine":0.02,"Lysine":0.02,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.01,"Tyrosine":0.01,"Valine":0.02,"Arginine":0.02,"Histidine":0.01,"Alanine":0.01,"AsparticAcid":0.03,"GlutamicAcid":0.06,"Glycine":0.02,"Proline":0.02,"Serine":0.01,"omega3":0.01,"omega6":0.01,"AddedSugars":1.49,"IntrinsicSugars":0.89},"addedSugars":0.5,"intrinsicSugars":0.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":18.1},{"ndb":"9152","name":"Lemon juice, raw","grams":10.0},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":0.8},{"ndb":"19296","name":"Honey","grams":0.6},{"ndb":"11215","name":"Garlic, raw","grams":0.5},{"ndb":"11156","name":"Chives, raw","grams":1.0},{"ndb":"2049","name":"Thyme, fresh","grams":0.4},{"ndb":"2047","name":"Salt, table","grams":0.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"dressing","section_label":"Dressing","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":192.28,"raw_water_grams":69.01,"raw_fat_grams":109.23,"raw_protein_grams":0.99,"raw_carb_grams":9.52,"final_grams":192.28}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Lemon Vinaigrette', quantity: 'custom (g)', foodWord: 'LEMONVINAIGRETTE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'olive oil', quantity: '½ cup', section: 'dressing', ndbNo: '4053', portionDesc: 'g', portionGrams: 108.8 },
+      { name: 'lemon juice', quantity: '¼ cup', section: 'dressing', ndbNo: '9152', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'yellow mustard', quantity: '1 tsp', section: 'dressing', ndbNo: '2046', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'honey', quantity: '1 tsp', section: 'dressing', ndbNo: '19296', portionDesc: 'g', portionGrams: 3.5 },
+      { name: 'garlic', quantity: '1 clove', section: 'dressing', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'fresh chives', quantity: '2 tbsp', section: 'dressing', ndbNo: '11156', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'fresh thyme leaves', quantity: '1 tbsp', section: 'dressing', ndbNo: '2049', portionDesc: 'g', portionGrams: 2.4 },
+      { name: 'salt', quantity: '½ tsp', section: 'dressing', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'dressing', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Mince or grate the garlic clove. Thinly slice the chives and finely mince the fresh thyme leaves.',
+      'In a small bowl or jar, combine the lemon juice, Dijon-style mustard, honey, garlic, salt, and black pepper. Whisk until the honey dissolves.',
+      'Add the olive oil in a slow, steady stream while whisking constantly, or seal the jar and shake vigorously until the dressing emulsifies.',
+      'Stir in the chives and thyme.',
+      'Taste and adjust seasoning. The dressing will separate on standing — shake or whisk before each use.',
+      'Store in a sealed jar in the refrigerator for up to 1 week.'
+    ],
+    sections: [
+      { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
