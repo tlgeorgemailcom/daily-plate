@@ -9480,5 +9480,53 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAUCE_023',
+    name: 'Green Goddess Dressing',
+    category: 'sauces & condiments',
+    dietaryCategory: 'all',
+    levelNum: 207,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 tbsp (makes 9)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":115.7,"pro":0.7,"fat":12.2,"carb":1.1,"fib":0.2,"h2o":15.2,"sug":0.4,"perServing":{"cal":115.7,"pro":0.7,"fat":12.2,"carb":1.1,"fib":0.2,"h2o":15.2,"sug":0.4,"AddedSugars":0.0,"IntrinsicSugars":0.4},"micros":{"vitaminA":91.63,"vitaminC":22.53,"vitaminD":4.95,"vitaminE":2.38,"vitaminK":263.61,"vitaminB6":0.06,"vitaminB12":0.12,"thiamin":0.03,"riboflavin":0.07,"niacin":0.83,"folate":28.53,"calcium":58.99,"iron":1.21,"magnesium":14.32,"phosphorus":45.14,"potassium":156.1,"sodium":817.34,"zinc":0.38,"copper":0.05,"selenium":4.0,"cholesterol":32.53,"saturatedFat":7.81,"monoFat":11.8,"polyFat":19.37,"omega3":2.29,"omega6":16.26},"gramsPerServing":30.0,"servings":9,"per100g":{"Energy_KCal":386.07,"Water":50.56,"Protein":2.44,"TotalLipidFat":40.7,"Carbohydrate":3.54,"FiberTotalDietary":0.6,"SugarsTotal":1.41,"Cholesterol":32.53,"FattyAcids_totalSaturated":7.81,"FattyAcids_totalMonounsaturated":11.8,"FattyAcids_totalPolyunsaturated":19.37,"LinoleicAcid":16.26,"alphaLinolenicAcid":2.23,"EPA_20_5n3":0.02,"DPA_22_5n3":0.0,"DHA_22_6n3":0.04,"VitaminA_RAE":91.63,"Retinol":32.37,"Carotene_beta":665.18,"VitaminD":4.95,"VitaminE_alphaTocopherol":2.38,"VitaminK_phylloquinone":263.61,"VitaminC_totalAscorbicAcid":22.53,"Thiamin":0.03,"Riboflavin":0.07,"Niacin":0.83,"PantothenicAcid":0.28,"VitaminB6":0.06,"Folate_total":28.53,"Folate_food":28.53,"Folate_DFE":28.53,"FolicAcid":0.0,"VitaminB12":0.12,"Choline_total":23.29,"Betaine":0.15,"LuteinZeaxanthin":645.95,"Lycopene":0.04,"Calcium_Ca":58.99,"Iron_Fe":1.21,"Magnesium_Mg":14.32,"Phosphorus_P":45.14,"Potassium_K":156.1,"Sodium_Na":817.34,"Zinc_Zn":0.38,"Copper_Cu":0.05,"Manganese_Mn":0.12,"Selenium_Se":4.0,"Tryptophan":0.03,"Threonine":0.11,"Isoleucine":0.12,"Leucine":0.21,"Lysine":0.2,"Methionine":0.06,"Cystine":0.02,"Phenylalanine":0.11,"Tyrosine":0.09,"Valine":0.14,"Arginine":0.13,"Histidine":0.06,"Alanine":0.13,"AsparticAcid":0.23,"GlutamicAcid":0.39,"Glycine":0.09,"Proline":0.15,"Serine":0.13,"omega3":2.29,"omega6":16.26,"AddedSugars":0.0,"IntrinsicSugars":1.41},"addedSugars":0.0,"intrinsicSugars":0.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":12.4},{"ndb":"1056","name":"Cream, sour, cultured","grams":6.4},{"ndb":"11297","name":"Parsley, fresh","grams":3.4},{"ndb":"11156","name":"Chives, raw","grams":1.0},{"ndb":"2045","name":"Dill weed, fresh","grams":0.2},{"ndb":"2041","name":"Spices, tarragon, dried","grams":0.1},{"ndb":"9152","name":"Lemon juice, raw","grams":3.3},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":1.5},{"ndb":"15002","name":"Fish, anchovy, european, canned in oil, drained solids","grams":0.9},{"ndb":"11215","name":"Garlic, raw","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":0.3},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"dressing","section_label":"Dressing","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":12,"raw_grams":269.82,"raw_water_grams":136.41,"raw_fat_grams":109.82,"raw_protein_grams":6.58,"raw_carb_grams":9.56,"final_grams":269.82}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Green Goddess Dressing', quantity: 'custom (g)', foodWord: 'GREENGODDESS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'mayonnaise', quantity: '½ cup', section: 'dressing', ndbNo: '4025', portionDesc: 'g', portionGrams: 112.0 },
+      { name: 'sour cream', quantity: '¼ cup', section: 'dressing', ndbNo: '1056', portionDesc: 'g', portionGrams: 57.5 },
+      { name: 'fresh parsley', quantity: '½ cup chopped', section: 'dressing', ndbNo: '11297', portionDesc: 'g', portionGrams: 30.4 },
+      { name: 'fresh chives', quantity: '3 tbsp', section: 'dressing', ndbNo: '11156', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'fresh dill', quantity: '2 tbsp', section: 'dressing', ndbNo: '2045', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'dried tarragon', quantity: '½ tsp', section: 'dressing', ndbNo: '2041', portionDesc: 'g', portionGrams: 0.75 },
+      { name: 'lemon juice', quantity: '2 tbsp', section: 'dressing', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'dressing', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'anchovy canned', quantity: '2 fillets', section: 'dressing', ndbNo: '15002', portionDesc: 'g', portionGrams: 8.0 },
+      { name: 'garlic', quantity: '1 clove', section: 'dressing', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'salt', quantity: '½ tsp', section: 'dressing', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'dressing', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Finely chop the parsley, chives, and dill. Mince the garlic. Mash or finely chop the anchovy fillets.',
+      'Combine the mayonnaise, sour cream, lemon juice, olive oil, anchovies, and garlic in a bowl or blender. Mix or blend until smooth.',
+      'Stir in the parsley, chives, dill, and dried tarragon.',
+      'Season with salt and black pepper. Taste and adjust lemon juice or salt as needed.',
+      'For a smoother dressing, blend all ingredients together until the herbs are fully incorporated and the dressing is uniformly green.',
+      'Cover and refrigerate for at least 30 minutes before serving. Store refrigerated for up to 1 week.'
+    ],
+    sections: [
+      { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
