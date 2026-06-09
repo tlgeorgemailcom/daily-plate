@@ -9690,7 +9690,7 @@ export const LEVELS: Level[] = [
       { name: 'Cobb Salad', quantity: 'custom (g)', foodWord: 'COBBSALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'romaine lettuce', quantity: '4 cups shredded', section: 'salad', ndbNo: '11251', portionDesc: 'g', portionGrams: 188.0 },
       { name: 'sliced', quantity: '6 oz raw', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 170.1 },
-      { name: 'crumbled', quantity: '4 slices', section: 'salad', ndbNo: '10862', portionDesc: 'g', portionGrams: 46.0 },
+      { name: 'cooked bacon', quantity: '4 slices', section: 'salad', ndbNo: '10862', portionDesc: 'g', portionGrams: 46.0 },
       { name: 'diced', quantity: '1 fruit', section: 'salad', ndbNo: '9038', portionDesc: 'g', portionGrams: 136.0 },
       { name: 'quartered', quantity: '2 large', section: 'salad', ndbNo: '1129', portionDesc: 'g', portionGrams: 100.0 },
       { name: 'diced', quantity: '1 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },

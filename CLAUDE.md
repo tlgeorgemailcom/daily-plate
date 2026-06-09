@@ -355,8 +355,8 @@ Planned BKFST order (standalone components first, composites last):
 | ID | Recipe | Dressing | Notes |
 |---|---|---|---|
 | SALAD_001 | Caesar Salad | @SAUCE_024 included | Rule D ✅ — romaine(11251) 188.0g+croutons_plain(18242) 15.0g+cheese_parmesan_hard(1033) 25.0g+@SAUCE_024 61.7g; 289.7g; 2 servings × 144.8g; 181.0 kcal·6.08P·14.74F·6.95C per 100g; 262 kcal/serving; dietary_category=all; composite (dish) |
-| SALAD_002 | Chicken Caesar Salad | @SAUCE_024 included | Rule D ✅ — chicken_breast_cooked_roasted(5064) 226.8g+romaine(11251) 188.0g+croutons_plain(18242) 15.0g+cheese_parmesan_hard(1033) 25.0g+@SAUCE_024 61.7g; 516.5g; 2 servings × 258.2g; 174.0 kcal·17.03P·9.84F·3.90C per 100g; 449 kcal/serving; dietary_category=all; composite (dish) |
-| SALAD_003 | Cobb Salad | (none) | Rule D ✅ — lettuce_romaine_raw(11251) 188.0g+chicken_breast_cooked_roasted(5064) 170.1g+bacon_cooked_pan_fried(10862) 46.0g+avocado_raw(9038) 136.0g+egg_cooked_hardboiled(1129) 100.0g+tomato_red_raw(11529) 123.0g+cheese_blue(1004) 56.7g+onion_raw(11282) 20.0g; 839.8g; 2 servings × 419.9g; 135.8 kcal·11.83P·8.44F·3.31C per 100g; 570 kcal/serving; dietary_category=all; no dressing included (serve with SAUCE_021 or SAUCE_020) |
+| SALAD_002 | Chicken Caesar Salad | @SAUCE_024 included | Rule D ✅ — chicken_breast_raw(5062) 226.8g pan grilled yfw=0.75+romaine(11251) 188.0g+croutons_plain(18242) 15.0g+cheese_parmesan_hard(1033) 25.0g+@SAUCE_024 61.7g; 474.6g; 2 servings × 237.3g; 167.8 kcal·14.46P·10.25F·4.24C per 100g; 398 kcal/serving; dietary_category=all; composite (dish) |
+| SALAD_003 | Cobb Salad | (none) | Rule D ✅ — chicken_breast_raw(5062) 170.1g pan grilled yfw=0.75+lettuce_romaine_raw(11251) 188.0g+bacon_cooked_pan_fried(10862) 46.0g+avocado_raw(9038) 136.0g+egg_cooked_hardboiled(1129) 100.0g+tomato_red_raw(11529) 123.0g+cheese_blue(1004) 56.7g+onion_raw(11282) 20.0g; 808.4g; 2 servings × 404.2g; 131.6 kcal·10.50P·8.57F·3.44C per 100g; 532 kcal/serving; dietary_category=all; no dressing included (serve with SAUCE_021 or SAUCE_020) |
 
 ## Current Work: SAND Recipes
 

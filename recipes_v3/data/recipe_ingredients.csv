@@ -1861,7 +1861,7 @@ SALAD_002,4,cheese_parmesan_hard,¼ cup grated,25.0,,,salad,Parmesan,false,
 SALAD_002,5,@SAUCE_024,4 tbsp,61.7,,,dressing,Caesar dressing,false,Caesar dressing (4 tbsp total; 2 tbsp per serving)
 SALAD_003,1,lettuce_romaine_raw,4 cups shredded,188.0,,,salad,romaine,false,
 SALAD_003,2,chicken_breast_raw,6 oz raw,170.1,,,chicken,chicken breast,false,sliced
-SALAD_003,3,bacon_cooked_pan_fried,4 slices,46.0,,,salad,bacon,false,crumbled
+SALAD_003,3,bacon_cooked_pan_fried,4 slices,46.0,,,salad,bacon,false,
 SALAD_003,4,avocado_raw,1 fruit,136.0,,,salad,avocado,false,diced
 SALAD_003,5,egg_cooked_hardboiled,2 large,100.0,,,salad,hard-boiled egg,false,quartered
 SALAD_003,6,tomato_red_raw,1 medium,123.0,,,salad,tomato,false,diced
