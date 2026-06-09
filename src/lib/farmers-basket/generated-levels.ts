@@ -9439,5 +9439,46 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAUCE_022',
+    name: 'Honey Mustard Dressing',
+    category: 'sauces & condiments',
+    dietaryCategory: 'veggie',
+    levelNum: 206,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 tbsp (makes 7)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":131.4,"pro":0.4,"fat":12.2,"carb":5.5,"fib":0.3,"h2o":11.2,"sug":5.1,"perServing":{"cal":131.4,"pro":0.4,"fat":12.2,"carb":5.5,"fib":0.3,"h2o":11.2,"sug":5.1,"AddedSugars":4.9,"IntrinsicSugars":0.2},"micros":{"vitaminA":9.63,"vitaminC":1.08,"vitaminD":3.71,"vitaminE":1.82,"vitaminK":87.23,"vitaminB6":0.02,"vitaminB12":0.06,"thiamin":0.04,"riboflavin":0.03,"niacin":0.15,"folate":5.06,"calcium":20.56,"iron":0.57,"magnesium":11.9,"phosphorus":35.77,"potassium":61.21,"sodium":848.73,"zinc":0.27,"copper":0.03,"selenium":8.54,"cholesterol":22.29,"saturatedFat":6.26,"monoFat":9.4,"polyFat":23.88,"omega3":2.91,"omega6":20.74},"gramsPerServing":30.1,"servings":7,"per100g":{"Energy_KCal":435.8,"Water":37.18,"Protein":1.4,"TotalLipidFat":40.44,"Carbohydrate":18.3,"FiberTotalDietary":0.97,"SugarsTotal":16.91,"Cholesterol":22.29,"FattyAcids_totalSaturated":6.26,"FattyAcids_totalMonounsaturated":9.4,"FattyAcids_totalPolyunsaturated":23.88,"LinoleicAcid":20.74,"alphaLinolenicAcid":2.91,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":9.63,"Retinol":7.96,"Carotene_beta":14.92,"VitaminD":3.71,"VitaminE_alphaTocopherol":1.82,"VitaminK_phylloquinone":87.23,"VitaminC_totalAscorbicAcid":1.08,"Thiamin":0.04,"Riboflavin":0.03,"Niacin":0.15,"PantothenicAcid":0.16,"VitaminB6":0.02,"Folate_total":5.06,"Folate_food":5.06,"Folate_DFE":5.06,"FolicAcid":0.0,"VitaminB12":0.06,"Choline_total":23.51,"Betaine":0.41,"LuteinZeaxanthin":32.05,"Lycopene":0.05,"Calcium_Ca":20.56,"Iron_Fe":0.57,"Magnesium_Mg":11.9,"Phosphorus_P":35.77,"Potassium_K":61.21,"Sodium_Na":848.73,"Zinc_Zn":0.27,"Copper_Cu":0.03,"Manganese_Mn":0.15,"Selenium_Se":8.54,"Tryptophan":0.01,"Threonine":0.06,"Isoleucine":0.06,"Leucine":0.11,"Lysine":0.09,"Methionine":0.03,"Cystine":0.03,"Phenylalanine":0.06,"Tyrosine":0.05,"Valine":0.08,"Arginine":0.09,"Histidine":0.03,"Alanine":0.07,"AsparticAcid":0.14,"GlutamicAcid":0.23,"Glycine":0.07,"Proline":0.12,"Serine":0.09,"omega3":2.91,"omega6":20.74,"AddedSugars":16.34,"IntrinsicSugars":0.57},"addedSugars":4.9,"intrinsicSugars":0.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":16.0},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":6.4},{"ndb":"19296","name":"Honey","grams":6.0},{"ndb":"9152","name":"Lemon juice, raw","grams":0.7},{"ndb":"2048","name":"Vinegar, cider","grams":0.7},{"ndb":"2047","name":"Salt, table","grams":0.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"dressing","section_label":"Dressing","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":211.07,"raw_water_grams":78.48,"raw_fat_grams":85.37,"raw_protein_grams":2.96,"raw_carb_grams":38.63,"final_grams":211.07}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Honey Mustard Dressing', quantity: 'custom (g)', foodWord: 'HONEYMUSTARD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'mayonnaise', quantity: '½ cup', section: 'dressing', ndbNo: '4025', portionDesc: 'g', portionGrams: 112.0 },
+      { name: 'yellow mustard', quantity: '3 tbsp', section: 'dressing', ndbNo: '2046', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'honey', quantity: '2 tbsp', section: 'dressing', ndbNo: '19296', portionDesc: 'g', portionGrams: 42.0 },
+      { name: 'lemon juice', quantity: '1 tsp', section: 'dressing', ndbNo: '9152', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'apple cider vinegar', quantity: '1 tsp', section: 'dressing', ndbNo: '2048', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'salt', quantity: '¼ tsp', section: 'dressing', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'dressing', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Combine the mayonnaise, mustard, honey, lemon juice, and apple cider vinegar in a bowl. Whisk until smooth.',
+      'Season with salt and black pepper. Whisk again to combine.',
+      'Taste and adjust honey or mustard to balance sweetness and tang to your preference.',
+      'Use immediately or cover and refrigerate for up to 2 weeks. Stir before serving.'
+    ],
+    sections: [
+      { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
