@@ -9394,5 +9394,50 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAUCE_021',
+    name: 'Blue Cheese Dressing',
+    category: 'sauces & condiments',
+    dietaryCategory: 'veggie',
+    levelNum: 205,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 tbsp (makes 10+)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":112.2,"pro":1.7,"fat":11.3,"carb":1.0,"fib":0.0,"h2o":16.0,"sug":0.7,"perServing":{"cal":112.2,"pro":1.7,"fat":11.3,"carb":1.0,"fib":0.0,"h2o":16.0,"sug":0.7,"AddedSugars":0.0,"IntrinsicSugars":0.7},"micros":{"vitaminA":74.95,"vitaminC":2.16,"vitaminD":16.78,"vitaminE":1.34,"vitaminK":60.32,"vitaminB6":0.05,"vitaminB12":0.4,"thiamin":0.02,"riboflavin":0.14,"niacin":0.23,"folate":11.75,"calcium":143.96,"iron":0.23,"magnesium":9.23,"phosphorus":112.22,"potassium":120.61,"sodium":666.5,"zinc":0.7,"copper":0.02,"selenium":5.01,"cholesterol":42.35,"saturatedFat":9.98,"monoFat":8.59,"polyFat":16.61,"omega3":1.95,"omega6":14.26},"gramsPerServing":30.8,"servings":10,"per100g":{"Energy_KCal":364.9,"Water":52.05,"Protein":5.46,"TotalLipidFat":36.85,"Carbohydrate":3.22,"FiberTotalDietary":0.06,"SugarsTotal":2.12,"Cholesterol":42.35,"FattyAcids_totalSaturated":9.98,"FattyAcids_totalMonounsaturated":8.59,"FattyAcids_totalPolyunsaturated":16.61,"LinoleicAcid":14.26,"alphaLinolenicAcid":1.95,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":74.95,"Retinol":72.66,"Carotene_beta":22.6,"VitaminD":16.78,"VitaminE_alphaTocopherol":1.34,"VitaminK_phylloquinone":60.32,"VitaminC_totalAscorbicAcid":2.16,"Thiamin":0.02,"Riboflavin":0.14,"Niacin":0.23,"PantothenicAcid":0.55,"VitaminB6":0.05,"Folate_total":11.75,"Folate_food":11.75,"Folate_DFE":11.75,"FolicAcid":0.0,"VitaminB12":0.4,"Choline_total":22.24,"Betaine":0.14,"LuteinZeaxanthin":6.68,"Lycopene":0.02,"Calcium_Ca":143.96,"Iron_Fe":0.23,"Magnesium_Mg":9.23,"Phosphorus_P":112.22,"Potassium_K":120.61,"Sodium_Na":666.5,"Zinc_Zn":0.7,"Copper_Cu":0.02,"Manganese_Mn":0.02,"Selenium_Se":5.01,"Tryptophan":0.08,"Threonine":0.22,"Isoleucine":0.29,"Leucine":0.51,"Lysine":0.47,"Methionine":0.15,"Cystine":0.03,"Phenylalanine":0.28,"Tyrosine":0.31,"Valine":0.39,"Arginine":0.2,"Histidine":0.18,"Alanine":0.18,"AsparticAcid":0.4,"GlutamicAcid":1.28,"Glycine":0.11,"Proline":0.53,"Serine":0.31,"omega3":1.95,"omega6":14.26,"AddedSugars":0.0,"IntrinsicSugars":2.12},"addedSugars":0.0,"intrinsicSugars":0.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":11.2},{"ndb":"1056","name":"Cream, sour, cultured","grams":5.8},{"ndb":"1230","name":"Milk, buttermilk, fluid, whole","grams":6.1},{"ndb":"1004","name":"Cheese, blue","grams":5.7},{"ndb":"9152","name":"Lemon juice, raw","grams":1.5},{"ndb":"6971","name":"Sauce, worcestershire","grams":0.2},{"ndb":"2020","name":"Spices, garlic powder","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":0.1},{"ndb":"2030","name":"Spices, pepper, black","grams":0.0}],"sections":[{"section_key":"dressing","section_label":"Dressing","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":307.52,"raw_water_grams":160.05,"raw_fat_grams":113.33,"raw_protein_grams":16.79,"raw_carb_grams":9.89,"final_grams":307.52}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Blue Cheese Dressing', quantity: 'custom (g)', foodWord: 'BLUECHEESEDRESSING', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'mayonnaise', quantity: '½ cup', section: 'dressing', ndbNo: '4025', portionDesc: 'g', portionGrams: 112.0 },
+      { name: 'sour cream', quantity: '¼ cup', section: 'dressing', ndbNo: '1056', portionDesc: 'g', portionGrams: 57.5 },
+      { name: 'whole buttermilk', quantity: '¼ cup', section: 'dressing', ndbNo: '1230', portionDesc: 'g', portionGrams: 61.25 },
+      { name: 'blue cheese crumbles', quantity: '2 oz', section: 'dressing', ndbNo: '1004', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'lemon juice', quantity: '1 tbsp', section: 'dressing', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'Worcestershire sauce', quantity: '½ tsp', section: 'dressing', ndbNo: '6971', portionDesc: 'g', portionGrams: 2.5 },
+      { name: 'garlic powder', quantity: '¼ tsp', section: 'dressing', ndbNo: '2020', portionDesc: 'g', portionGrams: 0.775 },
+      { name: 'salt', quantity: '¼ tsp', section: 'dressing', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '⅛ tsp', section: 'dressing', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 }
+    ],
+    recipeInstructions: [
+      'Crumble the blue cheese into a bowl. Reserve a few larger crumbles for texture if desired.',
+      'In a medium bowl, whisk together the mayonnaise, sour cream, and buttermilk until smooth.',
+      'Add the lemon juice, Worcestershire sauce, garlic powder, salt, and black pepper. Whisk to combine.',
+      'Fold in the crumbled blue cheese, mashing some pieces slightly into the dressing for a creamy texture while leaving some crumbles intact.',
+      'Taste and adjust salt, pepper, or lemon juice as needed. Thin with additional buttermilk if a pourable consistency is desired.',
+      'Cover and refrigerate for at least 30 minutes before serving. Store refrigerated for up to 1 week.'
+    ],
+    sections: [
+      { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
