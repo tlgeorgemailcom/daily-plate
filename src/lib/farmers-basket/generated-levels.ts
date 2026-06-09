@@ -9650,7 +9650,7 @@ export const LEVELS: Level[] = [
       { name: 'Caesar dressing (4 tbsp total; 2 tbsp per serving)', quantity: '4 tbsp', section: 'dressing', foodWord: 'CAESARDRESSING', portionDesc: 'g', portionGrams: 61.7, isDish: true, componentRef: 'SAUCE_024' }
     ],
     recipeInstructions: [
-      'Season the chicken breast with salt and pepper. Grill or pan-sear over medium-high heat until cooked through, about 6–7 minutes per side. Let rest 5 minutes, then slice or chop.',
+      'Season the chicken breast with salt and pepper. Grill or pan-sear over medium-high heat until cooked through (internal temperature 165°F / 74°C), about 6–7 minutes per side. Let rest 5 minutes, then slice or chop.',
       'Wash and dry the romaine leaves. Tear or chop into bite-sized pieces and place in a large bowl.',
       'Add the croutons and freshly grated Parmesan.',
       'Drizzle the Caesar dressing over the salad and toss well to coat every leaf evenly.',
