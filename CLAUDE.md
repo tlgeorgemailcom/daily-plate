@@ -5,6 +5,29 @@
 ## Project
 SvelteKit + Svelte 5 + TypeScript food/word game. Nutrition data comes from a Python pipeline (`recipes_v3/`) that computes per-100g macros from raw ingredients using USDA SR Legacy data and FNDDS canonical references.
 
+## Purpose and Strategic Intent of Recipe Development
+
+Any AI assistant working on this project must understand that the recipes are not merely content — they are the primary mechanism by which this application achieves all of its goals simultaneously. This section exists so that purpose is never lost during tactical work.
+
+**The four compounding functions of every recipe built:**
+
+**1. User recipe templates.**
+Community users build their own recipes by editing a dev recipe they recognize as "close enough." The wider and more diverse the dev recipe library, the smaller the gap between any user's intent and the nearest starting point. A user making lentil soup, red beans and rice, or baked ziti should find a dev recipe with matching cooking method, ingredient class, and structure — requiring only quantity tweaks rather than a rebuild from scratch. Coverage breadth matters as much as depth: one example of each meaningful cooking pattern is more valuable than five near-identical variants.
+
+**2. Ingredient universe expansion.**
+Every new recipe forces new entries into `ingredients_ledger.csv` and `food-portions-complete.csv`. These entries are permanent infrastructure. They expand what community users can select when building their own recipes, and they expand the word and food pool available to the chain and plate games. The ledger grows purposefully through recipe development — never arbitrarily.
+
+**3. Game content.**
+`food_word` entries tied to recipes are the raw material for both games. Recipe coverage across categories, cooking methods, and cuisines directly determines game playability and variety. A thin category produces a thin game experience in that domain.
+
+**4. Algorithm calibration — the deepest and most important function.**
+The nutrition computation pipeline (yield factors, water absorption model, fat-drain Atwater correction, fat-soluble vitamin partitioning, multi-section composition, component-ref composites) is novel. There is no prior implementation to copy or replicate. Every recipe built against a USDA canonical target (Rules A, B, C, F, G) is a calibration test. Rule C and G divergences are especially valuable: they reveal either a structural limitation of the model (irreducible, to be documented) or a modeling gap that can be closed. The more diverse the cooking methods, ingredient classes, and multi-stage compositions in the dev library, the more thoroughly the algorithm is stress-tested across its full operating range.
+
+**The critical constraint that makes all of this urgent:**
+Community users creating and editing their own recipes receive no AI assistance. The algorithm must work correctly without guidance. All modeling knowledge — smart defaults, guard rails, edge-case handling, yield factor behavior for every cooking method — must be pre-built into the code. The only way to pre-build that robustness is to encounter the edge cases in dev recipe work first, resolve them, and encode the resolution in the pipeline. Each recipe authored is a lesson permanently absorbed into the system.
+
+**In summary:** The recipes are not the product. They are the curriculum. The product is an algorithm comprehensive enough to handle the full diversity of how humans cook — without AI assistance at runtime.
+
 ## Pipeline: recipes_v3
 
 **Data lives in 6 CSVs** (`recipes_v3/data/`):
@@ -47,6 +70,100 @@ Always commit `recipes_bundle.json` after generating.
 **⚠️ `recipe_instructions.csv` has exactly 3 columns: `recipe_id,step_order,step_text`.** There is no `section_key` column. Writing a 4-column row (e.g. `[recipe_id, step_order, section_key, step_text]`) silently places the section key in `step_text` and discards the actual instruction text. Always write exactly `[recipe_id, str(step_num), step_text]`.
 
 **For brand-new recipes, also run `insert_new.py` before `generate_bundle.py`** (see § insert_new.py below).
+
+## Absorption Model (DataCentralCombo.bin)
+
+The `bin` column in `DataCentralCombo` stores numeric **water-absorption factors** for dry starches and legumes that absorb cooking water rather than losing it. The factor equals the target cooked-water fraction of the finished ingredient.
+
+**Math:**
+```
+bin_factor  = cooked_water_fraction  (e.g. 0.6213 → pasta cooks to 62.13% water)
+retained_water = dry_non_water_g × bin / (1 − bin)
+yfw = retained_water / raw_water_in_section
+```
+`yfw` will normally be >> 1.0 when the section has no explicit water ingredient (only the small residual moisture of the dry item is in `raw_water`). `build.py` handles yfw > 1 correctly: `water_lost = raw_water × (1 − yfw)` becomes negative (i.e. water gained).
+
+**Derivation of bin from a reference cooked NDB:**
+1. Look up the USDA cooked NDB water content (e.g. NDB 20521 cooked enriched pasta: 62.13% water).
+2. Set `bin = cooked_water_fraction` (e.g. `0.6213`).
+3. No explicit `water` row should appear in the section — the model provides the absorbed water automatically.
+
+**Pipeline execution order (build.py priority):**
+1. Absorption model fires first when `cook_method in ('boiled','simmered')` **and** the section contains at least one absorber NDB.
+2. Manual `yield_factor_water` override from `recipe_sections.csv` (used for locked recipes only).
+3. Physics-based evaporation model (`calc_yield_water`).
+4. Default `yfw = 1.0`.
+
+**Paths that implement this model:**
+- Python pipeline: `DataCentralCombo.bin` → `load.py` → `nuts["_absorption_factor"]` → `build.py` `st["absorbers"][]` → weighted-average factor → auto-yfw.
+- TypeScript community path: `bin` → `NutrientRow.absorptionFactor` (`types.ts`) → `buildRecipeCommunity.ts` weighted-average model. **Both paths must stay in sync.**
+
+**Key authoring invariant:** Never add an explicit `water` row to a section that contains absorber NDBs. The model already accounts for absorbed water. Adding a water row inflates `raw_water` and drives `yfw` toward 1.0, silently producing an undercooked macro profile.
+
+**Legacy `bin` values:** The column previously stored non-numeric strings (e.g. `'fridge'`, `'raw beans bin'`). `load.py` wraps the float parse in try/except and silently ignores non-numeric values. Only numeric rows trigger the model.
+
+**56 NDBs with bin factors (ordered by bin value):**
+
+| NDB | bin | Cooked H₂O% | Description |
+|---|---|---|---|
+| 16056 | 0.6021 | 60.2% | Chickpeas (garbanzo beans), mature seeds, raw |
+| 16040 | 0.6120 | 61.2% | Beans, pink, mature seeds, raw |
+| 20124 | 0.6180 | 61.8% | Pasta, whole-wheat, dry |
+| 20135 | 0.6180 | 61.8% | Pasta, whole grain, 51% whole wheat, unenriched, dry |
+| 20653 | 0.6180 | 61.8% | Pasta, whole grain, 51% whole wheat, enriched, dry |
+| 20120 | 0.6213 | 62.1% | Pasta, dry, enriched |
+| 20420 | 0.6213 | 62.1% | Pasta, dry, unenriched ← calibrated vs NDB 20521 |
+| 16108 | 0.6255 | 62.6% | Soybeans, mature seeds, raw |
+| 16042 | 0.6295 | 63.0% | Beans, pinto, mature seeds, raw |
+| 16047 | 0.6298 | 63.0% | Beans, yellow, mature seeds, raw |
+| 16049 | 0.6308 | 63.1% | Beans, white, mature seeds, raw |
+| 16045 | 0.6324 | 63.2% | Beans, small white, mature seeds, raw |
+| 16037 | 0.6381 | 63.8% | Beans, navy, mature seeds, raw |
+| 16019 | 0.6465 | 64.7% | Beans, cranberry (roman), mature seeds, raw |
+| 16014 | 0.6574 | 65.7% | Beans, black, mature seeds, raw |
+| 16016 | 0.6574 | 65.7% | Beans, black turtle, mature seeds, raw |
+| 16001 | 0.6629 | 66.3% | Beans, adzuki, mature seeds, raw |
+| 16022 | 0.6657 | 66.6% | Beans, french, mature seeds, raw |
+| 16030 | 0.6694 | 66.9% | Beans, kidney, california red, mature seeds, raw |
+| 16032 | 0.6694 | 66.9% | Beans, kidney, red, mature seeds, raw |
+| 16027 | 0.6694 | 66.9% | Beans, kidney, all types, mature seeds, raw |
+| 16035 | 0.6694 | 66.9% | Beans, kidney, royal red, mature seeds, raw |
+| 16074 | 0.6715 | 67.2% | Lima beans, thin seeded (baby), mature seeds, raw |
+| 16135 | 0.6719 | 67.2% | Winged beans, mature seeds, raw |
+| 20091 | 0.6831 | 68.3% | Pasta, gluten-free, corn, dry |
+| 20044 | 0.6844 | 68.4% | Rice, white, long-grain, regular, raw, enriched |
+| 20444 | 0.6844 | 68.4% | Rice, white, long-grain, regular, raw, unenriched |
+| 20452 | 0.6853 | 68.5% | Rice, white, short-grain, raw, unenriched |
+| 20050 | 0.6861 | 68.6% | Rice, white, medium-grain, raw, enriched |
+| 20450 | 0.6861 | 68.6% | Rice, white, medium-grain, raw, unenriched |
+| 16133 | 0.6880 | 68.8% | Yardlong beans, mature seeds, raw |
+| 20005 | 0.6880 | 68.8% | Barley, pearled, raw |
+| 16024 | 0.6900 | 69.0% | Beans, great northern, mature seeds, raw |
+| 16067 | 0.6913 | 69.1% | Hyacinth beans, mature seeds, raw |
+| 16078 | 0.6923 | 69.2% | Mothbeans, mature seeds, raw |
+| 16069 | 0.6964 | 69.6% | Lentils, raw |
+| 16144 | 0.6964 | 69.6% | Lentils, pink or red, raw |
+| 16071 | 0.6979 | 69.8% | Lima beans, large, mature seeds, raw |
+| 20040 | 0.7030 | 70.3% | Rice, brown, medium-grain, raw |
+| 20048 | 0.7034 | 70.3% | Rice, white, long-grain, precooked or instant, enriched |
+| 20046 | 0.7036 | 70.4% | Rice, white, long-grain, parboiled, enriched, dry |
+| 20446 | 0.7036 | 70.4% | Rice, white, long-grain, parboiled, unenriched, dry |
+| 16052 | 0.7154 | 71.5% | Broadbeans (fava beans), mature seeds, raw |
+| 16083 | 0.7251 | 72.5% | Mungo beans, mature seeds, raw |
+| 20028 | 0.7257 | 72.6% | Couscous, dry |
+| 16080 | 0.7266 | 72.7% | Mung beans, mature seeds, raw |
+| 20036 | 0.7296 | 73.0% | Rice, brown, long-grain, raw |
+| 20042 | 0.7296 | 73.0% | Rice, brown, parboiled, dry |
+| 20133 | 0.7382 | 73.8% | Rice noodles, dry |
+| 20088 | 0.7393 | 73.9% | Wild rice, raw |
+| 20009 | 0.7563 | 75.6% | Buckwheat groats, roasted, dry |
+| 20054 | 0.7663 | 76.6% | Rice, white, glutinous, unenriched, uncooked |
+| 20012 | 0.7776 | 77.8% | Bulgur, dry |
+| 8120  | 0.8361 | 83.6% | Oats, regular and quick, not fortified, dry ← calibrated vs NDB 8121 |
+| 8122  | 0.8361 | 83.6% | Oats, instant, fortified, plain, dry |
+| 20033 | 0.8400 | 84.0% | Oat bran, raw |
+
+**To add bin factors to a new NDB:** `UPDATE DataCentralCombo SET bin = '<factor>' WHERE NDB_No = <ndb>` in `/Users/macminidata/vscode/jetfooddata/jetcool/assets/comboo.db`, then sync to Turso comboo DB using the `libsql_experimental` client (same pattern as `insert_new.py`'s `_connect()` but targeting `TURSO_SR28_URL` / `TURSO_SR28_TOKEN`).
 
 ## insert_new.py — Initial Turso Insert
 
@@ -92,7 +209,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | SAUCE_NNN` | 🔧 In progress | 15 (001–015) |
 | `STOCK_NNN` | 🔧 In progress | 7 (001–007) |
 | `ENTR_NNN` | 🔧 In progress | 1 (001) |
-| `SIDE_NNN` | 🔧 In progress | 23 (001–023) |
+| `SIDE_NNN` | 🔧 In progress | 24 (001–024) |
 
 ## Validation Rules
 - **Rule A** — SR Legacy NDB canonical; all graded macros ±5%
@@ -147,7 +264,7 @@ Planned BKFST order (standalone components first, composites last):
 | BKFST_035 | Avocado Toast Tomato & Egg | (none) | Rule D ✅ — no canonical; 38g bread_multigrain_toasted(18036)+75g avocado_raw(9038)+5g lemon_juice_raw(9152)+4.5g olive_oil(4053)+68g tomato_red_raw(11529)+50g egg_cooked_poached(1131)+0.4g salt(2047)+0.3g red_pepper_flakes(2031); yfw=1.00 → 241.2g; 1 toast/serving; 149 kcal·5.8P·9.4F·11.6C per 100g; dietary_category=veggie |
 
 **Ingredients needed in ledger before building:**
-- (none outstanding — squash_yellow_raw (NDB 11641) added during SIDE_023 build; thyme_dried (NDB 2042) + okra_raw (NDB 11278) added during SAUCE_014/SIDE_021 build; pasta_dry_unenriched (NDB 20420) + tomatoes_canned_crushed (NDB 11693) added during SIDE_019/020 build; great_northern_beans_raw (NDB 16024) + salt_pork_raw (NDB 10165) added during SIDE_018 build; rosemary_fresh (NDB 2063) added during SIDE_017 build; potato_russet_raw (NDB 11353) added during SIDE_016 rebuild — May 2026; cabbage_red_raw (NDB 11112) + bell_pepper_red_raw (NDB 11821) + honey (NDB 19296) added during SIDE_014 build; cheese_brie (NDB 1006) added during SIDE_010 build; horseradish_prepared (NDB 2055) added during SAUCE_013 build; brown_sugar (NDB 19334) added during SAUCE_011 rebuild; mustard_seed_ground (NDB 2024) added during SAUCE_010 build; grapeseed_oil (NDB 4517) added during SAUCE_009 build; shallots_raw (NDB 11677) + tarragon_dried (NDB 2041) added during SAUCE_007 build; chicken_broth_canned (NDB 6194) added during SAUCE_006 build; tomato_puree (NDB 11547) added during SAUCE_005 build; white_pepper_ground (NDB 2032) added during SAUCE_001 build; beef_chili_no_beans (NDB 22911) added during SAND_065 build; celery_seed (NDB 2007) + peppers_hot_pickled (NDB 31034) added during SAND_064 build; frankfurter_beef (NDB 7022) added during SAND_063 build; tomato_red_raw (NDB 11529) added during BKFST_035 build (formerly cherry_tomato_raw); cheese_cheddar NDB 1009 + cheese_gruyere NDB 1023 added during SAND_001 build; cheese_american NDB 1253 added during SAND_002 build; mayonnaise NDB 4025 + lettuce_iceberg_raw NDB 11252 added during SAND_004 build; turkey_breast_deli NDB 7081 added during SAND_005 build; egg_cooked_hardboiled NDB 1129 + mustard_yellow NDB 2046 added during SAND_006 build; french_roll NDB 18349 + provolone_cheese NDB 1035 + tamari NDB 16124 added during SAND_042 build; oregano_dried NDB 2027 + basil_dried NDB 2003 added during SAND_043 build; pork_tenderloin_raw NDB 10214 + daikon_radish_raw NDB 11429 + carrot_raw NDB 11124 + cucumber_raw NDB 11205 + jalapeno_raw NDB 11979 + lime_juice_raw NDB 9160 + sesame_oil NDB 4058 added during SAND_050 build; focaccia_bread NDB 18414 + basil_fresh NDB 2044 + balsamic_vinegar NDB 2068 added during SAND_051 build; pita_white NDB 18413 + chickpeas_cooked NDB 16057 + chickpeas_raw_dried NDB 16056 + tahini NDB 12166 + coriander_seed NDB 2013 + cumin_ground NDB 2014 + mint_fresh NDB 2065 added during SAND_052 build; lamb_ground_raw NDB 17224 added during SAND_052/053 builds; smoked_salmon NDB 15086 added during BKFST_039 build; hamburger_bun NDB 18350 + ketchup NDB 11935 + pickle_dill NDB 11937 already in ledger — confirmed during SAND_055 build)
+- (none outstanding — sweet_potato_raw (NDB 11507) + maple_syrup (NDB 19353) added during SIDE_024 build; squash_yellow_raw (NDB 11641) added during SIDE_023 build; thyme_dried (NDB 2042) + okra_raw (NDB 11278) added during SAUCE_014/SIDE_021 build; pasta_dry_unenriched (NDB 20420) + tomatoes_canned_crushed (NDB 11693) added during SIDE_019/020 build; great_northern_beans_raw (NDB 16024) + salt_pork_raw (NDB 10165) added during SIDE_018 build; rosemary_fresh (NDB 2063) added during SIDE_017 build; potato_russet_raw (NDB 11353) added during SIDE_016 rebuild — May 2026; cabbage_red_raw (NDB 11112) + bell_pepper_red_raw (NDB 11821) + honey (NDB 19296) added during SIDE_014 build; cheese_brie (NDB 1006) added during SIDE_010 build; horseradish_prepared (NDB 2055) added during SAUCE_013 build; brown_sugar (NDB 19334) added during SAUCE_011 rebuild; mustard_seed_ground (NDB 2024) added during SAUCE_010 build; grapeseed_oil (NDB 4517) added during SAUCE_009 build; shallots_raw (NDB 11677) + tarragon_dried (NDB 2041) added during SAUCE_007 build; chicken_broth_canned (NDB 6194) added during SAUCE_006 build; tomato_puree (NDB 11547) added during SAUCE_005 build; white_pepper_ground (NDB 2032) added during SAUCE_001 build; beef_chili_no_beans (NDB 22911) added during SAND_065 build; celery_seed (NDB 2007) + peppers_hot_pickled (NDB 31034) added during SAND_064 build; frankfurter_beef (NDB 7022) added during SAND_063 build; tomato_red_raw (NDB 11529) added during BKFST_035 build (formerly cherry_tomato_raw); cheese_cheddar NDB 1009 + cheese_gruyere NDB 1023 added during SAND_001 build; cheese_american NDB 1253 added during SAND_002 build; mayonnaise NDB 4025 + lettuce_iceberg_raw NDB 11252 added during SAND_004 build; turkey_breast_deli NDB 7081 added during SAND_005 build; egg_cooked_hardboiled NDB 1129 + mustard_yellow NDB 2046 added during SAND_006 build; french_roll NDB 18349 + provolone_cheese NDB 1035 + tamari NDB 16124 added during SAND_042 build; oregano_dried NDB 2027 + basil_dried NDB 2003 added during SAND_043 build; pork_tenderloin_raw NDB 10214 + daikon_radish_raw NDB 11429 + carrot_raw NDB 11124 + cucumber_raw NDB 11205 + jalapeno_raw NDB 11979 + lime_juice_raw NDB 9160 + sesame_oil NDB 4058 added during SAND_050 build; focaccia_bread NDB 18414 + basil_fresh NDB 2044 + balsamic_vinegar NDB 2068 added during SAND_051 build; pita_white NDB 18413 + chickpeas_cooked NDB 16057 + chickpeas_raw_dried NDB 16056 + tahini NDB 12166 + coriander_seed NDB 2013 + cumin_ground NDB 2014 + mint_fresh NDB 2065 added during SAND_052 build; lamb_ground_raw NDB 17224 added during SAND_052/053 builds; smoked_salmon NDB 15086 added during BKFST_039 build; hamburger_bun NDB 18350 + ketchup NDB 11935 + pickle_dill NDB 11937 already in ledger — confirmed during SAND_055 build)
 
 ## Current Work: SAND Recipes
 
@@ -221,6 +338,7 @@ Planned BKFST order (standalone components first, composites last):
 | SIDE_021 | Stewed Okra and Tomatoes | (none) | Rule D ✅ — no canonical; 2-section: stew (boiled yfw=0.88): okra_raw(11278) 453.6g+tomatoes_canned_crushed(11693) 411.0g+onion_raw(11282) 150.0g+bell_pepper_green_raw(11333) 119.0g+celery_raw(11143) 75.0g+garlic_raw(11215) 12.0g+olive_oil(4053) 13.6g+salt+black_pepper; seasoning (raw yfw=1.0): @SAUCE_014 8.8g; 1114.8g cooked; 4 servings × 278.7g (1 cup); 47.9 kcal·1.82P·1.48F·8.39C·2.68Fi per 100g; dietary_category=vegan |
 | SIDE_022 | Fried Okra | (none) | Rule D ✅ — no canonical; 2-section: coating (fried yfw=0.75): okra_raw(11278) 453.6g+milk_buttermilk_whole(1230) 122.5g+cornmeal_enriched_yellow(20022) 138.0g+flour_ap_white_enriched_unbleached(20581) 31.25g+salt_table(2047) 3.0g+black_pepper_ground(2030) 0.575g+cayenne_pepper(2031) 0.45g+olive_oil(4053) 40.8g; seasoning (raw yfw=1.0): @SAUCE_014 8.7g; 665.5g cooked; 4 servings × 166.4g (1 cup); 186.4 kcal·4.06P·7.39F·26.96C·3.46Fi per 100g; dietary_category=veggie |
 | SIDE_023 | Fried Squash | (none) | Rule D ✅ — no canonical; 2-section: coating (fried yfw=0.75): squash_yellow_raw(11641) 453.6g+milk_buttermilk_whole(1230) 122.5g+egg_whole_raw(1123) 50.0g+cornmeal_enriched_yellow(20022) 103.5g+flour_ap_white_enriched_unbleached(20581) 62.5g+garlic_powder(2020) 0.775g+onion_powder(2026) 0.6g+salt_table(2047) 4.5g+black_pepper_ground(2030) 1.15g+olive_oil(4053) 40.8g; seasoning (raw yfw=1.0): @SAUCE_014 5.8g; 697.1g cooked; 4 servings × 174.3g (1 cup); 174.5 kcal·4.39P·7.65F·22.51C·1.80Fi per 100g; dietary_category=veggie |
+| SIDE_024 | Sweet Potato Casserole | (none) | Rule D ✅ — no canonical; 2-section: filling (baked yfw=0.85): sweet_potato_raw(11507) 1360.8g+maple_syrup(19353) 80.0g+butter_unsalted(1145) 56.8g+milk_whole(1077) 122.0g+egg_whole_raw(1123) 50.0g+vanilla_extract(2050) 4.2g+cinnamon_ground(2010) 2.6g+nutmeg_ground(2025) 0.55g+salt_table(2047) 3.0g; topping (baked yfw=0.95): oats_rolled_old_fashioned_dry(8120) 60.8g+pecans_raw(12142) 81.8g+maple_syrup(19353) 83.0g+cinnamon_ground(2010) 2.6g+butter_unsalted(1145) 42.6g+salt_table(2047) 1.5g; 1764.7g cooked; 8 servings × 220.6g (1 cup); 185.7 kcal·2.73P·8.68F·25.32C·3.27Fi per 100g; dietary_category=veggie |
 ## Current Work: SAND Recipes
 
 **Sandwiches planning**: `/Volumes/training/Daily Food Chain/daily-food-chain/docs/sandwiches.md`

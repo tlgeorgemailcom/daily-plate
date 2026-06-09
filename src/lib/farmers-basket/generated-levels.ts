@@ -9017,5 +9017,60 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sauce', label: 'Cheese Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'SIDE_024',
+    name: 'Sweet Potato Casserole',
+    category: 'sides',
+    dietaryCategory: 'veggie',
+    levelNum: 197,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cup (makes 8)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":409.5,"pro":6.0,"fat":19.1,"carb":55.9,"fib":7.2,"h2o":136.6,"sug":20.8,"perServing":{"cal":409.5,"pro":6.0,"fat":19.1,"carb":55.9,"fib":7.2,"h2o":136.6,"sug":20.8,"AddedSugars":12.3,"IntrinsicSugars":8.5},"micros":{"vitaminA":504.19,"vitaminC":1.05,"vitaminD":5.56,"vitaminE":0.38,"vitaminK":2.03,"vitaminB6":0.13,"vitaminB12":0.06,"thiamin":0.08,"riboflavin":0.19,"niacin":0.46,"folate":9.99,"calcium":51.44,"iron":0.82,"magnesium":32.99,"phosphorus":76.43,"potassium":327.07,"sodium":150.24,"zinc":0.78,"copper":0.19,"selenium":2.88,"cholesterol":23.34,"saturatedFat":3.4,"monoFat":3.27,"polyFat":1.06,"omega3":0.01,"omega6":0.14},"gramsPerServing":220.6,"servings":8,"per100g":{"Energy_KCal":185.66,"Water":61.91,"Protein":2.73,"TotalLipidFat":8.68,"Carbohydrate":25.32,"FiberTotalDietary":3.27,"SugarsTotal":9.43,"Cholesterol":23.34,"FattyAcids_totalSaturated":3.4,"FattyAcids_totalMonounsaturated":3.27,"FattyAcids_totalPolyunsaturated":1.06,"LinoleicAcid":0.14,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":504.19,"Retinol":38.62,"Carotene_beta":5258.16,"VitaminD":5.56,"VitaminE_alphaTocopherol":0.38,"VitaminK_phylloquinone":2.03,"VitaminC_totalAscorbicAcid":1.05,"Thiamin":0.08,"Riboflavin":0.19,"Niacin":0.46,"PantothenicAcid":0.66,"VitaminB6":0.13,"Folate_total":9.99,"Folate_food":9.99,"Folate_DFE":9.99,"FolicAcid":0.0,"VitaminB12":0.06,"Choline_total":20.98,"Betaine":0.09,"LuteinZeaxanthin":15.33,"Lycopene":0.04,"Calcium_Ca":51.44,"Iron_Fe":0.82,"Magnesium_Mg":32.99,"Phosphorus_P":76.43,"Potassium_K":327.07,"Sodium_Na":150.24,"Zinc_Zn":0.78,"Copper_Cu":0.19,"Manganese_Mn":0.85,"Selenium_Se":2.88,"Tryptophan":0.04,"Threonine":0.12,"Isoleucine":0.1,"Leucine":0.19,"Lysine":0.13,"Methionine":0.05,"Cystine":0.04,"Phenylalanine":0.14,"Tyrosine":0.07,"Valine":0.15,"Arginine":0.15,"Histidine":0.06,"Alanine":0.12,"AsparticAcid":0.44,"GlutamicAcid":0.4,"Glycine":0.11,"Proline":0.11,"Serine":0.15,"omega3":0.01,"omega6":0.14,"AddedSugars":5.58,"IntrinsicSugars":3.84},"addedSugars":12.3,"intrinsicSugars":8.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"11507","name":"Sweet potato, raw, unprepared","grams":170.1},{"ndb":"19353","name":"Syrups, maple","grams":10.0},{"ndb":"1145","name":"Butter, without salt","grams":7.1},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":15.2},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":6.2},{"ndb":"2050","name":"Vanilla extract","grams":0.5},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.3},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"8120","name":"Cereals, oats, regular and quick, not fortified, dry","grams":7.6},{"ndb":"12142","name":"Nuts, pecans","grams":10.2},{"ndb":"19353","name":"Syrups, maple","grams":10.4},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.3},{"ndb":"1145","name":"Butter, without salt","grams":5.3},{"ndb":"2047","name":"Salt, table","grams":0.2}],"sections":[{"section_key":"filling","section_label":"Sweet Potato Filling","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":1679.95,"raw_water_grams":1235.85,"raw_fat_grams":55.75,"raw_protein_grams":32.14,"raw_carb_grams":336.57,"final_grams":1494.57},{"section_key":"topping","section_label":"Oat Pecan Topping","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.95,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":272.3,"raw_water_grams":44.27,"raw_fat_grams":97.47,"raw_protein_grams":16.0,"raw_carb_grams":110.26,"final_grams":270.09}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Sweet Potato Casserole', quantity: 'custom (g)', foodWord: 'SWEETPOTATOCASSEROLE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'sweet potato (raw)', quantity: '3 lbs', section: 'filling', ndbNo: '11507', portionDesc: 'g', portionGrams: 1360.8 },
+      { name: 'maple syrup', quantity: '4 tbsp', section: 'filling', ndbNo: '19353', portionDesc: 'g', portionGrams: 80.0 },
+      { name: 'unsalted butter', quantity: '4 tbsp', section: 'filling', ndbNo: '1145', portionDesc: 'g', portionGrams: 56.8 },
+      { name: 'whole milk', quantity: '1/2 cup', section: 'filling', ndbNo: '1077', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'large egg', quantity: '1 large', section: 'filling', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'vanilla extract', quantity: '1 tsp', section: 'filling', ndbNo: '2050', portionDesc: 'g', portionGrams: 4.2 },
+      { name: 'ground cinnamon', quantity: '1 tsp', section: 'filling', ndbNo: '2010', portionDesc: 'g', portionGrams: 2.6 },
+      { name: 'ground nutmeg', quantity: '1/4 tsp', section: 'filling', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.55 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'rolled oats (regular/quick oats)', quantity: '3/4 cup', section: 'topping', ndbNo: '8120', portionDesc: 'g', portionGrams: 60.8 },
+      { name: 'pecan halves', quantity: '3/4 cup chopped', section: 'topping', ndbNo: '12142', portionDesc: 'g', portionGrams: 81.8 },
+      { name: 'maple syrup', quantity: '1/4 cup', section: 'topping', ndbNo: '19353', portionDesc: 'g', portionGrams: 83.0 },
+      { name: 'ground cinnamon', quantity: '1 tsp', section: 'topping', ndbNo: '2010', portionDesc: 'g', portionGrams: 2.6 },
+      { name: 'unsalted butter', quantity: '3 tbsp', section: 'topping', ndbNo: '1145', portionDesc: 'g', portionGrams: 42.6 },
+      { name: 'salt', quantity: '1/4 tsp', section: 'topping', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 }
+    ],
+    recipeInstructions: [
+      'Preheat oven to 375°F (190°C). Scrub sweet potatoes, pierce several times with a fork, and bake directly on the oven rack until completely tender, about 50–60 minutes.',
+      'Remove sweet potatoes from oven and let cool slightly. Reduce oven temperature to 350°F (175°C).',
+      'Peel the sweet potatoes and place the flesh in a large bowl. Mash until smooth.',
+      'Add maple syrup, butter, milk, egg, vanilla, cinnamon, nutmeg, and salt to the mashed sweet potatoes. Stir until fully combined and creamy.',
+      'Transfer the filling to a greased 9×13-inch baking dish and spread evenly.',
+      'Make the topping: combine rolled oats, chopped pecans, cinnamon, and salt in a bowl. Drizzle in maple syrup and melted butter and stir until evenly coated.',
+      'Spread the oat-pecan topping evenly over the sweet potato filling.',
+      'Bake at 350°F (175°C) for 25–30 minutes, until the topping is golden and the filling is heated through.',
+      'Let rest 5 minutes before serving.'
+    ],
+    sections: [
+      { key: 'filling', label: 'Sweet Potato Filling', cookingMethod: '', yieldFactorWater: 0.85 },
+      { key: 'topping', label: 'Oat Pecan Topping', cookingMethod: '', yieldFactorWater: 0.95 }
+    ],
   }
 ];

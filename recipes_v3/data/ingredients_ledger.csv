@@ -248,3 +248,5 @@ thyme_dried,2042,THYMEDRIED,"Spices, thyme, dried",dried thyme,teaspoon,1.4,adde
 okra_raw,11278,OKRARAW,"Okra, raw",okra,cup,100.0,added during SIDE_021 build
 cayenne_pepper,2031,CAYENNE,"Spices, pepper, red or cayenne",cayenne pepper,teaspoon,1.8,added during SAUCE_014 revision; same NDB as red_pepper_flakes
 squash_yellow_raw,11641,SQUASHYELLOW,"Squash, summer, all varieties, raw",yellow squash,cup,180.0,added during SIDE_023 build
+sweet_potato_raw,11507,SWEETPOTATORAW,"Sweet potato, raw, unprepared",sweet potato (raw),medium,130.0,added during SIDE_024 build
+maple_syrup,19353,MAPLESYPUP,"Syrups, maple",maple syrup,tablespoon,20.0,added during SIDE_024 build
