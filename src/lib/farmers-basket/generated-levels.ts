@@ -9528,5 +9528,52 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAUCE_024',
+    name: 'Caesar Salad Dressing',
+    category: 'sauces & condiments',
+    dietaryCategory: 'all',
+    levelNum: 208,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 tbsp (makes 7)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":166.7,"pro":2.3,"fat":17.3,"carb":1.1,"fib":0.1,"h2o":9.4,"sug":0.2,"perServing":{"cal":166.7,"pro":2.3,"fat":17.3,"carb":1.1,"fib":0.1,"h2o":9.4,"sug":0.2,"AddedSugars":0.0,"IntrinsicSugars":0.2},"micros":{"vitaminA":55.06,"vitaminC":6.56,"vitaminD":23.2,"vitaminE":7.69,"vitaminK":31.84,"vitaminB6":0.09,"vitaminB12":0.34,"thiamin":0.04,"riboflavin":0.11,"niacin":1.22,"folate":16.45,"calcium":173.28,"iron":1.13,"magnesium":13.84,"phosphorus":137.27,"potassium":104.61,"sodium":711.85,"zinc":0.71,"copper":0.05,"selenium":12.79,"cholesterol":98.04,"saturatedFat":9.75,"monoFat":38.88,"polyFat":5.89,"omega3":0.14,"omega6":0.02},"gramsPerServing":30.8,"servings":7,"per100g":{"Energy_KCal":540.41,"Water":30.48,"Protein":7.42,"TotalLipidFat":56.23,"Carbohydrate":3.42,"FiberTotalDietary":0.35,"SugarsTotal":0.79,"Cholesterol":98.04,"FattyAcids_totalSaturated":9.75,"FattyAcids_totalMonounsaturated":38.88,"FattyAcids_totalPolyunsaturated":5.89,"LinoleicAcid":0.02,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.04,"DPA_22_5n3":0.0,"DHA_22_6n3":0.08,"VitaminA_RAE":55.06,"Retinol":53.18,"Carotene_beta":19.04,"VitaminD":23.2,"VitaminE_alphaTocopherol":7.69,"VitaminK_phylloquinone":31.84,"VitaminC_totalAscorbicAcid":6.56,"Thiamin":0.04,"Riboflavin":0.11,"Niacin":1.22,"PantothenicAcid":0.39,"VitaminB6":0.09,"Folate_total":16.45,"Folate_food":16.45,"Folate_DFE":16.45,"FolicAcid":0.0,"VitaminB12":0.34,"Choline_total":73.73,"Betaine":0.15,"LuteinZeaxanthin":96.24,"Lycopene":0.05,"Calcium_Ca":173.28,"Iron_Fe":1.13,"Magnesium_Mg":13.84,"Phosphorus_P":137.27,"Potassium_K":104.61,"Sodium_Na":711.85,"Zinc_Zn":0.71,"Copper_Cu":0.05,"Manganese_Mn":0.11,"Selenium_Se":12.79,"Tryptophan":0.09,"Threonine":0.29,"Isoleucine":0.37,"Leucine":0.66,"Lysine":0.64,"Methionine":0.19,"Cystine":0.07,"Phenylalanine":0.35,"Tyrosine":0.35,"Valine":0.46,"Arginine":0.36,"Histidine":0.25,"Alanine":0.3,"AsparticAcid":0.58,"GlutamicAcid":1.4,"Glycine":0.2,"Proline":0.61,"Serine":0.42,"omega3":0.14,"omega6":0.02,"AddedSugars":0.0,"IntrinsicSugars":0.79},"addedSugars":0.0,"intrinsicSugars":0.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"1125","name":"Egg, yolk, raw, fresh","grams":2.4},{"ndb":"9152","name":"Lemon juice, raw","grams":4.3},{"ndb":"11215","name":"Garlic, raw","grams":0.9},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":1.4},{"ndb":"6971","name":"Sauce, worcestershire","grams":0.7},{"ndb":"15002","name":"Fish, anchovy, european, canned in oil, drained solids","grams":1.7},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":15.5},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":3.6},{"ndb":"2047","name":"Salt, table","grams":0.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"dressing","section_label":"Dressing","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":215.88,"raw_water_grams":65.8,"raw_fat_grams":121.39,"raw_protein_grams":16.02,"raw_carb_grams":7.39,"final_grams":215.88}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Caesar Salad Dressing', quantity: 'custom (g)', foodWord: 'CAESARDRESSING', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'egg yolks', quantity: '1 large yolk', section: 'dressing', ndbNo: '1125', portionDesc: 'g', portionGrams: 17.0 },
+      { name: 'lemon juice', quantity: '2 tbsp', section: 'dressing', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'garlic', quantity: '2 cloves', section: 'dressing', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'yellow mustard', quantity: '2 tsp', section: 'dressing', ndbNo: '2046', portionDesc: 'g', portionGrams: 10.0 },
+      { name: 'Worcestershire sauce', quantity: '1 tsp', section: 'dressing', ndbNo: '6971', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'anchovy canned', quantity: '3 fillets', section: 'dressing', ndbNo: '15002', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'olive oil', quantity: '½ cup', section: 'dressing', ndbNo: '4053', portionDesc: 'g', portionGrams: 108.8 },
+      { name: 'Parmesan cheese', quantity: '¼ cup grated', section: 'dressing', ndbNo: '1033', portionDesc: 'g', portionGrams: 25.0 },
+      { name: 'salt', quantity: '¼ tsp', section: 'dressing', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'dressing', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Mince the garlic and mash or finely chop the anchovy fillets into a paste.',
+      'Pasteurize the egg yolk: whisk it in a small bowl set over barely simmering water (double boiler), whisking constantly, until it reaches 145°F (63°C) and has slightly thickened, about 2–3 minutes. Remove from heat immediately and let cool for 1 minute.',
+      'Whisk the lemon juice, garlic, mustard, Worcestershire sauce, and anchovy paste into the warm yolk until fully combined.',
+      'Add the olive oil in a very slow, thin stream while whisking constantly to emulsify the dressing into a creamy consistency.',
+      'Fold in the freshly grated Parmesan. Season with salt and black pepper to taste.',
+      'If the dressing is too thick, thin with 1–2 tablespoons of water. Taste and adjust lemon juice or anchovy to preference.',
+      'Store refrigerated in a sealed jar for up to 5 days. Whisk or shake before each use.'
+    ],
+    sections: [
+      { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

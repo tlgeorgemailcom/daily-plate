@@ -206,7 +206,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
 | `BKFST_NNN` | 🔧 In progress | 39 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039) |
 | `SAND_NNN` | 🔧 In progress | 67 (001–067) |
-| `SAUCE_NNN` | 🔧 In progress | 23 (001–023) |
+| `SAUCE_NNN` | 🔧 In progress | 24 (001–024) |
 | `STOCK_NNN` | 🔧 In progress | 7 (001–007) |
 | `ENTR_NNN` | 🔧 In progress | 1 (001) |
 | `SIDE_NNN` | 🔧 In progress | 26 (001–026) |
@@ -297,6 +297,7 @@ Planned BKFST order (standalone components first, composites last):
 | SAUCE_021 | Blue Cheese Dressing | (none) | Rule D ✅ — no canonical; mayonnaise(4025) 112.0g+sour_cream(1056) 57.5g+milk_buttermilk_whole(1230) 61.25g+cheese_blue(1004) 56.7g+lemon_juice_raw(9152) 15.0g+worcestershire_sauce(6971) 2.5g+garlic_powder(2020) 0.775g+salt_table(2047) 1.5g+black_pepper_ground(2030) 0.3g; yfw=1.00 → 307.5g; 10+ servings × 30.8g (2 tbsp); 364.9 kcal·5.46P·36.85F·3.22C per 100g; dietary_category=veggie; cooking_method=raw |
 | SAUCE_022 | Honey Mustard Dressing | (none) | Rule D ✅ — no canonical; mayonnaise(4025) 112.0g+mustard_yellow(2046) 45.0g+honey(19296) 42.0g+lemon_juice_raw(9152) 5.0g+apple_cider_vinegar(2048) 5.0g+salt_table(2047) 1.5g+black_pepper_ground(2030) 0.575g; yfw=1.00 → 211.1g; 7 servings × 30.1g (2 tbsp); 435.8 kcal·1.40P·40.44F·18.30C per 100g; dietary_category=veggie; cooking_method=raw |
 | SAUCE_023 | Green Goddess Dressing | (none) | Rule D ✅ — no canonical; mayonnaise(4025) 112.0g+sour_cream(1056) 57.5g+parsley_fresh(11297) 30.4g+chives_raw(11156) 9.0g+dill_fresh(2045) 2.0g+tarragon_dried(2041) 0.75g+lemon_juice_raw(9152) 30.0g+olive_oil(4053) 13.6g+anchovy_canned(15002) 8.0g+garlic_raw(11215) 3.0g+salt_table(2047) 3.0g+black_pepper_ground(2030) 0.575g; yfw=1.00 → 269.8g; 9 servings × 30.0g (2 tbsp); 386.1 kcal·2.44P·40.70F·3.54C per 100g; dietary_category=all; cooking_method=raw |
+| SAUCE_024 | Caesar Salad Dressing | (none) | Rule D ✅ — no canonical; egg_yolk_raw(1125) 17.0g+lemon_juice_raw(9152) 30.0g+garlic_raw(11215) 6.0g+mustard_yellow(2046) 10.0g+worcestershire_sauce(6971) 5.0g+anchovy_canned(15002) 12.0g+olive_oil(4053) 108.8g+cheese_parmesan_hard(1033) 25.0g+salt_table(2047) 1.5g+black_pepper_ground(2030) 0.575g; yfw=1.00 → 215.9g; 7 servings × 30.8g (2 tbsp); 540.4 kcal·7.42P·56.23F·3.42C per 100g; dietary_category=all; cooking_method=raw; yolk pasteurized via double-boiler to 145°F |
 ## Current Work: STOCK Recipes
 
 **Stock/broth yield factor tiers:**
