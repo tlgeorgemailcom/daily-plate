@@ -1854,3 +1854,8 @@ SALAD_001,1,lettuce_romaine_raw,4 cups,188.0,,,salad,romaine,false,
 SALAD_001,2,croutons_plain,½ cup,15.0,,,salad,croutons,false,
 SALAD_001,3,cheese_parmesan_hard,¼ cup grated,25.0,,,salad,Parmesan,false,
 SALAD_001,4,@SAUCE_024,4 tbsp,61.7,,,dressing,Caesar dressing,false,Caesar dressing (4 tbsp total; 2 tbsp per serving)
+SALAD_002,1,chicken_breast_cooked_roasted,2 × 4 oz,226.8,,,chicken,chicken breast,false,sliced or chopped
+SALAD_002,2,lettuce_romaine_raw,4 cups,188.0,,,salad,romaine,false,
+SALAD_002,3,croutons_plain,½ cup,15.0,,,salad,croutons,false,
+SALAD_002,4,cheese_parmesan_hard,¼ cup grated,25.0,,,salad,Parmesan,false,
+SALAD_002,5,@SAUCE_024,4 tbsp,61.7,,,dressing,Caesar dressing,false,Caesar dressing (4 tbsp total; 2 tbsp per serving)

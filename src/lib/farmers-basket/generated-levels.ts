@@ -9617,5 +9617,50 @@ export const LEVELS: Level[] = [
       { key: 'salad', label: 'Caesar Salad', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'dressing', label: 'Caesar Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SALAD_002',
+    name: 'Chicken Caesar Salad',
+    category: 'salads',
+    dietaryCategory: 'all',
+    levelNum: 210,
+    recipe: ['lettuce', 'bacon', 'tomato'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'rabbit', delay: 3500 },
+      { type: 'fox', delay: 5000 },
+      { type: 'raccoon', delay: 6500 }
+    ],
+    foodSupply: { lettuce: 5, tomato: 3, carrot: 0, cheese: 0, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 4, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 servings',
+    prepTime: '',
+    linkType: 'dish',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":449.3,"pro":44.0,"fat":25.4,"carb":10.1,"fib":2.5,"h2o":176.4,"sug":1.5,"perServing":{"cal":449.3,"pro":44.0,"fat":25.4,"carb":10.1,"fib":2.5,"h2o":176.4,"sug":1.5,"AddedSugars":0.0,"IntrinsicSugars":1.5},"micros":{"vitaminA":177.93,"vitaminC":2.24,"vitaminD":5.89,"vitaminE":1.1,"vitaminK":41.33,"vitaminB6":0.3,"vitaminB12":0.25,"thiamin":0.08,"riboflavin":0.11,"niacin":6.45,"folate":57.4,"calcium":98.81,"iron":1.1,"magnesium":22.51,"phosphorus":164.37,"potassium":222.87,"sodium":207.32,"zinc":0.77,"copper":0.04,"selenium":15.97,"cholesterol":52.33,"saturatedFat":2.46,"monoFat":5.64,"polyFat":1.16,"omega3":0.03,"omega6":0.0},"gramsPerServing":258.2,"servings":2,"per100g":{"Energy_KCal":173.99,"Water":68.31,"Protein":17.03,"TotalLipidFat":9.84,"Carbohydrate":3.9,"FiberTotalDietary":0.95,"SugarsTotal":0.57,"Cholesterol":52.33,"FattyAcids_totalSaturated":2.46,"FattyAcids_totalMonounsaturated":5.64,"FattyAcids_totalPolyunsaturated":1.16,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.01,"DPA_22_5n3":0.0,"DHA_22_6n3":0.02,"VitaminA_RAE":177.93,"Retinol":18.72,"Carotene_beta":1907.67,"VitaminD":5.89,"VitaminE_alphaTocopherol":1.1,"VitaminK_phylloquinone":41.33,"VitaminC_totalAscorbicAcid":2.24,"Thiamin":0.08,"Riboflavin":0.11,"Niacin":6.45,"PantothenicAcid":0.55,"VitaminB6":0.3,"Folate_total":57.4,"Folate_food":54.2,"Folate_DFE":59.63,"FolicAcid":3.19,"VitaminB12":0.25,"Choline_total":50.61,"Betaine":2.78,"LuteinZeaxanthin":853.04,"Lycopene":0.01,"Calcium_Ca":98.81,"Iron_Fe":1.1,"Magnesium_Mg":22.51,"Phosphorus_P":164.37,"Potassium_K":222.87,"Sodium_Na":207.32,"Zinc_Zn":0.77,"Copper_Cu":0.04,"Manganese_Mn":0.09,"Selenium_Se":15.97,"Tryptophan":0.2,"Threonine":0.7,"Isoleucine":0.88,"Leucine":1.31,"Lysine":1.42,"Methionine":0.45,"Cystine":0.2,"Phenylalanine":0.71,"Tyrosine":0.61,"Valine":0.88,"Arginine":0.96,"Histidine":0.53,"Alanine":0.86,"AsparticAcid":1.45,"GlutamicAcid":2.78,"Glycine":0.75,"Proline":0.89,"Serine":0.65,"omega3":0.03,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.57},"addedSugars":0.0,"intrinsicSugars":1.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"5064","name":"Chicken, broilers or fryers, breast, meat only, cooked, roasted","grams":113.4},{"ndb":"11251","name":"Lettuce, cos or romaine, raw","grams":94.0},{"ndb":"18242","name":"Croutons, plain","grams":7.5},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":12.5},{"ndb":"","name":"Caesar Salad Dressing","grams":30.9}],"sections":[{"section_key":"chicken","section_label":"Chicken","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":226.8,"raw_water_grams":148.01,"raw_fat_grams":8.1,"raw_protein_grams":70.35,"raw_carb_grams":0.0,"final_grams":226.8},{"section_key":"salad","section_label":"Caesar Salad","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":228.0,"raw_water_grams":185.98,"raw_fat_grams":8.01,"raw_protein_grams":13.03,"raw_carb_grams":18.02,"final_grams":228.0},{"section_key":"dressing","section_label":"Caesar Dressing","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":61.7,"raw_water_grams":18.81,"raw_fat_grams":34.69,"raw_protein_grams":4.58,"raw_carb_grams":2.11,"final_grams":61.7}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken Caesar Salad', quantity: 'custom (g)', foodWord: 'CHICKENCAESARSALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'sliced or chopped', quantity: '2 × 4 oz', section: 'chicken', ndbNo: '5064', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'romaine lettuce', quantity: '4 cups', section: 'salad', ndbNo: '11251', portionDesc: 'g', portionGrams: 188.0 },
+      { name: 'plain croutons', quantity: '½ cup', section: 'salad', ndbNo: '18242', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'Parmesan cheese', quantity: '¼ cup grated', section: 'salad', ndbNo: '1033', portionDesc: 'g', portionGrams: 25.0 },
+      { name: 'Caesar dressing (4 tbsp total; 2 tbsp per serving)', quantity: '4 tbsp', section: 'dressing', foodWord: 'CAESARDRESSING', portionDesc: 'g', portionGrams: 61.7, isDish: true, componentRef: 'SAUCE_024' }
+    ],
+    recipeInstructions: [
+      'Season the chicken breast with salt and pepper. Grill or pan-sear over medium-high heat until cooked through, about 6–7 minutes per side. Let rest 5 minutes, then slice or chop.',
+      'Wash and dry the romaine leaves. Tear or chop into bite-sized pieces and place in a large bowl.',
+      'Add the croutons and freshly grated Parmesan.',
+      'Drizzle the Caesar dressing over the salad and toss well to coat every leaf evenly.',
+      'Divide between two plates and top each with the sliced chicken breast.',
+      'Finish with an extra pinch of Parmesan and freshly cracked black pepper. Serve immediately.'
+    ],
+    sections: [
+      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'salad', label: 'Caesar Salad', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'dressing', label: 'Caesar Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
