@@ -4049,7 +4049,8 @@ export const LEVELS: Level[] = [
       { name: 'salt', quantity: '¼ tsp', section: 'sandwich', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 }
     ],
     recipeInstructions: [
-      'Heat a lightly oiled skillet over medium-high heat. Season the chicken breast with salt and pepper and pan-sear until cooked through (internal temperature 165°F / 74°C), about 6–7 minutes per side. Let rest 5 minutes, then shred or chop. Refrigerate until cool.',
+      'Heat a lightly oiled skillet over medium-high heat. Season the chicken breast with salt and pepper and pan-sear until cooked through (internal temperature 165°F / 74°C), about 6–7 minutes per side. Let rest 5 minutes.',
+      'Shred or chop the chicken into bite-sized pieces. Refrigerate until cool, at least 15 minutes.',
       'In a bowl, combine the Greek yogurt, lemon juice, and salt. Stir to mix.',
       'Add the shredded chicken, diced apple, chopped celery, and green onion. Toss to coat evenly.',
       'Spread the chicken salad evenly over one bread slice and top with the second slice.',
