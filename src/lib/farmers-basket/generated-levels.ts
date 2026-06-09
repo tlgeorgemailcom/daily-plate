@@ -9662,5 +9662,50 @@ export const LEVELS: Level[] = [
       { key: 'salad', label: 'Caesar Salad', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'dressing', label: 'Caesar Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SALAD_003',
+    name: 'Cobb Salad',
+    category: 'salads',
+    dietaryCategory: 'all',
+    levelNum: 211,
+    recipe: ['fish', 'carrot', 'tomato'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'bird', delay: 3500 },
+      { type: 'rabbit', delay: 5000 },
+      { type: 'raccoon', delay: 6500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 3, carrot: 4, cheese: 0, egg: 0, bread: 0, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 5 },
+    servings: '2 servings',
+    prepTime: '',
+    linkType: 'dish',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":570.2,"pro":49.7,"fat":35.5,"carb":13.9,"fib":7.5,"h2o":315.4,"sug":4.1,"perServing":{"cal":570.2,"pro":49.7,"fat":35.5,"carb":13.9,"fib":7.5,"h2o":315.4,"sug":4.1,"AddedSugars":0.0,"IntrinsicSugars":4.1},"micros":{"vitaminA":137.82,"vitaminC":4.5,"vitaminD":13.72,"vitaminE":0.64,"vitaminK":27.77,"vitaminB6":0.25,"vitaminB12":0.34,"thiamin":0.09,"riboflavin":0.16,"niacin":3.89,"folate":55.99,"calcium":56.75,"iron":0.79,"magnesium":20.0,"phosphorus":133.71,"potassium":287.06,"sodium":203.28,"zinc":0.87,"copper":0.06,"selenium":13.18,"cholesterol":72.12,"saturatedFat":2.86,"monoFat":3.7,"polyFat":1.05,"omega3":0.04,"omega6":0.29},"gramsPerServing":419.9,"servings":2,"per100g":{"Energy_KCal":135.78,"Water":75.12,"Protein":11.83,"TotalLipidFat":8.44,"Carbohydrate":3.31,"FiberTotalDietary":1.79,"SugarsTotal":0.97,"Cholesterol":72.12,"FattyAcids_totalSaturated":2.86,"FattyAcids_totalMonounsaturated":3.7,"FattyAcids_totalPolyunsaturated":1.05,"LinoleicAcid":0.29,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":137.82,"Retinol":32.4,"Carotene_beta":1252.2,"VitaminD":13.72,"VitaminE_alphaTocopherol":0.64,"VitaminK_phylloquinone":27.77,"VitaminC_totalAscorbicAcid":4.5,"Thiamin":0.09,"Riboflavin":0.16,"Niacin":3.89,"PantothenicAcid":0.82,"VitaminB6":0.25,"Folate_total":55.99,"Folate_food":55.99,"Folate_DFE":55.99,"FolicAcid":0.0,"VitaminB12":0.34,"Choline_total":63.85,"Betaine":1.92,"LuteinZeaxanthin":621.6,"Lycopene":376.85,"Calcium_Ca":56.75,"Iron_Fe":0.79,"Magnesium_Mg":20.0,"Phosphorus_P":133.71,"Potassium_K":287.06,"Sodium_Na":203.28,"Zinc_Zn":0.87,"Copper_Cu":0.06,"Manganese_Mn":0.08,"Selenium_Se":13.18,"Tryptophan":0.14,"Threonine":0.5,"Isoleucine":0.6,"Leucine":0.92,"Lysine":0.97,"Methionine":0.32,"Cystine":0.15,"Phenylalanine":0.51,"Tyrosine":0.45,"Valine":0.63,"Arginine":0.67,"Histidine":0.37,"Alanine":0.61,"AsparticAcid":1.07,"GlutamicAcid":1.92,"Glycine":0.5,"Proline":0.56,"Serine":0.51,"omega3":0.04,"omega6":0.29,"AddedSugars":0.0,"IntrinsicSugars":0.97},"addedSugars":0.0,"intrinsicSugars":4.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"11251","name":"Lettuce, cos or romaine, raw","grams":94.0},{"ndb":"5064","name":"Chicken, broilers or fryers, breast, meat only, cooked, roasted","grams":85.0},{"ndb":"10862","name":"Pork, cured, bacon, pre-sliced, cooked, pan-fried","grams":23.0},{"ndb":"9038","name":"Avocados, raw, California","grams":68.0},{"ndb":"1129","name":"Egg, whole, cooked, hard-boiled","grams":50.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":61.5},{"ndb":"1004","name":"Cheese, blue","grams":28.4},{"ndb":"11282","name":"Onions, raw","grams":10.0}],"sections":[{"section_key":"salad","section_label":"Cobb Salad","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":839.8,"raw_water_grams":630.87,"raw_fat_grams":70.91,"raw_protein_grams":99.36,"raw_carb_grams":27.82,"final_grams":839.8}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Cobb Salad', quantity: 'custom (g)', foodWord: 'COBBSALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'romaine lettuce', quantity: '4 cups shredded', section: 'salad', ndbNo: '11251', portionDesc: 'g', portionGrams: 188.0 },
+      { name: 'sliced', quantity: '6 oz', section: 'salad', ndbNo: '5064', portionDesc: 'g', portionGrams: 170.1 },
+      { name: 'crumbled', quantity: '4 slices', section: 'salad', ndbNo: '10862', portionDesc: 'g', portionGrams: 46.0 },
+      { name: 'diced', quantity: '1 fruit', section: 'salad', ndbNo: '9038', portionDesc: 'g', portionGrams: 136.0 },
+      { name: 'quartered', quantity: '2 large', section: 'salad', ndbNo: '1129', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'diced', quantity: '1 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'crumbled', quantity: '2 oz', section: 'salad', ndbNo: '1004', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'thinly sliced', quantity: '⅛ cup', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 20.0 }
+    ],
+    recipeInstructions: [
+      'Cook bacon in a skillet over medium heat until crisp, about 8 minutes. Drain on paper towels, then crumble.',
+      'Season chicken breast with salt and pepper. Grill or pan-sear over medium-high heat until cooked through (internal temperature 165°F / 74°C), about 6–7 minutes per side. Let rest 5 minutes, then slice or chop.',
+      'Arrange the romaine on a large platter or divide between two bowls.',
+      'Arrange the chicken, bacon, avocado, hard-boiled eggs, tomato, blue cheese, and onion in rows or sections over the romaine.',
+      'Season lightly with salt and pepper. Serve with blue cheese dressing or ranch dressing on the side (see SAUCE_021 or SAUCE_020).'
+    ],
+    sections: [
+      { key: 'salad', label: 'Cobb Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
