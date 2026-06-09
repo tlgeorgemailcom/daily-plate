@@ -9125,5 +9125,54 @@ export const LEVELS: Level[] = [
       { key: 'filling', label: 'Sweet Potato Filling', cookingMethod: '', yieldFactorWater: 0.85 },
       { key: 'topping', label: 'Oat Pecan Topping', cookingMethod: '', yieldFactorWater: 0.95 }
     ],
+  },
+  {
+    id: 'SIDE_026',
+    name: 'Marshmallow Sweet Potato Casserole',
+    category: 'sides',
+    dietaryCategory: 'veggie',
+    levelNum: 199,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '3/4 cup (makes 8)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":283.9,"pro":4.2,"fat":7.0,"carb":52.2,"fib":5.3,"h2o":133.4,"sug":21.2,"perServing":{"cal":283.9,"pro":4.2,"fat":7.0,"carb":52.2,"fib":5.3,"h2o":133.4,"sug":21.2,"AddedSugars":13.2,"IntrinsicSugars":8.0},"micros":{"vitaminA":542.29,"vitaminC":1.13,"vitaminD":6.15,"vitaminE":0.29,"vitaminK":1.78,"vitaminB6":0.13,"vitaminB12":0.06,"thiamin":0.05,"riboflavin":0.14,"niacin":0.42,"folate":9.16,"calcium":43.94,"iron":0.61,"magnesium":23.92,"phosphorus":54.4,"potassium":315.05,"sodium":133.65,"zinc":0.41,"copper":0.14,"selenium":1.94,"cholesterol":20.09,"saturatedFat":2.06,"monoFat":0.97,"polyFat":0.15,"omega3":0.01,"omega6":0.11},"gramsPerServing":199.3,"servings":8,"per100g":{"Energy_KCal":142.41,"Water":66.91,"Protein":2.13,"TotalLipidFat":3.51,"Carbohydrate":26.21,"FiberTotalDietary":2.66,"SugarsTotal":10.65,"Cholesterol":20.09,"FattyAcids_totalSaturated":2.06,"FattyAcids_totalMonounsaturated":0.97,"FattyAcids_totalPolyunsaturated":0.15,"LinoleicAcid":0.11,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":542.29,"Retinol":27.51,"Carotene_beta":5814.31,"VitaminD":6.15,"VitaminE_alphaTocopherol":0.29,"VitaminK_phylloquinone":1.78,"VitaminC_totalAscorbicAcid":1.13,"Thiamin":0.05,"Riboflavin":0.14,"Niacin":0.42,"PantothenicAcid":0.65,"VitaminB6":0.13,"Folate_total":9.16,"Folate_food":9.16,"Folate_DFE":9.16,"FolicAcid":0.0,"VitaminB12":0.06,"Choline_total":19.42,"Betaine":0.06,"LuteinZeaxanthin":11.29,"Lycopene":0.02,"Calcium_Ca":43.94,"Iron_Fe":0.61,"Magnesium_Mg":23.92,"Phosphorus_P":54.4,"Potassium_K":315.05,"Sodium_Na":133.65,"Zinc_Zn":0.41,"Copper_Cu":0.14,"Manganese_Mn":0.39,"Selenium_Se":1.94,"Tryptophan":0.03,"Threonine":0.1,"Isoleucine":0.08,"Leucine":0.14,"Lysine":0.11,"Methionine":0.04,"Cystine":0.02,"Phenylalanine":0.11,"Tyrosine":0.05,"Valine":0.12,"Arginine":0.09,"Histidine":0.04,"Alanine":0.1,"AsparticAcid":0.4,"GlutamicAcid":0.25,"Glycine":0.1,"Proline":0.1,"Serine":0.12,"omega3":0.01,"omega6":0.11,"AddedSugars":6.64,"IntrinsicSugars":4.01},"addedSugars":13.2,"intrinsicSugars":8.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"11507","name":"Sweet potato, raw, unprepared","grams":170.1},{"ndb":"19353","name":"Syrups, maple","grams":10.0},{"ndb":"1145","name":"Butter, without salt","grams":7.1},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":15.2},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":6.2},{"ndb":"2050","name":"Vanilla extract","grams":0.5},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.3},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"19116","name":"Candies, marshmallows","grams":12.5}],"sections":[{"section_key":"filling","section_label":"Sweet Potato Filling","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":1679.95,"raw_water_grams":1235.85,"raw_fat_grams":55.75,"raw_protein_grams":32.14,"raw_carb_grams":336.57,"final_grams":1494.57},{"section_key":"topping","section_label":"Marshmallow Topping","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":100.0,"raw_water_grams":16.4,"raw_fat_grams":0.2,"raw_protein_grams":1.8,"raw_carb_grams":81.3,"final_grams":100.0}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Marshmallow Sweet Potato Casserole', quantity: 'custom (g)', foodWord: 'SWEETPOTATOCASSEROLEMAR', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'sweet potato (raw)', quantity: '3 lbs', section: 'filling', ndbNo: '11507', portionDesc: 'g', portionGrams: 1360.8 },
+      { name: 'maple syrup', quantity: '4 tbsp', section: 'filling', ndbNo: '19353', portionDesc: 'g', portionGrams: 80.0 },
+      { name: 'unsalted butter', quantity: '4 tbsp', section: 'filling', ndbNo: '1145', portionDesc: 'g', portionGrams: 56.8 },
+      { name: 'whole milk', quantity: '1/2 cup', section: 'filling', ndbNo: '1077', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'large egg', quantity: '1 large', section: 'filling', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'vanilla extract', quantity: '1 tsp', section: 'filling', ndbNo: '2050', portionDesc: 'g', portionGrams: 4.2 },
+      { name: 'ground cinnamon', quantity: '1 tsp', section: 'filling', ndbNo: '2010', portionDesc: 'g', portionGrams: 2.6 },
+      { name: 'ground nutmeg', quantity: '1/4 tsp', section: 'filling', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.55 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'mini marshmallows', quantity: '2 cups', section: 'topping', ndbNo: '19116', portionDesc: 'g', portionGrams: 100.0 }
+    ],
+    recipeInstructions: [
+      'Preheat oven to 375°F (190°C). Scrub sweet potatoes, pierce several times with a fork, and bake directly on the oven rack until completely tender, about 50–60 minutes.',
+      'Remove sweet potatoes from oven and let cool slightly. Reduce oven temperature to 350°F (175°C).',
+      'Peel the sweet potatoes and place the flesh in a large bowl. Mash until smooth.',
+      'Add maple syrup, butter, milk, egg, vanilla, cinnamon, nutmeg, and salt to the mashed sweet potatoes. Stir until fully combined and creamy.',
+      'Transfer the filling to a greased 9×13-inch baking dish and spread evenly.',
+      'Scatter mini marshmallows in an even layer over the top of the sweet potato filling.',
+      'Bake at 350°F (175°C) for 20–25 minutes, until the marshmallows are puffed and golden brown on top.',
+      'Let rest 5 minutes before serving.'
+    ],
+    sections: [
+      { key: 'filling', label: 'Sweet Potato Filling', cookingMethod: '', yieldFactorWater: 0.85 },
+      { key: 'topping', label: 'Marshmallow Topping', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
