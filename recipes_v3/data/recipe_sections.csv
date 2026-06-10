@@ -324,3 +324,8 @@ SALAD_002,salad,Caesar Salad,,raw,1.0,1.0,1.0,1.0,1.0,,,,
 SALAD_002,dressing,Caesar Dressing,,raw,1.0,1.0,1.0,1.0,1.0,,,,SAUCE_024
 SALAD_003,chicken,Chicken,,pan grilled,0.75,1.0,1.0,1.0,1.0,,,,
 SALAD_003,salad,Cobb Salad,,raw,1.0,1.0,1.0,1.0,1.0,,,,
+SALAD_004,salad,Chef Salad,,raw,1.0,1.0,1.0,1.0,1.0,,,,
+SALAD_005,salad,Greek Salad,,raw,1.0,1.0,1.0,1.0,1.0,,,,
+SALAD_005,dressing,Italian Vinaigrette,,raw,1.0,1.0,1.0,1.0,1.0,,,,SAUCE_017
+SALAD_006,beef,Beef,,pan grilled,0.75,0.593,1.0,1.0,1.0,,,,
+SALAD_006,salad,Taco Salad,,raw,1.0,1.0,1.0,1.0,1.0,,,,

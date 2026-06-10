@@ -9711,5 +9711,135 @@ export const LEVELS: Level[] = [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
       { key: 'salad', label: 'Cobb Salad', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SALAD_004',
+    name: 'Chef Salad',
+    category: 'salads',
+    dietaryCategory: 'all',
+    levelNum: 212,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 servings',
+    prepTime: '',
+    linkType: 'dish',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":314.2,"pro":26.0,"fat":18.9,"carb":10.1,"fib":2.9,"h2o":343.6,"sug":6.3,"perServing":{"cal":314.2,"pro":26.0,"fat":18.9,"carb":10.1,"fib":2.9,"h2o":343.6,"sug":6.3,"AddedSugars":0.0,"IntrinsicSugars":6.3},"micros":{"vitaminA":57.58,"vitaminC":3.56,"vitaminD":15.17,"vitaminE":0.36,"vitaminK":11.08,"vitaminB6":0.11,"vitaminB12":0.29,"thiamin":0.09,"riboflavin":0.14,"niacin":1.14,"folate":22.58,"calcium":67.78,"iron":0.5,"magnesium":12.12,"phosphorus":106.46,"potassium":185.32,"sodium":241.27,"zinc":0.74,"copper":0.04,"selenium":8.28,"cholesterol":61.18,"saturatedFat":2.03,"monoFat":1.56,"polyFat":0.49,"omega3":0.0,"omega6":0.07},"gramsPerServing":403.4,"servings":2,"per100g":{"Energy_KCal":77.89,"Water":85.19,"Protein":6.45,"TotalLipidFat":4.69,"Carbohydrate":2.5,"FiberTotalDietary":0.71,"SugarsTotal":1.55,"Cholesterol":61.18,"FattyAcids_totalSaturated":2.03,"FattyAcids_totalMonounsaturated":1.56,"FattyAcids_totalPolyunsaturated":0.49,"LinoleicAcid":0.07,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":57.58,"Retinol":41.54,"Carotene_beta":187.12,"VitaminD":15.17,"VitaminE_alphaTocopherol":0.36,"VitaminK_phylloquinone":11.08,"VitaminC_totalAscorbicAcid":3.56,"Thiamin":0.09,"Riboflavin":0.14,"Niacin":1.14,"PantothenicAcid":0.36,"VitaminB6":0.11,"Folate_total":22.58,"Folate_food":22.58,"Folate_DFE":22.58,"FolicAcid":0.0,"VitaminB12":0.29,"Choline_total":50.36,"Betaine":0.89,"LuteinZeaxanthin":163.76,"Lycopene":392.31,"Calcium_Ca":67.78,"Iron_Fe":0.5,"Magnesium_Mg":12.12,"Phosphorus_P":106.46,"Potassium_K":185.32,"Sodium_Na":241.27,"Zinc_Zn":0.74,"Copper_Cu":0.04,"Manganese_Mn":0.08,"Selenium_Se":8.28,"Tryptophan":0.09,"Threonine":0.28,"Isoleucine":0.29,"Leucine":0.5,"Lysine":0.43,"Methionine":0.16,"Cystine":0.08,"Phenylalanine":0.28,"Tyrosine":0.24,"Valine":0.32,"Arginine":0.32,"Histidine":0.17,"Alanine":0.32,"AsparticAcid":0.6,"GlutamicAcid":1.13,"Glycine":0.24,"Proline":0.36,"Serine":0.29,"omega3":0.0,"omega6":0.07,"AddedSugars":0.0,"IntrinsicSugars":1.55},"addedSugars":0.0,"intrinsicSugars":6.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"11252","name":"Lettuce, iceberg (includes crisphead types), raw","grams":144.0},{"ndb":"7081","name":"Turkey breast, sliced, prepackaged","grams":32.0},{"ndb":"10136","name":"Pork, cured, ham, boneless, regular (approximately 11% fat), roasted","grams":28.0},{"ndb":"1129","name":"Egg, whole, cooked, hard-boiled","grams":50.0},{"ndb":"1009","name":"Cheese, cheddar","grams":28.4},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":61.5},{"ndb":"11206","name":"Cucumber, peeled, raw","grams":59.5}],"sections":[{"section_key":"salad","section_label":"Chef Salad","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":806.7,"raw_water_grams":687.19,"raw_fat_grams":37.8,"raw_protein_grams":52.07,"raw_carb_grams":20.19,"final_grams":806.7}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Chef Salad', quantity: 'custom (g)', foodWord: 'CHEFSALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'iceberg lettuce', quantity: '4 cups', section: 'salad', ndbNo: '11252', portionDesc: 'g', portionGrams: 288.0 },
+      { name: 'deli turkey breast', quantity: '4 slices', section: 'salad', ndbNo: '7081', portionDesc: 'g', portionGrams: 64.0 },
+      { name: 'diced ham', quantity: '2 oz', section: 'salad', ndbNo: '10136', portionDesc: 'g', portionGrams: 56.0 },
+      { name: 'hard-boiled egg', quantity: '2 large', section: 'salad', ndbNo: '1129', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'Cheddar cheese', quantity: '2 oz', section: 'salad', ndbNo: '1009', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'tomato', quantity: '1 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'cucumber peeled', quantity: '1 cup sliced', section: 'salad', ndbNo: '11206', portionDesc: 'g', portionGrams: 119.0 }
+    ],
+    recipeInstructions: [
+      'Layer the lettuce in a large bowl or divide between two plates.',
+      'Arrange the turkey, ham, hard-boiled eggs, cheddar cheese, tomato, and cucumber on top of the lettuce.',
+      'Season lightly with salt and pepper if desired.',
+      'Serve with your choice of dressing. Ranch Dressing, Honey Mustard Dressing, or Italian Vinaigrette are all excellent choices.'
+    ],
+    sections: [
+      { key: 'salad', label: 'Chef Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
+    id: 'SALAD_005',
+    name: 'Greek Salad',
+    category: 'salads',
+    dietaryCategory: 'veggie',
+    levelNum: 213,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 servings',
+    prepTime: '',
+    linkType: 'dish',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":309.9,"pro":6.7,"fat":27.1,"carb":12.5,"fib":4.4,"h2o":269.1,"sug":6.2,"perServing":{"cal":309.9,"pro":6.7,"fat":27.1,"carb":12.5,"fib":4.4,"h2o":269.1,"sug":6.2,"AddedSugars":0.5,"IntrinsicSugars":5.7},"micros":{"vitaminA":151.08,"vitaminC":5.64,"vitaminD":1.42,"vitaminE":1.12,"vitaminK":40.98,"vitaminB6":0.1,"vitaminB12":0.15,"thiamin":0.05,"riboflavin":0.1,"niacin":0.32,"folate":50.28,"calcium":68.56,"iron":0.8,"magnesium":11.97,"phosphorus":50.64,"potassium":166.14,"sodium":198.5,"zinc":0.43,"copper":0.06,"selenium":1.66,"cholesterol":7.9,"saturatedFat":2.23,"monoFat":5.1,"polyFat":0.78,"omega3":0.0,"omega6":0.0},"gramsPerServing":319.6,"servings":2,"per100g":{"Energy_KCal":96.97,"Water":84.2,"Protein":2.08,"TotalLipidFat":8.47,"Carbohydrate":3.92,"FiberTotalDietary":1.38,"SugarsTotal":1.92,"Cholesterol":7.9,"FattyAcids_totalSaturated":2.23,"FattyAcids_totalMonounsaturated":5.1,"FattyAcids_totalPolyunsaturated":0.78,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":151.08,"Retinol":11.09,"Carotene_beta":1663.52,"VitaminD":1.42,"VitaminE_alphaTocopherol":1.12,"VitaminK_phylloquinone":40.98,"VitaminC_totalAscorbicAcid":5.64,"Thiamin":0.05,"Riboflavin":0.1,"Niacin":0.32,"PantothenicAcid":0.2,"VitaminB6":0.1,"Folate_total":50.28,"Folate_food":50.28,"Folate_DFE":50.28,"FolicAcid":0.0,"VitaminB12":0.15,"Choline_total":7.96,"Betaine":0.1,"LuteinZeaxanthin":758.93,"Lycopene":495.34,"Calcium_Ca":68.56,"Iron_Fe":0.8,"Magnesium_Mg":11.97,"Phosphorus_P":50.64,"Potassium_K":166.14,"Sodium_Na":198.5,"Zinc_Zn":0.43,"Copper_Cu":0.06,"Manganese_Mn":0.11,"Selenium_Se":1.66,"Tryptophan":0.02,"Threonine":0.08,"Isoleucine":0.09,"Leucine":0.16,"Lysine":0.14,"Methionine":0.04,"Cystine":0.01,"Phenylalanine":0.09,"Tyrosine":0.07,"Valine":0.12,"Arginine":0.08,"Histidine":0.05,"Alanine":0.09,"AsparticAcid":0.15,"GlutamicAcid":0.41,"Glycine":0.03,"Proline":0.14,"Serine":0.13,"omega3":0.0,"omega6":0.0,"AddedSugars":0.15,"IntrinsicSugars":1.77},"addedSugars":0.5,"intrinsicSugars":5.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"11251","name":"Lettuce, cos or romaine, raw","grams":94.0},{"ndb":"11206","name":"Cucumber, peeled, raw","grams":59.5},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":61.5},{"ndb":"9193","name":"Olives, ripe, canned (small-extra large)","grams":22.0},{"ndb":"1019","name":"Cheese, feta","grams":28.4},{"ndb":"11282","name":"Onions, raw","grams":20.0},{"ndb":"","name":"Italian Vinaigrette","grams":34.2}],"sections":[{"section_key":"salad","section_label":"Greek Salad","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":570.7,"raw_water_grams":511.38,"raw_fat_grams":17.81,"raw_protein_grams":12.96,"raw_carb_grams":22.35,"final_grams":570.7},{"section_key":"dressing","section_label":"Italian Vinaigrette","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":68.4,"raw_water_grams":26.76,"raw_fat_grams":36.35,"raw_protein_grams":0.35,"raw_carb_grams":2.72,"final_grams":68.4}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Greek Salad', quantity: 'custom (g)', foodWord: 'GREEKSALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'romaine lettuce', quantity: '4 cups shredded', section: 'salad', ndbNo: '11251', portionDesc: 'g', portionGrams: 188.0 },
+      { name: 'cucumber peeled', quantity: '1 cup sliced', section: 'salad', ndbNo: '11206', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'tomato', quantity: '1 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'black olives canned', quantity: '10 large', section: 'salad', ndbNo: '9193', portionDesc: 'g', portionGrams: 44.0 },
+      { name: 'feta cheese crumbles', quantity: '2 oz', section: 'salad', ndbNo: '1019', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'onion', quantity: '¼ cup', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'Italian vinaigrette (4 tbsp total; 2 tbsp per serving)', quantity: '4 tbsp', section: 'dressing', foodWord: 'ITALIANVINAIGRETTE', portionDesc: 'g', portionGrams: 68.4, isDish: true, componentRef: 'SAUCE_017' }
+    ],
+    recipeInstructions: [
+      'Combine the romaine lettuce, cucumber, tomato, black olives, feta cheese, and onion in a large bowl.',
+      'Drizzle with Italian Vinaigrette (2 tbsp per serving) and toss gently to coat.',
+      'Serve immediately or refrigerate up to 1 hour before serving (add dressing just before serving if making ahead).'
+    ],
+    sections: [
+      { key: 'salad', label: 'Greek Salad', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'dressing', label: 'Italian Vinaigrette', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
+    id: 'SALAD_006',
+    name: 'Taco Salad',
+    category: 'salads',
+    dietaryCategory: 'all',
+    levelNum: 214,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 servings',
+    prepTime: '',
+    linkType: 'dish',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":547.7,"pro":32.8,"fat":29.0,"carb":41.9,"fib":11.3,"h2o":341.7,"sug":6.8,"perServing":{"cal":547.7,"pro":32.8,"fat":29.0,"carb":41.9,"fib":11.3,"h2o":341.7,"sug":6.8,"AddedSugars":0.0,"IntrinsicSugars":6.8},"micros":{"vitaminA":43.14,"vitaminC":3.16,"vitaminD":2.05,"vitaminE":0.51,"vitaminK":10.75,"vitaminB6":0.1,"vitaminB12":0.44,"thiamin":0.08,"riboflavin":0.08,"niacin":0.9,"folate":44.15,"calcium":73.69,"iron":1.17,"magnesium":26.8,"phosphorus":110.01,"potassium":228.06,"sodium":135.14,"zinc":1.39,"copper":0.07,"selenium":5.34,"cholesterol":23.4,"saturatedFat":3.39,"monoFat":2.77,"polyFat":0.64,"omega3":0.02,"omega6":0.33},"gramsPerServing":450.4,"servings":2,"per100g":{"Energy_KCal":121.59,"Water":75.86,"Protein":7.28,"TotalLipidFat":6.43,"Carbohydrate":9.31,"FiberTotalDietary":2.51,"SugarsTotal":1.52,"Cholesterol":23.4,"FattyAcids_totalSaturated":3.39,"FattyAcids_totalMonounsaturated":2.77,"FattyAcids_totalPolyunsaturated":0.64,"LinoleicAcid":0.33,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":43.14,"Retinol":29.1,"Carotene_beta":165.46,"VitaminD":2.05,"VitaminE_alphaTocopherol":0.51,"VitaminK_phylloquinone":10.75,"VitaminC_totalAscorbicAcid":3.16,"Thiamin":0.08,"Riboflavin":0.08,"Niacin":0.9,"PantothenicAcid":0.23,"VitaminB6":0.1,"Folate_total":44.15,"Folate_food":44.15,"Folate_DFE":44.15,"FolicAcid":0.0,"VitaminB12":0.44,"Choline_total":22.17,"Betaine":1.71,"LuteinZeaxanthin":106.78,"Lycopene":351.33,"Calcium_Ca":73.69,"Iron_Fe":1.17,"Magnesium_Mg":26.8,"Phosphorus_P":110.01,"Potassium_K":228.06,"Sodium_Na":135.14,"Zinc_Zn":1.39,"Copper_Cu":0.07,"Manganese_Mn":0.18,"Selenium_Se":5.34,"Tryptophan":0.08,"Threonine":0.28,"Isoleucine":0.31,"Leucine":0.54,"Lysine":0.48,"Methionine":0.15,"Cystine":0.06,"Phenylalanine":0.3,"Tyrosine":0.23,"Valine":0.36,"Arginine":0.37,"Histidine":0.19,"Alanine":0.34,"AsparticAcid":0.68,"GlutamicAcid":1.22,"Glycine":0.33,"Proline":0.42,"Serine":0.29,"omega3":0.02,"omega6":0.33,"AddedSugars":0.0,"IntrinsicSugars":1.52},"addedSugars":0.0,"intrinsicSugars":6.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":85.0},{"ndb":"2014","name":"Spices, cumin seed","grams":1.0},{"ndb":"2020","name":"Spices, garlic powder","grams":0.8},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"11252","name":"Lettuce, iceberg (includes crisphead types), raw","grams":144.0},{"ndb":"16015","name":"Beans, black, mature seeds, cooked, boiled, without salt","grams":86.0},{"ndb":"1009","name":"Cheese, cheddar","grams":28.4},{"ndb":"19056","name":"Snacks, tortilla chips, plain, white corn, salted","grams":14.2},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":61.5},{"ndb":"1056","name":"Cream, sour, cultured","grams":28.8},{"ndb":"11282","name":"Onions, raw","grams":20.0}],"sections":[{"section_key":"beef","section_label":"Beef","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":0.593,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":175.72,"raw_water_grams":105.58,"raw_fat_grams":34.5,"raw_protein_grams":29.88,"raw_carb_grams":2.38,"final_grams":135.29},{"section_key":"salad","section_label":"Taco Salad","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":765.55,"raw_water_grams":604.17,"raw_fat_grams":37.49,"raw_protein_grams":35.74,"raw_carb_grams":81.49,"final_grams":765.55}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Taco Salad', quantity: 'custom (g)', foodWord: 'TACOSALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'ground beef (80% lean)', quantity: '6 oz', section: 'beef', ndbNo: '23572', portionDesc: 'g', portionGrams: 170.1 },
+      { name: 'ground cumin', quantity: '1 tsp', section: 'beef', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'garlic powder', quantity: '½ tsp', section: 'beef', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.55 },
+      { name: 'salt', quantity: '¼ tsp', section: 'beef', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'beef', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'iceberg lettuce', quantity: '4 cups', section: 'salad', ndbNo: '11252', portionDesc: 'g', portionGrams: 288.0 },
+      { name: 'black beans', quantity: '1 cup', section: 'salad', ndbNo: '16015', portionDesc: 'g', portionGrams: 172.0 },
+      { name: 'Cheddar cheese', quantity: '2 oz', section: 'salad', ndbNo: '1009', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'tortilla chips', quantity: '1 oz', section: 'salad', ndbNo: '19056', portionDesc: 'g', portionGrams: 28.35 },
+      { name: 'tomato', quantity: '1 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'sour cream', quantity: '¼ cup', section: 'salad', ndbNo: '1056', portionDesc: 'g', portionGrams: 57.5 },
+      { name: 'onion', quantity: '¼ cup', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 40.0 }
+    ],
+    recipeInstructions: [
+      'Heat a lightly oiled skillet over medium-high heat. Add the ground beef and cook, breaking it up, until browned and cooked through, about 6–8 minutes.',
+      'Drain off excess fat. Season the beef with cumin, garlic powder, salt, and black pepper. Stir well and cook 1 minute more. Remove from heat and let cool slightly.',
+      'Divide the iceberg lettuce between two large bowls or plates. Top with the seasoned beef, black beans, cheddar cheese, tortilla chips, tomato, sour cream, and onion.',
+      'Serve immediately so the tortilla chips stay crisp.',
+      'Nutrition note: values reflect 6 oz raw ground beef (80% lean) with fat drained; serving weight approximately 449g per person.'
+    ],
+    sections: [
+      { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.75, yieldFactorFat: 0.593 },
+      { key: 'salad', label: 'Taco Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
