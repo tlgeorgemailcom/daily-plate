@@ -9968,5 +9968,51 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'salad', label: 'Caprese Salad', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SALAD_010',
+    name: 'Chickpea Salad',
+    category: 'salads',
+    dietaryCategory: 'veggie',
+    levelNum: 218,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 servings',
+    prepTime: '',
+    linkType: 'dish',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":476.4,"pro":17.2,"fat":25.6,"carb":48.4,"fib":13.1,"h2o":330.0,"sug":13.7,"perServing":{"cal":476.4,"pro":17.2,"fat":25.6,"carb":48.4,"fib":13.1,"h2o":330.0,"sug":13.7,"AddedSugars":0.0,"IntrinsicSugars":13.7},"micros":{"vitaminA":45.91,"vitaminC":24.77,"vitaminD":1.06,"vitaminE":0.98,"vitaminK":36.89,"vitaminB6":0.13,"vitaminB12":0.11,"thiamin":0.06,"riboflavin":0.09,"niacin":0.49,"folate":65.85,"calcium":60.65,"iron":1.34,"magnesium":22.49,"phosphorus":85.08,"potassium":198.76,"sodium":172.05,"zinc":0.77,"copper":0.14,"selenium":2.21,"cholesterol":5.92,"saturatedFat":1.6,"monoFat":3.2,"polyFat":0.78,"omega3":0.0,"omega6":0.0},"gramsPerServing":426.2,"servings":2,"per100g":{"Energy_KCal":111.75,"Water":77.42,"Protein":4.04,"TotalLipidFat":6.0,"Carbohydrate":11.36,"FiberTotalDietary":3.07,"SugarsTotal":3.22,"Cholesterol":5.92,"FattyAcids_totalSaturated":1.6,"FattyAcids_totalMonounsaturated":3.2,"FattyAcids_totalPolyunsaturated":0.78,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":45.91,"Retinol":8.31,"Carotene_beta":405.56,"VitaminD":1.06,"VitaminE_alphaTocopherol":0.98,"VitaminK_phylloquinone":36.89,"VitaminC_totalAscorbicAcid":24.77,"Thiamin":0.06,"Riboflavin":0.09,"Niacin":0.49,"PantothenicAcid":0.26,"VitaminB6":0.13,"Folate_total":65.85,"Folate_food":65.85,"Folate_DFE":65.85,"FolicAcid":0.0,"VitaminB12":0.11,"Choline_total":17.41,"Betaine":0.06,"LuteinZeaxanthin":153.96,"Lycopene":371.24,"Calcium_Ca":60.65,"Iron_Fe":1.34,"Magnesium_Mg":22.49,"Phosphorus_P":85.08,"Potassium_K":198.76,"Sodium_Na":172.05,"Zinc_Zn":0.77,"Copper_Cu":0.14,"Manganese_Mn":0.36,"Selenium_Se":2.21,"Tryptophan":0.04,"Threonine":0.15,"Isoleucine":0.17,"Leucine":0.29,"Lysine":0.27,"Methionine":0.06,"Cystine":0.04,"Phenylalanine":0.2,"Tyrosine":0.11,"Valine":0.19,"Arginine":0.29,"Histidine":0.1,"Alanine":0.17,"AsparticAcid":0.43,"GlutamicAcid":0.75,"Glycine":0.12,"Proline":0.21,"Serine":0.22,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":3.22},"addedSugars":0.0,"intrinsicSugars":13.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"16057","name":"Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt","grams":123.0},{"ndb":"11205","name":"Cucumber, with peel, raw","grams":75.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":61.5},{"ndb":"11821","name":"Peppers, sweet, red, raw","grams":59.5},{"ndb":"11282","name":"Onions, raw","grams":20.0},{"ndb":"1019","name":"Cheese, feta","grams":28.4},{"ndb":"9193","name":"Olives, ripe, canned (small-extra large)","grams":22.0},{"ndb":"11297","name":"Parsley, fresh","grams":7.5},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":13.5},{"ndb":"9152","name":"Lemon juice, raw","grams":15.0},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"salad","section_label":"Chickpea Salad","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":12,"raw_grams":852.5,"raw_water_grams":659.99,"raw_fat_grams":51.14,"raw_protein_grams":34.48,"raw_carb_grams":96.88,"final_grams":852.5}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Chickpea Salad', quantity: 'custom (g)', foodWord: 'CHICKPEASALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chickpeas, cooked', quantity: '1½ cups', section: 'salad', ndbNo: '16057', portionDesc: 'g', portionGrams: 246.0 },
+      { name: 'Cucumber, raw', quantity: '1 cup diced', section: 'salad', ndbNo: '11205', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'tomato', quantity: '1 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'red bell pepper', quantity: '1 medium', section: 'salad', ndbNo: '11821', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'onion', quantity: '¼ cup', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'feta cheese crumbles', quantity: '2 oz', section: 'salad', ndbNo: '1019', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'black olives canned', quantity: '10 large', section: 'salad', ndbNo: '9193', portionDesc: 'g', portionGrams: 44.0 },
+      { name: 'fresh parsley', quantity: '¼ cup', section: 'salad', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'salad', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.0 },
+      { name: 'lemon juice', quantity: '2 tbsp', section: 'salad', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'salt', quantity: '¼ tsp', section: 'salad', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '⅛ tsp', section: 'salad', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 }
+    ],
+    recipeInstructions: [
+      'Drain and rinse the chickpeas. Dice the cucumber, tomato, and red bell pepper into ½-inch pieces. Thinly slice the onion.',
+      'Combine chickpeas, cucumber, tomato, bell pepper, onion, olives, and parsley in a large bowl.',
+      'Whisk together olive oil, lemon juice, salt, and pepper. Pour over the salad and toss to coat.',
+      'Crumble feta over the top. Toss gently and serve immediately, or refrigerate up to 2 days (the flavors improve as the salad sits).'
+    ],
+    sections: [
+      { key: 'salad', label: 'Chickpea Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
