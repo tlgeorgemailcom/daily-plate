@@ -10260,5 +10260,55 @@ export const LEVELS: Level[] = [
       { key: 'orzo', label: 'Orzo', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'salad', label: 'Mediterranean salad', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SALAD_016',
+    name: 'Mediterranean Pasta Salad',
+    category: 'salads',
+    dietaryCategory: 'all',
+    levelNum: 224,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '4 servings',
+    prepTime: '',
+    linkType: 'dish',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":448.3,"pro":15.8,"fat":20.4,"carb":50.9,"fib":4.8,"h2o":209.7,"sug":4.5,"perServing":{"cal":448.3,"pro":15.8,"fat":20.4,"carb":50.9,"fib":4.8,"h2o":209.7,"sug":4.5,"AddedSugars":0.2,"IntrinsicSugars":4.3},"micros":{"vitaminA":27.41,"vitaminC":9.45,"vitaminD":0.94,"vitaminE":0.7,"vitaminK":10.68,"vitaminB6":0.09,"vitaminB12":0.2,"thiamin":0.07,"riboflavin":0.06,"niacin":0.7,"folate":16.77,"calcium":53.09,"iron":0.64,"magnesium":18.77,"phosphorus":78.36,"potassium":138.15,"sodium":248.55,"zinc":0.69,"copper":0.1,"selenium":13.34,"cholesterol":7.02,"saturatedFat":1.95,"monoFat":3.73,"polyFat":0.68,"omega3":0.0,"omega6":0.0},"gramsPerServing":300.8,"servings":4,"per100g":{"Energy_KCal":149.04,"Water":69.73,"Protein":5.24,"TotalLipidFat":6.79,"Carbohydrate":16.92,"FiberTotalDietary":1.6,"SugarsTotal":1.5,"Cholesterol":7.02,"FattyAcids_totalSaturated":1.95,"FattyAcids_totalMonounsaturated":3.73,"FattyAcids_totalPolyunsaturated":0.68,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":27.41,"Retinol":10.84,"Carotene_beta":177.56,"VitaminD":0.94,"VitaminE_alphaTocopherol":0.7,"VitaminK_phylloquinone":10.68,"VitaminC_totalAscorbicAcid":9.45,"Thiamin":0.07,"Riboflavin":0.06,"Niacin":0.7,"PantothenicAcid":0.2,"VitaminB6":0.09,"Folate_total":16.77,"Folate_food":16.77,"Folate_DFE":16.77,"FolicAcid":0.0,"VitaminB12":0.2,"Choline_total":5.83,"Betaine":0.06,"LuteinZeaxanthin":129.92,"Lycopene":263.15,"Calcium_Ca":53.09,"Iron_Fe":0.64,"Magnesium_Mg":18.77,"Phosphorus_P":78.36,"Potassium_K":138.15,"Sodium_Na":248.55,"Zinc_Zn":0.69,"Copper_Cu":0.1,"Manganese_Mn":0.24,"Selenium_Se":13.34,"Tryptophan":0.06,"Threonine":0.19,"Isoleucine":0.2,"Leucine":0.38,"Lysine":0.28,"Methionine":0.08,"Cystine":0.07,"Phenylalanine":0.24,"Tyrosine":0.15,"Valine":0.25,"Arginine":0.22,"Histidine":0.14,"Alanine":0.19,"AsparticAcid":0.34,"GlutamicAcid":1.43,"Glycine":0.18,"Proline":0.49,"Serine":0.24,"omega3":0.0,"omega6":0.0,"AddedSugars":0.08,"IntrinsicSugars":1.42},"addedSugars":0.2,"intrinsicSugars":4.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20420","name":"Pasta, dry, unenriched","grams":56.7},{"ndb":"14411","name":"Water, tap, drinking","grams":236.5},{"ndb":"","name":"Italian Vinaigrette","grams":17.1},{"ndb":"7926","name":"Salami, Italian, pork","grams":14.2},{"ndb":"1035","name":"Cheese, provolone","grams":14.2},{"ndb":"9193","name":"Olives, ripe, canned (small-extra large)","grams":11.0},{"ndb":"11008","name":"Artichokes, (globe or french), cooked, boiled, drained, without salt","grams":25.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":30.8},{"ndb":"11821","name":"Peppers, sweet, red, raw","grams":15.0},{"ndb":"11206","name":"Cucumber, peeled, raw","grams":25.0},{"ndb":"11282","name":"Onions, raw","grams":10.0},{"ndb":"2044","name":"Basil, fresh","grams":2.5},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"pasta","section_label":"Pasta","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.34811726353257855,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":1172.8,"raw_water_grams":967.51,"raw_fat_grams":3.42,"raw_protein_grams":29.57,"raw_carb_grams":169.35,"final_grams":542.1},{"section_key":"dressing","section_label":"Italian Vinaigrette","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":68.5,"raw_water_grams":26.8,"raw_fat_grams":36.4,"raw_protein_grams":0.35,"raw_carb_grams":2.73,"final_grams":68.5},{"section_key":"salad","section_label":"Mediterranean salad","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":592.48,"raw_water_grams":475.35,"raw_fat_grams":41.82,"raw_protein_grams":33.15,"raw_carb_grams":31.53,"final_grams":592.48}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Mediterranean Pasta Salad', quantity: 'custom (g)', foodWord: 'MEDPASTASALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'elbow macaroni, dry', quantity: '8 oz dry', section: 'pasta', ndbNo: '20420', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'water', quantity: '4 cups', section: 'pasta', ndbNo: '14411', portionDesc: 'g', portionGrams: 946.0 },
+      { name: 'Italian vinaigrette (2 servings; 2 tbsp per serving)', quantity: '2 servings', section: 'dressing', foodWord: 'ITALIANVINAIGRETTE', portionDesc: 'g', portionGrams: 68.5, isDish: true, componentRef: 'SAUCE_017' },
+      { name: 'Salami, Italian dry', quantity: '2 oz', section: 'salad', ndbNo: '7926', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'provolone cheese', quantity: '2 oz', section: 'salad', ndbNo: '1035', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'black olives canned', quantity: '¼ cup', section: 'salad', ndbNo: '9193', portionDesc: 'g', portionGrams: 44.0 },
+      { name: 'artichoke hearts cooked', quantity: '3½ oz', section: 'salad', ndbNo: '11008', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'tomato', quantity: '1 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'red bell pepper', quantity: '½ medium', section: 'salad', ndbNo: '11821', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'cucumber peeled', quantity: '½ medium', section: 'salad', ndbNo: '11206', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'onion', quantity: '¼ cup', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'fresh basil', quantity: '¼ cup', section: 'salad', ndbNo: '2044', portionDesc: 'g', portionGrams: 10.0 },
+      { name: 'salt', quantity: '¼ tsp', section: 'salad', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'salad', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Cook pasta in a large pot of salted boiling water until al dente (about 9–11 minutes). Drain, rinse under cold water, and spread on a sheet pan to cool completely.',
+      'Slice salami and provolone into bite-sized pieces. Quarter the artichoke hearts. Chop the tomato, cucumber, and bell pepper. Drain the olives.',
+      'Combine cooled pasta, salami, provolone, olives, artichoke hearts, tomato, bell pepper, cucumber, onion, and basil in a large bowl.',
+      'Drizzle Italian vinaigrette over the salad. Season with salt and pepper. Toss to coat evenly. Refrigerate at least 30 minutes before serving.'
+    ],
+    sections: [
+      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'dressing', label: 'Italian Vinaigrette', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'salad', label: 'Mediterranean salad', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
