@@ -360,6 +360,26 @@ Planned BKFST order (standalone components first, composites last):
 | SALAD_004 | Chef Salad | (none) | Rule D ✅ — no canonical; lettuce_iceberg_raw(11252) 288.0g+turkey_breast_deli(7081) 64.0g+ham_diced_cooked(10136) 56.0g+egg_cooked_hardboiled(1129) 100.0g+cheese_cheddar(1009) 56.7g+tomato_red_raw(11529) 123.0g+cucumber_peeled_raw(11206) 119.0g; 806.7g; 2 servings × 403.4g; 77.9 kcal·7.72P·5.59F·2.86C per 100g; 314 kcal/serving; dietary_category=all; no dressing included (instructions suggest Ranch, Honey Mustard, or Italian Vinaigrette) |
 | SALAD_005 | Greek Salad | @SAUCE_017 included | Rule D ✅ — lettuce_romaine_raw(11251) 188.0g+cucumber_peeled_raw(11206) 119.0g+tomato_red_raw(11529) 123.0g+olives_black_canned(9193) 44.0g+cheese_feta(1019) 56.7g+onion_raw(11282) 40.0g+@SAUCE_017 68.4g; 639.1g; 2 servings × 319.6g; 97.0 kcal·2.08P·8.47F·3.92C per 100g; 310 kcal/serving; dietary_category=veggie; composite (dish) |
 | SALAD_006 | Taco Salad | sour cream | Rule D ✅ — beef_ground_80lean_raw(23572) 170.1g pan grilled yfw=0.75 yff=0.593+cumin_ground(2014) 2.0g+garlic_powder(2020) 1.55g+salt_table(2047) 1.5g+black_pepper_ground(2030) 0.575g; lettuce_iceberg_raw(11252) 288.0g+beans_black_cooked(16015) 172.0g+cheese_cheddar(1009) 56.7g+tortilla_chips_plain(19056) 28.35g+tomato_red_raw(11529) 123.0g+sour_cream(1056) 57.5g+onion_raw(11282) 40.0g; 900.8g; 2 servings × 450.4g; 121.6 kcal·8.64P·7.65F·10.47C per 100g; 548 kcal/serving; dietary_category=all; Atwater energy recomputed (yff=0.593) |
+| SALAD_007 | Asparagus Salad | vinaigrette | planned |
+| SALAD_008 | Burrata Salad | olive oil & balsamic | planned |
+| SALAD_009 | Caprese Salad | olive oil & balsamic | planned |
+| SALAD_010 | Chickpea Salad | vinaigrette | planned |
+| SALAD_011 | Chicken Pasta Salad | (none) | planned |
+| SALAD_012 | Chicken & Artichoke Pasta Salad | (none) | planned |
+| SALAD_013 | Gnocchi Antipasto Salad | vinaigrette | planned |
+| SALAD_014 | Grilled Chicken Salad | vinaigrette | planned |
+| SALAD_015 | Mediterranean Orzo Salad | vinaigrette | planned |
+| SALAD_016 | Mediterranean Pasta Salad | vinaigrette | planned |
+| SALAD_017 | Ramen Noodle Salad | (none) | planned |
+| SALAD_018 | Shrimp Caesar Salad | @SAUCE_024 | planned |
+| SALAD_019 | Southwestern Salad | (none) | planned |
+| SALAD_020 | Shrimp and Avocado Salad | vinaigrette | planned |
+| SALAD_021 | Tuna Macaroni Salad | (none) | planned |
+| SALAD_022 | Wedge Salad | blue cheese or ranch | planned |
+| SALAD_023 | Nicoise Salad | vinaigrette | planned |
+| SALAD_024 | Spinach Salad | vinaigrette | planned |
+| SALAD_025 | Three Bean Salad | vinaigrette | planned |
+| SALAD_026 | Waldorf Salad | (none) | planned |
 
 ## Current Work: SAND Recipes
 
