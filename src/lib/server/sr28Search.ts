@@ -81,6 +81,7 @@ function buildSearchWhere(query: string, scope: Sr28SearchScope): { sql: string;
   const terms = query
     .toLowerCase()
     .trim()
+    .replace(/[^a-z0-9\s]/g, ' ')   // strip commas and other punctuation (handles USDA Long_Desc format)
     .split(/\s+/)
     .filter(Boolean);
 
