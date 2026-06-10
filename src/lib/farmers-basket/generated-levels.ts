@@ -10163,5 +10163,53 @@ export const LEVELS: Level[] = [
       { key: 'dressing', label: 'Italian Vinaigrette', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'salad', label: 'Antipasto Salad', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SALAD_014',
+    name: 'Grilled Chicken Salad',
+    category: 'salads',
+    dietaryCategory: 'all',
+    levelNum: 222,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 servings',
+    prepTime: '',
+    linkType: 'dish',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":571.6,"pro":42.3,"fat":35.8,"carb":19.9,"fib":5.6,"h2o":410.2,"sug":7.7,"perServing":{"cal":571.6,"pro":42.3,"fat":35.8,"carb":19.9,"fib":5.6,"h2o":410.2,"sug":7.7,"AddedSugars":0.4,"IntrinsicSugars":7.3},"micros":{"vitaminA":146.8,"vitaminC":10.97,"vitaminD":0.31,"vitaminE":1.16,"vitaminK":25.76,"vitaminB6":0.26,"vitaminB12":0.06,"thiamin":0.06,"riboflavin":0.08,"niacin":2.88,"folate":37.79,"calcium":16.33,"iron":0.53,"magnesium":17.87,"phosphorus":89.59,"potassium":250.2,"sodium":121.94,"zinc":0.37,"copper":0.04,"selenium":8.27,"cholesterol":24.18,"saturatedFat":1.03,"monoFat":4.55,"polyFat":0.76,"omega3":0.0,"omega6":0.08},"gramsPerServing":513.5,"servings":2,"per100g":{"Energy_KCal":111.32,"Water":79.9,"Protein":8.23,"TotalLipidFat":6.98,"Carbohydrate":3.88,"FiberTotalDietary":1.09,"SugarsTotal":1.49,"Cholesterol":24.18,"FattyAcids_totalSaturated":1.03,"FattyAcids_totalMonounsaturated":4.55,"FattyAcids_totalPolyunsaturated":0.76,"LinoleicAcid":0.08,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":146.8,"Retinol":2.39,"Carotene_beta":1603.77,"VitaminD":0.31,"VitaminE_alphaTocopherol":1.16,"VitaminK_phylloquinone":25.76,"VitaminC_totalAscorbicAcid":10.97,"Thiamin":0.06,"Riboflavin":0.08,"Niacin":2.88,"PantothenicAcid":0.52,"VitaminB6":0.26,"Folate_total":37.79,"Folate_food":36.19,"Folate_DFE":38.92,"FolicAcid":1.61,"VitaminB12":0.06,"Choline_total":29.27,"Betaine":2.42,"LuteinZeaxanthin":459.69,"Lycopene":308.24,"Calcium_Ca":16.33,"Iron_Fe":0.53,"Magnesium_Mg":17.87,"Phosphorus_P":89.59,"Potassium_K":250.2,"Sodium_Na":121.94,"Zinc_Zn":0.37,"Copper_Cu":0.04,"Manganese_Mn":0.1,"Selenium_Se":8.27,"Tryptophan":0.1,"Threonine":0.36,"Isoleucine":0.39,"Leucine":0.66,"Lysine":0.75,"Methionine":0.2,"Cystine":0.08,"Phenylalanine":0.33,"Tyrosine":0.28,"Valine":0.41,"Arginine":0.54,"Histidine":0.29,"Alanine":0.47,"AsparticAcid":0.78,"GlutamicAcid":1.33,"Glycine":0.35,"Proline":0.27,"Serine":0.31,"omega3":0.0,"omega6":0.08,"AddedSugars":0.08,"IntrinsicSugars":1.41},"addedSugars":0.4,"intrinsicSugars":7.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":170.1},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"2020","name":"Spices, garlic powder","grams":0.4},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"","name":"Basic Vinaigrette","grams":33.6},{"ndb":"11251","name":"Lettuce, cos or romaine, raw","grams":94.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":61.5},{"ndb":"11206","name":"Cucumber, peeled, raw","grams":100.5},{"ndb":"11821","name":"Peppers, sweet, red, raw","grams":30.0},{"ndb":"11282","name":"Onions, raw","grams":9.0},{"ndb":"11124","name":"Carrots, raw","grams":30.5},{"ndb":"18242","name":"Croutons, plain","grams":7.5}],"sections":[{"section_key":"chicken","section_label":"Grilled chicken","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":356.65,"raw_water_grams":251.53,"raw_fat_grams":22.54,"raw_protein_grams":76.73,"raw_carb_grams":0.93,"final_grams":293.77},{"section_key":"dressing","section_label":"Basic Vinaigrette","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":67.2,"raw_water_grams":17.26,"raw_fat_grams":46.63,"raw_protein_grams":0.1,"raw_carb_grams":1.41,"final_grams":67.2},{"section_key":"salad","section_label":"Garden salad","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":666.0,"raw_water_grams":614.6,"raw_fat_grams":2.47,"raw_protein_grams":7.73,"raw_carb_grams":37.48,"final_grams":666.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Grilled Chicken Salad', quantity: 'custom (g)', foodWord: 'GRILLEDCHICKENSALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chicken breast', quantity: '12 oz', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 340.2 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'garlic powder', quantity: '¼ tsp', section: 'chicken', ndbNo: '2020', portionDesc: 'g', portionGrams: 0.775 },
+      { name: 'salt', quantity: '¼ tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'Basic vinaigrette (2 servings; 2 tbsp per serving)', quantity: '2 servings', section: 'dressing', foodWord: 'BASICVINAIGRETTE', portionDesc: 'g', portionGrams: 67.2, isDish: true, componentRef: 'SAUCE_016' },
+      { name: 'romaine lettuce', quantity: '4 cups', section: 'salad', ndbNo: '11251', portionDesc: 'g', portionGrams: 188.0 },
+      { name: 'tomato', quantity: '1 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'cucumber peeled', quantity: '1 medium', section: 'salad', ndbNo: '11206', portionDesc: 'g', portionGrams: 201.0 },
+      { name: 'red bell pepper', quantity: '½ medium', section: 'salad', ndbNo: '11821', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'onion', quantity: '2 thin slices', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'Carrot, raw', quantity: '1 medium', section: 'salad', ndbNo: '11124', portionDesc: 'g', portionGrams: 61.0 },
+      { name: 'plain croutons', quantity: '¼ cup', section: 'salad', ndbNo: '18242', portionDesc: 'g', portionGrams: 15.0 }
+    ],
+    recipeInstructions: [
+      'Season chicken breast with garlic powder, salt, and pepper. Brush with olive oil. Cook in a grill pan or skillet over medium-high heat, 6–7 minutes per side, until an instant-read thermometer reads 165°F (74°C). Let rest 5 minutes, then slice on the bias.',
+      'While chicken rests, arrange romaine, tomato, cucumber, bell pepper, onion, carrot, and croutons in a large bowl or on a platter.',
+      'Top salad with sliced chicken. Drizzle with basic vinaigrette and serve immediately.'
+    ],
+    sections: [
+      { key: 'chicken', label: 'Grilled chicken', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'dressing', label: 'Basic Vinaigrette', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'salad', label: 'Garden salad', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

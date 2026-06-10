@@ -343,3 +343,6 @@ SALAD_012,salad,Salad,,raw,1.0,1.0,1.0,1.0,1.0,,,,
 SALAD_013,gnocchi,Potato Gnocchi,,raw,1.0,1.0,1.0,1.0,1.0,,,,SIDE_011
 SALAD_013,dressing,Italian Vinaigrette,,raw,1.0,1.0,1.0,1.0,1.0,,,,SAUCE_017
 SALAD_013,salad,Antipasto Salad,,raw,1.0,1.0,1.0,1.0,1.0,,,,
+SALAD_014,chicken,Grilled chicken,,pan grilled,0.75,1.0,1.0,1.0,1.0,,,,
+SALAD_014,dressing,Basic Vinaigrette,,raw,1.0,1.0,1.0,1.0,1.0,,,,SAUCE_016
+SALAD_014,salad,Garden salad,,raw,1.0,1.0,1.0,1.0,1.0,,,,
