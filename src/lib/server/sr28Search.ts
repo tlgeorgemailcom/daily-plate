@@ -77,7 +77,7 @@ function rowToFood(row: Row): Food {
   };
 }
 
-function buildSearchWhere(query: string, scope: Sr28SearchScope): { sql: string; args: InValue[] } {
+function buildSearchWhere(query: string, scope: Sr28SearchScope): { sql: string; args: InValue[]; scoreExpr: string; scoreArgs: InValue[] } {
   const terms = query
     .toLowerCase()
     .trim()
@@ -87,13 +87,13 @@ function buildSearchWhere(query: string, scope: Sr28SearchScope): { sql: string;
 
   const filters: string[] = [];
   const args: InValue[] = [];
+  const scoreArgs: InValue[] = [];
 
   // Baby foods and infant formula (FdGrp_Cd = 300) are handled separately.
   filters.push('COALESCE("FdGrp_Cd", \'\') <> ?');
   args.push('300');
 
   // OR across all terms — any matching term returns the row.
-  // Each term still OR-checks all keyword fields, then the term clauses join with OR.
   if (terms.length > 0) {
     const termClauses = terms.map((term) => {
       const fieldClauses = SEARCH_FIELDS.map((field) => `LOWER(COALESCE("${field}", '')) LIKE ?`);
@@ -103,15 +103,26 @@ function buildSearchWhere(query: string, scope: Sr28SearchScope): { sql: string;
     filters.push(`(${termClauses.join(' OR ')})`);
   }
 
+  // Relevance score: first term weight=8, second=4, rest=1.
+  // Rows matching earlier (more specific) terms bubble to the top.
+  const weights = [8, 4];
+  const scoreCases = terms.map((term, i) => {
+    const w = weights[i] ?? 1;
+    const fieldClauses = SEARCH_FIELDS.map((field) => `LOWER(COALESCE("${field}", '')) LIKE ?`);
+    scoreArgs.push(...SEARCH_FIELDS.map(() => `%${term}%`));
+    return `CASE WHEN (${fieldClauses.join(' OR ')}) THEN ${w} ELSE 0 END`;
+  });
+  const scoreExpr = scoreCases.length > 0 ? scoreCases.join(' + ') : '0';
+
   const sql = filters.length > 0 ? `WHERE ${filters.join(' AND ')}` : '';
-  return { sql, args };
+  return { sql, args, scoreExpr, scoreArgs };
 }
 
 export async function searchSr28Foods(query: string, scope: Sr28SearchScope, limit = DEFAULT_LIMIT): Promise<Food[]> {
   const db = getSR28Db();
   const safeLimit = Math.max(1, Math.min(limit, 100));
   const trimmedQuery = query.trim();
-  const { sql, args } = buildSearchWhere(trimmedQuery, scope);
+  const { sql, args, scoreExpr, scoreArgs } = buildSearchWhere(trimmedQuery, scope);
 
   const result = await db.execute({
     sql: `
@@ -130,12 +141,14 @@ export async function searchSr28Foods(query: string, scope: Sr28SearchScope, lim
       FROM DataCentralCombo
       ${sql}
       ORDER BY
+        (${scoreExpr}) DESC,
         CAST(COALESCE(key10, '0') AS INTEGER) DESC,
         "Long_Desc" ASC
       LIMIT ?
     `,
     args: [
       ...args,
+      ...scoreArgs,
       safeLimit
     ]
   });
@@ -204,7 +217,7 @@ export async function searchSr28FoodsWithNutrients(
   const db = getSR28Db();
   const safeLimit = Math.max(1, Math.min(limit, 100));
   const trimmedQuery = query.trim();
-  const { sql, args } = buildSearchWhere(trimmedQuery, scope);
+  const { sql, args, scoreExpr, scoreArgs } = buildSearchWhere(trimmedQuery, scope);
 
   const result = await db.execute({
     sql: `
@@ -221,11 +234,12 @@ export async function searchSr28FoodsWithNutrients(
       FROM DataCentralCombo
       ${sql}
       ORDER BY
+        (${scoreExpr}) DESC,
         CAST(COALESCE(key10, '0') AS INTEGER) DESC,
         "Long_Desc" ASC
       LIMIT ?
     `,
-    args: [...args, safeLimit],
+    args: [...args, ...scoreArgs, safeLimit],
   });
 
   return result.rows.map((row) => {
