@@ -10014,5 +10014,107 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'salad', label: 'Chickpea Salad', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SALAD_011',
+    name: 'Chicken Pasta Salad',
+    category: 'salads',
+    dietaryCategory: 'all',
+    levelNum: 219,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '4 servings',
+    prepTime: '',
+    linkType: 'dish',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":550.1,"pro":28.1,"fat":25.4,"carb":50.1,"fib":3.4,"h2o":215.1,"sug":4.0,"perServing":{"cal":550.1,"pro":28.1,"fat":25.4,"carb":50.1,"fib":3.4,"h2o":215.1,"sug":4.0,"AddedSugars":0.0,"IntrinsicSugars":4.0},"micros":{"vitaminA":24.74,"vitaminC":14.3,"vitaminD":0.86,"vitaminE":0.64,"vitaminK":36.74,"vitaminB6":0.22,"vitaminB12":0.06,"thiamin":0.04,"riboflavin":0.06,"niacin":2.38,"folate":14.65,"calcium":12.58,"iron":0.46,"magnesium":18.76,"phosphorus":95.07,"potassium":181.1,"sodium":211.9,"zinc":0.48,"copper":0.06,"selenium":17.66,"cholesterol":22.91,"saturatedFat":1.27,"monoFat":1.94,"polyFat":4.1,"omega3":0.47,"omega6":3.45},"gramsPerServing":322.4,"servings":4,"per100g":{"Energy_KCal":170.64,"Water":66.73,"Protein":8.73,"TotalLipidFat":7.89,"Carbohydrate":15.54,"FiberTotalDietary":1.07,"SugarsTotal":1.24,"Cholesterol":22.91,"FattyAcids_totalSaturated":1.27,"FattyAcids_totalMonounsaturated":1.94,"FattyAcids_totalPolyunsaturated":4.1,"LinoleicAcid":3.45,"alphaLinolenicAcid":0.47,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":24.74,"Retinol":3.2,"Carotene_beta":234.54,"VitaminD":0.86,"VitaminE_alphaTocopherol":0.64,"VitaminK_phylloquinone":36.74,"VitaminC_totalAscorbicAcid":14.3,"Thiamin":0.04,"Riboflavin":0.06,"Niacin":2.38,"PantothenicAcid":0.45,"VitaminB6":0.22,"Folate_total":14.65,"Folate_food":14.65,"Folate_DFE":14.65,"FolicAcid":0.0,"VitaminB12":0.06,"Choline_total":23.99,"Betaine":1.88,"LuteinZeaxanthin":97.34,"Lycopene":0.01,"Calcium_Ca":12.58,"Iron_Fe":0.46,"Magnesium_Mg":18.76,"Phosphorus_P":95.07,"Potassium_K":181.1,"Sodium_Na":211.9,"Zinc_Zn":0.48,"Copper_Cu":0.06,"Manganese_Mn":0.2,"Selenium_Se":17.66,"Tryptophan":0.11,"Threonine":0.36,"Isoleucine":0.4,"Leucine":0.69,"Lysine":0.64,"Methionine":0.18,"Cystine":0.1,"Phenylalanine":0.38,"Tyrosine":0.27,"Valine":0.43,"Arginine":0.51,"Histidine":0.28,"Alanine":0.44,"AsparticAcid":0.73,"GlutamicAcid":1.8,"Glycine":0.35,"Proline":0.49,"Serine":0.36,"omega3":0.47,"omega6":3.45,"AddedSugars":0.0,"IntrinsicSugars":1.24},"addedSugars":0.0,"intrinsicSugars":4.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":85.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":1.1},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"20420","name":"Pasta, dry, unenriched","grams":61.0},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":28.0},{"ndb":"11143","name":"Celery, raw","grams":30.0},{"ndb":"11821","name":"Peppers, sweet, red, raw","grams":29.8},{"ndb":"11282","name":"Onions, raw","grams":10.0},{"ndb":"9152","name":"Lemon juice, raw","grams":3.8},{"ndb":"11297","name":"Parsley, fresh","grams":3.8},{"ndb":"2020","name":"Spices, garlic powder","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"chicken","section_label":"Chicken","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":346.5,"raw_water_grams":251.45,"raw_fat_grams":13.42,"raw_protein_grams":76.58,"raw_carb_grams":0.19,"final_grams":283.64},{"section_key":"pasta","section_label":"Pasta","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":14.931232045834632,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":244.0,"raw_water_grams":24.16,"raw_fat_grams":3.68,"raw_protein_grams":31.82,"raw_carb_grams":182.19,"final_grams":580.52},{"section_key":"salad","section_label":"Salad","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":425.35,"raw_water_grams":311.27,"raw_fat_grams":84.61,"raw_protein_grams":4.21,"raw_carb_grams":18.03,"final_grams":425.35}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken Pasta Salad', quantity: 'custom (g)', foodWord: 'CHICKENPASTASALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chicken breast', quantity: '12 oz', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 340.2 },
+      { name: 'olive oil', quantity: '1 tsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'salt', quantity: '¼ tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '⅛ tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'elbow macaroni, dry', quantity: '2 cups dry', section: 'pasta', ndbNo: '20420', portionDesc: 'g', portionGrams: 244.0 },
+      { name: 'mayonnaise', quantity: '½ cup', section: 'salad', ndbNo: '4025', portionDesc: 'g', portionGrams: 112.0 },
+      { name: 'celery stalk', quantity: '3 stalks', section: 'salad', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'red bell pepper', quantity: '1 medium', section: 'salad', ndbNo: '11821', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'onion', quantity: '¼ cup', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'lemon juice', quantity: '1 tbsp', section: 'salad', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'fresh parsley', quantity: '¼ cup', section: 'salad', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'garlic powder', quantity: '¼ tsp', section: 'salad', ndbNo: '2020', portionDesc: 'g', portionGrams: 0.775 },
+      { name: 'salt', quantity: '½ tsp', section: 'salad', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'salad', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Cook pasta in salted boiling water until al dente (about 9–11 minutes). Drain, rinse under cold water to stop cooking, and set aside.',
+      'Season chicken breast with salt and pepper. Cook in a lightly oiled skillet over medium-high heat, 6–7 minutes per side, until cooked through. Let rest 5 minutes, then dice into bite-sized pieces.',
+      'In a large bowl, whisk together mayonnaise, lemon juice, garlic powder, salt, and pepper to make the dressing.',
+      'Add cooled pasta, diced chicken, celery, bell pepper, onion, and parsley to the bowl. Toss to coat evenly with the dressing. Refrigerate at least 30 minutes before serving.'
+    ],
+    sections: [
+      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'salad', label: 'Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
+    id: 'SALAD_012',
+    name: 'Chicken & Artichoke Pasta Salad',
+    category: 'salads',
+    dietaryCategory: 'all',
+    levelNum: 220,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '4 servings',
+    prepTime: '',
+    linkType: 'dish',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":438.6,"pro":25.0,"fat":13.3,"carb":55.0,"fib":5.8,"h2o":211.2,"sug":3.2,"perServing":{"cal":438.6,"pro":25.0,"fat":13.3,"carb":55.0,"fib":5.8,"h2o":211.2,"sug":3.2,"AddedSugars":0.0,"IntrinsicSugars":3.2},"micros":{"vitaminA":10.7,"vitaminC":3.7,"vitaminD":0.56,"vitaminE":0.63,"vitaminK":6.41,"vitaminB6":0.16,"vitaminB12":0.06,"thiamin":0.04,"riboflavin":0.06,"niacin":1.89,"folate":20.53,"calcium":40.06,"iron":0.65,"magnesium":23.52,"phosphorus":100.79,"potassium":177.04,"sodium":215.51,"zinc":0.52,"copper":0.09,"selenium":16.69,"cholesterol":14.82,"saturatedFat":0.91,"monoFat":2.46,"polyFat":0.49,"omega3":0.01,"omega6":0.05},"gramsPerServing":308.0,"servings":4,"per100g":{"Energy_KCal":142.42,"Water":68.57,"Protein":8.1,"TotalLipidFat":4.34,"Carbohydrate":17.86,"FiberTotalDietary":1.88,"SugarsTotal":1.04,"Cholesterol":14.82,"FattyAcids_totalSaturated":0.91,"FattyAcids_totalMonounsaturated":2.46,"FattyAcids_totalPolyunsaturated":0.49,"LinoleicAcid":0.05,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":10.7,"Retinol":5.4,"Carotene_beta":57.22,"VitaminD":0.56,"VitaminE_alphaTocopherol":0.63,"VitaminK_phylloquinone":6.41,"VitaminC_totalAscorbicAcid":3.7,"Thiamin":0.04,"Riboflavin":0.06,"Niacin":1.89,"PantothenicAcid":0.34,"VitaminB6":0.16,"Folate_total":20.53,"Folate_food":20.53,"Folate_DFE":20.53,"FolicAcid":0.0,"VitaminB12":0.06,"Choline_total":20.85,"Betaine":1.36,"LuteinZeaxanthin":108.74,"Lycopene":257.12,"Calcium_Ca":40.06,"Iron_Fe":0.65,"Magnesium_Mg":23.52,"Phosphorus_P":100.79,"Potassium_K":177.04,"Sodium_Na":215.51,"Zinc_Zn":0.52,"Copper_Cu":0.09,"Manganese_Mn":0.25,"Selenium_Se":16.69,"Tryptophan":0.1,"Threonine":0.31,"Isoleucine":0.35,"Leucine":0.61,"Lysine":0.53,"Methionine":0.16,"Cystine":0.09,"Phenylalanine":0.34,"Tyrosine":0.24,"Valine":0.38,"Arginine":0.41,"Histidine":0.24,"Alanine":0.35,"AsparticAcid":0.58,"GlutamicAcid":1.74,"Glycine":0.29,"Proline":0.53,"Serine":0.32,"omega3":0.01,"omega6":0.05,"AddedSugars":0.0,"IntrinsicSugars":1.04},"addedSugars":0.0,"intrinsicSugars":3.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":56.7},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":1.1},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"20420","name":"Pasta, dry, unenriched","grams":61.0},{"ndb":"11008","name":"Artichokes, (globe or french), cooked, boiled, drained, without salt","grams":50.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":30.8},{"ndb":"9193","name":"Olives, ripe, canned (small-extra large)","grams":11.0},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":6.2},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"9152","name":"Lemon juice, raw","grams":7.5},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.2},{"ndb":"2003","name":"Spices, basil, dried","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"chicken","section_label":"Chicken","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":233.1,"raw_water_grams":167.65,"raw_fat_grams":10.45,"raw_protein_grams":51.06,"raw_carb_grams":0.19,"final_grams":191.19},{"section_key":"pasta","section_label":"Pasta","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":14.931232045834632,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":244.0,"raw_water_grams":24.16,"raw_fat_grams":3.68,"raw_protein_grams":31.82,"raw_carb_grams":182.19,"final_grams":580.52},{"section_key":"salad","section_label":"Salad","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":460.27,"raw_water_grams":358.36,"raw_fat_grams":39.27,"raw_protein_grams":16.97,"raw_carb_grams":37.69,"final_grams":460.27}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken & Artichoke Pasta Salad', quantity: 'custom (g)', foodWord: 'CHICKENARTICHOKESAL', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chicken breast', quantity: '8 oz', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'olive oil', quantity: '1 tsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'salt', quantity: '¼ tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '⅛ tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'elbow macaroni, dry', quantity: '2 cups dry', section: 'pasta', ndbNo: '20420', portionDesc: 'g', portionGrams: 244.0 },
+      { name: 'artichoke hearts cooked', quantity: '1 can drained', section: 'salad', ndbNo: '11008', portionDesc: 'g', portionGrams: 200.0 },
+      { name: 'tomato', quantity: '1 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'black olives canned', quantity: '10 large', section: 'salad', ndbNo: '9193', portionDesc: 'g', portionGrams: 44.0 },
+      { name: 'Parmesan cheese', quantity: '¼ cup grated', section: 'salad', ndbNo: '1033', portionDesc: 'g', portionGrams: 25.0 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'salad', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.0 },
+      { name: 'lemon juice', quantity: '2 tbsp', section: 'salad', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'garlic', quantity: '2 cloves', section: 'salad', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'dried oregano', quantity: '¼ tsp', section: 'salad', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'dried basil', quantity: '¼ tsp', section: 'salad', ndbNo: '2003', portionDesc: 'g', portionGrams: 0.7 },
+      { name: 'salt', quantity: '½ tsp', section: 'salad', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'salad', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Cook pasta in salted boiling water until al dente (about 9–11 minutes). Drain, rinse under cold water, and set aside.',
+      'Season chicken with salt and pepper. Cook in a lightly oiled skillet over medium-high heat, 6–7 minutes per side. Let rest 5 minutes, then slice or dice.',
+      'Whisk together olive oil, lemon juice, garlic, oregano, basil, salt, and pepper in a large bowl to make the vinaigrette.',
+      'Add pasta, chicken, artichoke hearts, tomato, olives, and parmesan. Toss to coat. Refrigerate at least 30 minutes before serving. Serve cold or at room temperature.'
+    ],
+    sections: [
+      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'salad', label: 'Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
