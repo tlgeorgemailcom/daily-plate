@@ -77,6 +77,21 @@ function rowToFood(row: Row): Food {
   };
 }
 
+/** Naive singular stem: "onions" → "onion", "tomatoes" → "tomato", "berries" → "berr" (short, harmless) */
+function stem(term: string): string {
+  if (term.length > 4 && term.endsWith('ies')) return term.slice(0, -3) + 'y';  // berries→berry
+  if (term.length > 4 && term.endsWith('es'))  return term.slice(0, -2);         // tomatoes→tomat (too short, fallback below)
+  if (term.length > 3 && term.endsWith('s'))   return term.slice(0, -1);         // onions→onion
+  return term;
+}
+
+/** Build a LIKE pattern that covers both the raw term and its stem. */
+function termLike(term: string): string {
+  const s = stem(term);
+  // If stemming changed the term, use the shorter stem — it's a substring of the plural anyway.
+  return `%${s !== term ? s : term}%`;
+}
+
 function buildSearchWhere(query: string, scope: Sr28SearchScope): { sql: string; args: InValue[]; scoreExpr: string; scoreArgs: InValue[] } {
   const terms = query
     .toLowerCase()
@@ -96,8 +111,9 @@ function buildSearchWhere(query: string, scope: Sr28SearchScope): { sql: string;
   // OR across all terms — any matching term returns the row.
   if (terms.length > 0) {
     const termClauses = terms.map((term) => {
+      const like = termLike(term);
       const fieldClauses = SEARCH_FIELDS.map((field) => `LOWER(COALESCE("${field}", '')) LIKE ?`);
-      args.push(...SEARCH_FIELDS.map(() => `%${term}%`));
+      args.push(...SEARCH_FIELDS.map(() => like));
       return `(${fieldClauses.join(' OR ')})`;
     });
     filters.push(`(${termClauses.join(' OR ')})`);
@@ -108,8 +124,9 @@ function buildSearchWhere(query: string, scope: Sr28SearchScope): { sql: string;
   const weights = [8, 4];
   const scoreCases = terms.map((term, i) => {
     const w = weights[i] ?? 1;
+    const like = termLike(term);
     const fieldClauses = SEARCH_FIELDS.map((field) => `LOWER(COALESCE("${field}", '')) LIKE ?`);
-    scoreArgs.push(...SEARCH_FIELDS.map(() => `%${term}%`));
+    scoreArgs.push(...SEARCH_FIELDS.map(() => like));
     return `CASE WHEN (${fieldClauses.join(' OR ')}) THEN ${w} ELSE 0 END`;
   });
   const scoreExpr = scoreCases.length > 0 ? scoreCases.join(' + ') : '0';
