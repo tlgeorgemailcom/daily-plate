@@ -10433,7 +10433,7 @@ export const LEVELS: Level[] = [
       { name: 'garlic powder', quantity: '¼ tsp', section: 'chicken', ndbNo: '2020', portionDesc: 'g', portionGrams: 0.775 },
       { name: 'salt', quantity: '¼ tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
       { name: 'ground black pepper', quantity: '⅛ tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
-      { name: 'romaine lettuce', quantity: '1 large head', section: 'salad', ndbNo: '11251', portionDesc: 'g', portionGrams: 188.0 },
+      { name: 'romaine lettuce', quantity: '1 large head (~1 lb 6 oz)', section: 'salad', ndbNo: '11251', portionDesc: 'g', portionGrams: 188.0 },
       { name: 'black beans', quantity: '½ cup', section: 'salad', ndbNo: '16015', portionDesc: 'g', portionGrams: 86.0 },
       { name: 'sweet corn', quantity: '½ cup', section: 'salad', ndbNo: '11168', portionDesc: 'g', portionGrams: 75.0 },
       { name: 'avocado', quantity: '½ medium', section: 'salad', ndbNo: '9038', portionDesc: 'g', portionGrams: 68.0 },
