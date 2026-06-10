@@ -10093,7 +10093,7 @@ export const LEVELS: Level[] = [
       { name: 'salt', quantity: '¼ tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
       { name: 'ground black pepper', quantity: '⅛ tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
       { name: 'elbow macaroni, dry', quantity: '2 cups dry', section: 'pasta', ndbNo: '20420', portionDesc: 'g', portionGrams: 244.0 },
-      { name: 'artichoke hearts cooked', quantity: '1 can drained', section: 'salad', ndbNo: '11008', portionDesc: 'g', portionGrams: 200.0 },
+      { name: 'artichoke hearts cooked', quantity: '7 oz', section: 'salad', ndbNo: '11008', portionDesc: 'g', portionGrams: 200.0 },
       { name: 'tomato', quantity: '1 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
       { name: 'black olives canned', quantity: '10 large', section: 'salad', ndbNo: '9193', portionDesc: 'g', portionGrams: 44.0 },
       { name: 'Parmesan cheese', quantity: '¼ cup grated', section: 'salad', ndbNo: '1033', portionDesc: 'g', portionGrams: 25.0 },
