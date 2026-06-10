@@ -263,3 +263,7 @@ asparagus_raw,11011,ASPARAGUSRAW,"Asparagus, raw",asparagus raw,cup,134,added du
 arugula_raw,11959,ARUGULA,"Arugula, raw",arugula,cup,20,added during SALAD_007 build
 pine_nuts_dried,12147,PINENUTS,"Nuts, pine nuts, dried",pine nuts,oz,28.35,added during SALAD_007 build
 artichoke_hearts_cooked,11008,ARTICHOKE,"Artichokes, (globe or french), cooked, boiled, drained, without salt",artichoke hearts cooked,½ cup hearts,84,added during SALAD_012 build
+ramen_noodles_dry,6583,SOUPRAMENNOODLE,"Soup, ramen noodle, any flavor, dry",ramen noodle,package,81.0,
+almonds_sliced,12061,ALMONDS,"Nuts, almonds",almonds,cup sliced,92.0,
+sunflower_seeds_dry_roasted,12037,SUNFLOWERSEEDS,"Seeds, sunflower seed kernels, dry roasted, without salt",sunflower seeds,cup,128.0,
+vinegar_distilled,2053,VINEGARDISTILLED,"Vinegar, distilled",distilled vinegar (rice vinegar proxy),tbsp,15.0,
