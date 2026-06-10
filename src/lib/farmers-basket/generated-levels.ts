@@ -10403,5 +10403,61 @@ export const LEVELS: Level[] = [
       { key: 'dressing', label: 'Caesar Dressing', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'salad', label: 'Salad', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SALAD_019',
+    name: 'Southwestern Salad',
+    category: 'salads',
+    dietaryCategory: 'all',
+    levelNum: 227,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 servings',
+    prepTime: '',
+    linkType: 'dish',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":635.6,"pro":37.9,"fat":37.1,"carb":42.5,"fib":11.0,"h2o":322.7,"sug":8.5,"perServing":{"cal":635.6,"pro":37.9,"fat":37.1,"carb":42.5,"fib":11.0,"h2o":322.7,"sug":8.5,"AddedSugars":2.9,"IntrinsicSugars":5.7},"micros":{"vitaminA":109.91,"vitaminC":5.28,"vitaminD":0.91,"vitaminE":1.21,"vitaminK":30.98,"vitaminB6":0.23,"vitaminB12":0.1,"thiamin":0.08,"riboflavin":0.09,"niacin":2.49,"folate":57.69,"calcium":42.12,"iron":0.92,"magnesium":28.03,"phosphorus":112.16,"potassium":287.86,"sodium":167.29,"zinc":0.62,"copper":0.07,"selenium":6.73,"cholesterol":21.57,"saturatedFat":1.61,"monoFat":4.77,"polyFat":1.15,"omega3":0.02,"omega6":0.37},"gramsPerServing":445.9,"servings":2,"per100g":{"Energy_KCal":142.54,"Water":72.37,"Protein":8.49,"TotalLipidFat":8.31,"Carbohydrate":9.52,"FiberTotalDietary":2.46,"SugarsTotal":1.92,"Cholesterol":21.57,"FattyAcids_totalSaturated":1.61,"FattyAcids_totalMonounsaturated":4.77,"FattyAcids_totalPolyunsaturated":1.15,"LinoleicAcid":0.37,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":109.91,"Retinol":7.22,"Carotene_beta":1213.85,"VitaminD":0.91,"VitaminE_alphaTocopherol":1.21,"VitaminK_phylloquinone":30.98,"VitaminC_totalAscorbicAcid":5.28,"Thiamin":0.08,"Riboflavin":0.09,"Niacin":2.49,"PantothenicAcid":0.57,"VitaminB6":0.23,"Folate_total":57.69,"Folate_food":57.69,"Folate_DFE":57.69,"FolicAcid":0.0,"VitaminB12":0.1,"Choline_total":30.15,"Betaine":1.93,"LuteinZeaxanthin":610.28,"Lycopene":354.86,"Calcium_Ca":42.12,"Iron_Fe":0.92,"Magnesium_Mg":28.03,"Phosphorus_P":112.16,"Potassium_K":287.86,"Sodium_Na":167.29,"Zinc_Zn":0.62,"Copper_Cu":0.07,"Manganese_Mn":0.15,"Selenium_Se":6.73,"Tryptophan":0.1,"Threonine":0.35,"Isoleucine":0.39,"Leucine":0.67,"Lysine":0.7,"Methionine":0.19,"Cystine":0.07,"Phenylalanine":0.35,"Tyrosine":0.29,"Valine":0.42,"Arginine":0.5,"Histidine":0.27,"Alanine":0.44,"AsparticAcid":0.78,"GlutamicAcid":1.33,"Glycine":0.33,"Proline":0.34,"Serine":0.34,"omega3":0.02,"omega6":0.37,"AddedSugars":0.64,"IntrinsicSugars":1.27},"addedSugars":2.9,"intrinsicSugars":5.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":113.4},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"2014","name":"Spices, cumin seed","grams":0.8},{"ndb":"2020","name":"Spices, garlic powder","grams":0.4},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"11251","name":"Lettuce, cos or romaine, raw","grams":94.0},{"ndb":"16015","name":"Beans, black, mature seeds, cooked, boiled, without salt","grams":43.0},{"ndb":"11168","name":"Corn, sweet, yellow, cooked, boiled, drained, without salt","grams":37.5},{"ndb":"9038","name":"Avocados, raw, California","grams":34.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":61.5},{"ndb":"11282","name":"Onions, raw","grams":9.0},{"ndb":"19056","name":"Snacks, tortilla chips, plain, white corn, salted","grams":14.2},{"ndb":"1251","name":"Cheese, Mexican blend","grams":14.1},{"ndb":"11165","name":"Coriander (cilantro) leaves, raw","grams":4.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":13.6},{"ndb":"9160","name":"Lime juice, raw","grams":15.0},{"ndb":"19296","name":"Honey","grams":3.5},{"ndb":"2014","name":"Spices, cumin seed","grams":0.4},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"chicken","section_label":"Chicken","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":244.48,"raw_water_grams":167.82,"raw_fat_grams":19.89,"raw_protein_grams":51.46,"raw_carb_grams":1.42,"final_grams":202.52},{"section_key":"salad","section_label":"Southwestern Salad","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":15,"raw_grams":689.35,"raw_water_grams":519.61,"raw_fat_grams":54.25,"raw_protein_grams":24.25,"raw_carb_grams":83.47,"final_grams":689.35}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Southwestern Salad', quantity: 'custom (g)', foodWord: 'SOUTHWESTERNSALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chicken breast', quantity: '8 oz', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'ground cumin', quantity: '½ tsp', section: 'chicken', ndbNo: '2014', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'garlic powder', quantity: '¼ tsp', section: 'chicken', ndbNo: '2020', portionDesc: 'g', portionGrams: 0.775 },
+      { name: 'salt', quantity: '¼ tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '⅛ tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'romaine lettuce', quantity: '1 large head', section: 'salad', ndbNo: '11251', portionDesc: 'g', portionGrams: 188.0 },
+      { name: 'black beans', quantity: '½ cup', section: 'salad', ndbNo: '16015', portionDesc: 'g', portionGrams: 86.0 },
+      { name: 'sweet corn', quantity: '½ cup', section: 'salad', ndbNo: '11168', portionDesc: 'g', portionGrams: 75.0 },
+      { name: 'avocado', quantity: '½ medium', section: 'salad', ndbNo: '9038', portionDesc: 'g', portionGrams: 68.0 },
+      { name: 'tomato', quantity: '1 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'onion', quantity: '2 thin slices', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'tortilla chips', quantity: '1 oz', section: 'salad', ndbNo: '19056', portionDesc: 'g', portionGrams: 28.35 },
+      { name: 'Mexican blend cheese', quantity: '¼ cup', section: 'salad', ndbNo: '1251', portionDesc: 'g', portionGrams: 28.25 },
+      { name: 'fresh cilantro', quantity: '¼ cup', section: 'salad', ndbNo: '11165', portionDesc: 'g', portionGrams: 8.0 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'salad', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'Lime juice, raw', quantity: '2 tbsp', section: 'salad', ndbNo: '9160', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'honey', quantity: '1 tsp', section: 'salad', ndbNo: '19296', portionDesc: 'g', portionGrams: 7.0 },
+      { name: 'ground cumin', quantity: '¼ tsp', section: 'salad', ndbNo: '2014', portionDesc: 'g', portionGrams: 0.75 },
+      { name: 'salt', quantity: '¼ tsp', section: 'salad', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '⅛ tsp', section: 'salad', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 }
+    ],
+    recipeInstructions: [
+      'Season chicken with cumin, garlic powder, salt, and pepper. Heat olive oil in a skillet over medium-high heat. Cook chicken 6–7 minutes per side until cooked through. USDA safe internal temperature: 165°F (74°C). Rest 5 minutes, then slice.',
+      'Whisk together olive oil, lime juice, honey, cumin, salt, and pepper to make the dressing.',
+      'Combine romaine, black beans, corn, avocado, tomato, onion, cheese, and cilantro in a large bowl.',
+      'Top with sliced chicken and tortilla chips. Drizzle with dressing and serve.'
+    ],
+    sections: [
+      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'salad', label: 'Southwestern Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
