@@ -83,24 +83,27 @@ function buildSearchWhere(query: string, scope: Sr28SearchScope): { sql: string;
     .trim()
     .replace(/[^a-z0-9\s]/g, ' ')   // strip commas and other punctuation (handles USDA Long_Desc format)
     .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 4);                    // cap at 4 terms — USDA Long_Desc qualifiers ("year round average") break AND chains
+    .filter(Boolean);
 
-  const clauses: string[] = [];
+  const filters: string[] = [];
   const args: InValue[] = [];
 
   // Baby foods and infant formula (FdGrp_Cd = 300) are handled separately.
-  clauses.push('COALESCE("FdGrp_Cd", \'\') <> ?');
+  filters.push('COALESCE("FdGrp_Cd", \'\') <> ?');
   args.push('300');
 
-  for (const term of terms) {
-    const fieldClauses = SEARCH_FIELDS.map((field) => `LOWER(COALESCE("${field}", '')) LIKE ?`);
-    clauses.push(`(${fieldClauses.join(' OR ')})`);
-    const like = `%${term}%`;
-    args.push(...SEARCH_FIELDS.map(() => like));
+  // OR across all terms — any matching term returns the row.
+  // Each term still OR-checks all keyword fields, then the term clauses join with OR.
+  if (terms.length > 0) {
+    const termClauses = terms.map((term) => {
+      const fieldClauses = SEARCH_FIELDS.map((field) => `LOWER(COALESCE("${field}", '')) LIKE ?`);
+      args.push(...SEARCH_FIELDS.map(() => `%${term}%`));
+      return `(${fieldClauses.join(' OR ')})`;
+    });
+    filters.push(`(${termClauses.join(' OR ')})`);
   }
 
-  const sql = clauses.length > 0 ? `WHERE ${clauses.join(' AND ')}` : '';
+  const sql = filters.length > 0 ? `WHERE ${filters.join(' AND ')}` : '';
   return { sql, args };
 }
 
