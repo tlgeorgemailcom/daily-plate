@@ -10211,5 +10211,54 @@ export const LEVELS: Level[] = [
       { key: 'dressing', label: 'Basic Vinaigrette', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'salad', label: 'Garden salad', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SALAD_015',
+    name: 'Mediterranean Orzo Salad',
+    category: 'salads',
+    dietaryCategory: 'veggie',
+    levelNum: 223,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '4 servings',
+    prepTime: '',
+    linkType: 'dish',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":426.6,"pro":12.7,"fat":19.6,"carb":50.8,"fib":4.1,"h2o":233.3,"sug":5.4,"perServing":{"cal":426.6,"pro":12.7,"fat":19.6,"carb":50.8,"fib":4.1,"h2o":233.3,"sug":5.4,"AddedSugars":0.0,"IntrinsicSugars":5.4},"micros":{"vitaminA":24.23,"vitaminC":5.84,"vitaminD":1.41,"vitaminE":0.74,"vitaminK":25.03,"vitaminB6":0.09,"vitaminB12":0.15,"thiamin":0.04,"riboflavin":0.09,"niacin":0.41,"folate":12.85,"calcium":65.35,"iron":0.73,"magnesium":15.38,"phosphorus":68.14,"potassium":112.92,"sodium":227.68,"zinc":0.57,"copper":0.09,"selenium":12.12,"cholesterol":7.87,"saturatedFat":1.91,"monoFat":3.29,"polyFat":0.55,"omega3":0.0,"omega6":0.0},"gramsPerServing":320.6,"servings":4,"per100g":{"Energy_KCal":133.07,"Water":72.79,"Protein":3.97,"TotalLipidFat":6.13,"Carbohydrate":15.83,"FiberTotalDietary":1.28,"SugarsTotal":1.67,"Cholesterol":7.87,"FattyAcids_totalSaturated":1.91,"FattyAcids_totalMonounsaturated":3.29,"FattyAcids_totalPolyunsaturated":0.55,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":24.23,"Retinol":11.05,"Carotene_beta":147.64,"VitaminD":1.41,"VitaminE_alphaTocopherol":0.74,"VitaminK_phylloquinone":25.03,"VitaminC_totalAscorbicAcid":5.84,"Thiamin":0.04,"Riboflavin":0.09,"Niacin":0.41,"PantothenicAcid":0.21,"VitaminB6":0.09,"Folate_total":12.85,"Folate_food":12.85,"Folate_DFE":12.85,"FolicAcid":0.0,"VitaminB12":0.15,"Choline_total":4.64,"Betaine":0.06,"LuteinZeaxanthin":125.23,"Lycopene":371.23,"Calcium_Ca":65.35,"Iron_Fe":0.73,"Magnesium_Mg":15.38,"Phosphorus_P":68.14,"Potassium_K":112.92,"Sodium_Na":227.68,"Zinc_Zn":0.57,"Copper_Cu":0.09,"Manganese_Mn":0.21,"Selenium_Se":12.12,"Tryptophan":0.05,"Threonine":0.15,"Isoleucine":0.17,"Leucine":0.31,"Lysine":0.17,"Methionine":0.06,"Cystine":0.05,"Phenylalanine":0.19,"Tyrosine":0.11,"Valine":0.21,"Arginine":0.14,"Histidine":0.09,"Alanine":0.15,"AsparticAcid":0.22,"GlutamicAcid":1.14,"Glycine":0.1,"Proline":0.41,"Serine":0.22,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":1.67},"addedSugars":0.0,"intrinsicSugars":5.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20420","name":"Pasta, dry, unenriched","grams":56.7},{"ndb":"14411","name":"Water, tap, drinking","grams":236.5},{"ndb":"11206","name":"Cucumber, peeled, raw","grams":50.2},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":46.2},{"ndb":"9193","name":"Olives, ripe, canned (small-extra large)","grams":22.0},{"ndb":"1019","name":"Cheese, feta","grams":28.4},{"ndb":"11282","name":"Onions, raw","grams":10.0},{"ndb":"11297","name":"Parsley, fresh","grams":3.8},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":10.1},{"ndb":"9152","name":"Lemon juice, raw","grams":11.2},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.7},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"orzo","section_label":"Orzo","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.34811726353257855,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":1172.8,"raw_water_grams":967.51,"raw_fat_grams":3.42,"raw_protein_grams":29.57,"raw_carb_grams":169.35,"final_grams":542.1},{"section_key":"salad","section_label":"Mediterranean salad","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":12,"raw_grams":740.18,"raw_water_grams":596.5,"raw_fat_grams":75.15,"raw_protein_grams":21.39,"raw_carb_grams":33.69,"final_grams":740.18}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Mediterranean Orzo Salad', quantity: 'custom (g)', foodWord: 'MEDORZOSALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'orzo (dry semolina pasta)', quantity: '8 oz dry', section: 'orzo', ndbNo: '20420', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'water', quantity: '4 cups', section: 'orzo', ndbNo: '14411', portionDesc: 'g', portionGrams: 946.0 },
+      { name: 'cucumber peeled', quantity: '1 medium', section: 'salad', ndbNo: '11206', portionDesc: 'g', portionGrams: 201.0 },
+      { name: 'tomato', quantity: '1½ medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 185.0 },
+      { name: 'black olives canned', quantity: '½ cup', section: 'salad', ndbNo: '9193', portionDesc: 'g', portionGrams: 88.0 },
+      { name: 'feta cheese crumbles', quantity: '4 oz', section: 'salad', ndbNo: '1019', portionDesc: 'g', portionGrams: 113.4 },
+      { name: 'onion', quantity: '¼ cup', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'fresh parsley', quantity: '¼ cup', section: 'salad', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'olive oil', quantity: '3 tbsp', section: 'salad', ndbNo: '4053', portionDesc: 'g', portionGrams: 40.5 },
+      { name: 'lemon juice', quantity: '3 tbsp', section: 'salad', ndbNo: '9152', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'garlic', quantity: '2 cloves', section: 'salad', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'dried oregano', quantity: '1 tsp', section: 'salad', ndbNo: '2027', portionDesc: 'g', portionGrams: 2.7 },
+      { name: 'salt', quantity: '½ tsp', section: 'salad', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'salad', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Note: Orzo is not in the USDA SR Legacy database. This recipe uses dry semolina pasta (NDB 20420) as a stand-in — by weight, any dry semolina pasta has essentially identical nutrient values to orzo.',
+      'Cook orzo in a large pot of salted boiling water according to package directions (typically 8–10 minutes). Drain, rinse under cold water, and spread on a sheet pan to cool completely.',
+      'Whisk together olive oil, lemon juice, garlic, oregano, salt, and pepper in a large bowl to make the vinaigrette.',
+      'Add cooled orzo, cucumber, tomato, olives, feta, onion, and parsley to the bowl. Toss to coat evenly. Refrigerate at least 30 minutes before serving.'
+    ],
+    sections: [
+      { key: 'orzo', label: 'Orzo', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'salad', label: 'Mediterranean salad', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
