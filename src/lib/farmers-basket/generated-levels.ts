@@ -10394,7 +10394,7 @@ export const LEVELS: Level[] = [
     ],
     recipeInstructions: [
       'Season shrimp with garlic powder, salt, and pepper. Heat olive oil in a skillet over medium-high heat. Cook shrimp 2–3 minutes per side until pink and opaque. USDA safe internal temperature: 145°F (63°C). Remove from heat and let cool slightly.',
-      'Make or portion the Caesar dressing (see SAUCE_024 — Caesar Salad Dressing).',
+      'Make or portion the Caesar dressing (see the Caesar Salad Dressing recipe).',
       'Toss romaine with croutons, Parmesan, and Caesar dressing.',
       'Arrange shrimp over the salad. Serve immediately.'
     ],
