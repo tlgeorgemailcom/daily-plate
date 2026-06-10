@@ -259,3 +259,6 @@ croutons_plain,18242,CROUTON,"Croutons, plain",plain croutons,cup,30.0,added dur
 cheese_feta,1019,FETA,"Cheese, feta",feta cheese crumbles,oz,28.35,added during SALAD build
 olives_black_canned,9193,OLIVEBLACK,"Olives, ripe, canned (small-extra large)",black olives canned,large,4.4,added during SALAD build
 tortilla_chips_plain,19056,TORTILLACHIPWHITE,"Snacks, tortilla chips, plain, white corn, salted",tortilla chips,oz,28.35,added during SALAD build
+asparagus_raw,11011,ASPARAGUSRAW,"Asparagus, raw",asparagus raw,cup,134,added during SALAD_007 build
+arugula_raw,11959,ARUGULA,"Arugula, raw",arugula,cup,20,added during SALAD_007 build
+pine_nuts_dried,12147,PINENUTS,"Nuts, pine nuts, dried",pine nuts,oz,28.35,added during SALAD_007 build
