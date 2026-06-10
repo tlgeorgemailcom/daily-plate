@@ -1961,7 +1961,7 @@ SALAD_012,13,oregano_dried,¼ tsp,1.0,,,salad,oregano,false,
 SALAD_012,14,basil_dried,¼ tsp,0.7,,,salad,dried basil,false,
 SALAD_012,15,salt_table,½ tsp,3.0,,,salad,salt,false,
 SALAD_012,16,black_pepper_ground,¼ tsp,0.575,,,salad,black pepper,false,
-SALAD_013,1,@SIDE_011,2 servings,411.2,,,gnocchi,Potato gnocchi,false,
+SALAD_013,1,@SIDE_011,2 servings,411.2,,,gnocchi,Potato gnocchi,false,Potato gnocchi (2 servings; ~1 cup per serving)
 SALAD_013,2,@SAUCE_017,2 servings,68.5,,,dressing,Italian vinaigrette,false,Italian vinaigrette (2 servings; 2 tbsp per serving)
 SALAD_013,3,salami_italian_dry,2 oz,56.0,,,salad,salami,false,
 SALAD_013,4,provolone_cheese,2 oz,56.7,,,salad,provolone,false,
