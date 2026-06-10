@@ -546,3 +546,16 @@ Composite recipes (e.g. BKFST_002 Biscuits & Gravy) reference child recipes via 
 
 ## v3 Full Spec
 `/Users/macminidata/vscode/jetfooddata/jetcool/docs/v3.md` — authoritative pipeline spec (phases, math contract, CSV schemas, authoring runbook §17)
+
+## SR28 Food Search (`src/lib/server/sr28Search.ts`)
+
+`buildSearchWhere()` converts a user/ingredient query into SQL WHERE + relevance score against `DataCentralCombo`.
+
+**Key behaviors (as of June 2026):**
+- **Punctuation stripped** — `.replace(/[^a-z0-9\s]/g, ' ')` before splitting, so USDA Long_Desc format ("Tomatoes, red, ripe, raw") works correctly.
+- **OR between terms** — any matching term returns the row; no term is required. Prevents USDA descriptor noise ("year round average") from killing the result.
+- **Plural stemming** — `stem()` helper: `onions→onion`, `tomatoes→tomato`, `berries→berry` (strips trailing `s`/`es`/`ies`) so plurals match SR28's singular keyword columns.
+- **Weighted relevance scoring** — first term weight=8, second=4, rest=1 in the ORDER BY `scoreExpr`. Results sorted: score DESC → key10 (usage rank) DESC → Long_Desc ASC.
+- **Baby food excluded** — `FdGrp_Cd <> '300'` always applied.
+
+**Environment**: `.env.local` sets `TURSO_SR28_URL=libsql://comboo-tlgeorge.aws-us-east-1.turso.io` — dev and production both hit the remote Turso comboo DB. Vercel env vars `TURSO_SR28_URL` + `TURSO_SR28_TOKEN` must be set or production falls back to a local file path that doesn't exist on Vercel.
