@@ -83,7 +83,8 @@ function buildSearchWhere(query: string, scope: Sr28SearchScope): { sql: string;
     .trim()
     .replace(/[^a-z0-9\s]/g, ' ')   // strip commas and other punctuation (handles USDA Long_Desc format)
     .split(/\s+/)
-    .filter(Boolean);
+    .filter(Boolean)
+    .slice(0, 4);                    // cap at 4 terms — USDA Long_Desc qualifiers ("year round average") break AND chains
 
   const clauses: string[] = [];
   const args: InValue[] = [];
