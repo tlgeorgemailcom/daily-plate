@@ -10720,7 +10720,7 @@ export const LEVELS: Level[] = [
       { name: 'Three Bean Salad', quantity: 'custom (g)', foodWord: 'THREEBEANSALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'green beans', quantity: '1 can (15 oz, drained)', section: 'salad', ndbNo: '11053', portionDesc: 'g', portionGrams: 226.8 },
       { name: 'yellow wax beans', quantity: '1 can (15 oz, drained)', section: 'salad', ndbNo: '11724', portionDesc: 'g', portionGrams: 226.8 },
-      { name: 'chickpeas (canned, drained)', quantity: '1 can (15 oz, drained)', section: 'salad', ndbNo: '16358', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'chickpeas', quantity: '1 can (15 oz, drained)', section: 'salad', ndbNo: '16358', portionDesc: 'g', portionGrams: 226.8 },
       { name: 'onion', quantity: '½ medium', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 55.0 },
       { name: 'green bell pepper', quantity: '½ medium', section: 'salad', ndbNo: '11333', portionDesc: 'g', portionGrams: 60.0 },
       { name: 'apple cider vinegar', quantity: '½ cup', section: 'salad', ndbNo: '2048', portionDesc: 'g', portionGrams: 119.0 },
