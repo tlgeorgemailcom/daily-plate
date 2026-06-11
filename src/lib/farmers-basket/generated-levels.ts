@@ -10591,7 +10591,7 @@ export const LEVELS: Level[] = [
       { name: 'fresh chives', quantity: '2 tbsp', section: 'salad', ndbNo: '11156', portionDesc: 'g', portionGrams: 6.0 }
     ],
     recipeInstructions: [
-      'Cut the iceberg lettuce head in half through the core. Cut each half into a wedge, keeping the core intact to hold it together.',
+      'Cut the half head of iceberg lettuce into 2 wedges through the core (each serving is ¼ of a full head). Keep the core intact to hold each wedge together.',
       'Make or portion the blue cheese dressing (see the Blue Cheese Dressing recipe).',
       'Place each wedge on a plate. Spoon blue cheese dressing over the top.',
       'Top with crumbled bacon, diced tomato, blue cheese crumbles, sliced scallions, and chopped chives. Serve immediately.'
