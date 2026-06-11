@@ -275,3 +275,11 @@ yellow_snap_beans_cooked,11724,YELLOWSNAPBEAN,"Beans, snap, yellow, cooked, boil
 chickpeas_canned_drained,16358,CHICKPEACANNED,"Chickpeas (garbanzo beans), mature seeds, canned, drained solids","chickpeas (canned, drained)",cup,164.0,
 walnuts_raw,12155,WALNUTRAW,"Nuts, walnuts, english",walnuts,oz,28.35,
 grapes_raw,9132,GRAPE,"Grapes, red or green (European type, such as Thompson seedless), raw",grapes,cup,151.0,
+beef_chuck_roast_raw,13293,BEEFCHUCKROAST,"Beef, chuck, under blade pot roast or steak, boneless, separable lean only, trimmed to 0"" fat, all grades, raw",beef chuck roast,lb,453.592,
+beef_flank_steak_raw,23656,BEEFFLANKSTEAK,"Beef, flank, steak, separable lean only, trimmed to 0"" fat, all grades, raw",beef flank steak,lb,453.592,
+beef_skirt_steak_raw,23224,BEEFSKIRT,"Beef, plate steak, boneless, outside skirt, separable lean and fat, trimmed to 0"" fat, all grades, raw",beef skirt steak,lb,453.592,Outside skirt (lean+fat)
+beef_top_sirloin_raw,23611,BEEFTOPSIRLOIN,"Beef, top sirloin, steak, separable lean only, trimmed to 1/8"" fat, all grades, raw",beef top sirloin,lb,453.592,
+beef_tenderloin_raw,23372,BEEFTENDERLOIN,"Beef, loin, tenderloin steak, boneless, separable lean only, trimmed to 0"" fat, all grades, raw",beef tenderloin,lb,453.592,Also used for Wellington roast; identical macros to NDB 23366
+beef_top_round_raw,23354,BEEFTOPROUND,"Beef, round, top round steak, boneless, separable lean only, trimmed to 0"" fat, all grades, raw",beef top round,lb,453.592,
+beef_short_ribs_boneless_raw,23068,BEEFSHORTRIBS,"Beef, chuck, short ribs, boneless, separable lean only, trimmed to 0"" fat, all grades, raw",beef short ribs,lb,453.592,
+beef_back_ribs_raw,23181,BEEFBACKRIBS,"Beef, rib, back ribs, bone-in, separable lean only, trimmed to 0"" fat, all grades, raw",beef back ribs,lb,453.592,Bone-in; lean only

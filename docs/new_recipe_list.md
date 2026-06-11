@@ -92,7 +92,7 @@ Beef Picadillo
 Beef Pot Pie
 Beef Pot Roast
 Beef Ragu
-Beef Ribs
+Beef Back Ribs
 Beef Salisbury Steak
 Beef Short Ribs
 Beef Skirt Steak with Marinade
