@@ -11004,5 +11004,60 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'main', label: 'Beef Bourguignon', cookingMethod: '', yieldFactorWater: 0.5 }
     ],
+  },
+  {
+    id: 'ENTR_006',
+    name: 'Beef Birria',
+    category: 'Entrees & Main Courses',
+    dietaryCategory: 'all',
+    levelNum: 239,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '4 bowls',
+    prepTime: '3 hr',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":425.6,"pro":53.0,"fat":16.2,"carb":20.3,"fib":6.5,"h2o":199.8,"sug":4.1,"perServing":{"cal":425.6,"pro":53.0,"fat":16.2,"carb":20.3,"fib":6.5,"h2o":199.8,"sug":4.1,"AddedSugars":0.0,"IntrinsicSugars":4.1},"micros":{"vitaminA":68.78,"vitaminC":2.52,"vitaminD":3.06,"vitaminE":0.31,"vitaminK":7.9,"vitaminB6":0.35,"vitaminB12":2.04,"thiamin":0.06,"riboflavin":0.25,"niacin":2.72,"folate":10.44,"calcium":32.42,"iron":2.59,"magnesium":25.22,"phosphorus":159.16,"potassium":425.17,"sodium":352.27,"zinc":5.24,"copper":0.09,"selenium":19.43,"cholesterol":50.45,"saturatedFat":2.09,"monoFat":2.54,"polyFat":0.41,"omega3":0.0,"omega6":0.17},"gramsPerServing":296.7,"servings":4,"per100g":{"Energy_KCal":143.43,"Water":67.33,"Protein":17.88,"TotalLipidFat":5.46,"Carbohydrate":6.84,"FiberTotalDietary":2.18,"SugarsTotal":1.38,"Cholesterol":50.45,"FattyAcids_totalSaturated":2.09,"FattyAcids_totalMonounsaturated":2.54,"FattyAcids_totalPolyunsaturated":0.41,"LinoleicAcid":0.17,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":68.78,"Retinol":1.38,"Carotene_beta":93.17,"VitaminD":3.06,"VitaminE_alphaTocopherol":0.31,"VitaminK_phylloquinone":7.9,"VitaminC_totalAscorbicAcid":2.52,"Thiamin":0.06,"Riboflavin":0.25,"Niacin":2.72,"PantothenicAcid":0.51,"VitaminB6":0.35,"Folate_total":10.44,"Folate_food":10.44,"Folate_DFE":10.44,"FolicAcid":0.0,"VitaminB12":2.04,"Choline_total":50.15,"Betaine":13.37,"LuteinZeaxanthin":27.31,"Lycopene":480.0,"Calcium_Ca":32.42,"Iron_Fe":2.59,"Magnesium_Mg":25.22,"Phosphorus_P":159.16,"Potassium_K":425.17,"Sodium_Na":352.27,"Zinc_Zn":5.24,"Copper_Cu":0.09,"Manganese_Mn":0.28,"Selenium_Se":19.43,"Tryptophan":0.19,"Threonine":0.76,"Isoleucine":0.73,"Leucine":1.37,"Lysine":1.49,"Methionine":0.48,"Cystine":0.17,"Phenylalanine":0.65,"Tyrosine":0.58,"Valine":0.78,"Arginine":1.14,"Histidine":0.54,"Alanine":0.96,"AsparticAcid":1.61,"GlutamicAcid":2.85,"Glycine":0.75,"Proline":0.7,"Serine":0.67,"omega3":0.0,"omega6":0.17,"AddedSugars":0.0,"IntrinsicSugars":1.38},"addedSugars":0.0,"intrinsicSugars":4.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"13293","name":"Beef, chuck, under blade pot roast or steak, boneless, separable lean only, trimmed to 0\" fat, all grades, raw","grams":226.8},{"ndb":"6008","name":"Soup, beef broth or bouillon canned, ready-to-serve","grams":120.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":61.5},{"ndb":"11282","name":"Onions, raw","grams":55.0},{"ndb":"11978","name":"Peppers, ancho, dried","grams":12.8},{"ndb":"11982","name":"Peppers, pasilla, dried","grams":3.5},{"ndb":"2048","name":"Vinegar, cider","grams":7.5},{"ndb":"11215","name":"Garlic, raw","grams":4.5},{"ndb":"2014","name":"Spices, cumin seed","grams":1.1},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.5},{"ndb":"2042","name":"Spices, thyme, dried","grams":0.7},{"ndb":"2004","name":"Spices, bay leaf","grams":0.3},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.3},{"ndb":"2011","name":"Spices, cloves, ground","grams":0.3},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":1.5}],"sections":[{"section_key":"main","section_label":"Beef Birria","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.5,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":16,"raw_grams":1985.95,"raw_water_grams":1598.16,"raw_fat_grams":64.85,"raw_protein_grams":212.18,"raw_carb_grams":81.16,"final_grams":1186.87}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Beef Birria', quantity: 'custom (g)', foodWord: 'BEEFBIRRIA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'beef chuck roast', quantity: '2 lbs', section: 'main', ndbNo: '13293', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'beef broth', quantity: '2 cups', section: 'main', ndbNo: '6008', portionDesc: 'g', portionGrams: 480.0 },
+      { name: 'tomato', quantity: '2 medium', section: 'main', ndbNo: '11529', portionDesc: 'g', portionGrams: 246.0 },
+      { name: 'onion', quantity: '2 medium', section: 'main', ndbNo: '11282', portionDesc: 'g', portionGrams: 220.0 },
+      { name: 'ancho chile dried', quantity: '3 peppers', section: 'main', ndbNo: '11978', portionDesc: 'g', portionGrams: 51.0 },
+      { name: 'pasilla chile dried', quantity: '2 peppers', section: 'main', ndbNo: '11982', portionDesc: 'g', portionGrams: 14.0 },
+      { name: 'apple cider vinegar', quantity: '2 tbsp', section: 'main', ndbNo: '2048', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'garlic', quantity: '6 cloves', section: 'main', ndbNo: '11215', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'ground cumin', quantity: '2 tsp', section: 'main', ndbNo: '2014', portionDesc: 'g', portionGrams: 4.2 },
+      { name: 'dried oregano', quantity: '2 tsp', section: 'main', ndbNo: '2027', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'dried thyme', quantity: '2 tsp', section: 'main', ndbNo: '2042', portionDesc: 'g', portionGrams: 2.8 },
+      { name: 'bay leaf', quantity: '2 bay leaves', section: 'main', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'ground cinnamon', quantity: '½ tsp', section: 'main', ndbNo: '2010', portionDesc: 'g', portionGrams: 1.3 },
+      { name: 'ground cloves', quantity: '½ tsp', section: 'main', ndbNo: '2011', portionDesc: 'g', portionGrams: 1.1 },
+      { name: 'ground black pepper', quantity: '½ tsp', section: 'main', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'salt', quantity: '1 tsp', section: 'main', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 }
+    ],
+    recipeInstructions: [
+      'Remove the stems and seeds from the ancho and pasilla chiles. Toast them in a dry skillet over medium heat for 30 seconds per side until fragrant.',
+      'Soak the toasted chiles in 1 cup of the hot beef broth for 20 minutes until softened.',
+      'Transfer the soaked chiles and their soaking liquid to a blender. Add the tomatoes, onion, garlic, cumin, oregano, thyme, cinnamon, cloves, and apple cider vinegar. Blend until smooth.',
+      'Cut the beef chuck into 2-inch cubes. Season generously with salt and black pepper.',
+      'Place the beef in a large Dutch oven or pot. Pour the chile sauce over the beef.',
+      'Add the remaining beef broth, bay leaves, and additional salt to taste. Stir to combine.',
+      'Bring to a boil over high heat, then reduce to a low simmer. Cover and braise for 2½ to 3 hours, until the beef is very tender and shreds easily.',
+      'Remove the bay leaves. Shred the beef with two forks directly in the broth.',
+      'Taste and adjust salt as needed. Serve the birria in bowls with its broth, accompanied by warm tortillas, diced onion, cilantro, and lime wedges.'
+    ],
+    sections: [
+      { key: 'main', label: 'Beef Birria', cookingMethod: '', yieldFactorWater: 0.5 }
+    ],
   }
 ];
