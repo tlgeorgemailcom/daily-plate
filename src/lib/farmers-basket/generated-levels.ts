@@ -11050,7 +11050,7 @@ export const LEVELS: Level[] = [
       'Soak the toasted chiles in 1 cup of the hot beef broth for 20 minutes until softened.',
       'Transfer the soaked chiles and their soaking liquid to a blender. Add the tomatoes, onion, garlic, cumin, oregano, thyme, cinnamon, cloves, and apple cider vinegar. Blend until smooth.',
       'Cut the beef chuck into 2-inch cubes. Season generously with salt and black pepper.',
-      'Place the beef in a large Dutch oven or pot. Pour the chile sauce over the beef.',
+      'Set a Dutch oven or pot over medium-high heat with olive oil. Add the meat and sear on all sides until browned. Work in batches. Once all meat is seared, strain the blended sauce into the pot with the seared meat.',
       'Add the remaining beef broth, bay leaves, and additional salt to taste. Stir to combine.',
       'Bring to a boil over high heat, then reduce to a low simmer. Cover and braise for 2½ to 3 hours, until the beef is very tender and shreds easily.',
       'Remove the bay leaves. Shred the beef with two forks directly in the broth.',
