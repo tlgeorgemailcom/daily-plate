@@ -10459,5 +10459,58 @@ export const LEVELS: Level[] = [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
       { key: 'salad', label: 'Southwestern Salad', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SALAD_020',
+    name: 'Shrimp and Avocado Salad',
+    category: 'salads',
+    dietaryCategory: 'pesca',
+    levelNum: 228,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 servings',
+    prepTime: '',
+    linkType: 'dish',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":444.2,"pro":26.7,"fat":32.1,"carb":17.9,"fib":8.5,"h2o":351.4,"sug":6.1,"perServing":{"cal":444.2,"pro":26.7,"fat":32.1,"carb":17.9,"fib":8.5,"h2o":351.4,"sug":6.1,"AddedSugars":1.4,"IntrinsicSugars":4.7},"micros":{"vitaminA":109.01,"vitaminC":6.34,"vitaminD":0.0,"vitaminE":1.11,"vitaminK":33.54,"vitaminB6":0.09,"vitaminB12":0.0,"thiamin":0.04,"riboflavin":0.04,"niacin":0.49,"folate":49.11,"calcium":32.07,"iron":0.62,"magnesium":21.35,"phosphorus":80.16,"potassium":274.99,"sodium":170.31,"zinc":0.58,"copper":0.16,"selenium":0.23,"cholesterol":42.16,"saturatedFat":1.03,"monoFat":5.01,"polyFat":0.83,"omega3":0.02,"omega6":0.01},"gramsPerServing":433.0,"servings":2,"per100g":{"Energy_KCal":102.57,"Water":81.14,"Protein":6.16,"TotalLipidFat":7.42,"Carbohydrate":4.12,"FiberTotalDietary":1.96,"SugarsTotal":1.41,"Cholesterol":42.16,"FattyAcids_totalSaturated":1.03,"FattyAcids_totalMonounsaturated":5.01,"FattyAcids_totalPolyunsaturated":0.83,"LinoleicAcid":0.01,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":109.01,"Retinol":0.0,"Carotene_beta":1287.76,"VitaminD":0.0,"VitaminE_alphaTocopherol":1.11,"VitaminK_phylloquinone":33.54,"VitaminC_totalAscorbicAcid":6.34,"Thiamin":0.04,"Riboflavin":0.04,"Niacin":0.49,"PantothenicAcid":0.32,"VitaminB6":0.09,"Folate_total":49.11,"Folate_food":49.11,"Folate_DFE":49.11,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":6.78,"Betaine":0.21,"LuteinZeaxanthin":594.46,"Lycopene":365.43,"Calcium_Ca":32.07,"Iron_Fe":0.62,"Magnesium_Mg":21.35,"Phosphorus_P":80.16,"Potassium_K":274.99,"Sodium_Na":170.31,"Zinc_Zn":0.58,"Copper_Cu":0.16,"Manganese_Mn":0.11,"Selenium_Se":0.23,"Tryptophan":0.01,"Threonine":0.03,"Isoleucine":0.03,"Leucine":0.05,"Lysine":0.04,"Methionine":0.01,"Cystine":0.01,"Phenylalanine":0.04,"Tyrosine":0.01,"Valine":0.03,"Arginine":0.04,"Histidine":0.01,"Alanine":0.04,"AsparticAcid":0.1,"GlutamicAcid":0.19,"Glycine":0.03,"Proline":0.03,"Serine":0.04,"omega3":0.02,"omega6":0.01,"AddedSugars":0.33,"IntrinsicSugars":1.07},"addedSugars":1.4,"intrinsicSugars":4.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"15270","name":"Crustaceans, shrimp, raw (not previously frozen)","grams":113.4},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"9160","name":"Lime juice, raw","grams":7.5},{"ndb":"2020","name":"Spices, garlic powder","grams":0.4},{"ndb":"2028","name":"Spices, paprika","grams":0.8},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"11251","name":"Lettuce, cos or romaine, raw","grams":94.0},{"ndb":"9038","name":"Avocados, raw, California","grams":68.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":61.5},{"ndb":"11206","name":"Cucumber, peeled, raw","grams":59.5},{"ndb":"11282","name":"Onions, raw","grams":9.0},{"ndb":"11165","name":"Coriander (cilantro) leaves, raw","grams":4.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":13.6},{"ndb":"9160","name":"Lime juice, raw","grams":15.0},{"ndb":"19296","name":"Honey","grams":1.8},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"shrimp","section_label":"Shrimp","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":259.53,"raw_water_grams":191.81,"raw_fat_grams":14.98,"raw_protein_grams":46.03,"raw_carb_grams":2.86,"final_grams":211.57},{"section_key":"salad","section_label":"Shrimp and Avocado Salad","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":654.5,"raw_water_grams":558.9,"raw_fat_grams":49.25,"raw_protein_grams":7.3,"raw_carb_grams":32.87,"final_grams":654.5}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Shrimp and Avocado Salad', quantity: 'custom (g)', foodWord: 'SHRIMPAVOCADOSALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Shrimp, raw', quantity: '8 oz peeled', section: 'shrimp', ndbNo: '15270', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'shrimp', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'Lime juice, raw', quantity: '1 tbsp', section: 'shrimp', ndbNo: '9160', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'garlic powder', quantity: '¼ tsp', section: 'shrimp', ndbNo: '2020', portionDesc: 'g', portionGrams: 0.775 },
+      { name: 'paprika', quantity: '½ tsp', section: 'shrimp', ndbNo: '2028', portionDesc: 'g', portionGrams: 1.55 },
+      { name: 'salt', quantity: '¼ tsp', section: 'shrimp', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '⅛ tsp', section: 'shrimp', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'romaine lettuce', quantity: '1 large head (~1 lb 6 oz)', section: 'salad', ndbNo: '11251', portionDesc: 'g', portionGrams: 188.0 },
+      { name: 'avocado', quantity: '1 medium', section: 'salad', ndbNo: '9038', portionDesc: 'g', portionGrams: 136.0 },
+      { name: 'tomato', quantity: '1 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'cucumber peeled', quantity: '1 medium', section: 'salad', ndbNo: '11206', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'onion', quantity: '2 thin slices', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'fresh cilantro', quantity: '¼ cup', section: 'salad', ndbNo: '11165', portionDesc: 'g', portionGrams: 8.0 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'salad', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'Lime juice, raw', quantity: '2 tbsp', section: 'salad', ndbNo: '9160', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'honey', quantity: '½ tsp', section: 'salad', ndbNo: '19296', portionDesc: 'g', portionGrams: 3.5 },
+      { name: 'salt', quantity: '¼ tsp', section: 'salad', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '⅛ tsp', section: 'salad', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 }
+    ],
+    recipeInstructions: [
+      'Toss shrimp with lime juice, garlic powder, paprika, salt, and pepper. Heat olive oil in a skillet over medium-high heat. Cook shrimp 2–3 minutes per side until pink and opaque. USDA safe internal temperature: 145°F (63°C). Remove from heat.',
+      'Whisk together olive oil, lime juice, honey, salt, and pepper to make the dressing.',
+      'Arrange romaine, avocado, tomato, cucumber, onion, and cilantro in a large bowl.',
+      'Top with shrimp, drizzle with dressing, and serve immediately.'
+    ],
+    sections: [
+      { key: 'shrimp', label: 'Shrimp', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'salad', label: 'Shrimp and Avocado Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
