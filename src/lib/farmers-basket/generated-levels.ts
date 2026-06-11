@@ -10890,5 +10890,64 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'main', label: 'Beef and Broccoli', cookingMethod: '', yieldFactorWater: 0.87 }
     ],
+  },
+  {
+    id: 'ENTR_004',
+    name: 'Beef Bolognese',
+    category: 'Entrees & Main Courses',
+    dietaryCategory: 'all',
+    levelNum: 237,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '4 plates',
+    prepTime: '45 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":661.1,"pro":30.7,"fat":31.4,"carb":61.8,"fib":6.4,"h2o":214.1,"sug":12.1,"perServing":{"cal":661.1,"pro":30.7,"fat":31.4,"carb":61.8,"fib":6.4,"h2o":214.1,"sug":12.1,"AddedSugars":1.1,"IntrinsicSugars":11.0},"micros":{"vitaminA":78.96,"vitaminC":2.46,"vitaminD":3.24,"vitaminE":0.91,"vitaminK":9.36,"vitaminB6":0.13,"vitaminB12":0.62,"thiamin":0.04,"riboflavin":0.08,"niacin":1.49,"folate":10.71,"calcium":38.04,"iron":1.27,"magnesium":22.25,"phosphorus":92.56,"potassium":254.18,"sodium":205.75,"zinc":1.53,"copper":0.13,"selenium":15.23,"cholesterol":23.78,"saturatedFat":2.93,"monoFat":4.42,"polyFat":0.46,"omega3":0.02,"omega6":0.0},"gramsPerServing":345.4,"servings":4,"per100g":{"Energy_KCal":191.43,"Water":61.98,"Protein":8.9,"TotalLipidFat":9.1,"Carbohydrate":17.9,"FiberTotalDietary":1.86,"SugarsTotal":3.5,"Cholesterol":23.78,"FattyAcids_totalSaturated":2.93,"FattyAcids_totalMonounsaturated":4.42,"FattyAcids_totalPolyunsaturated":0.46,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":78.96,"Retinol":2.97,"Carotene_beta":764.86,"VitaminD":3.24,"VitaminE_alphaTocopherol":0.91,"VitaminK_phylloquinone":9.36,"VitaminC_totalAscorbicAcid":2.46,"Thiamin":0.04,"Riboflavin":0.08,"Niacin":1.49,"PantothenicAcid":0.28,"VitaminB6":0.13,"Folate_total":10.71,"Folate_food":10.71,"Folate_DFE":10.71,"FolicAcid":0.0,"VitaminB12":0.62,"Choline_total":22.36,"Betaine":2.82,"LuteinZeaxanthin":72.12,"Lycopene":1986.07,"Calcium_Ca":38.04,"Iron_Fe":1.27,"Magnesium_Mg":22.25,"Phosphorus_P":92.56,"Potassium_K":254.18,"Sodium_Na":205.75,"Zinc_Zn":1.53,"Copper_Cu":0.13,"Manganese_Mn":0.28,"Selenium_Se":15.23,"Tryptophan":0.06,"Threonine":0.34,"Isoleucine":0.36,"Leucine":0.65,"Lysine":0.56,"Methionine":0.18,"Cystine":0.11,"Phenylalanine":0.36,"Tyrosine":0.23,"Valine":0.41,"Arginine":0.48,"Histidine":0.25,"Alanine":0.46,"AsparticAcid":0.74,"GlutamicAcid":1.92,"Glycine":0.48,"Proline":0.58,"Serine":0.36,"omega3":0.02,"omega6":0.0,"AddedSugars":0.3,"IntrinsicSugars":3.2},"addedSugars":1.1,"intrinsicSugars":11.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20420","name":"Pasta, dry, unenriched","grams":56.7},{"ndb":"14411","name":"Water, tap, drinking","grams":450.0},{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":113.5},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"11124","name":"Carrots, raw","grams":32.0},{"ndb":"11143","name":"Celery, raw","grams":25.2},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":102.8},{"ndb":"11546","name":"Tomato products, canned, paste, without salt added","grams":8.2},{"ndb":"14106","name":"Alcoholic beverage, wine, table, white","grams":14.7},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":15.2},{"ndb":"6008","name":"Soup, beef broth or bouillon canned, ready-to-serve","grams":15.0},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.5},{"ndb":"2003","name":"Spices, basil, dried","grams":0.3},{"ndb":"2004","name":"Spices, bay leaf","grams":0.1},{"ndb":"19335","name":"Sugars, granulated","grams":1.1},{"ndb":"2047","name":"Salt, table","grams":1.1},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.1}],"sections":[{"section_key":"pasta","section_label":"Pasta","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.1857613751434733,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":2026.8,"raw_water_grams":1820.65,"raw_fat_grams":3.42,"raw_protein_grams":29.57,"raw_carb_grams":169.35,"final_grams":544.35},{"section_key":"sauce","section_label":"Bolognese Sauce","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.45,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":18,"raw_grams":1470.2,"raw_water_grams":1151.12,"raw_fat_grams":122.3,"raw_protein_grams":93.32,"raw_carb_grams":77.89,"final_grams":837.09}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Beef Bolognese', quantity: 'custom (g)', foodWord: 'BEEFBOLOGNESE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'elbow macaroni, dry', quantity: '8 oz dry', section: 'pasta', ndbNo: '20420', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'water', quantity: 'enough to boil', section: 'pasta', ndbNo: '14411', portionDesc: 'g', portionGrams: 1800.0 },
+      { name: 'ground beef (80% lean)', quantity: '1 lb', section: 'sauce', ndbNo: '23572', portionDesc: 'g', portionGrams: 454.0 },
+      { name: 'onion', quantity: '1 medium', section: 'sauce', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'carrot', quantity: '1 cup chopped', section: 'sauce', ndbNo: '11124', portionDesc: 'g', portionGrams: 128.0 },
+      { name: 'celery stalk', quantity: '1 cup chopped', section: 'sauce', ndbNo: '11143', portionDesc: 'g', portionGrams: 101.0 },
+      { name: 'garlic', quantity: '4 cloves', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'sauce', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.0 },
+      { name: 'canned crushed tomatoes', quantity: '14.5 oz can', section: 'sauce', ndbNo: '11693', portionDesc: 'g', portionGrams: 411.0 },
+      { name: 'tomato paste', quantity: '2 tbsp', section: 'sauce', ndbNo: '11546', portionDesc: 'g', portionGrams: 33.0 },
+      { name: 'white wine', quantity: '2 fl oz', section: 'sauce', ndbNo: '14106', portionDesc: 'g', portionGrams: 58.8 },
+      { name: 'whole milk', quantity: '¼ cup', section: 'sauce', ndbNo: '1077', portionDesc: 'g', portionGrams: 61.0 },
+      { name: 'beef broth', quantity: '¼ cup', section: 'sauce', ndbNo: '6008', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'dried oregano', quantity: '2 tsp', section: 'sauce', ndbNo: '2027', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'dried basil', quantity: '2 tsp', section: 'sauce', ndbNo: '2003', portionDesc: 'g', portionGrams: 1.4 },
+      { name: 'bay leaf', quantity: '1 bay leaf', section: 'sauce', ndbNo: '2004', portionDesc: 'g', portionGrams: 0.6 },
+      { name: 'sugar', quantity: '1 tsp', section: 'sauce', ndbNo: '19335', portionDesc: 'g', portionGrams: 4.2 },
+      { name: 'salt', quantity: '¾ tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'ground black pepper', quantity: '½ tsp', section: 'sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'ground nutmeg', quantity: '¼ tsp', section: 'sauce', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.55 }
+    ],
+    recipeInstructions: [
+      'Heat olive oil in a large heavy pot or Dutch oven over medium-high heat. Add the ground beef and cook, breaking it up, until browned, about 8 minutes. Drain excess fat if desired.',
+      'Add the onion, carrot, and celery (soffritto) to the pot. Cook, stirring occasionally, until softened, about 8 minutes. Add the garlic and cook 1 minute more.',
+      'Add the tomato paste and stir into the meat, cooking 2 minutes until it darkens slightly.',
+      'Pour in the white wine and stir, scraping up any browned bits. Cook until the wine is mostly absorbed, about 3 minutes.',
+      'Add the crushed tomatoes, beef broth, milk, oregano, basil, bay leaf, sugar, salt, pepper, and nutmeg. Stir to combine.',
+      'Reduce heat to low and simmer uncovered, stirring occasionally, for 45 minutes to 1 hour until the sauce is thick and the fat begins to pool on the surface. Remove the bay leaf.',
+      'Meanwhile, bring a large pot of salted water to a boil. Cook pasta according to package directions until al dente. Reserve ½ cup pasta water, then drain.',
+      'Toss the drained pasta with the Bolognese sauce, adding a splash of pasta water if needed to loosen. Serve with grated Parmesan if desired.'
+    ],
+    sections: [
+      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'sauce', label: 'Bolognese Sauce', cookingMethod: '', yieldFactorWater: 0.45 }
+    ],
   }
 ];
