@@ -2103,9 +2103,11 @@
                   {#each groupRecipeIngredients(selectedLevel) as group}
                     {#if group.section}
                       {@const isSectionCollapsed = collapsedIngredientSections.has(group.section)}
+                      {@const componentRefItem = group.items.find(i => i.isDish && i.componentRef)}
+                      {@const collapsedLabel = componentRefItem?.quantity?.replace(/\s*\(recipe\)/i, '') ?? ''}
                       <button class="ingredient-section-label" onclick={() => toggleIngredientSection(group.section!)}>
                         <span class="section-chevron">{isSectionCollapsed ? '▶' : '▼'}</span>
-                        {formatSectionHeader(group.section, selectedLevel.sections)}
+                        {isSectionCollapsed && collapsedLabel ? collapsedLabel + ':' : formatSectionHeader(group.section, selectedLevel.sections)}
                       </button>
                     {/if}
                     {#if !group.section || !collapsedIngredientSections.has(group.section)}
