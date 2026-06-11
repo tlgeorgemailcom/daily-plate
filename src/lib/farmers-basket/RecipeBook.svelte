@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onMount, onDestroy } from 'svelte';
+  import { onMount, onDestroy, tick } from 'svelte';
   import { canUseStorage } from '$lib/stores/playerStore';
   import type { Level, FoodType, DietaryCategory } from './types';
   import { RECIPE_CATEGORY_OPTIONS, toDisplayRecipeCategory, toStoredRecipeCategory } from './recipe-categories';
@@ -246,6 +246,7 @@
   
   // Reference to scroll container
   let scrollContainer: HTMLDivElement;
+  let savedScrollTop = 0;
   
   function toggleCategory(category: string) {
     const newSet = new Set(collapsedCategories);
@@ -375,6 +376,7 @@
   }
   
   function handleSelect(level: Level) {
+    savedScrollTop = scrollContainer?.scrollTop ?? 0;
     selectedLevel = level;
     showRecipeOfDay = false;
     searchQuery = ''; // Clear search when viewing detail
@@ -423,6 +425,9 @@
       return;
     }
     selectedLevel = null;
+    tick().then(() => {
+      if (scrollContainer) scrollContainer.scrollTop = savedScrollTop;
+    });
   }
   
   function handleClose() {
