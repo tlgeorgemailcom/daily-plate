@@ -10558,5 +10558,47 @@ export const LEVELS: Level[] = [
       { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'salad', label: 'Tuna Macaroni Salad', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SALAD_022',
+    name: 'Wedge Salad',
+    category: 'salads',
+    dietaryCategory: 'all',
+    levelNum: 230,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 servings',
+    prepTime: '',
+    linkType: 'dish',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":357.0,"pro":17.8,"fat":27.9,"carb":9.9,"fib":3.0,"h2o":245.5,"sug":5.7,"perServing":{"cal":357.0,"pro":17.8,"fat":27.9,"carb":9.9,"fib":3.0,"h2o":245.5,"sug":5.7,"AddedSugars":0.0,"IntrinsicSugars":5.7},"micros":{"vitaminA":51.57,"vitaminC":5.79,"vitaminD":4.92,"vitaminE":0.41,"vitaminK":31.49,"vitaminB6":0.1,"vitaminB12":0.24,"thiamin":0.07,"riboflavin":0.08,"niacin":1.11,"folate":25.38,"calcium":79.24,"iron":0.46,"magnesium":12.3,"phosphorus":93.04,"potassium":204.01,"sodium":306.71,"zinc":0.68,"copper":0.04,"selenium":5.75,"cholesterol":18.67,"saturatedFat":3.65,"monoFat":2.77,"polyFat":2.26,"omega3":0.21,"omega6":1.83},"gramsPerServing":305.6,"servings":2,"per100g":{"Energy_KCal":116.81,"Water":80.33,"Protein":5.81,"TotalLipidFat":9.14,"Carbohydrate":3.25,"FiberTotalDietary":0.96,"SugarsTotal":1.85,"Cholesterol":18.67,"FattyAcids_totalSaturated":3.65,"FattyAcids_totalMonounsaturated":2.77,"FattyAcids_totalPolyunsaturated":2.26,"LinoleicAcid":1.83,"alphaLinolenicAcid":0.21,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":51.57,"Retinol":25.96,"Carotene_beta":295.34,"VitaminD":4.92,"VitaminE_alphaTocopherol":0.41,"VitaminK_phylloquinone":31.49,"VitaminC_totalAscorbicAcid":5.79,"Thiamin":0.07,"Riboflavin":0.08,"Niacin":1.11,"PantothenicAcid":0.36,"VitaminB6":0.1,"Folate_total":25.38,"Folate_food":25.38,"Folate_DFE":25.38,"FolicAcid":0.0,"VitaminB12":0.24,"Choline_total":15.24,"Betaine":0.69,"LuteinZeaxanthin":214.89,"Lycopene":517.72,"Calcium_Ca":79.24,"Iron_Fe":0.46,"Magnesium_Mg":12.3,"Phosphorus_P":93.04,"Potassium_K":204.01,"Sodium_Na":306.71,"Zinc_Zn":0.68,"Copper_Cu":0.04,"Manganese_Mn":0.09,"Selenium_Se":5.75,"Tryptophan":0.07,"Threonine":0.23,"Isoleucine":0.27,"Leucine":0.46,"Lysine":0.47,"Methionine":0.14,"Cystine":0.05,"Phenylalanine":0.25,"Tyrosine":0.26,"Valine":0.33,"Arginine":0.27,"Histidine":0.2,"Alanine":0.24,"AsparticAcid":0.51,"GlutamicAcid":1.2,"Glycine":0.18,"Proline":0.37,"Serine":0.26,"omega3":0.21,"omega6":1.83,"AddedSugars":0.0,"IntrinsicSugars":1.85},"addedSugars":0.0,"intrinsicSugars":5.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Blue Cheese Dressing","grams":30.8},{"ndb":"11252","name":"Lettuce, iceberg (includes crisphead types), raw","grams":144.0},{"ndb":"10862","name":"Pork, cured, bacon, pre-sliced, cooked, pan-fried","grams":23.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":61.5},{"ndb":"1004","name":"Cheese, blue","grams":28.4},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":15.0},{"ndb":"11156","name":"Chives, raw","grams":3.0}],"sections":[{"section_key":"dressing","section_label":"Blue Cheese Dressing","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":61.6,"raw_water_grams":32.06,"raw_fat_grams":22.7,"raw_protein_grams":3.36,"raw_carb_grams":1.98,"final_grams":61.6},{"section_key":"salad","section_label":"Wedge Salad","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":549.7,"raw_water_grams":459.02,"raw_fat_grams":33.19,"raw_protein_grams":32.16,"raw_carb_grams":17.91,"final_grams":549.7}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Wedge Salad', quantity: 'custom (g)', foodWord: 'WEDGESALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Blue Cheese Dressing (4 tbsp total; 2 tbsp per serving)', quantity: '4 tbsp', section: 'dressing', foodWord: 'BLUECHEESEDRESSING', portionDesc: 'g', portionGrams: 61.6, isDish: true, componentRef: 'SAUCE_021' },
+      { name: 'iceberg lettuce', quantity: '½ head', section: 'salad', ndbNo: '11252', portionDesc: 'g', portionGrams: 288.0 },
+      { name: 'bacon', quantity: '4 slices', section: 'salad', ndbNo: '10862', portionDesc: 'g', portionGrams: 46.0 },
+      { name: 'tomato', quantity: '1 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'blue cheese crumbles', quantity: '2 oz', section: 'salad', ndbNo: '1004', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'scallion (green onion)', quantity: '2 stalks', section: 'salad', ndbNo: '11291', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'fresh chives', quantity: '2 tbsp', section: 'salad', ndbNo: '11156', portionDesc: 'g', portionGrams: 6.0 }
+    ],
+    recipeInstructions: [
+      'Cut the iceberg lettuce head in half through the core. Cut each half into a wedge, keeping the core intact to hold it together.',
+      'Make or portion the blue cheese dressing (see the Blue Cheese Dressing recipe).',
+      'Place each wedge on a plate. Spoon blue cheese dressing over the top.',
+      'Top with crumbled bacon, diced tomato, blue cheese crumbles, sliced scallions, and chopped chives. Serve immediately.'
+    ],
+    sections: [
+      { key: 'dressing', label: 'Blue Cheese Dressing', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'salad', label: 'Wedge Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
