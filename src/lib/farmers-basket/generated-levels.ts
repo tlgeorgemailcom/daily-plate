@@ -10600,5 +10600,52 @@ export const LEVELS: Level[] = [
       { key: 'dressing', label: 'Blue Cheese Dressing', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'salad', label: 'Wedge Salad', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SALAD_023',
+    name: 'Nicoise Salad',
+    category: 'salads',
+    dietaryCategory: 'pesca',
+    levelNum: 231,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 servings',
+    prepTime: '',
+    linkType: 'dish',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":650.3,"pro":43.3,"fat":35.3,"carb":44.7,"fib":11.7,"h2o":572.7,"sug":9.8,"perServing":{"cal":650.3,"pro":43.3,"fat":35.3,"carb":44.7,"fib":11.7,"h2o":572.7,"sug":9.8,"AddedSugars":0.4,"IntrinsicSugars":9.4},"micros":{"vitaminA":82.1,"vitaminC":4.48,"vitaminD":16.43,"vitaminE":0.88,"vitaminK":24.86,"vitaminB6":0.13,"vitaminB12":0.6,"thiamin":0.05,"riboflavin":0.09,"niacin":2.63,"folate":31.8,"calcium":28.56,"iron":1.01,"magnesium":16.42,"phosphorus":67.01,"potassium":208.9,"sodium":178.66,"zinc":0.4,"copper":0.07,"selenium":17.42,"cholesterol":34.68,"saturatedFat":0.84,"monoFat":3.15,"polyFat":0.64,"omega3":0.07,"omega6":0.0},"gramsPerServing":704.8,"servings":2,"per100g":{"Energy_KCal":92.27,"Water":81.26,"Protein":6.15,"TotalLipidFat":5.0,"Carbohydrate":6.34,"FiberTotalDietary":1.66,"SugarsTotal":1.4,"Cholesterol":34.68,"FattyAcids_totalSaturated":0.84,"FattyAcids_totalMonounsaturated":3.15,"FattyAcids_totalPolyunsaturated":0.64,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.01,"DPA_22_5n3":0.0,"DHA_22_6n3":0.06,"VitaminA_RAE":82.1,"Retinol":14.06,"Carotene_beta":811.07,"VitaminD":16.43,"VitaminE_alphaTocopherol":0.88,"VitaminK_phylloquinone":24.86,"VitaminC_totalAscorbicAcid":4.48,"Thiamin":0.05,"Riboflavin":0.09,"Niacin":2.63,"PantothenicAcid":0.22,"VitaminB6":0.13,"Folate_total":31.8,"Folate_food":31.8,"Folate_DFE":31.8,"FolicAcid":0.0,"VitaminB12":0.6,"Choline_total":35.16,"Betaine":0.68,"LuteinZeaxanthin":474.01,"Lycopene":224.53,"Calcium_Ca":28.56,"Iron_Fe":1.01,"Magnesium_Mg":16.42,"Phosphorus_P":67.01,"Potassium_K":208.9,"Sodium_Na":178.66,"Zinc_Zn":0.4,"Copper_Cu":0.07,"Manganese_Mn":0.12,"Selenium_Se":17.42,"Tryptophan":0.06,"Threonine":0.25,"Isoleucine":0.26,"Leucine":0.46,"Lysine":0.48,"Methionine":0.16,"Cystine":0.07,"Phenylalanine":0.24,"Tyrosine":0.19,"Valine":0.31,"Arginine":0.34,"Histidine":0.15,"Alanine":0.33,"AsparticAcid":0.68,"GlutamicAcid":0.89,"Glycine":0.25,"Proline":0.21,"Serine":0.27,"omega3":0.07,"omega6":0.0,"AddedSugars":0.06,"IntrinsicSugars":1.34},"addedSugars":0.4,"intrinsicSugars":9.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"11354","name":"Potatoes, white, flesh and skin, raw","grams":170.0},{"ndb":"","name":"Basic Vinaigrette","grams":33.6},{"ndb":"11251","name":"Lettuce, cos or romaine, raw","grams":94.0},{"ndb":"11053","name":"Beans, snap, green, cooked, boiled, drained, without salt","grams":113.4},{"ndb":"15121","name":"Fish, tuna, light, canned in water, drained solids","grams":142.0},{"ndb":"1129","name":"Egg, whole, cooked, hard-boiled","grams":50.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":61.5},{"ndb":"9193","name":"Olives, ripe, canned (small-extra large)","grams":33.5},{"ndb":"15002","name":"Fish, anchovy, european, canned in oil, drained solids","grams":8.0},{"ndb":"2054","name":"Capers, canned","grams":4.3}],"sections":[{"section_key":"potatoes","section_label":"Potatoes","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.96,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":340.0,"raw_water_grams":277.37,"raw_fat_grams":0.34,"raw_protein_grams":5.71,"raw_carb_grams":53.41,"final_grams":328.91},{"section_key":"dressing","section_label":"Vinaigrette","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":67.2,"raw_water_grams":17.26,"raw_fat_grams":46.63,"raw_protein_grams":0.1,"raw_carb_grams":1.41,"final_grams":67.2},{"section_key":"salad","section_label":"Nicoise Salad","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":1013.4,"raw_water_grams":861.87,"raw_fat_grams":23.56,"raw_protein_grams":80.86,"raw_carb_grams":34.58,"final_grams":1013.4}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Nicoise Salad', quantity: 'custom (g)', foodWord: 'NICOISESALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white potatoes (raw)', quantity: '12 oz small', section: 'potatoes', ndbNo: '11354', portionDesc: 'g', portionGrams: 340.0 },
+      { name: 'Basic Vinaigrette (4 tbsp total; 2 tbsp per serving)', quantity: '4 tbsp', section: 'dressing', foodWord: 'BASICVINAIGRETTE', portionDesc: 'g', portionGrams: 67.2, isDish: true, componentRef: 'SAUCE_016' },
+      { name: 'romaine lettuce', quantity: '1 large head (~1 lb 6 oz)', section: 'salad', ndbNo: '11251', portionDesc: 'g', portionGrams: 188.0 },
+      { name: 'green beans', quantity: '8 oz', section: 'salad', ndbNo: '11053', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'canned light tuna', quantity: '2 cans (5 oz each, drained)', section: 'salad', ndbNo: '15121', portionDesc: 'g', portionGrams: 284.0 },
+      { name: 'hard-boiled egg', quantity: '2 large', section: 'salad', ndbNo: '1129', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'tomato', quantity: '1 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'black olives canned', quantity: '½ cup', section: 'salad', ndbNo: '9193', portionDesc: 'g', portionGrams: 67.0 },
+      { name: 'anchovy canned', quantity: '4 fillets', section: 'salad', ndbNo: '15002', portionDesc: 'g', portionGrams: 16.0 },
+      { name: 'capers', quantity: '1 tbsp', section: 'salad', ndbNo: '2054', portionDesc: 'g', portionGrams: 8.6 }
+    ],
+    recipeInstructions: [
+      'Cook potatoes in boiling salted water until fork-tender, about 15–20 minutes. Drain and let cool slightly, then cut into halves or quarters.',
+      'Blanch green beans in boiling salted water for 3–4 minutes until crisp-tender. Transfer to ice water to stop cooking, then drain well.',
+      'Make or portion the basic vinaigrette (see the Basic Vinaigrette recipe).',
+      'Arrange romaine on a large platter or divide between 2 bowls. Top with potatoes, green beans, tuna, halved hard-boiled eggs, tomato wedges, olives, and anchovies. Scatter capers over the top.',
+      'Drizzle vinaigrette over the salad and serve at room temperature or chilled.'
+    ],
+    sections: [
+      { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 },
+      { key: 'dressing', label: 'Vinaigrette', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'salad', label: 'Nicoise Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
