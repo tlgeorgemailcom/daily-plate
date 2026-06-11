@@ -11259,7 +11259,7 @@ export const LEVELS: Level[] = [
       { name: 'onion', quantity: '1 medium onion', section: 'vegetables', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 }
     ],
     recipeInstructions: [
-      'Prepare the brine: Combine the water, salt, sugar, mustard seed, coriander seed, cloves, dill seed, mace, red pepper flakes, ginger, and cinnamon sticks in a large saucepan. Bring to a boil over high heat, stirring until the salt and sugar fully dissolve. Remove from heat and add 4 cups of ice to cool the brine rapidly. Once completely cold, refrigerate until chilled.',
+      'Prepare the brine: Combine the water, salt, sugar, mustard seed, coriander seed, cloves, dill seed, mace, red pepper flakes, ginger, and cinnamon sticks in a large saucepan. Bring to a boil over high heat, stirring until the salt and sugar fully dissolve. Remove from heat and add 4 cups of ice to cool the brine rapidly. Once completely cold, proceed to curing.',
       'Cure the brisket: Place the brisket in a large zip-top bag or non-reactive container and pour the cold brine over it. Press out any air, seal tightly, and refrigerate for 10 days. Flip the brisket once each day. After 10 days, remove the brisket and rinse it well under cold running water. Discard all brine.',
       'Place the rinsed brisket in a pot large enough to cover the brisket by at least 2 inches of water. Add the black pepper, allspice, bay leaves, and salt. Bring to a full boil over high heat, then reduce to a gentle simmer. Cover and cook for 2 1/2 to 3 hours, until the brisket yields easily to a fork.',
       'Move the brisket to a cutting board and tent loosely with foil. Keep the pot at a low simmer.',
