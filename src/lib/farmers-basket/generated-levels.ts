@@ -10739,5 +10739,48 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'salad', label: 'Three Bean Salad', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SALAD_026',
+    name: 'Waldorf Salad',
+    category: 'salads',
+    dietaryCategory: 'veggie',
+    levelNum: 234,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '4 servings',
+    prepTime: '',
+    linkType: 'dish',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":393.4,"pro":3.5,"fat":30.5,"carb":30.9,"fib":4.4,"h2o":150.9,"sug":22.5,"perServing":{"cal":393.4,"pro":3.5,"fat":30.5,"carb":30.9,"fib":4.4,"h2o":150.9,"sug":22.5,"AddedSugars":0.0,"IntrinsicSugars":22.5},"micros":{"vitaminA":6.96,"vitaminC":3.83,"vitaminD":0.9,"vitaminE":0.62,"vitaminK":28.8,"vitaminB6":0.08,"vitaminB12":0.02,"thiamin":0.05,"riboflavin":0.04,"niacin":0.22,"folate":14.19,"calcium":19.67,"iron":0.45,"magnesium":16.86,"phosphorus":41.49,"potassium":182.4,"sodium":160.77,"zinc":0.28,"copper":0.15,"selenium":0.72,"cholesterol":5.4,"saturatedFat":1.93,"monoFat":2.76,"polyFat":8.85,"omega3":0.69,"omega6":5.0},"gramsPerServing":217.9,"servings":4,"per100g":{"Energy_KCal":180.59,"Water":69.29,"Protein":1.59,"TotalLipidFat":14.01,"Carbohydrate":14.21,"FiberTotalDietary":2.02,"SugarsTotal":10.34,"Cholesterol":5.4,"FattyAcids_totalSaturated":1.93,"FattyAcids_totalMonounsaturated":2.76,"FattyAcids_totalPolyunsaturated":8.85,"LinoleicAcid":5.0,"alphaLinolenicAcid":0.69,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":6.96,"Retinol":1.93,"Carotene_beta":57.13,"VitaminD":0.9,"VitaminE_alphaTocopherol":0.62,"VitaminK_phylloquinone":28.8,"VitaminC_totalAscorbicAcid":3.83,"Thiamin":0.05,"Riboflavin":0.04,"Niacin":0.22,"PantothenicAcid":0.13,"VitaminB6":0.08,"Folate_total":14.19,"Folate_food":14.19,"Folate_DFE":14.19,"FolicAcid":0.0,"VitaminB12":0.02,"Choline_total":10.82,"Betaine":0.11,"LuteinZeaxanthin":66.31,"Lycopene":0.0,"Calcium_Ca":19.67,"Iron_Fe":0.45,"Magnesium_Mg":16.86,"Phosphorus_P":41.49,"Potassium_K":182.4,"Sodium_Na":160.77,"Zinc_Zn":0.28,"Copper_Cu":0.15,"Manganese_Mn":0.28,"Selenium_Se":0.72,"Tryptophan":0.02,"Threonine":0.06,"Isoleucine":0.06,"Leucine":0.1,"Lysine":0.05,"Methionine":0.02,"Cystine":0.02,"Phenylalanine":0.06,"Tyrosine":0.04,"Valine":0.07,"Arginine":0.2,"Histidine":0.04,"Alanine":0.07,"AsparticAcid":0.19,"GlutamicAcid":0.24,"Glycine":0.07,"Proline":0.08,"Serine":0.08,"omega3":0.69,"omega6":5.0,"AddedSugars":0.0,"IntrinsicSugars":10.34},"addedSugars":0.0,"intrinsicSugars":22.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"9003","name":"Apples, raw, with skin","grams":93.8},{"ndb":"11143","name":"Celery, raw","grams":30.0},{"ndb":"9132","name":"Grapes, red or green (European type, such as Thompson seedless), raw","grams":37.8},{"ndb":"12155","name":"Nuts, walnuts, english","grams":14.2},{"ndb":"9298","name":"Raisins, seedless","grams":10.0},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":28.0},{"ndb":"9152","name":"Lemon juice, raw","grams":3.8},{"ndb":"2047","name":"Salt, table","grams":0.4}],"sections":[{"section_key":"salad","section_label":"Waldorf Salad","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":871.45,"raw_water_grams":603.79,"raw_fat_grams":122.11,"raw_protein_grams":13.88,"raw_carb_grams":123.82,"final_grams":871.45}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Waldorf Salad', quantity: 'custom (g)', foodWord: 'WALDORFSALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'apple', quantity: '3 medium (cored, diced, skin on)', section: 'salad', ndbNo: '9003', portionDesc: 'g', portionGrams: 375.0 },
+      { name: 'celery stalk', quantity: '3 stalks (sliced)', section: 'salad', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'grapes', quantity: '1 cup (halved)', section: 'salad', ndbNo: '9132', portionDesc: 'g', portionGrams: 151.0 },
+      { name: 'walnuts', quantity: '½ cup (roughly chopped)', section: 'salad', ndbNo: '12155', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'raisins', quantity: '¼ cup', section: 'salad', ndbNo: '9298', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'mayonnaise', quantity: '½ cup', section: 'salad', ndbNo: '4025', portionDesc: 'g', portionGrams: 112.0 },
+      { name: 'lemon juice', quantity: '1 tbsp', section: 'salad', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.25 },
+      { name: 'salt', quantity: '¼ tsp', section: 'salad', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 }
+    ],
+    recipeInstructions: [
+      'Core and dice the apples (leave the skin on). Toss immediately with the lemon juice to prevent browning.',
+      'Slice the celery and halve the grapes. Roughly chop the walnuts.',
+      'Combine apples, celery, grapes, walnuts, and raisins in a large bowl.',
+      'Add the mayonnaise and salt. Toss gently until everything is evenly coated.',
+      'Refrigerate at least 30 minutes before serving to allow flavors to meld. Serve chilled.'
+    ],
+    sections: [
+      { key: 'salad', label: 'Waldorf Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
