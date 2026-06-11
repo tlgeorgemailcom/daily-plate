@@ -11212,5 +11212,58 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'main', label: 'Carne Guisada', cookingMethod: '', yieldFactorWater: 0.55 }
     ],
+  },
+  {
+    id: 'ENTR_010',
+    name: 'Beef Corned Beef & Cabbage',
+    category: 'Entrees & Main Courses',
+    dietaryCategory: 'all',
+    levelNum: 243,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '6 plates',
+    prepTime: '3 hr',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":347.4,"pro":20.3,"fat":17.6,"carb":27.9,"fib":6.4,"h2o":224.4,"sug":6.3,"perServing":{"cal":347.4,"pro":20.3,"fat":17.6,"carb":27.9,"fib":6.4,"h2o":224.4,"sug":6.3,"AddedSugars":0.0,"IntrinsicSugars":6.3},"micros":{"vitaminA":105.55,"vitaminC":12.2,"vitaminD":0.0,"vitaminE":0.15,"vitaminK":21.0,"vitaminB6":0.15,"vitaminB12":0.58,"thiamin":0.04,"riboflavin":0.08,"niacin":1.29,"folate":15.14,"calcium":24.29,"iron":0.91,"magnesium":15.82,"phosphorus":69.95,"potassium":286.88,"sodium":412.9,"zinc":1.12,"copper":0.08,"selenium":7.49,"cholesterol":20.66,"saturatedFat":1.85,"monoFat":2.81,"polyFat":0.23,"omega3":0.0,"omega6":0.0},"gramsPerServing":296.5,"servings":6,"per100g":{"Energy_KCal":117.2,"Water":75.68,"Protein":6.85,"TotalLipidFat":5.93,"Carbohydrate":9.43,"FiberTotalDietary":2.16,"SugarsTotal":2.14,"Cholesterol":20.66,"FattyAcids_totalSaturated":1.85,"FattyAcids_totalMonounsaturated":2.81,"FattyAcids_totalPolyunsaturated":0.23,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":105.55,"Retinol":0.0,"Carotene_beta":1044.44,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.15,"VitaminK_phylloquinone":21.0,"VitaminC_totalAscorbicAcid":12.2,"Thiamin":0.04,"Riboflavin":0.08,"Niacin":1.29,"PantothenicAcid":0.29,"VitaminB6":0.15,"Folate_total":15.14,"Folate_food":15.14,"Folate_DFE":15.14,"FolicAcid":0.0,"VitaminB12":0.58,"Choline_total":7.12,"Betaine":0.24,"LuteinZeaxanthin":41.54,"Lycopene":0.15,"Calcium_Ca":24.29,"Iron_Fe":0.91,"Magnesium_Mg":15.82,"Phosphorus_P":69.95,"Potassium_K":286.88,"Sodium_Na":412.9,"Zinc_Zn":1.12,"Copper_Cu":0.08,"Manganese_Mn":0.2,"Selenium_Se":7.49,"Tryptophan":0.06,"Threonine":0.27,"Isoleucine":0.28,"Leucine":0.47,"Lysine":0.49,"Methionine":0.14,"Cystine":0.09,"Phenylalanine":0.24,"Tyrosine":0.2,"Valine":0.3,"Arginine":0.42,"Histidine":0.2,"Alanine":0.45,"AsparticAcid":0.75,"GlutamicAcid":1.16,"Glycine":0.5,"Proline":0.44,"Serine":0.27,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":2.14},"addedSugars":0.0,"intrinsicSugars":6.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"13346","name":"Beef, cured, corned beef, brisket, raw","grams":113.4},{"ndb":"11282","name":"Onions, raw","grams":18.3},{"ndb":"11215","name":"Garlic, raw","grams":2.0},{"ndb":"2024","name":"Spices, mustard seed, ground","grams":0.3},{"ndb":"2013","name":"Spices, coriander seed","grams":0.3},{"ndb":"2001","name":"Spices, allspice, ground","grams":0.3},{"ndb":"2030","name":"Spices, pepper, black","grams":0.4},{"ndb":"2011","name":"Spices, cloves, ground","grams":0.2},{"ndb":"2016","name":"Spices, dill seed","grams":0.4},{"ndb":"2022","name":"Spices, mace, ground","grams":0.1},{"ndb":"2004","name":"Spices, bay leaf","grams":0.3},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1},{"ndb":"11109","name":"Cabbage, raw","grams":75.6},{"ndb":"11354","name":"Potatoes, white, flesh and skin, raw","grams":100.0},{"ndb":"11124","name":"Carrots, raw","grams":40.7}],"sections":[{"section_key":"beef","section_label":"Corned Beef","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.6,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":12,"raw_grams":817.1,"raw_water_grams":559.14,"raw_fat_grams":103.86,"raw_protein_grams":103.66,"raw_carb_grams":23.72,"final_grams":593.44},{"section_key":"vegetables","section_label":"Vegetables","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":1297.6,"raw_water_grams":1123.04,"raw_fat_grams":1.64,"raw_protein_grams":18.16,"raw_carb_grams":143.94,"final_grams":1185.3}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Beef Corned Beef & Cabbage', quantity: 'custom (g)', foodWord: 'BEEFCORNEDCABBAGE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'corned beef', quantity: '1 1/2 lbs corned beef brisket', section: 'beef', ndbNo: '13346', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'onion', quantity: '1 medium onion', section: 'beef', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'garlic', quantity: '4 cloves garlic', section: 'beef', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'ground mustard', quantity: '1 tsp ground mustard seed', section: 'beef', ndbNo: '2024', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'ground coriander', quantity: '1 tsp coriander seed', section: 'beef', ndbNo: '2013', portionDesc: 'g', portionGrams: 1.8 },
+      { name: 'allspice', quantity: '1 tsp ground allspice', section: 'beef', ndbNo: '2001', portionDesc: 'g', portionGrams: 1.9 },
+      { name: 'ground black pepper', quantity: '1 tsp black pepper', section: 'beef', ndbNo: '2030', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'ground cloves', quantity: '1/2 tsp ground cloves', section: 'beef', ndbNo: '2011', portionDesc: 'g', portionGrams: 1.05 },
+      { name: 'dill seed', quantity: '1 tsp dill seed', section: 'beef', ndbNo: '2016', portionDesc: 'g', portionGrams: 2.1 },
+      { name: 'ground mace', quantity: '1/2 tsp ground mace', section: 'beef', ndbNo: '2022', portionDesc: 'g', portionGrams: 0.85 },
+      { name: 'bay leaf', quantity: '3 bay leaves', section: 'beef', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.8 },
+      { name: 'red pepper flakes', quantity: '1/2 tsp red pepper flakes', section: 'beef', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.9 },
+      { name: 'green cabbage', quantity: '1/2 head cabbage', section: 'vegetables', ndbNo: '11109', portionDesc: 'g', portionGrams: 453.6 },
+      { name: 'white potatoes (raw)', quantity: '4 medium potatoes', section: 'vegetables', ndbNo: '11354', portionDesc: 'g', portionGrams: 600.0 },
+      { name: 'carrot', quantity: '4 large carrots', section: 'vegetables', ndbNo: '11124', portionDesc: 'g', portionGrams: 244.0 }
+    ],
+    recipeInstructions: [
+      'In a large pot, place the corned beef brisket fat-side up. Cover with cold water by at least 2 inches.',
+      'Add the onion, garlic, mustard seed, coriander seed, allspice, black pepper, cloves, dill seed, mace, bay leaves, and red pepper flakes to the pot.',
+      'Bring to a boil over high heat, then reduce heat to low. Cover and simmer for 2 to 2 1/2 hours, or until the beef is fork-tender.',
+      'Remove the brisket to a cutting board and tent with foil. Keep the cooking liquid at a gentle simmer.',
+      'Add the potatoes and carrots to the simmering liquid. Cook for 10 minutes.',
+      'Add the cabbage wedges to the pot. Continue cooking for 15 to 20 minutes, or until the vegetables are tender.',
+      'Slice the brisket against the grain. Serve with the cabbage, potatoes, and carrots alongside with a ladle of the cooking broth.'
+    ],
+    sections: [
+      { key: 'beef', label: 'Corned Beef', cookingMethod: '', yieldFactorWater: 0.6 },
+      { key: 'vegetables', label: 'Vegetables', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];

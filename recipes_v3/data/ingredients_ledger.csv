@@ -292,3 +292,6 @@ pasilla_chile_dried,11982,PASILLACHILE,"Peppers, pasilla, dried",pasilla chile d
 beer_regular,14003,BEER,"Alcoholic beverage, beer, regular, all",beer,fl oz,29.7,
 orange_juice_raw,9206,ORANGEJUICERAW,"Orange juice, raw",orange juice,fl oz,31.0,
 chili_powder,2009,CHILIPOWDER,"Spices, chili powder",chili powder,tsp,2.7,
+corned_beef_brisket_raw,13346,BEEFCORNEDRAW,"Beef, cured, corned beef, brisket, raw",corned beef,oz,28.35,
+dill_seed,2016,DILLSEED,"Spices, dill seed",dill seed,tsp,2.1,
+mace_ground,2022,MACEGROUND,"Spices, mace, ground",ground mace,tsp,1.7,
