@@ -9612,7 +9612,8 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Wash and dry the romaine leaves. Tear or chop into bite-sized pieces and place in a large bowl.',
       'Add the croutons and freshly grated Parmesan to the bowl.',
-      'Drizzle the Caesar dressing over the salad, starting with 2 tablespoons per serving. Toss well to coat every leaf evenly.',
+      'Make or portion the Caesar Salad Dressing (see the Caesar Salad Dressing recipe).',
+      'Drizzle the Caesar Salad Dressing over the salad, starting with 2 tablespoons per serving. Toss well to coat every leaf evenly.',
       'Taste and add more dressing if desired. Finish with an extra pinch of Parmesan and black pepper at the table.',
       'Serve immediately — Caesar salad does not hold after dressing.'
     ],
@@ -9656,7 +9657,8 @@ export const LEVELS: Level[] = [
       'Season the chicken breast with salt and pepper. Grill or pan-sear over medium-high heat until cooked through (internal temperature 165°F / 74°C), about 6–7 minutes per side. Let rest 5 minutes, then slice or chop.',
       'Wash and dry the romaine leaves. Tear or chop into bite-sized pieces and place in a large bowl.',
       'Add the croutons and freshly grated Parmesan.',
-      'Drizzle the Caesar dressing over the salad and toss well to coat every leaf evenly.',
+      'Make or portion the Caesar Salad Dressing (see the Caesar Salad Dressing recipe).',
+      'Drizzle the Caesar Salad Dressing over the salad and toss well to coat every leaf evenly.',
       'Divide between two plates and top each with the sliced chicken breast.',
       'Finish with an extra pinch of Parmesan and freshly cracked black pepper. Serve immediately.'
     ],
@@ -9786,7 +9788,8 @@ export const LEVELS: Level[] = [
     ],
     recipeInstructions: [
       'Combine the romaine lettuce, cucumber, tomato, black olives, feta cheese, and onion in a large bowl.',
-      'Drizzle with Italian Vinaigrette (2 tbsp per serving) and toss gently to coat.',
+      'Make or portion the Italian Vinaigrette (see the Italian Vinaigrette recipe).',
+      'Drizzle with the Italian Vinaigrette (2 tablespoons per serving) and toss gently to coat.',
       'Serve immediately or refrigerate up to 1 hour before serving (add dressing just before serving if making ahead).'
     ],
     sections: [
@@ -10156,7 +10159,8 @@ export const LEVELS: Level[] = [
       'Prepare gnocchi according to the Potato Gnocchi recipe (or use 2 cups store-bought). Cook in salted boiling water until they float, about 2–3 minutes. Drain, toss with a splash of oil to prevent sticking, and let cool completely.',
       'Slice or cube the salami and provolone. Quarter the artichoke hearts. Chop the tomato and bell pepper into bite-sized pieces. Drain the olives.',
       'Combine cooled gnocchi, salami, provolone, olives, artichoke hearts, tomato, bell pepper, and basil in a large bowl.',
-      'Drizzle Italian vinaigrette over the salad. Season with salt and pepper. Toss gently to coat. Serve at room temperature or refrigerate 30 minutes before serving.'
+      'Make or portion the Italian Vinaigrette (see the Italian Vinaigrette recipe).',
+      'Drizzle the Italian Vinaigrette over the salad. Season with salt and pepper. Toss gently to coat. Serve at room temperature or refrigerate 30 minutes before serving.'
     ],
     sections: [
       { key: 'gnocchi', label: 'Potato Gnocchi', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -10204,7 +10208,8 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Season chicken breast with garlic powder, salt, and pepper. Brush with olive oil. Cook in a grill pan or skillet over medium-high heat, 6–7 minutes per side, until an instant-read thermometer reads 165°F (74°C). Let rest 5 minutes, then slice on the bias.',
       'While chicken rests, arrange romaine, tomato, cucumber, bell pepper, onion, carrot, and croutons in a large bowl or on a platter.',
-      'Top salad with sliced chicken. Drizzle with basic vinaigrette and serve immediately.'
+      'Make or portion the Basic Vinaigrette (see the Basic Vinaigrette recipe).',
+      'Top salad with sliced chicken. Drizzle with the Basic Vinaigrette and serve immediately.'
     ],
     sections: [
       { key: 'chicken', label: 'Grilled chicken', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -10303,7 +10308,8 @@ export const LEVELS: Level[] = [
       'Cook pasta in a large pot of salted boiling water until al dente (about 9–11 minutes). Drain, rinse under cold water, and spread on a sheet pan to cool completely.',
       'Slice salami and provolone into bite-sized pieces. Quarter the artichoke hearts. Chop the tomato, cucumber, and bell pepper. Drain the olives.',
       'Combine cooled pasta, salami, provolone, olives, artichoke hearts, tomato, bell pepper, cucumber, onion, and basil in a large bowl.',
-      'Drizzle Italian vinaigrette over the salad. Season with salt and pepper. Toss to coat evenly. Refrigerate at least 30 minutes before serving.'
+      'Make or portion the Italian Vinaigrette (see the Italian Vinaigrette recipe).',
+      'Drizzle the Italian Vinaigrette over the salad. Season with salt and pepper. Toss to coat evenly. Refrigerate at least 30 minutes before serving.'
     ],
     sections: [
       { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
