@@ -173,6 +173,19 @@
   // Which level is expanded (null = show index view)
   let selectedLevel = $state<Level | null>(null);
 
+  // Which ingredient sections are collapsed in the detail view
+  let collapsedIngredientSections = $state<Set<string>>(new Set());
+
+  function toggleIngredientSection(sectionKey: string) {
+    const newSet = new Set(collapsedIngredientSections);
+    if (newSet.has(sectionKey)) {
+      newSet.delete(sectionKey);
+    } else {
+      newSet.add(sectionKey);
+    }
+    collapsedIngredientSections = newSet;
+  }
+
   $effect(() => {
     if (!selectedLevel) return;
     const refreshedLevel = levels.find((level) => level.id === selectedLevel?.id);
@@ -378,6 +391,7 @@
   function handleSelect(level: Level) {
     savedScrollTop = scrollContainer?.scrollTop ?? 0;
     selectedLevel = level;
+    collapsedIngredientSections = new Set(); // Reset: all sections expanded when opening a recipe
     showRecipeOfDay = false;
     searchQuery = ''; // Clear search when viewing detail
     if (canReadAllRecipes) {
@@ -2082,8 +2096,13 @@
                   <span class="ingredients-label">📝 Full Ingredient List:</span>
                   {#each groupRecipeIngredients(selectedLevel) as group}
                     {#if group.section}
-                      <div class="ingredient-section-label">{formatSectionHeader(group.section, selectedLevel.sections)}</div>
+                      {@const isSectionCollapsed = collapsedIngredientSections.has(group.section)}
+                      <button class="ingredient-section-label" onclick={() => toggleIngredientSection(group.section!)}>
+                        <span class="section-chevron">{isSectionCollapsed ? '▶' : '▼'}</span>
+                        {formatSectionHeader(group.section, selectedLevel.sections)}
+                      </button>
                     {/if}
+                    {#if !group.section || !collapsedIngredientSections.has(group.section)}
                     <ul>
                       {#each group.items as ing}
                         {@const ingLineParts = formatIngredientLine(ing).split('\n')}
@@ -2102,6 +2121,7 @@
                         </li>
                       {/each}
                     </ul>
+                    {/if}
                   {/each}
                 </div>
                 {#if selectedLevel.nutritionJson}
@@ -3282,6 +3302,33 @@
     font-size: 0.85em;
     color: #888;
     font-style: italic;
+  }
+
+  .ingredient-section-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 4px 0 2px;
+    margin-top: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #5D4037;
+    text-align: left;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+  }
+
+  .ingredient-section-label:hover {
+    color: #3E2723;
+  }
+
+  .section-chevron {
+    font-size: 0.65rem;
+    flex-shrink: 0;
+    color: #8B6550;
   }
 
   .component-sublist-label {
