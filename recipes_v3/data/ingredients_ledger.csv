@@ -283,3 +283,6 @@ beef_tenderloin_raw,23372,BEEFTENDERLOIN,"Beef, loin, tenderloin steak, boneless
 beef_top_round_raw,23354,BEEFTOPROUND,"Beef, round, top round steak, boneless, separable lean only, trimmed to 0"" fat, all grades, raw",beef top round,lb,453.592,
 beef_short_ribs_boneless_raw,23068,BEEFSHORTRIBS,"Beef, chuck, short ribs, boneless, separable lean only, trimmed to 0"" fat, all grades, raw",beef short ribs,lb,453.592,
 beef_back_ribs_raw,23181,BEEFBACKRIBS,"Beef, rib, back ribs, bone-in, separable lean only, trimmed to 0"" fat, all grades, raw",beef back ribs,lb,453.592,Bone-in; lean only
+broccoli_raw,11090,BROCCOLI,"Broccoli, raw",broccoli,cup,91.0,
+rice_noodles_dry,20133,NOODLERICE,"Rice noodles, dry",rice noodles dry,oz,28.35,
+soy_sauce,16123,SOYSAUCE,Soy sauce made from soy and wheat (shoyu),soy sauce,tbsp,16.0,

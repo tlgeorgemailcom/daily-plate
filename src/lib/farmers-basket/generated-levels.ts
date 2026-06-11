@@ -10792,5 +10792,103 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'salad', label: 'Waldorf Salad', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'ENTR_002',
+    name: 'Beef Asian Noodles',
+    category: 'Entrees & Main Courses',
+    dietaryCategory: 'all',
+    levelNum: 235,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 bowls',
+    prepTime: '30 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":672.6,"pro":47.0,"fat":25.9,"carb":62.6,"fib":6.3,"h2o":397.8,"sug":9.8,"perServing":{"cal":672.6,"pro":47.0,"fat":25.9,"carb":62.6,"fib":6.3,"h2o":397.8,"sug":9.8,"AddedSugars":2.1,"IntrinsicSugars":7.7},"micros":{"vitaminA":83.62,"vitaminC":7.01,"vitaminD":0.6,"vitaminE":0.51,"vitaminK":22.52,"vitaminB6":0.21,"vitaminB12":0.29,"thiamin":0.04,"riboflavin":0.06,"niacin":2.09,"folate":15.05,"calcium":28.59,"iron":0.92,"magnesium":16.56,"phosphorus":101.17,"potassium":238.26,"sodium":349.58,"zinc":1.47,"copper":0.06,"selenium":10.37,"cholesterol":18.82,"saturatedFat":0.97,"monoFat":2.69,"polyFat":0.53,"omega3":0.0,"omega6":0.0},"gramsPerServing":542.3,"servings":2,"per100g":{"Energy_KCal":124.03,"Water":73.35,"Protein":8.67,"TotalLipidFat":4.77,"Carbohydrate":11.55,"FiberTotalDietary":1.16,"SugarsTotal":1.8,"Cholesterol":18.82,"FattyAcids_totalSaturated":0.97,"FattyAcids_totalMonounsaturated":2.69,"FattyAcids_totalPolyunsaturated":0.53,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":83.62,"Retinol":0.0,"Carotene_beta":838.62,"VitaminD":0.6,"VitaminE_alphaTocopherol":0.51,"VitaminK_phylloquinone":22.52,"VitaminC_totalAscorbicAcid":7.01,"Thiamin":0.04,"Riboflavin":0.06,"Niacin":2.09,"PantothenicAcid":0.28,"VitaminB6":0.21,"Folate_total":15.05,"Folate_food":15.05,"Folate_DFE":15.05,"FolicAcid":0.0,"VitaminB12":0.29,"Choline_total":32.47,"Betaine":4.34,"LuteinZeaxanthin":165.52,"Lycopene":0.09,"Calcium_Ca":28.59,"Iron_Fe":0.92,"Magnesium_Mg":16.56,"Phosphorus_P":101.17,"Potassium_K":238.26,"Sodium_Na":349.58,"Zinc_Zn":1.47,"Copper_Cu":0.06,"Manganese_Mn":0.15,"Selenium_Se":10.37,"Tryptophan":0.06,"Threonine":0.35,"Isoleucine":0.38,"Leucine":0.66,"Lysine":0.67,"Methionine":0.2,"Cystine":0.1,"Phenylalanine":0.35,"Tyrosine":0.27,"Valine":0.42,"Arginine":0.56,"Histidine":0.25,"Alanine":0.5,"AsparticAcid":0.8,"GlutamicAcid":1.39,"Glycine":0.48,"Proline":0.41,"Serine":0.35,"omega3":0.0,"omega6":0.0,"AddedSugars":0.39,"IntrinsicSugars":1.42},"addedSugars":2.1,"intrinsicSugars":7.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20133","name":"Rice noodles, dry","grams":42.5},{"ndb":"23611","name":"Beef, top sirloin, steak, separable lean only, trimmed to 1/8\" fat, all grades, raw","grams":170.1},{"ndb":"11090","name":"Broccoli, raw","grams":68.2},{"ndb":"11124","name":"Carrots, raw","grams":64.0},{"ndb":"11282","name":"Onions, raw","grams":55.0},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":22.5},{"ndb":"11215","name":"Garlic, raw","grams":9.0},{"ndb":"11216","name":"Ginger root, raw","grams":6.0},{"ndb":"16124","name":"Soy sauce made from soy (tamari)","grams":22.5},{"ndb":"4058","name":"Oil, sesame, salad or cooking","grams":4.5},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":13.5},{"ndb":"6008","name":"Soup, beef broth or bouillon canned, ready-to-serve","grams":30.0},{"ndb":"20027","name":"Cornstarch","grams":4.0},{"ndb":"19335","name":"Sugars, granulated","grams":2.1},{"ndb":"2047","name":"Salt, table","grams":0.8}],"sections":[{"section_key":"noodles","section_label":"Noodles","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":20.855434731712702,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":85.05,"raw_water_grams":10.13,"raw_fat_grams":0.48,"raw_protein_grams":5.06,"raw_carb_grams":68.19,"final_grams":286.17},{"section_key":"stir_fry","section_label":"Stir-Fry","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.8,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":14,"raw_grams":944.4,"raw_water_grams":730.3,"raw_fat_grams":51.25,"raw_protein_grams":89.02,"raw_carb_grams":57.02,"final_grams":798.34}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Beef Asian Noodles', quantity: 'custom (g)', foodWord: 'BEEFASIANNOODLES', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'rice noodles dry', quantity: '3 oz dry', section: 'noodles', ndbNo: '20133', portionDesc: 'g', portionGrams: 85.05 },
+      { name: 'beef top sirloin', quantity: '¾ lb', section: 'stir_fry', ndbNo: '23611', portionDesc: 'g', portionGrams: 340.2 },
+      { name: 'broccoli', quantity: '1½ cups chopped', section: 'stir_fry', ndbNo: '11090', portionDesc: 'g', portionGrams: 136.5 },
+      { name: 'carrot', quantity: '1 cup strips', section: 'stir_fry', ndbNo: '11124', portionDesc: 'g', portionGrams: 128.0 },
+      { name: 'onion', quantity: '1 medium', section: 'stir_fry', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'scallion (green onion)', quantity: '3 medium', section: 'stir_fry', ndbNo: '11291', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'garlic', quantity: '6 cloves', section: 'stir_fry', ndbNo: '11215', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'fresh ginger', quantity: '2 tbsp', section: 'stir_fry', ndbNo: '11216', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'tamari', quantity: '2½ tbsp', section: 'stir_fry', ndbNo: '16124', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'Sesame oil', quantity: '2 tsp', section: 'stir_fry', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'stir_fry', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.0 },
+      { name: 'beef broth', quantity: '¼ cup', section: 'stir_fry', ndbNo: '6008', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'cornstarch', quantity: '1 tbsp', section: 'stir_fry', ndbNo: '20027', portionDesc: 'g', portionGrams: 8.0 },
+      { name: 'sugar', quantity: '1 tsp', section: 'stir_fry', ndbNo: '19335', portionDesc: 'g', portionGrams: 4.2 },
+      { name: 'salt', quantity: '¼ tsp', section: 'stir_fry', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 }
+    ],
+    recipeInstructions: [
+      'Bring a large pot of water to a boil. Cook rice noodles according to package directions (about 4-6 minutes). Drain and rinse with cold water. Set aside.',
+      'In a small bowl, whisk together the tamari, sesame oil, beef broth, cornstarch, and sugar until smooth. Set the sauce aside.',
+      'Slice the beef thin against the grain into bite-sized strips. Season with the salt.',
+      'Heat a large wok or skillet over high heat. Add 1 tablespoon olive oil. Add beef in a single layer and cook undisturbed for 1 minute, then stir-fry 1-2 minutes until browned. Transfer beef to a plate.',
+      'Add remaining tablespoon olive oil to the wok. Add onion and carrot; stir-fry 2 minutes. Add broccoli; stir-fry 2 minutes. Add garlic and ginger; stir-fry 30 seconds.',
+      'Return beef to the wok. Pour sauce over everything and toss to coat. Cook 1-2 minutes, stirring, until the sauce thickens and coats all the ingredients.',
+      'Add the cooked noodles and scallions; toss to combine. Serve immediately.'
+    ],
+    sections: [
+      { key: 'noodles', label: 'Noodles', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'stir_fry', label: 'Stir-Fry', cookingMethod: '', yieldFactorWater: 0.8 }
+    ],
+  },
+  {
+    id: 'ENTR_003',
+    name: 'Beef and Broccoli',
+    category: 'Entrees & Main Courses',
+    dietaryCategory: 'all',
+    levelNum: 236,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 plates',
+    prepTime: '25 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule F',
+    nutritionJson: {"cal":691.8,"pro":45.9,"fat":47.5,"carb":23.5,"fib":6.3,"h2o":317.6,"sug":6.2,"perServing":{"cal":691.8,"pro":45.9,"fat":47.5,"carb":23.5,"fib":6.3,"h2o":317.6,"sug":6.2,"AddedSugars":2.1,"IntrinsicSugars":4.1},"micros":{"vitaminA":12.73,"vitaminC":23.0,"vitaminD":0.0,"vitaminE":1.29,"vitaminK":51.89,"vitaminB6":0.25,"vitaminB12":0.35,"thiamin":0.05,"riboflavin":0.1,"niacin":2.44,"folate":28.76,"calcium":37.21,"iron":1.15,"magnesium":25.24,"phosphorus":124.66,"potassium":328.13,"sodium":435.11,"zinc":1.79,"copper":0.05,"selenium":11.58,"cholesterol":23.79,"saturatedFat":1.96,"monoFat":6.87,"polyFat":0.74,"omega3":0.0,"omega6":0.0},"gramsPerServing":443.3,"servings":2,"per100g":{"Energy_KCal":156.06,"Water":71.65,"Protein":10.36,"TotalLipidFat":10.71,"Carbohydrate":5.3,"FiberTotalDietary":1.41,"SugarsTotal":1.39,"Cholesterol":23.79,"FattyAcids_totalSaturated":1.96,"FattyAcids_totalMonounsaturated":6.87,"FattyAcids_totalPolyunsaturated":0.74,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":12.73,"Retinol":0.0,"Carotene_beta":148.25,"VitaminD":0.0,"VitaminE_alphaTocopherol":1.29,"VitaminK_phylloquinone":51.89,"VitaminC_totalAscorbicAcid":23.0,"Thiamin":0.05,"Riboflavin":0.1,"Niacin":2.44,"PantothenicAcid":0.45,"VitaminB6":0.25,"Folate_total":28.76,"Folate_food":28.76,"Folate_DFE":28.76,"FolicAcid":0.0,"VitaminB12":0.35,"Choline_total":41.11,"Betaine":7.31,"LuteinZeaxanthin":468.11,"Lycopene":0.0,"Calcium_Ca":37.21,"Iron_Fe":1.15,"Magnesium_Mg":25.24,"Phosphorus_P":124.66,"Potassium_K":328.13,"Sodium_Na":435.11,"Zinc_Zn":1.79,"Copper_Cu":0.05,"Manganese_Mn":0.2,"Selenium_Se":11.58,"Tryptophan":0.08,"Threonine":0.39,"Isoleucine":0.44,"Leucine":0.76,"Lysine":0.79,"Methionine":0.24,"Cystine":0.1,"Phenylalanine":0.41,"Tyrosine":0.3,"Valine":0.5,"Arginine":0.67,"Histidine":0.3,"Alanine":0.58,"AsparticAcid":0.97,"GlutamicAcid":1.64,"Glycine":0.57,"Proline":0.48,"Serine":0.42,"omega3":0.0,"omega6":0.0,"AddedSugars":0.47,"IntrinsicSugars":0.91},"addedSugars":2.1,"intrinsicSugars":4.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"27415110","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"23656","name":"Beef, flank, steak, separable lean only, trimmed to 0\" fat, all grades, raw","grams":170.1},{"ndb":"11090","name":"Broccoli, raw","grams":227.5},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":37.1},{"ndb":"16123","name":"Soy sauce made from soy and wheat (shoyu)","grams":32.0},{"ndb":"2048","name":"Vinegar, cider","grams":7.5},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"19335","name":"Sugars, granulated","grams":2.1},{"ndb":"20027","name":"Cornstarch","grams":4.0},{"ndb":"14411","name":"Water, tap, drinking","grams":7.4}],"sections":[{"section_key":"main","section_label":"Beef and Broccoli","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.87,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":981.45,"raw_water_grams":730.11,"raw_fat_grams":94.94,"raw_protein_grams":91.82,"raw_carb_grams":46.99,"final_grams":886.54}],"cookingMethod":"pan grilled"},
+    recipeIngredients: [
+      { name: 'Beef and Broccoli', quantity: 'custom (g)', foodWord: 'BEEFANDBROCCOLI', ndbNo: '27415110', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'beef flank steak', quantity: '¾ lb', section: 'main', ndbNo: '23656', portionDesc: 'g', portionGrams: 340.2 },
+      { name: 'broccoli', quantity: '5 cups chopped', section: 'main', ndbNo: '11090', portionDesc: 'g', portionGrams: 455.0 },
+      { name: 'olive oil', quantity: '5½ tbsp', section: 'main', ndbNo: '4053', portionDesc: 'g', portionGrams: 74.25 },
+      { name: 'soy sauce', quantity: '4 tbsp', section: 'main', ndbNo: '16123', portionDesc: 'g', portionGrams: 64.0 },
+      { name: 'apple cider vinegar', quantity: '1 tbsp', section: 'main', ndbNo: '2048', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'garlic', quantity: '2 cloves', section: 'main', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'sugar', quantity: '1 tsp', section: 'main', ndbNo: '19335', portionDesc: 'g', portionGrams: 4.2 },
+      { name: 'cornstarch', quantity: '1 tbsp', section: 'main', ndbNo: '20027', portionDesc: 'g', portionGrams: 8.0 },
+      { name: 'water', quantity: '1 tbsp', section: 'main', ndbNo: '14411', portionDesc: 'g', portionGrams: 14.8 }
+    ],
+    recipeInstructions: [
+      'Slice the beef thin against the grain into bite-sized strips.',
+      'In a small bowl, whisk together the soy sauce, apple cider vinegar, sugar, cornstarch, and water until smooth. Set the sauce aside.',
+      'Heat a large wok or skillet over high heat until very hot. Add 3 tablespoons olive oil. Add the beef in a single layer and cook undisturbed for 1 minute, then stir-fry 1-2 minutes until just browned. Transfer to a plate.',
+      'Add the remaining 2½ tablespoons olive oil to the wok. Add the broccoli and garlic; stir-fry 3-4 minutes until the broccoli is bright green and tender-crisp.',
+      'Return the beef to the wok. Pour the sauce over everything and toss to coat. Cook 1-2 minutes, stirring, until the sauce thickens and coats the beef and broccoli.',
+      'Serve immediately over steamed rice.'
+    ],
+    sections: [
+      { key: 'main', label: 'Beef and Broccoli', cookingMethod: '', yieldFactorWater: 0.87 }
+    ],
   }
 ];
