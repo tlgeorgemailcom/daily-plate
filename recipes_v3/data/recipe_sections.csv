@@ -309,14 +309,19 @@ SIDE_025,topping,Oat Pecan Topping,,baked,0.95,1.0,1.0,1.0,1.0,,,,
 SIDE_026,filling,Sweet Potato Filling,,baked,0.85,1.0,1.0,1.0,1.0,,,,
 SIDE_026,topping,Marshmallow Topping,,baked,1.0,1.0,1.0,1.0,1.0,,,,
 SAUCE_016,dressing,Dressing,,raw,1.0,1.0,1.0,1.0,1.0,,,,
+SAUCE_016,mustard,Dijon-Style Mustard,,raw,1.0,1.0,1.0,1.0,1.0,,,,SAUCE_010
 SAUCE_017,dressing,Dressing,,raw,1.0,1.0,1.0,1.0,1.0,,,,
+SAUCE_017,mustard,Dijon-Style Mustard,,raw,1.0,1.0,1.0,1.0,1.0,,,,SAUCE_010
 SAUCE_018,dressing,Dressing,,raw,1.0,1.0,1.0,1.0,1.0,,,,
+SAUCE_018,mustard,Dijon-Style Mustard,,raw,1.0,1.0,1.0,1.0,1.0,,,,SAUCE_010
 SAUCE_019,dressing,Dressing,,raw,1.0,1.0,1.0,1.0,1.0,,,,
+SAUCE_019,mustard,Dijon-Style Mustard,,raw,1.0,1.0,1.0,1.0,1.0,,,,SAUCE_010
 SAUCE_020,dressing,Dressing,,raw,1.0,1.0,1.0,1.0,1.0,,,,
 SAUCE_021,dressing,Dressing,,raw,1.0,1.0,1.0,1.0,1.0,,,,
 SAUCE_022,dressing,Dressing,,raw,1.0,1.0,1.0,1.0,1.0,,,,
 SAUCE_023,dressing,Dressing,,raw,1.0,1.0,1.0,1.0,1.0,,,,
 SAUCE_024,dressing,Dressing,,raw,1.0,1.0,1.0,1.0,1.0,,,,
+SAUCE_024,mustard,Dijon-Style Mustard,,raw,1.0,1.0,1.0,1.0,1.0,,,,SAUCE_010
 SALAD_001,salad,Caesar Salad,,raw,1.0,1.0,1.0,1.0,1.0,,,,
 SALAD_001,dressing,Caesar Dressing,,raw,1.0,1.0,1.0,1.0,1.0,,,,SAUCE_024
 SALAD_002,chicken,Chicken,,pan grilled,0.75,1.0,1.0,1.0,1.0,,,,
