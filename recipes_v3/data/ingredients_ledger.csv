@@ -19,7 +19,7 @@ beans_refried_canned,16403,REFRIEDBEAN,"Refried beans, canned, traditional style
 beef_brisket_raw,13803,BEEFBRISKET,"Beef, brisket, whole, separable lean and fat, trimmed to 1/8"" fat, all grades, raw",beef brisket,oz,28.35,
 beef_broth_canned,6008,SOUPBEEFBROTH,"Soup, beef broth or bouillon canned, ready-to-serve",beef broth,cup,245.0,
 beef_ground_80lean_raw,23572,BEEFGROUND80RAW,"Beef, ground, 80% lean meat / 20% fat, raw",ground beef (80% lean),oz,28.35,raw
-beef_ribeye_raw,23263,BEEFRIBEYERAW,"Beef, ribeye petite roast/filet, boneless, separable lean only, trimmed to 0"" fat, all grades, raw","Beef ribeye, raw",oz,28.35,
+beef_ribeye_raw,23263,BEEFRIBEYERAW,"Beef, ribeye petite roast/filet, boneless, separable lean only, trimmed to 0"" fat, all grades, raw",beef ribeye,oz,28.35,
 bell_pepper_green_raw,11333,BELLPEPPER,"Peppers, sweet, green, raw",green bell pepper,cup,149.0,
 black_pepper_ground,2030,BLACKPEPPER,"Spices, pepper, black",ground black pepper,teaspoon,2.3,
 blueberries_raw,9050,BLUEBERRIES,"Blueberries, raw",blueberries,cup,148.0,Fresh raw blueberries; 1 cup ~148g
@@ -29,21 +29,21 @@ bread_multigrain_toasted,18036,TOASTMULTI,"Bread, multi-grain, toasted (includes
 bread_rye,18060,BREADRYE,"Bread, rye",rye bread,slice,32.0,
 bread_white_commercial,18069,BREADWHITE,"Bread, white, commercially prepared (includes soft bread crumbs)",white bread,slice,28.0,
 bread_whole_wheat_commercial,18075,BREADWHOLE,"Bread, whole-wheat, commercially prepared",whole wheat bread,slice,32.0,
-breadcrumbs_plain_dry,18079,BREADCRUMBSDRY,"Bread crumbs, dry, grated, plain","Bread crumbs, dry plain",tbsp,7.5,
+breadcrumbs_plain_dry,18079,BREADCRUMBSDRY,"Bread crumbs, dry, grated, plain",bread crumbs,tbsp,7.5,
 butter_salted,1001,BUTTERSALTED,"Butter, salted",salted butter,tablespoon,14.2,Salted butter; sodium adds ~130-150mg per tablespoon
 butter_unsalted,1145,BUTTERUNSALTED,"Butter, without salt",unsalted butter,tablespoon,14.2,
 cabbage_raw,11109,CABBAGE,"Cabbage, raw",green cabbage,cup shredded,89.0,
 canadian_bacon_raw,10130,CANADIANBACONRAW,"Canadian bacon, unprepared",Canadian bacon,slice,28.5,Raw/unprepared Canadian bacon; NDB 10130
 candied_fruit_mixed,9426,CANDIEDFRUIT,Candied fruit,mixed candied peel,cup,170.0,Mixed candied peel/citron; ~170g per cup
 canola_oil,4582,OILCANOLA,"Oil, canola",canola oil,tablespoon,13.6,Neutral vegetable oil; common in 70/30 butter+oil pie crusts for tenderness
-carrot_raw,11124,CARROT,"Carrots, raw","Carrot, raw",medium,61.0,
+carrot_raw,11124,CARROT,"Carrots, raw",carrot,medium,61.0,
 celery_raw,11143,CELERY,"Celery, raw",celery stalk,stalk,40.0,
 cheese_american,1253,AMERICANFAT,"Cheese, pasteurized process, American, without added vitamin D",American cheese,oz,28.35,
 cheese_cheddar,1009,CHEDDAR,"Cheese, cheddar",Cheddar cheese,oz,28.35,
 cheese_cheddar_sharp_sliced,1270,CHEDDARSHARPCHEESE,"Cheese, cheddar, sharp, sliced",sharp cheddar cheese,slice,21,
 cheese_gruyere,1023,GRUYERE,"Cheese, gruyere",Gruyere cheese,oz,28.35,
 cheese_mexican_blend,1251,MEXICANBLEND,"Cheese, Mexican blend",Mexican blend cheese,cup,113.0,shredded
-cheese_mozzarella_wholemilk,1026,MOZZARELLA,"Cheese, mozzarella, whole milk","Mozzarella, whole milk",oz,28.35,
+cheese_mozzarella_wholemilk,1026,MOZZARELLA,"Cheese, mozzarella, whole milk",whole milk mozzarella,oz,28.35,
 cheese_parmesan_hard,1033,PARMESAN,"Cheese, parmesan, hard",Parmesan cheese,oz,28.35,Hard block; freshly grated
 cheese_provolone,1035,PROVOLONE,"Cheese, provolone",provolone cheese,slice,28.0,
 cheese_swiss,1040,SWISSCHEESE,"Cheese, swiss",Swiss cheese,oz,28.35,
@@ -71,7 +71,7 @@ cod_atlantic_raw,15015,CODRAW,"Fish, cod, Atlantic, raw",cod fillet,oz,28.35,
 coriander_seed,2013,CORIANDERSEED,"Spices, coriander seed",ground coriander,teaspoon,1.8,Ground coriander spice
 corn_syrup_light,19350,SYRUPCORNLIGHT,"Syrups, corn, light",light corn syrup,cup,328.0,
 corned_beef_brisket_cooked,13347,BEEFCORNED,"Beef, cured, corned beef, brisket, cooked",corned beef,oz,28.35,
-cornmeal_enriched_yellow,20022,CORNMEAL,"Cornmeal, degermed, enriched, yellow","Cornmeal, enriched, yellow",tbsp,8.6,
+cornmeal_enriched_yellow,20022,CORNMEAL,"Cornmeal, degermed, enriched, yellow",yellow cornmeal,tbsp,8.6,
 cornmeal_yellow_whole_grain,20020,CORNMEAL,"Cornmeal, whole-grain, yellow",cornmeal,cup,122.0,
 cornstarch,20027,CORNSTARCH,Cornstarch,cornstarch,tablespoon,8.0,Pure starch thickener; gluten-free alternative to flour for pie filling thickening
 crab_blue_cooked,15140,CRAB,"Crustaceans, crab, blue, cooked, moist heat",crab meat,oz,28.35,
@@ -80,10 +80,10 @@ cream_cheese,1017,CREAMCHEESE,"Cheese, cream",cream cheese,package_8oz,227.0,Ful
 cream_of_tartar,18373,CREAMOFTARTAR,"Leavening agents, cream of tartar",cream of tartar,teaspoon,3.0,Cream of tartar; 1 tsp ~3g
 croissant,18239,CROISSANT,"Croissants, butter",croissant,piece,67,
 cucumber_peeled_raw,11206,CUCUMBER,"Cucumber, peeled, raw",cucumber peeled,cup_sliced,119.0,
-cucumber_raw,11205,CUCUMBERPEEL,"Cucumber, with peel, raw","Cucumber, raw",cup sliced,119.0,
+cucumber_raw,11205,CUCUMBERPEEL,"Cucumber, with peel, raw",cucumber,cup sliced,119.0,
 cumin_ground,2014,CUMIN,"Spices, cumin seed",ground cumin,teaspoon,2.0,Ground cumin spice
 currants_zante_dried,9085,CURRANTSDRIED,"Currants, zante, dried",currants,cup,145.0,Dried Zante currants; ~145g per cup
-daikon_radish_raw,11430,DAIKONRADISH,"Radishes, oriental, raw","Daikon radish, raw",oz,28.35,
+daikon_radish_raw,11430,DAIKONRADISH,"Radishes, oriental, raw",daikon radish,oz,28.35,
 dates_medjool,9421,DATESMEDJOOL,"Dates, medjool",medjool dates,cup,150.0,"Pitted medjool dates, chopped; ~150g per cup"
 dill_fresh,2045,DILL,"Dill weed, fresh",fresh dill,sprigs,1.0,
 egg_cooked_hardboiled,1129,EGGBOILED,"Egg, whole, cooked, hard-boiled",hard-boiled egg,large_egg,50.0,
@@ -113,7 +113,7 @@ heavy_cream,1053,CREAM,"Cream, fluid, heavy whipping",heavy cream,cup,238.0,Heav
 hoagie_roll,18353,HOAGIEROLL,"Rolls, hard (includes kaiser)",Hoagie roll,oz,28.35,
 hot_sauce,6169,HOTSAUCE,"Sauce, ready-to-serve, pepper, TABASCO",hot sauce,tablespoon,15.0,
 hot_sauce_tabasco,6169,HOTSAUCE,"Sauce, ready-to-serve, pepper, TABASCO",Hot sauce (Tabasco),tsp,4.7,
-jalapeno_raw,11979,JALAPENO,"Peppers, jalapeno, raw","Jalapeño, raw",pepper,14.0,
+jalapeno_raw,11979,JALAPENO,"Peppers, jalapeno, raw",jalapeño,pepper,14.0,
 jam_preserves,19297,JAM,Jams and preserves,jelly or jam,tablespoon,20.0,
 ketchup,11935,KETCHUP,Catsup,ketchup,tablespoon,17.0,
 lamb_ground_raw,17224,LAMBGROUND,"Lamb, ground, raw",ground lamb,oz,28.35,Raw ground lamb; use raw weight
@@ -121,7 +121,7 @@ lemon_juice_raw,9152,LEMONJUICE,"Lemon juice, raw",lemon juice,tablespoon,15.0,
 lemon_peel_raw,9156,LEMONPEEL,"Lemon peel, raw",lemon zest,tablespoon,6.0,Fresh lemon zest; 1 Tbsp grated ~6g
 lettuce_iceberg_raw,11252,LETTUCE,"Lettuce, iceberg (includes crisphead types), raw",iceberg lettuce,cup,72.0,
 limburger_cheese,1024,LIMBURGERCHEESE,"Cheese, limburger",limburger cheese,oz,28.35,
-lime_juice_raw,9160,LIMEJUICE,"Lime juice, raw","Lime juice, raw",tbsp,15.0,
+lime_juice_raw,9160,LIMEJUICE,"Lime juice, raw",lime juice,tbsp,15.0,
 liverwurst_pork,7041,LIVERWURSTPORK,"Liver sausage, liverwurst, pork",liverwurst,oz,28.35,
 lobster_northern_cooked,15148,LOBSTER,"Crustaceans, lobster, northern, cooked, moist heat",lobster meat,oz,28.35,
 margarine_stick_salted,4610,MARGARINESTICKSALTED,"Margarine, regular, 80% fat, composite, stick, with salt",margarine stick salted,tablespoon,14.2,Regular 80% fat stick margarine with salt; 1 tbsp ~14.2g
@@ -141,7 +141,7 @@ onion_powder,2026,ONIONPOWDER,"Spices, onion powder",onion powder,teaspoon,2.4,
 onion_raw,11282,ONION,"Onions, raw",onion,cup,160.0,
 oregano_dried,2027,OREGANO,"Spices, oregano, dried",dried oregano,teaspoon,1.0,
 oregano_dried_ground,2027,OREGANO,"Spices, oregano, dried",dried oregano,teaspoon,1.8,
-oyster_eastern_raw,15167,OYSTER,"Mollusks, oyster, eastern, wild, raw","Oyster, eastern, wild, raw",oz,85.05,
+oyster_eastern_raw,15167,OYSTER,"Mollusks, oyster, eastern, wild, raw",oysters,oz,85.05,
 paprika,2028,PAPRIKA,"Spices, paprika",paprika,teaspoon,2.3,
 paprika_ground,2028,PAPRIKA,"Spices, paprika",paprika,teaspoon,2.3,
 parsley_fresh,11297,PARSLEY,"Parsley, fresh",fresh parsley,cup,60.0,1 cup loose-packed ~60g
@@ -151,7 +151,7 @@ peanut_butter_chunky,16097,PEANUTBUTTERCHUNK,"Peanut butter, chunk style, with s
 peanut_butter_smooth,16098,PEANUTBUTTER,"Peanut butter, smooth style, with salt",smooth peanut butter,cup,264.0,"Smooth style, with salt (USDA 16098)"
 pecans_raw,12142,PECAN,"Nuts, pecans",pecan halves,cup,99.0,
 pickle_dill,11937,PICKLE,"Pickles, cucumber, dill or kosher dill",dill pickle,spear,35.0,
-pickle_relish_sweet,11945,PICKLERELISH,"Pickle relish, sweet","Pickle relish, sweet",tbsp,15.0,
+pickle_relish_sweet,11945,PICKLERELISH,"Pickle relish, sweet",sweet pickle relish,tbsp,15.0,
 pie_filling_apple_canned,19312,PIEFILLINGAPPLE,"Pie fillings, apple, canned","apple pie filling, canned",can_21oz,595.0,
 pimentos_canned,11943,PIMIENTO,"Pimento, canned",canned pimentos,tablespoon,14.0,
 pineapple_canned_juice_pack_drained,9354,PINEAPPLECANNED,"Pineapple, canned, juice pack, drained",pineapple slices,slice,40.0,7 slices ~280g; 20oz can drained ~340g
@@ -160,7 +160,7 @@ pita_white,18413,PITA,"Bread, pita, white, enriched","pita bread, white",pita,60
 pork_backfat_raw,10004,PORKBACKFAT,"Pork, fresh, backfat, raw",pork backfat (finely chopped),tbsp,14.0,Raw pork fatback used to enrich lean ground pork in homemade sausage recipes
 pork_boston_butt_raw,10080,PORKBOSTONBUTT,"Pork, fresh, shoulder, (Boston butt), blade (steaks), separable lean and fat, raw",pork shoulder,oz,28.35,
 pork_ground_raw,10219,GROUNDPORK,"Pork, fresh, ground, raw",Ground pork (raw),oz,28.35,
-pork_tenderloin_raw,10060,PORKTENDERLOIN,"Pork, fresh, loin, tenderloin, separable lean only, raw","Pork tenderloin, raw",oz,28.35,
+pork_tenderloin_raw,10060,PORKTENDERLOIN,"Pork, fresh, loin, tenderloin, separable lean only, raw",pork tenderloin,oz,28.35,
 potato_boiled_no_skin,11367,POTATOESBOILED,"Potatoes, boiled, cooked without skin, flesh, without salt",boiled potato (flesh),medium_potato,150.0,Pre-boiled potato flesh; grate or shred before pan-frying
 potato_raw,11352,POTATOESRAW,"Potatoes, flesh and skin, raw",raw potato (diced),medium_potato,150.0,
 powdered_sugar,19336,SUGARPOWDERED,"Sugars, powdered",powdered sugar,tsp,4.0,
@@ -175,12 +175,12 @@ ranch_dressing,4639,RANCHDRESSING,"Salad dressing, ranch dressing, regular",ranc
 red_pepper_flakes,2031,CAYENNE,"Spices, pepper, red or cayenne",red pepper flakes,teaspoon,2.3,SR Legacy sub for flaked red pepper
 roast_beef_deli,7043,BEEFROASTBEEF,"Roast beef, deli style, prepackaged, sliced",deli roast beef,oz,28.35,
 sage_ground,2038,SAGE,"Spices, sage, ground",ground sage,teaspoon,0.7,
-salami_italian_dry,7926,SALAMIITALIAN,"Salami, Italian, pork","Salami, Italian dry",slice,10.0,
+salami_italian_dry,7926,SALAMIITALIAN,"Salami, Italian, pork",salami,slice,10.0,
 salt_table,2047,SALT,"Salt, table",salt,teaspoon,6.0,
 sauerkraut_canned,11439,SAUERKRAUT,"Sauerkraut, canned, solids and liquids",sauerkraut,cup,140.0,
 scallion_raw,11291,SCALLION,"Onions, spring or scallions (includes tops and bulb), raw",scallion (green onion),each,15.0,Medium scallion ~15g
 sesame_oil,4058,OILSESAME,"Oil, sesame, salad or cooking",Sesame oil,tsp,4.5,
-shrimp_raw,15270,SHRIMP,"Crustaceans, shrimp, raw (not previously frozen)","Shrimp, raw",oz,85.05,
+shrimp_raw,15270,SHRIMP,"Crustaceans, shrimp, raw (not previously frozen)",shrimp,oz,85.05,
 smoked_salmon,15077,SMOKEDSALMON,"Fish, salmon, chinook, smoked",smoked salmon,oz,28.35,NDB is already a smoked/cured value
 sour_cream,1056,SOURCREAM,"Cream, sour, cultured",sour cream,cup,230.0,Cultured sour cream; 1 cup = 230g; 1 Tbsp = 12g
 spinach_cooked,11458,SPINACH,"Spinach, cooked, boiled, drained, without salt",cooked spinach,cup,180.0,
@@ -213,18 +213,18 @@ poultry_seasoning,2034,POULTRYSEASONING,"Spices, poultry seasoning",poultry seas
 frankfurter_beef,7022,FRANKFURTERRAW,"Frankfurter, beef, unheated",Beef frankfurter,frankfurter,48.0,
 celery_seed,2007,CELERYSEED,"Spices, celery seed",Celery seed,tsp,2.0,
 peppers_hot_pickled,31034,SPORTPEPPERS,"Peppers, hot pickled, canned",Pickled hot peppers,pepper,6.0,
-beef_chili_no_beans,22911,CHILI,"Chili, no beans, canned entree","Beef chili, no beans",cup,240.0,
-white_pepper_ground,2032,WHITEPEPPERCORN,"Spices, pepper, white","White pepper, ground",tsp,2.4,
+beef_chili_no_beans,22911,CHILI,"Chili, no beans, canned entree","beef chili, no beans",cup,240.0,
+white_pepper_ground,2032,WHITEPEPPERCORN,"Spices, pepper, white",white pepper,tsp,2.4,
 tomato_puree,11547,TOMATOPUREE,"Tomato products, canned, puree, without salt added",tomato purée,cup,244.0,"canned tomato purée, unsalted"
 chicken_broth_canned,6194,CHICKENBROTH,"Soup, chicken broth, ready-to-serve",chicken broth,cup,245.0,"canned chicken broth, ready-to-serve"
-leek_raw,11246,LEEKRAW,"Leeks, (bulb and lower leaf-portion), raw","Leek, raw",leek,89.0,1 medium leek (bulb + lower leaf) ~89g
-bay_leaf_dried,2004,BAYLEAF,"Spices, bay leaf","Bay leaf, dried",leaf,0.6,1 dried bay leaf ~0.6g (SR Legacy M1 tsp crumbled = 0.6g)
-chicken_back_raw,5048,CHICKENBACKRAW,"Chicken, broilers or fryers, back, meat and skin, raw","Chicken back, raw",lb,453.592,Bone-in back with skin; 1 lb ~454g
-chicken_neck_raw,5084,CHICKENNECKRAW,"Chicken, broilers or fryers, neck, meat and skin, raw","Chicken neck, raw",lb,453.592,Bone-in neck with skin; 1 lb ~454g
-chicken_feet_boiled,5335,CHICKENFEETBOILED,"Chicken, feet, boiled","Chicken feet, boiled",lb,453.592,Pre-cleaned/boiled feet; 1 lb ~454g
-chicken_wing_raw,5100,CHICKENWINGRAW,"Chicken, broilers or fryers, wing, meat and skin, raw","Chicken wing, raw",lb,453.592,Bone-in wing with skin; 1 lb ~454g
-beef_shank_raw,13227,BEEFSHANKRAW,"Beef, shank crosscuts, separable lean only, trimmed to 1/4"" fat, choice, raw","Beef shank crosscuts, raw",lb,453.592,"Bone-in shank crosscuts, lean only; 1 lb ~454g"
-white_wine_dry,14106,WINE,"Alcoholic beverage, wine, table, white","White wine, dry",cup,240.0,Dry white table wine; 1 cup = 240g
+leek_raw,11246,LEEKRAW,"Leeks, (bulb and lower leaf-portion), raw",leek,leek,89.0,1 medium leek (bulb + lower leaf) ~89g
+bay_leaf_dried,2004,BAYLEAF,"Spices, bay leaf",bay leaf,leaf,0.6,1 dried bay leaf ~0.6g (SR Legacy M1 tsp crumbled = 0.6g)
+chicken_back_raw,5048,CHICKENBACKRAW,"Chicken, broilers or fryers, back, meat and skin, raw",chicken back,lb,453.592,Bone-in back with skin; 1 lb ~454g
+chicken_neck_raw,5084,CHICKENNECKRAW,"Chicken, broilers or fryers, neck, meat and skin, raw",chicken neck,lb,453.592,Bone-in neck with skin; 1 lb ~454g
+chicken_feet_boiled,5335,CHICKENFEETBOILED,"Chicken, feet, boiled",chicken feet,lb,453.592,Pre-cleaned/boiled feet; 1 lb ~454g
+chicken_wing_raw,5100,CHICKENWINGRAW,"Chicken, broilers or fryers, wing, meat and skin, raw",chicken wing,lb,453.592,Bone-in wing with skin; 1 lb ~454g
+beef_shank_raw,13227,BEEFSHANKRAW,"Beef, shank crosscuts, separable lean only, trimmed to 1/4"" fat, choice, raw",beef shank,lb,453.592,"Bone-in shank crosscuts, lean only; 1 lb ~454g"
+white_wine_dry,14106,WINE,"Alcoholic beverage, wine, table, white",white wine,cup,240.0,Dry white table wine; 1 cup = 240g
 shallots_raw,11677,SHALLOT,"Shallots, raw",shallots,tablespoon,10.0,1 medium shallot ~30g; 1 tbsp minced ~10g
 tarragon_dried,2041,TARRAGON,"Spices, tarragon, dried",dried tarragon,teaspoon,1.5,1 tsp dried tarragon ~1.5g
 grapeseed_oil,4517,GRAPESEEDOIL,"Oil, grapeseed",grapeseed oil,tablespoon,13.6,1 tbsp grapeseed oil = 13.6g
@@ -238,7 +238,7 @@ cheese_brie,1006,BRIECHEESE,"Cheese, brie",Brie cheese,oz,28.35,Reblochon substi
 cabbage_red_raw,11112,REDCABBAGE,"Cabbage, red, raw",red cabbage,cup shredded,70.0,
 bell_pepper_red_raw,11821,BELLPEPPERRED,"Peppers, sweet, red, raw",red bell pepper,medium,119.0,
 honey,19296,HONEY,Honey,honey,tablespoon,21.0,
-potato_russet_raw,11353,POTATOESRUSSET,"Potatoes, russet, flesh and skin, raw","Potatoes, russet, raw",large potato,369.0,
+potato_russet_raw,11353,POTATOESRUSSET,"Potatoes, russet, flesh and skin, raw",russet potato,large potato,369.0,
 rosemary_fresh,2063,ROSEMARY,"Rosemary, fresh",fresh rosemary,tbsp,1.7,
 great_northern_beans_raw,16024,NORTHERNBEANRAW,"Beans, great northern, mature seeds, raw","great northern beans, dry",cup,200,added during SIDE_018 build
 salt_pork_raw,10165,PORKSALT,"Pork, cured, salt pork, raw",salt pork,oz,28.35,added during SIDE_018 build
