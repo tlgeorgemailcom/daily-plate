@@ -11331,5 +11331,52 @@ export const LEVELS: Level[] = [
       { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.85, yieldFactorFat: 0.7 },
       { key: 'topping', label: 'Topping', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'ENTR_012',
+    name: 'Beef Churrasco',
+    category: 'Entrees & Main Courses',
+    dietaryCategory: 'all',
+    levelNum: 245,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '4 plates',
+    prepTime: '30 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":526.5,"pro":40.8,"fat":39.9,"carb":0.9,"fib":0.6,"h2o":111.8,"sug":0.3,"perServing":{"cal":526.5,"pro":40.8,"fat":39.9,"carb":0.9,"fib":0.6,"h2o":111.8,"sug":0.3,"AddedSugars":0.0,"IntrinsicSugars":0.3},"micros":{"vitaminA":3.68,"vitaminC":3.05,"vitaminD":5.44,"vitaminE":0.13,"vitaminK":1.65,"vitaminB6":0.34,"vitaminB12":5.11,"thiamin":0.09,"riboflavin":0.57,"niacin":3.81,"folate":4.29,"calcium":21.29,"iron":4.33,"magnesium":25.24,"phosphorus":169.47,"potassium":307.57,"sodium":516.39,"zinc":5.47,"copper":0.21,"selenium":26.27,"cholesterol":81.37,"saturatedFat":9.13,"monoFat":13.91,"polyFat":1.48,"omega3":0.03,"omega6":0.57},"gramsPerServing":197.9,"servings":4,"per100g":{"Energy_KCal":266.06,"Water":56.48,"Protein":20.61,"TotalLipidFat":20.16,"Carbohydrate":0.45,"FiberTotalDietary":0.31,"SugarsTotal":0.17,"Cholesterol":81.37,"FattyAcids_totalSaturated":9.13,"FattyAcids_totalMonounsaturated":13.91,"FattyAcids_totalPolyunsaturated":1.48,"LinoleicAcid":0.57,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.0,"VitaminA_RAE":3.68,"Retinol":3.67,"Carotene_beta":0.18,"VitaminD":5.44,"VitaminE_alphaTocopherol":0.13,"VitaminK_phylloquinone":1.65,"VitaminC_totalAscorbicAcid":3.05,"Thiamin":0.09,"Riboflavin":0.57,"Niacin":3.81,"PantothenicAcid":1.06,"VitaminB6":0.34,"Folate_total":4.29,"Folate_food":4.29,"Folate_DFE":4.29,"FolicAcid":0.0,"VitaminB12":5.11,"Choline_total":58.9,"Betaine":15.32,"LuteinZeaxanthin":0.21,"Lycopene":0.01,"Calcium_Ca":21.29,"Iron_Fe":4.33,"Magnesium_Mg":25.24,"Phosphorus_P":169.47,"Potassium_K":307.57,"Sodium_Na":516.39,"Zinc_Zn":5.47,"Copper_Cu":0.21,"Manganese_Mn":0.29,"Selenium_Se":26.27,"Tryptophan":0.23,"Threonine":0.97,"Isoleucine":0.96,"Leucine":1.79,"Lysine":1.98,"Methionine":0.55,"Cystine":0.18,"Phenylalanine":0.83,"Tyrosine":0.77,"Valine":1.03,"Arginine":1.42,"Histidine":0.77,"Alanine":1.28,"AsparticAcid":2.03,"GlutamicAcid":3.4,"Glycine":1.02,"Proline":0.93,"Serine":0.86,"omega3":0.03,"omega6":0.57,"AddedSugars":0.0,"IntrinsicSugars":0.17},"addedSugars":0.0,"intrinsicSugars":0.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":13.6},{"ndb":"9160","name":"Lime juice, raw","grams":15.2},{"ndb":"11215","name":"Garlic, raw","grams":4.5},{"ndb":"2014","name":"Spices, cumin seed","grams":0.5},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.7},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"23224","name":"Beef, plate steak, boneless, outside skirt, separable lean and fat, trimmed to 0\" fat, all grades, raw","grams":226.8},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"marinade","section_label":"Marinade","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":0.0,"yield_factor_fat":0.0,"yield_factor_protein":0.0,"yield_factor_carbohydrate":0.0,"yield_factor_other":0.0,"ingredient_count":7,"raw_grams":145.35,"raw_water_grams":66.52,"raw_fat_grams":55.15,"raw_protein_grams":2.14,"raw_carb_grams":14.61,"final_grams":6.93},{"section_key":"beef","section_label":"Beef","prep_method":"raw","cook_method":"grilled","cooking_method":"grilled","cooking_method_normalized":"grilled","yield_factor_water":0.78,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":910.78,"raw_water_grams":573.16,"raw_fat_grams":159.6,"raw_protein_grams":163.17,"raw_carb_grams":3.54,"final_grams":784.68}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Beef Churrasco', quantity: 'custom (g)', foodWord: 'CHURRASCO', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'olive oil', quantity: '1/4 cup olive oil', section: 'marinade', ndbNo: '4053', portionDesc: 'g', portionGrams: 54.4 },
+      { name: 'lime juice', quantity: '1/4 cup lime juice', section: 'marinade', ndbNo: '9160', portionDesc: 'g', portionGrams: 61.0 },
+      { name: 'garlic', quantity: '6 cloves garlic', section: 'marinade', ndbNo: '11215', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'ground cumin', quantity: '1 tsp cumin', section: 'marinade', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.1 },
+      { name: 'dried oregano', quantity: '1 tsp dried oregano', section: 'marinade', ndbNo: '2027', portionDesc: 'g', portionGrams: 2.7 },
+      { name: 'salt', quantity: '1 tsp salt', section: 'marinade', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/2 tsp black pepper', section: 'marinade', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'beef skirt steak', quantity: '2 lbs skirt steak', section: 'beef', ndbNo: '23224', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'salt', quantity: '1/2 tsp salt', section: 'beef', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp black pepper', section: 'beef', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Whisk together olive oil, lime juice, minced garlic, cumin, oregano, salt, and pepper in a bowl to form the marinade.',
+      'Place the skirt steak in a zip-lock bag or shallow dish. Pour the marinade over the steak, turning to coat. Refrigerate at least 2 hours, or up to 8 hours for deeper flavor.',
+      'Remove the steak from the marinade and discard the marinade. Pat the surface dry with paper towels. Season both sides with salt and pepper.',
+      'Heat a grill or grill pan to high heat. The grill should be very hot — skirt steak needs quick, intense heat to develop a crust without overcooking the interior.',
+      'Grill the steak 3 to 4 minutes per side for medium-rare, or until it reaches an internal temperature of 130 to 135°F. Skirt steak is thin; do not walk away.',
+      'Transfer to a cutting board and let rest 5 minutes. Slice thinly against the grain at a steep angle. Serve immediately.'
+    ],
+    sections: [
+      { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
+      { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.78 }
+    ],
   }
 ];
