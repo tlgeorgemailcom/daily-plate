@@ -10636,11 +10636,11 @@ export const LEVELS: Level[] = [
       { name: 'capers', quantity: '1 tbsp', section: 'salad', ndbNo: '2054', portionDesc: 'g', portionGrams: 8.6 }
     ],
     recipeInstructions: [
-      'Cook potatoes in boiling salted water until fork-tender, about 15–20 minutes. Drain and let cool slightly, then cut into halves or quarters.',
+      'Scrub the small potatoes (no need to peel). Cook in boiling salted water until fork-tender, about 15–20 minutes. Drain and let cool slightly, then cut into halves or quarters.',
       'Blanch green beans in boiling salted water for 3–4 minutes until crisp-tender. Transfer to ice water to stop cooking, then drain well.',
-      'Make or portion the basic vinaigrette (see the Basic Vinaigrette recipe).',
+      'Make or portion the Basic Vinaigrette (see the Basic Vinaigrette recipe).',
       'Arrange romaine on a large platter or divide between 2 bowls. Top with potatoes, green beans, tuna, halved hard-boiled eggs, tomato wedges, olives, and anchovies. Scatter capers over the top.',
-      'Drizzle vinaigrette over the salad and serve at room temperature or chilled.'
+      'Drizzle the Basic Vinaigrette over the salad and serve at room temperature or chilled.'
     ],
     sections: [
       { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 },
