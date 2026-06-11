@@ -10694,5 +10694,50 @@ export const LEVELS: Level[] = [
       { key: 'dressing', label: 'Lemon Vinaigrette', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'salad', label: 'Spinach Salad', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SALAD_025',
+    name: 'Three Bean Salad',
+    category: 'salads',
+    dietaryCategory: 'vegan',
+    levelNum: 233,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '4 servings',
+    prepTime: '',
+    linkType: 'dish',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":209.7,"pro":6.5,"fat":8.7,"carb":28.4,"fib":7.8,"h2o":194.2,"sug":11.8,"perServing":{"cal":209.7,"pro":6.5,"fat":8.7,"carb":28.4,"fib":7.8,"h2o":194.2,"sug":11.8,"AddedSugars":4.3,"IntrinsicSugars":7.5},"micros":{"vitaminA":9.79,"vitaminC":9.97,"vitaminD":0.0,"vitaminE":0.71,"vitaminK":25.48,"vitaminB6":0.07,"vitaminB12":0.0,"thiamin":0.04,"riboflavin":0.05,"niacin":0.36,"folate":28.43,"calcium":34.95,"iron":0.79,"magnesium":18.1,"phosphorus":39.85,"potassium":163.7,"sodium":299.63,"zinc":0.32,"copper":0.1,"selenium":0.93,"cholesterol":0.0,"saturatedFat":0.47,"monoFat":2.17,"polyFat":0.59,"omega3":0.0,"omega6":0.0},"gramsPerServing":242.3,"servings":4,"per100g":{"Energy_KCal":86.54,"Water":80.14,"Protein":2.66,"TotalLipidFat":3.6,"Carbohydrate":11.72,"FiberTotalDietary":3.24,"SugarsTotal":4.86,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.47,"FattyAcids_totalMonounsaturated":2.17,"FattyAcids_totalPolyunsaturated":0.59,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":9.79,"Retinol":0.0,"Carotene_beta":116.79,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.71,"VitaminK_phylloquinone":25.48,"VitaminC_totalAscorbicAcid":9.97,"Thiamin":0.04,"Riboflavin":0.05,"Niacin":0.36,"PantothenicAcid":0.05,"VitaminB6":0.07,"Folate_total":28.43,"Folate_food":28.43,"Folate_DFE":28.43,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":8.66,"Betaine":0.1,"LuteinZeaxanthin":338.23,"Lycopene":0.01,"Calcium_Ca":34.95,"Iron_Fe":0.79,"Magnesium_Mg":18.1,"Phosphorus_P":39.85,"Potassium_K":163.7,"Sodium_Na":299.63,"Zinc_Zn":0.32,"Copper_Cu":0.1,"Manganese_Mn":0.38,"Selenium_Se":0.93,"Tryptophan":0.02,"Threonine":0.1,"Isoleucine":0.1,"Leucine":0.17,"Lysine":0.16,"Methionine":0.03,"Cystine":0.03,"Phenylalanine":0.12,"Tyrosine":0.06,"Valine":0.11,"Arginine":0.19,"Histidine":0.06,"Alanine":0.11,"AsparticAcid":0.33,"GlutamicAcid":0.41,"Glycine":0.1,"Proline":0.11,"Serine":0.13,"omega3":0.0,"omega6":0.0,"AddedSugars":1.78,"IntrinsicSugars":3.08},"addedSugars":4.3,"intrinsicSugars":7.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"11053","name":"Beans, snap, green, cooked, boiled, drained, without salt","grams":56.7},{"ndb":"11724","name":"Beans, snap, yellow, cooked, boiled, drained, without salt","grams":56.7},{"ndb":"16358","name":"Chickpeas (garbanzo beans), mature seeds, canned, drained solids","grams":56.7},{"ndb":"11282","name":"Onions, raw","grams":13.8},{"ndb":"11333","name":"Peppers, sweet, green, raw","grams":15.0},{"ndb":"2048","name":"Vinegar, cider","grams":29.8},{"ndb":"19296","name":"Honey","grams":5.2},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"salad","section_label":"Three Bean Salad","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":969.18,"raw_water_grams":776.68,"raw_fat_grams":34.93,"raw_protein_grams":25.81,"raw_carb_grams":113.54,"final_grams":969.18}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Three Bean Salad', quantity: 'custom (g)', foodWord: 'THREEBEANSALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'green beans', quantity: '1 can (15 oz, drained)', section: 'salad', ndbNo: '11053', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'yellow wax beans', quantity: '1 can (15 oz, drained)', section: 'salad', ndbNo: '11724', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'chickpeas (canned, drained)', quantity: '1 can (15 oz, drained)', section: 'salad', ndbNo: '16358', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'onion', quantity: '½ medium', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 55.0 },
+      { name: 'green bell pepper', quantity: '½ medium', section: 'salad', ndbNo: '11333', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'apple cider vinegar', quantity: '½ cup', section: 'salad', ndbNo: '2048', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'honey', quantity: '1 tbsp', section: 'salad', ndbNo: '19296', portionDesc: 'g', portionGrams: 21.0 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'salad', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'salt', quantity: '1 tsp', section: 'salad', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'salad', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Drain and rinse the green beans, yellow wax beans, and chickpeas. Place all three in a large bowl.',
+      'Dice the onion and bell pepper and add to the bowl.',
+      'Whisk together the apple cider vinegar, honey, olive oil, salt, and pepper in a small bowl until combined.',
+      'Pour the dressing over the beans and toss to coat evenly.',
+      'Cover and refrigerate at least 2 hours (or overnight) before serving to allow the flavors to marinate.'
+    ],
+    sections: [
+      { key: 'salad', label: 'Three Bean Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
