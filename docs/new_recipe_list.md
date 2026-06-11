@@ -34,17 +34,24 @@ Pinwheel Sandwiches
 Shrimp Salad Rolls
 Tomato Sandwich
 Tofu Burritos
+Arepas
+Empanadas
+Gorditas
 
 Pasta & Pizza
 
 Baked Ziti
 Garlic Bread Pizza
+Pizza, thick crust
+Pizza, thin crust
 Garlic Butter Shrimp Pasta
 Chicken Pesto Pasta
 Lemon Pasta
 Pasta Primavera
+Pasta al Pesto
 Ravioli
 Spaghetti & Meatballs
+Spaghetti Bolognese
 Cacio e Pepe
 Carbonara
 Fettuccine Alfredo
@@ -59,6 +66,7 @@ Beef Bourguignon
 Beef Birria
 Beef Carbonnade
 Beef Carne Asada
+Beef Carne Guisada
 Beef Corned Beef & Cabbage
 Beef Cottage Pie
 Beef Churrasco
@@ -97,13 +105,16 @@ Beef Tacos
 
 Chicken & Broccoli
 Chicken Cacciatore
+Chicken Curries
 Chicken Enchiladas
 Chicken Florentine
 Chicken Fried Rice
 Chicken General Tso
+Moo Goo Gai Pan
 Chicken Piccata
 Chicken Pot Pie
 Chicken Kabobs
+Chicken King Ranch
 Chicken Marsala
 Chicken Masala
 Chicken Peanut Protein Bowls
@@ -127,6 +138,7 @@ Pork Crown Roast
 Pork Egg Roll
 Pork Egg Roll Bowls
 Pork Milanese
+Pork Baby Back Ribs
 Pork Ribs
 Pork Schnitzel
 Pork Tenderloin Stuffed
@@ -137,6 +149,7 @@ Pork Shoulder
 Seafood Crab Cakes
 Seafood Crab Stuffed Avocados
 Seafood Fried Shrimp
+Seafood California Roll
 Seafood Philadelphia Roll (sushi-style)
 Seafood Salmon Poke Bowl
 Seafood Salmon Quinoa Bowls

@@ -2116,17 +2116,20 @@
                     {#if !group.section || !collapsedIngredientSections.has(group.section)}
                     <ul>
                       {#each group.items as ing}
-                        {#if ing.isDish && ing.componentRef}
-                          {@const childLines = getChildIngredientLines(ing.componentRef)}
-                          {#each childLines as line}
-                            <li>{line}</li>
-                          {/each}
-                        {:else}
                         {@const ingLineParts = formatIngredientLine(ing).split('\n')}
                         <li>
                           {ingLineParts[0]}{#each ingLineParts.slice(1) as note}<div class="ingredient-note">{note}</div>{/each}
+                          {#if ing.componentRef}
+                            {@const childLines = getChildIngredientLines(ing.componentRef)}
+                            {#if childLines.length > 0}
+                              <ul class="component-sublist">
+                                {#each childLines as line}
+                                  <li>{line}</li>
+                                {/each}
+                              </ul>
+                            {/if}
+                          {/if}
                         </li>
-                        {/if}
                       {/each}
                     </ul>
                     {/if}

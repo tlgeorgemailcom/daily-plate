@@ -1962,7 +1962,7 @@ SALAD_012,14,basil_dried,¼ tsp,0.7,,,salad,dried basil,false,
 SALAD_012,15,salt_table,½ tsp,3.0,,,salad,salt,false,
 SALAD_012,16,black_pepper_ground,¼ tsp,0.575,,,salad,black pepper,false,
 SALAD_013,1,@SIDE_011,2 servings,411.2,,,gnocchi,Potato gnocchi,false,Potato gnocchi (2 servings; ~1 cup per serving)
-SALAD_013,2,@SAUCE_017,2 servings,68.5,,,dressing,Italian vinaigrette,false,Italian vinaigrette (2 servings; 2 tbsp per serving)
+SALAD_013,2,@SAUCE_017,4 tbsp,68.5,,,dressing,Italian vinaigrette,false,Italian vinaigrette (4 tbsp total; 2 tbsp per serving)
 SALAD_013,3,salami_italian_dry,2 oz,56.0,,,salad,salami,false,
 SALAD_013,4,provolone_cheese,2 oz,56.7,,,salad,provolone,false,
 SALAD_013,5,olives_black_canned,¼ cup,44.0,,,salad,olives,false,
@@ -1977,7 +1977,7 @@ SALAD_014,2,olive_oil,1 tbsp,13.6,,,chicken,,false,
 SALAD_014,3,garlic_powder,¼ tsp,0.775,,,chicken,,false,
 SALAD_014,4,salt_table,¼ tsp,1.5,,,chicken,,false,
 SALAD_014,5,black_pepper_ground,¼ tsp,0.575,,,chicken,,false,
-SALAD_014,6,@SAUCE_016,2 servings,67.2,,,dressing,Basic vinaigrette,false,Basic vinaigrette (2 servings; 2 tbsp per serving)
+SALAD_014,6,@SAUCE_016,4 tbsp,67.2,,,dressing,Basic vinaigrette,false,Basic vinaigrette (4 tbsp total; 2 tbsp per serving)
 SALAD_014,7,lettuce_romaine_raw,4 cups,188.0,,,salad,romaine,false,
 SALAD_014,8,tomato_red_raw,1 medium,123.0,,,salad,tomato,false,
 SALAD_014,9,cucumber_peeled_raw,1 medium,201.0,,,salad,cucumber,false,
@@ -2001,7 +2001,7 @@ SALAD_015,13,salt_table,½ tsp,3.0,,,salad,,false,
 SALAD_015,14,black_pepper_ground,¼ tsp,0.575,,,salad,,false,
 SALAD_016,1,pasta_dry_unenriched,8 oz dry,226.8,,,pasta,pasta,false,
 SALAD_016,2,water,4 cups,946.0,,,pasta,,false,
-SALAD_016,3,@SAUCE_017,2 servings,68.5,,,dressing,Italian vinaigrette,false,Italian vinaigrette (2 servings; 2 tbsp per serving)
+SALAD_016,3,@SAUCE_017,4 tbsp,68.5,,,dressing,Italian vinaigrette,false,Italian vinaigrette (4 tbsp total; 2 tbsp per serving)
 SALAD_016,4,salami_italian_dry,2 oz,56.7,,,salad,salami,false,
 SALAD_016,5,provolone_cheese,2 oz,56.7,,,salad,provolone,false,
 SALAD_016,6,olives_black_canned,¼ cup,44.0,,,salad,olives,false,
