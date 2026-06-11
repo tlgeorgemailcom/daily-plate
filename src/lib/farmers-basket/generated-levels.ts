@@ -9207,9 +9207,10 @@ export const LEVELS: Level[] = [
       { name: 'garlic', quantity: '1 clove, minced', section: 'dressing', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'salt', quantity: '1/2 tsp', section: 'dressing', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'ground black pepper', quantity: '1/4 tsp', section: 'dressing', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
-      { name: 'Dijon-Style Mustard', quantity: '1/2 tsp (2.5g)', section: 'mustard', foodWord: 'DIJONTYPEMUSTARD', portionDesc: 'g', portionGrams: 2.5, isDish: true, componentRef: 'SAUCE_010' }
+      { name: 'Dijon-Style Mustard', quantity: '1/2 tsp Dijon-Style Mustard (recipe)', section: 'mustard', foodWord: 'DIJONTYPEMUSTARD', portionDesc: 'g', portionGrams: 2.5, isDish: true, componentRef: 'SAUCE_010' }
     ],
     recipeInstructions: [
+      'Make or prepare the Dijon-Style Mustard (see the Dijon-Style Mustard recipe).',
       'Mince the garlic clove finely or use a garlic press.',
       'Combine apple cider vinegar, mustard, honey, minced garlic, salt, and black pepper in a small bowl or jar. Whisk or shake to combine.',
       'Slowly drizzle in the olive oil while whisking constantly, or add olive oil to the jar and shake vigorously until the dressing is emulsified.',
@@ -9254,9 +9255,10 @@ export const LEVELS: Level[] = [
       { name: 'red pepper flakes', quantity: '1/4 tsp', section: 'dressing', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.575 },
       { name: 'salt', quantity: '1/2 tsp', section: 'dressing', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'ground black pepper', quantity: '1/4 tsp', section: 'dressing', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
-      { name: 'Dijon-Style Mustard', quantity: '1/2 tsp (2.5g)', section: 'mustard', foodWord: 'DIJONTYPEMUSTARD', portionDesc: 'g', portionGrams: 2.5, isDish: true, componentRef: 'SAUCE_010' }
+      { name: 'Dijon-Style Mustard', quantity: '1/2 tsp Dijon-Style Mustard (recipe)', section: 'mustard', foodWord: 'DIJONTYPEMUSTARD', portionDesc: 'g', portionGrams: 2.5, isDish: true, componentRef: 'SAUCE_010' }
     ],
     recipeInstructions: [
+      'Make or prepare the Dijon-Style Mustard (see the Dijon-Style Mustard recipe).',
       'Finely mince the garlic and chop the parsley.',
       'Combine red wine vinegar, lemon juice, mustard, honey, garlic, oregano, basil, parsley, red pepper flakes, salt, and black pepper in a small bowl or jar. Whisk or shake to combine.',
       'Slowly drizzle in the olive oil while whisking constantly, or add to the jar and shake vigorously until the dressing is emulsified.',
@@ -9296,9 +9298,10 @@ export const LEVELS: Level[] = [
       { name: 'garlic', quantity: '1 clove', section: 'dressing', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'salt', quantity: '½ tsp', section: 'dressing', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'ground black pepper', quantity: '¼ tsp', section: 'dressing', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
-      { name: 'Dijon-Style Mustard', quantity: '1 tsp (5.0g)', section: 'mustard', foodWord: 'DIJONTYPEMUSTARD', portionDesc: 'g', portionGrams: 5.0, isDish: true, componentRef: 'SAUCE_010' }
+      { name: 'Dijon-Style Mustard', quantity: '1 tsp Dijon-Style Mustard (recipe)', section: 'mustard', foodWord: 'DIJONTYPEMUSTARD', portionDesc: 'g', portionGrams: 5.0, isDish: true, componentRef: 'SAUCE_010' }
     ],
     recipeInstructions: [
+      'Make or prepare the Dijon-Style Mustard (see the Dijon-Style Mustard recipe).',
       'Mince or grate the garlic clove.',
       'In a small bowl or jar, combine the balsamic vinegar, honey, garlic, Dijon-style mustard, salt, and black pepper. Whisk until the honey dissolves.',
       'Add the olive oil in a slow, steady stream while whisking constantly, or seal the jar and shake vigorously until the dressing emulsifies.',
@@ -9341,9 +9344,10 @@ export const LEVELS: Level[] = [
       { name: 'fresh thyme leaves', quantity: '1 tbsp', section: 'dressing', ndbNo: '2049', portionDesc: 'g', portionGrams: 2.4 },
       { name: 'salt', quantity: '½ tsp', section: 'dressing', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'ground black pepper', quantity: '¼ tsp', section: 'dressing', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
-      { name: 'Dijon-Style Mustard', quantity: '1 tsp (5.0g)', section: 'mustard', foodWord: 'DIJONTYPEMUSTARD', portionDesc: 'g', portionGrams: 5.0, isDish: true, componentRef: 'SAUCE_010' }
+      { name: 'Dijon-Style Mustard', quantity: '1 tsp Dijon-Style Mustard (recipe)', section: 'mustard', foodWord: 'DIJONTYPEMUSTARD', portionDesc: 'g', portionGrams: 5.0, isDish: true, componentRef: 'SAUCE_010' }
     ],
     recipeInstructions: [
+      'Make or prepare the Dijon-Style Mustard (see the Dijon-Style Mustard recipe).',
       'Mince or grate the garlic clove. Thinly slice the chives and finely mince the fresh thyme leaves.',
       'In a small bowl or jar, combine the lemon juice, Dijon-style mustard, honey, garlic, salt, and black pepper. Whisk until the honey dissolves.',
       'Add the olive oil in a slow, steady stream while whisking constantly, or seal the jar and shake vigorously until the dressing emulsifies.',
@@ -9568,9 +9572,10 @@ export const LEVELS: Level[] = [
       { name: 'Parmesan cheese', quantity: '¼ cup grated', section: 'dressing', ndbNo: '1033', portionDesc: 'g', portionGrams: 25.0 },
       { name: 'salt', quantity: '¼ tsp', section: 'dressing', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
       { name: 'ground black pepper', quantity: '¼ tsp', section: 'dressing', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
-      { name: 'Dijon-Style Mustard', quantity: '2 tsp (10.0g)', section: 'mustard', foodWord: 'DIJONTYPEMUSTARD', portionDesc: 'g', portionGrams: 10.0, isDish: true, componentRef: 'SAUCE_010' }
+      { name: 'Dijon-Style Mustard', quantity: '2 tsp Dijon-Style Mustard (recipe)', section: 'mustard', foodWord: 'DIJONTYPEMUSTARD', portionDesc: 'g', portionGrams: 10.0, isDish: true, componentRef: 'SAUCE_010' }
     ],
     recipeInstructions: [
+      'Make or prepare the Dijon-Style Mustard (see the Dijon-Style Mustard recipe).',
       'Mince the garlic and mash or finely chop the anchovy fillets into a paste.',
       'Pasteurize the egg yolk: whisk it in a small bowl set over barely simmering water (double boiler), whisking constantly, until it reaches 145°F (63°C) and has slightly thickened, about 2–3 minutes. Remove from heat immediately and let cool for 1 minute.',
       'Whisk the lemon juice, garlic, mustard, Worcestershire sauce, and anchovy paste into the warm yolk until fully combined.',

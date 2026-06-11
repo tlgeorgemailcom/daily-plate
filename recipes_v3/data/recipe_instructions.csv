@@ -1282,25 +1282,29 @@ SIDE_026,5,Transfer the filling to a greased 9×13-inch baking dish and spread e
 SIDE_026,6,Scatter mini marshmallows in an even layer over the top of the sweet potato filling.
 SIDE_026,7,"Bake at 350°F (175°C) for 20–25 minutes, until the marshmallows are puffed and golden brown on top."
 SIDE_026,8,Let rest 5 minutes before serving.
-SAUCE_016,1,Mince the garlic clove finely or use a garlic press.
-SAUCE_016,2,"Combine apple cider vinegar, mustard, honey, minced garlic, salt, and black pepper in a small bowl or jar. Whisk or shake to combine."
-SAUCE_016,3,"Slowly drizzle in the olive oil while whisking constantly, or add olive oil to the jar and shake vigorously until the dressing is emulsified."
-SAUCE_016,4,Taste and adjust seasoning. Use immediately or refrigerate in a sealed jar for up to 1 week. Shake well before each use.
-SAUCE_017,1,Finely mince the garlic and chop the parsley.
-SAUCE_017,2,"Combine red wine vinegar, lemon juice, mustard, honey, garlic, oregano, basil, parsley, red pepper flakes, salt, and black pepper in a small bowl or jar. Whisk or shake to combine."
-SAUCE_017,3,"Slowly drizzle in the olive oil while whisking constantly, or add to the jar and shake vigorously until the dressing is emulsified."
-SAUCE_017,4,Taste and adjust seasoning. Use immediately or refrigerate in a sealed jar for up to 1 week. Shake well before each use.
-SAUCE_018,1,Mince or grate the garlic clove.
-SAUCE_018,2,"In a small bowl or jar, combine the balsamic vinegar, honey, garlic, Dijon-style mustard, salt, and black pepper. Whisk until the honey dissolves."
-SAUCE_018,3,"Add the olive oil in a slow, steady stream while whisking constantly, or seal the jar and shake vigorously until the dressing emulsifies."
-SAUCE_018,4,"Taste and adjust salt, pepper, or honey as needed. The dressing will separate on standing — shake or whisk before each use."
-SAUCE_018,5,Store in a sealed jar in the refrigerator for up to 2 weeks.
-SAUCE_019,1,Mince or grate the garlic clove. Thinly slice the chives and finely mince the fresh thyme leaves.
-SAUCE_019,2,"In a small bowl or jar, combine the lemon juice, Dijon-style mustard, honey, garlic, salt, and black pepper. Whisk until the honey dissolves."
-SAUCE_019,3,"Add the olive oil in a slow, steady stream while whisking constantly, or seal the jar and shake vigorously until the dressing emulsifies."
-SAUCE_019,4,Stir in the chives and thyme.
-SAUCE_019,5,Taste and adjust seasoning. The dressing will separate on standing — shake or whisk before each use.
-SAUCE_019,6,Store in a sealed jar in the refrigerator for up to 1 week.
+SAUCE_016,1,Make or prepare the Dijon-Style Mustard (see the Dijon-Style Mustard recipe).
+SAUCE_016,2,Mince the garlic clove finely or use a garlic press.
+SAUCE_016,3,"Combine apple cider vinegar, mustard, honey, minced garlic, salt, and black pepper in a small bowl or jar. Whisk or shake to combine."
+SAUCE_016,4,"Slowly drizzle in the olive oil while whisking constantly, or add olive oil to the jar and shake vigorously until the dressing is emulsified."
+SAUCE_016,5,Taste and adjust seasoning. Use immediately or refrigerate in a sealed jar for up to 1 week. Shake well before each use.
+SAUCE_017,1,Make or prepare the Dijon-Style Mustard (see the Dijon-Style Mustard recipe).
+SAUCE_017,2,Finely mince the garlic and chop the parsley.
+SAUCE_017,3,"Combine red wine vinegar, lemon juice, mustard, honey, garlic, oregano, basil, parsley, red pepper flakes, salt, and black pepper in a small bowl or jar. Whisk or shake to combine."
+SAUCE_017,4,"Slowly drizzle in the olive oil while whisking constantly, or add to the jar and shake vigorously until the dressing is emulsified."
+SAUCE_017,5,Taste and adjust seasoning. Use immediately or refrigerate in a sealed jar for up to 1 week. Shake well before each use.
+SAUCE_018,1,Make or prepare the Dijon-Style Mustard (see the Dijon-Style Mustard recipe).
+SAUCE_018,2,Mince or grate the garlic clove.
+SAUCE_018,3,"In a small bowl or jar, combine the balsamic vinegar, honey, garlic, Dijon-style mustard, salt, and black pepper. Whisk until the honey dissolves."
+SAUCE_018,4,"Add the olive oil in a slow, steady stream while whisking constantly, or seal the jar and shake vigorously until the dressing emulsifies."
+SAUCE_018,5,"Taste and adjust salt, pepper, or honey as needed. The dressing will separate on standing — shake or whisk before each use."
+SAUCE_018,6,Store in a sealed jar in the refrigerator for up to 2 weeks.
+SAUCE_019,1,Make or prepare the Dijon-Style Mustard (see the Dijon-Style Mustard recipe).
+SAUCE_019,2,Mince or grate the garlic clove. Thinly slice the chives and finely mince the fresh thyme leaves.
+SAUCE_019,3,"In a small bowl or jar, combine the lemon juice, Dijon-style mustard, honey, garlic, salt, and black pepper. Whisk until the honey dissolves."
+SAUCE_019,4,"Add the olive oil in a slow, steady stream while whisking constantly, or seal the jar and shake vigorously until the dressing emulsifies."
+SAUCE_019,5,Stir in the chives and thyme.
+SAUCE_019,6,Taste and adjust seasoning. The dressing will separate on standing — shake or whisk before each use.
+SAUCE_019,7,Store in a sealed jar in the refrigerator for up to 1 week.
 SAUCE_020,1,"Finely chop the fresh dill, parsley, and chives."
 SAUCE_020,2,"In a bowl, whisk together the mayonnaise, sour cream, and buttermilk until smooth."
 SAUCE_020,3,"Add the dill, parsley, chives, garlic powder, onion powder, lemon juice, salt, and black pepper. Whisk to combine."
@@ -1322,13 +1326,14 @@ SAUCE_023,3,"Stir in the parsley, chives, dill, and dried tarragon."
 SAUCE_023,4,Season with salt and black pepper. Taste and adjust lemon juice or salt as needed.
 SAUCE_023,5,"For a smoother dressing, blend all ingredients together until the herbs are fully incorporated and the dressing is uniformly green."
 SAUCE_023,6,Cover and refrigerate for at least 30 minutes before serving. Store refrigerated for up to 1 week.
-SAUCE_024,1,Mince the garlic and mash or finely chop the anchovy fillets into a paste.
-SAUCE_024,2,"Pasteurize the egg yolk: whisk it in a small bowl set over barely simmering water (double boiler), whisking constantly, until it reaches 145°F (63°C) and has slightly thickened, about 2–3 minutes. Remove from heat immediately and let cool for 1 minute."
-SAUCE_024,3,"Whisk the lemon juice, garlic, mustard, Worcestershire sauce, and anchovy paste into the warm yolk until fully combined."
-SAUCE_024,4,"Add the olive oil in a very slow, thin stream while whisking constantly to emulsify the dressing into a creamy consistency."
-SAUCE_024,5,Fold in the freshly grated Parmesan. Season with salt and black pepper to taste.
-SAUCE_024,6,"If the dressing is too thick, thin with 1–2 tablespoons of water. Taste and adjust lemon juice or anchovy to preference."
-SAUCE_024,7,Store refrigerated in a sealed jar for up to 5 days. Whisk or shake before each use.
+SAUCE_024,1,Make or prepare the Dijon-Style Mustard (see the Dijon-Style Mustard recipe).
+SAUCE_024,2,Mince the garlic and mash or finely chop the anchovy fillets into a paste.
+SAUCE_024,3,"Pasteurize the egg yolk: whisk it in a small bowl set over barely simmering water (double boiler), whisking constantly, until it reaches 145°F (63°C) and has slightly thickened, about 2–3 minutes. Remove from heat immediately and let cool for 1 minute."
+SAUCE_024,4,"Whisk the lemon juice, garlic, mustard, Worcestershire sauce, and anchovy paste into the warm yolk until fully combined."
+SAUCE_024,5,"Add the olive oil in a very slow, thin stream while whisking constantly to emulsify the dressing into a creamy consistency."
+SAUCE_024,6,Fold in the freshly grated Parmesan. Season with salt and black pepper to taste.
+SAUCE_024,7,"If the dressing is too thick, thin with 1–2 tablespoons of water. Taste and adjust lemon juice or anchovy to preference."
+SAUCE_024,8,Store refrigerated in a sealed jar for up to 5 days. Whisk or shake before each use.
 SALAD_001,1,Wash and dry the romaine leaves. Tear or chop into bite-sized pieces and place in a large bowl.
 SALAD_001,2,Add the croutons and freshly grated Parmesan to the bowl.
 SALAD_001,3,Make or portion the Caesar Salad Dressing (see the Caesar Salad Dressing recipe).
