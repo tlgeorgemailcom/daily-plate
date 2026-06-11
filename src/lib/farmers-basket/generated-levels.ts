@@ -11112,5 +11112,53 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'main', label: 'Beef Carbonnade', cookingMethod: '', yieldFactorWater: 0.5 }
     ],
+  },
+  {
+    id: 'ENTR_008',
+    name: 'Beef Carne Asada',
+    category: 'Entrees & Main Courses',
+    dietaryCategory: 'all',
+    levelNum: 241,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '4 plates',
+    prepTime: '30 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":322.8,"pro":37.4,"fat":16.5,"carb":5.2,"fib":0.8,"h2o":115.4,"sug":1.7,"perServing":{"cal":322.8,"pro":37.4,"fat":16.5,"carb":5.2,"fib":0.8,"h2o":115.4,"sug":1.7,"AddedSugars":0.0,"IntrinsicSugars":1.7},"micros":{"vitaminA":10.77,"vitaminC":3.89,"vitaminD":0.0,"vitaminE":0.79,"vitaminK":8.39,"vitaminB6":0.46,"vitaminB12":0.86,"thiamin":0.06,"riboflavin":0.1,"niacin":5.24,"folate":13.17,"calcium":40.61,"iron":2.18,"magnesium":28.17,"phosphorus":203.95,"potassium":389.42,"sodium":300.71,"zinc":3.86,"copper":0.09,"selenium":25.63,"cholesterol":59.39,"saturatedFat":2.51,"monoFat":4.74,"polyFat":0.48,"omega3":0.0,"omega6":0.0},"gramsPerServing":177.6,"servings":4,"per100g":{"Energy_KCal":181.77,"Water":65.0,"Protein":21.08,"TotalLipidFat":9.27,"Carbohydrate":2.96,"FiberTotalDietary":0.45,"SugarsTotal":0.95,"Cholesterol":59.39,"FattyAcids_totalSaturated":2.51,"FattyAcids_totalMonounsaturated":4.74,"FattyAcids_totalPolyunsaturated":0.48,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":10.77,"Retinol":0.0,"Carotene_beta":113.88,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.79,"VitaminK_phylloquinone":8.39,"VitaminC_totalAscorbicAcid":3.89,"Thiamin":0.06,"Riboflavin":0.1,"Niacin":5.24,"PantothenicAcid":0.53,"VitaminB6":0.46,"Folate_total":13.17,"Folate_food":13.17,"Folate_DFE":13.17,"FolicAcid":0.0,"VitaminB12":0.86,"Choline_total":79.43,"Betaine":12.83,"LuteinZeaxanthin":58.47,"Lycopene":0.03,"Calcium_Ca":40.61,"Iron_Fe":2.18,"Magnesium_Mg":28.17,"Phosphorus_P":203.95,"Potassium_K":389.42,"Sodium_Na":300.71,"Zinc_Zn":3.86,"Copper_Cu":0.09,"Manganese_Mn":0.1,"Selenium_Se":25.63,"Tryptophan":0.14,"Threonine":0.83,"Isoleucine":0.95,"Leucine":1.65,"Lysine":1.75,"Methionine":0.54,"Cystine":0.22,"Phenylalanine":0.82,"Tyrosine":0.66,"Valine":1.04,"Arginine":1.35,"Histidine":0.66,"Alanine":1.26,"AsparticAcid":1.92,"GlutamicAcid":3.13,"Glycine":1.26,"Proline":1.0,"Serine":0.82,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.95},"addedSugars":0.0,"intrinsicSugars":1.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"23656","name":"Beef, flank, steak, separable lean only, trimmed to 0\" fat, all grades, raw","grams":170.1},{"ndb":"9206","name":"Orange juice, raw","grams":15.2},{"ndb":"9160","name":"Lime juice, raw","grams":15.4},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"2014","name":"Spices, cumin seed","grams":1.1},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.5},{"ndb":"2028","name":"Spices, paprika","grams":0.6},{"ndb":"11165","name":"Coriander (cilantro) leaves, raw","grams":2.0},{"ndb":"2047","name":"Salt, table","grams":1.1},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3}],"sections":[{"section_key":"main","section_label":"Carne Asada","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":864.15,"raw_water_grams":615.58,"raw_fat_grams":65.84,"raw_protein_grams":149.75,"raw_carb_grams":21.01,"final_grams":710.26}],"cookingMethod":"pan grilled"},
+    recipeIngredients: [
+      { name: 'Beef Carne Asada', quantity: 'custom (g)', foodWord: 'BEEFCARNEASADA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'beef flank steak', quantity: '1½ lbs', section: 'main', ndbNo: '23656', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'orange juice', quantity: '¼ cup', section: 'main', ndbNo: '9206', portionDesc: 'g', portionGrams: 61.0 },
+      { name: 'lime juice', quantity: '¼ cup', section: 'main', ndbNo: '9160', portionDesc: 'g', portionGrams: 61.6 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'main', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.0 },
+      { name: 'garlic', quantity: '4 cloves', section: 'main', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'ground cumin', quantity: '2 tsp', section: 'main', ndbNo: '2014', portionDesc: 'g', portionGrams: 4.2 },
+      { name: 'dried oregano', quantity: '2 tsp', section: 'main', ndbNo: '2027', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'paprika', quantity: '1 tsp', section: 'main', ndbNo: '2028', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'fresh cilantro', quantity: '¼ cup', section: 'main', ndbNo: '11165', portionDesc: 'g', portionGrams: 8.0 },
+      { name: 'salt', quantity: '¾ tsp', section: 'main', ndbNo: '2047', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'ground black pepper', quantity: '½ tsp', section: 'main', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
+    ],
+    recipeInstructions: [
+      'In a bowl or zip-lock bag, combine the orange juice, lime juice, olive oil, garlic, cumin, oregano, paprika, salt, and black pepper to make the marinade.',
+      'Add the flank steak to the marinade, turning to coat. Cover and refrigerate for at least 2 hours, or up to 8 hours for best flavor.',
+      'Remove the steak from the marinade and pat dry with paper towels. Discard the marinade.',
+      'Heat a cast iron skillet or grill pan over high heat until very hot. Brush with a little oil.',
+      'Cook the flank steak for 4 to 5 minutes per side for medium-rare, or until the desired doneness. Let it rest for 5 to 10 minutes.',
+      'Slice the steak thinly against the grain.',
+      'Serve with warm tortillas, fresh cilantro, diced onion, and lime wedges.'
+    ],
+    sections: [
+      { key: 'main', label: 'Carne Asada', cookingMethod: '', yieldFactorWater: 0.75 }
+    ],
   }
 ];
