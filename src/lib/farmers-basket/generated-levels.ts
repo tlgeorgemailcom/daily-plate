@@ -10512,5 +10512,51 @@ export const LEVELS: Level[] = [
       { key: 'shrimp', label: 'Shrimp', cookingMethod: '', yieldFactorWater: 0.75 },
       { key: 'salad', label: 'Shrimp and Avocado Salad', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SALAD_021',
+    name: 'Tuna Macaroni Salad',
+    category: 'salads',
+    dietaryCategory: 'pesca',
+    levelNum: 229,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '4 servings',
+    prepTime: '',
+    linkType: 'dish',
+    sr28Rule: 'D',
+    nutritionJson: {"cal":571.7,"pro":22.0,"fat":32.6,"carb":47.1,"fib":2.6,"h2o":192.5,"sug":4.7,"perServing":{"cal":571.7,"pro":22.0,"fat":32.6,"carb":47.1,"fib":2.6,"h2o":192.5,"sug":4.7,"AddedSugars":0.0,"IntrinsicSugars":4.7},"micros":{"vitaminA":10.1,"vitaminC":0.94,"vitaminD":12.18,"vitaminE":0.6,"vitaminK":27.81,"vitaminB6":0.1,"vitaminB12":0.62,"thiamin":0.02,"riboflavin":0.04,"niacin":2.67,"folate":8.16,"calcium":16.15,"iron":0.69,"magnesium":16.48,"phosphorus":71.38,"potassium":112.31,"sodium":241.8,"zinc":0.45,"copper":0.07,"selenium":29.06,"cholesterol":14.4,"saturatedFat":1.73,"monoFat":2.42,"polyFat":6.37,"omega3":0.8,"omega6":5.4},"gramsPerServing":297.8,"servings":4,"per100g":{"Energy_KCal":191.98,"Water":64.65,"Protein":7.4,"TotalLipidFat":10.96,"Carbohydrate":15.81,"FiberTotalDietary":0.89,"SugarsTotal":1.56,"Cholesterol":14.4,"FattyAcids_totalSaturated":1.73,"FattyAcids_totalMonounsaturated":2.42,"FattyAcids_totalPolyunsaturated":6.37,"LinoleicAcid":5.4,"alphaLinolenicAcid":0.75,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.05,"VitaminA_RAE":10.1,"Retinol":6.13,"Carotene_beta":41.92,"VitaminD":12.18,"VitaminE_alphaTocopherol":0.6,"VitaminK_phylloquinone":27.81,"VitaminC_totalAscorbicAcid":0.94,"Thiamin":0.02,"Riboflavin":0.04,"Niacin":2.67,"PantothenicAcid":0.15,"VitaminB6":0.1,"Folate_total":8.16,"Folate_food":8.16,"Folate_DFE":8.16,"FolicAcid":0.0,"VitaminB12":0.62,"Choline_total":12.9,"Betaine":0.67,"LuteinZeaxanthin":38.89,"Lycopene":0.01,"Calcium_Ca":16.15,"Iron_Fe":0.69,"Magnesium_Mg":16.48,"Phosphorus_P":71.38,"Potassium_K":112.31,"Sodium_Na":241.8,"Zinc_Zn":0.45,"Copper_Cu":0.07,"Manganese_Mn":0.19,"Selenium_Se":29.06,"Tryptophan":0.08,"Threonine":0.29,"Isoleucine":0.31,"Leucine":0.57,"Lysine":0.48,"Methionine":0.16,"Cystine":0.1,"Phenylalanine":0.31,"Tyrosine":0.2,"Valine":0.35,"Arginine":0.37,"Histidine":0.19,"Alanine":0.36,"AsparticAcid":0.6,"GlutamicAcid":1.58,"Glycine":0.31,"Proline":0.46,"Serine":0.31,"omega3":0.8,"omega6":5.4,"AddedSugars":0.0,"IntrinsicSugars":1.56},"addedSugars":0.0,"intrinsicSugars":4.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20420","name":"Pasta, dry, unenriched","grams":56.7},{"ndb":"14411","name":"Water, tap, drinking","grams":236.5},{"ndb":"15121","name":"Fish, tuna, light, canned in water, drained solids","grams":71.0},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":41.2},{"ndb":"11143","name":"Celery, raw","grams":30.0},{"ndb":"11282","name":"Onions, raw","grams":4.5},{"ndb":"11945","name":"Pickle relish, sweet","grams":7.5},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":3.8},{"ndb":"9152","name":"Lemon juice, raw","grams":3.8},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"pasta","section_label":"Pasta","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.34811726353257855,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":1172.8,"raw_water_grams":967.51,"raw_fat_grams":3.42,"raw_protein_grams":29.57,"raw_carb_grams":169.35,"final_grams":542.1},{"section_key":"salad","section_label":"Tuna Macaroni Salad","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":649.08,"raw_water_grams":433.3,"raw_fat_grams":127.15,"raw_protein_grams":58.6,"raw_carb_grams":18.98,"final_grams":649.08}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Tuna Macaroni Salad', quantity: 'custom (g)', foodWord: 'TUNAMACARONISALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'elbow macaroni (dry semolina pasta)', quantity: '8 oz dry', section: 'pasta', ndbNo: '20420', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'water', quantity: '4 cups', section: 'pasta', ndbNo: '14411', portionDesc: 'g', portionGrams: 946.0 },
+      { name: 'canned light tuna', quantity: '2 cans (5 oz each, drained)', section: 'salad', ndbNo: '15121', portionDesc: 'g', portionGrams: 284.0 },
+      { name: 'mayonnaise', quantity: '¾ cup', section: 'salad', ndbNo: '4025', portionDesc: 'g', portionGrams: 165.0 },
+      { name: 'celery stalk', quantity: '3 stalks', section: 'salad', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'onion', quantity: '2 thin slices', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'Pickle relish, sweet', quantity: '2 tbsp', section: 'salad', ndbNo: '11945', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'yellow mustard', quantity: '1 tbsp', section: 'salad', ndbNo: '2046', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'lemon juice', quantity: '1 tbsp', section: 'salad', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'salt', quantity: '¼ tsp', section: 'salad', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '⅛ tsp', section: 'salad', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Cook pasta in boiling salted water according to package directions until al dente. Drain and rinse under cold water to stop cooking. Let cool completely.',
+      'Drain tuna thoroughly. Combine tuna, mayonnaise, celery, onion, sweet relish, mustard, lemon juice, salt, and pepper in a large bowl and mix well.',
+      'Add cooled pasta and stir to combine. Taste and adjust seasoning.',
+      'Refrigerate at least 30 minutes before serving to allow flavors to meld. Serve chilled.'
+    ],
+    sections: [
+      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'salad', label: 'Tuna Macaroni Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
