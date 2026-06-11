@@ -2104,29 +2104,29 @@
                     {#if group.section}
                       {@const isSectionCollapsed = collapsedIngredientSections.has(group.section)}
                       {@const componentRefItem = group.items.find(i => i.isDish && i.componentRef)}
-                      {@const collapsedLabel = componentRefItem?.quantity?.replace(/\s*\(recipe\)/i, '') ?? ''}
+                      {@const sectionMeta = selectedLevel.sections?.find(s => s.key === group.section)}
+                      {@const sectionName = sectionMeta?.label ?? ((group.section ?? '').charAt(0).toUpperCase() + (group.section ?? '').slice(1))}
+                      {@const qtyStripped = (componentRefItem?.quantity ?? '').replace(/\s*\([^)]*\)/g, '').trim()}
+                      {@const collapsedLabel = qtyStripped && qtyStripped.toLowerCase().includes((sectionName.split(/\s+/)[0] ?? '').toLowerCase()) ? qtyStripped : (qtyStripped ? `${qtyStripped} ${sectionName}` : sectionName)}
                       <button class="ingredient-section-label" onclick={() => toggleIngredientSection(group.section!)}>
                         <span class="section-chevron">{isSectionCollapsed ? '▶' : '▼'}</span>
-                        {isSectionCollapsed && collapsedLabel ? collapsedLabel + ':' : formatSectionHeader(group.section, selectedLevel.sections)}
+                        {isSectionCollapsed && componentRefItem ? `${collapsedLabel}:` : formatSectionHeader(group.section, selectedLevel.sections)}
                       </button>
                     {/if}
                     {#if !group.section || !collapsedIngredientSections.has(group.section)}
                     <ul>
                       {#each group.items as ing}
+                        {#if ing.isDish && ing.componentRef}
+                          {@const childLines = getChildIngredientLines(ing.componentRef)}
+                          {#each childLines as line}
+                            <li>{line}</li>
+                          {/each}
+                        {:else}
                         {@const ingLineParts = formatIngredientLine(ing).split('\n')}
                         <li>
                           {ingLineParts[0]}{#each ingLineParts.slice(1) as note}<div class="ingredient-note">{note}</div>{/each}
-                          {#if ing.componentRef}
-                            {@const childLines = getChildIngredientLines(ing.componentRef)}
-                            {#if childLines.length > 0}
-                              <ul class="component-sublist">
-                                {#each childLines as line}
-                                  <li>{line}</li>
-                                {/each}
-                              </ul>
-                            {/if}
-                          {/if}
                         </li>
+                        {/if}
                       {/each}
                     </ul>
                     {/if}
