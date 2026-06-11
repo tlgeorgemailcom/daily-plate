@@ -391,7 +391,13 @@
   function handleSelect(level: Level) {
     savedScrollTop = scrollContainer?.scrollTop ?? 0;
     selectedLevel = level;
-    collapsedIngredientSections = new Set(); // Reset: all sections expanded when opening a recipe
+    // Pre-collapse component_ref sections (sub-recipes); all other sections start expanded
+    const componentRefSections = new Set(
+      (level.recipeIngredients || [])
+        .filter(ing => ing.isDish && ing.componentRef && ing.section)
+        .map(ing => ing.section!)
+    );
+    collapsedIngredientSections = componentRefSections;
     showRecipeOfDay = false;
     searchQuery = ''; // Clear search when viewing detail
     if (canReadAllRecipes) {
