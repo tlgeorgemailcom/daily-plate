@@ -11685,5 +11685,58 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'goulash', label: 'Goulash', cookingMethod: '', yieldFactorWater: 0.8 }
     ],
+  },
+  {
+    id: 'ENTR_018',
+    name: 'Beef Fajitas',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 252,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 fajitas (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":778.7,"pro":39.5,"fat":44.4,"carb":55.3,"fib":6.5,"h2o":211.0,"sug":9.1,"perServing":{"cal":778.7,"pro":39.5,"fat":44.4,"carb":55.3,"fib":6.5,"h2o":211.0,"sug":9.1,"AddedSugars":0.0,"IntrinsicSugars":9.1},"micros":{"vitaminA":26.0,"vitaminC":15.99,"vitaminD":2.26,"vitaminE":0.54,"vitaminK":4.9,"vitaminB6":0.23,"vitaminB12":2.13,"thiamin":0.15,"riboflavin":0.32,"niacin":2.69,"folate":27.79,"calcium":50.84,"iron":2.97,"magnesium":21.0,"phosphorus":133.88,"potassium":237.59,"sodium":433.39,"zinc":2.5,"copper":0.13,"selenium":16.67,"cholesterol":33.85,"saturatedFat":4.69,"monoFat":6.96,"polyFat":1.14,"omega3":0.04,"omega6":0.65},"gramsPerServing":356.8,"servings":4,"per100g":{"Energy_KCal":218.24,"Water":59.13,"Protein":11.09,"TotalLipidFat":12.44,"Carbohydrate":15.51,"FiberTotalDietary":1.81,"SugarsTotal":2.54,"Cholesterol":33.85,"FattyAcids_totalSaturated":4.69,"FattyAcids_totalMonounsaturated":6.96,"FattyAcids_totalPolyunsaturated":1.14,"LinoleicAcid":0.65,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":26.0,"Retinol":1.53,"Carotene_beta":254.3,"VitaminD":2.26,"VitaminE_alphaTocopherol":0.54,"VitaminK_phylloquinone":4.9,"VitaminC_totalAscorbicAcid":15.99,"Thiamin":0.15,"Riboflavin":0.32,"Niacin":2.69,"PantothenicAcid":0.61,"VitaminB6":0.23,"Folate_total":27.79,"Folate_food":12.85,"Folate_DFE":38.2,"FolicAcid":19.93,"VitaminB12":2.13,"Choline_total":28.52,"Betaine":7.74,"LuteinZeaxanthin":26.76,"Lycopene":0.04,"Calcium_Ca":50.84,"Iron_Fe":2.97,"Magnesium_Mg":21.0,"Phosphorus_P":133.88,"Potassium_K":237.59,"Sodium_Na":433.39,"Zinc_Zn":2.5,"Copper_Cu":0.13,"Manganese_Mn":0.29,"Selenium_Se":16.67,"Tryptophan":0.12,"Threonine":0.45,"Isoleucine":0.45,"Leucine":0.85,"Lysine":0.86,"Methionine":0.25,"Cystine":0.1,"Phenylalanine":0.43,"Tyrosine":0.36,"Valine":0.49,"Arginine":0.66,"Histidine":0.35,"Alanine":0.58,"AsparticAcid":0.98,"GlutamicAcid":1.95,"Glycine":0.48,"Proline":0.55,"Serine":0.44,"omega3":0.04,"omega6":0.65,"AddedSugars":0.0,"IntrinsicSugars":2.54},"addedSugars":0.0,"intrinsicSugars":9.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.8,"yieldFactorFat":1.0,"sources":[{"ndb":"9160","name":"Lime juice, raw","grams":15.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"2014","name":"Spices, cumin seed","grams":0.5},{"ndb":"2009","name":"Spices, chili powder","grams":0.7},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"23224","name":"Beef, plate steak, boneless, outside skirt, separable lean and fat, trimmed to 0\" fat, all grades, raw","grams":170.1},{"ndb":"11282","name":"Onions, raw","grams":50.0},{"ndb":"11821","name":"Peppers, sweet, red, raw","grams":59.5},{"ndb":"11333","name":"Peppers, sweet, green, raw","grams":29.8},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"2014","name":"Spices, cumin seed","grams":0.5},{"ndb":"2009","name":"Spices, chili powder","grams":0.7},{"ndb":"2047","name":"Salt, table","grams":1.1},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"18364","name":"Tortillas, ready-to-bake or -fry, flour, refrigerated","grams":90.0}],"sections":[{"section_key":"marinade","section_label":"Marinade","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":0.0,"yield_factor_fat":0.0,"yield_factor_protein":0.0,"yield_factor_carbohydrate":0.0,"yield_factor_other":0.0,"ingredient_count":6,"raw_grams":103.9,"raw_water_grams":60.2,"raw_fat_grams":28.12,"raw_protein_grams":1.54,"raw_carb_grams":10.25,"final_grams":3.78},{"section_key":"fajitas","section_label":"Fajitas","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.8,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":1634.38,"raw_water_grams":1054.88,"raw_fat_grams":177.61,"raw_protein_grams":158.21,"raw_carb_grams":221.3,"final_grams":1423.4}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Beef Fajitas', quantity: 'custom (g)', foodWord: 'BEEFFAJITA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'lime juice', quantity: '1/4 cup lime juice', section: 'marinade', ndbNo: '9160', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'olive oil', quantity: '2 tbsp olive oil', section: 'marinade', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'marinade', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'ground cumin', quantity: '1 tsp ground cumin', section: 'marinade', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'chili powder', quantity: '1 tsp chili powder', section: 'marinade', ndbNo: '2009', portionDesc: 'g', portionGrams: 2.7 },
+      { name: 'salt', quantity: '1/2 tsp salt', section: 'marinade', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'beef skirt steak', quantity: '1 1/2 lbs beef skirt steak', section: 'fajitas', ndbNo: '23224', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'onion', quantity: '2 medium onions, sliced', section: 'fajitas', ndbNo: '11282', portionDesc: 'g', portionGrams: 200.0 },
+      { name: 'red bell pepper', quantity: '2 red bell peppers, sliced', section: 'fajitas', ndbNo: '11821', portionDesc: 'g', portionGrams: 238.0 },
+      { name: 'green bell pepper', quantity: '1 green bell pepper, sliced', section: 'fajitas', ndbNo: '11333', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'olive oil', quantity: '2 tbsp olive oil', section: 'fajitas', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'ground cumin', quantity: '1 tsp ground cumin', section: 'fajitas', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'chili powder', quantity: '1 tsp chili powder', section: 'fajitas', ndbNo: '2009', portionDesc: 'g', portionGrams: 2.7 },
+      { name: 'salt', quantity: '3/4 tsp salt', section: 'fajitas', ndbNo: '2047', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'ground black pepper', quantity: '1/4 tsp black pepper', section: 'fajitas', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'flour tortillas', quantity: '8 flour tortillas (6-inch)', section: 'fajitas', ndbNo: '18364', portionDesc: 'g', portionGrams: 360.0 }
+    ],
+    recipeInstructions: [
+      'Combine the lime juice, 2 tablespoons olive oil, garlic, 1 teaspoon cumin, 1 teaspoon chili powder, and 1/2 teaspoon salt in a shallow dish. Add the skirt steak and turn to coat. Marinate at room temperature for 30 minutes, or refrigerate for up to 4 hours.',
+      'Remove the steak from the marinade and pat dry with paper towels. Discard the marinade.',
+      'Heat 1 tablespoon olive oil in a large cast-iron skillet or grill pan over high heat until smoking. Sear the steak 3 to 4 minutes per side for medium-rare, or until desired doneness. Transfer to a cutting board and rest 5 minutes.',
+      'In the same skillet, heat the remaining 1 tablespoon olive oil over medium-high heat. Add the onions and cook 4 to 5 minutes until softened and charred at the edges. Add the bell peppers, 1 teaspoon cumin, 1 teaspoon chili powder, 3/4 teaspoon salt, and black pepper. Cook 4 to 5 more minutes until the peppers are tender and slightly charred.',
+      'Slice the rested steak thinly against the grain.',
+      'Warm the flour tortillas in a dry skillet or microwave. Divide the steak and pepper-onion mixture among the tortillas. Serve with your choice of toppings such as sour cream, guacamole, salsa, shredded cheese, and lime wedges.'
+    ],
+    sections: [
+      { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
+      { key: 'fajitas', label: 'Fajitas', cookingMethod: '', yieldFactorWater: 0.8 }
+    ],
   }
 ];

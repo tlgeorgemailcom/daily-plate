@@ -401,3 +401,5 @@ ENTR_016,filling,Filling,,pan grilled,0.80,0.593,1.0,1.0,1.0,,,,
 ENTR_016,sauce,Red Enchilada Sauce,,raw,1.0,1.0,1.0,1.0,1.0,,,,SAUCE_025
 ENTR_016,assembly,Assembly,,baked,0.93,1.0,1.0,1.0,1.0,,,,
 ENTR_017,goulash,Goulash,,boiled,0.80,1.0,1.0,1.0,1.0,,,,
+ENTR_018,marinade,Marinade,,raw,0.0,0.0,0.0,0.0,0.0,,,,
+ENTR_018,fajitas,Fajitas,,pan grilled,0.80,1.0,1.0,1.0,1.0,,,,
