@@ -428,5 +428,5 @@ ENTR_029,gremolata,Gremolata,,raw,1.0,1.0,1.0,1.0,1.0,,,,
 ENTR_030,beef,Beef,,pan grilled,0.82,1.0,1.0,1.0,1.0,,,,
 ENTR_030,stir_fry,Stir-Fry,,pan grilled,0.9,1.0,1.0,1.0,1.0,,,,
 ENTR_031,picadillo,Picadillo,,pan grilled,0.85,0.593,1.0,1.0,1.0,,,,
-ENTR_032,crust,Crust,,raw,1.0,1.0,1.0,1.0,1.0,,,,CRUST_003
+ENTR_032,crust,Crust,,raw,1.0,1.0,1.0,1.0,1.0,,,,CRUST_004
 ENTR_032,filling,Filling,,baked,0.9,1.0,1.0,1.0,1.0,,,,

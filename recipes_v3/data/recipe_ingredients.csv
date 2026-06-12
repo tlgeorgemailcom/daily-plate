@@ -2580,7 +2580,7 @@ ENTR_031,12,oregano_dried,1 tsp dried oregano,1.0,,,picadillo,,False,
 ENTR_031,13,bay_leaf_dried,2 bay leaves,1.2,,,picadillo,,False,
 ENTR_031,14,salt_table,1 tsp salt,6.0,,,picadillo,,False,
 ENTR_031,15,black_pepper_ground,1/4 tsp black pepper,0.575,,,picadillo,,False,
-ENTR_032,1,@CRUST_003,1 recipe Pie Crust Single (Unbaked),279.8,,,crust,Pie Crust,False,Pie Crust Single (Unbaked)
+ENTR_032,1,@CRUST_004,1 recipe Pie Crust Double (Unbaked),559.6,,,crust,Pie Crust,False,Pie Crust Double (Unbaked)
 ENTR_032,2,beef_chuck_roast_raw,1-1/2 lb,680.4,,,filling,,False,beef chuck roast
 ENTR_032,3,butter_unsalted,4 tbsp,56.8,,,filling,,False,
 ENTR_032,4,onion_raw,1 large onion,160.0,,,filling,,False,
