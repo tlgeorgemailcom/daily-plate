@@ -12261,5 +12261,61 @@ export const LEVELS: Level[] = [
       { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.8 },
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'ENTR_029',
+    name: 'Beef Osso Buco',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 263,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 shank (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":537.6,"pro":53.9,"fat":19.6,"carb":24.8,"fib":4.7,"h2o":307.6,"sug":8.8,"perServing":{"cal":537.6,"pro":53.9,"fat":19.6,"carb":24.8,"fib":4.7,"h2o":307.6,"sug":8.8,"AddedSugars":0.0,"IntrinsicSugars":8.8},"micros":{"vitaminA":62.34,"vitaminC":3.54,"vitaminD":0.0,"vitaminE":0.71,"vitaminK":22.19,"vitaminB6":0.2,"vitaminB12":1.54,"thiamin":0.07,"riboflavin":0.13,"niacin":2.45,"folate":12.91,"calcium":29.73,"iron":1.6,"magnesium":14.75,"phosphorus":113.65,"potassium":295.1,"sodium":299.7,"zinc":3.33,"copper":0.08,"selenium":10.13,"cholesterol":21.03,"saturatedFat":1.07,"monoFat":2.74,"polyFat":0.33,"omega3":0.0,"omega6":0.0},"gramsPerServing":420.5,"servings":4,"per100g":{"Energy_KCal":127.84,"Water":73.15,"Protein":12.82,"TotalLipidFat":4.66,"Carbohydrate":5.9,"FiberTotalDietary":1.11,"SugarsTotal":2.1,"Cholesterol":21.03,"FattyAcids_totalSaturated":1.07,"FattyAcids_totalMonounsaturated":2.74,"FattyAcids_totalPolyunsaturated":0.33,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":62.34,"Retinol":0.0,"Carotene_beta":634.65,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.71,"VitaminK_phylloquinone":22.19,"VitaminC_totalAscorbicAcid":3.54,"Thiamin":0.07,"Riboflavin":0.13,"Niacin":2.45,"PantothenicAcid":0.23,"VitaminB6":0.2,"Folate_total":12.91,"Folate_food":11.05,"Folate_DFE":14.22,"FolicAcid":2.86,"VitaminB12":1.54,"Choline_total":5.36,"Betaine":0.06,"LuteinZeaxanthin":112.05,"Lycopene":1122.88,"Calcium_Ca":29.73,"Iron_Fe":1.6,"Magnesium_Mg":14.75,"Phosphorus_P":113.65,"Potassium_K":295.1,"Sodium_Na":299.7,"Zinc_Zn":3.33,"Copper_Cu":0.08,"Manganese_Mn":0.13,"Selenium_Se":10.13,"Tryptophan":0.14,"Threonine":0.55,"Isoleucine":0.55,"Leucine":0.96,"Lysine":1.01,"Methionine":0.31,"Cystine":0.14,"Phenylalanine":0.48,"Tyrosine":0.41,"Valine":0.6,"Arginine":0.78,"Histidine":0.41,"Alanine":0.74,"AsparticAcid":1.17,"GlutamicAcid":2.03,"Glycine":0.66,"Proline":0.56,"Serine":0.48,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":2.1},"addedSugars":0.0,"intrinsicSugars":8.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.65,"yieldFactorFat":1.0,"sources":[{"ndb":"13227","name":"Beef, shank crosscuts, separable lean only, trimmed to 1/4\" fat, choice, raw","grams":226.8},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":7.8},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":10.1},{"ndb":"11282","name":"Onions, raw","grams":40.0},{"ndb":"11124","name":"Carrots, raw","grams":30.5},{"ndb":"11143","name":"Celery, raw","grams":30.0},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"14106","name":"Alcoholic beverage, wine, table, white","grams":60.0},{"ndb":"6008","name":"Soup, beef broth or bouillon canned, ready-to-serve","grams":60.0},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":102.8},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.2},{"ndb":"2042","name":"Spices, thyme, dried","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":2.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"11297","name":"Parsley, fresh","grams":3.8},{"ndb":"11215","name":"Garlic, raw","grams":0.8},{"ndb":"9152","name":"Lemon juice, raw","grams":3.8}],"sections":[{"section_key":"braise","section_label":"Braise","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.65,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":14,"raw_grams":2295.92,"raw_water_grams":1848.57,"raw_fat_grams":78.29,"raw_protein_grams":214.95,"raw_carb_grams":96.26,"final_grams":1648.93},{"section_key":"gremolata","section_label":"Gremolata","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":33.2,"raw_water_grams":28.94,"raw_fat_grams":0.17,"raw_protein_grams":0.69,"raw_carb_grams":2.99,"final_grams":33.2}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Beef Osso Buco', quantity: 'custom (g)', foodWord: 'BEEFOSSOBUCO', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'beef shank crosscuts', quantity: '2 lbs', section: 'braise', ndbNo: '13227', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '1/4 cup flour', section: 'braise', ndbNo: '20581', portionDesc: 'g', portionGrams: 31.25 },
+      { name: 'olive oil', quantity: '3 tbsp', section: 'braise', ndbNo: '4053', portionDesc: 'g', portionGrams: 40.5 },
+      { name: 'onion', quantity: '1 large onion', section: 'braise', ndbNo: '11282', portionDesc: 'g', portionGrams: 160.0 },
+      { name: 'carrot', quantity: '2 medium carrots', section: 'braise', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'celery stalk', quantity: '3 stalks celery', section: 'braise', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'garlic', quantity: '4 cloves', section: 'braise', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'white wine', quantity: '1 cup white wine', section: 'braise', ndbNo: '14106', portionDesc: 'g', portionGrams: 240.0 },
+      { name: 'beef broth', quantity: '1 cup beef broth', section: 'braise', ndbNo: '6008', portionDesc: 'g', portionGrams: 240.0 },
+      { name: 'canned crushed tomatoes', quantity: '1 can (14.5 oz)', section: 'braise', ndbNo: '11693', portionDesc: 'g', portionGrams: 411.0 },
+      { name: 'dried oregano', quantity: '1 tsp dried oregano', section: 'braise', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'dried thyme', quantity: '1 tsp dried thyme', section: 'braise', ndbNo: '2042', portionDesc: 'g', portionGrams: 1.4 },
+      { name: 'salt', quantity: '1-1/2 tsp salt', section: 'braise', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp black pepper', section: 'braise', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'fresh parsley', quantity: '1/4 cup fresh parsley', section: 'gremolata', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.2 },
+      { name: 'garlic', quantity: '1 clove', section: 'gremolata', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'lemon juice', quantity: '1 tbsp lemon juice', section: 'gremolata', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 }
+    ],
+    recipeInstructions: [
+      'Pat the beef shank crosscuts dry and season with salt and pepper. Dredge lightly in flour, shaking off any excess.',
+      'Heat the olive oil in a large Dutch oven or heavy pot over medium-high heat. Sear the shanks for 3 to 4 minutes per side until browned. Remove and set aside.',
+      'In the same pot, reduce heat to medium and sauté the onion, carrot, and celery for 5 minutes until softened. Add the garlic and cook 1 minute more.',
+      'Pour in the white wine and scrape up any browned bits from the bottom of the pot. Simmer for 2 minutes.',
+      'Add the beef broth, crushed tomatoes, oregano, and thyme. Stir to combine. Return the seared shanks to the pot, nestling them into the braising liquid.',
+      'Bring to a boil, then reduce heat to low. Cover and simmer for 1 hour 30 minutes to 2 hours, turning the shanks halfway through, until the meat is very tender and beginning to fall off the bone.',
+      'While the osso buco braises, prepare the gremolata: combine the chopped parsley, minced garlic, and lemon juice in a small bowl.',
+      'Serve each shank with braising sauce spooned over the top and a generous pinch of gremolata. Pairs well with risotto, polenta, or crusty bread.'
+    ],
+    sections: [
+      { key: 'braise', label: 'Braise', cookingMethod: '', yieldFactorWater: 0.65 },
+      { key: 'gremolata', label: 'Gremolata', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
