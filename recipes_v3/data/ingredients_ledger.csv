@@ -309,3 +309,4 @@ egg_noodles_dry,20109,NOODLEEGGDRY,"Noodles, egg, dry, enriched",dry egg noodles
 bean_sprouts_raw,11043,BEANSPROUT,"Mung beans, mature seeds, sprouted, raw",bean sprouts,cup,104.0,added during ENTR_023 build
 hoisin_sauce,6175,HOISINSAUCE,"Sauce, hoisin, ready-to-serve",hoisin sauce,tablespoon,16.0,added during ENTR_023 build
 zucchini_raw,11477,ZUCCHINI,"Squash, summer, zucchini, includes skin, raw",zucchini,medium,196.0,added during ENTR_025 build
+rice_white_raw,20044,RICEWHITERAW,"Rice, white, long-grain, regular, raw, enriched",white rice (dry),cup,185.0,added during ENTR_026 build; bin=0.6844 in comboo.db

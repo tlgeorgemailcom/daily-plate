@@ -12104,5 +12104,53 @@ export const LEVELS: Level[] = [
       { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
       { key: 'kabobs', label: 'Kabobs', cookingMethod: '', yieldFactorWater: 0.85 }
     ],
+  },
+  {
+    id: 'ENTR_026',
+    name: 'Beef Korean Beef',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 260,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving over rice (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":569.5,"pro":35.1,"fat":22.0,"carb":56.2,"fib":1.4,"h2o":222.4,"sug":7.0,"perServing":{"cal":569.5,"pro":35.1,"fat":22.0,"carb":56.2,"fib":1.4,"h2o":222.4,"sug":7.0,"AddedSugars":6.5,"IntrinsicSugars":0.5},"micros":{"vitaminA":3.31,"vitaminC":0.48,"vitaminD":1.42,"vitaminE":0.11,"vitaminK":7.22,"vitaminB6":0.15,"vitaminB12":0.91,"thiamin":0.08,"riboflavin":0.08,"niacin":2.26,"folate":30.33,"calcium":21.59,"iron":1.72,"magnesium":17.25,"phosphorus":106.48,"potassium":191.46,"sodium":294.31,"zinc":2.32,"copper":0.08,"selenium":10.13,"cholesterol":35.47,"saturatedFat":3.92,"monoFat":4.72,"polyFat":0.44,"omega3":0.02,"omega6":0.0},"gramsPerServing":340.5,"servings":4,"per100g":{"Energy_KCal":167.26,"Water":65.31,"Protein":10.32,"TotalLipidFat":6.46,"Carbohydrate":16.51,"FiberTotalDietary":0.41,"SugarsTotal":2.07,"Cholesterol":35.47,"FattyAcids_totalSaturated":3.92,"FattyAcids_totalMonounsaturated":4.72,"FattyAcids_totalPolyunsaturated":0.44,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":3.31,"Retinol":1.6,"Carotene_beta":19.9,"VitaminD":1.42,"VitaminE_alphaTocopherol":0.11,"VitaminK_phylloquinone":7.22,"VitaminC_totalAscorbicAcid":0.48,"Thiamin":0.08,"Riboflavin":0.08,"Niacin":2.26,"PantothenicAcid":0.34,"VitaminB6":0.15,"Folate_total":30.33,"Folate_food":5.72,"Folate_DFE":47.55,"FolicAcid":37.86,"VitaminB12":0.91,"Choline_total":27.61,"Betaine":5.51,"LuteinZeaxanthin":26.64,"Lycopene":0.01,"Calcium_Ca":21.59,"Iron_Fe":1.72,"Magnesium_Mg":17.25,"Phosphorus_P":106.48,"Potassium_K":191.46,"Sodium_Na":294.31,"Zinc_Zn":2.32,"Copper_Cu":0.08,"Manganese_Mn":0.26,"Selenium_Se":10.13,"Tryptophan":0.06,"Threonine":0.39,"Isoleucine":0.45,"Leucine":0.8,"Lysine":0.78,"Methionine":0.25,"Cystine":0.1,"Phenylalanine":0.42,"Tyrosine":0.31,"Valine":0.51,"Arginine":0.69,"Histidine":0.31,"Alanine":0.62,"AsparticAcid":0.93,"GlutamicAcid":1.61,"Glycine":0.65,"Proline":0.52,"Serine":0.43,"omega3":0.02,"omega6":0.0,"AddedSugars":1.92,"IntrinsicSugars":0.14},"addedSugars":6.5,"intrinsicSugars":0.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.85,"yieldFactorFat":1.0,"sources":[{"ndb":"20044","name":"Rice, white, long-grain, regular, raw, enriched","grams":57.8},{"ndb":"14411","name":"Water, tap, drinking","grams":112.5},{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":170.1},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11216","name":"Ginger root, raw","grams":3.0},{"ndb":"16123","name":"Soy sauce made from soy and wheat (shoyu)","grams":16.0},{"ndb":"19334","name":"Sugars, brown","grams":6.8},{"ndb":"4058","name":"Oil, sesame, salad or cooking","grams":2.2},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":11.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1}],"sections":[{"section_key":"rice","section_label":"Rice","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.9323367361761509,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":681.25,"raw_water_grams":476.42,"raw_fat_grams":1.53,"raw_protein_grams":16.49,"raw_carb_grams":184.88,"final_grams":649.01},{"section_key":"beef","section_label":"Beef","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.85,"yield_factor_fat":0.593,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":850.85,"raw_water_grams":523.95,"raw_fat_grams":145.77,"raw_protein_grams":124.03,"raw_carb_grams":39.95,"final_grams":712.93}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Beef Korean Beef', quantity: 'custom (g)', foodWord: 'BEEFKOREAN', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white rice (dry)', quantity: '1-1/4 cups white rice, dry', section: 'rice', ndbNo: '20044', portionDesc: 'g', portionGrams: 231.25 },
+      { name: 'water', quantity: 'water for cooking', section: 'rice', ndbNo: '14411', portionDesc: 'g', portionGrams: 450.0 },
+      { name: 'ground beef (80/20)', quantity: '1.5 lbs ground beef (80/20)', section: 'beef', ndbNo: '23572', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'beef', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'fresh ginger', quantity: '2 tbsp fresh ginger, grated', section: 'beef', ndbNo: '11216', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'soy sauce', quantity: '1/4 cup soy sauce', section: 'beef', ndbNo: '16123', portionDesc: 'g', portionGrams: 64.0 },
+      { name: 'brown sugar', quantity: '3 tbsp brown sugar', section: 'beef', ndbNo: '19334', portionDesc: 'g', portionGrams: 27.0 },
+      { name: 'Sesame oil', quantity: '2 tsp sesame oil', section: 'beef', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'scallion (green onion)', quantity: '3 scallions, sliced', section: 'beef', ndbNo: '11291', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'ground black pepper', quantity: '1/2 tsp black pepper', section: 'beef', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'red pepper flakes', quantity: '1/4 tsp red pepper flakes', section: 'beef', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.3 }
+    ],
+    recipeInstructions: [
+      'Cook the rice: combine the rice and water in a medium saucepan. Bring to a boil, then reduce heat to low, cover, and cook for 18 minutes until the water is absorbed. Remove from heat and let stand covered for 5 minutes. Fluff with a fork.',
+      'While the rice cooks, make the sauce: whisk together the soy sauce, brown sugar, sesame oil, and red pepper flakes in a small bowl. Set aside.',
+      'Heat a large skillet or wok over medium-high heat. Add the ground beef and cook, breaking it up, until browned through, about 6 to 8 minutes. Drain excess fat.',
+      'Add the garlic and ginger to the beef and cook 1 to 2 minutes until fragrant.',
+      'Pour the sauce over the beef and stir to coat. Cook 1 to 2 minutes until the sauce thickens and coats the beef. Remove from heat and stir in the scallions and black pepper.',
+      'Serve the Korean beef over steamed rice. Garnish with additional sliced scallions and sesame seeds if desired.'
+    ],
+    sections: [
+      { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.85, yieldFactorFat: 0.593 }
+    ],
   }
 ];
