@@ -11536,5 +11536,103 @@ export const LEVELS: Level[] = [
       { key: 'steak', label: 'Steak Diane', cookingMethod: '', yieldFactorWater: 0.8 },
       { key: 'dijon', label: 'Dijon-Style Mustard', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAUCE_025',
+    name: 'Red Enchilada Sauce',
+    category: 'sauces & condiments',
+    dietaryCategory: 'vegan',
+    levelNum: 249,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1/4 cup (makes 11+)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":50.6,"pro":1.6,"fat":2.4,"carb":7.1,"fib":2.8,"h2o":52.0,"sug":0.9,"perServing":{"cal":50.6,"pro":1.6,"fat":2.4,"carb":7.1,"fib":2.8,"h2o":52.0,"sug":0.9,"AddedSugars":0.0,"IntrinsicSugars":0.9},"micros":{"vitaminA":194.03,"vitaminC":2.82,"vitaminD":0.0,"vitaminE":0.43,"vitaminK":3.94,"vitaminB6":0.39,"vitaminB12":0.0,"thiamin":0.03,"riboflavin":0.35,"niacin":0.8,"folate":15.55,"calcium":23.12,"iron":1.61,"magnesium":20.31,"phosphorus":41.99,"potassium":367.31,"sodium":222.39,"zinc":0.28,"copper":0.09,"selenium":0.71,"cholesterol":0.0,"saturatedFat":0.36,"monoFat":1.5,"polyFat":0.57,"omega3":0.0,"omega6":0.0},"gramsPerServing":64.2,"servings":11,"per100g":{"Energy_KCal":78.69,"Water":80.86,"Protein":2.41,"TotalLipidFat":3.8,"Carbohydrate":11.07,"FiberTotalDietary":4.36,"SugarsTotal":1.35,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.36,"FattyAcids_totalMonounsaturated":1.5,"FattyAcids_totalPolyunsaturated":0.57,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":194.03,"Retinol":0.0,"Carotene_beta":106.34,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.43,"VitaminK_phylloquinone":3.94,"VitaminC_totalAscorbicAcid":2.82,"Thiamin":0.03,"Riboflavin":0.35,"Niacin":0.8,"PantothenicAcid":0.23,"VitaminB6":0.39,"Folate_total":15.55,"Folate_food":15.55,"Folate_DFE":15.55,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":2.61,"Betaine":0.06,"LuteinZeaxanthin":27.08,"Lycopene":589.79,"Calcium_Ca":23.12,"Iron_Fe":1.61,"Magnesium_Mg":20.31,"Phosphorus_P":41.99,"Potassium_K":367.31,"Sodium_Na":222.39,"Zinc_Zn":0.28,"Copper_Cu":0.09,"Manganese_Mn":0.29,"Selenium_Se":0.71,"Tryptophan":0.02,"Threonine":0.05,"Isoleucine":0.04,"Leucine":0.07,"Lysine":0.06,"Methionine":0.02,"Cystine":0.02,"Phenylalanine":0.05,"Tyrosine":0.03,"Valine":0.06,"Arginine":0.08,"Histidine":0.03,"Alanine":0.06,"AsparticAcid":0.21,"GlutamicAcid":0.31,"Glycine":0.05,"Proline":0.06,"Serine":0.06,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":1.35},"addedSugars":0.0,"intrinsicSugars":0.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.73,"yieldFactorFat":1.0,"sources":[{"ndb":"11978","name":"Peppers, ancho, dried","grams":6.2},{"ndb":"11982","name":"Peppers, pasilla, dried","grams":3.8},{"ndb":"11282","name":"Onions, raw","grams":10.0},{"ndb":"11215","name":"Garlic, raw","grams":0.8},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":16.4},{"ndb":"2014","name":"Spices, cumin seed","grams":0.2},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":1.2},{"ndb":"14411","name":"Water, tap, drinking","grams":44.4}],"sections":[{"section_key":"sauce","section_label":"Sauce","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.73,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":918.1,"raw_water_grams":782.83,"raw_fat_grams":26.84,"raw_protein_grams":17.06,"raw_carb_grams":78.27,"final_grams":706.74}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Red Enchilada Sauce', quantity: 'custom (g)', foodWord: 'ENCHILADASAUCE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'ancho chile dried', quantity: '4 ancho dried chiles', section: 'sauce', ndbNo: '11978', portionDesc: 'g', portionGrams: 68.0 },
+      { name: 'pasilla chile dried', quantity: '6 pasilla dried chiles (guajillo proxy)', section: 'sauce', ndbNo: '11982', portionDesc: 'g', portionGrams: 42.0 },
+      { name: 'onion', quantity: '3/4 cup chopped white onion', section: 'sauce', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'garlic', quantity: '3 cloves garlic', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'tomato', quantity: '2 Roma tomatoes', section: 'sauce', ndbNo: '11529', portionDesc: 'g', portionGrams: 180.0 },
+      { name: 'ground cumin', quantity: '1 tsp ground cumin', section: 'sauce', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'dried oregano', quantity: '1 tsp dried oregano', section: 'sauce', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'salt', quantity: '3/4 tsp salt', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'olive oil', quantity: '1 tbsp olive oil', section: 'sauce', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'water', quantity: '2 cups water', section: 'sauce', ndbNo: '14411', portionDesc: 'g', portionGrams: 488.0 }
+    ],
+    recipeInstructions: [
+      'Toast the dried ancho and pasilla chiles in a dry skillet over medium heat for 30 to 60 seconds per side, just until fragrant. Do not let them scorch or they will taste bitter.',
+      'Remove the stems and slice the toasted chiles open. Shake out and discard as many seeds as possible.',
+      'Place the cleaned chiles in a bowl. Pour 2 cups of boiling water over them and press a small plate on top to keep them submerged. Soak for 20 to 30 minutes until soft and pliable. Drain and reserve the soaking liquid.',
+      'Heat the olive oil in a skillet over medium heat. Add the chopped onion and cook 4 to 5 minutes until softened. Add the garlic and cook 1 more minute. Add the Roma tomatoes and cook 2 minutes, pressing to soften.',
+      'Transfer the soaked chiles, cooked onion mixture, cumin, oregano, salt, and 2 cups water to a blender. Blend on high until completely smooth, about 1 minute.',
+      'Strain the blended sauce through a fine-mesh sieve into the skillet, pressing with a spatula to push through as much pulp as possible. Discard the remaining skins and seeds in the strainer.',
+      'Bring the strained sauce to a simmer over medium heat. Cook uncovered, stirring occasionally, for 10 to 15 minutes until the sauce thickens to the consistency of heavy cream. Taste and adjust salt.',
+      'Use immediately for enchiladas, or cool completely and refrigerate for up to 1 week. The sauce can also be frozen for up to 3 months.'
+    ],
+    sections: [
+      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.73 }
+    ],
+  },
+  {
+    id: 'ENTR_016',
+    name: 'Beef Enchiladas',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 250,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '3 enchiladas (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":677.0,"pro":38.9,"fat":34.6,"carb":58.2,"fib":13.8,"h2o":274.6,"sug":5.3,"perServing":{"cal":677.0,"pro":38.9,"fat":34.6,"carb":58.2,"fib":13.8,"h2o":274.6,"sug":5.3,"AddedSugars":0.0,"IntrinsicSugars":5.3},"micros":{"vitaminA":104.63,"vitaminC":1.63,"vitaminD":2.82,"vitaminE":0.43,"vitaminK":2.93,"vitaminB6":0.29,"vitaminB12":0.61,"thiamin":0.04,"riboflavin":0.23,"niacin":1.56,"folate":11.25,"calcium":103.37,"iron":1.77,"magnesium":31.09,"phosphorus":166.66,"potassium":301.2,"sodium":275.3,"zinc":1.85,"copper":0.09,"selenium":7.24,"cholesterol":29.15,"saturatedFat":4.07,"monoFat":3.99,"polyFat":0.65,"omega3":0.01,"omega6":0.0},"gramsPerServing":414.5,"servings":4,"per100g":{"Energy_KCal":163.34,"Water":66.24,"Protein":9.37,"TotalLipidFat":8.36,"Carbohydrate":14.05,"FiberTotalDietary":3.32,"SugarsTotal":1.28,"Cholesterol":29.15,"FattyAcids_totalSaturated":4.07,"FattyAcids_totalMonounsaturated":3.99,"FattyAcids_totalPolyunsaturated":0.65,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":104.63,"Retinol":15.65,"Carotene_beta":110.32,"VitaminD":2.82,"VitaminE_alphaTocopherol":0.43,"VitaminK_phylloquinone":2.93,"VitaminC_totalAscorbicAcid":1.63,"Thiamin":0.04,"Riboflavin":0.23,"Niacin":1.56,"PantothenicAcid":0.26,"VitaminB6":0.29,"Folate_total":11.25,"Folate_food":11.25,"Folate_DFE":11.25,"FolicAcid":0.0,"VitaminB12":0.61,"Choline_total":19.5,"Betaine":2.39,"LuteinZeaxanthin":13.99,"Lycopene":251.48,"Calcium_Ca":103.37,"Iron_Fe":1.77,"Magnesium_Mg":31.09,"Phosphorus_P":166.66,"Potassium_K":301.2,"Sodium_Na":275.3,"Zinc_Zn":1.85,"Copper_Cu":0.09,"Manganese_Mn":0.22,"Selenium_Se":7.24,"Tryptophan":0.07,"Threonine":0.33,"Isoleucine":0.4,"Leucine":0.75,"Lysine":0.62,"Methionine":0.21,"Cystine":0.08,"Phenylalanine":0.38,"Tyrosine":0.31,"Valine":0.47,"Arginine":0.48,"Histidine":0.27,"Alanine":0.46,"AsparticAcid":0.76,"GlutamicAcid":1.61,"Glycine":0.43,"Proline":0.62,"Serine":0.38,"omega3":0.01,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":1.28},"addedSugars":0.0,"intrinsicSugars":5.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.8,"yieldFactorFat":0.593,"sources":[{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":113.5},{"ndb":"11282","name":"Onions, raw","grams":37.5},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"2009","name":"Spices, chili powder","grams":2.0},{"ndb":"2014","name":"Spices, cumin seed","grams":1.0},{"ndb":"2047","name":"Salt, table","grams":1.1},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"","name":"Red Enchilada Sauce","grams":176.7},{"ndb":"18363","name":"Tortillas, ready-to-bake or -fry, corn","grams":72.0},{"ndb":"1251","name":"Cheese, Mexican blend","grams":42.4}],"sections":[{"section_key":"filling","section_label":"Filling","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.8,"yield_factor_fat":0.593,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":630.18,"raw_water_grams":421.1,"raw_fat_grams":93.06,"raw_protein_grams":82.04,"raw_carb_grams":23.15,"final_grams":508.08},{"section_key":"sauce","section_label":"Red Enchilada Sauce","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":706.7,"raw_water_grams":571.44,"raw_fat_grams":26.85,"raw_protein_grams":17.03,"raw_carb_grams":78.23,"final_grams":706.7},{"section_key":"assembly","section_label":"Assembly","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.93,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":457.5,"raw_water_grams":204.17,"raw_fat_grams":56.53,"raw_protein_grams":56.32,"raw_carb_grams":131.53,"final_grams":443.21}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Beef Enchiladas', quantity: 'custom (g)', foodWord: 'BEEFENCHILADA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'ground beef (80% lean)', quantity: '1 lb ground beef (80/20)', section: 'filling', ndbNo: '23572', portionDesc: 'g', portionGrams: 454.0 },
+      { name: 'onion', quantity: '1 medium onion, diced', section: 'filling', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'filling', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'chili powder', quantity: '3 tsp chili powder', section: 'filling', ndbNo: '2009', portionDesc: 'g', portionGrams: 8.1 },
+      { name: 'ground cumin', quantity: '2 tsp ground cumin', section: 'filling', ndbNo: '2014', portionDesc: 'g', portionGrams: 4.0 },
+      { name: 'salt', quantity: '3/4 tsp salt', section: 'filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'ground black pepper', quantity: '1/4 tsp black pepper', section: 'filling', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'Red Enchilada Sauce', quantity: '1 batch Red Enchilada Sauce (recipe)', section: 'sauce', foodWord: 'ENCHILADASAUCE', portionDesc: 'g', portionGrams: 706.7, isDish: true, componentRef: 'SAUCE_025' },
+      { name: 'corn tortilla', quantity: '12 corn tortillas (6-inch)', section: 'assembly', ndbNo: '18363', portionDesc: 'g', portionGrams: 288.0 },
+      { name: 'Mexican blend cheese', quantity: '1 1/2 cups shredded Mexican blend cheese', section: 'assembly', ndbNo: '1251', portionDesc: 'g', portionGrams: 169.5 }
+    ],
+    recipeInstructions: [
+      'Make or prepare the Red Enchilada Sauce (see the Red Enchilada Sauce recipe). Set aside.',
+      'Preheat the oven to 375°F (190°C). Lightly grease a 9×13-inch baking dish.',
+      'Heat a large skillet over medium-high heat. Add the ground beef and cook, breaking it up, until no longer pink, about 6 to 8 minutes. Drain the excess fat from the pan.',
+      'Add the onion to the beef and cook 4 to 5 minutes until softened. Add the garlic, chili powder, cumin, salt, and pepper. Stir and cook 1 minute more. Remove from heat.',
+      'Spread about 1/2 cup of the enchilada sauce in the bottom of the prepared baking dish.',
+      'Warm the corn tortillas briefly in the microwave or a dry skillet to make them pliable. Place about 3 tablespoons of the beef filling down the center of each tortilla. Roll tightly and place seam-side down in the baking dish.',
+      'Pour the remaining enchilada sauce evenly over the rolled enchiladas. Sprinkle the shredded cheese over the top.',
+      'Cover the dish with foil and bake for 20 minutes. Remove the foil and bake an additional 10 minutes until the cheese is melted and bubbly. Serve immediately.'
+    ],
+    sections: [
+      { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.8, yieldFactorFat: 0.593 },
+      { key: 'sauce', label: 'Red Enchilada Sauce', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 0.93 }
+    ],
   }
 ];

@@ -1562,3 +1562,19 @@ ENTR_015,5,"Remove the pan from heat. Add the brandy carefully. Return to heat a
 ENTR_015,6,"Add the beef broth and Worcestershire sauce. Stir, scraping up any browned bits. Simmer 2 minutes. Add the heavy cream and Dijon mustard. Stir to combine and simmer 3 to 4 minutes until the sauce thickens enough to coat a spoon."
 ENTR_015,7,Return the steaks and any accumulated juices to the pan. Spoon the sauce over them and warm through 1 minute. Taste and adjust seasoning.
 ENTR_015,8,"Plate the steaks, spoon the mushroom pan sauce over the top, and garnish with chopped parsley. Serve immediately."
+SAUCE_025,1,"Toast the dried ancho and pasilla chiles in a dry skillet over medium heat for 30 to 60 seconds per side, just until fragrant. Do not let them scorch or they will taste bitter."
+SAUCE_025,2,Remove the stems and slice the toasted chiles open. Shake out and discard as many seeds as possible.
+SAUCE_025,3,Place the cleaned chiles in a bowl. Pour 2 cups of boiling water over them and press a small plate on top to keep them submerged. Soak for 20 to 30 minutes until soft and pliable. Drain and reserve the soaking liquid.
+SAUCE_025,4,"Heat the olive oil in a skillet over medium heat. Add the chopped onion and cook 4 to 5 minutes until softened. Add the garlic and cook 1 more minute. Add the Roma tomatoes and cook 2 minutes, pressing to soften."
+SAUCE_025,5,"Transfer the soaked chiles, cooked onion mixture, cumin, oregano, salt, and 2 cups water to a blender. Blend on high until completely smooth, about 1 minute."
+SAUCE_025,6,"Strain the blended sauce through a fine-mesh sieve into the skillet, pressing with a spatula to push through as much pulp as possible. Discard the remaining skins and seeds in the strainer."
+SAUCE_025,7,"Bring the strained sauce to a simmer over medium heat. Cook uncovered, stirring occasionally, for 10 to 15 minutes until the sauce thickens to the consistency of heavy cream. Taste and adjust salt."
+SAUCE_025,8,"Use immediately for enchiladas, or cool completely and refrigerate for up to 1 week. The sauce can also be frozen for up to 3 months."
+ENTR_016,1,Make or prepare the Red Enchilada Sauce (see the Red Enchilada Sauce recipe). Set aside.
+ENTR_016,2,Preheat the oven to 375°F (190°C). Lightly grease a 9×13-inch baking dish.
+ENTR_016,3,"Heat a large skillet over medium-high heat. Add the ground beef and cook, breaking it up, until no longer pink, about 6 to 8 minutes. Drain the excess fat from the pan."
+ENTR_016,4,"Add the onion to the beef and cook 4 to 5 minutes until softened. Add the garlic, chili powder, cumin, salt, and pepper. Stir and cook 1 minute more. Remove from heat."
+ENTR_016,5,Spread about 1/2 cup of the enchilada sauce in the bottom of the prepared baking dish.
+ENTR_016,6,Warm the corn tortillas briefly in the microwave or a dry skillet to make them pliable. Place about 3 tablespoons of the beef filling down the center of each tortilla. Roll tightly and place seam-side down in the baking dish.
+ENTR_016,7,Pour the remaining enchilada sauce evenly over the rolled enchiladas. Sprinkle the shredded cheese over the top.
+ENTR_016,8,Cover the dish with foil and bake for 20 minutes. Remove the foil and bake an additional 10 minutes until the cheese is melted and bubbly. Serve immediately.
