@@ -12411,5 +12411,56 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'picadillo', label: 'Picadillo', cookingMethod: '', yieldFactorWater: 0.85, yieldFactorFat: 0.593 }
     ],
+  },
+  {
+    id: 'ENTR_032',
+    name: 'Beef Pot Pie',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 266,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 6)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":548.8,"pro":30.7,"fat":29.4,"carb":41.6,"fib":4.5,"h2o":263.6,"sug":4.1,"perServing":{"cal":548.8,"pro":30.7,"fat":29.4,"carb":41.6,"fib":4.5,"h2o":263.6,"sug":4.1,"AddedSugars":0.0,"IntrinsicSugars":4.1},"micros":{"vitaminA":89.16,"vitaminC":1.54,"vitaminD":1.16,"vitaminE":0.37,"vitaminK":6.52,"vitaminB6":0.14,"vitaminB12":0.88,"thiamin":0.11,"riboflavin":0.12,"niacin":2.04,"folate":24.51,"calcium":17.49,"iron":1.43,"magnesium":15.4,"phosphorus":92.96,"potassium":246.4,"sodium":278.12,"zinc":2.56,"copper":0.06,"selenium":11.24,"cholesterol":29.16,"saturatedFat":3.56,"monoFat":3.01,"polyFat":0.89,"omega3":0.01,"omega6":0.14},"gramsPerServing":370.1,"servings":6,"per100g":{"Energy_KCal":148.29,"Water":71.22,"Protein":8.29,"TotalLipidFat":7.93,"Carbohydrate":11.24,"FiberTotalDietary":1.2,"SugarsTotal":1.11,"Cholesterol":29.16,"FattyAcids_totalSaturated":3.56,"FattyAcids_totalMonounsaturated":3.01,"FattyAcids_totalPolyunsaturated":0.89,"LinoleicAcid":0.14,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":89.16,"Retinol":25.84,"Carotene_beta":601.66,"VitaminD":1.16,"VitaminE_alphaTocopherol":0.37,"VitaminK_phylloquinone":6.52,"VitaminC_totalAscorbicAcid":1.54,"Thiamin":0.11,"Riboflavin":0.12,"Niacin":2.04,"PantothenicAcid":0.31,"VitaminB6":0.14,"Folate_total":24.51,"Folate_food":11.36,"Folate_DFE":33.73,"FolicAcid":13.72,"VitaminB12":0.88,"Choline_total":24.63,"Betaine":5.41,"LuteinZeaxanthin":95.03,"Lycopene":0.08,"Calcium_Ca":17.49,"Iron_Fe":1.43,"Magnesium_Mg":15.4,"Phosphorus_P":92.96,"Potassium_K":246.4,"Sodium_Na":278.12,"Zinc_Zn":2.56,"Copper_Cu":0.06,"Manganese_Mn":0.13,"Selenium_Se":11.24,"Tryptophan":0.09,"Threonine":0.35,"Isoleucine":0.34,"Leucine":0.63,"Lysine":0.64,"Methionine":0.21,"Cystine":0.09,"Phenylalanine":0.32,"Tyrosine":0.27,"Valine":0.36,"Arginine":0.51,"Histidine":0.24,"Alanine":0.43,"AsparticAcid":0.73,"GlutamicAcid":1.49,"Glycine":0.34,"Proline":0.39,"Serine":0.32,"omega3":0.01,"omega6":0.14,"AddedSugars":0.0,"IntrinsicSugars":1.11},"addedSugars":0.0,"intrinsicSugars":4.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.9,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Pie Crust Single (Unbaked)","grams":46.6},{"ndb":"13293","name":"Beef, chuck, under blade pot roast or steak, boneless, separable lean only, trimmed to 0\" fat, all grades, raw","grams":113.4},{"ndb":"1145","name":"Butter, without salt","grams":9.5},{"ndb":"11282","name":"Onions, raw","grams":26.7},{"ndb":"11124","name":"Carrots, raw","grams":30.5},{"ndb":"11143","name":"Celery, raw","grams":20.0},{"ndb":"11354","name":"Potatoes, white, flesh and skin, raw","grams":50.0},{"ndb":"11313","name":"Peas, green, frozen, cooked, boiled, drained, without salt","grams":13.3},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":6.9},{"ndb":"6008","name":"Soup, beef broth or bouillon canned, ready-to-serve","grams":80.0},{"ndb":"2042","name":"Spices, thyme, dried","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":1.0},{"ndb":"2030","name":"Spices, pepper, black","grams":0.2}],"sections":[{"section_key":"crust","section_label":"Crust","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":279.8,"raw_water_grams":54.53,"raw_fat_grams":85.79,"raw_protein_grams":16.45,"raw_carb_grams":119.25,"final_grams":279.8},{"section_key":"filling","section_label":"Filling","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":12,"raw_grams":2110.35,"raw_water_grams":1696.55,"raw_fat_grams":90.3,"raw_protein_grams":167.72,"raw_carb_grams":130.29,"final_grams":1940.7}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Beef Pot Pie', quantity: 'custom (g)', foodWord: 'BEEFPOTPIE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Pie Crust Single (Unbaked)', quantity: '1 recipe Pie Crust Single (Unbaked)', section: 'crust', foodWord: 'PIECRUSTRAW', ndbNo: '18402', portionDesc: 'g', portionGrams: 279.8, isDish: true, componentRef: 'CRUST_003' },
+      { name: 'beef chuck roast', quantity: '1-1/2 lb', section: 'filling', ndbNo: '13293', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'unsalted butter', quantity: '4 tbsp', section: 'filling', ndbNo: '1145', portionDesc: 'g', portionGrams: 56.8 },
+      { name: 'onion', quantity: '1 large onion', section: 'filling', ndbNo: '11282', portionDesc: 'g', portionGrams: 160.0 },
+      { name: 'carrot', quantity: '3 medium carrots', section: 'filling', ndbNo: '11124', portionDesc: 'g', portionGrams: 183.0 },
+      { name: 'celery stalk', quantity: '3 stalks celery', section: 'filling', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'white potatoes (raw)', quantity: '2 medium potatoes', section: 'filling', ndbNo: '11354', portionDesc: 'g', portionGrams: 300.0 },
+      { name: 'frozen peas', quantity: '1 cup frozen peas', section: 'filling', ndbNo: '11313', portionDesc: 'g', portionGrams: 80.0 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '1/3 cup flour', section: 'filling', ndbNo: '20581', portionDesc: 'g', portionGrams: 41.6 },
+      { name: 'beef broth', quantity: '2 cups beef broth', section: 'filling', ndbNo: '6008', portionDesc: 'g', portionGrams: 480.0 },
+      { name: 'dried thyme', quantity: '1 tsp dried thyme', section: 'filling', ndbNo: '2042', portionDesc: 'g', portionGrams: 1.4 },
+      { name: 'salt', quantity: '1 tsp salt', section: 'filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/2 tsp black pepper', section: 'filling', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
+    ],
+    recipeInstructions: [
+      'Make or prepare the Pie Crust Single (Unbaked) (see the Pie Crust Single (Unbaked) recipe). Divide into two equal portions for a top and bottom crust, or use as a top crust only for a 9×13-inch dish. Refrigerate until needed.',
+      'Preheat the oven to 400°F. Cut the beef chuck roast into 3/4-inch cubes. Season with salt and pepper.',
+      'Melt the butter in a large Dutch oven or oven-safe pot over medium-high heat. Add the beef in batches and brown on all sides, about 3 to 4 minutes per batch. Remove and set aside.',
+      'In the same pot, sauté the onion, carrot, and celery over medium heat for 5 minutes until softened. Add the flour and stir for 1 minute.',
+      'Gradually whisk in the beef broth, scraping up any browned bits. Add the potatoes, peas, thyme, salt, and pepper. Return the beef to the pot. Bring to a simmer and cook for 15 minutes until slightly thickened.',
+      'Transfer the filling to a greased 9×13-inch baking dish. Lay the rolled-out pie crust over the top, pressing the edges against the dish. Cut a few slits in the crust to vent steam.',
+      'Bake for 30 to 35 minutes until the crust is golden brown and the filling is bubbling. Let rest 10 minutes before serving.'
+    ],
+    sections: [
+      { key: 'crust', label: 'Crust', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];
