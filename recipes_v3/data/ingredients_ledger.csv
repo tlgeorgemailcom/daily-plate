@@ -302,3 +302,5 @@ curry_powder,2015,CURRY,"Spices, curry powder",curry powder,tsp,2.0,
 olives_green_canned,9195,OLIVEGREEN,"Olives, pickled, canned or bottled, green",green olives,olive,2.7,
 brandy,14037,TEQUILA,"Alcoholic beverage, distilled, all (gin, rum, vodka, whiskey) 80 proof",brandy (cognac proxy),fl oz,27.8,SR Legacy proxy for brandy/cognac; same Atwater energy
 corn_tortilla,18363,TORTILLACORN,"Tortillas, ready-to-bake or -fry, corn",corn tortilla,each,24.0,
+caraway_seed,2005,CARAWAY,"Spices, caraway seed",caraway seed,tsp,2.1,
+marjoram_dried,2023,MARJORAM,"Spices, marjoram, dried",dried marjoram,tsp,0.6,

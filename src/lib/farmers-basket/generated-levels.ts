@@ -11608,14 +11608,14 @@ export const LEVELS: Level[] = [
     nutritionJson: {"cal":677.0,"pro":38.9,"fat":34.6,"carb":58.2,"fib":13.8,"h2o":274.6,"sug":5.3,"perServing":{"cal":677.0,"pro":38.9,"fat":34.6,"carb":58.2,"fib":13.8,"h2o":274.6,"sug":5.3,"AddedSugars":0.0,"IntrinsicSugars":5.3},"micros":{"vitaminA":104.63,"vitaminC":1.63,"vitaminD":2.82,"vitaminE":0.43,"vitaminK":2.93,"vitaminB6":0.29,"vitaminB12":0.61,"thiamin":0.04,"riboflavin":0.23,"niacin":1.56,"folate":11.25,"calcium":103.37,"iron":1.77,"magnesium":31.09,"phosphorus":166.66,"potassium":301.2,"sodium":275.3,"zinc":1.85,"copper":0.09,"selenium":7.24,"cholesterol":29.15,"saturatedFat":4.07,"monoFat":3.99,"polyFat":0.65,"omega3":0.01,"omega6":0.0},"gramsPerServing":414.5,"servings":4,"per100g":{"Energy_KCal":163.34,"Water":66.24,"Protein":9.37,"TotalLipidFat":8.36,"Carbohydrate":14.05,"FiberTotalDietary":3.32,"SugarsTotal":1.28,"Cholesterol":29.15,"FattyAcids_totalSaturated":4.07,"FattyAcids_totalMonounsaturated":3.99,"FattyAcids_totalPolyunsaturated":0.65,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":104.63,"Retinol":15.65,"Carotene_beta":110.32,"VitaminD":2.82,"VitaminE_alphaTocopherol":0.43,"VitaminK_phylloquinone":2.93,"VitaminC_totalAscorbicAcid":1.63,"Thiamin":0.04,"Riboflavin":0.23,"Niacin":1.56,"PantothenicAcid":0.26,"VitaminB6":0.29,"Folate_total":11.25,"Folate_food":11.25,"Folate_DFE":11.25,"FolicAcid":0.0,"VitaminB12":0.61,"Choline_total":19.5,"Betaine":2.39,"LuteinZeaxanthin":13.99,"Lycopene":251.48,"Calcium_Ca":103.37,"Iron_Fe":1.77,"Magnesium_Mg":31.09,"Phosphorus_P":166.66,"Potassium_K":301.2,"Sodium_Na":275.3,"Zinc_Zn":1.85,"Copper_Cu":0.09,"Manganese_Mn":0.22,"Selenium_Se":7.24,"Tryptophan":0.07,"Threonine":0.33,"Isoleucine":0.4,"Leucine":0.75,"Lysine":0.62,"Methionine":0.21,"Cystine":0.08,"Phenylalanine":0.38,"Tyrosine":0.31,"Valine":0.47,"Arginine":0.48,"Histidine":0.27,"Alanine":0.46,"AsparticAcid":0.76,"GlutamicAcid":1.61,"Glycine":0.43,"Proline":0.62,"Serine":0.38,"omega3":0.01,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":1.28},"addedSugars":0.0,"intrinsicSugars":5.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.8,"yieldFactorFat":0.593,"sources":[{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":113.5},{"ndb":"11282","name":"Onions, raw","grams":37.5},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"2009","name":"Spices, chili powder","grams":2.0},{"ndb":"2014","name":"Spices, cumin seed","grams":1.0},{"ndb":"2047","name":"Salt, table","grams":1.1},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"","name":"Red Enchilada Sauce","grams":176.7},{"ndb":"18363","name":"Tortillas, ready-to-bake or -fry, corn","grams":72.0},{"ndb":"1251","name":"Cheese, Mexican blend","grams":42.4}],"sections":[{"section_key":"filling","section_label":"Filling","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.8,"yield_factor_fat":0.593,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":630.18,"raw_water_grams":421.1,"raw_fat_grams":93.06,"raw_protein_grams":82.04,"raw_carb_grams":23.15,"final_grams":508.08},{"section_key":"sauce","section_label":"Red Enchilada Sauce","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":706.7,"raw_water_grams":571.44,"raw_fat_grams":26.85,"raw_protein_grams":17.03,"raw_carb_grams":78.23,"final_grams":706.7},{"section_key":"assembly","section_label":"Assembly","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.93,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":457.5,"raw_water_grams":204.17,"raw_fat_grams":56.53,"raw_protein_grams":56.32,"raw_carb_grams":131.53,"final_grams":443.21}],"cookingMethod":"multi"},
     recipeIngredients: [
       { name: 'Beef Enchiladas', quantity: 'custom (g)', foodWord: 'BEEFENCHILADA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
-      { name: 'ground beef (80% lean)', quantity: '1 lb ground beef (80/20)', section: 'filling', ndbNo: '23572', portionDesc: 'g', portionGrams: 454.0 },
+      { name: 'ground beef (80/20)', quantity: '1 lb ground beef (80/20)', section: 'filling', ndbNo: '23572', portionDesc: 'g', portionGrams: 454.0 },
       { name: 'onion', quantity: '1 medium onion, diced', section: 'filling', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
       { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'filling', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'chili powder', quantity: '3 tsp chili powder', section: 'filling', ndbNo: '2009', portionDesc: 'g', portionGrams: 8.1 },
       { name: 'ground cumin', quantity: '2 tsp ground cumin', section: 'filling', ndbNo: '2014', portionDesc: 'g', portionGrams: 4.0 },
       { name: 'salt', quantity: '3/4 tsp salt', section: 'filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'ground black pepper', quantity: '1/4 tsp black pepper', section: 'filling', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
-      { name: 'Red Enchilada Sauce', quantity: '1 batch Red Enchilada Sauce (recipe)', section: 'sauce', foodWord: 'ENCHILADASAUCE', portionDesc: 'g', portionGrams: 706.7, isDish: true, componentRef: 'SAUCE_025' },
+      { name: 'Red Enchilada Sauce', quantity: '1 batch Red Enchilada Sauce (~3 cups) (recipe)', section: 'sauce', foodWord: 'ENCHILADASAUCE', portionDesc: 'g', portionGrams: 706.7, isDish: true, componentRef: 'SAUCE_025' },
       { name: 'corn tortilla', quantity: '12 corn tortillas (6-inch)', section: 'assembly', ndbNo: '18363', portionDesc: 'g', portionGrams: 288.0 },
       { name: 'Mexican blend cheese', quantity: '1 1/2 cups shredded Mexican blend cheese', section: 'assembly', ndbNo: '1251', portionDesc: 'g', portionGrams: 169.5 }
     ],
@@ -11633,6 +11633,57 @@ export const LEVELS: Level[] = [
       { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.8, yieldFactorFat: 0.593 },
       { key: 'sauce', label: 'Red Enchilada Sauce', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 0.93 }
+    ],
+  },
+  {
+    id: 'ENTR_017',
+    name: 'Beef Goulash',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 251,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cup (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":479.2,"pro":52.4,"fat":24.1,"carb":16.6,"fib":4.6,"h2o":322.2,"sug":6.5,"perServing":{"cal":479.2,"pro":52.4,"fat":24.1,"carb":16.6,"fib":4.6,"h2o":322.2,"sug":6.5,"AddedSugars":0.0,"IntrinsicSugars":6.5},"micros":{"vitaminA":34.81,"vitaminC":4.66,"vitaminD":2.15,"vitaminE":0.81,"vitaminK":3.98,"vitaminB6":0.19,"vitaminB12":1.44,"thiamin":0.04,"riboflavin":0.12,"niacin":1.84,"folate":5.0,"calcium":19.65,"iron":1.44,"magnesium":15.55,"phosphorus":110.0,"potassium":256.95,"sodium":307.47,"zinc":3.67,"copper":0.06,"selenium":13.81,"cholesterol":37.09,"saturatedFat":1.97,"monoFat":3.06,"polyFat":0.4,"omega3":0.01,"omega6":0.13},"gramsPerServing":422.7,"servings":4,"per100g":{"Energy_KCal":113.36,"Water":76.24,"Protein":12.38,"TotalLipidFat":5.71,"Carbohydrate":3.94,"FiberTotalDietary":1.09,"SugarsTotal":1.54,"Cholesterol":37.09,"FattyAcids_totalSaturated":1.97,"FattyAcids_totalMonounsaturated":3.06,"FattyAcids_totalPolyunsaturated":0.4,"LinoleicAcid":0.13,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":34.81,"Retinol":4.06,"Carotene_beta":330.59,"VitaminD":2.15,"VitaminE_alphaTocopherol":0.81,"VitaminK_phylloquinone":3.98,"VitaminC_totalAscorbicAcid":4.66,"Thiamin":0.04,"Riboflavin":0.12,"Niacin":1.84,"PantothenicAcid":0.34,"VitaminB6":0.19,"Folate_total":5.0,"Folate_food":5.0,"Folate_DFE":5.0,"FolicAcid":0.0,"VitaminB12":1.44,"Choline_total":36.77,"Betaine":9.49,"LuteinZeaxanthin":198.35,"Lycopene":735.0,"Calcium_Ca":19.65,"Iron_Fe":1.44,"Magnesium_Mg":15.55,"Phosphorus_P":110.0,"Potassium_K":256.95,"Sodium_Na":307.47,"Zinc_Zn":3.67,"Copper_Cu":0.06,"Manganese_Mn":0.09,"Selenium_Se":13.81,"Tryptophan":0.14,"Threonine":0.53,"Isoleucine":0.51,"Leucine":0.97,"Lysine":1.05,"Methionine":0.33,"Cystine":0.12,"Phenylalanine":0.47,"Tyrosine":0.41,"Valine":0.55,"Arginine":0.8,"Histidine":0.38,"Alanine":0.68,"AsparticAcid":1.14,"GlutamicAcid":2.02,"Glycine":0.53,"Proline":0.51,"Serine":0.47,"omega3":0.01,"omega6":0.13,"AddedSugars":0.0,"IntrinsicSugars":1.54},"addedSugars":0.0,"intrinsicSugars":6.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.8,"yieldFactorFat":1.0,"sources":[{"ndb":"13293","name":"Beef, chuck, under blade pot roast or steak, boneless, separable lean only, trimmed to 0\" fat, all grades, raw","grams":226.8},{"ndb":"11282","name":"Onions, raw","grams":75.0},{"ndb":"11333","name":"Peppers, sweet, green, raw","grams":37.2},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"2028","name":"Spices, paprika","grams":5.2},{"ndb":"2005","name":"Spices, caraway seed","grams":0.5},{"ndb":"2023","name":"Spices, marjoram, dried","grams":0.1},{"ndb":"11546","name":"Tomato products, canned, paste, without salt added","grams":12.0},{"ndb":"6008","name":"Soup, beef broth or bouillon canned, ready-to-serve","grams":122.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"2047","name":"Salt, table","grams":2.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"1056","name":"Cream, sour, cultured","grams":12.0}],"sections":[{"section_key":"goulash","section_label":"Goulash","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.8,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":13,"raw_grams":2012.95,"raw_water_grams":1611.23,"raw_fat_grams":96.52,"raw_protein_grams":209.38,"raw_carb_grams":66.53,"final_grams":1690.7}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Beef Goulash', quantity: 'custom (g)', foodWord: 'GOULASH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'beef chuck roast', quantity: '2 lbs beef chuck roast, cubed', section: 'goulash', ndbNo: '13293', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'onion', quantity: '2 large onions, sliced', section: 'goulash', ndbNo: '11282', portionDesc: 'g', portionGrams: 300.0 },
+      { name: 'green bell pepper', quantity: '1 large green bell pepper, diced', section: 'goulash', ndbNo: '11333', portionDesc: 'g', portionGrams: 149.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'goulash', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'paprika', quantity: '3 tbsp paprika', section: 'goulash', ndbNo: '2028', portionDesc: 'g', portionGrams: 20.7 },
+      { name: 'caraway seed', quantity: '1 tsp caraway seeds', section: 'goulash', ndbNo: '2005', portionDesc: 'g', portionGrams: 2.1 },
+      { name: 'dried marjoram', quantity: '1 tsp dried marjoram', section: 'goulash', ndbNo: '2023', portionDesc: 'g', portionGrams: 0.6 },
+      { name: 'tomato paste', quantity: '3 tbsp tomato paste', section: 'goulash', ndbNo: '11546', portionDesc: 'g', portionGrams: 48.0 },
+      { name: 'beef broth', quantity: '2 cups beef broth', section: 'goulash', ndbNo: '6008', portionDesc: 'g', portionGrams: 488.0 },
+      { name: 'olive oil', quantity: '2 tbsp olive oil', section: 'goulash', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'salt', quantity: '1 1/2 tsp salt', section: 'goulash', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'ground black pepper', quantity: '1/2 tsp black pepper', section: 'goulash', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'sour cream', quantity: '4 tbsp sour cream (for serving)', section: 'goulash', ndbNo: '1056', portionDesc: 'g', portionGrams: 48.0 }
+    ],
+    recipeInstructions: [
+      'Pat the beef chuck cubes dry with paper towels. Season generously with salt and pepper.',
+      'Heat the olive oil in a large Dutch oven or heavy pot over medium-high heat. Working in batches, sear the beef on all sides until deeply browned, about 3 to 4 minutes per side. Remove to a plate and set aside.',
+      'Reduce heat to medium. Add the sliced onions to the same pot and cook, stirring occasionally, for 8 to 10 minutes until softened and lightly golden. Add the bell pepper and garlic and cook 2 more minutes.',
+      'Add the paprika, caraway seeds, and marjoram. Stir to coat the vegetables and cook 1 minute until fragrant.',
+      'Stir in the tomato paste and cook 1 to 2 minutes. Return the seared beef and any accumulated juices to the pot.',
+      'Pour in the beef broth. Stir to combine, scraping up any browned bits from the bottom. Bring to a boil, then reduce heat to low.',
+      'Cover and simmer for 1 hour 45 minutes to 2 hours, stirring occasionally, until the beef is very tender and the sauce has thickened. Add a splash of water or broth if it gets too thick during cooking.',
+      'Taste and adjust seasoning. Ladle into bowls and top each serving with a tablespoon of sour cream. Serve with egg noodles, bread dumplings, or crusty bread.'
+    ],
+    sections: [
+      { key: 'goulash', label: 'Goulash', cookingMethod: '', yieldFactorWater: 0.8 }
     ],
   }
 ];
