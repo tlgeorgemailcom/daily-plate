@@ -12152,5 +12152,58 @@ export const LEVELS: Level[] = [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.85, yieldFactorFat: 0.593 }
     ],
+  },
+  {
+    id: 'ENTR_027',
+    name: 'Beef Meatloaf',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 261,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 slice (serves 8)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":374.0,"pro":23.0,"fat":24.8,"carb":13.7,"fib":0.9,"h2o":103.2,"sug":6.2,"perServing":{"cal":374.0,"pro":23.0,"fat":24.8,"carb":13.7,"fib":0.9,"h2o":103.2,"sug":6.2,"AddedSugars":1.1,"IntrinsicSugars":5.1},"micros":{"vitaminA":21.77,"vitaminC":1.72,"vitaminD":12.15,"vitaminE":0.28,"vitaminK":19.32,"vitaminB6":0.21,"vitaminB12":1.41,"thiamin":0.06,"riboflavin":0.18,"niacin":2.8,"folate":14.43,"calcium":44.16,"iron":1.89,"magnesium":18.74,"phosphorus":145.67,"potassium":279.11,"sodium":347.4,"zinc":3.09,"copper":0.08,"selenium":14.1,"cholesterol":76.7,"saturatedFat":5.59,"monoFat":6.06,"polyFat":0.48,"omega3":0.03,"omega6":0.1},"gramsPerServing":167.6,"servings":8,"per100g":{"Energy_KCal":223.16,"Water":61.57,"Protein":13.73,"TotalLipidFat":14.79,"Carbohydrate":8.19,"FiberTotalDietary":0.53,"SugarsTotal":3.7,"Cholesterol":76.7,"FattyAcids_totalSaturated":5.59,"FattyAcids_totalMonounsaturated":6.06,"FattyAcids_totalPolyunsaturated":0.48,"LinoleicAcid":0.1,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":21.77,"Retinol":15.94,"Carotene_beta":65.82,"VitaminD":12.15,"VitaminE_alphaTocopherol":0.28,"VitaminK_phylloquinone":19.32,"VitaminC_totalAscorbicAcid":1.72,"Thiamin":0.06,"Riboflavin":0.18,"Niacin":2.8,"PantothenicAcid":0.45,"VitaminB6":0.21,"Folate_total":14.43,"Folate_food":11.79,"Folate_DFE":16.27,"FolicAcid":3.3,"VitaminB12":1.41,"Choline_total":57.81,"Betaine":5.68,"LuteinZeaxanthin":79.57,"Lycopene":780.01,"Calcium_Ca":44.16,"Iron_Fe":1.89,"Magnesium_Mg":18.74,"Phosphorus_P":145.67,"Potassium_K":279.11,"Sodium_Na":347.4,"Zinc_Zn":3.09,"Copper_Cu":0.08,"Manganese_Mn":0.1,"Selenium_Se":14.1,"Tryptophan":0.08,"Threonine":0.52,"Isoleucine":0.6,"Leucine":1.06,"Lysine":1.08,"Methionine":0.34,"Cystine":0.13,"Phenylalanine":0.55,"Tyrosine":0.42,"Valine":0.68,"Arginine":0.87,"Histidine":0.42,"Alanine":0.82,"AsparticAcid":1.23,"GlutamicAcid":2.17,"Glycine":0.85,"Proline":0.72,"Serine":0.58,"omega3":0.03,"omega6":0.1,"AddedSugars":0.65,"IntrinsicSugars":3.04},"addedSugars":1.1,"intrinsicSugars":5.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.82,"yieldFactorFat":1.0,"sources":[{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":113.4},{"ndb":"18079","name":"Bread crumbs, dry, grated, plain","grams":6.8},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":15.2},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":12.5},{"ndb":"11282","name":"Onions, raw","grams":20.0},{"ndb":"11215","name":"Garlic, raw","grams":1.1},{"ndb":"11935","name":"Catsup","grams":4.2},{"ndb":"6971","name":"Sauce, worcestershire","grams":1.9},{"ndb":"2020","name":"Spices, garlic powder","grams":0.4},{"ndb":"2026","name":"Spices, onion powder","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"11297","name":"Parsley, fresh","grams":1.9},{"ndb":"11935","name":"Catsup","grams":8.5},{"ndb":"19334","name":"Sugars, brown","grams":1.1},{"ndb":"6971","name":"Sauce, worcestershire","grams":0.6}],"sections":[{"section_key":"meatloaf","section_label":"Meatloaf","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":13,"raw_grams":1428.85,"raw_water_grams":945.03,"raw_fat_grams":198.22,"raw_protein_grams":183.39,"raw_carb_grams":81.44,"final_grams":1258.74},{"section_key":"glaze","section_label":"Glaze","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":82.0,"raw_water_grams":50.63,"raw_fat_grams":0.07,"raw_protein_grams":0.72,"raw_carb_grams":28.43,"final_grams":82.0}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Beef Meatloaf', quantity: 'custom (g)', foodWord: 'BEEFMEATLOAF', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'ground beef (80/20)', quantity: '2 lbs ground beef (80/20)', section: 'meatloaf', ndbNo: '23572', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'dry bread crumbs', quantity: '1/2 cup dry bread crumbs', section: 'meatloaf', ndbNo: '18079', portionDesc: 'g', portionGrams: 54.0 },
+      { name: 'whole milk', quantity: '1/2 cup whole milk', section: 'meatloaf', ndbNo: '1077', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'large egg', quantity: '2 large eggs', section: 'meatloaf', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'onion', quantity: '1 medium onion, finely diced', section: 'meatloaf', ndbNo: '11282', portionDesc: 'g', portionGrams: 160.0 },
+      { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'meatloaf', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'ketchup', quantity: '2 tbsp ketchup', section: 'meatloaf', ndbNo: '11935', portionDesc: 'g', portionGrams: 34.0 },
+      { name: 'Worcestershire sauce', quantity: '1 tbsp Worcestershire sauce', section: 'meatloaf', ndbNo: '6971', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'garlic powder', quantity: '1 tsp garlic powder', section: 'meatloaf', ndbNo: '2020', portionDesc: 'g', portionGrams: 3.1 },
+      { name: 'onion powder', quantity: '1 tsp onion powder', section: 'meatloaf', ndbNo: '2026', portionDesc: 'g', portionGrams: 2.4 },
+      { name: 'salt', quantity: '1 tsp salt', section: 'meatloaf', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/2 tsp black pepper', section: 'meatloaf', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'fresh parsley', quantity: '1/4 cup fresh parsley, chopped', section: 'meatloaf', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'ketchup', quantity: '1/4 cup ketchup', section: 'glaze', ndbNo: '11935', portionDesc: 'g', portionGrams: 68.0 },
+      { name: 'brown sugar', quantity: '1 tbsp brown sugar', section: 'glaze', ndbNo: '19334', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'Worcestershire sauce', quantity: '1 tsp Worcestershire sauce', section: 'glaze', ndbNo: '6971', portionDesc: 'g', portionGrams: 5.0 }
+    ],
+    recipeInstructions: [
+      'Preheat the oven to 350°F. Lightly grease a 9×5-inch loaf pan or line a rimmed baking sheet with foil.',
+      'Combine the bread crumbs and milk in a large bowl and let soak for 2 minutes. Add the eggs, onion, garlic, ketchup, Worcestershire sauce, garlic powder, onion powder, salt, black pepper, and parsley. Mix well.',
+      'Add the ground beef and mix gently with your hands until just combined — do not overwork. Transfer to the prepared loaf pan and shape into a compact loaf.',
+      'Make the glaze: whisk together the ketchup, brown sugar, and Worcestershire sauce. Spread half the glaze over the top of the meatloaf.',
+      'Bake for 45 minutes. Spread the remaining glaze over the top and bake an additional 15 to 20 minutes until the internal temperature reaches 160°F.',
+      'Remove from the oven and let rest 10 minutes before slicing. Cut into 8 slices and serve.'
+    ],
+    sections: [
+      { key: 'meatloaf', label: 'Meatloaf', cookingMethod: '', yieldFactorWater: 0.82 },
+      { key: 'glaze', label: 'Glaze', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
