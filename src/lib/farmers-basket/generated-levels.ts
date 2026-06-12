@@ -12007,5 +12007,51 @@ export const LEVELS: Level[] = [
       { key: 'noodles', label: 'Noodles', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'stir_fry', label: 'Stir-Fry', cookingMethod: '', yieldFactorWater: 0.95 }
     ],
+  },
+  {
+    id: 'ENTR_024',
+    name: 'Beef London Broil',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 258,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '6 oz steak (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":274.4,"pro":53.5,"fat":6.7,"carb":0.0,"fib":0.4,"h2o":132.4,"sug":0.8,"perServing":{"cal":274.4,"pro":53.5,"fat":6.7,"carb":0.0,"fib":0.4,"h2o":132.4,"sug":0.8,"AddedSugars":0.0,"IntrinsicSugars":0.8},"micros":{"vitaminA":1.83,"vitaminC":1.19,"vitaminD":1.09,"vitaminE":0.2,"vitaminK":1.54,"vitaminB6":0.54,"vitaminB12":1.59,"thiamin":0.06,"riboflavin":0.26,"niacin":6.13,"folate":5.24,"calcium":27.15,"iron":3.13,"magnesium":21.58,"phosphorus":270.61,"potassium":436.9,"sodium":836.0,"zinc":4.34,"copper":0.07,"selenium":25.68,"cholesterol":70.91,"saturatedFat":2.01,"monoFat":5.24,"polyFat":0.76,"omega3":0.01,"omega6":0.12},"gramsPerServing":198.3,"servings":4,"per100g":{"Energy_KCal":138.39,"Water":66.76,"Protein":26.98,"TotalLipidFat":3.36,"Carbohydrate":0.0,"FiberTotalDietary":0.21,"SugarsTotal":0.43,"Cholesterol":70.91,"FattyAcids_totalSaturated":2.01,"FattyAcids_totalMonounsaturated":5.24,"FattyAcids_totalPolyunsaturated":0.76,"LinoleicAcid":0.12,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.0,"VitaminA_RAE":1.83,"Retinol":1.83,"Carotene_beta":0.0,"VitaminD":1.09,"VitaminE_alphaTocopherol":0.2,"VitaminK_phylloquinone":1.54,"VitaminC_totalAscorbicAcid":1.19,"Thiamin":0.06,"Riboflavin":0.26,"Niacin":6.13,"PantothenicAcid":0.36,"VitaminB6":0.54,"Folate_total":5.24,"Folate_food":5.24,"Folate_DFE":5.24,"FolicAcid":0.0,"VitaminB12":1.59,"Choline_total":68.68,"Betaine":15.13,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":27.15,"Iron_Fe":3.13,"Magnesium_Mg":21.58,"Phosphorus_P":270.61,"Potassium_K":436.9,"Sodium_Na":836.0,"Zinc_Zn":4.34,"Copper_Cu":0.07,"Manganese_Mn":0.15,"Selenium_Se":25.68,"Tryptophan":0.33,"Threonine":1.41,"Isoleucine":1.4,"Leucine":2.58,"Lysine":2.87,"Methionine":0.79,"Cystine":0.25,"Phenylalanine":1.2,"Tyrosine":1.12,"Valine":1.49,"Arginine":2.03,"Histidine":1.1,"Alanine":1.79,"AsparticAcid":2.92,"GlutamicAcid":4.95,"Glycine":1.3,"Proline":1.28,"Serine":1.22,"omega3":0.01,"omega6":0.12,"AddedSugars":0.0,"IntrinsicSugars":0.43},"addedSugars":0.0,"intrinsicSugars":0.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.8,"yieldFactorFat":1.0,"sources":[{"ndb":"16123","name":"Soy sauce made from soy and wheat (shoyu)","grams":16.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":10.2},{"ndb":"2068","name":"Vinegar, red wine","grams":7.5},{"ndb":"6971","name":"Sauce, worcestershire","grams":7.5},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"2049","name":"Thyme, fresh","grams":0.2},{"ndb":"2063","name":"Rosemary, fresh","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.6},{"ndb":"23354","name":"Beef, round, top round steak, boneless, separable lean only, trimmed to 0\" fat, all grades, raw","grams":226.8},{"ndb":"2047","name":"Salt, table","grams":1.5}],"sections":[{"section_key":"marinade","section_label":"Marinade","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":0.0,"yield_factor_fat":0.0,"yield_factor_protein":0.0,"yield_factor_carbohydrate":0.0,"yield_factor_other":0.0,"ingredient_count":8,"raw_grams":181.6,"raw_water_grams":106.43,"raw_fat_grams":41.41,"raw_protein_grams":6.32,"raw_carb_grams":15.06,"final_grams":12.37},{"section_key":"steak","section_label":"Steak","prep_method":"raw","cook_method":"grilled","cooking_method":"grilled","cooking_method_normalized":"grilled","yield_factor_water":0.8,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":913.2,"raw_water_grams":661.91,"raw_fat_grams":26.67,"raw_protein_grams":214.01,"raw_carb_grams":0.0,"final_grams":780.82}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Beef London Broil', quantity: 'custom (g)', foodWord: 'BEFLONDONBROIL', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'soy sauce', quantity: '1/4 cup soy sauce', section: 'marinade', ndbNo: '16123', portionDesc: 'g', portionGrams: 64.0 },
+      { name: 'olive oil', quantity: '3 tbsp olive oil', section: 'marinade', ndbNo: '4053', portionDesc: 'g', portionGrams: 40.8 },
+      { name: 'Red wine vinegar', quantity: '2 tbsp red wine vinegar', section: 'marinade', ndbNo: '2068', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'Worcestershire sauce', quantity: '2 tbsp Worcestershire sauce', section: 'marinade', ndbNo: '6971', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'marinade', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'fresh thyme leaves', quantity: '1 tsp fresh thyme leaves', section: 'marinade', ndbNo: '2049', portionDesc: 'g', portionGrams: 0.8 },
+      { name: 'fresh rosemary', quantity: '1 tsp fresh rosemary, minced', section: 'marinade', ndbNo: '2063', portionDesc: 'g', portionGrams: 1.7 },
+      { name: 'ground black pepper', quantity: '1 tsp black pepper', section: 'marinade', ndbNo: '2030', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'beef top round', quantity: '2 lbs beef top round', section: 'steak', ndbNo: '23354', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'salt', quantity: '1 tsp salt', section: 'steak', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 }
+    ],
+    recipeInstructions: [
+      'Whisk together the soy sauce, olive oil, red wine vinegar, Worcestershire sauce, garlic, thyme, rosemary, and black pepper in a shallow dish or zip-top bag. Add the top round steak and turn to coat. Marinate in the refrigerator for at least 4 hours, or overnight for best results.',
+      'Remove the steak from the marinade and pat dry with paper towels. Discard the marinade. Season both sides with salt.',
+      'Heat a grill or broiler to high heat. For a grill: cook the steak 5 to 7 minutes per side for medium-rare (internal temperature 130 to 135°F). For a broiler: broil 4 inches from the heat, 5 to 6 minutes per side.',
+      'Transfer to a cutting board and rest for 10 minutes.',
+      'Slice very thinly against the grain and serve immediately. London broil must always be sliced against the grain to be tender.'
+    ],
+    sections: [
+      { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
+      { key: 'steak', label: 'Steak', cookingMethod: '', yieldFactorWater: 0.8 }
+    ],
   }
 ];
