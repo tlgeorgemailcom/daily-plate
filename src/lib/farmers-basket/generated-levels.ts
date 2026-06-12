@@ -12205,5 +12205,57 @@ export const LEVELS: Level[] = [
       { key: 'meatloaf', label: 'Meatloaf', cookingMethod: '', yieldFactorWater: 0.82 },
       { key: 'glaze', label: 'Glaze', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'ENTR_028',
+    name: 'Beef Mongolian Beef',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 262,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving over rice (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":612.4,"pro":36.9,"fat":18.8,"carb":72.1,"fib":1.9,"h2o":227.0,"sug":16.3,"perServing":{"cal":612.4,"pro":36.9,"fat":18.8,"carb":72.1,"fib":1.9,"h2o":227.0,"sug":16.3,"AddedSugars":13.3,"IntrinsicSugars":2.9},"micros":{"vitaminA":3.52,"vitaminC":0.74,"vitaminD":0.0,"vitaminE":0.22,"vitaminK":14.68,"vitaminB6":0.2,"vitaminB12":0.36,"thiamin":0.08,"riboflavin":0.06,"niacin":2.66,"folate":31.68,"calcium":23.89,"iron":1.36,"magnesium":17.36,"phosphorus":105.55,"potassium":188.87,"sodium":264.07,"zinc":1.77,"copper":0.07,"selenium":12.96,"cholesterol":24.5,"saturatedFat":2.53,"monoFat":1.42,"polyFat":0.49,"omega3":0.0,"omega6":0.0},"gramsPerServing":359.7,"servings":4,"per100g":{"Energy_KCal":170.24,"Water":63.11,"Protein":10.25,"TotalLipidFat":5.22,"Carbohydrate":20.05,"FiberTotalDietary":0.53,"SugarsTotal":4.53,"Cholesterol":24.5,"FattyAcids_totalSaturated":2.53,"FattyAcids_totalMonounsaturated":1.42,"FattyAcids_totalPolyunsaturated":0.49,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":3.52,"Retinol":0.0,"Carotene_beta":41.6,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.22,"VitaminK_phylloquinone":14.68,"VitaminC_totalAscorbicAcid":0.74,"Thiamin":0.08,"Riboflavin":0.06,"Niacin":2.66,"PantothenicAcid":0.33,"VitaminB6":0.2,"Folate_total":31.68,"Folate_food":8.38,"Folate_DFE":47.97,"FolicAcid":35.84,"VitaminB12":0.36,"Choline_total":34.2,"Betaine":6.57,"LuteinZeaxanthin":62.12,"Lycopene":0.0,"Calcium_Ca":23.89,"Iron_Fe":1.36,"Magnesium_Mg":17.36,"Phosphorus_P":105.55,"Potassium_K":188.87,"Sodium_Na":264.07,"Zinc_Zn":1.77,"Copper_Cu":0.07,"Manganese_Mn":0.24,"Selenium_Se":12.96,"Tryptophan":0.07,"Threonine":0.4,"Isoleucine":0.45,"Leucine":0.8,"Lysine":0.78,"Methionine":0.25,"Cystine":0.12,"Phenylalanine":0.42,"Tyrosine":0.32,"Valine":0.51,"Arginine":0.67,"Histidine":0.3,"Alanine":0.6,"AsparticAcid":0.93,"GlutamicAcid":1.59,"Glycine":0.59,"Proline":0.49,"Serine":0.42,"omega3":0.0,"omega6":0.0,"AddedSugars":3.71,"IntrinsicSugars":0.82},"addedSugars":13.3,"intrinsicSugars":2.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.82,"yieldFactorFat":1.0,"sources":[{"ndb":"23656","name":"Beef, flank, steak, separable lean only, trimmed to 0\" fat, all grades, raw","grams":141.8},{"ndb":"20027","name":"Cornstarch","grams":6.0},{"ndb":"4513","name":"Vegetable oil, palm kernel","grams":6.8},{"ndb":"16123","name":"Soy sauce made from soy and wheat (shoyu)","grams":16.0},{"ndb":"19334","name":"Sugars, brown","grams":13.8},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"11216","name":"Ginger root, raw","grams":1.5},{"ndb":"6175","name":"Sauce, hoisin, ready-to-serve","grams":8.0},{"ndb":"4058","name":"Oil, sesame, salad or cooking","grams":3.4},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":25.0},{"ndb":"20044","name":"Rice, white, long-grain, regular, raw, enriched","grams":57.8},{"ndb":"14411","name":"Water, tap, drinking","grams":147.9}],"sections":[{"section_key":"beef","section_label":"Beef","prep_method":"raw","cook_method":"fried","cooking_method":"fried","cooking_method_normalized":"fried","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":618.2,"raw_water_grams":410.69,"raw_fat_grams":58.23,"raw_protein_grams":122.36,"raw_carb_grams":21.9,"final_grams":544.28},{"section_key":"sauce","section_label":"Sauce","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.8,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":276.9,"raw_water_grams":158.53,"raw_fat_grams":15.37,"raw_protein_grams":8.69,"raw_carb_grams":81.77,"final_grams":245.19},{"section_key":"rice","section_label":"Rice","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.7194989567312655,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":822.75,"raw_water_grams":617.78,"raw_fat_grams":1.53,"raw_protein_grams":16.49,"raw_carb_grams":184.88,"final_grams":649.46}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Beef Mongolian Beef', quantity: 'custom (g)', foodWord: 'BEEFMONGOLIAN', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'flank steak', quantity: '1-1/4 lb', section: 'beef', ndbNo: '23656', portionDesc: 'g', portionGrams: 567.0 },
+      { name: 'cornstarch', quantity: '3 tbsp cornstarch', section: 'beef', ndbNo: '20027', portionDesc: 'g', portionGrams: 24.0 },
+      { name: 'vegetable oil', quantity: '2 tbsp', section: 'beef', ndbNo: '4513', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'soy sauce', quantity: '4 tbsp soy sauce', section: 'sauce', ndbNo: '16123', portionDesc: 'g', portionGrams: 64.0 },
+      { name: 'brown sugar', quantity: '1/4 cup packed', section: 'sauce', ndbNo: '19334', portionDesc: 'g', portionGrams: 55.0 },
+      { name: 'garlic', quantity: '2 cloves', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'fresh ginger', quantity: '1 tbsp grated', section: 'sauce', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'hoisin sauce', quantity: '2 tbsp hoisin sauce', section: 'sauce', ndbNo: '6175', portionDesc: 'g', portionGrams: 32.0 },
+      { name: 'Sesame oil', quantity: '1 tbsp', section: 'sauce', ndbNo: '4058', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'red pepper flakes', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'scallion (green onion)', quantity: '4 large scallions', section: 'sauce', ndbNo: '11291', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'white rice (dry)', quantity: '1-1/4 cups', section: 'rice', ndbNo: '20044', portionDesc: 'g', portionGrams: 231.25 },
+      { name: 'water', quantity: '2-1/2 cups', section: 'rice', ndbNo: '14411', portionDesc: 'g', portionGrams: 591.5 }
+    ],
+    recipeInstructions: [
+      'Slice the flank steak across the grain into 1/4-inch strips. Toss with cornstarch and let sit for 10 minutes.',
+      'In a bowl, whisk together the soy sauce, brown sugar, garlic, ginger, hoisin sauce, and red pepper flakes. Set aside.',
+      'Cook the rice: combine the rice and water in a medium saucepan. Bring to a boil, then reduce heat to low, cover, and simmer for 18 minutes. Remove from heat and let steam, covered, for 5 minutes.',
+      'Heat the vegetable oil in a wok or large skillet over high heat. Add the beef in a single layer and cook without stirring for 1 to 2 minutes until browned. Flip and cook 1 minute more. Remove beef and set aside.',
+      'Pour the sauce into the same wok and bring to a simmer over medium-high heat, stirring, for 2 to 3 minutes until slightly thickened.',
+      'Return the beef to the wok and toss to coat in the sauce. Add the scallions and drizzle with sesame oil. Stir-fry 1 minute.',
+      'Serve the Mongolian beef over the steamed white rice.'
+    ],
+    sections: [
+      { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.82 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.8 },
+      { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
