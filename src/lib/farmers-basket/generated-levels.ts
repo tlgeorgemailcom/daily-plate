@@ -11738,5 +11738,59 @@ export const LEVELS: Level[] = [
       { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
       { key: 'fajitas', label: 'Fajitas', cookingMethod: '', yieldFactorWater: 0.8 }
     ],
+  },
+  {
+    id: 'ENTR_019',
+    name: 'Beef Hamburger Steak',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 253,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 steak with gravy (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":454.2,"pro":35.5,"fat":27.2,"carb":18.2,"fib":1.9,"h2o":257.4,"sug":4.4,"perServing":{"cal":454.2,"pro":35.5,"fat":27.2,"carb":18.2,"fib":1.9,"h2o":257.4,"sug":4.4,"AddedSugars":0.0,"IntrinsicSugars":4.4},"micros":{"vitaminA":19.05,"vitaminC":0.77,"vitaminD":4.73,"vitaminE":0.15,"vitaminK":1.28,"vitaminB6":0.16,"vitaminB12":0.97,"thiamin":0.05,"riboflavin":0.17,"niacin":2.39,"folate":11.96,"calcium":25.95,"iron":1.41,"magnesium":13.54,"phosphorus":116.73,"potassium":253.8,"sodium":356.4,"zinc":2.35,"copper":0.12,"selenium":13.88,"cholesterol":53.05,"saturatedFat":4.97,"monoFat":5.03,"polyFat":0.34,"omega3":0.02,"omega6":0.08},"gramsPerServing":344.1,"servings":4,"per100g":{"Energy_KCal":132.0,"Water":74.79,"Protein":10.31,"TotalLipidFat":7.91,"Carbohydrate":5.3,"FiberTotalDietary":0.54,"SugarsTotal":1.28,"Cholesterol":53.05,"FattyAcids_totalSaturated":4.97,"FattyAcids_totalMonounsaturated":5.03,"FattyAcids_totalPolyunsaturated":0.34,"LinoleicAcid":0.08,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":19.05,"Retinol":18.71,"Carotene_beta":4.11,"VitaminD":4.73,"VitaminE_alphaTocopherol":0.15,"VitaminK_phylloquinone":1.28,"VitaminC_totalAscorbicAcid":0.77,"Thiamin":0.05,"Riboflavin":0.17,"Niacin":2.39,"PantothenicAcid":0.45,"VitaminB6":0.16,"Folate_total":11.96,"Folate_food":9.62,"Folate_DFE":13.6,"FolicAcid":3.35,"VitaminB12":0.97,"Choline_total":40.14,"Betaine":5.93,"LuteinZeaxanthin":14.03,"Lycopene":0.01,"Calcium_Ca":25.95,"Iron_Fe":1.41,"Magnesium_Mg":13.54,"Phosphorus_P":116.73,"Potassium_K":253.8,"Sodium_Na":356.4,"Zinc_Zn":2.35,"Copper_Cu":0.12,"Manganese_Mn":0.09,"Selenium_Se":13.88,"Tryptophan":0.06,"Threonine":0.38,"Isoleucine":0.43,"Leucine":0.76,"Lysine":0.8,"Methionine":0.25,"Cystine":0.09,"Phenylalanine":0.4,"Tyrosine":0.3,"Valine":0.49,"Arginine":0.64,"Histidine":0.3,"Alanine":0.6,"AsparticAcid":0.89,"GlutamicAcid":1.58,"Glycine":0.63,"Proline":0.53,"Serine":0.41,"omega3":0.02,"omega6":0.08,"AddedSugars":0.0,"IntrinsicSugars":1.28},"addedSugars":0.0,"intrinsicSugars":4.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.75,"yieldFactorFat":0.593,"sources":[{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":170.1},{"ndb":"18079","name":"Bread crumbs, dry, grated, plain","grams":6.8},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":12.5},{"ndb":"6971","name":"Sauce, worcestershire","grams":3.8},{"ndb":"2020","name":"Spices, garlic powder","grams":0.8},{"ndb":"2026","name":"Spices, onion powder","grams":0.6},{"ndb":"2047","name":"Salt, table","grams":1.1},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"1145","name":"Butter, without salt","grams":7.1},{"ndb":"11282","name":"Onions, raw","grams":50.0},{"ndb":"11266","name":"Mushrooms, brown, italian, or crimini, raw","grams":56.8},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":3.9},{"ndb":"6008","name":"Soup, beef broth or bouillon canned, ready-to-serve","grams":91.5},{"ndb":"6971","name":"Sauce, worcestershire","grams":3.8},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"patties","section_label":"Patties","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":0.593,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":782.98,"raw_water_grams":472.99,"raw_fat_grams":142.33,"raw_protein_grams":127.53,"raw_carb_grams":27.23,"final_grams":606.8},{"section_key":"gravy","section_label":"Onion Gravy","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":861.58,"raw_water_grams":766.69,"raw_fat_grams":24.47,"raw_protein_grams":14.34,"raw_carb_grams":45.78,"final_grams":769.57}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Beef Hamburger Steak', quantity: 'custom (g)', foodWord: 'HAMBURGERSTEAK', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'ground beef (80/20)', quantity: '1 1/2 lbs ground beef (80/20)', section: 'patties', ndbNo: '23572', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'dry bread crumbs', quantity: '1/4 cup dry bread crumbs', section: 'patties', ndbNo: '18079', portionDesc: 'g', portionGrams: 27.0 },
+      { name: 'large egg', quantity: '1 large egg', section: 'patties', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'Worcestershire sauce', quantity: '1 tbsp Worcestershire sauce', section: 'patties', ndbNo: '6971', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'garlic powder', quantity: '1 tsp garlic powder', section: 'patties', ndbNo: '2020', portionDesc: 'g', portionGrams: 3.1 },
+      { name: 'onion powder', quantity: '1 tsp onion powder', section: 'patties', ndbNo: '2026', portionDesc: 'g', portionGrams: 2.4 },
+      { name: 'salt', quantity: '3/4 tsp salt', section: 'patties', ndbNo: '2047', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'ground black pepper', quantity: '1/4 tsp black pepper', section: 'patties', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'unsalted butter', quantity: '2 tbsp unsalted butter', section: 'gravy', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
+      { name: 'onion', quantity: '2 medium onions, sliced', section: 'gravy', ndbNo: '11282', portionDesc: 'g', portionGrams: 200.0 },
+      { name: 'crimini mushrooms', quantity: '8 oz crimini mushrooms, sliced', section: 'gravy', ndbNo: '11266', portionDesc: 'g', portionGrams: 227.0 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'gravy', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '2 tbsp all-purpose flour', section: 'gravy', ndbNo: '20581', portionDesc: 'g', portionGrams: 15.6 },
+      { name: 'beef broth', quantity: '1 1/2 cups beef broth', section: 'gravy', ndbNo: '6008', portionDesc: 'g', portionGrams: 366.0 },
+      { name: 'Worcestershire sauce', quantity: '1 tbsp Worcestershire sauce', section: 'gravy', ndbNo: '6971', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'salt', quantity: '1/2 tsp salt', section: 'gravy', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp black pepper', section: 'gravy', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Combine the ground beef, bread crumbs, egg, Worcestershire sauce, garlic powder, onion powder, salt, and pepper in a bowl. Mix gently until just combined — do not overwork. Shape into 4 oval patties about 3/4 inch thick.',
+      'Heat a large skillet over medium-high heat. Cook the patties 4 to 5 minutes per side until browned and cooked through. Remove to a plate and tent with foil. Drain all but 1 tablespoon of fat from the pan.',
+      'Reduce heat to medium. Add the butter to the skillet. Add the onions and cook 8 to 10 minutes, stirring occasionally, until softened and golden. Add the mushrooms and garlic, cook 4 to 5 more minutes until the mushrooms are browned.',
+      'Sprinkle the flour over the vegetables and stir to coat. Cook 1 minute.',
+      'Gradually pour in the beef broth, stirring constantly to prevent lumps. Add the Worcestershire sauce, salt, and pepper. Bring to a simmer and cook 4 to 5 minutes until the gravy thickens.',
+      'Return the patties to the skillet, nestling them into the gravy. Simmer 3 to 4 minutes to heat through and meld the flavors. Serve immediately, spooning the onion-mushroom gravy over the patties.'
+    ],
+    sections: [
+      { key: 'patties', label: 'Patties', cookingMethod: '', yieldFactorWater: 0.75, yieldFactorFat: 0.593 },
+      { key: 'gravy', label: 'Onion Gravy', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];
