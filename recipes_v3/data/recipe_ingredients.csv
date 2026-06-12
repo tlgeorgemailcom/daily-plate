@@ -2261,12 +2261,12 @@ ENTR_010,16,salt_table,1 tsp salt,6.0,,,beef,,false,
 ENTR_010,17,cabbage_raw,1/2 head cabbage,453.6,,,vegetables,,false,
 ENTR_010,18,potato_white_raw,4 medium potatoes,600.0,,,vegetables,,false,
 ENTR_010,19,carrot_raw,4 large carrots,244.0,,,vegetables,,false,
-ENTR_010,20,celery_raw,4 stalks celery,160.0,,,vegetables,,false,
+ENTR_010,20,celery_raw,4 stalks,160.0,,,vegetables,,false,celery
 ENTR_010,21,onion_raw,1 medium onion,110.0,,,vegetables,,false,
 ENTR_011,1,beef_ground_80lean_raw,1 lb ground beef,453.6,,,filling,,false,
 ENTR_011,2,onion_raw,1 medium onion,110.0,,,filling,,false,
 ENTR_011,3,carrot_raw,2 medium carrots,122.0,,,filling,,false,
-ENTR_011,4,celery_raw,2 stalks celery,80.0,,,filling,,false,
+ENTR_011,4,celery_raw,2 stalks,80.0,,,filling,,false,celery
 ENTR_011,5,garlic_raw,3 cloves garlic,9.0,,,filling,,false,
 ENTR_011,6,tomato_paste,2 tbsp tomato paste,33.0,,,filling,,false,
 ENTR_011,7,beef_broth_canned,1 cup beef broth,240.0,,,filling,,false,
@@ -2538,7 +2538,7 @@ ENTR_029,2,flour_ap_white_enriched_unbleached,1/4 cup flour,31.25,,,braise,,Fals
 ENTR_029,3,olive_oil,3 tbsp,40.5,,,braise,,False,
 ENTR_029,4,onion_raw,1 large onion,160.0,,,braise,,False,
 ENTR_029,5,carrot_raw,2 medium carrots,122.0,,,braise,,False,
-ENTR_029,6,celery_raw,3 stalks celery,120.0,,,braise,,False,
+ENTR_029,6,celery_raw,3 stalks,120.0,,,braise,,False,celery
 ENTR_029,7,garlic_raw,4 cloves,12.0,,,braise,,False,
 ENTR_029,8,white_wine_dry,1 cup white wine,240.0,,,braise,,False,
 ENTR_029,9,beef_broth_canned,1 cup beef broth,240.0,,,braise,,False,
@@ -2585,7 +2585,7 @@ ENTR_032,2,beef_chuck_roast_raw,1-1/2 lb,680.4,,,filling,,False,beef chuck roast
 ENTR_032,3,butter_unsalted,4 tbsp,56.8,,,filling,,False,
 ENTR_032,4,onion_raw,1 large onion,160.0,,,filling,,False,
 ENTR_032,5,carrot_raw,3 medium carrots,183.0,,,filling,,False,
-ENTR_032,6,celery_raw,3 stalks celery,120.0,,,filling,,False,
+ENTR_032,6,celery_raw,3 stalks,120.0,,,filling,,False,celery
 ENTR_032,7,potato_white_raw,2 medium potatoes,300.0,,,filling,,False,
 ENTR_032,8,peas_green_frozen,1 cup frozen peas,80.0,,,filling,,False,
 ENTR_032,9,flour_ap_white_enriched_unbleached,1/3 cup flour,41.6,,,filling,,False,
@@ -2597,7 +2597,7 @@ ENTR_033,1,beef_chuck_roast_raw,2 lb,907.2,,,roast,,False,beef chuck roast
 ENTR_033,2,olive_oil,2 tbsp,27.2,,,roast,,False,
 ENTR_033,3,onion_raw,1 large,160.0,,,roast,,False,
 ENTR_033,4,carrot_raw,4 medium,244.0,,,roast,,False,
-ENTR_033,5,celery_raw,3 stalks,120.0,,,roast,,False,
+ENTR_033,5,celery_raw,3 stalks,120.0,,,roast,,False,celery
 ENTR_033,6,potato_white_raw,3 medium,450.0,,,roast,,False,
 ENTR_033,7,garlic_raw,4 cloves,12.0,,,roast,,False,
 ENTR_033,8,beef_broth_canned,2 cups,480.0,,,roast,,False,
