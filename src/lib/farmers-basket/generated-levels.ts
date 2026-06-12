@@ -12450,12 +12450,12 @@ export const LEVELS: Level[] = [
       { name: 'ground black pepper', quantity: '1/2 tsp black pepper', section: 'filling', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
     ],
     recipeInstructions: [
-      'Make or prepare the Pie Crust Single (Unbaked) (see the Pie Crust Single (Unbaked) recipe). Divide into two equal portions for a top and bottom crust, or use as a top crust only for a 9×13-inch dish. Refrigerate until needed.',
+      'Make or prepare the Pie Crust Double (Unbaked) (see the Pie Crust Double (Unbaked) recipe). Divide the dough into two equal portions — one for the bottom crust and one for the top. Roll out the bottom crust and fit it into a 9-inch deep-dish pie pan. Refrigerate both portions until needed.',
       'Preheat the oven to 400°F. Cut the beef chuck roast into 3/4-inch cubes. Season with salt and pepper.',
       'Melt the butter in a large Dutch oven or oven-safe pot over medium-high heat. Add the beef in batches and brown on all sides, about 3 to 4 minutes per batch. Remove and set aside.',
       'In the same pot, sauté the onion, carrot, and celery over medium heat for 5 minutes until softened. Add the flour and stir for 1 minute.',
       'Gradually whisk in the beef broth, scraping up any browned bits. Add the potatoes, peas, thyme, salt, and pepper. Return the beef to the pot. Bring to a simmer and cook for 15 minutes until slightly thickened.',
-      'Transfer the filling to a greased 9×13-inch baking dish. Lay the rolled-out pie crust over the top, pressing the edges against the dish. Cut a few slits in the crust to vent steam.',
+      'Transfer the filling to the prepared 9-inch deep-dish pie pan with the bottom crust. Roll out the top crust and lay it over the filling, crimping the edges to seal. Cut several slits in the top crust to vent steam.',
       'Bake for 30 to 35 minutes until the crust is golden brown and the filling is bubbling. Let rest 10 minutes before serving.'
     ],
     sections: [
