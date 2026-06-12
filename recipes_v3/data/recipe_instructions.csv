@@ -1555,7 +1555,7 @@ ENTR_014,7,"Remove the steak to a cutting board. Discard the bay leaves. Using t
 ENTR_014,8,Return the shredded beef to the pot. Add the green olives and capers. Stir to combine and simmer uncovered 10 minutes to meld the flavors. Taste and adjust seasoning.
 ENTR_014,9,Stir in the cilantro just before serving. Serve over white rice or with black beans.
 ENTR_015,1,Make or prepare the Dijon-Style Mustard (see the Dijon-Style Mustard recipe). Set aside.
-ENTR_015,2,"Pound each 6oz steak to a thickness of 3/4 to 1 inch. Season both sides generously with salt and pepper."
+ENTR_015,2,Pound each 6oz steak to a thickness of 3/4 to 1 inch. Season both sides generously with salt and pepper.
 ENTR_015,3,Melt 2 tablespoons of butter in a large skillet over high heat until foaming subsides. Sear the steaks 2 to 3 minutes per side for medium-rare. Remove to a plate and tent loosely with foil.
 ENTR_015,4,"Reduce heat to medium. Add the remaining 1 tablespoon of butter to the pan. Add shallots and garlic, cook 1 minute. Add the mushrooms and cook 3 to 4 minutes until golden and most of the moisture has evaporated."
 ENTR_015,5,"Remove the pan from heat. Add the brandy carefully. Return to heat and tilt the pan to flambé, or let the alcohol cook off for 1 to 2 minutes until the sharp aroma subsides."
@@ -1633,12 +1633,11 @@ ENTR_025,2,"Cut the zucchini, bell peppers, and onion into 1½-inch pieces. Halv
 ENTR_025,3,"Thread the marinated beef and vegetables alternately onto metal or soaked wooden skewers, leaving a small gap between each piece."
 ENTR_025,4,"Heat a grill to high heat (450 to 500°F). Brush the grates lightly with oil. Grill the kabobs 3 to 4 minutes per side, turning once or twice, until the beef is cooked to medium (internal temperature 145°F) and vegetables are tender with char marks."
 ENTR_025,5,Transfer to a platter and rest 2 to 3 minutes before serving.
-ENTR_026,1,"Cook the rice: combine the rice and water in a medium saucepan. Bring to a boil, then reduce heat to low, cover, and cook for 18 minutes until the water is absorbed. Remove from heat and let stand covered for 5 minutes. Fluff with a fork."
-ENTR_026,2,"While the rice cooks, make the sauce: whisk together the soy sauce, brown sugar, sesame oil, and red pepper flakes in a small bowl. Set aside."
-ENTR_026,3,"Heat a large skillet or wok over medium-high heat. Add the ground beef and cook, breaking it up, until browned through, about 6 to 8 minutes. Drain excess fat."
-ENTR_026,4,Add the garlic and ginger to the beef and cook 1 to 2 minutes until fragrant.
-ENTR_026,5,Pour the sauce over the beef and stir to coat. Cook 1 to 2 minutes until the sauce thickens and coats the beef. Remove from heat and stir in the scallions and black pepper.
-ENTR_026,6,Serve the Korean beef over steamed rice. Garnish with additional sliced scallions and sesame seeds if desired.
+ENTR_026,1,"While the rice cooks, make the sauce: whisk together the soy sauce, brown sugar, sesame oil, and red pepper flakes in a small bowl. Set aside."
+ENTR_026,2,"Heat a large skillet or wok over medium-high heat. Add the ground beef and cook, breaking it up, until browned through, about 6 to 8 minutes. Drain excess fat."
+ENTR_026,3,Add the garlic and ginger to the beef and cook 1 to 2 minutes until fragrant.
+ENTR_026,4,Pour the sauce over the beef and stir to coat. Cook 1 to 2 minutes until the sauce thickens and coats the beef. Remove from heat and stir in the scallions and black pepper.
+ENTR_026,5,Serve the Korean beef over steamed rice. Garnish with additional sliced scallions and sesame seeds if desired.
 ENTR_027,1,Preheat the oven to 350°F. Lightly grease a 9×5-inch loaf pan or line a rimmed baking sheet with foil.
 ENTR_027,2,"Combine the bread crumbs and milk in a large bowl and let soak for 2 minutes. Add the eggs, onion, garlic, ketchup, Worcestershire sauce, garlic powder, onion powder, salt, black pepper, basil, oregano, paprika, and parsley. Mix well."
 ENTR_027,3,Add the ground beef and mix gently with your hands until just combined — do not overwork. Transfer to the prepared loaf pan and shape into a compact loaf.
@@ -1647,11 +1646,10 @@ ENTR_027,5,Bake for 45 minutes. Spread the remaining glaze over the top and bake
 ENTR_027,6,Remove from the oven and let rest 10 minutes before slicing. Cut into 8 slices and serve.
 ENTR_028,1,Slice the flank steak across the grain into 1/4-inch strips. Toss with cornstarch and let sit for 10 minutes.
 ENTR_028,2,"In a bowl, whisk together the soy sauce, brown sugar, garlic, ginger, hoisin sauce, and red pepper flakes. Set aside."
-ENTR_028,3,"Cook the rice: combine the rice and water in a medium saucepan. Bring to a boil, then reduce heat to low, cover, and simmer for 18 minutes. Remove from heat and let steam, covered, for 5 minutes."
-ENTR_028,4,Heat the vegetable oil in a wok or large skillet over high heat. Add the beef in a single layer and cook without stirring for 1 to 2 minutes until browned. Flip and cook 1 minute more. Remove beef and set aside.
-ENTR_028,5,"Pour the sauce into the same wok and bring to a simmer over medium-high heat, stirring, for 2 to 3 minutes until slightly thickened."
-ENTR_028,6,Return the beef to the wok and toss to coat in the sauce. Add the scallions and drizzle with sesame oil. Stir-fry 1 minute.
-ENTR_028,7,Serve the Mongolian beef over the steamed white rice.
+ENTR_028,3,Heat the vegetable oil in a wok or large skillet over high heat. Add the beef in a single layer and cook without stirring for 1 to 2 minutes until browned. Flip and cook 1 minute more. Remove beef and set aside.
+ENTR_028,4,"Pour the sauce into the same wok and bring to a simmer over medium-high heat, stirring, for 2 to 3 minutes until slightly thickened."
+ENTR_028,5,Return the beef to the wok and toss to coat in the sauce. Add the scallions and drizzle with sesame oil. Stir-fry 1 minute.
+ENTR_028,6,Serve the Mongolian beef over the steamed white rice.
 ENTR_029,1,"Pat the beef shank crosscuts dry and season with salt and pepper. Dredge lightly in flour, shaking off any excess."
 ENTR_029,2,Heat the olive oil in a large Dutch oven or heavy pot over medium-high heat. Sear the shanks for 3 to 4 minutes per side until browned. Remove and set aside.
 ENTR_029,3,"In the same pot, reduce heat to medium and sauté the onion, carrot, and celery for 5 minutes until softened. Add the garlic and cook 1 minute more."
@@ -1661,9 +1659,8 @@ ENTR_029,6,"Bring to a boil, then reduce heat to low. Cover and simmer for 1 hou
 ENTR_029,7,"While the osso buco braises, prepare the gremolata: combine the chopped parsley, minced garlic, and lemon juice in a small bowl."
 ENTR_029,8,"Serve each shank with braising sauce spooned over the top and a generous pinch of gremolata. Pairs well with risotto, polenta, or crusty bread."
 ENTR_030,1,"Slice the flank steak across the grain into thin strips. Toss with soy sauce, cornstarch, and black pepper. Let marinate for 15 minutes."
-ENTR_030,2,"Cook the rice: combine the rice and water in a medium saucepan. Bring to a boil, then reduce heat to low, cover, and simmer for 18 minutes. Remove from heat and let steam, covered, for 5 minutes."
-ENTR_030,3,"In a small bowl, whisk together the soy sauce, beef broth, and cornstarch for the sauce. Set aside."
-ENTR_030,4,Heat 1 tablespoon olive oil in a wok or large skillet over high heat. Add the beef in a single layer and cook for 1 to 2 minutes per side until browned. Remove and set aside.
-ENTR_030,5,"Add the remaining olive oil to the wok. Stir-fry the onion for 2 minutes, then add the bell peppers and cook 2 minutes more until slightly tender but still crisp."
-ENTR_030,6,"Add the garlic and ginger and stir-fry for 30 seconds. Pour in the sauce and stir until thickened, about 1 minute."
-ENTR_030,7,Return the beef to the wok and toss to coat. Drizzle with sesame oil. Serve over the steamed white rice.
+ENTR_030,2,"In a small bowl, whisk together the soy sauce, beef broth, and cornstarch for the sauce. Set aside."
+ENTR_030,3,Heat 1 tablespoon olive oil in a wok or large skillet over high heat. Add the beef in a single layer and cook for 1 to 2 minutes per side until browned. Remove and set aside.
+ENTR_030,4,"Add the remaining olive oil to the wok. Stir-fry the onion for 2 minutes, then add the bell peppers and cook 2 minutes more until slightly tender but still crisp."
+ENTR_030,5,"Add the garlic and ginger and stir-fry for 30 seconds. Pour in the sauce and stir until thickened, about 1 minute."
+ENTR_030,6,Return the beef to the wok and toss to coat. Drizzle with sesame oil. Serve over the steamed white rice.
