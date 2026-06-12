@@ -12462,5 +12462,58 @@ export const LEVELS: Level[] = [
       { key: 'crust', label: 'Crust', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'ENTR_033',
+    name: 'Beef Pot Roast',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 267,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":556.7,"pro":53.9,"fat":21.4,"carb":39.2,"fib":6.6,"h2o":401.2,"sug":7.7,"perServing":{"cal":556.7,"pro":53.9,"fat":21.4,"carb":39.2,"fib":6.6,"h2o":401.2,"sug":7.7,"AddedSugars":0.0,"IntrinsicSugars":7.7},"micros":{"vitaminA":85.91,"vitaminC":2.25,"vitaminD":1.64,"vitaminE":0.37,"vitaminK":6.21,"vitaminB6":0.2,"vitaminB12":1.23,"thiamin":0.06,"riboflavin":0.11,"niacin":2.19,"folate":11.85,"calcium":21.91,"iron":1.53,"magnesium":19.05,"phosphorus":116.06,"potassium":351.92,"sodium":312.03,"zinc":3.52,"copper":0.08,"selenium":12.1,"cholesterol":28.56,"saturatedFat":1.35,"monoFat":2.23,"polyFat":0.25,"omega3":0.0,"omega6":0.09},"gramsPerServing":524.2,"servings":4,"per100g":{"Energy_KCal":106.21,"Water":76.54,"Protein":10.28,"TotalLipidFat":4.09,"Carbohydrate":7.47,"FiberTotalDietary":1.27,"SugarsTotal":1.48,"Cholesterol":28.56,"FattyAcids_totalSaturated":1.35,"FattyAcids_totalMonounsaturated":2.23,"FattyAcids_totalPolyunsaturated":0.25,"LinoleicAcid":0.09,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":85.91,"Retinol":0.74,"Carotene_beta":797.39,"VitaminD":1.64,"VitaminE_alphaTocopherol":0.37,"VitaminK_phylloquinone":6.21,"VitaminC_totalAscorbicAcid":2.25,"Thiamin":0.06,"Riboflavin":0.11,"Niacin":2.19,"PantothenicAcid":0.39,"VitaminB6":0.2,"Folate_total":11.85,"Folate_food":10.02,"Folate_DFE":13.14,"FolicAcid":2.3,"VitaminB12":1.23,"Choline_total":32.93,"Betaine":7.65,"LuteinZeaxanthin":36.75,"Lycopene":373.26,"Calcium_Ca":21.91,"Iron_Fe":1.53,"Magnesium_Mg":19.05,"Phosphorus_P":116.06,"Potassium_K":351.92,"Sodium_Na":312.03,"Zinc_Zn":3.52,"Copper_Cu":0.08,"Manganese_Mn":0.12,"Selenium_Se":12.1,"Tryptophan":0.11,"Threonine":0.45,"Isoleucine":0.43,"Leucine":0.8,"Lysine":0.86,"Methionine":0.27,"Cystine":0.1,"Phenylalanine":0.39,"Tyrosine":0.34,"Valine":0.46,"Arginine":0.66,"Histidine":0.31,"Alanine":0.56,"AsparticAcid":0.98,"GlutamicAcid":1.71,"Glycine":0.43,"Proline":0.42,"Serine":0.39,"omega3":0.0,"omega6":0.09,"AddedSugars":0.0,"IntrinsicSugars":1.48},"addedSugars":0.0,"intrinsicSugars":7.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.8,"yieldFactorFat":1.0,"sources":[{"ndb":"13293","name":"Beef, chuck, under blade pot roast or steak, boneless, separable lean only, trimmed to 0\" fat, all grades, raw","grams":226.8},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"11282","name":"Onions, raw","grams":40.0},{"ndb":"11124","name":"Carrots, raw","grams":61.0},{"ndb":"11143","name":"Celery, raw","grams":30.0},{"ndb":"11354","name":"Potatoes, white, flesh and skin, raw","grams":112.5},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"6008","name":"Soup, beef broth or bouillon canned, ready-to-serve","grams":120.0},{"ndb":"11546","name":"Tomato products, canned, paste, without salt added","grams":8.0},{"ndb":"6971","name":"Sauce, worcestershire","grams":4.2},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":7.8},{"ndb":"2042","name":"Spices, thyme, dried","grams":0.3},{"ndb":"2063","name":"Rosemary, fresh","grams":0.8},{"ndb":"2004","name":"Spices, bay leaf","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":2.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.6}],"sections":[{"section_key":"roast","section_label":"Pot Roast","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.8,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":16,"raw_grams":2497.95,"raw_water_grams":2006.11,"raw_fat_grams":85.72,"raw_protein_grams":215.52,"raw_carb_grams":156.73,"final_grams":2096.73}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Beef Pot Roast', quantity: 'custom (g)', foodWord: 'BEEFPOTROAST', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'beef chuck roast', quantity: '2 lb', section: 'roast', ndbNo: '13293', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'roast', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'onion', quantity: '1 large onion', section: 'roast', ndbNo: '11282', portionDesc: 'g', portionGrams: 160.0 },
+      { name: 'carrot', quantity: '4 medium carrots', section: 'roast', ndbNo: '11124', portionDesc: 'g', portionGrams: 244.0 },
+      { name: 'celery stalk', quantity: '3 stalks celery', section: 'roast', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'white potatoes (raw)', quantity: '3 medium potatoes', section: 'roast', ndbNo: '11354', portionDesc: 'g', portionGrams: 450.0 },
+      { name: 'garlic', quantity: '4 cloves garlic', section: 'roast', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'beef broth', quantity: '2 cups beef broth', section: 'roast', ndbNo: '6008', portionDesc: 'g', portionGrams: 480.0 },
+      { name: 'tomato paste', quantity: '2 tbsp', section: 'roast', ndbNo: '11546', portionDesc: 'g', portionGrams: 32.0 },
+      { name: 'Worcestershire sauce', quantity: '1 tbsp', section: 'roast', ndbNo: '6971', portionDesc: 'g', portionGrams: 17.0 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '1/4 cup flour', section: 'roast', ndbNo: '20581', portionDesc: 'g', portionGrams: 31.25 },
+      { name: 'dried thyme', quantity: '1 tsp dried thyme', section: 'roast', ndbNo: '2042', portionDesc: 'g', portionGrams: 1.4 },
+      { name: 'fresh rosemary', quantity: '1 sprig rosemary', section: 'roast', ndbNo: '2063', portionDesc: 'g', portionGrams: 3.4 },
+      { name: 'bay leaf', quantity: '2 bay leaves', section: 'roast', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'salt', quantity: '1-1/2 tsp salt', section: 'roast', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'ground black pepper', quantity: '1 tsp black pepper', section: 'roast', ndbNo: '2030', portionDesc: 'g', portionGrams: 2.3 }
+    ],
+    recipeInstructions: [
+      'Preheat the oven to 325°F. Pat the beef chuck roast dry and season generously on all sides with salt and black pepper.',
+      'Heat the olive oil in a large Dutch oven over medium-high heat. Sear the roast on all sides until deep brown, about 3 to 4 minutes per side. Remove and set aside.',
+      'In the same pot, sauté the onion and celery over medium heat for 5 minutes until softened. Add the garlic and tomato paste and cook for 1 minute.',
+      'Sprinkle the flour over the vegetables and stir to coat. Cook for 1 minute, then gradually whisk in the beef broth until smooth.',
+      'Stir in the Worcestershire sauce. Return the roast to the pot. Add the thyme, rosemary, and bay leaves. The liquid should come about halfway up the roast.',
+      'Cover tightly and braise in the oven for 2 to 2-1/2 hours. Then nestle the potato chunks and carrot chunks around the roast and continue braising for about another hour until the beef is fork-tender and falling apart.',
+      'Remove the bay leaves and rosemary sprig. Transfer the roast and vegetables to a serving platter. Skim excess fat from the braising liquid and serve as gravy alongside.'
+    ],
+    sections: [
+      { key: 'roast', label: 'Pot Roast', cookingMethod: '', yieldFactorWater: 0.8 }
+    ],
   }
 ];
