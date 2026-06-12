@@ -83,9 +83,9 @@ Beef Lasagna
 Beef Lo Mein
 Beef London Broil
 Beef Kabobs
-Beef Korean Beef
+Beef Korean Beef with Rice
 Beef Meatloaf
-Beef Mongolian Beef
+Beef Mongolian Beef with Rice
 Beef Osso Buco
 Beef Pepper Steak
 Beef Picadillo
