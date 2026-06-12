@@ -12053,5 +12053,56 @@ export const LEVELS: Level[] = [
       { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
       { key: 'steak', label: 'Steak', cookingMethod: '', yieldFactorWater: 0.8 }
     ],
+  },
+  {
+    id: 'ENTR_025',
+    name: 'Beef Kabobs',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 259,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 skewers (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":274.8,"pro":40.6,"fat":7.3,"carb":10.9,"fib":3.2,"h2o":266.7,"sug":6.2,"perServing":{"cal":274.8,"pro":40.6,"fat":7.3,"carb":10.9,"fib":3.2,"h2o":266.7,"sug":6.2,"AddedSugars":0.0,"IntrinsicSugars":6.2},"micros":{"vitaminA":13.81,"vitaminC":12.26,"vitaminD":1.47,"vitaminE":0.27,"vitaminK":2.22,"vitaminB6":0.31,"vitaminB12":0.49,"thiamin":0.05,"riboflavin":0.15,"niacin":3.55,"folate":17.34,"calcium":27.86,"iron":1.23,"magnesium":20.69,"phosphorus":143.15,"potassium":361.57,"sodium":208.9,"zinc":2.4,"copper":0.15,"selenium":18.67,"cholesterol":30.93,"saturatedFat":1.23,"monoFat":3.12,"polyFat":0.44,"omega3":0.01,"omega6":0.0},"gramsPerServing":330.0,"servings":4,"per100g":{"Energy_KCal":83.29,"Water":80.83,"Protein":12.3,"TotalLipidFat":2.22,"Carbohydrate":3.3,"FiberTotalDietary":0.97,"SugarsTotal":1.87,"Cholesterol":30.93,"FattyAcids_totalSaturated":1.23,"FattyAcids_totalMonounsaturated":3.12,"FattyAcids_totalPolyunsaturated":0.44,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":13.81,"Retinol":0.0,"Carotene_beta":146.49,"VitaminD":1.47,"VitaminE_alphaTocopherol":0.27,"VitaminK_phylloquinone":2.22,"VitaminC_totalAscorbicAcid":12.26,"Thiamin":0.05,"Riboflavin":0.15,"Niacin":3.55,"PantothenicAcid":0.55,"VitaminB6":0.31,"Folate_total":17.34,"Folate_food":17.34,"Folate_DFE":17.34,"FolicAcid":0.0,"VitaminB12":0.49,"Choline_total":49.53,"Betaine":8.99,"LuteinZeaxanthin":228.41,"Lycopene":0.0,"Calcium_Ca":27.86,"Iron_Fe":1.23,"Magnesium_Mg":20.69,"Phosphorus_P":143.15,"Potassium_K":361.57,"Sodium_Na":208.9,"Zinc_Zn":2.4,"Copper_Cu":0.15,"Manganese_Mn":0.13,"Selenium_Se":18.67,"Tryptophan":0.09,"Threonine":0.49,"Isoleucine":0.55,"Leucine":0.95,"Lysine":1.02,"Methionine":0.3,"Cystine":0.13,"Phenylalanine":0.49,"Tyrosine":0.38,"Valine":0.6,"Arginine":0.78,"Histidine":0.38,"Alanine":0.74,"AsparticAcid":1.16,"GlutamicAcid":1.87,"Glycine":0.73,"Proline":0.59,"Serine":0.49,"omega3":0.01,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":1.87},"addedSugars":0.0,"intrinsicSugars":6.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.85,"yieldFactorFat":1.0,"sources":[{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":10.2},{"ndb":"9152","name":"Lemon juice, raw","grams":7.5},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.5},{"ndb":"2028","name":"Spices, paprika","grams":0.6},{"ndb":"2014","name":"Spices, cumin seed","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"23611","name":"Beef, top sirloin, steak, separable lean only, trimmed to 1/8\" fat, all grades, raw","grams":170.1},{"ndb":"11477","name":"Squash, summer, zucchini, includes skin, raw","grams":49.0},{"ndb":"11821","name":"Peppers, sweet, red, raw","grams":29.8},{"ndb":"11333","name":"Peppers, sweet, green, raw","grams":29.8},{"ndb":"11282","name":"Onions, raw","grams":40.0},{"ndb":"11266","name":"Mushrooms, brown, italian, or crimini, raw","grams":56.8},{"ndb":"2047","name":"Salt, table","grams":0.8}],"sections":[{"section_key":"marinade","section_label":"Marinade","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":0.0,"yield_factor_fat":0.0,"yield_factor_protein":0.0,"yield_factor_carbohydrate":0.0,"yield_factor_other":0.0,"ingredient_count":8,"raw_grams":89.05,"raw_water_grams":33.63,"raw_fat_grams":41.55,"raw_protein_grams":1.46,"raw_carb_grams":8.71,"final_grams":3.7},{"section_key":"kabobs","section_label":"Kabobs","prep_method":"raw","cook_method":"grilled","cooking_method":"grilled","cooking_method_normalized":"grilled","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":1504.4,"raw_water_grams":1255.02,"raw_fat_grams":29.33,"raw_protein_grams":162.31,"raw_carb_grams":43.5,"final_grams":1316.15}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Beef Kabobs', quantity: 'custom (g)', foodWord: 'BEEFKABOB', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'olive oil', quantity: '3 tbsp olive oil', section: 'marinade', ndbNo: '4053', portionDesc: 'g', portionGrams: 40.8 },
+      { name: 'lemon juice', quantity: '2 tbsp lemon juice', section: 'marinade', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'marinade', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'dried oregano', quantity: '1 tsp dried oregano', section: 'marinade', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.8 },
+      { name: 'paprika', quantity: '1 tsp paprika', section: 'marinade', ndbNo: '2028', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'ground cumin', quantity: '1/2 tsp ground cumin', section: 'marinade', ndbNo: '2014', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'salt', quantity: '1/2 tsp salt', section: 'marinade', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/2 tsp black pepper', section: 'marinade', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'beef top sirloin', quantity: '1.5 lbs beef top sirloin, cut into 1-1/2 inch cubes', section: 'kabobs', ndbNo: '23611', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'zucchini', quantity: '1 large zucchini, cut in chunks', section: 'kabobs', ndbNo: '11477', portionDesc: 'g', portionGrams: 196.0 },
+      { name: 'red bell pepper', quantity: '1 red bell pepper, cut in chunks', section: 'kabobs', ndbNo: '11821', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'green bell pepper', quantity: '1 green bell pepper, cut in chunks', section: 'kabobs', ndbNo: '11333', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'onion', quantity: '1 medium onion, cut in wedges', section: 'kabobs', ndbNo: '11282', portionDesc: 'g', portionGrams: 160.0 },
+      { name: 'crimini mushrooms', quantity: '8 oz crimini mushrooms, halved', section: 'kabobs', ndbNo: '11266', portionDesc: 'g', portionGrams: 227.0 },
+      { name: 'salt', quantity: '1/2 tsp salt', section: 'kabobs', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 }
+    ],
+    recipeInstructions: [
+      'Whisk together the olive oil, lemon juice, garlic, oregano, paprika, cumin, salt, and black pepper in a large bowl. Add the beef cubes and toss to coat. Marinate in the refrigerator for at least 1 hour, or up to 4 hours.',
+      'Cut the zucchini, bell peppers, and onion into 1½-inch pieces. Halve any large mushrooms. Season the vegetables lightly with salt.',
+      'Thread the marinated beef and vegetables alternately onto metal or soaked wooden skewers, leaving a small gap between each piece.',
+      'Heat a grill to high heat (450 to 500°F). Brush the grates lightly with oil. Grill the kabobs 3 to 4 minutes per side, turning once or twice, until the beef is cooked to medium (internal temperature 145°F) and vegetables are tender with char marks.',
+      'Transfer to a platter and rest 2 to 3 minutes before serving.'
+    ],
+    sections: [
+      { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
+      { key: 'kabobs', label: 'Kabobs', cookingMethod: '', yieldFactorWater: 0.85 }
+    ],
   }
 ];
