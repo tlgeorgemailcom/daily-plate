@@ -11895,5 +11895,63 @@ export const LEVELS: Level[] = [
       { key: 'meatballs', label: 'Meatballs', cookingMethod: '', yieldFactorWater: 0.85 },
       { key: 'sauce', label: 'Tomato Sauce', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'ENTR_022',
+    name: 'Beef Lasagna',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 256,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 piece (serves 8)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":666.4,"pro":40.2,"fat":38.4,"carb":40.3,"fib":4.1,"h2o":264.5,"sug":7.9,"perServing":{"cal":666.4,"pro":40.2,"fat":38.4,"carb":40.3,"fib":4.1,"h2o":264.5,"sug":7.9,"AddedSugars":0.0,"IntrinsicSugars":7.9},"micros":{"vitaminA":42.04,"vitaminC":2.08,"vitaminD":5.15,"vitaminE":0.49,"vitaminK":11.29,"vitaminB6":0.11,"vitaminB12":0.69,"thiamin":0.03,"riboflavin":0.12,"niacin":1.19,"folate":9.32,"calcium":127.31,"iron":1.23,"magnesium":20.43,"phosphorus":137.52,"potassium":217.86,"sodium":262.47,"zinc":1.68,"copper":0.11,"selenium":13.48,"cholesterol":38.24,"saturatedFat":4.67,"monoFat":3.61,"polyFat":0.33,"omega3":0.01,"omega6":0.02},"gramsPerServing":389.9,"servings":8,"per100g":{"Energy_KCal":170.9,"Water":67.83,"Protein":10.3,"TotalLipidFat":9.86,"Carbohydrate":10.34,"FiberTotalDietary":1.06,"SugarsTotal":2.03,"Cholesterol":38.24,"FattyAcids_totalSaturated":4.67,"FattyAcids_totalMonounsaturated":3.61,"FattyAcids_totalPolyunsaturated":0.33,"LinoleicAcid":0.02,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":42.04,"Retinol":35.65,"Carotene_beta":73.2,"VitaminD":5.15,"VitaminE_alphaTocopherol":0.49,"VitaminK_phylloquinone":11.29,"VitaminC_totalAscorbicAcid":2.08,"Thiamin":0.03,"Riboflavin":0.12,"Niacin":1.19,"PantothenicAcid":0.26,"VitaminB6":0.11,"Folate_total":9.32,"Folate_food":9.32,"Folate_DFE":9.32,"FolicAcid":0.0,"VitaminB12":0.69,"Choline_total":23.62,"Betaine":1.84,"LuteinZeaxanthin":50.16,"Lycopene":2304.25,"Calcium_Ca":127.31,"Iron_Fe":1.23,"Magnesium_Mg":20.43,"Phosphorus_P":137.52,"Potassium_K":217.86,"Sodium_Na":262.47,"Zinc_Zn":1.68,"Copper_Cu":0.11,"Manganese_Mn":0.17,"Selenium_Se":13.48,"Tryptophan":0.12,"Threonine":0.41,"Isoleucine":0.47,"Leucine":0.84,"Lysine":0.71,"Methionine":0.23,"Cystine":0.09,"Phenylalanine":0.45,"Tyrosine":0.38,"Valine":0.55,"Arginine":0.48,"Histidine":0.3,"Alanine":0.46,"AsparticAcid":0.84,"GlutamicAcid":2.15,"Glycine":0.42,"Proline":0.82,"Serine":0.43,"omega3":0.01,"omega6":0.02,"AddedSugars":0.0,"IntrinsicSugars":2.03},"addedSugars":0.0,"intrinsicSugars":7.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.9,"yieldFactorFat":1.0,"sources":[{"ndb":"20420","name":"Pasta, dry, unenriched","grams":33.8},{"ndb":"14411","name":"Water, tap, drinking","grams":187.5},{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":85.0},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":90.0},{"ndb":"11547","name":"Tomato products, canned, puree, without salt added","grams":30.5},{"ndb":"11282","name":"Onions, raw","grams":20.0},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":1.7},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.5},{"ndb":"2003","name":"Spices, basil, dried","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"1036","name":"Cheese, ricotta, whole milk","grams":53.1},{"ndb":"1026","name":"Cheese, mozzarella, whole milk","grams":42.5},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":7.1},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":6.2},{"ndb":"11297","name":"Parsley, fresh","grams":1.9},{"ndb":"2047","name":"Salt, table","grams":0.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"pasta","section_label":"Pasta","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.263286685626661,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":1770.0,"raw_water_grams":1525.23,"raw_fat_grams":4.08,"raw_protein_grams":35.21,"raw_carb_grams":201.61,"final_grams":646.34},{"section_key":"meat_sauce","section_label":"Meat Sauce","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":1842.15,"raw_water_grams":1429.62,"raw_fat_grams":152.68,"raw_protein_grams":135.95,"raw_carb_grams":97.2,"final_grams":1627.71},{"section_key":"cheese_filling","section_label":"Cheese Filling","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.92,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":888.78,"raw_water_grams":542.6,"raw_fat_grams":150.69,"raw_protein_grams":150.29,"raw_carb_grams":23.87,"final_grams":845.37}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Beef Lasagna', quantity: 'custom (g)', foodWord: 'LASAGNAMEAT', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'wide pasta, dry', quantity: '12 lasagna noodles (about 9.5 oz dry)', section: 'pasta', ndbNo: '20420', portionDesc: 'g', portionGrams: 270.0 },
+      { name: 'water', quantity: 'water for boiling', section: 'pasta', ndbNo: '14411', portionDesc: 'g', portionGrams: 1500.0 },
+      { name: 'ground beef (80/20)', quantity: '1.5 lbs ground beef (80/20)', section: 'meat_sauce', ndbNo: '23572', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'canned crushed tomatoes', quantity: '3 cups crushed tomatoes (one 28 oz can)', section: 'meat_sauce', ndbNo: '11693', portionDesc: 'g', portionGrams: 720.0 },
+      { name: 'tomato purée', quantity: '1 cup tomato purée', section: 'meat_sauce', ndbNo: '11547', portionDesc: 'g', portionGrams: 244.0 },
+      { name: 'onion', quantity: '1 cup onion, diced', section: 'meat_sauce', ndbNo: '11282', portionDesc: 'g', portionGrams: 160.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'meat_sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'olive oil', quantity: '1 tbsp olive oil', section: 'meat_sauce', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'dried oregano', quantity: '2 tsp dried oregano', section: 'meat_sauce', ndbNo: '2027', portionDesc: 'g', portionGrams: 3.6 },
+      { name: 'dried basil', quantity: '2 tsp dried basil', section: 'meat_sauce', ndbNo: '2003', portionDesc: 'g', portionGrams: 1.4 },
+      { name: 'salt', quantity: '1 tsp salt', section: 'meat_sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/2 tsp black pepper', section: 'meat_sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'Ricotta cheese', quantity: '15 oz ricotta cheese', section: 'cheese_filling', ndbNo: '1036', portionDesc: 'g', portionGrams: 425.0 },
+      { name: 'whole milk mozzarella', quantity: '12 oz whole milk mozzarella, shredded (divided)', section: 'cheese_filling', ndbNo: '1026', portionDesc: 'g', portionGrams: 340.0 },
+      { name: 'Parmesan cheese', quantity: '2 oz Parmesan, freshly grated', section: 'cheese_filling', ndbNo: '1033', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'large egg', quantity: '1 large egg', section: 'cheese_filling', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'fresh parsley', quantity: '1/4 cup fresh parsley, chopped', section: 'cheese_filling', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'salt', quantity: '1/4 tsp salt', section: 'cheese_filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '1/4 tsp black pepper', section: 'cheese_filling', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Preheat the oven to 375°F. Cook the lasagna noodles in a large pot of salted boiling water according to package directions until al dente. Drain and lay flat on a lightly oiled baking sheet to prevent sticking.',
+      'Make the meat sauce: heat the olive oil in a large skillet or Dutch oven over medium-high heat. Add the ground beef and cook, breaking it up, until browned, about 8 minutes. Drain excess fat if desired. Add the onion and garlic and cook 3 minutes until softened.',
+      'Stir in the crushed tomatoes, tomato purée, oregano, basil, salt, and black pepper. Simmer over low heat for 15 to 20 minutes, stirring occasionally, until the sauce thickens slightly.',
+      'Make the cheese filling: in a large bowl, combine the ricotta, two-thirds of the mozzarella, the Parmesan, egg, parsley, salt, and black pepper. Stir until smooth.',
+      'Assemble the lasagna: spread a thin layer of meat sauce on the bottom of a 9×13-inch baking dish. Layer 3 to 4 noodles over the sauce. Spread one-third of the cheese filling, then one-third of the remaining meat sauce. Repeat the layers twice more, ending with meat sauce on top. Scatter the remaining mozzarella over the top.',
+      'Cover tightly with foil and bake for 30 minutes. Uncover and bake for an additional 15 to 20 minutes until the cheese is bubbly and golden.',
+      'Let rest for 15 minutes before slicing. Cut into 8 pieces and serve.'
+    ],
+    sections: [
+      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'meat_sauce', label: 'Meat Sauce', cookingMethod: '', yieldFactorWater: 0.85 },
+      { key: 'cheese_filling', label: 'Cheese Filling', cookingMethod: '', yieldFactorWater: 0.92 }
+    ],
   }
 ];

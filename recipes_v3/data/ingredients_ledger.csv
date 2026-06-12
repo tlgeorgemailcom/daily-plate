@@ -304,3 +304,4 @@ brandy,14037,TEQUILA,"Alcoholic beverage, distilled, all (gin, rum, vodka, whisk
 corn_tortilla,18363,TORTILLACORN,"Tortillas, ready-to-bake or -fry, corn",corn tortilla,each,24.0,
 caraway_seed,2005,CARAWAY,"Spices, caraway seed",caraway seed,tsp,2.1,
 marjoram_dried,2023,MARJORAM,"Spices, marjoram, dried",dried marjoram,tsp,0.6,
+cheese_ricotta_wholemilk,1036,RICOTTA,"Cheese, ricotta, whole milk",Ricotta cheese,cup,246.0,added during ENTR_022 build
