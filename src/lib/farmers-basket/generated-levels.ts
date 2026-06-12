@@ -11792,5 +11792,50 @@ export const LEVELS: Level[] = [
       { key: 'patties', label: 'Patties', cookingMethod: '', yieldFactorWater: 0.75, yieldFactorFat: 0.593 },
       { key: 'gravy', label: 'Onion Gravy', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'ENTR_020',
+    name: 'Beef Flank Steak with Marinade',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 254,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '6 oz steak (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":319.8,"pro":48.9,"fat":12.4,"carb":0.0,"fib":0.7,"h2o":130.8,"sug":0.4,"perServing":{"cal":319.8,"pro":48.9,"fat":12.4,"carb":0.0,"fib":0.7,"h2o":130.8,"sug":0.4,"AddedSugars":0.0,"IntrinsicSugars":0.4},"micros":{"vitaminA":0.0,"vitaminC":2.22,"vitaminD":0.0,"vitaminE":0.26,"vitaminK":1.24,"vitaminB6":0.52,"vitaminB12":1.03,"thiamin":0.06,"riboflavin":0.12,"niacin":6.38,"folate":13.11,"calcium":41.01,"iron":2.4,"magnesium":36.03,"phosphorus":251.97,"potassium":457.07,"sodium":738.42,"zinc":4.65,"copper":0.1,"selenium":30.62,"cholesterol":71.03,"saturatedFat":3.09,"monoFat":6.08,"polyFat":0.78,"omega3":0.0,"omega6":0.0},"gramsPerServing":197.9,"servings":4,"per100g":{"Energy_KCal":161.55,"Water":66.07,"Protein":24.71,"TotalLipidFat":6.27,"Carbohydrate":0.0,"FiberTotalDietary":0.36,"SugarsTotal":0.18,"Cholesterol":71.03,"FattyAcids_totalSaturated":3.09,"FattyAcids_totalMonounsaturated":6.08,"FattyAcids_totalPolyunsaturated":0.78,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.0,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.26,"VitaminK_phylloquinone":1.24,"VitaminC_totalAscorbicAcid":2.22,"Thiamin":0.06,"Riboflavin":0.12,"Niacin":6.38,"PantothenicAcid":0.62,"VitaminB6":0.52,"Folate_total":13.11,"Folate_food":13.11,"Folate_DFE":13.11,"FolicAcid":0.0,"VitaminB12":1.03,"Choline_total":95.43,"Betaine":17.7,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":41.01,"Iron_Fe":2.4,"Magnesium_Mg":36.03,"Phosphorus_P":251.97,"Potassium_K":457.07,"Sodium_Na":738.42,"Zinc_Zn":4.65,"Copper_Cu":0.1,"Manganese_Mn":0.18,"Selenium_Se":30.62,"Tryptophan":0.17,"Threonine":1.01,"Isoleucine":1.15,"Leucine":2.01,"Lysine":2.12,"Methionine":0.65,"Cystine":0.27,"Phenylalanine":1.01,"Tyrosine":0.8,"Valine":1.26,"Arginine":1.64,"Histidine":0.8,"Alanine":1.53,"AsparticAcid":2.33,"GlutamicAcid":3.85,"Glycine":1.53,"Proline":1.22,"Serine":1.01,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.18},"addedSugars":0.0,"intrinsicSugars":0.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.8,"yieldFactorFat":1.0,"sources":[{"ndb":"16123","name":"Soy sauce made from soy and wheat (shoyu)","grams":16.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":10.2},{"ndb":"9160","name":"Lime juice, raw","grams":11.2},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"2014","name":"Spices, cumin seed","grams":1.0},{"ndb":"2009","name":"Spices, chili powder","grams":0.7},{"ndb":"2030","name":"Spices, pepper, black","grams":0.6},{"ndb":"23656","name":"Beef, flank, steak, separable lean only, trimmed to 0\" fat, all grades, raw","grams":226.8},{"ndb":"2047","name":"Salt, table","grams":1.1}],"sections":[{"section_key":"marinade","section_label":"Marinade","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":0.0,"yield_factor_fat":0.0,"yield_factor_protein":0.0,"yield_factor_carbohydrate":0.0,"yield_factor_other":0.0,"ingredient_count":7,"raw_grams":170.8,"raw_water_grams":94.32,"raw_fat_grams":42.61,"raw_protein_grams":7.48,"raw_carb_grams":15.49,"final_grams":10.9},{"section_key":"steak","section_label":"Steak","prep_method":"raw","cook_method":"grilled","cooking_method":"grilled","cooking_method_normalized":"grilled","yield_factor_water":0.8,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":911.7,"raw_water_grams":653.92,"raw_fat_grams":49.62,"raw_protein_grams":195.68,"raw_carb_grams":0.0,"final_grams":780.92}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Beef Flank Steak with Marinade', quantity: 'custom (g)', foodWord: 'BEEFFLANKSTEAK', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'soy sauce', quantity: '1/4 cup soy sauce', section: 'marinade', ndbNo: '16123', portionDesc: 'g', portionGrams: 64.0 },
+      { name: 'olive oil', quantity: '3 tbsp olive oil', section: 'marinade', ndbNo: '4053', portionDesc: 'g', portionGrams: 40.8 },
+      { name: 'lime juice', quantity: '3 tbsp lime juice', section: 'marinade', ndbNo: '9160', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'marinade', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'ground cumin', quantity: '2 tsp ground cumin', section: 'marinade', ndbNo: '2014', portionDesc: 'g', portionGrams: 4.0 },
+      { name: 'chili powder', quantity: '1 tsp chili powder', section: 'marinade', ndbNo: '2009', portionDesc: 'g', portionGrams: 2.7 },
+      { name: 'ground black pepper', quantity: '1 tsp black pepper', section: 'marinade', ndbNo: '2030', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'beef flank steak', quantity: '2 lbs beef flank steak', section: 'steak', ndbNo: '23656', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'salt', quantity: '3/4 tsp salt', section: 'steak', ndbNo: '2047', portionDesc: 'g', portionGrams: 4.5 }
+    ],
+    recipeInstructions: [
+      'Whisk together the soy sauce, olive oil, lime juice, garlic, cumin, chili powder, and black pepper in a shallow dish or zip-top bag. Add the flank steak and turn to coat. Marinate in the refrigerator for at least 2 hours, or up to 8 hours for maximum flavor.',
+      'Remove the steak from the marinade and pat dry with paper towels. Discard the marinade. Season both sides with salt.',
+      'Heat a grill or grill pan over high heat until very hot. Grill the flank steak 4 to 5 minutes per side for medium-rare (internal temperature 130 to 135°F), or until desired doneness.',
+      'Transfer to a cutting board and rest for 5 to 10 minutes.',
+      'Slice thinly against the grain and serve immediately.'
+    ],
+    sections: [
+      { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
+      { key: 'steak', label: 'Steak', cookingMethod: '', yieldFactorWater: 0.8 }
+    ],
   }
 ];
