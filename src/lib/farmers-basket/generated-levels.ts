@@ -12556,7 +12556,7 @@ export const LEVELS: Level[] = [
       { name: 'ground black pepper', quantity: '1 tsp', section: 'ragu', ndbNo: '2030', portionDesc: 'g', portionGrams: 2.3 }
     ],
     recipeInstructions: [
-      'Preheat the oven to 325°F. Season the beef chuck roast generously with salt and pepper.',
+      'Preheat the oven to 325°F. Cut the roast into 4 pieces then season generously with salt and pepper.',
       'Heat the olive oil in a large Dutch oven over medium-high heat. Sear the roast on all sides until deep brown, about 3 to 4 minutes per side. Remove and set aside.',
       'Reduce heat to medium. Sauté the onion, celery, and carrot for 5 minutes until softened. Add the garlic and tomato paste and cook for 1 minute.',
       'Pour in the red wine and scrape up any browned bits. Simmer for 2 minutes until slightly reduced.',
