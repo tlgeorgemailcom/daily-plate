@@ -11837,5 +11837,63 @@ export const LEVELS: Level[] = [
       { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
       { key: 'steak', label: 'Steak', cookingMethod: '', yieldFactorWater: 0.8 }
     ],
+  },
+  {
+    id: 'ENTR_021',
+    name: 'Beef Italian Meatballs',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 255,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving meatballs & sauce (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":606.4,"pro":34.2,"fat":40.7,"carb":27.4,"fib":5.0,"h2o":253.5,"sug":10.2,"perServing":{"cal":606.4,"pro":34.2,"fat":40.7,"carb":27.4,"fib":5.0,"h2o":253.5,"sug":10.2,"AddedSugars":0.0,"IntrinsicSugars":10.2},"micros":{"vitaminA":18.81,"vitaminC":3.29,"vitaminD":5.74,"vitaminE":0.94,"vitaminK":22.59,"vitaminB6":0.17,"vitaminB12":0.59,"thiamin":0.15,"riboflavin":0.13,"niacin":1.96,"folate":12.69,"calcium":67.45,"iron":1.63,"magnesium":20.61,"phosphorus":111.49,"potassium":263.81,"sodium":392.54,"zinc":1.65,"copper":0.12,"selenium":10.4,"cholesterol":42.43,"saturatedFat":3.84,"monoFat":5.28,"polyFat":0.65,"omega3":0.01,"omega6":0.04},"gramsPerServing":363.1,"servings":4,"per100g":{"Energy_KCal":166.99,"Water":69.82,"Protein":9.41,"TotalLipidFat":11.2,"Carbohydrate":7.54,"FiberTotalDietary":1.38,"SugarsTotal":2.8,"Cholesterol":42.43,"FattyAcids_totalSaturated":3.84,"FattyAcids_totalMonounsaturated":5.28,"FattyAcids_totalPolyunsaturated":0.65,"LinoleicAcid":0.04,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":18.81,"Retinol":10.06,"Carotene_beta":103.38,"VitaminD":5.74,"VitaminE_alphaTocopherol":0.94,"VitaminK_phylloquinone":22.59,"VitaminC_totalAscorbicAcid":3.29,"Thiamin":0.15,"Riboflavin":0.13,"Niacin":1.96,"PantothenicAcid":0.36,"VitaminB6":0.17,"Folate_total":12.69,"Folate_food":10.4,"Folate_DFE":14.28,"FolicAcid":3.05,"VitaminB12":0.59,"Choline_total":28.34,"Betaine":2.01,"LuteinZeaxanthin":111.95,"Lycopene":2278.37,"Calcium_Ca":67.45,"Iron_Fe":1.63,"Magnesium_Mg":20.61,"Phosphorus_P":111.49,"Potassium_K":263.81,"Sodium_Na":392.54,"Zinc_Zn":1.65,"Copper_Cu":0.12,"Manganese_Mn":0.18,"Selenium_Se":10.4,"Tryptophan":0.08,"Threonine":0.37,"Isoleucine":0.41,"Leucine":0.71,"Lysine":0.72,"Methionine":0.22,"Cystine":0.09,"Phenylalanine":0.38,"Tyrosine":0.3,"Valine":0.48,"Arginine":0.53,"Histidine":0.3,"Alanine":0.5,"AsparticAcid":0.85,"GlutamicAcid":1.72,"Glycine":0.47,"Proline":0.5,"Serine":0.4,"omega3":0.01,"omega6":0.04,"AddedSugars":0.0,"IntrinsicSugars":2.8},"addedSugars":0.0,"intrinsicSugars":10.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.88,"yieldFactorFat":1.0,"sources":[{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":85.0},{"ndb":"10219","name":"Pork, fresh, ground, raw","grams":56.7},{"ndb":"18079","name":"Bread crumbs, dry, grated, plain","grams":13.5},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":15.2},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":12.5},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":7.1},{"ndb":"11282","name":"Onions, raw","grams":10.0},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"11297","name":"Parsley, fresh","grams":3.8},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.5},{"ndb":"2003","name":"Spices, basil, dried","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":180.0},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.5},{"ndb":"2003","name":"Spices, basil, dried","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"meatballs","section_label":"Meatballs","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":14,"raw_grams":847.6,"raw_water_grams":507.06,"raw_fat_grams":146.97,"raw_protein_grams":124.14,"raw_carb_grams":53.04,"final_grams":771.54},{"section_key":"sauce","section_label":"Tomato Sauce","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":745.68,"raw_water_grams":647.81,"raw_fat_grams":15.77,"raw_protein_grams":12.57,"raw_carb_grams":56.41,"final_grams":680.89}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Beef Italian Meatballs', quantity: 'custom (g)', foodWord: 'BEEFITALIANMEATBALL', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'ground beef (80/20)', quantity: '3/4 lb ground beef (80/20)', section: 'meatballs', ndbNo: '23572', portionDesc: 'g', portionGrams: 340.2 },
+      { name: 'Ground pork (raw)', quantity: '1/2 lb ground pork', section: 'meatballs', ndbNo: '10219', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'dry bread crumbs', quantity: '1/2 cup dry bread crumbs', section: 'meatballs', ndbNo: '18079', portionDesc: 'g', portionGrams: 54.0 },
+      { name: 'whole milk', quantity: '1/4 cup whole milk', section: 'meatballs', ndbNo: '1077', portionDesc: 'g', portionGrams: 61.0 },
+      { name: 'large egg', quantity: '1 large egg', section: 'meatballs', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'Parmesan cheese', quantity: '1 oz Parmesan, freshly grated', section: 'meatballs', ndbNo: '1033', portionDesc: 'g', portionGrams: 28.35 },
+      { name: 'onion', quantity: '1/4 cup onion, finely minced', section: 'meatballs', ndbNo: '11282', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'meatballs', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'fresh parsley', quantity: '1/4 cup fresh parsley, chopped', section: 'meatballs', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'dried oregano', quantity: '1 tsp dried oregano', section: 'meatballs', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.8 },
+      { name: 'dried basil', quantity: '1 tsp dried basil', section: 'meatballs', ndbNo: '2003', portionDesc: 'g', portionGrams: 0.7 },
+      { name: 'salt', quantity: '1 tsp salt', section: 'meatballs', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/2 tsp black pepper', section: 'meatballs', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'olive oil', quantity: '1 tbsp olive oil (for browning)', section: 'meatballs', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'canned crushed tomatoes', quantity: '3 cups crushed tomatoes (one 28 oz can)', section: 'sauce', ndbNo: '11693', portionDesc: 'g', portionGrams: 720.0 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'olive oil', quantity: '1 tbsp olive oil', section: 'sauce', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'dried oregano', quantity: '1 tsp dried oregano', section: 'sauce', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.8 },
+      { name: 'dried basil', quantity: '1 tsp dried basil', section: 'sauce', ndbNo: '2003', portionDesc: 'g', portionGrams: 0.7 },
+      { name: 'salt', quantity: '1/2 tsp salt', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp black pepper', section: 'sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Combine the ground beef, ground pork, bread crumbs, milk, egg, Parmesan, onion, garlic, parsley, oregano, basil, salt, and black pepper in a large bowl. Mix gently until just combined — do not overwork the meat.',
+      'Shape the mixture into meatballs about 1½ inches in diameter (approximately 1½ oz each). You should get 18 to 20 meatballs.',
+      'Heat the olive oil in a large skillet over medium-high heat. Brown the meatballs in batches, turning to sear all sides, 4 to 5 minutes total. The meatballs do not need to be fully cooked through at this stage. Transfer to a plate.',
+      'Make the sauce: in the same skillet, add the olive oil and garlic. Cook over medium heat for 1 minute until fragrant. Add the crushed tomatoes, oregano, basil, salt, and black pepper. Stir to combine.',
+      'Return the browned meatballs to the skillet. Nestle them into the sauce. Reduce heat to low, cover, and simmer for 20 to 25 minutes until the meatballs are cooked through and the sauce has thickened.',
+      'Serve over pasta or with crusty bread, garnished with fresh parsley and additional Parmesan if desired.'
+    ],
+    sections: [
+      { key: 'meatballs', label: 'Meatballs', cookingMethod: '', yieldFactorWater: 0.85 },
+      { key: 'sauce', label: 'Tomato Sauce', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];
