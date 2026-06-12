@@ -12361,5 +12361,55 @@ export const LEVELS: Level[] = [
       { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.82 },
       { key: 'stir_fry', label: 'Stir-Fry', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'ENTR_031',
+    name: 'Beef Picadillo',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 265,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":430.0,"pro":32.5,"fat":23.3,"carb":22.5,"fib":4.4,"h2o":241.6,"sug":12.6,"perServing":{"cal":430.0,"pro":32.5,"fat":23.3,"carb":22.5,"fib":4.4,"h2o":241.6,"sug":12.6,"AddedSugars":0.0,"IntrinsicSugars":12.6},"micros":{"vitaminA":6.97,"vitaminC":6.73,"vitaminD":1.49,"vitaminE":0.61,"vitaminK":4.65,"vitaminB6":0.21,"vitaminB12":0.95,"thiamin":0.05,"riboflavin":0.1,"niacin":2.17,"folate":9.11,"calcium":33.48,"iron":1.82,"magnesium":20.67,"phosphorus":104.34,"potassium":304.26,"sodium":342.84,"zinc":2.34,"copper":0.12,"selenium":8.28,"cholesterol":37.05,"saturatedFat":4.18,"monoFat":5.71,"polyFat":0.36,"omega3":0.02,"omega6":0.0},"gramsPerServing":326.0,"servings":4,"per100g":{"Energy_KCal":131.91,"Water":74.12,"Protein":9.97,"TotalLipidFat":7.16,"Carbohydrate":6.9,"FiberTotalDietary":1.34,"SugarsTotal":3.87,"Cholesterol":37.05,"FattyAcids_totalSaturated":4.18,"FattyAcids_totalMonounsaturated":5.71,"FattyAcids_totalPolyunsaturated":0.36,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":6.97,"Retinol":1.67,"Carotene_beta":59.27,"VitaminD":1.49,"VitaminE_alphaTocopherol":0.61,"VitaminK_phylloquinone":4.65,"VitaminC_totalAscorbicAcid":6.73,"Thiamin":0.05,"Riboflavin":0.1,"Niacin":2.17,"PantothenicAcid":0.3,"VitaminB6":0.21,"Folate_total":9.11,"Folate_food":9.11,"Folate_DFE":9.11,"FolicAcid":0.0,"VitaminB12":0.95,"Choline_total":32.33,"Betaine":4.32,"LuteinZeaxanthin":68.09,"Lycopene":1287.47,"Calcium_Ca":33.48,"Iron_Fe":1.82,"Magnesium_Mg":20.67,"Phosphorus_P":104.34,"Potassium_K":304.26,"Sodium_Na":342.84,"Zinc_Zn":2.34,"Copper_Cu":0.12,"Manganese_Mn":0.14,"Selenium_Se":8.28,"Tryptophan":0.05,"Threonine":0.37,"Isoleucine":0.41,"Leucine":0.72,"Lysine":0.77,"Methionine":0.24,"Cystine":0.08,"Phenylalanine":0.38,"Tyrosine":0.28,"Valine":0.46,"Arginine":0.62,"Histidine":0.3,"Alanine":0.58,"AsparticAcid":0.91,"GlutamicAcid":1.59,"Glycine":0.63,"Proline":0.48,"Serine":0.38,"omega3":0.02,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":3.87},"addedSugars":0.0,"intrinsicSugars":12.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.85,"yieldFactorFat":0.593,"sources":[{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":170.1},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"11282","name":"Onions, raw","grams":40.0},{"ndb":"11333","name":"Peppers, sweet, green, raw","grams":37.2},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":102.8},{"ndb":"9195","name":"Olives, pickled, canned or bottled, green","grams":8.1},{"ndb":"2054","name":"Capers, canned","grams":4.3},{"ndb":"9298","name":"Raisins, seedless","grams":9.1},{"ndb":"2048","name":"Vinegar, cider","grams":3.8},{"ndb":"2014","name":"Spices, cumin seed","grams":0.8},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.2},{"ndb":"2004","name":"Spices, bay leaf","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"picadillo","section_label":"Picadillo","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.85,"yield_factor_fat":0.593,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":15,"raw_grams":1538.63,"raw_water_grams":1137.03,"raw_fat_grams":157.41,"raw_protein_grams":130.0,"raw_carb_grams":90.0,"final_grams":1304.0}],"cookingMethod":"pan grilled"},
+    recipeIngredients: [
+      { name: 'Beef Picadillo', quantity: 'custom (g)', foodWord: 'BEEFPICADILLO', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'ground beef (80/20)', quantity: '1-1/2 lb', section: 'picadillo', ndbNo: '23572', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'picadillo', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'onion', quantity: '1 large onion', section: 'picadillo', ndbNo: '11282', portionDesc: 'g', portionGrams: 160.0 },
+      { name: 'green bell pepper', quantity: '1 large green pepper', section: 'picadillo', ndbNo: '11333', portionDesc: 'g', portionGrams: 149.0 },
+      { name: 'garlic', quantity: '4 cloves', section: 'picadillo', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'canned crushed tomatoes', quantity: '1 can (14.5 oz)', section: 'picadillo', ndbNo: '11693', portionDesc: 'g', portionGrams: 411.0 },
+      { name: 'green olives', quantity: '1/4 cup green olives', section: 'picadillo', ndbNo: '9195', portionDesc: 'g', portionGrams: 32.4 },
+      { name: 'capers', quantity: '2 tbsp capers, drained', section: 'picadillo', ndbNo: '2054', portionDesc: 'g', portionGrams: 17.2 },
+      { name: 'raisins', quantity: '1/4 cup raisins', section: 'picadillo', ndbNo: '9298', portionDesc: 'g', portionGrams: 36.25 },
+      { name: 'apple cider vinegar', quantity: '1 tbsp apple cider vinegar', section: 'picadillo', ndbNo: '2048', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'ground cumin', quantity: '1-1/2 tsp cumin', section: 'picadillo', ndbNo: '2014', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'dried oregano', quantity: '1 tsp dried oregano', section: 'picadillo', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'bay leaf', quantity: '2 bay leaves', section: 'picadillo', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'salt', quantity: '1 tsp salt', section: 'picadillo', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp black pepper', section: 'picadillo', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Heat the olive oil in a large skillet over medium-high heat. Add the ground beef and cook, breaking it apart, until browned and cooked through, about 7 to 8 minutes. Drain excess fat.',
+      'Add the onion and bell pepper to the skillet and cook for 4 to 5 minutes until softened. Add the garlic and cook 1 minute more.',
+      'Stir in the crushed tomatoes, green olives, capers, raisins, apple cider vinegar, cumin, oregano, and bay leaves. Season with salt and pepper.',
+      'Reduce heat to medium-low and simmer uncovered for 15 to 20 minutes, stirring occasionally, until the sauce thickens and flavors meld.',
+      'Remove and discard the bay leaves. Taste and adjust seasoning. Serve as a filling for tacos or empanadas, or over rice.'
+    ],
+    sections: [
+      { key: 'picadillo', label: 'Picadillo', cookingMethod: '', yieldFactorWater: 0.85, yieldFactorFat: 0.593 }
+    ],
   }
 ];
