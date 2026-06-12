@@ -11427,5 +11427,62 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'curry', label: 'Curry', cookingMethod: '', yieldFactorWater: 0.8, yieldFactorFat: 0.85 }
     ],
+  },
+  {
+    id: 'ENTR_014',
+    name: 'Beef Ropa Vieja',
+    category: 'Entrees & Main Courses',
+    dietaryCategory: 'all',
+    levelNum: 247,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '4 plates',
+    prepTime: '2 hr 30 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":492.1,"pro":52.2,"fat":22.5,"carb":14.4,"fib":4.1,"h2o":315.1,"sug":6.7,"perServing":{"cal":492.1,"pro":52.2,"fat":22.5,"carb":14.4,"fib":4.1,"h2o":315.1,"sug":6.7,"AddedSugars":0.0,"IntrinsicSugars":6.7},"micros":{"vitaminA":20.26,"vitaminC":9.25,"vitaminD":0.0,"vitaminE":0.87,"vitaminK":5.9,"vitaminB6":0.25,"vitaminB12":0.5,"thiamin":0.03,"riboflavin":0.06,"niacin":2.66,"folate":10.91,"calcium":24.64,"iron":1.06,"magnesium":16.59,"phosphorus":108.51,"potassium":246.25,"sodium":268.4,"zinc":1.94,"copper":0.06,"selenium":14.17,"cholesterol":33.99,"saturatedFat":1.47,"monoFat":2.77,"polyFat":0.31,"omega3":0.0,"omega6":0.0},"gramsPerServing":413.7,"servings":4,"per100g":{"Energy_KCal":118.96,"Water":76.17,"Protein":12.61,"TotalLipidFat":5.43,"Carbohydrate":3.49,"FiberTotalDietary":1.0,"SugarsTotal":1.61,"Cholesterol":33.99,"FattyAcids_totalSaturated":1.47,"FattyAcids_totalMonounsaturated":2.77,"FattyAcids_totalPolyunsaturated":0.31,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":20.26,"Retinol":0.0,"Carotene_beta":215.23,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.87,"VitaminK_phylloquinone":5.9,"VitaminC_totalAscorbicAcid":9.25,"Thiamin":0.03,"Riboflavin":0.06,"Niacin":2.66,"PantothenicAcid":0.29,"VitaminB6":0.25,"Folate_total":10.91,"Folate_food":10.91,"Folate_DFE":10.91,"FolicAcid":0.0,"VitaminB12":0.5,"Choline_total":46.06,"Betaine":7.36,"LuteinZeaxanthin":55.26,"Lycopene":860.59,"Calcium_Ca":24.64,"Iron_Fe":1.06,"Magnesium_Mg":16.59,"Phosphorus_P":108.51,"Potassium_K":246.25,"Sodium_Na":268.4,"Zinc_Zn":1.94,"Copper_Cu":0.06,"Manganese_Mn":0.1,"Selenium_Se":14.17,"Tryptophan":0.08,"Threonine":0.49,"Isoleucine":0.55,"Leucine":0.95,"Lysine":1.01,"Methionine":0.31,"Cystine":0.15,"Phenylalanine":0.49,"Tyrosine":0.38,"Valine":0.6,"Arginine":0.79,"Histidine":0.38,"Alanine":0.73,"AsparticAcid":1.16,"GlutamicAcid":1.94,"Glycine":0.73,"Proline":0.57,"Serine":0.48,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":1.61},"addedSugars":0.0,"intrinsicSugars":6.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"23656","name":"Beef, flank, steak, separable lean only, trimmed to 0\" fat, all grades, raw","grams":226.8},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":61.5},{"ndb":"11333","name":"Peppers, sweet, green, raw","grams":29.8},{"ndb":"11821","name":"Peppers, sweet, red, raw","grams":29.8},{"ndb":"11282","name":"Onions, raw","grams":37.5},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"14106","name":"Alcoholic beverage, wine, table, white","grams":30.0},{"ndb":"6008","name":"Soup, beef broth or bouillon canned, ready-to-serve","grams":60.0},{"ndb":"11546","name":"Tomato products, canned, paste, without salt added","grams":8.2},{"ndb":"9195","name":"Olives, pickled, canned or bottled, green","grams":16.8},{"ndb":"2054","name":"Capers, canned","grams":4.3},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"2014","name":"Spices, cumin seed","grams":0.5},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.7},{"ndb":"2004","name":"Spices, bay leaf","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"11165","name":"Coriander (cilantro) leaves, raw","grams":1.0}],"sections":[{"section_key":"ropa","section_label":"Ropa Vieja","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":18,"raw_grams":2074.75,"raw_water_grams":1680.4,"raw_fat_grams":89.92,"raw_protein_grams":208.72,"raw_carb_grams":57.69,"final_grams":1654.65}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Beef Ropa Vieja', quantity: 'custom (g)', foodWord: 'ROPAVIEJA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'beef flank steak', quantity: '2 lbs flank steak', section: 'ropa', ndbNo: '23656', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'tomato', quantity: '2 medium tomatoes', section: 'ropa', ndbNo: '11529', portionDesc: 'g', portionGrams: 246.0 },
+      { name: 'green bell pepper', quantity: '1 medium green bell pepper', section: 'ropa', ndbNo: '11333', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'red bell pepper', quantity: '1 medium red bell pepper', section: 'ropa', ndbNo: '11821', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'onion', quantity: '1 large onion', section: 'ropa', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'garlic', quantity: '4 cloves garlic', section: 'ropa', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'white wine', quantity: '1/2 cup dry white wine', section: 'ropa', ndbNo: '14106', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'beef broth', quantity: '1 cup beef broth', section: 'ropa', ndbNo: '6008', portionDesc: 'g', portionGrams: 240.0 },
+      { name: 'tomato paste', quantity: '2 tbsp tomato paste', section: 'ropa', ndbNo: '11546', portionDesc: 'g', portionGrams: 33.0 },
+      { name: 'green olives', quantity: '1/2 cup green olives', section: 'ropa', ndbNo: '9195', portionDesc: 'g', portionGrams: 67.0 },
+      { name: 'capers', quantity: '2 tbsp capers', section: 'ropa', ndbNo: '2054', portionDesc: 'g', portionGrams: 17.2 },
+      { name: 'olive oil', quantity: '2 tbsp olive oil', section: 'ropa', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'ground cumin', quantity: '1 tsp cumin', section: 'ropa', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.1 },
+      { name: 'dried oregano', quantity: '1 tsp dried oregano', section: 'ropa', ndbNo: '2027', portionDesc: 'g', portionGrams: 2.7 },
+      { name: 'bay leaf', quantity: '2 bay leaves', section: 'ropa', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'salt', quantity: '1 tsp salt', section: 'ropa', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/2 tsp black pepper', section: 'ropa', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'fresh cilantro', quantity: '1/4 cup cilantro', section: 'ropa', ndbNo: '11165', portionDesc: 'g', portionGrams: 4.0 }
+    ],
+    recipeInstructions: [
+      'Season the flank steak generously with salt and pepper on both sides.',
+      'Heat olive oil in a large Dutch oven over medium-high heat. Sear the flank steak 3 to 4 minutes per side until deeply browned. Remove and set aside.',
+      'Reduce heat to medium. Add the onion and both bell peppers to the pot. Cook 5 to 6 minutes, stirring occasionally, until softened. Add garlic and cook 1 minute more.',
+      'Add cumin and oregano. Stir and cook 30 seconds until fragrant. Add tomato paste and cook 1 minute until darkened.',
+      'Add the tomatoes, white wine, and beef broth. Stir, scraping up any browned bits from the bottom. Return the steak to the pot. Tuck in the bay leaves. The liquid should come about halfway up the steak.',
+      'Bring to a boil, then reduce heat to low. Cover and simmer 1½ to 2 hours, turning the steak once halfway through, until the beef is completely tender and shreds easily.',
+      'Remove the steak to a cutting board. Discard the bay leaves. Using two forks, shred the meat into long, thin strips along the grain.',
+      'Return the shredded beef to the pot. Add the green olives and capers. Stir to combine and simmer uncovered 10 minutes to meld the flavors. Taste and adjust seasoning.',
+      'Stir in the cilantro just before serving. Serve over white rice or with black beans.'
+    ],
+    sections: [
+      { key: 'ropa', label: 'Ropa Vieja', cookingMethod: '', yieldFactorWater: 0.75 }
+    ],
   }
 ];
