@@ -305,3 +305,6 @@ corn_tortilla,18363,TORTILLACORN,"Tortillas, ready-to-bake or -fry, corn",corn t
 caraway_seed,2005,CARAWAY,"Spices, caraway seed",caraway seed,tsp,2.1,
 marjoram_dried,2023,MARJORAM,"Spices, marjoram, dried",dried marjoram,tsp,0.6,
 cheese_ricotta_wholemilk,1036,RICOTTA,"Cheese, ricotta, whole milk",Ricotta cheese,cup,246.0,added during ENTR_022 build
+egg_noodles_dry,20109,NOODLEEGGDRY,"Noodles, egg, dry, enriched",dry egg noodles,oz,28.35,added during ENTR_023 build; bin=0.6773 added to comboo.db
+bean_sprouts_raw,11043,BEANSPROUT,"Mung beans, mature seeds, sprouted, raw",bean sprouts,cup,104.0,added during ENTR_023 build
+hoisin_sauce,6175,HOISINSAUCE,"Sauce, hoisin, ready-to-serve",hoisin sauce,tablespoon,16.0,added during ENTR_023 build

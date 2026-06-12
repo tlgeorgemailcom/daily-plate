@@ -11953,5 +11953,59 @@ export const LEVELS: Level[] = [
       { key: 'meat_sauce', label: 'Meat Sauce', cookingMethod: '', yieldFactorWater: 0.85 },
       { key: 'cheese_filling', label: 'Cheese Filling', cookingMethod: '', yieldFactorWater: 0.92 }
     ],
+  },
+  {
+    id: 'ENTR_023',
+    name: 'Beef Lo Mein',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 257,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":571.1,"pro":38.0,"fat":18.8,"carb":62.6,"fib":5.0,"h2o":318.0,"sug":7.1,"perServing":{"cal":571.1,"pro":38.0,"fat":18.8,"carb":62.6,"fib":5.0,"h2o":318.0,"sug":7.1,"AddedSugars":0.0,"IntrinsicSugars":7.1},"micros":{"vitaminA":26.7,"vitaminC":2.24,"vitaminD":1.81,"vitaminE":0.33,"vitaminK":13.41,"vitaminB6":0.16,"vitaminB12":0.27,"thiamin":0.14,"riboflavin":0.12,"niacin":2.52,"folate":33.77,"calcium":23.14,"iron":1.15,"magnesium":20.59,"phosphorus":104.03,"potassium":202.09,"sodium":251.25,"zinc":1.42,"copper":0.11,"selenium":19.65,"cholesterol":28.71,"saturatedFat":1.01,"monoFat":2.04,"polyFat":0.53,"omega3":0.01,"omega6":0.0},"gramsPerServing":443.2,"servings":4,"per100g":{"Energy_KCal":128.87,"Water":71.76,"Protein":8.57,"TotalLipidFat":4.25,"Carbohydrate":14.14,"FiberTotalDietary":1.12,"SugarsTotal":1.6,"Cholesterol":28.71,"FattyAcids_totalSaturated":1.01,"FattyAcids_totalMonounsaturated":2.04,"FattyAcids_totalPolyunsaturated":0.53,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":26.7,"Retinol":2.33,"Carotene_beta":243.57,"VitaminD":1.81,"VitaminE_alphaTocopherol":0.33,"VitaminK_phylloquinone":13.41,"VitaminC_totalAscorbicAcid":2.24,"Thiamin":0.14,"Riboflavin":0.12,"Niacin":2.52,"PantothenicAcid":0.34,"VitaminB6":0.16,"Folate_total":33.77,"Folate_food":13.87,"Folate_DFE":47.63,"FolicAcid":30.62,"VitaminB12":0.27,"Choline_total":34.84,"Betaine":25.12,"LuteinZeaxanthin":39.32,"Lycopene":0.04,"Calcium_Ca":23.14,"Iron_Fe":1.15,"Magnesium_Mg":20.59,"Phosphorus_P":104.03,"Potassium_K":202.09,"Sodium_Na":251.25,"Zinc_Zn":1.42,"Copper_Cu":0.11,"Manganese_Mn":0.23,"Selenium_Se":19.65,"Tryptophan":0.07,"Threonine":0.32,"Isoleucine":0.37,"Leucine":0.66,"Lysine":0.58,"Methionine":0.19,"Cystine":0.11,"Phenylalanine":0.36,"Tyrosine":0.24,"Valine":0.41,"Arginine":0.5,"Histidine":0.25,"Alanine":0.45,"AsparticAcid":0.71,"GlutamicAcid":1.66,"Glycine":0.44,"Proline":0.53,"Serine":0.37,"omega3":0.01,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":1.6},"addedSugars":0.0,"intrinsicSugars":7.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.95,"yieldFactorFat":1.0,"sources":[{"ndb":"20109","name":"Noodles, egg, dry, enriched","grams":67.5},{"ndb":"14411","name":"Water, tap, drinking","grams":250.0},{"ndb":"23656","name":"Beef, flank, steak, separable lean only, trimmed to 0\" fat, all grades, raw","grams":113.4},{"ndb":"11109","name":"Cabbage, raw","grams":33.5},{"ndb":"11124","name":"Carrots, raw","grams":15.2},{"ndb":"11043","name":"Mung beans, mature seeds, sprouted, raw","grams":26.0},{"ndb":"11266","name":"Mushrooms, brown, italian, or crimini, raw","grams":21.2},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":11.2},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11216","name":"Ginger root, raw","grams":3.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"16123","name":"Soy sauce made from soy and wheat (shoyu)","grams":16.0},{"ndb":"6175","name":"Sauce, hoisin, ready-to-serve","grams":8.0},{"ndb":"4058","name":"Oil, sesame, salad or cooking","grams":2.2},{"ndb":"20027","name":"Cornstarch","grams":2.0},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3}],"sections":[{"section_key":"noodles","section_label":"Noodles","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.5059286725707767,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":1270.0,"raw_water_grams":1023.33,"raw_fat_grams":11.99,"raw_protein_grams":38.23,"raw_carb_grams":192.43,"final_grams":764.4},{"section_key":"stir_fry","section_label":"Stir-Fry","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.95,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":14,"raw_grams":1047.95,"raw_water_grams":794.07,"raw_fat_grams":63.29,"raw_protein_grams":113.62,"raw_carb_grams":58.15,"final_grams":1008.25}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Beef Lo Mein', quantity: 'custom (g)', foodWord: 'BEEFLOMEL', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'dry egg noodles', quantity: '9.5 oz dry egg noodles', section: 'noodles', ndbNo: '20109', portionDesc: 'g', portionGrams: 270.0 },
+      { name: 'water', quantity: 'water for boiling', section: 'noodles', ndbNo: '14411', portionDesc: 'g', portionGrams: 1000.0 },
+      { name: 'beef flank steak, thinly sliced', quantity: '1 lb beef flank steak, thinly sliced', section: 'stir_fry', ndbNo: '23656', portionDesc: 'g', portionGrams: 453.6 },
+      { name: 'green cabbage', quantity: '1-1/2 cups green cabbage, shredded', section: 'stir_fry', ndbNo: '11109', portionDesc: 'g', portionGrams: 134.0 },
+      { name: 'carrot', quantity: '1 medium carrot, julienned', section: 'stir_fry', ndbNo: '11124', portionDesc: 'g', portionGrams: 61.0 },
+      { name: 'bean sprouts', quantity: '1 cup bean sprouts', section: 'stir_fry', ndbNo: '11043', portionDesc: 'g', portionGrams: 104.0 },
+      { name: 'crimini mushrooms', quantity: '3 oz crimini mushrooms, sliced', section: 'stir_fry', ndbNo: '11266', portionDesc: 'g', portionGrams: 85.0 },
+      { name: 'scallion (green onion)', quantity: '3 scallions, sliced', section: 'stir_fry', ndbNo: '11291', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'stir_fry', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'fresh ginger', quantity: '2 tbsp fresh ginger, grated', section: 'stir_fry', ndbNo: '11216', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'olive oil', quantity: '2 tbsp neutral oil', section: 'stir_fry', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'soy sauce', quantity: '4 tbsp soy sauce', section: 'stir_fry', ndbNo: '16123', portionDesc: 'g', portionGrams: 64.0 },
+      { name: 'hoisin sauce', quantity: '2 tbsp hoisin sauce', section: 'stir_fry', ndbNo: '6175', portionDesc: 'g', portionGrams: 32.0 },
+      { name: 'Sesame oil', quantity: '2 tsp sesame oil', section: 'stir_fry', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'cornstarch', quantity: '1 tbsp cornstarch', section: 'stir_fry', ndbNo: '20027', portionDesc: 'g', portionGrams: 8.0 },
+      { name: 'ground black pepper', quantity: '1/2 tsp black pepper', section: 'stir_fry', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
+    ],
+    recipeInstructions: [
+      'Cook the egg noodles in a large pot of salted boiling water for 2 to 3 minutes until just tender (they will finish cooking in the wok). Drain, toss with a splash of sesame oil to prevent sticking, and set aside.',
+      'Combine the soy sauce, hoisin sauce, and black pepper in a small bowl. Set aside.',
+      'Toss the sliced beef with the cornstarch until lightly coated. Heat 1 tablespoon of the oil in a large wok or skillet over high heat until smoking. Stir-fry the beef in a single layer for 2 minutes until seared. Transfer to a plate.',
+      'Add the remaining oil to the wok. Add the garlic and ginger and stir-fry 30 seconds until fragrant. Add the mushrooms and carrots and stir-fry 2 minutes.',
+      'Add the cabbage and bean sprouts. Stir-fry 1 to 2 minutes until the cabbage just begins to wilt.',
+      'Return the beef to the wok. Add the cooked noodles and pour the sauce over everything. Toss and stir-fry over high heat for 1 to 2 minutes until everything is coated and heated through.',
+      'Remove from heat. Drizzle with sesame oil, scatter the scallions over the top, and serve immediately.'
+    ],
+    sections: [
+      { key: 'noodles', label: 'Noodles', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'stir_fry', label: 'Stir-Fry', cookingMethod: '', yieldFactorWater: 0.95 }
+    ],
   }
 ];
