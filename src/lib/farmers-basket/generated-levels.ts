@@ -12317,5 +12317,61 @@ export const LEVELS: Level[] = [
       { key: 'braise', label: 'Braise', cookingMethod: '', yieldFactorWater: 0.65 },
       { key: 'gremolata', label: 'Gremolata', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'ENTR_030',
+    name: 'Beef Pepper Steak',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 264,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving over rice (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":554.6,"pro":38.0,"fat":16.4,"carb":61.3,"fib":3.2,"h2o":323.9,"sug":4.0,"perServing":{"cal":554.6,"pro":38.0,"fat":16.4,"carb":61.3,"fib":3.2,"h2o":323.9,"sug":4.0,"AddedSugars":0.0,"IntrinsicSugars":4.0},"micros":{"vitaminA":9.64,"vitaminC":8.04,"vitaminD":0.0,"vitaminE":0.36,"vitaminK":2.39,"vitaminB6":0.2,"vitaminB12":0.29,"thiamin":0.07,"riboflavin":0.05,"niacin":2.27,"folate":27.43,"calcium":18.66,"iron":1.14,"magnesium":16.72,"phosphorus":92.62,"potassium":190.31,"sodium":292.1,"zinc":1.47,"copper":0.06,"selenium":10.51,"cholesterol":19.73,"saturatedFat":0.94,"monoFat":1.87,"polyFat":0.28,"omega3":0.0,"omega6":0.0},"gramsPerServing":445.3,"servings":4,"per100g":{"Energy_KCal":124.55,"Water":72.73,"Protein":8.53,"TotalLipidFat":3.69,"Carbohydrate":13.77,"FiberTotalDietary":0.71,"SugarsTotal":0.9,"Cholesterol":19.73,"FattyAcids_totalSaturated":0.94,"FattyAcids_totalMonounsaturated":1.87,"FattyAcids_totalPolyunsaturated":0.28,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":9.64,"Retinol":0.0,"Carotene_beta":101.28,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.36,"VitaminK_phylloquinone":2.39,"VitaminC_totalAscorbicAcid":8.04,"Thiamin":0.07,"Riboflavin":0.05,"Niacin":2.27,"PantothenicAcid":0.3,"VitaminB6":0.2,"Folate_total":27.43,"Folate_food":8.61,"Folate_DFE":40.59,"FolicAcid":28.95,"VitaminB12":0.29,"Choline_total":28.77,"Betaine":5.61,"LuteinZeaxanthin":21.61,"Lycopene":0.03,"Calcium_Ca":18.66,"Iron_Fe":1.14,"Magnesium_Mg":16.72,"Phosphorus_P":92.62,"Potassium_K":190.31,"Sodium_Na":292.1,"Zinc_Zn":1.47,"Copper_Cu":0.06,"Manganese_Mn":0.24,"Selenium_Se":10.51,"Tryptophan":0.06,"Threonine":0.33,"Isoleucine":0.37,"Leucine":0.65,"Lysine":0.64,"Methionine":0.2,"Cystine":0.1,"Phenylalanine":0.35,"Tyrosine":0.26,"Valine":0.42,"Arginine":0.56,"Histidine":0.25,"Alanine":0.49,"AsparticAcid":0.79,"GlutamicAcid":1.34,"Glycine":0.48,"Proline":0.4,"Serine":0.35,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.9},"addedSugars":0.0,"intrinsicSugars":4.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.82,"yieldFactorFat":1.0,"sources":[{"ndb":"23656","name":"Beef, flank, steak, separable lean only, trimmed to 0\" fat, all grades, raw","grams":141.8},{"ndb":"16123","name":"Soy sauce made from soy and wheat (shoyu)","grams":8.0},{"ndb":"20027","name":"Cornstarch","grams":4.0},{"ndb":"2030","name":"Spices, pepper, black","grams":0.6},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"11333","name":"Peppers, sweet, green, raw","grams":37.2},{"ndb":"11821","name":"Peppers, sweet, red, raw","grams":29.8},{"ndb":"11282","name":"Onions, raw","grams":40.0},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"11216","name":"Ginger root, raw","grams":0.5},{"ndb":"16123","name":"Soy sauce made from soy and wheat (shoyu)","grams":12.0},{"ndb":"6008","name":"Soup, beef broth or bouillon canned, ready-to-serve","grams":30.0},{"ndb":"20027","name":"Cornstarch","grams":2.0},{"ndb":"4058","name":"Oil, sesame, salad or cooking","grams":1.1},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"20044","name":"Rice, white, long-grain, regular, raw, enriched","grams":57.8},{"ndb":"14411","name":"Water, tap, drinking","grams":147.9}],"sections":[{"section_key":"beef","section_label":"Beef","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":617.3,"raw_water_grams":433.08,"raw_fat_grams":31.28,"raw_protein_grams":125.19,"raw_carb_grams":17.65,"final_grams":539.35},{"section_key":"stir_fry","section_label":"Stir-Fry","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":647.65,"raw_water_grams":551.07,"raw_fat_grams":32.91,"raw_protein_grams":10.24,"raw_carb_grams":42.82,"final_grams":592.54},{"section_key":"rice","section_label":"Rice","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.7194989567312655,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":822.75,"raw_water_grams":617.78,"raw_fat_grams":1.53,"raw_protein_grams":16.49,"raw_carb_grams":184.88,"final_grams":649.46}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Beef Pepper Steak', quantity: 'custom (g)', foodWord: 'BEEFPEPPERSTEAK', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'flank steak', quantity: '1-1/4 lb', section: 'beef', ndbNo: '23656', portionDesc: 'g', portionGrams: 567.0 },
+      { name: 'soy sauce', quantity: '2 tbsp soy sauce', section: 'beef', ndbNo: '16123', portionDesc: 'g', portionGrams: 32.0 },
+      { name: 'cornstarch', quantity: '2 tbsp cornstarch', section: 'beef', ndbNo: '20027', portionDesc: 'g', portionGrams: 16.0 },
+      { name: 'ground black pepper', quantity: '1 tsp black pepper', section: 'beef', ndbNo: '2030', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'stir_fry', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.0 },
+      { name: 'green bell pepper', quantity: '1 large green pepper', section: 'stir_fry', ndbNo: '11333', portionDesc: 'g', portionGrams: 149.0 },
+      { name: 'red bell pepper', quantity: '1 medium red pepper', section: 'stir_fry', ndbNo: '11821', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'onion', quantity: '1 large onion', section: 'stir_fry', ndbNo: '11282', portionDesc: 'g', portionGrams: 160.0 },
+      { name: 'garlic', quantity: '3 cloves', section: 'stir_fry', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'fresh ginger', quantity: '1 tsp grated ginger', section: 'stir_fry', ndbNo: '11216', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'soy sauce', quantity: '3 tbsp soy sauce', section: 'stir_fry', ndbNo: '16123', portionDesc: 'g', portionGrams: 48.0 },
+      { name: 'beef broth', quantity: '1/2 cup beef broth', section: 'stir_fry', ndbNo: '6008', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'cornstarch', quantity: '1 tbsp cornstarch', section: 'stir_fry', ndbNo: '20027', portionDesc: 'g', portionGrams: 8.0 },
+      { name: 'Sesame oil', quantity: '1 tsp', section: 'stir_fry', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'ground black pepper', quantity: '1/2 tsp black pepper', section: 'stir_fry', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'white rice (dry)', quantity: '1-1/4 cups', section: 'rice', ndbNo: '20044', portionDesc: 'g', portionGrams: 231.25 },
+      { name: 'water', quantity: '2-1/2 cups', section: 'rice', ndbNo: '14411', portionDesc: 'g', portionGrams: 591.5 }
+    ],
+    recipeInstructions: [
+      'Slice the flank steak across the grain into thin strips. Toss with soy sauce, cornstarch, and black pepper. Let marinate for 15 minutes.',
+      'Cook the rice: combine the rice and water in a medium saucepan. Bring to a boil, then reduce heat to low, cover, and simmer for 18 minutes. Remove from heat and let steam, covered, for 5 minutes.',
+      'In a small bowl, whisk together the soy sauce, beef broth, and cornstarch for the sauce. Set aside.',
+      'Heat 1 tablespoon olive oil in a wok or large skillet over high heat. Add the beef in a single layer and cook for 1 to 2 minutes per side until browned. Remove and set aside.',
+      'Add the remaining olive oil to the wok. Stir-fry the onion for 2 minutes, then add the bell peppers and cook 2 minutes more until slightly tender but still crisp.',
+      'Add the garlic and ginger and stir-fry for 30 seconds. Pour in the sauce and stir until thickened, about 1 minute.',
+      'Return the beef to the wok and toss to coat. Drizzle with sesame oil. Serve over the steamed white rice.'
+    ],
+    sections: [
+      { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.82 },
+      { key: 'stir_fry', label: 'Stir-Fry', cookingMethod: '', yieldFactorWater: 0.9 },
+      { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
