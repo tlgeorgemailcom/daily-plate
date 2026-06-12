@@ -11484,5 +11484,57 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'ropa', label: 'Ropa Vieja', cookingMethod: '', yieldFactorWater: 0.75 }
     ],
+  },
+  {
+    id: 'ENTR_015',
+    name: 'Beef Steak Diane',
+    category: 'Entrees & Main Courses',
+    dietaryCategory: 'all',
+    levelNum: 248,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '4 plates',
+    prepTime: '30 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":482.9,"pro":40.7,"fat":29.7,"carb":6.5,"fib":0.9,"h2o":198.9,"sug":3.0,"perServing":{"cal":482.9,"pro":40.7,"fat":29.7,"carb":6.5,"fib":0.9,"h2o":198.9,"sug":3.0,"AddedSugars":0.0,"IntrinsicSugars":3.0},"micros":{"vitaminA":58.31,"vitaminC":0.79,"vitaminD":8.55,"vitaminE":0.27,"vitaminK":11.44,"vitaminB6":0.31,"vitaminB12":1.84,"thiamin":0.04,"riboflavin":0.28,"niacin":3.0,"folate":8.31,"calcium":26.03,"iron":1.82,"magnesium":12.96,"phosphorus":168.71,"potassium":311.1,"sodium":302.32,"zinc":2.26,"copper":0.15,"selenium":18.8,"cholesterol":56.48,"saturatedFat":5.5,"monoFat":3.21,"polyFat":0.45,"omega3":0.02,"omega6":0.26},"gramsPerServing":283.8,"servings":4,"per100g":{"Energy_KCal":170.15,"Water":70.1,"Protein":14.34,"TotalLipidFat":10.47,"Carbohydrate":2.3,"FiberTotalDietary":0.31,"SugarsTotal":1.06,"Cholesterol":56.48,"FattyAcids_totalSaturated":5.5,"FattyAcids_totalMonounsaturated":3.21,"FattyAcids_totalPolyunsaturated":0.45,"LinoleicAcid":0.26,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":58.31,"Retinol":55.08,"Carotene_beta":38.77,"VitaminD":8.55,"VitaminE_alphaTocopherol":0.27,"VitaminK_phylloquinone":11.44,"VitaminC_totalAscorbicAcid":0.79,"Thiamin":0.04,"Riboflavin":0.28,"Niacin":3.0,"PantothenicAcid":0.47,"VitaminB6":0.31,"Folate_total":8.31,"Folate_food":8.31,"Folate_DFE":8.31,"FolicAcid":0.0,"VitaminB12":1.84,"Choline_total":37.38,"Betaine":7.87,"LuteinZeaxanthin":27.42,"Lycopene":0.02,"Calcium_Ca":26.03,"Iron_Fe":1.82,"Magnesium_Mg":12.96,"Phosphorus_P":168.71,"Potassium_K":311.1,"Sodium_Na":302.32,"Zinc_Zn":2.26,"Copper_Cu":0.15,"Manganese_Mn":0.08,"Selenium_Se":18.8,"Tryptophan":0.17,"Threonine":0.71,"Isoleucine":0.71,"Leucine":1.31,"Lysine":1.46,"Methionine":0.4,"Cystine":0.13,"Phenylalanine":0.61,"Tyrosine":0.57,"Valine":0.76,"Arginine":1.01,"Histidine":0.56,"Alanine":0.91,"AsparticAcid":1.47,"GlutamicAcid":2.54,"Glycine":0.66,"Proline":0.69,"Serine":0.62,"omega3":0.02,"omega6":0.26,"AddedSugars":0.0,"IntrinsicSugars":1.06},"addedSugars":0.0,"intrinsicSugars":3.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"23372","name":"Beef, loin, tenderloin steak, boneless, separable lean only, trimmed to 0\" fat, all grades, raw","grams":170.1},{"ndb":"1145","name":"Butter, without salt","grams":10.7},{"ndb":"11677","name":"Shallots, raw","grams":7.5},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"11266","name":"Mushrooms, brown, italian, or crimini, raw","grams":56.8},{"ndb":"14037","name":"Alcoholic beverage, distilled, all (gin, rum, vodka, whiskey) 80 proof","grams":15.0},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":29.8},{"ndb":"6008","name":"Soup, beef broth or bouillon canned, ready-to-serve","grams":30.0},{"ndb":"6971","name":"Sauce, worcestershire","grams":4.2},{"ndb":"11297","name":"Parsley, fresh","grams":1.9},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"","name":"Dijon-Style Mustard","grams":3.8}],"sections":[{"section_key":"steak","section_label":"Steak Diane","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.8,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":12,"raw_grams":1316.75,"raw_water_grams":983.08,"raw_fat_grams":117.19,"raw_protein_grams":161.54,"raw_carb_grams":24.64,"final_grams":1120.13},{"section_key":"dijon","section_label":"Dijon-Style Mustard","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":15.0,"raw_water_grams":9.26,"raw_fat_grams":1.64,"raw_protein_grams":1.19,"raw_carb_grams":1.5,"final_grams":15.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Beef Steak Diane', quantity: 'custom (g)', foodWord: 'STEAKDIANE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'beef tenderloin', quantity: '1 1/2 lbs beef tenderloin', section: 'steak', ndbNo: '23372', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'unsalted butter', quantity: '3 tbsp unsalted butter', section: 'steak', ndbNo: '1145', portionDesc: 'g', portionGrams: 42.6 },
+      { name: 'shallots', quantity: '3 tbsp minced shallots', section: 'steak', ndbNo: '11677', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'garlic', quantity: '2 cloves garlic', section: 'steak', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'crimini mushrooms', quantity: '8 oz crimini mushrooms', section: 'steak', ndbNo: '11266', portionDesc: 'g', portionGrams: 227.0 },
+      { name: 'brandy (cognac proxy)', quantity: '1/4 cup brandy', section: 'steak', ndbNo: '14037', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'heavy cream', quantity: '1/2 cup heavy cream', section: 'steak', ndbNo: '1053', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'beef broth', quantity: '1/2 cup beef broth', section: 'steak', ndbNo: '6008', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'Worcestershire sauce', quantity: '1 tbsp Worcestershire sauce', section: 'steak', ndbNo: '6971', portionDesc: 'g', portionGrams: 17.0 },
+      { name: 'fresh parsley', quantity: '2 tbsp fresh parsley', section: 'steak', ndbNo: '11297', portionDesc: 'g', portionGrams: 7.6 },
+      { name: 'salt', quantity: '1 tsp salt', section: 'steak', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/2 tsp black pepper', section: 'steak', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'Dijon-Style Mustard', quantity: '1 tbsp Dijon-Style Mustard (recipe)', section: 'dijon', foodWord: 'DIJONTYPEMUSTARD', portionDesc: 'g', portionGrams: 15.0, isDish: true, componentRef: 'SAUCE_010' }
+    ],
+    recipeInstructions: [
+      'Make or prepare the Dijon-Style Mustard (see the Dijon-Style Mustard recipe). Set aside.',
+      'Cut the beef tenderloin into 4 equal steaks, about ¾ to 1 inch thick. Season both sides generously with salt and pepper.',
+      'Melt 2 tablespoons of butter in a large skillet over high heat until foaming subsides. Sear the steaks 2 to 3 minutes per side for medium-rare. Remove to a plate and tent loosely with foil.',
+      'Reduce heat to medium. Add the remaining 1 tablespoon of butter to the pan. Add shallots and garlic, cook 1 minute. Add the mushrooms and cook 3 to 4 minutes until golden and most of the moisture has evaporated.',
+      'Remove the pan from heat. Add the brandy carefully. Return to heat and tilt the pan to flambé, or let the alcohol cook off for 1 to 2 minutes until the sharp aroma subsides.',
+      'Add the beef broth and Worcestershire sauce. Stir, scraping up any browned bits. Simmer 2 minutes. Add the heavy cream and Dijon mustard. Stir to combine and simmer 3 to 4 minutes until the sauce thickens enough to coat a spoon.',
+      'Return the steaks and any accumulated juices to the pan. Spoon the sauce over them and warm through 1 minute. Taste and adjust seasoning.',
+      'Plate the steaks, spoon the mushroom pan sauce over the top, and garnish with chopped parsley. Serve immediately.'
+    ],
+    sections: [
+      { key: 'steak', label: 'Steak Diane', cookingMethod: '', yieldFactorWater: 0.8 },
+      { key: 'dijon', label: 'Dijon-Style Mustard', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
