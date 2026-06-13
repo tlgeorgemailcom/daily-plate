@@ -448,3 +448,5 @@ ENTR_042,duxelles,Duxelles,,pan grilled,0.18,1.0,1.0,1.0,1.0,,,,
 ENTR_042,dijon,Dijon-Style Mustard,,raw,1.0,1.0,1.0,1.0,1.0,,,,SAUCE_010
 ENTR_042,wellington,Wellington,,baked,0.90,1.0,1.0,1.0,1.0,,,,
 ENTR_043,stir_fry,Stir Fry,,pan grilled,0.85,1.0,1.0,1.0,1.0,,,,
+ENTR_044,taco_meat,Taco Meat,,pan grilled,0.80,0.75,1.0,1.0,1.0,,,,
+ENTR_044,assembly,Assembly,,raw,1.0,1.0,1.0,1.0,1.0,,,,

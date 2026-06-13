@@ -13066,5 +13066,55 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'stir_fry', label: 'Stir Fry', cookingMethod: '', yieldFactorWater: 0.85 }
     ],
+  },
+  {
+    id: 'ENTR_044',
+    name: 'Beef Tacos',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 279,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":468.9,"pro":27.0,"fat":29.0,"carb":26.6,"fib":4.4,"h2o":163.6,"sug":2.8,"perServing":{"cal":468.9,"pro":27.0,"fat":29.0,"carb":26.6,"fib":4.4,"h2o":163.6,"sug":2.8,"AddedSugars":0.0,"IntrinsicSugars":2.8},"micros":{"vitaminA":50.91,"vitaminC":2.02,"vitaminD":2.65,"vitaminE":0.47,"vitaminK":4.54,"vitaminB6":0.18,"vitaminB12":0.91,"thiamin":0.04,"riboflavin":0.12,"niacin":1.98,"folate":9.88,"calcium":83.21,"iron":1.47,"magnesium":28.29,"phosphorus":175.04,"potassium":237.76,"sodium":271.13,"zinc":2.47,"copper":0.08,"selenium":10.2,"cholesterol":44.58,"saturatedFat":5.78,"monoFat":5.24,"polyFat":0.68,"omega3":0.02,"omega6":0.05},"gramsPerServing":250.2,"servings":4,"per100g":{"Energy_KCal":187.46,"Water":65.41,"Protein":10.8,"TotalLipidFat":11.6,"Carbohydrate":10.65,"FiberTotalDietary":1.75,"SugarsTotal":1.13,"Cholesterol":44.58,"FattyAcids_totalSaturated":5.78,"FattyAcids_totalMonounsaturated":5.24,"FattyAcids_totalPolyunsaturated":0.68,"LinoleicAcid":0.05,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":50.91,"Retinol":34.06,"Carotene_beta":182.99,"VitaminD":2.65,"VitaminE_alphaTocopherol":0.47,"VitaminK_phylloquinone":4.54,"VitaminC_totalAscorbicAcid":2.02,"Thiamin":0.04,"Riboflavin":0.12,"Niacin":1.98,"PantothenicAcid":0.3,"VitaminB6":0.18,"Folate_total":9.88,"Folate_food":9.88,"Folate_DFE":9.88,"FolicAcid":0.0,"VitaminB12":0.91,"Choline_total":30.61,"Betaine":3.96,"LuteinZeaxanthin":57.22,"Lycopene":316.39,"Calcium_Ca":83.21,"Iron_Fe":1.47,"Magnesium_Mg":28.29,"Phosphorus_P":175.04,"Potassium_K":237.76,"Sodium_Na":271.13,"Zinc_Zn":2.47,"Copper_Cu":0.08,"Manganese_Mn":0.12,"Selenium_Se":10.2,"Tryptophan":0.08,"Threonine":0.42,"Isoleucine":0.47,"Leucine":0.9,"Lysine":0.77,"Methionine":0.26,"Cystine":0.1,"Phenylalanine":0.44,"Tyrosine":0.36,"Valine":0.55,"Arginine":0.61,"Histidine":0.33,"Alanine":0.63,"AsparticAcid":0.95,"GlutamicAcid":1.81,"Glycine":0.62,"Proline":0.68,"Serine":0.43,"omega3":0.02,"omega6":0.05,"AddedSugars":0.0,"IntrinsicSugars":1.13},"addedSugars":0.0,"intrinsicSugars":2.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.8,"yieldFactorFat":0.75,"sources":[{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":113.4},{"ndb":"2009","name":"Spices, chili powder","grams":1.4},{"ndb":"2014","name":"Spices, cumin seed","grams":0.5},{"ndb":"2020","name":"Spices, garlic powder","grams":0.4},{"ndb":"2026","name":"Spices, onion powder","grams":0.3},{"ndb":"2028","name":"Spices, paprika","grams":0.4},{"ndb":"2047","name":"Salt, table","grams":1.1},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"14411","name":"Water, tap, drinking","grams":15.0},{"ndb":"18363","name":"Tortillas, ready-to-bake or -fry, corn","grams":48.0},{"ndb":"1009","name":"Cheese, cheddar","grams":14.2},{"ndb":"11252","name":"Lettuce, iceberg (includes crisphead types), raw","grams":18.8},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":30.8},{"ndb":"1056","name":"Cream, sour, cultured","grams":28.8}],"sections":[{"section_key":"taco_meat","section_label":"Taco Meat","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.8,"yield_factor_fat":0.75,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":530.27,"raw_water_grams":341.74,"raw_fat_grams":92.17,"raw_protein_grams":79.61,"raw_carb_grams":6.78,"final_grams":438.88},{"section_key":"assembly","section_label":"Assembly","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":561.7,"raw_water_grams":381.12,"raw_fat_grams":46.96,"raw_protein_grams":28.47,"raw_carb_grams":99.8,"final_grams":561.7}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Beef Tacos', quantity: 'custom (g)', foodWord: 'BEEFTACO', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'ground beef (80% lean)', quantity: '1 lb', section: 'taco_meat', ndbNo: '23572', portionDesc: 'g', portionGrams: 453.6 },
+      { name: 'chili powder', quantity: '2 tsp', section: 'taco_meat', ndbNo: '2009', portionDesc: 'g', portionGrams: 5.4 },
+      { name: 'ground cumin', quantity: '1 tsp', section: 'taco_meat', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'garlic powder', quantity: '1/2 tsp', section: 'taco_meat', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.55 },
+      { name: 'onion powder', quantity: '1/2 tsp', section: 'taco_meat', ndbNo: '2026', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'paprika', quantity: '1/2 tsp', section: 'taco_meat', ndbNo: '2028', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'salt', quantity: '3/4 tsp', section: 'taco_meat', ndbNo: '2047', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'taco_meat', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'water', quantity: '1/4 cup', section: 'taco_meat', ndbNo: '14411', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'corn tortilla', quantity: '8 each', section: 'assembly', ndbNo: '18363', portionDesc: 'g', portionGrams: 192.0 },
+      { name: 'Cheddar cheese', quantity: '1/2 cup', section: 'assembly', ndbNo: '1009', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'iceberg lettuce', quantity: '1 cup', section: 'assembly', ndbNo: '11252', portionDesc: 'g', portionGrams: 75.0 },
+      { name: 'tomato', quantity: '1 medium', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'sour cream', quantity: '1/2 cup', section: 'assembly', ndbNo: '1056', portionDesc: 'g', portionGrams: 115.0 }
+    ],
+    recipeInstructions: [
+      'In a small bowl, mix together the chili powder, cumin, garlic powder, onion powder, paprika, salt, and black pepper to make the taco seasoning.',
+      'Heat a large skillet over medium-high heat. Add the ground beef and cook, breaking it apart with a spoon, for 6 to 8 minutes until browned. Drain excess fat.',
+      'Add the taco seasoning and water to the browned beef. Stir to combine and simmer for 3 to 5 minutes until the liquid is absorbed and the meat is well coated. Remove from heat.',
+      'Warm the corn tortillas in a dry skillet or directly over a gas flame for 30 seconds per side until pliable.',
+      'Assemble the tacos: fill each tortilla with taco meat, shredded cheddar cheese, shredded lettuce, diced tomato, and a dollop of sour cream. Serve immediately.'
+    ],
+    sections: [
+      { key: 'taco_meat', label: 'Taco Meat', cookingMethod: '', yieldFactorWater: 0.8, yieldFactorFat: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
