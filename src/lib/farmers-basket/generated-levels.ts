@@ -12917,5 +12917,49 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'tenderloin', label: 'Tenderloin', cookingMethod: '', yieldFactorWater: 0.75 }
     ],
+  },
+  {
+    id: 'ENTR_041',
+    name: 'Beef Teriyaki',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 276,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":296.7,"pro":39.1,"fat":8.2,"carb":12.8,"fib":0.2,"h2o":118.1,"sug":10.3,"perServing":{"cal":296.7,"pro":39.1,"fat":8.2,"carb":12.8,"fib":0.2,"h2o":118.1,"sug":10.3,"AddedSugars":10.0,"IntrinsicSugars":0.2},"micros":{"vitaminA":0.0,"vitaminC":0.21,"vitaminD":1.76,"vitaminE":0.23,"vitaminK":1.2,"vitaminB6":0.45,"vitaminB12":0.86,"thiamin":0.05,"riboflavin":0.11,"niacin":5.25,"folate":10.14,"calcium":33.64,"iron":1.7,"magnesium":29.55,"phosphorus":209.9,"potassium":381.59,"sodium":533.18,"zinc":3.85,"copper":0.08,"selenium":25.43,"cholesterol":55.63,"saturatedFat":1.49,"monoFat":1.77,"polyFat":0.34,"omega3":0.01,"omega6":0.0},"gramsPerServing":183.5,"servings":4,"per100g":{"Energy_KCal":161.73,"Water":64.38,"Protein":21.3,"TotalLipidFat":4.46,"Carbohydrate":7.01,"FiberTotalDietary":0.12,"SugarsTotal":5.59,"Cholesterol":55.63,"FattyAcids_totalSaturated":1.49,"FattyAcids_totalMonounsaturated":1.77,"FattyAcids_totalPolyunsaturated":0.34,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.05,"VitaminD":1.76,"VitaminE_alphaTocopherol":0.23,"VitaminK_phylloquinone":1.2,"VitaminC_totalAscorbicAcid":0.21,"Thiamin":0.05,"Riboflavin":0.11,"Niacin":5.25,"PantothenicAcid":0.52,"VitaminB6":0.45,"Folate_total":10.14,"Folate_food":10.14,"Folate_DFE":10.14,"FolicAcid":0.0,"VitaminB12":0.86,"Choline_total":79.27,"Betaine":15.21,"LuteinZeaxanthin":0.13,"Lycopene":0.0,"Calcium_Ca":33.64,"Iron_Fe":1.7,"Magnesium_Mg":29.55,"Phosphorus_P":209.9,"Potassium_K":381.59,"Sodium_Na":533.18,"Zinc_Zn":3.85,"Copper_Cu":0.08,"Manganese_Mn":0.13,"Selenium_Se":25.43,"Tryptophan":0.14,"Threonine":0.84,"Isoleucine":0.96,"Leucine":1.67,"Lysine":1.76,"Methionine":0.54,"Cystine":0.23,"Phenylalanine":0.84,"Tyrosine":0.67,"Valine":1.04,"Arginine":1.36,"Histidine":0.67,"Alanine":1.27,"AsparticAcid":1.93,"GlutamicAcid":3.22,"Glycine":1.27,"Proline":1.02,"Serine":0.84,"omega3":0.01,"omega6":0.0,"AddedSugars":5.47,"IntrinsicSugars":0.12},"addedSugars":10.0,"intrinsicSugars":0.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.8,"yieldFactorFat":1.0,"sources":[{"ndb":"23611","name":"Beef, top sirloin, steak, separable lean only, trimmed to 1/8\" fat, all grades, raw","grams":170.1},{"ndb":"16123","name":"Soy sauce made from soy and wheat (shoyu)","grams":16.0},{"ndb":"14106","name":"Alcoholic beverage, wine, table, white","grams":11.0},{"ndb":"19334","name":"Sugars, brown","grams":10.3},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"11216","name":"Ginger root, raw","grams":1.5},{"ndb":"4058","name":"Oil, sesame, salad or cooking","grams":1.1},{"ndb":"20027","name":"Cornstarch","grams":0.7}],"sections":[{"section_key":"teriyaki","section_label":"Teriyaki","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.8,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":852.0,"raw_water_grams":590.62,"raw_fat_grams":32.72,"raw_protein_grams":156.28,"raw_carb_grams":51.41,"final_grams":733.88}],"cookingMethod":"pan grilled"},
+    recipeIngredients: [
+      { name: 'Beef Teriyaki', quantity: 'custom (g)', foodWord: 'BEEFTERIYAKI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'beef top sirloin', quantity: '1-1/2 lb', section: 'teriyaki', ndbNo: '23611', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'soy sauce', quantity: '1/4 cup', section: 'teriyaki', ndbNo: '16123', portionDesc: 'g', portionGrams: 64.0 },
+      { name: 'mirin', quantity: '3 tbsp', section: 'teriyaki', ndbNo: '14106', portionDesc: 'g', portionGrams: 44.0 },
+      { name: 'brown sugar', quantity: '3 tbsp', section: 'teriyaki', ndbNo: '19334', portionDesc: 'g', portionGrams: 41.4 },
+      { name: 'garlic', quantity: '3 cloves', section: 'teriyaki', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'fresh ginger', quantity: '1 tbsp', section: 'teriyaki', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'Sesame oil', quantity: '1 tsp', section: 'teriyaki', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'cornstarch', quantity: '1 tsp', section: 'teriyaki', ndbNo: '20027', portionDesc: 'g', portionGrams: 2.7 }
+    ],
+    recipeInstructions: [
+      'Whisk together the soy sauce, mirin, brown sugar, minced garlic, grated ginger, sesame oil, and cornstarch in a bowl until the sugar and cornstarch dissolve.',
+      'Slice the sirloin thinly against the grain into strips about 1/4-inch thick. Add to the marinade and toss to coat. Marinate for at least 15 minutes, or up to 1 hour in the refrigerator.',
+      'Heat a large skillet or wok over high heat until very hot. Remove the beef from the marinade, reserving the marinade.',
+      'Cook the beef strips in a single layer for 1 to 2 minutes per side until browned. Work in batches to avoid steaming. Transfer to a plate.',
+      'Pour the reserved marinade into the skillet and bring to a boil, stirring, for 1 to 2 minutes until thickened and glossy.',
+      'Return the beef to the skillet and toss to coat. Serve immediately over steamed rice.'
+    ],
+    sections: [
+      { key: 'teriyaki', label: 'Teriyaki', cookingMethod: '', yieldFactorWater: 0.8 }
+    ],
   }
 ];
