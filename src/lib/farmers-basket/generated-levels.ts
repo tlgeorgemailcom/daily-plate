@@ -12962,5 +12962,58 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'teriyaki', label: 'Teriyaki', cookingMethod: '', yieldFactorWater: 0.8 }
     ],
+  },
+  {
+    id: 'ENTR_042',
+    name: 'Beef Wellington',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 277,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":819.2,"pro":65.7,"fat":46.3,"carb":36.8,"fib":2.5,"h2o":196.6,"sug":3.5,"perServing":{"cal":819.2,"pro":65.7,"fat":46.3,"carb":36.8,"fib":2.5,"h2o":196.6,"sug":3.5,"AddedSugars":0.0,"IntrinsicSugars":3.5},"micros":{"vitaminA":17.67,"vitaminC":0.53,"vitaminD":7.62,"vitaminE":0.33,"vitaminK":4.01,"vitaminB6":0.36,"vitaminB12":2.15,"thiamin":0.12,"riboflavin":0.41,"niacin":4.39,"folate":19.31,"calcium":25.14,"iron":2.51,"magnesium":19.41,"phosphorus":223.09,"potassium":399.07,"sodium":508.05,"zinc":2.83,"copper":0.24,"selenium":29.93,"cholesterol":61.08,"saturatedFat":3.53,"monoFat":3.72,"polyFat":3.54,"omega3":0.01,"omega6":0.22},"gramsPerServing":351.7,"servings":4,"per100g":{"Energy_KCal":232.93,"Water":55.9,"Protein":18.68,"TotalLipidFat":13.16,"Carbohydrate":10.45,"FiberTotalDietary":0.72,"SugarsTotal":0.99,"Cholesterol":61.08,"FattyAcids_totalSaturated":3.53,"FattyAcids_totalMonounsaturated":3.72,"FattyAcids_totalPolyunsaturated":3.54,"LinoleicAcid":0.22,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":17.67,"Retinol":16.77,"Carotene_beta":10.85,"VitaminD":7.62,"VitaminE_alphaTocopherol":0.33,"VitaminK_phylloquinone":4.01,"VitaminC_totalAscorbicAcid":0.53,"Thiamin":0.12,"Riboflavin":0.41,"Niacin":4.39,"PantothenicAcid":0.66,"VitaminB6":0.36,"Folate_total":19.31,"Folate_food":12.91,"Folate_DFE":23.77,"FolicAcid":8.01,"VitaminB12":2.15,"Choline_total":56.21,"Betaine":10.09,"LuteinZeaxanthin":21.51,"Lycopene":0.02,"Calcium_Ca":25.14,"Iron_Fe":2.51,"Magnesium_Mg":19.41,"Phosphorus_P":223.09,"Potassium_K":399.07,"Sodium_Na":508.05,"Zinc_Zn":2.83,"Copper_Cu":0.24,"Manganese_Mn":0.2,"Selenium_Se":29.93,"Tryptophan":0.23,"Threonine":0.89,"Isoleucine":0.9,"Leucine":1.66,"Lysine":1.78,"Methionine":0.5,"Cystine":0.2,"Phenylalanine":0.81,"Tyrosine":0.71,"Valine":0.97,"Arginine":1.27,"Histidine":0.7,"Alanine":1.16,"AsparticAcid":1.84,"GlutamicAcid":3.5,"Glycine":0.86,"Proline":0.97,"Serine":0.84,"omega3":0.01,"omega6":0.22,"AddedSugars":0.0,"IntrinsicSugars":0.99},"addedSugars":0.0,"intrinsicSugars":3.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.9,"yieldFactorFat":1.0,"sources":[{"ndb":"11266","name":"Mushrooms, brown, italian, or crimini, raw","grams":113.4},{"ndb":"11677","name":"Shallots, raw","grams":10.0},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"1145","name":"Butter, without salt","grams":7.1},{"ndb":"2049","name":"Thyme, fresh","grams":1.2},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"","name":"Dijon-Style Mustard","grams":7.5},{"ndb":"23372","name":"Beef, loin, tenderloin steak, boneless, separable lean only, trimmed to 0\" fat, all grades, raw","grams":226.8},{"ndb":"18211","name":"Puff pastry, frozen, ready-to-bake, baked","grams":61.2},{"ndb":"10141","name":"Pork, cured, ham, center slice, country-style, separable lean only, raw","grams":21.0},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":12.5},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3}],"sections":[{"section_key":"duxelles","section_label":"Duxelles","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.18,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":539.38,"raw_water_grams":463.35,"raw_fat_grams":23.67,"raw_protein_grams":13.48,"raw_carb_grams":30.76,"final_grams":159.43},{"section_key":"dijon","section_label":"Dijon-Style Mustard","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":30.0,"raw_water_grams":18.52,"raw_fat_grams":3.28,"raw_protein_grams":2.37,"raw_carb_grams":3.0,"final_grams":30.0},{"section_key":"wellington","section_label":"Wellington","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":1293.35,"raw_water_grams":760.52,"raw_fat_grams":158.18,"raw_protein_grams":246.92,"raw_carb_grams":113.31,"final_grams":1217.3}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Beef Wellington', quantity: 'custom (g)', foodWord: 'BEEFWELLINGTON', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'crimini mushrooms', quantity: '1 lb', section: 'duxelles', ndbNo: '11266', portionDesc: 'g', portionGrams: 453.6 },
+      { name: 'shallots', quantity: '2 medium', section: 'duxelles', ndbNo: '11677', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'garlic', quantity: '3 cloves', section: 'duxelles', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'unsalted butter', quantity: '2 tbsp', section: 'duxelles', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
+      { name: 'fresh thyme leaves', quantity: '2 sprigs', section: 'duxelles', ndbNo: '2049', portionDesc: 'g', portionGrams: 4.8 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'duxelles', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'duxelles', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'Dijon-Style Mustard', quantity: '2 tbsp Dijon-Style Mustard (recipe)', section: 'dijon', foodWord: 'DIJONTYPEMUSTARD', portionDesc: 'g', portionGrams: 30.0, isDish: true, componentRef: 'SAUCE_010' },
+      { name: 'beef tenderloin', quantity: '2 lb', section: 'wellington', ndbNo: '23372', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'puff pastry sheet', quantity: '1 sheet', section: 'wellington', ndbNo: '18211', portionDesc: 'g', portionGrams: 245.0 },
+      { name: 'Prosciutto', quantity: '6 slices', section: 'wellington', ndbNo: '10141', portionDesc: 'g', portionGrams: 84.0 },
+      { name: 'egg (for egg wash)', quantity: '1 large', section: 'wellington', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'salt', quantity: '1 tsp', section: 'wellington', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/2 tsp', section: 'wellington', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
+    ],
+    recipeInstructions: [
+      'Make or prepare the Dijon-Style Mustard (see the Dijon-Style Mustard recipe). Set aside.',
+      'Make the duxelles: finely mince the mushrooms, shallots, and garlic. Melt butter in a large skillet over medium-high heat. Add the mushrooms, shallots, and garlic and cook, stirring frequently, for 15 to 20 minutes until all the moisture has evaporated and the mixture is dry and paste-like. Season with thyme, salt, and pepper. Spread on a plate and refrigerate until completely cool.',
+      'Pat the beef tenderloin dry and season generously with salt and pepper. Heat a skillet over high heat. Sear the tenderloin on all sides for 2 minutes per side until browned. Transfer to a plate and brush all over with the Dijon mustard. Refrigerate for 15 minutes to set.',
+      'Lay a large sheet of plastic wrap on the work surface. Arrange the prosciutto slices in overlapping rows to form a rectangle large enough to wrap the tenderloin. Spread the cooled duxelles evenly over the prosciutto.',
+      'Place the seared tenderloin at the bottom edge of the prosciutto. Using the plastic wrap, roll tightly into a log, twisting the ends to seal. Refrigerate for at least 15 minutes.',
+      'On a lightly floured surface, roll out the puff pastry sheet large enough to wrap the beef log. Remove the plastic wrap from the beef and place it at the bottom edge of the pastry. Roll up tightly, sealing the edges with egg wash. Brush the entire surface with egg wash and score lightly with a knife if desired.',
+      'Bake at 425°F for 25 to 30 minutes until the pastry is deep golden brown and an instant-read thermometer reads 125°F for medium-rare. Rest 10 minutes before slicing into 4 equal portions.'
+    ],
+    sections: [
+      { key: 'duxelles', label: 'Duxelles', cookingMethod: '', yieldFactorWater: 0.18 },
+      { key: 'dijon', label: 'Dijon-Style Mustard', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'wellington', label: 'Wellington', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];
