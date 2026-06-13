@@ -12098,7 +12098,7 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Whisk together the olive oil, lemon juice, garlic, oregano, paprika, cumin, salt, and black pepper in a large bowl. Add the beef cubes and toss to coat. Marinate in the refrigerator for at least 1 hour, or up to 4 hours.',
       'Cut the zucchini, bell peppers, and onion into 1½-inch pieces. Halve any large mushrooms. Season the vegetables lightly with salt.',
-      'Thread the marinated beef and vegetables alternately onto metal or soaked wooden skewers, leaving a small gap between each piece.',
+      'Thread the marinated beef and vegetables alternately onto 8 metal or soaked wooden skewers (each skewer gets 2 to 3 pieces of beef and a mix of vegetables), leaving a small gap between each piece.',
       'Heat a grill to high heat (450 to 500°F). Brush the grates lightly with oil. Grill the kabobs 3 to 4 minutes per side, turning once or twice, until the beef is cooked to medium (internal temperature 145°F) and vegetables are tender with char marks.',
       'Transfer to a platter and rest 2 to 3 minutes before serving.'
     ],
