@@ -12765,7 +12765,7 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Pat the short ribs dry with paper towels. Season all over with salt and pepper.',
       'Heat olive oil in a large Dutch oven over medium-high heat. Sear the ribs in batches for 3 to 4 minutes per side until deeply browned. Transfer to a plate.',
-      'Reduce heat to medium. Add onion, carrot, and celery to the pot and cook for 5 minutes until softened. Add garlic and tomato paste and cook 2 minutes, stirring.',
+      'Reduce heat to medium. Add the diced onion, sliced carrots, and sliced celery to the pot and cook for 5 minutes until softened. Add the minced garlic and tomato paste and cook 2 minutes, stirring.',
       'Pour in the red wine and scrape up any browned bits from the bottom of the pot. Simmer for 3 minutes.',
       'Add the beef broth, thyme, rosemary, and bay leaves. Nestle the ribs back into the pot in a single layer. The liquid should come about halfway up the ribs.',
       'Cover and braise in a 325°F oven for 2-1/2 to 3 hours until the meat is very tender and pulling away from the bone.',
