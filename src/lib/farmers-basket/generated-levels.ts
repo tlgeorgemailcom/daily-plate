@@ -12775,5 +12775,50 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'braise', label: 'Braise', cookingMethod: '', yieldFactorWater: 0.72 }
     ],
+  },
+  {
+    id: 'ENTR_038',
+    name: 'Beef Skirt Steak with Marinade',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 273,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":500.8,"pro":31.7,"fat":40.4,"carb":3.7,"fib":0.5,"h2o":94.0,"sug":0.3,"perServing":{"cal":500.8,"pro":31.7,"fat":40.4,"carb":3.7,"fib":0.5,"h2o":94.0,"sug":0.3,"AddedSugars":0.0,"IntrinsicSugars":0.3},"micros":{"vitaminA":8.01,"vitaminC":1.25,"vitaminD":4.64,"vitaminE":0.87,"vitaminK":5.18,"vitaminB6":0.31,"vitaminB12":4.36,"thiamin":0.08,"riboflavin":0.5,"niacin":3.34,"folate":3.33,"calcium":16.34,"iron":3.75,"magnesium":24.82,"phosphorus":152.68,"potassium":285.76,"sodium":661.65,"zinc":4.71,"copper":0.18,"selenium":22.45,"cholesterol":69.33,"saturatedFat":7.79,"monoFat":11.88,"polyFat":1.14,"omega3":0.02,"omega6":0.48},"gramsPerServing":174.2,"servings":4,"per100g":{"Energy_KCal":287.51,"Water":53.93,"Protein":18.19,"TotalLipidFat":23.2,"Carbohydrate":2.11,"FiberTotalDietary":0.31,"SugarsTotal":0.18,"Cholesterol":69.33,"FattyAcids_totalSaturated":7.79,"FattyAcids_totalMonounsaturated":11.88,"FattyAcids_totalPolyunsaturated":1.14,"LinoleicAcid":0.48,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.0,"VitaminA_RAE":8.01,"Retinol":3.12,"Carotene_beta":50.28,"VitaminD":4.64,"VitaminE_alphaTocopherol":0.87,"VitaminK_phylloquinone":5.18,"VitaminC_totalAscorbicAcid":1.25,"Thiamin":0.08,"Riboflavin":0.5,"Niacin":3.34,"PantothenicAcid":0.9,"VitaminB6":0.31,"Folate_total":3.33,"Folate_food":3.33,"Folate_DFE":3.33,"FolicAcid":0.0,"VitaminB12":4.36,"Choline_total":50.96,"Betaine":14.4,"LuteinZeaxanthin":2.28,"Lycopene":0.09,"Calcium_Ca":16.34,"Iron_Fe":3.75,"Magnesium_Mg":24.82,"Phosphorus_P":152.68,"Potassium_K":285.76,"Sodium_Na":661.65,"Zinc_Zn":4.71,"Copper_Cu":0.18,"Manganese_Mn":0.28,"Selenium_Se":22.45,"Tryptophan":0.2,"Threonine":0.84,"Isoleucine":0.83,"Leucine":1.55,"Lysine":1.7,"Methionine":0.47,"Cystine":0.16,"Phenylalanine":0.73,"Tyrosine":0.67,"Valine":0.89,"Arginine":1.23,"Histidine":0.67,"Alanine":1.1,"AsparticAcid":1.77,"GlutamicAcid":2.97,"Glycine":0.88,"Proline":0.81,"Serine":0.75,"omega3":0.02,"omega6":0.48,"AddedSugars":0.0,"IntrinsicSugars":0.18},"addedSugars":0.0,"intrinsicSugars":0.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.75,"yieldFactorFat":1.0,"sources":[{"ndb":"23224","name":"Beef, plate steak, boneless, outside skirt, separable lean and fat, trimmed to 0\" fat, all grades, raw","grams":170.1},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":10.2},{"ndb":"9160","name":"Lime juice, raw","grams":11.2},{"ndb":"16123","name":"Soy sauce made from soy and wheat (shoyu)","grams":8.0},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"2014","name":"Spices, cumin seed","grams":0.5},{"ndb":"2009","name":"Spices, chili powder","grams":0.7},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":1.5}],"sections":[{"section_key":"steak","section_label":"Steak","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":822.05,"raw_water_grams":501.07,"raw_fat_grams":161.62,"raw_protein_grams":126.73,"raw_carb_grams":14.68,"final_grams":696.78}],"cookingMethod":"pan grilled"},
+    recipeIngredients: [
+      { name: 'Beef Skirt Steak with Marinade', quantity: 'custom (g)', foodWord: 'BEEFSKIRT', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'beef skirt steak', quantity: '1-1/2 lb', section: 'steak', ndbNo: '23224', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'olive oil', quantity: '3 tbsp', section: 'steak', ndbNo: '4053', portionDesc: 'g', portionGrams: 40.8 },
+      { name: 'lime juice', quantity: '3 tbsp', section: 'steak', ndbNo: '9160', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'soy sauce', quantity: '2 tbsp', section: 'steak', ndbNo: '16123', portionDesc: 'g', portionGrams: 32.0 },
+      { name: 'garlic', quantity: '4 cloves', section: 'steak', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'ground cumin', quantity: '1 tsp', section: 'steak', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'chili powder', quantity: '1 tsp', section: 'steak', ndbNo: '2009', portionDesc: 'g', portionGrams: 2.7 },
+      { name: 'ground black pepper', quantity: '1/2 tsp', section: 'steak', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'salt', quantity: '1 tsp', section: 'steak', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 }
+    ],
+    recipeInstructions: [
+      'Whisk together the olive oil, lime juice, soy sauce, minced garlic, cumin, chili powder, pepper, and salt in a small bowl.',
+      'Place the skirt steak in a zip-lock bag or shallow dish. Pour the marinade over the steak and turn to coat. Marinate in the refrigerator for at least 1 hour, or up to 4 hours.',
+      'Remove the steak from the marinade and pat dry with paper towels. Discard the marinade.',
+      'Heat a cast-iron skillet or grill pan over high heat until very hot. Cook the steak for 3 to 4 minutes per side for medium-rare, or until desired doneness.',
+      'Transfer to a cutting board and rest for 5 minutes.',
+      'Slice thinly against the grain and serve immediately.'
+    ],
+    sections: [
+      { key: 'steak', label: 'Steak', cookingMethod: '', yieldFactorWater: 0.75 }
+    ],
   }
 ];
