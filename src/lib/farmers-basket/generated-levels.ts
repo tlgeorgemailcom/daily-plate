@@ -13168,5 +13168,56 @@ export const LEVELS: Level[] = [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
       { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'ENTR_046',
+    name: 'Chicken Cacciatore',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 281,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":489.0,"pro":50.5,"fat":19.3,"carb":25.4,"fib":6.6,"h2o":426.3,"sug":12.5,"perServing":{"cal":489.0,"pro":50.5,"fat":19.3,"carb":25.4,"fib":6.6,"h2o":426.3,"sug":12.5,"AddedSugars":0.0,"IntrinsicSugars":12.5},"micros":{"vitaminA":14.92,"vitaminC":5.6,"vitaminD":0.73,"vitaminE":0.83,"vitaminK":6.74,"vitaminB6":0.21,"vitaminB12":0.23,"thiamin":0.05,"riboflavin":0.14,"niacin":2.51,"folate":8.98,"calcium":25.41,"iron":1.06,"magnesium":19.26,"phosphorus":104.95,"potassium":254.82,"sodium":236.75,"zinc":0.91,"copper":0.14,"selenium":12.81,"cholesterol":40.21,"saturatedFat":0.73,"monoFat":1.92,"polyFat":0.48,"omega3":0.01,"omega6":0.25},"gramsPerServing":530.3,"servings":4,"per100g":{"Energy_KCal":92.23,"Water":80.4,"Protein":9.52,"TotalLipidFat":3.64,"Carbohydrate":4.78,"FiberTotalDietary":1.24,"SugarsTotal":2.35,"Cholesterol":40.21,"FattyAcids_totalSaturated":0.73,"FattyAcids_totalMonounsaturated":1.92,"FattyAcids_totalPolyunsaturated":0.48,"LinoleicAcid":0.25,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":14.92,"Retinol":2.4,"Carotene_beta":136.06,"VitaminD":0.73,"VitaminE_alphaTocopherol":0.83,"VitaminK_phylloquinone":6.74,"VitaminC_totalAscorbicAcid":5.6,"Thiamin":0.05,"Riboflavin":0.14,"Niacin":2.51,"PantothenicAcid":0.21,"VitaminB6":0.21,"Folate_total":8.98,"Folate_food":8.98,"Folate_DFE":8.98,"FolicAcid":0.0,"VitaminB12":0.23,"Choline_total":28.06,"Betaine":5.73,"LuteinZeaxanthin":96.13,"Lycopene":1720.67,"Calcium_Ca":25.41,"Iron_Fe":1.06,"Magnesium_Mg":19.26,"Phosphorus_P":104.95,"Potassium_K":254.82,"Sodium_Na":236.75,"Zinc_Zn":0.91,"Copper_Cu":0.14,"Manganese_Mn":0.13,"Selenium_Se":12.81,"Tryptophan":0.11,"Threonine":0.43,"Isoleucine":0.42,"Leucine":0.76,"Lysine":0.84,"Methionine":0.25,"Cystine":0.09,"Phenylalanine":0.37,"Tyrosine":0.33,"Valine":0.44,"Arginine":0.63,"Histidine":0.27,"Alanine":0.54,"AsparticAcid":0.96,"GlutamicAcid":1.67,"Glycine":0.42,"Proline":0.38,"Serine":0.38,"omega3":0.01,"omega6":0.25,"AddedSugars":0.0,"IntrinsicSugars":2.35},"addedSugars":0.0,"intrinsicSugars":12.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.88,"yieldFactorFat":1.0,"sources":[{"ndb":"5096","name":"Chicken, broilers or fryers, dark meat, thigh, meat only, raw","grams":226.8},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"11821","name":"Peppers, sweet, red, raw","grams":29.8},{"ndb":"11266","name":"Mushrooms, brown, italian, or crimini, raw","grams":56.7},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"14106","name":"Alcoholic beverage, wine, table, white","grams":30.0},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":198.5},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.7},{"ndb":"2003","name":"Spices, basil, dried","grams":0.6},{"ndb":"9193","name":"Olives, ripe, canned (small-extra large)","grams":22.0}],"sections":[{"section_key":"chicken","section_label":"Chicken","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.8,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":941.55,"raw_water_grams":691.62,"raw_fat_grams":64.61,"raw_protein_grams":178.48,"raw_carb_grams":0.74,"final_grams":803.23},{"section_key":"braise","section_label":"Braise","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":1474.9,"raw_water_grams":1309.0,"raw_fat_grams":12.59,"raw_protein_grams":23.46,"raw_carb_grams":100.69,"final_grams":1317.82}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken Cacciatore', quantity: 'custom (g)', foodWord: 'CHICKENCACCIATORE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chicken thigh', quantity: '2 lbs', section: 'chicken', ndbNo: '5096', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'salt', quantity: '1 tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/2 tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'onion', quantity: '1 medium', section: 'braise', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'red bell pepper', quantity: '1 medium', section: 'braise', ndbNo: '11821', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'crimini mushrooms', quantity: '8 oz', section: 'braise', ndbNo: '11266', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'garlic', quantity: '4 cloves', section: 'braise', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'white wine', quantity: '1/2 cup', section: 'braise', ndbNo: '14106', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'canned crushed tomatoes', quantity: '28 oz', section: 'braise', ndbNo: '11693', portionDesc: 'g', portionGrams: 794.0 },
+      { name: 'dried oregano', quantity: '1 tsp', section: 'braise', ndbNo: '2027', portionDesc: 'g', portionGrams: 2.7 },
+      { name: 'dried basil', quantity: '1 tsp', section: 'braise', ndbNo: '2003', portionDesc: 'g', portionGrams: 2.4 },
+      { name: 'black olives canned', quantity: '1/2 cup', section: 'braise', ndbNo: '9193', portionDesc: 'g', portionGrams: 88.0 }
+    ],
+    recipeInstructions: [
+      'Pat the chicken thighs dry and season both sides with salt and black pepper.',
+      'Heat the olive oil in a large oven-safe skillet or Dutch oven over medium-high heat. Sear the chicken thighs skin-side down for 4 to 5 minutes until golden brown. Flip and sear for 2 minutes more. Transfer to a plate.',
+      'Preheat the oven to 350°F.',
+      'In the same pan over medium heat, add the diced onion and sliced bell pepper. Cook for 4 to 5 minutes until softened. Add the sliced mushrooms and cook for 3 minutes more until tender.',
+      'Add the minced garlic and cook for 30 seconds until fragrant. Pour in the white wine and scrape up any browned bits from the bottom of the pan. Simmer for 2 minutes.',
+      'Add the crushed tomatoes, dried oregano, and dried basil. Stir to combine. Return the chicken thighs to the pan, nestling them into the sauce. Scatter the black olives over the top.',
+      'Cover and bake at 350°F for 35 to 40 minutes until the chicken is cooked through to an internal temperature of 165°F. Serve over pasta, polenta, or rice.'
+    ],
+    sections: [
+      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.8 },
+      { key: 'braise', label: 'Braise', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];
