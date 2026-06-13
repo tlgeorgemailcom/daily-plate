@@ -13207,8 +13207,8 @@ export const LEVELS: Level[] = [
       { name: 'black olives canned', quantity: '1/2 cup', section: 'braise', ndbNo: '9193', portionDesc: 'g', portionGrams: 88.0 }
     ],
     recipeInstructions: [
-      'Pat the chicken thighs dry and season both sides with salt and black pepper.',
-      'Heat the olive oil in a large oven-safe skillet or Dutch oven over medium-high heat. Sear the chicken thighs skin-side down for 4 to 5 minutes until golden brown. Flip and sear for 2 minutes more. Transfer to a plate.',
+      'Pat the boneless skinless chicken thighs dry and season both sides with salt and black pepper.',
+      'Heat the olive oil in a large oven-safe skillet or Dutch oven over medium-high heat. Sear the chicken thighs for 4 to 5 minutes until golden brown. Flip and sear for 2 minutes more. Transfer to a plate.',
       'Preheat the oven to 350°F.',
       'In the same pan over medium heat, add the diced onion and sliced bell pepper. Cook for 4 to 5 minutes until softened. Add the sliced mushrooms and cook for 3 minutes more until tender.',
       'Add the minced garlic and cook for 30 seconds until fragrant. Pour in the white wine and scrape up any browned bits from the bottom of the pan. Simmer for 2 minutes.',
@@ -13259,7 +13259,7 @@ export const LEVELS: Level[] = [
       { name: 'salt', quantity: '1/2 tsp', section: 'curry', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 }
     ],
     recipeInstructions: [
-      'Cut the chicken thighs into bite-sized pieces. Season with salt and black pepper.',
+      'Cut the boneless skinless chicken thighs into bite-sized pieces. Season with salt and black pepper.',
       'Heat 1 tbsp olive oil in a large skillet or Dutch oven over medium-high heat. Sear the chicken pieces for 3 to 4 minutes per side until browned and cooked through to an internal temperature of 165°F. Transfer to a plate.',
       'Add the remaining 1 tbsp olive oil to the pan over medium heat. Add the diced onion and cook for 5 minutes until softened. Add the minced garlic and grated ginger and cook for 1 minute until fragrant.',
       'Add the curry powder, cumin, and coriander. Stir and cook for 1 minute to toast the spices.',
