@@ -101,7 +101,7 @@ Beef Tenderloin
 Beef Teriyaki
 Beef Wellington
 Beef Stir Fry
-Beef Tacos
+Beef Soft Tacos
 
 Chicken & Broccoli
 Chicken Cacciatore

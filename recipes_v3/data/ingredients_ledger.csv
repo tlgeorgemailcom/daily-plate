@@ -311,3 +311,4 @@ hoisin_sauce,6175,HOISINSAUCE,"Sauce, hoisin, ready-to-serve",hoisin sauce,table
 zucchini_raw,11477,ZUCCHINI,"Squash, summer, zucchini, includes skin, raw",zucchini,medium,196.0,added during ENTR_025 build
 rice_white_raw,20044,RICEWHITERAW,"Rice, white, long-grain, regular, raw, enriched",white rice (dry),cup,185.0,added during ENTR_026 build; bin=0.6844 in comboo.db
 tomato_sauce_canned,43217,TOMATOSAUCE,"Tomato sauce, canned, no salt added",tomato sauce,cup,245.0,canned tomato sauce (no salt added); proxy for regular canned tomato sauce; use paprika NDB 2028 as proxy for smoked paprika
+oyster_sauce,6176,OYSTERSAUCE,"Sauce, oyster, ready-to-serve",oyster sauce,tablespoon,18.0,added during ENTR_045 build

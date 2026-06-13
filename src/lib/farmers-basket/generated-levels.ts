@@ -13116,5 +13116,57 @@ export const LEVELS: Level[] = [
       { key: 'taco_meat', label: 'Taco Meat', cookingMethod: '', yieldFactorWater: 0.8, yieldFactorFat: 0.75 },
       { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'ENTR_045',
+    name: 'Chicken & Broccoli',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 280,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":299.1,"pro":30.4,"fat":12.5,"carb":16.4,"fib":2.7,"h2o":183.7,"sug":5.0,"perServing":{"cal":299.1,"pro":30.4,"fat":12.5,"carb":16.4,"fib":2.7,"h2o":183.7,"sug":5.0,"AddedSugars":3.4,"IntrinsicSugars":1.7},"micros":{"vitaminA":13.47,"vitaminC":16.5,"vitaminD":0.43,"vitaminE":0.48,"vitaminK":35.41,"vitaminB6":0.33,"vitaminB12":0.1,"thiamin":0.05,"riboflavin":0.12,"niacin":3.88,"folate":19.39,"calcium":23.84,"iron":0.54,"magnesium":25.01,"phosphorus":133.58,"potassium":289.29,"sodium":554.8,"zinc":0.52,"copper":0.04,"selenium":11.74,"cholesterol":33.23,"saturatedFat":2.67,"monoFat":0.87,"polyFat":0.52,"omega3":0.0,"omega6":0.15},"gramsPerServing":249.1,"servings":4,"per100g":{"Energy_KCal":120.06,"Water":73.76,"Protein":12.21,"TotalLipidFat":5.03,"Carbohydrate":6.57,"FiberTotalDietary":1.08,"SugarsTotal":2.02,"Cholesterol":33.23,"FattyAcids_totalSaturated":2.67,"FattyAcids_totalMonounsaturated":0.87,"FattyAcids_totalPolyunsaturated":0.52,"LinoleicAcid":0.15,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":13.47,"Retinol":3.28,"Carotene_beta":118.75,"VitaminD":0.43,"VitaminE_alphaTocopherol":0.48,"VitaminK_phylloquinone":35.41,"VitaminC_totalAscorbicAcid":16.5,"Thiamin":0.05,"Riboflavin":0.12,"Niacin":3.88,"PantothenicAcid":0.71,"VitaminB6":0.33,"Folate_total":19.39,"Folate_food":19.39,"Folate_DFE":19.39,"FolicAcid":0.0,"VitaminB12":0.1,"Choline_total":41.55,"Betaine":5.62,"LuteinZeaxanthin":384.56,"Lycopene":0.0,"Calcium_Ca":23.84,"Iron_Fe":0.54,"Magnesium_Mg":25.01,"Phosphorus_P":133.58,"Potassium_K":289.29,"Sodium_Na":554.8,"Zinc_Zn":0.52,"Copper_Cu":0.04,"Manganese_Mn":0.18,"Selenium_Se":11.74,"Tryptophan":0.15,"Threonine":0.51,"Isoleucine":0.55,"Leucine":0.94,"Lysine":1.07,"Methionine":0.28,"Cystine":0.1,"Phenylalanine":0.48,"Tyrosine":0.41,"Valine":0.6,"Arginine":0.81,"Histidine":0.41,"Alanine":0.66,"AsparticAcid":1.14,"GlutamicAcid":1.85,"Glycine":0.51,"Proline":0.4,"Serine":0.46,"omega3":0.0,"omega6":0.15,"AddedSugars":1.34,"IntrinsicSugars":0.68},"addedSugars":3.4,"intrinsicSugars":1.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.75,"yieldFactorFat":1.0,"sources":[{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":113.4},{"ndb":"16123","name":"Soy sauce made from soy and wheat (shoyu)","grams":8.0},{"ndb":"4058","name":"Oil, sesame, salad or cooking","grams":1.1},{"ndb":"20027","name":"Cornstarch","grams":2.0},{"ndb":"11090","name":"Broccoli, raw","grams":91.0},{"ndb":"4047","name":"Oil, coconut","grams":6.8},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11216","name":"Ginger root, raw","grams":1.5},{"ndb":"16123","name":"Soy sauce made from soy and wheat (shoyu)","grams":12.0},{"ndb":"6176","name":"Sauce, oyster, ready-to-serve","grams":9.0},{"ndb":"6008","name":"Soup, beef broth or bouillon canned, ready-to-serve","grams":30.0},{"ndb":"19334","name":"Sugars, brown","grams":3.5},{"ndb":"20027","name":"Cornstarch","grams":2.0},{"ndb":"4058","name":"Oil, sesame, salad or cooking","grams":1.1}],"sections":[{"section_key":"chicken","section_label":"Chicken","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":498.2,"raw_water_grams":358.65,"raw_fat_grams":16.57,"raw_protein_grams":104.69,"raw_carb_grams":8.97,"final_grams":408.54},{"section_key":"sauce","section_label":"Sauce","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":639.6,"raw_water_grams":517.69,"raw_fat_grams":33.53,"raw_protein_grams":16.94,"raw_carb_grams":56.48,"final_grams":587.83}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken & Broccoli', quantity: 'custom (g)', foodWord: 'CHICKENBROCCOLI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chicken breast', quantity: '1 lb', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 453.6 },
+      { name: 'soy sauce', quantity: '2 tbsp', section: 'chicken', ndbNo: '16123', portionDesc: 'g', portionGrams: 32.0 },
+      { name: 'Sesame oil', quantity: '1 tsp', section: 'chicken', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'cornstarch', quantity: '1 tbsp', section: 'chicken', ndbNo: '20027', portionDesc: 'g', portionGrams: 8.1 },
+      { name: 'broccoli', quantity: '4 cups', section: 'sauce', ndbNo: '11090', portionDesc: 'g', portionGrams: 364.0 },
+      { name: 'coconut oil', quantity: '2 tbsp', section: 'sauce', ndbNo: '4047', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'garlic', quantity: '4 cloves', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'fresh ginger', quantity: '1 tbsp', section: 'sauce', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'soy sauce', quantity: '3 tbsp', section: 'sauce', ndbNo: '16123', portionDesc: 'g', portionGrams: 48.0 },
+      { name: 'oyster sauce', quantity: '2 tbsp', section: 'sauce', ndbNo: '6176', portionDesc: 'g', portionGrams: 36.0 },
+      { name: 'beef broth', quantity: '1/2 cup', section: 'sauce', ndbNo: '6008', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'brown sugar', quantity: '1 tbsp', section: 'sauce', ndbNo: '19334', portionDesc: 'g', portionGrams: 13.8 },
+      { name: 'cornstarch', quantity: '1 tbsp', section: 'sauce', ndbNo: '20027', portionDesc: 'g', portionGrams: 8.1 },
+      { name: 'Sesame oil', quantity: '1 tsp', section: 'sauce', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 }
+    ],
+    recipeInstructions: [
+      'Slice the chicken breast thinly against the grain into strips. In a bowl, toss with 2 tbsp soy sauce, 1 tsp sesame oil, and 1 tbsp cornstarch. Set aside to marinate for 10 minutes.',
+      'In a small bowl, whisk together the remaining 3 tbsp soy sauce, oyster sauce, beef broth, brown sugar, remaining 1 tbsp cornstarch, and remaining 1 tsp sesame oil to make the sauce. Set aside.',
+      'Cut the broccoli into bite-sized florets.',
+      'Heat a wok or large skillet over high heat. Add 1 tbsp coconut oil. Sear the chicken strips in a single layer for 2 to 3 minutes per side until cooked through and lightly browned. Transfer to a plate.',
+      'Add the remaining 1 tbsp coconut oil to the wok. Add the broccoli florets and stir fry for 3 to 4 minutes until bright green and crisp-tender.',
+      'Add the minced garlic and grated ginger and stir fry for 30 seconds until fragrant.',
+      'Return the chicken to the wok. Pour in the sauce and toss everything together for 1 to 2 minutes until the sauce thickens and coats the chicken and broccoli evenly. Serve immediately over steamed rice.'
+    ],
+    sections: [
+      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];
