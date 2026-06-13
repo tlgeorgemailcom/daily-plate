@@ -12654,7 +12654,7 @@ export const LEVELS: Level[] = [
       'Mix all dry rub ingredients together in a small bowl until combined.',
       'Pat the ribs dry with paper towels. Flip racks over and remove the membrane (silver skin) from the underside of each rack by loosening a corner with a knife and pulling it off.',
       'Coat the ribs all over with the dry rub, pressing it into the meat. Let rest at room temperature for 30 minutes, or cover and refrigerate up to overnight.',
-      'Preheat oven to 300°F. Wrap each rack tightly in aluminum foil and place on a rimmed baking sheet.',
+      'Preheat oven to 275°F. Wrap each rack tightly in aluminum foil and place on a rimmed baking sheet.',
       'Bake for 2-1/2 to 3 hours until very tender and the meat has pulled back from the bone ends.',
       'Make or prepare the BBQ Sauce (see the BBQ Sauce recipe). Carefully unwrap the ribs and brush generously with BBQ sauce on all sides.',
       'Increase oven temperature to 425°F. Return the ribs, uncovered, to the oven and bake for 15 minutes until the sauce is caramelized and sticky.',
