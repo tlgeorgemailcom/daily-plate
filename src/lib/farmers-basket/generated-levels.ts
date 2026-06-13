@@ -10885,7 +10885,7 @@ export const LEVELS: Level[] = [
       'Heat a large wok or skillet over high heat until very hot. Add 3 tablespoons olive oil. Add the beef in a single layer and cook undisturbed for 1 minute, then stir-fry 1-2 minutes until just browned. Transfer to a plate.',
       'Add the remaining 2½ tablespoons olive oil to the wok. Add the broccoli and garlic; stir-fry 3-4 minutes until the broccoli is bright green and tender-crisp.',
       'Return the beef to the wok. Pour the sauce over everything and toss to coat. Cook 1-2 minutes, stirring, until the sauce thickens and coats the beef and broccoli.',
-      'Serve immediately over steamed rice.'
+      'Serve immediately on its own or over steamed white rice (not included).'
     ],
     sections: [
       { key: 'main', label: 'Beef and Broccoli', cookingMethod: '', yieldFactorWater: 0.87 }
@@ -11207,7 +11207,7 @@ export const LEVELS: Level[] = [
       'Add the diced tomatoes, beef broth, cumin, chili powder, oregano, and paprika. Stir to combine.',
       'Return the seared beef to the pot. Bring to a boil, then reduce heat to low.',
       'Cover and simmer for 1.5 to 2 hours, stirring occasionally, until the beef is very tender and the gravy has thickened.',
-      'Taste and adjust seasoning. Serve over rice or with warm flour tortillas.'
+      'Taste and adjust seasoning. Serve on its own or over rice or with warm flour tortillas (not included).'
     ],
     sections: [
       { key: 'main', label: 'Carne Guisada', cookingMethod: '', yieldFactorWater: 0.55 }
@@ -11422,7 +11422,7 @@ export const LEVELS: Level[] = [
       'Add curry powder and tomato paste. Stir and cook 1 to 2 minutes until fragrant and the paste darkens slightly.',
       'Add the tomatoes and stir, scraping up any browned bits from the bottom of the pot. Return the beef and any accumulated juices to the pot.',
       'Pour in the coconut milk. Add salt and pepper. Stir to combine. Bring to a boil, then reduce heat to low. Cover and simmer 1 to 1½ hours, stirring occasionally, until the beef is fork-tender and the sauce has thickened.',
-      'Taste and adjust seasoning. Stir in the cilantro just before serving. Serve over steamed rice.'
+      'Taste and adjust seasoning. Stir in the cilantro just before serving. Serve on its own or over steamed rice (not included).'
     ],
     sections: [
       { key: 'curry', label: 'Curry', cookingMethod: '', yieldFactorWater: 0.8, yieldFactorFat: 0.85 }
@@ -12357,7 +12357,7 @@ export const LEVELS: Level[] = [
       'Heat 1 tablespoon olive oil in a wok or large skillet over high heat. Add the beef in a single layer and cook for 1 to 2 minutes per side until browned. Remove and set aside.',
       'Add the remaining olive oil to the wok. Stir-fry the onion for 2 minutes, then add the bell peppers and cook 2 minutes more until slightly tender but still crisp.',
       'Add the garlic and ginger and stir-fry for 30 seconds. Pour in the sauce and stir until thickened, about 1 minute.',
-      'Return the beef to the wok and toss to coat. Drizzle with sesame oil. Serve over the steamed white rice.'
+      'Return the beef to the wok and toss to coat. Drizzle with sesame oil. Serve on its own or over steamed white rice (not included).'
     ],
     sections: [
       { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.82 },
@@ -12408,7 +12408,7 @@ export const LEVELS: Level[] = [
       'Add the onion and bell pepper to the skillet and cook for 4 to 5 minutes until softened. Add the garlic and cook 1 minute more.',
       'Stir in the crushed tomatoes, green olives, capers, raisins, apple cider vinegar, cumin, oregano, and bay leaves. Season with salt and pepper.',
       'Reduce heat to medium-low and simmer uncovered for 15 to 20 minutes, stirring occasionally, until the sauce thickens and flavors meld.',
-      'Remove and discard the bay leaves. Taste and adjust seasoning. Serve as a filling for tacos or empanadas, or over rice.'
+      'Remove and discard the bay leaves. Taste and adjust seasoning. Serve as a filling for tacos or empanadas, or on its own or over rice (not included).'
     ],
     sections: [
       { key: 'picadillo', label: 'Picadillo', cookingMethod: '', yieldFactorWater: 0.85, yieldFactorFat: 0.593 }
@@ -12957,7 +12957,7 @@ export const LEVELS: Level[] = [
       'Heat a large skillet or wok over high heat until very hot. Remove the beef from the marinade, reserving the marinade.',
       'Add the coconut oil to the hot skillet. Cook the beef strips in a single layer for 1 to 2 minutes per side until browned. Work in batches to avoid steaming. Transfer to a plate.',
       'Pour the reserved marinade into the skillet and bring to a boil, stirring, for 1 to 2 minutes until thickened and glossy.',
-      'Return the beef to the skillet and toss to coat. Serve immediately over steamed rice.'
+      'Return the beef to the skillet and toss to coat. Serve immediately on its own or over steamed rice (not included).'
     ],
     sections: [
       { key: 'teriyaki', label: 'Teriyaki', cookingMethod: '', yieldFactorWater: 0.8 }
@@ -13061,7 +13061,7 @@ export const LEVELS: Level[] = [
       'Add the remaining 1 tbsp coconut oil to the wok. Add the sliced onion and cook for 2 minutes. Add the sliced mushrooms and cook for 2 minutes more.',
       'Add the broccoli florets and sliced bell pepper. Stir fry for 2 to 3 minutes until the broccoli is bright green and crisp-tender.',
       'Add the minced garlic and grated ginger and stir fry for 30 seconds until fragrant.',
-      'Return the beef to the wok. Pour in the sauce and toss everything together for 1 to 2 minutes until the sauce thickens and coats everything evenly. Serve immediately over steamed rice.'
+      'Return the beef to the wok. Pour in the sauce and toss everything together for 1 to 2 minutes until the sauce thickens and coats everything evenly. Serve immediately on its own or over steamed rice (not included).'
     ],
     sections: [
       { key: 'stir_fry', label: 'Stir Fry', cookingMethod: '', yieldFactorWater: 0.85 }
@@ -13162,7 +13162,7 @@ export const LEVELS: Level[] = [
       'Heat a wok or large skillet over high heat. Add 1 tbsp coconut oil. Sear the chicken pieces in a single layer for 3 to 4 minutes per side until cooked through to an internal temperature of 165°F and lightly browned. Transfer to a plate.',
       'Add the remaining 1 tbsp coconut oil to the wok. Add the broccoli florets and stir fry for 3 to 4 minutes until bright green and crisp-tender.',
       'Add the minced garlic and grated ginger and stir fry for 30 seconds until fragrant.',
-      'Return the chicken to the wok. Pour in the sauce and toss everything together for 1 to 2 minutes until the sauce thickens and coats the chicken and broccoli evenly. Serve immediately over steamed rice.'
+      'Return the chicken to the wok. Pour in the sauce and toss everything together for 1 to 2 minutes until the sauce thickens and coats the chicken and broccoli evenly. Serve immediately on its own or over steamed rice (not included).'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -13264,7 +13264,7 @@ export const LEVELS: Level[] = [
       'Add the remaining 1 tbsp olive oil to the pan over medium heat. Add the diced onion and cook for 5 minutes until softened. Add the minced garlic and grated ginger and cook for 1 minute until fragrant.',
       'Add the curry powder, cumin, and coriander. Stir and cook for 1 minute to toast the spices.',
       'Pour in the crushed tomatoes and coconut milk. Add the salt and stir to combine. Bring to a simmer.',
-      'Return the chicken to the pan. Simmer uncovered for 15 to 20 minutes until the sauce thickens and the flavors meld. Adjust seasoning to taste. Serve over steamed rice with naan bread.'
+      'Return the chicken to the pan. Simmer uncovered for 15 to 20 minutes until the sauce thickens and the flavors meld. Adjust seasoning to taste. Serve on its own or over steamed rice with naan bread (rice not included).'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.8 },
