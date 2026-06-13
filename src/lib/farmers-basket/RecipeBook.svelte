@@ -346,7 +346,7 @@
     const gStr = (typeof gramsPerServing === 'number' && Number.isFinite(gramsPerServing) && gramsPerServing > 0)
       ? `${gramsPerServing}g` : null;
 
-    const servingsStr = level.servings?.trim();
+    const servingsStr = level.servings?.trim().replace(/\s*\(serves\s+\d+\)/i, '');
     if (servingsStr) {
       const m = servingsStr.match(/^(\d+(?:\.\d+)?)\s+(.+)$/);
       if (m) {
