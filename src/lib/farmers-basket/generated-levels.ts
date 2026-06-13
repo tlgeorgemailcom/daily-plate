@@ -12820,5 +12820,57 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'steak', label: 'Steak', cookingMethod: '', yieldFactorWater: 0.75 }
     ],
+  },
+  {
+    id: 'ENTR_039',
+    name: 'Beef Stroganoff',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 274,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":482.7,"pro":40.1,"fat":30.1,"carb":12.3,"fib":1.1,"h2o":261.4,"sug":4.6,"perServing":{"cal":482.7,"pro":40.1,"fat":30.1,"carb":12.3,"fib":1.1,"h2o":261.4,"sug":4.6,"AddedSugars":0.0,"IntrinsicSugars":4.6},"micros":{"vitaminA":37.25,"vitaminC":0.51,"vitaminD":0.49,"vitaminE":0.21,"vitaminK":0.68,"vitaminB6":0.22,"vitaminB12":1.92,"thiamin":0.05,"riboflavin":0.18,"niacin":2.51,"folate":9.99,"calcium":24.86,"iron":1.17,"magnesium":15.88,"phosphorus":139.12,"potassium":280.84,"sodium":337.21,"zinc":2.82,"copper":0.11,"selenium":19.93,"cholesterol":45.01,"saturatedFat":4.29,"monoFat":2.63,"polyFat":0.32,"omega3":0.02,"omega6":0.2},"gramsPerServing":349.2,"servings":4,"per100g":{"Energy_KCal":138.24,"Water":74.85,"Protein":11.48,"TotalLipidFat":8.62,"Carbohydrate":3.54,"FiberTotalDietary":0.32,"SugarsTotal":1.31,"Cholesterol":45.01,"FattyAcids_totalSaturated":4.29,"FattyAcids_totalMonounsaturated":2.63,"FattyAcids_totalPolyunsaturated":0.32,"LinoleicAcid":0.2,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":37.25,"Retinol":36.36,"Carotene_beta":9.1,"VitaminD":0.49,"VitaminE_alphaTocopherol":0.21,"VitaminK_phylloquinone":0.68,"VitaminC_totalAscorbicAcid":0.51,"Thiamin":0.05,"Riboflavin":0.18,"Niacin":2.51,"PantothenicAcid":0.53,"VitaminB6":0.22,"Folate_total":9.99,"Folate_food":8.87,"Folate_DFE":10.77,"FolicAcid":1.72,"VitaminB12":1.92,"Choline_total":43.9,"Betaine":9.13,"LuteinZeaxanthin":2.57,"Lycopene":0.02,"Calcium_Ca":24.86,"Iron_Fe":1.17,"Magnesium_Mg":15.88,"Phosphorus_P":139.12,"Potassium_K":280.84,"Sodium_Na":337.21,"Zinc_Zn":2.82,"Copper_Cu":0.11,"Manganese_Mn":0.07,"Selenium_Se":19.93,"Tryptophan":0.08,"Threonine":0.45,"Isoleucine":0.51,"Leucine":0.9,"Lysine":0.95,"Methionine":0.28,"Cystine":0.12,"Phenylalanine":0.45,"Tyrosine":0.36,"Valine":0.56,"Arginine":0.71,"Histidine":0.35,"Alanine":0.67,"AsparticAcid":1.02,"GlutamicAcid":1.78,"Glycine":0.66,"Proline":0.58,"Serine":0.46,"omega3":0.02,"omega6":0.2,"AddedSugars":0.0,"IntrinsicSugars":1.31},"addedSugars":0.0,"intrinsicSugars":4.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.88,"yieldFactorFat":1.0,"sources":[{"ndb":"23061","name":"Beef, round, knuckle, tip center, steak, separable lean and fat, trimmed to 0\" fat, all grades, raw","grams":170.1},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"1145","name":"Butter, without salt","grams":10.7},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"11266","name":"Mushrooms, brown, italian, or crimini, raw","grams":56.7},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":3.9},{"ndb":"6008","name":"Soup, beef broth or bouillon canned, ready-to-serve","grams":60.0},{"ndb":"6971","name":"Sauce, worcestershire","grams":4.2},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":1.2},{"ndb":"1056","name":"Cream, sour, cultured","grams":57.5},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"beef","section_label":"Beef","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.8,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":687.55,"raw_water_grams":493.11,"raw_fat_grams":40.11,"raw_protein_grams":142.53,"raw_carb_grams":0.74,"final_grams":588.93},{"section_key":"sauce","section_label":"Sauce","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":896.58,"raw_water_grams":739.76,"raw_fat_grams":80.29,"raw_protein_grams":17.83,"raw_carb_grams":48.65,"final_grams":807.8}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Beef Stroganoff', quantity: 'custom (g)', foodWord: 'STROGANOFF', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'sirloin tip steak', quantity: '1-1/2 lb', section: 'beef', ndbNo: '23061', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'salt', quantity: '1 tsp', section: 'beef', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/2 tsp', section: 'beef', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'unsalted butter', quantity: '3 tbsp', section: 'sauce', ndbNo: '1145', portionDesc: 'g', portionGrams: 42.6 },
+      { name: 'onion', quantity: '1 medium', section: 'sauce', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'crimini mushrooms', quantity: '8 oz', section: 'sauce', ndbNo: '11266', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'garlic', quantity: '2 cloves', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '2 tbsp', section: 'sauce', ndbNo: '20581', portionDesc: 'g', portionGrams: 15.6 },
+      { name: 'beef broth', quantity: '1 cup', section: 'sauce', ndbNo: '6008', portionDesc: 'g', portionGrams: 240.0 },
+      { name: 'Worcestershire sauce', quantity: '1 tbsp', section: 'sauce', ndbNo: '6971', portionDesc: 'g', portionGrams: 17.0 },
+      { name: 'yellow mustard', quantity: '1 tsp', section: 'sauce', ndbNo: '2046', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'sour cream', quantity: '1 cup', section: 'sauce', ndbNo: '1056', portionDesc: 'g', portionGrams: 230.0 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Slice the sirloin tip steak thinly against the grain into strips about 1/4-inch thick. Season with salt and pepper.',
+      'Heat a large skillet over high heat. Sear the beef strips in a single layer for 1 to 2 minutes per side until browned. Work in batches to avoid steaming. Transfer to a plate.',
+      'Reduce heat to medium. Add butter to the same skillet. Add the sliced onion and mushrooms and cook for 6 to 8 minutes until softened and the liquid has evaporated.',
+      'Add the minced garlic and cook 1 minute. Sprinkle the flour over the vegetables and stir to coat. Cook 1 to 2 minutes.',
+      'Gradually whisk in the beef broth, Worcestershire sauce, and mustard, scraping up any browned bits. Simmer for 4 to 5 minutes until the sauce thickens.',
+      'Reduce heat to low. Stir in the sour cream and heat gently — do not boil or the sour cream will curdle.',
+      'Return the beef strips to the skillet and stir to coat. Heat through for 1 to 2 minutes. Adjust seasoning and serve over egg noodles or mashed potatoes.'
+    ],
+    sections: [
+      { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.8 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];
