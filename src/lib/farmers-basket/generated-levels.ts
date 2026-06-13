@@ -12955,7 +12955,7 @@ export const LEVELS: Level[] = [
       'Whisk together the soy sauce, mirin, brown sugar, minced garlic, grated ginger, sesame oil, and cornstarch in a bowl until the sugar and cornstarch dissolve.',
       'Slice the sirloin thinly against the grain into strips about 1/4-inch thick. Add to the marinade and toss to coat. Marinate for at least 15 minutes, or up to 1 hour in the refrigerator.',
       'Heat a large skillet or wok over high heat until very hot. Remove the beef from the marinade, reserving the marinade.',
-      'Lightly oil the hot skillet. Cook the beef strips in a single layer for 1 to 2 minutes per side until browned. Work in batches to avoid steaming. Transfer to a plate.',
+      'Add the coconut oil to the hot skillet. Cook the beef strips in a single layer for 1 to 2 minutes per side until browned. Work in batches to avoid steaming. Transfer to a plate.',
       'Pour the reserved marinade into the skillet and bring to a boil, stirring, for 1 to 2 minutes until thickened and glossy.',
       'Return the beef to the skillet and toss to coat. Serve immediately over steamed rice.'
     ],
