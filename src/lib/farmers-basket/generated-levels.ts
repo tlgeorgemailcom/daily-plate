@@ -12862,7 +12862,7 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Slice the sirloin tip steak thinly against the grain into strips about 1/4-inch thick. Season with salt and pepper.',
       'Heat a large skillet over high heat. Sear the beef strips in a single layer for 1 to 2 minutes per side until browned. Work in batches to avoid steaming. Transfer to a plate.',
-      'Reduce heat to medium. Add butter to the same skillet. Add the sliced onion and mushrooms and cook for 6 to 8 minutes until softened and the liquid has evaporated.',
+      'Reduce heat to medium. Add butter to the same skillet. Add the sliced onion and sliced mushrooms and cook for 6 to 8 minutes until softened and the liquid has evaporated.',
       'Add the minced garlic and cook 1 minute. Sprinkle the flour over the vegetables and stir to coat. Cook 1 to 2 minutes.',
       'Gradually whisk in the beef broth, Worcestershire sauce, and mustard, scraping up any browned bits. Simmer for 4 to 5 minutes until the sauce thickens.',
       'Reduce heat to low. Stir in the sour cream and heat gently — do not boil or the sour cream will curdle.',
@@ -12871,6 +12871,51 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.8 },
       { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
+  },
+  {
+    id: 'ENTR_040',
+    name: 'Beef Tenderloin',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 275,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":436.8,"pro":50.3,"fat":25.8,"carb":2.3,"fib":0.8,"h2o":127.6,"sug":0.0,"perServing":{"cal":436.8,"pro":50.3,"fat":25.8,"carb":2.3,"fib":0.8,"h2o":127.6,"sug":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.0},"micros":{"vitaminA":25.1,"vitaminC":1.36,"vitaminD":3.11,"vitaminE":0.68,"vitaminK":4.1,"vitaminB6":0.52,"vitaminB12":3.47,"thiamin":0.04,"riboflavin":0.33,"niacin":4.44,"folate":4.77,"calcium":26.37,"iron":3.05,"magnesium":16.58,"phosphorus":239.55,"potassium":337.85,"sodium":468.08,"zinc":3.61,"copper":0.08,"selenium":22.49,"cholesterol":73.82,"saturatedFat":4.33,"monoFat":5.23,"polyFat":0.74,"omega3":0.03,"omega6":0.3},"gramsPerServing":208.1,"servings":4,"per100g":{"Energy_KCal":209.92,"Water":61.31,"Protein":24.15,"TotalLipidFat":12.37,"Carbohydrate":1.11,"FiberTotalDietary":0.38,"SugarsTotal":0.02,"Cholesterol":73.82,"FattyAcids_totalSaturated":4.33,"FattyAcids_totalMonounsaturated":5.23,"FattyAcids_totalPolyunsaturated":0.74,"LinoleicAcid":0.3,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.0,"VitaminA_RAE":25.1,"Retinol":21.31,"Carotene_beta":31.36,"VitaminD":3.11,"VitaminE_alphaTocopherol":0.68,"VitaminK_phylloquinone":4.1,"VitaminC_totalAscorbicAcid":1.36,"Thiamin":0.04,"Riboflavin":0.33,"Niacin":4.44,"PantothenicAcid":0.35,"VitaminB6":0.52,"Folate_total":4.77,"Folate_food":4.77,"Folate_DFE":4.77,"FolicAcid":0.0,"VitaminB12":3.47,"Choline_total":55.26,"Betaine":10.27,"LuteinZeaxanthin":1.04,"Lycopene":0.05,"Calcium_Ca":26.37,"Iron_Fe":3.05,"Magnesium_Mg":16.58,"Phosphorus_P":239.55,"Potassium_K":337.85,"Sodium_Na":468.08,"Zinc_Zn":3.61,"Copper_Cu":0.08,"Manganese_Mn":0.1,"Selenium_Se":22.49,"Tryptophan":0.29,"Threonine":1.23,"Isoleucine":1.22,"Leucine":2.26,"Lysine":2.52,"Methionine":0.69,"Cystine":0.24,"Phenylalanine":1.04,"Tyrosine":0.97,"Valine":1.3,"Arginine":1.76,"Histidine":0.97,"Alanine":1.56,"AsparticAcid":2.53,"GlutamicAcid":4.29,"Glycine":1.13,"Proline":1.1,"Serine":1.06,"omega3":0.03,"omega6":0.3,"AddedSugars":0.0,"IntrinsicSugars":0.02},"addedSugars":0.0,"intrinsicSugars":0.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.75,"yieldFactorFat":1.0,"sources":[{"ndb":"23372","name":"Beef, loin, tenderloin steak, boneless, separable lean only, trimmed to 0\" fat, all grades, raw","grams":226.8},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"1145","name":"Butter, without salt","grams":7.1},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"2049","name":"Thyme, fresh","grams":2.4},{"ndb":"2063","name":"Rosemary, fresh","grams":1.7},{"ndb":"2047","name":"Salt, table","grams":2.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.6}],"sections":[{"section_key":"tenderloin","section_label":"Tenderloin","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":1002.5,"raw_water_grams":680.46,"raw_fat_grams":103.0,"raw_protein_grams":201.04,"raw_carb_grams":9.21,"final_grams":832.38}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Beef Tenderloin', quantity: 'custom (g)', foodWord: 'BEEFTENDERLOIN', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'beef tenderloin', quantity: '2 lb', section: 'tenderloin', ndbNo: '23372', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'tenderloin', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'unsalted butter', quantity: '2 tbsp', section: 'tenderloin', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
+      { name: 'garlic', quantity: '4 cloves', section: 'tenderloin', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'fresh thyme leaves', quantity: '4 sprigs', section: 'tenderloin', ndbNo: '2049', portionDesc: 'g', portionGrams: 9.6 },
+      { name: 'fresh rosemary', quantity: '2 sprigs', section: 'tenderloin', ndbNo: '2063', portionDesc: 'g', portionGrams: 6.8 },
+      { name: 'salt', quantity: '1-1/2 tsp', section: 'tenderloin', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'ground black pepper', quantity: '1 tsp', section: 'tenderloin', ndbNo: '2030', portionDesc: 'g', portionGrams: 2.3 }
+    ],
+    recipeInstructions: [
+      'Remove the tenderloin from the refrigerator 30 to 45 minutes before cooking to take the chill off. Pat dry with paper towels. Tie with kitchen twine at 1-inch intervals if needed to ensure even thickness.',
+      'Season generously all over with salt and pepper.',
+      'Heat olive oil in an oven-safe skillet over high heat until smoking. Sear the tenderloin for 2 to 3 minutes per side, turning to brown all surfaces evenly.',
+      'Reduce heat to medium. Add the butter, smashed garlic cloves, thyme sprigs, and rosemary sprigs to the skillet. Tilt the pan and baste the meat with the butter repeatedly for 1 minute.',
+      'Transfer the skillet to a 425°F oven. Roast for 15 to 20 minutes until an instant-read thermometer inserted into the thickest part reads 130°F for medium-rare.',
+      'Transfer to a cutting board, tent loosely with foil, and rest for 10 minutes before slicing.',
+      'Slice into medallions about 1/2-inch thick and serve with the pan juices spooned over the top.'
+    ],
+    sections: [
+      { key: 'tenderloin', label: 'Tenderloin', cookingMethod: '', yieldFactorWater: 0.75 }
     ],
   }
 ];
