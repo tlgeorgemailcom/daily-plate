@@ -13159,7 +13159,7 @@ export const LEVELS: Level[] = [
       'Cut the chicken breast into bite-sized pieces. In a bowl, toss with 2 tbsp soy sauce, 1 tsp sesame oil, and 1 tbsp cornstarch. Set aside to marinate for 10 minutes.',
       'In a small bowl, whisk together the remaining 3 tbsp soy sauce, oyster sauce, beef broth, brown sugar, remaining 1 tbsp cornstarch, and remaining 1 tsp sesame oil to make the sauce. Set aside.',
       'Cut the broccoli into bite-sized florets.',
-      'Heat a wok or large skillet over high heat. Add 1 tbsp coconut oil. Sear the chicken strips in a single layer for 2 to 3 minutes per side until cooked through and lightly browned. Transfer to a plate.',
+      'Heat a wok or large skillet over high heat. Add 1 tbsp coconut oil. Sear the chicken pieces in a single layer for 3 to 4 minutes per side until cooked through to an internal temperature of 165°F and lightly browned. Transfer to a plate.',
       'Add the remaining 1 tbsp coconut oil to the wok. Add the broccoli florets and stir fry for 3 to 4 minutes until bright green and crisp-tender.',
       'Add the minced garlic and grated ginger and stir fry for 30 seconds until fragrant.',
       'Return the chicken to the wok. Pour in the sauce and toss everything together for 1 to 2 minutes until the sauce thickens and coats the chicken and broccoli evenly. Serve immediately over steamed rice.'
