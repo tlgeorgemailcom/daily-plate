@@ -12723,5 +12723,57 @@ export const LEVELS: Level[] = [
       { key: 'patties', label: 'Patties', cookingMethod: '', yieldFactorWater: 0.75 },
       { key: 'gravy', label: 'Gravy', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'ENTR_037',
+    name: 'Beef Short Ribs',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 272,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":553.1,"pro":47.7,"fat":30.1,"carb":13.4,"fib":2.9,"h2o":305.4,"sug":5.2,"perServing":{"cal":553.1,"pro":47.7,"fat":30.1,"carb":13.4,"fib":2.9,"h2o":305.4,"sug":5.2,"AddedSugars":0.0,"IntrinsicSugars":5.2},"micros":{"vitaminA":56.58,"vitaminC":1.25,"vitaminD":2.1,"vitaminE":0.42,"vitaminK":5.97,"vitaminB6":0.17,"vitaminB12":1.73,"thiamin":0.04,"riboflavin":0.13,"niacin":2.03,"folate":7.0,"calcium":22.45,"iron":1.78,"magnesium":18.31,"phosphorus":120.22,"potassium":285.56,"sodium":380.48,"zinc":4.61,"copper":0.07,"selenium":12.45,"cholesterol":42.08,"saturatedFat":2.67,"monoFat":3.96,"polyFat":0.35,"omega3":0.0,"omega6":0.16},"gramsPerServing":409.6,"servings":4,"per100g":{"Energy_KCal":135.03,"Water":74.56,"Protein":11.64,"TotalLipidFat":7.35,"Carbohydrate":3.27,"FiberTotalDietary":0.71,"SugarsTotal":1.27,"Cholesterol":42.08,"FattyAcids_totalSaturated":2.67,"FattyAcids_totalMonounsaturated":3.96,"FattyAcids_totalPolyunsaturated":0.35,"LinoleicAcid":0.16,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":56.58,"Retinol":0.94,"Carotene_beta":520.25,"VitaminD":2.1,"VitaminE_alphaTocopherol":0.42,"VitaminK_phylloquinone":5.97,"VitaminC_totalAscorbicAcid":1.25,"Thiamin":0.04,"Riboflavin":0.13,"Niacin":2.03,"PantothenicAcid":0.4,"VitaminB6":0.17,"Folate_total":7.0,"Folate_food":7.0,"Folate_DFE":7.0,"FolicAcid":0.0,"VitaminB12":1.73,"Choline_total":40.14,"Betaine":12.74,"LuteinZeaxanthin":25.62,"Lycopene":477.57,"Calcium_Ca":22.45,"Iron_Fe":1.78,"Magnesium_Mg":18.31,"Phosphorus_P":120.22,"Potassium_K":285.56,"Sodium_Na":380.48,"Zinc_Zn":4.61,"Copper_Cu":0.07,"Manganese_Mn":0.11,"Selenium_Se":12.45,"Tryptophan":0.13,"Threonine":0.51,"Isoleucine":0.49,"Leucine":0.92,"Lysine":1.0,"Methionine":0.32,"Cystine":0.11,"Phenylalanine":0.43,"Tyrosine":0.39,"Valine":0.52,"Arginine":0.76,"Histidine":0.36,"Alanine":0.64,"AsparticAcid":1.05,"GlutamicAcid":1.88,"Glycine":0.49,"Proline":0.46,"Serine":0.44,"omega3":0.0,"omega6":0.16,"AddedSugars":0.0,"IntrinsicSugars":1.27},"addedSugars":0.0,"intrinsicSugars":5.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.72,"yieldFactorFat":1.0,"sources":[{"ndb":"23068","name":"Beef, chuck, short ribs, boneless, separable lean only, trimmed to 0\" fat, all grades, raw","grams":226.8},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"11282","name":"Onions, raw","grams":50.0},{"ndb":"11124","name":"Carrots, raw","grams":30.5},{"ndb":"11143","name":"Celery, raw","grams":20.0},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11546","name":"Tomato products, canned, paste, without salt added","grams":8.0},{"ndb":"14096","name":"Alcoholic beverage, wine, table, red","grams":59.0},{"ndb":"6008","name":"Soup, beef broth or bouillon canned, ready-to-serve","grams":120.0},{"ndb":"2042","name":"Spices, thyme, dried","grams":0.3},{"ndb":"2063","name":"Rosemary, fresh","grams":0.8},{"ndb":"2004","name":"Spices, bay leaf","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":2.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.6}],"sections":[{"section_key":"braise","section_label":"Braise","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.72,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":14,"raw_grams":2113.7,"raw_water_grams":1696.93,"raw_fat_grams":120.48,"raw_protein_grams":190.78,"raw_carb_grams":53.54,"final_grams":1638.56}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Beef Short Ribs', quantity: 'custom (g)', foodWord: 'BEEFSHORTRIBS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'beef short ribs', quantity: '2 lb', section: 'braise', ndbNo: '23068', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'braise', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'onion', quantity: '1 large', section: 'braise', ndbNo: '11282', portionDesc: 'g', portionGrams: 200.0 },
+      { name: 'carrot', quantity: '2 medium', section: 'braise', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'celery', quantity: '2 stalks', section: 'braise', ndbNo: '11143', portionDesc: 'g', portionGrams: 80.0 },
+      { name: 'garlic', quantity: '4 cloves', section: 'braise', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'tomato paste', quantity: '2 tbsp', section: 'braise', ndbNo: '11546', portionDesc: 'g', portionGrams: 32.0 },
+      { name: 'red wine', quantity: '1 cup', section: 'braise', ndbNo: '14096', portionDesc: 'g', portionGrams: 236.0 },
+      { name: 'beef broth', quantity: '2 cups', section: 'braise', ndbNo: '6008', portionDesc: 'g', portionGrams: 480.0 },
+      { name: 'dried thyme', quantity: '1 tsp', section: 'braise', ndbNo: '2042', portionDesc: 'g', portionGrams: 1.4 },
+      { name: 'fresh rosemary', quantity: '1 sprig', section: 'braise', ndbNo: '2063', portionDesc: 'g', portionGrams: 3.4 },
+      { name: 'bay leaf', quantity: '2', section: 'braise', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'salt', quantity: '1-1/2 tsp', section: 'braise', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'ground black pepper', quantity: '1 tsp', section: 'braise', ndbNo: '2030', portionDesc: 'g', portionGrams: 2.3 }
+    ],
+    recipeInstructions: [
+      'Pat the short ribs dry with paper towels. Season all over with salt and pepper.',
+      'Heat olive oil in a large Dutch oven over medium-high heat. Sear the ribs in batches for 3 to 4 minutes per side until deeply browned. Transfer to a plate.',
+      'Reduce heat to medium. Add onion, carrot, and celery to the pot and cook for 5 minutes until softened. Add garlic and tomato paste and cook 2 minutes, stirring.',
+      'Pour in the red wine and scrape up any browned bits from the bottom of the pot. Simmer for 3 minutes.',
+      'Add the beef broth, thyme, rosemary, and bay leaves. Nestle the ribs back into the pot in a single layer. The liquid should come about halfway up the ribs.',
+      'Cover and braise in a 325°F oven for 2-1/2 to 3 hours until the meat is very tender and pulling away from the bone.',
+      'Remove the ribs. Discard the bay leaves and rosemary sprig. Skim excess fat from the braising liquid and adjust seasoning.',
+      'Serve the ribs with the braising liquid spooned over the top.'
+    ],
+    sections: [
+      { key: 'braise', label: 'Braise', cookingMethod: '', yieldFactorWater: 0.72 }
+    ],
   }
 ];
