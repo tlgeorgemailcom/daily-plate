@@ -13156,7 +13156,7 @@ export const LEVELS: Level[] = [
       { name: 'Sesame oil', quantity: '1 tsp', section: 'sauce', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 }
     ],
     recipeInstructions: [
-      'Slice the chicken breast thinly against the grain into strips. In a bowl, toss with 2 tbsp soy sauce, 1 tsp sesame oil, and 1 tbsp cornstarch. Set aside to marinate for 10 minutes.',
+      'Cut the chicken breast into bite-sized pieces. In a bowl, toss with 2 tbsp soy sauce, 1 tsp sesame oil, and 1 tbsp cornstarch. Set aside to marinate for 10 minutes.',
       'In a small bowl, whisk together the remaining 3 tbsp soy sauce, oyster sauce, beef broth, brown sugar, remaining 1 tbsp cornstarch, and remaining 1 tsp sesame oil to make the sauce. Set aside.',
       'Cut the broccoli into bite-sized florets.',
       'Heat a wok or large skillet over high heat. Add 1 tbsp coconut oil. Sear the chicken strips in a single layer for 2 to 3 minutes per side until cooked through and lightly browned. Transfer to a plate.',
