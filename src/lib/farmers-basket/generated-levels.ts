@@ -13264,7 +13264,7 @@ export const LEVELS: Level[] = [
       'Add the remaining 1 tbsp olive oil to the pan over medium heat. Add the diced onion and cook for 5 minutes until softened. Add the minced garlic and grated ginger and cook for 1 minute until fragrant.',
       'Add the curry powder, cumin, and coriander. Stir and cook for 1 minute to toast the spices.',
       'Pour in the crushed tomatoes and coconut milk. Add the salt and stir to combine. Bring to a simmer.',
-      'Return the chicken to the pan. Simmer uncovered for 15 to 20 minutes until the sauce thickens and the flavors meld. Adjust seasoning to taste. Serve on its own or over steamed rice with naan bread (rice not included).'
+      'Return the chicken to the pan. Simmer uncovered for 15 to 20 minutes until the sauce thickens and the flavors meld. Adjust seasoning to taste. Serve on its own or over steamed rice with naan bread (neither included).'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.8 },
