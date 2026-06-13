@@ -12912,7 +12912,7 @@ export const LEVELS: Level[] = [
       'Reduce heat to medium. Add the butter, smashed garlic cloves, thyme sprigs, and rosemary sprigs to the skillet. Tilt the pan and baste the meat with the butter repeatedly for 1 minute.',
       'Transfer the skillet to a 425°F oven. Roast for 15 to 20 minutes until an instant-read thermometer inserted into the thickest part reads 130°F for medium-rare.',
       'Transfer to a cutting board, tent loosely with foil, and rest for 10 minutes before slicing.',
-      'Slice into medallions about 1/2-inch thick and serve with the pan juices spooned over the top.'
+      'Slice into medallions about 1-inch thick and serve with the pan juices spooned over the top.'
     ],
     sections: [
       { key: 'tenderloin', label: 'Tenderloin', cookingMethod: '', yieldFactorWater: 0.75 }
