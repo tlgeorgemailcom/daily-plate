@@ -352,8 +352,9 @@
       if (m) {
         const count = parseFloat(m[1]);
         const unit = m[2].trim();
-        const singular = count > 1 ? singularizeUnit(unit) : unit;
-        const label = `1 ${singular}`;
+        // Keep original count+unit when serving is >1 unit (e.g. "3 enchiladas").
+        // Only singularize when count=1 (e.g. "1 cups" → "1 cup").
+        const label = count > 1 ? `${count} ${unit}` : `1 ${singularizeUnit(unit)}`;
         return gStr ? `${label} (${gStr})` : label;
       }
     }
