@@ -12123,7 +12123,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '1 serving over rice (serves 4)',
+    servings: '1 serving (serves 4)',
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
@@ -12141,11 +12141,11 @@ export const LEVELS: Level[] = [
       { name: 'red pepper flakes', quantity: '1/4 tsp red pepper flakes', section: 'beef', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.3 }
     ],
     recipeInstructions: [
-      'While the rice cooks, make the sauce: whisk together the soy sauce, brown sugar, sesame oil, and red pepper flakes in a small bowl. Set aside.',
+      'Make the sauce: whisk together the soy sauce, brown sugar, sesame oil, and red pepper flakes in a small bowl. Set aside.',
       'Heat a large skillet or wok over medium-high heat. Add the ground beef and cook, breaking it up, until browned through, about 6 to 8 minutes. Drain excess fat.',
       'Add the garlic and ginger to the beef and cook 1 to 2 minutes until fragrant.',
       'Pour the sauce over the beef and stir to coat. Cook 1 to 2 minutes until the sauce thickens and coats the beef. Remove from heat and stir in the scallions and black pepper.',
-      'Serve the Korean beef over steamed rice. Garnish with additional sliced scallions and sesame seeds if desired.'
+      'Serve the Korean beef on its own or over steamed white rice (not included). Garnish with additional sliced scallions and sesame seeds if desired.'
     ],
     sections: [
       { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.85, yieldFactorFat: 0.593 }
@@ -12224,7 +12224,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '1 serving over rice (serves 4)',
+    servings: '1 serving (serves 4)',
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
@@ -12249,7 +12249,7 @@ export const LEVELS: Level[] = [
       'Heat the vegetable oil in a wok or large skillet over high heat. Add the beef in a single layer and cook without stirring for 1 to 2 minutes until browned. Flip and cook 1 minute more. Remove beef and set aside.',
       'Pour the sauce into the same wok and bring to a simmer over medium-high heat, stirring, for 2 to 3 minutes until slightly thickened.',
       'Return the beef to the wok and toss to coat in the sauce. Add the scallions and drizzle with sesame oil. Stir-fry 1 minute.',
-      'Serve the Mongolian beef over the steamed white rice.'
+      'Serve the Mongolian beef on its own or over steamed white rice (not included).'
     ],
     sections: [
       { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.82 },
