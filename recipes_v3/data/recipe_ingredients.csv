@@ -2803,3 +2803,13 @@ ENTR_047,11,curry_powder,2 tbsp,12.0,,,curry,,False,
 ENTR_047,12,cumin_ground,1 tsp,2.0,,,curry,,False,
 ENTR_047,13,coriander_seed,1 tsp,1.8,,,curry,,False,
 ENTR_047,14,salt_table,1/2 tsp,3.0,,,curry,,False,
+ENTR_048,1,chicken_breast_raw,1.5 lbs,680.4,,,filling,,False,chicken breast (boneless/skinless)
+ENTR_048,2,chili_powder,1 tsp,2.7,,,filling,,False,
+ENTR_048,3,cumin_ground,1 tsp,2.0,,,filling,,False,
+ENTR_048,4,garlic_powder,1/2 tsp,1.55,,,filling,,False,
+ENTR_048,5,salt_table,1/2 tsp,3.0,,,filling,,False,
+ENTR_048,6,olive_oil,1 tbsp,13.6,,,filling,,False,
+ENTR_048,7,@SAUCE_025,"1 recipe Red Enchilada Sauce (1¾ cup, 397.9g)",397.9,,,sauce,,False,Red Enchilada Sauce
+ENTR_048,8,corn_tortilla,8 each,192.0,,,assembly,,False,
+ENTR_048,9,cheese_cheddar,2 cups,226.8,,,assembly,,False,
+ENTR_048,10,onion_raw,1/2 medium,55.0,,,assembly,,False,

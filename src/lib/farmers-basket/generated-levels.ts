@@ -13270,5 +13270,55 @@ export const LEVELS: Level[] = [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.8 },
       { key: 'curry', label: 'Curry Sauce', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'ENTR_048',
+    name: 'Chicken Enchiladas',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 283,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":720.6,"pro":58.6,"fat":35.0,"carb":45.0,"fib":11.3,"h2o":217.3,"sug":3.8,"perServing":{"cal":720.6,"pro":58.6,"fat":35.0,"carb":45.0,"fib":11.3,"h2o":217.3,"sug":3.8,"AddedSugars":0.0,"IntrinsicSugars":3.8},"micros":{"vitaminA":142.81,"vitaminC":1.52,"vitaminD":3.98,"vitaminE":0.68,"vitaminK":2.96,"vitaminB6":0.51,"vitaminB12":0.24,"thiamin":0.06,"riboflavin":0.31,"niacin":4.16,"folate":15.18,"calcium":136.49,"iron":1.28,"magnesium":37.6,"phosphorus":234.1,"potassium":384.13,"sodium":387.28,"zinc":1.21,"copper":0.08,"selenium":16.26,"cholesterol":49.29,"saturatedFat":3.56,"monoFat":3.19,"polyFat":0.84,"omega3":0.0,"omega6":0.12},"gramsPerServing":365.8,"servings":4,"per100g":{"Energy_KCal":197.0,"Water":59.4,"Protein":16.03,"TotalLipidFat":9.58,"Carbohydrate":12.3,"FiberTotalDietary":3.08,"SugarsTotal":1.04,"Cholesterol":49.29,"FattyAcids_totalSaturated":3.56,"FattyAcids_totalMonounsaturated":3.19,"FattyAcids_totalPolyunsaturated":0.84,"LinoleicAcid":0.12,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":142.81,"Retinol":46.83,"Carotene_beta":85.02,"VitaminD":3.98,"VitaminE_alphaTocopherol":0.68,"VitaminK_phylloquinone":2.96,"VitaminC_totalAscorbicAcid":1.52,"Thiamin":0.06,"Riboflavin":0.31,"Niacin":4.16,"PantothenicAcid":0.74,"VitaminB6":0.51,"Folate_total":15.18,"Folate_food":15.18,"Folate_DFE":15.18,"FolicAcid":0.0,"VitaminB12":0.24,"Choline_total":39.91,"Betaine":3.46,"LuteinZeaxanthin":14.23,"Lycopene":284.92,"Calcium_Ca":136.49,"Iron_Fe":1.28,"Magnesium_Mg":37.6,"Phosphorus_P":234.1,"Potassium_K":384.13,"Sodium_Na":387.28,"Zinc_Zn":1.21,"Copper_Cu":0.08,"Manganese_Mn":0.21,"Selenium_Se":16.26,"Tryptophan":0.23,"Threonine":0.68,"Isoleucine":0.75,"Leucine":1.3,"Lysine":1.22,"Methionine":0.38,"Cystine":0.13,"Phenylalanine":0.64,"Tyrosine":0.59,"Valine":0.82,"Arginine":0.88,"Histidine":0.51,"Alanine":0.81,"AsparticAcid":1.41,"GlutamicAcid":2.59,"Glycine":0.6,"Proline":0.81,"Serine":0.58,"omega3":0.0,"omega6":0.12,"AddedSugars":0.0,"IntrinsicSugars":1.04},"addedSugars":0.0,"intrinsicSugars":3.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.95,"yieldFactorFat":1.0,"sources":[{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":170.1},{"ndb":"2009","name":"Spices, chili powder","grams":0.7},{"ndb":"2014","name":"Spices, cumin seed","grams":0.5},{"ndb":"2020","name":"Spices, garlic powder","grams":0.4},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"","name":"Red Enchilada Sauce","grams":99.5},{"ndb":"18363","name":"Tortillas, ready-to-bake or -fry, corn","grams":48.0},{"ndb":"1009","name":"Cheese, cheddar","grams":56.7},{"ndb":"11282","name":"Onions, raw","grams":13.8}],"sections":[{"section_key":"filling","section_label":"Filling","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.8,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":703.25,"raw_water_grams":503.37,"raw_fat_grams":32.27,"raw_protein_grams":154.07,"raw_carb_grams":3.35,"final_grams":602.58},{"section_key":"sauce","section_label":"Red Enchilada Sauce","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":397.9,"raw_water_grams":256.41,"raw_fat_grams":26.86,"raw_protein_grams":17.07,"raw_carb_grams":78.82,"final_grams":397.9},{"section_key":"assembly","section_label":"Assembly","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.95,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":473.8,"raw_water_grams":221.08,"raw_fat_grams":81.07,"raw_protein_grams":63.42,"raw_carb_grams":97.85,"final_grams":462.75}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken Enchiladas', quantity: 'custom (g)', foodWord: 'CHICKENENCHILADAS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chicken breast (boneless/skinless)', quantity: '1.5 lbs', section: 'filling', ndbNo: '5062', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'chili powder', quantity: '1 tsp', section: 'filling', ndbNo: '2009', portionDesc: 'g', portionGrams: 2.7 },
+      { name: 'ground cumin', quantity: '1 tsp', section: 'filling', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'garlic powder', quantity: '1/2 tsp', section: 'filling', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.55 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'filling', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'Red Enchilada Sauce', quantity: '1 recipe Red Enchilada Sauce (1¾ cup, 397.9g)', section: 'sauce', foodWord: 'ENCHILADASAUCE', portionDesc: 'g', portionGrams: 397.9, isDish: true, componentRef: 'SAUCE_025' },
+      { name: 'corn tortilla', quantity: '8 each', section: 'assembly', ndbNo: '18363', portionDesc: 'g', portionGrams: 192.0 },
+      { name: 'Cheddar cheese', quantity: '2 cups', section: 'assembly', ndbNo: '1009', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'onion', quantity: '1/2 medium', section: 'assembly', ndbNo: '11282', portionDesc: 'g', portionGrams: 55.0 }
+    ],
+    recipeInstructions: [
+      'Make or prepare the Red Enchilada Sauce (see the Red Enchilada Sauce recipe). Set aside.',
+      'Cut the boneless skinless chicken breasts into bite-sized pieces. Season with chili powder, cumin, garlic powder, and salt.',
+      'Heat the olive oil in a skillet over medium-high heat. Cook the chicken pieces for 5 to 6 minutes, stirring occasionally, until cooked through to an internal temperature of 165°F. Remove from heat and shred or chop into small pieces.',
+      'Preheat the oven to 375°F. Spread a thin layer of enchilada sauce over the bottom of a 9×13-inch baking dish.',
+      'Warm the corn tortillas in a dry skillet or directly over a gas flame for 20 to 30 seconds per side until pliable.',
+      'Fill each tortilla with chicken, diced onion, and a small handful of shredded cheddar cheese. Roll up tightly and place seam-side down in the baking dish.',
+      'Pour the remaining enchilada sauce evenly over the rolled enchiladas. Top with the remaining shredded cheddar cheese.',
+      'Bake at 375°F for 20 to 25 minutes until the cheese is melted and bubbly. Serve immediately.'
+    ],
+    sections: [
+      { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.8 },
+      { key: 'sauce', label: 'Red Enchilada Sauce', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 0.95 }
+    ],
   }
 ];
