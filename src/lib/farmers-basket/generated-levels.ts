@@ -12616,5 +12616,54 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.85 }
     ],
+  },
+  {
+    id: 'ENTR_035',
+    name: 'Beef Back Ribs',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 270,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":1058.0,"pro":88.5,"fat":69.8,"carb":21.2,"fib":2.9,"h2o":225.3,"sug":11.9,"perServing":{"cal":1058.0,"pro":88.5,"fat":69.8,"carb":21.2,"fib":2.9,"h2o":225.3,"sug":11.9,"AddedSugars":10.0,"IntrinsicSugars":1.9},"micros":{"vitaminA":25.94,"vitaminC":0.47,"vitaminD":0.0,"vitaminE":0.47,"vitaminK":1.72,"vitaminB6":0.4,"vitaminB12":1.72,"thiamin":0.08,"riboflavin":0.27,"niacin":4.41,"folate":4.3,"calcium":20.57,"iron":2.42,"magnesium":27.5,"phosphorus":166.79,"potassium":350.68,"sodium":503.76,"zinc":5.13,"copper":0.09,"selenium":22.2,"cholesterol":76.57,"saturatedFat":7.75,"monoFat":8.42,"polyFat":0.71,"omega3":0.04,"omega6":0.47},"gramsPerServing":414.7,"servings":4,"per100g":{"Energy_KCal":255.12,"Water":54.34,"Protein":21.34,"TotalLipidFat":16.84,"Carbohydrate":5.11,"FiberTotalDietary":0.7,"SugarsTotal":2.87,"Cholesterol":76.57,"FattyAcids_totalSaturated":7.75,"FattyAcids_totalMonounsaturated":8.42,"FattyAcids_totalPolyunsaturated":0.71,"LinoleicAcid":0.47,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.0,"VitaminA_RAE":25.94,"Retinol":0.0,"Carotene_beta":276.92,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.47,"VitaminK_phylloquinone":1.72,"VitaminC_totalAscorbicAcid":0.47,"Thiamin":0.08,"Riboflavin":0.27,"Niacin":4.41,"PantothenicAcid":0.05,"VitaminB6":0.4,"Folate_total":4.3,"Folate_food":4.3,"Folate_DFE":4.3,"FolicAcid":0.0,"VitaminB12":1.72,"Choline_total":1.93,"Betaine":0.19,"LuteinZeaxanthin":186.98,"Lycopene":797.89,"Calcium_Ca":20.57,"Iron_Fe":2.42,"Magnesium_Mg":27.5,"Phosphorus_P":166.79,"Potassium_K":350.68,"Sodium_Na":503.76,"Zinc_Zn":5.13,"Copper_Cu":0.09,"Manganese_Mn":0.1,"Selenium_Se":22.2,"Tryptophan":0.0,"Threonine":0.01,"Isoleucine":0.01,"Leucine":0.02,"Lysine":0.02,"Methionine":0.0,"Cystine":0.01,"Phenylalanine":0.01,"Tyrosine":0.01,"Valine":0.02,"Arginine":0.04,"Histidine":0.01,"Alanine":0.01,"AsparticAcid":0.06,"GlutamicAcid":0.1,"Glycine":0.02,"Proline":0.04,"Serine":0.01,"omega3":0.04,"omega6":0.47,"AddedSugars":2.42,"IntrinsicSugars":0.45},"addedSugars":10.0,"intrinsicSugars":1.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.72,"yieldFactorFat":0.85,"sources":[{"ndb":"2047","name":"Salt, table","grams":4.5},{"ndb":"2030","name":"Spices, pepper, black","grams":1.7},{"ndb":"19334","name":"Sugars, brown","grams":6.9},{"ndb":"2028","name":"Spices, paprika","grams":3.6},{"ndb":"2020","name":"Spices, garlic powder","grams":2.4},{"ndb":"2026","name":"Spices, onion powder","grams":2.1},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.3},{"ndb":"23181","name":"Beef, rib, back ribs, bone-in, separable lean only, trimmed to 0\" fat, all grades, raw","grams":453.6},{"ndb":"","name":"BBQ Sauce","grams":30.0}],"sections":[{"section_key":"rub","section_label":"Dry Rub","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":86.55,"raw_water_grams":4.08,"raw_fat_grams":2.47,"raw_protein_grams":5.45,"raw_carb_grams":53.88,"final_grams":86.55},{"section_key":"ribs","section_label":"Ribs","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.72,"yield_factor_fat":0.85,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":1814.4,"raw_water_grams":1119.48,"raw_fat_grams":324.96,"raw_protein_grams":346.73,"raw_carb_grams":8.35,"final_grams":1452.2},{"section_key":"bbq_sauce","section_label":"BBQ Sauce","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":120.0,"raw_water_grams":91.19,"raw_fat_grams":0.7,"raw_protein_grams":1.86,"raw_carb_grams":22.56,"final_grams":120.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Beef Back Ribs', quantity: 'custom (g)', foodWord: 'BEEFBACKRIBS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'salt', quantity: '1 tbsp', section: 'rub', ndbNo: '2047', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'ground black pepper', quantity: '1 tbsp', section: 'rub', ndbNo: '2030', portionDesc: 'g', portionGrams: 6.9 },
+      { name: 'brown sugar', quantity: '2 tbsp', section: 'rub', ndbNo: '19334', portionDesc: 'g', portionGrams: 27.6 },
+      { name: 'paprika', quantity: '2 tbsp', section: 'rub', ndbNo: '2028', portionDesc: 'g', portionGrams: 14.4 },
+      { name: 'garlic powder', quantity: '1 tbsp', section: 'rub', ndbNo: '2020', portionDesc: 'g', portionGrams: 9.7 },
+      { name: 'onion powder', quantity: '1 tbsp', section: 'rub', ndbNo: '2026', portionDesc: 'g', portionGrams: 8.6 },
+      { name: 'cayenne pepper', quantity: '1/2 tsp', section: 'rub', ndbNo: '2031', portionDesc: 'g', portionGrams: 1.35 },
+      { name: 'beef back ribs', quantity: '2 racks (4 lb)', section: 'ribs', ndbNo: '23181', portionDesc: 'g', portionGrams: 1814.4 },
+      { name: 'BBQ Sauce', quantity: '1/2 cup BBQ Sauce (recipe)', section: 'bbq_sauce', foodWord: 'BBQSAUCE', portionDesc: 'g', portionGrams: 120.0, isDish: true, componentRef: 'SAUCE_026' }
+    ],
+    recipeInstructions: [
+      'Mix all dry rub ingredients together in a small bowl until combined.',
+      'Pat the ribs dry with paper towels. Flip racks over and remove the membrane (silver skin) from the underside of each rack by loosening a corner with a knife and pulling it off.',
+      'Coat the ribs all over with the dry rub, pressing it into the meat. Let rest at room temperature for 30 minutes, or cover and refrigerate up to overnight.',
+      'Preheat oven to 300°F. Wrap each rack tightly in aluminum foil and place on a rimmed baking sheet.',
+      'Bake for 2-1/2 to 3 hours until very tender and the meat has pulled back from the bone ends.',
+      'Make or prepare the BBQ Sauce (see the BBQ Sauce recipe). Carefully unwrap the ribs and brush generously with BBQ sauce on all sides.',
+      'Increase oven temperature to 425°F. Return the ribs, uncovered, to the oven and bake for 15 minutes until the sauce is caramelized and sticky.',
+      'Rest 5 minutes before slicing between bones. Serve with remaining BBQ sauce on the side.'
+    ],
+    sections: [
+      { key: 'rub', label: 'Dry Rub', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'ribs', label: 'Ribs', cookingMethod: '', yieldFactorWater: 0.72, yieldFactorFat: 0.85 },
+      { key: 'bbq_sauce', label: 'BBQ Sauce', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
