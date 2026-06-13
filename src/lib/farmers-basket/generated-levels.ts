@@ -13219,5 +13219,56 @@ export const LEVELS: Level[] = [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.8 },
       { key: 'braise', label: 'Braise', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'ENTR_047',
+    name: 'Chicken Curry',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 282,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":590.0,"pro":49.4,"fat":37.5,"carb":17.2,"fib":4.5,"h2o":314.4,"sug":6.1,"perServing":{"cal":590.0,"pro":49.4,"fat":37.5,"carb":17.2,"fib":4.5,"h2o":314.4,"sug":6.1,"AddedSugars":0.0,"IntrinsicSugars":6.1},"micros":{"vitaminA":5.4,"vitaminC":1.68,"vitaminD":0.51,"vitaminE":0.72,"vitaminK":4.25,"vitaminB6":0.22,"vitaminB12":0.28,"thiamin":0.05,"riboflavin":0.11,"niacin":2.69,"folate":7.05,"calcium":22.14,"iron":1.5,"magnesium":27.53,"phosphorus":130.45,"potassium":248.56,"sodium":287.03,"zinc":1.07,"copper":0.12,"selenium":12.87,"cholesterol":50.33,"saturatedFat":5.11,"monoFat":2.28,"polyFat":0.61,"omega3":0.01,"omega6":0.31},"gramsPerServing":423.6,"servings":4,"per100g":{"Energy_KCal":139.31,"Water":74.24,"Protein":11.67,"TotalLipidFat":8.86,"Carbohydrate":4.05,"FiberTotalDietary":1.06,"SugarsTotal":1.44,"Cholesterol":50.33,"FattyAcids_totalSaturated":5.11,"FattyAcids_totalMonounsaturated":2.28,"FattyAcids_totalPolyunsaturated":0.61,"LinoleicAcid":0.31,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":5.4,"Retinol":3.0,"Carotene_beta":28.29,"VitaminD":0.51,"VitaminE_alphaTocopherol":0.72,"VitaminK_phylloquinone":4.25,"VitaminC_totalAscorbicAcid":1.68,"Thiamin":0.05,"Riboflavin":0.11,"Niacin":2.69,"PantothenicAcid":0.09,"VitaminB6":0.22,"Folate_total":7.05,"Folate_food":7.05,"Folate_DFE":7.05,"FolicAcid":0.0,"VitaminB12":0.28,"Choline_total":31.17,"Betaine":5.84,"LuteinZeaxanthin":66.92,"Lycopene":1076.85,"Calcium_Ca":22.14,"Iron_Fe":1.5,"Magnesium_Mg":27.53,"Phosphorus_P":130.45,"Potassium_K":248.56,"Sodium_Na":287.03,"Zinc_Zn":1.07,"Copper_Cu":0.12,"Manganese_Mn":0.3,"Selenium_Se":12.87,"Tryptophan":0.13,"Threonine":0.53,"Isoleucine":0.53,"Leucine":0.95,"Lysine":1.03,"Methionine":0.31,"Cystine":0.12,"Phenylalanine":0.46,"Tyrosine":0.41,"Valine":0.56,"Arginine":0.84,"Histidine":0.33,"Alanine":0.67,"AsparticAcid":1.15,"GlutamicAcid":2.01,"Glycine":0.52,"Proline":0.46,"Serine":0.48,"omega3":0.01,"omega6":0.31,"AddedSugars":0.0,"IntrinsicSugars":1.44},"addedSugars":0.0,"intrinsicSugars":6.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.9,"yieldFactorFat":1.0,"sources":[{"ndb":"5096","name":"Chicken, broilers or fryers, dark meat, thigh, meat only, raw","grams":226.8},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"11282","name":"Onions, raw","grams":37.5},{"ndb":"11215","name":"Garlic, raw","grams":3.8},{"ndb":"11216","name":"Ginger root, raw","grams":1.5},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":99.2},{"ndb":"12118","name":"Nuts, coconut milk, canned","grams":95.8},{"ndb":"2015","name":"Spices, curry powder","grams":3.0},{"ndb":"2014","name":"Spices, cumin seed","grams":0.5},{"ndb":"2013","name":"Spices, coriander seed","grams":0.5},{"ndb":"2047","name":"Salt, table","grams":0.8}],"sections":[{"section_key":"chicken","section_label":"Chicken","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.8,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":927.38,"raw_water_grams":691.55,"raw_fat_grams":51.0,"raw_protein_grams":178.42,"raw_carb_grams":0.37,"final_grams":789.06},{"section_key":"curry","section_label":"Curry Sauce","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":983.4,"raw_water_grams":782.78,"raw_fat_grams":99.12,"raw_protein_grams":19.25,"raw_carb_grams":68.31,"final_grams":905.12}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken Curry', quantity: 'custom (g)', foodWord: 'CHICKENCURRY', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chicken thigh', quantity: '2 lbs', section: 'chicken', ndbNo: '5096', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'salt', quantity: '1 tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'onion', quantity: '1 large', section: 'curry', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'garlic', quantity: '5 cloves', section: 'curry', ndbNo: '11215', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'fresh ginger', quantity: '1 tbsp', section: 'curry', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'curry', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'canned crushed tomatoes', quantity: '14 oz', section: 'curry', ndbNo: '11693', portionDesc: 'g', portionGrams: 397.0 },
+      { name: 'canned coconut milk', quantity: '13.5 oz', section: 'curry', ndbNo: '12118', portionDesc: 'g', portionGrams: 383.0 },
+      { name: 'curry powder', quantity: '2 tbsp', section: 'curry', ndbNo: '2015', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'ground cumin', quantity: '1 tsp', section: 'curry', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'ground coriander', quantity: '1 tsp', section: 'curry', ndbNo: '2013', portionDesc: 'g', portionGrams: 1.8 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'curry', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 }
+    ],
+    recipeInstructions: [
+      'Cut the chicken thighs into bite-sized pieces. Season with salt and black pepper.',
+      'Heat 1 tbsp olive oil in a large skillet or Dutch oven over medium-high heat. Sear the chicken pieces for 3 to 4 minutes per side until browned and cooked through to an internal temperature of 165°F. Transfer to a plate.',
+      'Add the remaining 1 tbsp olive oil to the pan over medium heat. Add the diced onion and cook for 5 minutes until softened. Add the minced garlic and grated ginger and cook for 1 minute until fragrant.',
+      'Add the curry powder, cumin, and coriander. Stir and cook for 1 minute to toast the spices.',
+      'Pour in the crushed tomatoes and coconut milk. Add the salt and stir to combine. Bring to a simmer.',
+      'Return the chicken to the pan. Simmer uncovered for 15 to 20 minutes until the sauce thickens and the flavors meld. Adjust seasoning to taste. Serve over steamed rice with naan bread.'
+    ],
+    sections: [
+      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.8 },
+      { key: 'curry', label: 'Curry Sauce', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];
