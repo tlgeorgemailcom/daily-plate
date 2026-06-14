@@ -14016,7 +14016,7 @@ export const LEVELS: Level[] = [
       'Cut chicken breast lengthwise into 1-inch wide strips. Pat dry with paper towels.',
       'In a shallow bowl, whisk together flour, cornstarch, salt, pepper, garlic powder, onion powder, and paprika. In a second shallow bowl, whisk together eggs and buttermilk.',
       'Working one strip at a time: dredge in the seasoned flour, shake off excess, dip in the egg-buttermilk wash, then dredge in the seasoned flour a second time, pressing firmly so the coating adheres fully.',
-      'Heat olive oil in a large skillet over medium-high heat. Working in batches, fry chicken strips 3 to 4 minutes per side until deep golden brown and cooked through (165°F internal temperature). Transfer to a wire rack; do not stack.',
+      'Heat olive oil in a large skillet over medium-high heat. Keeping the oil temp at a minimum of 350° decreases oil absorption. Working in batches, fry chicken strips 3 to 4 minutes per side until deep golden brown and cooked through (165°F internal temperature). Transfer to a wire rack; do not stack.',
       'Serve hot with dipping sauce of your choice — honey mustard, ranch dressing, or BBQ sauce (not included).'
     ],
     sections: [
