@@ -13540,5 +13540,58 @@ export const LEVELS: Level[] = [
       { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'stir_fry', label: 'Stir Fry', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'ENTR_053',
+    name: 'Chicken Piccata',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 288,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 plate (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":432.1,"pro":40.6,"fat":23.3,"carb":8.0,"fib":0.6,"h2o":171.2,"sug":0.8,"perServing":{"cal":432.1,"pro":40.6,"fat":23.3,"carb":8.0,"fib":0.6,"h2o":171.2,"sug":0.8,"AddedSugars":0.0,"IntrinsicSugars":0.8},"micros":{"vitaminA":38.87,"vitaminC":1.56,"vitaminD":0.65,"vitaminE":0.71,"vitaminK":13.66,"vitaminB6":0.44,"vitaminB12":0.15,"thiamin":0.07,"riboflavin":0.13,"niacin":5.69,"folate":11.73,"calcium":10.64,"iron":0.6,"magnesium":23.78,"phosphorus":161.74,"potassium":265.59,"sodium":253.62,"zinc":0.61,"copper":0.04,"selenium":17.81,"cholesterol":69.41,"saturatedFat":4.16,"monoFat":4.56,"polyFat":0.9,"omega3":0.02,"omega6":0.33},"gramsPerServing":249.6,"servings":4,"per100g":{"Energy_KCal":173.14,"Water":68.61,"Protein":16.27,"TotalLipidFat":9.35,"Carbohydrate":3.21,"FiberTotalDietary":0.24,"SugarsTotal":0.32,"Cholesterol":69.41,"FattyAcids_totalSaturated":4.16,"FattyAcids_totalMonounsaturated":4.56,"FattyAcids_totalPolyunsaturated":0.9,"LinoleicAcid":0.33,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":38.87,"Retinol":35.52,"Carotene_beta":40.19,"VitaminD":0.65,"VitaminE_alphaTocopherol":0.71,"VitaminK_phylloquinone":13.66,"VitaminC_totalAscorbicAcid":1.56,"Thiamin":0.07,"Riboflavin":0.13,"Niacin":5.69,"PantothenicAcid":0.88,"VitaminB6":0.44,"Folate_total":11.73,"Folate_food":8.11,"Folate_DFE":14.26,"FolicAcid":4.82,"VitaminB12":0.15,"Choline_total":54.57,"Betaine":5.08,"LuteinZeaxanthin":30.0,"Lycopene":0.01,"Calcium_Ca":10.64,"Iron_Fe":0.6,"Magnesium_Mg":23.78,"Phosphorus_P":161.74,"Potassium_K":265.59,"Sodium_Na":253.62,"Zinc_Zn":0.61,"Copper_Cu":0.04,"Manganese_Mn":0.06,"Selenium_Se":17.81,"Tryptophan":0.21,"Threonine":0.75,"Isoleucine":0.82,"Leucine":1.39,"Lysine":1.59,"Methionine":0.43,"Cystine":0.15,"Phenylalanine":0.68,"Tyrosine":0.61,"Valine":0.87,"Arginine":1.13,"Histidine":0.62,"Alanine":0.98,"AsparticAcid":1.58,"GlutamicAcid":2.58,"Glycine":0.77,"Proline":0.58,"Serine":0.65,"omega3":0.02,"omega6":0.33,"AddedSugars":0.0,"IntrinsicSugars":0.32},"addedSugars":0.0,"intrinsicSugars":0.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.82,"yieldFactorFat":1.0,"sources":[{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":170.1},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":7.8},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"1145","name":"Butter, without salt","grams":3.5},{"ndb":"","name":"Chicken Broth","grams":30.0},{"ndb":"14106","name":"Alcoholic beverage, wine, table, white","grams":30.0},{"ndb":"9152","name":"Lemon juice, raw","grams":11.2},{"ndb":"2054","name":"Capers, canned","grams":4.3},{"ndb":"1145","name":"Butter, without salt","grams":10.7},{"ndb":"11297","name":"Parsley, fresh","grams":1.9},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"chicken","section_label":"Chicken","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":756.63,"raw_water_grams":509.17,"raw_fat_grams":56.87,"raw_protein_grams":156.5,"raw_carb_grams":24.22,"final_grams":664.98},{"section_key":"broth","section_label":"Chicken Broth","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":120.0,"raw_water_grams":113.76,"raw_fat_grams":1.61,"raw_protein_grams":4.63,"raw_carb_grams":0.04,"final_grams":120.0},{"section_key":"sauce","section_label":"Lemon Caper Sauce","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":234.2,"raw_water_grams":174.54,"raw_fat_grams":34.88,"raw_protein_grams":1.27,"raw_carb_grams":7.76,"final_grams":213.25}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken Piccata', quantity: 'custom (g)', foodWord: 'CHICKENPICCATA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chicken breast (boneless/skinless)', quantity: '1.5 lb', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '1/4 cup', section: 'chicken', ndbNo: '20581', portionDesc: 'g', portionGrams: 31.25 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'unsalted butter', quantity: '1 tbsp', section: 'chicken', ndbNo: '1145', portionDesc: 'g', portionGrams: 14.2 },
+      { name: 'Chicken Broth', quantity: '1/2 cup Chicken Broth (recipe)', section: 'broth', foodWord: 'CHICKENBROTH', portionDesc: 'g', portionGrams: 120.0, isDish: true, componentRef: 'STOCK_003' },
+      { name: 'white wine', quantity: '1/2 cup', section: 'sauce', ndbNo: '14106', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'lemon juice', quantity: '3 tbsp', section: 'sauce', ndbNo: '9152', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'capers', quantity: '2 tbsp', section: 'sauce', ndbNo: '2054', portionDesc: 'g', portionGrams: 17.2 },
+      { name: 'unsalted butter', quantity: '3 tbsp', section: 'sauce', ndbNo: '1145', portionDesc: 'g', portionGrams: 42.6 },
+      { name: 'fresh parsley', quantity: '2 tbsp', section: 'sauce', ndbNo: '11297', portionDesc: 'g', portionGrams: 7.6 },
+      { name: 'salt', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: 'pinch', section: 'sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 }
+    ],
+    recipeInstructions: [
+      'Pound the chicken breasts to an even 1/4-inch thickness, or slice horizontally into cutlets. Season with salt and pepper, then dredge lightly in flour, shaking off the excess.',
+      'Make or prepare the Chicken Broth (see the Chicken Broth recipe).',
+      'Heat olive oil and 1 tablespoon butter in a large skillet over medium-high heat. Sear the chicken in batches for 3 to 4 minutes per side until golden and cooked through to an internal temperature of 165°F. Transfer to a plate and tent loosely with foil.',
+      'Pour off excess oil if needed, leaving a thin film. Add the white wine and lemon juice to the skillet. Bring to a boil, scraping up any browned bits, and cook for 2 minutes until slightly reduced.',
+      'Add the chicken broth and capers. Simmer for 2 to 3 minutes until the sauce reduces by about one-third.',
+      'Remove the pan from heat and swirl in the remaining 3 tablespoons butter until the sauce is glossy and emulsified. Season with salt and pepper to taste.',
+      'Return the chicken to the pan and spoon the sauce over to coat. Garnish with fresh parsley and serve immediately. (Pasta or rice not included.)'
+    ],
+    sections: [
+      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.82 },
+      { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'sauce', label: 'Lemon Caper Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];
