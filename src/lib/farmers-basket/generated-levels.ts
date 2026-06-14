@@ -14454,7 +14454,7 @@ export const LEVELS: Level[] = [
       'Season chicken breasts with salt and pepper and lightly coat in flour; shake off any excess.',
       'Heat olive oil in a large skillet over medium-high heat. Cook chicken 4 to 5 minutes per side until golden brown and an instant-read thermometer reads 165°F. Transfer to a plate.',
       'Reduce heat to medium. Add butter to the same skillet. Add garlic and cook 1 minute until fragrant.',
-      'Add sun-dried tomatoes and stir 1 minute.',
+      'Add diced sun-dried tomatoes and stir 1 minute.',
       'Pour in chicken broth (see Chicken Broth recipe) and scrape up any browned bits. Simmer 2 minutes.',
       'Add heavy cream and bring to a gentle simmer. Cook 4 to 5 minutes until sauce begins to thicken.',
       'Stir in Parmesan, oregano, thyme, and red pepper flakes. Simmer 2 more minutes. Taste and adjust seasoning.',
