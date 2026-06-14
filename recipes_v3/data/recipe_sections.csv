@@ -502,3 +502,7 @@ ENTR_064,sauce,Sauce,,boiled,0.90,1.0,1.0,1.0,1.0,,,,
 ENTR_065,chicken,Chicken,,pan grilled,0.75,1.0,1.0,1.0,1.0,,,,
 ENTR_065,sauce,Sauce,,boiled,0.70,1.0,1.0,1.0,1.0,,,,
 ENTR_065,broth,Chicken Broth,,raw,1.0,1.0,1.0,1.0,1.0,,,,STOCK_003
+ENTR_066,pasta,Pasta,,boiled,1.0,1.0,1.0,1.0,1.0,,,,
+ENTR_066,chicken,Chicken,,pan grilled,0.75,1.0,1.0,1.0,1.0,,,,
+ENTR_066,sauce,Sauce,,boiled,0.75,1.0,1.0,1.0,1.0,,,,
+ENTR_066,broth,Chicken Broth,,raw,1.0,1.0,1.0,1.0,1.0,,,,STOCK_003

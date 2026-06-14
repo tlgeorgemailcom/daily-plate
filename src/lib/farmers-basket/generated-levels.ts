@@ -14226,5 +14226,62 @@ export const LEVELS: Level[] = [
       { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.7 },
       { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'ENTR_066',
+    name: 'Chicken Scampi',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 301,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 plate (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":570.3,"pro":41.5,"fat":20.0,"carb":48.6,"fib":2.4,"h2o":222.7,"sug":2.3,"perServing":{"cal":570.3,"pro":41.5,"fat":20.0,"carb":48.6,"fib":2.4,"h2o":222.7,"sug":2.3,"AddedSugars":0.0,"IntrinsicSugars":2.3},"micros":{"vitaminA":33.87,"vitaminC":1.49,"vitaminD":0.4,"vitaminE":0.45,"vitaminK":18.32,"vitaminB6":0.29,"vitaminB12":0.09,"thiamin":0.05,"riboflavin":0.09,"niacin":3.68,"folate":8.49,"calcium":13.79,"iron":0.54,"magnesium":22.33,"phosphorus":128.17,"potassium":199.28,"sodium":150.0,"zinc":0.6,"copper":0.07,"selenium":20.99,"cholesterol":44.94,"saturatedFat":2.92,"monoFat":2.6,"polyFat":0.66,"omega3":0.02,"omega6":0.23},"gramsPerServing":339.4,"servings":4,"per100g":{"Energy_KCal":168.03,"Water":65.61,"Protein":12.22,"TotalLipidFat":5.9,"Carbohydrate":14.33,"FiberTotalDietary":0.7,"SugarsTotal":0.67,"Cholesterol":44.94,"FattyAcids_totalSaturated":2.92,"FattyAcids_totalMonounsaturated":2.6,"FattyAcids_totalPolyunsaturated":0.66,"LinoleicAcid":0.23,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":33.87,"Retinol":28.33,"Carotene_beta":65.43,"VitaminD":0.4,"VitaminE_alphaTocopherol":0.45,"VitaminK_phylloquinone":18.32,"VitaminC_totalAscorbicAcid":1.49,"Thiamin":0.05,"Riboflavin":0.09,"Niacin":3.68,"PantothenicAcid":0.6,"VitaminB6":0.29,"Folate_total":8.49,"Folate_food":7.17,"Folate_DFE":9.42,"FolicAcid":1.77,"VitaminB12":0.09,"Choline_total":34.1,"Betaine":3.15,"LuteinZeaxanthin":51.66,"Lycopene":0.01,"Calcium_Ca":13.79,"Iron_Fe":0.54,"Magnesium_Mg":22.33,"Phosphorus_P":128.17,"Potassium_K":199.28,"Sodium_Na":150.0,"Zinc_Zn":0.6,"Copper_Cu":0.07,"Manganese_Mn":0.2,"Selenium_Se":20.99,"Tryptophan":0.16,"Threonine":0.54,"Isoleucine":0.6,"Leucine":1.03,"Lysine":1.04,"Methionine":0.29,"Cystine":0.14,"Phenylalanine":0.53,"Tyrosine":0.42,"Valine":0.64,"Arginine":0.79,"Histidine":0.43,"Alanine":0.68,"AsparticAcid":1.09,"GlutamicAcid":2.36,"Glycine":0.55,"Proline":0.62,"Serine":0.5,"omega3":0.02,"omega6":0.23,"AddedSugars":0.0,"IntrinsicSugars":0.67},"addedSugars":0.0,"intrinsicSugars":2.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.75,"yieldFactorFat":1.0,"sources":[{"ndb":"20420","name":"Pasta, dry, unenriched","grams":56.7},{"ndb":"14411","name":"Water, tap, drinking","grams":236.5},{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":141.8},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":3.9},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"1145","name":"Butter, without salt","grams":14.2},{"ndb":"11215","name":"Garlic, raw","grams":4.5},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1},{"ndb":"14106","name":"Alcoholic beverage, wine, table, white","grams":30.0},{"ndb":"9152","name":"Lemon juice, raw","grams":7.5},{"ndb":"11297","name":"Parsley, fresh","grams":3.8},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"","name":"Chicken Broth","grams":30.0}],"sections":[{"section_key":"pasta","section_label":"Pasta","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.34811726353257855,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":1172.8,"raw_water_grams":967.51,"raw_fat_grams":3.42,"raw_protein_grams":29.57,"raw_carb_grams":169.35,"final_grams":542.1},{"section_key":"chicken","section_label":"Chicken","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":586.18,"raw_water_grams":420.95,"raw_fat_grams":15.03,"raw_protein_grams":129.25,"raw_carb_grams":12.27,"final_grams":480.94},{"section_key":"sauce","section_label":"Sauce","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":256.05,"raw_water_grams":165.94,"raw_fat_grams":60.07,"raw_protein_grams":2.39,"raw_carb_grams":12.82,"final_grams":214.57},{"section_key":"broth","section_label":"Chicken Broth","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":120.0,"raw_water_grams":113.76,"raw_fat_grams":1.61,"raw_protein_grams":4.63,"raw_carb_grams":0.04,"final_grams":120.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken Scampi', quantity: 'custom (g)', foodWord: 'CHICKENSCAMPI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'wide pasta, dry', quantity: '8 oz', section: 'pasta', ndbNo: '20420', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'water', quantity: '4 cups', section: 'pasta', ndbNo: '14411', portionDesc: 'g', portionGrams: 946.0 },
+      { name: 'chicken breast', quantity: '1.25 lb', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 567.0 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '2 tbsp', section: 'chicken', ndbNo: '20581', portionDesc: 'g', portionGrams: 15.6 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'sauce', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'unsalted butter', quantity: '4 tbsp', section: 'sauce', ndbNo: '1145', portionDesc: 'g', portionGrams: 56.8 },
+      { name: 'garlic', quantity: '6 cloves', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'red pepper flakes', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'white wine', quantity: '1/2 cup', section: 'sauce', ndbNo: '14106', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'lemon juice', quantity: '2 tbsp', section: 'sauce', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'fresh parsley', quantity: '1/4 cup', section: 'sauce', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'salt', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'Chicken Broth', quantity: '1/2 cup Chicken Broth (recipe)', section: 'broth', foodWord: 'CHICKENBROTH', portionDesc: 'g', portionGrams: 120.0, isDish: true, componentRef: 'STOCK_003' }
+    ],
+    recipeInstructions: [
+      'Cook pasta in a large pot of salted boiling water until al dente. Reserve 1/2 cup pasta water, then drain and set aside.',
+      'Season chicken breasts with salt and pepper and lightly coat in flour; shake off any excess.',
+      'Heat olive oil in a large skillet over medium-high heat. Add chicken and cook 4 to 5 minutes per side until golden brown and an instant-read thermometer reads 165°F. Transfer to a cutting board and slice into strips.',
+      'Reduce heat to medium. Add butter to the same skillet. Once melted, add garlic and red pepper flakes; cook 1 minute until fragrant.',
+      'Pour in white wine and scrape up any browned bits. Simmer 2 minutes.',
+      'Add chicken broth (see Chicken Broth recipe) and lemon juice. Simmer 3 to 4 minutes until sauce reduces slightly.',
+      'Add drained pasta and toss to coat, adding reserved pasta water a splash at a time if needed to loosen the sauce.',
+      'Return sliced chicken to the pan, top with parsley, and serve immediately.'
+    ],
+    sections: [
+      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
