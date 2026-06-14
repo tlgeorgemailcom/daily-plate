@@ -14283,5 +14283,68 @@ export const LEVELS: Level[] = [
       { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.75 },
       { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'ENTR_067',
+    name: 'Chicken Tetrazzini',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 302,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 plate (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":999.4,"pro":55.0,"fat":53.3,"carb":69.0,"fib":3.8,"h2o":351.9,"sug":7.0,"perServing":{"cal":999.4,"pro":55.0,"fat":53.3,"carb":69.0,"fib":3.8,"h2o":351.9,"sug":7.0,"AddedSugars":0.0,"IntrinsicSugars":7.0},"micros":{"vitaminA":73.07,"vitaminC":0.43,"vitaminD":8.17,"vitaminE":0.39,"vitaminK":1.32,"vitaminB6":0.21,"vitaminB12":0.14,"thiamin":0.07,"riboflavin":0.14,"niacin":2.89,"folate":11.08,"calcium":58.89,"iron":0.56,"magnesium":18.62,"phosphorus":128.16,"potassium":186.8,"sodium":230.25,"zinc":0.67,"copper":0.1,"selenium":18.38,"cholesterol":49.38,"saturatedFat":5.89,"monoFat":3.57,"polyFat":0.8,"omega3":0.03,"omega6":0.29},"gramsPerServing":539.3,"servings":4,"per100g":{"Energy_KCal":185.31,"Water":65.25,"Protein":10.19,"TotalLipidFat":9.88,"Carbohydrate":12.8,"FiberTotalDietary":0.71,"SugarsTotal":1.31,"Cholesterol":49.38,"FattyAcids_totalSaturated":5.89,"FattyAcids_totalMonounsaturated":3.57,"FattyAcids_totalPolyunsaturated":0.8,"LinoleicAcid":0.29,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":73.07,"Retinol":71.76,"Carotene_beta":15.5,"VitaminD":8.17,"VitaminE_alphaTocopherol":0.39,"VitaminK_phylloquinone":1.32,"VitaminC_totalAscorbicAcid":0.43,"Thiamin":0.07,"Riboflavin":0.14,"Niacin":2.89,"PantothenicAcid":0.57,"VitaminB6":0.21,"Folate_total":11.08,"Folate_food":7.51,"Folate_DFE":13.58,"FolicAcid":5.03,"VitaminB12":0.14,"Choline_total":27.16,"Betaine":3.29,"LuteinZeaxanthin":1.68,"Lycopene":0.01,"Calcium_Ca":58.89,"Iron_Fe":0.56,"Magnesium_Mg":18.62,"Phosphorus_P":128.16,"Potassium_K":186.8,"Sodium_Na":230.25,"Zinc_Zn":0.67,"Copper_Cu":0.1,"Manganese_Mn":0.17,"Selenium_Se":18.38,"Tryptophan":0.14,"Threonine":0.45,"Isoleucine":0.51,"Leucine":0.89,"Lysine":0.87,"Methionine":0.25,"Cystine":0.11,"Phenylalanine":0.47,"Tyrosine":0.38,"Valine":0.57,"Arginine":0.62,"Histidine":0.36,"Alanine":0.55,"AsparticAcid":0.89,"GlutamicAcid":2.12,"Glycine":0.44,"Proline":0.66,"Serine":0.45,"omega3":0.03,"omega6":0.29,"AddedSugars":0.0,"IntrinsicSugars":1.31},"addedSugars":0.0,"intrinsicSugars":7.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.9,"yieldFactorFat":1.0,"sources":[{"ndb":"20420","name":"Pasta, dry, unenriched","grams":56.7},{"ndb":"14411","name":"Water, tap, drinking","grams":236.5},{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":141.8},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"1145","name":"Butter, without salt","grams":14.2},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"11266","name":"Mushrooms, brown, italian, or crimini, raw","grams":56.7},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":10.4},{"ndb":"14106","name":"Alcoholic beverage, wine, table, white","grams":30.0},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":59.5},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":12.5},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"18079","name":"Bread crumbs, dry, grated, plain","grams":13.5},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":6.2},{"ndb":"1145","name":"Butter, without salt","grams":7.1},{"ndb":"","name":"Chicken Broth","grams":60.0}],"sections":[{"section_key":"pasta","section_label":"Pasta","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.34811726353257855,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":1172.8,"raw_water_grams":967.51,"raw_fat_grams":3.42,"raw_protein_grams":29.57,"raw_carb_grams":169.35,"final_grams":542.1},{"section_key":"chicken","section_label":"Chicken","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":584.18,"raw_water_grams":419.09,"raw_fat_grams":28.47,"raw_protein_grams":127.63,"raw_carb_grams":0.37,"final_grams":479.4},{"section_key":"sauce","section_label":"Sauce","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":859.15,"raw_water_grams":583.88,"raw_fat_grams":145.76,"raw_protein_grams":37.04,"raw_carb_grams":66.61,"final_grams":789.08},{"section_key":"topping","section_label":"Topping","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.95,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":107.4,"raw_water_grams":15.9,"raw_fat_grams":32.35,"raw_protein_grams":16.39,"raw_carb_grams":39.69,"final_grams":106.6},{"section_key":"broth","section_label":"Chicken Broth","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":240.0,"raw_water_grams":227.52,"raw_fat_grams":3.22,"raw_protein_grams":9.26,"raw_carb_grams":0.07,"final_grams":240.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken Tetrazzini', quantity: 'custom (g)', foodWord: 'CHICKENTETRAZZINI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'wide pasta, dry', quantity: '8 oz', section: 'pasta', ndbNo: '20420', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'water', quantity: '4 cups', section: 'pasta', ndbNo: '14411', portionDesc: 'g', portionGrams: 946.0 },
+      { name: 'chicken breast', quantity: '1.25 lb', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 567.0 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'unsalted butter', quantity: '4 tbsp', section: 'sauce', ndbNo: '1145', portionDesc: 'g', portionGrams: 56.8 },
+      { name: 'onion', quantity: '1 medium', section: 'sauce', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'garlic', quantity: '3 cloves', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'crimini mushrooms', quantity: '8 oz', section: 'sauce', ndbNo: '11266', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '1/3 cup', section: 'sauce', ndbNo: '20581', portionDesc: 'g', portionGrams: 41.7 },
+      { name: 'white wine', quantity: '1/2 cup', section: 'sauce', ndbNo: '14106', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'heavy cream', quantity: '1 cup', section: 'sauce', ndbNo: '1053', portionDesc: 'g', portionGrams: 238.0 },
+      { name: 'Parmesan cheese', quantity: '1/2 cup', section: 'sauce', ndbNo: '1033', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'ground nutmeg', quantity: '1/8 tsp', section: 'sauce', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.275 },
+      { name: 'salt', quantity: '1 tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'dry bread crumbs', quantity: '1/2 cup', section: 'topping', ndbNo: '18079', portionDesc: 'g', portionGrams: 54.0 },
+      { name: 'Parmesan cheese', quantity: '1/4 cup', section: 'topping', ndbNo: '1033', portionDesc: 'g', portionGrams: 25.0 },
+      { name: 'unsalted butter', quantity: '2 tbsp', section: 'topping', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
+      { name: 'Chicken Broth', quantity: '1 cup Chicken Broth (recipe)', section: 'broth', foodWord: 'CHICKENBROTH', portionDesc: 'g', portionGrams: 240.0, isDish: true, componentRef: 'STOCK_003' }
+    ],
+    recipeInstructions: [
+      'Preheat oven to 375°F. Cook pasta in a large pot of salted boiling water until just al dente (it will finish cooking in the oven). Drain and set aside.',
+      'Season chicken with salt and pepper. Heat olive oil in a large skillet over medium-high heat. Cook chicken 4 to 5 minutes per side until golden brown and an instant-read thermometer reads 165°F. Let rest 5 minutes, then shred or dice into bite-size pieces.',
+      'In the same skillet over medium heat, melt butter. Add onion and cook 4 minutes until softened. Add garlic and mushrooms; cook 6 to 8 minutes until mushrooms release their liquid and it evaporates.',
+      'Sprinkle flour over the vegetables and stir 1 minute. Pour in white wine and scrape up any browned bits.',
+      'Add chicken broth (see Chicken Broth recipe) and heavy cream. Stir and simmer 5 minutes until sauce thickens. Season with nutmeg, salt, and pepper. Remove from heat and stir in Parmesan.',
+      'Fold cooked pasta and shredded chicken into the sauce until evenly coated. Transfer to a greased 9x13-inch baking dish.',
+      'Combine bread crumbs, Parmesan, and melted butter; sprinkle evenly over the top.',
+      'Bake 25 to 30 minutes until bubbling and the topping is golden brown. Let rest 5 minutes before serving.'
+    ],
+    sections: [
+      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.88 },
+      { key: 'topping', label: 'Topping', cookingMethod: '', yieldFactorWater: 0.95 },
+      { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
