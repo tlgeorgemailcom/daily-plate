@@ -14022,5 +14022,56 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.85 }
     ],
+  },
+  {
+    id: 'ENTR_062',
+    name: 'Chicken & Waffles',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 297,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 plate (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":1128.2,"pro":64.7,"fat":50.0,"carb":101.8,"fib":3.0,"h2o":264.8,"sug":21.7,"perServing":{"cal":1128.2,"pro":64.7,"fat":50.0,"carb":101.8,"fib":3.0,"h2o":264.8,"sug":21.7,"AddedSugars":15.1,"IntrinsicSugars":6.7},"micros":{"vitaminA":51.42,"vitaminC":0.01,"vitaminD":20.54,"vitaminE":0.6,"vitaminK":3.41,"vitaminB6":0.18,"vitaminB12":0.42,"thiamin":0.15,"riboflavin":0.29,"niacin":2.98,"folate":31.75,"calcium":98.46,"iron":1.58,"magnesium":20.35,"phosphorus":219.65,"potassium":196.01,"sodium":425.14,"zinc":1.16,"copper":0.07,"selenium":21.16,"cholesterol":93.44,"saturatedFat":3.94,"monoFat":4.23,"polyFat":0.89,"omega3":0.02,"omega6":0.47},"gramsPerServing":489.6,"servings":4,"per100g":{"Energy_KCal":230.41,"Water":54.08,"Protein":13.21,"TotalLipidFat":10.21,"Carbohydrate":20.8,"FiberTotalDietary":0.62,"SugarsTotal":4.44,"Cholesterol":93.44,"FattyAcids_totalSaturated":3.94,"FattyAcids_totalMonounsaturated":4.23,"FattyAcids_totalPolyunsaturated":0.89,"LinoleicAcid":0.47,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":51.42,"Retinol":48.05,"Carotene_beta":35.93,"VitaminD":20.54,"VitaminE_alphaTocopherol":0.6,"VitaminK_phylloquinone":3.41,"VitaminC_totalAscorbicAcid":0.01,"Thiamin":0.15,"Riboflavin":0.29,"Niacin":2.98,"PantothenicAcid":0.27,"VitaminB6":0.18,"Folate_total":31.75,"Folate_food":10.22,"Folate_DFE":46.84,"FolicAcid":28.7,"VitaminB12":0.42,"Choline_total":53.57,"Betaine":5.05,"LuteinZeaxanthin":92.85,"Lycopene":0.02,"Calcium_Ca":98.46,"Iron_Fe":1.58,"Magnesium_Mg":20.35,"Phosphorus_P":219.65,"Potassium_K":196.01,"Sodium_Na":425.14,"Zinc_Zn":1.16,"Copper_Cu":0.07,"Manganese_Mn":0.28,"Selenium_Se":21.16,"Tryptophan":0.15,"Threonine":0.57,"Isoleucine":0.61,"Leucine":1.1,"Lysine":1.06,"Methionine":0.35,"Cystine":0.15,"Phenylalanine":0.57,"Tyrosine":0.49,"Valine":0.66,"Arginine":0.83,"Histidine":0.37,"Alanine":0.71,"AsparticAcid":1.19,"GlutamicAcid":2.5,"Glycine":0.55,"Proline":0.73,"Serine":0.63,"omega3":0.02,"omega6":0.47,"AddedSugars":3.08,"IntrinsicSugars":1.36},"addedSugars":15.1,"intrinsicSugars":6.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.85,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Waffles plain","grams":163.4},{"ndb":"5096","name":"Chicken, broilers or fryers, dark meat, thigh, meat only, raw","grams":226.8},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":31.2},{"ndb":"20027","name":"Cornstarch","grams":8.0},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":25.0},{"ndb":"1230","name":"Milk, buttermilk, fluid, whole","grams":30.6},{"ndb":"2047","name":"Salt, table","grams":2.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.6},{"ndb":"2020","name":"Spices, garlic powder","grams":0.8},{"ndb":"2026","name":"Spices, onion powder","grams":0.1},{"ndb":"2028","name":"Spices, paprika","grams":0.6},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":13.6},{"ndb":"19353","name":"Syrups, maple","grams":20.0}],"sections":[{"section_key":"waffles","section_label":"Waffles plain","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":653.77,"raw_water_grams":273.67,"raw_fat_grams":92.84,"raw_protein_grams":49.62,"raw_carb_grams":216.79,"final_grams":653.77},{"section_key":"chicken","section_label":"Chicken","prep_method":"raw","cook_method":"fried","cooking_method":"fried","cooking_method_normalized":"fried","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":12,"raw_grams":1358.85,"raw_water_grams":893.7,"raw_fat_grams":107.06,"raw_protein_grams":209.04,"raw_carb_grams":136.99,"final_grams":1224.79},{"section_key":"maple_syrup","section_label":"Maple Syrup","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":80.0,"raw_water_grams":25.91,"raw_fat_grams":0.05,"raw_protein_grams":0.03,"raw_carb_grams":53.63,"final_grams":80.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken & Waffles', quantity: 'custom (g)', foodWord: 'CHICKENWAFFLES', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Waffles plain', quantity: '1 recipe Waffles plain (4 waffles, 653.8g)', section: 'waffles', foodWord: 'WAFFLE', ndbNo: '18367', portionDesc: 'g', portionGrams: 653.77, isDish: true, componentRef: 'BKFST_014' },
+      { name: 'chicken thigh', quantity: '2 lb', section: 'chicken', ndbNo: '5096', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '1 cup', section: 'chicken', ndbNo: '20581', portionDesc: 'g', portionGrams: 125.0 },
+      { name: 'cornstarch', quantity: '1/4 cup', section: 'chicken', ndbNo: '20027', portionDesc: 'g', portionGrams: 32.0 },
+      { name: 'large egg', quantity: '2 large', section: 'chicken', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'whole buttermilk', quantity: '1/2 cup', section: 'chicken', ndbNo: '1230', portionDesc: 'g', portionGrams: 122.5 },
+      { name: 'salt', quantity: '1.5 tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'ground black pepper', quantity: '1 tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'garlic powder', quantity: '1 tsp', section: 'chicken', ndbNo: '2020', portionDesc: 'g', portionGrams: 3.1 },
+      { name: 'onion powder', quantity: '1/2 tsp', section: 'chicken', ndbNo: '2026', portionDesc: 'g', portionGrams: 0.6 },
+      { name: 'paprika', quantity: '1 tsp', section: 'chicken', ndbNo: '2028', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'cayenne pepper', quantity: '1/4 tsp', section: 'chicken', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.45 },
+      { name: 'olive oil', quantity: '1/4 cup (absorbed into coating)', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 54.4 },
+      { name: 'maple syrup', quantity: '4 tbsp', section: 'maple_syrup', ndbNo: '19353', portionDesc: 'g', portionGrams: 80.0 }
+    ],
+    recipeInstructions: [
+      'Make or prepare the Waffles plain (see the Waffles plain recipe). Keep warm in a 200°F oven on a wire rack while you fry the chicken.',
+      'In a shallow bowl, whisk together flour, cornstarch, salt, pepper, garlic powder, onion powder, paprika, and cayenne. In a second shallow bowl, whisk together eggs and buttermilk.',
+      'Pat chicken thighs dry with paper towels. Dredge in seasoned flour, dip in the egg-buttermilk wash, then dredge in the seasoned flour a second time, pressing firmly so the coating adheres fully.',
+      'Heat olive oil in a large skillet over medium-high heat to 350°. Working in batches, fry chicken thighs 5 to 6 minutes per side until deep golden brown and cooked through (165°F internal). Transfer to a wire rack.',
+      'Place one waffle on each plate and top with a piece of fried chicken. Drizzle 1 tablespoon of maple syrup over each serving.'
+    ],
+    sections: [
+      { key: 'waffles', label: 'Waffles plain', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.85 },
+      { key: 'maple_syrup', label: 'Maple Syrup', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
