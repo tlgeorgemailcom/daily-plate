@@ -11403,7 +11403,7 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Beef Curry', quantity: 'custom (g)', foodWord: 'BEEFCURRY', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'beef chuck roast', quantity: '2 lbs chuck roast', section: 'curry', ndbNo: '13293', portionDesc: 'g', portionGrams: 907.2 },
-      { name: 'canned coconut milk', quantity: '1 can (13.5 oz) coconut milk', section: 'curry', ndbNo: '12118', portionDesc: 'g', portionGrams: 383.0 },
+      { name: 'coconut milk (canned)', quantity: '1 can (13.5 oz) coconut milk', section: 'curry', ndbNo: '12118', portionDesc: 'g', portionGrams: 383.0 },
       { name: 'tomato', quantity: '2 medium tomatoes', section: 'curry', ndbNo: '11529', portionDesc: 'g', portionGrams: 246.0 },
       { name: 'onion', quantity: '1 large onion', section: 'curry', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
       { name: 'garlic', quantity: '4 cloves garlic', section: 'curry', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
@@ -13252,7 +13252,7 @@ export const LEVELS: Level[] = [
       { name: 'fresh ginger', quantity: '1 tbsp', section: 'curry', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'olive oil', quantity: '1 tbsp', section: 'curry', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
       { name: 'canned crushed tomatoes', quantity: '14 oz', section: 'curry', ndbNo: '11693', portionDesc: 'g', portionGrams: 397.0 },
-      { name: 'canned coconut milk', quantity: '13.5 oz', section: 'curry', ndbNo: '12118', portionDesc: 'g', portionGrams: 383.0 },
+      { name: 'coconut milk (canned)', quantity: '13.5 oz', section: 'curry', ndbNo: '12118', portionDesc: 'g', portionGrams: 383.0 },
       { name: 'curry powder', quantity: '2 tbsp', section: 'curry', ndbNo: '2015', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'ground cumin', quantity: '1 tsp', section: 'curry', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
       { name: 'ground coriander', quantity: '1 tsp', section: 'curry', ndbNo: '2013', portionDesc: 'g', portionGrams: 1.8 },
@@ -14115,6 +14115,63 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 }
+    ],
+  },
+  {
+    id: 'ENTR_064',
+    name: 'Chicken Korma',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 299,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 plate (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":592.7,"pro":51.1,"fat":38.5,"carb":11.6,"fib":1.7,"h2o":226.0,"sug":3.7,"perServing":{"cal":592.7,"pro":51.1,"fat":38.5,"carb":11.6,"fib":1.7,"h2o":226.0,"sug":3.7,"AddedSugars":0.0,"IntrinsicSugars":3.7},"micros":{"vitaminA":20.73,"vitaminC":0.71,"vitaminD":3.48,"vitaminE":0.45,"vitaminK":3.96,"vitaminB6":0.26,"vitaminB12":0.42,"thiamin":0.06,"riboflavin":0.15,"niacin":3.17,"folate":5.92,"calcium":27.13,"iron":1.4,"magnesium":31.19,"phosphorus":172.34,"potassium":251.04,"sodium":322.89,"zinc":1.38,"copper":0.13,"selenium":17.37,"cholesterol":70.72,"saturatedFat":5.69,"monoFat":3.83,"polyFat":0.95,"omega3":0.02,"omega6":0.45},"gramsPerServing":330.8,"servings":4,"per100g":{"Energy_KCal":179.2,"Water":68.34,"Protein":15.44,"TotalLipidFat":11.63,"Carbohydrate":3.5,"FiberTotalDietary":0.5,"SugarsTotal":1.13,"Cholesterol":70.72,"FattyAcids_totalSaturated":5.69,"FattyAcids_totalMonounsaturated":3.83,"FattyAcids_totalPolyunsaturated":0.95,"LinoleicAcid":0.45,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":20.73,"Retinol":20.31,"Carotene_beta":4.77,"VitaminD":3.48,"VitaminE_alphaTocopherol":0.45,"VitaminK_phylloquinone":3.96,"VitaminC_totalAscorbicAcid":0.71,"Thiamin":0.06,"Riboflavin":0.15,"Niacin":3.17,"PantothenicAcid":0.09,"VitaminB6":0.26,"Folate_total":5.92,"Folate_food":5.92,"Folate_DFE":5.92,"FolicAcid":0.0,"VitaminB12":0.42,"Choline_total":37.21,"Betaine":7.24,"LuteinZeaxanthin":50.57,"Lycopene":0.01,"Calcium_Ca":27.13,"Iron_Fe":1.4,"Magnesium_Mg":31.19,"Phosphorus_P":172.34,"Potassium_K":251.04,"Sodium_Na":322.89,"Zinc_Zn":1.38,"Copper_Cu":0.13,"Manganese_Mn":0.28,"Selenium_Se":17.37,"Tryptophan":0.17,"Threonine":0.67,"Isoleucine":0.68,"Leucine":1.22,"Lysine":1.31,"Methionine":0.4,"Cystine":0.15,"Phenylalanine":0.58,"Tyrosine":0.53,"Valine":0.71,"Arginine":1.06,"Histidine":0.42,"Alanine":0.85,"AsparticAcid":1.42,"GlutamicAcid":2.45,"Glycine":0.66,"Proline":0.59,"Serine":0.61,"omega3":0.02,"omega6":0.45,"AddedSugars":0.0,"IntrinsicSugars":1.13},"addedSugars":0.0,"intrinsicSugars":3.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.75,"yieldFactorFat":1.0,"sources":[{"ndb":"5096","name":"Chicken, broilers or fryers, dark meat, thigh, meat only, raw","grams":226.8},{"ndb":"1293","name":"Yogurt, Greek, plain, whole milk","grams":30.0},{"ndb":"2043","name":"Spices, turmeric, ground","grams":0.4},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"11282","name":"Onions, raw","grams":37.5},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11216","name":"Ginger root, raw","grams":1.5},{"ndb":"12087","name":"Nuts, cashew nuts, raw","grams":7.1},{"ndb":"12118","name":"Nuts, coconut milk, canned (liquid expressed from grated meat and water)","grams":56.5},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":14.9},{"ndb":"2013","name":"Spices, coriander seed","grams":0.7},{"ndb":"2014","name":"Spices, cumin seed","grams":0.5},{"ndb":"2043","name":"Spices, turmeric, ground","grams":0.4},{"ndb":"2006","name":"Spices, cardamom","grams":0.2},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":0.8}],"sections":[{"section_key":"chicken","section_label":"Chicken","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":1034.7,"raw_water_grams":789.23,"raw_fat_grams":43.43,"raw_protein_grams":189.3,"raw_carb_grams":5.78,"final_grams":837.39},{"section_key":"sauce","section_label":"Sauce","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":14,"raw_grams":520.27,"raw_water_grams":346.83,"raw_fat_grams":110.43,"raw_protein_grams":14.97,"raw_carb_grams":40.54,"final_grams":485.59}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken Korma', quantity: 'custom (g)', foodWord: 'CHICKENKORMA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'boneless/skinless thighs', quantity: '2 lb', section: 'chicken', ndbNo: '5096', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'Greek whole milk yogurt', quantity: '1/2 cup', section: 'chicken', ndbNo: '1293', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'ground turmeric', quantity: '1/2 tsp', section: 'chicken', ndbNo: '2043', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'salt', quantity: '1 tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'sauce', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.0 },
+      { name: 'onion', quantity: '1 large', section: 'sauce', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'garlic', quantity: '4 cloves', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'fresh ginger', quantity: '1 tbsp', section: 'sauce', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'cashews', quantity: '1/4 cup', section: 'sauce', ndbNo: '12087', portionDesc: 'g', portionGrams: 28.35 },
+      { name: 'coconut milk (canned)', quantity: '1 cup', section: 'sauce', ndbNo: '12118', portionDesc: 'g', portionGrams: 226.0 },
+      { name: 'heavy cream', quantity: '1/4 cup', section: 'sauce', ndbNo: '1053', portionDesc: 'g', portionGrams: 59.5 },
+      { name: 'ground coriander', quantity: '1.5 tsp', section: 'sauce', ndbNo: '2013', portionDesc: 'g', portionGrams: 2.7 },
+      { name: 'ground cumin', quantity: '1 tsp', section: 'sauce', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'ground turmeric', quantity: '1/2 tsp', section: 'sauce', ndbNo: '2043', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground cardamom', quantity: '1/2 tsp', section: 'sauce', ndbNo: '2006', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'ground cinnamon', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2010', portionDesc: 'g', portionGrams: 0.65 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 }
+    ],
+    recipeInstructions: [
+      'In a bowl, combine chicken thighs with yogurt, turmeric, and salt. Toss to coat and marinate at least 30 minutes (or overnight in the refrigerator).',
+      'Heat olive oil in a large skillet or Dutch oven over medium-high heat. Add marinated chicken and sear 3 to 4 minutes per side until lightly browned. Transfer to a plate; chicken need not be fully cooked through.',
+      'In the same pan over medium heat, add onion and cook 8 to 10 minutes, stirring often, until soft and golden. Add garlic and ginger; cook 1 minute until fragrant.',
+      'Add coriander, cumin, turmeric, cardamom, cinnamon, and black pepper. Stir 30 seconds to toast the spices.',
+      'Transfer the onion-spice mixture to a blender with the cashews and a splash of coconut milk. Blend until smooth.',
+      'Return the blended sauce to the pan. Add remaining coconut milk, heavy cream, and salt. Stir to combine and bring to a gentle simmer.',
+      'Return chicken to the pan. Cover and simmer on low heat 20 to 25 minutes, turning once, until chicken is cooked through and the sauce has thickened.',
+      'Serve over steamed basmati rice or with naan (not included).'
+    ],
+    sections: [
+      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
   }
 ];

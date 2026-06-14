@@ -323,3 +323,6 @@ tomatoes_canned_green_chiles,11537,TOMATOESGRNCHILES,"Tomatoes, red, ripe, canne
 turmeric_ground,2043,TURMERIC,"Spices, turmeric, ground",ground turmeric,teaspoon,3.0,added during ENTR_058 build
 rice_brown_long_raw,20036,BROWNRICE,"Rice, brown, long-grain, raw",brown rice (dry),cup,185.0,added during ENTR_059 build; bin=0.7296 in comboo.db
 edamame_frozen,11212,EDAMAME,"Edamame, frozen, prepared",edamame (cooked),cup,155.0,added during ENTR_059 build; NDB 11212 cooked/prepared
+cashews_raw,12087,CASHEWSRAW,"Nuts, cashew nuts, raw",cashews,oz,28.35,added during ENTR_064 build
+cardamom_ground,2006,CARDAMOM,"Spices, cardamom",ground cardamom,tsp,2.0,added during ENTR_064 build
+coconut_milk_canned,12118,COCONUTMILKCANNED,"Nuts, coconut milk, canned (liquid expressed from grated meat and water)",coconut milk (canned),cup,226.0,added during ENTR_064 build
