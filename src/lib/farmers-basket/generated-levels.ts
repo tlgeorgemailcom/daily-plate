@@ -13321,5 +13321,55 @@ export const LEVELS: Level[] = [
       { key: 'sauce', label: 'Red Enchilada Sauce', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 0.95 }
     ],
+  },
+  {
+    id: 'ENTR_049',
+    name: 'Chicken Florentine',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 284,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":589.3,"pro":47.0,"fat":42.0,"carb":5.9,"fib":1.9,"h2o":212.8,"sug":2.3,"perServing":{"cal":589.3,"pro":47.0,"fat":42.0,"carb":5.9,"fib":1.9,"h2o":212.8,"sug":2.3,"AddedSugars":0.0,"IntrinsicSugars":2.3},"micros":{"vitaminA":201.87,"vitaminC":1.28,"vitaminD":13.21,"vitaminE":1.14,"vitaminK":108.06,"vitaminB6":0.37,"vitaminB12":0.17,"thiamin":0.06,"riboflavin":0.17,"niacin":4.27,"folate":25.84,"calcium":82.18,"iron":0.93,"magnesium":33.86,"phosphorus":160.97,"potassium":288.44,"sodium":336.88,"zinc":0.66,"copper":0.06,"selenium":14.23,"cholesterol":68.74,"saturatedFat":6.78,"monoFat":4.51,"polyFat":0.69,"omega3":0.03,"omega6":0.33},"gramsPerServing":313.9,"servings":4,"per100g":{"Energy_KCal":187.74,"Water":67.79,"Protein":14.97,"TotalLipidFat":13.38,"Carbohydrate":1.87,"FiberTotalDietary":0.6,"SugarsTotal":0.73,"Cholesterol":68.74,"FattyAcids_totalSaturated":6.78,"FattyAcids_totalMonounsaturated":4.51,"FattyAcids_totalPolyunsaturated":0.69,"LinoleicAcid":0.33,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":201.87,"Retinol":93.85,"Carotene_beta":1296.1,"VitaminD":13.21,"VitaminE_alphaTocopherol":1.14,"VitaminK_phylloquinone":108.06,"VitaminC_totalAscorbicAcid":1.28,"Thiamin":0.06,"Riboflavin":0.17,"Niacin":4.27,"PantothenicAcid":0.75,"VitaminB6":0.37,"Folate_total":25.84,"Folate_food":25.84,"Folate_DFE":25.84,"FolicAcid":0.0,"VitaminB12":0.17,"Choline_total":47.65,"Betaine":24.02,"LuteinZeaxanthin":1915.38,"Lycopene":0.02,"Calcium_Ca":82.18,"Iron_Fe":0.93,"Magnesium_Mg":33.86,"Phosphorus_P":160.97,"Potassium_K":288.44,"Sodium_Na":336.88,"Zinc_Zn":0.66,"Copper_Cu":0.06,"Manganese_Mn":0.24,"Selenium_Se":14.23,"Tryptophan":0.19,"Threonine":0.65,"Isoleucine":0.73,"Leucine":1.25,"Lysine":1.37,"Methionine":0.38,"Cystine":0.12,"Phenylalanine":0.62,"Tyrosine":0.57,"Valine":0.8,"Arginine":0.93,"Histidine":0.53,"Alanine":0.8,"AsparticAcid":1.33,"GlutamicAcid":2.33,"Glycine":0.61,"Proline":0.64,"Serine":0.59,"omega3":0.03,"omega6":0.33,"AddedSugars":0.0,"IntrinsicSugars":0.73},"addedSugars":0.0,"intrinsicSugars":2.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.75,"yieldFactorFat":1.0,"sources":[{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":170.1},{"ndb":"2047","name":"Salt, table","grams":1.1},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"1145","name":"Butter, without salt","grams":7.1},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":59.5},{"ndb":"6194","name":"Soup, chicken broth, ready-to-serve","grams":30.0},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":12.5},{"ndb":"11458","name":"Spinach, cooked, boiled, drained, without salt","grams":70.9},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.1}],"sections":[{"section_key":"chicken","section_label":"Chicken","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":713.25,"raw_water_grams":502.97,"raw_fat_grams":45.06,"raw_protein_grams":153.21,"raw_carb_grams":0.74,"final_grams":587.51},{"section_key":"sauce","section_label":"Cream Spinach Sauce","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":732.75,"raw_water_grams":538.58,"raw_fat_grams":122.97,"raw_protein_grams":34.71,"raw_carb_grams":22.79,"final_grams":668.12}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken Florentine', quantity: 'custom (g)', foodWord: 'CHICKENFLORENTINE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chicken breast (boneless/skinless)', quantity: '1.5 lbs', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'salt', quantity: '3/4 tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'ground black pepper', quantity: '1/2 tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'unsalted butter', quantity: '2 tbsp', section: 'sauce', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
+      { name: 'garlic', quantity: '3 cloves', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'heavy cream', quantity: '1 cup', section: 'sauce', ndbNo: '1053', portionDesc: 'g', portionGrams: 238.0 },
+      { name: 'chicken broth', quantity: '1/2 cup', section: 'sauce', ndbNo: '6194', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'Parmesan cheese', quantity: '1/2 cup grated', section: 'sauce', ndbNo: '1033', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'cooked spinach', quantity: '10 oz', section: 'sauce', ndbNo: '11458', portionDesc: 'g', portionGrams: 283.5 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'ground nutmeg', quantity: '1/8 tsp', section: 'sauce', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.275 }
+    ],
+    recipeInstructions: [
+      'Season the boneless skinless chicken breasts on both sides with salt and black pepper.',
+      'Heat the olive oil in a large skillet over medium-high heat. Sear the chicken breasts for 5 to 6 minutes per side until golden brown and cooked through to an internal temperature of 165°F. Transfer to a plate and cover loosely with foil.',
+      'Reduce heat to medium. Add the butter to the same skillet and let it melt. Add the minced garlic and cook for 30 seconds until fragrant.',
+      'Pour in the chicken broth and heavy cream. Stir to combine, scraping up any browned bits from the bottom of the pan.',
+      'Stir in the cooked spinach, Parmesan, salt, black pepper, and nutmeg. Simmer for 3 to 4 minutes until the sauce thickens slightly.',
+      'Return the chicken breasts to the skillet and spoon the sauce over them. Simmer for 2 to 3 minutes to heat through. Serve immediately with the creamed spinach sauce spooned over the top.'
+    ],
+    sections: [
+      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'sauce', label: 'Cream Spinach Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];
