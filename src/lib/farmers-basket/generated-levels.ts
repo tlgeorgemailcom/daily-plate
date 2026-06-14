@@ -14173,5 +14173,57 @@ export const LEVELS: Level[] = [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
       { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'ENTR_065',
+    name: 'Chicken Saltimbocca',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 300,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 plate (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":337.5,"pro":37.2,"fat":14.3,"carb":7.5,"fib":0.4,"h2o":127.7,"sug":0.5,"perServing":{"cal":337.5,"pro":37.2,"fat":14.3,"carb":7.5,"fib":0.4,"h2o":127.7,"sug":0.5,"AddedSugars":0.0,"IntrinsicSugars":0.5},"micros":{"vitaminA":28.2,"vitaminC":0.4,"vitaminD":3.42,"vitaminE":0.67,"vitaminK":3.54,"vitaminB6":0.48,"vitaminB12":0.2,"thiamin":0.11,"riboflavin":0.16,"niacin":6.1,"folate":11.48,"calcium":10.45,"iron":0.65,"magnesium":25.64,"phosphorus":189.14,"potassium":305.03,"sodium":430.84,"zinc":0.78,"copper":0.04,"selenium":20.19,"cholesterol":67.09,"saturatedFat":2.74,"monoFat":2.94,"polyFat":0.55,"omega3":0.01,"omega6":0.25},"gramsPerServing":193.5,"servings":4,"per100g":{"Energy_KCal":174.39,"Water":65.98,"Protein":19.23,"TotalLipidFat":7.39,"Carbohydrate":3.88,"FiberTotalDietary":0.2,"SugarsTotal":0.28,"Cholesterol":67.09,"FattyAcids_totalSaturated":2.74,"FattyAcids_totalMonounsaturated":2.94,"FattyAcids_totalPolyunsaturated":0.55,"LinoleicAcid":0.25,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":28.2,"Retinol":27.43,"Carotene_beta":9.4,"VitaminD":3.42,"VitaminE_alphaTocopherol":0.67,"VitaminK_phylloquinone":3.54,"VitaminC_totalAscorbicAcid":0.4,"Thiamin":0.11,"Riboflavin":0.16,"Niacin":6.1,"PantothenicAcid":0.92,"VitaminB6":0.48,"Folate_total":11.48,"Folate_food":6.82,"Folate_DFE":14.75,"FolicAcid":6.22,"VitaminB12":0.2,"Choline_total":62.92,"Betaine":5.87,"LuteinZeaxanthin":4.35,"Lycopene":0.03,"Calcium_Ca":10.45,"Iron_Fe":0.65,"Magnesium_Mg":25.64,"Phosphorus_P":189.14,"Potassium_K":305.03,"Sodium_Na":430.84,"Zinc_Zn":0.78,"Copper_Cu":0.04,"Manganese_Mn":0.08,"Selenium_Se":20.19,"Tryptophan":0.24,"Threonine":0.84,"Isoleucine":0.92,"Leucine":1.57,"Lysine":1.78,"Methionine":0.49,"Cystine":0.18,"Phenylalanine":0.78,"Tyrosine":0.68,"Valine":0.96,"Arginine":1.27,"Histidine":0.69,"Alanine":1.1,"AsparticAcid":1.77,"GlutamicAcid":2.94,"Glycine":0.85,"Proline":0.66,"Serine":0.73,"omega3":0.01,"omega6":0.25,"AddedSugars":0.0,"IntrinsicSugars":0.28},"addedSugars":0.0,"intrinsicSugars":0.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.75,"yieldFactorFat":1.0,"sources":[{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":141.8},{"ndb":"10141","name":"Pork, cured, ham, center slice, country-style, separable lean only, raw","grams":15.0},{"ndb":"2038","name":"Spices, sage, ground","grams":0.2},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":7.8},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"1145","name":"Butter, without salt","grams":7.1},{"ndb":"14106","name":"Alcoholic beverage, wine, table, white","grams":30.0},{"ndb":"6194","name":"Soup, chicken broth, ready-to-serve","grams":30.0},{"ndb":"9152","name":"Lemon juice, raw","grams":3.8},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"chicken","section_label":"Chicken","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":661.33,"raw_water_grams":456.45,"raw_fat_grams":20.3,"raw_protein_grams":147.65,"raw_carb_grams":25.0,"final_grams":547.21},{"section_key":"sauce","section_label":"Sauce","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.7,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":299.07,"raw_water_grams":240.62,"raw_fat_grams":36.94,"raw_protein_grams":1.21,"raw_carb_grams":5.07,"final_grams":226.89}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken Saltimbocca', quantity: 'custom (g)', foodWord: 'CHICKENSALTIMBOCCA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chicken breast', quantity: '1.25 lb', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 567.0 },
+      { name: 'Prosciutto', quantity: '4 slices', section: 'chicken', ndbNo: '10141', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'fresh sage leaves', quantity: '8 leaves', section: 'chicken', ndbNo: '2038', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '1/4 cup', section: 'chicken', ndbNo: '20581', portionDesc: 'g', portionGrams: 31.25 },
+      { name: 'salt', quantity: '1/4 tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'sauce', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'unsalted butter', quantity: '2 tbsp', section: 'sauce', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
+      { name: 'white wine', quantity: '1/2 cup', section: 'sauce', ndbNo: '14106', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'chicken broth', quantity: '1/2 cup', section: 'sauce', ndbNo: '6194', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'lemon juice', quantity: '1 tbsp', section: 'sauce', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'salt', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Butterfly or pound chicken breasts to 1/4-inch thickness and cut into 4 cutlets. Season both sides with salt and pepper.',
+      'Place 2 fresh sage leaves on each cutlet. Lay a slice of prosciutto over the sage and press to adhere. Lightly dredge the prosciutto side in flour; shake off any excess.',
+      'Heat olive oil and 1 tablespoon of the butter in a large skillet over medium-high heat until shimmering.',
+      'Add cutlets prosciutto-side down. Cook 3 to 4 minutes until the prosciutto is crisp and golden. Flip and cook 2 to 3 minutes until chicken is cooked through. Transfer to a plate and tent with foil.',
+      'Pour white wine into the pan and scrape up any browned bits. Let bubble 2 minutes.',
+      'Add chicken broth and lemon juice. Simmer 3 to 4 minutes until sauce reduces by about half.',
+      'Remove from heat and swirl in remaining 1 tablespoon of butter until sauce is glossy. Taste and adjust seasoning.',
+      'Return chicken to the pan briefly to coat in sauce. Serve immediately.'
+    ],
+    sections: [
+      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.7 }
+    ],
   }
 ];
