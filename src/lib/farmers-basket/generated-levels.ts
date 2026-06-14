@@ -13645,5 +13645,56 @@ export const LEVELS: Level[] = [
       { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'ENTR_055',
+    name: 'Chicken Kabobs',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 290,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 plate (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":256.1,"pro":41.3,"fat":4.8,"carb":10.9,"fib":3.2,"h2o":236.6,"sug":6.2,"perServing":{"cal":256.1,"pro":41.3,"fat":4.8,"carb":10.9,"fib":3.2,"h2o":236.6,"sug":6.2,"AddedSugars":0.0,"IntrinsicSugars":6.2},"micros":{"vitaminA":19.39,"vitaminC":13.57,"vitaminD":1.08,"vitaminE":0.4,"vitaminK":1.79,"vitaminB6":0.42,"vitaminB12":0.12,"thiamin":0.07,"riboflavin":0.2,"niacin":5.19,"folate":17.48,"calcium":19.42,"iron":0.65,"magnesium":25.75,"phosphorus":161.83,"potassium":391.57,"sodium":224.9,"zinc":0.74,"copper":0.14,"selenium":18.2,"cholesterol":41.65,"saturatedFat":0.83,"monoFat":2.91,"polyFat":0.59,"omega3":0.01,"omega6":0.15},"gramsPerServing":298.2,"servings":4,"per100g":{"Energy_KCal":85.89,"Water":79.35,"Protein":13.84,"TotalLipidFat":1.63,"Carbohydrate":3.65,"FiberTotalDietary":1.07,"SugarsTotal":2.07,"Cholesterol":41.65,"FattyAcids_totalSaturated":0.83,"FattyAcids_totalMonounsaturated":2.91,"FattyAcids_totalPolyunsaturated":0.59,"LinoleicAcid":0.15,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":19.39,"Retinol":4.11,"Carotene_beta":162.12,"VitaminD":1.08,"VitaminE_alphaTocopherol":0.4,"VitaminK_phylloquinone":1.79,"VitaminC_totalAscorbicAcid":13.57,"Thiamin":0.07,"Riboflavin":0.2,"Niacin":5.19,"PantothenicAcid":0.99,"VitaminB6":0.42,"Folate_total":17.48,"Folate_food":17.48,"Folate_DFE":17.48,"FolicAcid":0.0,"VitaminB12":0.12,"Choline_total":49.57,"Betaine":6.18,"LuteinZeaxanthin":252.76,"Lycopene":0.0,"Calcium_Ca":19.42,"Iron_Fe":0.65,"Magnesium_Mg":25.75,"Phosphorus_P":161.83,"Potassium_K":391.57,"Sodium_Na":224.9,"Zinc_Zn":0.74,"Copper_Cu":0.14,"Manganese_Mn":0.14,"Selenium_Se":18.2,"Tryptophan":0.18,"Threonine":0.61,"Isoleucine":0.66,"Leucine":1.12,"Lysine":1.3,"Methionine":0.34,"Cystine":0.12,"Phenylalanine":0.56,"Tyrosine":0.48,"Valine":0.7,"Arginine":0.92,"Histidine":0.49,"Alanine":0.8,"AsparticAcid":1.34,"GlutamicAcid":2.09,"Glycine":0.6,"Proline":0.46,"Serine":0.53,"omega3":0.01,"omega6":0.15,"AddedSugars":0.0,"IntrinsicSugars":2.07},"addedSugars":0.0,"intrinsicSugars":6.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.75,"yieldFactorFat":1.0,"sources":[{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":10.2},{"ndb":"9152","name":"Lemon juice, raw","grams":7.5},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.5},{"ndb":"2028","name":"Spices, paprika","grams":0.6},{"ndb":"2014","name":"Spices, cumin seed","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":170.1},{"ndb":"11477","name":"Squash, summer, zucchini, includes skin, raw","grams":49.0},{"ndb":"11821","name":"Peppers, sweet, red, raw","grams":29.8},{"ndb":"11333","name":"Peppers, sweet, green, raw","grams":29.8},{"ndb":"11282","name":"Onions, raw","grams":40.0},{"ndb":"11266","name":"Mushrooms, brown, italian, or crimini, raw","grams":56.8},{"ndb":"2047","name":"Salt, table","grams":0.8}],"sections":[{"section_key":"marinade","section_label":"Marinade","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":0.0,"yield_factor_fat":0.0,"yield_factor_protein":0.0,"yield_factor_carbohydrate":0.0,"yield_factor_other":0.0,"ingredient_count":8,"raw_grams":89.05,"raw_water_grams":33.63,"raw_fat_grams":41.55,"raw_protein_grams":1.46,"raw_carb_grams":8.71,"final_grams":3.7},{"section_key":"kabobs","section_label":"Kabobs","prep_method":"raw","cook_method":"grilled","cooking_method":"grilled","cooking_method_normalized":"grilled","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":1504.4,"raw_water_grams":1261.76,"raw_fat_grams":19.4,"raw_protein_grams":165.1,"raw_carb_grams":43.5,"final_grams":1188.96}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken Kabobs', quantity: 'custom (g)', foodWord: 'CHICKENKABOB', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'olive oil', quantity: '3 tbsp', section: 'marinade', ndbNo: '4053', portionDesc: 'g', portionGrams: 40.8 },
+      { name: 'lemon juice', quantity: '2 tbsp', section: 'marinade', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'garlic', quantity: '3 cloves', section: 'marinade', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'dried oregano', quantity: '1 tsp', section: 'marinade', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.8 },
+      { name: 'paprika', quantity: '1 tsp', section: 'marinade', ndbNo: '2028', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'ground cumin', quantity: '1/2 tsp', section: 'marinade', ndbNo: '2014', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'marinade', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/2 tsp', section: 'marinade', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'chicken breast (boneless/skinless)', quantity: '1.5 lb', section: 'kabobs', ndbNo: '5062', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'zucchini', quantity: '1 large', section: 'kabobs', ndbNo: '11477', portionDesc: 'g', portionGrams: 196.0 },
+      { name: 'red bell pepper', quantity: '1 medium', section: 'kabobs', ndbNo: '11821', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'green bell pepper', quantity: '1 medium', section: 'kabobs', ndbNo: '11333', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'onion', quantity: '1 medium', section: 'kabobs', ndbNo: '11282', portionDesc: 'g', portionGrams: 160.0 },
+      { name: 'crimini mushrooms', quantity: '8 oz', section: 'kabobs', ndbNo: '11266', portionDesc: 'g', portionGrams: 227.0 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'kabobs', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 }
+    ],
+    recipeInstructions: [
+      'Whisk together the olive oil, lemon juice, garlic, oregano, paprika, cumin, salt, and black pepper in a large bowl. Add the chicken cubes and toss to coat. Marinate in the refrigerator for at least 1 hour, or up to 4 hours.',
+      'Cut the zucchini, bell peppers, and onion into 1-1/2-inch pieces. Halve any large mushrooms. Season the vegetables lightly with salt.',
+      'Thread the marinated chicken and vegetables alternately onto 8 metal or soaked wooden skewers (each skewer gets 2 to 3 pieces of chicken and a mix of vegetables), leaving a small gap between each piece.',
+      'Heat a grill to medium-high heat (400 to 450°F). Brush the grates lightly with oil. Grill the kabobs 4 to 5 minutes per side, turning once or twice, until the chicken is cooked through to an internal temperature of 165°F and the vegetables are tender with char marks.',
+      'Transfer to a platter and rest 2 to 3 minutes before serving.'
+    ],
+    sections: [
+      { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
+      { key: 'kabobs', label: 'Kabobs', cookingMethod: '', yieldFactorWater: 0.75 }
+    ],
   }
 ];
