@@ -13426,5 +13426,62 @@ export const LEVELS: Level[] = [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'stir_fry', label: 'Stir Fry', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'ENTR_051',
+    name: 'Chicken General Tso',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 286,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 bowl (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":504.9,"pro":47.4,"fat":25.0,"carb":20.2,"fib":1.0,"h2o":190.1,"sug":7.2,"perServing":{"cal":504.9,"pro":47.4,"fat":25.0,"carb":20.2,"fib":1.0,"h2o":190.1,"sug":7.2,"AddedSugars":4.4,"IntrinsicSugars":2.8},"micros":{"vitaminA":7.06,"vitaminC":0.57,"vitaminD":0.75,"vitaminE":0.66,"vitaminK":10.7,"vitaminB6":0.3,"vitaminB12":0.42,"thiamin":0.06,"riboflavin":0.16,"niacin":3.85,"folate":5.66,"calcium":16.94,"iron":0.98,"magnesium":23.83,"phosphorus":162.7,"potassium":231.51,"sodium":488.68,"zinc":1.37,"copper":0.08,"selenium":19.08,"cholesterol":77.63,"saturatedFat":1.84,"monoFat":5.21,"polyFat":1.28,"omega3":0.02,"omega6":0.49},"gramsPerServing":286.9,"servings":4,"per100g":{"Energy_KCal":176.0,"Water":66.27,"Protein":16.54,"TotalLipidFat":8.72,"Carbohydrate":7.03,"FiberTotalDietary":0.35,"SugarsTotal":2.49,"Cholesterol":77.63,"FattyAcids_totalSaturated":1.84,"FattyAcids_totalMonounsaturated":5.21,"FattyAcids_totalPolyunsaturated":1.28,"LinoleicAcid":0.49,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":7.06,"Retinol":4.46,"Carotene_beta":29.31,"VitaminD":0.75,"VitaminE_alphaTocopherol":0.66,"VitaminK_phylloquinone":10.7,"VitaminC_totalAscorbicAcid":0.57,"Thiamin":0.06,"Riboflavin":0.16,"Niacin":3.85,"PantothenicAcid":0.04,"VitaminB6":0.3,"Folate_total":5.66,"Folate_food":5.66,"Folate_DFE":5.66,"FolicAcid":0.0,"VitaminB12":0.42,"Choline_total":41.61,"Betaine":8.44,"LuteinZeaxanthin":87.58,"Lycopene":0.01,"Calcium_Ca":16.94,"Iron_Fe":0.98,"Magnesium_Mg":23.83,"Phosphorus_P":162.7,"Potassium_K":231.51,"Sodium_Na":488.68,"Zinc_Zn":1.37,"Copper_Cu":0.08,"Manganese_Mn":0.08,"Selenium_Se":19.08,"Tryptophan":0.19,"Threonine":0.78,"Isoleucine":0.79,"Leucine":1.41,"Lysine":1.55,"Methionine":0.47,"Cystine":0.17,"Phenylalanine":0.67,"Tyrosine":0.62,"Valine":0.81,"Arginine":1.16,"Histidine":0.49,"Alanine":0.99,"AsparticAcid":1.63,"GlutamicAcid":2.77,"Glycine":0.77,"Proline":0.69,"Serine":0.7,"omega3":0.02,"omega6":0.49,"AddedSugars":1.52,"IntrinsicSugars":0.97},"addedSugars":4.4,"intrinsicSugars":2.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.85,"yieldFactorFat":1.0,"sources":[{"ndb":"5096","name":"Chicken, broilers or fryers, dark meat, thigh, meat only, raw","grams":226.8},{"ndb":"20027","name":"Cornstarch","grams":8.0},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":13.6},{"ndb":"","name":"Chicken Broth","grams":15.0},{"ndb":"16124","name":"Soy sauce made from soy (tamari)","grams":13.5},{"ndb":"6175","name":"Sauce, hoisin, ready-to-serve","grams":8.0},{"ndb":"2053","name":"Vinegar, distilled","grams":7.5},{"ndb":"19334","name":"Sugars, brown","grams":4.5},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11216","name":"Ginger root, raw","grams":1.5},{"ndb":"4058","name":"Oil, sesame, salad or cooking","grams":1.1},{"ndb":"20027","name":"Cornstarch","grams":2.0},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.2},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":9.0},{"ndb":"12024","name":"Seeds, sesame seeds, whole, roasted and toasted","grams":0.8}],"sections":[{"section_key":"chicken","section_label":"Chicken","prep_method":"raw","cook_method":"fried","cooking_method":"fried","cooking_method_normalized":"fried","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":997.18,"raw_water_grams":694.21,"raw_fat_grams":91.81,"raw_protein_grams":178.5,"raw_carb_grams":29.57,"final_grams":893.04},{"section_key":"broth","section_label":"Chicken Broth","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":60.0,"raw_water_grams":56.88,"raw_fat_grams":0.8,"raw_protein_grams":2.32,"raw_carb_grams":0.02,"final_grams":60.0},{"section_key":"sauce","section_label":"Sauce","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.92,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":204.2,"raw_water_grams":123.22,"raw_fat_grams":7.41,"raw_protein_grams":8.93,"raw_carb_grams":51.04,"final_grams":194.34}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken General Tso', quantity: 'custom (g)', foodWord: 'GENERALTSO', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chicken thigh (boneless/skinless)', quantity: '2 lb', section: 'chicken', ndbNo: '5096', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'cornstarch', quantity: '1/4 cup', section: 'chicken', ndbNo: '20027', portionDesc: 'g', portionGrams: 32.0 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'olive oil', quantity: '1/4 cup', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 54.4 },
+      { name: 'Chicken Broth', quantity: '1/4 cup Chicken Broth (recipe)', section: 'broth', foodWord: 'CHICKENBROTH', portionDesc: 'g', portionGrams: 60.0, isDish: true, componentRef: 'STOCK_003' },
+      { name: 'tamari', quantity: '3 tbsp', section: 'sauce', ndbNo: '16124', portionDesc: 'g', portionGrams: 54.0 },
+      { name: 'hoisin sauce', quantity: '2 tbsp', section: 'sauce', ndbNo: '6175', portionDesc: 'g', portionGrams: 32.0 },
+      { name: 'rice wine vinegar', quantity: '2 tbsp', section: 'sauce', ndbNo: '2053', portionDesc: 'g', portionGrams: 29.8 },
+      { name: 'brown sugar', quantity: '2 tbsp', section: 'sauce', ndbNo: '19334', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'garlic', quantity: '4 cloves', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'fresh ginger', quantity: '1 tbsp', section: 'sauce', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'Sesame oil', quantity: '1 tsp', section: 'sauce', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'cornstarch', quantity: '1 tbsp', section: 'sauce', ndbNo: '20027', portionDesc: 'g', portionGrams: 8.0 },
+      { name: 'red pepper flakes', quantity: '1/2 tsp', section: 'sauce', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.9 },
+      { name: 'scallion (green onion)', quantity: '3 stalks', section: 'sauce', ndbNo: '11291', portionDesc: 'g', portionGrams: 36.0 },
+      { name: 'sesame seeds', quantity: '1 tsp', section: 'sauce', ndbNo: '12024', portionDesc: 'g', portionGrams: 3.0 }
+    ],
+    recipeInstructions: [
+      'Cut the chicken thighs into bite-sized pieces. In a bowl, combine the tamari, rice wine vinegar, and half the garlic. Add the chicken, toss to coat, and marinate for at least 15 minutes.',
+      'Make or prepare the Chicken Broth (see the Chicken Broth recipe).',
+      'Remove the chicken from the marinade (reserve the marinade). Pat the chicken dry and toss with the cornstarch, salt, and black pepper until evenly coated.',
+      'Heat the olive oil in a large wok or skillet over high heat. Fry the chicken pieces in batches for 4 to 5 minutes per batch until golden brown and cooked through to an internal temperature of 165°F. Transfer to a plate.',
+      'Drain excess oil from the wok, leaving about 1 tablespoon. Add the remaining garlic and the ginger and stir-fry for 30 seconds until fragrant.',
+      'Add the hoisin sauce, brown sugar, sesame oil, red pepper flakes, reserved marinade, and chicken broth. Stir to combine. Mix the cornstarch with 2 tablespoons cold water and pour into the sauce, stirring until the sauce thickens, about 1 to 2 minutes.',
+      'Return the chicken to the wok and toss to coat in the sauce. Cook for 1 minute until heated through.',
+      'Garnish with scallions and sesame seeds. Serve immediately. (Rice not included.)'
+    ],
+    sections: [
+      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.85 },
+      { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.92 }
+    ],
   }
 ];

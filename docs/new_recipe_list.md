@@ -110,7 +110,7 @@ Chicken Enchiladas
 Chicken Florentine
 Chicken Fried Rice
 Chicken General Tso
-Moo Goo Gai Pan
+Chicken Moo Goo Gai Pan
 Chicken Piccata
 Chicken Pot Pie
 Chicken Kabobs
