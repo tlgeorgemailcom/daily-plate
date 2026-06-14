@@ -13458,7 +13458,7 @@ export const LEVELS: Level[] = [
       { name: 'Chicken Broth', quantity: '1/4 cup Chicken Broth (recipe)', section: 'broth', foodWord: 'CHICKENBROTH', portionDesc: 'g', portionGrams: 60.0, isDish: true, componentRef: 'STOCK_003' },
       { name: 'tamari', quantity: '3 tbsp', section: 'sauce', ndbNo: '16124', portionDesc: 'g', portionGrams: 54.0 },
       { name: 'hoisin sauce', quantity: '2 tbsp', section: 'sauce', ndbNo: '6175', portionDesc: 'g', portionGrams: 32.0 },
-      { name: 'rice wine vinegar', quantity: '2 tbsp', section: 'sauce', ndbNo: '2053', portionDesc: 'g', portionGrams: 29.8 },
+      { name: 'rice wine vinegar (distilled vinegar)', quantity: '2 tbsp', section: 'sauce', ndbNo: '2053', portionDesc: 'g', portionGrams: 29.8 },
       { name: 'brown sugar', quantity: '2 tbsp', section: 'sauce', ndbNo: '19334', portionDesc: 'g', portionGrams: 18.0 },
       { name: 'garlic', quantity: '4 cloves', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'fresh ginger', quantity: '1 tbsp', section: 'sauce', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
