@@ -13365,7 +13365,7 @@ export const LEVELS: Level[] = [
       'Reduce heat to medium. Add the butter to the same skillet and let it melt. Add the minced garlic and cook for 30 seconds until fragrant.',
       'Pour in the chicken broth and heavy cream. Stir to combine, scraping up any browned bits from the bottom of the pan.',
       'Stir in the Parmesan, salt, black pepper, and nutmeg. Simmer for 3 to 4 minutes until the sauce thickens slightly.',
-      'Stir in the baby spinach, thoroughly coating with sauce, and cook for 1 to 2 minutes until wilted. Return the chicken breasts to the skillet and spoon the sauce over them. Simmer for 2 to 3 minutes to heat through. Serve immediately with the creamed spinach sauce spooned over the top.'
+      'Stir in the baby spinach, thoroughly coating with sauce. Return the chicken breasts to the skillet and spoon the sauce over them. Simmer for 2 to 3 minutes to heat through. Serve immediately with the creamed spinach sauce spooned over the top.'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
