@@ -14346,5 +14346,67 @@ export const LEVELS: Level[] = [
       { key: 'topping', label: 'Topping', cookingMethod: '', yieldFactorWater: 0.95 },
       { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'ENTR_068',
+    name: 'Chicken Tikka Masala',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 303,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 plate (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":582.3,"pro":51.1,"fat":35.0,"carb":16.7,"fib":3.9,"h2o":277.4,"sug":8.4,"perServing":{"cal":582.3,"pro":51.1,"fat":35.0,"carb":16.7,"fib":3.9,"h2o":277.4,"sug":8.4,"AddedSugars":0.0,"IntrinsicSugars":8.4},"micros":{"vitaminA":53.48,"vitaminC":1.81,"vitaminD":5.43,"vitaminE":0.85,"vitaminK":4.61,"vitaminB6":0.25,"vitaminB12":0.37,"thiamin":0.06,"riboflavin":0.15,"niacin":2.9,"folate":5.99,"calcium":32.92,"iron":1.15,"magnesium":22.78,"phosphorus":138.3,"potassium":255.87,"sodium":319.51,"zinc":1.12,"copper":0.09,"selenium":14.91,"cholesterol":69.14,"saturatedFat":3.82,"monoFat":3.55,"polyFat":0.81,"omega3":0.03,"omega6":0.45},"gramsPerServing":384.7,"servings":4,"per100g":{"Energy_KCal":151.37,"Water":72.11,"Protein":13.28,"TotalLipidFat":9.11,"Carbohydrate":4.33,"FiberTotalDietary":1.02,"SugarsTotal":2.19,"Cholesterol":69.14,"FattyAcids_totalSaturated":3.82,"FattyAcids_totalMonounsaturated":3.55,"FattyAcids_totalPolyunsaturated":0.81,"LinoleicAcid":0.45,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":53.48,"Retinol":42.7,"Carotene_beta":118.26,"VitaminD":5.43,"VitaminE_alphaTocopherol":0.85,"VitaminK_phylloquinone":4.61,"VitaminC_totalAscorbicAcid":1.81,"Thiamin":0.06,"Riboflavin":0.15,"Niacin":2.9,"PantothenicAcid":0.12,"VitaminB6":0.25,"Folate_total":5.99,"Folate_food":5.99,"Folate_DFE":5.99,"FolicAcid":0.0,"VitaminB12":0.37,"Choline_total":34.89,"Betaine":6.24,"LuteinZeaxanthin":120.1,"Lycopene":1227.36,"Calcium_Ca":32.92,"Iron_Fe":1.15,"Magnesium_Mg":22.78,"Phosphorus_P":138.3,"Potassium_K":255.87,"Sodium_Na":319.51,"Zinc_Zn":1.12,"Copper_Cu":0.09,"Manganese_Mn":0.15,"Selenium_Se":14.91,"Tryptophan":0.14,"Threonine":0.57,"Isoleucine":0.57,"Leucine":1.03,"Lysine":1.12,"Methionine":0.34,"Cystine":0.12,"Phenylalanine":0.49,"Tyrosine":0.45,"Valine":0.59,"Arginine":0.84,"Histidine":0.36,"Alanine":0.71,"AsparticAcid":1.24,"GlutamicAcid":2.14,"Glycine":0.55,"Proline":0.51,"Serine":0.51,"omega3":0.03,"omega6":0.45,"AddedSugars":0.0,"IntrinsicSugars":2.19},"addedSugars":0.0,"intrinsicSugars":8.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.75,"yieldFactorFat":1.0,"sources":[{"ndb":"5096","name":"Chicken, broilers or fryers, dark meat, thigh, meat only, raw","grams":226.8},{"ndb":"1293","name":"Yogurt, Greek, plain, whole milk","grams":30.0},{"ndb":"2014","name":"Spices, cumin seed","grams":0.5},{"ndb":"2013","name":"Spices, coriander seed","grams":0.5},{"ndb":"2043","name":"Spices, turmeric, ground","grams":0.4},{"ndb":"2028","name":"Spices, paprika","grams":0.6},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"1145","name":"Butter, without salt","grams":7.1},{"ndb":"11282","name":"Onions, raw","grams":37.5},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11216","name":"Ginger root, raw","grams":1.5},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":102.8},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":29.8},{"ndb":"2014","name":"Spices, cumin seed","grams":0.5},{"ndb":"2013","name":"Spices, coriander seed","grams":0.5},{"ndb":"2043","name":"Spices, turmeric, ground","grams":0.4},{"ndb":"2028","name":"Spices, paprika","grams":0.6},{"ndb":"2006","name":"Spices, cardamom","grams":0.1},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.2},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":0.8}],"sections":[{"section_key":"chicken","section_label":"Chicken","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":1041.25,"raw_water_grams":789.85,"raw_fat_grams":44.56,"raw_protein_grams":190.26,"raw_carb_grams":9.15,"final_grams":843.79},{"section_key":"sauce","section_label":"Sauce","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":15,"raw_grams":765.6,"raw_water_grams":587.84,"raw_fat_grams":95.61,"raw_protein_grams":14.07,"raw_carb_grams":57.53,"final_grams":695.06}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken Tikka Masala', quantity: 'custom (g)', foodWord: 'CHICKENTIKKAMASALA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'boneless/skinless thighs', quantity: '2 lb', section: 'chicken', ndbNo: '5096', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'Greek whole milk yogurt', quantity: '1/2 cup', section: 'chicken', ndbNo: '1293', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'ground cumin', quantity: '1 tsp', section: 'chicken', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'ground coriander', quantity: '1 tsp', section: 'chicken', ndbNo: '2013', portionDesc: 'g', portionGrams: 1.8 },
+      { name: 'ground turmeric', quantity: '1/2 tsp', section: 'chicken', ndbNo: '2043', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'paprika', quantity: '1 tsp', section: 'chicken', ndbNo: '2028', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'cayenne pepper', quantity: '1/4 tsp', section: 'chicken', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.45 },
+      { name: 'salt', quantity: '1 tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'sauce', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.0 },
+      { name: 'unsalted butter', quantity: '2 tbsp', section: 'sauce', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
+      { name: 'onion', quantity: '1 large', section: 'sauce', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'garlic', quantity: '4 cloves', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'fresh ginger', quantity: '1 tbsp', section: 'sauce', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'canned crushed tomatoes', quantity: '14 oz', section: 'sauce', ndbNo: '11693', portionDesc: 'g', portionGrams: 411.0 },
+      { name: 'heavy cream', quantity: '1/2 cup', section: 'sauce', ndbNo: '1053', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'ground cumin', quantity: '1 tsp', section: 'sauce', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'ground coriander', quantity: '1 tsp', section: 'sauce', ndbNo: '2013', portionDesc: 'g', portionGrams: 1.8 },
+      { name: 'ground turmeric', quantity: '1/2 tsp', section: 'sauce', ndbNo: '2043', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'paprika', quantity: '1 tsp', section: 'sauce', ndbNo: '2028', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'ground cardamom', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2006', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'ground cinnamon', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2010', portionDesc: 'g', portionGrams: 0.65 },
+      { name: 'cayenne pepper', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.45 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 }
+    ],
+    recipeInstructions: [
+      'In a bowl, combine chicken thighs with yogurt, cumin, coriander, turmeric, paprika, cayenne, and salt. Toss to coat and marinate at least 30 minutes (or overnight in the refrigerator).',
+      'Heat olive oil in a large skillet or Dutch oven over medium-high heat. Add marinated chicken in batches and sear 3 to 4 minutes per side until charred at the edges and an instant-read thermometer reads 165°F. Transfer to a plate and cut into bite-size pieces.',
+      'Reduce heat to medium. Add butter to the same pan. Add onion and cook 8 to 10 minutes until golden. Add garlic and ginger; cook 1 minute until fragrant.',
+      'Add cumin, coriander, turmeric, paprika, cardamom, cinnamon, and cayenne. Stir 30 seconds to toast the spices.',
+      'Pour in crushed tomatoes and simmer 10 minutes, stirring occasionally, until sauce darkens and thickens.',
+      'Stir in heavy cream and simmer 5 minutes until sauce is rich and smooth. Season with salt.',
+      'Return chicken pieces to the pan and simmer 5 minutes to heat through and meld flavors.',
+      'Serve over steamed basmati rice or with naan (not included).'
+    ],
+    sections: [
+      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];
