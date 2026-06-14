@@ -13747,5 +13747,58 @@ export const LEVELS: Level[] = [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
       { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.92 }
     ],
+  },
+  {
+    id: 'ENTR_057',
+    name: 'Chicken Marsala',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 292,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 plate (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":464.2,"pro":42.3,"fat":23.4,"carb":12.4,"fib":1.2,"h2o":226.9,"sug":2.8,"perServing":{"cal":464.2,"pro":42.3,"fat":23.4,"carb":12.4,"fib":1.2,"h2o":226.9,"sug":2.8,"AddedSugars":0.0,"IntrinsicSugars":2.8},"micros":{"vitaminA":30.9,"vitaminC":0.71,"vitaminD":1.04,"vitaminE":0.55,"vitaminK":10.64,"vitaminB6":0.38,"vitaminB12":0.13,"thiamin":0.07,"riboflavin":0.18,"niacin":5.09,"folate":13.22,"calcium":13.18,"iron":0.59,"magnesium":21.4,"phosphorus":153.95,"potassium":307.95,"sodium":171.76,"zinc":0.71,"copper":0.12,"selenium":18.94,"cholesterol":55.32,"saturatedFat":3.31,"monoFat":3.63,"polyFat":0.72,"omega3":0.01,"omega6":0.26},"gramsPerServing":313.1,"servings":4,"per100g":{"Energy_KCal":148.24,"Water":72.45,"Protein":13.5,"TotalLipidFat":7.46,"Carbohydrate":3.95,"FiberTotalDietary":0.4,"SugarsTotal":0.89,"Cholesterol":55.32,"FattyAcids_totalSaturated":3.31,"FattyAcids_totalMonounsaturated":3.63,"FattyAcids_totalPolyunsaturated":0.72,"LinoleicAcid":0.26,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":30.9,"Retinol":28.31,"Carotene_beta":31.2,"VitaminD":1.04,"VitaminE_alphaTocopherol":0.55,"VitaminK_phylloquinone":10.64,"VitaminC_totalAscorbicAcid":0.71,"Thiamin":0.07,"Riboflavin":0.18,"Niacin":5.09,"PantothenicAcid":0.93,"VitaminB6":0.38,"Folate_total":13.22,"Folate_food":10.34,"Folate_DFE":15.25,"FolicAcid":3.84,"VitaminB12":0.13,"Choline_total":47.52,"Betaine":6.06,"LuteinZeaxanthin":23.81,"Lycopene":0.01,"Calcium_Ca":13.18,"Iron_Fe":0.59,"Magnesium_Mg":21.4,"Phosphorus_P":153.95,"Potassium_K":307.95,"Sodium_Na":171.76,"Zinc_Zn":0.71,"Copper_Cu":0.12,"Manganese_Mn":0.09,"Selenium_Se":18.94,"Tryptophan":0.18,"Threonine":0.62,"Isoleucine":0.68,"Leucine":1.14,"Lysine":1.32,"Methionine":0.35,"Cystine":0.12,"Phenylalanine":0.56,"Tyrosine":0.5,"Valine":0.72,"Arginine":0.93,"Histidine":0.5,"Alanine":0.82,"AsparticAcid":1.31,"GlutamicAcid":2.15,"Glycine":0.64,"Proline":0.5,"Serine":0.54,"omega3":0.01,"omega6":0.26,"AddedSugars":0.0,"IntrinsicSugars":0.89},"addedSugars":0.0,"intrinsicSugars":2.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.82,"yieldFactorFat":1.0,"sources":[{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":170.1},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":7.8},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"1145","name":"Butter, without salt","grams":3.5},{"ndb":"","name":"Chicken Broth","grams":30.0},{"ndb":"11266","name":"Mushrooms, brown, italian, or crimini, raw","grams":56.7},{"ndb":"11677","name":"Shallots, raw","grams":15.0},{"ndb":"14106","name":"Alcoholic beverage, wine, table, white","grams":45.0},{"ndb":"1145","name":"Butter, without salt","grams":10.7},{"ndb":"11297","name":"Parsley, fresh","grams":1.9},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"chicken","section_label":"Chicken","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":756.63,"raw_water_grams":509.17,"raw_fat_grams":56.87,"raw_protein_grams":156.5,"raw_carb_grams":24.22,"final_grams":664.98},{"section_key":"broth","section_label":"Chicken Broth","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":120.0,"raw_water_grams":113.76,"raw_fat_grams":1.61,"raw_protein_grams":4.63,"raw_carb_grams":0.04,"final_grams":120.0},{"section_key":"sauce","section_label":"Marsala Sauce","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":518.8,"raw_water_grams":427.5,"raw_fat_grams":34.91,"raw_protein_grams":7.91,"raw_carb_grams":25.21,"final_grams":467.5}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken Marsala', quantity: 'custom (g)', foodWord: 'CHICKENMARSALA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chicken breast (boneless/skinless)', quantity: '1.5 lb', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '1/4 cup', section: 'chicken', ndbNo: '20581', portionDesc: 'g', portionGrams: 31.25 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'unsalted butter', quantity: '1 tbsp', section: 'chicken', ndbNo: '1145', portionDesc: 'g', portionGrams: 14.2 },
+      { name: 'Chicken Broth', quantity: '1/2 cup Chicken Broth (recipe)', section: 'broth', foodWord: 'CHICKENBROTH', portionDesc: 'g', portionGrams: 120.0, isDish: true, componentRef: 'STOCK_003' },
+      { name: 'crimini mushrooms', quantity: '8 oz', section: 'sauce', ndbNo: '11266', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'shallots', quantity: '2 medium', section: 'sauce', ndbNo: '11677', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'Marsala wine (dry white wine)', quantity: '3/4 cup', section: 'sauce', ndbNo: '14106', portionDesc: 'g', portionGrams: 180.0 },
+      { name: 'unsalted butter', quantity: '3 tbsp', section: 'sauce', ndbNo: '1145', portionDesc: 'g', portionGrams: 42.6 },
+      { name: 'fresh parsley', quantity: '2 tbsp', section: 'sauce', ndbNo: '11297', portionDesc: 'g', portionGrams: 7.6 },
+      { name: 'salt', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: 'pinch', section: 'sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 }
+    ],
+    recipeInstructions: [
+      'Pound the chicken breasts to an even 1/4-inch thickness, or slice horizontally into cutlets. Season with salt and pepper, then dredge lightly in flour, shaking off the excess.',
+      'Make or prepare the Chicken Broth (see the Chicken Broth recipe).',
+      'Heat olive oil and 1 tablespoon butter in a large skillet over medium-high heat. Sear the chicken in batches for 3 to 4 minutes per side until golden and cooked through to an internal temperature of 165°F. Transfer to a plate and tent loosely with foil.',
+      'Add the mushrooms to the same skillet and cook over medium-high heat for 4 to 5 minutes until browned. Add the shallots and cook for 1 minute more.',
+      'Pour in the Marsala wine and chicken broth. Bring to a boil, scraping up any browned bits, and simmer for 4 to 5 minutes until the sauce reduces by about one-third.',
+      'Remove from heat and swirl in the remaining 3 tablespoons butter until the sauce is glossy. Season with salt and pepper to taste.',
+      'Return the chicken to the pan and spoon the sauce over to coat. Garnish with fresh parsley and serve immediately. (Pasta or rice not included.)'
+    ],
+    sections: [
+      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.82 },
+      { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'sauce', label: 'Marsala Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];
