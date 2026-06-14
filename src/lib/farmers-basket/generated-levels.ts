@@ -13354,7 +13354,7 @@ export const LEVELS: Level[] = [
       { name: 'garlic', quantity: '3 cloves', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'heavy cream', quantity: '1 cup', section: 'sauce', ndbNo: '1053', portionDesc: 'g', portionGrams: 238.0 },
       { name: 'Parmesan cheese', quantity: '1/2 cup grated', section: 'sauce', ndbNo: '1033', portionDesc: 'g', portionGrams: 50.0 },
-      { name: 'baby spinach', quantity: '2 cups packed', section: 'sauce', ndbNo: '11457', portionDesc: 'g', portionGrams: 85.05 },
+      { name: 'baby spinach', quantity: '3 oz (85g)', section: 'sauce', ndbNo: '11457', portionDesc: 'g', portionGrams: 85.05 },
       { name: 'salt', quantity: '1/2 tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'ground black pepper', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
       { name: 'ground nutmeg', quantity: '1/8 tsp', section: 'sauce', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.275 }
