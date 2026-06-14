@@ -14408,5 +14408,62 @@ export const LEVELS: Level[] = [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
       { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'ENTR_069',
+    name: 'Chicken Marry Me',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 304,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 plate (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":535.6,"pro":40.7,"fat":37.1,"carb":9.7,"fib":1.3,"h2o":151.5,"sug":2.1,"perServing":{"cal":535.6,"pro":40.7,"fat":37.1,"carb":9.7,"fib":1.3,"h2o":151.5,"sug":2.1,"AddedSugars":0.0,"IntrinsicSugars":2.1},"micros":{"vitaminA":120.1,"vitaminC":3.41,"vitaminD":16.91,"vitaminE":0.7,"vitaminK":7.01,"vitaminB6":0.4,"vitaminB12":0.21,"thiamin":0.07,"riboflavin":0.18,"niacin":5.0,"folate":9.35,"calcium":78.54,"iron":0.65,"magnesium":26.09,"phosphorus":186.17,"potassium":313.21,"sodium":331.74,"zinc":0.73,"copper":0.06,"selenium":17.09,"cholesterol":84.27,"saturatedFat":8.37,"monoFat":5.64,"polyFat":1.13,"omega3":0.04,"omega6":0.43},"gramsPerServing":243.7,"servings":4,"per100g":{"Energy_KCal":219.77,"Water":62.18,"Protein":16.69,"TotalLipidFat":15.24,"Carbohydrate":3.99,"FiberTotalDietary":0.54,"SugarsTotal":0.85,"Cholesterol":84.27,"FattyAcids_totalSaturated":8.37,"FattyAcids_totalMonounsaturated":5.64,"FattyAcids_totalPolyunsaturated":1.13,"LinoleicAcid":0.43,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.0,"VitaminA_RAE":120.1,"Retinol":111.33,"Carotene_beta":64.11,"VitaminD":16.91,"VitaminE_alphaTocopherol":0.7,"VitaminK_phylloquinone":7.01,"VitaminC_totalAscorbicAcid":3.41,"Thiamin":0.07,"Riboflavin":0.18,"Niacin":5.0,"PantothenicAcid":0.87,"VitaminB6":0.4,"Folate_total":9.35,"Folate_food":7.5,"Folate_DFE":10.64,"FolicAcid":2.46,"VitaminB12":0.21,"Choline_total":50.21,"Betaine":4.4,"LuteinZeaxanthin":52.35,"Lycopene":0.02,"Calcium_Ca":78.54,"Iron_Fe":0.65,"Magnesium_Mg":26.09,"Phosphorus_P":186.17,"Potassium_K":313.21,"Sodium_Na":331.74,"Zinc_Zn":0.73,"Copper_Cu":0.06,"Manganese_Mn":0.1,"Selenium_Se":17.09,"Tryptophan":0.22,"Threonine":0.75,"Isoleucine":0.85,"Leucine":1.44,"Lysine":1.59,"Methionine":0.44,"Cystine":0.15,"Phenylalanine":0.72,"Tyrosine":0.66,"Valine":0.93,"Arginine":1.07,"Histidine":0.62,"Alanine":0.93,"AsparticAcid":1.57,"GlutamicAcid":2.86,"Glycine":0.72,"Proline":0.79,"Serine":0.69,"omega3":0.04,"omega6":0.43,"AddedSugars":0.0,"IntrinsicSugars":0.85},"addedSugars":0.0,"intrinsicSugars":2.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.75,"yieldFactorFat":1.0,"sources":[{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":141.8},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":3.9},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"1145","name":"Butter, without salt","grams":3.5},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11956","name":"Tomatoes, sun-dried, packed in oil, drained","grams":13.8},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":59.5},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":12.5},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.2},{"ndb":"2042","name":"Spices, thyme, dried","grams":0.1},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1},{"ndb":"2044","name":"Basil, fresh","grams":2.5},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"","name":"Chicken Broth","grams":30.0}],"sections":[{"section_key":"chicken","section_label":"Chicken","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":599.78,"raw_water_grams":420.95,"raw_fat_grams":28.63,"raw_protein_grams":129.25,"raw_carb_grams":12.27,"final_grams":494.54},{"section_key":"sauce","section_label":"Sauce","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":384.4,"raw_water_grams":200.78,"raw_fat_grams":118.35,"raw_protein_grams":28.84,"raw_carb_grams":26.6,"final_grams":360.31},{"section_key":"broth","section_label":"Chicken Broth","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":120.0,"raw_water_grams":113.76,"raw_fat_grams":1.61,"raw_protein_grams":4.63,"raw_carb_grams":0.04,"final_grams":120.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken Marry Me', quantity: 'custom (g)', foodWord: 'CHICKENMARRYME', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chicken breast', quantity: '1.25 lb', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 567.0 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '2 tbsp', section: 'chicken', ndbNo: '20581', portionDesc: 'g', portionGrams: 15.6 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'unsalted butter', quantity: '1 tbsp', section: 'sauce', ndbNo: '1145', portionDesc: 'g', portionGrams: 14.2 },
+      { name: 'garlic', quantity: '4 cloves', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'Sun-dried tomatoes in oil (drained)', quantity: '1/2 cup', section: 'sauce', ndbNo: '11956', portionDesc: 'g', portionGrams: 55.0 },
+      { name: 'heavy cream', quantity: '1 cup', section: 'sauce', ndbNo: '1053', portionDesc: 'g', portionGrams: 238.0 },
+      { name: 'Parmesan cheese', quantity: '1/2 cup', section: 'sauce', ndbNo: '1033', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'dried oregano', quantity: '1/2 tsp', section: 'sauce', ndbNo: '2027', portionDesc: 'g', portionGrams: 0.7 },
+      { name: 'dried thyme', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2042', portionDesc: 'g', portionGrams: 0.35 },
+      { name: 'red pepper flakes', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'fresh basil', quantity: '1/4 cup', section: 'sauce', ndbNo: '2044', portionDesc: 'g', portionGrams: 10.0 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'Chicken Broth', quantity: '1/2 cup Chicken Broth (recipe)', section: 'broth', foodWord: 'CHICKENBROTH', portionDesc: 'g', portionGrams: 120.0, isDish: true, componentRef: 'STOCK_003' }
+    ],
+    recipeInstructions: [
+      'Season chicken breasts with salt and pepper and lightly coat in flour; shake off any excess.',
+      'Heat olive oil in a large skillet over medium-high heat. Cook chicken 4 to 5 minutes per side until golden brown and an instant-read thermometer reads 165°F. Transfer to a plate.',
+      'Reduce heat to medium. Add butter to the same skillet. Add garlic and cook 1 minute until fragrant.',
+      'Add sun-dried tomatoes and stir 1 minute.',
+      'Pour in chicken broth (see Chicken Broth recipe) and scrape up any browned bits. Simmer 2 minutes.',
+      'Add heavy cream and bring to a gentle simmer. Cook 4 to 5 minutes until sauce begins to thicken.',
+      'Stir in Parmesan, oregano, thyme, and red pepper flakes. Simmer 2 more minutes. Taste and adjust seasoning.',
+      'Return chicken to the pan and spoon sauce over the top. Garnish with fresh basil and serve immediately with pasta, rice, or crusty bread (not included).'
+    ],
+    sections: [
+      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.88 },
+      { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
