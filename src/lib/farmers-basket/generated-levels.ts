@@ -14073,5 +14073,48 @@ export const LEVELS: Level[] = [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.85 },
       { key: 'maple_syrup', label: 'Maple Syrup', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'ENTR_063',
+    name: 'Chicken Adobo',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 298,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 plate (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":335.3,"pro":47.8,"fat":12.8,"carb":3.7,"fib":0.6,"h2o":177.2,"sug":0.5,"perServing":{"cal":335.3,"pro":47.8,"fat":12.8,"carb":3.7,"fib":0.6,"h2o":177.2,"sug":0.5,"AddedSugars":0.0,"IntrinsicSugars":0.5},"micros":{"vitaminA":6.32,"vitaminC":0.33,"vitaminD":0.91,"vitaminE":0.35,"vitaminK":3.69,"vitaminB6":0.28,"vitaminB12":0.47,"thiamin":0.05,"riboflavin":0.16,"niacin":3.59,"folate":3.92,"calcium":13.01,"iron":0.91,"magnesium":21.31,"phosphorus":159.08,"potassium":204.76,"sodium":591.53,"zinc":1.3,"copper":0.07,"selenium":20.29,"cholesterol":85.96,"saturatedFat":1.19,"monoFat":2.36,"polyFat":0.87,"omega3":0.03,"omega6":0.6},"gramsPerServing":248.0,"servings":4,"per100g":{"Energy_KCal":135.22,"Water":71.44,"Protein":19.28,"TotalLipidFat":5.17,"Carbohydrate":1.5,"FiberTotalDietary":0.23,"SugarsTotal":0.21,"Cholesterol":85.96,"FattyAcids_totalSaturated":1.19,"FattyAcids_totalMonounsaturated":2.36,"FattyAcids_totalPolyunsaturated":0.87,"LinoleicAcid":0.6,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.0,"VitaminA_RAE":6.32,"Retinol":5.76,"Carotene_beta":0.73,"VitaminD":0.91,"VitaminE_alphaTocopherol":0.35,"VitaminK_phylloquinone":3.69,"VitaminC_totalAscorbicAcid":0.33,"Thiamin":0.05,"Riboflavin":0.16,"Niacin":3.59,"PantothenicAcid":0.04,"VitaminB6":0.28,"Folate_total":3.92,"Folate_food":3.92,"Folate_DFE":3.92,"FolicAcid":0.0,"VitaminB12":0.47,"Choline_total":45.6,"Betaine":9.62,"LuteinZeaxanthin":76.45,"Lycopene":0.04,"Calcium_Ca":13.01,"Iron_Fe":0.91,"Magnesium_Mg":21.31,"Phosphorus_P":159.08,"Potassium_K":204.76,"Sodium_Na":591.53,"Zinc_Zn":1.3,"Copper_Cu":0.07,"Manganese_Mn":0.14,"Selenium_Se":20.29,"Tryptophan":0.22,"Threonine":0.9,"Isoleucine":0.91,"Leucine":1.61,"Lysine":1.78,"Methionine":0.53,"Cystine":0.21,"Phenylalanine":0.78,"Tyrosine":0.71,"Valine":0.93,"Arginine":1.31,"Histidine":0.56,"Alanine":1.13,"AsparticAcid":1.87,"GlutamicAcid":3.22,"Glycine":0.87,"Proline":0.81,"Serine":0.81,"omega3":0.03,"omega6":0.6,"AddedSugars":0.0,"IntrinsicSugars":0.21},"addedSugars":0.0,"intrinsicSugars":0.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.75,"yieldFactorFat":1.0,"sources":[{"ndb":"5096","name":"Chicken, broilers or fryers, dark meat, thigh, meat only, raw","grams":226.8},{"ndb":"16124","name":"Soy sauce made from soy (tamari)","grams":27.0},{"ndb":"2053","name":"Vinegar, distilled","grams":29.6},{"ndb":"11215","name":"Garlic, raw","grams":4.5},{"ndb":"2004","name":"Spices, bay leaf","grams":0.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.6},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"14411","name":"Water, tap, drinking","grams":14.8}],"sections":[{"section_key":"chicken","section_label":"Chicken","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":1228.25,"raw_water_grams":944.89,"raw_fat_grams":51.3,"raw_protein_grams":191.23,"raw_carb_grams":14.83,"final_grams":992.03}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Chicken Adobo', quantity: 'custom (g)', foodWord: 'CHICKENADOBO', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'boneless/skinless thighs', quantity: '2 lb', section: 'chicken', ndbNo: '5096', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'tamari', quantity: '1/2 cup', section: 'chicken', ndbNo: '16124', portionDesc: 'g', portionGrams: 108.0 },
+      { name: 'white cane vinegar or rice vinegar (distilled vinegar)', quantity: '1/2 cup', section: 'chicken', ndbNo: '2053', portionDesc: 'g', portionGrams: 118.3 },
+      { name: 'garlic', quantity: '6 cloves', section: 'chicken', ndbNo: '11215', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'bay leaf', quantity: '3 leaves', section: 'chicken', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.8 },
+      { name: 'ground black pepper', quantity: '1 tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.5 },
+      { name: 'water', quantity: '1/4 cup', section: 'chicken', ndbNo: '14411', portionDesc: 'g', portionGrams: 59.15 }
+    ],
+    recipeInstructions: [
+      'Heat olive oil in a large skillet or Dutch oven over medium-high heat. Sear chicken thighs 3 to 4 minutes until golden brown on the bottom. Flip and sear the other side 2 minutes. Transfer to a plate.',
+      'Add garlic to the pan and cook 30 seconds until fragrant. Add tamari, vinegar, water, bay leaves, and black pepper. Stir to combine.',
+      'Return chicken to the pan. Bring to a boil, then reduce heat to low. Cover and simmer 25 to 30 minutes, turning chicken halfway through, until cooked through and tender.',
+      'Uncover and increase heat to medium. Simmer 5 to 10 minutes more, turning chicken occasionally, until the sauce reduces and thickens to coat the chicken.',
+      'Remove bay leaves. Serve over steamed white rice (not included).'
+    ],
+    sections: [
+      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 }
+    ],
   }
 ];
