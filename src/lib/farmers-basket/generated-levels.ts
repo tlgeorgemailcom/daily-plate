@@ -13593,5 +13593,57 @@ export const LEVELS: Level[] = [
       { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'sauce', label: 'Lemon Caper Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'ENTR_054',
+    name: 'Chicken Pot Pie',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 289,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 6)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":761.6,"pro":37.2,"fat":40.6,"carb":61.1,"fib":5.4,"h2o":280.8,"sug":4.6,"perServing":{"cal":761.6,"pro":37.2,"fat":40.6,"carb":61.1,"fib":5.4,"h2o":280.8,"sug":4.6,"AddedSugars":0.0,"IntrinsicSugars":4.6},"micros":{"vitaminA":89.14,"vitaminC":1.58,"vitaminD":0.26,"vitaminE":0.59,"vitaminK":6.4,"vitaminB6":0.23,"vitaminB12":0.08,"thiamin":0.15,"riboflavin":0.14,"niacin":3.65,"folate":34.83,"calcium":16.37,"iron":1.07,"magnesium":18.12,"phosphorus":101.93,"potassium":224.14,"sodium":218.17,"zinc":0.52,"copper":0.06,"selenium":12.73,"cholesterol":41.95,"saturatedFat":4.62,"monoFat":4.48,"polyFat":1.95,"omega3":0.02,"omega6":0.27},"gramsPerServing":424.2,"servings":6,"per100g":{"Energy_KCal":179.52,"Water":66.19,"Protein":8.76,"TotalLipidFat":9.58,"Carbohydrate":14.4,"FiberTotalDietary":1.28,"SugarsTotal":1.08,"Cholesterol":41.95,"FattyAcids_totalSaturated":4.62,"FattyAcids_totalMonounsaturated":4.48,"FattyAcids_totalPolyunsaturated":1.95,"LinoleicAcid":0.27,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":89.14,"Retinol":33.6,"Carotene_beta":528.36,"VitaminD":0.26,"VitaminE_alphaTocopherol":0.59,"VitaminK_phylloquinone":6.4,"VitaminC_totalAscorbicAcid":1.58,"Thiamin":0.15,"Riboflavin":0.14,"Niacin":3.65,"PantothenicAcid":0.54,"VitaminB6":0.23,"Folate_total":34.83,"Folate_food":13.91,"Folate_DFE":49.5,"FolicAcid":21.42,"VitaminB12":0.08,"Choline_total":27.52,"Betaine":2.4,"LuteinZeaxanthin":88.03,"Lycopene":0.07,"Calcium_Ca":16.37,"Iron_Fe":1.07,"Magnesium_Mg":18.12,"Phosphorus_P":101.93,"Potassium_K":224.14,"Sodium_Na":218.17,"Zinc_Zn":0.52,"Copper_Cu":0.06,"Manganese_Mn":0.16,"Selenium_Se":12.73,"Tryptophan":0.12,"Threonine":0.42,"Isoleucine":0.46,"Leucine":0.78,"Lysine":0.81,"Methionine":0.24,"Cystine":0.12,"Phenylalanine":0.41,"Tyrosine":0.34,"Valine":0.49,"Arginine":0.63,"Histidine":0.33,"Alanine":0.54,"AsparticAcid":0.9,"GlutamicAcid":1.77,"Glycine":0.45,"Proline":0.46,"Serine":0.39,"omega3":0.02,"omega6":0.27,"AddedSugars":0.0,"IntrinsicSugars":1.08},"addedSugars":0.0,"intrinsicSugars":4.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.9,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Pie Crust Double (Unbaked)","grams":93.3},{"ndb":"","name":"Chicken Broth","grams":80.0},{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":113.4},{"ndb":"1145","name":"Butter, without salt","grams":9.5},{"ndb":"11282","name":"Onions, raw","grams":26.7},{"ndb":"11124","name":"Carrots, raw","grams":30.5},{"ndb":"11143","name":"Celery, raw","grams":20.0},{"ndb":"11354","name":"Potatoes, white, flesh and skin, raw","grams":50.0},{"ndb":"11313","name":"Peas, green, frozen, cooked, boiled, drained, without salt","grams":13.3},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":6.9},{"ndb":"2042","name":"Spices, thyme, dried","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":1.0},{"ndb":"2030","name":"Spices, pepper, black","grams":0.2}],"sections":[{"section_key":"crust","section_label":"Crust","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":559.6,"raw_water_grams":109.07,"raw_fat_grams":171.57,"raw_protein_grams":32.9,"raw_carb_grams":238.5,"final_grams":559.6},{"section_key":"broth","section_label":"Chicken Broth","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":480.0,"raw_water_grams":455.04,"raw_fat_grams":6.43,"raw_protein_grams":18.53,"raw_carb_grams":0.14,"final_grams":480.0},{"section_key":"filling","section_label":"Filling","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":1630.35,"raw_water_grams":1245.25,"raw_fat_grams":65.77,"raw_protein_grams":171.57,"raw_carb_grams":127.99,"final_grams":1505.83}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken Pot Pie', quantity: 'custom (g)', foodWord: 'CHICKENPOTPIE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Pie Crust Double (Unbaked)', quantity: '1 recipe Pie Crust Double (Unbaked)', section: 'crust', foodWord: 'PIEDOUBLECRUSTRAW', portionDesc: 'g', portionGrams: 559.6, isDish: true, componentRef: 'CRUST_004' },
+      { name: 'Chicken Broth', quantity: '2 cups Chicken Broth (recipe)', section: 'broth', foodWord: 'CHICKENBROTH', portionDesc: 'g', portionGrams: 480.0, isDish: true, componentRef: 'STOCK_003' },
+      { name: 'chicken breast (boneless/skinless)', quantity: '1.5 lb', section: 'filling', ndbNo: '5062', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'unsalted butter', quantity: '4 tbsp', section: 'filling', ndbNo: '1145', portionDesc: 'g', portionGrams: 56.8 },
+      { name: 'onion', quantity: '1 large onion', section: 'filling', ndbNo: '11282', portionDesc: 'g', portionGrams: 160.0 },
+      { name: 'carrot', quantity: '3 medium', section: 'filling', ndbNo: '11124', portionDesc: 'g', portionGrams: 183.0 },
+      { name: 'celery', quantity: '3 stalks', section: 'filling', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'white potatoes (raw)', quantity: '2 medium', section: 'filling', ndbNo: '11354', portionDesc: 'g', portionGrams: 300.0 },
+      { name: 'frozen peas', quantity: '1 cup', section: 'filling', ndbNo: '11313', portionDesc: 'g', portionGrams: 80.0 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '1/3 cup', section: 'filling', ndbNo: '20581', portionDesc: 'g', portionGrams: 41.6 },
+      { name: 'dried thyme', quantity: '1 tsp', section: 'filling', ndbNo: '2042', portionDesc: 'g', portionGrams: 1.4 },
+      { name: 'salt', quantity: '1 tsp', section: 'filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/2 tsp', section: 'filling', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
+    ],
+    recipeInstructions: [
+      'Make or prepare the Pie Crust Double (Unbaked) (see the Pie Crust Double recipe). Make or prepare the Chicken Broth (see the Chicken Broth recipe).',
+      'Preheat the oven to 425°F. Press or roll one crust portion into a 9-inch deep-dish pie plate.',
+      'Place the chicken breast in a pot with the chicken broth. Bring to a simmer over medium heat and cook for 15 to 18 minutes until cooked through to an internal temperature of 165°F. Remove the chicken, let cool slightly, then dice or shred into bite-sized pieces. Reserve the broth.',
+      'Melt butter in a large saucepan over medium heat. Add the onion, carrot, and celery and cook for 5 to 6 minutes until softened. Add the flour and stir for 1 minute.',
+      'Gradually whisk in the reserved chicken broth until smooth. Add the potatoes, peas, thyme, salt, and pepper. Simmer for 8 to 10 minutes, stirring often, until the potatoes are just tender and the filling is thickened. Stir in the chicken.',
+      'Pour the filling into the prepared crust. Top with the second crust, fold the edges under, and crimp to seal. Cut several slits in the top to vent.',
+      'Bake for 30 to 35 minutes until the crust is deep golden brown. Let rest for 10 minutes before slicing and serving.'
+    ],
+    sections: [
+      { key: 'crust', label: 'Crust', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];

@@ -473,3 +473,6 @@ ENTR_052,stir_fry,Stir Fry,,pan grilled,0.90,1.0,1.0,1.0,1.0,,,,
 ENTR_053,chicken,Chicken,,pan grilled,0.82,1.0,1.0,1.0,1.0,,,,
 ENTR_053,broth,Chicken Broth,,raw,1.0,1.0,1.0,1.0,1.0,,,,STOCK_003
 ENTR_053,sauce,Lemon Caper Sauce,,pan grilled,0.88,1.0,1.0,1.0,1.0,,,,
+ENTR_054,crust,Crust,,raw,1.0,1.0,1.0,1.0,1.0,,,,CRUST_004
+ENTR_054,broth,Chicken Broth,,raw,1.0,1.0,1.0,1.0,1.0,,,,STOCK_003
+ENTR_054,filling,Filling,,baked,0.90,1.0,1.0,1.0,1.0,,,,
