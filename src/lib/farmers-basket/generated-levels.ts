@@ -13859,5 +13859,67 @@ export const LEVELS: Level[] = [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
       { key: 'sauce', label: 'Masala Sauce', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'ENTR_059',
+    name: 'Chicken Peanut Protein Bowls',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 294,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 bowl (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":743.1,"pro":55.4,"fat":26.2,"carb":73.2,"fib":8.0,"h2o":391.6,"sug":10.6,"perServing":{"cal":743.1,"pro":55.4,"fat":26.2,"carb":73.2,"fib":8.0,"h2o":391.6,"sug":10.6,"AddedSugars":4.3,"IntrinsicSugars":6.2},"micros":{"vitaminA":45.9,"vitaminC":6.86,"vitaminD":0.29,"vitaminE":0.68,"vitaminK":13.94,"vitaminB6":0.28,"vitaminB12":0.05,"thiamin":0.09,"riboflavin":0.1,"niacin":3.57,"folate":35.11,"calcium":20.67,"iron":0.69,"magnesium":35.1,"phosphorus":133.53,"potassium":231.96,"sodium":260.3,"zinc":0.7,"copper":0.1,"selenium":9.5,"cholesterol":22.38,"saturatedFat":0.79,"monoFat":1.96,"polyFat":0.99,"omega3":0.01,"omega6":0.55},"gramsPerServing":554.9,"servings":4,"per100g":{"Energy_KCal":133.92,"Water":70.57,"Protein":9.98,"TotalLipidFat":4.72,"Carbohydrate":13.2,"FiberTotalDietary":1.43,"SugarsTotal":1.9,"Cholesterol":22.38,"FattyAcids_totalSaturated":0.79,"FattyAcids_totalMonounsaturated":1.96,"FattyAcids_totalPolyunsaturated":0.99,"LinoleicAcid":0.55,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":45.9,"Retinol":2.21,"Carotene_beta":437.17,"VitaminD":0.29,"VitaminE_alphaTocopherol":0.68,"VitaminK_phylloquinone":13.94,"VitaminC_totalAscorbicAcid":6.86,"Thiamin":0.09,"Riboflavin":0.1,"Niacin":3.57,"PantothenicAcid":0.59,"VitaminB6":0.28,"Folate_total":35.11,"Folate_food":35.11,"Folate_DFE":35.11,"FolicAcid":0.0,"VitaminB12":0.05,"Choline_total":33.91,"Betaine":2.29,"LuteinZeaxanthin":89.87,"Lycopene":0.05,"Calcium_Ca":20.67,"Iron_Fe":0.69,"Magnesium_Mg":35.1,"Phosphorus_P":133.53,"Potassium_K":231.96,"Sodium_Na":260.3,"Zinc_Zn":0.7,"Copper_Cu":0.1,"Manganese_Mn":0.52,"Selenium_Se":9.5,"Tryptophan":0.12,"Threonine":0.41,"Isoleucine":0.44,"Leucine":0.79,"Lysine":0.81,"Methionine":0.23,"Cystine":0.09,"Phenylalanine":0.43,"Tyrosine":0.35,"Valine":0.49,"Arginine":0.72,"Histidine":0.33,"Alanine":0.55,"AsparticAcid":0.99,"GlutamicAcid":1.66,"Glycine":0.45,"Proline":0.39,"Serine":0.43,"omega3":0.01,"omega6":0.55,"AddedSugars":0.78,"IntrinsicSugars":1.13},"addedSugars":4.3,"intrinsicSugars":6.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.75,"yieldFactorFat":1.0,"sources":[{"ndb":"20036","name":"Rice, brown, long-grain, raw","grams":69.4},{"ndb":"14411","name":"Water, tap, drinking","grams":180.0},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":170.1},{"ndb":"16124","name":"Soy sauce made from soy (tamari)","grams":9.0},{"ndb":"4058","name":"Oil, sesame, salad or cooking","grams":3.4},{"ndb":"2020","name":"Spices, garlic powder","grams":0.8},{"ndb":"11216","name":"Ginger root, raw","grams":0.8},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"16098","name":"Peanut butter, smooth style, with salt","grams":16.5},{"ndb":"16124","name":"Soy sauce made from soy (tamari)","grams":9.0},{"ndb":"9160","name":"Lime juice, raw","grams":7.5},{"ndb":"19296","name":"Honey","grams":5.2},{"ndb":"4058","name":"Oil, sesame, salad or cooking","grams":1.1},{"ndb":"11216","name":"Ginger root, raw","grams":0.8},{"ndb":"11215","name":"Garlic, raw","grams":0.8},{"ndb":"14411","name":"Water, tap, drinking","grams":7.5},{"ndb":"11109","name":"Cabbage, raw","grams":22.2},{"ndb":"11124","name":"Carrots, raw","grams":27.5},{"ndb":"11211","name":"Edamame, frozen, unprepared","grams":38.8},{"ndb":"11090","name":"Broccoli, raw","grams":22.8},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":9.0},{"ndb":"12024","name":"Seeds, sesame seeds, whole, roasted and toasted","grams":2.2}],"sections":[{"section_key":"rice","section_label":"Brown Rice","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.8914861631624635,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":1000.5,"raw_water_grams":752.03,"raw_fat_grams":8.88,"raw_protein_grams":20.92,"raw_carb_grams":211.59,"final_grams":918.89},{"section_key":"chicken","section_label":"Chicken","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":749.6,"raw_water_grams":529.14,"raw_fat_grams":45.01,"raw_protein_grams":157.44,"raw_carb_grams":4.79,"final_grams":617.31},{"section_key":"peanut_sauce","section_label":"Peanut Sauce","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":193.5,"raw_water_grams":89.49,"raw_fat_grams":38.49,"raw_protein_grams":18.88,"raw_carb_grams":38.08,"final_grams":193.5},{"section_key":"toppings","section_label":"Toppings","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":490.0,"raw_water_grams":409.57,"raw_fat_grams":12.41,"raw_protein_grams":24.3,"raw_carb_grams":38.5,"final_grams":490.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken Peanut Protein Bowls', quantity: 'custom (g)', foodWord: 'CHICKENPEANUTBOWL', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'brown rice (dry)', quantity: '1.5 cups', section: 'rice', ndbNo: '20036', portionDesc: 'g', portionGrams: 277.5 },
+      { name: 'water', quantity: '3 cups', section: 'rice', ndbNo: '14411', portionDesc: 'g', portionGrams: 720.0 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'rice', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'chicken breast (boneless/skinless)', quantity: '1.5 lb', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'tamari', quantity: '2 tbsp', section: 'chicken', ndbNo: '16124', portionDesc: 'g', portionGrams: 36.0 },
+      { name: 'Sesame oil', quantity: '1 tbsp', section: 'chicken', ndbNo: '4058', portionDesc: 'g', portionGrams: 13.5 },
+      { name: 'garlic powder', quantity: '1 tsp', section: 'chicken', ndbNo: '2020', portionDesc: 'g', portionGrams: 3.1 },
+      { name: 'fresh ginger', quantity: '1/2 tsp', section: 'chicken', ndbNo: '11216', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'smooth peanut butter', quantity: '1/4 cup', section: 'peanut_sauce', ndbNo: '16098', portionDesc: 'g', portionGrams: 66.0 },
+      { name: 'tamari', quantity: '2 tbsp', section: 'peanut_sauce', ndbNo: '16124', portionDesc: 'g', portionGrams: 36.0 },
+      { name: 'lime juice', quantity: '2 tbsp', section: 'peanut_sauce', ndbNo: '9160', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'honey', quantity: '1 tbsp', section: 'peanut_sauce', ndbNo: '19296', portionDesc: 'g', portionGrams: 21.0 },
+      { name: 'Sesame oil', quantity: '1 tsp', section: 'peanut_sauce', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'fresh ginger', quantity: '1 tsp', section: 'peanut_sauce', ndbNo: '11216', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'garlic', quantity: '1 clove', section: 'peanut_sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'water', quantity: '2 tbsp', section: 'peanut_sauce', ndbNo: '14411', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'green cabbage', quantity: '1 cup shredded', section: 'toppings', ndbNo: '11109', portionDesc: 'g', portionGrams: 89.0 },
+      { name: 'carrot', quantity: '1 cup shredded', section: 'toppings', ndbNo: '11124', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'edamame (thawed)', quantity: '1 cup', section: 'toppings', ndbNo: '11211', portionDesc: 'g', portionGrams: 155.0 },
+      { name: 'broccoli', quantity: '1 cup', section: 'toppings', ndbNo: '11090', portionDesc: 'g', portionGrams: 91.0 },
+      { name: 'scallion (green onion)', quantity: '3 stalks', section: 'toppings', ndbNo: '11291', portionDesc: 'g', portionGrams: 36.0 },
+      { name: 'sesame seeds', quantity: '1 tbsp', section: 'toppings', ndbNo: '12024', portionDesc: 'g', portionGrams: 9.0 }
+    ],
+    recipeInstructions: [
+      'Cook the brown rice: combine rice, water, and salt in a medium saucepan. Bring to a boil, reduce to a low simmer, cover, and cook for 40 to 45 minutes until the water is absorbed. Remove from heat and let steam covered for 5 minutes, then fluff with a fork.',
+      'Slice the chicken breast into thin strips. In a bowl, whisk together the tamari, sesame oil, garlic powder, and ginger. Add the chicken and toss to coat. Marinate for 10 minutes.',
+      'Whisk together the peanut butter, tamari, lime juice, honey, sesame oil, ginger, garlic, and water until smooth. Add more water 1 teaspoon at a time if needed to reach a pourable consistency.',
+      'Heat olive oil in a skillet over medium-high heat. Add the chicken and cook for 3 to 4 minutes per side until cooked through to an internal temperature of 165°F. Slice or keep as strips.',
+      'Thaw the edamame by running under warm water or microwaving for 1 to 2 minutes.',
+      'Divide the cooked rice among 4 bowls. Arrange the chicken, cabbage, carrot, edamame, and broccoli over the rice. Drizzle generously with peanut sauce, then garnish with scallions and sesame seeds.'
+    ],
+    sections: [
+      { key: 'rice', label: 'Brown Rice', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'peanut_sauce', label: 'Peanut Sauce', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'toppings', label: 'Toppings', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
