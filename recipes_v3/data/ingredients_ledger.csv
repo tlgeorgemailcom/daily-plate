@@ -314,3 +314,6 @@ tomato_sauce_canned,43217,TOMATOSAUCE,"Tomato sauce, canned, no salt added",toma
 oyster_sauce,6176,OYSTERSAUCE,"Sauce, oyster, ready-to-serve",oyster sauce,tablespoon,18.0,added during ENTR_045 build
 chicken_thighs_raw,5096,CHICKENTHIGHRAW,"Chicken, broilers or fryers, dark meat, thigh, meat only, raw",chicken thigh,oz,28.35,added during ENTR_046 build
 sesame_seeds,12024,SESAME,"Seeds, sesame seeds, whole, roasted and toasted",sesame seeds,teaspoon,3.0,added during ENTR_051 build
+peas_edible_pod_raw,11300,SNOWPEAS,"Peas, edible-podded, raw",snow peas,cup,98.0,added during ENTR_052 build
+waterchestnut_canned,11590,WATERCHESTNUT,"Waterchestnuts, chinese, canned, solids and liquids",water chestnuts (canned),can (8 oz),227.0,added during ENTR_052 build
+bamboo_shoots_canned,11028,BAMBOOSHOOTS,"Bamboo shoots, canned, drained solids",bamboo shoots (canned),can (8 oz),227.0,added during ENTR_052 build
