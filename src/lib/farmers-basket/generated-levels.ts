@@ -13976,5 +13976,51 @@ export const LEVELS: Level[] = [
       { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'ENTR_061',
+    name: 'Chicken Tenders',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 296,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 plate (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":559.9,"pro":46.0,"fat":21.9,"carb":41.5,"fib":1.4,"h2o":150.4,"sug":1.8,"perServing":{"cal":559.9,"pro":46.0,"fat":21.9,"carb":41.5,"fib":1.4,"h2o":150.4,"sug":1.8,"AddedSugars":0.0,"IntrinsicSugars":1.8},"micros":{"vitaminA":25.43,"vitaminC":0.01,"vitaminD":13.7,"vitaminE":0.98,"vitaminK":3.36,"vitaminB6":0.42,"vitaminB12":0.23,"thiamin":0.12,"riboflavin":0.21,"niacin":5.53,"folate":24.57,"calcium":25.9,"iron":1.1,"magnesium":24.15,"phosphorus":181.6,"potassium":268.45,"sodium":385.71,"zinc":0.71,"copper":0.05,"selenium":22.28,"cholesterol":83.42,"saturatedFat":1.61,"monoFat":4.65,"polyFat":0.81,"omega3":0.01,"omega6":0.28},"gramsPerServing":264.4,"servings":4,"per100g":{"Energy_KCal":211.81,"Water":56.88,"Protein":17.38,"TotalLipidFat":8.27,"Carbohydrate":15.69,"FiberTotalDietary":0.54,"SugarsTotal":0.67,"Cholesterol":83.42,"FattyAcids_totalSaturated":1.61,"FattyAcids_totalMonounsaturated":4.65,"FattyAcids_totalPolyunsaturated":0.81,"LinoleicAcid":0.28,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":25.43,"Retinol":21.0,"Carotene_beta":46.81,"VitaminD":13.7,"VitaminE_alphaTocopherol":0.98,"VitaminK_phylloquinone":3.36,"VitaminC_totalAscorbicAcid":0.01,"Thiamin":0.12,"Riboflavin":0.21,"Niacin":5.53,"PantothenicAcid":0.97,"VitaminB6":0.42,"Folate_total":24.57,"Folate_food":10.92,"Folate_DFE":34.15,"FolicAcid":18.2,"VitaminB12":0.23,"Choline_total":74.43,"Betaine":4.59,"LuteinZeaxanthin":64.41,"Lycopene":0.03,"Calcium_Ca":25.9,"Iron_Fe":1.1,"Magnesium_Mg":24.15,"Phosphorus_P":181.6,"Potassium_K":268.45,"Sodium_Na":385.71,"Zinc_Zn":0.71,"Copper_Cu":0.05,"Manganese_Mn":0.13,"Selenium_Se":22.28,"Tryptophan":0.21,"Threonine":0.75,"Isoleucine":0.83,"Leucine":1.43,"Lysine":1.54,"Methionine":0.44,"Cystine":0.17,"Phenylalanine":0.73,"Tyrosine":0.63,"Valine":0.91,"Arginine":1.13,"Histidine":0.6,"Alanine":0.97,"AsparticAcid":1.58,"GlutamicAcid":2.82,"Glycine":0.73,"Proline":0.7,"Serine":0.73,"omega3":0.01,"omega6":0.28,"AddedSugars":0.0,"IntrinsicSugars":0.67},"addedSugars":0.0,"intrinsicSugars":1.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"36034","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.85,"yieldFactorFat":1.0,"sources":[{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":170.1},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":31.2},{"ndb":"20027","name":"Cornstarch","grams":16.0},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":25.0},{"ndb":"1230","name":"Milk, buttermilk, fluid, whole","grams":30.6},{"ndb":"2047","name":"Salt, table","grams":2.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.6},{"ndb":"2020","name":"Spices, garlic powder","grams":0.8},{"ndb":"2026","name":"Spices, onion powder","grams":0.1},{"ndb":"2028","name":"Spices, paprika","grams":0.6},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":13.6}],"sections":[{"section_key":"chicken","section_label":"Chicken","prep_method":"raw","cook_method":"fried","cooking_method":"fried","cooking_method_normalized":"fried","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":1163.6,"raw_water_grams":707.68,"raw_fat_grams":87.45,"raw_protein_grams":183.8,"raw_carb_grams":165.94,"final_grams":1057.45}],"cookingMethod":"fried"},
+    recipeIngredients: [
+      { name: 'Chicken Tenders', quantity: 'custom (g)', foodWord: 'CHICKENTENDERS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chicken breast', quantity: '1.5 lb', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '1 cup', section: 'chicken', ndbNo: '20581', portionDesc: 'g', portionGrams: 125.0 },
+      { name: 'cornstarch', quantity: '1/2 cup', section: 'chicken', ndbNo: '20027', portionDesc: 'g', portionGrams: 64.0 },
+      { name: 'large egg', quantity: '2 large', section: 'chicken', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'whole buttermilk', quantity: '1/2 cup', section: 'chicken', ndbNo: '1230', portionDesc: 'g', portionGrams: 122.5 },
+      { name: 'salt', quantity: '1.5 tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'ground black pepper', quantity: '1 tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'garlic powder', quantity: '1 tsp', section: 'chicken', ndbNo: '2020', portionDesc: 'g', portionGrams: 3.1 },
+      { name: 'onion powder', quantity: '1/2 tsp', section: 'chicken', ndbNo: '2026', portionDesc: 'g', portionGrams: 0.6 },
+      { name: 'paprika', quantity: '1 tsp', section: 'chicken', ndbNo: '2028', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'olive oil', quantity: '1/4 cup (absorbed into coating)', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 54.4 }
+    ],
+    recipeInstructions: [
+      'Cut chicken breast lengthwise into 1-inch wide strips. Pat dry with paper towels.',
+      'In a shallow bowl, whisk together flour, cornstarch, salt, pepper, garlic powder, onion powder, and paprika. In a second shallow bowl, whisk together eggs and buttermilk.',
+      'Working one strip at a time: dredge in the seasoned flour, shake off excess, dip in the egg-buttermilk wash, then dredge in the seasoned flour a second time, pressing firmly so the coating adheres fully.',
+      'Heat olive oil in a large skillet over medium-high heat. Working in batches, fry chicken strips 3 to 4 minutes per side until deep golden brown and cooked through (165°F internal temperature). Transfer to a wire rack; do not stack.',
+      'Serve hot with dipping sauce of your choice — honey mustard, ranch dressing, or BBQ sauce (not included).'
+    ],
+    sections: [
+      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.85 }
+    ],
   }
 ];
