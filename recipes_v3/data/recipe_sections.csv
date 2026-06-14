@@ -483,3 +483,5 @@ ENTR_056,filling,Filling,,baked,0.92,1.0,1.0,1.0,1.0,,,,
 ENTR_057,chicken,Chicken,,pan grilled,0.82,1.0,1.0,1.0,1.0,,,,
 ENTR_057,broth,Chicken Broth,,raw,1.0,1.0,1.0,1.0,1.0,,,,STOCK_003
 ENTR_057,sauce,Marsala Sauce,,pan grilled,0.88,1.0,1.0,1.0,1.0,,,,
+ENTR_058,chicken,Chicken,,pan grilled,0.75,1.0,1.0,1.0,1.0,,,,
+ENTR_058,sauce,Masala Sauce,,pan grilled,0.90,1.0,1.0,1.0,1.0,,,,

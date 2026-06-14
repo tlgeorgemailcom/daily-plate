@@ -13800,5 +13800,64 @@ export const LEVELS: Level[] = [
       { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'sauce', label: 'Marsala Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'ENTR_058',
+    name: 'Chicken Masala',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 293,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 bowl (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":340.6,"pro":41.8,"fat":12.8,"carb":14.1,"fib":3.4,"h2o":226.3,"sug":5.9,"perServing":{"cal":340.6,"pro":41.8,"fat":12.8,"carb":14.1,"fib":3.4,"h2o":226.3,"sug":5.9,"AddedSugars":0.0,"IntrinsicSugars":5.9},"micros":{"vitaminA":19.87,"vitaminC":2.89,"vitaminD":0.54,"vitaminE":0.73,"vitaminK":4.31,"vitaminB6":0.4,"vitaminB12":0.13,"thiamin":0.06,"riboflavin":0.11,"niacin":4.57,"folate":10.75,"calcium":24.58,"iron":0.81,"magnesium":25.16,"phosphorus":147.09,"potassium":318.0,"sodium":234.39,"zinc":0.57,"copper":0.05,"selenium":13.9,"cholesterol":42.13,"saturatedFat":0.79,"monoFat":2.24,"polyFat":0.43,"omega3":0.01,"omega6":0.15},"gramsPerServing":299.3,"servings":4,"per100g":{"Energy_KCal":113.8,"Water":75.61,"Protein":13.97,"TotalLipidFat":4.27,"Carbohydrate":4.72,"FiberTotalDietary":1.12,"SugarsTotal":1.99,"Cholesterol":42.13,"FattyAcids_totalSaturated":0.79,"FattyAcids_totalMonounsaturated":2.24,"FattyAcids_totalPolyunsaturated":0.43,"LinoleicAcid":0.15,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":19.87,"Retinol":4.13,"Carotene_beta":166.84,"VitaminD":0.54,"VitaminE_alphaTocopherol":0.73,"VitaminK_phylloquinone":4.31,"VitaminC_totalAscorbicAcid":2.89,"Thiamin":0.06,"Riboflavin":0.11,"Niacin":4.57,"PantothenicAcid":0.75,"VitaminB6":0.4,"Folate_total":10.75,"Folate_food":10.75,"Folate_DFE":10.75,"FolicAcid":0.0,"VitaminB12":0.13,"Choline_total":46.28,"Betaine":4.08,"LuteinZeaxanthin":44.45,"Lycopene":422.97,"Calcium_Ca":24.58,"Iron_Fe":0.81,"Magnesium_Mg":25.16,"Phosphorus_P":147.09,"Potassium_K":318.0,"Sodium_Na":234.39,"Zinc_Zn":0.57,"Copper_Cu":0.05,"Manganese_Mn":0.16,"Selenium_Se":13.9,"Tryptophan":0.16,"Threonine":0.58,"Isoleucine":0.64,"Leucine":1.08,"Lysine":1.25,"Methionine":0.33,"Cystine":0.12,"Phenylalanine":0.53,"Tyrosine":0.47,"Valine":0.67,"Arginine":0.91,"Histidine":0.48,"Alanine":0.76,"AsparticAcid":1.27,"GlutamicAcid":2.07,"Glycine":0.58,"Proline":0.42,"Serine":0.5,"omega3":0.01,"omega6":0.15,"AddedSugars":0.0,"IntrinsicSugars":1.99},"addedSugars":0.0,"intrinsicSugars":5.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.75,"yieldFactorFat":1.0,"sources":[{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":170.1},{"ndb":"1293","name":"Yogurt, Greek, plain, whole milk","grams":15.0},{"ndb":"9152","name":"Lemon juice, raw","grams":3.8},{"ndb":"2009","name":"Spices, chili powder","grams":0.7},{"ndb":"2014","name":"Spices, cumin seed","grams":0.2},{"ndb":"2013","name":"Spices, coriander seed","grams":0.2},{"ndb":"2043","name":"Spices, turmeric, ground","grams":0.4},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"11282","name":"Onions, raw","grams":80.0},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11216","name":"Ginger root, raw","grams":1.5},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":61.5},{"ndb":"2014","name":"Spices, cumin seed","grams":0.5},{"ndb":"2013","name":"Spices, coriander seed","grams":0.5},{"ndb":"2028","name":"Spices, paprika","grams":0.6},{"ndb":"2043","name":"Spices, turmeric, ground","grams":0.4},{"ndb":"2009","name":"Spices, chili powder","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"11165","name":"Coriander (cilantro) leaves, raw","grams":1.0}],"sections":[{"section_key":"chicken","section_label":"Chicken","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":764.45,"raw_water_grams":566.09,"raw_fat_grams":21.67,"raw_protein_grams":159.33,"raw_carb_grams":6.68,"final_grams":622.93},{"section_key":"sauce","section_label":"Masala Sauce","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":13,"raw_grams":627.83,"raw_water_grams":534.13,"raw_fat_grams":29.48,"raw_protein_grams":7.95,"raw_carb_grams":49.84,"final_grams":574.41}],"cookingMethod":"pan grilled"},
+    recipeIngredients: [
+      { name: 'Chicken Masala', quantity: 'custom (g)', foodWord: 'CHICKENMASALA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chicken breast (boneless/skinless)', quantity: '1.5 lb', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'Greek whole milk yogurt', quantity: '1/4 cup', section: 'chicken', ndbNo: '1293', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'lemon juice', quantity: '1 tbsp', section: 'chicken', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'chili powder', quantity: '1 tsp', section: 'chicken', ndbNo: '2009', portionDesc: 'g', portionGrams: 2.65 },
+      { name: 'ground cumin', quantity: '1/2 tsp', section: 'chicken', ndbNo: '2014', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'ground coriander', quantity: '1/2 tsp', section: 'chicken', ndbNo: '2013', portionDesc: 'g', portionGrams: 0.9 },
+      { name: 'ground turmeric', quantity: '1/2 tsp', section: 'chicken', ndbNo: '2043', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'sauce', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'onion', quantity: '2 large', section: 'sauce', ndbNo: '11282', portionDesc: 'g', portionGrams: 320.0 },
+      { name: 'garlic', quantity: '4 cloves', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'fresh ginger', quantity: '1 tbsp', section: 'sauce', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'tomato', quantity: '2 medium', section: 'sauce', ndbNo: '11529', portionDesc: 'g', portionGrams: 246.0 },
+      { name: 'ground cumin', quantity: '1 tsp', section: 'sauce', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.1 },
+      { name: 'ground coriander', quantity: '1 tsp', section: 'sauce', ndbNo: '2013', portionDesc: 'g', portionGrams: 1.8 },
+      { name: 'paprika', quantity: '1 tsp', section: 'sauce', ndbNo: '2028', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'ground turmeric', quantity: '1/2 tsp', section: 'sauce', ndbNo: '2043', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'chili powder', quantity: '1/2 tsp', section: 'sauce', ndbNo: '2009', portionDesc: 'g', portionGrams: 1.35 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'fresh cilantro', quantity: '1/4 cup', section: 'sauce', ndbNo: '11165', portionDesc: 'g', portionGrams: 4.0 }
+    ],
+    recipeInstructions: [
+      'Cut the chicken into 1-1/2-inch pieces. In a bowl, combine the yogurt, lemon juice, chili powder, cumin, coriander, turmeric, and salt. Add the chicken and toss to coat. Marinate for at least 30 minutes, or up to 4 hours in the refrigerator.',
+      'Heat 1 tablespoon olive oil in a large skillet or wok over high heat. Add the chicken in a single layer and sear for 3 to 4 minutes per side until cooked through to an internal temperature of 165°F. Transfer to a plate.',
+      'Add the remaining olive oil to the same pan over medium heat. Add the onions and cook for 8 to 10 minutes, stirring often, until deeply golden. Add the garlic and ginger and cook for 1 to 2 minutes until fragrant.',
+      'Stir in the cumin, coriander, paprika, turmeric, chili powder, salt, and black pepper. Cook for 1 minute.',
+      'Add the tomatoes and cook for 6 to 8 minutes, breaking them down with a spoon, until the sauce thickens and the oil begins to separate.',
+      'Return the chicken to the pan and stir to coat in the sauce. Simmer for 5 minutes until the chicken is heated through and the flavors meld.',
+      'Garnish with fresh cilantro and serve immediately. (Rice or naan not included.)'
+    ],
+    sections: [
+      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'sauce', label: 'Masala Sauce', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];
