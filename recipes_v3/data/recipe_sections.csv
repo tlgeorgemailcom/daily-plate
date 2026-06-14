@@ -478,3 +478,5 @@ ENTR_054,broth,Chicken Broth,,raw,1.0,1.0,1.0,1.0,1.0,,,,STOCK_003
 ENTR_054,filling,Filling,,baked,0.90,1.0,1.0,1.0,1.0,,,,
 ENTR_055,marinade,Marinade,,raw,0.0,0.0,0.0,0.0,0.0,,,,
 ENTR_055,kabobs,Kabobs,,grilled,0.75,1.0,1.0,1.0,1.0,,,,
+ENTR_056,chicken,Chicken,,pan grilled,0.75,1.0,1.0,1.0,1.0,,,,
+ENTR_056,filling,Filling,,baked,0.92,1.0,1.0,1.0,1.0,,,,

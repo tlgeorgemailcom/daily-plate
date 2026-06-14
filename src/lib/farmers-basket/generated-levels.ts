@@ -13696,5 +13696,56 @@ export const LEVELS: Level[] = [
       { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
       { key: 'kabobs', label: 'Kabobs', cookingMethod: '', yieldFactorWater: 0.75 }
     ],
+  },
+  {
+    id: 'ENTR_056',
+    name: 'Chicken King Ranch',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 291,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 6)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":509.2,"pro":39.4,"fat":23.8,"carb":34.7,"fib":6.4,"h2o":252.3,"sug":2.5,"perServing":{"cal":509.2,"pro":39.4,"fat":23.8,"carb":34.7,"fib":6.4,"h2o":252.3,"sug":2.5,"AddedSugars":0.0,"IntrinsicSugars":2.5},"micros":{"vitaminA":37.0,"vitaminC":3.22,"vitaminD":3.91,"vitaminE":0.35,"vitaminK":3.43,"vitaminB6":0.25,"vitaminB12":0.16,"thiamin":0.04,"riboflavin":0.11,"niacin":2.78,"folate":7.8,"calcium":97.74,"iron":0.52,"magnesium":25.85,"phosphorus":171.9,"potassium":195.35,"sodium":384.55,"zinc":0.86,"copper":0.06,"selenium":11.64,"cholesterol":34.98,"saturatedFat":2.68,"monoFat":1.91,"polyFat":0.91,"omega3":0.04,"omega6":0.38},"gramsPerServing":356.4,"servings":6,"per100g":{"Energy_KCal":142.86,"Water":70.8,"Protein":11.06,"TotalLipidFat":6.67,"Carbohydrate":9.74,"FiberTotalDietary":1.81,"SugarsTotal":0.69,"Cholesterol":34.98,"FattyAcids_totalSaturated":2.68,"FattyAcids_totalMonounsaturated":1.91,"FattyAcids_totalPolyunsaturated":0.91,"LinoleicAcid":0.38,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":37.0,"Retinol":32.28,"Carotene_beta":32.17,"VitaminD":3.91,"VitaminE_alphaTocopherol":0.35,"VitaminK_phylloquinone":3.43,"VitaminC_totalAscorbicAcid":3.22,"Thiamin":0.04,"Riboflavin":0.11,"Niacin":2.78,"PantothenicAcid":0.47,"VitaminB6":0.25,"Folate_total":7.8,"Folate_food":7.8,"Folate_DFE":7.8,"FolicAcid":0.0,"VitaminB12":0.16,"Choline_total":28.74,"Betaine":2.38,"LuteinZeaxanthin":14.82,"Lycopene":0.03,"Calcium_Ca":97.74,"Iron_Fe":0.52,"Magnesium_Mg":25.85,"Phosphorus_P":171.9,"Potassium_K":195.35,"Sodium_Na":384.55,"Zinc_Zn":0.86,"Copper_Cu":0.06,"Manganese_Mn":0.1,"Selenium_Se":11.64,"Tryptophan":0.15,"Threonine":0.46,"Isoleucine":0.51,"Leucine":0.9,"Lysine":0.82,"Methionine":0.26,"Cystine":0.09,"Phenylalanine":0.45,"Tyrosine":0.41,"Valine":0.56,"Arginine":0.6,"Histidine":0.35,"Alanine":0.56,"AsparticAcid":0.94,"GlutamicAcid":1.81,"Glycine":0.41,"Proline":0.57,"Serine":0.4,"omega3":0.04,"omega6":0.38,"AddedSugars":0.0,"IntrinsicSugars":0.69},"addedSugars":0.0,"intrinsicSugars":2.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.92,"yieldFactorFat":1.0,"sources":[{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":113.4},{"ndb":"2047","name":"Salt, table","grams":0.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"6043","name":"Soup, cream of mushroom, canned, condensed","grams":49.7},{"ndb":"6336","name":"CAMPBELL'S, Cream of Chicken Soup, condensed","grams":49.7},{"ndb":"11537","name":"Tomatoes, red, ripe, canned, with green chilies","grams":47.2},{"ndb":"11282","name":"Onions, raw","grams":26.7},{"ndb":"11333","name":"Peppers, sweet, green, raw","grams":19.8},{"ndb":"2009","name":"Spices, chili powder","grams":0.4},{"ndb":"2014","name":"Spices, cumin seed","grams":0.4},{"ndb":"2020","name":"Spices, garlic powder","grams":0.3},{"ndb":"18363","name":"Tortillas, ready-to-bake or -fry, corn","grams":48.0},{"ndb":"1009","name":"Cheese, cheddar","grams":37.8}],"sections":[{"section_key":"chicken","section_label":"Chicken","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":683.98,"raw_water_grams":502.89,"raw_fat_grams":17.85,"raw_protein_grams":153.15,"raw_carb_grams":0.37,"final_grams":558.25},{"section_key":"filling","section_label":"Filling","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.92,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":1679.1,"raw_water_grams":1235.76,"raw_fat_grams":124.78,"raw_protein_grams":83.28,"raw_carb_grams":207.89,"final_grams":1580.24}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken King Ranch', quantity: 'custom (g)', foodWord: 'KINGRANCH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chicken breast (boneless/skinless)', quantity: '1.5 lb', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'cream of mushroom soup (condensed)', quantity: '1 can (10.5 oz)', section: 'filling', ndbNo: '6043', portionDesc: 'g', portionGrams: 298.0 },
+      { name: 'cream of chicken soup (condensed)', quantity: '1 can (10.5 oz)', section: 'filling', ndbNo: '6336', portionDesc: 'g', portionGrams: 298.0 },
+      { name: 'diced tomatoes with green chiles (Rotel-style)', quantity: '1 can (10 oz)', section: 'filling', ndbNo: '11537', portionDesc: 'g', portionGrams: 283.0 },
+      { name: 'onion', quantity: '1 medium', section: 'filling', ndbNo: '11282', portionDesc: 'g', portionGrams: 160.0 },
+      { name: 'green bell pepper', quantity: '1 medium', section: 'filling', ndbNo: '11333', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'chili powder', quantity: '1 tsp', section: 'filling', ndbNo: '2009', portionDesc: 'g', portionGrams: 2.65 },
+      { name: 'ground cumin', quantity: '1 tsp', section: 'filling', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.1 },
+      { name: 'garlic powder', quantity: '1/2 tsp', section: 'filling', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.55 },
+      { name: 'corn tortillas', quantity: '12 each', section: 'filling', ndbNo: '18363', portionDesc: 'g', portionGrams: 288.0 },
+      { name: 'Cheddar cheese', quantity: '2 cups', section: 'filling', ndbNo: '1009', portionDesc: 'g', portionGrams: 226.8 }
+    ],
+    recipeInstructions: [
+      'Preheat the oven to 350°F. Lightly grease a 9x13-inch baking dish.',
+      'Season the chicken breasts with salt and pepper. Heat a skillet over medium-high heat and cook the chicken 4 to 5 minutes per side until cooked through to an internal temperature of 165°F. Let rest 5 minutes, then shred or chop into bite-sized pieces.',
+      'In a large bowl, stir together the condensed cream of mushroom soup, condensed cream of chicken soup, and diced tomatoes with green chiles (do not drain). Add the chili powder, cumin, and garlic powder and stir to combine.',
+      'Dice the onion and green bell pepper and stir them into the soup mixture along with the shredded chicken.',
+      'Tear or cut the corn tortillas into quarters. Layer half the tortilla pieces across the bottom of the prepared baking dish. Spoon half the chicken mixture over the tortillas and sprinkle with half the cheddar cheese.',
+      'Repeat with the remaining tortillas, chicken mixture, and cheddar cheese.',
+      'Cover with foil and bake for 30 minutes. Remove the foil and bake an additional 10 to 15 minutes until the cheese is bubbly and lightly browned. Let rest 5 minutes before serving.'
+    ],
+    sections: [
+      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.92 }
+    ],
   }
 ];
