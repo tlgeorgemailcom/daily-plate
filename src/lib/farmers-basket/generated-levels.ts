@@ -13373,5 +13373,58 @@ export const LEVELS: Level[] = [
       { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'sauce', label: 'Cream Spinach Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'ENTR_050',
+    name: 'Chicken Fried Rice',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 285,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 bowl (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":656.1,"pro":40.3,"fat":15.3,"carb":86.0,"fib":4.1,"h2o":369.7,"sug":4.7,"perServing":{"cal":656.1,"pro":40.3,"fat":15.3,"carb":86.0,"fib":4.1,"h2o":369.7,"sug":4.7,"AddedSugars":0.0,"IntrinsicSugars":4.7},"micros":{"vitaminA":54.24,"vitaminC":0.92,"vitaminD":5.84,"vitaminE":0.35,"vitaminK":6.68,"vitaminB6":0.18,"vitaminB12":0.09,"thiamin":0.1,"riboflavin":0.08,"niacin":2.36,"folate":35.83,"calcium":18.27,"iron":1.03,"magnesium":14.85,"phosphorus":90.33,"potassium":146.98,"sodium":326.5,"zinc":0.49,"copper":0.06,"selenium":9.93,"cholesterol":42.83,"saturatedFat":0.6,"monoFat":1.49,"polyFat":0.38,"omega3":0.0,"omega6":0.14},"gramsPerServing":519.0,"servings":4,"per100g":{"Energy_KCal":126.42,"Water":71.23,"Protein":7.77,"TotalLipidFat":2.95,"Carbohydrate":16.56,"FiberTotalDietary":0.79,"SugarsTotal":0.91,"Cholesterol":42.83,"FattyAcids_totalSaturated":0.6,"FattyAcids_totalMonounsaturated":1.49,"FattyAcids_totalPolyunsaturated":0.38,"LinoleicAcid":0.14,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":54.24,"Retinol":10.82,"Carotene_beta":439.22,"VitaminD":5.84,"VitaminE_alphaTocopherol":0.35,"VitaminK_phylloquinone":6.68,"VitaminC_totalAscorbicAcid":0.92,"Thiamin":0.1,"Riboflavin":0.08,"Niacin":2.36,"PantothenicAcid":0.51,"VitaminB6":0.18,"Folate_total":35.83,"Folate_food":9.99,"Folate_DFE":53.9,"FolicAcid":39.74,"VitaminB12":0.09,"Choline_total":39.06,"Betaine":1.59,"LuteinZeaxanthin":110.91,"Lycopene":0.05,"Calcium_Ca":18.27,"Iron_Fe":1.03,"Magnesium_Mg":14.85,"Phosphorus_P":90.33,"Potassium_K":146.98,"Sodium_Na":326.5,"Zinc_Zn":0.49,"Copper_Cu":0.06,"Manganese_Mn":0.24,"Selenium_Se":9.93,"Tryptophan":0.09,"Threonine":0.34,"Isoleucine":0.37,"Leucine":0.63,"Lysine":0.62,"Methionine":0.19,"Cystine":0.09,"Phenylalanine":0.34,"Tyrosine":0.27,"Valine":0.42,"Arginine":0.54,"Histidine":0.25,"Alanine":0.44,"AsparticAcid":0.74,"GlutamicAcid":1.24,"Glycine":0.33,"Proline":0.29,"Serine":0.35,"omega3":0.0,"omega6":0.14,"AddedSugars":0.0,"IntrinsicSugars":0.91},"addedSugars":0.0,"intrinsicSugars":4.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20044","name":"Rice, white, long-grain, regular, raw, enriched","grams":92.5},{"ndb":"14411","name":"Water, tap, drinking","grams":236.5},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":113.4},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":37.5},{"ndb":"11124","name":"Carrots, raw","grams":30.5},{"ndb":"11313","name":"Peas, green, frozen, cooked, boiled, drained, without salt","grams":20.0},{"ndb":"11282","name":"Onions, raw","grams":37.5},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":12.0},{"ndb":"16124","name":"Soy sauce made from soy (tamari)","grams":13.5},{"ndb":"4058","name":"Oil, sesame, salad or cooking","grams":1.1},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"rice","section_label":"Rice","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.732922629786469,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":1322.0,"raw_water_grams":988.06,"raw_fat_grams":2.44,"raw_protein_grams":26.38,"raw_carb_grams":295.81,"final_grams":1058.11},{"section_key":"stir_fry","section_label":"Stir Fry","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":12,"raw_grams":1101.88,"raw_water_grams":838.54,"raw_fat_grams":58.72,"raw_protein_grams":134.99,"raw_carb_grams":48.06,"final_grams":1018.02}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken Fried Rice', quantity: 'custom (g)', foodWord: 'CHICKENFRIEDRICE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white rice (dry)', quantity: '2 cups', section: 'rice', ndbNo: '20044', portionDesc: 'g', portionGrams: 370.0 },
+      { name: 'water', quantity: '4 cups', section: 'rice', ndbNo: '14411', portionDesc: 'g', portionGrams: 946.0 },
+      { name: 'salt', quantity: '1 tsp', section: 'rice', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'chicken breast (boneless/skinless)', quantity: '1 lb', section: 'stir_fry', ndbNo: '5062', portionDesc: 'g', portionGrams: 453.6 },
+      { name: 'large egg', quantity: '3 large', section: 'stir_fry', ndbNo: '1123', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'carrot', quantity: '2 medium', section: 'stir_fry', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'frozen peas', quantity: '1 cup', section: 'stir_fry', ndbNo: '11313', portionDesc: 'g', portionGrams: 80.0 },
+      { name: 'onion', quantity: '1 medium', section: 'stir_fry', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'garlic', quantity: '3 cloves', section: 'stir_fry', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'scallion (green onion)', quantity: '4 stalks', section: 'stir_fry', ndbNo: '11291', portionDesc: 'g', portionGrams: 48.0 },
+      { name: 'tamari', quantity: '3 tbsp', section: 'stir_fry', ndbNo: '16124', portionDesc: 'g', portionGrams: 54.0 },
+      { name: 'Sesame oil', quantity: '1 tsp', section: 'stir_fry', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'stir_fry', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'stir_fry', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'stir_fry', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Bring 4 cups of salted water to a boil, add the rice, cover and simmer for 18 minutes. Fluff with a fork and let cool. For best results, use day-old rice.',
+      'Cut the chicken breast into bite-sized pieces and season with salt and black pepper.',
+      'Heat 1 tablespoon of the olive oil in a large wok or skillet over high heat. Add the chicken and stir-fry for 5 to 6 minutes until cooked through to an internal temperature of 165°F. Transfer to a plate.',
+      'Add the remaining olive oil to the wok. Add the onion and carrot and stir-fry for 3 minutes. Add the garlic and cook for 30 seconds.',
+      'Push the vegetables to the side. Pour the eggs into the empty side of the wok and scramble, stirring until just set, then mix with the vegetables.',
+      'Add the cooked rice, peas, and chicken. Pour the tamari over the rice and toss everything together over high heat for 2 to 3 minutes.',
+      'Stir in the sesame oil and scallions. Serve immediately.'
+    ],
+    sections: [
+      { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'stir_fry', label: 'Stir Fry', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];
