@@ -13686,7 +13686,7 @@ export const LEVELS: Level[] = [
       { name: 'salt', quantity: '1/2 tsp', section: 'kabobs', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 }
     ],
     recipeInstructions: [
-      'Whisk together the olive oil, lemon juice, garlic, oregano, paprika, cumin, salt, and black pepper in a large bowl. Add the chicken cubes and toss to coat. Marinate in the refrigerator for at least 1 hour, or up to 4 hours.',
+      'Cut chicken breasts into 1-inch cubes. Whisk together the olive oil, lemon juice, garlic, oregano, paprika, cumin, salt, and black pepper in a large bowl. Add the chicken cubes and toss to coat. Marinate in the refrigerator for at least 1 hour, or up to 4 hours.',
       'Cut the zucchini, bell peppers, and onion into 1-1/2-inch pieces. Halve any large mushrooms. Season the vegetables lightly with salt.',
       'Thread the marinated chicken and vegetables alternately onto 8 metal or soaked wooden skewers (each skewer gets 2 to 3 pieces of chicken and a mix of vegetables), leaving a small gap between each piece.',
       'Heat a grill to medium-high heat (400 to 450°F). Brush the grates lightly with oil. Grill the kabobs 4 to 5 minutes per side, turning once or twice, until the chicken is cooked through to an internal temperature of 165°F and the vegetables are tender with char marks.',
