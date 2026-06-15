@@ -12390,7 +12390,7 @@ export const LEVELS: Level[] = [
       { name: 'ground beef (80/20)', quantity: '1-1/2 lb', section: 'picadillo', ndbNo: '23572', portionDesc: 'g', portionGrams: 680.4 },
       { name: 'olive oil', quantity: '1 tbsp', section: 'picadillo', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
       { name: 'onion', quantity: '1 large onion', section: 'picadillo', ndbNo: '11282', portionDesc: 'g', portionGrams: 160.0 },
-      { name: 'green bell pepper', quantity: '1 large green pepper', section: 'picadillo', ndbNo: '11333', portionDesc: 'g', portionGrams: 149.0 },
+      { name: 'green bell pepper', quantity: '1 large', section: 'picadillo', ndbNo: '11333', portionDesc: 'g', portionGrams: 149.0 },
       { name: 'garlic', quantity: '4 cloves', section: 'picadillo', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'canned crushed tomatoes', quantity: '1 can (14.5 oz)', section: 'picadillo', ndbNo: '11693', portionDesc: 'g', portionGrams: 411.0 },
       { name: 'green olives', quantity: '1/4 cup green olives', section: 'picadillo', ndbNo: '9195', portionDesc: 'g', portionGrams: 32.4 },
@@ -12405,8 +12405,8 @@ export const LEVELS: Level[] = [
     ],
     recipeInstructions: [
       'Heat the olive oil in a large skillet over medium-high heat. Add the ground beef and cook, breaking it apart, until browned and cooked through, about 7 to 8 minutes. Drain excess fat.',
-      'Add the onion and bell pepper to the skillet and cook for 4 to 5 minutes until softened. Add the garlic and cook 1 minute more.',
-      'Stir in the crushed tomatoes, green olives, capers, raisins, apple cider vinegar, cumin, oregano, and bay leaves. Season with salt and pepper.',
+      'Add the diced onion and diced bell pepper to the skillet and cook for 4 to 5 minutes until softened. Add the minced garlic and cook 1 minute more.',
+      'Stir in the crushed tomatoes, sliced green olives, capers, raisins, apple cider vinegar, cumin, oregano, and bay leaves. Season with salt and pepper.',
       'Reduce heat to medium-low and simmer uncovered for 15 to 20 minutes, stirring occasionally, until the sauce thickens and flavors meld.',
       'Remove and discard the bay leaves. Taste and adjust seasoning. Serve as a filling for tacos or empanadas, or on its own or over rice (not included).'
     ],
