@@ -14941,5 +14941,53 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'chops', label: 'Chops', cookingMethod: '', yieldFactorWater: 0.82 }
     ],
+  },
+  {
+    id: 'ENTR_079',
+    name: 'Rack of Lamb',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 314,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":460.4,"pro":30.7,"fat":34.5,"carb":6.8,"fib":0.8,"h2o":80.3,"sug":0.6,"perServing":{"cal":460.4,"pro":30.7,"fat":34.5,"carb":6.8,"fib":0.8,"h2o":80.3,"sug":0.6,"AddedSugars":0.0,"IntrinsicSugars":0.6},"micros":{"vitaminA":4.01,"vitaminC":0.54,"vitaminD":0.0,"vitaminE":1.02,"vitaminK":4.44,"vitaminB6":0.34,"vitaminB12":0.72,"thiamin":0.11,"riboflavin":0.29,"niacin":5.19,"folate":6.71,"calcium":24.39,"iron":1.86,"magnesium":33.66,"phosphorus":139.24,"potassium":201.31,"sodium":512.3,"zinc":1.89,"copper":0.11,"selenium":13.97,"cholesterol":60.87,"saturatedFat":8.17,"monoFat":10.67,"polyFat":1.51,"omega3":0.15,"omega6":0.22},"gramsPerServing":154.7,"servings":4,"per100g":{"Energy_KCal":297.51,"Water":51.87,"Protein":19.86,"TotalLipidFat":22.3,"Carbohydrate":4.37,"FiberTotalDietary":0.55,"SugarsTotal":0.41,"Cholesterol":60.87,"FattyAcids_totalSaturated":8.17,"FattyAcids_totalMonounsaturated":10.67,"FattyAcids_totalPolyunsaturated":1.51,"LinoleicAcid":0.22,"alphaLinolenicAcid":0.11,"EPA_20_5n3":0.01,"DPA_22_5n3":0.02,"DHA_22_6n3":0.01,"VitaminA_RAE":4.01,"Retinol":3.0,"Carotene_beta":3.73,"VitaminD":0.0,"VitaminE_alphaTocopherol":1.02,"VitaminK_phylloquinone":4.44,"VitaminC_totalAscorbicAcid":0.54,"Thiamin":0.11,"Riboflavin":0.29,"Niacin":5.19,"PantothenicAcid":0.47,"VitaminB6":0.34,"Folate_total":6.71,"Folate_food":3.85,"Folate_DFE":8.7,"FolicAcid":3.58,"VitaminB12":0.72,"Choline_total":2.8,"Betaine":0.05,"LuteinZeaxanthin":9.04,"Lycopene":0.03,"Calcium_Ca":24.39,"Iron_Fe":1.86,"Magnesium_Mg":33.66,"Phosphorus_P":139.24,"Potassium_K":201.31,"Sodium_Na":512.3,"Zinc_Zn":1.89,"Copper_Cu":0.11,"Manganese_Mn":0.14,"Selenium_Se":13.97,"Tryptophan":0.21,"Threonine":0.79,"Isoleucine":0.82,"Leucine":1.41,"Lysine":1.48,"Methionine":0.47,"Cystine":0.19,"Phenylalanine":0.75,"Tyrosine":0.61,"Valine":0.89,"Arginine":1.17,"Histidine":0.51,"Alanine":1.11,"AsparticAcid":1.62,"GlutamicAcid":2.77,"Glycine":1.04,"Proline":0.9,"Serine":0.71,"omega3":0.15,"omega6":0.22,"AddedSugars":0.0,"IntrinsicSugars":0.41},"addedSugars":0.0,"intrinsicSugars":0.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"17314","name":"Lamb, Australian, imported, fresh, rib chop/rack roast, frenched, bone-in, separable lean and fat, trimmed to 1/8\" fat, raw","grams":136.5},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":10.2},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"2063","name":"Rosemary, fresh","grams":0.8},{"ndb":"2049","name":"Thyme, fresh","grams":0.2},{"ndb":"18079","name":"Bread crumbs, dry, grated, plain","grams":6.8},{"ndb":"","name":"Dijon-Style Mustard","grams":7.5}],"sections":[{"section_key":"rack","section_label":"Rack of Lamb","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.87,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":634.15,"raw_water_grams":347.77,"raw_fat_grams":134.75,"raw_protein_grams":120.53,"raw_carb_grams":24.04,"final_grams":588.94},{"section_key":"dijon","section_label":"Dijon-Style Mustard","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":30.0,"raw_water_grams":18.52,"raw_fat_grams":3.28,"raw_protein_grams":2.37,"raw_carb_grams":3.0,"final_grams":30.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Rack of Lamb', quantity: 'custom (g)', foodWord: 'RACKOLAMB', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'rack of lamb', quantity: '1 rack of lamb (8 ribs)', section: 'rack', ndbNo: '17314', portionDesc: 'g', portionGrams: 546.0 },
+      { name: 'olive oil', quantity: '3 tbsp', section: 'rack', ndbNo: '4053', portionDesc: 'g', portionGrams: 40.8 },
+      { name: 'salt', quantity: '1 tsp', section: 'rack', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '½ tsp', section: 'rack', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'rack', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'fresh rosemary', quantity: '2 tbsp fresh rosemary, finely chopped', section: 'rack', ndbNo: '2063', portionDesc: 'g', portionGrams: 3.4 },
+      { name: 'fresh thyme leaves', quantity: '1 tbsp fresh thyme leaves, stripped', section: 'rack', ndbNo: '2049', portionDesc: 'g', portionGrams: 0.8 },
+      { name: 'dry bread crumbs', quantity: '¼ cup dry bread crumbs', section: 'rack', ndbNo: '18079', portionDesc: 'g', portionGrams: 27.0 },
+      { name: 'Dijon-Style Mustard (2 tbsp)', quantity: '2 tbsp Dijon-Style Mustard (recipe)', section: 'dijon', foodWord: 'DIJONTYPEMUSTARD', portionDesc: 'g', portionGrams: 30.0, isDish: true, componentRef: 'SAUCE_010' }
+    ],
+    recipeInstructions: [
+      'Make or prepare the Dijon-Style Mustard (see the Dijon-Style Mustard recipe). You will need 2 tablespoons.',
+      'Remove the rack from the refrigerator 30 minutes before cooking. Preheat the oven to 450°F (230°C).',
+      'Pat the rack dry with paper towels. Season generously on all sides with salt and black pepper.',
+      'Heat 2 tablespoons of olive oil in an oven-safe skillet over high heat. Sear the rack fat-side down for 3–4 minutes until deep golden brown, then sear the other sides briefly. Transfer to a plate.',
+      'In a small bowl, combine the remaining olive oil, garlic, rosemary, thyme, and dry bread crumbs to form the herb crust.',
+      'Brush the fat side of the rack with the Dijon-Style Mustard, then press the herb crust firmly onto the mustard-coated surface.',
+      'Return the rack crust-side up to the skillet. Roast in the oven for 12–15 minutes for medium-rare (internal temperature 130°F / 54°C), or until cooked to your preferred doneness.',
+      'Transfer to a cutting board, tent loosely with foil, and rest for 10 minutes. Slice between the bones into individual rib chops and serve 2 per person.'
+    ],
+    sections: [
+      { key: 'rack', label: 'Rack of Lamb', cookingMethod: '', yieldFactorWater: 0.87 },
+      { key: 'dijon', label: 'Dijon-Style Mustard', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
