@@ -14989,5 +14989,50 @@ export const LEVELS: Level[] = [
       { key: 'rack', label: 'Rack of Lamb', cookingMethod: '', yieldFactorWater: 0.87 },
       { key: 'dijon', label: 'Dijon-Style Mustard', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'ENTR_080',
+    name: 'Leg of Lamb',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 315,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 6)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":558.1,"pro":58.2,"fat":35.1,"carb":2.4,"fib":0.3,"h2o":136.6,"sug":0.3,"perServing":{"cal":558.1,"pro":58.2,"fat":35.1,"carb":2.4,"fib":0.3,"h2o":136.6,"sug":0.3,"AddedSugars":0.0,"IntrinsicSugars":0.3},"micros":{"vitaminA":0.58,"vitaminC":1.3,"vitaminD":0.0,"vitaminE":0.24,"vitaminK":1.25,"vitaminB6":0.17,"vitaminB12":3.03,"thiamin":0.13,"riboflavin":0.31,"niacin":7.06,"folate":22.29,"calcium":15.83,"iron":2.34,"magnesium":33.07,"phosphorus":235.45,"potassium":357.28,"sodium":322.28,"zinc":4.58,"copper":0.15,"selenium":28.5,"cholesterol":90.18,"saturatedFat":8.52,"monoFat":8.78,"polyFat":1.39,"omega3":0.0,"omega6":0.0},"gramsPerServing":236.1,"servings":6,"per100g":{"Energy_KCal":236.35,"Water":57.84,"Protein":24.64,"TotalLipidFat":14.87,"Carbohydrate":1.0,"FiberTotalDietary":0.13,"SugarsTotal":0.13,"Cholesterol":90.18,"FattyAcids_totalSaturated":8.52,"FattyAcids_totalMonounsaturated":8.78,"FattyAcids_totalPolyunsaturated":1.39,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.58,"Retinol":0.0,"Carotene_beta":1.59,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.24,"VitaminK_phylloquinone":1.25,"VitaminC_totalAscorbicAcid":1.3,"Thiamin":0.13,"Riboflavin":0.31,"Niacin":7.06,"PantothenicAcid":0.81,"VitaminB6":0.17,"Folate_total":22.29,"Folate_food":22.29,"Folate_DFE":22.29,"FolicAcid":0.0,"VitaminB12":3.03,"Choline_total":0.56,"Betaine":0.01,"LuteinZeaxanthin":0.9,"Lycopene":0.01,"Calcium_Ca":15.83,"Iron_Fe":2.34,"Magnesium_Mg":33.07,"Phosphorus_P":235.45,"Potassium_K":357.28,"Sodium_Na":322.28,"Zinc_Zn":4.58,"Copper_Cu":0.15,"Manganese_Mn":0.07,"Selenium_Se":28.5,"Tryptophan":0.28,"Threonine":1.05,"Isoleucine":1.18,"Leucine":1.9,"Lysine":2.17,"Methionine":0.62,"Cystine":0.26,"Phenylalanine":1.0,"Tyrosine":0.82,"Valine":1.32,"Arginine":1.46,"Histidine":0.77,"Alanine":1.48,"AsparticAcid":2.16,"GlutamicAcid":3.57,"Glycine":1.2,"Proline":1.02,"Serine":0.91,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.13},"addedSugars":0.0,"intrinsicSugars":0.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"17230","name":"Lamb, domestic, leg, whole (shank and sirloin), separable lean and fat, trimmed to 1/8\" fat, choice, raw","grams":313.2},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":4.5},{"ndb":"11215","name":"Garlic, raw","grams":4.0},{"ndb":"2063","name":"Rosemary, fresh","grams":0.8},{"ndb":"2049","name":"Thyme, fresh","grams":0.1},{"ndb":"9152","name":"Lemon juice, raw","grams":10.2},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.2}],"sections":[{"section_key":"lamb","section_label":"Leg of Lamb","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.62,"yield_factor_fat":0.705,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":2007.25,"raw_water_grams":1321.79,"raw_fat_grams":298.77,"raw_protein_grams":349.12,"raw_carb_grams":14.13,"final_grams":1416.83}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Leg of Lamb', quantity: 'custom (g)', foodWord: 'LEGOFLAMB', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'lamb leg', quantity: '1 whole bone-in lamb leg (~5 lbs)', section: 'lamb', ndbNo: '17230', portionDesc: 'g', portionGrams: 1879.0 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'lamb', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'garlic', quantity: '8 cloves garlic, minced', section: 'lamb', ndbNo: '11215', portionDesc: 'g', portionGrams: 24.0 },
+      { name: 'fresh rosemary', quantity: '3 tbsp fresh rosemary, finely chopped', section: 'lamb', ndbNo: '2063', portionDesc: 'g', portionGrams: 5.1 },
+      { name: 'fresh thyme leaves', quantity: '1 tbsp fresh thyme leaves', section: 'lamb', ndbNo: '2049', portionDesc: 'g', portionGrams: 0.8 },
+      { name: 'lemon juice', quantity: '¼ cup', section: 'lamb', ndbNo: '9152', portionDesc: 'g', portionGrams: 61.0 },
+      { name: 'salt', quantity: '1½ tsp', section: 'lamb', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'ground black pepper', quantity: '½ tsp', section: 'lamb', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
+    ],
+    recipeInstructions: [
+      'Remove the leg from the refrigerator 1 hour before cooking. Preheat the oven to 450°F (230°C). Set a rack in a large roasting pan.',
+      'In a small bowl, combine the garlic, rosemary, thyme, olive oil, lemon juice, salt, and black pepper to form an herb paste.',
+      'Using a small sharp knife, make 15–20 deep slits all over the leg. Rub the herb paste all over the surface, pressing it into the slits.',
+      'Place the leg fat-side up on the rack. Roast at 450°F (230°C) for 15 minutes to brown the exterior.',
+      'Reduce the oven temperature to 325°F (165°C). Continue roasting for 1½–2 hours, until a thermometer inserted into the thickest part reads 130°F (54°C) for medium-rare or 140°F (60°C) for medium.',
+      'Transfer the leg to a cutting board, tent loosely with foil, and rest for 20 minutes before carving.',
+      'Carve by making parallel slices along the length of the leg, angling the knife along the bone to free each slice. Arrange on a platter and serve.'
+    ],
+    sections: [
+      { key: 'lamb', label: 'Leg of Lamb', cookingMethod: '', yieldFactorWater: 0.62, yieldFactorFat: 0.705 }
+    ],
   }
 ];
