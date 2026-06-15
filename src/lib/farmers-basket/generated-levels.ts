@@ -11149,7 +11149,7 @@ export const LEVELS: Level[] = [
       { name: 'ground black pepper', quantity: '½ tsp', section: 'main', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
     ],
     recipeInstructions: [
-      'In a bowl or zip-lock bag, combine the orange juice, lime juice, olive oil, garlic, cumin, oregano, paprika, salt, and black pepper to make the marinade.',
+      'In a bowl or zip-lock bag, combine the orange juice, lime juice, olive oil, minced garlic, cumin, oregano, paprika, salt, and black pepper to make the marinade.',
       'Add the flank steak to the marinade, turning to coat. Cover and refrigerate for at least 2 hours, or up to 8 hours for best flavor.',
       'Remove the steak from the marinade and pat dry with paper towels. Discard the marinade.',
       'Heat a cast iron skillet or grill pan over high heat until very hot. Brush with a little oil.',
