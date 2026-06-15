@@ -11418,9 +11418,9 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Cut the chuck roast into 1½-inch cubes, trimming any large pieces of hard fat. Pat dry and season lightly with salt and pepper.',
       'Heat olive oil in a large heavy-bottomed pot or Dutch oven over medium-high heat. Working in batches, sear the beef on all sides until deeply browned, about 3 to 4 minutes per batch. Do not crowd the pan. Remove seared beef and set aside.',
-      'Reduce heat to medium. Add the onion to the pot and cook 4 to 5 minutes until softened. Add garlic and ginger and cook 1 minute more.',
+      'Reduce heat to medium. Add the diced onion to the pot and cook 4 to 5 minutes until softened. Add minced garlic and minced ginger and cook 1 minute more.',
       'Add curry powder and tomato paste. Stir and cook 1 to 2 minutes until fragrant and the paste darkens slightly.',
-      'Add the tomatoes and stir, scraping up any browned bits from the bottom of the pot. Return the beef and any accumulated juices to the pot.',
+      'Add the diced tomatoes and stir, scraping up any browned bits from the bottom of the pot. Return the beef and any accumulated juices to the pot.',
       'Pour in the coconut milk. Add salt and pepper. Stir to combine. Bring to a boil, then reduce heat to low. Cover and simmer 1 to 1½ hours, stirring occasionally, until the beef is fork-tender and the sauce has thickened.',
       'Taste and adjust seasoning. Stir in the cilantro just before serving. Serve on its own or over steamed rice (not included).'
     ],
