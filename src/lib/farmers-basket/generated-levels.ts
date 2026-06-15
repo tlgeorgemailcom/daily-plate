@@ -13530,7 +13530,7 @@ export const LEVELS: Level[] = [
       'Make or prepare the Chicken Broth (see the Chicken Broth recipe).',
       'In a small bowl, whisk together the remaining tamari, oyster sauce, remaining sesame oil, chicken broth, and 1 tablespoon cornstarch. Set the sauce aside.',
       'Heat 1 tablespoon olive oil in a large wok or skillet over high heat. Add the chicken in a single layer and stir-fry for 3 to 4 minutes until cooked through to an internal temperature of 165°F. Transfer to a plate.',
-      'Add the remaining olive oil to the wok. Add the mushrooms and stir-fry for 2 minutes. Add the garlic and ginger and cook for 30 seconds.',
+      'Add the remaining olive oil to the wok. Add the 1/4 inch thick sliced mushrooms and stir-fry for 2 minutes. Add the minced garlic and finely grated ginger and cook for 30 seconds.',
       'Add the snow peas, water chestnuts, and bamboo shoots. Stir-fry for 2 minutes until just tender-crisp.',
       'Return the chicken to the wok. Pour in the sauce and toss everything together for 1 to 2 minutes until the sauce thickens and coats everything.',
       'Stir in the scallions. Serve immediately. (Rice not included.)'
