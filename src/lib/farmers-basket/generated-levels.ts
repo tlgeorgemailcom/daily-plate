@@ -12340,8 +12340,8 @@ export const LEVELS: Level[] = [
       { name: 'cornstarch', quantity: '2 tbsp cornstarch', section: 'beef', ndbNo: '20027', portionDesc: 'g', portionGrams: 16.0 },
       { name: 'ground black pepper', quantity: '1 tsp black pepper', section: 'beef', ndbNo: '2030', portionDesc: 'g', portionGrams: 2.3 },
       { name: 'olive oil', quantity: '2 tbsp', section: 'stir_fry', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.0 },
-      { name: 'green bell pepper', quantity: '1 large green pepper', section: 'stir_fry', ndbNo: '11333', portionDesc: 'g', portionGrams: 149.0 },
-      { name: 'red bell pepper', quantity: '1 medium red pepper', section: 'stir_fry', ndbNo: '11821', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'green bell pepper', quantity: '1 large', section: 'stir_fry', ndbNo: '11333', portionDesc: 'g', portionGrams: 149.0 },
+      { name: 'red bell pepper', quantity: '1 medium', section: 'stir_fry', ndbNo: '11821', portionDesc: 'g', portionGrams: 119.0 },
       { name: 'onion', quantity: '1 large onion', section: 'stir_fry', ndbNo: '11282', portionDesc: 'g', portionGrams: 160.0 },
       { name: 'garlic', quantity: '3 cloves', section: 'stir_fry', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'fresh ginger', quantity: '1 tsp grated ginger', section: 'stir_fry', ndbNo: '11216', portionDesc: 'g', portionGrams: 2.0 },
@@ -12355,8 +12355,8 @@ export const LEVELS: Level[] = [
       'Slice the flank steak across the grain into thin strips. Toss with soy sauce, cornstarch, and black pepper. Let marinate for 15 minutes.',
       'In a small bowl, whisk together the soy sauce, beef broth, and cornstarch for the sauce. Set aside.',
       'Heat 1 tablespoon olive oil in a wok or large skillet over high heat. Add the beef in a single layer and cook for 1 to 2 minutes per side until browned. Remove and set aside.',
-      'Add the remaining olive oil to the wok. Stir-fry the onion for 2 minutes, then add the bell peppers and cook 2 minutes more until slightly tender but still crisp.',
-      'Add the garlic and ginger and stir-fry for 30 seconds. Pour in the sauce and stir until thickened, about 1 minute.',
+      'Cut onions and peppers into 1 inch squares. Add the remaining olive oil to the wok. Stir-fry the onion for 2 minutes, then add the bell peppers and cook 2 minutes more until slightly tender but still crisp.',
+      'Add the minced garlic and ginger and stir-fry for 30 seconds. Pour in the sauce and stir until thickened, about 1 minute.',
       'Return the beef to the wok and toss to coat. Drizzle with sesame oil. Serve on its own or over steamed white rice (not included).'
     ],
     sections: [
