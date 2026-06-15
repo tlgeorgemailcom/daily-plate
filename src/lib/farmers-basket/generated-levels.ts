@@ -14465,5 +14465,53 @@ export const LEVELS: Level[] = [
       { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.88 },
       { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'ENTR_070',
+    name: 'Lamb Kabobs',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 305,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 plate (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":406.7,"pro":46.4,"fat":22.4,"carb":2.8,"fib":0.8,"h2o":132.1,"sug":0.3,"perServing":{"cal":406.7,"pro":46.4,"fat":22.4,"carb":2.8,"fib":0.8,"h2o":132.1,"sug":0.3,"AddedSugars":0.0,"IntrinsicSugars":0.3},"micros":{"vitaminA":6.52,"vitaminC":0.98,"vitaminD":0.0,"vitaminE":0.8,"vitaminK":3.07,"vitaminB6":0.14,"vitaminB12":2.54,"thiamin":0.1,"riboflavin":0.24,"niacin":5.26,"folate":19.66,"calcium":18.81,"iron":2.37,"magnesium":31.76,"phosphorus":213.2,"potassium":340.01,"sodium":352.86,"zinc":4.61,"copper":0.15,"selenium":25.28,"cholesterol":71.15,"saturatedFat":2.76,"monoFat":5.97,"polyFat":0.81,"omega3":0.0,"omega6":0.0},"gramsPerServing":207.2,"servings":4,"per100g":{"Energy_KCal":196.26,"Water":63.76,"Protein":22.37,"TotalLipidFat":10.83,"Carbohydrate":1.36,"FiberTotalDietary":0.37,"SugarsTotal":0.15,"Cholesterol":71.15,"FattyAcids_totalSaturated":2.76,"FattyAcids_totalMonounsaturated":5.97,"FattyAcids_totalPolyunsaturated":0.81,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":6.52,"Retinol":0.0,"Carotene_beta":69.37,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.8,"VitaminK_phylloquinone":3.07,"VitaminC_totalAscorbicAcid":0.98,"Thiamin":0.1,"Riboflavin":0.24,"Niacin":5.26,"PantothenicAcid":0.64,"VitaminB6":0.14,"Folate_total":19.66,"Folate_food":19.66,"Folate_DFE":19.66,"FolicAcid":0.0,"VitaminB12":2.54,"Choline_total":0.78,"Betaine":0.05,"LuteinZeaxanthin":40.34,"Lycopene":0.02,"Calcium_Ca":18.81,"Iron_Fe":2.37,"Magnesium_Mg":31.76,"Phosphorus_P":213.2,"Potassium_K":340.01,"Sodium_Na":352.86,"Zinc_Zn":4.61,"Copper_Cu":0.15,"Manganese_Mn":0.12,"Selenium_Se":25.28,"Tryptophan":0.25,"Threonine":0.95,"Isoleucine":1.07,"Leucine":1.73,"Lysine":1.96,"Methionine":0.56,"Cystine":0.22,"Phenylalanine":0.9,"Tyrosine":0.74,"Valine":1.2,"Arginine":1.33,"Histidine":0.7,"Alanine":1.33,"AsparticAcid":1.96,"GlutamicAcid":3.23,"Glycine":1.08,"Proline":0.93,"Serine":0.83,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.15},"addedSugars":0.0,"intrinsicSugars":0.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.75,"yieldFactorFat":1.0,"sources":[{"ndb":"17059","name":"Lamb, domestic, cubed for stew or kabob (leg and shoulder), separable lean only, trimmed to 1/4\" fat, raw","grams":226.8},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":10.1},{"ndb":"9152","name":"Lemon juice, raw","grams":7.5},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"2014","name":"Spices, cumin seed","grams":0.5},{"ndb":"2013","name":"Spices, coriander seed","grams":0.5},{"ndb":"2028","name":"Spices, paprika","grams":0.6},{"ndb":"2043","name":"Spices, turmeric, ground","grams":0.4},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.2},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"kabob","section_label":"Kabob","prep_method":"raw","cook_method":"grilled","cooking_method":"grilled","cooking_method_normalized":"grilled","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":12,"raw_grams":1004.98,"raw_water_grams":704.65,"raw_fat_grams":89.75,"raw_protein_grams":185.4,"raw_carb_grams":11.31,"final_grams":828.81}],"cookingMethod":"grilled"},
+    recipeIngredients: [
+      { name: 'Lamb Kabobs', quantity: 'custom (g)', foodWord: 'LAMBKABOBS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'lamb (cubed for kabobs)', quantity: '2 lb', section: 'kabob', ndbNo: '17059', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'olive oil', quantity: '3 tbsp', section: 'kabob', ndbNo: '4053', portionDesc: 'g', portionGrams: 40.5 },
+      { name: 'lemon juice', quantity: '2 tbsp', section: 'kabob', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'garlic', quantity: '4 cloves', section: 'kabob', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'ground cumin', quantity: '1 tsp', section: 'kabob', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'ground coriander', quantity: '1 tsp', section: 'kabob', ndbNo: '2013', portionDesc: 'g', portionGrams: 1.8 },
+      { name: 'paprika', quantity: '1 tsp', section: 'kabob', ndbNo: '2028', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'ground turmeric', quantity: '1/2 tsp', section: 'kabob', ndbNo: '2043', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground cinnamon', quantity: '1/4 tsp', section: 'kabob', ndbNo: '2010', portionDesc: 'g', portionGrams: 0.65 },
+      { name: 'cayenne pepper', quantity: '1/4 tsp', section: 'kabob', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.45 },
+      { name: 'salt', quantity: '1 tsp', section: 'kabob', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'kabob', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'In a bowl, whisk together olive oil, lemon juice, garlic, cumin, coriander, paprika, turmeric, cinnamon, cayenne, salt, and pepper.',
+      'Add lamb cubes and toss to coat. Cover and marinate at least 1 hour, or overnight in the refrigerator.',
+      'Preheat grill to medium-high heat. Thread lamb onto metal or soaked wooden skewers.',
+      'Grill skewers 3 to 4 minutes per side, turning every few minutes, until lamb is well-seared and an instant-read thermometer reads 145°F for medium.',
+      'Transfer to a plate and rest 5 minutes before serving.',
+      'Serve with flatbread, rice, or a cucumber-yogurt sauce (not included).'
+    ],
+    sections: [
+      { key: 'kabob', label: 'Kabob', cookingMethod: '', yieldFactorWater: 0.75 }
+    ],
   }
 ];

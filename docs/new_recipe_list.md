@@ -28,6 +28,7 @@ Beef Shawarma
 Buffalo Chicken Wraps
 Chicken Caesar Wrap
 Fish Wrap
+Lamb Burger
 Mediterranean Wraps
 Pickle Cheeseburger Bites
 Pinwheel Sandwiches
@@ -127,9 +128,21 @@ Chicken Saltimbocca
 Chicken Scampi
 Chicken Tetrazzini
 Chicken Tikka Masala
+Chicken Marry Me
 
 Lamb Kabobs
+Lamb Kofta
+Lamb Greek Souvlaki
 Lamb Shepherd’s Pie
+Lamb Rogan Josh
+Lamb Tagine
+Lamb Moussaka
+Lamb Shanks
+Lamb Chops
+Rack of Lamb
+Leg of Lamb
+Lamb Biryani
+
 
 Pork Carnitas
 Pork Char Siu
