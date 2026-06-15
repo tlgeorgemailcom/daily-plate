@@ -14272,7 +14272,7 @@ export const LEVELS: Level[] = [
       'Cook pasta in a large pot of salted boiling water until al dente. Reserve 1/2 cup pasta water, then drain and set aside.',
       'Season chicken breasts with salt and pepper and lightly coat in flour; shake off any excess.',
       'Heat olive oil in a large skillet over medium-high heat. Add chicken and cook 4 to 5 minutes per side until golden brown and an instant-read thermometer reads 165°F. Transfer to a cutting board and slice into strips.',
-      'Reduce heat to medium. Add butter to the same skillet. Once melted, add garlic and red pepper flakes; cook 1 minute until fragrant.',
+      'Reduce heat to medium. Add butter to the same skillet. Once melted, add minced garlic and red pepper flakes; cook 1 minute until fragrant.',
       'Pour in white wine and scrape up any browned bits. Simmer 2 minutes.',
       'Add chicken broth (see Chicken Broth recipe) and lemon juice. Simmer 3 to 4 minutes until sauce reduces slightly.',
       'Add drained pasta and toss to coat, adding reserved pasta water a splash at a time if needed to loosen the sauce.',
