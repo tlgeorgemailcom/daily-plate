@@ -11102,7 +11102,7 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Cut the beef chuck into 2-inch cubes. Pat dry and season generously with salt and black pepper.',
       'Melt the butter in a large Dutch oven over medium-high heat. Working in batches, sear the beef on all sides until well browned. Remove and set aside.',
-      'In the same pot, add the onions and cook over medium heat, stirring often, until deeply caramelized, about 25 minutes. Add the garlic and cook 1 minute more.',
+      'In the same pot, add the thinly sliced onions and cook over medium heat, stirring often, until deeply caramelized, about 25 minutes. Add the minced garlic and cook 1 minute more.',
       'Stir in the flour and cook for 1 minute until absorbed.',
       'Pour in the beer and beef broth, scraping up any browned bits. Add the apple cider vinegar, mustard, and brown sugar. Stir to combine.',
       'Return the seared beef to the pot. Add the thyme and bay leaves. The liquid should nearly cover the meat.',
