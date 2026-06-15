@@ -12713,8 +12713,8 @@ export const LEVELS: Level[] = [
       'Combine the ground beef, bread crumbs, egg, Worcestershire sauce, mustard, garlic powder, onion powder, salt, and pepper in a large bowl. Mix until just combined — do not overwork.',
       'Divide the mixture into 4 equal oval patties about 3/4-inch thick.',
       'Heat a large skillet over medium-high heat. Cook the patties for 4 to 5 minutes per side until browned and cooked through. Transfer to a plate and tent with foil.',
-      'Reduce heat to medium. Add butter to the same skillet. Add mushrooms and onion and cook, stirring occasionally, for 6 to 8 minutes until softened and browned.',
-      'Add garlic and cook 1 minute. Sprinkle flour over the vegetables and stir to coat. Cook 1 to 2 minutes.',
+      'Reduce heat to medium. Add butter to the same skillet. Add 1/4 inch sliced mushrooms and finely chopped onion and cook, stirring occasionally, for 6 to 8 minutes until softened and browned.',
+      'Add minced garlic and cook 1 minute. Sprinkle flour over the vegetables and stir to coat. Cook 1 to 2 minutes.',
       'Gradually whisk in the beef broth and Worcestershire sauce, scraping up any browned bits. Add thyme, salt, and pepper.',
       'Simmer, stirring occasionally, for 5 to 7 minutes until the gravy is thickened.',
       'Return the patties to the skillet and spoon gravy over them. Simmer 3 to 4 minutes until heated through. Serve immediately.'
