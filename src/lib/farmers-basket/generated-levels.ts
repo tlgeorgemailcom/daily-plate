@@ -10121,8 +10121,8 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Cook pasta in salted boiling water until al dente (about 9–11 minutes). Drain, rinse under cold water, and set aside.',
       'Season chicken with salt and pepper. Cook in a lightly oiled skillet over medium-high heat, 6–7 minutes per side, until an instant-read thermometer reads 165°F (74°C). Let rest 5 minutes, then slice or dice.',
-      'Whisk together olive oil, lemon juice, garlic, oregano, basil, salt, and pepper in a large bowl to make the vinaigrette.',
-      'Add pasta, chicken, artichoke hearts, tomato, olives, and parmesan. Toss to coat. Refrigerate at least 30 minutes before serving. Serve cold or at room temperature.'
+      'Whisk together olive oil, lemon juice, minced garlic, oregano, basil, salt, and pepper in a large bowl to make the vinaigrette.',
+      'Add pasta, chicken, chopped artichoke hearts, tomato, sliced olives, and parmesan. Toss to coat. Refrigerate at least 30 minutes before serving. Serve cold or at room temperature.'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
