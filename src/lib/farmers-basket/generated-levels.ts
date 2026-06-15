@@ -14513,5 +14513,53 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'kabob', label: 'Kabob', cookingMethod: '', yieldFactorWater: 0.75 }
     ],
+  },
+  {
+    id: 'ENTR_071',
+    name: 'Lamb Kofta',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 306,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 plate (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":662.1,"pro":38.4,"fat":53.5,"carb":4.7,"fib":1.3,"h2o":124.9,"sug":1.2,"perServing":{"cal":662.1,"pro":38.4,"fat":53.5,"carb":4.7,"fib":1.3,"h2o":124.9,"sug":1.2,"AddedSugars":0.0,"IntrinsicSugars":1.2},"micros":{"vitaminA":8.69,"vitaminC":1.86,"vitaminD":1.91,"vitaminE":0.18,"vitaminK":28.03,"vitaminB6":0.11,"vitaminB12":1.97,"thiamin":0.09,"riboflavin":0.2,"niacin":4.86,"folate":18.32,"calcium":31.69,"iron":2.13,"magnesium":26.4,"phosphorus":167.53,"potassium":271.37,"sodium":448.75,"zinc":3.52,"copper":0.12,"selenium":19.2,"cholesterol":73.42,"saturatedFat":10.27,"monoFat":9.74,"polyFat":1.42,"omega3":0.0,"omega6":0.0},"gramsPerServing":225.5,"servings":4,"per100g":{"Energy_KCal":293.63,"Water":55.41,"Protein":17.05,"TotalLipidFat":23.71,"Carbohydrate":2.1,"FiberTotalDietary":0.57,"SugarsTotal":0.56,"Cholesterol":73.42,"FattyAcids_totalSaturated":10.27,"FattyAcids_totalMonounsaturated":9.74,"FattyAcids_totalPolyunsaturated":1.42,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":8.69,"Retinol":0.0,"Carotene_beta":78.34,"VitaminD":1.91,"VitaminE_alphaTocopherol":0.18,"VitaminK_phylloquinone":28.03,"VitaminC_totalAscorbicAcid":1.86,"Thiamin":0.09,"Riboflavin":0.2,"Niacin":4.86,"PantothenicAcid":0.55,"VitaminB6":0.11,"Folate_total":18.32,"Folate_food":18.32,"Folate_DFE":18.32,"FolicAcid":0.0,"VitaminB12":1.97,"Choline_total":63.91,"Betaine":10.28,"LuteinZeaxanthin":66.06,"Lycopene":0.02,"Calcium_Ca":31.69,"Iron_Fe":2.13,"Magnesium_Mg":26.4,"Phosphorus_P":167.53,"Potassium_K":271.37,"Sodium_Na":448.75,"Zinc_Zn":3.52,"Copper_Cu":0.12,"Manganese_Mn":0.1,"Selenium_Se":19.2,"Tryptophan":0.19,"Threonine":0.71,"Isoleucine":0.8,"Leucine":1.3,"Lysine":1.48,"Methionine":0.42,"Cystine":0.16,"Phenylalanine":0.68,"Tyrosine":0.56,"Valine":0.91,"Arginine":1.01,"Histidine":0.53,"Alanine":1.01,"AsparticAcid":1.49,"GlutamicAcid":2.46,"Glycine":0.81,"Proline":0.7,"Serine":0.62,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.56},"addedSugars":0.0,"intrinsicSugars":1.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.75,"yieldFactorFat":1.0,"sources":[{"ndb":"17224","name":"Lamb, ground, raw","grams":226.8},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"11297","name":"Parsley, fresh","grams":3.8},{"ndb":"2065","name":"Spearmint, fresh","grams":2.9},{"ndb":"2014","name":"Spices, cumin seed","grams":0.8},{"ndb":"2013","name":"Spices, coriander seed","grams":0.5},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.2},{"ndb":"2001","name":"Spices, allspice, ground","grams":0.1},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":2.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"kofta","section_label":"Kofta","prep_method":"raw","cook_method":"grilled","cooking_method":"grilled","cooking_method_normalized":"grilled","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":12,"raw_grams":1068.55,"raw_water_grams":666.35,"raw_fat_grams":213.87,"raw_protein_grams":153.76,"raw_carb_grams":18.96,"final_grams":901.96}],"cookingMethod":"grilled"},
+    recipeIngredients: [
+      { name: 'Lamb Kofta', quantity: 'custom (g)', foodWord: 'LAMBKOFTA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'ground lamb', quantity: '2 lb', section: 'kofta', ndbNo: '17224', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'onion', quantity: '1 medium', section: 'kofta', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'garlic', quantity: '3 cloves', section: 'kofta', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'fresh parsley', quantity: '1/4 cup', section: 'kofta', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'fresh mint', quantity: '2 tbsp', section: 'kofta', ndbNo: '2065', portionDesc: 'g', portionGrams: 11.4 },
+      { name: 'ground cumin', quantity: '1 1/2 tsp', section: 'kofta', ndbNo: '2014', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground coriander', quantity: '1 tsp', section: 'kofta', ndbNo: '2013', portionDesc: 'g', portionGrams: 1.8 },
+      { name: 'ground cinnamon', quantity: '1/4 tsp', section: 'kofta', ndbNo: '2010', portionDesc: 'g', portionGrams: 0.65 },
+      { name: 'allspice', quantity: '1/8 tsp', section: 'kofta', ndbNo: '2001', portionDesc: 'g', portionGrams: 0.475 },
+      { name: 'cayenne pepper', quantity: '1/4 tsp', section: 'kofta', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.45 },
+      { name: 'salt', quantity: '1 1/2 tsp', section: 'kofta', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'kofta', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'In a large bowl combine ground lamb, grated onion, garlic, parsley, mint, cumin, coriander, cinnamon, allspice, cayenne, salt, and pepper. Mix until just combined; do not overmix.',
+      'Divide the mixture into 8 equal portions and shape each firmly around a flat metal skewer into a log about 6 inches long.',
+      'Refrigerate the skewers at least 30 minutes (up to 4 hours) to firm up.',
+      'Preheat grill to medium-high heat. Grill kofta 3 to 4 minutes per side (12 to 14 minutes total), turning carefully, until cooked through and an instant-read thermometer reads 160°F.',
+      'Transfer to a platter and rest 3 minutes before serving.',
+      'Serve with flatbread, tzatziki, or a fresh herb salad (not included).'
+    ],
+    sections: [
+      { key: 'kofta', label: 'Kofta', cookingMethod: '', yieldFactorWater: 0.75 }
+    ],
   }
 ];
