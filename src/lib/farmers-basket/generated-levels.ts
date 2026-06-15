@@ -13417,7 +13417,7 @@ export const LEVELS: Level[] = [
       'Bring 4 cups of salted water to a boil, add the rice, cover and simmer for 18 minutes. Fluff with a fork and let cool. For best results, use day-old rice.',
       'Cut the chicken breast into bite-sized pieces and season with salt and black pepper.',
       'Heat 1 tablespoon of the olive oil in a large wok or skillet over high heat. Add the chicken and stir-fry for 5 to 6 minutes until cooked through to an internal temperature of 165°F. Transfer to a plate.',
-      'Add the remaining olive oil to the wok. Add the onion and carrot and stir-fry for 3 minutes. Add the garlic and cook for 30 seconds.',
+      'Add the remaining olive oil to the wok. Add the finely chopped onion and chopped carrot and stir-fry for 3 minutes. Add the minced garlic and cook for 30 seconds.',
       'Push the vegetables to the side. Pour the eggs into the empty side of the wok and scramble, stirring until just set, then mix with the vegetables.',
       'Add the cooked rice, peas, and chicken. Pour the tamari over the rice and toss everything together over high heat for 2 to 3 minutes.',
       'Stir in the sesame oil and scallions. Serve immediately.'
