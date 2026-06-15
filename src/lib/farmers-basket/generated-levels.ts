@@ -7480,7 +7480,7 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Place the beef shanks in a large stockpot. Pour the apple cider vinegar over the bones and let sit for 30 minutes before adding the water. The vinegar helps draw minerals from the bones.',
       'Add the water and bring to a boil over high heat. Skim any gray foam and impurities that rise to the surface during the first 20 to 30 minutes.',
-      'Reduce heat to a bare simmer. Add the onion, carrot, celery, garlic, parsley, thyme, bay leaves, black pepper, and salt.',
+      'Reduce heat to a bare simmer. Add the quartered onion, carrot and celery chunks, halved garlic clove, parsley, thyme, bay leaves, black pepper, and salt.',
       'Simmer uncovered for 12 to 24 hours, skimming any fat and foam occasionally. The longer the simmer, the richer and more gelatinous the broth. Do not let it boil hard. Do not stir — stirring emulsifies fats and impurities back into the liquid.',
       'Add water as needed to keep the bones mostly submerged during the simmer.',
       'Strain the broth through a fine-mesh strainer or cheesecloth-lined colander. Discard the solids.',
