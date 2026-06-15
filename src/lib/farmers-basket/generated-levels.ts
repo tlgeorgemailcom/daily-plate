@@ -11473,9 +11473,9 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Season the flank steak generously with salt and pepper on both sides.',
       'Heat olive oil in a large Dutch oven over medium-high heat. Sear the flank steak 3 to 4 minutes per side until deeply browned. Remove and set aside.',
-      'Reduce heat to medium. Add the onion and both bell peppers to the pot. Cook 5 to 6 minutes, stirring occasionally, until softened. Add garlic and cook 1 minute more.',
+      'Reduce heat to medium. Add the thinly sliced onion and lengthwise sliced bell peppers to the pot. Cook 5 to 6 minutes, stirring occasionally, until softened. Add minced garlic and cook 1 minute more.',
       'Add cumin and oregano. Stir and cook 30 seconds until fragrant. Add tomato paste and cook 1 minute until darkened.',
-      'Add the tomatoes, white wine, and beef broth. Stir, scraping up any browned bits from the bottom. Return the steak to the pot. Tuck in the bay leaves. The liquid should come about halfway up the steak.',
+      'Add the diced tomatoes, white wine, and beef broth. Stir, scraping up any browned bits from the bottom. Return the steak to the pot. Tuck in the bay leaves. The liquid should come about halfway up the steak.',
       'Bring to a boil, then reduce heat to low. Cover and simmer 1½ to 2 hours, turning the steak once halfway through, until the beef is completely tender and shreds easily.',
       'Remove the steak to a cutting board. Discard the bay leaves. Using two forks, shred the meat into long, thin strips along the grain.',
       'Return the shredded beef to the pot. Add the green olives and capers. Stir to combine and simmer uncovered 10 minutes to meld the flavors. Taste and adjust seasoning.',
