@@ -10883,7 +10883,7 @@ export const LEVELS: Level[] = [
       'Slice the beef thin against the grain into bite-sized strips.',
       'In a small bowl, whisk together the soy sauce, apple cider vinegar, sugar, cornstarch, and water until smooth. Set the sauce aside.',
       'Heat a large wok or skillet over high heat until very hot. Add 3 tablespoons olive oil. Add the beef in a single layer and cook undisturbed for 1 minute, then stir-fry 1-2 minutes until just browned. Transfer to a plate.',
-      'Add the remaining 2½ tablespoons olive oil to the wok. Add the broccoli and garlic; stir-fry 3-4 minutes until the broccoli is bright green and tender-crisp.',
+      'Add the remaining 2½ tablespoons olive oil to the wok. Add the broccoli and minced garlic; stir-fry 3-4 minutes until the broccoli is bright green and tender-crisp.',
       'Return the beef to the wok. Pour the sauce over everything and toss to coat. Cook 1-2 minutes, stirring, until the sauce thickens and coats the beef and broccoli.',
       'Serve immediately on its own or over steamed white rice (not included).'
     ],
