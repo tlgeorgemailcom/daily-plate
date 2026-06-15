@@ -11577,7 +11577,7 @@ export const LEVELS: Level[] = [
       'Remove the stems and slice the toasted chiles open. Shake out and discard as many seeds as possible.',
       'Bring to a gentle simmer, then reduce heat to low. Cook uncovered for 20 to 25 minutes, stirring occasionally, until the sauce thickens and the flavors meld.',
       'Place the cleaned chiles in a bowl. Pour 2 cups of boiling water over them and press a small plate on top to keep them submerged. Soak for 20 to 30 minutes until soft and pliable. Drain and reserve the soaking liquid.',
-      'Heat the olive oil in a skillet over medium heat. Add the chopped onion and cook 4 to 5 minutes until softened. Add the garlic and cook 1 more minute. Add the Roma tomatoes and cook 2 minutes, pressing to soften.',
+      'Heat the olive oil in a skillet over medium heat. Add the chopped onion and cook 4 to 5 minutes until softened. Add the minced garlic and cook 1 more minute. Add the quartered Roma tomatoes and cook 2 minutes, pressing to soften.',
       'Transfer the soaked chiles, cooked onion mixture, cumin, oregano, salt, and 2 cups water to a blender. Blend on high until completely smooth, about 1 minute.',
       'Strain the blended sauce through a fine-mesh sieve into the skillet, pressing with a spatula to push through as much pulp as possible. Discard the remaining skins and seeds in the strainer.',
       'Bring the strained sauce to a simmer over medium heat. Cook uncovered, stirring occasionally, for 10 to 15 minutes until the sauce thickens to the consistency of heavy cream. Taste and adjust salt.',
