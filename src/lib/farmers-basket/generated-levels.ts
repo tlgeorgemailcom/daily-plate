@@ -14551,7 +14551,7 @@ export const LEVELS: Level[] = [
       { name: 'ground black pepper', quantity: '1/4 tsp', section: 'kofta', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
     ],
     recipeInstructions: [
-      'In a large bowl combine ground lamb, grated onion, garlic, parsley, mint, cumin, coriander, cinnamon, allspice, cayenne, salt, and pepper. Mix until just combined; do not overmix.',
+      'In a large bowl combine ground lamb, grated onion, garlic, minced parsley, minced mint, cumin, coriander, cinnamon, allspice, cayenne, salt, and pepper. Mix until just combined; do not overmix.',
       'Divide the mixture into 8 equal portions and shape each firmly around a flat metal skewer into a log about 6 inches long.',
       'Refrigerate the skewers at least 30 minutes (up to 4 hours) to firm up.',
       'Preheat grill to medium-high heat. Grill kofta 3 to 4 minutes per side (12 to 14 minutes total), turning carefully, until cooked through and an instant-read thermometer reads 160°F.',
