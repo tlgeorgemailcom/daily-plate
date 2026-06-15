@@ -13469,11 +13469,11 @@ export const LEVELS: Level[] = [
       { name: 'sesame seeds', quantity: '1 tsp', section: 'sauce', ndbNo: '12024', portionDesc: 'g', portionGrams: 3.0 }
     ],
     recipeInstructions: [
-      'Cut the chicken thighs into bite-sized pieces. In a bowl, combine the tamari, rice wine vinegar, and half the garlic. Add the chicken, toss to coat, and marinate for at least 15 minutes.',
+      'Cut the chicken thighs into bite-sized pieces. In a bowl, combine the tamari, rice wine vinegar, and half the minced garlic. Add the chicken, toss to coat, and marinate for at least 15 minutes.',
       'Make or prepare the Chicken Broth (see the Chicken Broth recipe).',
       'Remove the chicken from the marinade (reserve the marinade). Pat the chicken dry and toss with the cornstarch, salt, and black pepper until evenly coated.',
       'Heat the olive oil in a large wok or skillet over high heat. Fry the chicken pieces in batches for 4 to 5 minutes per batch until golden brown and cooked through to an internal temperature of 165°F. Transfer to a plate.',
-      'Drain excess oil from the wok, leaving about 1 tablespoon. Add the remaining garlic and the ginger and stir-fry for 30 seconds until fragrant.',
+      'Drain excess oil from the wok, leaving about 1 tablespoon. Add the remaining garlic and the finely grated ginger and stir-fry for 30 seconds until fragrant.',
       'Add the hoisin sauce, brown sugar, sesame oil, red pepper flakes, reserved marinade, and chicken broth. Stir to combine. Mix the cornstarch with 2 tablespoons cold water and pour into the sauce, stirring until the sauce thickens, about 1 to 2 minutes.',
       'Return the chicken to the wok and toss to coat in the sauce. Cook for 1 minute until heated through.',
       'Garnish with scallions and sesame seeds. Serve immediately. (Rice not included.)'
