@@ -13850,10 +13850,10 @@ export const LEVELS: Level[] = [
       'Cut the chicken into 1-1/2-inch pieces. In a bowl, combine the yogurt, lemon juice, chili powder, cumin, coriander, turmeric, and salt. Add the chicken and toss to coat. Marinate for at least 30 minutes, or up to 4 hours in the refrigerator.',
       'Heat 1 tablespoon olive oil in a large skillet or wok over high heat. Add the chicken in a single layer and sear for 3 to 4 minutes per side until cooked through to an internal temperature of 165°F. Transfer to a plate.',
       'Add the remaining olive oil to the same pan over medium heat. Add the onions and cook for 8 to 10 minutes, stirring often, until deeply golden. Add the garlic and ginger and cook for 1 to 2 minutes until fragrant.',
-      'Stir in the cumin, coriander, paprika, turmeric, chili powder, salt, and black pepper. Cook for 1 minute.',
+      'Add the 1/4 inch thick sliced mushrooms to the same skillet and cook over medium-high heat for 4 to 5 minutes until browned. Add the chopped shallots and cook for 1 minute more.',
       'Add the tomatoes and cook for 6 to 8 minutes, breaking them down with a spoon, until the sauce thickens and the oil begins to separate.',
       'Return the chicken to the pan and stir to coat in the sauce. Simmer for 5 minutes until the chicken is heated through and the flavors meld.',
-      'Garnish with fresh cilantro and serve immediately. (Rice or naan not included.)'
+      'Return the chicken to the pan and spoon the sauce over to coat. Garnish with chopped fresh parsley and serve immediately. (Pasta or rice not included.)'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
