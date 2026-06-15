@@ -519,3 +519,5 @@ ENTR_069,broth,Chicken Broth,,raw,1.0,1.0,1.0,1.0,1.0,,,,STOCK_003
 ENTR_070,kabob,Kabob,,grilled,0.75,1.0,1.0,1.0,1.0,,,,
 ENTR_071,kofta,Kofta,,grilled,0.75,1.0,1.0,1.0,1.0,,,,
 ENTR_072,souvlaki,Souvlaki,,grilled,0.75,1.0,1.0,1.0,1.0,,,,
+ENTR_073,filling,Filling,,pan grilled,0.85,1.0,1.0,1.0,1.0,,,,
+ENTR_073,topping,Mashed potato topping,,boiled,0.96,1.0,1.0,1.0,1.0,,,,

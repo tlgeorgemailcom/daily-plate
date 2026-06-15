@@ -14605,5 +14605,67 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'souvlaki', label: 'Souvlaki', cookingMethod: '', yieldFactorWater: 0.75 }
     ],
+  },
+  {
+    id: 'ENTR_073',
+    name: 'Lamb Shepherd\'s Pie',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 308,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 6)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":602.3,"pro":25.6,"fat":38.3,"carb":39.4,"fib":4.2,"h2o":285.5,"sug":5.7,"perServing":{"cal":602.3,"pro":25.6,"fat":38.3,"carb":39.4,"fib":4.2,"h2o":285.5,"sug":5.7,"AddedSugars":0.0,"IntrinsicSugars":5.7},"micros":{"vitaminA":58.4,"vitaminC":2.06,"vitaminD":4.75,"vitaminE":0.26,"vitaminK":4.51,"vitaminB6":0.13,"vitaminB12":0.61,"thiamin":0.06,"riboflavin":0.09,"niacin":1.86,"folate":13.6,"calcium":24.06,"iron":0.98,"magnesium":17.37,"phosphorus":81.26,"potassium":265.04,"sodium":215.68,"zinc":1.18,"copper":0.08,"selenium":6.67,"cholesterol":34.49,"saturatedFat":4.42,"monoFat":3.89,"polyFat":0.57,"omega3":0.01,"omega6":0.05},"gramsPerServing":394.0,"servings":6,"per100g":{"Energy_KCal":152.85,"Water":72.46,"Protein":6.49,"TotalLipidFat":9.73,"Carbohydrate":10.0,"FiberTotalDietary":1.07,"SugarsTotal":1.44,"Cholesterol":34.49,"FattyAcids_totalSaturated":4.42,"FattyAcids_totalMonounsaturated":3.89,"FattyAcids_totalPolyunsaturated":0.57,"LinoleicAcid":0.05,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":58.4,"Retinol":19.0,"Carotene_beta":399.52,"VitaminD":4.75,"VitaminE_alphaTocopherol":0.26,"VitaminK_phylloquinone":4.51,"VitaminC_totalAscorbicAcid":2.06,"Thiamin":0.06,"Riboflavin":0.09,"Niacin":1.86,"PantothenicAcid":0.3,"VitaminB6":0.13,"Folate_total":13.6,"Folate_food":12.84,"Folate_DFE":14.13,"FolicAcid":1.02,"VitaminB12":0.61,"Choline_total":30.72,"Betaine":3.09,"LuteinZeaxanthin":75.46,"Lycopene":311.51,"Calcium_Ca":24.06,"Iron_Fe":0.98,"Magnesium_Mg":17.37,"Phosphorus_P":81.26,"Potassium_K":265.04,"Sodium_Na":215.68,"Zinc_Zn":1.18,"Copper_Cu":0.08,"Manganese_Mn":0.11,"Selenium_Se":6.67,"Tryptophan":0.06,"Threonine":0.24,"Isoleucine":0.26,"Leucine":0.42,"Lysine":0.47,"Methionine":0.13,"Cystine":0.06,"Phenylalanine":0.22,"Tyrosine":0.18,"Valine":0.29,"Arginine":0.33,"Histidine":0.17,"Alanine":0.32,"AsparticAcid":0.49,"GlutamicAcid":0.86,"Glycine":0.25,"Proline":0.24,"Serine":0.21,"omega3":0.01,"omega6":0.05,"AddedSugars":0.0,"IntrinsicSugars":1.44},"addedSugars":0.0,"intrinsicSugars":5.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":2.3},{"ndb":"17224","name":"Lamb, ground, raw","grams":113.4},{"ndb":"11282","name":"Onions, raw","grams":25.0},{"ndb":"11124","name":"Carrots, raw","grams":20.3},{"ndb":"11143","name":"Celery, raw","grams":12.5},{"ndb":"11215","name":"Garlic, raw","grams":2.0},{"ndb":"11546","name":"Tomato products, canned, paste, without salt added","grams":5.3},{"ndb":"6971","name":"Sauce, worcestershire","grams":2.5},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":2.6},{"ndb":"6008","name":"Soup, beef broth or bouillon canned, ready-to-serve","grams":40.8},{"ndb":"2049","name":"Thyme, fresh","grams":0.4},{"ndb":"2063","name":"Rosemary, fresh","grams":0.3},{"ndb":"11313","name":"Peas, green, frozen, cooked, boiled, drained, without salt","grams":13.3},{"ndb":"2047","name":"Salt, table","grams":1.0},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"11353","name":"Potatoes, russet, flesh and skin, raw","grams":151.2},{"ndb":"1145","name":"Butter, without salt","grams":9.5},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":20.3},{"ndb":"1125","name":"Egg, yolk, raw, fresh","grams":2.8},{"ndb":"2047","name":"Salt, table","grams":0.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"filling","section_label":"Filling","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":15,"raw_grams":1451.28,"raw_water_grams":1067.19,"raw_fat_grams":174.73,"raw_protein_grams":126.9,"raw_carb_grams":65.58,"final_grams":1291.2},{"section_key":"topping","section_label":"Mashed potato topping","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.96,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":1106.58,"raw_water_grams":839.56,"raw_fat_grams":55.29,"raw_protein_grams":26.5,"raw_carb_grams":170.8,"final_grams":1072.99}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Lamb Shepherd\'s Pie', quantity: 'custom (g)', foodWord: 'SHEPHERDSPIE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'filling', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'ground lamb', quantity: '1.5 lb', section: 'filling', ndbNo: '17224', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'onion', quantity: '1 medium, finely diced', section: 'filling', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'carrot', quantity: '2 medium, peeled and finely diced', section: 'filling', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'celery stalk', quantity: '3 stalks, finely diced', section: 'filling', ndbNo: '11143', portionDesc: 'g', portionGrams: 75.0 },
+      { name: 'garlic', quantity: '4 cloves, minced', section: 'filling', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'tomato paste', quantity: '2 tbsp', section: 'filling', ndbNo: '11546', portionDesc: 'g', portionGrams: 32.0 },
+      { name: 'Worcestershire sauce', quantity: '1 tbsp', section: 'filling', ndbNo: '6971', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '2 tbsp', section: 'filling', ndbNo: '20581', portionDesc: 'g', portionGrams: 15.6 },
+      { name: 'beef broth', quantity: '1 cup', section: 'filling', ndbNo: '6008', portionDesc: 'g', portionGrams: 245.0 },
+      { name: 'fresh thyme leaves', quantity: '1 tsp, leaves stripped', section: 'filling', ndbNo: '2049', portionDesc: 'g', portionGrams: 2.4 },
+      { name: 'fresh rosemary', quantity: '1 tsp, finely chopped', section: 'filling', ndbNo: '2063', portionDesc: 'g', portionGrams: 1.7 },
+      { name: 'frozen peas', quantity: '1 cup', section: 'filling', ndbNo: '11313', portionDesc: 'g', portionGrams: 80.0 },
+      { name: 'salt', quantity: '1 tsp', section: 'filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'filling', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'russet potato', quantity: '2 lb, peeled and cut into 2-inch chunks', section: 'topping', ndbNo: '11353', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'unsalted butter', quantity: '4 tbsp', section: 'topping', ndbNo: '1145', portionDesc: 'g', portionGrams: 56.8 },
+      { name: 'whole milk', quantity: '1/2 cup', section: 'topping', ndbNo: '1077', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'egg yolks', quantity: '1 yolk', section: 'topping', ndbNo: '1125', portionDesc: 'g', portionGrams: 17.0 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'topping', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'topping', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Peel and cut the potatoes into 2-inch chunks. Place in a large pot of cold salted water, bring to a boil, and cook for 15 to 20 minutes until tender when pierced with a fork. Drain and return to the pot.',
+      'Add butter, warm milk, egg yolk, salt, and pepper to the drained potatoes. Mash until smooth and creamy. Set aside.',
+      'Preheat the oven to 400°F.',
+      'Heat olive oil in a large oven-safe skillet or sauté pan over medium-high heat. Add the ground lamb and cook, breaking it up with a spoon, for 6 to 8 minutes until browned. Drain excess fat if more than 2 tablespoons remain in the pan.',
+      'Reduce heat to medium. Add the finely diced onion, carrot, and celery; cook for 5 to 6 minutes until softened.',
+      'Add the minced garlic and cook for 1 minute until fragrant. Stir in the tomato paste and Worcestershire sauce. Sprinkle the flour over the mixture and stir until no dry flour remains.',
+      'Pour in the beef broth and add the stripped thyme leaves and finely chopped rosemary. Bring to a simmer and cook for 8 to 10 minutes, stirring occasionally, until the sauce thickens. Taste and adjust salt and pepper.',
+      'Remove from heat and stir in the frozen peas. Transfer filling to a 9x13 inch baking dish if not using an oven-safe pan.',
+      'Spoon the mashed potato topping over the filling and spread evenly. Use a fork to create ridges on the surface.',
+      'Bake at 400°F for 20 to 25 minutes until the topping is golden brown and the filling is bubbling at the edges. Let rest 5 minutes before serving.'
+    ],
+    sections: [
+      { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.85 },
+      { key: 'topping', label: 'Mashed potato topping', cookingMethod: '', yieldFactorWater: 0.96 }
+    ],
   }
 ];
