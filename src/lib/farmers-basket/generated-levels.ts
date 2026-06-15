@@ -13790,7 +13790,7 @@ export const LEVELS: Level[] = [
       'Pound the chicken breasts to an even 1/4-inch thickness, or slice horizontally into cutlets. Season with salt and pepper, then dredge lightly in flour, shaking off the excess.',
       'Make or prepare the Chicken Broth (see the Chicken Broth recipe).',
       'Heat olive oil and 1 tablespoon butter in a large skillet over medium-high heat. Sear the chicken in batches for 3 to 4 minutes per side until golden and cooked through to an internal temperature of 165°F. Transfer to a plate and tent loosely with foil.',
-      'Add the mushrooms to the same skillet and cook over medium-high heat for 4 to 5 minutes until browned. Add the shallots and cook for 1 minute more.',
+      'Add the 1/4 inch thick sliced mushrooms to the same skillet and cook over medium-high heat for 4 to 5 minutes until browned. Add the finely diced shallots and cook for 1 minute more.',
       'Pour in the Marsala wine and chicken broth. Bring to a boil, scraping up any browned bits, and simmer for 4 to 5 minutes until the sauce reduces by about one-third.',
       'Remove from heat and swirl in the remaining 3 tablespoons butter until the sauce is glossy. Season with salt and pepper to taste.',
       'Return the chicken to the pan and spoon the sauce over to coat. Garnish with fresh parsley and serve immediately. (Pasta or rice not included.)'
