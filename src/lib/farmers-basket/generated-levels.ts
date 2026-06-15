@@ -14779,7 +14779,7 @@ export const LEVELS: Level[] = [
       'Return the browned lamb to the pot along with any accumulated juices. Add the water, bay leaves, and saffron. Stir to combine.',
       'Bring to a boil, then reduce heat to low. Cover and simmer for 30 minutes.',
       'Add the drained chickpeas, roughly chopped dried apricots, honey, and lemon juice. Stir to combine. Cover and continue to simmer for 20 to 30 minutes until the lamb is tender and the sauce has thickened.',
-      'Remove and discard the bay leaves. Taste and adjust seasoning. Stir in the toasted sliced almonds, chopped cilantro, and chopped parsley. Serve over couscous or with warm flatbread.'
+      'Remove and discard the bay leaves. Taste and adjust seasoning. Stir in the toasted sliced almonds, chopped cilantro, and chopped parsley. Serve over couscous or with warm flatbread (not included).'
     ],
     sections: [
       { key: 'tagine', label: 'Tagine', cookingMethod: '', yieldFactorWater: 0.75 }
