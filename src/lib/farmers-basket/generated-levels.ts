@@ -12300,7 +12300,7 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Pat the beef shank crosscuts dry and season with salt and pepper. Dredge lightly in flour, shaking off any excess.',
       'Heat the olive oil in a large Dutch oven or heavy pot over medium-high heat. Sear the shanks for 3 to 4 minutes per side until browned. Remove and set aside.',
-      'In the same pot, reduce heat to medium and sauté the onion, carrot, and celery for 5 minutes until softened. Add the garlic and cook 1 minute more.',
+      'In the same pot, reduce heat to medium and sauté the finely diced onion, diced carrot, and finely diced celery for 5 minutes until softened. Add the chopped garlic and cook 1 minute more.',
       'Pour in the white wine and scrape up any browned bits from the bottom of the pot. Simmer for 2 minutes.',
       'Add the beef broth, crushed tomatoes, oregano, and thyme. Stir to combine. Return the seared shanks to the pot, nestling them into the braising liquid.',
       'Bring to a boil, then reduce heat to low. Cover and simmer for 1 hour 30 minutes to 2 hours, turning the shanks halfway through, until the meat is very tender and beginning to fall off the bone.',
