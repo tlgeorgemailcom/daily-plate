@@ -14723,5 +14723,66 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'curry', label: 'Curry', cookingMethod: '', yieldFactorWater: 0.66 }
     ],
+  },
+  {
+    id: 'ENTR_075',
+    name: 'Lamb Tagine',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 310,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":585.6,"pro":53.6,"fat":23.6,"carb":42.1,"fib":9.1,"h2o":283.6,"sug":20.8,"perServing":{"cal":585.6,"pro":53.6,"fat":23.6,"carb":42.1,"fib":9.1,"h2o":283.6,"sug":20.8,"AddedSugars":4.3,"IntrinsicSugars":16.5},"micros":{"vitaminA":21.51,"vitaminC":2.43,"vitaminD":0.0,"vitaminE":1.19,"vitaminK":19.72,"vitaminB6":0.1,"vitaminB12":1.28,"thiamin":0.07,"riboflavin":0.15,"niacin":2.44,"folate":24.87,"calcium":30.0,"iron":1.73,"magnesium":26.22,"phosphorus":123.72,"potassium":274.48,"sodium":238.26,"zinc":2.24,"copper":0.15,"selenium":12.77,"cholesterol":35.72,"saturatedFat":1.38,"monoFat":2.97,"polyFat":0.67,"omega3":0.0,"omega6":0.16},"gramsPerServing":409.5,"servings":4,"per100g":{"Energy_KCal":143.02,"Water":69.26,"Protein":13.09,"TotalLipidFat":5.77,"Carbohydrate":10.27,"FiberTotalDietary":2.22,"SugarsTotal":5.09,"Cholesterol":35.72,"FattyAcids_totalSaturated":1.38,"FattyAcids_totalMonounsaturated":2.97,"FattyAcids_totalPolyunsaturated":0.67,"LinoleicAcid":0.16,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":21.51,"Retinol":0.0,"Carotene_beta":245.47,"VitaminD":0.0,"VitaminE_alphaTocopherol":1.19,"VitaminK_phylloquinone":19.72,"VitaminC_totalAscorbicAcid":2.43,"Thiamin":0.07,"Riboflavin":0.15,"Niacin":2.44,"PantothenicAcid":0.37,"VitaminB6":0.1,"Folate_total":24.87,"Folate_food":24.87,"Folate_DFE":24.87,"FolicAcid":0.0,"VitaminB12":1.28,"Choline_total":7.98,"Betaine":0.1,"LuteinZeaxanthin":106.24,"Lycopene":673.4,"Calcium_Ca":30.0,"Iron_Fe":1.73,"Magnesium_Mg":26.22,"Phosphorus_P":123.72,"Potassium_K":274.48,"Sodium_Na":238.26,"Zinc_Zn":2.24,"Copper_Cu":0.15,"Manganese_Mn":0.3,"Selenium_Se":12.77,"Tryptophan":0.14,"Threonine":0.53,"Isoleucine":0.6,"Leucine":0.97,"Lysine":1.07,"Methionine":0.3,"Cystine":0.14,"Phenylalanine":0.53,"Tyrosine":0.41,"Valine":0.67,"Arginine":0.81,"Histidine":0.39,"Alanine":0.74,"AsparticAcid":1.21,"GlutamicAcid":2.0,"Glycine":0.61,"Proline":0.56,"Serine":0.49,"omega3":0.0,"omega6":0.16,"AddedSugars":1.05,"IntrinsicSugars":4.03},"addedSugars":4.3,"intrinsicSugars":16.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"17059","name":"Lamb, domestic, cubed for stew or kabob (leg and shoulder), separable lean only, trimmed to 1/4\" fat, raw","grams":225.0},{"ndb":"11282","name":"Onions, raw","grams":60.0},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11216","name":"Ginger root, raw","grams":3.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":60.0},{"ndb":"16057","name":"Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt","grams":41.0},{"ndb":"9032","name":"Apricots, dried, sulfured, uncooked","grams":16.2},{"ndb":"19296","name":"Honey","grams":5.2},{"ndb":"9152","name":"Lemon juice, raw","grams":3.8},{"ndb":"2028","name":"Spices, paprika","grams":1.1},{"ndb":"2014","name":"Spices, cumin seed","grams":1.0},{"ndb":"2013","name":"Spices, coriander seed","grams":0.9},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.7},{"ndb":"2043","name":"Spices, turmeric, ground","grams":0.8},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1},{"ndb":"2037","name":"Spices, saffron","grams":0.1},{"ndb":"2004","name":"Spices, bay leaf","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":2.2},{"ndb":"14411","name":"Water, tap, drinking","grams":59.2},{"ndb":"12061","name":"Nuts, almonds","grams":5.8},{"ndb":"11165","name":"Coriander (cilantro) leaves, raw","grams":4.0},{"ndb":"11297","name":"Parsley, fresh","grams":3.8}],"sections":[{"section_key":"tagine","section_label":"Tagine","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":23,"raw_grams":2016.0,"raw_water_grams":1512.6,"raw_fat_grams":94.53,"raw_protein_grams":214.34,"raw_carb_grams":168.25,"final_grams":1637.85}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Lamb Tagine', quantity: 'custom (g)', foodWord: 'LAMBTAGINE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'lamb (cubed for kabobs)', quantity: '2 lb, cut into 1½-inch pieces', section: 'tagine', ndbNo: '17059', portionDesc: 'g', portionGrams: 900.0 },
+      { name: 'onion', quantity: '1½ large, finely diced', section: 'tagine', ndbNo: '11282', portionDesc: 'g', portionGrams: 240.0 },
+      { name: 'garlic', quantity: '4 cloves, minced', section: 'tagine', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'fresh ginger', quantity: '2 tbsp, freshly grated', section: 'tagine', ndbNo: '11216', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'tagine', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'canned crushed tomatoes', quantity: '1 cup', section: 'tagine', ndbNo: '11693', portionDesc: 'g', portionGrams: 240.0 },
+      { name: 'chickpeas, cooked', quantity: '1 cup, drained', section: 'tagine', ndbNo: '16057', portionDesc: 'g', portionGrams: 164.0 },
+      { name: 'dried apricots', quantity: '½ cup, roughly chopped', section: 'tagine', ndbNo: '9032', portionDesc: 'g', portionGrams: 65.0 },
+      { name: 'honey', quantity: '1 tbsp', section: 'tagine', ndbNo: '19296', portionDesc: 'g', portionGrams: 21.0 },
+      { name: 'lemon juice', quantity: '1 tbsp', section: 'tagine', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'paprika', quantity: '2 tsp', section: 'tagine', ndbNo: '2028', portionDesc: 'g', portionGrams: 4.6 },
+      { name: 'ground cumin', quantity: '2 tsp', section: 'tagine', ndbNo: '2014', portionDesc: 'g', portionGrams: 4.0 },
+      { name: 'ground coriander', quantity: '2 tsp', section: 'tagine', ndbNo: '2013', portionDesc: 'g', portionGrams: 3.6 },
+      { name: 'ground cinnamon', quantity: '1 tsp', section: 'tagine', ndbNo: '2010', portionDesc: 'g', portionGrams: 2.6 },
+      { name: 'ground turmeric', quantity: '1 tsp', section: 'tagine', ndbNo: '2043', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'cayenne pepper', quantity: '¼ tsp', section: 'tagine', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.45 },
+      { name: 'saffron', quantity: '½ tsp', section: 'tagine', ndbNo: '2037', portionDesc: 'g', portionGrams: 0.35 },
+      { name: 'bay leaf', quantity: '2 leaves', section: 'tagine', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'salt', quantity: '1½ tsp', section: 'tagine', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'water', quantity: '1 cup', section: 'tagine', ndbNo: '14411', portionDesc: 'g', portionGrams: 237.0 },
+      { name: 'almonds', quantity: '¼ cup, toasted', section: 'tagine', ndbNo: '12061', portionDesc: 'g', portionGrams: 23.0 },
+      { name: 'fresh cilantro', quantity: '1 cup, chopped', section: 'tagine', ndbNo: '11165', portionDesc: 'g', portionGrams: 16.0 },
+      { name: 'fresh parsley', quantity: '¼ cup, chopped', section: 'tagine', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.0 }
+    ],
+    recipeInstructions: [
+      'Pat the lamb dry and season with salt and pepper. Heat the olive oil in a large heavy-bottomed pot or Dutch oven over high heat. Working in batches, brown the lamb on all sides, about 3 to 4 minutes per batch. Transfer to a plate and set aside.',
+      'Reduce heat to medium. Add the finely diced onion and cook, stirring occasionally, for 8 to 10 minutes until softened and golden.',
+      'Add the minced garlic, freshly grated ginger, paprika, ground cumin, ground coriander, ground cinnamon, ground turmeric, and cayenne. Stir for 1 to 2 minutes until fragrant.',
+      'Add the crushed tomatoes and cook for 2 to 3 minutes, stirring to combine with the spice mixture.',
+      'Return the browned lamb to the pot along with any accumulated juices. Add the water, bay leaves, and saffron. Stir to combine.',
+      'Bring to a boil, then reduce heat to low. Cover and simmer for 30 minutes.',
+      'Add the drained chickpeas, roughly chopped dried apricots, honey, and lemon juice. Stir to combine. Cover and continue to simmer for 20 to 30 minutes until the lamb is tender and the sauce has thickened.',
+      'Remove and discard the bay leaves. Taste and adjust seasoning. Stir in the toasted sliced almonds, chopped cilantro, and chopped parsley. Serve over couscous or with warm flatbread.'
+    ],
+    sections: [
+      { key: 'tagine', label: 'Tagine', cookingMethod: '', yieldFactorWater: 0.75 }
+    ],
   }
 ];
