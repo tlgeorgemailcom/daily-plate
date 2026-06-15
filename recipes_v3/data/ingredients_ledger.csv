@@ -332,3 +332,4 @@ ghee,1003,GHEE,"Butter oil, anhydrous",ghee,tablespoon,12.8,"Clarified butter (g
 saffron,2037,SAFFRON,"Spices, saffron",saffron,tsp,0.7,Saffron threads; NDB 2037; 1 tsp ~0.7g
 eggplant_raw,11209,EGGPLANT,"Eggplant, raw",eggplant,lb,454.0,Raw eggplant; NDB 11209; 1 lb = 454g
 lamb_foreshank_raw,17007,LAMBSHANKS,"Lamb, domestic, foreshank, separable lean and fat, trimmed to 1/4"" fat, choice, raw",lamb shanks,shank,222.0,NDB 17007; foreshank lean and fat; 1 shank = 222g (raw boneless yield from 1 lb bone-in as purchased)
+lamb_loin_chop_raw,17078,LAMBCHOP,"Lamb, New Zealand, imported, loin chop, separable lean only, raw",lamb loin chop,chop,86.0,NDB 17078; loin chop lean only; 1 chop = 86g (raw boneless yield from ~115g bone-in chop)

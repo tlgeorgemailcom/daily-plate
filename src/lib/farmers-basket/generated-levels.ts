@@ -14898,5 +14898,48 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'braise', label: 'Braise', cookingMethod: '', yieldFactorWater: 0.73 }
     ],
+  },
+  {
+    id: 'ENTR_078',
+    name: 'Lamb Chops',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 313,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":311.2,"pro":34.6,"fat":18.7,"carb":1.6,"fib":0.4,"h2o":105.5,"sug":0.1,"perServing":{"cal":311.2,"pro":34.6,"fat":18.7,"carb":1.6,"fib":0.4,"h2o":105.5,"sug":0.1,"AddedSugars":0.0,"IntrinsicSugars":0.1},"micros":{"vitaminA":5.73,"vitaminC":1.1,"vitaminD":1.98,"vitaminE":0.62,"vitaminK":2.51,"vitaminB6":0.14,"vitaminB12":1.68,"thiamin":0.09,"riboflavin":0.15,"niacin":4.51,"folate":0.98,"calcium":25.99,"iron":1.77,"magnesium":25.99,"phosphorus":200.33,"potassium":357.36,"sodium":432.98,"zinc":2.84,"copper":0.13,"selenium":5.94,"cholesterol":68.77,"saturatedFat":3.47,"monoFat":5.1,"polyFat":0.65,"omega3":0.09,"omega6":0.1},"gramsPerServing":165.1,"servings":4,"per100g":{"Energy_KCal":188.51,"Water":63.95,"Protein":20.98,"TotalLipidFat":11.34,"Carbohydrate":0.94,"FiberTotalDietary":0.22,"SugarsTotal":0.07,"Cholesterol":68.77,"FattyAcids_totalSaturated":3.47,"FattyAcids_totalMonounsaturated":5.1,"FattyAcids_totalPolyunsaturated":0.65,"LinoleicAcid":0.1,"alphaLinolenicAcid":0.07,"EPA_20_5n3":0.01,"DPA_22_5n3":0.01,"DHA_22_6n3":0.0,"VitaminA_RAE":5.73,"Retinol":4.17,"Carotene_beta":11.56,"VitaminD":1.98,"VitaminE_alphaTocopherol":0.62,"VitaminK_phylloquinone":2.51,"VitaminC_totalAscorbicAcid":1.1,"Thiamin":0.09,"Riboflavin":0.15,"Niacin":4.51,"PantothenicAcid":0.45,"VitaminB6":0.14,"Folate_total":0.98,"Folate_food":0.98,"Folate_DFE":0.98,"FolicAcid":0.0,"VitaminB12":1.68,"Choline_total":0.42,"Betaine":0.02,"LuteinZeaxanthin":0.88,"Lycopene":0.03,"Calcium_Ca":25.99,"Iron_Fe":1.77,"Magnesium_Mg":25.99,"Phosphorus_P":200.33,"Potassium_K":357.36,"Sodium_Na":432.98,"Zinc_Zn":2.84,"Copper_Cu":0.13,"Manganese_Mn":0.07,"Selenium_Se":5.94,"Tryptophan":0.23,"Threonine":0.99,"Isoleucine":0.93,"Leucine":1.61,"Lysine":1.82,"Methionine":0.68,"Cystine":0.23,"Phenylalanine":0.82,"Tyrosine":0.72,"Valine":1.06,"Arginine":1.41,"Histidine":0.44,"Alanine":1.04,"AsparticAcid":0.01,"GlutamicAcid":2.92,"Glycine":0.89,"Proline":0.67,"Serine":0.71,"omega3":0.09,"omega6":0.1,"AddedSugars":0.0,"IntrinsicSugars":0.07},"addedSugars":0.0,"intrinsicSugars":0.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"17078","name":"Lamb, New Zealand, imported, loin chop, separable lean only, raw","grams":172.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"2063","name":"Rosemary, fresh","grams":0.8},{"ndb":"2049","name":"Thyme, fresh","grams":0.8},{"ndb":"9152","name":"Lemon juice, raw","grams":3.8},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3}],"sections":[{"section_key":"chops","section_label":"Chops","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":752.95,"raw_water_grams":514.89,"raw_fat_grams":74.91,"raw_protein_grams":138.5,"raw_carb_grams":6.23,"final_grams":660.27}],"cookingMethod":"pan grilled"},
+    recipeIngredients: [
+      { name: 'Lamb Chops', quantity: 'custom (g)', foodWord: 'LAMBCHOPS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'lamb loin chop', quantity: '8 lamb loin chops', section: 'chops', ndbNo: '17078', portionDesc: 'g', portionGrams: 688.0 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'chops', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'chops', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'fresh rosemary', quantity: '2 sprigs fresh rosemary, leaves stripped and finely chopped', section: 'chops', ndbNo: '2063', portionDesc: 'g', portionGrams: 3.4 },
+      { name: 'fresh thyme leaves', quantity: '4 sprigs fresh thyme leaves, stripped', section: 'chops', ndbNo: '2049', portionDesc: 'g', portionGrams: 3.2 },
+      { name: 'lemon juice', quantity: '1 tbsp', section: 'chops', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'salt', quantity: '1 tsp', section: 'chops', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '½ tsp', section: 'chops', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
+    ],
+    recipeInstructions: [
+      'In a small bowl, combine the olive oil, garlic, rosemary, thyme, and lemon juice to make the marinade.',
+      'Pat the lamb chops dry with paper towels. Season on both sides with salt and black pepper, then coat with the marinade. Let rest at room temperature for 30 minutes to 1 hour.',
+      'Heat a large cast iron skillet or heavy skillet over high heat until very hot and just beginning to smoke.',
+      'Working in batches if needed to avoid crowding, sear the chops for 3 to 4 minutes per side for medium-rare, or until cooked to your preferred doneness.',
+      'Transfer to a plate, tent loosely with foil, and rest for 5 minutes before serving. Serve with roasted vegetables or a simple salad (not included).'
+    ],
+    sections: [
+      { key: 'chops', label: 'Chops', cookingMethod: '', yieldFactorWater: 0.82 }
+    ],
   }
 ];
