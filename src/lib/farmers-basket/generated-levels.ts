@@ -14109,7 +14109,7 @@ export const LEVELS: Level[] = [
     ],
     recipeInstructions: [
       'Heat olive oil in a large skillet or Dutch oven over medium-high heat. Sear chicken thighs 3 to 4 minutes until golden brown on the bottom. Flip and sear the other side 2 minutes. Transfer to a plate.',
-      'Add garlic to the pan and cook 30 seconds until fragrant. Add tamari, vinegar, water, bay leaves, and black pepper. Stir to combine.',
+      'Add crushed garlic cloves to the pan and cook 30 seconds until fragrant. Add tamari, vinegar, water, bay leaves, and black pepper. Stir to combine.',
       'Return chicken to the pan. Bring to a boil, then reduce heat to low. Cover and simmer 25 to 30 minutes, turning chicken halfway through, until cooked through and tender.',
       'Uncover and increase heat to medium. Simmer 5 to 10 minutes more, turning chicken occasionally, until the sauce reduces and thickens to coat the chicken.',
       'Remove bay leaves. Serve over steamed white rice (not included).'
