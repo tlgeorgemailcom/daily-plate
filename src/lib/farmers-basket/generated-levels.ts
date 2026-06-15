@@ -13909,11 +13909,12 @@ export const LEVELS: Level[] = [
     ],
     recipeInstructions: [
       'Cook the brown rice: combine rice, water, and salt in a medium saucepan. Bring to a boil, reduce to a low simmer, cover, and cook for 40 to 45 minutes until the water is absorbed. Remove from heat and let steam covered for 5 minutes, then fluff with a fork.',
-      'Slice the chicken breast into thin strips. In a bowl, whisk together the tamari, sesame oil, garlic powder, and ginger. Add the chicken and toss to coat. Marinate for 10 minutes.',
-      'Whisk together the peanut butter, tamari, lime juice, honey, sesame oil, ginger, garlic, and water until smooth. Add more water 1 teaspoon at a time if needed to reach a pourable consistency.',
+      'Slice the chicken breast into thin strips. In a bowl, whisk together the tamari, sesame oil, garlic powder, and grated ginger. Add the chicken and toss to coat. Marinate for 10 minutes.',
+      'Whisk together the peanut butter, tamari, lime juice, honey, sesame oil, grated ginger, minced garlic, and water until smooth. Add more water 1 teaspoon at a time if needed to reach a pourable consistency.',
       'Heat olive oil in a skillet over medium-high heat. Add the chicken and cook for 3 to 4 minutes per side until cooked through to an internal temperature of 165°F. Slice or keep as strips.',
       'Cook the edamame according to package directions (typically boil or microwave 3 to 5 minutes until heated through and tender). Drain and set aside.',
-      'Divide the cooked rice among 4 bowls. Arrange the chicken, cabbage, carrot, edamame, and broccoli over the rice. Drizzle generously with peanut sauce, then garnish with scallions and sesame seeds.'
+      'Cut the broccoli into 1/2 inch florets. Steam or blanch for 3 to 4 minutes until tender-crisp. Drain and set aside.',
+      'Divide the cooked rice among 4 bowls. Arrange the chicken, cabbage, carrot, edamame, and broccoli over the rice. Drizzle generously with peanut sauce, then garnish with sliced scallions and sesame seeds.'
     ],
     sections: [
       { key: 'rice', label: 'Brown Rice', cookingMethod: '', yieldFactorWater: 1.0 },
