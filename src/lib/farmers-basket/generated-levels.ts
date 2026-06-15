@@ -14333,7 +14333,7 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Preheat oven to 375°F. Cook pasta in a large pot of salted boiling water until just al dente (it will finish cooking in the oven). Drain and set aside.',
       'Season chicken with salt and pepper. Heat olive oil in a large skillet over medium-high heat. Cook chicken 4 to 5 minutes per side until golden brown and an instant-read thermometer reads 165°F. Let rest 5 minutes, then shred or dice into bite-size pieces.',
-      'In the same skillet over medium heat, melt butter. Add onion and cook 4 minutes until softened. Add garlic and mushrooms; cook 6 to 8 minutes until mushrooms release their liquid and it evaporates.',
+      'In the same skillet over medium heat, melt butter. Add finely chopped onion and cook 4 minutes until softened. Add chopped garlic and 1/4 inch thick sliced mushrooms; cook 6 to 8 minutes until mushrooms release their liquid and it evaporates.',
       'Sprinkle flour over the vegetables and stir 1 minute. Pour in white wine and scrape up any browned bits.',
       'Add chicken broth (see Chicken Broth recipe) and heavy cream. Stir and simmer 5 minutes until sauce thickens. Season with nutmeg, salt, and pepper. Remove from heat and stir in Parmesan.',
       'Fold cooked pasta and shredded chicken into the sauce until evenly coated. Transfer to a greased 9x13-inch baking dish.',
