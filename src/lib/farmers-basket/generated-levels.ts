@@ -14846,5 +14846,57 @@ export const LEVELS: Level[] = [
       { key: 'meat_sauce', label: 'Meat Sauce', cookingMethod: '', yieldFactorWater: 0.82 },
       { key: 'bechamel', label: 'Béchamel', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'ENTR_077',
+    name: 'Lamb Shanks',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 312,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":617.9,"pro":45.1,"fat":37.1,"carb":13.7,"fib":2.9,"h2o":308.8,"sug":5.5,"perServing":{"cal":617.9,"pro":45.1,"fat":37.1,"carb":13.7,"fib":2.9,"h2o":308.8,"sug":5.5,"AddedSugars":0.0,"IntrinsicSugars":5.5},"micros":{"vitaminA":58.05,"vitaminC":1.26,"vitaminD":0.0,"vitaminE":0.49,"vitaminK":3.73,"vitaminB6":0.08,"vitaminB12":1.08,"thiamin":0.04,"riboflavin":0.11,"niacin":2.17,"folate":11.15,"calcium":17.6,"iron":0.98,"magnesium":14.77,"phosphorus":92.12,"potassium":184.14,"sodium":312.77,"zinc":2.44,"copper":0.06,"selenium":10.57,"cholesterol":38.31,"saturatedFat":3.38,"monoFat":4.15,"polyFat":0.65,"omega3":0.0,"omega6":0.0},"gramsPerServing":417.2,"servings":4,"per100g":{"Energy_KCal":148.11,"Water":74.02,"Protein":10.82,"TotalLipidFat":8.89,"Carbohydrate":3.28,"FiberTotalDietary":0.7,"SugarsTotal":1.31,"Cholesterol":38.31,"FattyAcids_totalSaturated":3.38,"FattyAcids_totalMonounsaturated":4.15,"FattyAcids_totalPolyunsaturated":0.65,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":58.05,"Retinol":0.0,"Carotene_beta":577.14,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.49,"VitaminK_phylloquinone":3.73,"VitaminC_totalAscorbicAcid":1.26,"Thiamin":0.04,"Riboflavin":0.11,"Niacin":2.17,"PantothenicAcid":0.3,"VitaminB6":0.08,"Folate_total":11.15,"Folate_food":11.15,"Folate_DFE":11.15,"FolicAcid":0.0,"VitaminB12":1.08,"Choline_total":3.69,"Betaine":0.11,"LuteinZeaxanthin":25.8,"Lycopene":512.0,"Calcium_Ca":17.6,"Iron_Fe":0.98,"Magnesium_Mg":14.77,"Phosphorus_P":92.12,"Potassium_K":184.14,"Sodium_Na":312.77,"Zinc_Zn":2.44,"Copper_Cu":0.06,"Manganese_Mn":0.1,"Selenium_Se":10.57,"Tryptophan":0.12,"Threonine":0.45,"Isoleucine":0.5,"Leucine":0.8,"Lysine":0.91,"Methionine":0.26,"Cystine":0.12,"Phenylalanine":0.42,"Tyrosine":0.34,"Valine":0.56,"Arginine":0.62,"Histidine":0.32,"Alanine":0.62,"AsparticAcid":0.93,"GlutamicAcid":1.57,"Glycine":0.5,"Proline":0.43,"Serine":0.38,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":1.31},"addedSugars":0.0,"intrinsicSugars":5.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"17007","name":"Lamb, domestic, foreshank, separable lean and fat, trimmed to 1/4\" fat, choice, raw","grams":222.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"2047","name":"Salt, table","grams":2.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.6},{"ndb":"11282","name":"Onions, raw","grams":55.0},{"ndb":"11124","name":"Carrots, raw","grams":30.5},{"ndb":"11143","name":"Celery, raw","grams":20.0},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11546","name":"Tomato products, canned, paste, without salt added","grams":8.2},{"ndb":"14096","name":"Alcoholic beverage, wine, table, red","grams":58.8},{"ndb":"6008","name":"Soup, beef broth or bouillon canned, ready-to-serve","grams":122.5},{"ndb":"2063","name":"Rosemary, fresh","grams":0.8},{"ndb":"2049","name":"Thyme, fresh","grams":0.6},{"ndb":"2004","name":"Spices, bay leaf","grams":0.3}],"sections":[{"section_key":"braise","section_label":"Braise","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.73,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":14,"raw_grams":2125.7,"raw_water_grams":1692.09,"raw_fat_grams":148.37,"raw_protein_grams":180.54,"raw_carb_grams":54.81,"final_grams":1668.84}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Lamb Shanks', quantity: 'custom (g)', foodWord: 'LAMBSHANKS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'lamb shank', quantity: '4 shanks', section: 'braise', ndbNo: '17007', portionDesc: 'g', portionGrams: 888.0 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'braise', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'salt', quantity: '1½ tsp', section: 'braise', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'ground black pepper', quantity: '1 tsp', section: 'braise', ndbNo: '2030', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'onion', quantity: '1 large, halved and thinly sliced', section: 'braise', ndbNo: '11282', portionDesc: 'g', portionGrams: 220.0 },
+      { name: 'carrot', quantity: '2 medium, cut into 1-inch pieces', section: 'braise', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'celery stalk', quantity: '2 stalks, cut into 1-inch pieces', section: 'braise', ndbNo: '11143', portionDesc: 'g', portionGrams: 80.0 },
+      { name: 'garlic', quantity: '4 cloves, minced', section: 'braise', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'tomato paste', quantity: '2 tbsp', section: 'braise', ndbNo: '11546', portionDesc: 'g', portionGrams: 33.0 },
+      { name: 'red wine', quantity: '1 cup', section: 'braise', ndbNo: '14096', portionDesc: 'g', portionGrams: 235.2 },
+      { name: 'beef broth', quantity: '2 cups', section: 'braise', ndbNo: '6008', portionDesc: 'g', portionGrams: 490.0 },
+      { name: 'fresh rosemary', quantity: '2 sprigs', section: 'braise', ndbNo: '2063', portionDesc: 'g', portionGrams: 3.4 },
+      { name: 'fresh thyme leaves', quantity: '3 sprigs', section: 'braise', ndbNo: '2049', portionDesc: 'g', portionGrams: 2.4 },
+      { name: 'bay leaf', quantity: '2 leaves', section: 'braise', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 }
+    ],
+    recipeInstructions: [
+      'Pat the lamb shanks dry with paper towels. Season generously on all sides with salt and black pepper.',
+      'Heat the olive oil in a large Dutch oven or heavy-bottomed pot over medium-high heat. Sear the shanks in batches, 3–4 minutes per side, until deep brown on all sides. Transfer to a plate and set aside.',
+      'Reduce heat to medium. Add the onion, carrot, and celery to the pot and cook, stirring occasionally, for 5–6 minutes until softened. Add the garlic and cook 1 minute more.',
+      'Add the tomato paste and stir to coat the vegetables. Cook for 2 minutes until the paste darkens slightly.',
+      'Pour in the red wine, scraping up any browned bits from the bottom of the pot. Simmer for 3 minutes to reduce slightly.',
+      'Add the beef broth, rosemary, thyme, and bay leaves. Return the shanks to the pot, nestling them into the braising liquid; the liquid should come about halfway up the shanks.',
+      'Bring to a gentle simmer, cover tightly, and cook over low heat for 2½ to 3 hours, turning the shanks once halfway through, until the meat is very tender and falling off the bone.',
+      'Discard the rosemary sprigs, thyme sprigs, and bay leaves. Serve the shanks with spoonfuls of the braising liquid and vegetables. Serve with mashed potatoes, polenta, or crusty bread (not included).'
+    ],
+    sections: [
+      { key: 'braise', label: 'Braise', cookingMethod: '', yieldFactorWater: 0.73 }
+    ],
   }
 ];
