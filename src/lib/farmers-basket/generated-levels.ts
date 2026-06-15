@@ -10993,7 +10993,7 @@ export const LEVELS: Level[] = [
       'Pat the beef chuck dry and cut into 2-inch cubes. Season generously with salt and black pepper.',
       'Cook the bacon in a large Dutch oven over medium heat until crisp. Remove bacon and set aside, leaving the fat in the pot.',
       'Working in batches, sear the beef cubes in the bacon fat over medium-high heat until browned on all sides, about 3 minutes per side. Remove and set aside.',
-      'Add the olive oil to the pot. Sauté the onion and carrot over medium heat until softened, about 5 minutes. Add the garlic and cook 1 minute more.',
+      'Add the olive oil to the pot. Sauté the diced onion and carrots sliced into 1 inch chunks over medium heat until softened, about 5 minutes. Add the minced garlic and cook 1 minute more.',
       'Stir in the flour and tomato paste and cook for 1 minute until the flour is absorbed.',
       'Pour in the red wine and beef broth, scraping up any browned bits from the bottom of the pot.',
       'Return the seared beef and bacon to the pot. Add the thyme sprigs and bay leaves. Bring to a simmer.',
