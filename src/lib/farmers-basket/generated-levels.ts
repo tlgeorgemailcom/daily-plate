@@ -10837,9 +10837,9 @@ export const LEVELS: Level[] = [
       'In a small bowl, whisk together the tamari, sesame oil, beef broth, cornstarch, and sugar until smooth. Set the sauce aside.',
       'Slice the beef thin against the grain into bite-sized strips. Season with the salt.',
       'Heat a large wok or skillet over high heat. Add 1 tablespoon olive oil. Add beef in a single layer and cook undisturbed for 1 minute, then stir-fry 1-2 minutes until browned. Transfer beef to a plate.',
-      'Add remaining tablespoon olive oil to the wok. Add onion and carrot; stir-fry 2 minutes. Add broccoli; stir-fry 2 minutes. Add garlic and ginger; stir-fry 30 seconds.',
+      'Add remaining tablespoon olive oil to the wok. Add the onion sliced into strips and carrot strips; stir-fry 2 minutes. Add broccoli; stir-fry 2 minutes. Add chopped garlic and chopped ginger; stir-fry 30 seconds.',
       'Return beef to the wok. Pour sauce over everything and toss to coat. Cook 1-2 minutes, stirring, until the sauce thickens and coats all the ingredients.',
-      'Add the cooked noodles and scallions; toss to combine. Serve immediately.'
+      'Add the cooked noodles and thinly sliced scallions; toss to combine. Serve immediately.'
     ],
     sections: [
       { key: 'noodles', label: 'Noodles', cookingMethod: '', yieldFactorWater: 1.0 },
