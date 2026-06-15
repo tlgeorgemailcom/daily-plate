@@ -14503,7 +14503,7 @@ export const LEVELS: Level[] = [
       { name: 'ground black pepper', quantity: '1/4 tsp', section: 'kabob', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
     ],
     recipeInstructions: [
-      'In a bowl, whisk together olive oil, lemon juice, garlic, cumin, coriander, paprika, turmeric, cinnamon, cayenne, salt, and pepper.',
+      'In a bowl, whisk together olive oil, lemon juice, minced garlic, cumin, coriander, paprika, turmeric, cinnamon, cayenne, salt, and pepper.',
       'Add lamb cubes and toss to coat. Cover and marinate at least 1 hour, or overnight in the refrigerator.',
       'Preheat grill to medium-high heat. Thread lamb onto metal or soaked wooden skewers.',
       'Grill skewers 3 to 4 minutes per side, turning every few minutes, until lamb is well-seared and an instant-read thermometer reads 145°F for medium.',
@@ -14551,7 +14551,7 @@ export const LEVELS: Level[] = [
       { name: 'ground black pepper', quantity: '1/4 tsp', section: 'kofta', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
     ],
     recipeInstructions: [
-      'In a large bowl combine ground lamb, grated onion, garlic, minced parsley, minced mint, cumin, coriander, cinnamon, allspice, cayenne, salt, and pepper. Mix until just combined; do not overmix.',
+      'In a large bowl combine ground lamb, grated onion, minced garlic, minced parsley, minced mint, cumin, coriander, cinnamon, allspice, cayenne, salt, and pepper. Mix until just combined; do not overmix.',
       'Divide the mixture into 8 equal portions and shape each firmly around a flat metal skewer into a log about 6 inches long.',
       'Refrigerate the skewers at least 30 minutes (up to 4 hours) to firm up.',
       'Preheat grill to medium-high heat. Grill kofta 3 to 4 minutes per side (12 to 14 minutes total), turning carefully, until cooked through and an instant-read thermometer reads 160°F.',
