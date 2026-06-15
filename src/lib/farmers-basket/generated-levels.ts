@@ -14718,7 +14718,7 @@ export const LEVELS: Level[] = [
       'Return the browned lamb to the pot along with any accumulated juices. Add the water and the bay leaves. Stir to coat the lamb with the sauce.',
       'Bring to a boil, then reduce heat to low. Cover and simmer for 45 to 60 minutes, stirring occasionally, until the lamb is tender.',
       'Remove from heat and let cool for 2 to 3 minutes. Stir in the room-temperature yogurt gradually to prevent curdling. Return to low heat and simmer uncovered for 5 minutes.',
-      'Remove and discard the bay leaves. Taste and adjust seasoning. Serve over basmati rice or with naan bread.'
+      'Remove and discard the bay leaves. Taste and adjust seasoning. Serve over basmati rice or with naan bread (not included).'
     ],
     sections: [
       { key: 'curry', label: 'Curry', cookingMethod: '', yieldFactorWater: 0.66 }
