@@ -15034,5 +15034,63 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'lamb', label: 'Leg of Lamb', cookingMethod: '', yieldFactorWater: 0.62, yieldFactorFat: 0.705 }
     ],
+  },
+  {
+    id: 'ENTR_081',
+    name: 'Lamb Biryani',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 316,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 6)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":524.4,"pro":31.1,"fat":14.7,"carb":65.3,"fib":3.5,"h2o":277.0,"sug":4.7,"perServing":{"cal":524.4,"pro":31.1,"fat":14.7,"carb":65.3,"fib":3.5,"h2o":277.0,"sug":4.7,"AddedSugars":0.0,"IntrinsicSugars":4.7},"micros":{"vitaminA":19.15,"vitaminC":1.37,"vitaminD":0.0,"vitaminE":0.21,"vitaminK":2.77,"vitaminB6":0.07,"vitaminB12":0.7,"thiamin":0.1,"riboflavin":0.08,"niacin":1.65,"folate":33.47,"calcium":21.22,"iron":1.28,"magnesium":13.97,"phosphorus":78.17,"potassium":135.77,"sodium":188.0,"zinc":1.28,"copper":0.08,"selenium":9.44,"cholesterol":23.88,"saturatedFat":1.79,"monoFat":1.31,"polyFat":0.24,"omega3":0.0,"omega6":0.01},"gramsPerServing":392.2,"servings":6,"per100g":{"Energy_KCal":133.69,"Water":70.62,"Protein":7.94,"TotalLipidFat":3.76,"Carbohydrate":16.64,"FiberTotalDietary":0.9,"SugarsTotal":1.2,"Cholesterol":23.88,"FattyAcids_totalSaturated":1.79,"FattyAcids_totalMonounsaturated":1.31,"FattyAcids_totalPolyunsaturated":0.24,"LinoleicAcid":0.01,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":19.15,"Retinol":12.9,"Carotene_beta":62.51,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.21,"VitaminK_phylloquinone":2.77,"VitaminC_totalAscorbicAcid":1.37,"Thiamin":0.1,"Riboflavin":0.08,"Niacin":1.65,"PantothenicAcid":0.3,"VitaminB6":0.07,"Folate_total":33.47,"Folate_food":8.84,"Folate_DFE":50.71,"FolicAcid":37.9,"VitaminB12":0.7,"Choline_total":3.62,"Betaine":0.04,"LuteinZeaxanthin":16.93,"Lycopene":121.04,"Calcium_Ca":21.22,"Iron_Fe":1.28,"Magnesium_Mg":13.97,"Phosphorus_P":78.17,"Potassium_K":135.77,"Sodium_Na":188.0,"Zinc_Zn":1.28,"Copper_Cu":0.08,"Manganese_Mn":0.31,"Selenium_Se":9.44,"Tryptophan":0.08,"Threonine":0.3,"Isoleucine":0.34,"Leucine":0.56,"Lysine":0.57,"Methionine":0.18,"Cystine":0.09,"Phenylalanine":0.31,"Tyrosine":0.24,"Valine":0.4,"Arginine":0.47,"Histidine":0.22,"Alanine":0.43,"AsparticAcid":0.66,"GlutamicAcid":1.16,"Glycine":0.34,"Proline":0.3,"Serine":0.29,"omega3":0.0,"omega6":0.01,"AddedSugars":0.0,"IntrinsicSugars":1.2},"addedSugars":0.0,"intrinsicSugars":4.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"17059","name":"Lamb, domestic, cubed for stew or kabob (leg and shoulder), separable lean only, trimmed to 1/4\" fat, raw","grams":113.3},{"ndb":"1293","name":"Yogurt, Greek, plain, whole milk","grams":20.0},{"ndb":"11282","name":"Onions, raw","grams":73.3},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11216","name":"Ginger root, raw","grams":3.0},{"ndb":"1003","name":"Butter oil, anhydrous","grams":6.8},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":20.5},{"ndb":"2043","name":"Spices, turmeric, ground","grams":0.3},{"ndb":"2014","name":"Spices, cumin seed","grams":0.7},{"ndb":"2013","name":"Spices, coriander seed","grams":0.7},{"ndb":"2006","name":"Spices, cardamom","grams":0.3},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.4},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.2},{"ndb":"2011","name":"Spices, cloves, ground","grams":0.1},{"ndb":"2004","name":"Spices, bay leaf","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"20044","name":"Rice, white, long-grain, regular, raw, enriched","grams":66.7},{"ndb":"11165","name":"Coriander (cilantro) leaves, raw","grams":2.7},{"ndb":"2065","name":"Spearmint, fresh","grams":1.0},{"ndb":"2047","name":"Salt, table","grams":0.5}],"sections":[{"section_key":"lamb","section_label":"Lamb","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.78,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":16,"raw_grams":1466.62,"raw_water_grams":1133.81,"raw_fat_grams":85.66,"raw_protein_grams":157.76,"raw_carb_grams":70.68,"final_grams":1217.19},{"section_key":"rice","section_label":"Rice","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":11.717302538608068,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":425.0,"raw_water_grams":66.37,"raw_fat_grams":2.77,"raw_protein_grams":29.06,"raw_carb_grams":320.89,"final_grams":1136.34}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Lamb Biryani', quantity: 'custom (g)', foodWord: 'LAMBBIRYANI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'lamb (cubed for kabobs)', quantity: '1½ lb', section: 'lamb', ndbNo: '17059', portionDesc: 'g', portionGrams: 680.0 },
+      { name: 'Greek whole milk yogurt', quantity: '½ cup', section: 'lamb', ndbNo: '1293', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'onion', quantity: '2 large onions, thinly sliced', section: 'lamb', ndbNo: '11282', portionDesc: 'g', portionGrams: 440.0 },
+      { name: 'garlic', quantity: '6 cloves garlic, minced', section: 'lamb', ndbNo: '11215', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'fresh ginger', quantity: '1½ tbsp fresh ginger, grated', section: 'lamb', ndbNo: '11216', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'ghee', quantity: '3 tbsp', section: 'lamb', ndbNo: '1003', portionDesc: 'g', portionGrams: 40.8 },
+      { name: 'tomato', quantity: '1 medium tomato, chopped', section: 'lamb', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'ground turmeric', quantity: '1 tsp', section: 'lamb', ndbNo: '2043', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'ground cumin', quantity: '2 tsp', section: 'lamb', ndbNo: '2014', portionDesc: 'g', portionGrams: 4.0 },
+      { name: 'ground coriander', quantity: '2 tsp', section: 'lamb', ndbNo: '2013', portionDesc: 'g', portionGrams: 4.0 },
+      { name: 'ground cardamom', quantity: '1 tsp', section: 'lamb', ndbNo: '2006', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'ground cinnamon', quantity: '1 tsp', section: 'lamb', ndbNo: '2010', portionDesc: 'g', portionGrams: 2.6 },
+      { name: 'cayenne pepper', quantity: '½ tsp', section: 'lamb', ndbNo: '2031', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground cloves', quantity: '¼ tsp', section: 'lamb', ndbNo: '2011', portionDesc: 'g', portionGrams: 0.525 },
+      { name: 'bay leaf', quantity: '2 leaves', section: 'lamb', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'salt', quantity: '1½ tsp', section: 'lamb', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'white rice (dry)', quantity: '2 cups', section: 'rice', ndbNo: '20044', portionDesc: 'g', portionGrams: 400.0 },
+      { name: 'fresh cilantro', quantity: '¼ cup fresh', section: 'rice', ndbNo: '11165', portionDesc: 'g', portionGrams: 16.0 },
+      { name: 'fresh mint', quantity: '2 tbsp fresh', section: 'rice', ndbNo: '2065', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'salt', quantity: '½ tsp', section: 'rice', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 }
+    ],
+    recipeInstructions: [
+      'In a bowl, combine the lamb with the yogurt, turmeric, cumin, coriander, cardamom, cinnamon, cayenne, cloves, and 1 teaspoon of salt. Toss to coat, cover, and refrigerate for at least 2 hours or overnight.',
+      'Melt the ghee in a large, heavy-bottomed pot over medium-high heat. Add the onions and cook, stirring occasionally, for 12–15 minutes until deep golden brown. Set aside a handful of the fried onions for garnish.',
+      'Add the garlic and ginger to the pot and cook for 1 minute until fragrant. Add the tomatoes and bay leaves and cook for 3–4 minutes until the tomatoes break down.',
+      'Add the marinated lamb to the pot. Stir to combine, cover, and simmer over medium-low heat for 35–40 minutes, stirring occasionally, until the lamb is tender and the sauce has thickened.',
+      'Meanwhile, bring a large pot of salted water to a boil. Add the rice and cook for 6–7 minutes until about 70% cooked (it should still have a firm bite at the center). Drain well.',
+      'Spread the par-cooked rice evenly over the lamb. Scatter the cilantro and mint over the rice, then top with the reserved fried onions. Cover the pot tightly (seal with foil, then the lid) and cook over very low heat for 20–25 minutes until the rice is fully cooked.',
+      'To serve, scoop portions from the pot so each serving contains both lamb and rice. Arrange on a platter and serve immediately.'
+    ],
+    sections: [
+      { key: 'lamb', label: 'Lamb', cookingMethod: '', yieldFactorWater: 0.78 },
+      { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
