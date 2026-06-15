@@ -14714,7 +14714,7 @@ export const LEVELS: Level[] = [
       'Pat the lamb dry and season with salt and pepper. In a large heavy-bottomed pot or Dutch oven, heat 2 tablespoons of ghee over high heat. Working in batches, brown the lamb on all sides, about 3 to 4 minutes per batch. Transfer to a plate and set aside.',
       'Reduce heat to medium. Add the remaining 1 tablespoon of ghee to the pot. Add the finely diced onion and cook, stirring occasionally, for 12 to 15 minutes until deep golden brown.',
       'Add the minced garlic, freshly grated ginger, paprika, ground coriander, ground cumin, ground cardamom, ground cinnamon, ground cloves, ground turmeric, and cayenne. Stir constantly for 1 to 2 minutes until fragrant.',
-      'Add the crushed tomatoes and stir to combine with the spice mixture. Cook for 3 to 4 minutes until the oil begins to separate from the masala.',
+      'Add the crushed tomatoes and stir to combine with the spice mixture. Cook for 3 to 4 minutes until the oil begins to separate from the spice mixture.',
       'Return the browned lamb to the pot along with any accumulated juices. Add the water and the bay leaves. Stir to coat the lamb with the sauce.',
       'Bring to a boil, then reduce heat to low. Cover and simmer for 45 to 60 minutes, stirring occasionally, until the lamb is tender.',
       'Remove from heat and let cool for 2 to 3 minutes. Stir in the room-temperature yogurt gradually to prevent curdling. Return to low heat and simmer uncovered for 5 minutes.',
