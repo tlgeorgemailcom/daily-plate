@@ -12248,7 +12248,7 @@ export const LEVELS: Level[] = [
       'In a bowl, whisk together the soy sauce, brown sugar, garlic, ginger, hoisin sauce, and red pepper flakes. Set aside.',
       'Heat the vegetable oil in a wok or large skillet over high heat. Add the beef in a single layer and cook without stirring for 1 to 2 minutes until browned. Flip and cook 1 minute more. Remove beef and set aside.',
       'Pour the sauce into the same wok and bring to a simmer over medium-high heat, stirring, for 2 to 3 minutes until slightly thickened.',
-      'Return the beef to the wok and toss to coat in the sauce. Add the scallions and drizzle with sesame oil. Stir-fry 1 minute.',
+      'Return the beef to the wok and toss to coat in the sauce. Add the sliced scallions and drizzle with sesame oil. Stir-fry 1 minute.',
       'Serve the Mongolian beef on its own or over steamed white rice (not included).'
     ],
     sections: [
