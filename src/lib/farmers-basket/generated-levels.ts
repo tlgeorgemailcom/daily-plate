@@ -14561,5 +14561,48 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'kofta', label: 'Kofta', cookingMethod: '', yieldFactorWater: 0.75 }
     ],
+  },
+  {
+    id: 'ENTR_072',
+    name: 'Lamb Greek Souvlaki',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 307,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 plate (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":433.3,"pro":46.2,"fat":25.6,"carb":2.6,"fib":0.6,"h2o":134.6,"sug":0.3,"perServing":{"cal":433.3,"pro":46.2,"fat":25.6,"carb":2.6,"fib":0.6,"h2o":134.6,"sug":0.3,"AddedSugars":0.0,"IntrinsicSugars":0.3},"micros":{"vitaminA":0.32,"vitaminC":1.25,"vitaminD":0.0,"vitaminE":0.93,"vitaminK":6.04,"vitaminB6":0.14,"vitaminB12":2.48,"thiamin":0.1,"riboflavin":0.23,"niacin":5.11,"folate":20.02,"calcium":20.09,"iron":2.13,"magnesium":29.82,"phosphorus":205.28,"potassium":321.69,"sodium":343.74,"zinc":4.46,"copper":0.14,"selenium":24.58,"cholesterol":69.42,"saturatedFat":2.91,"monoFat":6.92,"polyFat":0.89,"omega3":0.0,"omega6":0.0},"gramsPerServing":212.4,"servings":4,"per100g":{"Energy_KCal":204.04,"Water":63.4,"Protein":21.74,"TotalLipidFat":12.04,"Carbohydrate":1.21,"FiberTotalDietary":0.26,"SugarsTotal":0.17,"Cholesterol":69.42,"FattyAcids_totalSaturated":2.91,"FattyAcids_totalMonounsaturated":6.92,"FattyAcids_totalPolyunsaturated":0.89,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.32,"Retinol":0.0,"Carotene_beta":3.85,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.93,"VitaminK_phylloquinone":6.04,"VitaminC_totalAscorbicAcid":1.25,"Thiamin":0.1,"Riboflavin":0.23,"Niacin":5.11,"PantothenicAcid":0.62,"VitaminB6":0.14,"Folate_total":20.02,"Folate_food":20.02,"Folate_DFE":20.02,"FolicAcid":0.0,"VitaminB12":2.48,"Choline_total":0.69,"Betaine":0.06,"LuteinZeaxanthin":6.28,"Lycopene":0.02,"Calcium_Ca":20.09,"Iron_Fe":2.13,"Magnesium_Mg":29.82,"Phosphorus_P":205.28,"Potassium_K":321.69,"Sodium_Na":343.74,"Zinc_Zn":4.46,"Copper_Cu":0.14,"Manganese_Mn":0.08,"Selenium_Se":24.58,"Tryptophan":0.25,"Threonine":0.92,"Isoleucine":1.04,"Leucine":1.69,"Lysine":1.91,"Methionine":0.55,"Cystine":0.22,"Phenylalanine":0.88,"Tyrosine":0.72,"Valine":1.17,"Arginine":1.29,"Histidine":0.69,"Alanine":1.3,"AsparticAcid":1.9,"GlutamicAcid":3.15,"Glycine":1.05,"Proline":0.91,"Serine":0.81,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.17},"addedSugars":0.0,"intrinsicSugars":0.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.75,"yieldFactorFat":1.0,"sources":[{"ndb":"17059","name":"Lamb, domestic, cubed for stew or kabob (leg and shoulder), separable lean only, trimmed to 1/4\" fat, raw","grams":226.8},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":13.5},{"ndb":"9152","name":"Lemon juice, raw","grams":11.2},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.9},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3}],"sections":[{"section_key":"souvlaki","section_label":"Souvlaki","prep_method":"raw","cook_method":"grilled","cooking_method":"grilled","cooking_method_normalized":"grilled","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":1028.95,"raw_water_grams":718.05,"raw_fat_grams":102.26,"raw_protein_grams":184.71,"raw_carb_grams":10.29,"final_grams":849.44}],"cookingMethod":"grilled"},
+    recipeIngredients: [
+      { name: 'Lamb Greek Souvlaki', quantity: 'custom (g)', foodWord: 'LAMBSOUVLAKI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'lamb (cubed for kabobs)', quantity: '2 lb', section: 'souvlaki', ndbNo: '17059', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'olive oil', quantity: '1/4 cup', section: 'souvlaki', ndbNo: '4053', portionDesc: 'g', portionGrams: 54.0 },
+      { name: 'lemon juice', quantity: '3 tbsp', section: 'souvlaki', ndbNo: '9152', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'garlic', quantity: '4 cloves', section: 'souvlaki', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'dried oregano', quantity: '2 tsp', section: 'souvlaki', ndbNo: '2027', portionDesc: 'g', portionGrams: 3.6 },
+      { name: 'salt', quantity: '1 tsp', section: 'souvlaki', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/2 tsp', section: 'souvlaki', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
+    ],
+    recipeInstructions: [
+      'In a bowl, whisk together olive oil, lemon juice, garlic, oregano, salt, and pepper to make the marinade.',
+      'Add lamb cubes and toss to coat. Cover and marinate in the refrigerator at least 2 hours, or overnight.',
+      'Preheat grill to medium-high heat. Thread lamb onto metal or soaked wooden skewers, 4 to 5 pieces per skewer.',
+      'Grill skewers 3 to 4 minutes per side (12 to 14 minutes total), turning every few minutes, until well-seared and an instant-read thermometer reads 145°F for medium.',
+      'Transfer to a plate and rest 5 minutes before serving.',
+      'Serve with warm pita, tzatziki sauce, sliced tomatoes, and onion (not included).'
+    ],
+    sections: [
+      { key: 'souvlaki', label: 'Souvlaki', cookingMethod: '', yieldFactorWater: 0.75 }
+    ],
   }
 ];
