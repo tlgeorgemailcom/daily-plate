@@ -11320,7 +11320,7 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Preheat oven to 400°F. Peel and quarter the potatoes. Add to a pot of cold salted water, bring to a boil, and cook 15 to 20 minutes until completely tender when pierced with a fork.',
       'While the potatoes cook, heat olive oil in a large oven-safe skillet or Dutch oven over medium-high heat. Add the ground beef and cook, breaking it apart, until no pink remains. Tilt the pan and spoon off excess fat.',
-      'Add onion, carrot, and celery to the beef. Cook 5 to 7 minutes, stirring occasionally, until the vegetables soften. Add the garlic and cook 1 minute more.',
+      'Add finely chopped onion, finely chopped carrot, and finely chopped celery to the beef. Cook 5 to 7 minutes, stirring occasionally, until the vegetables soften. Add the minced garlic and cook 1 minute more.',
       'Sprinkle flour over the mixture and stir to coat. Add tomato paste and cook 1 minute. Pour in beef broth and Worcestershire sauce. Add thyme, rosemary, salt, and pepper. Stir to combine.',
       'Simmer uncovered 8 to 10 minutes until the filling thickens to a gravy consistency. Remove from heat and stir in the frozen peas. Remove the rosemary sprig.',
       'Drain the potatoes and return to the pot. Add butter, milk, egg, salt, and pepper. Mash until smooth and creamy.',
