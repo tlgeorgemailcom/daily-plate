@@ -14594,7 +14594,7 @@ export const LEVELS: Level[] = [
       { name: 'ground black pepper', quantity: '1/2 tsp', section: 'souvlaki', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
     ],
     recipeInstructions: [
-      'In a bowl, whisk together olive oil, lemon juice, garlic, oregano, salt, and pepper to make the marinade.',
+      'In a bowl, whisk together olive oil, lemon juice, minced garlic, oregano, salt, and pepper to make the marinade.',
       'Add lamb cubes and toss to coat. Cover and marinate in the refrigerator at least 2 hours, or overnight.',
       'Preheat grill to medium-high heat. Thread lamb onto metal or soaked wooden skewers, 4 to 5 pieces per skewer.',
       'Grill skewers 3 to 4 minutes per side (12 to 14 minutes total), turning every few minutes, until well-seared and an instant-read thermometer reads 145°F for medium.',
