@@ -14398,7 +14398,7 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'In a bowl, combine chicken thighs with yogurt, cumin, coriander, turmeric, paprika, cayenne, and salt. Toss to coat and marinate at least 30 minutes (or overnight in the refrigerator).',
       'Heat olive oil in a large skillet or Dutch oven over medium-high heat. Add marinated chicken in batches and sear 3 to 4 minutes per side until charred at the edges and an instant-read thermometer reads 165°F. Transfer to a plate and cut into bite-size pieces.',
-      'Reduce heat to medium. Add butter to the same pan. Add onion and cook 8 to 10 minutes until golden. Add garlic and ginger; cook 1 minute until fragrant.',
+      'Reduce heat to medium. Add butter to the same pan. Add finely diced onion and cook 8 to 10 minutes until golden. Add minced garlic and ginger; cook 1 minute until fragrant.',
       'Add cumin, coriander, turmeric, paprika, cardamom, cinnamon, and cayenne. Stir 30 seconds to toast the spices.',
       'Pour in crushed tomatoes and simmer 10 minutes, stirring occasionally, until sauce darkens and thickens.',
       'Stir in heavy cream and simmer 5 minutes until sauce is rich and smooth. Season with salt.',
