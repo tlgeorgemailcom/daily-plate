@@ -10937,7 +10937,7 @@ export const LEVELS: Level[] = [
     ],
     recipeInstructions: [
       'Heat olive oil in a large heavy pot or Dutch oven over medium-high heat. Add the ground beef and cook, breaking it up, until browned, about 8 minutes. Drain excess fat if desired.',
-      'Add the onion, carrot, and celery (soffritto) to the pot. Cook, stirring occasionally, until softened, about 8 minutes. Add the garlic and cook 1 minute more.',
+      'Add the finely diced onion, carrot, and celery to the pot. Cook, stirring occasionally, until softened, about 8 minutes. Add the crushed garlic and cook 1 minute more.',
       'Add the tomato paste and stir into the meat, cooking 2 minutes until it darkens slightly.',
       'Pour in the white wine and stir, scraping up any browned bits. Cook until the wine is mostly absorbed, about 3 minutes.',
       'Add the crushed tomatoes, beef broth, milk, oregano, basil, bay leaf, sugar, salt, pepper, and nutmeg. Stir to combine.',
