@@ -11202,7 +11202,7 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Cut the beef chuck into 1 to 2 inch cubes. Season with salt and black pepper.',
       'Heat the olive oil in a Dutch oven or large pot over medium-high heat. Sear the beef in batches until browned on all sides. Remove and set aside.',
-      'In the same pot, add the onion and bell pepper. Cook for 4 to 5 minutes until softened. Add the garlic and cook for 1 more minute.',
+      'In the same pot, add the diced onion and diced bell pepper. Cook for 4 to 5 minutes until softened. Add the minced garlic and cook for 1 more minute.',
       'Sprinkle in the flour and stir to coat the vegetables. Cook for 1 to 2 minutes.',
       'Add the diced tomatoes, beef broth, cumin, chili powder, oregano, and paprika. Stir to combine.',
       'Return the seared beef to the pot. Bring to a boil, then reduce heat to low.',
