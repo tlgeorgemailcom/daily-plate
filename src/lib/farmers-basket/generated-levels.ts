@@ -14667,5 +14667,61 @@ export const LEVELS: Level[] = [
       { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.85 },
       { key: 'topping', label: 'Mashed potato topping', cookingMethod: '', yieldFactorWater: 0.96 }
     ],
+  },
+  {
+    id: 'ENTR_074',
+    name: 'Lamb Rogan Josh',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 309,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":523.6,"pro":53.8,"fat":25.6,"carb":20.0,"fib":4.8,"h2o":247.7,"sug":8.8,"perServing":{"cal":523.6,"pro":53.8,"fat":25.6,"carb":20.0,"fib":4.8,"h2o":247.7,"sug":8.8,"AddedSugars":0.0,"IntrinsicSugars":8.8},"micros":{"vitaminA":34.99,"vitaminC":1.9,"vitaminD":0.0,"vitaminE":0.6,"vitaminK":1.8,"vitaminB6":0.12,"vitaminB12":1.59,"thiamin":0.07,"riboflavin":0.19,"niacin":2.7,"folate":14.78,"calcium":39.48,"iron":1.58,"magnesium":23.51,"phosphorus":138.59,"potassium":261.57,"sodium":279.47,"zinc":2.48,"copper":0.12,"selenium":15.86,"cholesterol":50.58,"saturatedFat":3.34,"monoFat":2.62,"polyFat":0.49,"omega3":0.0,"omega6":0.03},"gramsPerServing":353.2,"servings":4,"per100g":{"Energy_KCal":148.26,"Water":70.13,"Protein":15.25,"TotalLipidFat":7.24,"Carbohydrate":5.67,"FiberTotalDietary":1.36,"SugarsTotal":2.49,"Cholesterol":50.58,"FattyAcids_totalSaturated":3.34,"FattyAcids_totalMonounsaturated":2.62,"FattyAcids_totalPolyunsaturated":0.49,"LinoleicAcid":0.03,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":34.99,"Retinol":20.31,"Carotene_beta":155.45,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.6,"VitaminK_phylloquinone":1.8,"VitaminC_totalAscorbicAcid":1.9,"Thiamin":0.07,"Riboflavin":0.19,"Niacin":2.7,"PantothenicAcid":0.42,"VitaminB6":0.12,"Folate_total":14.78,"Folate_food":14.78,"Folate_DFE":14.78,"FolicAcid":0.0,"VitaminB12":1.59,"Choline_total":6.64,"Betaine":0.09,"LuteinZeaxanthin":97.86,"Lycopene":780.77,"Calcium_Ca":39.48,"Iron_Fe":1.58,"Magnesium_Mg":23.51,"Phosphorus_P":138.59,"Potassium_K":261.57,"Sodium_Na":279.47,"Zinc_Zn":2.48,"Copper_Cu":0.12,"Manganese_Mn":0.27,"Selenium_Se":15.86,"Tryptophan":0.15,"Threonine":0.56,"Isoleucine":0.63,"Leucine":1.02,"Lysine":1.16,"Methionine":0.33,"Cystine":0.15,"Phenylalanine":0.54,"Tyrosine":0.44,"Valine":0.72,"Arginine":0.8,"Histidine":0.42,"Alanine":0.79,"AsparticAcid":1.21,"GlutamicAcid":2.04,"Glycine":0.64,"Proline":0.56,"Serine":0.5,"omega3":0.0,"omega6":0.03,"AddedSugars":0.0,"IntrinsicSugars":2.49},"addedSugars":0.0,"intrinsicSugars":8.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"17059","name":"Lamb, domestic, cubed for stew or kabob (leg and shoulder), separable lean only, trimmed to 1/4\" fat, raw","grams":225.0},{"ndb":"11282","name":"Onions, raw","grams":80.0},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11216","name":"Ginger root, raw","grams":4.5},{"ndb":"1003","name":"Butter oil, anhydrous","grams":9.6},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":60.0},{"ndb":"1293","name":"Yogurt, Greek, plain, whole milk","grams":60.0},{"ndb":"2028","name":"Spices, paprika","grams":1.7},{"ndb":"2013","name":"Spices, coriander seed","grams":1.4},{"ndb":"2014","name":"Spices, cumin seed","grams":1.0},{"ndb":"2006","name":"Spices, cardamom","grams":0.5},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.7},{"ndb":"2011","name":"Spices, cloves, ground","grams":0.3},{"ndb":"2043","name":"Spices, turmeric, ground","grams":0.8},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.2},{"ndb":"2004","name":"Spices, bay leaf","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":2.2},{"ndb":"14411","name":"Water, tap, drinking","grams":29.6}],"sections":[{"section_key":"curry","section_label":"Curry","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.66,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":18,"raw_grams":1922.95,"raw_water_grams":1500.95,"raw_fat_grams":102.3,"raw_protein_grams":215.37,"raw_carb_grams":80.14,"final_grams":1412.63}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Lamb Rogan Josh', quantity: 'custom (g)', foodWord: 'ROGANJOSH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'lamb (cubed for kabobs)', quantity: '2 lb, cut into 1½-inch pieces', section: 'curry', ndbNo: '17059', portionDesc: 'g', portionGrams: 900.0 },
+      { name: 'onion', quantity: '2 large, finely diced', section: 'curry', ndbNo: '11282', portionDesc: 'g', portionGrams: 320.0 },
+      { name: 'garlic', quantity: '4 cloves, minced', section: 'curry', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'fresh ginger', quantity: '3 tbsp, freshly grated', section: 'curry', ndbNo: '11216', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'ghee', quantity: '3 tbsp', section: 'curry', ndbNo: '1003', portionDesc: 'g', portionGrams: 38.4 },
+      { name: 'canned crushed tomatoes', quantity: '1 cup', section: 'curry', ndbNo: '11693', portionDesc: 'g', portionGrams: 240.0 },
+      { name: 'Greek whole milk yogurt', quantity: '1 cup, room temperature', section: 'curry', ndbNo: '1293', portionDesc: 'g', portionGrams: 240.0 },
+      { name: 'paprika', quantity: '3 tsp (Kashmiri chili proxy)', section: 'curry', ndbNo: '2028', portionDesc: 'g', portionGrams: 6.9 },
+      { name: 'ground coriander', quantity: '3 tsp', section: 'curry', ndbNo: '2013', portionDesc: 'g', portionGrams: 5.4 },
+      { name: 'ground cumin', quantity: '2 tsp', section: 'curry', ndbNo: '2014', portionDesc: 'g', portionGrams: 4.0 },
+      { name: 'ground cardamom', quantity: '1 tsp', section: 'curry', ndbNo: '2006', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'ground cinnamon', quantity: '1 tsp', section: 'curry', ndbNo: '2010', portionDesc: 'g', portionGrams: 2.6 },
+      { name: 'ground cloves', quantity: '½ tsp', section: 'curry', ndbNo: '2011', portionDesc: 'g', portionGrams: 1.05 },
+      { name: 'ground turmeric', quantity: '1 tsp', section: 'curry', ndbNo: '2043', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'cayenne pepper', quantity: '½ tsp', section: 'curry', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.9 },
+      { name: 'bay leaf', quantity: '2 leaves', section: 'curry', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'salt', quantity: '1½ tsp', section: 'curry', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'water', quantity: '½ cup', section: 'curry', ndbNo: '14411', portionDesc: 'g', portionGrams: 118.5 }
+    ],
+    recipeInstructions: [
+      'Pat the lamb dry and season with salt and pepper. In a large heavy-bottomed pot or Dutch oven, heat 2 tablespoons of ghee over high heat. Working in batches, brown the lamb on all sides, about 3 to 4 minutes per batch. Transfer to a plate and set aside.',
+      'Reduce heat to medium. Add the remaining 1 tablespoon of ghee to the pot. Add the finely diced onion and cook, stirring occasionally, for 12 to 15 minutes until deep golden brown.',
+      'Add the minced garlic, freshly grated ginger, paprika, ground coriander, ground cumin, ground cardamom, ground cinnamon, ground cloves, ground turmeric, and cayenne. Stir constantly for 1 to 2 minutes until fragrant.',
+      'Add the crushed tomatoes and stir to combine with the spice mixture. Cook for 3 to 4 minutes until the oil begins to separate from the masala.',
+      'Return the browned lamb to the pot along with any accumulated juices. Add the water and the bay leaves. Stir to coat the lamb with the sauce.',
+      'Bring to a boil, then reduce heat to low. Cover and simmer for 45 to 60 minutes, stirring occasionally, until the lamb is tender.',
+      'Remove from heat and let cool for 2 to 3 minutes. Stir in the room-temperature yogurt gradually to prevent curdling. Return to low heat and simmer uncovered for 5 minutes.',
+      'Remove and discard the bay leaves. Taste and adjust seasoning. Serve over basmati rice or with naan bread.'
+    ],
+    sections: [
+      { key: 'curry', label: 'Curry', cookingMethod: '', yieldFactorWater: 0.66 }
+    ],
   }
 ];
