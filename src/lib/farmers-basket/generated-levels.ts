@@ -11526,7 +11526,7 @@ export const LEVELS: Level[] = [
       'Make or prepare the Dijon-Style Mustard (see the Dijon-Style Mustard recipe). Set aside.',
       'Pound each 6oz steak to a thickness of 3/4 to 1 inch. Season both sides generously with salt and pepper.',
       'Melt 2 tablespoons of butter in a large skillet over high heat until foaming subsides. Sear the steaks 2 to 3 minutes per side for medium-rare. Remove to a plate and tent loosely with foil.',
-      'Reduce heat to medium. Add the remaining 1 tablespoon of butter to the pan. Add shallots and garlic, cook 1 minute. Add the mushrooms and cook 3 to 4 minutes until golden and most of the moisture has evaporated.',
+      'Reduce heat to medium. Add the remaining 1 tablespoon of butter to the pan. Add shallots and minced garlic, cook 1 minute. Add the sliced 1/4 inch thick mushrooms and cook 3 to 4 minutes until golden and most of the moisture has evaporated.',
       'Remove the pan from heat. Add the brandy carefully. Return to heat and tilt the pan to flambé, or let the alcohol cook off for 1 to 2 minutes until the sharp aroma subsides.',
       'Add the beef broth and Worcestershire sauce. Stir, scraping up any browned bits. Simmer 2 minutes. Add the heavy cream and Dijon mustard. Stir to combine and simmer 3 to 4 minutes until the sauce thickens enough to coat a spoon.',
       'Return the steaks and any accumulated juices to the pan. Spoon the sauce over them and warm through 1 minute. Taste and adjust seasoning.',
