@@ -11049,7 +11049,7 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Remove the stems and seeds from the ancho and pasilla chiles. Toast them in a dry skillet over medium heat for 30 seconds per side until fragrant.',
       'Soak the toasted chiles in 1 cup of the hot beef broth for 20 minutes until softened.',
-      'Transfer the soaked chiles and their soaking liquid to a blender. Add the tomatoes, onion, garlic, cumin, oregano, thyme, cinnamon, cloves, and apple cider vinegar. Blend until smooth.',
+      'Transfer the soaked chiles and their soaking liquid to a blender. Add the tomatoes, coarsely chopped onion, whole garlic cloves, cumin, oregano, thyme, cinnamon, cloves, and apple cider vinegar. Blend until smooth.',
       'Cut the beef chuck into 2-inch cubes. Season generously with salt and black pepper.',
       'Set a Dutch oven or pot over medium-high heat with olive oil. Add the meat and sear on all sides until browned. Work in batches. Once all meat is seared, strain the blended sauce into the pot with the seared meat.',
       'Add the remaining beef broth, bay leaves, and additional salt to taste. Stir to combine.',
