@@ -14163,7 +14163,7 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'In a bowl, combine chicken thighs with yogurt, turmeric, and salt. Toss to coat and marinate at least 30 minutes (or overnight in the refrigerator).',
       'Heat olive oil in a large skillet or Dutch oven over medium-high heat. Add marinated chicken and sear 3 to 4 minutes per side until lightly browned. Transfer to a plate; chicken need not be fully cooked through.',
-      'In the same pan over medium heat, add onion and cook 8 to 10 minutes, stirring often, until soft and golden. Add garlic and ginger; cook 1 minute until fragrant.',
+      'In the same pan over medium heat, add coarsely chopped onion and cook 8 to 10 minutes, stirring often, until soft and golden. Add minced garlic and grated ginger; cook 1 minute until fragrant.',
       'Add coriander, cumin, turmeric, cardamom, cinnamon, and black pepper. Stir 30 seconds to toast the spices.',
       'Transfer the onion-spice mixture to a blender with the cashews and a splash of coconut milk. Blend until smooth.',
       'Return the blended sauce to the pan. Add remaining coconut milk, heavy cream, and salt. Stir to combine and bring to a gentle simmer.',
