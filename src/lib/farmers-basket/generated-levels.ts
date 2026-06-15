@@ -14784,5 +14784,67 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'tagine', label: 'Tagine', cookingMethod: '', yieldFactorWater: 0.75 }
     ],
+  },
+  {
+    id: 'ENTR_076',
+    name: 'Lamb Moussaka',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 311,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 6)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":657.5,"pro":28.2,"fat":49.2,"carb":24.5,"fib":6.5,"h2o":297.4,"sug":12.6,"perServing":{"cal":657.5,"pro":28.2,"fat":49.2,"carb":24.5,"fib":6.5,"h2o":297.4,"sug":12.6,"AddedSugars":0.0,"IntrinsicSugars":12.6},"micros":{"vitaminA":31.81,"vitaminC":1.24,"vitaminD":14.28,"vitaminE":0.62,"vitaminK":4.68,"vitaminB6":0.08,"vitaminB12":0.67,"thiamin":0.05,"riboflavin":0.12,"niacin":1.71,"folate":16.02,"calcium":49.44,"iron":0.89,"magnesium":17.41,"phosphorus":88.49,"potassium":222.52,"sodium":291.63,"zinc":1.21,"copper":0.09,"selenium":8.07,"cholesterol":43.29,"saturatedFat":5.03,"monoFat":5.19,"polyFat":0.77,"omega3":0.01,"omega6":0.1},"gramsPerServing":406.8,"servings":6,"per100g":{"Energy_KCal":161.63,"Water":73.12,"Protein":6.93,"TotalLipidFat":12.1,"Carbohydrate":6.02,"FiberTotalDietary":1.6,"SugarsTotal":3.09,"Cholesterol":43.29,"FattyAcids_totalSaturated":5.03,"FattyAcids_totalMonounsaturated":5.19,"FattyAcids_totalPolyunsaturated":0.77,"LinoleicAcid":0.1,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":31.81,"Retinol":29.9,"Carotene_beta":20.42,"VitaminD":14.28,"VitaminE_alphaTocopherol":0.62,"VitaminK_phylloquinone":4.68,"VitaminC_totalAscorbicAcid":1.24,"Thiamin":0.05,"Riboflavin":0.12,"Niacin":1.71,"PantothenicAcid":0.37,"VitaminB6":0.08,"Folate_total":16.02,"Folate_food":14.73,"Folate_DFE":16.91,"FolicAcid":1.97,"VitaminB12":0.67,"Choline_total":34.67,"Betaine":3.01,"LuteinZeaxanthin":37.26,"Lycopene":401.68,"Calcium_Ca":49.44,"Iron_Fe":0.89,"Magnesium_Mg":17.41,"Phosphorus_P":88.49,"Potassium_K":222.52,"Sodium_Na":291.63,"Zinc_Zn":1.21,"Copper_Cu":0.09,"Manganese_Mn":0.17,"Selenium_Se":8.07,"Tryptophan":0.08,"Threonine":0.28,"Isoleucine":0.32,"Leucine":0.54,"Lysine":0.56,"Methionine":0.17,"Cystine":0.07,"Phenylalanine":0.3,"Tyrosine":0.24,"Valine":0.38,"Arginine":0.38,"Histidine":0.2,"Alanine":0.37,"AsparticAcid":0.63,"GlutamicAcid":1.15,"Glycine":0.28,"Proline":0.36,"Serine":0.3,"omega3":0.01,"omega6":0.1,"AddedSugars":0.0,"IntrinsicSugars":3.09},"addedSugars":0.0,"intrinsicSugars":12.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"11209","name":"Eggplant, raw","grams":151.2},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"17224","name":"Lamb, ground, raw","grams":113.4},{"ndb":"11282","name":"Onions, raw","grams":26.7},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":2.3},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":40.0},{"ndb":"14096","name":"Alcoholic beverage, wine, table, red","grams":14.7},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.4},{"ndb":"2001","name":"Spices, allspice, ground","grams":0.3},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.3},{"ndb":"2004","name":"Spices, bay leaf","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":0.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"1145","name":"Butter, without salt","grams":9.5},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":5.2},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":81.3},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":16.7},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":4.2},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":0.5},{"ndb":"2032","name":"Spices, pepper, white","grams":0.1}],"sections":[{"section_key":"eggplant","section_label":"Eggplant","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":957.0,"raw_water_grams":837.36,"raw_fat_grams":42.43,"raw_protein_grams":8.89,"raw_carb_grams":53.34,"final_grams":747.66},{"section_key":"meat_sauce","section_label":"Meat Sauce","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":12,"raw_grams":1202.58,"raw_water_grams":844.21,"raw_fat_grams":174.17,"raw_protein_grams":119.56,"raw_carb_grams":43.9,"final_grams":1050.62},{"section_key":"bechamel","section_label":"Béchamel","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":705.75,"raw_water_grams":527.57,"raw_fat_grams":78.62,"raw_protein_grams":40.71,"raw_carb_grams":49.78,"final_grams":642.44}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Lamb Moussaka', quantity: 'custom (g)', foodWord: 'MOUSSAKA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'eggplant', quantity: '2 lb, sliced ¼-inch thick', section: 'eggplant', ndbNo: '11209', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'olive oil', quantity: '3 tbsp', section: 'eggplant', ndbNo: '4053', portionDesc: 'g', portionGrams: 40.8 },
+      { name: 'salt', quantity: '1½ tsp', section: 'eggplant', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'ground lamb', quantity: '1½ lb', section: 'meat_sauce', ndbNo: '17224', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'onion', quantity: '1 large, finely diced', section: 'meat_sauce', ndbNo: '11282', portionDesc: 'g', portionGrams: 160.0 },
+      { name: 'garlic', quantity: '3 cloves, minced', section: 'meat_sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'meat_sauce', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'canned crushed tomatoes', quantity: '1 cup', section: 'meat_sauce', ndbNo: '11693', portionDesc: 'g', portionGrams: 240.0 },
+      { name: 'red wine', quantity: '3 fl oz', section: 'meat_sauce', ndbNo: '14096', portionDesc: 'g', portionGrams: 88.2 },
+      { name: 'ground cinnamon', quantity: '1 tsp', section: 'meat_sauce', ndbNo: '2010', portionDesc: 'g', portionGrams: 2.6 },
+      { name: 'allspice', quantity: '1 tsp', section: 'meat_sauce', ndbNo: '2001', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'dried oregano', quantity: '1 tsp', section: 'meat_sauce', ndbNo: '2027', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'bay leaf', quantity: '2 leaves', section: 'meat_sauce', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'salt', quantity: '½ tsp', section: 'meat_sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'meat_sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'unsalted butter', quantity: '4 tbsp', section: 'bechamel', ndbNo: '1145', portionDesc: 'g', portionGrams: 56.8 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '¼ cup', section: 'bechamel', ndbNo: '20581', portionDesc: 'g', portionGrams: 31.25 },
+      { name: 'whole milk', quantity: '2 cups', section: 'bechamel', ndbNo: '1077', portionDesc: 'g', portionGrams: 488.0 },
+      { name: 'large egg', quantity: '2 large', section: 'bechamel', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'Parmesan cheese', quantity: '¼ cup, freshly grated', section: 'bechamel', ndbNo: '1033', portionDesc: 'g', portionGrams: 25.0 },
+      { name: 'ground nutmeg', quantity: '½ tsp', section: 'bechamel', ndbNo: '2025', portionDesc: 'g', portionGrams: 1.1 },
+      { name: 'salt', quantity: '½ tsp', section: 'bechamel', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'white pepper', quantity: '¼ tsp', section: 'bechamel', ndbNo: '2032', portionDesc: 'g', portionGrams: 0.6 }
+    ],
+    recipeInstructions: [
+      'Preheat the oven to 400°F. Arrange the sliced eggplant in a single layer on two oiled baking sheets. Brush both sides with olive oil and season with salt. Roast for 20 to 25 minutes, flipping once halfway through, until golden and tender. Set aside. Reduce oven temperature to 375°F.',
+      'Heat 1 tablespoon of olive oil in a large skillet over medium-high heat. Add the lamb and cook, breaking it up with a spoon, for 6 to 8 minutes until browned. Drain any excess fat and set the lamb aside.',
+      'In the same skillet over medium heat, add the finely diced onion and cook for 5 minutes until softened. Add the minced garlic and cook for 1 minute.',
+      'Return the lamb to the skillet. Add the crushed tomatoes, red wine, ground cinnamon, ground allspice, dried oregano, and bay leaves. Season with salt and pepper. Simmer over medium-low heat for 15 to 20 minutes until the sauce thickens. Remove and discard the bay leaves.',
+      'Make the béchamel: melt the butter in a medium saucepan over medium heat. Whisk in the flour and cook for 1 to 2 minutes. Gradually whisk in the milk and cook, stirring constantly, for 6 to 8 minutes until thickened. Remove from heat. Whisk in the eggs one at a time, then stir in the freshly grated Parmesan, ground nutmeg, salt, and white pepper.',
+      'Lightly oil a 9×13-inch baking dish. Arrange half the roasted eggplant slices in an even layer. Spread all of the meat sauce over the eggplant. Top with the remaining eggplant slices. Pour the béchamel evenly over the top and smooth with a spatula.',
+      'Bake at 375°F for 40 to 45 minutes until the top is set and golden brown. Let rest for 15 to 20 minutes before cutting. Cut into 6 portions and serve.'
+    ],
+    sections: [
+      { key: 'eggplant', label: 'Eggplant', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'meat_sauce', label: 'Meat Sauce', cookingMethod: '', yieldFactorWater: 0.82 },
+      { key: 'bechamel', label: 'Béchamel', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];
