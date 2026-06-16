@@ -152,7 +152,8 @@ Pork Egg Roll
 Pork Egg Roll Bowls
 Pork Milanese
 Pork Baby Back Ribs
-Pork Ribs
+Pork Spareribs
+Pork Country-Style Ribs
 Pork Schnitzel
 Pork Tenderloin Stuffed
 Pork & Beef Swedish Meatballs

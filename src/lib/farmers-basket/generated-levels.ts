@@ -15459,5 +15459,54 @@ export const LEVELS: Level[] = [
       { key: 'ribs', label: 'Baby Back Ribs', cookingMethod: '', yieldFactorWater: 0.73 },
       { key: 'bbq_sauce', label: 'BBQ Sauce', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'ENTR_090',
+    name: 'Pork Spareribs',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 325,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1/4 rack (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":524.9,"pro":27.6,"fat":40.6,"carb":12.1,"fib":2.0,"h2o":83.7,"sug":8.3,"perServing":{"cal":524.9,"pro":27.6,"fat":40.6,"carb":12.1,"fib":2.0,"h2o":83.7,"sug":8.3,"AddedSugars":6.7,"IntrinsicSugars":1.6},"micros":{"vitaminA":42.42,"vitaminC":0.75,"vitaminD":86.56,"vitaminE":1.14,"vitaminK":2.56,"vitaminB6":0.48,"vitaminB12":0.34,"thiamin":0.24,"riboflavin":0.27,"niacin":4.29,"folate":2.51,"calcium":31.65,"iron":1.65,"magnesium":26.36,"phosphorus":158.72,"potassium":366.58,"sodium":653.13,"zinc":2.68,"copper":0.13,"selenium":23.45,"cholesterol":80.1,"saturatedFat":7.6,"monoFat":8.24,"polyFat":3.34,"omega3":0.07,"omega6":2.67},"gramsPerServing":169.8,"servings":4,"per100g":{"Energy_KCal":309.14,"Water":49.28,"Protein":16.22,"TotalLipidFat":23.89,"Carbohydrate":7.12,"FiberTotalDietary":1.17,"SugarsTotal":4.9,"Cholesterol":80.1,"FattyAcids_totalSaturated":7.6,"FattyAcids_totalMonounsaturated":8.24,"FattyAcids_totalPolyunsaturated":3.34,"LinoleicAcid":2.67,"alphaLinolenicAcid":0.07,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":42.42,"Retinol":0.01,"Carotene_beta":428.1,"VitaminD":86.56,"VitaminE_alphaTocopherol":1.14,"VitaminK_phylloquinone":2.56,"VitaminC_totalAscorbicAcid":0.75,"Thiamin":0.24,"Riboflavin":0.27,"Niacin":4.29,"PantothenicAcid":0.61,"VitaminB6":0.48,"Folate_total":2.51,"Folate_food":2.51,"Folate_DFE":2.51,"FolicAcid":0.0,"VitaminB12":0.34,"Choline_total":57.35,"Betaine":2.49,"LuteinZeaxanthin":201.04,"Lycopene":1948.68,"Calcium_Ca":31.65,"Iron_Fe":1.65,"Magnesium_Mg":26.36,"Phosphorus_P":158.72,"Potassium_K":366.58,"Sodium_Na":653.13,"Zinc_Zn":2.68,"Copper_Cu":0.13,"Manganese_Mn":0.13,"Selenium_Se":23.45,"Tryptophan":0.16,"Threonine":0.71,"Isoleucine":0.78,"Leucine":1.35,"Lysine":1.46,"Methionine":0.43,"Cystine":0.16,"Phenylalanine":0.67,"Tyrosine":0.6,"Valine":0.83,"Arginine":1.08,"Histidine":0.67,"Alanine":0.93,"AsparticAcid":1.62,"GlutamicAcid":2.66,"Glycine":0.72,"Proline":0.69,"Serine":0.68,"omega3":0.07,"omega6":2.67,"AddedSugars":3.93,"IntrinsicSugars":0.96},"addedSugars":6.7,"intrinsicSugars":1.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"10088","name":"Pork, fresh, spareribs, separable lean and fat, raw","grams":170.0},{"ndb":"2028","name":"Spices, paprika","grams":2.1},{"ndb":"19334","name":"Sugars, brown","grams":3.5},{"ndb":"2009","name":"Spices, chili powder","grams":1.1},{"ndb":"2020","name":"Spices, garlic powder","grams":0.8},{"ndb":"2026","name":"Spices, onion powder","grams":0.6},{"ndb":"2024","name":"Spices, mustard seed, ground","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":2.2},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1},{"ndb":"","name":"BBQ Sauce","grams":30.0}],"sections":[{"section_key":"ribs","section_label":"Spareribs","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.596,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":724.2,"raw_water_grams":408.51,"raw_fat_grams":161.55,"raw_protein_grams":108.32,"raw_carb_grams":25.8,"final_grams":559.16},{"section_key":"bbq_sauce","section_label":"BBQ Sauce","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":120.0,"raw_water_grams":91.19,"raw_fat_grams":0.7,"raw_protein_grams":1.86,"raw_carb_grams":22.56,"final_grams":120.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Pork Spareribs', quantity: 'custom (g)', foodWord: 'PORKSPARERIBS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'pork spareribs', quantity: '1 1/2 lb', section: 'ribs', ndbNo: '10088', portionDesc: 'g', portionGrams: 680.0 },
+      { name: 'paprika', quantity: '1 tbsp', section: 'ribs', ndbNo: '2028', portionDesc: 'g', portionGrams: 8.6 },
+      { name: 'brown sugar', quantity: '1 tbsp', section: 'ribs', ndbNo: '19334', portionDesc: 'g', portionGrams: 13.8 },
+      { name: 'chili powder', quantity: '1 1/2 tsp', section: 'ribs', ndbNo: '2009', portionDesc: 'g', portionGrams: 4.3 },
+      { name: 'garlic powder', quantity: '1 tsp', section: 'ribs', ndbNo: '2020', portionDesc: 'g', portionGrams: 3.1 },
+      { name: 'onion powder', quantity: '3/4 tsp', section: 'ribs', ndbNo: '2026', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'ground mustard', quantity: '1/2 tsp', section: 'ribs', ndbNo: '2024', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '1/2 tsp', section: 'ribs', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'salt', quantity: '1 1/2 tsp', section: 'ribs', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'cayenne pepper', quantity: '1/8 tsp', section: 'ribs', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.45 },
+      { name: 'BBQ Sauce', quantity: '1/2 cup BBQ Sauce (recipe)', section: 'bbq_sauce', foodWord: 'BBQSAUCE', portionDesc: 'g', portionGrams: 120.0, isDish: true, componentRef: 'SAUCE_026' }
+    ],
+    recipeInstructions: [
+      'Make or prepare the BBQ Sauce (see the BBQ Sauce recipe). Set aside.',
+      'Preheat the oven to 275°F (135°C). Line a large rimmed baking sheet with heavy-duty foil.',
+      'Flip the ribs meat-side down and use a butter knife or paper towel to grip and pull off the thin membrane from the back of the rack. Discard the membrane.',
+      'Mix the paprika, brown sugar, chili powder, garlic powder, onion powder, mustard, black pepper, salt, and cayenne in a small bowl to form the dry rub. Pat the ribs dry and coat all sides generously with the rub.',
+      'Wrap the rack tightly in foil, place on the prepared baking sheet meat-side up, and bake for 2½ to 3 hours until the meat is tender and starting to pull from the bone tips.',
+      'Carefully open the foil and drain off any accumulated juices. Brush the top generously with the BBQ sauce.',
+      'Increase the oven to 425°F (220°C) (or use the broiler), return the ribs uncovered for 10 to 15 minutes until the sauce caramelizes and sets. Let rest 5 minutes before cutting into individual ribs. Serve with coleslaw or potato salad (not included).'
+    ],
+    sections: [
+      { key: 'ribs', label: 'Spareribs', cookingMethod: '', yieldFactorWater: 0.596 },
+      { key: 'bbq_sauce', label: 'BBQ Sauce', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

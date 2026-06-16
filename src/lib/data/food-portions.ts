@@ -53625,6 +53625,34 @@ export const FOODS: Food[] = [
         "gm": 453.592
       }
     ]
+  },
+  {
+    "word": "PORKSPARERIBS",
+    "display": "Pork Spareribs",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "10088",
+    "desc": "Pork, fresh, spareribs, separable lean and fat, raw",
+    "cal": 277.0,
+    "pro": 15.47,
+    "fat": 23.4,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 59.75,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 3.0,
+        "desc": "oz",
+        "gm": 85.0
+      }
+    ]
   }
 ];
 
