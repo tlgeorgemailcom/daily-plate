@@ -15663,5 +15663,50 @@ export const LEVELS: Level[] = [
       { key: 'pan_sauce', label: 'Pan Sauce', cookingMethod: '', yieldFactorWater: 0.8 },
       { key: 'chicken_broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'ENTR_094',
+    name: 'Pork Shoulder',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 329,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":694.7,"pro":60.1,"fat":46.0,"carb":7.0,"fib":1.3,"h2o":141.6,"sug":3.7,"perServing":{"cal":694.7,"pro":60.1,"fat":46.0,"carb":7.0,"fib":1.3,"h2o":141.6,"sug":3.7,"AddedSugars":3.4,"IntrinsicSugars":0.3},"micros":{"vitaminA":20.44,"vitaminC":0.07,"vitaminD":37.05,"vitaminE":0.63,"vitaminK":1.78,"vitaminB6":0.49,"vitaminB12":1.06,"thiamin":0.51,"riboflavin":0.44,"niacin":4.77,"folate":0.77,"calcium":30.06,"iron":1.98,"magnesium":30.17,"phosphorus":255.25,"potassium":454.06,"sodium":525.86,"zinc":4.1,"copper":0.13,"selenium":34.34,"cholesterol":80.61,"saturatedFat":5.85,"monoFat":7.39,"polyFat":1.83,"omega3":0.06,"omega6":1.5},"gramsPerServing":261.7,"servings":4,"per100g":{"Energy_KCal":265.51,"Water":54.1,"Protein":22.99,"TotalLipidFat":17.58,"Carbohydrate":2.68,"FiberTotalDietary":0.48,"SugarsTotal":1.41,"Cholesterol":80.61,"FattyAcids_totalSaturated":5.85,"FattyAcids_totalMonounsaturated":7.39,"FattyAcids_totalPolyunsaturated":1.83,"LinoleicAcid":1.5,"alphaLinolenicAcid":0.06,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":20.44,"Retinol":2.21,"Carotene_beta":182.42,"VitaminD":37.05,"VitaminE_alphaTocopherol":0.63,"VitaminK_phylloquinone":1.78,"VitaminC_totalAscorbicAcid":0.07,"Thiamin":0.51,"Riboflavin":0.44,"Niacin":4.77,"PantothenicAcid":1.62,"VitaminB6":0.49,"Folate_total":0.77,"Folate_food":0.77,"Folate_DFE":0.77,"FolicAcid":0.0,"VitaminB12":1.06,"Choline_total":86.75,"Betaine":5.19,"LuteinZeaxanthin":114.85,"Lycopene":0.04,"Calcium_Ca":30.06,"Iron_Fe":1.98,"Magnesium_Mg":30.17,"Phosphorus_P":255.25,"Potassium_K":454.06,"Sodium_Na":525.86,"Zinc_Zn":4.1,"Copper_Cu":0.13,"Manganese_Mn":0.08,"Selenium_Se":34.34,"Tryptophan":0.24,"Threonine":1.02,"Isoleucine":1.11,"Leucine":1.94,"Lysine":2.11,"Methionine":0.63,"Cystine":0.24,"Phenylalanine":0.96,"Tyrosine":0.87,"Valine":1.19,"Arginine":1.53,"Histidine":0.98,"Alanine":1.34,"AsparticAcid":2.25,"GlutamicAcid":3.66,"Glycine":1.03,"Proline":0.94,"Serine":0.98,"omega3":0.06,"omega6":1.5,"AddedSugars":1.28,"IntrinsicSugars":0.13},"addedSugars":3.4,"intrinsicSugars":0.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"10080","name":"Pork, fresh, shoulder, (Boston butt), blade (steaks), separable lean and fat, raw","grams":340.2},{"ndb":"2028","name":"Spices, paprika","grams":2.1},{"ndb":"19334","name":"Sugars, brown","grams":3.5},{"ndb":"2020","name":"Spices, garlic powder","grams":1.6},{"ndb":"2014","name":"Spices, cumin seed","grams":1.0},{"ndb":"2030","name":"Spices, pepper, black","grams":0.6},{"ndb":"2047","name":"Salt, table","grams":3.0},{"ndb":"2026","name":"Spices, onion powder","grams":0.6},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4}],"sections":[{"section_key":"pork","section_label":"Pork Shoulder","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.6,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":1424.15,"raw_water_grams":943.75,"raw_fat_grams":184.04,"raw_protein_grams":240.57,"raw_carb_grams":28.05,"final_grams":1046.65}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Pork Shoulder', quantity: 'custom (g)', foodWord: 'PORKSHOULDER', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'pork shoulder', quantity: '3 lb boneless pork shoulder', section: 'pork', ndbNo: '10080', portionDesc: 'g', portionGrams: 1360.8 },
+      { name: 'paprika', quantity: '1 tbsp', section: 'pork', ndbNo: '2028', portionDesc: 'g', portionGrams: 8.6 },
+      { name: 'brown sugar', quantity: '1 tbsp', section: 'pork', ndbNo: '19334', portionDesc: 'g', portionGrams: 13.8 },
+      { name: 'garlic powder', quantity: '2 tsp', section: 'pork', ndbNo: '2020', portionDesc: 'g', portionGrams: 6.2 },
+      { name: 'ground cumin', quantity: '1 1/2 tsp', section: 'pork', ndbNo: '2014', portionDesc: 'g', portionGrams: 4.1 },
+      { name: 'ground black pepper', quantity: '1 tsp', section: 'pork', ndbNo: '2030', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'salt', quantity: '2 tsp', section: 'pork', ndbNo: '2047', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'onion powder', quantity: '3/4 tsp', section: 'pork', ndbNo: '2026', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'cayenne pepper', quantity: '1/8 tsp', section: 'pork', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.45 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'pork', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 }
+    ],
+    recipeInstructions: [
+      'Pat the pork shoulder dry with paper towels. Rub the olive oil all over the surface.',
+      'Combine the paprika, brown sugar, garlic powder, cumin, black pepper, salt, onion powder, and cayenne in a small bowl. Rub the spice mixture evenly over all surfaces of the pork. For best results, cover and refrigerate for at least 1 hour or overnight.',
+      'Heat the oven to 325°F. Place the pork fat-side up in a roasting pan or Dutch oven. Roast uncovered until the meat is very tender and pulls apart easily with a fork, 4 to 5 hours (internal temperature 195–205°F for pull-apart texture).',
+      'Transfer to a cutting board and let rest 20 to 30 minutes before slicing or pulling. Reserve the pan drippings for serving if desired.',
+      'Slice or pull the pork into large pieces. Serve with roasted vegetables, mashed potatoes, or over rice (not included).'
+    ],
+    sections: [
+      { key: 'pork', label: 'Pork Shoulder', cookingMethod: '', yieldFactorWater: 0.6 }
+    ],
   }
 ];
