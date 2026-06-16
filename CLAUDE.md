@@ -208,7 +208,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | `SAND_NNN` | 🔧 In progress | 67 (001–067) |
 | `SAUCE_NNN` | 🔧 In progress | 24 (001–024) |
 | `STOCK_NNN` | 🔧 In progress | 7 (001–007) |
-| `ENTR_NNN` | 🔧 In progress | 1 (001) |
+| `ENTR_NNN` | 🔧 In progress | 2 (001, 087) |
 | `SIDE_NNN` | 🔧 In progress | 26 (001–026) |
 
 ## Validation Rules
@@ -319,6 +319,7 @@ Planned BKFST order (standalone components first, composites last):
 | ID | Recipe | NDB | Notes |
 |---|---|---|---|
 | ENTR_001 | Chicken Fried Steak | (none) | Rule D ✅ — no canonical; steak section: sirloin_tip_raw(23061) 226.7g+flour(20581) 62.5g+egg_whole_raw(1123) 50g+paprika(2028)+garlic_powder(2020)+salt+black_pepper+vegetable_oil(4513) 27.2g absorbed; fried yfw=0.82 → 337.7g; gravy section: butter_unsalted(1145) 14.2g+flour(20581) 15.6g+milk_whole(1077) 244g+salt+black_pepper; boiled yfw=0.88 → 250.1g; cooked total 587.8g; 2 servings × 293.9g; 201.7 kcal·12.0P·11.2F·13.0C per 100g; dietary_category=all |
+| ENTR_087 | Pork Egg Roll Bowls | (none) | Rule D ✅ — no canonical; 2-section: rice (boiled, bin model): rice_white_raw(20044) 370.0g+water(14411) 720.0g; filling (pan grilled, yfw=0.85): pork_boston_butt_raw(10214) 340.0g+cabbage_raw(11109) 280.0g+carrot_raw(11124) 122.0g+bean_sprouts_raw(11052) 120.0g+scallion_raw(11291) 60.0g+garlic_raw(11215) 6.0g+ginger_root_fresh(11216) 4.0g+tamari(16124) 30.0g+vegetable_oil(4513) 13.6g+sesame_oil(4058) 9.0g; cooked total 1904.5g; 4 servings × 476.1g; 125.2 kcal·5.18P·3.57F·17.83C per 100g; dietary_category=all |
 
 ## Current Work: SIDE Recipes
 
