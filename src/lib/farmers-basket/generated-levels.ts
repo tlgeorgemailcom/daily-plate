@@ -15172,7 +15172,7 @@ export const LEVELS: Level[] = [
       { name: 'Sesame oil', quantity: '1 tsp', section: 'char_siu', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'char_siu', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'fresh ginger', quantity: '1 tbsp fresh ginger, grated', section: 'char_siu', ndbNo: '11216', portionDesc: 'g', portionGrams: 9.0 },
-      { name: 'five-spice powder', quantity: '1 tsp', section: 'char_siu', ndbNo: '2010', portionDesc: 'g', portionGrams: 3.0 }
+      { name: 'five-spice powder', quantity: '1 tsp five-spice powder (nutrition counted as cinnamon — closest SR Legacy proxy)', section: 'char_siu', ndbNo: '2010', portionDesc: 'g', portionGrams: 3.0 }
     ],
     recipeInstructions: [
       'In a bowl, whisk together the hoisin sauce, soy sauce, honey, brown sugar, Shaoxing rice wine (or dry white wine as a substitute), sesame oil, garlic, ginger, and five-spice powder to form the marinade. Reserve 3 tablespoons of the marinade separately for basting.',

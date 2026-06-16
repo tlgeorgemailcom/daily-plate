@@ -136,7 +136,7 @@
       "grams": 30.0,
       "section": "char_siu",
       "ingredient_group": "char_siu",
-      "qty_display": "2 tbsp",
+      "qty_display": "2 tbsp white wine (sub for Shaoxing rice wine)",
       "contribution": {
         "Energy_KCal": 24.6,
         "Protein": 0.021,
@@ -220,7 +220,7 @@
       "grams": 3.0,
       "section": "char_siu",
       "ingredient_group": "char_siu",
-      "qty_display": "1 tsp",
+      "qty_display": "1 tsp five-spice powder (nutrition counted as cinnamon \u2014 closest SR Legacy proxy)",
       "contribution": {
         "Energy_KCal": 7.41,
         "Protein": 0.12,
