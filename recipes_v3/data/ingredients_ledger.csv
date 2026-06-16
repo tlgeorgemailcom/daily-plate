@@ -115,7 +115,7 @@ hot_sauce,6169,HOTSAUCE,"Sauce, ready-to-serve, pepper, TABASCO",hot sauce,table
 hot_sauce_tabasco,6169,HOTSAUCE,"Sauce, ready-to-serve, pepper, TABASCO",Hot sauce (Tabasco),tsp,4.7,
 jalapeno_raw,11979,JALAPENO,"Peppers, jalapeno, raw",jalapeño,pepper,14.0,
 jam_preserves,19297,JAM,Jams and preserves,jelly or jam,tablespoon,20.0,
-ketchup,11935,KETCHUP,Catsup,ketchup,tablespoon,17.0,
+ketchup,11935,CATSUP,Catsup,ketchup,tablespoon,17.0,
 lamb_ground_raw,17224,LAMBGROUND,"Lamb, ground, raw",ground lamb,oz,28.35,Raw ground lamb; use raw weight
 lemon_juice_raw,9152,LEMONJUICE,"Lemon juice, raw",lemon juice,tablespoon,15.0,
 lemon_peel_raw,9156,LEMONPEEL,"Lemon peel, raw",lemon zest,tablespoon,6.0,Fresh lemon zest; 1 Tbsp grated ~6g
@@ -216,7 +216,7 @@ peppers_hot_pickled,31034,SPORTPEPPERS,"Peppers, hot pickled, canned",Pickled ho
 beef_chili_no_beans,22911,CHILI,"Chili, no beans, canned entree","beef chili, no beans",cup,240.0,
 white_pepper_ground,2032,WHITEPEPPERCORN,"Spices, pepper, white",white pepper,tsp,2.4,
 tomato_puree,11547,TOMATOPUREE,"Tomato products, canned, puree, without salt added",tomato purée,cup,244.0,"canned tomato purée, unsalted"
-chicken_broth_canned,6194,CHICKENBROTH,"Soup, chicken broth, ready-to-serve",chicken broth,cup,245.0,"canned chicken broth, ready-to-serve"
+chicken_broth_canned,6194,SOUPCHICKBROTH,"Soup, chicken broth, ready-to-serve",chicken broth,cup,245.0,"canned chicken broth, ready-to-serve"
 leek_raw,11246,LEEKRAW,"Leeks, (bulb and lower leaf-portion), raw",leek,leek,89.0,1 medium leek (bulb + lower leaf) ~89g
 bay_leaf_dried,2004,BAYLEAF,"Spices, bay leaf",bay leaf,leaf,0.6,1 dried bay leaf ~0.6g (SR Legacy M1 tsp crumbled = 0.6g)
 chicken_back_raw,5048,CHICKENBACKRAW,"Chicken, broilers or fryers, back, meat and skin, raw",chicken back,lb,453.592,Bone-in back with skin; 1 lb ~454g
