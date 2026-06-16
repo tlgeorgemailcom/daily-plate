@@ -15130,11 +15130,11 @@ export const LEVELS: Level[] = [
     ],
     recipeInstructions: [
       'Cut the pork into 2-inch cubes. In a large, heavy pot, combine the pork, orange juice, lime juice, garlic, onion, cumin, oregano, cinnamon, black pepper, bay leaves, and salt.',
-      'Add just enough water to barely cover the pork (about 1–2 cups, not included). Bring to a boil over high heat, then reduce to a vigorous simmer. Cook uncovered for 1½–2 hours, stirring occasionally.',
+      'Add just enough water to barely cover the pork (about 1–2 cups). Bring to a boil over high heat, then reduce to a vigorous simmer. Cook uncovered for 1½–2 hours, stirring occasionally.',
       'Continue simmering until all the liquid has evaporated and the pork is sizzling in its own rendered fat, about 20–30 more minutes. Stir frequently at this stage to prevent burning. The pork should be golden and lightly crisp on the edges.',
       'Remove and discard the bay leaves. Use two forks to shred or roughly chop the pork into bite-sized pieces.',
       'For extra crispiness, spread the shredded pork on a baking sheet and broil for 3–5 minutes until edges are caramelized and crisp.',
-      'Serve in warm tortillas (not included) with your choice of toppings such as diced white onion, fresh cilantro, salsa, and lime wedges (not included).'
+      'Serve in warm tortillas (not included) with your choice of toppings such as diced white onion, fresh cilantro, salsa, and lime wedges (neither included).'
     ],
     sections: [
       { key: 'carnitas', label: 'Carnitas', cookingMethod: '', yieldFactorWater: 0.65 }
