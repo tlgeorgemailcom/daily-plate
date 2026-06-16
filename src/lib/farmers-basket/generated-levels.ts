@@ -15709,5 +15709,54 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'pork', label: 'Pork Shoulder', cookingMethod: '', yieldFactorWater: 0.6 }
     ],
+  },
+  {
+    id: 'ENTR_095',
+    name: 'Pork Fried Rice',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 330,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":549.4,"pro":29.9,"fat":10.6,"carb":80.6,"fib":3.0,"h2o":290.8,"sug":2.3,"perServing":{"cal":549.4,"pro":29.9,"fat":10.6,"carb":80.6,"fib":3.0,"h2o":290.8,"sug":2.3,"AddedSugars":0.0,"IntrinsicSugars":2.3},"micros":{"vitaminA":37.7,"vitaminC":0.75,"vitaminD":6.24,"vitaminE":0.17,"vitaminK":8.49,"vitaminB6":0.16,"vitaminB12":0.13,"thiamin":0.25,"riboflavin":0.11,"niacin":1.86,"folate":40.2,"calcium":16.81,"iron":1.26,"magnesium":14.18,"phosphorus":93.5,"potassium":143.67,"sodium":129.29,"zinc":0.74,"copper":0.08,"selenium":11.48,"cholesterol":35.68,"saturatedFat":1.12,"monoFat":0.74,"polyFat":0.36,"omega3":0.0,"omega6":0.12},"gramsPerServing":415.5,"servings":4,"per100g":{"Energy_KCal":132.22,"Water":69.98,"Protein":7.19,"TotalLipidFat":2.56,"Carbohydrate":19.41,"FiberTotalDietary":0.73,"SugarsTotal":0.56,"Cholesterol":35.68,"FattyAcids_totalSaturated":1.12,"FattyAcids_totalMonounsaturated":0.74,"FattyAcids_totalPolyunsaturated":0.36,"LinoleicAcid":0.12,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":37.7,"Retinol":7.7,"Carotene_beta":308.66,"VitaminD":6.24,"VitaminE_alphaTocopherol":0.17,"VitaminK_phylloquinone":8.49,"VitaminC_totalAscorbicAcid":0.75,"Thiamin":0.25,"Riboflavin":0.11,"Niacin":1.86,"PantothenicAcid":0.39,"VitaminB6":0.16,"Folate_total":40.2,"Folate_food":7.94,"Folate_DFE":62.77,"FolicAcid":49.64,"VitaminB12":0.13,"Choline_total":34.31,"Betaine":0.65,"LuteinZeaxanthin":127.58,"Lycopene":0.03,"Calcium_Ca":16.81,"Iron_Fe":1.26,"Magnesium_Mg":14.18,"Phosphorus_P":93.5,"Potassium_K":143.67,"Sodium_Na":129.29,"Zinc_Zn":0.74,"Copper_Cu":0.08,"Manganese_Mn":0.27,"Selenium_Se":11.48,"Tryptophan":0.08,"Threonine":0.31,"Isoleucine":0.34,"Leucine":0.59,"Lysine":0.54,"Methionine":0.18,"Cystine":0.09,"Phenylalanine":0.33,"Tyrosine":0.26,"Valine":0.4,"Arginine":0.5,"Histidine":0.25,"Alanine":0.41,"AsparticAcid":0.7,"GlutamicAcid":1.2,"Glycine":0.31,"Proline":0.3,"Serine":0.35,"omega3":0.0,"omega6":0.12,"AddedSugars":0.0,"IntrinsicSugars":0.56},"addedSugars":0.0,"intrinsicSugars":2.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20044","name":"Rice, white, long-grain, regular, raw, enriched","grams":92.5},{"ndb":"14411","name":"Water, tap, drinking","grams":180.0},{"ndb":"10060","name":"Pork, fresh, loin, tenderloin, separable lean only, raw","grams":85.0},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":25.0},{"ndb":"11313","name":"Peas, green, frozen, cooked, boiled, drained, without salt","grams":20.0},{"ndb":"11124","name":"Carrots, raw","grams":15.2},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":15.0},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"11216","name":"Ginger root, raw","grams":1.0},{"ndb":"16124","name":"Soy sauce made from soy (tamari)","grams":7.5},{"ndb":"4058","name":"Oil, sesame, salad or cooking","grams":2.2},{"ndb":"4513","name":"Vegetable oil, palm kernel","grams":3.4}],"sections":[{"section_key":"rice","section_label":"Rice","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.9323367361761503,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":1090.0,"raw_water_grams":762.27,"raw_fat_grams":2.44,"raw_protein_grams":26.38,"raw_carb_grams":295.81,"final_grams":1038.42},{"section_key":"filling","section_label":"Filling","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":703.6,"raw_water_grams":532.39,"raw_fat_grams":40.05,"raw_protein_grams":93.18,"raw_carb_grams":26.74,"final_grams":623.74}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Pork Fried Rice', quantity: 'custom (g)', foodWord: 'PORKFRIEDRICE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white rice (dry)', quantity: '2 cups white rice (dry)', section: 'rice', ndbNo: '20044', portionDesc: 'g', portionGrams: 370.0 },
+      { name: 'water', quantity: '3 cups water', section: 'rice', ndbNo: '14411', portionDesc: 'g', portionGrams: 720.0 },
+      { name: 'pork tenderloin', quantity: '3/4 lb pork tenderloin, diced', section: 'filling', ndbNo: '10060', portionDesc: 'g', portionGrams: 340.0 },
+      { name: 'large egg', quantity: '2 large eggs', section: 'filling', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'frozen peas', quantity: '1/2 cup frozen peas', section: 'filling', ndbNo: '11313', portionDesc: 'g', portionGrams: 80.0 },
+      { name: 'carrot', quantity: '1 medium carrot, diced', section: 'filling', ndbNo: '11124', portionDesc: 'g', portionGrams: 61.0 },
+      { name: 'scallion (green onion)', quantity: '4 scallions, sliced', section: 'filling', ndbNo: '11291', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'filling', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'fresh ginger', quantity: '1 tsp fresh ginger, grated', section: 'filling', ndbNo: '11216', portionDesc: 'g', portionGrams: 4.0 },
+      { name: 'tamari', quantity: '2 tbsp', section: 'filling', ndbNo: '16124', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'Sesame oil', quantity: '2 tsp', section: 'filling', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'vegetable oil', quantity: '1 tbsp', section: 'filling', ndbNo: '4513', portionDesc: 'g', portionGrams: 13.6 }
+    ],
+    recipeInstructions: [
+      'Cook the rice: Combine the rice and water in a medium saucepan. Bring to a boil over high heat, then reduce to the lowest heat, cover tightly, and cook until the water is absorbed, about 18 minutes. Remove from heat and let steam 5 minutes. Spread onto a sheet pan or large plate to cool. For best results, refrigerate the cooked rice uncovered for at least 1 hour or overnight before stir-frying.',
+      'Heat 1 tablespoon of the vegetable oil in a large wok or skillet over high heat until smoking. Add the pork and cook, stirring, until browned and cooked through, 3 to 4 minutes. Push to the side of the pan.',
+      'Add the garlic and ginger to the empty side of the pan and stir for 30 seconds until fragrant. Add the carrot and peas and stir-fry 2 minutes. Push everything to the sides to clear the center.',
+      'Crack the eggs into the center of the pan and scramble until just set, then break up and fold into the pork and vegetables.',
+      'Add the cold cooked rice, breaking up any clumps. Stir-fry over high heat, tossing constantly, until the rice is heated through and beginning to dry out and separate, 3 to 4 minutes.',
+      'Drizzle in the tamari and sesame oil, toss to coat evenly, and cook 1 minute more. Remove from heat, scatter the scallions over the top, and serve immediately.'
+    ],
+    sections: [
+      { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.85 }
+    ],
   }
 ];

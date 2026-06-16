@@ -552,3 +552,5 @@ ENTR_093,tenderloin,Tenderloin,,baked,0.82,1.0,1.0,1.0,1.0,,,,
 ENTR_093,pan_sauce,Pan Sauce,,pan grilled,0.80,1.0,1.0,1.0,1.0,,,,
 ENTR_093,chicken_broth,Chicken Broth,,raw,1.0,1.0,1.0,1.0,1.0,,,,STOCK_003
 ENTR_094,pork,Pork Shoulder,,baked,0.60,1.0,1.0,1.0,1.0,,,,
+ENTR_095,rice,Rice,,boiled,1.0,1.0,1.0,1.0,1.0,,,,
+ENTR_095,filling,Filling,,pan grilled,0.85,1.0,1.0,1.0,1.0,,,,
