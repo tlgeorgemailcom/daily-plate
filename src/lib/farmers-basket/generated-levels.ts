@@ -15758,5 +15758,61 @@ export const LEVELS: Level[] = [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.85 }
     ],
+  },
+  {
+    id: 'ENTR_096',
+    name: 'Pork & Beef Swedish Meatballs',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 331,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":577.8,"pro":25.1,"fat":46.6,"carb":14.0,"fib":1.0,"h2o":169.9,"sug":3.5,"perServing":{"cal":577.8,"pro":25.1,"fat":46.6,"carb":14.0,"fib":1.0,"h2o":169.9,"sug":3.5,"AddedSugars":0.0,"IntrinsicSugars":3.5},"micros":{"vitaminA":79.25,"vitaminC":0.46,"vitaminD":14.42,"vitaminE":0.27,"vitaminK":1.45,"vitaminB6":0.14,"vitaminB12":0.64,"thiamin":0.17,"riboflavin":0.15,"niacin":1.88,"folate":10.43,"calcium":37.36,"iron":1.02,"magnesium":13.31,"phosphorus":108.0,"potassium":183.39,"sodium":415.11,"zinc":1.59,"copper":0.04,"selenium":12.36,"cholesterol":73.09,"saturatedFat":8.71,"monoFat":6.4,"polyFat":0.81,"omega3":0.03,"omega6":0.24},"gramsPerServing":260.0,"servings":4,"per100g":{"Energy_KCal":222.21,"Water":65.36,"Protein":9.63,"TotalLipidFat":17.93,"Carbohydrate":5.39,"FiberTotalDietary":0.39,"SugarsTotal":1.34,"Cholesterol":73.09,"FattyAcids_totalSaturated":8.71,"FattyAcids_totalMonounsaturated":6.4,"FattyAcids_totalPolyunsaturated":0.81,"LinoleicAcid":0.24,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":79.25,"Retinol":77.98,"Carotene_beta":14.56,"VitaminD":14.42,"VitaminE_alphaTocopherol":0.27,"VitaminK_phylloquinone":1.45,"VitaminC_totalAscorbicAcid":0.46,"Thiamin":0.17,"Riboflavin":0.15,"Niacin":1.88,"PantothenicAcid":0.36,"VitaminB6":0.14,"Folate_total":10.43,"Folate_food":6.8,"Folate_DFE":12.96,"FolicAcid":5.15,"VitaminB12":0.64,"Choline_total":28.79,"Betaine":1.87,"LuteinZeaxanthin":17.42,"Lycopene":0.02,"Calcium_Ca":37.36,"Iron_Fe":1.02,"Magnesium_Mg":13.31,"Phosphorus_P":108.0,"Potassium_K":183.39,"Sodium_Na":415.11,"Zinc_Zn":1.59,"Copper_Cu":0.04,"Manganese_Mn":0.08,"Selenium_Se":12.36,"Tryptophan":0.09,"Threonine":0.39,"Isoleucine":0.43,"Leucine":0.74,"Lysine":0.74,"Methionine":0.24,"Cystine":0.1,"Phenylalanine":0.39,"Tyrosine":0.31,"Valine":0.49,"Arginine":0.56,"Histidine":0.31,"Alanine":0.53,"AsparticAcid":0.83,"GlutamicAcid":1.56,"Glycine":0.49,"Proline":0.49,"Serine":0.41,"omega3":0.03,"omega6":0.24,"AddedSugars":0.0,"IntrinsicSugars":1.34},"addedSugars":0.0,"intrinsicSugars":3.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"10219","name":"Pork, fresh, ground, raw","grams":56.7},{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":56.7},{"ndb":"18079","name":"Bread crumbs, dry, grated, plain","grams":9.0},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":15.2},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":12.5},{"ndb":"11282","name":"Onions, raw","grams":20.0},{"ndb":"2001","name":"Spices, allspice, ground","grams":0.2},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"1145","name":"Butter, without salt","grams":3.5},{"ndb":"1145","name":"Butter, without salt","grams":7.1},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":3.9},{"ndb":"6008","name":"Soup, beef broth or bouillon canned, ready-to-serve","grams":61.2},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":29.8},{"ndb":"6971","name":"Sauce, worcestershire","grams":1.2},{"ndb":"1056","name":"Cream, sour, cultured","grams":7.5},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"meatballs","section_label":"Meatballs","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":702.93,"raw_water_grams":447.02,"raw_fat_grams":113.97,"raw_protein_grams":91.39,"raw_carb_grams":38.04,"final_grams":635.87},{"section_key":"sauce","section_label":"Sauce","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":445.07,"raw_water_grams":340.67,"raw_fat_grams":72.49,"raw_protein_grams":8.82,"raw_carb_grams":18.01,"final_grams":404.19}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Pork & Beef Swedish Meatballs', quantity: 'custom (g)', foodWord: 'SWEDISHMEATBALLS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'raw ground pork', quantity: '1/2 lb ground pork', section: 'meatballs', ndbNo: '10219', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'ground beef (80% lean)', quantity: '1/2 lb ground beef (80% lean)', section: 'meatballs', ndbNo: '23572', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'dry bread crumbs', quantity: '1/3 cup dry bread crumbs', section: 'meatballs', ndbNo: '18079', portionDesc: 'g', portionGrams: 36.0 },
+      { name: 'whole milk', quantity: '1/4 cup', section: 'meatballs', ndbNo: '1077', portionDesc: 'g', portionGrams: 61.0 },
+      { name: 'large egg', quantity: '1 large egg', section: 'meatballs', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'onion', quantity: '1 small onion, grated', section: 'meatballs', ndbNo: '11282', portionDesc: 'g', portionGrams: 80.0 },
+      { name: 'allspice', quantity: '1/2 tsp', section: 'meatballs', ndbNo: '2001', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'ground nutmeg', quantity: '1/4 tsp', section: 'meatballs', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.55 },
+      { name: 'salt', quantity: '1 tsp', section: 'meatballs', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'meatballs', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'unsalted butter', quantity: '1 tbsp', section: 'meatballs', ndbNo: '1145', portionDesc: 'g', portionGrams: 14.2 },
+      { name: 'unsalted butter', quantity: '2 tbsp', section: 'sauce', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '2 tbsp', section: 'sauce', ndbNo: '20581', portionDesc: 'g', portionGrams: 15.6 },
+      { name: 'beef broth', quantity: '1 cup', section: 'sauce', ndbNo: '6008', portionDesc: 'g', portionGrams: 245.0 },
+      { name: 'heavy cream', quantity: '1/2 cup', section: 'sauce', ndbNo: '1053', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'Worcestershire sauce', quantity: '1 tsp', section: 'sauce', ndbNo: '6971', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'sour cream', quantity: '2 tbsp', section: 'sauce', ndbNo: '1056', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'salt', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Combine the bread crumbs and milk in a large bowl and let sit 2 minutes until the crumbs absorb the milk. Add the ground pork, ground beef, egg, grated onion, allspice, nutmeg, salt, and pepper. Mix gently with your hands until just combined — do not overwork. Roll into 1-inch balls (about 24 meatballs).',
+      'Melt 1 tablespoon butter in a large skillet over medium-high heat. Working in batches, add the meatballs without crowding and cook, turning to brown all sides, 6 to 8 minutes per batch. Transfer to a plate and set aside. Pour off all but 1 tablespoon of the fat from the pan.',
+      'Reduce heat to medium. Add the remaining 2 tablespoons butter to the skillet. Whisk in the flour and cook 1 to 2 minutes until golden and smooth.',
+      'Gradually whisk in the beef broth, scraping up any browned bits from the bottom of the pan. Add the heavy cream and Worcestershire sauce. Bring to a simmer and cook, stirring occasionally, until the sauce thickens, 4 to 5 minutes.',
+      'Return the meatballs to the skillet. Simmer gently until the meatballs are cooked through and the sauce coats them, about 5 minutes more. Remove from heat and stir in the sour cream. Season with salt and pepper to taste.',
+      'Serve over egg noodles, mashed potatoes, or with lingonberry jam on the side (not included). Garnish with fresh parsley if desired.'
+    ],
+    sections: [
+      { key: 'meatballs', label: 'Meatballs', cookingMethod: '', yieldFactorWater: 0.85 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];
