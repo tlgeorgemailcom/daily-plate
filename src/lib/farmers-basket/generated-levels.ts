@@ -15603,5 +15603,65 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'main', label: 'Pork Schnitzel', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'ENTR_093',
+    name: 'Pork Tenderloin Stuffed',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 328,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":431.2,"pro":54.1,"fat":19.5,"carb":7.4,"fib":1.7,"h2o":199.8,"sug":3.2,"perServing":{"cal":431.2,"pro":54.1,"fat":19.5,"carb":7.4,"fib":1.7,"h2o":199.8,"sug":3.2,"AddedSugars":0.0,"IntrinsicSugars":3.2},"micros":{"vitaminA":31.56,"vitaminC":4.1,"vitaminD":8.62,"vitaminE":0.51,"vitaminK":21.05,"vitaminB6":0.46,"vitaminB12":0.43,"thiamin":0.56,"riboflavin":0.27,"niacin":4.4,"folate":11.02,"calcium":74.96,"iron":1.29,"magnesium":30.34,"phosphorus":238.26,"potassium":394.15,"sodium":549.9,"zinc":1.78,"copper":0.11,"selenium":24.8,"cholesterol":58.79,"saturatedFat":2.59,"monoFat":3.38,"polyFat":0.67,"omega3":0.01,"omega6":0.22},"gramsPerServing":287.9,"servings":4,"per100g":{"Energy_KCal":149.76,"Water":69.41,"Protein":18.78,"TotalLipidFat":6.77,"Carbohydrate":2.57,"FiberTotalDietary":0.58,"SugarsTotal":1.13,"Cholesterol":58.79,"FattyAcids_totalSaturated":2.59,"FattyAcids_totalMonounsaturated":3.38,"FattyAcids_totalPolyunsaturated":0.67,"LinoleicAcid":0.22,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":31.56,"Retinol":14.07,"Carotene_beta":127.41,"VitaminD":8.62,"VitaminE_alphaTocopherol":0.51,"VitaminK_phylloquinone":21.05,"VitaminC_totalAscorbicAcid":4.1,"Thiamin":0.56,"Riboflavin":0.27,"Niacin":4.4,"PantothenicAcid":0.6,"VitaminB6":0.46,"Folate_total":11.02,"Folate_food":11.02,"Folate_DFE":11.02,"FolicAcid":0.0,"VitaminB12":0.43,"Choline_total":60.55,"Betaine":2.73,"LuteinZeaxanthin":120.16,"Lycopene":0.02,"Calcium_Ca":74.96,"Iron_Fe":1.29,"Magnesium_Mg":30.34,"Phosphorus_P":238.26,"Potassium_K":394.15,"Sodium_Na":549.9,"Zinc_Zn":1.78,"Copper_Cu":0.11,"Manganese_Mn":0.12,"Selenium_Se":24.8,"Tryptophan":0.21,"Threonine":0.83,"Isoleucine":0.93,"Leucine":1.61,"Lysine":1.72,"Methionine":0.51,"Cystine":0.19,"Phenylalanine":0.81,"Tyrosine":0.73,"Valine":0.99,"Arginine":1.21,"Histidine":0.78,"Alanine":1.07,"AsparticAcid":1.79,"GlutamicAcid":3.14,"Glycine":0.83,"Proline":0.9,"Serine":0.83,"omega3":0.01,"omega6":0.22,"AddedSugars":0.0,"IntrinsicSugars":1.13},"addedSugars":0.0,"intrinsicSugars":3.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"10060","name":"Pork, fresh, loin, tenderloin, separable lean only, raw","grams":198.4},{"ndb":"10141","name":"Pork, cured, ham, center slice, country-style, separable lean only, raw","grams":21.2},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":12.5},{"ndb":"2044","name":"Basil, fresh","grams":6.2},{"ndb":"2045","name":"Dill weed, fresh","grams":5.0},{"ndb":"11156","name":"Chives, raw","grams":6.0},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":9.0},{"ndb":"2049","name":"Thyme, fresh","grams":0.6},{"ndb":"11215","name":"Garlic, raw","grams":0.8},{"ndb":"2055","name":"Horseradish, prepared","grams":2.5},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"11677","name":"Shallots, raw","grams":15.0},{"ndb":"2054","name":"Capers, canned","grams":5.4},{"ndb":"2063","name":"Rosemary, fresh","grams":0.5},{"ndb":"2049","name":"Thyme, fresh","grams":0.3},{"ndb":"14106","name":"Alcoholic beverage, wine, table, white","grams":3.7},{"ndb":"9206","name":"Orange juice, raw","grams":15.2},{"ndb":"1145","name":"Butter, without salt","grams":3.5},{"ndb":"","name":"Chicken Broth","grams":15.0}],"sections":[{"section_key":"tenderloin","section_label":"Tenderloin","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":13,"raw_grams":1083.55,"raw_water_grams":771.69,"raw_fat_grams":65.2,"raw_protein_grams":211.29,"raw_carb_grams":11.06,"final_grams":944.65},{"section_key":"pan_sauce","section_label":"Pan Sauce","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.8,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":174.5,"raw_water_grams":137.17,"raw_fat_grams":12.01,"raw_protein_grams":2.69,"raw_carb_grams":18.53,"final_grams":147.07},{"section_key":"chicken_broth","section_label":"Chicken Broth","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":60.0,"raw_water_grams":56.88,"raw_fat_grams":0.8,"raw_protein_grams":2.32,"raw_carb_grams":0.02,"final_grams":60.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Pork Tenderloin Stuffed', quantity: 'custom (g)', foodWord: 'PORKTENDERLOINROLLED', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'pork tenderloin', quantity: '1 3/4 lb, butterflied', section: 'tenderloin', ndbNo: '10060', portionDesc: 'g', portionGrams: 793.8 },
+      { name: 'Prosciutto', quantity: '6 slices', section: 'tenderloin', ndbNo: '10141', portionDesc: 'g', portionGrams: 85.0 },
+      { name: 'Parmesan cheese', quantity: '1/2 cup', section: 'tenderloin', ndbNo: '1033', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'fresh basil', quantity: '1 cup fresh basil leaves', section: 'tenderloin', ndbNo: '2044', portionDesc: 'g', portionGrams: 25.0 },
+      { name: 'fresh dill', quantity: '1/2 cup fresh dill', section: 'tenderloin', ndbNo: '2045', portionDesc: 'g', portionGrams: 20.0 },
+      { name: 'fresh chives', quantity: '1/2 cup chopped chives', section: 'tenderloin', ndbNo: '11156', portionDesc: 'g', portionGrams: 24.0 },
+      { name: 'scallion (green onion)', quantity: '2 scallions, chopped', section: 'tenderloin', ndbNo: '11291', portionDesc: 'g', portionGrams: 36.0 },
+      { name: 'fresh thyme leaves', quantity: '1 tbsp fresh thyme leaves', section: 'tenderloin', ndbNo: '2049', portionDesc: 'g', portionGrams: 2.4 },
+      { name: 'garlic', quantity: '1 clove garlic, minced', section: 'tenderloin', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'prepared horseradish', quantity: '2 tsp', section: 'tenderloin', ndbNo: '2055', portionDesc: 'g', portionGrams: 10.0 },
+      { name: 'olive oil', quantity: '3 tbsp olive oil', section: 'tenderloin', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'salt', quantity: '1 tsp', section: 'tenderloin', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/2 tsp', section: 'tenderloin', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'shallots', quantity: '4 shallots, minced', section: 'pan_sauce', ndbNo: '11677', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'capers', quantity: '2 1/2 tbsp capers, drained', section: 'pan_sauce', ndbNo: '2054', portionDesc: 'g', portionGrams: 21.5 },
+      { name: 'fresh rosemary', quantity: '1 1/2 tsp fresh rosemary, chopped', section: 'pan_sauce', ndbNo: '2063', portionDesc: 'g', portionGrams: 1.8 },
+      { name: 'fresh thyme leaves', quantity: '1 1/2 tsp fresh thyme, chopped', section: 'pan_sauce', ndbNo: '2049', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'white wine', quantity: '1 tbsp dry white wine', section: 'pan_sauce', ndbNo: '14106', portionDesc: 'g', portionGrams: 14.8 },
+      { name: 'orange juice', quantity: '1/4 cup orange juice', section: 'pan_sauce', ndbNo: '9206', portionDesc: 'g', portionGrams: 61.0 },
+      { name: 'unsalted butter', quantity: '1 tbsp', section: 'pan_sauce', ndbNo: '1145', portionDesc: 'g', portionGrams: 14.2 },
+      { name: 'Chicken Broth', quantity: '1/4 cup Chicken Broth (recipe)', section: 'chicken_broth', foodWord: 'CHICKENBROTH', portionDesc: 'g', portionGrams: 60.0, isDish: true, componentRef: 'STOCK_003' }
+    ],
+    recipeInstructions: [
+      'Make or prepare the Chicken Broth (see the Chicken Broth recipe). Set aside.',
+      'Heat the oven to 375°F. Trim any silver skin from the tenderloins. Butterfly each one with a sharp knife — slice lengthwise down the center, cutting almost but not quite through, so the two halves open flat. Place between two sheets of plastic wrap and pound with the flat side of a meat mallet to an even 1/4-inch thickness. Season generously with salt and pepper.',
+      'Heat 2 tablespoons of the olive oil in a large oven-safe skillet over medium-high heat. Add the shallots, half the capers, the rosemary, and the thyme. Cook, stirring frequently, until the shallots soften and begin to brown, about 5 minutes. Add the garlic and cook 1 minute more until fragrant. Season with salt and pepper, then transfer to a plate to cool. Wipe out the skillet and reserve.',
+      'Lay the prosciutto slices in an overlapping layer over the surface of each pounded tenderloin, leaving a 1/2-inch border on all sides. Spread the cooled shallot filling evenly over the prosciutto. Starting at the narrow end, roll each tenderloin up tightly jelly-roll style. Tie with kitchen twine at 1-inch intervals to hold the shape.',
+      'Heat the remaining 1 tablespoon olive oil in the reserved skillet over medium heat. Place the rolls seam-side down and transfer the skillet to the oven. Roast until the center registers 140-145°F, 20 to 25 minutes total, turning once halfway through. Transfer to a cutting board to rest; reserve the skillet.',
+      'Set the reserved skillet over medium-high heat. Add the white wine and the remaining capers, scraping up any browned bits from the pan bottom. Cook until the wine is nearly evaporated. Pour in the orange juice and chicken broth and simmer until the sauce reduces and turns slightly syrupy, 3 to 4 minutes. Remove from the heat and whisk in the butter until smooth. Taste and adjust salt and pepper; add a squeeze of lemon juice if the sauce tastes too sweet.',
+      'Remove the twine and cut each roll into 1/2-inch medallions. Arrange on plates, spoon the pan sauce generously over the top, and finish with fresh thyme leaves. Serve with roasted potatoes or egg noodles (not included).'
+    ],
+    sections: [
+      { key: 'tenderloin', label: 'Tenderloin', cookingMethod: '', yieldFactorWater: 0.82 },
+      { key: 'pan_sauce', label: 'Pan Sauce', cookingMethod: '', yieldFactorWater: 0.8 },
+      { key: 'chicken_broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
