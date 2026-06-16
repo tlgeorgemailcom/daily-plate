@@ -15747,7 +15747,7 @@ export const LEVELS: Level[] = [
       { name: 'vegetable oil', quantity: '1 tbsp', section: 'filling', ndbNo: '4513', portionDesc: 'g', portionGrams: 13.6 }
     ],
     recipeInstructions: [
-      'Cook the rice: Combine the rice and water in a medium saucepan. Bring to a boil over high heat, then reduce to the lowest heat, cover tightly, and cook until the water is absorbed, about 18 minutes. Remove from heat and let steam 5 minutes. Spread onto a sheet pan or large plate to cool. For best results, refrigerate the cooked rice uncovered for at least 1 hour or overnight before stir-frying.',
+      'Rinse the rice in cold water, swirling with your hand, until the water runs clear (3 to 4 rinses). Drain well. Combine the rinsed rice and water in a medium saucepan. Bring to a boil over high heat, then reduce to the lowest heat, cover tightly, and cook until the water is absorbed, about 18 minutes. Remove from heat and let steam 5 minutes. Spread onto a sheet pan or large plate to cool. For best results, refrigerate the cooked rice uncovered for at least 1 hour or overnight before stir-frying.',
       'Heat 1 tablespoon of the vegetable oil in a large wok or skillet over high heat until smoking. Add the pork and cook, stirring, until browned and cooked through, 3 to 4 minutes. Push to the side of the pan.',
       'Add the garlic and ginger to the empty side of the pan and stir for 30 seconds until fragrant. Add the carrot and peas and stir-fry 2 minutes. Push everything to the sides to clear the center.',
       'Crack the eggs into the center of the pan and scramble until just set, then break up and fold into the pork and vegetables.',
