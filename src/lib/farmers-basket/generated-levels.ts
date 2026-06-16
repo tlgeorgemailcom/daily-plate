@@ -15139,5 +15139,51 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'carnitas', label: 'Carnitas', cookingMethod: '', yieldFactorWater: 0.65 }
     ],
+  },
+  {
+    id: 'ENTR_083',
+    name: 'Pork Char Siu',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 318,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":550.0,"pro":40.8,"fat":29.6,"carb":27.4,"fib":0.9,"h2o":129.9,"sug":22.9,"perServing":{"cal":550.0,"pro":40.8,"fat":29.6,"carb":27.4,"fib":0.9,"h2o":129.9,"sug":22.9,"AddedSugars":19.5,"IntrinsicSugars":3.5},"micros":{"vitaminA":1.7,"vitaminC":0.28,"vitaminD":27.75,"vitaminE":0.21,"vitaminK":0.22,"vitaminB6":0.37,"vitaminB12":0.8,"thiamin":0.38,"riboflavin":0.34,"niacin":3.64,"folate":1.6,"calcium":27.11,"iron":1.3,"magnesium":24.74,"phosphorus":195.8,"potassium":350.03,"sodium":321.13,"zinc":3.1,"copper":0.11,"selenium":25.91,"cholesterol":60.53,"saturatedFat":4.33,"monoFat":5.04,"polyFat":1.48,"omega3":0.04,"omega6":1.13},"gramsPerServing":232.9,"servings":4,"per100g":{"Energy_KCal":236.14,"Water":55.79,"Protein":17.53,"TotalLipidFat":12.73,"Carbohydrate":11.79,"FiberTotalDietary":0.4,"SugarsTotal":9.85,"Cholesterol":60.53,"FattyAcids_totalSaturated":4.33,"FattyAcids_totalMonounsaturated":5.04,"FattyAcids_totalPolyunsaturated":1.48,"LinoleicAcid":1.13,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":1.7,"Retinol":1.66,"Carotene_beta":0.5,"VitaminD":27.75,"VitaminE_alphaTocopherol":0.21,"VitaminK_phylloquinone":0.22,"VitaminC_totalAscorbicAcid":0.28,"Thiamin":0.38,"Riboflavin":0.34,"Niacin":3.64,"PantothenicAcid":1.22,"VitaminB6":0.37,"Folate_total":1.6,"Folate_food":1.6,"Folate_DFE":1.6,"FolicAcid":0.0,"VitaminB12":0.8,"Choline_total":66.01,"Betaine":4.89,"LuteinZeaxanthin":2.27,"Lycopene":0.04,"Calcium_Ca":27.11,"Iron_Fe":1.3,"Magnesium_Mg":24.74,"Phosphorus_P":195.8,"Potassium_K":350.03,"Sodium_Na":321.13,"Zinc_Zn":3.1,"Copper_Cu":0.11,"Manganese_Mn":0.15,"Selenium_Se":25.91,"Tryptophan":0.18,"Threonine":0.77,"Isoleucine":0.84,"Leucine":1.46,"Lysine":1.59,"Methionine":0.47,"Cystine":0.18,"Phenylalanine":0.73,"Tyrosine":0.65,"Valine":0.9,"Arginine":1.14,"Histidine":0.74,"Alanine":1.01,"AsparticAcid":1.69,"GlutamicAcid":2.77,"Glycine":0.77,"Proline":0.71,"Serine":0.75,"omega3":0.04,"omega6":1.13,"AddedSugars":8.37,"IntrinsicSugars":1.48},"addedSugars":19.5,"intrinsicSugars":3.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"10080","name":"Pork, fresh, shoulder, (Boston butt), blade (steaks), separable lean and fat, raw","grams":226.8},{"ndb":"6175","name":"Sauce, hoisin, ready-to-serve","grams":12.0},{"ndb":"16123","name":"Soy sauce made from soy and wheat (shoyu)","grams":7.5},{"ndb":"19296","name":"Honey","grams":15.8},{"ndb":"19334","name":"Sugars, brown","grams":6.8},{"ndb":"14106","name":"Alcoholic beverage, wine, table, white","grams":7.5},{"ndb":"4058","name":"Oil, sesame, salad or cooking","grams":1.1},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11216","name":"Ginger root, raw","grams":2.2},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.8}],"sections":[{"section_key":"char_siu","section_label":"Char Siu","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.72,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":1133.7,"raw_water_grams":721.82,"raw_fat_grams":118.59,"raw_protein_grams":163.35,"raw_carb_grams":109.8,"final_grams":931.59}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Pork Char Siu', quantity: 'custom (g)', foodWord: 'CHARSIU', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'pork shoulder', quantity: '2 lbs boneless pork shoulder', section: 'char_siu', ndbNo: '10080', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'hoisin sauce', quantity: '3 tbsp', section: 'char_siu', ndbNo: '6175', portionDesc: 'g', portionGrams: 48.0 },
+      { name: 'soy sauce', quantity: '2 tbsp', section: 'char_siu', ndbNo: '16123', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'honey', quantity: '3 tbsp', section: 'char_siu', ndbNo: '19296', portionDesc: 'g', portionGrams: 63.0 },
+      { name: 'brown sugar', quantity: '2 tbsp', section: 'char_siu', ndbNo: '19334', portionDesc: 'g', portionGrams: 27.0 },
+      { name: 'white wine', quantity: '2 tbsp', section: 'char_siu', ndbNo: '14106', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'Sesame oil', quantity: '1 tsp', section: 'char_siu', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'char_siu', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'fresh ginger', quantity: '1 tbsp fresh ginger, grated', section: 'char_siu', ndbNo: '11216', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'five-spice powder', quantity: '1 tsp', section: 'char_siu', ndbNo: '2010', portionDesc: 'g', portionGrams: 3.0 }
+    ],
+    recipeInstructions: [
+      'In a bowl, whisk together the hoisin sauce, soy sauce, honey, brown sugar, white wine, sesame oil, garlic, ginger, and five-spice powder to form the marinade. Reserve 3 tablespoons of the marinade separately for basting.',
+      'Cut the pork shoulder into long strips about 2 inches wide and 1 inch thick. Add to the marinade, toss to coat, cover, and refrigerate for at least 4 hours or overnight.',
+      'Remove the pork from the refrigerator 30 minutes before cooking. Preheat the oven to 400°F (200°C). Line a baking sheet with foil and set a wire rack on top. Arrange the pork strips on the rack in a single layer.',
+      'Roast for 15 minutes, then flip the strips and brush generously with the reserved marinade. Roast for another 15 minutes.',
+      'Switch the oven to broil. Brush the pork again with the remaining reserved marinade and broil for 3–4 minutes until the edges are deeply caramelized and slightly charred. Watch closely to prevent burning.',
+      'Rest for 5 minutes, then slice against the grain and serve over steamed rice (not included).'
+    ],
+    sections: [
+      { key: 'char_siu', label: 'Char Siu', cookingMethod: '', yieldFactorWater: 0.72 }
+    ],
   }
 ];
