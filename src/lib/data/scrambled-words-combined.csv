@@ -145,6 +145,7 @@ broccoli,vegetable
 broilers,protein
 broth,prepared
 brotwurst,protein|prepared
+brownie,sweets
 brunello,wine
 bruschetta,prepared
 brussel,vegetable
@@ -212,6 +213,7 @@ catsup,condiment
 cattail,vegetable
 cauliflower,vegetable
 cava,wine
+caviar,protein
 cayenne,spice
 celeriac,vegetable
 celery,vegetable
@@ -250,6 +252,7 @@ chickpea,legume|protein
 chicory,vegetable
 chihuahua,dairy
 chilchen,protein
+chile,spice
 chili,prepared|protein
 chimichurri,condiment
 chinon,wine
@@ -281,6 +284,7 @@ cloudberry,fruit
 clove,spice
 club,prepared
 cobbler,bar
+cockle,protein
 cocktail,fruit|beverage|prepared
 cocoa,beverage|condiment
 coconut,fruit|nuts|fats
@@ -326,9 +330,12 @@ cranberry,fruit
 crawfish,protein
 crayfish,protein
 cream,dairy
+creamsicle,dairy
 cremant,wine
 creme,dairy
 crepe,prepared
+cress,vegetable
+crimini,vegetable
 croaker,protein
 croissant,prepared
 cronut,prepared
@@ -349,6 +356,7 @@ cusk,protein
 custard,prepared|dairy
 cuttlefish,protein
 cynar,bar
+daikon,vegetable
 daiquiri,bar
 dal,legume
 danablu,dairy
@@ -394,6 +402,7 @@ elk,protein
 emmental,dairy
 empanada,prepared
 emu,protein
+enchilada,prepared
 endive,vegetable
 enoki,vegetable
 epazote,spice
@@ -411,6 +420,7 @@ fava,legume
 feijoa,fruit
 fengugreek,nuts
 fennel,vegetable|nuts
+fenugreek,spice
 fern,vegetable
 fernet,bar
 feta,dairy
@@ -481,6 +491,7 @@ gimlet,bar
 gin,bar
 ginger,vegetable|spice
 gingerbread,prepared
+gingersnap,sweets
 ginkgo,nuts
 gizzard,protein
 gjetost,dairy
@@ -509,6 +520,7 @@ gravlax,protein
 gravy,prepared
 grechetto,wine
 greco,wine
+greens,vegetable
 grenache,wine
 grigio,wine
 grillo,wine
@@ -545,14 +557,17 @@ hibiscus,beverage
 hickory,nuts
 highball,bar
 hindshank,protein
+hoagie,prepared
 hoecake,prepared
 hoisin,condiment
 hojicha,beverage
 hokkaido,grain|prepared
+hollandaise,prepared
 hominy,grain
 honey,condiment
 honeybush,beverage
 honeydew,fruit
+horchata,beverage
 horse,protein
 horseradish,vegetable|condiment
 hotcake,grain|prepared
@@ -632,6 +647,7 @@ lemonade,beverage
 lentil,legume|protein
 lettuce,vegetable
 lima,legume
+limburger,dairy
 lime,fruit
 limeade,beverage
 limoncello,bar
@@ -658,6 +674,7 @@ Lychee,fruit
 macadamia,nuts
 macaroni,grain|prepared
 macaroon,prepared
+mace,spice
 mackerel,protein
 madeira,wine
 mahi,protein
@@ -707,6 +724,7 @@ midori,bar
 mignon,protein
 milk,dairy|beverage
 milkfish,protein
+milkshake,beverage
 millet,grain
 mimosa,bar
 mincemeat,prepared
@@ -875,6 +893,7 @@ poke,protein
 polenta,grain
 pollock,protein
 pomegranate,fruit
+pomodoro,prepared
 pompano,protein
 ponzu,condiment
 pop,beverage
@@ -912,6 +931,7 @@ purslane,vegetable
 puttanesca,prepared
 quail,protein
 quark,dairy
+quesadilla,prepared
 queso,dairy
 quiche,prepared
 quince,fruit
@@ -929,6 +949,7 @@ raisin,fruit
 raita,condiment
 raki,bar
 ramen,grain|prepared
+ranch,condiment
 raspberry,fruit
 ratafia,bar
 ratatouille,prepared
@@ -953,6 +974,7 @@ roast,protein
 rockfish,protein
 roe,protein
 roll,prepared
+romaine,vegetable
 romano,dairy
 romesco,condiment
 rooibos,beverage
@@ -1143,6 +1165,7 @@ tahini,condiment
 taiping,beverage
 tallow,fats
 tamale,prepared
+tamari,condiment
 tamarind,fruit
 tandoori,prepared
 tangerine,fruit
@@ -1173,6 +1196,7 @@ thyme,spice
 tieguanyin,beverage
 tikka,prepared
 tilapia,protein
+tilefish,protein
 tilsit,dairy
 tipnuk,protein
 tiramisu,prepared
@@ -1221,6 +1245,7 @@ verdejo,wine
 verdello,wine
 verdicchio,wine
 vermentino,wine
+vermicelli,grain
 vermouth,bar
 vernaccia,wine
 vesper,bar
@@ -1253,6 +1278,7 @@ wing,protein
 winged,legume
 wolffish,protein
 wonton,prepared
+worcestershire,condiment
 yakitori,protein
 yam,vegetable
 yambean,vegetable
