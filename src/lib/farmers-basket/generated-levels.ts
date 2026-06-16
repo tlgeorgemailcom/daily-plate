@@ -15368,5 +15368,47 @@ export const LEVELS: Level[] = [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.85 }
     ],
+  },
+  {
+    id: 'ENTR_088',
+    name: 'Pork Milanese',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 323,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cutlet (serves 2)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":383.7,"pro":32.1,"fat":13.2,"carb":31.7,"fib":1.7,"h2o":98.0,"sug":1.8,"perServing":{"cal":383.7,"pro":32.1,"fat":13.2,"carb":31.7,"fib":1.7,"h2o":98.0,"sug":1.8,"AddedSugars":0.0,"IntrinsicSugars":1.8},"micros":{"vitaminA":17.94,"vitaminC":0.0,"vitaminD":15.72,"vitaminE":0.65,"vitaminK":3.26,"vitaminB6":0.4,"vitaminB12":0.43,"thiamin":0.64,"riboflavin":0.34,"niacin":4.61,"folate":29.07,"calcium":40.92,"iron":2.04,"magnesium":27.51,"phosphorus":219.04,"potassium":313.67,"sodium":489.65,"zinc":1.66,"copper":0.12,"selenium":30.62,"cholesterol":93.28,"saturatedFat":1.6,"monoFat":3.95,"polyFat":0.93,"omega3":0.01,"omega6":0.32},"gramsPerServing":178.7,"servings":2,"per100g":{"Energy_KCal":214.7,"Water":54.83,"Protein":17.99,"TotalLipidFat":7.4,"Carbohydrate":17.75,"FiberTotalDietary":0.96,"SugarsTotal":1.01,"Cholesterol":93.28,"FattyAcids_totalSaturated":1.6,"FattyAcids_totalMonounsaturated":3.95,"FattyAcids_totalPolyunsaturated":0.93,"LinoleicAcid":0.32,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":17.94,"Retinol":17.9,"Carotene_beta":0.47,"VitaminD":15.72,"VitaminE_alphaTocopherol":0.65,"VitaminK_phylloquinone":3.26,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.64,"Riboflavin":0.34,"Niacin":4.61,"PantothenicAcid":0.7,"VitaminB6":0.4,"Folate_total":29.07,"Folate_food":9.69,"Folate_DFE":42.61,"FolicAcid":25.85,"VitaminB12":0.43,"Choline_total":85.14,"Betaine":1.96,"LuteinZeaxanthin":50.7,"Lycopene":0.03,"Calcium_Ca":40.92,"Iron_Fe":2.04,"Magnesium_Mg":27.51,"Phosphorus_P":219.04,"Potassium_K":313.67,"Sodium_Na":489.65,"Zinc_Zn":1.66,"Copper_Cu":0.12,"Manganese_Mn":0.23,"Selenium_Se":30.62,"Tryptophan":0.2,"Threonine":0.76,"Isoleucine":0.86,"Leucine":1.49,"Lysine":1.44,"Methionine":0.47,"Cystine":0.21,"Phenylalanine":0.8,"Tyrosine":0.66,"Valine":0.94,"Arginine":1.12,"Histidine":0.68,"Alanine":0.98,"AsparticAcid":1.63,"GlutamicAcid":3.28,"Glycine":0.76,"Proline":0.92,"Serine":0.85,"omega3":0.01,"omega6":0.32,"AddedSugars":0.0,"IntrinsicSugars":1.01},"addedSugars":0.0,"intrinsicSugars":1.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"10060","name":"Pork, fresh, loin, tenderloin, separable lean only, raw","grams":113.4},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":15.6},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":25.0},{"ndb":"18079","name":"Bread crumbs, dry, grated, plain","grams":27.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3}],"sections":[{"section_key":"main","section_label":"Pork Milanese","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":379.23,"raw_water_grams":217.76,"raw_fat_grams":26.46,"raw_protein_grams":64.29,"raw_carb_grams":63.44,"final_grams":357.45}],"cookingMethod":"pan grilled"},
+    recipeIngredients: [
+      { name: 'Pork Milanese', quantity: 'custom (g)', foodWord: 'PORKMILANESE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'pork tenderloin', quantity: '2 pork tenderloin cutlets (4 oz each), pounded to 1/4 inch', section: 'main', ndbNo: '10060', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '1/4 cup', section: 'main', ndbNo: '20581', portionDesc: 'g', portionGrams: 31.25 },
+      { name: 'large egg', quantity: '1 large, beaten', section: 'main', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'dry bread crumbs', quantity: '1/2 cup (panko preferred)', section: 'main', ndbNo: '18079', portionDesc: 'g', portionGrams: 54.0 },
+      { name: 'olive oil', quantity: '1 tbsp olive oil (absorbed into crust)', section: 'main', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'main', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'main', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Place the pork tenderloin cutlets between two sheets of plastic wrap and pound to 1/4-inch thickness. Season both sides with salt and pepper.',
+      'Set up a breading station: flour in one shallow dish, beaten egg in a second, and panko breadcrumbs in a third.',
+      'Dredge each cutlet in flour and shake off the excess. Dip in the beaten egg, letting the excess drip off. Press firmly into the panko to coat both sides. (The ingredient list reflects only the oil absorbed into the crust.)',
+      'Heat olive oil in a large skillet over medium-high heat until shimmering. Add the cutlets and cook until deep golden brown, 3–4 minutes per side.',
+      'Transfer to a wire rack for 1–2 minutes. Serve with lemon wedges and an arugula salad (not included).'
+    ],
+    sections: [
+      { key: 'main', label: 'Pork Milanese', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];
