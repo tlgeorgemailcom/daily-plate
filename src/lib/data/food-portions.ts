@@ -2225,8 +2225,8 @@ export const FOODS: Food[] = [
     "groups": [
       "prepared"
     ],
-    "ndb": "16006",
-    "desc": "Beans, baked, canned, plain or vegetarian",
+    "ndb": "16005",
+    "desc": "Beans, baked, home prepared",
     "cal": 94.0,
     "pro": 4.8,
     "fat": 0.4,
@@ -3015,6 +3015,29 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "BEEFANDBROCCOLI",
+    "display": "Beef and Broccoli",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "",
+    "desc": "Beef, with broccoli, stir-fried",
+    "cal": 156.1,
+    "pro": 10.36,
+    "fat": 10.71,
+    "carb": 5.3,
+    "fib": 1.41,
+    "h2o": 71.65,
+    "sug": 1.39,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      }
+    ]
+  },
+  {
     "word": "BEEFBRAIN",
     "display": "Beef Brain",
     "groups": [
@@ -3147,39 +3170,6 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "BEEFFLANKSTEAK",
-    "display": "Beef Flank Steak",
-    "groups": [
-      "protein"
-    ],
-    "ndb": "13948",
-    "desc": "Beef, flank, steak, separable lean and fat, trimmed to 0\" fat, all grades, cooked, broiled",
-    "cal": 192.0,
-    "pro": 27.7,
-    "fat": 8.2,
-    "carb": 0.0,
-    "fib": 0.0,
-    "h2o": 64.2,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 3.0,
-        "desc": "oz",
-        "gm": 85.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "steak (yield from 475 g raw meat)",
-        "gm": 383.0
-      }
-    ]
-  },
-  {
     "word": "BEEFGROUND",
     "display": "Beef Ground",
     "groups": [
@@ -3275,7 +3265,7 @@ export const FOODS: Food[] = [
       "protein",
       "prepared"
     ],
-    "ndb": "22529",
+    "ndb": "",
     "desc": "Beef Pot Pie, frozen entree, prepared",
     "cal": 220.0,
     "pro": 7.2,
@@ -3742,39 +3732,6 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "BEEFTENDERLOIN",
-    "display": "Beef Tenderloin",
-    "groups": [
-      "protein"
-    ],
-    "ndb": "23600",
-    "desc": "Beef, tenderloin, steak, separable lean only, trimmed to 1/8\" fat, all grades, cooked, broiled",
-    "cal": 200.0,
-    "pro": 29.0,
-    "fat": 8.4,
-    "carb": 0.0,
-    "fib": 0.0,
-    "h2o": 62.9,
-    "sug": 0.0,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      },
-      {
-        "amt": 1.0,
-        "desc": "lb",
-        "gm": 453.6
-      }
-    ]
-  },
-  {
     "word": "BEEFTONGUE",
     "display": "Beef Tongue",
     "groups": [
@@ -4085,15 +4042,15 @@ export const FOODS: Food[] = [
     "groups": [
       "prepared"
     ],
-    "ndb": "18015",
-    "desc": "Biscuits, plain or buttermilk, refrigerated dough, higher fat, baked",
-    "cal": 324.0,
-    "pro": 6.8,
-    "fat": 11.2,
-    "carb": 49.0,
-    "fib": 2.8,
-    "h2o": 29.7,
-    "sug": 8.2,
+    "ndb": "18016",
+    "desc": "Biscuits, plain or buttermilk, prepared from recipe",
+    "cal": 353.0,
+    "pro": 7.0,
+    "fat": 16.3,
+    "carb": 44.6,
+    "fib": 1.5,
+    "h2o": 28.9,
+    "sug": 2.18,
     "portions": [
       {
         "amt": 1.0,
@@ -4102,13 +4059,8 @@ export const FOODS: Food[] = [
       },
       {
         "amt": 1.0,
-        "desc": "biscuit",
-        "gm": 51.0
-      },
-      {
-        "amt": 1.0,
         "desc": "biscuit (2-1/2\" dia)",
-        "gm": 27.0
+        "gm": 56.4
       },
       {
         "amt": 1.0,
@@ -5584,15 +5536,15 @@ export const FOODS: Food[] = [
     "groups": [
       "prepared"
     ],
-    "ndb": "21061",
-    "desc": "Fast foods, burrito, with beans and cheese",
-    "cal": 205.0,
-    "pro": 7.3,
-    "fat": 6.0,
-    "carb": 31.2,
-    "fib": 4.2,
-    "h2o": 53.2,
-    "sug": 1.7,
+    "ndb": "",
+    "desc": "Burrito with beans and cheese, prepared from recipe",
+    "cal": 196.2,
+    "pro": 8.18,
+    "fat": 5.12,
+    "carb": 29.46,
+    "fib": 4.86,
+    "h2o": 55.05,
+    "sug": 1.71,
     "portions": [
       {
         "amt": 1.0,
@@ -5602,7 +5554,7 @@ export const FOODS: Food[] = [
       {
         "amt": 1.0,
         "desc": "each burrito",
-        "gm": 185.0
+        "gm": 105.3
       }
     ]
   },
@@ -5640,15 +5592,15 @@ export const FOODS: Food[] = [
     "groups": [
       "prepared"
     ],
-    "ndb": "21060",
-    "desc": "Fast foods, burrito, with beans",
-    "cal": 206.0,
-    "pro": 6.5,
-    "fat": 6.2,
-    "carb": 32.9,
-    "fib": 0.0,
-    "h2o": 52.5,
-    "sug": 0.0,
+    "ndb": "",
+    "desc": "Burrito with beans, prepared from recipe",
+    "cal": 188.14,
+    "pro": 7.41,
+    "fat": 3.95,
+    "carb": 30.84,
+    "fib": 5.1,
+    "h2o": 55.67,
+    "sug": 1.74,
     "portions": [
       {
         "amt": 1.0,
@@ -5656,9 +5608,93 @@ export const FOODS: Food[] = [
         "gm": 100.0
       },
       {
-        "amt": 2.0,
-        "desc": "pieces",
-        "gm": 217.0
+        "amt": 1.0,
+        "desc": "each burrito",
+        "gm": 100.3
+      }
+    ]
+  },
+  {
+    "word": "BURRITOBEEF",
+    "display": "Burrito Beef",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "",
+    "desc": "Burrito with beef, prepared from recipe",
+    "cal": 261.94,
+    "pro": 12.91,
+    "fat": 10.79,
+    "carb": 27.76,
+    "fib": 1.96,
+    "h2o": 46.58,
+    "sug": 2.14,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "each burrito",
+        "gm": 107.1
+      }
+    ]
+  },
+  {
+    "word": "BURRITOCHEESE",
+    "display": "Burrito Cheese",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "",
+    "desc": "Burrito with cheese, prepared from recipe",
+    "cal": 326.8,
+    "pro": 14.34,
+    "fat": 16.2,
+    "carb": 30.33,
+    "fib": 2.1,
+    "h2o": 36.18,
+    "sug": 2.72,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "each burrito",
+        "gm": 100.0
+      }
+    ]
+  },
+  {
+    "word": "BURRITOEGG",
+    "display": "Burrito Egg",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "",
+    "desc": "Egg burrito, prepared from recipe",
+    "cal": 277.06,
+    "pro": 13.02,
+    "fat": 15.81,
+    "carb": 19.81,
+    "fib": 1.36,
+    "h2o": 49.23,
+    "sug": 1.78,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "each burrito",
+        "gm": 180.0
       }
     ]
   },
@@ -6113,8 +6149,8 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "CAKEANGELFOOD",
-    "display": "Cake Angel Food",
+    "word": "ANGELFOODCAKE",
+    "display": "Angel Food Cake",
     "groups": [
       "sweets"
     ],
@@ -6146,8 +6182,8 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "CAKECHEESECAKE",
-    "display": "Cake Cheesecake",
+    "word": "CHEESECAKE",
+    "display": "Cheesecake",
     "groups": [
       "sweets"
     ],
@@ -6260,8 +6296,8 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "CAKECOFFEECAKE",
-    "display": "Cake Coffee",
+    "word": "COFFEECAKE",
+    "display": "Coffee Cake",
     "groups": [
       "sweets"
     ],
@@ -6331,8 +6367,8 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "CAKEGINGERBREAD",
-    "display": "Cake Gingerbread",
+    "word": "GINGERBREAD",
+    "display": "Gingerbread",
     "groups": [
       "sweets"
     ],
@@ -6364,8 +6400,8 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "CAKEPINEAPPLE",
-    "display": "Cake Pineapple",
+    "word": "PINEAPPLECAKE",
+    "display": "Pineapple Upside-Down Cake",
     "groups": [
       "sweets"
     ],
@@ -6397,8 +6433,8 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "CAKEPOUND",
-    "display": "Cake Pound",
+    "word": "POUNDCAKE",
+    "display": "Pound Cake",
     "groups": [
       "sweets"
     ],
@@ -6430,8 +6466,8 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "CAKESHORTCAKE",
-    "display": "Cake Shortcake",
+    "word": "SHORTCAKE",
+    "display": "Shortcake",
     "groups": [
       "sweets"
     ],
@@ -6458,8 +6494,8 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "CAKESPONGE",
-    "display": "Cake Sponge",
+    "word": "SPONGECAKE",
+    "display": "Sponge Cake",
     "groups": [
       "sweets"
     ],
@@ -6491,8 +6527,8 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "CAKEWHITE",
-    "display": "Cake White no Frosting",
+    "word": "WHITECAKE",
+    "display": "White Cake",
     "groups": [
       "sweets"
     ],
@@ -6557,8 +6593,8 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "CAKEYELLOW",
-    "display": "Cake Yellow no Frosting",
+    "word": "YELLOWCAKE",
+    "display": "Yellow Cake",
     "groups": [
       "sweets"
     ],
@@ -10518,8 +10554,8 @@ export const FOODS: Food[] = [
       "grain",
       "prepared"
     ],
-    "ndb": "8180",
-    "desc": "Cereals, oats, regular and quick and instant, unenriched, cooked with water (includes boiling and microwaving), with salt",
+    "ndb": "8121",
+    "desc": "Cereals, oats, regular and quick, unenriched, cooked with water (includes boiling and microwaving), without salt",
     "cal": 71.0,
     "pro": 2.5,
     "fat": 1.5,
@@ -10847,7 +10883,7 @@ export const FOODS: Food[] = [
     "groups": [
       "prepared"
     ],
-    "ndb": "21091",
+    "ndb": "",
     "desc": "Fast foods, cheeseburger; single, regular patty, with condiments and vegetables",
     "cal": 254.0,
     "pro": 13.1,
@@ -11473,7 +11509,7 @@ export const FOODS: Food[] = [
       "protein",
       "prepared"
     ],
-    "ndb": "22906",
+    "ndb": "",
     "desc": "Chicken pot pie, frozen entree, prepared",
     "cal": 204.0,
     "pro": 5.1,
@@ -11531,7 +11567,7 @@ export const FOODS: Food[] = [
       "protein",
       "prepared"
     ],
-    "ndb": "36633",
+    "ndb": "",
     "desc": "Restaurant, Chinese, sesame chicken",
     "cal": 293.0,
     "pro": 14.3,
@@ -11674,6 +11710,38 @@ export const FOODS: Food[] = [
         "desc": "cup",
         "gm": 164.0
       }
+    ]
+  },
+  {
+    "word": "CHICKPEADRIED",
+    "display": "",
+    "groups": [
+      "legume",
+      "protein"
+    ],
+    "ndb": "16056",
+    "desc": "Chickpeas (garbanzo beans, bengal gram), mature seeds, raw",
+    "cal": 378.0,
+    "pro": 20.47,
+    "fat": 6.04,
+    "carb": 62.95,
+    "fib": 12.2,
+    "h2o": 7.68,
+    "sug": 10.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 200.0
+      }
+    ],
+    "synonyms": [
+      "chickpea (dried)"
     ]
   },
   {
@@ -11835,7 +11903,7 @@ export const FOODS: Food[] = [
     "groups": [
       "prepared"
     ],
-    "ndb": "21119",
+    "ndb": "",
     "desc": "Fast foods, hotdog, with chili",
     "cal": 260.0,
     "pro": 11.8,
@@ -13484,7 +13552,7 @@ export const FOODS: Food[] = [
     "groups": [
       "prepared"
     ],
-    "ndb": "21152",
+    "ndb": "",
     "desc": "SUBWAY, SUBWAY CLUB sub on white bread with lettuce and tomato",
     "cal": 146.0,
     "pro": 10.7,
@@ -13798,6 +13866,39 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "cup",
         "gm": 226.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 15.0
+      }
+    ]
+  },
+  {
+    "word": "COCONUTWATER",
+    "display": "Coconut Water",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "12119",
+    "desc": "Nuts, coconut water (liquid from coconuts)",
+    "cal": 19.0,
+    "pro": 0.72,
+    "fat": 0.2,
+    "carb": 3.71,
+    "fib": 1.1,
+    "h2o": 94.99,
+    "sug": 2.61,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 240.0
       },
       {
         "amt": 1.0,
@@ -14267,8 +14368,8 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "COOKIESBROWNIES",
-    "display": "Cookies Brownies",
+    "word": "BROWNIES",
+    "display": "Brownies",
     "groups": [
       "sweets"
     ],
@@ -14475,8 +14576,8 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "COOKIESGINGERSNAP",
-    "display": "Cookies Gingersnap",
+    "word": "GINGERSNAP",
+    "display": "Gingersnap Cookie",
     "groups": [
       "sweets"
     ],
@@ -14892,8 +14993,8 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "COOKIESMOLASSES",
-    "display": "Cookies Molasses",
+    "word": "MOLASSESCOOKIE",
+    "display": "Molasses Cookie",
     "groups": [
       "sweets"
     ],
@@ -14940,8 +15041,8 @@ export const FOODS: Food[] = [
     "groups": [
       "sweets"
     ],
-    "ndb": "18183",
-    "desc": "Cookies, oatmeal, refrigerated dough, baked",
+    "ndb": "18184",
+    "desc": "Cookies, oatmeal, prepared from recipe, with raisins",
     "cal": 471.0,
     "pro": 6.0,
     "fat": 21.0,
@@ -15090,8 +15191,8 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "COOKIESSHORTBREAD",
-    "display": "Cookies Shortbread",
+    "word": "SHORTBREAD",
+    "display": "Shortbread Cookie",
     "groups": [
       "sweets"
     ],
@@ -15260,6 +15361,42 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "CORIANDERSEED",
+    "display": "",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "2013",
+    "desc": "Spices, coriander seed",
+    "cal": 298.0,
+    "pro": 12.37,
+    "fat": 17.77,
+    "carb": 54.99,
+    "fib": 41.9,
+    "h2o": 8.86,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 1.8
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 5.5
+      }
+    ],
+    "synonyms": [
+      "coriander (ground)"
+    ]
+  },
+  {
     "word": "CORN",
     "display": "Corn Cooked",
     "groups": [
@@ -15415,7 +15552,7 @@ export const FOODS: Food[] = [
     "groups": [
       "prepared"
     ],
-    "ndb": "21120",
+    "ndb": "",
     "desc": "Fast foods, hotdog, with corn flour coating (corndog)",
     "cal": 263.0,
     "pro": 9.6,
@@ -19181,30 +19318,30 @@ export const FOODS: Food[] = [
     "groups": [
       "prepared"
     ],
-    "ndb": "22953",
+    "ndb": "",
     "desc": "Egg rolls, pork, refrigerated, heated",
-    "cal": 222.0,
-    "pro": 9.9,
-    "fat": 7.2,
-    "carb": 29.5,
+    "cal": 221.6,
+    "pro": 10.72,
+    "fat": 8.71,
+    "carb": 25.14,
     "fib": 2.1,
-    "h2o": 51.3,
-    "sug": 5.3,
+    "h2o": 2.17,
+    "sug": 53.42,
     "portions": [
       {
         "amt": 1.0,
         "desc": "custom (g)",
-        "gm": 100.0
+        "gm": 251.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 251.0
       },
       {
         "amt": 1.0,
         "desc": "roll",
-        "gm": 85.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
+        "gm": 84.0
       }
     ]
   },
@@ -19484,7 +19621,7 @@ export const FOODS: Food[] = [
     "groups": [
       "spice"
     ],
-    "ndb": "27063",
+    "ndb": "",
     "desc": "Sauce, enchilada, red, mild, ready to serve",
     "cal": 30.0,
     "pro": 0.6,
@@ -19556,8 +19693,8 @@ export const FOODS: Food[] = [
       "grain",
       "prepared"
     ],
-    "ndb": "28320",
-    "desc": "English muffins, whole grain white",
+    "ndb": "18639",
+    "desc": "GEORGE WESTON BAKERIES, Thomas English Muffins",
     "cal": 245.0,
     "pro": 7.0,
     "fat": 1.8,
@@ -19565,6 +19702,35 @@ export const FOODS: Food[] = [
     "fib": 3.5,
     "h2o": 39.5,
     "sug": 1.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "muffin 1 serving",
+        "gm": 57.0
+      }
+    ]
+  },
+  {
+    "word": "ENGLISHMUFFINWT",
+    "display": "English Muffin (Wheat)",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "18264",
+    "desc": "English muffins, wheat",
+    "cal": 223.0,
+    "pro": 8.7,
+    "fat": 2.0,
+    "carb": 44.8,
+    "fib": 4.6,
+    "h2o": 42.3,
+    "sug": 1.6,
     "portions": [
       {
         "amt": 1.0,
@@ -20690,6 +20856,65 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "package",
         "gm": 451.0
+      }
+    ]
+  },
+  {
+    "word": "FRANKFURTERRAW",
+    "display": "Frankfurter, beef (uncooked)",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "7022",
+    "desc": "Frankfurter, beef, unheated",
+    "cal": 315.0,
+    "pro": 11.69,
+    "fat": 28.1,
+    "carb": 2.97,
+    "fib": 0.0,
+    "h2o": 54.47,
+    "sug": 1.17,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "frankfurter",
+        "gm": 48.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "package",
+        "gm": 451.0
+      }
+    ]
+  },
+  {
+    "word": "SPORTPEPPERS",
+    "display": "Pickled hot peppers",
+    "groups": [],
+    "ndb": "31034",
+    "desc": "Peppers, hot pickled, canned",
+    "cal": 22.0,
+    "pro": 0.8,
+    "fat": 0.4,
+    "carb": 4.56,
+    "fib": 2.6,
+    "h2o": 90.2,
+    "sug": 1.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "pepper",
+        "gm": 6.0
       }
     ]
   },
@@ -22282,6 +22507,128 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "HOLLANDAISESAUCE",
+    "display": "Hollandaise Sauce",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "",
+    "desc": "Hollandaise sauce, prepared from recipe",
+    "cal": 529.0,
+    "pro": 5.3,
+    "fat": 56.65,
+    "carb": 1.8,
+    "fib": 0.03,
+    "h2o": 34.45,
+    "sug": 0.46,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tablespoon",
+        "gm": 14.9
+      }
+    ]
+  },
+  {
+    "word": "PIECRUSTRAW",
+    "display": "Pie Crust (Unbaked)",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "18402",
+    "desc": "Pie crust, standard-type, prepared from recipe, unbaked",
+    "cal": 469.0,
+    "pro": 5.7,
+    "fat": 30.8,
+    "carb": 42.3,
+    "fib": 3.4,
+    "h2o": 19.7,
+    "sug": 0.15,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "piece (1/8 of 9\" crust)",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "crust, single 9\"",
+        "gm": 214.0
+      }
+    ]
+  },
+  {
+    "word": "PIESINGLECRUST",
+    "display": "Pie Crust Single (Baked)",
+    "groups": [
+      "sweets"
+    ],
+    "ndb": "18336",
+    "desc": "Pie crust, standard-type, prepared from recipe, baked",
+    "cal": 527.0,
+    "pro": 6.4,
+    "fat": 34.6,
+    "carb": 47.5,
+    "fib": 1.7,
+    "h2o": 9.8,
+    "sug": 0.17,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "piece (1/8 of 9\" crust)",
+        "gm": 23.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "crust, single 9\"",
+        "gm": 180.0
+      }
+    ]
+  },
+  {
+    "word": "SAUSAGEGRAVY",
+    "display": "Sausage Gravy",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "",
+    "desc": "Sausage gravy, prepared from recipe",
+    "cal": 175.53,
+    "pro": 8.78,
+    "fat": 11.84,
+    "carb": 6.63,
+    "fib": 0.28,
+    "h2o": 71.03,
+    "sug": 3.74,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 115.15
+      }
+    ]
+  },
+  {
     "word": "GREENBEAN",
     "display": "Green Bean",
     "groups": [
@@ -22749,7 +23096,7 @@ export const FOODS: Food[] = [
     "groups": [
       "prepared"
     ],
-    "ndb": "21109",
+    "ndb": "",
     "desc": "Fast foods, hamburger; single, regular patty; with condiments and vegetables",
     "cal": 254.0,
     "pro": 11.7,
@@ -24519,7 +24866,7 @@ export const FOODS: Food[] = [
     "groups": [
       "prepared"
     ],
-    "ndb": "11935",
+    "ndb": "",
     "desc": "Catsup",
     "cal": 101.0,
     "pro": 1.0,
@@ -25137,7 +25484,7 @@ export const FOODS: Food[] = [
     "groups": [
       "prepared"
     ],
-    "ndb": "22977",
+    "ndb": "",
     "desc": "Lasagna with meat sauce, frozen, prepared",
     "cal": 135.0,
     "pro": 7.3,
@@ -25896,7 +26243,7 @@ export const FOODS: Food[] = [
     "groups": [
       "protein"
     ],
-    "ndb": "7911",
+    "ndb": "",
     "desc": "Liverwurst spread",
     "cal": 305.0,
     "pro": 12.4,
@@ -27083,7 +27430,7 @@ export const FOODS: Food[] = [
     "groups": [
       "spice"
     ],
-    "ndb": "4025",
+    "ndb": "",
     "desc": "Salad dressing, mayonnaise, regular",
     "cal": 680.0,
     "pro": 1.0,
@@ -29075,15 +29422,15 @@ export const FOODS: Food[] = [
     "groups": [
       "grain"
     ],
-    "ndb": "20134",
-    "desc": "Rice noodles, cooked",
-    "cal": 108.0,
-    "pro": 1.8,
-    "fat": 0.2,
-    "carb": 24.0,
-    "fib": 1.0,
-    "h2o": 73.8,
-    "sug": 0.0,
+    "ndb": "20133",
+    "desc": "Rice noodles, dry",
+    "cal": 364.0,
+    "pro": 5.95,
+    "fat": 0.56,
+    "carb": 80.18,
+    "fib": 1.6,
+    "h2o": 11.91,
+    "sug": 0.12,
     "portions": [
       {
         "amt": 1.0,
@@ -29091,9 +29438,9 @@ export const FOODS: Food[] = [
         "gm": 100.0
       },
       {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 176.0
+        "amt": 2.0,
+        "desc": "oz",
+        "gm": 57.0
       }
     ]
   },
@@ -31826,7 +32173,7 @@ export const FOODS: Food[] = [
     "groups": [
       "protein"
     ],
-    "ndb": "13355",
+    "ndb": "",
     "desc": "Beef, cured, pastrami",
     "cal": 147.0,
     "pro": 21.8,
@@ -35359,25 +35706,25 @@ export const FOODS: Food[] = [
     "groups": [
       "protein"
     ],
-    "ndb": "10189",
-    "desc": "Pork, fresh, loin, center loin (chops), boneless, separable lean and fat, cooked, pan-broiled",
-    "cal": 229.0,
-    "pro": 26.7,
-    "fat": 13.6,
-    "carb": 0.0,
-    "fib": 0.0,
-    "h2o": 59.4,
-    "sug": 0.0,
+    "ndb": "10036",
+    "desc": "Pork, fresh, loin, center loin (chops), bone-in, separable lean and fat, raw",
+    "cal": 230.4,
+    "pro": 21.62,
+    "fat": 15.17,
+    "carb": 0.74,
+    "fib": 0.17,
+    "h2o": 0.02,
+    "sug": 60.89,
     "portions": [
       {
         "amt": 1.0,
         "desc": "custom (g)",
-        "gm": 100.0
+        "gm": 158.0
       },
       {
-        "amt": 3.0,
-        "desc": "oz",
-        "gm": 85.0
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 158.0
       },
       {
         "amt": 1.0,
@@ -36570,14 +36917,14 @@ export const FOODS: Food[] = [
     "groups": [
       "protein"
     ],
-    "ndb": "7057",
-    "desc": "Pepperoni, beef and pork, sliced",
-    "cal": 504.0,
-    "pro": 19.2,
-    "fat": 46.3,
-    "carb": 1.2,
+    "ndb": "10141",
+    "desc": "Pork, cured, ham, center slice, country-style, separable lean only, raw",
+    "cal": 195.0,
+    "pro": 27.8,
+    "fat": 8.32,
+    "carb": 0.3,
     "fib": 0.0,
-    "h2o": 28.6,
+    "h2o": 55.93,
     "sug": 0.0,
     "portions": [
       {
@@ -41064,39 +41411,6 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "SHORTBREAD",
-    "display": "Shortbread",
-    "groups": [
-      "prepared"
-    ],
-    "ndb": "18192",
-    "desc": "Cookies, shortbread, commercially prepared, plain",
-    "cal": 514.0,
-    "pro": 5.4,
-    "fat": 26.2,
-    "carb": 63.8,
-    "fib": 1.3,
-    "h2o": 3.6,
-    "sug": 21.6,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "oz",
-        "gm": 28.35
-      },
-      {
-        "amt": 1.0,
-        "desc": "cookie",
-        "gm": 11.8
-      }
-    ]
-  },
-  {
     "word": "SHORTENING",
     "display": "Shortening",
     "groups": [
@@ -42958,19 +43272,19 @@ export const FOODS: Food[] = [
   },
   {
     "word": "SPINACH",
-    "display": "Spinach Raw",
+    "display": "Spinach Cooked",
     "groups": [
       "vegetable"
     ],
-    "ndb": "11457",
-    "desc": "Spinach, raw",
+    "ndb": "11458",
+    "desc": "Spinach, cooked, boiled, drained, without salt",
     "cal": 23.0,
-    "pro": 2.9,
-    "fat": 0.4,
-    "carb": 3.6,
-    "fib": 2.2,
-    "h2o": 91.4,
-    "sug": 0.4,
+    "pro": 2.97,
+    "fat": 0.26,
+    "carb": 3.75,
+    "fib": 2.4,
+    "h2o": 91.21,
+    "sug": 0.43,
     "portions": [
       {
         "amt": 1.0,
@@ -43920,15 +44234,15 @@ export const FOODS: Food[] = [
     "groups": [
       "spice"
     ],
-    "ndb": "18336",
-    "desc": "Pie crust, standard-type, prepared from recipe, baked",
-    "cal": 527.0,
-    "pro": 6.4,
-    "fat": 34.6,
-    "carb": 47.5,
-    "fib": 1.7,
-    "h2o": 9.8,
-    "sug": 0.2,
+    "ndb": "19336",
+    "desc": "Sugars, powdered",
+    "cal": 389.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 99.77,
+    "fib": 0.0,
+    "h2o": 0.23,
+    "sug": 97.81,
     "portions": [
       {
         "amt": 1.0,
@@ -43937,13 +44251,13 @@ export const FOODS: Food[] = [
       },
       {
         "amt": 1.0,
-        "desc": "piece (1/8 of 9\" crust)",
-        "gm": 23.0
+        "desc": "cup unsifted",
+        "gm": 120.0
       },
       {
         "amt": 1.0,
-        "desc": "crust, single 9\"",
-        "gm": 180.0
+        "desc": "tbsp",
+        "gm": 7.5
       }
     ]
   },
@@ -43958,10 +44272,10 @@ export const FOODS: Food[] = [
     "cal": 389.0,
     "pro": 0.0,
     "fat": 0.0,
-    "carb": 99.8,
+    "carb": 99.77,
     "fib": 0.0,
-    "h2o": 0.2,
-    "sug": 97.8,
+    "h2o": 0.23,
+    "sug": 97.81,
     "portions": [
       {
         "amt": 1.0,
@@ -43975,18 +44289,8 @@ export const FOODS: Food[] = [
       },
       {
         "amt": 1.0,
-        "desc": "cup sifted",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "tbsp unsifted",
-        "gm": 8.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "tsp",
-        "gm": 2.5
+        "desc": "tbsp",
+        "gm": 7.5
       }
     ]
   },
@@ -46811,7 +47115,7 @@ export const FOODS: Food[] = [
     "groups": [
       "protein"
     ],
-    "ndb": "15128",
+    "ndb": "",
     "desc": "Fish, tuna salad",
     "cal": 187.0,
     "pro": 16.0,
@@ -48541,34 +48845,6 @@ export const FOODS: Food[] = [
     ]
   },
   {
-    "word": "WHEAT",
-    "display": "Wheat Flour White Enriched",
-    "groups": [
-      "grain"
-    ],
-    "ndb": "20581",
-    "desc": "Wheat flour, white, all-purpose, enriched, unbleached",
-    "cal": 364.0,
-    "pro": 10.3,
-    "fat": 1.0,
-    "carb": 76.3,
-    "fib": 2.7,
-    "h2o": 11.9,
-    "sug": 0.3,
-    "portions": [
-      {
-        "amt": 1.0,
-        "desc": "custom (g)",
-        "gm": 100.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "cup",
-        "gm": 125.0
-      }
-    ]
-  },
-  {
     "word": "WHEATFLOURBREAD",
     "display": "Wheat Flour Bread",
     "groups": [
@@ -49715,6 +49991,3610 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "tbsp",
         "gm": 8.0
+      }
+    ]
+  },
+  {
+    "word": "BLACKPEPPER",
+    "display": "Black Pepper",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "2030",
+    "desc": "Spices, pepper, black",
+    "cal": 251.0,
+    "pro": 10.4,
+    "fat": 3.3,
+    "carb": 64.0,
+    "fib": 25.3,
+    "h2o": 12.5,
+    "sug": 0.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 2.3
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 6.9
+      }
+    ]
+  },
+  {
+    "word": "GARLICPOWDER",
+    "display": "Garlic Powder",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "2020",
+    "desc": "Spices, garlic powder",
+    "cal": 331.0,
+    "pro": 16.6,
+    "fat": 0.7,
+    "carb": 72.7,
+    "fib": 9.0,
+    "h2o": 6.5,
+    "sug": 2.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 3.1
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 9.7
+      }
+    ]
+  },
+  {
+    "word": "GROUNDPORK",
+    "display": "Ground Pork (Raw)",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "10219",
+    "desc": "Pork, fresh, ground, raw",
+    "cal": 263.0,
+    "pro": 16.9,
+    "fat": 21.2,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 61.1,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 4.0,
+        "desc": "oz",
+        "gm": 113.0
+      }
+    ]
+  },
+  {
+    "word": "ONIONPOWDER",
+    "display": "Onion Powder",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "2026",
+    "desc": "Spices, onion powder",
+    "cal": 341.0,
+    "pro": 10.4,
+    "fat": 1.0,
+    "carb": 79.1,
+    "fib": 15.2,
+    "h2o": 5.4,
+    "sug": 6.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 2.4
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 6.9
+      }
+    ]
+  },
+  {
+    "word": "OREGANO",
+    "display": "Oregano (Dried)",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "2027",
+    "desc": "Spices, oregano, dried",
+    "cal": 265.0,
+    "pro": 9.0,
+    "fat": 4.3,
+    "carb": 68.9,
+    "fib": 42.5,
+    "h2o": 9.9,
+    "sug": 4.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp, ground",
+        "gm": 1.8
+      }
+    ]
+  },
+  {
+    "word": "PAPRIKA",
+    "display": "Paprika",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "2028",
+    "desc": "Spices, paprika",
+    "cal": 282.0,
+    "pro": 14.1,
+    "fat": 12.9,
+    "carb": 54.0,
+    "fib": 34.9,
+    "h2o": 11.2,
+    "sug": 10.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 2.3
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 6.8
+      }
+    ]
+  },
+  {
+    "word": "SAGE",
+    "display": "Sage (Ground)",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "2038",
+    "desc": "Spices, sage, ground",
+    "cal": 315.0,
+    "pro": 10.6,
+    "fat": 12.8,
+    "carb": 60.7,
+    "fib": 40.3,
+    "h2o": 8.0,
+    "sug": 1.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 0.7
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 2.0
+      }
+    ]
+  },
+  {
+    "word": "PORKBACKFAT",
+    "display": "Pork Backfat",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "10004",
+    "desc": "Pork, fresh, backfat, raw",
+    "cal": 812.0,
+    "pro": 2.92,
+    "fat": 88.69,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 7.69,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 14.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "lb",
+        "gm": 453.6
+      }
+    ]
+  },
+  {
+    "word": "BISCUITSGRAVY",
+    "display": "Biscuits & Gravy",
+    "groups": [],
+    "ndb": "",
+    "desc": "262.64",
+    "cal": 7.83,
+    "pro": 13.85,
+    "fat": 25.61,
+    "carb": 0.88,
+    "fib": 50.18,
+    "h2o": 2.97,
+    "sug": 1.0,
+    "portions": [],
+    "synonyms": [
+      "prepared"
+    ]
+  },
+  {
+    "word": "EGGSBENEDICT",
+    "display": "Eggs Benedict",
+    "groups": [],
+    "ndb": "Eggs Benedict, prepared from recipe",
+    "desc": "288.0",
+    "cal": 13.81,
+    "pro": 21.1,
+    "fat": 8.48,
+    "carb": 0.6,
+    "fib": 53.51,
+    "h2o": 1.17,
+    "sug": 1.0,
+    "portions": [],
+    "synonyms": [
+      "prepared"
+    ]
+  },
+  {
+    "word": "CANADIANBACON",
+    "display": "Canadian Bacon",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "10998",
+    "desc": "Canadian bacon, cooked, pan-fried",
+    "cal": 146.0,
+    "pro": 28.31,
+    "fat": 2.78,
+    "carb": 1.8,
+    "fib": 0.0,
+    "h2o": 62.5,
+    "sug": 1.2,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice",
+        "gm": 28.0
+      }
+    ]
+  },
+  {
+    "word": "CANADIANBACONRAW",
+    "display": "Canadian Bacon (raw)",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "10130",
+    "desc": "Canadian bacon, unprepared",
+    "cal": 110.0,
+    "pro": 20.31,
+    "fat": 2.62,
+    "carb": 1.34,
+    "fib": 0.0,
+    "h2o": 72.34,
+    "sug": 0.9,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice",
+        "gm": 28.5
+      }
+    ]
+  },
+  {
+    "word": "BREADWHITE",
+    "display": "White Bread",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "18069",
+    "desc": "Bread, white, commercially prepared (includes soft bread crumbs)",
+    "cal": 266.0,
+    "pro": 8.85,
+    "fat": 3.33,
+    "carb": 49.42,
+    "fib": 2.7,
+    "h2o": 36.42,
+    "sug": 5.67,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice",
+        "gm": 28.0
+      }
+    ]
+  },
+  {
+    "word": "MILK2PCT",
+    "display": "Milk 2%",
+    "groups": [
+      "dairy",
+      "beverage"
+    ],
+    "ndb": "1079",
+    "desc": "Milk, reduced fat, fluid, 2% milkfat, with added vitamin A and vitamin D",
+    "cal": 50.0,
+    "pro": 3.3,
+    "fat": 1.98,
+    "carb": 4.8,
+    "fib": 0.0,
+    "h2o": 89.21,
+    "sug": 5.06,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 244.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.5
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 15.0
+      }
+    ]
+  },
+  {
+    "word": "REFRIEDBEANVEG",
+    "display": "Refried Bean (Veg)",
+    "groups": [
+      "legume"
+    ],
+    "ndb": "16171",
+    "desc": "Refried beans, canned, vegetarian",
+    "cal": 83.0,
+    "pro": 5.28,
+    "fat": 0.87,
+    "carb": 13.5,
+    "fib": 4.7,
+    "h2o": 78.39,
+    "sug": 0.59,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 238.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tablespoon",
+        "gm": 16.0
+      }
+    ]
+  },
+  {
+    "word": "BEEFGROUND80RAW",
+    "display": "Ground Beef (80% lean, raw)",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "23572",
+    "desc": "Beef, ground, 80% lean meat / 20% fat, raw",
+    "cal": 254.0,
+    "pro": 17.17,
+    "fat": 20.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 61.87,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "oz",
+        "gm": 85.0
+      }
+    ]
+  },
+  {
+    "word": "POTATOESRAW",
+    "display": "Raw Potatoes",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11352",
+    "desc": "Potatoes, flesh and skin, raw",
+    "cal": 77.0,
+    "pro": 2.05,
+    "fat": 0.09,
+    "carb": 17.49,
+    "fib": 2.1,
+    "h2o": 79.25,
+    "sug": 0.82,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "medium potato",
+        "gm": 150.0
+      }
+    ]
+  },
+  {
+    "word": "HAM",
+    "display": "Ham",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "10136",
+    "desc": "Pork, cured, ham, boneless, regular (approximately 11% fat), roasted",
+    "cal": 178.0,
+    "pro": 22.62,
+    "fat": 9.02,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 64.54,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "oz",
+        "gm": 85.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, diced",
+        "gm": 135.0
+      }
+    ]
+  },
+  {
+    "word": "BELLPEPPER",
+    "display": "Bell Pepper Green",
+    "groups": [
+      "vegetable",
+      "fruit"
+    ],
+    "ndb": "11333",
+    "desc": "Peppers, sweet, green, raw",
+    "cal": 20.0,
+    "pro": 0.86,
+    "fat": 0.17,
+    "carb": 4.64,
+    "fib": 1.7,
+    "h2o": 93.89,
+    "sug": 2.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "medium",
+        "gm": 119.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, chopped",
+        "gm": 149.0
+      },
+      {
+        "amt": 0.5,
+        "desc": "cup, chopped",
+        "gm": 75.0
+      },
+      {
+        "amt": 0.25,
+        "desc": "cup, chopped",
+        "gm": 37.0
+      }
+    ]
+  },
+  {
+    "word": "GREEKYOGURT",
+    "display": "Greek Yogurt",
+    "groups": [
+      "dairy"
+    ],
+    "ndb": "1293",
+    "desc": "Yogurt, Greek, plain, whole milk",
+    "cal": 97.0,
+    "pro": 9.0,
+    "fat": 5.0,
+    "carb": 3.98,
+    "fib": 0.0,
+    "h2o": 81.3,
+    "sug": 4.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 245.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 15.0
+      }
+    ]
+  },
+  {
+    "word": "WORCESTERSHIRE",
+    "display": "Worcestershire Sauce",
+    "groups": [
+      "condiment"
+    ],
+    "ndb": "6971",
+    "desc": "Sauce, worcestershire",
+    "cal": 78.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 19.5,
+    "fib": 0.0,
+    "h2o": 78.5,
+    "sug": 10.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 5.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 15.0
+      }
+    ]
+  },
+  {
+    "word": "BREADMULTIGRAIN",
+    "display": "Multigrain Bread",
+    "groups": [
+      "prepared",
+      "grain"
+    ],
+    "ndb": "28397",
+    "desc": "Bread, multi-grain (includes whole-grain)",
+    "cal": 265.0,
+    "pro": 13.36,
+    "fat": 4.23,
+    "carb": 43.34,
+    "fib": 7.4,
+    "h2o": 36.94,
+    "sug": 6.39,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice",
+        "gm": 28.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "LIVERWURSTPORK",
+    "display": "Liverwurst",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "7041",
+    "desc": "Liver sausage, liverwurst, pork",
+    "cal": 326.0,
+    "pro": 14.1,
+    "fat": 28.5,
+    "carb": 2.2,
+    "fib": 0.0,
+    "h2o": 52.1,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "LIMBURGERCHEESE",
+    "display": "Limburger cheese",
+    "groups": [
+      "dairy"
+    ],
+    "ndb": "1024",
+    "desc": "Cheese, limburger",
+    "cal": 327.0,
+    "pro": 20.05,
+    "fat": 27.25,
+    "carb": 0.49,
+    "fib": 0.0,
+    "h2o": 48.42,
+    "sug": 0.49,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 134.0
+      }
+    ]
+  },
+  {
+    "word": "TOMATOPASTE",
+    "display": "Tomato Paste",
+    "groups": [
+      "prepared",
+      "vegetable"
+    ],
+    "ndb": "11546",
+    "desc": "Tomato products, canned, paste, without salt added",
+    "cal": 82.0,
+    "pro": 4.32,
+    "fat": 0.47,
+    "carb": 18.91,
+    "fib": 4.1,
+    "h2o": 73.5,
+    "sug": 12.18,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 16.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 0.25,
+        "desc": "cup",
+        "gm": 66.0
+      }
+    ]
+  },
+  {
+    "word": "PORKBOSTONBUTT",
+    "display": "Pork Shoulder",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "10080",
+    "desc": "Pork, fresh, shoulder, (Boston butt), blade (steaks), separable lean and fat, raw",
+    "cal": 186.0,
+    "pro": 17.42,
+    "fat": 12.36,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 69.18,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "lb",
+        "gm": 453.6
+      }
+    ]
+  },
+  {
+    "word": "BBQSAUCE",
+    "display": "Barbecue Sauce",
+    "groups": [
+      "condiment"
+    ],
+    "ndb": "",
+    "desc": "Sauce, barbecue",
+    "cal": 172.0,
+    "pro": 0.82,
+    "fat": 0.63,
+    "carb": 40.77,
+    "fib": 0.9,
+    "h2o": 54.71,
+    "sug": 33.24,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 15.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 250.0
+      }
+    ]
+  },
+  {
+    "word": "BEEFBRISKET",
+    "display": "Beef Brisket",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "13803",
+    "desc": "Beef, brisket, whole, separable lean and fat, trimmed to 1/8\" fat, all grades, raw",
+    "cal": 251.0,
+    "pro": 18.42,
+    "fat": 19.06,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 61.08,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "lb",
+        "gm": 453.6
+      }
+    ]
+  },
+  {
+    "word": "CHICKENBREASTRAW",
+    "display": "Chicken Breast Raw",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "5062",
+    "desc": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+    "cal": 120.0,
+    "pro": 22.5,
+    "fat": 2.62,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 73.9,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "lb",
+        "gm": 453.6
+      }
+    ]
+  },
+  {
+    "word": "HOTSAUCE",
+    "display": "Hot Sauce",
+    "groups": [
+      "condiment"
+    ],
+    "ndb": "6169",
+    "desc": "Sauce, ready-to-serve, pepper, TABASCO",
+    "cal": 12.0,
+    "pro": 1.29,
+    "fat": 0.76,
+    "carb": 0,
+    "fib": 0,
+    "h2o": 0,
+    "sug": 0,
+    "portions": []
+  },
+  {
+    "word": "RANCHDRESSING",
+    "display": "Ranch Dressing",
+    "groups": [
+      "condiment"
+    ],
+    "ndb": "4639",
+    "desc": "Salad dressing, ranch dressing, regular",
+    "cal": 430.0,
+    "pro": 1.32,
+    "fat": 44.54,
+    "carb": 0,
+    "fib": 0,
+    "h2o": 0,
+    "sug": 0,
+    "portions": []
+  },
+  {
+    "word": "CODRAW",
+    "display": "Cod (raw)",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "15015",
+    "desc": "Fish, cod, Atlantic, raw",
+    "cal": 82.0,
+    "pro": 17.81,
+    "fat": 0.67,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 81.22,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "oz",
+        "gm": 85.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fillet",
+        "gm": 180.0
+      }
+    ]
+  },
+  {
+    "word": "TAMARI",
+    "display": "Tamari",
+    "groups": [
+      "condiment"
+    ],
+    "ndb": "16124",
+    "desc": "Soy sauce made from soy (tamari)",
+    "cal": 60.0,
+    "pro": 10.51,
+    "fat": 0.1,
+    "carb": 5.57,
+    "fib": 0.8,
+    "h2o": 66.0,
+    "sug": 1.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 18.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 6.0
+      }
+    ]
+  },
+  {
+    "word": "BASIL",
+    "display": "Basil (Dried)",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "2003",
+    "desc": "Spices, basil, dried",
+    "cal": 233.0,
+    "pro": 22.98,
+    "fat": 4.07,
+    "carb": 47.75,
+    "fib": 37.7,
+    "h2o": 10.35,
+    "sug": 1.71,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp, leaves",
+        "gm": 0.7
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp, leaves",
+        "gm": 2.1
+      }
+    ]
+  },
+  {
+    "word": "SHRIMP",
+    "display": "Shrimp",
+    "groups": [],
+    "ndb": "15270",
+    "desc": "Crustaceans, shrimp, raw (not previously frozen)",
+    "cal": 85.0,
+    "pro": 20.1,
+    "fat": 0.51,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 78.45,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 3.0,
+        "desc": "oz",
+        "gm": 85.0
+      },
+      {
+        "amt": 6.0,
+        "desc": "oz",
+        "gm": 170.0
+      }
+    ]
+  },
+  {
+    "word": "OYSTER",
+    "display": "Oyster",
+    "groups": [],
+    "ndb": "15167",
+    "desc": "Mollusks, oyster, eastern, wild, raw",
+    "cal": 51.0,
+    "pro": 5.71,
+    "fat": 1.71,
+    "carb": 2.72,
+    "fib": 0.0,
+    "h2o": 89.04,
+    "sug": 0.62,
+    "portions": [
+      {
+        "amt": 3.0,
+        "desc": "oz",
+        "gm": 85.0
+      },
+      {
+        "amt": 6.0,
+        "desc": "oz",
+        "gm": 170.0
+      }
+    ]
+  },
+  {
+    "word": "CORNMEAL",
+    "display": "Cornmeal",
+    "groups": [],
+    "ndb": "20022",
+    "desc": "Cornmeal, degermed, enriched, yellow",
+    "cal": 370.0,
+    "pro": 7.11,
+    "fat": 1.75,
+    "carb": 79.45,
+    "fib": 3.9,
+    "h2o": 11.18,
+    "sug": 1.61,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 138.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 8.6
+      }
+    ]
+  },
+  {
+    "word": "PICKLERELISH",
+    "display": "Pickle Relish",
+    "groups": [],
+    "ndb": "11945",
+    "desc": "Pickle relish, sweet",
+    "cal": 130.0,
+    "pro": 0.37,
+    "fat": 0.47,
+    "carb": 35.06,
+    "fib": 1.1,
+    "h2o": 62.07,
+    "sug": 29.13,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 15.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 5.0
+      }
+    ]
+  },
+  {
+    "word": "HOAGIEROLL",
+    "display": "Hoagie Roll",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "18353",
+    "desc": "Rolls, hard (includes kaiser)",
+    "cal": 293.0,
+    "pro": 9.9,
+    "fat": 4.3,
+    "carb": 52.7,
+    "fib": 2.3,
+    "h2o": 31.0,
+    "sug": 1.77,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "roll (6\")",
+        "gm": 72.0
+      }
+    ]
+  },
+  {
+    "word": "SALAMIITALIAN",
+    "display": "Salami Italian",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "7926",
+    "desc": "Salami, Italian, pork",
+    "cal": 425.0,
+    "pro": 21.7,
+    "fat": 37.0,
+    "carb": 1.2,
+    "fib": 0.0,
+    "h2o": 34.6,
+    "sug": 1.2,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice",
+        "gm": 10.0
+      }
+    ]
+  },
+  {
+    "word": "BEEFRIBEYERAW",
+    "display": "Beef, Ribeye, Raw",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "23263",
+    "desc": "Beef, ribeye petite roast/filet, boneless, separable lean only, trimmed to 0\" fat, all grades, raw",
+    "cal": 133.0,
+    "pro": 22.66,
+    "fat": 4.66,
+    "carb": 0.04,
+    "fib": 0.0,
+    "h2o": 71.57,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 3.0,
+        "desc": "oz",
+        "gm": 85.05
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "PORKTENDERLOIN",
+    "display": "Pork Tenderloin",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "10060",
+    "desc": "Pork, fresh, loin, tenderloin, separable lean only, raw",
+    "cal": 109.0,
+    "pro": 20.95,
+    "fat": 2.17,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 76.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 3.0,
+        "desc": "oz",
+        "gm": 85.05
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "DAIKONRADISH",
+    "display": "Daikon Radish",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11430",
+    "desc": "Radishes, oriental, raw",
+    "cal": 18.0,
+    "pro": 0.6,
+    "fat": 0.1,
+    "carb": 4.1,
+    "fib": 0.0,
+    "h2o": 94.62,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 116.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "BASILFRESH",
+    "display": "Basil (Fresh)",
+    "groups": [],
+    "ndb": "2044",
+    "desc": "Basil, fresh",
+    "cal": 23.0,
+    "pro": 3.2,
+    "fat": 0.6,
+    "carb": 2.7,
+    "fib": 1.6,
+    "h2o": 92.1,
+    "sug": 0.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "tbsp",
+        "gm": 5.0
+      }
+    ]
+  },
+  {
+    "word": "CHEDDARSHARPCHEESE",
+    "display": "Cheddar Cheese (Sharp)",
+    "groups": [
+      "dairy"
+    ],
+    "ndb": "1270",
+    "desc": "Cheese, cheddar, sharp, sliced",
+    "cal": 410.0,
+    "pro": 24.3,
+    "fat": 33.8,
+    "carb": 2.1,
+    "fib": 0.0,
+    "h2o": 36.2,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice",
+        "gm": 21.0
+      }
+    ]
+  },
+  {
+    "word": "SMOKEDSALMON",
+    "display": "Smoked Salmon",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "15077",
+    "desc": "Fish, salmon, chinook, smoked",
+    "cal": 117.0,
+    "pro": 18.28,
+    "fat": 4.32,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 0.0,
+    "sug": 72.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "CRIMINI",
+    "display": "Crimini Mushroom Raw",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11266",
+    "desc": "Mushrooms, brown, italian, or crimini, raw",
+    "cal": 22.0,
+    "pro": 2.5,
+    "fat": 0.1,
+    "carb": 4.3,
+    "fib": 0.6,
+    "h2o": 92.12,
+    "sug": 1.72,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup sliced",
+        "gm": 72.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup whole",
+        "gm": 96.0
+      }
+    ]
+  },
+  {
+    "word": "ONIONRINGS",
+    "display": "Onion Rings Fried",
+    "groups": [],
+    "ndb": "21130",
+    "desc": "Fast foods, onion rings, breaded and fried",
+    "cal": 411.0,
+    "pro": 3.86,
+    "fat": 25.23,
+    "carb": 43.58,
+    "fib": 2.7,
+    "h2o": 24.52,
+    "sug": 5.43,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "piece",
+        "gm": 10.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving (8-9 rings)",
+        "gm": 85.0
+      }
+    ]
+  },
+  {
+    "word": "TURKEYBURGER",
+    "display": "Turkey Burger",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "5665",
+    "desc": "Ground turkey, 93% lean, 7% fat, raw",
+    "cal": 150.0,
+    "pro": 18.73,
+    "fat": 8.34,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 72.63,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 100.0,
+        "desc": "custom",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "patty (4 oz)",
+        "gm": 113.4
+      }
+    ]
+  },
+  {
+    "word": "POULTRYSEASONING",
+    "display": "Poultry Seasoning",
+    "groups": [],
+    "ndb": "2034",
+    "desc": "Spices, poultry seasoning",
+    "cal": 307.0,
+    "pro": 9.59,
+    "fat": 7.53,
+    "carb": 65.59,
+    "fib": 11.3,
+    "h2o": 9.31,
+    "sug": 1.8,
+    "portions": [
+      {
+        "amt": 100.0,
+        "desc": "custom",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 1.5
+      }
+    ]
+  },
+  {
+    "word": "WHITEPEPPERCORN",
+    "display": "White Pepper",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "2032",
+    "desc": "Spices, pepper, white",
+    "cal": 296.0,
+    "pro": 10.4,
+    "fat": 2.12,
+    "carb": 68.61,
+    "fib": 26.2,
+    "h2o": 11.42,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 2.4
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 7.2
+      }
+    ]
+  },
+  {
+    "word": "TOMATOPUREE",
+    "display": "Tomato Pur\u00e9e",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "11547",
+    "desc": "Tomato products, canned, puree, without salt added",
+    "cal": 38.0,
+    "pro": 1.65,
+    "fat": 0.21,
+    "carb": 8.98,
+    "fib": 1.9,
+    "h2o": 87.88,
+    "sug": 4.83,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 244.0
+      }
+    ]
+  },
+  {
+    "word": "CHICKENBROTH",
+    "display": "Chicken Broth",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "",
+    "desc": "Soup, chicken broth, ready-to-serve",
+    "cal": 6.0,
+    "pro": 0.64,
+    "fat": 0.21,
+    "carb": 0.44,
+    "fib": 0.0,
+    "h2o": 97.81,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 245.0
+      }
+    ]
+  },
+  {
+    "word": "LEEKRAW",
+    "display": "Leek Raw",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11246",
+    "desc": "Leeks, (bulb and lower leaf-portion), raw",
+    "cal": 61.0,
+    "pro": 1.5,
+    "fat": 0.3,
+    "carb": 14.15,
+    "fib": 1.8,
+    "h2o": 83.0,
+    "sug": 3.9,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 89.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "leek",
+        "gm": 89.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice",
+        "gm": 6.0
+      }
+    ]
+  },
+  {
+    "word": "CHICKENBACKRAW",
+    "display": "Chicken Back Raw",
+    "groups": [],
+    "ndb": "5048",
+    "desc": "Chicken, broilers or fryers, back, meat and skin, raw",
+    "cal": 319.0,
+    "pro": 14.05,
+    "fat": 28.74,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 58.1,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "lb",
+        "gm": 453.592
+      },
+      {
+        "amt": 1.0,
+        "desc": "unit (yield from 1 lb)",
+        "gm": 59.0
+      }
+    ]
+  },
+  {
+    "word": "CHICKENNECKRAW",
+    "display": "Chicken Neck Raw",
+    "groups": [],
+    "ndb": "5084",
+    "desc": "Chicken, broilers or fryers, neck, meat and skin, raw",
+    "cal": 297.0,
+    "pro": 14.07,
+    "fat": 26.24,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 59.99,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "lb",
+        "gm": 453.592
+      },
+      {
+        "amt": 1.0,
+        "desc": "neck, bone removed",
+        "gm": 50.0
+      }
+    ]
+  },
+  {
+    "word": "CHICKENFEETBOILED",
+    "display": "Chicken Feet Boiled",
+    "groups": [],
+    "ndb": "5335",
+    "desc": "Chicken, feet, boiled",
+    "cal": 215.0,
+    "pro": 19.4,
+    "fat": 14.6,
+    "carb": 0.2,
+    "fib": 0.0,
+    "h2o": 65.8,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "lb",
+        "gm": 453.6
+      }
+    ]
+  },
+  {
+    "word": "CHICKENWINGRAW",
+    "display": "Chicken Wing Raw",
+    "groups": [],
+    "ndb": "5100",
+    "desc": "Chicken, broilers or fryers, wing, meat and skin, raw",
+    "cal": 191.0,
+    "pro": 17.52,
+    "fat": 12.85,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 69.19,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "lb",
+        "gm": 453.592
+      },
+      {
+        "amt": 1.0,
+        "desc": "unit (yield from 1 lb)",
+        "gm": 68.0
+      }
+    ]
+  },
+  {
+    "word": "BEEFSHANKRAW",
+    "display": "Beef Shank Raw",
+    "groups": [],
+    "ndb": "13227",
+    "desc": "Beef, shank crosscuts, separable lean only, trimmed to 1/4\" fat, choice, raw",
+    "cal": 128.0,
+    "pro": 21.75,
+    "fat": 3.85,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 73.03,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "lb",
+        "gm": 453.592
+      }
+    ]
+  },
+  {
+    "word": "VEGETABLEBROTH",
+    "display": "Vegetable Broth",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "6700",
+    "desc": "Soup, vegetable broth, ready to serve",
+    "cal": 5.0,
+    "pro": 0.24,
+    "fat": 0.07,
+    "carb": 0.93,
+    "fib": 0.0,
+    "h2o": 98.05,
+    "sug": 0.55,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 221.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "can",
+        "gm": 390.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "carton (32 oz)",
+        "gm": 926.0
+      }
+    ]
+  },
+  {
+    "word": "MUSTARDGROUND",
+    "display": "Ground Mustard",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "2024",
+    "desc": "Spices, mustard seed, ground",
+    "cal": 508.0,
+    "pro": 26.08,
+    "fat": 36.24,
+    "carb": 28.09,
+    "fib": 12.2,
+    "h2o": 5.27,
+    "sug": 6.79,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 3.3
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 9.9
+      }
+    ]
+  },
+  {
+    "word": "BEEFSIRLOINTIP",
+    "display": "Beef Sirloin Tip Steak",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "23061",
+    "desc": "Beef, round, knuckle, tip center, steak, separable lean and fat, trimmed to 0\" fat, all grades, raw",
+    "cal": 143.0,
+    "pro": 20.93,
+    "fat": 5.89,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 72.45,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "oz",
+        "gm": 85.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "steak",
+        "gm": 197.0
+      }
+    ]
+  },
+  {
+    "word": "POTATOESWHITE",
+    "display": "White Potatoes",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11354",
+    "desc": "Potatoes, white, flesh and skin, raw",
+    "cal": 69.0,
+    "pro": 1.68,
+    "fat": 0.1,
+    "carb": 15.71,
+    "fib": 2.4,
+    "h2o": 81.58,
+    "sug": 1.15,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "medium potato",
+        "gm": 150.0
+      }
+    ]
+  },
+  {
+    "word": "REDCABBAGE",
+    "display": "Red Cabbage Raw",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11112",
+    "desc": "Cabbage, red, raw",
+    "cal": 31.0,
+    "pro": 1.43,
+    "fat": 0.16,
+    "carb": 7.37,
+    "fib": 2.1,
+    "h2o": 90.39,
+    "sug": 3.83,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, shredded",
+        "gm": 70.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "head (about 5-1/2\" dia)",
+        "gm": 908.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "leaf",
+        "gm": 28.0
+      }
+    ]
+  },
+  {
+    "word": "BELLPEPPERRED",
+    "display": "Bell Pepper Red",
+    "groups": [
+      "vegetable",
+      "fruit"
+    ],
+    "ndb": "11821",
+    "desc": "Peppers, sweet, red, raw",
+    "cal": 31.0,
+    "pro": 0.99,
+    "fat": 0.3,
+    "carb": 6.03,
+    "fib": 2.1,
+    "h2o": 92.21,
+    "sug": 4.2,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "medium",
+        "gm": 119.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, chopped",
+        "gm": 149.0
+      },
+      {
+        "amt": 0.5,
+        "desc": "cup, chopped",
+        "gm": 74.5
+      }
+    ]
+  },
+  {
+    "word": "POTATOESRUSSET",
+    "display": "Russet Potato",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11353",
+    "desc": "Potatoes, russet, flesh and skin, raw",
+    "cal": 79.0,
+    "pro": 2.14,
+    "fat": 0.08,
+    "carb": 18.07,
+    "fib": 1.3,
+    "h2o": 78.58,
+    "sug": 0.62,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "large potato",
+        "gm": 369.0
+      }
+    ]
+  },
+  {
+    "word": "NORTHERNBEANRAW",
+    "display": "",
+    "groups": [
+      "legume",
+      "protein"
+    ],
+    "ndb": "16024",
+    "desc": "Beans, great northern, mature seeds, raw",
+    "cal": 339.0,
+    "pro": 21.86,
+    "fat": 1.14,
+    "carb": 62.37,
+    "fib": 20.2,
+    "h2o": 10.7,
+    "sug": 2.26,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 200.0
+      }
+    ],
+    "synonyms": [
+      "great northern beans, dry"
+    ]
+  },
+  {
+    "word": "TOMATOCAN",
+    "display": "Tomatoes Crushed Canned",
+    "groups": [],
+    "ndb": "11693",
+    "desc": "Tomatoes, crushed, canned",
+    "cal": 32.0,
+    "pro": 1.64,
+    "fat": 0.28,
+    "carb": 7.29,
+    "fib": 1.9,
+    "h2o": 89.44,
+    "sug": 4.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 240.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "can (14.5 oz)",
+        "gm": 411.0
+      }
+    ]
+  },
+  {
+    "word": "THYMEDRIED",
+    "display": "Thyme Dried",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "2042",
+    "desc": "Spices, thyme, dried",
+    "cal": 276.0,
+    "pro": 9.11,
+    "fat": 7.43,
+    "carb": 63.94,
+    "fib": 37.0,
+    "h2o": 7.79,
+    "sug": 1.71,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 1.4
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 4.2
+      }
+    ]
+  },
+  {
+    "word": "OKRARAW",
+    "display": "Okra Raw",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11278",
+    "desc": "Okra, raw",
+    "cal": 33.0,
+    "pro": 1.93,
+    "fat": 0.19,
+    "carb": 7.45,
+    "fib": 3.2,
+    "h2o": 89.58,
+    "sug": 1.48,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "cup sliced",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "lb",
+        "gm": 453.6
+      }
+    ]
+  },
+  {
+    "word": "SQUASHYELLOW",
+    "display": "Yellow Squash Raw",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11641",
+    "desc": "Squash, summer, all varieties, raw",
+    "cal": 16.0,
+    "pro": 1.21,
+    "fat": 0.18,
+    "carb": 3.35,
+    "fib": 1.1,
+    "h2o": 94.6,
+    "sug": 2.16,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "cup sliced",
+        "gm": 180.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "lb",
+        "gm": 453.6
+      }
+    ]
+  },
+  {
+    "word": "SWEETPOTATORAW",
+    "display": "Sweet Potato Raw",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11507",
+    "desc": "Sweet potato, raw, unprepared",
+    "cal": 86.0,
+    "pro": 1.57,
+    "fat": 0.05,
+    "carb": 20.12,
+    "fib": 3.0,
+    "h2o": 77.28,
+    "sug": 4.18,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "medium (raw)",
+        "gm": 130.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "large (raw)",
+        "gm": 180.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "small (raw)",
+        "gm": 60.0
+      }
+    ]
+  },
+  {
+    "word": "ANCHOVYCANNED",
+    "display": "Anchovy Canned",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "15002",
+    "desc": "Fish, anchovy, european, canned in oil, drained solids",
+    "cal": 210.0,
+    "pro": 28.89,
+    "fat": 9.71,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 50.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fillet",
+        "gm": 4.0
+      }
+    ]
+  },
+  {
+    "word": "ROMAINE",
+    "display": "Romaine Lettuce",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11251",
+    "desc": "Lettuce, cos or romaine, raw",
+    "cal": 17.0,
+    "pro": 1.23,
+    "fat": 0.3,
+    "carb": 3.29,
+    "fib": 2.1,
+    "h2o": 94.61,
+    "sug": 1.19,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup shredded",
+        "gm": 47.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "head",
+        "gm": 626.0
+      }
+    ]
+  },
+  {
+    "word": "PINENUTS",
+    "display": "Pine Nuts",
+    "groups": [
+      "nuts"
+    ],
+    "ndb": "12147",
+    "desc": "Nuts, pine nuts, dried",
+    "cal": 673.0,
+    "pro": 13.69,
+    "fat": 68.37,
+    "carb": 13.08,
+    "fib": 3.7,
+    "h2o": 2.28,
+    "sug": 3.59,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 9.0
+      }
+    ]
+  },
+  {
+    "word": "ALMONDS",
+    "display": "Almonds",
+    "groups": [
+      "nuts"
+    ],
+    "ndb": "12061",
+    "desc": "Nuts, almonds",
+    "cal": 579.0,
+    "pro": 21.15,
+    "fat": 49.93,
+    "carb": 21.55,
+    "fib": 12.5,
+    "h2o": 4.35,
+    "sug": 4.41,
+    "portions": [
+      {
+        "amt": 100.0,
+        "desc": "100.0",
+        "gm": 1.0
+      }
+    ]
+  },
+  {
+    "word": "SUNFLOWERSEEDS",
+    "display": "Sunflower Seeds",
+    "groups": [
+      "nuts"
+    ],
+    "ndb": "12037",
+    "desc": "Seeds, sunflower seed kernels, dry roasted, without salt",
+    "cal": 582.0,
+    "pro": 19.33,
+    "fat": 49.8,
+    "carb": 24.07,
+    "fib": 11.1,
+    "h2o": 2.73,
+    "sug": 1.2,
+    "portions": [
+      {
+        "amt": 100.0,
+        "desc": "100.0",
+        "gm": 1.0
+      }
+    ]
+  },
+  {
+    "word": "SPINACHRAW",
+    "display": "Spinach Raw",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11457",
+    "desc": "Spinach, raw",
+    "cal": 23.0,
+    "pro": 2.86,
+    "fat": 0.39,
+    "carb": 3.63,
+    "fib": 0.0,
+    "h2o": 91.4,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 30.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "CHICKPEACANNED",
+    "display": "Chickpeas Canned",
+    "groups": [
+      "legume"
+    ],
+    "ndb": "16358",
+    "desc": "Chickpeas (garbanzo beans, bengal gram), mature seeds, canned, drained solids",
+    "cal": 139.0,
+    "pro": 7.05,
+    "fat": 2.77,
+    "carb": 22.53,
+    "fib": 0.0,
+    "h2o": 66.72,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 164.0
+      }
+    ]
+  },
+  {
+    "word": "WALNUTRAW",
+    "display": "Walnut Raw",
+    "groups": [
+      "nuts"
+    ],
+    "ndb": "12155",
+    "desc": "Nuts, walnuts, english",
+    "cal": 654.0,
+    "pro": 15.23,
+    "fat": 65.21,
+    "carb": 13.71,
+    "fib": 0.0,
+    "h2o": 4.07,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup halves",
+        "gm": 117.0
+      }
+    ]
+  },
+  {
+    "word": "BEEFCHUCKROAST",
+    "display": "Beef Chuck Roast",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "13293",
+    "desc": "Beef, chuck, under blade pot roast or steak, boneless, separable lean only, trimmed to 0\" fat, all grades, raw",
+    "cal": 140.0,
+    "pro": 21.13,
+    "fat": 6.07,
+    "carb": 0.31,
+    "fib": 0.0,
+    "h2o": 71.41,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "lb",
+        "gm": 453.592
+      }
+    ]
+  },
+  {
+    "word": "BEEFTOPSIRLOIN",
+    "display": "Beef Top Sirloin",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "23611",
+    "desc": "Beef, top sirloin, steak, separable lean only, trimmed to 1/8\" fat, all grades, raw",
+    "cal": 131.0,
+    "pro": 22.09,
+    "fat": 4.08,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 72.91,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "lb",
+        "gm": 453.592
+      }
+    ]
+  },
+  {
+    "word": "BEEFTOPROUND",
+    "display": "Beef Top Round",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "23354",
+    "desc": "Beef, round, top round steak, boneless, separable lean only, trimmed to 0\" fat, all grades, raw",
+    "cal": 121.0,
+    "pro": 23.59,
+    "fat": 2.94,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 72.96,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "lb",
+        "gm": 453.592
+      }
+    ]
+  },
+  {
+    "word": "ANCHOCHILE",
+    "display": "Ancho Chile",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "11978",
+    "desc": "",
+    "cal": 281.0,
+    "pro": 11.86,
+    "fat": 8.2,
+    "carb": 51.42,
+    "fib": 21.6,
+    "h2o": 22.63,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "pepper",
+        "gm": 17.0
+      }
+    ]
+  },
+  {
+    "word": "PASILLACHILE",
+    "display": "Pasilla Chile",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "11982",
+    "desc": "",
+    "cal": 345.0,
+    "pro": 12.35,
+    "fat": 15.85,
+    "carb": 51.13,
+    "fib": 26.8,
+    "h2o": 14.84,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "pepper",
+        "gm": 7.0
+      }
+    ]
+  },
+  {
+    "word": "ORANGEJUICERAW",
+    "display": "Orange Juice Raw",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "9206",
+    "desc": "",
+    "cal": 45.0,
+    "pro": 0.7,
+    "fat": 0.2,
+    "carb": 10.4,
+    "fib": 0.2,
+    "h2o": 88.3,
+    "sug": 8.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 31.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 248.0
+      }
+    ]
+  },
+  {
+    "word": "CHILIPOWDER",
+    "display": "Chili Powder",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "2009",
+    "desc": "",
+    "cal": 282.0,
+    "pro": 13.46,
+    "fat": 14.28,
+    "carb": 49.7,
+    "fib": 34.8,
+    "h2o": 10.75,
+    "sug": 7.19,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 2.7
+      }
+    ]
+  },
+  {
+    "word": "BEEFCORNEDRAW",
+    "display": "Corned Beef Brisket Raw",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "13346",
+    "desc": "",
+    "cal": 198.0,
+    "pro": 14.68,
+    "fat": 14.9,
+    "carb": 0.14,
+    "fib": 0.0,
+    "h2o": 66.56,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "DILLSEED",
+    "display": "Dill Seed",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "2016",
+    "desc": "",
+    "cal": 305.0,
+    "pro": 15.98,
+    "fat": 14.54,
+    "carb": 55.17,
+    "fib": 21.1,
+    "h2o": 7.7,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 2.1
+      }
+    ]
+  },
+  {
+    "word": "MACEGROUND",
+    "display": "Mace Ground",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "2022",
+    "desc": "",
+    "cal": 475.0,
+    "pro": 6.71,
+    "fat": 32.38,
+    "carb": 50.5,
+    "fib": 20.2,
+    "h2o": 8.17,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 1.7
+      }
+    ]
+  },
+  {
+    "word": "BEEFBRISKETFLAT",
+    "display": "Beef Brisket Flat",
+    "groups": [],
+    "ndb": "13805",
+    "desc": "",
+    "cal": 277.0,
+    "pro": 17.94,
+    "fat": 22.18,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 59.07,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "oz",
+        "gm": 85.0
+      }
+    ]
+  },
+  {
+    "word": "NOODLEEGGDRY",
+    "display": "Noodle Egg Dry",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20109",
+    "desc": "Noodles, egg, dry, enriched",
+    "cal": 384.0,
+    "pro": 14.16,
+    "fat": 4.44,
+    "carb": 71.27,
+    "fib": 3.3,
+    "h2o": 9.01,
+    "sug": 1.88,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 80.0
+      }
+    ]
+  },
+  {
+    "word": "BEANSPROUT",
+    "display": "Bean Sprouts",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11043",
+    "desc": "Mung beans, mature seeds, sprouted, raw",
+    "cal": 30.0,
+    "pro": 3.04,
+    "fat": 0.18,
+    "carb": 5.94,
+    "fib": 1.8,
+    "h2o": 90.4,
+    "sug": 4.13,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 104.0
+      }
+    ]
+  },
+  {
+    "word": "ZUCCHINI",
+    "display": "Zucchini",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11477",
+    "desc": "Squash, summer, zucchini, includes skin, raw",
+    "cal": 17.0,
+    "pro": 1.21,
+    "fat": 0.32,
+    "carb": 3.11,
+    "fib": 1.0,
+    "h2o": 94.79,
+    "sug": 2.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "medium",
+        "gm": 196.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup sliced",
+        "gm": 124.0
+      }
+    ]
+  },
+  {
+    "word": "RICEWHITERAW",
+    "display": "White Rice Dry",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20044",
+    "desc": "Rice, white, long-grain, regular, raw, enriched",
+    "cal": 365.0,
+    "pro": 7.13,
+    "fat": 0.66,
+    "carb": 79.95,
+    "fib": 1.3,
+    "h2o": 11.62,
+    "sug": 0.12,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 185.0
+      }
+    ]
+  },
+  {
+    "word": "OYSTERSAUCE",
+    "display": "Oyster Sauce",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "6176",
+    "desc": "Sauce, oyster, ready-to-serve",
+    "cal": 51.0,
+    "pro": 1.35,
+    "fat": 0.25,
+    "carb": 10.92,
+    "fib": 0.3,
+    "h2o": 80.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 18.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 6.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 288.0
+      }
+    ]
+  },
+  {
+    "word": "CHICKENTHIGHRAW",
+    "display": "Chicken Thigh",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "5096",
+    "desc": "Chicken, broilers or fryers, dark meat, thigh, meat only, raw",
+    "cal": 121.0,
+    "pro": 19.66,
+    "fat": 4.12,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 76.22,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "lb",
+        "gm": 453.6
+      },
+      {
+        "amt": 1.0,
+        "desc": "thigh",
+        "gm": 100.0
+      }
+    ]
+  },
+  {
+    "word": "CASHEWSRAW",
+    "display": "Cashews Raw",
+    "groups": [
+      "nuts"
+    ],
+    "ndb": "12087",
+    "desc": "Nuts, cashew nuts, raw",
+    "cal": 553.0,
+    "pro": 18.22,
+    "fat": 43.85,
+    "carb": 30.19,
+    "fib": 3.3,
+    "h2o": 5.2,
+    "sug": 5.91,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "LAMBKABOBS",
+    "display": "Lamb Kabobs",
+    "groups": [],
+    "ndb": "17059",
+    "desc": "Lamb, domestic, cubed for stew or kabob (leg and shoulder), separable lean only, trimmed to 1/4\" fat, raw",
+    "cal": 134.0,
+    "pro": 20.21,
+    "fat": 5.28,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 73.74,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "lb",
+        "gm": 453.6
+      }
+    ]
+  },
+  {
+    "word": "SHEPHERDSPIE",
+    "display": "Lamb Shepherd's Pie",
+    "groups": [],
+    "ndb": "",
+    "desc": "Lamb Shepherd's Pie (ground lamb, vegetables, mashed potato topping)",
+    "cal": 152.8,
+    "pro": 6.49,
+    "fat": 9.73,
+    "carb": 10.0,
+    "fib": 0.0,
+    "h2o": 72.46,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 394.0
+      }
+    ]
+  },
+  {
+    "word": "ROGANJOSH",
+    "display": "Lamb Rogan Josh",
+    "groups": [],
+    "ndb": "",
+    "desc": "Lamb Rogan Josh (braised lamb curry with spices and yogurt)",
+    "cal": 148.3,
+    "pro": 15.25,
+    "fat": 7.24,
+    "carb": 5.67,
+    "fib": 0.0,
+    "h2o": 70.13,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 353.0
+      }
+    ]
+  },
+  {
+    "word": "LAMBTAGINE",
+    "display": "Lamb Tagine",
+    "groups": [],
+    "ndb": "",
+    "desc": "Lamb Tagine (braised lamb with chickpeas, dried apricots, and spices)",
+    "cal": 143.0,
+    "pro": 13.09,
+    "fat": 5.77,
+    "carb": 10.27,
+    "fib": 0.0,
+    "h2o": 69.26,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 409.0
+      }
+    ]
+  },
+  {
+    "word": "MOUSSAKA",
+    "display": "Lamb Moussaka",
+    "groups": [],
+    "ndb": "",
+    "desc": "Lamb Moussaka (baked ground lamb with eggplant and b\u00e9chamel)",
+    "cal": 161.6,
+    "pro": 6.93,
+    "fat": 12.1,
+    "carb": 6.02,
+    "fib": 0.0,
+    "h2o": 73.12,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 407.0
+      }
+    ]
+  },
+  {
+    "word": "EGGPLANT",
+    "display": "Eggplant",
+    "groups": [
+      "vegetable",
+      "vegetable"
+    ],
+    "ndb": "11209",
+    "desc": "Eggplant, raw",
+    "cal": 25.0,
+    "pro": 0.98,
+    "fat": 0.18,
+    "carb": 5.88,
+    "fib": 3.0,
+    "h2o": 92.3,
+    "sug": 3.53,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "lb",
+        "gm": 454.0
+      }
+    ]
+  },
+  {
+    "word": "LAMBSHANKS",
+    "display": "Lamb Shanks",
+    "groups": [],
+    "ndb": "17007",
+    "desc": "Lamb Shanks (braised lamb foreshank)",
+    "cal": 148.1,
+    "pro": 10.82,
+    "fat": 8.89,
+    "carb": 3.28,
+    "fib": 0.7,
+    "h2o": 74.02,
+    "sug": 1.31,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 417.0
+      }
+    ]
+  },
+  {
+    "word": "LAMBCHOPS",
+    "display": "Lamb Chops",
+    "groups": [],
+    "ndb": "",
+    "desc": "Lamb Chops (pan-grilled herb-marinated loin chops)",
+    "cal": 188.5,
+    "pro": 20.98,
+    "fat": 11.34,
+    "carb": 0.94,
+    "fib": 0.22,
+    "h2o": 63.95,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 165.0
+      }
+    ]
+  },
+  {
+    "word": "RACKOLAMB",
+    "display": "Rack of Lamb",
+    "groups": [],
+    "ndb": "17314",
+    "desc": "Rack of Lamb (herb-crusted, roasted, with Dijon-style mustard)",
+    "cal": 297.5,
+    "pro": 19.86,
+    "fat": 22.3,
+    "carb": 4.37,
+    "fib": 0.55,
+    "h2o": 51.87,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 155.0
+      }
+    ]
+  },
+  {
+    "word": "LEGOFLAMB",
+    "display": "Leg of Lamb",
+    "groups": [],
+    "ndb": "17230",
+    "desc": "Leg of Lamb (herb-roasted, bone-in whole leg, medium-rare)",
+    "cal": 236.3,
+    "pro": 24.64,
+    "fat": 14.87,
+    "carb": 1.0,
+    "fib": 0.13,
+    "h2o": 57.84,
+    "sug": 0.13,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 236.0
+      }
+    ]
+  },
+  {
+    "word": "LAMBBIRYANI",
+    "display": "Lamb Biryani",
+    "groups": [],
+    "ndb": "",
+    "desc": "Lamb Biryani (dum-style, yogurt-marinated lamb, basmati rice)",
+    "cal": 133.7,
+    "pro": 7.94,
+    "fat": 3.76,
+    "carb": 16.64,
+    "fib": 0.9,
+    "h2o": 70.62,
+    "sug": 1.2,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 392.0
+      }
+    ]
+  },
+  {
+    "word": "PORKCARNITAS",
+    "display": "Pork Carnitas",
+    "groups": [],
+    "ndb": "",
+    "desc": "Pork Carnitas (braised and crisped pork shoulder)",
+    "cal": 205.6,
+    "pro": 18.09,
+    "fat": 12.66,
+    "carb": 4.03,
+    "fib": 0.51,
+    "h2o": 62.97,
+    "sug": 1.74,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 150.0
+      }
+    ]
+  },
+  {
+    "word": "CHARSIU",
+    "display": "Pork Char Siu",
+    "groups": [],
+    "ndb": "",
+    "desc": "Pork Char Siu (Chinese BBQ pork, no red food coloring)",
+    "cal": 236.1,
+    "pro": 17.53,
+    "fat": 12.73,
+    "carb": 11.79,
+    "fib": 0.4,
+    "h2o": 55.79,
+    "sug": 9.85,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 233.0
+      }
+    ]
+  },
+  {
+    "word": "PORKCROWNROAST",
+    "display": "Pork Crown Roast",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "10044",
+    "desc": "Pork, fresh, loin, center rib (chops or roasts), bone-in, separable lean and fat, raw",
+    "cal": 257.5,
+    "pro": 25.81,
+    "fat": 16.21,
+    "carb": 0.54,
+    "fib": 0.13,
+    "h2o": 0.01,
+    "sug": 55.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 155.8
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 155.8
+      },
+      {
+        "amt": 1.0,
+        "desc": "roast",
+        "gm": 155.8
+      }
+    ]
+  },
+  {
+    "word": "SNOWPEAS",
+    "display": "Snow Peas",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11300",
+    "desc": "Peas, edible-podded, raw",
+    "cal": 42.0,
+    "pro": 2.8,
+    "fat": 0.2,
+    "carb": 7.55,
+    "fib": 2.6,
+    "h2o": 4.0,
+    "sug": 88.89,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 98.0
+      }
+    ]
+  },
+  {
+    "word": "CREAMOFMUSHROOMSOUP",
+    "display": "Cream of Mushroom Soup",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "6043",
+    "desc": "Soup, cream of mushroom, canned, condensed",
+    "cal": 79.0,
+    "pro": 1.35,
+    "fat": 5.3,
+    "carb": 6.8,
+    "fib": 0.7,
+    "h2o": 0.4,
+    "sug": 84.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "can",
+        "gm": 298.0
+      }
+    ]
+  },
+  {
+    "word": "CREAMOFCHICKENSOUP",
+    "display": "Cream of Chicken Soup",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "6336",
+    "desc": "CAMPBELL'S, Cream of Chicken Soup, condensed",
+    "cal": 103.0,
+    "pro": 1.76,
+    "fat": 7.98,
+    "carb": 6.03,
+    "fib": 4.1,
+    "h2o": 0.0,
+    "sug": 82.45,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "can",
+        "gm": 298.0
+      }
+    ]
+  },
+  {
+    "word": "TOMATOESGRNCHILES",
+    "display": "Diced Tomatoes with Green Chiles",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11537",
+    "desc": "Tomatoes, red, ripe, canned, with green chilies",
+    "cal": 15.0,
+    "pro": 0.69,
+    "fat": 0.08,
+    "carb": 3.62,
+    "fib": 0.0,
+    "h2o": 0.0,
+    "sug": 94.23,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "can",
+        "gm": 283.0
+      }
+    ]
+  },
+  {
+    "word": "BROWNRICE",
+    "display": "Brown Rice",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20036",
+    "desc": "Rice, brown, long-grain, raw",
+    "cal": 367.0,
+    "pro": 7.54,
+    "fat": 3.2,
+    "carb": 76.25,
+    "fib": 3.6,
+    "h2o": 0.66,
+    "sug": 11.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 185.0
+      }
+    ]
+  },
+  {
+    "word": "BBQSAUCE",
+    "display": "BBQ Sauce",
+    "groups": [
+      "condiment"
+    ],
+    "ndb": "6150",
+    "desc": "Sauce, barbecue",
+    "cal": 172.0,
+    "pro": 0.82,
+    "fat": 0.63,
+    "carb": 40.77,
+    "fib": 0.9,
+    "h2o": 33.24,
+    "sug": 54.71,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 16.0
+      }
+    ]
+  },
+  {
+    "word": "PASTRAMI",
+    "display": "Pastrami",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "13355",
+    "desc": "Beef, cured, pastrami",
+    "cal": 147.0,
+    "pro": 21.8,
+    "fat": 5.82,
+    "carb": 0.36,
+    "fib": 0.0,
+    "h2o": 0.1,
+    "sug": 69.53,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "BEEFFLANKSTEAK",
+    "display": "Beef Flank Steak",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "23656",
+    "desc": "Beef, flank, steak, separable lean only, trimmed to 0\" fat, all grades, raw",
+    "cal": 141.0,
+    "pro": 21.57,
+    "fat": 5.47,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 0.0,
+    "sug": 72.08,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "BEEFSKIRT",
+    "display": "Beef Skirt Steak",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "23224",
+    "desc": "Beef, plate steak, boneless, outside skirt, separable lean and fat, trimmed to 0\" fat, all grades, raw",
+    "cal": 232.0,
+    "pro": 17.98,
+    "fat": 17.59,
+    "carb": 0.35,
+    "fib": 0.0,
+    "h2o": 0.0,
+    "sug": 63.17,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "BEEFTENDERLOIN",
+    "display": "Beef Tenderloin",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "23372",
+    "desc": "Beef, loin, tenderloin steak, boneless, separable lean only, trimmed to 0\" fat, all grades, raw",
+    "cal": 139.0,
+    "pro": 21.94,
+    "fat": 5.74,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 0.0,
+    "sug": 72.44,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "BEEFSHORTRIBS",
+    "display": "Beef Short Ribs",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "23068",
+    "desc": "Beef, chuck, short ribs, boneless, separable lean only, trimmed to 0\" fat, all grades, raw",
+    "cal": 169.0,
+    "pro": 19.68,
+    "fat": 10.02,
+    "carb": 0.05,
+    "fib": 0.0,
+    "h2o": 0.0,
+    "sug": 69.33,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "BEEFBACKRIBS",
+    "display": "Beef Back Ribs",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "23181",
+    "desc": "Beef, rib, back ribs, bone-in, separable lean only, trimmed to 0\" fat, all grades, raw",
+    "cal": 239.0,
+    "pro": 19.11,
+    "fat": 17.91,
+    "carb": 0.46,
+    "fib": 0.0,
+    "h2o": 0.0,
+    "sug": 61.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
       }
     ]
   }
