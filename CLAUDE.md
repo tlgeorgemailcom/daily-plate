@@ -611,4 +611,4 @@ Whenever a new `ingredient_key` is added to `ingredients_ledger.csv` or a new ro
 
 | Date | ingredient_key | word candidate | SR Legacy? | Decision |
 |---|---|---|---|---|
-| — | — | — | — | pending |
+| 2026-06-16 | pork_back_ribs_raw (NDB 10192) | ribs | Yes | added to usda + combined |
