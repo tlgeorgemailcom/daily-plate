@@ -15185,5 +15185,48 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'char_siu', label: 'Char Siu', cookingMethod: '', yieldFactorWater: 0.72 }
     ],
+  },
+  {
+    id: 'ENTR_084',
+    name: 'Pork Chop',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 319,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 chop (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":365.0,"pro":34.2,"fat":24.0,"carb":1.2,"fib":0.3,"h2o":96.5,"sug":0.0,"perServing":{"cal":365.0,"pro":34.2,"fat":24.0,"carb":1.2,"fib":0.3,"h2o":96.5,"sug":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.0},"micros":{"vitaminA":27.26,"vitaminC":0.55,"vitaminD":20.66,"vitaminE":0.4,"vitaminK":1.73,"vitaminB6":0.55,"vitaminB12":0.47,"thiamin":0.38,"riboflavin":0.17,"niacin":5.49,"folate":0.5,"calcium":26.76,"iron":0.79,"magnesium":27.5,"phosphorus":220.52,"potassium":368.53,"sodium":424.91,"zinc":1.87,"copper":0.07,"selenium":35.25,"cholesterol":81.08,"saturatedFat":5.67,"monoFat":6.29,"polyFat":1.2,"omega3":0.04,"omega6":0.92},"gramsPerServing":158.4,"servings":4,"per100g":{"Energy_KCal":230.44,"Water":60.89,"Protein":21.62,"TotalLipidFat":15.17,"Carbohydrate":0.74,"FiberTotalDietary":0.17,"SugarsTotal":0.02,"Cholesterol":81.08,"FattyAcids_totalSaturated":5.67,"FattyAcids_totalMonounsaturated":6.29,"FattyAcids_totalPolyunsaturated":1.2,"LinoleicAcid":0.92,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":27.26,"Retinol":25.72,"Carotene_beta":14.81,"VitaminD":20.66,"VitaminE_alphaTocopherol":0.4,"VitaminK_phylloquinone":1.73,"VitaminC_totalAscorbicAcid":0.55,"Thiamin":0.38,"Riboflavin":0.17,"Niacin":5.49,"PantothenicAcid":0.6,"VitaminB6":0.55,"Folate_total":0.5,"Folate_food":0.5,"Folate_DFE":0.5,"FolicAcid":0.0,"VitaminB12":0.47,"Choline_total":53.08,"Betaine":3.12,"LuteinZeaxanthin":0.68,"Lycopene":0.03,"Calcium_Ca":26.76,"Iron_Fe":0.79,"Magnesium_Mg":27.5,"Phosphorus_P":220.52,"Potassium_K":368.53,"Sodium_Na":424.91,"Zinc_Zn":1.87,"Copper_Cu":0.07,"Manganese_Mn":0.06,"Selenium_Se":35.25,"Tryptophan":0.22,"Threonine":0.97,"Isoleucine":1.05,"Leucine":1.83,"Lysine":2.0,"Methionine":0.59,"Cystine":0.2,"Phenylalanine":0.91,"Tyrosine":0.81,"Valine":1.13,"Arginine":1.43,"Histidine":0.92,"Alanine":1.26,"AsparticAcid":2.1,"GlutamicAcid":3.44,"Glycine":0.97,"Proline":0.87,"Serine":0.93,"omega3":0.04,"omega6":0.92,"AddedSugars":0.0,"IntrinsicSugars":0.02},"addedSugars":0.0,"intrinsicSugars":0.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"10036","name":"Pork, fresh, loin, center loin (chops), bone-in, separable lean and fat, raw","grams":164.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"1145","name":"Butter, without salt","grams":7.1},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"2049","name":"Thyme, fresh","grams":0.6},{"ndb":"2063","name":"Rosemary, fresh","grams":0.4},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3}],"sections":[{"section_key":"chops","section_label":"Pork Chops","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":718.25,"raw_water_grams":470.47,"raw_fat_grams":96.09,"raw_protein_grams":136.98,"raw_carb_grams":4.67,"final_grams":633.57}],"cookingMethod":"pan grilled"},
+    recipeIngredients: [
+      { name: 'Pork Chop', quantity: 'custom (g)', foodWord: 'PORKCHOP', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'pork loin chop', quantity: '4 bone-in pork loin chops (1 inch thick)', section: 'chops', ndbNo: '10036', portionDesc: 'g', portionGrams: 656.0 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'chops', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'unsalted butter', quantity: '2 tbsp', section: 'chops', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
+      { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'chops', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'fresh thyme leaves', quantity: '3 sprigs', section: 'chops', ndbNo: '2049', portionDesc: 'g', portionGrams: 2.4 },
+      { name: 'fresh rosemary', quantity: '1 sprig', section: 'chops', ndbNo: '2063', portionDesc: 'g', portionGrams: 1.7 },
+      { name: 'salt', quantity: '1 tsp', section: 'chops', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '½ tsp', section: 'chops', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
+    ],
+    recipeInstructions: [
+      'Remove the chops from the refrigerator 30 minutes before cooking. Pat dry with paper towels and season generously on both sides with salt and black pepper.',
+      'Heat the olive oil in a large, heavy skillet (cast iron preferred) over medium-high heat until shimmering. Add the chops and sear without moving for 3–4 minutes until a deep golden crust forms.',
+      'Flip the chops. Add the butter, garlic, thyme, and rosemary to the pan. As the butter melts and foams, tilt the pan slightly and use a spoon to continuously baste the chops with the herb butter for 2–3 minutes.',
+      'Continue cooking, basting frequently, until the internal temperature reaches 145°F (63°C) at the thickest point away from the bone, about 2–3 minutes more.',
+      'Transfer to a cutting board and rest for 5 minutes before serving.'
+    ],
+    sections: [
+      { key: 'chops', label: 'Pork Chops', cookingMethod: '', yieldFactorWater: 0.82 }
+    ],
   }
 ];
