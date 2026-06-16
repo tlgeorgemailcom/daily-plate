@@ -593,3 +593,19 @@ Composite recipes (e.g. BKFST_002 Biscuits & Gravy) reference child recipes via 
 - **Baby food excluded** — `FdGrp_Cd <> '300'` always applied.
 
 **Environment**: `.env.local` sets `TURSO_SR28_URL=libsql://comboo-tlgeorge.aws-us-east-1.turso.io` — dev and production both hit the remote Turso comboo DB. Vercel env vars `TURSO_SR28_URL` + `TURSO_SR28_TOKEN` must be set or production falls back to a local file path that doesn't exist on Vercel.
+
+## Word Game Candidate Log
+
+Whenever a new `ingredient_key` is added to `ingredients_ledger.csv` or a new row is added to `food-portions-complete.csv`, log the word here for later review. At a suitable checkpoint, review the log and decide whether each word should be added to `src/lib/data/scrambled-words.csv` (USDA level) and/or `src/lib/data/scrambled-words-combined.csv` (FOODIE/FOODIE21 levels).
+
+**Curation rules reminder:**
+- Single words only (no spaces)
+- No adjectives or cooking qualifiers (`raw`, `boiled`, `dry`, `flat`, `lean`, `frozen`, etc.)
+- No variety/place names that require context (`anjou`, `russet`, `napa`, `fuji`, etc.)
+- Prefer singular form unless the plural is the natural food noun (`greens`, `nachos`)
+- USDA words (SR Legacy sourced) go in both files; culinary extras (not SR Legacy) go in combined only
+- Alcohol words go in combined only (the runtime `wine`/`bar` filter excludes them from FOODIE)
+
+| Date | ingredient_key | word candidate | SR Legacy? | Decision |
+|---|---|---|---|---|
+| — | — | — | — | pending |
