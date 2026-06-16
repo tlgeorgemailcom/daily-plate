@@ -15168,14 +15168,14 @@ export const LEVELS: Level[] = [
       { name: 'soy sauce', quantity: '2 tbsp', section: 'char_siu', ndbNo: '16123', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'honey', quantity: '3 tbsp', section: 'char_siu', ndbNo: '19296', portionDesc: 'g', portionGrams: 63.0 },
       { name: 'brown sugar', quantity: '2 tbsp', section: 'char_siu', ndbNo: '19334', portionDesc: 'g', portionGrams: 27.0 },
-      { name: 'white wine', quantity: '2 tbsp', section: 'char_siu', ndbNo: '14106', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'white wine', quantity: '2 tbsp white wine (sub for Shaoxing rice wine)', section: 'char_siu', ndbNo: '14106', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'Sesame oil', quantity: '1 tsp', section: 'char_siu', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'char_siu', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'fresh ginger', quantity: '1 tbsp fresh ginger, grated', section: 'char_siu', ndbNo: '11216', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'five-spice powder', quantity: '1 tsp', section: 'char_siu', ndbNo: '2010', portionDesc: 'g', portionGrams: 3.0 }
     ],
     recipeInstructions: [
-      'In a bowl, whisk together the hoisin sauce, soy sauce, honey, brown sugar, white wine, sesame oil, garlic, ginger, and five-spice powder to form the marinade. Reserve 3 tablespoons of the marinade separately for basting.',
+      'In a bowl, whisk together the hoisin sauce, soy sauce, honey, brown sugar, Shaoxing rice wine (or dry white wine as a substitute), sesame oil, garlic, ginger, and five-spice powder to form the marinade. Reserve 3 tablespoons of the marinade separately for basting.',
       'Cut the pork shoulder into long strips about 2 inches wide and 1 inch thick. Add to the marinade, toss to coat, cover, and refrigerate for at least 4 hours or overnight.',
       'Remove the pork from the refrigerator 30 minutes before cooking. Preheat the oven to 400°F (200°C). Line a baking sheet with foil and set a wire rack on top. Arrange the pork strips on the rack in a single layer.',
       'Roast for 15 minutes, then flip the strips and brush generously with the reserved marinade. Roast for another 15 minutes.',
