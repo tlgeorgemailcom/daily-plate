@@ -15092,5 +15092,52 @@ export const LEVELS: Level[] = [
       { key: 'lamb', label: 'Lamb', cookingMethod: '', yieldFactorWater: 0.78 },
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'ENTR_082',
+    name: 'Pork Carnitas',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 317,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (serves 6)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":307.8,"pro":27.1,"fat":18.9,"carb":6.0,"fib":0.8,"h2o":94.3,"sug":2.6,"perServing":{"cal":307.8,"pro":27.1,"fat":18.9,"carb":6.0,"fib":0.8,"h2o":94.3,"sug":2.6,"AddedSugars":0.0,"IntrinsicSugars":2.6},"micros":{"vitaminA":3.88,"vitaminC":4.66,"vitaminD":30.3,"vitaminE":0.27,"vitaminK":1.34,"vitaminB6":0.32,"vitaminB12":0.78,"thiamin":0.36,"riboflavin":0.31,"niacin":2.85,"folate":4.83,"calcium":28.9,"iron":1.33,"magnesium":20.94,"phosphorus":173.52,"potassium":312.49,"sodium":384.09,"zinc":2.73,"copper":0.1,"selenium":25.53,"cholesterol":62.62,"saturatedFat":4.41,"monoFat":5.33,"polyFat":1.39,"omega3":0.05,"omega6":1.24},"gramsPerServing":149.7,"servings":6,"per100g":{"Energy_KCal":205.64,"Water":62.97,"Protein":18.09,"TotalLipidFat":12.66,"Carbohydrate":4.03,"FiberTotalDietary":0.51,"SugarsTotal":1.74,"Cholesterol":62.62,"FattyAcids_totalSaturated":4.41,"FattyAcids_totalMonounsaturated":5.33,"FattyAcids_totalPolyunsaturated":1.39,"LinoleicAcid":1.24,"alphaLinolenicAcid":0.05,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":3.88,"Retinol":1.82,"Carotene_beta":10.07,"VitaminD":30.3,"VitaminE_alphaTocopherol":0.27,"VitaminK_phylloquinone":1.34,"VitaminC_totalAscorbicAcid":4.66,"Thiamin":0.36,"Riboflavin":0.31,"Niacin":2.85,"PantothenicAcid":1.06,"VitaminB6":0.32,"Folate_total":4.83,"Folate_food":4.83,"Folate_DFE":4.83,"FolicAcid":0.0,"VitaminB12":0.78,"Choline_total":64.97,"Betaine":3.99,"LuteinZeaxanthin":16.56,"Lycopene":0.03,"Calcium_Ca":28.9,"Iron_Fe":1.33,"Magnesium_Mg":20.94,"Phosphorus_P":173.52,"Potassium_K":312.49,"Sodium_Na":384.09,"Zinc_Zn":2.73,"Copper_Cu":0.1,"Manganese_Mn":0.12,"Selenium_Se":25.53,"Tryptophan":0.19,"Threonine":0.8,"Isoleucine":0.87,"Leucine":1.51,"Lysine":1.64,"Methionine":0.49,"Cystine":0.19,"Phenylalanine":0.75,"Tyrosine":0.67,"Valine":0.93,"Arginine":1.19,"Histidine":0.76,"Alanine":1.04,"AsparticAcid":1.75,"GlutamicAcid":2.86,"Glycine":0.8,"Proline":0.72,"Serine":0.77,"omega3":0.05,"omega6":1.24,"AddedSugars":0.0,"IntrinsicSugars":1.74},"addedSugars":0.0,"intrinsicSugars":2.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"10080","name":"Pork, fresh, shoulder, (Boston butt), blade (steaks), separable lean and fat, raw","grams":151.2},{"ndb":"9206","name":"Orange juice, raw","grams":20.0},{"ndb":"9160","name":"Lime juice, raw","grams":5.0},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11282","name":"Onions, raw","grams":18.3},{"ndb":"2014","name":"Spices, cumin seed","grams":0.7},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.2},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.1},{"ndb":"2030","name":"Spices, pepper, black","grams":0.2},{"ndb":"2004","name":"Spices, bay leaf","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":1.5}],"sections":[{"section_key":"carnitas","section_label":"Carnitas","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.65,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":1202.7,"raw_water_grams":870.13,"raw_fat_grams":113.69,"raw_protein_grams":162.44,"raw_carb_grams":36.19,"final_grams":898.15}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Pork Carnitas', quantity: 'custom (g)', foodWord: 'PORKCARNITAS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'pork shoulder', quantity: '2 lbs boneless pork shoulder', section: 'carnitas', ndbNo: '10080', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'orange juice', quantity: '½ cup', section: 'carnitas', ndbNo: '9206', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'lime juice', quantity: '2 tbsp', section: 'carnitas', ndbNo: '9160', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'garlic', quantity: '6 cloves garlic, minced', section: 'carnitas', ndbNo: '11215', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'onion', quantity: '1 medium onion, roughly chopped', section: 'carnitas', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'ground cumin', quantity: '2 tsp', section: 'carnitas', ndbNo: '2014', portionDesc: 'g', portionGrams: 4.0 },
+      { name: 'dried oregano', quantity: '¾ tsp', section: 'carnitas', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground cinnamon', quantity: '¼ tsp', section: 'carnitas', ndbNo: '2010', portionDesc: 'g', portionGrams: 0.65 },
+      { name: 'ground black pepper', quantity: '½ tsp', section: 'carnitas', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'bay leaf', quantity: '2 leaves', section: 'carnitas', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'salt', quantity: '1½ tsp', section: 'carnitas', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 }
+    ],
+    recipeInstructions: [
+      'Cut the pork into 2-inch cubes. In a large, heavy pot, combine the pork, orange juice, lime juice, garlic, onion, cumin, oregano, cinnamon, black pepper, bay leaves, and salt.',
+      'Add just enough water to barely cover the pork (about 1–2 cups, not included). Bring to a boil over high heat, then reduce to a vigorous simmer. Cook uncovered for 1½–2 hours, stirring occasionally.',
+      'Continue simmering until all the liquid has evaporated and the pork is sizzling in its own rendered fat, about 20–30 more minutes. Stir frequently at this stage to prevent burning. The pork should be golden and lightly crisp on the edges.',
+      'Remove and discard the bay leaves. Use two forks to shred or roughly chop the pork into bite-sized pieces.',
+      'For extra crispiness, spread the shredded pork on a baking sheet and broil for 3–5 minutes until edges are caramelized and crisp.',
+      'Serve in warm tortillas (not included) with your choice of toppings such as diced white onion, fresh cilantro, salsa, and lime wedges (not included).'
+    ],
+    sections: [
+      { key: 'carnitas', label: 'Carnitas', cookingMethod: '', yieldFactorWater: 0.65 }
+    ],
   }
 ];
