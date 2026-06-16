@@ -578,7 +578,7 @@ EGGPOACHED,Egg Poached,,protein,,,,,1131,"Egg, whole, cooked, poached",143.0,12.
 EGGRAW,Egg Raw,,protein,,,,,1123,"Egg, whole, raw, fresh",143.0,12.6,9.5,0.7,0.0,76.2,0.4,1.0,custom (g),100.0,1.0,large,50.0,1.0,extra large,56.0,1.0,jumbo,63.0,,,,1.0,cup (4.86 large eggs),243.0,1.0,medium,44.0,1.0,small,38.0,,,,,,,,,,,,,,,
 EGGROLL,Egg Roll,,prepared,,,,1,22955,"Egg rolls, vegetable, frozen, prepared",214.0,6.0,7.0,31.8,2.4,53.4,6.0,1.0,custom (g),100.0,1.0,egg roll,68.0,1.0,oz,28.35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 EGGROLLCHICKEN,Egg Roll Chicken,,prepared,,,,1,22954,"Egg rolls, chicken, refrigerated, heated",197.0,10.4,4.5,28.5,2.4,54.2,5.6,1.0,custom (g),100.0,1.0,roll,80.0,1.0,oz,28.35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-EGGROLLPORK,Egg Roll Pork,,prepared,,,,1,22953,"Egg rolls, pork, refrigerated, heated",222.0,9.9,7.2,29.5,2.1,51.3,5.3,1.0,custom (g),100.0,1.0,roll,85.0,1.0,oz,28.35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+EGGROLLPORK,Egg Roll Pork,,prepared,,,,1,22953,"Egg rolls, pork, refrigerated, heated",221.6,10.72,8.71,25.14,2.1,2.17,53.42,1.0,custom (g),251.0,1.0,serving,251.0,1.0,roll,84.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 EGGSCRAMBLED,Egg Scrambled,,protein,,,,,1132,"Egg, whole, cooked, scrambled",149.0,10.0,11.0,1.6,0.0,76.4,1.4,1.0,custom (g),100.0,1.0,large,61.0,1.0,tbsp,13.7,1.0,cup,220.0,,,,,,,,,,,,,,,,,,,,,,,,,,,
 EGGWHITE,Egg White,,protein,,,,,1124,"Egg, white, raw, fresh",52.0,10.9,0.2,0.7,0.0,87.6,0.7,1.0,custom (g),100.0,1.0,large,33.0,1.0,cup,243.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 EGGYOLK,Egg Yolk,,protein,,,,,1125,"Egg, yolk, raw, fresh",322.0,15.9,26.5,3.6,0.0,52.3,0.6,1.0,custom (g),100.0,1.0,large,17.0,1.0,cup,243.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

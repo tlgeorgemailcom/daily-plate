@@ -15271,5 +15271,51 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'crown', label: 'Crown Roast', cookingMethod: '', yieldFactorWater: 0.64 }
     ],
+  },
+  {
+    id: 'ENTR_086',
+    name: 'Pork Egg Roll',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 321,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '3 rolls (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":555.9,"pro":26.9,"fat":21.9,"carb":63.1,"fib":5.3,"h2o":134.0,"sug":5.4,"perServing":{"cal":555.9,"pro":26.9,"fat":21.9,"carb":63.1,"fib":5.3,"h2o":134.0,"sug":5.4,"AddedSugars":0.0,"IntrinsicSugars":5.4},"micros":{"vitaminA":86.5,"vitaminC":6.92,"vitaminD":9.66,"vitaminE":0.28,"vitaminK":36.0,"vitaminB6":0.19,"vitaminB12":0.27,"thiamin":0.3,"riboflavin":0.26,"niacin":3.04,"folate":42.66,"calcium":45.05,"iron":2.03,"magnesium":23.98,"phosphorus":118.54,"potassium":268.19,"sodium":408.07,"zinc":1.47,"copper":0.12,"selenium":19.31,"cholesterol":24.23,"saturatedFat":4.15,"monoFat":2.54,"polyFat":0.91,"omega3":0.01,"omega6":0.37},"gramsPerServing":250.9,"servings":4,"per100g":{"Energy_KCal":221.56,"Water":53.42,"Protein":10.72,"TotalLipidFat":8.71,"Carbohydrate":25.14,"FiberTotalDietary":2.1,"SugarsTotal":2.17,"Cholesterol":24.23,"FattyAcids_totalSaturated":4.15,"FattyAcids_totalMonounsaturated":2.54,"FattyAcids_totalPolyunsaturated":0.91,"LinoleicAcid":0.37,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":86.5,"Retinol":1.69,"Carotene_beta":844.31,"VitaminD":9.66,"VitaminE_alphaTocopherol":0.28,"VitaminK_phylloquinone":36.0,"VitaminC_totalAscorbicAcid":6.92,"Thiamin":0.3,"Riboflavin":0.26,"Niacin":3.04,"PantothenicAcid":0.52,"VitaminB6":0.19,"Folate_total":42.66,"Folate_food":24.09,"Folate_DFE":55.57,"FolicAcid":24.75,"VitaminB12":0.27,"Choline_total":29.12,"Betaine":1.48,"LuteinZeaxanthin":69.92,"Lycopene":0.1,"Calcium_Ca":45.05,"Iron_Fe":2.03,"Magnesium_Mg":23.98,"Phosphorus_P":118.54,"Potassium_K":268.19,"Sodium_Na":408.07,"Zinc_Zn":1.47,"Copper_Cu":0.12,"Manganese_Mn":0.35,"Selenium_Se":19.31,"Tryptophan":0.12,"Threonine":0.41,"Isoleucine":0.47,"Leucine":0.82,"Lysine":0.69,"Methionine":0.24,"Cystine":0.14,"Phenylalanine":0.47,"Tyrosine":0.35,"Valine":0.51,"Arginine":0.59,"Histidine":0.35,"Alanine":0.51,"AsparticAcid":0.88,"GlutamicAcid":2.4,"Glycine":0.42,"Proline":0.69,"Serine":0.47,"omega3":0.01,"omega6":0.37,"AddedSugars":0.0,"IntrinsicSugars":2.17},"addedSugars":0.0,"intrinsicSugars":5.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"10080","name":"Pork, fresh, shoulder, (Boston butt), blade (steaks), separable lean and fat, raw","grams":85.0},{"ndb":"11109","name":"Cabbage, raw","grams":70.0},{"ndb":"11124","name":"Carrots, raw","grams":30.5},{"ndb":"11043","name":"Mung beans, mature seeds, sprouted, raw","grams":30.0},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":15.0},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"11216","name":"Ginger root, raw","grams":1.0},{"ndb":"16124","name":"Soy sauce made from soy (tamari)","grams":7.5},{"ndb":"4058","name":"Oil, sesame, salad or cooking","grams":2.2},{"ndb":"18368","name":"Wonton wrappers (includes egg roll wrappers)","grams":90.0},{"ndb":"4513","name":"Vegetable oil, palm kernel","grams":7.5}],"sections":[{"section_key":"rolls","section_label":"Egg Rolls","prep_method":"raw","cook_method":"fried","cooking_method":"fried","cooking_method_normalized":"fried","yield_factor_water":0.6,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":1361.0,"raw_water_grams":893.56,"raw_fat_grams":87.42,"raw_protein_grams":107.58,"raw_carb_grams":252.26,"final_grams":1003.58}],"cookingMethod":"fried"},
+    recipeIngredients: [
+      { name: 'Pork Egg Roll', quantity: 'custom (g)', foodWord: 'EGGROLLPORK', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'pork shoulder', quantity: '¾ lb pork shoulder, ground or finely chopped', section: 'rolls', ndbNo: '10080', portionDesc: 'g', portionGrams: 340.0 },
+      { name: 'green cabbage', quantity: '4 cups cabbage, finely shredded', section: 'rolls', ndbNo: '11109', portionDesc: 'g', portionGrams: 280.0 },
+      { name: 'carrot', quantity: '2 medium carrots, shredded', section: 'rolls', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'bean sprouts', quantity: '1¼ cups bean sprouts', section: 'rolls', ndbNo: '11043', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'scallion (green onion)', quantity: '4 scallions, thinly sliced', section: 'rolls', ndbNo: '11291', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'rolls', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'fresh ginger', quantity: '1 tsp fresh ginger, minced', section: 'rolls', ndbNo: '11216', portionDesc: 'g', portionGrams: 4.0 },
+      { name: 'tamari', quantity: '2 tbsp tamari', section: 'rolls', ndbNo: '16124', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'Sesame oil', quantity: '2 tsp sesame oil', section: 'rolls', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'wonton/egg roll wrapper', quantity: '12 large wonton/egg roll wrappers', section: 'rolls', ndbNo: '18368', portionDesc: 'g', portionGrams: 360.0 },
+      { name: 'vegetable oil', quantity: '¼ cup vegetable oil (absorbed into rolls during frying)', section: 'rolls', ndbNo: '4513', portionDesc: 'g', portionGrams: 30.0 }
+    ],
+    recipeInstructions: [
+      'In a large skillet or wok over high heat, cook the ground pork, breaking it up, until no longer pink, about 3–4 minutes. Add the garlic and ginger and stir-fry 30 seconds.',
+      'Add the cabbage, carrots, bean sprouts, and scallions. Stir-fry until the vegetables are just wilted, about 2–3 minutes. Add the tamari and sesame oil, toss to combine, and transfer filling to a plate to cool completely.',
+      'Place one wonton wrapper on a flat surface with a corner pointing toward you (diamond position). Spoon about 3 tablespoons (≈70g) of filling across the center. Fold the bottom corner over the filling, fold in the sides, and roll tightly. Seal the top corner with a dab of water. Repeat with remaining wrappers and filling.',
+      'Heat 2–3 inches of vegetable oil in a deep skillet or pot to 350°F (175°C). Fry the egg rolls in batches, seam side down, for 3–4 minutes, turning once, until deep golden brown and crispy.',
+      'Drain on a rack or paper towels. Serve immediately with sweet-and-sour sauce or duck sauce (not included).'
+    ],
+    sections: [
+      { key: 'rolls', label: 'Egg Rolls', cookingMethod: '', yieldFactorWater: 0.6 }
+    ],
   }
 ];
