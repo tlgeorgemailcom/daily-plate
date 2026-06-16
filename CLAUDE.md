@@ -465,7 +465,8 @@ Planned BKFST order (standalone components first, composites last):
 
 - **There are no "pre-existing" or "acceptable" errors.** If `validate_ledger.py`, `build_all.py`, or any other tool surfaces an error or warning, surface it to the human immediately.
 - Finish the current task first, then fix every reported error before moving on. Do not silently defer, downgrade, or rationalize errors as "unrelated."
-- The only acceptable warning is the `Rule D — bespoke key OK` note for recipes explicitly authored under Rule D.
+- The only acceptable warning is the `Rule D — bespoke key OK` note for recipes explicitly authored under Rule D. There will be one such warning per Rule D recipe — currently 207+ — and that is expected.
+- **`sr_rule` values in `recipes.csv` must use the full `'Rule X'` prefix** — `'Rule A'`, `'Rule B'`, `'Rule C'`, `'Rule D'`, etc. Bare single letters (`'D'`, `'C'`) cause the validator to misclassify the recipe and produce false errors. The validator string-matches `== 'Rule D'` exactly.
 
 ## Recipe Audit Protocol
 
@@ -523,6 +524,9 @@ FNDDS published nutrient profiles use **Foundation Foods** values for common ing
 - **Sugar fine-tuning**: when 6 macros pass but sugar is slightly under, adding 1g (¼ tsp) sugar shifts only the sugar column meaningfully without disturbing others. Don't add a full tbsp — overshoots by >100%.
 - **Ingredient key naming must match NDB long_desc**: NDB 20581 is *unbleached* per `comboo.db`, despite the legacy `flour_ap_white_enriched_bleached` key. Always verify `Long_Desc` before naming a new ledger key.
 - **`food-portions-complete.csv` lives in 3 places** — root, `src/lib/data/`, `docs/` — all must stay in sync. Edit all three together.
+- **After any change to `food-portions-complete.csv`, regenerate `food-portions.ts`**: run `python3 scripts/dev/convert_to_ts.py`. This file is what the chain, plate, bees, and tower word games actually read at runtime. The CSV and TS can silently diverge if the script is not run. Commit the updated TS with the CSV changes.
+- **The `word` key (not `display`) is what players see and type** in chain/plate/bees/tower games. The chain game renders `{item.word}` directly on screen. `display` is not shown. Name the `word` key for clarity and typability — `CHEESECAKE` not `CAKECHEESECAKE`.
+- **Rule D `food_word` values must NOT be added to `food-portions-complete.csv`**: Rule D recipes have no SR Legacy canonical anchor. Adding them to food-portions puts a non-SR-Legacy entry into the word game pool with fabricated nutrition values. The validator issues a `(Rule D — bespoke key OK)` warning specifically because the word is absent from food-portions — that absence is the correct state.
 - **Duplicate NDB mappings in food-portions cause silent validator errors**: validator picks one `food_word` per NDB and flags ledger keys as "mismatched". Before adding a food-portions row, `grep ",NDB,"` to check for duplicates.
 - **`food-portions-complete.csv` column layouts differ across copies** — `src/lib/data/` has 56 columns (`word,display,synonyms,group1,group2,group3,group4,has_recipe,NDB_NO,usda_desc,...`) while root and `docs/` have 55 columns (no `synonyms` column: `word,display,group1,group2,group3,group4,has_recipe,NDB_NO,usda_desc,...`). When scripting changes, use Python's `csv` module and verify column offsets per file — never assume the same integer index applies to all three copies.
 - **CSV field-count discipline**: a single missing/extra comma in a manual edit breaks the row. After editing, verify `awk -F, '{print NF}'` matches the header field count.
