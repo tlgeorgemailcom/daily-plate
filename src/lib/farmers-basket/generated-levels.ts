@@ -15228,5 +15228,48 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'chops', label: 'Pork Chops', cookingMethod: '', yieldFactorWater: 0.82 }
     ],
+  },
+  {
+    id: 'ENTR_085',
+    name: 'Pork Crown Roast',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 320,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 ribs (serves 8)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":401.2,"pro":40.2,"fat":25.2,"carb":0.8,"fib":0.2,"h2o":86.6,"sug":0.0,"perServing":{"cal":401.2,"pro":40.2,"fat":25.2,"carb":0.8,"fib":0.2,"h2o":86.6,"sug":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.0},"micros":{"vitaminA":2.93,"vitaminC":0.37,"vitaminD":31.31,"vitaminE":0.4,"vitaminK":1.55,"vitaminB6":0.66,"vitaminB12":0.62,"thiamin":0.43,"riboflavin":0.21,"niacin":6.83,"folate":0.36,"calcium":36.09,"iron":0.85,"magnesium":30.27,"phosphorus":259.47,"potassium":436.57,"sodium":351.17,"zinc":2.37,"copper":0.08,"selenium":45.15,"cholesterol":73.52,"saturatedFat":3.3,"monoFat":4.83,"polyFat":1.16,"omega3":0.03,"omega6":0.92},"gramsPerServing":155.8,"servings":8,"per100g":{"Energy_KCal":257.51,"Water":55.6,"Protein":25.81,"TotalLipidFat":16.21,"Carbohydrate":0.54,"FiberTotalDietary":0.13,"SugarsTotal":0.01,"Cholesterol":73.52,"FattyAcids_totalSaturated":3.3,"FattyAcids_totalMonounsaturated":4.83,"FattyAcids_totalPolyunsaturated":1.16,"LinoleicAcid":0.92,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":2.93,"Retinol":2.15,"Carotene_beta":4.89,"VitaminD":31.31,"VitaminE_alphaTocopherol":0.4,"VitaminK_phylloquinone":1.55,"VitaminC_totalAscorbicAcid":0.37,"Thiamin":0.43,"Riboflavin":0.21,"Niacin":6.83,"PantothenicAcid":0.75,"VitaminB6":0.66,"Folate_total":0.36,"Folate_food":0.36,"Folate_DFE":0.36,"FolicAcid":0.0,"VitaminB12":0.62,"Choline_total":62.74,"Betaine":3.82,"LuteinZeaxanthin":0.69,"Lycopene":0.03,"Calcium_Ca":36.09,"Iron_Fe":0.85,"Magnesium_Mg":30.27,"Phosphorus_P":259.47,"Potassium_K":436.57,"Sodium_Na":351.17,"Zinc_Zn":2.37,"Copper_Cu":0.08,"Manganese_Mn":0.06,"Selenium_Se":45.15,"Tryptophan":0.27,"Threonine":1.16,"Isoleucine":1.26,"Leucine":2.19,"Lysine":2.39,"Methionine":0.7,"Cystine":0.26,"Phenylalanine":1.08,"Tyrosine":0.98,"Valine":1.35,"Arginine":1.72,"Histidine":1.1,"Alanine":1.51,"AsparticAcid":2.52,"GlutamicAcid":4.11,"Glycine":1.16,"Proline":1.04,"Serine":1.11,"omega3":0.03,"omega6":0.92,"AddedSugars":0.0,"IntrinsicSugars":0.01},"addedSugars":0.0,"intrinsicSugars":0.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"10044","name":"Pork, fresh, loin, center rib (chops or roasts), bone-in, separable lean and fat, raw","grams":197.5},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"2063","name":"Rosemary, fresh","grams":0.4},{"ndb":"2049","name":"Thyme, fresh","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":1.1},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3}],"sections":[{"section_key":"crown","section_label":"Crown Roast","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.64,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":1636.3,"raw_water_grams":1082.92,"raw_fat_grams":202.01,"raw_protein_grams":321.67,"raw_carb_grams":6.73,"final_grams":1246.45}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Pork Crown Roast', quantity: 'custom (g)', foodWord: 'PORKCROWNROAST', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'pork center rib roast', quantity: '2 racks (14 ribs), frenched, tied into a crown', section: 'crown', ndbNo: '10044', portionDesc: 'g', portionGrams: 1580.0 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'crown', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'crown', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'fresh rosemary', quantity: '2 sprigs rosemary, leaves stripped and minced', section: 'crown', ndbNo: '2063', portionDesc: 'g', portionGrams: 3.4 },
+      { name: 'fresh thyme leaves', quantity: '4 sprigs thyme, leaves stripped', section: 'crown', ndbNo: '2049', portionDesc: 'g', portionGrams: 2.4 },
+      { name: 'salt', quantity: '1½ tsp', section: 'crown', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'ground black pepper', quantity: '1 tsp', section: 'crown', ndbNo: '2030', portionDesc: 'g', portionGrams: 2.3 }
+    ],
+    recipeInstructions: [
+      'Remove the crown roast from the refrigerator 1 hour before roasting. Preheat oven to 450°F (230°C).',
+      'Combine the olive oil, garlic, rosemary, and thyme in a small bowl. Rub the herb mixture generously over the entire outside surface of the crown, including between the bones.',
+      'Season the crown all over with salt and black pepper. Wrap each exposed rib-bone tip with a small piece of foil to prevent burning during roasting.',
+      'Stand the crown upright in a roasting pan. Roast at 450°F for 15 minutes to brown the exterior. Reduce oven temperature to 375°F (190°C) and continue roasting 60–80 minutes, until the internal temperature at the thickest part (away from bone) reaches 145°F (63°C). The center cavity may be filled with stuffing (not included) before roasting if desired.',
+      'Remove the foil from the bone tips. Transfer to a cutting board and rest 20 minutes before carving.',
+      'Carve by slicing straight down between the rib bones to divide into individual chops. Serve 2 ribs per person.'
+    ],
+    sections: [
+      { key: 'crown', label: 'Crown Roast', cookingMethod: '', yieldFactorWater: 0.64 }
+    ],
   }
 ];
