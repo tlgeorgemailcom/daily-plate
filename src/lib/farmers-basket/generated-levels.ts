@@ -15700,10 +15700,11 @@ export const LEVELS: Level[] = [
     ],
     recipeInstructions: [
       'Pat the pork shoulder dry with paper towels. Rub the olive oil all over the surface.',
-      'Combine the paprika, brown sugar, garlic powder, cumin, black pepper, salt, onion powder, and cayenne in a small bowl. Rub the spice mixture evenly over all surfaces of the pork. For best results, cover and refrigerate for at least 1 hour or overnight.',
-      'Heat the oven to 325°F. Place the pork fat-side up in a roasting pan or Dutch oven. Roast uncovered until the meat is very tender and pulls apart easily with a fork, 4 to 5 hours (internal temperature 195–205°F for pull-apart texture).',
-      'Transfer to a cutting board and let rest 20 to 30 minutes before slicing or pulling. Reserve the pan drippings for serving if desired.',
-      'Slice or pull the pork into large pieces. Serve with roasted vegetables, mashed potatoes, or over rice (not included).'
+      'Combine the paprika, brown sugar, garlic powder, cumin, black pepper, salt, onion powder, and cayenne in a small bowl. Rub the spice mixture evenly over all surfaces of the pork. Let the roast sit at room temperature for 30 to 45 minutes while the oven heats.',
+      'Heat the oven to 450°F. Place the pork fat-side up in a shallow roasting pan. Roast uncovered for 30 minutes until the top begins to brown and develop a crust.',
+      'Reduce the oven temperature to 250°F. Loosely tent the roast with foil. Continue roasting until the center registers 180°F on an instant-read thermometer, 6 to 8 hours.',
+      'Remove the foil and continue roasting until the surface is deeply caramelized and the meat pulls apart easily with a fork, 30 to 45 minutes more.',
+      'Transfer to a cutting board and let rest 20 to 30 minutes. Pull into large chunks or slice. Serve with roasted vegetables, mashed potatoes, or over rice (not included).'
     ],
     sections: [
       { key: 'pork', label: 'Pork Shoulder', cookingMethod: '', yieldFactorWater: 0.6 }
