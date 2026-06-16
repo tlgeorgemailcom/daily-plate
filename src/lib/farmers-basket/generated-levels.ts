@@ -15264,7 +15264,7 @@ export const LEVELS: Level[] = [
       'Remove the crown roast from the refrigerator 1 hour before roasting. Preheat oven to 450°F (230°C).',
       'Combine the olive oil, garlic, rosemary, and thyme in a small bowl. Rub the herb mixture generously over the entire outside surface of the crown, including between the bones.',
       'Season the crown all over with salt and black pepper. Wrap each exposed rib-bone tip with a small piece of foil to prevent burning during roasting.',
-      'Stand the crown upright in a roasting pan. Roast at 450°F for 15 minutes to brown the exterior. Reduce oven temperature to 375°F (190°C) and continue roasting 60–80 minutes, until the internal temperature at the thickest part (away from bone) reaches 145°F (63°C). The center cavity may be filled with stuffing (not included) before roasting if desired.',
+      'Stand crown with bones upright in roasting pan. Roast at 450°F 15 min, then reduce to 375°F for 60–80 min to 145°F internal. (Center cavity may be filled with stuffing — not included.)',
       'Remove the foil from the bone tips. Transfer to a cutting board and rest 20 minutes before carving.',
       'Carve by slicing straight down between the rib bones to divide into individual chops. Serve 2 ribs per person.'
     ],
