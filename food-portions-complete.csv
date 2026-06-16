@@ -1607,3 +1607,8 @@ LAMBBIRYANI,Lamb Biryani,meat,lamb,,,1,17059,"Lamb Biryani (dum-style, yogurt-ma
 PORKCARNITAS,Pork Carnitas,meat,pork,,,1,10080,Pork Carnitas (braised and crisped pork shoulder),205.6,18.09,12.66,4.03,0.51,62.97,1.74,1,serving,150.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 CHARSIU,Pork Char Siu,meat,pork,,,1,10080,"Pork Char Siu (Chinese BBQ pork, no red food coloring)",236.1,17.53,12.73,11.79,0.4,55.79,9.85,1,serving,233.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 PORKCROWNROAST,Pork Crown Roast,protein,,,,1,10044,"Pork, fresh, loin, center rib (chops or roasts), bone-in, separable lean and fat, raw",257.5,25.81,16.21,0.54,0.13,0.01,55.6,1.0,custom (g),155.8,1.0,serving,155.8,1.0,roast,155.8,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SNOWPEAS,Snow Peas,vegetable,,,,,11300,"Peas, edible-podded, raw",42.0,2.8,0.2,7.55,2.6,4.0,88.89,1.0,cup,98.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+CREAMOFMUSHROOMSOUP,Cream of Mushroom Soup,prepared,,,,,6043,"Soup, cream of mushroom, canned, condensed",79.0,1.35,5.3,6.8,0.7,0.4,84.7,1.0,can,298.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+CREAMOFCHICKENSOUP,Cream of Chicken Soup,prepared,,,,,6336,"CAMPBELL'S, Cream of Chicken Soup, condensed",103.0,1.76,7.98,6.03,4.1,0.0,82.45,1.0,can,298.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+TOMATOESGRNCHILES,Diced Tomatoes with Green Chiles,vegetable,,,,,11537,"Tomatoes, red, ripe, canned, with green chilies",15.0,0.69,0.08,3.62,0.0,0.0,94.23,1.0,can,283.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+BROWNRICE,Brown Rice,grain,,,,,20036,"Rice, brown, long-grain, raw",367.0,7.54,3.2,76.25,3.6,0.66,11.8,1.0,cup,185.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

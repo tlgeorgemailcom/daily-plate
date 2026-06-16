@@ -316,7 +316,7 @@ chicken_thighs_raw,5096,CHICKENTHIGHRAW,"Chicken, broilers or fryers, dark meat,
 sesame_seeds,12024,SESAME,"Seeds, sesame seeds, whole, roasted and toasted",sesame seeds,teaspoon,3.0,added during ENTR_051 build
 peas_edible_pod_raw,11300,SNOWPEAS,"Peas, edible-podded, raw",snow peas,cup,98.0,added during ENTR_052 build
 waterchestnut_canned,11590,WATERCHESTNUT,"Waterchestnuts, chinese, canned, solids and liquids",water chestnuts (canned),can (8 oz),227.0,added during ENTR_052 build
-bamboo_shoots_canned,11028,BAMBOOSHOOTS,"Bamboo shoots, canned, drained solids",bamboo shoots (canned),can (8 oz),227.0,added during ENTR_052 build
+bamboo_shoots_canned,11028,BAMBOOCANNED,"Bamboo shoots, canned, drained solids",bamboo shoots (canned),can (8 oz),227.0,added during ENTR_052 build
 soup_cream_of_mushroom,6043,CREAMOFMUSHROOMSOUP,"Soup, cream of mushroom, canned, condensed",cream of mushroom soup (condensed),can (10.5 oz),298.0,added during ENTR_056 build
 soup_cream_of_chicken,6336,CREAMOFCHICKENSOUP,"CAMPBELL'S, Cream of Chicken Soup, condensed",cream of chicken soup (condensed),can (10.5 oz),298.0,added during ENTR_056 build
 tomatoes_canned_green_chiles,11537,TOMATOESGRNCHILES,"Tomatoes, red, ripe, canned, with green chilies",diced tomatoes with green chiles,can (10 oz),283.0,added during ENTR_056 build
