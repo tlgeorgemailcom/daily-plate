@@ -15395,7 +15395,7 @@ export const LEVELS: Level[] = [
       { name: 'pork tenderloin', quantity: '2 pork tenderloin cutlets (4 oz each), pounded to 1/4 inch', section: 'main', ndbNo: '10060', portionDesc: 'g', portionGrams: 226.8 },
       { name: 'all-purpose enriched unbleached white flour', quantity: '1/4 cup', section: 'main', ndbNo: '20581', portionDesc: 'g', portionGrams: 31.25 },
       { name: 'large egg', quantity: '1 large, beaten', section: 'main', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
-      { name: 'dry bread crumbs', quantity: '1/2 cup (panko preferred)', section: 'main', ndbNo: '18079', portionDesc: 'g', portionGrams: 54.0 },
+      { name: 'dry bread crumbs', quantity: '1/2 cup dry bread crumbs (prefer panko)', section: 'main', ndbNo: '18079', portionDesc: 'g', portionGrams: 54.0 },
       { name: 'olive oil', quantity: '1 tbsp olive oil (absorbed into crust)', section: 'main', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
       { name: 'salt', quantity: '1/2 tsp', section: 'main', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'ground black pepper', quantity: '1/4 tsp', section: 'main', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
@@ -15403,8 +15403,8 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Place the pork tenderloin cutlets between two sheets of plastic wrap and pound to 1/4-inch thickness. Season both sides with salt and pepper.',
       'Set up a breading station: flour in one shallow dish, beaten egg in a second, and panko breadcrumbs in a third.',
-      'Dredge each cutlet in flour and shake off the excess. Dip in the beaten egg, letting the excess drip off. Press firmly into the panko to coat both sides. (The ingredient list reflects only the oil absorbed into the crust.)',
-      'Heat olive oil in a large skillet over medium-high heat until shimmering. Add the cutlets and cook until deep golden brown, 3–4 minutes per side.',
+      'Dredge each cutlet in flour and shake off the excess. Dip in the beaten egg, letting the excess drip off. Press firmly into the panko to coat both sides.',
+      'Heat olive oil in a large skillet over medium-high heat until shimmering. Add the cutlets and cook until deep golden brown, 3–4 minutes per side. (The ingredient list reflects only the oil absorbed into the crust.)',
       'Transfer to a wire rack for 1–2 minutes. Serve with lemon wedges and an arugula salad (not included).'
     ],
     sections: [
