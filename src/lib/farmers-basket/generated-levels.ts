@@ -15508,5 +15508,54 @@ export const LEVELS: Level[] = [
       { key: 'ribs', label: 'Spareribs', cookingMethod: '', yieldFactorWater: 0.596 },
       { key: 'bbq_sauce', label: 'BBQ Sauce', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'ENTR_091',
+    name: 'Pork Country-Style Ribs',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 326,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 ribs (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":537.8,"pro":50.8,"fat":31.0,"carb":12.1,"fib":2.0,"h2o":123.9,"sug":8.3,"perServing":{"cal":537.8,"pro":50.8,"fat":31.0,"carb":12.1,"fib":2.0,"h2o":123.9,"sug":8.3,"AddedSugars":6.7,"IntrinsicSugars":1.6},"micros":{"vitaminA":34.26,"vitaminC":0.57,"vitaminD":31.64,"vitaminE":0.85,"vitaminK":1.95,"vitaminB6":0.5,"vitaminB12":1.03,"thiamin":0.33,"riboflavin":0.3,"niacin":3.25,"folate":1.91,"calcium":37.93,"iron":1.54,"magnesium":31.99,"phosphorus":234.98,"potassium":459.81,"sodium":508.0,"zinc":3.33,"copper":0.12,"selenium":38.17,"cholesterol":84.97,"saturatedFat":2.77,"monoFat":3.1,"polyFat":1.02,"omega3":0.04,"omega6":0.84},"gramsPerServing":222.9,"servings":4,"per100g":{"Energy_KCal":241.24,"Water":55.57,"Protein":22.77,"TotalLipidFat":13.92,"Carbohydrate":5.42,"FiberTotalDietary":0.89,"SugarsTotal":3.73,"Cholesterol":84.97,"FattyAcids_totalSaturated":2.77,"FattyAcids_totalMonounsaturated":3.1,"FattyAcids_totalPolyunsaturated":1.02,"LinoleicAcid":0.84,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":34.26,"Retinol":1.96,"Carotene_beta":326.03,"VitaminD":31.64,"VitaminE_alphaTocopherol":0.85,"VitaminK_phylloquinone":1.95,"VitaminC_totalAscorbicAcid":0.57,"Thiamin":0.33,"Riboflavin":0.3,"Niacin":3.25,"PantothenicAcid":1.62,"VitaminB6":0.5,"Folate_total":1.91,"Folate_food":1.91,"Folate_DFE":1.91,"FolicAcid":0.0,"VitaminB12":1.03,"Choline_total":86.83,"Betaine":5.16,"LuteinZeaxanthin":153.11,"Lycopene":1484.09,"Calcium_Ca":37.93,"Iron_Fe":1.54,"Magnesium_Mg":31.99,"Phosphorus_P":234.98,"Potassium_K":459.81,"Sodium_Na":508.0,"Zinc_Zn":3.33,"Copper_Cu":0.12,"Manganese_Mn":0.1,"Selenium_Se":38.17,"Tryptophan":0.23,"Threonine":1.0,"Isoleucine":1.11,"Leucine":1.91,"Lysine":2.08,"Methionine":0.61,"Cystine":0.23,"Phenylalanine":0.95,"Tyrosine":0.85,"Valine":1.18,"Arginine":1.51,"Histidine":0.96,"Alanine":1.32,"AsparticAcid":2.25,"GlutamicAcid":3.68,"Glycine":1.02,"Proline":0.95,"Serine":0.97,"omega3":0.04,"omega6":0.84,"AddedSugars":3.0,"IntrinsicSugars":0.73},"addedSugars":6.7,"intrinsicSugars":1.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"10204","name":"Pork, fresh, loin, country-style ribs, separable lean and fat, raw","grams":256.0},{"ndb":"2028","name":"Spices, paprika","grams":2.1},{"ndb":"19334","name":"Sugars, brown","grams":3.5},{"ndb":"2009","name":"Spices, chili powder","grams":1.1},{"ndb":"2020","name":"Spices, garlic powder","grams":0.8},{"ndb":"2026","name":"Spices, onion powder","grams":0.6},{"ndb":"2024","name":"Spices, mustard seed, ground","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":2.2},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1},{"ndb":"","name":"BBQ Sauce","grams":30.0}],"sections":[{"section_key":"ribs","section_label":"Country-Style Ribs","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.577,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":1068.2,"raw_water_grams":700.79,"raw_fat_grams":123.46,"raw_protein_grams":201.17,"raw_carb_grams":25.8,"final_grams":771.77},{"section_key":"bbq_sauce","section_label":"BBQ Sauce","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":120.0,"raw_water_grams":91.19,"raw_fat_grams":0.7,"raw_protein_grams":1.86,"raw_carb_grams":22.56,"final_grams":120.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Pork Country-Style Ribs', quantity: 'custom (g)', foodWord: 'PORKCOUNTRYSTYLERIBS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'pork country-style ribs', quantity: '8 ribs', section: 'ribs', ndbNo: '10204', portionDesc: 'g', portionGrams: 1024.0 },
+      { name: 'paprika', quantity: '1 tbsp', section: 'ribs', ndbNo: '2028', portionDesc: 'g', portionGrams: 8.6 },
+      { name: 'brown sugar', quantity: '1 tbsp', section: 'ribs', ndbNo: '19334', portionDesc: 'g', portionGrams: 13.8 },
+      { name: 'chili powder', quantity: '1 1/2 tsp', section: 'ribs', ndbNo: '2009', portionDesc: 'g', portionGrams: 4.3 },
+      { name: 'garlic powder', quantity: '1 tsp', section: 'ribs', ndbNo: '2020', portionDesc: 'g', portionGrams: 3.1 },
+      { name: 'onion powder', quantity: '3/4 tsp', section: 'ribs', ndbNo: '2026', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'ground mustard', quantity: '1/2 tsp', section: 'ribs', ndbNo: '2024', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '1/2 tsp', section: 'ribs', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'salt', quantity: '1 1/2 tsp', section: 'ribs', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'cayenne pepper', quantity: '1/8 tsp', section: 'ribs', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.45 },
+      { name: 'BBQ Sauce', quantity: '1/2 cup BBQ Sauce (recipe)', section: 'bbq_sauce', foodWord: 'BBQSAUCE', portionDesc: 'g', portionGrams: 120.0, isDish: true, componentRef: 'SAUCE_026' }
+    ],
+    recipeInstructions: [
+      'Make or prepare the BBQ Sauce (see the BBQ Sauce recipe). Set aside.',
+      'Preheat the oven to 300°F (150°C). Line a large rimmed baking sheet with heavy-duty foil.',
+      'Mix the paprika, brown sugar, chili powder, garlic powder, onion powder, mustard, black pepper, salt, and cayenne in a small bowl to form the dry rub. Pat the ribs dry and coat all sides generously with the rub.',
+      'Arrange the ribs in a single layer on the prepared pan. Cover tightly with foil and bake for 1 hour 45 minutes to 2 hours until the meat is tender and cooked through.',
+      'Carefully remove the top foil and drain off any accumulated juices. Brush the ribs generously with the BBQ sauce.',
+      'Increase the oven to 425°F (220°C) (or use the broiler), return the ribs uncovered for 10 to 15 minutes until the sauce caramelizes and sets.',
+      'Let rest 5 minutes before serving. Serve 2 ribs per person with coleslaw or potato salad (not included).'
+    ],
+    sections: [
+      { key: 'ribs', label: 'Country-Style Ribs', cookingMethod: '', yieldFactorWater: 0.577 },
+      { key: 'bbq_sauce', label: 'BBQ Sauce', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

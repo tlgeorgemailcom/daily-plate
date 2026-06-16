@@ -340,3 +340,4 @@ pork_center_rib_roast_raw,10044,PORKCROWNROAST,"Pork, fresh, loin, center rib (c
 wonton_wrapper,18368,WONTON,Wonton wrappers (includes egg roll wrappers),wonton/egg roll wrapper,wrapper,30.0,NDB 18368; 30g = 1 large egg roll wrapper (7x7 inch)
 pork_back_ribs_raw,10192,PORKBACKRIBS,"Pork, fresh, backribs, separable lean and fat, raw",pork back ribs,lb,453.592,"NDB 10192 bone-in raw lean+fat; 680g = raw edible per rack (1134g bone-in x 60% edible, 40% bone refuse)"
 pork_spareribs_raw,10088,PORKSPARERIBS,"Pork, fresh, spareribs, separable lean and fat, raw",pork spareribs,lb,453.592,"NDB 10088 bone-in raw lean+fat; 680g = raw edible per rack (~1361g bone-in x 50% edible, 50% bone/cartilage refuse)"
+pork_country_style_ribs_raw,10204,PORKCOUNTRYSTYLERIBS,"Pork, fresh, loin, country-style ribs, separable lean and fat, raw",pork country-style ribs,rib,128.0,NDB 10204; 128g per rib (USDA M1: 1 rib without refuse); refuse already excluded from NDB weight

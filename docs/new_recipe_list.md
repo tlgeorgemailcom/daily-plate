@@ -156,9 +156,9 @@ Pork Spareribs
 Pork Country-Style Ribs
 Pork Schnitzel
 Pork Tenderloin Stuffed
-Pork & Beef Swedish Meatballs
-Pork Fried Rice
 Pork Shoulder
+Pork Fried Rice
+Pork & Beef Swedish Meatballs
 
 Seafood Crab Cakes
 Seafood Crab Stuffed Avocados

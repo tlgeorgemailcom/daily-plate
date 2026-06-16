@@ -53653,6 +53653,34 @@ export const FOODS: Food[] = [
         "gm": 85.0
       }
     ]
+  },
+  {
+    "word": "PORKCOUNTRYSTYLERIBS",
+    "display": "Pork Country-Style Ribs",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "10204",
+    "desc": "Pork, fresh, loin, country-style ribs, separable lean and fat, raw",
+    "cal": 189.0,
+    "pro": 19.34,
+    "fat": 11.82,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 68.22,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "rib without refuse",
+        "gm": 128.0
+      }
+    ]
   }
 ];
 
