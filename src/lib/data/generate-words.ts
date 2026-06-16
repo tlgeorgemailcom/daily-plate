@@ -1,3 +1,17 @@
+// RETIRED — DO NOT RUN THIS SCRIPT.
+//
+// scrambled-words.csv is a manually curated word list for the Chain, Plate, Tower, and Bees games.
+// It is frozen as of 2026-06-16. New words must be added by hand after review.
+//
+// Protocol for adding new words:
+//   1. After completing a new recipe with a Rule A/B/C food_word, check whether the ingredient's
+//      display name contributes any new, game-worthy lowercase words (3+ letters, no qualifiers
+//      like "raw", "boiled", "dry", "flat").
+//   2. If yes, append the word and its group(s) to src/lib/data/scrambled-words.csv manually.
+//   3. Commit the CSV change with the recipe commit.
+//
+// This file is kept for historical reference only.
+
 import { FOODS } from './food-portions';
 import { writeFileSync } from 'fs';
 
