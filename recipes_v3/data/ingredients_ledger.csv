@@ -341,3 +341,5 @@ wonton_wrapper,18368,WONTON,Wonton wrappers (includes egg roll wrappers),wonton/
 pork_back_ribs_raw,10192,PORKBACKRIBS,"Pork, fresh, backribs, separable lean and fat, raw",pork back ribs,lb,453.592,"NDB 10192 bone-in raw lean+fat; 680g = raw edible per rack (1134g bone-in x 60% edible, 40% bone refuse)"
 pork_spareribs_raw,10088,PORKSPARERIBS,"Pork, fresh, spareribs, separable lean and fat, raw",pork spareribs,lb,453.592,"NDB 10088 bone-in raw lean+fat; 680g = raw edible per rack (~1361g bone-in x 50% edible, 50% bone/cartilage refuse)"
 pork_country_style_ribs_raw,10204,PORKCOUNTRYSTYLERIBS,"Pork, fresh, loin, country-style ribs, separable lean and fat, raw",pork country-style ribs,rib,128.0,NDB 10204; 128g per rib (USDA M1: 1 rib without refuse); refuse already excluded from NDB weight
+pork_loin_chop_boneless_raw,10062,PORKLOINCHOPBONELESS,"Pork, fresh, loin, top loin (chops), boneless, separable lean and fat, raw",pork loin chop boneless,oz,28.35,
+rosemary_dried,2036,ROSEMARY_DRIED,"Spices, rosemary, dried",dried rosemary,tsp,1.2,

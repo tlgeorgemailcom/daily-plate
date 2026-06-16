@@ -15557,5 +15557,51 @@ export const LEVELS: Level[] = [
       { key: 'ribs', label: 'Country-Style Ribs', cookingMethod: '', yieldFactorWater: 0.577 },
       { key: 'bbq_sauce', label: 'BBQ Sauce', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'ENTR_092',
+    name: 'Pork Schnitzel',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 327,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cutlet (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":560.7,"pro":45.3,"fat":26.3,"carb":33.1,"fib":2.6,"h2o":128.3,"sug":1.9,"perServing":{"cal":560.7,"pro":45.3,"fat":26.3,"carb":33.1,"fib":2.6,"h2o":128.3,"sug":1.9,"AddedSugars":0.0,"IntrinsicSugars":1.9},"micros":{"vitaminA":23.75,"vitaminC":0.14,"vitaminD":20.42,"vitaminE":0.74,"vitaminK":4.43,"vitaminB6":0.43,"vitaminB12":0.44,"thiamin":0.48,"riboflavin":0.24,"niacin":5.53,"folate":23.2,"calcium":42.11,"iron":1.73,"magnesium":28.52,"phosphorus":210.53,"potassium":328.39,"sodium":377.8,"zinc":1.49,"copper":0.09,"selenium":32.05,"cholesterol":87.04,"saturatedFat":2.86,"monoFat":5.79,"polyFat":1.19,"omega3":0.02,"omega6":0.55},"gramsPerServing":237.7,"servings":4,"per100g":{"Energy_KCal":235.87,"Water":53.98,"Protein":19.04,"TotalLipidFat":11.05,"Carbohydrate":13.93,"FiberTotalDietary":1.1,"SugarsTotal":0.81,"Cholesterol":87.04,"FattyAcids_totalSaturated":2.86,"FattyAcids_totalMonounsaturated":5.79,"FattyAcids_totalPolyunsaturated":1.19,"LinoleicAcid":0.55,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":23.75,"Retinol":14.03,"Carotene_beta":98.67,"VitaminD":20.42,"VitaminE_alphaTocopherol":0.74,"VitaminK_phylloquinone":4.43,"VitaminC_totalAscorbicAcid":0.14,"Thiamin":0.48,"Riboflavin":0.24,"Niacin":5.53,"PantothenicAcid":0.62,"VitaminB6":0.43,"Folate_total":23.2,"Folate_food":8.62,"Folate_DFE":33.38,"FolicAcid":19.44,"VitaminB12":0.44,"Choline_total":66.79,"Betaine":2.3,"LuteinZeaxanthin":95.75,"Lycopene":0.02,"Calcium_Ca":42.11,"Iron_Fe":1.73,"Magnesium_Mg":28.52,"Phosphorus_P":210.53,"Potassium_K":328.39,"Sodium_Na":377.8,"Zinc_Zn":1.49,"Copper_Cu":0.09,"Manganese_Mn":0.19,"Selenium_Se":32.05,"Tryptophan":0.2,"Threonine":0.81,"Isoleucine":0.92,"Leucine":1.58,"Lysine":1.59,"Methionine":0.5,"Cystine":0.21,"Phenylalanine":0.83,"Tyrosine":0.71,"Valine":0.99,"Arginine":1.2,"Histidine":0.75,"Alanine":1.06,"AsparticAcid":1.77,"GlutamicAcid":3.34,"Glycine":0.82,"Proline":0.92,"Serine":0.88,"omega3":0.02,"omega6":0.55,"AddedSugars":0.0,"IntrinsicSugars":0.81},"addedSugars":0.0,"intrinsicSugars":1.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"10062","name":"Pork, fresh, loin, top loin (chops), boneless, separable lean and fat, raw","grams":170.0},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":15.6},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":25.0},{"ndb":"18079","name":"Bread crumbs, dry, grated, plain","grams":27.0},{"ndb":"2036","name":"Spices, rosemary, dried","grams":0.9},{"ndb":"2023","name":"Spices, marjoram, dried","grams":0.2},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.2},{"ndb":"2028","name":"Spices, paprika","grams":1.1},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":10.2}],"sections":[{"section_key":"main","section_label":"Pork Schnitzel","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":1007.85,"raw_water_grams":570.32,"raw_fat_grams":105.06,"raw_protein_grams":181.04,"raw_carb_grams":132.49,"final_grams":950.82}],"cookingMethod":"pan grilled"},
+    recipeIngredients: [
+      { name: 'Pork Schnitzel', quantity: 'custom (g)', foodWord: 'PORKSCHNITZEL', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'pork loin chop boneless', quantity: '4 cutlets (6 oz each), pounded thin', section: 'main', ndbNo: '10062', portionDesc: 'g', portionGrams: 680.0 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '1/2 cup', section: 'main', ndbNo: '20581', portionDesc: 'g', portionGrams: 62.5 },
+      { name: 'large egg', quantity: '2 large', section: 'main', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'dry bread crumbs', quantity: '1 cup dry bread crumbs', section: 'main', ndbNo: '18079', portionDesc: 'g', portionGrams: 108.0 },
+      { name: 'dried rosemary', quantity: '3 tsp', section: 'main', ndbNo: '2036', portionDesc: 'g', portionGrams: 3.6 },
+      { name: 'dried marjoram', quantity: '1 1/4 tsp', section: 'main', ndbNo: '2023', portionDesc: 'g', portionGrams: 0.75 },
+      { name: 'dried oregano', quantity: '3/4 tsp', section: 'main', ndbNo: '2027', portionDesc: 'g', portionGrams: 0.75 },
+      { name: 'paprika', quantity: '1 1/2 tsp', section: 'main', ndbNo: '2028', portionDesc: 'g', portionGrams: 4.3 },
+      { name: 'salt', quantity: '1 tsp', section: 'main', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/2 tsp', section: 'main', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'olive oil', quantity: '3 tbsp olive oil (absorbed into crust)', section: 'main', ndbNo: '4053', portionDesc: 'g', portionGrams: 40.8 }
+    ],
+    recipeInstructions: [
+      'Place each pork cutlet between two sheets of plastic wrap and pound to about 1/4-inch thickness with a meat mallet or heavy skillet.',
+      'Set up three shallow dishes: one with the flour, one with the beaten eggs, and one with the bread crumbs mixed with the rosemary, marjoram, oregano, paprika, salt, and pepper.',
+      'Dredge each cutlet in flour, shaking off the excess, then dip in egg, letting the excess drip off, then press firmly into the herbed bread crumb mixture to coat both sides.',
+      'Heat the olive oil in a large skillet over medium-high heat. Cook the schnitzel in batches for 3 to 4 minutes per side until golden brown and cooked through. (The ingredient list reflects only the oil absorbed into the crust.)',
+      'Transfer to a wire rack and serve immediately with lemon wedges and a simple green salad or cucumber salad (not included).'
+    ],
+    sections: [
+      { key: 'main', label: 'Pork Schnitzel', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];

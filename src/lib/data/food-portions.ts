@@ -53681,6 +53681,57 @@ export const FOODS: Food[] = [
         "gm": 128.0
       }
     ]
+  },
+  {
+    "word": "PORKLOINCHOPBONELESS",
+    "display": "Pork Loin Chop Boneless",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "10062",
+    "desc": "Pork, fresh, loin, top loin (chops), boneless, separable lean and fat, raw",
+    "cal": 155.0,
+    "pro": 21.55,
+    "fat": 6.94,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 70.38,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 3.0,
+        "desc": "oz",
+        "gm": 85.0
+      }
+    ]
+  },
+  {
+    "word": "ROSEMARY_DRIED",
+    "display": "Rosemary, Dried",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "2036",
+    "desc": "Spices, rosemary, dried",
+    "cal": 331.0,
+    "pro": 4.88,
+    "fat": 15.22,
+    "carb": 64.06,
+    "fib": 42.6,
+    "h2o": 9.31,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 1.2
+      }
+    ]
   }
 ];
 
