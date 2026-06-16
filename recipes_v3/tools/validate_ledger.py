@@ -67,8 +67,6 @@ def main() -> int:
     with RECIPES.open() as f:
         for r in csv.DictReader(f):
             rid = r["recipe_id"]
-            if not rid.startswith("SWEET_"):
-                continue
             fw = r["food_word"]
             if fw in words:
                 continue
