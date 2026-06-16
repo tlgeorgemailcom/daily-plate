@@ -15410,5 +15410,54 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'main', label: 'Pork Milanese', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'ENTR_089',
+    name: 'Pork Baby Back Ribs',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 324,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1/4 rack (serves 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":457.1,"pro":34.1,"fat":29.0,"carb":16.9,"fib":2.9,"h2o":102.2,"sug":11.8,"perServing":{"cal":457.1,"pro":34.1,"fat":29.0,"carb":16.9,"fib":2.9,"h2o":102.2,"sug":11.8,"AddedSugars":9.9,"IntrinsicSugars":1.9},"micros":{"vitaminA":65.86,"vitaminC":0.72,"vitaminD":36.21,"vitaminE":1.29,"vitaminK":3.66,"vitaminB6":0.36,"vitaminB12":0.46,"thiamin":0.32,"riboflavin":0.3,"niacin":5.64,"folate":3.06,"calcium":49.29,"iron":1.64,"magnesium":27.29,"phosphorus":161.87,"potassium":369.94,"sodium":457.81,"zinc":2.54,"copper":0.14,"selenium":29.83,"cholesterol":62.61,"saturatedFat":5.34,"monoFat":6.1,"polyFat":2.2,"omega3":0.08,"omega6":1.8},"gramsPerServing":187.3,"servings":4,"per100g":{"Energy_KCal":244.0,"Water":54.57,"Protein":18.23,"TotalLipidFat":15.5,"Carbohydrate":9.02,"FiberTotalDietary":1.57,"SugarsTotal":6.28,"Cholesterol":62.61,"FattyAcids_totalSaturated":5.34,"FattyAcids_totalMonounsaturated":6.1,"FattyAcids_totalPolyunsaturated":2.2,"LinoleicAcid":1.8,"alphaLinolenicAcid":0.07,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.0,"VitaminA_RAE":65.86,"Retinol":5.41,"Carotene_beta":604.97,"VitaminD":36.21,"VitaminE_alphaTocopherol":1.29,"VitaminK_phylloquinone":3.66,"VitaminC_totalAscorbicAcid":0.72,"Thiamin":0.32,"Riboflavin":0.3,"Niacin":5.64,"PantothenicAcid":0.72,"VitaminB6":0.36,"Folate_total":3.06,"Folate_food":3.06,"Folate_DFE":3.06,"FolicAcid":0.0,"VitaminB12":0.46,"Choline_total":57.69,"Betaine":2.61,"LuteinZeaxanthin":282.29,"Lycopene":1766.19,"Calcium_Ca":49.29,"Iron_Fe":1.64,"Magnesium_Mg":27.29,"Phosphorus_P":161.87,"Potassium_K":369.94,"Sodium_Na":457.81,"Zinc_Zn":2.54,"Copper_Cu":0.14,"Manganese_Mn":0.16,"Selenium_Se":29.83,"Tryptophan":0.21,"Threonine":0.76,"Isoleucine":0.83,"Leucine":1.44,"Lysine":1.54,"Methionine":0.47,"Cystine":0.18,"Phenylalanine":0.73,"Tyrosine":0.68,"Valine":0.89,"Arginine":1.14,"Histidine":0.7,"Alanine":0.99,"AsparticAcid":1.7,"GlutamicAcid":2.79,"Glycine":0.8,"Proline":0.77,"Serine":0.73,"omega3":0.08,"omega6":1.8,"AddedSugars":5.27,"IntrinsicSugars":1.01},"addedSugars":9.9,"intrinsicSugars":1.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"10192","name":"Pork, fresh, backribs, separable lean and fat, raw","grams":170.0},{"ndb":"2028","name":"Spices, paprika","grams":3.5},{"ndb":"19334","name":"Sugars, brown","grams":6.8},{"ndb":"2009","name":"Spices, chili powder","grams":2.0},{"ndb":"2020","name":"Spices, garlic powder","grams":0.8},{"ndb":"2026","name":"Spices, onion powder","grams":0.6},{"ndb":"2024","name":"Spices, mustard seed, ground","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.6},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.2},{"ndb":"","name":"BBQ Sauce","grams":30.0}],"sections":[{"section_key":"ribs","section_label":"Baby Back Ribs","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.73,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":746.9,"raw_water_grams":435.25,"raw_fat_grams":115.45,"raw_protein_grams":134.72,"raw_carb_grams":45.02,"final_grams":629.38},{"section_key":"bbq_sauce","section_label":"BBQ Sauce","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":120.0,"raw_water_grams":91.19,"raw_fat_grams":0.7,"raw_protein_grams":1.86,"raw_carb_grams":22.56,"final_grams":120.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Pork Baby Back Ribs', quantity: 'custom (g)', foodWord: 'PORKBABYBACKRIBS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'pork back ribs', quantity: '1 rack (about 2.5 lb bone-in), edible lean and fat only', section: 'ribs', ndbNo: '10192', portionDesc: 'g', portionGrams: 680.0 },
+      { name: 'paprika', quantity: '2 tbsp', section: 'ribs', ndbNo: '2028', portionDesc: 'g', portionGrams: 13.8 },
+      { name: 'brown sugar', quantity: '3 tbsp', section: 'ribs', ndbNo: '19334', portionDesc: 'g', portionGrams: 27.0 },
+      { name: 'chili powder', quantity: '1 tbsp', section: 'ribs', ndbNo: '2009', portionDesc: 'g', portionGrams: 8.1 },
+      { name: 'garlic powder', quantity: '1 tsp', section: 'ribs', ndbNo: '2020', portionDesc: 'g', portionGrams: 3.1 },
+      { name: 'onion powder', quantity: '1 tsp', section: 'ribs', ndbNo: '2026', portionDesc: 'g', portionGrams: 2.4 },
+      { name: 'ground mustard', quantity: '1 tsp ground mustard', section: 'ribs', ndbNo: '2024', portionDesc: 'g', portionGrams: 3.3 },
+      { name: 'ground black pepper', quantity: '1 tsp', section: 'ribs', ndbNo: '2030', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'salt', quantity: '1 tsp', section: 'ribs', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'cayenne pepper', quantity: '1/4 tsp', section: 'ribs', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.9 },
+      { name: 'BBQ Sauce', quantity: '1/2 cup BBQ Sauce (recipe)', section: 'bbq_sauce', foodWord: 'BBQSAUCE', portionDesc: 'g', portionGrams: 120.0, isDish: true, componentRef: 'SAUCE_026' }
+    ],
+    recipeInstructions: [
+      'Make or prepare the BBQ Sauce (see the BBQ Sauce recipe). Set aside.',
+      'Preheat oven to 275°F (135°C). Remove the thin membrane from the back of the rack by sliding a butter knife under it and pulling it off with a paper towel.',
+      'Mix the paprika, brown sugar, chili powder, garlic powder, onion powder, ground mustard, black pepper, salt, and cayenne in a small bowl. Rub the dry rub evenly over both sides of the ribs.',
+      'Place the rack bone-side down on a large sheet of foil. Wrap the foil tightly around the ribs to seal completely. Place on a baking sheet.',
+      'Bake for 2.5–3 hours, until the meat is tender and beginning to pull back from the bones.',
+      'Open the foil and brush both sides of the ribs generously with BBQ sauce. Return to the oven uncovered for 20–30 minutes, until the sauce caramelizes.',
+      'Rest for 10 minutes before slicing into individual ribs. Serve with additional BBQ sauce on the side (not included).'
+    ],
+    sections: [
+      { key: 'ribs', label: 'Baby Back Ribs', cookingMethod: '', yieldFactorWater: 0.73 },
+      { key: 'bbq_sauce', label: 'BBQ Sauce', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

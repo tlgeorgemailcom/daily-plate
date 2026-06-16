@@ -53597,6 +53597,34 @@ export const FOODS: Food[] = [
         "gm": 28.35
       }
     ]
+  },
+  {
+    "word": "PORKBACKRIBS",
+    "display": "Pork Back Ribs",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "10192",
+    "desc": "Pork, fresh, backribs, separable lean and fat, raw",
+    "cal": 224.0,
+    "pro": 19.07,
+    "fat": 16.33,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 63.47,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "lb",
+        "gm": 453.592
+      }
+    ]
   }
 ];
 
