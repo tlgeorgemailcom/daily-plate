@@ -157,7 +157,7 @@
       "grams": 36.0,
       "section": "tenderloin",
       "ingredient_group": "tenderloin",
-      "qty_display": "2 scallions",
+      "qty_display": "2 scallions, chopped",
       "contribution": {
         "Energy_KCal": 11.52,
         "Protein": 0.659,
@@ -178,7 +178,7 @@
       "grams": 2.4,
       "section": "tenderloin",
       "ingredient_group": "tenderloin",
-      "qty_display": "1 tbsp",
+      "qty_display": "1 tbsp fresh thyme",
       "contribution": {
         "Energy_KCal": 2.424,
         "Protein": 0.133,

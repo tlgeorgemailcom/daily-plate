@@ -178,7 +178,7 @@ sage_ground,2038,SAGE,"Spices, sage, ground",ground sage,teaspoon,0.7,
 salami_italian_dry,7926,SALAMIITALIAN,"Salami, Italian, pork",salami,slice,10.0,
 salt_table,2047,SALT,"Salt, table",salt,teaspoon,6.0,
 sauerkraut_canned,11439,SAUERKRAUT,"Sauerkraut, canned, solids and liquids",sauerkraut,cup,140.0,
-scallion_raw,11291,SCALLION,"Onions, spring or scallions (includes tops and bulb), raw",scallion (green onion),each,15.0,Medium scallion ~15g
+scallion_raw,11291,SCALLION,"Onions, spring or scallions (includes tops and bulb), raw",scallions,each,15.0,Medium scallion ~15g
 sesame_oil,4058,OILSESAME,"Oil, sesame, salad or cooking",Sesame oil,tsp,4.5,
 shrimp_raw,15270,SHRIMP,"Crustaceans, shrimp, raw (not previously frozen)",shrimp,oz,85.05,
 smoked_salmon,15077,SMOKEDSALMON,"Fish, salmon, chinook, smoked",smoked salmon,oz,28.35,NDB is already a smoked/cured value
@@ -191,7 +191,7 @@ tahini,12166,TAHINI,"Seeds, sesame butter, tahini, from roasted and toasted kern
 tamari,16124,TAMARI,Soy sauce made from soy (tamari),tamari,tablespoon,18.0,
 tartar_sauce,27049,TARTARSAUCE,"Sauce, tartar, ready-to-serve",tartar sauce,tablespoon,14.0,
 thousand_island_dressing,4017,DRESSINGTHOUSAND,"Salad dressing, thousand island, commercial, regular",thousand island dressing,tablespoon,15.6,
-thyme_fresh,2049,THYME,"Thyme, fresh",fresh thyme leaves,teaspoon,0.8,1 tsp leaves ~0.8g
+thyme_fresh,2049,THYME,"Thyme, fresh",fresh thyme,teaspoon,0.8,1 tsp leaves ~0.8g
 tomato_paste,11546,TOMATOPASTE,"Tomato products, canned, paste, without salt added",tomato paste,tablespoon,16.0,
 tomato_red_raw,11529,TOMATO,"Tomatoes, red, ripe, raw, year round average",tomato,each,17.0,red ripe raw tomato; 1 cherry tomato ~17g
 tortilla_flour_refrigerated,18364,TORTILLAFLOUR,"Tortillas, ready-to-bake or -fry, flour, refrigerated",flour tortilla,each,45.0,
