@@ -15240,6 +15240,7 @@ export const LEVELS: Level[] = [
       { name: 'lime juice', quantity: '2 tbsp', section: 'salmon', ndbNo: '9160', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'salt', quantity: '1/2 tsp', section: 'salmon', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'quinoa dry', quantity: '1 1/3 cups dry', section: 'quinoa', ndbNo: '20035', portionDesc: 'g', portionGrams: 242.4 },
+      { name: 'water', quantity: '2 1/3 cups', section: 'quinoa', portionDesc: 'g', portionGrams: 560.0 },
       { name: 'edamame cooked', quantity: '2 cups', section: 'assembly', ndbNo: '11212', portionDesc: 'g', portionGrams: 310.0 },
       { name: 'avocado', quantity: '1 fruit', section: 'assembly', ndbNo: '9038', portionDesc: 'g', portionGrams: 136.0 },
       { name: 'cucumber peeled', quantity: '1 1/2 cups, sliced', section: 'assembly', ndbNo: '11206', portionDesc: 'g', portionGrams: 178.5 },
@@ -15249,7 +15250,7 @@ export const LEVELS: Level[] = [
     ],
     recipeInstructions: [
       'Rinse 1 1/3 cups dry quinoa under cold water in a fine-mesh strainer.',
-      'Combine rinsed quinoa and 3 cups water in a saucepan. Bring to a boil, then reduce heat to low, cover, and simmer until liquid is absorbed and quinoa is tender, about 15 minutes.',
+      'Combine rinsed quinoa and 2 1/3 cups water in a saucepan. Bring to a boil, then reduce heat to low, cover, and simmer until liquid is absorbed and quinoa is tender, about 15 minutes.',
       'Remove from heat, let stand covered 5 minutes, then fluff with a fork and spread on a tray to cool slightly.',
       'In a medium bowl, whisk together tamari, sesame oil, lime juice, and salt.',
       'Add salmon and toss gently to coat. Let marinate 10 minutes while you prep the bowl ingredients.',
