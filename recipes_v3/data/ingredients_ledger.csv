@@ -344,3 +344,4 @@ pork_country_style_ribs_raw,10204,PORKCOUNTRYSTYLERIBS,"Pork, fresh, loin, count
 pork_loin_chop_boneless_raw,10062,PORKLOINCHOPBONELESS,"Pork, fresh, loin, top loin (chops), boneless, separable lean and fat, raw",pork loin chop boneless,oz,28.35,
 rosemary_dried,2036,ROSEMARY_DRIED,"Spices, rosemary, dried",dried rosemary,tsp,1.2,
 crackers_saltines_unsalted_tops,18426,SALTINEUNSALTED,"Crackers, saltines, unsalted tops (includes oyster, soda, soup)",saltine cracker crumbs (unsalted tops),cup,108.0,Finely crushed for binder; 1/2 cup = 54g
+seaweed_laver_raw,11444,SEAWEED,"Seaweed, irishmoss, raw",nori (seaweed proxy),sheet,2.5,Nori proxy: SR Legacy has no nori row in food-portions; using seaweed raw mapping
