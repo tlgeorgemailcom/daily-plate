@@ -15634,7 +15634,7 @@ export const LEVELS: Level[] = [
       { name: 'fresh dill', quantity: '1/2 cup fresh dill', section: 'tenderloin', ndbNo: '2045', portionDesc: 'g', portionGrams: 20.0 },
       { name: 'fresh chives', quantity: '1/2 cup fresh chives', section: 'tenderloin', ndbNo: '11156', portionDesc: 'g', portionGrams: 24.0 },
       { name: '2 scallions', quantity: '2 scallions', section: 'tenderloin', ndbNo: '11291', portionDesc: 'g', portionGrams: 36.0 },
-      { name: 'fresh thyme leaves', quantity: '1 tbsp fresh thyme', section: 'tenderloin', ndbNo: '2049', portionDesc: 'g', portionGrams: 2.4 },
+      { name: 'fresh thyme', quantity: '1 tbsp', section: 'tenderloin', ndbNo: '2049', portionDesc: 'g', portionGrams: 2.4 },
       { name: 'garlic', quantity: '1 clove garlic, minced', section: 'tenderloin', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'prepared horseradish', quantity: '2 tsp', section: 'tenderloin', ndbNo: '2055', portionDesc: 'g', portionGrams: 10.0 },
       { name: 'olive oil', quantity: '3 tbsp olive oil', section: 'tenderloin', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
