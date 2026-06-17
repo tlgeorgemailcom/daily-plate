@@ -540,6 +540,7 @@ FNDDS published nutrient profiles use **Foundation Foods** values for common ing
 - **Yield factors for baked goods**: default `yfw=0.85` left macros too dilute for biscuits. `yfw=0.75` hit Rule A. Expect baked breads/biscuits to need 0.70–0.78.
 - **Sugar fine-tuning**: when 6 macros pass but sugar is slightly under, adding 1g (¼ tsp) sugar shifts only the sugar column meaningfully without disturbing others. Don't add a full tbsp — overshoots by >100%.
 - **Ingredient key naming must match NDB long_desc**: NDB 20581 is *unbleached* per `comboo.db`, despite the legacy `flour_ap_white_enriched_bleached` key. Always verify `Long_Desc` before naming a new ledger key.
+- **`ingredients_ledger.csv` has one authoritative copy** — `recipes_v3/data/ingredients_ledger.csv`. `src/lib/data/ingredients_ledger.csv` is a **symlink** to it (set up 2026-06-17). Never edit the `src/lib/data/` path directly; edit only `recipes_v3/data/ingredients_ledger.csv` and both paths update automatically.
 - **`food-portions-complete.csv` lives in 3 places** — root, `src/lib/data/`, `docs/` — all must stay in sync. Edit all three together.
 - **After any change to `food-portions-complete.csv`, regenerate `food-portions.ts`**: run `python3 scripts/dev/convert_to_ts.py`. Commit the updated TS with the CSV changes.
 - **Game architecture — three separate word/data pipelines:**
