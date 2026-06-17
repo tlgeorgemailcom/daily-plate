@@ -634,3 +634,18 @@ Whenever a new `ingredient_key` is added to `ingredients_ledger.csv` or a new ro
 | 2026-06-16 | pork_loin_chop_boneless_raw (NDB 10062) | (no candidate — not a standalone food noun) | Yes | skip |
 | 2026-06-16 | rosemary_dried (NDB 2036) | rosemary | Yes | pending |
 | 2026-06-17 | crackers_saltines_unsalted_tops (NDB 18426) | saltine | Yes | pending |
+| 2026-06-17 | almonds_sliced (NDB 12061) | almonds | Yes | pending |
+| 2026-06-17 | bean_sprouts_raw (NDB 11052) | sprouts | Yes | pending |
+| 2026-06-17 | capers_canned (NDB 2054) | capers | Yes | pending |
+| 2026-06-17 | cashews_raw (NDB 12087) | cashews | Yes | pending |
+| 2026-06-17 | chickpeas_canned_drained (NDB 16057) | chickpeas | Yes | pending |
+| 2026-06-17 | croutons_plain (NDB 18242) | croutons | Yes | pending |
+| 2026-06-17 | egg_noodles_dry (NDB 20112) | noodles | Yes | pending |
+| 2026-06-17 | grapes_raw (NDB 9132) | grapes | Yes | pending |
+| 2026-06-17 | leek_raw (NDB 11246) | leeks | Yes | pending |
+| 2026-06-17 | olives_black_canned (NDB 9193) | olives | Yes | pending |
+| 2026-06-17 | shallots_raw (NDB 11677) | shallots | Yes | pending |
+| 2026-06-17 | walnuts_raw (NDB 12155) | walnuts | Yes | pending |
+| 2026-06-17 | seaweed_laver_raw (NDB 15188) | nori | No (not SR Legacy) | pending — combined only |
+| 2026-06-17 | beer_regular (NDB 14003) | beer | Yes | pending — alcohol → combined only |
+| 2026-06-17 | brandy (NDB 14037) | brandy | Yes | pending — alcohol → combined only |
