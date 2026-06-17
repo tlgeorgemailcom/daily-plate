@@ -40900,6 +40900,34 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "LAVER",
+    "display": "Laver Raw",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11446",
+    "desc": "Seaweed, laver, raw",
+    "cal": 35.0,
+    "pro": 5.81,
+    "fat": 0.28,
+    "carb": 5.11,
+    "fib": 0.3,
+    "h2o": 85.03,
+    "sug": 0.49,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "sheet",
+        "gm": 2.5
+      }
+    ]
+  },
+  {
     "word": "SEMOLINA",
     "display": "Semolina",
     "groups": [
