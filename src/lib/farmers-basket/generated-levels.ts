@@ -15188,5 +15188,53 @@ export const LEVELS: Level[] = [
       { key: 'rice', label: 'Sushi Rice', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'assembly', label: 'Bowl Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'ENTR_102',
+    name: 'Seafood Salmon Quinoa Bowls',
+    category: 'entrees & main courses',
+    dietaryCategory: 'pesca',
+    levelNum: 337,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":302.2,"pro":18.2,"fat":23.3,"carb":5.9,"fib":3.1,"h2o":137.9,"sug":1.2,"perServing":{"cal":302.2,"pro":18.2,"fat":23.3,"carb":5.9,"fib":3.1,"h2o":137.9,"sug":1.2,"AddedSugars":0.0,"IntrinsicSugars":1.2},"micros":{"vitaminA":56.29,"vitaminC":5.47,"vitaminD":0.0,"vitaminE":1.25,"vitaminK":24.51,"vitaminB6":0.21,"vitaminB12":0.51,"thiamin":0.04,"riboflavin":0.08,"niacin":3.5,"folate":35.61,"calcium":24.35,"iron":0.43,"magnesium":54.1,"phosphorus":151.42,"potassium":337.13,"sodium":182.0,"zinc":0.41,"copper":0.08,"selenium":16.9,"cholesterol":22.94,"saturatedFat":2.5,"monoFat":6.98,"polyFat":1.97,"omega3":0.62,"omega6":0.0},"gramsPerServing":185.2,"servings":4,"per100g":{"Energy_KCal":163.12,"Water":74.46,"Protein":9.83,"TotalLipidFat":12.56,"Carbohydrate":3.19,"FiberTotalDietary":1.66,"SugarsTotal":0.66,"Cholesterol":22.94,"FattyAcids_totalSaturated":2.5,"FattyAcids_totalMonounsaturated":6.98,"FattyAcids_totalPolyunsaturated":1.97,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.28,"DPA_22_5n3":0.08,"DHA_22_6n3":0.24,"VitaminA_RAE":56.29,"Retinol":49.92,"Carotene_beta":68.43,"VitaminD":0.0,"VitaminE_alphaTocopherol":1.25,"VitaminK_phylloquinone":24.51,"VitaminC_totalAscorbicAcid":5.47,"Thiamin":0.04,"Riboflavin":0.08,"Niacin":3.5,"PantothenicAcid":0.61,"VitaminB6":0.21,"Folate_total":35.61,"Folate_food":35.61,"Folate_DFE":35.61,"FolicAcid":0.0,"VitaminB12":0.51,"Choline_total":4.87,"Betaine":0.16,"LuteinZeaxanthin":145.67,"Lycopene":0.0,"Calcium_Ca":24.35,"Iron_Fe":0.43,"Magnesium_Mg":54.1,"Phosphorus_P":151.42,"Potassium_K":337.13,"Sodium_Na":182.0,"Zinc_Zn":0.41,"Copper_Cu":0.08,"Manganese_Mn":0.06,"Selenium_Se":16.9,"Tryptophan":0.11,"Threonine":0.42,"Isoleucine":0.45,"Leucine":0.79,"Lysine":0.88,"Methionine":0.28,"Cystine":0.09,"Phenylalanine":0.39,"Tyrosine":0.32,"Valine":0.5,"Arginine":0.58,"Histidine":0.28,"Alanine":0.59,"AsparticAcid":1.01,"GlutamicAcid":1.51,"Glycine":0.47,"Proline":0.35,"Serine":0.4,"omega3":0.62,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.66},"addedSugars":0.0,"intrinsicSugars":1.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"15078","name":"Fish, salmon, chinook, raw","grams":85.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"4058","name":"Oil, sesame, salad or cooking","grams":2.2},{"ndb":"9160","name":"Lime juice, raw","grams":7.5},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"9038","name":"Avocados, raw, California","grams":34.0},{"ndb":"11206","name":"Cucumber, peeled, raw","grams":44.6},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":15.0},{"ndb":"11216","name":"Ginger root, raw","grams":1.5}],"sections":[{"section_key":"salmon","section_label":"Salmon","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":409.2,"raw_water_grams":270.82,"raw_fat_grams":71.68,"raw_protein_grams":67.89,"raw_carb_grams":2.53,"final_grams":360.45},{"section_key":"assembly","section_label":"Bowl Assembly","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":380.5,"raw_water_grams":329.66,"raw_fat_grams":21.4,"raw_protein_grams":4.93,"raw_carb_grams":21.08,"final_grams":380.5}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Seafood Salmon Quinoa Bowls', quantity: 'custom (g)', foodWord: 'SALMONQUINOABOWLS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'raw salmon (chinook)', quantity: '12 oz', section: 'salmon', ndbNo: '15078', portionDesc: 'g', portionGrams: 340.0 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'salmon', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'Sesame oil', quantity: '2 tsp', section: 'salmon', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'lime juice', quantity: '2 tbsp', section: 'salmon', ndbNo: '9160', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'salmon', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'avocado', quantity: '1 fruit', section: 'assembly', ndbNo: '9038', portionDesc: 'g', portionGrams: 136.0 },
+      { name: 'cucumber peeled', quantity: '1 1/2 cups, sliced', section: 'assembly', ndbNo: '11206', portionDesc: 'g', portionGrams: 178.5 },
+      { name: 'scallions', quantity: '4 medium, thinly sliced', section: 'assembly', ndbNo: '11291', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'fresh ginger', quantity: '1 tbsp, minced', section: 'assembly', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 }
+    ],
+    recipeInstructions: [
+      'In a medium bowl, whisk together tamari, sesame oil, lime juice, and salt.',
+      'Add salmon and toss gently to coat. Let marinate 10 minutes while you prep the bowl ingredients.',
+      'Heat 2 tbsp olive oil in a skillet over medium-high heat.',
+      'Add salmon in a single layer and pan-grill until lightly browned on the outside and just cooked through, about 2-3 minutes per side.',
+      'Divide cooked quinoa evenly among 4 bowls.',
+      'Top each bowl with cooked salmon, edamame, sliced avocado, cucumber, and scallions.',
+      'Sprinkle sesame seeds and minced ginger over each bowl.',
+      'Serve immediately.'
+    ],
+    sections: [
+      { key: 'salmon', label: 'Salmon', cookingMethod: '', yieldFactorWater: 0.82 },
+      { key: 'assembly', label: 'Bowl Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
