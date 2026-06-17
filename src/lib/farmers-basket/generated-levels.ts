@@ -15948,8 +15948,8 @@ export const LEVELS: Level[] = [
       'Rinse the short-grain rice under cold water until the water runs mostly clear. Combine with 1 1/2 cups water and cook until tender, then spread in a shallow bowl.',
       'While the rice is hot, fold in distilled vinegar, sugar, and salt until dissolved. Cool to room temperature before rolling.',
       'In a small bowl, mix the crab meat with mayonnaise until lightly bound.',
-      'Lay a nori sheet on a bamboo mat. Spread a thin, even layer of seasoned rice over the sheet, leaving a 1-inch strip at the top edge. Sprinkle lightly with sesame seeds.',
-      'Arrange crab mixture, avocado slices, and julienned cucumber in a line near the bottom edge. Roll tightly, seal the edge, and repeat for remaining sheets. Slice each roll into even pieces and serve immediately.'
+      'Lay a nori sheet on a bamboo mat, spread an even layer of sushi rice with a 1/2-inch gap near the top, and arrange crab mixture, avocado slices, and julienned cucumber slightly toward the bottom.',
+      'Roll tightly, seal the edge, and repeat for remaining sheets. Slice each roll into even pieces and serve immediately.'
     ],
     sections: [
       { key: 'rice', label: 'Sushi rice', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -15994,8 +15994,8 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Rinse the short-grain rice under cold water until the water runs mostly clear. Combine with 1 1/2 cups water and cook until tender, then spread in a shallow bowl.',
       'While the rice is hot, fold in distilled vinegar, sugar, and salt until dissolved. Cool to room temperature before rolling.',
-      'Lay a nori sheet on a bamboo mat. Spread a thin, even layer of seasoned rice over the sheet, leaving a 1-inch strip at the top edge. Sprinkle lightly with sesame seeds.',
-      'Arrange smoked salmon, softened cream cheese, avocado slices, and julienned cucumber in a line near the bottom edge. Roll tightly, seal the edge, and repeat for remaining sheets.',
+      'Lay a nori sheet on a bamboo mat, spread an even layer of sushi rice with a 1/2-inch gap near the top, and arrange smoked salmon, softened cream cheese, avocado slices, and julienned cucumber slightly toward the bottom.',
+      'Roll tightly, seal the edge, and repeat for remaining sheets.',
       'Slice each roll into even pieces and serve immediately chilled.'
     ],
     sections: [
