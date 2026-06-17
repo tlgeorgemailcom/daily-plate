@@ -15955,5 +15955,52 @@ export const LEVELS: Level[] = [
       { key: 'rice', label: 'Sushi rice', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'ENTR_100',
+    name: 'Seafood Philadelphia Roll',
+    category: 'entrees & main courses',
+    dietaryCategory: 'pesca',
+    levelNum: 335,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 roll (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":359.0,"pro":13.2,"fat":13.1,"carb":46.4,"fib":1.6,"h2o":175.3,"sug":4.1,"perServing":{"cal":359.0,"pro":13.2,"fat":13.1,"carb":46.4,"fib":1.6,"h2o":175.3,"sug":4.1,"AddedSugars":3.0,"IntrinsicSugars":1.1},"micros":{"vitaminA":33.69,"vitaminC":1.2,"vitaminD":115.31,"vitaminE":0.46,"vitaminK":2.76,"vitaminB6":0.1,"vitaminB12":0.57,"thiamin":0.03,"riboflavin":0.06,"niacin":1.2,"folate":10.91,"calcium":20.12,"iron":0.45,"magnesium":12.79,"phosphorus":62.48,"potassium":105.32,"sodium":240.05,"zinc":0.4,"copper":0.11,"selenium":6.46,"cholesterol":12.37,"saturatedFat":2.08,"monoFat":1.96,"polyFat":0.58,"omega3":0.1,"omega6":0.07},"gramsPerServing":252.6,"servings":4,"per100g":{"Energy_KCal":142.12,"Water":69.41,"Protein":5.22,"TotalLipidFat":5.17,"Carbohydrate":18.38,"FiberTotalDietary":0.62,"SugarsTotal":1.63,"Cholesterol":12.37,"FattyAcids_totalSaturated":2.08,"FattyAcids_totalMonounsaturated":1.96,"FattyAcids_totalPolyunsaturated":0.58,"LinoleicAcid":0.07,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.03,"DPA_22_5n3":0.01,"DHA_22_6n3":0.04,"VitaminA_RAE":33.69,"Retinol":29.88,"Carotene_beta":43.18,"VitaminD":115.31,"VitaminE_alphaTocopherol":0.46,"VitaminK_phylloquinone":2.76,"VitaminC_totalAscorbicAcid":1.2,"Thiamin":0.03,"Riboflavin":0.06,"Niacin":1.2,"PantothenicAcid":0.5,"VitaminB6":0.1,"Folate_total":10.91,"Folate_food":10.91,"Folate_DFE":10.91,"FolicAcid":0.0,"VitaminB12":0.57,"Choline_total":18.78,"Betaine":0.12,"LuteinZeaxanthin":22.06,"Lycopene":0.0,"Calcium_Ca":20.12,"Iron_Fe":0.45,"Magnesium_Mg":12.79,"Phosphorus_P":62.48,"Potassium_K":105.32,"Sodium_Na":240.05,"Zinc_Zn":0.4,"Copper_Cu":0.11,"Manganese_Mn":0.24,"Selenium_Se":6.46,"Tryptophan":0.06,"Threonine":0.21,"Isoleucine":0.24,"Leucine":0.43,"Lysine":0.39,"Methionine":0.14,"Cystine":0.06,"Phenylalanine":0.23,"Tyrosine":0.18,"Valine":0.29,"Arginine":0.34,"Histidine":0.14,"Alanine":0.29,"AsparticAcid":0.51,"GlutamicAcid":0.88,"Glycine":0.23,"Proline":0.24,"Serine":0.24,"omega3":0.1,"omega6":0.07,"AddedSugars":1.19,"IntrinsicSugars":0.44},"addedSugars":3.0,"intrinsicSugars":1.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20452","name":"Rice, white, short-grain, raw, unenriched","grams":50.0},{"ndb":"14411","name":"Water, tap, drinking","grams":90.0},{"ndb":"2053","name":"Vinegar, distilled","grams":7.5},{"ndb":"19335","name":"Sugars, granulated","grams":3.0},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"11446","name":"Seaweed, laver, raw","grams":2.5},{"ndb":"15077","name":"Fish, salmon, chinook, smoked","grams":42.5},{"ndb":"1017","name":"Cheese, cream","grams":21.3},{"ndb":"9038","name":"Avocados, raw, California","grams":18.8},{"ndb":"11205","name":"Cucumber, with peel, raw","grams":14.9},{"ndb":"12024","name":"Seeds, sesame seeds, whole, roasted and toasted","grams":1.5}],"sections":[{"section_key":"rice","section_label":"Sushi rice","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.9995716286588757,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":605.0,"raw_water_grams":414.66,"raw_fat_grams":1.04,"raw_protein_grams":13.0,"raw_carb_grams":170.31,"final_grams":604.82},{"section_key":"assembly","section_label":"Assembly","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":405.65,"raw_water_grams":286.84,"raw_fat_grams":51.17,"raw_protein_grams":39.78,"raw_carb_grams":15.39,"final_grams":405.65}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Seafood Philadelphia Roll', quantity: 'custom (g)', foodWord: 'PHILADELPHIAROLL', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'short-grain white rice (dry)', quantity: '1 cup short-grain white rice (dry)', section: 'rice', ndbNo: '20452', portionDesc: 'g', portionGrams: 200.0 },
+      { name: 'water', quantity: '1 1/2 cups water', section: 'rice', ndbNo: '14411', portionDesc: 'g', portionGrams: 360.0 },
+      { name: 'distilled vinegar (rice vinegar proxy)', quantity: '2 tbsp', section: 'rice', ndbNo: '2053', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'sugar', quantity: '1 tbsp', section: 'rice', ndbNo: '19335', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'rice', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'nori', quantity: '4 nori sheets, whole', section: 'assembly', ndbNo: '11446', portionDesc: 'g', portionGrams: 10.0 },
+      { name: 'smoked salmon', quantity: '6 oz smoked salmon, thinly sliced', section: 'assembly', ndbNo: '15077', portionDesc: 'g', portionGrams: 170.1 },
+      { name: 'cream cheese', quantity: '3 oz cream cheese, softened', section: 'assembly', ndbNo: '1017', portionDesc: 'g', portionGrams: 85.05 },
+      { name: 'avocado', quantity: '1/2 avocado, thinly sliced', section: 'assembly', ndbNo: '9038', portionDesc: 'g', portionGrams: 75.0 },
+      { name: 'cucumber', quantity: '1/2 cup cucumber, julienned', section: 'assembly', ndbNo: '11205', portionDesc: 'g', portionGrams: 59.5 },
+      { name: 'sesame seeds', quantity: '2 tsp', section: 'assembly', ndbNo: '12024', portionDesc: 'g', portionGrams: 6.0 }
+    ],
+    recipeInstructions: [
+      'Rinse the short-grain rice under cold water until the water runs mostly clear. Combine with 1 1/2 cups water and cook until tender, then spread in a shallow bowl.',
+      'While the rice is hot, fold in distilled vinegar, sugar, and salt until dissolved. Cool to room temperature before rolling.',
+      'Lay a nori sheet on a bamboo mat. Spread a thin, even layer of seasoned rice over the sheet, leaving a 1-inch strip at the top edge. Sprinkle lightly with sesame seeds.',
+      'Arrange smoked salmon, softened cream cheese, avocado slices, and julienned cucumber in a line near the bottom edge. Roll tightly, seal the edge, and repeat for remaining sheets.',
+      'Slice each roll into even pieces and serve immediately chilled.'
+    ],
+    sections: [
+      { key: 'rice', label: 'Sushi rice', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
