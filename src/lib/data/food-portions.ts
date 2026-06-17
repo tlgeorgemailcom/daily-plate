@@ -53732,6 +53732,77 @@ export const FOODS: Food[] = [
         "gm": 1.2
       }
     ]
+  },
+  {
+    "word": "SALTINEUNSALTED",
+    "display": "Saltine Unsalted Tops",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "18426",
+    "desc": "Crackers, saltines, unsalted tops (includes oyster, soda, soup)",
+    "cal": 434.0,
+    "pro": 9.2,
+    "fat": 11.8,
+    "carb": 71.5,
+    "fib": 3.0,
+    "h2o": 4.1,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 5.0,
+        "desc": "crackers",
+        "gm": 14.9
+      },
+      {
+        "amt": 0.5,
+        "desc": "oz",
+        "gm": 14.2
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, crushed",
+        "gm": 70.0
+      },
+      {
+        "amt": 5.0,
+        "desc": "crackers square (1 serving)",
+        "gm": 15.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cracker square",
+        "gm": 3.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cracker, round large",
+        "gm": 10.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cracker, oyster",
+        "gm": 1.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cracker, rectangle",
+        "gm": 6.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup oyster crackers",
+        "gm": 45.0
+      }
+    ],
+    "synonyms": [
+      "saltine cracker unsalted"
+    ]
   }
 ];
 
