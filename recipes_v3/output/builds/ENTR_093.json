@@ -94,7 +94,7 @@
       "grams": 25.0,
       "section": "tenderloin",
       "ingredient_group": "tenderloin",
-      "qty_display": "1 cup fresh basil",
+      "qty_display": "1 cup fresh basil, chopped",
       "contribution": {
         "Energy_KCal": 5.75,
         "Protein": 0.787,
@@ -115,7 +115,7 @@
       "grams": 20.0,
       "section": "tenderloin",
       "ingredient_group": "tenderloin",
-      "qty_display": "1/2 cup fresh dill",
+      "qty_display": "1/2 cup fresh dill, chopped",
       "contribution": {
         "Energy_KCal": 8.6,
         "Protein": 0.692,
@@ -136,7 +136,7 @@
       "grams": 24.0,
       "section": "tenderloin",
       "ingredient_group": "tenderloin",
-      "qty_display": "1/2 cup fresh chives",
+      "qty_display": "1/2 cup fresh chives, chopped",
       "contribution": {
         "Energy_KCal": 7.2,
         "Protein": 0.785,
@@ -178,7 +178,7 @@
       "grams": 2.4,
       "section": "tenderloin",
       "ingredient_group": "tenderloin",
-      "qty_display": "1 tbsp fresh thyme",
+      "qty_display": "1 tbsp fresh thyme, chopped",
       "contribution": {
         "Energy_KCal": 2.424,
         "Protein": 0.133,
