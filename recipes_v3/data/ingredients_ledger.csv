@@ -309,6 +309,7 @@ bean_sprouts_raw,11043,BEANSPROUT,"Mung beans, mature seeds, sprouted, raw",bean
 hoisin_sauce,6175,HOISINSAUCE,"Sauce, hoisin, ready-to-serve",hoisin sauce,tablespoon,16.0,added during ENTR_023 build
 zucchini_raw,11477,ZUCCHINI,"Squash, summer, zucchini, includes skin, raw",zucchini,medium,196.0,added during ENTR_025 build
 rice_white_raw,20044,RICEWHITERAW,"Rice, white, long-grain, regular, raw, enriched",white rice (dry),cup,185.0,added during ENTR_026 build; bin=0.6844 in comboo.db
+rice_white_short_raw,20452,RICESHORTRAW,"Rice, white, short-grain, raw, unenriched",short-grain white rice (dry),cup,200.0,USDA M1: 1 cup raw short-grain white rice = 200g
 tomato_sauce_canned,43217,TOMATOSAUCE,"Tomato sauce, canned, no salt added",tomato sauce,cup,245.0,canned tomato sauce (no salt added); proxy for regular canned tomato sauce; use paprika NDB 2028 as proxy for smoked paprika
 oyster_sauce,6176,OYSTERSAUCE,"Sauce, oyster, ready-to-serve",oyster sauce,tablespoon,18.0,added during ENTR_045 build
 chicken_thighs_raw,5096,CHICKENTHIGHRAW,"Chicken, broilers or fryers, dark meat, thigh, meat only, raw",chicken thigh,oz,28.35,added during ENTR_046 build

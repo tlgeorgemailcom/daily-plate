@@ -1151,6 +1151,7 @@ RICEFRIED,Chinese Rice Fried,grain,prepared,,,1,36602,"Restaurant, Chinese, frie
 RICESPANISH,Spanish Rice,grain,prepared,,,,36417,"Restaurant, Mexican, spanish rice",185.0,3.3,5.3,31.2,1.2,58.5,1.3,1.0,custom (g),100.0,1.0,cup,116.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 RICESTEAMED,Steamed Rice,grain,,,,,20058,"Rice, white, steamed, Chinese restaurant",151.0,3.2,0.3,33.9,0.9,62.5,0.0,1.0,custom (g),100.0,1.0,"cup, loosely packed",132.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 RICEWHITE,White Rice,grain,,,,,20545,"Rice, white, long-grain, regular, cooked, unenriched, with salt",130.0,2.7,0.3,28.2,0.4,68.4,0.1,1.0,custom (g),100.0,1.0,cup,158.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+RICESHORTRAW,Short-Grain White Rice Dry,grain,,,,,20452,"Rice, white, short-grain, raw, unenriched",358.0,6.5,0.52,79.15,0.0,13.29,0.0,1.0,custom (g),100.0,1.0,cup,200.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 RICEWILD,Wild Rice,grain,,,,,20089,"Wild rice, cooked",101.0,4.0,0.3,21.3,1.8,73.9,0.7,1.0,custom (g),100.0,1.0,cup,164.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 RICOTTA,Ricotta,dairy,,,,,1036,"Cheese, ricotta, whole milk",174.0,11.3,13.0,3.0,0.0,71.7,0.3,1.0,custom (g),100.0,0.5,cup,124.0,1.0,cup,246.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 RICOTTASKIM,Ricotta Part Skim,dairy,,,,,1037,"Cheese, ricotta, part skim milk",138.0,11.4,7.9,5.1,0.0,74.4,0.3,1.0,custom (g),100.0,0.5,cup,124.0,1.0,oz,28.35,1.0,cup,246.0,,,,,,,,,,,,,,,,,,,,,,,,,,,

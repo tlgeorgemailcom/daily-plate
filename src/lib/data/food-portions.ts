@@ -38706,6 +38706,34 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "RICESHORTRAW",
+    "display": "Short-Grain White Rice Dry",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20452",
+    "desc": "Rice, white, short-grain, raw, unenriched",
+    "cal": 358.0,
+    "pro": 6.5,
+    "fat": 0.52,
+    "carb": 79.15,
+    "fib": 0.0,
+    "h2o": 13.29,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 200.0
+      }
+    ]
+  },
+  {
     "word": "RICEWILD",
     "display": "Wild Rice",
     "groups": [
