@@ -55,6 +55,7 @@ asti,wine
 avocado,vegetable|fruit|fats
 babassu,fats
 babka,grain|prepared
+backrib,protein
 bacon,protein
 bagel,grain
 baguette,grain|prepared
@@ -187,6 +188,7 @@ cannonau,wine
 canola,fats
 cantaloupe,fruit
 caper,condiment
+capers,condiment
 cappuccino,beverage
 carambola,fruit
 caramel,prepared|condiment
@@ -789,6 +791,7 @@ neufchatel,dairy
 nigiri,prepared
 nocino,bar
 noodle,grain
+noodles,grain
 nopales,vegetable
 nori,vegetable
 northern,legume
@@ -963,6 +966,7 @@ retsina,wine
 rhubarb,fruit
 rib,protein
 ribeye,protein
+ribs,protein
 rice,grain|prepared
 rickey,bar
 ricotta,dairy
@@ -1119,6 +1123,7 @@ sponge,prepared
 spot,protein
 spritz,bar
 sprout,vegetable
+sprouts,vegetable
 squab,protein
 squash,vegetable|fruit
 squid,protein
