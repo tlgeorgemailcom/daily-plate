@@ -31,7 +31,7 @@
       "grams": 453.6,
       "section": "crab_cakes",
       "ingredient_group": "crab_cakes",
-      "qty_display": "16 oz crab meat, picked over for shells",
+      "qty_display": "16 oz crabmeat, picked over for shells",
       "contribution": {
         "Energy_KCal": 376.488,
         "Protein": 81.104,
@@ -52,7 +52,7 @@
       "grams": 54.0,
       "section": "crab_cakes",
       "ingredient_group": "crab_cakes",
-      "qty_display": "1/2 cup finely crushed cracker crumbs",
+      "qty_display": "1/2 cup saltine crackers (unsalted tops), finely crushed",
       "contribution": {
         "Energy_KCal": 234.36,
         "Protein": 4.968,
@@ -178,7 +178,7 @@
       "grams": 40.0,
       "section": "crab_cakes",
       "ingredient_group": "crab_cakes",
-      "qty_display": "1/4 cup celery, finely diced",
+      "qty_display": "1/4 cup, finely diced",
       "contribution": {
         "Energy_KCal": 6.4,
         "Protein": 0.276,
@@ -199,7 +199,7 @@
       "grams": 7.6,
       "section": "crab_cakes",
       "ingredient_group": "crab_cakes",
-      "qty_display": "2 tbsp parsley, chopped",
+      "qty_display": "2 tbsp, chopped",
       "contribution": {
         "Energy_KCal": 2.736,
         "Protein": 0.226,
@@ -220,7 +220,7 @@
       "grams": 30.0,
       "section": "crab_cakes",
       "ingredient_group": "crab_cakes",
-      "qty_display": "2 scallions, thinly sliced",
+      "qty_display": "2, thinly sliced",
       "contribution": {
         "Energy_KCal": 9.6,
         "Protein": 0.549,
