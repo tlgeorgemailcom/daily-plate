@@ -5432,6 +5432,7 @@ export const LEVELS: Level[] = [
       { name: 'garlic powder', quantity: '½ tsp', section: 'onion_saute', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.55 },
       { name: 'salt', quantity: 'pinch', section: 'onion_saute', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.5 },
       { name: 'beef broth', quantity: '½ cup', section: 'au_jus', ndbNo: '6008', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'tamari', quantity: '½ tbsp', section: 'au_jus', ndbNo: '16124', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'French roll', quantity: '1 roll', section: 'assembly', ndbNo: '18349', portionDesc: 'g', portionGrams: 38.0 },
       { name: 'deli roast beef', quantity: '5 oz, thinly sliced', section: 'assembly', ndbNo: '7043', portionDesc: 'g', portionGrams: 141.75 },
       { name: 'provolone cheese', quantity: '1 slice', section: 'assembly', ndbNo: '1035', portionDesc: 'g', portionGrams: 28.35 }
@@ -5827,6 +5828,7 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Banh Mi Sandwich', quantity: 'custom (g)', foodWord: 'BANHMI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'pork tenderloin', quantity: '4 oz (113g)', section: 'pork', ndbNo: '10060', portionDesc: 'g', portionGrams: 113.0 },
+      { name: 'tamari', quantity: '1 tbsp (15g)', section: 'pork', ndbNo: '16124', portionDesc: 'g', portionGrams: 15.0 },
       { name: 'Sesame oil', quantity: '1 tsp (4.5g)', section: 'pork', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'lime juice', quantity: '1 tbsp (15g)', section: 'pork', ndbNo: '9160', portionDesc: 'g', portionGrams: 15.0 },
       { name: 'garlic powder', quantity: '½ tsp (1g)', section: 'pork', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.0 },
@@ -9997,6 +9999,7 @@ export const LEVELS: Level[] = [
       { name: 'Sesame oil', quantity: '2 tbsp', section: 'salad', ndbNo: '4058', portionDesc: 'g', portionGrams: 27.2 },
       { name: 'olive oil', quantity: '2 tbsp', section: 'salad', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
       { name: 'rice vinegar (distilled vinegar used as proxy — see note)', quantity: '3 tbsp', section: 'salad', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'tamari', quantity: '2 tbsp', section: 'salad', ndbNo: '16124', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'fresh ginger', quantity: '1 tsp', section: 'salad', ndbNo: '11216', portionDesc: 'g', portionGrams: 2.0 },
       { name: 'salt', quantity: '¼ tsp', section: 'salad', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
       { name: 'ground black pepper', quantity: '¼ tsp', section: 'salad', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
@@ -10427,6 +10430,7 @@ export const LEVELS: Level[] = [
       { name: 'onion', quantity: '1 medium', section: 'stir_fry', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
       { name: 'scallions', quantity: '3 medium', section: 'stir_fry', ndbNo: '11291', portionDesc: 'g', portionGrams: 45.0 },
       { name: 'fresh ginger', quantity: '2 tbsp', section: 'stir_fry', ndbNo: '11216', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'tamari', quantity: '2½ tbsp', section: 'stir_fry', ndbNo: '16124', portionDesc: 'g', portionGrams: 45.0 },
       { name: 'Sesame oil', quantity: '2 tsp', section: 'stir_fry', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'olive oil', quantity: '2 tbsp', section: 'stir_fry', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.0 },
       { name: 'beef broth', quantity: '¼ cup', section: 'stir_fry', ndbNo: '6008', portionDesc: 'g', portionGrams: 60.0 },
@@ -12758,6 +12762,7 @@ export const LEVELS: Level[] = [
       { name: 'carrot', quantity: '2 medium', section: 'stir_fry', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
       { name: 'onion', quantity: '1 medium', section: 'stir_fry', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
       { name: 'scallions', quantity: '4 stalks', section: 'stir_fry', ndbNo: '11291', portionDesc: 'g', portionGrams: 48.0 },
+      { name: 'tamari', quantity: '3 tbsp', section: 'stir_fry', ndbNo: '16124', portionDesc: 'g', portionGrams: 54.0 },
       { name: 'Sesame oil', quantity: '1 tsp', section: 'stir_fry', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'olive oil', quantity: '2 tbsp', section: 'stir_fry', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
       { name: 'salt', quantity: '1/2 tsp', section: 'stir_fry', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
@@ -12806,12 +12811,14 @@ export const LEVELS: Level[] = [
       { name: 'ground black pepper', quantity: '1/4 tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
       { name: 'olive oil', quantity: '1/4 cup', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 54.4 },
       { name: 'Chicken Broth', quantity: '1/4 cup Chicken Broth (recipe)', section: 'broth', foodWord: 'CHICKENBROTH', portionDesc: 'g', portionGrams: 60.0, isDish: true, componentRef: 'STOCK_003' },
+      { name: 'tamari', quantity: '3 tbsp', section: 'sauce', ndbNo: '16124', portionDesc: 'g', portionGrams: 54.0 },
       { name: 'rice wine vinegar (distilled vinegar)', quantity: '2 tbsp', section: 'sauce', portionDesc: 'g', portionGrams: 29.8 },
       { name: 'fresh ginger', quantity: '1 tbsp', section: 'sauce', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'Sesame oil', quantity: '1 tsp', section: 'sauce', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'cornstarch', quantity: '1 tbsp', section: 'sauce', ndbNo: '20027', portionDesc: 'g', portionGrams: 8.0 },
       { name: 'red pepper flakes', quantity: '1/2 tsp', section: 'sauce', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.9 },
-      { name: 'scallions', quantity: '3 stalks', section: 'sauce', ndbNo: '11291', portionDesc: 'g', portionGrams: 36.0 }
+      { name: 'scallions', quantity: '3 stalks', section: 'sauce', ndbNo: '11291', portionDesc: 'g', portionGrams: 36.0 },
+      { name: 'sesame seeds', quantity: '1 tsp', section: 'sauce', ndbNo: '12024', portionDesc: 'g', portionGrams: 3.0 }
     ],
     recipeInstructions: [
       'Cut the chicken thighs into bite-sized pieces. In a bowl, combine the tamari, rice wine vinegar, and half the minced garlic. Add the chicken, toss to coat, and marinate for at least 15 minutes.',
@@ -12853,12 +12860,14 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Chicken Moo Goo Gai Pan', quantity: 'custom (g)', foodWord: 'MOOGOOGAIPAN', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'chicken breast (boneless/skinless)', quantity: '1.5 lb', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'tamari', quantity: '1 tbsp', section: 'chicken', ndbNo: '16124', portionDesc: 'g', portionGrams: 18.0 },
       { name: 'cornstarch', quantity: '1 tbsp', section: 'chicken', ndbNo: '20027', portionDesc: 'g', portionGrams: 8.0 },
       { name: 'Sesame oil', quantity: '1 tsp', section: 'chicken', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'olive oil', quantity: '2 tbsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
       { name: 'Chicken Broth', quantity: '1/2 cup Chicken Broth (recipe)', section: 'broth', foodWord: 'CHICKENBROTH', portionDesc: 'g', portionGrams: 120.0, isDish: true, componentRef: 'STOCK_003' },
       { name: 'snow peas', quantity: '1 cup', section: 'stir_fry', portionDesc: 'g', portionGrams: 98.0 },
       { name: 'fresh ginger', quantity: '1 tbsp', section: 'stir_fry', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'tamari', quantity: '2 tbsp', section: 'stir_fry', ndbNo: '16124', portionDesc: 'g', portionGrams: 36.0 },
       { name: 'Sesame oil', quantity: '1 tsp', section: 'stir_fry', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'cornstarch', quantity: '1 tbsp', section: 'stir_fry', ndbNo: '20027', portionDesc: 'g', portionGrams: 8.0 },
       { name: 'scallions', quantity: '3 stalks', section: 'stir_fry', ndbNo: '11291', portionDesc: 'g', portionGrams: 36.0 }
@@ -13203,18 +13212,21 @@ export const LEVELS: Level[] = [
       { name: 'Chicken Peanut Protein Bowls', quantity: 'custom (g)', foodWord: 'CHICKENPEANUTBOWL', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'salt', quantity: '1/2 tsp', section: 'rice', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'chicken breast (boneless/skinless)', quantity: '1.5 lb', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'tamari', quantity: '2 tbsp', section: 'chicken', ndbNo: '16124', portionDesc: 'g', portionGrams: 36.0 },
       { name: 'Sesame oil', quantity: '1 tbsp', section: 'chicken', ndbNo: '4058', portionDesc: 'g', portionGrams: 13.5 },
       { name: 'garlic powder', quantity: '1 tsp', section: 'chicken', ndbNo: '2020', portionDesc: 'g', portionGrams: 3.1 },
       { name: 'fresh ginger', quantity: '1/2 tsp', section: 'chicken', ndbNo: '11216', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'olive oil', quantity: '1 tbsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
       { name: 'smooth peanut butter', quantity: '1/4 cup', section: 'peanut_sauce', ndbNo: '16098', portionDesc: 'g', portionGrams: 66.0 },
+      { name: 'tamari', quantity: '2 tbsp', section: 'peanut_sauce', ndbNo: '16124', portionDesc: 'g', portionGrams: 36.0 },
       { name: 'lime juice', quantity: '2 tbsp', section: 'peanut_sauce', ndbNo: '9160', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'Sesame oil', quantity: '1 tsp', section: 'peanut_sauce', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'fresh ginger', quantity: '1 tsp', section: 'peanut_sauce', ndbNo: '11216', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'green cabbage', quantity: '1 cup shredded', section: 'toppings', ndbNo: '11109', portionDesc: 'g', portionGrams: 89.0 },
       { name: 'carrot', quantity: '1 cup shredded', section: 'toppings', ndbNo: '11124', portionDesc: 'g', portionGrams: 110.0 },
-      { name: 'edamame (cooked)', quantity: '1 cup', section: 'toppings', portionDesc: 'g', portionGrams: 155.0 },
-      { name: 'scallions', quantity: '3 stalks', section: 'toppings', ndbNo: '11291', portionDesc: 'g', portionGrams: 36.0 }
+      { name: 'edamame (cooked)', quantity: '1 cup', section: 'toppings', ndbNo: '11212', portionDesc: 'g', portionGrams: 155.0 },
+      { name: 'scallions', quantity: '3 stalks', section: 'toppings', ndbNo: '11291', portionDesc: 'g', portionGrams: 36.0 },
+      { name: 'sesame seeds', quantity: '1 tbsp', section: 'toppings', ndbNo: '12024', portionDesc: 'g', portionGrams: 9.0 }
     ],
     recipeInstructions: [
       'Cook the brown rice: combine rice, water, and salt in a medium saucepan. Bring to a boil, reduce to a low simmer, cover, and cook for 40 to 45 minutes until the water is absorbed. Remove from heat and let steam covered for 5 minutes, then fluff with a fork.',
@@ -13262,10 +13274,12 @@ export const LEVELS: Level[] = [
       { name: 'ground black pepper', quantity: '1/4 tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
       { name: 'olive oil', quantity: '1/4 cup', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 54.4 },
       { name: 'Chicken Broth', quantity: '1/4 cup Chicken Broth (recipe)', section: 'broth', foodWord: 'CHICKENBROTH', portionDesc: 'g', portionGrams: 60.0, isDish: true, componentRef: 'STOCK_003' },
+      { name: 'tamari', quantity: '3 tbsp', section: 'sauce', ndbNo: '16124', portionDesc: 'g', portionGrams: 54.0 },
       { name: 'rice wine vinegar (distilled vinegar)', quantity: '1 tbsp', section: 'sauce', portionDesc: 'g', portionGrams: 14.9 },
       { name: 'Sesame oil', quantity: '1 tbsp', section: 'sauce', ndbNo: '4058', portionDesc: 'g', portionGrams: 13.5 },
       { name: 'fresh ginger', quantity: '1 tbsp', section: 'sauce', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'cornstarch', quantity: '1 tbsp', section: 'sauce', ndbNo: '20027', portionDesc: 'g', portionGrams: 8.0 },
+      { name: 'sesame seeds', quantity: '1 tbsp', section: 'sauce', ndbNo: '12024', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'scallions', quantity: '3 stalks', section: 'sauce', ndbNo: '11291', portionDesc: 'g', portionGrams: 36.0 },
       { name: 'red pepper flakes', quantity: '1/8 tsp', section: 'sauce', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.225 }
     ],
@@ -13401,6 +13415,7 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Chicken Adobo', quantity: 'custom (g)', foodWord: 'CHICKENADOBO', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'boneless/skinless thighs', quantity: '2 lb', section: 'chicken', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'tamari', quantity: '1/2 cup', section: 'chicken', ndbNo: '16124', portionDesc: 'g', portionGrams: 108.0 },
       { name: 'white cane vinegar or rice vinegar (distilled vinegar)', quantity: '1/2 cup', section: 'chicken', portionDesc: 'g', portionGrams: 118.3 },
       { name: 'ground black pepper', quantity: '1 tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 2.3 },
       { name: 'olive oil', quantity: '1 tbsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.5 }
@@ -14485,6 +14500,7 @@ export const LEVELS: Level[] = [
       { name: 'carrot', quantity: '2 medium carrots, shredded', section: 'rolls', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
       { name: 'scallions', quantity: '4 scallions, thinly sliced', section: 'rolls', ndbNo: '11291', portionDesc: 'g', portionGrams: 60.0 },
       { name: 'fresh ginger', quantity: '1 tsp fresh ginger, minced', section: 'rolls', ndbNo: '11216', portionDesc: 'g', portionGrams: 4.0 },
+      { name: 'tamari', quantity: '2 tbsp tamari', section: 'rolls', ndbNo: '16124', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'Sesame oil', quantity: '2 tsp sesame oil', section: 'rolls', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 }
     ],
     recipeInstructions: [
@@ -14526,6 +14542,7 @@ export const LEVELS: Level[] = [
       { name: 'carrot', quantity: '2 medium carrots, shredded', section: 'filling', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
       { name: 'scallions', quantity: '4 scallions, thinly sliced', section: 'filling', ndbNo: '11291', portionDesc: 'g', portionGrams: 60.0 },
       { name: 'fresh ginger', quantity: '1 tsp fresh ginger, minced', section: 'filling', ndbNo: '11216', portionDesc: 'g', portionGrams: 4.0 },
+      { name: 'tamari', quantity: '2 tbsp tamari', section: 'filling', ndbNo: '16124', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'Sesame oil', quantity: '2 tsp sesame oil', section: 'filling', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 }
     ],
     recipeInstructions: [
@@ -14883,6 +14900,7 @@ export const LEVELS: Level[] = [
       { name: 'carrot', quantity: '1 medium carrot, diced', section: 'filling', ndbNo: '11124', portionDesc: 'g', portionGrams: 61.0 },
       { name: 'scallions', quantity: '4 scallions, sliced', section: 'filling', ndbNo: '11291', portionDesc: 'g', portionGrams: 60.0 },
       { name: 'fresh ginger', quantity: '1 tsp fresh ginger, grated', section: 'filling', ndbNo: '11216', portionDesc: 'g', portionGrams: 4.0 },
+      { name: 'tamari', quantity: '2 tbsp', section: 'filling', ndbNo: '16124', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'Sesame oil', quantity: '2 tsp', section: 'filling', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 }
     ],
     recipeInstructions: [
@@ -15072,7 +15090,8 @@ export const LEVELS: Level[] = [
       { name: 'crab meat', quantity: '6 oz crab meat, picked over for shells', section: 'assembly', ndbNo: '15140', portionDesc: 'g', portionGrams: 170.1 },
       { name: 'mayonnaise', quantity: '2 tbsp', section: 'assembly', ndbNo: '4025', portionDesc: 'g', portionGrams: 27.6 },
       { name: 'avocado', quantity: '1/2 avocado, thinly sliced', section: 'assembly', ndbNo: '9038', portionDesc: 'g', portionGrams: 75.0 },
-      { name: 'cucumber', quantity: '1/2 cup cucumber, julienned', section: 'assembly', ndbNo: '11205', portionDesc: 'g', portionGrams: 59.5 }
+      { name: 'cucumber', quantity: '1/2 cup cucumber, julienned', section: 'assembly', ndbNo: '11205', portionDesc: 'g', portionGrams: 59.5 },
+      { name: 'sesame seeds', quantity: '2 tsp', section: 'assembly', ndbNo: '12024', portionDesc: 'g', portionGrams: 6.0 }
     ],
     recipeInstructions: [
       'Rinse the short-grain rice in a fine-mesh strainer under cold water until water runs clear.',
@@ -15119,7 +15138,8 @@ export const LEVELS: Level[] = [
       { name: 'smoked salmon', quantity: '6 oz smoked salmon, thinly sliced', section: 'assembly', ndbNo: '15077', portionDesc: 'g', portionGrams: 170.1 },
       { name: 'cream cheese', quantity: '3 oz cream cheese, softened', section: 'assembly', ndbNo: '1017', portionDesc: 'g', portionGrams: 85.05 },
       { name: 'avocado', quantity: '1/2 avocado, thinly sliced', section: 'assembly', ndbNo: '9038', portionDesc: 'g', portionGrams: 75.0 },
-      { name: 'cucumber', quantity: '1/2 cup cucumber, julienned', section: 'assembly', ndbNo: '11205', portionDesc: 'g', portionGrams: 59.5 }
+      { name: 'cucumber', quantity: '1/2 cup cucumber, julienned', section: 'assembly', ndbNo: '11205', portionDesc: 'g', portionGrams: 59.5 },
+      { name: 'sesame seeds', quantity: '2 tsp', section: 'assembly', ndbNo: '12024', portionDesc: 'g', portionGrams: 6.0 }
     ],
     recipeInstructions: [
       'Rinse the short-grain rice in a fine-mesh strainer under cold water until water runs clear.',
@@ -15164,6 +15184,7 @@ export const LEVELS: Level[] = [
       { name: 'Seafood Salmon Poke Bowl', quantity: 'custom (g)', foodWord: 'SALMONPOKEBOWL', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'salt', quantity: '1/2 tsp', section: 'rice', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'raw salmon (chinook)', quantity: '8 oz, cubed', section: 'assembly', ndbNo: '15078', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'tamari', quantity: '2 tbsp', section: 'assembly', ndbNo: '16124', portionDesc: 'g', portionGrams: 36.0 },
       { name: 'Sesame oil', quantity: '2 tsp', section: 'assembly', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'fresh ginger', quantity: '1 tsp, minced', section: 'assembly', ndbNo: '11216', portionDesc: 'g', portionGrams: 2.0 },
       { name: 'avocado', quantity: '1/2 avocado, thinly sliced', section: 'assembly', ndbNo: '9038', portionDesc: 'g', portionGrams: 75.0 },
@@ -15209,20 +15230,26 @@ export const LEVELS: Level[] = [
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
-    nutritionJson: {"cal":302.2,"pro":18.2,"fat":23.3,"carb":5.9,"fib":3.1,"h2o":137.9,"sug":1.2,"perServing":{"cal":302.2,"pro":18.2,"fat":23.3,"carb":5.9,"fib":3.1,"h2o":137.9,"sug":1.2,"AddedSugars":0.0,"IntrinsicSugars":1.2},"micros":{"vitaminA":56.29,"vitaminC":5.47,"vitaminD":0.0,"vitaminE":1.25,"vitaminK":24.51,"vitaminB6":0.21,"vitaminB12":0.51,"thiamin":0.04,"riboflavin":0.08,"niacin":3.5,"folate":35.61,"calcium":24.35,"iron":0.43,"magnesium":54.1,"phosphorus":151.42,"potassium":337.13,"sodium":182.0,"zinc":0.41,"copper":0.08,"selenium":16.9,"cholesterol":22.94,"saturatedFat":2.5,"monoFat":6.98,"polyFat":1.97,"omega3":0.62,"omega6":0.0},"gramsPerServing":185.2,"servings":4,"per100g":{"Energy_KCal":163.12,"Water":74.46,"Protein":9.83,"TotalLipidFat":12.56,"Carbohydrate":3.19,"FiberTotalDietary":1.66,"SugarsTotal":0.66,"Cholesterol":22.94,"FattyAcids_totalSaturated":2.5,"FattyAcids_totalMonounsaturated":6.98,"FattyAcids_totalPolyunsaturated":1.97,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.28,"DPA_22_5n3":0.08,"DHA_22_6n3":0.24,"VitaminA_RAE":56.29,"Retinol":49.92,"Carotene_beta":68.43,"VitaminD":0.0,"VitaminE_alphaTocopherol":1.25,"VitaminK_phylloquinone":24.51,"VitaminC_totalAscorbicAcid":5.47,"Thiamin":0.04,"Riboflavin":0.08,"Niacin":3.5,"PantothenicAcid":0.61,"VitaminB6":0.21,"Folate_total":35.61,"Folate_food":35.61,"Folate_DFE":35.61,"FolicAcid":0.0,"VitaminB12":0.51,"Choline_total":4.87,"Betaine":0.16,"LuteinZeaxanthin":145.67,"Lycopene":0.0,"Calcium_Ca":24.35,"Iron_Fe":0.43,"Magnesium_Mg":54.1,"Phosphorus_P":151.42,"Potassium_K":337.13,"Sodium_Na":182.0,"Zinc_Zn":0.41,"Copper_Cu":0.08,"Manganese_Mn":0.06,"Selenium_Se":16.9,"Tryptophan":0.11,"Threonine":0.42,"Isoleucine":0.45,"Leucine":0.79,"Lysine":0.88,"Methionine":0.28,"Cystine":0.09,"Phenylalanine":0.39,"Tyrosine":0.32,"Valine":0.5,"Arginine":0.58,"Histidine":0.28,"Alanine":0.59,"AsparticAcid":1.01,"GlutamicAcid":1.51,"Glycine":0.47,"Proline":0.35,"Serine":0.4,"omega3":0.62,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.66},"addedSugars":0.0,"intrinsicSugars":1.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"15078","name":"Fish, salmon, chinook, raw","grams":85.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"4058","name":"Oil, sesame, salad or cooking","grams":2.2},{"ndb":"9160","name":"Lime juice, raw","grams":7.5},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"9038","name":"Avocados, raw, California","grams":34.0},{"ndb":"11206","name":"Cucumber, peeled, raw","grams":44.6},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":15.0},{"ndb":"11216","name":"Ginger root, raw","grams":1.5}],"sections":[{"section_key":"salmon","section_label":"Salmon","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":409.2,"raw_water_grams":270.82,"raw_fat_grams":71.68,"raw_protein_grams":67.89,"raw_carb_grams":2.53,"final_grams":360.45},{"section_key":"assembly","section_label":"Bowl Assembly","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":380.5,"raw_water_grams":329.66,"raw_fat_grams":21.4,"raw_protein_grams":4.93,"raw_carb_grams":21.08,"final_grams":380.5}],"cookingMethod":"multi"},
+    nutritionJson: {"cal":648.8,"pro":37.3,"fat":33.0,"carb":53.9,"fib":13.0,"h2o":331.8,"sug":4.7,"perServing":{"cal":648.8,"pro":37.3,"fat":33.0,"carb":53.9,"fib":13.0,"h2o":331.8,"sug":4.7,"AddedSugars":0.0,"IntrinsicSugars":4.7},"micros":{"vitaminA":25.18,"vitaminC":3.23,"vitaminD":0.0,"vitaminE":0.87,"vitaminK":14.36,"vitaminB6":0.16,"vitaminB12":0.2,"thiamin":0.1,"riboflavin":0.11,"niacin":1.83,"folate":84.82,"calcium":37.31,"iron":1.35,"magnesium":62.55,"phosphorus":159.31,"potassium":287.08,"sodium":186.45,"zinc":0.91,"copper":0.19,"selenium":8.42,"cholesterol":9.24,"saturatedFat":1.27,"monoFat":3.41,"polyFat":1.79,"omega3":0.31,"omega6":0.3},"gramsPerServing":460.2,"servings":4,"per100g":{"Energy_KCal":140.98,"Water":72.11,"Protein":8.1,"TotalLipidFat":7.18,"Carbohydrate":11.71,"FiberTotalDietary":2.82,"SugarsTotal":1.02,"Cholesterol":9.24,"FattyAcids_totalSaturated":1.27,"FattyAcids_totalMonounsaturated":3.41,"FattyAcids_totalPolyunsaturated":1.79,"LinoleicAcid":0.3,"alphaLinolenicAcid":0.07,"EPA_20_5n3":0.11,"DPA_22_5n3":0.03,"DHA_22_6n3":0.1,"VitaminA_RAE":25.18,"Retinol":20.1,"Carotene_beta":58.22,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.87,"VitaminK_phylloquinone":14.36,"VitaminC_totalAscorbicAcid":3.23,"Thiamin":0.1,"Riboflavin":0.11,"Niacin":1.83,"PantothenicAcid":0.32,"VitaminB6":0.16,"Folate_total":84.82,"Folate_food":84.82,"Folate_DFE":84.82,"FolicAcid":0.0,"VitaminB12":0.2,"Choline_total":21.37,"Betaine":0.82,"LuteinZeaxanthin":352.61,"Lycopene":0.0,"Calcium_Ca":37.31,"Iron_Fe":1.35,"Magnesium_Mg":62.55,"Phosphorus_P":159.31,"Potassium_K":287.08,"Sodium_Na":186.45,"Zinc_Zn":0.91,"Copper_Cu":0.19,"Manganese_Mn":0.48,"Selenium_Se":8.42,"Tryptophan":0.09,"Threonine":0.29,"Isoleucine":0.31,"Leucine":0.57,"Lysine":0.59,"Methionine":0.18,"Cystine":0.08,"Phenylalanine":0.33,"Tyrosine":0.23,"Valine":0.35,"Arginine":0.53,"Histidine":0.21,"Alanine":0.4,"AsparticAcid":0.81,"GlutamicAcid":1.26,"Glycine":0.37,"Proline":0.38,"Serine":0.36,"omega3":0.31,"omega6":0.3,"AddedSugars":0.0,"IntrinsicSugars":1.02},"addedSugars":0.0,"intrinsicSugars":4.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"15078","name":"Fish, salmon, chinook, raw","grams":85.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"16124","name":"Soy sauce made from soy (tamari)","grams":9.0},{"ndb":"4058","name":"Oil, sesame, salad or cooking","grams":2.2},{"ndb":"9160","name":"Lime juice, raw","grams":7.5},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"20137","name":"Quinoa, cooked","grams":185.0},{"ndb":"11212","name":"Edamame, frozen, prepared","grams":77.5},{"ndb":"9038","name":"Avocados, raw, California","grams":34.0},{"ndb":"11206","name":"Cucumber, peeled, raw","grams":44.6},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":15.0},{"ndb":"12024","name":"Seeds, sesame seeds, whole, roasted and toasted","grams":4.5},{"ndb":"11216","name":"Ginger root, raw","grams":1.5}],"sections":[{"section_key":"salmon","section_label":"Salmon","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":445.2,"raw_water_grams":294.58,"raw_fat_grams":71.72,"raw_protein_grams":71.67,"raw_carb_grams":4.53,"final_grams":392.18},{"section_key":"assembly","section_label":"Bowl Assembly","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":1448.5,"raw_water_grams":1085.76,"raw_fat_grams":60.37,"raw_protein_grams":77.46,"raw_carb_grams":210.95,"final_grams":1448.5}],"cookingMethod":"multi"},
     recipeIngredients: [
       { name: 'Seafood Salmon Quinoa Bowls', quantity: 'custom (g)', foodWord: 'SALMONQUINOABOWLS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'raw salmon (chinook)', quantity: '12 oz', section: 'salmon', ndbNo: '15078', portionDesc: 'g', portionGrams: 340.0 },
       { name: 'olive oil', quantity: '2 tbsp', section: 'salmon', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'tamari', quantity: '2 tbsp', section: 'salmon', ndbNo: '16124', portionDesc: 'g', portionGrams: 36.0 },
       { name: 'Sesame oil', quantity: '2 tsp', section: 'salmon', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'lime juice', quantity: '2 tbsp', section: 'salmon', ndbNo: '9160', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'salt', quantity: '1/2 tsp', section: 'salmon', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'quinoa cooked', quantity: '4 cups cooked', section: 'assembly', ndbNo: '20137', portionDesc: 'g', portionGrams: 740.0 },
+      { name: 'edamame cooked', quantity: '2 cups', section: 'assembly', ndbNo: '11212', portionDesc: 'g', portionGrams: 310.0 },
       { name: 'avocado', quantity: '1 fruit', section: 'assembly', ndbNo: '9038', portionDesc: 'g', portionGrams: 136.0 },
       { name: 'cucumber peeled', quantity: '1 1/2 cups, sliced', section: 'assembly', ndbNo: '11206', portionDesc: 'g', portionGrams: 178.5 },
       { name: 'scallions', quantity: '4 medium, thinly sliced', section: 'assembly', ndbNo: '11291', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'sesame seeds', quantity: '2 tbsp', section: 'assembly', ndbNo: '12024', portionDesc: 'g', portionGrams: 18.0 },
       { name: 'fresh ginger', quantity: '1 tbsp, minced', section: 'assembly', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 }
     ],
     recipeInstructions: [
+      'Cook quinoa according to package directions until tender and fluffy; measure 4 cups cooked quinoa for the bowls.',
+      'Spread cooked quinoa on a tray and let it cool slightly while preparing the salmon and toppings.',
       'In a medium bowl, whisk together tamari, sesame oil, lime juice, and salt.',
       'Add salmon and toss gently to coat. Let marinate 10 minutes while you prep the bowl ingredients.',
       'Heat 2 tbsp olive oil in a skillet over medium-high heat.',

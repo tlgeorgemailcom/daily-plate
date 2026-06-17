@@ -169,6 +169,7 @@ provolone_cheese,1035,PROVOLONE,"Cheese, provolone",provolone cheese,oz,28.35,
 puff_pastry_baked,18211,PUFFPASTRY,"Puff pastry, frozen, ready-to-bake, baked",puff pastry sheet,sheet,245.0,Pre-baked nutrition values from USDA; 17.25 oz package typically contains 2 sheets ~245g each
 pumpkin_canned,11424,PUMPKIN,"Pumpkin, canned, without salt",canned pumpkin puree,cup,245.0,
 pumpkin_pie_spice,2035,PUMPKINPIESPICE,"Spices, pumpkin pie spice",pumpkin pie spice,teaspoon,1.7,
+quinoa,20137,QUINOA,"Quinoa, cooked",quinoa cooked,cup,185.0,
 raisins_golden,9297,RAISIN,"Raisins, golden seedless",golden raisins,cup,145.0,Golden raisins; ~145g per cup
 raisins_seedless,9298,RAISINSSEEDLESS,"Raisins, seedless",raisins,cup,165.0,Seedless raisins; 1/2 cup ~ 80g
 ranch_dressing,4639,RANCHDRESSING,"Salad dressing, ranch dressing, regular",ranch dressing,tablespoon,15.0,
@@ -179,7 +180,10 @@ salami_italian_dry,7926,SALAMIITALIAN,"Salami, Italian, pork",salami,slice,10.0,
 salt_table,2047,SALT,"Salt, table",salt,teaspoon,6.0,
 sauerkraut_canned,11439,SAUERKRAUT,"Sauerkraut, canned, solids and liquids",sauerkraut,cup,140.0,
 scallion_raw,11291,SCALLION,"Onions, spring or scallions (includes tops and bulb), raw",scallions,each,15.0,Medium scallion ~15g
+sesame_seeds,12024,SESAME,"Seeds, sesame seeds, whole, roasted and toasted",sesame seeds,tablespoon,9.0,
 sesame_oil,4058,OILSESAME,"Oil, sesame, salad or cooking",Sesame oil,tsp,4.5,
+edamame_frozen,11212,EDAMAME,"Edamame, frozen, prepared",edamame cooked,cup,155.0,
 shrimp_raw,15270,SHRIMP,"Crustaceans, shrimp, raw (not previously frozen)",shrimp,oz,85.05,
 smoked_salmon,15077,SMOKEDSALMON,"Fish, salmon, chinook, smoked",smoked salmon,oz,28.35,NDB is already a smoked/cured value
 salmon_raw_chinook,15078,SALMONRAWCHINOOK,"Fish, salmon, chinook, raw",raw salmon (chinook),oz,85.0,Wild raw chinook salmon; 3 oz = 85g
+tamari,16124,TAMARI,Soy sauce made from soy (tamari),tamari,tbsp,18.0,
