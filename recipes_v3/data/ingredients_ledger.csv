@@ -170,6 +170,7 @@ puff_pastry_baked,18211,PUFFPASTRY,"Puff pastry, frozen, ready-to-bake, baked",p
 pumpkin_canned,11424,PUMPKIN,"Pumpkin, canned, without salt",canned pumpkin puree,cup,245.0,
 pumpkin_pie_spice,2035,PUMPKINPIESPICE,"Spices, pumpkin pie spice",pumpkin pie spice,teaspoon,1.7,
 quinoa,20137,QUINOA,"Quinoa, cooked",quinoa cooked,cup,185.0,
+quinoa_raw,20035,QUINOARAW,"Quinoa, uncooked",quinoa dry,cup,170.0,
 raisins_golden,9297,RAISIN,"Raisins, golden seedless",golden raisins,cup,145.0,Golden raisins; ~145g per cup
 raisins_seedless,9298,RAISINSSEEDLESS,"Raisins, seedless",raisins,cup,165.0,Seedless raisins; 1/2 cup ~ 80g
 ranch_dressing,4639,RANCHDRESSING,"Salad dressing, ranch dressing, regular",ranch dressing,tablespoon,15.0,

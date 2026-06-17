@@ -1126,6 +1126,7 @@ QUESOCHIHUAHUA,Queso Chihuahua,,dairy,,,,,1167,"Cheese, mexican, queso chihuahua
 QUESOCOTIJA,Queso Cotija,,dairy,,,,,1267,"Cheese, mexican, queso cotija",366.0,20.0,30.0,4.0,0.0,38.0,0.0,1.0,custom (g),100.0,2.0,tsp,5.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 QUINCE,Quince,,fruit,,,,,9296,"Quinces, raw",57.0,0.4,0.1,15.3,1.9,83.8,0.0,1.0,custom (g),100.0,1.0,fruit without refuse,92.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 QUINOA,Quinoa,,grain,protein,,A pseudo-grain,,20137,"Quinoa, cooked",120.0,4.4,1.9,21.3,2.8,71.6,0.9,1.0,custom (g),100.0,1.0,cup,185.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+QUINOARAW,Quinoa Raw,,grain,protein,,A pseudo-grain,,20035,"Quinoa, uncooked",368.0,14.1,6.1,64.2,7.0,13.3,0.0,1.0,custom (g),100.0,1.0,cup dry,170.0,1.0,oz,28.35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 RABBIT,Rabbit,,protein,,,,,17178,"Game meat, rabbit, domesticated, composite of cuts, cooked, roasted",197.0,29.1,8.1,0.0,0.0,60.6,0.0,1.0,custom (g),100.0,3.0,oz,85.0,1.0,"piece, cooked (yield from 1 lb raw meat, boneless)",313.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 RACCOON,Raccoon,,protein,,,,,17182,"Game meat, raccoon, cooked, roasted",255.0,29.2,14.5,0.0,0.0,54.3,0.0,1.0,custom (g),100.0,3.0,oz,85.0,1.0,"piece, cooked (yield from 1 lb raw meat, boneless)",399.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 RADICCHIO,Radicchio Raw,,vegetable,,,,,11952,"Radicchio, raw",23.0,1.4,0.2,4.5,0.9,93.1,0.6,1.0,custom (g),100.0,1.0,"cup, shredded",40.0,1.0,leaf,8.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

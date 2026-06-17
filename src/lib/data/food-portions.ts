@@ -37893,6 +37893,40 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "QUINOARAW",
+    "display": "Quinoa Raw",
+    "groups": [
+      "grain",
+      "protein"
+    ],
+    "ndb": "20035",
+    "desc": "Quinoa, uncooked",
+    "cal": 368.0,
+    "pro": 14.1,
+    "fat": 6.1,
+    "carb": 64.2,
+    "fib": 7.0,
+    "h2o": 13.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup dry",
+        "gm": 170.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
     "word": "RABBIT",
     "display": "Rabbit",
     "groups": [
