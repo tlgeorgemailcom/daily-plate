@@ -31,7 +31,7 @@
       "grams": 226.8,
       "section": "meatballs",
       "ingredient_group": "meatballs",
-      "qty_display": "1/2 lb ground pork",
+      "qty_display": "1/2 lb",
       "contribution": {
         "Energy_KCal": 596.484,
         "Protein": 38.284,
@@ -52,7 +52,7 @@
       "grams": 226.8,
       "section": "meatballs",
       "ingredient_group": "meatballs",
-      "qty_display": "1/2 lb ground beef (80% lean)",
+      "qty_display": "1/2 lb",
       "contribution": {
         "Energy_KCal": 576.072,
         "Protein": 38.942,
