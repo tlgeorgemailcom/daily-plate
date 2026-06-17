@@ -69,6 +69,14 @@ Always commit `recipes_bundle.json` after generating.
 
 **⚠️ `recipe_instructions.csv` has exactly 3 columns: `recipe_id,step_order,step_text`.** There is no `section_key` column. Writing a 4-column row (e.g. `[recipe_id, step_order, section_key, step_text]`) silently places the section key in `step_text` and discards the actual instruction text. Always write exactly `[recipe_id, str(step_num), step_text]`.
 
+**⚠️ For single-recipe instruction edits, never rewrite the entire `recipe_instructions.csv` file.** Only replace the target recipe block (e.g. `ENTR_101,*`) and leave all other lines untouched.
+
+**⚠️ Required guardrails before and after any instruction edit:**
+- Before writing: snapshot recipe counts by prefix (`ENTR_`, `SAUCE_`, etc.) so accidental truncation is detectable.
+- After writing: re-run the same count check and confirm no non-target prefix counts changed.
+- If a CSV write raises any exception, abort immediately and restore from git before retrying.
+- Prefer atomic writes (`.tmp` then rename) for scripted edits so a failure cannot leave a partially written CSV.
+
 **For brand-new recipes, also run `insert_new.py` before `generate_bundle.py`** (see § insert_new.py below).
 
 ## Absorption Model (DataCentralCombo.bin)
