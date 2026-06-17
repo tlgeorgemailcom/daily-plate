@@ -1,28 +1,51 @@
 ingredient_key,ndb_no,food_word,default_long_desc,default_display_name,common_unit,common_unit_grams,notes
 alfalfa_sprouts_raw,11001,SPROUTS,"Alfalfa seeds, sprouted, raw",alfalfa sprouts,cup,33.0,
 allspice_ground,2001,ALLSPICE,"Spices, allspice, ground",allspice,teaspoon,2.0,
+almonds_sliced,12061,ALMONDS,"Nuts, almonds",almonds,100.0,1,Auto-added 2026-06-17 from Turso+food-portions backfill
+ancho_chile_dried,11978,ANCHOCHILE,,ancho chile dried,pepper,17.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+anchovy_canned,15002,ANCHOVYCANNED,"Fish, anchovy, european, canned in oil, drained solids",anchovy canned,fillet,4.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 apple_cider_vinegar,2048,VINEGARCIDER,"Vinegar, cider",apple cider vinegar,tablespoon,15.0,
 apple_granny_smith_raw,9502,APPLESMITH,"Apples, raw, granny smith, with skin",Granny Smith apples (peeled and cored),medium_apple,125.0,Tart firm baking apple; assume ~125g per medium apple after peeling and coring (from ~150g whole)
 apple_raw,9003,APPLE,"Apples, raw, with skin",apple,cup_chopped,125.0,
 apricots_dried,9032,APRICOTDRIED,"Apricots, dried, sulfured, uncooked",dried apricots,cup,130.0,"Dried apricots, chopped; ~130g per cup"
+artichoke_hearts_cooked,11008,ARTICHOKE,"Artichokes, (globe or french), cooked, boiled, drained, without salt",artichoke hearts cooked,"artichoke, medium",120.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+arugula_raw,11959,ARUGULA,"Arugula, raw",arugula,leaf,2.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+asparagus_raw,11011,ASPARAGUSRAW,"Asparagus, raw",asparagus raw,cup,134.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 avocado_raw,9038,AVOCADO,"Avocados, raw, California",avocado,avocado,150.0,Whole medium avocado; half provides ~75g flesh
 bacon_cooked_pan_fried,10862,BACON,"Pork, cured, bacon, pre-sliced, cooked, pan-fried",bacon,slice,11.5,NDB is already cooked pan-fried value
 baking_powder,18370,BAKINGPOWDER,"Leavening agents, baking powder, double-acting, straight phosphate",baking powder,teaspoon,4.0,
 baking_soda,18372,BAKINGSODA,"Leavening agents, baking soda",baking soda,teaspoon,4.6,1 tsp ~4.6g; very high sodium use carefully
 balsamic_vinegar,2069,VINEGARBALSAMIC,"Vinegar, balsamic",balsamic vinegar,tbsp,15,
+bamboo_shoots_canned,11028,BAMBOOCANNED,"Bamboo shoots, canned, drained solids",bamboo shoots canned,"cup (1/8"" slices)",131.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 banana_raw,9040,BANANA,"Bananas, raw",bananas (sliced),medium_banana,118.0,Medium banana ~118g without peel
 basil_dried,2003,BASIL,"Spices, basil, dried",dried basil,teaspoon,0.7,
 basil_fresh,2044,BASILFRESH,"Basil, fresh",fresh basil,leaves,2.5,
+bay_leaf_dried,2004,BAYLEAF,"Spices, bay leaf",bay leaf,"tsp, crumbled",0.6,Auto-added 2026-06-17 from Turso+food-portions backfill
 bbq_sauce,6150,BBQSAUCE,"Sauce, barbecue",BBQ sauce,tablespoon,15.0,
+bean_sprouts_raw,11043,BEANSPROUT,"Mung beans, mature seeds, sprouted, raw",bean sprouts,cup,104.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 beans_black_cooked,16015,BLACKBEAN,"Beans, black, mature seeds, cooked, boiled, without salt",black beans,cup,172.0,cooked
 beans_refried_canned,16403,REFRIEDBEAN,"Refried beans, canned, traditional style, reduced sodium",refried beans,cup,238.0,canned
+beef_back_ribs_raw,23181,BEEFBACKRIBS,"Beef, rib, back ribs, bone-in, separable lean only, trimmed to 0"" fat, all grades, raw",beef back ribs,g,100.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+beef_brisket_flat_raw,13805,BEEFBRISKETFLAT,,beef brisket flat,oz,85.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 beef_brisket_raw,13803,BEEFBRISKET,"Beef, brisket, whole, separable lean and fat, trimmed to 1/8"" fat, all grades, raw",beef brisket,oz,28.35,
 beef_broth_canned,6008,SOUPBEEFBROTH,"Soup, beef broth or bouillon canned, ready-to-serve",beef broth,cup,245.0,
+beef_chili_no_beans,22911,CHILI,"Chili, no beans, canned entree","beef chili, no beans",cup,240.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+beef_chuck_roast_raw,13293,BEEFCHUCKROAST,"Beef, chuck, under blade pot roast or steak, boneless, separable lean only, trimmed to 0"" fat, all grades, raw",beef chuck roast,oz,28.35,Auto-added 2026-06-17 from Turso+food-portions backfill
+beef_flank_steak_raw,23656,BEEFFLANKSTEAK,"Beef, flank, steak, separable lean only, trimmed to 0"" fat, all grades, raw",beef flank steak,g,100.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 beef_ground_80lean_raw,23572,BEEFGROUND80RAW,"Beef, ground, 80% lean meat / 20% fat, raw",ground beef (80% lean),oz,28.35,raw
 beef_ribeye_raw,23263,BEEFRIBEYERAW,"Beef, ribeye petite roast/filet, boneless, separable lean only, trimmed to 0"" fat, all grades, raw",beef ribeye,oz,28.35,
+beef_shank_raw,13227,BEEFSHANKRAW,"Beef, shank crosscuts, separable lean only, trimmed to 1/4"" fat, choice, raw",beef shank,lb,453.592,Auto-added 2026-06-17 from Turso+food-portions backfill
+beef_short_ribs_boneless_raw,23068,BEEFSHORTRIBS,"Beef, chuck, short ribs, boneless, separable lean only, trimmed to 0"" fat, all grades, raw",beef short ribs,g,100.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+beef_skirt_steak_raw,23224,BEEFSKIRT,"Beef, plate steak, boneless, outside skirt, separable lean and fat, trimmed to 0"" fat, all grades, raw",beef skirt steak,g,100.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+beef_tenderloin_raw,23372,BEEFTENDERLOIN,"Beef, loin, tenderloin steak, boneless, separable lean only, trimmed to 0"" fat, all grades, raw",beef tenderloin,g,100.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+beef_top_round_raw,23354,BEEFTOPROUND,"Beef, round, top round steak, boneless, separable lean only, trimmed to 0"" fat, all grades, raw",beef top round,oz,28.35,Auto-added 2026-06-17 from Turso+food-portions backfill
+beef_top_sirloin_raw,23611,BEEFTOPSIRLOIN,"Beef, top sirloin, steak, separable lean only, trimmed to 1/8"" fat, all grades, raw",beef top sirloin,oz,28.35,Auto-added 2026-06-17 from Turso+food-portions backfill
+beer_regular,14003,BEER,"Alcoholic beverage, beer, regular, all",beer,fl oz,29.7,Auto-added 2026-06-17 from Turso+food-portions backfill
 bell_pepper_green_raw,11333,BELLPEPPER,"Peppers, sweet, green, raw",green bell pepper,cup,149.0,
+bell_pepper_red_raw,11821,BELLPEPPERRED,"Peppers, sweet, red, raw",red bell pepper,medium,119.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 black_pepper_ground,2030,BLACKPEPPER,"Spices, pepper, black",ground black pepper,teaspoon,2.3,
 blueberries_raw,9050,BLUEBERRIES,"Blueberries, raw",blueberries,cup,148.0,Fresh raw blueberries; 1 cup ~148g
+brandy,14037,TEQUILA,"Alcoholic beverage, distilled, all (gin, rum, vodka, whiskey) 80 proof",brandy (cognac proxy),fl oz,27.8,Auto-added 2026-06-17 from Turso+food-portions backfill
 bread_crumbs_dry,18079,BREADCRUMBSDRY,"Bread crumbs, dry, grated, plain",dry bread crumbs,cup,108.0,Plain dry breadcrumbs; 1/2 cup ~ 54g
 bread_multigrain,28397,BREADMULTIGRAIN,"Bread, multi-grain (includes whole-grain)",multigrain bread,slice,28.0,
 bread_multigrain_toasted,18036,TOASTMULTI,"Bread, multi-grain, toasted (includes whole-grain)",multigrain toast,slice,38.0,Large slice ~38g
@@ -30,29 +53,48 @@ bread_rye,18060,BREADRYE,"Bread, rye",rye bread,slice,32.0,
 bread_white_commercial,18069,BREADWHITE,"Bread, white, commercially prepared (includes soft bread crumbs)",white bread,slice,28.0,
 bread_whole_wheat_commercial,18075,BREADWHOLE,"Bread, whole-wheat, commercially prepared",whole wheat bread,slice,32.0,
 breadcrumbs_plain_dry,18079,BREADCRUMBSDRY,"Bread crumbs, dry, grated, plain",bread crumbs,tbsp,7.5,
+broccoli_raw,11090,BROCCOLI,"Broccoli, raw",broccoli,cup chopped,91.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+brown_sugar,19334,SUGARBROWN,"Sugars, brown",brown sugar,tsp unpacked,3.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 butter_salted,1001,BUTTERSALTED,"Butter, salted",salted butter,tablespoon,14.2,Salted butter; sodium adds ~130-150mg per tablespoon
 butter_unsalted,1145,BUTTERUNSALTED,"Butter, without salt",unsalted butter,tablespoon,14.2,
 cabbage_raw,11109,CABBAGE,"Cabbage, raw",green cabbage,cup shredded,89.0,
+cabbage_red_raw,11112,REDCABBAGE,"Cabbage, red, raw",red cabbage,"cup, shredded",70.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 canadian_bacon_raw,10130,CANADIANBACONRAW,"Canadian bacon, unprepared",Canadian bacon,slice,28.5,Raw/unprepared Canadian bacon; NDB 10130
 candied_fruit_mixed,9426,CANDIEDFRUIT,Candied fruit,mixed candied peel,cup,170.0,Mixed candied peel/citron; ~170g per cup
 canola_oil,4582,OILCANOLA,"Oil, canola",canola oil,tablespoon,13.6,Neutral vegetable oil; common in 70/30 butter+oil pie crusts for tenderness
+capers_canned,2054,CAPER,"Capers, canned",capers,"tbsp, drained",8.6,Auto-added 2026-06-17 from Turso+food-portions backfill
+caraway_seed,2005,CARAWAY,"Spices, caraway seed",caraway seed,tsp,2.1,Auto-added 2026-06-17 from Turso+food-portions backfill
+cardamom_ground,2006,CARDAMOM,"Spices, cardamom",ground cardamom,"tsp, ground",2.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 carrot_raw,11124,CARROT,"Carrots, raw",carrot,medium,61.0,
+cashews_raw,12087,CASHEWSRAW,"Nuts, cashew nuts, raw",cashews,oz,28.35,Auto-added 2026-06-17 from Turso+food-portions backfill
+cayenne_pepper,2031,CAYENNE,"Spices, pepper, red or cayenne",cayenne pepper,tsp,1.8,Auto-added 2026-06-17 from Turso+food-portions backfill
 celery_raw,11143,CELERY,"Celery, raw",celery stalk,stalk,40.0,
+celery_seed,2007,CELERYSEED,"Spices, celery seed",Celery seed,tsp,2.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 cheese_american,1253,AMERICANFAT,"Cheese, pasteurized process, American, without added vitamin D",American cheese,oz,28.35,
+cheese_blue,1004,BLUECHEESE,"Cheese, blue",blue cheese crumbles,oz,28.35,Auto-added 2026-06-17 from Turso+food-portions backfill
+cheese_brie,1006,BRIECHEESE,"Cheese, brie",Brie cheese (Reblochon substitute — not in SR Legacy),oz,28.35,Auto-added 2026-06-17 from Turso+food-portions backfill
 cheese_cheddar,1009,CHEDDAR,"Cheese, cheddar",Cheddar cheese,oz,28.35,
 cheese_cheddar_sharp_sliced,1270,CHEDDARSHARPCHEESE,"Cheese, cheddar, sharp, sliced",sharp cheddar cheese,slice,21,
+cheese_feta,1019,FETA,"Cheese, feta",feta cheese crumbles,"cup, crumbled",150.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 cheese_gruyere,1023,GRUYERE,"Cheese, gruyere",Gruyere cheese,oz,28.35,
 cheese_mexican_blend,1251,MEXICANBLEND,"Cheese, Mexican blend",Mexican blend cheese,cup,113.0,shredded
 cheese_mozzarella_wholemilk,1026,MOZZARELLA,"Cheese, mozzarella, whole milk",whole milk mozzarella,oz,28.35,
 cheese_parmesan_hard,1033,PARMESAN,"Cheese, parmesan, hard",Parmesan cheese,oz,28.35,Hard block; freshly grated
 cheese_provolone,1035,PROVOLONE,"Cheese, provolone",provolone cheese,slice,28.0,
+cheese_ricotta_wholemilk,1036,RICOTTA,"Cheese, ricotta, whole milk",Ricotta cheese,cup,124.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 cheese_swiss,1040,SWISSCHEESE,"Cheese, swiss",Swiss cheese,oz,28.35,
 cherries_maraschino_drained,9328,MARASCHINO,"Maraschino cherries, canned, drained",maraschino cherries,cherry,5.0,1 cherry ~5g
 cherries_sour_red_raw,9063,CHERRYSOUR,"Cherries, sour, red, raw",sour cherries (pitted),cup,155.0,Pitted sour/tart red cherries; 1 cup pitted ~155g
+chicken_back_raw,5048,CHICKENBACKRAW,"Chicken, broilers or fryers, back, meat and skin, raw",chicken back,lb,453.592,Auto-added 2026-06-17 from Turso+food-portions backfill
 chicken_breast_cooked_roasted,5064,CHICKENBREAST,"Chicken, broilers or fryers, breast, meat only, cooked, roasted",cooked chicken breast,oz,28.35,
 chicken_breast_raw,5062,CHICKENBREASTRAW,"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",chicken breast,oz,28.35,
+chicken_neck_raw,5084,CHICKENNECKRAW,"Chicken, broilers or fryers, neck, meat and skin, raw",chicken neck,lb,453.592,Auto-added 2026-06-17 from Turso+food-portions backfill
+chicken_thighs_raw,5096,CHICKENTHIGHRAW,"Chicken, broilers or fryers, dark meat, thigh, meat only, raw",chicken thigh (boneless/skinless),oz,28.35,Auto-added 2026-06-17 from Turso+food-portions backfill
+chicken_wing_raw,5100,CHICKENWINGRAW,"Chicken, broilers or fryers, wing, meat and skin, raw",chicken wing,lb,453.592,Auto-added 2026-06-17 from Turso+food-portions backfill
+chickpeas_canned_drained,16358,CHICKPEACANNED,"Chickpeas (garbanzo beans, bengal gram), mature seeds, canned, drained solids",chickpeas canned drained,cup,164.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 chickpeas_cooked,16057,CHICKPEA,"Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt","chickpeas, cooked",cup,164.0,"Canned or home-cooked chickpeas, drained; ~164g per cup"
 chickpeas_raw_dried,16056,CHICKPEADRIED,"Chickpeas (garbanzo beans, bengal gram), mature seeds, raw","chickpeas, dried (soaked overnight)",cup,200.0,Raw dried; weigh before soaking. Soaking adds water that cooks off during frying.
+chili_powder,2009,CHILIPOWDER,,chili powder,tsp,2.7,Auto-added 2026-06-17 from Turso+food-portions backfill
 chives_raw,11156,CHIVE,"Chives, raw",fresh chives,tablespoon,3.0,1 tablespoon chopped ~3g
 chocolate_chips_semisweet,19080,CANDCHOCSEMI,"Candies, semisweet chocolate",chocolate chips semi-sweet,cup,170,Semisweet chocolate chips; 1 cup ~170g
 chocolate_sandwich_cookies,18166,COOKIESCHOCOLATESANDWICH,"Cookies, chocolate sandwich, with creme filling, regular",chocolate sandwich cookies,cookie,11.0,
@@ -65,67 +107,102 @@ coconut_cream_canned_sweetened,12116,COCONUTCREAMSWEET,"Nuts, coconut cream, can
 coconut_extract,2050,VANILLA,Vanilla extract,coconut extract,teaspoon,4.2,Coconut-flavored extract; nutritionally equivalent to vanilla extract (NDB 2050 proxy)
 coconut_flaked_sweetened,12109,COCONUTFLAKEDSWEET,"Nuts, coconut meat, dried, sweetened, flaked",sweetened flaked coconut,cup,74.0,
 coconut_milk_canned,12118,COCONUTMILKCANNED,"Nuts, coconut milk, canned",canned coconut milk,cup,226.0,
+coconut_oil,4047,OILCOCONUT,"Oil, coconut",coconut oil,tbsp,13.6,Auto-added 2026-06-17 from Turso+food-portions backfill
 coconut_shredded_sweetened,12179,COCONUTSHREDDEDSWEET12179,"Nuts, coconut meat, dried (desiccated), sweetened, shredded",sweetened shredded coconut,cup,74.0,USDA shredded sweetened coconut; preferred for macaroons
 coconut_water,12119,COCONUTWATER,"Nuts, coconut water",coconut water,cup,240.0,Fresh coconut water; ~19 kcal/cup; NDB 12119
 cod_atlantic_raw,15015,CODRAW,"Fish, cod, Atlantic, raw",cod fillet,oz,28.35,
 coriander_seed,2013,CORIANDERSEED,"Spices, coriander seed",ground coriander,teaspoon,1.8,Ground coriander spice
+corn_sweet_cooked,11168,CORN,"Corn, sweet, yellow, cooked, boiled, drained, without salt",sweet corn,"ear small (5-1/2"" to 6-1/2"" long)",89.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 corn_syrup_light,19350,SYRUPCORNLIGHT,"Syrups, corn, light",light corn syrup,cup,328.0,
+corn_tortilla,18363,TORTILLACORN,"Tortillas, ready-to-bake or -fry, corn",corn tortilla,oz,28.35,Auto-added 2026-06-17 from Turso+food-portions backfill
 corned_beef_brisket_cooked,13347,BEEFCORNED,"Beef, cured, corned beef, brisket, cooked",corned beef,oz,28.35,
 cornmeal_enriched_yellow,20022,CORNMEAL,"Cornmeal, degermed, enriched, yellow",yellow cornmeal,tbsp,8.6,
 cornmeal_yellow_whole_grain,20020,CORNMEAL,"Cornmeal, whole-grain, yellow",cornmeal,cup,122.0,
 cornstarch,20027,CORNSTARCH,Cornstarch,cornstarch,tablespoon,8.0,Pure starch thickener; gluten-free alternative to flour for pie filling thickening
 crab_blue_cooked,15140,CRAB,"Crustaceans, crab, blue, cooked, moist heat",crab meat,oz,28.35,
+crackers_saltines_unsalted_tops,18426,SALTINEUNSALTED,"Crackers, saltines, unsalted tops (includes oyster, soda, soup)",saltine crackers (unsalted tops),crackers,14.9,Auto-added 2026-06-17 from Turso+food-portions backfill
 cranberries_dried_sweetened,9079,CRANBERRYDRIED,"Cranberries, dried, sweetened",dried cranberries,cup,120.0,Sweetened dried cranberries; ~120g per cup
 cream_cheese,1017,CREAMCHEESE,"Cheese, cream",cream cheese,package_8oz,227.0,Full-fat cream cheese; 1 oz brick = 28g; 8 oz package = 227g
 cream_of_tartar,18373,CREAMOFTARTAR,"Leavening agents, cream of tartar",cream of tartar,teaspoon,3.0,Cream of tartar; 1 tsp ~3g
 croissant,18239,CROISSANT,"Croissants, butter",croissant,piece,67,
+croutons_plain,18242,CROUTON,"Croutons, plain",plain croutons,oz,14.2,Auto-added 2026-06-17 from Turso+food-portions backfill
 cucumber_peeled_raw,11206,CUCUMBER,"Cucumber, peeled, raw",cucumber peeled,cup_sliced,119.0,
 cucumber_raw,11205,CUCUMBERPEEL,"Cucumber, with peel, raw",cucumber,cup sliced,119.0,
 cumin_ground,2014,CUMIN,"Spices, cumin seed",ground cumin,teaspoon,2.0,Ground cumin spice
 currants_zante_dried,9085,CURRANTSDRIED,"Currants, zante, dried",currants,cup,145.0,Dried Zante currants; ~145g per cup
+curry_powder,2015,CURRY,"Spices, curry powder",curry powder,tsp,2.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 daikon_radish_raw,11430,DAIKONRADISH,"Radishes, oriental, raw",daikon radish,oz,28.35,
 dates_medjool,9421,DATESMEDJOOL,"Dates, medjool",medjool dates,cup,150.0,"Pitted medjool dates, chopped; ~150g per cup"
 dill_fresh,2045,DILL,"Dill weed, fresh",fresh dill,sprigs,1.0,
+dill_seed,2016,DILLSEED,,dill seed,tsp,2.1,Auto-added 2026-06-17 from Turso+food-portions backfill
+edamame_cooked,11212,EDAMAME,"Edamame, frozen, prepared",edamame cooked,cup,155.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+edamame_frozen,11212,EDAMAME,"Edamame, frozen, prepared",edamame cooked,cup,155.0,
 egg_cooked_hardboiled,1129,EGGBOILED,"Egg, whole, cooked, hard-boiled",hard-boiled egg,large_egg,50.0,
 egg_cooked_poached,1131,EGGPOACHED,"Egg, whole, cooked, poached",egg poached,large_egg,50.0,Poached egg; NDB 1131
 egg_fried,1128,EGGFRIED,"Egg, whole, cooked, fried",fried egg,large_egg,50.0,
+egg_noodles_dry,20109,NOODLEEGGDRY,"Noodles, egg, dry, enriched",dry egg noodles,oz,28.35,Auto-added 2026-06-17 from Turso+food-portions backfill
 egg_white_raw,1124,EGGWHITE,"Egg, white, raw, fresh",egg whites,large_white,33.0,Large egg white ~33g
 egg_whole_raw,1123,EGGRAW,"Egg, whole, raw, fresh",large egg,large_egg,50.0,Large egg ~50g without shell
 egg_yolk_raw,1125,YOLK,"Egg, yolk, raw, fresh",egg yolks,large_yolk,17.0,Large egg yolk ~17g
+eggplant_raw,11209,EGGPLANT,"Eggplant, raw",eggplant,g,100.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 figs_dried_uncooked,9094,FIG,"Figs, dried, uncooked",dried figs,cup,150,Dried figs uncooked; 1 cup ~150g
+five_spice_powder,2010,CINNAMON,"Spices, cinnamon, ground",five-spice powder,tsp,2.6,Auto-added 2026-06-17 from Turso+food-portions backfill
 flour_ap_white_enriched_unbleached,20581,FLOURAPENRICHED,"Wheat flour, white, all-purpose, enriched, unbleached",all-purpose enriched unbleached white flour,cup,125.0,
 flour_cake_white_enriched,20084,FLOURCAKE,"Wheat flour, white, cake, enriched",cake flour,cup,125.0,Home-cook accessible enriched flour; lower protein than AP for tender crust
 flour_pastry_white_enriched_bleached,20623,FLOURPASTRY,"Wheat flour, white (industrial), 9% protein, bleached, enriched",pastry flour (9% protein),cup,125.0,Lower-protein enriched flour for pie crust; same enrichment as AP
 flour_whole_wheat,20080,WHEATWHOLE,"Wheat flour, whole-grain",whole wheat flour,cup,120.0,Whole wheat flour; ~120g per cup
 focaccia_bread,18973,FOCACCIA,"Focaccia, Italian flatbread, plain",focaccia,piece,120,
+frankfurter_beef,7022,FRANKFURTERRAW,"Frankfurter, beef, unheated",Beef frankfurter,frankfurter,48.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 french_bread,18029,FRENCHBREAD,"Bread, french or vienna (includes sourdough)",French bread,oz,28.35,
 french_roll,18349,ROLLFRENCH,"Rolls, french",French roll,roll,38.0,
 garlic_powder,2020,GARLICPOWDER,"Spices, garlic powder",garlic powder,teaspoon,3.1,
+garlic_raw,11215,GARLIC,"Garlic, raw",garlic,cup,136.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+ghee,1003,GHEE,"Butter oil, anhydrous",ghee,tbsp,12.8,Auto-added 2026-06-17 from Turso+food-portions backfill
 ginger_ground,2021,GINGERGROUND,"Spices, ginger, ground",ground ginger,teaspoon,1.8,Ground ginger; ~1.8g per tsp
 ginger_root_fresh,11216,GINGER,"Ginger root, raw",fresh ginger,tablespoon,6.0,Grated/pureed fresh gingerroot; 1 Tbsp ~6g
 graham_crackers,18173,GRAHAM,"Cookies, graham crackers, plain or honey",graham crackers,cracker,14.0,
+grapes_raw,9132,GRAPE,"Grapes, red or green (European type, such as Thompson seedless), raw",grapes,cup,151.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+grapeseed_oil,4517,GRAPESEEDOIL,"Oil, grapeseed",grapeseed oil,tablespoon,13.6,Auto-added 2026-06-17 from Turso+food-portions backfill
+great_northern_beans_raw,16024,NORTHERNBEANRAW,"Beans, great northern, mature seeds, raw","great northern beans, dry",cup,200.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+green_beans_cooked,11053,SNAPBEAN,"Beans, snap, green, cooked, boiled, drained, without salt",green beans,cup,125.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 ground_pork_raw,10219,GROUNDPORK,"Pork, fresh, ground, raw",raw ground pork,oz,28.35,
+ground_turkey_raw,5665,TURKEYBURGER,"Ground turkey, 93% lean, 7% fat, raw",ground turkey,oz,28.35,Auto-added 2026-06-17 from Turso+food-portions backfill
 half_and_half,1049,HALFANDHALF,"Cream, fluid, half and half",half-and-half,cup,242.0,Half cream half whole milk ~12% milkfat
 ham_diced_cooked,10136,HAM,"Pork, cured, ham, boneless, regular (approximately 11% fat), roasted",diced ham,oz,28.0,Cooked cured ham; NDB is already a roasted/cooked value
 ham_sliced_regular,7029,PORKHAMSLICED,"Ham, sliced, regular (approximately 11% fat)",sliced ham,oz,28.35,
 hamburger_bun,18350,ROLLHOTDOG,"Rolls, hamburger or hotdog, plain",hamburger bun,bun,43.0,
 heavy_cream,1053,CREAM,"Cream, fluid, heavy whipping",heavy cream,cup,238.0,Heavy whipping cream ~36% milkfat
 hoagie_roll,18353,HOAGIEROLL,"Rolls, hard (includes kaiser)",Hoagie roll,oz,28.35,
+hoisin_sauce,6175,HOISINSAUCE,"Sauce, hoisin, ready-to-serve",hoisin sauce,tbsp,16.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+honey,19296,HONEY,Honey,honey,cup,339.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+horseradish_prepared,2055,HORSERADISH,"Horseradish, prepared",prepared horseradish,tsp,5.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 hot_sauce,6169,HOTSAUCE,"Sauce, ready-to-serve, pepper, TABASCO",hot sauce,tablespoon,15.0,
 hot_sauce_tabasco,6169,HOTSAUCE,"Sauce, ready-to-serve, pepper, TABASCO",Hot sauce (Tabasco),tsp,4.7,
 jalapeno_raw,11979,JALAPENO,"Peppers, jalapeno, raw",jalapeño,pepper,14.0,
 jam_preserves,19297,JAM,Jams and preserves,jelly or jam,tablespoon,20.0,
 ketchup,11935,CATSUP,Catsup,ketchup,tablespoon,17.0,
+lamb_cubed_kabob_raw,17059,LAMBKABOBS,"Lamb, domestic, cubed for stew or kabob (leg and shoulder), separable lean only, trimmed to 1/4"" fat, raw",lamb (cubed for kabobs),g,100.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+lamb_foreshank_raw,17007,LAMBSHANKS,Lamb Shanks (braised lamb foreshank),lamb shanks,g,100.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 lamb_ground_raw,17224,LAMBGROUND,"Lamb, ground, raw",ground lamb,oz,28.35,Raw ground lamb; use raw weight
+lamb_loin_chop_raw,17078,LAMBCHOP,"Lamb, New Zealand, imported, loin chop, separable lean only, raw",lamb loin chop,oz,115.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+lamb_rack_raw,17314,RACKOLAMB,"Rack of Lamb (herb-crusted, roasted, with Dijon-style mustard)",rack of lamb,g,100.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+lamb_whole_leg_raw,17230,LEGOFLAMB,"Leg of Lamb (herb-roasted, bone-in whole leg, medium-rare)",lamb leg,g,100.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+laver_raw,11446,LAVER,"Seaweed, laver, raw",laver raw,sheet,2.5,Auto-added 2026-06-17 from Turso+food-portions backfill
+leek_raw,11246,LEEKRAW,"Leeks, (bulb and lower leaf-portion), raw",leek,cup,89.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 lemon_juice_raw,9152,LEMONJUICE,"Lemon juice, raw",lemon juice,tablespoon,15.0,
 lemon_peel_raw,9156,LEMONPEEL,"Lemon peel, raw",lemon zest,tablespoon,6.0,Fresh lemon zest; 1 Tbsp grated ~6g
 lettuce_iceberg_raw,11252,LETTUCE,"Lettuce, iceberg (includes crisphead types), raw",iceberg lettuce,cup,72.0,
+lettuce_romaine_raw,11251,ROMAINE,"Lettuce, cos or romaine, raw",romaine lettuce,cup shredded,47.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 limburger_cheese,1024,LIMBURGERCHEESE,"Cheese, limburger",limburger cheese,oz,28.35,
 lime_juice_raw,9160,LIMEJUICE,"Lime juice, raw",lime juice,tbsp,15.0,
 liverwurst_pork,7041,LIVERWURSTPORK,"Liver sausage, liverwurst, pork",liverwurst,oz,28.35,
 lobster_northern_cooked,15148,LOBSTER,"Crustaceans, lobster, northern, cooked, moist heat",lobster meat,oz,28.35,
+mace_ground,2022,MACEGROUND,,ground mace,tsp,1.7,Auto-added 2026-06-17 from Turso+food-portions backfill
+maple_syrup,19353,MAPLESYPUP,"Syrups, maple",maple syrup,tbsp,20.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 margarine_stick_salted,4610,MARGARINESTICKSALTED,"Margarine, regular, 80% fat, composite, stick, with salt",margarine stick salted,tablespoon,14.2,Regular 80% fat stick margarine with salt; 1 tbsp ~14.2g
 marinara_sauce,6931,MARINARASAUCE,"Sauce, pasta, spaghetti/marinara, ready-to-serve",Marinara sauce,tbsp,15.0,
+marjoram_dried,2023,MARJORAM,"Spices, marjoram, dried",dried marjoram,tsp,0.6,Auto-added 2026-06-17 from Turso+food-portions backfill
+marshmallow_mini,19116,MARSHMALLOW,"Candies, marshmallows",mini marshmallows,cup of miniature,50.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 mayonnaise,4025,MAYOREGULAR,"Salad dressing, mayonnaise, regular",mayonnaise,tablespoon,13.8,
 milk_buttermilk_whole,1230,BUTTERMILK,"Milk, buttermilk, fluid, whole",whole buttermilk,cup,245.0,
 milk_evaporated,1096,EVAPORATEDMILK,"Milk, canned, evaporated, with added vitamin D",evaporated milk,cup,252.0,
@@ -133,36 +210,59 @@ milk_lowfat_2pct,1079,MILK2PCT,"Milk, reduced fat, fluid, 2% milkfat, with added
 milk_whole,1077,MILK,"Milk, whole, 3.25% milkfat, with added vitamin D",whole milk,cup,244.0,Whole milk 3.25% milkfat
 mint_fresh,2065,SPEARMINT,"Spearmint, fresh",fresh mint,teaspoon,0.7,Spearmint fresh; standard culinary fresh mint
 molasses,19304,MOLASSES,Molasses,molasses,cup,337.0,1 cup ~337g; 1 Tbsp ~20g
+mushroom_crimini_raw,11266,CRIMINI,"Mushrooms, brown, italian, or crimini, raw",crimini mushrooms,oz,28.35,Auto-added 2026-06-17 from Turso+food-portions backfill
+mustard_seed_ground,2024,MUSTARDGROUND,"Spices, mustard seed, ground",ground mustard,tsp,3.3,Auto-added 2026-06-17 from Turso+food-portions backfill
 mustard_yellow,2046,MUSTARD,"Mustard, prepared, yellow",yellow mustard,teaspoon,5.0,
 nutmeg_ground,2025,NUTMEG,"Spices, nutmeg, ground",ground nutmeg,teaspoon,2.2,Ground nutmeg; ~2.2g per tsp
 oats_rolled_old_fashioned_dry,8120,CEREALOATSDRY8120,"Cereals, oats, regular and quick, not fortified, dry",rolled oats (regular/quick oats),cup,100.0,Dry rolled oats (not instant); 1 cup ~ 100g
+okra_raw,11278,OKRARAW,"Okra, raw",okra,cup sliced,100.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 olive_oil,4053,OILOLIVE,"Oil, olive, salad or cooking",olive oil,tablespoon,13.6,
+olives_black_canned,9193,OLIVEBLACK,"Olives, ripe, canned (small-extra large)",black olives canned,tbsp,8.4,Auto-added 2026-06-17 from Turso+food-portions backfill
+olives_green_canned,9195,OLIVEGREEN,"Olives, pickled, canned or bottled, green",green olives,olive,2.7,Auto-added 2026-06-17 from Turso+food-portions backfill
 onion_powder,2026,ONIONPOWDER,"Spices, onion powder",onion powder,teaspoon,2.4,
 onion_raw,11282,ONION,"Onions, raw",onion,cup,160.0,
+onion_rings_fried,21130,ONIONRINGS,"Fast foods, onion rings, breaded and fried",onion rings,piece,10.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+orange_juice_raw,9206,ORANGEJUICERAW,,orange juice,fl oz,31.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 oregano_dried,2027,OREGANO,"Spices, oregano, dried",dried oregano,teaspoon,1.0,
 oregano_dried_ground,2027,OREGANO,"Spices, oregano, dried",dried oregano,teaspoon,1.8,
 oyster_eastern_raw,15167,OYSTER,"Mollusks, oyster, eastern, wild, raw",oysters,oz,85.05,
+oyster_sauce,6176,OYSTERSAUCE,"Sauce, oyster, ready-to-serve",oyster sauce,tbsp,18.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 paprika,2028,PAPRIKA,"Spices, paprika",paprika,teaspoon,2.3,
 paprika_ground,2028,PAPRIKA,"Spices, paprika",paprika,teaspoon,2.3,
 parsley_fresh,11297,PARSLEY,"Parsley, fresh",fresh parsley,cup,60.0,1 cup loose-packed ~60g
+pasilla_chile_dried,11982,PASILLACHILE,"Peppers, pasilla, dried",pasilla chile dried,pepper,7.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+pasta_dry_unenriched,20420,PASTA,"Pasta, dry, unenriched","wide pasta, dry",cup spaghetti,91.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 pastrami_beef,13355,PASTRAMI,"Beef, cured, pastrami",pastrami,oz,28.35,
 peach_yellow_raw,9236,PEACH,"Peaches, yellow, raw",peaches,cup,154.0,Fresh peeled peach slices; ~154g per cup sliced
 peanut_butter_chunky,16097,PEANUTBUTTERCHUNK,"Peanut butter, chunk style, with salt",chunky peanut butter,cup,258.0,"Chunk style, with salt (USDA 16097)"
 peanut_butter_smooth,16098,PEANUTBUTTER,"Peanut butter, smooth style, with salt",smooth peanut butter,cup,264.0,"Smooth style, with salt (USDA 16098)"
+peas_edible_pod_raw,11300,SNOWPEAS,"Peas, edible-podded, raw",snow peas,g,100.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+peas_green_frozen,11313,PEAS,"Peas, green, frozen, cooked, boiled, drained, without salt",frozen peas,cup,80.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 pecans_raw,12142,PECAN,"Nuts, pecans",pecan halves,cup,99.0,
+peppers_hot_pickled,31034,SPORTPEPPERS,"Peppers, hot pickled, canned",Pickled hot peppers,pepper,6.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 pickle_dill,11937,PICKLE,"Pickles, cucumber, dill or kosher dill",dill pickle,spear,35.0,
 pickle_relish_sweet,11945,PICKLERELISH,"Pickle relish, sweet",sweet pickle relish,tbsp,15.0,
 pie_filling_apple_canned,19312,PIEFILLINGAPPLE,"Pie fillings, apple, canned","apple pie filling, canned",can_21oz,595.0,
 pimentos_canned,11943,PIMIENTO,"Pimento, canned",canned pimentos,tablespoon,14.0,
+pine_nuts_dried,12147,PINENUTS,"Nuts, pine nuts, dried",pine nuts,oz,28.35,Auto-added 2026-06-17 from Turso+food-portions backfill
 pineapple_canned_juice_pack_drained,9354,PINEAPPLECANNED,"Pineapple, canned, juice pack, drained",pineapple slices,slice,40.0,7 slices ~280g; 20oz can drained ~340g
 pineapple_juice_canned,9273,PINEAPPLEJUICE,"Pineapple juice, canned, unsweetened",pineapple juice (reserved),tablespoon,15.0,Reserved juice from canned pineapple; 1 tbsp = ~15g
 pita_white,18413,PITA,"Bread, pita, white, enriched","pita bread, white",pita,60.0,1 standard pita ~60g
+pork_back_ribs_raw,10192,PORKBACKRIBS,"Pork, fresh, backribs, separable lean and fat, raw",pork back ribs,lb,453.592,Auto-added 2026-06-17 from Turso+food-portions backfill
 pork_backfat_raw,10004,PORKBACKFAT,"Pork, fresh, backfat, raw",pork backfat (finely chopped),tbsp,14.0,Raw pork fatback used to enrich lean ground pork in homemade sausage recipes
 pork_boston_butt_raw,10080,PORKBOSTONBUTT,"Pork, fresh, shoulder, (Boston butt), blade (steaks), separable lean and fat, raw",pork shoulder,oz,28.35,
+pork_center_rib_roast_raw,10044,PORKCROWNROAST,"Pork, fresh, loin, center rib (chops or roasts), bone-in, separable lean and fat, raw",pork center rib roast,serving,155.8,Auto-added 2026-06-17 from Turso+food-portions backfill
+pork_country_style_ribs_raw,10204,PORKCOUNTRYSTYLERIBS,"Pork, fresh, loin, country-style ribs, separable lean and fat, raw",pork country-style ribs,rib without refuse,128.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 pork_ground_raw,10219,GROUNDPORK,"Pork, fresh, ground, raw",Ground pork (raw),oz,28.35,
+pork_loin_chop_boneless_raw,10062,PORKLOINCHOPBONELESS,"Pork, fresh, loin, top loin (chops), boneless, separable lean and fat, raw",pork loin chop boneless,oz,85.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+pork_loin_chop_raw,10036,PORKCHOP,"Pork, fresh, loin, center loin (chops), bone-in, separable lean and fat, raw",pork loin chop,serving,158.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+pork_spareribs_raw,10088,PORKSPARERIBS,"Pork, fresh, spareribs, separable lean and fat, raw",pork spareribs,oz,85.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 pork_tenderloin_raw,10060,PORKTENDERLOIN,"Pork, fresh, loin, tenderloin, separable lean only, raw",pork tenderloin,oz,28.35,
 potato_boiled_no_skin,11367,POTATOESBOILED,"Potatoes, boiled, cooked without skin, flesh, without salt",boiled potato (flesh),medium_potato,150.0,Pre-boiled potato flesh; grate or shred before pan-frying
 potato_raw,11352,POTATOESRAW,"Potatoes, flesh and skin, raw",raw potato (diced),medium_potato,150.0,
+potato_russet_raw,11353,POTATOESRUSSET,"Potatoes, russet, flesh and skin, raw",russet potato,large potato,369.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+potato_white_raw,11354,POTATOESWHITE,"Potatoes, white, flesh and skin, raw",Yukon Gold potatoes (White potatoes in the database),medium potato,150.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+poultry_seasoning,2034,POULTRYSEASONING,"Spices, poultry seasoning",poultry seasoning,tsp,1.5,Auto-added 2026-06-17 from Turso+food-portions backfill
 powdered_sugar,19336,SUGARPOWDERED,"Sugars, powdered",powdered sugar,tsp,4.0,
 prosciutto,10141,PROSCIUTTO,"Pork, cured, ham, center slice, country-style, separable lean only, raw",Prosciutto,oz,28.35,FNDDS proxy for prosciutto; SR Legacy has no direct entry
 provolone_cheese,1035,PROVOLONE,"Cheese, provolone",provolone cheese,oz,28.35,
@@ -173,18 +273,78 @@ quinoa,20137,QUINOA,"Quinoa, cooked",quinoa cooked,cup,185.0,
 quinoa_raw,20035,QUINOARAW,"Quinoa, uncooked",quinoa dry,cup,170.0,
 raisins_golden,9297,RAISIN,"Raisins, golden seedless",golden raisins,cup,145.0,Golden raisins; ~145g per cup
 raisins_seedless,9298,RAISINSSEEDLESS,"Raisins, seedless",raisins,cup,165.0,Seedless raisins; 1/2 cup ~ 80g
+ramen_noodles_dry,6583,SOUPRAMENNOODLE,"Soup, ramen noodle, any flavor, dry","ramen noodles (crushed, dry — discard flavor packet)",package without flavor packet,81.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 ranch_dressing,4639,RANCHDRESSING,"Salad dressing, ranch dressing, regular",ranch dressing,tablespoon,15.0,
 red_pepper_flakes,2031,CAYENNE,"Spices, pepper, red or cayenne",red pepper flakes,teaspoon,2.3,SR Legacy sub for flaked red pepper
+red_wine_dry,14096,WINERED,"Alcoholic beverage, wine, table, red",red wine,fl oz,29.4,Auto-added 2026-06-17 from Turso+food-portions backfill
+rice_brown_long_raw,20036,BROWNRICE,"Rice, brown, long-grain, raw",brown rice (dry),g,100.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+rice_noodles_dry,20133,NOODLERICE,"Rice noodles, dry",rice noodles dry,oz,57.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+rice_white_raw,20044,RICEWHITERAW,"Rice, white, long-grain, regular, raw, enriched",white rice (dry),cup,185.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+rice_white_short_raw,20452,RICESHORTRAW,"Rice, white, short-grain, raw, unenriched",short-grain white rice (dry),cup,200.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 roast_beef_deli,7043,BEEFROASTBEEF,"Roast beef, deli style, prepackaged, sliced",deli roast beef,oz,28.35,
+rosemary_dried,2036,ROSEMARY_DRIED,"Spices, rosemary, dried",dried rosemary,g,100.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+rosemary_fresh,2063,ROSEMARY,"Rosemary, fresh",fresh rosemary,tsp,0.7,Auto-added 2026-06-17 from Turso+food-portions backfill
+saffron,2037,SAFFRON,"Spices, saffron",saffron,tsp,0.7,Auto-added 2026-06-17 from Turso+food-portions backfill
 sage_ground,2038,SAGE,"Spices, sage, ground",ground sage,teaspoon,0.7,
 salami_italian_dry,7926,SALAMIITALIAN,"Salami, Italian, pork",salami,slice,10.0,
+salmon_raw_chinook,15078,SALMONRAWCHINOOK,"Fish, salmon, chinook, raw",raw salmon (chinook),oz,85.0,Wild raw chinook salmon; 3 oz = 85g
+salt_pork_raw,10165,PORKSALT,"Pork, cured, salt pork, raw",salt pork,oz,28.35,Auto-added 2026-06-17 from Turso+food-portions backfill
 salt_table,2047,SALT,"Salt, table",salt,teaspoon,6.0,
 sauerkraut_canned,11439,SAUERKRAUT,"Sauerkraut, canned, solids and liquids",sauerkraut,cup,140.0,
 scallion_raw,11291,SCALLION,"Onions, spring or scallions (includes tops and bulb), raw",scallions,each,15.0,Medium scallion ~15g
-sesame_seeds,12024,SESAME,"Seeds, sesame seeds, whole, roasted and toasted",sesame seeds,tablespoon,9.0,
+seaweed_laver_raw,11446,LAVER,"Seaweed, laver, raw",nori,sheet,2.5,Auto-added 2026-06-17 from Turso+food-portions backfill
 sesame_oil,4058,OILSESAME,"Oil, sesame, salad or cooking",Sesame oil,tsp,4.5,
-edamame_frozen,11212,EDAMAME,"Edamame, frozen, prepared",edamame cooked,cup,155.0,
+sesame_seeds,12024,SESAME,"Seeds, sesame seeds, whole, roasted and toasted",sesame seeds,tablespoon,9.0,
+sesame_seeds_raw,12024,SESAME,"Seeds, sesame seeds, whole, roasted and toasted",sesame seeds raw,oz,28.35,Auto-added 2026-06-17 from Turso+food-portions backfill
+shallots_raw,11677,SHALLOT,"Shallots, raw",shallots,tbsp chopped,10.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 shrimp_raw,15270,SHRIMP,"Crustaceans, shrimp, raw (not previously frozen)",shrimp,oz,85.05,
+sirloin_tip_raw,23061,BEEFSIRLOINTIP,"Beef, round, knuckle, tip center, steak, separable lean and fat, trimmed to 0"" fat, all grades, raw",sirloin tip steak,oz,85.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 smoked_salmon,15077,SMOKEDSALMON,"Fish, salmon, chinook, smoked",smoked salmon,oz,28.35,NDB is already a smoked/cured value
-salmon_raw_chinook,15078,SALMONRAWCHINOOK,"Fish, salmon, chinook, raw",raw salmon (chinook),oz,85.0,Wild raw chinook salmon; 3 oz = 85g
+soup_cream_of_chicken,6336,CREAMOFCHICKENSOUP,"CAMPBELL'S, Cream of Chicken Soup, condensed",soup cream of chicken,g,100.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+soup_cream_of_mushroom,6043,CREAMOFMUSHROOMSOUP,"Soup, cream of mushroom, canned, condensed",soup cream of mushroom,g,100.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+sour_cream,1056,SOURCREAM,"Cream, sour, cultured",sour cream,cup,230.0,Cultured sour cream; 1 cup = 230g; 1 Tbsp = 12g
+soy_sauce,16123,SOYSAUCE,Soy sauce made from soy and wheat (shoyu),soy sauce,tbsp,16.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+spinach_cooked,11458,SPINACH,"Spinach, cooked, boiled, drained, without salt",cooked spinach,cup,30.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+spinach_raw,11457,SPINACHRAW,"Spinach, raw",spinach,cup,30.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+squash_yellow_raw,11641,SQUASHYELLOW,"Squash, summer, all varieties, raw",yellow squash,cup sliced,180.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+sugar_brown,19334,SUGARBROWN,"Sugars, brown",brown sugar,cup,220.0,"Packed brown sugar; 1/4 cup ~ 55g loose, ~36g unpacked"
+sugar_granulated,19335,SUGAR,"Sugars, granulated",sugar,teaspoon,4.0,
+sugar_powdered,19336,SUGARPOWDERED,"Sugars, powdered",powdered sugar,cup,120.0,Confectioners sugar; 1 cup ~120g sifted
+sunflower_seeds_dry_roasted,12037,SUNFLOWERSEEDS,"Seeds, sunflower seed kernels, dry roasted, without salt",sunflower seeds,100.0,1,Auto-added 2026-06-17 from Turso+food-portions backfill
+sweet_potato_raw,11507,SWEETPOTATORAW,"Sweet potato, raw, unprepared",sweet potato (raw),medium (raw),130.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+tahini,12166,TAHINI,"Seeds, sesame butter, tahini, from roasted and toasted kernels (most common type)",tahini,tbsp,15.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 tamari,16124,TAMARI,Soy sauce made from soy (tamari),tamari,tbsp,18.0,
+tarragon_dried,2041,TARRAGON,"Spices, tarragon, dried",dried tarragon,"tsp, leaves",0.6,Auto-added 2026-06-17 from Turso+food-portions backfill
+tartar_sauce,27049,TARTARSAUCE,"Sauce, tartar, ready-to-serve",tartar sauce,tablespoons,30.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+thousand_island_dressing,4017,DRESSINGTHOUSAND,"Salad dressing, thousand island, commercial, regular",thousand island dressing,tbsp,16.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+thyme_dried,2042,THYMEDRIED,"Spices, thyme, dried",dried thyme,tsp,1.4,Auto-added 2026-06-17 from Turso+food-portions backfill
+thyme_fresh,2049,THYME,"Thyme, fresh",fresh thyme leaves,tsp,0.8,Auto-added 2026-06-17 from Turso+food-portions backfill
+tomato_paste,11546,TOMATOPASTE,"Tomato products, canned, paste, without salt added",tomato paste,tbsp,16.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+tomato_puree,11547,TOMATOPUREE,"Tomato products, canned, puree, without salt added",tomato purée,cup,244.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+tomato_red_raw,11529,TOMATO,"Tomatoes, red, ripe, raw, year round average",tomato,cup cherry tomatoes,149.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+tomato_sauce_canned,43217,TOMATOSAUCE,"Tomato sauce, canned, no salt added",tomato sauce,cup,245.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+tomatoes_canned_crushed,11693,TOMATOCAN,"Tomatoes, crushed, canned",canned crushed tomatoes,cup,240.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+tomatoes_canned_green_chiles,11537,TOMATOESGRNCHILES,"Tomatoes, red, ripe, canned, with green chilies",diced tomatoes with green chiles (Rotel-style),g,100.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+tomatoes_sun_dried_oil,11956,TOMATOSUNDRIED,"Tomatoes, sun-dried, packed in oil, drained",Sun-dried tomatoes in oil (drained),cup,110.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+tortilla_chips_plain,19056,TORTILLACHIPWHITE,"Snacks, tortilla chips, plain, white corn, salted",tortilla chips,oz,28.35,Auto-added 2026-06-17 from Turso+food-portions backfill
+tortilla_flour_refrigerated,18364,TORTILLAFLOUR,"Tortillas, ready-to-bake or -fry, flour, refrigerated",flour tortilla,tortilla,48.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+tuna_canned_light_water,15121,TUNALIGHT,"Fish, tuna, light, canned in water, drained solids",canned light tuna,oz,28.35,Auto-added 2026-06-17 from Turso+food-portions backfill
+turkey_breast_deli,7081,TURKEYSLICED,"Turkey breast, sliced, prepackaged",deli turkey breast,slice,16.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+turmeric_ground,2043,TURMERIC,"Spices, turmeric, ground",ground turmeric,tsp,3.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+vanilla_extract,2050,VANILLA,Vanilla extract,vanilla extract,teaspoon,4.2,Pure vanilla extract; 1 tsp ~4.2g
+vegetable_oil,4513,VEGETABLEOIL,"Vegetable oil, palm kernel",vegetable oil,tablespoon,13.6,Auto-added 2026-06-17 from Turso+food-portions backfill
+vegetable_shortening,4031,SHORTENING,"Shortening, household, soybean (partially hydrogenated)-cottonseed (partially hydrogenated)",vegetable shortening,tablespoon,12.8,Crisco-equivalent solid vegetable shortening; pure fat 0% water for flakier pie crust
+vinegar_distilled,2053,VINEGARDISTILLED,"Vinegar, distilled",rice wine vinegar (distilled vinegar),tbsp,14.9,Auto-added 2026-06-17 from Turso+food-portions backfill
+vinegar_red_wine,2068,VINEGARREDWINE,"Vinegar, red wine",Red wine vinegar,tbsp,14.9,Auto-added 2026-06-17 from Turso+food-portions backfill
+walnuts_raw,12155,WALNUTRAW,"Nuts, walnuts, english",walnuts,oz,28.35,Auto-added 2026-06-17 from Turso+food-portions backfill
+water,14411,WATER,"Water, tap, drinking",water,cup,237.0,Tap water; nutritionally inert (0 kcal)
+water_tap,14411,WATER,"Water, tap, drinking",ice water,tablespoon,15.0,
+waterchestnut_canned,11590,WATERCHESTNUT,"Waterchestnuts, chinese, canned, solids and liquids",waterchestnut canned,cup slices,70.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+white_pepper_ground,2032,WHITEPEPPERCORN,"Spices, pepper, white",white pepper,tsp,2.4,Auto-added 2026-06-17 from Turso+food-portions backfill
+white_wine_dry,14106,WINE,"Alcoholic beverage, wine, table, white",white wine,fl oz,29.4,Auto-added 2026-06-17 from Turso+food-portions backfill
+wonton_wrapper,18368,WONTON,Wonton wrappers (includes egg roll wrappers),wonton/egg roll wrapper,oz,28.35,Auto-added 2026-06-17 from Turso+food-portions backfill
+worcestershire_sauce,6971,WORCESTERSHIRE,"Sauce, worcestershire",Worcestershire sauce,tsp,5.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+yeast_active_dry,18375,YEAST,"Leavening agents, yeast, baker's, active dry",active dry yeast,tsp,4.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+yellow_snap_beans_cooked,11724,YELLOWSNAPBEAN,"Beans, snap, yellow, cooked, boiled, drained, without salt",yellow snap beans cooked,cup,125.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+yogurt_greek_whole_milk,1293,GREEKYOGURT,"Yogurt, Greek, plain, whole milk",Greek whole milk yogurt,cup,245.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+zucchini_raw,11477,ZUCCHINI,"Squash, summer, zucchini, includes skin, raw",zucchini,medium,196.0,Auto-added 2026-06-17 from Turso+food-portions backfill

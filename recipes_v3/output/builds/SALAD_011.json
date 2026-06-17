@@ -1,7 +1,7 @@
 {
   "recipe_id": "SALAD_011",
   "recipe_name": "Chicken Pasta Salad",
-  "sr_rule": "D",
+  "sr_rule": "Rule D",
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
@@ -115,7 +115,7 @@
       "grams": 244.0,
       "section": "pasta",
       "ingredient_group": "pasta",
-      "qty_display": "2 cups dry",
+      "qty_display": "2 cups",
       "contribution": {
         "Energy_KCal": 905.24,
         "Protein": 31.818,

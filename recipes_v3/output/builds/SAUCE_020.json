@@ -1,7 +1,7 @@
 {
   "recipe_id": "SAUCE_020",
   "recipe_name": "Ranch Dressing",
-  "sr_rule": "D",
+  "sr_rule": "Rule D",
   "canonical_ndb_no": null,
   "cooking_method": "raw",
   "cooking_method_normalized": "raw",

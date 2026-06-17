@@ -1,7 +1,7 @@
 {
   "recipe_id": "SALAD_021",
   "recipe_name": "Tuna Macaroni Salad",
-  "sr_rule": "D",
+  "sr_rule": "Rule D",
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
@@ -31,7 +31,7 @@
       "grams": 226.8,
       "section": "pasta",
       "ingredient_group": "pasta",
-      "qty_display": "8 oz dry",
+      "qty_display": "8 oz",
       "contribution": {
         "Energy_KCal": 841.428,
         "Protein": 29.575,
