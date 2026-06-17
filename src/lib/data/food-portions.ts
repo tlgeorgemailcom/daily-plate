@@ -53926,6 +53926,34 @@ export const FOODS: Food[] = [
     "synonyms": [
       "saltine cracker unsalted"
     ]
+  },
+  {
+    "word": "SCALLOPRAW",
+    "display": "Scallop, raw",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "15172",
+    "desc": "Mollusks, scallop, mixed species, raw",
+    "cal": 69.0,
+    "pro": 12.06,
+    "fat": 0.49,
+    "carb": 3.18,
+    "fib": 0.0,
+    "h2o": 82.53,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "oz",
+        "gm": 85.0
+      }
+    ]
   }
 ];
 

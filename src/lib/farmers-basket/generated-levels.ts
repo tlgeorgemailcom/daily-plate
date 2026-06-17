@@ -16128,5 +16128,50 @@ export const LEVELS: Level[] = [
       { key: 'salmon', label: 'Salmon', cookingMethod: '', yieldFactorWater: 0.82 },
       { key: 'assembly', label: 'Bowl Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'ENTR_103',
+    name: 'Seafood Scallops',
+    category: 'entrees & main courses',
+    dietaryCategory: 'pesca',
+    levelNum: 338,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 2)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":326.6,"pro":27.8,"fat":19.5,"carb":9.2,"fib":0.3,"h2o":163.5,"sug":0.2,"perServing":{"cal":326.6,"pro":27.8,"fat":19.5,"carb":9.2,"fib":0.3,"h2o":163.5,"sug":0.2,"AddedSugars":0.0,"IntrinsicSugars":0.2},"micros":{"vitaminA":36.29,"vitaminC":1.28,"vitaminD":0.96,"vitaminE":0.44,"vitaminK":2.24,"vitaminB6":0.07,"vitaminB12":1.22,"thiamin":0.01,"riboflavin":0.01,"niacin":0.58,"folate":12.94,"calcium":13.06,"iron":0.53,"magnesium":23.87,"phosphorus":340.65,"potassium":221.56,"sodium":653.23,"zinc":0.95,"copper":0.03,"selenium":13.14,"cholesterol":37.68,"saturatedFat":3.72,"monoFat":3.72,"polyFat":0.48,"omega3":0.06,"omega6":0.11},"gramsPerServing":225.6,"servings":2,"per100g":{"Energy_KCal":144.78,"Water":72.47,"Protein":12.33,"TotalLipidFat":8.64,"Carbohydrate":4.08,"FiberTotalDietary":0.14,"SugarsTotal":0.1,"Cholesterol":37.68,"FattyAcids_totalSaturated":3.72,"FattyAcids_totalMonounsaturated":3.72,"FattyAcids_totalPolyunsaturated":0.48,"LinoleicAcid":0.11,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.02,"DPA_22_5n3":0.0,"DHA_22_6n3":0.03,"VitaminA_RAE":36.29,"Retinol":34.59,"Carotene_beta":20.48,"VitaminD":0.96,"VitaminE_alphaTocopherol":0.44,"VitaminK_phylloquinone":2.24,"VitaminC_totalAscorbicAcid":1.28,"Thiamin":0.01,"Riboflavin":0.01,"Niacin":0.58,"PantothenicAcid":0.19,"VitaminB6":0.07,"Folate_total":12.94,"Folate_food":12.94,"Folate_DFE":12.94,"FolicAcid":0.0,"VitaminB12":1.22,"Choline_total":60.38,"Betaine":0.01,"LuteinZeaxanthin":0.84,"Lycopene":0.02,"Calcium_Ca":13.06,"Iron_Fe":0.53,"Magnesium_Mg":23.87,"Phosphorus_P":340.65,"Potassium_K":221.56,"Sodium_Na":653.23,"Zinc_Zn":0.95,"Copper_Cu":0.03,"Manganese_Mn":0.06,"Selenium_Se":13.14,"Tryptophan":0.1,"Threonine":0.37,"Isoleucine":0.41,"Leucine":0.74,"Lysine":0.74,"Methionine":0.28,"Cystine":0.1,"Phenylalanine":0.36,"Tyrosine":0.3,"Valine":0.38,"Arginine":0.65,"Histidine":0.18,"Alanine":0.54,"AsparticAcid":0.94,"GlutamicAcid":1.43,"Glycine":1.04,"Proline":0.29,"Serine":0.37,"omega3":0.06,"omega6":0.11,"AddedSugars":0.0,"IntrinsicSugars":0.1},"addedSugars":0.0,"intrinsicSugars":0.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.82,"yieldFactorFat":1.0,"sources":[{"ndb":"15172","name":"Mollusks, scallop, mixed species, raw","grams":227.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"1145","name":"Butter, without salt","grams":14.2},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"9152","name":"Lemon juice, raw","grams":7.5},{"ndb":"2049","name":"Thyme, fresh","grams":1.2},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3}],"sections":[{"section_key":"scallops","section_label":"Scallops","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":522.98,"raw_water_grams":398.78,"raw_fat_grams":38.98,"raw_protein_grams":55.62,"raw_carb_grams":18.43,"final_grams":451.19}],"cookingMethod":"pan grilled"},
+    recipeIngredients: [
+      { name: 'Seafood Scallops', quantity: 'custom (g)', foodWord: 'SCALLOP', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'sea scallops, raw', quantity: '1 lb sea scallops, patted dry', section: 'scallops', ndbNo: '15172', portionDesc: 'g', portionGrams: 454.0 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'scallops', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'unsalted butter', quantity: '2 tbsp', section: 'scallops', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'scallops', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'lemon juice', quantity: '1 tbsp', section: 'scallops', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'fresh thyme leaves', quantity: '4 sprigs fresh thyme', section: 'scallops', ndbNo: '2049', portionDesc: 'g', portionGrams: 2.4 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'scallops', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'scallops', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Pat the scallops completely dry with paper towels and season both sides with salt and black pepper.',
+      'Heat the olive oil in a large skillet over high heat until shimmering.',
+      'Add the scallops in a single layer, leaving space between each. Sear without moving for 2 minutes until a golden-brown crust forms.',
+      'Flip the scallops. Add the butter, garlic, and thyme sprigs to the pan.',
+      'Tilt the pan slightly and spoon the melted butter continuously over the scallops for 1–2 minutes until cooked through and opaque.',
+      'Squeeze the lemon juice over the scallops and remove from heat.',
+      'Serve immediately. Pairs well with risotto, pasta, or crusty bread (not included).'
+    ],
+    sections: [
+      { key: 'scallops', label: 'Scallops', cookingMethod: '', yieldFactorWater: 0.82 }
+    ],
   }
 ];
