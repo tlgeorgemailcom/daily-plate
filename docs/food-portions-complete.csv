@@ -1531,6 +1531,7 @@ DAIKONRADISH,Daikon Radish,vegetable,,,,,11430,"Radishes, oriental, raw",18.0,0.
 BASILFRESH,Basil (Fresh),fresh herbs,,,,,2044,"Basil, fresh",23.0,3.2,0.6,2.7,1.6,92.1,0.3,1.0,custom (g),100.0,2.0,tbsp,5.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 CHEDDARSHARPCHEESE,Cheddar Cheese (Sharp),dairy,,,,,1270,"Cheese, cheddar, sharp, sliced",410.0,24.3,33.8,2.1,0.0,36.2,0.0,1.0,custom (g),100.0,1.0,slice,21.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 SMOKEDSALMON,Smoked Salmon,protein,,,,,15077,"Fish, salmon, chinook, smoked",117.0,18.28,4.32,0.0,0.0,0.0,72.0,1.0,custom (g),100.0,1.0,oz,28.35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SALMONRAWCHINOOK,Salmon Chinook Raw,protein,,,,,15078,"Fish, salmon, chinook, raw",235.0,19.84,16.93,0.0,0.0,63.23,0.0,1.0,custom (g),100.0,3.0,oz,85.0,0.5,fillet,198.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 CRIMINI,Crimini Mushroom Raw,vegetable,,,,,11266,"Mushrooms, brown, italian, or crimini, raw",22.0,2.5,0.1,4.3,0.6,92.12,1.72,1.0,custom (g),100.0,1.0,oz,28.35,1.0,cup sliced,72.0,1.0,cup whole,96.0,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ONIONRINGS,Onion Rings Fried,fast food,,,,,21130,"Fast foods, onion rings, breaded and fried",411.0,3.86,25.23,43.58,2.7,24.52,5.43,1.0,custom (g),100.0,1.0,piece,10.0,1.0,serving (8-9 rings),85.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 TURKEYBURGER,Turkey Burger,protein,poultry,,,1,5665,"Ground turkey, 93% lean, 7% fat, raw",150.0,18.73,8.34,0.0,0.0,72.63,0.0,100,custom,100,1,oz,28.35,1,patty (4 oz),113.4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

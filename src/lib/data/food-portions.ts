@@ -51457,6 +51457,39 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "SALMONRAWCHINOOK",
+    "display": "Salmon Chinook Raw",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "15078",
+    "desc": "Fish, salmon, chinook, raw",
+    "cal": 235.0,
+    "pro": 19.84,
+    "fat": 16.93,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 63.23,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "oz",
+        "gm": 85.0
+      },
+      {
+        "amt": 0.5,
+        "desc": "fillet",
+        "gm": 198.0
+      }
+    ]
+  },
+  {
     "word": "CRIMINI",
     "display": "Crimini Mushroom Raw",
     "groups": [
