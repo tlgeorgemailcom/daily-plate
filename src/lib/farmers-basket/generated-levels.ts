@@ -15863,5 +15863,50 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'crab_cakes', label: 'Crab Cakes', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'ENTR_098',
+    name: 'Seafood Crab Stuffed Avocados',
+    category: 'entrees & main courses',
+    dietaryCategory: 'pesca',
+    levelNum: 333,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 4 avocado halves)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":296.9,"pro":17.2,"fat":22.6,"carb":8.2,"fib":5.6,"h2o":151.4,"sug":0.8,"perServing":{"cal":296.9,"pro":17.2,"fat":22.6,"carb":8.2,"fib":5.6,"h2o":151.4,"sug":0.8,"AddedSugars":0.0,"IntrinsicSugars":0.8},"micros":{"vitaminA":14.1,"vitaminC":8.84,"vitaminD":0.48,"vitaminE":1.78,"vitaminK":51.96,"vitaminB6":0.18,"vitaminB12":1.4,"thiamin":0.04,"riboflavin":0.1,"niacin":1.91,"folate":61.72,"calcium":50.81,"iron":0.62,"magnesium":28.24,"phosphorus":123.17,"potassium":334.06,"sodium":359.8,"zinc":1.9,"copper":0.41,"selenium":18.3,"cholesterol":43.43,"saturatedFat":1.67,"monoFat":4.81,"polyFat":3.82,"omega3":0.48,"omega6":2.65},"gramsPerServing":203.3,"servings":4,"per100g":{"Energy_KCal":146.02,"Water":74.47,"Protein":8.44,"TotalLipidFat":11.11,"Carbohydrate":4.04,"FiberTotalDietary":2.77,"SugarsTotal":0.41,"Cholesterol":43.43,"FattyAcids_totalSaturated":1.67,"FattyAcids_totalMonounsaturated":4.81,"FattyAcids_totalPolyunsaturated":3.82,"LinoleicAcid":2.65,"alphaLinolenicAcid":0.41,"EPA_20_5n3":0.04,"DPA_22_5n3":0.0,"DHA_22_6n3":0.03,"VitaminA_RAE":14.1,"Retinol":1.44,"Carotene_beta":143.66,"VitaminD":0.48,"VitaminE_alphaTocopherol":1.78,"VitaminK_phylloquinone":51.96,"VitaminC_totalAscorbicAcid":8.84,"Thiamin":0.04,"Riboflavin":0.1,"Niacin":1.91,"PantothenicAcid":0.99,"VitaminB6":0.18,"Folate_total":61.72,"Folate_food":61.72,"Folate_DFE":61.72,"FolicAcid":0.0,"VitaminB12":1.4,"Choline_total":42.33,"Betaine":0.27,"LuteinZeaxanthin":237.65,"Lycopene":0.01,"Calcium_Ca":50.81,"Iron_Fe":0.62,"Magnesium_Mg":28.24,"Phosphorus_P":123.17,"Potassium_K":334.06,"Sodium_Na":359.8,"Zinc_Zn":1.9,"Copper_Cu":0.41,"Manganese_Mn":0.11,"Selenium_Se":18.3,"Tryptophan":0.1,"Threonine":0.34,"Isoleucine":0.36,"Leucine":0.61,"Lysine":0.63,"Methionine":0.2,"Cystine":0.08,"Phenylalanine":0.33,"Tyrosine":0.29,"Valine":0.38,"Arginine":0.77,"Histidine":0.18,"Alanine":0.42,"AsparticAcid":0.81,"GlutamicAcid":1.24,"Glycine":0.49,"Proline":0.33,"Serine":0.33,"omega3":0.48,"omega6":2.65,"AddedSugars":0.0,"IntrinsicSugars":0.41},"addedSugars":0.0,"intrinsicSugars":0.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"15140","name":"Crustaceans, crab, blue, cooked, moist heat","grams":85.0},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":13.8},{"ndb":"9152","name":"Lemon juice, raw","grams":7.5},{"ndb":"11143","name":"Celery, raw","grams":10.0},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":7.5},{"ndb":"11297","name":"Parsley, fresh","grams":2.8},{"ndb":"11165","name":"Coriander (cilantro) leaves, raw","grams":0.8},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"9038","name":"Avocados, raw, California","grams":75.0}],"sections":[{"section_key":"stuffed_avocados","section_label":"Stuffed avocados","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":813.23,"raw_water_grams":605.57,"raw_fat_grams":90.38,"raw_protein_grams":68.63,"raw_carb_grams":32.88,"final_grams":813.23}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Seafood Crab Stuffed Avocados', quantity: 'custom (g)', foodWord: 'CRABSTUFFEDAVOCADOS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'crab meat', quantity: '12 oz crab meat, picked over for shells', section: 'stuffed_avocados', ndbNo: '15140', portionDesc: 'g', portionGrams: 340.2 },
+      { name: 'mayonnaise', quantity: '1/4 cup', section: 'stuffed_avocados', ndbNo: '4025', portionDesc: 'g', portionGrams: 55.2 },
+      { name: 'lemon juice', quantity: '2 tbsp', section: 'stuffed_avocados', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'celery stalk', quantity: '1 celery stalk, finely diced', section: 'stuffed_avocados', ndbNo: '11143', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'scallions', quantity: '2 scallions, finely chopped', section: 'stuffed_avocados', ndbNo: '11291', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'fresh parsley', quantity: '3 tbsp fresh parsley, chopped', section: 'stuffed_avocados', ndbNo: '11297', portionDesc: 'g', portionGrams: 11.25 },
+      { name: 'fresh cilantro', quantity: '3 tbsp fresh cilantro, chopped', section: 'stuffed_avocados', ndbNo: '11165', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'stuffed_avocados', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'stuffed_avocados', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'avocado', quantity: '2 avocados, halved and pitted', section: 'stuffed_avocados', ndbNo: '9038', portionDesc: 'g', portionGrams: 300.0 }
+    ],
+    recipeInstructions: [
+      'In a medium bowl, combine the crab meat, mayonnaise, lemon juice, celery, scallions, parsley, cilantro, salt, and black pepper. Fold gently until evenly mixed while keeping the crab texture intact.',
+      'Taste and adjust seasoning if needed. Cover and chill the crab filling for 10 to 15 minutes to firm slightly.',
+      'Halve and pit the avocados. If needed, scoop a small amount from the center of each half to make room for filling.',
+      'Spoon the chilled crab mixture into the avocado halves, mounding slightly.',
+      'Serve immediately chilled, optionally with extra lemon wedges (not included).'
+    ],
+    sections: [
+      { key: 'stuffed_avocados', label: 'Stuffed avocados', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
