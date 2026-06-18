@@ -349,3 +349,4 @@ ENTR_112,VEGBOWL,Vegetarian Bowl,entrees & main courses,vegan,builtin,,,1 servin
 ENTR_113,EGGROLL,Vegetarian Egg Rolls,entrees & main courses,veggie,builtin,22955,,3 egg rolls (makes 12),4,Rule A,fried,0.62,1.0,1.0,1.0,1.0,approved,,,,PASS,,
 ENTR_114,VEGEGROLLBOWL,Vegetarian Egg Roll Bowls,entrees & main courses,vegan,builtin,,,1 serving (makes 4),4,Rule D,pan grilled,0.85,1.0,1.0,1.0,1.0,approved,,,,PASS,,
 ENTR_115,TOFUNUGGETS,Vegetarian Tofu Nuggets,entrees & main courses,vegan,builtin,,,1 serving (makes 4),4,Rule D,pan grilled,0.85,1.0,1.0,1.0,1.0,approved,,,,PASS,,
+ENTR_116,TOFUSTIRFRY,Vegetarian Tofu Stir-Fry,entrees & main courses,vegan,,,,,4,Rule D,pan grilled,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,,

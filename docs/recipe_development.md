@@ -106,6 +106,15 @@ Every `section` key used in `recipe_ingredients.csv` must have a matching row he
 
 Single-section recipes may mirror the recipe-level yield factors.
 
+**Validator rule 14 — two distinct component-ref section patterns:**
+
+| Pattern | Description | `cook_method` constraint |
+|---|---|---|
+| **Pure-composite** | Every ingredient row in the section is a `@`-ref (e.g. `@SAUCE_001` alone under "Béchamel") | Must be `raw`; all yield factors must be 1.0 |
+| **Mixed / cooking-liquid** | A `@`-ref coexists with regular ingredients (e.g. `@STOCK_006` + rice + spices in a boiled rice section) | No constraint — section's own `cook_method` and yield factors apply |
+
+The mixed pattern is the correct authoring approach whenever a stock or broth component-ref is used as a **cooking liquid** for an absorbing grain or stew (paella, risotto, pilaf, soups). The `@`-ref's nutrients are absorbed by the grain during boiling; restricting the section to `raw` would be nutritionally incorrect.
+
 ---
 
 ## Step 4 — Add Ingredients

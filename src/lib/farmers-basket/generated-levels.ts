@@ -16778,5 +16778,62 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'nuggets', label: 'Tofu Nuggets', cookingMethod: '', yieldFactorWater: 0.85 }
     ],
+  },
+  {
+    id: 'ENTR_116',
+    name: 'Vegetarian Tofu Stir-Fry',
+    category: 'entrees & main courses',
+    dietaryCategory: 'vegan',
+    levelNum: 351,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '',
+    prepTime: '',
+    linkType: 'ingredient',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":459.8,"pro":23.7,"fat":16.7,"carb":58.4,"fib":6.6,"h2o":357.2,"sug":6.9,"perServing":{"cal":459.8,"pro":23.7,"fat":16.7,"carb":58.4,"fib":6.6,"h2o":357.2,"sug":6.9,"AddedSugars":0.0,"IntrinsicSugars":6.9},"micros":{"vitaminA":58.72,"vitaminC":13.07,"vitaminD":0.17,"vitaminE":0.28,"vitaminK":17.3,"vitaminB6":0.09,"vitaminB12":0.01,"thiamin":0.08,"riboflavin":0.08,"niacin":0.79,"folate":33.86,"calcium":88.83,"iron":1.32,"magnesium":23.49,"phosphorus":81.8,"potassium":193.85,"sodium":241.63,"zinc":0.58,"copper":0.15,"selenium":7.05,"cholesterol":0.0,"saturatedFat":1.57,"monoFat":0.78,"polyFat":0.64,"omega3":0.0,"omega6":0.0},"gramsPerServing":462.6,"servings":4,"per100g":{"Energy_KCal":99.39,"Water":77.21,"Protein":5.12,"TotalLipidFat":3.6,"Carbohydrate":12.62,"FiberTotalDietary":1.42,"SugarsTotal":1.49,"Cholesterol":0.0,"FattyAcids_totalSaturated":1.57,"FattyAcids_totalMonounsaturated":0.78,"FattyAcids_totalPolyunsaturated":0.64,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":58.72,"Retinol":0.0,"Carotene_beta":597.53,"VitaminD":0.17,"VitaminE_alphaTocopherol":0.28,"VitaminK_phylloquinone":17.3,"VitaminC_totalAscorbicAcid":13.07,"Thiamin":0.08,"Riboflavin":0.08,"Niacin":0.79,"PantothenicAcid":0.33,"VitaminB6":0.09,"Folate_total":33.86,"Folate_food":19.37,"Folate_DFE":43.99,"FolicAcid":22.29,"VitaminB12":0.01,"Choline_total":16.19,"Betaine":0.87,"LuteinZeaxanthin":180.55,"Lycopene":0.06,"Calcium_Ca":88.83,"Iron_Fe":1.32,"Magnesium_Mg":23.49,"Phosphorus_P":81.8,"Potassium_K":193.85,"Sodium_Na":241.63,"Zinc_Zn":0.58,"Copper_Cu":0.15,"Manganese_Mn":0.42,"Selenium_Se":7.05,"Tryptophan":0.07,"Threonine":0.22,"Isoleucine":0.23,"Leucine":0.38,"Lysine":0.27,"Methionine":0.07,"Cystine":0.03,"Phenylalanine":0.24,"Tyrosine":0.18,"Valine":0.27,"Arginine":0.38,"Histidine":0.12,"Alanine":0.24,"AsparticAcid":0.57,"GlutamicAcid":0.99,"Glycine":0.21,"Proline":0.29,"Serine":0.28,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":1.49},"addedSugars":0.0,"intrinsicSugars":6.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20044","name":"Rice, white, long-grain, regular, raw, enriched","grams":46.2},{"ndb":"14411","name":"Water, tap, drinking","grams":88.9},{"ndb":"16126","name":"Tofu, firm, prepared with calcium sulfate and magnesium chloride (nigari)","grams":162.0},{"ndb":"11090","name":"Broccoli, raw","grams":68.2},{"ndb":"11300","name":"Peas, edible-podded, raw","grams":31.5},{"ndb":"11821","name":"Peppers, sweet, red, raw","grams":29.8},{"ndb":"11124","name":"Carrots, raw","grams":30.5},{"ndb":"11266","name":"Mushrooms, brown, italian, or crimini, raw","grams":28.2},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11216","name":"Ginger root, raw","grams":1.5},{"ndb":"16124","name":"Soy sauce made from soy (tamari)","grams":13.5},{"ndb":"4058","name":"Oil, sesame, salad or cooking","grams":2.2},{"ndb":"4513","name":"Vegetable oil, palm kernel","grams":6.8},{"ndb":"20027","name":"Cornstarch","grams":2.0},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"rice","section_label":"Rice","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.9434389679863646,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":540.5,"raw_water_grams":376.64,"raw_fat_grams":1.22,"raw_protein_grams":13.19,"raw_carb_grams":147.91,"final_grams":519.2},{"section_key":"stir_fry","section_label":"Stir-Fry","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":14,"raw_grams":1520.78,"raw_water_grams":1262.86,"raw_fat_grams":65.43,"raw_protein_grams":81.57,"raw_carb_grams":85.54,"final_grams":1331.35}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Vegetarian Tofu Stir-Fry', quantity: 'custom (g)', foodWord: 'TOFUSTIRFRY', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white rice (dry)', quantity: '1 cup', section: 'rice', ndbNo: '20044', portionDesc: 'g', portionGrams: 185.0 },
+      { name: 'water', quantity: '1½ cups', section: 'rice', ndbNo: '14411', portionDesc: 'g', portionGrams: 355.5 },
+      { name: 'firm tofu', quantity: '2 blocks firm tofu, pressed and cubed', section: 'stir_fry', ndbNo: '16126', portionDesc: 'g', portionGrams: 648.0 },
+      { name: 'broccoli', quantity: '3 cups broccoli, cut into florets', section: 'stir_fry', ndbNo: '11090', portionDesc: 'g', portionGrams: 273.0 },
+      { name: 'snap peas', quantity: '2 cups snap peas, trimmed', section: 'stir_fry', ndbNo: '11300', portionDesc: 'g', portionGrams: 126.0 },
+      { name: 'red bell pepper', quantity: '1 medium red bell pepper, thinly sliced', section: 'stir_fry', ndbNo: '11821', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'carrot', quantity: '2 medium carrots, thinly sliced', section: 'stir_fry', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'crimini mushrooms', quantity: '4 oz cremini mushrooms, sliced', section: 'stir_fry', ndbNo: '11266', portionDesc: 'g', portionGrams: 113.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'stir_fry', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'fresh ginger', quantity: '1 tbsp fresh ginger, grated', section: 'stir_fry', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'tamari', quantity: '3 tbsp', section: 'stir_fry', ndbNo: '16124', portionDesc: 'g', portionGrams: 54.0 },
+      { name: 'Sesame oil', quantity: '2 tsp', section: 'stir_fry', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'vegetable oil', quantity: '2 tbsp', section: 'stir_fry', ndbNo: '4513', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'cornstarch', quantity: '1 tbsp', section: 'stir_fry', ndbNo: '20027', portionDesc: 'g', portionGrams: 8.0 },
+      { name: 'salt', quantity: '½ tsp', section: 'stir_fry', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'stir_fry', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Rinse the rice and combine with 1½ cups of water in a medium saucepan. Bring to a boil, reduce heat to low, cover, and cook for 18 minutes. Remove from heat and let stand, covered, for 5 minutes. Fluff with a fork.',
+      'Press the firm tofu blocks firmly to remove excess moisture. Cut into 1-inch cubes and pat dry with paper towels.',
+      'In a small bowl, whisk together the tamari and cornstarch until smooth to make the stir-fry sauce. Set aside.',
+      'Heat 1 tablespoon of vegetable oil in a large wok or skillet over high heat until shimmering. Add the tofu in a single layer and cook undisturbed for 3 to 4 minutes until golden. Flip and cook for another 2 to 3 minutes. Remove from the pan and set aside.',
+      'Add the remaining vegetable oil to the pan. Add the garlic and ginger and stir-fry for 30 seconds until fragrant.',
+      'Add the broccoli and carrots. Stir-fry for 3 minutes.',
+      'Add the bell pepper, mushrooms, and snap peas. Stir-fry for 2 to 3 minutes until the vegetables are bright and tender-crisp.',
+      'Return the tofu to the pan. Pour the sauce over everything and toss to coat. Cook for 1 minute until the sauce thickens.',
+      'Remove from heat and drizzle the sesame oil over the stir-fry. Season with salt and pepper to taste.',
+      'Divide the cooked rice among four bowls and top with the stir-fry. Serve immediately.'
+    ],
+    sections: [
+      { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'stir_fry', label: 'Stir-Fry', cookingMethod: '', yieldFactorWater: 0.85 }
+    ],
   }
 ];
