@@ -18,7 +18,14 @@ Run these gates **before writing a single CSV row**. Skipping any one causes a p
 - [ ] For every new ingredient: NDB queried from `comboo.db` (`DataCentralCombo`), `default_display_name` confirmed, `food_word` confirmed against `food-portions-complete.csv`
 - [ ] For every new ingredient: `food-portions-complete.csv` checked for duplicate NDB — `grep NDB_NO` — before adding
 - [ ] If recipe calls for chicken broth → use `@STOCK_003`; beef broth → `@STOCK_004`; fish broth → `@STOCK_006`. Never add canned broth NDBs to the ledger.
-- [ ] Human approval received for all new ledger entries and the full ingredient list
+- [ ] Human approval received for all new ledger entries and the full ingredient list — **see the mandatory render rule directly below**
+
+> ### ⚠ MANDATORY: Show ingredients in rendered UI format for approval
+> Before writing a single row to `recipe_ingredients.csv`, simulate the full rendered output for every proposed ingredient. Apply the `formatIngredientLine` dedup logic — `qty_display + " " + display_name` with the guard that suppresses the name when it already appears in `qty_display` — using the actual `default_display_name` values from the ledger. Show the developer **exactly what they will see in the app**.
+>
+> **Never present raw CSV rows for ingredient approval.** The developer cannot detect doubling bugs, awkward phrasing, or wrong display names from raw CSV. Bugs caught before writing cost seconds. Bugs caught after upload require a round-trip fix.
+>
+> To simulate: load the ledger, apply `format_line(qty_display, display_name)` for each row, group by section label, and print. See the session history for a working Python snippet.
 
 ---
 
@@ -106,6 +113,8 @@ Single-section recipes may mirror the recipe-level yield factors.
 File: `recipes_v3/data/recipe_ingredients.csv`
 
 Columns: `recipe_id, row_order, ingredient_key, qty_display, grams, grams_min, grams_max, section, ingredient_group, is_optional, display_name_override`
+
+> **⚠ Write no CSV rows until the rendered ingredient list has been approved.** See the mandatory render rule in the Pre-Build Checklist above.
 
 ### 4a — Deriving `grams`
 
