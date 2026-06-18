@@ -1,7 +1,7 @@
 {
   "recipe_id": "SALAD_019",
   "recipe_name": "Southwestern Salad",
-  "sr_rule": "D",
+  "sr_rule": "Rule D",
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",

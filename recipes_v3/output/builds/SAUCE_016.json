@@ -1,7 +1,7 @@
 {
   "recipe_id": "SAUCE_016",
   "recipe_name": "Basic Vinaigrette",
-  "sr_rule": "D",
+  "sr_rule": "Rule D",
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
@@ -158,7 +158,7 @@
       "grams": 2.5,
       "section": "mustard",
       "ingredient_group": "mustard",
-      "qty_display": "1/2 tsp (2.5g)",
+      "qty_display": "1/2 tsp Dijon-Style Mustard (recipe)",
       "contribution": {
         "Energy_KCal": 4.877,
         "Protein": 0.198,

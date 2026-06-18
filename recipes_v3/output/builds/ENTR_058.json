@@ -90,7 +90,7 @@
     {
       "ingredient_key": "chili_powder",
       "ndb_no": "2009",
-      "long_desc": "Spices, chili powder",
+      "long_desc": "",
       "grams": 2.65,
       "section": "chicken",
       "ingredient_group": "chicken",
@@ -384,7 +384,7 @@
     {
       "ingredient_key": "chili_powder",
       "ndb_no": "2009",
-      "long_desc": "Spices, chili powder",
+      "long_desc": "",
       "grams": 1.35,
       "section": "sauce",
       "ingredient_group": "sauce",

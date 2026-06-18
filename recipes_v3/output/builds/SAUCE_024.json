@@ -1,7 +1,7 @@
 {
   "recipe_id": "SAUCE_024",
   "recipe_name": "Caesar Salad Dressing",
-  "sr_rule": "D",
+  "sr_rule": "Rule D",
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
@@ -221,7 +221,7 @@
       "grams": 10.0,
       "section": "mustard",
       "ingredient_group": "mustard",
-      "qty_display": "2 tsp (10.0g)",
+      "qty_display": "2 tsp Dijon-Style Mustard (recipe)",
       "contribution": {
         "Energy_KCal": 19.508,
         "Protein": 0.791,

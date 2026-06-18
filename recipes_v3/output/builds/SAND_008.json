@@ -25,27 +25,6 @@
   "grams_per_serving": 291.39,
   "ingredients": [
     {
-      "ingredient_key": "bread_white_commercial",
-      "ndb_no": "18069",
-      "long_desc": "Bread, white, commercially prepared (includes soft bread crumbs)",
-      "grams": 60.0,
-      "section": "sandwich",
-      "ingredient_group": "sandwich",
-      "qty_display": "2 slices (30g each)",
-      "contribution": {
-        "Energy_KCal": 159.6,
-        "Protein": 5.31,
-        "TotalLipidFat": 1.998,
-        "Carbohydrate": 29.652,
-        "FiberTotalDietary": 1.62,
-        "SugarsTotal": 3.402,
-        "Water": 21.852
-      },
-      "sugar_policy": "none_added",
-      "added_sugar_g": 0.0,
-      "intrinsic_sugar_g": 3.402
-    },
-    {
       "ingredient_key": "chicken_breast_raw",
       "ndb_no": "5062",
       "long_desc": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
@@ -65,6 +44,27 @@
       "sugar_policy": "none_added",
       "added_sugar_g": 0.0,
       "intrinsic_sugar_g": 0.0
+    },
+    {
+      "ingredient_key": "bread_white_commercial",
+      "ndb_no": "18069",
+      "long_desc": "Bread, white, commercially prepared (includes soft bread crumbs)",
+      "grams": 60.0,
+      "section": "sandwich",
+      "ingredient_group": "sandwich",
+      "qty_display": "2 slices (30g each)",
+      "contribution": {
+        "Energy_KCal": 159.6,
+        "Protein": 5.31,
+        "TotalLipidFat": 1.998,
+        "Carbohydrate": 29.652,
+        "FiberTotalDietary": 1.62,
+        "SugarsTotal": 3.402,
+        "Water": 21.852
+      },
+      "sugar_policy": "none_added",
+      "added_sugar_g": 0.0,
+      "intrinsic_sugar_g": 3.402
     },
     {
       "ingredient_key": "yogurt_greek_whole_milk",

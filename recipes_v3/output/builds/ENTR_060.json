@@ -1,8 +1,8 @@
 {
   "recipe_id": "ENTR_060",
   "recipe_name": "Chicken Sesame",
-  "sr_rule": "Rule C",
-  "canonical_ndb_no": "36633",
+  "sr_rule": "Rule D",
+  "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
   "yield_factor_water": 0.85,

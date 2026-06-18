@@ -1,8 +1,8 @@
 {
   "recipe_id": "ENTR_061",
   "recipe_name": "Chicken Tenders",
-  "sr_rule": "Rule C",
-  "canonical_ndb_no": "36034",
+  "sr_rule": "Rule D",
+  "canonical_ndb_no": null,
   "cooking_method": "fried",
   "cooking_method_normalized": "fried",
   "yield_factor_water": 0.85,
