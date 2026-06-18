@@ -16234,5 +16234,54 @@ export const LEVELS: Level[] = [
       { key: 'chicken_stock', label: 'White Chicken Stock', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'shrimp', label: 'Shrimp', cookingMethod: '', yieldFactorWater: 0.85 }
     ],
+  },
+  {
+    id: 'ENTR_105',
+    name: 'Seafood Shrimp Kabobs',
+    category: 'entrees & main courses',
+    dietaryCategory: 'pesca',
+    levelNum: 340,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":223.1,"pro":24.3,"fat":11.2,"carb":7.8,"fib":2.0,"h2o":166.3,"sug":3.9,"perServing":{"cal":223.1,"pro":24.3,"fat":11.2,"carb":7.8,"fib":2.0,"h2o":166.3,"sug":3.9,"AddedSugars":0.0,"IntrinsicSugars":3.9},"micros":{"vitaminA":25.78,"vitaminC":12.38,"vitaminD":0.0,"vitaminE":0.8,"vitaminK":5.11,"vitaminB6":0.08,"vitaminB12":0.0,"thiamin":0.02,"riboflavin":0.04,"niacin":0.24,"folate":11.74,"calcium":46.85,"iron":0.61,"magnesium":27.3,"phosphorus":133.81,"potassium":267.49,"sodium":204.2,"zinc":0.88,"copper":0.23,"selenium":0.31,"cholesterol":86.1,"saturatedFat":0.76,"monoFat":3.56,"polyFat":0.49,"omega3":0.03,"omega6":0.02},"gramsPerServing":212.1,"servings":4,"per100g":{"Energy_KCal":105.19,"Water":78.45,"Protein":11.45,"TotalLipidFat":5.28,"Carbohydrate":3.66,"FiberTotalDietary":0.95,"SugarsTotal":1.85,"Cholesterol":86.1,"FattyAcids_totalSaturated":0.76,"FattyAcids_totalMonounsaturated":3.56,"FattyAcids_totalPolyunsaturated":0.49,"LinoleicAcid":0.02,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.01,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":25.78,"Retinol":0.0,"Carotene_beta":271.68,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.8,"VitaminK_phylloquinone":5.11,"VitaminC_totalAscorbicAcid":12.38,"Thiamin":0.02,"Riboflavin":0.04,"Niacin":0.24,"PantothenicAcid":0.1,"VitaminB6":0.08,"Folate_total":11.74,"Folate_food":11.74,"Folate_DFE":11.74,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":3.98,"Betaine":0.07,"LuteinZeaxanthin":364.05,"Lycopene":0.01,"Calcium_Ca":46.85,"Iron_Fe":0.61,"Magnesium_Mg":27.3,"Phosphorus_P":133.81,"Potassium_K":267.49,"Sodium_Na":204.2,"Zinc_Zn":0.88,"Copper_Cu":0.23,"Manganese_Mn":0.12,"Selenium_Se":0.31,"Tryptophan":0.01,"Threonine":0.02,"Isoleucine":0.02,"Leucine":0.03,"Lysine":0.03,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.02,"Tyrosine":0.01,"Valine":0.02,"Arginine":0.04,"Histidine":0.01,"Alanine":0.02,"AsparticAcid":0.1,"GlutamicAcid":0.11,"Glycine":0.02,"Proline":0.02,"Serine":0.02,"omega3":0.03,"omega6":0.02,"AddedSugars":0.0,"IntrinsicSugars":1.85},"addedSugars":0.0,"intrinsicSugars":3.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.85,"yieldFactorFat":1.0,"sources":[{"ndb":"15270","name":"Crustaceans, shrimp, raw (not previously frozen)","grams":113.4},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":10.2},{"ndb":"9152","name":"Lemon juice, raw","grams":7.5},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"2028","name":"Spices, paprika","grams":0.6},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.2},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"11821","name":"Peppers, sweet, red, raw","grams":29.8},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"11477","name":"Squash, summer, zucchini, includes skin, raw","grams":49.0}],"sections":[{"section_key":"kabobs","section_label":"Shrimp Kabobs","prep_method":"raw","cook_method":"grilled","cooking_method":"grilled","cooking_method_normalized":"grilled","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":12,"raw_grams":965.63,"raw_water_grams":782.82,"raw_fat_grams":44.76,"raw_protein_grams":97.13,"raw_carb_grams":31.08,"final_grams":848.2}],"cookingMethod":"grilled"},
+    recipeIngredients: [
+      { name: 'Seafood Shrimp Kabobs', quantity: 'custom (g)', foodWord: 'SHRIMPKABOBS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'shrimp', quantity: '1 lb (about 20 large) shrimp, peeled and deveined', section: 'kabobs', ndbNo: '15270', portionDesc: 'g', portionGrams: 453.6 },
+      { name: 'olive oil', quantity: '3 tbsp', section: 'kabobs', ndbNo: '4053', portionDesc: 'g', portionGrams: 40.8 },
+      { name: 'lemon juice', quantity: '2 tbsp', section: 'kabobs', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'kabobs', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'paprika', quantity: '1 tsp', section: 'kabobs', ndbNo: '2028', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'dried oregano', quantity: '1/2 tsp', section: 'kabobs', ndbNo: '2027', portionDesc: 'g', portionGrams: 0.9 },
+      { name: 'cayenne pepper', quantity: '1/4 tsp', section: 'kabobs', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.45 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'kabobs', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'kabobs', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'red bell pepper', quantity: '1 medium red bell pepper, cut into 1-inch pieces', section: 'kabobs', ndbNo: '11821', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'onion', quantity: '1 medium onion, cut into 1-inch chunks', section: 'kabobs', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'zucchini', quantity: '1 medium zucchini, sliced into 1-inch rounds', section: 'kabobs', ndbNo: '11477', portionDesc: 'g', portionGrams: 196.0 }
+    ],
+    recipeInstructions: [
+      'In a large bowl, whisk together the olive oil, lemon juice, garlic, paprika, oregano, cayenne pepper, salt, and black pepper to make the marinade.',
+      'Add the shrimp, red bell pepper, onion, and zucchini to the bowl. Toss to coat evenly. Marinate for 15–30 minutes at room temperature or up to 2 hours refrigerated.',
+      'If using wooden skewers, soak them in water for at least 30 minutes before grilling to prevent burning.',
+      'Preheat a grill or grill pan to medium-high heat and lightly oil the grates.',
+      'Thread the shrimp and vegetables onto skewers, alternating shrimp with bell pepper, onion, and zucchini pieces.',
+      'Grill the kabobs for 2–3 minutes per side until the shrimp are pink and opaque and the vegetables are lightly charred.',
+      'Remove from the grill and serve immediately. Pairs well with rice, couscous, or warm flatbread (not included).'
+    ],
+    sections: [
+      { key: 'kabobs', label: 'Shrimp Kabobs', cookingMethod: '', yieldFactorWater: 0.85 }
+    ],
   }
 ];
