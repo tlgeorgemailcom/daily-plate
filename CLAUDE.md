@@ -73,6 +73,8 @@ Always commit `recipes_bundle.json` after generating.
 
 **⚠️ For single-recipe instruction edits, never rewrite the entire `recipe_instructions.csv` file.** Only replace the target recipe block (e.g. `ENTR_101,*`) and leave all other lines untouched.
 
+**⚠️ For new recipes (appending instructions), always use `open(path, 'a')` append mode — never `open(path, 'w')`** with DictWriter or writer. Opening with `'w'` truncates the file immediately; if the write then fails (e.g. a `ValueError: dict contains fields not in fieldnames: None`), all pre-existing rows are gone and git restore is required. Use `csv.writer` in append mode: `with open(path, 'a', newline='') as f: writer = csv.writer(f)`. (Discovered June 2026, ENTR_108 build — DictWriter `'w'`-mode crash wiped 748 ENTR instruction rows; restored from git.)
+
 **⚠️ Required guardrails before and after any instruction edit:**
 - Before writing: snapshot recipe counts by prefix (`ENTR_`, `SAUCE_`, etc.) so accidental truncation is detectable.
 - After writing: re-run the same count check and confirm no non-target prefix counts changed.

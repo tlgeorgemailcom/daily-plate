@@ -224,6 +224,8 @@ Columns: **exactly 3** — `recipe_id, step_order, step_text`. No `section_key` 
 
 **For single-recipe edits**: never rewrite the entire file. Replace only the target recipe block.
 
+**For new recipes (appending)**: open the file in append mode (`'a'`) and write only the new rows with `csv.writer`. Never open the file with `'w'` mode — that truncates the file immediately, before any rows are written. If the write then fails mid-way, all pre-existing data is lost and cannot be recovered without git. The rule is simple: `open(path, 'a')` for appends, `open(path, 'w')` only when deliberately rewriting the entire file (and only after snapshotting prefix counts).
+
 ---
 
 ## Step 6 — Preview Ingredient Rendering (Required Before Upload)
