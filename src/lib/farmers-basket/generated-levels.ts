@@ -17261,5 +17261,64 @@ export const LEVELS: Level[] = [
       { key: 'sauce', label: 'Red Enchilada Sauce', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'enchiladas', label: 'Cheese Enchiladas', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'ENTR_125',
+    name: 'Vegetarian Cheese Lasagna',
+    category: 'entrees & main courses',
+    dietaryCategory: 'veggie',
+    levelNum: 360,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 piece (makes 8)',
+    prepTime: '',
+    linkType: 'ingredient',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":539.9,"pro":30.3,"fat":27.0,"carb":44.9,"fib":3.9,"h2o":207.5,"sug":7.2,"perServing":{"cal":539.9,"pro":30.3,"fat":27.0,"carb":44.9,"fib":3.9,"h2o":207.5,"sug":7.2,"AddedSugars":0.0,"IntrinsicSugars":7.2},"micros":{"vitaminA":57.71,"vitaminC":2.17,"vitaminD":6.4,"vitaminE":0.63,"vitaminK":13.96,"vitaminB6":0.06,"vitaminB12":0.47,"thiamin":0.03,"riboflavin":0.12,"niacin":0.45,"folate":9.51,"calcium":180.76,"iron":0.81,"magnesium":19.93,"phosphorus":147.61,"potassium":149.25,"sodium":328.79,"zinc":1.09,"copper":0.1,"selenium":15.13,"cholesterol":32.14,"saturatedFat":4.51,"monoFat":2.8,"polyFat":0.4,"omega3":0.0,"omega6":0.03},"gramsPerServing":315.8,"servings":8,"per100g":{"Energy_KCal":170.93,"Water":65.69,"Protein":9.6,"TotalLipidFat":8.54,"Carbohydrate":14.23,"FiberTotalDietary":1.23,"SugarsTotal":2.27,"Cholesterol":32.14,"FattyAcids_totalSaturated":4.51,"FattyAcids_totalMonounsaturated":2.8,"FattyAcids_totalPolyunsaturated":0.4,"LinoleicAcid":0.03,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":57.71,"Retinol":51.04,"Carotene_beta":75.8,"VitaminD":6.4,"VitaminE_alphaTocopherol":0.63,"VitaminK_phylloquinone":13.96,"VitaminC_totalAscorbicAcid":2.17,"Thiamin":0.03,"Riboflavin":0.12,"Niacin":0.45,"PantothenicAcid":0.2,"VitaminB6":0.06,"Folate_total":9.51,"Folate_food":9.51,"Folate_DFE":9.51,"FolicAcid":0.0,"VitaminB12":0.47,"Choline_total":14.76,"Betaine":0.04,"LuteinZeaxanthin":69.43,"Lycopene":1444.35,"Calcium_Ca":180.76,"Iron_Fe":0.81,"Magnesium_Mg":19.93,"Phosphorus_P":147.61,"Potassium_K":149.25,"Sodium_Na":328.79,"Zinc_Zn":1.09,"Copper_Cu":0.1,"Manganese_Mn":0.21,"Selenium_Se":15.13,"Tryptophan":0.16,"Threonine":0.39,"Isoleucine":0.45,"Leucine":0.81,"Lysine":0.57,"Methionine":0.2,"Cystine":0.08,"Phenylalanine":0.45,"Tyrosine":0.39,"Valine":0.54,"Arginine":0.34,"Histidine":0.26,"Alanine":0.33,"AsparticAcid":0.71,"GlutamicAcid":2.31,"Glycine":0.24,"Proline":0.96,"Serine":0.41,"omega3":0.0,"omega6":0.03,"AddedSugars":0.0,"IntrinsicSugars":2.27},"addedSugars":0.0,"intrinsicSugars":7.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20420","name":"Pasta, dry, unenriched","grams":42.5},{"ndb":"14411","name":"Water, tap, drinking","grams":250.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"11282","name":"Onions, raw","grams":18.8},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":99.2},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.2},{"ndb":"2003","name":"Spices, basil, dried","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":0.6},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"1036","name":"Cheese, ricotta, whole milk","grams":53.1},{"ndb":"1026","name":"Cheese, mozzarella, whole milk","grams":56.7},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":9.4},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":6.2},{"ndb":"11297","name":"Parsley, fresh","grams":1.9},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.0}],"sections":[{"section_key":"noodles","section_label":"Noodles","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.2491347968816532,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":2340.2,"raw_water_grams":2031.68,"raw_fat_grams":5.14,"raw_protein_grams":44.36,"raw_carb_grams":254.03,"final_grams":814.68},{"section_key":"sauce","section_label":"Tomato Sauce","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.73,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":992.18,"raw_water_grams":851.32,"raw_fat_grams":29.81,"raw_protein_grams":16.14,"raw_carb_grams":78.47,"final_grams":762.32},{"section_key":"cheese_filling","section_label":"Cheese Filling","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":1022.32,"raw_water_grams":604.76,"raw_fat_grams":180.86,"raw_protein_grams":182.02,"raw_carb_grams":27.02,"final_grams":949.74}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Vegetarian Cheese Lasagna', quantity: 'custom (g)', foodWord: 'CHEESELASAGNA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'lasagna noodles', quantity: '12 sheets (dry)', section: 'noodles', ndbNo: '20420', portionDesc: 'g', portionGrams: 340.2 },
+      { name: 'ice water', quantity: 'to cover (for boiling)', section: 'noodles', ndbNo: '14411', portionDesc: 'g', portionGrams: 2000.0 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'sauce', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'onion', quantity: '1 large onion, roughly chopped', section: 'sauce', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'canned crushed tomatoes', quantity: '1 (28-oz) can', section: 'sauce', ndbNo: '11693', portionDesc: 'g', portionGrams: 794.0 },
+      { name: 'dried oregano', quantity: '1 tsp', section: 'sauce', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.8 },
+      { name: 'dried basil', quantity: '1 tbsp', section: 'sauce', ndbNo: '2003', portionDesc: 'g', portionGrams: 2.1 },
+      { name: 'salt', quantity: '3/4 tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'red pepper flakes', quantity: '1/4 tsp (optional)', section: 'sauce', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.45 },
+      { name: 'Ricotta cheese', quantity: '1 (15-oz) container Ricotta cheese', section: 'cheese_filling', ndbNo: '1036', portionDesc: 'g', portionGrams: 425.0 },
+      { name: 'whole milk mozzarella', quantity: '16 oz (1 lb) whole milk mozzarella, shredded', section: 'cheese_filling', ndbNo: '1026', portionDesc: 'g', portionGrams: 453.6 },
+      { name: 'Parmesan cheese', quantity: '3/4 cup, grated', section: 'cheese_filling', ndbNo: '1033', portionDesc: 'g', portionGrams: 75.0 },
+      { name: 'large egg', quantity: '1 large egg', section: 'cheese_filling', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'fresh parsley', quantity: '1/4 cup parsley, chopped', section: 'cheese_filling', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'cheese_filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'cheese_filling', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'ground nutmeg', quantity: 'pinch', section: 'cheese_filling', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.14 }
+    ],
+    recipeInstructions: [
+      'Bring a large pot of salted water to a boil. Cook the lasagna noodles until al dente, 8–10 minutes. Drain and lay flat on a lightly oiled sheet of parchment to prevent sticking.',
+      'Heat the olive oil in a large saucepan over medium heat. Add the onion and cook, stirring occasionally, until softened, about 5 minutes. Add the garlic and cook 1 minute more.',
+      'Add the crushed tomatoes, oregano, basil, red pepper flakes, 3/4 tsp of the salt, and black pepper. Simmer over medium-low heat, stirring occasionally, 20–25 minutes until slightly thickened.',
+      'In a large bowl, stir together the ricotta, half of the shredded mozzarella, the parmesan, egg, parsley, 1/2 tsp salt, black pepper, and nutmeg until well combined.',
+      'Preheat the oven to 375°F. Spread a thin layer of sauce on the bottom of a 9x13 baking dish. Layer 3 noodles over the sauce. Spread one-third of the ricotta mixture over the noodles, then top with a layer of sauce and a sprinkle of mozzarella. Repeat for 2 more noodle layers.',
+      'Finish with a final layer of noodles, the remaining sauce, and the remaining mozzarella. Sprinkle any remaining parmesan over the top.',
+      'Cover tightly with foil and bake at 375°F for 40 minutes. Remove foil and bake an additional 15–20 minutes until the cheese is bubbly and lightly golden.',
+      'Let the lasagna rest 15 minutes before cutting into 8 equal pieces and serving.'
+    ],
+    sections: [
+      { key: 'noodles', label: 'Noodles', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'sauce', label: 'Tomato Sauce', cookingMethod: '', yieldFactorWater: 0.73 },
+      { key: 'cheese_filling', label: 'Cheese Filling', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];
