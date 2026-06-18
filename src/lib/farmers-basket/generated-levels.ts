@@ -16685,5 +16685,52 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'egg_rolls', label: 'Egg Rolls', cookingMethod: '', yieldFactorWater: 0.62 }
     ],
+  },
+  {
+    id: 'ENTR_114',
+    name: 'Vegetarian Egg Roll Bowls',
+    category: 'entrees & main courses',
+    dietaryCategory: 'vegan',
+    levelNum: 349,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":276.4,"pro":7.3,"fat":6.2,"carb":49.3,"fib":4.4,"h2o":229.5,"sug":6.0,"perServing":{"cal":276.4,"pro":7.3,"fat":6.2,"carb":49.3,"fib":4.4,"h2o":229.5,"sug":6.0,"AddedSugars":0.0,"IntrinsicSugars":6.0},"micros":{"vitaminA":72.04,"vitaminC":5.89,"vitaminD":0.27,"vitaminE":0.17,"vitaminK":30.29,"vitaminB6":0.07,"vitaminB12":0.01,"thiamin":0.09,"riboflavin":0.08,"niacin":1.01,"folate":41.91,"calcium":25.61,"iron":0.96,"magnesium":12.9,"phosphorus":48.23,"potassium":169.96,"sodium":157.08,"zinc":0.4,"copper":0.11,"selenium":5.0,"cholesterol":0.0,"saturatedFat":1.09,"monoFat":0.47,"polyFat":0.3,"omega3":0.0,"omega6":0.0},"gramsPerServing":295.4,"servings":4,"per100g":{"Energy_KCal":93.56,"Water":77.69,"Protein":2.47,"TotalLipidFat":2.11,"Carbohydrate":16.7,"FiberTotalDietary":1.5,"SugarsTotal":2.03,"Cholesterol":0.0,"FattyAcids_totalSaturated":1.09,"FattyAcids_totalMonounsaturated":0.47,"FattyAcids_totalPolyunsaturated":0.3,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":72.04,"Retinol":0.0,"Carotene_beta":717.16,"VitaminD":0.27,"VitaminE_alphaTocopherol":0.17,"VitaminK_phylloquinone":30.29,"VitaminC_totalAscorbicAcid":5.89,"Thiamin":0.09,"Riboflavin":0.08,"Niacin":1.01,"PantothenicAcid":0.33,"VitaminB6":0.07,"Folate_total":41.91,"Folate_food":19.22,"Folate_DFE":57.79,"FolicAcid":34.92,"VitaminB12":0.01,"Choline_total":8.51,"Betaine":1.2,"LuteinZeaxanthin":59.39,"Lycopene":0.08,"Calcium_Ca":25.61,"Iron_Fe":0.96,"Magnesium_Mg":12.9,"Phosphorus_P":48.23,"Potassium_K":169.96,"Sodium_Na":157.08,"Zinc_Zn":0.4,"Copper_Cu":0.11,"Manganese_Mn":0.28,"Selenium_Se":5.0,"Tryptophan":0.03,"Threonine":0.1,"Isoleucine":0.1,"Leucine":0.17,"Lysine":0.12,"Methionine":0.04,"Cystine":0.03,"Phenylalanine":0.11,"Tyrosine":0.06,"Valine":0.13,"Arginine":0.17,"Histidine":0.05,"Alanine":0.13,"AsparticAcid":0.26,"GlutamicAcid":0.46,"Glycine":0.09,"Proline":0.11,"Serine":0.11,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":2.03},"addedSugars":0.0,"intrinsicSugars":6.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.85,"yieldFactorFat":1.0,"sources":[{"ndb":"20044","name":"Rice, white, long-grain, regular, raw, enriched","grams":46.2},{"ndb":"14411","name":"Water, tap, drinking","grams":88.9},{"ndb":"4513","name":"Vegetable oil, palm kernel","grams":3.4},{"ndb":"11109","name":"Cabbage, raw","grams":70.0},{"ndb":"11124","name":"Carrots, raw","grams":30.5},{"ndb":"11043","name":"Mung beans, mature seeds, sprouted, raw","grams":30.0},{"ndb":"11266","name":"Mushrooms, brown, italian, or crimini, raw","grams":28.2},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":15.0},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"11216","name":"Ginger root, raw","grams":2.0},{"ndb":"16124","name":"Soy sauce made from soy (tamari)","grams":7.5},{"ndb":"4058","name":"Oil, sesame, salad or cooking","grams":2.2}],"sections":[{"section_key":"rice","section_label":"Rice","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.9434389679863646,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":540.5,"raw_water_grams":376.64,"raw_fat_grams":1.22,"raw_protein_grams":13.19,"raw_carb_grams":147.91,"final_grams":519.2},{"section_key":"filling","section_label":"Egg Roll Filling","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":761.6,"raw_water_grams":661.92,"raw_fat_grams":23.74,"raw_protein_grams":15.97,"raw_carb_grams":49.39,"final_grams":662.31}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Vegetarian Egg Roll Bowls', quantity: 'custom (g)', foodWord: 'VEGEGROLLBOWL', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'White Rice', quantity: '1 cup white rice, rinsed', section: 'rice', ndbNo: '20044', portionDesc: 'g', portionGrams: 185.0 },
+      { name: 'water', quantity: '1½ cups', section: 'rice', ndbNo: '14411', portionDesc: 'g', portionGrams: 355.5 },
+      { name: 'vegetable oil', quantity: '1 tbsp vegetable oil', section: 'filling', ndbNo: '4513', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'Cabbage', quantity: '4 cups cabbage, finely shredded', section: 'filling', ndbNo: '11109', portionDesc: 'g', portionGrams: 280.0 },
+      { name: 'carrot', quantity: '2 medium carrots, shredded', section: 'filling', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'bean sprouts', quantity: '1 cup bean sprouts', section: 'filling', ndbNo: '11043', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'crimini mushrooms', quantity: '4 oz crimini mushrooms, finely chopped', section: 'filling', ndbNo: '11266', portionDesc: 'g', portionGrams: 113.0 },
+      { name: 'scallions', quantity: '4 scallions, thinly sliced', section: 'filling', ndbNo: '11291', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'filling', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'fresh ginger', quantity: '1 tsp fresh ginger, grated', section: 'filling', ndbNo: '11216', portionDesc: 'g', portionGrams: 8.0 },
+      { name: 'tamari', quantity: '2 tbsp', section: 'filling', ndbNo: '16124', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'Sesame oil', quantity: '2 tsp', section: 'filling', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 }
+    ],
+    recipeInstructions: [
+      'Bring 1½ cups of water to a boil in a medium saucepan; if the rice was rinsed, reduce the water by 2 tablespoons. Add the rice, reduce heat to low, cover, and cook until water is absorbed and rice is tender, about 18 minutes. Remove from heat and let stand 5 minutes, then fluff with a fork.',
+      'While the rice cooks, heat the vegetable oil in a large skillet or wok over medium-high heat. Add the garlic and ginger and cook, stirring, about 30 seconds until fragrant.',
+      'Add the cabbage, carrots, and mushrooms. Stir-fry 4–5 minutes until slightly softened. Add the bean sprouts, scallions, tamari, and sesame oil. Stir-fry 2–3 minutes more until heated through and lightly caramelized.',
+      'Divide the rice among bowls and top with the egg roll filling. Garnish with additional scallions or sesame seeds if desired (not included).'
+    ],
+    sections: [
+      { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'filling', label: 'Egg Roll Filling', cookingMethod: '', yieldFactorWater: 0.85 }
+    ],
   }
 ];
