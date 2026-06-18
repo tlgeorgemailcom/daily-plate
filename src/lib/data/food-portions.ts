@@ -38368,6 +38368,34 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "REDLENTIL",
+    "display": "Red Lentils",
+    "groups": [
+      "legume"
+    ],
+    "ndb": "16144",
+    "desc": "Lentils, pink or red, raw",
+    "cal": 358.0,
+    "pro": 23.91,
+    "fat": 2.17,
+    "carb": 63.1,
+    "fib": 10.8,
+    "h2o": 7.82,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 192.0
+      }
+    ]
+  },
+  {
     "word": "REFRIEDBEAN",
     "display": "Refried Bean",
     "groups": [

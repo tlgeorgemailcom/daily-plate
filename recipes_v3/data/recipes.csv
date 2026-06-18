@@ -351,3 +351,4 @@ ENTR_114,VEGEGROLLBOWL,Vegetarian Egg Roll Bowls,entrees & main courses,vegan,bu
 ENTR_115,TOFUNUGGETS,Vegetarian Tofu Nuggets,entrees & main courses,vegan,builtin,,,1 serving (makes 4),4,Rule D,pan grilled,0.85,1.0,1.0,1.0,1.0,approved,,,,PASS,,
 ENTR_116,TOFUSTIRFRY,Vegetarian Tofu Stir-Fry,entrees & main courses,vegan,,,,,4,Rule D,pan grilled,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,,
 ENTR_117,SESAMETOFUBROCCOLI,Vegetarian Sesame Tofu & Broccoli,entrees & main courses,vegan,,,,,4,Rule D,pan grilled,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,,
+ENTR_118,VEGDAL,Vegetarian Dal,entrees & main courses,vegan,,,,,4,Rule D,boiled,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,,

@@ -16890,5 +16890,62 @@ export const LEVELS: Level[] = [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'sesame_tofu', label: 'Sesame Tofu & Broccoli', cookingMethod: '', yieldFactorWater: 0.85 }
     ],
+  },
+  {
+    id: 'ENTR_118',
+    name: 'Vegetarian Dal',
+    category: 'entrees & main courses',
+    dietaryCategory: 'vegan',
+    levelNum: 353,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '',
+    prepTime: '',
+    linkType: 'ingredient',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":410.1,"pro":16.3,"fat":5.3,"carb":76.1,"fib":8.0,"h2o":281.4,"sug":3.6,"perServing":{"cal":410.1,"pro":16.3,"fat":5.3,"carb":76.1,"fib":8.0,"h2o":281.4,"sug":3.6,"AddedSugars":0.0,"IntrinsicSugars":3.6},"micros":{"vitaminA":9.29,"vitaminC":2.14,"vitaminD":0.0,"vitaminE":0.18,"vitaminK":3.05,"vitaminB6":0.07,"vitaminB12":0.0,"thiamin":0.1,"riboflavin":0.02,"niacin":0.57,"folate":38.59,"calcium":18.07,"iron":1.49,"magnesium":13.68,"phosphorus":53.48,"potassium":150.44,"sodium":162.06,"zinc":0.58,"copper":0.19,"selenium":1.96,"cholesterol":0.0,"saturatedFat":0.81,"monoFat":0.24,"polyFat":0.18,"omega3":0.0,"omega6":0.0},"gramsPerServing":383.2,"servings":4,"per100g":{"Energy_KCal":107.04,"Water":73.43,"Protein":4.25,"TotalLipidFat":1.38,"Carbohydrate":19.85,"FiberTotalDietary":2.08,"SugarsTotal":0.94,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.81,"FattyAcids_totalMonounsaturated":0.24,"FattyAcids_totalPolyunsaturated":0.18,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":9.29,"Retinol":0.0,"Carotene_beta":100.06,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.18,"VitaminK_phylloquinone":3.05,"VitaminC_totalAscorbicAcid":2.14,"Thiamin":0.1,"Riboflavin":0.02,"Niacin":0.57,"PantothenicAcid":0.14,"VitaminB6":0.07,"Folate_total":38.59,"Folate_food":21.1,"Folate_DFE":50.83,"FolicAcid":26.92,"VitaminB12":0.0,"Choline_total":2.7,"Betaine":0.05,"LuteinZeaxanthin":17.01,"Lycopene":330.39,"Calcium_Ca":18.07,"Iron_Fe":1.49,"Magnesium_Mg":13.68,"Phosphorus_P":53.48,"Potassium_K":150.44,"Sodium_Na":162.06,"Zinc_Zn":0.58,"Copper_Cu":0.19,"Manganese_Mn":0.42,"Selenium_Se":1.96,"Tryptophan":0.04,"Threonine":0.15,"Isoleucine":0.18,"Leucine":0.31,"Lysine":0.26,"Methionine":0.05,"Cystine":0.06,"Phenylalanine":0.21,"Tyrosine":0.11,"Valine":0.21,"Arginine":0.33,"Histidine":0.11,"Alanine":0.19,"AsparticAcid":0.47,"GlutamicAcid":0.75,"Glycine":0.17,"Proline":0.18,"Serine":0.2,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.94},"addedSugars":0.0,"intrinsicSugars":3.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20044","name":"Rice, white, long-grain, regular, raw, enriched","grams":46.2},{"ndb":"14411","name":"Water, tap, drinking","grams":88.9},{"ndb":"16144","name":"Lentils, pink or red, raw","grams":48.0},{"ndb":"14411","name":"Water, tap, drinking","grams":150.0},{"ndb":"4513","name":"Vegetable oil, palm kernel","grams":3.4},{"ndb":"2014","name":"Spices, cumin seed","grams":0.5},{"ndb":"11282","name":"Onions, raw","grams":37.5},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"11216","name":"Ginger root, raw","grams":1.5},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":61.5},{"ndb":"2043","name":"Spices, turmeric, ground","grams":0.8},{"ndb":"2013","name":"Spices, coriander seed","grams":0.5},{"ndb":"2009","name":"","grams":0.7},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"9152","name":"Lemon juice, raw","grams":7.5},{"ndb":"11165","name":"Coriander (cilantro) leaves, raw","grams":2.0}],"sections":[{"section_key":"rice","section_label":"Rice","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.9434389679863646,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":540.5,"raw_water_grams":376.64,"raw_fat_grams":1.22,"raw_protein_grams":13.19,"raw_carb_grams":147.91,"final_grams":519.2},{"section_key":"lentils","section_label":"Lentils","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.6629844715945954,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":792.0,"raw_water_grams":614.41,"raw_fat_grams":4.17,"raw_protein_grams":45.91,"raw_carb_grams":121.15,"final_grams":584.93},{"section_key":"dal_base","section_label":"Dal Sauce","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":12,"raw_grams":478.1,"raw_water_grams":412.27,"raw_fat_grams":15.69,"raw_protein_grams":6.0,"raw_carb_grams":35.22,"final_grams":428.63}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Vegetarian Dal', quantity: 'custom (g)', foodWord: 'VEGDAL', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white rice (dry)', quantity: '1 cup', section: 'rice', ndbNo: '20044', portionDesc: 'g', portionGrams: 185.0 },
+      { name: 'water', quantity: '1½ cups', section: 'rice', ndbNo: '14411', portionDesc: 'g', portionGrams: 355.5 },
+      { name: 'red lentils', quantity: '1 cup red lentils', section: 'lentils', ndbNo: '16144', portionDesc: 'g', portionGrams: 192.0 },
+      { name: 'water', quantity: '2½ cups', section: 'lentils', ndbNo: '14411', portionDesc: 'g', portionGrams: 600.0 },
+      { name: 'vegetable oil', quantity: '1 tbsp', section: 'dal_base', ndbNo: '4513', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'ground cumin', quantity: '1 tsp ground cumin', section: 'dal_base', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'onion', quantity: '1 medium onion, diced', section: 'dal_base', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'dal_base', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'fresh ginger', quantity: '1 tbsp fresh ginger, grated', section: 'dal_base', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'tomato', quantity: '2 medium tomatoes, diced', section: 'dal_base', ndbNo: '11529', portionDesc: 'g', portionGrams: 246.0 },
+      { name: 'ground turmeric', quantity: '1 tsp ground turmeric', section: 'dal_base', ndbNo: '2043', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground coriander', quantity: '1 tsp ground coriander', section: 'dal_base', ndbNo: '2013', portionDesc: 'g', portionGrams: 1.8 },
+      { name: 'chili powder', quantity: '1 tsp chili powder', section: 'dal_base', ndbNo: '2009', portionDesc: 'g', portionGrams: 2.7 },
+      { name: 'salt', quantity: '1 tsp', section: 'dal_base', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'lemon juice', quantity: '2 tbsp', section: 'dal_base', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'fresh cilantro', quantity: '¼ cup fresh cilantro, chopped', section: 'dal_base', ndbNo: '11165', portionDesc: 'g', portionGrams: 8.0 }
+    ],
+    recipeInstructions: [
+      'Rinse the rice until water is clear and combine with 1½ cups of water in a medium saucepan. If rice is rinsed, reduce water by 2 tablespoons. Bring to a boil, reduce heat to low, cover, and cook for 18 minutes. Remove from heat and let stand, covered, for 5 minutes. Fluff with a fork.',
+      'Rinse the red lentils under cold water until the water runs clear. Combine with 2½ cups of water in a medium saucepan. Bring to a boil, reduce heat to medium-low, and simmer uncovered for 18 to 20 minutes, stirring occasionally, until the lentils are very soft and have broken down into a thick porridge. Set aside.',
+      'Heat the vegetable oil in a large saucepan over medium-high heat. Add the ground cumin and cook for 30 seconds, stirring, until fragrant.',
+      'Add the onion and cook for 4 to 5 minutes, stirring often, until softened and lightly golden.',
+      'Add the garlic and ginger and cook for 1 minute until fragrant.',
+      'Add the tomatoes, ground turmeric, ground coriander, and chili powder. Cook for 4 to 5 minutes, stirring frequently, until the tomatoes break down and the mixture thickens into a deep red base.',
+      'Add the cooked lentils to the tomato base and stir to combine. Season with salt and simmer together for 3 to 4 minutes until the flavors meld. Add a splash of water if the dal is too thick.',
+      'Remove from heat and stir in the lemon juice. Taste and adjust seasoning.',
+      'Divide the rice among four bowls and ladle the dal over the top. Garnish with fresh cilantro and serve immediately.'
+    ],
+    sections: [
+      { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'lentils', label: 'Lentils', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'dal_base', label: 'Dal Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];
