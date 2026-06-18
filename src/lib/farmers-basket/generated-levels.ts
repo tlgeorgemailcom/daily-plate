@@ -16640,5 +16640,50 @@ export const LEVELS: Level[] = [
       { key: 'rice', label: 'White Rice', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'filling', label: 'Vegetable Filling', cookingMethod: '', yieldFactorWater: 0.85 }
     ],
+  },
+  {
+    id: 'ENTR_113',
+    name: 'Vegetarian Egg Rolls',
+    category: 'entrees & main courses',
+    dietaryCategory: 'veggie',
+    levelNum: 348,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '3 egg rolls (makes 12)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule A',
+    nutritionJson: {"cal":441.3,"pro":12.9,"fat":14.2,"carb":67.2,"fib":5.3,"h2o":114.3,"sug":5.7,"perServing":{"cal":441.3,"pro":12.9,"fat":14.2,"carb":67.2,"fib":5.3,"h2o":114.3,"sug":5.7,"AddedSugars":0.0,"IntrinsicSugars":5.7},"micros":{"vitaminA":100.11,"vitaminC":7.84,"vitaminD":0.38,"vitaminE":0.28,"vitaminK":36.19,"vitaminB6":0.09,"vitaminB12":0.02,"thiamin":0.21,"riboflavin":0.25,"niacin":2.71,"folate":52.8,"calcium":47.74,"iron":2.02,"magnesium":20.99,"phosphorus":79.17,"potassium":240.39,"sodium":394.76,"zinc":0.65,"copper":0.17,"selenium":16.53,"cholesterol":4.06,"saturatedFat":4.2,"monoFat":1.06,"polyFat":0.62,"omega3":0.0,"omega6":0.0},"gramsPerServing":212.6,"servings":4,"per100g":{"Energy_KCal":207.56,"Water":53.77,"Protein":6.09,"TotalLipidFat":6.66,"Carbohydrate":31.61,"FiberTotalDietary":2.51,"SugarsTotal":2.69,"Cholesterol":4.06,"FattyAcids_totalSaturated":4.2,"FattyAcids_totalMonounsaturated":1.06,"FattyAcids_totalPolyunsaturated":0.62,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":100.11,"Retinol":1.44,"Carotene_beta":979.4,"VitaminD":0.38,"VitaminE_alphaTocopherol":0.28,"VitaminK_phylloquinone":36.19,"VitaminC_totalAscorbicAcid":7.84,"Thiamin":0.21,"Riboflavin":0.25,"Niacin":2.71,"PantothenicAcid":0.31,"VitaminB6":0.09,"Folate_total":52.8,"Folate_food":29.44,"Folate_DFE":69.06,"FolicAcid":31.15,"VitaminB12":0.02,"Choline_total":10.09,"Betaine":1.66,"LuteinZeaxanthin":56.43,"Lycopene":0.11,"Calcium_Ca":47.74,"Iron_Fe":2.02,"Magnesium_Mg":20.99,"Phosphorus_P":79.17,"Potassium_K":240.39,"Sodium_Na":394.76,"Zinc_Zn":0.65,"Copper_Cu":0.17,"Manganese_Mn":0.43,"Selenium_Se":16.53,"Tryptophan":0.07,"Threonine":0.19,"Isoleucine":0.23,"Leucine":0.4,"Lysine":0.19,"Methionine":0.1,"Cystine":0.1,"Phenylalanine":0.28,"Tyrosine":0.15,"Valine":0.26,"Arginine":0.25,"Histidine":0.13,"Alanine":0.22,"AsparticAcid":0.38,"GlutamicAcid":1.82,"Glycine":0.2,"Proline":0.58,"Serine":0.27,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":2.69},"addedSugars":0.0,"intrinsicSugars":5.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"22955","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.62,"yieldFactorFat":1.0,"sources":[{"ndb":"18368","name":"Wonton wrappers (includes egg roll wrappers)","grams":96.0},{"ndb":"11109","name":"Cabbage, raw","grams":70.0},{"ndb":"11124","name":"Carrots, raw","grams":30.5},{"ndb":"11043","name":"Mung beans, mature seeds, sprouted, raw","grams":30.0},{"ndb":"11266","name":"Mushrooms, brown, italian, or crimini, raw","grams":28.2},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":7.5},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"11216","name":"Ginger root, raw","grams":2.0},{"ndb":"16124","name":"Soy sauce made from soy (tamari)","grams":4.5},{"ndb":"4058","name":"Oil, sesame, salad or cooking","grams":2.2},{"ndb":"4513","name":"Vegetable oil, palm kernel","grams":10.2}],"sections":[{"section_key":"egg_rolls","section_label":"Egg Rolls","prep_method":"raw","cook_method":"fried","cooking_method":"fried","cooking_method_normalized":"fried","yield_factor_water":0.62,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":1130.8,"raw_water_grams":737.64,"raw_fat_grams":56.63,"raw_protein_grams":51.79,"raw_carb_grams":268.86,"final_grams":850.5}],"cookingMethod":"fried"},
+    recipeIngredients: [
+      { name: 'Egg rolls, vegetable, frozen, prepared', quantity: 'custom (g)', foodWord: 'EGGROLL', ndbNo: '22955', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'egg roll wrappers', quantity: '12 egg roll wrappers (7-inch square)', section: 'egg_rolls', ndbNo: '18368', portionDesc: 'g', portionGrams: 384.0 },
+      { name: 'Cabbage', quantity: '4 cups cabbage, finely shredded', section: 'egg_rolls', ndbNo: '11109', portionDesc: 'g', portionGrams: 280.0 },
+      { name: 'carrot', quantity: '2 medium carrots, shredded', section: 'egg_rolls', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'bean sprouts', quantity: '1 cup bean sprouts', section: 'egg_rolls', ndbNo: '11043', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'crimini mushrooms', quantity: '4 oz crimini mushrooms, finely chopped', section: 'egg_rolls', ndbNo: '11266', portionDesc: 'g', portionGrams: 113.0 },
+      { name: 'scallions', quantity: '2 scallions, thinly sliced', section: 'egg_rolls', ndbNo: '11291', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'egg_rolls', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'fresh ginger', quantity: '1 tsp fresh ginger, grated', section: 'egg_rolls', ndbNo: '11216', portionDesc: 'g', portionGrams: 8.0 },
+      { name: 'tamari', quantity: '1 tbsp', section: 'egg_rolls', ndbNo: '16124', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'Sesame oil', quantity: '2 tsp', section: 'egg_rolls', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'vegetable oil', quantity: '3 tbsp vegetable oil (absorbed during frying)', section: 'egg_rolls', ndbNo: '4513', portionDesc: 'g', portionGrams: 40.8 }
+    ],
+    recipeInstructions: [
+      'Heat sesame oil in a wok or large skillet over high heat. Add garlic and ginger and stir for 30 seconds. Add cabbage, carrots, and bean sprouts; stir-fry until wilted, 3 to 4 minutes. Add mushrooms and scallions and cook 2 more minutes. Add tamari, toss to combine. Spread filling on a plate and cool to room temperature.',
+      'Lay one egg roll wrapper on a flat surface in a diamond orientation. Spoon about 3 tablespoons of filling onto the lower third of the wrapper. Fold the bottom corner up over the filling, fold in the side corners, then roll tightly toward the top corner. Dab the edge with water to seal. Repeat with remaining wrappers and filling.',
+      'Heat vegetable oil in a large heavy skillet to about ½-inch depth over medium-high heat (about 350°F). Working in batches, add egg rolls seam-side down. Fry, turning with tongs, until golden brown on all sides, 3 to 4 minutes total.',
+      'Transfer to a paper-towel-lined plate to drain. Serve immediately with your preferred dipping sauce (not included).'
+    ],
+    sections: [
+      { key: 'egg_rolls', label: 'Egg Rolls', cookingMethod: '', yieldFactorWater: 0.62 }
+    ],
   }
 ];
