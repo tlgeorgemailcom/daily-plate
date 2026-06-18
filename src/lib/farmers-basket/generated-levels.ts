@@ -17001,5 +17001,54 @@ export const LEVELS: Level[] = [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'chana_masala', label: 'Chana Masala', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'ENTR_120',
+    name: 'Vegetarian Shakshuka',
+    category: 'entrees & main courses',
+    dietaryCategory: 'veggie',
+    levelNum: 355,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '',
+    prepTime: '',
+    linkType: 'ingredient',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":266.3,"pro":12.7,"fat":15.5,"carb":22.5,"fib":5.6,"h2o":254.4,"sug":12.5,"perServing":{"cal":266.3,"pro":12.7,"fat":15.5,"carb":22.5,"fib":5.6,"h2o":254.4,"sug":12.5,"AddedSugars":0.0,"IntrinsicSugars":12.5},"micros":{"vitaminA":51.84,"vitaminC":10.41,"vitaminD":13.21,"vitaminE":1.16,"vitaminK":22.93,"vitaminB6":0.15,"vitaminB12":0.19,"thiamin":0.05,"riboflavin":0.14,"niacin":0.8,"folate":19.5,"calcium":62.19,"iron":1.48,"magnesium":19.86,"phosphorus":77.17,"potassium":269.19,"sodium":375.39,"zinc":0.6,"copper":0.14,"selenium":6.22,"cholesterol":63.84,"saturatedFat":1.53,"monoFat":2.45,"polyFat":0.51,"omega3":0.0,"omega6":0.2},"gramsPerServing":311.1,"servings":4,"per100g":{"Energy_KCal":85.6,"Water":81.77,"Protein":4.1,"TotalLipidFat":4.99,"Carbohydrate":7.23,"FiberTotalDietary":1.8,"SugarsTotal":4.01,"Cholesterol":63.84,"FattyAcids_totalSaturated":1.53,"FattyAcids_totalMonounsaturated":2.45,"FattyAcids_totalPolyunsaturated":0.51,"LinoleicAcid":0.2,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":51.84,"Retinol":25.13,"Carotene_beta":291.86,"VitaminD":13.21,"VitaminE_alphaTocopherol":1.16,"VitaminK_phylloquinone":22.93,"VitaminC_totalAscorbicAcid":10.41,"Thiamin":0.05,"Riboflavin":0.14,"Niacin":0.8,"PantothenicAcid":0.42,"VitaminB6":0.15,"Folate_total":19.5,"Folate_food":19.5,"Folate_DFE":19.5,"FolicAcid":0.0,"VitaminB12":0.19,"Choline_total":52.17,"Betaine":0.09,"LuteinZeaxanthin":188.79,"Lycopene":2606.42,"Calcium_Ca":62.19,"Iron_Fe":1.48,"Magnesium_Mg":19.86,"Phosphorus_P":77.17,"Potassium_K":269.19,"Sodium_Na":375.39,"Zinc_Zn":0.6,"Copper_Cu":0.14,"Manganese_Mn":0.17,"Selenium_Se":6.22,"Tryptophan":0.04,"Threonine":0.15,"Isoleucine":0.17,"Leucine":0.28,"Lysine":0.25,"Methionine":0.09,"Cystine":0.05,"Phenylalanine":0.18,"Tyrosine":0.13,"Valine":0.22,"Arginine":0.2,"Histidine":0.08,"Alanine":0.18,"AsparticAcid":0.43,"GlutamicAcid":0.81,"Glycine":0.1,"Proline":0.18,"Serine":0.25,"omega3":0.0,"omega6":0.2,"AddedSugars":0.0,"IntrinsicSugars":4.01},"addedSugars":0.0,"intrinsicSugars":12.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"11282","name":"Onions, raw","grams":37.5},{"ndb":"11821","name":"Peppers, sweet, red, raw","grams":29.8},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"2014","name":"Spices, cumin seed","grams":0.5},{"ndb":"2028","name":"Spices, paprika","grams":0.6},{"ndb":"2009","name":"","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":198.5},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":50.0},{"ndb":"1019","name":"Cheese, feta","grams":14.2},{"ndb":"11297","name":"Parsley, fresh","grams":3.8}],"sections":[{"section_key":"shakshuka","section_label":"Shakshuka","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":13,"raw_grams":1383.12,"raw_water_grams":1156.24,"raw_fat_grams":62.13,"raw_protein_grams":50.97,"raw_carb_grams":89.92,"final_grams":1244.38}],"cookingMethod":"pan grilled"},
+    recipeIngredients: [
+      { name: 'Vegetarian Shakshuka', quantity: 'custom (g)', foodWord: 'SHAKSHUKA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'shakshuka', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'onion', quantity: '1 medium onion, diced', section: 'shakshuka', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'red bell pepper', quantity: '1 medium red bell pepper, diced', section: 'shakshuka', ndbNo: '11821', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'shakshuka', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'ground cumin', quantity: '1 tsp ground cumin', section: 'shakshuka', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'paprika', quantity: '1 tsp paprika', section: 'shakshuka', ndbNo: '2028', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'chili powder', quantity: '½ tsp chili powder', section: 'shakshuka', ndbNo: '2009', portionDesc: 'g', portionGrams: 1.35 },
+      { name: 'salt', quantity: '1 tsp', section: 'shakshuka', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp ground black pepper', section: 'shakshuka', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'canned crushed tomatoes', quantity: '28 oz', section: 'shakshuka', ndbNo: '11693', portionDesc: 'g', portionGrams: 794.0 },
+      { name: 'large egg', quantity: '4 large eggs', section: 'shakshuka', ndbNo: '1123', portionDesc: 'g', portionGrams: 200.0 },
+      { name: 'feta cheese crumbles', quantity: '2 oz feta cheese crumbles', section: 'shakshuka', ndbNo: '1019', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'fresh parsley', quantity: '¼ cup fresh parsley, chopped', section: 'shakshuka', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.0 }
+    ],
+    recipeInstructions: [
+      'Heat the olive oil in a large skillet over medium heat. Add the onion and red bell pepper and cook for 5 to 6 minutes, stirring often, until softened.',
+      'Add the garlic, ground cumin, paprika, and chili powder. Cook for 1 to 2 minutes, stirring, until fragrant.',
+      'Add the crushed tomatoes, salt, and ground black pepper. Stir to combine, bring to a simmer, and cook for 8 to 10 minutes until the sauce thickens slightly.',
+      'Using a spoon, make 4 wells in the sauce. Crack one egg into each well. Cover the skillet and cook over medium-low heat for 5 to 8 minutes, until the egg whites are set but the yolks are still slightly runny, or until cooked to your liking.',
+      'Remove from heat. Crumble the feta over the top and garnish with fresh parsley.',
+      'Serve directly from the skillet with crusty bread or pita for dipping (not included).'
+    ],
+    sections: [
+      { key: 'shakshuka', label: 'Shakshuka', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];
