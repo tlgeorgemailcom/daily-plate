@@ -2,6 +2,8 @@
 
 > Claude AI is not required to ask permission to query the DataCentralCombo table in the comboo.db
 
+> **Building a recipe? Follow `docs/recipe_development.md` — it is the source of truth for all authoring steps, decision gates, and `qty_display` patterns. The sections below document pipeline internals, current work, and accumulated lessons. When in doubt: `recipe_development.md` first.**
+
 ## Project
 SvelteKit + Svelte 5 + TypeScript food/word game. Nutrition data comes from a Python pipeline (`recipes_v3/`) that computes per-100g macros from raw ingredients using USDA SR Legacy data and FNDDS canonical references.
 
