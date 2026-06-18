@@ -216,7 +216,33 @@ Columns: **exactly 3** — `recipe_id, step_order, step_text`. No `section_key` 
 
 ---
 
-## Step 6 — Build, Validate, Insert, Upload
+## Step 6 — Preview Ingredient Rendering (Required Before Upload)
+
+Run this before `upload.py`. It replicates the exact `formatIngredientLine` logic from `RecipeBook.svelte` and shows you precisely what the user will see in the app.
+
+```bash
+python3 recipes_v3/tools/preview_ingredients.py --recipe RECIPE_ID
+```
+
+Add `--raw` to also see `qty_display` and `display_name` columns side-by-side for debugging:
+
+```bash
+python3 recipes_v3/tools/preview_ingredients.py --recipe RECIPE_ID --raw
+```
+
+**Do not proceed to Step 7 (upload) until the preview matches what you and the user agreed on.**
+
+To scan all recipes for doubling issues at any time:
+
+```bash
+python3 recipes_v3/tools/preview_ingredients.py --all
+```
+
+If the preview shows any `⚠️ POSSIBLE DOUBLING` warning, fix `qty_display` or `display_name_override` in `recipe_ingredients.csv` and re-run the preview before uploading.
+
+---
+
+## Step 7 — Build, Validate, Insert, Upload
 
 Run in this exact order:
 
@@ -249,12 +275,12 @@ python3 recipes_v3/tools/generate_bundle.py
 
 ---
 
-## Step 7 — Post-Build Verification
+## Step 8 — Post-Build Verification
 
 - [ ] `validate_ledger.py` exits with `OK` — the only acceptable non-error output is `Rule D — bespoke key OK` (one per Rule D recipe)
 - [ ] Build output shows expected `kcal` and `gps` (grams per serving)
 - [ ] For Rule A/B/F/G: run full audit table — computed vs canonical ±5% for all scored macros
-- [ ] Rendered ingredient list reviewed — no line repeats a noun phrase
+- [ ] `preview_ingredients.py --recipe RECIPE_ID` run — output matches approved ingredient list exactly, no `⚠️` warnings
 - [ ] Every fresh/raw ingredient has a prep state in `qty_display`
 - [ ] Instructions include `(not included)` where needed
 - [ ] `servings_label` confirmed correct in Turso (query directly to verify)
@@ -262,7 +288,7 @@ python3 recipes_v3/tools/generate_bundle.py
 
 ---
 
-## Step 8 — Commit
+## Step 9 — Commit
 
 ```bash
 git add -A
