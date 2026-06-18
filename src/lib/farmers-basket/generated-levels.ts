@@ -17160,5 +17160,55 @@ export const LEVELS: Level[] = [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'poblanos', label: 'Stuffed Poblanos', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'ENTR_123',
+    name: 'Vegetarian Stuffed Zucchini Boats',
+    category: 'entrees & main courses',
+    dietaryCategory: 'veggie',
+    levelNum: 358,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: 'medium (serves 4)',
+    prepTime: '',
+    linkType: 'ingredient',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":273.5,"pro":16.2,"fat":17.7,"carb":15.6,"fib":3.7,"h2o":301.5,"sug":9.1,"perServing":{"cal":273.5,"pro":16.2,"fat":17.7,"carb":15.6,"fib":3.7,"h2o":301.5,"sug":9.1,"AddedSugars":0.0,"IntrinsicSugars":9.1},"micros":{"vitaminA":31.55,"vitaminC":7.2,"vitaminD":2.38,"vitaminE":0.41,"vitaminK":8.11,"vitaminB6":0.11,"vitaminB12":0.22,"thiamin":0.04,"riboflavin":0.16,"niacin":0.85,"folate":18.17,"calcium":106.08,"iron":0.47,"magnesium":18.19,"phosphorus":103.61,"potassium":282.56,"sodium":274.35,"zinc":0.75,"copper":0.13,"selenium":6.63,"cholesterol":8.99,"saturatedFat":2.02,"monoFat":2.11,"polyFat":0.29,"omega3":0.03,"omega6":0.01},"gramsPerServing":356.5,"servings":4,"per100g":{"Energy_KCal":76.71,"Water":84.57,"Protein":4.56,"TotalLipidFat":4.96,"Carbohydrate":4.38,"FiberTotalDietary":1.04,"SugarsTotal":2.55,"Cholesterol":8.99,"FattyAcids_totalSaturated":2.02,"FattyAcids_totalMonounsaturated":2.11,"FattyAcids_totalPolyunsaturated":0.29,"LinoleicAcid":0.01,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":31.55,"Retinol":18.55,"Carotene_beta":138.78,"VitaminD":2.38,"VitaminE_alphaTocopherol":0.41,"VitaminK_phylloquinone":8.11,"VitaminC_totalAscorbicAcid":7.2,"Thiamin":0.04,"Riboflavin":0.16,"Niacin":0.85,"PantothenicAcid":0.35,"VitaminB6":0.11,"Folate_total":18.17,"Folate_food":18.17,"Folate_DFE":18.17,"FolicAcid":0.0,"VitaminB12":0.22,"Choline_total":11.21,"Betaine":1.8,"LuteinZeaxanthin":861.58,"Lycopene":377.27,"Calcium_Ca":106.08,"Iron_Fe":0.47,"Magnesium_Mg":18.19,"Phosphorus_P":103.61,"Potassium_K":282.56,"Sodium_Na":274.35,"Zinc_Zn":0.75,"Copper_Cu":0.13,"Manganese_Mn":0.17,"Selenium_Se":6.63,"Tryptophan":0.08,"Threonine":0.17,"Isoleucine":0.21,"Leucine":0.35,"Lysine":0.29,"Methionine":0.09,"Cystine":0.02,"Phenylalanine":0.2,"Tyrosine":0.19,"Valine":0.25,"Arginine":0.16,"Histidine":0.12,"Alanine":0.17,"AsparticAcid":0.37,"GlutamicAcid":0.91,"Glycine":0.11,"Proline":0.4,"Serine":0.19,"omega3":0.03,"omega6":0.01,"AddedSugars":0.0,"IntrinsicSugars":2.55},"addedSugars":0.0,"intrinsicSugars":9.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.88,"yieldFactorFat":1.0,"sources":[{"ndb":"11477","name":"Squash, summer, zucchini, includes skin, raw","grams":196.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"11266","name":"Mushrooms, brown, italian, or crimini, raw","grams":56.7},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":61.5},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.2},{"ndb":"2044","name":"Basil, fresh","grams":2.5},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"1026","name":"Cheese, mozzarella, whole milk","grams":28.4},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":14.2}],"sections":[{"section_key":"zucchini_boats","section_label":"Zucchini Boats","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":12,"raw_grams":1590.58,"raw_water_grams":1370.52,"raw_fat_grams":70.69,"raw_protein_grams":64.97,"raw_carb_grams":62.52,"final_grams":1426.11}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Vegetarian Stuffed Zucchini Boats', quantity: 'custom (g)', foodWord: 'STUFFEDZUCCHINI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'zucchini', quantity: '4 medium zucchini, halved and hollowed', section: 'zucchini_boats', ndbNo: '11477', portionDesc: 'g', portionGrams: 784.0 },
+      { name: 'olive oil', quantity: '2 tbsp olive oil, divided', section: 'zucchini_boats', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'onion', quantity: '1 medium onion, diced', section: 'zucchini_boats', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'zucchini_boats', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'crimini mushrooms', quantity: '8 oz crimini mushrooms, finely chopped', section: 'zucchini_boats', ndbNo: '11266', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'tomato', quantity: '2 medium tomatoes, diced', section: 'zucchini_boats', ndbNo: '11529', portionDesc: 'g', portionGrams: 246.0 },
+      { name: 'dried oregano', quantity: '1 tsp dried oregano', section: 'zucchini_boats', ndbNo: '2027', portionDesc: 'g', portionGrams: 0.9 },
+      { name: 'fresh basil', quantity: '¼ cup fresh basil, chopped', section: 'zucchini_boats', ndbNo: '2044', portionDesc: 'g', portionGrams: 10.0 },
+      { name: 'salt', quantity: '1 tsp', section: 'zucchini_boats', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp ground black pepper', section: 'zucchini_boats', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'whole milk mozzarella', quantity: '4 oz whole milk mozzarella, shredded', section: 'zucchini_boats', ndbNo: '1026', portionDesc: 'g', portionGrams: 113.4 },
+      { name: 'Parmesan cheese', quantity: '2 oz Parmesan cheese, grated', section: 'zucchini_boats', ndbNo: '1033', portionDesc: 'g', portionGrams: 56.7 }
+    ],
+    recipeInstructions: [
+      'Preheat oven to 400°F (200°C).',
+      'Trim the ends off the zucchini and cut each one in half lengthwise. Use a spoon to scoop out the flesh, leaving a ¼-inch shell. Roughly chop the scooped flesh and set aside.',
+      'Brush the zucchini shells all over with 1 tablespoon of olive oil and arrange cut-side up in a 9×13-inch baking dish.',
+      'Heat the remaining 1 tablespoon of olive oil in a large skillet over medium heat. Add the onion and cook for 4 to 5 minutes, stirring often, until softened. Add the garlic and cook for 1 minute more.',
+      'Add the mushrooms and cook for 5 to 6 minutes, stirring often, until they release their moisture and begin to brown.',
+      'Add the reserved zucchini flesh, tomatoes, dried oregano, salt, and ground black pepper. Cook for 3 to 4 minutes, stirring often, until most of the liquid has evaporated. Remove from heat and stir in the fresh basil.',
+      'Spoon the filling into the zucchini shells, mounding slightly. Sprinkle with the shredded mozzarella, then the grated Parmesan.',
+      'Bake for 20 to 25 minutes, until the zucchini is tender and the cheese is melted and lightly golden. Let cool for 5 minutes before serving.'
+    ],
+    sections: [
+      { key: 'zucchini_boats', label: 'Zucchini Boats', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];
