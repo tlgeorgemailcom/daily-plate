@@ -16835,5 +16835,60 @@ export const LEVELS: Level[] = [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'stir_fry', label: 'Stir-Fry', cookingMethod: '', yieldFactorWater: 0.85 }
     ],
+  },
+  {
+    id: 'ENTR_117',
+    name: 'Vegetarian Sesame Tofu & Broccoli',
+    category: 'entrees & main courses',
+    dietaryCategory: 'vegan',
+    levelNum: 352,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '',
+    prepTime: '',
+    linkType: 'ingredient',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":497.6,"pro":22.7,"fat":22.2,"carb":56.8,"fib":5.2,"h2o":291.5,"sug":7.4,"perServing":{"cal":497.6,"pro":22.7,"fat":22.2,"carb":56.8,"fib":5.2,"h2o":291.5,"sug":7.4,"AddedSugars":4.3,"IntrinsicSugars":3.0},"micros":{"vitaminA":7.35,"vitaminC":10.52,"vitaminD":0.0,"vitaminE":0.24,"vitaminK":25.89,"vitaminB6":0.08,"vitaminB12":0.0,"thiamin":0.08,"riboflavin":0.06,"niacin":0.61,"folate":35.86,"calcium":104.62,"iron":1.44,"magnesium":26.5,"phosphorus":85.55,"potassium":163.61,"sodium":203.37,"zinc":0.61,"copper":0.14,"selenium":6.6,"cholesterol":0.0,"saturatedFat":2.02,"monoFat":1.46,"polyFat":1.17,"omega3":0.0,"omega6":0.0},"gramsPerServing":398.8,"servings":4,"per100g":{"Energy_KCal":124.76,"Water":73.09,"Protein":5.68,"TotalLipidFat":5.56,"Carbohydrate":14.24,"FiberTotalDietary":1.31,"SugarsTotal":1.85,"Cholesterol":0.0,"FattyAcids_totalSaturated":2.02,"FattyAcids_totalMonounsaturated":1.46,"FattyAcids_totalPolyunsaturated":1.17,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":7.35,"Retinol":0.0,"Carotene_beta":84.77,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.24,"VitaminK_phylloquinone":25.89,"VitaminC_totalAscorbicAcid":10.52,"Thiamin":0.08,"Riboflavin":0.06,"Niacin":0.61,"PantothenicAcid":0.24,"VitaminB6":0.08,"Folate_total":35.86,"Folate_food":19.05,"Folate_DFE":47.62,"FolicAcid":25.86,"VitaminB12":0.0,"Choline_total":16.23,"Betaine":0.21,"LuteinZeaxanthin":226.86,"Lycopene":0.0,"Calcium_Ca":104.62,"Iron_Fe":1.44,"Magnesium_Mg":26.5,"Phosphorus_P":85.55,"Potassium_K":163.61,"Sodium_Na":203.37,"Zinc_Zn":0.61,"Copper_Cu":0.14,"Manganese_Mn":0.47,"Selenium_Se":6.6,"Tryptophan":0.07,"Threonine":0.23,"Isoleucine":0.25,"Leucine":0.42,"Lysine":0.28,"Methionine":0.08,"Cystine":0.03,"Phenylalanine":0.27,"Tyrosine":0.2,"Valine":0.29,"Arginine":0.43,"Histidine":0.13,"Alanine":0.26,"AsparticAcid":0.63,"GlutamicAcid":1.1,"Glycine":0.23,"Proline":0.33,"Serine":0.31,"omega3":0.0,"omega6":0.0,"AddedSugars":1.08,"IntrinsicSugars":0.77},"addedSugars":4.3,"intrinsicSugars":3.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20044","name":"Rice, white, long-grain, regular, raw, enriched","grams":46.2},{"ndb":"14411","name":"Water, tap, drinking","grams":88.9},{"ndb":"16126","name":"Tofu, firm, prepared with calcium sulfate and magnesium chloride (nigari)","grams":162.0},{"ndb":"11090","name":"Broccoli, raw","grams":91.0},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"11216","name":"Ginger root, raw","grams":1.5},{"ndb":"16124","name":"Soy sauce made from soy (tamari)","grams":13.5},{"ndb":"4058","name":"Oil, sesame, salad or cooking","grams":6.8},{"ndb":"19296","name":"Honey","grams":5.2},{"ndb":"2053","name":"Vinegar, distilled","grams":3.7},{"ndb":"20027","name":"Cornstarch","grams":2.0},{"ndb":"4513","name":"Vegetable oil, palm kernel","grams":6.8},{"ndb":"12024","name":"Seeds, sesame seeds, whole, roasted and toasted","grams":2.2},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":7.5},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.2}],"sections":[{"section_key":"rice","section_label":"Rice","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.9434389679863646,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":540.5,"raw_water_grams":376.64,"raw_fat_grams":1.22,"raw_protein_grams":13.19,"raw_carb_grams":147.91,"final_grams":519.2},{"section_key":"sesame_tofu","section_label":"Sesame Tofu & Broccoli","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":13,"raw_grams":1219.2,"raw_water_grams":953.78,"raw_fat_grams":87.45,"raw_protein_grams":77.47,"raw_carb_grams":79.33,"final_grams":1076.13}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Vegetarian Sesame Tofu & Broccoli', quantity: 'custom (g)', foodWord: 'SESAMETOFUBROCCOLI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white rice (dry)', quantity: '1 cup', section: 'rice', ndbNo: '20044', portionDesc: 'g', portionGrams: 185.0 },
+      { name: 'water', quantity: '1½ cups', section: 'rice', ndbNo: '14411', portionDesc: 'g', portionGrams: 355.5 },
+      { name: 'firm tofu', quantity: '2 blocks firm tofu, pressed and cubed', section: 'sesame_tofu', ndbNo: '16126', portionDesc: 'g', portionGrams: 648.0 },
+      { name: 'broccoli', quantity: '4 cups broccoli, cut into florets', section: 'sesame_tofu', ndbNo: '11090', portionDesc: 'g', portionGrams: 364.0 },
+      { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'sesame_tofu', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'fresh ginger', quantity: '1 tbsp fresh ginger, grated', section: 'sesame_tofu', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'tamari', quantity: '3 tbsp', section: 'sesame_tofu', ndbNo: '16124', portionDesc: 'g', portionGrams: 54.0 },
+      { name: 'Sesame oil', quantity: '2 tbsp', section: 'sesame_tofu', ndbNo: '4058', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'honey', quantity: '1 tbsp', section: 'sesame_tofu', ndbNo: '19296', portionDesc: 'g', portionGrams: 21.0 },
+      { name: 'rice vinegar', quantity: '1 tbsp', section: 'sesame_tofu', ndbNo: '2053', portionDesc: 'g', portionGrams: 14.9 },
+      { name: 'cornstarch', quantity: '1 tbsp', section: 'sesame_tofu', ndbNo: '20027', portionDesc: 'g', portionGrams: 8.0 },
+      { name: 'vegetable oil', quantity: '2 tbsp', section: 'sesame_tofu', ndbNo: '4513', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'sesame seeds', quantity: '1 tbsp', section: 'sesame_tofu', ndbNo: '12024', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'scallions', quantity: '3 stalks scallions, thinly sliced', section: 'sesame_tofu', ndbNo: '11291', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'red pepper flakes', quantity: '½ tsp', section: 'sesame_tofu', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.9 }
+    ],
+    recipeInstructions: [
+      'Rinse the rice until water is clear and combine with 1½ cups of water in a medium saucepan. If rice is rinsed, reduce water by 2 tablespoons. Bring to a boil, reduce heat to low, cover, and cook for 18 minutes. Remove from heat and let stand, covered, for 5 minutes. Fluff with a fork.',
+      'Press the firm tofu blocks to remove excess moisture. Cut into 1-inch cubes, pat dry with paper towels, and toss with the cornstarch until evenly coated.',
+      'In a small bowl, whisk together the tamari, sesame oil, honey, and rice vinegar to make the sesame sauce. Set aside.',
+      'Heat 1 tablespoon of vegetable oil in a large wok or skillet over high heat. Add the tofu in a single layer and cook for 3 to 4 minutes per side until golden and crispy. Remove from the pan and set aside.',
+      'Add the remaining vegetable oil to the pan. Add the garlic and ginger and stir-fry for 30 seconds until fragrant.',
+      'Add the broccoli and stir-fry for 3 to 4 minutes until bright green and tender-crisp.',
+      'Return the tofu to the pan and pour the sesame sauce over everything. Toss to coat and cook for 1 to 2 minutes until the sauce thickens and glazes the tofu and broccoli.',
+      'Remove from heat and sprinkle with sesame seeds and scallions. Add red pepper flakes for heat if desired.',
+      'Divide the rice among four bowls and top with the sesame tofu and broccoli. Serve immediately.'
+    ],
+    sections: [
+      { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'sesame_tofu', label: 'Sesame Tofu & Broccoli', cookingMethod: '', yieldFactorWater: 0.85 }
+    ],
   }
 ];
