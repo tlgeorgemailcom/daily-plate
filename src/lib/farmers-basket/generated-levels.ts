@@ -15620,7 +15620,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '1 serving (makes 4)',
+    servings: '1 serving',
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
@@ -15680,7 +15680,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '1 serving (makes 4)',
+    servings: '1 serving',
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
@@ -15726,7 +15726,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '1 serving (makes 4)',
+    servings: '1 serving',
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
@@ -15775,7 +15775,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '1 serving (makes 4)',
+    servings: '1 serving',
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
@@ -15831,7 +15831,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '2 crab cakes (makes 4)',
+    servings: '2 crab cakes',
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
@@ -15880,7 +15880,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '1 serving (makes 4 avocado halves)',
+    servings: '1 serving',
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
@@ -15925,7 +15925,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '1 roll (makes 4)',
+    servings: '1 roll',
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
@@ -15978,7 +15978,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '1 roll (makes 4)',
+    servings: '1 roll',
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
@@ -16031,7 +16031,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '1 serving (makes 3)',
+    servings: '1 serving',
     prepTime: '',
     linkType: 'ingredient',
     sr28Rule: 'Rule D',
@@ -16088,7 +16088,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '1 serving (makes 4)',
+    servings: '1 serving',
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
@@ -16145,7 +16145,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '3 scallops (makes 4)',
+    servings: '3 scallops',
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
@@ -16190,7 +16190,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '1 serving (makes 4)',
+    servings: '1 serving',
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
@@ -16251,7 +16251,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '1 serving (makes 4)',
+    servings: '1 serving',
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
@@ -16300,7 +16300,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '1 serving (makes 4)',
+    servings: '1 serving',
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
@@ -16345,7 +16345,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '1 serving (makes 4)',
+    servings: '1 serving',
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
@@ -16395,7 +16395,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '1 serving (makes 4)',
+    servings: '1 serving',
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
@@ -16451,7 +16451,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '1 serving (makes 4)',
+    servings: '1 serving',
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
@@ -16501,7 +16501,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '1 serving (makes 4)',
+    servings: '1 serving',
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
@@ -16557,7 +16557,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '1 serving (makes 4)',
+    servings: '1 serving',
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule G',
@@ -16603,7 +16603,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '1 serving (makes 4)',
+    servings: '1 serving',
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
@@ -16657,7 +16657,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '3 egg rolls (makes 12)',
+    servings: '3 egg rolls',
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule A',
@@ -16702,7 +16702,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '1 serving (makes 4)',
+    servings: '1 serving',
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
@@ -16749,7 +16749,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '1 serving (makes 4)',
+    servings: '1 serving',
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
@@ -17227,7 +17227,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '3 enchiladas (makes 4)',
+    servings: '3 enchiladas',
     prepTime: '',
     linkType: 'ingredient',
     sr28Rule: 'Rule D',
@@ -17278,7 +17278,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 3500 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '1 piece (makes 8)',
+    servings: '1 piece',
     prepTime: '',
     linkType: 'ingredient',
     sr28Rule: 'Rule D',
