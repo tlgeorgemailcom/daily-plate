@@ -17050,5 +17050,60 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'shakshuka', label: 'Shakshuka', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'ENTR_121',
+    name: 'Vegetarian Stuffed Peppers',
+    category: 'entrees & main courses',
+    dietaryCategory: 'veggie',
+    levelNum: 356,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '',
+    prepTime: '',
+    linkType: 'ingredient',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":459.6,"pro":17.8,"fat":13.2,"carb":70.6,"fib":9.6,"h2o":325.0,"sug":9.5,"perServing":{"cal":459.6,"pro":17.8,"fat":13.2,"carb":70.6,"fib":9.6,"h2o":325.0,"sug":9.5,"AddedSugars":0.0,"IntrinsicSugars":9.5},"micros":{"vitaminA":19.64,"vitaminC":13.57,"vitaminD":1.3,"vitaminE":0.52,"vitaminK":4.24,"vitaminB6":0.1,"vitaminB12":0.07,"thiamin":0.09,"riboflavin":0.05,"niacin":0.76,"folate":35.41,"calcium":62.12,"iron":1.1,"magnesium":20.7,"phosphorus":74.28,"potassium":180.94,"sodium":189.8,"zinc":0.57,"copper":0.1,"selenium":2.88,"cholesterol":6.21,"saturatedFat":1.3,"monoFat":1.12,"polyFat":0.23,"omega3":0.0,"omega6":0.0},"gramsPerServing":432.1,"servings":4,"per100g":{"Energy_KCal":106.36,"Water":75.22,"Protein":4.13,"TotalLipidFat":3.07,"Carbohydrate":16.34,"FiberTotalDietary":2.23,"SugarsTotal":2.2,"Cholesterol":6.21,"FattyAcids_totalSaturated":1.3,"FattyAcids_totalMonounsaturated":1.12,"FattyAcids_totalPolyunsaturated":0.23,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":19.64,"Retinol":9.45,"Carotene_beta":101.8,"VitaminD":1.3,"VitaminE_alphaTocopherol":0.52,"VitaminK_phylloquinone":4.24,"VitaminC_totalAscorbicAcid":13.57,"Thiamin":0.09,"Riboflavin":0.05,"Niacin":0.76,"PantothenicAcid":0.24,"VitaminB6":0.1,"Folate_total":35.41,"Folate_food":19.9,"Folate_DFE":46.27,"FolicAcid":23.87,"VitaminB12":0.07,"Choline_total":10.4,"Betaine":0.07,"LuteinZeaxanthin":148.28,"Lycopene":602.69,"Calcium_Ca":62.12,"Iron_Fe":1.1,"Magnesium_Mg":20.7,"Phosphorus_P":74.28,"Potassium_K":180.94,"Sodium_Na":189.8,"Zinc_Zn":0.57,"Copper_Cu":0.1,"Manganese_Mn":0.26,"Selenium_Se":2.88,"Tryptophan":0.05,"Threonine":0.15,"Isoleucine":0.18,"Leucine":0.33,"Lysine":0.23,"Methionine":0.08,"Cystine":0.04,"Phenylalanine":0.21,"Tyrosine":0.14,"Valine":0.23,"Arginine":0.2,"Histidine":0.1,"Alanine":0.17,"AsparticAcid":0.4,"GlutamicAcid":0.85,"Glycine":0.12,"Proline":0.28,"Serine":0.2,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":2.2},"addedSugars":0.0,"intrinsicSugars":9.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20044","name":"Rice, white, long-grain, regular, raw, enriched","grams":46.2},{"ndb":"14411","name":"Water, tap, drinking","grams":88.9},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"11282","name":"Onions, raw","grams":37.5},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":60.0},{"ndb":"16015","name":"Beans, black, mature seeds, cooked, boiled, without salt","grams":43.0},{"ndb":"11168","name":"Corn, sweet, yellow, cooked, boiled, drained, without salt","grams":38.5},{"ndb":"2014","name":"Spices, cumin seed","grams":0.5},{"ndb":"2009","name":"","grams":0.7},{"ndb":"2028","name":"Spices, paprika","grams":0.3},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"11333","name":"Peppers, sweet, green, raw","grams":119.0},{"ndb":"1251","name":"Cheese, Mexican blend","grams":28.2}],"sections":[{"section_key":"rice","section_label":"Rice","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.9434389679863646,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":540.5,"raw_water_grams":376.64,"raw_fat_grams":1.22,"raw_protein_grams":13.19,"raw_carb_grams":147.91,"final_grams":519.2},{"section_key":"peppers","section_label":"Stuffed Peppers","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":14,"raw_grams":1338.03,"raw_water_grams":1073.64,"raw_fat_grams":51.76,"raw_protein_grams":58.18,"raw_carb_grams":134.55,"final_grams":1209.19}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Vegetarian Stuffed Peppers', quantity: 'custom (g)', foodWord: 'STUFFEDPEPPERS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white rice (dry)', quantity: '1 cup', section: 'rice', ndbNo: '20044', portionDesc: 'g', portionGrams: 185.0 },
+      { name: 'water', quantity: '1½ cups', section: 'rice', ndbNo: '14411', portionDesc: 'g', portionGrams: 355.5 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'peppers', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'onion', quantity: '1 medium onion, diced', section: 'peppers', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'peppers', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'canned crushed tomatoes', quantity: '1 cup canned crushed tomatoes', section: 'peppers', ndbNo: '11693', portionDesc: 'g', portionGrams: 240.0 },
+      { name: 'black beans', quantity: '1 cup black beans, drained', section: 'peppers', ndbNo: '16015', portionDesc: 'g', portionGrams: 172.0 },
+      { name: 'sweet corn', quantity: '1 cup sweet corn', section: 'peppers', ndbNo: '11168', portionDesc: 'g', portionGrams: 154.0 },
+      { name: 'ground cumin', quantity: '1 tsp ground cumin', section: 'peppers', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'chili powder', quantity: '1 tsp chili powder', section: 'peppers', ndbNo: '2009', portionDesc: 'g', portionGrams: 2.7 },
+      { name: 'paprika', quantity: '½ tsp paprika', section: 'peppers', ndbNo: '2028', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'dried oregano', quantity: '1 tsp dried oregano', section: 'peppers', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'salt', quantity: '1 tsp', section: 'peppers', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp ground black pepper', section: 'peppers', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'green bell pepper', quantity: '4 medium green bell peppers, halved and seeded', section: 'peppers', ndbNo: '11333', portionDesc: 'g', portionGrams: 476.0 },
+      { name: 'Mexican blend cheese', quantity: '1 cup Mexican blend cheese', section: 'peppers', ndbNo: '1251', portionDesc: 'g', portionGrams: 113.0 }
+    ],
+    recipeInstructions: [
+      'Preheat oven to 375°F (190°C). Rinse the rice until water is clear and combine with 1½ cups of water in a medium saucepan. If rice is rinsed, reduce water by 2 tablespoons. Bring to a boil, reduce heat to low, cover, and cook for 18 minutes. Remove from heat and let stand, covered, for 5 minutes. Fluff with a fork.',
+      'Heat the olive oil in a large skillet over medium heat. Add the onion and cook for 4 to 5 minutes, stirring often, until softened.',
+      'Add the garlic and cook for 1 minute until fragrant.',
+      'Add the crushed tomatoes, black beans, sweet corn, ground cumin, chili powder, paprika, dried oregano, salt, and ground black pepper. Stir to combine and cook for 3 to 4 minutes until heated through. Remove from heat and fold in the cooked rice.',
+      'Cut the bell peppers in half lengthwise and remove the seeds and membranes. Arrange cut-side up in a 9×13-inch baking dish.',
+      'Spoon the rice and bean filling into each pepper half, mounding slightly. Sprinkle the Mexican blend cheese evenly over the tops.',
+      'Cover the baking dish tightly with aluminum foil and bake for 30 minutes. Uncover and bake for an additional 10 to 15 minutes, until the peppers are tender and the cheese is melted and lightly browned.',
+      'Let cool for 5 minutes before serving.'
+    ],
+    sections: [
+      { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'peppers', label: 'Stuffed Peppers', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];
