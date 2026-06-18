@@ -16586,5 +16586,59 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'scampi', label: 'Shrimp Scampi', cookingMethod: '', yieldFactorWater: 0.82 }
     ],
+  },
+  {
+    id: 'ENTR_112',
+    name: 'Vegetarian Bowl',
+    category: 'entrees & main courses',
+    dietaryCategory: 'vegan',
+    levelNum: 347,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":380.7,"pro":11.8,"fat":9.2,"carb":64.2,"fib":7.8,"h2o":259.4,"sug":8.0,"perServing":{"cal":380.7,"pro":11.8,"fat":9.2,"carb":64.2,"fib":7.8,"h2o":259.4,"sug":8.0,"AddedSugars":0.0,"IntrinsicSugars":8.0},"micros":{"vitaminA":17.79,"vitaminC":7.65,"vitaminD":0.46,"vitaminE":0.45,"vitaminK":8.48,"vitaminB6":0.1,"vitaminB12":0.01,"thiamin":0.09,"riboflavin":0.11,"niacin":1.09,"folate":53.94,"calcium":24.94,"iron":1.34,"magnesium":18.85,"phosphorus":75.35,"potassium":222.03,"sodium":90.15,"zinc":0.69,"copper":0.19,"selenium":6.98,"cholesterol":0.0,"saturatedFat":0.37,"monoFat":1.58,"polyFat":0.36,"omega3":0.01,"omega6":0.0},"gramsPerServing":347.7,"servings":4,"per100g":{"Energy_KCal":109.5,"Water":74.6,"Protein":3.4,"TotalLipidFat":2.66,"Carbohydrate":18.47,"FiberTotalDietary":2.24,"SugarsTotal":2.29,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.37,"FattyAcids_totalMonounsaturated":1.58,"FattyAcids_totalPolyunsaturated":0.36,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":17.79,"Retinol":0.0,"Carotene_beta":191.3,"VitaminD":0.46,"VitaminE_alphaTocopherol":0.45,"VitaminK_phylloquinone":8.48,"VitaminC_totalAscorbicAcid":7.65,"Thiamin":0.09,"Riboflavin":0.11,"Niacin":1.09,"PantothenicAcid":0.39,"VitaminB6":0.1,"Folate_total":53.94,"Folate_food":34.65,"Folate_DFE":67.43,"FolicAcid":29.67,"VitaminB12":0.01,"Choline_total":13.22,"Betaine":1.85,"LuteinZeaxanthin":237.84,"Lycopene":0.01,"Calcium_Ca":24.94,"Iron_Fe":1.34,"Magnesium_Mg":18.85,"Phosphorus_P":75.35,"Potassium_K":222.03,"Sodium_Na":90.15,"Zinc_Zn":0.69,"Copper_Cu":0.19,"Manganese_Mn":0.41,"Selenium_Se":6.98,"Tryptophan":0.04,"Threonine":0.12,"Isoleucine":0.13,"Leucine":0.23,"Lysine":0.2,"Methionine":0.05,"Cystine":0.04,"Phenylalanine":0.16,"Tyrosine":0.09,"Valine":0.16,"Arginine":0.27,"Histidine":0.08,"Alanine":0.17,"AsparticAcid":0.37,"GlutamicAcid":0.6,"Glycine":0.14,"Proline":0.15,"Serine":0.16,"omega3":0.01,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":2.29},"addedSugars":0.0,"intrinsicSugars":8.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.85,"yieldFactorFat":1.0,"sources":[{"ndb":"20044","name":"Rice, white, long-grain, regular, raw, enriched","grams":46.2},{"ndb":"14411","name":"Water, tap, drinking","grams":88.9},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"11821","name":"Peppers, sweet, red, raw","grams":29.8},{"ndb":"11477","name":"Squash, summer, zucchini, includes skin, raw","grams":49.0},{"ndb":"11266","name":"Mushrooms, brown, italian, or crimini, raw","grams":56.7},{"ndb":"16057","name":"Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt","grams":61.5},{"ndb":"2014","name":"Spices, cumin seed","grams":0.5},{"ndb":"2028","name":"Spices, paprika","grams":0.6},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"9160","name":"Lime juice, raw","grams":3.8},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":7.5},{"ndb":"11165","name":"Coriander (cilantro) leaves, raw","grams":2.0}],"sections":[{"section_key":"rice","section_label":"White Rice","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.9434389679863646,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":540.5,"raw_water_grams":376.64,"raw_fat_grams":1.22,"raw_protein_grams":13.19,"raw_carb_grams":147.91,"final_grams":519.2},{"section_key":"filling","section_label":"Vegetable Filling","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":14,"raw_grams":991.88,"raw_water_grams":802.54,"raw_fat_grams":35.79,"raw_protein_grams":34.13,"raw_carb_grams":108.99,"final_grams":871.49}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Vegetarian Bowl', quantity: 'custom (g)', foodWord: 'VEGBOWL', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white rice (dry)', quantity: '1 cup', section: 'rice', ndbNo: '20044', portionDesc: 'g', portionGrams: 185.0 },
+      { name: 'water', quantity: '1½ cups', section: 'rice', ndbNo: '14411', portionDesc: 'g', portionGrams: 355.5 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'filling', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'onion', quantity: '1 medium onion, thinly sliced', section: 'filling', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'filling', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'red bell pepper', quantity: '1 medium red bell pepper, sliced', section: 'filling', ndbNo: '11821', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'zucchini', quantity: '2 medium zucchini, sliced', section: 'filling', ndbNo: '11477', portionDesc: 'g', portionGrams: 196.0 },
+      { name: 'crimini mushrooms', quantity: '8 oz crimini mushrooms, sliced', section: 'filling', ndbNo: '11266', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'Chickpeas', quantity: '1½ cups chickpeas, drained and rinsed', section: 'filling', ndbNo: '16057', portionDesc: 'g', portionGrams: 246.0 },
+      { name: 'ground cumin', quantity: '1 tsp', section: 'filling', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'paprika', quantity: '1 tsp', section: 'filling', ndbNo: '2028', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'salt', quantity: '½ tsp', section: 'filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'filling', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'lime juice', quantity: '1 tbsp', section: 'filling', ndbNo: '9160', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'scallions', quantity: '2 scallions, thinly sliced', section: 'filling', ndbNo: '11291', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'fresh cilantro', quantity: '¼ cup fresh cilantro, chopped', section: 'filling', ndbNo: '11165', portionDesc: 'g', portionGrams: 8.0 }
+    ],
+    recipeInstructions: [
+      'Bring 1½ cups of water to a boil in a medium saucepan; if using rinsed rice, reduce the water by 2 tablespoons. Add the rice, reduce heat to low, cover and cook until water is absorbed and rice is tender, about 18 minutes. Remove from heat and let stand 5 minutes, then fluff with a fork.',
+      'Heat olive oil in a large skillet over medium-high heat. Add onion and cook, stirring occasionally, until softened, 3 to 4 minutes.',
+      'Add garlic and red bell pepper. Cook, stirring, until the pepper is slightly tender, about 2 minutes.',
+      'Add zucchini and mushrooms. Cook, stirring occasionally, until the vegetables are tender and any liquid has evaporated, 5 to 6 minutes.',
+      'Add chickpeas, cumin, paprika, salt, and pepper. Stir to combine and cook until the chickpeas are heated through, about 2 minutes.',
+      'Remove from heat and stir in the lime juice.',
+      'Divide the rice among 4 bowls. Top with the vegetable-chickpea mixture, garnish with scallions and cilantro, and serve.'
+    ],
+    sections: [
+      { key: 'rice', label: 'White Rice', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'filling', label: 'Vegetable Filling', cookingMethod: '', yieldFactorWater: 0.85 }
+    ],
   }
 ];
