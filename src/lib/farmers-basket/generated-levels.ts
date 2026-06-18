@@ -16173,5 +16173,66 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'scallops', label: 'Scallops', cookingMethod: '', yieldFactorWater: 0.82 }
     ],
+  },
+  {
+    id: 'ENTR_104',
+    name: 'Seafood Shrimp & Grits',
+    category: 'entrees & main courses',
+    dietaryCategory: 'pesca',
+    levelNum: 339,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":546.4,"pro":35.4,"fat":30.0,"carb":34.2,"fib":2.4,"h2o":334.0,"sug":1.8,"perServing":{"cal":546.4,"pro":35.4,"fat":30.0,"carb":34.2,"fib":2.4,"h2o":334.0,"sug":1.8,"AddedSugars":0.0,"IntrinsicSugars":1.8},"micros":{"vitaminA":52.54,"vitaminC":0.52,"vitaminD":5.52,"vitaminE":0.19,"vitaminK":3.79,"vitaminB6":0.04,"vitaminB12":0.08,"thiamin":0.09,"riboflavin":0.06,"niacin":0.66,"folate":12.11,"calcium":46.19,"iron":0.5,"magnesium":15.53,"phosphorus":97.07,"potassium":119.31,"sodium":221.08,"zinc":0.67,"copper":0.12,"selenium":4.56,"cholesterol":64.67,"saturatedFat":4.09,"monoFat":2.39,"polyFat":0.6,"omega3":0.04,"omega6":0.25},"gramsPerServing":438.1,"servings":4,"per100g":{"Energy_KCal":124.73,"Water":76.25,"Protein":8.07,"TotalLipidFat":6.85,"Carbohydrate":7.8,"FiberTotalDietary":0.54,"SugarsTotal":0.41,"Cholesterol":64.67,"FattyAcids_totalSaturated":4.09,"FattyAcids_totalMonounsaturated":2.39,"FattyAcids_totalPolyunsaturated":0.6,"LinoleicAcid":0.25,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.01,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":52.54,"Retinol":48.98,"Carotene_beta":42.16,"VitaminD":5.52,"VitaminE_alphaTocopherol":0.19,"VitaminK_phylloquinone":3.79,"VitaminC_totalAscorbicAcid":0.52,"Thiamin":0.09,"Riboflavin":0.06,"Niacin":0.66,"PantothenicAcid":0.1,"VitaminB6":0.04,"Folate_total":12.11,"Folate_food":4.51,"Folate_DFE":17.4,"FolicAcid":11.69,"VitaminB12":0.08,"Choline_total":6.64,"Betaine":0.51,"LuteinZeaxanthin":26.48,"Lycopene":0.01,"Calcium_Ca":46.19,"Iron_Fe":0.5,"Magnesium_Mg":15.53,"Phosphorus_P":97.07,"Potassium_K":119.31,"Sodium_Na":221.08,"Zinc_Zn":0.67,"Copper_Cu":0.12,"Manganese_Mn":0.04,"Selenium_Se":4.56,"Tryptophan":0.05,"Threonine":0.14,"Isoleucine":0.15,"Leucine":0.31,"Lysine":0.2,"Methionine":0.08,"Cystine":0.04,"Phenylalanine":0.15,"Tyrosine":0.12,"Valine":0.18,"Arginine":0.16,"Histidine":0.1,"Alanine":0.19,"AsparticAcid":0.27,"GlutamicAcid":0.6,"Glycine":0.13,"Proline":0.25,"Serine":0.13,"omega3":0.04,"omega6":0.25,"AddedSugars":0.0,"IntrinsicSugars":0.41},"addedSugars":0.0,"intrinsicSugars":1.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"8090","name":"Cereals, corn grits, white, regular and quick, enriched, dry","grams":38.8},{"ndb":"14411","name":"Water, tap, drinking","grams":236.5},{"ndb":"1145","name":"Butter, without salt","grams":7.1},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":30.0},{"ndb":"1009","name":"Cheese, cheddar","grams":14.2},{"ndb":"2047","name":"Salt, table","grams":1.1},{"ndb":"2032","name":"Spices, pepper, white","grams":0.1},{"ndb":"","name":"Chicken Broth","grams":30.0},{"ndb":"15270","name":"Crustaceans, shrimp, raw (not previously frozen)","grams":113.4},{"ndb":"10862","name":"Pork, cured, bacon, pre-sliced, cooked, pan-fried","grams":11.5},{"ndb":"1145","name":"Butter, without salt","grams":3.5},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"9152","name":"Lemon juice, raw","grams":3.8},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":7.5},{"ndb":"6971","name":"Sauce, worcestershire","grams":1.2},{"ndb":"2028","name":"Spices, paprika","grams":0.4},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"grits","section_label":"Grits","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":1311.4,"raw_water_grams":1057.54,"raw_fat_grams":87.95,"raw_protein_grams":28.55,"raw_carb_grams":128.22,"final_grams":1121.04},{"section_key":"chicken_stock","section_label":"White Chicken Stock","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":120.0,"raw_water_grams":113.76,"raw_fat_grams":1.61,"raw_protein_grams":4.63,"raw_carb_grams":0.04,"final_grams":120.0},{"section_key":"shrimp","section_label":"Shrimp","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":573.88,"raw_water_grams":417.8,"raw_fat_grams":30.39,"raw_protein_grams":108.21,"raw_carb_grams":8.44,"final_grams":511.21}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Seafood Shrimp & Grits', quantity: 'custom (g)', foodWord: 'SHRIMPGRITS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'corn grits, dry', quantity: '1 cup', section: 'grits', ndbNo: '8090', portionDesc: 'g', portionGrams: 155.2 },
+      { name: 'water', quantity: '4 cups', section: 'grits', ndbNo: '14411', portionDesc: 'g', portionGrams: 946.0 },
+      { name: 'unsalted butter', quantity: '2 tbsp', section: 'grits', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
+      { name: 'heavy cream', quantity: '1/2 cup', section: 'grits', ndbNo: '1053', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'Cheddar cheese', quantity: '2 oz', section: 'grits', ndbNo: '1009', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'salt', quantity: '3/4 tsp', section: 'grits', ndbNo: '2047', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'white pepper', quantity: '1/4 tsp', section: 'grits', ndbNo: '2032', portionDesc: 'g', portionGrams: 0.6 },
+      { name: 'Chicken Broth', quantity: '1/2 cup White Chicken Stock (recipe)', section: 'chicken_stock', foodWord: 'CHICKENBROTH', portionDesc: 'g', portionGrams: 120.0, isDish: true, componentRef: 'STOCK_003' },
+      { name: 'shrimp', quantity: '1 lb (about 16 large) shrimp, peeled and deveined', section: 'shrimp', ndbNo: '15270', portionDesc: 'g', portionGrams: 453.6 },
+      { name: 'bacon', quantity: '2 strips', section: 'shrimp', ndbNo: '10862', portionDesc: 'g', portionGrams: 46.0 },
+      { name: 'unsalted butter', quantity: '1 tbsp', section: 'shrimp', ndbNo: '1145', portionDesc: 'g', portionGrams: 14.2 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'shrimp', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'lemon juice', quantity: '1 tbsp', section: 'shrimp', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'scallions', quantity: '2 stalks scallions, thinly sliced', section: 'shrimp', ndbNo: '11291', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'Worcestershire sauce', quantity: '1 tsp', section: 'shrimp', ndbNo: '6971', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'paprika', quantity: '1/2 tsp', section: 'shrimp', ndbNo: '2028', portionDesc: 'g', portionGrams: 1.55 },
+      { name: 'cayenne pepper', quantity: '1/8 tsp', section: 'shrimp', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.45 },
+      { name: 'salt', quantity: '1/4 tsp', section: 'shrimp', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'shrimp', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Make or prepare the White Chicken Stock (see the White Chicken Stock recipe).',
+      'Bring 4 cups of water to a boil in a medium saucepan. Slowly whisk in the corn grits, reduce heat to low, and cook, stirring frequently, for 20–25 minutes until thick and creamy.',
+      'Stir the butter, heavy cream, Cheddar cheese, salt, and white pepper into the grits. Taste and adjust seasoning. Keep warm over low heat.',
+      'Cook the bacon in a large skillet over medium heat until crisp. Transfer to a plate and crumble. Reserve 1 tablespoon of drippings in the pan.',
+      'Season the shrimp with paprika, cayenne pepper, salt, and black pepper.',
+      'Increase heat to high. Add the butter to the pan with the reserved drippings. Add the shrimp in a single layer and sear without moving for 1–2 minutes per side until pink and just cooked through. Transfer the shrimp to a plate.',
+      'Reduce heat to medium. Add the garlic to the pan and cook for 30 seconds until fragrant.',
+      'Pour in the White Chicken Stock, Worcestershire sauce, and lemon juice. Simmer for 2–3 minutes, scraping up any browned bits, until the sauce reduces slightly.',
+      'Return the shrimp and crumbled bacon to the pan. Add the scallions and toss to combine.',
+      'Spoon the grits into bowls and top with the shrimp mixture. Serve immediately.'
+    ],
+    sections: [
+      { key: 'grits', label: 'Grits', cookingMethod: '', yieldFactorWater: 0.82 },
+      { key: 'chicken_stock', label: 'White Chicken Stock', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'shrimp', label: 'Shrimp', cookingMethod: '', yieldFactorWater: 0.85 }
+    ],
   }
 ];

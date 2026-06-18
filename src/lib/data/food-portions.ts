@@ -53954,6 +53954,39 @@ export const FOODS: Food[] = [
         "gm": 85.0
       }
     ]
+  },
+  {
+    "word": "CORNGRITS",
+    "display": "Corn Grits (dry)",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "8090",
+    "desc": "Cereals, corn grits, white, regular and quick, enriched, dry",
+    "cal": 370.0,
+    "pro": 7.65,
+    "fat": 1.75,
+    "carb": 79.09,
+    "fib": 4.6,
+    "h2o": 10.92,
+    "sug": 0.57,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tablespoon",
+        "gm": 9.7
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 155.0
+      }
+    ]
   }
 ];
 
