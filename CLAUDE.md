@@ -220,7 +220,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | `SAND_NNN` | 🔧 In progress | 67 (001–067) |
 | `SAUCE_NNN` | 🔧 In progress | 24 (001–024) |
 | `STOCK_NNN` | 🔧 In progress | 7 (001–007) |
-| `ENTR_NNN` | 🔧 In progress | 18 (001, 087, 088, 089, 090, 091, 092, 093, 094, 095, 096, 097, 103, 104, 105, 106, 107, 108) |
+| `ENTR_NNN` | 🔧 In progress | 19 (001, 087, 088, 089, 090, 091, 092, 093, 094, 095, 096, 097, 103, 104, 105, 106, 107, 108, 109) |
 | `SIDE_NNN` | 🔧 In progress | 26 (001–026) |
 
 ## Validation Rules
@@ -345,6 +345,7 @@ Planned BKFST order (standalone components first, composites last):
 | ENTR_105 | Seafood Shrimp Kabobs | (none) | Rule D ✅ — no canonical; single section grilled yfw=0.85: shrimp_raw(15270) 453.6g+olive_oil(4053) 40.8g+lemon_juice_raw(9152) 30g+garlic_raw(11215) 9g+paprika(2028) 2.3g+oregano_dried(2027) 0.9g+cayenne_pepper(2031) 0.45g+salt_table(2047) 3g+black_pepper_ground(2030) 0.575g+bell_pepper_red_raw(11821) 119g+onion_raw(11282) 110g+zucchini_raw(11477) 196g; cooked total 848.2g; 4 servings × 212.1g; 105.2 kcal·11.45P·5.28F·3.66C per 100g; dietary_category=pesca |
 | ENTR_106 | Seafood Sole Meunière | (none) | Rule D ✅ — no canonical; single section pan grilled yfw=0.82: flounder_sole_raw(15028) 652g+flour_ap_white_enriched_unbleached(20581) 41.67g+ghee(1003) 38.4g+butter_unsalted(1145) 42.6g+lemon_juice_raw(9152) 30g+parsley_fresh(11297) 7.6g+salt_table(2047) 3g+black_pepper_ground(2030) 0.575g; cooked total 708.0g; 4 servings × 177.0g; 178.1 kcal·12.16P·12.13F·4.91C per 100g; dietary_category=pesca |
 | ENTR_107 | Seafood Tuna Poke Bowl | (none) | Rule D ✅ — no canonical; 2-section: rice (boiled bin model NDB 20452) yfw=1.0: rice_white_short_raw(20452) 200g+water(14411) 355.5g; poke (raw yfw=1.0): tuna_yellowfin_raw(15127) 453.6g+tamari(16124) 54g+sesame_oil(4058) 9g+lime_juice_raw(9160) 15g+honey(19296) 7.1g+ginger_root_fresh(11216) 6g+scallion_raw(11291) 30g+avocado_raw(9038) 150g+cucumber_raw(11205) 119g+sesame_seeds(12024) 9g; cooked total 1404.9g; 4 servings × 351.2g; 119.7 kcal·9.63P·2.85F·13.62C per 100g; dietary_category=pesca |
+| ENTR_109 | Seafood Fish and Chips | (none) | Rule D ✅ — no canonical; 2-section: fish (fried yfw=0.75): cod_atlantic_raw 680g+beer_batter(flour 200g+beer 240g+egg 50g+baking_powder)+veg_oil 81g absorbed; chips (fried yfw=0.55): potato_russet_raw 907.2g+veg_oil 68g absorbed; ~428g/serving; 867 kcal·42g P·40g F·82g C per serving; dietary_category=pesca |
 | ENTR_108 | Seafood Cioppino | (none) | Rule D ✅ — no canonical; 2-section: fish_stock (raw yfw=1.0): @STOCK_006(240g); stew (boiled yfw=0.88): olive_oil(4053) 27.2g+onion_raw(11282) 150g+celery_raw(11143) 75g+garlic_raw(11215) 12g+tomatoes_canned_crushed(11693) 822g+white_wine_dry(14106) 235g+spices+cod_atlantic_raw(15015) 226.8g+shrimp_raw(15270) 226.8g+clams_raw(15157) 170g+mussels_raw(15164) 170g+parsley_fresh(11297) 7.6g; cooked total 2159.5g; 4 servings × 539.9g; 69.9 kcal·7.10P·1.85F·4.77C per 100g; dietary_category=pesca |
 
 ## Current Work: SIDE Recipes

@@ -16434,5 +16434,55 @@ export const LEVELS: Level[] = [
       { key: 'fish_stock', label: 'Fish Stock', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'stew', label: 'Cioppino', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'ENTR_109',
+    name: 'Seafood Fish and Chips',
+    category: 'entrees & main courses',
+    dietaryCategory: 'pesca',
+    levelNum: 344,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":866.6,"pro":42.2,"fat":40.3,"carb":81.8,"fib":4.4,"h2o":254.6,"sug":1.6,"perServing":{"cal":866.6,"pro":42.2,"fat":40.3,"carb":81.8,"fib":4.4,"h2o":254.6,"sug":1.6,"AddedSugars":0.0,"IntrinsicSugars":1.6},"micros":{"vitaminA":7.58,"vitaminC":1.71,"vitaminD":15.88,"vitaminE":0.49,"vitaminK":2.97,"vitaminB6":0.22,"vitaminB12":0.33,"thiamin":0.12,"riboflavin":0.1,"niacin":1.7,"folate":25.38,"calcium":37.43,"iron":1.24,"magnesium":28.92,"phosphorus":157.09,"potassium":406.79,"sodium":220.33,"zinc":0.46,"copper":0.08,"selenium":18.33,"cholesterol":27.98,"saturatedFat":7.27,"monoFat":1.15,"polyFat":0.27,"omega3":0.04,"omega6":0.04},"gramsPerServing":427.5,"servings":4,"per100g":{"Energy_KCal":202.75,"Water":59.57,"Protein":9.87,"TotalLipidFat":9.42,"Carbohydrate":19.14,"FiberTotalDietary":1.02,"SugarsTotal":0.37,"Cholesterol":27.98,"FattyAcids_totalSaturated":7.27,"FattyAcids_totalMonounsaturated":1.15,"FattyAcids_totalPolyunsaturated":0.27,"LinoleicAcid":0.04,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.01,"DPA_22_5n3":0.0,"DHA_22_6n3":0.03,"VitaminA_RAE":7.58,"Retinol":7.56,"Carotene_beta":0.26,"VitaminD":15.88,"VitaminE_alphaTocopherol":0.49,"VitaminK_phylloquinone":2.97,"VitaminC_totalAscorbicAcid":1.71,"Thiamin":0.12,"Riboflavin":0.1,"Niacin":1.7,"PantothenicAcid":0.26,"VitaminB6":0.22,"Folate_total":25.38,"Folate_food":11.87,"Folate_DFE":34.86,"FolicAcid":18.01,"VitaminB12":0.33,"Choline_total":38.38,"Betaine":0.12,"LuteinZeaxanthin":17.49,"Lycopene":0.01,"Calcium_Ca":37.43,"Iron_Fe":1.24,"Magnesium_Mg":28.92,"Phosphorus_P":157.09,"Potassium_K":406.79,"Sodium_Na":220.33,"Zinc_Zn":0.46,"Copper_Cu":0.08,"Manganese_Mn":0.17,"Selenium_Se":18.33,"Tryptophan":0.09,"Threonine":0.36,"Isoleucine":0.39,"Leucine":0.69,"Lysine":0.7,"Methionine":0.24,"Cystine":0.09,"Phenylalanine":0.36,"Tyrosine":0.29,"Valine":0.44,"Arginine":0.49,"Histidine":0.24,"Alanine":0.49,"AsparticAcid":0.82,"GlutamicAcid":1.52,"Glycine":0.4,"Proline":0.41,"Serine":0.37,"omega3":0.04,"omega6":0.04,"AddedSugars":0.0,"IntrinsicSugars":0.37},"addedSugars":0.0,"intrinsicSugars":1.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.75,"yieldFactorFat":1.0,"sources":[{"ndb":"15015","name":"Fish, cod, Atlantic, raw","grams":170.0},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":50.0},{"ndb":"14003","name":"Alcoholic beverage, beer, regular, all","grams":60.0},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":12.5},{"ndb":"18370","name":"Leavening agents, baking powder, double-acting, straight phosphate","grams":1.1},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"4513","name":"Vegetable oil, palm kernel","grams":20.2},{"ndb":"11353","name":"Potatoes, russet, flesh and skin, raw","grams":226.8},{"ndb":"4513","name":"Vegetable oil, palm kernel","grams":17.0},{"ndb":"2047","name":"Salt, table","grams":1.1},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"fish","section_label":"Battered Fish","prep_method":"raw","cook_method":"fried","cooking_method":"fried","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":1259.17,"raw_water_grams":835.18,"raw_fat_grams":92.29,"raw_protein_grams":149.22,"raw_carb_grams":162.98,"final_grams":1050.38},{"section_key":"chips","section_label":"Chips","prep_method":"raw","cook_method":"fried","cooking_method":"fried","cooking_method_normalized":"fried","yield_factor_water":0.55,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":980.28,"raw_water_grams":712.96,"raw_fat_grams":68.74,"raw_protein_grams":19.47,"raw_carb_grams":164.3,"final_grams":659.44}],"cookingMethod":"fried"},
+    recipeIngredients: [
+      { name: 'Seafood Fish and Chips', quantity: 'custom (g)', foodWord: 'FISHANDCHIPS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'cod fillet', quantity: '4 cod fillets, about 6 oz each', section: 'fish', ndbNo: '15015', portionDesc: 'g', portionGrams: 680.0 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '1-1/2 cups', section: 'fish', ndbNo: '20581', portionDesc: 'g', portionGrams: 200.0 },
+      { name: 'beer', quantity: '1 cup cold beer (lager)', section: 'fish', ndbNo: '14003', portionDesc: 'g', portionGrams: 240.0 },
+      { name: 'large egg', quantity: '1 large egg', section: 'fish', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'baking powder', quantity: '1 tsp', section: 'fish', ndbNo: '18370', portionDesc: 'g', portionGrams: 4.6 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'fish', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'fish', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'vegetable oil', quantity: '6 tbsp vegetable oil (absorbed into batter)', section: 'fish', ndbNo: '4513', portionDesc: 'g', portionGrams: 81.0 },
+      { name: 'russet potato', quantity: '2 lbs russet potatoes, cut into thick wedges', section: 'chips', ndbNo: '11353', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'vegetable oil', quantity: '5 tbsp vegetable oil (absorbed into chips)', section: 'chips', ndbNo: '4513', portionDesc: 'g', portionGrams: 68.0 },
+      { name: 'salt', quantity: '3/4 tsp', section: 'chips', ndbNo: '2047', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'chips', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Pat cod fillets dry; season with salt and pepper.',
+      'Make the batter: whisk flour, baking powder, 1/2 tsp salt, and 1/4 tsp pepper in a bowl. Add egg and cold beer; whisk to a smooth, thick batter.',
+      'Heat 2-3 inches of oil in a large heavy pot to 375°F (190°C). (Oil amounts in the ingredient list reflect only the absorbed portion; use enough to submerge the food.)',
+      'Cut potatoes into 1/2-inch-thick wedges. Fry in batches at 375°F for 7-8 minutes, turning halfway, until golden and crisp. Drain on paper towels; season with salt and pepper. Keep warm in a 200°F oven.',
+      'Dredge each cod fillet lightly in flour, then dip into beer batter and let excess drip off.',
+      'Fry battered fish in batches at 375°F for 4-5 minutes, turning once, until deep golden brown and cooked through. Drain; season with salt.',
+      'Serve fish and chips together with malt vinegar and lemon wedges (not included).'
+    ],
+    sections: [
+      { key: 'fish', label: 'Battered Fish', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'chips', label: 'Chips', cookingMethod: '', yieldFactorWater: 0.55 }
+    ],
   }
 ];
