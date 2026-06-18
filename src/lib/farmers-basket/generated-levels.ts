@@ -16283,5 +16283,50 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'kabobs', label: 'Shrimp Kabobs', cookingMethod: '', yieldFactorWater: 0.85 }
     ],
+  },
+  {
+    id: 'ENTR_106',
+    name: 'Seafood Sole Meunière',
+    category: 'entrees & main courses',
+    dietaryCategory: 'pesca',
+    levelNum: 341,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":315.2,"pro":21.5,"fat":21.5,"carb":8.7,"fib":0.4,"h2o":122.8,"sug":0.2,"perServing":{"cal":315.2,"pro":21.5,"fat":21.5,"carb":8.7,"fib":0.4,"h2o":122.8,"sug":0.2,"AddedSugars":0.0,"IntrinsicSugars":0.2},"micros":{"vitaminA":80.37,"vitaminC":1.53,"vitaminD":98.85,"vitaminE":0.68,"vitaminK":16.86,"vitaminB6":0.07,"vitaminB12":0.89,"thiamin":0.05,"riboflavin":0.05,"niacin":1.06,"folate":13.54,"calcium":24.08,"iron":0.52,"magnesium":18.92,"phosphorus":241.11,"potassium":166.77,"sodium":438.34,"zinc":0.36,"copper":0.02,"selenium":26.56,"cholesterol":68.26,"saturatedFat":6.81,"monoFat":3.46,"polyFat":0.56,"omega3":0.15,"omega6":0.13},"gramsPerServing":177.0,"servings":4,"per100g":{"Energy_KCal":178.05,"Water":69.36,"Protein":12.16,"TotalLipidFat":12.13,"Carbohydrate":4.91,"FiberTotalDietary":0.23,"SugarsTotal":0.14,"Cholesterol":68.26,"FattyAcids_totalSaturated":6.81,"FattyAcids_totalMonounsaturated":3.46,"FattyAcids_totalPolyunsaturated":0.56,"LinoleicAcid":0.13,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.07,"DPA_22_5n3":0.01,"DHA_22_6n3":0.05,"VitaminA_RAE":80.37,"Retinol":75.42,"Carotene_beta":59.66,"VitaminD":98.85,"VitaminE_alphaTocopherol":0.68,"VitaminK_phylloquinone":16.86,"VitaminC_totalAscorbicAcid":1.53,"Thiamin":0.05,"Riboflavin":0.05,"Niacin":1.06,"PantothenicAcid":0.17,"VitaminB6":0.07,"Folate_total":13.54,"Folate_food":6.74,"Folate_DFE":18.3,"FolicAcid":9.06,"VitaminB12":0.89,"Choline_total":56.3,"Betaine":0.01,"LuteinZeaxanthin":42.47,"Lycopene":0.01,"Calcium_Ca":24.08,"Iron_Fe":0.52,"Magnesium_Mg":18.92,"Phosphorus_P":241.11,"Potassium_K":166.77,"Sodium_Na":438.34,"Zinc_Zn":0.36,"Copper_Cu":0.02,"Manganese_Mn":0.06,"Selenium_Se":26.56,"Tryptophan":0.16,"Threonine":0.55,"Isoleucine":0.59,"Leucine":1.05,"Lysine":1.19,"Methionine":0.43,"Cystine":0.12,"Phenylalanine":0.5,"Tyrosine":0.46,"Valine":0.63,"Arginine":0.85,"Histidine":0.29,"Alanine":0.73,"AsparticAcid":1.31,"GlutamicAcid":2.17,"Glycine":0.61,"Proline":0.52,"Serine":0.56,"omega3":0.15,"omega6":0.13,"AddedSugars":0.0,"IntrinsicSugars":0.14},"addedSugars":0.0,"intrinsicSugars":0.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.82,"yieldFactorFat":1.0,"sources":[{"ndb":"15028","name":"Fish, flatfish (flounder and sole species), raw","grams":163.0},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":10.4},{"ndb":"1003","name":"Butter oil, anhydrous","grams":9.6},{"ndb":"1145","name":"Butter, without salt","grams":10.7},{"ndb":"9152","name":"Lemon juice, raw","grams":7.5},{"ndb":"11297","name":"Parsley, fresh","grams":1.9},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"meuniere","section_label":"Meunière","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":815.85,"raw_water_grams":598.93,"raw_fat_grams":85.9,"raw_protein_grams":86.08,"raw_carb_grams":34.74,"final_grams":708.04}],"cookingMethod":"pan grilled"},
+    recipeIngredients: [
+      { name: 'Seafood Sole Meunière', quantity: 'custom (g)', foodWord: 'SOLEMEUNIERE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'sole or flounder fillet', quantity: '4 fillets sole or flounder fillet', section: 'meuniere', ndbNo: '15028', portionDesc: 'g', portionGrams: 652.0 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '1/3 cup all-purpose enriched unbleached white flour, for dredging', section: 'meuniere', ndbNo: '20581', portionDesc: 'g', portionGrams: 41.67 },
+      { name: 'ghee', quantity: '3 tbsp ghee, for searing', section: 'meuniere', ndbNo: '1003', portionDesc: 'g', portionGrams: 38.4 },
+      { name: 'unsalted butter', quantity: '3 tbsp unsalted butter, for the sauce', section: 'meuniere', ndbNo: '1145', portionDesc: 'g', portionGrams: 42.6 },
+      { name: 'lemon juice', quantity: '2 tbsp fresh lemon juice', section: 'meuniere', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'fresh parsley', quantity: '2 tbsp fresh parsley, finely chopped', section: 'meuniere', ndbNo: '11297', portionDesc: 'g', portionGrams: 7.6 },
+      { name: 'salt', quantity: '1/2 tsp salt', section: 'meuniere', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp ground black pepper', section: 'meuniere', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Pat the sole or flounder fillets dry with paper towels. Season both sides with salt and ground black pepper.',
+      'Place the all-purpose flour in a shallow dish. Dredge each fillet in the flour, shaking off any excess.',
+      'Heat 3 tablespoons of ghee in a large skillet over medium-high heat until shimmering.',
+      'Working in batches if needed, cook the fillets until golden and cooked through, 2–3 minutes per side. Transfer to a warm serving plate.',
+      'Reduce heat to medium. Add the 3 tablespoons of butter to the pan and swirl until golden-brown and nutty-smelling, about 1–2 minutes.',
+      'Remove from heat. Add the lemon juice and fresh parsley; the butter will foam briefly — swirl to combine.',
+      'Pour the butter sauce over the fillets and serve immediately.'
+    ],
+    sections: [
+      { key: 'meuniere', label: 'Meunière', cookingMethod: '', yieldFactorWater: 0.82 }
+    ],
   }
 ];
