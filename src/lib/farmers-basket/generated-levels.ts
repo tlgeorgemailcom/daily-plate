@@ -16540,5 +16540,51 @@ export const LEVELS: Level[] = [
       { key: 'rice', label: 'Saffron Rice', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'paella', label: 'Seafood and Sofrito', cookingMethod: '', yieldFactorWater: 0.85 }
     ],
+  },
+  {
+    id: 'ENTR_111',
+    name: 'Seafood Shrimp Scampi',
+    category: 'entrees & main courses',
+    dietaryCategory: 'pesca',
+    levelNum: 346,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule G',
+    nutritionJson: {"cal":295.8,"pro":23.5,"fat":19.0,"carb":3.8,"fib":0.4,"h2o":107.7,"sug":0.6,"perServing":{"cal":295.8,"pro":23.5,"fat":19.0,"carb":3.8,"fib":0.4,"h2o":107.7,"sug":0.6,"AddedSugars":0.0,"IntrinsicSugars":0.6},"micros":{"vitaminA":59.15,"vitaminC":3.14,"vitaminD":0.0,"vitaminE":0.67,"vitaminK":38.48,"vitaminB6":0.05,"vitaminB12":0.01,"thiamin":0.01,"riboflavin":0.01,"niacin":0.08,"folate":3.98,"calcium":60.6,"iron":0.68,"magnesium":29.8,"phosphorus":166.1,"potassium":240.96,"sodium":271.54,"zinc":1.06,"copper":0.3,"selenium":0.67,"cholesterol":133.87,"saturatedFat":5.17,"monoFat":5.27,"polyFat":0.64,"omega3":0.04,"omega6":0.17},"gramsPerServing":159.2,"servings":4,"per100g":{"Energy_KCal":185.85,"Water":67.69,"Protein":14.76,"TotalLipidFat":11.94,"Carbohydrate":2.36,"FiberTotalDietary":0.23,"SugarsTotal":0.38,"Cholesterol":133.87,"FattyAcids_totalSaturated":5.17,"FattyAcids_totalMonounsaturated":5.27,"FattyAcids_totalPolyunsaturated":0.64,"LinoleicAcid":0.17,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.01,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":59.15,"Retinol":47.81,"Carotene_beta":132.91,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.67,"VitaminK_phylloquinone":38.48,"VitaminC_totalAscorbicAcid":3.14,"Thiamin":0.01,"Riboflavin":0.01,"Niacin":0.08,"PantothenicAcid":0.05,"VitaminB6":0.05,"Folate_total":3.98,"Folate_food":3.98,"Folate_DFE":3.98,"FolicAcid":0.0,"VitaminB12":0.01,"Choline_total":3.6,"Betaine":0.01,"LuteinZeaxanthin":99.52,"Lycopene":0.01,"Calcium_Ca":60.6,"Iron_Fe":0.68,"Magnesium_Mg":29.8,"Phosphorus_P":166.1,"Potassium_K":240.96,"Sodium_Na":271.54,"Zinc_Zn":1.06,"Copper_Cu":0.3,"Manganese_Mn":0.12,"Selenium_Se":0.67,"Tryptophan":0.0,"Threonine":0.01,"Isoleucine":0.02,"Leucine":0.02,"Lysine":0.02,"Methionine":0.01,"Cystine":0.0,"Phenylalanine":0.01,"Tyrosine":0.01,"Valine":0.02,"Arginine":0.03,"Histidine":0.01,"Alanine":0.01,"AsparticAcid":0.03,"GlutamicAcid":0.05,"Glycine":0.01,"Proline":0.02,"Serine":0.01,"omega3":0.04,"omega6":0.17,"AddedSugars":0.0,"IntrinsicSugars":0.38},"addedSugars":0.0,"intrinsicSugars":0.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.82,"yieldFactorFat":1.0,"sources":[{"ndb":"15270","name":"Crustaceans, shrimp, raw (not previously frozen)","grams":113.4},{"ndb":"1145","name":"Butter, without salt","grams":14.2},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"11215","name":"Garlic, raw","grams":6.0},{"ndb":"14106","name":"Alcoholic beverage, wine, table, white","grams":30.0},{"ndb":"9152","name":"Lemon juice, raw","grams":7.5},{"ndb":"11297","name":"Parsley, fresh","grams":3.8},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"scampi","section_label":"Shrimp Scampi","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":731.18,"raw_water_grams":525.49,"raw_fat_grams":75.99,"raw_protein_grams":93.99,"raw_carb_grams":15.0,"final_grams":636.59}],"cookingMethod":"pan grilled"},
+    recipeIngredients: [
+      { name: 'Seafood Shrimp Scampi', quantity: 'custom (g)', foodWord: 'SHRIMPSCAMPI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'shrimp', quantity: '1 lb shrimp, peeled and deveined', section: 'scampi', ndbNo: '15270', portionDesc: 'g', portionGrams: 453.6 },
+      { name: 'unsalted butter', quantity: '4 tbsp', section: 'scampi', ndbNo: '1145', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'olive oil', quantity: '2 tbsp olive oil', section: 'scampi', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'garlic', quantity: '8 cloves garlic, minced', section: 'scampi', ndbNo: '11215', portionDesc: 'g', portionGrams: 24.0 },
+      { name: 'white wine', quantity: '1/2 cup dry white wine', section: 'scampi', ndbNo: '14106', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'lemon juice', quantity: '2 tbsp', section: 'scampi', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'fresh parsley', quantity: '4 tbsp fresh parsley, chopped', section: 'scampi', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.2 },
+      { name: 'red pepper flakes', quantity: '1/4 tsp', section: 'scampi', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.9 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'scampi', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'scampi', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Pat shrimp dry with paper towels. Season with salt and pepper.',
+      'Heat olive oil in a large skillet over medium-high heat. Add shrimp in a single layer; cook 1-2 minutes per side until pink and just opaque. Transfer to a plate.',
+      'Reduce heat to medium. Add butter to the skillet. Once foamy, add garlic and red pepper flakes; cook 1 minute until fragrant.',
+      'Add white wine; simmer 2-3 minutes until reduced by half. Stir in lemon juice.',
+      'Return shrimp to the pan; toss to coat and heat through, about 1 minute.',
+      'Remove from heat; scatter with parsley. Serve immediately over pasta or with crusty bread (not included).'
+    ],
+    sections: [
+      { key: 'scampi', label: 'Shrimp Scampi', cookingMethod: '', yieldFactorWater: 0.82 }
+    ],
   }
 ];

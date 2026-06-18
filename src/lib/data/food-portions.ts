@@ -54086,6 +54086,34 @@ export const FOODS: Food[] = [
         "gm": 170.0
       }
     ]
+  },
+  {
+    "word": "SHRIMPSCAMPI",
+    "display": "Shrimp Scampi",
+    "groups": [
+      "prepared"
+    ],
+    "ndb": "",
+    "desc": "Shrimp scampi, prepared from recipe",
+    "cal": 185.8,
+    "pro": 14.76,
+    "fat": 11.94,
+    "carb": 2.36,
+    "fib": 0.23,
+    "h2o": 67.69,
+    "sug": 0.38,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "1 serving",
+        "gm": 159.15
+      }
+    ]
   }
 ];
 
