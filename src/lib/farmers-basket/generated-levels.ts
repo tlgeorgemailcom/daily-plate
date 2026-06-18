@@ -17105,5 +17105,60 @@ export const LEVELS: Level[] = [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'peppers', label: 'Stuffed Peppers', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'ENTR_122',
+    name: 'Vegetarian Stuffed Poblano Peppers',
+    category: 'entrees & main courses',
+    dietaryCategory: 'veggie',
+    levelNum: 357,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '',
+    prepTime: '',
+    linkType: 'ingredient',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":466.4,"pro":17.3,"fat":14.5,"carb":69.6,"fib":9.1,"h2o":335.6,"sug":8.4,"perServing":{"cal":466.4,"pro":17.3,"fat":14.5,"carb":69.6,"fib":9.1,"h2o":335.6,"sug":8.4,"AddedSugars":0.0,"IntrinsicSugars":8.4},"micros":{"vitaminA":31.3,"vitaminC":14.01,"vitaminD":1.46,"vitaminE":0.44,"vitaminK":5.46,"vitaminB6":0.09,"vitaminB12":0.06,"thiamin":0.08,"riboflavin":0.05,"niacin":0.67,"folate":35.83,"calcium":60.57,"iron":0.89,"magnesium":19.21,"phosphorus":73.15,"potassium":172.39,"sodium":181.39,"zinc":0.59,"copper":0.08,"selenium":3.62,"cholesterol":6.33,"saturatedFat":1.39,"monoFat":1.18,"polyFat":0.25,"omega3":0.0,"omega6":0.0},"gramsPerServing":441.9,"servings":4,"per100g":{"Energy_KCal":105.55,"Water":75.94,"Protein":3.91,"TotalLipidFat":3.29,"Carbohydrate":15.76,"FiberTotalDietary":2.06,"SugarsTotal":1.89,"Cholesterol":6.33,"FattyAcids_totalSaturated":1.39,"FattyAcids_totalMonounsaturated":1.18,"FattyAcids_totalPolyunsaturated":0.25,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":31.3,"Retinol":17.93,"Carotene_beta":137.58,"VitaminD":1.46,"VitaminE_alphaTocopherol":0.44,"VitaminK_phylloquinone":5.46,"VitaminC_totalAscorbicAcid":14.01,"Thiamin":0.08,"Riboflavin":0.05,"Niacin":0.67,"PantothenicAcid":0.22,"VitaminB6":0.09,"Folate_total":35.83,"Folate_food":20.66,"Folate_DFE":46.45,"FolicAcid":23.34,"VitaminB12":0.06,"Choline_total":9.6,"Betaine":0.11,"LuteinZeaxanthin":135.35,"Lycopene":304.43,"Calcium_Ca":60.57,"Iron_Fe":0.89,"Magnesium_Mg":19.21,"Phosphorus_P":73.15,"Potassium_K":172.39,"Sodium_Na":181.39,"Zinc_Zn":0.59,"Copper_Cu":0.08,"Manganese_Mn":0.24,"Selenium_Se":3.62,"Tryptophan":0.06,"Threonine":0.15,"Isoleucine":0.17,"Leucine":0.3,"Lysine":0.18,"Methionine":0.07,"Cystine":0.03,"Phenylalanine":0.2,"Tyrosine":0.14,"Valine":0.21,"Arginine":0.18,"Histidine":0.09,"Alanine":0.17,"AsparticAcid":0.39,"GlutamicAcid":0.78,"Glycine":0.13,"Proline":0.27,"Serine":0.17,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":1.89},"addedSugars":0.0,"intrinsicSugars":8.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20044","name":"Rice, white, long-grain, regular, raw, enriched","grams":46.2},{"ndb":"14411","name":"Water, tap, drinking","grams":88.9},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"11282","name":"Onions, raw","grams":37.5},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":61.5},{"ndb":"16015","name":"Beans, black, mature seeds, cooked, boiled, without salt","grams":43.0},{"ndb":"11168","name":"Corn, sweet, yellow, cooked, boiled, drained, without salt","grams":38.5},{"ndb":"2014","name":"Spices, cumin seed","grams":0.5},{"ndb":"2009","name":"","grams":0.7},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"9160","name":"Lime juice, raw","grams":7.5},{"ndb":"11165","name":"Coriander (cilantro) leaves, raw","grams":2.0},{"ndb":"11333","name":"Peppers, sweet, green, raw","grams":119.0},{"ndb":"1009","name":"Cheese, cheddar","grams":28.2}],"sections":[{"section_key":"rice","section_label":"Rice","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.9434389679863646,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":540.5,"raw_water_grams":376.64,"raw_fat_grams":1.22,"raw_protein_grams":13.19,"raw_carb_grams":147.91,"final_grams":519.2},{"section_key":"poblanos","section_label":"Stuffed Poblanos","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":14,"raw_grams":1382.88,"raw_water_grams":1121.48,"raw_fat_grams":56.89,"raw_protein_grams":55.89,"raw_carb_grams":130.64,"final_grams":1248.3}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Vegetarian Stuffed Poblano Peppers', quantity: 'custom (g)', foodWord: 'STUFFEDPOBLANOS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white rice (dry)', quantity: '1 cup', section: 'rice', ndbNo: '20044', portionDesc: 'g', portionGrams: 185.0 },
+      { name: 'water', quantity: '1½ cups', section: 'rice', ndbNo: '14411', portionDesc: 'g', portionGrams: 355.5 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'poblanos', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'onion', quantity: '1 medium onion, diced', section: 'poblanos', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'poblanos', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'tomato', quantity: '2 medium tomatoes, diced', section: 'poblanos', ndbNo: '11529', portionDesc: 'g', portionGrams: 246.0 },
+      { name: 'black beans', quantity: '1 cup black beans, drained', section: 'poblanos', ndbNo: '16015', portionDesc: 'g', portionGrams: 172.0 },
+      { name: 'sweet corn', quantity: '1 cup sweet corn', section: 'poblanos', ndbNo: '11168', portionDesc: 'g', portionGrams: 154.0 },
+      { name: 'ground cumin', quantity: '1 tsp ground cumin', section: 'poblanos', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'chili powder', quantity: '1 tsp chili powder', section: 'poblanos', ndbNo: '2009', portionDesc: 'g', portionGrams: 2.7 },
+      { name: 'salt', quantity: '1 tsp', section: 'poblanos', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp ground black pepper', section: 'poblanos', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'lime juice', quantity: '2 tbsp', section: 'poblanos', ndbNo: '9160', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'fresh cilantro', quantity: '½ cup fresh cilantro, chopped', section: 'poblanos', ndbNo: '11165', portionDesc: 'g', portionGrams: 8.0 },
+      { name: 'poblano pepper', quantity: '4 medium poblano peppers, halved and seeded', section: 'poblanos', ndbNo: '11333', portionDesc: 'g', portionGrams: 476.0 },
+      { name: 'Cheddar cheese', quantity: '4 oz Cheddar cheese, shredded', section: 'poblanos', ndbNo: '1009', portionDesc: 'g', portionGrams: 113.0 }
+    ],
+    recipeInstructions: [
+      'Preheat oven to 375°F (190°C). Rinse the rice until water is clear and combine with 1½ cups of water in a medium saucepan. If rice is rinsed, reduce water by 2 tablespoons. Bring to a boil, reduce heat to low, cover, and cook for 18 minutes. Remove from heat and let stand, covered, for 5 minutes. Fluff with a fork.',
+      'Heat the olive oil in a large skillet over medium heat. Add the onion and cook for 4 to 5 minutes, stirring often, until softened.',
+      'Add the garlic and cook for 1 minute until fragrant.',
+      'Add the tomatoes, black beans, sweet corn, ground cumin, chili powder, salt, and ground black pepper. Cook for 4 to 5 minutes, stirring often, until the tomatoes soften and the mixture comes together. Remove from heat and stir in the lime juice, cilantro, and cooked rice.',
+      'Cut the poblano peppers in half lengthwise and remove the seeds and membranes. Arrange cut-side up in a 9×13-inch baking dish.',
+      'Spoon the rice and bean filling into each pepper half, mounding slightly. Sprinkle the shredded Cheddar cheese evenly over the tops.',
+      'Cover the baking dish tightly with aluminum foil and bake for 30 minutes. Uncover and bake for an additional 10 to 15 minutes, until the peppers are tender and the cheese is melted and lightly browned.',
+      'Let cool for 5 minutes before serving. Serve with sour cream or salsa on the side (not included).'
+    ],
+    sections: [
+      { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'poblanos', label: 'Stuffed Poblanos', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];
