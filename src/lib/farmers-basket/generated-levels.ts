@@ -16366,7 +16366,7 @@ export const LEVELS: Level[] = [
       { name: 'sesame seeds', quantity: '1 tbsp sesame seeds, toasted', section: 'poke', ndbNo: '12024', portionDesc: 'g', portionGrams: 9.0 }
     ],
     recipeInstructions: [
-      'Rinse the short-grain white rice until the water runs clear. Combine with the water in a saucepan, bring to a boil, then reduce heat to low, cover, and simmer until absorbed, 18–20 minutes. Remove from heat and let steam, covered, for 5 minutes. Fluff and cool slightly.',
+      'Rinse the short-grain white rice until the water runs clear. If rice is rinsed, reduce water by 2 tablespoons. Combine with the water in a saucepan, bring to a boil, then reduce heat to low, cover, and simmer until absorbed, 18–20 minutes. Remove from heat and let steam, covered, for 5 minutes. Fluff and cool slightly.',
       'While the rice cooks, whisk together the tamari, sesame oil, lime juice, honey, and grated ginger in a medium bowl.',
       'Add the cubed tuna and toss gently to coat. Let marinate for 10 minutes at room temperature.',
       'Divide the warm rice among 4 bowls.',
