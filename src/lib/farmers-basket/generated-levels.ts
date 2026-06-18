@@ -17147,13 +17147,13 @@ export const LEVELS: Level[] = [
       { name: 'Cheddar cheese', quantity: '4 oz Cheddar cheese, shredded', section: 'poblanos', ndbNo: '1009', portionDesc: 'g', portionGrams: 113.0 }
     ],
     recipeInstructions: [
-      'Preheat oven to 375°F (190°C). Rinse the rice until water is clear and combine with 1½ cups of water in a medium saucepan. If rice is rinsed, reduce water by 2 tablespoons. Bring to a boil, reduce heat to low, cover, and cook for 18 minutes. Remove from heat and let stand, covered, for 5 minutes. Fluff with a fork.',
+      'Set the oven to broil on high. Rinse the rice until water is clear and combine with 1½ cups of water in a medium saucepan. Bring to a boil, reduce heat to low, cover, and cook for 18 minutes. Remove from heat and let stand, covered, for 5 minutes. Fluff with a fork.',
+      'While the rice cooks, prepare the peppers: cut each poblano in half lengthwise and remove the seeds and membranes. Arrange the halves skin-side up in a 9×13-inch baking dish. Broil on high for about 7 minutes until the skin begins to char and blister. Flip the peppers cut-side up and broil for 7 minutes more. Remove from the oven and set aside. Reduce the oven temperature to 375°F (190°C).',
       'Heat the olive oil in a large skillet over medium heat. Add the onion and cook for 4 to 5 minutes, stirring often, until softened.',
       'Add the garlic and cook for 1 minute until fragrant.',
       'Add the tomatoes, black beans, sweet corn, ground cumin, chili powder, salt, and ground black pepper. Cook for 4 to 5 minutes, stirring often, until the tomatoes soften and the mixture comes together. Remove from heat and stir in the lime juice, cilantro, and cooked rice.',
-      'Cut the poblano peppers in half lengthwise and remove the seeds and membranes. Arrange cut-side up in a 9×13-inch baking dish.',
-      'Spoon the rice and bean filling into each pepper half, mounding slightly. Sprinkle the shredded Cheddar cheese evenly over the tops.',
-      'Cover the baking dish tightly with aluminum foil and bake for 30 minutes. Uncover and bake for an additional 10 to 15 minutes, until the peppers are tender and the cheese is melted and lightly browned.',
+      'Spoon the rice and bean filling into each broiled pepper half, mounding slightly. Sprinkle the shredded Cheddar cheese evenly over the tops.',
+      'Bake uncovered at 375°F for 15 to 20 minutes, until the filling is heated through and the cheese is melted and lightly browned.',
       'Let cool for 5 minutes before serving. Serve with sour cream or salsa on the side (not included).'
     ],
     sections: [
