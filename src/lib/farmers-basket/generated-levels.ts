@@ -16484,5 +16484,61 @@ export const LEVELS: Level[] = [
       { key: 'fish', label: 'Battered Fish', cookingMethod: '', yieldFactorWater: 0.75 },
       { key: 'chips', label: 'Chips', cookingMethod: '', yieldFactorWater: 0.55 }
     ],
+  },
+  {
+    id: 'ENTR_110',
+    name: 'Seafood Paella',
+    category: 'entrees & main courses',
+    dietaryCategory: 'pesca',
+    levelNum: 345,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":602.5,"pro":33.9,"fat":17.3,"carb":77.8,"fib":4.0,"h2o":392.5,"sug":8.4,"perServing":{"cal":602.5,"pro":33.9,"fat":17.3,"carb":77.8,"fib":4.0,"h2o":392.5,"sug":8.4,"AddedSugars":0.0,"IntrinsicSugars":8.4},"micros":{"vitaminA":21.31,"vitaminC":5.74,"vitaminD":0.15,"vitaminE":0.63,"vitaminK":8.11,"vitaminB6":0.08,"vitaminB12":1.66,"thiamin":0.04,"riboflavin":0.04,"niacin":0.62,"folate":9.83,"calcium":26.33,"iron":1.02,"magnesium":19.38,"phosphorus":93.72,"potassium":186.88,"sodium":274.7,"zinc":0.58,"copper":0.12,"selenium":9.41,"cholesterol":26.68,"saturatedFat":0.55,"monoFat":2.01,"polyFat":0.33,"omega3":0.04,"omega6":0.01},"gramsPerServing":529.8,"servings":4,"per100g":{"Energy_KCal":113.71,"Water":74.08,"Protein":6.4,"TotalLipidFat":3.26,"Carbohydrate":14.68,"FiberTotalDietary":0.76,"SugarsTotal":1.59,"Cholesterol":26.68,"FattyAcids_totalSaturated":0.55,"FattyAcids_totalMonounsaturated":2.01,"FattyAcids_totalPolyunsaturated":0.33,"LinoleicAcid":0.01,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.02,"DPA_22_5n3":0.0,"DHA_22_6n3":0.02,"VitaminA_RAE":21.31,"Retinol":8.89,"Carotene_beta":133.57,"VitaminD":0.15,"VitaminE_alphaTocopherol":0.63,"VitaminK_phylloquinone":8.11,"VitaminC_totalAscorbicAcid":5.74,"Thiamin":0.04,"Riboflavin":0.04,"Niacin":0.62,"PantothenicAcid":0.25,"VitaminB6":0.08,"Folate_total":9.83,"Folate_food":9.83,"Folate_DFE":9.83,"FolicAcid":0.0,"VitaminB12":1.66,"Choline_total":17.76,"Betaine":0.03,"LuteinZeaxanthin":50.93,"Lycopene":792.2,"Calcium_Ca":26.33,"Iron_Fe":1.02,"Magnesium_Mg":19.38,"Phosphorus_P":93.72,"Potassium_K":186.88,"Sodium_Na":274.7,"Zinc_Zn":0.58,"Copper_Cu":0.12,"Manganese_Mn":0.5,"Selenium_Se":9.41,"Tryptophan":0.06,"Threonine":0.22,"Isoleucine":0.23,"Leucine":0.41,"Lysine":0.38,"Methionine":0.13,"Cystine":0.06,"Phenylalanine":0.21,"Tyrosine":0.18,"Valine":0.27,"Arginine":0.37,"Histidine":0.12,"Alanine":0.31,"AsparticAcid":0.57,"GlutamicAcid":0.92,"Glycine":0.25,"Proline":0.2,"Serine":0.24,"omega3":0.04,"omega6":0.01,"AddedSugars":0.0,"IntrinsicSugars":1.59},"addedSugars":0.0,"intrinsicSugars":8.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.85,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Fish Stock","grams":180.0},{"ndb":"20452","name":"Rice, white, short-grain, raw, unenriched","grams":75.0},{"ndb":"2037","name":"Spices, saffron","grams":0.1},{"ndb":"2028","name":"Spices, paprika","grams":0.6},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":13.6},{"ndb":"11282","name":"Onions, raw","grams":37.5},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11821","name":"Peppers, sweet, red, raw","grams":29.8},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":102.8},{"ndb":"15270","name":"Crustaceans, shrimp, raw (not previously frozen)","grams":56.7},{"ndb":"15164","name":"Mollusks, mussel, blue, raw","grams":42.5},{"ndb":"15157","name":"Mollusks, clam, mixed species, raw","grams":42.5},{"ndb":"9152","name":"Lemon juice, raw","grams":3.8},{"ndb":"11297","name":"Parsley, fresh","grams":1.9},{"ndb":"2047","name":"Salt, table","grams":1.1},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"rice","section_label":"Saffron Rice","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.8848556807302435,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":1025.5,"raw_water_grams":729.2,"raw_fat_grams":6.33,"raw_protein_grams":34.1,"raw_carb_grams":241.7,"final_grams":941.54},{"section_key":"paella","section_label":"Seafood and Sofrito","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":12,"raw_grams":1340.88,"raw_water_grams":1087.79,"raw_fat_grams":62.83,"raw_protein_grams":101.43,"raw_carb_grams":69.34,"final_grams":1177.71}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Seafood Paella', quantity: 'custom (g)', foodWord: 'PAELLA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Fish Stock', quantity: '3 cups Fish Stock (recipe)', section: 'rice', foodWord: 'FISHBROTH', ndbNo: '6963', portionDesc: 'g', portionGrams: 720.0, isDish: true, componentRef: 'STOCK_006' },
+      { name: 'short-grain white rice (dry)', quantity: '1-1/2 cups', section: 'rice', ndbNo: '20452', portionDesc: 'g', portionGrams: 300.0 },
+      { name: 'saffron', quantity: '1/4 tsp saffron threads', section: 'rice', ndbNo: '2037', portionDesc: 'g', portionGrams: 0.2 },
+      { name: 'paprika', quantity: '1 tsp smoked paprika', section: 'rice', ndbNo: '2028', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'rice', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'olive oil', quantity: '4 tbsp olive oil', section: 'paella', ndbNo: '4053', portionDesc: 'g', portionGrams: 54.4 },
+      { name: 'onion', quantity: '1 medium onion, diced', section: 'paella', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'paella', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'red bell pepper', quantity: '1 medium red bell pepper, diced', section: 'paella', ndbNo: '11821', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'crushed tomatoes', quantity: 'one 14.5-oz can', section: 'paella', ndbNo: '11693', portionDesc: 'g', portionGrams: 411.0 },
+      { name: 'shrimp', quantity: '1/2 lb shrimp, peeled and deveined', section: 'paella', ndbNo: '15270', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'mussels', quantity: '1 lb mussels, scrubbed and debearded', section: 'paella', ndbNo: '15164', portionDesc: 'g', portionGrams: 170.0 },
+      { name: 'clams', quantity: '1 lb clams in shell, scrubbed', section: 'paella', ndbNo: '15157', portionDesc: 'g', portionGrams: 170.0 },
+      { name: 'lemon juice', quantity: '1 tbsp', section: 'paella', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'fresh parsley', quantity: '2 tbsp fresh parsley, chopped', section: 'paella', ndbNo: '11297', portionDesc: 'g', portionGrams: 7.6 },
+      { name: 'salt', quantity: '3/4 tsp', section: 'paella', ndbNo: '2047', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'paella', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Prepare or have ready 3 cups of Fish Stock (see the Fish Stock recipe).',
+      'Heat olive oil in a large paella pan or wide skillet over medium heat. Add onion and red bell pepper; cook 6-7 minutes until softened.',
+      'Add garlic; cook 1 minute until fragrant. Add crushed tomatoes; cook 3-4 minutes, stirring, until mixture thickens slightly.',
+      'Pour in fish stock. Stir in saffron and smoked paprika; season with salt and bring to a boil.',
+      'Add the rice; stir once to distribute evenly. Reduce heat to medium-low and cook uncovered for 10-12 minutes or until most of the liquid is absorbed, gently shaking the pan occasionally -- do not stir.',
+      'Arrange shrimp, mussels, and clams over the rice; press lightly into the pan. Cover and cook 8-10 minutes, turning the shrimp halfway through, until rice has absorbed the liquid, shrimp are opaque, and shellfish have opened.',
+      'Discard any mussels or clams that have not opened. Squeeze lemon juice over the top and scatter with parsley. Season to taste.',
+      'Remove from heat; rest 5 minutes before serving directly from the pan.'
+    ],
+    sections: [
+      { key: 'rice', label: 'Saffron Rice', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'paella', label: 'Seafood and Sofrito', cookingMethod: '', yieldFactorWater: 0.85 }
+    ],
   }
 ];
