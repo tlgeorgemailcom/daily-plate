@@ -53987,6 +53987,105 @@ export const FOODS: Food[] = [
         "gm": 155.0
       }
     ]
+  },
+  {
+    "word": "TUNARAW",
+    "display": "Tuna, raw",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "15127",
+    "desc": "Fish, tuna, fresh, yellowfin, raw",
+    "cal": 109.0,
+    "pro": 24.4,
+    "fat": 0.49,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 74.03,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "oz",
+        "gm": 85.0
+      },
+      {
+        "amt": 6.0,
+        "desc": "oz",
+        "gm": 170.0
+      }
+    ]
+  },
+  {
+    "word": "CLAMRAW",
+    "display": "Clam, raw",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "15157",
+    "desc": "Mollusks, clam, mixed species, raw",
+    "cal": 86.0,
+    "pro": 14.67,
+    "fat": 0.96,
+    "carb": 3.57,
+    "fib": 0.0,
+    "h2o": 78.98,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "oz",
+        "gm": 85.0
+      },
+      {
+        "amt": 6.0,
+        "desc": "oz",
+        "gm": 170.0
+      }
+    ]
+  },
+  {
+    "word": "MUSSELRAW",
+    "display": "Mussel, raw",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "15164",
+    "desc": "Mollusks, mussel, blue, raw",
+    "cal": 86.0,
+    "pro": 11.9,
+    "fat": 2.24,
+    "carb": 3.69,
+    "fib": 0.0,
+    "h2o": 80.58,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "oz",
+        "gm": 85.0
+      },
+      {
+        "amt": 6.0,
+        "desc": "oz",
+        "gm": 170.0
+      }
+    ]
   }
 ];
 

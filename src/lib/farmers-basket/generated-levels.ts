@@ -16378,5 +16378,61 @@ export const LEVELS: Level[] = [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'poke', label: 'Poke', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'ENTR_108',
+    name: 'Seafood Cioppino',
+    category: 'entrees & main courses',
+    dietaryCategory: 'pesca',
+    levelNum: 343,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":377.3,"pro":38.3,"fat":10.0,"carb":25.7,"fib":5.5,"h2o":452.0,"sug":11.8,"perServing":{"cal":377.3,"pro":38.3,"fat":10.0,"carb":25.7,"fib":5.5,"h2o":452.0,"sug":11.8,"AddedSugars":0.0,"IntrinsicSugars":11.8},"micros":{"vitaminA":18.02,"vitaminC":3.0,"vitaminD":3.88,"vitaminE":0.82,"vitaminK":10.12,"vitaminB6":0.07,"vitaminB12":1.67,"thiamin":0.04,"riboflavin":0.05,"niacin":0.62,"folate":8.93,"calcium":30.29,"iron":0.98,"magnesium":18.79,"phosphorus":85.77,"potassium":211.08,"sodium":239.43,"zinc":0.45,"copper":0.11,"selenium":10.37,"cholesterol":27.56,"saturatedFat":0.3,"monoFat":1.02,"polyFat":0.25,"omega3":0.05,"omega6":0.01},"gramsPerServing":539.9,"servings":4,"per100g":{"Energy_KCal":69.89,"Water":83.73,"Protein":7.1,"TotalLipidFat":1.85,"Carbohydrate":4.77,"FiberTotalDietary":1.02,"SugarsTotal":2.19,"Cholesterol":27.56,"FattyAcids_totalSaturated":0.3,"FattyAcids_totalMonounsaturated":1.02,"FattyAcids_totalPolyunsaturated":0.25,"LinoleicAcid":0.01,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.02,"DPA_22_5n3":0.0,"DHA_22_6n3":0.03,"VitaminA_RAE":18.02,"Retinol":10.93,"Carotene_beta":82.83,"VitaminD":3.88,"VitaminE_alphaTocopherol":0.82,"VitaminK_phylloquinone":10.12,"VitaminC_totalAscorbicAcid":3.0,"Thiamin":0.04,"Riboflavin":0.05,"Niacin":0.62,"PantothenicAcid":0.14,"VitaminB6":0.07,"Folate_total":8.93,"Folate_food":8.93,"Folate_DFE":8.93,"FolicAcid":0.0,"VitaminB12":1.67,"Choline_total":21.84,"Betaine":0.03,"LuteinZeaxanthin":73.9,"Lycopene":1749.36,"Calcium_Ca":30.29,"Iron_Fe":0.98,"Magnesium_Mg":18.79,"Phosphorus_P":85.77,"Potassium_K":211.08,"Sodium_Na":239.43,"Zinc_Zn":0.45,"Copper_Cu":0.11,"Manganese_Mn":0.38,"Selenium_Se":10.37,"Tryptophan":0.06,"Threonine":0.22,"Isoleucine":0.22,"Leucine":0.39,"Lysine":0.41,"Methionine":0.13,"Cystine":0.06,"Phenylalanine":0.19,"Tyrosine":0.17,"Valine":0.25,"Arginine":0.33,"Histidine":0.12,"Alanine":0.29,"AsparticAcid":0.57,"GlutamicAcid":0.92,"Glycine":0.24,"Proline":0.18,"Serine":0.22,"omega3":0.05,"omega6":0.01,"AddedSugars":0.0,"IntrinsicSugars":2.19},"addedSugars":0.0,"intrinsicSugars":11.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.88,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Fish Stock","grams":60.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"11282","name":"Onions, raw","grams":37.5},{"ndb":"11143","name":"Celery, raw","grams":18.8},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":205.5},{"ndb":"14106","name":"Alcoholic beverage, wine, table, white","grams":58.8},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.3},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.2},{"ndb":"2003","name":"Spices, basil, dried","grams":0.2},{"ndb":"2049","name":"Thyme, fresh","grams":0.6},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"15015","name":"Fish, cod, Atlantic, raw","grams":56.7},{"ndb":"15270","name":"Crustaceans, shrimp, raw (not previously frozen)","grams":56.7},{"ndb":"15157","name":"Mollusks, clam, mixed species, raw","grams":42.5},{"ndb":"15164","name":"Mollusks, mussel, blue, raw","grams":42.5},{"ndb":"11297","name":"Parsley, fresh","grams":1.9}],"sections":[{"section_key":"fish_stock","section_label":"Fish Stock","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":240.0,"raw_water_grams":229.68,"raw_fat_grams":1.49,"raw_protein_grams":4.75,"raw_carb_grams":0.96,"final_grams":240.0},{"section_key":"stew","section_label":"Cioppino","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":17,"raw_grams":2134.7,"raw_water_grams":1793.61,"raw_fat_grams":38.36,"raw_protein_grams":148.58,"raw_carb_grams":101.99,"final_grams":1919.47}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Seafood Cioppino', quantity: 'custom (g)', foodWord: 'CIOPPINO', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Fish Stock', quantity: '1 cup Fish Stock (recipe)', section: 'fish_stock', foodWord: 'FISHBROTH', ndbNo: '6963', portionDesc: 'g', portionGrams: 240.0, isDish: true, componentRef: 'STOCK_006' },
+      { name: 'olive oil', quantity: '2 tbsp olive oil', section: 'stew', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'onion', quantity: '1 medium onion, chopped', section: 'stew', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'celery stalk', quantity: '2 celery stalks, sliced', section: 'stew', ndbNo: '11143', portionDesc: 'g', portionGrams: 75.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'stew', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'crushed tomatoes', quantity: 'two 14.5-oz cans crushed tomatoes', section: 'stew', ndbNo: '11693', portionDesc: 'g', portionGrams: 822.0 },
+      { name: 'white wine', quantity: '1 cup dry white wine', section: 'stew', ndbNo: '14106', portionDesc: 'g', portionGrams: 235.0 },
+      { name: 'red pepper flakes', quantity: '1/2 tsp red pepper flakes', section: 'stew', ndbNo: '2031', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'dried oregano', quantity: '1 tsp dried oregano', section: 'stew', ndbNo: '2027', portionDesc: 'g', portionGrams: 0.9 },
+      { name: 'dried basil', quantity: '1 tsp dried basil', section: 'stew', ndbNo: '2003', portionDesc: 'g', portionGrams: 0.7 },
+      { name: 'thyme', quantity: '3 sprigs fresh thyme', section: 'stew', ndbNo: '2049', portionDesc: 'g', portionGrams: 2.4 },
+      { name: 'salt', quantity: '1 tsp salt', section: 'stew', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/2 tsp ground black pepper', section: 'stew', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'cod fillet', quantity: '1/2 lb cod fillet, cut into 2-inch pieces', section: 'stew', ndbNo: '15015', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'shrimp', quantity: '1/2 lb shrimp, peeled and deveined', section: 'stew', ndbNo: '15270', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'clams', quantity: '1 lb clams in shell, scrubbed', section: 'stew', ndbNo: '15157', portionDesc: 'g', portionGrams: 170.0 },
+      { name: 'mussels', quantity: '1 lb mussels, scrubbed and debearded', section: 'stew', ndbNo: '15164', portionDesc: 'g', portionGrams: 170.0 },
+      { name: 'fresh parsley', quantity: '2 tbsp fresh parsley, chopped', section: 'stew', ndbNo: '11297', portionDesc: 'g', portionGrams: 7.6 }
+    ],
+    recipeInstructions: [
+      'Heat the olive oil in a large pot or Dutch oven over medium heat. Add the onion and celery and cook, stirring occasionally, until softened, about 5 minutes. Add the garlic and cook 1 minute more.',
+      'Pour in the wine and cook, scraping up any browned bits from the bottom, until reduced by half, about 2 minutes.',
+      'Add the crushed tomatoes, fish stock, red pepper flakes, oregano, basil, thyme sprigs, salt, and pepper. Bring to a boil, then reduce heat to low and simmer for 15 minutes, stirring occasionally.',
+      'Add the clams and mussels to the pot. Cover and cook until they begin to open, about 3 to 4 minutes.',
+      'Add the cod and shrimp, pressing them gently into the broth. Cover and cook until the shrimp are pink and the fish flakes easily, about 3 to 4 minutes more.',
+      'Remove and discard the thyme sprigs and any clams or mussels that did not open. Stir in the parsley.',
+      'Ladle into wide bowls and serve with crusty bread for dipping (not included).'
+    ],
+    sections: [
+      { key: 'fish_stock', label: 'Fish Stock', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'stew', label: 'Cioppino', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];

@@ -575,3 +575,5 @@ ENTR_105,kabobs,Shrimp Kabobs,,grilled,0.85,1.0,1.0,1.0,1.0,,,,
 ENTR_106,meuniere,Meunière,,pan grilled,0.82,1.0,1.0,1.0,1.0,,,,
 ENTR_107,rice,Rice,,boiled,1.0,1.0,1.0,1.0,1.0,,,,
 ENTR_107,poke,Poke,,raw,1.0,1.0,1.0,1.0,1.0,,,,
+ENTR_108,fish_stock,Fish Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,STOCK_006
+ENTR_108,stew,Cioppino,,boiled,0.88,1.0,1.0,1.0,1.0,,,,
