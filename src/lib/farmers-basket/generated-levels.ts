@@ -16732,5 +16732,51 @@ export const LEVELS: Level[] = [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'filling', label: 'Egg Roll Filling', cookingMethod: '', yieldFactorWater: 0.85 }
     ],
+  },
+  {
+    id: 'ENTR_115',
+    name: 'Vegetarian Tofu Nuggets',
+    category: 'entrees & main courses',
+    dietaryCategory: 'vegan',
+    levelNum: 350,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":380.4,"pro":21.9,"fat":19.7,"carb":33.1,"fib":3.3,"h2o":147.6,"sug":2.7,"perServing":{"cal":380.4,"pro":21.9,"fat":19.7,"carb":33.1,"fib":3.3,"h2o":147.6,"sug":2.7,"AddedSugars":0.0,"IntrinsicSugars":2.7},"micros":{"vitaminA":4.99,"vitaminC":0.12,"vitaminD":0.0,"vitaminE":0.2,"vitaminK":3.77,"vitaminB6":0.07,"vitaminB12":0.03,"thiamin":0.11,"riboflavin":0.09,"niacin":0.69,"folate":20.37,"calcium":193.98,"iron":2.04,"magnesium":38.98,"phosphorus":128.6,"potassium":169.2,"sodium":551.73,"zinc":0.9,"copper":0.22,"selenium":11.15,"cholesterol":0.0,"saturatedFat":4.45,"monoFat":1.58,"polyFat":1.28,"omega3":0.0,"omega6":0.0},"gramsPerServing":228.1,"servings":4,"per100g":{"Energy_KCal":166.77,"Water":64.7,"Protein":9.6,"TotalLipidFat":8.62,"Carbohydrate":14.53,"FiberTotalDietary":1.44,"SugarsTotal":1.19,"Cholesterol":0.0,"FattyAcids_totalSaturated":4.45,"FattyAcids_totalMonounsaturated":1.58,"FattyAcids_totalPolyunsaturated":1.28,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":4.99,"Retinol":0.0,"Carotene_beta":53.07,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.2,"VitaminK_phylloquinone":3.77,"VitaminC_totalAscorbicAcid":0.12,"Thiamin":0.11,"Riboflavin":0.09,"Niacin":0.69,"PantothenicAcid":0.14,"VitaminB6":0.07,"Folate_total":20.37,"Folate_food":14.91,"Folate_DFE":24.17,"FolicAcid":7.28,"VitaminB12":0.03,"Choline_total":25.03,"Betaine":0.4,"LuteinZeaxanthin":31.41,"Lycopene":0.02,"Calcium_Ca":193.98,"Iron_Fe":2.04,"Magnesium_Mg":38.98,"Phosphorus_P":128.6,"Potassium_K":169.2,"Sodium_Na":551.73,"Zinc_Zn":0.9,"Copper_Cu":0.22,"Manganese_Mn":0.67,"Selenium_Se":11.15,"Tryptophan":0.13,"Threonine":0.41,"Isoleucine":0.45,"Leucine":0.75,"Lysine":0.47,"Methionine":0.12,"Cystine":0.05,"Phenylalanine":0.46,"Tyrosine":0.36,"Valine":0.47,"Arginine":0.7,"Histidine":0.23,"Alanine":0.42,"AsparticAcid":1.04,"GlutamicAcid":1.98,"Glycine":0.4,"Proline":0.65,"Serine":0.54,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":1.19},"addedSugars":0.0,"intrinsicSugars":2.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.85,"yieldFactorFat":1.0,"sources":[{"ndb":"16126","name":"Tofu, firm, prepared with calcium sulfate and magnesium chloride (nigari)","grams":198.2},{"ndb":"16124","name":"Soy sauce made from soy (tamari)","grams":9.0},{"ndb":"2020","name":"Spices, garlic powder","grams":0.8},{"ndb":"2026","name":"Spices, onion powder","grams":0.3},{"ndb":"2028","name":"Spices, paprika","grams":0.6},{"ndb":"11216","name":"Ginger root, raw","grams":1.0},{"ndb":"20027","name":"Cornstarch","grams":12.0},{"ndb":"18079","name":"Bread crumbs, dry, grated, plain","grams":20.2},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"4513","name":"Vegetable oil, palm kernel","grams":10.2}],"sections":[{"section_key":"nuggets","section_label":"Tofu Nuggets","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":1016.55,"raw_water_grams":694.5,"raw_fat_grams":78.62,"raw_protein_grams":87.56,"raw_carb_grams":132.61,"final_grams":912.38}],"cookingMethod":"pan grilled"},
+    recipeIngredients: [
+      { name: 'Vegetarian Tofu Nuggets', quantity: 'custom (g)', foodWord: 'TOFUNUGGETS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'firm tofu', quantity: '2 blocks (28 oz) extra-firm tofu, pressed and cubed', section: 'nuggets', ndbNo: '16126', portionDesc: 'g', portionGrams: 793.0 },
+      { name: 'tamari', quantity: '2 tbsp', section: 'nuggets', ndbNo: '16124', portionDesc: 'g', portionGrams: 36.0 },
+      { name: 'garlic powder', quantity: '1 tsp', section: 'nuggets', ndbNo: '2020', portionDesc: 'g', portionGrams: 3.1 },
+      { name: 'onion powder', quantity: '½ tsp', section: 'nuggets', ndbNo: '2026', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'paprika', quantity: '¾ tsp', section: 'nuggets', ndbNo: '2028', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'fresh ginger', quantity: '2 tsp fresh ginger, grated', section: 'nuggets', ndbNo: '11216', portionDesc: 'g', portionGrams: 4.0 },
+      { name: 'cornstarch', quantity: '6 tbsp', section: 'nuggets', ndbNo: '20027', portionDesc: 'g', portionGrams: 48.0 },
+      { name: 'Panko', quantity: '¾ cup panko (bread crumbs used as proxy; panko not in database)', section: 'nuggets', ndbNo: '18079', portionDesc: 'g', portionGrams: 81.0 },
+      { name: 'salt', quantity: '1 tsp', section: 'nuggets', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '½ tsp', section: 'nuggets', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'vegetable oil', quantity: '3 tbsp vegetable oil (absorbed)', section: 'nuggets', ndbNo: '4513', portionDesc: 'g', portionGrams: 40.8 }
+    ],
+    recipeInstructions: [
+      'Wrap the tofu blocks in a clean kitchen towel or several layers of paper towels and set a heavy pan or cast-iron skillet on top. Press for 30 minutes to remove excess moisture. Unwrap and cut into 1-inch cubes or nugget-shaped pieces.',
+      'In a large bowl, whisk together the tamari, garlic powder, onion powder, paprika, and grated ginger. Add the tofu pieces and toss gently to coat. Marinate for at least 15 minutes (up to 30 minutes).',
+      'In a shallow dish, combine the cornstarch, salt, and black pepper. In a second shallow dish, spread the panko bread crumbs. Working with one piece at a time, dredge marinated tofu in the cornstarch mixture (the marinade moisture helps it adhere), then press firmly into the panko to coat all sides.',
+      'Heat the vegetable oil in a large non-stick skillet over medium-high heat. Working in batches to avoid crowding, cook the nuggets 2–3 minutes per side, turning carefully, until golden brown and crispy on all sides. Add a little extra oil between batches if needed.',
+      'Transfer to a plate lined with paper towels. Serve immediately with your choice of dipping sauce such as sweet chili sauce, sriracha mayo, or tamari (not included).'
+    ],
+    sections: [
+      { key: 'nuggets', label: 'Tofu Nuggets', cookingMethod: '', yieldFactorWater: 0.85 }
+    ],
   }
 ];
