@@ -17210,5 +17210,56 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'zucchini_boats', label: 'Zucchini Boats', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'ENTR_124',
+    name: 'Vegetarian Cheese Enchiladas',
+    category: 'entrees & main courses',
+    dietaryCategory: 'veggie',
+    levelNum: 359,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '3 enchiladas (makes 4)',
+    prepTime: '',
+    linkType: 'ingredient',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":607.3,"pro":26.2,"fat":28.8,"carb":67.2,"fib":16.9,"h2o":164.3,"sug":5.2,"perServing":{"cal":607.3,"pro":26.2,"fat":28.8,"carb":67.2,"fib":16.9,"h2o":164.3,"sug":5.2,"AddedSugars":0.0,"IntrinsicSugars":5.2},"micros":{"vitaminA":147.44,"vitaminC":2.21,"vitaminD":3.83,"vitaminE":0.59,"vitaminK":4.35,"vitaminB6":0.31,"vitaminB12":0.21,"thiamin":0.07,"riboflavin":0.29,"niacin":0.92,"folate":31.26,"calcium":170.59,"iron":1.91,"magnesium":46.92,"phosphorus":211.98,"potassium":361.65,"sodium":397.13,"zinc":1.27,"copper":0.13,"selenium":5.19,"cholesterol":18.23,"saturatedFat":4.57,"monoFat":2.65,"polyFat":0.81,"omega3":0.0,"omega6":0.0},"gramsPerServing":295.5,"servings":4,"per100g":{"Energy_KCal":205.52,"Water":55.62,"Protein":8.86,"TotalLipidFat":9.76,"Carbohydrate":22.73,"FiberTotalDietary":5.72,"SugarsTotal":1.75,"Cholesterol":18.23,"FattyAcids_totalSaturated":4.57,"FattyAcids_totalMonounsaturated":2.65,"FattyAcids_totalPolyunsaturated":0.81,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":147.44,"Retinol":27.73,"Carotene_beta":101.67,"VitaminD":3.83,"VitaminE_alphaTocopherol":0.59,"VitaminK_phylloquinone":4.35,"VitaminC_totalAscorbicAcid":2.21,"Thiamin":0.07,"Riboflavin":0.29,"Niacin":0.92,"PantothenicAcid":0.25,"VitaminB6":0.31,"Folate_total":31.26,"Folate_food":31.26,"Folate_DFE":31.26,"FolicAcid":0.0,"VitaminB12":0.21,"Choline_total":12.33,"Betaine":0.2,"LuteinZeaxanthin":19.24,"Lycopene":352.73,"Calcium_Ca":170.59,"Iron_Fe":1.91,"Magnesium_Mg":46.92,"Phosphorus_P":211.98,"Potassium_K":361.65,"Sodium_Na":397.13,"Zinc_Zn":1.27,"Copper_Cu":0.13,"Manganese_Mn":0.37,"Selenium_Se":5.19,"Tryptophan":0.1,"Threonine":0.3,"Isoleucine":0.4,"Leucine":0.74,"Lysine":0.49,"Methionine":0.17,"Cystine":0.07,"Phenylalanine":0.4,"Tyrosine":0.33,"Valine":0.47,"Arginine":0.36,"Histidine":0.24,"Alanine":0.32,"AsparticAcid":0.7,"GlutamicAcid":1.72,"Glycine":0.22,"Proline":0.71,"Serine":0.4,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":1.75},"addedSugars":0.0,"intrinsicSugars":5.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Red Enchilada Sauce","grams":99.5},{"ndb":"4513","name":"Vegetable oil, palm kernel","grams":3.4},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"16015","name":"Beans, black, mature seeds, cooked, boiled, without salt","grams":43.0},{"ndb":"2014","name":"Spices, cumin seed","grams":0.5},{"ndb":"2009","name":"","grams":0.7},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"18363","name":"Tortillas, ready-to-bake or -fry, corn","grams":72.0},{"ndb":"1251","name":"Cheese, Mexican blend","grams":56.7}],"sections":[{"section_key":"sauce","section_label":"Red Enchilada Sauce","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":397.87,"raw_water_grams":256.39,"raw_fat_grams":26.86,"raw_protein_grams":17.07,"raw_carb_grams":78.82,"final_grams":397.87},{"section_key":"enchiladas","section_label":"Cheese Enchiladas","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":828.58,"raw_water_grams":445.49,"raw_fat_grams":88.44,"raw_protein_grams":87.69,"raw_carb_grams":189.78,"final_grams":784.03}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Vegetarian Cheese Enchiladas', quantity: 'custom (g)', foodWord: 'CHEESEENCHILADAS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Red Enchilada Sauce', quantity: '1 recipe Red Enchilada Sauce (recipe)', section: 'sauce', foodWord: 'ENCHILADASAUCE', portionDesc: 'g', portionGrams: 397.87, isDish: true, componentRef: 'SAUCE_025' },
+      { name: 'vegetable oil', quantity: '1 tbsp', section: 'enchiladas', ndbNo: '4513', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'onion', quantity: '1 medium onion, diced', section: 'enchiladas', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'enchiladas', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'black beans', quantity: '1 cup black beans, drained', section: 'enchiladas', ndbNo: '16015', portionDesc: 'g', portionGrams: 172.0 },
+      { name: 'ground cumin', quantity: '1 tsp ground cumin', section: 'enchiladas', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'chili powder', quantity: '1 tsp chili powder', section: 'enchiladas', ndbNo: '2009', portionDesc: 'g', portionGrams: 2.7 },
+      { name: 'dried oregano', quantity: '1 tsp dried oregano', section: 'enchiladas', ndbNo: '2027', portionDesc: 'g', portionGrams: 0.9 },
+      { name: 'salt', quantity: '½ tsp', section: 'enchiladas', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp ground black pepper', section: 'enchiladas', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'corn tortilla', quantity: '12 corn tortillas', section: 'enchiladas', ndbNo: '18363', portionDesc: 'g', portionGrams: 288.0 },
+      { name: 'Mexican blend cheese', quantity: '2 cups Mexican blend cheese, shredded', section: 'enchiladas', ndbNo: '1251', portionDesc: 'g', portionGrams: 226.8 }
+    ],
+    recipeInstructions: [
+      'Preheat oven to 375°F (190°C). Lightly grease a 9×13-inch baking dish. Make or prepare the Red Enchilada Sauce (see the Red Enchilada Sauce recipe).',
+      'Heat the vegetable oil in a large skillet over medium heat. Add the onion and cook for 4 to 5 minutes, stirring often, until softened. Add the garlic and cook for 1 minute more.',
+      'Add the black beans, ground cumin, chili powder, dried oregano, salt, and ground black pepper. Stir to combine and cook for 2 minutes. Remove from heat.',
+      'Spread about ¼ cup of the enchilada sauce evenly over the bottom of the prepared baking dish.',
+      'Warm the corn tortillas one at a time in a dry skillet for about 30 seconds per side until pliable. Dip each tortilla briefly in the warm enchilada sauce to coat, fill with 2 tablespoons of the bean mixture and 2 tablespoons of the cheese, roll tightly, and place seam-side down in the baking dish.',
+      'Pour the remaining enchilada sauce evenly over the rolled enchiladas. Sprinkle the remaining cheese over the top.',
+      'Cover tightly with aluminum foil and bake for 20 minutes. Uncover and bake for an additional 10 minutes, until the cheese is melted and the sauce is bubbling.',
+      'Let rest for 5 minutes before serving. Serve with sour cream, avocado, or fresh cilantro on the side (not included).'
+    ],
+    sections: [
+      { key: 'sauce', label: 'Red Enchilada Sauce', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'enchiladas', label: 'Cheese Enchiladas', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];
