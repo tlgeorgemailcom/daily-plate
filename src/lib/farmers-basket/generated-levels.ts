@@ -16820,7 +16820,7 @@ export const LEVELS: Level[] = [
       { name: 'ground black pepper', quantity: '¼ tsp', section: 'stir_fry', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
     ],
     recipeInstructions: [
-      'Rinse the rice and combine with 1½ cups of water in a medium saucepan. Bring to a boil, reduce heat to low, cover, and cook for 18 minutes. Remove from heat and let stand, covered, for 5 minutes. Fluff with a fork.',
+      'Rinse the rice until water is clear and combine with 1½ cups of water in a medium saucepan. If rice is rinsed, reduce water by 2 tablespoons. Bring to a boil, reduce heat to low, cover, and cook for 18 minutes. Remove from heat and let stand, covered, for 5 minutes. Fluff with a fork.',
       'Press the firm tofu blocks firmly to remove excess moisture. Cut into 1-inch cubes and pat dry with paper towels.',
       'In a small bowl, whisk together the tamari and cornstarch until smooth to make the stir-fry sauce. Set aside.',
       'Heat 1 tablespoon of vegetable oil in a large wok or skillet over high heat until shimmering. Add the tofu in a single layer and cook undisturbed for 3 to 4 minutes until golden. Flip and cook for another 2 to 3 minutes. Remove from the pan and set aside.',
