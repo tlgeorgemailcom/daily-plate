@@ -16947,5 +16947,59 @@ export const LEVELS: Level[] = [
       { key: 'lentils', label: 'Lentils', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'dal_base', label: 'Dal Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'ENTR_119',
+    name: 'Vegetarian Chana Masala',
+    category: 'entrees & main courses',
+    dietaryCategory: 'vegan',
+    levelNum: 354,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '',
+    prepTime: '',
+    linkType: 'ingredient',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":453.0,"pro":16.2,"fat":7.6,"carb":82.4,"fib":12.9,"h2o":280.5,"sug":10.8,"perServing":{"cal":453.0,"pro":16.2,"fat":7.6,"carb":82.4,"fib":12.9,"h2o":280.5,"sug":10.8,"AddedSugars":0.0,"IntrinsicSugars":10.8},"micros":{"vitaminA":11.66,"vitaminC":2.89,"vitaminD":0.0,"vitaminE":0.29,"vitaminK":4.69,"vitaminB6":0.08,"vitaminB12":0.0,"thiamin":0.08,"riboflavin":0.03,"niacin":0.61,"folate":63.4,"calcium":29.84,"iron":1.69,"magnesium":23.99,"phosphorus":78.08,"potassium":198.73,"sodium":233.7,"zinc":0.7,"copper":0.16,"selenium":3.15,"cholesterol":0.0,"saturatedFat":0.83,"monoFat":0.37,"polyFat":0.33,"omega3":0.0,"omega6":0.0},"gramsPerServing":391.4,"servings":4,"per100g":{"Energy_KCal":115.75,"Water":71.67,"Protein":4.14,"TotalLipidFat":1.93,"Carbohydrate":21.04,"FiberTotalDietary":3.3,"SugarsTotal":2.77,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.83,"FattyAcids_totalMonounsaturated":0.37,"FattyAcids_totalPolyunsaturated":0.33,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":11.66,"Retinol":0.0,"Carotene_beta":126.37,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.29,"VitaminK_phylloquinone":4.69,"VitaminC_totalAscorbicAcid":2.89,"Thiamin":0.08,"Riboflavin":0.03,"Niacin":0.61,"PantothenicAcid":0.19,"VitaminB6":0.08,"Folate_total":63.4,"Folate_food":46.28,"Folate_DFE":75.39,"FolicAcid":26.35,"VitaminB12":0.0,"Choline_total":15.44,"Betaine":0.06,"LuteinZeaxanthin":23.04,"Lycopene":485.19,"Calcium_Ca":29.84,"Iron_Fe":1.69,"Magnesium_Mg":23.99,"Phosphorus_P":78.08,"Potassium_K":198.73,"Sodium_Na":233.7,"Zinc_Zn":0.7,"Copper_Cu":0.16,"Manganese_Mn":0.55,"Selenium_Se":3.15,"Tryptophan":0.04,"Threonine":0.14,"Isoleucine":0.16,"Leucine":0.28,"Lysine":0.23,"Methionine":0.06,"Cystine":0.05,"Phenylalanine":0.2,"Tyrosine":0.1,"Valine":0.18,"Arginine":0.35,"Histidine":0.1,"Alanine":0.18,"AsparticAcid":0.46,"GlutamicAcid":0.8,"Glycine":0.16,"Proline":0.16,"Serine":0.19,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":2.77},"addedSugars":0.0,"intrinsicSugars":10.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20044","name":"Rice, white, long-grain, regular, raw, enriched","grams":46.2},{"ndb":"14411","name":"Water, tap, drinking","grams":88.9},{"ndb":"4513","name":"Vegetable oil, palm kernel","grams":3.4},{"ndb":"2014","name":"Spices, cumin seed","grams":0.5},{"ndb":"11282","name":"Onions, raw","grams":50.0},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11216","name":"Ginger root, raw","grams":1.5},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":92.2},{"ndb":"16057","name":"Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt","grams":123.0},{"ndb":"2043","name":"Spices, turmeric, ground","grams":0.8},{"ndb":"2013","name":"Spices, coriander seed","grams":0.9},{"ndb":"2009","name":"","grams":0.7},{"ndb":"2047","name":"Salt, table","grams":2.2},{"ndb":"9152","name":"Lemon juice, raw","grams":7.5},{"ndb":"11165","name":"Coriander (cilantro) leaves, raw","grams":2.0}],"sections":[{"section_key":"rice","section_label":"Rice","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.9434389679863646,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":540.5,"raw_water_grams":376.64,"raw_fat_grams":1.22,"raw_protein_grams":13.19,"raw_carb_grams":147.91,"final_grams":519.2},{"section_key":"chana_masala","section_label":"Chana Masala","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":13,"raw_grams":1150.9,"raw_water_grams":871.24,"raw_fat_grams":29.07,"raw_protein_grams":51.64,"raw_carb_grams":181.56,"final_grams":1046.35}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Vegetarian Chana Masala', quantity: 'custom (g)', foodWord: 'CHANAMASALA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white rice (dry)', quantity: '1 cup', section: 'rice', ndbNo: '20044', portionDesc: 'g', portionGrams: 185.0 },
+      { name: 'water', quantity: '1½ cups', section: 'rice', ndbNo: '14411', portionDesc: 'g', portionGrams: 355.5 },
+      { name: 'vegetable oil', quantity: '1 tbsp', section: 'chana_masala', ndbNo: '4513', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'ground cumin', quantity: '1 tsp ground cumin', section: 'chana_masala', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'onion', quantity: '1 large onion, diced', section: 'chana_masala', ndbNo: '11282', portionDesc: 'g', portionGrams: 200.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'chana_masala', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'fresh ginger', quantity: '1 tbsp fresh ginger, grated', section: 'chana_masala', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'tomato', quantity: '2 large tomatoes, diced', section: 'chana_masala', ndbNo: '11529', portionDesc: 'g', portionGrams: 369.0 },
+      { name: 'chickpeas, cooked', quantity: '3 cups', section: 'chana_masala', ndbNo: '16057', portionDesc: 'g', portionGrams: 492.0 },
+      { name: 'ground turmeric', quantity: '1 tsp ground turmeric', section: 'chana_masala', ndbNo: '2043', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground coriander', quantity: '2 tsp ground coriander', section: 'chana_masala', ndbNo: '2013', portionDesc: 'g', portionGrams: 3.6 },
+      { name: 'chili powder', quantity: '1 tsp chili powder', section: 'chana_masala', ndbNo: '2009', portionDesc: 'g', portionGrams: 2.7 },
+      { name: 'salt', quantity: '1½ tsp', section: 'chana_masala', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'lemon juice', quantity: '2 tbsp', section: 'chana_masala', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'fresh cilantro', quantity: '½ cup fresh cilantro, chopped', section: 'chana_masala', ndbNo: '11165', portionDesc: 'g', portionGrams: 8.0 }
+    ],
+    recipeInstructions: [
+      'Rinse the rice until water is clear and combine with 1½ cups of water in a medium saucepan. If rice is rinsed, reduce water by 2 tablespoons. Bring to a boil, reduce heat to low, cover, and cook for 18 minutes. Remove from heat and let stand, covered, for 5 minutes. Fluff with a fork.',
+      'Heat the vegetable oil in a large saucepan over medium-high heat. Add the ground cumin and cook for 30 seconds, stirring constantly, until fragrant and sizzling.',
+      'Add the onion and cook for 5 to 6 minutes, stirring often, until softened and lightly golden.',
+      'Add the garlic and ginger and cook for 1 to 2 minutes, stirring, until fragrant.',
+      'Add the tomatoes, ground turmeric, ground coriander, and chili powder. Cook for 5 to 7 minutes, stirring frequently, until the tomatoes break down and the sauce thickens and deepens in color.',
+      'Add the chickpeas and stir to coat in the masala sauce. Reduce heat to medium-low and simmer for 8 to 10 minutes, stirring occasionally, until the chickpeas have absorbed the flavors. Add a splash of water if the masala becomes too thick.',
+      'Remove from heat and stir in the lemon juice. Season with salt to taste.',
+      'Divide the rice among four bowls, spoon the chana masala over the top, garnish with fresh cilantro, and serve immediately.'
+    ],
+    sections: [
+      { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'chana_masala', label: 'Chana Masala', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];
