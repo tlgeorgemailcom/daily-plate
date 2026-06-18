@@ -197,6 +197,10 @@ def main() -> int:
 
         # 14: section that hosts component-ref rows must be yfw=yff=yfo=1.0 + cook_method=raw,
         #     and its source_recipe (if set) must equal the @-ref child id.
+        #     Exception: "mixed" sections where a component-ref (e.g. a stock) coexists with
+        #     regular ingredients (e.g. rice, spices) are cooking-liquid use cases. The
+        #     cook_method/yield constraints apply only to pure-composite sections — i.e. sections
+        #     whose every ingredient row is a @-ref.
         for rid, ings in ings_by_recipe.items():
             comp_rows = [r for r in ings if (r.get("ingredient_key") or "").startswith("@")]
             if not comp_rows:
@@ -212,6 +216,21 @@ def main() -> int:
                     continue
                 s = sec_index[sec_key]
                 child = (r.get("ingredient_key") or "")[1:]
+                # Determine if this is a pure-composite section (all rows are @-refs)
+                # or a mixed section (stock/broth used as cooking liquid among other ingredients).
+                sec_all_rows = [
+                    r2 for r2 in ings
+                    if (r2.get("section") or "").strip() == sec_key
+                ]
+                is_pure_composite = all(
+                    (r2.get("ingredient_key") or "").startswith("@")
+                    for r2 in sec_all_rows
+                )
+                if not is_pure_composite:
+                    # Mixed section: @-ref is a cooking-liquid ingredient (e.g. stock for rice).
+                    # cook_method and yield factors are governed by the section's own cooking
+                    # step; no constraints apply here.
+                    continue
                 if s.get("cook_method") and s["cook_method"] != "raw":
                     errors.append(
                         f"  recipe_sections {rid}/{sec_key}: hosts component-ref @{child} "
