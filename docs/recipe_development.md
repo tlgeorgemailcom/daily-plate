@@ -17,6 +17,7 @@ Run these gates **before writing a single CSV row**. Skipping any one causes a p
 - [ ] Every ingredient looked up in `ingredients_ledger.csv` — missing keys identified and proposed for human approval **before** writing any row
 - [ ] For every new ingredient: NDB queried from `comboo.db` (`DataCentralCombo`), `default_display_name` confirmed, `food_word` confirmed against `food-portions-complete.csv`
 - [ ] For every new ingredient: `food-portions-complete.csv` checked for duplicate NDB — `grep NDB_NO` — before adding
+- [ ] If recipe calls for chicken broth → use `@STOCK_003`; beef broth → `@STOCK_004`; fish broth → `@STOCK_006`. Never add canned broth NDBs to the ledger.
 - [ ] Human approval received for all new ledger entries and the full ingredient list
 
 ---
