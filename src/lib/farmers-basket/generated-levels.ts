@@ -16328,5 +16328,55 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'meuniere', label: 'Meunière', cookingMethod: '', yieldFactorWater: 0.82 }
     ],
+  },
+  {
+    id: 'ENTR_107',
+    name: 'Seafood Tuna Poke Bowl',
+    category: 'entrees & main courses',
+    dietaryCategory: 'pesca',
+    levelNum: 342,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":420.3,"pro":33.8,"fat":10.0,"carb":47.8,"fib":3.4,"h2o":254.6,"sug":2.6,"perServing":{"cal":420.3,"pro":33.8,"fat":10.0,"carb":47.8,"fib":3.4,"h2o":254.6,"sug":2.6,"AddedSugars":1.5,"IntrinsicSugars":1.1},"micros":{"vitaminA":8.07,"vitaminC":1.92,"vitaminD":22.28,"vitaminE":0.31,"vitaminK":8.18,"vitaminB6":0.36,"vitaminB12":0.67,"thiamin":0.06,"riboflavin":0.07,"niacin":6.52,"folate":14.15,"calcium":13.93,"iron":0.65,"magnesium":22.84,"phosphorus":119.24,"potassium":238.0,"sodium":231.75,"zinc":0.42,"copper":0.08,"selenium":29.59,"cholesterol":12.59,"saturatedFat":0.44,"monoFat":1.48,"polyFat":0.66,"omega3":0.04,"omega6":0.0},"gramsPerServing":351.2,"servings":4,"per100g":{"Energy_KCal":119.68,"Water":72.5,"Protein":9.63,"TotalLipidFat":2.85,"Carbohydrate":13.62,"FiberTotalDietary":0.96,"SugarsTotal":0.73,"Cholesterol":12.59,"FattyAcids_totalSaturated":0.44,"FattyAcids_totalMonounsaturated":1.48,"FattyAcids_totalPolyunsaturated":0.66,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.03,"VitaminA_RAE":8.07,"Retinol":5.81,"Carotene_beta":23.63,"VitaminD":22.28,"VitaminE_alphaTocopherol":0.31,"VitaminK_phylloquinone":8.18,"VitaminC_totalAscorbicAcid":1.92,"Thiamin":0.06,"Riboflavin":0.07,"Niacin":6.52,"PantothenicAcid":0.41,"VitaminB6":0.36,"Folate_total":14.15,"Folate_food":14.15,"Folate_DFE":14.15,"FolicAcid":0.0,"VitaminB12":0.67,"Choline_total":24.8,"Betaine":0.09,"LuteinZeaxanthin":55.16,"Lycopene":0.0,"Calcium_Ca":13.93,"Iron_Fe":0.65,"Magnesium_Mg":22.84,"Phosphorus_P":119.24,"Potassium_K":238.0,"Sodium_Na":231.75,"Zinc_Zn":0.42,"Copper_Cu":0.08,"Manganese_Mn":0.2,"Selenium_Se":29.59,"Tryptophan":0.11,"Threonine":0.39,"Isoleucine":0.42,"Leucine":0.74,"Lysine":0.77,"Methionine":0.26,"Cystine":0.11,"Phenylalanine":0.38,"Tyrosine":0.31,"Valine":0.48,"Arginine":0.57,"Histidine":0.26,"Alanine":0.55,"AsparticAcid":0.94,"GlutamicAcid":1.48,"Glycine":0.44,"Proline":0.36,"Serine":0.4,"omega3":0.04,"omega6":0.0,"AddedSugars":0.42,"IntrinsicSugars":0.31},"addedSugars":1.5,"intrinsicSugars":1.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20452","name":"Rice, white, short-grain, raw, unenriched","grams":50.0},{"ndb":"14411","name":"Water, tap, drinking","grams":88.9},{"ndb":"15127","name":"Fish, tuna, fresh, yellowfin, raw","grams":113.4},{"ndb":"16124","name":"Soy sauce made from soy (tamari)","grams":13.5},{"ndb":"4058","name":"Oil, sesame, salad or cooking","grams":2.2},{"ndb":"9160","name":"Lime juice, raw","grams":3.8},{"ndb":"19296","name":"Honey","grams":1.8},{"ndb":"11216","name":"Ginger root, raw","grams":1.5},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":7.5},{"ndb":"9038","name":"Avocados, raw, California","grams":37.5},{"ndb":"11205","name":"Cucumber, with peel, raw","grams":29.8},{"ndb":"12024","name":"Seeds, sesame seeds, whole, roasted and toasted","grams":2.2}],"sections":[{"section_key":"rice","section_label":"Rice","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.9913397048440467,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":555.5,"raw_water_grams":381.72,"raw_fat_grams":1.04,"raw_protein_grams":13.0,"raw_carb_grams":158.3,"final_grams":552.19},{"section_key":"poke","section_label":"Poke","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":852.7,"raw_water_grams":640.07,"raw_fat_grams":38.96,"raw_protein_grams":122.34,"raw_carb_grams":32.99,"final_grams":852.7}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Seafood Tuna Poke Bowl', quantity: 'custom (g)', foodWord: 'TUNAPOKEBOWL', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'short-grain white rice (dry)', quantity: '1 cup short-grain white rice (dry)', section: 'rice', ndbNo: '20452', portionDesc: 'g', portionGrams: 200.0 },
+      { name: 'water', quantity: '1 1/2 cups water', section: 'rice', ndbNo: '14411', portionDesc: 'g', portionGrams: 355.5 },
+      { name: 'fresh yellowfin tuna', quantity: '16 oz fresh yellowfin tuna, cut into 3/4-inch cubes', section: 'poke', ndbNo: '15127', portionDesc: 'g', portionGrams: 453.6 },
+      { name: 'tamari', quantity: '3 tbsp tamari', section: 'poke', ndbNo: '16124', portionDesc: 'g', portionGrams: 54.0 },
+      { name: 'Sesame oil', quantity: '2 tsp sesame oil', section: 'poke', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'lime juice', quantity: '1 tbsp fresh lime juice', section: 'poke', ndbNo: '9160', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'honey', quantity: '1 tsp honey', section: 'poke', ndbNo: '19296', portionDesc: 'g', portionGrams: 7.1 },
+      { name: 'fresh ginger', quantity: '1 tbsp fresh ginger, grated', section: 'poke', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'scallions', quantity: '2 stalks scallions, thinly sliced', section: 'poke', ndbNo: '11291', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'avocado', quantity: '1 medium avocado, pitted and diced', section: 'poke', ndbNo: '9038', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'cucumber', quantity: '1 cup cucumber, diced', section: 'poke', ndbNo: '11205', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'sesame seeds', quantity: '1 tbsp sesame seeds, toasted', section: 'poke', ndbNo: '12024', portionDesc: 'g', portionGrams: 9.0 }
+    ],
+    recipeInstructions: [
+      'Rinse the short-grain white rice until the water runs clear. Combine with the water in a saucepan, bring to a boil, then reduce heat to low, cover, and simmer until absorbed, 18–20 minutes. Remove from heat and let steam, covered, for 5 minutes. Fluff and cool slightly.',
+      'While the rice cooks, whisk together the tamari, sesame oil, lime juice, honey, and grated ginger in a medium bowl.',
+      'Add the cubed tuna and toss gently to coat. Let marinate for 10 minutes at room temperature.',
+      'Divide the warm rice among 4 bowls.',
+      'Arrange the marinated tuna, diced avocado, and diced cucumber over the rice.',
+      'Top each bowl with the sliced scallions and toasted sesame seeds.',
+      'Drizzle any remaining marinade over the top and serve immediately.'
+    ],
+    sections: [
+      { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'poke', label: 'Poke', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
