@@ -17655,5 +17655,49 @@ export const LEVELS: Level[] = [
       { key: 'casserole', label: 'Green Bean Casserole', cookingMethod: '', yieldFactorWater: 0.88 },
       { key: 'topping', label: 'Onion Ring Topping', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SIDE_035',
+    name: 'Rice Pilaf',
+    category: 'sides',
+    dietaryCategory: 'all',
+    levelNum: 369,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cup (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":362.7,"pro":12.3,"fat":8.7,"carb":57.5,"fib":1.9,"h2o":172.9,"sug":1.6,"perServing":{"cal":362.7,"pro":12.3,"fat":8.7,"carb":57.5,"fib":1.9,"h2o":172.9,"sug":1.6,"AddedSugars":0.0,"IntrinsicSugars":1.6},"micros":{"vitaminA":20.95,"vitaminC":1.24,"vitaminD":0.02,"vitaminE":0.1,"vitaminK":12.21,"vitaminB6":0.1,"vitaminB12":0.09,"thiamin":0.12,"riboflavin":0.05,"niacin":1.83,"folate":45.65,"calcium":19.24,"iron":1.3,"magnesium":12.73,"phosphorus":72.97,"potassium":103.97,"sodium":129.81,"zinc":0.73,"copper":0.08,"selenium":10.3,"cholesterol":50.03,"saturatedFat":4.55,"monoFat":5.28,"polyFat":1.74,"omega3":0.03,"omega6":0.39},"gramsPerServing":252.6,"servings":4,"per100g":{"Energy_KCal":143.56,"Water":68.44,"Protein":4.86,"TotalLipidFat":3.43,"Carbohydrate":22.77,"FiberTotalDietary":0.74,"SugarsTotal":0.65,"Cholesterol":50.03,"FattyAcids_totalSaturated":4.55,"FattyAcids_totalMonounsaturated":5.28,"FattyAcids_totalPolyunsaturated":1.74,"LinoleicAcid":0.39,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.0,"VitaminA_RAE":20.95,"Retinol":17.35,"Carotene_beta":42.66,"VitaminD":0.02,"VitaminE_alphaTocopherol":0.1,"VitaminK_phylloquinone":12.21,"VitaminC_totalAscorbicAcid":1.24,"Thiamin":0.12,"Riboflavin":0.05,"Niacin":1.83,"PantothenicAcid":0.39,"VitaminB6":0.1,"Folate_total":45.65,"Folate_food":5.84,"Folate_DFE":73.5,"FolicAcid":61.24,"VitaminB12":0.09,"Choline_total":14.23,"Betaine":1.76,"LuteinZeaxanthin":32.59,"Lycopene":0.01,"Calcium_Ca":19.24,"Iron_Fe":1.3,"Magnesium_Mg":12.73,"Phosphorus_P":72.97,"Potassium_K":103.97,"Sodium_Na":129.81,"Zinc_Zn":0.73,"Copper_Cu":0.08,"Manganese_Mn":0.33,"Selenium_Se":10.3,"Tryptophan":0.11,"Threonine":0.39,"Isoleucine":0.44,"Leucine":0.74,"Lysine":0.72,"Methionine":0.24,"Cystine":0.12,"Phenylalanine":0.4,"Tyrosine":0.32,"Valine":0.49,"Arginine":0.66,"Histidine":0.29,"Alanine":0.57,"AsparticAcid":0.89,"GlutamicAcid":1.5,"Glycine":0.55,"Proline":0.42,"Serine":0.38,"omega3":0.03,"omega6":0.39,"AddedSugars":0.0,"IntrinsicSugars":0.65},"addedSugars":0.0,"intrinsicSugars":1.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Chicken Broth","grams":180.0},{"ndb":"20044","name":"Rice, white, long-grain, regular, raw, enriched","grams":69.4},{"ndb":"1145","name":"Butter, without salt","grams":7.1},{"ndb":"11282","name":"Onions, raw","grams":13.8},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"11297","name":"Parsley, fresh","grams":1.9}],"sections":[{"section_key":"rice","section_label":"Rice Pilaf","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.8875714635467646,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":1098.08,"raw_water_grams":779.17,"raw_fat_grams":34.68,"raw_protein_grams":49.09,"raw_carb_grams":230.06,"final_grams":1010.47}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Rice Pilaf', quantity: 'custom (g)', foodWord: 'RICEPILAF', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Chicken Broth', quantity: '3 cups Chicken Broth (recipe)', section: 'rice', foodWord: 'CHICKENBROTH', portionDesc: 'g', portionGrams: 720.0, isDish: true, componentRef: 'STOCK_003' },
+      { name: 'white rice (dry)', quantity: '1-1/2 cups', section: 'rice', ndbNo: '20044', portionDesc: 'g', portionGrams: 277.5 },
+      { name: 'unsalted butter', quantity: '2 tbsp', section: 'rice', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
+      { name: 'onion', quantity: '1/2 medium onion, diced', section: 'rice', ndbNo: '11282', portionDesc: 'g', portionGrams: 55.0 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'rice', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'rice', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'rice', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'fresh parsley', quantity: '2 tbsp fresh parsley, chopped', section: 'rice', ndbNo: '11297', portionDesc: 'g', portionGrams: 7.6 }
+    ],
+    recipeInstructions: [
+      'Melt butter in a medium saucepan over medium heat. Add the onion and cook, stirring, until softened, about 3 minutes.',
+      'Add the garlic and cook 30 seconds until fragrant.',
+      'Add the dry rice and stir to coat. Toast for 1–2 minutes, stirring, until the grains are lightly golden.',
+      'Pour in the chicken broth, salt, and pepper. (Make or prepare the Chicken Broth recipe ahead of time — see the Chicken Broth recipe.) Bring to a boil over medium-high heat.',
+      'Reduce heat to low, cover tightly, and simmer 18 minutes until the liquid is absorbed and the rice is tender.',
+      'Remove from heat and let stand covered 5 minutes. Fluff with a fork, stir in the fresh parsley, and serve.'
+    ],
+    sections: [
+      { key: 'rice', label: 'Rice Pilaf', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
