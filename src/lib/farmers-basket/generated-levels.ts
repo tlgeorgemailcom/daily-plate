@@ -17320,5 +17320,49 @@ export const LEVELS: Level[] = [
       { key: 'sauce', label: 'Tomato Sauce', cookingMethod: '', yieldFactorWater: 0.73 },
       { key: 'cheese_filling', label: 'Cheese Filling', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'SIDE_027',
+    name: 'Deviled Eggs',
+    category: 'sides',
+    dietaryCategory: 'veggie',
+    levelNum: 361,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 halves (makes 6)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":125.8,"pro":6.4,"fat":10.5,"carb":0.8,"fib":0.1,"h2o":40.3,"sug":0.6,"perServing":{"cal":125.8,"pro":6.4,"fat":10.5,"carb":0.8,"fib":0.1,"h2o":40.3,"sug":0.6,"AddedSugars":0.0,"IntrinsicSugars":0.6},"micros":{"vitaminA":136.11,"vitaminC":0.01,"vitaminD":74.48,"vitaminE":1.36,"vitaminK":19.71,"vitaminB6":0.11,"vitaminB12":0.95,"thiamin":0.06,"riboflavin":0.44,"niacin":0.09,"folate":38.11,"calcium":45.45,"iron":1.14,"magnesium":10.05,"phosphorus":150.86,"potassium":120.66,"sodium":359.15,"zinc":0.93,"copper":0.01,"selenium":26.85,"cholesterol":320.72,"saturatedFat":4.14,"monoFat":5.45,"polyFat":6.45,"omega3":0.66,"omega6":4.55},"gramsPerServing":59.0,"servings":6,"per100g":{"Energy_KCal":212.94,"Water":68.26,"Protein":10.87,"TotalLipidFat":17.82,"Carbohydrate":1.34,"FiberTotalDietary":0.19,"SugarsTotal":1.07,"Cholesterol":320.72,"FattyAcids_totalSaturated":4.14,"FattyAcids_totalMonounsaturated":5.45,"FattyAcids_totalPolyunsaturated":6.45,"LinoleicAcid":4.55,"alphaLinolenicAcid":0.63,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.03,"VitaminA_RAE":136.11,"Retinol":127.06,"Carotene_beta":95.89,"VitaminD":74.48,"VitaminE_alphaTocopherol":1.36,"VitaminK_phylloquinone":19.71,"VitaminC_totalAscorbicAcid":0.01,"Thiamin":0.06,"Riboflavin":0.44,"Niacin":0.09,"PantothenicAcid":1.21,"VitaminB6":0.11,"Folate_total":38.11,"Folate_food":38.11,"Folate_DFE":38.11,"FolicAcid":0.0,"VitaminB12":0.95,"Choline_total":253.24,"Betaine":0.54,"LuteinZeaxanthin":363.71,"Lycopene":0.02,"Calcium_Ca":45.45,"Iron_Fe":1.14,"Magnesium_Mg":10.05,"Phosphorus_P":150.86,"Potassium_K":120.66,"Sodium_Na":359.15,"Zinc_Zn":0.93,"Copper_Cu":0.01,"Manganese_Mn":0.04,"Selenium_Se":26.85,"Tryptophan":0.13,"Threonine":0.52,"Isoleucine":0.59,"Leucine":0.92,"Lysine":0.78,"Methionine":0.34,"Cystine":0.25,"Phenylalanine":0.57,"Tyrosine":0.44,"Valine":0.66,"Arginine":0.65,"Histidine":0.25,"Alanine":0.6,"AsparticAcid":1.09,"GlutamicAcid":1.42,"Glycine":0.37,"Proline":0.44,"Serine":0.8,"omega3":0.66,"omega6":4.55,"AddedSugars":0.0,"IntrinsicSugars":1.07},"addedSugars":0.0,"intrinsicSugars":0.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"1129","name":"Egg, whole, cooked, hard-boiled","grams":50.0},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":6.9},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":0.8},{"ndb":"2048","name":"Vinegar, cider","grams":0.8},{"ndb":"2047","name":"Salt, table","grams":0.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.0},{"ndb":"2028","name":"Spices, paprika","grams":0.2}],"sections":[{"section_key":"filling","section_label":"Deviled Egg Filling","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":354.32,"raw_water_grams":241.87,"raw_fat_grams":63.14,"raw_protein_grams":38.52,"raw_carb_grams":4.73,"final_grams":354.32}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Deviled Eggs', quantity: 'custom (g)', foodWord: 'DEVILEDEGGS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'hard-boiled egg', quantity: '6 large eggs, hard-boiled', section: 'filling', ndbNo: '1129', portionDesc: 'g', portionGrams: 300.0 },
+      { name: 'mayonnaise', quantity: '3 tbsp', section: 'filling', ndbNo: '4025', portionDesc: 'g', portionGrams: 41.4 },
+      { name: 'yellow mustard', quantity: '1 tsp', section: 'filling', ndbNo: '2046', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'apple cider vinegar', quantity: '1 tsp', section: 'filling', ndbNo: '2048', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'salt', quantity: '1/4 tsp', section: 'filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '1/8 tsp', section: 'filling', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.275 },
+      { name: 'paprika', quantity: '1/2 tsp, for garnish', section: 'filling', ndbNo: '2028', portionDesc: 'g', portionGrams: 1.15 }
+    ],
+    recipeInstructions: [
+      'Place the eggs in a single layer in a saucepan and cover with cold water by 1 inch. Bring to a boil over medium-high heat, then remove from heat, cover, and let stand 12 minutes.',
+      'Transfer the eggs to a bowl of ice water and let cool completely, about 10 minutes. Peel and pat dry.',
+      'Slice each egg in half lengthwise. Pop the yolks into a bowl and arrange the egg white halves on a serving platter.',
+      'Mash the yolks well with a fork. Add the mayonnaise, mustard, apple cider vinegar, salt, and pepper; mix until smooth and creamy.',
+      'Taste and adjust seasoning. The filling should be tangy and well-seasoned.',
+      'Fill each egg white half with the yolk mixture using a small spoon or piping bag.',
+      'Dust lightly with paprika. Refrigerate until ready to serve, up to 24 hours.'
+    ],
+    sections: [
+      { key: 'filling', label: 'Deviled Egg Filling', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
