@@ -2,7 +2,7 @@
   import '../app.css';
   import { onMount } from 'svelte';
   import { browser } from '$app/environment';
-  import { page } from '$app/stores';
+  import { page, updated } from '$app/stores';
   import { goto } from '$app/navigation';
 
   type UmamiWindow = Window & { umami?: { track: (name: string, data?: Record<string, unknown>) => void } };
@@ -134,7 +134,26 @@
       cleanupVisibility = () => document.removeEventListener('visibilitychange', handleVisibilityHidden);
     })();
 
-    return () => { cleanupVisibility?.(); };
+    // ── Silent auto-update ───────────────────────────────────────────────────
+    // SvelteKit polls /_app/version.json every 60 s (set in svelte.config.js).
+    // When a new Vercel deployment is detected, reload silently so the user
+    // always sees the latest version — no prompt, no action required.
+    const unsubUpdated = updated.subscribe((isUpdated) => {
+      if (isUpdated) window.location.reload();
+    });
+
+    // Also check immediately when the app comes back to the foreground
+    // (covers iOS standalone mode resuming from suspension).
+    function handleVisibilityUpdate() {
+      if (document.visibilityState === 'visible') updated.check();
+    }
+    document.addEventListener('visibilitychange', handleVisibilityUpdate);
+
+    return () => {
+      cleanupVisibility?.();
+      unsubUpdated();
+      document.removeEventListener('visibilitychange', handleVisibilityUpdate);
+    };
   });
   
   // Enable auto-sync for returning paid users
