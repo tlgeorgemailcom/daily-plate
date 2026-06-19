@@ -54170,6 +54170,34 @@ export const FOODS: Food[] = [
         "gm": 36.0
       }
     ]
+  },
+  {
+    "word": "BACONRAW",
+    "display": "Bacon Raw",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "10994",
+    "desc": "Bacon, pre-sliced, reduced/low sodium, unprepared",
+    "cal": 407.0,
+    "pro": 12.53,
+    "fat": 39.27,
+    "carb": 0.83,
+    "fib": 0.0,
+    "h2o": 45.01,
+    "sug": 0.83,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice",
+        "gm": 30.0
+      }
+    ]
   }
 ];
 

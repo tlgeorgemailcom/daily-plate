@@ -360,4 +360,4 @@ ENTR_123,STUFFEDZUCCHINI,Vegetarian Stuffed Zucchini Boats,entrees & main course
 ENTR_124,CHEESEENCHILADAS,Vegetarian Cheese Enchiladas,entrees & main courses,veggie,,,,3 enchiladas (makes 4),4,Rule D,multi,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,,
 ENTR_125,CHEESELASAGNA,Vegetarian Cheese Lasagna,entrees & main courses,veggie,,,,1 piece (makes 8),8,Rule D,multi,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,,
 SIDE_027,DEVILEDEGGS,Deviled Eggs,sides,veggie,builtin,,,2 halves (makes 6),6,Rule D,raw,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,,
-SIDE_028,COLLARDGREENS,Braised Collard Greens,sides,all,builtin,,,3/4 cup (makes 4),4,Rule D,simmered,0.65,1.0,1.0,1.0,1.0,approved,,,,PASS,,
+SIDE_028,COLLARDGREENS,Braised Collard Greens,sides,all,builtin,,,3/4 cup (makes 4),4,Rule D,boiled,0.65,1.0,1.0,1.0,1.0,approved,,,,PASS,,
