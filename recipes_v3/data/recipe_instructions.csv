@@ -2339,10 +2339,9 @@ ENTR_125,5,"Preheat the oven to 375°F. Spread a thin layer of sauce on the bott
 ENTR_125,6,"Finish with a final layer of noodles, the remaining sauce, and the remaining mozzarella. Sprinkle any remaining parmesan over the top."
 ENTR_125,7,Cover tightly with foil and bake at 375°F for 40 minutes. Remove foil and bake an additional 15–20 minutes until the cheese is bubbly and lightly golden.
 ENTR_125,8,Let the lasagna rest 15 minutes before cutting into 8 equal pieces and serving.
-SIDE_027,1,"Place the eggs in a single layer in a saucepan and cover with cold water by 1 inch. Bring to a boil over medium-high heat, then remove from heat, cover, and let stand 12 minutes."
-SIDE_027,2,"Transfer the eggs to a bowl of ice water and let cool completely, about 10 minutes. Peel and pat dry."
-SIDE_027,3,Slice each egg in half lengthwise. Pop the yolks into a bowl and arrange the egg white halves on a serving platter.
-SIDE_027,4,"Mash the yolks well with a fork. Add the mayonnaise, mustard, apple cider vinegar, salt, and pepper; mix until smooth and creamy."
-SIDE_027,5,Taste and adjust seasoning. The filling should be tangy and well-seasoned.
-SIDE_027,6,Fill each egg white half with the yolk mixture using a small spoon or piping bag.
-SIDE_027,7,"Dust lightly with paprika. Refrigerate until ready to serve, up to 24 hours."
+SIDE_027,1,"Start with 6 hard-boiled eggs, cooled and peeled. (To hard-boil: place eggs in a saucepan, cover with cold water by 1 inch, bring to a boil, remove from heat, cover, and let stand 12 minutes; then transfer to an ice bath for 10 minutes before peeling.)"
+SIDE_027,2,Slice each egg in half lengthwise. Pop the yolks into a bowl and arrange the egg white halves on a serving platter.
+SIDE_027,3,"Mash the yolks well with a fork. Add the mayonnaise, mustard, apple cider vinegar, salt, and pepper; mix until smooth and creamy."
+SIDE_027,4,Taste and adjust seasoning. The filling should be tangy and well-seasoned.
+SIDE_027,5,Fill each egg white half with the yolk mixture using a small spoon or piping bag.
+SIDE_027,6,"Dust lightly with paprika. Refrigerate until ready to serve, up to 24 hours."
