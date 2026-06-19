@@ -51619,17 +51619,17 @@ export const FOODS: Food[] = [
   },
   {
     "word": "ONIONRINGS",
-    "display": "Onion Rings Fried",
+    "display": "Onion Rings",
     "groups": [],
-    "ndb": "21130",
-    "desc": "Fast foods, onion rings, breaded and fried",
-    "cal": 411.0,
-    "pro": 3.86,
-    "fat": 25.23,
-    "carb": 43.58,
-    "fib": 2.7,
-    "h2o": 24.52,
-    "sug": 5.43,
+    "ndb": "36036",
+    "desc": "Restaurant, family style, onion rings",
+    "cal": 356.0,
+    "pro": 4.89,
+    "fat": 19.28,
+    "carb": 40.72,
+    "fib": 2.6,
+    "h2o": 32.9,
+    "sug": 4.68,
     "portions": [
       {
         "amt": 1.0,
@@ -51638,13 +51638,8 @@ export const FOODS: Food[] = [
       },
       {
         "amt": 1.0,
-        "desc": "piece",
-        "gm": 10.0
-      },
-      {
-        "amt": 1.0,
-        "desc": "serving (8-9 rings)",
-        "gm": 85.0
+        "desc": "serving",
+        "gm": 259.0
       }
     ]
   },
