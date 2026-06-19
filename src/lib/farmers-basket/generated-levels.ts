@@ -17363,5 +17363,50 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'filling', label: 'Deviled Egg Filling', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SIDE_028',
+    name: 'Braised Collard Greens',
+    category: 'sides',
+    dietaryCategory: 'all',
+    levelNum: 362,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '3/4 cup (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":108.0,"pro":7.8,"fat":4.8,"carb":10.1,"fib":5.1,"h2o":167.4,"sug":1.8,"perServing":{"cal":108.0,"pro":7.8,"fat":4.8,"carb":10.1,"fib":5.1,"h2o":167.4,"sug":1.8,"AddedSugars":0.0,"IntrinsicSugars":1.8},"micros":{"vitaminA":149.12,"vitaminC":22.25,"vitaminD":1.01,"vitaminE":1.37,"vitaminK":256.08,"vitaminB6":0.16,"vitaminB12":0.06,"thiamin":0.07,"riboflavin":0.1,"niacin":1.09,"folate":78.33,"calcium":145.16,"iron":0.41,"magnesium":20.5,"phosphorus":44.79,"potassium":186.53,"sodium":263.46,"zinc":0.36,"copper":0.05,"selenium":4.08,"cholesterol":5.88,"saturatedFat":0.75,"monoFat":0.94,"polyFat":0.49,"omega3":0.01,"omega6":0.31},"gramsPerServing":193.8,"servings":4,"per100g":{"Energy_KCal":55.72,"Water":86.39,"Protein":4.05,"TotalLipidFat":2.48,"Carbohydrate":5.24,"FiberTotalDietary":2.65,"SugarsTotal":0.91,"Cholesterol":5.88,"FattyAcids_totalSaturated":0.75,"FattyAcids_totalMonounsaturated":0.94,"FattyAcids_totalPolyunsaturated":0.49,"LinoleicAcid":0.31,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":149.12,"Retinol":0.65,"Carotene_beta":1767.18,"VitaminD":1.01,"VitaminE_alphaTocopherol":1.37,"VitaminK_phylloquinone":256.08,"VitaminC_totalAscorbicAcid":22.25,"Thiamin":0.07,"Riboflavin":0.1,"Niacin":1.09,"PantothenicAcid":0.24,"VitaminB6":0.16,"Folate_total":78.33,"Folate_food":78.33,"Folate_DFE":78.33,"FolicAcid":0.0,"VitaminB12":0.06,"Choline_total":20.16,"Betaine":0.74,"LuteinZeaxanthin":2541.01,"Lycopene":0.01,"Calcium_Ca":145.16,"Iron_Fe":0.41,"Magnesium_Mg":20.5,"Phosphorus_P":44.79,"Potassium_K":186.53,"Sodium_Na":263.46,"Zinc_Zn":0.36,"Copper_Cu":0.05,"Manganese_Mn":0.45,"Selenium_Se":4.08,"Tryptophan":0.04,"Threonine":0.14,"Isoleucine":0.16,"Leucine":0.26,"Lysine":0.25,"Methionine":0.07,"Cystine":0.04,"Phenylalanine":0.14,"Tyrosine":0.12,"Valine":0.18,"Arginine":0.22,"Histidine":0.11,"Alanine":0.18,"AsparticAcid":0.32,"GlutamicAcid":0.48,"Glycine":0.15,"Proline":0.14,"Serine":0.13,"omega3":0.01,"omega6":0.31,"AddedSugars":0.0,"IntrinsicSugars":0.91},"addedSugars":0.0,"intrinsicSugars":1.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.65,"yieldFactorFat":1.0,"sources":[{"ndb":"11161","name":"Collards, raw","grams":113.4},{"ndb":"10862","name":"Pork, cured, bacon, pre-sliced, cooked, pan-fried","grams":11.5},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"14411","name":"Water, tap, drinking","grams":120.0},{"ndb":"2048","name":"Vinegar, cider","grams":7.5},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1}],"sections":[{"section_key":"greens","section_label":"Collard Greens","prep_method":"raw","cook_method":"simmered","cooking_method":"simmered","cooking_method_normalized":"raw","yield_factor_water":0.65,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":1135.55,"raw_water_grams":1030.05,"raw_fat_grams":19.2,"raw_protein_grams":31.4,"raw_carb_grams":40.58,"final_grams":775.03}],"cookingMethod":"simmered"},
+    recipeIngredients: [
+      { name: 'Braised Collard Greens', quantity: 'custom (g)', foodWord: 'COLLARDGREENS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'collard greens', quantity: '1 lb bunch collard greens, stems removed, leaves chopped', section: 'greens', ndbNo: '11161', portionDesc: 'g', portionGrams: 453.6 },
+      { name: 'bacon', quantity: '4 slices, chopped', section: 'greens', ndbNo: '10862', portionDesc: 'g', portionGrams: 46.0 },
+      { name: 'onion', quantity: '1 medium onion, diced', section: 'greens', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'greens', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'water', quantity: '2 cups', section: 'greens', ndbNo: '14411', portionDesc: 'g', portionGrams: 480.0 },
+      { name: 'apple cider vinegar', quantity: '2 tbsp', section: 'greens', ndbNo: '2048', portionDesc: 'g', portionGrams: 29.8 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'greens', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'greens', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'red pepper flakes', quantity: '1/4 tsp', section: 'greens', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Cook the bacon in a large pot or Dutch oven over medium heat until the fat renders and the bacon is crispy, about 5 minutes. Remove the bacon with a slotted spoon and set aside, leaving the drippings in the pot.',
+      'Add the diced onion to the pot and cook in the bacon drippings over medium heat until softened and translucent, about 5 minutes. Add the minced garlic and cook 1 minute more.',
+      'Add the chopped collard greens to the pot in batches, stirring to wilt each addition before adding more.',
+      'Add the water, apple cider vinegar, salt, black pepper, and red pepper flakes. Stir to combine. Return the reserved bacon to the pot.',
+      'Bring to a boil, then reduce heat to low, cover, and simmer for 45–60 minutes, stirring occasionally, until the collard greens are very tender and have absorbed most of the pot likker.',
+      'Taste and adjust seasoning with additional salt, vinegar, or red pepper flakes as needed. Serve warm.'
+    ],
+    sections: [
+      { key: 'greens', label: 'Collard Greens', cookingMethod: '', yieldFactorWater: 0.65 }
+    ],
   }
 ];

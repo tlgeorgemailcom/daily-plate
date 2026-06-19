@@ -54142,6 +54142,34 @@ export const FOODS: Food[] = [
         "gm": 159.15
       }
     ]
+  },
+  {
+    "word": "COLLARDRAW",
+    "display": "Collard Greens Raw",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11161",
+    "desc": "Collards, raw",
+    "cal": 32.0,
+    "pro": 3.02,
+    "fat": 0.61,
+    "carb": 5.42,
+    "fib": 4.0,
+    "h2o": 89.62,
+    "sug": 0.46,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup chopped",
+        "gm": 36.0
+      }
+    ]
   }
 ];
 
