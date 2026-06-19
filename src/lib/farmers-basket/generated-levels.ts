@@ -17400,8 +17400,8 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Heat a large pot or Dutch oven over medium heat. Add the cooked bacon and diced onion and cook until the onion is softened, about 5 minutes. Add the minced garlic and cook 1 minute more.',
       'Add the chopped collard greens in batches, stirring each addition to begin wilting before adding more.',
-      'Add the water, apple cider vinegar, salt, black pepper, and red pepper flakes. Stir to combine. Bring to a boil, then reduce heat to low, cover, and simmer for 45–60 minutes, stirring occasionally, until the collard greens are very tender.',
-      'Taste and adjust seasoning with additional salt, vinegar, or red pepper flakes as needed. Serve warm.'
+      'Add the water, apple cider vinegar, salt, black pepper, and red pepper flakes. Stir to combine. Bring to a boil, then reduce heat to low, cover, and simmer for 45–60 minutes, stirring occasionally, until the collard greens are very tender and most of the liquid has reduced.',
+      'Taste and adjust seasoning with additional salt, vinegar, or red pepper flakes as needed. Serve warm with any remaining pot likker (the flavorful cooking liquid).'
     ],
     sections: [
       { key: 'greens', label: 'Collard Greens', cookingMethod: '', yieldFactorWater: 0.65 }
