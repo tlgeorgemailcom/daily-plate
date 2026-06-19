@@ -17613,5 +17613,47 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'rings', label: 'Onion Rings', cookingMethod: '', yieldFactorWater: 0.29 }
     ],
+  },
+  {
+    id: 'SIDE_034',
+    name: 'Green Bean Casserole',
+    category: 'sides',
+    dietaryCategory: 'veggie',
+    levelNum: 368,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '3/4 cup (makes 6)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":220.9,"pro":5.7,"fat":11.0,"carb":26.8,"fib":3.8,"h2o":133.7,"sug":6.7,"perServing":{"cal":220.9,"pro":5.7,"fat":11.0,"carb":26.8,"fib":3.8,"h2o":133.7,"sug":6.7,"AddedSugars":0.0,"IntrinsicSugars":6.7},"micros":{"vitaminA":22.73,"vitaminC":2.93,"vitaminD":14.68,"vitaminE":0.43,"vitaminK":25.41,"vitaminB6":0.04,"vitaminB12":0.1,"thiamin":0.09,"riboflavin":0.12,"niacin":0.76,"folate":27.2,"calcium":56.79,"iron":0.81,"magnesium":15.18,"phosphorus":56.07,"potassium":152.83,"sodium":341.74,"zinc":0.33,"copper":0.05,"selenium":4.88,"cholesterol":2.54,"saturatedFat":3.72,"monoFat":0.94,"polyFat":0.8,"omega3":0.07,"omega6":0.6},"gramsPerServing":179.8,"servings":6,"per100g":{"Energy_KCal":122.86,"Water":74.35,"Protein":3.15,"TotalLipidFat":6.13,"Carbohydrate":14.89,"FiberTotalDietary":2.14,"SugarsTotal":3.74,"Cholesterol":2.54,"FattyAcids_totalSaturated":3.72,"FattyAcids_totalMonounsaturated":0.94,"FattyAcids_totalPolyunsaturated":0.8,"LinoleicAcid":0.6,"alphaLinolenicAcid":0.07,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":22.73,"Retinol":10.0,"Carotene_beta":140.89,"VitaminD":14.68,"VitaminE_alphaTocopherol":0.43,"VitaminK_phylloquinone":25.41,"VitaminC_totalAscorbicAcid":2.93,"Thiamin":0.09,"Riboflavin":0.12,"Niacin":0.76,"PantothenicAcid":0.19,"VitaminB6":0.04,"Folate_total":27.2,"Folate_food":17.19,"Folate_DFE":34.21,"FolicAcid":13.34,"VitaminB12":0.1,"Choline_total":13.35,"Betaine":0.23,"LuteinZeaxanthin":201.32,"Lycopene":0.01,"Calcium_Ca":56.79,"Iron_Fe":0.81,"Magnesium_Mg":15.18,"Phosphorus_P":56.07,"Potassium_K":152.83,"Sodium_Na":341.74,"Zinc_Zn":0.33,"Copper_Cu":0.05,"Manganese_Mn":0.22,"Selenium_Se":4.88,"Tryptophan":0.03,"Threonine":0.1,"Isoleucine":0.1,"Leucine":0.2,"Lysine":0.14,"Methionine":0.05,"Cystine":0.03,"Phenylalanine":0.13,"Tyrosine":0.09,"Valine":0.14,"Arginine":0.12,"Histidine":0.06,"Alanine":0.1,"AsparticAcid":0.26,"GlutamicAcid":0.76,"Glycine":0.09,"Proline":0.23,"Serine":0.15,"omega3":0.07,"omega6":0.6,"AddedSugars":0.0,"IntrinsicSugars":3.74},"addedSugars":0.0,"intrinsicSugars":6.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.88,"yieldFactorFat":1.0,"sources":[{"ndb":"11053","name":"Beans, snap, green, cooked, boiled, drained, without salt","grams":75.7},{"ndb":"6043","name":"Soup, cream of mushroom, canned, condensed","grams":49.7},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":30.5},{"ndb":"16124","name":"Soy sauce made from soy (tamari)","grams":1.0},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"","name":"Onion Rings","grams":39.3}],"sections":[{"section_key":"casserole","section_label":"Green Bean Casserole","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":941.58,"raw_water_grams":822.77,"raw_fat_grams":23.04,"raw_protein_grams":19.06,"raw_carb_grams":65.53,"final_grams":842.84},{"section_key":"topping","section_label":"Onion Ring Topping","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":236.0,"raw_water_grams":78.12,"raw_fat_grams":43.05,"raw_protein_grams":14.89,"raw_carb_grams":95.11,"final_grams":236.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Green Bean Casserole', quantity: 'custom (g)', foodWord: 'GREENBEANCASSEROLE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'green beans, cooked and drained', quantity: '3 cups', section: 'casserole', ndbNo: '11053', portionDesc: 'g', portionGrams: 454.0 },
+      { name: 'condensed cream of mushroom soup', quantity: '1 can (10.5 oz)', section: 'casserole', ndbNo: '6043', portionDesc: 'g', portionGrams: 298.0 },
+      { name: 'whole milk', quantity: '3/4 cup whole milk', section: 'casserole', ndbNo: '1077', portionDesc: 'g', portionGrams: 183.0 },
+      { name: 'tamari', quantity: '1 tsp', section: 'casserole', ndbNo: '16124', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'casserole', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'Onion Rings', quantity: 'half the Onion Rings recipe (236g)', section: 'topping', foodWord: 'ONIONRINGS', ndbNo: '36036', portionDesc: 'g', portionGrams: 236.0, isDish: true, componentRef: 'SIDE_033' }
+    ],
+    recipeInstructions: [
+      'Preheat oven to 350°F (175°C). Lightly grease a 9×13-inch or 2-quart baking dish.',
+      'In a large bowl, whisk together the condensed cream of mushroom soup, whole milk, tamari, and black pepper until smooth.',
+      'Add the cooked green beans and half the onion rings (broken into pieces). Stir to coat evenly, then spread into the prepared baking dish.',
+      'Bake for 25 minutes, until bubbling at the edges. Remove from oven and scatter the remaining onion rings over the top. (Make or prepare the Onion Rings recipe ahead of time — see the Onion Rings recipe.)',
+      'Return to oven and bake 5 minutes more until the topping is heated through. Rest 5 minutes before serving.'
+    ],
+    sections: [
+      { key: 'casserole', label: 'Green Bean Casserole', cookingMethod: '', yieldFactorWater: 0.88 },
+      { key: 'topping', label: 'Onion Ring Topping', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

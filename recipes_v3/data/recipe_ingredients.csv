@@ -3932,3 +3932,9 @@ SIDE_033,5,salt_table,1 tsp,6.0,,,rings,,,
 SIDE_033,6,black_pepper_ground,1/4 tsp,0.575,,,rings,,,
 SIDE_033,7,garlic_powder,1/4 tsp,0.775,,,rings,,,
 SIDE_033,8,paprika,1/2 tsp,1.15,,,rings,,,
+SIDE_034,1,green_beans_cooked,3 cups,454.0,,,casserole,,,"green beans, cooked and drained"
+SIDE_034,2,soup_cream_of_mushroom,1 can (10.5 oz),298.0,,,casserole,,,condensed cream of mushroom soup
+SIDE_034,3,milk_whole,3/4 cup whole milk,183.0,,,casserole,,,
+SIDE_034,4,tamari,1 tsp,6.0,,,casserole,,,
+SIDE_034,5,black_pepper_ground,1/4 tsp,0.575,,,casserole,,,
+SIDE_034,6,@SIDE_033,half the Onion Rings recipe (236g),236.0,,,topping,,,Onion Rings
