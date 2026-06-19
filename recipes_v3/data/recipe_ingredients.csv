@@ -3938,7 +3938,7 @@ SIDE_034,3,milk_whole,3/4 cup whole milk,183.0,,,casserole,,,
 SIDE_034,4,tamari,1 tsp,6.0,,,casserole,,,
 SIDE_034,5,black_pepper_ground,1/4 tsp,0.575,,,casserole,,,
 SIDE_034,6,@SIDE_033,half the Onion Rings recipe (236g),236.0,,,topping,,,Onion Rings
-SIDE_035,1,@STOCK_003,3 cups Chicken Broth (recipe),720.0,,,rice,,,Chicken Broth
+SIDE_035,1,@STOCK_003,3 cups Chicken Broth (recipe),720.0,,,broth,,,Chicken Broth
 SIDE_035,2,rice_white_raw,1-1/2 cups,277.5,,,rice,,,
 SIDE_035,3,butter_unsalted,2 tbsp,28.4,,,rice,,,
 SIDE_035,4,onion_raw,"1/2 medium onion, diced",55.0,,,rice,,,
