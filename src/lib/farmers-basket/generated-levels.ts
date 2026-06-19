@@ -17565,8 +17565,7 @@ export const LEVELS: Level[] = [
       'In a wide skillet or saute pan, combine the carrots, butter, brown sugar, water, and salt. Bring to a boil over medium-high heat.',
       'Reduce heat to medium-low, cover, and simmer for 12 to 15 minutes until the carrots are just tender when pierced with a fork.',
       'Remove the lid and increase the heat to medium-high. Cook, stirring occasionally, for 5 to 7 minutes until the liquid reduces to a glossy glaze that coats the carrots.',
-      'Taste and adjust salt if needed. Serve immediately.',
-      '(The nutrition reflects 530g cooked from 635g raw; yfw=0.80 accounts for water evaporated during the reduction step.)'
+      'Taste and adjust salt if needed. Serve immediately.'
     ],
     sections: [
       { key: 'carrots', label: 'Glazed Carrots', cookingMethod: '', yieldFactorWater: 0.8 }
