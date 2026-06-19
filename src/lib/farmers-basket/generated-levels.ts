@@ -17447,5 +17447,48 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cream', label: 'Creamed Corn', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'SIDE_030',
+    name: 'Creamed Spinach',
+    category: 'sides',
+    dietaryCategory: 'veggie',
+    levelNum: 364,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1/2 cup (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":200.2,"pro":5.4,"fat":17.1,"carb":9.4,"fib":3.5,"h2o":63.0,"sug":2.1,"perServing":{"cal":200.2,"pro":5.4,"fat":17.1,"carb":9.4,"fib":3.5,"h2o":63.0,"sug":2.1,"AddedSugars":0.0,"IntrinsicSugars":2.1},"micros":{"vitaminA":765.15,"vitaminC":21.11,"vitaminD":19.07,"vitaminE":3.21,"vitaminK":663.26,"vitaminB6":0.19,"vitaminB12":0.05,"thiamin":0.09,"riboflavin":0.28,"niacin":0.78,"folate":186.94,"calcium":145.95,"iron":3.28,"magnesium":95.03,"phosphorus":84.03,"potassium":692.86,"sodium":356.58,"zinc":0.77,"copper":0.17,"selenium":3.22,"cholesterol":49.73,"saturatedFat":10.73,"monoFat":4.47,"polyFat":0.8,"omega3":0.05,"omega6":0.38},"gramsPerServing":98.3,"servings":4,"per100g":{"Energy_KCal":203.68,"Water":64.04,"Protein":5.52,"TotalLipidFat":17.41,"Carbohydrate":9.52,"FiberTotalDietary":3.55,"SugarsTotal":2.11,"Cholesterol":49.73,"FattyAcids_totalSaturated":10.73,"FattyAcids_totalMonounsaturated":4.47,"FattyAcids_totalPolyunsaturated":0.8,"LinoleicAcid":0.38,"alphaLinolenicAcid":0.05,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":765.15,"Retinol":153.94,"Carotene_beta":7332.25,"VitaminD":19.07,"VitaminE_alphaTocopherol":3.21,"VitaminK_phylloquinone":663.26,"VitaminC_totalAscorbicAcid":21.11,"Thiamin":0.09,"Riboflavin":0.28,"Niacin":0.78,"PantothenicAcid":0.2,"VitaminB6":0.19,"Folate_total":186.94,"Folate_food":184.95,"Folate_DFE":188.33,"FolicAcid":3.06,"VitaminB12":0.05,"Choline_total":30.18,"Betaine":147.98,"LuteinZeaxanthin":13194.97,"Lycopene":0.03,"Calcium_Ca":145.95,"Iron_Fe":3.28,"Magnesium_Mg":95.03,"Phosphorus_P":84.03,"Potassium_K":692.86,"Sodium_Na":356.58,"Zinc_Zn":0.77,"Copper_Cu":0.17,"Manganese_Mn":1.29,"Selenium_Se":3.22,"Tryptophan":0.07,"Threonine":0.22,"Isoleucine":0.26,"Leucine":0.42,"Lysine":0.3,"Methionine":0.1,"Cystine":0.05,"Phenylalanine":0.23,"Tyrosine":0.2,"Valine":0.3,"Arginine":0.28,"Histidine":0.11,"Alanine":0.24,"AsparticAcid":0.44,"GlutamicAcid":0.79,"Glycine":0.22,"Proline":0.28,"Serine":0.19,"omega3":0.05,"omega6":0.38,"AddedSugars":0.0,"IntrinsicSugars":2.11},"addedSugars":0.0,"intrinsicSugars":2.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.39,"yieldFactorFat":1.0,"sources":[{"ndb":"11457","name":"Spinach, raw","grams":141.8},{"ndb":"1145","name":"Butter, without salt","grams":7.1},{"ndb":"11282","name":"Onions, raw","grams":13.8},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":1.9},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":29.8},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"cream","section_label":"Creamed Spinach","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.39,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":787.05,"raw_water_grams":645.68,"raw_fat_grams":68.46,"raw_protein_grams":21.71,"raw_carb_grams":37.44,"final_grams":393.19}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Creamed Spinach', quantity: 'custom (g)', foodWord: 'CREAMEDSPINACH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'spinach', quantity: '2 (10oz) packages fresh spinach', section: 'cream', ndbNo: '11457', portionDesc: 'g', portionGrams: 567.0 },
+      { name: 'unsalted butter', quantity: '2 tbsp', section: 'cream', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
+      { name: 'onion', quantity: '1/2 medium onion, finely diced', section: 'cream', ndbNo: '11282', portionDesc: 'g', portionGrams: 55.0 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'cream', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '1 tbsp', section: 'cream', ndbNo: '20581', portionDesc: 'g', portionGrams: 7.8 },
+      { name: 'heavy cream', quantity: '1/2 cup', section: 'cream', ndbNo: '1053', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'ground nutmeg', quantity: '1/8 tsp', section: 'cream', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.275 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'cream', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'cream', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Add the spinach to a large dry skillet over high heat and cook, stirring, until completely wilted, 3–4 minutes. Transfer to a colander and squeeze out as much liquid as possible. Set aside.',
+      'Melt the butter in the same skillet over medium heat. Add the onion and cook until softened, about 5 minutes. Add the garlic and cook 1 minute more.',
+      'Sprinkle the flour over the onion mixture and whisk to combine. Cook 1 minute, then pour in the heavy cream and whisk until smooth. Cook for 2–3 minutes until the sauce thickens.',
+      'Stir in the squeezed spinach, nutmeg, salt, and black pepper. Cook for 2 minutes until heated through. Taste and adjust seasoning as needed. Serve warm.'
+    ],
+    sections: [
+      { key: 'cream', label: 'Creamed Spinach', cookingMethod: '', yieldFactorWater: 0.39 }
+    ],
   }
 ];
