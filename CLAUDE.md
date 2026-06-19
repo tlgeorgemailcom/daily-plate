@@ -201,7 +201,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 - **fat column in `comboo.db`** is literal `'n'` for recipe entries — always use `TotalLipidFat`.
 - **NDB_No is stored as integer** in `comboo.db` (no leading zeros).
 - `step_order` must be plain integers (not "1a", "2b").
-- `cooking_method` must be one of: `raw`, `boiled`, `steamed`, `baked`, `fried`, `pan grilled`, `grilled`, `microwave`. (`pan grilled` is an alias for `fried` — same retention factors, friendlier display label.) Compound strings not supported — use `recipe_sections.csv` for multi-stage.
+- `cooking_method` must be one of: `raw`, `boiled`, `steamed`, `baked`, `fried`, `pan grilled`, `grilled`, `microwave`. (`pan grilled` is an alias for `fried` — same retention factors, friendlier display label.) Compound strings not supported — use `recipe_sections.csv` for multi-stage. **`simmered` is NOT a valid value** — use `boiled` for any simmered/braised/stewed cooking. Using `simmered` silently produces no cook method in the section display. (Discovered June 2026, SIDE_028.)
 - `dietary_category` must be one of: `all`, `pollo-pesca`, `pollo`, `pesca`, `veggie`, `vegan`. These are the keys in `DIETARY_INCLUDES` in `RecipeBook.svelte`; any other value silently hides the recipe from all users. Enforced by `validate_ledger.py`.
 - `food_word` must exist in `food-portions-complete.csv` (except Rule D).
 - **Every `section` value used in `recipe_ingredients.csv` must have a matching row in `recipe_sections.csv`.** Single-section recipes may mirror the recipe-level yield factors; multi-stage recipes set per-section yields. Enforced by `validate_ledger.py` Rule 6b.
@@ -385,7 +385,7 @@ Planned BKFST order (standalone components first, composites last):
 | SIDE_025 | Vegan Sweet Potato Casserole | (none) | Rule D ✅ — no canonical; 2-section: filling (baked yfw=0.85): sweet_potato_raw(11507) 1360.8g+maple_syrup(19353) 80.0g+coconut_oil(4047) 54.4g+vanilla_extract(2050) 4.2g+cinnamon_ground(2010) 2.6g+nutmeg_ground(2025) 0.55g+salt_table(2047) 3.0g; topping (baked yfw=0.95): oats_rolled_old_fashioned_dry(8120) 60.8g+pecans_raw(12142) 81.8g+maple_syrup(19353) 83.0g+cinnamon_ground(2010) 2.6g+coconut_oil(4047) 40.8g+salt_table(2047) 1.5g; 1612.2g cooked; 8 servings × 201.5g (3/4 cup); 202.6 kcal·2.31P·9.81F·27.33C·3.58Fi per 100g; dietary_category=vegan |
 | SIDE_026 | Marshmallow Sweet Potato Casserole | (none) | Rule D ✅ — no canonical; 2-section: filling (baked yfw=0.85): sweet_potato_raw(11507) 1360.8g+maple_syrup(19353) 80.0g+butter_unsalted(1145) 56.8g+milk_whole(1077) 122.0g+egg_whole_raw(1123) 50.0g+vanilla_extract(2050) 4.2g+cinnamon_ground(2010) 2.6g+nutmeg_ground(2025) 0.55g+salt_table(2047) 3.0g; topping (baked yfw=1.0): marshmallow_mini(19116) 100.0g; 1594.6g cooked; 8 servings × 199.3g (3/4 cup); 142.4 kcal·2.13P·3.51F·26.21C·2.66Fi per 100g; dietary_category=veggie |
 | SIDE_027 | Deviled Eggs | (none) | Rule D ✅ — no canonical; egg_cooked_hardboiled(1129) 300g+mayonnaise(4025) 82.8g+mustard_yellow(2046) 10g+apple_cider_vinegar(2048) 4.5g+salt(2047) 1.5g+black_pepper(2030) 0.575g+paprika(2028) 0.575g; raw yfw=1.0 → 399.95g; 6 servings × 2 halves; 125.8 kcal·6.37P·10.53F·0.82C per 100g; dietary_category=veggie; committed `2436cac` |
-| SIDE_028 | Braised Collard Greens | (none) | Rule D ✅ — new ingredient collard_greens_raw(11161, COLLARDRAW); collard_greens_raw(11161) 453.6g+bacon_cooked_pan_fried(10862) 46g+onion_raw(11282) 110g+garlic_raw(11215) 12g+water(14411) 480g+apple_cider_vinegar(2048) 29.8g+salt(2047) 3g+black_pepper(2030) 0.575g+red_pepper_flakes(2031) 0.575g; simmered yfw=0.65 → 775g; 4 servings × 193.8g (3/4 cup); 55.7 kcal·4.05P·2.48F·5.24C·2.65Fi per 100g; dietary_category=all; committed `9f357bc` |
+| SIDE_028 | Braised Collard Greens | (none) | Rule D ✅ — new ingredient collard_greens_raw(11161, COLLARDRAW); collard_greens_raw(11161) 453.6g+bacon_cooked_pan_fried(10862) 46g+onion_raw(11282) 110g+garlic_raw(11215) 12g+water(14411) 480g+apple_cider_vinegar(2048) 29.8g+salt(2047) 3g+black_pepper(2030) 0.575g+red_pepper_flakes(2031) 0.575g; boiled yfw=0.65 → 775g; 4 servings × 193.8g (3/4 cup); 55.7 kcal·4.05P·2.48F·5.24C·2.65Fi per 100g; dietary_category=all; committed `bcb7530` |
 ## Current Work: SALAD Recipes
 
 | ID | Recipe | Dressing | Notes |
@@ -657,6 +657,7 @@ Whenever a new `ingredient_key` is added to `ingredients_ledger.csv` or a new ro
 | 2026-06-18 | clams_raw (NDB 15157) | clam | Yes | pending |
 | 2026-06-18 | mussels_raw (NDB 15164) | mussel | Yes | pending |
 | 2026-06-19 | collard_greens_raw (NDB 11161) | collards | Yes | pending |
+| 2026-06-19 | bacon_raw (NDB 10994) | bacon | Yes | pending — note: NDB 10994 is reduced/low sodium raw bacon |
 | 2026-06-17 | scallops_raw (NDB 15172) | scallop | Yes | pending |
 | 2026-06-17 | almonds_sliced (NDB 12061) | almonds | Yes | pending |
 | 2026-06-17 | bean_sprouts_raw (NDB 11052) | sprouts | Yes | ✅ added 2026-06-17 (vegetable) |
