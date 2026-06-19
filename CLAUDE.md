@@ -386,6 +386,7 @@ Planned BKFST order (standalone components first, composites last):
 | SIDE_026 | Marshmallow Sweet Potato Casserole | (none) | Rule D ✅ — no canonical; 2-section: filling (baked yfw=0.85): sweet_potato_raw(11507) 1360.8g+maple_syrup(19353) 80.0g+butter_unsalted(1145) 56.8g+milk_whole(1077) 122.0g+egg_whole_raw(1123) 50.0g+vanilla_extract(2050) 4.2g+cinnamon_ground(2010) 2.6g+nutmeg_ground(2025) 0.55g+salt_table(2047) 3.0g; topping (baked yfw=1.0): marshmallow_mini(19116) 100.0g; 1594.6g cooked; 8 servings × 199.3g (3/4 cup); 142.4 kcal·2.13P·3.51F·26.21C·2.66Fi per 100g; dietary_category=veggie |
 | SIDE_027 | Deviled Eggs | (none) | Rule D ✅ — no canonical; egg_cooked_hardboiled(1129) 300g+mayonnaise(4025) 82.8g+mustard_yellow(2046) 10g+apple_cider_vinegar(2048) 4.5g+salt(2047) 1.5g+black_pepper(2030) 0.575g+paprika(2028) 0.575g; raw yfw=1.0 → 399.95g; 6 servings × 2 halves; 125.8 kcal·6.37P·10.53F·0.82C per 100g; dietary_category=veggie; committed `2436cac` |
 | SIDE_028 | Braised Collard Greens | (none) | Rule D ✅ — new ingredient collard_greens_raw(11161, COLLARDRAW); collard_greens_raw(11161) 453.6g+bacon_cooked_pan_fried(10862) 46g+onion_raw(11282) 110g+garlic_raw(11215) 12g+water(14411) 480g+apple_cider_vinegar(2048) 29.8g+salt(2047) 3g+black_pepper(2030) 0.575g+red_pepper_flakes(2031) 0.575g; boiled yfw=0.65 → 775g; 4 servings × 193.8g (3/4 cup); 55.7 kcal·4.05P·2.48F·5.24C·2.65Fi per 100g; dietary_category=all; committed `bcb7530` |
+| SIDE_029 | Creamed Corn | (none) | Rule D ✅ — new ingredient corn_sweet_white_frozen(11910, CORNSWTWHITEFRZN); corn_sweet_white_frozen(11910) 283.5g+butter_unsalted(1145) 28.4g+flour_ap_white_enriched_unbleached(20581) 7.8g+heavy_cream(1053) 119.0g+sugar_granulated(19335) 8.4g+salt_table(2047) 3.0g+black_pepper_ground(2030) 0.575g; boiled yfw=0.90 → 422g; 4 servings × 105.5g (1/2 cup); 218.1 kcal·2.7P·16.5F·17.7C·1.9Fi per 100g; dietary_category=veggie; committed `608493e` |
 ## Current Work: SALAD Recipes
 
 | ID | Recipe | Dressing | Notes |
@@ -658,6 +659,7 @@ Whenever a new `ingredient_key` is added to `ingredients_ledger.csv` or a new ro
 | 2026-06-18 | mussels_raw (NDB 15164) | mussel | Yes | pending |
 | 2026-06-19 | collard_greens_raw (NDB 11161) | collards | Yes | pending |
 | 2026-06-19 | bacon_raw (NDB 10994) | bacon | Yes | pending — note: NDB 10994 is reduced/low sodium raw bacon |
+| 2026-06-19 | corn_sweet_white_frozen (NDB 11910) | corn | Yes | pending — likely already exists as CORN; skip if duplicate |
 | 2026-06-17 | scallops_raw (NDB 15172) | scallop | Yes | pending |
 | 2026-06-17 | almonds_sliced (NDB 12061) | almonds | Yes | pending |
 | 2026-06-17 | bean_sprouts_raw (NDB 11052) | sprouts | Yes | ✅ added 2026-06-17 (vegetable) |
