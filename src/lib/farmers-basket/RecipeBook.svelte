@@ -392,10 +392,19 @@
   function handleSelect(level: Level) {
     savedScrollTop = scrollContainer?.scrollTop ?? 0;
     selectedLevel = level;
-    // Pre-collapse component_ref sections (sub-recipes); all other sections start expanded
+    // Pre-collapse only pure component_ref sections (where the sub-recipe is the
+    // only item). Mixed sections — a component_ref alongside regular ingredients
+    // (e.g. stock as cooking liquid + rice + aromatics) — start expanded so the
+    // regular ingredients are immediately visible.
     const componentRefSections = new Set(
       (level.recipeIngredients || [])
         .filter(ing => ing.isDish && ing.componentRef && ing.section)
+        .filter(ing => {
+          const allInSection = (level.recipeIngredients || []).filter(
+            i => i.section === ing.section
+          );
+          return allInSection.every(i => i.isDish);
+        })
         .map(ing => ing.section!)
     );
     collapsedIngredientSections = componentRefSections;
