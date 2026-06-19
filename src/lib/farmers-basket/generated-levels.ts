@@ -17490,5 +17490,45 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cream', label: 'Creamed Spinach', cookingMethod: '', yieldFactorWater: 0.39 }
     ],
+  },
+  {
+    id: 'SIDE_031',
+    name: 'French Fries',
+    category: 'sides',
+    dietaryCategory: 'vegan',
+    levelNum: 365,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule C',
+    nutritionJson: {"cal":308.5,"pro":4.8,"fat":15.2,"carb":41.0,"fib":3.0,"h2o":37.4,"sug":1.4,"perServing":{"cal":308.5,"pro":4.8,"fat":15.2,"carb":41.0,"fib":3.0,"h2o":37.4,"sug":1.4,"AddedSugars":0.0,"IntrinsicSugars":1.4},"micros":{"vitaminA":0.0,"vitaminC":6.35,"vitaminD":0.0,"vitaminE":0.44,"vitaminK":6.89,"vitaminB6":0.57,"vitaminB12":0.0,"thiamin":0.13,"riboflavin":0.06,"niacin":1.84,"folate":23.4,"calcium":29.15,"iron":1.92,"magnesium":51.27,"phosphorus":122.59,"potassium":929.5,"sodium":296.81,"zinc":0.65,"copper":0.22,"selenium":0.89,"cholesterol":0.0,"saturatedFat":12.06,"monoFat":1.68,"polyFat":0.24,"omega3":0.0,"omega6":0.0},"gramsPerServing":101.8,"servings":4,"per100g":{"Energy_KCal":303.15,"Water":36.78,"Protein":4.77,"TotalLipidFat":14.92,"Carbohydrate":40.28,"FiberTotalDietary":2.9,"SugarsTotal":1.38,"Cholesterol":0.0,"FattyAcids_totalSaturated":12.06,"FattyAcids_totalMonounsaturated":1.68,"FattyAcids_totalPolyunsaturated":0.24,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.0,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.44,"VitaminK_phylloquinone":6.89,"VitaminC_totalAscorbicAcid":6.35,"Thiamin":0.13,"Riboflavin":0.06,"Niacin":1.84,"PantothenicAcid":0.53,"VitaminB6":0.57,"Folate_total":23.4,"Folate_food":23.4,"Folate_DFE":23.4,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":25.3,"Betaine":0.45,"LuteinZeaxanthin":7.24,"Lycopene":0.0,"Calcium_Ca":29.15,"Iron_Fe":1.92,"Magnesium_Mg":51.27,"Phosphorus_P":122.59,"Potassium_K":929.5,"Sodium_Na":296.81,"Zinc_Zn":0.65,"Copper_Cu":0.22,"Manganese_Mn":0.34,"Selenium_Se":0.89,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":1.38},"addedSugars":0.0,"intrinsicSugars":1.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"21138","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.21,"yieldFactorFat":1.0,"sources":[{"ndb":"11353","name":"Potatoes, russet, flesh and skin, raw","grams":226.8},{"ndb":"4513","name":"Vegetable oil, palm kernel","grams":15.0},{"ndb":"2047","name":"Salt, table","grams":0.8}],"sections":[{"section_key":"fries","section_label":"French Fries","prep_method":"raw","cook_method":"fried","cooking_method":"fried","cooking_method_normalized":"fried","yield_factor_water":0.21,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":970.2,"raw_water_grams":712.88,"raw_fat_grams":60.73,"raw_protein_grams":19.41,"raw_carb_grams":163.93,"final_grams":407.02}],"cookingMethod":"fried"},
+    recipeIngredients: [
+      { name: 'Fast foods, potato, french fried in vegetable oil', quantity: 'custom (g)', foodWord: 'FRENCHFRIES', ndbNo: '21138', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'russet potato', quantity: '2 lbs russet potatoes, peeled and cut into 1/4-inch strips', section: 'fries', ndbNo: '11353', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'vegetable oil', quantity: '60g vegetable oil (absorbed during frying)', section: 'fries', ndbNo: '4513', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'fries', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 }
+    ],
+    recipeInstructions: [
+      'Peel and cut potatoes into 1/4-inch thick strips about 3 to 4 inches long. Place in a large bowl of cold water and soak 30 minutes to remove excess starch.',
+      'Drain and pat the potatoes very dry with paper towels. Surface moisture causes splattering and prevents crisping.',
+      'Pour vegetable oil into a large, heavy pot to a depth of 3 to 4 inches. Heat over medium-high to 325°F (165°C).',
+      'Working in small batches, add fries to the oil and cook 3 to 4 minutes until just softened and pale blond. Do not let them brown. Remove with a slotted spoon and drain on a wire rack. Repeat with remaining fries.',
+      'Let the blanched fries rest 10 minutes. Increase oil temperature to 375°F (190°C).',
+      'Return fries in batches to the hot oil and cook 2 to 3 minutes until deep golden brown and crispy. Drain on a wire rack or paper towels.',
+      'Season immediately with salt and serve hot. (The nutrition reflects approximately 60g of vegetable oil absorbed into the finished fries.)'
+    ],
+    sections: [
+      { key: 'fries', label: 'French Fries', cookingMethod: '', yieldFactorWater: 0.21 }
+    ],
   }
 ];

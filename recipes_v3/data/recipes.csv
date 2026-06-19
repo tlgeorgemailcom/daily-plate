@@ -363,3 +363,4 @@ SIDE_027,DEVILEDEGGS,Deviled Eggs,sides,veggie,builtin,,,2 halves (makes 6),6,Ru
 SIDE_028,COLLARDGREENS,Braised Collard Greens,sides,all,builtin,,,1 cup (makes 4),4,Rule D,boiled,0.65,1.0,1.0,1.0,1.0,approved,,,,PASS,,
 SIDE_029,CREAMEDCORN,Creamed Corn,sides,veggie,builtin,,,1/2 cup (makes 4),4,Rule D,boiled,0.90,1.0,1.0,1.0,1.0,approved,,,,PASS,,
 SIDE_030,CREAMEDSPINACH,Creamed Spinach,sides,veggie,builtin,,,1/2 cup (makes 4),4,Rule D,boiled,0.39,1.0,1.0,1.0,1.0,approved,,,,PASS,,
+SIDE_031,FRENCHFRIES,French Fries,sides,vegan,builtin,21138,,1 serving (makes 4),4,Rule C,fried,0.21,1.0,1.0,1.0,1.0,approved,,P +39% structural (russet P/C=0.118 vs canonical 0.083; blanching leaches protein in commercial fries). Fi -24% structural (russet SR Legacy fiber vs commercial variety). Su +361% structural (Maillard + variety; absolute delta 1.1g/100g).,,PASS,E +0.8% F +1.3% C -2.8% W -4.6% all pass. P/Fi/Su structural divergence irreducible.,

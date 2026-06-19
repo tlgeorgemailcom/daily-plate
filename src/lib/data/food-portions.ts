@@ -6367,6 +6367,34 @@ export const FOODS: Food[] = [
     ]
   },
   {
+    "word": "FRENCHFRIES",
+    "display": "French Fries",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "21138",
+    "desc": "Fast foods, potato, french fried in vegetable oil",
+    "cal": 312.0,
+    "pro": 3.43,
+    "fat": 14.73,
+    "carb": 41.44,
+    "fib": 3.8,
+    "h2o": 38.55,
+    "sug": 0.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 10.0,
+        "desc": "fries",
+        "gm": 76.0
+      }
+    ]
+  },
+  {
     "word": "GINGERBREAD",
     "display": "Gingerbread",
     "groups": [
