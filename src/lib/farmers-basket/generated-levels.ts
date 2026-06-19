@@ -17406,5 +17406,46 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'greens', label: 'Collard Greens', cookingMethod: '', yieldFactorWater: 0.65 }
     ],
+  },
+  {
+    id: 'SIDE_029',
+    name: 'Creamed Corn',
+    category: 'sides',
+    dietaryCategory: 'veggie',
+    levelNum: 363,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1/2 cup (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":230.0,"pro":3.3,"fat":17.1,"carb":19.2,"fib":2.1,"h2o":64.7,"sug":9.4,"perServing":{"cal":230.0,"pro":3.3,"fat":17.1,"carb":19.2,"fib":2.1,"h2o":64.7,"sug":9.4,"AddedSugars":2.1,"IntrinsicSugars":7.3},"micros":{"vitaminA":145.8,"vitaminC":2.2,"vitaminD":17.77,"vitaminE":0.4,"vitaminK":1.71,"vitaminB6":0.07,"vitaminB12":0.05,"thiamin":0.05,"riboflavin":0.09,"niacin":0.84,"folate":18.8,"calcium":20.39,"iron":0.33,"magnesium":11.88,"phosphorus":57.14,"potassium":140.33,"sodium":243.13,"zinc":0.29,"copper":0.02,"selenium":1.93,"cholesterol":46.34,"saturatedFat":10.02,"monoFat":4.27,"polyFat":0.75,"omega3":0.04,"omega6":0.35},"gramsPerServing":105.5,"servings":4,"per100g":{"Energy_KCal":218.06,"Water":61.33,"Protein":3.09,"TotalLipidFat":16.18,"Carbohydrate":18.19,"FiberTotalDietary":2.03,"SugarsTotal":8.93,"Cholesterol":46.34,"FattyAcids_totalSaturated":10.02,"FattyAcids_totalMonounsaturated":4.27,"FattyAcids_totalPolyunsaturated":0.75,"LinoleicAcid":0.35,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":145.8,"Retinol":143.45,"Carotene_beta":28.85,"VitaminD":17.77,"VitaminE_alphaTocopherol":0.4,"VitaminK_phylloquinone":1.71,"VitaminC_totalAscorbicAcid":2.2,"Thiamin":0.05,"Riboflavin":0.09,"Niacin":0.84,"PantothenicAcid":0.24,"VitaminB6":0.07,"Folate_total":18.8,"Folate_food":16.95,"Folate_DFE":20.1,"FolicAcid":2.85,"VitaminB12":0.05,"Choline_total":5.12,"Betaine":0.01,"LuteinZeaxanthin":19.2,"Lycopene":0.02,"Calcium_Ca":20.39,"Iron_Fe":0.33,"Magnesium_Mg":11.88,"Phosphorus_P":57.14,"Potassium_K":140.33,"Sodium_Na":243.13,"Zinc_Zn":0.29,"Copper_Cu":0.02,"Manganese_Mn":0.11,"Selenium_Se":1.93,"Tryptophan":0.03,"Threonine":0.12,"Isoleucine":0.13,"Leucine":0.3,"Lysine":0.12,"Methionine":0.06,"Cystine":0.02,"Phenylalanine":0.14,"Tyrosine":0.12,"Valine":0.17,"Arginine":0.11,"Histidine":0.08,"Alanine":0.22,"AsparticAcid":0.22,"GlutamicAcid":0.63,"Glycine":0.1,"Proline":0.3,"Serine":0.13,"omega3":0.04,"omega6":0.35,"AddedSugars":1.99,"IntrinsicSugars":6.94},"addedSugars":2.1,"intrinsicSugars":7.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.9,"yieldFactorFat":1.0,"sources":[{"ndb":"11910","name":"Corn, sweet, white, frozen, kernels cut off cob, unprepared","grams":70.9},{"ndb":"1145","name":"Butter, without salt","grams":7.1},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":1.9},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":29.8},{"ndb":"19335","name":"Sugars, granulated","grams":2.1},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"cream","section_label":"Creamed Corn","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":450.67,"raw_water_grams":287.52,"raw_fat_grams":68.25,"raw_protein_grams":13.05,"raw_carb_grams":76.77,"final_grams":421.92}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Creamed Corn', quantity: 'custom (g)', foodWord: 'CREAMEDCORN', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'frozen white corn', quantity: '1 (10oz) package frozen white corn', section: 'cream', ndbNo: '11910', portionDesc: 'g', portionGrams: 283.5 },
+      { name: 'unsalted butter', quantity: '2 tbsp', section: 'cream', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '1 tbsp', section: 'cream', ndbNo: '20581', portionDesc: 'g', portionGrams: 7.8 },
+      { name: 'heavy cream', quantity: '1/2 cup', section: 'cream', ndbNo: '1053', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'sugar', quantity: '2 tsp', section: 'cream', ndbNo: '19335', portionDesc: 'g', portionGrams: 8.4 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'cream', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'cream', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Melt the butter in a large skillet over medium heat. Sprinkle the flour over the butter and whisk together, cooking for 1 minute.',
+      'Pour in the heavy cream and whisk until smooth. Cook for 1–2 minutes until the sauce begins to thicken.',
+      'Add the frozen corn kernels, sugar, salt, and black pepper. Stir to combine.',
+      'Cook over medium heat, stirring frequently, for 6–8 minutes until the corn is tender and the sauce coats the kernels. Taste and adjust seasoning with additional salt, pepper, or sugar as needed. Serve warm.'
+    ],
+    sections: [
+      { key: 'cream', label: 'Creamed Corn', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];

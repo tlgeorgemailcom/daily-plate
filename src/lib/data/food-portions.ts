@@ -54198,6 +54198,35 @@ export const FOODS: Food[] = [
         "gm": 30.0
       }
     ]
+  },
+  {
+    "word": "CORNSWTWHITEFRZN",
+    "display": "Corn, Frozen White Kernels",
+    "groups": [
+      "vegetable",
+      "grain"
+    ],
+    "ndb": "11910",
+    "desc": "Corn, sweet, white, frozen, kernels cut off cob, unprepared",
+    "cal": 88.0,
+    "pro": 3.0,
+    "fat": 0.8,
+    "carb": 20.7,
+    "fib": 2.9,
+    "h2o": 75.0,
+    "sug": 9.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "10oz package",
+        "gm": 283.5
+      }
+    ]
   }
 ];
 
