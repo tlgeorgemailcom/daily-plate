@@ -17530,5 +17530,46 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'fries', label: 'French Fries', cookingMethod: '', yieldFactorWater: 0.21 }
     ],
+  },
+  {
+    id: 'SIDE_032',
+    name: 'Glazed Carrots',
+    category: 'sides',
+    dietaryCategory: 'veggie',
+    levelNum: 366,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '3/4 cup (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":125.9,"pro":1.1,"fat":6.0,"carb":18.2,"fib":3.2,"h2o":105.1,"sug":12.7,"perServing":{"cal":125.9,"pro":1.1,"fat":6.0,"carb":18.2,"fib":3.2,"h2o":105.1,"sug":12.7,"AddedSugars":7.3,"IntrinsicSugars":5.4},"micros":{"vitaminA":676.38,"vitaminC":2.53,"vitaminD":0.0,"vitaminE":0.65,"vitaminK":11.09,"vitaminB6":0.07,"vitaminB12":0.01,"thiamin":0.03,"riboflavin":0.04,"niacin":0.55,"folate":10.71,"calcium":29.79,"iron":0.24,"magnesium":8.9,"phosphorus":26.76,"potassium":226.26,"sodium":267.98,"zinc":0.18,"copper":0.03,"selenium":0.2,"cholesterol":11.51,"saturatedFat":2.78,"monoFat":1.13,"polyFat":0.22,"omega3":0.01,"omega6":0.1},"gramsPerServing":132.6,"servings":4,"per100g":{"Energy_KCal":95.0,"Water":79.3,"Protein":0.85,"TotalLipidFat":4.55,"Carbohydrate":13.75,"FiberTotalDietary":2.4,"SugarsTotal":9.55,"Cholesterol":11.51,"FattyAcids_totalSaturated":2.78,"FattyAcids_totalMonounsaturated":1.13,"FattyAcids_totalPolyunsaturated":0.22,"LinoleicAcid":0.1,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":676.38,"Retinol":32.34,"Carotene_beta":6391.59,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.65,"VitaminK_phylloquinone":11.09,"VitaminC_totalAscorbicAcid":2.53,"Thiamin":0.03,"Riboflavin":0.04,"Niacin":0.55,"PantothenicAcid":0.17,"VitaminB6":0.07,"Folate_total":10.71,"Folate_food":10.71,"Folate_DFE":10.71,"FolicAcid":0.0,"VitaminB12":0.01,"Choline_total":7.37,"Betaine":0.36,"LuteinZeaxanthin":164.38,"Lycopene":0.77,"Calcium_Ca":29.79,"Iron_Fe":0.24,"Magnesium_Mg":8.9,"Phosphorus_P":26.76,"Potassium_K":226.26,"Sodium_Na":267.98,"Zinc_Zn":0.18,"Copper_Cu":0.03,"Manganese_Mn":0.12,"Selenium_Se":0.2,"Tryptophan":0.01,"Threonine":0.16,"Isoleucine":0.06,"Leucine":0.09,"Lysine":0.09,"Methionine":0.02,"Cystine":0.07,"Phenylalanine":0.05,"Tyrosine":0.04,"Valine":0.05,"Arginine":0.08,"Histidine":0.04,"Alanine":0.1,"AsparticAcid":0.17,"GlutamicAcid":0.32,"Glycine":0.03,"Proline":0.05,"Serine":0.04,"omega3":0.01,"omega6":0.1,"AddedSugars":5.49,"IntrinsicSugars":4.06},"addedSugars":7.3,"intrinsicSugars":5.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.8,"yieldFactorFat":1.0,"sources":[{"ndb":"11124","name":"Carrots, raw","grams":113.5},{"ndb":"1001","name":"Butter, salted","grams":7.1},{"ndb":"19334","name":"Sugars, brown","grams":7.5},{"ndb":"14411","name":"Water, tap, drinking","grams":30.0},{"ndb":"2047","name":"Salt, table","grams":0.8}],"sections":[{"section_key":"carrots","section_label":"Glazed Carrots","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.8,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":635.4,"raw_water_grams":525.63,"raw_fat_grams":24.12,"raw_protein_grams":4.5,"raw_carb_grams":72.94,"final_grams":530.27}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Glazed Carrots', quantity: 'custom (g)', foodWord: 'GLAZEDCARROTS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'carrot', quantity: '1 lb carrots, peeled and cut into 1/4-inch coins', section: 'carrots', ndbNo: '11124', portionDesc: 'g', portionGrams: 454.0 },
+      { name: 'salted butter', quantity: '2 tbsp', section: 'carrots', ndbNo: '1001', portionDesc: 'g', portionGrams: 28.4 },
+      { name: 'brown sugar', quantity: '2 1/2 tbsp brown sugar', section: 'carrots', ndbNo: '19334', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'water', quantity: '1/2 cup', section: 'carrots', ndbNo: '14411', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'carrots', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 }
+    ],
+    recipeInstructions: [
+      'Peel the carrots and cut them on the diagonal into 1/4-inch coins (or cut into sticks if preferred).',
+      'In a wide skillet or saute pan, combine the carrots, butter, brown sugar, water, and salt. Bring to a boil over medium-high heat.',
+      'Reduce heat to medium-low, cover, and simmer for 12 to 15 minutes until the carrots are just tender when pierced with a fork.',
+      'Remove the lid and increase the heat to medium-high. Cook, stirring occasionally, for 5 to 7 minutes until the liquid reduces to a glossy glaze that coats the carrots.',
+      'Taste and adjust salt if needed. Serve immediately.',
+      '(The nutrition reflects 530g cooked from 635g raw; yfw=0.80 accounts for water evaporated during the reduction step.)'
+    ],
+    sections: [
+      { key: 'carrots', label: 'Glazed Carrots', cookingMethod: '', yieldFactorWater: 0.8 }
+    ],
   }
 ];

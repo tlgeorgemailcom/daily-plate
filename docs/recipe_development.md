@@ -304,6 +304,12 @@ python3 recipes_v3/tools/insert_new.py --recipe-id RECIPE_ID --commit
 
 # 4. Upload nutrition/ingredients/instructions to Turso
 python3 recipes_v3/tools/upload.py --recipe RECIPE_ID --commit
+# ⚠️  For brand-new recipes, upload.py will report "unchanged" with 0 rows written.
+#     This is CORRECT — insert_new.py already computed and wrote the nutrition data
+#     from the build output in the same transaction. "unchanged" means the diff
+#     found nothing to update, not that the upload was skipped or failed.
+#     Only subsequent edits (ingredient tweaks, instruction changes) will show
+#     "changed cols:" output from upload.py.
 
 # 5. If servings_label changed (upload.py does not touch it):
 #    Direct Turso SQL UPDATE + conn.commit()
@@ -328,7 +334,8 @@ python3 recipes_v3/tools/generate_bundle.py
 - [ ] `preview_ingredients.py --recipe RECIPE_ID` run — output matches approved ingredient list exactly, no `⚠️` warnings
 - [ ] Every fresh/raw ingredient has a prep state in `qty_display`
 - [ ] Instructions include `(not included)` where needed
-- [ ] `servings_label` confirmed correct in Turso (query directly to verify)
+- [ ] `upload.py` result reviewed — `"unchanged"` on a brand-new recipe is expected and correct (insert_new.py already wrote nutrition). `"changed cols:"` is expected on edits to an existing recipe. Either outcome means Turso is current.
+- [ ] `servings_label` confirmed correct in Turso (insert_new.py reads it from `recipes.csv`; post-insert corrections need a direct Turso SQL UPDATE + `conn.commit()`)
 - [ ] Bundle regenerated and confirmed at expected level count
 
 ---
@@ -345,6 +352,8 @@ git commit -m "Add RECIPE_ID Recipe Name (Rule X, dietary_category, cooking_meth
 - New food-portions entries (if any)"
 git push
 ```
+
+**`git push` is required for Vercel to deploy the update.** The static bundle (`generated-levels.ts`), `food-portions.ts`, and all CSV-derived assets are baked into the Vercel build at deploy time. Turso is updated the moment `upload.py --commit` and `insert_new.py --commit` run, but the front-end app (served by Vercel) will not reflect any new recipe, food-portions entry, or instruction change until a push triggers a new Vercel deployment.
 
 Always commit `recipes_bundle.json` if `generate_bundle.py` was run.
 
