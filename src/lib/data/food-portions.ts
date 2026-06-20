@@ -54250,6 +54250,39 @@ export const FOODS: Food[] = [
         "gm": 283.5
       }
     ]
+  },
+  {
+    "word": "BRUSSELSPROUTSRAW",
+    "display": "Brussels Sprouts Raw",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11098",
+    "desc": "Brussels sprouts, raw",
+    "cal": 43.0,
+    "pro": 3.38,
+    "fat": 0.3,
+    "carb": 8.95,
+    "fib": 3.8,
+    "h2o": 86.0,
+    "sug": 2.2,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 88.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "sprout",
+        "gm": 19.0
+      }
+    ]
   }
 ];
 

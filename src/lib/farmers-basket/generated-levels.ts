@@ -17789,5 +17789,46 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'asparagus', label: 'Roasted Asparagus', cookingMethod: '', yieldFactorWater: 0.85 }
     ],
+  },
+  {
+    id: 'SIDE_038',
+    name: 'Roasted Brussels Sprouts',
+    category: 'sides',
+    dietaryCategory: 'vegan',
+    levelNum: 372,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":114.8,"pro":4.0,"fat":7.2,"carb":11.4,"fib":4.4,"h2o":86.1,"sug":3.1,"perServing":{"cal":114.8,"pro":4.0,"fat":7.2,"carb":11.4,"fib":4.4,"h2o":86.1,"sug":3.1,"AddedSugars":0.0,"IntrinsicSugars":3.1},"micros":{"vitaminA":32.98,"vitaminC":47.93,"vitaminD":0.0,"vitaminE":1.51,"vitaminK":175.27,"vitaminB6":0.17,"vitaminB12":0.0,"thiamin":0.1,"riboflavin":0.09,"niacin":0.65,"folate":49.84,"calcium":47.0,"iron":1.52,"magnesium":24.44,"phosphorus":73.31,"potassium":407.9,"sodium":288.18,"zinc":0.45,"copper":0.08,"selenium":1.83,"cholesterol":0.0,"saturatedFat":0.91,"monoFat":4.26,"polyFat":0.64,"omega3":0.0,"omega6":0.0},"gramsPerServing":111.2,"servings":4,"per100g":{"Energy_KCal":103.26,"Water":77.46,"Protein":3.56,"TotalLipidFat":6.43,"Carbohydrate":10.23,"FiberTotalDietary":3.94,"SugarsTotal":2.76,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.91,"FattyAcids_totalMonounsaturated":4.26,"FattyAcids_totalPolyunsaturated":0.64,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":32.98,"Retinol":0.0,"Carotene_beta":367.66,"VitaminD":0.0,"VitaminE_alphaTocopherol":1.51,"VitaminK_phylloquinone":175.27,"VitaminC_totalAscorbicAcid":47.93,"Thiamin":0.1,"Riboflavin":0.09,"Niacin":0.65,"PantothenicAcid":0.27,"VitaminB6":0.17,"Folate_total":49.84,"Folate_food":49.84,"Folate_DFE":49.84,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":17.85,"Betaine":0.83,"LuteinZeaxanthin":1136.09,"Lycopene":0.02,"Calcium_Ca":47.0,"Iron_Fe":1.52,"Magnesium_Mg":24.44,"Phosphorus_P":73.31,"Potassium_K":407.9,"Sodium_Na":288.18,"Zinc_Zn":0.45,"Copper_Cu":0.08,"Manganese_Mn":0.38,"Selenium_Se":1.83,"Tryptophan":0.03,"Threonine":0.12,"Isoleucine":0.14,"Leucine":0.16,"Lysine":0.16,"Methionine":0.03,"Cystine":0.02,"Phenylalanine":0.09,"Tyrosine":0.0,"Valine":0.16,"Arginine":0.21,"Histidine":0.07,"Alanine":0.0,"AsparticAcid":0.01,"GlutamicAcid":0.01,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":2.76},"addedSugars":0.0,"intrinsicSugars":3.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.85,"yieldFactorFat":1.0,"sources":[{"ndb":"11098","name":"Brussels sprouts, raw","grams":113.4},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"2069","name":"Vinegar, balsamic","grams":3.8},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"sprouts","section_label":"Roasted Brussels Sprouts","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":505.38,"raw_water_grams":405.16,"raw_fat_grams":28.61,"raw_protein_grams":15.85,"raw_carb_grams":45.5,"final_grams":444.6}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Roasted Brussels Sprouts', quantity: 'custom (g)', foodWord: 'ROASTEDBRUSSELS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Brussels sprouts', quantity: '1 lb Brussels sprouts, trimmed and halved', section: 'sprouts', ndbNo: '11098', portionDesc: 'g', portionGrams: 453.6 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'sprouts', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'sprouts', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'balsamic vinegar', quantity: '1 tbsp', section: 'sprouts', ndbNo: '2069', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'sprouts', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'sprouts', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Preheat oven to 425°F (220°C). Line a large rimmed baking sheet with foil or parchment.',
+      'Trim the stem ends from the Brussels sprouts and cut each sprout in half through the stem. Spread in a single layer on the prepared baking sheet, cut side down.',
+      'Drizzle with the olive oil and scatter the minced garlic over the sprouts. Season with salt and pepper. Toss to coat evenly, then arrange cut side down for maximum caramelization.',
+      'Roast until the cut sides are deeply golden and the outer leaves are crispy, 20-25 minutes. Do not stir during the first 15 minutes.',
+      'Remove from oven and drizzle with the balsamic vinegar. Toss gently and serve immediately.'
+    ],
+    sections: [
+      { key: 'sprouts', label: 'Roasted Brussels Sprouts', cookingMethod: '', yieldFactorWater: 0.85 }
+    ],
   }
 ];
