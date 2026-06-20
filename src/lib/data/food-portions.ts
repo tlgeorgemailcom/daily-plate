@@ -54283,6 +54283,39 @@ export const FOODS: Food[] = [
         "gm": 19.0
       }
     ]
+  },
+  {
+    "word": "PINTOBEANS",
+    "display": "Pinto Bean",
+    "groups": [
+      "legume"
+    ],
+    "ndb": "16043",
+    "desc": "Beans, pinto, mature seeds, cooked, boiled, without salt",
+    "cal": 143.0,
+    "pro": 9.0,
+    "fat": 0.7,
+    "carb": 26.2,
+    "fib": 9.0,
+    "h2o": 63.0,
+    "sug": 0.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 171.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 10.6
+      }
+    ]
   }
 ];
 

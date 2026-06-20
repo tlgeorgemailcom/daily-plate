@@ -368,3 +368,5 @@ lima_beans_cooked,11032,LIMABEAN,"Lima beans, immature seeds, cooked, boiled, dr
 anise_seed,2002,ANISE,"Spices, anise seed",anise seed,tsp,2.1,
 beef_chuck_for_stew_raw,23093,BEEFCHUCKSTEW,"Beef, chuck for stew, separable lean and fat, all grades, raw",beef chuck,oz,28.35,Added 2026-06-20 for SOUP_003 Beef Stew
 mushroom_shiitake_raw,11238,SHIITAKE,"Mushrooms, shiitake, raw",fresh shiitake mushrooms,piece whole,19.0,Fresh shiitake mushroom; stems removed
+beans_kidney_red_cooked,16033,REDBEAN,"Beans, kidney, red, mature seeds, cooked, boiled, without salt",kidney beans,cup,177.0,cooked
+beans_pinto_cooked,16043,PINTOBEANS,"Beans, pinto, mature seeds, cooked, boiled, without salt",pinto beans,cup,171.0,cooked
