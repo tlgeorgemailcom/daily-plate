@@ -18316,5 +18316,62 @@ export const LEVELS: Level[] = [
       { key: 'stock', label: 'Vegetable stock', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'chili', label: 'Chili', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'SOUP_009',
+    name: 'Chicken Gumbo',
+    category: 'soups & stews',
+    dietaryCategory: 'all',
+    levelNum: 383,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 bowl (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":573.8,"pro":42.0,"fat":35.0,"carb":23.7,"fib":6.0,"h2o":475.6,"sug":6.1,"perServing":{"cal":573.8,"pro":42.0,"fat":35.0,"carb":23.7,"fib":6.0,"h2o":475.6,"sug":6.1,"AddedSugars":0.0,"IntrinsicSugars":6.1},"micros":{"vitaminA":13.47,"vitaminC":4.36,"vitaminD":4.5,"vitaminE":0.26,"vitaminK":7.44,"vitaminB6":0.16,"vitaminB12":0.21,"thiamin":0.06,"riboflavin":0.09,"niacin":2.02,"folate":12.23,"calcium":25.24,"iron":0.74,"magnesium":16.95,"phosphorus":83.73,"potassium":169.94,"sodium":206.06,"zinc":0.78,"copper":0.06,"selenium":8.72,"cholesterol":49.14,"saturatedFat":4.38,"monoFat":4.31,"polyFat":1.64,"omega3":0.05,"omega6":0.34},"gramsPerServing":581.0,"servings":4,"per100g":{"Energy_KCal":98.76,"Water":81.86,"Protein":7.24,"TotalLipidFat":6.03,"Carbohydrate":4.09,"FiberTotalDietary":1.03,"SugarsTotal":1.05,"Cholesterol":49.14,"FattyAcids_totalSaturated":4.38,"FattyAcids_totalMonounsaturated":4.31,"FattyAcids_totalPolyunsaturated":1.64,"LinoleicAcid":0.34,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.01,"VitaminA_RAE":13.47,"Retinol":2.44,"Carotene_beta":120.64,"VitaminD":4.5,"VitaminE_alphaTocopherol":0.26,"VitaminK_phylloquinone":7.44,"VitaminC_totalAscorbicAcid":4.36,"Thiamin":0.06,"Riboflavin":0.09,"Niacin":2.02,"PantothenicAcid":0.24,"VitaminB6":0.16,"Folate_total":12.23,"Folate_food":10.89,"Folate_DFE":13.18,"FolicAcid":2.07,"VitaminB12":0.21,"Choline_total":23.64,"Betaine":3.31,"LuteinZeaxanthin":104.55,"Lycopene":0.98,"Calcium_Ca":25.24,"Iron_Fe":0.74,"Magnesium_Mg":16.95,"Phosphorus_P":83.73,"Potassium_K":169.94,"Sodium_Na":206.06,"Zinc_Zn":0.78,"Copper_Cu":0.06,"Manganese_Mn":0.17,"Selenium_Se":8.72,"Tryptophan":0.1,"Threonine":0.38,"Isoleucine":0.4,"Leucine":0.68,"Lysine":0.75,"Methionine":0.23,"Cystine":0.1,"Phenylalanine":0.34,"Tyrosine":0.3,"Valine":0.42,"Arginine":0.59,"Histidine":0.26,"Alanine":0.5,"AsparticAcid":0.83,"GlutamicAcid":1.38,"Glycine":0.46,"Proline":0.37,"Serine":0.34,"omega3":0.05,"omega6":0.34,"AddedSugars":0.0,"IntrinsicSugars":1.05},"addedSugars":0.0,"intrinsicSugars":6.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.88,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Chicken Broth","grams":236.5},{"ndb":"","name":"Creole Seasoning","grams":4.3},{"ndb":"4513","name":"Vegetable oil, palm kernel","grams":10.2},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":7.8},{"ndb":"11282","name":"Onions, raw","grams":55.0},{"ndb":"11143","name":"Celery, raw","grams":37.5},{"ndb":"11333","name":"Peppers, sweet, green, raw","grams":29.8},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"5096","name":"Chicken, broilers or fryers, dark meat, thigh, meat only, raw","grams":113.4},{"ndb":"7075","name":"Sausage, smoked link sausage, pork and beef","grams":56.7},{"ndb":"11278","name":"Okra, raw","grams":56.7},{"ndb":"6971","name":"Sauce, worcestershire","grams":2.5},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2004","name":"Spices, bay leaf","grams":0.3}],"sections":[{"section_key":"stock","section_label":"Chicken stock","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":946.0,"raw_water_grams":896.81,"raw_fat_grams":12.68,"raw_protein_grams":36.52,"raw_carb_grams":0.28,"final_grams":946.0},{"section_key":"cajun_spice","section_label":"Creole seasoning","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":17.4,"raw_water_grams":1.52,"raw_fat_grams":1.3,"raw_protein_grams":2.31,"raw_carb_grams":11.08,"final_grams":17.4},{"section_key":"gumbo","section_label":"Gumbo","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":12,"raw_grams":1497.45,"raw_water_grams":1140.91,"raw_fat_grams":126.22,"raw_protein_grams":129.33,"raw_carb_grams":83.57,"final_grams":1360.54}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken Gumbo', quantity: 'custom (g)', foodWord: 'CHICKENGUMBO', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Chicken Broth', quantity: '4 cups White Chicken Stock (recipe)', section: 'stock', foodWord: 'CHICKENBROTH', portionDesc: 'g', portionGrams: 946.0, isDish: true, componentRef: 'STOCK_003' },
+      { name: 'Creole Seasoning', quantity: '2 tbsp Creole Seasoning (recipe)', section: 'cajun_spice', foodWord: 'CREOLESEASONING', portionDesc: 'g', portionGrams: 17.4, isDish: true, componentRef: 'SAUCE_014' },
+      { name: 'vegetable oil', quantity: '3 tbsp', section: 'gumbo', ndbNo: '4513', portionDesc: 'g', portionGrams: 40.8 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '1/4 cup', section: 'gumbo', ndbNo: '20581', portionDesc: 'g', portionGrams: 31.25 },
+      { name: 'onion', quantity: '2 medium onions, diced', section: 'gumbo', ndbNo: '11282', portionDesc: 'g', portionGrams: 220.0 },
+      { name: 'celery stalk', quantity: '3 celery stalks, diced', section: 'gumbo', ndbNo: '11143', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'green bell pepper', quantity: '1 large green bell pepper, diced', section: 'gumbo', ndbNo: '11333', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'gumbo', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'chicken thigh (boneless/skinless)', quantity: '1 lb chicken thigh (boneless/skinless), cut into 1-inch pieces', section: 'gumbo', ndbNo: '5096', portionDesc: 'g', portionGrams: 453.6 },
+      { name: 'andouille sausage', quantity: '8 oz andouille sausage, sliced', section: 'gumbo', ndbNo: '7075', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'okra', quantity: '8 oz okra, sliced', section: 'gumbo', ndbNo: '11278', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'Worcestershire sauce', quantity: '2 tsp', section: 'gumbo', ndbNo: '6971', portionDesc: 'g', portionGrams: 10.0 },
+      { name: 'salt', quantity: '1 tsp', section: 'gumbo', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'bay leaf', quantity: '2 whole bay leaf', section: 'gumbo', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 }
+    ],
+    recipeInstructions: [
+      'Prepare the Creole Seasoning (see the Creole Seasoning recipe) if not already made.',
+      'Make the dark roux: heat vegetable oil in a large heavy-bottomed pot over medium-high heat. Add the flour and cook, stirring constantly, for 15–20 minutes until the roux turns a deep chocolate brown. Reduce heat immediately if it begins to smell scorched.',
+      'Add the onion, celery, and bell pepper (the \'holy trinity\') to the roux. Cook, stirring frequently, for 5 minutes until the vegetables soften.',
+      'Add the garlic and Creole Seasoning. Cook for 1 minute, stirring, until fragrant.',
+      'Add the chicken thigh pieces and sliced andouille sausage. Stir to coat in the roux and cook for 3–4 minutes until the chicken begins to turn opaque on the edges.',
+      'Pour in the White Chicken Stock. Add the Worcestershire sauce, salt, and bay leaves. Stir well to incorporate the roux into the broth.',
+      'Bring to a boil, then reduce heat to medium-low. Simmer uncovered for 30 minutes, stirring occasionally, until the chicken is cooked through.',
+      'Remove the chicken pieces with tongs. Shred the meat using two forks and return to the pot, discarding any bones or cartilage.',
+      'Add the okra. Continue simmering for 15 minutes until the okra is tender and the gumbo has thickened.',
+      'Remove and discard the bay leaves. Taste and adjust seasoning with additional salt if needed.',
+      'Serve ladled into bowls over white rice (not included). Garnish with sliced scallions if desired (not included).'
+    ],
+    sections: [
+      { key: 'stock', label: 'Chicken stock', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'cajun_spice', label: 'Creole seasoning', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'gumbo', label: 'Gumbo', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];

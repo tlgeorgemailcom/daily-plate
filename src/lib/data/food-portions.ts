@@ -54316,6 +54316,72 @@ export const FOODS: Food[] = [
         "gm": 10.6
       }
     ]
+  },
+  {
+    "word": "ANDOUILLE",
+    "display": "Andouille Sausage",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "7075",
+    "desc": "Sausage, smoked link sausage, pork and beef",
+    "cal": 320.0,
+    "pro": 12.0,
+    "fat": 28.73,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 53.97,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "link",
+        "gm": 85.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
+  },
+  {
+    "word": "BEEFCHUCKSTEW",
+    "display": "Beef Chuck for Stew (raw)",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "23093",
+    "desc": "Beef, chuck for stew, separable lean and fat, all grades, raw",
+    "cal": 128.0,
+    "pro": 21.75,
+    "fat": 4.48,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 72.51,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "lb",
+        "gm": 453.6
+      }
+    ]
   }
 ];
 
