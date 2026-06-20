@@ -631,3 +631,5 @@ SOUP_002,stock,Beef stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,STOCK_004
 SOUP_002,seasoning,Broth seasoning,,raw,1.0,1.0,1.0,1.0,1.0,,,,
 SOUP_002,noodles,Rice noodles,,boiled,1.0,1.0,1.0,1.0,1.0,,,,
 SOUP_002,beef,Beef,,raw,1.0,1.0,1.0,1.0,1.0,,,,
+SOUP_003,stock,Beef stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,STOCK_004
+SOUP_003,stew,Beef stew,,boiled,0.65,1.0,1.0,1.0,1.0,,,,

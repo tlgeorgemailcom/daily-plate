@@ -18010,5 +18010,56 @@ export const LEVELS: Level[] = [
       { key: 'noodles', label: 'Rice noodles', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SOUP_003',
+    name: 'Beef Stew',
+    category: 'soups & stews',
+    dietaryCategory: 'all',
+    levelNum: 377,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1½ cups (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":478.1,"pro":47.1,"fat":15.2,"carb":40.4,"fib":7.3,"h2o":346.6,"sug":9.6,"perServing":{"cal":478.1,"pro":47.1,"fat":15.2,"carb":40.4,"fib":7.3,"h2o":346.6,"sug":9.6,"AddedSugars":0.0,"IntrinsicSugars":9.6},"micros":{"vitaminA":104.75,"vitaminC":2.89,"vitaminD":1.49,"vitaminE":0.48,"vitaminK":5.76,"vitaminB6":0.23,"vitaminB12":1.13,"thiamin":0.06,"riboflavin":0.11,"niacin":2.15,"folate":12.36,"calcium":22.89,"iron":1.32,"magnesium":17.29,"phosphorus":119.19,"potassium":336.11,"sodium":221.68,"zinc":2.71,"copper":0.09,"selenium":11.89,"cholesterol":29.29,"saturatedFat":1.1,"monoFat":2.21,"polyFat":0.29,"omega3":0.0,"omega6":0.08},"gramsPerServing":457.1,"servings":4,"per100g":{"Energy_KCal":104.61,"Water":75.82,"Protein":10.3,"TotalLipidFat":3.33,"Carbohydrate":8.83,"FiberTotalDietary":1.59,"SugarsTotal":2.09,"Cholesterol":29.29,"FattyAcids_totalSaturated":1.1,"FattyAcids_totalMonounsaturated":2.21,"FattyAcids_totalPolyunsaturated":0.29,"LinoleicAcid":0.08,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":104.75,"Retinol":0.68,"Carotene_beta":1039.31,"VitaminD":1.49,"VitaminE_alphaTocopherol":0.48,"VitaminK_phylloquinone":5.76,"VitaminC_totalAscorbicAcid":2.89,"Thiamin":0.06,"Riboflavin":0.11,"Niacin":2.15,"PantothenicAcid":0.32,"VitaminB6":0.23,"Folate_total":12.36,"Folate_food":10.65,"Folate_DFE":13.56,"FolicAcid":2.63,"VitaminB12":1.13,"Choline_total":28.31,"Betaine":7.06,"LuteinZeaxanthin":44.31,"Lycopene":681.11,"Calcium_Ca":22.89,"Iron_Fe":1.32,"Magnesium_Mg":17.29,"Phosphorus_P":119.19,"Potassium_K":336.11,"Sodium_Na":221.68,"Zinc_Zn":2.71,"Copper_Cu":0.09,"Manganese_Mn":0.13,"Selenium_Se":11.89,"Tryptophan":0.13,"Threonine":0.55,"Isoleucine":0.52,"Leucine":0.97,"Lysine":1.03,"Methionine":0.32,"Cystine":0.14,"Phenylalanine":0.47,"Tyrosine":0.41,"Valine":0.57,"Arginine":0.8,"Histidine":0.39,"Alanine":0.69,"AsparticAcid":1.2,"GlutamicAcid":2.06,"Glycine":0.55,"Proline":0.51,"Serine":0.47,"omega3":0.0,"omega6":0.08,"AddedSugars":0.0,"IntrinsicSugars":2.09},"addedSugars":0.0,"intrinsicSugars":9.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.65,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Beef Stock","grams":118.2},{"ndb":"23093","name":"Beef, chuck for stew, separable lean and fat, all grades, raw","grams":170.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"11282","name":"Onions, raw","grams":55.0},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11546","name":"Tomato products, canned, paste, without salt added","grams":12.0},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":7.8},{"ndb":"11124","name":"Carrots, raw","grams":61.0},{"ndb":"11143","name":"Celery, raw","grams":30.0},{"ndb":"11354","name":"Potatoes, white, flesh and skin, raw","grams":112.5},{"ndb":"6971","name":"Sauce, worcestershire","grams":3.8},{"ndb":"2049","name":"Thyme, fresh","grams":0.6},{"ndb":"2004","name":"Spices, bay leaf","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":2.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3}],"sections":[{"section_key":"stock","section_label":"Beef stock","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":473.0,"raw_water_grams":446.46,"raw_fat_grams":0.9,"raw_protein_grams":20.86,"raw_carb_grams":0.14,"final_grams":473.0},{"section_key":"stew","section_label":"Beef stew","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.65,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":14,"raw_grams":1861.2,"raw_water_grams":1445.77,"raw_fat_grams":59.89,"raw_protein_grams":167.39,"raw_carb_grams":161.3,"final_grams":1355.18}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Beef Stew', quantity: 'custom (g)', foodWord: 'CLASSICBEEFSTEW', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Beef Stock', quantity: '2 cups Beef Stock (recipe)', section: 'stock', foodWord: 'BEEFSTOCK', portionDesc: 'g', portionGrams: 473.0, isDish: true, componentRef: 'STOCK_004' },
+      { name: 'beef chuck', quantity: '1½ lbs beef chuck, cut into 1½-inch cubes', section: 'stew', ndbNo: '23093', portionDesc: 'g', portionGrams: 680.0 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'stew', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'onion', quantity: '2 medium onions, roughly chopped', section: 'stew', ndbNo: '11282', portionDesc: 'g', portionGrams: 220.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'stew', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'tomato paste', quantity: '3 tbsp', section: 'stew', ndbNo: '11546', portionDesc: 'g', portionGrams: 48.0 },
+      { name: 'all-purpose flour', quantity: '¼ cup', section: 'stew', ndbNo: '20581', portionDesc: 'g', portionGrams: 31.25 },
+      { name: 'carrot', quantity: '4 medium carrots, cut into 1-inch pieces', section: 'stew', ndbNo: '11124', portionDesc: 'g', portionGrams: 244.0 },
+      { name: 'celery stalk', quantity: '3 celery stalks, sliced', section: 'stew', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'potatoes', quantity: '3 medium potatoes, peeled and cubed', section: 'stew', ndbNo: '11354', portionDesc: 'g', portionGrams: 450.0 },
+      { name: 'Worcestershire sauce', quantity: '1 tbsp', section: 'stew', ndbNo: '6971', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'fresh thyme', quantity: '3 sprigs fresh thyme', section: 'stew', ndbNo: '2049', portionDesc: 'g', portionGrams: 2.4 },
+      { name: 'bay leaves', quantity: '2 bay leaves', section: 'stew', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'salt', quantity: '1½ tsp', section: 'stew', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'ground black pepper', quantity: '½ tsp', section: 'stew', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
+    ],
+    recipeInstructions: [
+      'Season beef with salt and pepper. Heat olive oil in a Dutch oven or heavy pot over high heat. Working in batches, sear beef on all sides until browned, about 3 minutes per batch. Transfer to a plate.',
+      'Reduce heat to medium. Add onion and celery; cook 5 minutes until softened. Add garlic and tomato paste; cook 2 minutes, stirring.',
+      'Sprinkle flour over the vegetables and stir to coat. Gradually pour in the beef stock, scraping up any browned bits from the bottom. Return beef and any accumulated juices to the pot. Stir in Worcestershire sauce, thyme sprigs, and bay leaves.',
+      'Bring to a boil, then reduce heat to low. Cover and simmer 1 hour. Add potatoes and carrots; continue simmering covered 45 to 60 minutes until beef is fork-tender and vegetables are soft.',
+      'Discard thyme sprigs and bay leaves. Taste and adjust seasoning. Suggestions (not included): Serve with crusty bread or over buttered egg noodles.'
+    ],
+    sections: [
+      { key: 'stock', label: 'Beef stock', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'stew', label: 'Beef stew', cookingMethod: '', yieldFactorWater: 0.65 }
+    ],
   }
 ];
