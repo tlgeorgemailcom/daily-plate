@@ -639,3 +639,5 @@ SOUP_005,stock,Chicken stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,STOCK_003
 SOUP_005,egg_drop,Egg drop,,boiled,0.95,1.0,1.0,1.0,1.0,,,,
 SOUP_006,stock,Chicken stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,STOCK_003
 SOUP_006,hot_sour,Hot and sour,,boiled,0.92,1.0,1.0,1.0,1.0,,,,
+SOUP_007,stock,Chicken stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,STOCK_003
+SOUP_007,soup,Tortilla soup,,boiled,0.88,1.0,1.0,1.0,1.0,,,,
