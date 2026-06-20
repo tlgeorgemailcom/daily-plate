@@ -17830,5 +17830,49 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sprouts', label: 'Roasted Brussels Sprouts', cookingMethod: '', yieldFactorWater: 0.85 }
     ],
+  },
+  {
+    id: 'SIDE_039',
+    name: 'Stuffed Mushrooms',
+    category: 'sides',
+    dietaryCategory: 'veggie',
+    levelNum: 373,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '5 mushrooms (makes 20)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":233.0,"pro":10.1,"fat":16.9,"carb":12.4,"fib":1.1,"h2o":113.4,"sug":3.6,"perServing":{"cal":233.0,"pro":10.1,"fat":16.9,"carb":12.4,"fib":1.1,"h2o":113.4,"sug":3.6,"AddedSugars":0.0,"IntrinsicSugars":3.6},"micros":{"vitaminA":66.19,"vitaminC":1.06,"vitaminD":3.53,"vitaminE":0.43,"vitaminK":21.12,"vitaminB6":0.09,"vitaminB12":0.2,"thiamin":0.09,"riboflavin":0.42,"niacin":2.65,"folate":21.56,"calcium":137.53,"iron":0.7,"magnesium":14.53,"phosphorus":172.07,"potassium":377.64,"sodium":298.09,"zinc":1.2,"copper":0.38,"selenium":23.55,"cholesterol":23.86,"saturatedFat":5.36,"monoFat":3.67,"polyFat":0.53,"omega3":0.02,"omega6":0.12},"gramsPerServing":155.7,"servings":4,"per100g":{"Energy_KCal":149.7,"Water":72.87,"Protein":6.49,"TotalLipidFat":10.85,"Carbohydrate":7.95,"FiberTotalDietary":0.71,"SugarsTotal":2.29,"Cholesterol":23.86,"FattyAcids_totalSaturated":5.36,"FattyAcids_totalMonounsaturated":3.67,"FattyAcids_totalPolyunsaturated":0.53,"LinoleicAcid":0.12,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":66.19,"Retinol":60.63,"Carotene_beta":62.35,"VitaminD":3.53,"VitaminE_alphaTocopherol":0.43,"VitaminK_phylloquinone":21.12,"VitaminC_totalAscorbicAcid":1.06,"Thiamin":0.09,"Riboflavin":0.42,"Niacin":2.65,"PantothenicAcid":1.07,"VitaminB6":0.09,"Folate_total":21.56,"Folate_food":18.71,"Folate_DFE":23.54,"FolicAcid":3.56,"VitaminB12":0.2,"Choline_total":20.99,"Betaine":8.22,"LuteinZeaxanthin":48.67,"Lycopene":0.01,"Calcium_Ca":137.53,"Iron_Fe":0.7,"Magnesium_Mg":14.53,"Phosphorus_P":172.07,"Potassium_K":377.64,"Sodium_Na":298.09,"Zinc_Zn":1.2,"Copper_Cu":0.38,"Manganese_Mn":0.17,"Selenium_Se":23.55,"Tryptophan":0.09,"Threonine":0.25,"Isoleucine":0.3,"Leucine":0.55,"Lysine":0.57,"Methionine":0.15,"Cystine":0.04,"Phenylalanine":0.3,"Tyrosine":0.27,"Valine":0.38,"Arginine":0.27,"Histidine":0.2,"Alanine":0.27,"AsparticAcid":0.47,"GlutamicAcid":1.39,"Glycine":0.18,"Proline":0.64,"Serine":0.35,"omega3":0.02,"omega6":0.12,"AddedSugars":0.0,"IntrinsicSugars":2.29},"addedSugars":0.0,"intrinsicSugars":3.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.9,"yieldFactorFat":1.0,"sources":[{"ndb":"11266","name":"Mushrooms, brown, italian, or crimini, raw","grams":113.4},{"ndb":"1017","name":"Cheese, cream","grams":28.4},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":12.5},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"11297","name":"Parsley, fresh","grams":1.9},{"ndb":"18079","name":"Bread crumbs, dry, grated, plain","grams":6.8},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"mushrooms","section_label":"Stuffed Mushrooms","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":673.0,"raw_water_grams":504.09,"raw_fat_grams":67.55,"raw_protein_grams":40.43,"raw_carb_grams":49.47,"final_grams":622.59}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Stuffed Mushrooms', quantity: 'custom (g)', foodWord: 'STUFFEDMUSHROOMS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'mushrooms', quantity: '20 medium mushrooms, stems removed', section: 'mushrooms', ndbNo: '11266', portionDesc: 'g', portionGrams: 453.6 },
+      { name: 'cream cheese', quantity: '4 oz cream cheese, softened', section: 'mushrooms', ndbNo: '1017', portionDesc: 'g', portionGrams: 113.4 },
+      { name: 'Parmesan cheese', quantity: '1/2 cup Parmesan cheese, grated', section: 'mushrooms', ndbNo: '1033', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'mushrooms', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'fresh parsley', quantity: '2 tbsp fresh parsley, chopped', section: 'mushrooms', ndbNo: '11297', portionDesc: 'g', portionGrams: 7.6 },
+      { name: 'dry bread crumbs', quantity: '1/4 cup', section: 'mushrooms', ndbNo: '18079', portionDesc: 'g', portionGrams: 27.0 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'mushrooms', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'salt', quantity: '1/4 tsp', section: 'mushrooms', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '1/8 tsp', section: 'mushrooms', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 }
+    ],
+    recipeInstructions: [
+      'Preheat oven to 400°F (200°C). Line a rimmed baking sheet with foil or parchment.',
+      'Wipe the mushrooms clean with a damp paper towel. Twist or cut out the stems and set them aside. Arrange the caps hollow side up on the prepared baking sheet. Brush the outside of each cap lightly with the olive oil.',
+      'Finely chop the reserved mushroom stems. In a bowl, combine the cream cheese, chopped stems, Parmesan cheese, minced garlic, chopped parsley, bread crumbs, salt, and pepper. Mix until well combined.',
+      'Spoon the filling generously into each mushroom cap, mounding it slightly. Each cap should hold about 1 tablespoon of filling.',
+      'Bake until the mushrooms are tender and the filling is golden on top, 18-22 minutes. Serve warm.'
+    ],
+    sections: [
+      { key: 'mushrooms', label: 'Stuffed Mushrooms', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];
