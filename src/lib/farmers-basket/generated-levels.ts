@@ -18416,7 +18416,7 @@ export const LEVELS: Level[] = [
       'Add the chicken pieces. Bring back to a gentle boil, then reduce heat to medium-low. Simmer uncovered for 12–15 minutes until the chicken is cooked through.',
       'Add the egg noodles. Continue simmering for 8–10 minutes, stirring occasionally, until the noodles are tender.',
       'Remove and discard the bay leaves. Stir in the parsley. Taste and adjust seasoning with additional salt if needed.',
-      'Suggestions (not included): Serve immediately in warmed bowls. If making ahead, store the cooked noodles separately to prevent them from absorbing all the broth.'
+      'Serve immediately in warmed bowls. If making ahead, store the cooked noodles separately to prevent them from absorbing all the broth.'
     ],
     sections: [
       { key: 'stock', label: 'White Chicken Stock', cookingMethod: '', yieldFactorWater: 1.0 },
