@@ -18362,9 +18362,7 @@ export const LEVELS: Level[] = [
       'Add the garlic and Creole Seasoning. Cook for 1 minute, stirring, until fragrant.',
       'Add the chicken thigh pieces and sliced andouille sausage. Stir to coat in the roux and cook for 3–4 minutes until the chicken begins to turn opaque on the edges.',
       'Pour in the White Chicken Stock. Add the Worcestershire sauce, salt, and bay leaves. Stir well to incorporate the roux into the broth.',
-      'Bring to a boil, then reduce heat to medium-low. Simmer uncovered for 30 minutes, stirring occasionally, until the chicken is cooked through.',
-      'Remove the chicken pieces with tongs. Shred the meat using two forks and return to the pot, discarding any bones or cartilage.',
-      'Add the okra. Continue simmering for 15 minutes until the okra is tender and the gumbo has thickened.',
+      'Bring to a boil, then reduce heat to medium-low. Simmer uncovered for 15 minutes, stirring occasionally. Then add the okra and continue simmering for another 15 minutes until the chicken is cooked through and the okra is tender.',
       'Remove and discard the bay leaves. Taste and adjust seasoning with additional salt if needed.',
       'Suggestions (not included): Serve ladled into bowls over steamed white rice. Garnish with sliced scallions if desired.'
     ],
