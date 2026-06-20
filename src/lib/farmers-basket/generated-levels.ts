@@ -18371,5 +18371,57 @@ export const LEVELS: Level[] = [
       { key: 'cajun_spice', label: 'Creole seasoning', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'gumbo', label: 'Gumbo', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'SOUP_010',
+    name: 'Chicken Noodle Soup',
+    category: 'soups & stews',
+    dietaryCategory: 'all',
+    levelNum: 384,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 bowl (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":347.0,"pro":33.0,"fat":6.7,"carb":37.6,"fib":4.0,"h2o":374.2,"sug":4.7,"perServing":{"cal":347.0,"pro":33.0,"fat":6.7,"carb":37.6,"fib":4.0,"h2o":374.2,"sug":4.7,"AddedSugars":0.0,"IntrinsicSugars":4.7},"micros":{"vitaminA":56.57,"vitaminC":1.34,"vitaminD":1.23,"vitaminE":0.2,"vitaminK":10.04,"vitaminB6":0.17,"vitaminB12":0.11,"thiamin":0.1,"riboflavin":0.09,"niacin":2.65,"folate":20.8,"calcium":16.89,"iron":0.72,"magnesium":14.85,"phosphorus":86.31,"potassium":151.34,"sodium":144.39,"zinc":0.59,"copper":0.05,"selenium":14.79,"cholesterol":45.91,"saturatedFat":1.93,"monoFat":2.78,"polyFat":1.25,"omega3":0.01,"omega6":0.26},"gramsPerServing":455.1,"servings":4,"per100g":{"Energy_KCal":76.25,"Water":82.24,"Protein":7.26,"TotalLipidFat":1.48,"Carbohydrate":8.26,"FiberTotalDietary":0.87,"SugarsTotal":1.02,"Cholesterol":45.91,"FattyAcids_totalSaturated":1.93,"FattyAcids_totalMonounsaturated":2.78,"FattyAcids_totalPolyunsaturated":1.25,"LinoleicAcid":0.26,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":56.57,"Retinol":3.18,"Carotene_beta":533.94,"VitaminD":1.23,"VitaminE_alphaTocopherol":0.2,"VitaminK_phylloquinone":10.04,"VitaminC_totalAscorbicAcid":1.34,"Thiamin":0.1,"Riboflavin":0.09,"Niacin":2.65,"PantothenicAcid":0.43,"VitaminB6":0.17,"Folate_total":20.8,"Folate_food":8.59,"Folate_DFE":29.31,"FolicAcid":18.78,"VitaminB12":0.11,"Choline_total":28.28,"Betaine":14.62,"LuteinZeaxanthin":49.33,"Lycopene":0.07,"Calcium_Ca":16.89,"Iron_Fe":0.72,"Magnesium_Mg":14.85,"Phosphorus_P":86.31,"Potassium_K":151.34,"Sodium_Na":144.39,"Zinc_Zn":0.59,"Copper_Cu":0.05,"Manganese_Mn":0.13,"Selenium_Se":14.79,"Tryptophan":0.11,"Threonine":0.42,"Isoleucine":0.47,"Leucine":0.78,"Lysine":0.81,"Methionine":0.24,"Cystine":0.12,"Phenylalanine":0.41,"Tyrosine":0.32,"Valine":0.49,"Arginine":0.63,"Histidine":0.33,"Alanine":0.55,"AsparticAcid":0.88,"GlutamicAcid":1.71,"Glycine":0.49,"Proline":0.46,"Serine":0.39,"omega3":0.01,"omega6":0.26,"AddedSugars":0.0,"IntrinsicSugars":1.02},"addedSugars":0.0,"intrinsicSugars":4.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.9,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Chicken Broth","grams":180.0},{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":85.0},{"ndb":"11124","name":"Carrots, raw","grams":30.5},{"ndb":"11143","name":"Celery, raw","grams":20.0},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"11297","name":"Parsley, fresh","grams":1.9},{"ndb":"2042","name":"Spices, thyme, dried","grams":0.3},{"ndb":"2004","name":"Spices, bay leaf","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"20109","name":"Noodles, egg, dry, enriched","grams":42.5}],"sections":[{"section_key":"stock","section_label":"White Chicken Stock","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":720.0,"raw_water_grams":682.56,"raw_fat_grams":9.65,"raw_protein_grams":27.79,"raw_carb_grams":0.22,"final_grams":720.0},{"section_key":"soup","section_label":"Soup","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":674.98,"raw_water_grams":543.93,"raw_fat_grams":9.77,"raw_protein_grams":80.33,"raw_carb_grams":28.96,"final_grams":620.58},{"section_key":"noodles","section_label":"Noodles","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":21.195857166588652,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":170.1,"raw_water_grams":15.33,"raw_fat_grams":7.55,"raw_protein_grams":24.09,"raw_carb_grams":121.23,"final_grams":479.62}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken Noodle Soup', quantity: 'custom (g)', foodWord: 'CHICKENNOODLESOUP', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Chicken Broth', quantity: '3 cups White Chicken Stock (recipe)', section: 'stock', foodWord: 'CHICKENBROTH', portionDesc: 'g', portionGrams: 720.0, isDish: true, componentRef: 'STOCK_003' },
+      { name: 'chicken breast', quantity: '2 chicken breasts (12 oz), cut into 1/2–3/4 inch cubes', section: 'soup', ndbNo: '5062', portionDesc: 'g', portionGrams: 340.2 },
+      { name: 'carrot', quantity: '2 medium carrots, diced', section: 'soup', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'celery stalk', quantity: '2 celery stalks, diced', section: 'soup', ndbNo: '11143', portionDesc: 'g', portionGrams: 80.0 },
+      { name: 'onion', quantity: '1 medium onion, diced', section: 'soup', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'soup', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'fresh parsley', quantity: '2 tbsp fresh parsley, chopped', section: 'soup', ndbNo: '11297', portionDesc: 'g', portionGrams: 7.6 },
+      { name: 'dried thyme', quantity: '1 tsp', section: 'soup', ndbNo: '2042', portionDesc: 'g', portionGrams: 1.4 },
+      { name: 'bay leaf', quantity: '2 whole bay leaf', section: 'soup', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'salt', quantity: '1 tsp', section: 'soup', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'soup', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'dry egg noodles', quantity: '6 oz dry egg noodles (about 3 cups)', section: 'noodles', ndbNo: '20109', portionDesc: 'g', portionGrams: 170.1 }
+    ],
+    recipeInstructions: [
+      'Make or prepare the White Chicken Stock (see the White Chicken Stock recipe) if not already made.',
+      'Pour the chicken stock into a large pot and bring to a boil over medium-high heat.',
+      'Add the carrot, celery, and onion. Reduce heat to medium and cook for 5 minutes until the vegetables begin to soften.',
+      'Add the garlic, thyme, bay leaves, salt, and black pepper. Stir to combine.',
+      'Add the chicken pieces. Bring back to a gentle boil, then reduce heat to medium-low. Simmer uncovered for 12–15 minutes until the chicken is cooked through.',
+      'Add the egg noodles. Continue simmering for 8–10 minutes, stirring occasionally, until the noodles are tender.',
+      'Remove and discard the bay leaves. Stir in the parsley. Taste and adjust seasoning with additional salt if needed.',
+      'Suggestions (not included): Serve immediately in warmed bowls. If making ahead, store the cooked noodles separately to prevent them from absorbing all the broth.'
+    ],
+    sections: [
+      { key: 'stock', label: 'White Chicken Stock', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'soup', label: 'Soup', cookingMethod: '', yieldFactorWater: 0.9 },
+      { key: 'noodles', label: 'Noodles', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
