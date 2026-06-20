@@ -18002,7 +18002,7 @@ export const LEVELS: Level[] = [
       'Soak the rice noodles in cold water for 20 minutes. Bring a separate pot of water to a boil, cook the noodles for 1-2 minutes until just tender, then drain and divide among 4 bowls.',
       'Arrange the raw beef slices over the noodles in each bowl.',
       'Ladle the simmering hot broth over the beef and noodles. The heat of the broth will cook the beef to medium-rare. Serve immediately.',
-      'Serve with bean sprouts, fresh Thai basil, lime wedges, hoisin sauce, and sriracha on the side (not included).'
+      'Suggestions (not included): Serve with bean sprouts, fresh Thai basil, lime wedges, hoisin sauce, and sriracha.'
     ],
     sections: [
       { key: 'stock', label: 'Beef stock', cookingMethod: '', yieldFactorWater: 1.0 },
