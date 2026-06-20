@@ -17748,5 +17748,46 @@ export const LEVELS: Level[] = [
       { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'risotto', label: 'Risotto', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SIDE_037',
+    name: 'Roasted Asparagus',
+    category: 'sides',
+    dietaryCategory: 'vegan',
+    levelNum: 371,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":85.1,"pro":2.6,"fat":7.0,"carb":5.0,"fib":2.4,"h2o":93.2,"sug":2.2,"perServing":{"cal":85.1,"pro":2.6,"fat":7.0,"carb":5.0,"fib":2.4,"h2o":93.2,"sug":2.2,"AddedSugars":0.0,"IntrinsicSugars":2.2},"micros":{"vitaminA":33.57,"vitaminC":4.06,"vitaminD":0.0,"vitaminE":1.76,"vitaminK":44.82,"vitaminB6":0.08,"vitaminB12":0.0,"thiamin":0.11,"riboflavin":0.14,"niacin":0.86,"folate":43.79,"calcium":27.19,"iron":2.29,"magnesium":15.15,"phosphorus":55.54,"potassium":217.98,"sodium":268.57,"zinc":0.57,"copper":0.19,"selenium":2.5,"cholesterol":0.0,"saturatedFat":0.9,"monoFat":4.32,"polyFat":0.57,"omega3":0.0,"omega6":0.0},"gramsPerServing":109.2,"servings":4,"per100g":{"Energy_KCal":77.94,"Water":85.38,"Protein":2.35,"TotalLipidFat":6.37,"Carbohydrate":4.58,"FiberTotalDietary":2.24,"SugarsTotal":2.05,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.9,"FattyAcids_totalMonounsaturated":4.32,"FattyAcids_totalPolyunsaturated":0.57,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":33.57,"Retinol":0.0,"Carotene_beta":373.39,"VitaminD":0.0,"VitaminE_alphaTocopherol":1.76,"VitaminK_phylloquinone":44.82,"VitaminC_totalAscorbicAcid":4.06,"Thiamin":0.11,"Riboflavin":0.14,"Niacin":0.86,"PantothenicAcid":0.25,"VitaminB6":0.08,"Folate_total":43.79,"Folate_food":43.79,"Folate_DFE":43.79,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":15.29,"Betaine":0.64,"LuteinZeaxanthin":516.96,"Lycopene":0.02,"Calcium_Ca":27.19,"Iron_Fe":2.29,"Magnesium_Mg":15.15,"Phosphorus_P":55.54,"Potassium_K":217.98,"Sodium_Na":268.57,"Zinc_Zn":0.57,"Copper_Cu":0.19,"Manganese_Mn":0.19,"Selenium_Se":2.5,"Tryptophan":0.02,"Threonine":0.08,"Isoleucine":0.07,"Leucine":0.13,"Lysine":0.11,"Methionine":0.03,"Cystine":0.03,"Phenylalanine":0.07,"Tyrosine":0.05,"Valine":0.12,"Arginine":0.1,"Histidine":0.04,"Alanine":0.12,"AsparticAcid":0.52,"GlutamicAcid":0.25,"Glycine":0.1,"Proline":0.08,"Serine":0.11,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":2.05},"addedSugars":0.0,"intrinsicSugars":2.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.85,"yieldFactorFat":1.0,"sources":[{"ndb":"11011","name":"Asparagus, raw","grams":113.4},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"11215","name":"Garlic, raw","grams":0.8},{"ndb":"9152","name":"Lemon juice, raw","grams":3.8},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"asparagus","section_label":"Roasted Asparagus","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":502.62,"raw_water_grams":438.76,"raw_fat_grams":27.81,"raw_protein_grams":10.28,"raw_carb_grams":20.01,"final_grams":436.81}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Roasted Asparagus', quantity: 'custom (g)', foodWord: 'ROASTEDASPARAGUS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'asparagus', quantity: '1 lb asparagus, ends trimmed', section: 'asparagus', ndbNo: '11011', portionDesc: 'g', portionGrams: 453.6 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'asparagus', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'garlic', quantity: '1 clove garlic, minced', section: 'asparagus', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'lemon juice', quantity: '1 tbsp', section: 'asparagus', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.25 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'asparagus', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'asparagus', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Preheat oven to 425°F (220°C). Line a large rimmed baking sheet with foil or parchment.',
+      'Trim the woody ends from the asparagus. Spread in a single layer on the prepared baking sheet.',
+      'Drizzle with the olive oil and scatter the minced garlic over the spears. Season with salt and pepper. Toss to coat evenly, then arrange in a single layer.',
+      'Roast until tender and the tips are lightly caramelized, 10-14 minutes depending on thickness. Thin spears need 10 minutes; thick spears 12-14.',
+      'Remove from oven and drizzle with the lemon juice. Serve immediately.'
+    ],
+    sections: [
+      { key: 'asparagus', label: 'Roasted Asparagus', cookingMethod: '', yieldFactorWater: 0.85 }
+    ],
   }
 ];

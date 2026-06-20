@@ -139,13 +139,15 @@ Single-section recipes may mirror the recipe-level yield factors.
 
 The mixed pattern is the correct authoring approach whenever a stock or broth component-ref is used as a **cooking liquid** for an absorbing grain or stew (paella, risotto, pilaf, soups). The `@`-ref's nutrients are absorbed by the grain during boiling; restricting the section to `raw` would be nutritionally incorrect.
 
+> **Separate-section variant (use `cook_section`):** If you want the stock to display under its own pre-collapsed header rather than inline with the grain, place the `@`-ref row in a separate `raw` display section AND set `cook_section=<grain_section>` on that row. The pipeline will route its nutrients into the grain section for math. See Step 4, section 4a-2.
+
 ---
 
 ## Step 4 — Add Ingredients
 
 File: `recipes_v3/data/recipe_ingredients.csv`
 
-Columns: `recipe_id, row_order, ingredient_key, qty_display, grams, grams_min, grams_max, section, ingredient_group, is_optional, display_name_override`
+Columns: `recipe_id, row_order, ingredient_key, qty_display, grams, grams_min, grams_max, section, ingredient_group, is_optional, display_name_override, cook_section`
 
 > **⚠ Write no CSV rows until the rendered ingredient list has been approved.** See the mandatory render rule in the Pre-Build Checklist above.
 
@@ -158,6 +160,37 @@ Columns: `recipe_id, row_order, ingredient_key, qty_display, grams, grams_min, g
 - `onion_raw` thin slice = **9.0g** (M9 per slice)
 
 For fractional measures without a direct M-series entry, compute from the nearest unit using the exact M-series value.
+
+### 4a-2 — cook_section: decoupling display section from pipeline section (Phase 8d)
+
+`cook_section` is the 12th column. When non-empty, it tells the pipeline to accumulate this ingredient's nutrients into the named section for math purposes, while `section` continues to control which collapsible header the ingredient appears under in the UI.
+
+**When to use it:** a sub-recipe (@STOCK_003, @STOCK_006, etc.) is the actual cooking liquid for an absorber NDB (rice, pasta, legumes) BUT you want it to display in its own pre-collapsed section rather than inline with the grain.
+
+| | `section` | `cook_section` |
+|---|---|---|
+| Display grouping | ✅ used | ignored |
+| Pipeline nutrient math | ignored | ✅ used (falls back to `section` if empty) |
+
+**Pattern — stock as cooking liquid with separate display section:**
+
+```
+# recipe_sections.csv
+SIDE_036, broth,   Chicken Broth, raw,    yfw=1.0   ← display only
+SIDE_036, risotto, Risotto,       boiled, yfw=1.0   ← bin model fires here
+
+# recipe_ingredients.csv
+SIDE_036, 1, @STOCK_003, "4 cups ...", 960g, section=broth, cook_section=risotto
+SIDE_036, 2, rice_white_short_raw, ...,    section=risotto, cook_section=(empty)
+```
+
+Result: Chicken Broth header pre-collapses (all items `isDish: true`); Risotto header starts expanded with the 10 regular ingredients visible. The bin model sees the 960g of broth water inside the risotto section and computes the correct auto_yfw.
+
+**When NOT to use it:** if the @-ref and the absorber are already in the same section (e.g. ENTR_110 Paella, where `@STOCK_006` is in the same `rice` section as the rice), no `cook_section` is needed — they already share a section accumulator.
+
+**Empty = backward compatible.** All 368 pre-Phase-8d recipes have empty `cook_section`; the pipeline falls back to `section` for all of them.
+
+---
 
 ### 4b — Proteins: always use raw NDB
 
