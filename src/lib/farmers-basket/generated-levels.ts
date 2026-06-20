@@ -17960,5 +17960,55 @@ export const LEVELS: Level[] = [
       { key: 'stock', label: 'Chicken stock', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'soup', label: 'Asparagus soup', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'SOUP_002',
+    name: 'Beef Pho',
+    category: 'soups & stews',
+    dietaryCategory: 'all',
+    levelNum: 376,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 bowl (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":450.9,"pro":44.4,"fat":6.2,"carb":52.1,"fib":4.0,"h2o":685.4,"sug":5.6,"perServing":{"cal":450.9,"pro":44.4,"fat":6.2,"carb":52.1,"fib":4.0,"h2o":685.4,"sug":5.6,"AddedSugars":1.1,"IntrinsicSugars":4.6},"micros":{"vitaminA":0.42,"vitaminC":0.94,"vitaminD":0.0,"vitaminE":0.05,"vitaminK":0.38,"vitaminB6":0.17,"vitaminB12":1.03,"thiamin":0.03,"riboflavin":0.08,"niacin":2.03,"folate":6.37,"calcium":18.01,"iron":0.99,"magnesium":10.58,"phosphorus":93.53,"potassium":173.75,"sodium":119.73,"zinc":2.42,"copper":0.05,"selenium":9.4,"cholesterol":19.2,"saturatedFat":0.65,"monoFat":0.81,"polyFat":0.09,"omega3":0.0,"omega6":0.0},"gramsPerServing":796.8,"servings":4,"per100g":{"Energy_KCal":56.58,"Water":86.02,"Protein":5.57,"TotalLipidFat":0.78,"Carbohydrate":6.54,"FiberTotalDietary":0.51,"SugarsTotal":0.7,"Cholesterol":19.2,"FattyAcids_totalSaturated":0.65,"FattyAcids_totalMonounsaturated":0.81,"FattyAcids_totalPolyunsaturated":0.09,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.42,"Retinol":0.0,"Carotene_beta":4.15,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.05,"VitaminK_phylloquinone":0.38,"VitaminC_totalAscorbicAcid":0.94,"Thiamin":0.03,"Riboflavin":0.08,"Niacin":2.03,"PantothenicAcid":0.18,"VitaminB6":0.17,"Folate_total":6.37,"Folate_food":6.37,"Folate_DFE":6.37,"FolicAcid":0.0,"VitaminB12":1.03,"Choline_total":11.67,"Betaine":1.44,"LuteinZeaxanthin":1.14,"Lycopene":2.96,"Calcium_Ca":18.01,"Iron_Fe":0.99,"Magnesium_Mg":10.58,"Phosphorus_P":93.53,"Potassium_K":173.75,"Sodium_Na":119.73,"Zinc_Zn":2.42,"Copper_Cu":0.05,"Manganese_Mn":0.12,"Selenium_Se":9.4,"Tryptophan":0.1,"Threonine":0.43,"Isoleucine":0.44,"Leucine":0.79,"Lysine":0.81,"Methionine":0.25,"Cystine":0.11,"Phenylalanine":0.39,"Tyrosine":0.34,"Valine":0.49,"Arginine":0.65,"Histidine":0.33,"Alanine":0.6,"AsparticAcid":0.92,"GlutamicAcid":1.55,"Glycine":0.55,"Proline":0.46,"Serine":0.39,"omega3":0.0,"omega6":0.0,"AddedSugars":0.13,"IntrinsicSugars":0.57},"addedSugars":1.1,"intrinsicSugars":4.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.88,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Beef Stock","grams":473.0},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"11216","name":"Ginger root, raw","grams":5.0},{"ndb":"16124","name":"Soy sauce made from soy (tamari)","grams":11.2},{"ndb":"2002","name":"Spices, anise seed","grams":0.8},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.4},{"ndb":"2011","name":"Spices, cloves, ground","grams":0.5},{"ndb":"2013","name":"Spices, coriander seed","grams":0.6},{"ndb":"19335","name":"Sugars, granulated","grams":1.1},{"ndb":"20133","name":"Rice noodles, dry","grams":56.7},{"ndb":"14411","name":"Water, tap, drinking","grams":236.5},{"ndb":"23656","name":"Beef, flank, steak, separable lean only, trimmed to 0\" fat, all grades, raw","grams":85.0}],"sections":[{"section_key":"stock","section_label":"Beef stock","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":1892.0,"raw_water_grams":1785.86,"raw_fat_grams":3.59,"raw_protein_grams":83.44,"raw_carb_grams":0.57,"final_grams":1892.0},{"section_key":"seasoning","section_label":"Broth seasoning","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":188.2,"raw_water_grams":144.36,"raw_fat_grams":1.5,"raw_protein_grams":7.32,"raw_carb_grams":25.93,"final_grams":188.2},{"section_key":"noodles","section_label":"Rice noodles","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.5822773510978556,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":1172.8,"raw_water_grams":972.07,"raw_fat_grams":1.27,"raw_protein_grams":13.49,"raw_carb_grams":181.85,"final_grams":766.75},{"section_key":"beef","section_label":"Beef","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":340.2,"raw_water_grams":245.22,"raw_fat_grams":18.61,"raw_protein_grams":73.38,"raw_carb_grams":0.0,"final_grams":340.2}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Beef Pho', quantity: 'custom (g)', foodWord: 'BEEFPHO', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Beef Stock', quantity: '8 cups Beef Stock (recipe)', section: 'stock', foodWord: 'BEEFSTOCK', portionDesc: 'g', portionGrams: 1892.0, isDish: true, componentRef: 'STOCK_004' },
+      { name: 'onion', quantity: '1 medium onion, halved and charred', section: 'seasoning', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'fresh ginger', quantity: '2-inch piece ginger, halved lengthwise', section: 'seasoning', ndbNo: '11216', portionDesc: 'g', portionGrams: 20.0 },
+      { name: 'fish sauce', quantity: '3 tbsp fish sauce', section: 'seasoning', ndbNo: '16124', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'star anise', quantity: '3 whole star anise', section: 'seasoning', ndbNo: '2002', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'cinnamon stick', quantity: '1 cinnamon stick, cracked', section: 'seasoning', ndbNo: '2010', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'cloves', quantity: '4 whole cloves', section: 'seasoning', ndbNo: '2011', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'coriander seeds', quantity: '1 tsp coriander seeds', section: 'seasoning', ndbNo: '2013', portionDesc: 'g', portionGrams: 2.5 },
+      { name: 'sugar', quantity: '1 tsp sugar', section: 'seasoning', ndbNo: '19335', portionDesc: 'g', portionGrams: 4.2 },
+      { name: 'rice noodles', quantity: '8 oz dried rice noodles', section: 'noodles', ndbNo: '20133', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'water', quantity: '4 cups', section: 'noodles', ndbNo: '14411', portionDesc: 'g', portionGrams: 946.0 },
+      { name: 'beef flank steak', quantity: '3/4 lb beef flank steak, thinly sliced against the grain', section: 'beef', ndbNo: '23656', portionDesc: 'g', portionGrams: 340.2 }
+    ],
+    recipeInstructions: [
+      'In a large pot, combine the beef stock, onion, ginger, fish sauce, star anise, cinnamon stick, cloves, coriander seeds, and sugar. Bring to a boil, reduce heat, and simmer for 20 minutes. Strain through a fine-mesh strainer, discard solids, and return the broth to the pot. Keep at a gentle simmer over low heat.',
+      'Soak the rice noodles in cold water for 20 minutes. Bring a separate pot of water to a boil, cook the noodles for 1-2 minutes until just tender, then drain and divide among 4 bowls.',
+      'Arrange the raw beef slices over the noodles in each bowl.',
+      'Ladle the simmering hot broth over the beef and noodles. The heat of the broth will cook the beef to medium-rare. Serve immediately.',
+      'Serve with bean sprouts, fresh Thai basil, lime wedges, hoisin sauce, and sriracha on the side (not included).'
+    ],
+    sections: [
+      { key: 'stock', label: 'Beef stock', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'seasoning', label: 'Broth seasoning', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'noodles', label: 'Rice noodles', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
