@@ -18061,5 +18061,53 @@ export const LEVELS: Level[] = [
       { key: 'stock', label: 'Beef stock', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'stew', label: 'Beef stew', cookingMethod: '', yieldFactorWater: 0.65 }
     ],
+  },
+  {
+    id: 'SOUP_004',
+    name: 'Broccoli Cheddar Soup',
+    category: 'soups & stews',
+    dietaryCategory: 'veggie',
+    levelNum: 378,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 bowl (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":605.9,"pro":26.1,"fat":45.2,"carb":27.1,"fib":5.0,"h2o":360.8,"sug":10.5,"perServing":{"cal":605.9,"pro":26.1,"fat":45.2,"carb":27.1,"fib":5.0,"h2o":360.8,"sug":10.5,"AddedSugars":0.0,"IntrinsicSugars":10.5},"micros":{"vitaminA":134.27,"vitaminC":11.78,"vitaminD":3.46,"vitaminE":0.44,"vitaminK":25.33,"vitaminB6":0.09,"vitaminB12":0.2,"thiamin":0.04,"riboflavin":0.14,"niacin":0.82,"folate":17.87,"calcium":115.4,"iron":0.4,"magnesium":13.19,"phosphorus":106.06,"potassium":153.25,"sodium":184.88,"zinc":0.78,"copper":0.03,"selenium":7.67,"cholesterol":43.48,"saturatedFat":6.79,"monoFat":4.34,"polyFat":1.05,"omega3":0.02,"omega6":0.27},"gramsPerServing":464.6,"servings":4,"per100g":{"Energy_KCal":130.41,"Water":77.67,"Protein":5.63,"TotalLipidFat":9.73,"Carbohydrate":5.84,"FiberTotalDietary":1.07,"SugarsTotal":2.25,"Cholesterol":43.48,"FattyAcids_totalSaturated":6.79,"FattyAcids_totalMonounsaturated":4.34,"FattyAcids_totalPolyunsaturated":1.05,"LinoleicAcid":0.27,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":134.27,"Retinol":77.13,"Carotene_beta":589.54,"VitaminD":3.46,"VitaminE_alphaTocopherol":0.44,"VitaminK_phylloquinone":25.33,"VitaminC_totalAscorbicAcid":11.78,"Thiamin":0.04,"Riboflavin":0.14,"Niacin":0.82,"PantothenicAcid":0.35,"VitaminB6":0.09,"Folate_total":17.87,"Folate_food":16.19,"Folate_DFE":19.05,"FolicAcid":2.59,"VitaminB12":0.2,"Choline_total":16.1,"Betaine":0.95,"LuteinZeaxanthin":271.16,"Lycopene":0.06,"Calcium_Ca":115.4,"Iron_Fe":0.4,"Magnesium_Mg":13.19,"Phosphorus_P":106.06,"Potassium_K":153.25,"Sodium_Na":184.88,"Zinc_Zn":0.78,"Copper_Cu":0.03,"Manganese_Mn":0.1,"Selenium_Se":7.67,"Tryptophan":0.13,"Threonine":0.31,"Isoleucine":0.35,"Leucine":0.56,"Lysine":0.43,"Methionine":0.17,"Cystine":0.06,"Phenylalanine":0.31,"Tyrosine":0.28,"Valine":0.39,"Arginine":0.33,"Histidine":0.19,"Alanine":0.32,"AsparticAcid":0.62,"GlutamicAcid":1.37,"Glycine":0.28,"Proline":0.56,"Serine":0.26,"omega3":0.02,"omega6":0.27,"AddedSugars":0.0,"IntrinsicSugars":2.25},"addedSugars":0.0,"intrinsicSugars":10.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.9,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Chicken Broth","grams":118.2},{"ndb":"1145","name":"Butter, without salt","grams":14.2},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":7.8},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"11124","name":"Carrots, raw","grams":30.5},{"ndb":"11090","name":"Broccoli, raw","grams":113.4},{"ndb":"1049","name":"Cream, fluid, half and half","grams":121.0},{"ndb":"1009","name":"Cheese, cheddar","grams":56.7},{"ndb":"2047","name":"Salt, table","grams":1.1},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.1}],"sections":[{"section_key":"stock","section_label":"Chicken stock","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":473.0,"raw_water_grams":448.4,"raw_fat_grams":6.34,"raw_protein_grams":18.26,"raw_carb_grams":0.14,"final_grams":473.0},{"section_key":"soup","section_label":"Broccoli cheddar","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":1495.8,"raw_water_grams":1105.49,"raw_fat_grams":174.44,"raw_protein_grams":86.32,"raw_carb_grams":108.35,"final_grams":1385.25}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Broccoli Cheddar Soup', quantity: 'custom (g)', foodWord: 'BROCCOLICHEDDARSOUP', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Chicken Broth', quantity: '2 cups Chicken Broth (recipe)', section: 'stock', foodWord: 'CHICKENBROTH', portionDesc: 'g', portionGrams: 473.0, isDish: true, componentRef: 'STOCK_003' },
+      { name: 'unsalted butter', quantity: '4 tbsp', section: 'soup', ndbNo: '1145', portionDesc: 'g', portionGrams: 56.8 },
+      { name: 'all-purpose flour', quantity: '¼ cup', section: 'soup', ndbNo: '20581', portionDesc: 'g', portionGrams: 31.25 },
+      { name: 'onion', quantity: '1 medium onion, finely diced', section: 'soup', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'soup', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'carrot', quantity: '2 medium carrots, finely grated', section: 'soup', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'broccoli', quantity: '1 lb broccoli, cut into small florets', section: 'soup', ndbNo: '11090', portionDesc: 'g', portionGrams: 453.6 },
+      { name: 'half-and-half', quantity: '2 cups', section: 'soup', ndbNo: '1049', portionDesc: 'g', portionGrams: 484.0 },
+      { name: 'Cheddar cheese', quantity: '8 oz sharp Cheddar cheese, shredded', section: 'soup', ndbNo: '1009', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'salt', quantity: '¾ tsp', section: 'soup', ndbNo: '2047', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'soup', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'ground nutmeg', quantity: '⅛ tsp', section: 'soup', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.275 }
+    ],
+    recipeInstructions: [
+      'Melt butter in a large pot or Dutch oven over medium heat. Add onion and carrot; cook 5 minutes until softened. Add garlic; cook 1 minute.',
+      'Sprinkle flour over the vegetables and stir to coat. Cook 1 to 2 minutes, stirring, until the raw flour taste is gone.',
+      'Gradually whisk in the chicken stock and half-and-half. Bring to a gentle simmer over medium heat, stirring often.',
+      'Add broccoli; reduce heat to low and cook 15 to 20 minutes until very tender. Season with salt, pepper, and nutmeg.',
+      'Reduce heat to the lowest setting. Add shredded cheddar a handful at a time, stirring until fully melted before adding the next. Do not boil after adding the cheese. For a smoother texture, use an immersion blender to partially blend. Taste and adjust seasoning.'
+    ],
+    sections: [
+      { key: 'stock', label: 'Chicken stock', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'soup', label: 'Broccoli cheddar', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];
