@@ -263,7 +263,7 @@ display_name = "fresh thyme leaves"
 - **Fresh/raw ingredients**: always include a prep state — active (`chopped`, `minced`, `sliced`) or explicit no-prep (`whole`, `leaves`, `sprigs`). Never leave a fresh ingredient with just a quantity.
 - **Component-ref rows**: `qty_display` must include the child recipe name and the word "recipe". Never a bare measure. Never "N servings" — use a real culinary measure (tbsp, cup, oz, g).
 - **Prep notes belong in `qty_display`, not in instructions**: embed dicing, mincing, etc. in `qty_display`. The instruction step just says "Add the garlic."
-- **`(not included)` for serving suggestions**: if an instruction mentions serving with something not in the ingredient list, append `(not included)` to that instruction step.
+- **`Suggestions (not included):` for serving suggestions**: when a recipe has optional accompaniments not in the ingredient list, write a dedicated final instruction step: `Suggestions (not included): [serving text].` — never append `(not included)` inline to a regular instruction step.
 
 ### 4f — display_name_override rules
 
@@ -286,7 +286,7 @@ Columns: **exactly 3** — `recipe_id, step_order, step_text`. No `section_key` 
 **Before writing**: snapshot prefix counts (`BKFST_`, `ENTR_`, etc.) to detect accidental truncation.
 **After writing**: re-run the count check — confirm no non-target prefix counts changed.
 
-**"(not included)"**: any serving suggestion referencing an item not in the ingredient list must include `(not included)` in that step.
+**`Suggestions (not included):`**: when the recipe has optional accompaniments not in the ingredient list, add a dedicated final instruction step using this prefix — e.g. `Suggestions (not included): Serve with steamed rice and crusty bread.` Never append `(not included)` as a trailing qualifier on a regular instruction step.
 
 **For single-recipe edits**: never rewrite the entire file. Replace only the target recipe block.
 
@@ -366,7 +366,7 @@ python3 recipes_v3/tools/generate_bundle.py
 - [ ] For Rule A/B/F/G: run full audit table — computed vs canonical ±5% for all scored macros
 - [ ] `preview_ingredients.py --recipe RECIPE_ID` run — output matches approved ingredient list exactly, no `⚠️` warnings
 - [ ] Every fresh/raw ingredient has a prep state in `qty_display`
-- [ ] Instructions include `(not included)` where needed
+- [ ] Serving suggestions use a dedicated `Suggestions (not included):` final step where needed
 - [ ] `upload.py` result reviewed — `"unchanged"` on a brand-new recipe is expected and correct (insert_new.py already wrote nutrition). `"changed cols:"` is expected on edits to an existing recipe. Either outcome means Turso is current.
 - [ ] `servings_label` confirmed correct in Turso (insert_new.py reads it from `recipes.csv`; post-insert corrections need a direct Turso SQL UPDATE + `conn.commit()`)
 - [ ] Bundle regenerated and confirmed at expected level count

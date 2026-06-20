@@ -209,7 +209,7 @@ Roasted Brussels Sprouts
 Stuffed Mushrooms
 Succotash
 
-Soups & Stews
+Soups & Stews:
 Asparagus Soup
 Beef Pho
 Beef Stew
