@@ -18155,5 +18155,57 @@ export const LEVELS: Level[] = [
       { key: 'stock', label: 'Chicken stock', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'egg_drop', label: 'Egg drop', cookingMethod: '', yieldFactorWater: 0.95 }
     ],
+  },
+  {
+    id: 'SOUP_006',
+    name: 'Hot & Sour Soup',
+    category: 'soups & stews',
+    dietaryCategory: 'all',
+    levelNum: 380,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 bowl (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":219.9,"pro":23.8,"fat":9.3,"carb":10.5,"fib":2.2,"h2o":342.3,"sug":2.6,"perServing":{"cal":219.9,"pro":23.8,"fat":9.3,"carb":10.5,"fib":2.2,"h2o":342.3,"sug":2.6,"AddedSugars":0.0,"IntrinsicSugars":2.6},"micros":{"vitaminA":10.02,"vitaminC":0.87,"vitaminD":6.84,"vitaminE":0.12,"vitaminK":0.46,"vitaminB6":0.15,"vitaminB12":0.16,"thiamin":0.07,"riboflavin":0.11,"niacin":1.92,"folate":7.95,"calcium":32.91,"iron":0.7,"magnesium":14.07,"phosphorus":89.62,"potassium":135.23,"sodium":197.84,"zinc":0.8,"copper":0.07,"selenium":11.04,"cholesterol":66.04,"saturatedFat":3.01,"monoFat":4.41,"polyFat":2.02,"omega3":0.03,"omega6":0.43},"gramsPerServing":389.7,"servings":4,"per100g":{"Energy_KCal":56.43,"Water":87.84,"Protein":6.1,"TotalLipidFat":2.38,"Carbohydrate":2.69,"FiberTotalDietary":0.58,"SugarsTotal":0.66,"Cholesterol":66.04,"FattyAcids_totalSaturated":3.01,"FattyAcids_totalMonounsaturated":4.41,"FattyAcids_totalPolyunsaturated":2.02,"LinoleicAcid":0.43,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.01,"VitaminA_RAE":10.02,"Retinol":9.6,"Carotene_beta":4.31,"VitaminD":6.84,"VitaminE_alphaTocopherol":0.12,"VitaminK_phylloquinone":0.46,"VitaminC_totalAscorbicAcid":0.87,"Thiamin":0.07,"Riboflavin":0.11,"Niacin":1.92,"PantothenicAcid":0.41,"VitaminB6":0.15,"Folate_total":7.95,"Folate_food":7.95,"Folate_DFE":7.95,"FolicAcid":0.0,"VitaminB12":0.16,"Choline_total":36.37,"Betaine":1.77,"LuteinZeaxanthin":25.15,"Lycopene":0.0,"Calcium_Ca":32.91,"Iron_Fe":0.7,"Magnesium_Mg":14.07,"Phosphorus_P":89.62,"Potassium_K":135.23,"Sodium_Na":197.84,"Zinc_Zn":0.8,"Copper_Cu":0.07,"Manganese_Mn":0.13,"Selenium_Se":11.04,"Tryptophan":0.12,"Threonine":0.44,"Isoleucine":0.49,"Leucine":0.79,"Lysine":0.82,"Methionine":0.25,"Cystine":0.11,"Phenylalanine":0.42,"Tyrosine":0.35,"Valine":0.52,"Arginine":0.67,"Histidine":0.32,"Alanine":0.58,"AsparticAcid":0.98,"GlutamicAcid":1.57,"Glycine":0.55,"Proline":0.46,"Serine":0.44,"omega3":0.03,"omega6":0.43,"AddedSugars":0.0,"IntrinsicSugars":0.66},"addedSugars":0.0,"intrinsicSugars":2.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.92,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Chicken Broth","grams":236.5},{"ndb":"10060","name":"Pork, fresh, loin, tenderloin, separable lean only, raw","grams":28.2},{"ndb":"16126","name":"Tofu, firm, prepared with calcium sulfate and magnesium chloride (nigari)","grams":42.5},{"ndb":"11238","name":"Mushrooms, shiitake, raw","grams":21.2},{"ndb":"11028","name":"Bamboo shoots, canned, drained solids","grams":16.2},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":25.0},{"ndb":"20027","name":"Cornstarch","grams":6.0},{"ndb":"2053","name":"Vinegar, distilled","grams":11.2},{"ndb":"16124","name":"Soy sauce made from soy (tamari)","grams":7.5},{"ndb":"2032","name":"Spices, pepper, white","grams":0.6},{"ndb":"4058","name":"Oil, sesame, salad or cooking","grams":1.1},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"11216","name":"Ginger root, raw","grams":1.5},{"ndb":"2047","name":"Salt, table","grams":0.8}],"sections":[{"section_key":"stock","section_label":"Chicken stock","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":946.0,"raw_water_grams":896.81,"raw_fat_grams":12.68,"raw_protein_grams":36.52,"raw_carb_grams":0.28,"final_grams":946.0},{"section_key":"hot_sour","section_label":"Hot and sour","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.92,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":13,"raw_grams":653.9,"raw_water_grams":513.57,"raw_fat_grams":24.4,"raw_protein_grams":58.58,"raw_carb_grams":41.72,"final_grams":612.81}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Hot & Sour Soup', quantity: 'custom (g)', foodWord: 'HOTSOURSOUP', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Chicken Broth', quantity: '1 quart Chicken Broth (recipe)', section: 'stock', foodWord: 'CHICKENBROTH', portionDesc: 'g', portionGrams: 946.0, isDish: true, componentRef: 'STOCK_003' },
+      { name: 'pork tenderloin', quantity: '4 oz pork tenderloin, cut into thin strips', section: 'hot_sour', ndbNo: '10060', portionDesc: 'g', portionGrams: 113.0 },
+      { name: 'firm tofu', quantity: '6 oz firm tofu, drained and cut into thin strips', section: 'hot_sour', ndbNo: '16126', portionDesc: 'g', portionGrams: 170.0 },
+      { name: 'fresh shiitake mushrooms', quantity: '1 cup fresh shiitake mushrooms, stems removed and sliced', section: 'hot_sour', ndbNo: '11238', portionDesc: 'g', portionGrams: 85.0 },
+      { name: 'bamboo shoots canned', quantity: '½ cup bamboo shoots, drained', section: 'hot_sour', ndbNo: '11028', portionDesc: 'g', portionGrams: 65.0 },
+      { name: 'large egg', quantity: '2 large eggs, beaten', section: 'hot_sour', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'cornstarch', quantity: '3 tbsp', section: 'hot_sour', ndbNo: '20027', portionDesc: 'g', portionGrams: 24.0 },
+      { name: 'rice wine vinegar (distilled vinegar)', quantity: '3 tbsp', section: 'hot_sour', ndbNo: '2053', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'tamari', quantity: '2 tbsp', section: 'hot_sour', ndbNo: '16124', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'white pepper', quantity: '1 tsp', section: 'hot_sour', ndbNo: '2032', portionDesc: 'g', portionGrams: 2.4 },
+      { name: 'Sesame oil', quantity: '1 tsp', section: 'hot_sour', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'hot_sour', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'fresh ginger', quantity: '1 tbsp fresh ginger root, grated', section: 'hot_sour', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'salt', quantity: '½ tsp', section: 'hot_sour', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 }
+    ],
+    recipeInstructions: [
+      'In a small bowl, whisk the cornstarch with 3 tablespoons of cold chicken broth until smooth. In a separate small bowl, beat the eggs lightly. Set both aside.',
+      'Bring the chicken broth to a boil in a medium saucepan over medium-high heat. Add the pork strips; cook 2 minutes until just opaque.',
+      'Add the shiitake mushrooms, bamboo shoots, tofu, garlic, and ginger. Reduce heat to medium and simmer 5 minutes.',
+      'Stir in the tamari, vinegar, white pepper, and salt. Taste and adjust the sour and heat level.',
+      'Re-stir the cornstarch slurry and pour it into the soup while stirring; simmer 1 to 2 minutes until the soup thickens to a light gravy consistency.',
+      'Reduce heat to medium-low. Slowly drizzle the beaten eggs in a thin stream while stirring gently in one direction to create ribbons. Remove from heat and stir in the sesame oil.',
+      'Suggestions (not included): Serve as a first course alongside stir-fry, fried rice, or dumplings. For more heat, add extra white pepper or a few drops of chili oil.'
+    ],
+    sections: [
+      { key: 'stock', label: 'Chicken stock', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'hot_sour', label: 'Hot and sour', cookingMethod: '', yieldFactorWater: 0.92 }
+    ],
   }
 ];
