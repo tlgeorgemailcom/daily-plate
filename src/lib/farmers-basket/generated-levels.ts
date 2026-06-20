@@ -17914,5 +17914,51 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'succotash', label: 'Succotash', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'SOUP_001',
+    name: 'Asparagus Soup',
+    category: 'soups & stews',
+    dietaryCategory: 'all',
+    levelNum: 375,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 bowl (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":268.7,"pro":13.4,"fat":19.9,"carb":11.7,"fib":3.8,"h2o":359.3,"sug":5.5,"perServing":{"cal":268.7,"pro":13.4,"fat":19.9,"carb":11.7,"fib":3.8,"h2o":359.3,"sug":5.5,"AddedSugars":0.0,"IntrinsicSugars":5.5},"micros":{"vitaminA":48.12,"vitaminC":2.01,"vitaminD":4.63,"vitaminE":0.41,"vitaminK":11.6,"vitaminB6":0.11,"vitaminB12":0.09,"thiamin":0.05,"riboflavin":0.09,"niacin":1.57,"folate":15.45,"calcium":21.05,"iron":0.84,"magnesium":10.83,"phosphorus":60.77,"potassium":129.42,"sodium":122.64,"zinc":0.6,"copper":0.07,"selenium":6.59,"cholesterol":47.97,"saturatedFat":5.1,"monoFat":4.8,"polyFat":1.73,"omega3":0.04,"omega6":0.4},"gramsPerServing":406.2,"servings":4,"per100g":{"Energy_KCal":66.15,"Water":88.44,"Protein":3.29,"TotalLipidFat":4.89,"Carbohydrate":2.88,"FiberTotalDietary":0.94,"SugarsTotal":1.36,"Cholesterol":47.97,"FattyAcids_totalSaturated":5.1,"FattyAcids_totalMonounsaturated":4.8,"FattyAcids_totalPolyunsaturated":1.73,"LinoleicAcid":0.4,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.01,"VitaminA_RAE":48.12,"Retinol":37.59,"Carotene_beta":124.06,"VitaminD":4.63,"VitaminE_alphaTocopherol":0.41,"VitaminK_phylloquinone":11.6,"VitaminC_totalAscorbicAcid":2.01,"Thiamin":0.05,"Riboflavin":0.09,"Niacin":1.57,"PantothenicAcid":0.31,"VitaminB6":0.11,"Folate_total":15.45,"Folate_food":14.49,"Folate_DFE":16.12,"FolicAcid":1.48,"VitaminB12":0.09,"Choline_total":17.06,"Betaine":1.6,"LuteinZeaxanthin":150.55,"Lycopene":0.01,"Calcium_Ca":21.05,"Iron_Fe":0.84,"Magnesium_Mg":10.83,"Phosphorus_P":60.77,"Potassium_K":129.42,"Sodium_Na":122.64,"Zinc_Zn":0.6,"Copper_Cu":0.07,"Manganese_Mn":0.09,"Selenium_Se":6.59,"Tryptophan":0.08,"Threonine":0.3,"Isoleucine":0.33,"Leucine":0.53,"Lysine":0.57,"Methionine":0.17,"Cystine":0.08,"Phenylalanine":0.28,"Tyrosine":0.23,"Valine":0.35,"Arginine":0.44,"Histidine":0.22,"Alanine":0.41,"AsparticAcid":0.73,"GlutamicAcid":1.06,"Glycine":0.41,"Proline":0.32,"Serine":0.27,"omega3":0.04,"omega6":0.4,"AddedSugars":0.0,"IntrinsicSugars":1.36},"addedSugars":0.0,"intrinsicSugars":5.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.88,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Chicken Broth","grams":236.5},{"ndb":"11011","name":"Asparagus, raw","grams":113.4},{"ndb":"1145","name":"Butter, without salt","grams":7.1},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":3.9},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":29.8},{"ndb":"9152","name":"Lemon juice, raw","grams":3.8},{"ndb":"2047","name":"Salt, table","grams":1.1},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"stock","section_label":"Chicken stock","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":946.0,"raw_water_grams":896.81,"raw_fat_grams":12.68,"raw_protein_grams":36.52,"raw_carb_grams":0.28,"final_grams":946.0},{"section_key":"soup","section_label":"Asparagus soup","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":752.68,"raw_water_grams":614.06,"raw_fat_grams":66.86,"raw_protein_grams":16.92,"raw_carb_grams":46.44,"final_grams":678.99}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Asparagus Soup', quantity: 'custom (g)', foodWord: 'ASPARAGUSSOUP', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Chicken Broth', quantity: '4 cups Chicken Broth (recipe)', section: 'stock', foodWord: 'CHICKENBROTH', portionDesc: 'g', portionGrams: 946.0, isDish: true, componentRef: 'STOCK_003' },
+      { name: 'asparagus', quantity: '1 lb asparagus, trimmed and cut into 1-inch pieces', section: 'soup', ndbNo: '11011', portionDesc: 'g', portionGrams: 453.6 },
+      { name: 'unsalted butter', quantity: '2 tbsp', section: 'soup', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
+      { name: 'onion', quantity: '1 medium onion, roughly chopped', section: 'soup', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'soup', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'all-purpose flour', quantity: '2 tbsp', section: 'soup', ndbNo: '20581', portionDesc: 'g', portionGrams: 15.6 },
+      { name: 'heavy cream', quantity: '1/2 cup', section: 'soup', ndbNo: '1053', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'lemon juice', quantity: '1 tbsp', section: 'soup', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'salt', quantity: '3/4 tsp', section: 'soup', ndbNo: '2047', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'soup', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Melt the butter in a large pot over medium heat. Add the onion and cook, stirring occasionally, until softened, about 5 minutes. Add the garlic and cook for 1 minute more.',
+      'Sprinkle in the flour and stir to coat the vegetables. Cook, stirring constantly, for 1 minute.',
+      'Add the asparagus and chicken broth. Bring to a boil, then reduce heat and simmer until the asparagus is very tender, about 15-18 minutes.',
+      'Use an immersion blender (or transfer in batches to a blender) to purée the soup until very smooth. Return to the pot over low heat.',
+      'Stir in the heavy cream and lemon juice. Season with salt and pepper to taste. Warm through and serve.'
+    ],
+    sections: [
+      { key: 'stock', label: 'Chicken stock', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'soup', label: 'Asparagus soup', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];
