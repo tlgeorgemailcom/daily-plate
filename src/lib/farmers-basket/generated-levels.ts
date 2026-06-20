@@ -18109,5 +18109,51 @@ export const LEVELS: Level[] = [
       { key: 'stock', label: 'Chicken stock', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'soup', label: 'Broccoli cheddar', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'SOUP_005',
+    name: 'Egg Drop Soup',
+    category: 'soups & stews',
+    dietaryCategory: 'all',
+    levelNum: 379,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 bowl (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":159.9,"pro":14.6,"fat":7.9,"carb":7.4,"fib":1.3,"h2o":267.5,"sug":1.8,"perServing":{"cal":159.9,"pro":14.6,"fat":7.9,"carb":7.4,"fib":1.3,"h2o":267.5,"sug":1.8,"AddedSugars":0.0,"IntrinsicSugars":1.8},"micros":{"vitaminA":21.27,"vitaminC":1.46,"vitaminD":10.3,"vitaminE":0.16,"vitaminK":10.13,"vitaminB6":0.13,"vitaminB12":0.21,"thiamin":0.03,"riboflavin":0.11,"niacin":1.88,"folate":11.08,"calcium":21.21,"iron":0.68,"magnesium":11.25,"phosphorus":80.52,"potassium":119.38,"sodium":197.13,"zinc":0.75,"copper":0.05,"selenium":11.02,"cholesterol":95.41,"saturatedFat":3.86,"monoFat":5.67,"polyFat":2.47,"omega3":0.04,"omega6":0.59},"gramsPerServing":299.2,"servings":4,"per100g":{"Energy_KCal":53.43,"Water":89.41,"Protein":4.86,"TotalLipidFat":2.64,"Carbohydrate":2.46,"FiberTotalDietary":0.44,"SugarsTotal":0.6,"Cholesterol":95.41,"FattyAcids_totalSaturated":3.86,"FattyAcids_totalMonounsaturated":5.67,"FattyAcids_totalPolyunsaturated":2.47,"LinoleicAcid":0.59,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.01,"VitaminA_RAE":21.27,"Retinol":18.51,"Carotene_beta":32.18,"VitaminD":10.3,"VitaminE_alphaTocopherol":0.16,"VitaminK_phylloquinone":10.13,"VitaminC_totalAscorbicAcid":1.46,"Thiamin":0.03,"Riboflavin":0.11,"Niacin":1.88,"PantothenicAcid":0.43,"VitaminB6":0.13,"Folate_total":11.08,"Folate_food":11.08,"Folate_DFE":11.08,"FolicAcid":0.0,"VitaminB12":0.21,"Choline_total":47.59,"Betaine":1.97,"LuteinZeaxanthin":91.2,"Lycopene":0.0,"Calcium_Ca":21.21,"Iron_Fe":0.68,"Magnesium_Mg":11.25,"Phosphorus_P":80.52,"Potassium_K":119.38,"Sodium_Na":197.13,"Zinc_Zn":0.75,"Copper_Cu":0.05,"Manganese_Mn":0.05,"Selenium_Se":11.02,"Tryptophan":0.12,"Threonine":0.43,"Isoleucine":0.49,"Leucine":0.78,"Lysine":0.84,"Methionine":0.26,"Cystine":0.13,"Phenylalanine":0.42,"Tyrosine":0.35,"Valine":0.53,"Arginine":0.66,"Histidine":0.31,"Alanine":0.6,"AsparticAcid":0.95,"GlutamicAcid":1.48,"Glycine":0.58,"Proline":0.44,"Serine":0.44,"omega3":0.04,"omega6":0.59,"AddedSugars":0.0,"IntrinsicSugars":0.6},"addedSugars":0.0,"intrinsicSugars":1.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.95,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Chicken Broth","grams":236.5},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":37.5},{"ndb":"20027","name":"Cornstarch","grams":6.0},{"ndb":"16124","name":"Soy sauce made from soy (tamari)","grams":3.8},{"ndb":"4058","name":"Oil, sesame, salad or cooking","grams":1.1},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":15.0},{"ndb":"11216","name":"Ginger root, raw","grams":0.8},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2032","name":"Spices, pepper, white","grams":0.1}],"sections":[{"section_key":"stock","section_label":"Chicken stock","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":946.0,"raw_water_grams":896.81,"raw_fat_grams":12.68,"raw_protein_grams":36.52,"raw_carb_grams":0.28,"final_grams":946.0},{"section_key":"egg_drop","section_label":"Egg drop","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.95,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":260.07,"raw_water_grams":182.46,"raw_fat_grams":18.94,"raw_protein_grams":21.69,"raw_carb_grams":29.15,"final_grams":250.95}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Egg Drop Soup', quantity: 'custom (g)', foodWord: 'EGGDROPSOUP', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Chicken Broth', quantity: '1 quart Chicken Broth (recipe)', section: 'stock', foodWord: 'CHICKENBROTH', portionDesc: 'g', portionGrams: 946.0, isDish: true, componentRef: 'STOCK_003' },
+      { name: 'large egg', quantity: '3 large eggs', section: 'egg_drop', ndbNo: '1123', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'cornstarch', quantity: '3 tbsp', section: 'egg_drop', ndbNo: '20027', portionDesc: 'g', portionGrams: 24.0 },
+      { name: 'tamari', quantity: '1 tbsp', section: 'egg_drop', ndbNo: '16124', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'Sesame oil', quantity: '1 tsp', section: 'egg_drop', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'scallions', quantity: '4 medium scallions, thinly sliced', section: 'egg_drop', ndbNo: '11291', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'fresh ginger', quantity: '½ tsp fresh ginger root, grated', section: 'egg_drop', ndbNo: '11216', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'salt', quantity: '½ tsp', section: 'egg_drop', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'white pepper', quantity: '¼ tsp', section: 'egg_drop', ndbNo: '2032', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'In a small bowl, whisk the cornstarch with 3 tablespoons of cold chicken broth until completely smooth. Set aside.',
+      'Pour the remaining chicken broth into a medium saucepan and bring to a gentle boil over medium-high heat. Stir in the tamari, ginger, salt, and white pepper.',
+      'Reduce heat to medium. Re-stir the cornstarch slurry and pour it into the broth while stirring; simmer 1 to 2 minutes until the broth thickens slightly.',
+      'Beat the eggs lightly in a bowl. Reduce heat to medium-low so the broth is barely simmering. Slowly drizzle the beaten eggs in a thin, steady stream while gently stirring in one direction to form delicate ribbons.',
+      'Remove from heat. Stir in the sesame oil and scallions. Taste and adjust seasoning.',
+      'Suggestions (not included): Serve alongside fried rice, potstickers, or stir-fry.'
+    ],
+    sections: [
+      { key: 'stock', label: 'Chicken stock', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'egg_drop', label: 'Egg drop', cookingMethod: '', yieldFactorWater: 0.95 }
+    ],
   }
 ];
