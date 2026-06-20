@@ -17700,5 +17700,53 @@ export const LEVELS: Level[] = [
       { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'rice', label: 'Rice Pilaf', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SIDE_036',
+    name: 'Risotto',
+    category: 'sides',
+    dietaryCategory: 'all',
+    levelNum: 370,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cup (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":445.8,"pro":18.1,"fat":19.2,"carb":44.1,"fib":1.4,"h2o":188.5,"sug":2.8,"perServing":{"cal":445.8,"pro":18.1,"fat":19.2,"carb":44.1,"fib":1.4,"h2o":188.5,"sug":2.8,"AddedSugars":0.0,"IntrinsicSugars":2.8},"micros":{"vitaminA":34.65,"vitaminC":1.08,"vitaminD":1.01,"vitaminE":0.28,"vitaminK":1.42,"vitaminB6":0.11,"vitaminB12":0.16,"thiamin":0.03,"riboflavin":0.08,"niacin":1.53,"folate":5.96,"calcium":68.4,"iron":0.59,"magnesium":14.87,"phosphorus":103.53,"potassium":117.08,"sodium":188.22,"zinc":0.88,"copper":0.07,"selenium":8.9,"cholesterol":65.7,"saturatedFat":6.77,"monoFat":7.81,"polyFat":2.25,"omega3":0.04,"omega6":0.49},"gramsPerServing":275.0,"servings":4,"per100g":{"Energy_KCal":162.1,"Water":68.53,"Protein":6.59,"TotalLipidFat":6.99,"Carbohydrate":16.04,"FiberTotalDietary":0.5,"SugarsTotal":1.03,"Cholesterol":65.7,"FattyAcids_totalSaturated":6.77,"FattyAcids_totalMonounsaturated":7.81,"FattyAcids_totalPolyunsaturated":2.25,"LinoleicAcid":0.49,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.01,"VitaminA_RAE":34.65,"Retinol":33.17,"Carotene_beta":16.79,"VitaminD":1.01,"VitaminE_alphaTocopherol":0.28,"VitaminK_phylloquinone":1.42,"VitaminC_totalAscorbicAcid":1.08,"Thiamin":0.03,"Riboflavin":0.08,"Niacin":1.53,"PantothenicAcid":0.42,"VitaminB6":0.11,"Folate_total":5.96,"Folate_food":5.96,"Folate_DFE":5.96,"FolicAcid":0.0,"VitaminB12":0.16,"Choline_total":16.95,"Betaine":2.15,"LuteinZeaxanthin":1.52,"Lycopene":0.01,"Calcium_Ca":68.4,"Iron_Fe":0.59,"Magnesium_Mg":14.87,"Phosphorus_P":103.53,"Potassium_K":117.08,"Sodium_Na":188.22,"Zinc_Zn":0.88,"Copper_Cu":0.07,"Manganese_Mn":0.25,"Selenium_Se":8.9,"Tryptophan":0.14,"Threonine":0.51,"Isoleucine":0.59,"Leucine":0.98,"Lysine":1.0,"Methionine":0.31,"Cystine":0.13,"Phenylalanine":0.52,"Tyrosine":0.45,"Valine":0.66,"Arginine":0.78,"Histidine":0.4,"Alanine":0.67,"AsparticAcid":1.09,"GlutamicAcid":2.03,"Glycine":0.66,"Proline":0.68,"Serine":0.51,"omega3":0.04,"omega6":0.49,"AddedSugars":0.0,"IntrinsicSugars":1.03},"addedSugars":0.0,"intrinsicSugars":2.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Chicken Broth","grams":240.0},{"ndb":"20452","name":"Rice, white, short-grain, raw, unenriched","grams":50.0},{"ndb":"14106","name":"Alcoholic beverage, wine, table, white","grams":30.0},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"1145","name":"Butter, without salt","grams":10.7},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":14.2},{"ndb":"2049","name":"Thyme, fresh","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"broth","section_label":"Chicken Broth","prep_method":"raw","cook_method":"raw","cooking_method":"raw","ingredient_count":0,"raw_grams":0.0,"final_grams":0.0},{"section_key":"risotto","section_label":"Risotto","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.6457777866999282,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":1513.67,"raw_water_grams":1167.46,"raw_fat_grams":76.88,"raw_protein_grams":72.49,"raw_carb_grams":176.48,"final_grams":1100.13}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Risotto', quantity: 'custom (g)', foodWord: 'RISOTTO', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Chicken Broth', quantity: '4 cups Chicken Broth (recipe)', section: 'broth', foodWord: 'CHICKENBROTH', portionDesc: 'g', portionGrams: 960.0, isDish: true, componentRef: 'STOCK_003' },
+      { name: 'short-grain white rice (dry)', quantity: '1 cup', section: 'risotto', ndbNo: '20452', portionDesc: 'g', portionGrams: 200.0 },
+      { name: 'white wine', quantity: '1/2 cup dry white wine', section: 'risotto', ndbNo: '14106', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'onion', quantity: '1 medium onion, diced', section: 'risotto', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'risotto', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'risotto', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'unsalted butter', quantity: '3 tbsp', section: 'risotto', ndbNo: '1145', portionDesc: 'g', portionGrams: 42.6 },
+      { name: 'Parmesan cheese', quantity: '2 oz, finely grated', section: 'risotto', ndbNo: '1033', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'fresh thyme leaves', quantity: '1 sprig', section: 'risotto', ndbNo: '2049', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'risotto', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'risotto', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Warm the chicken broth in a small saucepan over low heat; keep hot throughout cooking.',
+      'Heat the olive oil and 1 tablespoon of the butter in a wide, heavy-bottomed pan over medium heat. Add the onion and cook, stirring occasionally, until softened and translucent, about 4 minutes. Add the garlic and thyme sprig; cook 1 minute more.',
+      'Add the rice and stir to coat in the oil and butter. Toast for 1-2 minutes until the edges of the grains look translucent.',
+      'Pour in the white wine and stir until fully absorbed, about 2 minutes.',
+      'Add the hot broth one ladleful (about 1/2 cup) at a time, stirring constantly and waiting for each addition to be absorbed before adding the next. Continue until the rice is tender with a slight bite (al dente) and the mixture is creamy, about 18-20 minutes total. You may not need all the broth.',
+      'Remove the thyme sprig. Remove from heat and stir in the remaining 2 tablespoons cold butter and the Parmesan until melted and creamy (mantecatura). Season with salt and pepper. Serve immediately.'
+    ],
+    sections: [
+      { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'risotto', label: 'Risotto', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
