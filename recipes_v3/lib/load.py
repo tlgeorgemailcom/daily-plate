@@ -142,10 +142,12 @@ class IngredientRow:
     ingredient_key: str
     qty_display: str
     grams: float
-    section: str          # FK → recipe_sections.csv::section_key (cooking math)
+    section: str          # FK → recipe_sections.csv::section_key (display grouping)
     ingredient_group: str  # display-only label shown in UI (may differ from section)
     is_optional: bool
     display_name_override: str | None
+    cook_section: str = ""  # Phase 8d: when non-empty, overrides `section` for pipeline
+                             # nutrient math while keeping `section` for display grouping.
 
 
 @dataclass(frozen=True)
@@ -281,6 +283,7 @@ def load_ingredients() -> dict[str, list[IngredientRow]]:
                 ingredient_group=(row.get("ingredient_group") or row.get("section") or "").strip(),
                 is_optional=row.get("is_optional", "false").strip().lower() == "true",
                 display_name_override=(row.get("display_name_override") or "").strip() or None,
+                cook_section=(row.get("cook_section") or "").strip(),
             )
             out.setdefault(rid, []).append(ingr)
     for rid in out:

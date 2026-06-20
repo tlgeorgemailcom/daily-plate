@@ -405,15 +405,17 @@ def _build_recipe_multi(
             continue
         # Phase 8c: component-ref ingredient (@<child_id>).
         if is_component_ref(row.ingredient_key):
-            if row.section not in sec_state:
+            # Phase 8d: cook_section overrides section for nutrient math (display uses section).
+            math_section = row.cook_section if row.cook_section else row.section
+            if math_section not in sec_state:
                 raise RuntimeError(
                     f"Recipe {recipe.recipe_id}: component-ref {row.ingredient_key} has "
-                    f"section={row.section!r} but no matching section_key in recipe_sections.csv"
+                    f"cook_section/section={math_section!r} but no matching section_key in recipe_sections.csv"
                 )
             cid = child_recipe_id(row.ingredient_key)
             child = _load_child_build(cid)
             p100 = child.get("per100g", {})
-            st = sec_state[row.section]
+            st = sec_state[math_section]
             scale = row.grams / 100.0
             st["raw_total"] += row.grams
             st["raw_water"] += float(p100.get("Water", 0.0)) * scale
@@ -456,8 +458,14 @@ def _build_recipe_multi(
                 f"Recipe {recipe.recipe_id}: ingredient {row.ingredient_key} has "
                 f"section={row.section!r} but no matching section_key in recipe_sections.csv"
             )
-
-        st = sec_state[row.section]
+        # Phase 8d: cook_section overrides section for nutrient math (display uses section).
+        math_section = row.cook_section if row.cook_section else row.section
+        if math_section not in sec_state:
+            raise RuntimeError(
+                f"Recipe {recipe.recipe_id}: ingredient {row.ingredient_key} has "
+                f"cook_section={math_section!r} but no matching section_key in recipe_sections.csv"
+            )
+        st = sec_state[math_section]
         scale = row.grams / 100.0
         st["raw_total"] += row.grams
         st["raw_water"] += nuts.get("Water", 0.0) * scale
