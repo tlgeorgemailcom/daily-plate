@@ -17874,5 +17874,45 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'mushrooms', label: 'Stuffed Mushrooms', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'SIDE_040',
+    name: 'Succotash',
+    category: 'sides',
+    dietaryCategory: 'veggie',
+    levelNum: 374,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cup (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":185.2,"pro":6.4,"fat":6.8,"carb":27.5,"fib":5.0,"h2o":102.2,"sug":5.7,"perServing":{"cal":185.2,"pro":6.4,"fat":6.8,"carb":27.5,"fib":5.0,"h2o":102.2,"sug":5.7,"AddedSugars":0.0,"IntrinsicSugars":5.7},"micros":{"vitaminA":36.15,"vitaminC":7.98,"vitaminD":0.0,"vitaminE":0.18,"vitaminK":3.59,"vitaminB6":0.11,"vitaminB12":0.01,"thiamin":0.1,"riboflavin":0.06,"niacin":0.98,"folate":23.29,"calcium":18.97,"iron":1.29,"magnesium":48.06,"phosphorus":96.51,"potassium":381.05,"sodium":214.39,"zinc":0.55,"copper":0.16,"selenium":1.17,"cholesterol":10.5,"saturatedFat":2.64,"monoFat":1.33,"polyFat":0.31,"omega3":0.01,"omega6":0.24},"gramsPerServing":145.4,"servings":4,"per100g":{"Energy_KCal":127.36,"Water":70.3,"Protein":4.4,"TotalLipidFat":4.68,"Carbohydrate":18.9,"FiberTotalDietary":3.42,"SugarsTotal":3.91,"Cholesterol":10.5,"FattyAcids_totalSaturated":2.64,"FattyAcids_totalMonounsaturated":1.33,"FattyAcids_totalPolyunsaturated":0.31,"LinoleicAcid":0.24,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":36.15,"Retinol":26.21,"Carotene_beta":99.27,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.18,"VitaminK_phylloquinone":3.59,"VitaminC_totalAscorbicAcid":7.98,"Thiamin":0.1,"Riboflavin":0.06,"Niacin":0.98,"PantothenicAcid":0.34,"VitaminB6":0.11,"Folate_total":23.29,"Folate_food":23.29,"Folate_DFE":23.29,"FolicAcid":0.0,"VitaminB12":0.01,"Choline_total":26.79,"Betaine":0.03,"LuteinZeaxanthin":196.16,"Lycopene":0.02,"Calcium_Ca":18.97,"Iron_Fe":1.29,"Magnesium_Mg":48.06,"Phosphorus_P":96.51,"Potassium_K":381.05,"Sodium_Na":214.39,"Zinc_Zn":0.55,"Copper_Cu":0.16,"Manganese_Mn":0.62,"Selenium_Se":1.17,"Tryptophan":0.04,"Threonine":0.17,"Isoleucine":0.23,"Leucine":0.37,"Lysine":0.25,"Methionine":0.05,"Cystine":0.04,"Phenylalanine":0.21,"Tyrosine":0.14,"Valine":0.26,"Arginine":0.25,"Histidine":0.13,"Alanine":0.23,"AsparticAcid":0.43,"GlutamicAcid":0.67,"Glycine":0.17,"Proline":0.17,"Serine":0.24,"omega3":0.01,"omega6":0.24,"AddedSugars":0.0,"IntrinsicSugars":3.91},"addedSugars":0.0,"intrinsicSugars":5.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.9,"yieldFactorFat":1.0,"sources":[{"ndb":"11032","name":"Lima beans, immature seeds, cooked, boiled, drained, without salt","grams":60.0},{"ndb":"11167","name":"Corn, sweet, yellow, raw","grams":60.0},{"ndb":"1145","name":"Butter, without salt","grams":7.1},{"ndb":"11282","name":"Onions, raw","grams":13.8},{"ndb":"11333","name":"Peppers, sweet, green, raw","grams":15.0},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"succotash","section_label":"Succotash","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":626.98,"raw_water_grams":454.25,"raw_fat_grams":27.22,"raw_protein_grams":25.61,"raw_carb_grams":109.92,"final_grams":581.55}],"cookingMethod":"pan grilled"},
+    recipeIngredients: [
+      { name: 'Succotash', quantity: 'custom (g)', foodWord: 'SUCCOTASH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'lima beans', quantity: '1 1/2 cups lima beans, cooked and drained', section: 'succotash', ndbNo: '11032', portionDesc: 'g', portionGrams: 240.0 },
+      { name: 'sweet corn', quantity: '1 1/2 cups sweet corn kernels, raw', section: 'succotash', ndbNo: '11167', portionDesc: 'g', portionGrams: 240.0 },
+      { name: 'unsalted butter', quantity: '2 tbsp', section: 'succotash', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
+      { name: 'onion', quantity: '1/2 small onion, finely diced', section: 'succotash', ndbNo: '11282', portionDesc: 'g', portionGrams: 55.0 },
+      { name: 'green bell pepper', quantity: '1/2 medium green bell pepper, diced', section: 'succotash', ndbNo: '11333', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'succotash', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'succotash', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Melt the butter in a large skillet over medium heat. Add the diced onion and green bell pepper and cook, stirring occasionally, until softened, about 5 minutes.',
+      'Add the sweet corn kernels and lima beans. Stir to combine and cook until heated through and any excess moisture has cooked off, about 5-7 minutes.',
+      'Season with salt and pepper. Taste and adjust seasoning. Serve warm.'
+    ],
+    sections: [
+      { key: 'succotash', label: 'Succotash', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];
