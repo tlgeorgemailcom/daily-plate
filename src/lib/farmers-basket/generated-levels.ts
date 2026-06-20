@@ -18366,7 +18366,7 @@ export const LEVELS: Level[] = [
       'Remove the chicken pieces with tongs. Shred the meat using two forks and return to the pot, discarding any bones or cartilage.',
       'Add the okra. Continue simmering for 15 minutes until the okra is tender and the gumbo has thickened.',
       'Remove and discard the bay leaves. Taste and adjust seasoning with additional salt if needed.',
-      'Serve ladled into bowls over white rice (not included). Garnish with sliced scallions if desired (not included).'
+      'Suggestions (not included): Serve ladled into bowls over steamed white rice. Garnish with sliced scallions if desired.'
     ],
     sections: [
       { key: 'stock', label: 'Chicken stock', cookingMethod: '', yieldFactorWater: 1.0 },
