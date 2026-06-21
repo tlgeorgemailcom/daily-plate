@@ -17919,7 +17919,7 @@ export const LEVELS: Level[] = [
     id: 'SOUP_001',
     name: 'Asparagus Soup',
     category: 'soups & stews',
-    dietaryCategory: 'all',
+    dietaryCategory: 'pollo',
     levelNum: 375,
     recipe: ['bread'],
     tools: [
@@ -18066,7 +18066,7 @@ export const LEVELS: Level[] = [
     id: 'SOUP_004',
     name: 'Broccoli Cheddar Soup',
     category: 'soups & stews',
-    dietaryCategory: 'veggie',
+    dietaryCategory: 'pollo',
     levelNum: 378,
     recipe: ['bread'],
     tools: [
@@ -18114,7 +18114,7 @@ export const LEVELS: Level[] = [
     id: 'SOUP_005',
     name: 'Egg Drop Soup',
     category: 'soups & stews',
-    dietaryCategory: 'all',
+    dietaryCategory: 'pollo',
     levelNum: 379,
     recipe: ['bread'],
     tools: [
@@ -18212,7 +18212,7 @@ export const LEVELS: Level[] = [
     id: 'SOUP_007',
     name: 'Tortilla Soup',
     category: 'soups & stews',
-    dietaryCategory: 'all',
+    dietaryCategory: 'pollo',
     levelNum: 381,
     recipe: ['bread'],
     tools: [
@@ -18375,7 +18375,7 @@ export const LEVELS: Level[] = [
     id: 'SOUP_010',
     name: 'Chicken Noodle Soup',
     category: 'soups & stews',
-    dietaryCategory: 'all',
+    dietaryCategory: 'pollo',
     levelNum: 384,
     recipe: ['bread'],
     tools: [
