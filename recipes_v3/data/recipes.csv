@@ -387,3 +387,4 @@ SOUP_011,CHILINOBEANS,Chili no Beans,soups & stews,all,builtin,,,1 bowl (makes 4
 SOUP_012,CHILEWITHBEANS,Chili with Beans,soups & stews,all,builtin,,,1 bowl (makes 4),4,Rule D,boiled,0.82,1.0,1.0,1.0,1.0,approved,,Rule D — no canonical; 2-section: @STOCK_004 raw + chili boiled yfw=0.82,PASS,,,
 SOUP_013,SEAFOODGUMBO,Seafood Gumbo,soups & stews,pesca,builtin,,,1 bowl (makes 8),8,Rule D,boiled,0.88,1.0,1.0,1.0,1.0,approved,,Rule D — no canonical; 3-section: @STOCK_006 raw + @SAUCE_014 raw + gumbo boiled yfw=0.88,PASS,,,
 SOUP_014,BLACKBEANSOUP,Black Bean Soup,soups & stews,vegan,builtin,,,1 bowl (makes 4),4,Rule D,boiled,0.88,1.0,1.0,1.0,1.0,approved,,Rule D — no canonical; 2-section: @STOCK_007 raw + soup boiled yfw=0.88,PASS,,,
+SOUP_015,NEWENGLANDCLAMCHOWDER,New England Clam Chowder,soups & stews,pesca,builtin,,,1 bowl (makes 4),4,Rule D,boiled,0.88,1.0,1.0,1.0,1.0,approved,,Rule D — no canonical; 2-section: @STOCK_006 raw + chowder boiled yfw=0.88,PASS,,,
