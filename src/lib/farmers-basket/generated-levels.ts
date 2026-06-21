@@ -19197,5 +19197,93 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'scramble', label: 'Scramble', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BKFST_043',
+    name: 'Migas without Tortillas',
+    category: 'Breakfast',
+    dietaryCategory: 'veggie',
+    levelNum: 400,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 1)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":463.7,"pro":26.6,"fat":36.1,"carb":7.9,"fib":1.9,"h2o":229.8,"sug":4.4,"perServing":{"cal":463.7,"pro":26.6,"fat":36.1,"carb":7.9,"fib":1.9,"h2o":229.8,"sug":4.4,"AddedSugars":0.0,"IntrinsicSugars":4.4},"micros":{"vitaminA":91.36,"vitaminC":4.79,"vitaminD":40.13,"vitaminE":1.14,"vitaminK":12.27,"vitaminB6":0.1,"vitaminB12":0.47,"thiamin":0.03,"riboflavin":0.23,"niacin":0.21,"folate":23.99,"calcium":94.71,"iron":1.07,"magnesium":12.72,"phosphorus":147.56,"potassium":161.74,"sodium":294.19,"zinc":0.98,"copper":0.06,"selenium":16.56,"cholesterol":191.61,"saturatedFat":3.72,"monoFat":5.78,"polyFat":1.13,"omega3":0.02,"omega6":0.6},"gramsPerServing":305.1,"servings":1,"per100g":{"Energy_KCal":151.97,"Water":75.31,"Protein":8.71,"TotalLipidFat":11.83,"Carbohydrate":2.59,"FiberTotalDietary":0.61,"SugarsTotal":1.44,"Cholesterol":191.61,"FattyAcids_totalSaturated":3.72,"FattyAcids_totalMonounsaturated":5.78,"FattyAcids_totalPolyunsaturated":1.13,"LinoleicAcid":0.6,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":91.36,"Retinol":75.41,"Carotene_beta":177.86,"VitaminD":40.13,"VitaminE_alphaTocopherol":1.14,"VitaminK_phylloquinone":12.27,"VitaminC_totalAscorbicAcid":4.79,"Thiamin":0.03,"Riboflavin":0.23,"Niacin":0.21,"PantothenicAcid":0.66,"VitaminB6":0.1,"Folate_total":23.99,"Folate_food":23.99,"Folate_DFE":23.99,"FolicAcid":0.0,"VitaminB12":0.47,"Choline_total":133.65,"Betaine":0.2,"LuteinZeaxanthin":217.14,"Lycopene":404.8,"Calcium_Ca":94.71,"Iron_Fe":1.07,"Magnesium_Mg":12.72,"Phosphorus_P":147.56,"Potassium_K":161.74,"Sodium_Na":294.19,"Zinc_Zn":0.98,"Copper_Cu":0.06,"Manganese_Mn":0.06,"Selenium_Se":16.56,"Tryptophan":0.11,"Threonine":0.36,"Isoleucine":0.46,"Leucine":0.74,"Lysine":0.61,"Methionine":0.24,"Cystine":0.12,"Phenylalanine":0.45,"Tyrosine":0.35,"Valine":0.56,"Arginine":0.49,"Histidine":0.22,"Alanine":0.42,"AsparticAcid":0.83,"GlutamicAcid":1.43,"Glycine":0.25,"Proline":0.49,"Serine":0.59,"omega3":0.02,"omega6":0.6,"AddedSugars":0.0,"IntrinsicSugars":1.44},"addedSugars":0.0,"intrinsicSugars":4.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":150.0},{"ndb":"11282","name":"Onions, raw","grams":30.0},{"ndb":"11979","name":"Peppers, jalapeno, raw","grams":14.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":60.0},{"ndb":"1251","name":"Cheese, Mexican blend","grams":28.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":13.6},{"ndb":"11165","name":"Coriander (cilantro) leaves, raw","grams":8.0},{"ndb":"2047","name":"Salt, table","grams":1.5}],"sections":[{"section_key":"migas","section_label":"Migas","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":305.1,"raw_water_grams":229.78,"raw_fat_grams":36.09,"raw_protein_grams":26.59,"raw_carb_grams":7.91,"final_grams":305.1}],"cookingMethod":"pan grilled"},
+    recipeIngredients: [
+      { name: 'Migas without Tortillas', quantity: 'custom (g)', foodWord: 'MIGAS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'eggs', quantity: '3 large', section: 'migas', ndbNo: '1123', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'onion', quantity: '2 tbsp onion, diced', section: 'migas', ndbNo: '11282', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'jalapeño', quantity: '1 medium jalapeño, seeded and minced', section: 'migas', ndbNo: '11979', portionDesc: 'g', portionGrams: 14.0 },
+      { name: 'tomato', quantity: '1/3 cup tomato, diced', section: 'migas', ndbNo: '11529', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'shredded cheese', quantity: '1/4 cup', section: 'migas', ndbNo: '1251', portionDesc: 'g', portionGrams: 28.0 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'migas', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'fresh cilantro', quantity: '2 tbsp fresh cilantro, chopped', section: 'migas', ndbNo: '11165', portionDesc: 'g', portionGrams: 8.0 },
+      { name: 'salt', quantity: '1/4 tsp', section: 'migas', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 }
+    ],
+    recipeInstructions: [
+      'Beat the eggs in a bowl with salt. Set aside.',
+      'Heat olive oil in a non-toxic nonstick skillet over medium heat.',
+      'Add onion and jalapeño; cook 2–3 minutes, stirring, until softened.',
+      'Add tomato and cook 1 minute more, stirring.',
+      'Pour in the beaten eggs. Cook, stirring gently, until just set, 2–3 minutes.',
+      'Remove from heat, top with shredded cheese and fresh cilantro, and serve immediately.'
+    ],
+    sections: [
+      { key: 'migas', label: 'Migas', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
+    id: 'BKFST_044',
+    name: 'Migas with Tortillas',
+    category: 'Breakfast',
+    dietaryCategory: 'veggie',
+    levelNum: 401,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 1)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":605.3,"pro":28.7,"fat":42.3,"carb":28.2,"fib":3.5,"h2o":230.6,"sug":4.6,"perServing":{"cal":605.3,"pro":28.7,"fat":42.3,"carb":28.2,"fib":3.5,"h2o":230.6,"sug":4.6,"AddedSugars":0.0,"IntrinsicSugars":4.6},"micros":{"vitaminA":83.18,"vitaminC":4.36,"vitaminD":36.54,"vitaminE":1.27,"vitaminK":12.85,"vitaminB6":0.11,"vitaminB12":0.45,"thiamin":0.03,"riboflavin":0.22,"niacin":0.25,"folate":22.65,"calcium":95.72,"iron":1.11,"magnesium":19.1,"phosphorus":154.5,"potassium":163.55,"sodium":297.22,"zinc":1.02,"copper":0.06,"selenium":15.47,"cholesterol":174.46,"saturatedFat":3.64,"monoFat":5.77,"polyFat":1.75,"omega3":0.03,"omega6":1.24},"gramsPerServing":335.1,"servings":1,"per100g":{"Energy_KCal":180.62,"Water":68.81,"Protein":8.57,"TotalLipidFat":12.62,"Carbohydrate":8.43,"FiberTotalDietary":1.03,"SugarsTotal":1.38,"Cholesterol":174.46,"FattyAcids_totalSaturated":3.64,"FattyAcids_totalMonounsaturated":5.77,"FattyAcids_totalPolyunsaturated":1.75,"LinoleicAcid":1.24,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":83.18,"Retinol":68.66,"Carotene_beta":162.08,"VitaminD":36.54,"VitaminE_alphaTocopherol":1.27,"VitaminK_phylloquinone":12.85,"VitaminC_totalAscorbicAcid":4.36,"Thiamin":0.03,"Riboflavin":0.22,"Niacin":0.25,"PantothenicAcid":0.63,"VitaminB6":0.11,"Folate_total":22.65,"Folate_food":22.65,"Folate_DFE":22.65,"FolicAcid":0.0,"VitaminB12":0.45,"Choline_total":123.24,"Betaine":0.22,"LuteinZeaxanthin":197.99,"Lycopene":368.56,"Calcium_Ca":95.72,"Iron_Fe":1.11,"Magnesium_Mg":19.1,"Phosphorus_P":154.5,"Potassium_K":163.55,"Sodium_Na":297.22,"Zinc_Zn":1.02,"Copper_Cu":0.06,"Manganese_Mn":0.09,"Selenium_Se":15.47,"Tryptophan":0.1,"Threonine":0.32,"Isoleucine":0.42,"Leucine":0.67,"Lysine":0.55,"Methionine":0.22,"Cystine":0.11,"Phenylalanine":0.41,"Tyrosine":0.32,"Valine":0.51,"Arginine":0.44,"Histidine":0.2,"Alanine":0.39,"AsparticAcid":0.75,"GlutamicAcid":1.3,"Glycine":0.23,"Proline":0.45,"Serine":0.54,"omega3":0.03,"omega6":1.24,"AddedSugars":0.0,"IntrinsicSugars":1.38},"addedSugars":0.0,"intrinsicSugars":4.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":150.0},{"ndb":"11282","name":"Onions, raw","grams":30.0},{"ndb":"11979","name":"Peppers, jalapeno, raw","grams":14.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":60.0},{"ndb":"1251","name":"Cheese, Mexican blend","grams":28.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":13.6},{"ndb":"11165","name":"Coriander (cilantro) leaves, raw","grams":8.0},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"19056","name":"Snacks, tortilla chips, plain, white corn, salted","grams":30.0}],"sections":[{"section_key":"migas","section_label":"Migas","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":335.1,"raw_water_grams":230.57,"raw_fat_grams":42.3,"raw_protein_grams":28.72,"raw_carb_grams":28.24,"final_grams":335.1}],"cookingMethod":"pan grilled"},
+    recipeIngredients: [
+      { name: 'Migas with Tortillas', quantity: 'custom (g)', foodWord: 'MIGASTORTILLAS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'eggs', quantity: '3 large', section: 'migas', ndbNo: '1123', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'onion', quantity: '2 tbsp onion, diced', section: 'migas', ndbNo: '11282', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'jalapeño', quantity: '1 medium jalapeño, seeded and minced', section: 'migas', ndbNo: '11979', portionDesc: 'g', portionGrams: 14.0 },
+      { name: 'tomato', quantity: '1/3 cup tomato, diced', section: 'migas', ndbNo: '11529', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'shredded cheese', quantity: '1/4 cup', section: 'migas', ndbNo: '1251', portionDesc: 'g', portionGrams: 28.0 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'migas', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'fresh cilantro', quantity: '2 tbsp fresh cilantro, chopped', section: 'migas', ndbNo: '11165', portionDesc: 'g', portionGrams: 8.0 },
+      { name: 'salt', quantity: '1/4 tsp', section: 'migas', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'tortilla chips', quantity: '1 oz tortilla chips, crushed', section: 'migas', ndbNo: '19056', portionDesc: 'g', portionGrams: 30.0 }
+    ],
+    recipeInstructions: [
+      'Beat the eggs in a bowl with salt. Set aside.',
+      'Heat olive oil in a non-toxic nonstick skillet over medium heat.',
+      'Add onion and jalapeño; cook 2–3 minutes, stirring, until softened.',
+      'Add tomato and cook 1 minute more, stirring.',
+      'Add the crushed tortilla chips and stir to coat, 30 seconds.',
+      'Pour in the beaten eggs. Cook, stirring gently, until just set and chips are softened, 2–3 minutes.',
+      'Remove from heat, top with shredded cheese and fresh cilantro, and serve immediately.'
+    ],
+    sections: [
+      { key: 'migas', label: 'Migas', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
