@@ -660,3 +660,5 @@ SOUP_014,vegetable_stock,Vegetable Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,STOCK_007
 SOUP_014,soup,Soup,,boiled,0.88,1.0,1.0,1.0,1.0,,,,
 SOUP_015,fish_stock,Fish Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,STOCK_006
 SOUP_015,chowder,Chowder,,boiled,0.88,1.0,1.0,1.0,1.0,,,,
+SOUP_016,fish_stock,Fish Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,STOCK_006
+SOUP_016,chowder,Chowder,,boiled,0.85,1.0,1.0,1.0,1.0,,,,

@@ -18703,5 +18703,61 @@ export const LEVELS: Level[] = [
       { key: 'fish_stock', label: 'Fish Stock', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'chowder', label: 'Chowder', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'SOUP_016',
+    name: 'Red Clam Chowder',
+    category: 'soups & stews',
+    dietaryCategory: 'pesca',
+    levelNum: 390,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 bowl (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":398.9,"pro":26.9,"fat":13.7,"carb":45.4,"fib":7.5,"h2o":468.2,"sug":12.7,"perServing":{"cal":398.9,"pro":26.9,"fat":13.7,"carb":45.4,"fib":7.5,"h2o":468.2,"sug":12.7,"AddedSugars":0.0,"IntrinsicSugars":12.7},"micros":{"vitaminA":17.56,"vitaminC":5.28,"vitaminD":0.86,"vitaminE":0.64,"vitaminK":9.62,"vitaminB6":0.12,"vitaminB12":1.24,"thiamin":0.05,"riboflavin":0.04,"niacin":0.85,"folate":8.96,"calcium":24.52,"iron":0.83,"magnesium":16.28,"phosphorus":69.14,"potassium":226.19,"sodium":285.9,"zinc":0.35,"copper":0.09,"selenium":7.88,"cholesterol":10.62,"saturatedFat":0.68,"monoFat":1.14,"polyFat":0.35,"omega3":0.03,"omega6":0.2},"gramsPerServing":564.4,"servings":4,"per100g":{"Energy_KCal":70.69,"Water":82.96,"Protein":4.78,"TotalLipidFat":2.43,"Carbohydrate":8.04,"FiberTotalDietary":1.32,"SugarsTotal":2.25,"Cholesterol":10.62,"FattyAcids_totalSaturated":0.68,"FattyAcids_totalMonounsaturated":1.14,"FattyAcids_totalPolyunsaturated":0.35,"LinoleicAcid":0.2,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.01,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":17.56,"Retinol":10.19,"Carotene_beta":85.19,"VitaminD":0.86,"VitaminE_alphaTocopherol":0.64,"VitaminK_phylloquinone":9.62,"VitaminC_totalAscorbicAcid":5.28,"Thiamin":0.05,"Riboflavin":0.04,"Niacin":0.85,"PantothenicAcid":0.18,"VitaminB6":0.12,"Folate_total":8.96,"Folate_food":8.96,"Folate_DFE":8.96,"FolicAcid":0.0,"VitaminB12":1.24,"Choline_total":20.52,"Betaine":0.39,"LuteinZeaxanthin":83.14,"Lycopene":1616.29,"Calcium_Ca":24.52,"Iron_Fe":0.83,"Magnesium_Mg":16.28,"Phosphorus_P":69.14,"Potassium_K":226.19,"Sodium_Na":285.9,"Zinc_Zn":0.35,"Copper_Cu":0.09,"Manganese_Mn":0.14,"Selenium_Se":7.88,"Tryptophan":0.06,"Threonine":0.22,"Isoleucine":0.22,"Leucine":0.38,"Lysine":0.39,"Methionine":0.13,"Cystine":0.05,"Phenylalanine":0.19,"Tyrosine":0.18,"Valine":0.24,"Arginine":0.33,"Histidine":0.14,"Alanine":0.27,"AsparticAcid":0.54,"GlutamicAcid":0.89,"Glycine":0.21,"Proline":0.17,"Serine":0.21,"omega3":0.03,"omega6":0.2,"AddedSugars":0.0,"IntrinsicSugars":2.25},"addedSugars":0.0,"intrinsicSugars":12.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.85,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Fish Stock","grams":118.5},{"ndb":"15157","name":"Mollusks, clam, mixed species, raw","grams":68.0},{"ndb":"10862","name":"Pork, cured, bacon, pre-sliced, cooked, pan-fried","grams":23.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"11282","name":"Onions, raw","grams":37.5},{"ndb":"11143","name":"Celery, raw","grams":28.1},{"ndb":"11333","name":"Peppers, sweet, green, raw","grams":29.8},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":198.5},{"ndb":"11353","name":"Potatoes, russet, flesh and skin, raw","grams":113.4},{"ndb":"2049","name":"Thyme, fresh","grams":0.6},{"ndb":"2004","name":"Spices, bay leaf","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1},{"ndb":"11297","name":"Parsley, fresh","grams":1.9}],"sections":[{"section_key":"fish_stock","section_label":"Fish Stock","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":474.0,"raw_water_grams":453.62,"raw_fat_grams":2.94,"raw_protein_grams":9.39,"raw_carb_grams":1.9,"final_grams":474.0},{"section_key":"chowder","section_label":"Chowder","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":15,"raw_grams":2033.92,"raw_water_grams":1669.61,"raw_fat_grams":51.97,"raw_protein_grams":98.42,"raw_carb_grams":179.56,"final_grams":1783.48}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Red Clam Chowder', quantity: 'custom (g)', foodWord: 'REDCLAMCHOWDER', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Fish Stock', quantity: '1 recipe Fish Stock (~2 cups, 474g)', section: 'fish_stock', foodWord: 'FISHBROTH', ndbNo: '6963', portionDesc: 'g', portionGrams: 474.0, isDish: true, componentRef: 'STOCK_006' },
+      { name: 'clams', quantity: '4 lb whole clams, steamed, shucked, and chopped into ¼–½ inch pieces (about 272g / 10 oz meat)', section: 'chowder', ndbNo: '15157', portionDesc: 'g', portionGrams: 272.0 },
+      { name: 'bacon', quantity: '4 slices bacon, chopped', section: 'chowder', ndbNo: '10862', portionDesc: 'g', portionGrams: 92.0 },
+      { name: 'olive oil', quantity: '1 tbsp olive oil', section: 'chowder', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'onion', quantity: '1 large onion, diced', section: 'chowder', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'celery stalk', quantity: '3 celery stalks, diced', section: 'chowder', ndbNo: '11143', portionDesc: 'g', portionGrams: 112.5 },
+      { name: 'green bell pepper', quantity: '1 medium green bell pepper, diced', section: 'chowder', ndbNo: '11333', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'chowder', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'canned crushed tomatoes', quantity: '1 can (28 oz) canned crushed tomatoes', section: 'chowder', ndbNo: '11693', portionDesc: 'g', portionGrams: 794.0 },
+      { name: 'russet potato', quantity: '1 lb russet potatoes, peeled and diced into ½ inch cubes', section: 'chowder', ndbNo: '11353', portionDesc: 'g', portionGrams: 453.6 },
+      { name: 'fresh thyme', quantity: '2 sprigs fresh thyme', section: 'chowder', ndbNo: '2049', portionDesc: 'g', portionGrams: 2.4 },
+      { name: 'bay leaves', quantity: '2 whole bay leaves', section: 'chowder', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'salt', quantity: '1 tsp salt', section: 'chowder', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp ground black pepper', section: 'chowder', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'red pepper flakes', quantity: '¼ tsp red pepper flakes', section: 'chowder', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.45 },
+      { name: 'fresh parsley', quantity: '2 tbsp fresh parsley, chopped', section: 'chowder', ndbNo: '11297', portionDesc: 'g', portionGrams: 7.6 }
+    ],
+    recipeInstructions: [
+      'Make or prepare the Fish Stock (see the Fish Stock recipe).',
+      'In a large pot over medium heat, cook the bacon until crisp. Transfer to a paper towel-lined plate, leaving the rendered fat in the pot.',
+      'Add the olive oil, onion, celery, and bell pepper. Cook over medium heat, stirring occasionally, until softened, about 5–7 minutes.',
+      'Add the garlic and red pepper flakes. Cook, stirring, for 1 minute until fragrant.',
+      'Add the potatoes, crushed tomatoes, fish stock, thyme sprigs, bay leaves, salt, and black pepper. Stir to combine.',
+      'Bring to a boil, then reduce to a simmer. Cook until the potatoes are tender, about 15–18 minutes.',
+      'Add the chopped clam meat. Simmer for 3–5 minutes only — do not overcook or the clams will become rubbery.',
+      'Remove and discard the bay leaves and thyme sprigs. Stir in the reserved bacon and parsley. Adjust seasoning to taste.',
+      'Suggestions (not included): serve with crusty bread or oyster crackers. Garnish with additional chopped parsley.'
+    ],
+    sections: [
+      { key: 'fish_stock', label: 'Fish Stock', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'chowder', label: 'Chowder', cookingMethod: '', yieldFactorWater: 0.85 }
+    ],
   }
 ];
