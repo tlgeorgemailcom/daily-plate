@@ -19037,5 +19037,53 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'pozole', label: 'Pozole Rojo', cookingMethod: '', yieldFactorWater: 0.73 }
     ],
+  },
+  {
+    id: 'SOUP_022',
+    name: 'Tomato Soup',
+    category: 'soups & stews',
+    dietaryCategory: 'veggie',
+    levelNum: 396,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 bowl (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":240.6,"pro":4.9,"fat":17.1,"carb":21.2,"fib":4.7,"h2o":263.4,"sug":12.3,"perServing":{"cal":240.6,"pro":4.9,"fat":17.1,"carb":21.2,"fib":4.7,"h2o":263.4,"sug":12.3,"AddedSugars":1.1,"IntrinsicSugars":11.2},"micros":{"vitaminA":55.64,"vitaminC":3.55,"vitaminD":6.01,"vitaminE":0.91,"vitaminK":6.39,"vitaminB6":0.08,"vitaminB12":0.02,"thiamin":0.03,"riboflavin":0.05,"niacin":0.53,"folate":7.5,"calcium":32.38,"iron":0.82,"magnesium":13.19,"phosphorus":27.12,"potassium":177.84,"sodium":342.53,"zinc":0.21,"copper":0.11,"selenium":0.85,"cholesterol":15.67,"saturatedFat":3.38,"monoFat":1.43,"polyFat":0.25,"omega3":0.02,"omega6":0.12},"gramsPerServing":312.0,"servings":4,"per100g":{"Energy_KCal":77.12,"Water":84.41,"Protein":1.57,"TotalLipidFat":5.49,"Carbohydrate":6.78,"FiberTotalDietary":1.51,"SugarsTotal":3.94,"Cholesterol":15.67,"FattyAcids_totalSaturated":3.38,"FattyAcids_totalMonounsaturated":1.43,"FattyAcids_totalPolyunsaturated":0.25,"LinoleicAcid":0.12,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":55.64,"Retinol":48.5,"Carotene_beta":84.1,"VitaminD":6.01,"VitaminE_alphaTocopherol":0.91,"VitaminK_phylloquinone":6.39,"VitaminC_totalAscorbicAcid":3.55,"Thiamin":0.03,"Riboflavin":0.05,"Niacin":0.53,"PantothenicAcid":0.17,"VitaminB6":0.08,"Folate_total":7.5,"Folate_food":7.5,"Folate_DFE":7.5,"FolicAcid":0.0,"VitaminB12":0.02,"Choline_total":9.59,"Betaine":0.04,"LuteinZeaxanthin":77.4,"Lycopene":2924.17,"Calcium_Ca":32.38,"Iron_Fe":0.82,"Magnesium_Mg":13.19,"Phosphorus_P":27.12,"Potassium_K":177.84,"Sodium_Na":342.53,"Zinc_Zn":0.21,"Copper_Cu":0.11,"Manganese_Mn":0.16,"Selenium_Se":0.85,"Tryptophan":0.01,"Threonine":0.04,"Isoleucine":0.04,"Leucine":0.06,"Lysine":0.05,"Methionine":0.01,"Cystine":0.01,"Phenylalanine":0.05,"Tyrosine":0.03,"Valine":0.05,"Arginine":0.05,"Histidine":0.02,"Alanine":0.04,"AsparticAcid":0.17,"GlutamicAcid":0.46,"Glycine":0.03,"Proline":0.06,"Serine":0.04,"omega3":0.02,"omega6":0.12,"AddedSugars":0.34,"IntrinsicSugars":3.6},"addedSugars":1.1,"intrinsicSugars":11.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.75,"yieldFactorFat":1.0,"sources":[{"ndb":"1145","name":"Butter, without salt","grams":7.1},{"ndb":"11282","name":"Onions, raw","grams":37.5},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":198.5},{"ndb":"14411","name":"Water, tap, drinking","grams":120.0},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":29.8},{"ndb":"2003","name":"Spices, basil, dried","grams":0.5},{"ndb":"19335","name":"Sugars, granulated","grams":1.1},{"ndb":"2047","name":"Salt, table","grams":2.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"soup","section_label":"Tomato Soup","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":1599.18,"raw_water_grams":1404.55,"raw_fat_grams":68.5,"raw_protein_grams":19.58,"raw_carb_grams":84.66,"final_grams":1248.04}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Tomato Soup', quantity: 'custom (g)', foodWord: 'TOMATOSOUP', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'unsalted butter', quantity: '2 tbsp', section: 'soup', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
+      { name: 'onion', quantity: '1 medium onion, diced', section: 'soup', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'soup', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'canned crushed tomatoes', quantity: '1 can (28 oz)', section: 'soup', ndbNo: '11693', portionDesc: 'g', portionGrams: 794.0 },
+      { name: 'water', quantity: '2 cups', section: 'soup', ndbNo: '14411', portionDesc: 'g', portionGrams: 480.0 },
+      { name: 'heavy cream', quantity: '½ cup', section: 'soup', ndbNo: '1053', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'dried basil', quantity: '1 tsp', section: 'soup', ndbNo: '2003', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'sugar', quantity: '1 tsp', section: 'soup', ndbNo: '19335', portionDesc: 'g', portionGrams: 4.2 },
+      { name: 'salt', quantity: '1½ tsp', section: 'soup', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'soup', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Melt butter in a large pot over medium heat. Add the diced onion and cook, stirring occasionally, for 6–8 minutes until softened and translucent.',
+      'Add the garlic and cook for 1 minute until fragrant.',
+      'Pour in the crushed tomatoes and water. Stir in the dried basil, sugar, salt, and black pepper.',
+      'Bring to a boil, then reduce heat to medium-low. Simmer uncovered for 20 minutes, stirring occasionally, until the flavors have melded and the soup has thickened slightly.',
+      'Remove from heat. Using an immersion blender, purée the soup directly in the pot until completely smooth. Alternatively, carefully transfer in batches to a blender, blend until smooth, then return to the pot.',
+      'Reduce heat to low. Stir in the heavy cream until fully incorporated. Warm gently for 3–5 minutes — do not boil.',
+      'Taste and adjust seasoning with additional salt and black pepper as needed.',
+      'Serve hot. Suggestions (not included): crusty bread or a grilled cheese sandwich on the side.'
+    ],
+    sections: [
+      { key: 'soup', label: 'Tomato Soup', cookingMethod: '', yieldFactorWater: 0.75 }
+    ],
   }
 ];
