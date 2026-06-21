@@ -19418,5 +19418,55 @@ export const LEVELS: Level[] = [
       { key: 'salsa', label: 'Salsa Ranchera', cookingMethod: '', yieldFactorWater: 0.75 },
       { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 0.95 }
     ],
+  },
+  {
+    id: 'BKFST_048',
+    name: 'Breakfast Strata',
+    category: 'Breakfast',
+    dietaryCategory: 'all',
+    levelNum: 405,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 piece (makes 6)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":405.1,"pro":25.0,"fat":21.8,"carb":26.7,"fib":1.3,"h2o":146.6,"sug":7.0,"perServing":{"cal":405.1,"pro":25.0,"fat":21.8,"carb":26.7,"fib":1.3,"h2o":146.6,"sug":7.0,"AddedSugars":0.0,"IntrinsicSugars":7.0},"micros":{"vitaminA":86.6,"vitaminC":2.68,"vitaminD":40.86,"vitaminE":0.39,"vitaminK":1.12,"vitaminB6":0.09,"vitaminB12":0.52,"thiamin":0.17,"riboflavin":0.3,"niacin":1.3,"folate":30.7,"calcium":154.77,"iron":1.26,"magnesium":18.76,"phosphorus":181.9,"potassium":169.8,"sodium":562.9,"zinc":1.33,"copper":0.07,"selenium":18.77,"cholesterol":107.14,"saturatedFat":4.68,"monoFat":2.89,"polyFat":0.8,"omega3":0.03,"omega6":0.42},"gramsPerServing":224.9,"servings":6,"per100g":{"Energy_KCal":180.13,"Water":65.17,"Protein":11.1,"TotalLipidFat":9.7,"Carbohydrate":11.86,"FiberTotalDietary":0.59,"SugarsTotal":3.13,"Cholesterol":107.14,"FattyAcids_totalSaturated":4.68,"FattyAcids_totalMonounsaturated":2.89,"FattyAcids_totalPolyunsaturated":0.8,"LinoleicAcid":0.42,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":86.6,"Retinol":85.3,"Carotene_beta":21.39,"VitaminD":40.86,"VitaminE_alphaTocopherol":0.39,"VitaminK_phylloquinone":1.12,"VitaminC_totalAscorbicAcid":2.68,"Thiamin":0.17,"Riboflavin":0.3,"Niacin":1.3,"PantothenicAcid":0.59,"VitaminB6":0.09,"Folate_total":30.7,"Folate_food":21.69,"Folate_DFE":37.02,"FolicAcid":11.26,"VitaminB12":0.52,"Choline_total":75.63,"Betaine":1.0,"LuteinZeaxanthin":97.35,"Lycopene":0.01,"Calcium_Ca":154.77,"Iron_Fe":1.26,"Magnesium_Mg":18.76,"Phosphorus_P":181.9,"Potassium_K":169.8,"Sodium_Na":562.9,"Zinc_Zn":1.33,"Copper_Cu":0.07,"Manganese_Mn":0.13,"Selenium_Se":18.77,"Tryptophan":0.14,"Threonine":0.4,"Isoleucine":0.45,"Leucine":0.76,"Lysine":0.6,"Methionine":0.24,"Cystine":0.1,"Phenylalanine":0.44,"Tyrosine":0.37,"Valine":0.53,"Arginine":0.42,"Histidine":0.24,"Alanine":0.42,"AsparticAcid":0.82,"GlutamicAcid":1.58,"Glycine":0.3,"Proline":0.63,"Serine":0.47,"omega3":0.03,"omega6":0.42,"AddedSugars":0.0,"IntrinsicSugars":3.13},"addedSugars":0.0,"intrinsicSugars":7.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18029","name":"Bread, french or vienna (includes sourdough)","grams":37.8},{"ndb":"10136","name":"Pork, cured, ham, boneless, regular (approximately 11% fat), roasted","grams":23.3},{"ndb":"1009","name":"Cheese, cheddar","grams":28.2},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":50.0},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":81.3},{"ndb":"11282","name":"Onions, raw","grams":13.3},{"ndb":"11333","name":"Peppers, sweet, green, raw","grams":12.4},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":0.8},{"ndb":"2047","name":"Salt, table","grams":1.0},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"1145","name":"Butter, without salt","grams":2.4}],"sections":[{"section_key":"strata","section_label":"Strata","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":1504.58,"raw_water_grams":1034.53,"raw_fat_grams":130.88,"raw_protein_grams":149.75,"raw_carb_grams":160.08,"final_grams":1349.4}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Breakfast Strata', quantity: 'custom (g)', foodWord: 'BREAKFASTSTRATA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'sourdough bread', quantity: '8 oz day-old sourdough bread, cubed', section: 'strata', ndbNo: '18029', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'diced ham', quantity: '1 cup diced ham', section: 'strata', ndbNo: '10136', portionDesc: 'g', portionGrams: 140.0 },
+      { name: 'Cheddar cheese', quantity: '1-1/2 cups shredded Cheddar cheese', section: 'strata', ndbNo: '1009', portionDesc: 'g', portionGrams: 169.5 },
+      { name: 'large egg', quantity: '6 large eggs', section: 'strata', ndbNo: '1123', portionDesc: 'g', portionGrams: 300.0 },
+      { name: 'whole milk', quantity: '2 cups whole milk', section: 'strata', ndbNo: '1077', portionDesc: 'g', portionGrams: 488.0 },
+      { name: 'onion', quantity: '1/2 cup onion, diced', section: 'strata', ndbNo: '11282', portionDesc: 'g', portionGrams: 80.0 },
+      { name: 'green bell pepper', quantity: '1/2 cup green bell pepper, diced', section: 'strata', ndbNo: '11333', portionDesc: 'g', portionGrams: 74.5 },
+      { name: 'yellow mustard', quantity: '1 tsp yellow mustard', section: 'strata', ndbNo: '2046', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'salt', quantity: '1 tsp', section: 'strata', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'strata', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'unsalted butter', quantity: '1 tbsp unsalted butter (for pan)', section: 'strata', ndbNo: '1145', portionDesc: 'g', portionGrams: 14.2 }
+    ],
+    recipeInstructions: [
+      'Butter a 9x13 inch baking dish. Arrange half the bread cubes in a single layer in the dish.',
+      'Distribute the ham, bell pepper, onion, and half the cheese evenly over the bread.',
+      'Arrange the remaining bread cubes on top in an even layer.',
+      'Whisk together the eggs, milk, mustard, salt, and black pepper in a large bowl until combined.',
+      'Pour the custard evenly over the bread, pressing down gently so the bread absorbs the liquid.',
+      'Sprinkle the remaining cheese over the top. Cover tightly and refrigerate overnight or for at least 1 hour.',
+      'Remove from the refrigerator 30 minutes before baking. Preheat the oven to 350°F (175°C).',
+      'Bake uncovered until the top is golden and the center is set, 45 to 55 minutes. A knife inserted in the center should come out clean.',
+      'Let rest 10 minutes before slicing into 6 pieces and serving.',
+      'Suggestions (not included): Serve with fresh fruit, hot sauce, or a simple green salad.'
+    ],
+    sections: [
+      { key: 'strata', label: 'Strata', cookingMethod: '', yieldFactorWater: 0.85 }
+    ],
   }
 ];
