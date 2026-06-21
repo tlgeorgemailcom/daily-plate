@@ -19555,5 +19555,45 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'dutch_baby', label: 'Dutch Baby', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'BKFST_051',
+    name: 'Overnight Oats',
+    category: 'Breakfast',
+    dietaryCategory: 'veggie',
+    levelNum: 408,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 jar (makes 2 servings)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":393.2,"pro":16.0,"fat":10.3,"carb":59.7,"fib":5.1,"h2o":167.4,"sug":26.6,"perServing":{"cal":393.2,"pro":16.0,"fat":10.3,"carb":59.7,"fib":5.1,"h2o":167.4,"sug":26.6,"AddedSugars":17.2,"IntrinsicSugars":9.4},"micros":{"vitaminA":22.34,"vitaminC":0.04,"vitaminD":24.24,"vitaminE":0.12,"vitaminK":0.53,"vitaminB6":0.05,"vitaminB12":0.39,"thiamin":0.11,"riboflavin":0.17,"niacin":0.32,"folate":9.96,"calcium":88.3,"iron":0.88,"magnesium":34.52,"phosphorus":152.36,"potassium":172.35,"sodium":86.97,"zinc":1.03,"copper":0.09,"selenium":9.77,"cholesterol":7.85,"saturatedFat":1.67,"monoFat":1.28,"polyFat":0.65,"omega3":0.0,"omega6":0.05},"gramsPerServing":256.7,"servings":2,"per100g":{"Energy_KCal":153.17,"Water":65.22,"Protein":6.23,"TotalLipidFat":4.01,"Carbohydrate":23.26,"FiberTotalDietary":1.98,"SugarsTotal":10.37,"Cholesterol":7.85,"FattyAcids_totalSaturated":1.67,"FattyAcids_totalMonounsaturated":1.28,"FattyAcids_totalPolyunsaturated":0.65,"LinoleicAcid":0.05,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":22.34,"Retinol":21.62,"Carotene_beta":5.0,"VitaminD":24.24,"VitaminE_alphaTocopherol":0.12,"VitaminK_phylloquinone":0.53,"VitaminC_totalAscorbicAcid":0.04,"Thiamin":0.11,"Riboflavin":0.17,"Niacin":0.32,"PantothenicAcid":0.48,"VitaminB6":0.05,"Folate_total":9.96,"Folate_food":9.96,"Folate_DFE":9.96,"FolicAcid":0.0,"VitaminB12":0.39,"Choline_total":18.45,"Betaine":0.42,"LuteinZeaxanthin":35.06,"Lycopene":0.0,"Calcium_Ca":88.3,"Iron_Fe":0.88,"Magnesium_Mg":34.52,"Phosphorus_P":152.36,"Potassium_K":172.35,"Sodium_Na":86.97,"Zinc_Zn":1.03,"Copper_Cu":0.09,"Manganese_Mn":0.72,"Selenium_Se":9.77,"Tryptophan":0.05,"Threonine":0.14,"Isoleucine":0.17,"Leucine":0.33,"Lysine":0.25,"Methionine":0.08,"Cystine":0.09,"Phenylalanine":0.21,"Tyrosine":0.15,"Valine":0.23,"Arginine":0.21,"Histidine":0.1,"Alanine":0.16,"AsparticAcid":0.37,"GlutamicAcid":0.88,"Glycine":0.15,"Proline":0.24,"Serine":0.23,"omega3":0.0,"omega6":0.05,"AddedSugars":6.72,"IntrinsicSugars":3.65},"addedSugars":17.2,"intrinsicSugars":9.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"8120","name":"Cereals, oats, regular and quick, not fortified, dry","grams":50.0},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":122.0},{"ndb":"1293","name":"Yogurt, Greek, plain, whole milk","grams":61.2},{"ndb":"19296","name":"Honey","grams":21.0},{"ndb":"2050","name":"Vanilla extract","grams":2.1},{"ndb":"2047","name":"Salt, table","grams":0.4}],"sections":[{"section_key":"overnight_oats","section_label":"Overnight Oats","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":513.45,"raw_water_grams":334.86,"raw_fat_grams":20.58,"raw_protein_grams":31.99,"raw_carb_grams":119.43,"final_grams":513.45}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Overnight Oats', quantity: 'custom (g)', foodWord: 'OVERNIGHTOATS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'rolled oats', quantity: '1 cup rolled oats', section: 'overnight_oats', ndbNo: '8120', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'whole milk', quantity: '1 cup whole milk', section: 'overnight_oats', ndbNo: '1077', portionDesc: 'g', portionGrams: 244.0 },
+      { name: 'Greek whole milk yogurt', quantity: '1/2 cup Greek whole milk yogurt', section: 'overnight_oats', ndbNo: '1293', portionDesc: 'g', portionGrams: 122.5 },
+      { name: 'honey', quantity: '2 tbsp honey', section: 'overnight_oats', ndbNo: '19296', portionDesc: 'g', portionGrams: 42.0 },
+      { name: 'vanilla extract', quantity: '1 tsp vanilla extract', section: 'overnight_oats', ndbNo: '2050', portionDesc: 'g', portionGrams: 4.2 },
+      { name: 'salt', quantity: '1/8 tsp', section: 'overnight_oats', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.75 }
+    ],
+    recipeInstructions: [
+      'Combine the oats, milk, yogurt, honey, vanilla extract, and salt in a large jar or mixing bowl. Stir well to combine.',
+      'Divide evenly between two jars or containers with lids.',
+      'Seal and refrigerate overnight, or for at least 4 hours.',
+      'In the morning, stir each jar. If the oats are too thick, thin with a splash of milk to your desired consistency.',
+      'Suggestions (not included): Top with fresh blueberries or sliced banana, a drizzle of honey, granola, chia seeds, or a spoonful of nut butter.'
+    ],
+    sections: [
+      { key: 'overnight_oats', label: 'Overnight Oats', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
