@@ -19363,7 +19363,8 @@ export const LEVELS: Level[] = [
       'Gently fold the beaten egg whites into the batter in two additions.',
       'Preheat a Belgian waffle iron and lightly coat with non-toxic nonstick cooking spray or melted butter.',
       'Pour about 3/4 cup of batter into the waffle iron and cook 4 to 5 minutes, until golden and crisp.',
-      'Serve immediately with maple syrup, fresh berries, or whipped cream (not included).'
+      'Serve immediately.',
+      'Suggestions (not included): Serve with maple syrup, fresh berries, or whipped cream.'
     ],
     sections: [
       { key: 'waffle', label: 'Waffle', cookingMethod: '', yieldFactorWater: 0.62 }
