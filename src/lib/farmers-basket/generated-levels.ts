@@ -18867,5 +18867,63 @@ export const LEVELS: Level[] = [
       { key: 'vegetable_stock', label: 'Vegetable Stock', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'soup', label: 'Soup', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SOUP_019',
+    name: 'Lobster Bisque',
+    category: 'soups & stews',
+    dietaryCategory: 'pesca',
+    levelNum: 393,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 bowl (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":465.2,"pro":22.4,"fat":34.8,"carb":15.9,"fib":2.8,"h2o":267.7,"sug":6.4,"perServing":{"cal":465.2,"pro":22.4,"fat":34.8,"carb":15.9,"fib":2.8,"h2o":267.7,"sug":6.4,"AddedSugars":0.0,"IntrinsicSugars":6.4},"micros":{"vitaminA":129.33,"vitaminC":1.59,"vitaminD":11.11,"vitaminE":0.67,"vitaminK":3.46,"vitaminB6":0.07,"vitaminB12":0.41,"thiamin":0.03,"riboflavin":0.06,"niacin":0.63,"folate":9.74,"calcium":43.36,"iron":0.43,"magnesium":17.1,"phosphorus":77.95,"potassium":169.01,"sodium":285.17,"zinc":1.01,"copper":0.35,"selenium":21.65,"cholesterol":68.7,"saturatedFat":6.17,"monoFat":2.64,"polyFat":0.47,"omega3":0.08,"omega6":0.22},"gramsPerServing":347.4,"servings":4,"per100g":{"Energy_KCal":133.88,"Water":77.06,"Protein":6.43,"TotalLipidFat":10.01,"Carbohydrate":4.57,"FiberTotalDietary":0.79,"SugarsTotal":1.84,"Cholesterol":68.7,"FattyAcids_totalSaturated":6.17,"FattyAcids_totalMonounsaturated":2.64,"FattyAcids_totalPolyunsaturated":0.47,"LinoleicAcid":0.22,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.02,"DPA_22_5n3":0.0,"DHA_22_6n3":0.02,"VitaminA_RAE":129.33,"Retinol":87.36,"Carotene_beta":426.47,"VitaminD":11.11,"VitaminE_alphaTocopherol":0.67,"VitaminK_phylloquinone":3.46,"VitaminC_totalAscorbicAcid":1.59,"Thiamin":0.03,"Riboflavin":0.06,"Niacin":0.63,"PantothenicAcid":0.41,"VitaminB6":0.07,"Folate_total":9.74,"Folate_food":8.06,"Folate_DFE":10.92,"FolicAcid":2.59,"VitaminB12":0.41,"Choline_total":28.38,"Betaine":0.06,"LuteinZeaxanthin":48.69,"Lycopene":596.11,"Calcium_Ca":43.36,"Iron_Fe":0.43,"Magnesium_Mg":17.1,"Phosphorus_P":77.95,"Potassium_K":169.01,"Sodium_Na":285.17,"Zinc_Zn":1.01,"Copper_Cu":0.35,"Manganese_Mn":0.1,"Selenium_Se":21.65,"Tryptophan":0.1,"Threonine":0.31,"Isoleucine":0.33,"Leucine":0.56,"Lysine":0.56,"Methionine":0.19,"Cystine":0.08,"Phenylalanine":0.31,"Tyrosine":0.27,"Valine":0.36,"Arginine":0.58,"Histidine":0.19,"Alanine":0.4,"AsparticAcid":0.74,"GlutamicAcid":1.24,"Glycine":0.43,"Proline":0.37,"Serine":0.29,"omega3":0.08,"omega6":0.22,"AddedSugars":0.0,"IntrinsicSugars":1.84},"addedSugars":0.0,"intrinsicSugars":6.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.85,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Fish Stock","grams":118.5},{"ndb":"15148","name":"Crustaceans, lobster, northern, cooked, moist heat","grams":85.0},{"ndb":"1145","name":"Butter, without salt","grams":14.2},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"11143","name":"Celery, raw","grams":18.8},{"ndb":"11124","name":"Carrots, raw","grams":15.2},{"ndb":"11677","name":"Shallots, raw","grams":10.0},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"11546","name":"Tomato products, canned, paste, without salt added","grams":8.0},{"ndb":"14106","name":"Alcoholic beverage, wine, table, white","grams":7.3},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":5.8},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":59.5},{"ndb":"2028","name":"Spices, paprika","grams":0.6},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1},{"ndb":"2004","name":"Spices, bay leaf","grams":0.3},{"ndb":"2049","name":"Thyme, fresh","grams":0.6},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"fish_stock","section_label":"Fish Stock","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":474.0,"raw_water_grams":453.62,"raw_fat_grams":2.94,"raw_protein_grams":9.39,"raw_carb_grams":1.9,"final_grams":474.0},{"section_key":"bisque","section_label":"Bisque","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":17,"raw_grams":1024.73,"raw_water_grams":726.25,"raw_fat_grams":136.23,"raw_protein_grams":80.04,"raw_carb_grams":61.63,"final_grams":915.79}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Lobster Bisque', quantity: 'custom (g)', foodWord: 'LOBSTERBISQUE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Fish Stock', quantity: '1 recipe Fish Stock (~2 cups, 474g)', section: 'fish_stock', foodWord: 'FISHBROTH', ndbNo: '6963', portionDesc: 'g', portionGrams: 474.0, isDish: true, componentRef: 'STOCK_006' },
+      { name: 'lobster meat', quantity: '12 oz cooked lobster meat, chopped', section: 'bisque', ndbNo: '15148', portionDesc: 'g', portionGrams: 340.2 },
+      { name: 'unsalted butter', quantity: '4 tbsp unsalted butter', section: 'bisque', ndbNo: '1145', portionDesc: 'g', portionGrams: 56.8 },
+      { name: 'onion', quantity: '1 medium onion, diced', section: 'bisque', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'celery stalk', quantity: '2 celery stalks, diced', section: 'bisque', ndbNo: '11143', portionDesc: 'g', portionGrams: 75.0 },
+      { name: 'carrot', quantity: '1 medium carrot, diced', section: 'bisque', ndbNo: '11124', portionDesc: 'g', portionGrams: 61.0 },
+      { name: 'shallots', quantity: '2 medium shallots, minced', section: 'bisque', ndbNo: '11677', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'bisque', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'tomato paste', quantity: '2 tbsp tomato paste', section: 'bisque', ndbNo: '11546', portionDesc: 'g', portionGrams: 32.0 },
+      { name: 'white wine', quantity: '2 tbsp dry sherry or white wine', section: 'bisque', ndbNo: '14106', portionDesc: 'g', portionGrams: 29.4 },
+      { name: 'all-purpose flour', quantity: '3 tbsp all-purpose flour', section: 'bisque', ndbNo: '20581', portionDesc: 'g', portionGrams: 23.4 },
+      { name: 'heavy cream', quantity: '1 cup heavy cream', section: 'bisque', ndbNo: '1053', portionDesc: 'g', portionGrams: 238.0 },
+      { name: 'paprika', quantity: '1 tsp paprika', section: 'bisque', ndbNo: '2028', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'cayenne pepper', quantity: '¼ tsp cayenne pepper', section: 'bisque', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.45 },
+      { name: 'bay leaves', quantity: '2 whole bay leaves', section: 'bisque', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'fresh thyme', quantity: '2 sprigs fresh thyme', section: 'bisque', ndbNo: '2049', portionDesc: 'g', portionGrams: 2.4 },
+      { name: 'salt', quantity: '1 tsp salt', section: 'bisque', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp ground black pepper', section: 'bisque', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Make or prepare the Fish Stock (see the Fish Stock recipe).',
+      'In a large pot, melt the butter over medium heat. Add the onion, celery, carrot, and shallots. Cook, stirring occasionally, until softened, about 5–7 minutes.',
+      'Add the garlic and tomato paste. Cook, stirring, for 2 minutes.',
+      'Add the flour and stir constantly for 1–2 minutes to coat the vegetables and cook out the raw flour taste.',
+      'Pour in the dry sherry or white wine and stir to combine.',
+      'Add the fish stock, paprika, cayenne, bay leaves, and thyme. Bring to a boil, then reduce to a simmer. Cook for 15–20 minutes.',
+      'Remove the bay leaves and thyme sprigs. Use an immersion blender to purée the soup until smooth.',
+      'Stir in the heavy cream and lobster meat. Simmer gently for 5 minutes until the lobster is heated through.',
+      'Season with salt and black pepper to taste. Suggestions (not included): garnish with a drizzle of cream, a pinch of paprika, fresh chives or chopped tarragon.'
+    ],
+    sections: [
+      { key: 'fish_stock', label: 'Fish Stock', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'bisque', label: 'Bisque', cookingMethod: '', yieldFactorWater: 0.85 }
+    ],
   }
 ];
