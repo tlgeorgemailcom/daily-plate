@@ -203,6 +203,14 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 - `step_order` must be plain integers (not "1a", "2b").
 - `cooking_method` must be one of: `raw`, `boiled`, `steamed`, `baked`, `fried`, `pan grilled`, `grilled`, `microwave`. (`pan grilled` is an alias for `fried` — same retention factors, friendlier display label.) Compound strings not supported — use `recipe_sections.csv` for multi-stage. **`simmered` is NOT a valid value** — use `boiled` for any simmered/braised/stewed cooking. Using `simmered` silently produces no cook method in the section display. (Discovered June 2026, SIDE_028.)
 - `dietary_category` must be one of: `all`, `pollo-pesca`, `pollo`, `pesca`, `veggie`, `vegan`. These are the keys in `DIETARY_INCLUDES` in `RecipeBook.svelte`; any other value silently hides the recipe from all users. Enforced by `validate_ledger.py`.
+- **`dietary_category` assignment rule — apply every time a new recipe is authored:**
+  - **`all`** — recipe contains beef, pork, lamb, game, or offal. **`all` does NOT mean "visible to all users" — it means "requires no dietary restrictions" (i.e. contains red meat).** This is the most common authoring mistake.
+  - **`pollo-pesca`** — recipe contains BOTH poultry AND fish/seafood (no red meat).
+  - **`pollo`** — recipe contains chicken, turkey, or other poultry (including chicken/turkey stock) but NO fish/seafood and NO red meat.
+  - **`pesca`** — recipe contains fish or seafood but NO poultry and NO red meat.
+  - **`veggie`** — no meat or seafood of any kind; eggs and dairy are OK. Do NOT use if the recipe contains any stock made from meat or poultry.
+  - **`vegan`** — strictly plant-based; no meat, seafood, eggs, dairy, or honey.
+  - **Quick check**: if the only animal ingredient is chicken stock → `pollo`. If beef stock → `all`. If vegetable stock only → `veggie` or `vegan` depending on other ingredients. A recipe tagged `all` with only chicken is a bug — fix immediately.
 - `food_word` must exist in `food-portions-complete.csv` (except Rule D).
 - **Every `section` value used in `recipe_ingredients.csv` must have a matching row in `recipe_sections.csv`.** Single-section recipes may mirror the recipe-level yield factors; multi-stage recipes set per-section yields. Enforced by `validate_ledger.py` Rule 6b.
 
