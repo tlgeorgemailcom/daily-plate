@@ -18362,9 +18362,8 @@ export const LEVELS: Level[] = [
       'Add the garlic and Creole Seasoning. Cook for 1 minute, stirring, until fragrant.',
       'Add the chicken thigh pieces and sliced andouille sausage. Stir to coat in the roux and cook for 3–4 minutes until the chicken begins to turn opaque on the edges.',
       'Pour in the White Chicken Stock. Add the Worcestershire sauce, salt, and bay leaves. Stir well to incorporate the roux into the broth.',
-      'Bring to a boil, then reduce heat to medium-low. Simmer uncovered for 15 minutes, stirring occasionally. Then add the okra and continue simmering for another 15 minutes until the chicken is cooked through and the okra is tender.',
-      'Remove and discard the bay leaves. Taste and adjust seasoning with additional salt if needed.',
-      'Suggestions (not included): Serve ladled into bowls over steamed white rice. Garnish with sliced scallions if desired.'
+      'Bring to a boil, then reduce heat to medium-low. Simmer uncovered for 15 minutes, stirring occasionally. Then add the okra and continue simmering for another 15 minutes until the chicken is cooked through and the okra is tender. Remove and discard the bay leaves. Taste and adjust seasoning with additional salt if needed.',
+      'Suggestions (not included): Turn off the heat and stir in 1½ tsp gumbo filé powder — add it off the heat only, as boiling causes filé to turn stringy. Serve in bowls over hot cooked white rice.'
     ],
     sections: [
       { key: 'stock', label: 'Chicken stock', cookingMethod: '', yieldFactorWater: 1.0 },
