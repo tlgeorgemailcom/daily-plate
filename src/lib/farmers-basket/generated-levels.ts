@@ -18759,5 +18759,58 @@ export const LEVELS: Level[] = [
       { key: 'fish_stock', label: 'Fish Stock', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'chowder', label: 'Chowder', cookingMethod: '', yieldFactorWater: 0.85 }
     ],
+  },
+  {
+    id: 'SOUP_017',
+    name: 'French Onion Soup',
+    category: 'soups & stews',
+    dietaryCategory: 'all',
+    levelNum: 391,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 bowl (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":540.0,"pro":25.3,"fat":26.1,"carb":48.5,"fib":7.8,"h2o":324.5,"sug":17.5,"perServing":{"cal":540.0,"pro":25.3,"fat":26.1,"carb":48.5,"fib":7.8,"h2o":324.5,"sug":17.5,"AddedSugars":1.1,"IntrinsicSugars":16.4},"micros":{"vitaminA":33.85,"vitaminC":3.64,"vitaminD":1.49,"vitaminE":0.19,"vitaminK":1.38,"vitaminB6":0.17,"vitaminB12":0.94,"thiamin":0.07,"riboflavin":0.11,"niacin":1.46,"folate":21.39,"calcium":102.49,"iron":1.07,"magnesium":17.67,"phosphorus":123.97,"potassium":246.55,"sodium":242.41,"zinc":2.23,"copper":0.06,"selenium":8.24,"cholesterol":25.74,"saturatedFat":3.47,"monoFat":2.61,"polyFat":0.32,"omega3":0.01,"omega6":0.06},"gramsPerServing":434.5,"servings":4,"per100g":{"Energy_KCal":124.3,"Water":74.7,"Protein":5.82,"TotalLipidFat":6.02,"Carbohydrate":11.17,"FiberTotalDietary":1.8,"SugarsTotal":4.02,"Cholesterol":25.74,"FattyAcids_totalSaturated":3.47,"FattyAcids_totalMonounsaturated":2.61,"FattyAcids_totalPolyunsaturated":0.32,"LinoleicAcid":0.06,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":33.85,"Retinol":32.41,"Carotene_beta":14.99,"VitaminD":1.49,"VitaminE_alphaTocopherol":0.19,"VitaminK_phylloquinone":1.38,"VitaminC_totalAscorbicAcid":3.64,"Thiamin":0.07,"Riboflavin":0.11,"Niacin":1.46,"PantothenicAcid":0.22,"VitaminB6":0.17,"Folate_total":21.39,"Folate_food":17.21,"Folate_DFE":24.31,"FolicAcid":5.22,"VitaminB12":0.94,"Choline_total":7.59,"Betaine":0.1,"LuteinZeaxanthin":5.24,"Lycopene":2.71,"Calcium_Ca":102.49,"Iron_Fe":1.07,"Magnesium_Mg":17.67,"Phosphorus_P":123.97,"Potassium_K":246.55,"Sodium_Na":242.41,"Zinc_Zn":2.23,"Copper_Cu":0.06,"Manganese_Mn":0.17,"Selenium_Se":8.24,"Tryptophan":0.11,"Threonine":0.39,"Isoleucine":0.43,"Leucine":0.77,"Lysine":0.76,"Methionine":0.23,"Cystine":0.1,"Phenylalanine":0.41,"Tyrosine":0.36,"Valine":0.5,"Arginine":0.58,"Histidine":0.32,"Alanine":0.49,"AsparticAcid":0.81,"GlutamicAcid":1.77,"Glycine":0.42,"Proline":0.61,"Serine":0.41,"omega3":0.01,"omega6":0.06,"AddedSugars":0.24,"IntrinsicSugars":3.78},"addedSugars":1.1,"intrinsicSugars":16.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.25,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Beef Stock","grams":236.5},{"ndb":"11282","name":"Onions, raw","grams":340.2},{"ndb":"1145","name":"Butter, without salt","grams":14.2},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"14106","name":"Alcoholic beverage, wine, table, white","grams":29.5},{"ndb":"2049","name":"Thyme, fresh","grams":0.9},{"ndb":"2004","name":"Spices, bay leaf","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"19335","name":"Sugars, granulated","grams":1.1},{"ndb":"18349","name":"Rolls, french","grams":28.4},{"ndb":"1023","name":"Cheese, gruyere","grams":28.4}],"sections":[{"section_key":"beef_stock","section_label":"Beef Stock","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":946.0,"raw_water_grams":892.93,"raw_fat_grams":1.8,"raw_protein_grams":41.72,"raw_carb_grams":0.28,"final_grams":946.0},{"section_key":"onion_soup","section_label":"Caramelized Onion Soup","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.25,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":1564.77,"raw_water_grams":1327.79,"raw_fat_grams":61.21,"raw_protein_grams":15.89,"raw_carb_grams":136.55,"final_grams":568.93},{"section_key":"topping","section_label":"Topping","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.95,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":226.8,"raw_water_grams":77.1,"raw_fat_grams":41.55,"raw_protein_grams":43.56,"raw_carb_grams":57.34,"final_grams":222.94}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'French Onion Soup', quantity: 'custom (g)', foodWord: 'FRENCHONIONSOUP', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Beef Stock', quantity: '1 recipe Beef Stock (~4 cups, 946g)', section: 'beef_stock', foodWord: 'BEEFSTOCK', portionDesc: 'g', portionGrams: 946.0, isDish: true, componentRef: 'STOCK_004' },
+      { name: 'onion', quantity: '3 lb yellow onions, thinly sliced', section: 'onion_soup', ndbNo: '11282', portionDesc: 'g', portionGrams: 1360.8 },
+      { name: 'unsalted butter', quantity: '4 tbsp unsalted butter', section: 'onion_soup', ndbNo: '1145', portionDesc: 'g', portionGrams: 56.8 },
+      { name: 'olive oil', quantity: '1 tbsp olive oil', section: 'onion_soup', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'white wine', quantity: '½ cup white wine, dry', section: 'onion_soup', ndbNo: '14106', portionDesc: 'g', portionGrams: 118.0 },
+      { name: 'fresh thyme', quantity: '3 sprigs fresh thyme', section: 'onion_soup', ndbNo: '2049', portionDesc: 'g', portionGrams: 3.6 },
+      { name: 'bay leaves', quantity: '2 whole bay leaves', section: 'onion_soup', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'salt', quantity: '1 tsp salt', section: 'onion_soup', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp ground black pepper', section: 'onion_soup', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'sugar', quantity: '1 tsp sugar', section: 'onion_soup', ndbNo: '19335', portionDesc: 'g', portionGrams: 4.2 },
+      { name: 'baguette', quantity: '4 slices baguette, about 1 inch thick (1 oz each)', section: 'topping', ndbNo: '18349', portionDesc: 'g', portionGrams: 113.4 },
+      { name: 'Gruyere cheese', quantity: '4 oz Gruyere cheese, shredded', section: 'topping', ndbNo: '1023', portionDesc: 'g', portionGrams: 113.4 }
+    ],
+    recipeInstructions: [
+      'Make or prepare the Beef Stock (see the Beef Stock recipe).',
+      'In a large heavy-bottomed pot or Dutch oven, melt the butter with the olive oil over medium heat. Add the onions and sugar. Cook, stirring occasionally, for 40–50 minutes until deeply caramelized and golden brown. Reduce heat if needed to prevent burning.',
+      'Add the white wine and deglaze the pot, scraping up any browned bits. Cook for 2–3 minutes until most of the wine has evaporated.',
+      'Add the beef stock, thyme sprigs, bay leaves, salt, and black pepper. Bring to a gentle boil, then reduce to a simmer for 15–20 minutes.',
+      'Remove and discard the bay leaves and thyme sprigs. Adjust seasoning to taste.',
+      'Preheat the broiler. Ladle the soup into 4 oven-safe bowls and place on a baking sheet.',
+      'Top each bowl with a slice of toasted baguette, then cover each with 1 oz of shredded Gruyere cheese.',
+      'Broil for 2–4 minutes until the cheese is melted, bubbling, and lightly browned. Watch carefully to prevent burning.',
+      'Suggestions (not included): serve immediately while the cheese is still bubbly. Pairs well with a simple green salad.'
+    ],
+    sections: [
+      { key: 'beef_stock', label: 'Beef Stock', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'onion_soup', label: 'Caramelized Onion Soup', cookingMethod: '', yieldFactorWater: 0.25 },
+      { key: 'topping', label: 'Topping', cookingMethod: '', yieldFactorWater: 0.95 }
+    ],
   }
 ];

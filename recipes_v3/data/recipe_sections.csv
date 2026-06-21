@@ -662,3 +662,6 @@ SOUP_015,fish_stock,Fish Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,STOCK_006
 SOUP_015,chowder,Chowder,,boiled,0.88,1.0,1.0,1.0,1.0,,,,
 SOUP_016,fish_stock,Fish Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,STOCK_006
 SOUP_016,chowder,Chowder,,boiled,0.85,1.0,1.0,1.0,1.0,,,,
+SOUP_017,beef_stock,Beef Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,STOCK_004
+SOUP_017,onion_soup,Caramelized Onion Soup,,pan grilled,0.25,1.0,1.0,1.0,1.0,,,,
+SOUP_017,topping,Topping,,baked,0.95,1.0,1.0,1.0,1.0,,,,
