@@ -19468,5 +19468,49 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'strata', label: 'Strata', cookingMethod: '', yieldFactorWater: 0.85 }
     ],
+  },
+  {
+    id: 'BKFST_049',
+    name: 'Crepes',
+    category: 'Breakfast',
+    dietaryCategory: 'veggie',
+    levelNum: 406,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 crepes (makes 4 servings)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":242.0,"pro":7.9,"fat":9.9,"carb":29.4,"fib":0.8,"h2o":82.9,"sug":5.7,"perServing":{"cal":242.0,"pro":7.9,"fat":9.9,"carb":29.4,"fib":0.8,"h2o":82.9,"sug":5.7,"AddedSugars":3.1,"IntrinsicSugars":2.6},"micros":{"vitaminA":66.71,"vitaminC":0.0,"vitaminD":31.68,"vitaminE":0.3,"vitaminK":0.55,"vitaminB6":0.04,"vitaminB12":0.28,"thiamin":0.16,"riboflavin":0.23,"niacin":1.16,"folate":40.76,"calcium":55.66,"iron":1.45,"magnesium":11.38,"phosphorus":93.89,"potassium":99.59,"sodium":154.58,"zinc":0.55,"copper":0.06,"selenium":15.25,"cholesterol":85.85,"saturatedFat":4.0,"monoFat":2.26,"polyFat":0.52,"omega3":0.02,"omega6":0.33},"gramsPerServing":131.4,"servings":4,"per100g":{"Energy_KCal":184.12,"Water":63.07,"Protein":5.99,"TotalLipidFat":7.55,"Carbohydrate":22.4,"FiberTotalDietary":0.64,"SugarsTotal":4.34,"Cholesterol":85.85,"FattyAcids_totalSaturated":4.0,"FattyAcids_totalMonounsaturated":2.26,"FattyAcids_totalPolyunsaturated":0.52,"LinoleicAcid":0.33,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":66.71,"Retinol":65.87,"Carotene_beta":8.97,"VitaminD":31.68,"VitaminE_alphaTocopherol":0.3,"VitaminK_phylloquinone":0.55,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.16,"Riboflavin":0.23,"Niacin":1.16,"PantothenicAcid":0.42,"VitaminB6":0.04,"Folate_total":40.76,"Folate_food":13.3,"Folate_DFE":60.02,"FolicAcid":36.61,"VitaminB12":0.28,"Choline_total":55.68,"Betaine":0.27,"LuteinZeaxanthin":74.39,"Lycopene":0.0,"Calcium_Ca":55.66,"Iron_Fe":1.45,"Magnesium_Mg":11.38,"Phosphorus_P":93.89,"Potassium_K":99.59,"Sodium_Na":154.58,"Zinc_Zn":0.55,"Copper_Cu":0.06,"Manganese_Mn":0.17,"Selenium_Se":15.25,"Tryptophan":0.07,"Threonine":0.22,"Isoleucine":0.27,"Leucine":0.48,"Lysine":0.32,"Methionine":0.14,"Cystine":0.09,"Phenylalanine":0.31,"Tyrosine":0.22,"Valine":0.33,"Arginine":0.29,"Histidine":0.14,"Alanine":0.25,"AsparticAcid":0.45,"GlutamicAcid":1.4,"Glycine":0.19,"Proline":0.49,"Serine":0.37,"omega3":0.02,"omega6":0.33,"AddedSugars":2.39,"IntrinsicSugars":1.95},"addedSugars":3.1,"intrinsicSugars":2.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":31.2},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":25.0},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":45.8},{"ndb":"14411","name":"Water, tap, drinking","grams":29.6},{"ndb":"1145","name":"Butter, without salt","grams":7.1},{"ndb":"19335","name":"Sugars, granulated","grams":3.1},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2050","name":"Vanilla extract","grams":0.5}],"sections":[{"section_key":"crepes","section_label":"Crepes","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":571.0,"raw_water_grams":376.81,"raw_fat_grams":39.72,"raw_protein_grams":31.48,"raw_carb_grams":117.77,"final_grams":525.78}],"cookingMethod":"pan grilled"},
+    recipeIngredients: [
+      { name: 'Crepes', quantity: 'custom (g)', foodWord: 'CREPES', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'all-purpose flour', quantity: '1 cup all-purpose flour', section: 'crepes', ndbNo: '20581', portionDesc: 'g', portionGrams: 125.0 },
+      { name: 'large egg', quantity: '2 large eggs', section: 'crepes', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'whole milk', quantity: '3/4 cup whole milk', section: 'crepes', ndbNo: '1077', portionDesc: 'g', portionGrams: 183.0 },
+      { name: 'water', quantity: '1/2 cup water', section: 'crepes', ndbNo: '14411', portionDesc: 'g', portionGrams: 118.4 },
+      { name: 'unsalted butter', quantity: '2 tbsp unsalted butter, melted (plus more for pan)', section: 'crepes', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
+      { name: 'sugar', quantity: '1 tbsp sugar', section: 'crepes', ndbNo: '19335', portionDesc: 'g', portionGrams: 12.6 },
+      { name: 'salt', quantity: '1/4 tsp', section: 'crepes', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'vanilla extract', quantity: '1/2 tsp vanilla extract', section: 'crepes', ndbNo: '2050', portionDesc: 'g', portionGrams: 2.1 }
+    ],
+    recipeInstructions: [
+      'Blend the flour, eggs, milk, water, melted butter, sugar, salt, and vanilla extract in a blender until smooth, about 30 seconds. Let the batter rest for at least 30 minutes at room temperature.',
+      'Heat a non-toxic nonstick 8-inch skillet or crepe pan over medium heat. Brush lightly with melted butter.',
+      'Pour about 3 tablespoons of batter into the center of the pan and immediately tilt and swirl the pan to spread it into a thin, even circle.',
+      'Cook until the edges look dry and the bottom is lightly golden, about 1 minute. Flip and cook the second side for about 30 seconds.',
+      'Slide onto a plate and repeat with the remaining batter, re-buttering the pan as needed. Stack crepes with parchment between them to prevent sticking.',
+      'Serve warm, or fold each crepe into quarters for individual plates.',
+      'Suggestions (not included): Fill with Nutella and sliced banana, fresh berries and whipped cream, or lemon juice and powdered sugar.'
+    ],
+    sections: [
+      { key: 'crepes', label: 'Crepes', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];
