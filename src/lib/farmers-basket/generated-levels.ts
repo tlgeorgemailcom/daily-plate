@@ -19116,5 +19116,44 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'bagel', label: 'Bagel', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BKFST_041',
+    name: 'Bagel & Lox',
+    category: 'Breakfast',
+    dietaryCategory: 'pesca',
+    levelNum: 398,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 bagel (makes 1)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":454.2,"pro":23.6,"fat":13.9,"carb":58.7,"fib":2.3,"h2o":114.8,"sug":10.7,"perServing":{"cal":454.2,"pro":23.6,"fat":13.9,"carb":58.7,"fib":2.3,"h2o":114.8,"sug":10.7,"AddedSugars":0.0,"IntrinsicSugars":10.7},"micros":{"vitaminA":48.17,"vitaminC":0.78,"vitaminD":178.74,"vitaminE":4.11,"vitaminK":1.41,"vitaminB6":0.12,"vitaminB12":0.88,"thiamin":0.28,"riboflavin":0.23,"niacin":3.46,"folate":55.43,"calcium":125.13,"iron":2.04,"magnesium":22.05,"phosphorus":107.71,"potassium":128.66,"sodium":514.42,"zinc":0.58,"copper":0.14,"selenium":20.08,"cholesterol":19.48,"saturatedFat":3.12,"monoFat":1.91,"polyFat":0.72,"omega3":0.17,"omega6":0.35},"gramsPerServing":217.3,"servings":1,"per100g":{"Energy_KCal":209.03,"Water":52.85,"Protein":10.88,"TotalLipidFat":6.4,"Carbohydrate":27.01,"FiberTotalDietary":1.04,"SugarsTotal":4.94,"Cholesterol":19.48,"FattyAcids_totalSaturated":3.12,"FattyAcids_totalMonounsaturated":1.91,"FattyAcids_totalPolyunsaturated":0.72,"LinoleicAcid":0.35,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.05,"DPA_22_5n3":0.02,"DHA_22_6n3":0.07,"VitaminA_RAE":48.17,"Retinol":47.22,"Carotene_beta":11.24,"VitaminD":178.74,"VitaminE_alphaTocopherol":4.11,"VitaminK_phylloquinone":1.41,"VitaminC_totalAscorbicAcid":0.78,"Thiamin":0.28,"Riboflavin":0.23,"Niacin":3.46,"PantothenicAcid":0.5,"VitaminB6":0.12,"Folate_total":55.43,"Folate_food":15.8,"Folate_DFE":82.97,"FolicAcid":39.62,"VitaminB12":0.88,"Choline_total":34.67,"Betaine":0.1,"LuteinZeaxanthin":1.27,"Lycopene":0.0,"Calcium_Ca":125.13,"Iron_Fe":2.04,"Magnesium_Mg":22.05,"Phosphorus_P":107.71,"Potassium_K":128.66,"Sodium_Na":514.42,"Zinc_Zn":0.58,"Copper_Cu":0.14,"Manganese_Mn":0.27,"Selenium_Se":20.08,"Tryptophan":0.06,"Threonine":0.24,"Isoleucine":0.26,"Leucine":0.47,"Lysine":0.51,"Methionine":0.17,"Cystine":0.06,"Phenylalanine":0.23,"Tyrosine":0.2,"Valine":0.3,"Arginine":0.32,"Histidine":0.16,"Alanine":0.31,"AsparticAcid":0.56,"GlutamicAcid":0.9,"Glycine":0.25,"Proline":0.26,"Serine":0.24,"omega3":0.17,"omega6":0.35,"AddedSugars":0.0,"IntrinsicSugars":4.94},"addedSugars":0.0,"intrinsicSugars":10.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18001","name":"Bagels, plain, enriched, with calcium propionate (includes onion, poppy, sesame)","grams":105.0},{"ndb":"1017","name":"Cheese, cream","grams":29.0},{"ndb":"15077","name":"Fish, salmon, chinook, smoked","grams":56.7},{"ndb":"11282","name":"Onions, raw","grams":18.0},{"ndb":"2054","name":"Capers, canned","grams":8.6}],"sections":[{"section_key":"bagel","section_label":"Bagel","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":217.3,"raw_water_grams":114.84,"raw_fat_grams":13.92,"raw_protein_grams":23.64,"raw_carb_grams":58.7,"final_grams":217.3}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Bagel & Lox', quantity: 'custom (g)', foodWord: 'BAGELLOX', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'plain bagel', quantity: '1 medium bagel (3-1/2" to 4" dia)', section: 'bagel', ndbNo: '18001', portionDesc: 'g', portionGrams: 105.0 },
+      { name: 'cream cheese', quantity: '2 tbsp', section: 'bagel', ndbNo: '1017', portionDesc: 'g', portionGrams: 29.0 },
+      { name: 'smoked salmon', quantity: '2 oz smoked salmon', section: 'bagel', ndbNo: '15077', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'onion', quantity: '2 thin slices red onion', section: 'bagel', ndbNo: '11282', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'capers', quantity: '1 tbsp capers, drained', section: 'bagel', ndbNo: '2054', portionDesc: 'g', portionGrams: 8.6 }
+    ],
+    recipeInstructions: [
+      'Slice the bagel in half horizontally. Toast if desired, 2–3 minutes.',
+      'Spread 1 tablespoon of cream cheese evenly on each half.',
+      'Layer the smoked salmon evenly over each half.',
+      'Top with red onion slices and capers.',
+      'Serve immediately.'
+    ],
+    sections: [
+      { key: 'bagel', label: 'Bagel', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

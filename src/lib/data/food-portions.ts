@@ -51531,8 +51531,8 @@ export const FOODS: Food[] = [
     "fat": 4.32,
     "carb": 0.0,
     "fib": 0.0,
-    "h2o": 0.0,
-    "sug": 72.0,
+    "h2o": 72.0,
+    "sug": 0.0,
     "portions": [
       {
         "amt": 1.0,
