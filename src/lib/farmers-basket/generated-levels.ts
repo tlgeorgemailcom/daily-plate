@@ -18812,5 +18812,60 @@ export const LEVELS: Level[] = [
       { key: 'onion_soup', label: 'Caramelized Onion Soup', cookingMethod: '', yieldFactorWater: 0.25 },
       { key: 'topping', label: 'Topping', cookingMethod: '', yieldFactorWater: 0.95 }
     ],
+  },
+  {
+    id: 'SOUP_018',
+    name: 'Lentil Soup',
+    category: 'soups & stews',
+    dietaryCategory: 'vegan',
+    levelNum: 392,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 bowl (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":508.9,"pro":27.2,"fat":10.0,"carb":83.1,"fib":17.7,"h2o":630.1,"sug":13.5,"perServing":{"cal":508.9,"pro":27.2,"fat":10.0,"carb":83.1,"fib":17.7,"h2o":630.1,"sug":13.5,"AddedSugars":0.0,"IntrinsicSugars":13.5},"micros":{"vitaminA":34.84,"vitaminC":2.3,"vitaminD":0.0,"vitaminE":0.35,"vitaminK":3.03,"vitaminB6":0.07,"vitaminB12":0.0,"thiamin":0.06,"riboflavin":0.04,"niacin":0.37,"folate":23.63,"calcium":21.85,"iron":1.15,"magnesium":12.67,"phosphorus":46.67,"potassium":167.08,"sodium":141.82,"zinc":0.5,"copper":0.19,"selenium":0.71,"cholesterol":0.0,"saturatedFat":0.2,"monoFat":0.76,"polyFat":0.24,"omega3":0.0,"omega6":0.0},"gramsPerServing":759.4,"servings":4,"per100g":{"Energy_KCal":67.01,"Water":82.97,"Protein":3.58,"TotalLipidFat":1.32,"Carbohydrate":10.95,"FiberTotalDietary":2.33,"SugarsTotal":1.78,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.2,"FattyAcids_totalMonounsaturated":0.76,"FattyAcids_totalPolyunsaturated":0.24,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":34.84,"Retinol":0.0,"Carotene_beta":351.97,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.35,"VitaminK_phylloquinone":3.03,"VitaminC_totalAscorbicAcid":2.3,"Thiamin":0.06,"Riboflavin":0.04,"Niacin":0.37,"PantothenicAcid":0.12,"VitaminB6":0.07,"Folate_total":23.63,"Folate_food":23.63,"Folate_DFE":23.63,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":3.89,"Betaine":0.24,"LuteinZeaxanthin":44.35,"Lycopene":623.64,"Calcium_Ca":21.85,"Iron_Fe":1.15,"Magnesium_Mg":12.67,"Phosphorus_P":46.67,"Potassium_K":167.08,"Sodium_Na":141.82,"Zinc_Zn":0.5,"Copper_Cu":0.19,"Manganese_Mn":0.3,"Selenium_Se":0.71,"Tryptophan":0.04,"Threonine":0.14,"Isoleucine":0.15,"Leucine":0.25,"Lysine":0.25,"Methionine":0.03,"Cystine":0.05,"Phenylalanine":0.18,"Tyrosine":0.09,"Valine":0.18,"Arginine":0.28,"Histidine":0.1,"Alanine":0.15,"AsparticAcid":0.42,"GlutamicAcid":0.66,"Glycine":0.15,"Proline":0.15,"Serine":0.17,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":1.78},"addedSugars":0.0,"intrinsicSugars":13.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.88,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Vegetable Stock","grams":355.5},{"ndb":"16144","name":"Lentils, pink or red, raw","grams":96.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"11282","name":"Onions, raw","grams":55.0},{"ndb":"11124","name":"Carrots, raw","grams":30.5},{"ndb":"11143","name":"Celery, raw","grams":28.1},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"2014","name":"Spices, cumin seed","grams":1.0},{"ndb":"2013","name":"Spices, coriander seed","grams":0.5},{"ndb":"2043","name":"Spices, turmeric, ground","grams":0.3},{"ndb":"2028","name":"Spices, paprika","grams":0.6},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":102.8},{"ndb":"9152","name":"Lemon juice, raw","grams":7.5},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"vegetable_stock","section_label":"Vegetable Stock","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":1422.0,"raw_water_grams":1395.27,"raw_fat_grams":1.0,"raw_protein_grams":3.41,"raw_carb_grams":13.22,"final_grams":1422.0},{"section_key":"soup","section_label":"Soup","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":1.3322747351004642,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":14,"raw_grams":1334.98,"raw_water_grams":844.49,"raw_fat_grams":39.13,"raw_protein_grams":105.23,"raw_carb_grams":319.3,"final_grams":1615.58}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Lentil Soup', quantity: 'custom (g)', foodWord: 'LENTILSOUP', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Vegetable Stock', quantity: '1 recipe Vegetable Stock (~6 cups, 1422g)', section: 'vegetable_stock', foodWord: 'VEGETABLEBROTH', ndbNo: '6700', portionDesc: 'g', portionGrams: 1422.0, isDish: true, componentRef: 'STOCK_007' },
+      { name: 'red lentils', quantity: '2 cups red lentils, dry', section: 'soup', ndbNo: '16144', portionDesc: 'g', portionGrams: 384.0 },
+      { name: 'olive oil', quantity: '2 tbsp olive oil', section: 'soup', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'onion', quantity: '1 large onion, diced', section: 'soup', ndbNo: '11282', portionDesc: 'g', portionGrams: 220.0 },
+      { name: 'carrot', quantity: '2 medium carrots, diced', section: 'soup', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'celery stalk', quantity: '3 celery stalks, diced', section: 'soup', ndbNo: '11143', portionDesc: 'g', portionGrams: 112.5 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'soup', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'ground cumin', quantity: '2 tsp ground cumin', section: 'soup', ndbNo: '2014', portionDesc: 'g', portionGrams: 4.0 },
+      { name: 'ground coriander', quantity: '1 tsp ground coriander', section: 'soup', ndbNo: '2013', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'ground turmeric', quantity: '½ tsp ground turmeric', section: 'soup', ndbNo: '2043', portionDesc: 'g', portionGrams: 1.4 },
+      { name: 'paprika', quantity: '1 tsp smoked paprika', section: 'soup', ndbNo: '2028', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'canned crushed tomatoes', quantity: '1 can (14 oz) canned crushed tomatoes', section: 'soup', ndbNo: '11693', portionDesc: 'g', portionGrams: 411.0 },
+      { name: 'lemon juice', quantity: '2 tbsp lemon juice', section: 'soup', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'salt', quantity: '1 tsp salt', section: 'soup', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp ground black pepper', section: 'soup', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Make or prepare the Vegetable Stock (see the Vegetable Stock recipe).',
+      'Rinse the red lentils under cold water and drain.',
+      'In a large pot, heat the olive oil over medium heat. Add the onion, carrots, and celery. Cook, stirring occasionally, until softened, about 5–7 minutes.',
+      'Add the garlic, cumin, coriander, turmeric, and smoked paprika. Cook, stirring, for 1–2 minutes until fragrant.',
+      'Add the crushed tomatoes and cook for 2–3 minutes, stirring occasionally.',
+      'Add the vegetable stock and lentils. Bring to a boil, then reduce to a simmer. Cook for 20–25 minutes, stirring occasionally, until the lentils have softened and partially dissolved into the broth.',
+      'Stir in the lemon juice. Season with salt and black pepper to taste.',
+      'For a smoother texture, use an immersion blender to partially or fully blend the soup.',
+      'Suggestions (not included): serve with warm pita or crusty bread. Garnish with a drizzle of olive oil, fresh parsley, or a pinch of smoked paprika.'
+    ],
+    sections: [
+      { key: 'vegetable_stock', label: 'Vegetable Stock', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'soup', label: 'Soup', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
