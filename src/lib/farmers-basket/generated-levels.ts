@@ -19595,5 +19595,50 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'overnight_oats', label: 'Overnight Oats', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BKFST_052',
+    name: 'Granola',
+    category: 'Breakfast',
+    dietaryCategory: 'vegan',
+    levelNum: 409,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1/4 cup (makes 24+ servings)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule B',
+    nutritionJson: {"cal":142.7,"pro":4.0,"fat":7.3,"carb":16.4,"fib":2.8,"h2o":1.8,"sug":3.4,"perServing":{"cal":142.7,"pro":4.0,"fat":7.3,"carb":16.4,"fib":2.8,"h2o":1.8,"sug":3.4,"AddedSugars":2.9,"IntrinsicSugars":0.5},"micros":{"vitaminA":0.02,"vitaminC":0.17,"vitaminD":0.0,"vitaminE":6.83,"vitaminK":1.57,"vitaminB6":0.16,"vitaminB12":0.0,"thiamin":0.22,"riboflavin":0.26,"niacin":1.97,"folate":51.8,"calcium":77.23,"iron":3.52,"magnesium":132.38,"phosphorus":487.43,"potassium":446.17,"sodium":242.88,"zinc":3.34,"copper":0.67,"selenium":30.3,"cholesterol":0.0,"saturatedFat":6.6,"monoFat":6.71,"polyFat":6.92,"omega3":0.0,"omega6":1.4},"gramsPerServing":30.5,"servings":24,"per100g":{"Energy_KCal":468.18,"Water":5.84,"Protein":13.28,"TotalLipidFat":24.09,"Carbohydrate":53.67,"FiberTotalDietary":9.16,"SugarsTotal":11.12,"Cholesterol":0.0,"FattyAcids_totalSaturated":6.6,"FattyAcids_totalMonounsaturated":6.71,"FattyAcids_totalPolyunsaturated":6.92,"LinoleicAcid":1.4,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.02,"Retinol":0.0,"Carotene_beta":0.96,"VitaminD":0.0,"VitaminE_alphaTocopherol":6.83,"VitaminK_phylloquinone":1.57,"VitaminC_totalAscorbicAcid":0.17,"Thiamin":0.22,"Riboflavin":0.26,"Niacin":1.97,"PantothenicAcid":1.62,"VitaminB6":0.16,"Folate_total":51.8,"Folate_food":51.8,"Folate_DFE":51.8,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":34.72,"Betaine":0.27,"LuteinZeaxanthin":69.27,"Lycopene":0.02,"Calcium_Ca":77.23,"Iron_Fe":3.52,"Magnesium_Mg":132.38,"Phosphorus_P":487.43,"Potassium_K":446.17,"Sodium_Na":242.88,"Zinc_Zn":3.34,"Copper_Cu":0.67,"Manganese_Mn":2.67,"Selenium_Se":30.3,"Tryptophan":0.18,"Threonine":0.42,"Isoleucine":0.54,"Leucine":0.97,"Lysine":0.55,"Methionine":0.2,"Cystine":0.31,"Phenylalanine":0.68,"Tyrosine":0.37,"Valine":0.67,"Arginine":1.13,"Histidine":0.31,"Alanine":0.6,"AsparticAcid":1.36,"GlutamicAcid":3.16,"Glycine":0.75,"Proline":0.55,"Serine":0.66,"omega3":0.0,"omega6":1.4,"AddedSugars":9.51,"IntrinsicSugars":1.61},"addedSugars":2.9,"intrinsicSugars":0.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"8037","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.66,"yieldFactorFat":1.0,"sources":[{"ndb":"8120","name":"Cereals, oats, regular and quick, not fortified, dry","grams":16.7},{"ndb":"12061","name":"Nuts, almonds","grams":3.8},{"ndb":"12037","name":"Seeds, sunflower seed kernels, dry roasted, without salt","grams":5.3},{"ndb":"4047","name":"Oil, coconut","grams":1.7},{"ndb":"19296","name":"Honey","grams":3.5},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.1},{"ndb":"2050","name":"Vanilla extract","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":0.2}],"sections":[{"section_key":"granola","section_label":"Granola","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.66,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":753.45,"raw_water_grams":64.71,"raw_fat_grams":176.19,"raw_protein_grams":97.11,"raw_carb_grams":392.58,"final_grams":731.45}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Cereals ready-to-eat, granola, homemade', quantity: 'custom (g)', foodWord: 'GRANOLA', ndbNo: '8037', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'rolled oats', quantity: '4 cups rolled oats', section: 'granola', ndbNo: '8120', portionDesc: 'g', portionGrams: 400.0 },
+      { name: 'almonds', quantity: '1 cup sliced almonds', section: 'granola', ndbNo: '12061', portionDesc: 'g', portionGrams: 92.0 },
+      { name: 'sunflower seeds', quantity: '1 cup sunflower seeds', section: 'granola', ndbNo: '12037', portionDesc: 'g', portionGrams: 128.0 },
+      { name: 'coconut oil', quantity: '3 tbsp coconut oil, melted', section: 'granola', ndbNo: '4047', portionDesc: 'g', portionGrams: 40.8 },
+      { name: 'honey', quantity: '1/4 cup honey', section: 'granola', ndbNo: '19296', portionDesc: 'g', portionGrams: 84.75 },
+      { name: 'ground cinnamon', quantity: '1/2 tsp ground cinnamon', section: 'granola', ndbNo: '2010', portionDesc: 'g', portionGrams: 1.3 },
+      { name: 'vanilla extract', quantity: '1/2 tsp vanilla extract', section: 'granola', ndbNo: '2050', portionDesc: 'g', portionGrams: 2.1 },
+      { name: 'salt', quantity: '3/4 tsp', section: 'granola', ndbNo: '2047', portionDesc: 'g', portionGrams: 4.5 }
+    ],
+    recipeInstructions: [
+      'Preheat the oven to 325°F (165°C) and line a large rimmed baking sheet with parchment paper.',
+      'In a large bowl, combine the rolled oats, sliced almonds, and sunflower seeds. Stir to mix evenly.',
+      'In a small bowl, whisk together the coconut oil, honey, vanilla extract, ground cinnamon, and salt until smooth. Pour over the oat mixture and fold until every piece is evenly coated.',
+      'Spread in an even layer on the prepared baking sheet.',
+      'Bake for 30–35 minutes, stirring once halfway through, until deep golden brown and fragrant. Watch closely in the last 5 minutes — the honey can cause overbrowning quickly.',
+      'Remove from the oven and let cool completely on the baking sheet without stirring or disturbing. The granola crisps as it cools.',
+      'Transfer to an airtight container and store at room temperature for up to 3 weeks.',
+      'Suggestions (not included): Serve with milk, over Greek yogurt, or with fresh fruit. Stir in 1 cup dried cranberries or raisins after cooling for a fruity variation.'
+    ],
+    sections: [
+      { key: 'granola', label: 'Granola', cookingMethod: '', yieldFactorWater: 0.66 }
+    ],
   }
 ];
