@@ -659,31 +659,32 @@ Whenever a new `ingredient_key` is added to `ingredients_ledger.csv` or a new ro
 | Date | ingredient_key | word candidate | SR Legacy? | Decision |
 |---|---|---|---|---|
 | 2026-06-16 | pork_back_ribs_raw (NDB 10192) | ribs | Yes | ✅ added 2026-06-17 (protein) |
-| 2026-06-16 | pork_spareribs_raw (NDB 10088) | spareribs | Yes | pending |
+| 2026-06-16 | pork_spareribs_raw (NDB 10088) | spareribs | Yes | skip — `sparerib` already in both files (protein) |
 | 2026-06-16 | pork_country_style_ribs_raw (NDB 10204) | (no candidate — not a standalone food noun) | Yes | skip |
 | 2026-06-16 | pork_loin_chop_boneless_raw (NDB 10062) | (no candidate — not a standalone food noun) | Yes | skip |
-| 2026-06-16 | rosemary_dried (NDB 2036) | rosemary | Yes | pending |
-| 2026-06-17 | crackers_saltines_unsalted_tops (NDB 18426) | saltine | Yes | pending |
-| 2026-06-18 | clams_raw (NDB 15157) | clam | Yes | pending |
-| 2026-06-18 | mussels_raw (NDB 15164) | mussel | Yes | pending |
-| 2026-06-19 | collard_greens_raw (NDB 11161) | collards | Yes | pending |
-| 2026-06-19 | bacon_raw (NDB 10994) | bacon | Yes | pending — note: NDB 10994 is reduced/low sodium raw bacon |
-| 2026-06-19 | corn_sweet_white_frozen (NDB 11910) | corn | Yes | pending — likely already exists as CORN; skip if duplicate |
-| 2026-06-17 | scallops_raw (NDB 15172) | scallop | Yes | pending |
-| 2026-06-17 | almonds_sliced (NDB 12061) | almonds | Yes | pending |
+| 2026-06-16 | rosemary_dried (NDB 2036) | rosemary | Yes | skip — `rosemary` already in both files (spice) |
+| 2026-06-17 | crackers_saltines_unsalted_tops (NDB 18426) | saltine | Yes | skip — `saltine` already in both files (prepared) |
+| 2026-06-18 | clams_raw (NDB 15157) | clam | Yes | skip — `clam` already in both files (protein) |
+| 2026-06-18 | mussels_raw (NDB 15164) | mussel | Yes | skip — `mussel` already in both files (protein) |
+| 2026-06-19 | collard_greens_raw (NDB 11161) | collards | Yes | skip — `collard` already in both files (vegetable) |
+| 2026-06-19 | bacon_raw (NDB 10994) | bacon | Yes | skip — `bacon` already in both files (protein) |
+| 2026-06-19 | corn_sweet_white_frozen (NDB 11910) | corn | Yes | skip — `corn` already in both files (vegetable) |
+| 2026-06-17 | scallops_raw (NDB 15172) | scallop | Yes | skip — `scallop` already in both files (protein) |
+| 2026-06-17 | almonds_sliced (NDB 12061) | almonds | Yes | skip — `almond` already in both files (nuts\|fats\|protein) |
 | 2026-06-17 | bean_sprouts_raw (NDB 11052) | sprouts | Yes | ✅ added 2026-06-17 (vegetable) |
 | 2026-06-17 | capers_canned (NDB 2054) | capers | Yes | ✅ added 2026-06-17 (condiment) |
-| 2026-06-17 | cashews_raw (NDB 12087) | cashews | Yes | pending |
-| 2026-06-17 | chickpeas_canned_drained (NDB 16057) | chickpeas | Yes | pending |
-| 2026-06-17 | croutons_plain (NDB 18242) | croutons | Yes | pending |
+| 2026-06-17 | cashews_raw (NDB 12087) | cashews | Yes | skip — `cashew` already in both files (nuts) |
+| 2026-06-17 | chickpeas_canned_drained (NDB 16057) | chickpeas | Yes | skip — `chickpea` already in both files (legume\|protein) |
+| 2026-06-17 | croutons_plain (NDB 18242) | croutons | Yes | skip — `crouton` already in both files (prepared) |
 | 2026-06-17 | egg_noodles_dry (NDB 20112) | noodles | Yes | ✅ added 2026-06-17 (grain) |
 | 2026-06-17 | beef_back_ribs_raw | backrib | Yes | ✅ added 2026-06-17 (protein) |
-| 2026-06-17 | grapes_raw (NDB 9132) | grapes | Yes | pending |
-| 2026-06-17 | leek_raw (NDB 11246) | leeks | Yes | pending |
-| 2026-06-17 | olives_black_canned (NDB 9193) | olives | Yes | pending |
-| 2026-06-17 | shallots_raw (NDB 11677) | shallots | Yes | pending |
-| 2026-06-17 | walnuts_raw (NDB 12155) | walnuts | Yes | pending |
+| 2026-06-17 | grapes_raw (NDB 9132) | grapes | Yes | skip — `grape` already in both files (fruit) |
+| 2026-06-17 | leek_raw (NDB 11246) | leeks | Yes | skip — `leek` already in both files (vegetable) |
+| 2026-06-17 | olives_black_canned (NDB 9193) | olives | Yes | skip — `olive` already in both files (fruit\|fats) |
+| 2026-06-17 | shallots_raw (NDB 11677) | shallots | Yes | skip — `shallot` already in both files (vegetable) |
+| 2026-06-17 | walnuts_raw (NDB 12155) | walnuts | Yes | skip — `walnut` already in both files (nuts\|fats) |
 | 2026-06-17 | seaweed_laver_raw (NDB 15188) | nori | No (not SR Legacy) | ✅ added 2026-06-17 (vegetable, both files) |
-| 2026-06-17 | beer_regular (NDB 14003) | beer | Yes | pending — alcohol → combined only |
-| 2026-06-17 | brandy (NDB 14037) | brandy | Yes | pending — alcohol → combined only |
+| 2026-06-17 | beer_regular (NDB 14003) | beer | Yes | skip — `beer` already in combined file (beverage) |
+| 2026-06-17 | brandy (NDB 14037) | brandy | Yes | skip — `brandy` already in combined file (beverage) |
+| 2026-06-21 | hominy_canned_white (NDB 20030) | hominy | Yes | skip — `hominy` already in both files (grain) |
 
