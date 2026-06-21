@@ -25,6 +25,8 @@ const CATEGORY_ID_BY_INPUT = Object.fromEntries(
     ...RECIPE_CATEGORY_OPTIONS.map((option) => [option.label.toLowerCase(), option.id]),
     ['desserts', 'sweets-desserts'],
     ['sweets & desserts', 'sweets-desserts'],
+    ['breakfast & brunch', 'breakfast'],
+    ['breakfast-brunch', 'breakfast'],
     ['dinner', 'entrees-main-courses'],
     ['other', 'entrees-main-courses']
   ]

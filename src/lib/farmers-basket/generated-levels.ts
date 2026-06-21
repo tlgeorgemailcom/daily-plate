@@ -6077,19 +6077,18 @@ export const LEVELS: Level[] = [
   {
     id: 'BKFST_036',
     name: 'Croissant Bacon, Egg & Cheese Sandwich',
-    category: 'breakfast & brunch',
+    category: 'Breakfast',
     dietaryCategory: 'all',
     levelNum: 131,
     recipe: ['bread'],
     tools: [
-      { type: 'wall', count: 6, emoji: '🧱' },
-      { type: 'fence', count: 2, emoji: '🚧' },
-      { type: 'scarecrow', count: 1, emoji: '🧹' }
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
     ],
     animalSpawns: [
-      { type: 'mouse', delay: 3500 }
+      { type: 'mouse', delay: 5000 }
     ],
-    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
     servings: '1 sandwich',
     prepTime: '15 min',
     linkType: 'dish',
@@ -6118,19 +6117,18 @@ export const LEVELS: Level[] = [
   {
     id: 'BKFST_037',
     name: 'Croissant Sausage, Egg & Cheese Sandwich',
-    category: 'breakfast & brunch',
+    category: 'Breakfast',
     dietaryCategory: 'all',
     levelNum: 132,
     recipe: ['bread'],
     tools: [
-      { type: 'wall', count: 6, emoji: '🧱' },
-      { type: 'fence', count: 2, emoji: '🚧' },
-      { type: 'scarecrow', count: 1, emoji: '🧹' }
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
     ],
     animalSpawns: [
-      { type: 'mouse', delay: 3500 }
+      { type: 'mouse', delay: 5000 }
     ],
-    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
     servings: '1 sandwich',
     prepTime: '20 min',
     linkType: 'dish',
@@ -6160,19 +6158,18 @@ export const LEVELS: Level[] = [
   {
     id: 'BKFST_038',
     name: 'Croissant Ham, Egg & Cheese Sandwich',
-    category: 'breakfast & brunch',
+    category: 'Breakfast',
     dietaryCategory: 'all',
     levelNum: 133,
     recipe: ['bread'],
     tools: [
-      { type: 'wall', count: 6, emoji: '🧱' },
-      { type: 'fence', count: 2, emoji: '🚧' },
-      { type: 'scarecrow', count: 1, emoji: '🧹' }
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
     ],
     animalSpawns: [
-      { type: 'mouse', delay: 3500 }
+      { type: 'mouse', delay: 5000 }
     ],
-    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
     servings: '1 sandwich',
     prepTime: '15 min',
     linkType: 'dish',
@@ -6202,19 +6199,18 @@ export const LEVELS: Level[] = [
   {
     id: 'BKFST_039',
     name: 'Croissant Smoked Salmon & Cream Cheese',
-    category: 'breakfast & brunch',
+    category: 'Breakfast',
     dietaryCategory: 'pesca',
     levelNum: 134,
     recipe: ['bread'],
     tools: [
-      { type: 'wall', count: 6, emoji: '🧱' },
-      { type: 'fence', count: 2, emoji: '🚧' },
-      { type: 'scarecrow', count: 1, emoji: '🧹' }
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
     ],
     animalSpawns: [
-      { type: 'mouse', delay: 3500 }
+      { type: 'mouse', delay: 5000 }
     ],
-    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
     servings: '1 sandwich',
     prepTime: '5 min',
     linkType: 'dish',
@@ -19089,19 +19085,18 @@ export const LEVELS: Level[] = [
   {
     id: 'BKFST_040',
     name: 'Bagel & Cream Cheese',
-    category: 'breakfast & brunch',
+    category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 397,
     recipe: ['bread'],
     tools: [
-      { type: 'wall', count: 6, emoji: '🧱' },
-      { type: 'fence', count: 2, emoji: '🚧' },
-      { type: 'scarecrow', count: 1, emoji: '🧹' }
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
     ],
     animalSpawns: [
-      { type: 'mouse', delay: 3500 }
+      { type: 'mouse', delay: 5000 }
     ],
-    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
     servings: '1 bagel (makes 1)',
     prepTime: '',
     linkType: 'builtin',
