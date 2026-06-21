@@ -18925,5 +18925,66 @@ export const LEVELS: Level[] = [
       { key: 'fish_stock', label: 'Fish Stock', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'bisque', label: 'Bisque', cookingMethod: '', yieldFactorWater: 0.85 }
     ],
+  },
+  {
+    id: 'SOUP_020',
+    name: 'Minestrone',
+    category: 'soups & stews',
+    dietaryCategory: 'vegan',
+    levelNum: 394,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 bowl (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":293.2,"pro":11.7,"fat":8.2,"carb":47.4,"fib":10.7,"h2o":460.9,"sug":13.4,"perServing":{"cal":293.2,"pro":11.7,"fat":8.2,"carb":47.4,"fib":10.7,"h2o":460.9,"sug":13.4,"AddedSugars":0.0,"IntrinsicSugars":13.4},"micros":{"vitaminA":61.63,"vitaminC":3.73,"vitaminD":0.0,"vitaminE":0.71,"vitaminK":20.17,"vitaminB6":0.07,"vitaminB12":0.0,"thiamin":0.03,"riboflavin":0.05,"niacin":0.4,"folate":18.0,"calcium":30.91,"iron":0.88,"magnesium":17.37,"phosphorus":34.9,"potassium":202.94,"sodium":249.12,"zinc":0.32,"copper":0.09,"selenium":2.61,"cholesterol":0.0,"saturatedFat":0.23,"monoFat":0.95,"polyFat":0.19,"omega3":0.01,"omega6":0.0},"gramsPerServing":535.4,"servings":4,"per100g":{"Energy_KCal":54.77,"Water":86.08,"Protein":2.19,"TotalLipidFat":1.52,"Carbohydrate":8.85,"FiberTotalDietary":2.01,"SugarsTotal":2.5,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.23,"FattyAcids_totalMonounsaturated":0.95,"FattyAcids_totalPolyunsaturated":0.19,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":61.63,"Retinol":0.0,"Carotene_beta":645.34,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.71,"VitaminK_phylloquinone":20.17,"VitaminC_totalAscorbicAcid":3.73,"Thiamin":0.03,"Riboflavin":0.05,"Niacin":0.4,"PantothenicAcid":0.13,"VitaminB6":0.07,"Folate_total":18.0,"Folate_food":18.0,"Folate_DFE":18.0,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":6.39,"Betaine":3.07,"LuteinZeaxanthin":470.15,"Lycopene":1270.19,"Calcium_Ca":30.91,"Iron_Fe":0.88,"Magnesium_Mg":17.37,"Phosphorus_P":34.9,"Potassium_K":202.94,"Sodium_Na":249.12,"Zinc_Zn":0.32,"Copper_Cu":0.09,"Manganese_Mn":0.23,"Selenium_Se":2.61,"Tryptophan":0.02,"Threonine":0.09,"Isoleucine":0.08,"Leucine":0.14,"Lysine":0.11,"Methionine":0.02,"Cystine":0.03,"Phenylalanine":0.1,"Tyrosine":0.05,"Valine":0.1,"Arginine":0.11,"Histidine":0.05,"Alanine":0.09,"AsparticAcid":0.25,"GlutamicAcid":0.51,"Glycine":0.08,"Proline":0.11,"Serine":0.1,"omega3":0.01,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":2.5},"addedSugars":0.0,"intrinsicSugars":13.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.88,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Vegetable Stock","grams":180.0},{"ndb":"20420","name":"Pasta, dry, unenriched","grams":15.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"11143","name":"Celery, raw","grams":18.8},{"ndb":"11124","name":"Carrots, raw","grams":30.5},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11546","name":"Tomato products, canned, paste, without salt added","grams":8.0},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":102.8},{"ndb":"11477","name":"Squash, summer, zucchini, includes skin, raw","grams":49.0},{"ndb":"11052","name":"Beans, snap, green, raw","grams":25.0},{"ndb":"16051","name":"Beans, white, mature seeds, canned","grams":65.5},{"ndb":"11457","name":"Spinach, raw","grams":15.0},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.4},{"ndb":"2003","name":"Spices, basil, dried","grams":0.2},{"ndb":"2004","name":"Spices, bay leaf","grams":0.3},{"ndb":"2049","name":"Thyme, fresh","grams":0.3},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":2.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"stock","section_label":"Vegetable Stock","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":720.0,"raw_water_grams":706.46,"raw_fat_grams":0.5,"raw_protein_grams":1.73,"raw_carb_grams":6.7,"final_grams":720.0},{"section_key":"pasta","section_label":"Pasta","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":14.93123204583463,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":60.0,"raw_water_grams":5.94,"raw_fat_grams":0.91,"raw_protein_grams":7.82,"raw_carb_grams":44.8,"final_grams":142.75},{"section_key":"soup","section_label":"Soup","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":18,"raw_grams":1421.83,"raw_water_grams":1191.26,"raw_fat_grams":31.24,"raw_protein_grams":37.25,"raw_carb_grams":138.14,"final_grams":1278.87}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Minestrone', quantity: 'custom (g)', foodWord: 'MINESTRONE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Vegetable Stock', quantity: '1 recipe Vegetable Stock (~3 cups, 720g)', section: 'stock', foodWord: 'VEGETABLEBROTH', ndbNo: '6700', portionDesc: 'g', portionGrams: 720.0, isDish: true, componentRef: 'STOCK_007' },
+      { name: 'small pasta', quantity: '½ cup small pasta (ditalini or similar), dry', section: 'pasta', ndbNo: '20420', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'olive oil', quantity: '2 tbsp olive oil', section: 'soup', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'onion', quantity: '1 medium onion, diced', section: 'soup', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'celery stalk', quantity: '2 celery stalks, diced', section: 'soup', ndbNo: '11143', portionDesc: 'g', portionGrams: 75.0 },
+      { name: 'carrot', quantity: '2 medium carrots, diced', section: 'soup', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'soup', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'tomato paste', quantity: '2 tbsp tomato paste', section: 'soup', ndbNo: '11546', portionDesc: 'g', portionGrams: 32.0 },
+      { name: 'crushed tomatoes', quantity: 'one 14.5-oz can', section: 'soup', ndbNo: '11693', portionDesc: 'g', portionGrams: 411.0 },
+      { name: 'zucchini', quantity: '1 medium zucchini, diced', section: 'soup', ndbNo: '11477', portionDesc: 'g', portionGrams: 196.0 },
+      { name: 'green beans', quantity: '1 cup green beans, cut into ½-inch pieces', section: 'soup', ndbNo: '11052', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'cannellini beans', quantity: '1 cup cannellini beans, canned and drained', section: 'soup', ndbNo: '16051', portionDesc: 'g', portionGrams: 262.0 },
+      { name: 'spinach', quantity: '2 cups fresh spinach, packed', section: 'soup', ndbNo: '11457', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'dried oregano', quantity: '½ tsp dried oregano', section: 'soup', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'dried basil', quantity: '¼ tsp dried basil', section: 'soup', ndbNo: '2003', portionDesc: 'g', portionGrams: 0.7 },
+      { name: 'bay leaves', quantity: '2 whole bay leaves', section: 'soup', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'fresh thyme', quantity: '1 sprig fresh thyme', section: 'soup', ndbNo: '2049', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'red pepper flakes', quantity: '¼ tsp red pepper flakes', section: 'soup', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.45 },
+      { name: 'salt', quantity: '1½ tsp salt', section: 'soup', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp ground black pepper', section: 'soup', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Make or prepare the Vegetable Stock (see the Vegetable Stock recipe).',
+      'In a large pot, heat the olive oil over medium heat. Add the onion, celery, and carrots. Cook, stirring occasionally, until softened, about 5–7 minutes.',
+      'Add the garlic and tomato paste. Stir and cook for 2 minutes.',
+      'Add the crushed tomatoes, vegetable stock, green beans, zucchini, bay leaves, thyme sprig, oregano, basil, and red pepper flakes. Bring to a boil.',
+      'Reduce heat and simmer for 15 minutes, until the vegetables are nearly tender.',
+      'Add the dry pasta and cannellini beans. Continue to simmer until pasta is al dente, about 8–10 minutes.',
+      'Stir in the spinach and cook just until wilted, 1–2 minutes. Remove the bay leaves and thyme sprig.',
+      'Season with salt and black pepper to taste.',
+      'Serve hot. Suggestions (not included): top with freshly grated Parmesan cheese and a drizzle of olive oil; serve with crusty bread on the side.'
+    ],
+    sections: [
+      { key: 'stock', label: 'Vegetable Stock', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'soup', label: 'Soup', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];

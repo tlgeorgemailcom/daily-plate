@@ -54382,6 +54382,57 @@ export const FOODS: Food[] = [
         "gm": 453.6
       }
     ]
+  },
+  {
+    "word": "GREENBEANS",
+    "display": "Green Beans",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11052",
+    "desc": "Beans, snap, green, raw",
+    "cal": 31.0,
+    "pro": 1.83,
+    "fat": 0.22,
+    "carb": 6.97,
+    "fib": 2.7,
+    "h2o": 90.32,
+    "sug": 3.26,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "cup 1/2\" pieces",
+        "gm": 100.0
+      },
+      {
+        "amt": 10.0,
+        "desc": "beans (4\" long)",
+        "gm": 55.0
+      }
+    ]
+  },
+  {
+    "word": "CANNELLINI",
+    "display": "Cannellini Beans",
+    "groups": [
+      "legume"
+    ],
+    "ndb": "16051",
+    "desc": "Beans, white, mature seeds, canned",
+    "cal": 114.0,
+    "pro": 7.26,
+    "fat": 0.29,
+    "carb": 21.2,
+    "fib": 4.8,
+    "h2o": 70.1,
+    "sug": 0.29,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 262.0
+      }
+    ]
   }
 ];
 

@@ -372,3 +372,5 @@ beans_kidney_red_cooked,16033,REDBEAN,"Beans, kidney, red, mature seeds, cooked,
 beans_pinto_cooked,16043,PINTOBEANS,"Beans, pinto, mature seeds, cooked, boiled, without salt",pinto beans,cup,171.0,cooked
 andouille_sausage,7075,ANDOUILLE,"Sausage, smoked link sausage, pork and beef",andouille sausage,oz,28.35,Added 2026-06-20 SOUP_009
 lentils_red_raw,16144,REDLENTIL,"Lentils, pink or red, raw",red lentils,cup,192.0,Added 2026-06-21 SOUP_018
+green_beans_raw,11052,GREENBEANS,"Beans, snap, green, raw",green beans,cup,100.0,
+cannellini_beans_canned,16051,CANNELLINI,"Beans, white, mature seeds, canned",cannellini beans,cup,262.0,
