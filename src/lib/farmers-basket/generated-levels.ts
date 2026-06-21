@@ -19323,5 +19323,50 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'parfait', label: 'Parfait', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BKFST_046',
+    name: 'Belgian Waffle',
+    category: 'Breakfast',
+    dietaryCategory: 'veggie',
+    levelNum: 403,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 waffle (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":547.6,"pro":13.8,"fat":29.7,"carb":55.5,"fib":1.7,"h2o":67.5,"sug":7.5,"perServing":{"cal":547.6,"pro":13.8,"fat":29.7,"carb":55.5,"fib":1.7,"h2o":67.5,"sug":7.5,"AddedSugars":3.1,"IntrinsicSugars":4.3},"micros":{"vitaminA":135.76,"vitaminC":0.0,"vitaminD":38.8,"vitaminE":0.55,"vitaminK":1.33,"vitaminB6":0.05,"vitaminB12":0.36,"thiamin":0.22,"riboflavin":0.32,"niacin":1.78,"folate":60.12,"calcium":171.88,"iron":2.26,"magnesium":16.11,"phosphorus":258.53,"potassium":133.66,"sodium":330.06,"zinc":0.72,"copper":0.08,"selenium":21.01,"cholesterol":122.1,"saturatedFat":9.98,"monoFat":5.1,"polyFat":0.87,"omega3":0.05,"omega6":0.56},"gramsPerServing":170.5,"servings":4,"per100g":{"Energy_KCal":321.2,"Water":39.62,"Protein":8.1,"TotalLipidFat":17.42,"Carbohydrate":32.54,"FiberTotalDietary":0.99,"SugarsTotal":4.37,"Cholesterol":122.1,"FattyAcids_totalSaturated":9.98,"FattyAcids_totalMonounsaturated":5.1,"FattyAcids_totalPolyunsaturated":0.87,"LinoleicAcid":0.56,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":135.76,"Retinol":133.67,"Carotene_beta":23.85,"VitaminD":38.8,"VitaminE_alphaTocopherol":0.55,"VitaminK_phylloquinone":1.33,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.22,"Riboflavin":0.32,"Niacin":1.78,"PantothenicAcid":0.54,"VitaminB6":0.05,"Folate_total":60.12,"Folate_food":17.78,"Folate_DFE":89.81,"FolicAcid":56.45,"VitaminB12":0.36,"Choline_total":66.73,"Betaine":0.33,"LuteinZeaxanthin":90.73,"Lycopene":0.0,"Calcium_Ca":171.88,"Iron_Fe":2.26,"Magnesium_Mg":16.11,"Phosphorus_P":258.53,"Potassium_K":133.66,"Sodium_Na":330.06,"Zinc_Zn":0.72,"Copper_Cu":0.08,"Manganese_Mn":0.26,"Selenium_Se":21.01,"Tryptophan":0.1,"Threonine":0.29,"Isoleucine":0.36,"Leucine":0.64,"Lysine":0.41,"Methionine":0.19,"Cystine":0.12,"Phenylalanine":0.42,"Tyrosine":0.3,"Valine":0.44,"Arginine":0.38,"Histidine":0.19,"Alanine":0.33,"AsparticAcid":0.58,"GlutamicAcid":1.98,"Glycine":0.26,"Proline":0.7,"Serine":0.49,"omega3":0.05,"omega6":0.56,"AddedSugars":1.84,"IntrinsicSugars":2.53},"addedSugars":3.1,"intrinsicSugars":4.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.62,"yieldFactorFat":1.0,"sources":[{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":62.5},{"ndb":"18370","name":"Leavening agents, baking powder, double-acting, straight phosphate","grams":2.3},{"ndb":"19335","name":"Sugars, granulated","grams":3.1},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":37.5},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":76.2},{"ndb":"1145","name":"Butter, without salt","grams":28.4},{"ndb":"2050","name":"Vanilla extract","grams":1.1}],"sections":[{"section_key":"waffle","section_label":"Waffle","prep_method":"raw","cook_method":"grilled","cooking_method":"grilled","cooking_method_normalized":"grilled","yield_factor_water":0.62,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":847.6,"raw_water_grams":435.79,"raw_fat_grams":118.77,"raw_protein_grams":55.25,"raw_carb_grams":221.91,"final_grams":682.0}],"cookingMethod":"grilled"},
+    recipeIngredients: [
+      { name: 'Belgian Waffle', quantity: 'custom (g)', foodWord: 'BELGIANWAFFLE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'all-purpose flour', quantity: '2 cups', section: 'waffle', ndbNo: '20581', portionDesc: 'g', portionGrams: 250.0 },
+      { name: 'baking powder', quantity: '2 tsp', section: 'waffle', ndbNo: '18370', portionDesc: 'g', portionGrams: 9.2 },
+      { name: 'sugar', quantity: '1 tbsp', section: 'waffle', ndbNo: '19335', portionDesc: 'g', portionGrams: 12.6 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'waffle', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'large egg', quantity: '3 large eggs, separated', section: 'waffle', ndbNo: '1123', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'whole milk', quantity: '1 1/4 cups', section: 'waffle', ndbNo: '1077', portionDesc: 'g', portionGrams: 305.0 },
+      { name: 'unsalted butter', quantity: '1/2 cup unsalted butter, melted', section: 'waffle', ndbNo: '1145', portionDesc: 'g', portionGrams: 113.6 },
+      { name: 'vanilla extract', quantity: '1 tsp', section: 'waffle', ndbNo: '2050', portionDesc: 'g', portionGrams: 4.2 }
+    ],
+    recipeInstructions: [
+      'Whisk together the flour, baking powder, sugar, and salt in a large bowl.',
+      'In a separate bowl, whisk together the egg yolks, whole milk, melted butter, and vanilla extract.',
+      'Pour the wet ingredients into the dry ingredients and stir until just combined — a few lumps are fine.',
+      'In a clean bowl, beat the egg whites with an electric mixer on medium-high speed until stiff peaks form.',
+      'Gently fold the beaten egg whites into the batter in two additions.',
+      'Preheat a Belgian waffle iron and lightly coat with non-toxic nonstick cooking spray or melted butter.',
+      'Pour about 3/4 cup of batter into the waffle iron and cook 4 to 5 minutes, until golden and crisp.',
+      'Serve immediately with maple syrup, fresh berries, or whipped cream (not included).'
+    ],
+    sections: [
+      { key: 'waffle', label: 'Waffle', cookingMethod: '', yieldFactorWater: 0.62 }
+    ],
   }
 ];
