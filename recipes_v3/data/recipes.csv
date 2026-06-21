@@ -402,3 +402,4 @@ BKFST_043,MIGAS,Migas without Tortillas,Breakfast,veggie,builtin,,,1 serving (ma
 BKFST_044,MIGASTORTILLAS,Migas with Tortillas,Breakfast,veggie,builtin,,,1 serving (makes 1),1,Rule D,pan grilled,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,,
 BKFST_045,YOGURTPARFAIT,Yogurt Parfait,Breakfast,veggie,builtin,,,1 serving (makes 1),1,Rule D,raw,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,,
 BKFST_046,BELGIANWAFFLE,Belgian Waffle,Breakfast,veggie,builtin,,,1 waffle (makes 4),4,Rule D,grilled,0.62,1.0,1.0,1.0,1.0,approved,,,,PASS,,
+BKFST_047,HUEVOSRANCHEROS,Huevos Rancheros,Breakfast,veggie,builtin,,,1 serving (makes 2),2,Rule D,pan grilled,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,,

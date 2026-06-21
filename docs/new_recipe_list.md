@@ -225,7 +225,8 @@ Chile with Beans
 Chile Vegetarian
 Seafood Gumbo
 Black Bean Soup
-Clam Chowder
+New England Clam Chowder
+Red Clam Chowder
 French Onion Soup
 Lentil Soup
 Lobster Bisque
@@ -237,8 +238,8 @@ Breakfast
 Bagel & Cream Cheese 
 Bagel & Lox
 Denver Scrambler
-Migas
-Migas with Fried Tortillas
+Migas without Tortillas
+Migas with Tortillas
 Yogurt Parfait
 Belgian Waffle
 Huevos Rancheros
@@ -247,3 +248,4 @@ Crepes
 Dutch Baby
 Overnight Oats
 Shakshuka
+Granola

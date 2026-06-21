@@ -19369,5 +19369,54 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'waffle', label: 'Waffle', cookingMethod: '', yieldFactorWater: 0.62 }
     ],
+  },
+  {
+    id: 'BKFST_047',
+    name: 'Huevos Rancheros',
+    category: 'Breakfast',
+    dietaryCategory: 'veggie',
+    levelNum: 404,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 2)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":418.7,"pro":17.4,"fat":25.1,"carb":33.0,"fib":5.7,"h2o":214.7,"sug":5.9,"perServing":{"cal":418.7,"pro":17.4,"fat":25.1,"carb":33.0,"fib":5.7,"h2o":214.7,"sug":5.9,"AddedSugars":0.0,"IntrinsicSugars":5.9},"micros":{"vitaminA":63.45,"vitaminC":6.55,"vitaminD":26.48,"vitaminE":1.13,"vitaminK":10.24,"vitaminB6":0.14,"vitaminB12":0.26,"thiamin":0.04,"riboflavin":0.16,"niacin":0.5,"folate":20.3,"calcium":47.09,"iron":1.25,"magnesium":24.19,"phosphorus":137.98,"potassium":223.21,"sodium":257.46,"zinc":0.79,"copper":0.09,"selenium":11.82,"cholesterol":126.44,"saturatedFat":1.8,"monoFat":4.79,"polyFat":1.07,"omega3":0.02,"omega6":0.42},"gramsPerServing":294.2,"servings":2,"per100g":{"Energy_KCal":142.31,"Water":72.97,"Protein":5.93,"TotalLipidFat":8.52,"Carbohydrate":11.21,"FiberTotalDietary":1.94,"SugarsTotal":2.0,"Cholesterol":126.44,"FattyAcids_totalSaturated":1.8,"FattyAcids_totalMonounsaturated":4.79,"FattyAcids_totalPolyunsaturated":1.07,"LinoleicAcid":0.42,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":63.45,"Retinol":43.51,"Carotene_beta":216.63,"VitaminD":26.48,"VitaminE_alphaTocopherol":1.13,"VitaminK_phylloquinone":10.24,"VitaminC_totalAscorbicAcid":6.55,"Thiamin":0.04,"Riboflavin":0.16,"Niacin":0.5,"PantothenicAcid":0.49,"VitaminB6":0.14,"Folate_total":20.3,"Folate_food":20.3,"Folate_DFE":20.3,"FolicAcid":0.0,"VitaminB12":0.26,"Choline_total":95.85,"Betaine":0.22,"LuteinZeaxanthin":180.59,"Lycopene":860.56,"Calcium_Ca":47.09,"Iron_Fe":1.25,"Magnesium_Mg":24.19,"Phosphorus_P":137.98,"Potassium_K":223.21,"Sodium_Na":257.46,"Zinc_Zn":0.79,"Copper_Cu":0.09,"Manganese_Mn":0.17,"Selenium_Se":11.82,"Tryptophan":0.07,"Threonine":0.23,"Isoleucine":0.27,"Leucine":0.5,"Lysine":0.35,"Methionine":0.15,"Cystine":0.1,"Phenylalanine":0.29,"Tyrosine":0.21,"Valine":0.35,"Arginine":0.35,"Histidine":0.14,"Alanine":0.33,"AsparticAcid":0.59,"GlutamicAcid":0.96,"Glycine":0.19,"Proline":0.26,"Serine":0.39,"omega3":0.02,"omega6":0.42,"AddedSugars":0.0,"IntrinsicSugars":2.0},"addedSugars":0.0,"intrinsicSugars":5.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":123.0},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"11979","name":"Peppers, jalapeno, raw","grams":14.0},{"ndb":"11215","name":"Garlic, raw","grams":6.0},{"ndb":"2014","name":"Spices, cumin seed","grams":1.0},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"18363","name":"Tortillas, ready-to-bake or -fry, corn","grams":48.0},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":100.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"11165","name":"Coriander (cilantro) leaves, raw","grams":4.0}],"sections":[{"section_key":"salsa","section_label":"Salsa Ranchera","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":359.6,"raw_water_grams":314.4,"raw_fat_grams":14.76,"raw_protein_grams":4.14,"raw_carb_grams":21.38,"final_grams":281.0},{"section_key":"assembly","section_label":"Assembly","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.95,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":317.6,"raw_water_grams":203.73,"raw_fat_grams":35.4,"raw_protein_grams":30.76,"raw_carb_grams":44.59,"final_grams":307.41}],"cookingMethod":"pan grilled"},
+    recipeIngredients: [
+      { name: 'Huevos Rancheros', quantity: 'custom (g)', foodWord: 'HUEVOSRANCHEROS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'tomato', quantity: '2 medium tomatoes, diced', section: 'salsa', ndbNo: '11529', portionDesc: 'g', portionGrams: 246.0 },
+      { name: 'onion', quantity: '1/2 onion, diced', section: 'salsa', ndbNo: '11282', portionDesc: 'g', portionGrams: 55.0 },
+      { name: 'jalapeño', quantity: '2 jalapeños, seeded and minced', section: 'salsa', ndbNo: '11979', portionDesc: 'g', portionGrams: 28.0 },
+      { name: 'garlic', quantity: '4 garlic cloves, minced', section: 'salsa', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'ground cumin', quantity: '1/2 tsp ground cumin', section: 'salsa', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'salsa', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'olive oil', quantity: '1 tbsp olive oil', section: 'salsa', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'corn tortilla', quantity: '4 corn tortillas (6-inch)', section: 'assembly', ndbNo: '18363', portionDesc: 'g', portionGrams: 96.0 },
+      { name: 'large egg', quantity: '4 large eggs', section: 'assembly', ndbNo: '1123', portionDesc: 'g', portionGrams: 200.0 },
+      { name: 'olive oil', quantity: '1 tbsp olive oil', section: 'assembly', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'fresh cilantro', quantity: '1/4 cup fresh cilantro, chopped', section: 'assembly', ndbNo: '11165', portionDesc: 'g', portionGrams: 8.0 }
+    ],
+    recipeInstructions: [
+      'Heat 1 tablespoon of olive oil in a non-toxic nonstick skillet over medium-high heat. Add the onion and jalapeños and cook, stirring, until softened, about 3 minutes.',
+      'Add the garlic and cumin and cook, stirring, 30 seconds.',
+      'Add the tomatoes and salt. Cook, stirring occasionally, until the salsa thickens, 8 to 10 minutes. Transfer to a bowl and keep warm.',
+      'Wipe out the skillet and add the remaining tablespoon of olive oil over medium heat. Heat the corn tortillas two at a time, about 1 minute per side, until lightly crisped. Place 2 tortillas on each plate.',
+      'In the same skillet, crack in the eggs and fry to your preferred doneness, about 2 minutes for over-easy.',
+      'Lay 2 fried eggs over the tortillas on each plate and spoon the salsa ranchera generously on top.',
+      'Garnish with fresh cilantro and serve immediately.',
+      'Suggestions (not included): Serve with sliced avocado, crumbled queso fresco, or warm refried beans alongside.'
+    ],
+    sections: [
+      { key: 'salsa', label: 'Salsa Ranchera', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 0.95 }
+    ],
   }
 ];
