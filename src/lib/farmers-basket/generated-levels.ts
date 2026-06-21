@@ -19285,5 +19285,43 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'migas', label: 'Migas', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BKFST_045',
+    name: 'Yogurt Parfait',
+    category: 'Breakfast',
+    dietaryCategory: 'veggie',
+    levelNum: 402,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 1)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":490.4,"pro":26.8,"fat":19.8,"carb":53.9,"fib":4.5,"h2o":266.8,"sug":34.4,"perServing":{"cal":490.4,"pro":26.8,"fat":19.8,"carb":53.9,"fib":4.5,"h2o":266.8,"sug":34.4,"AddedSugars":17.2,"IntrinsicSugars":17.2},"micros":{"vitaminA":2.01,"vitaminC":2.07,"vitaminD":0.0,"vitaminE":1.02,"vitaminK":4.29,"vitaminB6":0.08,"vitaminB12":0.5,"thiamin":0.06,"riboflavin":0.22,"niacin":0.44,"folate":11.44,"calcium":73.92,"iron":0.4,"magnesium":22.22,"phosphorus":126.96,"potassium":155.42,"sodium":25.71,"zinc":0.73,"copper":0.07,"selenium":8.55,"cholesterol":8.61,"saturatedFat":1.91,"monoFat":2.31,"polyFat":0.97,"omega3":0.01,"omega6":0.13},"gramsPerServing":370.0,"servings":1,"per100g":{"Energy_KCal":132.53,"Water":72.12,"Protein":7.23,"TotalLipidFat":5.35,"Carbohydrate":14.58,"FiberTotalDietary":1.21,"SugarsTotal":9.3,"Cholesterol":8.61,"FattyAcids_totalSaturated":1.91,"FattyAcids_totalMonounsaturated":2.31,"FattyAcids_totalPolyunsaturated":0.97,"LinoleicAcid":0.13,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":2.01,"Retinol":0.66,"Carotene_beta":11.93,"VitaminD":0.0,"VitaminE_alphaTocopherol":1.02,"VitaminK_phylloquinone":4.29,"VitaminC_totalAscorbicAcid":2.07,"Thiamin":0.06,"Riboflavin":0.22,"Niacin":0.44,"PantothenicAcid":0.31,"VitaminB6":0.08,"Folate_total":11.44,"Folate_food":11.44,"Folate_DFE":11.44,"FolicAcid":0.0,"VitaminB12":0.5,"Choline_total":15.31,"Betaine":0.14,"LuteinZeaxanthin":27.11,"Lycopene":0.0,"Calcium_Ca":73.92,"Iron_Fe":0.4,"Magnesium_Mg":22.22,"Phosphorus_P":126.96,"Potassium_K":155.42,"Sodium_Na":25.71,"Zinc_Zn":0.73,"Copper_Cu":0.07,"Manganese_Mn":0.4,"Selenium_Se":8.55,"Tryptophan":0.02,"Threonine":0.04,"Isoleucine":0.05,"Leucine":0.09,"Lysine":0.05,"Methionine":0.02,"Cystine":0.03,"Phenylalanine":0.06,"Tyrosine":0.03,"Valine":0.06,"Arginine":0.11,"Histidine":0.03,"Alanine":0.06,"AsparticAcid":0.12,"GlutamicAcid":0.27,"Glycine":0.07,"Proline":0.06,"Serine":0.06,"omega3":0.01,"omega6":0.13,"AddedSugars":4.66,"IntrinsicSugars":4.64},"addedSugars":17.2,"intrinsicSugars":17.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"1293","name":"Yogurt, Greek, plain, whole milk","grams":245.0},{"ndb":"8037","name":"Cereals ready-to-eat, granola, homemade","grams":30.0},{"ndb":"9050","name":"Blueberries, raw","grams":74.0},{"ndb":"19296","name":"Honey","grams":21.0}],"sections":[{"section_key":"parfait","section_label":"Parfait","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":370.0,"raw_water_grams":266.84,"raw_fat_grams":19.79,"raw_protein_grams":26.76,"raw_carb_grams":53.94,"final_grams":370.0}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Yogurt Parfait', quantity: 'custom (g)', foodWord: 'YOGURTPARFAIT', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'whole milk Greek yogurt', quantity: '1 cup', section: 'parfait', ndbNo: '1293', portionDesc: 'g', portionGrams: 245.0 },
+      { name: 'granola', quantity: '1/4 cup', section: 'parfait', ndbNo: '8037', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'blueberries', quantity: '1/2 cup blueberries, fresh', section: 'parfait', ndbNo: '9050', portionDesc: 'g', portionGrams: 74.0 },
+      { name: 'honey', quantity: '1 tbsp', section: 'parfait', ndbNo: '19296', portionDesc: 'g', portionGrams: 21.0 }
+    ],
+    recipeInstructions: [
+      'Spoon half the yogurt into a serving glass or bowl.',
+      'Add half the granola and half the blueberries.',
+      'Spoon the remaining yogurt on top.',
+      'Top with the remaining granola and blueberries.',
+      'Drizzle with honey and serve immediately.'
+    ],
+    sections: [
+      { key: 'parfait', label: 'Parfait', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
