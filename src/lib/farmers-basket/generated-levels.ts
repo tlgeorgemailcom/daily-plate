@@ -18986,5 +18986,56 @@ export const LEVELS: Level[] = [
       { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'soup', label: 'Soup', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'SOUP_021',
+    name: 'Pozole Rojo',
+    category: 'soups & stews',
+    dietaryCategory: 'all',
+    levelNum: 395,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 bowl (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":441.3,"pro":33.3,"fat":23.0,"carb":25.1,"fib":5.9,"h2o":394.3,"sug":4.1,"perServing":{"cal":441.3,"pro":33.3,"fat":23.0,"carb":25.1,"fib":5.9,"h2o":394.3,"sug":4.1,"AddedSugars":0.0,"IntrinsicSugars":4.1},"micros":{"vitaminA":21.99,"vitaminC":0.66,"vitaminD":10.58,"vitaminE":0.24,"vitaminK":0.97,"vitaminB6":0.16,"vitaminB12":0.27,"thiamin":0.13,"riboflavin":0.15,"niacin":1.1,"folate":2.61,"calcium":17.25,"iron":0.8,"magnesium":12.4,"phosphorus":71.5,"potassium":152.26,"sodium":234.67,"zinc":1.16,"copper":0.06,"selenium":9.62,"cholesterol":21.87,"saturatedFat":1.59,"monoFat":1.93,"polyFat":0.64,"omega3":0.02,"omega6":0.43},"gramsPerServing":481.9,"servings":4,"per100g":{"Energy_KCal":91.57,"Water":81.82,"Protein":6.91,"TotalLipidFat":4.78,"Carbohydrate":5.21,"FiberTotalDietary":1.23,"SugarsTotal":0.84,"Cholesterol":21.87,"FattyAcids_totalSaturated":1.59,"FattyAcids_totalMonounsaturated":1.93,"FattyAcids_totalPolyunsaturated":0.64,"LinoleicAcid":0.43,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":21.99,"Retinol":0.63,"Carotene_beta":50.69,"VitaminD":10.58,"VitaminE_alphaTocopherol":0.24,"VitaminK_phylloquinone":0.97,"VitaminC_totalAscorbicAcid":0.66,"Thiamin":0.13,"Riboflavin":0.15,"Niacin":1.1,"PantothenicAcid":0.42,"VitaminB6":0.16,"Folate_total":2.61,"Folate_food":2.61,"Folate_DFE":2.61,"FolicAcid":0.0,"VitaminB12":0.27,"Choline_total":23.54,"Betaine":1.41,"LuteinZeaxanthin":7.08,"Lycopene":0.07,"Calcium_Ca":17.25,"Iron_Fe":0.8,"Magnesium_Mg":12.4,"Phosphorus_P":71.5,"Potassium_K":152.26,"Sodium_Na":234.67,"Zinc_Zn":1.16,"Copper_Cu":0.06,"Manganese_Mn":0.09,"Selenium_Se":9.62,"Tryptophan":0.07,"Threonine":0.3,"Isoleucine":0.32,"Leucine":0.58,"Lysine":0.59,"Methionine":0.18,"Cystine":0.08,"Phenylalanine":0.28,"Tyrosine":0.25,"Valine":0.35,"Arginine":0.45,"Histidine":0.28,"Alanine":0.39,"AsparticAcid":0.67,"GlutamicAcid":1.1,"Glycine":0.3,"Proline":0.29,"Serine":0.29,"omega3":0.02,"omega6":0.43,"AddedSugars":0.0,"IntrinsicSugars":0.84},"addedSugars":0.0,"intrinsicSugars":4.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.73,"yieldFactorFat":1.0,"sources":[{"ndb":"10080","name":"Pork, fresh, shoulder, (Boston butt), blade (steaks), separable lean and fat, raw","grams":170.0},{"ndb":"20030","name":"Hominy, canned, white","grams":82.5},{"ndb":"11978","name":"","grams":8.5},{"ndb":"11282","name":"Onions, raw","grams":55.0},{"ndb":"11215","name":"Garlic, raw","grams":6.0},{"ndb":"14411","name":"Water, tap, drinking","grams":300.0},{"ndb":"2009","name":"","grams":1.7},{"ndb":"2014","name":"Spices, cumin seed","grams":1.0},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.4},{"ndb":"2004","name":"Spices, bay leaf","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":2.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"pozole","section_label":"Pozole Rojo","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.73,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":12,"raw_grams":2511.17,"raw_water_grams":2160.74,"raw_fat_grams":92.14,"raw_protein_grams":133.25,"raw_carb_grams":100.52,"final_grams":1927.78}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Pozole Rojo', quantity: 'custom (g)', foodWord: 'POZOLE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'pork shoulder', quantity: '1½ lb pork shoulder, cut into 2-inch pieces', section: 'pozole', ndbNo: '10080', portionDesc: 'g', portionGrams: 680.0 },
+      { name: 'hominy', quantity: '2 cups hominy, canned and drained', section: 'pozole', ndbNo: '20030', portionDesc: 'g', portionGrams: 330.0 },
+      { name: 'ancho chiles', quantity: '2 dried ancho chiles', section: 'pozole', ndbNo: '11978', portionDesc: 'g', portionGrams: 34.0 },
+      { name: 'onion', quantity: '2 medium onions, halved', section: 'pozole', ndbNo: '11282', portionDesc: 'g', portionGrams: 220.0 },
+      { name: 'garlic', quantity: '8 cloves garlic, minced', section: 'pozole', ndbNo: '11215', portionDesc: 'g', portionGrams: 24.0 },
+      { name: 'water', quantity: '5 cups water', section: 'pozole', ndbNo: '14411', portionDesc: 'g', portionGrams: 1200.0 },
+      { name: 'chili powder', quantity: '2 tsp chili powder', section: 'pozole', ndbNo: '2009', portionDesc: 'g', portionGrams: 6.9 },
+      { name: 'ground cumin', quantity: '1½ tsp ground cumin', section: 'pozole', ndbNo: '2014', portionDesc: 'g', portionGrams: 4.0 },
+      { name: 'dried oregano', quantity: '½ tsp dried oregano', section: 'pozole', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'bay leaves', quantity: '2 whole bay leaves', section: 'pozole', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'salt', quantity: '1½ tsp salt', section: 'pozole', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp ground black pepper', section: 'pozole', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'In a large pot, combine the pork, water, halved onions, garlic, bay leaves, salt, and black pepper. Bring to a boil, skimming any foam that rises. Reduce heat and simmer, partially covered, for 1 hour until the pork is nearly tender.',
+      'While the pork simmers, toast the dried ancho chiles in a dry skillet over medium heat for 30 seconds per side. Remove the stems and seeds.',
+      'Place the toasted chiles in a bowl. Ladle 1 cup of hot broth from the pot over the chiles and let soak for 15–20 minutes until softened.',
+      'Transfer the soaked chiles and their soaking liquid to a blender. Add a splash of broth and blend until very smooth.',
+      'Pour the chile purée through a fine-mesh strainer back into the pot, pressing with a spoon to extract all the liquid.',
+      'Stir in the chili powder, cumin, and oregano.',
+      'Add the drained hominy. Continue to simmer for 30 minutes until the pork is very tender and the flavors have melded.',
+      'Remove and discard the onion halves and bay leaves. Shred the pork into bite-sized pieces and return to the pot. Adjust seasoning with salt.',
+      'Serve hot. Suggestions (not included): garnish with shredded cabbage, sliced radishes, diced white onion, fresh cilantro, lime wedges, and tostadas on the side.'
+    ],
+    sections: [
+      { key: 'pozole', label: 'Pozole Rojo', cookingMethod: '', yieldFactorWater: 0.73 }
+    ],
   }
 ];
