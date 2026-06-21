@@ -19155,5 +19155,47 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'bagel', label: 'Bagel', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BKFST_042',
+    name: 'Denver Scrambler',
+    category: 'Breakfast',
+    dietaryCategory: 'all',
+    levelNum: 399,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 1)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":455.1,"pro":35.5,"fat":31.8,"carb":5.2,"fib":1.0,"h2o":206.9,"sug":2.6,"perServing":{"cal":455.1,"pro":35.5,"fat":31.8,"carb":5.2,"fib":1.0,"h2o":206.9,"sug":2.6,"AddedSugars":0.0,"IntrinsicSugars":2.6},"micros":{"vitaminA":96.18,"vitaminC":5.47,"vitaminD":47.36,"vitaminE":0.55,"vitaminK":1.41,"vitaminB6":0.13,"vitaminB12":0.59,"thiamin":0.1,"riboflavin":0.29,"niacin":0.82,"folate":21.83,"calcium":98.85,"iron":1.24,"magnesium":14.04,"phosphorus":193.53,"potassium":174.55,"sodium":548.49,"zinc":1.37,"copper":0.07,"selenium":20.57,"cholesterol":218.71,"saturatedFat":5.04,"monoFat":3.86,"polyFat":1.03,"omega3":0.03,"omega6":0.69},"gramsPerServing":285.5,"servings":1,"per100g":{"Energy_KCal":159.4,"Water":72.47,"Protein":12.44,"TotalLipidFat":11.14,"Carbohydrate":1.81,"FiberTotalDietary":0.34,"SugarsTotal":0.92,"Cholesterol":218.71,"FattyAcids_totalSaturated":5.04,"FattyAcids_totalMonounsaturated":3.86,"FattyAcids_totalPolyunsaturated":1.03,"LinoleicAcid":0.69,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":96.18,"Retinol":93.75,"Carotene_beta":29.11,"VitaminD":47.36,"VitaminE_alphaTocopherol":0.55,"VitaminK_phylloquinone":1.41,"VitaminC_totalAscorbicAcid":5.47,"Thiamin":0.1,"Riboflavin":0.29,"Niacin":0.82,"PantothenicAcid":0.76,"VitaminB6":0.13,"Folate_total":21.83,"Folate_food":21.83,"Folate_DFE":21.83,"FolicAcid":0.0,"VitaminB12":0.59,"Choline_total":153.46,"Betaine":1.07,"LuteinZeaxanthin":200.68,"Lycopene":0.0,"Calcium_Ca":98.85,"Iron_Fe":1.24,"Magnesium_Mg":14.04,"Phosphorus_P":193.53,"Potassium_K":174.55,"Sodium_Na":548.49,"Zinc_Zn":1.37,"Copper_Cu":0.07,"Manganese_Mn":0.04,"Selenium_Se":20.57,"Tryptophan":0.15,"Threonine":0.51,"Isoleucine":0.62,"Leucine":1.02,"Lysine":0.89,"Methionine":0.34,"Cystine":0.17,"Phenylalanine":0.61,"Tyrosine":0.47,"Valine":0.73,"Arginine":0.71,"Histidine":0.34,"Alanine":0.63,"AsparticAcid":1.16,"GlutamicAcid":1.93,"Glycine":0.42,"Proline":0.65,"Serine":0.75,"omega3":0.03,"omega6":0.69,"AddedSugars":0.0,"IntrinsicSugars":0.92},"addedSugars":0.0,"intrinsicSugars":2.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":150.0},{"ndb":"10136","name":"Pork, cured, ham, boneless, regular (approximately 11% fat), roasted","grams":42.0},{"ndb":"11333","name":"Peppers, sweet, green, raw","grams":37.0},{"ndb":"11282","name":"Onions, raw","grams":20.0},{"ndb":"1251","name":"Cheese, Mexican blend","grams":28.0},{"ndb":"1001","name":"Butter, salted","grams":7.0},{"ndb":"2047","name":"Salt, table","grams":1.5}],"sections":[{"section_key":"scramble","section_label":"Scramble","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":285.5,"raw_water_grams":206.9,"raw_fat_grams":31.8,"raw_protein_grams":35.53,"raw_carb_grams":5.16,"final_grams":285.5}],"cookingMethod":"pan grilled"},
+    recipeIngredients: [
+      { name: 'Denver Scrambler', quantity: 'custom (g)', foodWord: 'DENVERSCRAMBLER', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'eggs', quantity: '3 large', section: 'scramble', ndbNo: '1123', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'diced ham', quantity: '1½ oz', section: 'scramble', ndbNo: '10136', portionDesc: 'g', portionGrams: 42.0 },
+      { name: 'green bell pepper', quantity: '¼ cup', section: 'scramble', ndbNo: '11333', portionDesc: 'g', portionGrams: 37.0 },
+      { name: 'onion', quantity: '2 tbsp', section: 'scramble', ndbNo: '11282', portionDesc: 'g', portionGrams: 20.0 },
+      { name: 'shredded cheese', quantity: '1 oz', section: 'scramble', ndbNo: '1251', portionDesc: 'g', portionGrams: 28.0 },
+      { name: 'butter', quantity: '1½ tsp', section: 'scramble', ndbNo: '1001', portionDesc: 'g', portionGrams: 7.0 },
+      { name: 'salt', quantity: '¼ tsp', section: 'scramble', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 }
+    ],
+    recipeInstructions: [
+      'Crack the eggs into a bowl, add salt, and beat well. Set aside.',
+      'Melt butter in a non-toxic nonstick skillet over medium heat.',
+      'Add onion and green bell pepper; cook 3–4 minutes, stirring, until softened.',
+      'Add diced ham and cook 1 minute more, stirring to heat through.',
+      'Pour the beaten eggs over the filling. Let sit 10–15 seconds, then stir gently with a spatula, folding the egg mixture until just set, 2–3 minutes total.',
+      'Remove from heat, top with shredded cheese, and serve immediately.'
+    ],
+    sections: [
+      { key: 'scramble', label: 'Scramble', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
