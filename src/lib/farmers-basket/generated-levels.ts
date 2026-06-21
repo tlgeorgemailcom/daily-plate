@@ -19085,5 +19085,41 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'soup', label: 'Tomato Soup', cookingMethod: '', yieldFactorWater: 0.75 }
     ],
+  },
+  {
+    id: 'BKFST_040',
+    name: 'Bagel & Cream Cheese',
+    category: 'breakfast & brunch',
+    dietaryCategory: 'veggie',
+    levelNum: 397,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 bagel (makes 1)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":378.7,"pro":12.9,"fat":11.4,"carb":56.6,"fib":1.7,"h2o":50.8,"sug":9.9,"perServing":{"cal":378.7,"pro":12.9,"fat":11.4,"carb":56.6,"fib":1.7,"h2o":50.8,"sug":9.9,"AddedSugars":0.0,"IntrinsicSugars":9.9},"micros":{"vitaminA":66.66,"vitaminC":0.0,"vitaminD":0.0,"vitaminE":6.03,"vitaminK":0.61,"vitaminB6":0.07,"vitaminB12":0.05,"thiamin":0.44,"riboflavin":0.32,"niacin":3.55,"folate":85.01,"calcium":192.6,"iron":2.82,"magnesium":24.67,"phosphorus":100.73,"potassium":112.41,"sodium":398.63,"zinc":0.76,"copper":0.1,"selenium":18.71,"cholesterol":21.86,"saturatedFat":4.66,"monoFat":2.23,"polyFat":0.73,"omega3":0.04,"omega6":0.56},"gramsPerServing":134.0,"servings":1,"per100g":{"Energy_KCal":282.61,"Water":37.88,"Protein":9.61,"TotalLipidFat":8.49,"Carbohydrate":42.24,"FiberTotalDietary":1.25,"SugarsTotal":7.42,"Cholesterol":21.86,"FattyAcids_totalSaturated":4.66,"FattyAcids_totalMonounsaturated":2.23,"FattyAcids_totalPolyunsaturated":0.73,"LinoleicAcid":0.56,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":66.66,"Retinol":65.57,"Carotene_beta":12.77,"VitaminD":0.0,"VitaminE_alphaTocopherol":6.03,"VitaminK_phylloquinone":0.61,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.44,"Riboflavin":0.32,"Niacin":3.55,"PantothenicAcid":0.42,"VitaminB6":0.07,"Folate_total":85.01,"Folate_food":20.75,"Folate_DFE":129.67,"FolicAcid":64.25,"VitaminB12":0.05,"Choline_total":17.33,"Betaine":0.15,"LuteinZeaxanthin":1.51,"Lycopene":0.0,"Calcium_Ca":192.6,"Iron_Fe":2.82,"Magnesium_Mg":24.67,"Phosphorus_P":100.73,"Potassium_K":112.41,"Sodium_Na":398.63,"Zinc_Zn":0.76,"Copper_Cu":0.1,"Manganese_Mn":0.42,"Selenium_Se":18.71,"Tryptophan":0.01,"Threonine":0.05,"Isoleucine":0.07,"Leucine":0.14,"Lysine":0.12,"Methionine":0.04,"Cystine":0.01,"Phenylalanine":0.06,"Tyrosine":0.06,"Valine":0.08,"Arginine":0.05,"Histidine":0.04,"Alanine":0.04,"AsparticAcid":0.11,"GlutamicAcid":0.28,"Glycine":0.03,"Proline":0.14,"Serine":0.08,"omega3":0.04,"omega6":0.56,"AddedSugars":0.0,"IntrinsicSugars":7.42},"addedSugars":0.0,"intrinsicSugars":9.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18001","name":"Bagels, plain, enriched, with calcium propionate (includes onion, poppy, sesame)","grams":105.0},{"ndb":"1017","name":"Cheese, cream","grams":29.0}],"sections":[{"section_key":"bagel","section_label":"Bagel","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":134.0,"raw_water_grams":50.76,"raw_fat_grams":11.37,"raw_protein_grams":12.87,"raw_carb_grams":56.6,"final_grams":134.0}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Bagel & Cream Cheese', quantity: 'custom (g)', foodWord: 'BAGELCREAMCHEESE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'plain bagel', quantity: '1 medium bagel (3-1/2" to 4" dia)', section: 'bagel', ndbNo: '18001', portionDesc: 'g', portionGrams: 105.0 },
+      { name: 'cream cheese', quantity: '2 tbsp', section: 'bagel', ndbNo: '1017', portionDesc: 'g', portionGrams: 29.0 }
+    ],
+    recipeInstructions: [
+      'Slice the bagel in half horizontally.',
+      'Toast the bagel halves in a toaster or toaster oven until golden and crisp, 2–3 minutes (optional but recommended).',
+      'Spread 1 tablespoon of cream cheese evenly on each half.',
+      'Serve immediately.'
+    ],
+    sections: [
+      { key: 'bagel', label: 'Bagel', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

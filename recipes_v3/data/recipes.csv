@@ -395,3 +395,4 @@ SOUP_019,LOBSTERBISQUE,Lobster Bisque,soups & stews,pesca,builtin,,,1 bowl (make
 SOUP_020,MINESTRONE,Minestrone,soups & stews,vegan,builtin,,,1 bowl (makes 4),4,Rule D,boiled,0.88,1.0,1.0,1.0,1.0,approved,,Rule D — no canonical; 3-section: @STOCK_007 raw yfw=1.0 + pasta boiled (absorption model) + soup boiled yfw=0.88,PASS,,,
 SOUP_021,POZOLE,Pozole Rojo,soups & stews,all,builtin,,,1 bowl (makes 4),4,Rule D,boiled,0.73,1.0,1.0,1.0,1.0,approved,,Rule D — no canonical; 1-section: pozole boiled yfw=0.73; pork shoulder + hominy + ancho chiles,PASS,,,
 SOUP_022,TOMATOSOUP,Tomato Soup,soups & stews,veggie,builtin,,,1 bowl (makes 4),4,Rule D,boiled,0.75,1.0,1.0,1.0,1.0,approved,,"Rule D — no canonical; 1-section: soup boiled yfw=0.75; crushed tomatoes + cream, blended smooth",PASS,,,
+BKFST_040,BAGELCREAMCHEESE,Bagel & Cream Cheese,breakfast & brunch,veggie,builtin,,,1 bagel (makes 1),1,Rule D,raw,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,,

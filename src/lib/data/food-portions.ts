@@ -54433,6 +54433,55 @@ export const FOODS: Food[] = [
         "gm": 262.0
       }
     ]
+  },
+  {
+    "word": "BAGELPLAIN",
+    "display": "Plain Bagel",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "18001",
+    "desc": "Bagels, plain, enriched, with calcium propionate (includes onion, poppy, sesame)",
+    "cal": 264.0,
+    "pro": 10.56,
+    "fat": 1.32,
+    "carb": 52.38,
+    "fib": 1.6,
+    "h2o": 33.81,
+    "sug": 8.43,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "mini bagel (2-1/2\" dia)",
+        "gm": 26.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "small bagel (3\" dia)",
+        "gm": 69.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "medium bagel (3-1/2\" to 4\" dia)",
+        "gm": 105.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "large bagel (4-1/2\" dia)",
+        "gm": 131.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      }
+    ]
   }
 ];
 
