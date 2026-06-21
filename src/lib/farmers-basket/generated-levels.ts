@@ -18591,5 +18591,62 @@ export const LEVELS: Level[] = [
       { key: 'cajun_spice', label: 'Creole Seasoning', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'gumbo', label: 'Gumbo', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'SOUP_014',
+    name: 'Black Bean Soup',
+    category: 'soups & stews',
+    dietaryCategory: 'vegan',
+    levelNum: 388,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 bowl (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":381.7,"pro":19.6,"fat":8.7,"carb":59.6,"fib":22.1,"h2o":568.1,"sug":9.0,"perServing":{"cal":381.7,"pro":19.6,"fat":8.7,"carb":59.6,"fib":22.1,"h2o":568.1,"sug":9.0,"AddedSugars":0.0,"IntrinsicSugars":9.0},"micros":{"vitaminA":7.18,"vitaminC":3.5,"vitaminD":0.0,"vitaminE":0.5,"vitaminK":4.95,"vitaminB6":0.05,"vitaminB12":0.0,"thiamin":0.06,"riboflavin":0.04,"niacin":0.25,"folate":34.73,"calcium":21.7,"iron":0.8,"magnesium":21.46,"phosphorus":47.25,"potassium":159.22,"sodium":138.3,"zinc":0.37,"copper":0.08,"selenium":1.06,"cholesterol":0.0,"saturatedFat":0.21,"monoFat":0.8,"polyFat":0.19,"omega3":0.0,"omega6":0.0},"gramsPerServing":663.0,"servings":4,"per100g":{"Energy_KCal":57.57,"Water":85.69,"Protein":2.96,"TotalLipidFat":1.32,"Carbohydrate":8.99,"FiberTotalDietary":3.33,"SugarsTotal":1.36,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.21,"FattyAcids_totalMonounsaturated":0.8,"FattyAcids_totalPolyunsaturated":0.19,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":7.18,"Retinol":0.0,"Carotene_beta":77.79,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.5,"VitaminK_phylloquinone":4.95,"VitaminC_totalAscorbicAcid":3.5,"Thiamin":0.06,"Riboflavin":0.04,"Niacin":0.25,"PantothenicAcid":0.12,"VitaminB6":0.05,"Folate_total":34.73,"Folate_food":34.73,"Folate_DFE":34.73,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":10.77,"Betaine":0.26,"LuteinZeaxanthin":42.36,"Lycopene":2.1,"Calcium_Ca":21.7,"Iron_Fe":0.8,"Magnesium_Mg":21.46,"Phosphorus_P":47.25,"Potassium_K":159.22,"Sodium_Na":138.3,"Zinc_Zn":0.37,"Copper_Cu":0.08,"Manganese_Mn":0.2,"Selenium_Se":1.06,"Tryptophan":0.04,"Threonine":0.12,"Isoleucine":0.12,"Leucine":0.22,"Lysine":0.2,"Methionine":0.04,"Cystine":0.03,"Phenylalanine":0.16,"Tyrosine":0.08,"Valine":0.15,"Arginine":0.19,"Histidine":0.08,"Alanine":0.12,"AsparticAcid":0.37,"GlutamicAcid":0.49,"Glycine":0.12,"Proline":0.12,"Serine":0.16,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":1.36},"addedSugars":0.0,"intrinsicSugars":9.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.88,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Vegetable Stock","grams":355.5},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"11282","name":"Onions, raw","grams":55.0},{"ndb":"11143","name":"Celery, raw","grams":37.5},{"ndb":"11333","name":"Peppers, sweet, green, raw","grams":29.8},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"2014","name":"Spices, cumin seed","grams":1.0},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.2},{"ndb":"2009","name":"","grams":0.7},{"ndb":"2028","name":"Spices, paprika","grams":0.6},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1},{"ndb":"16015","name":"Beans, black, mature seeds, cooked, boiled, without salt","grams":191.2},{"ndb":"2004","name":"Spices, bay leaf","grams":0.3},{"ndb":"9160","name":"Lime juice, raw","grams":7.5},{"ndb":"11165","name":"Coriander (cilantro) leaves, raw","grams":2.0},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"vegetable_stock","section_label":"Vegetable Stock","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":1422.0,"raw_water_grams":1395.27,"raw_fat_grams":1.0,"raw_protein_grams":3.41,"raw_carb_grams":13.22,"final_grams":1422.0},{"section_key":"soup","section_label":"Soup","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":16,"raw_grams":1349.43,"raw_water_grams":996.63,"raw_fat_grams":33.94,"raw_protein_grams":75.01,"raw_carb_grams":225.26,"final_grams":1229.83}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Black Bean Soup', quantity: 'custom (g)', foodWord: 'BLACKBEANSOUP', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Vegetable Stock', quantity: '6 cups Vegetable Stock (recipe)', section: 'vegetable_stock', foodWord: 'VEGETABLEBROTH', ndbNo: '6700', portionDesc: 'g', portionGrams: 1422.0, isDish: true, componentRef: 'STOCK_007' },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'soup', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'onion', quantity: '1 large onion, diced', section: 'soup', ndbNo: '11282', portionDesc: 'g', portionGrams: 220.0 },
+      { name: 'celery stalk', quantity: '3 stalks celery, diced', section: 'soup', ndbNo: '11143', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'green bell pepper', quantity: '1 green bell pepper, diced', section: 'soup', ndbNo: '11333', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'soup', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'ground cumin', quantity: '2 tsp ground cumin', section: 'soup', ndbNo: '2014', portionDesc: 'g', portionGrams: 4.0 },
+      { name: 'dried oregano', quantity: '1 tsp dried oregano', section: 'soup', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'chili powder', quantity: '1 tsp chili powder', section: 'soup', ndbNo: '2009', portionDesc: 'g', portionGrams: 2.7 },
+      { name: 'paprika', quantity: '1 tsp smoked paprika', section: 'soup', ndbNo: '2028', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'cayenne pepper', quantity: '¼ tsp cayenne pepper', section: 'soup', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.45 },
+      { name: 'black beans', quantity: '3 cans (15 oz) black beans, drained and rinsed', section: 'soup', ndbNo: '16015', portionDesc: 'g', portionGrams: 765.0 },
+      { name: 'bay leaf', quantity: '2 whole bay leaves', section: 'soup', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'lime juice', quantity: '2 tbsp lime juice', section: 'soup', ndbNo: '9160', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'fresh cilantro', quantity: '¼ cup fresh cilantro, chopped', section: 'soup', ndbNo: '11165', portionDesc: 'g', portionGrams: 8.0 },
+      { name: 'salt', quantity: '1 tsp salt', section: 'soup', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp black pepper', section: 'soup', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Make or prepare the Vegetable Stock (see the Vegetable Stock recipe) if not already made.',
+      'Heat the olive oil in a large pot over medium heat. Add the onion and celery and cook for 5–7 minutes until softened.',
+      'Add the bell pepper and cook for 3 minutes until slightly softened.',
+      'Add the garlic, cumin, oregano, chili powder, paprika, and cayenne. Cook for 1–2 minutes, stirring, until fragrant.',
+      'Add the black beans and vegetable stock. Add the bay leaves, salt, and black pepper. Stir to combine.',
+      'Bring to a boil, then reduce heat to low. Simmer uncovered for 20–25 minutes until the flavors meld and the soup has thickened slightly.',
+      'Remove and discard the bay leaves. Using an immersion blender, partially blend the soup to create a creamy texture while leaving some beans whole. Alternatively, transfer 2 cups of soup to a blender, blend until smooth, and return to the pot.',
+      'Stir in the lime juice and cilantro. Taste and adjust seasoning with additional salt, lime juice, or cayenne as desired.',
+      'Suggestions (not included): Serve in bowls topped with diced avocado, sliced jalapeños, or additional cilantro. Good alongside warm tortillas or cornbread.'
+    ],
+    sections: [
+      { key: 'vegetable_stock', label: 'Vegetable Stock', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'soup', label: 'Soup', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];
