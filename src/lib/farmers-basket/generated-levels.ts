@@ -18476,5 +18476,60 @@ export const LEVELS: Level[] = [
       { key: 'stock', label: 'Beef Stock', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'chili', label: 'Chili', cookingMethod: '', yieldFactorWater: 0.82 }
     ],
+  },
+  {
+    id: 'SOUP_012',
+    name: 'Chili with Beans',
+    category: 'soups & stews',
+    dietaryCategory: 'all',
+    levelNum: 386,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 bowl (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":667.7,"pro":42.7,"fat":39.9,"carb":38.7,"fib":12.4,"h2o":358.3,"sug":11.9,"perServing":{"cal":667.7,"pro":42.7,"fat":39.9,"carb":38.7,"fib":12.4,"h2o":358.3,"sug":11.9,"AddedSugars":0.0,"IntrinsicSugars":11.9},"micros":{"vitaminA":28.44,"vitaminC":2.56,"vitaminD":1.05,"vitaminE":1.21,"vitaminK":6.05,"vitaminB6":0.17,"vitaminB12":0.82,"thiamin":0.05,"riboflavin":0.1,"niacin":1.73,"folate":18.38,"calcium":32.54,"iron":1.85,"magnesium":20.98,"phosphorus":94.26,"potassium":282.09,"sodium":223.64,"zinc":1.94,"copper":0.13,"selenium":6.89,"cholesterol":27.36,"saturatedFat":2.9,"monoFat":3.82,"polyFat":0.41,"omega3":0.02,"omega6":0.0},"gramsPerServing":487.9,"servings":4,"per100g":{"Energy_KCal":136.86,"Water":73.44,"Protein":8.74,"TotalLipidFat":8.18,"Carbohydrate":7.94,"FiberTotalDietary":2.55,"SugarsTotal":2.43,"Cholesterol":27.36,"FattyAcids_totalSaturated":2.9,"FattyAcids_totalMonounsaturated":3.82,"FattyAcids_totalPolyunsaturated":0.41,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":28.44,"Retinol":1.26,"Carotene_beta":285.16,"VitaminD":1.05,"VitaminE_alphaTocopherol":1.21,"VitaminK_phylloquinone":6.05,"VitaminC_totalAscorbicAcid":2.56,"Thiamin":0.05,"Riboflavin":0.1,"Niacin":1.73,"PantothenicAcid":0.26,"VitaminB6":0.17,"Folate_total":18.38,"Folate_food":18.38,"Folate_DFE":18.38,"FolicAcid":0.0,"VitaminB12":0.82,"Choline_total":26.31,"Betaine":2.93,"LuteinZeaxanthin":93.2,"Lycopene":1936.48,"Calcium_Ca":32.54,"Iron_Fe":1.85,"Magnesium_Mg":20.98,"Phosphorus_P":94.26,"Potassium_K":282.09,"Sodium_Na":223.64,"Zinc_Zn":1.94,"Copper_Cu":0.13,"Manganese_Mn":0.2,"Selenium_Se":6.89,"Tryptophan":0.06,"Threonine":0.37,"Isoleucine":0.4,"Leucine":0.7,"Lysine":0.73,"Methionine":0.21,"Cystine":0.09,"Phenylalanine":0.38,"Tyrosine":0.28,"Valine":0.45,"Arginine":0.58,"Histidine":0.29,"Alanine":0.54,"AsparticAcid":0.94,"GlutamicAcid":1.58,"Glycine":0.55,"Proline":0.45,"Serine":0.38,"omega3":0.02,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":2.43},"addedSugars":0.0,"intrinsicSugars":11.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.82,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Beef Stock","grams":60.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":170.1},{"ndb":"11282","name":"Onions, raw","grams":37.5},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"2009","name":"","grams":6.1},{"ndb":"2014","name":"Spices, cumin seed","grams":1.5},{"ndb":"2028","name":"Spices, paprika","grams":1.1},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.2},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.2},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":205.5},{"ndb":"16033","name":"Beans, kidney, red, mature seeds, cooked, boiled, without salt","grams":63.8},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"stock","section_label":"Beef Stock","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":240.0,"raw_water_grams":226.54,"raw_fat_grams":0.46,"raw_protein_grams":10.58,"raw_carb_grams":0.07,"final_grams":240.0},{"section_key":"chili","section_label":"Chili","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":13,"raw_grams":1976.38,"raw_water_grams":1471.42,"raw_fat_grams":159.08,"raw_protein_grams":160.07,"raw_carb_grams":154.82,"final_grams":1711.52}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chili with Beans', quantity: 'custom (g)', foodWord: 'CHILEWITHBEANS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Beef Stock', quantity: '1 cup Beef Stock (recipe)', section: 'stock', foodWord: 'BEEFSTOCK', portionDesc: 'g', portionGrams: 240.0, isDish: true, componentRef: 'STOCK_004' },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'chili', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'ground beef (80% lean)', quantity: '1-1/2 lb ground beef (80% lean)', section: 'chili', ndbNo: '23572', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'onion', quantity: '1 large onion, diced', section: 'chili', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'chili', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'chili powder', quantity: '3 tbsp', section: 'chili', ndbNo: '2009', portionDesc: 'g', portionGrams: 24.3 },
+      { name: 'ground cumin', quantity: '3 tsp', section: 'chili', ndbNo: '2014', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'paprika', quantity: '2 tsp', section: 'chili', ndbNo: '2028', portionDesc: 'g', portionGrams: 4.6 },
+      { name: 'dried oregano', quantity: '1 tsp', section: 'chili', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'cayenne pepper', quantity: '1/2 tsp', section: 'chili', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.9 },
+      { name: 'canned crushed tomatoes', quantity: '1 can (28 oz)', section: 'chili', ndbNo: '11693', portionDesc: 'g', portionGrams: 822.0 },
+      { name: 'kidney beans', quantity: '1 can (15 oz) kidney beans, drained and rinsed', section: 'chili', ndbNo: '16033', portionDesc: 'g', portionGrams: 255.0 },
+      { name: 'salt', quantity: '1 tsp', section: 'chili', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'chili', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Make or prepare the Beef Stock (see the Beef Stock recipe) if not already made.',
+      'Heat olive oil in a large heavy-bottomed pot over medium-high heat. Add the ground beef and cook, breaking it up with a spoon, for 6–8 minutes until browned.',
+      'Add the onion and cook for 5 minutes until softened.',
+      'Add the garlic and cook for 1 minute until fragrant.',
+      'Add the chili powder, cumin, paprika, oregano, cayenne, salt, and black pepper. Stir to coat the meat and cook for 1–2 minutes until the spices are fragrant.',
+      'Add the crushed tomatoes and beef stock. Stir well to combine.',
+      'Bring to a boil, then reduce heat to low. Simmer uncovered for 30 minutes, stirring occasionally.',
+      'Add the kidney beans. Continue simmering for 15 minutes until the beans are heated through and the chili has thickened.',
+      'Taste and adjust seasoning with additional chili powder, cumin, or cayenne as desired.',
+      'Suggestions (not included): Serve in bowls topped with shredded cheddar cheese, sour cream, diced onion, or sliced jalapeños. Good alongside cornbread or crackers.'
+    ],
+    sections: [
+      { key: 'stock', label: 'Beef Stock', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'chili', label: 'Chili', cookingMethod: '', yieldFactorWater: 0.82 }
+    ],
   }
 ];

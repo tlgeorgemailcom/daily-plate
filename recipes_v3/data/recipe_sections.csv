@@ -651,3 +651,5 @@ SOUP_010,soup,Soup,,boiled,0.9,1.0,1.0,1.0,1.0,,,,
 SOUP_010,noodles,Noodles,,boiled,1.0,1.0,1.0,1.0,1.0,,,,
 SOUP_011,stock,Beef Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,STOCK_004
 SOUP_011,chili,Chili,,boiled,0.82,1.0,1.0,1.0,1.0,,,,
+SOUP_012,stock,Beef Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,STOCK_004
+SOUP_012,chili,Chili,,boiled,0.82,1.0,1.0,1.0,1.0,,,,
