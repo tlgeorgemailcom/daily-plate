@@ -18531,5 +18531,66 @@ export const LEVELS: Level[] = [
       { key: 'stock', label: 'Beef Stock', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'chili', label: 'Chili', cookingMethod: '', yieldFactorWater: 0.82 }
     ],
+  },
+  {
+    id: 'SOUP_013',
+    name: 'Seafood Gumbo',
+    category: 'soups & stews',
+    dietaryCategory: 'pesca',
+    levelNum: 387,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 bowl (makes 8)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":538.7,"pro":40.6,"fat":31.6,"carb":26.1,"fib":5.0,"h2o":581.5,"sug":5.3,"perServing":{"cal":538.7,"pro":40.6,"fat":31.6,"carb":26.1,"fib":5.0,"h2o":581.5,"sug":5.3,"AddedSugars":0.0,"IntrinsicSugars":5.3},"micros":{"vitaminA":8.27,"vitaminC":3.16,"vitaminD":0.18,"vitaminE":0.42,"vitaminK":10.71,"vitaminB6":0.06,"vitaminB12":0.82,"thiamin":0.04,"riboflavin":0.04,"niacin":0.59,"folate":13.65,"calcium":33.9,"iron":0.71,"magnesium":18.14,"phosphorus":83.79,"potassium":164.34,"sodium":151.34,"zinc":2.63,"copper":0.28,"selenium":10.38,"cholesterol":37.62,"saturatedFat":3.45,"monoFat":0.57,"polyFat":0.18,"omega3":0.05,"omega6":0.01},"gramsPerServing":689.0,"servings":8,"per100g":{"Energy_KCal":78.19,"Water":84.41,"Protein":5.89,"TotalLipidFat":4.59,"Carbohydrate":3.8,"FiberTotalDietary":0.73,"SugarsTotal":0.77,"Cholesterol":37.62,"FattyAcids_totalSaturated":3.45,"FattyAcids_totalMonounsaturated":0.57,"FattyAcids_totalPolyunsaturated":0.18,"LinoleicAcid":0.01,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.02,"DPA_22_5n3":0.0,"DHA_22_6n3":0.03,"VitaminA_RAE":8.27,"Retinol":0.86,"Carotene_beta":83.32,"VitaminD":0.18,"VitaminE_alphaTocopherol":0.42,"VitaminK_phylloquinone":10.71,"VitaminC_totalAscorbicAcid":3.16,"Thiamin":0.04,"Riboflavin":0.04,"Niacin":0.59,"PantothenicAcid":0.13,"VitaminB6":0.06,"Folate_total":13.65,"Folate_food":11.38,"Folate_DFE":15.24,"FolicAcid":3.49,"VitaminB12":0.82,"Choline_total":19.97,"Betaine":0.03,"LuteinZeaxanthin":65.75,"Lycopene":0.01,"Calcium_Ca":33.9,"Iron_Fe":0.71,"Magnesium_Mg":18.14,"Phosphorus_P":83.79,"Potassium_K":164.34,"Sodium_Na":151.34,"Zinc_Zn":2.63,"Copper_Cu":0.28,"Manganese_Mn":0.16,"Selenium_Se":10.38,"Tryptophan":0.06,"Threonine":0.2,"Isoleucine":0.22,"Leucine":0.39,"Lysine":0.41,"Methionine":0.13,"Cystine":0.05,"Phenylalanine":0.2,"Tyrosine":0.18,"Valine":0.25,"Arginine":0.36,"Histidine":0.13,"Alanine":0.28,"AsparticAcid":0.5,"GlutamicAcid":0.81,"Glycine":0.26,"Proline":0.21,"Serine":0.2,"omega3":0.05,"omega6":0.01,"AddedSugars":0.0,"IntrinsicSugars":0.77},"addedSugars":0.0,"intrinsicSugars":5.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.88,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Fish Stock","grams":355.5},{"ndb":"","name":"Creole Seasoning","grams":2.2},{"ndb":"4513","name":"Vegetable oil, palm kernel","grams":27.2},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":15.6},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"11143","name":"Celery, raw","grams":25.0},{"ndb":"11333","name":"Peppers, sweet, green, raw","grams":14.9},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"11278","name":"Okra, raw","grams":56.7},{"ndb":"15270","name":"Crustaceans, shrimp, raw (not previously frozen)","grams":85.0},{"ndb":"15140","name":"Crustaceans, crab, blue, cooked, moist heat","grams":56.7},{"ndb":"15167","name":"Mollusks, oyster, eastern, wild, raw","grams":42.5},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":3.8},{"ndb":"11297","name":"Parsley, fresh","grams":1.9},{"ndb":"6971","name":"Sauce, worcestershire","grams":4.2},{"ndb":"2004","name":"Spices, bay leaf","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":1.1},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"fish_stock","section_label":"Fish Stock","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":2844.0,"raw_water_grams":2721.71,"raw_fat_grams":17.63,"raw_protein_grams":56.31,"raw_carb_grams":11.38,"final_grams":2844.0},{"section_key":"cajun_spice","section_label":"Creole Seasoning","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":17.4,"raw_water_grams":1.52,"raw_fat_grams":1.3,"raw_protein_grams":2.31,"raw_carb_grams":11.08,"final_grams":17.4},{"section_key":"gumbo","section_label":"Gumbo","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":16,"raw_grams":2913.35,"raw_water_grams":2192.16,"raw_fat_grams":233.97,"raw_protein_grams":265.83,"raw_carb_grams":186.72,"final_grams":2650.29}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Seafood Gumbo', quantity: 'custom (g)', foodWord: 'SEAFOODGUMBO', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Fish Stock', quantity: '12 cups Fish Stock (recipe)', section: 'fish_stock', foodWord: 'FISHBROTH', ndbNo: '6963', portionDesc: 'g', portionGrams: 2844.0, isDish: true, componentRef: 'STOCK_006' },
+      { name: 'Creole Seasoning', quantity: '2 tbsp Creole Seasoning (recipe)', section: 'cajun_spice', foodWord: 'CREOLESEASONING', portionDesc: 'g', portionGrams: 17.4, isDish: true, componentRef: 'SAUCE_014' },
+      { name: 'vegetable oil', quantity: '1 cup vegetable oil (for roux)', section: 'gumbo', ndbNo: '4513', portionDesc: 'g', portionGrams: 218.0 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '1 cup all-purpose flour', section: 'gumbo', ndbNo: '20581', portionDesc: 'g', portionGrams: 125.0 },
+      { name: 'onion', quantity: '1 large onion, coarsely chopped', section: 'gumbo', ndbNo: '11282', portionDesc: 'g', portionGrams: 220.0 },
+      { name: 'celery stalk', quantity: '4 celery stalks, diced', section: 'gumbo', ndbNo: '11143', portionDesc: 'g', portionGrams: 200.0 },
+      { name: 'green bell pepper', quantity: '1 large green bell pepper, diced', section: 'gumbo', ndbNo: '11333', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'gumbo', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'okra', quantity: '1 lb okra, sliced', section: 'gumbo', ndbNo: '11278', portionDesc: 'g', portionGrams: 453.6 },
+      { name: 'shrimp', quantity: '1½ lb large shrimp, peeled and deveined', section: 'gumbo', ndbNo: '15270', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'crab meat', quantity: '1 lb lump crab meat', section: 'gumbo', ndbNo: '15140', portionDesc: 'g', portionGrams: 453.6 },
+      { name: 'oysters', quantity: '12 oz oysters, shucked with brine', section: 'gumbo', ndbNo: '15167', portionDesc: 'g', portionGrams: 340.0 },
+      { name: 'scallions', quantity: '¼ cup green onions, chopped', section: 'gumbo', ndbNo: '11291', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'fresh parsley', quantity: '¼ cup fresh parsley, minced', section: 'gumbo', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.2 },
+      { name: 'Worcestershire sauce', quantity: '2 tbsp Worcestershire sauce', section: 'gumbo', ndbNo: '6971', portionDesc: 'g', portionGrams: 34.0 },
+      { name: 'bay leaf', quantity: '4 whole bay leaves', section: 'gumbo', ndbNo: '2004', portionDesc: 'g', portionGrams: 2.4 },
+      { name: 'salt', quantity: '1½ tsp salt', section: 'gumbo', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'ground black pepper', quantity: '½ tsp black pepper', section: 'gumbo', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
+    ],
+    recipeInstructions: [
+      'Make or prepare the Fish Stock (see the Fish Stock recipe) if not already made.',
+      'Make or prepare the Creole Seasoning (see the Creole Seasoning recipe) if not already made.',
+      'Heat the vegetable oil in a large heavy-bottomed pot or Dutch oven over medium heat. Add the flour and cook, stirring constantly with a wooden spoon, for 20–30 minutes until the roux reaches a deep chocolate-brown color. Do not stop stirring or the roux will burn.',
+      'Add the onion, celery, and bell pepper to the roux. Cook, stirring frequently, for 5–7 minutes until softened.',
+      'Add the garlic and cook for 1 minute until fragrant.',
+      'Gradually ladle in the fish stock, whisking constantly to prevent lumps. Stir well to combine.',
+      'Add the Creole seasoning, bay leaves, salt, and black pepper. Bring to a boil, then reduce heat to low. Simmer uncovered for 20 minutes, stirring occasionally.',
+      'Add the okra and Worcestershire sauce. Continue simmering for 15 minutes until the okra is tender and the gumbo has thickened.',
+      'Add the shrimp, crab meat, and oysters with their brine. Cook for 5–7 minutes until the shrimp are pink and just cooked through.',
+      'Remove and discard the bay leaves. Stir in the green onions and parsley.',
+      'Suggestions (not included): Turn off the heat and stir in 1½ tsp gumbo filé powder — add it off the heat only, as boiling causes filé to turn stringy. Serve in bowls over hot cooked white rice.'
+    ],
+    sections: [
+      { key: 'fish_stock', label: 'Fish Stock', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'cajun_spice', label: 'Creole Seasoning', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'gumbo', label: 'Gumbo', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];
