@@ -19512,5 +19512,48 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'crepes', label: 'Crepes', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'BKFST_050',
+    name: 'Dutch Baby',
+    category: 'Breakfast',
+    dietaryCategory: 'veggie',
+    levelNum: 407,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1/2 pancake (makes 2 servings)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":462.9,"pro":17.3,"fat":22.1,"carb":47.1,"fib":1.3,"h2o":128.9,"sug":11.4,"perServing":{"cal":462.9,"pro":17.3,"fat":22.1,"carb":47.1,"fib":1.3,"h2o":128.9,"sug":11.4,"AddedSugars":6.3,"IntrinsicSugars":5.2},"micros":{"vitaminA":101.02,"vitaminC":0.0,"vitaminD":47.11,"vitaminE":0.5,"vitaminK":0.71,"vitaminB6":0.06,"vitaminB12":0.46,"thiamin":0.15,"riboflavin":0.31,"niacin":1.13,"folate":46.23,"calcium":71.61,"iron":1.62,"magnesium":13.24,"phosphorus":128.13,"potassium":128.19,"sodium":201.37,"zinc":0.76,"copper":0.06,"selenium":19.48,"cholesterol":146.12,"saturatedFat":5.17,"monoFat":2.98,"polyFat":0.82,"omega3":0.03,"omega6":0.57},"gramsPerServing":218.1,"servings":2,"per100g":{"Energy_KCal":212.24,"Water":59.09,"Protein":7.92,"TotalLipidFat":10.13,"Carbohydrate":21.61,"FiberTotalDietary":0.58,"SugarsTotal":5.25,"Cholesterol":146.12,"FattyAcids_totalSaturated":5.17,"FattyAcids_totalMonounsaturated":2.98,"FattyAcids_totalPolyunsaturated":0.82,"LinoleicAcid":0.57,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":101.02,"Retinol":99.95,"Carotene_beta":10.75,"VitaminD":47.11,"VitaminE_alphaTocopherol":0.5,"VitaminK_phylloquinone":0.71,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.15,"Riboflavin":0.31,"Niacin":1.13,"PantothenicAcid":0.66,"VitaminB6":0.06,"Folate_total":46.23,"Folate_food":19.75,"Folate_DFE":64.8,"FolicAcid":33.1,"VitaminB12":0.46,"Choline_total":97.43,"Betaine":0.35,"LuteinZeaxanthin":132.96,"Lycopene":0.0,"Calcium_Ca":71.61,"Iron_Fe":1.62,"Magnesium_Mg":13.24,"Phosphorus_P":128.13,"Potassium_K":128.19,"Sodium_Na":201.37,"Zinc_Zn":0.76,"Copper_Cu":0.06,"Manganese_Mn":0.16,"Selenium_Se":19.48,"Tryptophan":0.1,"Threonine":0.31,"Isoleucine":0.38,"Leucine":0.65,"Lysine":0.47,"Methionine":0.2,"Cystine":0.13,"Phenylalanine":0.42,"Tyrosine":0.3,"Valine":0.47,"Arginine":0.41,"Histidine":0.19,"Alanine":0.37,"AsparticAcid":0.66,"GlutamicAcid":1.62,"Glycine":0.25,"Proline":0.57,"Serine":0.53,"omega3":0.03,"omega6":0.57,"AddedSugars":2.88,"IntrinsicSugars":2.37},"addedSugars":6.3,"intrinsicSugars":5.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":75.0},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":46.9},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":91.5},{"ndb":"1145","name":"Butter, without salt","grams":14.2},{"ndb":"19335","name":"Sugars, granulated","grams":6.3},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2050","name":"Vanilla extract","grams":1.1}],"sections":[{"section_key":"dutch_baby","section_label":"Dutch Baby","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":471.35,"raw_water_grams":292.88,"raw_fat_grams":44.17,"raw_protein_grams":34.53,"raw_carb_grams":94.28,"final_grams":436.2}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Dutch Baby', quantity: 'custom (g)', foodWord: 'DUTCHBABY', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'large egg', quantity: '3 large eggs', section: 'dutch_baby', ndbNo: '1123', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'all-purpose flour', quantity: '3/4 cup all-purpose flour', section: 'dutch_baby', ndbNo: '20581', portionDesc: 'g', portionGrams: 93.75 },
+      { name: 'whole milk', quantity: '3/4 cup whole milk', section: 'dutch_baby', ndbNo: '1077', portionDesc: 'g', portionGrams: 183.0 },
+      { name: 'unsalted butter', quantity: '2 tbsp unsalted butter (for skillet)', section: 'dutch_baby', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
+      { name: 'sugar', quantity: '1 tbsp sugar', section: 'dutch_baby', ndbNo: '19335', portionDesc: 'g', portionGrams: 12.6 },
+      { name: 'salt', quantity: '1/4 tsp', section: 'dutch_baby', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'vanilla extract', quantity: '1/2 tsp vanilla extract', section: 'dutch_baby', ndbNo: '2050', portionDesc: 'g', portionGrams: 2.1 }
+    ],
+    recipeInstructions: [
+      'Preheat the oven to 425°F (220°C) with a 10-inch cast iron or oven-safe skillet inside.',
+      'Blend the eggs, milk, flour, sugar, salt, and vanilla extract until smooth, about 30 seconds. Let the batter rest for 10 minutes.',
+      'Carefully remove the hot skillet from the oven. Add the butter and swirl to coat the bottom and sides as it melts.',
+      'Immediately pour the batter into the hot, buttered skillet. Return to the oven.',
+      'Bake until the pancake is puffed and deep golden brown at the edges, 18–22 minutes. Do not open the oven during baking.',
+      'Remove from the oven and serve immediately — the pancake will deflate within a minute or two, which is normal.',
+      'Suggestions (not included): Dust with powdered sugar and squeeze fresh lemon juice over the top, or serve with maple syrup and fresh berries.'
+    ],
+    sections: [
+      { key: 'dutch_baby', label: 'Dutch Baby', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];
