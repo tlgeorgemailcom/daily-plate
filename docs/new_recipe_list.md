@@ -4,7 +4,7 @@ Sandwiches & Burgers
 ✅ Buffalo Chicken Wraps
 ✅ Chicken Caesar Wrap
 ✅ Fish Wrap
-Lamb Burger
+✅ Lamb Burger
 Mediterranean Wraps
 Pickle Cheeseburger Bites
 Pinwheel Sandwiches

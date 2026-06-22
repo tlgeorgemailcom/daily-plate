@@ -20075,5 +20075,59 @@ export const LEVELS: Level[] = [
       { key: 'fish', label: 'Fish', cookingMethod: '', yieldFactorWater: 0.82 },
       { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_072',
+    name: 'Lamb Burger',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 419,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 2)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":637.3,"pro":31.3,"fat":43.3,"carb":30.4,"fib":2.7,"h2o":187.5,"sug":7.6,"perServing":{"cal":637.3,"pro":31.3,"fat":43.3,"carb":30.4,"fib":2.7,"h2o":187.5,"sug":7.6,"AddedSugars":0.0,"IntrinsicSugars":7.6},"micros":{"vitaminA":26.89,"vitaminC":3.44,"vitaminD":2.25,"vitaminE":0.47,"vitaminK":9.58,"vitaminB6":0.13,"vitaminB12":1.02,"thiamin":0.14,"riboflavin":0.23,"niacin":2.67,"folate":30.84,"calcium":104.1,"iron":1.73,"magnesium":22.24,"phosphorus":133.82,"potassium":200.89,"sodium":287.59,"zinc":1.85,"copper":0.09,"selenium":13.91,"cholesterol":37.69,"saturatedFat":6.02,"monoFat":6.2,"polyFat":1.12,"omega3":0.03,"omega6":0.25},"gramsPerServing":297.1,"servings":2,"per100g":{"Energy_KCal":214.48,"Water":63.11,"Protein":10.54,"TotalLipidFat":14.56,"Carbohydrate":10.23,"FiberTotalDietary":0.9,"SugarsTotal":2.54,"Cholesterol":37.69,"FattyAcids_totalSaturated":6.02,"FattyAcids_totalMonounsaturated":6.2,"FattyAcids_totalPolyunsaturated":1.12,"LinoleicAcid":0.25,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":26.89,"Retinol":16.32,"Carotene_beta":102.93,"VitaminD":2.25,"VitaminE_alphaTocopherol":0.47,"VitaminK_phylloquinone":9.58,"VitaminC_totalAscorbicAcid":3.44,"Thiamin":0.14,"Riboflavin":0.23,"Niacin":2.67,"PantothenicAcid":0.47,"VitaminB6":0.13,"Folate_total":30.84,"Folate_food":22.99,"Folate_DFE":36.32,"FolicAcid":7.85,"VitaminB12":1.02,"Choline_total":31.43,"Betaine":3.96,"LuteinZeaxanthin":138.34,"Lycopene":265.21,"Calcium_Ca":104.1,"Iron_Fe":1.73,"Magnesium_Mg":22.24,"Phosphorus_P":133.82,"Potassium_K":200.89,"Sodium_Na":287.59,"Zinc_Zn":1.85,"Copper_Cu":0.09,"Manganese_Mn":0.17,"Selenium_Se":13.91,"Tryptophan":0.09,"Threonine":0.33,"Isoleucine":0.38,"Leucine":0.63,"Lysine":0.68,"Methionine":0.2,"Cystine":0.07,"Phenylalanine":0.33,"Tyrosine":0.28,"Valine":0.45,"Arginine":0.44,"Histidine":0.24,"Alanine":0.45,"AsparticAcid":0.66,"GlutamicAcid":1.24,"Glycine":0.32,"Proline":0.41,"Serine":0.35,"omega3":0.03,"omega6":0.25,"AddedSugars":0.0,"IntrinsicSugars":2.54},"addedSugars":0.0,"intrinsicSugars":7.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.75,"yieldFactorFat":1.0,"sources":[{"ndb":"17224","name":"Lamb, ground, raw","grams":113.4},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"2020","name":"Spices, garlic powder","grams":0.8},{"ndb":"2014","name":"Spices, cumin seed","grams":1.0},{"ndb":"2013","name":"Spices, coriander seed","grams":0.9},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.5},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"18350","name":"Rolls, hamburger or hotdog, plain","grams":44.0},{"ndb":"11959","name":"Arugula, raw","grams":10.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":30.6},{"ndb":"11282","name":"Onions, raw","grams":9.0},{"ndb":"1019","name":"Cheese, feta","grams":28.4},{"ndb":"1293","name":"Yogurt, Greek, plain, whole milk","grams":30.6},{"ndb":"11206","name":"Cucumber, peeled, raw","grams":29.8},{"ndb":"2065","name":"Spearmint, fresh","grams":2.1},{"ndb":"9152","name":"Lemon juice, raw","grams":3.8},{"ndb":"11215","name":"Garlic, raw","grams":1.5}],"sections":[{"section_key":"patty","section_label":"Patty","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":248.73,"raw_water_grams":135.46,"raw_fat_grams":67.53,"raw_protein_grams":38.53,"raw_carb_grams":3.99,"final_grams":214.86},{"section_key":"assembly","section_label":"Assembly","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":379.4,"raw_water_grams":273.43,"raw_fat_grams":19.0,"raw_protein_grams":24.13,"raw_carb_grams":56.8,"final_grams":379.4}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Lamb Burger', quantity: 'custom (g)', foodWord: 'LAMBBURGER', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'ground lamb', quantity: '2 patties (4 oz each)', section: 'patty', ndbNo: '17224', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'patty', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'garlic powder', quantity: '½ tsp', section: 'patty', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.55 },
+      { name: 'ground cumin', quantity: '½ tsp', section: 'patty', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'ground coriander', quantity: '1 tsp', section: 'patty', ndbNo: '2013', portionDesc: 'g', portionGrams: 1.8 },
+      { name: 'dried oregano', quantity: '¼ tsp', section: 'patty', ndbNo: '2027', portionDesc: 'g', portionGrams: 0.9 },
+      { name: 'salt', quantity: '¼ tsp', section: 'patty', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'patty', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'hamburger bun', quantity: '2 hamburger buns', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 88.0 },
+      { name: 'arugula', quantity: '10 leaves arugula', section: 'assembly', ndbNo: '11959', portionDesc: 'g', portionGrams: 20.0 },
+      { name: 'tomato', quantity: '1 small tomato, sliced', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 61.25 },
+      { name: 'onion', quantity: '2 thin slices red onion', section: 'assembly', ndbNo: '11282', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'feta cheese crumbles', quantity: '2 oz feta cheese, crumbled', section: 'assembly', ndbNo: '1019', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'Greek whole milk yogurt', quantity: '¼ cup', section: 'assembly', ndbNo: '1293', portionDesc: 'g', portionGrams: 61.25 },
+      { name: 'cucumber peeled', quantity: '½ cup cucumber, finely diced', section: 'assembly', ndbNo: '11206', portionDesc: 'g', portionGrams: 59.5 },
+      { name: 'fresh mint', quantity: '2 tbsp fresh mint, chopped', section: 'assembly', ndbNo: '2065', portionDesc: 'g', portionGrams: 4.2 },
+      { name: 'lemon juice', quantity: '½ tbsp', section: 'assembly', ndbNo: '9152', portionDesc: 'g', portionGrams: 7.5 },
+      { name: 'garlic', quantity: '1 clove garlic, minced', section: 'assembly', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 }
+    ],
+    recipeInstructions: [
+      'In a small bowl, mix together the garlic powder, cumin, coriander, oregano, salt, and black pepper. Add the ground lamb and gently mix to combine. Form into 2 patties (about ½-inch thick) and press a small indentation in the center of each to prevent doming.',
+      'Heat the olive oil in a skillet over medium-high heat. Cook the patties for 4–5 minutes per side, until cooked through (internal temperature 160°F). Remove and rest 3 minutes.',
+      'Make the tzatziki: in a small bowl, stir together the Greek yogurt, cucumber, mint, lemon juice, and garlic. Season with a pinch of salt.',
+      'Lightly toast the hamburger buns in the same skillet.',
+      'Place arugula on the bottom bun, top with the lamb patty, feta crumbles, tomato, and red onion. Spoon tzatziki over the top, close with the top bun, and serve immediately.'
+    ],
+    sections: [
+      { key: 'patty', label: 'Patty', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
