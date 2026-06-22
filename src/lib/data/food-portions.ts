@@ -54539,6 +54539,39 @@ export const FOODS: Food[] = [
         "gm": 113.0
       }
     ]
+  },
+  {
+    "word": "SNAPPER",
+    "display": "Snapper",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "15101",
+    "desc": "Fish, snapper, mixed species, raw",
+    "cal": 100.0,
+    "pro": 20.51,
+    "fat": 1.34,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 76.87,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 3.0,
+        "desc": "oz",
+        "gm": 85.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fillet",
+        "gm": 218.0
+      }
+    ]
   }
 ];
 

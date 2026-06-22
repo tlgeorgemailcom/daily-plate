@@ -3,7 +3,7 @@ Sandwiches & Burgers
 ✅ Beef Shawarma
 ✅ Buffalo Chicken Wraps
 ✅ Chicken Caesar Wrap
-Fish Wrap
+✅ Fish Wrap
 Lamb Burger
 Mediterranean Wraps
 Pickle Cheeseburger Bites

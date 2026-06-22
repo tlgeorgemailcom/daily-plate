@@ -20024,5 +20024,56 @@ export const LEVELS: Level[] = [
       { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'dressing', label: 'Caesar Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_071',
+    name: 'Fish Wrap',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'pesca',
+    levelNum: 418,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 2)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":623.9,"pro":44.0,"fat":28.6,"carb":48.5,"fib":8.4,"h2o":278.8,"sug":6.7,"perServing":{"cal":623.9,"pro":44.0,"fat":28.6,"carb":48.5,"fib":8.4,"h2o":278.8,"sug":6.7,"AddedSugars":0.0,"IntrinsicSugars":6.7},"micros":{"vitaminA":33.23,"vitaminC":8.12,"vitaminD":162.22,"vitaminE":0.91,"vitaminK":18.25,"vitaminB6":0.2,"vitaminB12":1.08,"thiamin":0.12,"riboflavin":0.09,"niacin":1.24,"folate":37.15,"calcium":58.32,"iron":1.15,"magnesium":26.1,"phosphorus":140.4,"potassium":330.2,"sodium":235.76,"zinc":0.43,"copper":0.06,"selenium":20.38,"cholesterol":19.66,"saturatedFat":1.86,"monoFat":3.21,"polyFat":0.99,"omega3":0.15,"omega6":0.39},"gramsPerServing":406.4,"servings":2,"per100g":{"Energy_KCal":153.52,"Water":68.59,"Protein":10.83,"TotalLipidFat":7.04,"Carbohydrate":11.94,"FiberTotalDietary":2.06,"SugarsTotal":1.64,"Cholesterol":19.66,"FattyAcids_totalSaturated":1.86,"FattyAcids_totalMonounsaturated":3.21,"FattyAcids_totalPolyunsaturated":0.99,"LinoleicAcid":0.39,"alphaLinolenicAcid":0.06,"EPA_20_5n3":0.01,"DPA_22_5n3":0.02,"DHA_22_6n3":0.06,"VitaminA_RAE":33.23,"Retinol":19.27,"Carotene_beta":149.09,"VitaminD":162.22,"VitaminE_alphaTocopherol":0.91,"VitaminK_phylloquinone":18.25,"VitaminC_totalAscorbicAcid":8.12,"Thiamin":0.12,"Riboflavin":0.09,"Niacin":1.24,"PantothenicAcid":0.61,"VitaminB6":0.2,"Folate_total":37.15,"Folate_food":23.15,"Folate_DFE":46.89,"FolicAcid":14.0,"VitaminB12":1.08,"Choline_total":31.43,"Betaine":1.17,"LuteinZeaxanthin":92.46,"Lycopene":193.89,"Calcium_Ca":58.32,"Iron_Fe":1.15,"Magnesium_Mg":26.1,"Phosphorus_P":140.4,"Potassium_K":330.2,"Sodium_Na":235.76,"Zinc_Zn":0.43,"Copper_Cu":0.06,"Manganese_Mn":0.17,"Selenium_Se":20.38,"Tryptophan":0.11,"Threonine":0.42,"Isoleucine":0.45,"Leucine":0.81,"Lysine":0.85,"Methionine":0.28,"Cystine":0.1,"Phenylalanine":0.41,"Tyrosine":0.34,"Valine":0.51,"Arginine":0.59,"Histidine":0.29,"Alanine":0.58,"AsparticAcid":1.01,"GlutamicAcid":1.76,"Glycine":0.47,"Proline":0.46,"Serine":0.43,"omega3":0.15,"omega6":0.39,"AddedSugars":0.0,"IntrinsicSugars":1.64},"addedSugars":0.0,"intrinsicSugars":6.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.82,"yieldFactorFat":1.0,"sources":[{"ndb":"15101","name":"Fish, snapper, mixed species, raw","grams":170.1},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"9160","name":"Lime juice, raw","grams":7.5},{"ndb":"2014","name":"Spices, cumin seed","grams":1.0},{"ndb":"2020","name":"Spices, garlic powder","grams":0.8},{"ndb":"2028","name":"Spices, paprika","grams":1.1},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"18364","name":"Tortillas, ready-to-bake or -fry, flour, refrigerated","grams":72.0},{"ndb":"11109","name":"Cabbage, raw","grams":50.0},{"ndb":"9038","name":"Avocados, raw, California","grams":50.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":30.6},{"ndb":"1056","name":"Cream, sour, cultured","grams":28.8},{"ndb":"9160","name":"Lime juice, raw","grams":7.5},{"ndb":"11165","name":"Coriander (cilantro) leaves, raw","grams":4.0}],"sections":[{"section_key":"fish","section_label":"Fish","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":376.73,"raw_water_grams":275.72,"raw_fat_grams":18.94,"raw_protein_grams":70.84,"raw_carb_grams":4.88,"final_grams":327.09},{"section_key":"assembly","section_label":"Assembly","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":485.75,"raw_water_grams":331.47,"raw_fat_grams":38.32,"raw_protein_grams":17.22,"raw_carb_grams":92.15,"final_grams":485.75}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Fish Wrap', quantity: 'custom (g)', foodWord: 'FISHWRAP', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'snapper fillet', quantity: '2 fillets (6 oz each)', section: 'fish', ndbNo: '15101', portionDesc: 'g', portionGrams: 340.2 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'fish', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'lime juice', quantity: '1 tbsp', section: 'fish', ndbNo: '9160', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'ground cumin', quantity: '½ tsp', section: 'fish', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'garlic powder', quantity: '½ tsp', section: 'fish', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.55 },
+      { name: 'paprika', quantity: '½ tsp', section: 'fish', ndbNo: '2028', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'salt', quantity: '¼ tsp', section: 'fish', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'fish', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'flour tortilla', quantity: '2 large (10-inch) flour tortillas', section: 'assembly', ndbNo: '18364', portionDesc: 'g', portionGrams: 144.0 },
+      { name: 'green cabbage', quantity: '1 cup cabbage, shredded', section: 'assembly', ndbNo: '11109', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'avocado', quantity: '1 avocado, sliced', section: 'assembly', ndbNo: '9038', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'tomato', quantity: '1 small tomato, diced', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 61.25 },
+      { name: 'sour cream', quantity: '¼ cup', section: 'assembly', ndbNo: '1056', portionDesc: 'g', portionGrams: 57.5 },
+      { name: 'lime juice', quantity: '1 tbsp', section: 'assembly', ndbNo: '9160', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'fresh cilantro', quantity: '2 tbsp cilantro, chopped', section: 'assembly', ndbNo: '11165', portionDesc: 'g', portionGrams: 8.0 }
+    ],
+    recipeInstructions: [
+      'In a bowl, combine the olive oil, lime juice, cumin, garlic powder, paprika, salt, and black pepper. Add the snapper fillets and turn to coat. Marinate for 10 minutes at room temperature.',
+      'Heat a non-stick skillet over medium-high heat. Cook the snapper for 3–4 minutes per side, until opaque and it flakes easily with a fork. Break into large pieces.',
+      'In a small bowl, stir together the sour cream and lime juice to make a lime crema.',
+      'Warm the flour tortillas in a dry skillet for 30 seconds per side.',
+      'Lay each tortilla flat. Layer on shredded cabbage, avocado, tomato, and snapper. Top with lime crema and cilantro, fold in the sides, and roll tightly.'
+    ],
+    sections: [
+      { key: 'fish', label: 'Fish', cookingMethod: '', yieldFactorWater: 0.82 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
