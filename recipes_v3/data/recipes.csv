@@ -409,3 +409,4 @@ BKFST_050,DUTCHBABY,Dutch Baby,Breakfast,veggie,builtin,,,1/2 pancake (makes 2 s
 BKFST_051,OVERNIGHTOATS,Overnight Oats,Breakfast,veggie,builtin,,,1 jar (makes 2 servings),2,Rule D,raw,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,,
 BKFST_052,GRANOLA,Granola,Breakfast,vegan,builtin,8037,,1/4 cup (makes 24+ servings),24,Rule B,baked,0.515,1.0,1.0,1.0,1.0,approved,,,,PASS,,
 BKFST_054,GRANOLABALANCED,"Granola, Omega Balanced",Breakfast,vegan,builtin,,,1/4 cup (makes 24 servings),24,Rule D,baked,0.660,1.0,1.0,1.0,1.0,approved,,,,PASS,Rule D — no canonical,
+ENTR_126,SHRIMPFRIED,Seafood Fried Shrimp,entrees & main courses,pesca,builtin,15150,,4 servings (~4 oz each),4,Rule C,fried,0.620,1.0,1.0,1.0,1.0,approved,,ENTR_126 Rule C — Fiber -10% and Sugar -20% structural (thin flour coating; shrimp glycogen in NDB 15150 not captured by raw NDB 15270); E/P/F/C/W all within ±4%,,PASS,,

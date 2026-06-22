@@ -137,7 +137,7 @@ Entrees & Main Courses
 
 ✅ Seafood Crab Cakes
 ✅ Seafood Crab Stuffed Avocados
-Seafood Fried Shrimp
+✅ Seafood Fried Shrimp
 ✅ Seafood California Roll
 ✅ Seafood Philadelphia Roll (sushi-style)
 ✅ Seafood Salmon Poke Bowl

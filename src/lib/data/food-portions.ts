@@ -54510,6 +54510,35 @@ export const FOODS: Food[] = [
         "gm": 170.0
       }
     ]
+  },
+  {
+    "word": "SHRIMPFRIED",
+    "display": "Shrimp, Breaded and Fried",
+    "groups": [
+      "protein",
+      "prepared"
+    ],
+    "ndb": "15150",
+    "desc": "Crustaceans, shrimp, mixed species, cooked, breaded and fried",
+    "cal": 242.0,
+    "pro": 21.39,
+    "fat": 12.28,
+    "carb": 11.47,
+    "fib": 0.4,
+    "h2o": 52.86,
+    "sug": 0.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "serving",
+        "gm": 113.0
+      }
+    ]
   }
 ];
 
