@@ -20361,5 +20361,58 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'sandwich', label: 'Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_078',
+    name: 'Tofu Burritos',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'vegan',
+    levelNum: 425,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 burrito (makes 2)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":583.6,"pro":30.8,"fat":20.9,"carb":72.8,"fib":14.7,"h2o":289.9,"sug":9.2,"perServing":{"cal":583.6,"pro":30.8,"fat":20.9,"carb":72.8,"fib":14.7,"h2o":289.9,"sug":9.2,"AddedSugars":0.0,"IntrinsicSugars":9.2},"micros":{"vitaminA":26.4,"vitaminC":10.06,"vitaminD":0.0,"vitaminE":0.61,"vitaminK":7.39,"vitaminB6":0.1,"vitaminB12":0.0,"thiamin":0.15,"riboflavin":0.1,"niacin":1.05,"folate":52.09,"calcium":121.58,"iron":2.07,"magnesium":38.19,"phosphorus":124.42,"potassium":225.97,"sodium":278.92,"zinc":0.76,"copper":0.16,"selenium":8.32,"cholesterol":0.0,"saturatedFat":1.09,"monoFat":1.99,"polyFat":1.09,"omega3":0.04,"omega6":0.35},"gramsPerServing":421.2,"servings":2,"per100g":{"Energy_KCal":138.55,"Water":68.82,"Protein":7.32,"TotalLipidFat":4.95,"Carbohydrate":17.28,"FiberTotalDietary":3.49,"SugarsTotal":2.17,"Cholesterol":0.0,"FattyAcids_totalSaturated":1.09,"FattyAcids_totalMonounsaturated":1.99,"FattyAcids_totalPolyunsaturated":1.09,"LinoleicAcid":0.35,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":26.4,"Retinol":0.0,"Carotene_beta":276.89,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.61,"VitaminK_phylloquinone":7.39,"VitaminC_totalAscorbicAcid":10.06,"Thiamin":0.15,"Riboflavin":0.1,"Niacin":1.05,"PantothenicAcid":0.23,"VitaminB6":0.1,"Folate_total":52.09,"Folate_food":38.59,"Folate_DFE":61.5,"FolicAcid":13.5,"VitaminB12":0.0,"Choline_total":19.61,"Betaine":1.12,"LuteinZeaxanthin":30.23,"Lycopene":0.06,"Calcium_Ca":121.58,"Iron_Fe":2.07,"Magnesium_Mg":38.19,"Phosphorus_P":124.42,"Potassium_K":225.97,"Sodium_Na":278.92,"Zinc_Zn":0.76,"Copper_Cu":0.16,"Manganese_Mn":0.5,"Selenium_Se":8.32,"Tryptophan":0.08,"Threonine":0.28,"Isoleucine":0.3,"Leucine":0.51,"Lysine":0.34,"Methionine":0.09,"Cystine":0.05,"Phenylalanine":0.33,"Tyrosine":0.23,"Valine":0.32,"Arginine":0.46,"Histidine":0.16,"Alanine":0.27,"AsparticAcid":0.75,"GlutamicAcid":1.35,"Glycine":0.26,"Proline":0.42,"Serine":0.37,"omega3":0.04,"omega6":0.35,"AddedSugars":0.0,"IntrinsicSugars":2.17},"addedSugars":0.0,"intrinsicSugars":9.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.85,"yieldFactorFat":1.0,"sources":[{"ndb":"16126","name":"Tofu, firm, prepared with calcium sulfate and magnesium chloride (nigari)","grams":170.0},{"ndb":"16015","name":"Beans, black, mature seeds, cooked, boiled, without salt","grams":86.0},{"ndb":"11821","name":"Peppers, sweet, red, raw","grams":59.5},{"ndb":"11282","name":"Onions, raw","grams":55.0},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"2014","name":"Spices, cumin seed","grams":1.0},{"ndb":"2009","name":"","grams":1.1},{"ndb":"2028","name":"Spices, paprika","grams":0.6},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"9160","name":"Lime juice, raw","grams":7.5},{"ndb":"11165","name":"Coriander (cilantro) leaves, raw","grams":4.0},{"ndb":"18364","name":"Tortillas, ready-to-bake or -fry, flour, refrigerated","grams":72.0}],"sections":[{"section_key":"filling","section_label":"Filling","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":13,"raw_grams":792.62,"raw_water_grams":627.91,"raw_fat_grams":30.2,"raw_protein_grams":49.87,"raw_carb_grams":74.48,"final_grams":698.44},{"section_key":"assembly","section_label":"Assembly","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":144.0,"raw_water_grams":46.05,"raw_fat_grams":11.51,"raw_protein_grams":11.81,"raw_carb_grams":71.11,"final_grams":144.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Tofu Burritos', quantity: 'custom (g)', foodWord: 'TOFUBURRITO', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'firm tofu', quantity: '12 oz firm tofu, pressed and crumbled', section: 'filling', ndbNo: '16126', portionDesc: 'g', portionGrams: 340.0 },
+      { name: 'black beans', quantity: '1 cup black beans, cooked', section: 'filling', ndbNo: '16015', portionDesc: 'g', portionGrams: 172.0 },
+      { name: 'red bell pepper', quantity: '1 large red bell pepper, diced', section: 'filling', ndbNo: '11821', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'onion', quantity: '1 medium onion, diced', section: 'filling', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'filling', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'olive oil', quantity: '1 tbsp olive oil', section: 'filling', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'ground cumin', quantity: '1 tsp ground cumin', section: 'filling', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'chili powder', quantity: '1 tsp chili powder', section: 'filling', ndbNo: '2009', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'paprika', quantity: '½ tsp paprika', section: 'filling', ndbNo: '2028', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'salt', quantity: '½ tsp salt', section: 'filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp ground black pepper', section: 'filling', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'lime juice', quantity: '1 tbsp lime juice', section: 'filling', ndbNo: '9160', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'fresh cilantro', quantity: '2 tbsp fresh cilantro, chopped', section: 'filling', ndbNo: '11165', portionDesc: 'g', portionGrams: 8.0 },
+      { name: 'flour tortilla', quantity: '2 large flour tortillas (10 inch)', section: 'assembly', ndbNo: '18364', portionDesc: 'g', portionGrams: 144.0 }
+    ],
+    recipeInstructions: [
+      'Drain tofu and press between paper towels. Place a heavy skillet or another heavy weight on top for 15 minutes to remove moisture. Crumble into rough chunks.',
+      'Heat olive oil in a large skillet over medium-high heat. Add onion and bell pepper; cook 3–4 minutes until softened.',
+      'Add garlic, ground cumin, chili powder, and paprika; cook 1 minute until fragrant.',
+      'Add crumbled tofu and cook 5–6 minutes, stirring occasionally, until lightly golden.',
+      'Stir in black beans and lime juice; cook 2 minutes until heated through. Season with salt and pepper. Remove from heat and fold in cilantro.',
+      'Warm tortillas in a dry skillet over medium heat for 30 seconds per side.',
+      'Divide the filling between the 2 tortillas. Fold in the sides and roll tightly into burritos. Serve immediately.',
+      'Suggestions (not included): Serve with salsa, guacamole, or hot sauce on the side.'
+    ],
+    sections: [
+      { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.85 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
