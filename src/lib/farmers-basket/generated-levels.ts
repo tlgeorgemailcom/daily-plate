@@ -20414,5 +20414,58 @@ export const LEVELS: Level[] = [
       { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.85 },
       { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_079',
+    name: 'Beef Empanadas',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 426,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 empanada (makes 8)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":434.4,"pro":12.6,"fat":28.3,"carb":32.4,"fib":1.8,"h2o":60.5,"sug":1.0,"perServing":{"cal":434.4,"pro":12.6,"fat":28.3,"carb":32.4,"fib":1.8,"h2o":60.5,"sug":1.0,"AddedSugars":0.0,"IntrinsicSugars":1.0},"micros":{"vitaminA":54.85,"vitaminC":2.71,"vitaminD":4.69,"vitaminE":1.16,"vitaminK":7.22,"vitaminB6":0.12,"vitaminB12":0.62,"thiamin":0.25,"riboflavin":0.21,"niacin":2.81,"folate":58.04,"calcium":25.14,"iron":2.37,"magnesium":15.34,"phosphorus":96.41,"potassium":157.08,"sodium":379.63,"zinc":1.62,"copper":0.08,"selenium":16.11,"cholesterol":53.41,"saturatedFat":8.65,"monoFat":10.31,"polyFat":3.29,"omega3":0.03,"omega6":0.14},"gramsPerServing":135.9,"servings":8,"per100g":{"Energy_KCal":319.74,"Water":44.53,"Protein":9.26,"TotalLipidFat":20.83,"Carbohydrate":23.86,"FiberTotalDietary":1.29,"SugarsTotal":0.72,"Cholesterol":53.41,"FattyAcids_totalSaturated":8.65,"FattyAcids_totalMonounsaturated":10.31,"FattyAcids_totalPolyunsaturated":3.29,"LinoleicAcid":0.14,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":54.85,"Retinol":50.28,"Carotene_beta":52.04,"VitaminD":4.69,"VitaminE_alphaTocopherol":1.16,"VitaminK_phylloquinone":7.22,"VitaminC_totalAscorbicAcid":2.71,"Thiamin":0.25,"Riboflavin":0.21,"Niacin":2.81,"PantothenicAcid":0.32,"VitaminB6":0.12,"Folate_total":58.04,"Folate_food":13.77,"Folate_DFE":89.09,"FolicAcid":44.27,"VitaminB12":0.62,"Choline_total":30.73,"Betaine":2.63,"LuteinZeaxanthin":73.98,"Lycopene":0.01,"Calcium_Ca":25.14,"Iron_Fe":2.37,"Magnesium_Mg":15.34,"Phosphorus_P":96.41,"Potassium_K":157.08,"Sodium_Na":379.63,"Zinc_Zn":1.62,"Copper_Cu":0.08,"Manganese_Mn":0.25,"Selenium_Se":16.11,"Tryptophan":0.07,"Threonine":0.32,"Isoleucine":0.37,"Leucine":0.69,"Lysine":0.56,"Methionine":0.21,"Cystine":0.12,"Phenylalanine":0.4,"Tyrosine":0.28,"Valine":0.43,"Arginine":0.52,"Histidine":0.26,"Alanine":0.47,"AsparticAcid":0.7,"GlutamicAcid":1.94,"Glycine":0.5,"Proline":0.65,"Serine":0.41,"omega3":0.03,"omega6":0.14,"AddedSugars":0.0,"IntrinsicSugars":0.72},"addedSugars":0.0,"intrinsicSugars":1.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":42.5},{"ndb":"11282","name":"Onions, raw","grams":13.8},{"ndb":"11333","name":"Peppers, sweet, green, raw","grams":7.5},{"ndb":"11215","name":"Garlic, raw","grams":0.8},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":1.7},{"ndb":"2014","name":"Spices, cumin seed","grams":0.2},{"ndb":"2028","name":"Spices, paprika","grams":0.1},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"1129","name":"Egg, whole, cooked, hard-boiled","grams":6.2},{"ndb":"9193","name":"Olives, ripe, canned (small-extra large)","grams":5.5},{"ndb":"","name":"Pie Crust Double (Unbaked)","grams":69.9}],"sections":[{"section_key":"filling","section_label":"Filling","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.85,"yield_factor_fat":0.593,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":12,"raw_grams":631.23,"raw_water_grams":441.19,"raw_fat_grams":92.5,"raw_protein_grams":67.8,"raw_carb_grams":20.85,"final_grams":527.4},{"section_key":"crust","section_label":"Crust","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":559.57,"raw_water_grams":109.06,"raw_fat_grams":171.56,"raw_protein_grams":32.9,"raw_carb_grams":238.49,"final_grams":559.57}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Beef Empanadas', quantity: 'custom (g)', foodWord: 'EMPANADA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'ground beef (80% lean)', quantity: '¾ lb ground beef (80% lean)', section: 'filling', ndbNo: '23572', portionDesc: 'g', portionGrams: 340.0 },
+      { name: 'onion', quantity: '1 medium onion, finely diced', section: 'filling', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'green bell pepper', quantity: '½ green bell pepper, finely diced', section: 'filling', ndbNo: '11333', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'filling', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'olive oil', quantity: '1 tbsp olive oil', section: 'filling', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'ground cumin', quantity: '1 tsp ground cumin', section: 'filling', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'paprika', quantity: '½ tsp paprika', section: 'filling', ndbNo: '2028', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'dried oregano', quantity: '½ tsp dried oregano', section: 'filling', ndbNo: '2027', portionDesc: 'g', portionGrams: 0.9 },
+      { name: 'salt', quantity: '½ tsp salt', section: 'filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp ground black pepper', section: 'filling', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'hard-boiled egg', quantity: '1 hard-boiled egg, chopped', section: 'filling', ndbNo: '1129', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'black olives', quantity: '8 pitted black olives, halved', section: 'filling', ndbNo: '9193', portionDesc: 'g', portionGrams: 44.0 },
+      { name: 'Pie Crust Double (Unbaked)', quantity: '1 recipe Pie Crust Double (Unbaked)', section: 'crust', foodWord: 'PIEDOUBLECRUSTRAW', portionDesc: 'g', portionGrams: 559.57, isDish: true, componentRef: 'CRUST_004' }
+    ],
+    recipeInstructions: [
+      'Heat olive oil in a large skillet over medium-high heat. Add onion and bell pepper; cook 3–4 minutes until softened.',
+      'Add garlic, ground cumin, paprika, and dried oregano; cook 1 minute until fragrant.',
+      'Add ground beef; cook 5–7 minutes, breaking up the meat, until browned. Drain excess fat.',
+      'Stir in the chopped hard-boiled egg and halved black olives. Season with salt and pepper. Remove from heat and let the filling cool to room temperature.',
+      'Prepare the Pie Crust Double (Unbaked) recipe (see the Pie Crust Double (Unbaked) recipe). Divide the dough into 8 equal portions. On a lightly floured surface, roll each into a 6-inch circle.',
+      'Place 2–3 tablespoons of filling towards the top half of each dough circle. Brush egg white along the edges. Fold the dough over to form a half-moon shape and press the edges firmly to seal. Crimp with a fork.',
+      'Arrange on a parchment-lined baking sheet. If desired, brush the tops with beaten egg for a golden finish.',
+      'Bake at 375°F (190°C) for 25–30 minutes until golden brown. Cool 5 minutes before serving.',
+      'Suggestions (not included): Serve with chimichurri sauce, salsa verde, or sour cream.'
+    ],
+    sections: [
+      { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.85, yieldFactorFat: 0.593 },
+      { key: 'crust', label: 'Crust', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
