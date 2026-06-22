@@ -19977,5 +19977,52 @@ export const LEVELS: Level[] = [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
       { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_070',
+    name: 'Chicken Caesar Wrap',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'pollo',
+    levelNum: 417,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 2)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":823.5,"pro":58.0,"fat":42.1,"carb":50.8,"fib":4.5,"h2o":179.0,"sug":3.7,"perServing":{"cal":823.5,"pro":58.0,"fat":42.1,"carb":50.8,"fib":4.5,"h2o":179.0,"sug":3.7,"AddedSugars":0.0,"IntrinsicSugars":3.7},"micros":{"vitaminA":84.81,"vitaminC":1.17,"vitaminD":4.01,"vitaminE":1.17,"vitaminK":20.09,"vitaminB6":0.35,"vitaminB12":0.21,"thiamin":0.18,"riboflavin":0.19,"niacin":5.24,"folate":50.61,"calcium":146.08,"iron":1.48,"magnesium":27.31,"phosphorus":226.53,"potassium":255.99,"sodium":464.78,"zinc":0.81,"copper":0.06,"selenium":21.01,"cholesterol":50.85,"saturatedFat":3.37,"monoFat":6.46,"polyFat":1.48,"omega3":0.06,"omega6":0.56},"gramsPerServing":337.1,"servings":2,"per100g":{"Energy_KCal":244.29,"Water":53.11,"Protein":17.2,"TotalLipidFat":12.48,"Carbohydrate":15.07,"FiberTotalDietary":1.34,"SugarsTotal":1.1,"Cholesterol":50.85,"FattyAcids_totalSaturated":3.37,"FattyAcids_totalMonounsaturated":6.46,"FattyAcids_totalPolyunsaturated":1.48,"LinoleicAcid":0.56,"alphaLinolenicAcid":0.05,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":84.81,"Retinol":23.41,"Carotene_beta":735.26,"VitaminD":4.01,"VitaminE_alphaTocopherol":1.17,"VitaminK_phylloquinone":20.09,"VitaminC_totalAscorbicAcid":1.17,"Thiamin":0.18,"Riboflavin":0.19,"Niacin":5.24,"PantothenicAcid":0.83,"VitaminB6":0.35,"Folate_total":50.61,"Folate_food":28.85,"Folate_DFE":65.79,"FolicAcid":21.77,"VitaminB12":0.21,"Choline_total":48.46,"Betaine":4.72,"LuteinZeaxanthin":333.56,"Lycopene":0.02,"Calcium_Ca":146.08,"Iron_Fe":1.48,"Magnesium_Mg":27.31,"Phosphorus_P":226.53,"Potassium_K":255.99,"Sodium_Na":464.78,"Zinc_Zn":0.81,"Copper_Cu":0.06,"Manganese_Mn":0.19,"Selenium_Se":21.01,"Tryptophan":0.21,"Threonine":0.68,"Isoleucine":0.8,"Leucine":1.38,"Lysine":1.44,"Methionine":0.41,"Cystine":0.16,"Phenylalanine":0.72,"Tyrosine":0.64,"Valine":0.89,"Arginine":0.98,"Histidine":0.58,"Alanine":0.83,"AsparticAcid":1.38,"GlutamicAcid":3.01,"Glycine":0.63,"Proline":0.93,"Serine":0.71,"omega3":0.06,"omega6":0.56,"AddedSugars":0.0,"IntrinsicSugars":1.1},"addedSugars":0.0,"intrinsicSugars":3.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.75,"yieldFactorFat":1.0,"sources":[{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":170.1},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"2020","name":"Spices, garlic powder","grams":0.8},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"18364","name":"Tortillas, ready-to-bake or -fry, flour, refrigerated","grams":72.0},{"ndb":"11251","name":"Lettuce, cos or romaine, raw","grams":47.0},{"ndb":"18242","name":"Croutons, plain","grams":15.0},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":25.0},{"ndb":"","name":"Caesar Salad Dressing","grams":30.9}],"sections":[{"section_key":"chicken","section_label":"Chicken","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":357.43,"raw_water_grams":251.58,"raw_fat_grams":22.54,"raw_protein_grams":76.86,"raw_carb_grams":1.5,"final_grams":294.53},{"section_key":"assembly","section_label":"Assembly","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":318.0,"raw_water_grams":151.21,"raw_fat_grams":26.68,"raw_protein_grams":34.41,"raw_carb_grams":97.86,"final_grams":318.0},{"section_key":"dressing","section_label":"Caesar Dressing","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":61.7,"raw_water_grams":18.18,"raw_fat_grams":34.91,"raw_protein_grams":4.7,"raw_carb_grams":2.23,"final_grams":61.7}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken Caesar Wrap', quantity: 'custom (g)', foodWord: 'CHICKENCAESARWRAP', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chicken breast', quantity: '2 chicken breasts (6 oz each)', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 340.2 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'garlic powder', quantity: '½ tsp', section: 'chicken', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.55 },
+      { name: 'salt', quantity: '¼ tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'flour tortilla', quantity: '2 large (10-inch) flour tortillas', section: 'assembly', ndbNo: '18364', portionDesc: 'g', portionGrams: 144.0 },
+      { name: 'romaine lettuce', quantity: '2 cups', section: 'assembly', ndbNo: '11251', portionDesc: 'g', portionGrams: 94.0 },
+      { name: 'plain croutons', quantity: '1 cup', section: 'assembly', ndbNo: '18242', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'Parmesan cheese', quantity: '½ cup grated', section: 'assembly', ndbNo: '1033', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'Caesar dressing (4 tbsp total; 2 tbsp per serving)', quantity: '4 tbsp', section: 'dressing', foodWord: 'CAESARDRESSING', portionDesc: 'g', portionGrams: 61.7, isDish: true, componentRef: 'SAUCE_024' }
+    ],
+    recipeInstructions: [
+      'Season the chicken breasts on both sides with garlic powder, salt, and black pepper.',
+      'Heat the olive oil in a skillet over medium-high heat. Cook the chicken for 6–7 minutes per side, or until cooked through (internal temperature 165°F). Let rest 5 minutes, then slice into strips.',
+      'Make or prepare the Caesar Salad Dressing (see the Caesar Salad Dressing recipe).',
+      'Warm the flour tortillas in a dry skillet for 30 seconds per side, or wrap in a damp paper towel and microwave for 20 seconds.',
+      'Lay a tortilla flat. Arrange half the romaine down the center, top with chicken strips, croutons, and Parmesan. Drizzle with half the Caesar dressing, fold in the sides, and roll tightly. Repeat with the second tortilla.'
+    ],
+    sections: [
+      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'dressing', label: 'Caesar Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
