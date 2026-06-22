@@ -174,7 +174,7 @@
     {
       "ingredient_key": "turmeric_ground",
       "ndb_no": "2043",
-      "long_desc": "Spices, turmeric, ground",
+      "long_desc": "\"Spices, turmeric, ground\"",
       "grams": 2.0,
       "section": "lamb",
       "ingredient_group": "lamb",
@@ -237,7 +237,7 @@
     {
       "ingredient_key": "cardamom_ground",
       "ndb_no": "2006",
-      "long_desc": "Spices, cardamom",
+      "long_desc": "\"Spices, cardamom\"",
       "grams": 2.0,
       "section": "lamb",
       "ingredient_group": "lamb",
@@ -388,7 +388,7 @@
       "grams": 16.0,
       "section": "rice",
       "ingredient_group": "rice",
-      "qty_display": "\u00bc cup fresh",
+      "qty_display": "\u00bc cup fresh cilantro, chopped",
       "contribution": {
         "Energy_KCal": 3.68,
         "Protein": 0.341,

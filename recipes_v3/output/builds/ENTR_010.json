@@ -153,7 +153,7 @@
     {
       "ingredient_key": "dill_seed",
       "ndb_no": "2016",
-      "long_desc": "Spices, dill seed",
+      "long_desc": "",
       "grams": 4.2,
       "section": "brine",
       "ingredient_group": "brine",
@@ -174,7 +174,7 @@
     {
       "ingredient_key": "mace_ground",
       "ndb_no": "2022",
-      "long_desc": "Spices, mace, ground",
+      "long_desc": "",
       "grams": 1.7,
       "section": "brine",
       "ingredient_group": "brine",
@@ -258,7 +258,7 @@
     {
       "ingredient_key": "beef_brisket_flat_raw",
       "ndb_no": "13805",
-      "long_desc": "Beef, brisket, flat half, separable lean and fat, trimmed to 1/8\" fat, all grades, raw",
+      "long_desc": "",
       "grams": 1360.8,
       "section": "beef",
       "ingredient_group": "beef",
@@ -367,7 +367,7 @@
       "grams": 453.6,
       "section": "vegetables",
       "ingredient_group": "vegetables",
-      "qty_display": "1/2 head cabbage",
+      "qty_display": "\u00bd head green cabbage",
       "contribution": {
         "Energy_KCal": 113.4,
         "Protein": 5.806,
@@ -430,7 +430,7 @@
       "grams": 160.0,
       "section": "vegetables",
       "ingredient_group": "vegetables",
-      "qty_display": "4 stalks celery",
+      "qty_display": "4 stalks",
       "contribution": {
         "Energy_KCal": 25.6,
         "Protein": 1.104,

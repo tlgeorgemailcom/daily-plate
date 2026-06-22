@@ -153,7 +153,7 @@
     {
       "ingredient_key": "turmeric_ground",
       "ndb_no": "2043",
-      "long_desc": "Spices, turmeric, ground",
+      "long_desc": "\"Spices, turmeric, ground\"",
       "grams": 1.5,
       "section": "chicken",
       "ingredient_group": "chicken",
@@ -363,7 +363,7 @@
     {
       "ingredient_key": "turmeric_ground",
       "ndb_no": "2043",
-      "long_desc": "Spices, turmeric, ground",
+      "long_desc": "\"Spices, turmeric, ground\"",
       "grams": 1.5,
       "section": "sauce",
       "ingredient_group": "sauce",
@@ -451,7 +451,7 @@
       "grams": 4.0,
       "section": "sauce",
       "ingredient_group": "sauce",
-      "qty_display": "1/4 cup",
+      "qty_display": "\u00bc cup fresh cilantro, chopped",
       "contribution": {
         "Energy_KCal": 0.92,
         "Protein": 0.085,

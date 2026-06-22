@@ -48,7 +48,7 @@
     {
       "ingredient_key": "orange_juice_raw",
       "ndb_no": "9206",
-      "long_desc": "Orange juice, raw",
+      "long_desc": "",
       "grams": 61.0,
       "section": "main",
       "ingredient_group": "main",
@@ -199,7 +199,7 @@
       "grams": 8.0,
       "section": "main",
       "ingredient_group": "main",
-      "qty_display": "\u00bc cup",
+      "qty_display": "\u00bc cup fresh cilantro, chopped",
       "contribution": {
         "Energy_KCal": 1.84,
         "Protein": 0.17,

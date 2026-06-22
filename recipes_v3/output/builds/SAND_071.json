@@ -220,7 +220,7 @@
       "grams": 100.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "1 cup cabbage, shredded",
+      "qty_display": "1 cup green cabbage, shredded",
       "contribution": {
         "Energy_KCal": 25.0,
         "Protein": 1.28,
@@ -325,7 +325,7 @@
       "grams": 8.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "2 tbsp cilantro, chopped",
+      "qty_display": "2 tbsp fresh cilantro, chopped",
       "contribution": {
         "Energy_KCal": 1.84,
         "Protein": 0.17,
