@@ -19871,5 +19871,61 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'main', label: 'Marinara Sauce', cookingMethod: '', yieldFactorWater: 0.85 }
     ],
+  },
+  {
+    id: 'SAND_068',
+    name: 'Beef Shawarma',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 415,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 2)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":672.7,"pro":45.8,"fat":33.5,"carb":48.7,"fib":5.9,"h2o":220.2,"sug":3.6,"perServing":{"cal":672.7,"pro":45.8,"fat":33.5,"carb":48.7,"fib":5.9,"h2o":220.2,"sug":3.6,"AddedSugars":0.0,"IntrinsicSugars":3.6},"micros":{"vitaminA":24.07,"vitaminC":8.01,"vitaminD":0.0,"vitaminE":0.73,"vitaminK":38.76,"vitaminB6":0.25,"vitaminB12":1.83,"thiamin":0.14,"riboflavin":0.13,"niacin":2.73,"folate":20.76,"calcium":54.13,"iron":2.35,"magnesium":28.36,"phosphorus":166.49,"potassium":315.71,"sodium":289.86,"zinc":3.05,"copper":0.16,"selenium":16.3,"cholesterol":28.36,"saturatedFat":1.95,"monoFat":4.92,"polyFat":1.56,"omega3":0.0,"omega6":0.08},"gramsPerServing":353.9,"servings":2,"per100g":{"Energy_KCal":190.1,"Water":62.23,"Protein":12.94,"TotalLipidFat":9.45,"Carbohydrate":13.75,"FiberTotalDietary":1.67,"SugarsTotal":1.03,"Cholesterol":28.36,"FattyAcids_totalSaturated":1.95,"FattyAcids_totalMonounsaturated":4.92,"FattyAcids_totalPolyunsaturated":1.56,"LinoleicAcid":0.08,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":24.07,"Retinol":0.0,"Carotene_beta":269.1,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.73,"VitaminK_phylloquinone":38.76,"VitaminC_totalAscorbicAcid":8.01,"Thiamin":0.14,"Riboflavin":0.13,"Niacin":2.73,"PantothenicAcid":0.43,"VitaminB6":0.25,"Folate_total":20.76,"Folate_food":20.76,"Folate_DFE":20.76,"FolicAcid":0.0,"VitaminB12":1.83,"Choline_total":40.2,"Betaine":7.2,"LuteinZeaxanthin":187.76,"Lycopene":447.18,"Calcium_Ca":54.13,"Iron_Fe":2.35,"Magnesium_Mg":28.36,"Phosphorus_P":166.49,"Potassium_K":315.71,"Sodium_Na":289.86,"Zinc_Zn":3.05,"Copper_Cu":0.16,"Manganese_Mn":0.34,"Selenium_Se":16.3,"Tryptophan":0.1,"Threonine":0.48,"Isoleucine":0.56,"Leucine":0.98,"Lysine":0.92,"Methionine":0.31,"Cystine":0.16,"Phenylalanine":0.52,"Tyrosine":0.4,"Valine":0.62,"Arginine":0.84,"Histidine":0.38,"Alanine":0.71,"AsparticAcid":1.1,"GlutamicAcid":2.3,"Glycine":0.73,"Proline":0.7,"Serine":0.52,"omega3":0.0,"omega6":0.08,"AddedSugars":0.0,"IntrinsicSugars":1.03},"addedSugars":0.0,"intrinsicSugars":3.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.75,"yieldFactorFat":1.0,"sources":[{"ndb":"23061","name":"Beef, round, knuckle, tip center, steak, separable lean and fat, trimmed to 0\" fat, all grades, raw","grams":170.1},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":13.6},{"ndb":"9152","name":"Lemon juice, raw","grams":22.5},{"ndb":"11215","name":"Garlic, raw","grams":6.0},{"ndb":"2014","name":"Spices, cumin seed","grams":1.5},{"ndb":"2013","name":"Spices, coriander seed","grams":0.9},{"ndb":"2028","name":"Spices, paprika","grams":1.1},{"ndb":"2043","name":"\"Spices, turmeric, ground\"","grams":0.8},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.7},{"ndb":"2006","name":"\"Spices, cardamom\"","grams":0.2},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"18413","name":"Bread, pita, white, enriched","grams":60.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":61.5},{"ndb":"11282","name":"Onions, raw","grams":20.0},{"ndb":"11297","name":"Parsley, fresh","grams":7.5},{"ndb":"12166","name":"Seeds, sesame butter, tahini, from roasted and toasted kernels (most common type)","grams":15.0},{"ndb":"9152","name":"Lemon juice, raw","grams":7.5}],"sections":[{"section_key":"beef","section_label":"Beef","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":13,"raw_grams":438.82,"raw_water_grams":296.19,"raw_fat_grams":48.89,"raw_protein_grams":73.57,"raw_carb_grams":13.65,"final_grams":364.78},{"section_key":"assembly","section_label":"Assembly","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":343.0,"raw_water_grams":218.34,"raw_fat_grams":18.01,"raw_protein_grams":18.04,"raw_carb_grams":83.7,"final_grams":343.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Beef Shawarma', quantity: 'custom (g)', foodWord: 'BEEFSHAWARMA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'sirloin tip steak', quantity: '12 oz sirloin tip steak, thinly sliced', section: 'beef', ndbNo: '23061', portionDesc: 'g', portionGrams: 340.2 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'beef', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'lemon juice', quantity: '3 tbsp', section: 'beef', ndbNo: '9152', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'garlic', quantity: '4 cloves, minced', section: 'beef', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'ground cumin', quantity: '1½ tsp', section: 'beef', ndbNo: '2014', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground coriander', quantity: '1 tsp', section: 'beef', ndbNo: '2013', portionDesc: 'g', portionGrams: 1.8 },
+      { name: 'paprika', quantity: '1 tsp', section: 'beef', ndbNo: '2028', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'ground turmeric', quantity: '½ tsp', section: 'beef', ndbNo: '2043', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground cinnamon', quantity: '½ tsp', section: 'beef', ndbNo: '2010', portionDesc: 'g', portionGrams: 1.3 },
+      { name: 'ground cardamom', quantity: '¼ tsp', section: 'beef', ndbNo: '2006', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'cayenne pepper', quantity: '¼ tsp', section: 'beef', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.45 },
+      { name: 'salt', quantity: '½ tsp', section: 'beef', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'beef', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'pita bread, white', quantity: '2 pitas', section: 'assembly', ndbNo: '18413', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'tomato', quantity: '1 medium, diced', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'onion', quantity: '¼ medium, thinly sliced', section: 'assembly', ndbNo: '11282', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'fresh parsley', quantity: '¼ cup, chopped', section: 'assembly', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'tahini', quantity: '2 tbsp', section: 'assembly', ndbNo: '12166', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'lemon juice', quantity: '1 tbsp', section: 'assembly', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 }
+    ],
+    recipeInstructions: [
+      'In a bowl, whisk together the olive oil, lemon juice, minced garlic, cumin, coriander, paprika, turmeric, cinnamon, cardamom, cayenne, salt, and black pepper to make the marinade. Add the sirloin strips, toss well to coat, and marinate at room temperature for at least 30 minutes, or refrigerate for up to 4 hours.',
+      'Heat a large cast-iron skillet or grill pan over high heat until very hot. Working in batches if needed, add the marinated beef in a single layer. Cook undisturbed for 2 to 3 minutes until charred and caramelized on the bottom, then flip and cook 1 to 2 minutes more. Transfer to a cutting board.',
+      'Let the beef rest 5 minutes, then slice thinly across the grain.',
+      'Warm the pita breads in a dry skillet over medium heat for 30 seconds per side, or wrap in foil and warm in a 350°F oven for 5 minutes.',
+      'To assemble each wrap, lay a pita flat and place half the sliced beef down the center. Top with diced tomato, sliced onion, and chopped parsley. Drizzle with tahini and a squeeze of lemon juice. Roll tightly and serve immediately.',
+      'Suggestions (not included): Serve with pickled turnips, cucumber slices, or a yogurt-garlic sauce alongside.'
+    ],
+    sections: [
+      { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

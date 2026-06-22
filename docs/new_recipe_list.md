@@ -1,6 +1,6 @@
 Sandwiches & Burgers
 
-Beef Shawarma
+✅ Beef Shawarma
 Buffalo Chicken Wraps
 Chicken Caesar Wrap
 Fish Wrap

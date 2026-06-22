@@ -383,3 +383,5 @@ flaxseed_ground,12220,FLAXSEED,"Seeds, flaxseed",ground flaxseed,tbsp,10.5,SR Le
 chia_seeds,12006,CHIA,"Seeds, chia seeds, dried",chia seeds,tbsp,12.5,
 hemp_seeds_hulled,12012,HEMP,"Seeds, hemp seed, hulled",hemp seeds,tbsp,10.0,
 buckwheat_groats_raw,20008,BUCKWHEATGROATS,Buckwheat,buckwheat groats,cup,170.0,Raw buckwheat groats; 1 cup = 170g (USDA M-series)
+turmeric_ground,2043,TURMERIC,"""Spices, turmeric, ground""",ground turmeric,teaspoon,3.0,Ground turmeric spice
+cardamom_ground,2006,CARDAMOM,"""Spices, cardamom""",ground cardamom,teaspoon,2.0,Ground cardamom spice
