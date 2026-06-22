@@ -8,7 +8,7 @@ Sandwiches & Burgers
 ✅ Mediterranean Wraps
 ✅ Bacon Cheeseburger Bites
 ✅ Pinwheel Sandwiches
-Shrimp Salad Rolls
+✅ Shrimp Salad Rolls
 Tomato Sandwich
 Tofu Burritos
 Arepas
