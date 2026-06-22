@@ -10,7 +10,7 @@ Sandwiches & Burgers
 ✅ Pinwheel Sandwiches
 ✅ Shrimp Salad Rolls
 ✅ Tomato Sandwich
-Tofu Burritos
+✅ Tofu Burritos
 Arepas
 Empanadas
 Gorditas
