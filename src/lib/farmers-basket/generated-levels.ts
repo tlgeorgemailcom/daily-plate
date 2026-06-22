@@ -19690,5 +19690,53 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'granola', label: 'Granola', cookingMethod: '', yieldFactorWater: 0.66 }
     ],
+  },
+  {
+    id: 'BKFST_054',
+    name: 'Granola, Omega Balanced',
+    category: 'Breakfast',
+    dietaryCategory: 'vegan',
+    levelNum: 411,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 5, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 5000 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1/4 cup (makes 24 servings)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":134.6,"pro":4.0,"fat":7.1,"carb":15.6,"fib":4.0,"h2o":2.1,"sug":2.2,"perServing":{"cal":134.6,"pro":4.0,"fat":7.1,"carb":15.6,"fib":4.0,"h2o":2.1,"sug":2.2,"AddedSugars":2.0,"IntrinsicSugars":0.1},"micros":{"vitaminA":0.13,"vitaminC":0.23,"vitaminD":0.0,"vitaminE":0.18,"vitaminK":0.74,"vitaminB6":0.17,"vitaminB12":0.0,"thiamin":0.32,"riboflavin":0.39,"niacin":4.7,"folate":35.39,"calcium":150.62,"iron":3.47,"magnesium":254.8,"phosphorus":476.33,"potassium":492.85,"sodium":251.32,"zinc":3.22,"copper":0.99,"selenium":15.03,"cholesterol":0.0,"saturatedFat":6.62,"monoFat":2.83,"polyFat":10.14,"omega3":2.23,"omega6":2.07},"gramsPerServing":29.9,"servings":24,"per100g":{"Energy_KCal":450.6,"Water":7.0,"Protein":13.57,"TotalLipidFat":23.76,"Carbohydrate":52.28,"FiberTotalDietary":13.53,"SugarsTotal":7.24,"Cholesterol":0.0,"FattyAcids_totalSaturated":6.62,"FattyAcids_totalMonounsaturated":2.83,"FattyAcids_totalPolyunsaturated":10.14,"LinoleicAcid":2.07,"alphaLinolenicAcid":2.23,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.13,"Retinol":0.0,"Carotene_beta":1.14,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.18,"VitaminK_phylloquinone":0.74,"VitaminC_totalAscorbicAcid":0.23,"Thiamin":0.32,"Riboflavin":0.39,"Niacin":4.7,"PantothenicAcid":0.63,"VitaminB6":0.17,"Folate_total":35.39,"Folate_food":35.39,"Folate_DFE":29.93,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":10.95,"Betaine":0.39,"LuteinZeaxanthin":54.12,"Lycopene":0.02,"Calcium_Ca":150.62,"Iron_Fe":3.47,"Magnesium_Mg":254.8,"Phosphorus_P":476.33,"Potassium_K":492.85,"Sodium_Na":251.32,"Zinc_Zn":3.22,"Copper_Cu":0.99,"Manganese_Mn":2.31,"Selenium_Se":15.03,"Tryptophan":0.22,"Threonine":0.54,"Isoleucine":0.56,"Leucine":0.93,"Lysine":0.65,"Methionine":0.27,"Cystine":0.23,"Phenylalanine":0.63,"Tyrosine":0.35,"Valine":0.73,"Arginine":1.4,"Histidine":0.35,"Alanine":0.74,"AsparticAcid":1.34,"GlutamicAcid":2.47,"Glycine":0.91,"Proline":0.58,"Serine":0.74,"omega3":2.23,"omega6":2.07,"AddedSugars":6.75,"IntrinsicSugars":0.49},"addedSugars":2.0,"intrinsicSugars":0.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.66,"yieldFactorFat":1.0,"sources":[{"ndb":"20008","name":"Buckwheat","grams":14.2},{"ndb":"12220","name":"Seeds, flaxseed","grams":3.5},{"ndb":"12006","name":"Seeds, chia seeds, dried","grams":4.2},{"ndb":"12012","name":"Seeds, hemp seed, hulled","grams":1.7},{"ndb":"12155","name":"Nuts, walnuts, english","grams":2.1},{"ndb":"4047","name":"Oil, coconut","grams":1.7},{"ndb":"19353","name":"Syrups, maple","grams":3.3},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.1},{"ndb":"2050","name":"Vanilla extract","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":0.2}],"sections":[{"section_key":"granola","section_label":"Granola","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.66,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":742.7,"raw_water_grams":75.99,"raw_fat_grams":170.3,"raw_protein_grams":97.28,"raw_carb_grams":374.75,"final_grams":716.86}],"cookingMethod":"baked"},
+    recipeIngredients: [
+      { name: 'Granola, Omega Balanced', quantity: 'custom (g)', foodWord: 'GRANOLABALANCED', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'buckwheat groats', quantity: '2 cups buckwheat groats', section: 'granola', ndbNo: '20008', portionDesc: 'g', portionGrams: 340.0 },
+      { name: 'ground flaxseed', quantity: '1/2 cup ground flaxseed', section: 'granola', ndbNo: '12220', portionDesc: 'g', portionGrams: 84.0 },
+      { name: 'chia seeds', quantity: '1/2 cup chia seeds', section: 'granola', ndbNo: '12006', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'hemp seeds', quantity: '1/4 cup hemp seeds', section: 'granola', ndbNo: '12012', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'walnuts', quantity: '1/2 cup walnuts, roughly chopped', section: 'granola', ndbNo: '12155', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'coconut oil', quantity: '3 tbsp coconut oil, melted', section: 'granola', ndbNo: '4047', portionDesc: 'g', portionGrams: 40.8 },
+      { name: 'maple syrup', quantity: '1/4 cup maple syrup', section: 'granola', ndbNo: '19353', portionDesc: 'g', portionGrams: 80.0 },
+      { name: 'ground cinnamon', quantity: '1/2 tsp ground cinnamon', section: 'granola', ndbNo: '2010', portionDesc: 'g', portionGrams: 1.3 },
+      { name: 'vanilla extract', quantity: '1/2 tsp vanilla extract', section: 'granola', ndbNo: '2050', portionDesc: 'g', portionGrams: 2.1 },
+      { name: 'salt', quantity: '3/4 tsp', section: 'granola', ndbNo: '2047', portionDesc: 'g', portionGrams: 4.5 }
+    ],
+    recipeInstructions: [
+      'Preheat the oven to 325°F. Line a large rimmed baking sheet with parchment paper.',
+      'In a small bowl, combine the coconut oil (melted), maple syrup, ground cinnamon, vanilla extract, and salt. Stir well to combine.',
+      'In a large bowl, combine the buckwheat groats, walnuts (roughly chopped), ground flaxseed, chia seeds, and hemp seeds. Toss to mix evenly.',
+      'Pour the wet mixture over the dry ingredients. Stir thoroughly until every groat and nut is evenly coated.',
+      'Spread the mixture in a thin, even layer on the prepared baking sheet.',
+      'Bake for 30–35 minutes, stirring gently every 10 minutes, until the granola is golden and fragrant. Watch carefully in the last 5 minutes to avoid over-browning.',
+      'Remove from the oven and let cool completely on the baking sheet — the granola will crisp up as it cools. Do not stir while cooling.',
+      'Transfer to an airtight container. Stored at room temperature, granola keeps for up to 2 weeks.',
+      'Suggestions (not included): Serve with plant-based milk or coconut yogurt, or enjoy dry as a trail mix.'
+    ],
+    sections: [
+      { key: 'granola', label: 'Granola', cookingMethod: '', yieldFactorWater: 0.66 }
+    ],
   }
 ];

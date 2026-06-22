@@ -54482,6 +54482,34 @@ export const FOODS: Food[] = [
         "gm": 28.35
       }
     ]
+  },
+  {
+    "word": "BUCKWHEATGROATS",
+    "display": "Buckwheat Groats",
+    "groups": [
+      "grain"
+    ],
+    "ndb": "20008",
+    "desc": "Buckwheat",
+    "cal": 343.0,
+    "pro": 13.25,
+    "fat": 3.4,
+    "carb": 71.5,
+    "fib": 10.0,
+    "h2o": 9.75,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 170.0
+      }
+    ]
   }
 ];
 
