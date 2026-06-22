@@ -7,7 +7,7 @@ Sandwiches & Burgers
 ✅ Lamb Burger
 ✅ Mediterranean Wraps
 ✅ Bacon Cheeseburger Bites
-Pinwheel Sandwiches
+✅ Pinwheel Sandwiches
 Shrimp Salad Rolls
 Tomato Sandwich
 Tofu Burritos

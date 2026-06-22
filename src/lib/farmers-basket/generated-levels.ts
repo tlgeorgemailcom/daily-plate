@@ -20228,5 +20228,49 @@ export const LEVELS: Level[] = [
       { key: 'patties', label: 'Patties', cookingMethod: '', yieldFactorWater: 0.75 },
       { key: 'toppings', label: 'Toppings', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_075',
+    name: 'Pinwheel Sandwiches',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'pollo',
+    levelNum: 422,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 roll (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":536.9,"pro":23.2,"fat":35.1,"carb":32.2,"fib":2.9,"h2o":146.7,"sug":6.1,"perServing":{"cal":536.9,"pro":23.2,"fat":35.1,"carb":32.2,"fib":2.9,"h2o":146.7,"sug":6.1,"AddedSugars":0.0,"IntrinsicSugars":6.1},"micros":{"vitaminA":160.44,"vitaminC":17.98,"vitaminD":4.21,"vitaminE":0.65,"vitaminK":39.16,"vitaminB6":0.18,"vitaminB12":0.27,"thiamin":0.13,"riboflavin":0.21,"niacin":2.75,"folate":44.5,"calcium":147.43,"iron":1.14,"magnesium":21.25,"phosphorus":185.29,"potassium":222.82,"sodium":511.28,"zinc":0.95,"copper":0.04,"selenium":12.93,"cholesterol":46.65,"saturatedFat":7.73,"monoFat":3.78,"polyFat":1.23,"omega3":0.09,"omega6":0.79},"gramsPerServing":242.6,"servings":4,"per100g":{"Energy_KCal":221.31,"Water":60.48,"Protein":9.58,"TotalLipidFat":14.48,"Carbohydrate":13.28,"FiberTotalDietary":1.2,"SugarsTotal":2.5,"Cholesterol":46.65,"FattyAcids_totalSaturated":7.73,"FattyAcids_totalMonounsaturated":3.78,"FattyAcids_totalPolyunsaturated":1.23,"LinoleicAcid":0.79,"alphaLinolenicAcid":0.08,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.0,"VitaminA_RAE":160.44,"Retinol":109.45,"Carotene_beta":589.46,"VitaminD":4.21,"VitaminE_alphaTocopherol":0.65,"VitaminK_phylloquinone":39.16,"VitaminC_totalAscorbicAcid":17.98,"Thiamin":0.13,"Riboflavin":0.21,"Niacin":2.75,"PantothenicAcid":0.4,"VitaminB6":0.18,"Folate_total":44.5,"Folate_food":28.87,"Folate_DFE":55.38,"FolicAcid":15.63,"VitaminB12":0.27,"Choline_total":19.06,"Betaine":8.53,"LuteinZeaxanthin":799.36,"Lycopene":0.01,"Calcium_Ca":147.43,"Iron_Fe":1.14,"Magnesium_Mg":21.25,"Phosphorus_P":185.29,"Potassium_K":222.82,"Sodium_Na":511.28,"Zinc_Zn":0.95,"Copper_Cu":0.04,"Manganese_Mn":0.19,"Selenium_Se":12.93,"Tryptophan":0.14,"Threonine":0.39,"Isoleucine":0.44,"Leucine":0.78,"Lysine":0.63,"Methionine":0.24,"Cystine":0.09,"Phenylalanine":0.41,"Tyrosine":0.37,"Valine":0.49,"Arginine":0.46,"Histidine":0.24,"Alanine":0.41,"AsparticAcid":0.79,"GlutamicAcid":1.88,"Glycine":0.35,"Proline":0.75,"Serine":0.41,"omega3":0.09,"omega6":0.79,"AddedSugars":0.0,"IntrinsicSugars":2.5},"addedSugars":0.0,"intrinsicSugars":6.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18364","name":"Tortillas, ready-to-bake or -fry, flour, refrigerated","grams":48.0},{"ndb":"1017","name":"Cheese, cream","grams":56.8},{"ndb":"7081","name":"Turkey breast, sliced, prepackaged","grams":56.7},{"ndb":"1009","name":"Cheese, cheddar","grams":28.4},{"ndb":"11457","name":"Spinach, raw","grams":15.0},{"ndb":"11821","name":"Peppers, sweet, red, raw","grams":29.8},{"ndb":"11291","name":"Onions, spring or scallions (includes tops and bulb), raw","grams":7.5},{"ndb":"2020","name":"Spices, garlic powder","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"pinwheels","section_label":"Pinwheels","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":970.32,"raw_water_grams":586.84,"raw_fat_grams":140.52,"raw_protein_grams":92.99,"raw_carb_grams":128.88,"final_grams":970.32}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Pinwheel Sandwiches', quantity: 'custom (g)', foodWord: 'PINWHEEL', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'flour tortilla', quantity: '4 large flour tortillas (10-inch)', section: 'pinwheels', ndbNo: '18364', portionDesc: 'g', portionGrams: 192.0 },
+      { name: 'cream cheese', quantity: '1 package (8 oz) cream cheese, softened', section: 'pinwheels', ndbNo: '1017', portionDesc: 'g', portionGrams: 227.0 },
+      { name: 'deli turkey breast', quantity: '8 oz deli turkey breast, thin-sliced', section: 'pinwheels', ndbNo: '7081', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'Cheddar cheese', quantity: '4 oz Cheddar cheese, shredded', section: 'pinwheels', ndbNo: '1009', portionDesc: 'g', portionGrams: 113.4 },
+      { name: 'spinach', quantity: '2 cups fresh spinach, whole leaves', section: 'pinwheels', ndbNo: '11457', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'red bell pepper', quantity: '1 medium red bell pepper, thinly sliced', section: 'pinwheels', ndbNo: '11821', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'scallions', quantity: '2 scallions, thinly sliced', section: 'pinwheels', ndbNo: '11291', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'garlic powder', quantity: '½ tsp', section: 'pinwheels', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.55 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'pinwheels', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'In a large bowl, beat the cream cheese with garlic powder and black pepper until smooth and spreadable.',
+      'Lay a flour tortilla flat on a clean surface. Spread a quarter of the cream cheese mixture evenly to the edges, leaving a ¼-inch border at one end.',
+      'Layer a quarter of the turkey, shredded cheddar, spinach leaves, red bell pepper slices, and scallions evenly over the cream cheese.',
+      'Starting from the filled edge, roll the tortilla tightly into a log. Repeat with the remaining 3 tortillas. Wrap each roll in plastic wrap and refrigerate for at least 1 hour (or overnight) to firm up.',
+      'Unwrap and slice each roll into 8–10 rounds about 1 inch thick using a sharp serrated knife. Arrange on a platter and serve chilled.'
+    ],
+    sections: [
+      { key: 'pinwheels', label: 'Pinwheels', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
