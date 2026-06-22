@@ -19927,5 +19927,55 @@ export const LEVELS: Level[] = [
       { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.75 },
       { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_069',
+    name: 'Buffalo Chicken Wrap',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'pollo',
+    levelNum: 416,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 2)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":569.5,"pro":48.9,"fat":21.6,"carb":42.9,"fib":5.4,"h2o":249.0,"sug":5.4,"perServing":{"cal":569.5,"pro":48.9,"fat":21.6,"carb":42.9,"fib":5.4,"h2o":249.0,"sug":5.4,"AddedSugars":0.0,"IntrinsicSugars":5.4},"micros":{"vitaminA":142.0,"vitaminC":1.49,"vitaminD":1.25,"vitaminE":0.5,"vitaminK":19.97,"vitaminB6":0.33,"vitaminB12":0.13,"thiamin":0.15,"riboflavin":0.16,"niacin":4.61,"folate":45.88,"calcium":64.33,"iron":1.17,"magnesium":23.28,"phosphorus":165.63,"potassium":287.52,"sodium":341.74,"zinc":0.61,"copper":0.05,"selenium":15.64,"cholesterol":36.56,"saturatedFat":1.82,"monoFat":2.31,"polyFat":0.83,"omega3":0.04,"omega6":0.51},"gramsPerServing":368.7,"servings":2,"per100g":{"Energy_KCal":154.48,"Water":67.55,"Protein":13.25,"TotalLipidFat":5.85,"Carbohydrate":11.65,"FiberTotalDietary":1.46,"SugarsTotal":1.46,"Cholesterol":36.56,"FattyAcids_totalSaturated":1.82,"FattyAcids_totalMonounsaturated":2.31,"FattyAcids_totalPolyunsaturated":0.83,"LinoleicAcid":0.51,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":142.0,"Retinol":10.7,"Carotene_beta":1428.82,"VitaminD":1.25,"VitaminE_alphaTocopherol":0.5,"VitaminK_phylloquinone":19.97,"VitaminC_totalAscorbicAcid":1.49,"Thiamin":0.15,"Riboflavin":0.16,"Niacin":4.61,"PantothenicAcid":0.8,"VitaminB6":0.33,"Folate_total":45.88,"Folate_food":30.41,"Folate_DFE":56.67,"FolicAcid":15.49,"VitaminB12":0.13,"Choline_total":39.08,"Betaine":4.34,"LuteinZeaxanthin":349.01,"Lycopene":0.1,"Calcium_Ca":64.33,"Iron_Fe":1.17,"Magnesium_Mg":23.28,"Phosphorus_P":165.63,"Potassium_K":287.52,"Sodium_Na":341.74,"Zinc_Zn":0.61,"Copper_Cu":0.05,"Manganese_Mn":0.17,"Selenium_Se":15.64,"Tryptophan":0.16,"Threonine":0.55,"Isoleucine":0.6,"Leucine":1.03,"Lysine":1.11,"Methionine":0.31,"Cystine":0.13,"Phenylalanine":0.53,"Tyrosine":0.46,"Valine":0.65,"Arginine":0.8,"Histidine":0.44,"Alanine":0.68,"AsparticAcid":1.13,"GlutamicAcid":2.16,"Glycine":0.52,"Proline":0.55,"Serine":0.5,"omega3":0.04,"omega6":0.51,"AddedSugars":0.0,"IntrinsicSugars":1.46},"addedSugars":0.0,"intrinsicSugars":5.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.75,"yieldFactorFat":1.0,"sources":[{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":170.1},{"ndb":"6169","name":"Sauce, ready-to-serve, pepper, TABASCO","grams":22.5},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"2020","name":"Spices, garlic powder","grams":0.8},{"ndb":"2026","name":"Spices, onion powder","grams":0.6},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"18364","name":"Tortillas, ready-to-bake or -fry, flour, refrigerated","grams":72.0},{"ndb":"11251","name":"Lettuce, cos or romaine, raw","grams":47.0},{"ndb":"11143","name":"Celery, raw","grams":40.0},{"ndb":"11124","name":"Carrots, raw","grams":30.5},{"ndb":"1004","name":"Cheese, blue","grams":14.2}],"sections":[{"section_key":"chicken","section_label":"Chicken","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":403.62,"raw_water_grams":294.47,"raw_fat_grams":22.9,"raw_protein_grams":77.57,"raw_carb_grams":2.8,"final_grams":330.01},{"section_key":"assembly","section_label":"Assembly","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":407.35,"raw_water_grams":277.21,"raw_fat_grams":20.22,"raw_protein_grams":20.15,"raw_carb_grams":83.08,"final_grams":407.35}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Buffalo Chicken Wrap', quantity: 'custom (g)', foodWord: 'BUFFALOCHICKENWRAP', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chicken breast', quantity: '2 chicken breasts (6 oz each)', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 340.2 },
+      { name: 'hot sauce', quantity: '3 tbsp hot sauce', section: 'chicken', ndbNo: '6169', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'garlic powder', quantity: '½ tsp', section: 'chicken', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.55 },
+      { name: 'onion powder', quantity: '½ tsp', section: 'chicken', ndbNo: '2026', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'salt', quantity: '¼ tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'flour tortilla', quantity: '2 large (10-inch) flour tortillas', section: 'assembly', ndbNo: '18364', portionDesc: 'g', portionGrams: 144.0 },
+      { name: 'romaine lettuce', quantity: '2 cups romaine lettuce, shredded', section: 'assembly', ndbNo: '11251', portionDesc: 'g', portionGrams: 94.0 },
+      { name: 'celery stalk', quantity: '2 celery stalks, thinly sliced', section: 'assembly', ndbNo: '11143', portionDesc: 'g', portionGrams: 80.0 },
+      { name: 'carrot', quantity: '1 medium carrot, shredded', section: 'assembly', ndbNo: '11124', portionDesc: 'g', portionGrams: 61.0 },
+      { name: 'blue cheese crumbles', quantity: '1 oz blue cheese crumbles', section: 'assembly', ndbNo: '1004', portionDesc: 'g', portionGrams: 28.35 }
+    ],
+    recipeInstructions: [
+      'Add the chicken breasts to a large bowl. Pour in the hot sauce and sprinkle with garlic powder, onion powder, salt, and black pepper. Stir to coat and allow to marinate for at least 10 minutes, or overnight in the refrigerator.',
+      'Heat the olive oil in a large skillet over medium heat. Add the chicken and cook for about 4 minutes on each side, or until cooked through (internal temperature 165°F).',
+      'Remove the chicken from the pan. Raise the heat and let the hot sauce in the pan reduce for 1–2 minutes until slightly thickened.',
+      'Slice the chicken into strips, return it to the pan, and toss to coat in the reduced sauce.',
+      'Warm the flour tortillas in a dry skillet for 30 seconds per side, or wrap in a damp paper towel and microwave for 20 seconds.',
+      'Layer each tortilla with romaine, celery, carrot, and blue cheese crumbles. Top with the buffalo chicken, fold in the sides, and roll tightly.',
+      'Suggestions (not included): Serve with Ranch Dressing (see SAUCE_020) or Blue Cheese Dressing (see SAUCE_021).'
+    ],
+    sections: [
+      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
