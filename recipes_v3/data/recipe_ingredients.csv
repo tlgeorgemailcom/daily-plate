@@ -4591,3 +4591,4 @@ SAND_079,10,black_pepper_ground,¼ tsp ground black pepper,0.575,,,filling,,fals
 SAND_079,11,egg_cooked_hardboiled,"1 hard-boiled egg, chopped",50.0,,,filling,,false,,
 SAND_079,12,olives_black_canned,"8 pitted black olives, halved",44.0,,,filling,,false,black olives,
 SAND_079,13,@CRUST_004,1 recipe Pie Crust Double (Unbaked),559.57,,,crust,,false,,
+SAND_079,14,egg_white_raw,1 large egg white (for sealing edges),35.0,,,crust,,false,egg white,
