@@ -1,7 +1,7 @@
 {
   "recipe_id": "SALAD_003",
   "recipe_name": "Cobb Salad",
-  "sr_rule": "D",
+  "sr_rule": "Rule D",
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
@@ -25,6 +25,27 @@
   "grams_per_serving": 404.19,
   "ingredients": [
     {
+      "ingredient_key": "chicken_breast_raw",
+      "ndb_no": "5062",
+      "long_desc": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+      "grams": 170.1,
+      "section": "chicken",
+      "ingredient_group": "chicken breast",
+      "qty_display": "6 oz",
+      "contribution": {
+        "Energy_KCal": 204.12,
+        "Protein": 38.272,
+        "TotalLipidFat": 4.457,
+        "Carbohydrate": 0.0,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.0,
+        "Water": 125.704
+      },
+      "sugar_policy": "none_added",
+      "added_sugar_g": 0.0,
+      "intrinsic_sugar_g": 0.0
+    },
+    {
       "ingredient_key": "lettuce_romaine_raw",
       "ndb_no": "11251",
       "long_desc": "Lettuce, cos or romaine, raw",
@@ -44,27 +65,6 @@
       "sugar_policy": "none_added",
       "added_sugar_g": 0.0,
       "intrinsic_sugar_g": 2.237
-    },
-    {
-      "ingredient_key": "chicken_breast_raw",
-      "ndb_no": "5062",
-      "long_desc": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
-      "grams": 170.1,
-      "section": "chicken",
-      "ingredient_group": "chicken breast",
-      "qty_display": "6 oz raw",
-      "contribution": {
-        "Energy_KCal": 204.12,
-        "Protein": 38.272,
-        "TotalLipidFat": 4.457,
-        "Carbohydrate": 0.0,
-        "FiberTotalDietary": 0.0,
-        "SugarsTotal": 0.0,
-        "Water": 125.704
-      },
-      "sugar_policy": "none_added",
-      "added_sugar_g": 0.0,
-      "intrinsic_sugar_g": 0.0
     },
     {
       "ingredient_key": "bacon_cooked_pan_fried",
@@ -94,7 +94,7 @@
       "grams": 136.0,
       "section": "salad",
       "ingredient_group": "avocado",
-      "qty_display": "1 fruit",
+      "qty_display": "1",
       "contribution": {
         "Energy_KCal": 227.12,
         "Protein": 2.666,

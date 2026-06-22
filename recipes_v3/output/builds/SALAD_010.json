@@ -1,7 +1,7 @@
 {
   "recipe_id": "SALAD_010",
   "recipe_name": "Chickpea Salad",
-  "sr_rule": "D",
+  "sr_rule": "Rule D",
   "canonical_ndb_no": null,
   "cooking_method": "raw",
   "cooking_method_normalized": "raw",
