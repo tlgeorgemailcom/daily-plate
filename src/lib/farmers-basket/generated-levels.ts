@@ -20184,5 +20184,49 @@ export const LEVELS: Level[] = [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
       { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_074',
+    name: 'Bacon Cheeseburger Bites',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'all',
+    levelNum: 421,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '3 bites (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":498.7,"pro":31.4,"fat":38.9,"carb":4.5,"fib":0.3,"h2o":82.8,"sug":2.6,"perServing":{"cal":498.7,"pro":31.4,"fat":38.9,"carb":4.5,"fib":0.3,"h2o":82.8,"sug":2.6,"AddedSugars":0.0,"IntrinsicSugars":2.6},"micros":{"vitaminA":53.36,"vitaminC":0.3,"vitaminD":8.22,"vitaminE":0.37,"vitaminK":2.7,"vitaminB6":0.25,"vitaminB12":1.67,"thiamin":0.09,"riboflavin":0.17,"niacin":3.56,"folate":6.18,"calcium":220.43,"iron":1.66,"magnesium":22.29,"phosphorus":279.64,"potassium":292.65,"sodium":819.09,"zinc":3.75,"copper":0.07,"selenium":20.32,"cholesterol":79.19,"saturatedFat":10.03,"monoFat":9.42,"polyFat":1.18,"omega3":0.09,"omega6":0.71},"gramsPerServing":163.1,"servings":4,"per100g":{"Energy_KCal":305.75,"Water":50.79,"Protein":19.22,"TotalLipidFat":23.84,"Carbohydrate":2.79,"FiberTotalDietary":0.18,"SugarsTotal":1.61,"Cholesterol":79.19,"FattyAcids_totalSaturated":10.03,"FattyAcids_totalMonounsaturated":9.42,"FattyAcids_totalPolyunsaturated":1.18,"LinoleicAcid":0.71,"alphaLinolenicAcid":0.08,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.0,"VitaminA_RAE":53.36,"Retinol":50.32,"Carotene_beta":35.09,"VitaminD":8.22,"VitaminE_alphaTocopherol":0.37,"VitaminK_phylloquinone":2.7,"VitaminC_totalAscorbicAcid":0.3,"Thiamin":0.09,"Riboflavin":0.17,"Niacin":3.56,"PantothenicAcid":0.48,"VitaminB6":0.25,"Folate_total":6.18,"Folate_food":6.18,"Folate_DFE":6.18,"FolicAcid":0.0,"VitaminB12":1.67,"Choline_total":53.06,"Betaine":6.61,"LuteinZeaxanthin":11.67,"Lycopene":628.63,"Calcium_Ca":220.43,"Iron_Fe":1.66,"Magnesium_Mg":22.29,"Phosphorus_P":279.64,"Potassium_K":292.65,"Sodium_Na":819.09,"Zinc_Zn":3.75,"Copper_Cu":0.07,"Manganese_Mn":0.05,"Selenium_Se":20.32,"Tryptophan":0.14,"Threonine":0.77,"Isoleucine":0.88,"Leucine":1.56,"Lysine":1.61,"Methionine":0.5,"Cystine":0.16,"Phenylalanine":0.8,"Tyrosine":0.69,"Valine":1.0,"Arginine":1.12,"Histidine":0.64,"Alanine":1.08,"AsparticAcid":1.73,"GlutamicAcid":3.17,"Glycine":1.04,"Proline":1.11,"Serine":0.84,"omega3":0.09,"omega6":0.71,"AddedSugars":0.0,"IntrinsicSugars":1.61},"addedSugars":0.0,"intrinsicSugars":2.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":113.5},{"ndb":"2020","name":"Spices, garlic powder","grams":0.4},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"10862","name":"Pork, cured, bacon, pre-sliced, cooked, pan-fried","grams":17.2},{"ndb":"1253","name":"Cheese, pasteurized process, American, without added vitamin D","grams":31.5},{"ndb":"11935","name":"Catsup","grams":8.5},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":2.5},{"ndb":"11937","name":"Pickles, cucumber, dill or kosher dill","grams":6.0}],"sections":[{"section_key":"patties","section_label":"Patties","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":459.7,"raw_water_grams":281.14,"raw_fat_grams":90.85,"raw_protein_grams":78.33,"raw_carb_grams":1.86,"final_grams":389.42},{"section_key":"toppings","section_label":"Toppings","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":263.0,"raw_water_grams":120.53,"raw_fat_grams":64.71,"raw_protein_grams":47.1,"raw_carb_grams":16.31,"final_grams":263.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Bacon Cheeseburger Bites', quantity: 'custom (g)', foodWord: 'CHEESEBURGERBITES', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'ground beef (80% lean)', quantity: '12 mini patties (about 1½ oz raw each)', section: 'patties', ndbNo: '23572', portionDesc: 'g', portionGrams: 454.0 },
+      { name: 'garlic powder', quantity: '½ tsp', section: 'patties', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.55 },
+      { name: 'salt', quantity: '½ tsp', section: 'patties', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '½ tsp', section: 'patties', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'bacon', quantity: '6 strips, cut in half', section: 'toppings', ndbNo: '10862', portionDesc: 'g', portionGrams: 69.0 },
+      { name: 'American cheese', quantity: '6 slices, cut in half', section: 'toppings', ndbNo: '1253', portionDesc: 'g', portionGrams: 126.0 },
+      { name: 'ketchup', quantity: '2 tbsp', section: 'toppings', ndbNo: '11935', portionDesc: 'g', portionGrams: 34.0 },
+      { name: 'yellow mustard', quantity: '2 tsp', section: 'toppings', ndbNo: '2046', portionDesc: 'g', portionGrams: 10.0 },
+      { name: 'dill pickle', quantity: '12 thin slices', section: 'toppings', ndbNo: '11937', portionDesc: 'g', portionGrams: 24.0 }
+    ],
+    recipeInstructions: [
+      'Mix the garlic powder, salt, and black pepper into the ground beef until just combined. Divide into 12 equal portions (~1½ oz each) and press each into a thin round patty about 2 inches in diameter. Press a small indentation in the center of each to prevent doming.',
+      'Heat a large skillet or griddle over medium-high heat (no oil needed). Cook the patties 2–3 minutes per side until cooked through (internal temperature 160°F). During the last 30 seconds, place a half-slice of American cheese on each patty, cover the pan, and cook until melted.',
+      'While still hot, top each cheesy patty with a half-strip of bacon and a dill pickle slice.',
+      'Arrange on a platter and serve with ketchup and mustard for dipping. Serve 3 bites per person.'
+    ],
+    sections: [
+      { key: 'patties', label: 'Patties', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'toppings', label: 'Toppings', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

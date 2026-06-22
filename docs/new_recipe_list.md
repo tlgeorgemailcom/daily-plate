@@ -6,7 +6,7 @@ Sandwiches & Burgers
 ✅ Fish Wrap
 ✅ Lamb Burger
 ✅ Mediterranean Wraps
-Bacon Cheeseburger Bites
+✅ Bacon Cheeseburger Bites
 Pinwheel Sandwiches
 Shrimp Salad Rolls
 Tomato Sandwich
