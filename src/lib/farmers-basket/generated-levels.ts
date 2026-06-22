@@ -19735,5 +19735,55 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'main', label: 'Fried Shrimp', cookingMethod: '', yieldFactorWater: 0.62 }
     ],
+  },
+  {
+    id: 'ENTR_127',
+    name: 'Seafood Cornmeal Fried Shrimp',
+    category: 'entrees & main courses',
+    dietaryCategory: 'pesca',
+    levelNum: 412,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '4 servings (~5 oz each)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":360.3,"pro":28.0,"fat":15.6,"carb":27.7,"fib":1.5,"h2o":71.8,"sug":1.2,"perServing":{"cal":360.3,"pro":28.0,"fat":15.6,"carb":27.7,"fib":1.5,"h2o":71.8,"sug":1.2,"AddedSugars":0.0,"IntrinsicSugars":1.2},"micros":{"vitaminA":24.97,"vitaminC":0.06,"vitaminD":11.83,"vitaminE":0.46,"vitaminK":2.51,"vitaminB6":0.05,"vitaminB12":0.11,"thiamin":0.12,"riboflavin":0.14,"niacin":1.03,"folate":37.07,"calcium":71.33,"iron":1.71,"magnesium":36.98,"phosphorus":219.51,"potassium":279.14,"sodium":514.9,"zinc":1.39,"copper":0.34,"selenium":8.07,"cholesterol":157.83,"saturatedFat":7.71,"monoFat":1.52,"polyFat":0.46,"omega3":0.03,"omega6":0.12},"gramsPerServing":146.2,"servings":4,"per100g":{"Energy_KCal":246.43,"Water":49.15,"Protein":19.13,"TotalLipidFat":10.66,"Carbohydrate":18.97,"FiberTotalDietary":1.01,"SugarsTotal":0.84,"Cholesterol":157.83,"FattyAcids_totalSaturated":7.71,"FattyAcids_totalMonounsaturated":1.52,"FattyAcids_totalPolyunsaturated":0.46,"LinoleicAcid":0.12,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.01,"DPA_22_5n3":0.0,"DHA_22_6n3":0.02,"VitaminA_RAE":24.97,"Retinol":14.8,"Carotene_beta":105.83,"VitaminD":11.83,"VitaminE_alphaTocopherol":0.46,"VitaminK_phylloquinone":2.51,"VitaminC_totalAscorbicAcid":0.06,"Thiamin":0.12,"Riboflavin":0.14,"Niacin":1.03,"PantothenicAcid":0.21,"VitaminB6":0.05,"Folate_total":37.07,"Folate_food":8.89,"Folate_DFE":56.88,"FolicAcid":37.7,"VitaminB12":0.11,"Choline_total":25.53,"Betaine":0.21,"LuteinZeaxanthin":213.59,"Lycopene":0.02,"Calcium_Ca":71.33,"Iron_Fe":1.71,"Magnesium_Mg":36.98,"Phosphorus_P":219.51,"Potassium_K":279.14,"Sodium_Na":514.9,"Zinc_Zn":1.39,"Copper_Cu":0.34,"Manganese_Mn":0.15,"Selenium_Se":8.07,"Tryptophan":0.04,"Threonine":0.12,"Isoleucine":0.14,"Leucine":0.33,"Lysine":0.15,"Methionine":0.08,"Cystine":0.06,"Phenylalanine":0.18,"Tyrosine":0.12,"Valine":0.18,"Arginine":0.18,"Histidine":0.08,"Alanine":0.18,"AsparticAcid":0.27,"GlutamicAcid":0.79,"Glycine":0.11,"Proline":0.31,"Serine":0.2,"omega3":0.03,"omega6":0.12,"AddedSugars":0.0,"IntrinsicSugars":0.84},"addedSugars":0.0,"intrinsicSugars":1.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.62,"yieldFactorFat":1.0,"sources":[{"ndb":"15270","name":"Crustaceans, shrimp, raw (not previously frozen)","grams":113.4},{"ndb":"1230","name":"Milk, buttermilk, fluid, whole","grams":15.3},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":12.5},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":15.6},{"ndb":"20022","name":"Cornmeal, degermed, enriched, yellow","grams":17.2},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"2020","name":"Spices, garlic powder","grams":0.8},{"ndb":"2026","name":"Spices, onion powder","grams":0.3},{"ndb":"2028","name":"Spices, paprika","grams":0.6},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1},{"ndb":"4513","name":"Vegetable oil, palm kernel","grams":12.8}],"sections":[{"section_key":"main","section_label":"Cornmeal Fried Shrimp","prep_method":"raw","cook_method":"fried","cooking_method":"fried","cooking_method_normalized":"fried","yield_factor_water":0.62,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":12,"raw_grams":760.98,"raw_water_grams":463.58,"raw_fat_grams":62.34,"raw_protein_grams":111.86,"raw_carb_grams":110.93,"final_grams":584.82}],"cookingMethod":"fried"},
+    recipeIngredients: [
+      { name: 'Seafood Cornmeal Fried Shrimp', quantity: 'custom (g)', foodWord: 'SHRIMPCORNMEALFRIED', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'shrimp', quantity: '1 lb shrimp, peeled, deveined, and dry-patted', section: 'main', ndbNo: '15270', portionDesc: 'g', portionGrams: 453.6 },
+      { name: 'whole buttermilk', quantity: '¼ cup buttermilk', section: 'main', ndbNo: '1230', portionDesc: 'g', portionGrams: 61.25 },
+      { name: 'large egg', quantity: '1 large egg, beaten', section: 'main', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '½ cup all-purpose flour', section: 'main', ndbNo: '20581', portionDesc: 'g', portionGrams: 62.5 },
+      { name: 'yellow cornmeal', quantity: '½ cup yellow cornmeal', section: 'main', ndbNo: '20022', portionDesc: 'g', portionGrams: 69.0 },
+      { name: 'salt', quantity: '1 tsp', section: 'main', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'main', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'garlic powder', quantity: '1 tsp', section: 'main', ndbNo: '2020', portionDesc: 'g', portionGrams: 3.1 },
+      { name: 'onion powder', quantity: '½ tsp', section: 'main', ndbNo: '2026', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'paprika', quantity: '1 tsp', section: 'main', ndbNo: '2028', portionDesc: 'g', portionGrams: 2.3 },
+      { name: 'cayenne pepper', quantity: '¼ tsp', section: 'main', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.45 },
+      { name: 'vegetable oil', quantity: '3¾ tbsp vegetable oil (absorbed during frying)', section: 'main', ndbNo: '4513', portionDesc: 'g', portionGrams: 51.0 }
+    ],
+    recipeInstructions: [
+      'In a shallow bowl, whisk together the buttermilk and egg. Add the shrimp and toss to coat. Let soak for 10 minutes.',
+      'In a separate shallow dish, whisk together the all-purpose flour, yellow cornmeal, salt, garlic powder, onion powder, paprika, cayenne pepper, and black pepper until well combined.',
+      'Working in batches, lift the shrimp from the buttermilk mixture, letting the excess drip off, then dredge in the cornmeal mixture, pressing gently so the coating adheres. Shake off any excess.',
+      'Pour vegetable oil into a heavy skillet or Dutch oven to a depth of about 2 inches and heat to 375°F (190°C). (The ingredient list reflects only the oil absorbed into the coating, not the full frying amount.)',
+      'Fry the shrimp in batches of 6–8, without crowding, for 3–4 minutes until golden brown and cooked through. Flip the shrimp partway through if the oil is shallow.',
+      'Transfer to a plate lined with paper towels. Allow the oil to return to 375°F between batches.',
+      'Repeat with remaining shrimp. Serve immediately for best crunch.',
+      'Suggestions (not included): Serve with cocktail sauce, remoulade, or lemon wedges. Pairs well with coleslaw or french fries.'
+    ],
+    sections: [
+      { key: 'main', label: 'Cornmeal Fried Shrimp', cookingMethod: '', yieldFactorWater: 0.62 }
+    ],
   }
 ];
