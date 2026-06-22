@@ -1,7 +1,7 @@
 {
   "recipe_id": "SALAD_026",
   "recipe_name": "Waldorf Salad",
-  "sr_rule": "D",
+  "sr_rule": "Rule D",
   "canonical_ndb_no": null,
   "cooking_method": "raw",
   "cooking_method_normalized": "raw",
@@ -52,7 +52,7 @@
       "grams": 120.0,
       "section": "salad",
       "ingredient_group": "salad",
-      "qty_display": "3 stalks (sliced)",
+      "qty_display": "3 (sliced)",
       "contribution": {
         "Energy_KCal": 19.2,
         "Protein": 0.828,

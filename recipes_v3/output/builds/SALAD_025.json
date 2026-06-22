@@ -1,7 +1,7 @@
 {
   "recipe_id": "SALAD_025",
   "recipe_name": "Three Bean Salad",
-  "sr_rule": "D",
+  "sr_rule": "Rule D",
   "canonical_ndb_no": null,
   "cooking_method": "raw",
   "cooking_method_normalized": "raw",
@@ -69,7 +69,7 @@
     {
       "ingredient_key": "chickpeas_canned_drained",
       "ndb_no": "16358",
-      "long_desc": "Chickpeas (garbanzo beans), mature seeds, canned, drained solids",
+      "long_desc": "Chickpeas (garbanzo beans, bengal gram), mature seeds, canned, drained solids",
       "grams": 226.8,
       "section": "salad",
       "ingredient_group": "salad",
