@@ -27329,7 +27329,7 @@ export const FOODS: Food[] = [
       "grain",
       "prepared"
     ],
-    "ndb": "20019",
+    "ndb": "20017",
     "desc": "Corn flour, masa, enriched, white",
     "cal": 0,
     "pro": 0,

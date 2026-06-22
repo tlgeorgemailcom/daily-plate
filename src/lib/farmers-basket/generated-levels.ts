@@ -20468,5 +20468,52 @@ export const LEVELS: Level[] = [
       { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.85, yieldFactorFat: 0.593 },
       { key: 'crust', label: 'Crust', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_080',
+    name: 'Gorditas',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'veggie',
+    levelNum: 427,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 gorditas',
+    prepTime: '15 min',
+    linkType: 'ingredient',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":404.4,"pro":14.8,"fat":14.9,"carb":55.3,"fib":6.2,"h2o":144.9,"sug":2.0,"perServing":{"cal":404.4,"pro":14.8,"fat":14.9,"carb":55.3,"fib":6.2,"h2o":144.9,"sug":2.0,"AddedSugars":0.0,"IntrinsicSugars":2.0},"micros":{"vitaminA":23.92,"vitaminC":0.72,"vitaminD":2.54,"vitaminE":0.14,"vitaminK":3.87,"vitaminB6":0.13,"vitaminB12":0.15,"thiamin":0.31,"riboflavin":0.24,"niacin":2.16,"folate":49.6,"calcium":125.06,"iron":2.64,"magnesium":36.66,"phosphorus":136.85,"potassium":167.55,"sodium":203.19,"zinc":0.99,"copper":0.09,"selenium":5.99,"cholesterol":11.49,"saturatedFat":3.54,"monoFat":1.52,"polyFat":0.59,"omega3":0.04,"omega6":0.09},"gramsPerServing":233.6,"servings":4,"per100g":{"Energy_KCal":173.08,"Water":62.01,"Protein":6.33,"TotalLipidFat":6.36,"Carbohydrate":23.66,"FiberTotalDietary":2.66,"SugarsTotal":0.87,"Cholesterol":11.49,"FattyAcids_totalSaturated":3.54,"FattyAcids_totalMonounsaturated":1.52,"FattyAcids_totalPolyunsaturated":0.59,"LinoleicAcid":0.09,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":23.92,"Retinol":20.56,"Carotene_beta":40.86,"VitaminD":2.54,"VitaminE_alphaTocopherol":0.14,"VitaminK_phylloquinone":3.87,"VitaminC_totalAscorbicAcid":0.72,"Thiamin":0.31,"Riboflavin":0.24,"Niacin":2.16,"PantothenicAcid":0.12,"VitaminB6":0.13,"Folate_total":49.6,"Folate_food":14.93,"Folate_DFE":73.87,"FolicAcid":46.23,"VitaminB12":0.15,"Choline_total":9.92,"Betaine":0.03,"LuteinZeaxanthin":8.56,"Lycopene":0.0,"Calcium_Ca":125.06,"Iron_Fe":2.64,"Magnesium_Mg":36.66,"Phosphorus_P":136.85,"Potassium_K":167.55,"Sodium_Na":203.19,"Zinc_Zn":0.99,"Copper_Cu":0.09,"Manganese_Mn":0.18,"Selenium_Se":5.99,"Tryptophan":0.07,"Threonine":0.21,"Isoleucine":0.29,"Leucine":0.63,"Lysine":0.34,"Methionine":0.13,"Cystine":0.06,"Phenylalanine":0.32,"Tyrosine":0.22,"Valine":0.35,"Arginine":0.26,"Histidine":0.19,"Alanine":0.3,"AsparticAcid":0.49,"GlutamicAcid":1.27,"Glycine":0.18,"Proline":0.55,"Serine":0.33,"omega3":0.04,"omega6":0.09,"AddedSugars":0.0,"IntrinsicSugars":0.87},"addedSugars":0.0,"intrinsicSugars":2.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.82,"yieldFactorFat":1.0,"sources":[{"ndb":"20017","name":"Corn flour, masa, enriched, white","grams":60.0},{"ndb":"14411","name":"Water, tap, drinking","grams":88.8},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"4513","name":"Vegetable oil, palm kernel","grams":3.4},{"ndb":"16403","name":"Refried beans, canned, traditional style, reduced sodium","grams":58.5},{"ndb":"1251","name":"Cheese, Mexican blend","grams":28.2},{"ndb":"11282","name":"Onions, raw","grams":9.0},{"ndb":"11165","name":"Coriander (cilantro) leaves, raw","grams":2.0}],"sections":[{"section_key":"dough","section_label":"Dough","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":611.6,"raw_water_grams":378.15,"raw_fat_grams":22.46,"raw_protein_grams":20.3,"raw_carb_grams":183.82,"final_grams":543.53},{"section_key":"filling","section_label":"Filling","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":391.0,"raw_water_grams":269.39,"raw_fat_grams":37.0,"raw_protein_grams":38.82,"raw_carb_grams":37.34,"final_grams":391.0}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Gorditas', quantity: 'custom (g)', foodWord: 'GORDITA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'masa harina', quantity: '2 cups masa harina', section: 'dough', ndbNo: '20017', portionDesc: 'g', portionGrams: 240.0 },
+      { name: 'water', quantity: '1½ cups warm water', section: 'dough', ndbNo: '14411', portionDesc: 'g', portionGrams: 355.0 },
+      { name: 'salt', quantity: '½ tsp salt', section: 'dough', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'vegetable oil', quantity: '1 tbsp vegetable oil (for comal)', section: 'dough', ndbNo: '4513', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'refried beans', quantity: '1 cup refried beans', section: 'filling', ndbNo: '16403', portionDesc: 'g', portionGrams: 234.0 },
+      { name: 'Mexican blend cheese', quantity: '1 cup Mexican blend cheese, shredded', section: 'filling', ndbNo: '1251', portionDesc: 'g', portionGrams: 113.0 },
+      { name: 'onion', quantity: '3 tbsp onion, diced', section: 'filling', ndbNo: '11282', portionDesc: 'g', portionGrams: 36.0 },
+      { name: 'fresh cilantro', quantity: '¼ cup fresh cilantro, chopped', section: 'filling', ndbNo: '11165', portionDesc: 'g', portionGrams: 8.0 }
+    ],
+    recipeInstructions: [
+      'Combine masa harina, salt, and warm water in a large bowl. Mix until a soft, pliable dough forms — it should hold together without cracking. If too dry, add water 1 tablespoon at a time. Cover and rest 5 minutes.',
+      'Divide the dough into 8 equal balls (~75g each). Flatten each ball between your palms or with a tortilla press lined with plastic wrap into a thick disc about ¼ inch (6 mm) thick and 4 inches wide.',
+      'Heat a comal or cast-iron skillet over medium heat. Brush lightly with vegetable oil.',
+      'Cook the gorditas in batches, 5–6 minutes per side, until firm, lightly charred in spots, and cooked through with no doughy center. Adjust heat as needed.',
+      'Let cool 2–3 minutes, then use a small knife to split each gordita open along the edge to create a pocket, similar to a pita.',
+      'Warm the refried beans. Fill each gordita pocket with beans, shredded cheese, diced onion, and chopped cilantro.',
+      'Serve immediately.',
+      'Suggestions (not included): Top with sour cream, salsa verde, pickled jalapeños, hot sauce, or shredded lettuce.'
+    ],
+    sections: [
+      { key: 'dough', label: 'Dough', cookingMethod: '', yieldFactorWater: 0.82 },
+      { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

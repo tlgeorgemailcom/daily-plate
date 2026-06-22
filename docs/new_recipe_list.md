@@ -13,7 +13,7 @@ Sandwiches & Burgers
 ✅ Tofu Burritos
 Arepas
 ✅ Empanadas
-Gorditas
+✅ Gorditas
 
 Pasta & Pizza
 
