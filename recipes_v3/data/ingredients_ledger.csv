@@ -378,3 +378,7 @@ hominy_canned_white,20030,HOMINY,"Hominy, canned, white",hominy,cup,165.0,
 bagel_plain,18001,BAGELPLAIN,"Bagels, plain, enriched, with calcium propionate (includes onion, poppy, sesame)",plain bagel,bagel,105,
 granola_plain,8037,GRANOLA,"Cereals ready-to-eat, granola, homemade",granola,1/4 cup,30,
 sourdough_bread,18029,FRENCHBREAD,"Bread, french or vienna (includes sourdough)",sourdough bread,oz,28.35,NDB 18029 includes sourdough
+pistachios_raw,12152,PISTACHIO,"Nuts, pistachio nuts, raw",pistachios,cup,123.0,
+flaxseed_ground,12220,FLAXSEED,"Seeds, flaxseed",ground flaxseed,tbsp,10.5,SR Legacy has whole only; ground macros identical per 100g
+chia_seeds,12006,CHIA,"Seeds, chia seeds, dried",chia seeds,tbsp,12.5,
+hemp_seeds_hulled,12012,HEMP,"Seeds, hemp seed, hulled",hemp seeds,tbsp,10.0,
