@@ -27,7 +27,7 @@ Lemon Pasta
 Pasta Primavera
 Pasta al Pesto
 Ravioli
-Spaghetti & Meatballs
+✅ Spaghetti & Meatballs
 Spaghetti Bolognese
 Cacio e Pepe
 Carbonara
@@ -167,6 +167,7 @@ Entrees & Main Courses
 ✅ Vegetarian Chana Masala
 ✅ Vegetarian Dal
 ✅ Vegetarian Shakshuka
+✅ Spaghetti & Meatballs
 
 
 Sides

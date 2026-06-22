@@ -11534,61 +11534,11 @@ export const LEVELS: Level[] = [
     ],
   },
   {
-    id: 'SAUCE_025',
-    name: 'Red Enchilada Sauce',
-    category: 'sauces & condiments',
-    dietaryCategory: 'vegan',
-    levelNum: 249,
-    recipe: ['bread'],
-    tools: [
-      { type: 'wall', count: 6, emoji: '🧱' },
-      { type: 'fence', count: 2, emoji: '🚧' },
-      { type: 'scarecrow', count: 1, emoji: '🧹' }
-    ],
-    animalSpawns: [
-      { type: 'mouse', delay: 3500 }
-    ],
-    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '1/4 cup (makes 11+)',
-    prepTime: '',
-    linkType: 'builtin',
-    sr28Rule: 'Rule D',
-    nutritionJson: {"cal":51.7,"pro":1.6,"fat":2.4,"carb":7.2,"fib":2.8,"h2o":23.3,"sug":0.9,"perServing":{"cal":51.7,"pro":1.6,"fat":2.4,"carb":7.2,"fib":2.8,"h2o":23.3,"sug":0.9,"AddedSugars":0.0,"IntrinsicSugars":0.9},"micros":{"vitaminA":344.66,"vitaminC":5.01,"vitaminD":0.0,"vitaminE":0.76,"vitaminK":7.0,"vitaminB6":0.69,"vitaminB12":0.0,"thiamin":0.05,"riboflavin":0.63,"niacin":1.43,"folate":27.62,"calcium":38.99,"iron":2.88,"magnesium":35.7,"phosphorus":75.61,"potassium":661.25,"sodium":639.91,"zinc":0.49,"copper":0.15,"selenium":1.28,"cholesterol":0.0,"saturatedFat":0.65,"monoFat":2.67,"polyFat":1.02,"omega3":0.0,"omega6":0.0},"gramsPerServing":36.2,"servings":11,"per100g":{"Energy_KCal":142.93,"Water":64.44,"Protein":4.29,"TotalLipidFat":6.75,"Carbohydrate":19.81,"FiberTotalDietary":7.74,"SugarsTotal":2.47,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.65,"FattyAcids_totalMonounsaturated":2.67,"FattyAcids_totalPolyunsaturated":1.02,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":344.66,"Retinol":0.0,"Carotene_beta":188.9,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.76,"VitaminK_phylloquinone":7.0,"VitaminC_totalAscorbicAcid":5.01,"Thiamin":0.05,"Riboflavin":0.63,"Niacin":1.43,"PantothenicAcid":0.42,"VitaminB6":0.69,"Folate_total":27.62,"Folate_food":27.62,"Folate_DFE":27.62,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":4.64,"Betaine":0.1,"LuteinZeaxanthin":48.1,"Lycopene":1047.65,"Calcium_Ca":38.99,"Iron_Fe":2.88,"Magnesium_Mg":35.7,"Phosphorus_P":75.61,"Potassium_K":661.25,"Sodium_Na":639.91,"Zinc_Zn":0.49,"Copper_Cu":0.15,"Manganese_Mn":0.54,"Selenium_Se":1.28,"Tryptophan":0.03,"Threonine":0.09,"Isoleucine":0.08,"Leucine":0.13,"Lysine":0.11,"Methionine":0.03,"Cystine":0.04,"Phenylalanine":0.08,"Tyrosine":0.05,"Valine":0.1,"Arginine":0.15,"Histidine":0.05,"Alanine":0.1,"AsparticAcid":0.38,"GlutamicAcid":0.55,"Glycine":0.09,"Proline":0.1,"Serine":0.1,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":2.47},"addedSugars":0.0,"intrinsicSugars":0.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.73,"yieldFactorFat":1.0,"sources":[{"ndb":"11978","name":"","grams":6.2},{"ndb":"11982","name":"Peppers, pasilla, dried","grams":3.8},{"ndb":"11282","name":"Onions, raw","grams":10.0},{"ndb":"2048","name":"Vinegar, cider","grams":5.4},{"ndb":"11215","name":"Garlic, raw","grams":0.8},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":16.4},{"ndb":"2014","name":"Spices, cumin seed","grams":0.2},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":1.2},{"ndb":"2047","name":"Salt, table","grams":0.3}],"sections":[{"section_key":"sauce","section_label":"Sauce","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.73,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":492.7,"raw_water_grams":351.24,"raw_fat_grams":26.84,"raw_protein_grams":17.06,"raw_carb_grams":78.82,"final_grams":397.87}],"cookingMethod":"boiled"},
-    recipeIngredients: [
-      { name: 'Red Enchilada Sauce', quantity: 'custom (g)', foodWord: 'ENCHILADASAUCE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
-      { name: 'ancho chile dried', quantity: '4 ancho dried chiles', section: 'sauce', ndbNo: '11978', portionDesc: 'g', portionGrams: 68.0 },
-      { name: 'pasilla chile dried', quantity: '6 pasilla dried chiles (guajillo proxy)', section: 'sauce', ndbNo: '11982', portionDesc: 'g', portionGrams: 42.0 },
-      { name: 'onion', quantity: '3/4 cup chopped white onion', section: 'sauce', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
-      { name: 'garlic', quantity: '3 cloves garlic', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
-      { name: 'tomato', quantity: '2 Roma tomatoes', section: 'sauce', ndbNo: '11529', portionDesc: 'g', portionGrams: 180.0 },
-      { name: 'ground cumin', quantity: '1 tsp ground cumin', section: 'sauce', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
-      { name: 'dried oregano', quantity: '1 tsp dried oregano', section: 'sauce', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.0 },
-      { name: 'salt', quantity: '3/4 tsp salt', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 4.5 },
-      { name: 'olive oil', quantity: '1 tbsp olive oil', section: 'sauce', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
-      { name: 'apple cider vinegar', quantity: '1/4 cup', section: 'sauce', ndbNo: '2048', portionDesc: 'g', portionGrams: 59.6 },
-      { name: 'salt', quantity: '1/2 tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 }
-    ],
-    recipeInstructions: [
-      'Toast the dried ancho and pasilla chiles in a dry skillet over medium heat for 30 to 60 seconds per side, just until fragrant. Do not let them scorch or they will taste bitter.',
-      'Remove the stems and slice the toasted chiles open. Shake out and discard as many seeds as possible.',
-      'Bring to a gentle simmer, then reduce heat to low. Cook uncovered for 20 to 25 minutes, stirring occasionally, until the sauce thickens and the flavors meld.',
-      'Place the cleaned chiles in a bowl. Pour 2 cups of boiling water over them and press a small plate on top to keep them submerged. Soak for 20 to 30 minutes until soft and pliable. Drain and reserve the soaking liquid.',
-      'Heat the olive oil in a skillet over medium heat. Add the chopped onion and cook 4 to 5 minutes until softened. Add the minced garlic and cook 1 more minute. Add the quartered Roma tomatoes and cook 2 minutes, pressing to soften.',
-      'Transfer the soaked chiles, cooked onion mixture, cumin, oregano, salt, and 2 cups water to a blender. Blend on high until completely smooth, about 1 minute.',
-      'Strain the blended sauce through a fine-mesh sieve into the skillet, pressing with a spatula to push through as much pulp as possible. Discard the remaining skins and seeds in the strainer.',
-      'Bring the strained sauce to a simmer over medium heat. Cook uncovered, stirring occasionally, for 10 to 15 minutes until the sauce thickens to the consistency of heavy cream. Taste and adjust salt.',
-      'Use immediately for enchiladas, or cool completely and refrigerate for up to 1 week. The sauce can also be frozen for up to 3 months.'
-    ],
-    sections: [
-      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.73 }
-    ],
-  },
-  {
     id: 'ENTR_016',
     name: 'Beef Enchiladas',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 250,
+    levelNum: 249,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -11638,7 +11588,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Goulash',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 251,
+    levelNum: 250,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -11689,7 +11639,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Fajitas',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 252,
+    levelNum: 251,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -11742,7 +11692,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Hamburger Steak',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 253,
+    levelNum: 252,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -11796,7 +11746,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Flank Steak with Marinade',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 254,
+    levelNum: 253,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -11841,7 +11791,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Italian Meatballs',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 255,
+    levelNum: 254,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -11856,7 +11806,7 @@ export const LEVELS: Level[] = [
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
-    nutritionJson: {"cal":606.4,"pro":34.2,"fat":40.7,"carb":27.4,"fib":5.0,"h2o":253.5,"sug":10.2,"perServing":{"cal":606.4,"pro":34.2,"fat":40.7,"carb":27.4,"fib":5.0,"h2o":253.5,"sug":10.2,"AddedSugars":0.0,"IntrinsicSugars":10.2},"micros":{"vitaminA":18.81,"vitaminC":3.29,"vitaminD":5.74,"vitaminE":0.94,"vitaminK":22.59,"vitaminB6":0.17,"vitaminB12":0.59,"thiamin":0.15,"riboflavin":0.13,"niacin":1.96,"folate":12.69,"calcium":67.45,"iron":1.63,"magnesium":20.61,"phosphorus":111.49,"potassium":263.81,"sodium":392.54,"zinc":1.65,"copper":0.12,"selenium":10.4,"cholesterol":42.43,"saturatedFat":3.84,"monoFat":5.28,"polyFat":0.65,"omega3":0.01,"omega6":0.04},"gramsPerServing":363.1,"servings":4,"per100g":{"Energy_KCal":166.99,"Water":69.82,"Protein":9.41,"TotalLipidFat":11.2,"Carbohydrate":7.54,"FiberTotalDietary":1.38,"SugarsTotal":2.8,"Cholesterol":42.43,"FattyAcids_totalSaturated":3.84,"FattyAcids_totalMonounsaturated":5.28,"FattyAcids_totalPolyunsaturated":0.65,"LinoleicAcid":0.04,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":18.81,"Retinol":10.06,"Carotene_beta":103.38,"VitaminD":5.74,"VitaminE_alphaTocopherol":0.94,"VitaminK_phylloquinone":22.59,"VitaminC_totalAscorbicAcid":3.29,"Thiamin":0.15,"Riboflavin":0.13,"Niacin":1.96,"PantothenicAcid":0.36,"VitaminB6":0.17,"Folate_total":12.69,"Folate_food":10.4,"Folate_DFE":14.28,"FolicAcid":3.05,"VitaminB12":0.59,"Choline_total":28.34,"Betaine":2.01,"LuteinZeaxanthin":111.95,"Lycopene":2278.37,"Calcium_Ca":67.45,"Iron_Fe":1.63,"Magnesium_Mg":20.61,"Phosphorus_P":111.49,"Potassium_K":263.81,"Sodium_Na":392.54,"Zinc_Zn":1.65,"Copper_Cu":0.12,"Manganese_Mn":0.18,"Selenium_Se":10.4,"Tryptophan":0.08,"Threonine":0.37,"Isoleucine":0.41,"Leucine":0.71,"Lysine":0.72,"Methionine":0.22,"Cystine":0.09,"Phenylalanine":0.38,"Tyrosine":0.3,"Valine":0.48,"Arginine":0.53,"Histidine":0.3,"Alanine":0.5,"AsparticAcid":0.85,"GlutamicAcid":1.72,"Glycine":0.47,"Proline":0.5,"Serine":0.4,"omega3":0.01,"omega6":0.04,"AddedSugars":0.0,"IntrinsicSugars":2.8},"addedSugars":0.0,"intrinsicSugars":10.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.88,"yieldFactorFat":1.0,"sources":[{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":85.0},{"ndb":"10219","name":"Pork, fresh, ground, raw","grams":56.7},{"ndb":"18079","name":"Bread crumbs, dry, grated, plain","grams":13.5},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":15.2},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":12.5},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":7.1},{"ndb":"11282","name":"Onions, raw","grams":10.0},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"11297","name":"Parsley, fresh","grams":3.8},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.5},{"ndb":"2003","name":"Spices, basil, dried","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":180.0},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.5},{"ndb":"2003","name":"Spices, basil, dried","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"meatballs","section_label":"Meatballs","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":14,"raw_grams":847.6,"raw_water_grams":507.06,"raw_fat_grams":146.97,"raw_protein_grams":124.14,"raw_carb_grams":53.04,"final_grams":771.54},{"section_key":"sauce","section_label":"Tomato Sauce","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":745.68,"raw_water_grams":647.81,"raw_fat_grams":15.77,"raw_protein_grams":12.57,"raw_carb_grams":56.41,"final_grams":680.89}],"cookingMethod":"multi"},
+    nutritionJson: {"cal":647.4,"pro":34.6,"fat":44.1,"carb":29.8,"fib":5.4,"h2o":272.8,"sug":11.1,"perServing":{"cal":647.4,"pro":34.6,"fat":44.1,"carb":29.8,"fib":5.4,"h2o":272.8,"sug":11.1,"AddedSugars":0.0,"IntrinsicSugars":11.1},"micros":{"vitaminA":20.05,"vitaminC":3.4,"vitaminD":5.35,"vitaminE":1.01,"vitaminK":23.93,"vitaminB6":0.17,"vitaminB12":0.55,"thiamin":0.14,"riboflavin":0.12,"niacin":1.84,"folate":12.75,"calcium":64.9,"iron":1.53,"magnesium":19.91,"phosphorus":106.13,"potassium":254.84,"sodium":398.21,"zinc":1.55,"copper":0.12,"selenium":9.79,"cholesterol":39.58,"saturatedFat":3.71,"monoFat":5.57,"polyFat":0.69,"omega3":0.01,"omega6":0.04},"gramsPerServing":389.2,"servings":4,"per100g":{"Energy_KCal":166.34,"Water":70.1,"Protein":8.88,"TotalLipidFat":11.34,"Carbohydrate":7.66,"FiberTotalDietary":1.39,"SugarsTotal":2.84,"Cholesterol":39.58,"FattyAcids_totalSaturated":3.71,"FattyAcids_totalMonounsaturated":5.57,"FattyAcids_totalPolyunsaturated":0.69,"LinoleicAcid":0.04,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":20.05,"Retinol":9.38,"Carotene_beta":125.41,"VitaminD":5.35,"VitaminE_alphaTocopherol":1.01,"VitaminK_phylloquinone":23.93,"VitaminC_totalAscorbicAcid":3.4,"Thiamin":0.14,"Riboflavin":0.12,"Niacin":1.84,"PantothenicAcid":0.34,"VitaminB6":0.17,"Folate_total":12.75,"Folate_food":10.62,"Folate_DFE":14.24,"FolicAcid":2.84,"VitaminB12":0.55,"Choline_total":26.86,"Betaine":1.88,"LuteinZeaxanthin":140.56,"Lycopene":2125.44,"Calcium_Ca":64.9,"Iron_Fe":1.53,"Magnesium_Mg":19.91,"Phosphorus_P":106.13,"Potassium_K":254.84,"Sodium_Na":398.21,"Zinc_Zn":1.55,"Copper_Cu":0.12,"Manganese_Mn":0.19,"Selenium_Se":9.79,"Tryptophan":0.08,"Threonine":0.34,"Isoleucine":0.38,"Leucine":0.67,"Lysine":0.68,"Methionine":0.21,"Cystine":0.09,"Phenylalanine":0.36,"Tyrosine":0.28,"Valine":0.45,"Arginine":0.5,"Histidine":0.28,"Alanine":0.47,"AsparticAcid":0.8,"GlutamicAcid":1.62,"Glycine":0.44,"Proline":0.47,"Serine":0.37,"omega3":0.01,"omega6":0.04,"AddedSugars":0.0,"IntrinsicSugars":2.84},"addedSugars":0.0,"intrinsicSugars":11.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.88,"yieldFactorFat":1.0,"sources":[{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":85.0},{"ndb":"10219","name":"Pork, fresh, ground, raw","grams":56.7},{"ndb":"18079","name":"Bread crumbs, dry, grated, plain","grams":13.5},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":15.2},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":12.5},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":7.1},{"ndb":"11282","name":"Onions, raw","grams":10.0},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"11297","name":"Parsley, fresh","grams":3.8},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.5},{"ndb":"2003","name":"Spices, basil, dried","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":180.0},{"ndb":"11282","name":"Onions, raw","grams":20.0},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.5},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1},{"ndb":"2044","name":"Basil, fresh","grams":3.0},{"ndb":"2047","name":"Salt, table","grams":1.1},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"meatballs","section_label":"Meatballs","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":14,"raw_grams":847.6,"raw_water_grams":507.06,"raw_fat_grams":146.97,"raw_protein_grams":124.14,"raw_carb_grams":53.04,"final_grams":771.54},{"section_key":"sauce","section_label":"Tomato Sauce","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":858.65,"raw_water_grams":733.64,"raw_fat_grams":29.63,"raw_protein_grams":14.12,"raw_carb_grams":66.18,"final_grams":785.29}],"cookingMethod":"multi"},
     recipeIngredients: [
       { name: 'Beef Italian Meatballs', quantity: 'custom (g)', foodWord: 'BEEFITALIANMEATBALL', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'ground beef (80/20)', quantity: '3/4 lb ground beef (80/20)', section: 'meatballs', ndbNo: '23572', portionDesc: 'g', portionGrams: 340.2 },
@@ -11874,19 +11824,21 @@ export const LEVELS: Level[] = [
       { name: 'ground black pepper', quantity: '1/2 tsp black pepper', section: 'meatballs', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
       { name: 'olive oil', quantity: '1 tbsp olive oil (for browning)', section: 'meatballs', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
       { name: 'canned crushed tomatoes', quantity: '3 cups (28 oz can)', section: 'sauce', ndbNo: '11693', portionDesc: 'g', portionGrams: 720.0 },
-      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
-      { name: 'olive oil', quantity: '1 tbsp olive oil', section: 'sauce', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
-      { name: 'dried oregano', quantity: '1 tsp dried oregano', section: 'sauce', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.8 },
-      { name: 'dried basil', quantity: '1 tsp dried basil', section: 'sauce', ndbNo: '2003', portionDesc: 'g', portionGrams: 0.7 },
-      { name: 'salt', quantity: '1/2 tsp salt', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
-      { name: 'ground black pepper', quantity: '1/4 tsp black pepper', section: 'sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+      { name: 'onion', quantity: '1 small onion, finely diced', section: 'sauce', ndbNo: '11282', portionDesc: 'g', portionGrams: 80.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'sauce', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'dried oregano', quantity: '1 tsp', section: 'sauce', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.8 },
+      { name: 'red pepper flakes', quantity: '¼ tsp', section: 'sauce', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'fresh basil', quantity: '¼ cup fresh basil, torn', section: 'sauce', ndbNo: '2044', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'salt', quantity: '¾ tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
     ],
     recipeInstructions: [
       'Combine the ground beef, ground pork, bread crumbs, milk, egg, Parmesan, onion, garlic, parsley, oregano, basil, salt, and black pepper in a large bowl. Mix gently until just combined — do not overwork the meat.',
       'Shape the mixture into meatballs about 1½ inches in diameter (approximately 1½ oz each). You should get 18 to 20 meatballs.',
       'Heat the olive oil in a large skillet over medium-high heat. Brown the meatballs in batches, turning to sear all sides, 4 to 5 minutes total. The meatballs do not need to be fully cooked through at this stage. Transfer to a plate.',
-      'Make the sauce: in the same skillet, add the olive oil and garlic. Cook over medium heat for 1 minute until fragrant. Add the crushed tomatoes, oregano, basil, salt, and black pepper. Stir to combine.',
-      'Return the browned meatballs to the skillet. Nestle them into the sauce. Reduce heat to low, cover, and simmer for 20 to 25 minutes until the meatballs are cooked through and the sauce has thickened.',
+      'Make the sauce: in the same skillet, heat the olive oil over medium heat. Add the diced onion and cook, stirring occasionally, until softened, about 8 minutes. Add the minced garlic and red pepper flakes and cook, stirring, until fragrant, about 1 minute. Pour in the crushed tomatoes. Season with oregano, salt, and black pepper and stir to combine.',
+      'Return the browned meatballs to the skillet. Nestle them into the sauce. Reduce heat to low, cover, and simmer for 20 to 25 minutes until the meatballs are cooked through and the sauce has thickened. Remove from heat and stir in the fresh basil.',
       'Serve over pasta or with crusty bread, garnished with fresh parsley and additional Parmesan if desired.'
     ],
     sections: [
@@ -11899,7 +11851,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Lasagna',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 256,
+    levelNum: 255,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -11957,7 +11909,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Lo Mein',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 257,
+    levelNum: 256,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12011,7 +11963,7 @@ export const LEVELS: Level[] = [
     name: 'Beef London Broil',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 258,
+    levelNum: 257,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12057,7 +12009,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Kabobs',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 259,
+    levelNum: 258,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12108,7 +12060,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Korean Beef',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 260,
+    levelNum: 259,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12152,7 +12104,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Meatloaf',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 261,
+    levelNum: 260,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12209,7 +12161,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Mongolian Beef',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 262,
+    levelNum: 261,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12257,7 +12209,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Osso Buco',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 263,
+    levelNum: 262,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12313,7 +12265,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Pepper Steak',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 264,
+    levelNum: 263,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12365,7 +12317,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Picadillo',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 265,
+    levelNum: 264,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12415,7 +12367,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Pot Pie',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 266,
+    levelNum: 265,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12466,7 +12418,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Pot Roast',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 267,
+    levelNum: 266,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12519,7 +12471,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Ragu',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 268,
+    levelNum: 267,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12567,58 +12519,11 @@ export const LEVELS: Level[] = [
     ],
   },
   {
-    id: 'SAUCE_026',
-    name: 'BBQ Sauce',
-    category: 'sauces & condiments',
-    dietaryCategory: 'vegan',
-    levelNum: 269,
-    recipe: ['bread'],
-    tools: [
-      { type: 'wall', count: 6, emoji: '🧱' },
-      { type: 'fence', count: 2, emoji: '🚧' },
-      { type: 'scarecrow', count: 1, emoji: '🧹' }
-    ],
-    animalSpawns: [
-      { type: 'mouse', delay: 3500 }
-    ],
-    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '1 tbsp (makes 40+)',
-    prepTime: '',
-    linkType: 'builtin',
-    sr28Rule: 'Rule D',
-    nutritionJson: {"cal":12.8,"pro":0.2,"fat":0.1,"carb":3.0,"fib":0.3,"h2o":12.0,"sug":2.4,"perServing":{"cal":12.8,"pro":0.2,"fat":0.1,"carb":3.0,"fib":0.3,"h2o":12.0,"sug":2.4,"AddedSugars":1.8,"IntrinsicSugars":0.7},"micros":{"vitaminA":38.0,"vitaminC":3.74,"vitaminD":0.0,"vitaminE":1.55,"vitaminK":3.52,"vitaminB6":0.09,"vitaminB12":0.0,"thiamin":0.02,"riboflavin":0.06,"niacin":0.74,"folate":6.48,"calcium":37.01,"iron":1.46,"magnesium":28.32,"phosphorus":35.78,"potassium":375.01,"sodium":216.43,"zinc":0.29,"copper":0.14,"selenium":3.15,"cholesterol":0.0,"saturatedFat":0.07,"monoFat":0.17,"polyFat":0.19,"omega3":0.0,"omega6":0.0},"gramsPerServing":15.8,"servings":40,"per100g":{"Energy_KCal":80.89,"Water":75.99,"Protein":1.55,"TotalLipidFat":0.58,"Carbohydrate":18.8,"FiberTotalDietary":1.87,"SugarsTotal":15.24,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.07,"FattyAcids_totalMonounsaturated":0.17,"FattyAcids_totalPolyunsaturated":0.19,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":38.0,"Retinol":0.05,"Carotene_beta":424.86,"VitaminD":0.0,"VitaminE_alphaTocopherol":1.55,"VitaminK_phylloquinone":3.52,"VitaminC_totalAscorbicAcid":3.74,"Thiamin":0.02,"Riboflavin":0.06,"Niacin":0.74,"PantothenicAcid":0.23,"VitaminB6":0.09,"Folate_total":6.48,"Folate_food":6.48,"Folate_DFE":6.48,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":10.53,"Betaine":0.75,"LuteinZeaxanthin":137.14,"Lycopene":11028.08,"Calcium_Ca":37.01,"Iron_Fe":1.46,"Magnesium_Mg":28.32,"Phosphorus_P":35.78,"Potassium_K":375.01,"Sodium_Na":216.43,"Zinc_Zn":0.29,"Copper_Cu":0.14,"Manganese_Mn":0.26,"Selenium_Se":3.15,"Tryptophan":0.01,"Threonine":0.04,"Isoleucine":0.03,"Leucine":0.05,"Lysine":0.05,"Methionine":0.01,"Cystine":0.02,"Phenylalanine":0.04,"Tyrosine":0.02,"Valine":0.04,"Arginine":0.06,"Histidine":0.03,"Alanine":0.04,"AsparticAcid":0.22,"GlutamicAcid":0.63,"Glycine":0.04,"Proline":0.06,"Serine":0.04,"omega3":0.0,"omega6":0.0,"AddedSugars":11.11,"IntrinsicSugars":4.13},"addedSugars":1.8,"intrinsicSugars":0.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.85,"yieldFactorFat":1.0,"sources":[{"ndb":"43217","name":"Tomato sauce, canned, no salt added","grams":12.2},{"ndb":"11546","name":"Tomato products, canned, paste, without salt added","grams":0.8},{"ndb":"2048","name":"Vinegar, cider","grams":1.5},{"ndb":"19304","name":"Molasses","grams":1.0},{"ndb":"19334","name":"Sugars, brown","grams":1.0},{"ndb":"6971","name":"Sauce, worcestershire","grams":0.8},{"ndb":"2028","name":"Spices, paprika","grams":0.1},{"ndb":"2024","name":"Spices, mustard seed, ground","grams":0.1},{"ndb":"2020","name":"Spices, garlic powder","grams":0.1},{"ndb":"2026","name":"Spices, onion powder","grams":0.1},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.0},{"ndb":"2047","name":"Salt, table","grams":0.1},{"ndb":"2030","name":"Spices, pepper, black","grams":0.0}],"sections":[{"section_key":"sauce","section_label":"Sauce","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":13,"raw_grams":715.35,"raw_water_grams":563.91,"raw_fat_grams":3.66,"raw_protein_grams":9.81,"raw_carb_grams":118.56,"final_grams":630.76}],"cookingMethod":"boiled"},
-    recipeIngredients: [
-      { name: 'BBQ Sauce', quantity: 'custom (g)', foodWord: 'BBQSAUCE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
-      { name: 'tomato sauce', quantity: '2 cups', section: 'sauce', ndbNo: '43217', portionDesc: 'g', portionGrams: 490.0 },
-      { name: 'tomato paste', quantity: '2 tbsp', section: 'sauce', ndbNo: '11546', portionDesc: 'g', portionGrams: 32.0 },
-      { name: 'apple cider vinegar', quantity: '1/4 cup', section: 'sauce', ndbNo: '2048', portionDesc: 'g', portionGrams: 59.6 },
-      { name: 'molasses', quantity: '2 tbsp', section: 'sauce', ndbNo: '19304', portionDesc: 'g', portionGrams: 40.0 },
-      { name: 'brown sugar', quantity: '3 tbsp', section: 'sauce', ndbNo: '19334', portionDesc: 'g', portionGrams: 41.4 },
-      { name: 'Worcestershire sauce', quantity: '2 tbsp', section: 'sauce', ndbNo: '6971', portionDesc: 'g', portionGrams: 34.0 },
-      { name: 'smoked paprika', quantity: '2 tsp', section: 'sauce', ndbNo: '2028', portionDesc: 'g', portionGrams: 4.8 },
-      { name: 'ground mustard', quantity: '1 tsp', section: 'sauce', ndbNo: '2024', portionDesc: 'g', portionGrams: 3.3 },
-      { name: 'garlic powder', quantity: '1 tsp', section: 'sauce', ndbNo: '2020', portionDesc: 'g', portionGrams: 3.1 },
-      { name: 'onion powder', quantity: '1 tsp', section: 'sauce', ndbNo: '2026', portionDesc: 'g', portionGrams: 2.9 },
-      { name: 'cayenne pepper', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.675 },
-      { name: 'salt', quantity: '1/2 tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
-      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
-    ],
-    recipeInstructions: [
-      'Combine all ingredients in a medium saucepan over medium heat. Stir well to dissolve the sugar and molasses.',
-      'Bring to a gentle simmer, then reduce heat to low. Cook uncovered for 20 to 25 minutes, stirring occasionally, until the sauce thickens and the flavors meld.',
-      'Taste and adjust seasoning — add more brown sugar for sweetness, vinegar for tang, or cayenne for heat.',
-      'Remove from heat and let cool. The sauce will thicken further as it cools. Store refrigerated for up to 2 weeks. Use as a glaze, dipping sauce, or basting sauce for ribs, chicken, or burgers.'
-    ],
-    sections: [
-      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.85 }
-    ],
-  },
-  {
     id: 'ENTR_035',
     name: 'Beef Back Ribs',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 270,
+    levelNum: 268,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12667,7 +12572,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Salisbury Steak',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 271,
+    levelNum: 269,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12725,7 +12630,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Short Ribs',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 272,
+    levelNum: 270,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12777,7 +12682,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Skirt Steak with Marinade',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 273,
+    levelNum: 271,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12822,7 +12727,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Stroganoff',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 274,
+    levelNum: 272,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12874,7 +12779,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Tenderloin',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 275,
+    levelNum: 273,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12919,7 +12824,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Teriyaki',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 276,
+    levelNum: 274,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12964,7 +12869,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Wellington',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 277,
+    levelNum: 275,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13017,7 +12922,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Stir Fry',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 278,
+    levelNum: 276,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13068,7 +12973,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Soft Tacos',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 279,
+    levelNum: 277,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13118,7 +13023,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken & Broccoli',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 280,
+    levelNum: 278,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13170,7 +13075,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken Cacciatore',
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
-    levelNum: 281,
+    levelNum: 279,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13221,7 +13126,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken Curry',
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
-    levelNum: 282,
+    levelNum: 280,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13272,7 +13177,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken Enchiladas',
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
-    levelNum: 283,
+    levelNum: 281,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13323,7 +13228,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken Florentine',
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
-    levelNum: 284,
+    levelNum: 282,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13375,7 +13280,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken Fried Rice',
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
-    levelNum: 285,
+    levelNum: 283,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13428,7 +13333,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken General Tso',
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
-    levelNum: 286,
+    levelNum: 284,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13485,7 +13390,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken Moo Goo Gai Pan',
     category: 'entrees & main courses',
     dietaryCategory: 'pollo-pesca',
-    levelNum: 287,
+    levelNum: 285,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13542,7 +13447,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken Piccata',
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
-    levelNum: 288,
+    levelNum: 286,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13595,7 +13500,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken Pot Pie',
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
-    levelNum: 289,
+    levelNum: 287,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13647,7 +13552,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken Kabobs',
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
-    levelNum: 290,
+    levelNum: 288,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13698,7 +13603,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken King Ranch',
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
-    levelNum: 291,
+    levelNum: 289,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13749,7 +13654,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken Marsala',
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
-    levelNum: 292,
+    levelNum: 290,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13802,7 +13707,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken Masala',
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
-    levelNum: 293,
+    levelNum: 291,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13861,7 +13766,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken Peanut Protein Bowls',
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
-    levelNum: 294,
+    levelNum: 292,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13924,7 +13829,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken Sesame',
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
-    levelNum: 295,
+    levelNum: 293,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13979,7 +13884,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken Tenders',
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
-    levelNum: 296,
+    levelNum: 294,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14025,7 +13930,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken & Waffles',
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
-    levelNum: 297,
+    levelNum: 295,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14076,7 +13981,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken Adobo',
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
-    levelNum: 298,
+    levelNum: 296,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14119,7 +14024,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken Korma',
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
-    levelNum: 299,
+    levelNum: 297,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14176,7 +14081,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken Saltimbocca',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 300,
+    levelNum: 298,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14229,7 +14134,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken Scampi',
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
-    levelNum: 301,
+    levelNum: 299,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14286,7 +14191,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken Tetrazzini',
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
-    levelNum: 302,
+    levelNum: 300,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14349,7 +14254,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken Tikka Masala',
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
-    levelNum: 303,
+    levelNum: 301,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14411,7 +14316,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken Marry Me',
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
-    levelNum: 304,
+    levelNum: 302,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14468,7 +14373,7 @@ export const LEVELS: Level[] = [
     name: 'Lamb Kabobs',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 305,
+    levelNum: 303,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14516,7 +14421,7 @@ export const LEVELS: Level[] = [
     name: 'Lamb Kofta',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 306,
+    levelNum: 304,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14564,7 +14469,7 @@ export const LEVELS: Level[] = [
     name: 'Lamb Greek Souvlaki',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 307,
+    levelNum: 305,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14607,7 +14512,7 @@ export const LEVELS: Level[] = [
     name: 'Lamb Shepherd\'s Pie',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 308,
+    levelNum: 306,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14669,7 +14574,7 @@ export const LEVELS: Level[] = [
     name: 'Lamb Rogan Josh',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 309,
+    levelNum: 307,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14725,7 +14630,7 @@ export const LEVELS: Level[] = [
     name: 'Lamb Tagine',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 310,
+    levelNum: 308,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14786,7 +14691,7 @@ export const LEVELS: Level[] = [
     name: 'Lamb Moussaka',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 311,
+    levelNum: 309,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14848,7 +14753,7 @@ export const LEVELS: Level[] = [
     name: 'Lamb Shanks',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 312,
+    levelNum: 310,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14900,7 +14805,7 @@ export const LEVELS: Level[] = [
     name: 'Lamb Chops',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 313,
+    levelNum: 311,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14943,7 +14848,7 @@ export const LEVELS: Level[] = [
     name: 'Rack of Lamb',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 314,
+    levelNum: 312,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14991,7 +14896,7 @@ export const LEVELS: Level[] = [
     name: 'Leg of Lamb',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 315,
+    levelNum: 313,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15036,7 +14941,7 @@ export const LEVELS: Level[] = [
     name: 'Lamb Biryani',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 316,
+    levelNum: 314,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15094,7 +14999,7 @@ export const LEVELS: Level[] = [
     name: 'Pork Carnitas',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 317,
+    levelNum: 315,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15141,7 +15046,7 @@ export const LEVELS: Level[] = [
     name: 'Pork Char Siu',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 318,
+    levelNum: 316,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15187,7 +15092,7 @@ export const LEVELS: Level[] = [
     name: 'Pork Chop',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 319,
+    levelNum: 317,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15230,7 +15135,7 @@ export const LEVELS: Level[] = [
     name: 'Pork Crown Roast',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 320,
+    levelNum: 318,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15273,7 +15178,7 @@ export const LEVELS: Level[] = [
     name: 'Pork Egg Roll',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 321,
+    levelNum: 319,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15319,7 +15224,7 @@ export const LEVELS: Level[] = [
     name: 'Pork Egg Roll Bowls',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 322,
+    levelNum: 320,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15370,7 +15275,7 @@ export const LEVELS: Level[] = [
     name: 'Pork Milanese',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 323,
+    levelNum: 321,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15412,7 +15317,7 @@ export const LEVELS: Level[] = [
     name: 'Pork Baby Back Ribs',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 324,
+    levelNum: 322,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15461,7 +15366,7 @@ export const LEVELS: Level[] = [
     name: 'Pork Spareribs',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 325,
+    levelNum: 323,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15510,7 +15415,7 @@ export const LEVELS: Level[] = [
     name: 'Pork Country-Style Ribs',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 326,
+    levelNum: 324,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15559,7 +15464,7 @@ export const LEVELS: Level[] = [
     name: 'Pork Schnitzel',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 327,
+    levelNum: 325,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15605,7 +15510,7 @@ export const LEVELS: Level[] = [
     name: 'Pork Tenderloin Stuffed',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 328,
+    levelNum: 326,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15665,7 +15570,7 @@ export const LEVELS: Level[] = [
     name: 'Pork Shoulder',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 329,
+    levelNum: 327,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15711,7 +15616,7 @@ export const LEVELS: Level[] = [
     name: 'Pork Fried Rice',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 330,
+    levelNum: 328,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15760,7 +15665,7 @@ export const LEVELS: Level[] = [
     name: 'Pork & Beef Swedish Meatballs',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 331,
+    levelNum: 329,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15816,7 +15721,7 @@ export const LEVELS: Level[] = [
     name: 'Seafood Crab Cakes',
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
-    levelNum: 332,
+    levelNum: 330,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15865,7 +15770,7 @@ export const LEVELS: Level[] = [
     name: 'Seafood Crab Stuffed Avocados',
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
-    levelNum: 333,
+    levelNum: 331,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15910,7 +15815,7 @@ export const LEVELS: Level[] = [
     name: 'Seafood California Roll',
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
-    levelNum: 334,
+    levelNum: 332,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15963,7 +15868,7 @@ export const LEVELS: Level[] = [
     name: 'Seafood Philadelphia Roll',
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
-    levelNum: 335,
+    levelNum: 333,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16016,7 +15921,7 @@ export const LEVELS: Level[] = [
     name: 'Seafood Salmon Poke Bowl',
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
-    levelNum: 336,
+    levelNum: 334,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16073,7 +15978,7 @@ export const LEVELS: Level[] = [
     name: 'Seafood Salmon Quinoa Bowls',
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
-    levelNum: 337,
+    levelNum: 335,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16130,7 +16035,7 @@ export const LEVELS: Level[] = [
     name: 'Seafood Scallops',
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
-    levelNum: 338,
+    levelNum: 336,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16175,7 +16080,7 @@ export const LEVELS: Level[] = [
     name: 'Seafood Shrimp & Grits',
     category: 'entrees & main courses',
     dietaryCategory: 'all',
-    levelNum: 339,
+    levelNum: 337,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16236,7 +16141,7 @@ export const LEVELS: Level[] = [
     name: 'Seafood Shrimp Kabobs',
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
-    levelNum: 340,
+    levelNum: 338,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16285,7 +16190,7 @@ export const LEVELS: Level[] = [
     name: 'Seafood Sole Meunière',
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
-    levelNum: 341,
+    levelNum: 339,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16330,7 +16235,7 @@ export const LEVELS: Level[] = [
     name: 'Seafood Tuna Poke Bowl',
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
-    levelNum: 342,
+    levelNum: 340,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16380,7 +16285,7 @@ export const LEVELS: Level[] = [
     name: 'Seafood Cioppino',
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
-    levelNum: 343,
+    levelNum: 341,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16436,7 +16341,7 @@ export const LEVELS: Level[] = [
     name: 'Seafood Fish and Chips',
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
-    levelNum: 344,
+    levelNum: 342,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16486,7 +16391,7 @@ export const LEVELS: Level[] = [
     name: 'Seafood Paella',
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
-    levelNum: 345,
+    levelNum: 343,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16542,7 +16447,7 @@ export const LEVELS: Level[] = [
     name: 'Seafood Shrimp Scampi',
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
-    levelNum: 346,
+    levelNum: 344,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16588,7 +16493,7 @@ export const LEVELS: Level[] = [
     name: 'Vegetarian Bowl',
     category: 'entrees & main courses',
     dietaryCategory: 'vegan',
-    levelNum: 347,
+    levelNum: 345,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16642,7 +16547,7 @@ export const LEVELS: Level[] = [
     name: 'Vegetarian Egg Rolls',
     category: 'entrees & main courses',
     dietaryCategory: 'veggie',
-    levelNum: 348,
+    levelNum: 346,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16687,7 +16592,7 @@ export const LEVELS: Level[] = [
     name: 'Vegetarian Egg Roll Bowls',
     category: 'entrees & main courses',
     dietaryCategory: 'vegan',
-    levelNum: 349,
+    levelNum: 347,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16734,7 +16639,7 @@ export const LEVELS: Level[] = [
     name: 'Vegetarian Tofu Nuggets',
     category: 'entrees & main courses',
     dietaryCategory: 'vegan',
-    levelNum: 350,
+    levelNum: 348,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16780,7 +16685,7 @@ export const LEVELS: Level[] = [
     name: 'Vegetarian Tofu Stir-Fry',
     category: 'entrees & main courses',
     dietaryCategory: 'vegan',
-    levelNum: 351,
+    levelNum: 349,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16837,7 +16742,7 @@ export const LEVELS: Level[] = [
     name: 'Vegetarian Sesame Tofu & Broccoli',
     category: 'entrees & main courses',
     dietaryCategory: 'vegan',
-    levelNum: 352,
+    levelNum: 350,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16892,7 +16797,7 @@ export const LEVELS: Level[] = [
     name: 'Vegetarian Dal',
     category: 'entrees & main courses',
     dietaryCategory: 'vegan',
-    levelNum: 353,
+    levelNum: 351,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16949,7 +16854,7 @@ export const LEVELS: Level[] = [
     name: 'Vegetarian Chana Masala',
     category: 'entrees & main courses',
     dietaryCategory: 'vegan',
-    levelNum: 354,
+    levelNum: 352,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17003,7 +16908,7 @@ export const LEVELS: Level[] = [
     name: 'Vegetarian Shakshuka',
     category: 'entrees & main courses',
     dietaryCategory: 'veggie',
-    levelNum: 355,
+    levelNum: 353,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17052,7 +16957,7 @@ export const LEVELS: Level[] = [
     name: 'Vegetarian Stuffed Peppers',
     category: 'entrees & main courses',
     dietaryCategory: 'veggie',
-    levelNum: 356,
+    levelNum: 354,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17107,7 +17012,7 @@ export const LEVELS: Level[] = [
     name: 'Vegetarian Stuffed Poblano Peppers',
     category: 'entrees & main courses',
     dietaryCategory: 'veggie',
-    levelNum: 357,
+    levelNum: 355,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17162,7 +17067,7 @@ export const LEVELS: Level[] = [
     name: 'Vegetarian Stuffed Zucchini Boats',
     category: 'entrees & main courses',
     dietaryCategory: 'veggie',
-    levelNum: 358,
+    levelNum: 356,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17212,7 +17117,7 @@ export const LEVELS: Level[] = [
     name: 'Vegetarian Cheese Enchiladas',
     category: 'entrees & main courses',
     dietaryCategory: 'veggie',
-    levelNum: 359,
+    levelNum: 357,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17263,7 +17168,7 @@ export const LEVELS: Level[] = [
     name: 'Vegetarian Cheese Lasagna',
     category: 'entrees & main courses',
     dietaryCategory: 'veggie',
-    levelNum: 360,
+    levelNum: 358,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17322,7 +17227,7 @@ export const LEVELS: Level[] = [
     name: 'Deviled Eggs',
     category: 'sides',
     dietaryCategory: 'veggie',
-    levelNum: 361,
+    levelNum: 359,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17365,7 +17270,7 @@ export const LEVELS: Level[] = [
     name: 'Braised Collard Greens',
     category: 'sides',
     dietaryCategory: 'all',
-    levelNum: 362,
+    levelNum: 360,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17408,7 +17313,7 @@ export const LEVELS: Level[] = [
     name: 'Creamed Corn',
     category: 'sides',
     dietaryCategory: 'veggie',
-    levelNum: 363,
+    levelNum: 361,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17449,7 +17354,7 @@ export const LEVELS: Level[] = [
     name: 'Creamed Spinach',
     category: 'sides',
     dietaryCategory: 'veggie',
-    levelNum: 364,
+    levelNum: 362,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17492,7 +17397,7 @@ export const LEVELS: Level[] = [
     name: 'French Fries',
     category: 'sides',
     dietaryCategory: 'vegan',
-    levelNum: 365,
+    levelNum: 363,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17532,7 +17437,7 @@ export const LEVELS: Level[] = [
     name: 'Glazed Carrots',
     category: 'sides',
     dietaryCategory: 'veggie',
-    levelNum: 366,
+    levelNum: 364,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17572,7 +17477,7 @@ export const LEVELS: Level[] = [
     name: 'Onion Rings',
     category: 'sides',
     dietaryCategory: 'veggie',
-    levelNum: 367,
+    levelNum: 365,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17615,7 +17520,7 @@ export const LEVELS: Level[] = [
     name: 'Green Bean Casserole',
     category: 'sides',
     dietaryCategory: 'veggie',
-    levelNum: 368,
+    levelNum: 366,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17657,7 +17562,7 @@ export const LEVELS: Level[] = [
     name: 'Rice Pilaf',
     category: 'sides',
     dietaryCategory: 'all',
-    levelNum: 369,
+    levelNum: 367,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17702,7 +17607,7 @@ export const LEVELS: Level[] = [
     name: 'Risotto',
     category: 'sides',
     dietaryCategory: 'all',
-    levelNum: 370,
+    levelNum: 368,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17750,7 +17655,7 @@ export const LEVELS: Level[] = [
     name: 'Roasted Asparagus',
     category: 'sides',
     dietaryCategory: 'vegan',
-    levelNum: 371,
+    levelNum: 369,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17791,7 +17696,7 @@ export const LEVELS: Level[] = [
     name: 'Roasted Brussels Sprouts',
     category: 'sides',
     dietaryCategory: 'vegan',
-    levelNum: 372,
+    levelNum: 370,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17832,7 +17737,7 @@ export const LEVELS: Level[] = [
     name: 'Stuffed Mushrooms',
     category: 'sides',
     dietaryCategory: 'veggie',
-    levelNum: 373,
+    levelNum: 371,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17876,7 +17781,7 @@ export const LEVELS: Level[] = [
     name: 'Succotash',
     category: 'sides',
     dietaryCategory: 'veggie',
-    levelNum: 374,
+    levelNum: 372,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17916,7 +17821,7 @@ export const LEVELS: Level[] = [
     name: 'Asparagus Soup',
     category: 'soups & stews',
     dietaryCategory: 'pollo',
-    levelNum: 375,
+    levelNum: 373,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17962,7 +17867,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Pho',
     category: 'soups & stews',
     dietaryCategory: 'all',
-    levelNum: 376,
+    levelNum: 374,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18012,7 +17917,7 @@ export const LEVELS: Level[] = [
     name: 'Beef Stew',
     category: 'soups & stews',
     dietaryCategory: 'all',
-    levelNum: 377,
+    levelNum: 375,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18063,7 +17968,7 @@ export const LEVELS: Level[] = [
     name: 'Broccoli Cheddar Soup',
     category: 'soups & stews',
     dietaryCategory: 'pollo',
-    levelNum: 378,
+    levelNum: 376,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18111,7 +18016,7 @@ export const LEVELS: Level[] = [
     name: 'Egg Drop Soup',
     category: 'soups & stews',
     dietaryCategory: 'pollo',
-    levelNum: 379,
+    levelNum: 377,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18157,7 +18062,7 @@ export const LEVELS: Level[] = [
     name: 'Hot & Sour Soup',
     category: 'soups & stews',
     dietaryCategory: 'all',
-    levelNum: 380,
+    levelNum: 378,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18209,7 +18114,7 @@ export const LEVELS: Level[] = [
     name: 'Tortilla Soup',
     category: 'soups & stews',
     dietaryCategory: 'pollo',
-    levelNum: 381,
+    levelNum: 379,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18263,7 +18168,7 @@ export const LEVELS: Level[] = [
     name: 'Vegetarian Chili',
     category: 'soups & stews',
     dietaryCategory: 'vegan',
-    levelNum: 382,
+    levelNum: 380,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18318,7 +18223,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken Gumbo',
     category: 'soups & stews',
     dietaryCategory: 'all',
-    levelNum: 383,
+    levelNum: 381,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18372,7 +18277,7 @@ export const LEVELS: Level[] = [
     name: 'Chicken Noodle Soup',
     category: 'soups & stews',
     dietaryCategory: 'pollo',
-    levelNum: 384,
+    levelNum: 382,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18424,7 +18329,7 @@ export const LEVELS: Level[] = [
     name: 'Chili no Beans',
     category: 'soups & stews',
     dietaryCategory: 'all',
-    levelNum: 385,
+    levelNum: 383,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18477,7 +18382,7 @@ export const LEVELS: Level[] = [
     name: 'Chili with Beans',
     category: 'soups & stews',
     dietaryCategory: 'all',
-    levelNum: 386,
+    levelNum: 384,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18532,7 +18437,7 @@ export const LEVELS: Level[] = [
     name: 'Seafood Gumbo',
     category: 'soups & stews',
     dietaryCategory: 'pesca',
-    levelNum: 387,
+    levelNum: 385,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18593,7 +18498,7 @@ export const LEVELS: Level[] = [
     name: 'Black Bean Soup',
     category: 'soups & stews',
     dietaryCategory: 'vegan',
-    levelNum: 388,
+    levelNum: 386,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18650,7 +18555,7 @@ export const LEVELS: Level[] = [
     name: 'New England Clam Chowder',
     category: 'soups & stews',
     dietaryCategory: 'pesca',
-    levelNum: 389,
+    levelNum: 387,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18705,7 +18610,7 @@ export const LEVELS: Level[] = [
     name: 'Red Clam Chowder',
     category: 'soups & stews',
     dietaryCategory: 'pesca',
-    levelNum: 390,
+    levelNum: 388,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18761,7 +18666,7 @@ export const LEVELS: Level[] = [
     name: 'French Onion Soup',
     category: 'soups & stews',
     dietaryCategory: 'all',
-    levelNum: 391,
+    levelNum: 389,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18814,7 +18719,7 @@ export const LEVELS: Level[] = [
     name: 'Lentil Soup',
     category: 'soups & stews',
     dietaryCategory: 'vegan',
-    levelNum: 392,
+    levelNum: 390,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18869,7 +18774,7 @@ export const LEVELS: Level[] = [
     name: 'Lobster Bisque',
     category: 'soups & stews',
     dietaryCategory: 'pesca',
-    levelNum: 393,
+    levelNum: 391,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18927,7 +18832,7 @@ export const LEVELS: Level[] = [
     name: 'Minestrone',
     category: 'soups & stews',
     dietaryCategory: 'vegan',
-    levelNum: 394,
+    levelNum: 392,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18988,7 +18893,7 @@ export const LEVELS: Level[] = [
     name: 'Pozole Rojo',
     category: 'soups & stews',
     dietaryCategory: 'all',
-    levelNum: 395,
+    levelNum: 393,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -19039,7 +18944,7 @@ export const LEVELS: Level[] = [
     name: 'Tomato Soup',
     category: 'soups & stews',
     dietaryCategory: 'veggie',
-    levelNum: 396,
+    levelNum: 394,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -19087,7 +18992,7 @@ export const LEVELS: Level[] = [
     name: 'Bagel & Cream Cheese',
     category: 'Breakfast',
     dietaryCategory: 'veggie',
-    levelNum: 397,
+    levelNum: 395,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -19122,7 +19027,7 @@ export const LEVELS: Level[] = [
     name: 'Bagel & Lox',
     category: 'Breakfast',
     dietaryCategory: 'pesca',
-    levelNum: 398,
+    levelNum: 396,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -19161,7 +19066,7 @@ export const LEVELS: Level[] = [
     name: 'Denver Scrambler',
     category: 'Breakfast',
     dietaryCategory: 'all',
-    levelNum: 399,
+    levelNum: 397,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -19203,7 +19108,7 @@ export const LEVELS: Level[] = [
     name: 'Migas without Tortillas',
     category: 'Breakfast',
     dietaryCategory: 'veggie',
-    levelNum: 400,
+    levelNum: 398,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -19246,7 +19151,7 @@ export const LEVELS: Level[] = [
     name: 'Migas with Tortillas',
     category: 'Breakfast',
     dietaryCategory: 'veggie',
-    levelNum: 401,
+    levelNum: 399,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -19291,7 +19196,7 @@ export const LEVELS: Level[] = [
     name: 'Yogurt Parfait',
     category: 'Breakfast',
     dietaryCategory: 'veggie',
-    levelNum: 402,
+    levelNum: 400,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -19329,7 +19234,7 @@ export const LEVELS: Level[] = [
     name: 'Belgian Waffle',
     category: 'Breakfast',
     dietaryCategory: 'veggie',
-    levelNum: 403,
+    levelNum: 401,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -19375,7 +19280,7 @@ export const LEVELS: Level[] = [
     name: 'Huevos Rancheros',
     category: 'Breakfast',
     dietaryCategory: 'veggie',
-    levelNum: 404,
+    levelNum: 402,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -19424,7 +19329,7 @@ export const LEVELS: Level[] = [
     name: 'Breakfast Strata',
     category: 'Breakfast',
     dietaryCategory: 'all',
-    levelNum: 405,
+    levelNum: 403,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -19474,7 +19379,7 @@ export const LEVELS: Level[] = [
     name: 'Crepes',
     category: 'Breakfast',
     dietaryCategory: 'veggie',
-    levelNum: 406,
+    levelNum: 404,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -19518,7 +19423,7 @@ export const LEVELS: Level[] = [
     name: 'Dutch Baby',
     category: 'Breakfast',
     dietaryCategory: 'veggie',
-    levelNum: 407,
+    levelNum: 405,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -19561,7 +19466,7 @@ export const LEVELS: Level[] = [
     name: 'Overnight Oats',
     category: 'Breakfast',
     dietaryCategory: 'veggie',
-    levelNum: 408,
+    levelNum: 406,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -19601,7 +19506,7 @@ export const LEVELS: Level[] = [
     name: 'Granola',
     category: 'Breakfast',
     dietaryCategory: 'vegan',
-    levelNum: 409,
+    levelNum: 407,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -19646,7 +19551,7 @@ export const LEVELS: Level[] = [
     name: 'Granola, Omega Balanced',
     category: 'Breakfast',
     dietaryCategory: 'vegan',
-    levelNum: 410,
+    levelNum: 408,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -19694,7 +19599,7 @@ export const LEVELS: Level[] = [
     name: 'Seafood Fried Shrimp',
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
-    levelNum: 411,
+    levelNum: 409,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -19741,7 +19646,7 @@ export const LEVELS: Level[] = [
     name: 'Seafood Cornmeal Fried Shrimp',
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
-    levelNum: 412,
+    levelNum: 410,
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -19784,6 +19689,187 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'main', label: 'Cornmeal Fried Shrimp', cookingMethod: '', yieldFactorWater: 0.62 }
+    ],
+  },
+  {
+    id: 'ENTR_128',
+    name: 'Spaghetti and Meatballs',
+    category: 'entrees & main courses',
+    dietaryCategory: 'all',
+    levelNum: 411,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":857.8,"pro":42.0,"fat":45.0,"carb":72.2,"fib":7.2,"h2o":357.0,"sug":12.6,"perServing":{"cal":857.8,"pro":42.0,"fat":45.0,"carb":72.2,"fib":7.2,"h2o":357.0,"sug":12.6,"AddedSugars":0.0,"IntrinsicSugars":12.6},"micros":{"vitaminA":14.87,"vitaminC":2.52,"vitaminD":3.97,"vitaminE":0.76,"vitaminK":17.76,"vitaminB6":0.14,"vitaminB12":0.41,"thiamin":0.11,"riboflavin":0.09,"niacin":1.48,"folate":10.72,"calcium":51.22,"iron":1.25,"magnesium":19.71,"phosphorus":96.08,"potassium":208.3,"sodium":297.44,"zinc":1.28,"copper":0.12,"selenium":13.75,"cholesterol":29.36,"saturatedFat":2.78,"monoFat":4.15,"polyFat":0.56,"omega3":0.01,"omega6":0.03},"gramsPerServing":524.7,"servings":4,"per100g":{"Energy_KCal":163.47,"Water":68.04,"Protein":8.0,"TotalLipidFat":8.57,"Carbohydrate":13.75,"FiberTotalDietary":1.38,"SugarsTotal":2.4,"Cholesterol":29.36,"FattyAcids_totalSaturated":2.78,"FattyAcids_totalMonounsaturated":4.15,"FattyAcids_totalPolyunsaturated":0.56,"LinoleicAcid":0.03,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":14.87,"Retinol":6.96,"Carotene_beta":93.02,"VitaminD":3.97,"VitaminE_alphaTocopherol":0.76,"VitaminK_phylloquinone":17.76,"VitaminC_totalAscorbicAcid":2.52,"Thiamin":0.11,"Riboflavin":0.09,"Niacin":1.48,"PantothenicAcid":0.28,"VitaminB6":0.14,"Folate_total":10.72,"Folate_food":9.14,"Folate_DFE":11.83,"FolicAcid":2.11,"VitaminB12":0.41,"Choline_total":19.92,"Betaine":1.39,"LuteinZeaxanthin":104.26,"Lycopene":1576.49,"Calcium_Ca":51.22,"Iron_Fe":1.25,"Magnesium_Mg":19.71,"Phosphorus_P":96.08,"Potassium_K":208.3,"Sodium_Na":297.44,"Zinc_Zn":1.28,"Copper_Cu":0.12,"Manganese_Mn":0.23,"Selenium_Se":13.75,"Tryptophan":0.08,"Threonine":0.3,"Isoleucine":0.34,"Leucine":0.6,"Lysine":0.54,"Methionine":0.17,"Cystine":0.09,"Phenylalanine":0.34,"Tyrosine":0.23,"Valine":0.4,"Arginine":0.42,"Histidine":0.24,"Alanine":0.4,"AsparticAcid":0.66,"GlutamicAcid":1.7,"Glycine":0.37,"Proline":0.52,"Serine":0.34,"omega3":0.01,"omega6":0.03,"AddedSugars":0.0,"IntrinsicSugars":2.4},"addedSugars":0.0,"intrinsicSugars":12.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20420","name":"Pasta, dry, unenriched","grams":56.7},{"ndb":"14411","name":"Water, tap, drinking","grams":236.5},{"ndb":"","name":"Beef Italian Meatballs","grams":389.2}],"sections":[{"section_key":"pasta","section_label":"Spaghetti","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.34811726353257855,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":1172.8,"raw_water_grams":967.51,"raw_fat_grams":3.42,"raw_protein_grams":29.57,"raw_carb_grams":169.35,"final_grams":542.1},{"section_key":"meatballs","section_label":"Beef Italian Meatballs","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":1556.8,"raw_water_grams":1091.32,"raw_fat_grams":176.54,"raw_protein_grams":138.24,"raw_carb_grams":119.25,"final_grams":1556.8}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Spaghetti and Meatballs', quantity: 'custom (g)', foodWord: 'SPAGHETTIANDMEATBALLS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'wide pasta, dry', quantity: '½ lb dry spaghetti', section: 'pasta', ndbNo: '20420', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'water', quantity: '4 cups', section: 'pasta', ndbNo: '14411', portionDesc: 'g', portionGrams: 946.0 },
+      { name: 'Beef Italian Meatballs', quantity: '1 recipe Beef Italian Meatballs & Sauce (1557g)', section: 'meatballs', foodWord: 'BEEFITALIANMEATBALL', portionDesc: 'g', portionGrams: 1556.8, isDish: true, componentRef: 'ENTR_021' }
+    ],
+    recipeInstructions: [
+      'Make or prepare the Beef Italian Meatballs & Sauce (see the Beef Italian Meatballs recipe). Keep warm over low heat.',
+      'Bring a large pot of generously salted water to a boil. Add the spaghetti and cook until al dente, 8–10 minutes. Reserve ½ cup pasta water before draining.',
+      'Drain the spaghetti and return to the pot. Ladle about half the meatball sauce over the pasta and toss to coat, adding a splash of reserved pasta water if needed to loosen.',
+      'Divide the sauced spaghetti among four bowls. Top each with 4–5 meatballs and spoon the remaining sauce over the top.',
+      'Suggestions (not included): Garnish with freshly grated Parmesan cheese and torn fresh basil. Serve with crusty bread or garlic bread.'
+    ],
+    sections: [
+      { key: 'pasta', label: 'Spaghetti', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'meatballs', label: 'Beef Italian Meatballs', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
+    id: 'SAUCE_025',
+    name: 'Red Enchilada Sauce',
+    category: 'sauces & condiments',
+    dietaryCategory: 'vegan',
+    levelNum: 412,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1/4 cup (makes 11+)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":51.7,"pro":1.6,"fat":2.4,"carb":7.2,"fib":2.8,"h2o":23.3,"sug":0.9,"perServing":{"cal":51.7,"pro":1.6,"fat":2.4,"carb":7.2,"fib":2.8,"h2o":23.3,"sug":0.9,"AddedSugars":0.0,"IntrinsicSugars":0.9},"micros":{"vitaminA":344.66,"vitaminC":5.01,"vitaminD":0.0,"vitaminE":0.76,"vitaminK":7.0,"vitaminB6":0.69,"vitaminB12":0.0,"thiamin":0.05,"riboflavin":0.63,"niacin":1.43,"folate":27.62,"calcium":38.99,"iron":2.88,"magnesium":35.7,"phosphorus":75.61,"potassium":661.25,"sodium":639.91,"zinc":0.49,"copper":0.15,"selenium":1.28,"cholesterol":0.0,"saturatedFat":0.65,"monoFat":2.67,"polyFat":1.02,"omega3":0.0,"omega6":0.0},"gramsPerServing":36.2,"servings":11,"per100g":{"Energy_KCal":142.93,"Water":64.44,"Protein":4.29,"TotalLipidFat":6.75,"Carbohydrate":19.81,"FiberTotalDietary":7.74,"SugarsTotal":2.47,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.65,"FattyAcids_totalMonounsaturated":2.67,"FattyAcids_totalPolyunsaturated":1.02,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":344.66,"Retinol":0.0,"Carotene_beta":188.9,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.76,"VitaminK_phylloquinone":7.0,"VitaminC_totalAscorbicAcid":5.01,"Thiamin":0.05,"Riboflavin":0.63,"Niacin":1.43,"PantothenicAcid":0.42,"VitaminB6":0.69,"Folate_total":27.62,"Folate_food":27.62,"Folate_DFE":27.62,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":4.64,"Betaine":0.1,"LuteinZeaxanthin":48.1,"Lycopene":1047.65,"Calcium_Ca":38.99,"Iron_Fe":2.88,"Magnesium_Mg":35.7,"Phosphorus_P":75.61,"Potassium_K":661.25,"Sodium_Na":639.91,"Zinc_Zn":0.49,"Copper_Cu":0.15,"Manganese_Mn":0.54,"Selenium_Se":1.28,"Tryptophan":0.03,"Threonine":0.09,"Isoleucine":0.08,"Leucine":0.13,"Lysine":0.11,"Methionine":0.03,"Cystine":0.04,"Phenylalanine":0.08,"Tyrosine":0.05,"Valine":0.1,"Arginine":0.15,"Histidine":0.05,"Alanine":0.1,"AsparticAcid":0.38,"GlutamicAcid":0.55,"Glycine":0.09,"Proline":0.1,"Serine":0.1,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":2.47},"addedSugars":0.0,"intrinsicSugars":0.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.73,"yieldFactorFat":1.0,"sources":[{"ndb":"11978","name":"","grams":6.2},{"ndb":"11982","name":"Peppers, pasilla, dried","grams":3.8},{"ndb":"11282","name":"Onions, raw","grams":10.0},{"ndb":"2048","name":"Vinegar, cider","grams":5.4},{"ndb":"11215","name":"Garlic, raw","grams":0.8},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":16.4},{"ndb":"2014","name":"Spices, cumin seed","grams":0.2},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":1.2},{"ndb":"2047","name":"Salt, table","grams":0.3}],"sections":[{"section_key":"sauce","section_label":"Sauce","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.73,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":492.7,"raw_water_grams":351.24,"raw_fat_grams":26.84,"raw_protein_grams":17.06,"raw_carb_grams":78.82,"final_grams":397.87}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Red Enchilada Sauce', quantity: 'custom (g)', foodWord: 'ENCHILADASAUCE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'ancho chile dried', quantity: '4 ancho dried chiles', section: 'sauce', ndbNo: '11978', portionDesc: 'g', portionGrams: 68.0 },
+      { name: 'pasilla chile dried', quantity: '6 pasilla dried chiles (guajillo proxy)', section: 'sauce', ndbNo: '11982', portionDesc: 'g', portionGrams: 42.0 },
+      { name: 'onion', quantity: '3/4 cup chopped white onion', section: 'sauce', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'garlic', quantity: '3 cloves garlic', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'tomato', quantity: '2 Roma tomatoes', section: 'sauce', ndbNo: '11529', portionDesc: 'g', portionGrams: 180.0 },
+      { name: 'ground cumin', quantity: '1 tsp ground cumin', section: 'sauce', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'dried oregano', quantity: '1 tsp dried oregano', section: 'sauce', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'salt', quantity: '3/4 tsp salt', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'olive oil', quantity: '1 tbsp olive oil', section: 'sauce', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'apple cider vinegar', quantity: '1/4 cup', section: 'sauce', ndbNo: '2048', portionDesc: 'g', portionGrams: 59.6 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 }
+    ],
+    recipeInstructions: [
+      'Toast the dried ancho and pasilla chiles in a dry skillet over medium heat for 30 to 60 seconds per side, just until fragrant. Do not let them scorch or they will taste bitter.',
+      'Remove the stems and slice the toasted chiles open. Shake out and discard as many seeds as possible.',
+      'Bring to a gentle simmer, then reduce heat to low. Cook uncovered for 20 to 25 minutes, stirring occasionally, until the sauce thickens and the flavors meld.',
+      'Place the cleaned chiles in a bowl. Pour 2 cups of boiling water over them and press a small plate on top to keep them submerged. Soak for 20 to 30 minutes until soft and pliable. Drain and reserve the soaking liquid.',
+      'Heat the olive oil in a skillet over medium heat. Add the chopped onion and cook 4 to 5 minutes until softened. Add the minced garlic and cook 1 more minute. Add the quartered Roma tomatoes and cook 2 minutes, pressing to soften.',
+      'Transfer the soaked chiles, cooked onion mixture, cumin, oregano, salt, and 2 cups water to a blender. Blend on high until completely smooth, about 1 minute.',
+      'Strain the blended sauce through a fine-mesh sieve into the skillet, pressing with a spatula to push through as much pulp as possible. Discard the remaining skins and seeds in the strainer.',
+      'Bring the strained sauce to a simmer over medium heat. Cook uncovered, stirring occasionally, for 10 to 15 minutes until the sauce thickens to the consistency of heavy cream. Taste and adjust salt.',
+      'Use immediately for enchiladas, or cool completely and refrigerate for up to 1 week. The sauce can also be frozen for up to 3 months.'
+    ],
+    sections: [
+      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.73 }
+    ],
+  },
+  {
+    id: 'SAUCE_026',
+    name: 'BBQ Sauce',
+    category: 'sauces & condiments',
+    dietaryCategory: 'vegan',
+    levelNum: 413,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 tbsp (makes 40+)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":12.8,"pro":0.2,"fat":0.1,"carb":3.0,"fib":0.3,"h2o":12.0,"sug":2.4,"perServing":{"cal":12.8,"pro":0.2,"fat":0.1,"carb":3.0,"fib":0.3,"h2o":12.0,"sug":2.4,"AddedSugars":1.8,"IntrinsicSugars":0.7},"micros":{"vitaminA":38.0,"vitaminC":3.74,"vitaminD":0.0,"vitaminE":1.55,"vitaminK":3.52,"vitaminB6":0.09,"vitaminB12":0.0,"thiamin":0.02,"riboflavin":0.06,"niacin":0.74,"folate":6.48,"calcium":37.01,"iron":1.46,"magnesium":28.32,"phosphorus":35.78,"potassium":375.01,"sodium":216.43,"zinc":0.29,"copper":0.14,"selenium":3.15,"cholesterol":0.0,"saturatedFat":0.07,"monoFat":0.17,"polyFat":0.19,"omega3":0.0,"omega6":0.0},"gramsPerServing":15.8,"servings":40,"per100g":{"Energy_KCal":80.89,"Water":75.99,"Protein":1.55,"TotalLipidFat":0.58,"Carbohydrate":18.8,"FiberTotalDietary":1.87,"SugarsTotal":15.24,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.07,"FattyAcids_totalMonounsaturated":0.17,"FattyAcids_totalPolyunsaturated":0.19,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":38.0,"Retinol":0.05,"Carotene_beta":424.86,"VitaminD":0.0,"VitaminE_alphaTocopherol":1.55,"VitaminK_phylloquinone":3.52,"VitaminC_totalAscorbicAcid":3.74,"Thiamin":0.02,"Riboflavin":0.06,"Niacin":0.74,"PantothenicAcid":0.23,"VitaminB6":0.09,"Folate_total":6.48,"Folate_food":6.48,"Folate_DFE":6.48,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":10.53,"Betaine":0.75,"LuteinZeaxanthin":137.14,"Lycopene":11028.08,"Calcium_Ca":37.01,"Iron_Fe":1.46,"Magnesium_Mg":28.32,"Phosphorus_P":35.78,"Potassium_K":375.01,"Sodium_Na":216.43,"Zinc_Zn":0.29,"Copper_Cu":0.14,"Manganese_Mn":0.26,"Selenium_Se":3.15,"Tryptophan":0.01,"Threonine":0.04,"Isoleucine":0.03,"Leucine":0.05,"Lysine":0.05,"Methionine":0.01,"Cystine":0.02,"Phenylalanine":0.04,"Tyrosine":0.02,"Valine":0.04,"Arginine":0.06,"Histidine":0.03,"Alanine":0.04,"AsparticAcid":0.22,"GlutamicAcid":0.63,"Glycine":0.04,"Proline":0.06,"Serine":0.04,"omega3":0.0,"omega6":0.0,"AddedSugars":11.11,"IntrinsicSugars":4.13},"addedSugars":1.8,"intrinsicSugars":0.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.85,"yieldFactorFat":1.0,"sources":[{"ndb":"43217","name":"Tomato sauce, canned, no salt added","grams":12.2},{"ndb":"11546","name":"Tomato products, canned, paste, without salt added","grams":0.8},{"ndb":"2048","name":"Vinegar, cider","grams":1.5},{"ndb":"19304","name":"Molasses","grams":1.0},{"ndb":"19334","name":"Sugars, brown","grams":1.0},{"ndb":"6971","name":"Sauce, worcestershire","grams":0.8},{"ndb":"2028","name":"Spices, paprika","grams":0.1},{"ndb":"2024","name":"Spices, mustard seed, ground","grams":0.1},{"ndb":"2020","name":"Spices, garlic powder","grams":0.1},{"ndb":"2026","name":"Spices, onion powder","grams":0.1},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.0},{"ndb":"2047","name":"Salt, table","grams":0.1},{"ndb":"2030","name":"Spices, pepper, black","grams":0.0}],"sections":[{"section_key":"sauce","section_label":"Sauce","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":13,"raw_grams":715.35,"raw_water_grams":563.91,"raw_fat_grams":3.66,"raw_protein_grams":9.81,"raw_carb_grams":118.56,"final_grams":630.76}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'BBQ Sauce', quantity: 'custom (g)', foodWord: 'BBQSAUCE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'tomato sauce', quantity: '2 cups', section: 'sauce', ndbNo: '43217', portionDesc: 'g', portionGrams: 490.0 },
+      { name: 'tomato paste', quantity: '2 tbsp', section: 'sauce', ndbNo: '11546', portionDesc: 'g', portionGrams: 32.0 },
+      { name: 'apple cider vinegar', quantity: '1/4 cup', section: 'sauce', ndbNo: '2048', portionDesc: 'g', portionGrams: 59.6 },
+      { name: 'molasses', quantity: '2 tbsp', section: 'sauce', ndbNo: '19304', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'brown sugar', quantity: '3 tbsp', section: 'sauce', ndbNo: '19334', portionDesc: 'g', portionGrams: 41.4 },
+      { name: 'Worcestershire sauce', quantity: '2 tbsp', section: 'sauce', ndbNo: '6971', portionDesc: 'g', portionGrams: 34.0 },
+      { name: 'smoked paprika', quantity: '2 tsp', section: 'sauce', ndbNo: '2028', portionDesc: 'g', portionGrams: 4.8 },
+      { name: 'ground mustard', quantity: '1 tsp', section: 'sauce', ndbNo: '2024', portionDesc: 'g', portionGrams: 3.3 },
+      { name: 'garlic powder', quantity: '1 tsp', section: 'sauce', ndbNo: '2020', portionDesc: 'g', portionGrams: 3.1 },
+      { name: 'onion powder', quantity: '1 tsp', section: 'sauce', ndbNo: '2026', portionDesc: 'g', portionGrams: 2.9 },
+      { name: 'cayenne pepper', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.675 },
+      { name: 'salt', quantity: '1/2 tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Combine all ingredients in a medium saucepan over medium heat. Stir well to dissolve the sugar and molasses.',
+      'Bring to a gentle simmer, then reduce heat to low. Cook uncovered for 20 to 25 minutes, stirring occasionally, until the sauce thickens and the flavors meld.',
+      'Taste and adjust seasoning — add more brown sugar for sweetness, vinegar for tang, or cayenne for heat.',
+      'Remove from heat and let cool. The sauce will thicken further as it cools. Store refrigerated for up to 2 weeks. Use as a glaze, dipping sauce, or basting sauce for ribs, chicken, or burgers.'
+    ],
+    sections: [
+      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.85 }
+    ],
+  },
+  {
+    id: 'SAUCE_027',
+    name: 'Italian Marinara Sauce',
+    category: 'sauces & condiments',
+    dietaryCategory: 'vegan',
+    levelNum: 414,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '½ cup (makes 7)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":81.0,"pro":2.2,"fat":4.3,"carb":10.6,"fib":2.6,"h2o":100.4,"sug":5.7,"perServing":{"cal":81.0,"pro":2.2,"fat":4.3,"carb":10.6,"fib":2.6,"h2o":100.4,"sug":5.7,"AddedSugars":0.0,"IntrinsicSugars":5.7},"micros":{"vitaminA":14.21,"vitaminC":5.21,"vitaminD":0.0,"vitaminE":1.64,"vitaminK":13.73,"vitaminB6":0.11,"vitaminB12":0.0,"thiamin":0.05,"riboflavin":0.05,"niacin":0.78,"folate":10.65,"calcium":37.64,"iron":1.15,"magnesium":17.83,"phosphorus":32.0,"potassium":248.83,"sodium":385.51,"zinc":0.27,"copper":0.16,"selenium":0.82,"cholesterol":0.0,"saturatedFat":0.5,"monoFat":2.41,"polyFat":0.39,"omega3":0.0,"omega6":0.0},"gramsPerServing":120.0,"servings":7,"per100g":{"Energy_KCal":67.51,"Water":83.62,"Protein":1.86,"TotalLipidFat":3.55,"Carbohydrate":8.85,"FiberTotalDietary":2.2,"SugarsTotal":4.75,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.5,"FattyAcids_totalMonounsaturated":2.41,"FattyAcids_totalPolyunsaturated":0.39,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":14.21,"Retinol":0.0,"Carotene_beta":165.88,"VitaminD":0.0,"VitaminE_alphaTocopherol":1.64,"VitaminK_phylloquinone":13.73,"VitaminC_totalAscorbicAcid":5.21,"Thiamin":0.05,"Riboflavin":0.05,"Niacin":0.78,"PantothenicAcid":0.2,"VitaminB6":0.11,"Folate_total":10.65,"Folate_food":10.65,"Folate_DFE":10.65,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":11.57,"Betaine":0.05,"LuteinZeaxanthin":183.11,"Lycopene":4342.9,"Calcium_Ca":37.64,"Iron_Fe":1.15,"Magnesium_Mg":17.83,"Phosphorus_P":32.0,"Potassium_K":248.83,"Sodium_Na":385.51,"Zinc_Zn":0.27,"Copper_Cu":0.16,"Manganese_Mn":0.24,"Selenium_Se":0.82,"Tryptophan":0.01,"Threonine":0.04,"Isoleucine":0.04,"Leucine":0.06,"Lysine":0.06,"Methionine":0.01,"Cystine":0.02,"Phenylalanine":0.05,"Tyrosine":0.02,"Valine":0.05,"Arginine":0.05,"Histidine":0.02,"Alanine":0.05,"AsparticAcid":0.22,"GlutamicAcid":0.59,"Glycine":0.04,"Proline":0.04,"Serine":0.05,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":4.75},"addedSugars":0.0,"intrinsicSugars":5.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.85,"yieldFactorFat":1.0,"sources":[{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":113.4},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.9},{"ndb":"11282","name":"Onions, raw","grams":15.7},{"ndb":"11215","name":"Garlic, raw","grams":1.7},{"ndb":"2044","name":"Basil, fresh","grams":1.7},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.3},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":0.9},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"main","section_label":"Marinara Sauce","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":964.15,"raw_water_grams":826.56,"raw_fat_grams":29.87,"raw_protein_grams":15.66,"raw_carb_grams":74.38,"final_grams":840.17}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Italian Marinara Sauce', quantity: 'custom (g)', foodWord: 'MARINARASAUCE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'canned crushed tomatoes', quantity: '1 can (28 oz) crushed tomatoes', section: 'main', ndbNo: '11693', portionDesc: 'g', portionGrams: 794.0 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'main', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'onion', quantity: '1 medium onion, finely diced', section: 'main', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'main', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'fresh basil', quantity: '¼ cup fresh basil, torn', section: 'main', ndbNo: '2044', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'dried oregano', quantity: '¾ tsp', section: 'main', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.8 },
+      { name: 'red pepper flakes', quantity: '¼ tsp', section: 'main', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'salt', quantity: '1 tsp', section: 'main', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'main', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Heat the olive oil in a medium saucepan over medium heat. Add the diced onion and cook, stirring occasionally, until softened and lightly golden, about 8 minutes.',
+      'Add the minced garlic and red pepper flakes and cook, stirring, until fragrant, about 1 minute.',
+      'Pour in the crushed tomatoes. Season with the oregano, salt, and black pepper and stir to combine.',
+      'Bring to a simmer, then reduce heat to low. Cook uncovered, stirring occasionally, for 20–25 minutes until the sauce thickens and the flavors meld.',
+      'Remove from heat and stir in the torn fresh basil. Taste and adjust seasoning.',
+      'Suggestions (not included): Serve over pasta with freshly grated Parmesan cheese, use as a pizza sauce, or serve as a dipping sauce for crusty bread.'
+    ],
+    sections: [
+      { key: 'main', label: 'Marinara Sauce', cookingMethod: '', yieldFactorWater: 0.85 }
     ],
   }
 ];
