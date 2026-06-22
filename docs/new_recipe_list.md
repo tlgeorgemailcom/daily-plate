@@ -1,27 +1,3 @@
-Salads
-
-Asparagus Salad
-Burrata Salad
-Caprese Salad
-Chickpea Salad
-Chicken Pasta Salad
-Chicken & Artichoke Pasta Salad
-Gnocchi Antipasto Salad
-Grilled Chicken Salad
-Mediterranean Orzo Salad
-Mediterranean Pasta Salad
-Ramen Noodle Salad
-Shrimp Caesar Salad
-Southwestern Salad
-Shrimp and Avocado Salad
-Tuna Macaroni Salad
-Wedge Salad
-Nicoise Salad
-Spinach Salad
-Three Bean Salad
-Waldorf Salad
-
-
 Sandwiches & Burgers
 
 Beef Shawarma
@@ -247,5 +223,4 @@ Breakfast Strata
 Crepes
 Dutch Baby
 Overnight Oats
-Shakshuka
 Granola
