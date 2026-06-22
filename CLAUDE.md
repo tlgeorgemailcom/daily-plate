@@ -224,7 +224,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 | Prefix | Status | Count |
 |---|---|---|
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
-| `BKFST_NNN` | 🔧 In progress | 54 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, 046, 047, 048, 049, 050, 051, 052, 053, 054) |
+| `BKFST_NNN` | 🔧 In progress | 53 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, 046, 047, 048, 049, 050, 051, 052, 054) |
 | `SAND_NNN` | 🔧 In progress | 67 (001–067) |
 | `SAUCE_NNN` | 🔧 In progress | 24 (001–024) |
 | `STOCK_NNN` | 🔧 In progress | 7 (001–007) |
@@ -295,7 +295,6 @@ Planned BKFST order (standalone components first, composites last):
 | BKFST_050 | Dutch Baby | (none) | Rule D ✅ — no canonical; egg_whole_raw(1123) 150g+flour_ap_white_enriched_unbleached(20581) 93.75g+milk_whole(1077) 183g+butter_unsalted(1145) 28.4g+sugar_granulated(19335) 12.6g+salt_table(2047) 1.5g+vanilla_extract(2050) 2.1g; baked yfw=0.88 → 436.2g; 2 servings × 218.1g; 212.2 kcal·7.92P·10.13F·21.61C per 100g; dietary_category=veggie |
 | BKFST_051 | Overnight Oats | (none) | Rule D ✅ — no canonical; oats_rolled_old_fashioned_dry(8120) 100g+milk_whole(1077) 244g+yogurt_greek_whole_milk(1293) 122.5g+honey(19296) 42g+vanilla_extract(2050) 4.2g+salt_table(2047) 0.75g; raw yfw=1.00 → 513.5g; 2 servings × 256.7g; 153.2 kcal·6.23P·4.01F·23.26C per 100g; dietary_category=veggie |
 | BKFST_052 | Granola | 8037 | Rule B ✅ — NDB 8037; oats_rolled_old_fashioned_dry(8120) 400g+almonds_sliced(12061) 92g+sunflower_seeds_dry_roasted(12037) 128g+coconut_oil(4047) 40.8g+maple_syrup(19353) 100g+cinnamon_ground(2010) 1.3g+vanilla_extract(2050) 2.1g+salt_table(2047) 4.5g; baked yfw=0.515 → 728.6g; 24 servings × 30.4g (1/4 cup); 470.3 kcal·13.30P·24.19F·53.50C·9.17Fi per 100g; Sugar unscored (canonical=0); all 5 scored macros ≤±4.3%; dietary_category=vegan |
-| BKFST_053 | Granola, High Omega-3 | (none) | Rule D ✅ — no canonical; oats_rolled_old_fashioned_dry(8120) 300g+walnuts_raw(12155) 100g+pecans_raw(12142) 49.5g+pistachios_raw(12152) 35g+flaxseed_ground(12220) 42g+chia_seeds(12006) 50g+hemp_seeds_hulled(12012) 40g+coconut_oil(4047) 40.8g+maple_syrup(19353) 80g+cinnamon_ground(2010) 1.3g+vanilla_extract(2050) 2.1g+salt_table(2047) 4.5g; baked yfw=0.660 → 720.0g; 24 servings × 30.0g (1/4 cup); 500.4 kcal·13.23P·31.87F·45.16C·10.60Fi per 100g; dietary_category=vegan |
 | BKFST_054 | Granola, Omega Balanced | (none) | Rule D ✅ — no canonical; buckwheat_groats_raw(20008) 340g+flaxseed_ground(12220) 84g+chia_seeds(12006) 100g+hemp_seeds_hulled(12012) 40g+walnuts_raw(12155) 50g+coconut_oil(4047) 40.8g+maple_syrup(19353) 80g+cinnamon_ground(2010) 1.3g+vanilla_extract(2050) 2.1g+salt_table(2047) 4.5g; baked yfw=0.660 → 716.9g; 24 servings × 29.9g (1/4 cup); 450.6 kcal·13.57P·23.76F·52.28C·13.53Fi per 100g; ω6:ω3=0.994:1 (≈1:1); dietary_category=vegan |
 
 **Ingredients needed in ledger before building:**

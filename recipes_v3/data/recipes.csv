@@ -408,5 +408,4 @@ BKFST_049,CREPES,Crepes,Breakfast,veggie,builtin,,,2 crepes (makes 4 servings),4
 BKFST_050,DUTCHBABY,Dutch Baby,Breakfast,veggie,builtin,,,1/2 pancake (makes 2 servings),2,Rule D,baked,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,,
 BKFST_051,OVERNIGHTOATS,Overnight Oats,Breakfast,veggie,builtin,,,1 jar (makes 2 servings),2,Rule D,raw,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,,
 BKFST_052,GRANOLA,Granola,Breakfast,vegan,builtin,8037,,1/4 cup (makes 24+ servings),24,Rule B,baked,0.515,1.0,1.0,1.0,1.0,approved,,,,PASS,,
-BKFST_053,GRANOLAOMEGA3,"Granola, High Omega-3",Breakfast,vegan,builtin,,,1/4 cup (makes 24 servings),24,Rule D,baked,0.660,1.0,1.0,1.0,1.0,approved,,,,PASS,Rule D — no canonical,
 BKFST_054,GRANOLABALANCED,"Granola, Omega Balanced",Breakfast,vegan,builtin,,,1/4 cup (makes 24 servings),24,Rule D,baked,0.660,1.0,1.0,1.0,1.0,approved,,,,PASS,Rule D — no canonical,
