@@ -225,7 +225,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 |---|---|---|
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
 | `BKFST_NNN` | 🔧 In progress | 53 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, 046, 047, 048, 049, 050, 051, 052, 054) |
-| `SAND_NNN` | 🔧 In progress | 76 (001–076) |
+| `SAND_NNN` | 🔧 In progress | 77 (001–077) |
 | `SAUCE_NNN` | 🔧 In progress | 27 (001–027) |
 | `STOCK_NNN` | 🔧 In progress | 7 (001–007) |
 | `ENTR_NNN` | 🔧 In progress | 39 (001, 021, 087, 088, 089, 090, 091, 092, 093, 094, 095, 096, 097, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128) |
@@ -530,6 +530,7 @@ Planned BKFST order (standalone components first, composites last):
 | SAND_074 | Bacon Cheeseburger Bites | (none) | Rule D ✅ — no canonical; 2-section bunless: patties (pan grilled yfw=0.75): beef_ground_80lean_raw(23572) 454.0g+garlic_powder(2020) 1.55g+salt_table(2047) 3.0g+black_pepper_ground(2030) 1.15g; toppings (raw yfw=1.0): bacon_cooked_pan_fried(10862) 69.0g+cheese_american(1253) 126.0g+ketchup(11935) 34.0g+mustard_yellow(2046) 10.0g+pickle_dill(11937) 24.0g; patties ~393g cooked; toppings 263g; total ~656g; 4 servings × ~164g (3 bites); 305.8 kcal/100g; dietary_category=all; food_word=CHEESEBURGERBITES |
 | SAND_075 | Pinwheel Sandwiches | (none) | Rule D ✅ — no canonical; single section (raw yfw=1.0): tortilla_flour_refrigerated(18364) 192.0g+cream_cheese(1017) 227.0g+turkey_breast_deli(7081) 226.8g+cheese_cheddar(1009) 113.4g+spinach_raw(11457) 60.0g+bell_pepper_red_raw(11821) 119.0g+scallion_raw(11291) 30.0g+garlic_powder(2020) 1.55g+black_pepper_ground(2030) 0.575g; 969.8g total; 4 servings × 242.6g (1 roll per person); 221.3 kcal/100g; dietary_category=pollo; food_word=PINWHEEL |
 | SAND_076 | Shrimp Salad Rolls | (none) | Rule D ✅ — no canonical; 2-section: shrimp (pan grilled yfw=0.82): shrimp_raw(15270) 226.8g+olive_oil(4053) 6.8g+salt_table(2047) 1.5g+black_pepper_ground(2030) 0.3g; salad (raw yfw=1.0): hamburger_bun(18350) 88.0g+butter_unsalted(1145) 14.2g+mayonnaise(4025) 55.2g+celery_raw(11143) 60.0g+scallion_raw(11291) 30.0g+lemon_juice_raw(9152) 15.0g+dill_fresh(2045) 2.0g+salt_table(2047) 1.5g+black_pepper_ground(2030) 0.3g; 469.6g cooked; 2 servings × 234.8g; 213.1 kcal·11.92P·13.73F·10.64C per 100g; dietary_category=pesca; food_word=SHRIMPROLL |
+| SAND_077 | Tomato Sandwich | (none) | Rule D ✅ — no canonical; single section (raw yfw=1.0): bread_white_commercial(18069) 80.0g+tomato_red_raw(11529) 150.0g+mayonnaise(4025) 27.6g+salt_table(2047) 0.75g+black_pepper_ground(2030) 0.3g; 258.65g total; 1 serving × 258.65g; 165.6 kcal·3.4P·9.2F·17.7C per 100g; 428 kcal/serving; dietary_category=veggie; food_word=TOMATOSANDWICH | shrimp (pan grilled yfw=0.82): shrimp_raw(15270) 226.8g+olive_oil(4053) 6.8g+salt_table(2047) 1.5g+black_pepper_ground(2030) 0.3g; salad (raw yfw=1.0): hamburger_bun(18350) 88.0g+butter_unsalted(1145) 14.2g+mayonnaise(4025) 55.2g+celery_raw(11143) 60.0g+scallion_raw(11291) 30.0g+lemon_juice_raw(9152) 15.0g+dill_fresh(2045) 2.0g+salt_table(2047) 1.5g+black_pepper_ground(2030) 0.3g; 469.6g cooked; 2 servings × 234.8g; 213.1 kcal·11.92P·13.73F·10.64C per 100g; dietary_category=pesca; food_word=SHRIMPROLL |
 
 ## Human Approval Requirements
 
@@ -739,4 +740,5 @@ Whenever a new `ingredient_key` is added to `ingredients_ledger.csv` or a new ro
 | 2026-06-22 | (SAND_074 Bacon Cheeseburger Bites) | (no new ledger entries — all ingredients already in ledger) | — | — |
 | 2026-06-22 | (SAND_075 Pinwheel Sandwiches) | (no new ledger entries — all ingredients already in ledger) | — | — |
 | 2026-06-22 | (SAND_076 Shrimp Salad Rolls) | (no new ledger entries — all ingredients already in ledger) | — | — |
+| 2026-06-22 | (SAND_077 Tomato Sandwich) | (no new ledger entries — all ingredients already in ledger) | — | — |
 

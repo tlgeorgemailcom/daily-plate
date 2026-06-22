@@ -9,7 +9,7 @@ Sandwiches & Burgers
 ✅ Bacon Cheeseburger Bites
 ✅ Pinwheel Sandwiches
 ✅ Shrimp Salad Rolls
-Tomato Sandwich
+✅ Tomato Sandwich
 Tofu Burritos
 Arepas
 Empanadas
