@@ -225,7 +225,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 |---|---|---|
 | `SWEET_NNN` | ✅ Complete — all 40 in production | 40 |
 | `BKFST_NNN` | 🔧 In progress | 53 (001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, 046, 047, 048, 049, 050, 051, 052, 054) |
-| `SAND_NNN` | 🔧 In progress | 72 (001–072) |
+| `SAND_NNN` | 🔧 In progress | 73 (001–073) |
 | `SAUCE_NNN` | 🔧 In progress | 27 (001–027) |
 | `STOCK_NNN` | 🔧 In progress | 7 (001–007) |
 | `ENTR_NNN` | 🔧 In progress | 39 (001, 021, 087, 088, 089, 090, 091, 092, 093, 094, 095, 096, 097, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128) |
@@ -526,6 +526,7 @@ Planned BKFST order (standalone components first, composites last):
 | SAND_070 | Chicken Caesar Wrap | (none) | Rule D ✅ — no canonical; 3-section composite: chicken (pan grilled yfw=0.75): chicken_breast_raw(5062) 340.2g+olive_oil(4053) 13.6g+garlic_powder(2020) 1.55g+salt_table(2047) 1.5g+black_pepper_ground(2030) 0.575g; assembly (raw yfw=1.0): tortilla_flour_refrigerated(18364) 144.0g+lettuce_romaine_raw(11251) 94.0g+croutons_plain(18242) 30.0g+cheese_parmesan_hard(1033) 50.0g; dressing (raw yfw=1.0, @SAUCE_024): 61.7g; cooked total ~673.5g; 2 servings × ~336.8g; 244.3 kcal/100g; dietary_category=pollo; food_word=CHICKENCAESARWRAP |
 | SAND_071 | Fish Wrap | (none) | Rule D ✅ — no canonical; 2-section: fish (pan grilled yfw=0.82): snapper_raw(15101) 340.2g+olive_oil(4053) 13.6g+lime_juice_raw(9160) 15.0g+cumin_ground(2014) 2.0g+garlic_powder(2020) 1.55g+paprika(2028) 2.3g+salt_table(2047) 1.5g+black_pepper_ground(2030) 0.575g; assembly (raw yfw=1.0): tortilla_flour_refrigerated(18364) 144.0g+cabbage_raw(11109) 100.0g+avocado_raw(9038) 100.0g+tomato_red_raw(11529) 61.25g+sour_cream(1056) 57.5g+lime_juice_raw(9160) 15.0g+cilantro_raw(11165) 8.0g; cooked total ~794.6g; 2 servings × ~397g; 153.5 kcal/100g; dietary_category=pesca; food_word=FISHWRAP |
 | SAND_072 | Lamb Burger | (none) | Rule D ✅ — no canonical; 2-section: patty (pan grilled yfw=0.75): lamb_ground_raw(17224) 226.8g+olive_oil(4053) 13.6g+garlic_powder(2020) 1.55g+cumin_ground(2014) 2.0g+coriander_seed(2013) 1.8g+oregano_dried(2027) 0.9g+salt_table(2047) 1.5g+black_pepper_ground(2030) 0.575g; assembly (raw yfw=1.0): hamburger_bun(18350) 88.0g+arugula_raw(11959) 20.0g+tomato_red_raw(11529) 61.25g+onion_raw(11282) 18.0g+cheese_feta(1019) 56.7g+yogurt_greek_whole_milk(1293) 61.25g+cucumber_peeled_raw(11206) 59.5g+mint_fresh(2065) 4.2g+lemon_juice_raw(9152) 7.5g+garlic_raw(11215) 3.0g; cooked total ~565.9g; 2 servings × ~297g; 214.5 kcal/100g; dietary_category=all; food_word=LAMBBURGER |
+| SAND_073 | Mediterranean Chicken Wrap | (none) | Rule D ✅ — no canonical; 2-section: chicken (pan grilled yfw=0.75): chicken_breast_raw(5062) 226.8g+olive_oil(4053) 13.6g+lemon_juice_raw(9152) 30.0g+garlic_powder(2020) 1.55g+oregano_dried(2027) 0.9g+salt_table(2047) 1.5g+black_pepper_ground(2030) 0.575g; assembly (raw yfw=1.0): tortilla_flour_refrigerated(18364) 144.0g+hummus_commercial(16158) 60.0g+lettuce_romaine_raw(11251) 94.0g+cucumber_peeled_raw(11206) 119.0g+tomato_red_raw(11529) 61.25g+onion_raw(11282) 18.0g+cheese_feta(1019) 56.7g+olives_black_canned(9193) 44.0g+lemon_juice_raw(9152) 15.0g+olive_oil(4053) 13.6g+oregano_dried(2027) 0.9g; cooked total ~796g; 2 servings × ~426g; 155.2 kcal/100g; dietary_category=pollo; food_word=MEDITERRANEANCHICKENWRAP |
 
 ## Human Approval Requirements
 
@@ -730,4 +731,5 @@ Whenever a new `ingredient_key` is added to `ingredients_ledger.csv` or a new ro
 | 2026-06-22 | (SAND_070 Chicken Caesar Wrap) | (no new ledger entries — all ingredients already in ledger) | — | — |
 | 2026-06-22 | snapper_raw (NDB 15101) | snapper | Yes | ✅ added 2026-06-22 (protein) |
 | 2026-06-22 | (SAND_072 Lamb Burger) | (no new ledger entries — all ingredients already in ledger) | — | — |
+| 2026-06-22 | hummus_commercial (NDB 16158) | hummus | Yes | skip — `hummus` already in both files (legume) |
 

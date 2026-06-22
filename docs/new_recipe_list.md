@@ -5,8 +5,8 @@ Sandwiches & Burgers
 ✅ Chicken Caesar Wrap
 ✅ Fish Wrap
 ✅ Lamb Burger
-Mediterranean Wraps
-Pickle Cheeseburger Bites
+✅ Mediterranean Wraps
+Bacon Cheeseburger Bites
 Pinwheel Sandwiches
 Shrimp Salad Rolls
 Tomato Sandwich

@@ -20129,5 +20129,60 @@ export const LEVELS: Level[] = [
       { key: 'patty', label: 'Patty', cookingMethod: '', yieldFactorWater: 0.75 },
       { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_073',
+    name: 'Mediterranean Chicken Wrap',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'pollo',
+    levelNum: 420,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 wrap (makes 2)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":661.4,"pro":39.6,"fat":34.0,"carb":50.2,"fib":7.5,"h2o":295.6,"sug":7.0,"perServing":{"cal":661.4,"pro":39.6,"fat":34.0,"carb":50.2,"fib":7.5,"h2o":295.6,"sug":7.0,"AddedSugars":0.0,"IntrinsicSugars":7.0},"micros":{"vitaminA":63.09,"vitaminC":3.44,"vitaminD":1.32,"vitaminE":0.71,"vitaminK":17.46,"vitaminB6":0.24,"vitaminB12":0.16,"thiamin":0.14,"riboflavin":0.16,"niacin":2.99,"folate":45.46,"calcium":77.0,"iron":1.38,"magnesium":23.0,"phosphorus":136.59,"potassium":208.1,"sodium":331.99,"zinc":0.68,"copper":0.1,"selenium":11.19,"cholesterol":25.34,"saturatedFat":2.26,"monoFat":3.81,"polyFat":1.13,"omega3":0.04,"omega6":0.41},"gramsPerServing":426.2,"servings":2,"per100g":{"Energy_KCal":155.18,"Water":69.34,"Protein":9.29,"TotalLipidFat":7.98,"Carbohydrate":11.77,"FiberTotalDietary":1.77,"SugarsTotal":1.65,"Cholesterol":25.34,"FattyAcids_totalSaturated":2.26,"FattyAcids_totalMonounsaturated":3.81,"FattyAcids_totalPolyunsaturated":1.13,"LinoleicAcid":0.41,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":63.09,"Retinol":10.23,"Carotene_beta":627.42,"VitaminD":1.32,"VitaminE_alphaTocopherol":0.71,"VitaminK_phylloquinone":17.46,"VitaminC_totalAscorbicAcid":3.44,"Thiamin":0.14,"Riboflavin":0.16,"Niacin":2.99,"PantothenicAcid":0.55,"VitaminB6":0.24,"Folate_total":45.46,"Folate_food":32.12,"Folate_DFE":54.75,"FolicAcid":13.34,"VitaminB12":0.16,"Choline_total":25.49,"Betaine":2.83,"LuteinZeaxanthin":298.04,"Lycopene":184.88,"Calcium_Ca":77.0,"Iron_Fe":1.38,"Magnesium_Mg":23.0,"Phosphorus_P":136.59,"Potassium_K":208.1,"Sodium_Na":331.99,"Zinc_Zn":0.68,"Copper_Cu":0.1,"Manganese_Mn":0.21,"Selenium_Se":11.19,"Tryptophan":0.1,"Threonine":0.34,"Isoleucine":0.39,"Leucine":0.67,"Lysine":0.69,"Methionine":0.2,"Cystine":0.08,"Phenylalanine":0.34,"Tyrosine":0.29,"Valine":0.43,"Arginine":0.49,"Histidine":0.27,"Alanine":0.43,"AsparticAcid":0.69,"GlutamicAcid":1.44,"Glycine":0.31,"Proline":0.4,"Serine":0.36,"omega3":0.04,"omega6":0.41,"AddedSugars":0.0,"IntrinsicSugars":1.65},"addedSugars":0.0,"intrinsicSugars":7.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":113.4},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"9152","name":"Lemon juice, raw","grams":15.0},{"ndb":"2020","name":"Spices, garlic powder","grams":0.8},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.5},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"18364","name":"Tortillas, ready-to-bake or -fry, flour, refrigerated","grams":72.0},{"ndb":"16158","name":"Hummus, commercial","grams":30.0},{"ndb":"11251","name":"Lettuce, cos or romaine, raw","grams":47.0},{"ndb":"11206","name":"Cucumber, peeled, raw","grams":59.5},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":30.6},{"ndb":"11282","name":"Onions, raw","grams":9.0},{"ndb":"1019","name":"Cheese, feta","grams":28.4},{"ndb":"9193","name":"Olives, ripe, canned (small-extra large)","grams":22.0},{"ndb":"9152","name":"Lemon juice, raw","grams":7.5},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.5}],"sections":[{"section_key":"chicken","section_label":"Chicken","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":274.92,"raw_water_grams":195.56,"raw_fat_grams":19.68,"raw_protein_grams":51.53,"raw_carb_grams":4.19,"final_grams":226.03},{"section_key":"assembly","section_label":"Assembly","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":626.45,"raw_water_grams":444.42,"raw_fat_grams":48.32,"raw_protein_grams":27.7,"raw_carb_grams":96.14,"final_grams":626.45}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Mediterranean Chicken Wrap', quantity: 'custom (g)', foodWord: 'MEDITERRANEANCHICKENWRAP', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chicken breast', quantity: '2 chicken breasts (4 oz each)', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'lemon juice', quantity: '2 tbsp', section: 'chicken', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'garlic powder', quantity: '½ tsp', section: 'chicken', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.55 },
+      { name: 'dried oregano', quantity: '¼ tsp', section: 'chicken', ndbNo: '2027', portionDesc: 'g', portionGrams: 0.9 },
+      { name: 'salt', quantity: '¼ tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'flour tortilla', quantity: '2 large flour tortillas (10-inch)', section: 'assembly', ndbNo: '18364', portionDesc: 'g', portionGrams: 144.0 },
+      { name: 'hummus', quantity: '4 tbsp hummus', section: 'assembly', ndbNo: '16158', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'romaine lettuce', quantity: '2 cups romaine, chopped', section: 'assembly', ndbNo: '11251', portionDesc: 'g', portionGrams: 94.0 },
+      { name: 'cucumber peeled', quantity: '1 cup cucumber, sliced', section: 'assembly', ndbNo: '11206', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'tomato', quantity: '1 small tomato, diced', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 61.25 },
+      { name: 'onion', quantity: '2 thin slices red onion', section: 'assembly', ndbNo: '11282', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'feta cheese crumbles', quantity: '2 oz feta cheese, crumbled', section: 'assembly', ndbNo: '1019', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'black olives canned', quantity: '10 olives', section: 'assembly', ndbNo: '9193', portionDesc: 'g', portionGrams: 44.0 },
+      { name: 'lemon juice', quantity: '1 tbsp', section: 'assembly', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'assembly', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'dried oregano', quantity: 'pinch dried oregano', section: 'assembly', ndbNo: '2027', portionDesc: 'g', portionGrams: 0.9 }
+    ],
+    recipeInstructions: [
+      'Combine the 2 tbsp lemon juice, garlic powder, oregano, salt, and black pepper in a shallow bowl. Add the chicken breasts and turn to coat. Marinate 15–30 minutes at room temperature (or up to 4 hours refrigerated).',
+      'Heat the olive oil in a skillet over medium-high heat. Cook the chicken 5–7 minutes per side until golden and cooked through (internal temperature 165°F). Transfer to a cutting board and rest 5 minutes, then slice thin on the diagonal.',
+      'Whisk together the 1 tbsp lemon juice, 1 tbsp olive oil, and pinch of oregano in a small bowl to make the dressing.',
+      'Warm the tortillas in a dry skillet over medium heat for 30 seconds per side until pliable.',
+      'Spread 2 tbsp hummus over each warm tortilla. Layer romaine, sliced chicken, cucumber, tomato, red onion, feta, and olives. Drizzle with the lemon dressing.',
+      'Fold in the sides of each tortilla and roll up tightly. Cut in half on the diagonal and serve immediately.'
+    ],
+    sections: [
+      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
