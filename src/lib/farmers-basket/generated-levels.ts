@@ -20321,5 +20321,45 @@ export const LEVELS: Level[] = [
       { key: 'shrimp', label: 'Shrimp', cookingMethod: '', yieldFactorWater: 0.82 },
       { key: 'salad', label: 'Salad', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'SAND_077',
+    name: 'Tomato Sandwich',
+    category: 'sandwiches & burgers',
+    dietaryCategory: 'veggie',
+    levelNum: 424,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 sandwich (makes 1)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":428.2,"pro":8.7,"fat":23.6,"carb":45.7,"fib":4.0,"h2o":176.9,"sug":8.6,"perServing":{"cal":428.2,"pro":8.7,"fat":23.6,"carb":45.7,"fib":4.0,"h2o":176.9,"sug":8.6,"AddedSugars":0.0,"IntrinsicSugars":8.6},"micros":{"vitaminA":26.1,"vitaminC":7.95,"vitaminD":0.75,"vitaminE":0.73,"vitaminK":22.23,"vitaminB6":0.07,"vitaminB12":0.01,"thiamin":0.18,"riboflavin":0.08,"niacin":1.82,"folate":43.58,"calcium":51.78,"iron":1.31,"magnesium":13.8,"phosphorus":46.65,"potassium":180.11,"sodium":334.62,"zinc":0.35,"copper":0.06,"selenium":7.06,"cholesterol":4.48,"saturatedFat":1.48,"monoFat":2.0,"polyFat":5.31,"omega3":0.62,"omega6":4.16},"gramsPerServing":258.6,"servings":1,"per100g":{"Energy_KCal":165.56,"Water":68.41,"Protein":3.36,"TotalLipidFat":9.14,"Carbohydrate":17.68,"FiberTotalDietary":1.56,"SugarsTotal":3.34,"Cholesterol":4.48,"FattyAcids_totalSaturated":1.48,"FattyAcids_totalMonounsaturated":2.0,"FattyAcids_totalPolyunsaturated":5.31,"LinoleicAcid":4.16,"alphaLinolenicAcid":0.62,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":26.1,"Retinol":1.6,"Carotene_beta":261.39,"VitaminD":0.75,"VitaminE_alphaTocopherol":0.73,"VitaminK_phylloquinone":22.23,"VitaminC_totalAscorbicAcid":7.95,"Thiamin":0.18,"Riboflavin":0.08,"Niacin":1.82,"PantothenicAcid":0.23,"VitaminB6":0.07,"Folate_total":43.58,"Folate_food":16.98,"Folate_DFE":62.14,"FolicAcid":26.6,"VitaminB12":0.01,"Choline_total":12.06,"Betaine":31.59,"LuteinZeaxanthin":86.75,"Lycopene":1492.19,"Calcium_Ca":51.78,"Iron_Fe":1.31,"Magnesium_Mg":13.8,"Phosphorus_P":46.65,"Potassium_K":180.11,"Sodium_Na":334.62,"Zinc_Zn":0.35,"Copper_Cu":0.06,"Manganese_Mn":0.24,"Selenium_Se":7.06,"Tryptophan":0.0,"Threonine":0.02,"Isoleucine":0.01,"Leucine":0.02,"Lysine":0.02,"Methionine":0.01,"Cystine":0.01,"Phenylalanine":0.02,"Tyrosine":0.01,"Valine":0.01,"Arginine":0.02,"Histidine":0.01,"Alanine":0.02,"AsparticAcid":0.09,"GlutamicAcid":0.27,"Glycine":0.01,"Proline":0.01,"Serine":0.02,"omega3":0.62,"omega6":4.16,"AddedSugars":0.0,"IntrinsicSugars":3.34},"addedSugars":0.0,"intrinsicSugars":8.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18069","name":"Bread, white, commercially prepared (includes soft bread crumbs)","grams":80.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":150.0},{"ndb":"4025","name":"Salad dressing, mayonnaise, regular","grams":27.6},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3}],"sections":[{"section_key":"sandwich","section_label":"Sandwich","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":258.65,"raw_water_grams":176.93,"raw_fat_grams":23.63,"raw_protein_grams":8.7,"raw_carb_grams":45.72,"final_grams":258.65}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Tomato Sandwich', quantity: 'custom (g)', foodWord: 'TOMATOSANDWICH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white bread', quantity: '2 thick slices white bread', section: 'sandwich', ndbNo: '18069', portionDesc: 'g', portionGrams: 80.0 },
+      { name: 'tomato', quantity: '1 large tomato, thickly sliced', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'mayonnaise', quantity: '2 tbsp mayonnaise', section: 'sandwich', ndbNo: '4025', portionDesc: 'g', portionGrams: 27.6 },
+      { name: 'salt', quantity: '⅛ tsp salt', section: 'sandwich', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.75 },
+      { name: 'ground black pepper', quantity: '⅛ tsp ground black pepper', section: 'sandwich', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 }
+    ],
+    recipeInstructions: [
+      'Spread mayonnaise evenly on both slices of bread.',
+      'Arrange tomato slices on one slice, overlapping slightly to cover the bread completely.',
+      'Season the tomatoes generously with salt and a pinch of black pepper.',
+      'Top with the second slice of bread and serve immediately.',
+      'Suggestions (not included): Best made with peak-season summer tomatoes and soft bread. Serve with potato chips.'
+    ],
+    sections: [
+      { key: 'sandwich', label: 'Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
