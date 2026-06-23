@@ -24,7 +24,7 @@ Pasta & Pizza
 ✅ Garlic Butter Shrimp Pasta
 ✅ Chicken Pesto Pasta
 ✅ Lemon Pasta
-Pasta Primavera
+✅ Pasta Primavera
 Pasta al Pesto
 Ravioli
 ✅ Spaghetti & Meatballs
