@@ -15605,8 +15605,8 @@ export const LEVELS: Level[] = [
       'Place the rack bone-side down on a large sheet of foil. Wrap the foil tightly around the ribs to seal completely. Place on a baking sheet.',
       'Bake for 2.5–3 hours, until the meat is tender and beginning to pull back from the bones.',
       'Open the foil and brush both sides of the ribs generously with BBQ sauce. Return to the oven uncovered for 20–30 minutes, until the sauce caramelizes.',
-      'Rest for 10 minutes before slicing into individual ribs. Serve with additional BBQ sauce on the side (not included).',
-      'Suggestions (not included):'
+      'Rest for 10 minutes before slicing into individual ribs.',
+      'Suggestions (not included): Serve with additional BBQ sauce on the side.'
     ],
     sections: [
       { key: 'ribs', label: 'Baby Back Ribs', cookingMethod: '', yieldFactorWater: 0.73 },
@@ -15655,8 +15655,8 @@ export const LEVELS: Level[] = [
       'Mix the paprika, brown sugar, chili powder, garlic powder, onion powder, mustard, black pepper, salt, and cayenne in a small bowl to form the dry rub. Pat the ribs dry and coat all sides generously with the rub.',
       'Wrap the rack tightly in foil, place on the prepared baking sheet meat-side up, and bake for 2½ to 3 hours until the meat is tender and starting to pull from the bone tips.',
       'Carefully open the foil and drain off any accumulated juices. Brush the top generously with the BBQ sauce.',
-      'Increase the oven to 425°F (220°C) (or use the broiler), return the ribs uncovered for 10 to 15 minutes until the sauce caramelizes and sets. Let rest 5 minutes before cutting into individual ribs. Serve with coleslaw or potato salad (not included).',
-      'Suggestions (not included):'
+      'Increase the oven to 425°F (220°C) (or use the broiler), return the ribs uncovered for 10 to 15 minutes until the sauce caramelizes and sets. Let rest 5 minutes before cutting into individual ribs.',
+      'Suggestions (not included): Serve with coleslaw or potato salad.'
     ],
     sections: [
       { key: 'ribs', label: 'Spareribs', cookingMethod: '', yieldFactorWater: 0.596 },
@@ -15705,8 +15705,8 @@ export const LEVELS: Level[] = [
       'Arrange the ribs in a single layer on the prepared pan. Cover tightly with foil and bake for 1 hour 45 minutes to 2 hours until the meat is tender and cooked through.',
       'Carefully remove the top foil and drain off any accumulated juices. Brush the ribs generously with the BBQ sauce.',
       'Increase the oven to 425°F (220°C) (or use the broiler), return the ribs uncovered for 10 to 15 minutes until the sauce caramelizes and sets.',
-      'Let rest 5 minutes before serving. Serve 2 ribs per person with coleslaw or potato salad (not included).',
-      'Suggestions (not included):'
+      'Let rest 5 minutes before serving.',
+      'Suggestions (not included): Serve 2 ribs per person with coleslaw or potato salad.'
     ],
     sections: [
       { key: 'ribs', label: 'Country-Style Ribs', cookingMethod: '', yieldFactorWater: 0.577 },
