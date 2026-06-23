@@ -4414,8 +4414,8 @@ export const LEVELS: Level[] = [
       'Dip the assembled sandwich in the egg batter, turning to coat all sides evenly. Let any excess drip off.',
       'Melt butter in a skillet over medium heat. Place the sandwich in the pan, cover with a lid or foil, and cook 3 minutes until the bottom is deep golden brown.',
       'Flip and cook another 2–3 minutes uncovered until both sides are golden and the cheese is melted through.',
-      'Transfer to a plate, dust with powdered sugar, and serve immediately. Consider raspberry jam (not included in nutrient calculation) alongside for dipping.',
-      'Suggestions (not included):'
+      'Transfer to a plate, dust with powdered sugar, and serve immediately.',
+      'Suggestions (not included): Serve with raspberry jam alongside for dipping (not included in nutrient calculation).'
     ],
     sections: [
       { key: 'sandwich', label: 'Monte Cristo Sandwich', cookingMethod: '', yieldFactorWater: 0.88 }
