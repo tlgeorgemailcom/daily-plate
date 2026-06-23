@@ -16854,8 +16854,8 @@ export const LEVELS: Level[] = [
       'Heat sesame oil in a wok or large skillet over high heat. Add garlic and ginger and stir for 30 seconds. Add cabbage, carrots, and bean sprouts; stir-fry until wilted, 3 to 4 minutes. Add mushrooms and scallions and cook 2 more minutes. Add tamari, toss to combine. Spread filling on a plate and cool to room temperature.',
       'Lay one egg roll wrapper on a flat surface in a diamond orientation. Spoon about 3 tablespoons of filling onto the lower third of the wrapper. Fold the bottom corner up over the filling, fold in the side corners, then roll tightly toward the top corner. Dab the edge with water to seal. Repeat with remaining wrappers and filling.',
       'Heat vegetable oil in a large heavy skillet to about ½-inch depth over medium-high heat (about 350°F). Working in batches, add egg rolls seam-side down. Fry, turning with tongs, until golden brown on all sides, 3 to 4 minutes total.',
-      'Transfer to a paper-towel-lined plate to drain. Serve immediately with your preferred dipping sauce (not included).',
-      'Suggestions (not included):'
+      'Transfer to a paper-towel-lined plate to drain. Serve immediately.',
+      'Suggestions (not included): Serve with your preferred dipping sauce.'
     ],
     sections: [
       { key: 'egg_rolls', label: 'Egg Rolls', cookingMethod: '', yieldFactorWater: 0.62 }
@@ -16901,8 +16901,8 @@ export const LEVELS: Level[] = [
       'Bring 1½ cups of water to a boil in a medium saucepan; if the rice was rinsed, reduce the water by 2 tablespoons. Add the rice, reduce heat to low, cover, and cook until water is absorbed and rice is tender, about 18 minutes. Remove from heat and let stand 5 minutes, then fluff with a fork.',
       'While the rice cooks, heat the vegetable oil in a large skillet or wok over medium-high heat. Add the garlic and ginger and cook, stirring, about 30 seconds until fragrant.',
       'Add the cabbage, carrots, and mushrooms. Stir-fry 4–5 minutes until slightly softened. Add the bean sprouts, scallions, tamari, and sesame oil. Stir-fry 2–3 minutes more until heated through and lightly caramelized.',
-      'Divide the rice among bowls and top with the egg roll filling. Garnish with additional scallions or sesame seeds if desired (not included).',
-      'Suggestions (not included):'
+      'Divide the rice among bowls and top with the egg roll filling.',
+      'Suggestions (not included): Garnish with additional scallions or sesame seeds if desired.'
     ],
     sections: [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -16949,8 +16949,8 @@ export const LEVELS: Level[] = [
       'In a large bowl, whisk together the tamari, garlic powder, onion powder, paprika, and grated ginger. Add the tofu pieces and toss gently to coat. Marinate for at least 15 minutes (up to 30 minutes).',
       'In a shallow dish, combine the cornstarch, salt, and black pepper. In a second shallow dish, spread the panko bread crumbs. Working with one piece at a time, dredge marinated tofu in the cornstarch mixture (the marinade moisture helps it adhere), then press firmly into the panko to coat all sides.',
       'Heat the vegetable oil in a large non-stick skillet over medium-high heat. Working in batches to avoid crowding, cook the nuggets 2–3 minutes per side, turning carefully, until golden brown and crispy on all sides. Add a little extra oil between batches if needed.',
-      'Transfer to a plate lined with paper towels. Serve immediately with your choice of dipping sauce such as sweet chili sauce, sriracha mayo, or tamari (not included).',
-      'Suggestions (not included):'
+      'Transfer to a plate lined with paper towels. Serve immediately.',
+      'Suggestions (not included): Serve with your choice of dipping sauce such as sweet chili sauce, sriracha mayo, or tamari.'
     ],
     sections: [
       { key: 'nuggets', label: 'Tofu Nuggets', cookingMethod: '', yieldFactorWater: 0.85 }
