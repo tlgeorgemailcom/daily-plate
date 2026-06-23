@@ -13381,8 +13381,8 @@ export const LEVELS: Level[] = [
       'Add the remaining 1 tbsp olive oil to the pan over medium heat. Add the diced onion and cook for 5 minutes until softened. Add the minced garlic and grated ginger and cook for 1 minute until fragrant.',
       'Add the curry powder, cumin, and coriander. Stir and cook for 1 minute to toast the spices.',
       'Pour in the crushed tomatoes and coconut milk. Add the salt and stir to combine. Bring to a simmer.',
-      'Return the chicken to the pan. Simmer uncovered for 15 to 20 minutes until the sauce thickens and the flavors meld. Adjust seasoning to taste. Serve on its own or over steamed rice with naan bread (neither included).',
-      'Suggestions (not included):'
+      'Return the chicken to the pan. Simmer uncovered for 15 to 20 minutes until the sauce thickens and the flavors meld. Adjust seasoning to taste.',
+      'Suggestions (not included): Serve on its own or over steamed rice with naan bread.'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.8 },
@@ -13597,8 +13597,8 @@ export const LEVELS: Level[] = [
       'Drain excess oil from the wok, leaving about 1 tablespoon. Add the remaining garlic and the finely grated ginger and stir-fry for 30 seconds until fragrant.',
       'Add the hoisin sauce, brown sugar, sesame oil, red pepper flakes, reserved marinade, and chicken broth. Stir to combine. Mix the cornstarch with 2 tablespoons cold water and pour into the sauce, stirring until the sauce thickens, about 1 to 2 minutes.',
       'Return the chicken to the wok and toss to coat in the sauce. Cook for 1 minute until heated through.',
-      'Garnish with scallions and sesame seeds. Serve immediately. (Rice not included.)',
-      'Suggestions (not included):'
+      'Garnish with scallions and sesame seeds. Serve immediately.',
+      'Suggestions (not included): Serve with steamed rice.'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.85 },
@@ -13709,8 +13709,8 @@ export const LEVELS: Level[] = [
       'Pour off excess oil if needed, leaving a thin film. Add the white wine and lemon juice to the skillet. Bring to a boil, scraping up any browned bits, and cook for 2 minutes until slightly reduced.',
       'Add the chicken broth and capers. Simmer for 2 to 3 minutes until the sauce reduces by about one-third.',
       'Remove the pan from heat and swirl in the remaining 3 tablespoons butter until the sauce is glossy and emulsified. Season with salt and pepper to taste.',
-      'Return the chicken to the pan and spoon the sauce over to coat. Garnish with fresh parsley and serve immediately. (Pasta or rice not included.)',
-      'Suggestions (not included):'
+      'Return the chicken to the pan and spoon the sauce over to coat. Garnish with fresh parsley and serve immediately.',
+      'Suggestions (not included): Serve with pasta or rice.'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.82 },
@@ -13920,8 +13920,8 @@ export const LEVELS: Level[] = [
       'Add the 1/4 inch thick sliced mushrooms to the same skillet and cook over medium-high heat for 4 to 5 minutes until browned. Add the finely diced shallots and cook for 1 minute more.',
       'Pour in the Marsala wine and chicken broth. Bring to a boil, scraping up any browned bits, and simmer for 4 to 5 minutes until the sauce reduces by about one-third.',
       'Remove from heat and swirl in the remaining 3 tablespoons butter until the sauce is glossy. Season with salt and pepper to taste.',
-      'Return the chicken to the pan and spoon the sauce over to coat. Garnish with fresh parsley and serve immediately. (Pasta or rice not included.)',
-      'Suggestions (not included):'
+      'Return the chicken to the pan and spoon the sauce over to coat. Garnish with fresh parsley and serve immediately.',
+      'Suggestions (not included): Serve with pasta or rice.'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.82 },
