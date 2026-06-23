@@ -11282,8 +11282,8 @@ export const LEVELS: Level[] = [
       'Pour in the beer and beef broth, scraping up any browned bits. Add the apple cider vinegar, mustard, and brown sugar. Stir to combine.',
       'Return the seared beef to the pot. Add the thyme and bay leaves. The liquid should nearly cover the meat.',
       'Bring to a simmer, then cover and braise over low heat for 2 to 2½ hours, until the beef is very tender.',
-      'Remove the bay leaves and thyme sprigs. Taste and adjust seasoning. Serve in bowls over egg noodles or with crusty bread.',
-      'Suggestions (not included):'
+      'Remove the bay leaves and thyme sprigs. Taste and adjust seasoning.',
+      'Suggestions (not included): Serve in bowls over egg noodles or with crusty bread.'
     ],
     sections: [
       { key: 'main', label: 'Beef Carbonnade', cookingMethod: '', yieldFactorWater: 0.5 }
