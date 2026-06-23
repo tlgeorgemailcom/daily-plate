@@ -17226,8 +17226,7 @@ export const LEVELS: Level[] = [
       'Add the crushed tomatoes, salt, and ground black pepper. Stir to combine, bring to a simmer, and cook for 8 to 10 minutes until the sauce thickens slightly.',
       'Using a spoon, make 4 wells in the sauce. Crack one egg into each well. Cover the skillet and cook over medium-low heat for 5 to 8 minutes, until the egg whites are set but the yolks are still slightly runny, or until cooked to your liking.',
       'Remove from heat. Crumble the feta over the top and garnish with fresh parsley.',
-      'Serve directly from the skillet with crusty bread or pita for dipping (not included).',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve directly from the skillet with crusty bread or pita for dipping.'
     ],
     sections: [
       { key: 'shakshuka', label: 'Shakshuka', cookingMethod: '', yieldFactorWater: 0.88 }
@@ -17337,8 +17336,8 @@ export const LEVELS: Level[] = [
       'Add the tomatoes, black beans, sweet corn, ground cumin, chili powder, salt, and ground black pepper. Cook for 4 to 5 minutes, stirring often, until the tomatoes soften and the mixture comes together. Remove from heat and stir in the lime juice, cilantro, and cooked rice.',
       'Spoon the rice and bean filling into each broiled pepper half, mounding slightly. Sprinkle the shredded Cheddar cheese evenly over the tops.',
       'Bake uncovered at 375°F for 15 to 20 minutes, until the filling is heated through and the cheese is melted and lightly browned.',
-      'Let cool for 5 minutes before serving. Serve with sour cream or salsa on the side (not included).',
-      'Suggestions (not included):'
+      'Let cool for 5 minutes before serving.',
+      'Suggestions (not included): Serve with sour cream or salsa on the side.'
     ],
     sections: [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -17440,8 +17439,8 @@ export const LEVELS: Level[] = [
       'Warm the corn tortillas one at a time in a dry skillet for about 30 seconds per side until pliable. Dip each tortilla briefly in the warm enchilada sauce to coat, fill with 2 tablespoons of the bean mixture and 2 tablespoons of the cheese, roll tightly, and place seam-side down in the baking dish.',
       'Pour the remaining enchilada sauce evenly over the rolled enchiladas. Sprinkle the remaining cheese over the top.',
       'Cover tightly with aluminum foil and bake for 20 minutes. Uncover and bake for an additional 10 minutes, until the cheese is melted and the sauce is bubbling.',
-      'Let rest for 5 minutes before serving. Serve with sour cream, avocado, or fresh cilantro on the side (not included).',
-      'Suggestions (not included):'
+      'Let rest for 5 minutes before serving.',
+      'Suggestions (not included): Serve with sour cream, avocado, or fresh cilantro on the side.'
     ],
     sections: [
       { key: 'sauce', label: 'Red Enchilada Sauce', cookingMethod: '', yieldFactorWater: 1.0 },
