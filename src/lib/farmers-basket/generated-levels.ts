@@ -16018,8 +16018,8 @@ export const LEVELS: Level[] = [
       'Form into 8 equal patties (about 1/2 cup each), pressing firmly so they hold together. Place on a tray and refrigerate at least 20 minutes to help set.',
       'Heat the olive oil in a large skillet over medium heat. Add the crab cakes in batches without crowding.',
       'Cook until deeply golden brown on the first side, 3 to 4 minutes. Flip carefully and cook the second side 3 to 4 minutes until browned and heated through.',
-      'Transfer to a plate lined with paper towels briefly, then serve hot with lemon wedges and tartar sauce or remoulade (not included).',
-      'Suggestions (not included):'
+      'Transfer to a plate lined with paper towels briefly, then serve hot.',
+      'Suggestions (not included): Serve with lemon wedges and tartar sauce or remoulade.'
     ],
     sections: [
       { key: 'crab_cakes', label: 'Crab Cakes', cookingMethod: '', yieldFactorWater: 0.9 }
@@ -16064,8 +16064,7 @@ export const LEVELS: Level[] = [
       'Taste and adjust seasoning if needed. Cover and chill the crab filling for 10 to 15 minutes to firm slightly.',
       'Halve and pit the avocados. If needed, scoop a small amount from the center of each half to make room for filling.',
       'Spoon the chilled crab mixture into the avocado halves, mounding slightly.',
-      'Serve immediately chilled, optionally with extra lemon wedges (not included).',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve immediately chilled, optionally with extra lemon wedges.'
     ],
     sections: [
       { key: 'stuffed_avocados', label: 'Stuffed avocados', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -16334,8 +16333,8 @@ export const LEVELS: Level[] = [
       'Flip the scallops. Add the butter, garlic, and thyme sprigs to the pan.',
       'Tilt the pan slightly and spoon the melted butter continuously over the scallops for 1–2 minutes until cooked through and opaque.',
       'Squeeze the lemon juice over the scallops and remove from heat.',
-      'Serve immediately. Pairs well with risotto, pasta, or crusty bread (not included).',
-      'Suggestions (not included):'
+      'Serve immediately.',
+      'Suggestions (not included): Pairs well with risotto, pasta, or crusty bread.'
     ],
     sections: [
       { key: 'scallops', label: 'Scallops', cookingMethod: '', yieldFactorWater: 0.82 }
@@ -16446,8 +16445,8 @@ export const LEVELS: Level[] = [
       'Preheat a grill or grill pan to medium-high heat and lightly oil the grates.',
       'Thread the shrimp and vegetables onto skewers, alternating shrimp with bell pepper, onion, and zucchini pieces.',
       'Grill the kabobs for 2–3 minutes per side until the shrimp are pink and opaque and the vegetables are lightly charred.',
-      'Remove from the grill and serve immediately. Pairs well with rice, couscous, or warm flatbread (not included).',
-      'Suggestions (not included):'
+      'Remove from the grill and serve immediately.',
+      'Suggestions (not included): Pairs well with rice, couscous, or warm flatbread.'
     ],
     sections: [
       { key: 'kabobs', label: 'Shrimp Kabobs', cookingMethod: '', yieldFactorWater: 0.85 }
