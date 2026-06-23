@@ -437,3 +437,4 @@ PASTA_008,PASTAPRIMAVERA,Pasta Primavera,pasta & pizza,veggie,builtin,,,1 plate 
 PASTA_009,PASTAPESTO,Pasta al Pesto,pasta & pizza,veggie,builtin,,,1 plate (makes 4),4,Rule D,boiled,1.00,1.00,1.00,1.00,1.00,approved,,,,PASS,,
 PASTA_010,RAVIOLI,Cheese Ravioli,pasta & pizza,veggie,builtin,,,1 plate (makes 4),4,Rule D,boiled,1.00,1.00,1.00,1.00,1.00,approved,,,,PASS,,
 PASTA_012,SPAGHETTIBOLOGNESE,Spaghetti Bolognese,pasta & pizza,all,builtin,,,1 plate (makes 4),4,Rule D,boiled,1.00,1.00,1.00,1.00,1.00,approved,,,,PASS,,
+PASTA_013,CACIOEPEPE,Cacio e Pepe,pasta & pizza,veggie,builtin,,,1 plate (makes 4),4,Rule D,boiled,1.00,1.00,1.00,1.00,1.00,approved,,,,PASS,,
