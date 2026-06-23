@@ -15753,8 +15753,8 @@ export const LEVELS: Level[] = [
       'Set up three shallow dishes: one with the flour, one with the beaten eggs, and one with the bread crumbs mixed with the rosemary, marjoram, oregano, paprika, salt, and pepper.',
       'Dredge each cutlet in flour, shaking off the excess, then dip in egg, letting the excess drip off, then press firmly into the herbed bread crumb mixture to coat both sides.',
       'Heat the olive oil in a large skillet over medium-high heat. Cook the schnitzel in batches for 3 to 4 minutes per side until golden brown and cooked through. (The ingredient list reflects only the oil absorbed into the crust.)',
-      'Transfer to a wire rack and serve immediately with lemon wedges and a simple green salad or cucumber salad (not included).',
-      'Suggestions (not included):'
+      'Transfer to a wire rack and serve immediately.',
+      'Suggestions (not included): Serve with lemon wedges and a simple green salad or cucumber salad.'
     ],
     sections: [
       { key: 'main', label: 'Pork Schnitzel', cookingMethod: '', yieldFactorWater: 0.9 }
@@ -15812,8 +15812,8 @@ export const LEVELS: Level[] = [
       'Lay the prosciutto slices in an overlapping layer over the surface of each pounded tenderloin, leaving a 1/2-inch border on all sides. Spread the cooled shallot filling evenly over the prosciutto. Starting at the narrow end, roll each tenderloin up tightly jelly-roll style. Tie with kitchen twine at 1-inch intervals to hold the shape.',
       'Heat the remaining 1 tablespoon olive oil in the reserved skillet over medium heat. Place the rolls seam-side down and transfer the skillet to the oven. Roast until the center registers 140-145°F, 20 to 25 minutes total, turning once halfway through. Transfer to a cutting board to rest; reserve the skillet.',
       'Set the reserved skillet over medium-high heat. Add the white wine and the remaining capers, scraping up any browned bits from the pan bottom. Cook until the wine is nearly evaporated. Pour in the orange juice and chicken broth and simmer until the sauce reduces and turns slightly syrupy, 3 to 4 minutes. Remove from the heat and whisk in the butter until smooth. Taste and adjust salt and pepper; add a squeeze of lemon juice if the sauce tastes too sweet.',
-      'Remove the twine and cut each roll into 1/2-inch medallions. Arrange on plates, spoon the pan sauce generously over the top, and finish with fresh thyme leaves. Serve with roasted potatoes or egg noodles (not included).',
-      'Suggestions (not included):'
+      'Remove the twine and cut each roll into 1/2-inch medallions. Arrange on plates, spoon the pan sauce generously over the top, and finish with fresh thyme leaves.',
+      'Suggestions (not included): Serve with roasted potatoes or egg noodles.'
     ],
     sections: [
       { key: 'tenderloin', label: 'Tenderloin', cookingMethod: '', yieldFactorWater: 0.82 },
@@ -15861,8 +15861,8 @@ export const LEVELS: Level[] = [
       'Heat the oven to 450°F. Place the pork fat-side up in a shallow roasting pan. Roast uncovered for 30 minutes until the top begins to brown and develop a crust.',
       'Reduce the oven temperature to 250°F. Loosely tent the roast with foil. Continue roasting until the center registers 180°F on an instant-read thermometer, 6 to 8 hours.',
       'Remove the foil and continue roasting until the surface is deeply caramelized and the meat pulls apart easily with a fork, 30 to 45 minutes more.',
-      'Transfer to a cutting board and let rest 20 to 30 minutes. Pull into large chunks or slice. Serve with roasted vegetables, mashed potatoes, or over rice (not included).',
-      'Suggestions (not included):'
+      'Transfer to a cutting board and let rest 20 to 30 minutes. Pull into large chunks or slice.',
+      'Suggestions (not included): Serve with roasted vegetables, mashed potatoes, or over rice.'
     ],
     sections: [
       { key: 'pork', label: 'Pork Shoulder', cookingMethod: '', yieldFactorWater: 0.6 }
@@ -15967,8 +15967,8 @@ export const LEVELS: Level[] = [
       'Reduce heat to medium. Add the remaining 2 tablespoons butter to the skillet. Whisk in the flour and cook 1 to 2 minutes until golden and smooth.',
       'Gradually whisk in the beef broth, scraping up any browned bits from the bottom of the pan. Add the heavy cream and Worcestershire sauce. Bring to a simmer and cook, stirring occasionally, until the sauce thickens, 4 to 5 minutes.',
       'Return the meatballs to the skillet. Simmer gently until the meatballs are cooked through and the sauce coats them, about 5 minutes more. Remove from heat and stir in the sour cream. Season with salt and pepper to taste.',
-      'Serve over egg noodles, mashed potatoes, or with lingonberry jam on the side (not included). Garnish with fresh parsley if desired.',
-      'Suggestions (not included):'
+      'Garnish with fresh parsley if desired.',
+      'Suggestions (not included): Serve over egg noodles, mashed potatoes, or with lingonberry jam on the side.'
     ],
     sections: [
       { key: 'meatballs', label: 'Meatballs', cookingMethod: '', yieldFactorWater: 0.85 },
