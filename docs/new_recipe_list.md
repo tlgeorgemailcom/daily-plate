@@ -18,7 +18,7 @@ Arepas
 Pasta & Pizza
 
 ✅ Baked Ziti
-Garlic Bread Pizza
+✅ Garlic Bread Pizza
 Pizza, thick crust
 Pizza, thin crust
 Garlic Butter Shrimp Pasta

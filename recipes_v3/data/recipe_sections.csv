@@ -722,3 +722,6 @@ SAND_080,filling,Filling,,raw,1.0,1.0,1.0,1.0,1.0,,,,
 PASTA_001,pasta,Pasta,,boiled,1.0,1.0,,,1.0,,,,
 PASTA_001,marinara,Marinara Sauce,,raw,1.0,1.0,,,1.0,,,,SAUCE_027
 PASTA_001,cheese,Cheese Layer,,baked,0.90,1.0,,,1.0,,,,
+PASTA_002,bread_base,Garlic Bread Base,,baked,0.85,1.0,1.0,1.0,1.0,,,,
+PASTA_002,sauce,Marinara Sauce,,raw,1.0,1.0,1.0,1.0,1.0,,,,SAUCE_027
+PASTA_002,toppings,Cheese Topping,,baked,0.90,1.0,1.0,1.0,1.0,,,,

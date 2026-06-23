@@ -20568,5 +20568,59 @@ export const LEVELS: Level[] = [
       { key: 'marinara', label: 'Marinara Sauce', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'cheese', label: 'Cheese Layer', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'PASTA_002',
+    name: 'Garlic Bread Pizza',
+    category: 'pasta & pizza',
+    dietaryCategory: 'veggie',
+    levelNum: 429,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 piece (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":646.5,"pro":27.0,"fat":37.5,"carb":51.1,"fib":4.4,"h2o":114.6,"sug":6.4,"perServing":{"cal":646.5,"pro":27.0,"fat":37.5,"carb":51.1,"fib":4.4,"h2o":114.6,"sug":6.4,"AddedSugars":0.0,"IntrinsicSugars":6.4},"micros":{"vitaminA":92.86,"vitaminC":2.16,"vitaminD":5.04,"vitaminE":0.9,"vitaminK":20.25,"vitaminB6":0.06,"vitaminB12":0.65,"thiamin":0.15,"riboflavin":0.21,"niacin":1.6,"folate":61.14,"calcium":228.81,"iron":1.7,"magnesium":23.16,"phosphorus":174.17,"potassium":143.56,"sodium":552.69,"zinc":1.37,"copper":0.12,"selenium":15.95,"cholesterol":38.4,"saturatedFat":7.74,"monoFat":5.29,"polyFat":0.97,"omega3":0.01,"omega6":0.11},"gramsPerServing":236.2,"servings":4,"per100g":{"Energy_KCal":273.68,"Water":48.53,"Protein":11.43,"TotalLipidFat":15.89,"Carbohydrate":21.65,"FiberTotalDietary":1.85,"SugarsTotal":2.71,"Cholesterol":38.4,"FattyAcids_totalSaturated":7.74,"FattyAcids_totalMonounsaturated":5.29,"FattyAcids_totalPolyunsaturated":0.97,"LinoleicAcid":0.11,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":92.86,"Retinol":83.12,"Carotene_beta":109.08,"VitaminD":5.04,"VitaminE_alphaTocopherol":0.9,"VitaminK_phylloquinone":20.25,"VitaminC_totalAscorbicAcid":2.16,"Thiamin":0.15,"Riboflavin":0.21,"Niacin":1.6,"PantothenicAcid":0.23,"VitaminB6":0.06,"Folate_total":61.14,"Folate_food":14.76,"Folate_DFE":93.68,"FolicAcid":57.97,"VitaminB12":0.65,"Choline_total":13.67,"Betaine":0.04,"LuteinZeaxanthin":97.66,"Lycopene":1103.32,"Calcium_Ca":228.81,"Iron_Fe":1.7,"Magnesium_Mg":23.16,"Phosphorus_P":174.17,"Potassium_K":143.56,"Sodium_Na":552.69,"Zinc_Zn":1.37,"Copper_Cu":0.12,"Manganese_Mn":0.27,"Selenium_Se":15.95,"Tryptophan":0.21,"Threonine":0.43,"Isoleucine":0.53,"Leucine":0.88,"Lysine":0.47,"Methionine":0.24,"Cystine":0.1,"Phenylalanine":0.53,"Tyrosine":0.46,"Valine":0.62,"Arginine":0.32,"Histidine":0.26,"Alanine":0.36,"AsparticAcid":0.75,"GlutamicAcid":2.8,"Glycine":0.29,"Proline":1.2,"Serine":0.44,"omega3":0.01,"omega6":0.11,"AddedSugars":0.0,"IntrinsicSugars":2.71},"addedSugars":0.0,"intrinsicSugars":6.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18033","name":"Bread, italian","grams":85.0},{"ndb":"1145","name":"Butter, without salt","grams":14.2},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"11297","name":"Parsley, fresh","grams":1.9},{"ndb":"2047","name":"Salt, table","grams":0.2},{"ndb":"","name":"Italian Marinara Sauce","grams":60.0},{"ndb":"1026","name":"Cheese, mozzarella, whole milk","grams":70.9},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":6.2},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.2},{"ndb":"2003","name":"Spices, basil, dried","grams":0.2},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1}],"sections":[{"section_key":"bread_base","section_label":"Garlic Bread Base","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":430.85,"raw_water_grams":145.32,"raw_fat_grams":71.62,"raw_protein_grams":31.41,"raw_carb_grams":174.92,"final_grams":409.05},{"section_key":"sauce","section_label":"Marinara Sauce","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":240.0,"raw_water_grams":200.69,"raw_fat_grams":8.52,"raw_protein_grams":4.46,"raw_carb_grams":21.24,"final_grams":240.0},{"section_key":"toppings","section_label":"Cheese Topping","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":310.77,"raw_water_grams":149.29,"raw_fat_grams":69.99,"raw_protein_grams":72.11,"raw_carb_grams":8.36,"final_grams":295.85}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Garlic Bread Pizza', quantity: 'custom (g)', foodWord: 'GARLICBREADPIZZA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Italian bread', quantity: '12 oz Italian bread loaf, halved lengthwise', section: 'bread_base', ndbNo: '18033', portionDesc: 'g', portionGrams: 340.2 },
+      { name: 'unsalted butter', quantity: '4 tbsp', section: 'bread_base', ndbNo: '1145', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'bread_base', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'bread_base', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'fresh parsley', quantity: '2 tbsp fresh parsley, chopped', section: 'bread_base', ndbNo: '11297', portionDesc: 'g', portionGrams: 7.6 },
+      { name: 'salt', quantity: '⅛ tsp', section: 'bread_base', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.75 },
+      { name: 'Italian Marinara Sauce', quantity: '1 cup Italian Marinara Sauce (recipe)', section: 'sauce', foodWord: 'MARINARASAUCE', portionDesc: 'g', portionGrams: 240.0, isDish: true, componentRef: 'SAUCE_027' },
+      { name: 'mozzarella', quantity: '8 oz mozzarella, shredded', section: 'toppings', ndbNo: '1026', portionDesc: 'g', portionGrams: 283.5 },
+      { name: 'Parmesan cheese', quantity: '¼ cup Parmesan cheese, grated', section: 'toppings', ndbNo: '1033', portionDesc: 'g', portionGrams: 25.0 },
+      { name: 'dried oregano', quantity: '1 tsp', section: 'toppings', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'dried basil', quantity: '¾ tsp', section: 'toppings', ndbNo: '2003', portionDesc: 'g', portionGrams: 0.7 },
+      { name: 'red pepper flakes', quantity: '¼ tsp', section: 'toppings', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Preheat oven to 400°F (205°C). Line a large baking sheet with aluminum foil.',
+      'Make or prepare the Italian Marinara Sauce (see the Italian Marinara Sauce recipe).',
+      'In a small bowl, stir together the softened butter, minced garlic, chopped parsley, olive oil, and salt until well combined.',
+      'Split the Italian bread loaf in half lengthwise. Spread the garlic butter mixture evenly over the cut sides of both halves.',
+      'Place the bread halves cut-side up on the prepared baking sheet. Bake for 5–7 minutes until lightly toasted and golden.',
+      'Remove from oven. Spread the marinara sauce evenly over both toasted bread halves.',
+      'Scatter the shredded mozzarella evenly over the marinara, then sprinkle with Parmesan, oregano, basil, and red pepper flakes.',
+      'Return to the oven and bake for 8–10 minutes, until the cheese is melted and bubbly with light golden spots.',
+      'Let cool 3–4 minutes, then cut each half into 2 pieces (4 total) and serve hot.',
+      'Suggestions (not included): Serve with a green salad or alongside pasta.'
+    ],
+    sections: [
+      { key: 'bread_base', label: 'Garlic Bread Base', cookingMethod: '', yieldFactorWater: 0.85 },
+      { key: 'sauce', label: 'Marinara Sauce', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'toppings', label: 'Cheese Topping', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];

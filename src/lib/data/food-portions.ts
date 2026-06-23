@@ -54572,6 +54572,40 @@ export const FOODS: Food[] = [
         "gm": 218.0
       }
     ]
+  },
+  {
+    "word": "ITALIANBREAD",
+    "display": "Italian Bread",
+    "groups": [
+      "grain",
+      "prepared"
+    ],
+    "ndb": "18033",
+    "desc": "Bread, italian",
+    "cal": 271.0,
+    "pro": 8.8,
+    "fat": 3.5,
+    "carb": 50.1,
+    "fib": 3.2,
+    "h2o": 35.7,
+    "sug": 3.17,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
+      },
+      {
+        "amt": 1.0,
+        "desc": "slice",
+        "gm": 30.0
+      }
+    ]
   }
 ];
 
