@@ -19692,9 +19692,9 @@ export const LEVELS: Level[] = [
     ],
   },
   {
-    id: 'ENTR_128',
+    id: 'PASTA_011',
     name: 'Spaghetti and Meatballs',
-    category: 'entrees & main courses',
+    category: 'pasta & pizza',
     dietaryCategory: 'all',
     levelNum: 411,
     recipe: ['bread'],

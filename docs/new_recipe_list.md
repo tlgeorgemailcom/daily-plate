@@ -329,7 +329,6 @@ Entrees & Main Courses
 ✅ Vegetarian Chana Masala
 ✅ Vegetarian Dal
 ✅ Vegetarian Shakshuka
-✅ Spaghetti & Meatballs
 
 
 Sides

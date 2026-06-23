@@ -2681,11 +2681,6 @@ ENTR_127,5,"Fry the shrimp in batches of 6–8, without crowding, for 3–4 minu
 ENTR_127,6,Transfer to a plate lined with paper towels. Allow the oil to return to 375°F between batches.
 ENTR_127,7,Repeat with remaining shrimp. Serve immediately for best crunch.
 ENTR_127,8,"Suggestions (not included): Serve with cocktail sauce, remoulade, or lemon wedges. Pairs well with coleslaw or french fries."
-ENTR_128,1,Make or prepare the Beef Italian Meatballs & Sauce (see the Beef Italian Meatballs recipe). Keep warm over low heat.
-ENTR_128,2,"Bring a large pot of generously salted water to a boil. Add the spaghetti and cook until al dente, 8–10 minutes. Reserve ½ cup pasta water before draining."
-ENTR_128,3,"Drain the spaghetti and return to the pot. Ladle about half the meatball sauce over the pasta and toss to coat, adding a splash of reserved pasta water if needed to loosen."
-ENTR_128,4,Divide the sauced spaghetti among four bowls. Top each with 4–5 meatballs and spoon the remaining sauce over the top.
-ENTR_128,5,Suggestions (not included): Garnish with freshly grated Parmesan cheese and torn fresh basil. Serve with crusty bread or garlic bread.
 SAUCE_025,1,"Toast the dried ancho and pasilla chiles in a dry skillet over medium heat for 30 to 60 seconds per side, just until fragrant. Do not let them scorch or they will taste bitter."
 SAUCE_025,2,Remove the stems and slice the toasted chiles open. Shake out and discard as many seeds as possible.
 SAUCE_025,3,Place the cleaned chiles in a bowl. Pour 2 cups of boiling water over them and press a small plate on top to keep them submerged. Soak for 20 to 30 minutes until soft and pliable. Drain and reserve the soaking liquid.
@@ -2868,3 +2863,8 @@ PASTA_010,5,"Make the sauce: Melt the butter in a large skillet over medium heat
 PASTA_010,6,"Add the ravioli to the skillet and toss gently to coat, adding a splash of pasta water if needed. Sprinkle with Parmesan, salt, and pepper."
 PASTA_010,7,Divide among 4 plates and serve immediately.
 PASTA_010,8,"Suggestions (not included): Substitute fresh sage (8–10 leaves, fried briefly in the butter) if available."
+PASTA_011,1,Make or prepare the Beef Italian Meatballs & Sauce (see the Beef Italian Meatballs recipe). Keep warm over low heat.
+PASTA_011,2,"Bring a large pot of generously salted water to a boil. Add the spaghetti and cook until al dente, 8–10 minutes. Reserve ½ cup pasta water before draining."
+PASTA_011,3,"Drain the spaghetti and return to the pot. Ladle about half the meatball sauce over the pasta and toss to coat, adding a splash of reserved pasta water if needed to loosen."
+PASTA_011,4,Divide the sauced spaghetti among four bowls. Top each with 4–5 meatballs and spoon the remaining sauce over the top.
+PASTA_011,5,Suggestions (not included): Garnish with freshly grated Parmesan cheese and torn fresh basil. Serve with crusty bread or garlic bread.
