@@ -6985,8 +6985,8 @@ export const LEVELS: Level[] = [
       'In a bowl, whisk together the cornmeal, flour, baking powder, sugar, and salt. Add the egg and milk; stir until a thick, smooth batter forms. Pour batter into a glass taller than the frankfurter is long.',
       'Pat the frankfurters dry. Insert a wooden skewer into each frank. Dip each frank into the batter turning to coat. Raise and let excess drip off. Then carefully lower into the hot oil, releasing just before it is fully submerged.',
       'Fry 2 to 3 corn dogs at a time for 2 to 3 minutes, turning once, until deep golden brown all over.',
-      'Lift out and drain on a paper towel-lined rack. Serve with mustard or ketchup for dipping.',
-      'Suggestions (not included):'
+      'Lift out and drain on a paper towel-lined rack.',
+      'Suggestions (not included): Serve with mustard or ketchup for dipping.'
     ],
     sections: [
       { key: 'corn_dog', label: 'Corn Dog:', cookingMethod: '', yieldFactorWater: 0.85 }
