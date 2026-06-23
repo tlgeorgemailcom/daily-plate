@@ -11660,8 +11660,8 @@ export const LEVELS: Level[] = [
       'Bring to a boil, then reduce heat to low. Cover and simmer 1½ to 2 hours, turning the steak once halfway through, until the beef is completely tender and shreds easily.',
       'Remove the steak to a cutting board. Discard the bay leaves. Using two forks, shred the meat into long, thin strips along the grain.',
       'Return the shredded beef to the pot. Add the green olives and capers. Stir to combine and simmer uncovered 10 minutes to meld the flavors. Taste and adjust seasoning.',
-      'Stir in the cilantro just before serving. Serve over white rice or with black beans.',
-      'Suggestions (not included):'
+      'Stir in the cilantro just before serving.',
+      'Suggestions (not included): Serve over steamed white rice or with black beans.'
     ],
     sections: [
       { key: 'ropa', label: 'Ropa Vieja', cookingMethod: '', yieldFactorWater: 0.75 }
@@ -11816,8 +11816,8 @@ export const LEVELS: Level[] = [
       'Stir in the tomato paste and cook 1 to 2 minutes. Return the seared beef and any accumulated juices to the pot.',
       'Pour in the beef broth. Stir to combine, scraping up any browned bits from the bottom. Bring to a boil, then reduce heat to low.',
       'Cover and simmer for 1 hour 45 minutes to 2 hours, stirring occasionally, until the beef is very tender and the sauce has thickened. Add a splash of water or broth if it gets too thick during cooking.',
-      'Taste and adjust seasoning. Ladle into bowls and top each serving with a tablespoon of sour cream. Serve with egg noodles, bread dumplings, or crusty bread.',
-      'Suggestions (not included):'
+      'Taste and adjust seasoning. Ladle into bowls and top each serving with a tablespoon of sour cream.',
+      'Suggestions (not included): Serve with egg noodles, bread dumplings, or crusty bread.'
     ],
     sections: [
       { key: 'goulash', label: 'Goulash', cookingMethod: '', yieldFactorWater: 0.8 }
