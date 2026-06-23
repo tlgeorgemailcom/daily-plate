@@ -21237,5 +21237,57 @@ export const LEVELS: Level[] = [
       { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.85 }
     ],
+  },
+  {
+    id: 'PASTA_016',
+    name: 'Penne alla Vodka',
+    category: 'pasta & pizza',
+    dietaryCategory: 'veggie',
+    levelNum: 442,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 plate (makes 4)',
+    prepTime: '30',
+    linkType: 'ingredient',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":480.6,"pro":12.8,"fat":20.4,"carb":54.7,"fib":4.4,"h2o":211.7,"sug":8.2,"perServing":{"cal":480.6,"pro":12.8,"fat":20.4,"carb":54.7,"fib":4.4,"h2o":211.7,"sug":8.2,"AddedSugars":0.0,"IntrinsicSugars":8.2},"micros":{"vitaminA":45.99,"vitaminC":2.15,"vitaminD":6.47,"vitaminE":0.83,"vitaminK":7.28,"vitaminB6":0.06,"vitaminB12":0.03,"thiamin":0.03,"riboflavin":0.05,"niacin":0.49,"folate":6.9,"calcium":45.72,"iron":0.63,"magnesium":16.54,"phosphorus":59.67,"potassium":136.99,"sodium":162.98,"zinc":0.4,"copper":0.11,"selenium":12.13,"cholesterol":12.29,"saturatedFat":2.93,"monoFat":2.69,"polyFat":0.46,"omega3":0.01,"omega6":0.08},"gramsPerServing":308.1,"servings":4,"per100g":{"Energy_KCal":155.99,"Water":68.7,"Protein":4.15,"TotalLipidFat":6.62,"Carbohydrate":17.74,"FiberTotalDietary":1.43,"SugarsTotal":2.65,"Cholesterol":12.29,"FattyAcids_totalSaturated":2.93,"FattyAcids_totalMonounsaturated":2.69,"FattyAcids_totalPolyunsaturated":0.46,"LinoleicAcid":0.08,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":45.99,"Retinol":38.86,"Carotene_beta":83.14,"VitaminD":6.47,"VitaminE_alphaTocopherol":0.83,"VitaminK_phylloquinone":7.28,"VitaminC_totalAscorbicAcid":2.15,"Thiamin":0.03,"Riboflavin":0.05,"Niacin":0.49,"PantothenicAcid":0.17,"VitaminB6":0.06,"Folate_total":6.9,"Folate_food":6.9,"Folate_DFE":6.9,"FolicAcid":0.0,"VitaminB12":0.03,"Choline_total":6.08,"Betaine":0.02,"LuteinZeaxanthin":85.92,"Lycopene":1532.47,"Calcium_Ca":45.72,"Iron_Fe":0.63,"Magnesium_Mg":16.54,"Phosphorus_P":59.67,"Potassium_K":136.99,"Sodium_Na":162.98,"Zinc_Zn":0.4,"Copper_Cu":0.11,"Manganese_Mn":0.26,"Selenium_Se":12.13,"Tryptophan":0.05,"Threonine":0.14,"Isoleucine":0.16,"Leucine":0.3,"Lysine":0.16,"Methionine":0.06,"Cystine":0.06,"Phenylalanine":0.19,"Tyrosine":0.11,"Valine":0.19,"Arginine":0.15,"Histidine":0.1,"Alanine":0.13,"AsparticAcid":0.26,"GlutamicAcid":1.29,"Glycine":0.11,"Proline":0.41,"Serine":0.18,"omega3":0.01,"omega6":0.08,"AddedSugars":0.0,"IntrinsicSugars":2.65},"addedSugars":0.0,"intrinsicSugars":8.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20420","name":"Pasta, dry, unenriched","grams":56.7},{"ndb":"14411","name":"Water, tap, drinking","grams":236.5},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":102.8},{"ndb":"14051","name":"Alcoholic beverage, distilled, vodka, 80 proof","grams":15.0},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":29.8},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":6.2},{"ndb":"2044","name":"Basil, fresh","grams":3.0}],"sections":[{"section_key":"pasta","section_label":"Pasta","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.34811726353257855,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":1172.8,"raw_water_grams":967.51,"raw_fat_grams":3.42,"raw_protein_grams":29.57,"raw_carb_grams":169.35,"final_grams":542.1},{"section_key":"sauce","section_label":"Sauce","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":11,"raw_grams":780.35,"raw_water_grams":599.86,"raw_fat_grams":78.11,"raw_protein_grams":21.54,"raw_carb_grams":49.28,"final_grams":690.37}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Penne alla Vodka', quantity: 'custom (g)', foodWord: 'PENNEALLAVODKA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'wide pasta, dry', quantity: '½ lb dry penne', section: 'pasta', ndbNo: '20420', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'water', quantity: '4 cups', section: 'pasta', ndbNo: '14411', portionDesc: 'g', portionGrams: 946.0 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'sauce', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'onion', quantity: '1 medium onion, finely diced', section: 'sauce', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'canned crushed tomatoes', quantity: 'one 14.5-oz can', section: 'sauce', ndbNo: '11693', portionDesc: 'g', portionGrams: 411.0 },
+      { name: 'vodka', quantity: '¼ cup', section: 'sauce', ndbNo: '14051', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'heavy cream', quantity: '½ cup', section: 'sauce', ndbNo: '1053', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'red pepper flakes', quantity: '¼ tsp', section: 'sauce', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'salt', quantity: '½ tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'Parmesan cheese', quantity: '¼ cup, finely grated', section: 'sauce', ndbNo: '1033', portionDesc: 'g', portionGrams: 25.0 },
+      { name: 'fresh basil', quantity: 'fresh leaves', section: 'sauce', ndbNo: '2044', portionDesc: 'g', portionGrams: 12.0 }
+    ],
+    recipeInstructions: [
+      'Bring a large pot of generously salted water to a boil. Add the penne and cook until al dente, 10–12 minutes. Reserve 1 cup pasta water before draining.',
+      'Meanwhile, heat the olive oil in a large skillet over medium heat. Add the onion and cook until softened, about 5 minutes. Add the garlic and red pepper flakes; cook 1 minute until fragrant.',
+      'Carefully pour in the vodka and cook, stirring, until mostly evaporated, about 2 minutes.',
+      'Stir in the crushed tomatoes. Simmer over medium-low heat for 10 minutes, stirring occasionally, until slightly reduced.',
+      'Reduce heat to low. Stir in the heavy cream and cook 3–4 minutes until the sauce turns a deep orange-pink.',
+      'Season with salt and pepper. Drain the penne and add to the sauce. Toss to coat, adding pasta water a splash at a time as needed.',
+      'Remove from heat and stir in the Parmesan until melted. Add the basil and toss briefly.',
+      'Suggestions (not included): Top with additional Parmesan and fresh basil. Add cooked pancetta or Italian sausage for a meat version.'
+    ],
+    sections: [
+      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.85 }
+    ],
   }
 ];

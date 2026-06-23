@@ -440,3 +440,4 @@ PASTA_012,SPAGHETTIBOLOGNESE,Spaghetti Bolognese,pasta & pizza,all,builtin,,,1 p
 PASTA_013,CACIOEPEPE,Cacio e Pepe,pasta & pizza,veggie,builtin,,,1 plate (makes 4),4,Rule D,boiled,1.00,1.00,1.00,1.00,1.00,approved,,,,PASS,,
 PASTA_014,CARBONARA,Carbonara,pasta & pizza,all,builtin,,,1 plate (makes 4),4,Rule D,boiled,1.00,1.00,1.00,1.00,1.00,approved,,,,PASS,,
 PASTA_015,FETTUCCINEALFREDO,Fettuccine Alfredo,pasta & pizza,veggie,,,25,1 plate (makes 4),4,Rule D,boiled,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,Rule D,0
+PASTA_016,PENNEALLAVODKA,Penne alla Vodka,pasta & pizza,veggie,,,30,1 plate (makes 4),4,Rule D,boiled,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,Rule D,0

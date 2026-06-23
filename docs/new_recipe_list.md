@@ -32,7 +32,7 @@ Pasta & Pizza
 ✅ Cacio e Pepe
 ✅ Carbonara
 ✅ Fettuccine Alfredo
-Penne alla Vodka
+✅ Penne alla Vodka
 
 
 Beverages
