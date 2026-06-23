@@ -12715,8 +12715,8 @@ export const LEVELS: Level[] = [
       'Pour in the red wine and scrape up any browned bits. Simmer for 2 minutes until slightly reduced.',
       'Add the crushed tomatoes, beef broth, thyme, rosemary, and bay leaves. Return the beef to the pot and bring to a simmer.',
       'Cover and braise in the oven for 2-1/2 to 3 hours until the beef is completely tender and falling apart.',
-      'Remove the bay leaves and rosemary sprig. Use two forks to shred the beef directly in the pot and stir it into the sauce. Taste and adjust seasoning. Serve over pasta, polenta, or gnocchi.',
-      'Suggestions (not included):'
+      'Remove the bay leaves and rosemary sprig. Use two forks to shred the beef directly in the pot and stir it into the sauce. Taste and adjust seasoning.',
+      'Suggestions (not included): Serve over pasta, polenta, or gnocchi.'
     ],
     sections: [
       { key: 'ragu', label: 'Ragu', cookingMethod: '', yieldFactorWater: 0.75 }
@@ -12975,8 +12975,8 @@ export const LEVELS: Level[] = [
       'Add the minced garlic and cook 1 minute. Sprinkle the flour over the vegetables and stir to coat. Cook 1 to 2 minutes.',
       'Gradually whisk in the beef broth, Worcestershire sauce, and mustard, scraping up any browned bits. Simmer for 4 to 5 minutes until the sauce thickens.',
       'Reduce heat to low. Stir in the sour cream and heat gently — do not boil or the sour cream will curdle.',
-      'Return the beef strips to the skillet and stir to coat. Heat through for 1 to 2 minutes. Adjust seasoning and serve over egg noodles or mashed potatoes.',
-      'Suggestions (not included):'
+      'Return the beef strips to the skillet and stir to coat. Heat through for 1 to 2 minutes. Adjust seasoning.',
+      'Suggestions (not included): Serve over egg noodles or mashed potatoes.'
     ],
     sections: [
       { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.8 },
@@ -13068,8 +13068,8 @@ export const LEVELS: Level[] = [
       'Heat a large skillet or wok over high heat until very hot. Remove the beef from the marinade, reserving the marinade.',
       'Add the coconut oil to the hot skillet. Cook the beef strips in a single layer for 1 to 2 minutes per side until browned. Work in batches to avoid steaming. Transfer to a plate.',
       'Pour the reserved marinade into the skillet and bring to a boil, stirring, for 1 to 2 minutes until thickened and glossy.',
-      'Return the beef to the skillet and toss to coat. Serve immediately on its own or over steamed rice (not included).',
-      'Suggestions (not included):'
+      'Return the beef to the skillet and toss to coat.',
+      'Suggestions (not included): Serve immediately on its own or over steamed rice.'
     ],
     sections: [
       { key: 'teriyaki', label: 'Teriyaki', cookingMethod: '', yieldFactorWater: 0.8 }
