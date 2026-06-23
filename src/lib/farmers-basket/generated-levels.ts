@@ -21608,5 +21608,43 @@ export const LEVELS: Level[] = [
       { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.85 }
     ],
+  },
+  {
+    id: 'BVRG_001',
+    name: 'Vanilla Milkshake',
+    category: 'beverages',
+    dietaryCategory: 'veggie',
+    levelNum: 443,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 milkshake',
+    prepTime: '5 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":595.8,"pro":11.2,"fat":31.0,"carb":65.8,"fib":1.9,"h2o":217.0,"sug":59.6,"perServing":{"cal":595.8,"pro":11.2,"fat":31.0,"carb":65.8,"fib":1.9,"h2o":217.0,"sug":59.6,"AddedSugars":0.0,"IntrinsicSugars":59.6},"micros":{"vitaminA":102.92,"vitaminC":0.48,"vitaminD":15.83,"vitaminE":0.25,"vitaminK":0.3,"vitaminB6":0.04,"vitaminB12":0.4,"thiamin":0.04,"riboflavin":0.22,"niacin":0.11,"folate":4.92,"calcium":123.5,"iron":0.08,"magnesium":13.21,"phosphorus":99.62,"potassium":185.53,"sodium":160.17,"zinc":0.62,"copper":0.02,"selenium":2.12,"cholesterol":37.05,"saturatedFat":5.78,"monoFat":2.52,"polyFat":0.4,"omega3":0.0,"omega6":0.0},"gramsPerServing":329.9,"servings":1,"per100g":{"Energy_KCal":180.57,"Water":65.77,"Protein":3.38,"TotalLipidFat":9.4,"Carbohydrate":19.93,"FiberTotalDietary":0.56,"SugarsTotal":18.07,"Cholesterol":37.05,"FattyAcids_totalSaturated":5.78,"FattyAcids_totalMonounsaturated":2.52,"FattyAcids_totalPolyunsaturated":0.4,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":102.92,"Retinol":101.13,"Carotene_beta":16.5,"VitaminD":15.83,"VitaminE_alphaTocopherol":0.25,"VitaminK_phylloquinone":0.3,"VitaminC_totalAscorbicAcid":0.48,"Thiamin":0.04,"Riboflavin":0.22,"Niacin":0.11,"PantothenicAcid":0.53,"VitaminB6":0.04,"Folate_total":4.92,"Folate_food":4.92,"Folate_DFE":4.92,"FolicAcid":0.0,"VitaminB12":0.4,"Choline_total":23.45,"Betaine":0.11,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":123.5,"Iron_Fe":0.08,"Magnesium_Mg":13.21,"Phosphorus_P":99.62,"Potassium_K":185.53,"Sodium_Na":160.17,"Zinc_Zn":0.62,"Copper_Cu":0.02,"Manganese_Mn":0.01,"Selenium_Se":2.12,"Tryptophan":0.04,"Threonine":0.14,"Isoleucine":0.18,"Leucine":0.3,"Lysine":0.25,"Methionine":0.08,"Cystine":0.02,"Phenylalanine":0.15,"Tyrosine":0.15,"Valine":0.21,"Arginine":0.11,"Histidine":0.08,"Alanine":0.11,"AsparticAcid":0.25,"GlutamicAcid":0.67,"Glycine":0.08,"Proline":0.31,"Serine":0.17,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":18.07},"addedSugars":0.0,"intrinsicSugars":59.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"19095","name":"Ice creams, vanilla","grams":264.0},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":61.0},{"ndb":"2050","name":"Vanilla extract","grams":4.2},{"ndb":"2047","name":"Salt, table","grams":0.8}],"sections":[{"section_key":"milkshake","section_label":"Milkshake","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":329.95,"raw_water_grams":217.01,"raw_fat_grams":31.03,"raw_protein_grams":11.16,"raw_carb_grams":65.76,"final_grams":329.95}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Vanilla Milkshake', quantity: 'custom (g)', foodWord: 'VANILLAMILKSHAKE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'vanilla ice cream', quantity: '2 cups', section: 'milkshake', ndbNo: '19095', portionDesc: 'g', portionGrams: 264.0 },
+      { name: 'whole milk', quantity: '1/4 cup', section: 'milkshake', ndbNo: '1077', portionDesc: 'g', portionGrams: 61.0 },
+      { name: 'vanilla extract', quantity: '1 tsp', section: 'milkshake', ndbNo: '2050', portionDesc: 'g', portionGrams: 4.2 },
+      { name: 'salt', quantity: '1/8 tsp', section: 'milkshake', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.75 }
+    ],
+    recipeInstructions: [
+      'Add the vanilla ice cream, whole milk, vanilla extract, and salt to a blender.',
+      'Blend on high speed until smooth and creamy, about 30 to 60 seconds.',
+      'Pour into a chilled glass and serve immediately.',
+      'Suggestions (not included): Top with whipped cream and a maraschino cherry.'
+    ],
+    sections: [
+      { key: 'milkshake', label: 'Milkshake', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

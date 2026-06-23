@@ -391,3 +391,8 @@ corn_flour_masa_enriched,20017,MASAWHITERICH,"Corn flour, masa, enriched, white"
 bread_italian,18033,ITALIANBREAD,"Bread, italian",Italian bread,slice,30.0,
 yeast_active_dry,18375,YEAST,"Leavening agents, yeast, baker's, active dry",active dry yeast,packet,7.2,
 vodka_80proof,14051,VODKA,"Alcoholic beverage, distilled, vodka, 80 proof",vodka,fl oz,27.8,
+ice_cream_vanilla,19095,ICECREAMVANILLA,"Ice creams, vanilla",vanilla ice cream,cup,132.0,
+ice_cream_chocolate,19270,ICECREAMCHOC,"Ice creams, chocolate",chocolate ice cream,cup,132.0,
+ice_cream_strawberry,19271,ICECREAMSTRAW,"Ice creams, strawberry",strawberry ice cream,cup,132.0,NDB 19271 SugarsTotal=0.0 is an SR Legacy by-difference artifact; actual sugar ~18-22g/100g
+chocolate_syrup,14181,CHOCOLATESYRUP,"Beverages, Chocolate syrup",chocolate syrup,tbsp,19.5,
+strawberries_raw,9316,STRAWBERRIES,"Strawberries, raw",strawberries,cup,152.0,

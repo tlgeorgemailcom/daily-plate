@@ -7,7 +7,6 @@ SOUP_009,5,Add the chicken thigh pieces and sliced andouille sausage. Stir to co
 SOUP_009,6,"Pour in the White Chicken Stock. Add the Worcestershire sauce, salt, and bay leaves. Stir well to incorporate the roux into the broth."
 SOUP_009,7,"Bring to a boil, then reduce heat to medium-low. Simmer uncovered for 15 minutes, stirring occasionally. Then add the okra and continue simmering for another 15 minutes until the chicken is cooked through and the okra is tender. Remove and discard the bay leaves. Taste and adjust seasoning with additional salt if needed."
 SOUP_009,8,"Suggestions (not included): Turn off the heat and stir in 1½ tsp gumbo filé powder — add it off the heat only, as boiling causes filé to turn stringy. Serve in bowls over hot cooked white rice."
-recipe_id,step_order,step_text
 CRUST_001,1,Whisk flour and salt together in a large bowl.
 CRUST_001,2,Cut in chilled butter and shortening until the mixture resembles coarse crumbs with a few pea-sized pieces.
 CRUST_001,3,"Add ice water 1 tablespoon at a time, stirring until the dough just comes together."
@@ -2917,3 +2916,7 @@ PASTA_016,5,Reduce heat to low. Stir in the heavy cream and cook 3–4 minutes u
 PASTA_016,6,"Season with salt and pepper. Drain the penne and add to the sauce. Toss to coat, adding pasta water a splash at a time as needed."
 PASTA_016,7,Remove from heat and stir in the Parmesan until melted. Add the basil and toss briefly.
 PASTA_016,8,Suggestions (not included): Top with additional Parmesan and fresh basil. Add cooked pancetta or Italian sausage for a meat version.
+BVRG_001,1,"Add the vanilla ice cream, whole milk, vanilla extract, and salt to a blender."
+BVRG_001,2,"Blend on high speed until smooth and creamy, about 30 to 60 seconds."
+BVRG_001,3,Pour into a chilled glass and serve immediately.
+BVRG_001,4,Suggestions (not included): Top with whipped cream and a maraschino cherry.
