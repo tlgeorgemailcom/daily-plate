@@ -23,7 +23,7 @@ Pasta & Pizza
 ✅ Pizza, thin crust
 ✅ Garlic Butter Shrimp Pasta
 ✅ Chicken Pesto Pasta
-Lemon Pasta
+✅ Lemon Pasta
 Pasta Primavera
 Pasta al Pesto
 Ravioli

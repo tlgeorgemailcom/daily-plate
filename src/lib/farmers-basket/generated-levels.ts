@@ -20835,5 +20835,54 @@ export const LEVELS: Level[] = [
       { key: 'chicken', label: 'Grilled Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
       { key: 'pesto', label: 'Basil Pesto', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'PASTA_007',
+    name: 'Lemon Pasta',
+    category: 'pasta & pizza',
+    dietaryCategory: 'veggie',
+    levelNum: 434,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 plate (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":428.2,"pro":12.3,"fat":22.5,"carb":44.4,"fib":2.1,"h2o":105.0,"sug":2.0,"perServing":{"cal":428.2,"pro":12.3,"fat":22.5,"carb":44.4,"fib":2.1,"h2o":105.0,"sug":2.0,"AddedSugars":0.0,"IntrinsicSugars":2.0},"micros":{"vitaminA":60.89,"vitaminC":2.68,"vitaminD":1.21,"vitaminE":0.6,"vitaminK":32.82,"vitaminB6":0.04,"vitaminB12":0.08,"thiamin":0.02,"riboflavin":0.04,"niacin":0.39,"folate":7.39,"calcium":95.01,"iron":0.55,"magnesium":18.83,"phosphorus":100.37,"potassium":85.55,"sodium":256.08,"zinc":0.6,"copper":0.09,"selenium":19.96,"cholesterol":20.92,"saturatedFat":5.53,"monoFat":5.01,"polyFat":0.64,"omega3":0.02,"omega6":0.13},"gramsPerServing":186.6,"servings":4,"per100g":{"Energy_KCal":229.45,"Water":56.28,"Protein":6.57,"TotalLipidFat":12.06,"Carbohydrate":23.81,"FiberTotalDietary":1.11,"SugarsTotal":1.06,"Cholesterol":20.92,"FattyAcids_totalSaturated":5.53,"FattyAcids_totalMonounsaturated":5.01,"FattyAcids_totalPolyunsaturated":0.64,"LinoleicAcid":0.13,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":60.89,"Retinol":51.62,"Carotene_beta":109.22,"VitaminD":1.21,"VitaminE_alphaTocopherol":0.6,"VitaminK_phylloquinone":32.82,"VitaminC_totalAscorbicAcid":2.68,"Thiamin":0.02,"Riboflavin":0.04,"Niacin":0.39,"PantothenicAcid":0.14,"VitaminB6":0.04,"Folate_total":7.39,"Folate_food":7.39,"Folate_DFE":7.39,"FolicAcid":0.0,"VitaminB12":0.08,"Choline_total":2.95,"Betaine":0.01,"LuteinZeaxanthin":81.09,"Lycopene":0.01,"Calcium_Ca":95.01,"Iron_Fe":0.55,"Magnesium_Mg":18.83,"Phosphorus_P":100.37,"Potassium_K":85.55,"Sodium_Na":256.08,"Zinc_Zn":0.6,"Copper_Cu":0.09,"Manganese_Mn":0.29,"Selenium_Se":19.96,"Tryptophan":0.09,"Threonine":0.23,"Isoleucine":0.29,"Leucine":0.54,"Lysine":0.32,"Methionine":0.11,"Cystine":0.09,"Phenylalanine":0.34,"Tyrosine":0.21,"Valine":0.35,"Arginine":0.24,"Histidine":0.18,"Alanine":0.21,"AsparticAcid":0.35,"GlutamicAcid":1.97,"Glycine":0.18,"Proline":0.77,"Serine":0.33,"omega3":0.02,"omega6":0.13,"AddedSugars":0.0,"IntrinsicSugars":1.06},"addedSugars":0.0,"intrinsicSugars":2.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20420","name":"Pasta, dry, unenriched","grams":56.7},{"ndb":"14411","name":"Water, tap, drinking","grams":236.5},{"ndb":"1145","name":"Butter, without salt","grams":14.2},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"9152","name":"Lemon juice, raw","grams":11.2},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":12.5},{"ndb":"11297","name":"Parsley, fresh","grams":3.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1}],"sections":[{"section_key":"pasta","section_label":"Pasta","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.34811726353257855,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":1172.8,"raw_water_grams":967.51,"raw_fat_grams":3.42,"raw_protein_grams":29.57,"raw_carb_grams":169.35,"final_grams":542.1},{"section_key":"sauce","section_label":"Lemon Butter Sauce","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":204.35,"raw_water_grams":83.28,"raw_fat_grams":86.56,"raw_protein_grams":19.48,"raw_carb_grams":8.39,"final_grams":204.35}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Lemon Pasta', quantity: 'custom (g)', foodWord: 'LEMONPASTA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'wide pasta, dry', quantity: '8 oz spaghetti, dry', section: 'pasta', ndbNo: '20420', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'water', quantity: '4 cups', section: 'pasta', ndbNo: '14411', portionDesc: 'g', portionGrams: 946.0 },
+      { name: 'unsalted butter', quantity: '4 tbsp', section: 'sauce', ndbNo: '1145', portionDesc: 'g', portionGrams: 56.8 },
+      { name: 'olive oil', quantity: '2 tbsp', section: 'sauce', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'lemon juice', quantity: '3 tbsp', section: 'sauce', ndbNo: '9152', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'Parmesan cheese', quantity: '½ cup, grated', section: 'sauce', ndbNo: '1033', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'fresh parsley', quantity: '½ cup, chopped', section: 'sauce', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.2 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'salt', quantity: '½ tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'red pepper flakes', quantity: '¼ tsp', section: 'sauce', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Bring a large pot of salted water to a boil. Cook the pasta until al dente. Reserve 1 cup pasta water, then drain.',
+      'In a large skillet, melt the butter with the olive oil over medium heat. Add the garlic and cook, stirring, 1–2 minutes until fragrant.',
+      'Add the lemon juice and ½ cup of the reserved pasta water. Simmer 1 minute.',
+      'Add the drained pasta to the skillet and toss to coat. Stir in the Parmesan until it melts into the sauce, adding more pasta water a splash at a time until the sauce is silky and clings to the pasta.',
+      'Remove from heat. Toss in the parsley and red pepper flakes. Season with salt and pepper to taste.',
+      'Divide among 4 plates and serve immediately.',
+      'Suggestions (not included): Add lemon zest (1 tbsp) for extra brightness. Top with extra Parmesan.'
+    ],
+    sections: [
+      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'sauce', label: 'Lemon Butter Sauce', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
