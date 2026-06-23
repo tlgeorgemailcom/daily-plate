@@ -25,7 +25,7 @@ Pasta & Pizza
 ✅ Chicken Pesto Pasta
 ✅ Lemon Pasta
 ✅ Pasta Primavera
-Pasta al Pesto
+✅ Pasta al Pesto
 Ravioli
 ✅ Spaghetti & Meatballs
 Spaghetti Bolognese
