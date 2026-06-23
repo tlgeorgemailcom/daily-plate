@@ -3164,7 +3164,6 @@ export const LEVELS: Level[] = [
       'Spoon the cooked beef onto the center of the warm tortilla.',
       'Sprinkle the Mexican cheese blend over the beef.',
       'Fold in the sides and roll up tightly into a burrito.',
-      '1 burrito (107g): 280 cal | 13.8g protein | 11.6g fat | 29.7g carbs | 2.1g fiber | 2.3g sugar | 49.9g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -3207,7 +3206,6 @@ export const LEVELS: Level[] = [
       'Warm the flour tortilla in a dry skillet over medium heat for 30 seconds per side, or microwave for 15–20 seconds, until pliable.',
       'Spoon the potato-egg mixture onto the center of the warm tortilla.',
       'Sprinkle the Mexican cheese blend evenly over the filling. Fold in the sides and roll up tightly into a burrito.',
-      '1 burrito (305g): 678 cal | 27.6g protein | 36.8g fat | 58.5g carbs | 5.2g fiber | 4.4g sugar | 175.0g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -3247,7 +3245,6 @@ export const LEVELS: Level[] = [
       'Pour in the egg mixture; let the edges set, then gently push cooked edges toward the center.',
       'When eggs are nearly set but still glossy on top, sprinkle cheese over one half.',
       'Fold the omelette in half over the cheese, press lightly, and slide onto a plate.',
-      '1 omelette (122 g): 247 cal | 16.2g protein | 19.5g fat | 1.0g carbs | 0g fiber | 0.6g sugar | 83.6g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -3290,7 +3287,6 @@ export const LEVELS: Level[] = [
       'Melt butter in a non-toxic nonstick skillet over medium heat; add ham, bell pepper, and onion and sauté 2–3 minutes until softened.',
       'Pour the egg mixture over the filling; let the edges set, then gently push cooked edges toward the center.',
       'When eggs are nearly set but still glossy on top, sprinkle cheese over one half; fold the omelette in half and slide onto a plate.',
-      '1 omelette (286 g): 455 cal | 35.5g protein | 31.8g fat | 5.2g carbs | 1.0g fiber | 2.6g sugar | 206.9g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -3338,7 +3334,6 @@ export const LEVELS: Level[] = [
       'Roll the chilled dough out on a lightly floured surface and fit it into a 9-inch pie pan. Fold over and crimp the edges. Line with parchment and fill with pie weights or dried beans. Blind-bake for 15 minutes; remove the weights and parchment and bake 5 minutes more until just beginning to brown.',
       'Whisk the eggs, heavy cream, salt, pepper, and nutmeg until smooth. Scatter the shredded Swiss cheese and diced onion evenly over the warm crust.',
       'Pour the custard over the cheese and onion. Bake for 35 to 40 minutes until the custard is just set in the center and the top is lightly golden. Cool on a rack for at least 10 minutes before slicing.',
-      '1 slice (100.0 g): 373.8 cal | 10.8g protein | 29.5g fat | 16.6g carbs | 0.6g fiber | 1.2g sugar | 41.3g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -3388,7 +3383,6 @@ export const LEVELS: Level[] = [
       'Roll the chilled dough out on a lightly floured surface and fit it into a 9-inch pie pan. Fold over and crimp the edges. Line with parchment and fill with pie weights or dried beans. Blind-bake for 15 minutes; remove the weights and parchment and bake 5 minutes more until just beginning to brown.',
       'Whisk the eggs, heavy cream, salt, pepper, and nutmeg until smooth. Squeeze any excess moisture from the cooked spinach and scatter it with the shredded Swiss cheese and diced onion evenly over the warm crust.',
       'Pour the custard over the cheese and onion. Bake for 35 to 40 minutes until the custard is just set in the center and the top is lightly golden. Cool on a rack for at least 10 minutes before slicing.',
-      '1 slice (120.5 g): 378.9 cal | 11.4g protein | 29.6g fat | 17.4g carbs | 1.2g fiber | 1.3g sugar | 59.8g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -3438,7 +3432,6 @@ export const LEVELS: Level[] = [
       'Roll the chilled dough out on a lightly floured surface and fit it into a 9-inch pie pan. Fold over and crimp the edges. Line with parchment and fill with pie weights or dried beans. Blind-bake for 15 minutes; remove the weights and parchment and bake 5 minutes more until just beginning to brown.',
       'Whisk the eggs, heavy cream, salt, pepper, and nutmeg until smooth. Scatter the diced ham, shredded Swiss cheese, and diced onion evenly over the warm crust.',
       'Pour the custard over the cheese and onion. Bake for 35 to 40 minutes until the custard is just set in the center and the top is lightly golden. Cool on a rack for at least 10 minutes before slicing.',
-      '1 slice (114.0 g): 400.5 cal | 14.2g protein | 30.9g fat | 16.6g carbs | 0.6g fiber | 1.2g sugar | 50.0g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -3488,7 +3481,6 @@ export const LEVELS: Level[] = [
       'Roll the chilled dough out on a lightly floured surface and fit it into a 9-inch pie pan. Fold over and crimp the edges. Line with parchment and fill with pie weights or dried beans. Blind-bake for 15 minutes; remove the weights and parchment and bake 5 minutes more until just beginning to brown.',
       'Whisk the eggs, heavy cream, salt, pepper, and nutmeg until smooth. Break the cooked bacon into small crumbles and scatter with the shredded Swiss cheese and diced onion evenly over the warm crust.',
       'Pour the custard over the cheese and onion. Bake for 35 to 40 minutes until the custard is just set in the center and the top is lightly golden. Cool on a rack for at least 10 minutes before slicing.',
-      '1 slice (113.9 g): 440.1 cal | 15.6g protein | 34.5g fat | 16.8g carbs | 0.6g fiber | 1.2g sugar | 44.3g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -3532,7 +3524,6 @@ export const LEVELS: Level[] = [
       'Scatter the shredded Swiss cheese and diced onion evenly over the bottom of the prepared pan.',
       'Pour the egg custard over the cheese and onion.',
       'Bake for 35 to 40 minutes until the custard is just set in the center and the top is lightly golden. Cool on a rack for at least 10 minutes before slicing.',
-      '1 slice (69.3 g): 209.6 cal | 8.7g protein | 18.8g fat | 1.7g carbs | 0.1g fiber | 1.1g sugar | 38.7g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -3576,7 +3567,6 @@ export const LEVELS: Level[] = [
       'Scatter the shredded Swiss cheese, squeezed cooked spinach, and diced onion evenly over the bottom of the prepared pan.',
       'Pour the egg custard over the filling.',
       'Bake for 35 to 40 minutes until the custard is just set in the center and the top is lightly golden. Cool on a rack for at least 10 minutes before slicing.',
-      '1 slice (89.7 g): 214.7 cal | 9.4g protein | 18.9g fat | 2.5g carbs | 0.6g fiber | 1.2g sugar | 57.2g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -3620,7 +3610,6 @@ export const LEVELS: Level[] = [
       'Scatter the shredded Swiss cheese, diced ham, and diced onion evenly over the bottom of the prepared pan.',
       'Pour the egg custard over the filling.',
       'Bake for 35 to 40 minutes until the custard is just set in the center and the top is lightly golden. Cool on a rack for at least 10 minutes before slicing.',
-      '1 slice (83.3 g): 236.3 cal | 12.1g protein | 20.2g fat | 1.7g carbs | 0.1g fiber | 1.1g sugar | 47.4g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -3664,7 +3653,6 @@ export const LEVELS: Level[] = [
       'Scatter the shredded Swiss cheese, crumbled bacon, and diced onion evenly over the bottom of the prepared pan.',
       'Pour the egg custard over the filling.',
       'Bake for 35 to 40 minutes until the custard is just set in the center and the top is lightly golden. Cool on a rack for at least 10 minutes before slicing.',
-      '1 slice (83.1 g): 275.9 cal | 13.5g protein | 23.8g fat | 1.9g carbs | 0.1g fiber | 1.1g sugar | 41.7g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -3712,7 +3700,6 @@ export const LEVELS: Level[] = [
       'Whisk the eggs with the milk, salt, and pepper in a bowl until well combined.',
       'Pour the egg mixture over the herbs in the skillet. Sprinkle the grated Parmesan evenly over the top. Cook undisturbed for 2 to 3 minutes until the edges begin to set.',
       'Transfer the skillet to a broiler set to high and broil for 3 to 4 minutes until the top is set and lightly golden. Let rest for 2 minutes before slicing into 4 wedges.',
-      '1 slice (91.6 g): 185.1 cal | 11.3g protein | 14.6g fat | 1.9g carbs | 0.5g fiber | 0.7g sugar | 62.3g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -3754,7 +3741,6 @@ export const LEVELS: Level[] = [
       'Add the lemon juice and mash with a fork to your preferred texture — smooth or slightly chunky.',
       'Spread the mashed avocado evenly on top of the warm toast.',
       'Drizzle with olive oil, then finish with a pinch of flaked salt and red pepper flakes.',
-      '1 toast (123.2 g): 276.5 cal | 7.0g protein | 17.9g fat | 24.9g carbs | 8.3g fiber | 3.0g sugar | 70.8g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -3799,7 +3785,6 @@ export const LEVELS: Level[] = [
       'Spread the mashed avocado evenly on top of the warm toast.',
       'Drizzle with olive oil. Place the poached egg on top of the avocado, then arrange the cherry tomato halves around the egg.',
       'Finish with a pinch of flaked salt and red pepper flakes.',
-      '1 toast (241.2 g): 360 cal | 13.9g protein | 22.7g fat | 27.9g carbs | 9.1g fiber | 5.0g sugar | 173.0g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -3841,7 +3826,6 @@ export const LEVELS: Level[] = [
       'Flip both slices over and evenly distribute the shredded cheddar and gruyère over one of the toasted slices. Top with the second toasted slice, toasted side over the cheese.',
       'Cook until the bottom is deep golden brown, about 3–4 minutes. Flip carefully and cook the second side until golden and the cheese is fully melted, about 2–3 more minutes.',
       'Transfer to a cutting board, rest 1 minute, then cut diagonally and serve.',
-      '1 serving (140g): 595 cal | 20.5g protein | 43.6g fat | 30.6g carbs | 1.6g fiber | 3.7g sugar | 41.6g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -3881,7 +3865,6 @@ export const LEVELS: Level[] = [
       'Place one slice butter-side down in the pan. Layer the American cheese over the top, then cover with the second slice, butter-side up.',
       'Cook until the bottom is deep golden brown, about 3–4 minutes. Flip carefully and cook the second side until golden and the cheese is fully melted, about 2–3 more minutes.',
       'Transfer to a cutting board, rest 1 minute, then cut diagonally and serve.',
-      '1 serving (126g): 472 cal | 15.7g protein | 31.5g fat | 31.8g carbs | 1.6g fiber | 4.7g sugar | 41.9g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -3921,7 +3904,6 @@ export const LEVELS: Level[] = [
       'Place one slice butter-side down in the pan. Layer the cheddar over the top, then cover with the second slice, butter-side up.',
       'Cook until the bottom is deep golden brown, about 3–4 minutes. Flip carefully and cook the second side until golden and the cheese is fully melted, about 2–3 more minutes.',
       'Transfer to a cutting board, rest 1 minute, then cut diagonally and serve.',
-      '1 serving (126g): 490 cal | 18.4g protein | 32.4g fat | 31.4g carbs | 1.6g fiber | 3.7g sugar | 40.6g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -3963,7 +3945,6 @@ export const LEVELS: Level[] = [
       'Spread mayonnaise evenly over one side of each toast slice.',
       'On one slice (mayo side up), layer the lettuce leaf, tomato slices, and bacon. Top with the second slice, mayo side down.',
       'Cut diagonally and serve immediately.',
-      '1 sandwich (165.5g): 447.5 cal | 10.2g protein | 17.9g fat | 16.7g carbs | 1.2g fiber | 2.7g sugar | 53.0g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -4007,7 +3988,6 @@ export const LEVELS: Level[] = [
       'On the bottom slice (mayo side up), layer the lettuce leaf and 4 thin tomato slices.',
       'Place the middle slice on top, mayo-side down. Spread mayo on the top of the middle slice, then layer the thin-sliced turkey (prepackaged thin-sliced or deli-sliced) and bacon.',
       'Top with the third slice, mayo-side down. Secure with 4 toothpicks, cut diagonally into 4 triangles, and serve immediately.',
-      '1 sandwich (289.0g): 587.5 cal | 28.5g protein | 29.9g fat | 49.5g carbs | 3.3g fiber | 7.8g sugar | 174.6g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -4049,7 +4029,6 @@ export const LEVELS: Level[] = [
       'In a bowl, combine the chopped eggs, mayonnaise, green onion, mustard, and salt. Mix well.',
       'Spread the egg salad evenly over one bread slice and top with the second slice.',
       'Cut diagonally and serve immediately, or refrigerate the egg salad up to 2 days.',
-      '1 sandwich (195.6g): 505.1 cal | 18.3g protein | 33.4g fat | 31.4g carbs | 1.8g fiber | 4.8g sugar | 108.1g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -4092,7 +4071,6 @@ export const LEVELS: Level[] = [
       'Add the mayonnaise, diced apple, green onion, lemon juice, and salt. Mix to combine.',
       'Spread the tuna salad evenly over one bread slice and top with the second slice.',
       'Cut diagonally and serve immediately, or refrigerate the tuna salad up to 2 days.',
-      '1 sandwich (285.15g): 581.9 cal | 33.5g protein | 34.4g fat | 34.8g carbs | 2.5g fiber | 7.1g sugar | 176.7g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -4138,7 +4116,6 @@ export const LEVELS: Level[] = [
       'Add the shredded chicken, diced apple, chopped celery, and green onion. Toss to coat evenly.',
       'Spread the chicken salad evenly over one bread slice and top with the second slice.',
       'Cut diagonally and serve immediately, or refrigerate the chicken salad up to 3 days.',
-      '1 sandwich (291.4g): 391.5 cal | 40.8g protein | 8.0g fat | 37.1g carbs | 2.9g fiber | 9.0g sugar | 200.9g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -4179,7 +4156,6 @@ export const LEVELS: Level[] = [
       'Spread mustard and mayonnaise on one or both bread slices.',
       'Layer the sliced ham and Swiss cheese on one slice, then top with the second slice.',
       'Cut diagonally and serve.',
-      '1 sandwich (191.8 g): 505.0 cal | 27.3g protein | 28.5g fat | 33.7g carbs | 2.9g fiber | 3.5g sugar | 96.7g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -4216,7 +4192,6 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Spread peanut butter evenly on one bread slice and jelly on the other.',
       'Press the slices together and cut diagonally.',
-      '1 sandwich (112.0 g): 406.6 cal | 12.5g protein | 18.4g fat | 50.6g carbs | 3.4g fiber | 16.5g sugar | 28.3g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -4258,7 +4233,6 @@ export const LEVELS: Level[] = [
       'Mix shredded cheddar, softened cream cheese, mayonnaise, drained pimentos, salt, and pepper until well combined.',
       'Spread generously on both slices of white bread.',
       'Press the slices together and serve. Cut diagonally if desired.',
-      '1 sandwich (201.65g): 683.5 cal | 20.7g protein | 51.4g fat | 34.9g carbs | 2.3g fiber | 5.7g sugar | 89.9g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -4304,7 +4278,6 @@ export const LEVELS: Level[] = [
       'Cut each sandwich into three fingers or four triangles.',
       'Chill sandwiches in the refrigerator until they firm up slightly and maintain their shape when served.',
       'Sandwiches can be stored covered overnight.',
-      '1 sandwich (133.7g): 217.0 cal | 5.8g protein | 11.4g fat | 23.1g carbs | 1.6g fiber | 4.3g sugar | 91.5g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -4350,7 +4323,6 @@ export const LEVELS: Level[] = [
       'Spread mustard on the inside of both bread slices, then spread a layer of béchamel over the mustard. Layer ham over one slice, add half the Gruyère, and close the sandwich.',
       'Melt remaining butter in a skillet over medium heat. Place the sandwich in the pan and cook 3 minutes until the bottom is golden.',
       'Flip the sandwich, spoon remaining béchamel over the top, and scatter remaining Gruyère over it. Cover the pan and cook 2–3 minutes until the bottom is golden and the cheese on top is melted.',
-      '1 sandwich (313.53g): 797.3 cal | 36.6g protein | 52.5g fat | 44.5g carbs | 2.9g fiber | 9.9g sugar | 172.1g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -4398,7 +4370,6 @@ export const LEVELS: Level[] = [
       'Melt remaining butter in a skillet over medium heat. Place the sandwich in the pan and cook 3 minutes until the bottom is golden.',
       'Flip the sandwich, spoon remaining béchamel over the top, and scatter remaining Gruyère over it. Cover the pan and cook 2–3 minutes until the bottom is golden and the cheese on top is melted. Remove to a plate.',
       'In the same pan, fry the egg sunny side up until the white is set but the yolk is still runny. Place on top of the sandwich and serve immediately.',
-      '1 sandwich (355.7g): 887.5 cal | 42.9g protein | 59.3g fat | 44.9g carbs | 2.9g fiber | 10.1g sugar | 200.2g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -4444,7 +4415,6 @@ export const LEVELS: Level[] = [
       'Melt butter in a skillet over medium heat. Place the sandwich in the pan, cover with a lid or foil, and cook 3 minutes until the bottom is deep golden brown.',
       'Flip and cook another 2–3 minutes uncovered until both sides are golden and the cheese is melted through.',
       'Transfer to a plate, dust with powdered sugar, and serve immediately. Consider raspberry jam (not included in nutrient calculation) alongside for dipping.',
-      '1 sandwich (303.61g): 781.3 cal | 41.9g protein | 50.9g fat | 38.0g carbs | 2.4g fiber | 8.1g sugar | 165.1g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -4492,7 +4462,6 @@ export const LEVELS: Level[] = [
       'Top evenly with the sliced turkey, tomato slices and cheese sauce. Sprinkle with the remaining 1 tablespoon of parmesan.',
       'Broil 3–4 minutes until the sauce is bubbling and parmesan lightly browned on top.',
       'Remove from the oven and transfer to serving plate. Cross two bacon strips over the top of each slice and serve immediately.',
-      '1 serving (408g): 1053 cal | 45.5g protein | 76.8g fat | 45.5g carbs | 2.7g fiber | 9.8g sugar | 230.9g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -4538,7 +4507,6 @@ export const LEVELS: Level[] = [
       'Gradually whisk in beef broth. Add Worcestershire sauce, onion powder, salt, and pepper. Bring to a simmer, stirring constantly, until gravy thickens, about 3–4 minutes.',
       'Add the sliced roast beef to the gravy and heat through, about 1 minute.',
       'Arrange the beef over the toasted bread and spoon the gravy generously over everything. Serve immediately.',
-      '1 serving (249g): 287 cal | 25.7g protein | 11.3g fat | 19.3g carbs | 1.0g fiber | 2.2g sugar | 186.5g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -4579,7 +4547,6 @@ export const LEVELS: Level[] = [
       'Layer the turkey breast slices on one slice of bread.',
       'Top the turkey with the lettuce and tomato slices.',
       'Close the sandwich with the second bread slice, press gently, and cut in half to serve.',
-      '1 serving (222g): 447 cal | 21.2g protein | 26.2g fat | 31.0g carbs | 4.4g fiber | 4.8g sugar | 138.2g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -4621,7 +4588,6 @@ export const LEVELS: Level[] = [
       'Layer the turkey breast slices on one slice of bread.',
       'Top the turkey with both slices of provolone, then add the lettuce and tomato.',
       'Close the sandwich with the second bread slice, press gently, and cut in half to serve.',
-      '1 serving (278g): 646 cal | 35.7g protein | 41.3g fat | 32.2g carbs | 4.4g fiber | 5.1g sugar | 161.4g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -4664,7 +4630,6 @@ export const LEVELS: Level[] = [
       'Top the avocado with the turkey breast slices.',
       'Add the lettuce and tomato slices.',
       'Close the sandwich with the second bread slice, press gently, and cut in half to serve.',
-      '1 serving (290g): 560 cal | 22.6g protein | 36.7g fat | 36.9g carbs | 9.0g fiber | 5.0g sugar | 187.4g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -4708,7 +4673,6 @@ export const LEVELS: Level[] = [
       'Top the avocado with the turkey breast slices, then layer both slices of provolone.',
       'Add the lettuce and tomato slices.',
       'Close the sandwich with the second bread slice, press gently, and cut in half to serve.',
-      '1 serving (346g): 759 cal | 37.1g protein | 51.8g fat | 38.1g carbs | 9.0g fiber | 5.3g sugar | 210.6g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -4753,7 +4717,6 @@ export const LEVELS: Level[] = [
       'Top the avocado with the turkey breast slices and bacon.',
       'Add the lettuce and tomato slices.',
       'Close the sandwich with the second bread slice, press gently, and cut in half to serve.',
-      '1 serving (313g): 668 cal | 30.4g protein | 44.7g fat | 37.2g carbs | 9.0g fiber | 5.0g sugar | 192.8g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -4795,7 +4758,6 @@ export const LEVELS: Level[] = [
       'Layer the roast beef slices on the mustard side.',
       'Top with the lettuce and tomato slices.',
       'Close the sandwich with the mayo slice, press gently, and cut in half to serve.',
-      '1 serving (241g): 396 cal | 29.8g protein | 17.0g fat | 30.0g carbs | 4.6g fiber | 4.3g sugar | 158.4g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -4837,7 +4799,6 @@ export const LEVELS: Level[] = [
       'Spread the mashed avocado evenly on both slices of multigrain bread.',
       'Layer the alfalfa sprouts on one slice, then top with the tomato slices.',
       'Close the sandwich with the second bread slice, press gently, and cut in half to serve.',
-      '1 serving (168g): 272 cal | 9.5g protein | 13.0g fat | 32.1g carbs | 9.3g fiber | 4.8g sugar | 110.8g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -4879,7 +4840,6 @@ export const LEVELS: Level[] = [
       'Spread thousand island dressing on the unbuttered side of each slice.',
       'Layer one slice of swiss cheese, then the corned beef, then drained sauerkraut and then the other slice of swiss cheese on one slice of bread.',
       'Close the sandwich butter-side out and pan grill over medium heat 3-4 minutes per side until the bread is golden and the cheese melts.',
-      '1 serving (292g): 826 cal | 37.0g protein | 57.7g fat | 39.0g carbs | 5.7g fiber | 8.1g sugar | 149.9g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -4919,7 +4879,6 @@ export const LEVELS: Level[] = [
       'Layer the swiss cheese on one slice of bread.',
       'Pile the pastrami on top of the swiss cheese.',
       'Close the sandwich with the second slice of bread, press gently, and cut in half to serve.',
-      '1 serving (219g): 449 cal | 38.0g protein | 17.8g fat | 32.6g carbs | 4.3g fiber | 2.7g sugar | 124.8g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -4959,7 +4918,6 @@ export const LEVELS: Level[] = [
       'Layer the swiss cheese on one slice of bread.',
       'Pile the corned beef on top of the swiss cheese.',
       'Close the sandwich with the second slice of bread, press gently, and cut in half to serve.',
-      '1 serving (220g): 569 cal | 34.1g protein | 32.8g fat | 32.7g carbs | 4.3g fiber | 2.6g sugar | 114.7g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -5000,7 +4958,6 @@ export const LEVELS: Level[] = [
       'Spread the liverwurst evenly on top of the mustard on one slice.',
       'Top with the onion slices and dill pickle slices.',
       'Close the sandwich with the second slice of bread, press gently, and cut in half to serve.',
-      '1 serving (214g): 464 cal | 18.4g protein | 27.0g fat | 36.2g carbs | 5.0g fiber | 3.8g sugar | 126.9g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -5040,7 +4997,6 @@ export const LEVELS: Level[] = [
       'Lay the limburger cheese on top of the mustard on one slice.',
       'Top with the thin onion slices.',
       'Close the sandwich with the second bread slice, press gently, and serve.',
-      '1 serving (146g): 362 cal | 17.2g protein | 17.8g fat | 33.4g carbs | 4.2g fiber | 3.6g sugar | 73.3g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -5084,7 +5040,6 @@ export const LEVELS: Level[] = [
       'In the same skillet over medium-low heat, cook the onion slices in the beef drippings, stirring occasionally, until golden and caramelized, about 15 minutes.',
       'Layer the Swiss cheese, cooked patty, caramelized onions, and second slice of Swiss cheese on one slice of rye bread. Close with the second slice.',
       'Melt the butter in the skillet over medium heat. Cook the assembled sandwich until golden-brown on both sides and the cheese is melted, about 2–3 minutes per side.',
-      '1 serving (297g): 807 cal | 41.0g protein | 53.7g fat | 39.4g carbs | 5.2g fiber | 5.9g sugar | 154.5g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -5135,7 +5090,6 @@ export const LEVELS: Level[] = [
       'Push the meat to one side, add the tomato paste to the center of the pan, and cook for 1 minute, stirring, until it darkens slightly.',
       'Stir in the ketchup, water, Worcestershire sauce, and mustard. Reduce heat to medium-low and simmer, stirring occasionally, until the sauce thickens, about 8–10 minutes.',
       'Spoon the meat mixture onto the bottom bun and close with the top bun.',
-      '1 serving (249g): 421 cal | 20.4g protein | 22.8g fat | 33.9g carbs | 2.4g fiber | 10.4g sugar | 167.6g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -5184,7 +5138,6 @@ export const LEVELS: Level[] = [
       'Toss the shredded cabbage with the mayonnaise, apple cider vinegar, and a pinch of salt until evenly coated.',
       'Spread the BBQ sauce over the bottom bun, pile on the pulled pork, and top with the slaw.',
       'Close with the top bun and serve.',
-      '1 serving (243g): 509 cal | 27.9g protein | 26.3g fat | 40.1g carbs | 2.8g fiber | 16.4g sugar | 142.8g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -5232,7 +5185,6 @@ export const LEVELS: Level[] = [
       'Remove the brisket from the pan and let it rest for 10 minutes, then slice thinly against the grain.',
       'Spread the BBQ sauce on the bottom bun and pile on the sliced brisket.',
       'Top with the sliced onion and pickle slices, then close with the top bun.',
-      '1 serving (249g): 580 cal | 33.0g protein | 28.4g fat | 47.8g carbs | 2.6g fiber | 21.2g sugar | 131.8g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -5280,7 +5232,6 @@ export const LEVELS: Level[] = [
       'Spread mayonnaise on both buns, then layer the lettuce, sliced tomato, and sliced pickles on the bottom bun.',
       'Place the grilled chicken on top of the toppings.',
       'Close with the top bun and serve.',
-      '1 serving (270g): 532 cal | 38.7g protein | 30.8g fat | 25.1g carbs | 1.7g fiber | 4.7g sugar | 170.7g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -5333,7 +5284,6 @@ export const LEVELS: Level[] = [
       'Spread mayonnaise on both buns, then layer the lettuce, sliced tomato, and sliced pickles on the bottom bun.',
       'Place the fried chicken on top of the toppings, close with the top bun, and serve.',
       '(Oil in the ingredient list reflects only the amount absorbed into the crust.)',
-      '1 serving (332g): 757 cal | 39.7g protein | 42.8g fat | 51.5g carbs | 3.1g fiber | 6.1g sugar | 190.8g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -5387,7 +5337,6 @@ export const LEVELS: Level[] = [
       'Spread ranch dressing on both buns, then place the lettuce on the bottom bun.',
       'Place the buffalo chicken on top of the lettuce, close with the top bun, and serve.',
       '(Oil in the ingredient list reflects only the amount absorbed into the crust.)',
-      '1 serving (321g): 796 cal | 40.0g protein | 47.1g fat | 51.7g carbs | 2.7g fiber | 6.4g sugar | 175.2g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -5442,7 +5391,6 @@ export const LEVELS: Level[] = [
       'Spread mayonnaise on both buns. Place the sliced pickles on the bottom bun.',
       'Place the Nashville hot chicken on top of the pickles, close with the top bun, and serve.',
       '(Oil in the ingredient list reflects only the amount absorbed into the crust.)',
-      '1 serving (294g): 782 cal | 39.6g protein | 44.2g fat | 55.4g carbs | 3.0g fiber | 9.6g sugar | 147.5g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -5492,7 +5440,6 @@ export const LEVELS: Level[] = [
       'Spread tartar sauce on both halves of the bun.',
       'Place the lettuce on the bottom bun, top with the fried cod fillet, close with the top bun, and serve.',
       '(Oil in the ingredient list reflects only the amount absorbed into the crust.)',
-      '1 serving (297g): 646 cal | 35.6g protein | 27.0g fat | 63.7g carbs | 4.0g fiber | 5.2g sugar | 164.6g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -5547,7 +5494,6 @@ export const LEVELS: Level[] = [
       'Heat olive oil in a skillet over medium-high heat until shimmering.',
       'Cook the crab cake until deeply golden on the bottom, about 4 minutes. Flip carefully and cook the second side until golden and heated through, about 3–4 more minutes.',
       'Spread tartar sauce on both halves of the hamburger bun. Place the crab cake on the bottom bun, then top with the lettuce leaf and tomato slices. (Oil in the ingredient list reflects only the amount absorbed into the crab cake.)',
-      '1 sandwich (316g): 599 cal | 30.3g protein | 34.4g fat | 41.2g carbs | 3.0g fiber | 7.6g sugar | 202.4g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -5595,7 +5541,6 @@ export const LEVELS: Level[] = [
       'Melt 1 tsp butter in a skillet over medium heat. Place the hot dog bun cut-side down and toast 1–2 minutes until golden.',
       'Fill the toasted bun generously with the lobster salad.',
       'Serve immediately.',
-      '1 sandwich (187g): 324 cal | 26.1g protein | 13.5g fat | 23.1g carbs | 1.1g fiber | 3.5g sugar | 119.3g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -5642,7 +5587,6 @@ export const LEVELS: Level[] = [
       'Heat a skillet over medium heat. Place one slice butter-side down.',
       'Layer one slice of American cheese, the tuna salad, then the second slice of American cheese on top.',
       'Place the second bread slice on top, butter-side up. Cook 3–4 minutes until golden, then flip and cook another 2–3 minutes until cheese is melted.',
-      '1 sandwich (337g): 840 cal | 41.2g protein | 59.3g fat | 36.4g carbs | 2.5g fiber | 8.1g sugar | 191.5g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -5692,7 +5636,6 @@ export const LEVELS: Level[] = [
       'Top the beef with the sautéed onions and 1 slice of provolone. Broil on high for 2–3 minutes until the cheese is melted and bubbly and the top roll is lightly golden.',
       'Remove from oven and fold the top half of the roll over the melted cheese.',
       'Ladle the warm au jus into a small ramekin and serve alongside for dipping.',
-      '1 sandwich (372g): 438 cal | 39.8g protein | 19.2g fat | 25.1g carbs | 1.9g fiber | 2.1g sugar | 277.8g water',
       'Suggestions (not included):'
     ],
     sections: [
@@ -5740,7 +5683,6 @@ export const LEVELS: Level[] = [
       'Add the sliced roast beef to the simmering broth. Warm through for 2–3 minutes, then remove with tongs and set aside. Keep the au jus warm on low heat.',
       'Heat 1 tsp olive oil in a skillet over medium-high heat. Add the sliced green peppers and sauté 4–5 minutes until softened and lightly charred.',
       'Split the French roll and pile on the roast beef on both sides of the split roll. Top with the sautéed peppers. Serve with the au jus in a small ramekin alongside for dipping or ladle over the sandwich. (Add hot or mild giardiniera if desired.)',
-      '1 sandwich (286g): 325 cal | 30.9g protein | 11.6g fat | 22.8g carbs | 2.2g fiber | 1.5g sugar | 213.9g water',
       'Suggestions (not included):'
     ],
     sections: [
