@@ -30,7 +30,7 @@ Pasta & Pizza
 ✅ Spaghetti & Meatballs
 ✅ Spaghetti Bolognese
 ✅ Cacio e Pepe
-Carbonara
+✅ Carbonara
 Fettuccine Alfredo
 Penne alla Vodka
 
