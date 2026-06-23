@@ -2342,7 +2342,8 @@ export const LEVELS: Level[] = [
       'Cut with a floured 2 1/2-inch round biscuit cutter, pressing straight down without twisting. Gather scraps gently and pat out once more to cut remaining biscuits. You should get 8 biscuits.',
       'Place biscuits on the prepared baking sheet with sides nearly touching for soft sides, or 1 inch apart for crisp sides.',
       'Bake 12–15 minutes until tops are golden brown and the biscuits have risen tall and split easily.',
-      'Transfer to a rack and serve warm with butter, gravy, or jam.'
+      'Transfer to a rack.',
+      'Suggestions (not included): Serve warm with butter, gravy, or jam.'
     ],
     sections: [
       { key: 'biscuit', label: 'Biscuit', cookingMethod: '', yieldFactorWater: 0.75 }
