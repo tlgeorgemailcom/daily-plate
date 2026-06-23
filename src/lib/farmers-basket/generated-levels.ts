@@ -16598,8 +16598,8 @@ export const LEVELS: Level[] = [
       'Add the clams and mussels to the pot. Cover and cook until they begin to open, about 3 to 4 minutes.',
       'Add the cod and shrimp, pressing them gently into the broth. Cover and cook until the shrimp are pink and the fish flakes easily, about 3 to 4 minutes more.',
       'Remove and discard the thyme sprigs and any clams or mussels that did not open. Stir in the parsley.',
-      'Ladle into wide bowls and serve with crusty bread for dipping (not included).',
-      'Suggestions (not included):'
+      'Ladle into wide bowls.',
+      'Suggestions (not included): Serve with crusty bread for dipping.'
     ],
     sections: [
       { key: 'fish_stock', label: 'Fish Stock', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -16649,8 +16649,7 @@ export const LEVELS: Level[] = [
       'Cut potatoes into 1/2-inch-thick wedges. Fry in batches at 375°F for 7-8 minutes, turning halfway, until golden and crisp. Drain on paper towels; season with salt and pepper. Keep warm in a 200°F oven.',
       'Dredge each cod fillet lightly in flour, then dip into beer batter and let excess drip off.',
       'Fry battered fish in batches at 375°F for 4-5 minutes, turning once, until deep golden brown and cooked through. Drain; season with salt.',
-      'Serve fish and chips together with malt vinegar and lemon wedges (not included).',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve fish and chips together with malt vinegar and lemon wedges.'
     ],
     sections: [
       { key: 'fish', label: 'Battered Fish', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -16754,8 +16753,8 @@ export const LEVELS: Level[] = [
       'Reduce heat to medium. Add butter to the skillet. Once foamy, add garlic and red pepper flakes; cook 1 minute until fragrant.',
       'Add white wine; simmer 2-3 minutes until reduced by half. Stir in lemon juice.',
       'Return shrimp to the pan; toss to coat and heat through, about 1 minute.',
-      'Remove from heat; scatter with parsley. Serve immediately over pasta or with crusty bread (not included).',
-      'Suggestions (not included):'
+      'Remove from heat; scatter with parsley. Serve immediately.',
+      'Suggestions (not included): Serve over pasta or with crusty bread.'
     ],
     sections: [
       { key: 'scampi', label: 'Shrimp Scampi', cookingMethod: '', yieldFactorWater: 0.82 }
