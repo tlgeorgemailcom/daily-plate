@@ -21045,5 +21045,61 @@ export const LEVELS: Level[] = [
       { key: 'dough', label: 'Fresh Pasta Dough', cookingMethod: '', yieldFactorWater: 0.95 },
       { key: 'sauce', label: 'Brown Butter Sage', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'PASTA_012',
+    name: 'Spaghetti Bolognese',
+    category: 'pasta & pizza',
+    dietaryCategory: 'all',
+    levelNum: 438,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 plate (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":574.1,"pro":24.8,"fat":25.4,"carb":56.5,"fib":4.9,"h2o":270.8,"sug":9.1,"perServing":{"cal":574.1,"pro":24.8,"fat":25.4,"carb":56.5,"fib":4.9,"h2o":270.8,"sug":9.1,"AddedSugars":0.0,"IntrinsicSugars":9.1},"micros":{"vitaminA":40.89,"vitaminC":1.77,"vitaminD":2.46,"vitaminE":0.53,"vitaminK":3.53,"vitaminB6":0.1,"vitaminB12":0.33,"thiamin":0.07,"riboflavin":0.06,"niacin":1.03,"folate":7.08,"calcium":24.14,"iron":0.77,"magnesium":16.45,"phosphorus":70.13,"potassium":172.48,"sodium":159.29,"zinc":0.95,"copper":0.1,"selenium":13.09,"cholesterol":18.13,"saturatedFat":2.42,"monoFat":2.93,"polyFat":0.4,"omega3":0.01,"omega6":0.02},"gramsPerServing":385.2,"servings":4,"per100g":{"Energy_KCal":149.05,"Water":70.31,"Protein":6.44,"TotalLipidFat":6.59,"Carbohydrate":14.68,"FiberTotalDietary":1.28,"SugarsTotal":2.37,"Cholesterol":18.13,"FattyAcids_totalSaturated":2.42,"FattyAcids_totalMonounsaturated":2.93,"FattyAcids_totalPolyunsaturated":0.4,"LinoleicAcid":0.02,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":40.89,"Retinol":7.83,"Carotene_beta":334.23,"VitaminD":2.46,"VitaminE_alphaTocopherol":0.53,"VitaminK_phylloquinone":3.53,"VitaminC_totalAscorbicAcid":1.77,"Thiamin":0.07,"Riboflavin":0.06,"Niacin":1.03,"PantothenicAcid":0.21,"VitaminB6":0.1,"Folate_total":7.08,"Folate_food":7.08,"Folate_DFE":7.08,"FolicAcid":0.0,"VitaminB12":0.33,"Choline_total":11.82,"Betaine":1.26,"LuteinZeaxanthin":45.13,"Lycopene":1225.82,"Calcium_Ca":24.14,"Iron_Fe":0.77,"Magnesium_Mg":16.45,"Phosphorus_P":70.13,"Potassium_K":172.48,"Sodium_Na":159.29,"Zinc_Zn":0.95,"Copper_Cu":0.1,"Manganese_Mn":0.21,"Selenium_Se":13.09,"Tryptophan":0.06,"Threonine":0.25,"Isoleucine":0.26,"Leucine":0.47,"Lysine":0.4,"Methionine":0.13,"Cystine":0.08,"Phenylalanine":0.27,"Tyrosine":0.17,"Valine":0.3,"Arginine":0.34,"Histidine":0.19,"Alanine":0.32,"AsparticAcid":0.52,"GlutamicAcid":1.47,"Glycine":0.31,"Proline":0.43,"Serine":0.26,"omega3":0.01,"omega6":0.02,"AddedSugars":0.0,"IntrinsicSugars":2.37},"addedSugars":0.0,"intrinsicSugars":9.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20420","name":"Pasta, dry, unenriched","grams":56.7},{"ndb":"14411","name":"Water, tap, drinking","grams":236.5},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"1145","name":"Butter, without salt","grams":3.5},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"11124","name":"Carrots, raw","grams":15.2},{"ndb":"11143","name":"Celery, raw","grams":10.0},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":56.7},{"ndb":"10219","name":"Pork, fresh, ground, raw","grams":28.4},{"ndb":"14106","name":"Alcoholic beverage, wine, table, white","grams":30.0},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":15.2},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":102.8},{"ndb":"2047","name":"Salt, table","grams":1.1},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.1}],"sections":[{"section_key":"pasta","section_label":"Spaghetti","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.34811726353257855,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":1172.8,"raw_water_grams":967.51,"raw_fat_grams":3.42,"raw_protein_grams":29.57,"raw_carb_grams":169.35,"final_grams":542.1},{"section_key":"bolognese","section_label":"Bolognese Sauce","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.8,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":14,"raw_grams":1185.35,"raw_water_grams":933.12,"raw_fat_grams":98.13,"raw_protein_grams":69.65,"raw_carb_grams":56.8,"final_grams":998.73}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Spaghetti Bolognese', quantity: 'custom (g)', foodWord: 'SPAGHETTIBOLOGNESE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'wide pasta, dry', quantity: '½ lb dry spaghetti', section: 'pasta', ndbNo: '20420', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'water', quantity: '4 cups', section: 'pasta', ndbNo: '14411', portionDesc: 'g', portionGrams: 946.0 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'bolognese', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'unsalted butter', quantity: '1 tbsp', section: 'bolognese', ndbNo: '1145', portionDesc: 'g', portionGrams: 14.2 },
+      { name: 'onion', quantity: '1 medium onion, finely diced', section: 'bolognese', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'carrot', quantity: '1 medium carrot, finely diced', section: 'bolognese', ndbNo: '11124', portionDesc: 'g', portionGrams: 61.0 },
+      { name: 'celery', quantity: '1 stalk celery, finely diced', section: 'bolognese', ndbNo: '11143', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'bolognese', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'ground beef (80% lean)', quantity: '½ lb ground beef (80/20)', section: 'bolognese', ndbNo: '23572', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'raw ground pork', quantity: '¼ lb ground pork', section: 'bolognese', ndbNo: '10219', portionDesc: 'g', portionGrams: 113.4 },
+      { name: 'white wine', quantity: '½ cup dry white wine', section: 'bolognese', ndbNo: '14106', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'whole milk', quantity: '¼ cup whole milk', section: 'bolognese', ndbNo: '1077', portionDesc: 'g', portionGrams: 61.0 },
+      { name: 'canned crushed tomatoes', quantity: '1 can (14.5 oz) crushed tomatoes', section: 'bolognese', ndbNo: '11693', portionDesc: 'g', portionGrams: 411.0 },
+      { name: 'salt', quantity: '¾ tsp', section: 'bolognese', ndbNo: '2047', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'bolognese', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'ground nutmeg', quantity: '⅛ tsp', section: 'bolognese', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.275 }
+    ],
+    recipeInstructions: [
+      'Heat the olive oil and butter in a large heavy pot over medium heat. Add the onion, carrot, and celery and cook, stirring, until softened, about 8 minutes. Add the garlic and cook 1 minute more.',
+      'Increase heat to medium-high. Add the ground beef and pork. Cook, breaking up the meat, until no longer pink, about 8 minutes.',
+      'Pour in the wine and cook, stirring, until mostly evaporated, about 3 minutes.',
+      'Stir in the milk and cook until absorbed, about 2 minutes.',
+      'Add the crushed tomatoes and nutmeg. Season with salt and pepper. Reduce heat to low and simmer uncovered, stirring occasionally, until the sauce is thick and rich — at least 1 hour, 2 hours preferred. Adjust seasoning.',
+      'Bring a large pot of generously salted water to a boil. Add the spaghetti and cook until al dente, 8–10 minutes. Reserve ½ cup pasta water before draining.',
+      'Drain the spaghetti and add directly to the Bolognese sauce. Toss to combine, adding a splash of pasta water if needed to loosen.',
+      'Divide among four bowls and serve immediately.',
+      'Suggestions (not included): Top with freshly grated Parmesan cheese.'
+    ],
+    sections: [
+      { key: 'pasta', label: 'Spaghetti', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'bolognese', label: 'Bolognese Sauce', cookingMethod: '', yieldFactorWater: 0.8 }
+    ],
   }
 ];

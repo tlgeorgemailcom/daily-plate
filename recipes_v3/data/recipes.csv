@@ -436,3 +436,4 @@ PASTA_007,LEMONPASTA,Lemon Pasta,pasta & pizza,veggie,builtin,,,1 plate (makes 4
 PASTA_008,PASTAPRIMAVERA,Pasta Primavera,pasta & pizza,veggie,builtin,,,1 plate (makes 4),4,Rule D,pan grilled,1.00,1.00,1.00,1.00,1.00,approved,,,,PASS,,
 PASTA_009,PASTAPESTO,Pasta al Pesto,pasta & pizza,veggie,builtin,,,1 plate (makes 4),4,Rule D,boiled,1.00,1.00,1.00,1.00,1.00,approved,,,,PASS,,
 PASTA_010,RAVIOLI,Cheese Ravioli,pasta & pizza,veggie,builtin,,,1 plate (makes 4),4,Rule D,boiled,1.00,1.00,1.00,1.00,1.00,approved,,,,PASS,,
+PASTA_012,SPAGHETTIBOLOGNESE,Spaghetti Bolognese,pasta & pizza,all,builtin,,,1 plate (makes 4),4,Rule D,boiled,1.00,1.00,1.00,1.00,1.00,approved,,,,PASS,,

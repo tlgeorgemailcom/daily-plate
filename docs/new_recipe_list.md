@@ -28,7 +28,7 @@ Pasta & Pizza
 ✅ Pasta al Pesto
 ✅ Ravioli
 ✅ Spaghetti & Meatballs
-Spaghetti Bolognese
+✅ Spaghetti Bolognese
 Cacio e Pepe
 Carbonara
 Fettuccine Alfredo
