@@ -47,7 +47,8 @@ export const LEVELS: Level[] = [
       'In a large saucepan, combine the peeled and cored Granny Smith apple slices with the sugar, lemon juice, cornstarch, butter, and 1/4 cup water, plus any optional cinnamon, cloves, or allspice. Bring to a boil over medium heat, then reduce heat, cover, and simmer for 5 minutes, stirring occasionally. Uncover and simmer 5 minutes more, until the apples are slightly softened and the juices have thickened. Remove from heat and let cool while you roll out the crust.',
       'Roll out one disc and line the bottom of a 9-inch pie plate. Spoon the cooled apple filling into the crust, mounding slightly in the center.',
       'Roll out the second disc and cut into 1/2-inch strips. Lay the strips over the filling in a lattice pattern, weaving them over and under. Trim and crimp the edges to seal.',
-      'Bake for 15 minutes. Lower the oven to 350 degrees F (175 degrees C) and bake 35 to 40 minutes more until the crust is golden brown and the filling is bubbling. Cool on a rack before slicing.'
+      'Bake for 15 minutes. Lower the oven to 350 degrees F (175 degrees C) and bake 35 to 40 minutes more until the crust is golden brown and the filling is bubbling. Cool on a rack before slicing.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.82 },
@@ -100,7 +101,8 @@ export const LEVELS: Level[] = [
       'Sprinkle the browned bread crumbs along one long side of the pastry several inches in, leaving a border on the sides so the roll can be sealed; the crumbs absorb juices and keep the bottom from going soggy.',
       'Spoon the cooled filling on top of the bread crumbs.',
       'Brush the exposed border with beaten egg. Fold the long end halfway over the filling then fold in the short ends. Continue rolling the pastry around the filling into a long strudel and seal the edge with egg. Tuck ends under. Place it seam-side down on a lined baking sheet. Brush with the remaining egg.',
-      'Bake for about 30-40 minutes or until the pastry is browned and crisp and the apple filling is tender. Cool before slicing.'
+      'Bake for about 30-40 minutes or until the pastry is browned and crisp and the apple filling is tender. Cool before slicing.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'pastry', label: 'Puff pastry', cookingMethod: '', yieldFactorWater: 0.82 },
@@ -156,7 +158,8 @@ export const LEVELS: Level[] = [
       'Whisk a ladleful of the hot mixture into the egg yolks to temper, then whisk the tempered yolks back into the saucepan. Cook over medium-low heat, whisking constantly, for 2 more minutes until very thick. Remove from heat and whisk in the butter and vanilla until smooth.',
       'Spread half of the warm pastry cream over the cooled crust. Layer the sliced bananas evenly on top, then spread the remaining pastry cream over the bananas. Press plastic wrap directly onto the surface to prevent a skin from forming.',
       'Refrigerate the pie for at least 4 hours or until fully chilled and set.',
-      'Just before serving, beat the heavy cream with the powdered sugar and vanilla until soft peaks form, then spread or pipe over the chilled pie. Slice with a clean knife and serve immediately.'
+      'Just before serving, beat the heavy cream with the powdered sugar and vanilla until soft peaks form, then spread or pipe over the chilled pie. Slice with a clean knife and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -213,7 +216,8 @@ export const LEVELS: Level[] = [
       'Roll out the second disc into an 11-inch circle, cut into 1/2-inch-wide strips, and weave into a lattice on top of the pie. Trim, crimp, and seal the lattice to the bottom crust.',
       'Lightly beat 1 large egg with 1 teaspoon water; brush the egg wash evenly over the lattice top to give it a deep golden, glossy finish during baking.',
       'Bake at 425 degrees F (220 degrees C) for 25 minutes to set the crust and activate the cornstarch. Reduce the heat to 375 degrees F (190 degrees C) and shield the crust edges with a 2- to 3-inch strip of aluminum foil (or a pie crust shield) to prevent over-browning. Continue baking for 50-55 minutes more (total bake time roughly 75-80 minutes), removing the foil for the last 15 minutes, until the crust is deep golden brown and the filling is bubbling thickly across the entire surface. An instant-read thermometer inserted through the lattice should read about 200 degrees F (93 degrees C).',
-      'Cool the pie on a wire rack for at least 3 hours before slicing to allow the filling to set. Serve at room temperature or slightly warm.'
+      'Cool the pie on a wire rack for at least 3 hours before slicing to allow the filling to set. Serve at room temperature or slightly warm.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.82 },
@@ -269,7 +273,8 @@ export const LEVELS: Level[] = [
       'Roll out the second disc into an 11-inch circle, cut into 1/2-inch-wide strips, and weave into a lattice on top of the pie. Trim, crimp, and seal the lattice to the bottom crust.',
       'Lightly beat 1 large egg with 1 teaspoon water; brush the egg wash evenly over the lattice top to give it a deep golden, glossy finish during baking.',
       'Bake at 425 degrees F (220 degrees C) for 25 minutes to set the crust. Reduce the heat to 375 degrees F (190 degrees C) and shield the crust edges with a 2- to 3-inch strip of aluminum foil (or a pie crust shield) to prevent over-browning. Continue baking for 50-55 minutes more (total bake time roughly 75-80 minutes), removing the foil for the last 15 minutes, until the crust is deep golden brown and the filling is bubbling thickly across the entire surface. An instant-read thermometer inserted through the lattice should read about 200 degrees F (93 degrees C).',
-      'Cool the pie on a wire rack for at least 3 hours before slicing to allow the filling to set. Serve at room temperature or slightly warm.'
+      'Cool the pie on a wire rack for at least 3 hours before slicing to allow the filling to set. Serve at room temperature or slightly warm.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.82 },
@@ -327,7 +332,8 @@ export const LEVELS: Level[] = [
       'For the meringue, combine the egg whites, sugar, and salt in a large bowl. Beat on medium-high until stiff, glossy peaks form.',
       'Pile the meringue onto the pie, spreading it so it touches the crust all the way around to seal.',
       'Bake at 350F until the meringue begins to brown, 8-10 minutes.',
-      'Cool the pie on a wire rack for at least 1 hour, then refrigerate for at least 3 hours before slicing to allow the filling to set fully.'
+      'Cool the pie on a wire rack for at least 1 hour, then refrigerate for at least 3 hours before slicing to allow the filling to set fully.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.84 },
@@ -395,7 +401,8 @@ export const LEVELS: Level[] = [
       'Pour the warm mincemeat into the prepared crust and smooth the top. Lay the lattice strips over the filling in a woven pattern. Trim, fold, and crimp the edges to seal.',
       'Whisk the egg with 1 teaspoon of water and brush the lattice top.',
       'Bake at 425F for 20 minutes, then reduce the temperature to 375F and bake for another 30-35 minutes, until the crust is deep golden brown and the filling is bubbling. Tent loosely with foil if the crust browns too quickly.',
-      'Cool the pie on a wire rack for at least 2 hours before slicing to allow the filling to set.'
+      'Cool the pie on a wire rack for at least 2 hours before slicing to allow the filling to set.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.82 },
@@ -456,7 +463,8 @@ export const LEVELS: Level[] = [
       'Scrape the cooled filling into the prepared bottom crust and smooth the surface. Dot with the butter pieces. Lay the lattice strips over the filling in a woven pattern. Trim, fold under, and crimp the edges to seal.',
       'Whisk the egg with 1 teaspoon of water and brush the lattice top.',
       'Bake at 425F for 20 minutes, then reduce the temperature to 375F and bake for another 25-30 minutes, until the crust is deep golden brown and the filling is bubbling slowly through the lattice. Tent the edges loosely with foil if they brown too quickly.',
-      'Cool the pie on a wire rack for at least 3 hours before slicing so the filling sets firmly.'
+      'Cool the pie on a wire rack for at least 3 hours before slicing so the filling sets firmly.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.82 },
@@ -511,7 +519,8 @@ export const LEVELS: Level[] = [
       'Stir in the pecan halves so they are evenly coated.',
       'Pour the filling into the par-baked crust, arranging the pecans so they float in an even layer across the top.',
       'Bake at 350F for 50-60 minutes, until the edges are puffed, the pecans on top are well toasted, and the center is just set with only a slight jiggle when the pan is gently shaken. Tent the crust edges with foil if they brown too quickly.',
-      'Cool on a wire rack for at least 2 hours before slicing so the filling sets fully.'
+      'Cool on a wire rack for at least 2 hours before slicing so the filling sets fully.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.84 },
@@ -565,7 +574,8 @@ export const LEVELS: Level[] = [
       'Gradually whisk in the evaporated milk and the melted butter until the filling is uniform with no streaks.',
       'Pour the filling into the par-baked crust. The crust should be nearly full but not overflowing.',
       'Bake at 425F for 15 minutes, then reduce the oven temperature to 350F and bake for another 40-50 minutes, until a knife inserted 1 inch from the edge comes out clean and the center is just set with only a slight jiggle. Tent the crust edges with foil if they brown too quickly.',
-      'Cool on a wire rack for at least 2 hours so the filling sets completely before slicing.'
+      'Cool on a wire rack for at least 2 hours so the filling sets completely before slicing.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.84 },
@@ -623,7 +633,8 @@ export const LEVELS: Level[] = [
       'Whisk a ladleful of the hot custard into the egg yolks to temper them, then return the yolks to the saucepan. Cook, whisking constantly, for another 2 minutes until thickened and glossy. Do not let it scorch.',
       'Remove from the heat and whisk in the butter and vanilla extract until smooth.',
       'Pour the warm filling into the cooled crust and smooth the top. Press a piece of plastic wrap directly onto the surface to prevent a skin from forming, then refrigerate for at least 4 hours, or until fully set.',
-      'Just before serving, whip the heavy cream with the powdered sugar and vanilla (if using) to soft peaks. Spread or pipe over the chilled pie and serve.'
+      'Just before serving, whip the heavy cream with the powdered sugar and vanilla (if using) to soft peaks. Spread or pipe over the chilled pie and serve.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crust', label: 'Pie crust', cookingMethod: '' },
@@ -686,7 +697,8 @@ export const LEVELS: Level[] = [
       'Remove from the heat and whisk in the butter and vanilla. Press plastic wrap onto the surface and chill until cold, at least 1 hour.',
       'When the cake layers are completely cool and the pastry cream is set, place the bottom layer on a serving plate. Spread the pastry cream evenly to within 1/2 inch of the edge. Top with the second cake layer, pressing gently.',
       'For the glaze, heat the cream in a small saucepan or microwave until it just begins to steam. Pour over the chopped chocolate in a heatproof bowl, let sit 1 minute, then whisk until smooth. Whisk in the butter until glossy.',
-      'Pour the warm glaze over the center of the top cake layer and spread gently with the back of a spoon, letting some drip down the sides. Refrigerate at least 1 hour before slicing so the glaze sets.'
+      'Pour the warm glaze over the center of the top cake layer and spread gently with the back of a spoon, letting some drip down the sides. Refrigerate at least 1 hour before slicing so the glaze sets.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'cake', label: 'Yellow butter cake', cookingMethod: '' },
@@ -743,7 +755,8 @@ export const LEVELS: Level[] = [
       'Whisk a ladleful of the hot custard into the egg yolks to temper them, then return the yolks to the saucepan. Cook 1-2 minutes more, whisking constantly, until thick and glossy.',
       'Remove from the heat and add the chopped chocolate, butter, and vanilla. Whisk until completely smooth and the chocolate is fully melted.',
       'Pour the warm filling into the cooled cookie crust and smooth the top. Press a piece of plastic wrap directly onto the surface and refrigerate for at least 4 hours, or until fully set.',
-      'Just before serving, whip the heavy cream with the powdered sugar and vanilla (if using) to soft peaks. Spread or pipe over the chilled pie and serve.'
+      'Just before serving, whip the heavy cream with the powdered sugar and vanilla (if using) to soft peaks. Spread or pipe over the chilled pie and serve.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crust', label: 'Chocolate cookie crumb crust', cookingMethod: '' },
@@ -804,7 +817,8 @@ export const LEVELS: Level[] = [
       'Remove from the heat and whisk in the butter and vanilla until smooth. Stir in the flaked coconut.',
       'Pour the warm filling into the cooled crust and smooth the top. Press a piece of plastic wrap directly onto the surface to prevent a skin from forming, then refrigerate for at least 4 hours, or until fully set.',
       'Toast the coconut: place 1/4 cup of the sweetened flaked coconut on a parchment-lined baking sheet. Bake at 350 degrees F (175 degrees C) until light golden, about 5 minutes. Set aside to cool.',
-      'Just before serving, whip the heavy cream with the powdered sugar and vanilla (if using) to soft peaks. Spread or pipe over the chilled pie. Sprinkle with toasted coconut and serve.'
+      'Just before serving, whip the heavy cream with the powdered sugar and vanilla (if using) to soft peaks. Spread or pipe over the chilled pie. Sprinkle with toasted coconut and serve.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crust', label: 'Pie crust', cookingMethod: '' },
@@ -856,7 +870,8 @@ export const LEVELS: Level[] = [
       'Heat the milk in a saucepan over medium heat just until steaming and small bubbles appear at the edges (do not boil). Slowly pour the hot milk into the egg mixture in a thin stream, whisking constantly. Stir in the vanilla.',
       'Place the par-baked crust on a rimmed baking sheet near the oven. Pour the custard through a fine-mesh strainer into the crust to remove any cooked egg bits and foam.',
       'Sprinkle a little more nutmeg over the top. Carefully transfer to the oven and bake at 325 degrees F (165 degrees C) for 35-45 minutes, until the edges are set and puffed and the center jiggles only slightly when nudged (a knife inserted 1 inch from the edge should come out clean).',
-      'Cool the pie completely on a rack, then refrigerate for at least 2 hours before slicing. Serve cold.'
+      'Cool the pie completely on a rack, then refrigerate for at least 2 hours before slicing. Serve cold.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crust', label: 'Pie crust', cookingMethod: '' },
@@ -906,7 +921,8 @@ export const LEVELS: Level[] = [
       'Add all of the sifted dry ingredients to the bowl. With the mixer running on low speed, slowly pour in the milk and beat just until the batter comes together. Do not overmix. Overmixing will cause gluten to form causing a dense bread-like cake. Finish with a few hand strokes using a whisk or spatula to make sure there are no flour pockets at the bottom of the bowl. The batter will be smooth and slightly thick.',
       'Divide the batter evenly between the prepared pan(s) and smooth the top. Tap the pan gently on the counter once or twice to release any large air bubbles.',
       'Bake until the top springs back when lightly pressed and a toothpick inserted in the center comes out clean: about 30-35 minutes for a 9x13 pan, or 22-26 minutes for 9-inch rounds.',
-      'Cool in the pan(s) on a rack for 10 minutes, then turn out onto the rack and cool completely before slicing or frosting.'
+      'Cool in the pan(s) on a rack for 10 minutes, then turn out onto the rack and cool completely before slicing or frosting.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'cake', label: 'Cake', cookingMethod: '', yieldFactorWater: 0.62 }
@@ -971,7 +987,8 @@ export const LEVELS: Level[] = [
       'Remove from heat and quickly beat in the vanilla extract.',
       'Fold in about 1 cup of the flaked coconut with a rubber spatula, beating briefly until the frosting is thick enough to spread.',
       'Place one cooled cake layer on a serving plate or cake board. Spread about a quarter of the frosting over the top. Add the second layer and frost the top and sides with the remaining frosting in soft swoops.',
-      'Press the remaining flaked coconut all over the top and sides of the frosted cake while the frosting is still tacky. Let the cake set for at least 30 minutes before slicing. Seven-minute frosting is best the day it is made.'
+      'Press the remaining flaked coconut all over the top and sides of the frosted cake while the frosting is still tacky. Let the cake set for at least 30 minutes before slicing. Seven-minute frosting is best the day it is made.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'cake', label: 'White butter cake (SWEET_016 base)', cookingMethod: '', yieldFactorWater: 0.62 },
@@ -1023,7 +1040,8 @@ export const LEVELS: Level[] = [
       'Add about a third of the sifted dry ingredients to the bowl, followed by half of the milk, and beat on low until just combined. Repeat with another third of the dry ingredients and the rest of the milk, then finish with the remaining dry ingredients. Do not overmix. Finish with a few hand strokes using a whisk or spatula to make sure there are no flour pockets at the bottom of the bowl.',
       'Divide the batter evenly between the prepared pans and smooth the top. Tap the pans gently on the counter once or twice to release any large air bubbles.',
       'Bake until the tops are golden, spring back when lightly pressed, and a toothpick inserted in the center comes out clean, about 25-30 minutes.',
-      'Cool in the pans on a rack for 10 minutes, then turn the layers out onto the rack and cool completely before slicing.'
+      'Cool in the pans on a rack for 10 minutes, then turn the layers out onto the rack and cool completely before slicing.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'cake', label: 'Cake', cookingMethod: '', yieldFactorWater: 0.78 }
@@ -1064,7 +1082,8 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Combine the butter, milk, and corn syrup in a small saucepan over medium heat. Stir until the butter is melted and the mixture just comes to a simmer. Add chopped chocolate whisking until melted.',
       'Remove from heat. Let sit 1 minute, then whisk until completely smooth. Whisk in the vanilla extract, then sift in the powdered sugar and whisk until glossy and pourable. If too thick, add milk a teaspoon at a time.',
-      'Pour or drizzle over a fully cooled cake. Let set 10–15 minutes before slicing.'
+      'Pour or drizzle over a fully cooled cake. Let set 10–15 minutes before slicing.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'glaze', label: 'Chocolate glaze', cookingMethod: '' }
@@ -1126,7 +1145,8 @@ export const LEVELS: Level[] = [
       'Sift the powdered sugar and cocoa powder together into a medium bowl.',
       'Whisk in the melted butter, then the milk, vanilla, and salt. Beat until smooth, glossy, and spreadable. If too thick, add boiling water a teaspoon at a time; if too thin, add powdered sugar a tablespoon at a time.',
       'Place one cake layer on a serving plate. Spread about 1/3 of the warm glaze over the top, letting some run down the sides. Top with the second layer.',
-      'Pour the remaining glaze over the top of the cake, using an offset spatula to coax it over the edges so it coats the top fully and drips down the sides. Let set 15–20 minutes before slicing.'
+      'Pour the remaining glaze over the top of the cake, using an offset spatula to coax it over the edges so it coats the top fully and drips down the sides. Let set 15–20 minutes before slicing.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'cake', label: 'Butter-buttermilk yellow cake', cookingMethod: '' },
@@ -1179,7 +1199,8 @@ export const LEVELS: Level[] = [
       'Add about half of the dry ingredients and beat on low until just combined. Pour in the hot water and beat until smooth — the batter will look loose, which is correct. Add the remaining dry ingredients and beat on low until just combined. Do not overmix.',
       'Pour the batter into the prepared pan and smooth the top.',
       'Bake until the top springs back when lightly pressed and a toothpick inserted in the center comes out with just a few moist crumbs, about 35–40 minutes.',
-      'Cool in the pan on a wire rack for 15 minutes, then cut into 9 squares. Serve warm or at room temperature.'
+      'Cool in the pan on a wire rack for 15 minutes, then cut into 9 squares. Serve warm or at room temperature.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'cake', label: 'Cake', cookingMethod: '', yieldFactorWater: 0.88 }
@@ -1235,7 +1256,8 @@ export const LEVELS: Level[] = [
       'Add about half of the dry ingredients and beat on low until just combined. Pour in the milk and beat until smooth. Add the remaining dry ingredients and beat on low until just combined. Do not overmix.',
       'Pour the batter evenly over the pineapple and cherries in the prepared pan and smooth the top. Tap the pan gently on the counter once or twice to release any large air bubbles.',
       'Bake until the top is golden, springs back when lightly pressed, and a toothpick inserted in the cake portion comes out clean, about 35–45 minutes.',
-      'Let the cake cool in the pan on a wire rack for exactly 10 minutes — no longer, or the topping will stick. Run a thin knife around the edge, place a serving plate over the pan, and quickly invert. Lift off the pan, replacing any pineapple or cherries that stick. Serve warm or at room temperature.'
+      'Let the cake cool in the pan on a wire rack for exactly 10 minutes — no longer, or the topping will stick. Run a thin knife around the edge, place a serving plate over the pan, and quickly invert. Lift off the pan, replacing any pineapple or cherries that stick. Serve warm or at room temperature.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'cake', label: 'Cake', cookingMethod: '', yieldFactorWater: 0.86 },
@@ -1282,7 +1304,8 @@ export const LEVELS: Level[] = [
       'Cut with a floured 2 1/2-inch round biscuit cutter, pressing straight down without twisting. Gather scraps gently and pat out once more to cut remaining biscuits. You should get 8 biscuits.',
       'Place biscuits on the prepared baking sheet with sides nearly touching for soft sides, or 1 inch apart for crisp sides.',
       'Bake 12–15 minutes until tops are golden brown and the biscuits have risen tall and split easily.',
-      'Transfer to a rack. Serve warm, split horizontally with sweetened berries and whipped cream for classic strawberry shortcake.'
+      'Transfer to a rack. Serve warm, split horizontally with sweetened berries and whipped cream for classic strawberry shortcake.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'biscuit', label: 'Biscuit', cookingMethod: '', yieldFactorWater: 0.85 }
@@ -1335,7 +1358,8 @@ export const LEVELS: Level[] = [
       'Pour the batter into the ungreased tube pan and gently smooth the top. Run a thin knife once through the batter in a circle to release any large air pockets.',
       'Bake on the lower rack for 40–50 minutes, until the top is golden, springs back when lightly pressed, and a wooden skewer inserted near the center comes out clean.',
       'Invert immediately: Flip the pan upside down onto the neck of a tall bottle (or use the pan\'s built-in feet) and let the cake cool completely upside-down, about 1 1/2 hours. This prevents the delicate sponge from collapsing under its own weight.',
-      'To unmold: run a thin knife around the outer edge and around the center tube, then push the removable bottom up and out of the outer ring. Slide the knife under the cake to release it from the bottom. Slice with a serrated knife in a gentle sawing motion.'
+      'To unmold: run a thin knife around the outer edge and around the center tube, then push the removable bottom up and out of the outer ring. Slide the knife under the cake to release it from the bottom. Slice with a serrated knife in a gentle sawing motion.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'cake', label: 'Cake', cookingMethod: '', yieldFactorWater: 0.55 }
@@ -1385,7 +1409,8 @@ export const LEVELS: Level[] = [
       'Bake on the lower rack for 35–40 minutes, until the top is golden, springs back when lightly pressed, and a wooden skewer inserted near the center comes out clean. Cracks on the surface are normal and expected.',
       'Invert immediately: Flip the pan upside down and rest it on its built-in feet, or set it over something that elevates it. Let the cake cool completely upside-down, about 1 1/2 hours — this prevents the airy structure from collapsing under its own weight while it sets.',
       'To unmold: run a thin knife around the outer edge and around the center tube using a gentle sawing motion (do not press inward — keep the knife flush against the metal). Push the removable bottom up and out of the outer ring. Slide the knife under the cake to release it from the bottom.',
-      'Slice with a serrated knife in a gentle sawing motion (a regular knife will compress the cake). Serve plain, with sweetened berries, or with a light glaze.'
+      'Slice with a serrated knife in a gentle sawing motion (a regular knife will compress the cake). Serve plain, with sweetened berries, or with a light glaze.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'cake', label: 'Cake', cookingMethod: '', yieldFactorWater: 0.55 }
@@ -1443,7 +1468,8 @@ export const LEVELS: Level[] = [
       'Bake at 325°F for 60–75 minutes, until the outer 2 inches are set and barely puffed, the center 3 inches still wobbles like just-set jelly when the pan is gently nudged, and the surface is pale ivory with no browning. Do not overbake — the center will firm up as it cools.',
       'Slow cool in the oven: Turn off the oven, prop the door open about 4 inches with a wooden spoon, and let the cheesecake cool slowly in the oven for 1 hour. This gradual cooling helps prevent surface cracks.',
       'Carefully remove the cheesecake from the water bath. Run a thin knife around the edge of the pan to release the cake from the sides (this also helps prevent cracking as it shrinks while cooling). Cool on a rack to room temperature, about 1 hour more.',
-      'Chill: Cover loosely and refrigerate at least 8 hours, preferably overnight, to fully set the texture. To serve, release the springform ring, slide a thin spatula under the crust to lift onto a serving plate, and slice with a knife dipped in hot water and wiped clean between cuts.'
+      'Chill: Cover loosely and refrigerate at least 8 hours, preferably overnight, to fully set the texture. To serve, release the springform ring, slide a thin spatula under the crust to lift onto a serving plate, and slice with a knife dipped in hot water and wiped clean between cuts.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crust', label: 'Crust', cookingMethod: '', yieldFactorWater: 0.92 },
@@ -1499,7 +1525,8 @@ export const LEVELS: Level[] = [
       'Assemble: Spread the batter evenly in the prepared pan, smoothing the top with an offset spatula. Scatter the chilled crumb topping evenly over the entire surface, breaking up any large clumps with your fingers so the crumbs are distributed in pebbles rather than sheets.',
       'Bake at 350°F for 40–50 minutes, until the topping is golden brown, the cake springs back when lightly pressed at the center, and a wooden toothpick inserted in the cake (not into a melted butter pocket) comes out with just a few moist crumbs.',
       'Transfer the pan to a wire rack and let cool for at least 30 minutes. Lift out using the parchment sling and slice into 10 squares (or 9 if you prefer larger pieces). Serve warm or at room temperature.',
-      'Storage: Cover loosely with foil at room temperature for up to 2 days, or wrap individual slices and refrigerate up to 5 days. Reheat briefly in a 300°F oven or toaster oven to refresh the crumb texture.'
+      'Storage: Cover loosely with foil at room temperature for up to 2 days, or wrap individual slices and refrigerate up to 5 days. Reheat briefly in a 300°F oven or toaster oven to refresh the crumb texture.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'cake', label: 'Cake', cookingMethod: '', yieldFactorWater: 0.83 },
@@ -1550,7 +1577,8 @@ export const LEVELS: Level[] = [
       'Bake at 325°F for 65–80 minutes, until the top is deep golden brown, a long crack runs down the center (this is normal and desirable), the cake springs back when lightly pressed, and a wooden skewer inserted in the deepest part comes out with just a few moist crumbs. If the top is browning too quickly past the 50-minute mark, tent loosely with foil.',
       'Cool: Transfer the pan to a wire rack and let cool for 15 minutes. Run a thin knife around the edge, then invert onto the rack and turn the cake right-side up. Let cool completely before slicing, at least 1 hour — pound cake\'s crumb continues to set as it cools and slices much more cleanly when fully cool.',
       'Slice and serve: Cut into 10 slices with a serrated knife in a gentle sawing motion. Serve plain, dusted with confectioners\' sugar, with macerated berries, with a dollop of whipped cream, or toasted with butter for breakfast.',
-      'Storage: Wrap tightly in plastic at room temperature for up to 3 days, or refrigerate up to 1 week, or freeze (whole or sliced) up to 3 months. The flavor improves on day 2 as the butter mellows.'
+      'Storage: Wrap tightly in plastic at room temperature for up to 3 days, or refrigerate up to 1 week, or freeze (whole or sliced) up to 3 months. The flavor improves on day 2 as the butter mellows.',
+      'Suggestions (not included):'
     ],
   },
   {
@@ -1597,7 +1625,8 @@ export const LEVELS: Level[] = [
       'Fold the dry ingredients into the wet mixture just until no dry streaks remain. Do not overmix.',
       'Spread the batter evenly in the prepared pan and smooth the top with an offset spatula.',
       'Bake for 22–28 minutes, until the top is set and a toothpick inserted 1 inch from the edge comes out with moist crumbs.',
-      'Cool completely in the pan on a wire rack. Lift out using the parchment overhang and cut into 16 squares.'
+      'Cool completely in the pan on a wire rack. Lift out using the parchment overhang and cut into 16 squares.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'batter', label: 'Batter', cookingMethod: '', yieldFactorWater: 0.79 }
@@ -1648,7 +1677,8 @@ export const LEVELS: Level[] = [
       'Fold in raisins gently until evenly distributed.',
       'Scoop dough onto parchment sheets, spacing 2 inches apart (dough will spread).',
       'Bake 13–17 minutes, until edges are golden and center is set.',
-      'Cool on baking sheet for 5 minutes, then transfer to wire rack to cool completely.'
+      'Cool on baking sheet for 5 minutes, then transfer to wire rack to cool completely.',
+      'Suggestions (not included):'
     ],
   },
   {
@@ -1693,7 +1723,8 @@ export const LEVELS: Level[] = [
       'Roll dough into 1-inch balls. Roll each ball in the reserved granulated sugar.',
       'Place 2 inches apart on prepared baking sheets; flatten slightly with the bottom of a glass.',
       'Bake 8–10 minutes, until edges are lightly golden. Do not overbake.',
-      'Cool on baking sheet for 2 minutes, then transfer to a wire rack to cool completely.'
+      'Cool on baking sheet for 2 minutes, then transfer to a wire rack to cool completely.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'rolling', label: 'Cookies', cookingMethod: '', yieldFactorWater: 0.46 },
@@ -1746,7 +1777,8 @@ export const LEVELS: Level[] = [
       'Roll dough into 1-inch balls. Roll each ball in the reserved granulated sugar.',
       'Place 2 inches apart on prepared baking sheets.',
       'Bake 10–12 minutes, until cookies are set and surface is cracked. Do not overbake.',
-      'Cool on baking sheet for 5 minutes, then transfer to a wire rack.'
+      'Cool on baking sheet for 5 minutes, then transfer to a wire rack.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'rolling', label: 'Cookies', cookingMethod: '', yieldFactorWater: 0.4 },
@@ -1792,7 +1824,8 @@ export const LEVELS: Level[] = [
       'Gradually mix dry ingredients into wet ingredients until a soft dough forms.',
       'Drop small spoonfuls (½ teaspoon) onto prepared baking sheets, spacing 1 inch apart.',
       'Bake 12–15 minutes, until edges are set and bottoms are pale golden. Cookies should be soft.',
-      'Cool on baking sheet for 3 minutes, then transfer to a wire rack.'
+      'Cool on baking sheet for 3 minutes, then transfer to a wire rack.',
+      'Suggestions (not included):'
     ],
   },
   {
@@ -1840,7 +1873,8 @@ export const LEVELS: Level[] = [
       'Fold in chocolate chips gently until evenly distributed.',
       'Drop rounded tablespoons of dough onto prepared baking sheets, spacing 2 inches apart.',
       'Bake 11–13 minutes, until edges are set and centers are still soft. Do not overbake.',
-      'Cool on baking sheet for 3 minutes, then transfer to a wire rack to cool completely.'
+      'Cool on baking sheet for 3 minutes, then transfer to a wire rack to cool completely.',
+      'Suggestions (not included):'
     ],
   },
   {
@@ -1886,7 +1920,8 @@ export const LEVELS: Level[] = [
       'Spread fig filling evenly over crust layer.',
       'Top with remaining crust mixture, spreading or dropping spoonfuls to cover filling.',
       'Bake 30–35 minutes, until golden and a toothpick inserted comes out clean.',
-      'Cool completely in pan, then cut into bars (16 squares).'
+      'Cool completely in pan, then cut into bars (16 squares).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crust', label: 'Crust', cookingMethod: '', yieldFactorWater: 0.62 },
@@ -1931,7 +1966,8 @@ export const LEVELS: Level[] = [
       'Fold in sweetened shredded coconut until evenly coated and mixture holds together when pressed.',
       'Use a small cookie scoop or two spoons to portion 24 mounds onto prepared baking sheets.',
       'Bake 20–24 minutes until edges and tops are lightly golden.',
-      'Cool on sheet 5 minutes, then transfer to a rack to cool completely.'
+      'Cool on sheet 5 minutes, then transfer to a rack to cool completely.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'macaroons', label: 'Macaroons', cookingMethod: '', yieldFactorWater: 0.55 }
@@ -1982,7 +2018,8 @@ export const LEVELS: Level[] = [
       'Cover and chill dough 20-30 minutes so it is easy to scoop and roll.',
       'Scoop into 1 to 1 1/2 tablespoon portions, roll into balls, and coat lightly in granulated sugar.',
       'Place 2 inches apart and bake 9-11 minutes, until puffed and crackled with set edges.',
-      'Cool 5 minutes on the pan, then move to a wire rack to cool completely.'
+      'Cool 5 minutes on the pan, then move to a wire rack to cool completely.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'cookies', label: 'Cookies', cookingMethod: '', yieldFactorWater: 0.46 }
@@ -2031,7 +2068,8 @@ export const LEVELS: Level[] = [
       'Chill dough 20-30 minutes if soft.',
       'Scoop 1 to 1 1/2 tablespoon portions, roll into balls, and roll in granulated sugar.',
       'Place on baking sheet and press lightly with a fork to form crosshatch pattern.',
-      'Bake 9-11 minutes until edges are set and tops are lightly cracked. Cool 5 minutes, then transfer to rack.'
+      'Bake 9-11 minutes until edges are set and tops are lightly cracked. Cool 5 minutes, then transfer to rack.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'cookies', label: 'Cookies', cookingMethod: '', yieldFactorWater: 0.35 }
@@ -2076,7 +2114,8 @@ export const LEVELS: Level[] = [
       'Turn dough onto a lightly floured surface, press into a disk, and roll to about 1/2-inch thickness.',
       'Cut into rounds or fingers and place on baking sheet; chill 10 to 15 minutes if dough is soft.',
       'Bake 18 to 24 minutes until tops are set and edges are just turning light golden.',
-      'Cool on pan 5 minutes, then transfer to a rack to cool completely.'
+      'Cool on pan 5 minutes, then transfer to a rack to cool completely.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'shortbread', label: 'Shortbread', cookingMethod: '', yieldFactorWater: 0.3 }
@@ -2131,7 +2170,8 @@ export const LEVELS: Level[] = [
       'Pour the filling into the par-baked crust through a fine-mesh strainer to remove any lumps.',
       'Grate a light dusting of nutmeg over the surface.',
       'Bake at 325 degrees F (165 degrees C) for 45 to 55 minutes until the edges are puffed and set and the center jiggles only slightly when the pan is gently nudged. Tent the crust edges with foil if they brown too quickly.',
-      'Cool completely on a wire rack for at least 2 hours before slicing. Serve at room temperature or chilled.'
+      'Cool completely on a wire rack for at least 2 hours before slicing. Serve at room temperature or chilled.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crust', label: 'Crust', cookingMethod: '', yieldFactorWater: 0.9 },
@@ -2173,7 +2213,8 @@ export const LEVELS: Level[] = [
       'Add ice water 1 tablespoon at a time, stirring until the dough just comes together.',
       'Divide dough into two equal pieces, shape each into a disc, and wrap in plastic.',
       'Refrigerate at least 30 minutes before rolling.',
-      'Roll each disc on a lightly floured surface to about 1/8-inch thickness for a 9-inch pie plate.'
+      'Roll each disc on a lightly floured surface to about 1/8-inch thickness for a 9-inch pie plate.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crust', label: 'Double pie crust', cookingMethod: '', yieldFactorWater: 0.38 }
@@ -2215,7 +2256,8 @@ export const LEVELS: Level[] = [
       'Shape into a disc, wrap in plastic, and refrigerate at least 30 minutes.',
       'Roll dough on a lightly floured surface to about 1/8-inch thickness and fit into a 9-inch pie plate.',
       'Trim and crimp the edges; chill 15 minutes.',
-      'Line with parchment and fill with pie weights. Bake at 375 degrees F (190 degrees C) for 20 minutes. Remove weights and bake 8 to 10 minutes more until golden.'
+      'Line with parchment and fill with pie weights. Bake at 375 degrees F (190 degrees C) for 20 minutes. Remove weights and bake 8 to 10 minutes more until golden.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crust', label: 'Single pie crust', cookingMethod: '', yieldFactorWater: 0.38 }
@@ -2256,7 +2298,8 @@ export const LEVELS: Level[] = [
       'Add ice water 1 tablespoon at a time, stirring until the dough just comes together.',
       'Shape into a disc, wrap in plastic, and refrigerate at least 30 minutes.',
       'Roll dough on a lightly floured surface to about 1/8-inch thickness and fit into a 9-inch pie plate.',
-      'Trim and crimp the edges; chill until ready to fill and bake with filling.'
+      'Trim and crimp the edges; chill until ready to fill and bake with filling.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crust', label: 'Single pie crust (unbaked)', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -2297,7 +2340,8 @@ export const LEVELS: Level[] = [
       'Add ice water 1 tablespoon at a time, stirring until the dough just comes together.',
       'Divide dough into two equal pieces, shape each into a disc, and wrap in plastic.',
       'Refrigerate at least 30 minutes before rolling.',
-      'Roll each disc on a lightly floured surface to about 1/8-inch thickness and fit into the pie plate; chill until ready to fill and bake.'
+      'Roll each disc on a lightly floured surface to about 1/8-inch thickness and fit into the pie plate; chill until ready to fill and bake.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crust', label: 'Crust', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -2389,7 +2433,8 @@ export const LEVELS: Level[] = [
       'For best flavor, cover and refrigerate the patties for at least 30 minutes (or overnight) to let the spices bloom and the pork firm up.',
       'Heat a large heavy skillet (cast iron preferred) over medium heat until hot. The pork has enough fat that no additional oil is needed.',
       'Place patties in the skillet without crowding. Cook 3–4 minutes per side, turning once, until deeply browned on both faces and an instant-read thermometer reads 160°F at the center. Total cook time about 7–8 minutes.',
-      'Transfer cooked patties to a paper-towel-lined plate to drain briefly. Serve hot alongside eggs, biscuits, or as the protein in biscuits & gravy.'
+      'Transfer cooked patties to a paper-towel-lined plate to drain briefly. Serve hot alongside eggs, biscuits, or as the protein in biscuits & gravy.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sausage', label: 'Sausage', cookingMethod: '', yieldFactorWater: 0.73, yieldFactorFat: 0.91 }
@@ -2439,7 +2484,8 @@ export const LEVELS: Level[] = [
       'Gradually pour in the whole milk, whisking continuously to prevent lumps. Whisk in the salt and black pepper.',
       'Bring the gravy to a gentle simmer, whisking often, and cook 4–6 minutes until thickened to a pourable sauce that coats the back of a spoon.',
       'Return the browned sausage to the skillet and stir to combine. Simmer 1–2 minutes more to reheat. Taste and adjust salt and pepper.',
-      'Serve hot over split biscuits.'
+      'Serve hot over split biscuits.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sausage', label: 'Browned pork sausage crumbles', cookingMethod: '', yieldFactorWater: 0.73 },
@@ -2474,7 +2520,8 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'For each serving:',
       'Split 2 warm biscuits open and arrange on a plate.',
-      'Ladle about 1/2 cup (115 g) of hot sausage gravy over the split biscuits. Serve immediately.'
+      'Ladle about 1/2 cup (115 g) of hot sausage gravy over the split biscuits. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'biscuit', label: 'Biscuit', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -2519,7 +2566,8 @@ export const LEVELS: Level[] = [
       'Punch down the dough. On a lightly floured surface, pat or roll to about ½-inch thickness. Cut into rounds with a 3-inch biscuit cutter. You should get about 10 muffins.',
       'Arrange cut rounds on a cornmeal-dusted sheet pan. Cover loosely and let rest 20–30 minutes until slightly puffed.',
       'Heat a cast-iron skillet or griddle over medium-low heat. Cook muffins in batches 5–7 minutes per side, pressing gently, until deep golden brown on both faces and cooked through. Adjust heat as needed — too high scorches the outside before the center sets.',
-      'Cool on a rack. To serve, split with a fork (never a knife) to preserve the characteristic nooks and crannies. Toast before eating.'
+      'Cool on a rack. To serve, split with a fork (never a knife) to preserve the characteristic nooks and crannies. Toast before eating.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'main', label: 'English muffin dough', cookingMethod: '', yieldFactorWater: 0.8 }
@@ -2563,7 +2611,8 @@ export const LEVELS: Level[] = [
       'Cut rounds with a floured 3-inch round cutter or glass. Re-pat scraps gently and cut remaining muffins. You should get about 11 muffins.',
       'Place rounds on the work surface, cover loosely, and let rest 15 minutes.',
       'Heat a dry cast-iron skillet or griddle over medium-low heat. Cook muffins in batches 7–8 minutes per side until both sides are deep golden brown and the centers feel firm. Adjust heat so they don\'t brown too quickly before cooking through.',
-      'Transfer to a wire rack and cool at least 5 minutes. Split with a fork — never a knife — to preserve the classic nooks and crannies. Serve toasted or as-is.'
+      'Transfer to a wire rack and cool at least 5 minutes. Split with a fork — never a knife — to preserve the classic nooks and crannies. Serve toasted or as-is.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'muffin', label: 'English muffin dough', cookingMethod: '', yieldFactorWater: 0.9 }
@@ -2602,7 +2651,8 @@ export const LEVELS: Level[] = [
       'Separate 3 large eggs, keeping only the yolks. Add the egg yolks to the top bowl. Whisk vigorously until pale, thick, and about doubled in volume, about 2-3 minutes. The whisk should leave a trail that slowly closes when thick enough.',
       'With the top bowl over the barely simmering water, slowly drizzle the melted butter into the yolk mixture one tablespoon at a time, whisking constantly. Adding it too fast will break the emulsion.',
       'Once all the butter is incorporated, the sauce should be thick enough to coat the back of a spoon. To thin add a little water. Remove from heat immediately.',
-      'Season with a pinch of salt and lemon juice. Serve right away over poached eggs, or keep warm by setting the bowl over the hot water (heat off) for up to 15 minutes, whisking occasionally.'
+      'Season with a pinch of salt and lemon juice. Serve right away over poached eggs, or keep warm by setting the bowl over the hot water (heat off) for up to 15 minutes, whisking occasionally.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sauce', label: 'Hollandaise sauce', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -2641,7 +2691,8 @@ export const LEVELS: Level[] = [
       'Heat a skillet over medium heat. Add the Canadian bacon slices and cook 1–2 minutes per side until lightly browned and heated through.',
       'If the hollandaise sauce has cooled, gently rewarm it by setting the bowl over a pot of warm (not simmering) water for a minute, stirring constantly. Do not overheat or the sauce will break.',
       'Place two toasted muffin halves on each plate. Lay a slice of Canadian bacon on each half, then set a poached egg on top.',
-      'Spoon about 1/4 cup hollandaise sauce over each egg. Season with a pinch of salt, white pepper, and paprika if desired. Serve immediately.'
+      'Spoon about 1/4 cup hollandaise sauce over each egg. Season with a pinch of salt, white pepper, and paprika if desired. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'egg', label: 'Poached egg', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -2683,7 +2734,8 @@ export const LEVELS: Level[] = [
       'Dip each slice of bread into the egg mixture, letting it soak for about 10–15 seconds per side so the bread absorbs the custard.',
       'Melt the butter in a skillet or griddle over medium heat until foamy.',
       'Place the soaked bread slices in the pan and cook until golden brown on the bottom, about 2–3 minutes.',
-      'Flip and cook the second side until golden brown, about 2 minutes more. Serve immediately.'
+      'Flip and cook the second side until golden brown, about 2 minutes more. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'main', label: 'French toast', cookingMethod: '', yieldFactorWater: 0.9 }
@@ -2718,7 +2770,8 @@ export const LEVELS: Level[] = [
       'Bring the water to a boil in a small saucepan over medium-high heat.',
       'Stir in the rolled oats. Reduce heat to medium-low.',
       'Cook, stirring occasionally, for 5 minutes until the oats are tender and most of the water is absorbed.',
-      'Remove from heat and let stand 1–2 minutes before serving.'
+      'Remove from heat and let stand 1–2 minutes before serving.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'oatmeal', label: 'Oatmeal', cookingMethod: '', yieldFactorWater: 0.76 }
@@ -2758,7 +2811,8 @@ export const LEVELS: Level[] = [
       'Whisk together the flour, baking powder, sugar, and salt in a large bowl.',
       'In a separate bowl, beat the egg, then stir in the milk and melted butter.',
       'Pour the wet ingredients into the dry and stir just until combined; a few lumps are fine.',
-      'Heat a lightly greased griddle or skillet over medium heat. Pour ¼ cup batter per pancake and cook until bubbles form on the surface and edges look set, about 2 minutes. Flip and cook until golden brown, about 1–2 minutes more.'
+      'Heat a lightly greased griddle or skillet over medium heat. Pour ¼ cup batter per pancake and cook until bubbles form on the surface and edges look set, about 2 minutes. Flip and cook until golden brown, about 1–2 minutes more.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'batter', label: 'Pancake batter', cookingMethod: '', yieldFactorWater: 0.96 }
@@ -2799,7 +2853,8 @@ export const LEVELS: Level[] = [
       'Whisk together the flour, baking powder, sugar, and salt in a large bowl.',
       'In a separate bowl, beat the egg, then stir in the milk and melted butter.',
       'Pour the wet ingredients into the dry and stir just until combined; a few lumps are fine. Gently fold in the blueberries.',
-      'Heat a lightly greased griddle or skillet over medium heat. Pour ¼ cup batter per pancake and cook until bubbles form on the surface and edges look set, about 2 minutes. Flip and cook until golden brown, about 1–2 minutes more.'
+      'Heat a lightly greased griddle or skillet over medium heat. Pour ¼ cup batter per pancake and cook until bubbles form on the surface and edges look set, about 2 minutes. Flip and cook until golden brown, about 1–2 minutes more.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'batter', label: 'Pancake batter', cookingMethod: '', yieldFactorWater: 0.81 }
@@ -2839,7 +2894,8 @@ export const LEVELS: Level[] = [
       'Whisk together the flour, baking powder, sugar, and salt in a large bowl.',
       'In a separate bowl, beat the egg, then stir in the buttermilk and melted butter.',
       'Pour the wet ingredients into the dry and stir just until combined; a few lumps are fine.',
-      'Heat a lightly greased griddle or skillet over medium heat. Pour ¼ cup batter per pancake and cook until bubbles form on the surface and edges look set, about 2 minutes. Flip and cook until golden brown, about 1–2 minutes more.'
+      'Heat a lightly greased griddle or skillet over medium heat. Pour ¼ cup batter per pancake and cook until bubbles form on the surface and edges look set, about 2 minutes. Flip and cook until golden brown, about 1–2 minutes more.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'batter', label: 'Pancake batter', cookingMethod: '', yieldFactorWater: 0.78 }
@@ -2879,7 +2935,8 @@ export const LEVELS: Level[] = [
       'Whisk together the flour, baking powder, sugar, and salt in a large bowl.',
       'In a separate bowl, beat the eggs, then stir in the milk and melted butter.',
       'Pour the wet ingredients into the dry and stir just until combined; a few lumps are fine.',
-      'Preheat a waffle iron and lightly grease it. Pour batter into the center and cook until the waffle is golden brown and crisp, about 4–5 minutes.'
+      'Preheat a waffle iron and lightly grease it. Pour batter into the center and cook until the waffle is golden brown and crisp, about 4–5 minutes.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'batter', label: 'Waffle batter', cookingMethod: '', yieldFactorWater: 0.62 }
@@ -2915,7 +2972,8 @@ export const LEVELS: Level[] = [
       'Place the potatoes in a saucepan, cover with cold water, and bring to a boil. Turn off heat and let potatoes sit in water for 5 minutes. Drain, let cool slightly, then peel and coarsely shred.',
       'Season the shredded potato with the salt and toss to combine.',
       'Heat the olive oil in a large skillet over medium-high heat until shimmering.',
-      'Add the potato in an even layer and press down firmly. Cook undisturbed until the bottom is deep golden brown, about 5–6 minutes. Flip in sections and cook the second side until crisp and golden, 4–5 minutes more.'
+      'Add the potato in an even layer and press down firmly. Cook undisturbed until the bottom is deep golden brown, about 5–6 minutes. Flip in sections and cook the second side until crisp and golden, 4–5 minutes more.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'hashbrown', label: 'Hash brown', cookingMethod: '', yieldFactorWater: 0.358 }
@@ -2952,7 +3010,8 @@ export const LEVELS: Level[] = [
       'Warm the flour tortilla in a dry skillet over medium heat for 30 seconds per side, or microwave for 15–20 seconds, until soft and pliable.',
       'Warm the refried beans and black beans together in a small saucepan over medium heat, stirring until heated through, about 3 minutes.',
       'Spoon the bean mixture onto the center of the tortilla and season with a pinch of salt.',
-      'Fold the sides in and roll tightly into a burrito.'
+      'Fold the sides in and roll tightly into a burrito.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'burrito', label: 'Bean burrito', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -2990,7 +3049,8 @@ export const LEVELS: Level[] = [
       'Warm the flour tortilla in a dry skillet over medium heat for 30 seconds per side, or microwave for 15–20 seconds, until soft and pliable.',
       'Warm the refried beans and black beans together in a small saucepan over medium heat, stirring until heated through, about 3 minutes.',
       'Spoon the bean mixture onto the center of the tortilla, top with the shredded cheese, and season with a pinch of salt.',
-      'Fold the sides in and roll tightly into a burrito.'
+      'Fold the sides in and roll tightly into a burrito.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'burrito', label: 'Bean and cheese burrito', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -3024,7 +3084,8 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Warm the flour tortilla in a dry skillet over medium heat for 30 seconds per side, or microwave for 15–20 seconds, until soft and pliable.',
       'Sprinkle the shredded Mexican cheese blend evenly over the center of the warm tortilla.',
-      'Fold the sides in and roll tightly into a burrito.'
+      'Fold the sides in and roll tightly into a burrito.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'burrito', label: 'Cheese burrito', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -3065,7 +3126,8 @@ export const LEVELS: Level[] = [
       'Sprinkle the Mexican cheese blend over the eggs and fold to melt, about 30 seconds.',
       'Warm the flour tortilla in a dry skillet for 30 seconds per side, or microwave for 15–20 seconds.',
       'Spoon the egg and cheese mixture onto the center of the tortilla. Fold in the sides and roll up tightly.',
-      '1 burrito (180g): 498.6 cal | 23.4g protein | 28.5g fat | 35.7g carbs | 2.4g fiber | 3.2g sugar | 88.6g water'
+      '1 burrito (180g): 498.6 cal | 23.4g protein | 28.5g fat | 35.7g carbs | 2.4g fiber | 3.2g sugar | 88.6g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'burrito', label: 'Egg burrito', cookingMethod: '', yieldFactorWater: 0.783 }
@@ -3104,7 +3166,8 @@ export const LEVELS: Level[] = [
       'Spoon the cooked beef onto the center of the warm tortilla.',
       'Sprinkle the Mexican cheese blend over the beef.',
       'Fold in the sides and roll up tightly into a burrito.',
-      '1 burrito (107g): 280 cal | 13.8g protein | 11.6g fat | 29.7g carbs | 2.1g fiber | 2.3g sugar | 49.9g water'
+      '1 burrito (107g): 280 cal | 13.8g protein | 11.6g fat | 29.7g carbs | 2.1g fiber | 2.3g sugar | 49.9g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'beef', label: 'Ground beef', cookingMethod: '', yieldFactorWater: 0.6669, yieldFactorFat: 0.593 },
@@ -3146,7 +3209,8 @@ export const LEVELS: Level[] = [
       'Warm the flour tortilla in a dry skillet over medium heat for 30 seconds per side, or microwave for 15–20 seconds, until pliable.',
       'Spoon the potato-egg mixture onto the center of the warm tortilla.',
       'Sprinkle the Mexican cheese blend evenly over the filling. Fold in the sides and roll up tightly into a burrito.',
-      '1 burrito (305g): 678 cal | 27.6g protein | 36.8g fat | 58.5g carbs | 5.2g fiber | 4.4g sugar | 175.0g water'
+      '1 burrito (305g): 678 cal | 27.6g protein | 36.8g fat | 58.5g carbs | 5.2g fiber | 4.4g sugar | 175.0g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'burrito', label: 'Breakfast burrito', cookingMethod: '', yieldFactorWater: 0.82 }
@@ -3185,7 +3249,8 @@ export const LEVELS: Level[] = [
       'Pour in the egg mixture; let the edges set, then gently push cooked edges toward the center.',
       'When eggs are nearly set but still glossy on top, sprinkle cheese over one half.',
       'Fold the omelette in half over the cheese, press lightly, and slide onto a plate.',
-      '1 omelette (122 g): 247 cal | 16.2g protein | 19.5g fat | 1.0g carbs | 0g fiber | 0.6g sugar | 83.6g water'
+      '1 omelette (122 g): 247 cal | 16.2g protein | 19.5g fat | 1.0g carbs | 0g fiber | 0.6g sugar | 83.6g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'omelette', label: 'Cheese omelette', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -3227,7 +3292,8 @@ export const LEVELS: Level[] = [
       'Melt butter in a non-toxic nonstick skillet over medium heat; add ham, bell pepper, and onion and sauté 2–3 minutes until softened.',
       'Pour the egg mixture over the filling; let the edges set, then gently push cooked edges toward the center.',
       'When eggs are nearly set but still glossy on top, sprinkle cheese over one half; fold the omelette in half and slide onto a plate.',
-      '1 omelette (286 g): 455 cal | 35.5g protein | 31.8g fat | 5.2g carbs | 1.0g fiber | 2.6g sugar | 206.9g water'
+      '1 omelette (286 g): 455 cal | 35.5g protein | 31.8g fat | 5.2g carbs | 1.0g fiber | 2.6g sugar | 206.9g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'omelette', label: 'Denver omelette', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -3274,7 +3340,8 @@ export const LEVELS: Level[] = [
       'Roll the chilled dough out on a lightly floured surface and fit it into a 9-inch pie pan. Fold over and crimp the edges. Line with parchment and fill with pie weights or dried beans. Blind-bake for 15 minutes; remove the weights and parchment and bake 5 minutes more until just beginning to brown.',
       'Whisk the eggs, heavy cream, salt, pepper, and nutmeg until smooth. Scatter the shredded Swiss cheese and diced onion evenly over the warm crust.',
       'Pour the custard over the cheese and onion. Bake for 35 to 40 minutes until the custard is just set in the center and the top is lightly golden. Cool on a rack for at least 10 minutes before slicing.',
-      '1 slice (100.0 g): 373.8 cal | 10.8g protein | 29.5g fat | 16.6g carbs | 0.6g fiber | 1.2g sugar | 41.3g water'
+      '1 slice (100.0 g): 373.8 cal | 10.8g protein | 29.5g fat | 16.6g carbs | 0.6g fiber | 1.2g sugar | 41.3g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.38 },
@@ -3323,7 +3390,8 @@ export const LEVELS: Level[] = [
       'Roll the chilled dough out on a lightly floured surface and fit it into a 9-inch pie pan. Fold over and crimp the edges. Line with parchment and fill with pie weights or dried beans. Blind-bake for 15 minutes; remove the weights and parchment and bake 5 minutes more until just beginning to brown.',
       'Whisk the eggs, heavy cream, salt, pepper, and nutmeg until smooth. Squeeze any excess moisture from the cooked spinach and scatter it with the shredded Swiss cheese and diced onion evenly over the warm crust.',
       'Pour the custard over the cheese and onion. Bake for 35 to 40 minutes until the custard is just set in the center and the top is lightly golden. Cool on a rack for at least 10 minutes before slicing.',
-      '1 slice (120.5 g): 378.9 cal | 11.4g protein | 29.6g fat | 17.4g carbs | 1.2g fiber | 1.3g sugar | 59.8g water'
+      '1 slice (120.5 g): 378.9 cal | 11.4g protein | 29.6g fat | 17.4g carbs | 1.2g fiber | 1.3g sugar | 59.8g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.38 },
@@ -3372,7 +3440,8 @@ export const LEVELS: Level[] = [
       'Roll the chilled dough out on a lightly floured surface and fit it into a 9-inch pie pan. Fold over and crimp the edges. Line with parchment and fill with pie weights or dried beans. Blind-bake for 15 minutes; remove the weights and parchment and bake 5 minutes more until just beginning to brown.',
       'Whisk the eggs, heavy cream, salt, pepper, and nutmeg until smooth. Scatter the diced ham, shredded Swiss cheese, and diced onion evenly over the warm crust.',
       'Pour the custard over the cheese and onion. Bake for 35 to 40 minutes until the custard is just set in the center and the top is lightly golden. Cool on a rack for at least 10 minutes before slicing.',
-      '1 slice (114.0 g): 400.5 cal | 14.2g protein | 30.9g fat | 16.6g carbs | 0.6g fiber | 1.2g sugar | 50.0g water'
+      '1 slice (114.0 g): 400.5 cal | 14.2g protein | 30.9g fat | 16.6g carbs | 0.6g fiber | 1.2g sugar | 50.0g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.38 },
@@ -3421,7 +3490,8 @@ export const LEVELS: Level[] = [
       'Roll the chilled dough out on a lightly floured surface and fit it into a 9-inch pie pan. Fold over and crimp the edges. Line with parchment and fill with pie weights or dried beans. Blind-bake for 15 minutes; remove the weights and parchment and bake 5 minutes more until just beginning to brown.',
       'Whisk the eggs, heavy cream, salt, pepper, and nutmeg until smooth. Break the cooked bacon into small crumbles and scatter with the shredded Swiss cheese and diced onion evenly over the warm crust.',
       'Pour the custard over the cheese and onion. Bake for 35 to 40 minutes until the custard is just set in the center and the top is lightly golden. Cool on a rack for at least 10 minutes before slicing.',
-      '1 slice (113.9 g): 440.1 cal | 15.6g protein | 34.5g fat | 16.8g carbs | 0.6g fiber | 1.2g sugar | 44.3g water'
+      '1 slice (113.9 g): 440.1 cal | 15.6g protein | 34.5g fat | 16.8g carbs | 0.6g fiber | 1.2g sugar | 44.3g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.38 },
@@ -3464,7 +3534,8 @@ export const LEVELS: Level[] = [
       'Scatter the shredded Swiss cheese and diced onion evenly over the bottom of the prepared pan.',
       'Pour the egg custard over the cheese and onion.',
       'Bake for 35 to 40 minutes until the custard is just set in the center and the top is lightly golden. Cool on a rack for at least 10 minutes before slicing.',
-      '1 slice (69.3 g): 209.6 cal | 8.7g protein | 18.8g fat | 1.7g carbs | 0.1g fiber | 1.1g sugar | 38.7g water'
+      '1 slice (69.3 g): 209.6 cal | 8.7g protein | 18.8g fat | 1.7g carbs | 0.1g fiber | 1.1g sugar | 38.7g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'filling', label: 'Cheese filling', cookingMethod: '', yieldFactorWater: 0.9 }
@@ -3507,7 +3578,8 @@ export const LEVELS: Level[] = [
       'Scatter the shredded Swiss cheese, squeezed cooked spinach, and diced onion evenly over the bottom of the prepared pan.',
       'Pour the egg custard over the filling.',
       'Bake for 35 to 40 minutes until the custard is just set in the center and the top is lightly golden. Cool on a rack for at least 10 minutes before slicing.',
-      '1 slice (89.7 g): 214.7 cal | 9.4g protein | 18.9g fat | 2.5g carbs | 0.6g fiber | 1.2g sugar | 57.2g water'
+      '1 slice (89.7 g): 214.7 cal | 9.4g protein | 18.9g fat | 2.5g carbs | 0.6g fiber | 1.2g sugar | 57.2g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'filling', label: 'Spinach filling', cookingMethod: '', yieldFactorWater: 0.9 }
@@ -3550,7 +3622,8 @@ export const LEVELS: Level[] = [
       'Scatter the shredded Swiss cheese, diced ham, and diced onion evenly over the bottom of the prepared pan.',
       'Pour the egg custard over the filling.',
       'Bake for 35 to 40 minutes until the custard is just set in the center and the top is lightly golden. Cool on a rack for at least 10 minutes before slicing.',
-      '1 slice (83.3 g): 236.3 cal | 12.1g protein | 20.2g fat | 1.7g carbs | 0.1g fiber | 1.1g sugar | 47.4g water'
+      '1 slice (83.3 g): 236.3 cal | 12.1g protein | 20.2g fat | 1.7g carbs | 0.1g fiber | 1.1g sugar | 47.4g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'filling', label: 'Ham and cheese filling', cookingMethod: '', yieldFactorWater: 0.9 }
@@ -3593,7 +3666,8 @@ export const LEVELS: Level[] = [
       'Scatter the shredded Swiss cheese, crumbled bacon, and diced onion evenly over the bottom of the prepared pan.',
       'Pour the egg custard over the filling.',
       'Bake for 35 to 40 minutes until the custard is just set in the center and the top is lightly golden. Cool on a rack for at least 10 minutes before slicing.',
-      '1 slice (83.1 g): 275.9 cal | 13.5g protein | 23.8g fat | 1.9g carbs | 0.1g fiber | 1.1g sugar | 41.7g water'
+      '1 slice (83.1 g): 275.9 cal | 13.5g protein | 23.8g fat | 1.9g carbs | 0.1g fiber | 1.1g sugar | 41.7g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'filling', label: 'Bacon filling', cookingMethod: '', yieldFactorWater: 0.9 }
@@ -3640,7 +3714,8 @@ export const LEVELS: Level[] = [
       'Whisk the eggs with the milk, salt, and pepper in a bowl until well combined.',
       'Pour the egg mixture over the herbs in the skillet. Sprinkle the grated Parmesan evenly over the top. Cook undisturbed for 2 to 3 minutes until the edges begin to set.',
       'Transfer the skillet to a broiler set to high and broil for 3 to 4 minutes until the top is set and lightly golden. Let rest for 2 minutes before slicing into 4 wedges.',
-      '1 slice (91.6 g): 185.1 cal | 11.3g protein | 14.6g fat | 1.9g carbs | 0.5g fiber | 0.7g sugar | 62.3g water'
+      '1 slice (91.6 g): 185.1 cal | 11.3g protein | 14.6g fat | 1.9g carbs | 0.5g fiber | 0.7g sugar | 62.3g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'frittata', label: 'Frittata', cookingMethod: '', yieldFactorWater: 0.9 }
@@ -3681,7 +3756,8 @@ export const LEVELS: Level[] = [
       'Add the lemon juice and mash with a fork to your preferred texture — smooth or slightly chunky.',
       'Spread the mashed avocado evenly on top of the warm toast.',
       'Drizzle with olive oil, then finish with a pinch of flaked salt and red pepper flakes.',
-      '1 toast (123.2 g): 276.5 cal | 7.0g protein | 17.9g fat | 24.9g carbs | 8.3g fiber | 3.0g sugar | 70.8g water'
+      '1 toast (123.2 g): 276.5 cal | 7.0g protein | 17.9g fat | 24.9g carbs | 8.3g fiber | 3.0g sugar | 70.8g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'toast', label: 'Avocado Toast', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -3725,7 +3801,8 @@ export const LEVELS: Level[] = [
       'Spread the mashed avocado evenly on top of the warm toast.',
       'Drizzle with olive oil. Place the poached egg on top of the avocado, then arrange the cherry tomato halves around the egg.',
       'Finish with a pinch of flaked salt and red pepper flakes.',
-      '1 toast (241.2 g): 360 cal | 13.9g protein | 22.7g fat | 27.9g carbs | 9.1g fiber | 5.0g sugar | 173.0g water'
+      '1 toast (241.2 g): 360 cal | 13.9g protein | 22.7g fat | 27.9g carbs | 9.1g fiber | 5.0g sugar | 173.0g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'toast', label: 'Avocado Egg Toast', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -3766,7 +3843,8 @@ export const LEVELS: Level[] = [
       'Flip both slices over and evenly distribute the shredded cheddar and gruyère over one of the toasted slices. Top with the second toasted slice, toasted side over the cheese.',
       'Cook until the bottom is deep golden brown, about 3–4 minutes. Flip carefully and cook the second side until golden and the cheese is fully melted, about 2–3 more minutes.',
       'Transfer to a cutting board, rest 1 minute, then cut diagonally and serve.',
-      '1 serving (140g): 595 cal | 20.5g protein | 43.6g fat | 30.6g carbs | 1.6g fiber | 3.7g sugar | 41.6g water'
+      '1 serving (140g): 595 cal | 20.5g protein | 43.6g fat | 30.6g carbs | 1.6g fiber | 3.7g sugar | 41.6g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Grilled Cheese', cookingMethod: '', yieldFactorWater: 0.9 }
@@ -3805,7 +3883,8 @@ export const LEVELS: Level[] = [
       'Place one slice butter-side down in the pan. Layer the American cheese over the top, then cover with the second slice, butter-side up.',
       'Cook until the bottom is deep golden brown, about 3–4 minutes. Flip carefully and cook the second side until golden and the cheese is fully melted, about 2–3 more minutes.',
       'Transfer to a cutting board, rest 1 minute, then cut diagonally and serve.',
-      '1 serving (126g): 472 cal | 15.7g protein | 31.5g fat | 31.8g carbs | 1.6g fiber | 4.7g sugar | 41.9g water'
+      '1 serving (126g): 472 cal | 15.7g protein | 31.5g fat | 31.8g carbs | 1.6g fiber | 4.7g sugar | 41.9g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Grilled Cheese', cookingMethod: '', yieldFactorWater: 0.9 }
@@ -3844,7 +3923,8 @@ export const LEVELS: Level[] = [
       'Place one slice butter-side down in the pan. Layer the cheddar over the top, then cover with the second slice, butter-side up.',
       'Cook until the bottom is deep golden brown, about 3–4 minutes. Flip carefully and cook the second side until golden and the cheese is fully melted, about 2–3 more minutes.',
       'Transfer to a cutting board, rest 1 minute, then cut diagonally and serve.',
-      '1 serving (126g): 490 cal | 18.4g protein | 32.4g fat | 31.4g carbs | 1.6g fiber | 3.7g sugar | 40.6g water'
+      '1 serving (126g): 490 cal | 18.4g protein | 32.4g fat | 31.4g carbs | 1.6g fiber | 3.7g sugar | 40.6g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Grilled Cheese', cookingMethod: '', yieldFactorWater: 0.9 }
@@ -3885,7 +3965,8 @@ export const LEVELS: Level[] = [
       'Spread mayonnaise evenly over one side of each toast slice.',
       'On one slice (mayo side up), layer the lettuce leaf, tomato slices, and bacon. Top with the second slice, mayo side down.',
       'Cut diagonally and serve immediately.',
-      '1 sandwich (165.5g): 447.5 cal | 10.2g protein | 17.9g fat | 16.7g carbs | 1.2g fiber | 2.7g sugar | 53.0g water'
+      '1 sandwich (165.5g): 447.5 cal | 10.2g protein | 17.9g fat | 16.7g carbs | 1.2g fiber | 2.7g sugar | 53.0g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'BLT', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -3928,7 +4009,8 @@ export const LEVELS: Level[] = [
       'On the bottom slice (mayo side up), layer the lettuce leaf and 4 thin tomato slices.',
       'Place the middle slice on top, mayo-side down. Spread mayo on the top of the middle slice, then layer the thin-sliced turkey (prepackaged thin-sliced or deli-sliced) and bacon.',
       'Top with the third slice, mayo-side down. Secure with 4 toothpicks, cut diagonally into 4 triangles, and serve immediately.',
-      '1 sandwich (289.0g): 587.5 cal | 28.5g protein | 29.9g fat | 49.5g carbs | 3.3g fiber | 7.8g sugar | 174.6g water'
+      '1 sandwich (289.0g): 587.5 cal | 28.5g protein | 29.9g fat | 49.5g carbs | 3.3g fiber | 7.8g sugar | 174.6g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Club Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -3969,7 +4051,8 @@ export const LEVELS: Level[] = [
       'In a bowl, combine the chopped eggs, mayonnaise, green onion, mustard, and salt. Mix well.',
       'Spread the egg salad evenly over one bread slice and top with the second slice.',
       'Cut diagonally and serve immediately, or refrigerate the egg salad up to 2 days.',
-      '1 sandwich (195.6g): 505.1 cal | 18.3g protein | 33.4g fat | 31.4g carbs | 1.8g fiber | 4.8g sugar | 108.1g water'
+      '1 sandwich (195.6g): 505.1 cal | 18.3g protein | 33.4g fat | 31.4g carbs | 1.8g fiber | 4.8g sugar | 108.1g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Egg Salad', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -4011,7 +4094,8 @@ export const LEVELS: Level[] = [
       'Add the mayonnaise, diced apple, green onion, lemon juice, and salt. Mix to combine.',
       'Spread the tuna salad evenly over one bread slice and top with the second slice.',
       'Cut diagonally and serve immediately, or refrigerate the tuna salad up to 2 days.',
-      '1 sandwich (285.15g): 581.9 cal | 33.5g protein | 34.4g fat | 34.8g carbs | 2.5g fiber | 7.1g sugar | 176.7g water'
+      '1 sandwich (285.15g): 581.9 cal | 33.5g protein | 34.4g fat | 34.8g carbs | 2.5g fiber | 7.1g sugar | 176.7g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Tuna Salad', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -4056,7 +4140,8 @@ export const LEVELS: Level[] = [
       'Add the shredded chicken, diced apple, chopped celery, and green onion. Toss to coat evenly.',
       'Spread the chicken salad evenly over one bread slice and top with the second slice.',
       'Cut diagonally and serve immediately, or refrigerate the chicken salad up to 3 days.',
-      '1 sandwich (291.4g): 391.5 cal | 40.8g protein | 8.0g fat | 37.1g carbs | 2.9g fiber | 9.0g sugar | 200.9g water'
+      '1 sandwich (291.4g): 391.5 cal | 40.8g protein | 8.0g fat | 37.1g carbs | 2.9g fiber | 9.0g sugar | 200.9g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.82 },
@@ -4096,7 +4181,8 @@ export const LEVELS: Level[] = [
       'Spread mustard and mayonnaise on one or both bread slices.',
       'Layer the sliced ham and Swiss cheese on one slice, then top with the second slice.',
       'Cut diagonally and serve.',
-      '1 sandwich (191.8 g): 505.0 cal | 27.3g protein | 28.5g fat | 33.7g carbs | 2.9g fiber | 3.5g sugar | 96.7g water'
+      '1 sandwich (191.8 g): 505.0 cal | 27.3g protein | 28.5g fat | 33.7g carbs | 2.9g fiber | 3.5g sugar | 96.7g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Ham and Cheese', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -4132,7 +4218,8 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Spread peanut butter evenly on one bread slice and jelly on the other.',
       'Press the slices together and cut diagonally.',
-      '1 sandwich (112.0 g): 406.6 cal | 12.5g protein | 18.4g fat | 50.6g carbs | 3.4g fiber | 16.5g sugar | 28.3g water'
+      '1 sandwich (112.0 g): 406.6 cal | 12.5g protein | 18.4g fat | 50.6g carbs | 3.4g fiber | 16.5g sugar | 28.3g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Peanut Butter & Jelly', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -4173,7 +4260,8 @@ export const LEVELS: Level[] = [
       'Mix shredded cheddar, softened cream cheese, mayonnaise, drained pimentos, salt, and pepper until well combined.',
       'Spread generously on both slices of white bread.',
       'Press the slices together and serve. Cut diagonally if desired.',
-      '1 sandwich (201.65g): 683.5 cal | 20.7g protein | 51.4g fat | 34.9g carbs | 2.3g fiber | 5.7g sugar | 89.9g water'
+      '1 sandwich (201.65g): 683.5 cal | 20.7g protein | 51.4g fat | 34.9g carbs | 2.3g fiber | 5.7g sugar | 89.9g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Pimento Cheese', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -4218,7 +4306,8 @@ export const LEVELS: Level[] = [
       'Cut each sandwich into three fingers or four triangles.',
       'Chill sandwiches in the refrigerator until they firm up slightly and maintain their shape when served.',
       'Sandwiches can be stored covered overnight.',
-      '1 sandwich (133.7g): 217.0 cal | 5.8g protein | 11.4g fat | 23.1g carbs | 1.6g fiber | 4.3g sugar | 91.5g water'
+      '1 sandwich (133.7g): 217.0 cal | 5.8g protein | 11.4g fat | 23.1g carbs | 1.6g fiber | 4.3g sugar | 91.5g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Cucumber Tea', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -4263,7 +4352,8 @@ export const LEVELS: Level[] = [
       'Spread mustard on the inside of both bread slices, then spread a layer of béchamel over the mustard. Layer ham over one slice, add half the Gruyère, and close the sandwich.',
       'Melt remaining butter in a skillet over medium heat. Place the sandwich in the pan and cook 3 minutes until the bottom is golden.',
       'Flip the sandwich, spoon remaining béchamel over the top, and scatter remaining Gruyère over it. Cover the pan and cook 2–3 minutes until the bottom is golden and the cheese on top is melted.',
-      '1 sandwich (313.53g): 797.3 cal | 36.6g protein | 52.5g fat | 44.5g carbs | 2.9g fiber | 9.9g sugar | 172.1g water'
+      '1 sandwich (313.53g): 797.3 cal | 36.6g protein | 52.5g fat | 44.5g carbs | 2.9g fiber | 9.9g sugar | 172.1g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Croque Monsieur', cookingMethod: '', yieldFactorWater: 0.88 }
@@ -4310,7 +4400,8 @@ export const LEVELS: Level[] = [
       'Melt remaining butter in a skillet over medium heat. Place the sandwich in the pan and cook 3 minutes until the bottom is golden.',
       'Flip the sandwich, spoon remaining béchamel over the top, and scatter remaining Gruyère over it. Cover the pan and cook 2–3 minutes until the bottom is golden and the cheese on top is melted. Remove to a plate.',
       'In the same pan, fry the egg sunny side up until the white is set but the yolk is still runny. Place on top of the sandwich and serve immediately.',
-      '1 sandwich (355.7g): 887.5 cal | 42.9g protein | 59.3g fat | 44.9g carbs | 2.9g fiber | 10.1g sugar | 200.2g water'
+      '1 sandwich (355.7g): 887.5 cal | 42.9g protein | 59.3g fat | 44.9g carbs | 2.9g fiber | 10.1g sugar | 200.2g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Croque Madame', cookingMethod: '', yieldFactorWater: 0.88 }
@@ -4355,7 +4446,8 @@ export const LEVELS: Level[] = [
       'Melt butter in a skillet over medium heat. Place the sandwich in the pan, cover with a lid or foil, and cook 3 minutes until the bottom is deep golden brown.',
       'Flip and cook another 2–3 minutes uncovered until both sides are golden and the cheese is melted through.',
       'Transfer to a plate, dust with powdered sugar, and serve immediately. Consider raspberry jam (not included in nutrient calculation) alongside for dipping.',
-      '1 sandwich (303.61g): 781.3 cal | 41.9g protein | 50.9g fat | 38.0g carbs | 2.4g fiber | 8.1g sugar | 165.1g water'
+      '1 sandwich (303.61g): 781.3 cal | 41.9g protein | 50.9g fat | 38.0g carbs | 2.4g fiber | 8.1g sugar | 165.1g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Monte Cristo Sandwich', cookingMethod: '', yieldFactorWater: 0.88 }
@@ -4402,7 +4494,8 @@ export const LEVELS: Level[] = [
       'Top evenly with the sliced turkey, tomato slices and cheese sauce. Sprinkle with the remaining 1 tablespoon of parmesan.',
       'Broil 3–4 minutes until the sauce is bubbling and parmesan lightly browned on top.',
       'Remove from the oven and transfer to serving plate. Cross two bacon strips over the top of each slice and serve immediately.',
-      '1 serving (408g): 1053 cal | 45.5g protein | 76.8g fat | 45.5g carbs | 2.7g fiber | 9.8g sugar | 230.9g water'
+      '1 serving (408g): 1053 cal | 45.5g protein | 76.8g fat | 45.5g carbs | 2.7g fiber | 9.8g sugar | 230.9g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Hot Brown', cookingMethod: '', yieldFactorWater: 0.92 }
@@ -4447,7 +4540,8 @@ export const LEVELS: Level[] = [
       'Gradually whisk in beef broth. Add Worcestershire sauce, onion powder, salt, and pepper. Bring to a simmer, stirring constantly, until gravy thickens, about 3–4 minutes.',
       'Add the sliced roast beef to the gravy and heat through, about 1 minute.',
       'Arrange the beef over the toasted bread and spoon the gravy generously over everything. Serve immediately.',
-      '1 serving (249g): 287 cal | 25.7g protein | 11.3g fat | 19.3g carbs | 1.0g fiber | 2.2g sugar | 186.5g water'
+      '1 serving (249g): 287 cal | 25.7g protein | 11.3g fat | 19.3g carbs | 1.0g fiber | 2.2g sugar | 186.5g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Open-Faced Roast Beef with Gravy', cookingMethod: '', yieldFactorWater: 0.87 }
@@ -4487,7 +4581,8 @@ export const LEVELS: Level[] = [
       'Layer the turkey breast slices on one slice of bread.',
       'Top the turkey with the lettuce and tomato slices.',
       'Close the sandwich with the second bread slice, press gently, and cut in half to serve.',
-      '1 serving (222g): 447 cal | 21.2g protein | 26.2g fat | 31.0g carbs | 4.4g fiber | 4.8g sugar | 138.2g water'
+      '1 serving (222g): 447 cal | 21.2g protein | 26.2g fat | 31.0g carbs | 4.4g fiber | 4.8g sugar | 138.2g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Turkey Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -4528,7 +4623,8 @@ export const LEVELS: Level[] = [
       'Layer the turkey breast slices on one slice of bread.',
       'Top the turkey with both slices of provolone, then add the lettuce and tomato.',
       'Close the sandwich with the second bread slice, press gently, and cut in half to serve.',
-      '1 serving (278g): 646 cal | 35.7g protein | 41.3g fat | 32.2g carbs | 4.4g fiber | 5.1g sugar | 161.4g water'
+      '1 serving (278g): 646 cal | 35.7g protein | 41.3g fat | 32.2g carbs | 4.4g fiber | 5.1g sugar | 161.4g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Turkey with Provolone Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -4570,7 +4666,8 @@ export const LEVELS: Level[] = [
       'Top the avocado with the turkey breast slices.',
       'Add the lettuce and tomato slices.',
       'Close the sandwich with the second bread slice, press gently, and cut in half to serve.',
-      '1 serving (290g): 560 cal | 22.6g protein | 36.7g fat | 36.9g carbs | 9.0g fiber | 5.0g sugar | 187.4g water'
+      '1 serving (290g): 560 cal | 22.6g protein | 36.7g fat | 36.9g carbs | 9.0g fiber | 5.0g sugar | 187.4g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Turkey & Avocado Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -4613,7 +4710,8 @@ export const LEVELS: Level[] = [
       'Top the avocado with the turkey breast slices, then layer both slices of provolone.',
       'Add the lettuce and tomato slices.',
       'Close the sandwich with the second bread slice, press gently, and cut in half to serve.',
-      '1 serving (346g): 759 cal | 37.1g protein | 51.8g fat | 38.1g carbs | 9.0g fiber | 5.3g sugar | 210.6g water'
+      '1 serving (346g): 759 cal | 37.1g protein | 51.8g fat | 38.1g carbs | 9.0g fiber | 5.3g sugar | 210.6g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Turkey & Avocado with Provolone Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -4657,7 +4755,8 @@ export const LEVELS: Level[] = [
       'Top the avocado with the turkey breast slices and bacon.',
       'Add the lettuce and tomato slices.',
       'Close the sandwich with the second bread slice, press gently, and cut in half to serve.',
-      '1 serving (313g): 668 cal | 30.4g protein | 44.7g fat | 37.2g carbs | 9.0g fiber | 5.0g sugar | 192.8g water'
+      '1 serving (313g): 668 cal | 30.4g protein | 44.7g fat | 37.2g carbs | 9.0g fiber | 5.0g sugar | 192.8g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Turkey & Avocado with Bacon Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -4698,7 +4797,8 @@ export const LEVELS: Level[] = [
       'Layer the roast beef slices on the mustard side.',
       'Top with the lettuce and tomato slices.',
       'Close the sandwich with the mayo slice, press gently, and cut in half to serve.',
-      '1 serving (241g): 396 cal | 29.8g protein | 17.0g fat | 30.0g carbs | 4.6g fiber | 4.3g sugar | 158.4g water'
+      '1 serving (241g): 396 cal | 29.8g protein | 17.0g fat | 30.0g carbs | 4.6g fiber | 4.3g sugar | 158.4g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Roast Beef Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -4739,7 +4839,8 @@ export const LEVELS: Level[] = [
       'Spread the mashed avocado evenly on both slices of multigrain bread.',
       'Layer the alfalfa sprouts on one slice, then top with the tomato slices.',
       'Close the sandwich with the second bread slice, press gently, and cut in half to serve.',
-      '1 serving (168g): 272 cal | 9.5g protein | 13.0g fat | 32.1g carbs | 9.3g fiber | 4.8g sugar | 110.8g water'
+      '1 serving (168g): 272 cal | 9.5g protein | 13.0g fat | 32.1g carbs | 9.3g fiber | 4.8g sugar | 110.8g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Avocado with Sprouts & Tomato Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -4780,7 +4881,8 @@ export const LEVELS: Level[] = [
       'Spread thousand island dressing on the unbuttered side of each slice.',
       'Layer one slice of swiss cheese, then the corned beef, then drained sauerkraut and then the other slice of swiss cheese on one slice of bread.',
       'Close the sandwich butter-side out and pan grill over medium heat 3-4 minutes per side until the bread is golden and the cheese melts.',
-      '1 serving (292g): 826 cal | 37.0g protein | 57.7g fat | 39.0g carbs | 5.7g fiber | 8.1g sugar | 149.9g water'
+      '1 serving (292g): 826 cal | 37.0g protein | 57.7g fat | 39.0g carbs | 5.7g fiber | 8.1g sugar | 149.9g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Reuben Sandwich', cookingMethod: '', yieldFactorWater: 0.9 }
@@ -4819,7 +4921,8 @@ export const LEVELS: Level[] = [
       'Layer the swiss cheese on one slice of bread.',
       'Pile the pastrami on top of the swiss cheese.',
       'Close the sandwich with the second slice of bread, press gently, and cut in half to serve.',
-      '1 serving (219g): 449 cal | 38.0g protein | 17.8g fat | 32.6g carbs | 4.3g fiber | 2.7g sugar | 124.8g water'
+      '1 serving (219g): 449 cal | 38.0g protein | 17.8g fat | 32.6g carbs | 4.3g fiber | 2.7g sugar | 124.8g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Pastrami Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -4858,7 +4961,8 @@ export const LEVELS: Level[] = [
       'Layer the swiss cheese on one slice of bread.',
       'Pile the corned beef on top of the swiss cheese.',
       'Close the sandwich with the second slice of bread, press gently, and cut in half to serve.',
-      '1 serving (220g): 569 cal | 34.1g protein | 32.8g fat | 32.7g carbs | 4.3g fiber | 2.6g sugar | 114.7g water'
+      '1 serving (220g): 569 cal | 34.1g protein | 32.8g fat | 32.7g carbs | 4.3g fiber | 2.6g sugar | 114.7g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Corned Beef Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -4898,7 +5002,8 @@ export const LEVELS: Level[] = [
       'Spread the liverwurst evenly on top of the mustard on one slice.',
       'Top with the onion slices and dill pickle slices.',
       'Close the sandwich with the second slice of bread, press gently, and cut in half to serve.',
-      '1 serving (214g): 464 cal | 18.4g protein | 27.0g fat | 36.2g carbs | 5.0g fiber | 3.8g sugar | 126.9g water'
+      '1 serving (214g): 464 cal | 18.4g protein | 27.0g fat | 36.2g carbs | 5.0g fiber | 3.8g sugar | 126.9g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Liverwurst Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -4937,7 +5042,8 @@ export const LEVELS: Level[] = [
       'Lay the limburger cheese on top of the mustard on one slice.',
       'Top with the thin onion slices.',
       'Close the sandwich with the second bread slice, press gently, and serve.',
-      '1 serving (146g): 362 cal | 17.2g protein | 17.8g fat | 33.4g carbs | 4.2g fiber | 3.6g sugar | 73.3g water'
+      '1 serving (146g): 362 cal | 17.2g protein | 17.8g fat | 33.4g carbs | 4.2g fiber | 3.6g sugar | 73.3g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Limburger Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -4980,7 +5086,8 @@ export const LEVELS: Level[] = [
       'In the same skillet over medium-low heat, cook the onion slices in the beef drippings, stirring occasionally, until golden and caramelized, about 15 minutes.',
       'Layer the Swiss cheese, cooked patty, caramelized onions, and second slice of Swiss cheese on one slice of rye bread. Close with the second slice.',
       'Melt the butter in the skillet over medium heat. Cook the assembled sandwich until golden-brown on both sides and the cheese is melted, about 2–3 minutes per side.',
-      '1 serving (297g): 807 cal | 41.0g protein | 53.7g fat | 39.4g carbs | 5.2g fiber | 5.9g sugar | 154.5g water'
+      '1 serving (297g): 807 cal | 41.0g protein | 53.7g fat | 39.4g carbs | 5.2g fiber | 5.9g sugar | 154.5g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Patty Melt', cookingMethod: '', yieldFactorWater: 0.82 }
@@ -5030,7 +5137,8 @@ export const LEVELS: Level[] = [
       'Push the meat to one side, add the tomato paste to the center of the pan, and cook for 1 minute, stirring, until it darkens slightly.',
       'Stir in the ketchup, water, Worcestershire sauce, and mustard. Reduce heat to medium-low and simmer, stirring occasionally, until the sauce thickens, about 8–10 minutes.',
       'Spoon the meat mixture onto the bottom bun and close with the top bun.',
-      '1 serving (249g): 421 cal | 20.4g protein | 22.8g fat | 33.9g carbs | 2.4g fiber | 10.4g sugar | 167.6g water'
+      '1 serving (249g): 421 cal | 20.4g protein | 22.8g fat | 33.9g carbs | 2.4g fiber | 10.4g sugar | 167.6g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sandwich', label: 'Sloppy Joe', cookingMethod: '', yieldFactorWater: 0.8 }
@@ -5078,7 +5186,8 @@ export const LEVELS: Level[] = [
       'Toss the shredded cabbage with the mayonnaise, apple cider vinegar, and a pinch of salt until evenly coated.',
       'Spread the BBQ sauce over the bottom bun, pile on the pulled pork, and top with the slaw.',
       'Close with the top bun and serve.',
-      '1 serving (243g): 509 cal | 27.9g protein | 26.3g fat | 40.1g carbs | 2.8g fiber | 16.4g sugar | 142.8g water'
+      '1 serving (243g): 509 cal | 27.9g protein | 26.3g fat | 40.1g carbs | 2.8g fiber | 16.4g sugar | 142.8g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'pork', label: 'Pulled pork', cookingMethod: '', yieldFactorWater: 0.6, yieldFactorFat: 0.88 },
@@ -5125,7 +5234,8 @@ export const LEVELS: Level[] = [
       'Remove the brisket from the pan and let it rest for 10 minutes, then slice thinly against the grain.',
       'Spread the BBQ sauce on the bottom bun and pile on the sliced brisket.',
       'Top with the sliced onion and pickle slices, then close with the top bun.',
-      '1 serving (249g): 580 cal | 33.0g protein | 28.4g fat | 47.8g carbs | 2.6g fiber | 21.2g sugar | 131.8g water'
+      '1 serving (249g): 580 cal | 33.0g protein | 28.4g fat | 47.8g carbs | 2.6g fiber | 21.2g sugar | 131.8g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'brisket', label: 'Barbecue brisket', cookingMethod: '', yieldFactorWater: 0.62, yieldFactorFat: 0.92 },
@@ -5172,7 +5282,8 @@ export const LEVELS: Level[] = [
       'Spread mayonnaise on both buns, then layer the lettuce, sliced tomato, and sliced pickles on the bottom bun.',
       'Place the grilled chicken on top of the toppings.',
       'Close with the top bun and serve.',
-      '1 serving (270g): 532 cal | 38.7g protein | 30.8g fat | 25.1g carbs | 1.7g fiber | 4.7g sugar | 170.7g water'
+      '1 serving (270g): 532 cal | 38.7g protein | 30.8g fat | 25.1g carbs | 1.7g fiber | 4.7g sugar | 170.7g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Grilled chicken', cookingMethod: '', yieldFactorWater: 0.8, yieldFactorFat: 0.98 },
@@ -5224,7 +5335,8 @@ export const LEVELS: Level[] = [
       'Spread mayonnaise on both buns, then layer the lettuce, sliced tomato, and sliced pickles on the bottom bun.',
       'Place the fried chicken on top of the toppings, close with the top bun, and serve.',
       '(Oil in the ingredient list reflects only the amount absorbed into the crust.)',
-      '1 serving (332g): 757 cal | 39.7g protein | 42.8g fat | 51.5g carbs | 3.1g fiber | 6.1g sugar | 190.8g water'
+      '1 serving (332g): 757 cal | 39.7g protein | 42.8g fat | 51.5g carbs | 3.1g fiber | 6.1g sugar | 190.8g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Fried chicken', cookingMethod: '', yieldFactorWater: 0.82 },
@@ -5277,7 +5389,8 @@ export const LEVELS: Level[] = [
       'Spread ranch dressing on both buns, then place the lettuce on the bottom bun.',
       'Place the buffalo chicken on top of the lettuce, close with the top bun, and serve.',
       '(Oil in the ingredient list reflects only the amount absorbed into the crust.)',
-      '1 serving (321g): 796 cal | 40.0g protein | 47.1g fat | 51.7g carbs | 2.7g fiber | 6.4g sugar | 175.2g water'
+      '1 serving (321g): 796 cal | 40.0g protein | 47.1g fat | 51.7g carbs | 2.7g fiber | 6.4g sugar | 175.2g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Fried chicken', cookingMethod: '', yieldFactorWater: 0.82 },
@@ -5331,7 +5444,8 @@ export const LEVELS: Level[] = [
       'Spread mayonnaise on both buns. Place the sliced pickles on the bottom bun.',
       'Place the Nashville hot chicken on top of the pickles, close with the top bun, and serve.',
       '(Oil in the ingredient list reflects only the amount absorbed into the crust.)',
-      '1 serving (294g): 782 cal | 39.6g protein | 44.2g fat | 55.4g carbs | 3.0g fiber | 9.6g sugar | 147.5g water'
+      '1 serving (294g): 782 cal | 39.6g protein | 44.2g fat | 55.4g carbs | 3.0g fiber | 9.6g sugar | 147.5g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Fried chicken', cookingMethod: '', yieldFactorWater: 0.82 },
@@ -5380,7 +5494,8 @@ export const LEVELS: Level[] = [
       'Spread tartar sauce on both halves of the bun.',
       'Place the lettuce on the bottom bun, top with the fried cod fillet, close with the top bun, and serve.',
       '(Oil in the ingredient list reflects only the amount absorbed into the crust.)',
-      '1 serving (297g): 646 cal | 35.6g protein | 27.0g fat | 63.7g carbs | 4.0g fiber | 5.2g sugar | 164.6g water'
+      '1 serving (297g): 646 cal | 35.6g protein | 27.0g fat | 63.7g carbs | 4.0g fiber | 5.2g sugar | 164.6g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'fish', label: 'Fried cod', cookingMethod: '', yieldFactorWater: 0.85 },
@@ -5434,7 +5549,8 @@ export const LEVELS: Level[] = [
       'Heat olive oil in a skillet over medium-high heat until shimmering.',
       'Cook the crab cake until deeply golden on the bottom, about 4 minutes. Flip carefully and cook the second side until golden and heated through, about 3–4 more minutes.',
       'Spread tartar sauce on both halves of the hamburger bun. Place the crab cake on the bottom bun, then top with the lettuce leaf and tomato slices. (Oil in the ingredient list reflects only the amount absorbed into the crab cake.)',
-      '1 sandwich (316g): 599 cal | 30.3g protein | 34.4g fat | 41.2g carbs | 3.0g fiber | 7.6g sugar | 202.4g water'
+      '1 sandwich (316g): 599 cal | 30.3g protein | 34.4g fat | 41.2g carbs | 3.0g fiber | 7.6g sugar | 202.4g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crab_cake', label: 'Crab cake', cookingMethod: '', yieldFactorWater: 0.9 },
@@ -5481,7 +5597,8 @@ export const LEVELS: Level[] = [
       'Melt 1 tsp butter in a skillet over medium heat. Place the hot dog bun cut-side down and toast 1–2 minutes until golden.',
       'Fill the toasted bun generously with the lobster salad.',
       'Serve immediately.',
-      '1 sandwich (187g): 324 cal | 26.1g protein | 13.5g fat | 23.1g carbs | 1.1g fiber | 3.5g sugar | 119.3g water'
+      '1 sandwich (187g): 324 cal | 26.1g protein | 13.5g fat | 23.1g carbs | 1.1g fiber | 3.5g sugar | 119.3g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'lobster_salad', label: 'Lobster salad', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -5527,7 +5644,8 @@ export const LEVELS: Level[] = [
       'Heat a skillet over medium heat. Place one slice butter-side down.',
       'Layer one slice of American cheese, the tuna salad, then the second slice of American cheese on top.',
       'Place the second bread slice on top, butter-side up. Cook 3–4 minutes until golden, then flip and cook another 2–3 minutes until cheese is melted.',
-      '1 sandwich (337g): 840 cal | 41.2g protein | 59.3g fat | 36.4g carbs | 2.5g fiber | 8.1g sugar | 191.5g water'
+      '1 sandwich (337g): 840 cal | 41.2g protein | 59.3g fat | 36.4g carbs | 2.5g fiber | 8.1g sugar | 191.5g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'tuna_salad', label: 'Tuna salad', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -5576,7 +5694,8 @@ export const LEVELS: Level[] = [
       'Top the beef with the sautéed onions and 1 slice of provolone. Broil on high for 2–3 minutes until the cheese is melted and bubbly and the top roll is lightly golden.',
       'Remove from oven and fold the top half of the roll over the melted cheese.',
       'Ladle the warm au jus into a small ramekin and serve alongside for dipping.',
-      '1 sandwich (372g): 438 cal | 39.8g protein | 19.2g fat | 25.1g carbs | 1.9g fiber | 2.1g sugar | 277.8g water'
+      '1 sandwich (372g): 438 cal | 39.8g protein | 19.2g fat | 25.1g carbs | 1.9g fiber | 2.1g sugar | 277.8g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'onion_saute', label: 'Sautéed onion', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -5623,7 +5742,8 @@ export const LEVELS: Level[] = [
       'Add the sliced roast beef to the simmering broth. Warm through for 2–3 minutes, then remove with tongs and set aside. Keep the au jus warm on low heat.',
       'Heat 1 tsp olive oil in a skillet over medium-high heat. Add the sliced green peppers and sauté 4–5 minutes until softened and lightly charred.',
       'Split the French roll and pile on the roast beef on both sides of the split roll. Top with the sautéed peppers. Serve with the au jus in a small ramekin alongside for dipping or ladle over the sandwich. (Add hot or mild giardiniera if desired.)',
-      '1 sandwich (286g): 325 cal | 30.9g protein | 11.6g fat | 22.8g carbs | 2.2g fiber | 1.5g sugar | 213.9g water'
+      '1 sandwich (286g): 325 cal | 30.9g protein | 11.6g fat | 22.8g carbs | 2.2g fiber | 1.5g sugar | 213.9g water',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'au_jus', label: 'Au jus', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -5679,7 +5799,8 @@ export const LEVELS: Level[] = [
       'Season the shrimp with salt, black pepper, and red pepper flakes. Dip each shrimp in the beaten egg, then dredge in the flour-cornmeal mixture, pressing to coat.',
       'Heat the olive oil in a skillet over medium-high heat until shimmering. Working in batches, cook the shrimp 1–2 minutes per side until golden and cooked through. Transfer to a plate.',
       'Slice the French bread roll and lightly toast the cut sides if desired. Spread the remoulade generously on both cut sides.',
-      'Layer the shredded lettuce and tomato slices on the bottom half of the roll. Top with the fried shrimp and close the sandwich.'
+      'Layer the shredded lettuce and tomato slices on the bottom half of the roll. Top with the fried shrimp and close the sandwich.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'remoulade', label: 'Remoulade sauce:', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -5735,7 +5856,8 @@ export const LEVELS: Level[] = [
       'Season the oysters with salt, black pepper, and red pepper flakes. Dip each oyster in the beaten egg, then dredge in the flour-cornmeal mixture, pressing to coat.',
       'Heat the olive oil in a skillet over medium-high heat until shimmering. Working in batches, cook the oysters 1–2 minutes per side until golden and cooked through. Transfer to a plate.',
       'Slice the French bread roll and lightly toast the cut sides if desired. Spread the remoulade generously on both cut sides.',
-      'Layer the shredded lettuce and tomato slices on the bottom half of the roll. Top with the fried oysters and close the sandwich.'
+      'Layer the shredded lettuce and tomato slices on the bottom half of the roll. Top with the fried oysters and close the sandwich.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'remoulade', label: 'Remoulade sauce:', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -5789,7 +5911,8 @@ export const LEVELS: Level[] = [
       'Pour marinara sauce over the meatballs in the skillet. Reduce heat to medium-low, cover, and simmer 10–12 minutes until cooked through (internal temp 165°F).',
       'Split the hoagie roll lengthwise (do not cut all the way through). Lightly toast cut-side down in a dry skillet over medium heat, about 1 minute.',
       'Arrange the meatballs on the roll and spoon sauce generously over them. Top with shredded mozzarella.',
-      'Place the open sandwich under the broiler for 2–3 minutes until the mozzarella is melted and bubbly. Serve immediately.'
+      'Place the open sandwich under the broiler for 2–3 minutes until the mozzarella is melted and bubbly. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'meatballs', label: 'Meatballs:', cookingMethod: '', yieldFactorWater: 0.74 },
@@ -5837,7 +5960,8 @@ export const LEVELS: Level[] = [
       'Drizzle olive oil and red wine vinegar evenly over both cut sides of the roll.',
       'Layer the salami slices on the bottom half, followed by the prosciutto, then the provolone.',
       'Top with shredded lettuce, tomato slices, and onion rings.',
-      'Season with oregano, salt, and black pepper. Close the sandwich and press gently. Serve immediately.'
+      'Season with oregano, salt, and black pepper. Close the sandwich and press gently. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -5888,7 +6012,8 @@ export const LEVELS: Level[] = [
       'Dredge the chicken in flour (shake off excess), dip in egg, then press firmly into the breadcrumb mixture to coat both sides.',
       'Heat olive oil in a skillet over medium-high heat. Pan-fry the cutlet 3–4 minutes per side until golden brown and cooked through (internal temp 165°F). Transfer to a paper-towel-lined plate.',
       'Preheat broiler. Place the hoagie roll cut-side up on a baking sheet. Spoon marinara sauce over the bottom half. Set the chicken cutlet on top, then spoon more sauce over the chicken. Layer mozzarella and Parmesan over the top.',
-      'Broil 2–3 minutes until the cheese is melted and bubbling. Close the sandwich and serve immediately.'
+      'Broil 2–3 minutes until the cheese is melted and bubbling. Close the sandwich and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Breaded chicken:', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -5932,7 +6057,8 @@ export const LEVELS: Level[] = [
       'Heat olive oil in a large cast-iron skillet or flat-top griddle over high heat. Add the onion and bell pepper; cook 5–6 minutes, stirring, until softened and lightly charred. Push to one side of the pan.',
       'Add the beef to the empty side of the pan. Cook 2–3 minutes, breaking apart with a spatula, until browned and just cooked through. Mix the beef together with the onions and peppers.',
       'Lay the provolone slices over the beef mixture. Cover loosely with a lid or foil for 30–60 seconds to melt the cheese.',
-      'Split the hoagie roll and lightly toast the cut sides on the griddle for 1 minute. Scoop the cheesy beef filling into the roll cheese side down and serve immediately.'
+      'Split the hoagie roll and lightly toast the cut sides on the griddle for 1 minute. Scoop the cheesy beef filling into the roll cheese side down and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'filling', label: 'Beef filling:', cookingMethod: '', yieldFactorWater: 0.82 },
@@ -5984,7 +6110,8 @@ export const LEVELS: Level[] = [
       'Make the quick pickles: combine daikon and carrot with red wine vinegar, sugar, and a pinch of salt. Toss well and let sit at least 10 minutes while the pork marinates.',
       'Heat a skillet over medium-high heat. Remove the pork from the marinade, pat lightly dry, and cook 3–4 minutes per side until cooked through (internal temp 145°F). Rest 5 minutes, then slice thinly.',
       'Split the baguette lengthwise and lightly toast the cut sides in the pan. Spread mayonnaise on both sides.',
-      'Layer the sliced pork on the bottom half. Top with pickled daikon and carrot, cucumber slices, jalapeño, and cilantro. Close the sandwich and serve immediately.'
+      'Layer the sliced pork on the bottom half. Top with pickled daikon and carrot, cucumber slices, jalapeño, and cilantro. Close the sandwich and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'pork', label: 'Pork:', cookingMethod: '', yieldFactorWater: 0.8 },
@@ -6028,7 +6155,8 @@ export const LEVELS: Level[] = [
       'Drizzle olive oil on both cut sides. Season lightly with salt and pepper.',
       'Layer mozzarella slices on the bottom half, followed by tomato slices. Season the tomatoes with a pinch of salt and pepper.',
       'Scatter fresh basil leaves over the tomatoes. Drizzle balsamic vinegar over the filling.',
-      'Close the sandwich, press gently, and slice in half. Serve immediately.'
+      'Close the sandwich, press gently, and slice in half. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -6068,7 +6196,8 @@ export const LEVELS: Level[] = [
       'Crack the eggs into a bowl, season with salt and pepper, and whisk until combined.',
       'Melt butter in a non-toxic nonstick skillet over medium-low heat. Add the eggs and scramble gently, stirring slowly, until just set. Remove from heat while still slightly glossy.',
       'Split the croissant in half horizontally. Lay the cheddar slice on the bottom half.',
-      'Spoon the scrambled eggs over the cheese. Close the sandwich and serve immediately.'
+      'Spoon the scrambled eggs over the cheese. Close the sandwich and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'eggs', label: 'Eggs:', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -6108,7 +6237,8 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Melt the butter in a non-toxic nonstick skillet over medium-low heat. Whisk the eggs with salt and pepper, pour into the pan, and scramble gently until just set. Remove from heat while still slightly glossy.',
       'Split the croissant in half horizontally. Lay the cheddar slice on the bottom half.',
-      'Spoon the scrambled eggs over the cheese, then lay the bacon strips on top. Close the sandwich and serve immediately.'
+      'Spoon the scrambled eggs over the cheese, then lay the bacon strips on top. Close the sandwich and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'eggs', label: 'Eggs:', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -6148,7 +6278,8 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Form about 2 oz (48g) of the sausage mixture into a patty sized to fit the croissant. Cook in a non-toxic nonstick skillet over medium heat until browned and cooked through to an internal temperature of 160°F (71°C), about 3–4 minutes per side. Set aside.',
       'Melt the butter in the same skillet over medium-low heat. Whisk the eggs with salt and pepper, pour into the pan, and scramble gently until just set. Remove from heat while still slightly glossy.',
-      'Split the croissant in half horizontally. Lay the cheddar slice on the bottom half, spoon the scrambled eggs over the cheese, and top with the sausage patty. Close the sandwich and serve immediately.'
+      'Split the croissant in half horizontally. Lay the cheddar slice on the bottom half, spoon the scrambled eggs over the cheese, and top with the sausage patty. Close the sandwich and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sausage', label: 'Sausage:', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -6189,7 +6320,8 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Warm the ham slices in a non-toxic nonstick skillet over medium heat for about 1 minute per side until lightly browned. Set aside.',
       'Melt the butter in the same skillet over medium-low heat. Whisk the eggs with salt and pepper, pour into the pan, and scramble gently until just set. Remove from heat while still slightly glossy.',
-      'Split the croissant in half horizontally. Lay the cheddar slice on the bottom half, spoon the scrambled eggs over the cheese, and top with the ham slices. Close the sandwich and serve immediately.'
+      'Split the croissant in half horizontally. Lay the cheddar slice on the bottom half, spoon the scrambled eggs over the cheese, and top with the ham slices. Close the sandwich and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'ham', label: 'Ham:', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -6229,7 +6361,8 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Split the croissant in half horizontally. Spread 2 tablespoons of cream cheese evenly over the cut sides.',
       'Layer the smoked salmon slices on the bottom half. Squeeze lemon juice over the salmon, scatter the chopped dill on top, and finish with a pinch of black pepper.',
-      'Close the sandwich and serve immediately.'
+      'Close the sandwich and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -6285,7 +6418,8 @@ export const LEVELS: Level[] = [
       'Heat the olive oil in a non-toxic nonstick skillet over medium heat. Cook the patties for 3–4 minutes per side until golden brown and crisp on the outside. Transfer to a plate.',
       'In a small bowl, stir together 2 tablespoons of yogurt, 1 teaspoon each of chopped dill, chopped parsley, and chopped fresh mint, ½ teaspoon of lemon juice, and a pinch of salt until smooth. Set the yogurt sauce aside.',
       'Warm the pita briefly in the skillet or microwave. Slice off the top third to open a pocket, or split in half.',
-      'Spread the tahini inside the pita. Add the tomato slices, red onion, and falafel patties. Drizzle the yogurt sauce over the top. Serve immediately.'
+      'Spread the tahini inside the pita. Add the tomato slices, red onion, and falafel patties. Drizzle the yogurt sauce over the top. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'falafel', label: 'Falafel:', cookingMethod: '', yieldFactorWater: 0.8 },
@@ -6336,7 +6470,8 @@ export const LEVELS: Level[] = [
       'Heat olive oil in a non-toxic nonstick skillet over medium-high heat. Cook patties 3 minutes per side until browned and cooked through. Transfer to a plate. (Oil reflects only the amount absorbed into the patties.)',
       'Make the tzatziki: grate cucumber and squeeze out as much liquid as possible with a paper towel. In a small bowl, stir together yogurt, drained cucumber, dill, garlic powder, lemon juice, and salt until combined. Set aside.',
       'Warm pita briefly in skillet or microwave. Slice off the top third to open a pocket.',
-      'Fill the pita with tomato slices and red onion. Add the lamb patties. Spoon tzatziki generously over the top. Serve immediately.'
+      'Fill the pita with tomato slices and red onion. Add the lamb patties. Spoon tzatziki generously over the top. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'lamb', label: 'Lamb:', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -6379,7 +6514,8 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'In a small bowl, combine shredded cabbage, mayonnaise, apple cider vinegar, and a pinch of salt. Toss well and set aside.',
       'Lay turkey slices and Swiss cheese on one slice of rye bread. Top with the coleslaw. Close the sandwich with the second slice.',
-      'Melt butter in a non-toxic nonstick skillet over medium heat. Add the sandwich and press lightly. Cook 3–4 minutes per side until the bread is golden brown and the cheese is melted. Serve immediately.'
+      'Melt butter in a non-toxic nonstick skillet over medium heat. Add the sandwich and press lightly. Cook 3–4 minutes per side until the bread is golden brown and the cheese is melted. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'coleslaw', label: 'Coleslaw:', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -6421,7 +6557,8 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Shape the ground beef into a patty a little larger than the bun due to shrinkage. Do not overwork the meat or pack tightly. Season both sides with salt and pepper.',
       'Heat a skillet over medium-high heat. Cook patty 3–4 minutes per side until cooked through (160°F / 71°C internal temperature). For best results use a pan where the meat sticks to the pan to prevent shrinkage. Then carefully release all sides of the patty from the pan with the back of a spatula before flipping. Serve immediately on prepared bun.',
-      'Prepare the bun by grilling the inside of each half until golden. Then spread ketchup on one bun and mustard on the other bun. Add the pickle slices and onion on the bottom bun and then top with the patty.'
+      'Prepare the bun by grilling the inside of each half until golden. Then spread ketchup on one bun and mustard on the other bun. Add the pickle slices and onion on the bottom bun and then top with the patty.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'patty', label: 'Patty:', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -6465,7 +6602,8 @@ export const LEVELS: Level[] = [
       'Shape the ground meat into a patty a little larger than the bun due to shrinkage. Do not overwork the meat or pack tightly. Season both sides with salt and pepper.',
       'Heat a skillet over medium-high heat. Cook patty 3–4 minutes per side until cooked through (160°F / 71°C internal temperature). For best results use a pan where the meat sticks to the pan to prevent shrinkage. Then carefully release all sides of the patty from the pan with the back of a spatula before flipping.',
       'After flipping lay the cheese on top of the patty and continue cooking. Serve immediately on prepared bun.',
-      'Prepare the bun by grilling the inside of each half until golden. Then spread ketchup on one bun and mustard on the other bun. Add the pickle slices and onion on the bottom bun and then top with the patty cheese side up.'
+      'Prepare the bun by grilling the inside of each half until golden. Then spread ketchup on one bun and mustard on the other bun. Add the pickle slices and onion on the bottom bun and then top with the patty cheese side up.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'patty', label: 'Patty:', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -6510,7 +6648,8 @@ export const LEVELS: Level[] = [
       'Shape the ground meat into a patty a little larger than the bun due to shrinkage. Do not overwork the meat or pack tightly. Season both sides with salt and pepper.',
       'Heat a skillet over medium-high heat. Cook patty 3–4 minutes per side until cooked through (160°F / 71°C internal temperature). For best results use a pan where the meat sticks to the pan to prevent shrinkage. Then carefully release all sides of the patty from the pan with the back of a spatula before flipping.',
       'After flipping lay the cheese on top of the patty and continue cooking. Serve immediately on prepared bun.',
-      'Prepare the bun by grilling the inside of each half until golden. Then spread ketchup on one bun and mustard on the other bun. Add the pickle slices and onion on the bottom bun and then top with the patty cheese side up. Lay bacon slices on the cheese.'
+      'Prepare the bun by grilling the inside of each half until golden. Then spread ketchup on one bun and mustard on the other bun. Add the pickle slices and onion on the bottom bun and then top with the patty cheese side up. Lay bacon slices on the cheese.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'patty', label: 'Patty:', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -6554,7 +6693,8 @@ export const LEVELS: Level[] = [
       'Shape the ground meat into two patties a little larger than the bun due to shrinkage. Do not overwork the meat or pack tightly. Season both sides of each patty with salt and pepper.',
       'Heat a skillet large enough for 2 patties over medium-high heat. Cook patties 3–4 minutes per side until cooked through (160°F / 71°C internal temperature). For best results use a pan where the meat sticks to the pan to prevent shrinkage. Then carefully release all sides of each patty from the pan with the back of a spatula before flipping.',
       'After flipping lay a slice of cheese on top of each patty and continue cooking. Serve immediately on prepared bun.',
-      'Prepare the bun by grilling the inside of each half until golden. Then spread ketchup on one bun and mustard on the other bun. Add the pickle slices and onion on the bottom bun and top with a patty cheese side up. Then top the first patty with the second patty cheese side up.'
+      'Prepare the bun by grilling the inside of each half until golden. Then spread ketchup on one bun and mustard on the other bun. Add the pickle slices and onion on the bottom bun and top with a patty cheese side up. Then top the first patty with the second patty cheese side up.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'patty', label: 'Patties:', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -6602,7 +6742,8 @@ export const LEVELS: Level[] = [
       'Heat a skillet over medium-high heat. Cook patty 3–4 minutes per side until cooked through (160°F / 71°C internal temperature). For best results use a pan where the meat sticks to the pan to prevent shrinkage. Then carefully release all sides of the patty from the pan with the back of a spatula before flipping.',
       'After flipping continue cooking the patty and lay the cheese on top the last 30–60 seconds.',
       'Remove the patty and add the sliced mushrooms to the same pan and cook until browning. Lower to medium-low heat and add the minced garlic. Sauté for 30–60 seconds and deglaze the pan with 1 tablespoon of water while scraping with a spatula.',
-      'Place patty on the bun cheese side up then top with caramelized onion and then the sautéed mushrooms. Close with top bun.'
+      'Place patty on the bun cheese side up then top with caramelized onion and then the sautéed mushrooms. Close with top bun.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'mushrooms', label: 'Mushrooms:', cookingMethod: '', yieldFactorWater: 0.9 },
@@ -6646,7 +6787,8 @@ export const LEVELS: Level[] = [
       'Season the ground beef patty with salt and pepper. Shape into a patty slightly larger than the bun to account for shrinkage.',
       'Heat a skillet over medium-high heat. Cook the patty 3–4 minutes per side until cooked through (160°F / 71°C). Lay the cheddar slice on top during the last 30–60 seconds; cover to melt.',
       'While the patty rests, heat the onion rings according to package directions if frozen, or use pre-fried rings.',
-      'Spread BBQ sauce on the bun bottom. Place the patty cheese side up, top with bacon strips and onion rings. Close with the bun top.'
+      'Spread BBQ sauce on the bun bottom. Place the patty cheese side up, top with bacon strips and onion rings. Close with the bun top.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'patty', label: 'Patty:', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -6688,7 +6830,8 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'In a bowl, combine the ground turkey with poultry seasoning, salt, and pepper. Mix gently — do not overwork. Shape into a patty slightly larger than the bun to account for shrinkage. Press indentation in patty with your thumb or a spoon to prevent doming.',
       'Heat a skillet over medium heat. Cook the patty 5–6 minutes per side until cooked through (165°F / 74°C). Do not press down on the patty.',
-      'Spread mayonnaise on the inside of both buns. Place the patty, then top with lettuce and tomato slices. Close with the bun top.'
+      'Spread mayonnaise on the inside of both buns. Place the patty, then top with lettuce and tomato slices. Close with the bun top.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'patty', label: 'Patty', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -6734,7 +6877,8 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Mash the black beans in a bowl with a fork until mostly smooth — a few whole beans add texture. Mix in bread crumbs, minced onion, minced garlic, cumin, salt, and pepper until combined. The mixture should hold together when pressed; if too wet, add a pinch more bread crumbs. Form into a patty slightly wider than the bun.',
       'Heat olive oil in a skillet over medium heat. Cook the patty 4–5 minutes per side until a firm, golden crust forms. Handle gently — the patty is more fragile than a meat burger.',
-      'Spread mayonnaise on the inside of both buns. Place the patty, then top with lettuce and tomato slices. Close with the bun top.'
+      'Spread mayonnaise on the inside of both buns. Place the patty, then top with lettuce and tomato slices. Close with the bun top.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'patty', label: 'Patty:', cookingMethod: '', yieldFactorWater: 0.85 },
@@ -6772,7 +6916,8 @@ export const LEVELS: Level[] = [
     ],
     recipeInstructions: [
       'Grill or pan-sear the frank over medium-high heat, turning occasionally, until heated through and lightly charred, about 4–5 minutes.',
-      'Place the frank in the bun. Top with ketchup, yellow mustard, and sweet relish.'
+      'Place the frank in the bun. Top with ketchup, yellow mustard, and sweet relish.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'frank', label: 'Grilled frank', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -6814,7 +6959,8 @@ export const LEVELS: Level[] = [
     ],
     recipeInstructions: [
       'Grill the frank over medium-high heat, turning occasionally, until lightly charred and heated through, about 4–5 minutes.',
-      'Place the frank in the bun. Top with yellow mustard, sweet relish, 2 Roma tomato wedges, the dill pickle spear (quartered lengthwise), 2 sport peppers (slivered), and a pinch of celery salt (⅛ tsp celery seed + 1 dash salt). Do not add ketchup.'
+      'Place the frank in the bun. Top with yellow mustard, sweet relish, 2 Roma tomato wedges, the dill pickle spear (quartered lengthwise), 2 sport peppers (slivered), and a pinch of celery salt (⅛ tsp celery seed + 1 dash salt). Do not add ketchup.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'frank', label: 'Frank:', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -6853,7 +6999,8 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Grill the frank over medium-high heat, turning occasionally, until lightly charred and heated through, about 4–5 minutes.',
       'Warm the canned chili in a small saucepan over medium heat, stirring, until hot.',
-      'Place the frank in the bun. Spoon the chili over the frank. Top with chopped onion and shredded cheddar cheese.'
+      'Place the frank in the bun. Spoon the chili over the frank. Top with chopped onion and shredded cheddar cheese.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'frank', label: 'Frank:', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -6898,7 +7045,8 @@ export const LEVELS: Level[] = [
       'In a bowl, whisk together the cornmeal, flour, baking powder, sugar, and salt. Add the egg and milk; stir until a thick, smooth batter forms. Pour batter into a glass taller than the frankfurter is long.',
       'Pat the frankfurters dry. Insert a wooden skewer into each frank. Dip each frank into the batter turning to coat. Raise and let excess drip off. Then carefully lower into the hot oil, releasing just before it is fully submerged.',
       'Fry 2 to 3 corn dogs at a time for 2 to 3 minutes, turning once, until deep golden brown all over.',
-      'Lift out and drain on a paper towel-lined rack. Serve with mustard or ketchup for dipping.'
+      'Lift out and drain on a paper towel-lined rack. Serve with mustard or ketchup for dipping.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'corn_dog', label: 'Corn Dog:', cookingMethod: '', yieldFactorWater: 0.85 }
@@ -6938,7 +7086,8 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'In a small bowl, toss the shredded cabbage with the mayonnaise, apple cider vinegar, and a pinch of salt. Let the coleslaw rest for 5 minutes to soften slightly.',
       'Grill the frank over medium-high heat, turning occasionally, until lightly charred and heated through, about 4–5 minutes.',
-      'Place the frank in the bun. Spread mustard along the frank. Pile the coleslaw on top and serve immediately.'
+      'Place the frank in the bun. Spread mustard along the frank. Pile the coleslaw on top and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'coleslaw', label: 'Coleslaw:', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -6987,7 +7136,8 @@ export const LEVELS: Level[] = [
       'Continue cooking, stirring frequently and scraping the bottom and sides of the pan with a spatula. Remove any skin that develops on the surface.',
       'Cook 15–30 minutes until the sauce is thick enough to coat the back of a wooden spoon and hold a clear line when wiped.',
       'If the sauce becomes too thick, whisk in additional milk a little at a time to reach the desired consistency.',
-      'Remove from heat. Season with the salt, white pepper, and freshly grated nutmeg, then strain through a fine-mesh strainer. Stir occasionally while cooling to prevent skinning.'
+      'Remove from heat. Season with the salt, white pepper, and freshly grated nutmeg, then strain through a fine-mesh strainer. Stir occasionally while cooling to prevent skinning.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sauce', label: 'Sauce:', cookingMethod: '', yieldFactorWater: 0.88 }
@@ -7026,7 +7176,8 @@ export const LEVELS: Level[] = [
       'Reduce the finished Béchamel heat to the lowest setting — the sauce should be hot but not simmering.',
       'Add the cheese in two or three additions, stirring gently with a wooden spoon or silicone spatula after each addition until just melted.',
       'Do not allow the sauce to boil after adding the cheese; boiling causes the proteins to seize and the sauce to become grainy or stringy.',
-      'Taste and adjust seasoning. Serve immediately, or keep warm over a bain-marie with plastic wrap pressed directly onto the surface to prevent skinning.'
+      'Taste and adjust seasoning. Serve immediately, or keep warm over a bain-marie with plastic wrap pressed directly onto the surface to prevent skinning.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -7069,7 +7220,8 @@ export const LEVELS: Level[] = [
       'Prepare one full recipe of Béchamel sauce (see instructions in the recipe: Béchamel Sauce).',
       'Add the sweated onions to the hot Béchamel. Simmer gently, stirring, for 10 minutes.',
       'Pass the sauce through a fine-mesh strainer or food mill, pressing firmly to extract all the onion purée. Discard the fibrous solids.',
-      'Taste and adjust seasoning with salt and white pepper. Serve immediately, or keep warm over a bain-marie with plastic wrap pressed directly onto the surface to prevent skinning.'
+      'Taste and adjust seasoning with salt and white pepper. Serve immediately, or keep warm over a bain-marie with plastic wrap pressed directly onto the surface to prevent skinning.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'onion', label: 'Sweated onion purée', cookingMethod: '', yieldFactorWater: 0.45 },
@@ -7109,7 +7261,8 @@ export const LEVELS: Level[] = [
       'Prepare one full recipe of Béchamel sauce (see instructions in the recipe: Béchamel Sauce).',
       'Pour the heavy cream into the hot Béchamel and bring to a gentle simmer.',
       'Reduce, stirring frequently, until the sauce lightly coats the back of a spoon — about 10–15 minutes. The sauce will lose roughly 15–20% of its volume.',
-      'Remove from heat and finish with 1 tsp of lemon juice. Adjust salt and white pepper.'
+      'Remove from heat and finish with 1 tsp of lemon juice. Adjust salt and white pepper.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -7147,7 +7300,8 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Prepare one full recipe of Béchamel sauce (see instructions in the recipe: Béchamel Sauce).',
       'Stir in the tomato purée until the sauce is evenly tinted a pale rosy pink.',
-      'Taste and adjust seasoning with salt and white pepper. Serve immediately.'
+      'Taste and adjust seasoning with salt and white pepper. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -7187,7 +7341,8 @@ export const LEVELS: Level[] = [
       'In a heavy saucepan over medium heat, melt the butter. Add the flour all at once and whisk constantly for 2–3 minutes until the roux turns a pale golden color — do not let it brown. Remove from heat.',
       'Gradually whisk in the chicken broth, a little at a time, making sure each addition is fully incorporated before adding more. Return to heat.',
       'Bring to a gentle simmer, whisking frequently, and cook for 20–30 minutes, skimming skin that forms on the surface.',
-      'Season with salt and white pepper. Strain through a fine-mesh sieve before serving.'
+      'Season with salt and white pepper. Strain through a fine-mesh sieve before serving.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'stock', label: 'White Chicken Stock', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -7234,7 +7389,8 @@ export const LEVELS: Level[] = [
       'Set a heatproof bowl over a saucepan of barely simmering water (bain-marie). The bowl should not touch the water. Add the egg yolks and the strained reduction to the bowl. Whisk constantly over gentle heat until the yolks thicken and nearly double in volume, and you can see the bottom of the bowl between strokes, about 3–5 minutes. Remove from heat immediately if the mixture gets too hot — it should never exceed 160°F (70°C).',
       'Begin adding the clarified butter very slowly — drop by drop at first — while whisking constantly. Once the emulsion is established (after the first few tablespoons), you can add the butter in a thin, steady stream. Continue whisking until all the butter is incorporated and the sauce is thick and creamy.',
       'Season with salt. Stir in the finishing tarragon and chopped chives. Taste and adjust seasoning. Serve immediately, or keep warm in the bain-marie with the heat off, whisking occasionally, for up to 30 minutes.',
-      '(The tarragon in the ingredient list appears twice: the first portion infuses the reduction and is strained out; the second portion is stirred in at the end as a fresh finish.)'
+      '(The tarragon in the ingredient list appears twice: the first portion infuses the reduction and is strained out; the second portion is stirred in at the end as a fresh finish.)',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'reduction', label: 'Tarragon reduction', cookingMethod: '', yieldFactorWater: 0.2 },
@@ -7284,7 +7440,8 @@ export const LEVELS: Level[] = [
       'Add boiling water to cover the top of the vegetables.',
       'Simmer uncovered for 3 to 4 hours, skimming occasionally. You\'re clarifying the stock by skimming the oil, as well. Do not let the stock boil — it will cloud. Do not stir — stirring emulsifies fats and impurities back into the liquid.',
       'Strain through a fine-mesh strainer, pressing lightly on the solids. Discard solids.',
-      'Cool to room temperature, then refrigerate. Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid.'
+      'Cool to room temperature, then refrigerate. Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
@@ -7334,7 +7491,8 @@ export const LEVELS: Level[] = [
       'Bring to a boil over high heat, skimming any foam that rises to the surface.',
       'Reduce heat to a bare simmer. Simmer uncovered for 4 hours, skimming any fat and foam that rise to the surface occasionally. Do not let the stock boil — it will cloud. Do not stir — stirring emulsifies fats and impurities back into the liquid.',
       'Strain through a fine-mesh strainer, pressing lightly on the solids. Discard solids.',
-      'Cool to room temperature, then refrigerate. Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid.'
+      'Cool to room temperature, then refrigerate. Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
@@ -7383,7 +7541,8 @@ export const LEVELS: Level[] = [
       'Add boiling water if needed to keep the vegetables covered.',
       'Simmer uncovered for 2 to 3 hours, skimming any fat and foam occasionally. Do not let the broth boil — it will cloud. Do not stir — stirring emulsifies fats and impurities back into the liquid.',
       'Strain through a fine-mesh strainer, pressing lightly on the solids. Discard solids.',
-      'Cool to room temperature, then refrigerate. Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid.'
+      'Cool to room temperature, then refrigerate. Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
@@ -7432,7 +7591,8 @@ export const LEVELS: Level[] = [
       'Skim the gray foam and fat that rise to the surface during the first 20 to 30 minutes of simmering.',
       'Simmer uncovered for 6 to 8 hours, skimming any fat and foam occasionally. Keep at a gentle simmer — do not let it boil hard. Do not stir — stirring emulsifies fats and impurities back into the liquid.',
       'Strain the stock through a fine-mesh strainer or cheesecloth-lined colander. Discard the solids.',
-      'Cool to room temperature, then refrigerate. Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid.'
+      'Cool to room temperature, then refrigerate. Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
@@ -7482,7 +7642,8 @@ export const LEVELS: Level[] = [
       'Add water as needed to keep the bones mostly submerged during the simmer.',
       'Strain the broth through a fine-mesh strainer or cheesecloth-lined colander. Discard the solids.',
       'Cool to room temperature, then refrigerate. The broth will gel when cold — this is normal and desirable.',
-      'Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid.'
+      'Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
@@ -7533,7 +7694,8 @@ export const LEVELS: Level[] = [
       'Reduce heat to maintain a bare simmer. Cook uncovered for 20 to 30 minutes. Do not simmer longer — prolonged cooking makes fish stock bitter.',
       'Do not stir — stirring emulsifies fats and impurities back into the liquid.',
       'Strain the stock through a fine-mesh strainer or cheesecloth-lined colander. Discard the solids.',
-      'Cool to room temperature and refrigerate for up to 3 days, or freeze for up to 3 months.'
+      'Cool to room temperature and refrigerate for up to 3 days, or freeze for up to 3 months.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.9, yieldFactorOther: 0.02 }
@@ -7584,7 +7746,8 @@ export const LEVELS: Level[] = [
       'Do not stir — stirring emulsifies fine particles back into the liquid.',
       'Strain the stock through a fine-mesh strainer or cheesecloth-lined colander. Press gently on the solids to extract remaining liquid, then discard the solids.',
       'Taste and adjust salt. Cool to room temperature.',
-      'Refrigerate for up to 5 days, or freeze for up to 6 months.'
+      'Refrigerate for up to 5 days, or freeze for up to 6 months.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.82, yieldFactorFat: 0.95, yieldFactorOther: 0.02 }
@@ -7629,7 +7792,8 @@ export const LEVELS: Level[] = [
       'Simmer 3 to 4 minutes until the cream has reduced slightly and coats the back of a spoon.',
       'Remove from heat. Add Parmesan a little at a time, stirring until fully melted and smooth.',
       'Season with salt, white pepper, and a pinch of nutmeg. Stir to combine.',
-      'Serve immediately over pasta, or hold warm over very low heat, stirring occasionally.'
+      'Serve immediately over pasta, or hold warm over very low heat, stirring occasionally.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sauce', label: 'Sauce:', cookingMethod: '', yieldFactorWater: 0.88 }
@@ -7673,7 +7837,8 @@ export const LEVELS: Level[] = [
       'Begin adding the grapeseed oil one drop at a time, whisking constantly to establish the emulsion.',
       'Once the mayonnaise begins to thicken and hold its shape, add the remaining oil in a thin, steady stream, whisking continuously.',
       'Season with salt and white pepper. Taste and adjust seasoning.',
-      'Transfer to a jar and refrigerate immediately. Use within 5 days.'
+      'Transfer to a jar and refrigerate immediately. Use within 5 days.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sauce', label: 'Sauce:', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -7715,7 +7880,8 @@ export const LEVELS: Level[] = [
       'Season with salt and white pepper. Taste and adjust salt.',
       'Transfer to a clean glass jar.',
       'Refrigerate uncovered until fully cooled, then seal.',
-      'Rest in the refrigerator at least 24 hours before using — the sharpness mellows and the flavor develops considerably.'
+      'Rest in the refrigerator at least 24 hours before using — the sharpness mellows and the flavor develops considerably.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sauce', label: 'Sauce:', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -7761,7 +7927,8 @@ export const LEVELS: Level[] = [
       'The ketchup is ready when a spoon dragged across the bottom of the pan leaves a clear trail that holds for several seconds.',
       'Taste and adjust seasoning — add a pinch more salt or a splash more vinegar if needed.',
       'Let cool for 10 minutes, then blend until smooth with an immersion blender (or transfer to a blender in batches).',
-      'Transfer to clean glass jars and refrigerate. The ketchup keeps for up to 3 weeks.'
+      'Transfer to clean glass jars and refrigerate. The ketchup keeps for up to 3 weeks.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sauce', label: 'Sauce:', cookingMethod: '', yieldFactorWater: 0.603 }
@@ -7810,7 +7977,8 @@ export const LEVELS: Level[] = [
       'The sauce is ready when a spoon dragged across the bottom of the pan leaves a clear trail that holds for several seconds. The onion and pepper pieces should be very soft.',
       'Taste and adjust seasoning — add a pinch more salt, a splash more vinegar, or extra red pepper flakes if needed.',
       'Remove from heat and let cool. Unlike ketchup, chili sauce is not blended — it keeps its chunky, relish-like texture.',
-      'Transfer to clean glass jars and refrigerate. The chili sauce keeps for up to 3 weeks.'
+      'Transfer to clean glass jars and refrigerate. The chili sauce keeps for up to 3 weeks.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sauce', label: 'Sauce:', cookingMethod: '', yieldFactorWater: 0.63 }
@@ -7852,7 +8020,8 @@ export const LEVELS: Level[] = [
       'Add the 3 tbsp of Chili Sauce and stir until the dressing is uniformly red-orange with no streaks.',
       'Taste and adjust: add more horseradish for extra bite, a splash of lemon juice for brightness, or a small pinch of salt if needed.',
       'Cover tightly and refrigerate for at least 30 minutes before serving to allow the flavors to meld.',
-      'Serve as a sandwich spread, salad dressing, or dipping sauce. Store covered in the refrigerator for up to 1 week; stir before each use.'
+      'Serve as a sandwich spread, salad dressing, or dipping sauce. Store covered in the refrigerator for up to 1 week; stir before each use.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'mayonnaise', label: 'Mayonnaise', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -7904,7 +8073,8 @@ export const LEVELS: Level[] = [
       'Add enough vegetable oil to cover the bottom of a large cast iron or heavy-bottomed skillet. Heat the oil over medium-high heat until shimmering. Add the steaks and fry 3 to 4 minutes per side until deep golden brown and cooked through. Transfer to a clean wire rack. (The oil in the ingredient list reflects only the amount absorbed into the crust.)',
       'Pour off all but 2 tablespoons of drippings from the skillet. Add the butter and let it melt over medium heat. Whisk in the 2 tbsp of flour and cook, stirring constantly, 1 to 2 minutes until the roux turns light golden.',
       'Gradually pour in the milk while whisking, scraping up any browned bits from the bottom of the pan. Continue to cook, stirring frequently, 4 to 6 minutes until the gravy thickens to a pourable consistency.',
-      'Season the gravy with salt and black pepper. Plate the steaks and ladle the cream gravy over the top. Serve immediately.'
+      'Season the gravy with salt and black pepper. Plate the steaks and ladle the cream gravy over the top. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'steak', label: 'Chicken fried steak', cookingMethod: '', yieldFactorWater: 0.82 },
@@ -7946,7 +8116,8 @@ export const LEVELS: Level[] = [
       'Put the pot over low heat and stir continuously with a wooden spoon for 2–3 minutes. The goal is a visibly drier, slightly fluffy mass — any residual water left in now will fight the emulsion later.',
       'Take the pot off the heat. Add the cold, cubed butter a few pieces at a time, whisking vigorously after each addition. The temperature contrast between cold butter and hot potato is what creates the emulsion — add it too fast or while the pot is still on the flame and you get grease instead of cream.',
       'Whisk in the warm milk gradually until the purée flows easily from the whisk. For the ultra-smooth Robuchon finish, press the entire batch through a fine-mesh drum sieve (tamis) — this step removes any remaining fibrous texture.',
-      'Taste for salt, and serve at once. The purée tightens quickly as it cools and does not reheat well without breaking.'
+      'Taste for salt, and serve at once. The purée tightens quickly as it cools and does not reheat well without breaking.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'puree', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 }
@@ -7991,7 +8162,8 @@ export const LEVELS: Level[] = [
       'Drain potatoes; peel while hot. Pass through a potato ricer or food mill into the pot.',
       'Dry the riced potato over low heat 1–2 minutes, stirring with a wooden spoon to drive off excess moisture.',
       'Remove from heat. Stir in garlic paste, then add butter in pieces, stirring vigorously to incorporate.',
-      'Warm the milk gently and stir in gradually until potatoes reach desired consistency. Season with salt and serve at once.'
+      'Warm the milk gently and stir in gradually until potatoes reach desired consistency. Season with salt and serve at once.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'garlic', label: 'Roasted garlic', cookingMethod: '', yieldFactorWater: 0.62 },
@@ -8031,7 +8203,8 @@ export const LEVELS: Level[] = [
       'Use Yukon Gold potatoes — their waxy, buttery flesh gives the smoothest, creamiest result. White potatoes are listed in the ingredients since they are a close nutritional match and they are in the database while Yukon Gold is not. Put the unpeeled potatoes in a large pot — uniform size matters so they cook evenly. Cover with cold salted water, bring to a boil, then drop to a gentle simmer. Cook 20–30 minutes until a knife slides through without any resistance.',
       'While potatoes cook, cut the butter into small pieces and let it come to room temperature.',
       'Drain the potatoes and peel them while still hot — hold each one with a clean towel and pull off the skin. Pass through a ricer or fine-mesh food mill then put back into the warm pot. For chunky potatoes use a hand masher.',
-      'Over low heat, beat in the softened butter a few pieces at a time using a wooden spoon or rubber spatula, working each addition fully in before adding the next. Season with salt and serve immediately.'
+      'Over low heat, beat in the softened butter a few pieces at a time using a wooden spoon or rubber spatula, working each addition fully in before adding the next. Season with salt and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'puree', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 }
@@ -8071,7 +8244,8 @@ export const LEVELS: Level[] = [
       'Use Yukon Gold potatoes — their waxy, buttery flesh gives the smoothest, creamiest result. White potatoes are listed in the ingredients since they are a close nutritional match and they are in the database while Yukon Gold is not. Put the unpeeled potatoes in a large pot — uniform size matters so they cook evenly. Cover with cold salted water, bring to a boil, then drop to a gentle simmer. Cook 20–30 minutes until a knife slides through without any resistance.',
       'While potatoes cook, cut the butter into small pieces and let it come to room temperature.',
       'Drain the potatoes and peel them while still hot. Pass through a ricer or food mill then put back into the warm pot.',
-      'Over low heat, beat in the softened butter a piece at a time, then stir in the sour cream. Fold in the prepared horseradish and season with salt. Taste and adjust horseradish as desired. Serve immediately.'
+      'Over low heat, beat in the softened butter a piece at a time, then stir in the sour cream. Fold in the prepared horseradish and season with salt. Taste and adjust horseradish as desired. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'puree', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 }
@@ -8118,7 +8292,8 @@ export const LEVELS: Level[] = [
       'Add the diced celery and onion to the dressing and stir to distribute evenly.',
       'Add the warm potato cubes to the bowl and fold gently to coat. Season with salt and black pepper. Warm potatoes absorb the dressing better — do not wait until they are fully cold.',
       'Fold in the chopped hard-boiled eggs last, being careful not to mash them. Taste and adjust salt, pepper, mustard, or vinegar as needed.',
-      'Cover and refrigerate at least 1 hour before serving. The flavors improve significantly as the salad rests. Serve cold or at cool room temperature.'
+      'Cover and refrigerate at least 1 hour before serving. The flavors improve significantly as the salad rests. Serve cold or at cool room temperature.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 },
@@ -8166,7 +8341,8 @@ export const LEVELS: Level[] = [
       'Add the sliced onion to the skillet and cook over medium heat, stirring occasionally, until softened and translucent, about 5 minutes.',
       'Add the apple cider vinegar, sugar, celery seed, salt, and black pepper to the skillet. Stir well and bring to a simmer. Cook 2–3 minutes, stirring, until the dressing is slightly thickened and the sugar is fully dissolved.',
       'Add the warm potato slices to the skillet and toss gently to coat with the hot dressing. Work carefully to keep the slices intact.',
-      'Add the crumbled bacon and toss once more. Taste and adjust salt, pepper, and vinegar as needed. Transfer to a serving dish, scatter the fresh parsley over the top, and serve warm.'
+      'Add the crumbled bacon and toss once more. Taste and adjust salt, pepper, and vinegar as needed. Transfer to a serving dish, scatter the fresh parsley over the top, and serve warm.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 },
@@ -8211,7 +8387,8 @@ export const LEVELS: Level[] = [
       'In a large saucepan, combine the heavy cream, remaining garlic, salt, pepper, and nutmeg. Bring to a gentle simmer over medium heat. Add the potato slices and cook for 5 minutes, stirring gently, until the cream begins to thicken.',
       'Transfer the potato mixture to the prepared baking dish, spreading evenly. Dot the top with small pieces of butter.',
       'Bake uncovered for 60–70 minutes, until the top is deep golden brown and a knife inserted in the center meets no resistance.',
-      'Let rest 10 minutes before slicing and serving.'
+      'Let rest 10 minutes before slicing and serving.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'gratin', label: 'Gratin', cookingMethod: '', yieldFactorWater: 0.85 }
@@ -8258,7 +8435,8 @@ export const LEVELS: Level[] = [
       'In a saucepan, combine the heavy cream, milk, salt, pepper, and nutmeg. Warm over medium heat until steaming; do not boil.',
       'Arrange one-third of the potato slices in the prepared dish. Pour one-third of the cream mixture over the potatoes and sprinkle with one-third of the shredded Gruyère. Repeat for two more layers, finishing with cheese on top.',
       'Cover with foil and bake for 45 minutes. Remove foil and bake an additional 25–30 minutes, until the top is golden and bubbling and the potatoes are completely tender.',
-      'Let rest 10 minutes before serving.'
+      'Let rest 10 minutes before serving.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'gratin', label: 'Gratin', cookingMethod: '', yieldFactorWater: 0.85 }
@@ -8300,7 +8478,8 @@ export const LEVELS: Level[] = [
       'Brush the bottom and sides of a 10-inch oven-safe skillet (cast iron preferred) generously with clarified butter. Arrange a single overlapping layer of potato slices in a spiral pattern on the bottom; season with salt and pepper and brush with butter. Repeat layers until all potatoes are used.',
       'Press the top firmly with a spatula. Cook on the stovetop over medium heat for 5 minutes until the bottom begins to brown.',
       'Transfer to the oven and bake for 40–45 minutes until the potatoes are cooked through and the top is golden.',
-      'Invert onto a serving plate so the crispy bottom becomes the top. Cut into wedges and serve.'
+      'Invert onto a serving plate so the crispy bottom becomes the top. Cut into wedges and serve.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'gratin', label: 'Pommes Anna', cookingMethod: '', yieldFactorWater: 0.85 }
@@ -8348,7 +8527,8 @@ export const LEVELS: Level[] = [
       'Add the white wine to the skillet, scraping up any browned bits. Cook 1–2 minutes until mostly evaporated. Stir in the heavy cream and season with salt and pepper.',
       'Layer half the potato rounds in the baking dish. Spread the bacon and onion mixture over the top. Add the remaining potatoes.',
       'Slice the Brie (or Reblochon if available) in half horizontally through the rind. Place it cut-side down on top of the potatoes, covering as much surface as possible.',
-      'Bake for 25–30 minutes until the cheese is melted and bubbling and the top is golden. Serve immediately directly from the baking dish.'
+      'Bake for 25–30 minutes until the cheese is melted and bubbling and the top is golden. Serve immediately directly from the baking dish.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 },
@@ -8392,7 +8572,8 @@ export const LEVELS: Level[] = [
       'Divide the dough into 6–8 portions. On a lightly floured surface, roll each portion into a rope about 3/4-inch thick. Cut into 1-inch pieces.',
       'Optional: roll each piece off the back of a fork or over a gnocchi board to create ridges.',
       'Bring a large pot of salted water to a boil. Cook gnocchi in batches — they are ready about 30 seconds after they float to the surface (2–3 minutes total). Remove with a slotted spoon.',
-      'Serve immediately tossed with browned butter and sage, tomato sauce, or pesto.'
+      'Serve immediately tossed with browned butter and sage, tomato sauce, or pesto.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 },
@@ -8437,7 +8618,8 @@ export const LEVELS: Level[] = [
       'In a separate bowl, whisk together the egg, milk, and melted butter.',
       'Pour the wet ingredients into the dry ingredients and stir until just combined — a few lumps are fine. Do not overmix.',
       'Pour the batter into the prepared pan. Bake for 20–25 minutes, until the top is golden and a toothpick inserted in the center comes out clean.',
-      'Let cool in the pan for 5 minutes before cutting into 8 pieces. Serve warm.'
+      'Let cool in the pan for 5 minutes before cutting into 8 pieces. Serve warm.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'batter', label: 'Batter', cookingMethod: '', yieldFactorWater: 0.73 }
@@ -8481,7 +8663,8 @@ export const LEVELS: Level[] = [
       'In a separate bowl, whisk together the egg, buttermilk, and melted butter.',
       'Pour the wet ingredients into the dry ingredients and stir until just combined — a few lumps are fine. Do not overmix; the baking soda reacts quickly with the buttermilk.',
       'Pour the batter into the prepared pan. Bake for 20–25 minutes, until the top is golden and a toothpick inserted in the center comes out clean.',
-      'Let cool in the pan for 5 minutes before cutting into 7 pieces. Serve warm.'
+      'Let cool in the pan for 5 minutes before cutting into 7 pieces. Serve warm.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'batter', label: 'Batter', cookingMethod: '', yieldFactorWater: 0.73 }
@@ -8528,7 +8711,8 @@ export const LEVELS: Level[] = [
       'Add the shredded vegetables to the dressing and toss well to coat.',
       'Taste and adjust seasoning with additional salt or vinegar as needed.',
       'Cover and refrigerate for at least 30 minutes before serving to allow flavors to meld.',
-      'Toss again before serving. Store covered in the refrigerator for up to 3 days.'
+      'Toss again before serving. Store covered in the refrigerator for up to 3 days.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'slaw', label: 'Slaw', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -8571,7 +8755,8 @@ export const LEVELS: Level[] = [
       'Melt the butter and mix with the olive oil. Brush generously between the potato slices and over the surface.',
       'Tuck thin slices of garlic and thyme sprigs between the potato slices. Season with salt and black pepper.',
       'Place potatoes on a baking sheet or in a baking dish and roast for 50 to 60 minutes, brushing with remaining butter mixture halfway through, until the tops are golden and crispy and the centers are tender.',
-      'Remove from the oven and let rest for 5 minutes before serving.'
+      'Remove from the oven and let rest for 5 minutes before serving.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.85 }
@@ -8617,7 +8802,8 @@ export const LEVELS: Level[] = [
       'Add butter, sour cream, milk, half the cheese, bacon, and scallions to the potato flesh. Season with salt, pepper, and garlic powder. Mash and mix until well combined but still slightly chunky.',
       'Spoon the filling back into the potato shells, mounding generously. Top each with the remaining cheese.',
       'Bake for 15 to 20 minutes until the tops are golden and the cheese is melted and bubbly.',
-      'Garnish with additional scallions and serve hot.'
+      'Garnish with additional scallions and serve hot.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.9 }
@@ -8658,7 +8844,8 @@ export const LEVELS: Level[] = [
       'Transfer potatoes to a well-oiled baking sheet. Use the bottom of a glass or measuring cup to firmly smash each potato to about ½-inch thickness.',
       'Drizzle olive oil over the smashed potatoes. Sprinkle with rosemary, garlic powder, salt, and black pepper.',
       'Roast at 450°F for 20 to 25 minutes until edges are crisp and golden.',
-      'Serve hot. Optionally top with vegan sour cream or fresh herbs.'
+      'Serve hot. Optionally top with vegan sour cream or fresh herbs.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.82 }
@@ -8704,7 +8891,8 @@ export const LEVELS: Level[] = [
       'Preheat the oven to 300°F (150°C). Cut the salt pork into ½-inch cubes. Dice the onion.',
       'In a Dutch oven or heavy oven-safe pot, cook pork over medium-high heat, stirring occasionally, until fat is rendered and pork is lightly browned, about 4–5 minutes. Add the onions and cook until tender, then add the beans. In a bowl, whisk together the molasses, brown sugar, yellow mustard, ketchup, salt, black pepper, and water until combined. Pour over the beans and stir to mix.',
       'Cover and bake at 300°F for 4 to 5 hours, stirring every hour, until the beans are very tender and the sauce has thickened. Add a splash of water if the beans look dry at any stir. Uncover for the last 30 minutes to caramelize the top.',
-      'Taste and adjust salt before serving. Beans will thicken further as they cool.'
+      'Taste and adjust salt before serving. Beans will thicken further as they cool.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'beans', label: 'Beans', cookingMethod: '', yieldFactorWater: 0.88 }
@@ -8746,7 +8934,8 @@ export const LEVELS: Level[] = [
       'In a medium saucepan over medium heat, melt the butter. Whisk in the flour and cook, stirring constantly, for 1 to 2 minutes until the roux turns pale gold and smells nutty.',
       'Gradually whisk in the milk, adding it in a slow stream. Bring to a gentle simmer, whisking frequently, and cook for 5 to 7 minutes until the sauce thickens enough to coat a spoon.',
       'Remove from heat. Stir in the shredded cheddar a handful at a time until fully melted. Season with salt and white pepper.',
-      'Add the drained macaroni to the cheese sauce and stir to coat. Serve immediately or transfer to a buttered baking dish and bake at 350°F for 20 minutes for a firmer, slightly crusted version.'
+      'Add the drained macaroni to the cheese sauce and stir to coat. Serve immediately or transfer to a buttered baking dish and bake at 350°F for 20 minutes for a firmer, slightly crusted version.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -8786,7 +8975,8 @@ export const LEVELS: Level[] = [
       'Bring a large pot of salted water to a boil. Cook the elbow macaroni according to package directions until al dente. Drain and set aside.',
       'In a large skillet or saucepan over medium heat, melt the butter. Add the drained macaroni and stir to coat.',
       'Pour in the crushed tomatoes, season with salt and black pepper, and stir to combine.',
-      'Simmer over medium-low heat, stirring occasionally, for 8 to 10 minutes until the sauce has thickened and coated the pasta. Taste and adjust salt before serving.'
+      'Simmer over medium-low heat, stirring occasionally, for 8 to 10 minutes until the sauce has thickened and coated the pasta. Taste and adjust salt before serving.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -8830,7 +9020,8 @@ export const LEVELS: Level[] = [
       'Measure all spices into a small bowl.',
       'Stir with a fork or whisk until evenly blended.',
       'Transfer to an airtight jar and store in a cool, dry place for up to 6 months.',
-      'To use, add 1 to 2 teaspoons per pound of protein, per cup of sauce, or to taste.'
+      'To use, add 1 to 2 teaspoons per pound of protein, per cup of sauce, or to taste.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'blend', label: 'Spice blend', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -8875,7 +9066,8 @@ export const LEVELS: Level[] = [
       'Add the garlic and Creole seasoning. Stir and cook for 1 minute until fragrant.',
       'Add the sliced okra and crushed tomatoes. Season with salt and black pepper and stir to combine.',
       'Bring to a boil, then reduce heat to medium-low. Simmer uncovered, stirring occasionally, for 20 to 25 minutes until the okra is tender and the stew has thickened slightly.',
-      'Taste and adjust seasoning before serving. Serve over rice or as a side.'
+      'Taste and adjust seasoning before serving. Serve over rice or as a side.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'stew', label: 'Stewed Okra and Tomatoes', cookingMethod: '', yieldFactorWater: 0.88 },
@@ -8921,7 +9113,8 @@ export const LEVELS: Level[] = [
       'Working in batches, lift the okra from the buttermilk, letting the excess drip off. Toss in the cornmeal mixture until well coated, shaking off any loose breading.',
       'Heat about ½ inch of oil in a large cast-iron skillet or heavy skillet over medium-high heat until shimmering (about 375°F).',
       'Fry the okra in batches, without crowding, for 3 to 4 minutes per side until deep golden brown and crisp. Transfer to a paper-towel-lined plate.',
-      'Season lightly with salt while still hot. Serve immediately.'
+      'Season lightly with salt while still hot. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'coating', label: 'Fried Okra', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -8969,7 +9162,8 @@ export const LEVELS: Level[] = [
       'Working in batches, lift the squash from the buttermilk, letting the excess drip off. Dredge in the cornmeal mixture, pressing lightly to adhere, and shake off any loose coating.',
       'Heat about ¼ inch of oil in a large cast-iron skillet over medium-high heat until shimmering (about 375°F).',
       'Fry in batches without crowding for 2 to 3 minutes per side until golden brown and crisp. Transfer to a paper-towel-lined plate.',
-      'Season lightly with salt while still hot and serve immediately.'
+      'Season lightly with salt while still hot and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'coating', label: 'Fried Squash', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -9012,7 +9206,8 @@ export const LEVELS: Level[] = [
       'Melt the butter in a small saucepan over medium heat. Whisk in the flour and cook, stirring constantly, for 1 to 2 minutes until the roux is pale golden and no longer smells raw.',
       'Gradually whisk in the milk in a thin stream, whisking constantly to prevent lumps. Cook, stirring, for 3 to 4 minutes until the sauce thickens enough to coat the back of a spoon.',
       'Remove from heat. Stir in the shredded cheddar a handful at a time until fully melted and smooth. Season with garlic powder, onion powder, salt, and black pepper.',
-      'Serve immediately over steamed broccoli, cauliflower, or other vegetables. Reheat gently over low heat, whisking in a splash of milk if needed to loosen.'
+      'Serve immediately over steamed broccoli, cauliflower, or other vegetables. Reheat gently over low heat, whisking in a splash of milk if needed to loosen.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sauce', label: 'Cheese Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
@@ -9066,7 +9261,8 @@ export const LEVELS: Level[] = [
       'Make the topping: combine rolled oats, chopped pecans, cinnamon, and salt in a bowl. Drizzle in maple syrup and melted butter and stir until evenly coated.',
       'Spread the oat-pecan topping evenly over the sweet potato filling.',
       'Bake at 350°F (175°C) for 25–30 minutes, until the topping is golden and the filling is heated through.',
-      'Let rest 5 minutes before serving.'
+      'Let rest 5 minutes before serving.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'filling', label: 'Sweet Potato Filling', cookingMethod: '', yieldFactorWater: 0.85 },
@@ -9119,7 +9315,8 @@ export const LEVELS: Level[] = [
       'Make the topping: combine rolled oats, chopped pecans, cinnamon, and salt in a bowl. Drizzle in maple syrup and melted coconut oil and stir until evenly coated.',
       'Spread the oat-pecan topping evenly over the sweet potato filling.',
       'Bake at 350°F (175°C) for 25–30 minutes, until the topping is golden and the filling is heated through.',
-      'Let rest 5 minutes before serving.'
+      'Let rest 5 minutes before serving.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'filling', label: 'Sweet Potato Filling', cookingMethod: '', yieldFactorWater: 0.85 },
@@ -9168,7 +9365,8 @@ export const LEVELS: Level[] = [
       'Transfer the filling to a greased 9×13-inch baking dish and spread evenly.',
       'Scatter mini marshmallows in an even layer over the top of the sweet potato filling.',
       'Bake at 350°F (175°C) for 20–25 minutes, until the marshmallows are puffed and golden brown on top.',
-      'Let rest 5 minutes before serving.'
+      'Let rest 5 minutes before serving.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'filling', label: 'Sweet Potato Filling', cookingMethod: '', yieldFactorWater: 0.85 },
@@ -9211,7 +9409,8 @@ export const LEVELS: Level[] = [
       'Mince the garlic clove finely or use a garlic press.',
       'Combine apple cider vinegar, mustard, honey, minced garlic, salt, and black pepper in a small bowl or jar. Whisk or shake to combine.',
       'Slowly drizzle in the olive oil while whisking constantly, or add olive oil to the jar and shake vigorously until the dressing is emulsified.',
-      'Taste and adjust seasoning. Use immediately or refrigerate in a sealed jar for up to 1 week. Shake well before each use.'
+      'Taste and adjust seasoning. Use immediately or refrigerate in a sealed jar for up to 1 week. Shake well before each use.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -9259,7 +9458,8 @@ export const LEVELS: Level[] = [
       'Finely mince the garlic and chop the parsley.',
       'Combine red wine vinegar, lemon juice, mustard, honey, garlic, oregano, basil, parsley, red pepper flakes, salt, and black pepper in a small bowl or jar. Whisk or shake to combine.',
       'Slowly drizzle in the olive oil while whisking constantly, or add to the jar and shake vigorously until the dressing is emulsified.',
-      'Taste and adjust seasoning. Use immediately or refrigerate in a sealed jar for up to 1 week. Shake well before each use.'
+      'Taste and adjust seasoning. Use immediately or refrigerate in a sealed jar for up to 1 week. Shake well before each use.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -9303,7 +9503,8 @@ export const LEVELS: Level[] = [
       'In a small bowl or jar, combine the balsamic vinegar, honey, garlic, Dijon-style mustard, salt, and black pepper. Whisk until the honey dissolves.',
       'Add the olive oil in a slow, steady stream while whisking constantly, or seal the jar and shake vigorously until the dressing emulsifies.',
       'Taste and adjust salt, pepper, or honey as needed. The dressing will separate on standing — shake or whisk before each use.',
-      'Store in a sealed jar in the refrigerator for up to 2 weeks.'
+      'Store in a sealed jar in the refrigerator for up to 2 weeks.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -9350,7 +9551,8 @@ export const LEVELS: Level[] = [
       'Add the olive oil in a slow, steady stream while whisking constantly, or seal the jar and shake vigorously until the dressing emulsifies.',
       'Stir in the chives and thyme.',
       'Taste and adjust seasoning. The dressing will separate on standing — shake or whisk before each use.',
-      'Store in a sealed jar in the refrigerator for up to 1 week.'
+      'Store in a sealed jar in the refrigerator for up to 1 week.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -9397,7 +9599,8 @@ export const LEVELS: Level[] = [
       'In a bowl, whisk together the mayonnaise, sour cream, and buttermilk until smooth.',
       'Add the dill, parsley, chives, garlic powder, onion powder, lemon juice, salt, and black pepper. Whisk to combine.',
       'Taste and adjust seasoning, adding more lemon juice for brightness or buttermilk to thin the dressing.',
-      'Cover and refrigerate for at least 30 minutes before serving to allow the flavors to meld. Store refrigerated for up to 1 week.'
+      'Cover and refrigerate for at least 30 minutes before serving to allow the flavors to meld. Store refrigerated for up to 1 week.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -9442,7 +9645,8 @@ export const LEVELS: Level[] = [
       'Add the lemon juice, Worcestershire sauce, garlic powder, salt, and black pepper. Whisk to combine.',
       'Fold in the crumbled blue cheese, mashing some pieces slightly into the dressing for a creamy texture while leaving some crumbles intact.',
       'Taste and adjust salt, pepper, or lemon juice as needed. Thin with additional buttermilk if a pourable consistency is desired.',
-      'Cover and refrigerate for at least 30 minutes before serving. Store refrigerated for up to 1 week.'
+      'Cover and refrigerate for at least 30 minutes before serving. Store refrigerated for up to 1 week.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -9483,7 +9687,8 @@ export const LEVELS: Level[] = [
       'Combine the mayonnaise, mustard, honey, lemon juice, and apple cider vinegar in a bowl. Whisk until smooth.',
       'Season with salt and black pepper. Whisk again to combine.',
       'Taste and adjust honey or mustard to balance sweetness and tang to your preference.',
-      'Use immediately or cover and refrigerate for up to 2 weeks. Stir before serving.'
+      'Use immediately or cover and refrigerate for up to 2 weeks. Stir before serving.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -9531,7 +9736,8 @@ export const LEVELS: Level[] = [
       'Stir in the parsley, chives, dill, and dried tarragon.',
       'Season with salt and black pepper. Taste and adjust lemon juice or salt as needed.',
       'For a smoother dressing, blend all ingredients together until the herbs are fully incorporated and the dressing is uniformly green.',
-      'Cover and refrigerate for at least 30 minutes before serving. Store refrigerated for up to 1 week.'
+      'Cover and refrigerate for at least 30 minutes before serving. Store refrigerated for up to 1 week.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -9579,7 +9785,8 @@ export const LEVELS: Level[] = [
       'Add the olive oil in a very slow, thin stream while whisking constantly to emulsify the dressing into a creamy consistency.',
       'Fold in the freshly grated Parmesan. Season with salt and black pepper to taste.',
       'If the dressing is too thick, thin with 1–2 tablespoons of water. Taste and adjust lemon juice or anchovy to preference.',
-      'Store refrigerated in a sealed jar for up to 5 days. Whisk or shake before each use.'
+      'Store refrigerated in a sealed jar for up to 5 days. Whisk or shake before each use.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -9622,7 +9829,8 @@ export const LEVELS: Level[] = [
       'Make or portion the Caesar Salad Dressing (see the Caesar Salad Dressing recipe).',
       'Drizzle the Caesar Salad Dressing over the salad, starting with 2 tablespoons per serving. Toss well to coat every leaf evenly.',
       'Taste and add more dressing if desired. Finish with an extra pinch of Parmesan and black pepper at the table.',
-      'Serve immediately — Caesar salad does not hold after dressing.'
+      'Serve immediately — Caesar salad does not hold after dressing.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'salad', label: 'Caesar Salad', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -9667,7 +9875,8 @@ export const LEVELS: Level[] = [
       'Make or portion the Caesar Salad Dressing (see the Caesar Salad Dressing recipe).',
       'Drizzle the Caesar Salad Dressing over the salad and toss well to coat every leaf evenly.',
       'Divide between two plates and top each with the sliced chicken breast.',
-      'Finish with an extra pinch of Parmesan and freshly cracked black pepper. Serve immediately.'
+      'Finish with an extra pinch of Parmesan and freshly cracked black pepper. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -9714,7 +9923,8 @@ export const LEVELS: Level[] = [
       'Season chicken breast with salt and pepper. In the same skillet with the reserved bacon drippings, pan-sear over medium-high heat until cooked through (internal temperature 165°F / 74°C), about 6–7 minutes per side. Let rest 5 minutes, then slice or chop.',
       'Arrange the romaine on a large platter or divide between two bowls.',
       'Arrange the chicken, bacon, avocado, hard-boiled eggs, tomato, blue cheese, and onion in rows or sections over the romaine.',
-      'Season lightly with salt and pepper. Serve with blue cheese dressing or ranch dressing on the side (see SAUCE_021 or SAUCE_020).'
+      'Season lightly with salt and pepper. Serve with blue cheese dressing or ranch dressing on the side (see SAUCE_021 or SAUCE_020).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -9756,7 +9966,8 @@ export const LEVELS: Level[] = [
       'Layer the lettuce in a large bowl or divide between two plates.',
       'Arrange the turkey, ham, hard-boiled eggs, cheddar cheese, tomato, and cucumber on top of the lettuce.',
       'Season lightly with salt and pepper if desired.',
-      'Serve with your choice of dressing. Ranch Dressing, Honey Mustard Dressing, or Italian Vinaigrette are all excellent choices.'
+      'Serve with your choice of dressing. Ranch Dressing, Honey Mustard Dressing, or Italian Vinaigrette are all excellent choices.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'salad', label: 'Chef Salad', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -9797,7 +10008,8 @@ export const LEVELS: Level[] = [
       'Combine the romaine lettuce, cucumber, tomato, black olives, feta cheese, and onion in a large bowl.',
       'Make or portion the Italian Vinaigrette (see the Italian Vinaigrette recipe).',
       'Drizzle with the Italian Vinaigrette (2 tablespoons per serving) and toss gently to coat.',
-      'Serve immediately or refrigerate up to 1 hour before serving (add dressing just before serving if making ahead).'
+      'Serve immediately or refrigerate up to 1 hour before serving (add dressing just before serving if making ahead).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'salad', label: 'Greek Salad', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -9845,7 +10057,8 @@ export const LEVELS: Level[] = [
       'Drain off excess fat. Season the beef with cumin, garlic powder, salt, and black pepper. Stir well and cook 1 minute more. Remove from heat and let cool slightly.',
       'Divide the iceberg lettuce between two large bowls or plates. Top with the seasoned beef, black beans, cheddar cheese, tortilla chips, tomato, sour cream, and onion.',
       'Serve immediately so the tortilla chips stay crisp.',
-      'Nutrition note: values reflect 6 oz raw ground beef (80% lean) with fat drained; serving weight approximately 449g per person.'
+      'Nutrition note: values reflect 6 oz raw ground beef (80% lean) with fat drained; serving weight approximately 449g per person.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.75, yieldFactorFat: 0.593 },
@@ -9890,7 +10103,8 @@ export const LEVELS: Level[] = [
       'Snap or cut the woody ends off the asparagus. Bring a pot of salted water to a boil, add asparagus, and cook 3–4 minutes until bright green and tender-crisp. Transfer immediately to an ice bath to stop cooking. Drain and pat dry.',
       'Cut the cooled asparagus on the bias into 2-inch pieces. Halve or quarter the tomato.',
       'Whisk together olive oil, lemon juice, garlic, salt, and pepper to make the dressing.',
-      'Arrange arugula on a platter. Top with asparagus, tomato, pine nuts, and parmesan. Drizzle with the lemon vinaigrette and serve immediately.'
+      'Arrange arugula on a platter. Top with asparagus, tomato, pine nuts, and parmesan. Drizzle with the lemon vinaigrette and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'asparagus', label: 'Asparagus', cookingMethod: '', yieldFactorWater: 0.92 },
@@ -9933,7 +10147,8 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Slice tomatoes into ¼-inch rounds. Slice or tear the mozzarella into similar-sized pieces.',
       'Arrange arugula on a large plate. Layer tomato and mozzarella over the arugula, alternating slices.',
-      'Scatter pine nuts and fresh basil leaves over the top. Drizzle with olive oil and balsamic vinegar. Season with salt and pepper and serve immediately.'
+      'Scatter pine nuts and fresh basil leaves over the top. Drizzle with olive oil and balsamic vinegar. Season with salt and pepper and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'salad', label: 'Burrata Salad', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -9973,7 +10188,8 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Slice tomatoes and mozzarella into ¼-inch rounds.',
       'Arrange tomato and mozzarella slices on a platter, alternating and overlapping. Tuck basil leaves between slices.',
-      'Drizzle with olive oil and balsamic vinegar. Season with salt and pepper. Let rest 5 minutes before serving to allow flavors to meld.'
+      'Drizzle with olive oil and balsamic vinegar. Season with salt and pepper. Let rest 5 minutes before serving to allow flavors to meld.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'salad', label: 'Caprese Salad', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -10019,7 +10235,8 @@ export const LEVELS: Level[] = [
       'Drain and rinse the chickpeas. Dice the cucumber, tomato, and red bell pepper into ½-inch pieces. Thinly slice the onion.',
       'Combine chickpeas, cucumber, tomato, bell pepper, onion, olives, and parsley in a large bowl.',
       'Whisk together olive oil, lemon juice, salt, and pepper. Pour over the salad and toss to coat.',
-      'Crumble feta over the top. Toss gently and serve immediately, or refrigerate up to 2 days (the flavors improve as the salad sits).'
+      'Crumble feta over the top. Toss gently and serve immediately, or refrigerate up to 2 days (the flavors improve as the salad sits).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'salad', label: 'Chickpea Salad', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -10067,7 +10284,8 @@ export const LEVELS: Level[] = [
       'Cook pasta in salted boiling water until al dente (about 9–11 minutes). Drain, rinse under cold water to stop cooking, and set aside.',
       'Season chicken breast with salt and pepper. Cook in a lightly oiled skillet over medium-high heat, 6–7 minutes per side, until an instant-read thermometer reads 165°F (74°C). Let rest 5 minutes, then dice into bite-sized pieces.',
       'In a large bowl, whisk together mayonnaise, lemon juice, garlic powder, salt, and pepper to make the dressing.',
-      'Add cooled pasta, diced chicken, celery, bell pepper, onion, and parsley to the bowl. Toss to coat evenly with the dressing. Refrigerate at least 30 minutes before serving.'
+      'Add cooled pasta, diced chicken, celery, bell pepper, onion, and parsley to the bowl. Toss to coat evenly with the dressing. Refrigerate at least 30 minutes before serving.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -10119,7 +10337,8 @@ export const LEVELS: Level[] = [
       'Cook pasta in salted boiling water until al dente (about 9–11 minutes). Drain, rinse under cold water, and set aside.',
       'Season chicken with salt and pepper. Cook in a lightly oiled skillet over medium-high heat, 6–7 minutes per side, until an instant-read thermometer reads 165°F (74°C). Let rest 5 minutes, then slice or dice.',
       'Whisk together olive oil, lemon juice, minced garlic, oregano, basil, salt, and pepper in a large bowl to make the vinaigrette.',
-      'Add pasta, chicken, chopped artichoke hearts, tomato, sliced olives, and parmesan. Toss to coat. Refrigerate at least 30 minutes before serving. Serve cold or at room temperature.'
+      'Add pasta, chicken, chopped artichoke hearts, tomato, sliced olives, and parmesan. Toss to coat. Refrigerate at least 30 minutes before serving. Serve cold or at room temperature.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -10167,7 +10386,8 @@ export const LEVELS: Level[] = [
       'Slice or cube the salami and provolone. Quarter the artichoke hearts. Chop the tomato and bell pepper into bite-sized pieces. Drain the olives.',
       'Combine cooled gnocchi, salami, provolone, olives, artichoke hearts, tomato, bell pepper, and basil in a large bowl.',
       'Make or portion the Italian Vinaigrette (see the Italian Vinaigrette recipe).',
-      'Drizzle the Italian Vinaigrette over the salad. Season with salt and pepper. Toss gently to coat. Serve at room temperature or refrigerate 30 minutes before serving.'
+      'Drizzle the Italian Vinaigrette over the salad. Season with salt and pepper. Toss gently to coat. Serve at room temperature or refrigerate 30 minutes before serving.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'gnocchi', label: 'Potato Gnocchi', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -10216,7 +10436,8 @@ export const LEVELS: Level[] = [
       'Season chicken breast with garlic powder, salt, and pepper. Brush with olive oil. Cook in a grill pan or skillet over medium-high heat, 6–7 minutes per side, until an instant-read thermometer reads 165°F (74°C). Let rest 5 minutes, then slice on the bias.',
       'While chicken rests, arrange romaine, tomato, cucumber, bell pepper, onion, carrot, and croutons in a large bowl or on a platter.',
       'Make or portion the Basic Vinaigrette (see the Basic Vinaigrette recipe).',
-      'Top salad with sliced chicken. Drizzle with the Basic Vinaigrette and serve immediately.'
+      'Top salad with sliced chicken. Drizzle with the Basic Vinaigrette and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Grilled chicken', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -10266,7 +10487,8 @@ export const LEVELS: Level[] = [
       'Note: Orzo is not in the USDA SR Legacy database. This recipe uses dry semolina pasta (NDB 20420) as a stand-in — by weight, any dry semolina pasta has essentially identical nutrient values to orzo.',
       'Cook orzo in a large pot of salted boiling water according to package directions (typically 8–10 minutes). Drain, rinse under cold water, and spread on a sheet pan to cool completely.',
       'Whisk together olive oil, lemon juice, garlic, oregano, salt, and pepper in a large bowl to make the vinaigrette.',
-      'Add cooled orzo, cucumber, tomato, olives, feta, onion, and parsley to the bowl. Toss to coat evenly. Refrigerate at least 30 minutes before serving.'
+      'Add cooled orzo, cucumber, tomato, olives, feta, onion, and parsley to the bowl. Toss to coat evenly. Refrigerate at least 30 minutes before serving.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'orzo', label: 'Orzo', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -10316,7 +10538,8 @@ export const LEVELS: Level[] = [
       'Slice salami and provolone into bite-sized pieces. Quarter the artichoke hearts. Chop the tomato, cucumber, and bell pepper. Drain the olives.',
       'Combine cooled pasta, salami, provolone, olives, artichoke hearts, tomato, bell pepper, cucumber, onion, and basil in a large bowl.',
       'Make or portion the Italian Vinaigrette (see the Italian Vinaigrette recipe).',
-      'Drizzle the Italian Vinaigrette over the salad. Season with salt and pepper. Toss to coat evenly. Refrigerate at least 30 minutes before serving.'
+      'Drizzle the Italian Vinaigrette over the salad. Season with salt and pepper. Toss to coat evenly. Refrigerate at least 30 minutes before serving.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -10366,7 +10589,8 @@ export const LEVELS: Level[] = [
       'Note: Rice vinegar is not in the USDA SR Legacy database. Distilled white vinegar (NDB 2053) is used as the nutritional stand-in — both are dilute acetic acid with essentially 0 protein, fat, and carbohydrates.',
       'Crush the dry ramen noodles (discard the flavor packet) into small pieces. In a small bowl, whisk together sesame oil, olive oil, vinegar, tamari, sugar, ginger, salt, and pepper to make the dressing.',
       'Combine shredded cabbage, shredded carrot, and sliced scallions in a large bowl.',
-      'Add the crushed ramen noodles, sliced almonds, and sunflower seeds. Drizzle dressing over the salad and toss to coat. Serve immediately so the noodles stay crunchy.'
+      'Add the crushed ramen noodles, sliced almonds, and sunflower seeds. Drizzle dressing over the salad and toss to coat. Serve immediately so the noodles stay crunchy.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'salad', label: 'Ramen Noodle Salad', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -10409,7 +10633,8 @@ export const LEVELS: Level[] = [
       'Season shrimp with garlic powder, salt, and pepper. Heat olive oil in a skillet over medium-high heat. Cook shrimp 2–3 minutes per side until pink and opaque. USDA safe internal temperature: 145°F (63°C). Remove from heat and let cool slightly.',
       'Make or portion the Caesar dressing (see the Caesar Salad Dressing recipe).',
       'Toss romaine with croutons, Parmesan, and Caesar dressing.',
-      'Arrange shrimp over the salad. Serve immediately.'
+      'Arrange shrimp over the salad. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'shrimp', label: 'Shrimp', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -10466,7 +10691,8 @@ export const LEVELS: Level[] = [
       'Season chicken with cumin, garlic powder, salt, and pepper. Heat olive oil in a skillet over medium-high heat. Cook chicken 6–7 minutes per side until cooked through. USDA safe internal temperature: 165°F (74°C). Rest 5 minutes, then slice.',
       'Whisk together olive oil, lime juice, honey, cumin, salt, and pepper to make the dressing.',
       'Combine romaine, black beans, corn, avocado, tomato, onion, cheese, and cilantro in a large bowl.',
-      'Top with sliced chicken and tortilla chips. Drizzle with dressing and serve.'
+      'Top with sliced chicken and tortilla chips. Drizzle with dressing and serve.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -10519,7 +10745,8 @@ export const LEVELS: Level[] = [
       'Toss shrimp with lime juice, garlic powder, paprika, salt, and pepper. Heat olive oil in a skillet over medium-high heat. Cook shrimp 2–3 minutes per side until pink and opaque. USDA safe internal temperature: 145°F (63°C). Remove from heat.',
       'Whisk together olive oil, lime juice, honey, salt, and pepper to make the dressing.',
       'Arrange romaine, avocado, tomato, cucumber, onion, and cilantro in a large bowl.',
-      'Top with shrimp, drizzle with dressing, and serve immediately.'
+      'Top with shrimp, drizzle with dressing, and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'shrimp', label: 'Shrimp', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -10565,7 +10792,8 @@ export const LEVELS: Level[] = [
       'Cook pasta in boiling salted water according to package directions until al dente. Drain and rinse under cold water to stop cooking. Let cool completely.',
       'Drain tuna thoroughly. Combine tuna, mayonnaise, celery, onion, sweet relish, mustard, lemon juice, salt, and pepper in a large bowl and mix well.',
       'Add cooled pasta and stir to combine. Taste and adjust seasoning.',
-      'Refrigerate at least 30 minutes before serving to allow flavors to meld. Serve chilled.'
+      'Refrigerate at least 30 minutes before serving to allow flavors to meld. Serve chilled.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -10607,7 +10835,8 @@ export const LEVELS: Level[] = [
       'Cut the half head of iceberg lettuce into 2 wedges through the core (each serving is ¼ of a full head). Keep the core intact to hold each wedge together.',
       'Make or portion the blue cheese dressing (see the Blue Cheese Dressing recipe).',
       'Place each wedge on a plate. Spoon blue cheese dressing over the top.',
-      'Top with crumbled bacon, diced tomato, blue cheese crumbles, sliced scallions, and chopped chives. Serve immediately.'
+      'Top with crumbled bacon, diced tomato, blue cheese crumbles, sliced scallions, and chopped chives. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'dressing', label: 'Blue Cheese Dressing', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -10653,7 +10882,8 @@ export const LEVELS: Level[] = [
       'Blanch green beans in boiling salted water for 3–4 minutes until crisp-tender. Transfer to ice water to stop cooking, then drain well.',
       'Make or portion the Basic Vinaigrette (see the Basic Vinaigrette recipe).',
       'Arrange romaine on a large platter or divide between 2 bowls. Top with potatoes, green beans, tuna, halved hard-boiled eggs, tomato wedges, olives, and anchovies. Scatter capers over the top.',
-      'Drizzle the Basic Vinaigrette over the salad and serve at room temperature or chilled.'
+      'Drizzle the Basic Vinaigrette over the salad and serve at room temperature or chilled.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 },
@@ -10695,7 +10925,8 @@ export const LEVELS: Level[] = [
       'Make or portion the Lemon Vinaigrette (see the Lemon Vinaigrette recipe).',
       'Slice mushrooms thinly. Slice red onion into thin half-rings. Halve the hard-boiled eggs. Crumble or chop the bacon.',
       'Place spinach in a large bowl or on a platter. Arrange mushrooms, red onion, hard-boiled eggs, and bacon on top.',
-      'Drizzle the Lemon Vinaigrette over the salad and toss gently to coat. Serve immediately.'
+      'Drizzle the Lemon Vinaigrette over the salad and toss gently to coat. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'dressing', label: 'Lemon Vinaigrette', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -10741,7 +10972,8 @@ export const LEVELS: Level[] = [
       'Dice the onion and bell pepper and add to the bowl.',
       'Whisk together the apple cider vinegar, honey, olive oil, salt, and pepper in a small bowl until combined.',
       'Pour the dressing over the beans and toss to coat evenly.',
-      'Cover and refrigerate at least 2 hours (or overnight) before serving to allow the flavors to marinate.'
+      'Cover and refrigerate at least 2 hours (or overnight) before serving to allow the flavors to marinate.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'salad', label: 'Three Bean Salad', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -10784,7 +11016,8 @@ export const LEVELS: Level[] = [
       'Slice the celery and halve the grapes. Roughly chop the walnuts.',
       'Combine apples, celery, grapes, walnuts, and raisins in a large bowl.',
       'Add the mayonnaise and salt. Toss gently until everything is evenly coated.',
-      'Refrigerate at least 30 minutes before serving to allow flavors to meld. Serve chilled.'
+      'Refrigerate at least 30 minutes before serving to allow flavors to meld. Serve chilled.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'salad', label: 'Waldorf Salad', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -10836,7 +11069,8 @@ export const LEVELS: Level[] = [
       'Heat a large wok or skillet over high heat. Add 1 tablespoon olive oil. Add beef in a single layer and cook undisturbed for 1 minute, then stir-fry 1-2 minutes until browned. Transfer beef to a plate.',
       'Add remaining tablespoon olive oil to the wok. Add the onion sliced into strips and carrot strips; stir-fry 2 minutes. Add broccoli; stir-fry 2 minutes. Add chopped garlic and chopped ginger; stir-fry 30 seconds.',
       'Return beef to the wok. Pour sauce over everything and toss to coat. Cook 1-2 minutes, stirring, until the sauce thickens and coats all the ingredients.',
-      'Add the cooked noodles and thinly sliced scallions; toss to combine. Serve immediately.'
+      'Add the cooked noodles and thinly sliced scallions; toss to combine. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'noodles', label: 'Noodles', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -10882,7 +11116,8 @@ export const LEVELS: Level[] = [
       'Heat a large wok or skillet over high heat until very hot. Add 3 tablespoons olive oil. Add the beef in a single layer and cook undisturbed for 1 minute, then stir-fry 1-2 minutes until just browned. Transfer to a plate.',
       'Add the remaining 2½ tablespoons olive oil to the wok. Add the broccoli and minced garlic; stir-fry 3-4 minutes until the broccoli is bright green and tender-crisp.',
       'Return the beef to the wok. Pour the sauce over everything and toss to coat. Cook 1-2 minutes, stirring, until the sauce thickens and coats the beef and broccoli.',
-      'Serve immediately on its own or over steamed white rice (not included).'
+      'Serve immediately on its own or over steamed white rice (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'main', label: 'Beef and Broccoli', cookingMethod: '', yieldFactorWater: 0.87 }
@@ -10940,7 +11175,8 @@ export const LEVELS: Level[] = [
       'Add the crushed tomatoes, beef broth, milk, oregano, basil, bay leaf, sugar, salt, pepper, and nutmeg. Stir to combine.',
       'Reduce heat to low and simmer uncovered, stirring occasionally, for 45 minutes to 1 hour until the sauce is thick and the fat begins to pool on the surface. Remove the bay leaf.',
       'Meanwhile, bring a large pot of salted water to a boil. Cook pasta according to package directions until al dente. Reserve ½ cup pasta water, then drain.',
-      'Toss the drained pasta with the Bolognese sauce, adding a splash of pasta water if needed to loosen. Serve with grated Parmesan if desired.'
+      'Toss the drained pasta with the Bolognese sauce, adding a splash of pasta water if needed to loosen. Serve with grated Parmesan if desired.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -10996,7 +11232,8 @@ export const LEVELS: Level[] = [
       'Return the seared beef and bacon to the pot. Add the thyme sprigs and bay leaves. Bring to a simmer.',
       'Cover and braise over low heat (or in a 325°F oven) for 2 to 2½ hours, until the beef is very tender.',
       'Add the mushrooms for the last 30 minutes of braising.',
-      'Remove the thyme sprigs and bay leaves. Taste and adjust seasoning. Serve in bowls.'
+      'Remove the thyme sprigs and bay leaves. Taste and adjust seasoning. Serve in bowls.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'main', label: 'Beef Bourguignon', cookingMethod: '', yieldFactorWater: 0.5 }
@@ -11052,7 +11289,8 @@ export const LEVELS: Level[] = [
       'Add the remaining beef broth, bay leaves, and additional salt to taste. Stir to combine.',
       'Bring to a boil over high heat, then reduce to a low simmer. Cover and braise for 2½ to 3 hours, until the beef is very tender and shreds easily.',
       'Remove the bay leaves. Shred the beef with two forks directly in the broth.',
-      'Taste and adjust salt as needed. Serve the birria in bowls with its broth, accompanied by warm tortillas, diced onion, cilantro, and lime wedges.'
+      'Taste and adjust salt as needed. Serve the birria in bowls with its broth, accompanied by warm tortillas, diced onion, cilantro, and lime wedges.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'main', label: 'Beef Birria', cookingMethod: '', yieldFactorWater: 0.5 }
@@ -11104,7 +11342,8 @@ export const LEVELS: Level[] = [
       'Pour in the beer and beef broth, scraping up any browned bits. Add the apple cider vinegar, mustard, and brown sugar. Stir to combine.',
       'Return the seared beef to the pot. Add the thyme and bay leaves. The liquid should nearly cover the meat.',
       'Bring to a simmer, then cover and braise over low heat for 2 to 2½ hours, until the beef is very tender.',
-      'Remove the bay leaves and thyme sprigs. Taste and adjust seasoning. Serve in bowls over egg noodles or with crusty bread.'
+      'Remove the bay leaves and thyme sprigs. Taste and adjust seasoning. Serve in bowls over egg noodles or with crusty bread.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'main', label: 'Beef Carbonnade', cookingMethod: '', yieldFactorWater: 0.5 }
@@ -11152,7 +11391,8 @@ export const LEVELS: Level[] = [
       'Heat a cast iron skillet or grill pan over high heat until very hot. Brush with a little oil.',
       'Cook the flank steak for 4 to 5 minutes per side for medium-rare, or until the desired doneness. Let it rest for 5 to 10 minutes.',
       'Slice the steak thinly against the grain.',
-      'Serve with warm tortillas, fresh cilantro, diced onion, and lime wedges.'
+      'Serve with warm tortillas, fresh cilantro, diced onion, and lime wedges.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'main', label: 'Carne Asada', cookingMethod: '', yieldFactorWater: 0.75 }
@@ -11204,7 +11444,8 @@ export const LEVELS: Level[] = [
       'Add the diced tomatoes, beef broth, cumin, chili powder, oregano, and paprika. Stir to combine.',
       'Return the seared beef to the pot. Bring to a boil, then reduce heat to low.',
       'Cover and simmer for 1.5 to 2 hours, stirring occasionally, until the beef is very tender and the gravy has thickened.',
-      'Taste and adjust seasoning. Serve on its own or over rice or with warm flour tortillas (not included).'
+      'Taste and adjust seasoning. Serve on its own or over rice or with warm flour tortillas (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'main', label: 'Carne Guisada', cookingMethod: '', yieldFactorWater: 0.55 }
@@ -11261,7 +11502,8 @@ export const LEVELS: Level[] = [
       'Place the rinsed brisket in a pot large enough to cover the brisket by at least 2 inches of water. Add the black pepper, allspice, bay leaves, and salt. Bring to a full boil over high heat, then reduce to a gentle simmer. Cover and cook for 2 1/2 to 3 hours, until the brisket yields easily to a fork.',
       'Move the brisket to a cutting board and tent loosely with foil. Keep the pot at a low simmer.',
       'Add the potatoes and carrots to the simmering liquid and cook for 10 minutes. Add the cabbage wedges, celery, and onion and cook uncovered for 15 to 20 minutes more, until all vegetables are tender.',
-      'Discard the bay leaves. Slice the brisket against the grain into 1/4-inch slices. Serve on a platter with the vegetables and a ladle of the cooking broth poured over the top.'
+      'Discard the bay leaves. Slice the brisket against the grain into 1/4-inch slices. Serve on a platter with the vegetables and a ladle of the cooking broth poured over the top.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'brine', label: 'Brine', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
@@ -11322,7 +11564,8 @@ export const LEVELS: Level[] = [
       'Simmer uncovered 8 to 10 minutes until the filling thickens to a gravy consistency. Remove from heat and stir in the frozen peas. Remove the rosemary sprig.',
       'Drain the potatoes and return to the pot. Add butter, milk, egg, salt, and pepper. Mash until smooth and creamy.',
       'Spread the mashed potato topping evenly over the filling. Drag a fork across the surface to create ridges, which will crisp and brown in the oven.',
-      'Bake uncovered 25 to 30 minutes until the top is golden and the edges are bubbling. Let stand 5 minutes before serving.'
+      'Bake uncovered 25 to 30 minutes until the top is golden and the edges are bubbling. Let stand 5 minutes before serving.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.85, yieldFactorFat: 0.7 },
@@ -11369,7 +11612,8 @@ export const LEVELS: Level[] = [
       'Remove the steak from the marinade and discard the marinade. Pat the surface dry with paper towels. Season both sides with salt and pepper.',
       'Heat a grill or grill pan to high heat. The grill should be very hot — skirt steak needs quick, intense heat to develop a crust without overcooking the interior.',
       'Grill the steak 3 to 4 minutes per side for medium-rare, or until it reaches an internal temperature of 130 to 135°F. Skirt steak is thin; do not walk away.',
-      'Transfer to a cutting board and let rest 5 minutes. Slice thinly against the grain at a steep angle. Serve immediately.'
+      'Transfer to a cutting board and let rest 5 minutes. Slice thinly against the grain at a steep angle. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
@@ -11419,7 +11663,8 @@ export const LEVELS: Level[] = [
       'Add curry powder and tomato paste. Stir and cook 1 to 2 minutes until fragrant and the paste darkens slightly.',
       'Add the diced tomatoes and stir, scraping up any browned bits from the bottom of the pot. Return the beef and any accumulated juices to the pot.',
       'Pour in the coconut milk. Add salt and pepper. Stir to combine. Bring to a boil, then reduce heat to low. Cover and simmer 1 to 1½ hours, stirring occasionally, until the beef is fork-tender and the sauce has thickened.',
-      'Taste and adjust seasoning. Stir in the cilantro just before serving. Serve on its own or over steamed rice (not included).'
+      'Taste and adjust seasoning. Stir in the cilantro just before serving. Serve on its own or over steamed rice (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'curry', label: 'Curry', cookingMethod: '', yieldFactorWater: 0.8, yieldFactorFat: 0.85 }
@@ -11476,7 +11721,8 @@ export const LEVELS: Level[] = [
       'Bring to a boil, then reduce heat to low. Cover and simmer 1½ to 2 hours, turning the steak once halfway through, until the beef is completely tender and shreds easily.',
       'Remove the steak to a cutting board. Discard the bay leaves. Using two forks, shred the meat into long, thin strips along the grain.',
       'Return the shredded beef to the pot. Add the green olives and capers. Stir to combine and simmer uncovered 10 minutes to meld the flavors. Taste and adjust seasoning.',
-      'Stir in the cilantro just before serving. Serve over white rice or with black beans.'
+      'Stir in the cilantro just before serving. Serve over white rice or with black beans.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'ropa', label: 'Ropa Vieja', cookingMethod: '', yieldFactorWater: 0.75 }
@@ -11527,7 +11773,8 @@ export const LEVELS: Level[] = [
       'Remove the pan from heat. Add the brandy carefully. Return to heat and tilt the pan to flambé, or let the alcohol cook off for 1 to 2 minutes until the sharp aroma subsides.',
       'Add the beef broth and Worcestershire sauce. Stir, scraping up any browned bits. Simmer 2 minutes. Add the heavy cream and Dijon mustard. Stir to combine and simmer 3 to 4 minutes until the sauce thickens enough to coat a spoon.',
       'Return the steaks and any accumulated juices to the pan. Spoon the sauce over them and warm through 1 minute. Taste and adjust seasoning.',
-      'Plate the steaks, spoon the mushroom pan sauce over the top, and garnish with chopped parsley. Serve immediately.'
+      'Plate the steaks, spoon the mushroom pan sauce over the top, and garnish with chopped parsley. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'steak', label: 'Steak Diane', cookingMethod: '', yieldFactorWater: 0.8 },
@@ -11576,7 +11823,8 @@ export const LEVELS: Level[] = [
       'Spread about 1/2 cup of the enchilada sauce in the bottom of the prepared baking dish.',
       'Warm the corn tortillas briefly in the microwave or a dry skillet to make them pliable. Place about 3 tablespoons of the beef filling down the center of each tortilla. Roll tightly and place seam-side down in the baking dish.',
       'Pour the remaining enchilada sauce evenly over the rolled enchiladas. Sprinkle the shredded cheese over the top.',
-      'Cover the dish with foil and bake for 20 minutes. Remove the foil and bake an additional 10 minutes until the cheese is melted and bubbly. Serve immediately.'
+      'Cover the dish with foil and bake for 20 minutes. Remove the foil and bake an additional 10 minutes until the cheese is melted and bubbly. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.8, yieldFactorFat: 0.593 },
@@ -11629,7 +11877,8 @@ export const LEVELS: Level[] = [
       'Stir in the tomato paste and cook 1 to 2 minutes. Return the seared beef and any accumulated juices to the pot.',
       'Pour in the beef broth. Stir to combine, scraping up any browned bits from the bottom. Bring to a boil, then reduce heat to low.',
       'Cover and simmer for 1 hour 45 minutes to 2 hours, stirring occasionally, until the beef is very tender and the sauce has thickened. Add a splash of water or broth if it gets too thick during cooking.',
-      'Taste and adjust seasoning. Ladle into bowls and top each serving with a tablespoon of sour cream. Serve with egg noodles, bread dumplings, or crusty bread.'
+      'Taste and adjust seasoning. Ladle into bowls and top each serving with a tablespoon of sour cream. Serve with egg noodles, bread dumplings, or crusty bread.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'goulash', label: 'Goulash', cookingMethod: '', yieldFactorWater: 0.8 }
@@ -11681,7 +11930,8 @@ export const LEVELS: Level[] = [
       'Heat 1 tablespoon olive oil in a large cast-iron skillet or grill pan over high heat until smoking. Sear the steak 3 to 4 minutes per side for medium-rare, or until desired doneness. Transfer to a cutting board and rest 5 minutes.',
       'In the same skillet, heat the remaining 1 tablespoon olive oil over medium-high heat. Add the onions and cook 4 to 5 minutes until softened and charred at the edges. Add the bell peppers, 1 teaspoon cumin, 1 teaspoon chili powder, 3/4 teaspoon salt, and black pepper. Cook 4 to 5 more minutes until the peppers are tender and slightly charred.',
       'Slice the rested steak thinly against the grain.',
-      'Warm the flour tortillas in a dry skillet or microwave. Divide the steak and pepper-onion mixture among the tortillas. Serve with your choice of toppings such as sour cream, guacamole, salsa, shredded cheese, and lime wedges.'
+      'Warm the flour tortillas in a dry skillet or microwave. Divide the steak and pepper-onion mixture among the tortillas. Serve with your choice of toppings such as sour cream, guacamole, salsa, shredded cheese, and lime wedges.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
@@ -11735,7 +11985,8 @@ export const LEVELS: Level[] = [
       'Reduce heat to medium. Add the butter to the skillet. Add the onions and cook 8 to 10 minutes, stirring occasionally, until softened and golden. Add the mushrooms and garlic, cook 4 to 5 more minutes until the mushrooms are browned.',
       'Sprinkle the flour over the vegetables and stir to coat. Cook 1 minute.',
       'Gradually pour in the beef broth, stirring constantly to prevent lumps. Add the Worcestershire sauce, salt, and pepper. Bring to a simmer and cook 4 to 5 minutes until the gravy thickens.',
-      'Return the patties to the skillet, nestling them into the gravy. Simmer 3 to 4 minutes to heat through and meld the flavors. Serve immediately, spooning the onion-mushroom gravy over the patties.'
+      'Return the patties to the skillet, nestling them into the gravy. Simmer 3 to 4 minutes to heat through and meld the flavors. Serve immediately, spooning the onion-mushroom gravy over the patties.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'patties', label: 'Patties', cookingMethod: '', yieldFactorWater: 0.75, yieldFactorFat: 0.593 },
@@ -11780,7 +12031,8 @@ export const LEVELS: Level[] = [
       'Remove the steak from the marinade and pat dry with paper towels. Discard the marinade. Season both sides with salt.',
       'Heat a grill or grill pan over high heat until very hot. Grill the flank steak 4 to 5 minutes per side for medium-rare (internal temperature 130 to 135°F), or until desired doneness.',
       'Transfer to a cutting board and rest for 5 to 10 minutes.',
-      'Slice thinly against the grain and serve immediately.'
+      'Slice thinly against the grain and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
@@ -11840,7 +12092,8 @@ export const LEVELS: Level[] = [
       'Heat the olive oil in a large skillet over medium-high heat. Brown the meatballs in batches, turning to sear all sides, 4 to 5 minutes total. The meatballs do not need to be fully cooked through at this stage. Transfer to a plate.',
       'Make the sauce: in the same skillet, heat the olive oil over medium heat. Add the diced onion and cook, stirring occasionally, until softened, about 8 minutes. Add the minced garlic and red pepper flakes and cook, stirring, until fragrant, about 1 minute. Pour in the crushed tomatoes. Season with oregano, salt, and black pepper and stir to combine.',
       'Return the browned meatballs to the skillet. Nestle them into the sauce. Reduce heat to low, cover, and simmer for 20 to 25 minutes until the meatballs are cooked through and the sauce has thickened. Remove from heat and stir in the fresh basil.',
-      'Serve over pasta or with crusty bread, garnished with fresh parsley and additional Parmesan if desired.'
+      'Serve over pasta or with crusty bread, garnished with fresh parsley and additional Parmesan if desired.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'meatballs', label: 'Meatballs', cookingMethod: '', yieldFactorWater: 0.85 },
@@ -11897,7 +12150,8 @@ export const LEVELS: Level[] = [
       'Make the cheese filling: in a large bowl, combine the ricotta, two-thirds of the mozzarella, the Parmesan, egg, parsley, salt, and black pepper. Stir until smooth.',
       'Assemble the lasagna: spread a thin layer of meat sauce on the bottom of a 9×13-inch baking dish. Layer 3 to 4 noodles over the sauce. Spread one-third of the cheese filling, then one-third of the remaining meat sauce. Repeat the layers twice more, ending with meat sauce on top. Scatter the remaining mozzarella over the top.',
       'Cover tightly with foil and bake for 30 minutes. Uncover and bake for an additional 15 to 20 minutes until the cheese is bubbly and golden.',
-      'Let rest for 15 minutes before slicing. Cut into 8 pieces and serve.'
+      'Let rest for 15 minutes before slicing. Cut into 8 pieces and serve.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -11952,7 +12206,8 @@ export const LEVELS: Level[] = [
       'Add the remaining oil to the wok. Add the garlic and ginger and stir-fry 30 seconds until fragrant. Add the mushrooms and carrots and stir-fry 2 minutes.',
       'Add the cabbage and bean sprouts. Stir-fry 1 to 2 minutes until the cabbage just begins to wilt.',
       'Return the beef to the wok. Add the cooked noodles and pour the sauce over everything. Toss and stir-fry over high heat for 1 to 2 minutes until everything is coated and heated through.',
-      'Remove from heat. Drizzle with sesame oil, scatter the scallions over the top, and serve immediately.'
+      'Remove from heat. Drizzle with sesame oil, scatter the scallions over the top, and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'noodles', label: 'Noodles', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -11998,7 +12253,8 @@ export const LEVELS: Level[] = [
       'Remove the steak from the marinade and pat dry with paper towels. Discard the marinade. Season both sides with salt.',
       'Heat a grill or broiler to high heat. For a grill: cook the steak 5 to 7 minutes per side for medium-rare (internal temperature 130 to 135°F). For a broiler: broil 4 inches from the heat, 5 to 6 minutes per side.',
       'Transfer to a cutting board and rest for 10 minutes.',
-      'Slice very thinly against the grain and serve immediately. London broil must always be sliced against the grain to be tender.'
+      'Slice very thinly against the grain and serve immediately. London broil must always be sliced against the grain to be tender.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
@@ -12049,7 +12305,8 @@ export const LEVELS: Level[] = [
       'Cut the zucchini, bell peppers, and onion into 1½-inch pieces. Halve any large mushrooms. Season the vegetables lightly with salt.',
       'Thread the marinated beef and vegetables alternately onto 8 metal or soaked wooden skewers (each skewer gets 2 to 3 pieces of beef and a mix of vegetables), leaving a small gap between each piece.',
       'Heat a grill to high heat (450 to 500°F). Brush the grates lightly with oil. Grill the kabobs 3 to 4 minutes per side, turning once or twice, until the beef is cooked to medium (internal temperature 145°F) and vegetables are tender with char marks.',
-      'Transfer to a platter and rest 2 to 3 minutes before serving.'
+      'Transfer to a platter and rest 2 to 3 minutes before serving.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
@@ -12094,7 +12351,8 @@ export const LEVELS: Level[] = [
       'Heat a large skillet or wok over medium-high heat. Add the ground beef and cook, breaking it up, until browned through, about 6 to 8 minutes. Drain excess fat.',
       'Add the garlic and ginger to the beef and cook 1 to 2 minutes until fragrant.',
       'Pour the sauce over the beef and stir to coat. Cook 1 to 2 minutes until the sauce thickens and coats the beef. Remove from heat and stir in the scallions and black pepper.',
-      'Serve the Korean beef on its own or over steamed white rice (not included). Garnish with additional sliced scallions and sesame seeds if desired.'
+      'Serve the Korean beef on its own or over steamed white rice (not included). Garnish with additional sliced scallions and sesame seeds if desired.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.85, yieldFactorFat: 0.593 }
@@ -12150,7 +12408,8 @@ export const LEVELS: Level[] = [
       'Add the ground beef and mix gently with your hands until just combined — do not overwork. Transfer to the prepared loaf pan and shape into a compact loaf.',
       'Make the glaze: whisk together the ketchup, brown sugar, Worcestershire sauce, and apple cider vinegar. Spread half the glaze over the top of the meatloaf.',
       'Bake for 45 minutes. Spread the remaining glaze over the top and bake an additional 15 to 20 minutes until the internal temperature reaches 160°F.',
-      'Remove from the oven and let rest 10 minutes before slicing. Cut into 8 slices and serve.'
+      'Remove from the oven and let rest 10 minutes before slicing. Cut into 8 slices and serve.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'meatloaf', label: 'Meatloaf', cookingMethod: '', yieldFactorWater: 0.82 },
@@ -12198,7 +12457,8 @@ export const LEVELS: Level[] = [
       'Heat the vegetable oil in a wok or large skillet over high heat. Add the beef in a single layer and cook without stirring for 1 to 2 minutes until browned. Flip and cook 1 minute more. Remove beef and set aside.',
       'Pour the sauce into the same wok and bring to a simmer over medium-high heat, stirring, for 2 to 3 minutes until slightly thickened.',
       'Return the beef to the wok and toss to coat in the sauce. Add the sliced scallions and drizzle with sesame oil. Stir-fry 1 minute.',
-      'Serve the Mongolian beef on its own or over steamed white rice (not included).'
+      'Serve the Mongolian beef on its own or over steamed white rice (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.82 },
@@ -12254,7 +12514,8 @@ export const LEVELS: Level[] = [
       'Add the beef broth, crushed tomatoes, oregano, and thyme. Stir to combine. Return the seared shanks to the pot, nestling them into the braising liquid.',
       'Bring to a boil, then reduce heat to low. Cover and simmer for 1 hour 30 minutes to 2 hours, turning the shanks halfway through, until the meat is very tender and beginning to fall off the bone.',
       'While the osso buco braises, prepare the gremolata: combine the chopped parsley, minced garlic, and lemon juice in a small bowl.',
-      'Serve each shank with braising sauce spooned over the top and a generous pinch of gremolata. Pairs well with risotto, polenta, or crusty bread.'
+      'Serve each shank with braising sauce spooned over the top and a generous pinch of gremolata. Pairs well with risotto, polenta, or crusty bread.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'braise', label: 'Braise', cookingMethod: '', yieldFactorWater: 0.65 },
@@ -12306,7 +12567,8 @@ export const LEVELS: Level[] = [
       'Heat 1 tablespoon olive oil in a wok or large skillet over high heat. Add the beef in a single layer and cook for 1 to 2 minutes per side until browned. Remove and set aside.',
       'Cut onions and peppers into 1 inch squares. Add the remaining olive oil to the wok. Stir-fry the onion for 2 minutes, then add the bell peppers and cook 2 minutes more until slightly tender but still crisp.',
       'Add the minced garlic and ginger and stir-fry for 30 seconds. Pour in the sauce and stir until thickened, about 1 minute.',
-      'Return the beef to the wok and toss to coat. Drizzle with sesame oil. Serve on its own or over steamed white rice (not included).'
+      'Return the beef to the wok and toss to coat. Drizzle with sesame oil. Serve on its own or over steamed white rice (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.82 },
@@ -12357,7 +12619,8 @@ export const LEVELS: Level[] = [
       'Add the diced onion and diced bell pepper to the skillet and cook for 4 to 5 minutes until softened. Add the minced garlic and cook 1 minute more.',
       'Stir in the crushed tomatoes, sliced green olives, capers, raisins, apple cider vinegar, cumin, oregano, and bay leaves. Season with salt and pepper.',
       'Reduce heat to medium-low and simmer uncovered for 15 to 20 minutes, stirring occasionally, until the sauce thickens and flavors meld.',
-      'Remove and discard the bay leaves. Taste and adjust seasoning. Serve as a filling for tacos or empanadas, or on its own or over rice (not included).'
+      'Remove and discard the bay leaves. Taste and adjust seasoning. Serve as a filling for tacos or empanadas, or on its own or over rice (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'picadillo', label: 'Picadillo', cookingMethod: '', yieldFactorWater: 0.85, yieldFactorFat: 0.593 }
@@ -12407,7 +12670,8 @@ export const LEVELS: Level[] = [
       'In the same pot, sauté the onion, carrot, and celery over medium heat for 5 minutes until softened. Add the flour and stir for 1 minute.',
       'Gradually whisk in the beef broth, scraping up any browned bits. Add the potatoes, peas, thyme, salt, and pepper. Return the beef to the pot. Bring to a simmer and cook for 15 minutes until slightly thickened.',
       'Transfer the filling to the prepared 9-inch deep-dish pie pan with the bottom crust. Roll out the top crust and lay it over the filling, crimping the edges to seal. Cut several slits in the top crust to vent steam.',
-      'Bake for 30 to 35 minutes until the crust is golden brown and the filling is bubbling. Let rest 10 minutes before serving.'
+      'Bake for 30 to 35 minutes until the crust is golden brown and the filling is bubbling. Let rest 10 minutes before serving.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crust', label: 'Crust', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -12461,7 +12725,8 @@ export const LEVELS: Level[] = [
       'Sprinkle the flour over the vegetables and stir to coat. Cook for 1 minute, then gradually whisk in the beef broth until smooth.',
       'Stir in the Worcestershire sauce. Return the roast to the pot. Add the thyme, rosemary, and bay leaves. The liquid should come about halfway up the roast.',
       'Cover tightly and braise in the oven for 2 to 2-1/2 hours. Then nestle the potato chunks and carrot chunks around the roast and continue braising for about another hour until the beef is fork-tender and falling apart.',
-      'Remove the bay leaves and rosemary sprig. Transfer the roast and vegetables to a serving platter. Skim excess fat from the braising liquid and serve as gravy alongside.'
+      'Remove the bay leaves and rosemary sprig. Transfer the roast and vegetables to a serving platter. Skim excess fat from the braising liquid and serve as gravy alongside.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'roast', label: 'Pot Roast', cookingMethod: '', yieldFactorWater: 0.8 }
@@ -12513,7 +12778,8 @@ export const LEVELS: Level[] = [
       'Pour in the red wine and scrape up any browned bits. Simmer for 2 minutes until slightly reduced.',
       'Add the crushed tomatoes, beef broth, thyme, rosemary, and bay leaves. Return the beef to the pot and bring to a simmer.',
       'Cover and braise in the oven for 2-1/2 to 3 hours until the beef is completely tender and falling apart.',
-      'Remove the bay leaves and rosemary sprig. Use two forks to shred the beef directly in the pot and stir it into the sauce. Taste and adjust seasoning. Serve over pasta, polenta, or gnocchi.'
+      'Remove the bay leaves and rosemary sprig. Use two forks to shred the beef directly in the pot and stir it into the sauce. Taste and adjust seasoning. Serve over pasta, polenta, or gnocchi.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'ragu', label: 'Ragu', cookingMethod: '', yieldFactorWater: 0.75 }
@@ -12560,7 +12826,8 @@ export const LEVELS: Level[] = [
       'Bake for 2-1/2 to 3 hours until very tender and the meat has pulled back from the bone ends.',
       'Make or prepare the BBQ Sauce (see the BBQ Sauce recipe). Carefully unwrap the ribs and brush generously with BBQ sauce on all sides.',
       'Increase oven temperature to 425°F. Return the ribs, uncovered, to the oven and bake for 15 minutes until the sauce is caramelized and sticky.',
-      'Rest 5 minutes before slicing between bones. Serve with remaining BBQ sauce on the side.'
+      'Rest 5 minutes before slicing between bones. Serve with remaining BBQ sauce on the side.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'rub', label: 'Dry Rub', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -12619,7 +12886,8 @@ export const LEVELS: Level[] = [
       'Add minced garlic and cook 1 minute. Sprinkle flour over the vegetables and stir to coat. Cook 1 to 2 minutes.',
       'Gradually whisk in the beef broth and Worcestershire sauce, scraping up any browned bits. Add thyme, salt, and pepper.',
       'Simmer, stirring occasionally, for 5 to 7 minutes until the gravy is thickened.',
-      'Return the patties to the skillet and spoon gravy over them. Simmer 3 to 4 minutes until heated through. Serve immediately.'
+      'Return the patties to the skillet and spoon gravy over them. Simmer 3 to 4 minutes until heated through. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'patties', label: 'Patties', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -12672,7 +12940,8 @@ export const LEVELS: Level[] = [
       'Add the beef broth, thyme, rosemary, and bay leaves. Nestle the ribs back into the pot in a single layer. The liquid should come about halfway up the ribs.',
       'Cover and braise in a 325°F oven for 2-1/2 to 3 hours until the meat is very tender and pulling away from the bone.',
       'Remove the ribs. Discard the bay leaves and rosemary sprig. Skim excess fat from the braising liquid and adjust seasoning.',
-      'Serve the ribs with the braising liquid spooned over the top.'
+      'Serve the ribs with the braising liquid spooned over the top.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'braise', label: 'Braise', cookingMethod: '', yieldFactorWater: 0.72 }
@@ -12717,7 +12986,8 @@ export const LEVELS: Level[] = [
       'Remove the steak from the marinade and pat dry with paper towels. Discard the marinade.',
       'Heat a cast-iron skillet or grill pan over high heat until very hot. Cook the steak for 3 to 4 minutes per side for medium-rare, or until desired doneness.',
       'Transfer to a cutting board and rest for 5 minutes.',
-      'Slice thinly against the grain and serve immediately.'
+      'Slice thinly against the grain and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'steak', label: 'Steak', cookingMethod: '', yieldFactorWater: 0.75 }
@@ -12768,7 +13038,8 @@ export const LEVELS: Level[] = [
       'Add the minced garlic and cook 1 minute. Sprinkle the flour over the vegetables and stir to coat. Cook 1 to 2 minutes.',
       'Gradually whisk in the beef broth, Worcestershire sauce, and mustard, scraping up any browned bits. Simmer for 4 to 5 minutes until the sauce thickens.',
       'Reduce heat to low. Stir in the sour cream and heat gently — do not boil or the sour cream will curdle.',
-      'Return the beef strips to the skillet and stir to coat. Heat through for 1 to 2 minutes. Adjust seasoning and serve over egg noodles or mashed potatoes.'
+      'Return the beef strips to the skillet and stir to coat. Heat through for 1 to 2 minutes. Adjust seasoning and serve over egg noodles or mashed potatoes.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.8 },
@@ -12814,7 +13085,8 @@ export const LEVELS: Level[] = [
       'Reduce heat to medium. Add the butter, smashed garlic cloves, thyme sprigs, and rosemary sprigs to the skillet. Tilt the pan and baste the meat with the butter repeatedly for 1 minute.',
       'Transfer the skillet to a 425°F oven. Roast for 15 to 20 minutes until an instant-read thermometer inserted into the thickest part reads 130°F for medium-rare.',
       'Transfer to a cutting board, tent loosely with foil, and rest for 10 minutes before slicing.',
-      'Slice into 4 equal portions, each about 2 to 3 inches thick, and serve with the pan juices spooned over the top.'
+      'Slice into 4 equal portions, each about 2 to 3 inches thick, and serve with the pan juices spooned over the top.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'tenderloin', label: 'Tenderloin', cookingMethod: '', yieldFactorWater: 0.75 }
@@ -12859,7 +13131,8 @@ export const LEVELS: Level[] = [
       'Heat a large skillet or wok over high heat until very hot. Remove the beef from the marinade, reserving the marinade.',
       'Add the coconut oil to the hot skillet. Cook the beef strips in a single layer for 1 to 2 minutes per side until browned. Work in batches to avoid steaming. Transfer to a plate.',
       'Pour the reserved marinade into the skillet and bring to a boil, stirring, for 1 to 2 minutes until thickened and glossy.',
-      'Return the beef to the skillet and toss to coat. Serve immediately on its own or over steamed rice (not included).'
+      'Return the beef to the skillet and toss to coat. Serve immediately on its own or over steamed rice (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'teriyaki', label: 'Teriyaki', cookingMethod: '', yieldFactorWater: 0.8 }
@@ -12910,7 +13183,8 @@ export const LEVELS: Level[] = [
       'Lay a large sheet of plastic wrap on the work surface. Arrange the prosciutto slices in overlapping rows to form a rectangle large enough to wrap the tenderloin. Spread the cooled duxelles evenly over the prosciutto.',
       'Place the seared tenderloin at the bottom edge of the prosciutto. Using the plastic wrap, roll tightly into a log, twisting the ends to seal. Refrigerate for at least 30 minutes.',
       'On a lightly floured surface, roll out the puff pastry sheet large enough to wrap the beef log. Beat the egg with 1 tablespoon of water to make an egg wash. Remove the plastic wrap from the beef and place the beef log at the bottom edge of the pastry. Brush the pastry with egg wash. Roll up tightly, wrapping the ends and sealing all edges with egg wash. Brush the entire surface with egg wash and score lightly with a knife if desired.',
-      'Bake at 425°F for 25 to 30 minutes until the pastry is deep golden brown and an instant-read thermometer reads 125°F for medium-rare. Rest 10 minutes before slicing into 4 equal portions.'
+      'Bake at 425°F for 25 to 30 minutes until the pastry is deep golden brown and an instant-read thermometer reads 125°F for medium-rare. Rest 10 minutes before slicing into 4 equal portions.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'duxelles', label: 'Duxelles', cookingMethod: '', yieldFactorWater: 0.18 },
@@ -12963,7 +13237,8 @@ export const LEVELS: Level[] = [
       'Add the remaining 1 tbsp coconut oil to the wok. Add the sliced onion and cook for 2 minutes. Add the sliced mushrooms and cook for 2 minutes more.',
       'Add the broccoli florets and sliced bell pepper. Stir fry for 2 to 3 minutes until the broccoli is bright green and crisp-tender.',
       'Add the minced garlic and grated ginger and stir fry for 30 seconds until fragrant.',
-      'Return the beef to the wok. Pour in the sauce and toss everything together for 1 to 2 minutes until the sauce thickens and coats everything evenly. Serve immediately on its own or over steamed rice (not included).'
+      'Return the beef to the wok. Pour in the sauce and toss everything together for 1 to 2 minutes until the sauce thickens and coats everything evenly. Serve immediately on its own or over steamed rice (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'stir_fry', label: 'Stir Fry', cookingMethod: '', yieldFactorWater: 0.85 }
@@ -13012,7 +13287,8 @@ export const LEVELS: Level[] = [
       'Heat a large skillet over medium-high heat. Add the ground beef and cook, breaking it apart with a spoon, for 6 to 8 minutes until browned. Drain excess fat.',
       'Add the taco seasoning and water to the browned beef. Stir to combine and simmer for 3 to 5 minutes until the liquid is absorbed and the meat is well coated. Remove from heat.',
       'Warm the corn tortillas in a dry skillet or directly over a gas flame for 30 seconds per side until pliable.',
-      'Assemble the tacos: fill each tortilla with taco meat, shredded cheddar cheese, shredded lettuce, diced tomato, and a dollop of sour cream. Serve immediately.'
+      'Assemble the tacos: fill each tortilla with taco meat, shredded cheddar cheese, shredded lettuce, diced tomato, and a dollop of sour cream. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'taco_meat', label: 'Taco Meat', cookingMethod: '', yieldFactorWater: 0.8, yieldFactorFat: 0.75 },
@@ -13064,7 +13340,8 @@ export const LEVELS: Level[] = [
       'Heat a wok or large skillet over high heat. Add 1 tbsp coconut oil. Sear the chicken pieces in a single layer for 3 to 4 minutes per side until cooked through to an internal temperature of 165°F and lightly browned. Transfer to a plate.',
       'Add the remaining 1 tbsp coconut oil to the wok. Add the broccoli florets and stir fry for 3 to 4 minutes until bright green and crisp-tender.',
       'Add the minced garlic and grated ginger and stir fry for 30 seconds until fragrant.',
-      'Return the chicken to the wok. Pour in the sauce and toss everything together for 1 to 2 minutes until the sauce thickens and coats the chicken and broccoli evenly. Serve immediately on its own or over steamed rice (not included).'
+      'Return the chicken to the wok. Pour in the sauce and toss everything together for 1 to 2 minutes until the sauce thickens and coats the chicken and broccoli evenly. Serve immediately on its own or over steamed rice (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -13115,7 +13392,8 @@ export const LEVELS: Level[] = [
       'In the same pan over medium heat, add the diced onion and sliced bell pepper. Cook for 4 to 5 minutes until softened. Add the sliced mushrooms and cook for 3 minutes more until tender.',
       'Add the minced garlic and cook for 30 seconds until fragrant. Pour in the white wine and scrape up any browned bits from the bottom of the pan. Simmer for 2 minutes.',
       'Add the crushed tomatoes, dried oregano, and dried basil. Stir to combine. Return the chicken thighs to the pan, nestling them into the sauce. Scatter the black olives over the top.',
-      'Cover and bake at 350°F for 35 to 40 minutes until the chicken is cooked through to an internal temperature of 165°F. Serve over pasta, polenta, or rice.'
+      'Cover and bake at 350°F for 35 to 40 minutes until the chicken is cooked through to an internal temperature of 165°F. Serve over pasta, polenta, or rice.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.8 },
@@ -13166,7 +13444,8 @@ export const LEVELS: Level[] = [
       'Add the remaining 1 tbsp olive oil to the pan over medium heat. Add the diced onion and cook for 5 minutes until softened. Add the minced garlic and grated ginger and cook for 1 minute until fragrant.',
       'Add the curry powder, cumin, and coriander. Stir and cook for 1 minute to toast the spices.',
       'Pour in the crushed tomatoes and coconut milk. Add the salt and stir to combine. Bring to a simmer.',
-      'Return the chicken to the pan. Simmer uncovered for 15 to 20 minutes until the sauce thickens and the flavors meld. Adjust seasoning to taste. Serve on its own or over steamed rice with naan bread (neither included).'
+      'Return the chicken to the pan. Simmer uncovered for 15 to 20 minutes until the sauce thickens and the flavors meld. Adjust seasoning to taste. Serve on its own or over steamed rice with naan bread (neither included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.8 },
@@ -13216,7 +13495,8 @@ export const LEVELS: Level[] = [
       'Warm the corn tortillas in a dry skillet or directly over a gas flame for 20 to 30 seconds per side until pliable.',
       'Fill each tortilla with chicken, diced onion, and a small handful of shredded cheddar cheese. Roll up tightly and place seam-side down in the baking dish.',
       'Pour the remaining enchilada sauce evenly over the rolled enchiladas. Top with the remaining shredded cheddar cheese.',
-      'Bake at 375°F for 20 to 25 minutes until the cheese is melted and bubbly. Serve immediately.'
+      'Bake at 375°F for 20 to 25 minutes until the cheese is melted and bubbly. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.8 },
@@ -13268,7 +13548,8 @@ export const LEVELS: Level[] = [
       'Reduce heat to medium. Add the butter to the same skillet and let it melt. Add the minced garlic and cook for 30 seconds until fragrant.',
       'Pour in the chicken broth and heavy cream. Stir to combine, scraping up any browned bits from the bottom of the pan.',
       'Stir in the Parmesan, salt, black pepper, and nutmeg. Simmer for 3 to 4 minutes until the sauce thickens slightly.',
-      'Stir in the baby spinach, thoroughly coating with sauce. Return the chicken breasts to the skillet and spoon the sauce over them. Simmer for 2 to 3 minutes to heat through. Serve immediately with the creamed spinach sauce spooned over the top.'
+      'Stir in the baby spinach, thoroughly coating with sauce. Return the chicken breasts to the skillet and spoon the sauce over them. Simmer for 2 to 3 minutes to heat through. Serve immediately with the creamed spinach sauce spooned over the top.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -13322,7 +13603,8 @@ export const LEVELS: Level[] = [
       'Add the remaining olive oil to the wok. Add the finely chopped onion and chopped carrot and stir-fry for 3 minutes. Add the minced garlic and cook for 30 seconds.',
       'Push the vegetables to the side. Pour the eggs into the empty side of the wok and scramble, stirring until just set, then mix with the vegetables.',
       'Add the cooked rice, peas, and chicken. Pour the tamari over the rice and toss everything together over high heat for 2 to 3 minutes.',
-      'Stir in the sesame oil and scallions. Serve immediately.'
+      'Stir in the sesame oil and scallions. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -13378,7 +13660,8 @@ export const LEVELS: Level[] = [
       'Drain excess oil from the wok, leaving about 1 tablespoon. Add the remaining garlic and the finely grated ginger and stir-fry for 30 seconds until fragrant.',
       'Add the hoisin sauce, brown sugar, sesame oil, red pepper flakes, reserved marinade, and chicken broth. Stir to combine. Mix the cornstarch with 2 tablespoons cold water and pour into the sauce, stirring until the sauce thickens, about 1 to 2 minutes.',
       'Return the chicken to the wok and toss to coat in the sauce. Cook for 1 minute until heated through.',
-      'Garnish with scallions and sesame seeds. Serve immediately. (Rice not included.)'
+      'Garnish with scallions and sesame seeds. Serve immediately. (Rice not included.)',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.85 },
@@ -13435,7 +13718,8 @@ export const LEVELS: Level[] = [
       'Add the remaining olive oil to the wok. Add the 1/4 inch thick sliced mushrooms and stir-fry for 2 minutes. Add the minced garlic and finely grated ginger and cook for 30 seconds.',
       'Add the snow peas, water chestnuts, and bamboo shoots. Stir-fry for 2 minutes until just tender-crisp.',
       'Return the chicken to the wok. Pour in the sauce and toss everything together for 1 to 2 minutes until the sauce thickens and coats everything.',
-      'Stir in the scallions. Serve immediately. (Rice not included.)'
+      'Stir in the scallions. Serve immediately. (Rice not included.)',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -13488,7 +13772,8 @@ export const LEVELS: Level[] = [
       'Pour off excess oil if needed, leaving a thin film. Add the white wine and lemon juice to the skillet. Bring to a boil, scraping up any browned bits, and cook for 2 minutes until slightly reduced.',
       'Add the chicken broth and capers. Simmer for 2 to 3 minutes until the sauce reduces by about one-third.',
       'Remove the pan from heat and swirl in the remaining 3 tablespoons butter until the sauce is glossy and emulsified. Season with salt and pepper to taste.',
-      'Return the chicken to the pan and spoon the sauce over to coat. Garnish with fresh parsley and serve immediately. (Pasta or rice not included.)'
+      'Return the chicken to the pan and spoon the sauce over to coat. Garnish with fresh parsley and serve immediately. (Pasta or rice not included.)',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.82 },
@@ -13540,7 +13825,8 @@ export const LEVELS: Level[] = [
       'Melt butter in a large saucepan over medium heat. Add the onion, carrot, and celery and cook for 5 to 6 minutes until softened. Add the flour and stir for 1 minute.',
       'Gradually whisk in the reserved chicken broth until smooth. Add the potatoes, peas, thyme, salt, and pepper. Simmer for 8 to 10 minutes, stirring often, until the potatoes are just tender and the filling is thickened. Stir in the chicken.',
       'Pour the filling into the prepared crust. Top with the second crust, fold the edges under, and crimp to seal. Cut several slits in the top to vent.',
-      'Bake for 30 to 35 minutes until the crust is deep golden brown. Let rest for 10 minutes before slicing and serving.'
+      'Bake for 30 to 35 minutes until the crust is deep golden brown. Let rest for 10 minutes before slicing and serving.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crust', label: 'Crust', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -13592,7 +13878,8 @@ export const LEVELS: Level[] = [
       'Cut the zucchini, bell peppers, and onion into 1-1/2-inch pieces. Halve any large mushrooms. Season the vegetables lightly with salt.',
       'Thread the marinated chicken and vegetables alternately onto 8 metal or soaked wooden skewers (each skewer gets 2 to 3 pieces of chicken and a mix of vegetables), leaving a small gap between each piece.',
       'Heat a grill to medium-high heat (400 to 450°F). Brush the grates lightly with oil. Grill the kabobs 4 to 5 minutes per side, turning once or twice, until the chicken is cooked through to an internal temperature of 165°F and the vegetables are tender with char marks.',
-      'Transfer to a platter and rest 2 to 3 minutes before serving.'
+      'Transfer to a platter and rest 2 to 3 minutes before serving.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
@@ -13643,7 +13930,8 @@ export const LEVELS: Level[] = [
       'Dice the onion and green bell pepper and stir them into the soup mixture along with the shredded chicken.',
       'Tear or cut the corn tortillas into quarters. Layer half the tortilla pieces across the bottom of the prepared baking dish. Spoon half the chicken mixture over the tortillas and sprinkle with half the cheddar cheese.',
       'Repeat with the remaining tortillas, chicken mixture, and cheddar cheese.',
-      'Cover with foil and bake for 30 minutes. Remove the foil and bake an additional 10 to 15 minutes until the cheese is bubbly and lightly browned. Let rest 5 minutes before serving.'
+      'Cover with foil and bake for 30 minutes. Remove the foil and bake an additional 10 to 15 minutes until the cheese is bubbly and lightly browned. Let rest 5 minutes before serving.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -13695,7 +13983,8 @@ export const LEVELS: Level[] = [
       'Add the 1/4 inch thick sliced mushrooms to the same skillet and cook over medium-high heat for 4 to 5 minutes until browned. Add the finely diced shallots and cook for 1 minute more.',
       'Pour in the Marsala wine and chicken broth. Bring to a boil, scraping up any browned bits, and simmer for 4 to 5 minutes until the sauce reduces by about one-third.',
       'Remove from heat and swirl in the remaining 3 tablespoons butter until the sauce is glossy. Season with salt and pepper to taste.',
-      'Return the chicken to the pan and spoon the sauce over to coat. Garnish with fresh parsley and serve immediately. (Pasta or rice not included.)'
+      'Return the chicken to the pan and spoon the sauce over to coat. Garnish with fresh parsley and serve immediately. (Pasta or rice not included.)',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.82 },
@@ -13755,7 +14044,8 @@ export const LEVELS: Level[] = [
       'Add the 1/4 inch thick sliced mushrooms to the same skillet and cook over medium-high heat for 4 to 5 minutes until browned. Add the chopped shallots and cook for 1 minute more.',
       'Add deseeded and finely chopped tomatoes and cook for 6 to 8 minutes, breaking them down with a spoon, until the sauce thickens and the oil begins to separate.',
       'Return the chicken to the pan and stir to coat in the sauce. Simmer for 5 minutes until the chicken is heated through and the flavors meld.',
-      'Return the chicken to the pan and spoon the sauce over to coat. Garnish with chopped fresh parsley and serve immediately. (Pasta or rice not included.)'
+      'Return the chicken to the pan and spoon the sauce over to coat. Garnish with chopped fresh parsley and serve immediately. (Pasta or rice not included.)',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -13816,7 +14106,8 @@ export const LEVELS: Level[] = [
       'Heat olive oil in a skillet over medium-high heat. Add the chicken and cook for 3 to 4 minutes per side until cooked through to an internal temperature of 165°F. Slice or keep as strips.',
       'Cook the edamame according to package directions (typically boil or microwave 3 to 5 minutes until heated through and tender). Drain and set aside.',
       'Cut the broccoli into 1/2 inch florets. Steam or blanch for 3 to 4 minutes until tender-crisp. Drain and set aside.',
-      'Divide the cooked rice among 4 bowls. Arrange the chicken, cabbage, carrot, edamame, and broccoli over the rice. Drizzle generously with peanut sauce, then garnish with sliced scallions and sesame seeds.'
+      'Divide the cooked rice among 4 bowls. Arrange the chicken, cabbage, carrot, edamame, and broccoli over the rice. Drizzle generously with peanut sauce, then garnish with sliced scallions and sesame seeds.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'rice', label: 'Brown Rice', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -13872,7 +14163,8 @@ export const LEVELS: Level[] = [
       'In a small bowl, whisk together tamari, chicken broth, honey, rice wine vinegar, sesame oil, minced garlic, minced ginger, and cornstarch until smooth.',
       'Pour the sauce into the skillet over medium heat. Stir constantly until the sauce thickens and becomes glossy, about 2 minutes.',
       'Return the fried chicken to the pan and toss to coat with the sauce. Cook 1 minute more until heated through and fully glazed.',
-      'Transfer to a serving platter. Top with sesame seeds and sliced scallions. Serve over steamed white rice (not included).'
+      'Transfer to a serving platter. Top with sesame seeds and sliced scallions. Serve over steamed white rice (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.85 },
@@ -13920,7 +14212,8 @@ export const LEVELS: Level[] = [
       'In a shallow bowl, whisk together flour, cornstarch, salt, pepper, garlic powder, onion powder, and paprika. In a second shallow bowl, whisk together eggs and buttermilk.',
       'Working one strip at a time: dredge in the seasoned flour, shake off excess, dip in the egg-buttermilk wash, then dredge in the seasoned flour a second time, pressing firmly so the coating adheres fully.',
       'Heat olive oil in a large skillet over medium-high heat. Keeping the oil temp at a minimum of 350° decreases oil absorption. Working in batches, fry chicken strips 3 to 4 minutes per side until deep golden brown and cooked through (165°F internal temperature). Transfer to a wire rack; do not stack.',
-      'Serve hot with dipping sauce of your choice — honey mustard, ranch dressing, or BBQ sauce (not included).'
+      'Serve hot with dipping sauce of your choice — honey mustard, ranch dressing, or BBQ sauce (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.85 }
@@ -13969,7 +14262,8 @@ export const LEVELS: Level[] = [
       'In a shallow bowl, whisk together flour, cornstarch, salt, pepper, garlic powder, onion powder, paprika, and cayenne. In a second shallow bowl, whisk together eggs and buttermilk.',
       'Pat chicken thighs dry with paper towels. Dredge in seasoned flour, dip in the egg-buttermilk wash, then dredge in the seasoned flour a second time, pressing firmly so the coating adheres fully.',
       'Heat olive oil in a large skillet over medium-high heat to 350°. Working in batches, fry chicken thighs 5 to 6 minutes per side until deep golden brown and cooked through (165°F internal). Transfer to a wire rack.',
-      'Place one waffle on each plate and top with a piece of fried chicken. Drizzle 1 tablespoon of maple syrup over each serving.'
+      'Place one waffle on each plate and top with a piece of fried chicken. Drizzle 1 tablespoon of maple syrup over each serving.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'waffles', label: 'Waffles plain', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -14014,7 +14308,8 @@ export const LEVELS: Level[] = [
       'Add crushed garlic cloves to the pan and cook 30 seconds until fragrant. Add tamari, vinegar, water, bay leaves, and black pepper. Stir to combine.',
       'Return chicken to the pan. Bring to a boil, then reduce heat to low. Cover and simmer 25 to 30 minutes, turning chicken halfway through, until cooked through and tender.',
       'Uncover and increase heat to medium. Simmer 5 to 10 minutes more, turning chicken occasionally, until the sauce reduces and thickens to coat the chicken.',
-      'Remove bay leaves. Serve over steamed white rice (not included).'
+      'Remove bay leaves. Serve over steamed white rice (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 }
@@ -14070,7 +14365,8 @@ export const LEVELS: Level[] = [
       'Transfer the onion-spice mixture to a blender with the cashews and a splash of coconut milk. Blend until smooth.',
       'Return the blended sauce to the pan. Add remaining coconut milk, heavy cream, and salt. Stir to combine and bring to a gentle simmer.',
       'Return chicken to the pan. Cover and simmer on low heat 20 to 25 minutes, turning once, until chicken is cooked through and the sauce has thickened.',
-      'Serve over steamed basmati rice or with naan (not included).'
+      'Serve over steamed basmati rice or with naan (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -14122,7 +14418,8 @@ export const LEVELS: Level[] = [
       'Pour white wine into the pan and scrape up any browned bits. Let bubble 2 minutes.',
       'Add chicken broth (see Chicken Broth recipe) and lemon juice. Simmer 3 to 4 minutes until sauce reduces by about half.',
       'Remove from heat and swirl in remaining 1 tablespoon of butter until sauce is glossy. Taste and adjust seasoning.',
-      'Return chicken to the pan briefly to coat in sauce. Serve immediately.'
+      'Return chicken to the pan briefly to coat in sauce. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -14178,7 +14475,8 @@ export const LEVELS: Level[] = [
       'Pour in white wine and scrape up any browned bits. Simmer 2 minutes.',
       'Add chicken broth (see Chicken Broth recipe) and lemon juice. Simmer 3 to 4 minutes until sauce reduces slightly.',
       'Add drained pasta and toss to coat, adding reserved pasta water a splash at a time if needed to loosen the sauce.',
-      'Return sliced chicken to the pan, top with parsley, and serve immediately.'
+      'Return sliced chicken to the pan, top with parsley, and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -14240,7 +14538,8 @@ export const LEVELS: Level[] = [
       'Add chicken broth (see Chicken Broth recipe) and heavy cream. Stir and simmer 5 minutes until sauce thickens. Season with nutmeg, salt, and pepper. Remove from heat and stir in Parmesan.',
       'Fold cooked pasta and shredded chicken into the sauce until evenly coated. Transfer to a greased 9x13-inch baking dish.',
       'Combine bread crumbs, Parmesan, and melted butter; sprinkle evenly over the top.',
-      'Bake 25 to 30 minutes until bubbling and the topping is golden brown. Let rest 5 minutes before serving.'
+      'Bake 25 to 30 minutes until bubbling and the topping is golden brown. Let rest 5 minutes before serving.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -14305,7 +14604,8 @@ export const LEVELS: Level[] = [
       'Pour in crushed tomatoes and simmer 10 minutes, stirring occasionally, until sauce darkens and thickens.',
       'Stir in heavy cream and simmer 5 minutes until sauce is rich and smooth. Season with salt.',
       'Return chicken pieces to the pan and simmer 5 minutes to heat through and meld flavors.',
-      'Serve over steamed basmati rice or with naan (not included).'
+      'Serve over steamed basmati rice or with naan (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -14361,7 +14661,8 @@ export const LEVELS: Level[] = [
       'Pour in chicken broth (see Chicken Broth recipe) and scrape up any browned bits. Simmer 2 minutes.',
       'Add heavy cream and bring to a gentle simmer. Cook 4 to 5 minutes until sauce begins to thicken.',
       'Stir in Parmesan, oregano, thyme, and red pepper flakes. Simmer 2 more minutes. Taste and adjust seasoning.',
-      'Return chicken to the pan and spoon sauce over the top. Garnish with fresh basil and serve immediately with pasta, rice, or crusty bread (not included).'
+      'Return chicken to the pan and spoon sauce over the top. Garnish with fresh basil and serve immediately with pasta, rice, or crusty bread (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -14411,7 +14712,8 @@ export const LEVELS: Level[] = [
       'Preheat grill to medium-high heat. Thread lamb onto metal or soaked wooden skewers.',
       'Grill skewers 3 to 4 minutes per side, turning every few minutes, until lamb is well-seared and an instant-read thermometer reads 145°F for medium.',
       'Transfer to a plate and rest 5 minutes before serving.',
-      'Serve with flatbread, rice, or a cucumber-yogurt sauce (not included).'
+      'Serve with flatbread, rice, or a cucumber-yogurt sauce (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'kabob', label: 'Kabob', cookingMethod: '', yieldFactorWater: 0.75 }
@@ -14459,7 +14761,8 @@ export const LEVELS: Level[] = [
       'Refrigerate the skewers at least 30 minutes (up to 4 hours) to firm up.',
       'Preheat grill to medium-high heat. Grill kofta 3 to 4 minutes per side (12 to 14 minutes total), turning carefully, until cooked through and an instant-read thermometer reads 160°F.',
       'Transfer to a platter and rest 3 minutes before serving.',
-      'Serve with flatbread, tzatziki, or a fresh herb salad (not included).'
+      'Serve with flatbread, tzatziki, or a fresh herb salad (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'kofta', label: 'Kofta', cookingMethod: '', yieldFactorWater: 0.75 }
@@ -14502,7 +14805,8 @@ export const LEVELS: Level[] = [
       'Preheat grill to medium-high heat. Thread lamb onto metal or soaked wooden skewers, 4 to 5 pieces per skewer.',
       'Grill skewers 3 to 4 minutes per side (12 to 14 minutes total), turning every few minutes, until well-seared and an instant-read thermometer reads 145°F for medium.',
       'Transfer to a plate and rest 5 minutes before serving.',
-      'Serve with warm pita, tzatziki sauce, sliced tomatoes, and onion (not included).'
+      'Serve with warm pita, tzatziki sauce, sliced tomatoes, and onion (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'souvlaki', label: 'Souvlaki', cookingMethod: '', yieldFactorWater: 0.75 }
@@ -14563,7 +14867,8 @@ export const LEVELS: Level[] = [
       'Pour in the beef broth and add the stripped thyme leaves and finely chopped rosemary. Bring to a simmer and cook for 8 to 10 minutes, stirring occasionally, until the sauce thickens. Taste and adjust salt and pepper.',
       'Remove from heat and stir in the frozen peas. Transfer filling to a 9x13 inch baking dish if not using an oven-safe pan.',
       'Spoon the mashed potato topping over the filling and spread evenly. Use a fork to create ridges on the surface.',
-      'Bake at 400°F for 20 to 25 minutes until the topping is golden brown and the filling is bubbling at the edges. Let rest 5 minutes before serving.'
+      'Bake at 400°F for 20 to 25 minutes until the topping is golden brown and the filling is bubbling at the edges. Let rest 5 minutes before serving.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.85 },
@@ -14620,7 +14925,8 @@ export const LEVELS: Level[] = [
       'Return the browned lamb to the pot along with any accumulated juices. Add the water and the bay leaves. Stir to coat the lamb with the sauce.',
       'Bring to a boil, then reduce heat to low. Cover and simmer for 45 to 60 minutes, stirring occasionally, until the lamb is tender.',
       'Remove from heat and let cool for 2 to 3 minutes. Stir in the room-temperature yogurt gradually to prevent curdling. Return to low heat and simmer uncovered for 5 minutes.',
-      'Remove and discard the bay leaves. Taste and adjust seasoning. Serve over basmati rice or with naan bread (not included).'
+      'Remove and discard the bay leaves. Taste and adjust seasoning. Serve over basmati rice or with naan bread (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'curry', label: 'Curry', cookingMethod: '', yieldFactorWater: 0.66 }
@@ -14681,7 +14987,8 @@ export const LEVELS: Level[] = [
       'Return the browned lamb to the pot along with any accumulated juices. Add the water, bay leaves, and saffron. Stir to combine.',
       'Bring to a boil, then reduce heat to low. Cover and simmer for 30 minutes.',
       'Add the drained chickpeas, roughly chopped dried apricots, honey, and lemon juice. Stir to combine. Cover and continue to simmer for 20 to 30 minutes until the lamb is tender and the sauce has thickened.',
-      'Remove and discard the bay leaves. Taste and adjust seasoning. Stir in the toasted sliced almonds, chopped cilantro, and chopped parsley. Serve over couscous or with warm flatbread (not included).'
+      'Remove and discard the bay leaves. Taste and adjust seasoning. Stir in the toasted sliced almonds, chopped cilantro, and chopped parsley. Serve over couscous or with warm flatbread (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'tagine', label: 'Tagine', cookingMethod: '', yieldFactorWater: 0.75 }
@@ -14741,7 +15048,8 @@ export const LEVELS: Level[] = [
       'Return the lamb to the skillet. Add the crushed tomatoes, red wine, ground cinnamon, ground allspice, dried oregano, and bay leaves. Season with salt and pepper. Simmer over medium-low heat for 15 to 20 minutes until the sauce thickens. Remove and discard the bay leaves.',
       'Make the béchamel: melt the butter in a medium saucepan over medium heat. Whisk in the flour and cook for 1 to 2 minutes. Gradually whisk in the milk and cook, stirring constantly, for 6 to 8 minutes until thickened. Remove from heat. Whisk in the eggs one at a time, then stir in the freshly grated Parmesan, ground nutmeg, salt, and white pepper.',
       'Lightly oil a 9×13-inch baking dish. Arrange half the roasted eggplant slices in an even layer. Spread all of the meat sauce over the eggplant. Top with the remaining eggplant slices. Pour the béchamel evenly over the top and smooth with a spatula.',
-      'Bake at 375°F for 40 to 45 minutes until the top is set and golden brown. Let rest for 15 to 20 minutes before cutting. Cut into 6 portions and serve.'
+      'Bake at 375°F for 40 to 45 minutes until the top is set and golden brown. Let rest for 15 to 20 minutes before cutting. Cut into 6 portions and serve.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'eggplant', label: 'Eggplant', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -14795,7 +15103,8 @@ export const LEVELS: Level[] = [
       'Pour in the red wine, scraping up any browned bits from the bottom of the pot. Simmer for 3 minutes to reduce slightly.',
       'Add the beef broth, rosemary, thyme, and bay leaves. Return the shanks to the pot, nestling them into the braising liquid; the liquid should come about halfway up the shanks.',
       'Bring to a gentle simmer, cover tightly, and cook over low heat for 2½ to 3 hours, turning the shanks once halfway through, until the meat is very tender and falling off the bone.',
-      'Discard the rosemary sprigs, thyme sprigs, and bay leaves. Serve the shanks with spoonfuls of the braising liquid and vegetables. Serve with mashed potatoes, polenta, or crusty bread (not included).'
+      'Discard the rosemary sprigs, thyme sprigs, and bay leaves. Serve the shanks with spoonfuls of the braising liquid and vegetables. Serve with mashed potatoes, polenta, or crusty bread (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'braise', label: 'Braise', cookingMethod: '', yieldFactorWater: 0.73 }
@@ -14838,7 +15147,8 @@ export const LEVELS: Level[] = [
       'Pat the lamb chops dry with paper towels. Season on both sides with salt and black pepper, then coat with the marinade. Let rest at room temperature for 30 minutes to 1 hour.',
       'Heat a large cast iron skillet or heavy skillet over high heat until very hot and just beginning to smoke.',
       'Working in batches if needed to avoid crowding, sear the chops for 3 to 4 minutes per side for medium-rare, or until cooked to your preferred doneness.',
-      'Transfer to a plate, tent loosely with foil, and rest for 5 minutes before serving. Serve with roasted vegetables or a simple salad (not included).'
+      'Transfer to a plate, tent loosely with foil, and rest for 5 minutes before serving. Serve with roasted vegetables or a simple salad (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chops', label: 'Chops', cookingMethod: '', yieldFactorWater: 0.82 }
@@ -14885,7 +15195,8 @@ export const LEVELS: Level[] = [
       'In a small bowl, combine the remaining olive oil, garlic, rosemary, thyme, and dry bread crumbs to form the herb crust.',
       'Brush the fat side of the rack with the Dijon-Style Mustard, then press the herb crust firmly onto the mustard-coated surface.',
       'Return the rack crust-side up to the skillet. Roast in the oven for 12–15 minutes for medium-rare (internal temperature 130°F / 54°C), or until cooked to your preferred doneness.',
-      'Transfer to a cutting board, tent loosely with foil, and rest for 10 minutes. Slice between the bones into individual rib chops and serve 2 per person.'
+      'Transfer to a cutting board, tent loosely with foil, and rest for 10 minutes. Slice between the bones into individual rib chops and serve 2 per person.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'rack', label: 'Rack of Lamb', cookingMethod: '', yieldFactorWater: 0.87 },
@@ -14931,7 +15242,8 @@ export const LEVELS: Level[] = [
       'Place the leg fat-side up on the rack. Roast at 450°F (230°C) for 15 minutes to brown the exterior.',
       'Reduce the oven temperature to 325°F (165°C). Continue roasting for 1½–2 hours, until a thermometer inserted into the thickest part reads 130°F (54°C) for medium-rare or 140°F (60°C) for medium.',
       'Transfer the leg to a cutting board, tent loosely with foil, and rest for 20 minutes before carving.',
-      'Carve by making parallel slices along the length of the leg, angling the knife along the bone to free each slice. Arrange on a platter and serve.'
+      'Carve by making parallel slices along the length of the leg, angling the knife along the bone to free each slice. Arrange on a platter and serve.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'lamb', label: 'Leg of Lamb', cookingMethod: '', yieldFactorWater: 0.62, yieldFactorFat: 0.705 }
@@ -14988,7 +15300,8 @@ export const LEVELS: Level[] = [
       'Add the marinated lamb to the pot. Stir to combine, cover, and simmer over medium-low heat for 35–40 minutes, stirring occasionally, until the lamb is tender and the sauce has thickened.',
       'Meanwhile, bring a large pot of salted water to a boil. Add the rice and cook for 6–7 minutes until about 70% cooked (it should still have a firm bite at the center). Drain well.',
       'Spread the par-cooked rice evenly over the lamb. Scatter the cilantro and mint over the rice, then top with the reserved fried onions. Cover the pot tightly (seal with foil, then the lid) and cook over very low heat for 20–25 minutes until the rice is fully cooked.',
-      'To serve, scoop portions from the pot so each serving contains both lamb and rice. Arrange on a platter and serve immediately.'
+      'To serve, scoop portions from the pot so each serving contains both lamb and rice. Arrange on a platter and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'lamb', label: 'Lamb', cookingMethod: '', yieldFactorWater: 0.78 },
@@ -15036,7 +15349,8 @@ export const LEVELS: Level[] = [
       'Continue simmering until all the liquid has evaporated and the pork is sizzling in its own rendered fat, about 20–30 more minutes. Stir frequently at this stage to prevent burning. The pork should be golden and lightly crisp on the edges.',
       'Remove and discard the bay leaves. Use two forks to shred or roughly chop the pork into bite-sized pieces.',
       'For extra crispiness, spread the shredded pork on a baking sheet and broil for 3–5 minutes until edges are caramelized and crisp.',
-      'Serve in warm tortillas (not included) with your choice of toppings such as diced white onion, fresh cilantro, salsa, and lime wedges (neither included).'
+      'Serve in warm tortillas (not included) with your choice of toppings such as diced white onion, fresh cilantro, salsa, and lime wedges (neither included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'carnitas', label: 'Carnitas', cookingMethod: '', yieldFactorWater: 0.65 }
@@ -15082,7 +15396,8 @@ export const LEVELS: Level[] = [
       'Remove the pork from the refrigerator 30 minutes before cooking. Preheat the oven to 400°F (200°C). Line a baking sheet with foil and set a wire rack on top. Arrange the pork strips on the rack in a single layer.',
       'Roast for 15 minutes, then flip the strips and brush generously with the reserved marinade. Roast for another 15 minutes.',
       'Switch the oven to broil. Brush the pork again with the remaining reserved marinade and broil for 3–4 minutes until the edges are deeply caramelized and slightly charred. Watch closely to prevent burning.',
-      'Rest for 5 minutes, then slice against the grain and serve over steamed rice (not included).'
+      'Rest for 5 minutes, then slice against the grain and serve over steamed rice (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'char_siu', label: 'Char Siu', cookingMethod: '', yieldFactorWater: 0.72 }
@@ -15125,7 +15440,8 @@ export const LEVELS: Level[] = [
       'Heat the olive oil in a large, heavy skillet (cast iron preferred) over medium-high heat until shimmering. Add the chops and sear without moving for 3–4 minutes until a deep golden crust forms.',
       'Flip the chops. Add the butter, garlic, thyme, and rosemary to the pan. As the butter melts and foams, tilt the pan slightly and use a spoon to continuously baste the chops with the herb butter for 2–3 minutes.',
       'Continue cooking, basting frequently, until the internal temperature reaches 145°F (63°C) at the thickest point away from the bone, about 2–3 minutes more.',
-      'Transfer to a cutting board and rest for 5 minutes before serving.'
+      'Transfer to a cutting board and rest for 5 minutes before serving.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chops', label: 'Pork Chops', cookingMethod: '', yieldFactorWater: 0.82 }
@@ -15168,7 +15484,8 @@ export const LEVELS: Level[] = [
       'Season the crown all over with salt and black pepper. Wrap each exposed rib-bone tip with a small piece of foil to prevent burning during roasting.',
       'Stand crown with bones upright in roasting pan. Roast at 450°F 15 min, then reduce to 375°F for 60–80 min to 145°F internal. (Center cavity may be filled with stuffing — not included.)',
       'Remove the foil from the bone tips. Transfer to a cutting board and rest 20 minutes before carving.',
-      'Carve by slicing straight down between the rib bones to divide into individual chops. Serve 2 ribs per person.'
+      'Carve by slicing straight down between the rib bones to divide into individual chops. Serve 2 ribs per person.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crown', label: 'Crown Roast', cookingMethod: '', yieldFactorWater: 0.64 }
@@ -15214,7 +15531,8 @@ export const LEVELS: Level[] = [
       'Add the cabbage, carrots, bean sprouts, and scallions. Stir-fry until the vegetables are just wilted, about 2–3 minutes. Add the tamari and sesame oil, toss to combine, and transfer filling to a plate to cool completely.',
       'Place one wonton wrapper on a flat surface with a corner pointing toward you (diamond position). Spoon about 3 tablespoons (≈70g) of filling across the center. Fold the bottom corner over the filling, fold in the sides, and roll tightly. Seal the top corner with a dab of water. Repeat with remaining wrappers and filling.',
       'Heat 2–3 inches of vegetable oil in a deep skillet or pot to 350°F (175°C). Fry the egg rolls in batches, seam side down, for 3–4 minutes, turning once, until deep golden brown and crispy.',
-      'Drain on a rack or paper towels. Serve immediately with sweet-and-sour sauce or duck sauce (not included).'
+      'Drain on a rack or paper towels. Serve immediately with sweet-and-sour sauce or duck sauce (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'rolls', label: 'Egg Rolls', cookingMethod: '', yieldFactorWater: 0.6 }
@@ -15264,7 +15582,8 @@ export const LEVELS: Level[] = [
       'Add the cabbage and carrots. Stir-fry for 3–4 minutes until the cabbage is wilted but still has some texture.',
       'Add the bean sprouts and scallions. Stir-fry for 1–2 minutes.',
       'Add the tamari and sesame oil. Toss to combine and cook for 1 minute more.',
-      'Divide the rice among 4 bowls. Top with the pork filling and serve immediately.'
+      'Divide the rice among 4 bowls. Top with the pork filling and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -15307,7 +15626,8 @@ export const LEVELS: Level[] = [
       'Set up a breading station: flour in one shallow dish, beaten egg in a second, and panko breadcrumbs in a third.',
       'Dredge each cutlet in flour and shake off the excess. Dip in the beaten egg, letting the excess drip off. Press firmly into the panko to coat both sides.',
       'Heat olive oil in a large skillet over medium-high heat until shimmering. Add the cutlets and cook until deep golden brown, 3–4 minutes per side. (The ingredient list reflects only the oil absorbed into the crust.)',
-      'Transfer to a wire rack for 1–2 minutes. Serve with lemon wedges and an arugula salad (not included).'
+      'Transfer to a wire rack for 1–2 minutes. Serve with lemon wedges and an arugula salad (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'main', label: 'Pork Milanese', cookingMethod: '', yieldFactorWater: 0.9 }
@@ -15355,7 +15675,8 @@ export const LEVELS: Level[] = [
       'Place the rack bone-side down on a large sheet of foil. Wrap the foil tightly around the ribs to seal completely. Place on a baking sheet.',
       'Bake for 2.5–3 hours, until the meat is tender and beginning to pull back from the bones.',
       'Open the foil and brush both sides of the ribs generously with BBQ sauce. Return to the oven uncovered for 20–30 minutes, until the sauce caramelizes.',
-      'Rest for 10 minutes before slicing into individual ribs. Serve with additional BBQ sauce on the side (not included).'
+      'Rest for 10 minutes before slicing into individual ribs. Serve with additional BBQ sauce on the side (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'ribs', label: 'Baby Back Ribs', cookingMethod: '', yieldFactorWater: 0.73 },
@@ -15404,7 +15725,8 @@ export const LEVELS: Level[] = [
       'Mix the paprika, brown sugar, chili powder, garlic powder, onion powder, mustard, black pepper, salt, and cayenne in a small bowl to form the dry rub. Pat the ribs dry and coat all sides generously with the rub.',
       'Wrap the rack tightly in foil, place on the prepared baking sheet meat-side up, and bake for 2½ to 3 hours until the meat is tender and starting to pull from the bone tips.',
       'Carefully open the foil and drain off any accumulated juices. Brush the top generously with the BBQ sauce.',
-      'Increase the oven to 425°F (220°C) (or use the broiler), return the ribs uncovered for 10 to 15 minutes until the sauce caramelizes and sets. Let rest 5 minutes before cutting into individual ribs. Serve with coleslaw or potato salad (not included).'
+      'Increase the oven to 425°F (220°C) (or use the broiler), return the ribs uncovered for 10 to 15 minutes until the sauce caramelizes and sets. Let rest 5 minutes before cutting into individual ribs. Serve with coleslaw or potato salad (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'ribs', label: 'Spareribs', cookingMethod: '', yieldFactorWater: 0.596 },
@@ -15453,7 +15775,8 @@ export const LEVELS: Level[] = [
       'Arrange the ribs in a single layer on the prepared pan. Cover tightly with foil and bake for 1 hour 45 minutes to 2 hours until the meat is tender and cooked through.',
       'Carefully remove the top foil and drain off any accumulated juices. Brush the ribs generously with the BBQ sauce.',
       'Increase the oven to 425°F (220°C) (or use the broiler), return the ribs uncovered for 10 to 15 minutes until the sauce caramelizes and sets.',
-      'Let rest 5 minutes before serving. Serve 2 ribs per person with coleslaw or potato salad (not included).'
+      'Let rest 5 minutes before serving. Serve 2 ribs per person with coleslaw or potato salad (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'ribs', label: 'Country-Style Ribs', cookingMethod: '', yieldFactorWater: 0.577 },
@@ -15500,7 +15823,8 @@ export const LEVELS: Level[] = [
       'Set up three shallow dishes: one with the flour, one with the beaten eggs, and one with the bread crumbs mixed with the rosemary, marjoram, oregano, paprika, salt, and pepper.',
       'Dredge each cutlet in flour, shaking off the excess, then dip in egg, letting the excess drip off, then press firmly into the herbed bread crumb mixture to coat both sides.',
       'Heat the olive oil in a large skillet over medium-high heat. Cook the schnitzel in batches for 3 to 4 minutes per side until golden brown and cooked through. (The ingredient list reflects only the oil absorbed into the crust.)',
-      'Transfer to a wire rack and serve immediately with lemon wedges and a simple green salad or cucumber salad (not included).'
+      'Transfer to a wire rack and serve immediately with lemon wedges and a simple green salad or cucumber salad (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'main', label: 'Pork Schnitzel', cookingMethod: '', yieldFactorWater: 0.9 }
@@ -15558,7 +15882,8 @@ export const LEVELS: Level[] = [
       'Lay the prosciutto slices in an overlapping layer over the surface of each pounded tenderloin, leaving a 1/2-inch border on all sides. Spread the cooled shallot filling evenly over the prosciutto. Starting at the narrow end, roll each tenderloin up tightly jelly-roll style. Tie with kitchen twine at 1-inch intervals to hold the shape.',
       'Heat the remaining 1 tablespoon olive oil in the reserved skillet over medium heat. Place the rolls seam-side down and transfer the skillet to the oven. Roast until the center registers 140-145°F, 20 to 25 minutes total, turning once halfway through. Transfer to a cutting board to rest; reserve the skillet.',
       'Set the reserved skillet over medium-high heat. Add the white wine and the remaining capers, scraping up any browned bits from the pan bottom. Cook until the wine is nearly evaporated. Pour in the orange juice and chicken broth and simmer until the sauce reduces and turns slightly syrupy, 3 to 4 minutes. Remove from the heat and whisk in the butter until smooth. Taste and adjust salt and pepper; add a squeeze of lemon juice if the sauce tastes too sweet.',
-      'Remove the twine and cut each roll into 1/2-inch medallions. Arrange on plates, spoon the pan sauce generously over the top, and finish with fresh thyme leaves. Serve with roasted potatoes or egg noodles (not included).'
+      'Remove the twine and cut each roll into 1/2-inch medallions. Arrange on plates, spoon the pan sauce generously over the top, and finish with fresh thyme leaves. Serve with roasted potatoes or egg noodles (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'tenderloin', label: 'Tenderloin', cookingMethod: '', yieldFactorWater: 0.82 },
@@ -15606,7 +15931,8 @@ export const LEVELS: Level[] = [
       'Heat the oven to 450°F. Place the pork fat-side up in a shallow roasting pan. Roast uncovered for 30 minutes until the top begins to brown and develop a crust.',
       'Reduce the oven temperature to 250°F. Loosely tent the roast with foil. Continue roasting until the center registers 180°F on an instant-read thermometer, 6 to 8 hours.',
       'Remove the foil and continue roasting until the surface is deeply caramelized and the meat pulls apart easily with a fork, 30 to 45 minutes more.',
-      'Transfer to a cutting board and let rest 20 to 30 minutes. Pull into large chunks or slice. Serve with roasted vegetables, mashed potatoes, or over rice (not included).'
+      'Transfer to a cutting board and let rest 20 to 30 minutes. Pull into large chunks or slice. Serve with roasted vegetables, mashed potatoes, or over rice (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'pork', label: 'Pork Shoulder', cookingMethod: '', yieldFactorWater: 0.6 }
@@ -15654,7 +15980,8 @@ export const LEVELS: Level[] = [
       'Add the garlic and ginger to the empty side of the pan and stir for 30 seconds until fragrant. Add the carrot and peas and stir-fry 2 minutes. Push everything to the sides to clear the center.',
       'Crack the eggs into the center of the pan and scramble until just set, then break up and fold into the pork and vegetables.',
       'Add the cold cooked rice, breaking up any clumps. Stir-fry over high heat, tossing constantly, until the rice is heated through and beginning to dry out and separate, 3 to 4 minutes.',
-      'Drizzle in the tamari and sesame oil, toss to coat evenly, and cook 1 minute more. Remove from heat, scatter the scallions over the top, and serve immediately.'
+      'Drizzle in the tamari and sesame oil, toss to coat evenly, and cook 1 minute more. Remove from heat, scatter the scallions over the top, and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -15710,7 +16037,8 @@ export const LEVELS: Level[] = [
       'Reduce heat to medium. Add the remaining 2 tablespoons butter to the skillet. Whisk in the flour and cook 1 to 2 minutes until golden and smooth.',
       'Gradually whisk in the beef broth, scraping up any browned bits from the bottom of the pan. Add the heavy cream and Worcestershire sauce. Bring to a simmer and cook, stirring occasionally, until the sauce thickens, 4 to 5 minutes.',
       'Return the meatballs to the skillet. Simmer gently until the meatballs are cooked through and the sauce coats them, about 5 minutes more. Remove from heat and stir in the sour cream. Season with salt and pepper to taste.',
-      'Serve over egg noodles, mashed potatoes, or with lingonberry jam on the side (not included). Garnish with fresh parsley if desired.'
+      'Serve over egg noodles, mashed potatoes, or with lingonberry jam on the side (not included). Garnish with fresh parsley if desired.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'meatballs', label: 'Meatballs', cookingMethod: '', yieldFactorWater: 0.85 },
@@ -15760,7 +16088,8 @@ export const LEVELS: Level[] = [
       'Form into 8 equal patties (about 1/2 cup each), pressing firmly so they hold together. Place on a tray and refrigerate at least 20 minutes to help set.',
       'Heat the olive oil in a large skillet over medium heat. Add the crab cakes in batches without crowding.',
       'Cook until deeply golden brown on the first side, 3 to 4 minutes. Flip carefully and cook the second side 3 to 4 minutes until browned and heated through.',
-      'Transfer to a plate lined with paper towels briefly, then serve hot with lemon wedges and tartar sauce or remoulade (not included).'
+      'Transfer to a plate lined with paper towels briefly, then serve hot with lemon wedges and tartar sauce or remoulade (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'crab_cakes', label: 'Crab Cakes', cookingMethod: '', yieldFactorWater: 0.9 }
@@ -15805,7 +16134,8 @@ export const LEVELS: Level[] = [
       'Taste and adjust seasoning if needed. Cover and chill the crab filling for 10 to 15 minutes to firm slightly.',
       'Halve and pit the avocados. If needed, scoop a small amount from the center of each half to make room for filling.',
       'Spoon the chilled crab mixture into the avocado halves, mounding slightly.',
-      'Serve immediately chilled, optionally with extra lemon wedges (not included).'
+      'Serve immediately chilled, optionally with extra lemon wedges (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'stuffed_avocados', label: 'Stuffed avocados', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -15857,7 +16187,8 @@ export const LEVELS: Level[] = [
       'Stir vinegar mixture into rice and keep stirring as the rice cools and dries.',
       'In a small bowl, mix the crab meat with mayonnaise until lightly bound.',
       'Lay a nori sheet on a bamboo mat, spread an even layer of sushi rice with a 1/2-inch gap near the top, and arrange crab mixture, avocado slices, and julienned cucumber slightly toward the bottom.',
-      'Roll tightly, seal the edge, and repeat for remaining sheets. Slice each roll into even pieces and serve immediately.'
+      'Roll tightly, seal the edge, and repeat for remaining sheets. Slice each roll into even pieces and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'rice', label: 'Sushi rice', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -15910,7 +16241,8 @@ export const LEVELS: Level[] = [
       'Stir vinegar mixture into rice and keep stirring as the rice cools and dries.',
       'Lay a nori sheet on a bamboo mat, spread an even layer of sushi rice with a 1/2-inch gap near the top, and arrange smoked salmon, softened cream cheese, avocado slices, and julienned cucumber slightly toward the bottom.',
       'Roll tightly, seal the edge, and repeat for remaining sheets.',
-      'Slice each roll into even pieces and serve immediately chilled.'
+      'Slice each roll into even pieces and serve immediately chilled.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'rice', label: 'Sushi rice', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -15967,7 +16299,8 @@ export const LEVELS: Level[] = [
       'Prepare poke marinade: in a small bowl, combine 2 tbsp tamari and 2 tsp sesame oil.',
       'Cut raw chinook salmon into 3/4-inch cubes. Gently toss salmon with the tamari-sesame oil marinade in a bowl; let sit for 5 minutes.',
       'To compose the poke bowl: place 1 cup cooled sushi rice in the base of a bowl. Arrange marinated salmon, sliced avocado, sliced cucumber, cooked edamame, and sliced scallions in separate sections on top of the rice. Sprinkle with sesame seeds.',
-      'Top with 1 tsp fresh minced ginger. Serve immediately (poke is best served chilled or at room temperature within 30 minutes of assembly; do not refrigerate assembled bowl).'
+      'Top with 1 tsp fresh minced ginger. Serve immediately (poke is best served chilled or at room temperature within 30 minutes of assembly; do not refrigerate assembled bowl).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'rice', label: 'Sushi Rice', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -16023,7 +16356,8 @@ export const LEVELS: Level[] = [
       'Divide cooked quinoa evenly among 4 bowls.',
       'Top each bowl with cooked salmon, edamame, sliced avocado, cucumber, and scallions.',
       'Sprinkle sesame seeds and minced ginger over each bowl.',
-      'Serve immediately.'
+      'Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'quinoa', label: 'Quinoa', cookingMethod: '', yieldFactorWater: 0.7 },
@@ -16070,7 +16404,8 @@ export const LEVELS: Level[] = [
       'Flip the scallops. Add the butter, garlic, and thyme sprigs to the pan.',
       'Tilt the pan slightly and spoon the melted butter continuously over the scallops for 1–2 minutes until cooked through and opaque.',
       'Squeeze the lemon juice over the scallops and remove from heat.',
-      'Serve immediately. Pairs well with risotto, pasta, or crusty bread (not included).'
+      'Serve immediately. Pairs well with risotto, pasta, or crusty bread (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'scallops', label: 'Scallops', cookingMethod: '', yieldFactorWater: 0.82 }
@@ -16129,7 +16464,8 @@ export const LEVELS: Level[] = [
       'Reduce heat to medium. Add the garlic to the pan and cook for 30 seconds until fragrant.',
       'Pour in the White Chicken Stock, Worcestershire sauce, and lemon juice. Simmer for 2–3 minutes, scraping up any browned bits, until the sauce reduces slightly.',
       'Return the shrimp and crumbled bacon to the pan. Add the scallions and toss to combine.',
-      'Spoon the grits into bowls and top with the shrimp mixture. Serve immediately.'
+      'Spoon the grits into bowls and top with the shrimp mixture. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'grits', label: 'Grits', cookingMethod: '', yieldFactorWater: 0.82 },
@@ -16180,7 +16516,8 @@ export const LEVELS: Level[] = [
       'Preheat a grill or grill pan to medium-high heat and lightly oil the grates.',
       'Thread the shrimp and vegetables onto skewers, alternating shrimp with bell pepper, onion, and zucchini pieces.',
       'Grill the kabobs for 2–3 minutes per side until the shrimp are pink and opaque and the vegetables are lightly charred.',
-      'Remove from the grill and serve immediately. Pairs well with rice, couscous, or warm flatbread (not included).'
+      'Remove from the grill and serve immediately. Pairs well with rice, couscous, or warm flatbread (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'kabobs', label: 'Shrimp Kabobs', cookingMethod: '', yieldFactorWater: 0.85 }
@@ -16225,7 +16562,8 @@ export const LEVELS: Level[] = [
       'Working in batches if needed, cook the fillets until golden and cooked through, 2–3 minutes per side. Transfer to a warm serving plate.',
       'Reduce heat to medium. Add the 3 tablespoons of butter to the pan and swirl until golden-brown and nutty-smelling, about 1–2 minutes.',
       'Remove from heat. Add the lemon juice and fresh parsley; the butter will foam briefly — swirl to combine.',
-      'Pour the butter sauce over the fillets and serve immediately.'
+      'Pour the butter sauce over the fillets and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'meuniere', label: 'Meunière', cookingMethod: '', yieldFactorWater: 0.82 }
@@ -16274,7 +16612,8 @@ export const LEVELS: Level[] = [
       'Divide the warm rice among 4 bowls.',
       'Arrange the marinated tuna, diced avocado, and diced cucumber over the rice.',
       'Top each bowl with the sliced scallions and toasted sesame seeds.',
-      'Drizzle any remaining marinade over the top and serve immediately.'
+      'Drizzle any remaining marinade over the top and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -16330,7 +16669,8 @@ export const LEVELS: Level[] = [
       'Add the clams and mussels to the pot. Cover and cook until they begin to open, about 3 to 4 minutes.',
       'Add the cod and shrimp, pressing them gently into the broth. Cover and cook until the shrimp are pink and the fish flakes easily, about 3 to 4 minutes more.',
       'Remove and discard the thyme sprigs and any clams or mussels that did not open. Stir in the parsley.',
-      'Ladle into wide bowls and serve with crusty bread for dipping (not included).'
+      'Ladle into wide bowls and serve with crusty bread for dipping (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'fish_stock', label: 'Fish Stock', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -16380,7 +16720,8 @@ export const LEVELS: Level[] = [
       'Cut potatoes into 1/2-inch-thick wedges. Fry in batches at 375°F for 7-8 minutes, turning halfway, until golden and crisp. Drain on paper towels; season with salt and pepper. Keep warm in a 200°F oven.',
       'Dredge each cod fillet lightly in flour, then dip into beer batter and let excess drip off.',
       'Fry battered fish in batches at 375°F for 4-5 minutes, turning once, until deep golden brown and cooked through. Drain; season with salt.',
-      'Serve fish and chips together with malt vinegar and lemon wedges (not included).'
+      'Serve fish and chips together with malt vinegar and lemon wedges (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'fish', label: 'Battered Fish', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -16436,7 +16777,8 @@ export const LEVELS: Level[] = [
       'Add the rice; stir once to distribute evenly. Reduce heat to medium-low and cook uncovered for 10-12 minutes or until most of the liquid is absorbed, gently shaking the pan occasionally -- do not stir.',
       'Arrange shrimp, mussels, and clams over the rice; press lightly into the pan. Cover and cook 8-10 minutes, turning the shrimp halfway through, until rice has absorbed the liquid, shrimp are opaque, and shellfish have opened.',
       'Discard any mussels or clams that have not opened. Squeeze lemon juice over the top and scatter with parsley. Season to taste.',
-      'Remove from heat; rest 5 minutes before serving directly from the pan.'
+      'Remove from heat; rest 5 minutes before serving directly from the pan.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'rice', label: 'Saffron Rice', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -16483,7 +16825,8 @@ export const LEVELS: Level[] = [
       'Reduce heat to medium. Add butter to the skillet. Once foamy, add garlic and red pepper flakes; cook 1 minute until fragrant.',
       'Add white wine; simmer 2-3 minutes until reduced by half. Stir in lemon juice.',
       'Return shrimp to the pan; toss to coat and heat through, about 1 minute.',
-      'Remove from heat; scatter with parsley. Serve immediately over pasta or with crusty bread (not included).'
+      'Remove from heat; scatter with parsley. Serve immediately over pasta or with crusty bread (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'scampi', label: 'Shrimp Scampi', cookingMethod: '', yieldFactorWater: 0.82 }
@@ -16536,7 +16879,8 @@ export const LEVELS: Level[] = [
       'Add zucchini and mushrooms. Cook, stirring occasionally, until the vegetables are tender and any liquid has evaporated, 5 to 6 minutes.',
       'Add chickpeas, cumin, paprika, salt, and pepper. Stir to combine and cook until the chickpeas are heated through, about 2 minutes.',
       'Remove from heat and stir in the lime juice.',
-      'Divide the rice among 4 bowls. Top with the vegetable-chickpea mixture, garnish with scallions and cilantro, and serve.'
+      'Divide the rice among 4 bowls. Top with the vegetable-chickpea mixture, garnish with scallions and cilantro, and serve.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'rice', label: 'White Rice', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -16582,7 +16926,8 @@ export const LEVELS: Level[] = [
       'Heat sesame oil in a wok or large skillet over high heat. Add garlic and ginger and stir for 30 seconds. Add cabbage, carrots, and bean sprouts; stir-fry until wilted, 3 to 4 minutes. Add mushrooms and scallions and cook 2 more minutes. Add tamari, toss to combine. Spread filling on a plate and cool to room temperature.',
       'Lay one egg roll wrapper on a flat surface in a diamond orientation. Spoon about 3 tablespoons of filling onto the lower third of the wrapper. Fold the bottom corner up over the filling, fold in the side corners, then roll tightly toward the top corner. Dab the edge with water to seal. Repeat with remaining wrappers and filling.',
       'Heat vegetable oil in a large heavy skillet to about ½-inch depth over medium-high heat (about 350°F). Working in batches, add egg rolls seam-side down. Fry, turning with tongs, until golden brown on all sides, 3 to 4 minutes total.',
-      'Transfer to a paper-towel-lined plate to drain. Serve immediately with your preferred dipping sauce (not included).'
+      'Transfer to a paper-towel-lined plate to drain. Serve immediately with your preferred dipping sauce (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'egg_rolls', label: 'Egg Rolls', cookingMethod: '', yieldFactorWater: 0.62 }
@@ -16628,7 +16973,8 @@ export const LEVELS: Level[] = [
       'Bring 1½ cups of water to a boil in a medium saucepan; if the rice was rinsed, reduce the water by 2 tablespoons. Add the rice, reduce heat to low, cover, and cook until water is absorbed and rice is tender, about 18 minutes. Remove from heat and let stand 5 minutes, then fluff with a fork.',
       'While the rice cooks, heat the vegetable oil in a large skillet or wok over medium-high heat. Add the garlic and ginger and cook, stirring, about 30 seconds until fragrant.',
       'Add the cabbage, carrots, and mushrooms. Stir-fry 4–5 minutes until slightly softened. Add the bean sprouts, scallions, tamari, and sesame oil. Stir-fry 2–3 minutes more until heated through and lightly caramelized.',
-      'Divide the rice among bowls and top with the egg roll filling. Garnish with additional scallions or sesame seeds if desired (not included).'
+      'Divide the rice among bowls and top with the egg roll filling. Garnish with additional scallions or sesame seeds if desired (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -16675,7 +17021,8 @@ export const LEVELS: Level[] = [
       'In a large bowl, whisk together the tamari, garlic powder, onion powder, paprika, and grated ginger. Add the tofu pieces and toss gently to coat. Marinate for at least 15 minutes (up to 30 minutes).',
       'In a shallow dish, combine the cornstarch, salt, and black pepper. In a second shallow dish, spread the panko bread crumbs. Working with one piece at a time, dredge marinated tofu in the cornstarch mixture (the marinade moisture helps it adhere), then press firmly into the panko to coat all sides.',
       'Heat the vegetable oil in a large non-stick skillet over medium-high heat. Working in batches to avoid crowding, cook the nuggets 2–3 minutes per side, turning carefully, until golden brown and crispy on all sides. Add a little extra oil between batches if needed.',
-      'Transfer to a plate lined with paper towels. Serve immediately with your choice of dipping sauce such as sweet chili sauce, sriracha mayo, or tamari (not included).'
+      'Transfer to a plate lined with paper towels. Serve immediately with your choice of dipping sauce such as sweet chili sauce, sriracha mayo, or tamari (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'nuggets', label: 'Tofu Nuggets', cookingMethod: '', yieldFactorWater: 0.85 }
@@ -16731,7 +17078,8 @@ export const LEVELS: Level[] = [
       'Add the bell pepper, mushrooms, and snap peas. Stir-fry for 2 to 3 minutes until the vegetables are bright and tender-crisp.',
       'Return the tofu to the pan. Pour the sauce over everything and toss to coat. Cook for 1 minute until the sauce thickens.',
       'Remove from heat and drizzle the sesame oil over the stir-fry. Season with salt and pepper to taste.',
-      'Divide the cooked rice among four bowls and top with the stir-fry. Serve immediately.'
+      'Divide the cooked rice among four bowls and top with the stir-fry. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -16786,7 +17134,8 @@ export const LEVELS: Level[] = [
       'Add the broccoli and stir-fry for 3 to 4 minutes until bright green and tender-crisp.',
       'Return the tofu to the pan and pour the sesame sauce over everything. Toss to coat and cook for 1 to 2 minutes until the sauce thickens and glazes the tofu and broccoli.',
       'Remove from heat and sprinkle with sesame seeds and scallions. Add red pepper flakes for heat if desired.',
-      'Divide the rice among four bowls and top with the sesame tofu and broccoli. Serve immediately.'
+      'Divide the rice among four bowls and top with the sesame tofu and broccoli. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -16842,7 +17191,8 @@ export const LEVELS: Level[] = [
       'Add the tomatoes, ground turmeric, ground coriander, and chili powder. Cook for 4 to 5 minutes, stirring frequently, until the tomatoes break down and the mixture thickens into a deep red base.',
       'Add the cooked lentils to the tomato base and stir to combine. Season with salt and simmer together for 3 to 4 minutes until the flavors meld. Add a splash of water if the dal is too thick.',
       'Remove from heat and stir in the lemon juice. Taste and adjust seasoning.',
-      'Divide the rice among four bowls and ladle the dal over the top. Garnish with fresh cilantro and serve immediately.'
+      'Divide the rice among four bowls and ladle the dal over the top. Garnish with fresh cilantro and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -16897,7 +17247,8 @@ export const LEVELS: Level[] = [
       'Add the tomatoes, ground turmeric, ground coriander, and chili powder. Cook for 5 to 7 minutes, stirring frequently, until the tomatoes break down and the sauce thickens and deepens in color.',
       'Add the chickpeas and stir to coat in the masala sauce. Reduce heat to medium-low and simmer for 8 to 10 minutes, stirring occasionally, until the chickpeas have absorbed the flavors. Add a splash of water if the masala becomes too thick.',
       'Remove from heat and stir in the lemon juice. Season with salt to taste.',
-      'Divide the rice among four bowls, spoon the chana masala over the top, garnish with fresh cilantro, and serve immediately.'
+      'Divide the rice among four bowls, spoon the chana masala over the top, garnish with fresh cilantro, and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -16947,7 +17298,8 @@ export const LEVELS: Level[] = [
       'Add the crushed tomatoes, salt, and ground black pepper. Stir to combine, bring to a simmer, and cook for 8 to 10 minutes until the sauce thickens slightly.',
       'Using a spoon, make 4 wells in the sauce. Crack one egg into each well. Cover the skillet and cook over medium-low heat for 5 to 8 minutes, until the egg whites are set but the yolks are still slightly runny, or until cooked to your liking.',
       'Remove from heat. Crumble the feta over the top and garnish with fresh parsley.',
-      'Serve directly from the skillet with crusty bread or pita for dipping (not included).'
+      'Serve directly from the skillet with crusty bread or pita for dipping (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'shakshuka', label: 'Shakshuka', cookingMethod: '', yieldFactorWater: 0.88 }
@@ -17001,7 +17353,8 @@ export const LEVELS: Level[] = [
       'Cut the bell peppers in half lengthwise and remove the seeds and membranes. Arrange cut-side up in a 9×13-inch baking dish.',
       'Spoon the rice and bean filling into each pepper half, mounding slightly. Sprinkle the Mexican blend cheese evenly over the tops.',
       'Cover the baking dish tightly with aluminum foil and bake for 30 minutes. Uncover and bake for an additional 10 to 15 minutes, until the peppers are tender and the cheese is melted and lightly browned.',
-      'Let cool for 5 minutes before serving.'
+      'Let cool for 5 minutes before serving.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -17056,7 +17409,8 @@ export const LEVELS: Level[] = [
       'Add the tomatoes, black beans, sweet corn, ground cumin, chili powder, salt, and ground black pepper. Cook for 4 to 5 minutes, stirring often, until the tomatoes soften and the mixture comes together. Remove from heat and stir in the lime juice, cilantro, and cooked rice.',
       'Spoon the rice and bean filling into each broiled pepper half, mounding slightly. Sprinkle the shredded Cheddar cheese evenly over the tops.',
       'Bake uncovered at 375°F for 15 to 20 minutes, until the filling is heated through and the cheese is melted and lightly browned.',
-      'Let cool for 5 minutes before serving. Serve with sour cream or salsa on the side (not included).'
+      'Let cool for 5 minutes before serving. Serve with sour cream or salsa on the side (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -17107,7 +17461,8 @@ export const LEVELS: Level[] = [
       'Add the mushrooms and cook for 5 to 6 minutes, stirring often, until they release their moisture and begin to brown.',
       'Add the reserved zucchini flesh, tomatoes, dried oregano, salt, and ground black pepper. Cook for 3 to 4 minutes, stirring often, until most of the liquid has evaporated. Remove from heat and stir in the fresh basil.',
       'Spoon the filling into the zucchini shells, mounding slightly. Sprinkle with the shredded mozzarella, then the grated Parmesan.',
-      'Bake for 20 to 25 minutes, until the zucchini is tender and the cheese is melted and lightly golden. Let cool for 5 minutes before serving.'
+      'Bake for 20 to 25 minutes, until the zucchini is tender and the cheese is melted and lightly golden. Let cool for 5 minutes before serving.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'zucchini_boats', label: 'Zucchini Boats', cookingMethod: '', yieldFactorWater: 0.88 }
@@ -17157,7 +17512,8 @@ export const LEVELS: Level[] = [
       'Warm the corn tortillas one at a time in a dry skillet for about 30 seconds per side until pliable. Dip each tortilla briefly in the warm enchilada sauce to coat, fill with 2 tablespoons of the bean mixture and 2 tablespoons of the cheese, roll tightly, and place seam-side down in the baking dish.',
       'Pour the remaining enchilada sauce evenly over the rolled enchiladas. Sprinkle the remaining cheese over the top.',
       'Cover tightly with aluminum foil and bake for 20 minutes. Uncover and bake for an additional 10 minutes, until the cheese is melted and the sauce is bubbling.',
-      'Let rest for 5 minutes before serving. Serve with sour cream, avocado, or fresh cilantro on the side (not included).'
+      'Let rest for 5 minutes before serving. Serve with sour cream, avocado, or fresh cilantro on the side (not included).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sauce', label: 'Red Enchilada Sauce', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -17215,7 +17571,8 @@ export const LEVELS: Level[] = [
       'Preheat the oven to 375°F. Spread a thin layer of sauce on the bottom of a 9x13 baking dish. Layer 3 noodles over the sauce. Spread one-third of the ricotta mixture over the noodles, then top with a layer of sauce and a sprinkle of mozzarella. Repeat for 2 more noodle layers.',
       'Finish with a final layer of noodles, the remaining sauce, and the remaining mozzarella. Sprinkle any remaining parmesan over the top.',
       'Cover tightly with foil and bake at 375°F for 40 minutes. Remove foil and bake an additional 15–20 minutes until the cheese is bubbly and lightly golden.',
-      'Let the lasagna rest 15 minutes before cutting into 8 equal pieces and serving.'
+      'Let the lasagna rest 15 minutes before cutting into 8 equal pieces and serving.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'noodles', label: 'Noodles', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -17260,7 +17617,8 @@ export const LEVELS: Level[] = [
       'Mash the yolks well with a fork. Add the mayonnaise, mustard, apple cider vinegar, salt, and pepper; mix until smooth and creamy.',
       'Taste and adjust seasoning. The filling should be tangy and well-seasoned.',
       'Fill each egg white half with the yolk mixture using a small spoon or piping bag.',
-      'Dust lightly with paprika. Refrigerate until ready to serve, up to 24 hours.'
+      'Dust lightly with paprika. Refrigerate until ready to serve, up to 24 hours.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'filling', label: 'Deviled Egg Filling', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -17303,7 +17661,8 @@ export const LEVELS: Level[] = [
       'Heat a large pot or Dutch oven over medium heat. Add the cooked bacon and diced onion and cook until the onion is softened, about 5 minutes. Add the minced garlic and cook 1 minute more.',
       'Add the chopped collard greens in batches, stirring each addition to begin wilting before adding more.',
       'Add the water, apple cider vinegar, salt, black pepper, and red pepper flakes. Stir to combine. Bring to a boil, then reduce heat to low, cover, and simmer for 45–60 minutes, stirring occasionally, until the collard greens are very tender and most of the liquid has reduced.',
-      'Taste and adjust seasoning with additional salt, vinegar, or red pepper flakes as needed. Serve warm with any remaining pot likker (the flavorful cooking liquid).'
+      'Taste and adjust seasoning with additional salt, vinegar, or red pepper flakes as needed. Serve warm with any remaining pot likker (the flavorful cooking liquid).',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'greens', label: 'Collard Greens', cookingMethod: '', yieldFactorWater: 0.65 }
@@ -17344,7 +17703,8 @@ export const LEVELS: Level[] = [
       'Melt the butter in a large skillet over medium heat. Sprinkle the flour over the butter and whisk together, cooking for 1 minute.',
       'Pour in the heavy cream and whisk until smooth. Cook for 1–2 minutes until the sauce begins to thicken.',
       'Add the frozen corn kernels, sugar, salt, and black pepper. Stir to combine.',
-      'Cook over medium heat, stirring frequently, for 6–8 minutes until the corn is tender and the sauce coats the kernels. Taste and adjust seasoning with additional salt, pepper, or sugar as needed. Serve warm.'
+      'Cook over medium heat, stirring frequently, for 6–8 minutes until the corn is tender and the sauce coats the kernels. Taste and adjust seasoning with additional salt, pepper, or sugar as needed. Serve warm.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'cream', label: 'Creamed Corn', cookingMethod: '', yieldFactorWater: 0.9 }
@@ -17387,7 +17747,8 @@ export const LEVELS: Level[] = [
       'Add the spinach to a large dry skillet over high heat and cook, stirring, until completely wilted, 3–4 minutes. Transfer to a colander and squeeze out as much liquid as possible. Set aside.',
       'Melt the butter in the same skillet over medium heat. Add the onion and cook until softened, about 5 minutes. Add the garlic and cook 1 minute more.',
       'Sprinkle the flour over the onion mixture and whisk to combine. Cook 1 minute, then pour in the heavy cream and whisk until smooth. Cook for 2–3 minutes until the sauce thickens.',
-      'Stir in the squeezed spinach, nutmeg, salt, and black pepper. Cook for 2 minutes until heated through. Taste and adjust seasoning as needed. Serve warm.'
+      'Stir in the squeezed spinach, nutmeg, salt, and black pepper. Cook for 2 minutes until heated through. Taste and adjust seasoning as needed. Serve warm.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'cream', label: 'Creamed Spinach', cookingMethod: '', yieldFactorWater: 0.39 }
@@ -17427,7 +17788,8 @@ export const LEVELS: Level[] = [
       'Working in small batches, add fries to the oil and cook 3 to 4 minutes until just softened and pale blond. Do not let them brown. Remove with a slotted spoon and drain on a wire rack. Repeat with remaining fries.',
       'Let the blanched fries rest 10 minutes. Increase oil temperature to 375°F (190°C).',
       'Return fries in batches to the hot oil and cook 2 to 3 minutes until deep golden brown and crispy. Drain on a wire rack or paper towels.',
-      'Season immediately with salt and serve hot. (The nutrition reflects approximately 60g of vegetable oil absorbed into the finished fries.)'
+      'Season immediately with salt and serve hot. (The nutrition reflects approximately 60g of vegetable oil absorbed into the finished fries.)',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'fries', label: 'French Fries', cookingMethod: '', yieldFactorWater: 0.21 }
@@ -17467,7 +17829,8 @@ export const LEVELS: Level[] = [
       'In a wide skillet or saute pan, combine the carrots, butter, brown sugar, water, and salt. Bring to a boil over medium-high heat.',
       'Reduce heat to medium-low, cover, and simmer for 12 to 15 minutes until the carrots are just tender when pierced with a fork.',
       'Remove the lid and increase the heat to medium-high. Cook, stirring occasionally, for 5 to 7 minutes until the liquid reduces to a glossy glaze that coats the carrots.',
-      'Taste and adjust salt if needed. Serve immediately.'
+      'Taste and adjust salt if needed. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'carrots', label: 'Glazed Carrots', cookingMethod: '', yieldFactorWater: 0.8 }
@@ -17510,7 +17873,8 @@ export const LEVELS: Level[] = [
       'In a large bowl, whisk together the flour, salt, black pepper, garlic powder, and paprika. Add the milk and whisk until a smooth batter forms.',
       'Heat 2–3 inches of vegetable oil in a heavy pot or Dutch oven to 375°F (190°C).',
       'Working in batches, dip each onion ring in the batter, letting excess drip off, then carefully lower into the hot oil. Fry 2–3 minutes per side until golden brown and crispy.',
-      'Remove with a slotted spoon and drain on a wire rack or paper towel-lined plate. Season lightly with salt while hot and serve immediately.'
+      'Remove with a slotted spoon and drain on a wire rack or paper towel-lined plate. Season lightly with salt while hot and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'rings', label: 'Onion Rings', cookingMethod: '', yieldFactorWater: 0.29 }
@@ -17551,7 +17915,8 @@ export const LEVELS: Level[] = [
       'In a large bowl, whisk together the condensed cream of mushroom soup, whole milk, tamari, and black pepper until smooth.',
       'Add the cooked green beans and half the onion rings (broken into pieces). Stir to coat evenly, then spread into the prepared baking dish.',
       'Bake for 25 minutes, until bubbling at the edges. Remove from oven and scatter the remaining onion rings over the top. (Make or prepare the Onion Rings recipe ahead of time — see the Onion Rings recipe.)',
-      'Return to oven and bake 5 minutes more until the topping is heated through. Rest 5 minutes before serving.'
+      'Return to oven and bake 5 minutes more until the topping is heated through. Rest 5 minutes before serving.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'casserole', label: 'Green Bean Casserole', cookingMethod: '', yieldFactorWater: 0.88 },
@@ -17596,7 +17961,8 @@ export const LEVELS: Level[] = [
       'Add the dry rice and stir to coat. Toast for 1–2 minutes, stirring, until the grains are lightly golden.',
       'Pour in the chicken broth, salt, and pepper. (Make or prepare the Chicken Broth recipe ahead of time — see the Chicken Broth recipe.) Bring to a boil over medium-high heat.',
       'Reduce heat to low, cover tightly, and simmer 18 minutes until the liquid is absorbed and the rice is tender.',
-      'Remove from heat and let stand covered 5 minutes. Fluff with a fork, stir in the fresh parsley, and serve.'
+      'Remove from heat and let stand covered 5 minutes. Fluff with a fork, stir in the fresh parsley, and serve.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -17644,7 +18010,8 @@ export const LEVELS: Level[] = [
       'Add the rice and stir to coat in the oil and butter. Toast for 1-2 minutes until the edges of the grains look translucent.',
       'Pour in the white wine and stir until fully absorbed, about 2 minutes.',
       'Add the hot broth one ladleful (about 1/2 cup) at a time, stirring constantly and waiting for each addition to be absorbed before adding the next. Continue until the rice is tender with a slight bite (al dente) and the mixture is creamy, about 18-20 minutes total. You may not need all the broth.',
-      'Remove the thyme sprig. Remove from heat and stir in the remaining 2 tablespoons cold butter and the Parmesan until melted and creamy (mantecatura). Season with salt and pepper. Serve immediately.'
+      'Remove the thyme sprig. Remove from heat and stir in the remaining 2 tablespoons cold butter and the Parmesan until melted and creamy (mantecatura). Season with salt and pepper. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -17686,7 +18053,8 @@ export const LEVELS: Level[] = [
       'Trim the woody ends from the asparagus. Spread in a single layer on the prepared baking sheet.',
       'Drizzle with the olive oil and scatter the minced garlic over the spears. Season with salt and pepper. Toss to coat evenly, then arrange in a single layer.',
       'Roast until tender and the tips are lightly caramelized, 10-14 minutes depending on thickness. Thin spears need 10 minutes; thick spears 12-14.',
-      'Remove from oven and drizzle with the lemon juice. Serve immediately.'
+      'Remove from oven and drizzle with the lemon juice. Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'asparagus', label: 'Roasted Asparagus', cookingMethod: '', yieldFactorWater: 0.85 }
@@ -17727,7 +18095,8 @@ export const LEVELS: Level[] = [
       'Trim the stem ends from the Brussels sprouts and cut each sprout in half through the stem. Spread in a single layer on the prepared baking sheet, cut side down.',
       'Drizzle with the olive oil and scatter the minced garlic over the sprouts. Season with salt and pepper. Toss to coat evenly, then arrange cut side down for maximum caramelization.',
       'Roast until the cut sides are deeply golden and the outer leaves are crispy, 20-25 minutes. Do not stir during the first 15 minutes.',
-      'Remove from oven and drizzle with the balsamic vinegar. Toss gently and serve immediately.'
+      'Remove from oven and drizzle with the balsamic vinegar. Toss gently and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sprouts', label: 'Roasted Brussels Sprouts', cookingMethod: '', yieldFactorWater: 0.85 }
@@ -17771,7 +18140,8 @@ export const LEVELS: Level[] = [
       'Wipe the mushrooms clean with a damp paper towel. Twist or cut out the stems and set them aside. Arrange the caps hollow side up on the prepared baking sheet. Brush the outside of each cap lightly with the olive oil.',
       'Finely chop the reserved mushroom stems. In a bowl, combine the cream cheese, chopped stems, Parmesan cheese, minced garlic, chopped parsley, bread crumbs, salt, and pepper. Mix until well combined.',
       'Spoon the filling generously into each mushroom cap, mounding it slightly. Each cap should hold about 1 tablespoon of filling.',
-      'Bake until the mushrooms are tender and the filling is golden on top, 18-22 minutes. Serve warm.'
+      'Bake until the mushrooms are tender and the filling is golden on top, 18-22 minutes. Serve warm.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'mushrooms', label: 'Stuffed Mushrooms', cookingMethod: '', yieldFactorWater: 0.9 }
@@ -17811,7 +18181,8 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Melt the butter in a large skillet over medium heat. Add the diced onion and green bell pepper and cook, stirring occasionally, until softened, about 5 minutes.',
       'Add the sweet corn kernels and lima beans. Stir to combine and cook until heated through and any excess moisture has cooked off, about 5-7 minutes.',
-      'Season with salt and pepper. Taste and adjust seasoning. Serve warm.'
+      'Season with salt and pepper. Taste and adjust seasoning. Serve warm.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'succotash', label: 'Succotash', cookingMethod: '', yieldFactorWater: 0.9 }
@@ -17856,7 +18227,8 @@ export const LEVELS: Level[] = [
       'Sprinkle in the flour and stir to coat the vegetables. Cook, stirring constantly, for 1 minute.',
       'Add the asparagus and chicken broth. Bring to a boil, then reduce heat and simmer until the asparagus is very tender, about 15-18 minutes.',
       'Use an immersion blender (or transfer in batches to a blender) to purée the soup until very smooth. Return to the pot over low heat.',
-      'Stir in the heavy cream and lemon juice. Season with salt and pepper to taste. Warm through and serve.'
+      'Stir in the heavy cream and lemon juice. Season with salt and pepper to taste. Warm through and serve.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'stock', label: 'Chicken stock', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -17957,7 +18329,8 @@ export const LEVELS: Level[] = [
       'Reduce heat to medium. Add onion and celery; cook 5 minutes until softened. Add garlic and tomato paste; cook 2 minutes, stirring.',
       'Sprinkle flour over the vegetables and stir to coat. Gradually pour in the beef stock, scraping up any browned bits from the bottom. Return beef and any accumulated juices to the pot. Stir in Worcestershire sauce, thyme sprigs, and bay leaves.',
       'Bring to a boil, then reduce heat to low. Cover and simmer 1 hour. Add potatoes and carrots; continue simmering covered 45 to 60 minutes until beef is fork-tender and vegetables are soft.',
-      'Discard thyme sprigs and bay leaves. Taste and adjust seasoning. Suggestions (not included): Serve with crusty bread or over buttered egg noodles.'
+      'Discard thyme sprigs and bay leaves. Taste and adjust seasoning.',
+      'Suggestions (not included): Serve with crusty bread or over buttered egg noodles.'
     ],
     sections: [
       { key: 'stock', label: 'Beef stock', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -18005,7 +18378,8 @@ export const LEVELS: Level[] = [
       'Sprinkle flour over the vegetables and stir to coat. Cook 1 to 2 minutes, stirring, until the raw flour taste is gone.',
       'Gradually whisk in the chicken stock and half-and-half. Bring to a gentle simmer over medium heat, stirring often.',
       'Add broccoli; reduce heat to low and cook 15 to 20 minutes until very tender. Season with salt, pepper, and nutmeg.',
-      'Reduce heat to the lowest setting. Add shredded cheddar a handful at a time, stirring until fully melted before adding the next. Do not boil after adding the cheese. For a smoother texture, use an immersion blender to partially blend. Taste and adjust seasoning.'
+      'Reduce heat to the lowest setting. Add shredded cheddar a handful at a time, stirring until fully melted before adding the next. Do not boil after adding the cheese. For a smoother texture, use an immersion blender to partially blend. Taste and adjust seasoning.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'stock', label: 'Chicken stock', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -18317,7 +18691,8 @@ export const LEVELS: Level[] = [
       'Add the chicken pieces. Bring back to a gentle boil, then reduce heat to medium-low. Simmer uncovered for 12–15 minutes until the chicken is cooked through.',
       'Add the egg noodles. Continue simmering for 8–10 minutes, stirring occasionally, until the noodles are tender.',
       'Remove and discard the bay leaves. Stir in the parsley. Taste and adjust seasoning with additional salt if needed.',
-      'Serve immediately in warmed bowls. If making ahead, store the cooked noodles separately to prevent them from absorbing all the broth.'
+      'Serve immediately in warmed bowls. If making ahead, store the cooked noodles separately to prevent them from absorbing all the broth.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'stock', label: 'White Chicken Stock', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -18821,7 +19196,8 @@ export const LEVELS: Level[] = [
       'Add the fish stock, paprika, cayenne, bay leaves, and thyme. Bring to a boil, then reduce to a simmer. Cook for 15–20 minutes.',
       'Remove the bay leaves and thyme sprigs. Use an immersion blender to purée the soup until smooth.',
       'Stir in the heavy cream and lobster meat. Simmer gently for 5 minutes until the lobster is heated through.',
-      'Season with salt and black pepper to taste. Suggestions (not included): garnish with a drizzle of cream, a pinch of paprika, fresh chives or chopped tarragon.'
+      'Season with salt and black pepper to taste.',
+      'Suggestions (not included): Garnish with a drizzle of cream, a pinch of paprika, fresh chives or chopped tarragon.'
     ],
     sections: [
       { key: 'fish_stock', label: 'Fish Stock', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -18881,7 +19257,8 @@ export const LEVELS: Level[] = [
       'Add the dry pasta and cannellini beans. Continue to simmer until pasta is al dente, about 8–10 minutes.',
       'Stir in the spinach and cook just until wilted, 1–2 minutes. Remove the bay leaves and thyme sprig.',
       'Season with salt and black pepper to taste.',
-      'Serve hot. Suggestions (not included): top with freshly grated Parmesan cheese and a drizzle of olive oil; serve with crusty bread on the side.'
+      'Serve hot.',
+      'Suggestions (not included): Top with freshly grated Parmesan cheese and a drizzle of olive oil; serve with crusty bread on the side.'
     ],
     sections: [
       { key: 'stock', label: 'Vegetable Stock', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -18934,7 +19311,8 @@ export const LEVELS: Level[] = [
       'Stir in the chili powder, cumin, and oregano.',
       'Add the drained hominy. Continue to simmer for 30 minutes until the pork is very tender and the flavors have melded.',
       'Remove and discard the onion halves and bay leaves. Shred the pork into bite-sized pieces and return to the pot. Adjust seasoning with salt.',
-      'Serve hot. Suggestions (not included): garnish with shredded cabbage, sliced radishes, diced white onion, fresh cilantro, lime wedges, and tostadas on the side.'
+      'Serve hot.',
+      'Suggestions (not included): Garnish with shredded cabbage, sliced radishes, diced white onion, fresh cilantro, lime wedges, and tostadas on the side.'
     ],
     sections: [
       { key: 'pozole', label: 'Pozole Rojo', cookingMethod: '', yieldFactorWater: 0.73 }
@@ -18982,7 +19360,8 @@ export const LEVELS: Level[] = [
       'Remove from heat. Using an immersion blender, purée the soup directly in the pot until completely smooth. Alternatively, carefully transfer in batches to a blender, blend until smooth, then return to the pot.',
       'Reduce heat to low. Stir in the heavy cream until fully incorporated. Warm gently for 3–5 minutes — do not boil.',
       'Taste and adjust seasoning with additional salt and black pepper as needed.',
-      'Serve hot. Suggestions (not included): crusty bread or a grilled cheese sandwich on the side.'
+      'Serve hot.',
+      'Suggestions (not included): Serve with crusty bread or a grilled cheese sandwich on the side.'
     ],
     sections: [
       { key: 'soup', label: 'Tomato Soup', cookingMethod: '', yieldFactorWater: 0.75 }
@@ -19017,7 +19396,8 @@ export const LEVELS: Level[] = [
       'Slice the bagel in half horizontally.',
       'Toast the bagel halves in a toaster or toaster oven until golden and crisp, 2–3 minutes (optional but recommended).',
       'Spread 1 tablespoon of cream cheese evenly on each half.',
-      'Serve immediately.'
+      'Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'bagel', label: 'Bagel', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -19056,7 +19436,8 @@ export const LEVELS: Level[] = [
       'Spread 1 tablespoon of cream cheese evenly on each half.',
       'Layer the smoked salmon evenly over each half.',
       'Top with red onion slices and capers.',
-      'Serve immediately.'
+      'Serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'bagel', label: 'Bagel', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -19098,7 +19479,8 @@ export const LEVELS: Level[] = [
       'Add onion and green bell pepper; cook 3–4 minutes, stirring, until softened.',
       'Add diced ham and cook 1 minute more, stirring to heat through.',
       'Pour the beaten eggs over the filling. Let sit 10–15 seconds, then stir gently with a spatula, folding the egg mixture until just set, 2–3 minutes total.',
-      'Remove from heat, top with shredded cheese, and serve immediately.'
+      'Remove from heat, top with shredded cheese, and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'scramble', label: 'Scramble', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -19141,7 +19523,8 @@ export const LEVELS: Level[] = [
       'Add onion and jalapeño; cook 2–3 minutes, stirring, until softened.',
       'Add tomato and cook 1 minute more, stirring.',
       'Pour in the beaten eggs. Cook, stirring gently, until just set, 2–3 minutes.',
-      'Remove from heat, top with shredded cheese and fresh cilantro, and serve immediately.'
+      'Remove from heat, top with shredded cheese and fresh cilantro, and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'migas', label: 'Migas', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -19186,7 +19569,8 @@ export const LEVELS: Level[] = [
       'Add tomato and cook 1 minute more, stirring.',
       'Add the crushed tortilla chips and stir to coat, 30 seconds.',
       'Pour in the beaten eggs. Cook, stirring gently, until just set and chips are softened, 2–3 minutes.',
-      'Remove from heat, top with shredded cheese and fresh cilantro, and serve immediately.'
+      'Remove from heat, top with shredded cheese and fresh cilantro, and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'migas', label: 'Migas', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -19224,7 +19608,8 @@ export const LEVELS: Level[] = [
       'Add half the granola and half the blueberries.',
       'Spoon the remaining yogurt on top.',
       'Top with the remaining granola and blueberries.',
-      'Drizzle with honey and serve immediately.'
+      'Drizzle with honey and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'parfait', label: 'Parfait', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -19775,7 +20160,8 @@ export const LEVELS: Level[] = [
       'Transfer the soaked chiles, cooked onion mixture, cumin, oregano, salt, and 2 cups water to a blender. Blend on high until completely smooth, about 1 minute.',
       'Strain the blended sauce through a fine-mesh sieve into the skillet, pressing with a spatula to push through as much pulp as possible. Discard the remaining skins and seeds in the strainer.',
       'Bring the strained sauce to a simmer over medium heat. Cook uncovered, stirring occasionally, for 10 to 15 minutes until the sauce thickens to the consistency of heavy cream. Taste and adjust salt.',
-      'Use immediately for enchiladas, or cool completely and refrigerate for up to 1 week. The sauce can also be frozen for up to 3 months.'
+      'Use immediately for enchiladas, or cool completely and refrigerate for up to 1 week. The sauce can also be frozen for up to 3 months.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.73 }
@@ -19822,7 +20208,8 @@ export const LEVELS: Level[] = [
       'Combine all ingredients in a medium saucepan over medium heat. Stir well to dissolve the sugar and molasses.',
       'Bring to a gentle simmer, then reduce heat to low. Cook uncovered for 20 to 25 minutes, stirring occasionally, until the sauce thickens and the flavors meld.',
       'Taste and adjust seasoning — add more brown sugar for sweetness, vinegar for tang, or cayenne for heat.',
-      'Remove from heat and let cool. The sauce will thicken further as it cools. Store refrigerated for up to 2 weeks. Use as a glaze, dipping sauce, or basting sauce for ribs, chicken, or burgers.'
+      'Remove from heat and let cool. The sauce will thicken further as it cools. Store refrigerated for up to 2 weeks. Use as a glaze, dipping sauce, or basting sauce for ribs, chicken, or burgers.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.85 }
@@ -20018,7 +20405,8 @@ export const LEVELS: Level[] = [
       'Heat the olive oil in a skillet over medium-high heat. Cook the chicken for 6–7 minutes per side, or until cooked through (internal temperature 165°F). Let rest 5 minutes, then slice into strips.',
       'Make or prepare the Caesar Salad Dressing (see the Caesar Salad Dressing recipe).',
       'Warm the flour tortillas in a dry skillet for 30 seconds per side, or wrap in a damp paper towel and microwave for 20 seconds.',
-      'Lay a tortilla flat. Arrange half the romaine down the center, top with chicken strips, croutons, and Parmesan. Drizzle with half the Caesar dressing, fold in the sides, and roll tightly. Repeat with the second tortilla.'
+      'Lay a tortilla flat. Arrange half the romaine down the center, top with chicken strips, croutons, and Parmesan. Drizzle with half the Caesar dressing, fold in the sides, and roll tightly. Repeat with the second tortilla.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -20070,7 +20458,8 @@ export const LEVELS: Level[] = [
       'Heat a non-stick skillet over medium-high heat. Cook the snapper for 3–4 minutes per side, until opaque and it flakes easily with a fork. Break into large pieces.',
       'In a small bowl, stir together the sour cream and lime juice to make a lime crema.',
       'Warm the flour tortillas in a dry skillet for 30 seconds per side.',
-      'Lay each tortilla flat. Layer on shredded cabbage, avocado, tomato, and snapper. Top with lime crema and cilantro, fold in the sides, and roll tightly.'
+      'Lay each tortilla flat. Layer on shredded cabbage, avocado, tomato, and snapper. Top with lime crema and cilantro, fold in the sides, and roll tightly.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'fish', label: 'Fish', cookingMethod: '', yieldFactorWater: 0.82 },
@@ -20124,7 +20513,8 @@ export const LEVELS: Level[] = [
       'Heat the olive oil in a skillet over medium-high heat. Cook the patties for 4–5 minutes per side, until cooked through (internal temperature 160°F). Remove and rest 3 minutes.',
       'Make the tzatziki: in a small bowl, stir together the Greek yogurt, cucumber, mint, lemon juice, and garlic. Season with a pinch of salt.',
       'Lightly toast the hamburger buns in the same skillet.',
-      'Place arugula on the bottom bun, top with the lamb patty, feta crumbles, tomato, and red onion. Spoon tzatziki over the top, close with the top bun, and serve immediately.'
+      'Place arugula on the bottom bun, top with the lamb patty, feta crumbles, tomato, and red onion. Spoon tzatziki over the top, close with the top bun, and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'patty', label: 'Patty', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -20179,7 +20569,8 @@ export const LEVELS: Level[] = [
       'Whisk together the 1 tbsp lemon juice, 1 tbsp olive oil, and pinch of oregano in a small bowl to make the dressing.',
       'Warm the tortillas in a dry skillet over medium heat for 30 seconds per side until pliable.',
       'Spread 2 tbsp hummus over each warm tortilla. Layer romaine, sliced chicken, cucumber, tomato, red onion, feta, and olives. Drizzle with the lemon dressing.',
-      'Fold in the sides of each tortilla and roll up tightly. Cut in half on the diagonal and serve immediately.'
+      'Fold in the sides of each tortilla and roll up tightly. Cut in half on the diagonal and serve immediately.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -20223,7 +20614,8 @@ export const LEVELS: Level[] = [
       'Mix the garlic powder, salt, and black pepper into the ground beef until just combined. Divide into 12 equal portions (~1½ oz each) and press each into a thin round patty about 2 inches in diameter. Press a small indentation in the center of each to prevent doming.',
       'Heat a large skillet or griddle over medium-high heat (no oil needed). Cook the patties 2–3 minutes per side until cooked through (internal temperature 160°F). During the last 30 seconds, place a half-slice of American cheese on each patty, cover the pan, and cook until melted.',
       'While still hot, top each cheesy patty with a half-strip of bacon and a dill pickle slice.',
-      'Arrange on a platter and serve with ketchup and mustard for dipping. Serve 3 bites per person.'
+      'Arrange on a platter and serve with ketchup and mustard for dipping. Serve 3 bites per person.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'patties', label: 'Patties', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -20268,7 +20660,8 @@ export const LEVELS: Level[] = [
       'Lay a flour tortilla flat on a clean surface. Spread a quarter of the cream cheese mixture evenly to the edges, leaving a ¼-inch border at one end.',
       'Layer a quarter of the turkey, shredded cheddar, spinach leaves, red bell pepper slices, and scallions evenly over the cream cheese.',
       'Starting from the filled edge, roll the tortilla tightly into a log. Repeat with the remaining 3 tortillas. Wrap each roll in plastic wrap and refrigerate for at least 1 hour (or overnight) to firm up.',
-      'Unwrap and slice each roll into 8–10 rounds about 1 inch thick using a sharp serrated knife. Arrange on a platter and serve chilled.'
+      'Unwrap and slice each roll into 8–10 rounds about 1 inch thick using a sharp serrated knife. Arrange on a platter and serve chilled.',
+      'Suggestions (not included):'
     ],
     sections: [
       { key: 'pinwheels', label: 'Pinwheels', cookingMethod: '', yieldFactorWater: 1.0 }

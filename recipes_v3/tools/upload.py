@@ -137,7 +137,12 @@ def _build_payload(rid: str, recipes, ings, ledger, instrs) -> dict:
         })
 
     # recipe_instructions_json: ordered list of step strings from recipe_instructions.csv.
-    recipe_instructions = json.dumps(instrs.get(rid, []), separators=(",", ":"))
+    # Auto-append the Suggestions step if it was not explicitly authored.
+    _SUGGESTIONS_MARKER = "Suggestions (not included):"
+    instr_list = list(instrs.get(rid, []))
+    if instr_list and not instr_list[-1].startswith(_SUGGESTIONS_MARKER):
+        instr_list.append(_SUGGESTIONS_MARKER)
+    recipe_instructions = json.dumps(instr_list, separators=(",", ":"))
 
     # v3 only writes the columns it owns. Identity / game-key / audit-history
     # columns (food_word, category, cooking_method casing, serving_label,

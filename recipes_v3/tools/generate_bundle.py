@@ -543,6 +543,10 @@ for recipe in recipes:
         key=lambda x: int(x.get('step_order', 0) or 0)
     )
     instr_texts = [r['step_text'] for r in instr_rows if r.get('step_text')]
+    # Auto-append the Suggestions step if it was not explicitly authored.
+    _SUGGESTIONS_MARKER = "Suggestions (not included):"
+    if instr_texts and not instr_texts[-1].startswith(_SUGGESTIONS_MARKER):
+        instr_texts.append(_SUGGESTIONS_MARKER)
 
     link_type = recipe.get('link_type', 'ingredient') or 'ingredient'
     servings_text = recipe.get('servings_label', '')
