@@ -1304,8 +1304,8 @@ export const LEVELS: Level[] = [
       'Cut with a floured 2 1/2-inch round biscuit cutter, pressing straight down without twisting. Gather scraps gently and pat out once more to cut remaining biscuits. You should get 8 biscuits.',
       'Place biscuits on the prepared baking sheet with sides nearly touching for soft sides, or 1 inch apart for crisp sides.',
       'Bake 12–15 minutes until tops are golden brown and the biscuits have risen tall and split easily.',
-      'Transfer to a rack. Serve warm, split horizontally with sweetened berries and whipped cream for classic strawberry shortcake.',
-      'Suggestions (not included):'
+      'Transfer to a rack.',
+      'Suggestions (not included): Serve warm, split horizontally with sweetened berries and whipped cream for classic strawberry shortcake.'
     ],
     sections: [
       { key: 'biscuit', label: 'Biscuit', cookingMethod: '', yieldFactorWater: 0.85 }
@@ -1409,8 +1409,8 @@ export const LEVELS: Level[] = [
       'Bake on the lower rack for 35–40 minutes, until the top is golden, springs back when lightly pressed, and a wooden skewer inserted near the center comes out clean. Cracks on the surface are normal and expected.',
       'Invert immediately: Flip the pan upside down and rest it on its built-in feet, or set it over something that elevates it. Let the cake cool completely upside-down, about 1 1/2 hours — this prevents the airy structure from collapsing under its own weight while it sets.',
       'To unmold: run a thin knife around the outer edge and around the center tube using a gentle sawing motion (do not press inward — keep the knife flush against the metal). Push the removable bottom up and out of the outer ring. Slide the knife under the cake to release it from the bottom.',
-      'Slice with a serrated knife in a gentle sawing motion (a regular knife will compress the cake). Serve plain, with sweetened berries, or with a light glaze.',
-      'Suggestions (not included):'
+      'Slice with a serrated knife in a gentle sawing motion (a regular knife will compress the cake).',
+      'Suggestions (not included): Serve plain, with sweetened berries, or with a light glaze.'
     ],
     sections: [
       { key: 'cake', label: 'Cake', cookingMethod: '', yieldFactorWater: 0.55 }
