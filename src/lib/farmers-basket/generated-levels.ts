@@ -14646,8 +14646,7 @@ export const LEVELS: Level[] = [
       'Preheat grill to medium-high heat. Thread lamb onto metal or soaked wooden skewers.',
       'Grill skewers 3 to 4 minutes per side, turning every few minutes, until lamb is well-seared and an instant-read thermometer reads 145°F for medium.',
       'Transfer to a plate and rest 5 minutes before serving.',
-      'Serve with flatbread, rice, or a cucumber-yogurt sauce (not included).',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with flatbread, rice, or a cucumber-yogurt sauce.'
     ],
     sections: [
       { key: 'kabob', label: 'Kabob', cookingMethod: '', yieldFactorWater: 0.75 }
@@ -14695,8 +14694,7 @@ export const LEVELS: Level[] = [
       'Refrigerate the skewers at least 30 minutes (up to 4 hours) to firm up.',
       'Preheat grill to medium-high heat. Grill kofta 3 to 4 minutes per side (12 to 14 minutes total), turning carefully, until cooked through and an instant-read thermometer reads 160°F.',
       'Transfer to a platter and rest 3 minutes before serving.',
-      'Serve with flatbread, tzatziki, or a fresh herb salad (not included).',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with flatbread, tzatziki, or a fresh herb salad.'
     ],
     sections: [
       { key: 'kofta', label: 'Kofta', cookingMethod: '', yieldFactorWater: 0.75 }
@@ -14739,8 +14737,7 @@ export const LEVELS: Level[] = [
       'Preheat grill to medium-high heat. Thread lamb onto metal or soaked wooden skewers, 4 to 5 pieces per skewer.',
       'Grill skewers 3 to 4 minutes per side (12 to 14 minutes total), turning every few minutes, until well-seared and an instant-read thermometer reads 145°F for medium.',
       'Transfer to a plate and rest 5 minutes before serving.',
-      'Serve with warm pita, tzatziki sauce, sliced tomatoes, and onion (not included).',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with warm pita, tzatziki sauce, sliced tomatoes, and onion.'
     ],
     sections: [
       { key: 'souvlaki', label: 'Souvlaki', cookingMethod: '', yieldFactorWater: 0.75 }
@@ -14859,8 +14856,8 @@ export const LEVELS: Level[] = [
       'Return the browned lamb to the pot along with any accumulated juices. Add the water and the bay leaves. Stir to coat the lamb with the sauce.',
       'Bring to a boil, then reduce heat to low. Cover and simmer for 45 to 60 minutes, stirring occasionally, until the lamb is tender.',
       'Remove from heat and let cool for 2 to 3 minutes. Stir in the room-temperature yogurt gradually to prevent curdling. Return to low heat and simmer uncovered for 5 minutes.',
-      'Remove and discard the bay leaves. Taste and adjust seasoning. Serve over basmati rice or with naan bread (not included).',
-      'Suggestions (not included):'
+      'Remove and discard the bay leaves. Taste and adjust seasoning.',
+      'Suggestions (not included): Serve over basmati rice or with naan bread.'
     ],
     sections: [
       { key: 'curry', label: 'Curry', cookingMethod: '', yieldFactorWater: 0.66 }
