@@ -1022,7 +1022,8 @@ SAUCE_008,4,"Pour in heavy cream and bring to a gentle simmer, stirring occasion
 SAUCE_008,5,Simmer 3 to 4 minutes until the cream has reduced slightly and coats the back of a spoon.
 SAUCE_008,6,"Remove from heat. Add Parmesan a little at a time, stirring until fully melted and smooth."
 SAUCE_008,7,"Season with salt, white pepper, and a pinch of nutmeg. Stir to combine."
-SAUCE_008,8,"Serve immediately over pasta, or hold warm over very low heat, stirring occasionally."
+SAUCE_008,8,"Hold warm over very low heat, stirring occasionally, if not serving immediately."
+SAUCE_008,9,Suggestions (not included): Serve immediately over pasta.
 SAUCE_009,1,Do not use aluminum to prepare or store. It will gray the mixture.,
 SAUCE_009,2,"In a small heatproof bowl, whisk together the egg yolks and lemon juice until smooth and combined.",
 SAUCE_009,3,"Set the bowl over a saucepan of barely simmering water, ensuring the bottom of the bowl does not touch the water.",
@@ -1061,7 +1062,8 @@ SAUCE_013,3,Add the 1/2 cup of Mayonnaise and fold in gently until the mixture i
 SAUCE_013,4,Add the 3 tbsp of Chili Sauce and stir until the dressing is uniformly red-orange with no streaks.
 SAUCE_013,5,"Taste and adjust: add more horseradish for extra bite, a splash of lemon juice for brightness, or a small pinch of salt if needed."
 SAUCE_013,6,Cover tightly and refrigerate for at least 30 minutes before serving to allow the flavors to meld.
-SAUCE_013,7,"Serve as a sandwich spread, salad dressing, or dipping sauce. Store covered in the refrigerator for up to 1 week; stir before each use."
+SAUCE_013,7,Store covered in the refrigerator for up to 1 week; stir before each use.
+SAUCE_013,8,"Suggestions (not included): Serve as a sandwich spread, salad dressing, or dipping sauce."
 ENTR_001,1,Using a meat mallet pound one side of each sirloin tip steak with the spiky side of the mallet. Flip and pound the other side to ¼-inch thickness. Pound firmly but do not shred the meat. Lightly seasoning the steaks before pounding will push the seasoning into the steaks.
 ENTR_001,2,"In a shallow dish, whisk together the flour, paprika, garlic powder, salt, and black pepper. In a second shallow dish, beat the egg."
 ENTR_001,3,"Dredge each steak in the seasoned flour, shaking off the excess. Dip in the beaten egg, then dredge in the flour again, pressing firmly so the coating adheres. Set aside on a wire rack."
@@ -1212,7 +1214,8 @@ SIDE_023,6,Season lightly with salt while still hot and serve immediately.
 SAUCE_015,1,"Melt the butter in a small saucepan over medium heat. Whisk in the flour and cook, stirring constantly, for 1 to 2 minutes until the roux is pale golden and no longer smells raw."
 SAUCE_015,2,"Gradually whisk in the milk in a thin stream, whisking constantly to prevent lumps. Cook, stirring, for 3 to 4 minutes until the sauce thickens enough to coat the back of a spoon."
 SAUCE_015,3,"Remove from heat. Stir in the shredded cheddar a handful at a time until fully melted and smooth. Season with garlic powder, onion powder, salt, and black pepper."
-SAUCE_015,4,"Serve immediately over steamed broccoli, cauliflower, or other vegetables. Reheat gently over low heat, whisking in a splash of milk if needed to loosen."
+SAUCE_015,4,"Reheat gently over low heat, whisking in a splash of milk if needed to loosen."
+SAUCE_015,5,"Suggestions (not included): Serve over steamed broccoli, cauliflower, or other vegetables."
 SIDE_024,1,"Preheat oven to 375°F (190°C). Scrub sweet potatoes, pierce several times with a fork, and bake directly on the oven rack until completely tender, about 50–60 minutes."
 SIDE_024,2,Remove sweet potatoes from oven and let cool slightly. Reduce oven temperature to 350°F (175°C).
 SIDE_024,3,Peel the sweet potatoes and place the flesh in a large bowl. Mash until smooth.
@@ -2696,7 +2699,8 @@ SAUCE_025,2,"Bring to a gentle simmer, then reduce heat to low. Cook uncovered f
 SAUCE_026,1,Combine all ingredients in a medium saucepan over medium heat. Stir well to dissolve the sugar and molasses.
 SAUCE_026,2,"Bring to a gentle simmer, then reduce heat to low. Cook uncovered for 20 to 25 minutes, stirring occasionally, until the sauce thickens and the flavors meld."
 SAUCE_026,3,"Taste and adjust seasoning — add more brown sugar for sweetness, vinegar for tang, or cayenne for heat."
-SAUCE_026,4,"Remove from heat and let cool. The sauce will thicken further as it cools. Store refrigerated for up to 2 weeks. Use as a glaze, dipping sauce, or basting sauce for ribs, chicken, or burgers."
+SAUCE_026,4,Remove from heat and let cool. The sauce will thicken further as it cools. Store refrigerated for up to 2 weeks.
+SAUCE_026,5,"Suggestions (not included): Use as a glaze, dipping sauce, or basting sauce for ribs, chicken, or burgers."
 SAUCE_027,1,"Heat the olive oil in a medium saucepan over medium heat. Add the diced onion and cook, stirring occasionally, until softened and lightly golden, about 8 minutes."
 SAUCE_027,2,"Add the minced garlic and red pepper flakes and cook, stirring, until fragrant, about 1 minute."
 SAUCE_027,3,"Pour in the crushed tomatoes. Season with the oregano, salt, and black pepper and stir to combine."

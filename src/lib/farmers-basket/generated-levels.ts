@@ -7732,8 +7732,8 @@ export const LEVELS: Level[] = [
       'Simmer 3 to 4 minutes until the cream has reduced slightly and coats the back of a spoon.',
       'Remove from heat. Add Parmesan a little at a time, stirring until fully melted and smooth.',
       'Season with salt, white pepper, and a pinch of nutmeg. Stir to combine.',
-      'Serve immediately over pasta, or hold warm over very low heat, stirring occasionally.',
-      'Suggestions (not included):'
+      'Hold warm over very low heat, stirring occasionally, if not serving immediately.',
+      'Suggestions (not included): Serve immediately over pasta.'
     ],
     sections: [
       { key: 'sauce', label: 'Sauce:', cookingMethod: '', yieldFactorWater: 0.88 }
@@ -7960,8 +7960,8 @@ export const LEVELS: Level[] = [
       'Add the 3 tbsp of Chili Sauce and stir until the dressing is uniformly red-orange with no streaks.',
       'Taste and adjust: add more horseradish for extra bite, a splash of lemon juice for brightness, or a small pinch of salt if needed.',
       'Cover tightly and refrigerate for at least 30 minutes before serving to allow the flavors to meld.',
-      'Serve as a sandwich spread, salad dressing, or dipping sauce. Store covered in the refrigerator for up to 1 week; stir before each use.',
-      'Suggestions (not included):'
+      'Store covered in the refrigerator for up to 1 week; stir before each use.',
+      'Suggestions (not included): Serve as a sandwich spread, salad dressing, or dipping sauce.'
     ],
     sections: [
       { key: 'mayonnaise', label: 'Mayonnaise', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -9145,8 +9145,8 @@ export const LEVELS: Level[] = [
       'Melt the butter in a small saucepan over medium heat. Whisk in the flour and cook, stirring constantly, for 1 to 2 minutes until the roux is pale golden and no longer smells raw.',
       'Gradually whisk in the milk in a thin stream, whisking constantly to prevent lumps. Cook, stirring, for 3 to 4 minutes until the sauce thickens enough to coat the back of a spoon.',
       'Remove from heat. Stir in the shredded cheddar a handful at a time until fully melted and smooth. Season with garlic powder, onion powder, salt, and black pepper.',
-      'Serve immediately over steamed broccoli, cauliflower, or other vegetables. Reheat gently over low heat, whisking in a splash of milk if needed to loosen.',
-      'Suggestions (not included):'
+      'Reheat gently over low heat, whisking in a splash of milk if needed to loosen.',
+      'Suggestions (not included): Serve over steamed broccoli, cauliflower, or other vegetables.'
     ],
     sections: [
       { key: 'sauce', label: 'Cheese Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
@@ -20134,8 +20134,8 @@ export const LEVELS: Level[] = [
       'Combine all ingredients in a medium saucepan over medium heat. Stir well to dissolve the sugar and molasses.',
       'Bring to a gentle simmer, then reduce heat to low. Cook uncovered for 20 to 25 minutes, stirring occasionally, until the sauce thickens and the flavors meld.',
       'Taste and adjust seasoning — add more brown sugar for sweetness, vinegar for tang, or cayenne for heat.',
-      'Remove from heat and let cool. The sauce will thicken further as it cools. Store refrigerated for up to 2 weeks. Use as a glaze, dipping sauce, or basting sauce for ribs, chicken, or burgers.',
-      'Suggestions (not included):'
+      'Remove from heat and let cool. The sauce will thicken further as it cools. Store refrigerated for up to 2 weeks.',
+      'Suggestions (not included): Use as a glaze, dipping sauce, or basting sauce for ribs, chicken, or burgers.'
     ],
     sections: [
       { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.85 }
