@@ -3125,7 +3125,6 @@ export const LEVELS: Level[] = [
       'Sprinkle the Mexican cheese blend over the eggs and fold to melt, about 30 seconds.',
       'Warm the flour tortilla in a dry skillet for 30 seconds per side, or microwave for 15–20 seconds.',
       'Spoon the egg and cheese mixture onto the center of the tortilla. Fold in the sides and roll up tightly.',
-      '1 burrito (180g): 498.6 cal | 23.4g protein | 28.5g fat | 35.7g carbs | 2.4g fiber | 3.2g sugar | 88.6g water',
       'Suggestions (not included):'
     ],
     sections: [
