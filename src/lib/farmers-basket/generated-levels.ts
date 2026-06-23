@@ -21646,5 +21646,79 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'milkshake', label: 'Milkshake', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_002',
+    name: 'Chocolate Milkshake',
+    category: 'beverages',
+    dietaryCategory: 'veggie',
+    levelNum: 444,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 milkshake',
+    prepTime: '5 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":716.3,"pro":12.8,"fat":31.5,"carb":102.8,"fib":4.2,"h2o":212.9,"sug":89.4,"perServing":{"cal":716.3,"pro":12.8,"fat":31.5,"carb":102.8,"fib":4.2,"h2o":212.9,"sug":89.4,"AddedSugars":19.4,"IntrinsicSugars":70.0},"micros":{"vitaminA":93.29,"vitaminC":0.53,"vitaminD":14.35,"vitaminE":0.23,"vitaminK":0.32,"vitaminB6":0.04,"vitaminB12":0.29,"thiamin":0.04,"riboflavin":0.17,"niacin":0.21,"folate":12.66,"calcium":99.49,"iron":0.91,"magnesium":29.67,"phosphorus":105.5,"potassium":226.71,"sodium":70.04,"zinc":0.56,"copper":0.15,"selenium":2.58,"cholesterol":26.34,"saturatedFat":5.3,"monoFat":2.49,"polyFat":0.33,"omega3":0.0,"omega6":0.0},"gramsPerServing":364.0,"servings":1,"per100g":{"Energy_KCal":196.77,"Water":58.49,"Protein":3.51,"TotalLipidFat":8.64,"Carbohydrate":28.23,"FiberTotalDietary":1.15,"SugarsTotal":24.56,"Cholesterol":26.34,"FattyAcids_totalSaturated":5.3,"FattyAcids_totalMonounsaturated":2.49,"FattyAcids_totalPolyunsaturated":0.33,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":93.29,"Retinol":91.67,"Carotene_beta":14.95,"VitaminD":14.35,"VitaminE_alphaTocopherol":0.23,"VitaminK_phylloquinone":0.32,"VitaminC_totalAscorbicAcid":0.53,"Thiamin":0.04,"Riboflavin":0.17,"Niacin":0.21,"PantothenicAcid":0.46,"VitaminB6":0.04,"Folate_total":12.66,"Folate_food":12.66,"Folate_DFE":12.66,"FolicAcid":0.0,"VitaminB12":0.29,"Choline_total":18.85,"Betaine":0.54,"LuteinZeaxanthin":0.32,"Lycopene":0.0,"Calcium_Ca":99.49,"Iron_Fe":0.91,"Magnesium_Mg":29.67,"Phosphorus_P":105.5,"Potassium_K":226.71,"Sodium_Na":70.04,"Zinc_Zn":0.56,"Copper_Cu":0.15,"Manganese_Mn":0.14,"Selenium_Se":2.58,"Tryptophan":0.01,"Threonine":0.02,"Isoleucine":0.03,"Leucine":0.05,"Lysine":0.04,"Methionine":0.01,"Cystine":0.0,"Phenylalanine":0.03,"Tyrosine":0.03,"Valine":0.03,"Arginine":0.02,"Histidine":0.02,"Alanine":0.02,"AsparticAcid":0.05,"GlutamicAcid":0.12,"Glycine":0.01,"Proline":0.05,"Serine":0.03,"omega3":0.0,"omega6":0.0,"AddedSugars":5.32,"IntrinsicSugars":19.24},"addedSugars":19.4,"intrinsicSugars":70.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"19270","name":"Ice creams, chocolate","grams":264.0},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":61.0},{"ndb":"14181","name":"Beverages, Chocolate syrup","grams":39.0}],"sections":[{"section_key":"milkshake","section_label":"Milkshake","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":364.0,"raw_water_grams":212.9,"raw_fat_grams":31.46,"raw_protein_grams":12.77,"raw_carb_grams":102.77,"final_grams":364.0}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Chocolate Milkshake', quantity: 'custom (g)', foodWord: 'CHOCOLATEMILKSHAKE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'chocolate ice cream', quantity: '2 cups', section: 'milkshake', ndbNo: '19270', portionDesc: 'g', portionGrams: 264.0 },
+      { name: 'whole milk', quantity: '1/4 cup', section: 'milkshake', ndbNo: '1077', portionDesc: 'g', portionGrams: 61.0 },
+      { name: 'chocolate syrup', quantity: '2 tbsp', section: 'milkshake', ndbNo: '14181', portionDesc: 'g', portionGrams: 39.0 }
+    ],
+    recipeInstructions: [
+      'Add the chocolate ice cream, whole milk, and chocolate syrup to a blender.',
+      'Blend on high speed until smooth and creamy, about 30 to 60 seconds.',
+      'Pour into a chilled glass and serve immediately.',
+      'Suggestions (not included): Top with whipped cream and chocolate shavings.'
+    ],
+    sections: [
+      { key: 'milkshake', label: 'Milkshake', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
+    id: 'BVRG_003',
+    name: 'Strawberry Milkshake',
+    category: 'beverages',
+    dietaryCategory: 'veggie',
+    levelNum: 445,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 milkshake',
+    prepTime: '5 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":608.0,"pro":11.7,"fat":31.2,"carb":71.1,"fib":3.4,"h2o":283.9,"sug":62.8,"perServing":{"cal":608.0,"pro":11.7,"fat":31.2,"carb":71.1,"fib":3.4,"h2o":283.9,"sug":62.8,"AddedSugars":0.0,"IntrinsicSugars":62.8},"micros":{"vitaminA":84.87,"vitaminC":11.54,"vitaminD":13.02,"vitaminE":0.26,"vitaminK":0.66,"vitaminB6":0.04,"vitaminB12":0.33,"thiamin":0.04,"riboflavin":0.19,"niacin":0.16,"folate":8.6,"calcium":104.49,"iron":0.14,"magnesium":13.2,"phosphorus":86.45,"potassium":180.09,"sodium":59.4,"zinc":0.54,"copper":0.02,"selenium":1.82,"cholesterol":30.49,"saturatedFat":4.76,"monoFat":2.08,"polyFat":0.35,"omega3":0.0,"omega6":0.0},"gramsPerServing":401.0,"servings":1,"per100g":{"Energy_KCal":151.62,"Water":70.8,"Protein":2.91,"TotalLipidFat":7.79,"Carbohydrate":17.72,"FiberTotalDietary":0.84,"SugarsTotal":15.67,"Cholesterol":30.49,"FattyAcids_totalSaturated":4.76,"FattyAcids_totalMonounsaturated":2.08,"FattyAcids_totalPolyunsaturated":0.35,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":84.87,"Retinol":83.21,"Carotene_beta":14.9,"VitaminD":13.02,"VitaminE_alphaTocopherol":0.26,"VitaminK_phylloquinone":0.66,"VitaminC_totalAscorbicAcid":11.54,"Thiamin":0.04,"Riboflavin":0.19,"Niacin":0.16,"PantothenicAcid":0.46,"VitaminB6":0.04,"Folate_total":8.6,"Folate_food":8.6,"Folate_DFE":8.6,"FolicAcid":0.0,"VitaminB12":0.33,"Choline_total":20.37,"Betaine":0.13,"LuteinZeaxanthin":4.93,"Lycopene":0.0,"Calcium_Ca":104.49,"Iron_Fe":0.14,"Magnesium_Mg":13.2,"Phosphorus_P":86.45,"Potassium_K":180.09,"Sodium_Na":59.4,"Zinc_Zn":0.54,"Copper_Cu":0.02,"Manganese_Mn":0.08,"Selenium_Se":1.82,"Tryptophan":0.03,"Threonine":0.12,"Isoleucine":0.15,"Leucine":0.25,"Lysine":0.21,"Methionine":0.07,"Cystine":0.02,"Phenylalanine":0.12,"Tyrosine":0.13,"Valine":0.17,"Arginine":0.1,"Histidine":0.07,"Alanine":0.1,"AsparticAcid":0.23,"GlutamicAcid":0.57,"Glycine":0.07,"Proline":0.26,"Serine":0.14,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":15.67},"addedSugars":0.0,"intrinsicSugars":62.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"19095","name":"Ice creams, vanilla","grams":264.0},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":61.0},{"ndb":"9316","name":"Strawberries, raw","grams":76.0}],"sections":[{"section_key":"milkshake","section_label":"Milkshake","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":401.0,"raw_water_grams":283.92,"raw_fat_grams":31.25,"raw_protein_grams":11.67,"raw_carb_grams":71.07,"final_grams":401.0}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Strawberry Milkshake', quantity: 'custom (g)', foodWord: 'STRAWBERRYMILKSHAKE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'vanilla ice cream', quantity: '2 cups', section: 'milkshake', ndbNo: '19095', portionDesc: 'g', portionGrams: 264.0 },
+      { name: 'whole milk', quantity: '1/4 cup', section: 'milkshake', ndbNo: '1077', portionDesc: 'g', portionGrams: 61.0 },
+      { name: 'strawberries', quantity: '1/2 cup strawberries, hulled and halved', section: 'milkshake', ndbNo: '9316', portionDesc: 'g', portionGrams: 76.0 }
+    ],
+    recipeInstructions: [
+      'Add the vanilla ice cream, whole milk, and fresh strawberries to a blender.',
+      'Blend on high speed until smooth and creamy, about 30 to 60 seconds.',
+      'Pour into a chilled glass and serve immediately.',
+      'Suggestions (not included): Top with whipped cream and a fresh strawberry.'
+    ],
+    sections: [
+      { key: 'milkshake', label: 'Milkshake', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
