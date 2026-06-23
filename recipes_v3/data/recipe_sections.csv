@@ -731,3 +731,5 @@ PASTA_003,toppings,Cheese Topping,,baked,0.90,1.0,1.0,1.0,1.0,,,,
 PASTA_004,crust,Pizza Crust,,baked,0.72,1.0,1.0,1.0,1.0,,,,
 PASTA_004,sauce,Marinara Sauce,,raw,1.0,1.0,1.0,1.0,1.0,,,,SAUCE_027
 PASTA_004,toppings,Cheese Topping,,baked,0.90,1.0,1.0,1.0,1.0,,,,
+PASTA_005,pasta,Pasta,,boiled,1.0,1.0,1.0,1.0,1.0,,,,
+PASTA_005,shrimp,Garlic Butter Shrimp,,pan grilled,0.88,1.0,1.0,1.0,1.0,,,,

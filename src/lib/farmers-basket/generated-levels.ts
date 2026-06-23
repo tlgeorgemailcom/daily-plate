@@ -20730,5 +20730,57 @@ export const LEVELS: Level[] = [
       { key: 'sauce', label: 'Marinara Sauce', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'toppings', label: 'Cheese Topping', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'PASTA_005',
+    name: 'Garlic Butter Shrimp Pasta',
+    category: 'pasta & pizza',
+    dietaryCategory: 'pesca',
+    levelNum: 432,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 plate (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":458.4,"pro":30.7,"fat":16.4,"carb":44.4,"fib":2.1,"h2o":183.8,"sug":1.8,"perServing":{"cal":458.4,"pro":30.7,"fat":16.4,"carb":44.4,"fib":2.1,"h2o":183.8,"sug":1.8,"AddedSugars":0.0,"IntrinsicSugars":1.8},"micros":{"vitaminA":33.24,"vitaminC":1.35,"vitaminD":0.0,"vitaminE":0.26,"vitaminK":21.21,"vitaminB6":0.03,"vitaminB12":0.01,"thiamin":0.02,"riboflavin":0.01,"niacin":0.26,"folate":4.35,"calcium":37.72,"iron":0.56,"magnesium":25.31,"phosphorus":124.35,"potassium":163.28,"sodium":158.01,"zinc":0.83,"copper":0.22,"selenium":12.4,"cholesterol":76.23,"saturatedFat":2.83,"monoFat":2.15,"polyFat":0.36,"omega3":0.03,"omega6":0.1},"gramsPerServing":279.5,"servings":4,"per100g":{"Energy_KCal":163.98,"Water":65.73,"Protein":10.97,"TotalLipidFat":5.88,"Carbohydrate":15.88,"FiberTotalDietary":0.75,"SugarsTotal":0.66,"Cholesterol":76.23,"FattyAcids_totalSaturated":2.83,"FattyAcids_totalMonounsaturated":2.15,"FattyAcids_totalPolyunsaturated":0.36,"LinoleicAcid":0.1,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.01,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":33.24,"Retinol":27.27,"Carotene_beta":70.55,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.26,"VitaminK_phylloquinone":21.21,"VitaminC_totalAscorbicAcid":1.35,"Thiamin":0.02,"Riboflavin":0.01,"Niacin":0.26,"PantothenicAcid":0.08,"VitaminB6":0.03,"Folate_total":4.35,"Folate_food":4.35,"Folate_DFE":4.35,"FolicAcid":0.0,"VitaminB12":0.01,"Choline_total":1.54,"Betaine":0.01,"LuteinZeaxanthin":53.93,"Lycopene":0.01,"Calcium_Ca":37.72,"Iron_Fe":0.56,"Magnesium_Mg":25.31,"Phosphorus_P":124.35,"Potassium_K":163.28,"Sodium_Na":158.01,"Zinc_Zn":0.83,"Copper_Cu":0.22,"Manganese_Mn":0.22,"Selenium_Se":12.4,"Tryptophan":0.04,"Threonine":0.1,"Isoleucine":0.11,"Leucine":0.21,"Lysine":0.07,"Methionine":0.03,"Cystine":0.05,"Phenylalanine":0.14,"Tyrosine":0.05,"Valine":0.13,"Arginine":0.11,"Histidine":0.06,"Alanine":0.09,"AsparticAcid":0.14,"GlutamicAcid":0.95,"Glycine":0.09,"Proline":0.33,"Serine":0.13,"omega3":0.03,"omega6":0.1,"AddedSugars":0.0,"IntrinsicSugars":0.66},"addedSugars":0.0,"intrinsicSugars":1.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20420","name":"Pasta, dry, unenriched","grams":56.7},{"ndb":"14411","name":"Water, tap, drinking","grams":236.5},{"ndb":"15270","name":"Crustaceans, shrimp, raw (not previously frozen)","grams":113.4},{"ndb":"1145","name":"Butter, without salt","grams":14.2},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"14106","name":"Alcoholic beverage, wine, table, white","grams":15.0},{"ndb":"9152","name":"Lemon juice, raw","grams":3.8},{"ndb":"11297","name":"Parsley, fresh","grams":3.8},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"pasta","section_label":"Pasta","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.34811726353257855,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":1172.8,"raw_water_grams":967.51,"raw_fat_grams":3.42,"raw_protein_grams":29.57,"raw_carb_grams":169.35,"final_grams":542.1},{"section_key":"shrimp","section_label":"Garlic Butter Shrimp","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":630.35,"raw_water_grams":452.49,"raw_fat_grams":62.32,"raw_protein_grams":93.09,"raw_carb_grams":8.25,"final_grams":576.05}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Garlic Butter Shrimp Pasta', quantity: 'custom (g)', foodWord: 'GARLICBUTTERSHRIMPASTA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'wide pasta, dry', quantity: '8 oz linguine, dry', section: 'pasta', ndbNo: '20420', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'water', quantity: '4 cups', section: 'pasta', ndbNo: '14411', portionDesc: 'g', portionGrams: 946.0 },
+      { name: 'shrimp', quantity: '1 lb shrimp, peeled and deveined', section: 'shrimp', ndbNo: '15270', portionDesc: 'g', portionGrams: 453.6 },
+      { name: 'unsalted butter', quantity: '4 tbsp', section: 'shrimp', ndbNo: '1145', portionDesc: 'g', portionGrams: 56.8 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'shrimp', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'shrimp', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'white wine', quantity: '¼ cup', section: 'shrimp', ndbNo: '14106', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'lemon juice', quantity: '1 tbsp', section: 'shrimp', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'fresh parsley', quantity: '½ cup, chopped', section: 'shrimp', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.2 },
+      { name: 'red pepper flakes', quantity: '¼ tsp', section: 'shrimp', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'salt', quantity: '½ tsp', section: 'shrimp', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'shrimp', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Bring a large pot of salted water to a boil. Cook the pasta until al dente. Reserve ½ cup pasta water, then drain.',
+      'Pat the shrimp dry. Season with the salt and black pepper.',
+      'In a large skillet, heat the olive oil over medium-high heat. Add the shrimp in a single layer and cook 1–2 minutes per side until pink and just cooked through. Transfer to a plate.',
+      'Reduce heat to medium. Add the butter and garlic to the same skillet. Cook, stirring, 1–2 minutes until fragrant.',
+      'Add the white wine and lemon juice. Simmer 2 minutes, scraping up any browned bits.',
+      'Return the shrimp to the skillet along with the drained pasta. Toss to coat, adding a splash of reserved pasta water if needed to loosen the sauce.',
+      'Remove from heat. Stir in the parsley and red pepper flakes. Taste and adjust seasoning.',
+      'Divide among 4 plates and serve immediately.',
+      'Suggestions (not included): Garnish with additional parsley and lemon wedges. Serve with crusty bread.'
+    ],
+    sections: [
+      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'shrimp', label: 'Garlic Butter Shrimp', cookingMethod: '', yieldFactorWater: 0.88 }
+    ],
   }
 ];

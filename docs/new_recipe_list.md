@@ -21,7 +21,7 @@ Pasta & Pizza
 ✅ Garlic Bread Pizza
 ✅ Pizza, thick crust
 ✅ Pizza, thin crust
-Garlic Butter Shrimp Pasta
+✅ Garlic Butter Shrimp Pasta
 Chicken Pesto Pasta
 Lemon Pasta
 Pasta Primavera
