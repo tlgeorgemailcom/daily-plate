@@ -11602,8 +11602,8 @@ export const LEVELS: Level[] = [
       'Add curry powder and tomato paste. Stir and cook 1 to 2 minutes until fragrant and the paste darkens slightly.',
       'Add the diced tomatoes and stir, scraping up any browned bits from the bottom of the pot. Return the beef and any accumulated juices to the pot.',
       'Pour in the coconut milk. Add salt and pepper. Stir to combine. Bring to a boil, then reduce heat to low. Cover and simmer 1 to 1½ hours, stirring occasionally, until the beef is fork-tender and the sauce has thickened.',
-      'Taste and adjust seasoning. Stir in the cilantro just before serving. Serve on its own or over steamed rice (not included).',
-      'Suggestions (not included):'
+      'Taste and adjust seasoning. Stir in the cilantro just before serving.',
+      'Suggestions (not included): Serve on its own or over steamed rice.'
     ],
     sections: [
       { key: 'curry', label: 'Curry', cookingMethod: '', yieldFactorWater: 0.8, yieldFactorFat: 0.85 }
