@@ -12451,8 +12451,8 @@ export const LEVELS: Level[] = [
       'Add the beef broth, crushed tomatoes, oregano, and thyme. Stir to combine. Return the seared shanks to the pot, nestling them into the braising liquid.',
       'Bring to a boil, then reduce heat to low. Cover and simmer for 1 hour 30 minutes to 2 hours, turning the shanks halfway through, until the meat is very tender and beginning to fall off the bone.',
       'While the osso buco braises, prepare the gremolata: combine the chopped parsley, minced garlic, and lemon juice in a small bowl.',
-      'Serve each shank with braising sauce spooned over the top and a generous pinch of gremolata. Pairs well with risotto, polenta, or crusty bread.',
-      'Suggestions (not included):'
+      'Serve each shank with braising sauce spooned over the top and a generous pinch of gremolata.',
+      'Suggestions (not included): Pairs well with risotto, polenta, or crusty bread.'
     ],
     sections: [
       { key: 'braise', label: 'Braise', cookingMethod: '', yieldFactorWater: 0.65 },
@@ -12504,8 +12504,8 @@ export const LEVELS: Level[] = [
       'Heat 1 tablespoon olive oil in a wok or large skillet over high heat. Add the beef in a single layer and cook for 1 to 2 minutes per side until browned. Remove and set aside.',
       'Cut onions and peppers into 1 inch squares. Add the remaining olive oil to the wok. Stir-fry the onion for 2 minutes, then add the bell peppers and cook 2 minutes more until slightly tender but still crisp.',
       'Add the minced garlic and ginger and stir-fry for 30 seconds. Pour in the sauce and stir until thickened, about 1 minute.',
-      'Return the beef to the wok and toss to coat. Drizzle with sesame oil. Serve on its own or over steamed white rice (not included).',
-      'Suggestions (not included):'
+      'Return the beef to the wok and toss to coat. Drizzle with sesame oil.',
+      'Suggestions (not included): Serve on its own or over steamed white rice.'
     ],
     sections: [
       { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.82 },
@@ -12556,8 +12556,8 @@ export const LEVELS: Level[] = [
       'Add the diced onion and diced bell pepper to the skillet and cook for 4 to 5 minutes until softened. Add the minced garlic and cook 1 minute more.',
       'Stir in the crushed tomatoes, sliced green olives, capers, raisins, apple cider vinegar, cumin, oregano, and bay leaves. Season with salt and pepper.',
       'Reduce heat to medium-low and simmer uncovered for 15 to 20 minutes, stirring occasionally, until the sauce thickens and flavors meld.',
-      'Remove and discard the bay leaves. Taste and adjust seasoning. Serve as a filling for tacos or empanadas, or on its own or over rice (not included).',
-      'Suggestions (not included):'
+      'Remove and discard the bay leaves. Taste and adjust seasoning.',
+      'Suggestions (not included): Serve as a filling for tacos or empanadas, or on its own or over steamed rice.'
     ],
     sections: [
       { key: 'picadillo', label: 'Picadillo', cookingMethod: '', yieldFactorWater: 0.85, yieldFactorFat: 0.593 }
