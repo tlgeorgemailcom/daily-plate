@@ -11331,8 +11331,7 @@ export const LEVELS: Level[] = [
       'Heat a cast iron skillet or grill pan over high heat until very hot. Brush with a little oil.',
       'Cook the flank steak for 4 to 5 minutes per side for medium-rare, or until the desired doneness. Let it rest for 5 to 10 minutes.',
       'Slice the steak thinly against the grain.',
-      'Serve with warm tortillas, fresh cilantro, diced onion, and lime wedges.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with warm tortillas, fresh cilantro, diced onion, and lime wedges.'
     ],
     sections: [
       { key: 'main', label: 'Carne Asada', cookingMethod: '', yieldFactorWater: 0.75 }
@@ -11384,8 +11383,8 @@ export const LEVELS: Level[] = [
       'Add the diced tomatoes, beef broth, cumin, chili powder, oregano, and paprika. Stir to combine.',
       'Return the seared beef to the pot. Bring to a boil, then reduce heat to low.',
       'Cover and simmer for 1.5 to 2 hours, stirring occasionally, until the beef is very tender and the gravy has thickened.',
-      'Taste and adjust seasoning. Serve on its own or over rice or with warm flour tortillas (not included).',
-      'Suggestions (not included):'
+      'Taste and adjust seasoning.',
+      'Suggestions (not included): Serve on its own or over steamed rice or with warm flour tortillas.'
     ],
     sections: [
       { key: 'main', label: 'Carne Guisada', cookingMethod: '', yieldFactorWater: 0.55 }
