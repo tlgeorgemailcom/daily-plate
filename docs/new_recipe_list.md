@@ -22,7 +22,7 @@ Pasta & Pizza
 ✅ Pizza, thick crust
 ✅ Pizza, thin crust
 ✅ Garlic Butter Shrimp Pasta
-Chicken Pesto Pasta
+✅ Chicken Pesto Pasta
 Lemon Pasta
 Pasta Primavera
 Pasta al Pesto

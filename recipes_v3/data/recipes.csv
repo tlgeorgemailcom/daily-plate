@@ -431,3 +431,4 @@ PASTA_002,GARLICBREADPIZZA,Garlic Bread Pizza,pasta & pizza,veggie,builtin,,,1 p
 PASTA_003,PIZZATHICKCRUST,"Pizza, Thick Crust",pasta & pizza,veggie,builtin,,,2 slices (makes 4),4,Rule D,baked,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,,
 PASTA_004,PIZZATHINCRUST,"Pizza, Thin Crust",pasta & pizza,veggie,builtin,,,2 slices (makes 4),4,Rule D,baked,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,,
 PASTA_005,GARLICBUTTERSHRIMPASTA,Garlic Butter Shrimp Pasta,pasta & pizza,pesca,builtin,,,1 plate (makes 4),4,Rule D,pan grilled,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,,
+PASTA_006,CHICKENPESTOPASTA,Chicken Pesto Pasta,pasta & pizza,pollo,builtin,,,1 plate (makes 4),4,Rule D,pan grilled,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,,

@@ -20782,5 +20782,58 @@ export const LEVELS: Level[] = [
       { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'shrimp', label: 'Garlic Butter Shrimp', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
+  },
+  {
+    id: 'PASTA_006',
+    name: 'Chicken Pesto Pasta',
+    category: 'pasta & pizza',
+    dietaryCategory: 'pollo',
+    levelNum: 433,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 plate (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":566.2,"pro":32.5,"fat":28.2,"carb":45.0,"fib":2.4,"h2o":147.0,"sug":2.0,"perServing":{"cal":566.2,"pro":32.5,"fat":28.2,"carb":45.0,"fib":2.4,"h2o":147.0,"sug":2.0,"AddedSugars":0.0,"IntrinsicSugars":2.0},"micros":{"vitaminA":22.84,"vitaminC":1.19,"vitaminD":1.24,"vitaminE":1.37,"vitaminK":21.84,"vitaminB6":0.24,"vitaminB12":0.12,"thiamin":0.05,"riboflavin":0.09,"niacin":2.97,"folate":9.0,"calcium":74.83,"iron":0.74,"magnesium":31.47,"phosphorus":159.95,"potassium":189.03,"sodium":200.38,"zinc":0.86,"copper":0.13,"selenium":22.11,"cholesterol":27.55,"saturatedFat":2.1,"monoFat":5.99,"polyFat":1.86,"omega3":0.01,"omega6":0.08},"gramsPerServing":256.2,"servings":4,"per100g":{"Energy_KCal":221.02,"Water":57.39,"Protein":12.68,"TotalLipidFat":11.03,"Carbohydrate":17.56,"FiberTotalDietary":0.92,"SugarsTotal":0.77,"Cholesterol":27.55,"FattyAcids_totalSaturated":2.1,"FattyAcids_totalMonounsaturated":5.99,"FattyAcids_totalPolyunsaturated":1.86,"LinoleicAcid":0.08,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":22.84,"Retinol":12.2,"Carotene_beta":126.61,"VitaminD":1.24,"VitaminE_alphaTocopherol":1.37,"VitaminK_phylloquinone":21.84,"VitaminC_totalAscorbicAcid":1.19,"Thiamin":0.05,"Riboflavin":0.09,"Niacin":2.97,"PantothenicAcid":0.51,"VitaminB6":0.24,"Folate_total":9.0,"Folate_food":9.0,"Folate_DFE":9.0,"FolicAcid":0.0,"VitaminB12":0.12,"Choline_total":27.57,"Betaine":2.37,"LuteinZeaxanthin":221.31,"Lycopene":0.01,"Calcium_Ca":74.83,"Iron_Fe":0.74,"Magnesium_Mg":31.47,"Phosphorus_P":159.95,"Potassium_K":189.03,"Sodium_Na":200.38,"Zinc_Zn":0.86,"Copper_Cu":0.13,"Manganese_Mn":0.51,"Selenium_Se":22.11,"Tryptophan":0.16,"Threonine":0.51,"Isoleucine":0.59,"Leucine":1.04,"Lysine":0.96,"Methionine":0.28,"Cystine":0.14,"Phenylalanine":0.56,"Tyrosine":0.44,"Valine":0.66,"Arginine":0.75,"Histidine":0.42,"Alanine":0.61,"AsparticAcid":1.0,"GlutamicAcid":2.62,"Glycine":0.48,"Proline":0.81,"Serine":0.55,"omega3":0.01,"omega6":0.08,"AddedSugars":0.0,"IntrinsicSugars":0.77},"addedSugars":0.0,"intrinsicSugars":2.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20420","name":"Pasta, dry, unenriched","grams":56.7},{"ndb":"14411","name":"Water, tap, drinking","grams":236.5},{"ndb":"5062","name":"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","grams":85.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"2020","name":"Spices, garlic powder","grams":0.4},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"2044","name":"Basil, fresh","grams":10.0},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":12.5},{"ndb":"12147","name":"Nuts, pine nuts, dried","grams":7.1},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":13.6},{"ndb":"9152","name":"Lemon juice, raw","grams":1.9},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"pasta","section_label":"Pasta","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.34811726353257855,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":1172.8,"raw_water_grams":967.51,"raw_fat_grams":3.42,"raw_protein_grams":29.57,"raw_carb_grams":169.35,"final_grams":542.1},{"section_key":"chicken","section_label":"Grilled Chicken","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":357.43,"raw_water_grams":251.58,"raw_fat_grams":22.54,"raw_protein_grams":76.86,"raw_carb_grams":1.5,"final_grams":294.53},{"section_key":"pesto","section_label":"Basil Pesto","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":188.05,"raw_water_grams":62.53,"raw_fat_grams":87.01,"raw_protein_grams":23.46,"raw_carb_grams":9.07,"final_grams":188.05}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Chicken Pesto Pasta', quantity: 'custom (g)', foodWord: 'CHICKENPESTOPASTA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'wide pasta, dry', quantity: '8 oz penne or fusilli, dry', section: 'pasta', ndbNo: '20420', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'water', quantity: '4 cups', section: 'pasta', ndbNo: '14411', portionDesc: 'g', portionGrams: 946.0 },
+      { name: 'chicken breast', quantity: '¾ lb chicken breast', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 340.2 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'garlic powder', quantity: '½ tsp', section: 'chicken', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.55 },
+      { name: 'salt', quantity: '¼ tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'fresh basil', quantity: '2 cups, packed', section: 'pesto', ndbNo: '2044', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'Parmesan cheese', quantity: '½ cup, grated', section: 'pesto', ndbNo: '1033', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'pine nuts', quantity: '3 tbsp', section: 'pesto', ndbNo: '12147', portionDesc: 'g', portionGrams: 28.35 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'pesto', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'olive oil', quantity: '¼ cup', section: 'pesto', ndbNo: '4053', portionDesc: 'g', portionGrams: 54.4 },
+      { name: 'lemon juice', quantity: '½ tbsp', section: 'pesto', ndbNo: '9152', portionDesc: 'g', portionGrams: 7.5 },
+      { name: 'salt', quantity: '¼ tsp', section: 'pesto', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '⅛ tsp', section: 'pesto', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 }
+    ],
+    recipeInstructions: [
+      'Bring a large pot of salted water to a boil. Cook the pasta until al dente. Reserve ½ cup pasta water, then drain.',
+      'Season the chicken breast with garlic powder, salt, and pepper. Heat the olive oil in a large skillet over medium-high heat. Cook the chicken 5–6 minutes per side until golden and cooked through (165°F internal). Transfer to a cutting board, rest 5 minutes, then slice into bite-sized pieces.',
+      'In a food processor, combine the basil, Parmesan, pine nuts, and garlic. Pulse until finely chopped. With the motor running, drizzle in the olive oil until smooth. Add the lemon juice, salt, and pepper and pulse briefly to combine.',
+      'In a large bowl, toss the hot drained pasta with the pesto, adding splashes of reserved pasta water to loosen as needed.',
+      'Divide among 4 plates and top each with sliced chicken. Serve immediately.',
+      'Suggestions (not included): Garnish with extra Parmesan, toasted pine nuts, and fresh basil leaves.'
+    ],
+    sections: [
+      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'chicken', label: 'Grilled Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'pesto', label: 'Basil Pesto', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
