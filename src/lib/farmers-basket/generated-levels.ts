@@ -14244,8 +14244,8 @@ export const LEVELS: Level[] = [
       'Add crushed garlic cloves to the pan and cook 30 seconds until fragrant. Add tamari, vinegar, water, bay leaves, and black pepper. Stir to combine.',
       'Return chicken to the pan. Bring to a boil, then reduce heat to low. Cover and simmer 25 to 30 minutes, turning chicken halfway through, until cooked through and tender.',
       'Uncover and increase heat to medium. Simmer 5 to 10 minutes more, turning chicken occasionally, until the sauce reduces and thickens to coat the chicken.',
-      'Remove bay leaves. Serve over steamed white rice (not included).',
-      'Suggestions (not included):'
+      'Remove bay leaves.',
+      'Suggestions (not included): Serve over steamed white rice.'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 }
@@ -14301,8 +14301,7 @@ export const LEVELS: Level[] = [
       'Transfer the onion-spice mixture to a blender with the cashews and a splash of coconut milk. Blend until smooth.',
       'Return the blended sauce to the pan. Add remaining coconut milk, heavy cream, and salt. Stir to combine and bring to a gentle simmer.',
       'Return chicken to the pan. Cover and simmer on low heat 20 to 25 minutes, turning once, until chicken is cooked through and the sauce has thickened.',
-      'Serve over steamed basmati rice or with naan (not included).',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve over steamed basmati rice or with naan.'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -14540,8 +14539,7 @@ export const LEVELS: Level[] = [
       'Pour in crushed tomatoes and simmer 10 minutes, stirring occasionally, until sauce darkens and thickens.',
       'Stir in heavy cream and simmer 5 minutes until sauce is rich and smooth. Season with salt.',
       'Return chicken pieces to the pan and simmer 5 minutes to heat through and meld flavors.',
-      'Serve over steamed basmati rice or with naan (not included).',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve over steamed basmati rice or with naan.'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -14597,8 +14595,8 @@ export const LEVELS: Level[] = [
       'Pour in chicken broth (see Chicken Broth recipe) and scrape up any browned bits. Simmer 2 minutes.',
       'Add heavy cream and bring to a gentle simmer. Cook 4 to 5 minutes until sauce begins to thicken.',
       'Stir in Parmesan, oregano, thyme, and red pepper flakes. Simmer 2 more minutes. Taste and adjust seasoning.',
-      'Return chicken to the pan and spoon sauce over the top. Garnish with fresh basil and serve immediately with pasta, rice, or crusty bread (not included).',
-      'Suggestions (not included):'
+      'Return chicken to the pan and spoon sauce over the top. Garnish with fresh basil and serve immediately.',
+      'Suggestions (not included): Serve with pasta, rice, or crusty bread.'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
