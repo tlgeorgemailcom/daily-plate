@@ -11229,8 +11229,8 @@ export const LEVELS: Level[] = [
       'Add the remaining beef broth, bay leaves, and additional salt to taste. Stir to combine.',
       'Bring to a boil over high heat, then reduce to a low simmer. Cover and braise for 2½ to 3 hours, until the beef is very tender and shreds easily.',
       'Remove the bay leaves. Shred the beef with two forks directly in the broth.',
-      'Taste and adjust salt as needed. Serve the birria in bowls with its broth, accompanied by warm tortillas, diced onion, cilantro, and lime wedges.',
-      'Suggestions (not included):'
+      'Taste and adjust salt as needed.',
+      'Suggestions (not included): Serve the birria in bowls with its broth, accompanied by warm tortillas, diced white onion, fresh cilantro, and lime wedges.'
     ],
     sections: [
       { key: 'main', label: 'Beef Birria', cookingMethod: '', yieldFactorWater: 0.5 }
