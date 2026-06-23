@@ -9906,8 +9906,8 @@ export const LEVELS: Level[] = [
       'Layer the lettuce in a large bowl or divide between two plates.',
       'Arrange the turkey, ham, hard-boiled eggs, cheddar cheese, tomato, and cucumber on top of the lettuce.',
       'Season lightly with salt and pepper if desired.',
-      'Serve with your choice of dressing. Ranch Dressing, Honey Mustard Dressing, or Italian Vinaigrette are all excellent choices.',
-      'Suggestions (not included):'
+      'Serve immediately.',
+      'Suggestions (not included): Serve with your choice of dressing on the side. Ranch Dressing (see SAUCE_020), Honey Mustard Dressing (see SAUCE_022), or Italian Vinaigrette (see SAUCE_017) are all excellent choices.'
     ],
     sections: [
       { key: 'salad', label: 'Chef Salad', cookingMethod: '', yieldFactorWater: 1.0 }

@@ -1317,7 +1317,8 @@ SAND_008,6,"Cut diagonally and serve immediately, or refrigerate the chicken sal
 SALAD_004,1,Layer the lettuce in a large bowl or divide between two plates.
 SALAD_004,2,"Arrange the turkey, ham, hard-boiled eggs, cheddar cheese, tomato, and cucumber on top of the lettuce."
 SALAD_004,3,Season lightly with salt and pepper if desired.
-SALAD_004,4,"Serve with your choice of dressing. Ranch Dressing, Honey Mustard Dressing, or Italian Vinaigrette are all excellent choices."
+SALAD_004,4,Serve immediately.
+SALAD_004,5,"Suggestions (not included): Serve with your choice of dressing on the side. Ranch Dressing (see SAUCE_020), Honey Mustard Dressing (see SAUCE_022), or Italian Vinaigrette (see SAUCE_017) are all excellent choices."
 SALAD_005,1,"Combine the romaine lettuce, cucumber, tomato, black olives, feta cheese, and onion in a large bowl."
 SALAD_005,2,Make or portion the Italian Vinaigrette (see the Italian Vinaigrette recipe).
 SALAD_005,3,Drizzle with the Italian Vinaigrette (2 tablespoons per serving) and toss gently to coat.
