@@ -2433,8 +2433,8 @@ export const LEVELS: Level[] = [
       'For best flavor, cover and refrigerate the patties for at least 30 minutes (or overnight) to let the spices bloom and the pork firm up.',
       'Heat a large heavy skillet (cast iron preferred) over medium heat until hot. The pork has enough fat that no additional oil is needed.',
       'Place patties in the skillet without crowding. Cook 3–4 minutes per side, turning once, until deeply browned on both faces and an instant-read thermometer reads 160°F at the center. Total cook time about 7–8 minutes.',
-      'Transfer cooked patties to a paper-towel-lined plate to drain briefly. Serve hot alongside eggs, biscuits, or as the protein in biscuits & gravy.',
-      'Suggestions (not included):'
+      'Transfer cooked patties to a paper-towel-lined plate to drain briefly.',
+      'Suggestions (not included): Serve hot alongside eggs, biscuits, or as the protein in biscuits & gravy.'
     ],
     sections: [
       { key: 'sausage', label: 'Sausage', cookingMethod: '', yieldFactorWater: 0.73, yieldFactorFat: 0.91 }
