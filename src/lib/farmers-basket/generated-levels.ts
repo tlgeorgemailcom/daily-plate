@@ -20515,5 +20515,58 @@ export const LEVELS: Level[] = [
       { key: 'dough', label: 'Dough', cookingMethod: '', yieldFactorWater: 0.82 },
       { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'PASTA_001',
+    name: 'Baked Ziti',
+    category: 'pasta & pizza',
+    dietaryCategory: 'veggie',
+    levelNum: 428,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 plate (makes 6)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":615.5,"pro":32.5,"fat":28.6,"carb":58.5,"fib":5.0,"h2o":276.2,"sug":8.9,"perServing":{"cal":615.5,"pro":32.5,"fat":28.6,"carb":58.5,"fib":5.0,"h2o":276.2,"sug":8.9,"AddedSugars":0.0,"IntrinsicSugars":8.9},"micros":{"vitaminA":47.22,"vitaminC":1.81,"vitaminD":5.44,"vitaminE":0.65,"vitaminK":6.02,"vitaminB6":0.06,"vitaminB12":0.33,"thiamin":0.03,"riboflavin":0.1,"niacin":0.46,"folate":8.74,"calcium":139.89,"iron":0.76,"magnesium":18.46,"phosphorus":121.65,"potassium":145.33,"sodium":304.63,"zinc":0.9,"copper":0.1,"selenium":14.38,"cholesterol":27.33,"saturatedFat":3.62,"monoFat":2.42,"polyFat":0.37,"omega3":0.0,"omega6":0.03},"gramsPerServing":402.9,"servings":6,"per100g":{"Energy_KCal":152.75,"Water":68.56,"Protein":8.07,"TotalLipidFat":7.08,"Carbohydrate":14.51,"FiberTotalDietary":1.25,"SugarsTotal":2.22,"Cholesterol":27.33,"FattyAcids_totalSaturated":3.62,"FattyAcids_totalMonounsaturated":2.42,"FattyAcids_totalPolyunsaturated":0.37,"LinoleicAcid":0.03,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":47.22,"Retinol":41.18,"Carotene_beta":69.21,"VitaminD":5.44,"VitaminE_alphaTocopherol":0.65,"VitaminK_phylloquinone":6.02,"VitaminC_totalAscorbicAcid":1.81,"Thiamin":0.03,"Riboflavin":0.1,"Niacin":0.46,"PantothenicAcid":0.19,"VitaminB6":0.06,"Folate_total":8.74,"Folate_food":8.74,"Folate_DFE":8.74,"FolicAcid":0.0,"VitaminB12":0.33,"Choline_total":14.2,"Betaine":0.03,"LuteinZeaxanthin":71.78,"Lycopene":1509.42,"Calcium_Ca":139.89,"Iron_Fe":0.76,"Magnesium_Mg":18.46,"Phosphorus_P":121.65,"Potassium_K":145.33,"Sodium_Na":304.63,"Zinc_Zn":0.9,"Copper_Cu":0.1,"Manganese_Mn":0.22,"Selenium_Se":14.38,"Tryptophan":0.12,"Threonine":0.32,"Isoleucine":0.37,"Leucine":0.68,"Lysine":0.5,"Methionine":0.16,"Cystine":0.08,"Phenylalanine":0.38,"Tyrosine":0.32,"Valine":0.44,"Arginine":0.3,"Histidine":0.22,"Alanine":0.28,"AsparticAcid":0.6,"GlutamicAcid":2.01,"Glycine":0.21,"Proline":0.79,"Serine":0.35,"omega3":0.0,"omega6":0.03,"AddedSugars":0.0,"IntrinsicSugars":2.22},"addedSugars":0.0,"intrinsicSugars":8.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20420","name":"Pasta, dry, unenriched","grams":56.7},{"ndb":"14411","name":"Water, tap, drinking","grams":250.0},{"ndb":"","name":"Italian Marinara Sauce","grams":140.0},{"ndb":"1036","name":"Cheese, ricotta, whole milk","grams":70.9},{"ndb":"1026","name":"Cheese, mozzarella, whole milk","grams":47.2},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":8.3},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":8.3},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.2},{"ndb":"2003","name":"Spices, basil, dried","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":0.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"pasta","section_label":"Pasta","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.3298188815637003,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":1840.2,"raw_water_grams":1532.18,"raw_fat_grams":5.14,"raw_protein_grams":44.36,"raw_carb_grams":254.03,"final_grams":813.36},{"section_key":"marinara","section_label":"Marinara Sauce","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":840.2,"raw_water_grams":702.58,"raw_fat_grams":29.83,"raw_protein_grams":15.63,"raw_carb_grams":74.36,"final_grams":840.2},{"section_key":"cheese","section_label":"Cheese Layer","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":813.98,"raw_water_grams":499.55,"raw_fat_grams":136.31,"raw_protein_grams":135.2,"raw_carb_grams":22.5,"final_grams":764.02}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Baked Ziti', quantity: 'custom (g)', foodWord: 'BAKEDZITI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'ziti pasta', quantity: '12 oz ziti pasta', section: 'pasta', ndbNo: '20420', portionDesc: 'g', portionGrams: 340.2 },
+      { name: 'water', quantity: '6¼ cups', section: 'pasta', ndbNo: '14411', portionDesc: 'g', portionGrams: 1500.0 },
+      { name: 'Italian Marinara Sauce', quantity: '1 recipe Italian Marinara Sauce (840g)', section: 'marinara', foodWord: 'MARINARASAUCE', portionDesc: 'g', portionGrams: 840.2, isDish: true, componentRef: 'SAUCE_027' },
+      { name: 'Ricotta cheese', quantity: '15 oz (1 container) ricotta cheese', section: 'cheese', ndbNo: '1036', portionDesc: 'g', portionGrams: 425.2 },
+      { name: 'mozzarella', quantity: '10 oz mozzarella, shredded', section: 'cheese', ndbNo: '1026', portionDesc: 'g', portionGrams: 283.5 },
+      { name: 'Parmesan cheese', quantity: '½ cup Parmesan cheese, grated', section: 'cheese', ndbNo: '1033', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'large egg', quantity: '1 large egg', section: 'cheese', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'dried oregano', quantity: '1 tsp', section: 'cheese', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'dried basil', quantity: '¾ tsp', section: 'cheese', ndbNo: '2003', portionDesc: 'g', portionGrams: 0.7 },
+      { name: 'salt', quantity: '½ tsp', section: 'cheese', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'cheese', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Preheat oven to 375°F (190°C). Grease a 9×13-inch baking dish and set aside.',
+      'Bring a large pot of salted water to a boil. Cook the ziti until al dente, about 2 minutes less than package directions. Drain and set aside.',
+      'Make or prepare the Italian Marinara Sauce (see the Italian Marinara Sauce recipe).',
+      'In a large bowl, combine the ricotta, half the mozzarella (5 oz), the Parmesan, egg, oregano, basil, salt, and pepper. Stir until well combined.',
+      'Spread about 1 cup of marinara over the bottom of the prepared baking dish. Layer in half the cooked pasta, then spread the ricotta mixture evenly over the pasta.',
+      'Spoon half the remaining marinara over the ricotta layer. Add the rest of the pasta, then pour the remaining marinara sauce over the top.',
+      'Scatter the remaining mozzarella and a dusting of Parmesan evenly over the surface.',
+      'Cover tightly with aluminum foil and bake for 25 minutes. Remove the foil and bake 15–20 minutes more, until the cheese is bubbly and lightly golden.',
+      'Let rest 10 minutes before cutting and serving.',
+      'Suggestions (not included): Serve with garlic bread and a green salad.'
+    ],
+    sections: [
+      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'marinara', label: 'Marinara Sauce', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'cheese', label: 'Cheese Layer', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];
