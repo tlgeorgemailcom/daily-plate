@@ -15280,8 +15280,7 @@ export const LEVELS: Level[] = [
       'Continue simmering until all the liquid has evaporated and the pork is sizzling in its own rendered fat, about 20–30 more minutes. Stir frequently at this stage to prevent burning. The pork should be golden and lightly crisp on the edges.',
       'Remove and discard the bay leaves. Use two forks to shred or roughly chop the pork into bite-sized pieces.',
       'For extra crispiness, spread the shredded pork on a baking sheet and broil for 3–5 minutes until edges are caramelized and crisp.',
-      'Serve in warm tortillas (not included) with your choice of toppings such as diced white onion, fresh cilantro, salsa, and lime wedges (neither included).',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve in warm tortillas with your choice of toppings such as diced white onion, fresh cilantro, salsa, and lime wedges.'
     ],
     sections: [
       { key: 'carnitas', label: 'Carnitas', cookingMethod: '', yieldFactorWater: 0.65 }
@@ -15327,8 +15326,8 @@ export const LEVELS: Level[] = [
       'Remove the pork from the refrigerator 30 minutes before cooking. Preheat the oven to 400°F (200°C). Line a baking sheet with foil and set a wire rack on top. Arrange the pork strips on the rack in a single layer.',
       'Roast for 15 minutes, then flip the strips and brush generously with the reserved marinade. Roast for another 15 minutes.',
       'Switch the oven to broil. Brush the pork again with the remaining reserved marinade and broil for 3–4 minutes until the edges are deeply caramelized and slightly charred. Watch closely to prevent burning.',
-      'Rest for 5 minutes, then slice against the grain and serve over steamed rice (not included).',
-      'Suggestions (not included):'
+      'Rest for 5 minutes, then slice against the grain.',
+      'Suggestions (not included): Serve over steamed rice.'
     ],
     sections: [
       { key: 'char_siu', label: 'Char Siu', cookingMethod: '', yieldFactorWater: 0.72 }
@@ -15462,8 +15461,8 @@ export const LEVELS: Level[] = [
       'Add the cabbage, carrots, bean sprouts, and scallions. Stir-fry until the vegetables are just wilted, about 2–3 minutes. Add the tamari and sesame oil, toss to combine, and transfer filling to a plate to cool completely.',
       'Place one wonton wrapper on a flat surface with a corner pointing toward you (diamond position). Spoon about 3 tablespoons (≈70g) of filling across the center. Fold the bottom corner over the filling, fold in the sides, and roll tightly. Seal the top corner with a dab of water. Repeat with remaining wrappers and filling.',
       'Heat 2–3 inches of vegetable oil in a deep skillet or pot to 350°F (175°C). Fry the egg rolls in batches, seam side down, for 3–4 minutes, turning once, until deep golden brown and crispy.',
-      'Drain on a rack or paper towels. Serve immediately with sweet-and-sour sauce or duck sauce (not included).',
-      'Suggestions (not included):'
+      'Drain on a rack or paper towels. Serve immediately.',
+      'Suggestions (not included): Serve with sweet-and-sour sauce or duck sauce.'
     ],
     sections: [
       { key: 'rolls', label: 'Egg Rolls', cookingMethod: '', yieldFactorWater: 0.6 }
@@ -15557,8 +15556,8 @@ export const LEVELS: Level[] = [
       'Set up a breading station: flour in one shallow dish, beaten egg in a second, and panko breadcrumbs in a third.',
       'Dredge each cutlet in flour and shake off the excess. Dip in the beaten egg, letting the excess drip off. Press firmly into the panko to coat both sides.',
       'Heat olive oil in a large skillet over medium-high heat until shimmering. Add the cutlets and cook until deep golden brown, 3–4 minutes per side. (The ingredient list reflects only the oil absorbed into the crust.)',
-      'Transfer to a wire rack for 1–2 minutes. Serve with lemon wedges and an arugula salad (not included).',
-      'Suggestions (not included):'
+      'Transfer to a wire rack for 1–2 minutes.',
+      'Suggestions (not included): Serve with lemon wedges and an arugula salad.'
     ],
     sections: [
       { key: 'main', label: 'Pork Milanese', cookingMethod: '', yieldFactorWater: 0.9 }
