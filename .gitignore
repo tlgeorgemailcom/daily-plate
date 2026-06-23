@@ -27,6 +27,9 @@ local.db
 local.db-info
 local.db-shm
 local.db-wal
+dev_recipes.db-info
+dev_recipes.db-shm
+dev_recipes.db-wal
 :memory:
 :memory:-info
 
