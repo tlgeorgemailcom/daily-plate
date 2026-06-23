@@ -9863,8 +9863,8 @@ export const LEVELS: Level[] = [
       'Season chicken breast with salt and pepper. In the same skillet with the reserved bacon drippings, pan-sear over medium-high heat until cooked through (internal temperature 165°F / 74°C), about 6–7 minutes per side. Let rest 5 minutes, then slice or chop.',
       'Arrange the romaine on a large platter or divide between two bowls.',
       'Arrange the chicken, bacon, avocado, hard-boiled eggs, tomato, blue cheese, and onion in rows or sections over the romaine.',
-      'Season lightly with salt and pepper. Serve with blue cheese dressing or ranch dressing on the side (see SAUCE_021 or SAUCE_020).',
-      'Suggestions (not included):'
+      'Season lightly with salt and pepper.',
+      'Suggestions (not included): Serve with blue cheese dressing or ranch dressing on the side (see SAUCE_021 or SAUCE_020).'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
