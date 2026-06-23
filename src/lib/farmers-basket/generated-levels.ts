@@ -2484,8 +2484,7 @@ export const LEVELS: Level[] = [
       'Gradually pour in the whole milk, whisking continuously to prevent lumps. Whisk in the salt and black pepper.',
       'Bring the gravy to a gentle simmer, whisking often, and cook 4–6 minutes until thickened to a pourable sauce that coats the back of a spoon.',
       'Return the browned sausage to the skillet and stir to combine. Simmer 1–2 minutes more to reheat. Taste and adjust salt and pepper.',
-      'Serve hot over split biscuits.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve hot over split biscuits.'
     ],
     sections: [
       { key: 'sausage', label: 'Browned pork sausage crumbles', cookingMethod: '', yieldFactorWater: 0.73 },
