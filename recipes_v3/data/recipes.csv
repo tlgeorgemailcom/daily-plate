@@ -428,3 +428,5 @@ SAND_079,EMPANADA,Beef Empanadas,sandwiches & burgers,all,builtin,,,1 empanada (
 SAND_080,GORDITA,Gorditas,sandwiches & burgers,veggie,,,15 min,2 gorditas,4,Rule D,pan grilled,0.82,1.0,1.0,1.0,1.0,approved,,,,PASS,,
 PASTA_001,BAKEDZITI,Baked Ziti,pasta & pizza,veggie,builtin,,,1 plate (makes 6),6,Rule D,baked,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,,
 PASTA_002,GARLICBREADPIZZA,Garlic Bread Pizza,pasta & pizza,veggie,builtin,,,1 piece (makes 4),4,Rule D,baked,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,,
+PASTA_003,PIZZATHICKCRUST,"Pizza, Thick Crust",pasta & pizza,veggie,builtin,,,2 slices (makes 4),4,Rule D,baked,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,,
+PASTA_004,PIZZATHINCRUST,"Pizza, Thin Crust",pasta & pizza,veggie,builtin,,,2 slices (makes 4),4,Rule D,baked,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,,

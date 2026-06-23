@@ -725,3 +725,9 @@ PASTA_001,cheese,Cheese Layer,,baked,0.90,1.0,,,1.0,,,,
 PASTA_002,bread_base,Garlic Bread Base,,baked,0.85,1.0,1.0,1.0,1.0,,,,
 PASTA_002,sauce,Marinara Sauce,,raw,1.0,1.0,1.0,1.0,1.0,,,,SAUCE_027
 PASTA_002,toppings,Cheese Topping,,baked,0.90,1.0,1.0,1.0,1.0,,,,
+PASTA_003,crust,Pizza Crust,,baked,0.85,1.0,1.0,1.0,1.0,,,,
+PASTA_003,sauce,Marinara Sauce,,raw,1.0,1.0,1.0,1.0,1.0,,,,SAUCE_027
+PASTA_003,toppings,Cheese Topping,,baked,0.90,1.0,1.0,1.0,1.0,,,,
+PASTA_004,crust,Pizza Crust,,baked,0.72,1.0,1.0,1.0,1.0,,,,
+PASTA_004,sauce,Marinara Sauce,,raw,1.0,1.0,1.0,1.0,1.0,,,,SAUCE_027
+PASTA_004,toppings,Cheese Topping,,baked,0.90,1.0,1.0,1.0,1.0,,,,

@@ -20622,5 +20622,113 @@ export const LEVELS: Level[] = [
       { key: 'sauce', label: 'Marinara Sauce', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'toppings', label: 'Cheese Topping', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
+  },
+  {
+    id: 'PASTA_003',
+    name: 'Pizza, Thick Crust',
+    category: 'pasta & pizza',
+    dietaryCategory: 'veggie',
+    levelNum: 430,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 slices (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":623.4,"pro":24.9,"fat":27.6,"carb":69.0,"fib":4.1,"h2o":127.9,"sug":4.8,"perServing":{"cal":623.4,"pro":24.9,"fat":27.6,"carb":69.0,"fib":4.1,"h2o":127.9,"sug":4.8,"AddedSugars":1.1,"IntrinsicSugars":3.7},"micros":{"vitaminA":42.6,"vitaminC":1.25,"vitaminD":3.82,"vitaminE":1.01,"vitaminK":7.88,"vitaminB6":0.05,"vitaminB12":0.48,"thiamin":0.26,"riboflavin":0.25,"niacin":2.01,"folate":62.75,"calcium":159.04,"iron":1.96,"magnesium":17.94,"phosphorus":141.67,"potassium":121.82,"sodium":494.01,"zinc":1.06,"copper":0.09,"selenium":15.07,"cholesterol":19.24,"saturatedFat":4.06,"monoFat":4.96,"polyFat":0.68,"omega3":0.0,"omega6":0.0},"gramsPerServing":254.9,"servings":4,"per100g":{"Energy_KCal":244.57,"Water":50.18,"Protein":9.75,"TotalLipidFat":10.82,"Carbohydrate":27.06,"FiberTotalDietary":1.62,"SugarsTotal":1.87,"Cholesterol":19.24,"FattyAcids_totalSaturated":4.06,"FattyAcids_totalMonounsaturated":4.96,"FattyAcids_totalPolyunsaturated":0.68,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":42.6,"Retinol":37.09,"Carotene_beta":61.59,"VitaminD":3.82,"VitaminE_alphaTocopherol":1.01,"VitaminK_phylloquinone":7.88,"VitaminC_totalAscorbicAcid":1.25,"Thiamin":0.26,"Riboflavin":0.25,"Niacin":2.01,"PantothenicAcid":0.28,"VitaminB6":0.05,"Folate_total":62.75,"Folate_food":24.68,"Folate_DFE":89.44,"FolicAcid":47.58,"VitaminB12":0.48,"Choline_total":6.45,"Betaine":0.06,"LuteinZeaxanthin":67.24,"Lycopene":1022.57,"Calcium_Ca":159.04,"Iron_Fe":1.96,"Magnesium_Mg":17.94,"Phosphorus_P":141.67,"Potassium_K":121.82,"Sodium_Na":494.01,"Zinc_Zn":1.06,"Copper_Cu":0.09,"Manganese_Mn":0.29,"Selenium_Se":15.07,"Tryptophan":0.17,"Threonine":0.36,"Isoleucine":0.43,"Leucine":0.75,"Lysine":0.4,"Methionine":0.2,"Cystine":0.09,"Phenylalanine":0.46,"Tyrosine":0.39,"Valine":0.51,"Arginine":0.3,"Histidine":0.23,"Alanine":0.31,"AsparticAcid":0.63,"GlutamicAcid":2.45,"Glycine":0.27,"Proline":1.02,"Serine":0.4,"omega3":0.0,"omega6":0.0,"AddedSugars":0.41,"IntrinsicSugars":1.46},"addedSugars":1.1,"intrinsicSugars":3.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":78.8},{"ndb":"14411","name":"Water, tap, drinking","grams":50.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":10.2},{"ndb":"18375","name":"Leavening agents, yeast, baker's, active dry","grams":1.8},{"ndb":"19335","name":"Sugars, granulated","grams":1.1},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"","name":"Italian Marinara Sauce","grams":60.0},{"ndb":"1026","name":"Cheese, mozzarella, whole milk","grams":56.7},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":6.2},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.2},{"ndb":"2003","name":"Spices, basil, dried","grams":0.2},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1}],"sections":[{"section_key":"crust","section_label":"Pizza Crust","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":573.2,"raw_water_grams":237.73,"raw_fat_grams":44.43,"raw_protein_grams":35.45,"raw_carb_grams":247.54,"final_grams":537.54},{"section_key":"sauce","section_label":"Marinara Sauce","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":240.0,"raw_water_grams":200.69,"raw_fat_grams":8.52,"raw_protein_grams":4.46,"raw_carb_grams":21.24,"final_grams":240.0},{"section_key":"toppings","section_label":"Cheese Topping","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":254.07,"raw_water_grams":120.93,"raw_fat_grams":57.32,"raw_protein_grams":59.54,"raw_carb_grams":7.12,"final_grams":241.98}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Pizza, Thick Crust', quantity: 'custom (g)', foodWord: 'PIZZATHICKCRUST', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '2½ cups', section: 'crust', ndbNo: '20581', portionDesc: 'g', portionGrams: 315.0 },
+      { name: 'water', quantity: '¾ cup', section: 'crust', ndbNo: '14411', portionDesc: 'g', portionGrams: 200.0 },
+      { name: 'olive oil', quantity: '3 tbsp', section: 'crust', ndbNo: '4053', portionDesc: 'g', portionGrams: 40.8 },
+      { name: 'active dry yeast', quantity: '1 packet (2¼ tsp)', section: 'crust', ndbNo: '18375', portionDesc: 'g', portionGrams: 7.2 },
+      { name: 'sugar', quantity: '1 tsp', section: 'crust', ndbNo: '19335', portionDesc: 'g', portionGrams: 4.2 },
+      { name: 'salt', quantity: '1 tsp', section: 'crust', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'Italian Marinara Sauce', quantity: '1 cup Italian Marinara Sauce (recipe)', section: 'sauce', foodWord: 'MARINARASAUCE', portionDesc: 'g', portionGrams: 240.0, isDish: true, componentRef: 'SAUCE_027' },
+      { name: 'mozzarella', quantity: '8 oz mozzarella, shredded', section: 'toppings', ndbNo: '1026', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'Parmesan cheese', quantity: '¼ cup', section: 'toppings', ndbNo: '1033', portionDesc: 'g', portionGrams: 25.0 },
+      { name: 'dried oregano', quantity: '1 tsp', section: 'toppings', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'dried basil', quantity: '¾ tsp', section: 'toppings', ndbNo: '2003', portionDesc: 'g', portionGrams: 0.7 },
+      { name: 'red pepper flakes', quantity: '¼ tsp', section: 'toppings', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'In a small bowl, combine the warm water, sugar, and yeast. Let stand 5–10 minutes until foamy.',
+      'In a large bowl, combine the flour and salt. Add the yeast mixture and 2 tablespoons of the olive oil. Mix until a shaggy dough forms, then knead 8–10 minutes until smooth and elastic. Cover and let rise 1–1½ hours until doubled.',
+      'Make or prepare the Italian Marinara Sauce (see the Italian Marinara Sauce recipe).',
+      'Preheat oven to 450°F (230°C). Coat a 13×9-inch baking pan with the remaining 1 tablespoon of olive oil.',
+      'Press the dough into the oiled pan, stretching it to fill the corners. Dimple the surface with your fingertips, cover loosely, and rest 20 minutes.',
+      'Spread the marinara sauce evenly over the dough, leaving a ½-inch border.',
+      'Scatter the shredded mozzarella over the sauce, then sprinkle with Parmesan, oregano, basil, and red pepper flakes.',
+      'Bake 18–22 minutes until the crust is deep golden brown and the cheese is bubbly.',
+      'Let rest 5 minutes, then cut into 8 pieces (2 per serving) and serve.',
+      'Suggestions (not included): Top with fresh basil or a drizzle of olive oil just before serving.'
+    ],
+    sections: [
+      { key: 'crust', label: 'Pizza Crust', cookingMethod: '', yieldFactorWater: 0.85 },
+      { key: 'sauce', label: 'Marinara Sauce', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'toppings', label: 'Cheese Topping', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
+  },
+  {
+    id: 'PASTA_004',
+    name: 'Pizza, Thin Crust',
+    category: 'pasta & pizza',
+    dietaryCategory: 'veggie',
+    levelNum: 431,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '2 slices (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":561.2,"pro":24.9,"fat":20.8,"carb":68.5,"fib":4.1,"h2o":112.1,"sug":4.2,"perServing":{"cal":561.2,"pro":24.9,"fat":20.8,"carb":68.5,"fib":4.1,"h2o":112.1,"sug":4.2,"AddedSugars":0.5,"IntrinsicSugars":3.7},"micros":{"vitaminA":46.85,"vitaminC":1.38,"vitaminD":4.21,"vitaminE":0.75,"vitaminK":6.99,"vitaminB6":0.06,"vitaminB12":0.53,"thiamin":0.28,"riboflavin":0.28,"niacin":2.21,"folate":69.02,"calcium":174.76,"iron":2.14,"magnesium":19.69,"phosphorus":155.82,"potassium":133.95,"sodium":543.11,"zinc":1.17,"copper":0.1,"selenium":16.58,"cholesterol":21.16,"saturatedFat":4.06,"monoFat":3.42,"polyFat":0.5,"omega3":0.0,"omega6":0.0},"gramsPerServing":231.7,"servings":4,"per100g":{"Energy_KCal":242.19,"Water":48.37,"Protein":10.73,"TotalLipidFat":8.96,"Carbohydrate":29.54,"FiberTotalDietary":1.79,"SugarsTotal":1.83,"Cholesterol":21.16,"FattyAcids_totalSaturated":4.06,"FattyAcids_totalMonounsaturated":3.42,"FattyAcids_totalPolyunsaturated":0.5,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":46.85,"Retinol":40.8,"Carotene_beta":67.74,"VitaminD":4.21,"VitaminE_alphaTocopherol":0.75,"VitaminK_phylloquinone":6.99,"VitaminC_totalAscorbicAcid":1.38,"Thiamin":0.28,"Riboflavin":0.28,"Niacin":2.21,"PantothenicAcid":0.31,"VitaminB6":0.06,"Folate_total":69.02,"Folate_food":27.15,"Folate_DFE":98.38,"FolicAcid":52.34,"VitaminB12":0.53,"Choline_total":7.09,"Betaine":0.06,"LuteinZeaxanthin":73.96,"Lycopene":1124.74,"Calcium_Ca":174.76,"Iron_Fe":2.14,"Magnesium_Mg":19.69,"Phosphorus_P":155.82,"Potassium_K":133.95,"Sodium_Na":543.11,"Zinc_Zn":1.17,"Copper_Cu":0.1,"Manganese_Mn":0.32,"Selenium_Se":16.58,"Tryptophan":0.19,"Threonine":0.4,"Isoleucine":0.47,"Leucine":0.82,"Lysine":0.44,"Methionine":0.22,"Cystine":0.1,"Phenylalanine":0.5,"Tyrosine":0.43,"Valine":0.56,"Arginine":0.33,"Histidine":0.25,"Alanine":0.34,"AsparticAcid":0.7,"GlutamicAcid":2.7,"Glycine":0.29,"Proline":1.12,"Serine":0.44,"omega3":0.0,"omega6":0.0,"AddedSugars":0.23,"IntrinsicSugars":1.61},"addedSugars":0.5,"intrinsicSugars":3.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":78.8},{"ndb":"14411","name":"Water, tap, drinking","grams":38.8},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"18375","name":"Leavening agents, yeast, baker's, active dry","grams":1.8},{"ndb":"19335","name":"Sugars, granulated","grams":0.5},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"","name":"Italian Marinara Sauce","grams":60.0},{"ndb":"1026","name":"Cheese, mozzarella, whole milk","grams":56.7},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":6.2},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.2},{"ndb":"2003","name":"Spices, basil, dried","grams":0.2},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1}],"sections":[{"section_key":"crust","section_label":"Pizza Crust","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.72,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":498.9,"raw_water_grams":192.77,"raw_fat_grams":17.23,"raw_protein_grams":35.45,"raw_carb_grams":245.44,"final_grams":444.92},{"section_key":"sauce","section_label":"Marinara Sauce","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":240.0,"raw_water_grams":200.69,"raw_fat_grams":8.52,"raw_protein_grams":4.46,"raw_carb_grams":21.24,"final_grams":240.0},{"section_key":"toppings","section_label":"Cheese Topping","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.9,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":254.07,"raw_water_grams":120.93,"raw_fat_grams":57.32,"raw_protein_grams":59.54,"raw_carb_grams":7.12,"final_grams":241.98}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Pizza, Thin Crust', quantity: 'custom (g)', foodWord: 'PIZZATHINCRUST', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '2½ cups', section: 'crust', ndbNo: '20581', portionDesc: 'g', portionGrams: 315.0 },
+      { name: 'water', quantity: '⅔ cup', section: 'crust', ndbNo: '14411', portionDesc: 'g', portionGrams: 155.0 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'crust', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'active dry yeast', quantity: '1 packet (2¼ tsp)', section: 'crust', ndbNo: '18375', portionDesc: 'g', portionGrams: 7.2 },
+      { name: 'sugar', quantity: '½ tsp', section: 'crust', ndbNo: '19335', portionDesc: 'g', portionGrams: 2.1 },
+      { name: 'salt', quantity: '1 tsp', section: 'crust', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'Italian Marinara Sauce', quantity: '1 cup Italian Marinara Sauce (recipe)', section: 'sauce', foodWord: 'MARINARASAUCE', portionDesc: 'g', portionGrams: 240.0, isDish: true, componentRef: 'SAUCE_027' },
+      { name: 'mozzarella', quantity: '8 oz mozzarella, shredded', section: 'toppings', ndbNo: '1026', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'Parmesan cheese', quantity: '¼ cup', section: 'toppings', ndbNo: '1033', portionDesc: 'g', portionGrams: 25.0 },
+      { name: 'dried oregano', quantity: '1 tsp', section: 'toppings', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'dried basil', quantity: '¾ tsp', section: 'toppings', ndbNo: '2003', portionDesc: 'g', portionGrams: 0.7 },
+      { name: 'red pepper flakes', quantity: '¼ tsp', section: 'toppings', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'In a small bowl, combine the warm water, sugar, and yeast. Let stand 5–10 minutes until foamy.',
+      'In a large bowl, combine the flour and salt. Add the yeast mixture and olive oil. Mix until a shaggy dough forms, then knead 8–10 minutes until smooth and elastic. Cover and let rise 1–1½ hours until doubled.',
+      'Make or prepare the Italian Marinara Sauce (see the Italian Marinara Sauce recipe).',
+      'Preheat oven to 500°F (260°C) with a pizza stone or heavy baking sheet inside. Let it heat at least 30 minutes.',
+      'On a lightly floured surface, stretch or roll the dough into a 12–14-inch round as thin as possible.',
+      'Transfer the dough to a sheet of parchment paper. Spread the marinara sauce in a thin, even layer, leaving a ½-inch border.',
+      'Scatter the shredded mozzarella over the sauce, then sprinkle with Parmesan, oregano, basil, and red pepper flakes.',
+      'Slide the pizza (on parchment) onto the hot stone or baking sheet. Bake 8–11 minutes until the crust is crisp and charred at the edges and the cheese is bubbly.',
+      'Let rest 2 minutes, then cut into 8 slices (2 per serving) and serve.',
+      'Suggestions (not included): Top with fresh basil or a drizzle of olive oil just before serving.'
+    ],
+    sections: [
+      { key: 'crust', label: 'Pizza Crust', cookingMethod: '', yieldFactorWater: 0.72 },
+      { key: 'sauce', label: 'Marinara Sauce', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'toppings', label: 'Cheese Topping', cookingMethod: '', yieldFactorWater: 0.9 }
+    ],
   }
 ];

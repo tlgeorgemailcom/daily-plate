@@ -19,8 +19,8 @@ Pasta & Pizza
 
 ✅ Baked Ziti
 ✅ Garlic Bread Pizza
-Pizza, thick crust
-Pizza, thin crust
+✅ Pizza, thick crust
+✅ Pizza, thin crust
 Garlic Butter Shrimp Pasta
 Chicken Pesto Pasta
 Lemon Pasta
