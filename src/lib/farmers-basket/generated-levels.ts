@@ -11869,8 +11869,8 @@ export const LEVELS: Level[] = [
       'Heat 1 tablespoon olive oil in a large cast-iron skillet or grill pan over high heat until smoking. Sear the steak 3 to 4 minutes per side for medium-rare, or until desired doneness. Transfer to a cutting board and rest 5 minutes.',
       'In the same skillet, heat the remaining 1 tablespoon olive oil over medium-high heat. Add the onions and cook 4 to 5 minutes until softened and charred at the edges. Add the bell peppers, 1 teaspoon cumin, 1 teaspoon chili powder, 3/4 teaspoon salt, and black pepper. Cook 4 to 5 more minutes until the peppers are tender and slightly charred.',
       'Slice the rested steak thinly against the grain.',
-      'Warm the flour tortillas in a dry skillet or microwave. Divide the steak and pepper-onion mixture among the tortillas. Serve with your choice of toppings such as sour cream, guacamole, salsa, shredded cheese, and lime wedges.',
-      'Suggestions (not included):'
+      'Warm the flour tortillas in a dry skillet or microwave. Divide the steak and pepper-onion mixture among the tortillas.',
+      'Suggestions (not included): Serve with sour cream, guacamole, salsa, shredded cheese, and lime wedges.'
     ],
     sections: [
       { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
@@ -12031,8 +12031,7 @@ export const LEVELS: Level[] = [
       'Heat the olive oil in a large skillet over medium-high heat. Brown the meatballs in batches, turning to sear all sides, 4 to 5 minutes total. The meatballs do not need to be fully cooked through at this stage. Transfer to a plate.',
       'Make the sauce: in the same skillet, heat the olive oil over medium heat. Add the diced onion and cook, stirring occasionally, until softened, about 8 minutes. Add the minced garlic and red pepper flakes and cook, stirring, until fragrant, about 1 minute. Pour in the crushed tomatoes. Season with oregano, salt, and black pepper and stir to combine.',
       'Return the browned meatballs to the skillet. Nestle them into the sauce. Reduce heat to low, cover, and simmer for 20 to 25 minutes until the meatballs are cooked through and the sauce has thickened. Remove from heat and stir in the fresh basil.',
-      'Serve over pasta or with crusty bread, garnished with fresh parsley and additional Parmesan if desired.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve over pasta or with crusty bread, garnished with fresh parsley and additional Parmesan.'
     ],
     sections: [
       { key: 'meatballs', label: 'Meatballs', cookingMethod: '', yieldFactorWater: 0.85 },
@@ -12396,8 +12395,7 @@ export const LEVELS: Level[] = [
       'Heat the vegetable oil in a wok or large skillet over high heat. Add the beef in a single layer and cook without stirring for 1 to 2 minutes until browned. Flip and cook 1 minute more. Remove beef and set aside.',
       'Pour the sauce into the same wok and bring to a simmer over medium-high heat, stirring, for 2 to 3 minutes until slightly thickened.',
       'Return the beef to the wok and toss to coat in the sauce. Add the sliced scallions and drizzle with sesame oil. Stir-fry 1 minute.',
-      'Serve the Mongolian beef on its own or over steamed white rice (not included).',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve on its own or over steamed white rice.'
     ],
     sections: [
       { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.82 },
