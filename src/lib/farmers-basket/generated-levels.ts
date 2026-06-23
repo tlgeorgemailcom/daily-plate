@@ -21191,5 +21191,51 @@ export const LEVELS: Level[] = [
       { key: 'pasta', label: 'Spaghetti', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'carbonara', label: 'Carbonara', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'PASTA_015',
+    name: 'Fettuccine Alfredo',
+    category: 'pasta & pizza',
+    dietaryCategory: 'veggie',
+    levelNum: 441,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 plate (makes 4)',
+    prepTime: '25',
+    linkType: 'ingredient',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":613.2,"pro":18.2,"fat":40.3,"carb":44.9,"fib":1.9,"h2o":121.8,"sug":3.5,"perServing":{"cal":613.2,"pro":18.2,"fat":40.3,"carb":44.9,"fib":1.9,"h2o":121.8,"sug":3.5,"AddedSugars":0.0,"IntrinsicSugars":3.5},"micros":{"vitaminA":137.95,"vitaminC":0.08,"vitaminD":17.58,"vitaminE":0.33,"vitaminK":1.43,"vitaminB6":0.03,"vitaminB12":0.16,"thiamin":0.02,"riboflavin":0.09,"niacin":0.31,"folate":4.43,"calcium":155.88,"iron":0.38,"magnesium":18.3,"phosphorus":132.74,"potassium":81.63,"sodium":226.99,"zinc":0.68,"copper":0.08,"selenium":18.23,"cholesterol":50.3,"saturatedFat":11.02,"monoFat":4.7,"polyFat":0.61,"omega3":0.04,"omega6":0.29},"gramsPerServing":228.2,"servings":4,"per100g":{"Energy_KCal":268.74,"Water":53.39,"Protein":7.96,"TotalLipidFat":17.67,"Carbohydrate":19.68,"FiberTotalDietary":0.82,"SugarsTotal":1.52,"Cholesterol":50.3,"FattyAcids_totalSaturated":11.02,"FattyAcids_totalMonounsaturated":4.7,"FattyAcids_totalPolyunsaturated":0.61,"LinoleicAcid":0.29,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":137.95,"Retinol":135.51,"Carotene_beta":28.83,"VitaminD":17.58,"VitaminE_alphaTocopherol":0.33,"VitaminK_phylloquinone":1.43,"VitaminC_totalAscorbicAcid":0.08,"Thiamin":0.02,"Riboflavin":0.09,"Niacin":0.31,"PantothenicAcid":0.22,"VitaminB6":0.03,"Folate_total":4.43,"Folate_food":4.43,"Folate_DFE":4.43,"FolicAcid":0.0,"VitaminB12":0.16,"Choline_total":6.52,"Betaine":0.01,"LuteinZeaxanthin":0.19,"Lycopene":0.01,"Calcium_Ca":155.88,"Iron_Fe":0.38,"Magnesium_Mg":18.3,"Phosphorus_P":132.74,"Potassium_K":81.63,"Sodium_Na":226.99,"Zinc_Zn":0.68,"Copper_Cu":0.08,"Manganese_Mn":0.23,"Selenium_Se":18.23,"Tryptophan":0.11,"Threonine":0.29,"Isoleucine":0.37,"Leucine":0.69,"Lysine":0.47,"Methionine":0.16,"Cystine":0.08,"Phenylalanine":0.41,"Tyrosine":0.31,"Valine":0.46,"Arginine":0.28,"Histidine":0.24,"Alanine":0.25,"AsparticAcid":0.46,"GlutamicAcid":2.2,"Glycine":0.19,"Proline":0.93,"Serine":0.4,"omega3":0.04,"omega6":0.29,"AddedSugars":0.0,"IntrinsicSugars":1.52},"addedSugars":0.0,"intrinsicSugars":3.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20420","name":"Pasta, dry, unenriched","grams":56.7},{"ndb":"14411","name":"Water, tap, drinking","grams":236.5},{"ndb":"1145","name":"Butter, without salt","grams":14.2},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":59.5},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":25.0},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.1}],"sections":[{"section_key":"pasta","section_label":"Pasta","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.34811726353257855,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":1172.8,"raw_water_grams":967.51,"raw_fat_grams":3.42,"raw_protein_grams":29.57,"raw_carb_grams":169.35,"final_grams":542.1},{"section_key":"sauce","section_label":"Sauce","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":0.85,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":397.15,"raw_water_grams":177.03,"raw_fat_grams":157.89,"raw_protein_grams":43.07,"raw_carb_grams":10.28,"final_grams":370.6}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Fettuccine Alfredo', quantity: 'custom (g)', foodWord: 'FETTUCCINEALFREDO', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'wide pasta, dry', quantity: '½ lb dry fettuccine', section: 'pasta', ndbNo: '20420', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'water', quantity: '4 cups', section: 'pasta', ndbNo: '14411', portionDesc: 'g', portionGrams: 946.0 },
+      { name: 'unsalted butter', quantity: '4 tbsp', section: 'sauce', ndbNo: '1145', portionDesc: 'g', portionGrams: 56.8 },
+      { name: 'heavy cream', quantity: '1 cup', section: 'sauce', ndbNo: '1053', portionDesc: 'g', portionGrams: 238.0 },
+      { name: 'Parmesan cheese', quantity: '1 cup, finely grated', section: 'sauce', ndbNo: '1033', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'salt', quantity: '¼ tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'ground nutmeg', quantity: '⅛ tsp', section: 'sauce', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.275 }
+    ],
+    recipeInstructions: [
+      'Bring a large pot of generously salted water to a boil. Add the fettuccine and cook until al dente, 8–10 minutes. Reserve 1 cup pasta water before draining.',
+      'Meanwhile, melt the butter in a large skillet over medium heat. Add the heavy cream and bring to a gentle simmer. Cook, stirring, until slightly thickened, about 3–4 minutes.',
+      'Reduce heat to low. Add half the Parmesan and stir until melted and smooth. Season with salt, pepper, and nutmeg.',
+      'Drain the fettuccine and add to the sauce. Toss to coat, adding pasta water a splash at a time to reach a silky consistency.',
+      'Add the remaining Parmesan and toss again until the sauce clings to every strand.',
+      'Divide among four warm bowls and serve immediately.',
+      'Suggestions (not included): Top with additional Parmesan and freshly cracked black pepper. Add grilled chicken or shrimp for a protein boost.'
+    ],
+    sections: [
+      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.85 }
+    ],
   }
 ];
