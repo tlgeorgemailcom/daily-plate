@@ -26,7 +26,7 @@ Pasta & Pizza
 ✅ Lemon Pasta
 ✅ Pasta Primavera
 ✅ Pasta al Pesto
-Ravioli
+✅ Ravioli
 ✅ Spaghetti & Meatballs
 Spaghetti Bolognese
 Cacio e Pepe

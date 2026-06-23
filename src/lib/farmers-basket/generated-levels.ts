@@ -20987,5 +20987,63 @@ export const LEVELS: Level[] = [
       { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'pesto', label: 'Basil Pesto', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'PASTA_010',
+    name: 'Cheese Ravioli',
+    category: 'pasta & pizza',
+    dietaryCategory: 'veggie',
+    levelNum: 437,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 plate (makes 4)',
+    prepTime: '',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":622.5,"pro":27.4,"fat":33.4,"carb":52.5,"fib":2.4,"h2o":121.2,"sug":0.9,"perServing":{"cal":622.5,"pro":27.4,"fat":33.4,"carb":52.5,"fib":2.4,"h2o":121.2,"sug":0.9,"AddedSugars":0.0,"IntrinsicSugars":0.9},"micros":{"vitaminA":153.94,"vitaminC":3.06,"vitaminD":21.19,"vitaminE":0.81,"vitaminK":48.47,"vitaminB6":0.07,"vitaminB12":0.35,"thiamin":0.15,"riboflavin":0.29,"niacin":1.14,"folate":60.76,"calcium":174.13,"iron":1.75,"magnesium":21.46,"phosphorus":163.52,"potassium":141.96,"sodium":450.13,"zinc":0.98,"copper":0.07,"selenium":20.36,"cholesterol":109.04,"saturatedFat":7.35,"monoFat":4.74,"polyFat":0.86,"omega3":0.03,"omega6":0.4},"gramsPerServing":239.3,"servings":4,"per100g":{"Energy_KCal":260.15,"Water":50.64,"Protein":11.43,"TotalLipidFat":13.94,"Carbohydrate":21.93,"FiberTotalDietary":1.0,"SugarsTotal":0.37,"Cholesterol":109.04,"FattyAcids_totalSaturated":7.35,"FattyAcids_totalMonounsaturated":4.74,"FattyAcids_totalPolyunsaturated":0.86,"LinoleicAcid":0.4,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":153.94,"Retinol":107.8,"Carotene_beta":552.58,"VitaminD":21.19,"VitaminE_alphaTocopherol":0.81,"VitaminK_phylloquinone":48.47,"VitaminC_totalAscorbicAcid":3.06,"Thiamin":0.15,"Riboflavin":0.29,"Niacin":1.14,"PantothenicAcid":0.43,"VitaminB6":0.07,"Folate_total":60.76,"Folate_food":34.62,"Folate_DFE":79.1,"FolicAcid":40.23,"VitaminB12":0.35,"Choline_total":63.26,"Betaine":9.72,"LuteinZeaxanthin":1249.48,"Lycopene":0.02,"Calcium_Ca":174.13,"Iron_Fe":1.75,"Magnesium_Mg":21.46,"Phosphorus_P":163.52,"Potassium_K":141.96,"Sodium_Na":450.13,"Zinc_Zn":0.98,"Copper_Cu":0.07,"Manganese_Mn":0.29,"Selenium_Se":20.36,"Tryptophan":0.14,"Threonine":0.44,"Isoleucine":0.55,"Leucine":1.03,"Lysine":0.87,"Methionine":0.28,"Cystine":0.15,"Phenylalanine":0.59,"Tyrosine":0.5,"Valine":0.68,"Arginine":0.57,"Histidine":0.36,"Alanine":0.46,"AsparticAcid":0.85,"GlutamicAcid":2.58,"Glycine":0.32,"Proline":1.04,"Serine":0.66,"omega3":0.03,"omega6":0.4,"AddedSugars":0.0,"IntrinsicSugars":0.37},"addedSugars":0.0,"intrinsicSugars":0.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"1036","name":"Cheese, ricotta, whole milk","grams":62.0},{"ndb":"11457","name":"Spinach, raw","grams":22.5},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":12.5},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":12.5},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":62.5},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":37.5},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"1145","name":"Butter, without salt","grams":14.2},{"ndb":"2038","name":"Spices, sage, ground","grams":0.2},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"9152","name":"Lemon juice, raw","grams":3.8},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":6.2},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"filling","section_label":"Ricotta & Spinach Filling","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":442.12,"raw_water_grams":312.84,"raw_fat_grams":50.43,"raw_protein_grams":54.75,"raw_carb_grams":13.42,"final_grams":442.12},{"section_key":"dough","section_label":"Fresh Pasta Dough","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.95,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":416.6,"raw_water_grams":144.03,"raw_fat_grams":30.32,"raw_protein_grams":44.66,"raw_carb_grams":191.86,"final_grams":409.4},{"section_key":"sauce","section_label":"Brown Butter Sage","prep_method":"raw","cook_method":"pan grilled","cooking_method":"pan grilled","cooking_method_normalized":"fried","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":105.58,"raw_water_grams":34.97,"raw_fat_grams":52.7,"raw_protein_grams":9.99,"raw_carb_grams":4.65,"final_grams":105.58}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Cheese Ravioli', quantity: 'custom (g)', foodWord: 'RAVIOLI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Ricotta cheese', quantity: '2 cups', section: 'filling', ndbNo: '1036', portionDesc: 'g', portionGrams: 248.0 },
+      { name: 'spinach', quantity: '3 cups, packed', section: 'filling', ndbNo: '11457', portionDesc: 'g', portionGrams: 90.0 },
+      { name: 'large egg', quantity: '1 large egg', section: 'filling', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'Parmesan cheese', quantity: '½ cup, grated', section: 'filling', ndbNo: '1033', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'ground nutmeg', quantity: '¼ tsp', section: 'filling', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.55 },
+      { name: 'salt', quantity: '½ tsp', section: 'filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'filling', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
+      { name: 'all-purpose enriched unbleached white flour', quantity: '2 cups', section: 'dough', ndbNo: '20581', portionDesc: 'g', portionGrams: 250.0 },
+      { name: 'large egg', quantity: '3 large eggs', section: 'dough', ndbNo: '1123', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'olive oil', quantity: '1 tbsp', section: 'dough', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'salt', quantity: '½ tsp', section: 'dough', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'unsalted butter', quantity: '4 tbsp', section: 'sauce', ndbNo: '1145', portionDesc: 'g', portionGrams: 56.8 },
+      { name: 'ground sage', quantity: '1 tsp', section: 'sauce', ndbNo: '2038', portionDesc: 'g', portionGrams: 0.7 },
+      { name: 'garlic', quantity: '2 cloves garlic', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'lemon juice', quantity: '1 tbsp', section: 'sauce', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'Parmesan cheese', quantity: '¼ cup, grated', section: 'sauce', ndbNo: '1033', portionDesc: 'g', portionGrams: 25.0 },
+      { name: 'salt', quantity: '¼ tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
+      { name: 'ground black pepper', quantity: '¼ tsp', section: 'sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+    ],
+    recipeInstructions: [
+      'Make the filling: Wilt the spinach by pouring boiling water over it in a colander; squeeze dry and chop finely. Combine with the ricotta, egg, Parmesan, nutmeg, salt, and pepper. Mix well. Refrigerate until needed.',
+      'Make the dough: Mound the flour on a clean surface and make a well in the center. Add the eggs, olive oil, and salt. Beat with a fork, gradually incorporating the flour from the inner walls. Knead until smooth and elastic, about 8–10 minutes. Wrap and rest 30 minutes at room temperature.',
+      'Roll and fill: Divide the dough into 4 portions. Roll each thin (about 1.5mm). Place 1-tbsp mounds of filling 1½ inches apart on one dough strip. Brush around each mound with water, top with a second strip, and press firmly to seal. Cut into squares with a pasta cutter or sharp knife.',
+      'Boil: Bring a large pot of well-salted water to a boil. Working in batches, cook the ravioli 3–4 minutes until they float and are tender. Remove with a slotted spoon, reserving ½ cup pasta water.',
+      'Make the sauce: Melt the butter in a large skillet over medium heat. Cook, swirling often, until golden brown and nutty, 3–4 minutes. Add the garlic and sage and cook 30 seconds. Remove from heat and stir in the lemon juice.',
+      'Add the ravioli to the skillet and toss gently to coat, adding a splash of pasta water if needed. Sprinkle with Parmesan, salt, and pepper.',
+      'Divide among 4 plates and serve immediately.',
+      'Suggestions (not included): Substitute fresh sage (8–10 leaves, fried briefly in the butter) if available.'
+    ],
+    sections: [
+      { key: 'filling', label: 'Ricotta & Spinach Filling', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'dough', label: 'Fresh Pasta Dough', cookingMethod: '', yieldFactorWater: 0.95 },
+      { key: 'sauce', label: 'Brown Butter Sage', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
