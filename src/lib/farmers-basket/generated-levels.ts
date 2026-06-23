@@ -8512,8 +8512,7 @@ export const LEVELS: Level[] = [
       'Divide the dough into 6–8 portions. On a lightly floured surface, roll each portion into a rope about 3/4-inch thick. Cut into 1-inch pieces.',
       'Optional: roll each piece off the back of a fork or over a gnocchi board to create ridges.',
       'Bring a large pot of salted water to a boil. Cook gnocchi in batches — they are ready about 30 seconds after they float to the surface (2–3 minutes total). Remove with a slotted spoon.',
-      'Serve immediately tossed with browned butter and sage, tomato sauce, or pesto.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve tossed with browned butter and sage, tomato sauce, or pesto.'
     ],
     sections: [
       { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 },
@@ -8784,8 +8783,8 @@ export const LEVELS: Level[] = [
       'Transfer potatoes to a well-oiled baking sheet. Use the bottom of a glass or measuring cup to firmly smash each potato to about ½-inch thickness.',
       'Drizzle olive oil over the smashed potatoes. Sprinkle with rosemary, garlic powder, salt, and black pepper.',
       'Roast at 450°F for 20 to 25 minutes until edges are crisp and golden.',
-      'Serve hot. Optionally top with vegan sour cream or fresh herbs.',
-      'Suggestions (not included):'
+      'Serve hot.',
+      'Suggestions (not included): Top with vegan sour cream or fresh herbs if desired.'
     ],
     sections: [
       { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.82 }
@@ -9006,8 +9005,8 @@ export const LEVELS: Level[] = [
       'Add the garlic and Creole seasoning. Stir and cook for 1 minute until fragrant.',
       'Add the sliced okra and crushed tomatoes. Season with salt and black pepper and stir to combine.',
       'Bring to a boil, then reduce heat to medium-low. Simmer uncovered, stirring occasionally, for 20 to 25 minutes until the okra is tender and the stew has thickened slightly.',
-      'Taste and adjust seasoning before serving. Serve over rice or as a side.',
-      'Suggestions (not included):'
+      'Taste and adjust seasoning before serving.',
+      'Suggestions (not included): Serve over rice.'
     ],
     sections: [
       { key: 'stew', label: 'Stewed Okra and Tomatoes', cookingMethod: '', yieldFactorWater: 0.88 },
