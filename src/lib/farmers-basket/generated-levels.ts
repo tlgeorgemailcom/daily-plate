@@ -14918,8 +14918,8 @@ export const LEVELS: Level[] = [
       'Return the browned lamb to the pot along with any accumulated juices. Add the water, bay leaves, and saffron. Stir to combine.',
       'Bring to a boil, then reduce heat to low. Cover and simmer for 30 minutes.',
       'Add the drained chickpeas, roughly chopped dried apricots, honey, and lemon juice. Stir to combine. Cover and continue to simmer for 20 to 30 minutes until the lamb is tender and the sauce has thickened.',
-      'Remove and discard the bay leaves. Taste and adjust seasoning. Stir in the toasted sliced almonds, chopped cilantro, and chopped parsley. Serve over couscous or with warm flatbread (not included).',
-      'Suggestions (not included):'
+      'Remove and discard the bay leaves. Taste and adjust seasoning. Stir in the toasted sliced almonds, chopped cilantro, and chopped parsley.',
+      'Suggestions (not included): Serve over couscous or with warm flatbread.'
     ],
     sections: [
       { key: 'tagine', label: 'Tagine', cookingMethod: '', yieldFactorWater: 0.75 }
@@ -15034,8 +15034,8 @@ export const LEVELS: Level[] = [
       'Pour in the red wine, scraping up any browned bits from the bottom of the pot. Simmer for 3 minutes to reduce slightly.',
       'Add the beef broth, rosemary, thyme, and bay leaves. Return the shanks to the pot, nestling them into the braising liquid; the liquid should come about halfway up the shanks.',
       'Bring to a gentle simmer, cover tightly, and cook over low heat for 2½ to 3 hours, turning the shanks once halfway through, until the meat is very tender and falling off the bone.',
-      'Discard the rosemary sprigs, thyme sprigs, and bay leaves. Serve the shanks with spoonfuls of the braising liquid and vegetables. Serve with mashed potatoes, polenta, or crusty bread (not included).',
-      'Suggestions (not included):'
+      'Discard the rosemary sprigs, thyme sprigs, and bay leaves. Serve the shanks with spoonfuls of the braising liquid and vegetables.',
+      'Suggestions (not included): Serve with mashed potatoes, polenta, or crusty bread.'
     ],
     sections: [
       { key: 'braise', label: 'Braise', cookingMethod: '', yieldFactorWater: 0.73 }
@@ -15078,8 +15078,8 @@ export const LEVELS: Level[] = [
       'Pat the lamb chops dry with paper towels. Season on both sides with salt and black pepper, then coat with the marinade. Let rest at room temperature for 30 minutes to 1 hour.',
       'Heat a large cast iron skillet or heavy skillet over high heat until very hot and just beginning to smoke.',
       'Working in batches if needed to avoid crowding, sear the chops for 3 to 4 minutes per side for medium-rare, or until cooked to your preferred doneness.',
-      'Transfer to a plate, tent loosely with foil, and rest for 5 minutes before serving. Serve with roasted vegetables or a simple salad (not included).',
-      'Suggestions (not included):'
+      'Transfer to a plate, tent loosely with foil, and rest for 5 minutes before serving.',
+      'Suggestions (not included): Serve with roasted vegetables or a simple salad.'
     ],
     sections: [
       { key: 'chops', label: 'Chops', cookingMethod: '', yieldFactorWater: 0.82 }
