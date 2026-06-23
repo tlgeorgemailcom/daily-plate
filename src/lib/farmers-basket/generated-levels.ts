@@ -13174,8 +13174,8 @@ export const LEVELS: Level[] = [
       'Add the remaining 1 tbsp coconut oil to the wok. Add the sliced onion and cook for 2 minutes. Add the sliced mushrooms and cook for 2 minutes more.',
       'Add the broccoli florets and sliced bell pepper. Stir fry for 2 to 3 minutes until the broccoli is bright green and crisp-tender.',
       'Add the minced garlic and grated ginger and stir fry for 30 seconds until fragrant.',
-      'Return the beef to the wok. Pour in the sauce and toss everything together for 1 to 2 minutes until the sauce thickens and coats everything evenly. Serve immediately on its own or over steamed rice (not included).',
-      'Suggestions (not included):'
+      'Return the beef to the wok. Pour in the sauce and toss everything together for 1 to 2 minutes until the sauce thickens and coats everything evenly.',
+      'Suggestions (not included): Serve immediately on its own or over steamed rice.'
     ],
     sections: [
       { key: 'stir_fry', label: 'Stir Fry', cookingMethod: '', yieldFactorWater: 0.85 }
@@ -13277,8 +13277,8 @@ export const LEVELS: Level[] = [
       'Heat a wok or large skillet over high heat. Add 1 tbsp coconut oil. Sear the chicken pieces in a single layer for 3 to 4 minutes per side until cooked through to an internal temperature of 165°F and lightly browned. Transfer to a plate.',
       'Add the remaining 1 tbsp coconut oil to the wok. Add the broccoli florets and stir fry for 3 to 4 minutes until bright green and crisp-tender.',
       'Add the minced garlic and grated ginger and stir fry for 30 seconds until fragrant.',
-      'Return the chicken to the wok. Pour in the sauce and toss everything together for 1 to 2 minutes until the sauce thickens and coats the chicken and broccoli evenly. Serve immediately on its own or over steamed rice (not included).',
-      'Suggestions (not included):'
+      'Return the chicken to the wok. Pour in the sauce and toss everything together for 1 to 2 minutes until the sauce thickens and coats the chicken and broccoli evenly.',
+      'Suggestions (not included): Serve immediately on its own or over steamed rice.'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -13329,8 +13329,8 @@ export const LEVELS: Level[] = [
       'In the same pan over medium heat, add the diced onion and sliced bell pepper. Cook for 4 to 5 minutes until softened. Add the sliced mushrooms and cook for 3 minutes more until tender.',
       'Add the minced garlic and cook for 30 seconds until fragrant. Pour in the white wine and scrape up any browned bits from the bottom of the pan. Simmer for 2 minutes.',
       'Add the crushed tomatoes, dried oregano, and dried basil. Stir to combine. Return the chicken thighs to the pan, nestling them into the sauce. Scatter the black olives over the top.',
-      'Cover and bake at 350°F for 35 to 40 minutes until the chicken is cooked through to an internal temperature of 165°F. Serve over pasta, polenta, or rice.',
-      'Suggestions (not included):'
+      'Cover and bake at 350°F for 35 to 40 minutes until the chicken is cooked through to an internal temperature of 165°F.',
+      'Suggestions (not included): Serve over pasta, polenta, or rice.'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.8 },
