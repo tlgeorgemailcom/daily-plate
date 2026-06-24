@@ -21829,5 +21829,81 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cappuccino', label: 'Cappuccino', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_007',
+    name: 'Ginger Lemonade',
+    category: 'beverages',
+    dietaryCategory: 'veggie',
+    levelNum: 449,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (~12 fl oz)',
+    prepTime: '5 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":142.7,"pro":0.4,"fat":0.2,"carb":39.2,"fib":0.3,"h2o":301.8,"sug":36.1,"perServing":{"cal":142.7,"pro":0.4,"fat":0.2,"carb":39.2,"fib":0.3,"h2o":301.8,"sug":36.1,"AddedSugars":34.5,"IntrinsicSugars":1.6},"micros":{"vitaminA":0.0,"vitaminC":6.99,"vitaminD":0.0,"vitaminE":0.03,"vitaminK":0.0,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.01,"niacin":0.04,"folate":3.88,"calcium":3.98,"iron":0.07,"magnesium":2.26,"phosphorus":2.12,"potassium":27.18,"sodium":3.52,"zinc":0.04,"copper":0.01,"selenium":0.12,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":342.0,"servings":1,"per100g":{"Energy_KCal":41.73,"Water":88.25,"Protein":0.11,"TotalLipidFat":0.05,"Carbohydrate":11.45,"FiberTotalDietary":0.09,"SugarsTotal":10.54,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.18,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.03,"VitaminK_phylloquinone":0.0,"VitaminC_totalAscorbicAcid":6.99,"Thiamin":0.0,"Riboflavin":0.01,"Niacin":0.04,"PantothenicAcid":0.03,"VitaminB6":0.01,"Folate_total":3.88,"Folate_food":3.88,"Folate_DFE":3.88,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":1.35,"Betaine":0.21,"LuteinZeaxanthin":2.68,"Lycopene":0.0,"Calcium_Ca":3.98,"Iron_Fe":0.07,"Magnesium_Mg":2.26,"Phosphorus_P":2.12,"Potassium_K":27.18,"Sodium_Na":3.52,"Zinc_Zn":0.04,"Copper_Cu":0.01,"Manganese_Mn":0.01,"Selenium_Se":0.12,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.01,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":10.08,"IntrinsicSugars":0.46},"addedSugars":34.5,"intrinsicSugars":1.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"9152","name":"Lemon juice, raw","grams":61.0},{"ndb":"14411","name":"Water, tap, drinking","grams":237.0},{"ndb":"19296","name":"Honey","grams":42.0},{"ndb":"11216","name":"Ginger root, raw","grams":2.0}],"sections":[{"section_key":"ginger_lemonade","section_label":"Ginger Lemonade","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":342.0,"raw_water_grams":301.83,"raw_fat_grams":0.16,"raw_protein_grams":0.38,"raw_carb_grams":39.17,"final_grams":342.0}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Ginger Lemonade', quantity: 'custom (g)', foodWord: 'GINGERLEMONADE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'lemon juice', quantity: '1/4 cup', section: 'ginger_lemonade', ndbNo: '9152', portionDesc: 'g', portionGrams: 61.0 },
+      { name: 'ice water', quantity: '1 cup', section: 'ginger_lemonade', ndbNo: '14411', portionDesc: 'g', portionGrams: 237.0 },
+      { name: 'honey', quantity: '2 tbsp', section: 'ginger_lemonade', ndbNo: '19296', portionDesc: 'g', portionGrams: 42.0 },
+      { name: 'fresh ginger', quantity: '1 tsp fresh ginger, peeled and grated', section: 'ginger_lemonade', ndbNo: '11216', portionDesc: 'g', portionGrams: 2.0 }
+    ],
+    recipeInstructions: [
+      'Peel and finely grate the fresh ginger.',
+      'Combine the lemon juice, honey, and grated ginger in a tall glass or mason jar. Stir until the honey is fully dissolved.',
+      'Add the water and stir to combine. Taste and adjust sweetness or lemon if desired.',
+      'Suggestions (not included): Serve over ice. For a pitcher, multiply by 4 and let the ginger steep 30 minutes before straining for a stronger flavor. Garnish with a lemon wheel and mint sprig.'
+    ],
+    sections: [
+      { key: 'ginger_lemonade', label: 'Ginger Lemonade', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
+    id: 'BVRG_008',
+    name: 'Strawberry Lemonade',
+    category: 'beverages',
+    dietaryCategory: 'veggie',
+    levelNum: 450,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (16 oz)',
+    prepTime: '5 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":159.6,"pro":1.2,"fat":0.6,"carb":41.1,"fib":3.2,"h2o":431.3,"sug":34.1,"perServing":{"cal":159.6,"pro":1.2,"fat":0.6,"carb":41.1,"fib":3.2,"h2o":431.3,"sug":34.1,"AddedSugars":25.1,"IntrinsicSugars":9.0},"micros":{"vitaminA":0.32,"vitaminC":23.78,"vitaminD":0.0,"vitaminE":0.11,"vitaminK":0.7,"vitaminB6":0.02,"vitaminB12":0.0,"thiamin":0.01,"riboflavin":0.01,"niacin":0.13,"folate":10.24,"calcium":7.44,"iron":0.14,"magnesium":5.43,"phosphorus":8.7,"potassium":62.27,"sodium":2.5,"zinc":0.06,"copper":0.02,"selenium":0.17,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.01,"polyFat":0.05,"omega3":0.0,"omega6":0.0},"gramsPerServing":475.2,"servings":1,"per100g":{"Energy_KCal":33.58,"Water":90.77,"Protein":0.26,"TotalLipidFat":0.13,"Carbohydrate":8.64,"FiberTotalDietary":0.68,"SugarsTotal":7.18,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.01,"FattyAcids_totalPolyunsaturated":0.05,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.32,"Retinol":0.0,"Carotene_beta":2.37,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.11,"VitaminK_phylloquinone":0.7,"VitaminC_totalAscorbicAcid":23.78,"Thiamin":0.01,"Riboflavin":0.01,"Niacin":0.13,"PantothenicAcid":0.06,"VitaminB6":0.02,"Folate_total":10.24,"Folate_food":10.24,"Folate_DFE":10.24,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":2.48,"Betaine":0.06,"LuteinZeaxanthin":10.24,"Lycopene":0.0,"Calcium_Ca":7.44,"Iron_Fe":0.14,"Magnesium_Mg":5.43,"Phosphorus_P":8.7,"Potassium_K":62.27,"Sodium_Na":2.5,"Zinc_Zn":0.06,"Copper_Cu":0.02,"Manganese_Mn":0.12,"Selenium_Se":0.17,"Tryptophan":0.0,"Threonine":0.01,"Isoleucine":0.0,"Leucine":0.01,"Lysine":0.01,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.01,"Valine":0.0,"Arginine":0.01,"Histidine":0.0,"Alanine":0.01,"AsparticAcid":0.04,"GlutamicAcid":0.03,"Glycine":0.01,"Proline":0.01,"Serine":0.01,"omega3":0.0,"omega6":0.0,"AddedSugars":5.29,"IntrinsicSugars":1.89},"addedSugars":25.1,"intrinsicSugars":9.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"9316","name":"Strawberries, raw","grams":152.0},{"ndb":"9152","name":"Lemon juice, raw","grams":61.0},{"ndb":"14411","name":"Water, tap, drinking","grams":237.0},{"ndb":"19335","name":"Sugars, granulated","grams":25.2}],"sections":[{"section_key":"strawberry_lemonade","section_label":"Strawberry Lemonade","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":475.2,"raw_water_grams":431.32,"raw_fat_grams":0.6,"raw_protein_grams":1.23,"raw_carb_grams":41.08,"final_grams":475.2}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Strawberry Lemonade', quantity: 'custom (g)', foodWord: 'STRAWBERRYLEMONADE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'strawberries', quantity: '1 cup strawberries, hulled', section: 'strawberry_lemonade', ndbNo: '9316', portionDesc: 'g', portionGrams: 152.0 },
+      { name: 'lemon juice', quantity: '1/4 cup', section: 'strawberry_lemonade', ndbNo: '9152', portionDesc: 'g', portionGrams: 61.0 },
+      { name: 'ice water', quantity: '1 cup', section: 'strawberry_lemonade', ndbNo: '14411', portionDesc: 'g', portionGrams: 237.0 },
+      { name: 'sugar', quantity: '2 tbsp', section: 'strawberry_lemonade', ndbNo: '19335', portionDesc: 'g', portionGrams: 25.2 }
+    ],
+    recipeInstructions: [
+      'Hull the strawberries and place them in a blender. Blend until smooth. Strain through a fine-mesh sieve if you prefer a clearer lemonade (optional).',
+      'Combine the lemon juice, sugar, and strawberry puree in a tall glass or pitcher. Stir until the sugar is fully dissolved.',
+      'Add the water and stir to combine. Taste and adjust sweetness, lemon, or strawberry as desired.',
+      'Suggestions (not included): Serve over ice. Garnish with a fresh strawberry and a lemon slice. For a sparkling version, substitute the water with club soda.'
+    ],
+    sections: [
+      { key: 'strawberry_lemonade', label: 'Strawberry Lemonade', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

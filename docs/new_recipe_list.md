@@ -12,21 +12,17 @@ Arepas
 - ✅ Chocolate Milkshake (BVRG_002)
 - ✅ Strawberry Milkshake (BVRG_003)
 - ✅ Vanilla Milkshake (BVRG_001)
+- ✅ Café au Lait (BVRG_004)
+- ✅ Café Mocha (BVRG_005)
+- ✅ Cappuccino (BVRG_006)
+- ✅ Ginger Lemonade (BVRG_007)
+- ✅ Strawberry Lemonade (BVRG_008)
 
 ---
 
-### Cluster 1 — Coffee Drinks (Hot)
-*New ledger entries: `coffee_brewed` NDB 14209, `espresso` NDB 14210*
+### ~~Cluster 1 — Coffee Drinks (Hot)~~ ✅ Complete
 
-Café au Lait
-Café Mocha
-Cappuccino
-
-### Cluster 2 — Citrus Water Drinks (Cold)
-*No new ledger entries*
-
-Ginger Lemonade
-Strawberry Lemonade
+### ~~Cluster 2 — Citrus Water Drinks (Cold)~~ ✅ Complete
 
 ### Cluster 3 — Arnold Palmer (Cold)
 *New ledger entry: `tea_black_brewed` NDB 14544 (also used by Chai Latte)*
