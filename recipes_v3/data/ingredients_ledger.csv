@@ -45,7 +45,7 @@ bell_pepper_green_raw,11333,BELLPEPPER,"Peppers, sweet, green, raw",green bell p
 bell_pepper_red_raw,11821,BELLPEPPERRED,"Peppers, sweet, red, raw",red bell pepper,medium,119.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 black_pepper_ground,2030,BLACKPEPPER,"Spices, pepper, black",ground black pepper,teaspoon,2.3,
 blueberries_raw,9050,BLUEBERRIES,"Blueberries, raw",blueberries,cup,148.0,Fresh raw blueberries; 1 cup ~148g
-brandy,14037,TEQUILA,"Alcoholic beverage, distilled, all (gin, rum, vodka, whiskey) 80 proof",brandy (cognac proxy),fl oz,27.8,Auto-added 2026-06-17 from Turso+food-portions backfill
+brandy,14747,BRANDY,"Alcoholic beverage, distilled, brandy, grape, 80 proof",brandy,fl oz,27.8,named NDB; was proxy 14037 2026-06-24
 bread_crumbs_dry,18079,BREADCRUMBSDRY,"Bread crumbs, dry, grated, plain",dry bread crumbs,cup,108.0,Plain dry breadcrumbs; 1/2 cup ~ 54g
 bread_multigrain,28397,BREADMULTIGRAIN,"Bread, multi-grain (includes whole-grain)",multigrain bread,slice,28.0,
 bread_multigrain_toasted,18036,TOASTMULTI,"Bread, multi-grain, toasted (includes whole-grain)",multigrain toast,slice,38.0,Large slice ~38g
@@ -408,7 +408,7 @@ cranberry_juice_cocktail,14242,CRANBERRYJUICE,"Cranberry juice cocktail, bottled
 club_soda,14121,SODACLUB,"Beverages, Carbonated beverage, club soda",club soda,cup,237.0,
 watermelon_raw,9326,WATERMELON,"Watermelon, raw",watermelon,cup,152.0,
 apple_juice,9016,APPLEJUICE,"Apple juice, canned or bottled, unsweetened, without added ascorbic acid",apple juice,cup,248.0,
-tequila,14037,TEQUILA,"Alcoholic beverage, distilled, all (gin, rum, vodka, whiskey) 80 proof",tequila,fl oz,27.8,SR Legacy; cocktail ingredient 2026-06-24
+tequila,14741,TEQUILA,"Alcoholic beverage, distilled, tequila, blanco, 80 proof",tequila,fl oz,27.8,named NDB; was proxy 14037 2026-06-24
 gin_90proof,14049,GIN,"Alcoholic beverage, distilled, gin, 90 proof",gin,fl oz,27.8,SR Legacy; cocktail ingredient 2026-06-24
 rum_80proof,14050,RUM,"Alcoholic beverage, distilled, rum, 80 proof",rum,fl oz,27.8,SR Legacy; cocktail ingredient 2026-06-24
 whiskey_86proof,14052,WHISKEY86,"Alcoholic beverage, distilled, whiskey, 86 proof",whiskey,fl oz,27.8,SR Legacy; cocktail ingredient 2026-06-24
@@ -448,15 +448,15 @@ orange_curacao,14729,ORANGECURACAO,"Alcoholic beverage, liqueur, orange curacao,
 passoa,14730,PASSOA,"Alcoholic beverage, liqueur, passoa, passion fruit, 34 proof",Passoa,fl oz,31.3,Custom NDB 14700–14732 inserted 2026-06-24
 pimms_no1,14731,PIMMSNO1,"Alcoholic beverage, liqueur, pimm's no. 1, 50 proof",Pimm's No. 1,fl oz,29.6,Custom NDB 14700–14732 inserted 2026-06-24
 yellow_chartreuse,14732,YELLOWCHARTREUSE,"Alcoholic beverage, liqueur, chartreuse, yellow, 80 proof",yellow chartreuse,fl oz,30.8,Custom NDB 14700–14732 inserted 2026-06-24
-cognac,14037,TEQUILA,"Alcoholic beverage, distilled, all (gin, rum, vodka, whiskey) 80 proof",cognac,fl oz,27.8,cocktail ingredient; proxy NDB 14037 (cognac ≈ 80-proof brandy) 2026-06-24
-pisco,14037,TEQUILA,"Alcoholic beverage, distilled, all (gin, rum, vodka, whiskey) 80 proof",pisco,fl oz,27.8,cocktail ingredient; proxy NDB 14037 (pisco ≈ 80-proof distilled) 2026-06-24
-mezcal,14037,TEQUILA,"Alcoholic beverage, distilled, all (gin, rum, vodka, whiskey) 80 proof",mezcal,fl oz,27.8,cocktail ingredient; proxy NDB 14037 (mezcal ≈ 80-proof agave spirit) 2026-06-24
-cachaca,14037,TEQUILA,"Alcoholic beverage, distilled, all (gin, rum, vodka, whiskey) 80 proof",cachaça,fl oz,27.8,cocktail ingredient; proxy NDB 14037 (cachaça ≈ 80-proof cane spirit) 2026-06-24
-calvados,14037,TEQUILA,"Alcoholic beverage, distilled, all (gin, rum, vodka, whiskey) 80 proof",calvados,fl oz,27.8,cocktail ingredient; proxy NDB 14037 (calvados ≈ 80-proof apple brandy) 2026-06-24
-scotch_whisky,14052,WHISKEY86,"Alcoholic beverage, distilled, whiskey, 86 proof",scotch whisky,fl oz,27.8,cocktail ingredient; proxy NDB 14052 2026-06-24
-rye_whiskey,14052,WHISKEY86,"Alcoholic beverage, distilled, whiskey, 86 proof",rye whiskey,fl oz,27.8,cocktail ingredient; proxy NDB 14052 2026-06-24
-bourbon,14052,WHISKEY86,"Alcoholic beverage, distilled, whiskey, 86 proof",bourbon,fl oz,27.8,cocktail ingredient; proxy NDB 14052 2026-06-24
-dark_rum,14050,RUM,"Alcoholic beverage, distilled, rum, 80 proof",dark rum,fl oz,27.8,cocktail ingredient; proxy NDB 14050 2026-06-24
+cognac,14743,COGNAC,"Alcoholic beverage, distilled, cognac, VS/VSOP, 80 proof",cognac,fl oz,27.8,named NDB; was proxy 14037 2026-06-24
+pisco,14746,PISCO,"Alcoholic beverage, distilled, pisco, Peruvian, 80 proof",pisco,fl oz,27.8,named NDB; was proxy 14037 2026-06-24
+mezcal,14742,MEZCAL,"Alcoholic beverage, distilled, mezcal, agave, 80 proof",mezcal,fl oz,27.8,named NDB; was proxy 14037 2026-06-24
+cachaca,14745,CACHACA,"Alcoholic beverage, distilled, cachaca, Brazilian sugar cane spirit, 80 proof",cachaça,fl oz,27.8,named NDB; was proxy 14037 2026-06-24
+calvados,14744,CALVADOS,"Alcoholic beverage, distilled, calvados, French apple brandy, 80 proof",calvados,fl oz,27.8,named NDB; was proxy 14037 2026-06-24
+scotch_whisky,14740,SCOTCH,"Alcoholic beverage, distilled, Scotch whisky, blended, 80 proof",scotch whisky,fl oz,27.8,80-proof named NDB; was proxy 14052 2026-06-24
+rye_whiskey,14739,RYEWHISKEY,"Alcoholic beverage, distilled, rye whiskey, 80 proof",rye whiskey,fl oz,27.8,80-proof named NDB; was proxy 14052 2026-06-24
+bourbon,14738,BOURBON,"Alcoholic beverage, distilled, bourbon whiskey, 80 proof",bourbon,fl oz,27.8,80-proof named NDB; was proxy 14052 2026-06-24
+dark_rum,14748,DARKRUM,"Alcoholic beverage, distilled, rum, dark, aged, 80 proof",dark rum,fl oz,27.8,named NDB; was proxy 14050 2026-06-24
 light_rum,14050,RUM,"Alcoholic beverage, distilled, rum, 80 proof",light rum,fl oz,27.8,cocktail ingredient; proxy NDB 14050 2026-06-24
 sparkling_wine,14733,SPARKLINGWINE,"Alcoholic beverage, wine, sparkling, brut (champagne, prosecco)",sparkling wine,fl oz,29.4,custom NDB 14733; 12% ABV brut champagne/prosecco 2026-06-24
 ginger_beer,14734,GINGERBEER,"Beverages, carbonated, ginger beer, non-alcoholic",ginger beer,fl oz,30.8,custom NDB 14734; non-alcoholic ginger beer (Fever-Tree) 2026-06-24

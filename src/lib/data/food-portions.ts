@@ -46076,8 +46076,8 @@ export const FOODS: Food[] = [
     "groups": [
       "beverage"
     ],
-    "ndb": "14037",
-    "desc": "Alcoholic beverage, distilled, all (gin, rum, vodka, whiskey) 80 proof",
+    "ndb": "14741",
+    "desc": "Alcoholic beverage, distilled, tequila, blanco, 80 proof",
     "cal": 231.0,
     "pro": 0.0,
     "fat": 0.0,
@@ -55789,6 +55789,336 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "tbsp",
         "gm": 14.79
+      }
+    ]
+  },
+  {
+    "word": "BOURBON",
+    "display": "Bourbon Whiskey",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14738",
+    "desc": "Alcoholic beverage, distilled, bourbon whiskey, 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
+      }
+    ]
+  },
+  {
+    "word": "RYEWHISKEY",
+    "display": "Rye Whiskey",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14739",
+    "desc": "Alcoholic beverage, distilled, rye whiskey, 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
+      }
+    ]
+  },
+  {
+    "word": "SCOTCH",
+    "display": "Scotch Whisky",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14740",
+    "desc": "Alcoholic beverage, distilled, Scotch whisky, blended, 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
+      }
+    ]
+  },
+  {
+    "word": "MEZCAL",
+    "display": "Mezcal",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14742",
+    "desc": "Alcoholic beverage, distilled, mezcal, agave, 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
+      }
+    ]
+  },
+  {
+    "word": "COGNAC",
+    "display": "Cognac",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14743",
+    "desc": "Alcoholic beverage, distilled, cognac, VS/VSOP, 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
+      }
+    ]
+  },
+  {
+    "word": "CALVADOS",
+    "display": "Calvados",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14744",
+    "desc": "Alcoholic beverage, distilled, calvados, French apple brandy, 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
+      }
+    ]
+  },
+  {
+    "word": "CACHACA",
+    "display": "Cacha\u00e7a",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14745",
+    "desc": "Alcoholic beverage, distilled, cachaca, Brazilian sugar cane spirit, 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
+      }
+    ]
+  },
+  {
+    "word": "PISCO",
+    "display": "Pisco",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14746",
+    "desc": "Alcoholic beverage, distilled, pisco, Peruvian, 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
+      }
+    ]
+  },
+  {
+    "word": "BRANDY",
+    "display": "Brandy",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14747",
+    "desc": "Alcoholic beverage, distilled, brandy, grape, 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
+      }
+    ]
+  },
+  {
+    "word": "DARKRUM",
+    "display": "Dark Rum",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14748",
+    "desc": "Alcoholic beverage, distilled, rum, dark, aged, 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
       }
     ]
   }
