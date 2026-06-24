@@ -21943,5 +21943,158 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'arnold_palmer', label: 'Arnold Palmer', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_010',
+    name: 'Berry Smoothie',
+    category: 'beverages',
+    dietaryCategory: 'veggie',
+    levelNum: 452,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 smoothie (~16 oz)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":400.0,"pro":23.9,"fat":13.1,"carb":51.0,"fib":7.3,"h2o":386.9,"sug":40.9,"perServing":{"cal":400.0,"pro":23.9,"fat":13.1,"carb":51.0,"fib":7.3,"h2o":386.9,"sug":40.9,"AddedSugars":17.2,"IntrinsicSugars":23.6},"micros":{"vitaminA":1.91,"vitaminC":14.26,"vitaminD":0.0,"vitaminE":0.25,"vitaminK":4.35,"vitaminB6":0.05,"vitaminB12":0.38,"thiamin":0.02,"riboflavin":0.15,"niacin":0.31,"folate":10.11,"calcium":58.27,"iron":0.22,"magnesium":11.56,"phosphorus":78.86,"potassium":130.37,"sodium":18.58,"zinc":0.38,"copper":0.03,"selenium":5.12,"cholesterol":6.67,"saturatedFat":1.23,"monoFat":1.11,"polyFat":0.33,"omega3":0.01,"omega6":0.1},"gramsPerServing":477.5,"servings":1,"per100g":{"Energy_KCal":83.76,"Water":81.04,"Protein":5.01,"TotalLipidFat":2.75,"Carbohydrate":10.67,"FiberTotalDietary":1.54,"SugarsTotal":8.56,"Cholesterol":6.67,"FattyAcids_totalSaturated":1.23,"FattyAcids_totalMonounsaturated":1.11,"FattyAcids_totalPolyunsaturated":0.33,"LinoleicAcid":0.1,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":1.91,"Retinol":0.51,"Carotene_beta":11.21,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.25,"VitaminK_phylloquinone":4.35,"VitaminC_totalAscorbicAcid":14.26,"Thiamin":0.02,"Riboflavin":0.15,"Niacin":0.31,"PantothenicAcid":0.25,"VitaminB6":0.05,"Folate_total":10.11,"Folate_food":10.11,"Folate_DFE":10.11,"FolicAcid":0.0,"VitaminB12":0.38,"Choline_total":11.27,"Betaine":0.24,"LuteinZeaxanthin":34.05,"Lycopene":0.0,"Calcium_Ca":58.27,"Iron_Fe":0.22,"Magnesium_Mg":11.56,"Phosphorus_P":78.86,"Potassium_K":130.37,"Sodium_Na":18.58,"Zinc_Zn":0.38,"Copper_Cu":0.03,"Manganese_Mn":0.21,"Selenium_Se":5.12,"Tryptophan":0.0,"Threonine":0.01,"Isoleucine":0.01,"Leucine":0.01,"Lysine":0.01,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.01,"Tyrosine":0.0,"Valine":0.01,"Arginine":0.01,"Histidine":0.0,"Alanine":0.01,"AsparticAcid":0.03,"GlutamicAcid":0.03,"Glycine":0.01,"Proline":0.01,"Serine":0.01,"omega3":0.01,"omega6":0.1,"AddedSugars":3.61,"IntrinsicSugars":4.94},"addedSugars":17.2,"intrinsicSugars":23.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"9302","name":"Raspberries, raw","grams":61.5},{"ndb":"9050","name":"Blueberries, raw","grams":74.0},{"ndb":"9316","name":"Strawberries, raw","grams":76.0},{"ndb":"1293","name":"Yogurt, Greek, plain, whole milk","grams":245.0},{"ndb":"19296","name":"Honey","grams":21.0}],"sections":[{"section_key":"berry_smoothie","section_label":"Berry Smoothie","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":477.5,"raw_water_grams":386.95,"raw_fat_grams":13.12,"raw_protein_grams":23.91,"raw_carb_grams":50.96,"final_grams":477.5}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Berry Smoothie', quantity: 'custom (g)', foodWord: 'BERRYSMOOTHIE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'raspberries', quantity: '1/2 cup', section: 'berry_smoothie', ndbNo: '9302', portionDesc: 'g', portionGrams: 61.5 },
+      { name: 'blueberries', quantity: '1/2 cup', section: 'berry_smoothie', ndbNo: '9050', portionDesc: 'g', portionGrams: 74.0 },
+      { name: 'strawberries', quantity: '1/2 cup strawberries, hulled', section: 'berry_smoothie', ndbNo: '9316', portionDesc: 'g', portionGrams: 76.0 },
+      { name: 'Greek whole milk yogurt', quantity: '1 cup', section: 'berry_smoothie', ndbNo: '1293', portionDesc: 'g', portionGrams: 245.0 },
+      { name: 'honey', quantity: '1 tbsp', section: 'berry_smoothie', ndbNo: '19296', portionDesc: 'g', portionGrams: 21.0 }
+    ],
+    recipeInstructions: [
+      'Hull the strawberries. Rinse the raspberries and blueberries. Place all ingredients in a blender.',
+      'Blend on high until completely smooth, about 60 seconds. Scrape down the sides if needed and blend again.',
+      'Taste and adjust sweetness with additional honey if desired. Add a few ice cubes and blend briefly if you prefer a colder, thicker smoothie.',
+      'Suggestions (not included): Pour into a chilled glass and top with a few fresh berries. For a dairy-free version, substitute the yogurt with coconut yogurt.'
+    ],
+    sections: [
+      { key: 'berry_smoothie', label: 'Berry Smoothie', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
+    id: 'BVRG_011',
+    name: 'Strawberry Banana Smoothie',
+    category: 'beverages',
+    dietaryCategory: 'veggie',
+    levelNum: 453,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 smoothie (~18 oz)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":366.3,"pro":10.1,"fat":8.8,"carb":67.6,"fib":6.2,"h2o":445.3,"sug":51.4,"perServing":{"cal":366.3,"pro":10.1,"fat":8.8,"carb":67.6,"fib":6.2,"h2o":445.3,"sug":51.4,"AddedSugars":17.2,"IntrinsicSugars":34.2},"micros":{"vitaminA":21.93,"vitaminC":18.64,"vitaminD":23.26,"vitaminE":0.14,"vitaminK":0.87,"vitaminB6":0.11,"vitaminB12":0.21,"thiamin":0.03,"riboflavin":0.1,"niacin":0.29,"folate":13.59,"calcium":57.42,"iron":0.2,"magnesium":14.29,"phosphorus":50.14,"potassium":184.67,"sodium":20.27,"zinc":0.25,"copper":0.04,"selenium":2.05,"cholesterol":4.56,"saturatedFat":0.88,"monoFat":0.39,"polyFat":0.14,"omega3":0.0,"omega6":0.0},"gramsPerServing":535.0,"servings":1,"per100g":{"Energy_KCal":68.47,"Water":83.23,"Protein":1.88,"TotalLipidFat":1.64,"Carbohydrate":12.64,"FiberTotalDietary":1.15,"SugarsTotal":9.61,"Cholesterol":4.56,"FattyAcids_totalSaturated":0.88,"FattyAcids_totalMonounsaturated":0.39,"FattyAcids_totalPolyunsaturated":0.14,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":21.93,"Retinol":20.52,"Carotene_beta":10.92,"VitaminD":23.26,"VitaminE_alphaTocopherol":0.14,"VitaminK_phylloquinone":0.87,"VitaminC_totalAscorbicAcid":18.64,"Thiamin":0.03,"Riboflavin":0.1,"Niacin":0.29,"PantothenicAcid":0.28,"VitaminB6":0.11,"Folate_total":13.59,"Folate_food":13.59,"Folate_DFE":13.59,"FolicAcid":0.0,"VitaminB12":0.21,"Choline_total":10.39,"Betaine":0.42,"LuteinZeaxanthin":12.24,"Lycopene":0.0,"Calcium_Ca":57.42,"Iron_Fe":0.2,"Magnesium_Mg":14.29,"Phosphorus_P":50.14,"Potassium_K":184.67,"Sodium_Na":20.27,"Zinc_Zn":0.25,"Copper_Cu":0.04,"Manganese_Mn":0.17,"Selenium_Se":2.05,"Tryptophan":0.02,"Threonine":0.07,"Isoleucine":0.08,"Leucine":0.15,"Lysine":0.14,"Methionine":0.04,"Cystine":0.01,"Phenylalanine":0.09,"Tyrosine":0.08,"Valine":0.1,"Arginine":0.06,"Histidine":0.06,"Alanine":0.06,"AsparticAcid":0.19,"GlutamicAcid":0.38,"Glycine":0.04,"Proline":0.16,"Serine":0.1,"omega3":0.0,"omega6":0.0,"AddedSugars":3.22,"IntrinsicSugars":6.39},"addedSugars":17.2,"intrinsicSugars":34.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"9316","name":"Strawberries, raw","grams":152.0},{"ndb":"9040","name":"Bananas, raw","grams":118.0},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":244.0},{"ndb":"19296","name":"Honey","grams":21.0}],"sections":[{"section_key":"strawberry_banana","section_label":"Strawberry Banana Smoothie","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":535.0,"raw_water_grams":445.27,"raw_fat_grams":8.78,"raw_protein_grams":10.05,"raw_carb_grams":67.64,"final_grams":535.0}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Strawberry Banana Smoothie', quantity: 'custom (g)', foodWord: 'STRAWBANANSMOOTHIE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'strawberries', quantity: '1 cup strawberries, hulled', section: 'strawberry_banana', ndbNo: '9316', portionDesc: 'g', portionGrams: 152.0 },
+      { name: 'banana', quantity: '1 medium banana', section: 'strawberry_banana', ndbNo: '9040', portionDesc: 'g', portionGrams: 118.0 },
+      { name: 'whole milk', quantity: '1 cup', section: 'strawberry_banana', ndbNo: '1077', portionDesc: 'g', portionGrams: 244.0 },
+      { name: 'honey', quantity: '1 tbsp', section: 'strawberry_banana', ndbNo: '19296', portionDesc: 'g', portionGrams: 21.0 }
+    ],
+    recipeInstructions: [
+      'Hull the strawberries. Peel the banana and break it into chunks.',
+      'Place all ingredients in a blender. Blend on high until completely smooth, about 45 seconds.',
+      'Taste and adjust sweetness with additional honey if desired.',
+      'Suggestions (not included): For a thicker smoothie, use a frozen banana. For a dairy-free version, substitute the milk with oat milk or almond milk.'
+    ],
+    sections: [
+      { key: 'strawberry_banana', label: 'Strawberry Banana Smoothie', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
+    id: 'BVRG_012',
+    name: 'Green Smoothie',
+    category: 'beverages',
+    dietaryCategory: 'veggie',
+    levelNum: 454,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 smoothie (~16 oz)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":277.2,"pro":5.9,"fat":1.4,"carb":66.1,"fib":6.6,"h2o":388.1,"sug":41.0,"perServing":{"cal":277.2,"pro":5.9,"fat":1.4,"carb":66.1,"fib":6.6,"h2o":388.1,"sug":41.0,"AddedSugars":24.9,"IntrinsicSugars":16.1},"micros":{"vitaminA":103.06,"vitaminC":26.69,"vitaminD":0.0,"vitaminE":0.39,"vitaminK":132.99,"vitaminB6":0.2,"vitaminB12":0.0,"thiamin":0.05,"riboflavin":0.06,"niacin":0.46,"folate":47.58,"calcium":36.26,"iron":0.62,"magnesium":25.17,"phosphorus":26.3,"potassium":267.49,"sodium":11.9,"zinc":0.21,"copper":0.27,"selenium":0.5,"cholesterol":0.0,"saturatedFat":0.05,"monoFat":0.02,"polyFat":0.1,"omega3":0.0,"omega6":0.0},"gramsPerServing":465.0,"servings":1,"per100g":{"Energy_KCal":59.62,"Water":83.45,"Protein":1.27,"TotalLipidFat":0.31,"Carbohydrate":14.21,"FiberTotalDietary":1.43,"SugarsTotal":8.82,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.05,"FattyAcids_totalMonounsaturated":0.02,"FattyAcids_totalPolyunsaturated":0.1,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":103.06,"Retinol":0.0,"Carotene_beta":1225.18,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.39,"VitaminK_phylloquinone":132.99,"VitaminC_totalAscorbicAcid":26.69,"Thiamin":0.05,"Riboflavin":0.06,"Niacin":0.46,"PantothenicAcid":0.13,"VitaminB6":0.2,"Folate_total":47.58,"Folate_food":47.58,"Folate_DFE":47.58,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":5.62,"Betaine":6.64,"LuteinZeaxanthin":1973.77,"Lycopene":0.0,"Calcium_Ca":36.26,"Iron_Fe":0.62,"Magnesium_Mg":25.17,"Phosphorus_P":26.3,"Potassium_K":267.49,"Sodium_Na":11.9,"Zinc_Zn":0.21,"Copper_Cu":0.27,"Manganese_Mn":0.49,"Selenium_Se":0.5,"Tryptophan":0.0,"Threonine":0.01,"Isoleucine":0.01,"Leucine":0.03,"Lysine":0.02,"Methionine":0.01,"Cystine":0.0,"Phenylalanine":0.02,"Tyrosine":0.01,"Valine":0.02,"Arginine":0.02,"Histidine":0.02,"Alanine":0.02,"AsparticAcid":0.05,"GlutamicAcid":0.06,"Glycine":0.02,"Proline":0.01,"Serine":0.02,"omega3":0.0,"omega6":0.0,"AddedSugars":5.37,"IntrinsicSugars":3.46},"addedSugars":24.9,"intrinsicSugars":16.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"11233","name":"Kale, raw","grams":67.0},{"ndb":"11457","name":"Spinach, raw","grams":30.0},{"ndb":"9040","name":"Bananas, raw","grams":118.0},{"ndb":"9273","name":"Pineapple juice, canned, unsweetened","grams":250.0}],"sections":[{"section_key":"green_smoothie","section_label":"Green Smoothie","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":465.0,"raw_water_grams":388.05,"raw_fat_grams":1.43,"raw_protein_grams":5.91,"raw_carb_grams":66.08,"final_grams":465.0}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Green Smoothie', quantity: 'custom (g)', foodWord: 'GREENSMOOTHIE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'raw kale', quantity: '1 cup raw kale, roughly chopped', section: 'green_smoothie', ndbNo: '11233', portionDesc: 'g', portionGrams: 67.0 },
+      { name: 'spinach', quantity: '1 cup', section: 'green_smoothie', ndbNo: '11457', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'banana', quantity: '1 medium banana', section: 'green_smoothie', ndbNo: '9040', portionDesc: 'g', portionGrams: 118.0 },
+      { name: 'pineapple juice', quantity: '1 cup pineapple juice', section: 'green_smoothie', ndbNo: '9273', portionDesc: 'g', portionGrams: 250.0 }
+    ],
+    recipeInstructions: [
+      'Remove any tough kale stems and roughly chop the kale leaves. Peel the banana and break it into chunks.',
+      'Add the pineapple juice to the blender first to help the greens blend smoothly, then add the kale, spinach, and banana.',
+      'Blend on high until completely smooth, at least 60 to 90 seconds. Green smoothies need longer blending to fully break down the kale.',
+      'Suggestions (not included): Add 1 tbsp honey for extra sweetness. Freeze banana chunks in advance for a colder, thicker smoothie.'
+    ],
+    sections: [
+      { key: 'green_smoothie', label: 'Green Smoothie', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
+    id: 'BVRG_013',
+    name: 'Tropical Smoothie',
+    category: 'beverages',
+    dietaryCategory: 'veggie',
+    levelNum: 455,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 smoothie (~16 oz)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":381.6,"pro":4.2,"fat":13.2,"carb":69.3,"fib":6.0,"h2o":375.2,"sug":49.5,"perServing":{"cal":381.6,"pro":4.2,"fat":13.2,"carb":69.3,"fib":6.0,"h2o":375.2,"sug":49.5,"AddedSugars":12.5,"IntrinsicSugars":37.0},"micros":{"vitaminA":19.94,"vitaminC":17.95,"vitaminD":0.0,"vitaminE":0.35,"vitaminK":1.7,"vitaminB6":0.16,"vitaminB12":0.0,"thiamin":0.03,"riboflavin":0.03,"niacin":0.53,"folate":26.9,"calcium":10.87,"iron":0.61,"magnesium":19.24,"phosphorus":24.39,"potassium":212.37,"sodium":2.73,"zinc":0.17,"copper":0.1,"selenium":0.49,"cholesterol":0.0,"saturatedFat":2.36,"monoFat":0.17,"polyFat":0.08,"omega3":0.0,"omega6":0.0},"gramsPerServing":464.5,"servings":1,"per100g":{"Energy_KCal":82.15,"Water":80.78,"Protein":0.91,"TotalLipidFat":2.85,"Carbohydrate":14.93,"FiberTotalDietary":1.28,"SugarsTotal":10.64,"Cholesterol":0.0,"FattyAcids_totalSaturated":2.36,"FattyAcids_totalMonounsaturated":0.17,"FattyAcids_totalPolyunsaturated":0.08,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":19.94,"Retinol":0.0,"Carotene_beta":234.75,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.35,"VitaminK_phylloquinone":1.7,"VitaminC_totalAscorbicAcid":17.95,"Thiamin":0.03,"Riboflavin":0.03,"Niacin":0.53,"PantothenicAcid":0.18,"VitaminB6":0.16,"Folate_total":26.9,"Folate_food":26.9,"Folate_DFE":26.9,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":7.11,"Betaine":0.03,"LuteinZeaxanthin":13.76,"Lycopene":1.07,"Calcium_Ca":10.87,"Iron_Fe":0.61,"Magnesium_Mg":19.24,"Phosphorus_P":24.39,"Potassium_K":212.37,"Sodium_Na":2.73,"Zinc_Zn":0.17,"Copper_Cu":0.1,"Manganese_Mn":0.32,"Selenium_Se":0.49,"Tryptophan":0.01,"Threonine":0.02,"Isoleucine":0.02,"Leucine":0.05,"Lysine":0.04,"Methionine":0.01,"Cystine":0.01,"Phenylalanine":0.03,"Tyrosine":0.01,"Valine":0.04,"Arginine":0.06,"Histidine":0.03,"Alanine":0.05,"AsparticAcid":0.07,"GlutamicAcid":0.13,"Glycine":0.03,"Proline":0.02,"Serine":0.03,"omega3":0.0,"omega6":0.0,"AddedSugars":2.69,"IntrinsicSugars":7.96},"addedSugars":12.5,"intrinsicSugars":37.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"9176","name":"Mangos, raw","grams":165.0},{"ndb":"9040","name":"Bananas, raw","grams":118.0},{"ndb":"9273","name":"Pineapple juice, canned, unsweetened","grams":125.0},{"ndb":"12118","name":"Nuts, coconut milk, canned","grams":56.5}],"sections":[{"section_key":"tropical_smoothie","section_label":"Tropical Smoothie","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":464.5,"raw_water_grams":375.24,"raw_fat_grams":13.22,"raw_protein_grams":4.23,"raw_carb_grams":69.34,"final_grams":464.5}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Tropical Smoothie', quantity: 'custom (g)', foodWord: 'TROPICALSMOOTHIE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'mango', quantity: '1 cup mango, cubed', section: 'tropical_smoothie', ndbNo: '9176', portionDesc: 'g', portionGrams: 165.0 },
+      { name: 'banana', quantity: '1 medium banana', section: 'tropical_smoothie', ndbNo: '9040', portionDesc: 'g', portionGrams: 118.0 },
+      { name: 'pineapple juice', quantity: '1/2 cup pineapple juice', section: 'tropical_smoothie', ndbNo: '9273', portionDesc: 'g', portionGrams: 125.0 },
+      { name: 'canned coconut milk', quantity: '1/4 cup', section: 'tropical_smoothie', ndbNo: '12118', portionDesc: 'g', portionGrams: 56.5 }
+    ],
+    recipeInstructions: [
+      'Peel and cube the mango. Peel the banana and break it into chunks.',
+      'Place all ingredients in a blender.',
+      'Blend on high until completely smooth, about 60 seconds.',
+      'Suggestions (not included): For a thicker smoothie, use frozen mango and banana chunks. Garnish with a pineapple wedge. For a lighter version, substitute the coconut milk with coconut water.'
+    ],
+    sections: [
+      { key: 'tropical_smoothie', label: 'Tropical Smoothie', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

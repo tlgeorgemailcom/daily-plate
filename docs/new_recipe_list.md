@@ -18,6 +18,10 @@ Arepas
 - ✅ Ginger Lemonade (BVRG_007)
 - ✅ Strawberry Lemonade (BVRG_008)
 - ✅ Arnold Palmer (BVRG_009)
+- ✅ Berry Smoothie (BVRG_010)
+- ✅ Strawberry Banana Smoothie (BVRG_011)
+- ✅ Green Smoothie (BVRG_012)
+- ✅ Tropical Smoothie (BVRG_013)
 
 ---
 
@@ -32,13 +36,12 @@ Arepas
 
 Arnold Palmer
 
-### Cluster 4 — Smoothies (Cold)
-*New ledger entries: `raspberries_raw` NDB 9302, `kale_raw` NDB 11233*
+### ~~Cluster 4 — Smoothies (Cold)~~ ✅ Complete
 
-Berry Smoothie
-Strawberry Banana Smoothie
-Green Smoothie
-Tropical Smoothie
+- ✅ Berry Smoothie (BVRG_010)
+- ✅ Strawberry Banana Smoothie (BVRG_011)
+- ✅ Green Smoothie (BVRG_012)
+- ✅ Tropical Smoothie (BVRG_013)
 
 ### Cluster 5 — Carbonated / Syrup (Cold)
 *New ledger entries: `ginger_ale` NDB 14136, `grenadine` NDB 42040*

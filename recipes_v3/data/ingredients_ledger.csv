@@ -399,3 +399,6 @@ strawberries_raw,9316,STRAWBERRIES,"Strawberries, raw",strawberries,cup,152.0,
 coffee_brewed,14209,COFFEE,"Beverages, Coffee, brewed, prepared with tap water","coffee, brewed",cup,237.0,
 espresso,14210,COFFEEESPRESSO,"Beverages, Coffee, espresso, restaurant-prepared",espresso,fl oz,29.6,
 tea_black_brewed,14355,TEA,"Beverages, tea, black, brewed, prepared with tap water","black tea, brewed",cup,237.0,
+raspberries_raw,9302,RASPBERRIES,"Raspberries, raw",raspberries,cup,123.0,
+kale_raw,11233,KALERAW,"Kale, raw",raw kale,cup,67.0,KALE in food-portions maps to NDB 11234 cooked; using KALERAW to avoid mismatch
+mango_raw,9176,MANGO,"Mangos, raw",mango,cup,165.0,

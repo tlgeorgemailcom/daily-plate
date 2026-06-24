@@ -54606,6 +54606,34 @@ export const FOODS: Food[] = [
         "gm": 30.0
       }
     ]
+  },
+  {
+    "word": "KALERAW",
+    "display": "Kale (Raw)",
+    "groups": [
+      "vegetable"
+    ],
+    "ndb": "11233",
+    "desc": "Kale, raw",
+    "cal": 49.0,
+    "pro": 4.28,
+    "fat": 0.93,
+    "carb": 8.75,
+    "fib": 3.6,
+    "h2o": 84.04,
+    "sug": 2.26,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup, chopped",
+        "gm": 67.0
+      }
+    ]
   }
 ];
 

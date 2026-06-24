@@ -450,3 +450,7 @@ BVRG_006,CAPPUCCINO,Cappuccino,beverages,veggie,dish,,5 min,1 cappuccino,1,Rule 
 BVRG_007,GINGERLEMONADE,Ginger Lemonade,beverages,veggie,dish,,5 min,1 serving (~12 fl oz),1,Rule D,raw,1.0,1.0,,,,approved,,,,PASS,"Rule D — no canonical. 1/4 cup lemon juice + 1 cup water + 2 tbsp honey + 1 tsp ginger. raw, yfw=1.0, 342.0g, 143 kcal/serving.",
 BVRG_008,STRAWBERRYLEMONADE,Strawberry Lemonade,beverages,veggie,dish,,5 min,1 serving (16 oz),1,Rule D,raw,1.0,1.0,,,,approved,,,,PASS,"Rule D — no canonical. 1 cup strawberries + 1/4 cup lemon juice + 1 cup water + 2 tbsp sugar. raw, yfw=1.0, 475.2g, 160 kcal/serving.",
 BVRG_009,ARNOLDPALMER,Arnold Palmer,beverages,veggie,dish,,5 min,1 serving (~15 fl oz),1,Rule D,raw,1.0,1.0,,,,approved,,,,PASS,"Rule D — no canonical. 1 cup black tea + 1/4 cup lemon juice + 1/2 cup water + 2 tbsp sugar. raw, yfw=1.0, 441.7g, 113 kcal/serving.",
+BVRG_010,BERRYSMOOTHIE,Berry Smoothie,beverages,veggie,dish,,5,1 smoothie (~16 oz),1,Rule D,raw,1.0,1.0,1.0,1.0,1.0,approved,,Rule D — no canonical,,PASS,,
+BVRG_011,STRAWBANANSMOOTHIE,Strawberry Banana Smoothie,beverages,veggie,dish,,5,1 smoothie (~18 oz),1,Rule D,raw,1.0,1.0,1.0,1.0,1.0,approved,,Rule D — no canonical,,PASS,,
+BVRG_012,GREENSMOOTHIE,Green Smoothie,beverages,veggie,dish,,5,1 smoothie (~16 oz),1,Rule D,raw,1.0,1.0,1.0,1.0,1.0,approved,,Rule D — no canonical,,PASS,,
+BVRG_013,TROPICALSMOOTHIE,Tropical Smoothie,beverages,veggie,dish,,5,1 smoothie (~16 oz),1,Rule D,raw,1.0,1.0,1.0,1.0,1.0,approved,,Rule D — no canonical,,PASS,,

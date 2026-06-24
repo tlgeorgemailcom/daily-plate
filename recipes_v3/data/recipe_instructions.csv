@@ -2952,3 +2952,19 @@ BVRG_009,1,"Brew 1 cup of black tea and let it cool to room temperature, or refr
 BVRG_009,2,"In a tall glass, combine the lemon juice and sugar. Stir until the sugar is fully dissolved."
 BVRG_009,3,Add the water and cold tea to the glass and stir to combine. Taste and adjust sweetness or lemon if desired.
 BVRG_009,4,"Suggestions (not included): Serve over ice. Named after golfer Arnold Palmer, who famously ordered half iced tea and half lemonade. For a stronger lemon flavor, reduce the water and increase the lemon juice."
+BVRG_010,1,Hull the strawberries. Rinse the raspberries and blueberries. Place all ingredients in a blender.
+BVRG_010,2,"Blend on high until completely smooth, about 60 seconds. Scrape down the sides if needed and blend again."
+BVRG_010,3,"Taste and adjust sweetness with additional honey if desired. Add a few ice cubes and blend briefly if you prefer a colder, thicker smoothie."
+BVRG_010,4,"Suggestions (not included): Pour into a chilled glass and top with a few fresh berries. For a dairy-free version, substitute the yogurt with coconut yogurt."
+BVRG_011,1,Hull the strawberries. Peel the banana and break it into chunks.
+BVRG_011,2,"Place all ingredients in a blender. Blend on high until completely smooth, about 45 seconds."
+BVRG_011,3,Taste and adjust sweetness with additional honey if desired.
+BVRG_011,4,"Suggestions (not included): For a thicker smoothie, use a frozen banana. For a dairy-free version, substitute the milk with oat milk or almond milk."
+BVRG_012,1,Remove any tough kale stems and roughly chop the kale leaves. Peel the banana and break it into chunks.
+BVRG_012,2,"Add the pineapple juice to the blender first to help the greens blend smoothly, then add the kale, spinach, and banana."
+BVRG_012,3,"Blend on high until completely smooth, at least 60 to 90 seconds. Green smoothies need longer blending to fully break down the kale."
+BVRG_012,4,"Suggestions (not included): Add 1 tbsp honey for extra sweetness. Freeze banana chunks in advance for a colder, thicker smoothie."
+BVRG_013,1,Peel and cube the mango. Peel the banana and break it into chunks.
+BVRG_013,2,Place all ingredients in a blender.
+BVRG_013,3,"Blend on high until completely smooth, about 60 seconds."
+BVRG_013,4,"Suggestions (not included): For a thicker smoothie, use frozen mango and banana chunks. Garnish with a pineapple wedge. For a lighter version, substitute the coconut milk with coconut water."
