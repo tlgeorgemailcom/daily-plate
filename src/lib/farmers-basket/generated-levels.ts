@@ -22284,5 +22284,90 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'pina_colada', label: 'Virgin Piña Colada', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_019',
+    name: 'Eggnog',
+    category: 'beverages',
+    dietaryCategory: 'veggie',
+    levelNum: 461,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cup (makes 3+)',
+    prepTime: '15',
+    linkType: 'dish',
+    sr28Rule: 'Rule A',
+    nutritionJson: {"cal":274.1,"pro":14.0,"fat":12.8,"carb":24.9,"fib":0.0,"h2o":253.9,"sug":25.3,"perServing":{"cal":274.1,"pro":14.0,"fat":12.8,"carb":24.9,"fib":0.0,"h2o":253.9,"sug":25.3,"AddedSugars":12.6,"IntrinsicSugars":12.7},"micros":{"vitaminA":56.14,"vitaminC":0.0,"vitaminD":53.68,"vitaminE":0.21,"vitaminK":0.27,"vitaminB6":0.03,"vitaminB12":0.43,"thiamin":0.02,"riboflavin":0.17,"niacin":0.05,"folate":7.56,"calcium":83.94,"iron":0.25,"magnesium":8.02,"phosphorus":83.97,"potassium":102.29,"sodium":48.6,"zinc":0.43,"copper":0.02,"selenium":7.54,"cholesterol":68.27,"saturatedFat":1.99,"monoFat":1.24,"polyFat":0.39,"omega3":0.01,"omega6":0.22},"gramsPerServing":308.2,"servings":3,"per100g":{"Energy_KCal":88.94,"Water":82.37,"Protein":4.54,"TotalLipidFat":4.14,"Carbohydrate":8.09,"FiberTotalDietary":0.01,"SugarsTotal":8.2,"Cholesterol":68.27,"FattyAcids_totalSaturated":1.99,"FattyAcids_totalMonounsaturated":1.24,"FattyAcids_totalPolyunsaturated":0.39,"LinoleicAcid":0.22,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":56.14,"Retinol":55.43,"Carotene_beta":5.0,"VitaminD":53.68,"VitaminE_alphaTocopherol":0.21,"VitaminK_phylloquinone":0.27,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.02,"Riboflavin":0.17,"Niacin":0.05,"PantothenicAcid":0.38,"VitaminB6":0.03,"Folate_total":7.56,"Folate_food":7.56,"Folate_DFE":7.56,"FolicAcid":0.0,"VitaminB12":0.43,"Choline_total":50.14,"Betaine":0.52,"LuteinZeaxanthin":61.21,"Lycopene":0.0,"Calcium_Ca":83.94,"Iron_Fe":0.25,"Magnesium_Mg":8.02,"Phosphorus_P":83.97,"Potassium_K":102.29,"Sodium_Na":48.6,"Zinc_Zn":0.43,"Copper_Cu":0.02,"Manganese_Mn":0.01,"Selenium_Se":7.54,"Tryptophan":0.06,"Threonine":0.19,"Isoleucine":0.24,"Leucine":0.4,"Lysine":0.35,"Methionine":0.12,"Cystine":0.05,"Phenylalanine":0.24,"Tyrosine":0.2,"Valine":0.3,"Arginine":0.2,"Histidine":0.12,"Alanine":0.2,"AsparticAcid":0.43,"GlutamicAcid":0.83,"Glycine":0.12,"Proline":0.33,"Serine":0.31,"omega3":0.01,"omega6":0.22,"AddedSugars":4.08,"IntrinsicSugars":4.12},"addedSugars":12.6,"intrinsicSugars":12.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"1057","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":244.0},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":50.0},{"ndb":"19335","name":"Sugars, granulated","grams":12.6},{"ndb":"2050","name":"Vanilla extract","grams":1.4},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.2}],"sections":[{"section_key":"eggnog","section_label":"Eggnog","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":924.55,"raw_water_grams":761.59,"raw_fat_grams":38.26,"raw_protein_grams":41.93,"raw_carb_grams":74.81,"final_grams":924.55}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Eggnog', quantity: 'custom (g)', foodWord: 'EGGNOG', ndbNo: '1057', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'whole milk', quantity: '3 cups', section: 'eggnog', ndbNo: '1077', portionDesc: 'g', portionGrams: 732.0 },
+      { name: 'large eggs', quantity: '3', section: 'eggnog', ndbNo: '1123', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'sugar', quantity: '3 tbsp', section: 'eggnog', ndbNo: '19335', portionDesc: 'g', portionGrams: 37.8 },
+      { name: 'vanilla extract', quantity: '1 tsp', section: 'eggnog', ndbNo: '2050', portionDesc: 'g', portionGrams: 4.2 },
+      { name: 'ground nutmeg', quantity: '1/4 tsp', section: 'eggnog', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.55 }
+    ],
+    recipeInstructions: [
+      'Whisk eggs and sugar in a medium bowl until smooth.',
+      'Heat milk in a saucepan over medium heat until steaming but not boiling.',
+      'Slowly pour hot milk into egg mixture, whisking constantly to temper the eggs.',
+      'Return mixture to saucepan over medium-low heat, stirring constantly until temperature reaches 160°F (71°C), about 5–8 minutes. Do not boil.',
+      'Remove from heat and stir in vanilla extract and ground nutmeg.',
+      'Strain through a fine-mesh sieve into a pitcher.',
+      'Cool to room temperature, then refrigerate until cold, at least 2 hours.',
+      'Suggestions (not included): Serve chilled. For a spiked version, stir in 2 oz bourbon or dark rum per serving.'
+    ],
+    sections: [
+      { key: 'eggnog', label: 'Eggnog', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
+    id: 'BVRG_020',
+    name: 'Horchata',
+    category: 'beverages',
+    dietaryCategory: 'vegan',
+    levelNum: 462,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cup (makes 4+)',
+    prepTime: '15',
+    linkType: 'dish',
+    sr28Rule: 'Rule B',
+    nutritionJson: {"cal":135.4,"pro":1.2,"fat":1.8,"carb":28.7,"fib":1.5,"h2o":218.3,"sug":22.5,"perServing":{"cal":135.4,"pro":1.2,"fat":1.8,"carb":28.7,"fib":1.5,"h2o":218.3,"sug":22.5,"AddedSugars":22.0,"IntrinsicSugars":0.5},"micros":{"vitaminA":0.04,"vitaminC":0.01,"vitaminD":0.0,"vitaminE":0.73,"vitaminK":0.09,"vitaminB6":0.02,"vitaminB12":0.0,"thiamin":0.06,"riboflavin":0.04,"niacin":0.49,"folate":22.53,"calcium":15.64,"iron":0.53,"magnesium":10.98,"phosphorus":24.2,"potassium":32.95,"sodium":4.42,"zinc":0.2,"copper":0.06,"selenium":1.57,"cholesterol":0.0,"saturatedFat":0.12,"monoFat":0.9,"polyFat":0.36,"omega3":0.0,"omega6":0.34},"gramsPerServing":251.0,"servings":4,"per100g":{"Energy_KCal":53.94,"Water":86.98,"Protein":0.48,"TotalLipidFat":0.71,"Carbohydrate":11.44,"FiberTotalDietary":0.61,"SugarsTotal":8.96,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.12,"FattyAcids_totalMonounsaturated":0.9,"FattyAcids_totalPolyunsaturated":0.36,"LinoleicAcid":0.34,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.04,"Retinol":0.0,"Carotene_beta":0.32,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.73,"VitaminK_phylloquinone":0.09,"VitaminC_totalAscorbicAcid":0.01,"Thiamin":0.06,"Riboflavin":0.04,"Niacin":0.49,"PantothenicAcid":0.11,"VitaminB6":0.02,"Folate_total":22.53,"Folate_food":1.98,"Folate_DFE":36.9,"FolicAcid":20.55,"VitaminB12":0.0,"Choline_total":2.02,"Betaine":0.02,"LuteinZeaxanthin":0.6,"Lycopene":0.04,"Calcium_Ca":15.64,"Iron_Fe":0.53,"Magnesium_Mg":10.98,"Phosphorus_P":24.2,"Potassium_K":32.95,"Sodium_Na":4.42,"Zinc_Zn":0.2,"Copper_Cu":0.06,"Manganese_Mn":0.21,"Selenium_Se":1.57,"Tryptophan":0.01,"Threonine":0.04,"Isoleucine":0.05,"Leucine":0.1,"Lysine":0.04,"Methionine":0.02,"Cystine":0.02,"Phenylalanine":0.07,"Tyrosine":0.03,"Valine":0.06,"Arginine":0.12,"Histidine":0.03,"Alanine":0.07,"AsparticAcid":0.14,"GlutamicAcid":0.3,"Glycine":0.07,"Proline":0.06,"Serine":0.06,"omega3":0.0,"omega6":0.34,"AddedSugars":8.77,"IntrinsicSugars":0.19},"addedSugars":22.0,"intrinsicSugars":0.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"14638","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20044","name":"Rice, white, long-grain, regular, raw, enriched","grams":23.1},{"ndb":"12061","name":"Nuts, almonds","grams":7.0},{"ndb":"14411","name":"Water, tap, drinking","grams":237.0},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.7},{"ndb":"19335","name":"Sugars, granulated","grams":22.1},{"ndb":"2050","name":"Vanilla extract","grams":1.1}],"sections":[{"section_key":"blend_strain","section_label":"Blend and Strain","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":0.908,"yield_factor_fat":0.49,"yield_factor_protein":0.38,"yield_factor_carbohydrate":0.318,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":1071.1,"raw_water_grams":959.31,"raw_fat_grams":14.62,"raw_protein_grams":12.62,"raw_carb_grams":82.08,"final_grams":911.58},{"section_key":"sweeten","section_label":"To Sweeten","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":92.4,"raw_water_grams":2.23,"raw_fat_grams":0.0,"raw_protein_grams":0.0,"raw_carb_grams":88.71,"final_grams":92.4}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Beverage, Horchata, as served in restaurant', quantity: 'custom (g)', foodWord: 'HORCHATA', ndbNo: '14638', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'white rice (dry)', quantity: '1/2 cup', section: 'blend_strain', ndbNo: '20044', portionDesc: 'g', portionGrams: 92.5 },
+      { name: 'almonds', quantity: '1 oz almonds, sliced', section: 'blend_strain', ndbNo: '12061', portionDesc: 'g', portionGrams: 28.0 },
+      { name: 'water', quantity: '4 cups', section: 'blend_strain', ndbNo: '14411', portionDesc: 'g', portionGrams: 948.0 },
+      { name: 'ground cinnamon', quantity: '1 tsp', section: 'blend_strain', ndbNo: '2010', portionDesc: 'g', portionGrams: 2.6 },
+      { name: 'sugar', quantity: '7 tbsp', section: 'sweeten', ndbNo: '19335', portionDesc: 'g', portionGrams: 88.2 },
+      { name: 'vanilla extract', quantity: '1 tsp', section: 'sweeten', ndbNo: '2050', portionDesc: 'g', portionGrams: 4.2 }
+    ],
+    recipeInstructions: [
+      'Combine rice, almonds, cinnamon, and water in a blender. Blend on high for 2 minutes until very smooth.',
+      'Strain through a fine-mesh sieve or cheesecloth into a pitcher, pressing the solids to extract as much liquid as possible. Discard solids.',
+      'Add sugar and vanilla extract to the strained liquid. Stir well until sugar is completely dissolved.',
+      'Refrigerate until cold, at least 1 hour. Stir well before serving.',
+      'Suggestions (not included): Serve over ice. For a creamier version, replace half the water with whole milk.'
+    ],
+    sections: [
+      { key: 'blend_strain', label: 'Blend and Strain', cookingMethod: '', yieldFactorWater: 0.908, yieldFactorFat: 0.49 },
+      { key: 'sweeten', label: 'To Sweeten', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

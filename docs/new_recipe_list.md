@@ -27,6 +27,8 @@ Arepas
 - ✅ Virgin Mojito (BVRG_016)
 - ✅ Watermelon Agua Fresca (BVRG_017)
 - ✅ Virgin Piña Colada (BVRG_018)
+- ✅ Eggnog (BVRG_019)
+- ✅ Horchata (BVRG_020)
 
 ---
 
@@ -65,11 +67,10 @@ Arnold Palmer
 
 - ✅ Virgin Piña Colada (BVRG_018)
 
-### Cluster 9 — Calibration Targets (Cold)
-*No new ledger entries — both have SR Legacy canonicals*
+### ~~Cluster 9 — Calibration Targets (Cold)~~ ✅ Complete
 
-Eggnog              ← canonical NDB 1057 (Rule A/B/C target)
-Horchata            ← canonical NDB 14638 (Rule A/B/C target)
+- ✅ Eggnog (BVRG_019)
+- ✅ Horchata (BVRG_020)
 
 ### Cluster 10 — Tea / Spice (Hot)
 *New ledger entry: `apple_juice` NDB 9016 (proxy for unfermented cider); matcha has no SR Legacy NDB — Rule D*

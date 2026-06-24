@@ -459,3 +459,5 @@ BVRG_015,FRUITPUNCH,Fruit Punch,beverages,veggie,dish,,3,1 glass (~13 oz),1,Rule
 BVRG_016,VIRGINMOJITO,Virgin Mojito,beverages,vegan,dish,,5,1 glass (~10 fl oz),1,Rule D,raw,1.0,1.0,1.0,1.0,1.0,approved,,Rule D — no canonical,,PASS,,
 BVRG_017,AGUAFRESCA,Watermelon Agua Fresca,beverages,vegan,dish,,5,1 glass (~10 fl oz),1,Rule D,raw,1.0,1.0,1.0,1.0,1.0,approved,,Rule D — no canonical,,PASS,,
 BVRG_018,VIRGINPINACOLADA,Virgin Piña Colada,beverages,vegan,dish,,5,1 glass (~9 fl oz),1,Rule D,raw,1.0,1.0,1.0,1.0,1.0,approved,,Rule D — no canonical,,PASS,,
+BVRG_019,EGGNOG,Eggnog,beverages,veggie,dish,1057,15,1 cup (makes 3+),3,Rule A,boiled,1.0,1.0,1.0,1.0,1.0,approved,,Rule A — all macros ≤±2%,,PASS,,
+BVRG_020,HORCHATA,Horchata,beverages,vegan,dish,14638,15,1 cup (makes 4+),4,Rule B,raw,1.0,1.0,1.0,1.0,1.0,approved,,Rule B — Fi unscored (canonical=0; straining model),,PASS,,
