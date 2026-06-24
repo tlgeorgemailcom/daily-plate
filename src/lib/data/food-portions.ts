@@ -56286,6 +56286,336 @@ export const FOODS: Food[] = [
         "gm": 20.0
       }
     ]
+  },
+  {
+    "word": "WHITERUM",
+    "display": "White Rum",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14754",
+    "desc": "Alcoholic beverage, rum, white, 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
+      }
+    ]
+  },
+  {
+    "word": "GOSLINGSRUM",
+    "display": "Goslings Black Seal Rum",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14755",
+    "desc": "Alcoholic beverage, rum, dark, Goslings Black Seal, 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
+      }
+    ]
+  },
+  {
+    "word": "CUBANRUM",
+    "display": "Cuban Rum",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14756",
+    "desc": "Alcoholic beverage, rum, Cuban, Havana Club, 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
+      }
+    ]
+  },
+  {
+    "word": "JAMAICANRUM",
+    "display": "Jamaican Rum",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14757",
+    "desc": "Alcoholic beverage, rum, Jamaican, Appleton, 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
+      }
+    ]
+  },
+  {
+    "word": "IRISHWHISKEY",
+    "display": "Irish Whiskey",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14758",
+    "desc": "Alcoholic beverage, whiskey, Irish, 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
+      }
+    ]
+  },
+  {
+    "word": "LONDONDRYGIN",
+    "display": "London Dry Gin",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14759",
+    "desc": "Alcoholic beverage, gin, London dry, 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
+      }
+    ]
+  },
+  {
+    "word": "VANILLAVODKA",
+    "display": "Vanilla Vodka",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14760",
+    "desc": "Alcoholic beverage, vodka, vanilla, 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
+      }
+    ]
+  },
+  {
+    "word": "CITRONVODKA",
+    "display": "Citron Vodka",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14761",
+    "desc": "Alcoholic beverage, vodka, citron, lemon, 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
+      }
+    ]
+  },
+  {
+    "word": "GRAPPA",
+    "display": "Grappa",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14762",
+    "desc": "Alcoholic beverage, grappa, Italian pomace brandy, 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
+      }
+    ]
+  },
+  {
+    "word": "AGUARDIENTE",
+    "display": "Cuban Aguardiente",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14763",
+    "desc": "Alcoholic beverage, aguardiente, Cuban cane spirit, 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
+      }
+    ]
   }
 ];
 
