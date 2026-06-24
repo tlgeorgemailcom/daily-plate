@@ -21720,5 +21720,114 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'milkshake', label: 'Milkshake', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_004',
+    name: 'Café au Lait',
+    category: 'beverages',
+    dietaryCategory: 'veggie',
+    levelNum: 446,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (16 oz)',
+    prepTime: '5 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":151.2,"pro":8.0,"fat":8.0,"carb":11.7,"fib":0.0,"h2o":450.6,"sug":12.3,"perServing":{"cal":151.2,"pro":8.0,"fat":8.0,"carb":11.7,"fib":0.0,"h2o":450.6,"sug":12.3,"AddedSugars":0.0,"IntrinsicSugars":12.3},"micros":{"vitaminA":23.33,"vitaminC":0.0,"vitaminD":25.87,"vitaminE":0.04,"vitaminK":0.2,"vitaminB6":0.02,"vitaminB12":0.23,"thiamin":0.03,"riboflavin":0.12,"niacin":0.13,"folate":3.52,"calcium":58.31,"iron":0.02,"magnesium":6.55,"phosphorus":44.09,"potassium":91.1,"sodium":22.8,"zinc":0.2,"copper":0.01,"selenium":1.88,"cholesterol":5.07,"saturatedFat":0.94,"monoFat":0.42,"polyFat":0.1,"omega3":0.0,"omega6":0.0},"gramsPerServing":481.0,"servings":1,"per100g":{"Energy_KCal":31.44,"Water":93.68,"Protein":1.66,"TotalLipidFat":1.66,"Carbohydrate":2.43,"FiberTotalDietary":0.0,"SugarsTotal":2.56,"Cholesterol":5.07,"FattyAcids_totalSaturated":0.94,"FattyAcids_totalMonounsaturated":0.42,"FattyAcids_totalPolyunsaturated":0.1,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":23.33,"Retinol":22.83,"Carotene_beta":3.55,"VitaminD":25.87,"VitaminE_alphaTocopherol":0.04,"VitaminK_phylloquinone":0.2,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.03,"Riboflavin":0.12,"Niacin":0.13,"PantothenicAcid":0.31,"VitaminB6":0.02,"Folate_total":3.52,"Folate_food":3.52,"Folate_DFE":3.52,"FolicAcid":0.0,"VitaminB12":0.23,"Choline_total":8.54,"Betaine":0.3,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":58.31,"Iron_Fe":0.02,"Magnesium_Mg":6.55,"Phosphorus_P":44.09,"Potassium_K":91.1,"Sodium_Na":22.8,"Zinc_Zn":0.2,"Copper_Cu":0.01,"Manganese_Mn":0.01,"Selenium_Se":1.88,"Tryptophan":0.02,"Threonine":0.07,"Isoleucine":0.08,"Leucine":0.15,"Lysine":0.13,"Methionine":0.04,"Cystine":0.01,"Phenylalanine":0.08,"Tyrosine":0.08,"Valine":0.1,"Arginine":0.05,"Histidine":0.05,"Alanine":0.05,"AsparticAcid":0.14,"GlutamicAcid":0.36,"Glycine":0.03,"Proline":0.16,"Serine":0.1,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":2.56},"addedSugars":0.0,"intrinsicSugars":12.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14209","name":"Beverages, Coffee, brewed, prepared with tap water","grams":237.0},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":244.0}],"sections":[{"section_key":"cafe_au_lait","section_label":"Café au Lait","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":481.0,"raw_water_grams":450.59,"raw_fat_grams":7.98,"raw_protein_grams":7.97,"raw_carb_grams":11.71,"final_grams":481.0}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Café au Lait', quantity: 'custom (g)', foodWord: 'CAFEAULAIT', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'coffee, brewed', quantity: '1 cup', section: 'cafe_au_lait', ndbNo: '14209', portionDesc: 'g', portionGrams: 237.0 },
+      { name: 'whole milk', quantity: '1 cup', section: 'cafe_au_lait', ndbNo: '1077', portionDesc: 'g', portionGrams: 244.0 }
+    ],
+    recipeInstructions: [
+      'Brew a strong cup of coffee using your preferred method. Keep it hot.',
+      'Warm the milk in a small saucepan over medium heat, stirring gently, until steaming (about 150°F). Do not boil. Alternatively, heat in the microwave for 1–2 minutes.',
+      'Pour the hot coffee and hot milk simultaneously into a large mug or bowl. The traditional French method is to pour both streams at once from opposite sides, creating a small layer of foam on top.',
+      'Suggestions (not included): Café au lait is traditionally drunk from a wide bowl at breakfast in France. Serve with a croissant or brioche.'
+    ],
+    sections: [
+      { key: 'cafe_au_lait', label: 'Café au Lait', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
+    id: 'BVRG_005',
+    name: 'Café Mocha',
+    category: 'beverages',
+    dietaryCategory: 'veggie',
+    levelNum: 447,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (12 oz)',
+    prepTime: '5 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":263.0,"pro":8.6,"fat":8.5,"carb":38.1,"fib":1.0,"h2o":285.0,"sug":31.7,"perServing":{"cal":263.0,"pro":8.6,"fat":8.5,"carb":38.1,"fib":1.0,"h2o":285.0,"sug":31.7,"AddedSugars":19.4,"IntrinsicSugars":12.3},"micros":{"vitaminA":32.8,"vitaminC":0.06,"vitaminD":36.36,"vitaminE":0.05,"vitaminK":0.29,"vitaminB6":0.02,"vitaminB12":0.32,"thiamin":0.03,"riboflavin":0.15,"niacin":0.99,"folate":3.97,"calcium":82.51,"iron":0.28,"magnesium":28.38,"phosphorus":75.81,"potassium":139.54,"sodium":41.29,"zinc":0.36,"copper":0.08,"selenium":2.8,"cholesterol":7.13,"saturatedFat":1.4,"monoFat":0.61,"polyFat":0.15,"omega3":0.0,"omega6":0.0},"gramsPerServing":342.2,"servings":1,"per100g":{"Energy_KCal":76.85,"Water":83.29,"Protein":2.51,"TotalLipidFat":2.48,"Carbohydrate":11.13,"FiberTotalDietary":0.3,"SugarsTotal":9.26,"Cholesterol":7.13,"FattyAcids_totalSaturated":1.4,"FattyAcids_totalMonounsaturated":0.61,"FattyAcids_totalPolyunsaturated":0.15,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":32.8,"Retinol":32.09,"Carotene_beta":4.99,"VitaminD":36.36,"VitaminE_alphaTocopherol":0.05,"VitaminK_phylloquinone":0.29,"VitaminC_totalAscorbicAcid":0.06,"Thiamin":0.03,"Riboflavin":0.15,"Niacin":0.99,"PantothenicAcid":0.27,"VitaminB6":0.02,"Folate_total":3.97,"Folate_food":3.97,"Folate_DFE":3.97,"FolicAcid":0.0,"VitaminB12":0.32,"Choline_total":10.79,"Betaine":0.43,"LuteinZeaxanthin":0.34,"Lycopene":0.0,"Calcium_Ca":82.51,"Iron_Fe":0.28,"Magnesium_Mg":28.38,"Phosphorus_P":75.81,"Potassium_K":139.54,"Sodium_Na":41.29,"Zinc_Zn":0.36,"Copper_Cu":0.08,"Manganese_Mn":0.05,"Selenium_Se":2.8,"Tryptophan":0.03,"Threonine":0.09,"Isoleucine":0.11,"Leucine":0.21,"Lysine":0.19,"Methionine":0.06,"Cystine":0.01,"Phenylalanine":0.11,"Tyrosine":0.11,"Valine":0.14,"Arginine":0.06,"Histidine":0.06,"Alanine":0.07,"AsparticAcid":0.19,"GlutamicAcid":0.5,"Glycine":0.04,"Proline":0.22,"Serine":0.14,"omega3":0.0,"omega6":0.0,"AddedSugars":5.66,"IntrinsicSugars":3.6},"addedSugars":19.4,"intrinsicSugars":12.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14210","name":"Beverages, Coffee, espresso, restaurant-prepared","grams":59.2},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":244.0},{"ndb":"14181","name":"Beverages, Chocolate syrup","grams":39.0}],"sections":[{"section_key":"cafe_mocha","section_label":"Café Mocha","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":342.2,"raw_water_grams":285.02,"raw_fat_grams":8.48,"raw_protein_grams":8.58,"raw_carb_grams":38.09,"final_grams":342.2}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Café Mocha', quantity: 'custom (g)', foodWord: 'CAFEMOCHA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'espresso', quantity: '2 fl oz', section: 'cafe_mocha', ndbNo: '14210', portionDesc: 'g', portionGrams: 59.2 },
+      { name: 'whole milk', quantity: '1 cup', section: 'cafe_mocha', ndbNo: '1077', portionDesc: 'g', portionGrams: 244.0 },
+      { name: 'chocolate syrup', quantity: '2 tbsp', section: 'cafe_mocha', ndbNo: '14181', portionDesc: 'g', portionGrams: 39.0 }
+    ],
+    recipeInstructions: [
+      'Pull 2 shots of espresso into a large mug, or brew 2 fl oz of very strong coffee using a stovetop moka pot or French press concentrate.',
+      'Add the chocolate syrup to the hot espresso and stir until fully combined.',
+      'Steam or heat the milk until steaming and frothy (about 150°F). Pour the steamed milk over the espresso–chocolate mixture, holding back the foam with a spoon, then spoon the foam on top.',
+      'Suggestions (not included): Dust the foam with cocoa powder or shaved chocolate. For an iced mocha, let the espresso–chocolate mixture cool, then pour over ice before adding cold milk.'
+    ],
+    sections: [
+      { key: 'cafe_mocha', label: 'Café Mocha', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
+    id: 'BVRG_006',
+    name: 'Cappuccino',
+    category: 'beverages',
+    dietaryCategory: 'veggie',
+    levelNum: 448,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cappuccino',
+    prepTime: '5 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":77.1,"pro":3.9,"fat":4.0,"carb":6.3,"fib":0.0,"h2o":136.5,"sug":6.2,"perServing":{"cal":77.1,"pro":3.9,"fat":4.0,"carb":6.3,"fib":0.0,"h2o":136.5,"sug":6.2,"AddedSugars":0.0,"IntrinsicSugars":6.2},"micros":{"vitaminA":37.02,"vitaminC":0.04,"vitaminD":41.04,"vitaminE":0.06,"vitaminK":0.26,"vitaminB6":0.02,"vitaminB12":0.36,"thiamin":0.03,"riboflavin":0.16,"niacin":1.08,"folate":4.22,"calcium":91.33,"iron":0.05,"magnesium":23.67,"phosphorus":68.97,"potassium":128.68,"sodium":37.34,"zinc":0.31,"copper":0.03,"selenium":2.98,"cholesterol":8.05,"saturatedFat":1.51,"monoFat":0.65,"polyFat":0.17,"omega3":0.0,"omega6":0.0},"gramsPerServing":151.6,"servings":1,"per100g":{"Energy_KCal":50.85,"Water":90.02,"Protein":2.56,"TotalLipidFat":2.65,"Carbohydrate":4.19,"FiberTotalDietary":0.0,"SugarsTotal":4.06,"Cholesterol":8.05,"FattyAcids_totalSaturated":1.51,"FattyAcids_totalMonounsaturated":0.65,"FattyAcids_totalPolyunsaturated":0.17,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":37.02,"Retinol":36.21,"Carotene_beta":5.63,"VitaminD":41.04,"VitaminE_alphaTocopherol":0.06,"VitaminK_phylloquinone":0.26,"VitaminC_totalAscorbicAcid":0.04,"Thiamin":0.03,"Riboflavin":0.16,"Niacin":1.08,"PantothenicAcid":0.3,"VitaminB6":0.02,"Folate_total":4.22,"Folate_food":4.22,"Folate_DFE":4.22,"FolicAcid":0.0,"VitaminB12":0.36,"Choline_total":12.02,"Betaine":0.48,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":91.33,"Iron_Fe":0.05,"Magnesium_Mg":23.67,"Phosphorus_P":68.97,"Potassium_K":128.68,"Sodium_Na":37.34,"Zinc_Zn":0.31,"Copper_Cu":0.03,"Manganese_Mn":0.01,"Selenium_Se":2.98,"Tryptophan":0.03,"Threonine":0.1,"Isoleucine":0.13,"Leucine":0.23,"Lysine":0.21,"Methionine":0.06,"Cystine":0.01,"Phenylalanine":0.13,"Tyrosine":0.12,"Valine":0.16,"Arginine":0.07,"Histidine":0.07,"Alanine":0.08,"AsparticAcid":0.22,"GlutamicAcid":0.56,"Glycine":0.05,"Proline":0.25,"Serine":0.15,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":4.06},"addedSugars":0.0,"intrinsicSugars":6.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14210","name":"Beverages, Coffee, espresso, restaurant-prepared","grams":29.6},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":122.0}],"sections":[{"section_key":"cappuccino","section_label":"Cappuccino","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":151.6,"raw_water_grams":136.47,"raw_fat_grams":4.02,"raw_protein_grams":3.88,"raw_carb_grams":6.35,"final_grams":151.6}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Cappuccino', quantity: 'custom (g)', foodWord: 'CAPPUCCINO', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'espresso', quantity: '1 fl oz', section: 'cappuccino', ndbNo: '14210', portionDesc: 'g', portionGrams: 29.6 },
+      { name: 'whole milk', quantity: '4 fl oz', section: 'cappuccino', ndbNo: '1077', portionDesc: 'g', portionGrams: 122.0 }
+    ],
+    recipeInstructions: [
+      'Pull 1 shot of espresso into a 6 oz cappuccino cup, or brew 1 fl oz of very strong coffee.',
+      'Steam 4 fl oz of whole milk to 140–150°F, working the steam wand just below the surface to create a dense, velvety microfoam. The milk should roughly double in volume.',
+      'Pour the steamed milk over the espresso in a steady stream while holding back the foam with a spoon, then spoon the remaining foam on top to fill the cup. A well-made cappuccino is roughly one-third espresso, one-third steamed milk, and one-third foam.',
+      'Suggestions (not included): Dust lightly with cinnamon or unsweetened cocoa powder. Traditionally served without added sugar in Italy.'
+    ],
+    sections: [
+      { key: 'cappuccino', label: 'Cappuccino', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

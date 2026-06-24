@@ -396,3 +396,5 @@ ice_cream_chocolate,19270,ICECREAMCHOC,"Ice creams, chocolate",chocolate ice cre
 ice_cream_strawberry,19271,ICECREAMSTRAW,"Ice creams, strawberry",strawberry ice cream,cup,132.0,NDB 19271 SugarsTotal=0.0 is an SR Legacy by-difference artifact; actual sugar ~18-22g/100g
 chocolate_syrup,14181,CHOCOLATESYRUP,"Beverages, Chocolate syrup",chocolate syrup,tbsp,19.5,
 strawberries_raw,9316,STRAWBERRIES,"Strawberries, raw",strawberries,cup,152.0,
+coffee_brewed,14209,COFFEE,"Beverages, Coffee, brewed, prepared with tap water","coffee, brewed",cup,237.0,
+espresso,14210,COFFEEESPRESSO,"Beverages, Coffee, espresso, restaurant-prepared",espresso,fl oz,29.6,
