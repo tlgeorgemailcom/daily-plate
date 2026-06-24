@@ -468,3 +468,8 @@ sherry_dry,14536,WINEDESSERTDRY,"Alcoholic beverage, wine, dessert, dry",sherry,
 port_wine_sweet,14057,WINEDESSERTSWEET,"Alcoholic beverage, wine, dessert, sweet",port wine,fl oz,30.5,SR Legacy; cocktail ingredient 2026-06-24
 grenadine,42040,GRENADINE,"Syrups, grenadine",grenadine,fl oz,20.0,SR Legacy; cocktail ingredient 2026-06-24
 baileys_irish_cream,14737,BAILEYSIRISHCREAM,"Alcoholic beverage, liqueur, cream, Irish, Baileys Original, 34 proof",Baileys Irish cream,fl oz,29.57,custom NDB 14737; official Baileys website EU label 2026-06-24
+aromatic_bitters,14749,AROMATICBITTERS,"Alcoholic beverage, bitters, aromatic, Angostura type, 89.4 proof",aromatic bitters,dash,0.9,cocktail ingredient; 44.7% ABV label-verified 2026-06-24
+peychauds_bitters,14750,PEYCHAUDS,"Alcoholic beverage, bitters, Peychaud's aromatic, 70 proof",Peychaud's bitters,dash,0.9,cocktail ingredient; 35% ABV; 2 kcal/dash label 2026-06-24
+cherry_sangue_morlacco,14751,CHERRYMORLACCO,"Alcoholic beverage, liqueur, cherry, Sangue Morlacco, Luxardo, 60 proof",cherry sangue morlacco,fl oz,32.0,cocktail ingredient; 85 kcal/oz label; 30% ABV 2026-06-24
+peach_brandy,14752,PEACHBRANDY,"Alcoholic beverage, liqueur, peach brandy, 54 proof",peach brandy,fl oz,30.0,cocktail ingredient; 54 proof label; kcal estimated Arrow/Dekuyper 2026-06-24
+honey_syrup,14753,HONEYSYRUP,"Beverage, syrup, honey, Monin, non-alcoholic",honey syrup,fl oz,40.0,cocktail ingredient; 25g sugar/oz Monin label 2026-06-24

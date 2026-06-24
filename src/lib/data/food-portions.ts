@@ -56121,6 +56121,171 @@ export const FOODS: Food[] = [
         "gm": 40.5
       }
     ]
+  },
+  {
+    "word": "AROMATICBITTERS",
+    "display": "Aromatic Bitters",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14749",
+    "desc": "Alcoholic beverage, bitters, aromatic, Angostura type, 89.4 proof",
+    "cal": 340.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 25.0,
+    "fib": 0.0,
+    "h2o": 39.7,
+    "sug": 25.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "dash",
+        "gm": 0.9
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 4.5
+      }
+    ]
+  },
+  {
+    "word": "PEYCHAUDS",
+    "display": "Peychaud's Bitters",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14750",
+    "desc": "Alcoholic beverage, bitters, Peychaud's aromatic, 70 proof",
+    "cal": 200.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 1.7,
+    "fib": 0.0,
+    "h2o": 70.7,
+    "sug": 1.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "dash",
+        "gm": 0.9
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 4.5
+      }
+    ]
+  },
+  {
+    "word": "CHERRYMORLACCO",
+    "display": "Cherry Sangue Morlacco",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14751",
+    "desc": "Alcoholic beverage, liqueur, cherry, Sangue Morlacco, Luxardo, 60 proof",
+    "cal": 287.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 30.3,
+    "fib": 0.0,
+    "h2o": 46.0,
+    "sug": 30.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 32.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 48.0
+      }
+    ]
+  },
+  {
+    "word": "PEACHBRANDY",
+    "display": "Peach Brandy",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14752",
+    "desc": "Alcoholic beverage, liqueur, peach brandy, 54 proof",
+    "cal": 248.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 24.7,
+    "fib": 0.0,
+    "h2o": 54.0,
+    "sug": 24.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 45.0
+      }
+    ]
+  },
+  {
+    "word": "HONEYSYRUP",
+    "display": "Honey Syrup",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14753",
+    "desc": "Beverage, syrup, honey, Monin, non-alcoholic",
+    "cal": 338.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 84.5,
+    "fib": 0.0,
+    "h2o": 15.5,
+    "sug": 84.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 40.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 20.0
+      }
+    ]
   }
 ];
 
