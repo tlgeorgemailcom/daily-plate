@@ -26,6 +26,7 @@ Arepas
 - ✅ Fruit Punch (BVRG_015)
 - ✅ Virgin Mojito (BVRG_016)
 - ✅ Watermelon Agua Fresca (BVRG_017)
+- ✅ Virgin Piña Colada (BVRG_018)
 
 ---
 
@@ -60,10 +61,9 @@ Arnold Palmer
 
 - ✅ Watermelon Agua Fresca (BVRG_017)
 
-### Cluster 8 — Coconut Drinks (Cold)
-*No new ledger entries (`pineapple_juice_canned` 9273 + `coconut_milk_canned` 12118 already in ledger)*
+### ~~Cluster 8 — Coconut Drinks (Cold)~~ ✅ Complete
 
-Virgin Piña Colada
+- ✅ Virgin Piña Colada (BVRG_018)
 
 ### Cluster 9 — Calibration Targets (Cold)
 *No new ledger entries — both have SR Legacy canonicals*

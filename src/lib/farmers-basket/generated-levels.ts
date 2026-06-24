@@ -22247,5 +22247,42 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'agua_fresca', label: 'Watermelon Agua Fresca', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_018',
+    name: 'Virgin Piña Colada',
+    category: 'beverages',
+    dietaryCategory: 'vegan',
+    levelNum: 460,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 glass (~9 fl oz)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":214.4,"pro":1.9,"fat":12.3,"carb":27.0,"fib":0.4,"h2o":216.7,"sug":19.0,"perServing":{"cal":214.4,"pro":1.9,"fat":12.3,"carb":27.0,"fib":0.4,"h2o":216.7,"sug":19.0,"AddedSugars":18.7,"IntrinsicSugars":0.2},"micros":{"vitaminA":0.12,"vitaminC":9.19,"vitaminD":0.0,"vitaminE":0.03,"vitaminK":0.25,"vitaminB6":0.08,"vitaminB12":0.0,"thiamin":0.04,"riboflavin":0.02,"niacin":0.28,"folate":16.66,"calcium":14.15,"iron":0.95,"magnesium":19.19,"phosphorus":27.54,"potassium":148.88,"sodium":4.4,"zinc":0.21,"copper":0.09,"selenium":0.08,"cholesterol":0.0,"saturatedFat":4.13,"monoFat":0.2,"polyFat":0.08,"omega3":0.0,"omega6":0.0},"gramsPerServing":259.0,"servings":1,"per100g":{"Energy_KCal":82.79,"Water":83.68,"Protein":0.73,"TotalLipidFat":4.74,"Carbohydrate":10.42,"FiberTotalDietary":0.17,"SugarsTotal":7.32,"Cholesterol":0.0,"FattyAcids_totalSaturated":4.13,"FattyAcids_totalMonounsaturated":0.2,"FattyAcids_totalPolyunsaturated":0.08,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.12,"Retinol":0.0,"Carotene_beta":3.91,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.03,"VitaminK_phylloquinone":0.25,"VitaminC_totalAscorbicAcid":9.19,"Thiamin":0.04,"Riboflavin":0.02,"Niacin":0.28,"PantothenicAcid":0.08,"VitaminB6":0.08,"Folate_total":16.66,"Folate_food":16.66,"Folate_DFE":16.66,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":4.54,"Betaine":0.01,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":14.15,"Iron_Fe":0.95,"Magnesium_Mg":19.19,"Phosphorus_P":27.54,"Potassium_K":148.88,"Sodium_Na":4.4,"Zinc_Zn":0.21,"Copper_Cu":0.09,"Manganese_Mn":0.53,"Selenium_Se":0.08,"Tryptophan":0.0,"Threonine":0.02,"Isoleucine":0.02,"Leucine":0.03,"Lysine":0.02,"Methionine":0.01,"Cystine":0.01,"Phenylalanine":0.02,"Tyrosine":0.01,"Valine":0.03,"Arginine":0.07,"Histidine":0.01,"Alanine":0.02,"AsparticAcid":0.05,"GlutamicAcid":0.1,"Glycine":0.02,"Proline":0.02,"Serine":0.02,"omega3":0.0,"omega6":0.0,"AddedSugars":7.22,"IntrinsicSugars":0.1},"addedSugars":18.7,"intrinsicSugars":0.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"9273","name":"Pineapple juice, canned, unsweetened","grams":187.5},{"ndb":"12118","name":"Nuts, coconut milk, canned","grams":56.5},{"ndb":"9160","name":"Lime juice, raw","grams":15.0}],"sections":[{"section_key":"pina_colada","section_label":"Virgin Piña Colada","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":259.0,"raw_water_grams":216.74,"raw_fat_grams":12.29,"raw_protein_grams":1.88,"raw_carb_grams":26.98,"final_grams":259.0}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Virgin Piña Colada', quantity: 'custom (g)', foodWord: 'VIRGINPINACOLADA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'pineapple juice', quantity: '3/4 cup pineapple juice', section: 'pina_colada', ndbNo: '9273', portionDesc: 'g', portionGrams: 187.5 },
+      { name: 'coconut milk', quantity: '1/4 cup coconut milk', section: 'pina_colada', ndbNo: '12118', portionDesc: 'g', portionGrams: 56.5 },
+      { name: 'lime juice', quantity: '1 tbsp lime juice', section: 'pina_colada', ndbNo: '9160', portionDesc: 'g', portionGrams: 15.0 }
+    ],
+    recipeInstructions: [
+      'Combine pineapple juice, coconut milk, and lime juice in a blender.',
+      'Add a large handful of ice and blend until smooth and frothy, about 30 seconds.',
+      'Pour into a chilled glass.',
+      'Suggestions (not included): Garnish with a pineapple wedge and a maraschino cherry. For a thicker texture, add more ice and blend again.'
+    ],
+    sections: [
+      { key: 'pina_colada', label: 'Virgin Piña Colada', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
