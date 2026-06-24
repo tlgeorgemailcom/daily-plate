@@ -413,7 +413,7 @@ gin_90proof,14049,GIN,"Alcoholic beverage, distilled, gin, 90 proof",gin,fl oz,2
 rum_80proof,14050,RUM,"Alcoholic beverage, distilled, rum, 80 proof",rum,fl oz,27.8,SR Legacy; cocktail ingredient 2026-06-24
 whiskey_86proof,14052,WHISKEY86,"Alcoholic beverage, distilled, whiskey, 86 proof",whiskey,fl oz,27.8,SR Legacy; cocktail ingredient 2026-06-24
 creme_de_menthe,14034,CREMEMENTHE,"Alcoholic beverage, creme de menthe, 72 proof",crème de menthe,fl oz,30.5,SR Legacy; cocktail ingredient 2026-06-24
-coffee_liqueur,14414,LIQUEUR,"Alcoholic beverage, liqueur, coffee, 53 proof",coffee liqueur (Kahlúa),fl oz,31.6,SR Legacy; cocktail ingredient 2026-06-24
+coffee_liqueur,14736,COFFEELIQUEUR,"Alcoholic beverage, liqueur, coffee, Kahlua Original, 32 proof",coffee liqueur (Kahlúa EU),fl oz,29.57,custom NDB 14736; Kahlua EU 16% ABV 2026-06-24
 coffee_cream_liqueur,14415,COFFEECREAMLIQUEUR,"Alcoholic beverage, liqueur, coffee with cream, 34 proof",Irish cream liqueur (Baileys),fl oz,30.8,SR Legacy; cocktail ingredient 2026-06-24
 triple_sec,14700,TRIPLESEC,"Alcoholic beverage, liqueur, triple sec, orange, 80 proof",triple sec,fl oz,30.2,Custom NDB 14700–14732 inserted 2026-06-24
 sweet_vermouth,14701,SWEETVERMOUTH,"Alcoholic beverage, wine, vermouth, sweet",sweet vermouth,fl oz,31.0,Custom NDB 14700–14732 inserted 2026-06-24
@@ -466,3 +466,5 @@ tomato_juice,11540,TOMATOJUICE,"Tomato juice, canned, with salt added",tomato ju
 cola,14148,SODACOLA,"Beverages, carbonated, cola, regular",cola,fl oz,30.8,SR Legacy; cocktail ingredient 2026-06-24
 sherry_dry,14536,WINEDESSERTDRY,"Alcoholic beverage, wine, dessert, dry",sherry,fl oz,29.3,SR Legacy; cocktail ingredient 2026-06-24
 port_wine_sweet,14057,WINEDESSERTSWEET,"Alcoholic beverage, wine, dessert, sweet",port wine,fl oz,30.5,SR Legacy; cocktail ingredient 2026-06-24
+grenadine,42040,GRENADINE,"Syrups, grenadine",grenadine,fl oz,20.0,SR Legacy; cocktail ingredient 2026-06-24
+baileys_irish_cream,14737,BAILEYSIRISHCREAM,"Alcoholic beverage, liqueur, cream, Irish, Baileys Original, 34 proof",Baileys Irish cream,fl oz,29.57,custom NDB 14737; official Baileys website EU label 2026-06-24

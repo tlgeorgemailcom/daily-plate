@@ -55739,6 +55739,58 @@ export const FOODS: Food[] = [
         "gm": 243.0
       }
     ]
+  },
+  {
+    "word": "COFFEELIQUEUR",
+    "display": "Coffee Liqueur",
+    "groups": [],
+    "ndb": "14736",
+    "desc": "Alcoholic beverage, liqueur, coffee, Kahlua Original, 32 proof",
+    "cal": 216.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 32.0,
+    "fib": 0.0,
+    "h2o": 54.88,
+    "sug": 32.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.57
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 14.79
+      }
+    ]
+  },
+  {
+    "word": "BAILEYSIRISHCREAM",
+    "display": "Baileys Irish Cream",
+    "groups": [],
+    "ndb": "14737",
+    "desc": "Alcoholic beverage, liqueur, cream, Irish, Baileys Original, 34 proof",
+    "cal": 314.0,
+    "pro": 2.8,
+    "fat": 13.6,
+    "carb": 21.7,
+    "fib": 0.0,
+    "h2o": 47.9,
+    "sug": 18.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.57
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 14.79
+      }
+    ]
   }
 ];
 
