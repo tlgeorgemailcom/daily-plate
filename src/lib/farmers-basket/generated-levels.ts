@@ -22369,5 +22369,132 @@ export const LEVELS: Level[] = [
       { key: 'blend_strain', label: 'Blend and Strain', cookingMethod: '', yieldFactorWater: 0.908, yieldFactorFat: 0.49 },
       { key: 'sweeten', label: 'To Sweeten', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_021',
+    name: 'Chai Tea Latte',
+    category: 'beverages',
+    dietaryCategory: 'veggie',
+    levelNum: 463,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 mug (makes 1)',
+    prepTime: '10',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":264.6,"pro":8.0,"fat":8.1,"carb":40.4,"fib":1.1,"h2o":313.5,"sug":37.9,"perServing":{"cal":264.6,"pro":8.0,"fat":8.1,"carb":40.4,"fib":1.1,"h2o":313.5,"sug":37.9,"AddedSugars":25.1,"IntrinsicSugars":12.7},"micros":{"vitaminA":27.2,"vitaminC":0.06,"vitaminD":33.42,"vitaminE":0.06,"vitaminK":0.51,"vitaminB6":0.01,"vitaminB12":0.25,"thiamin":0.02,"riboflavin":0.09,"niacin":0.05,"folate":3.33,"calcium":67.35,"iron":0.08,"magnesium":7.29,"phosphorus":48.11,"potassium":88.69,"sodium":25.28,"zinc":0.23,"copper":0.02,"selenium":2.37,"cholesterol":6.55,"saturatedFat":1.23,"monoFat":0.54,"polyFat":0.11,"omega3":0.0,"omega6":0.0},"gramsPerServing":372.4,"servings":1,"per100g":{"Energy_KCal":71.07,"Water":84.18,"Protein":2.13,"TotalLipidFat":2.17,"Carbohydrate":10.84,"FiberTotalDietary":0.3,"SugarsTotal":10.17,"Cholesterol":6.55,"FattyAcids_totalSaturated":1.23,"FattyAcids_totalMonounsaturated":0.54,"FattyAcids_totalPolyunsaturated":0.11,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":27.2,"Retinol":26.54,"Carotene_beta":4.73,"VitaminD":33.42,"VitaminE_alphaTocopherol":0.06,"VitaminK_phylloquinone":0.51,"VitaminC_totalAscorbicAcid":0.06,"Thiamin":0.02,"Riboflavin":0.09,"Niacin":0.05,"PantothenicAcid":0.18,"VitaminB6":0.01,"Folate_total":3.33,"Folate_food":3.33,"Folate_DFE":3.33,"FolicAcid":0.0,"VitaminB12":0.25,"Choline_total":8.53,"Betaine":0.41,"LuteinZeaxanthin":0.86,"Lycopene":0.06,"Calcium_Ca":67.35,"Iron_Fe":0.08,"Magnesium_Mg":7.29,"Phosphorus_P":48.11,"Potassium_K":88.69,"Sodium_Na":25.28,"Zinc_Zn":0.23,"Copper_Cu":0.02,"Manganese_Mn":0.22,"Selenium_Se":2.37,"Tryptophan":0.03,"Threonine":0.09,"Isoleucine":0.11,"Leucine":0.19,"Lysine":0.17,"Methionine":0.05,"Cystine":0.01,"Phenylalanine":0.11,"Tyrosine":0.1,"Valine":0.13,"Arginine":0.06,"Histidine":0.06,"Alanine":0.07,"AsparticAcid":0.18,"GlutamicAcid":0.46,"Glycine":0.04,"Proline":0.21,"Serine":0.13,"omega3":0.0,"omega6":0.0,"AddedSugars":6.75,"IntrinsicSugars":3.42},"addedSugars":25.1,"intrinsicSugars":12.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14355","name":"Beverages, tea, black, brewed, prepared with tap water","grams":120.0},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":244.0},{"ndb":"19335","name":"Sugars, granulated","grams":25.2},{"ndb":"11216","name":"Ginger root, raw","grams":6.0},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":1.3},{"ndb":"2006","name":"\"Spices, cardamom\"","grams":0.5},{"ndb":"2011","name":"Spices, cloves, ground","grams":0.3},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"2050","name":"Vanilla extract","grams":2.1}],"sections":[{"section_key":"chai","section_label":"Chai Tea","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.92,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":399.66,"raw_water_grams":340.76,"raw_fat_grams":8.07,"raw_protein_grams":7.95,"raw_carb_grams":40.35,"final_grams":372.4}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Chai Tea Latte', quantity: 'custom (g)', foodWord: 'CHAILATTE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'black tea, brewed', quantity: '1/2 cup', section: 'chai', ndbNo: '14355', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'whole milk', quantity: '1 cup', section: 'chai', ndbNo: '1077', portionDesc: 'g', portionGrams: 244.0 },
+      { name: 'sugar', quantity: '2 tbsp', section: 'chai', ndbNo: '19335', portionDesc: 'g', portionGrams: 25.2 },
+      { name: 'fresh ginger', quantity: '1 tbsp ginger root, fresh, grated', section: 'chai', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'ground cinnamon', quantity: '1/2 tsp', section: 'chai', ndbNo: '2010', portionDesc: 'g', portionGrams: 1.3 },
+      { name: 'ground cardamom', quantity: '1/4 tsp', section: 'chai', ndbNo: '2006', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'ground cloves', quantity: '1/8 tsp', section: 'chai', ndbNo: '2011', portionDesc: 'g', portionGrams: 0.263 },
+      { name: 'ground black pepper', quantity: '1/8 tsp', section: 'chai', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'vanilla extract', quantity: '1/2 tsp', section: 'chai', ndbNo: '2050', portionDesc: 'g', portionGrams: 2.1 }
+    ],
+    recipeInstructions: [
+      'Combine milk, brewed tea, sugar, and all spices in a small saucepan over medium heat.',
+      'Bring to a gentle simmer, stirring frequently. Do not allow it to boil.',
+      'Reduce heat to low and simmer for 5 minutes to let the spices infuse.',
+      'Remove from heat and stir in vanilla extract.',
+      'Strain through a fine-mesh sieve into a mug, pressing to extract all liquid. Discard solids.',
+      'Serve hot.',
+      'Suggestions (not included): Sprinkle a pinch of cinnamon on top. For a stronger tea flavor, steep 2 black tea bags in the milk during simmering.'
+    ],
+    sections: [
+      { key: 'chai', label: 'Chai Tea', cookingMethod: '', yieldFactorWater: 0.92 }
+    ],
+  },
+  {
+    id: 'BVRG_022',
+    name: 'Matcha Latte',
+    category: 'beverages',
+    dietaryCategory: 'veggie',
+    levelNum: 464,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 mug (makes 1)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":203.7,"pro":7.7,"fat":7.9,"carb":24.6,"fib":0.0,"h2o":251.1,"sug":25.2,"perServing":{"cal":203.7,"pro":7.7,"fat":7.9,"carb":24.6,"fib":0.0,"h2o":251.1,"sug":25.2,"AddedSugars":12.6,"IntrinsicSugars":12.6},"micros":{"vitaminA":38.22,"vitaminC":0.0,"vitaminD":42.37,"vitaminE":0.06,"vitaminK":0.25,"vitaminB6":0.03,"vitaminB12":0.37,"thiamin":0.03,"riboflavin":0.13,"niacin":0.07,"folate":4.24,"calcium":94.31,"iron":0.03,"magnesium":8.55,"phosphorus":69.85,"potassium":111.44,"sodium":36.29,"zinc":0.31,"copper":0.02,"selenium":3.1,"cholesterol":8.31,"saturatedFat":1.55,"monoFat":0.67,"polyFat":0.16,"omega3":0.0,"omega6":0.0},"gramsPerServing":293.7,"servings":1,"per100g":{"Energy_KCal":69.36,"Water":85.5,"Protein":2.62,"TotalLipidFat":2.7,"Carbohydrate":8.37,"FiberTotalDietary":0.0,"SugarsTotal":8.57,"Cholesterol":8.31,"FattyAcids_totalSaturated":1.55,"FattyAcids_totalMonounsaturated":0.67,"FattyAcids_totalPolyunsaturated":0.16,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":38.22,"Retinol":37.39,"Carotene_beta":5.82,"VitaminD":42.37,"VitaminE_alphaTocopherol":0.06,"VitaminK_phylloquinone":0.25,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.03,"Riboflavin":0.13,"Niacin":0.07,"PantothenicAcid":0.31,"VitaminB6":0.03,"Folate_total":4.24,"Folate_food":4.24,"Folate_DFE":4.24,"FolicAcid":0.0,"VitaminB12":0.37,"Choline_total":11.89,"Betaine":0.5,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":94.31,"Iron_Fe":0.03,"Magnesium_Mg":8.55,"Phosphorus_P":69.85,"Potassium_K":111.44,"Sodium_Na":36.29,"Zinc_Zn":0.31,"Copper_Cu":0.02,"Manganese_Mn":0.01,"Selenium_Se":3.1,"Tryptophan":0.03,"Threonine":0.11,"Isoleucine":0.13,"Leucine":0.24,"Lysine":0.22,"Methionine":0.07,"Cystine":0.01,"Phenylalanine":0.13,"Tyrosine":0.12,"Valine":0.17,"Arginine":0.07,"Histidine":0.07,"Alanine":0.08,"AsparticAcid":0.22,"GlutamicAcid":0.58,"Glycine":0.05,"Proline":0.26,"Serine":0.16,"omega3":0.0,"omega6":0.0,"AddedSugars":4.28,"IntrinsicSugars":4.29},"addedSugars":12.6,"intrinsicSugars":12.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14355","name":"Beverages, tea, black, brewed, prepared with tap water","grams":5.0},{"ndb":"14411","name":"Water, tap, drinking","grams":30.0},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":244.0},{"ndb":"19335","name":"Sugars, granulated","grams":12.6},{"ndb":"2050","name":"Vanilla extract","grams":2.1}],"sections":[{"section_key":"matcha","section_label":"Matcha Latte","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":293.7,"raw_water_grams":251.1,"raw_fat_grams":7.93,"raw_protein_grams":7.69,"raw_carb_grams":24.59,"final_grams":293.7}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Matcha Latte', quantity: 'custom (g)', foodWord: 'MATCHALATTE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'matcha powder', quantity: '2 tsp', section: 'matcha', ndbNo: '14355', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'water', quantity: '2 tbsp', section: 'matcha', ndbNo: '14411', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'whole milk', quantity: '1 cup', section: 'matcha', ndbNo: '1077', portionDesc: 'g', portionGrams: 244.0 },
+      { name: 'sugar', quantity: '1 tbsp', section: 'matcha', ndbNo: '19335', portionDesc: 'g', portionGrams: 12.6 },
+      { name: 'vanilla extract', quantity: '1/2 tsp', section: 'matcha', ndbNo: '2050', portionDesc: 'g', portionGrams: 2.1 }
+    ],
+    recipeInstructions: [
+      'Add matcha powder to a mug. Pour 2 tbsp of hot water (about 175°F, not boiling) over the powder.',
+      'Whisk vigorously until smooth with no lumps.',
+      'Heat milk in a small saucepan over medium heat until steaming. Stir in sugar and vanilla extract until dissolved.',
+      'Pour warm milk over the matcha and stir gently to combine. Serve immediately.',
+      'Suggestions (not included): For an iced matcha latte, cool the components and pour over ice. Use oat milk for a dairy-free version.'
+    ],
+    sections: [
+      { key: 'matcha', label: 'Matcha Latte', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
+    id: 'BVRG_023',
+    name: 'Spiced Apple Cider',
+    category: 'beverages',
+    dietaryCategory: 'vegan',
+    levelNum: 465,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cup (makes 4)',
+    prepTime: '20',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":123.6,"pro":0.4,"fat":0.4,"carb":30.3,"fib":1.0,"h2o":223.1,"sug":25.2,"perServing":{"cal":123.6,"pro":0.4,"fat":0.4,"carb":30.3,"fib":1.0,"h2o":223.1,"sug":25.2,"AddedSugars":23.9,"IntrinsicSugars":1.3},"micros":{"vitaminA":0.59,"vitaminC":1.95,"vitaminD":0.0,"vitaminE":0.02,"vitaminK":0.15,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.02,"riboflavin":0.01,"niacin":0.06,"folate":1.21,"calcium":9.94,"iron":0.13,"magnesium":4.74,"phosphorus":6.93,"potassium":89.96,"sodium":3.54,"zinc":0.02,"copper":0.01,"selenium":0.11,"cholesterol":0.0,"saturatedFat":0.03,"monoFat":0.01,"polyFat":0.03,"omega3":0.0,"omega6":0.0},"gramsPerServing":254.9,"servings":4,"per100g":{"Energy_KCal":48.48,"Water":87.52,"Protein":0.16,"TotalLipidFat":0.16,"Carbohydrate":11.9,"FiberTotalDietary":0.38,"SugarsTotal":9.87,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.03,"FattyAcids_totalMonounsaturated":0.01,"FattyAcids_totalPolyunsaturated":0.03,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.59,"Retinol":0.0,"Carotene_beta":2.06,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.02,"VitaminK_phylloquinone":0.15,"VitaminC_totalAscorbicAcid":1.95,"Thiamin":0.02,"Riboflavin":0.01,"Niacin":0.06,"PantothenicAcid":0.04,"VitaminB6":0.01,"Folate_total":1.21,"Folate_food":1.21,"Folate_DFE":1.21,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":1.85,"Betaine":0.11,"LuteinZeaxanthin":17.26,"Lycopene":0.03,"Calcium_Ca":9.94,"Iron_Fe":0.13,"Magnesium_Mg":4.74,"Phosphorus_P":6.93,"Potassium_K":89.96,"Sodium_Na":3.54,"Zinc_Zn":0.02,"Copper_Cu":0.01,"Manganese_Mn":0.14,"Selenium_Se":0.11,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.01,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":9.36,"IntrinsicSugars":0.51},"addedSugars":23.9,"intrinsicSugars":1.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"9016","name":"Apple juice, canned or bottled, unsweetened, without added ascorbic acid","grams":248.0},{"ndb":"9206","name":"","grams":15.2},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.7},{"ndb":"2011","name":"Spices, cloves, ground","grams":0.1},{"ndb":"2001","name":"Spices, allspice, ground","grams":0.1},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.1}],"sections":[{"section_key":"cider","section_label":"Spiced Apple Cider","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.96,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":1056.9,"raw_water_grams":929.59,"raw_fat_grams":1.66,"raw_protein_grams":1.6,"raw_carb_grams":121.38,"final_grams":1019.72}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Spiced Apple Cider', quantity: 'custom (g)', foodWord: 'SPICEDCIDER', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'apple juice', quantity: '4 cups', section: 'cider', ndbNo: '9016', portionDesc: 'g', portionGrams: 992.0 },
+      { name: 'orange juice', quantity: '1/4 cup', section: 'cider', ndbNo: '9206', portionDesc: 'g', portionGrams: 61.0 },
+      { name: 'ground cinnamon', quantity: '2 tsp', section: 'cider', ndbNo: '2010', portionDesc: 'g', portionGrams: 2.6 },
+      { name: 'ground cloves', quantity: '1/4 tsp', section: 'cider', ndbNo: '2011', portionDesc: 'g', portionGrams: 0.525 },
+      { name: 'allspice', quantity: '1/4 tsp', section: 'cider', ndbNo: '2001', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'ground nutmeg', quantity: '1/8 tsp', section: 'cider', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.275 }
+    ],
+    recipeInstructions: [
+      'Combine apple juice, orange juice, cinnamon, cloves, allspice, and nutmeg in a medium saucepan.',
+      'Bring to a gentle simmer over medium heat, stirring occasionally.',
+      'Reduce heat to low and simmer for 15 minutes to infuse the spices.',
+      'Strain through a fine-mesh sieve into a pitcher or directly into mugs. Serve warm.',
+      'Suggestions (not included): Garnish with a cinnamon stick or orange slice. For a spiked version, stir in 2 oz of bourbon or apple brandy per serving.'
+    ],
+    sections: [
+      { key: 'cider', label: 'Spiced Apple Cider', cookingMethod: '', yieldFactorWater: 0.96 }
+    ],
   }
 ];

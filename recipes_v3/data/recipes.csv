@@ -461,3 +461,6 @@ BVRG_017,AGUAFRESCA,Watermelon Agua Fresca,beverages,vegan,dish,,5,1 glass (~10 
 BVRG_018,VIRGINPINACOLADA,Virgin Piña Colada,beverages,vegan,dish,,5,1 glass (~9 fl oz),1,Rule D,raw,1.0,1.0,1.0,1.0,1.0,approved,,Rule D — no canonical,,PASS,,
 BVRG_019,EGGNOG,Eggnog,beverages,veggie,dish,1057,15,1 cup (makes 3+),3,Rule A,boiled,1.0,1.0,1.0,1.0,1.0,approved,,Rule A — all macros ≤±2%,,PASS,,
 BVRG_020,HORCHATA,Horchata,beverages,vegan,dish,14638,15,1 cup (makes 4+),4,Rule B,raw,1.0,1.0,1.0,1.0,1.0,approved,,Rule B — Fi unscored (canonical=0; straining model),,PASS,,
+BVRG_021,CHAILATTE,Chai Tea Latte,beverages,veggie,dish,,10,1 mug (makes 1),1,Rule D,boiled,1.0,1.0,1.0,1.0,1.0,approved,,Rule D — no canonical for chai tea latte,,PASS,,
+BVRG_022,MATCHALATTE,Matcha Latte,beverages,veggie,dish,,5,1 mug (makes 1),1,Rule D,raw,1.0,1.0,1.0,1.0,1.0,approved,,Rule D — no SR Legacy NDB for matcha; tea_black_brewed proxy at 5g,,PASS,,
+BVRG_023,SPICEDCIDER,Spiced Apple Cider,beverages,vegan,dish,,20,1 cup (makes 4),4,Rule D,boiled,1.0,1.0,1.0,1.0,1.0,approved,,Rule D — spiced cider variant; apple_juice NDB 9016 as base ingredient,,PASS,,

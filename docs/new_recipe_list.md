@@ -72,12 +72,12 @@ Arnold Palmer
 - ✅ Eggnog (BVRG_019)
 - ✅ Horchata (BVRG_020)
 
-### Cluster 10 — Tea / Spice (Hot)
+### Cluster 10 — Tea / Spice (Hot) ✅
 *New ledger entry: `apple_juice` NDB 9016 (proxy for unfermented cider); matcha has no SR Legacy NDB — Rule D*
 
-Chai Tea Latte
-Matcha Latte
-Spiced Apple Cider
+- ✅ Chai Tea Latte (BVRG_021)
+- ✅ Matcha Latte (BVRG_022)
+- ✅ Spiced Apple Cider (BVRG_023)
 
 ---
 
