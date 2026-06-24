@@ -8,6 +8,7 @@ export const RECIPE_CATEGORY_OPTIONS = [
   { id: 'sides', label: 'Sides' },
   { id: 'sweets-desserts', label: 'Sweets & Desserts' },
   { id: 'beverages', label: 'Beverages' },
+  { id: 'cocktails', label: 'Cocktails' },
   { id: 'sauces-condiments', label: 'Sauces & Condiments' }
 ] as const;
 
@@ -23,6 +24,9 @@ const CATEGORY_ID_BY_INPUT = Object.fromEntries(
   [
     ...RECIPE_CATEGORY_OPTIONS.map((option) => [option.id, option.id]),
     ...RECIPE_CATEGORY_OPTIONS.map((option) => [option.label.toLowerCase(), option.id]),
+    ['cocktail', 'cocktails'],
+    ['alcoholic-beverages', 'cocktails'],
+    ['alcoholic beverages', 'cocktails'],
     ['desserts', 'sweets-desserts'],
     ['sweets & desserts', 'sweets-desserts'],
     ['breakfast & brunch', 'breakfast'],

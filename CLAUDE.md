@@ -189,7 +189,7 @@ python recipes_v3/tools/insert_new.py --recipe-id BKFST_XXX --commit  # write
 
 **Before running `--commit`, verify the `_CATEGORY_MAP` covers the recipe's `category` value** (the column in `recipes.csv`). The map is near the top of `insert_new.py`. If the value is not in the map, it silently falls back to `"entrees-main-courses"`. Valid stored category IDs are defined in `src/lib/farmers-basket/recipe-categories.ts`.
 
-Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soups & stews`, `soups-stews`, `salads`, `pasta & pizza`, `pasta-pizza`, `entrees & main courses`, `entrees-main-courses`, `sides`, `sweets & desserts`, `sweets-desserts`, `beverages`, `sauces & condiments`, `sauces-condiments`, `sandwiches & burgers`, `sandwiches-burgers`. (**`pasta & pizza` and `sandwiches & burgers` were added during SAND_001 build — May 2026.**)
+Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soups & stews`, `soups-stews`, `salads`, `pasta & pizza`, `pasta-pizza`, `entrees & main courses`, `entrees-main-courses`, `sides`, `sweets & desserts`, `sweets-desserts`, `beverages`, `cocktails`, `cocktail`, `alcoholic-beverages`, `sauces & condiments`, `sauces-condiments`, `sandwiches & burgers`, `sandwiches-burgers`. (**`pasta & pizza` and `sandwiches & burgers` were added during SAND_001 build — May 2026. `cocktails` added June 2026 for alcoholic beverage recipes.**)
 
 **Component-ref child recipe must have `status='approved'` in `recipes.csv`** — otherwise `validate_ledger.py` raises `component-ref @RECIPE_ID status='' (must be 'approved')`. Set `status='approved'` and `audit_status='PASS'` on the child recipe before running the composite build. (Found during SAUCE_002 build — June 2026.)
 
