@@ -57236,6 +57236,39 @@ export const FOODS: Food[] = [
         "gm": 60.0
       }
     ]
+  },
+  {
+    "word": "VODKA",
+    "display": "Vodka",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14037",
+    "desc": "Alcoholic beverage, distilled, all (gin, rum, vodka, whiskey) 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.0
+      },
+      {
+        "amt": 1.5,
+        "desc": "fl oz",
+        "gm": 45.0
+      }
+    ]
   }
 ];
 

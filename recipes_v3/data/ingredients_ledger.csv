@@ -508,3 +508,12 @@ raspberry_liqueur,14724,CHAMBORD,"Chambord, black raspberry liqueur",Raspberry L
 espadin_mezcal,14742,MEZCAL,"Mezcal, Espadin",Espadin Mezcal,ml,1,alias
 palo_cortado,14772,AMONTILLADO,"Sherry, Palo Cortado, dry",Palo Cortado Sherry,ml,1,alias
 martinique_molasses_rhum,14748,DARKRUM,"Rum, Martinique molasses",Martinique Molasses Rhum,ml,1,alias
+vodka,14037,VODKA,"Alcoholic beverage, distilled, all (gin, rum, vodka, whiskey) 80 proof",Vodka,ml,1,
+smirnoff_vodka,14037,VODKA,"Alcoholic beverage, distilled, all (gin, rum, vodka, whiskey) 80 proof",Smirnoff Vodka,ml,1,alias
+red_wine,14096,WINERED,"Alcoholic beverage, wine, table, red",Red Wine,ml,1,alias
+port_wine,14057,WINEDESSERTSWEET,"Alcoholic beverage, wine, dessert, sweet",Red Tawny Port Wine,ml,1,alias
+creme_de_cacao_brown,14715,CREMEDECACAO,"Alcoholic beverage, liqueur, creme de cacao, 50 proof",Crème de Cacao (Brown),ml,1,alias
+maraschino,14702,MARASCHINOLIQUER,"Alcoholic beverage, liqueur, maraschino cherry, 64 proof",Maraschino Liqueur,ml,1,alias
+creme_de_mure,14713,BLACKBERRYLIQUEUR,"Alcoholic beverage, liqueur, blackberry, creme de mure, 36 proof",Crème de Mûre,ml,1,alias
+orgeat_syrup,14718,ORGEAT,"Beverage, syrup, orgeat, almond, non-alcoholic",Orgeat Syrup,ml,1,alias
+passion_fruit_liqueur,14730,PASSOA,"Alcoholic beverage, liqueur, passoa, passion fruit, 34 proof",Passion Fruit Liqueur,ml,1,alias
