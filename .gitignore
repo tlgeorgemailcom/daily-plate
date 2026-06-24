@@ -37,3 +37,9 @@ dev_recipes.db-wal
 *.bak
 *.bak2
 NOT SET
+
+# libsql Turso sync temp files
+comboo_*.db
+comboo_*.db-info
+comboo_*.db-shm
+comboo_*.db-wal

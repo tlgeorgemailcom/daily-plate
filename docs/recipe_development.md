@@ -200,6 +200,25 @@ Never use a pre-cooked NDB in a `raw` section. Use the raw NDB and set `cook_met
 
 Do NOT add an explicit `water` row to a section containing an absorber NDB (e.g. rice, dry pasta, dry beans). The absorption model provides the water automatically. Adding a water row inflates `raw_water` and silently undercooks the macro profile.
 
+**Exception — blend-and-strain / cold-infusion techniques (see 4c-1):** These processes are the one valid reason to have both a water row AND an absorber NDB in the same section, because the water is the carrier liquid, not the cooking medium. The fix is to use `cook_method='raw'` for that section (see below).
+
+### 4c-1 — Blend-and-strain / cold-infusion: always use `cook_method='raw'`
+
+When an absorber NDB (rice, oats, nuts) is soaked in water, blended, and then **strained** — rather than cooked to absorption — the pipeline's absorption model must not fire. The absorption model fires whenever `cook_method in ('boiled', 'simmered')` and the section contains an absorber NDB; it computes the cooked-water fraction for the grain and **silently overrides** any manual `yield_factor_water` set in `recipe_sections.csv`.
+
+**Rule:** For any blend-and-strain or cold-infusion section (horchata, oat milk, nut milk, cold-brew concentrate), set `cook_method='raw'` on that section. The manual `yield_factor_water` from `recipe_sections.csv` then applies via the `elif s.yield_factor_water is not None` branch — priority #2 in `build.py` — and models the fraction of liquid that passes through the strainer.
+
+| Technique | `cook_method` | Absorption model fires? | Manual `yfw` respected? |
+|---|---|---|---|
+| Rice / pasta / beans cooked to absorption | `boiled` | ✅ yes (correct) | ❌ overridden |
+| Blend-and-strain (horchata, nut milk) | `raw` | ❌ no (correct) | ✅ yes |
+| Cold infusion strained (cold-brew, tisane) | `raw` | ❌ no (correct) | ✅ yes |
+
+**Calibration approach for a strained section:**  
+Set `yfw` to the fraction of raw water that passes through the strainer into the final liquid (typically 0.85–0.95 for fine-mesh straining). Set `yfp`/`yff`/`yfc` to the fraction of each macro that dissolves or emulsifies into the liquid vs. remains in the discarded solids. Put the sugar/sweetener and any post-strain additions in a separate `raw` section with all yield factors = 1.0, so `yfc` for the blend section does not reduce the added sugar.
+
+**Discovered:** BVRG_020 Horchata (2026-06-24). `cook_method='boiled'` + rice NDB 20044 drove auto-yfw to 0.253 (absorption model), producing only 375g cooked from 1163g raw. Changing blend_strain section to `cook_method='raw'` restored manual yfw=0.908 and gave the correct 1004g cooked, matching canonical NDB 14638 within 0.1% on all scored macros.
+
 ### 4d — Section row ordering
 
 All rows for a given `section` key must be **contiguous** — no interleaving of sections. The renderer opens a new header each time a section key is first seen; a second appearance opens a second duplicate header.
