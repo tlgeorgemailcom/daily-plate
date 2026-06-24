@@ -55607,6 +55607,138 @@ export const FOODS: Food[] = [
         "gm": 30.8
       }
     ]
+  },
+  {
+    "word": "SPARKLINGWINE",
+    "display": "Sparkling Wine",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14733",
+    "desc": "Alcoholic beverage, wine, sparkling, brut (champagne, prosecco)",
+    "cal": 73.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 1.5,
+    "fib": 0.0,
+    "h2o": 88.9,
+    "sug": 0.9,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.4
+      },
+      {
+        "amt": 1.0,
+        "desc": "glass (5 fl oz)",
+        "gm": 147.0
+      }
+    ]
+  },
+  {
+    "word": "GINGERBEER",
+    "display": "Ginger Beer",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14734",
+    "desc": "Beverages, carbonated, ginger beer, non-alcoholic",
+    "cal": 41.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 9.8,
+    "fib": 0.0,
+    "h2o": 90.2,
+    "sug": 9.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.8
+      },
+      {
+        "amt": 1.0,
+        "desc": "can (12 fl oz)",
+        "gm": 370.0
+      }
+    ]
+  },
+  {
+    "word": "TONICWATER",
+    "display": "Tonic Water",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14155",
+    "desc": "Beverages, Carbonated beverage, tonic water",
+    "cal": 34.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 8.8,
+    "fib": 0.0,
+    "h2o": 91.1,
+    "sug": 8.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.2
+      },
+      {
+        "amt": 1.0,
+        "desc": "can (12 fl oz)",
+        "gm": 362.0
+      }
+    ]
+  },
+  {
+    "word": "TOMATOJUICE",
+    "display": "Tomato Juice",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "11540",
+    "desc": "Tomato juice, canned, with salt added",
+    "cal": 17.0,
+    "pro": 0.76,
+    "fat": 0.05,
+    "carb": 3.53,
+    "fib": 0.4,
+    "h2o": 94.24,
+    "sug": 2.58,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.2
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 243.0
+      }
+    ]
   }
 ];
 

@@ -1630,3 +1630,7 @@ ORANGECURACAO,Orange Curaçao,beverage,,,,,14729,"Alcoholic beverage, liqueur, o
 PASSOA,Passoa,beverage,,,,,14730,"Alcoholic beverage, liqueur, passoa, passion fruit, 34 proof",221.0,0.0,0.0,33.11,0.0,53.74,33.11,,,,1.0,fl oz,31.3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 PIMMSNO1,Pimm's No. 1,beverage,,,,,14731,"Alcoholic beverage, liqueur, pimm's no. 1, 50 proof",186.1,0.0,0.0,12.0,0.0,67.77,12.0,,,,1.0,fl oz,29.6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 YELLOWCHARTREUSE,Yellow Chartreuse,beverage,,,,,14732,"Alcoholic beverage, liqueur, chartreuse, yellow, 80 proof",320.1,0.0,0.0,26.92,0.0,42.23,26.92,,,,1.0,fl oz,30.8,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SPARKLINGWINE,Sparkling Wine,beverage,,,,,14733,"Alcoholic beverage, wine, sparkling, brut (champagne, prosecco)",73.0,0.0,0.0,1.5,0.0,88.9,0.9,1.0,custom (g),100.0,1.0,fl oz,29.4,1.0,glass (5 fl oz),147.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+GINGERBEER,Ginger Beer,beverage,,,,,14734,"Beverages, carbonated, ginger beer, non-alcoholic",41.0,0.0,0.0,9.8,0.0,90.2,9.8,1.0,custom (g),100.0,1.0,fl oz,30.8,1.0,can (12 fl oz),370.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+TONICWATER,Tonic Water,beverage,,,,,14155,"Beverages, Carbonated beverage, tonic water",34.0,0.0,0.0,8.8,0.0,91.1,8.8,1.0,custom (g),100.0,1.0,fl oz,30.2,1.0,can (12 fl oz),362.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+TOMATOJUICE,Tomato Juice,beverage,,,,,11540,"Tomato juice, canned, with salt added",17.0,0.76,0.05,3.53,0.4,94.24,2.58,1.0,custom (g),100.0,1.0,fl oz,30.2,1.0,cup,243.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
