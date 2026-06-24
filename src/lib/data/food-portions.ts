@@ -56616,6 +56616,237 @@ export const FOODS: Food[] = [
         "gm": 40.5
       }
     ]
+  },
+  {
+    "word": "GOLDJAMAICANRUM",
+    "display": "Gold Jamaican Rum",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14764",
+    "desc": "Alcoholic beverage, rum, gold, Jamaican, 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
+      }
+    ]
+  },
+  {
+    "word": "AMBERRUM",
+    "display": "Amber Rum",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14765",
+    "desc": "Alcoholic beverage, rum, amber, Jamaican, 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
+      }
+    ]
+  },
+  {
+    "word": "RONPROFUNDO",
+    "display": "Havana Club Profundo",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14766",
+    "desc": "Alcoholic beverage, rum, Havana Club Profundo, ron oscuro, 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
+      }
+    ]
+  },
+  {
+    "word": "RONSMOKY",
+    "display": "Havana Club Smoky",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14767",
+    "desc": "Alcoholic beverage, rum, Havana Club Smoky, ron ahumado, 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
+      }
+    ]
+  },
+  {
+    "word": "LAGAVULIN",
+    "display": "Lagavulin Single Malt Scotch",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14768",
+    "desc": "Alcoholic beverage, whisky, Scotch, single malt, Lagavulin, 86 proof",
+    "cal": 250.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 64.1,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
+      }
+    ]
+  },
+  {
+    "word": "RHUMAGRICOLE",
+    "display": "Rhum Agricole Blanc",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14769",
+    "desc": "Alcoholic beverage, rhum agricole, blanc, Martinique, 100 proof",
+    "cal": 295.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 57.5,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
+      }
+    ]
+  },
+  {
+    "word": "OVERPROOFJAMAICANRUM",
+    "display": "Overproof Jamaican Rum",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14770",
+    "desc": "Alcoholic beverage, rum, overproof, Jamaican, 126 proof",
+    "cal": 347.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 50.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
+      }
+    ]
   }
 ];
 
