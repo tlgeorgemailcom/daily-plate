@@ -56913,6 +56913,230 @@ export const FOODS: Food[] = [
         "gm": 40.5
       }
     ]
+  },
+  {
+    "word": "DEMERARA",
+    "display": "Demerara Syrup",
+    "groups": [],
+    "ndb": "14773",
+    "desc": "Syrup, demerara sugar, cocktail mixer",
+    "cal": 273.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 73.0,
+    "fib": 0.0,
+    "h2o": 27.0,
+    "sug": 73.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 15.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 45.0
+      }
+    ]
+  },
+  {
+    "word": "ELDERFLOWERCORDIAL",
+    "display": "Elderflower Cordial",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14774",
+    "desc": "Cordial, elderflower, non-alcoholic, undiluted",
+    "cal": 215.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 53.0,
+    "fib": 0.0,
+    "h2o": 45.0,
+    "sug": 53.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 15.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 45.0
+      }
+    ]
+  },
+  {
+    "word": "CHAMOMILECORDIAL",
+    "display": "Chamomile Cordial",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14775",
+    "desc": "Cordial, chamomile, non-alcoholic, botanical",
+    "cal": 152.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 38.0,
+    "fib": 0.0,
+    "h2o": 62.0,
+    "sug": 38.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 15.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 45.0
+      }
+    ]
+  },
+  {
+    "word": "WHITEPEACHPUREE",
+    "display": "White Peach Puree",
+    "groups": [
+      "fruit"
+    ],
+    "ndb": "14776",
+    "desc": "Puree, white peach, unsweetened",
+    "cal": 45.0,
+    "pro": 0.5,
+    "fat": 0.0,
+    "carb": 9.0,
+    "fib": 1.25,
+    "h2o": 90.0,
+    "sug": 8.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 15.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 240.0
+      }
+    ]
+  },
+  {
+    "word": "ORANGEFLOWERWATER",
+    "display": "Orange Flower Water",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14777",
+    "desc": "Flavoring, orange flower water, orange blossom water",
+    "cal": 0.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 100.0,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 5.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 15.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.0
+      }
+    ]
+  },
+  {
+    "word": "VANILLASUGAR",
+    "display": "Vanilla Sugar",
+    "groups": [],
+    "ndb": "14778",
+    "desc": "Sugar, vanilla, granulated, flavored with vanilla",
+    "cal": 385.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 96.0,
+    "fib": 0.0,
+    "h2o": 3.0,
+    "sug": 96.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 4.2
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 12.6
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 200.0
+      }
+    ]
   }
 ];
 

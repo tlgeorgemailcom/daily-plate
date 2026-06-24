@@ -495,3 +495,9 @@ amontillado_sherry,14772,AMONTILLADO,"Alcoholic beverage, wine, sherry, Amontill
 creme_de_menthe_white,14034,CREMEMENTHE,"Alcoholic beverage, creme de menthe, 72 proof",White Crème de Menthe,fl oz,27.0,"alias to SR Legacy NDB 14034 (72 proof, E=371); white=green same nutrition"
 creme_de_cacao_white,14715,CREMEDECACAO,"Alcoholic beverage, liqueur, creme de cacao, 50 proof",White Crème de Cacao,fl oz,27.0,"alias to NDB 14715 (50 proof, E=286); user label 15-24% ABV within range"
 peach_schnapps,14711,PEACHLIQUEUR,"Alcoholic beverage, liqueur, peach, 40 proof",Peach Schnapps,fl oz,27.0,"alias to NDB 14711 (40 proof, E=235); user label 15-24% ABV within range"
+demerara_syrup,14773,DEMERARA,"Syrup, demerara sugar, cocktail mixer",Demerara Syrup,fl oz,30.0,"label: 41 kcal/tbsp, 11g C/tbsp → 1:1 simple syrup from demerara sugar 2026-06-24"
+elderflower_cordial,14774,ELDERFLOWERCORDIAL,"Cordial, elderflower, non-alcoholic, undiluted",Elderflower Cordial,fl oz,30.0,non-alcoholic undiluted concentrate; user data 17-45 kcal/100ml diluted → undiluted ~215 2026-06-24
+chamomile_cordial,14775,CHAMOMILECORDIAL,"Cordial, chamomile, non-alcoholic, botanical",Chamomile Cordial,fl oz,30.0,label: 30-60 kcal/fl oz midpoint 45 → 152 kcal/100ml; 8-15g C/fl oz midpoint → 38g/100ml 2026-06-24
+white_peach_puree,14776,WHITEPEACHPUREE,"Puree, white peach, unsweetened",White Peach Puree,fl oz,30.0,"label: ~45 kcal/100g, 9g C, 1.25g Fi, 8g Su, 0.5g P, 0g F 2026-06-24"
+orange_flower_water,14777,ORANGEFLOWERWATER,"Flavoring, orange flower water, orange blossom water",Orange Flower Water,tsp,5.0,orange blossom water; used in dashes/tsp; essentially water + trace aromatics 2026-06-24
+vanilla_sugar,14778,VANILLASUGAR,"Sugar, vanilla, granulated, flavored with vanilla",Vanilla Sugar,tsp,4.2,"granulated sugar + vanilla; label: ~385 kcal/100g, 96g C 2026-06-24"
