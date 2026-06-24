@@ -22096,5 +22096,78 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'tropical_smoothie', label: 'Tropical Smoothie', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_014',
+    name: 'Shirley Temple',
+    category: 'beverages',
+    dietaryCategory: 'veggie',
+    levelNum: 456,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 glass (~13 oz)',
+    prepTime: '3',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":201.1,"pro":0.0,"fat":0.0,"carb":51.2,"fib":0.0,"h2o":333.6,"sug":45.6,"perServing":{"cal":201.1,"pro":0.0,"fat":0.0,"carb":51.2,"fib":0.0,"h2o":333.6,"sug":45.6,"AddedSugars":14.0,"IntrinsicSugars":31.6},"micros":{"vitaminA":0.0,"vitaminC":0.0,"vitaminD":0.0,"vitaminE":0.0,"vitaminK":0.0,"vitaminB6":0.0,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.0,"niacin":0.0,"folate":0.0,"calcium":3.23,"iron":0.17,"magnesium":1.23,"phosphorus":0.31,"potassium":3.1,"sodium":8.56,"zinc":0.06,"copper":0.01,"selenium":0.14,"cholesterol":0.0,"saturatedFat":0.0,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":385.0,"servings":1,"per100g":{"Energy_KCal":52.23,"Water":86.65,"Protein":0.0,"TotalLipidFat":0.0,"Carbohydrate":13.29,"FiberTotalDietary":0.0,"SugarsTotal":11.83,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.0,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.0,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.0,"VitaminK_phylloquinone":0.0,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.0,"Riboflavin":0.0,"Niacin":0.0,"PantothenicAcid":0.0,"VitaminB6":0.0,"Folate_total":0.0,"Folate_food":0.0,"Folate_DFE":0.0,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":0.0,"Betaine":0.0,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":3.23,"Iron_Fe":0.17,"Magnesium_Mg":1.23,"Phosphorus_P":0.31,"Potassium_K":3.1,"Sodium_Na":8.56,"Zinc_Zn":0.06,"Copper_Cu":0.01,"Manganese_Mn":0.01,"Selenium_Se":0.14,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":3.63,"IntrinsicSugars":8.21},"addedSugars":14.0,"intrinsicSugars":31.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14136","name":"Beverages, carbonated beverage, ginger ale","grams":355.0},{"ndb":"42040","name":"Syrups, grenadine","grams":30.0}],"sections":[{"section_key":"shirley_temple","section_label":"Shirley Temple","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":385.0,"raw_water_grams":333.59,"raw_fat_grams":0.0,"raw_protein_grams":0.0,"raw_carb_grams":51.17,"final_grams":385.0}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Shirley Temple', quantity: 'custom (g)', foodWord: 'SHIRLEYTEMPLE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'ginger ale', quantity: '12 fl oz ginger ale', section: 'shirley_temple', ndbNo: '14136', portionDesc: 'g', portionGrams: 355.0 },
+      { name: 'grenadine syrup', quantity: '2 tbsp grenadine syrup', section: 'shirley_temple', ndbNo: '42040', portionDesc: 'g', portionGrams: 30.0 }
+    ],
+    recipeInstructions: [
+      'Fill a tall glass with ice.',
+      'Pour in the ginger ale. Add the grenadine by pouring it down the side of the glass or over the back of a spoon so it settles at the bottom for a layered look.',
+      'Stir gently to combine if preferred, or leave layered and let the drinker stir.',
+      'Suggestions (not included): Garnish with a maraschino cherry and an orange slice. For a Shirley Temple Black, substitute the ginger ale with cola.'
+    ],
+    sections: [
+      { key: 'shirley_temple', label: 'Shirley Temple', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
+    id: 'BVRG_015',
+    name: 'Fruit Punch',
+    category: 'beverages',
+    dietaryCategory: 'veggie',
+    levelNum: 457,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 glass (~13 oz)',
+    prepTime: '3',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":244.0,"pro":1.3,"fat":0.5,"carb":59.5,"fib":0.5,"h2o":332.9,"sug":47.2,"perServing":{"cal":244.0,"pro":1.3,"fat":0.5,"carb":59.5,"fib":0.5,"h2o":332.9,"sug":47.2,"AddedSugars":21.8,"IntrinsicSugars":25.4},"micros":{"vitaminA":3.14,"vitaminC":32.37,"vitaminD":0.0,"vitaminE":0.09,"vitaminK":0.45,"vitaminB6":0.04,"vitaminB12":0.0,"thiamin":0.04,"riboflavin":0.02,"niacin":0.2,"folate":15.09,"calcium":8.82,"iron":0.2,"magnesium":7.76,"phosphorus":8.38,"potassium":109.69,"sodium":2.95,"zinc":0.07,"copper":0.04,"selenium":0.16,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.02,"polyFat":0.04,"omega3":0.0,"omega6":0.0},"gramsPerServing":395.5,"servings":1,"per100g":{"Energy_KCal":61.68,"Water":84.18,"Protein":0.33,"TotalLipidFat":0.13,"Carbohydrate":15.04,"FiberTotalDietary":0.13,"SugarsTotal":11.94,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.02,"FattyAcids_totalPolyunsaturated":0.04,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":3.14,"Retinol":0.0,"Carotene_beta":12.89,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.09,"VitaminK_phylloquinone":0.45,"VitaminC_totalAscorbicAcid":32.37,"Thiamin":0.04,"Riboflavin":0.02,"Niacin":0.2,"PantothenicAcid":0.09,"VitaminB6":0.04,"Folate_total":15.09,"Folate_food":15.09,"Folate_DFE":15.09,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":3.34,"Betaine":0.03,"LuteinZeaxanthin":40.21,"Lycopene":0.0,"Calcium_Ca":8.82,"Iron_Fe":0.2,"Magnesium_Mg":7.76,"Phosphorus_P":8.38,"Potassium_K":109.69,"Sodium_Na":2.95,"Zinc_Zn":0.07,"Copper_Cu":0.04,"Manganese_Mn":0.17,"Selenium_Se":0.16,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.01,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.02,"GlutamicAcid":0.01,"Glycine":0.0,"Proline":0.01,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":5.51,"IntrinsicSugars":6.43},"addedSugars":21.8,"intrinsicSugars":25.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"9206","name":"","grams":124.0},{"ndb":"9273","name":"Pineapple juice, canned, unsweetened","grams":125.0},{"ndb":"14242","name":"Cranberry juice cocktail, bottled","grams":126.5},{"ndb":"42040","name":"Syrups, grenadine","grams":20.0}],"sections":[{"section_key":"fruit_punch","section_label":"Fruit Punch","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":395.5,"raw_water_grams":332.94,"raw_fat_grams":0.52,"raw_protein_grams":1.32,"raw_carb_grams":59.47,"final_grams":395.5}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Fruit Punch', quantity: 'custom (g)', foodWord: 'FRUITPUNCH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'orange juice', quantity: '1/2 cup orange juice', section: 'fruit_punch', ndbNo: '9206', portionDesc: 'g', portionGrams: 124.0 },
+      { name: 'pineapple juice', quantity: '1/2 cup pineapple juice', section: 'fruit_punch', ndbNo: '9273', portionDesc: 'g', portionGrams: 125.0 },
+      { name: 'cranberry juice cocktail', quantity: '1/2 cup cranberry juice cocktail', section: 'fruit_punch', ndbNo: '14242', portionDesc: 'g', portionGrams: 126.5 },
+      { name: 'grenadine syrup', quantity: '1 tbsp grenadine syrup', section: 'fruit_punch', ndbNo: '42040', portionDesc: 'g', portionGrams: 20.0 }
+    ],
+    recipeInstructions: [
+      'Combine all ingredients in a pitcher and stir well to combine.',
+      'Taste and adjust with a splash more cranberry juice for tartness or an extra dash of grenadine for sweetness.',
+      'Suggestions (not included): Serve over ice with orange or pineapple slices as garnish. For a sparkling version, replace the orange juice with equal parts orange juice and club soda.'
+    ],
+    sections: [
+      { key: 'fruit_punch', label: 'Fruit Punch', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

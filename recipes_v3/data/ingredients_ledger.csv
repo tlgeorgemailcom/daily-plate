@@ -402,3 +402,6 @@ tea_black_brewed,14355,TEA,"Beverages, tea, black, brewed, prepared with tap wat
 raspberries_raw,9302,RASPBERRIES,"Raspberries, raw",raspberries,cup,123.0,
 kale_raw,11233,KALERAW,"Kale, raw",raw kale,cup,67.0,KALE in food-portions maps to NDB 11234 cooked; using KALERAW to avoid mismatch
 mango_raw,9176,MANGO,"Mangos, raw",mango,cup,165.0,
+ginger_ale,14136,GINGERALE,"Beverages, carbonated beverage, ginger ale",ginger ale,cup,244.0,
+grenadine_syrup,42040,GRENADINE,"Syrups, grenadine",grenadine syrup,tbsp,20.0,
+cranberry_juice_cocktail,14242,CRANBERRYJUICE,"Cranberry juice cocktail, bottled",cranberry juice cocktail,cup,253.0,

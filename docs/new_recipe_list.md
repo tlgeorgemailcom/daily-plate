@@ -22,6 +22,8 @@ Arepas
 - ✅ Strawberry Banana Smoothie (BVRG_011)
 - ✅ Green Smoothie (BVRG_012)
 - ✅ Tropical Smoothie (BVRG_013)
+- ✅ Shirley Temple (BVRG_014)
+- ✅ Fruit Punch (BVRG_015)
 
 ---
 
@@ -43,11 +45,10 @@ Arnold Palmer
 - ✅ Green Smoothie (BVRG_012)
 - ✅ Tropical Smoothie (BVRG_013)
 
-### Cluster 5 — Carbonated / Syrup (Cold)
-*New ledger entries: `ginger_ale` NDB 14136, `grenadine` NDB 42040*
+### ~~Cluster 5 — Carbonated / Syrup (Cold)~~ ✅ Complete
 
-Shirley Temple
-Fruit Punch
+- ✅ Shirley Temple (BVRG_014)
+- ✅ Fruit Punch (BVRG_015)
 
 ### Cluster 6 — Citrus Fizz (Cold)
 *New ledger entry: `club_soda` NDB 14121*

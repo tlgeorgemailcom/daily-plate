@@ -54634,6 +54634,105 @@ export const FOODS: Food[] = [
         "gm": 67.0
       }
     ]
+  },
+  {
+    "word": "GINGERALE",
+    "display": "Ginger Ale",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14136",
+    "desc": "Beverages, carbonated beverage, ginger ale",
+    "cal": 34.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 8.76,
+    "fib": 0.0,
+    "h2o": 91.23,
+    "sug": 8.9,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "can (12 fl oz)",
+        "gm": 355.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 244.0
+      }
+    ]
+  },
+  {
+    "word": "GRENADINE",
+    "display": "Grenadine Syrup",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "42040",
+    "desc": "Syrups, grenadine",
+    "cal": 268.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 66.91,
+    "fib": 0.0,
+    "h2o": 32.4,
+    "sug": 46.55,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 20.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.0
+      }
+    ]
+  },
+  {
+    "word": "CRANBERRYJUICE",
+    "display": "Cranberry Juice Cocktail",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14242",
+    "desc": "Cranberry juice cocktail, bottled",
+    "cal": 54.0,
+    "pro": 0.0,
+    "fat": 0.1,
+    "carb": 13.52,
+    "fib": 0.0,
+    "h2o": 86.17,
+    "sug": 11.87,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 253.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 31.6
+      }
+    ]
   }
 ];
 
