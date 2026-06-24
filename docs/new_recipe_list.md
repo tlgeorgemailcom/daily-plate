@@ -210,3 +210,15 @@ Alcohol Vieux Carre
 Alcohol Vodka Tonic
 Alcohol Whiskey Sour
 Alcohol White Russian
+
+---
+
+### FNDDS Canonical References for Cocktail Recipes
+
+| FC Code | Description | Examples |
+|---|---|---|
+| 93201000 | Liqueur | amaretto, anisette, benedictine, chartreuse, cointreau, creme de menthe, curacao, drambuie, kirsch, kummel, sloe gin, triple sec, schnapps, Jagermeister, cordial |
+| 93201010 | Liqueur, cream | Bailey's Irish Cream, RumChata, horchata liqueur |
+| 93301400 | Alcoholic coffee drink | Coffee Royale, Irish coffee, coffee and liqueur, hard or spiked coffee |
+
+Sources: [FC 93201000](https://fdc.nal.usda.gov/food-details/2710623/nutrients) · [FC 93201010](https://fdc.nal.usda.gov/food-details/2710624/nutrients) · [FC 93301400](https://fdc.nal.usda.gov/food-details/2710681/nutrients)
