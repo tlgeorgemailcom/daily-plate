@@ -25,6 +25,7 @@ Arepas
 - ✅ Shirley Temple (BVRG_014)
 - ✅ Fruit Punch (BVRG_015)
 - ✅ Virgin Mojito (BVRG_016)
+- ✅ Watermelon Agua Fresca (BVRG_017)
 
 ---
 
@@ -55,10 +56,9 @@ Arnold Palmer
 
 - ✅ Virgin Mojito (BVRG_016)
 
-### Cluster 7 — Agua Fresca (Cold)
-*New ledger entry: `watermelon_raw` NDB 9326*
+### ~~Cluster 7 — Agua Fresca (Cold)~~ ✅ Complete
 
-Agua Fresca, Watermelon
+- ✅ Watermelon Agua Fresca (BVRG_017)
 
 ### Cluster 8 — Coconut Drinks (Cold)
 *No new ledger entries (`pineapple_juice_canned` 9273 + `coconut_milk_canned` 12118 already in ledger)*

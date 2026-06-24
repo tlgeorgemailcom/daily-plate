@@ -457,3 +457,4 @@ BVRG_013,TROPICALSMOOTHIE,Tropical Smoothie,beverages,veggie,dish,,5,1 smoothie 
 BVRG_014,SHIRLEYTEMPLE,Shirley Temple,beverages,veggie,dish,,3,1 glass (~13 oz),1,Rule D,raw,1.0,1.0,1.0,1.0,1.0,approved,,Rule D — no canonical,,PASS,,
 BVRG_015,FRUITPUNCH,Fruit Punch,beverages,veggie,dish,,3,1 glass (~13 oz),1,Rule D,raw,1.0,1.0,1.0,1.0,1.0,approved,,Rule D — no canonical,,PASS,,
 BVRG_016,VIRGINMOJITO,Virgin Mojito,beverages,vegan,dish,,5,1 glass (~10 fl oz),1,Rule D,raw,1.0,1.0,1.0,1.0,1.0,approved,,Rule D — no canonical,,PASS,,
+BVRG_017,AGUAFRESCA,Watermelon Agua Fresca,beverages,vegan,dish,,5,1 glass (~10 fl oz),1,Rule D,raw,1.0,1.0,1.0,1.0,1.0,approved,,Rule D — no canonical,,PASS,,

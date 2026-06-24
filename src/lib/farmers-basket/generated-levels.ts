@@ -22208,5 +22208,44 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'virgin_mojito', label: 'Virgin Mojito', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_017',
+    name: 'Watermelon Agua Fresca',
+    category: 'beverages',
+    dietaryCategory: 'vegan',
+    levelNum: 459,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 glass (~10 fl oz)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":65.6,"pro":1.0,"fat":0.2,"carb":16.9,"fib":0.7,"h2o":271.0,"sug":13.9,"perServing":{"cal":65.6,"pro":1.0,"fat":0.2,"carb":16.9,"fib":0.7,"h2o":271.0,"sug":13.9,"AddedSugars":4.2,"IntrinsicSugars":9.7},"micros":{"vitaminA":14.79,"vitaminC":5.8,"vitaminD":0.0,"vitaminE":0.04,"vitaminK":0.08,"vitaminB6":0.02,"vitaminB12":0.0,"thiamin":0.02,"riboflavin":0.01,"niacin":0.1,"folate":2.09,"calcium":5.64,"iron":0.13,"magnesium":6.07,"phosphorus":6.5,"potassium":64.85,"sodium":2.28,"zinc":0.06,"copper":0.03,"selenium":0.22,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.02,"polyFat":0.03,"omega3":0.0,"omega6":0.0},"gramsPerServing":289.7,"servings":1,"per100g":{"Energy_KCal":22.65,"Water":93.55,"Protein":0.34,"TotalLipidFat":0.08,"Carbohydrate":5.85,"FiberTotalDietary":0.23,"SugarsTotal":4.79,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.02,"FattyAcids_totalPolyunsaturated":0.03,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":14.79,"Retinol":0.0,"Carotene_beta":160.53,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.04,"VitaminK_phylloquinone":0.08,"VitaminC_totalAscorbicAcid":5.8,"Thiamin":0.02,"Riboflavin":0.01,"Niacin":0.1,"PantothenicAcid":0.12,"VitaminB6":0.02,"Folate_total":2.09,"Folate_food":2.09,"Folate_DFE":2.09,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":2.42,"Betaine":0.17,"LuteinZeaxanthin":4.2,"Lycopene":2377.85,"Calcium_Ca":5.64,"Iron_Fe":0.13,"Magnesium_Mg":6.07,"Phosphorus_P":6.5,"Potassium_K":64.85,"Sodium_Na":2.28,"Zinc_Zn":0.06,"Copper_Cu":0.03,"Manganese_Mn":0.02,"Selenium_Se":0.22,"Tryptophan":0.0,"Threonine":0.01,"Isoleucine":0.01,"Leucine":0.01,"Lysine":0.03,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.01,"Tyrosine":0.01,"Valine":0.01,"Arginine":0.03,"Histidine":0.0,"Alanine":0.01,"AsparticAcid":0.02,"GlutamicAcid":0.03,"Glycine":0.01,"Proline":0.01,"Serine":0.01,"omega3":0.0,"omega6":0.0,"AddedSugars":1.45,"IntrinsicSugars":3.34},"addedSugars":4.2,"intrinsicSugars":9.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"9326","name":"Watermelon, raw","grams":152.0},{"ndb":"14411","name":"Water, tap, drinking","grams":118.5},{"ndb":"9160","name":"Lime juice, raw","grams":15.0},{"ndb":"19335","name":"Sugars, granulated","grams":4.2}],"sections":[{"section_key":"agua_fresca","section_label":"Watermelon Agua Fresca","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":289.7,"raw_water_grams":271.0,"raw_fat_grams":0.24,"raw_protein_grams":0.99,"raw_carb_grams":16.94,"final_grams":289.7}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Watermelon Agua Fresca', quantity: 'custom (g)', foodWord: 'AGUAFRESCA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'watermelon', quantity: '1 cup diced watermelon', section: 'agua_fresca', ndbNo: '9326', portionDesc: 'g', portionGrams: 152.0 },
+      { name: 'water', quantity: '1/2 cup', section: 'agua_fresca', ndbNo: '14411', portionDesc: 'g', portionGrams: 118.5 },
+      { name: 'lime juice', quantity: '1 tbsp lime juice', section: 'agua_fresca', ndbNo: '9160', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'sugar', quantity: '1 tsp', section: 'agua_fresca', ndbNo: '19335', portionDesc: 'g', portionGrams: 4.2 }
+    ],
+    recipeInstructions: [
+      'Blend watermelon until smooth, about 30 seconds. Strain through a fine-mesh sieve if desired for a smoother texture.',
+      'Add water, lime juice, and sugar. Stir well to dissolve sugar.',
+      'Taste and adjust lime juice or sugar as needed.',
+      'Serve over ice.',
+      'Suggestions (not included): Garnish with a watermelon wedge or fresh mint sprig. For a sparkling version, substitute club soda for the water.'
+    ],
+    sections: [
+      { key: 'agua_fresca', label: 'Watermelon Agua Fresca', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
