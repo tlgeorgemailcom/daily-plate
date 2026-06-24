@@ -1,72 +1,83 @@
-Sandwiches & Burgers
+# Remaining Recipes
 
-✅ Beef Shawarma
-✅ Buffalo Chicken Wraps
-✅ Chicken Caesar Wrap
-✅ Fish Wrap
-✅ Lamb Burger
-✅ Mediterranean Wraps
-✅ Bacon Cheeseburger Bites
-✅ Pinwheel Sandwiches
-✅ Shrimp Salad Rolls
-✅ Tomato Sandwich
-✅ Tofu Burritos
+## Sandwiches & Burgers
+
 Arepas
-✅ Empanadas
-✅ Gorditas
 
-Pasta & Pizza
+---
 
-✅ Baked Ziti
-✅ Garlic Bread Pizza
-✅ Pizza, thick crust
-✅ Pizza, thin crust
-✅ Garlic Butter Shrimp Pasta
-✅ Chicken Pesto Pasta
-✅ Lemon Pasta
-✅ Pasta Primavera
-✅ Pasta al Pesto
-✅ Ravioli
-✅ Spaghetti & Meatballs
-✅ Spaghetti Bolognese
-✅ Cacio e Pepe
-✅ Carbonara
-✅ Fettuccine Alfredo
-✅ Penne alla Vodka
+## Beverages
 
+### Completed
+- ✅ Chocolate Milkshake (BVRG_002)
+- ✅ Strawberry Milkshake (BVRG_003)
+- ✅ Vanilla Milkshake (BVRG_001)
 
-Beverages
+---
 
-Non-Alcoholic — Hot
+### Cluster 1 — Coffee Drinks (Hot)
+*New ledger entries: `coffee_brewed` NDB 14209, `espresso` NDB 14210*
+
 Café au Lait
 Café Mocha
 Cappuccino
-Chai Tea Latte
 
+### Cluster 2 — Citrus Water Drinks (Cold)
+*No new ledger entries*
+
+Ginger Lemonade
+Strawberry Lemonade
+
+### Cluster 3 — Arnold Palmer (Cold)
+*New ledger entry: `tea_black_brewed` NDB 14544 (also used by Chai Latte)*
+
+Arnold Palmer
+
+### Cluster 4 — Smoothies (Cold)
+*New ledger entries: `raspberries_raw` NDB 9302, `kale_raw` NDB 11233*
+
+Berry Smoothie
+Strawberry Banana Smoothie
+Green Smoothie
+Tropical Smoothie
+
+### Cluster 5 — Carbonated / Syrup (Cold)
+*New ledger entries: `ginger_ale` NDB 14136, `grenadine` NDB 42040*
+
+Shirley Temple
+Fruit Punch
+
+### Cluster 6 — Citrus Fizz (Cold)
+*New ledger entry: `club_soda` NDB 14121*
+
+Virgin Mojito
+
+### Cluster 7 — Agua Fresca (Cold)
+*New ledger entry: `watermelon_raw` NDB 9326*
+
+Agua Fresca, Watermelon
+
+### Cluster 8 — Coconut Drinks (Cold)
+*No new ledger entries (`pineapple_juice_canned` 9273 + `coconut_milk_canned` 12118 already in ledger)*
+
+Virgin Piña Colada
+
+### Cluster 9 — Calibration Targets (Cold)
+*No new ledger entries — both have SR Legacy canonicals*
+
+Eggnog              ← canonical NDB 1057 (Rule A/B/C target)
+Horchata            ← canonical NDB 14638 (Rule A/B/C target)
+
+### Cluster 10 — Tea / Spice (Hot)
+*New ledger entry: `apple_juice` NDB 9016 (proxy for unfermented cider); matcha has no SR Legacy NDB — Rule D*
+
+Chai Tea Latte
 Matcha Latte
 Spiced Apple Cider
 
-Non-Alcoholic — Cold
+---
 
-Agua Fresca, Watermelon
-Arnold Palmer
-Berry Smoothie
-Chocolate Milkshake
-Eggnog
-Fruit Punch
-Ginger Lemonade
-Green Smoothie
-Horchata
-Shirley Temple
-Strawberry Banana Smoothie
-Strawberry Lemonade
-Strawberry Milkshake
-Tropical Smoothie
-Vanilla Milkshake
-Virgin Mojito
-Virgin Piña Colada
-
-Alcoholic
+### Alcoholic
 Alcohol Alexander
 Alcohol Americano
 Alcohol Angel Face
@@ -195,194 +206,3 @@ Alcohol Vieux Carre
 Alcohol Vodka Tonic
 Alcohol Whiskey Sour
 Alcohol White Russian
-
-
-Entrees & Main Courses
-✅ Beef Asian Noodles
-✅ Beef and Broccoli
-✅ Beef Bolognese
-✅ Beef Bourguignon
-✅ Beef Birria
-✅ Beef Carbonnade
-✅ Beef Carne Asada
-✅ Beef Carne Guisada
-✅ Beef Corned Beef & Cabbage
-✅ Beef Cottage Pie
-✅ Beef Churrasco
-✅ Beef Curry
-✅ Beef Ropa Vieja
-✅ Beef Steak Diane
-✅ Beef Enchiladas
-✅ Beef Goulash
-✅ Beef Fajitas
-✅ Beef Hamburger Steak
-✅ Beef Flank Steak with Marinade
-✅ Beef Italian Meatballs
-✅ Beef Lasagna
-✅ Beef Lo Mein
-✅ Beef London Broil
-✅ Beef Kabobs
-✅ Beef Korean Beef
-✅ Beef Meatloaf
-✅ Beef Mongolian Beef
-✅ Beef Osso Buco
-✅ Beef Pepper Steak
-✅ Beef Picadillo
-✅ Beef Pot Pie
-✅ Beef Pot Roast
-✅ Beef Ragu
-✅ Beef Back Ribs
-✅ Beef Salisbury Steak
-✅ Beef Short Ribs
-✅ Beef Skirt Steak with Marinade
-✅ Beef Stroganoff
-✅ Beef Tenderloin
-✅ Beef Teriyaki
-✅ Beef Wellington
-✅ Beef Stir Fry
-✅ Beef Soft Tacos
-
-✅ Chicken & Broccoli
-✅ Chicken Cacciatore
-✅ Chicken Curries
-✅ Chicken Enchiladas
-✅ Chicken Florentine
-✅ Chicken Fried Rice
-✅ Chicken General Tso
-✅ Chicken Moo Goo Gai Pan
-✅ Chicken Piccata
-✅ Chicken Pot Pie
-✅ Chicken Kabobs
-✅ Chicken King Ranch
-✅ Chicken Marsala
-✅ Chicken Masala
-✅ Chicken Peanut Protein Bowls
-✅ Chicken Sesame
-✅ Chicken Tenders
-✅ Chicken & Waffles
-✅ Chicken Adobo
-✅ Chicken Korma
-✅ Chicken Saltimbocca
-✅ Chicken Scampi
-✅ Chicken Tetrazzini
-✅ Chicken Tikka Masala
-✅ Chicken Marry Me
-
-✅ Lamb Kabobs
-✅ Lamb Kofta
-✅ Lamb Greek Souvlaki
-✅ Lamb Shepherd's Pie
-✅ Lamb Rogan Josh
-✅ Lamb Tagine
-✅ Lamb Moussaka
-✅ Lamb Shanks
-✅ Lamb Chops
-✅ Rack of Lamb
-✅ Leg of Lamb
-✅ Lamb Biryani
-
-✅ Pork Carnitas
-✅ Pork Char Siu
-✅ Pork Chop
-✅ Pork Crown Roast
-✅ Pork Egg Roll
-✅ Pork Egg Roll Bowls
-✅ Pork Milanese
-✅ Pork Baby Back Ribs
-✅ Pork Spareribs
-✅ Pork Country-Style Ribs
-✅ Pork Schnitzel
-✅ Pork Tenderloin Stuffed
-✅ Pork Shoulder
-✅ Pork Fried Rice
-✅ Pork & Beef Swedish Meatballs
-
-✅ Seafood Crab Cakes
-✅ Seafood Crab Stuffed Avocados
-✅ Seafood Cornmeal Fried Shrimp
-✅ Seafood Fried Shrimp
-✅ Seafood California Roll
-✅ Seafood Philadelphia Roll (sushi-style)
-✅ Seafood Salmon Poke Bowl
-✅ Seafood Salmon Quinoa Bowls
-✅ Seafood Scallops
-✅ Seafood Shrimp & Grits
-✅ Seafood Shrimp Kabobs
-✅ Seafood Sole Meunière
-✅ Seafood Tuna Poke Bowl
-✅ Seafood Cioppino
-✅ Seafood Fish and Chips
-✅ Seafood Paella
-✅ Seafood Shrimp Scampi
-
-✅ Vegetarian Bowl
-✅ Vegetarian Cheese Enchiladas
-✅ Vegetarian Cheese Lasagna
-✅ Vegetarian Egg Rolls
-✅ Vegetarian Egg Roll Bowls
-✅ Vegetarian Stuffed Peppers
-✅ Vegetarian Sesame Tofu & Broccoli
-✅ Vegetarian Stuffed Poblano Peppers
-✅ Vegetarian Stuffed Zucchini Boats
-✅ Vegetarian Tofu Nuggets
-✅ Vegetarian Tofu Stir-Fry
-✅ Vegetarian Chana Masala
-✅ Vegetarian Dal
-✅ Vegetarian Shakshuka
-
-
-Sides
-✅ Deviled Eggs
-✅ Braised Collard Greens
-✅ Creamed Corn
-✅ Creamed Spinach
-✅ French Fries
-✅ Glazed Carrots
-✅ Green Bean Casserole
-✅ Onion Rings
-✅ Rice Pilaf
-✅ Risotto
-✅ Roasted Asparagus
-✅ Roasted Brussels Sprouts
-✅ Stuffed Mushrooms
-✅ Succotash
-
-Soups & Stews
-✅ Asparagus Soup
-✅ Beef Pho
-✅ Beef Stew
-✅ Broccoli Cheddar Soup
-✅ Egg Drop Soup
-✅ Hot & Sour
-✅ Tortilla Soup
-✅ Vegetarian Chili
-✅ Chicken Gumbo
-✅ Chicken Noodle Soup
-✅ Chili no Beans
-✅ Chile with Beans
-✅ Chile Vegetarian
-✅ Seafood Gumbo
-✅ Black Bean Soup
-✅ New England Clam Chowder
-✅ Red Clam Chowder
-✅ French Onion Soup
-✅ Lentil Soup
-✅ Lobster Bisque
-✅ Minestrone
-✅ Pozole
-✅ Tomato Soup
-
-Breakfast
-✅ Bagel & Cream Cheese
-✅ Bagel & Lox
-✅ Denver Scrambler
-✅ Migas without Tortillas
-✅ Migas with Tortillas
-✅ Yogurt Parfait
-✅ Belgian Waffle
-✅ Huevos Rancheros
-✅ Breakfast Strata
-✅ Crepes
-✅ Dutch Baby
-✅ Overnight Oats
-✅ Granola
