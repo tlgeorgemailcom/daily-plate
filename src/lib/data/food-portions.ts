@@ -54733,6 +54733,880 @@ export const FOODS: Food[] = [
         "gm": 31.6
       }
     ]
+  },
+  {
+    "word": "GIN",
+    "display": "Gin",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14049",
+    "desc": "Alcoholic beverage, distilled, gin, 90 proof",
+    "cal": 263.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 62.1,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.8
+      }
+    ]
+  },
+  {
+    "word": "RUM",
+    "display": "Rum",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14050",
+    "desc": "Alcoholic beverage, distilled, rum, 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.8
+      }
+    ]
+  },
+  {
+    "word": "WHISKEY86",
+    "display": "Whiskey",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14052",
+    "desc": "Alcoholic beverage, distilled, whiskey, 86 proof",
+    "cal": 250.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.1,
+    "fib": 0.0,
+    "h2o": 63.9,
+    "sug": 0.1,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.8
+      }
+    ]
+  },
+  {
+    "word": "CREMEMENTHE",
+    "display": "Cr\u00e8me de Menthe",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14034",
+    "desc": "Alcoholic beverage, creme de menthe, 72 proof",
+    "cal": 371.0,
+    "pro": 0.0,
+    "fat": 0.3,
+    "carb": 41.6,
+    "fib": 0.0,
+    "h2o": 28.3,
+    "sug": 41.6,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.5
+      }
+    ]
+  },
+  {
+    "word": "COFFEECREAMLIQUEUR",
+    "display": "Irish Cream Liqueur",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14415",
+    "desc": "Alcoholic beverage, liqueur, coffee with cream, 34 proof",
+    "cal": 327.0,
+    "pro": 2.8,
+    "fat": 15.7,
+    "carb": 20.9,
+    "fib": 0.0,
+    "h2o": 46.5,
+    "sug": 19.76,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.8
+      }
+    ]
+  },
+  {
+    "word": "TRIPLESEC",
+    "display": "Triple Sec",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14700",
+    "desc": "Alcoholic beverage, liqueur, triple sec, orange, 80 proof",
+    "cal": 326.4,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 27.45,
+    "fib": 0.0,
+    "h2o": 41.11,
+    "sug": 27.45,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.2
+      }
+    ]
+  },
+  {
+    "word": "SWEETVERMOUTH",
+    "display": "Sweet Vermouth",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14701",
+    "desc": "Alcoholic beverage, wine, vermouth, sweet",
+    "cal": 132.2,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 13.33,
+    "fib": 0.0,
+    "h2o": 74.9,
+    "sug": 13.33,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 31.0
+      }
+    ]
+  },
+  {
+    "word": "MARASCHINOLIQUER",
+    "display": "Maraschino Liqueur",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14702",
+    "desc": "Alcoholic beverage, liqueur, maraschino cherry, 64 proof",
+    "cal": 281.5,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 27.88,
+    "fib": 0.0,
+    "h2o": 47.34,
+    "sug": 27.88,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.8
+      }
+    ]
+  },
+  {
+    "word": "CAMPARI",
+    "display": "Campari",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14703",
+    "desc": "Alcoholic beverage, campari bitters, 48 proof",
+    "cal": 193.8,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 14.95,
+    "fib": 0.0,
+    "h2o": 65.4,
+    "sug": 14.95,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.5
+      }
+    ]
+  },
+  {
+    "word": "ABSINTHE",
+    "display": "Absinthe",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14704",
+    "desc": "Alcoholic beverage, distilled, absinthe, 136 proof",
+    "cal": 426.8,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 38.53,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 26.0
+      }
+    ]
+  },
+  {
+    "word": "APEROL",
+    "display": "Aperol",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14705",
+    "desc": "Alcoholic beverage, aperol, 22 proof",
+    "cal": 123.8,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 16.48,
+    "fib": 0.0,
+    "h2o": 74.75,
+    "sug": 16.48,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 31.0
+      }
+    ]
+  },
+  {
+    "word": "DRYVERMOUTH",
+    "display": "Dry Vermouth",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14706",
+    "desc": "Alcoholic beverage, wine, vermouth, dry",
+    "cal": 113.3,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 2.96,
+    "fib": 0.0,
+    "h2o": 82.05,
+    "sug": 2.96,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.0
+      }
+    ]
+  },
+  {
+    "word": "GREENCHARTREUSE",
+    "display": "Green Chartreuse",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14707",
+    "desc": "Alcoholic beverage, liqueur, chartreuse, green, 110 proof",
+    "cal": 368.6,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 11.38,
+    "fib": 0.0,
+    "h2o": 41.96,
+    "sug": 11.38,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.8
+      }
+    ]
+  },
+  {
+    "word": "APRICOTBRANDY",
+    "display": "Apricot Brandy",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14708",
+    "desc": "Alcoholic beverage, liqueur, apricot brandy, 60 proof",
+    "cal": 257.9,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 24.27,
+    "fib": 0.0,
+    "h2o": 52.25,
+    "sug": 24.27,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.5
+      }
+    ]
+  },
+  {
+    "word": "CREMEDECASSIS",
+    "display": "Cr\u00e8me de Cassis",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14709",
+    "desc": "Alcoholic beverage, liqueur, creme de cassis, blackcurrant, 30 proof",
+    "cal": 252.9,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 45.22,
+    "fib": 0.0,
+    "h2o": 43.99,
+    "sug": 45.22,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 34.0
+      }
+    ]
+  },
+  {
+    "word": "FALERNUM",
+    "display": "Falernum",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14710",
+    "desc": "Alcoholic beverage, liqueur, falernum, 22 proof",
+    "cal": 254.2,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 50.0,
+    "fib": 0.0,
+    "h2o": 41.75,
+    "sug": 50.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 33.1
+      }
+    ]
+  },
+  {
+    "word": "PEACHLIQUEUR",
+    "display": "Peach Liqueur",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14711",
+    "desc": "Alcoholic beverage, liqueur, peach, 40 proof",
+    "cal": 234.7,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 32.38,
+    "fib": 0.0,
+    "h2o": 52.09,
+    "sug": 32.38,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 31.0
+      }
+    ]
+  },
+  {
+    "word": "BENEDICTINE",
+    "display": "B\u00e9n\u00e9dictine",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14712",
+    "desc": "Alcoholic beverage, liqueur, benedictine, 80 proof",
+    "cal": 315.4,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 25.24,
+    "fib": 0.0,
+    "h2o": 43.62,
+    "sug": 25.24,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.5
+      }
+    ]
+  },
+  {
+    "word": "BLACKBERRYLIQUEUR",
+    "display": "Blackberry Liqueur",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14713",
+    "desc": "Alcoholic beverage, liqueur, blackberry, creme de mure, 36 proof",
+    "cal": 254.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 40.91,
+    "fib": 0.0,
+    "h2o": 45.68,
+    "sug": 40.91,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 32.5
+      }
+    ]
+  },
+  {
+    "word": "CHERRYBRANDY",
+    "display": "Cherry Brandy",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14714",
+    "desc": "Alcoholic beverage, liqueur, cherry brandy, 48 proof",
+    "cal": 242.9,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 28.85,
+    "fib": 0.0,
+    "h2o": 52.44,
+    "sug": 28.85,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.8
+      }
+    ]
+  },
+  {
+    "word": "CREMEDECACAO",
+    "display": "Cr\u00e8me de Cacao",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14715",
+    "desc": "Alcoholic beverage, liqueur, creme de cacao, 50 proof",
+    "cal": 286.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 39.25,
+    "fib": 0.0,
+    "h2o": 41.82,
+    "sug": 39.25,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 31.6
+      }
+    ]
+  },
+  {
+    "word": "FERNETBRANCA",
+    "display": "Fernet-Branca",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14716",
+    "desc": "Alcoholic beverage, liqueur, fernet-branca, 80 proof",
+    "cal": 288.9,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 17.0,
+    "fib": 0.0,
+    "h2o": 50.94,
+    "sug": 17.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.6
+      }
+    ]
+  },
+  {
+    "word": "LILLETBLANC",
+    "display": "Lillet Blanc",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14717",
+    "desc": "Alcoholic beverage, wine, lillet blanc, 34 proof",
+    "cal": 120.7,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 6.7,
+    "fib": 0.0,
+    "h2o": 79.39,
+    "sug": 6.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.6
+      }
+    ]
+  },
+  {
+    "word": "ORGEAT",
+    "display": "Orgeat Syrup",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14718",
+    "desc": "Beverage, syrup, orgeat, almond, non-alcoholic",
+    "cal": 187.5,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 46.88,
+    "fib": 0.0,
+    "h2o": 52.62,
+    "sug": 46.88,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 37.9
+      }
+    ]
+  },
+  {
+    "word": "ALLSPICEDRAM",
+    "display": "Allspice Dram",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14719",
+    "desc": "Alcoholic beverage, liqueur, allspice dram, 44 proof",
+    "cal": 249.5,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 34.26,
+    "fib": 0.0,
+    "h2o": 49.17,
+    "sug": 34.26,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 31.9
+      }
+    ]
+  },
+  {
+    "word": "AMARETTO",
+    "display": "Amaretto",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14720",
+    "desc": "Alcoholic beverage, liqueur, amaretto, almond, 56 proof",
+    "cal": 257.5,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 27.21,
+    "fib": 0.0,
+    "h2o": 51.05,
+    "sug": 27.21,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.8
+      }
+    ]
+  },
+  {
+    "word": "AMARONONINO",
+    "display": "Amaro Nonino",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14721",
+    "desc": "Alcoholic beverage, liqueur, amaro nonino, 70 proof",
+    "cal": 270.6,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 19.8,
+    "fib": 0.0,
+    "h2o": 52.36,
+    "sug": 19.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.9
+      }
+    ]
+  },
+  {
+    "word": "ANCHOREYES",
+    "display": "Ancho Reyes",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14722",
+    "desc": "Alcoholic beverage, liqueur, ancho reyes chile, 80 proof",
+    "cal": 287.7,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 16.7,
+    "fib": 0.0,
+    "h2o": 51.24,
+    "sug": 16.7,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.6
+      }
+    ]
+  },
+  {
+    "word": "BANANALIQUER",
+    "display": "Banana Liqueur",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14723",
+    "desc": "Alcoholic beverage, liqueur, banana, creme de banane, 40 proof",
+    "cal": 257.8,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 38.89,
+    "fib": 0.0,
+    "h2o": 46.0,
+    "sug": 38.89,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 31.9
+      }
+    ]
+  },
+  {
+    "word": "CHAMBORD",
+    "display": "Chambord",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14724",
+    "desc": "Alcoholic beverage, liqueur, chambord, black raspberry, 33 proof",
+    "cal": 204.9,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 29.52,
+    "fib": 0.0,
+    "h2o": 57.58,
+    "sug": 29.52,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 31.0
+      }
+    ]
+  },
+  {
+    "word": "CREMEDEVIOLETTE",
+    "display": "Cr\u00e8me de Violette",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14725",
+    "desc": "Alcoholic beverage, liqueur, creme de violette, 32 proof",
+    "cal": 233.1,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 38.18,
+    "fib": 0.0,
+    "h2o": 49.84,
+    "sug": 38.18,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 32.5
+      }
+    ]
+  },
+  {
+    "word": "DRAMBUIE",
+    "display": "Drambuie",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14726",
+    "desc": "Alcoholic beverage, liqueur, drambuie, scotch honey, 80 proof",
+    "cal": 319.3,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 26.21,
+    "fib": 0.0,
+    "h2o": 42.65,
+    "sug": 26.21,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.5
+      }
+    ]
+  },
+  {
+    "word": "ELDERFLOWERLIQUEUR",
+    "display": "Elderflower Liqueur",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14727",
+    "desc": "Alcoholic beverage, liqueur, elderflower, st germain, 40 proof",
+    "cal": 279.7,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 45.27,
+    "fib": 0.0,
+    "h2o": 40.14,
+    "sug": 45.27,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 33.1
+      }
+    ]
+  },
+  {
+    "word": "GRANDMARNIER",
+    "display": "Grand Marnier",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14728",
+    "desc": "Alcoholic beverage, liqueur, grand marnier, orange, 80 proof",
+    "cal": 305.9,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 21.78,
+    "fib": 0.0,
+    "h2o": 46.47,
+    "sug": 21.78,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.9
+      }
+    ]
+  },
+  {
+    "word": "ORANGECURACAO",
+    "display": "Orange Cura\u00e7ao",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14729",
+    "desc": "Alcoholic beverage, liqueur, orange curacao, 80 proof",
+    "cal": 325.7,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 26.73,
+    "fib": 0.0,
+    "h2o": 41.52,
+    "sug": 26.73,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.9
+      }
+    ]
+  },
+  {
+    "word": "PASSOA",
+    "display": "Passoa",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14730",
+    "desc": "Alcoholic beverage, liqueur, passoa, passion fruit, 34 proof",
+    "cal": 221.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 33.11,
+    "fib": 0.0,
+    "h2o": 53.74,
+    "sug": 33.11,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 31.3
+      }
+    ]
+  },
+  {
+    "word": "PIMMSNO1",
+    "display": "Pimm's No. 1",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14731",
+    "desc": "Alcoholic beverage, liqueur, pimm's no. 1, 50 proof",
+    "cal": 186.1,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 12.0,
+    "fib": 0.0,
+    "h2o": 67.77,
+    "sug": 12.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.6
+      }
+    ]
+  },
+  {
+    "word": "YELLOWCHARTREUSE",
+    "display": "Yellow Chartreuse",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14732",
+    "desc": "Alcoholic beverage, liqueur, chartreuse, yellow, 80 proof",
+    "cal": 320.1,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 26.92,
+    "fib": 0.0,
+    "h2o": 42.23,
+    "sug": 26.92,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.8
+      }
+    ]
   }
 ];
 

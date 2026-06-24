@@ -408,3 +408,43 @@ cranberry_juice_cocktail,14242,CRANBERRYJUICE,"Cranberry juice cocktail, bottled
 club_soda,14121,SODACLUB,"Beverages, Carbonated beverage, club soda",club soda,cup,237.0,
 watermelon_raw,9326,WATERMELON,"Watermelon, raw",watermelon,cup,152.0,
 apple_juice,9016,APPLEJUICE,"Apple juice, canned or bottled, unsweetened, without added ascorbic acid",apple juice,cup,248.0,
+tequila,14037,TEQUILA,"Alcoholic beverage, distilled, all (gin, rum, vodka, whiskey) 80 proof",tequila,fl oz,27.8,SR Legacy; cocktail ingredient 2026-06-24
+gin_90proof,14049,GIN,"Alcoholic beverage, distilled, gin, 90 proof",gin,fl oz,27.8,SR Legacy; cocktail ingredient 2026-06-24
+rum_80proof,14050,RUM,"Alcoholic beverage, distilled, rum, 80 proof",rum,fl oz,27.8,SR Legacy; cocktail ingredient 2026-06-24
+whiskey_86proof,14052,WHISKEY86,"Alcoholic beverage, distilled, whiskey, 86 proof",whiskey,fl oz,27.8,SR Legacy; cocktail ingredient 2026-06-24
+creme_de_menthe,14034,CREMEMENTHE,"Alcoholic beverage, creme de menthe, 72 proof",crème de menthe,fl oz,30.5,SR Legacy; cocktail ingredient 2026-06-24
+coffee_liqueur,14414,LIQUEUR,"Alcoholic beverage, liqueur, coffee, 53 proof",coffee liqueur (Kahlúa),fl oz,31.6,SR Legacy; cocktail ingredient 2026-06-24
+coffee_cream_liqueur,14415,COFFEECREAMLIQUEUR,"Alcoholic beverage, liqueur, coffee with cream, 34 proof",Irish cream liqueur (Baileys),fl oz,30.8,SR Legacy; cocktail ingredient 2026-06-24
+triple_sec,14700,TRIPLESEC,"Alcoholic beverage, liqueur, triple sec, orange, 80 proof",triple sec,fl oz,30.2,Custom NDB 14700–14732 inserted 2026-06-24
+sweet_vermouth,14701,SWEETVERMOUTH,"Alcoholic beverage, wine, vermouth, sweet",sweet vermouth,fl oz,31.0,Custom NDB 14700–14732 inserted 2026-06-24
+maraschino_liqueur,14702,MARASCHINOLIQUER,"Alcoholic beverage, liqueur, maraschino cherry, 64 proof",maraschino liqueur,fl oz,30.8,Custom NDB 14700–14732 inserted 2026-06-24
+campari,14703,CAMPARI,"Alcoholic beverage, campari bitters, 48 proof",Campari,fl oz,30.5,Custom NDB 14700–14732 inserted 2026-06-24
+absinthe,14704,ABSINTHE,"Alcoholic beverage, distilled, absinthe, 136 proof",absinthe,fl oz,26.0,Custom NDB 14700–14732 inserted 2026-06-24
+aperol,14705,APEROL,"Alcoholic beverage, aperol, 22 proof",Aperol,fl oz,31.0,Custom NDB 14700–14732 inserted 2026-06-24
+dry_vermouth,14706,DRYVERMOUTH,"Alcoholic beverage, wine, vermouth, dry",dry vermouth,fl oz,29.0,Custom NDB 14700–14732 inserted 2026-06-24
+green_chartreuse,14707,GREENCHARTREUSE,"Alcoholic beverage, liqueur, chartreuse, green, 110 proof",green chartreuse,fl oz,27.8,Custom NDB 14700–14732 inserted 2026-06-24
+apricot_brandy,14708,APRICOTBRANDY,"Alcoholic beverage, liqueur, apricot brandy, 60 proof",apricot brandy,fl oz,30.5,Custom NDB 14700–14732 inserted 2026-06-24
+creme_de_cassis,14709,CREMEDECASSIS,"Alcoholic beverage, liqueur, creme de cassis, blackcurrant, 30 proof",crème de cassis,fl oz,34.0,Custom NDB 14700–14732 inserted 2026-06-24
+falernum,14710,FALERNUM,"Alcoholic beverage, liqueur, falernum, 22 proof",falernum,fl oz,33.1,Custom NDB 14700–14732 inserted 2026-06-24
+peach_liqueur,14711,PEACHLIQUEUR,"Alcoholic beverage, liqueur, peach, 40 proof",peach liqueur,fl oz,31.0,Custom NDB 14700–14732 inserted 2026-06-24
+benedictine,14712,BENEDICTINE,"Alcoholic beverage, liqueur, benedictine, 80 proof",Bénédictine,fl oz,30.5,Custom NDB 14700–14732 inserted 2026-06-24
+blackberry_liqueur,14713,BLACKBERRYLIQUEUR,"Alcoholic beverage, liqueur, blackberry, creme de mure, 36 proof",blackberry liqueur,fl oz,32.5,Custom NDB 14700–14732 inserted 2026-06-24
+cherry_brandy,14714,CHERRYBRANDY,"Alcoholic beverage, liqueur, cherry brandy, 48 proof",cherry brandy,fl oz,30.8,Custom NDB 14700–14732 inserted 2026-06-24
+creme_de_cacao,14715,CREMEDECACAO,"Alcoholic beverage, liqueur, creme de cacao, 50 proof",crème de cacao,fl oz,31.6,Custom NDB 14700–14732 inserted 2026-06-24
+fernet_branca,14716,FERNETBRANCA,"Alcoholic beverage, liqueur, fernet-branca, 80 proof",Fernet-Branca,fl oz,29.6,Custom NDB 14700–14732 inserted 2026-06-24
+lillet_blanc,14717,LILLETBLANC,"Alcoholic beverage, wine, lillet blanc, 34 proof",Lillet Blanc,fl oz,29.6,Custom NDB 14700–14732 inserted 2026-06-24
+orgeat,14718,ORGEAT,"Beverage, syrup, orgeat, almond, non-alcoholic",orgeat syrup,fl oz,37.9,Custom NDB 14700–14732 inserted 2026-06-24
+allspice_dram,14719,ALLSPICEDRAM,"Alcoholic beverage, liqueur, allspice dram, 44 proof",allspice dram,fl oz,31.9,Custom NDB 14700–14732 inserted 2026-06-24
+amaretto,14720,AMARETTO,"Alcoholic beverage, liqueur, amaretto, almond, 56 proof",amaretto,fl oz,30.8,Custom NDB 14700–14732 inserted 2026-06-24
+amaro_nonino,14721,AMARONONINO,"Alcoholic beverage, liqueur, amaro nonino, 70 proof",amaro Nonino,fl oz,29.9,Custom NDB 14700–14732 inserted 2026-06-24
+ancho_reyes,14722,ANCHOREYES,"Alcoholic beverage, liqueur, ancho reyes chile, 80 proof",Ancho Reyes,fl oz,29.6,Custom NDB 14700–14732 inserted 2026-06-24
+banana_liqueur,14723,BANANALIQUER,"Alcoholic beverage, liqueur, banana, creme de banane, 40 proof",banana liqueur,fl oz,31.9,Custom NDB 14700–14732 inserted 2026-06-24
+chambord,14724,CHAMBORD,"Alcoholic beverage, liqueur, chambord, black raspberry, 33 proof",Chambord,fl oz,31.0,Custom NDB 14700–14732 inserted 2026-06-24
+creme_de_violette,14725,CREMEDEVIOLETTE,"Alcoholic beverage, liqueur, creme de violette, 32 proof",crème de violette,fl oz,32.5,Custom NDB 14700–14732 inserted 2026-06-24
+drambuie,14726,DRAMBUIE,"Alcoholic beverage, liqueur, drambuie, scotch honey, 80 proof",Drambuie,fl oz,30.5,Custom NDB 14700–14732 inserted 2026-06-24
+elderflower_liqueur,14727,ELDERFLOWERLIQUEUR,"Alcoholic beverage, liqueur, elderflower, st germain, 40 proof",elderflower liqueur,fl oz,33.1,Custom NDB 14700–14732 inserted 2026-06-24
+grand_marnier,14728,GRANDMARNIER,"Alcoholic beverage, liqueur, grand marnier, orange, 80 proof",Grand Marnier,fl oz,29.9,Custom NDB 14700–14732 inserted 2026-06-24
+orange_curacao,14729,ORANGECURACAO,"Alcoholic beverage, liqueur, orange curacao, 80 proof",orange curaçao,fl oz,29.9,Custom NDB 14700–14732 inserted 2026-06-24
+passoa,14730,PASSOA,"Alcoholic beverage, liqueur, passoa, passion fruit, 34 proof",Passoa,fl oz,31.3,Custom NDB 14700–14732 inserted 2026-06-24
+pimms_no1,14731,PIMMSNO1,"Alcoholic beverage, liqueur, pimm's no. 1, 50 proof",Pimm's No. 1,fl oz,29.6,Custom NDB 14700–14732 inserted 2026-06-24
+yellow_chartreuse,14732,YELLOWCHARTREUSE,"Alcoholic beverage, liqueur, chartreuse, yellow, 80 proof",yellow chartreuse,fl oz,30.8,Custom NDB 14700–14732 inserted 2026-06-24
