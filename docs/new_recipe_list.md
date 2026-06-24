@@ -17,12 +17,15 @@ Arepas
 - ✅ Cappuccino (BVRG_006)
 - ✅ Ginger Lemonade (BVRG_007)
 - ✅ Strawberry Lemonade (BVRG_008)
+- ✅ Arnold Palmer (BVRG_009)
 
 ---
 
 ### ~~Cluster 1 — Coffee Drinks (Hot)~~ ✅ Complete
 
 ### ~~Cluster 2 — Citrus Water Drinks (Cold)~~ ✅ Complete
+
+### ~~Cluster 3 — Arnold Palmer (Cold)~~ ✅ Complete
 
 ### Cluster 3 — Arnold Palmer (Cold)
 *New ledger entry: `tea_black_brewed` NDB 14544 (also used by Chai Latte)*

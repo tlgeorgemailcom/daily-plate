@@ -4803,3 +4803,7 @@ BVRG_008,1,strawberries_raw,"1 cup strawberries, hulled",152.0,,,strawberry_lemo
 BVRG_008,2,lemon_juice_raw,1/4 cup,61.0,,,strawberry_lemonade,,,,
 BVRG_008,3,water_tap,1 cup,237.0,,,strawberry_lemonade,,,,
 BVRG_008,4,sugar_granulated,2 tbsp,25.2,,,strawberry_lemonade,,,,
+BVRG_009,1,tea_black_brewed,1 cup,237.0,,,arnold_palmer,,,,
+BVRG_009,2,lemon_juice_raw,1/4 cup,61.0,,,arnold_palmer,,,,
+BVRG_009,3,water_tap,1/2 cup,118.5,,,arnold_palmer,,,,
+BVRG_009,4,sugar_granulated,2 tbsp,25.2,,,arnold_palmer,,,,

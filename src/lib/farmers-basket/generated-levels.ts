@@ -21905,5 +21905,43 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'strawberry_lemonade', label: 'Strawberry Lemonade', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_009',
+    name: 'Arnold Palmer',
+    category: 'beverages',
+    dietaryCategory: 'veggie',
+    levelNum: 451,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 serving (~15 fl oz)',
+    prepTime: '5 min',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":113.3,"pro":0.2,"fat":0.1,"carb":30.1,"fib":0.2,"h2o":411.0,"sug":26.7,"perServing":{"cal":113.3,"pro":0.2,"fat":0.1,"carb":30.1,"fib":0.2,"h2o":411.0,"sug":26.7,"AddedSugars":25.1,"IntrinsicSugars":1.5},"micros":{"vitaminA":0.0,"vitaminC":5.34,"vitaminD":0.0,"vitaminE":0.02,"vitaminK":0.0,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.01,"niacin":0.01,"folate":5.44,"calcium":1.69,"iron":0.02,"magnesium":2.71,"phosphorus":1.64,"potassium":34.19,"sodium":2.88,"zinc":0.02,"copper":0.01,"selenium":0.05,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":441.7,"servings":1,"per100g":{"Energy_KCal":25.65,"Water":93.05,"Protein":0.05,"TotalLipidFat":0.03,"Carbohydrate":6.82,"FiberTotalDietary":0.04,"SugarsTotal":6.04,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.14,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.02,"VitaminK_phylloquinone":0.0,"VitaminC_totalAscorbicAcid":5.34,"Thiamin":0.0,"Riboflavin":0.01,"Niacin":0.01,"PantothenicAcid":0.02,"VitaminB6":0.01,"Folate_total":5.44,"Folate_food":5.44,"Folate_DFE":5.44,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":0.92,"Betaine":0.0,"LuteinZeaxanthin":2.07,"Lycopene":0.0,"Calcium_Ca":1.69,"Iron_Fe":0.02,"Magnesium_Mg":2.71,"Phosphorus_P":1.64,"Potassium_K":34.19,"Sodium_Na":2.88,"Zinc_Zn":0.02,"Copper_Cu":0.01,"Manganese_Mn":0.11,"Selenium_Se":0.05,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":5.69,"IntrinsicSugars":0.35},"addedSugars":25.1,"intrinsicSugars":1.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14355","name":"Beverages, tea, black, brewed, prepared with tap water","grams":237.0},{"ndb":"9152","name":"Lemon juice, raw","grams":61.0},{"ndb":"14411","name":"Water, tap, drinking","grams":118.5},{"ndb":"19335","name":"Sugars, granulated","grams":25.2}],"sections":[{"section_key":"arnold_palmer","section_label":"Arnold Palmer","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":441.7,"raw_water_grams":410.98,"raw_fat_grams":0.15,"raw_protein_grams":0.21,"raw_carb_grams":30.11,"final_grams":441.7}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Arnold Palmer', quantity: 'custom (g)', foodWord: 'ARNOLDPALMER', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'black tea, brewed', quantity: '1 cup', section: 'arnold_palmer', ndbNo: '14355', portionDesc: 'g', portionGrams: 237.0 },
+      { name: 'lemon juice', quantity: '1/4 cup', section: 'arnold_palmer', ndbNo: '9152', portionDesc: 'g', portionGrams: 61.0 },
+      { name: 'ice water', quantity: '1/2 cup', section: 'arnold_palmer', ndbNo: '14411', portionDesc: 'g', portionGrams: 118.5 },
+      { name: 'sugar', quantity: '2 tbsp', section: 'arnold_palmer', ndbNo: '19335', portionDesc: 'g', portionGrams: 25.2 }
+    ],
+    recipeInstructions: [
+      'Brew 1 cup of black tea and let it cool to room temperature, or refrigerate until cold.',
+      'In a tall glass, combine the lemon juice and sugar. Stir until the sugar is fully dissolved.',
+      'Add the water and cold tea to the glass and stir to combine. Taste and adjust sweetness or lemon if desired.',
+      'Suggestions (not included): Serve over ice. Named after golfer Arnold Palmer, who famously ordered half iced tea and half lemonade. For a stronger lemon flavor, reduce the water and increase the lemon juice.'
+    ],
+    sections: [
+      { key: 'arnold_palmer', label: 'Arnold Palmer', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
