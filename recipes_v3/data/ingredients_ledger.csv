@@ -501,3 +501,10 @@ chamomile_cordial,14775,CHAMOMILECORDIAL,"Cordial, chamomile, non-alcoholic, bot
 white_peach_puree,14776,WHITEPEACHPUREE,"Puree, white peach, unsweetened",White Peach Puree,fl oz,30.0,"label: ~45 kcal/100g, 9g C, 1.25g Fi, 8g Su, 0.5g P, 0g F 2026-06-24"
 orange_flower_water,14777,ORANGEFLOWERWATER,"Flavoring, orange flower water, orange blossom water",Orange Flower Water,tsp,5.0,orange blossom water; used in dashes/tsp; essentially water + trace aromatics 2026-06-24
 vanilla_sugar,14778,VANILLASUGAR,"Sugar, vanilla, granulated, flavored with vanilla",Vanilla Sugar,tsp,4.2,"granulated sugar + vanilla; label: ~385 kcal/100g, 96g C 2026-06-24"
+old_tom_gin,14779,OLDTOMGIN,"Gin, Old Tom, 80 proof",Old Tom Gin,ml,1,
+blackstrap_rum,14780,BLACKSTRAPRUM,"Rum, blackstrap, 80 proof",Blackstrap Rum,ml,1,
+passion_fruit_puree,14781,PASSIONFRUITPUREE,"Passion fruit, puree, unsweetened",Passion Fruit Puree,ml,1,
+raspberry_liqueur,14724,CHAMBORD,"Chambord, black raspberry liqueur",Raspberry Liqueur,ml,1,alias
+espadin_mezcal,14742,MEZCAL,"Mezcal, Espadin",Espadin Mezcal,ml,1,alias
+palo_cortado,14772,AMONTILLADO,"Sherry, Palo Cortado, dry",Palo Cortado Sherry,ml,1,alias
+martinique_molasses_rhum,14748,DARKRUM,"Rum, Martinique molasses",Martinique Molasses Rhum,ml,1,alias

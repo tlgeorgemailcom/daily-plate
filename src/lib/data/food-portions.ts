@@ -57137,6 +57137,105 @@ export const FOODS: Food[] = [
         "gm": 200.0
       }
     ]
+  },
+  {
+    "word": "OLDTOMGIN",
+    "display": "Old Tom Gin",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14779",
+    "desc": "Gin, Old Tom, 80 proof",
+    "cal": 251.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 5.0,
+    "fib": 0.0,
+    "h2o": 61.6,
+    "sug": 5.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.0
+      },
+      {
+        "amt": 1.5,
+        "desc": "fl oz",
+        "gm": 45.0
+      }
+    ]
+  },
+  {
+    "word": "BLACKSTRAPRUM",
+    "display": "Blackstrap Rum",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14780",
+    "desc": "Rum, blackstrap, 80 proof",
+    "cal": 235.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.5,
+    "fib": 0.0,
+    "h2o": 66.1,
+    "sug": 0.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.0
+      },
+      {
+        "amt": 1.5,
+        "desc": "fl oz",
+        "gm": 45.0
+      }
+    ]
+  },
+  {
+    "word": "PASSIONFRUITPUREE",
+    "display": "Passion Fruit Puree",
+    "groups": [
+      "fruit"
+    ],
+    "ndb": "14781",
+    "desc": "Passion fruit, puree, unsweetened",
+    "cal": 60.0,
+    "pro": 0.7,
+    "fat": 0.3,
+    "carb": 13.0,
+    "fib": 2.0,
+    "h2o": 85.0,
+    "sug": 10.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.0
+      },
+      {
+        "amt": 2.0,
+        "desc": "fl oz",
+        "gm": 60.0
+      }
+    ]
   }
 ];
 
