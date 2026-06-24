@@ -56196,13 +56196,13 @@ export const FOODS: Food[] = [
     ],
     "ndb": "14751",
     "desc": "Alcoholic beverage, liqueur, cherry, Sangue Morlacco, Luxardo, 60 proof",
-    "cal": 287.0,
+    "cal": 247.0,
     "pro": 0.0,
     "fat": 0.0,
-    "carb": 30.3,
+    "carb": 30.4,
     "fib": 0.0,
-    "h2o": 46.0,
-    "sug": 30.3,
+    "h2o": 45.9,
+    "sug": 30.4,
     "portions": [
       {
         "amt": 1.0,
