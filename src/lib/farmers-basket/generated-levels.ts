@@ -22169,5 +22169,44 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'fruit_punch', label: 'Fruit Punch', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_016',
+    name: 'Virgin Mojito',
+    category: 'beverages',
+    dietaryCategory: 'vegan',
+    levelNum: 458,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 glass (~10 fl oz)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":106.3,"pro":0.2,"fat":0.0,"carb":28.0,"fib":0.3,"h2o":266.6,"sug":25.7,"perServing":{"cal":106.3,"pro":0.2,"fat":0.0,"carb":28.0,"fib":0.3,"h2o":266.6,"sug":25.7,"AddedSugars":25.1,"IntrinsicSugars":0.5},"micros":{"vitaminA":2.27,"vitaminC":3.18,"vitaminD":0.0,"vitaminE":0.02,"vitaminK":0.06,"vitaminB6":0.0,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.0,"niacin":0.02,"folate":2.08,"calcium":7.54,"iron":0.14,"magnesium":2.26,"phosphorus":2.03,"potassium":18.32,"sodium":17.45,"zinc":0.1,"copper":0.01,"selenium":0.06,"cholesterol":0.0,"saturatedFat":0.0,"monoFat":0.0,"polyFat":0.01,"omega3":0.0,"omega6":0.0},"gramsPerServing":295.2,"servings":1,"per100g":{"Energy_KCal":36.02,"Water":90.3,"Protein":0.08,"TotalLipidFat":0.01,"Carbohydrate":9.48,"FiberTotalDietary":0.11,"SugarsTotal":8.69,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.0,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.01,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":2.27,"Retinol":0.0,"Carotene_beta":3.05,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.02,"VitaminK_phylloquinone":0.06,"VitaminC_totalAscorbicAcid":3.18,"Thiamin":0.0,"Riboflavin":0.0,"Niacin":0.02,"PantothenicAcid":0.01,"VitaminB6":0.0,"Folate_total":2.08,"Folate_food":2.08,"Folate_DFE":2.08,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":0.52,"Betaine":0.02,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":7.54,"Iron_Fe":0.14,"Magnesium_Mg":2.26,"Phosphorus_P":2.03,"Potassium_K":18.32,"Sodium_Na":17.45,"Zinc_Zn":0.1,"Copper_Cu":0.01,"Manganese_Mn":0.01,"Selenium_Se":0.06,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.02,"GlutamicAcid":0.01,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":8.52,"IntrinsicSugars":0.17},"addedSugars":25.1,"intrinsicSugars":0.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"9160","name":"Lime juice, raw","grams":30.0},{"ndb":"19335","name":"Sugars, granulated","grams":25.2},{"ndb":"2065","name":"Spearmint, fresh","grams":3.0},{"ndb":"14121","name":"Beverages, Carbonated beverage, club soda","grams":237.0}],"sections":[{"section_key":"virgin_mojito","section_label":"Virgin Mojito","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":295.2,"raw_water_grams":266.57,"raw_fat_grams":0.04,"raw_protein_grams":0.22,"raw_carb_grams":27.97,"final_grams":295.2}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Virgin Mojito', quantity: 'custom (g)', foodWord: 'VIRGINMOJITO', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'lime juice', quantity: '2 tbsp lime juice', section: 'virgin_mojito', ndbNo: '9160', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'sugar', quantity: '2 tbsp', section: 'virgin_mojito', ndbNo: '19335', portionDesc: 'g', portionGrams: 25.2 },
+      { name: 'fresh mint', quantity: '10 fresh mint leaves', section: 'virgin_mojito', ndbNo: '2065', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'club soda', quantity: '1 cup (8 fl oz) club soda', section: 'virgin_mojito', ndbNo: '14121', portionDesc: 'g', portionGrams: 237.0 }
+    ],
+    recipeInstructions: [
+      'Muddle mint leaves with sugar in a glass, pressing firmly to release oils without shredding the leaves.',
+      'Add lime juice and stir to dissolve sugar.',
+      'Fill glass with ice and pour club soda over.',
+      'Stir gently to combine.',
+      'Suggestions (not included): Garnish with a lime wheel and fresh mint sprig. For a frozen version, blend all ingredients with ice.'
+    ],
+    sections: [
+      { key: 'virgin_mojito', label: 'Virgin Mojito', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

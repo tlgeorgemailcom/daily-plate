@@ -24,6 +24,7 @@ Arepas
 - ✅ Tropical Smoothie (BVRG_013)
 - ✅ Shirley Temple (BVRG_014)
 - ✅ Fruit Punch (BVRG_015)
+- ✅ Virgin Mojito (BVRG_016)
 
 ---
 
@@ -50,10 +51,9 @@ Arnold Palmer
 - ✅ Shirley Temple (BVRG_014)
 - ✅ Fruit Punch (BVRG_015)
 
-### Cluster 6 — Citrus Fizz (Cold)
-*New ledger entry: `club_soda` NDB 14121*
+### ~~Cluster 6 — Citrus Fizz (Cold)~~ ✅ Complete
 
-Virgin Mojito
+- ✅ Virgin Mojito (BVRG_016)
 
 ### Cluster 7 — Agua Fresca (Cold)
 *New ledger entry: `watermelon_raw` NDB 9326*
