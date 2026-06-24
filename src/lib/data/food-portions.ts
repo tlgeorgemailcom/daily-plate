@@ -56847,6 +56847,72 @@ export const FOODS: Food[] = [
         "gm": 40.5
       }
     ]
+  },
+  {
+    "word": "COINTREAU",
+    "display": "Cointreau (Triple Sec)",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14771",
+    "desc": "Alcoholic beverage, Cointreau, triple sec, orange liqueur, 80 proof",
+    "cal": 321.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 24.0,
+    "fib": 0.0,
+    "h2o": 42.6,
+    "sug": 24.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
+      }
+    ]
+  },
+  {
+    "word": "AMONTILLADO",
+    "display": "Amontillado Sherry",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14772",
+    "desc": "Alcoholic beverage, wine, sherry, Amontillado, dry, 40 proof",
+    "cal": 136.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 6.8,
+    "fib": 0.0,
+    "h2o": 77.4,
+    "sug": 6.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 40.5
+      }
+    ]
   }
 ];
 
