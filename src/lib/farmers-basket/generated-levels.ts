@@ -23040,7 +23040,7 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Caipirinha', quantity: 'custom (g)', foodWord: 'CAIPIRINHA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'cachaça', quantity: '2 fl oz', section: 'cocktail', ndbNo: '14745', portionDesc: 'g', portionGrams: 55.6 },
-      { name: 'lime juice', quantity: '2 tbsp', section: 'cocktail', ndbNo: '9160', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'lime', quantity: '1 lime, cut into 8 wedges', section: 'cocktail', ndbNo: '9160', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'sugar', quantity: '2 tsp', section: 'cocktail', ndbNo: '19335', portionDesc: 'g', portionGrams: 8.0 }
     ],
     recipeInstructions: [
