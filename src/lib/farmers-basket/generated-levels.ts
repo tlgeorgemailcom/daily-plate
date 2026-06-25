@@ -11694,7 +11694,7 @@ export const LEVELS: Level[] = [
       { name: 'shallots', quantity: '3 tbsp minced shallots', section: 'steak', ndbNo: '11677', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'garlic', quantity: '2 cloves garlic', section: 'steak', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'crimini mushrooms', quantity: '8 oz crimini mushrooms', section: 'steak', ndbNo: '11266', portionDesc: 'g', portionGrams: 227.0 },
-      { name: 'brandy (cognac proxy)', quantity: '1/4 cup brandy', section: 'steak', ndbNo: '14037', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'brandy', quantity: '1/4 cup brandy', section: 'steak', ndbNo: '14747', portionDesc: 'g', portionGrams: 60.0 },
       { name: 'heavy cream', quantity: '1/2 cup heavy cream', section: 'steak', ndbNo: '1053', portionDesc: 'g', portionGrams: 119.0 },
       { name: 'beef broth', quantity: '1/2 cup beef broth', section: 'steak', ndbNo: '6008', portionDesc: 'g', portionGrams: 120.0 },
       { name: 'Worcestershire sauce', quantity: '1 tbsp Worcestershire sauce', section: 'steak', ndbNo: '6971', portionDesc: 'g', portionGrams: 17.0 },
@@ -22495,6 +22495,443 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'cider', label: 'Spiced Apple Cider', cookingMethod: '', yieldFactorWater: 0.96 }
+    ],
+  },
+  {
+    id: 'BVRG_024',
+    name: 'Alexander',
+    category: 'cocktails',
+    dietaryCategory: 'veggie',
+    levelNum: 466,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":285.7,"pro":0.9,"fat":11.0,"carb":12.8,"fib":0.1,"h2o":57.7,"sug":12.7,"perServing":{"cal":285.7,"pro":0.9,"fat":11.0,"carb":12.8,"fib":0.1,"h2o":57.7,"sug":12.7,"AddedSugars":0.0,"IntrinsicSugars":12.7},"micros":{"vitaminA":120.9,"vitaminC":0.19,"vitaminD":18.53,"vitaminE":0.27,"vitaminK":0.94,"vitaminB6":0.01,"vitaminB12":0.05,"thiamin":0.01,"riboflavin":0.05,"niacin":0.02,"folate":1.4,"calcium":19.95,"iron":0.04,"magnesium":2.6,"phosphorus":17.69,"potassium":28.97,"sodium":7.99,"zinc":0.08,"copper":0.01,"selenium":0.89,"cholesterol":33.24,"saturatedFat":6.85,"monoFat":2.69,"polyFat":0.46,"omega3":0.05,"omega6":0.26},"gramsPerServing":102.0,"servings":1,"per100g":{"Energy_KCal":280.1,"Water":56.54,"Protein":0.85,"TotalLipidFat":10.78,"Carbohydrate":12.51,"FiberTotalDietary":0.06,"SugarsTotal":12.43,"Cholesterol":33.24,"FattyAcids_totalSaturated":6.85,"FattyAcids_totalMonounsaturated":2.69,"FattyAcids_totalPolyunsaturated":0.46,"LinoleicAcid":0.26,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.0,"VitaminA_RAE":120.9,"Retinol":119.12,"Carotene_beta":21.26,"VitaminD":18.53,"VitaminE_alphaTocopherol":0.27,"VitaminK_phylloquinone":0.94,"VitaminC_totalAscorbicAcid":0.19,"Thiamin":0.01,"Riboflavin":0.05,"Niacin":0.02,"PantothenicAcid":0.14,"VitaminB6":0.01,"Folate_total":1.4,"Folate_food":1.4,"Folate_DFE":1.4,"FolicAcid":0.0,"VitaminB12":0.05,"Choline_total":4.97,"Betaine":0.0,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":19.95,"Iron_Fe":0.04,"Magnesium_Mg":2.6,"Phosphorus_P":17.69,"Potassium_K":28.97,"Sodium_Na":7.99,"Zinc_Zn":0.08,"Copper_Cu":0.01,"Manganese_Mn":0.01,"Selenium_Se":0.89,"Tryptophan":0.02,"Threonine":0.04,"Isoleucine":0.04,"Leucine":0.07,"Lysine":0.04,"Methionine":0.02,"Cystine":0.0,"Phenylalanine":0.04,"Tyrosine":0.04,"Valine":0.05,"Arginine":0.02,"Histidine":0.02,"Alanine":0.03,"AsparticAcid":0.06,"GlutamicAcid":0.17,"Glycine":0.02,"Proline":0.09,"Serine":0.03,"omega3":0.05,"omega6":0.26,"AddedSugars":0.0,"IntrinsicSugars":12.43},"addedSugars":0.0,"intrinsicSugars":12.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14747","name":"Alcoholic beverage, distilled, brandy, grape, 80 proof","grams":41.7},{"ndb":"14789","name":"Alcoholic beverage, liqueur, creme de cacao, brown, 50 proof","grams":30.0},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":30.0},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.3}],"sections":[{"section_key":"cocktail","section_label":"Alexander","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":102.0,"raw_water_grams":57.67,"raw_fat_grams":10.99,"raw_protein_grams":0.87,"raw_carb_grams":12.76,"final_grams":102.0}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Alexander', quantity: 'custom (g)', foodWord: 'ALEXANDER', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'brandy', quantity: '1.5 oz', section: 'cocktail', ndbNo: '14747', portionDesc: 'g', portionGrams: 41.7 },
+      { name: 'Crème de Cacao (Brown)', quantity: '1 oz', section: 'cocktail', ndbNo: '14789', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'heavy cream', quantity: '1 oz', section: 'cocktail', ndbNo: '1053', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'nutmeg', quantity: '1 pinch freshly grated nutmeg', section: 'cocktail', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.3 }
+    ],
+    recipeInstructions: [
+      'Fill a cocktail shaker with ice.',
+      'Add the brandy, crème de cacao, and heavy cream.',
+      'Shake vigorously for 10–15 seconds until well chilled and frothy.',
+      'Double-strain into a chilled coupe or cocktail glass.',
+      'Garnish with freshly grated nutmeg over the top. Serve immediately.',
+      'Suggestions (not included):'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Alexander', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
+    id: 'BVRG_025',
+    name: 'Americano',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 467,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":100.1,"pro":0.0,"fat":0.0,"carb":8.7,"fib":0.0,"h2o":102.2,"sug":8.7,"perServing":{"cal":100.1,"pro":0.0,"fat":0.0,"carb":8.7,"fib":0.0,"h2o":102.2,"sug":8.7,"AddedSugars":0.0,"IntrinsicSugars":8.7},"micros":{"vitaminA":0.0,"vitaminC":0.0,"vitaminD":0.0,"vitaminE":0.0,"vitaminK":0.0,"vitaminB6":0.0,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.0,"niacin":0.0,"folate":0.0,"calcium":2.45,"iron":0.0,"magnesium":0.49,"phosphorus":0.0,"potassium":0.98,"sodium":10.29,"zinc":0.05,"copper":0.0,"selenium":0.0,"cholesterol":0.0,"saturatedFat":0.0,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":120.6,"servings":1,"per100g":{"Energy_KCal":82.99,"Water":84.75,"Protein":0.0,"TotalLipidFat":0.0,"Carbohydrate":7.21,"FiberTotalDietary":0.0,"SugarsTotal":7.21,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.0,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.0,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.0,"VitaminK_phylloquinone":0.0,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.0,"Riboflavin":0.0,"Niacin":0.0,"PantothenicAcid":0.0,"VitaminB6":0.0,"Folate_total":0.0,"Folate_food":0.0,"Folate_DFE":0.0,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":0.0,"Betaine":0.0,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":2.45,"Iron_Fe":0.0,"Magnesium_Mg":0.49,"Phosphorus_P":0.0,"Potassium_K":0.98,"Sodium_Na":10.29,"Zinc_Zn":0.05,"Copper_Cu":0.0,"Manganese_Mn":0.0,"Selenium_Se":0.0,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":7.21},"addedSugars":0.0,"intrinsicSugars":8.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14703","name":"Alcoholic beverage, campari bitters, 48 proof","grams":30.5},{"ndb":"14701","name":"Alcoholic beverage, wine, vermouth, sweet","grams":31.0},{"ndb":"14121","name":"Beverages, Carbonated beverage, club soda","grams":59.1}],"sections":[{"section_key":"cocktail","section_label":"Americano","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":120.6,"raw_water_grams":102.21,"raw_fat_grams":0.0,"raw_protein_grams":0.0,"raw_carb_grams":8.69,"final_grams":120.6}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Americano', quantity: 'custom (g)', foodWord: 'AMERICANO', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Campari', quantity: '1 oz', section: 'cocktail', ndbNo: '14703', portionDesc: 'g', portionGrams: 30.5 },
+      { name: 'sweet vermouth', quantity: '1 oz', section: 'cocktail', ndbNo: '14701', portionDesc: 'g', portionGrams: 31.0 },
+      { name: 'club soda', quantity: '2 oz', section: 'cocktail', ndbNo: '14121', portionDesc: 'g', portionGrams: 59.1 }
+    ],
+    recipeInstructions: [
+      'Fill a rocks glass with ice.',
+      'Add the Campari and sweet vermouth directly over the ice.',
+      'Top with club soda and stir gently to combine.',
+      'Garnish with an orange slice or lemon twist. Serve immediately.',
+      'Suggestions (not included):'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Americano', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
+    id: 'BVRG_026',
+    name: 'Angel Face',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 468,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":205.2,"pro":0.0,"fat":0.0,"carb":7.4,"fib":0.0,"h2o":52.4,"sug":7.4,"perServing":{"cal":205.2,"pro":0.0,"fat":0.0,"carb":7.4,"fib":0.0,"h2o":52.4,"sug":7.4,"AddedSugars":0.0,"IntrinsicSugars":7.4},"micros":{"vitaminA":0.0,"vitaminC":0.0,"vitaminD":0.0,"vitaminE":0.0,"vitaminK":0.0,"vitaminB6":0.0,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.0,"niacin":0.0,"folate":0.0,"calcium":0.0,"iron":0.0,"magnesium":0.0,"phosphorus":0.0,"potassium":0.0,"sodium":0.0,"zinc":0.0,"copper":0.0,"selenium":0.0,"cholesterol":0.0,"saturatedFat":0.0,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":85.3,"servings":1,"per100g":{"Energy_KCal":240.62,"Water":61.47,"Protein":0.0,"TotalLipidFat":0.0,"Carbohydrate":8.68,"FiberTotalDietary":0.0,"SugarsTotal":8.68,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.0,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.0,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.0,"VitaminK_phylloquinone":0.0,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.0,"Riboflavin":0.0,"Niacin":0.0,"PantothenicAcid":0.0,"VitaminB6":0.0,"Folate_total":0.0,"Folate_food":0.0,"Folate_DFE":0.0,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":0.0,"Betaine":0.0,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":0.0,"Iron_Fe":0.0,"Magnesium_Mg":0.0,"Phosphorus_P":0.0,"Potassium_K":0.0,"Sodium_Na":0.0,"Zinc_Zn":0.0,"Copper_Cu":0.0,"Manganese_Mn":0.0,"Selenium_Se":0.0,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":8.68},"addedSugars":0.0,"intrinsicSugars":7.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14759","name":"Alcoholic beverage, gin, London dry, 80 proof","grams":27.0},{"ndb":"14708","name":"Alcoholic beverage, liqueur, apricot brandy, 60 proof","grams":30.5},{"ndb":"14744","name":"Alcoholic beverage, distilled, calvados, French apple brandy, 80 proof","grams":27.8}],"sections":[{"section_key":"cocktail","section_label":"Angel Face","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":85.3,"raw_water_grams":52.43,"raw_fat_grams":0.0,"raw_protein_grams":0.0,"raw_carb_grams":7.4,"final_grams":85.3}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Angel Face', quantity: 'custom (g)', foodWord: 'ANGELFACE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'London Dry Gin', quantity: '1 oz', section: 'cocktail', ndbNo: '14759', portionDesc: 'g', portionGrams: 27.0 },
+      { name: 'apricot brandy', quantity: '1 oz', section: 'cocktail', ndbNo: '14708', portionDesc: 'g', portionGrams: 30.5 },
+      { name: 'calvados', quantity: '1 oz', section: 'cocktail', ndbNo: '14744', portionDesc: 'g', portionGrams: 27.8 }
+    ],
+    recipeInstructions: [
+      'Fill a cocktail shaker with ice.',
+      'Add the gin, apricot brandy, and calvados.',
+      'Shake vigorously for 10–15 seconds until well chilled.',
+      'Strain into a chilled coupe or cocktail glass.',
+      'Serve immediately.',
+      'Suggestions (not included):'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Angel Face', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
+    id: 'BVRG_027',
+    name: 'Aperol Spritz',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 469,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":141.1,"pro":0.0,"fat":0.0,"carb":11.5,"fib":0.0,"h2o":154.3,"sug":11.0,"perServing":{"cal":141.1,"pro":0.0,"fat":0.0,"carb":11.5,"fib":0.0,"h2o":154.3,"sug":11.0,"AddedSugars":0.0,"IntrinsicSugars":11.0},"micros":{"vitaminA":0.0,"vitaminC":0.0,"vitaminD":0.0,"vitaminE":0.0,"vitaminK":0.0,"vitaminB6":0.0,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.0,"niacin":0.0,"folate":0.0,"calcium":0.82,"iron":0.0,"magnesium":0.16,"phosphorus":0.0,"potassium":0.33,"sodium":3.46,"zinc":0.02,"copper":0.0,"selenium":0.0,"cholesterol":0.0,"saturatedFat":0.0,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":179.8,"servings":1,"per100g":{"Energy_KCal":78.5,"Water":85.83,"Protein":0.0,"TotalLipidFat":0.0,"Carbohydrate":6.42,"FiberTotalDietary":0.0,"SugarsTotal":6.12,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.0,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.0,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.0,"VitaminK_phylloquinone":0.0,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.0,"Riboflavin":0.0,"Niacin":0.0,"PantothenicAcid":0.0,"VitaminB6":0.0,"Folate_total":0.0,"Folate_food":0.0,"Folate_DFE":0.0,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":0.0,"Betaine":0.0,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":0.82,"Iron_Fe":0.0,"Magnesium_Mg":0.16,"Phosphorus_P":0.0,"Potassium_K":0.33,"Sodium_Na":3.46,"Zinc_Zn":0.02,"Copper_Cu":0.0,"Manganese_Mn":0.0,"Selenium_Se":0.0,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":6.12},"addedSugars":0.0,"intrinsicSugars":11.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14795","name":"Alcoholic beverage, wine, sparkling, Prosecco, 11% ABV, brut","grams":88.2},{"ndb":"14705","name":"Alcoholic beverage, aperol, 22 proof","grams":62.0},{"ndb":"14121","name":"Beverages, Carbonated beverage, club soda","grams":29.6}],"sections":[{"section_key":"cocktail","section_label":"Aperol Spritz","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":179.8,"raw_water_grams":154.33,"raw_fat_grams":0.0,"raw_protein_grams":0.0,"raw_carb_grams":11.54,"final_grams":179.8}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Aperol Spritz', quantity: 'custom (g)', foodWord: 'APEROLSPRITZ', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Prosecco', quantity: '3 oz', section: 'cocktail', ndbNo: '14795', portionDesc: 'g', portionGrams: 88.2 },
+      { name: 'Aperol', quantity: '2 oz', section: 'cocktail', ndbNo: '14705', portionDesc: 'g', portionGrams: 62.0 },
+      { name: 'club soda', quantity: '1 oz', section: 'cocktail', ndbNo: '14121', portionDesc: 'g', portionGrams: 29.6 }
+    ],
+    recipeInstructions: [
+      'Fill a large wine glass with ice.',
+      'Add the Prosecco.',
+      'Add the Aperol.',
+      'Top with a splash of club soda and stir gently to combine.',
+      'Garnish with an orange slice. Serve immediately.',
+      'Suggestions (not included):'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Aperol Spritz', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
+    id: 'BVRG_028',
+    name: 'Aviation',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 470,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":185.3,"pro":0.1,"fat":0.1,"carb":13.5,"fib":0.2,"h2o":58.7,"sug":12.7,"perServing":{"cal":185.3,"pro":0.1,"fat":0.1,"carb":13.5,"fib":0.2,"h2o":58.7,"sug":12.7,"AddedSugars":1.9,"IntrinsicSugars":10.8},"micros":{"vitaminA":0.11,"vitaminC":6.25,"vitaminD":0.0,"vitaminE":0.03,"vitaminK":0.08,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.0,"niacin":0.01,"folate":3.23,"calcium":3.92,"iron":0.04,"magnesium":1.19,"phosphorus":1.46,"potassium":17.79,"sodium":0.38,"zinc":0.02,"copper":0.01,"selenium":0.03,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.0,"polyFat":0.01,"omega3":0.0,"omega6":0.0},"gramsPerServing":91.6,"servings":1,"per100g":{"Energy_KCal":202.27,"Water":64.11,"Protein":0.07,"TotalLipidFat":0.05,"Carbohydrate":14.77,"FiberTotalDietary":0.22,"SugarsTotal":13.88,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.01,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.11,"Retinol":0.0,"Carotene_beta":1.64,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.03,"VitaminK_phylloquinone":0.08,"VitaminC_totalAscorbicAcid":6.25,"Thiamin":0.0,"Riboflavin":0.0,"Niacin":0.01,"PantothenicAcid":0.02,"VitaminB6":0.01,"Folate_total":3.23,"Folate_food":3.23,"Folate_DFE":3.23,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":1.06,"Betaine":0.0,"LuteinZeaxanthin":5.64,"Lycopene":0.0,"Calcium_Ca":3.92,"Iron_Fe":0.04,"Magnesium_Mg":1.19,"Phosphorus_P":1.46,"Potassium_K":17.79,"Sodium_Na":0.38,"Zinc_Zn":0.02,"Copper_Cu":0.01,"Manganese_Mn":0.0,"Selenium_Se":0.03,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":2.12,"IntrinsicSugars":11.77},"addedSugars":1.9,"intrinsicSugars":10.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14759","name":"Alcoholic beverage, gin, London dry, 80 proof","grams":40.5},{"ndb":"14790","name":"Alcoholic beverage, liqueur, maraschino, Luxardo, cherry, 64 proof","grams":15.0},{"ndb":"14725","name":"Alcoholic beverage, liqueur, creme de violette, 32 proof","grams":16.3},{"ndb":"9152","name":"Lemon juice, raw","grams":14.8},{"ndb":"9328","name":"Maraschino cherries, canned, drained","grams":5.0}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"1.0","cooking_method":"1.0","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":91.6,"raw_water_grams":58.72,"raw_fat_grams":0.05,"raw_protein_grams":0.06,"raw_carb_grams":13.53,"final_grams":91.6}],"cookingMethod":"1.0"},
+    recipeIngredients: [
+      { name: 'Aviation', quantity: 'custom (g)', foodWord: 'AVIATION', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'London Dry Gin', quantity: '1½ oz', section: 'cocktail', ndbNo: '14759', portionDesc: 'g', portionGrams: 40.5 },
+      { name: 'Maraschino Liqueur', quantity: '½ oz', section: 'cocktail', ndbNo: '14790', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'crème de violette', quantity: '½ oz', section: 'cocktail', ndbNo: '14725', portionDesc: 'g', portionGrams: 16.3 },
+      { name: 'lemon juice', quantity: '½ oz', section: 'cocktail', ndbNo: '9152', portionDesc: 'g', portionGrams: 14.8 },
+      { name: 'maraschino cherries', quantity: '1 cherry', section: 'cocktail', ndbNo: '9328', portionDesc: 'g', portionGrams: 5.0 }
+    ],
+    recipeInstructions: [
+      'Fill a cocktail shaker with ice.',
+      'Add the gin, maraschino liqueur, crème de violette, and lemon juice.',
+      'Shake vigorously for 10–15 seconds until well chilled.',
+      'Strain into a chilled coupe or cocktail glass.',
+      'Garnish with a maraschino cherry. Serve immediately.',
+      'Suggestions (not included):'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
+    id: 'BVRG_029',
+    name: 'Bee\'s Knees',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 471,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":194.0,"pro":0.1,"fat":0.1,"carb":19.0,"fib":0.1,"h2o":67.3,"sug":18.0,"perServing":{"cal":194.0,"pro":0.1,"fat":0.1,"carb":19.0,"fib":0.1,"h2o":67.3,"sug":18.0,"AddedSugars":17.4,"IntrinsicSugars":0.6},"micros":{"vitaminA":0.0,"vitaminC":8.24,"vitaminD":0.0,"vitaminE":0.03,"vitaminK":0.0,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.01,"niacin":0.04,"folate":4.61,"calcium":2.69,"iron":0.1,"magnesium":1.74,"phosphorus":2.49,"potassium":32.2,"sodium":1.3,"zinc":0.06,"copper":0.01,"selenium":0.18,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":104.6,"servings":1,"per100g":{"Energy_KCal":185.5,"Water":64.33,"Protein":0.13,"TotalLipidFat":0.05,"Carbohydrate":18.15,"FiberTotalDietary":0.1,"SugarsTotal":17.17,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.21,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.03,"VitaminK_phylloquinone":0.0,"VitaminC_totalAscorbicAcid":8.24,"Thiamin":0.0,"Riboflavin":0.01,"Niacin":0.04,"PantothenicAcid":0.04,"VitaminB6":0.01,"Folate_total":4.61,"Folate_food":4.61,"Folate_DFE":4.61,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":1.52,"Betaine":0.34,"LuteinZeaxanthin":3.15,"Lycopene":0.0,"Calcium_Ca":2.69,"Iron_Fe":0.1,"Magnesium_Mg":1.74,"Phosphorus_P":2.49,"Potassium_K":32.2,"Sodium_Na":1.3,"Zinc_Zn":0.06,"Copper_Cu":0.01,"Manganese_Mn":0.02,"Selenium_Se":0.18,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.02,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":16.64,"IntrinsicSugars":0.53},"addedSugars":17.4,"intrinsicSugars":0.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14759","name":"Alcoholic beverage, gin, London dry, 80 proof","grams":54.0},{"ndb":"9152","name":"Lemon juice, raw","grams":22.0},{"ndb":"19296","name":"Honey","grams":21.2},{"ndb":"14411","name":"Water, tap, drinking","grams":7.4}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"1.0","cooking_method":"1.0","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":104.6,"raw_water_grams":67.29,"raw_fat_grams":0.05,"raw_protein_grams":0.14,"raw_carb_grams":18.99,"final_grams":104.6}],"cookingMethod":"1.0"},
+    recipeIngredients: [
+      { name: 'Bee\'s Knees', quantity: 'custom (g)', foodWord: 'BEESKNEES', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'London Dry Gin', quantity: '2 oz', section: 'cocktail', ndbNo: '14759', portionDesc: 'g', portionGrams: 54.0 },
+      { name: 'lemon juice', quantity: '¾ oz', section: 'cocktail', ndbNo: '9152', portionDesc: 'g', portionGrams: 22.0 },
+      { name: 'honey', quantity: '½ oz', section: 'cocktail', ndbNo: '19296', portionDesc: 'g', portionGrams: 21.2 },
+      { name: 'water', quantity: '¼ oz', section: 'cocktail', ndbNo: '14411', portionDesc: 'g', portionGrams: 7.4 }
+    ],
+    recipeInstructions: [
+      'Make the honey syrup: combine the honey and warm water in a small jar and stir until fully dissolved. Let cool to room temperature.',
+      'Fill a cocktail shaker with ice.',
+      'Add the gin, lemon juice, and honey syrup.',
+      'Shake vigorously for 10–15 seconds until well chilled.',
+      'Strain into a chilled coupe or cocktail glass.',
+      'Garnish with a lemon twist. Serve immediately.',
+      'Suggestions (not included):'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
+    id: 'BVRG_030',
+    name: 'Bellini',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 472,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":96.0,"pro":0.3,"fat":0.0,"carb":6.1,"fib":0.6,"h2o":134.8,"sug":5.0,"perServing":{"cal":96.0,"pro":0.3,"fat":0.0,"carb":6.1,"fib":0.6,"h2o":134.8,"sug":5.0,"AddedSugars":4.1,"IntrinsicSugars":0.9},"micros":{"vitaminA":0.0,"vitaminC":0.0,"vitaminD":0.0,"vitaminE":0.0,"vitaminK":0.0,"vitaminB6":0.0,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.0,"niacin":0.0,"folate":0.0,"calcium":0.0,"iron":0.0,"magnesium":0.0,"phosphorus":0.0,"potassium":0.0,"sodium":0.0,"zinc":0.0,"copper":0.0,"selenium":0.0,"cholesterol":0.0,"saturatedFat":0.0,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":151.0,"servings":1,"per100g":{"Energy_KCal":63.54,"Water":89.27,"Protein":0.17,"TotalLipidFat":0.0,"Carbohydrate":4.03,"FiberTotalDietary":0.42,"SugarsTotal":3.3,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.0,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.0,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.0,"VitaminK_phylloquinone":0.0,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.0,"Riboflavin":0.0,"Niacin":0.0,"PantothenicAcid":0.0,"VitaminB6":0.0,"Folate_total":0.0,"Folate_food":0.0,"Folate_DFE":0.0,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":0.0,"Betaine":0.0,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":0.0,"Iron_Fe":0.0,"Magnesium_Mg":0.0,"Phosphorus_P":0.0,"Potassium_K":0.0,"Sodium_Na":0.0,"Zinc_Zn":0.0,"Copper_Cu":0.0,"Manganese_Mn":0.0,"Selenium_Se":0.0,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":2.7,"IntrinsicSugars":0.6},"addedSugars":4.1,"intrinsicSugars":0.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14795","name":"Alcoholic beverage, wine, sparkling, Prosecco, 11% ABV, brut","grams":100.0},{"ndb":"14776","name":"Puree, white peach, unsweetened","grams":51.0}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"1.0","cooking_method":"1.0","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":151.0,"raw_water_grams":134.8,"raw_fat_grams":0.0,"raw_protein_grams":0.26,"raw_carb_grams":6.09,"final_grams":151.0}],"cookingMethod":"1.0"},
+    recipeIngredients: [
+      { name: 'Bellini', quantity: 'custom (g)', foodWord: 'BELLINI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Prosecco', quantity: '3½ oz', section: 'cocktail', ndbNo: '14795', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'White Peach Puree', quantity: '1¾ oz', section: 'cocktail', ndbNo: '14776', portionDesc: 'g', portionGrams: 51.0 }
+    ],
+    recipeInstructions: [
+      'Chill a Champagne flute in the freezer for at least 10 minutes.',
+      'Purée the white peach flesh in a blender until completely smooth. Pass through a fine sieve if desired for a silkier texture.',
+      'Spoon the peach purée into the chilled flute.',
+      'Slowly pour the chilled prosecco over the purée, tilting the glass to preserve the bubbles.',
+      'Gently stir once to combine. Serve immediately.',
+      'Suggestions (not included):'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
+    id: 'BVRG_031',
+    name: 'Between The Sheets',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 473,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":231.8,"pro":0.1,"fat":0.1,"carb":9.8,"fib":0.1,"h2o":69.8,"sug":8.8,"perServing":{"cal":231.8,"pro":0.1,"fat":0.1,"carb":9.8,"fib":0.1,"h2o":69.8,"sug":8.8,"AddedSugars":0.0,"IntrinsicSugars":8.8},"micros":{"vitaminA":0.0,"vitaminC":7.9,"vitaminD":0.0,"vitaminE":0.03,"vitaminK":0.0,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.0,"niacin":0.02,"folate":4.08,"calcium":1.22,"iron":0.02,"magnesium":1.22,"phosphorus":1.63,"potassium":21.02,"sodium":0.2,"zinc":0.01,"copper":0.0,"selenium":0.02,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":107.8,"servings":1,"per100g":{"Energy_KCal":215.07,"Water":64.71,"Protein":0.07,"TotalLipidFat":0.05,"Carbohydrate":9.1,"FiberTotalDietary":0.06,"SugarsTotal":8.2,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.2,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.03,"VitaminK_phylloquinone":0.0,"VitaminC_totalAscorbicAcid":7.9,"Thiamin":0.0,"Riboflavin":0.0,"Niacin":0.02,"PantothenicAcid":0.03,"VitaminB6":0.01,"Folate_total":4.08,"Folate_food":4.08,"Folate_DFE":4.08,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":1.04,"Betaine":0.0,"LuteinZeaxanthin":3.06,"Lycopene":0.0,"Calcium_Ca":1.22,"Iron_Fe":0.02,"Magnesium_Mg":1.22,"Phosphorus_P":1.63,"Potassium_K":21.02,"Sodium_Na":0.2,"Zinc_Zn":0.01,"Copper_Cu":0.0,"Manganese_Mn":0.0,"Selenium_Se":0.02,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":8.2},"addedSugars":0.0,"intrinsicSugars":8.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14743","name":"Alcoholic beverage, distilled, cognac, VS/VSOP, 80 proof","grams":27.8},{"ndb":"14798","name":"Alcoholic beverage, distilled, rum, light (white), 80 proof","grams":27.8},{"ndb":"14700","name":"Alcoholic beverage, liqueur, triple sec, orange, 80 proof","grams":30.2},{"ndb":"9152","name":"Lemon juice, raw","grams":22.0}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"1.0","cooking_method":"1.0","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":107.8,"raw_water_grams":69.75,"raw_fat_grams":0.05,"raw_protein_grams":0.08,"raw_carb_grams":9.81,"final_grams":107.8}],"cookingMethod":"1.0"},
+    recipeIngredients: [
+      { name: 'Between The Sheets', quantity: 'custom (g)', foodWord: 'BETWEENTHESHEETS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'cognac', quantity: '1 oz', section: 'cocktail', ndbNo: '14743', portionDesc: 'g', portionGrams: 27.8 },
+      { name: 'light rum', quantity: '1 oz', section: 'cocktail', ndbNo: '14798', portionDesc: 'g', portionGrams: 27.8 },
+      { name: 'triple sec', quantity: '1 oz', section: 'cocktail', ndbNo: '14700', portionDesc: 'g', portionGrams: 30.2 },
+      { name: 'lemon juice', quantity: '¾ oz', section: 'cocktail', ndbNo: '9152', portionDesc: 'g', portionGrams: 22.0 }
+    ],
+    recipeInstructions: [
+      'Fill a cocktail shaker with ice.',
+      'Add the cognac, light rum, triple sec, and lemon juice.',
+      'Shake vigorously for 10–15 seconds until well chilled.',
+      'Strain into a chilled coupe glass.',
+      'Garnish with a lemon twist. Serve immediately.',
+      'Suggestions (not included):'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
+    id: 'BVRG_032',
+    name: 'Black Russian',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 474,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":201.0,"pro":0.0,"fat":0.0,"carb":11.6,"fib":0.0,"h2o":53.9,"sug":11.6,"perServing":{"cal":201.0,"pro":0.0,"fat":0.0,"carb":11.6,"fib":0.0,"h2o":53.9,"sug":11.6,"AddedSugars":0.0,"IntrinsicSugars":11.6},"micros":{"vitaminA":0.0,"vitaminC":0.0,"vitaminD":0.0,"vitaminE":0.0,"vitaminK":0.0,"vitaminB6":0.0,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.0,"niacin":0.0,"folate":0.0,"calcium":0.0,"iron":0.01,"magnesium":0.0,"phosphorus":3.16,"potassium":0.63,"sodium":0.63,"zinc":0.0,"copper":0.01,"selenium":0.0,"cholesterol":0.0,"saturatedFat":0.0,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":87.8,"servings":1,"per100g":{"Energy_KCal":228.8,"Water":61.35,"Protein":0.0,"TotalLipidFat":0.0,"Carbohydrate":13.25,"FiberTotalDietary":0.0,"SugarsTotal":13.25,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.0,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.0,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.0,"VitaminK_phylloquinone":0.0,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.0,"Riboflavin":0.0,"Niacin":0.0,"PantothenicAcid":0.0,"VitaminB6":0.0,"Folate_total":0.0,"Folate_food":0.0,"Folate_DFE":0.0,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":0.0,"Betaine":0.0,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":0.0,"Iron_Fe":0.01,"Magnesium_Mg":0.0,"Phosphorus_P":3.16,"Potassium_K":0.63,"Sodium_Na":0.63,"Zinc_Zn":0.0,"Copper_Cu":0.01,"Manganese_Mn":0.0,"Selenium_Se":0.0,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":13.25},"addedSugars":0.0,"intrinsicSugars":11.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14051","name":"Alcoholic beverage, distilled, vodka, 80 proof","grams":55.6},{"ndb":"14736","name":"Alcoholic beverage, liqueur, coffee, Kahlua Original, 32 proof","grams":32.2}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"1.0","cooking_method":"1.0","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":87.84,"raw_water_grams":53.89,"raw_fat_grams":0.0,"raw_protein_grams":0.0,"raw_carb_grams":11.64,"final_grams":87.84}],"cookingMethod":"1.0"},
+    recipeIngredients: [
+      { name: 'Black Russian', quantity: 'custom (g)', foodWord: 'BLACKRUSSIAN', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Vodka', quantity: '2 fl oz', section: 'cocktail', ndbNo: '14051', portionDesc: 'g', portionGrams: 55.6 },
+      { name: 'coffee liqueur (Kahlúa)', quantity: '1 fl oz', section: 'cocktail', ndbNo: '14736', portionDesc: 'g', portionGrams: 32.24 }
+    ],
+    recipeInstructions: [
+      'Fill a rocks glass with ice.',
+      'Pour the vodka over the ice.',
+      'Add the coffee liqueur.',
+      'Stir gently to combine. Serve immediately.',
+      'Suggestions (not included):'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
+    id: 'BVRG_033',
+    name: 'Bloody Mary',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 475,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":122.2,"pro":1.0,"fat":0.5,"carb":5.7,"fib":0.7,"h2o":134.4,"sug":3.4,"perServing":{"cal":122.2,"pro":1.0,"fat":0.5,"carb":5.7,"fib":0.7,"h2o":134.4,"sug":3.4,"AddedSugars":0.0,"IntrinsicSugars":3.4},"micros":{"vitaminA":14.02,"vitaminC":45.18,"vitaminD":0.0,"vitaminE":0.21,"vitaminK":1.7,"vitaminB6":0.05,"vitaminB12":0.0,"thiamin":0.06,"riboflavin":0.05,"niacin":0.43,"folate":15.45,"calcium":16.44,"iron":0.5,"magnesium":9.8,"phosphorus":17.2,"potassium":163.69,"sodium":279.12,"zinc":0.12,"copper":0.04,"selenium":0.45,"cholesterol":0.0,"saturatedFat":0.02,"monoFat":0.06,"polyFat":0.04,"omega3":0.0,"omega6":0.01},"gramsPerServing":157.2,"servings":1,"per100g":{"Energy_KCal":77.76,"Water":85.51,"Protein":0.65,"TotalLipidFat":0.3,"Carbohydrate":3.62,"FiberTotalDietary":0.45,"SugarsTotal":2.15,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.02,"FattyAcids_totalMonounsaturated":0.06,"FattyAcids_totalPolyunsaturated":0.04,"LinoleicAcid":0.01,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":14.02,"Retinol":0.02,"Carotene_beta":164.13,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.21,"VitaminK_phylloquinone":1.7,"VitaminC_totalAscorbicAcid":45.18,"Thiamin":0.06,"Riboflavin":0.05,"Niacin":0.43,"PantothenicAcid":0.02,"VitaminB6":0.05,"Folate_total":15.45,"Folate_food":15.44,"Folate_DFE":15.45,"FolicAcid":0.01,"VitaminB12":0.0,"Choline_total":4.76,"Betaine":0.02,"LuteinZeaxanthin":38.04,"Lycopene":5208.39,"Calcium_Ca":16.44,"Iron_Fe":0.5,"Magnesium_Mg":9.8,"Phosphorus_P":17.2,"Potassium_K":163.69,"Sodium_Na":279.12,"Zinc_Zn":0.12,"Copper_Cu":0.04,"Manganese_Mn":0.09,"Selenium_Se":0.45,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.01,"AddedSugars":0.0,"IntrinsicSugars":2.15},"addedSugars":0.0,"intrinsicSugars":3.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14051","name":"Alcoholic beverage, distilled, vodka, 80 proof","grams":41.7},{"ndb":"11540","name":"Tomato juice, canned, with salt added","grams":90.6},{"ndb":"9152","name":"Lemon juice, raw","grams":15.0},{"ndb":"6971","name":"Sauce, worcestershire","grams":2.5},{"ndb":"6169","name":"Sauce, ready-to-serve, pepper, TABASCO","grams":1.2},{"ndb":"2055","name":"Horseradish, prepared","grams":5.0},{"ndb":"2007","name":"Spices, celery seed","grams":0.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":0.4}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"1.0","cooking_method":"1.0","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":157.2,"raw_water_grams":134.43,"raw_fat_grams":0.48,"raw_protein_grams":1.02,"raw_carb_grams":5.69,"final_grams":157.2}],"cookingMethod":"1.0"},
+    recipeIngredients: [
+      { name: 'Bloody Mary', quantity: 'custom (g)', foodWord: 'BLOODYMARY', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Vodka', quantity: '1½ fl oz', section: 'cocktail', ndbNo: '14051', portionDesc: 'g', portionGrams: 41.7 },
+      { name: 'tomato juice', quantity: '3 fl oz', section: 'cocktail', ndbNo: '11540', portionDesc: 'g', portionGrams: 90.6 },
+      { name: 'lemon juice', quantity: '1 tbsp', section: 'cocktail', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'Worcestershire sauce', quantity: '½ tsp', section: 'cocktail', ndbNo: '6971', portionDesc: 'g', portionGrams: 2.5 },
+      { name: 'Hot sauce (Tabasco)', quantity: '3 dashes', section: 'cocktail', ndbNo: '6169', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'prepared horseradish', quantity: '1 tsp', section: 'cocktail', ndbNo: '2055', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'Celery seed', quantity: '¼ tsp', section: 'cocktail', ndbNo: '2007', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'ground black pepper', quantity: 'pinch', section: 'cocktail', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
+      { name: 'salt', quantity: 'pinch', section: 'cocktail', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.4 }
+    ],
+    recipeInstructions: [
+      'Fill a highball glass with ice.',
+      'Add the vodka, tomato juice, and lemon juice.',
+      'Add the Worcestershire sauce, hot sauce, horseradish, celery seed, salt, and black pepper.',
+      'Roll the drink by pouring back and forth between the glass and a shaker tin twice to combine.',
+      'Garnish with a celery stalk and lemon wedge. Serve immediately.',
+      'Suggestions (not included):'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
+  },
+  {
+    id: 'BVRG_034',
+    name: 'Boulevardier',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 476,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":190.1,"pro":0.0,"fat":0.0,"carb":8.4,"fib":0.0,"h2o":68.5,"sug":8.4,"perServing":{"cal":190.1,"pro":0.0,"fat":0.0,"carb":8.4,"fib":0.0,"h2o":68.5,"sug":8.4,"AddedSugars":0.0,"IntrinsicSugars":8.4},"micros":{"vitaminA":0.0,"vitaminC":0.0,"vitaminD":0.0,"vitaminE":0.0,"vitaminK":0.0,"vitaminB6":0.0,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.0,"niacin":0.0,"folate":0.0,"calcium":0.0,"iron":0.0,"magnesium":0.0,"phosphorus":0.0,"potassium":0.0,"sodium":0.0,"zinc":0.0,"copper":0.0,"selenium":0.0,"cholesterol":0.0,"saturatedFat":0.0,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":99.7,"servings":1,"per100g":{"Energy_KCal":190.62,"Water":68.71,"Protein":0.0,"TotalLipidFat":0.0,"Carbohydrate":8.4,"FiberTotalDietary":0.0,"SugarsTotal":8.4,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.0,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.0,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.0,"VitaminK_phylloquinone":0.0,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.0,"Riboflavin":0.0,"Niacin":0.0,"PantothenicAcid":0.0,"VitaminB6":0.0,"Folate_total":0.0,"Folate_food":0.0,"Folate_DFE":0.0,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":0.0,"Betaine":0.0,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":0.0,"Iron_Fe":0.0,"Magnesium_Mg":0.0,"Phosphorus_P":0.0,"Potassium_K":0.0,"Sodium_Na":0.0,"Zinc_Zn":0.0,"Copper_Cu":0.0,"Manganese_Mn":0.0,"Selenium_Se":0.0,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":8.4},"addedSugars":0.0,"intrinsicSugars":8.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14738","name":"Alcoholic beverage, distilled, bourbon whiskey, 80 proof","grams":40.5},{"ndb":"14701","name":"Alcoholic beverage, wine, vermouth, sweet","grams":29.6},{"ndb":"14703","name":"Alcoholic beverage, campari bitters, 48 proof","grams":29.6}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"1.0","cooking_method":"1.0","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":99.7,"raw_water_grams":68.5,"raw_fat_grams":0.0,"raw_protein_grams":0.0,"raw_carb_grams":8.37,"final_grams":99.7}],"cookingMethod":"1.0"},
+    recipeIngredients: [
+      { name: 'Boulevardier', quantity: 'custom (g)', foodWord: 'BOULEVARDIER', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'bourbon', quantity: '1½ fl oz bourbon or rye whiskey', section: 'cocktail', ndbNo: '14738', portionDesc: 'g', portionGrams: 40.5 },
+      { name: 'sweet vermouth', quantity: '1 fl oz', section: 'cocktail', ndbNo: '14701', portionDesc: 'g', portionGrams: 29.6 },
+      { name: 'Campari', quantity: '1 fl oz', section: 'cocktail', ndbNo: '14703', portionDesc: 'g', portionGrams: 29.6 }
+    ],
+    recipeInstructions: [
+      'Fill a mixing glass with ice.',
+      'Add the bourbon or rye whiskey, sweet vermouth, and Campari.',
+      'Stir for 30 seconds until well chilled.',
+      'Strain into a chilled coupe glass, or into a rocks glass over a large ice cube.',
+      'Garnish with an orange peel, expressed and discarded, or a maraschino cherry.',
+      'Suggestions (not included):'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   }
 ];
