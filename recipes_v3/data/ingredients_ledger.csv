@@ -522,3 +522,4 @@ peach_schnapps_99,14800,PEACHSCHNAPPS99,"Alcoholic beverage, liqueur, peach schn
 simple_syrup,14801,SIMPLESYRUP,"Cocktail mixer, simple syrup, 1:1 sugar-water",simple syrup,fl oz,35.0,Custom NDB 14801; 1:1 sugar:water by weight; 200 kcal/100g; 50g carbs; density ~1.18 g/mL 2026-06-25
 orange_bitters,14802,ORANGEBITTERS,,orange bitters,dash,0.9,,,,,,
 raspberry_syrup,14803,RASPBERRYSYRUP,,raspberry syrup,fl oz,35.0,,,,,,,
+rum_light,14050,RUM,"Alcoholic beverage, distilled, rum, 80 proof",rum,fl oz,27.8,SR Legacy; cocktail ingredient 2026-06-25
