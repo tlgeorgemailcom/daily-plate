@@ -23410,5 +23410,44 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_047',
+    name: 'Daiquiri',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 489,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":186.6,"pro":0.1,"fat":0.0,"carb":15.0,"fib":0.1,"h2o":70.6,"sug":13.5,"perServing":{"cal":186.6,"pro":0.1,"fat":0.0,"carb":15.0,"fib":0.1,"h2o":70.6,"sug":13.5,"AddedSugars":13.1,"IntrinsicSugars":0.4},"micros":{"vitaminA":0.43,"vitaminC":6.47,"vitaminD":0.0,"vitaminE":0.05,"vitaminK":0.13,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.01,"riboflavin":0.0,"niacin":0.03,"folate":2.16,"calcium":3.02,"iron":0.08,"magnesium":1.72,"phosphorus":5.68,"potassium":26.29,"sodium":0.96,"zinc":0.05,"copper":0.03,"selenium":0.02,"cholesterol":0.0,"saturatedFat":0.0,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":104.3,"servings":1,"per100g":{"Energy_KCal":178.78,"Water":67.64,"Protein":0.09,"TotalLipidFat":0.02,"Carbohydrate":14.39,"FiberTotalDietary":0.09,"SugarsTotal":12.94,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.0,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.43,"Retinol":0.0,"Carotene_beta":6.47,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.05,"VitaminK_phylloquinone":0.13,"VitaminC_totalAscorbicAcid":6.47,"Thiamin":0.01,"Riboflavin":0.0,"Niacin":0.03,"PantothenicAcid":0.03,"VitaminB6":0.01,"Folate_total":2.16,"Folate_food":2.16,"Folate_DFE":2.16,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":1.1,"Betaine":0.04,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":3.02,"Iron_Fe":0.08,"Magnesium_Mg":1.72,"Phosphorus_P":5.68,"Potassium_K":26.29,"Sodium_Na":0.96,"Zinc_Zn":0.05,"Copper_Cu":0.03,"Manganese_Mn":0.01,"Selenium_Se":0.02,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.02,"GlutamicAcid":0.01,"Glycine":0.0,"Proline":0.01,"Serine":0.01,"omega3":0.0,"omega6":0.0,"AddedSugars":12.58,"IntrinsicSugars":0.36},"addedSugars":13.1,"intrinsicSugars":0.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14050","name":"Alcoholic beverage, distilled, rum, 80 proof","grams":55.6},{"ndb":"9160","name":"Lime juice, raw","grams":22.5},{"ndb":"14801","name":"Cocktail mixer, simple syrup, 1:1 sugar-water","grams":26.2}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"1.0","cooking_method":"1.0","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":104.35,"raw_water_grams":70.58,"raw_fat_grams":0.02,"raw_protein_grams":0.09,"raw_carb_grams":15.02,"final_grams":104.35}],"cookingMethod":"1.0"},
+    recipeIngredients: [
+      { name: 'Daiquiri', quantity: 'custom (g)', foodWord: 'DAIQUIRI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'rum', quantity: '2 fl oz', section: 'cocktail', ndbNo: '14050', portionDesc: 'g', portionGrams: 55.6 },
+      { name: 'lime juice', quantity: '¾ fl oz', section: 'cocktail', ndbNo: '9160', portionDesc: 'g', portionGrams: 22.5 },
+      { name: 'simple syrup', quantity: '¾ fl oz', section: 'cocktail', ndbNo: '14801', portionDesc: 'g', portionGrams: 26.25 }
+    ],
+    recipeInstructions: [
+      'Fill a cocktail shaker with ice.',
+      'Add the white rum, lime juice, and simple syrup.',
+      'Shake vigorously until well chilled, about 15 seconds.',
+      'Strain into a chilled coupe or cocktail glass.',
+      'Garnish with a lime wheel and serve immediately.',
+      'Suggestions (not included):'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
