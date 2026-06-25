@@ -57807,6 +57807,29 @@ export const FOODS: Food[] = [
     "h2o": 68.03,
     "sug": 22.94,
     "portions": []
+  },
+  {
+    "word": "FRANGELICO",
+    "display": "Frangelico",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14806",
+    "desc": "Alcoholic beverage, liqueur, hazelnut, Frangelico, 40 proof",
+    "cal": 311.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 23.3,
+    "fib": 0.0,
+    "h2o": 55.0,
+    "sug": 23.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.0
+      }
+    ]
   }
 ];
 
