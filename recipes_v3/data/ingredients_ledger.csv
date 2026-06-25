@@ -523,3 +523,4 @@ simple_syrup,14801,SIMPLESYRUP,"Cocktail mixer, simple syrup, 1:1 sugar-water",s
 orange_bitters,14802,ORANGEBITTERS,,orange bitters,dash,0.9,,,,,,
 raspberry_syrup,14803,RASPBERRYSYRUP,,raspberry syrup,fl oz,35.0,,,,,,,
 rum_light,14050,RUM,"Alcoholic beverage, distilled, rum, 80 proof",rum,fl oz,27.8,SR Legacy; cocktail ingredient 2026-06-25
+rum_dark,14050,RUM,"Alcoholic beverage, distilled, rum, 80 proof",dark rum,fl oz,27.8,SR Legacy NDB 14050 (80 proof; same macros as light rum); cocktail ingredient 2026-06-25
