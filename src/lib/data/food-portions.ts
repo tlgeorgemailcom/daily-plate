@@ -57545,6 +57545,144 @@ export const FOODS: Food[] = [
         "gm": 100.0
       }
     ]
+  },
+  {
+    "word": "PROSECCO",
+    "display": "Prosecco",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14795",
+    "desc": "Alcoholic beverage, wine, sparkling, Prosecco, 11% ABV, brut",
+    "cal": 73.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 1.5,
+    "fib": 0.0,
+    "h2o": 88.9,
+    "sug": 0.9,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 29.4
+      }
+    ]
+  },
+  {
+    "word": "CREMEMENTHEWHITE",
+    "display": "White Cr\u00e8me de Menthe",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14796",
+    "desc": "Alcoholic beverage, creme de menthe, white (clear), 72 proof",
+    "cal": 426.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 45.1,
+    "fib": 0.0,
+    "h2o": 19.8,
+    "sug": 44.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.5
+      }
+    ]
+  },
+  {
+    "word": "CREMEDECACAOWHITE",
+    "display": "White Cr\u00e8me de Cacao",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14797",
+    "desc": "Alcoholic beverage, liqueur, creme de cacao, white, 50 proof",
+    "cal": 222.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 26.4,
+    "fib": 0.0,
+    "h2o": 57.0,
+    "sug": 26.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 31.6
+      }
+    ]
+  },
+  {
+    "word": "LIGHTRUM",
+    "display": "Light Rum",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14798",
+    "desc": "Alcoholic beverage, distilled, rum, light (white), 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.8
+      }
+    ]
+  },
+  {
+    "word": "PEACHSCHNAPPS",
+    "display": "Peach Schnapps",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14799",
+    "desc": "Alcoholic beverage, liqueur, peach schnapps, 30 proof",
+    "cal": 217.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 34.0,
+    "fib": 0.0,
+    "h2o": 54.5,
+    "sug": 34.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.0
+      }
+    ]
+  },
+  {
+    "word": "PEACHSCHNAPPS99",
+    "display": "Peach Schnapps (99 Proof)",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14800",
+    "desc": "Alcoholic beverage, liqueur, peach schnapps, high-proof, 99 proof",
+    "cal": 390.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 44.3,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 26.5
+      }
+    ]
   }
 ];
 

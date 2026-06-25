@@ -413,7 +413,7 @@ gin_90proof,14049,GIN,"Alcoholic beverage, distilled, gin, 90 proof",gin,fl oz,2
 rum_80proof,14050,RUM,"Alcoholic beverage, distilled, rum, 80 proof",rum,fl oz,27.8,SR Legacy; cocktail ingredient 2026-06-24
 whiskey_86proof,14052,WHISKEY86,"Alcoholic beverage, distilled, whiskey, 86 proof",whiskey,fl oz,27.8,SR Legacy; cocktail ingredient 2026-06-24
 creme_de_menthe,14034,CREMEMENTHE,"Alcoholic beverage, creme de menthe, 72 proof",crème de menthe,fl oz,30.5,SR Legacy; cocktail ingredient 2026-06-24
-coffee_liqueur,14736,COFFEELIQUEUR,"Alcoholic beverage, liqueur, coffee, Kahlua Original, 32 proof",coffee liqueur (Kahlúa EU),fl oz,29.57,custom NDB 14736; Kahlua EU 16% ABV 2026-06-24
+coffee_liqueur,14736,COFFEELIQUEUR,"Alcoholic beverage, liqueur, coffee, Kahlua Original, 32 proof",coffee liqueur (Kahlúa),fl oz,32.24,custom NDB 14736; Kahlua Original 16% ABV; corrected 2026-06-25
 coffee_cream_liqueur,14415,COFFEECREAMLIQUEUR,"Alcoholic beverage, liqueur, coffee with cream, 34 proof",Irish cream liqueur (Baileys),fl oz,30.8,SR Legacy; cocktail ingredient 2026-06-24
 triple_sec,14700,TRIPLESEC,"Alcoholic beverage, liqueur, triple sec, orange, 80 proof",triple sec,fl oz,30.2,Custom NDB 14700–14732 inserted 2026-06-24
 sweet_vermouth,14701,SWEETVERMOUTH,"Alcoholic beverage, wine, vermouth, sweet",sweet vermouth,fl oz,31.0,Custom NDB 14700–14732 inserted 2026-06-24
@@ -457,7 +457,7 @@ scotch_whisky,14740,SCOTCH,"Alcoholic beverage, distilled, Scotch whisky, blende
 rye_whiskey,14739,RYEWHISKEY,"Alcoholic beverage, distilled, rye whiskey, 80 proof",rye whiskey,fl oz,27.8,80-proof named NDB; was proxy 14052 2026-06-24
 bourbon,14738,BOURBON,"Alcoholic beverage, distilled, bourbon whiskey, 80 proof",bourbon,fl oz,27.8,80-proof named NDB; was proxy 14052 2026-06-24
 dark_rum,14748,DARKRUM,"Alcoholic beverage, distilled, rum, dark, aged, 80 proof",dark rum,fl oz,27.8,named NDB; was proxy 14050 2026-06-24
-light_rum,14050,RUM,"Alcoholic beverage, distilled, rum, 80 proof",light rum,fl oz,27.8,cocktail ingredient; proxy NDB 14050 2026-06-24
+light_rum,14798,LIGHTRUM,"Alcoholic beverage, distilled, rum, light (white), 80 proof",light rum,fl oz,27.8,new NDB 14798; light rum 80 proof 2026-06-25
 sparkling_wine,14733,SPARKLINGWINE,"Alcoholic beverage, wine, sparkling, brut (champagne, prosecco)",sparkling wine,fl oz,29.4,custom NDB 14733; 12% ABV brut champagne/prosecco 2026-06-24
 ginger_beer,14734,GINGERBEER,"Beverages, carbonated, ginger beer, non-alcoholic",ginger beer,fl oz,30.8,custom NDB 14734; non-alcoholic ginger beer (Fever-Tree) 2026-06-24
 tonic_water,14155,TONICWATER,"Beverages, Carbonated beverage, tonic water",tonic water,fl oz,30.2,SR Legacy; cocktail ingredient 2026-06-24
@@ -492,9 +492,9 @@ rhum_agricole_blanc,14769,RHUMAGRICOLE,"Alcoholic beverage, rhum agricole, blanc
 overproof_jamaican_rum,14770,OVERPROOFJAMAICANRUM,"Alcoholic beverage, rum, overproof, Jamaican, 126 proof",Overproof Jamaican Rum,fl oz,27.0,new named NDB 126 proof 2026-06-24
 cointreau,14771,COINTREAU,"Alcoholic beverage, Cointreau, triple sec, orange liqueur, 80 proof",Cointreau (Triple Sec),fl oz,27.0,"label: 95 kcal/oz, 7.1g C/oz, 40% ABV 2026-06-24"
 amontillado_sherry,14772,AMONTILLADO,"Alcoholic beverage, wine, sherry, Amontillado, dry, 40 proof",Amontillado Sherry,fl oz,27.0,"label: 136 kcal/100ml, 15-22% ABV, dry; using 20% ABV 2026-06-24"
-creme_de_menthe_white,14034,CREMEMENTHE,"Alcoholic beverage, creme de menthe, 72 proof",White Crème de Menthe,fl oz,27.0,"alias to SR Legacy NDB 14034 (72 proof, E=371); white=green same nutrition"
-creme_de_cacao_white,14715,CREMEDECACAO,"Alcoholic beverage, liqueur, creme de cacao, 50 proof",White Crème de Cacao,fl oz,27.0,"alias to NDB 14715 (50 proof, E=286); user label 15-24% ABV within range"
-peach_schnapps,14711,PEACHLIQUEUR,"Alcoholic beverage, liqueur, peach, 40 proof",Peach Schnapps,fl oz,27.0,"alias to NDB 14711 (40 proof, E=235); user label 15-24% ABV within range"
+creme_de_menthe_white,14796,CREMEMENTHEWHITE,"Alcoholic beverage, creme de menthe, white (clear), 72 proof",White Crème de Menthe,fl oz,30.5,new NDB 14796; white creme de menthe 72 proof 2026-06-25
+creme_de_cacao_white,14797,CREMEDECACAOWHITE,"Alcoholic beverage, liqueur, creme de cacao, white, 50 proof",White Crème de Cacao,fl oz,31.6,new NDB 14797; white creme de cacao 50 proof 2026-06-25
+peach_schnapps,14799,PEACHSCHNAPPS,"Alcoholic beverage, liqueur, peach schnapps, 30 proof",Peach Schnapps,fl oz,27.0,new NDB 14799; 30 proof DeKuyper peach schnapps 2026-06-25
 demerara_syrup,14773,DEMERARA,"Syrup, demerara sugar, cocktail mixer",Demerara Syrup,fl oz,30.0,"label: 41 kcal/tbsp, 11g C/tbsp → 1:1 simple syrup from demerara sugar 2026-06-24"
 elderflower_cordial,14774,ELDERFLOWERCORDIAL,"Cordial, elderflower, non-alcoholic, undiluted",Elderflower Cordial,fl oz,30.0,non-alcoholic undiluted concentrate; user data 17-45 kcal/100ml diluted → undiluted ~215 2026-06-24
 chamomile_cordial,14775,CHAMOMILECORDIAL,"Cordial, chamomile, non-alcoholic, botanical",Chamomile Cordial,fl oz,30.0,label: 30-60 kcal/fl oz midpoint 45 → 152 kcal/100ml; 8-15g C/fl oz midpoint → 38g/100ml 2026-06-24
@@ -508,7 +508,7 @@ raspberry_liqueur,14783,RASPBERRYLIQUEUR,"Alcoholic beverage, liqueur, raspberry
 espadin_mezcal,14784,ESPADINMEZCAL,"Alcoholic beverage, distilled, mezcal, espadin agave, 80 proof",Espadin Mezcal,ml,1,
 palo_cortado,14785,PALOCORTADO,"Alcoholic beverage, wine, sherry, palo cortado, dry, 40 proof",Palo Cortado Sherry,ml,1,
 martinique_molasses_rhum,14786,MARTINIQUERHUM,"Alcoholic beverage, distilled, rhum, Martinique, molasses, 80 proof",Martinique Molasses Rhum,ml,1,
-vodka,14037,VODKA,"Alcoholic beverage, distilled, all (gin, rum, vodka, whiskey) 80 proof",Vodka,ml,1,
+vodka,14051,VODKA,"Alcoholic beverage, distilled, vodka, 80 proof",Vodka,fl oz,27.8,
 smirnoff_vodka,14787,VODKASMIRNOFF,"Alcoholic beverage, vodka, Smirnoff, 80 proof",Smirnoff Vodka,ml,1,
 red_wine,14794,REDWINE,"Alcoholic beverage, wine, table, red, dry",Red Wine,ml,1,
 port_wine,14788,PORTWINE,"Alcoholic beverage, wine, port, tawny, red, 20 proof",Red Tawny Port Wine,ml,1,
@@ -517,3 +517,5 @@ maraschino,14790,MARASCHINO,"Alcoholic beverage, liqueur, maraschino, Luxardo, c
 creme_de_mure,14791,CREMEDMURE,"Alcoholic beverage, liqueur, blackberry, creme de mure, 36 proof",Crème de Mûre,ml,1,
 orgeat_syrup,14792,ORGEATYRUP,"Beverage, syrup, orgeat, almond syrup, non-alcoholic",Orgeat Syrup,ml,1,
 passion_fruit_liqueur,14793,PASSIONFRUITLEUR,"Alcoholic beverage, liqueur, passoa, passion fruit, 34 proof",Passion Fruit Liqueur,ml,1,
+prosecco,14795,PROSECCO,"Alcoholic beverage, wine, sparkling, Prosecco, 11% ABV, brut",Prosecco,fl oz,29.4,new NDB 14795; Prosecco brut sparkling wine 2026-06-25
+peach_schnapps_99,14800,PEACHSCHNAPPS99,"Alcoholic beverage, liqueur, peach schnapps, high-proof, 99 proof",Peach Schnapps (99 Proof),fl oz,26.5,new NDB 14800; 99-proof peach schnapps 0g carbs 2026-06-25

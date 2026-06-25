@@ -82,134 +82,134 @@ Arnold Palmer
 ---
 
 ### Alcoholic
-Alcohol Alexander
-Alcohol Americano
-Alcohol Angel Face
-Alcohol Aperol Spritz
-Alcohol Aviation
-Alcohol Bee's Knees
-Alcohol Bellini
-Alcohol Between The Sheets
-Alcohol Black Russian
-Alcohol Bloody Mary
-Alcohol Boulevardier
-Alcohol Bramble
-Alcohol Brandy Crusta
-Alcohol Caipirinha
-Alcohol Casino
-Alcohol Cardinale
-Alcohol Champagne Cocktail
-Alcohol Chartreuse Swizzle
-Alcohol Cosmopolitan
-Alcohol Corpse Reviver #2
-Alcohol Clover Club
-Alcohol Cuba Libre
-Alcohol Dark and Stormy
-Alcohol Daiquiri
-Alcohol Dirty Martini
-Alcohol Don's Special Daiquiri
-Alcohol Fernandito
-Alcohol El Pepino
-Alcohol Espresso Martini
-Alcohol French 75
-Alcohol French Connection
-Alcohol French Martini
-Alcohol Frozen Strawberry Margarita
-Alcohol Garibaldi
-Alcohol Gimlet
-Alcohol Gin and Tonic
-Alcohol Gin Basil Smash
-Alcohol Gin Fizz
-Alcohol Gin Rickey
-Alcohol Gold Rush
-Alcohol Grand Margarita
-Alcohol Grasshopper
-Alcohol Hanky Panky
-Alcohol Hemingway Special
-Alcohol Horse's Neck
-Alcohol Hot Toddy
-Alcohol Iba Tiki
-Alcohol Illegal
-Alcohol Irish Coffee
-Alcohol John Collins
-Alcohol Jungle Bird
-Alcohol Kir
-Alcohol Kir Royale
-Alcohol Last Word
-Alcohol Lemon Drop Martini
-Alcohol Long Island Iced Tea
-Alcohol Mai Tai
-Alcohol Manhattan
-Alcohol Margarita
-Alcohol Martinez
-Alcohol Mary Pickford
-Alcohol Mezcal Last Word
-Alcohol Michelada
-Alcohol Mimosa
-Alcohol Mint Julep
-Alcohol Missonary's Downfall
-Alcohol Mojito
-Alcohol Monkey Gland
-Alcohol Moscow Mule
-Alcohol Mudslide
-Alcohol Mulled Wine
-Alcohol Naked & Famous
-Alcohol Negroni
-Alcohol New York Sour
-Alcohol Oaxacanite
-Alcohol Old cuban
-Alcohol Old Fashioned
-Alcohol Paloma
-Alcohol Paper Plane
-Alcohol Paradise
-Alcohol Penicillin
-Alcohol Piña Colada
-Alcohol Pimm's Cup
-Alcohol Pisco Punch
-Alcohol Pisco Sour
-Alcohol Planters Punch
-Alcohol Porn Star Martini
-Alcohol Porto Flip
-Alcohol Remember the Maine
-Alcohol Ramos fizz
-Alcohol Rosita
-Alcohol Rum Punch
-Alcohol Rum Runner
-Alcohol Russian Spring Punch
-Alcohol Rusty Nail
-Alcohol Pabol de Galo
-Alcohol Sangria
-Alcohol Sangria, White
-Alcohol Sazerac
-Alcohol Screwdriver
-Alcohol Sea Breeze
-Alcohol Sex on the Beach
-Alcohol Shandy
-Alcohol Sherry Cobbler
-Alcohol Sidecar
-Alcohol singapore Sling
-Alcohol South Side
-Alcohol Spicy Fifty
-Alcohol Spiked Eggnog
-Alcohol Spiked Hot Cocoa
-Alcohol Spritz
-Alcohol Stinger
-Alcohol Strawberry Daiquiri
-Alcohol Suffering Bastard
-Alcohol TattleTale
-Alcohol Tequila Sunrise
-Alcohol Tipperary
-Alcohol Tommy's Margarita
-Alcohol Tom Collins
-Alcohol Three Dots and a Dash
-Alcohol Trindad Sour
-Alcohol Tuxedo
-Alcohol VE.N.TE
-Alcohol Vesper
-Alcohol Vieux Carre
-Alcohol Vodka Tonic
-Alcohol Whiskey Sour
-Alcohol White Russian
+Alexander
+Americano
+Angel Face
+Aperol Spritz
+Aviation
+Bee's Knees
+Bellini
+Between The Sheets
+Black Russian
+Bloody Mary
+Boulevardier
+Bramble
+Brandy Crusta
+Caipirinha
+Casino
+Cardinale
+Champagne Cocktail
+Chartreuse Swizzle
+Cosmopolitan
+Corpse Reviver #2
+Clover Club
+Cuba Libre
+Dark and Stormy
+Daiquiri
+Dirty Martini
+Don's Special Daiquiri
+Fernandito
+El Pepino
+Espresso Martini
+French 75
+French Connection
+French Martini
+Frozen Strawberry Margarita
+Garibaldi
+Gimlet
+Gin and Tonic
+Gin Basil Smash
+Gin Fizz
+Gin Rickey
+Gold Rush
+Grand Margarita
+Grasshopper
+Hanky Panky
+Hemingway Special
+Horse's Neck
+Hot Toddy
+Iba Tiki
+Illegal
+Irish Coffee
+John Collins
+Jungle Bird
+Kir
+Kir Royale
+Last Word
+Lemon Drop Martini
+Long Island Iced Tea
+Mai Tai
+Manhattan
+Margarita
+Martinez
+Mary Pickford
+Mezcal Last Word
+Michelada
+Mimosa
+Mint Julep
+Missonary's Downfall
+Mojito
+Monkey Gland
+Moscow Mule
+Mudslide
+Mulled Wine
+Naked & Famous
+Negroni
+New York Sour
+Oaxacanite
+Old cuban
+Old Fashioned
+Paloma
+Paper Plane
+Paradise
+Penicillin
+Piña Colada
+Pimm's Cup
+Pisco Punch
+Pisco Sour
+Planters Punch
+Porn Star Martini
+Porto Flip
+Remember the Maine
+Ramos fizz
+Rosita
+Rum Punch
+Rum Runner
+Russian Spring Punch
+Rusty Nail
+Pabol de Galo
+Sangria
+Sangria, White
+Sazerac
+Screwdriver
+Sea Breeze
+Sex on the Beach
+Shandy
+Sherry Cobbler
+Sidecar
+singapore Sling
+South Side
+Spicy Fifty
+Spiked Eggnog
+Spiked Hot Cocoa
+Spritz
+Stinger
+Strawberry Daiquiri
+Suffering Bastard
+TattleTale
+Tequila Sunrise
+Tipperary
+Tommy's Margarita
+Tom Collins
+Three Dots and a Dash
+Trindad Sour
+Tuxedo
+VE.N.TE
+Vesper
+Vieux Carre
+Vodka Tonic
+Whiskey Sour
+White Russian
 
 ---
 
