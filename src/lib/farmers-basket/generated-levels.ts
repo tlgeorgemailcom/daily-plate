@@ -24042,5 +24042,42 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_063',
+    name: 'Gold Rush',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 505,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'cocktail',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":231.1,"pro":0.1,"fat":0.1,"carb":26.9,"fib":0.1,"h2o":61.4,"sug":25.9,"perServing":{"cal":231.1,"pro":0.1,"fat":0.1,"carb":26.9,"fib":0.1,"h2o":61.4,"sug":25.9,"AddedSugars":25.4,"IntrinsicSugars":0.6},"micros":{"vitaminA":0.0,"vitaminC":8.18,"vitaminD":0.0,"vitaminE":0.03,"vitaminK":0.0,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.0,"niacin":0.02,"folate":4.23,"calcium":1.27,"iron":0.02,"magnesium":1.27,"phosphorus":1.69,"potassium":21.76,"sodium":0.21,"zinc":0.01,"copper":0.0,"selenium":0.02,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":106.5,"servings":1,"per100g":{"Energy_KCal":216.99,"Water":57.64,"Protein":0.07,"TotalLipidFat":0.05,"Carbohydrate":25.26,"FiberTotalDietary":0.06,"SugarsTotal":24.34,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.21,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.03,"VitaminK_phylloquinone":0.0,"VitaminC_totalAscorbicAcid":8.18,"Thiamin":0.0,"Riboflavin":0.0,"Niacin":0.02,"PantothenicAcid":0.03,"VitaminB6":0.01,"Folate_total":4.23,"Folate_food":4.23,"Folate_DFE":4.23,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":1.08,"Betaine":0.0,"LuteinZeaxanthin":3.17,"Lycopene":0.0,"Calcium_Ca":1.27,"Iron_Fe":0.02,"Magnesium_Mg":1.27,"Phosphorus_P":1.69,"Potassium_K":21.76,"Sodium_Na":0.21,"Zinc_Zn":0.01,"Copper_Cu":0.0,"Manganese_Mn":0.0,"Selenium_Se":0.02,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":23.8,"IntrinsicSugars":0.53},"addedSugars":25.4,"intrinsicSugars":0.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14738","name":"Alcoholic beverage, distilled, bourbon whiskey, 80 proof","grams":54.0},{"ndb":"9152","name":"Lemon juice, raw","grams":22.5},{"ndb":"14753","name":"Beverage, syrup, honey, Monin, non-alcoholic","grams":30.0}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":106.5,"raw_water_grams":61.38,"raw_fat_grams":0.05,"raw_protein_grams":0.08,"raw_carb_grams":26.9,"final_grams":106.5}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Gold Rush', quantity: 'custom (g)', foodWord: 'GOLDRUSH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'bourbon', quantity: '2 oz', section: 'cocktail', ndbNo: '14738', portionDesc: 'g', portionGrams: 54.0 },
+      { name: 'lemon juice', quantity: '¾ oz', section: 'cocktail', ndbNo: '9152', portionDesc: 'g', portionGrams: 22.5 },
+      { name: 'honey syrup', quantity: '¾ oz', section: 'cocktail', ndbNo: '14753', portionDesc: 'g', portionGrams: 30.0 }
+    ],
+    recipeInstructions: [
+      'Combine bourbon, lemon juice, and honey syrup in a cocktail shaker with ice.',
+      'Shake vigorously until well chilled, about 15 seconds.',
+      'Strain into a chilled rocks glass over a large ice cube.',
+      'Suggestions (not included): Garnish with a lemon twist.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
