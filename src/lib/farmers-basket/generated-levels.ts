@@ -24348,5 +24348,45 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_071',
+    name: 'Illegal',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 513,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'cocktail',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":204.1,"pro":0.1,"fat":0.0,"carb":18.3,"fib":0.1,"h2o":62.6,"sug":16.8,"perServing":{"cal":204.1,"pro":0.1,"fat":0.0,"carb":18.3,"fib":0.1,"h2o":62.6,"sug":16.8,"AddedSugars":7.5,"IntrinsicSugars":9.3},"micros":{"vitaminA":0.45,"vitaminC":6.73,"vitaminD":0.0,"vitaminE":0.05,"vitaminK":0.13,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.0,"niacin":0.03,"folate":2.24,"calcium":3.14,"iron":0.02,"magnesium":1.79,"phosphorus":3.14,"potassium":26.25,"sodium":0.45,"zinc":0.02,"copper":0.0,"selenium":0.02,"cholesterol":0.0,"saturatedFat":0.0,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":100.3,"servings":1,"per100g":{"Energy_KCal":203.49,"Water":62.43,"Protein":0.09,"TotalLipidFat":0.02,"Carbohydrate":18.23,"FiberTotalDietary":0.09,"SugarsTotal":16.72,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.0,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.45,"Retinol":0.0,"Carotene_beta":6.73,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.05,"VitaminK_phylloquinone":0.13,"VitaminC_totalAscorbicAcid":6.73,"Thiamin":0.0,"Riboflavin":0.0,"Niacin":0.03,"PantothenicAcid":0.03,"VitaminB6":0.01,"Folate_total":2.24,"Folate_food":2.24,"Folate_DFE":2.24,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":1.14,"Betaine":0.04,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":3.14,"Iron_Fe":0.02,"Magnesium_Mg":1.79,"Phosphorus_P":3.14,"Potassium_K":26.25,"Sodium_Na":0.45,"Zinc_Zn":0.02,"Copper_Cu":0.0,"Manganese_Mn":0.0,"Selenium_Se":0.02,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.02,"GlutamicAcid":0.01,"Glycine":0.0,"Proline":0.01,"Serine":0.01,"omega3":0.0,"omega6":0.0,"AddedSugars":7.48,"IntrinsicSugars":9.25},"addedSugars":7.5,"intrinsicSugars":9.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14742","name":"Alcoholic beverage, distilled, mezcal, agave, 80 proof","grams":27.8},{"ndb":"14770","name":"Alcoholic beverage, rum, overproof, Jamaican, 126 proof","grams":15.0},{"ndb":"14710","name":"Alcoholic beverage, liqueur, falernum, 22 proof","grams":15.0},{"ndb":"14702","name":"Alcoholic beverage, liqueur, maraschino cherry, 64 proof","grams":5.0},{"ndb":"9160","name":"Lime juice, raw","grams":22.5},{"ndb":"14801","name":"Cocktail mixer, simple syrup, 1:1 sugar-water","grams":15.0}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":100.3,"raw_water_grams":62.62,"raw_fat_grams":0.02,"raw_protein_grams":0.09,"raw_carb_grams":18.29,"final_grams":100.3}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Illegal', quantity: 'custom (g)', foodWord: 'ILLEGAL', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'mezcal', quantity: '1 oz', section: 'cocktail', ndbNo: '14742', portionDesc: 'g', portionGrams: 27.8 },
+      { name: 'Overproof Jamaican Rum', quantity: '½ oz', section: 'cocktail', ndbNo: '14770', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'falernum', quantity: '½ oz', section: 'cocktail', ndbNo: '14710', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'maraschino liqueur', quantity: '1 bar spoon', section: 'cocktail', ndbNo: '14702', portionDesc: 'g', portionGrams: 5.0 },
+      { name: 'lime juice', quantity: '¾ oz', section: 'cocktail', ndbNo: '9160', portionDesc: 'g', portionGrams: 22.5 },
+      { name: 'simple syrup', quantity: '½ oz', section: 'cocktail', ndbNo: '14801', portionDesc: 'g', portionGrams: 15.0 }
+    ],
+    recipeInstructions: [
+      'Combine mezcal, overproof rum, falernum, maraschino liqueur, lime juice, and simple syrup in a cocktail shaker with ice.',
+      'Shake vigorously until well chilled, about 15 seconds.',
+      'Strain into a chilled cocktail glass.',
+      'Suggestions (not included): Garnish with a lime wheel.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
