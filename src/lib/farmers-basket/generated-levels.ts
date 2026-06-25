@@ -23770,5 +23770,46 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_056',
+    name: 'Frozen Strawberry Margarita',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 498,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'cocktail',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":329.0,"pro":1.2,"fat":0.5,"carb":33.8,"fib":3.2,"h2o":348.2,"sug":26.3,"perServing":{"cal":329.0,"pro":1.2,"fat":0.5,"carb":33.8,"fib":3.2,"h2o":348.2,"sug":26.3,"AddedSugars":10.1,"IntrinsicSugars":16.2},"micros":{"vitaminA":0.8,"vitaminC":24.45,"vitaminD":0.0,"vitaminE":0.16,"vitaminK":1.66,"vitaminB6":0.03,"vitaminB12":0.0,"thiamin":0.01,"riboflavin":0.01,"niacin":0.17,"folate":10.64,"calcium":7.89,"iron":0.16,"magnesium":5.72,"phosphorus":9.9,"potassium":65.02,"sodium":1.92,"zinc":0.06,"copper":0.02,"selenium":0.22,"cholesterol":0.0,"saturatedFat":0.0,"monoFat":0.02,"polyFat":0.06,"omega3":0.0,"omega6":0.0},"gramsPerServing":412.6,"servings":1,"per100g":{"Energy_KCal":79.75,"Water":84.39,"Protein":0.28,"TotalLipidFat":0.13,"Carbohydrate":8.19,"FiberTotalDietary":0.77,"SugarsTotal":6.37,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.0,"FattyAcids_totalMonounsaturated":0.02,"FattyAcids_totalPolyunsaturated":0.06,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.8,"Retinol":0.0,"Carotene_beta":8.13,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.16,"VitaminK_phylloquinone":1.66,"VitaminC_totalAscorbicAcid":24.45,"Thiamin":0.01,"Riboflavin":0.01,"Niacin":0.17,"PantothenicAcid":0.05,"VitaminB6":0.03,"Folate_total":10.64,"Folate_food":10.64,"Folate_DFE":10.64,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":2.95,"Betaine":0.09,"LuteinZeaxanthin":9.58,"Lycopene":0.0,"Calcium_Ca":7.89,"Iron_Fe":0.16,"Magnesium_Mg":5.72,"Phosphorus_P":9.9,"Potassium_K":65.02,"Sodium_Na":1.92,"Zinc_Zn":0.06,"Copper_Cu":0.02,"Manganese_Mn":0.14,"Selenium_Se":0.22,"Tryptophan":0.0,"Threonine":0.01,"Isoleucine":0.0,"Leucine":0.01,"Lysine":0.01,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.01,"Valine":0.0,"Arginine":0.01,"Histidine":0.0,"Alanine":0.01,"AsparticAcid":0.06,"GlutamicAcid":0.04,"Glycine":0.01,"Proline":0.01,"Serine":0.01,"omega3":0.0,"omega6":0.0,"AddedSugars":2.44,"IntrinsicSugars":3.93},"addedSugars":10.1,"intrinsicSugars":16.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14741","name":"Alcoholic beverage, distilled, tequila, blanco, 80 proof","grams":55.6},{"ndb":"14700","name":"Alcoholic beverage, liqueur, triple sec, orange, 80 proof","grams":30.2},{"ndb":"9160","name":"Lime juice, raw","grams":30.0},{"ndb":"9316","name":"Strawberries, raw","grams":152.0},{"ndb":"19912","name":"Sweetener, syrup, agave","grams":14.8},{"ndb":"14411","name":"Water, tap, drinking","grams":130.0}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":412.6,"raw_water_grams":348.19,"raw_fat_grams":0.54,"raw_protein_grams":1.16,"raw_carb_grams":33.79,"final_grams":412.6}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Frozen Strawberry Margarita', quantity: 'custom (g)', foodWord: 'FROZENSTRAWMARGARITA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'tequila', quantity: '2 oz', section: 'cocktail', ndbNo: '14741', portionDesc: 'g', portionGrams: 55.6 },
+      { name: 'triple sec', quantity: '1 oz', section: 'cocktail', ndbNo: '14700', portionDesc: 'g', portionGrams: 30.2 },
+      { name: 'lime juice', quantity: '1 oz', section: 'cocktail', ndbNo: '9160', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'strawberries', quantity: '1 cup', section: 'cocktail', ndbNo: '9316', portionDesc: 'g', portionGrams: 152.0 },
+      { name: 'agave syrup', quantity: '½ oz', section: 'cocktail', ndbNo: '19912', portionDesc: 'g', portionGrams: 14.8 },
+      { name: 'water', quantity: '1 cup ice', section: 'cocktail', ndbNo: '14411', portionDesc: 'g', portionGrams: 130.0 }
+    ],
+    recipeInstructions: [
+      'Add tequila, triple sec, lime juice, strawberries, agave syrup, and ice to a blender.',
+      'Blend on high until smooth and slushy, about 30 seconds.',
+      'Pour into a salt-rimmed glass.',
+      'Garnish with a lime wheel or fresh strawberry.',
+      'Suggestions (not included):'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
