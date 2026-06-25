@@ -23173,5 +23173,45 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_041',
+    name: 'Chartreuse Swizzle',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 483,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":238.3,"pro":0.2,"fat":0.1,"carb":22.9,"fib":0.1,"h2o":74.2,"sug":20.5,"perServing":{"cal":238.3,"pro":0.2,"fat":0.1,"carb":22.9,"fib":0.1,"h2o":74.2,"sug":20.5,"AddedSugars":3.0,"IntrinsicSugars":17.5},"micros":{"vitaminA":0.38,"vitaminC":8.19,"vitaminD":0.0,"vitaminE":0.05,"vitaminK":0.19,"vitaminB6":0.03,"vitaminB12":0.0,"thiamin":0.02,"riboflavin":0.01,"niacin":0.07,"folate":6.43,"calcium":5.92,"iron":0.1,"magnesium":4.54,"phosphorus":4.66,"potassium":54.89,"sodium":0.88,"zinc":0.04,"copper":0.02,"selenium":0.04,"cholesterol":0.0,"saturatedFat":0.0,"monoFat":0.0,"polyFat":0.01,"omega3":0.0,"omega6":0.0},"gramsPerServing":119.0,"servings":1,"per100g":{"Energy_KCal":200.23,"Water":62.34,"Protein":0.17,"TotalLipidFat":0.04,"Carbohydrate":19.24,"FiberTotalDietary":0.13,"SugarsTotal":17.24,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.0,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.01,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.38,"Retinol":0.0,"Carotene_beta":6.43,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.05,"VitaminK_phylloquinone":0.19,"VitaminC_totalAscorbicAcid":8.19,"Thiamin":0.02,"Riboflavin":0.01,"Niacin":0.07,"PantothenicAcid":0.04,"VitaminB6":0.03,"Folate_total":6.43,"Folate_food":6.43,"Folate_DFE":6.43,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":1.8,"Betaine":0.04,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":5.92,"Iron_Fe":0.1,"Magnesium_Mg":4.54,"Phosphorus_P":4.66,"Potassium_K":54.89,"Sodium_Na":0.88,"Zinc_Zn":0.04,"Copper_Cu":0.02,"Manganese_Mn":0.13,"Selenium_Se":0.04,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.02,"GlutamicAcid":0.01,"Glycine":0.0,"Proline":0.01,"Serine":0.01,"omega3":0.0,"omega6":0.0,"AddedSugars":2.52,"IntrinsicSugars":14.73},"addedSugars":3.0,"intrinsicSugars":17.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14707","name":"Alcoholic beverage, liqueur, chartreuse, green, 110 proof","grams":41.7},{"ndb":"14710","name":"Alcoholic beverage, liqueur, falernum, 22 proof","grams":24.8},{"ndb":"9273","name":"Pineapple juice, canned, unsweetened","grams":30.0},{"ndb":"9160","name":"Lime juice, raw","grams":22.5}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"1.0","cooking_method":"1.0","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":119.0,"raw_water_grams":74.19,"raw_fat_grams":0.05,"raw_protein_grams":0.2,"raw_carb_grams":22.9,"final_grams":119.0}],"cookingMethod":"1.0"},
+    recipeIngredients: [
+      { name: 'Chartreuse Swizzle', quantity: 'custom (g)', foodWord: 'CHARTREUSESWIZZLE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'green chartreuse', quantity: '1½ fl oz', section: 'cocktail', ndbNo: '14707', portionDesc: 'g', portionGrams: 41.7 },
+      { name: 'falernum', quantity: '¾ fl oz', section: 'cocktail', ndbNo: '14710', portionDesc: 'g', portionGrams: 24.8 },
+      { name: 'pineapple juice', quantity: '1 fl oz', section: 'cocktail', ndbNo: '9273', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'lime juice', quantity: '¾ fl oz', section: 'cocktail', ndbNo: '9160', portionDesc: 'g', portionGrams: 22.5 }
+    ],
+    recipeInstructions: [
+      'Fill a highball or Collins glass with crushed ice.',
+      'Add the green chartreuse, falernum, pineapple juice, and lime juice.',
+      'Swizzle vigorously by placing a bar spoon between your palms and spinning it back and forth to mix and chill the drink.',
+      'Top with more crushed ice to form a mound above the rim.',
+      'Garnish with a mint sprig and a lime wheel.',
+      'Suggestions (not included):'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
