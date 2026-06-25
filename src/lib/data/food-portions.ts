@@ -57773,6 +57773,23 @@ export const FOODS: Food[] = [
     "h2o": 0.0,
     "sug": 98.4,
     "portions": []
+  },
+  {
+    "word": "PASSIONFRUITSYRUP",
+    "display": "Passion Fruit Syrup",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14805",
+    "desc": "Cocktail mixer, passion fruit syrup, non-alcoholic",
+    "cal": 252.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 63.0,
+    "fib": 0.0,
+    "h2o": 63.0,
+    "sug": 35.0,
+    "portions": []
   }
 ];
 

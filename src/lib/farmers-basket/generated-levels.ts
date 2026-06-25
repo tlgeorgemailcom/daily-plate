@@ -23490,5 +23490,46 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_049',
+    name: 'Don\'s Special Daiquiri',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 491,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":211.8,"pro":0.1,"fat":0.0,"carb":29.2,"fib":0.1,"h2o":50.6,"sug":28.2,"perServing":{"cal":211.8,"pro":0.1,"fat":0.0,"carb":29.2,"fib":0.1,"h2o":50.6,"sug":28.2,"AddedSugars":27.9,"IntrinsicSugars":0.2},"micros":{"vitaminA":0.32,"vitaminC":4.78,"vitaminD":0.0,"vitaminE":0.04,"vitaminK":0.1,"vitaminB6":0.0,"vitaminB12":0.0,"thiamin":0.01,"riboflavin":0.0,"niacin":0.02,"folate":1.59,"calcium":2.23,"iron":0.07,"magnesium":1.27,"phosphorus":4.44,"potassium":19.52,"sodium":0.76,"zinc":0.04,"copper":0.03,"selenium":0.02,"cholesterol":0.0,"saturatedFat":0.0,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":94.2,"servings":1,"per100g":{"Energy_KCal":224.82,"Water":53.73,"Protein":0.07,"TotalLipidFat":0.01,"Carbohydrate":30.99,"FiberTotalDietary":0.06,"SugarsTotal":29.91,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.0,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.32,"Retinol":0.0,"Carotene_beta":4.78,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.04,"VitaminK_phylloquinone":0.1,"VitaminC_totalAscorbicAcid":4.78,"Thiamin":0.01,"Riboflavin":0.0,"Niacin":0.02,"PantothenicAcid":0.02,"VitaminB6":0.0,"Folate_total":1.59,"Folate_food":1.59,"Folate_DFE":1.59,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":0.81,"Betaine":0.03,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":2.23,"Iron_Fe":0.07,"Magnesium_Mg":1.27,"Phosphorus_P":4.44,"Potassium_K":19.52,"Sodium_Na":0.76,"Zinc_Zn":0.04,"Copper_Cu":0.03,"Manganese_Mn":0.01,"Selenium_Se":0.02,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.02,"GlutamicAcid":0.01,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":29.64,"IntrinsicSugars":0.27},"addedSugars":27.9,"intrinsicSugars":0.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14050","name":"Alcoholic beverage, distilled, rum, 80 proof","grams":27.8},{"ndb":"14050","name":"Alcoholic beverage, distilled, rum, 80 proof","grams":13.9},{"ndb":"14805","name":"Cocktail mixer, passion fruit syrup, non-alcoholic","grams":17.5},{"ndb":"9160","name":"Lime juice, raw","grams":15.0},{"ndb":"14753","name":"Beverage, syrup, honey, Monin, non-alcoholic","grams":20.0}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"1.0","cooking_method":"1.0","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":94.2,"raw_water_grams":50.62,"raw_fat_grams":0.01,"raw_protein_grams":0.06,"raw_carb_grams":29.19,"final_grams":94.2}],"cookingMethod":"1.0"},
+    recipeIngredients: [
+      { name: 'Don\'s Special Daiquiri', quantity: 'custom (g)', foodWord: 'DONSDAIQUIRI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'dark rum', quantity: '1 fl oz', section: 'cocktail', ndbNo: '14050', portionDesc: 'g', portionGrams: 27.8 },
+      { name: 'rum', quantity: '½ fl oz', section: 'cocktail', ndbNo: '14050', portionDesc: 'g', portionGrams: 13.9 },
+      { name: 'passion fruit syrup', quantity: '½ fl oz', section: 'cocktail', ndbNo: '14805', portionDesc: 'g', portionGrams: 17.5 },
+      { name: 'lime juice', quantity: '1 tbsp', section: 'cocktail', ndbNo: '9160', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'honey syrup', quantity: '½ fl oz', section: 'cocktail', ndbNo: '14753', portionDesc: 'g', portionGrams: 20.0 }
+    ],
+    recipeInstructions: [
+      'Fill a cocktail shaker with ice.',
+      'Add the gold rum, light rum, passion fruit syrup, lime juice, and honey syrup.',
+      'Shake vigorously until well chilled, about 15 seconds.',
+      'Strain into a chilled coupe glass.',
+      'Garnish with a lime wheel and serve immediately.',
+      'Suggestions (not included):'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
