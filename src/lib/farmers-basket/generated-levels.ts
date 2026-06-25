@@ -23054,5 +23054,45 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_038',
+    name: 'Casino',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 480,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":167.9,"pro":0.1,"fat":0.0,"carb":6.0,"fib":0.0,"h2o":53.0,"sug":5.4,"perServing":{"cal":167.9,"pro":0.1,"fat":0.0,"carb":6.0,"fib":0.0,"h2o":53.0,"sug":5.4,"AddedSugars":0.0,"IntrinsicSugars":5.4},"micros":{"vitaminA":0.0,"vitaminC":7.25,"vitaminD":0.0,"vitaminE":0.03,"vitaminK":0.0,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.0,"niacin":0.02,"folate":3.75,"calcium":1.12,"iron":0.01,"magnesium":1.12,"phosphorus":1.5,"potassium":19.29,"sodium":0.19,"zinc":0.01,"copper":0.0,"selenium":0.02,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":80.1,"servings":1,"per100g":{"Energy_KCal":209.61,"Water":66.2,"Protein":0.07,"TotalLipidFat":0.04,"Carbohydrate":7.56,"FiberTotalDietary":0.06,"SugarsTotal":6.74,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.19,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.03,"VitaminK_phylloquinone":0.0,"VitaminC_totalAscorbicAcid":7.25,"Thiamin":0.0,"Riboflavin":0.0,"Niacin":0.02,"PantothenicAcid":0.02,"VitaminB6":0.01,"Folate_total":3.75,"Folate_food":3.75,"Folate_DFE":3.75,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":0.96,"Betaine":0.0,"LuteinZeaxanthin":2.81,"Lycopene":0.0,"Calcium_Ca":1.12,"Iron_Fe":0.01,"Magnesium_Mg":1.12,"Phosphorus_P":1.5,"Potassium_K":19.29,"Sodium_Na":0.19,"Zinc_Zn":0.01,"Copper_Cu":0.0,"Manganese_Mn":0.0,"Selenium_Se":0.02,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":6.74},"addedSugars":0.0,"intrinsicSugars":5.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14779","name":"Gin, Old Tom, 80 proof","grams":55.6},{"ndb":"9152","name":"Lemon juice, raw","grams":15.0},{"ndb":"14702","name":"Alcoholic beverage, liqueur, maraschino cherry, 64 proof","grams":7.7},{"ndb":"14802","name":"","grams":1.8}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"1.0","cooking_method":"1.0","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":80.1,"raw_water_grams":53.03,"raw_fat_grams":0.04,"raw_protein_grams":0.05,"raw_carb_grams":6.05,"final_grams":80.1}],"cookingMethod":"1.0"},
+    recipeIngredients: [
+      { name: 'Casino', quantity: 'custom (g)', foodWord: 'CASINO', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'old tom gin', quantity: '2 fl oz', section: 'cocktail', ndbNo: '14779', portionDesc: 'g', portionGrams: 55.6 },
+      { name: 'lemon juice', quantity: '½ fl oz', section: 'cocktail', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'maraschino liqueur', quantity: '¼ fl oz', section: 'cocktail', ndbNo: '14702', portionDesc: 'g', portionGrams: 7.7 },
+      { name: 'orange bitters', quantity: '2 dashes', section: 'cocktail', ndbNo: '14802', portionDesc: 'g', portionGrams: 1.8 }
+    ],
+    recipeInstructions: [
+      'Chill a coupe or cocktail glass by filling it with ice water; discard the water before use.',
+      'Fill a cocktail shaker with ice.',
+      'Add the old tom gin, lemon juice, maraschino liqueur, and orange bitters.',
+      'Shake vigorously until well chilled, about 15 seconds.',
+      'Double-strain into the chilled glass. Garnish with a maraschino cherry or a lemon twist.',
+      'Suggestions (not included):'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

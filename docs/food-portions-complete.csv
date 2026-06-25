@@ -1750,3 +1750,4 @@ LIGHTRUM,Light Rum,beverage,,,,,14798,"Alcoholic beverage, distilled, rum, light
 PEACHSCHNAPPS,Peach Schnapps,beverage,,,,,14799,"Alcoholic beverage, liqueur, peach schnapps, 30 proof",217.0,0.0,0.0,34.0,0.0,54.5,34.0,,,,1.0,fl oz,27.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 PEACHSCHNAPPS99,Peach Schnapps (99 Proof),beverage,,,,,14800,"Alcoholic beverage, liqueur, peach schnapps, high-proof, 99 proof",390.0,0.0,0.0,0.0,0.0,44.3,0.0,,,,1.0,fl oz,26.5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 SIMPLESYRUP,Simple Syrup,beverage,,,,,14801,"Cocktail mixer, simple syrup, 1:1 sugar-water",200.0,0.0,0.0,50.0,0.0,50.0,50.0,,,,1.0,fl oz,35.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ORANGEBITTERS,Orange Bitters,bar,,,,,14802,"Alcoholic beverage, bitters, orange, 56 proof",187.0,0.0,0.0,5.0,0.0,71.5,5.0,1.0,custom (g),100.0,1.0,dash,0.9,1.0,tsp,4.5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

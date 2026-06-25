@@ -501,7 +501,7 @@ chamomile_cordial,14775,CHAMOMILECORDIAL,"Cordial, chamomile, non-alcoholic, bot
 white_peach_puree,14776,WHITEPEACHPUREE,"Puree, white peach, unsweetened",White Peach Puree,fl oz,30.0,"label: ~45 kcal/100g, 9g C, 1.25g Fi, 8g Su, 0.5g P, 0g F 2026-06-24"
 orange_flower_water,14777,ORANGEFLOWERWATER,"Flavoring, orange flower water, orange blossom water",Orange Flower Water,tsp,5.0,orange blossom water; used in dashes/tsp; essentially water + trace aromatics 2026-06-24
 vanilla_sugar,14778,VANILLASUGAR,"Sugar, vanilla, granulated, flavored with vanilla",Vanilla Sugar,tsp,4.2,"granulated sugar + vanilla; label: ~385 kcal/100g, 96g C 2026-06-24"
-old_tom_gin,14779,OLDTOMGIN,"Gin, Old Tom, 80 proof",Old Tom Gin,ml,1,
+old_tom_gin,14779,OLDTOMGIN,"Gin, Old Tom, 80 proof",old tom gin,ml,1,
 blackstrap_rum,14780,BLACKSTRAPRUM,"Rum, blackstrap, 80 proof",Blackstrap Rum,ml,1,
 passion_fruit_puree,14781,PASSIONFRUITPUREE,"Passion fruit, puree, unsweetened",Passion Fruit Puree,ml,1,
 raspberry_liqueur,14783,RASPBERRYLIQUEUR,"Alcoholic beverage, liqueur, raspberry, 34 proof",Raspberry Liqueur,ml,1,
@@ -520,3 +520,4 @@ passion_fruit_liqueur,14793,PASSIONFRUITLEUR,"Alcoholic beverage, liqueur, passo
 prosecco,14795,PROSECCO,"Alcoholic beverage, wine, sparkling, Prosecco, 11% ABV, brut",Prosecco,fl oz,29.4,new NDB 14795; Prosecco brut sparkling wine 2026-06-25
 peach_schnapps_99,14800,PEACHSCHNAPPS99,"Alcoholic beverage, liqueur, peach schnapps, high-proof, 99 proof",Peach Schnapps (99 Proof),fl oz,26.5,new NDB 14800; 99-proof peach schnapps 0g carbs 2026-06-25
 simple_syrup,14801,SIMPLESYRUP,"Cocktail mixer, simple syrup, 1:1 sugar-water",simple syrup,fl oz,35.0,Custom NDB 14801; 1:1 sugar:water by weight; 200 kcal/100g; 50g carbs; density ~1.18 g/mL 2026-06-25
+orange_bitters,14802,ORANGEBITTERS,,orange bitters,dash,0.9,,,,,,

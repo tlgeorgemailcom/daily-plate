@@ -57706,6 +57706,39 @@ export const FOODS: Food[] = [
         "gm": 35.0
       }
     ]
+  },
+  {
+    "word": "ORANGEBITTERS",
+    "display": "Orange Bitters",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14802",
+    "desc": "Alcoholic beverage, bitters, orange, 56 proof",
+    "cal": 187.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 5.0,
+    "fib": 0.0,
+    "h2o": 71.5,
+    "sug": 5.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "dash",
+        "gm": 0.9
+      },
+      {
+        "amt": 1.0,
+        "desc": "tsp",
+        "gm": 4.5
+      }
+    ]
   }
 ];
 
