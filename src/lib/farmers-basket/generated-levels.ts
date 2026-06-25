@@ -24388,5 +24388,44 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_072',
+    name: 'Irish Coffee',
+    category: 'cocktails',
+    dietaryCategory: 'veggie',
+    levelNum: 514,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'cocktail',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":230.9,"pro":1.0,"fat":10.8,"carb":9.6,"fib":0.0,"h2o":170.2,"sug":9.6,"perServing":{"cal":230.9,"pro":1.0,"fat":10.8,"carb":9.6,"fib":0.0,"h2o":170.2,"sug":9.6,"AddedSugars":8.8,"IntrinsicSugars":0.9},"micros":{"vitaminA":59.43,"vitaminC":0.09,"vitaminD":9.11,"vitaminE":0.14,"vitaminK":0.52,"vitaminB6":0.0,"vitaminB12":0.02,"thiamin":0.01,"riboflavin":0.07,"niacin":0.12,"folate":1.73,"calcium":10.69,"iron":0.02,"magnesium":2.73,"phosphorus":10.11,"potassium":41.84,"sodium":5.05,"zinc":0.05,"copper":0.0,"selenium":0.43,"cholesterol":16.34,"saturatedFat":3.33,"monoFat":1.32,"polyFat":0.23,"omega3":0.02,"omega6":0.13},"gramsPerServing":205.8,"servings":1,"per100g":{"Energy_KCal":112.22,"Water":82.72,"Protein":0.48,"TotalLipidFat":5.23,"Carbohydrate":4.65,"FiberTotalDietary":0.0,"SugarsTotal":4.67,"Cholesterol":16.34,"FattyAcids_totalSaturated":3.33,"FattyAcids_totalMonounsaturated":1.32,"FattyAcids_totalPolyunsaturated":0.23,"LinoleicAcid":0.13,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":59.43,"Retinol":58.56,"Carotene_beta":10.41,"VitaminD":9.11,"VitaminE_alphaTocopherol":0.14,"VitaminK_phylloquinone":0.52,"VitaminC_totalAscorbicAcid":0.09,"Thiamin":0.01,"Riboflavin":0.07,"Niacin":0.12,"PantothenicAcid":0.21,"VitaminB6":0.0,"Folate_total":1.73,"Folate_food":1.73,"Folate_DFE":1.73,"FolicAcid":0.0,"VitaminB12":0.02,"Choline_total":3.92,"Betaine":0.0,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":10.69,"Iron_Fe":0.02,"Magnesium_Mg":2.73,"Phosphorus_P":10.11,"Potassium_K":41.84,"Sodium_Na":5.05,"Zinc_Zn":0.05,"Copper_Cu":0.0,"Manganese_Mn":0.01,"Selenium_Se":0.43,"Tryptophan":0.01,"Threonine":0.02,"Isoleucine":0.02,"Leucine":0.04,"Lysine":0.02,"Methionine":0.01,"Cystine":0.0,"Phenylalanine":0.02,"Tyrosine":0.02,"Valine":0.03,"Arginine":0.01,"Histidine":0.01,"Alanine":0.01,"AsparticAcid":0.03,"GlutamicAcid":0.09,"Glycine":0.01,"Proline":0.05,"Serine":0.01,"omega3":0.02,"omega6":0.13,"AddedSugars":4.25,"IntrinsicSugars":0.42},"addedSugars":8.8,"intrinsicSugars":0.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14758","name":"Alcoholic beverage, whiskey, Irish, 80 proof","grams":40.5},{"ndb":"14209","name":"Beverages, Coffee, brewed, prepared with tap water","grams":118.0},{"ndb":"14801","name":"Cocktail mixer, simple syrup, 1:1 sugar-water","grams":17.5},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":29.8}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":205.75,"raw_water_grams":170.2,"raw_fat_grams":10.76,"raw_protein_grams":0.99,"raw_carb_grams":9.57,"final_grams":205.75}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Irish Coffee', quantity: 'custom (g)', foodWord: 'IRISHCOFFEE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Irish Whiskey', quantity: '1½ oz', section: 'cocktail', ndbNo: '14758', portionDesc: 'g', portionGrams: 40.5 },
+      { name: 'coffee, brewed', quantity: '4 oz', section: 'cocktail', ndbNo: '14209', portionDesc: 'g', portionGrams: 118.0 },
+      { name: 'simple syrup', quantity: '½ oz', section: 'cocktail', ndbNo: '14801', portionDesc: 'g', portionGrams: 17.5 },
+      { name: 'heavy cream', quantity: '1 oz', section: 'cocktail', ndbNo: '1053', portionDesc: 'g', portionGrams: 29.75 }
+    ],
+    recipeInstructions: [
+      'Heat a glass mug by filling with hot water; discard the water.',
+      'Add whiskey and simple syrup to the warm mug.',
+      'Pour in hot brewed coffee and stir to combine.',
+      'Gently pour lightly whipped heavy cream over the back of a spoon so it floats on top.',
+      'Suggestions (not included): Do not stir after adding cream — drink through the cream layer.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
