@@ -23652,5 +23652,46 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_053',
+    name: 'French 75',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 495,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":174.8,"pro":0.1,"fat":0.0,"carb":10.7,"fib":0.0,"h2o":101.8,"sug":9.7,"perServing":{"cal":174.8,"pro":0.1,"fat":0.0,"carb":10.7,"fib":0.0,"h2o":101.8,"sug":9.7,"AddedSugars":8.8,"IntrinsicSugars":0.9},"micros":{"vitaminA":0.0,"vitaminC":4.4,"vitaminD":0.0,"vitaminE":0.02,"vitaminK":0.0,"vitaminB6":0.0,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.0,"niacin":0.01,"folate":2.28,"calcium":0.68,"iron":0.01,"magnesium":0.68,"phosphorus":0.91,"potassium":11.72,"sodium":0.11,"zinc":0.01,"copper":0.0,"selenium":0.01,"cholesterol":0.0,"saturatedFat":0.0,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":131.8,"servings":1,"per100g":{"Energy_KCal":132.61,"Water":77.27,"Protein":0.04,"TotalLipidFat":0.03,"Carbohydrate":8.09,"FiberTotalDietary":0.03,"SugarsTotal":7.33,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.0,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.11,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.02,"VitaminK_phylloquinone":0.0,"VitaminC_totalAscorbicAcid":4.4,"Thiamin":0.0,"Riboflavin":0.0,"Niacin":0.01,"PantothenicAcid":0.01,"VitaminB6":0.0,"Folate_total":2.28,"Folate_food":2.28,"Folate_DFE":2.28,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":0.58,"Betaine":0.0,"LuteinZeaxanthin":1.71,"Lycopene":0.0,"Calcium_Ca":0.68,"Iron_Fe":0.01,"Magnesium_Mg":0.68,"Phosphorus_P":0.91,"Potassium_K":11.72,"Sodium_Na":0.11,"Zinc_Zn":0.01,"Copper_Cu":0.0,"Manganese_Mn":0.0,"Selenium_Se":0.01,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":6.64,"IntrinsicSugars":0.69},"addedSugars":8.8,"intrinsicSugars":0.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14759","name":"Alcoholic beverage, gin, London dry, 80 proof","grams":40.5},{"ndb":"9152","name":"Lemon juice, raw","grams":15.0},{"ndb":"14801","name":"Cocktail mixer, simple syrup, 1:1 sugar-water","grams":17.5},{"ndb":"14733","name":"Alcoholic beverage, wine, sparkling, brut (champagne, prosecco)","grams":58.8}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"1.0","cooking_method":"1.0","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":131.8,"raw_water_grams":101.84,"raw_fat_grams":0.04,"raw_protein_grams":0.05,"raw_carb_grams":10.67,"final_grams":131.8}],"cookingMethod":"1.0"},
+    recipeIngredients: [
+      { name: 'French 75', quantity: 'custom (g)', foodWord: 'FRENCH75', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'dry gin', quantity: '1½ fl oz', section: 'cocktail', ndbNo: '14759', portionDesc: 'g', portionGrams: 40.5 },
+      { name: 'lemon juice', quantity: '½ oz', section: 'cocktail', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'simple syrup', quantity: '½ fl oz', section: 'cocktail', ndbNo: '14801', portionDesc: 'g', portionGrams: 17.5 },
+      { name: 'sparkling wine', quantity: '2 fl oz', section: 'cocktail', ndbNo: '14733', portionDesc: 'g', portionGrams: 58.8 }
+    ],
+    recipeInstructions: [
+      'Chill a Champagne flute or coupe in the freezer for a few minutes.',
+      'Combine the gin, lemon juice, and simple syrup in a cocktail shaker filled with ice.',
+      'Shake vigorously until well chilled, about 15 seconds.',
+      'Strain into the chilled glass.',
+      'Top with the sparkling wine, pouring gently down the side of the glass to preserve the bubbles.',
+      'Garnish with a lemon twist and serve immediately.',
+      'Suggestions (not included):'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
