@@ -524,3 +524,4 @@ orange_bitters,14802,ORANGEBITTERS,,orange bitters,dash,0.9,,,,,,
 raspberry_syrup,14803,RASPBERRYSYRUP,,raspberry syrup,fl oz,35.0,,,,,,,
 rum_light,14050,RUM,"Alcoholic beverage, distilled, rum, 80 proof",rum,fl oz,27.8,SR Legacy; cocktail ingredient 2026-06-25
 rum_dark,14050,RUM,"Alcoholic beverage, distilled, rum, 80 proof",dark rum,fl oz,27.8,SR Legacy NDB 14050 (80 proof; same macros as light rum); cocktail ingredient 2026-06-25
+olive_brine,14804,OLIVEBRINE,"Cocktail mixer, olive brine, liquid from olive jar",olive brine,fl oz,29.6,Custom NDB 14804; olive jar liquid; E=5 kcal/100g; cocktail ingredient 2026-06-25

@@ -23449,5 +23449,46 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_048',
+    name: 'Dirty Martini',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 490,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":153.7,"pro":0.1,"fat":1.2,"carb":0.9,"fib":0.3,"h2o":68.7,"sug":0.5,"perServing":{"cal":153.7,"pro":0.1,"fat":1.2,"carb":0.9,"fib":0.3,"h2o":68.7,"sug":0.5,"AddedSugars":0.0,"IntrinsicSugars":0.5},"micros":{"vitaminA":1.77,"vitaminC":0.0,"vitaminD":0.0,"vitaminE":0.34,"vitaminK":0.12,"vitaminB6":0.0,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.0,"niacin":0.02,"folate":0.27,"calcium":4.6,"iron":0.04,"magnesium":0.97,"phosphorus":0.35,"potassium":3.71,"sodium":137.59,"zinc":0.0,"copper":0.01,"selenium":0.08,"cholesterol":0.0,"saturatedFat":0.18,"monoFat":1.0,"polyFat":0.11,"omega3":0.0,"omega6":0.0},"gramsPerServing":91.6,"servings":1,"per100g":{"Energy_KCal":167.75,"Water":75.02,"Protein":0.11,"TotalLipidFat":1.35,"Carbohydrate":0.97,"FiberTotalDietary":0.29,"SugarsTotal":0.52,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.18,"FattyAcids_totalMonounsaturated":1.0,"FattyAcids_totalPolyunsaturated":0.11,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":1.77,"Retinol":0.0,"Carotene_beta":20.43,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.34,"VitaminK_phylloquinone":0.12,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.0,"Riboflavin":0.0,"Niacin":0.02,"PantothenicAcid":0.0,"VitaminB6":0.0,"Folate_total":0.27,"Folate_food":0.27,"Folate_DFE":0.27,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":1.26,"Betaine":0.0,"LuteinZeaxanthin":45.1,"Lycopene":0.0,"Calcium_Ca":4.6,"Iron_Fe":0.04,"Magnesium_Mg":0.97,"Phosphorus_P":0.35,"Potassium_K":3.71,"Sodium_Na":137.59,"Zinc_Zn":0.0,"Copper_Cu":0.01,"Manganese_Mn":0.0,"Selenium_Se":0.08,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.52},"addedSugars":0.0,"intrinsicSugars":0.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14759","name":"Alcoholic beverage, gin, London dry, 80 proof","grams":54.0},{"ndb":"14706","name":"Alcoholic beverage, wine, vermouth, dry","grams":14.5},{"ndb":"14804","name":"Cocktail mixer, olive brine, liquid from olive jar","grams":15.0},{"ndb":"9195","name":"Olives, pickled, canned or bottled, green","grams":8.1}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"1.0","cooking_method":"1.0","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":91.6,"raw_water_grams":68.72,"raw_fat_grams":1.24,"raw_protein_grams":0.1,"raw_carb_grams":0.89,"final_grams":91.6}],"cookingMethod":"1.0"},
+    recipeIngredients: [
+      { name: 'Dirty Martini', quantity: 'custom (g)', foodWord: 'DIRTYMARTINI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'dry gin', quantity: '2 fl oz', section: 'cocktail', ndbNo: '14759', portionDesc: 'g', portionGrams: 54.0 },
+      { name: 'dry vermouth', quantity: '½ fl oz', section: 'cocktail', ndbNo: '14706', portionDesc: 'g', portionGrams: 14.5 },
+      { name: 'olive brine', quantity: '½ fl oz', section: 'cocktail', ndbNo: '14804', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'green olives', quantity: '3 olives', section: 'cocktail', ndbNo: '9195', portionDesc: 'g', portionGrams: 8.1 }
+    ],
+    recipeInstructions: [
+      'Fill a mixing glass with ice.',
+      'Add the gin, dry vermouth, and olive brine.',
+      'Stir until well chilled, about 30 seconds.',
+      'Strain into a chilled cocktail glass.',
+      'Garnish with 3 cocktail olives on a skewer and serve immediately.',
+      'Nutrition based on eating the olives.',
+      'Suggestions (not included):'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

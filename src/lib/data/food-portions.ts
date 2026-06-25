@@ -57756,6 +57756,23 @@ export const FOODS: Food[] = [
     "h2o": 70.0,
     "sug": 30.0,
     "portions": []
+  },
+  {
+    "word": "OLIVEBRINE",
+    "display": "Olive Brine",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14804",
+    "desc": "Cocktail mixer, olive brine, liquid from olive jar",
+    "cal": 5.0,
+    "pro": 0.1,
+    "fat": 0.0,
+    "carb": 1.0,
+    "fib": 0.0,
+    "h2o": 0.0,
+    "sug": 98.4,
+    "portions": []
   }
 ];
 
