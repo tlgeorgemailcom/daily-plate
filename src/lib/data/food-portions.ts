@@ -57790,6 +57790,23 @@ export const FOODS: Food[] = [
     "h2o": 63.0,
     "sug": 35.0,
     "portions": []
+  },
+  {
+    "word": "AGAVESYRUP",
+    "display": "Agave Syrup",
+    "groups": [
+      "spice"
+    ],
+    "ndb": "19912",
+    "desc": "Sweetener, syrup, agave",
+    "cal": 310.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 76.37,
+    "fib": 0.0,
+    "h2o": 68.03,
+    "sug": 22.94,
+    "portions": []
   }
 ];
 

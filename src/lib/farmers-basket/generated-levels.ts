@@ -23568,5 +23568,47 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_051',
+    name: 'El Pepino',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 493,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":203.7,"pro":0.4,"fat":0.2,"carb":27.8,"fib":0.5,"h2o":94.4,"sug":22.4,"perServing":{"cal":203.7,"pro":0.4,"fat":0.2,"carb":27.8,"fib":0.5,"h2o":94.4,"sug":22.4,"AddedSugars":21.2,"IntrinsicSugars":1.3},"micros":{"vitaminA":6.05,"vitaminC":17.11,"vitaminD":0.0,"vitaminE":0.46,"vitaminK":9.56,"vitaminB6":0.09,"vitaminB12":0.0,"thiamin":0.04,"riboflavin":0.05,"niacin":0.27,"folate":11.84,"calcium":7.2,"iron":0.11,"magnesium":5.42,"phosphorus":9.55,"potassium":69.45,"sodium":1.91,"zinc":0.07,"copper":0.02,"selenium":0.49,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.0,"polyFat":0.02,"omega3":0.0,"omega6":0.0},"gramsPerServing":136.6,"servings":1,"per100g":{"Energy_KCal":149.12,"Water":69.13,"Protein":0.29,"TotalLipidFat":0.16,"Carbohydrate":20.31,"FiberTotalDietary":0.38,"SugarsTotal":16.41,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.02,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":6.05,"Retinol":0.0,"Carotene_beta":65.96,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.46,"VitaminK_phylloquinone":9.56,"VitaminC_totalAscorbicAcid":17.11,"Thiamin":0.04,"Riboflavin":0.05,"Niacin":0.27,"PantothenicAcid":0.09,"VitaminB6":0.09,"Folate_total":11.84,"Folate_food":11.84,"Folate_DFE":11.84,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":5.76,"Betaine":0.06,"LuteinZeaxanthin":48.84,"Lycopene":0.0,"Calcium_Ca":7.2,"Iron_Fe":0.11,"Magnesium_Mg":5.42,"Phosphorus_P":9.55,"Potassium_K":69.45,"Sodium_Na":1.91,"Zinc_Zn":0.07,"Copper_Cu":0.02,"Manganese_Mn":0.02,"Selenium_Se":0.49,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.01,"Lysine":0.01,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.01,"Arginine":0.01,"Histidine":0.0,"Alanine":0.01,"AsparticAcid":0.03,"GlutamicAcid":0.05,"Glycine":0.01,"Proline":0.01,"Serine":0.01,"omega3":0.0,"omega6":0.0,"AddedSugars":15.49,"IntrinsicSugars":0.92},"addedSugars":21.2,"intrinsicSugars":1.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14741","name":"Alcoholic beverage, distilled, tequila, blanco, 80 proof","grams":40.5},{"ndb":"11205","name":"Cucumber, with peel, raw","grams":28.0},{"ndb":"11979","name":"Peppers, jalapeno, raw","grams":7.0},{"ndb":"19912","name":"Sweetener, syrup, agave","grams":31.1},{"ndb":"9160","name":"Lime juice, raw","grams":30.0}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"1.0","cooking_method":"1.0","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":136.6,"raw_water_grams":94.43,"raw_fat_grams":0.22,"raw_protein_grams":0.4,"raw_carb_grams":27.75,"final_grams":136.6}],"cookingMethod":"1.0"},
+    recipeIngredients: [
+      { name: 'El Pepino', quantity: 'custom (g)', foodWord: 'ELPEPINO', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'tequila', quantity: '1½ fl oz', section: 'cocktail', ndbNo: '14741', portionDesc: 'g', portionGrams: 40.5 },
+      { name: 'cucumber', quantity: '3 slices', section: 'cocktail', ndbNo: '11205', portionDesc: 'g', portionGrams: 28.0 },
+      { name: 'jalapeño', quantity: '2 slices', section: 'cocktail', ndbNo: '11979', portionDesc: 'g', portionGrams: 7.0 },
+      { name: 'agave syrup', quantity: '¾ oz', section: 'cocktail', ndbNo: '19912', portionDesc: 'g', portionGrams: 31.1 },
+      { name: 'lime juice', quantity: '2 tbsp', section: 'cocktail', ndbNo: '9160', portionDesc: 'g', portionGrams: 30.0 }
+    ],
+    recipeInstructions: [
+      'Rub the rim of a chilled coupe glass with a lime wedge and dip into chili salt.',
+      'In a cocktail shaker, muddle the cucumber slices and jalapeño slices.',
+      'Add ice, tequila, agave syrup, and lime juice.',
+      'Shake vigorously until well chilled, about 15 seconds.',
+      'Double strain into the prepared glass.',
+      'Garnish with a cucumber wheel and serve immediately.',
+      'Suggestions (not included):'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
