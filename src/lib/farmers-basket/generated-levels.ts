@@ -24191,5 +24191,43 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_067',
+    name: 'Hemingway Special',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 509,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'cocktail',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":186.0,"pro":0.2,"fat":0.0,"carb":8.0,"fib":0.3,"h2o":86.0,"sug":6.8,"perServing":{"cal":186.0,"pro":0.2,"fat":0.0,"carb":8.0,"fib":0.3,"h2o":86.0,"sug":6.8,"AddedSugars":2.2,"IntrinsicSugars":4.5},"micros":{"vitaminA":0.78,"vitaminC":11.32,"vitaminD":0.0,"vitaminE":0.04,"vitaminK":0.08,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.02,"riboflavin":0.01,"niacin":0.08,"folate":3.92,"calcium":5.49,"iron":0.1,"magnesium":3.14,"phosphorus":8.13,"potassium":49.99,"sodium":1.52,"zinc":0.06,"copper":0.03,"selenium":0.04,"cholesterol":0.0,"saturatedFat":0.0,"monoFat":0.0,"polyFat":0.01,"omega3":0.0,"omega6":0.0},"gramsPerServing":116.8,"servings":1,"per100g":{"Energy_KCal":159.25,"Water":73.65,"Protein":0.21,"TotalLipidFat":0.04,"Carbohydrate":6.85,"FiberTotalDietary":0.26,"SugarsTotal":5.79,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.0,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.01,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.78,"Retinol":0.0,"Carotene_beta":9.13,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.04,"VitaminK_phylloquinone":0.08,"VitaminC_totalAscorbicAcid":11.32,"Thiamin":0.02,"Riboflavin":0.01,"Niacin":0.08,"PantothenicAcid":0.05,"VitaminB6":0.01,"Folate_total":3.92,"Folate_food":3.92,"Folate_DFE":3.92,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":2.69,"Betaine":0.03,"LuteinZeaxanthin":2.64,"Lycopene":0.0,"Calcium_Ca":5.49,"Iron_Fe":0.1,"Magnesium_Mg":3.14,"Phosphorus_P":8.13,"Potassium_K":49.99,"Sodium_Na":1.52,"Zinc_Zn":0.06,"Copper_Cu":0.03,"Manganese_Mn":0.01,"Selenium_Se":0.04,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.01,"GlutamicAcid":0.01,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":1.9,"IntrinsicSugars":3.89},"addedSugars":2.2,"intrinsicSugars":4.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14050","name":"Alcoholic beverage, distilled, rum, 80 proof","grams":55.6},{"ndb":"9123","name":"Grapefruit juice, white, canned or bottled, unsweetened","grams":30.8},{"ndb":"14702","name":"Alcoholic beverage, liqueur, maraschino cherry, 64 proof","grams":15.4},{"ndb":"9160","name":"Lime juice, raw","grams":15.0}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":116.8,"raw_water_grams":86.03,"raw_fat_grams":0.04,"raw_protein_grams":0.24,"raw_carb_grams":8.0,"final_grams":116.8}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Hemingway Special', quantity: 'custom (g)', foodWord: 'HEMINGWAYSPECIAL', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'rum', quantity: '2 oz', section: 'cocktail', ndbNo: '14050', portionDesc: 'g', portionGrams: 55.6 },
+      { name: 'grapefruit juice', quantity: '1 oz', section: 'cocktail', ndbNo: '9123', portionDesc: 'g', portionGrams: 30.8 },
+      { name: 'maraschino liqueur', quantity: '½ oz', section: 'cocktail', ndbNo: '14702', portionDesc: 'g', portionGrams: 15.4 },
+      { name: 'lime juice', quantity: '½ oz', section: 'cocktail', ndbNo: '9160', portionDesc: 'g', portionGrams: 15.0 }
+    ],
+    recipeInstructions: [
+      'Combine rum, grapefruit juice, maraschino liqueur, and lime juice in a cocktail shaker with ice.',
+      'Shake vigorously until well chilled, about 15 seconds.',
+      'Strain into a chilled cocktail glass.',
+      'Suggestions (not included): Garnish with a grapefruit twist.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
