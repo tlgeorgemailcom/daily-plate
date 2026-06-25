@@ -57269,6 +57269,282 @@ export const FOODS: Food[] = [
         "gm": 45.0
       }
     ]
+  },
+  {
+    "word": "RASPBERRYLIQUEUR",
+    "display": "Raspberry Liqueur",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14783",
+    "desc": "Alcoholic beverage, liqueur, raspberry, 34 proof",
+    "cal": 205.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 29.5,
+    "fib": 0.0,
+    "h2o": 57.6,
+    "sug": 29.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      }
+    ]
+  },
+  {
+    "word": "ESPADINMEZCAL",
+    "display": "Espadin Mezcal",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14784",
+    "desc": "Alcoholic beverage, distilled, mezcal, espadin agave, 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      }
+    ]
+  },
+  {
+    "word": "PALOCORTADO",
+    "display": "Palo Cortado Sherry",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14785",
+    "desc": "Alcoholic beverage, wine, sherry, palo cortado, dry, 40 proof",
+    "cal": 138.0,
+    "pro": 0.2,
+    "fat": 0.0,
+    "carb": 5.5,
+    "fib": 0.0,
+    "h2o": 78.7,
+    "sug": 3.5,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      }
+    ]
+  },
+  {
+    "word": "MARTINIQUERHUM",
+    "display": "Martinique Molasses Rhum",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14786",
+    "desc": "Alcoholic beverage, distilled, rhum, Martinique, molasses, 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      }
+    ]
+  },
+  {
+    "word": "VODKASMIRNOFF",
+    "display": "Smirnoff Vodka",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14787",
+    "desc": "Alcoholic beverage, vodka, Smirnoff, 80 proof",
+    "cal": 231.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.0,
+    "fib": 0.0,
+    "h2o": 66.6,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      }
+    ]
+  },
+  {
+    "word": "PORTWINE",
+    "display": "Tawny Port Wine",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14788",
+    "desc": "Alcoholic beverage, wine, port, tawny, red, 20 proof",
+    "cal": 160.0,
+    "pro": 0.2,
+    "fat": 0.0,
+    "carb": 13.7,
+    "fib": 0.0,
+    "h2o": 70.5,
+    "sug": 7.8,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      }
+    ]
+  },
+  {
+    "word": "CREMEDECACAOBROWN",
+    "display": "Cr\u00e8me de Cacao (Brown)",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14789",
+    "desc": "Alcoholic beverage, liqueur, creme de cacao, brown, 50 proof",
+    "cal": 286.0,
+    "pro": 0.0,
+    "fat": 0.2,
+    "carb": 39.3,
+    "fib": 0.0,
+    "h2o": 41.8,
+    "sug": 39.3,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      }
+    ]
+  },
+  {
+    "word": "MARASCHINO",
+    "display": "Maraschino Liqueur",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14790",
+    "desc": "Alcoholic beverage, liqueur, maraschino, Luxardo, cherry, 64 proof",
+    "cal": 281.5,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 27.88,
+    "fib": 0.0,
+    "h2o": 47.34,
+    "sug": 27.88,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      }
+    ]
+  },
+  {
+    "word": "CREMEDMURE",
+    "display": "Cr\u00e8me de M\u00fbre",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14791",
+    "desc": "Alcoholic beverage, liqueur, blackberry, creme de mure, 36 proof",
+    "cal": 254.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 40.91,
+    "fib": 0.0,
+    "h2o": 45.68,
+    "sug": 40.91,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      }
+    ]
+  },
+  {
+    "word": "ORGEATYRUP",
+    "display": "Orgeat Syrup",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14792",
+    "desc": "Beverage, syrup, orgeat, almond syrup, non-alcoholic",
+    "cal": 240.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 60.0,
+    "fib": 0.0,
+    "h2o": 39.5,
+    "sug": 60.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      }
+    ]
+  },
+  {
+    "word": "PASSIONFRUITLEUR",
+    "display": "Passion Fruit Liqueur",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14793",
+    "desc": "Alcoholic beverage, liqueur, passoa, passion fruit, 34 proof",
+    "cal": 221.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 33.11,
+    "fib": 0.0,
+    "h2o": 53.74,
+    "sug": 33.11,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      }
+    ]
+  },
+  {
+    "word": "REDWINE",
+    "display": "Red Wine",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14794",
+    "desc": "Alcoholic beverage, wine, table, red, dry",
+    "cal": 85.0,
+    "pro": 0.07,
+    "fat": 0.0,
+    "carb": 2.61,
+    "fib": 0.0,
+    "h2o": 86.49,
+    "sug": 0.62,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      }
+    ]
   }
 ];
 
