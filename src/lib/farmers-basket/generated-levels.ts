@@ -23294,5 +23294,45 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_044',
+    name: 'Clover Club',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 486,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":154.4,"pro":1.9,"fat":0.1,"carb":13.4,"fib":0.0,"h2o":60.5,"sug":12.8,"perServing":{"cal":154.4,"pro":1.9,"fat":0.1,"carb":13.4,"fib":0.0,"h2o":60.5,"sug":12.8,"AddedSugars":12.2,"IntrinsicSugars":0.5},"micros":{"vitaminA":0.0,"vitaminC":6.49,"vitaminD":0.0,"vitaminE":0.03,"vitaminK":0.0,"vitaminB6":0.01,"vitaminB12":0.02,"thiamin":0.0,"riboflavin":0.08,"niacin":0.03,"folate":4.09,"calcium":2.3,"iron":0.03,"magnesium":3.03,"phosphorus":4.11,"potassium":47.31,"sodium":30.77,"zinc":0.01,"copper":0.01,"selenium":3.7,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":89.5,"servings":1,"per100g":{"Energy_KCal":172.55,"Water":67.62,"Protein":2.07,"TotalLipidFat":0.07,"Carbohydrate":14.98,"FiberTotalDietary":0.05,"SugarsTotal":14.24,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.17,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.03,"VitaminK_phylloquinone":0.0,"VitaminC_totalAscorbicAcid":6.49,"Thiamin":0.0,"Riboflavin":0.08,"Niacin":0.03,"PantothenicAcid":0.06,"VitaminB6":0.01,"Folate_total":4.09,"Folate_food":4.09,"Folate_DFE":4.09,"FolicAcid":0.0,"VitaminB12":0.02,"Choline_total":1.06,"Betaine":0.06,"LuteinZeaxanthin":2.51,"Lycopene":0.0,"Calcium_Ca":2.3,"Iron_Fe":0.03,"Magnesium_Mg":3.03,"Phosphorus_P":4.11,"Potassium_K":47.31,"Sodium_Na":30.77,"Zinc_Zn":0.01,"Copper_Cu":0.01,"Manganese_Mn":0.0,"Selenium_Se":3.7,"Tryptophan":0.02,"Threonine":0.08,"Isoleucine":0.12,"Leucine":0.19,"Lysine":0.15,"Methionine":0.07,"Cystine":0.05,"Phenylalanine":0.13,"Tyrosine":0.08,"Valine":0.15,"Arginine":0.12,"Histidine":0.05,"Alanine":0.13,"AsparticAcid":0.22,"GlutamicAcid":0.29,"Glycine":0.08,"Proline":0.08,"Serine":0.15,"omega3":0.0,"omega6":0.0,"AddedSugars":13.69,"IntrinsicSugars":0.55},"addedSugars":12.2,"intrinsicSugars":0.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14759","name":"Alcoholic beverage, gin, London dry, 80 proof","grams":40.5},{"ndb":"9152","name":"Lemon juice, raw","grams":15.0},{"ndb":"14803","name":"","grams":17.5},{"ndb":"1124","name":"Egg, white, raw, fresh","grams":16.5}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"1.0","cooking_method":"1.0","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":89.5,"raw_water_grams":60.52,"raw_fat_grams":0.06,"raw_protein_grams":1.85,"raw_carb_grams":13.41,"final_grams":89.5}],"cookingMethod":"1.0"},
+    recipeIngredients: [
+      { name: 'Clover Club', quantity: 'custom (g)', foodWord: 'CLOVERCLUB', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'dry gin', quantity: '1½ fl oz', section: 'cocktail', ndbNo: '14759', portionDesc: 'g', portionGrams: 40.5 },
+      { name: 'lemon juice', quantity: '½ fl oz', section: 'cocktail', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'raspberry syrup', quantity: '½ fl oz', section: 'cocktail', ndbNo: '14803', portionDesc: 'g', portionGrams: 17.5 },
+      { name: 'egg whites', quantity: '½ large white', section: 'cocktail', ndbNo: '1124', portionDesc: 'g', portionGrams: 16.5 }
+    ],
+    recipeInstructions: [
+      'Fill a cocktail shaker with ice.',
+      'Add the dry gin, lemon juice, raspberry syrup, and egg white.',
+      'Dry shake (without ice) vigorously for 10 seconds to emulsify the egg white.',
+      'Add ice and shake again until well chilled, about 15 seconds.',
+      'Double-strain through a fine-meshed strainer into a chilled cocktail glass and garnish with a few fresh raspberries.',
+      'Suggestions (not included):'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

@@ -57739,6 +57739,23 @@ export const FOODS: Food[] = [
         "gm": 4.5
       }
     ]
+  },
+  {
+    "word": "RASPBERRYSYRUP",
+    "display": "Raspberry Syrup",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14803",
+    "desc": "Non-alcoholic syrup, raspberry",
+    "cal": 280.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 70.0,
+    "fib": 0.0,
+    "h2o": 70.0,
+    "sug": 30.0,
+    "portions": []
   }
 ];
 

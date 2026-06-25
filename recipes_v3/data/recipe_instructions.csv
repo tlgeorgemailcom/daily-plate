@@ -3120,3 +3120,8 @@ BVRG_043,2,Fill a cocktail shaker with ice.
 BVRG_043,3,"Add the dry gin, triple sec, Lillet Blanc, and lemon juice."
 BVRG_043,4,"Shake vigorously until well chilled, about 15 seconds."
 BVRG_043,5,Strain into the prepared cocktail glass.
+BVRG_044,1,Fill a cocktail shaker with ice.
+BVRG_044,2,"Add the dry gin, lemon juice, raspberry syrup, and egg white."
+BVRG_044,3,Dry shake (without ice) vigorously for 10 seconds to emulsify the egg white.
+BVRG_044,4,"Add ice and shake again until well chilled, about 15 seconds."
+BVRG_044,5,Double-strain through a fine-meshed strainer into a chilled cocktail glass and garnish with a few fresh raspberries.
