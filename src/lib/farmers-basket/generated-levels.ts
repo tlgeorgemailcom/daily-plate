@@ -23213,5 +23213,45 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_042',
+    name: 'Cosmopolitan',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 484,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":188.5,"pro":0.1,"fat":0.0,"carb":11.8,"fib":0.1,"h2o":77.2,"sug":10.2,"perServing":{"cal":188.5,"pro":0.1,"fat":0.0,"carb":11.8,"fib":0.1,"h2o":77.2,"sug":10.2,"AddedSugars":0.0,"IntrinsicSugars":10.2},"micros":{"vitaminA":0.27,"vitaminC":16.27,"vitaminD":0.0,"vitaminE":0.09,"vitaminK":0.37,"vitaminB6":0.0,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.0,"niacin":0.03,"folate":1.37,"calcium":2.78,"iron":0.04,"magnesium":1.38,"phosphorus":2.2,"potassium":20.01,"sodium":0.85,"zinc":0.02,"copper":0.01,"selenium":0.07,"cholesterol":0.0,"saturatedFat":0.0,"monoFat":0.0,"polyFat":0.02,"omega3":0.0,"omega6":0.0},"gramsPerServing":109.8,"servings":1,"per100g":{"Energy_KCal":171.64,"Water":70.27,"Protein":0.06,"TotalLipidFat":0.04,"Carbohydrate":10.72,"FiberTotalDietary":0.05,"SugarsTotal":9.32,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.0,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.02,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.27,"Retinol":0.0,"Carotene_beta":5.54,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.09,"VitaminK_phylloquinone":0.37,"VitaminC_totalAscorbicAcid":16.27,"Thiamin":0.0,"Riboflavin":0.0,"Niacin":0.03,"PantothenicAcid":0.03,"VitaminB6":0.0,"Folate_total":1.37,"Folate_food":1.37,"Folate_DFE":1.37,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":1.01,"Betaine":0.06,"LuteinZeaxanthin":3.74,"Lycopene":0.0,"Calcium_Ca":2.78,"Iron_Fe":0.04,"Magnesium_Mg":1.38,"Phosphorus_P":2.2,"Potassium_K":20.01,"Sodium_Na":0.85,"Zinc_Zn":0.02,"Copper_Cu":0.01,"Manganese_Mn":0.01,"Selenium_Se":0.07,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.02,"GlutamicAcid":0.01,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":9.32},"addedSugars":0.0,"intrinsicSugars":10.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14761","name":"Alcoholic beverage, vodka, citron, lemon, 80 proof","grams":40.5},{"ndb":"14700","name":"Alcoholic beverage, liqueur, triple sec, orange, 80 proof","grams":22.7},{"ndb":"9160","name":"Lime juice, raw","grams":15.0},{"ndb":"14242","name":"Cranberry juice cocktail, bottled","grams":31.6}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"1.0","cooking_method":"1.0","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":109.8,"raw_water_grams":77.15,"raw_fat_grams":0.04,"raw_protein_grams":0.06,"raw_carb_grams":11.77,"final_grams":109.8}],"cookingMethod":"1.0"},
+    recipeIngredients: [
+      { name: 'Cosmopolitan', quantity: 'custom (g)', foodWord: 'COSMOPOLITAN', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Citron Vodka', quantity: '1½ fl oz', section: 'cocktail', ndbNo: '14761', portionDesc: 'g', portionGrams: 40.5 },
+      { name: 'triple sec', quantity: '¾ fl oz', section: 'cocktail', ndbNo: '14700', portionDesc: 'g', portionGrams: 22.7 },
+      { name: 'lime juice', quantity: '½ fl oz', section: 'cocktail', ndbNo: '9160', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'cranberry juice cocktail', quantity: '1 fl oz', section: 'cocktail', ndbNo: '14242', portionDesc: 'g', portionGrams: 31.6 }
+    ],
+    recipeInstructions: [
+      'Fill a cocktail shaker with ice.',
+      'Add the citron vodka, triple sec, lime juice, and cranberry juice.',
+      'Shake vigorously until well chilled, about 15 seconds.',
+      'Double-strain into a chilled cocktail glass.',
+      'Garnish with a lime wheel or a twist of orange peel.',
+      'Suggestions (not included):'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
