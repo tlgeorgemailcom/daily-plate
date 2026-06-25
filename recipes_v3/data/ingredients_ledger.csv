@@ -519,3 +519,4 @@ orgeat_syrup,14792,ORGEATYRUP,"Beverage, syrup, orgeat, almond syrup, non-alcoho
 passion_fruit_liqueur,14793,PASSIONFRUITLEUR,"Alcoholic beverage, liqueur, passoa, passion fruit, 34 proof",Passion Fruit Liqueur,ml,1,
 prosecco,14795,PROSECCO,"Alcoholic beverage, wine, sparkling, Prosecco, 11% ABV, brut",Prosecco,fl oz,29.4,new NDB 14795; Prosecco brut sparkling wine 2026-06-25
 peach_schnapps_99,14800,PEACHSCHNAPPS99,"Alcoholic beverage, liqueur, peach schnapps, high-proof, 99 proof",Peach Schnapps (99 Proof),fl oz,26.5,new NDB 14800; 99-proof peach schnapps 0g carbs 2026-06-25
+simple_syrup,14801,SIMPLESYRUP,"Cocktail mixer, simple syrup, 1:1 sugar-water",simple syrup,fl oz,35.0,Custom NDB 14801; 1:1 sugar:water by weight; 200 kcal/100g; 50g carbs; density ~1.18 g/mL 2026-06-25

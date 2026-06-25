@@ -57683,6 +57683,29 @@ export const FOODS: Food[] = [
         "gm": 26.5
       }
     ]
+  },
+  {
+    "word": "SIMPLESYRUP",
+    "display": "Simple Syrup",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14801",
+    "desc": "Cocktail mixer, simple syrup, 1:1 sugar-water",
+    "cal": 200.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 50.0,
+    "fib": 0.0,
+    "h2o": 50.0,
+    "sug": 50.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 35.0
+      }
+    ]
   }
 ];
 
