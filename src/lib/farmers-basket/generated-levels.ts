@@ -23610,5 +23610,47 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_052',
+    name: 'Espresso Martini',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 494,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":189.0,"pro":0.0,"fat":0.1,"carb":16.5,"fib":0.0,"h2o":78.0,"sug":16.0,"perServing":{"cal":189.0,"pro":0.0,"fat":0.1,"carb":16.5,"fib":0.0,"h2o":78.0,"sug":16.0,"AddedSugars":4.4,"IntrinsicSugars":11.6},"micros":{"vitaminA":0.0,"vitaminC":0.05,"vitaminD":0.0,"vitaminE":0.0,"vitaminK":0.03,"vitaminB6":0.0,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.05,"niacin":1.37,"folate":0.26,"calcium":0.53,"iron":0.04,"magnesium":21.09,"phosphorus":3.7,"potassium":30.69,"sodium":4.06,"zinc":0.01,"copper":0.02,"selenium":0.0,"cholesterol":0.0,"saturatedFat":0.02,"monoFat":0.0,"polyFat":0.02,"omega3":0.0,"omega6":0.0},"gramsPerServing":112.3,"servings":1,"per100g":{"Energy_KCal":168.34,"Water":69.43,"Protein":0.03,"TotalLipidFat":0.05,"Carbohydrate":14.7,"FiberTotalDietary":0.0,"SugarsTotal":14.26,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.02,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.02,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.0,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.0,"VitaminK_phylloquinone":0.03,"VitaminC_totalAscorbicAcid":0.05,"Thiamin":0.0,"Riboflavin":0.05,"Niacin":1.37,"PantothenicAcid":0.01,"VitaminB6":0.0,"Folate_total":0.26,"Folate_food":0.26,"Folate_DFE":0.26,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":0.69,"Betaine":0.0,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":0.53,"Iron_Fe":0.04,"Magnesium_Mg":21.09,"Phosphorus_P":3.7,"Potassium_K":30.69,"Sodium_Na":4.06,"Zinc_Zn":0.01,"Copper_Cu":0.02,"Manganese_Mn":0.01,"Selenium_Se":0.0,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":3.9,"IntrinsicSugars":10.36},"addedSugars":4.4,"intrinsicSugars":11.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14051","name":"Alcoholic beverage, distilled, vodka, 80 proof","grams":41.7},{"ndb":"14210","name":"Beverages, Coffee, espresso, restaurant-prepared","grams":29.6},{"ndb":"14736","name":"Alcoholic beverage, liqueur, coffee, Kahlua Original, 32 proof","grams":32.2},{"ndb":"14801","name":"Cocktail mixer, simple syrup, 1:1 sugar-water","grams":8.8}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"1.0","cooking_method":"1.0","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":112.29,"raw_water_grams":77.96,"raw_fat_grams":0.05,"raw_protein_grams":0.04,"raw_carb_grams":16.51,"final_grams":112.29}],"cookingMethod":"1.0"},
+    recipeIngredients: [
+      { name: 'Espresso Martini', quantity: 'custom (g)', foodWord: 'ESPRESSOMARTINI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Vodka', quantity: '1½ fl oz', section: 'cocktail', ndbNo: '14051', portionDesc: 'g', portionGrams: 41.7 },
+      { name: 'espresso', quantity: '1 fl oz', section: 'cocktail', ndbNo: '14210', portionDesc: 'g', portionGrams: 29.6 },
+      { name: 'coffee liqueur (Kahlúa)', quantity: '1 fl oz', section: 'cocktail', ndbNo: '14736', portionDesc: 'g', portionGrams: 32.24 },
+      { name: 'simple syrup', quantity: '¼ fl oz', section: 'cocktail', ndbNo: '14801', portionDesc: 'g', portionGrams: 8.75 }
+    ],
+    recipeInstructions: [
+      'Chill a coupe or martini glass in the freezer for at least 5 minutes.',
+      'Brew 1 oz of espresso and allow it to cool for 1–2 minutes (not fully cold — warm espresso creates better foam).',
+      'Fill a cocktail shaker with ice.',
+      'Add the vodka, espresso, coffee liqueur, and simple syrup to the shaker.',
+      'Shake vigorously for 15–20 seconds — the shaker should frost over and you will hear the ice break down.',
+      'Double-strain through a fine-mesh strainer into the chilled glass.',
+      'Garnish with 3 coffee beans arranged on top of the foam for good luck.',
+      'Suggestions (not included):'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
