@@ -22974,5 +22974,46 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_036',
+    name: 'Brandy Crusta',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 478,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":208.2,"pro":0.1,"fat":0.0,"carb":7.6,"fib":0.0,"h2o":61.4,"sug":7.0,"perServing":{"cal":208.2,"pro":0.1,"fat":0.0,"carb":7.6,"fib":0.0,"h2o":61.4,"sug":7.0,"AddedSugars":0.0,"IntrinsicSugars":7.0},"micros":{"vitaminA":0.0,"vitaminC":6.11,"vitaminD":0.0,"vitaminE":0.02,"vitaminK":0.0,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.0,"niacin":0.01,"folate":3.16,"calcium":0.95,"iron":0.01,"magnesium":0.95,"phosphorus":1.26,"potassium":16.25,"sodium":0.16,"zinc":0.01,"copper":0.0,"selenium":0.02,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":95.0,"servings":1,"per100g":{"Energy_KCal":219.07,"Water":64.64,"Protein":0.06,"TotalLipidFat":0.04,"Carbohydrate":8.03,"FiberTotalDietary":0.05,"SugarsTotal":7.33,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.16,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.02,"VitaminK_phylloquinone":0.0,"VitaminC_totalAscorbicAcid":6.11,"Thiamin":0.0,"Riboflavin":0.0,"Niacin":0.01,"PantothenicAcid":0.02,"VitaminB6":0.01,"Folate_total":3.16,"Folate_food":3.16,"Folate_DFE":3.16,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":0.8,"Betaine":0.0,"LuteinZeaxanthin":2.37,"Lycopene":0.0,"Calcium_Ca":0.95,"Iron_Fe":0.01,"Magnesium_Mg":0.95,"Phosphorus_P":1.26,"Potassium_K":16.25,"Sodium_Na":0.16,"Zinc_Zn":0.01,"Copper_Cu":0.0,"Manganese_Mn":0.0,"Selenium_Se":0.02,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":7.33},"addedSugars":0.0,"intrinsicSugars":7.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14743","name":"Alcoholic beverage, distilled, cognac, VS/VSOP, 80 proof","grams":55.6},{"ndb":"9152","name":"Lemon juice, raw","grams":15.0},{"ndb":"14729","name":"Alcoholic beverage, liqueur, orange curacao, 80 proof","grams":14.9},{"ndb":"14702","name":"Alcoholic beverage, liqueur, maraschino cherry, 64 proof","grams":7.7},{"ndb":"14749","name":"Alcoholic beverage, bitters, aromatic, Angostura type, 89.4 proof","grams":1.8}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"1.0","cooking_method":"1.0","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":95.05,"raw_water_grams":61.44,"raw_fat_grams":0.04,"raw_protein_grams":0.05,"raw_carb_grams":7.63,"final_grams":95.05}],"cookingMethod":"1.0"},
+    recipeIngredients: [
+      { name: 'Brandy Crusta', quantity: 'custom (g)', foodWord: 'BRANDYCRUSTA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'cognac', quantity: '2 fl oz', section: 'cocktail', ndbNo: '14743', portionDesc: 'g', portionGrams: 55.6 },
+      { name: 'lemon juice', quantity: '½ fl oz', section: 'cocktail', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'orange curaçao', quantity: '½ fl oz', section: 'cocktail', ndbNo: '14729', portionDesc: 'g', portionGrams: 14.95 },
+      { name: 'maraschino liqueur', quantity: '¼ fl oz', section: 'cocktail', ndbNo: '14702', portionDesc: 'g', portionGrams: 7.7 },
+      { name: 'aromatic bitters', quantity: '2 dashes', section: 'cocktail', ndbNo: '14749', portionDesc: 'g', portionGrams: 1.8 }
+    ],
+    recipeInstructions: [
+      'Run a lemon wedge around the rim of a chilled wine glass or coupe, then dip the rim in superfine sugar to coat.',
+      'Line the inside of the glass with a long spiral of lemon peel.',
+      'Combine the cognac, lemon juice, orange curaçao, maraschino liqueur, and bitters in a cocktail shaker with ice.',
+      'Shake for 15 seconds until well chilled.',
+      'Strain into the prepared glass.',
+      'Suggestions (not included): Cut the lemon peel spiral long enough to drape over the rim — the crusta (sugared peel) is the cocktail\'s defining signature.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
