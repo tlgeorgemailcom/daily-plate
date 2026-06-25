@@ -23965,5 +23965,45 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_061',
+    name: 'Gin Fizz',
+    category: 'cocktails',
+    dietaryCategory: 'veggie',
+    levelNum: 503,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'cocktail',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":192.4,"pro":1.9,"fat":0.1,"carb":15.3,"fib":0.1,"h2o":121.2,"sug":14.0,"perServing":{"cal":192.4,"pro":1.9,"fat":0.1,"carb":15.3,"fib":0.1,"h2o":121.2,"sug":14.0,"AddedSugars":13.1,"IntrinsicSugars":0.9},"micros":{"vitaminA":0.0,"vitaminC":7.41,"vitaminD":0.0,"vitaminE":0.03,"vitaminK":0.0,"vitaminB6":0.01,"vitaminB12":0.01,"thiamin":0.0,"riboflavin":0.05,"niacin":0.03,"folate":4.25,"calcium":2.84,"iron":0.03,"magnesium":2.5,"phosphorus":3.11,"potassium":37.25,"sodium":21.68,"zinc":0.03,"copper":0.01,"selenium":2.12,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":156.8,"servings":1,"per100g":{"Energy_KCal":122.76,"Water":77.32,"Protein":1.21,"TotalLipidFat":0.06,"Carbohydrate":9.77,"FiberTotalDietary":0.06,"SugarsTotal":8.93,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.19,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.03,"VitaminK_phylloquinone":0.0,"VitaminC_totalAscorbicAcid":7.41,"Thiamin":0.0,"Riboflavin":0.05,"Niacin":0.03,"PantothenicAcid":0.04,"VitaminB6":0.01,"Folate_total":4.25,"Folate_food":4.25,"Folate_DFE":4.25,"FolicAcid":0.0,"VitaminB12":0.01,"Choline_total":1.09,"Betaine":0.03,"LuteinZeaxanthin":2.87,"Lycopene":0.0,"Calcium_Ca":2.84,"Iron_Fe":0.03,"Magnesium_Mg":2.5,"Phosphorus_P":3.11,"Potassium_K":37.25,"Sodium_Na":21.68,"Zinc_Zn":0.03,"Copper_Cu":0.01,"Manganese_Mn":0.0,"Selenium_Se":2.12,"Tryptophan":0.01,"Threonine":0.05,"Isoleucine":0.07,"Leucine":0.11,"Lysine":0.08,"Methionine":0.04,"Cystine":0.03,"Phenylalanine":0.07,"Tyrosine":0.05,"Valine":0.08,"Arginine":0.07,"Histidine":0.03,"Alanine":0.07,"AsparticAcid":0.13,"GlutamicAcid":0.16,"Glycine":0.04,"Proline":0.05,"Serine":0.08,"omega3":0.0,"omega6":0.0,"AddedSugars":8.37,"IntrinsicSugars":0.56},"addedSugars":13.1,"intrinsicSugars":0.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14759","name":"Alcoholic beverage, gin, London dry, 80 proof","grams":54.0},{"ndb":"9152","name":"Lemon juice, raw","grams":30.0},{"ndb":"14801","name":"Cocktail mixer, simple syrup, 1:1 sugar-water","grams":26.2},{"ndb":"1124","name":"Egg, white, raw, fresh","grams":16.5},{"ndb":"14121","name":"Beverages, Carbonated beverage, club soda","grams":30.0}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":156.75,"raw_water_grams":121.2,"raw_fat_grams":0.1,"raw_protein_grams":1.9,"raw_carb_grams":15.32,"final_grams":156.75}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Gin Fizz', quantity: 'custom (g)', foodWord: 'GINFIZZ', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'dry gin', quantity: '2 oz', section: 'cocktail', ndbNo: '14759', portionDesc: 'g', portionGrams: 54.0 },
+      { name: 'lemon juice', quantity: '1 oz', section: 'cocktail', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'simple syrup', quantity: '¾ oz', section: 'cocktail', ndbNo: '14801', portionDesc: 'g', portionGrams: 26.25 },
+      { name: 'egg whites', quantity: '½ large', section: 'cocktail', ndbNo: '1124', portionDesc: 'g', portionGrams: 16.5 },
+      { name: 'club soda', quantity: '1 oz', section: 'cocktail', ndbNo: '14121', portionDesc: 'g', portionGrams: 30.0 }
+    ],
+    recipeInstructions: [
+      'Combine gin, lemon juice, simple syrup, and egg white in a cocktail shaker (no ice) and dry-shake vigorously for 15 seconds.',
+      'Add ice and shake vigorously until well chilled, about 15 seconds more.',
+      'Double-strain into a chilled Collins glass.',
+      'Top with club soda — the egg white foam will rise to the surface.',
+      'Suggestions (not included): Garnish with a lemon twist.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
