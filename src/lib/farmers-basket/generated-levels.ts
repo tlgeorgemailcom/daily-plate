@@ -23811,5 +23811,43 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_057',
+    name: 'Garibaldi',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 499,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'cocktail',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":144.5,"pro":0.9,"fat":0.2,"carb":19.7,"fib":0.2,"h2o":139.4,"sug":17.3,"perServing":{"cal":144.5,"pro":0.9,"fat":0.2,"carb":19.7,"fib":0.2,"h2o":139.4,"sug":17.3,"AddedSugars":0.0,"IntrinsicSugars":17.3},"micros":{"vitaminA":7.3,"vitaminC":36.52,"vitaminD":0.0,"vitaminE":0.03,"vitaminK":0.07,"vitaminB6":0.03,"vitaminB12":0.0,"thiamin":0.07,"riboflavin":0.02,"niacin":0.29,"folate":21.91,"calcium":8.04,"iron":0.15,"magnesium":8.04,"phosphorus":12.42,"potassium":146.1,"sodium":0.73,"zinc":0.04,"copper":0.03,"selenium":0.07,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.02,"polyFat":0.03,"omega3":0.0,"omega6":0.0},"gramsPerServing":169.8,"servings":1,"per100g":{"Energy_KCal":85.1,"Water":82.13,"Protein":0.51,"TotalLipidFat":0.15,"Carbohydrate":11.63,"FiberTotalDietary":0.15,"SugarsTotal":10.17,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.02,"FattyAcids_totalPolyunsaturated":0.03,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":7.3,"Retinol":0.0,"Carotene_beta":24.11,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.03,"VitaminK_phylloquinone":0.07,"VitaminC_totalAscorbicAcid":36.52,"Thiamin":0.07,"Riboflavin":0.02,"Niacin":0.29,"PantothenicAcid":0.14,"VitaminB6":0.03,"Folate_total":21.91,"Folate_food":21.91,"Folate_DFE":21.91,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":4.53,"Betaine":0.0,"LuteinZeaxanthin":84.01,"Lycopene":0.0,"Calcium_Ca":8.04,"Iron_Fe":0.15,"Magnesium_Mg":8.04,"Phosphorus_P":12.42,"Potassium_K":146.1,"Sodium_Na":0.73,"Zinc_Zn":0.04,"Copper_Cu":0.03,"Manganese_Mn":0.01,"Selenium_Se":0.07,"Tryptophan":0.0,"Threonine":0.01,"Isoleucine":0.01,"Leucine":0.01,"Lysine":0.01,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.01,"Tyrosine":0.0,"Valine":0.01,"Arginine":0.03,"Histidine":0.0,"Alanine":0.01,"AsparticAcid":0.05,"GlutamicAcid":0.02,"Glycine":0.01,"Proline":0.03,"Serine":0.01,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":10.17},"addedSugars":0.0,"intrinsicSugars":17.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14703","name":"Alcoholic beverage, campari bitters, 48 proof","grams":45.8},{"ndb":"9206","name":"","grams":124.0}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":169.75,"raw_water_grams":139.41,"raw_fat_grams":0.25,"raw_protein_grams":0.87,"raw_carb_grams":19.74,"final_grams":169.75}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Garibaldi', quantity: 'custom (g)', foodWord: 'GARIBALDI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Campari', quantity: '1½ oz', section: 'cocktail', ndbNo: '14703', portionDesc: 'g', portionGrams: 45.75 },
+      { name: 'orange juice', quantity: '4 oz', section: 'cocktail', ndbNo: '9206', portionDesc: 'g', portionGrams: 124.0 }
+    ],
+    recipeInstructions: [
+      'Fill a highball glass with ice.',
+      'Pour Campari over the ice.',
+      'Add freshly squeezed orange juice.',
+      'Stir gently to combine.',
+      'Garnish with an orange slice.',
+      'Suggestions (not included):'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
