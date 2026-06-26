@@ -12,17 +12,17 @@
   "servings_count": 1,
   "audit_status": "PASS",
   "audit_notes": "",
-  "raw_total_grams": 80.24,
-  "raw_water_grams": 54.59,
+  "raw_total_grams": 90.51,
+  "raw_water_grams": 58.4,
   "raw_fat_grams": 0.0,
   "raw_protein_grams": 0.0,
-  "raw_carb_grams": 2.96,
+  "raw_carb_grams": 7.48,
   "water_lost_grams": 0.0,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
-  "cooked_total_grams": 80.24,
-  "grams_per_serving": 80.24,
+  "cooked_total_grams": 90.51,
+  "grams_per_serving": 90.51,
   "ingredients": [
     {
       "ingredient_key": "rye_whiskey",
@@ -67,6 +67,27 @@
       "intrinsic_sugar_g": 2.957
     },
     {
+      "ingredient_key": "cherry_heering",
+      "ndb_no": "14809",
+      "long_desc": "Cherry Heering liqueur, 48 proof",
+      "grams": 10.27,
+      "section": "cocktail",
+      "ingredient_group": "cocktail",
+      "qty_display": "2 tsp",
+      "contribution": {
+        "Energy_KCal": 31.734,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 4.519,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 4.519,
+        "Water": 3.806
+      },
+      "sugar_policy": "none_added",
+      "added_sugar_g": 0.0,
+      "intrinsic_sugar_g": 4.519
+    },
+    {
       "ingredient_key": "absinthe",
       "ndb_no": "14704",
       "long_desc": "Alcoholic beverage, distilled, absinthe, 136 proof",
@@ -88,20 +109,15 @@
       "intrinsic_sugar_g": 0.0
     }
   ],
-  "skipped_ingredients": [
-    {
-      "ingredient_key": "cherry_heering",
-      "reason": "missing_ndb_14809"
-    }
-  ],
+  "skipped_ingredients": [],
   "per100g": {
-    "Energy_KCal": 209.69,
-    "Water": 68.03,
+    "Energy_KCal": 220.96,
+    "Water": 64.52,
     "Protein": 0.0,
     "TotalLipidFat": 0.0,
-    "Carbohydrate": 3.68,
+    "Carbohydrate": 8.26,
     "FiberTotalDietary": 0.0,
-    "SugarsTotal": 3.68,
+    "SugarsTotal": 8.26,
     "Cholesterol": 0.0,
     "FattyAcids_totalSaturated": 0.0,
     "FattyAcids_totalMonounsaturated": 0.0,
@@ -163,16 +179,16 @@
     "omega3": 0.0,
     "omega6": 0.0,
     "AddedSugars": 0.0,
-    "IntrinsicSugars": 3.68
+    "IntrinsicSugars": 8.26
   },
   "per_serving": {
-    "Energy_KCal": 168.26,
-    "Water": 54.59,
+    "Energy_KCal": 199.99,
+    "Water": 58.4,
     "Protein": 0.0,
     "TotalLipidFat": 0.0,
-    "Carbohydrate": 2.96,
+    "Carbohydrate": 7.48,
     "FiberTotalDietary": 0.0,
-    "SugarsTotal": 2.96,
+    "SugarsTotal": 7.48,
     "Cholesterol": 0.0,
     "FattyAcids_totalSaturated": 0.0,
     "FattyAcids_totalMonounsaturated": 0.0,
@@ -234,7 +250,7 @@
     "omega3": 0.0,
     "omega6": 0.0,
     "AddedSugars": 0.0,
-    "IntrinsicSugars": 2.96
+    "IntrinsicSugars": 7.48
   },
   "sections": [
     {
@@ -249,13 +265,13 @@
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
       "yield_factor_other": 1.0,
-      "ingredient_count": 3,
-      "raw_grams": 80.24,
-      "raw_water_grams": 54.59,
+      "ingredient_count": 4,
+      "raw_grams": 90.51,
+      "raw_water_grams": 58.4,
       "raw_fat_grams": 0.0,
       "raw_protein_grams": 0.0,
-      "raw_carb_grams": 2.96,
-      "final_grams": 80.24
+      "raw_carb_grams": 7.48,
+      "final_grams": 90.51
     }
   ]
 }

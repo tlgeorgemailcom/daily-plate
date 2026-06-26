@@ -533,3 +533,4 @@ ginger_beer,14734,GINGERBEER,"Beverages, carbonated, ginger beer, non-alcoholic"
 islay_scotch,14808,ISLAYSCOTCH,"Alcoholic beverage, distilled, whiskey, Islay single malt Scotch, 86 proof",Islay single malt Scotch whisky,fl oz,27.8,Custom NDB 14808 inserted 2026-06-26
 cherry_heering,14809,CHERRYHEERING,"Cherry Heering liqueur, 48 proof",Cherry Heering,fl oz,30.8,custom NDB; 44g/100g sugar 24% ABV
 cynar,14810,CYNAR,"Alcoholic beverage, liqueur, Cynar, artichoke amaro, 33 proof",Cynar,fl oz,30.5,artichoke amaro 16.5% ABV; 8g sugar/fl oz per label; custom NDB 14810 2026-06-26
+angostura_bitters,14749,AROMATICBITTERS,"Alcoholic beverage, bitters, aromatic, Angostura type, 89.4 proof",Angostura bitters,dash,0.9,cocktail ingredient; alias of aromatic_bitters NDB 14749 2026-06-26
