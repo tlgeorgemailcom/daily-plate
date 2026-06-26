@@ -25812,5 +25812,44 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_109',
+    name: 'Planter\'s Punch',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 551,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":213.8,"pro":0.4,"fat":0.1,"carb":22.4,"fib":0.2,"h2o":116.2,"sug":15.3,"perServing":{"cal":213.8,"pro":0.4,"fat":0.1,"carb":22.4,"fib":0.2,"h2o":116.2,"sug":15.3,"AddedSugars":12.3,"IntrinsicSugars":3.0},"micros":{"vitaminA":2.25,"vitaminC":16.03,"vitaminD":0.0,"vitaminE":0.04,"vitaminK":0.16,"vitaminB6":0.03,"vitaminB12":0.0,"thiamin":0.03,"riboflavin":0.01,"niacin":0.13,"folate":10.76,"calcium":7.4,"iron":0.12,"magnesium":6.1,"phosphorus":7.38,"potassium":84.4,"sodium":4.29,"zinc":0.06,"copper":0.02,"selenium":0.13,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.01,"polyFat":0.02,"omega3":0.0,"omega6":0.0},"gramsPerServing":157.5,"servings":1,"per100g":{"Energy_KCal":135.76,"Water":73.75,"Protein":0.27,"TotalLipidFat":0.07,"Carbohydrate":14.2,"FiberTotalDietary":0.13,"SugarsTotal":9.71,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.01,"FattyAcids_totalPolyunsaturated":0.02,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":2.25,"Retinol":0.0,"Carotene_beta":11.35,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.04,"VitaminK_phylloquinone":0.16,"VitaminC_totalAscorbicAcid":16.03,"Thiamin":0.03,"Riboflavin":0.01,"Niacin":0.13,"PantothenicAcid":0.06,"VitaminB6":0.03,"Folate_total":10.76,"Folate_food":10.76,"Folate_DFE":10.76,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":2.58,"Betaine":0.03,"LuteinZeaxanthin":22.63,"Lycopene":0.0,"Calcium_Ca":7.4,"Iron_Fe":0.12,"Magnesium_Mg":6.1,"Phosphorus_P":7.38,"Potassium_K":84.4,"Sodium_Na":4.29,"Zinc_Zn":0.06,"Copper_Cu":0.02,"Manganese_Mn":0.1,"Selenium_Se":0.13,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.01,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.03,"GlutamicAcid":0.01,"Glycine":0.0,"Proline":0.01,"Serine":0.01,"omega3":0.0,"omega6":0.0,"AddedSugars":7.81,"IntrinsicSugars":1.89},"addedSugars":12.3,"intrinsicSugars":3.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14748","name":"Alcoholic beverage, distilled, rum, dark, aged, 80 proof","grams":54.0},{"ndb":"9160","name":"Lime juice, raw","grams":22.5},{"ndb":"9273","name":"Pineapple juice, canned, unsweetened","grams":30.0},{"ndb":"9206","name":"","grams":31.0},{"ndb":"42040","name":"Syrups, grenadine","grams":20.0}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":157.5,"raw_water_grams":116.16,"raw_fat_grams":0.11,"raw_protein_grams":0.42,"raw_carb_grams":22.36,"final_grams":157.5}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Planter\'s Punch', quantity: 'custom (g)', foodWord: 'PLANTERSP', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'dark rum', quantity: '2 oz', section: 'cocktail', ndbNo: '14748', portionDesc: 'g', portionGrams: 54.0 },
+      { name: 'lime juice', quantity: '¾ oz', section: 'cocktail', ndbNo: '9160', portionDesc: 'g', portionGrams: 22.5 },
+      { name: 'pineapple juice', quantity: '1 oz', section: 'cocktail', ndbNo: '9273', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'orange juice', quantity: '1 oz', section: 'cocktail', ndbNo: '9206', portionDesc: 'g', portionGrams: 31.0 },
+      { name: 'grenadine', quantity: '½ oz', section: 'cocktail', ndbNo: '42040', portionDesc: 'g', portionGrams: 20.0 }
+    ],
+    recipeInstructions: [
+      'Fill a highball glass with crushed or cubed ice.',
+      'Add dark rum, lime juice, pineapple juice, orange juice, and grenadine.',
+      'Stir gently to combine.',
+      'Suggestions (not included): Garnish with an orange wheel, a maraschino cherry, and a sprig of mint.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
