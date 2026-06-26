@@ -57886,6 +57886,29 @@ export const FOODS: Food[] = [
         "gm": 30.8
       }
     ]
+  },
+  {
+    "word": "CYNAR",
+    "display": "Cynar",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14810",
+    "desc": "Alcoholic beverage, liqueur, Cynar, artichoke amaro, 33 proof",
+    "cal": 196.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 26.0,
+    "fib": 0.0,
+    "h2o": 61.0,
+    "sug": 26.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.5
+      }
+    ]
   }
 ];
 
