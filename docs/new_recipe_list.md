@@ -208,7 +208,7 @@ Alcohol Sangria, White
 - ✅ Vesper (BVRG_147)
 - ✅ Vieux Carré (BVRG_148)
 - ✅ Vodka Tonic (BVRG_149)
-Alcohol Whiskey Sour
+- ✅ Whiskey Sour (BVRG_150)
 Alcohol White Russian
 
 

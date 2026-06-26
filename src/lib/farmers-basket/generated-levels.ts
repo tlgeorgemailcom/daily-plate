@@ -27453,5 +27453,42 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_151',
+    name: 'White Russian',
+    category: 'cocktails',
+    dietaryCategory: 'veggie',
+    levelNum: 593,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail',
+    prepTime: '5',
+    linkType: 'ingredient',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":302.1,"pro":0.8,"fat":10.7,"carb":12.4,"fib":0.0,"h2o":71.1,"sug":12.5,"perServing":{"cal":302.1,"pro":0.8,"fat":10.7,"carb":12.4,"fib":0.0,"h2o":71.1,"sug":12.5,"AddedSugars":0.0,"IntrinsicSugars":12.5},"micros":{"vitaminA":103.98,"vitaminC":0.15,"vitaminD":15.94,"vitaminE":0.23,"vitaminK":0.81,"vitaminB6":0.01,"vitaminB12":0.04,"thiamin":0.01,"riboflavin":0.05,"niacin":0.02,"folate":1.01,"calcium":16.7,"iron":0.03,"magnesium":1.77,"phosphorus":17.04,"potassium":24.51,"sodium":7.3,"zinc":0.06,"copper":0.01,"selenium":0.76,"cholesterol":28.59,"saturatedFat":5.83,"monoFat":2.3,"polyFat":0.4,"omega3":0.04,"omega6":0.22},"gramsPerServing":117.6,"servings":1,"per100g":{"Energy_KCal":256.93,"Water":60.46,"Protein":0.72,"TotalLipidFat":9.13,"Carbohydrate":10.59,"FiberTotalDietary":0.0,"SugarsTotal":10.64,"Cholesterol":28.59,"FattyAcids_totalSaturated":5.83,"FattyAcids_totalMonounsaturated":2.3,"FattyAcids_totalPolyunsaturated":0.4,"LinoleicAcid":0.22,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.0,"DPA_22_5n3":0.01,"DHA_22_6n3":0.0,"VitaminA_RAE":103.98,"Retinol":102.46,"Carotene_beta":18.22,"VitaminD":15.94,"VitaminE_alphaTocopherol":0.23,"VitaminK_phylloquinone":0.81,"VitaminC_totalAscorbicAcid":0.15,"Thiamin":0.01,"Riboflavin":0.05,"Niacin":0.02,"PantothenicAcid":0.12,"VitaminB6":0.01,"Folate_total":1.01,"Folate_food":1.01,"Folate_DFE":1.01,"FolicAcid":0.0,"VitaminB12":0.04,"Choline_total":4.25,"Betaine":0.0,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":16.7,"Iron_Fe":0.03,"Magnesium_Mg":1.77,"Phosphorus_P":17.04,"Potassium_K":24.51,"Sodium_Na":7.3,"Zinc_Zn":0.06,"Copper_Cu":0.01,"Manganese_Mn":0.0,"Selenium_Se":0.76,"Tryptophan":0.02,"Threonine":0.03,"Isoleucine":0.04,"Leucine":0.06,"Lysine":0.03,"Methionine":0.02,"Cystine":0.0,"Phenylalanine":0.03,"Tyrosine":0.03,"Valine":0.04,"Arginine":0.02,"Histidine":0.02,"Alanine":0.02,"AsparticAcid":0.05,"GlutamicAcid":0.14,"Glycine":0.02,"Proline":0.08,"Serine":0.02,"omega3":0.04,"omega6":0.22,"AddedSugars":0.0,"IntrinsicSugars":10.64},"addedSugars":0.0,"intrinsicSugars":12.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14051","name":"Alcoholic beverage, distilled, vodka, 80 proof","grams":55.6},{"ndb":"14736","name":"Alcoholic beverage, liqueur, coffee, Kahlua Original, 32 proof","grams":32.2},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":29.8}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":117.59,"raw_water_grams":71.09,"raw_fat_grams":10.73,"raw_protein_grams":0.84,"raw_carb_grams":12.45,"final_grams":117.59}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'White Russian', quantity: 'custom (g)', foodWord: 'WHITERUSSIAN', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'vodka', quantity: '2 oz', section: 'cocktail', ndbNo: '14051', portionDesc: 'g', portionGrams: 55.6 },
+      { name: 'coffee liqueur (Kahlúa)', quantity: '1 oz', section: 'cocktail', ndbNo: '14736', portionDesc: 'g', portionGrams: 32.24 },
+      { name: 'heavy cream', quantity: '1 oz', section: 'cocktail', ndbNo: '1053', portionDesc: 'g', portionGrams: 29.75 }
+    ],
+    recipeInstructions: [
+      'Fill a rocks glass with ice.',
+      'Pour in the vodka and coffee liqueur and stir briefly.',
+      'Float the heavy cream over the back of a spoon on top.',
+      'Suggestions (not included): Stir gently before drinking, or leave layered for presentation.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
