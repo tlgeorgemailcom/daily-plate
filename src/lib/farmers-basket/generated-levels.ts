@@ -26552,5 +26552,44 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_128',
+    name: 'Sidecar',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 570,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'ingredient',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":205.8,"pro":0.1,"fat":0.1,"carb":7.6,"fib":0.1,"h2o":66.9,"sug":6.7,"perServing":{"cal":205.8,"pro":0.1,"fat":0.1,"carb":7.6,"fib":0.1,"h2o":66.9,"sug":6.7,"AddedSugars":0.0,"IntrinsicSugars":6.7},"micros":{"vitaminA":0.0,"vitaminC":8.68,"vitaminD":0.0,"vitaminE":0.03,"vitaminK":0.0,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.0,"niacin":0.02,"folate":4.49,"calcium":1.35,"iron":0.02,"magnesium":1.35,"phosphorus":1.79,"potassium":23.11,"sodium":0.22,"zinc":0.01,"copper":0.0,"selenium":0.02,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":100.3,"servings":1,"per100g":{"Energy_KCal":205.21,"Water":66.73,"Protein":0.08,"TotalLipidFat":0.05,"Carbohydrate":7.62,"FiberTotalDietary":0.07,"SugarsTotal":6.64,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.22,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.03,"VitaminK_phylloquinone":0.0,"VitaminC_totalAscorbicAcid":8.68,"Thiamin":0.0,"Riboflavin":0.0,"Niacin":0.02,"PantothenicAcid":0.03,"VitaminB6":0.01,"Folate_total":4.49,"Folate_food":4.49,"Folate_DFE":4.49,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":1.14,"Betaine":0.0,"LuteinZeaxanthin":3.37,"Lycopene":0.0,"Calcium_Ca":1.35,"Iron_Fe":0.02,"Magnesium_Mg":1.35,"Phosphorus_P":1.79,"Potassium_K":23.11,"Sodium_Na":0.22,"Zinc_Zn":0.01,"Copper_Cu":0.0,"Manganese_Mn":0.0,"Selenium_Se":0.02,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":6.64},"addedSugars":0.0,"intrinsicSugars":6.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14743","name":"Alcoholic beverage, distilled, cognac, VS/VSOP, 80 proof","grams":55.6},{"ndb":"14700","name":"Alcoholic beverage, liqueur, triple sec, orange, 80 proof","grams":22.2},{"ndb":"9152","name":"Lemon juice, raw","grams":22.5}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":100.28,"raw_water_grams":66.92,"raw_fat_grams":0.05,"raw_protein_grams":0.08,"raw_carb_grams":7.64,"final_grams":100.28}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Sidecar', quantity: 'custom (g)', foodWord: 'SIDECAR', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'cognac', quantity: '2 oz cognac', section: 'cocktail', ndbNo: '14743', portionDesc: 'g', portionGrams: 55.6 },
+      { name: 'triple sec', quantity: '¾ oz triple sec', section: 'cocktail', ndbNo: '14700', portionDesc: 'g', portionGrams: 22.18 },
+      { name: 'lemon juice', quantity: '¾ oz lemon juice', section: 'cocktail', ndbNo: '9152', portionDesc: 'g', portionGrams: 22.5 }
+    ],
+    recipeInstructions: [
+      'Chill a coupe or cocktail glass in the freezer, or fill it with ice water and set aside.',
+      'Combine the cognac, triple sec, and lemon juice in a cocktail shaker filled with ice.',
+      'Shake vigorously for 15 seconds until well chilled and diluted.',
+      'Discard the ice from the chilled glass. Optional: rim the edge with sugar by rubbing a lemon wedge around the rim and dipping in superfine sugar.',
+      'Double-strain into the chilled glass and garnish with a lemon or orange twist.',
+      'Suggestions (not included):'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
