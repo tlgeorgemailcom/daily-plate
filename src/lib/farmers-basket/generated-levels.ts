@@ -26398,5 +26398,43 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_124',
+    name: 'Sea Breeze',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 566,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'ingredient',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":158.0,"pro":0.2,"fat":0.1,"carb":15.3,"fib":0.2,"h2o":137.6,"sug":13.5,"perServing":{"cal":158.0,"pro":0.2,"fat":0.1,"carb":15.3,"fib":0.2,"h2o":137.6,"sug":13.5,"AddedSugars":2.2,"IntrinsicSugars":11.2},"micros":{"vitaminA":0.37,"vitaminC":29.18,"vitaminD":0.0,"vitaminE":0.13,"vitaminK":0.57,"vitaminB6":0.0,"vitaminB12":0.0,"thiamin":0.01,"riboflavin":0.01,"niacin":0.07,"folate":1.84,"calcium":4.28,"iron":0.08,"magnesium":2.04,"phosphorus":4.58,"potassium":31.98,"sodium":1.94,"zinc":0.03,"copper":0.01,"selenium":0.13,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.01,"polyFat":0.03,"omega3":0.0,"omega6":0.0},"gramsPerServing":167.4,"servings":1,"per100g":{"Energy_KCal":94.41,"Water":82.22,"Protein":0.11,"TotalLipidFat":0.08,"Carbohydrate":9.12,"FiberTotalDietary":0.15,"SugarsTotal":8.05,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.01,"FattyAcids_totalPolyunsaturated":0.03,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.37,"Retinol":0.0,"Carotene_beta":6.52,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.13,"VitaminK_phylloquinone":0.57,"VitaminC_totalAscorbicAcid":29.18,"Thiamin":0.01,"Riboflavin":0.01,"Niacin":0.07,"PantothenicAcid":0.05,"VitaminB6":0.0,"Folate_total":1.84,"Folate_food":1.84,"Folate_DFE":1.84,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":2.04,"Betaine":0.06,"LuteinZeaxanthin":9.21,"Lycopene":0.0,"Calcium_Ca":4.28,"Iron_Fe":0.08,"Magnesium_Mg":2.04,"Phosphorus_P":4.58,"Potassium_K":31.98,"Sodium_Na":1.94,"Zinc_Zn":0.03,"Copper_Cu":0.01,"Manganese_Mn":0.02,"Selenium_Se":0.13,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":1.33,"IntrinsicSugars":6.72},"addedSugars":2.2,"intrinsicSugars":11.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14051","name":"Alcoholic beverage, distilled, vodka, 80 proof","grams":41.7},{"ndb":"14242","name":"Cranberry juice cocktail, bottled","grams":94.8},{"ndb":"9123","name":"Grapefruit juice, white, canned or bottled, unsweetened","grams":30.9}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":167.38,"raw_water_grams":137.62,"raw_fat_grams":0.13,"raw_protein_grams":0.18,"raw_carb_grams":15.27,"final_grams":167.38}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Sea Breeze', quantity: 'custom (g)', foodWord: 'SEABREEZE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Vodka', quantity: '1½ oz', section: 'cocktail', ndbNo: '14051', portionDesc: 'g', portionGrams: 41.7 },
+      { name: 'cranberry juice cocktail', quantity: '3 oz', section: 'cocktail', ndbNo: '14242', portionDesc: 'g', portionGrams: 94.8 },
+      { name: 'grapefruit juice', quantity: '1 oz', section: 'cocktail', ndbNo: '9123', portionDesc: 'g', portionGrams: 30.88 }
+    ],
+    recipeInstructions: [
+      'Fill a highball glass with ice.',
+      'Pour the vodka and cranberry juice over the ice.',
+      'Float the grapefruit juice on top by pouring it gently over the back of a spoon.',
+      'Stir lightly to combine.',
+      'Suggestions (not included): Garnish with a lime wedge or grapefruit slice.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
