@@ -24850,5 +24850,43 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_084',
+    name: 'Mary Pickford',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 526,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'cocktail',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":168.7,"pro":0.2,"fat":0.1,"carb":14.6,"fib":0.1,"h2o":73.5,"sug":11.3,"perServing":{"cal":168.7,"pro":0.2,"fat":0.1,"carb":14.6,"fib":0.1,"h2o":73.5,"sug":11.3,"AddedSugars":9.2,"IntrinsicSugars":2.1},"micros":{"vitaminA":0.0,"vitaminC":4.31,"vitaminD":0.0,"vitaminE":0.01,"vitaminK":0.13,"vitaminB6":0.04,"vitaminB12":0.0,"thiamin":0.02,"riboflavin":0.01,"niacin":0.08,"folate":7.76,"calcium":6.18,"iron":0.19,"magnesium":5.56,"phosphorus":5.83,"potassium":59.52,"sodium":3.85,"zinc":0.09,"copper":0.05,"selenium":0.1,"cholesterol":0.0,"saturatedFat":0.0,"monoFat":0.0,"polyFat":0.02,"omega3":0.0,"omega6":0.0},"gramsPerServing":104.4,"servings":1,"per100g":{"Energy_KCal":161.54,"Water":70.43,"Protein":0.16,"TotalLipidFat":0.05,"Carbohydrate":14.01,"FiberTotalDietary":0.09,"SugarsTotal":10.82,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.0,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.02,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":1.29,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.01,"VitaminK_phylloquinone":0.13,"VitaminC_totalAscorbicAcid":4.31,"Thiamin":0.02,"Riboflavin":0.01,"Niacin":0.08,"PantothenicAcid":0.02,"VitaminB6":0.04,"Folate_total":7.76,"Folate_food":7.76,"Folate_DFE":7.76,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":1.42,"Betaine":0.0,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":6.18,"Iron_Fe":0.19,"Magnesium_Mg":5.56,"Phosphorus_P":5.83,"Potassium_K":59.52,"Sodium_Na":3.85,"Zinc_Zn":0.09,"Copper_Cu":0.05,"Manganese_Mn":0.22,"Selenium_Se":0.1,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":8.76,"IntrinsicSugars":2.06},"addedSugars":9.2,"intrinsicSugars":2.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14050","name":"Alcoholic beverage, distilled, rum, 80 proof","grams":41.7},{"ndb":"9273","name":"Pineapple juice, canned, unsweetened","grams":45.0},{"ndb":"42040","name":"Syrups, grenadine","grams":10.0},{"ndb":"14702","name":"Alcoholic beverage, liqueur, maraschino cherry, 64 proof","grams":7.7}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":104.4,"raw_water_grams":73.52,"raw_fat_grams":0.05,"raw_protein_grams":0.16,"raw_carb_grams":14.63,"final_grams":104.4}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Mary Pickford', quantity: 'custom (g)', foodWord: 'MARYPICKFORD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'rum', quantity: '1½ oz', section: 'cocktail', ndbNo: '14050', portionDesc: 'g', portionGrams: 41.7 },
+      { name: 'pineapple juice', quantity: '1½ oz', section: 'cocktail', ndbNo: '9273', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'grenadine', quantity: '¼ oz', section: 'cocktail', ndbNo: '42040', portionDesc: 'g', portionGrams: 10.0 },
+      { name: 'maraschino liqueur', quantity: '¼ oz', section: 'cocktail', ndbNo: '14702', portionDesc: 'g', portionGrams: 7.7 }
+    ],
+    recipeInstructions: [
+      'Combine white rum, pineapple juice, grenadine, and maraschino liqueur in a cocktail shaker filled with ice.',
+      'Shake vigorously for 15–20 seconds until well chilled.',
+      'Strain into a chilled cocktail glass.',
+      'Suggestions (not included): Garnish with a maraschino cherry.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
