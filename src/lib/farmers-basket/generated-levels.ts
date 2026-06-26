@@ -25773,5 +25773,44 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_108',
+    name: 'Pisco Sour',
+    category: 'cocktails',
+    dietaryCategory: 'veggie',
+    levelNum: 550,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":204.7,"pro":3.7,"fat":0.1,"carb":15.4,"fib":0.1,"h2o":106.8,"sug":14.1,"perServing":{"cal":204.7,"pro":3.7,"fat":0.1,"carb":15.4,"fib":0.1,"h2o":106.8,"sug":14.1,"AddedSugars":13.1,"IntrinsicSugars":1.0},"micros":{"vitaminA":0.0,"vitaminC":8.02,"vitaminD":0.0,"vitaminE":0.03,"vitaminK":0.0,"vitaminB6":0.01,"vitaminB12":0.02,"thiamin":0.01,"riboflavin":0.1,"niacin":0.04,"folate":5.05,"calcium":2.84,"iron":0.03,"magnesium":3.75,"phosphorus":5.07,"potassium":58.47,"sodium":38.03,"zinc":0.02,"copper":0.01,"selenium":4.58,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":144.8,"servings":1,"per100g":{"Energy_KCal":141.32,"Water":73.69,"Protein":2.56,"TotalLipidFat":0.09,"Carbohydrate":10.66,"FiberTotalDietary":0.06,"SugarsTotal":9.74,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.21,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.03,"VitaminK_phylloquinone":0.0,"VitaminC_totalAscorbicAcid":8.02,"Thiamin":0.01,"Riboflavin":0.1,"Niacin":0.04,"PantothenicAcid":0.07,"VitaminB6":0.01,"Folate_total":5.05,"Folate_food":5.05,"Folate_DFE":5.05,"FolicAcid":0.0,"VitaminB12":0.02,"Choline_total":1.31,"Betaine":0.07,"LuteinZeaxanthin":3.11,"Lycopene":0.0,"Calcium_Ca":2.84,"Iron_Fe":0.03,"Magnesium_Mg":3.75,"Phosphorus_P":5.07,"Potassium_K":58.47,"Sodium_Na":38.03,"Zinc_Zn":0.02,"Copper_Cu":0.01,"Manganese_Mn":0.0,"Selenium_Se":4.58,"Tryptophan":0.03,"Threonine":0.1,"Isoleucine":0.15,"Leucine":0.23,"Lysine":0.18,"Methionine":0.09,"Cystine":0.06,"Phenylalanine":0.15,"Tyrosine":0.1,"Valine":0.18,"Arginine":0.15,"Histidine":0.07,"Alanine":0.16,"AsparticAcid":0.28,"GlutamicAcid":0.35,"Glycine":0.09,"Proline":0.1,"Serine":0.18,"omega3":0.0,"omega6":0.0,"AddedSugars":9.06,"IntrinsicSugars":0.68},"addedSugars":13.1,"intrinsicSugars":1.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14746","name":"Alcoholic beverage, distilled, pisco, Peruvian, 80 proof","grams":55.6},{"ndb":"9152","name":"Lemon juice, raw","grams":30.0},{"ndb":"14801","name":"Cocktail mixer, simple syrup, 1:1 sugar-water","grams":26.2},{"ndb":"1124","name":"Egg, white, raw, fresh","grams":33.0}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":144.85,"raw_water_grams":106.75,"raw_fat_grams":0.13,"raw_protein_grams":3.7,"raw_carb_grams":15.44,"final_grams":144.85}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Pisco Sour', quantity: 'custom (g)', foodWord: 'PISCOSOUR', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'pisco', quantity: '2 oz', section: 'cocktail', ndbNo: '14746', portionDesc: 'g', portionGrams: 55.6 },
+      { name: 'lemon juice', quantity: '1 oz', section: 'cocktail', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'simple syrup', quantity: '¾ oz', section: 'cocktail', ndbNo: '14801', portionDesc: 'g', portionGrams: 26.25 },
+      { name: 'egg whites', quantity: '1 large white', section: 'cocktail', ndbNo: '1124', portionDesc: 'g', portionGrams: 33.0 }
+    ],
+    recipeInstructions: [
+      'Combine pisco, lemon juice, simple syrup, and egg white in a cocktail shaker without ice.',
+      'Dry shake vigorously for 15 seconds to emulsify the egg white.',
+      'Add ice and shake again for 15 seconds until well chilled.',
+      'Double-strain into a chilled coupe glass.',
+      'Suggestions (not included): Finish with 3 drops of Angostura bitters on the foam and a lemon twist.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
