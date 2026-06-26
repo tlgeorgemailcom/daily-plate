@@ -25274,5 +25274,43 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_095',
+    name: 'Naked & Famous',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 537,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'cocktail',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":152.3,"pro":0.1,"fat":0.0,"carb":11.5,"fib":0.1,"h2o":60.4,"sug":10.0,"perServing":{"cal":152.3,"pro":0.1,"fat":0.0,"carb":11.5,"fib":0.1,"h2o":60.4,"sug":10.0,"AddedSugars":0.0,"IntrinsicSugars":10.0},"micros":{"vitaminA":0.52,"vitaminC":7.74,"vitaminD":0.0,"vitaminE":0.06,"vitaminK":0.15,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.01,"riboflavin":0.0,"niacin":0.04,"folate":2.58,"calcium":3.61,"iron":0.02,"magnesium":2.07,"phosphorus":3.61,"potassium":30.2,"sodium":0.52,"zinc":0.02,"copper":0.01,"selenium":0.03,"cholesterol":0.0,"saturatedFat":0.0,"monoFat":0.0,"polyFat":0.01,"omega3":0.0,"omega6":0.0},"gramsPerServing":87.9,"servings":1,"per100g":{"Energy_KCal":173.26,"Water":68.75,"Protein":0.11,"TotalLipidFat":0.02,"Carbohydrate":13.12,"FiberTotalDietary":0.1,"SugarsTotal":11.39,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.0,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.01,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.52,"Retinol":0.0,"Carotene_beta":7.74,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.06,"VitaminK_phylloquinone":0.15,"VitaminC_totalAscorbicAcid":7.74,"Thiamin":0.01,"Riboflavin":0.0,"Niacin":0.04,"PantothenicAcid":0.03,"VitaminB6":0.01,"Folate_total":2.58,"Folate_food":2.58,"Folate_DFE":2.58,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":1.32,"Betaine":0.05,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":3.61,"Iron_Fe":0.02,"Magnesium_Mg":2.07,"Phosphorus_P":3.61,"Potassium_K":30.2,"Sodium_Na":0.52,"Zinc_Zn":0.02,"Copper_Cu":0.01,"Manganese_Mn":0.0,"Selenium_Se":0.03,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.01,"AsparticAcid":0.03,"GlutamicAcid":0.02,"Glycine":0.0,"Proline":0.01,"Serine":0.01,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":11.39},"addedSugars":0.0,"intrinsicSugars":10.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14742","name":"Alcoholic beverage, distilled, mezcal, agave, 80 proof","grams":20.9},{"ndb":"14732","name":"Alcoholic beverage, liqueur, chartreuse, yellow, 80 proof","grams":22.2},{"ndb":"14705","name":"Alcoholic beverage, aperol, 22 proof","grams":22.2},{"ndb":"9160","name":"Lime juice, raw","grams":22.7}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":87.9,"raw_water_grams":60.43,"raw_fat_grams":0.02,"raw_protein_grams":0.1,"raw_carb_grams":11.54,"final_grams":87.9}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Naked & Famous', quantity: 'custom (g)', foodWord: 'NAKEDFAMOUS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'mezcal', quantity: '¾ oz', section: 'cocktail', ndbNo: '14742', portionDesc: 'g', portionGrams: 20.85 },
+      { name: 'yellow chartreuse', quantity: '¾ oz', section: 'cocktail', ndbNo: '14732', portionDesc: 'g', portionGrams: 22.18 },
+      { name: 'Aperol', quantity: '¾ oz', section: 'cocktail', ndbNo: '14705', portionDesc: 'g', portionGrams: 22.18 },
+      { name: 'lime juice', quantity: '¾ oz', section: 'cocktail', ndbNo: '9160', portionDesc: 'g', portionGrams: 22.69 }
+    ],
+    recipeInstructions: [
+      'Combine mezcal, yellow chartreuse, Aperol, and lime juice in a cocktail shaker with ice.',
+      'Shake well until chilled.',
+      'Double-strain into a chilled coupe glass.',
+      'Suggestions (not included):'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
