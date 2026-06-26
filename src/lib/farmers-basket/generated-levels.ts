@@ -26676,5 +26676,46 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_131',
+    name: 'Spicy Fifty',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 573,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'ingredient',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":241.3,"pro":0.2,"fat":0.0,"carb":26.7,"fib":0.3,"h2o":66.3,"sug":25.4,"perServing":{"cal":241.3,"pro":0.2,"fat":0.0,"carb":26.7,"fib":0.3,"h2o":66.3,"sug":25.4,"AddedSugars":17.4,"IntrinsicSugars":8.0},"micros":{"vitaminA":3.59,"vitaminC":11.35,"vitaminD":0.0,"vitaminE":0.25,"vitaminK":1.22,"vitaminB6":0.03,"vitaminB12":0.0,"thiamin":0.01,"riboflavin":0.01,"niacin":0.12,"folate":3.35,"calcium":3.7,"iron":0.11,"magnesium":2.35,"phosphorus":4.19,"potassium":40.38,"sodium":1.19,"zinc":0.06,"copper":0.01,"selenium":0.19,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.0,"polyFat":0.01,"omega3":0.0,"omega6":0.0},"gramsPerServing":113.8,"servings":1,"per100g":{"Energy_KCal":212.1,"Water":58.26,"Protein":0.17,"TotalLipidFat":0.03,"Carbohydrate":23.45,"FiberTotalDietary":0.26,"SugarsTotal":22.37,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.01,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":3.59,"Retinol":0.0,"Carotene_beta":38.48,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.25,"VitaminK_phylloquinone":1.22,"VitaminC_totalAscorbicAcid":11.35,"Thiamin":0.01,"Riboflavin":0.01,"Niacin":0.12,"PantothenicAcid":0.05,"VitaminB6":0.03,"Folate_total":3.35,"Folate_food":3.35,"Folate_DFE":3.35,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":1.54,"Betaine":0.34,"LuteinZeaxanthin":52.98,"Lycopene":0.0,"Calcium_Ca":3.7,"Iron_Fe":0.11,"Magnesium_Mg":2.35,"Phosphorus_P":4.19,"Potassium_K":40.38,"Sodium_Na":1.19,"Zinc_Zn":0.06,"Copper_Cu":0.01,"Manganese_Mn":0.02,"Selenium_Se":0.19,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.02,"GlutamicAcid":0.01,"Glycine":0.0,"Proline":0.02,"Serine":0.01,"omega3":0.0,"omega6":0.0,"AddedSugars":15.31,"IntrinsicSugars":7.06},"addedSugars":17.4,"intrinsicSugars":8.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14760","name":"Alcoholic beverage, vodka, vanilla, 80 proof","grams":54.0},{"ndb":"14727","name":"Alcoholic beverage, liqueur, elderflower, st germain, 40 proof","grams":16.6},{"ndb":"9160","name":"Lime juice, raw","grams":15.0},{"ndb":"19296","name":"Honey","grams":21.2},{"ndb":"11979","name":"Peppers, jalapeno, raw","grams":7.0}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":113.75,"raw_water_grams":66.27,"raw_fat_grams":0.04,"raw_protein_grams":0.19,"raw_carb_grams":26.68,"final_grams":113.75}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Spicy Fifty', quantity: 'custom (g)', foodWord: 'SPICYFIFTY', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Vanilla Vodka', quantity: '2 oz vanilla vodka', section: 'cocktail', ndbNo: '14760', portionDesc: 'g', portionGrams: 54.0 },
+      { name: 'elderflower liqueur', quantity: '½ oz elderflower liqueur', section: 'cocktail', ndbNo: '14727', portionDesc: 'g', portionGrams: 16.55 },
+      { name: 'lime juice', quantity: '½ oz lime juice', section: 'cocktail', ndbNo: '9160', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'honey', quantity: '½ oz honey', section: 'cocktail', ndbNo: '19296', portionDesc: 'g', portionGrams: 21.2 },
+      { name: 'jalapeño', quantity: '2 slices fresh red chilli', section: 'cocktail', ndbNo: '11979', portionDesc: 'g', portionGrams: 7.0 }
+    ],
+    recipeInstructions: [
+      'Place the chilli slices in a cocktail shaker and muddle lightly to release the heat.',
+      'Add the vanilla vodka, elderflower liqueur, lime juice, and honey.',
+      'Fill the shaker with ice.',
+      'Shake vigorously until well chilled, about 15 seconds.',
+      'Double-strain through a fine-mesh strainer into a chilled coupe glass.',
+      'Suggestions (not included): Garnish with a thin slice of red chilli on the rim.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
