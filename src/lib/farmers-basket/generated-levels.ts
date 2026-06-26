@@ -24697,5 +24697,45 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_080',
+    name: 'Mai Tai',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 522,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'cocktail',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":213.8,"pro":0.1,"fat":0.0,"carb":14.7,"fib":0.1,"h2o":69.8,"sug":13.2,"perServing":{"cal":213.8,"pro":0.1,"fat":0.0,"carb":14.7,"fib":0.1,"h2o":69.8,"sug":13.2,"AddedSugars":8.8,"IntrinsicSugars":4.3},"micros":{"vitaminA":0.42,"vitaminC":6.28,"vitaminD":0.0,"vitaminE":0.05,"vitaminK":0.13,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.0,"niacin":0.03,"folate":2.09,"calcium":2.93,"iron":0.02,"magnesium":1.68,"phosphorus":2.93,"potassium":24.5,"sodium":0.42,"zinc":0.02,"copper":0.0,"selenium":0.02,"cholesterol":0.0,"saturatedFat":0.0,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":107.5,"servings":1,"per100g":{"Energy_KCal":199.0,"Water":64.99,"Protein":0.09,"TotalLipidFat":0.01,"Carbohydrate":13.65,"FiberTotalDietary":0.08,"SugarsTotal":12.24,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.0,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.42,"Retinol":0.0,"Carotene_beta":6.28,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.05,"VitaminK_phylloquinone":0.13,"VitaminC_totalAscorbicAcid":6.28,"Thiamin":0.0,"Riboflavin":0.0,"Niacin":0.03,"PantothenicAcid":0.03,"VitaminB6":0.01,"Folate_total":2.09,"Folate_food":2.09,"Folate_DFE":2.09,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":1.07,"Betaine":0.04,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":2.93,"Iron_Fe":0.02,"Magnesium_Mg":1.68,"Phosphorus_P":2.93,"Potassium_K":24.5,"Sodium_Na":0.42,"Zinc_Zn":0.02,"Copper_Cu":0.0,"Manganese_Mn":0.0,"Selenium_Se":0.02,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.02,"GlutamicAcid":0.01,"Glycine":0.0,"Proline":0.01,"Serine":0.01,"omega3":0.0,"omega6":0.0,"AddedSugars":8.2,"IntrinsicSugars":4.04},"addedSugars":8.8,"intrinsicSugars":4.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14764","name":"Alcoholic beverage, rum, gold, Jamaican, 80 proof","grams":27.0},{"ndb":"14748","name":"Alcoholic beverage, distilled, rum, dark, aged, 80 proof","grams":27.0},{"ndb":"14729","name":"Alcoholic beverage, liqueur, orange curacao, 80 proof","grams":14.8},{"ndb":"9160","name":"Lime juice, raw","grams":22.5},{"ndb":"14718","name":"Beverage, syrup, orgeat, almond, non-alcoholic","grams":7.4},{"ndb":"14801","name":"Cocktail mixer, simple syrup, 1:1 sugar-water","grams":8.8}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":107.45,"raw_water_grams":69.83,"raw_fat_grams":0.02,"raw_protein_grams":0.09,"raw_carb_grams":14.67,"final_grams":107.45}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Mai Tai', quantity: 'custom (g)', foodWord: 'MAITAI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Gold Jamaican Rum', quantity: '1 oz', section: 'cocktail', ndbNo: '14764', portionDesc: 'g', portionGrams: 27.0 },
+      { name: 'dark rum', quantity: '1 oz', section: 'cocktail', ndbNo: '14748', portionDesc: 'g', portionGrams: 27.0 },
+      { name: 'orange curaçao', quantity: '½ oz', section: 'cocktail', ndbNo: '14729', portionDesc: 'g', portionGrams: 14.8 },
+      { name: 'lime juice', quantity: '¾ oz', section: 'cocktail', ndbNo: '9160', portionDesc: 'g', portionGrams: 22.5 },
+      { name: 'orgeat syrup', quantity: '¼ oz', section: 'cocktail', ndbNo: '14718', portionDesc: 'g', portionGrams: 7.4 },
+      { name: 'simple syrup', quantity: '¼ oz', section: 'cocktail', ndbNo: '14801', portionDesc: 'g', portionGrams: 8.75 }
+    ],
+    recipeInstructions: [
+      'Combine the gold Jamaican rum, dark rum, orange curaçao, lime juice, orgeat, and simple syrup in a cocktail shaker filled with crushed ice.',
+      'Shake briefly — about 5 seconds — just to combine and chill without over-diluting.',
+      'Pour unstrained (ice and all) into a double rocks glass or tiki mug.',
+      'Suggestions (not included): Garnish with a spent lime shell, fresh mint sprig, and a cocktail cherry. For a dramatic presentation, float a small amount of overproof dark rum on top.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
