@@ -25735,5 +25735,43 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_107',
+    name: 'Pisco Punch',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 549,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":184.3,"pro":0.2,"fat":0.1,"carb":14.2,"fib":0.1,"h2o":92.5,"sug":12.3,"perServing":{"cal":184.3,"pro":0.2,"fat":0.1,"carb":14.2,"fib":0.1,"h2o":92.5,"sug":12.3,"AddedSugars":11.7,"IntrinsicSugars":0.6},"micros":{"vitaminA":0.0,"vitaminC":9.32,"vitaminD":0.0,"vitaminE":0.03,"vitaminK":0.07,"vitaminB6":0.03,"vitaminB12":0.0,"thiamin":0.02,"riboflavin":0.01,"niacin":0.06,"folate":7.88,"calcium":4.18,"iron":0.09,"magnesium":3.94,"phosphorus":3.34,"potassium":49.5,"sodium":0.66,"zinc":0.04,"copper":0.02,"selenium":0.04,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.0,"polyFat":0.01,"omega3":0.0,"omega6":0.0},"gramsPerServing":125.6,"servings":1,"per100g":{"Energy_KCal":146.72,"Water":73.61,"Protein":0.15,"TotalLipidFat":0.07,"Carbohydrate":11.28,"FiberTotalDietary":0.1,"SugarsTotal":9.8,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.01,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.9,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.03,"VitaminK_phylloquinone":0.07,"VitaminC_totalAscorbicAcid":9.32,"Thiamin":0.02,"Riboflavin":0.01,"Niacin":0.06,"PantothenicAcid":0.04,"VitaminB6":0.03,"Folate_total":7.88,"Folate_food":7.88,"Folate_DFE":7.88,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":1.7,"Betaine":0.0,"LuteinZeaxanthin":2.69,"Lycopene":0.0,"Calcium_Ca":4.18,"Iron_Fe":0.09,"Magnesium_Mg":3.94,"Phosphorus_P":3.34,"Potassium_K":49.5,"Sodium_Na":0.66,"Zinc_Zn":0.04,"Copper_Cu":0.02,"Manganese_Mn":0.12,"Selenium_Se":0.04,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":9.35,"IntrinsicSugars":0.45},"addedSugars":11.7,"intrinsicSugars":0.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14746","name":"Alcoholic beverage, distilled, pisco, Peruvian, 80 proof","grams":55.6},{"ndb":"9273","name":"Pineapple juice, canned, unsweetened","grams":30.0},{"ndb":"9152","name":"Lemon juice, raw","grams":22.5},{"ndb":"14801","name":"Cocktail mixer, simple syrup, 1:1 sugar-water","grams":17.5}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":125.6,"raw_water_grams":92.46,"raw_fat_grams":0.09,"raw_protein_grams":0.19,"raw_carb_grams":14.16,"final_grams":125.6}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Pisco Punch', quantity: 'custom (g)', foodWord: 'PISCOPUNCH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'pisco', quantity: '2 oz', section: 'cocktail', ndbNo: '14746', portionDesc: 'g', portionGrams: 55.6 },
+      { name: 'pineapple juice', quantity: '1 oz', section: 'cocktail', ndbNo: '9273', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'lemon juice', quantity: '¾ oz', section: 'cocktail', ndbNo: '9152', portionDesc: 'g', portionGrams: 22.5 },
+      { name: 'simple syrup', quantity: '½ oz', section: 'cocktail', ndbNo: '14801', portionDesc: 'g', portionGrams: 17.5 }
+    ],
+    recipeInstructions: [
+      'Combine pisco, pineapple juice, lemon juice, and simple syrup in a cocktail shaker with ice.',
+      'Shake vigorously for 15 seconds until well chilled.',
+      'Strain into a chilled coupe or punch cup over a large ice cube.',
+      'Suggestions (not included): Garnish with a pineapple wedge or a thin lemon wheel.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
