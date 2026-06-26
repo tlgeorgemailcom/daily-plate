@@ -25620,5 +25620,45 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_104',
+    name: 'Penicillin',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 546,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":266.6,"pro":0.4,"fat":0.2,"carb":30.1,"fib":0.4,"h2o":81.1,"sug":26.2,"perServing":{"cal":266.6,"pro":0.4,"fat":0.2,"carb":30.1,"fib":0.4,"h2o":81.1,"sug":26.2,"AddedSugars":25.4,"IntrinsicSugars":0.9},"micros":{"vitaminA":0.0,"vitaminC":7.22,"vitaminD":0.0,"vitaminE":0.06,"vitaminK":0.01,"vitaminB6":0.03,"vitaminB12":0.0,"thiamin":0.01,"riboflavin":0.01,"niacin":0.12,"folate":4.87,"calcium":3.18,"iron":0.09,"magnesium":6.83,"phosphorus":5.95,"potassium":73.56,"sodium":1.93,"zinc":0.05,"copper":0.03,"selenium":0.11,"cholesterol":0.0,"saturatedFat":0.03,"monoFat":0.02,"polyFat":0.02,"omega3":0.0,"omega6":0.0},"gramsPerServing":133.1,"servings":1,"per100g":{"Energy_KCal":200.35,"Water":60.95,"Protein":0.31,"TotalLipidFat":0.14,"Carbohydrate":22.63,"FiberTotalDietary":0.32,"SugarsTotal":19.71,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.03,"FattyAcids_totalMonounsaturated":0.02,"FattyAcids_totalPolyunsaturated":0.02,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.17,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.06,"VitaminK_phylloquinone":0.01,"VitaminC_totalAscorbicAcid":7.22,"Thiamin":0.01,"Riboflavin":0.01,"Niacin":0.12,"PantothenicAcid":0.05,"VitaminB6":0.03,"Folate_total":4.87,"Folate_food":4.87,"Folate_DFE":4.87,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":4.76,"Betaine":0.0,"LuteinZeaxanthin":2.54,"Lycopene":0.0,"Calcium_Ca":3.18,"Iron_Fe":0.09,"Magnesium_Mg":6.83,"Phosphorus_P":5.95,"Potassium_K":73.56,"Sodium_Na":1.93,"Zinc_Zn":0.05,"Copper_Cu":0.03,"Manganese_Mn":0.03,"Selenium_Se":0.11,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.01,"Leucine":0.01,"Lysine":0.01,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.01,"Tyrosine":0.0,"Valine":0.01,"Arginine":0.01,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.03,"GlutamicAcid":0.02,"Glycine":0.01,"Proline":0.01,"Serine":0.01,"omega3":0.0,"omega6":0.0,"AddedSugars":19.05,"IntrinsicSugars":0.66},"addedSugars":25.4,"intrinsicSugars":0.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14740","name":"Alcoholic beverage, distilled, Scotch whisky, blended, 80 proof","grams":55.6},{"ndb":"9152","name":"Lemon juice, raw","grams":22.5},{"ndb":"14753","name":"Beverage, syrup, honey, Monin, non-alcoholic","grams":30.0},{"ndb":"11216","name":"Ginger root, raw","grams":18.0},{"ndb":"14808","name":"Alcoholic beverage, distilled, whiskey, Islay single malt Scotch, 86 proof","grams":7.0}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":133.05,"raw_water_grams":81.09,"raw_fat_grams":0.19,"raw_protein_grams":0.41,"raw_carb_grams":30.11,"final_grams":133.05}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Penicillin', quantity: 'custom (g)', foodWord: 'PENICILLIN', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'scotch whisky', quantity: '2 oz', section: 'cocktail', ndbNo: '14740', portionDesc: 'g', portionGrams: 55.6 },
+      { name: 'lemon juice', quantity: '¾ oz', section: 'cocktail', ndbNo: '9152', portionDesc: 'g', portionGrams: 22.5 },
+      { name: 'honey syrup', quantity: '¾ oz', section: 'cocktail', ndbNo: '14753', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'fresh ginger', quantity: '3 slices', section: 'cocktail', ndbNo: '11216', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'Islay single malt Scotch whisky', quantity: '¼ oz (float)', section: 'cocktail', ndbNo: '14808', portionDesc: 'g', portionGrams: 6.95 }
+    ],
+    recipeInstructions: [
+      'Muddle the fresh ginger slices in a cocktail shaker.',
+      'Add the blended Scotch whisky, lemon juice, and honey syrup. Fill with ice and shake well until chilled.',
+      'Double-strain into a rocks glass over a large ice cube.',
+      'Float the Islay single malt Scotch by gently pouring it over the back of a spoon so it rests on top.',
+      'Suggestions (not included): Garnish with a piece of candied ginger and a lemon twist.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
