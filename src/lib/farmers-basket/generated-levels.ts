@@ -24427,5 +24427,44 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_073',
+    name: 'John Collins',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 515,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'cocktail',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":187.5,"pro":0.1,"fat":0.1,"carb":15.2,"fib":0.1,"h2o":137.0,"sug":13.9,"perServing":{"cal":187.5,"pro":0.1,"fat":0.1,"carb":15.2,"fib":0.1,"h2o":137.0,"sug":13.9,"AddedSugars":13.1,"IntrinsicSugars":0.8},"micros":{"vitaminA":0.0,"vitaminC":6.79,"vitaminD":0.0,"vitaminE":0.03,"vitaminK":0.0,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.0,"niacin":0.02,"folate":3.51,"calcium":2.78,"iron":0.02,"magnesium":1.4,"phosphorus":1.4,"potassium":18.75,"sodium":7.45,"zinc":0.04,"copper":0.0,"selenium":0.02,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":171.1,"servings":1,"per100g":{"Energy_KCal":109.61,"Water":80.09,"Protein":0.06,"TotalLipidFat":0.04,"Carbohydrate":8.88,"FiberTotalDietary":0.05,"SugarsTotal":8.11,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.18,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.03,"VitaminK_phylloquinone":0.0,"VitaminC_totalAscorbicAcid":6.79,"Thiamin":0.0,"Riboflavin":0.0,"Niacin":0.02,"PantothenicAcid":0.02,"VitaminB6":0.01,"Folate_total":3.51,"Folate_food":3.51,"Folate_DFE":3.51,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":0.89,"Betaine":0.0,"LuteinZeaxanthin":2.63,"Lycopene":0.0,"Calcium_Ca":2.78,"Iron_Fe":0.02,"Magnesium_Mg":1.4,"Phosphorus_P":1.4,"Potassium_K":18.75,"Sodium_Na":7.45,"Zinc_Zn":0.04,"Copper_Cu":0.0,"Manganese_Mn":0.0,"Selenium_Se":0.02,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":7.67,"IntrinsicSugars":0.44},"addedSugars":13.1,"intrinsicSugars":0.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14738","name":"Alcoholic beverage, distilled, bourbon whiskey, 80 proof","grams":55.6},{"ndb":"9152","name":"Lemon juice, raw","grams":30.0},{"ndb":"14801","name":"Cocktail mixer, simple syrup, 1:1 sugar-water","grams":26.2},{"ndb":"14121","name":"Beverages, Carbonated beverage, club soda","grams":59.2}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":171.1,"raw_water_grams":137.04,"raw_fat_grams":0.07,"raw_protein_grams":0.1,"raw_carb_grams":15.2,"final_grams":171.1}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'John Collins', quantity: 'custom (g)', foodWord: 'JOHNCOLLINS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'bourbon', quantity: '2 oz', section: 'cocktail', ndbNo: '14738', portionDesc: 'g', portionGrams: 55.6 },
+      { name: 'lemon juice', quantity: '1 oz', section: 'cocktail', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'simple syrup', quantity: '¾ oz', section: 'cocktail', ndbNo: '14801', portionDesc: 'g', portionGrams: 26.25 },
+      { name: 'club soda', quantity: '2 oz', section: 'cocktail', ndbNo: '14121', portionDesc: 'g', portionGrams: 59.25 }
+    ],
+    recipeInstructions: [
+      'Combine bourbon, lemon juice, and simple syrup in a cocktail shaker with ice.',
+      'Shake vigorously until well chilled, about 15 seconds.',
+      'Strain into a Collins glass over fresh ice.',
+      'Top with club soda and stir gently.',
+      'Suggestions (not included): Garnish with a lemon slice and a maraschino cherry.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
