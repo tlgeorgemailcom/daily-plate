@@ -57830,6 +57830,39 @@ export const FOODS: Food[] = [
         "gm": 30.0
       }
     ]
+  },
+  {
+    "word": "ISLAYSCOTCH",
+    "display": "Islay Single Malt Scotch Whisky",
+    "groups": [
+      "bar"
+    ],
+    "ndb": "14808",
+    "desc": "Alcoholic beverage, distilled, whiskey, Islay single malt Scotch, 86 proof",
+    "cal": 250.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 0.1,
+    "fib": 0.0,
+    "h2o": 63.9,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 27.8
+      },
+      {
+        "amt": 1.0,
+        "desc": "jigger (1.5 fl oz)",
+        "gm": 41.7
+      }
+    ]
   }
 ];
 
