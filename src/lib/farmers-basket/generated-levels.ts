@@ -25080,5 +25080,45 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_090',
+    name: 'Mojito',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 532,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'cocktail',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":189.6,"pro":0.2,"fat":0.0,"carb":15.9,"fib":0.3,"h2o":168.5,"sug":13.6,"perServing":{"cal":189.6,"pro":0.2,"fat":0.0,"carb":15.9,"fib":0.3,"h2o":168.5,"sug":13.6,"AddedSugars":13.1,"IntrinsicSugars":0.5},"micros":{"vitaminA":2.69,"vitaminC":4.62,"vitaminD":0.0,"vitaminE":0.03,"vitaminK":0.09,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.01,"riboflavin":0.0,"niacin":0.03,"folate":2.73,"calcium":6.62,"iron":0.19,"magnesium":2.37,"phosphorus":4.16,"potassium":24.23,"sodium":10.1,"zinc":0.09,"copper":0.02,"selenium":0.01,"cholesterol":0.0,"saturatedFat":0.0,"monoFat":0.0,"polyFat":0.01,"omega3":0.0,"omega6":0.0},"gramsPerServing":203.4,"servings":1,"per100g":{"Energy_KCal":93.2,"Water":82.83,"Protein":0.1,"TotalLipidFat":0.02,"Carbohydrate":7.81,"FiberTotalDietary":0.14,"SugarsTotal":6.7,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.0,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.01,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":2.69,"Retinol":0.0,"Carotene_beta":4.46,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.03,"VitaminK_phylloquinone":0.09,"VitaminC_totalAscorbicAcid":4.62,"Thiamin":0.01,"Riboflavin":0.0,"Niacin":0.03,"PantothenicAcid":0.02,"VitaminB6":0.01,"Folate_total":2.73,"Folate_food":2.73,"Folate_DFE":2.73,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":0.76,"Betaine":0.03,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":6.62,"Iron_Fe":0.19,"Magnesium_Mg":2.37,"Phosphorus_P":4.16,"Potassium_K":24.23,"Sodium_Na":10.1,"Zinc_Zn":0.09,"Copper_Cu":0.02,"Manganese_Mn":0.02,"Selenium_Se":0.01,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.02,"GlutamicAcid":0.01,"Glycine":0.0,"Proline":0.01,"Serine":0.01,"omega3":0.0,"omega6":0.0,"AddedSugars":6.45,"IntrinsicSugars":0.25},"addedSugars":13.1,"intrinsicSugars":0.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14050","name":"Alcoholic beverage, distilled, rum, 80 proof","grams":55.6},{"ndb":"9160","name":"Lime juice, raw","grams":30.2},{"ndb":"14801","name":"Cocktail mixer, simple syrup, 1:1 sugar-water","grams":26.2},{"ndb":"2065","name":"Spearmint, fresh","grams":2.4},{"ndb":"14121","name":"Beverages, Carbonated beverage, club soda","grams":88.9}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":203.38,"raw_water_grams":168.46,"raw_fat_grams":0.04,"raw_protein_grams":0.21,"raw_carb_grams":15.87,"final_grams":203.38}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Mojito', quantity: 'custom (g)', foodWord: 'MOJITO', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'rum', quantity: '2 oz', section: 'cocktail', ndbNo: '14050', portionDesc: 'g', portionGrams: 55.6 },
+      { name: 'lime juice', quantity: '1 oz', section: 'cocktail', ndbNo: '9160', portionDesc: 'g', portionGrams: 30.25 },
+      { name: 'simple syrup', quantity: '¾ oz', section: 'cocktail', ndbNo: '14801', portionDesc: 'g', portionGrams: 26.25 },
+      { name: 'fresh mint', quantity: '8 leaves', section: 'cocktail', ndbNo: '2065', portionDesc: 'g', portionGrams: 2.4 },
+      { name: 'club soda', quantity: '3 oz', section: 'cocktail', ndbNo: '14121', portionDesc: 'g', portionGrams: 88.875 }
+    ],
+    recipeInstructions: [
+      'Add mint leaves and simple syrup to a highball glass and muddle gently to release the mint\'s aroma.',
+      'Fill the glass with ice.',
+      'Add rum and lime juice and stir to combine.',
+      'Top with club soda and stir once gently.',
+      'Suggestions (not included): Garnish with a mint sprig and a lime wheel.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
