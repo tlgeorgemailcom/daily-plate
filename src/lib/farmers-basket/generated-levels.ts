@@ -27101,5 +27101,44 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_142',
+    name: 'Tom Collins',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 584,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 glass (makes 1)',
+    prepTime: '5',
+    linkType: 'ingredient',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":187.8,"pro":0.1,"fat":0.1,"carb":10.8,"fib":0.1,"h2o":159.8,"sug":9.5,"perServing":{"cal":187.8,"pro":0.1,"fat":0.1,"carb":10.8,"fib":0.1,"h2o":159.8,"sug":9.5,"AddedSugars":8.8,"IntrinsicSugars":0.8},"micros":{"vitaminA":0.0,"vitaminC":6.05,"vitaminD":0.0,"vitaminE":0.02,"vitaminK":0.0,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.0,"niacin":0.01,"folate":3.12,"calcium":3.25,"iron":0.02,"magnesium":1.4,"phosphorus":1.25,"potassium":17.02,"sodium":10.46,"zinc":0.05,"copper":0.01,"selenium":0.02,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":192.0,"servings":1,"per100g":{"Energy_KCal":97.83,"Water":83.22,"Protein":0.05,"TotalLipidFat":0.04,"Carbohydrate":5.64,"FiberTotalDietary":0.05,"SugarsTotal":4.95,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.16,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.02,"VitaminK_phylloquinone":0.0,"VitaminC_totalAscorbicAcid":6.05,"Thiamin":0.0,"Riboflavin":0.0,"Niacin":0.01,"PantothenicAcid":0.02,"VitaminB6":0.01,"Folate_total":3.12,"Folate_food":3.12,"Folate_DFE":3.12,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":0.8,"Betaine":0.0,"LuteinZeaxanthin":2.34,"Lycopene":0.0,"Calcium_Ca":3.25,"Iron_Fe":0.02,"Magnesium_Mg":1.4,"Phosphorus_P":1.25,"Potassium_K":17.02,"Sodium_Na":10.46,"Zinc_Zn":0.05,"Copper_Cu":0.01,"Manganese_Mn":0.0,"Selenium_Se":0.02,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":4.56,"IntrinsicSugars":0.39},"addedSugars":8.8,"intrinsicSugars":0.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14049","name":"Alcoholic beverage, distilled, gin, 90 proof","grams":55.6},{"ndb":"9152","name":"Lemon juice, raw","grams":30.0},{"ndb":"14801","name":"Cocktail mixer, simple syrup, 1:1 sugar-water","grams":17.5},{"ndb":"14121","name":"Beverages, Carbonated beverage, club soda","grams":88.9}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":192.0,"raw_water_grams":159.78,"raw_fat_grams":0.07,"raw_protein_grams":0.1,"raw_carb_grams":10.82,"final_grams":192.0}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Tom Collins', quantity: 'custom (g)', foodWord: 'TOMCOLLINS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'gin', quantity: '2 oz', section: 'cocktail', ndbNo: '14049', portionDesc: 'g', portionGrams: 55.6 },
+      { name: 'lemon juice', quantity: '1 oz', section: 'cocktail', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'simple syrup', quantity: '1/2 oz', section: 'cocktail', ndbNo: '14801', portionDesc: 'g', portionGrams: 17.5 },
+      { name: 'club soda', quantity: '3 oz', section: 'cocktail', ndbNo: '14121', portionDesc: 'g', portionGrams: 88.9 }
+    ],
+    recipeInstructions: [
+      'Add the gin, lemon juice, and simple syrup to a cocktail shaker with ice.',
+      'Shake until well chilled.',
+      'Strain into a Collins glass filled with ice.',
+      'Top with club soda and stir gently.',
+      'Suggestions (not included): Garnish with a lemon wheel and a cherry.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
