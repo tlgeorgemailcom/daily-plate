@@ -25429,5 +25429,47 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_099',
+    name: 'Old Cuban',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 541,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'cocktail',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":201.5,"pro":0.1,"fat":0.0,"carb":16.5,"fib":0.2,"h2o":115.0,"sug":14.5,"perServing":{"cal":201.5,"pro":0.1,"fat":0.0,"carb":16.5,"fib":0.2,"h2o":115.0,"sug":14.5,"AddedSugars":13.1,"IntrinsicSugars":1.4},"micros":{"vitaminA":2.71,"vitaminC":4.61,"vitaminD":0.0,"vitaminE":0.03,"vitaminK":0.09,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.0,"niacin":0.03,"folate":2.73,"calcium":4.44,"iron":0.15,"magnesium":1.93,"phosphorus":2.79,"potassium":22.8,"sodium":0.65,"zinc":0.02,"copper":0.01,"selenium":0.01,"cholesterol":0.0,"saturatedFat":0.0,"monoFat":0.0,"polyFat":0.01,"omega3":0.0,"omega6":0.0},"gramsPerServing":151.7,"servings":1,"per100g":{"Energy_KCal":132.88,"Water":75.87,"Protein":0.1,"TotalLipidFat":0.02,"Carbohydrate":10.88,"FiberTotalDietary":0.14,"SugarsTotal":9.55,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.0,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.01,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":2.71,"Retinol":0.0,"Carotene_beta":4.45,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.03,"VitaminK_phylloquinone":0.09,"VitaminC_totalAscorbicAcid":4.61,"Thiamin":0.0,"Riboflavin":0.0,"Niacin":0.03,"PantothenicAcid":0.02,"VitaminB6":0.01,"Folate_total":2.73,"Folate_food":2.73,"Folate_DFE":2.73,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":0.76,"Betaine":0.03,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":4.44,"Iron_Fe":0.15,"Magnesium_Mg":1.93,"Phosphorus_P":2.79,"Potassium_K":22.8,"Sodium_Na":0.65,"Zinc_Zn":0.02,"Copper_Cu":0.01,"Manganese_Mn":0.01,"Selenium_Se":0.01,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.02,"GlutamicAcid":0.01,"Glycine":0.0,"Proline":0.01,"Serine":0.01,"omega3":0.0,"omega6":0.0,"AddedSugars":8.65,"IntrinsicSugars":0.9},"addedSugars":13.1,"intrinsicSugars":1.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14748","name":"Alcoholic beverage, distilled, rum, dark, aged, 80 proof","grams":40.5},{"ndb":"9160","name":"Lime juice, raw","grams":22.5},{"ndb":"14801","name":"Cocktail mixer, simple syrup, 1:1 sugar-water","grams":26.2},{"ndb":"14749","name":"Alcoholic beverage, bitters, aromatic, Angostura type, 89.4 proof","grams":1.8},{"ndb":"2065","name":"Spearmint, fresh","grams":1.8},{"ndb":"14733","name":"Alcoholic beverage, wine, sparkling, brut (champagne, prosecco)","grams":58.8}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":151.65,"raw_water_grams":115.05,"raw_fat_grams":0.03,"raw_protein_grams":0.15,"raw_carb_grams":16.5,"final_grams":151.65}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Old Cuban', quantity: 'custom (g)', foodWord: 'OLDCUBAN', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'dark rum', quantity: '1½ oz', section: 'cocktail', ndbNo: '14748', portionDesc: 'g', portionGrams: 40.5 },
+      { name: 'lime juice', quantity: '¾ oz', section: 'cocktail', ndbNo: '9160', portionDesc: 'g', portionGrams: 22.5 },
+      { name: 'simple syrup', quantity: '¾ oz', section: 'cocktail', ndbNo: '14801', portionDesc: 'g', portionGrams: 26.25 },
+      { name: 'aromatic bitters', quantity: '2 dashes', section: 'cocktail', ndbNo: '14749', portionDesc: 'g', portionGrams: 1.8 },
+      { name: 'fresh mint', quantity: '6 leaves', section: 'cocktail', ndbNo: '2065', portionDesc: 'g', portionGrams: 1.8 },
+      { name: 'sparkling wine', quantity: '2 oz', section: 'cocktail', ndbNo: '14733', portionDesc: 'g', portionGrams: 58.8 }
+    ],
+    recipeInstructions: [
+      'Lightly muddle the mint leaves in a cocktail shaker.',
+      'Add aged rum, lime juice, simple syrup, and bitters with ice.',
+      'Shake well until chilled.',
+      'Double-strain into a chilled coupe glass.',
+      'Top with sparkling wine and gently stir to combine.',
+      'Suggestions (not included): Garnish with a fresh mint sprig.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
