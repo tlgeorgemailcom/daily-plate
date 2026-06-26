@@ -203,7 +203,7 @@ Alcohol Sangria, White
 - ✅ Tom Collins (BVRG_142)
 - ✅ Three Dots and a Dash (BVRG_143)
 - ✅ Trinidad Sour (BVRG_144)
-Alcohol Tuxedo
+- ✅ Tuxedo (BVRG_145)
 Alcohol VE.N.TE
 Alcohol Vesper
 Alcohol Vieux Carre
