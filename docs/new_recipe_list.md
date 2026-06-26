@@ -206,7 +206,7 @@ Alcohol Sangria, White
 - ✅ Tuxedo (BVRG_145)
 - ✅ VE.N.TE (BVRG_146)
 - ✅ Vesper (BVRG_147)
-Alcohol Vieux Carre
+- ✅ Vieux Carré (BVRG_148)
 Alcohol Vodka Tonic
 Alcohol Whiskey Sour
 Alcohol White Russian
