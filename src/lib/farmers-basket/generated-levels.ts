@@ -25545,5 +25545,43 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_102',
+    name: 'Paper Plane',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 544,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":139.9,"pro":0.1,"fat":0.1,"carb":9.7,"fib":0.1,"h2o":62.6,"sug":8.7,"perServing":{"cal":139.9,"pro":0.1,"fat":0.1,"carb":9.7,"fib":0.1,"h2o":62.6,"sug":8.7,"AddedSugars":0.0,"IntrinsicSugars":8.7},"micros":{"vitaminA":0.0,"vitaminC":9.97,"vitaminD":0.0,"vitaminE":0.04,"vitaminK":0.0,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.01,"riboflavin":0.0,"niacin":0.02,"folate":5.15,"calcium":1.55,"iron":0.02,"magnesium":1.55,"phosphorus":2.06,"potassium":26.53,"sodium":0.26,"zinc":0.01,"copper":0.0,"selenium":0.03,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.0,"polyFat":0.01,"omega3":0.0,"omega6":0.0},"gramsPerServing":87.4,"servings":1,"per100g":{"Energy_KCal":160.12,"Water":71.63,"Protein":0.09,"TotalLipidFat":0.06,"Carbohydrate":11.04,"FiberTotalDietary":0.08,"SugarsTotal":9.92,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.01,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.26,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.04,"VitaminK_phylloquinone":0.0,"VitaminC_totalAscorbicAcid":9.97,"Thiamin":0.01,"Riboflavin":0.0,"Niacin":0.02,"PantothenicAcid":0.03,"VitaminB6":0.01,"Folate_total":5.15,"Folate_food":5.15,"Folate_DFE":5.15,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":1.31,"Betaine":0.0,"LuteinZeaxanthin":3.86,"Lycopene":0.0,"Calcium_Ca":1.55,"Iron_Fe":0.02,"Magnesium_Mg":1.55,"Phosphorus_P":2.06,"Potassium_K":26.53,"Sodium_Na":0.26,"Zinc_Zn":0.01,"Copper_Cu":0.0,"Manganese_Mn":0.0,"Selenium_Se":0.03,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":9.92},"addedSugars":0.0,"intrinsicSugars":8.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14738","name":"Alcoholic beverage, distilled, bourbon whiskey, 80 proof","grams":20.2},{"ndb":"14705","name":"Alcoholic beverage, aperol, 22 proof","grams":22.2},{"ndb":"14721","name":"Alcoholic beverage, liqueur, amaro nonino, 70 proof","grams":22.4},{"ndb":"9152","name":"Lemon juice, raw","grams":22.5}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":87.36,"raw_water_grams":62.58,"raw_fat_grams":0.05,"raw_protein_grams":0.08,"raw_carb_grams":9.65,"final_grams":87.36}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Paper Plane', quantity: 'custom (g)', foodWord: 'PAPERPLANE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'bourbon', quantity: '¾ oz', section: 'cocktail', ndbNo: '14738', portionDesc: 'g', portionGrams: 20.25 },
+      { name: 'Aperol', quantity: '¾ oz', section: 'cocktail', ndbNo: '14705', portionDesc: 'g', portionGrams: 22.18 },
+      { name: 'amaro Nonino', quantity: '¾ oz', section: 'cocktail', ndbNo: '14721', portionDesc: 'g', portionGrams: 22.43 },
+      { name: 'lemon juice', quantity: '¾ oz', section: 'cocktail', ndbNo: '9152', portionDesc: 'g', portionGrams: 22.5 }
+    ],
+    recipeInstructions: [
+      'Combine all ingredients in a cocktail shaker filled with ice.',
+      'Shake well until chilled, about 15 seconds.',
+      'Double-strain into a chilled coupe glass.',
+      'Suggestions (not included):'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

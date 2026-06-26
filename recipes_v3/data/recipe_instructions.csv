@@ -3379,3 +3379,6 @@ BVRG_100,3,"Suggestions (not included): Express an orange peel over the glass, r
 BVRG_101,1,"Combine the tequila, grapefruit juice, lime juice, and simple syrup in a highball glass filled with ice."
 BVRG_101,2,Top with club soda and stir gently to combine.
 BVRG_101,3,Suggestions (not included): Garnish with a grapefruit or lime wedge. Optionally rim the glass with salt before building.
+BVRG_102,1,Combine all ingredients in a cocktail shaker filled with ice.
+BVRG_102,2,"Shake well until chilled, about 15 seconds."
+BVRG_102,3,Double-strain into a chilled coupe glass.
