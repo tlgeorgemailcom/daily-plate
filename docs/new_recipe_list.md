@@ -82,143 +82,188 @@ Arnold Palmer
 ---
 
 ### Alcoholic
-Alexander
-Americano
-Angel Face
-Aperol Spritz
-Aviation
-Bee's Knees
-Bellini
-Between The Sheets
-Black Russian
-Bloody Mary
-Boulevardier
-Bramble
-Brandy Crusta
-Caipirinha
-Casino
-Cardinale
-Champagne Cocktail
-Chartreuse Swizzle
-Cosmopolitan
-Corpse Reviver #2
-Clover Club
-Cuba Libre
-Dark and Stormy
-Daiquiri
-Dirty Martini
-Don's Special Daiquiri
-Fernandito
-El Pepino
-Espresso Martini
-French 75
-French Connection
-French Martini
-Frozen Strawberry Margarita
-Garibaldi
-Gimlet
-Gin and Tonic
-Gin Basil Smash
-Gin Fizz
-Gin Rickey
-Gold Rush
-Grand Margarita
-Grasshopper
-Hanky Panky
-Hemingway Special
-Horse's Neck
-Hot Toddy
-Iba Tiki
-Illegal
-Irish Coffee
-John Collins
-Jungle Bird
-Kir
-Kir Royale
-Last Word
-Lemon Drop Martini
-Long Island Iced Tea
-Mai Tai
-Manhattan
-Margarita
-Martinez
-Mary Pickford
-Mezcal Last Word
-Michelada
-Mimosa
-Mint Julep
-Missonary's Downfall
-Mojito
-Monkey Gland
-Moscow Mule
-Mudslide
-Mulled Wine
-Naked & Famous
-Negroni
-New York Sour
-Oaxacanite
-Old cuban
-Old Fashioned
-Paloma
-Paper Plane
-Paradise
-Penicillin
-Piña Colada
-Pimm's Cup
-Pisco Punch
-Pisco Sour
-Planters Punch
-Porn Star Martini
-Porto Flip
-Remember the Maine
-Ramos fizz
-Rosita
-Rum Punch
-Rum Runner
-Russian Spring Punch
-Rusty Nail
-Pabol de Galo
-Sangria
-Sangria, White
-Sazerac
-Screwdriver
-Sea Breeze
-Sex on the Beach
-Shandy
-Sherry Cobbler
-Sidecar
-singapore Sling
-South Side
-Spicy Fifty
-Spiked Eggnog
-Spiked Hot Cocoa
-Spritz
-Stinger
-Strawberry Daiquiri
-Suffering Bastard
-TattleTale
-Tequila Sunrise
-Tipperary
-Tommy's Margarita
-Tom Collins
-Three Dots and a Dash
-Trindad Sour
-Tuxedo
-VE.N.TE
-Vesper
-Vieux Carre
-Vodka Tonic
-Whiskey Sour
-White Russian
+Alcohol Alexander
+Alcohol Americano
+Alcohol Angel Face
+Alcohol Aperol Spritz
+Alcohol Aviation
+Alcohol Bee's Knees
+Alcohol Bellini
+Alcohol Between The Sheets
+Alcohol Black Russian
+Alcohol Bloody Mary
+Alcohol Boulevardier
+Alcohol Bramble
+Alcohol Brandy Crusta
+Alcohol Caipirinha
+Alcohol Casino
+Alcohol Cardinale
+Alcohol Champagne Cocktail
+Alcohol Chartreuse Swizzle
+Alcohol Cosmopolitan
+Alcohol Corpse Reviver #2
+Alcohol Clover Club
+Alcohol Cuba Libre
+Alcohol Dark and Stormy
+Alcohol Daiquiri
+Alcohol Dirty Martini
+Alcohol Don's Special Daiquiri
+Alcohol Fernandito
+Alcohol El Pepino
+Alcohol Espresso Martini
+Alcohol French 75
+Alcohol French Connection
+Alcohol French Martini
+Alcohol Frozen Strawberry Margarita
+Alcohol Garibaldi
+Alcohol Gimlet
+Alcohol Gin and Tonic
+Alcohol Gin Basil Smash
+Alcohol Gin Fizz
+Alcohol Gin Rickey
+Alcohol Gold Rush
+Alcohol Grand Margarita
+Alcohol Grasshopper
+Alcohol Hanky Panky
+Alcohol Hemingway Special
+Alcohol Horse's Neck
+Alcohol Hot Toddy
+Alcohol Iba Tiki
+Alcohol Illegal
+Alcohol Irish Coffee
+Alcohol John Collins
+Alcohol Jungle Bird
+Alcohol Kir
+Alcohol Kir Royale
+Alcohol Last Word
+Alcohol Lemon Drop Martini
+Alcohol Long Island Iced Tea
+Alcohol Mai Tai
+Alcohol Manhattan
+Alcohol Margarita
+Alcohol Martinez
+Alcohol Mary Pickford
+Alcohol Mezcal Last Word
+Alcohol Michelada
+Alcohol Mimosa
+Alcohol Mint Julep
+Alcohol Missonary's Downfall
+Alcohol Mojito
+Alcohol Monkey Gland
+Alcohol Moscow Mule
+Alcohol Mudslide
+Alcohol Mulled Wine
+Alcohol Naked & Famous
+Alcohol Negroni
+Alcohol New York Sour
+Alcohol Oaxacanite
+Alcohol Old cuban
+Alcohol Old Fashioned
+Alcohol Paloma
+Alcohol Paper Plane
+Alcohol Paradise
+Alcohol Penicillin
+Alcohol Piña Colada
+Alcohol Pimm's Cup
+Alcohol Pisco Punch
+Alcohol Pisco Sour
+Alcohol Planters Punch
+Alcohol Porn Star Martini
+Alcohol Porto Flip
+Alcohol Remember the Maine
+Alcohol Ramos fizz
+Alcohol Rosita
+Alcohol Rum Punch
+Alcohol Rum Runner
+Alcohol Russian Spring Punch
+Alcohol Rusty Nail
+Alcohol Pabol de Galo
+Alcohol Sangria
+Alcohol Sangria, White
+Alcohol Sazerac
+Alcohol Screwdriver
+Alcohol Sea Breeze
+Alcohol Sex on the Beach
+Alcohol Shandy
+Alcohol Sherry Cobbler
+Alcohol Sidecar
+Alcohol singapore Sling
+Alcohol South Side
+Alcohol Spicy Fifty
+Alcohol Spiked Eggnog
+Alcohol Spiked Hot Cocoa
+Alcohol Spritz
+Alcohol Stinger
+Alcohol Strawberry Daiquiri
+Alcohol Suffering Bastard
+Alcohol TattleTale
+Alcohol Tequila Sunrise
+Alcohol Tipperary
+Alcohol Tommy's Margarita
+Alcohol Tom Collins
+Alcohol Three Dots and a Dash
+Alcohol Trindad Sour
+Alcohol Tuxedo
+Alcohol VE.N.TE
+Alcohol Vesper
+Alcohol Vieux Carre
+Alcohol Vodka Tonic
+Alcohol Whiskey Sour
+Alcohol White Russian
 
----
 
-### FNDDS Canonical References for Cocktail Recipes
 
-| FC Code | Description | Examples |
-|---|---|---|
-| 93201000 | Liqueur | amaretto, anisette, benedictine, chartreuse, cointreau, creme de menthe, curacao, drambuie, kirsch, kummel, sloe gin, triple sec, schnapps, Jagermeister, cordial |
-| 93201010 | Liqueur, cream | Bailey's Irish Cream, RumChata, horchata liqueur |
-| 93301400 | Alcoholic coffee drink | Coffee Royale, Irish coffee, coffee and liqueur, hard or spiked coffee |
+FNDDS
 
-Sources: [FC 93201000](https://fdc.nal.usda.gov/food-details/2710623/nutrients) · [FC 93201010](https://fdc.nal.usda.gov/food-details/2710624/nutrients) · [FC 93301400](https://fdc.nal.usda.gov/food-details/2710681/nutrients)
+
+93201000	Liqueur	amaretto, anisette, benedictine, chartreuse, cointreau, creme de menthe, curacao, drambuie, kirsch, kummel, sloe gin, triple sec, schnapps, Jagermeister, cordial
+
+
+
+93201010	Liqueur, cream	Bailey's Irish Cream, RumChata, horchata liqueur
+
+
+93301400	Alcoholic coffee drink	Coffee Royale, Irish coffee, coffee and liqueur, hard or spiked coffee
+
+
+
+37 unique liqueurs across 128 cocktails
+
+Priority	ingredient_key	Usage	Sugar g/100g	ABV%	Source
+1	triple_sec	11	~28	40%	Cointreau label: 25; generic: 30; avg 28
+2	sweet_vermouth	10	~14	16%	Martini Rosso label: 14.6
+3	maraschino_liqueur	10	~29	32%	Luxardo label: 29
+4	campari	7	~15	25%	Campari label: 15.4
+5	grenadine	7	~58	0–2%	FNDDS NDB 42040 (not in comboo.db): ~55; Rose's: 65
+6	absinthe	5	~0	68%	Unsweetened spirit; negligible sugar
+7	aperol	4	~17	11%	Campari Group EU label: 17.3
+8	coffee_liqueur	4	~32	20%	Kahlúa label: 32; SR Legacy NDB 14414 exists but not in comboo.db
+9	dry_vermouth	4	~3	18%	Noilly Prat: 3.3
+10	green_chartreuse	4	~11	55%	Chartreuse EU label: 10.7
+11	apricot_brandy	3	~25	30%	Marie Brizard Abricot: 25
+12	creme_de_cassis	3	~52	15%	Lejay label: 52
+13	falernum	3	~56	11%	Taylor's Velvet Falernum: 55; Bittermens: 57
+14	peach_liqueur	3	~34	20%	DeKuyper Peach Schnapps: 34
+15	baileys_irish_cream	2	~25	17%	Baileys EU label: 25.4; also has 13g fat/100g
+16	benedictine	2	~26	40%	B&B label: 26
+17	blackberry_liqueur	2	~45	18%	Crème de mûre generic: 40–50; avg 45
+18	cherry_brandy	2	~30	24%	Peter Heering label: 30
+19	creme_de_cacao	2	~42	25%	DeKuyper white/dark: 40–44; avg 42
+20	creme_de_menthe	2	~42	25%	DeKuyper label: 40–44; avg 42
+21	fernet_branca	2	~17	40%	Fernet-Branca EU label: 17
+22	lillet_blanc	2	~7	17%	Lillet EU label: 6.7
+23	orgeat	2	~60	0%	Monin: 55; Fee Brothers: 65; avg 60 (non-alcoholic syrup)
+24	allspice_dram	1	~37	22%	St. Elizabeth label: 37
+25	amaretto	1	~28	28%	DiSaronno label: 28.3
+26	amaro_nonino	1	~20	35%	Nonino EU label: 20
+27	ancho_reyes	1	~17	40%	Ancho Reyes label: 16.7
+28	banana_liqueur	1	~42	20%	Crème de banane generic: 40–44
+29	chambord	1	~31	16.5%	Chambord EU label: 31
+30	creme_de_violette	1	~42	16%	Rothman & Winter: 40–44; avg 42
+31	drambuie	1	~27	40%	Drambuie EU label: 27
+32	elderflower_liqueur	1	~51	20%	St-Germain EU label: 50.7
+33	grand_marnier	1	~22	40%	Grand Marnier label: 22
+34	orange_curacao	1	~27	40%	Pierre Ferrand Dry Curaçao: 22; generic: 30; avg 27
+35	passoa	1	~35	17%	Passoa label: 35.1
+36	pimms_no1	1	~12	25%	Pimm's EU label: 12
+37	yellow_chartreuse	1	~28	40%	Chartreuse EU label: 28
