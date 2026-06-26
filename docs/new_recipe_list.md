@@ -202,7 +202,7 @@ Alcohol Sangria, White
 - ✅ Tommy's Margarita (BVRG_141)
 - ✅ Tom Collins (BVRG_142)
 - ✅ Three Dots and a Dash (BVRG_143)
-Alcohol Trindad Sour
+- ✅ Trinidad Sour (BVRG_144)
 Alcohol Tuxedo
 Alcohol VE.N.TE
 Alcohol Vesper
