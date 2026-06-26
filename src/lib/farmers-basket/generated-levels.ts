@@ -25967,5 +25967,49 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_113',
+    name: 'Ramos Fizz',
+    category: 'cocktails',
+    dietaryCategory: 'veggie',
+    levelNum: 555,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'ingredient',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":320.1,"pro":4.6,"fat":10.8,"carb":20.9,"fib":0.1,"h2o":188.1,"sug":19.2,"perServing":{"cal":320.1,"pro":4.6,"fat":10.8,"carb":20.9,"fib":0.1,"h2o":188.1,"sug":19.2,"AddedSugars":17.5,"IntrinsicSugars":1.7},"micros":{"vitaminA":50.46,"vitaminC":4.32,"vitaminD":7.72,"vitaminE":0.14,"vitaminK":0.43,"vitaminB6":0.01,"vitaminB12":0.03,"thiamin":0.01,"riboflavin":0.08,"niacin":0.04,"folate":2.89,"calcium":11.49,"iron":0.04,"magnesium":3.46,"phosphorus":10.5,"potassium":47.85,"sodium":31.17,"zinc":0.07,"copper":0.01,"selenium":3.1,"cholesterol":13.84,"saturatedFat":2.82,"monoFat":1.12,"polyFat":0.19,"omega3":0.02,"omega6":0.11},"gramsPerServing":242.9,"servings":1,"per100g":{"Energy_KCal":131.78,"Water":77.45,"Protein":1.88,"TotalLipidFat":4.46,"Carbohydrate":8.59,"FiberTotalDietary":0.04,"SugarsTotal":7.92,"Cholesterol":13.84,"FattyAcids_totalSaturated":2.82,"FattyAcids_totalMonounsaturated":1.12,"FattyAcids_totalPolyunsaturated":0.19,"LinoleicAcid":0.11,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":50.46,"Retinol":49.6,"Carotene_beta":10.73,"VitaminD":7.72,"VitaminE_alphaTocopherol":0.14,"VitaminK_phylloquinone":0.43,"VitaminC_totalAscorbicAcid":4.32,"Thiamin":0.01,"Riboflavin":0.08,"Niacin":0.04,"PantothenicAcid":0.1,"VitaminB6":0.01,"Folate_total":2.89,"Folate_food":2.89,"Folate_DFE":2.89,"FolicAcid":0.0,"VitaminB12":0.03,"Choline_total":2.84,"Betaine":0.05,"LuteinZeaxanthin":0.93,"Lycopene":0.0,"Calcium_Ca":11.49,"Iron_Fe":0.04,"Magnesium_Mg":3.46,"Phosphorus_P":10.5,"Potassium_K":47.85,"Sodium_Na":31.17,"Zinc_Zn":0.07,"Copper_Cu":0.01,"Manganese_Mn":0.0,"Selenium_Se":3.1,"Tryptophan":0.02,"Threonine":0.07,"Isoleucine":0.11,"Leucine":0.17,"Lysine":0.12,"Methionine":0.06,"Cystine":0.04,"Phenylalanine":0.11,"Tyrosine":0.08,"Valine":0.13,"Arginine":0.09,"Histidine":0.05,"Alanine":0.11,"AsparticAcid":0.2,"GlutamicAcid":0.28,"Glycine":0.06,"Proline":0.1,"Serine":0.12,"omega3":0.02,"omega6":0.11,"AddedSugars":7.2,"IntrinsicSugars":0.71},"addedSugars":17.5,"intrinsicSugars":1.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14759","name":"Alcoholic beverage, gin, London dry, 80 proof","grams":54.0},{"ndb":"9152","name":"Lemon juice, raw","grams":15.0},{"ndb":"9160","name":"Lime juice, raw","grams":15.0},{"ndb":"14801","name":"Cocktail mixer, simple syrup, 1:1 sugar-water","grams":35.0},{"ndb":"1124","name":"Egg, white, raw, fresh","grams":33.0},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":29.8},{"ndb":"14777","name":"Flavoring, orange flower water, orange blossom water","grams":1.9},{"ndb":"14121","name":"Beverages, Carbonated beverage, club soda","grams":59.2}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":242.9,"raw_water_grams":188.12,"raw_fat_grams":10.84,"raw_protein_grams":4.56,"raw_carb_grams":20.85,"final_grams":242.9}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Ramos Fizz', quantity: 'custom (g)', foodWord: 'RAMOSFIZZ', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'dry gin', quantity: '2 oz', section: 'cocktail', ndbNo: '14759', portionDesc: 'g', portionGrams: 54.0 },
+      { name: 'lemon juice', quantity: '½ oz', section: 'cocktail', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'lime juice', quantity: '½ oz', section: 'cocktail', ndbNo: '9160', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'simple syrup', quantity: '1 oz', section: 'cocktail', ndbNo: '14801', portionDesc: 'g', portionGrams: 35.0 },
+      { name: 'egg whites', quantity: '1 large', section: 'cocktail', ndbNo: '1124', portionDesc: 'g', portionGrams: 33.0 },
+      { name: 'heavy cream', quantity: '1 oz', section: 'cocktail', ndbNo: '1053', portionDesc: 'g', portionGrams: 29.75 },
+      { name: 'Orange Flower Water', quantity: '3 dashes', section: 'cocktail', ndbNo: '14777', portionDesc: 'g', portionGrams: 1.9 },
+      { name: 'club soda', quantity: '2 oz (to top)', section: 'cocktail', ndbNo: '14121', portionDesc: 'g', portionGrams: 59.25 }
+    ],
+    recipeInstructions: [
+      'Combine the gin, lemon juice, lime juice, simple syrup, egg white, heavy cream, and orange flower water in a cocktail shaker without ice.',
+      'Dry shake vigorously for 30–60 seconds to emulsify the egg white and cream into a thick foam.',
+      'Add ice and shake vigorously for another 60 seconds to chill and dilute.',
+      'Strain into a chilled highball glass without ice.',
+      'Slowly pour the club soda over the back of a bar spoon to top the glass; the foam will rise above the rim.',
+      'Suggestions (not included): Garnish with a few drops of orange blossom water on the foam.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
