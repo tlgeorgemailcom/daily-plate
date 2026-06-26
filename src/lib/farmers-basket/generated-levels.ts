@@ -25583,5 +25583,42 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_103',
+    name: 'Paradise',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 545,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":128.3,"pro":0.1,"fat":0.0,"carb":7.2,"fib":0.0,"h2o":43.6,"sug":6.8,"perServing":{"cal":128.3,"pro":0.1,"fat":0.0,"carb":7.2,"fib":0.0,"h2o":43.6,"sug":6.8,"AddedSugars":0.0,"IntrinsicSugars":6.8},"micros":{"vitaminA":2.37,"vitaminC":11.85,"vitaminD":0.0,"vitaminE":0.01,"vitaminK":0.02,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.02,"riboflavin":0.01,"niacin":0.09,"folate":7.11,"calcium":2.61,"iron":0.05,"magnesium":2.61,"phosphorus":4.03,"potassium":47.42,"sodium":0.24,"zinc":0.01,"copper":0.01,"selenium":0.02,"cholesterol":0.0,"saturatedFat":0.0,"monoFat":0.01,"polyFat":0.01,"omega3":0.0,"omega6":0.0},"gramsPerServing":65.4,"servings":1,"per100g":{"Energy_KCal":196.32,"Water":66.72,"Protein":0.17,"TotalLipidFat":0.05,"Carbohydrate":10.96,"FiberTotalDietary":0.05,"SugarsTotal":10.48,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.0,"FattyAcids_totalMonounsaturated":0.01,"FattyAcids_totalPolyunsaturated":0.01,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":2.37,"Retinol":0.0,"Carotene_beta":7.82,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.01,"VitaminK_phylloquinone":0.02,"VitaminC_totalAscorbicAcid":11.85,"Thiamin":0.02,"Riboflavin":0.01,"Niacin":0.09,"PantothenicAcid":0.05,"VitaminB6":0.01,"Folate_total":7.11,"Folate_food":7.11,"Folate_DFE":7.11,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":1.47,"Betaine":0.0,"LuteinZeaxanthin":27.26,"Lycopene":0.0,"Calcium_Ca":2.61,"Iron_Fe":0.05,"Magnesium_Mg":2.61,"Phosphorus_P":4.03,"Potassium_K":47.42,"Sodium_Na":0.24,"Zinc_Zn":0.01,"Copper_Cu":0.01,"Manganese_Mn":0.0,"Selenium_Se":0.02,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.01,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.02,"GlutamicAcid":0.01,"Glycine":0.0,"Proline":0.01,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":10.48},"addedSugars":0.0,"intrinsicSugars":6.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14759","name":"Alcoholic beverage, gin, London dry, 80 proof","grams":27.0},{"ndb":"14708","name":"Alcoholic beverage, liqueur, apricot brandy, 60 proof","grams":22.9},{"ndb":"9206","name":"","grams":15.5}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":65.38,"raw_water_grams":43.62,"raw_fat_grams":0.03,"raw_protein_grams":0.11,"raw_carb_grams":7.16,"final_grams":65.38}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Paradise', quantity: 'custom (g)', foodWord: 'PARADISE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'dry gin', quantity: '1 oz', section: 'cocktail', ndbNo: '14759', portionDesc: 'g', portionGrams: 27.0 },
+      { name: 'apricot brandy', quantity: '¾ oz', section: 'cocktail', ndbNo: '14708', portionDesc: 'g', portionGrams: 22.88 },
+      { name: 'orange juice', quantity: '½ oz', section: 'cocktail', ndbNo: '9206', portionDesc: 'g', portionGrams: 15.5 }
+    ],
+    recipeInstructions: [
+      'Combine all ingredients in a cocktail shaker filled with ice.',
+      'Shake well until chilled, about 15 seconds.',
+      'Strain into a chilled coupe or cocktail glass.',
+      'Suggestions (not included):'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
