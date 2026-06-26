@@ -25892,5 +25892,42 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_111',
+    name: 'Porto Flip',
+    category: 'cocktails',
+    dietaryCategory: 'veggie',
+    levelNum: 553,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":160.1,"pro":2.8,"fat":4.5,"carb":6.9,"fib":0.0,"h2o":50.4,"sug":3.6,"perServing":{"cal":160.1,"pro":2.8,"fat":4.5,"carb":6.9,"fib":0.0,"h2o":50.4,"sug":3.6,"AddedSugars":0.0,"IntrinsicSugars":3.6},"micros":{"vitaminA":84.5,"vitaminC":0.0,"vitaminD":48.35,"vitaminE":0.57,"vitaminK":0.16,"vitaminB6":0.08,"vitaminB12":0.43,"thiamin":0.04,"riboflavin":0.12,"niacin":0.13,"folate":32.38,"calcium":33.39,"iron":0.75,"magnesium":6.48,"phosphorus":91.87,"potassium":79.09,"sodium":16.02,"zinc":0.55,"copper":0.04,"selenium":12.72,"cholesterol":240.64,"saturatedFat":2.12,"monoFat":2.6,"polyFat":0.93,"omega3":0.02,"omega6":0.0},"gramsPerServing":76.7,"servings":1,"per100g":{"Energy_KCal":208.8,"Water":65.76,"Protein":3.64,"TotalLipidFat":5.89,"Carbohydrate":8.97,"FiberTotalDietary":0.0,"SugarsTotal":4.77,"Cholesterol":240.64,"FattyAcids_totalSaturated":2.12,"FattyAcids_totalMonounsaturated":2.6,"FattyAcids_totalPolyunsaturated":0.93,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.02,"VitaminA_RAE":84.5,"Retinol":82.28,"Carotene_beta":19.52,"VitaminD":48.35,"VitaminE_alphaTocopherol":0.57,"VitaminK_phylloquinone":0.16,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.04,"Riboflavin":0.12,"Niacin":0.13,"PantothenicAcid":0.68,"VitaminB6":0.08,"Folate_total":32.38,"Folate_food":32.38,"Folate_DFE":32.38,"FolicAcid":0.0,"VitaminB12":0.43,"Choline_total":184.89,"Betaine":0.2,"LuteinZeaxanthin":242.64,"Lycopene":0.0,"Calcium_Ca":33.39,"Iron_Fe":0.75,"Magnesium_Mg":6.48,"Phosphorus_P":91.87,"Potassium_K":79.09,"Sodium_Na":16.02,"Zinc_Zn":0.55,"Copper_Cu":0.04,"Manganese_Mn":0.08,"Selenium_Se":12.72,"Tryptophan":0.04,"Threonine":0.15,"Isoleucine":0.19,"Leucine":0.31,"Lysine":0.27,"Methionine":0.08,"Cystine":0.06,"Phenylalanine":0.15,"Tyrosine":0.15,"Valine":0.21,"Arginine":0.24,"Histidine":0.09,"Alanine":0.18,"AsparticAcid":0.34,"GlutamicAcid":0.44,"Glycine":0.11,"Proline":0.14,"Serine":0.29,"omega3":0.02,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":4.77},"addedSugars":0.0,"intrinsicSugars":3.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14057","name":"Alcoholic beverage, wine, dessert, sweet","grams":45.8},{"ndb":"14743","name":"Alcoholic beverage, distilled, cognac, VS/VSOP, 80 proof","grams":13.9},{"ndb":"1125","name":"Egg, yolk, raw, fresh","grams":17.0}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":76.65,"raw_water_grams":50.41,"raw_fat_grams":4.51,"raw_protein_grams":2.79,"raw_carb_grams":6.87,"final_grams":76.65}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Porto Flip', quantity: 'custom (g)', foodWord: 'PORTOFLIP', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'port wine', quantity: '1½ oz', section: 'cocktail', ndbNo: '14057', portionDesc: 'g', portionGrams: 45.75 },
+      { name: 'cognac', quantity: '½ oz', section: 'cocktail', ndbNo: '14743', portionDesc: 'g', portionGrams: 13.9 },
+      { name: 'egg yolks', quantity: '1 large yolk', section: 'cocktail', ndbNo: '1125', portionDesc: 'g', portionGrams: 17.0 }
+    ],
+    recipeInstructions: [
+      'Combine port wine, cognac, and egg yolk in a cocktail shaker with ice.',
+      'Shake vigorously for 15–20 seconds until well chilled and frothy.',
+      'Double-strain into a chilled coupe or small wine glass.',
+      'Suggestions (not included): Grate fresh nutmeg over the top to finish.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
