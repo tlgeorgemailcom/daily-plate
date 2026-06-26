@@ -24774,5 +24774,43 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_082',
+    name: 'Margarita',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 524,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'cocktail',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":244.8,"pro":0.1,"fat":0.1,"carb":22.4,"fib":0.2,"h2o":74.3,"sug":18.7,"perServing":{"cal":244.8,"pro":0.1,"fat":0.1,"carb":22.4,"fib":0.2,"h2o":74.3,"sug":18.7,"AddedSugars":14.1,"IntrinsicSugars":4.6},"micros":{"vitaminA":1.89,"vitaminC":10.52,"vitaminD":0.0,"vitaminE":0.22,"vitaminK":4.04,"vitaminB6":0.05,"vitaminB12":0.0,"thiamin":0.03,"riboflavin":0.03,"niacin":0.15,"folate":7.71,"calcium":3.71,"iron":0.04,"magnesium":2.19,"phosphorus":3.71,"potassium":30.25,"sodium":1.2,"zinc":0.02,"copper":0.01,"selenium":0.32,"cholesterol":0.0,"saturatedFat":0.0,"monoFat":0.0,"polyFat":0.01,"omega3":0.0,"omega6":0.0},"gramsPerServing":119.8,"servings":1,"per100g":{"Energy_KCal":204.41,"Water":62.01,"Protein":0.12,"TotalLipidFat":0.1,"Carbohydrate":18.72,"FiberTotalDietary":0.14,"SugarsTotal":15.58,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.0,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.01,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":1.89,"Retinol":0.0,"Carotene_beta":23.83,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.22,"VitaminK_phylloquinone":4.04,"VitaminC_totalAscorbicAcid":10.52,"Thiamin":0.03,"Riboflavin":0.03,"Niacin":0.15,"PantothenicAcid":0.03,"VitaminB6":0.05,"Folate_total":7.71,"Folate_food":7.71,"Folate_DFE":7.71,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":3.59,"Betaine":0.05,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":3.71,"Iron_Fe":0.04,"Magnesium_Mg":2.19,"Phosphorus_P":3.71,"Potassium_K":30.25,"Sodium_Na":1.2,"Zinc_Zn":0.02,"Copper_Cu":0.01,"Manganese_Mn":0.0,"Selenium_Se":0.32,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.01,"AsparticAcid":0.03,"GlutamicAcid":0.02,"Glycine":0.0,"Proline":0.01,"Serine":0.01,"omega3":0.0,"omega6":0.0,"AddedSugars":11.76,"IntrinsicSugars":3.82},"addedSugars":14.1,"intrinsicSugars":4.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14741","name":"Alcoholic beverage, distilled, tequila, blanco, 80 proof","grams":54.0},{"ndb":"14700","name":"Alcoholic beverage, liqueur, triple sec, orange, 80 proof","grams":14.8},{"ndb":"9160","name":"Lime juice, raw","grams":30.2},{"ndb":"19912","name":"Sweetener, syrup, agave","grams":20.7}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":119.75,"raw_water_grams":74.26,"raw_fat_grams":0.11,"raw_protein_grams":0.15,"raw_carb_grams":22.42,"final_grams":119.75}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Margarita', quantity: 'custom (g)', foodWord: 'MARGARITA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'tequila', quantity: '2 oz', section: 'cocktail', ndbNo: '14741', portionDesc: 'g', portionGrams: 54.0 },
+      { name: 'triple sec', quantity: '½ oz', section: 'cocktail', ndbNo: '14700', portionDesc: 'g', portionGrams: 14.8 },
+      { name: 'lime juice', quantity: '1 oz', section: 'cocktail', ndbNo: '9160', portionDesc: 'g', portionGrams: 30.25 },
+      { name: 'agave syrup', quantity: '½ oz', section: 'cocktail', ndbNo: '19912', portionDesc: 'g', portionGrams: 20.7 }
+    ],
+    recipeInstructions: [
+      'Combine tequila, triple sec, lime juice, and agave syrup in a cocktail shaker filled with ice.',
+      'Shake vigorously for 15–20 seconds until well chilled.',
+      'Strain into a chilled cocktail glass with a salt-rimmed edge, if desired.',
+      'Suggestions (not included): Garnish with a lime wheel or wedge.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
