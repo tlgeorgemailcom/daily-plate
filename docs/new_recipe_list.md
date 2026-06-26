@@ -204,7 +204,7 @@ Alcohol Sangria, White
 - ✅ Three Dots and a Dash (BVRG_143)
 - ✅ Trinidad Sour (BVRG_144)
 - ✅ Tuxedo (BVRG_145)
-Alcohol VE.N.TE
+- ✅ VE.N.TE (BVRG_146)
 Alcohol Vesper
 Alcohol Vieux Carre
 Alcohol Vodka Tonic
