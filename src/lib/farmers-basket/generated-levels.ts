@@ -25195,5 +25195,43 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_093',
+    name: 'Mudslide',
+    category: 'cocktails',
+    dietaryCategory: 'veggie',
+    levelNum: 535,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'cocktail',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":330.8,"pro":1.7,"fat":14.8,"carb":18.9,"fib":0.0,"h2o":66.7,"sug":17.8,"perServing":{"cal":330.8,"pro":1.7,"fat":14.8,"carb":18.9,"fib":0.0,"h2o":66.7,"sug":17.8,"AddedSugars":0.0,"IntrinsicSugars":17.8},"micros":{"vitaminA":102.44,"vitaminC":0.15,"vitaminD":15.7,"vitaminE":0.23,"vitaminK":0.8,"vitaminB6":0.01,"vitaminB12":0.04,"thiamin":0.01,"riboflavin":0.05,"niacin":0.01,"folate":1.0,"calcium":16.45,"iron":0.03,"magnesium":1.74,"phosphorus":15.62,"potassium":23.91,"sodium":6.96,"zinc":0.06,"copper":0.0,"selenium":0.75,"cholesterol":28.16,"saturatedFat":5.74,"monoFat":2.27,"polyFat":0.39,"omega3":0.03,"omega6":0.22},"gramsPerServing":119.4,"servings":1,"per100g":{"Energy_KCal":277.11,"Water":55.91,"Protein":1.4,"TotalLipidFat":12.36,"Carbohydrate":15.81,"FiberTotalDietary":0.0,"SugarsTotal":14.94,"Cholesterol":28.16,"FattyAcids_totalSaturated":5.74,"FattyAcids_totalMonounsaturated":2.27,"FattyAcids_totalPolyunsaturated":0.39,"LinoleicAcid":0.22,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":102.44,"Retinol":100.94,"Carotene_beta":17.95,"VitaminD":15.7,"VitaminE_alphaTocopherol":0.23,"VitaminK_phylloquinone":0.8,"VitaminC_totalAscorbicAcid":0.15,"Thiamin":0.01,"Riboflavin":0.05,"Niacin":0.01,"PantothenicAcid":0.12,"VitaminB6":0.01,"Folate_total":1.0,"Folate_food":1.0,"Folate_DFE":1.0,"FolicAcid":0.0,"VitaminB12":0.04,"Choline_total":4.19,"Betaine":0.0,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":16.45,"Iron_Fe":0.03,"Magnesium_Mg":1.74,"Phosphorus_P":15.62,"Potassium_K":23.91,"Sodium_Na":6.96,"Zinc_Zn":0.06,"Copper_Cu":0.0,"Manganese_Mn":0.0,"Selenium_Se":0.75,"Tryptophan":0.01,"Threonine":0.03,"Isoleucine":0.03,"Leucine":0.06,"Lysine":0.03,"Methionine":0.01,"Cystine":0.0,"Phenylalanine":0.03,"Tyrosine":0.03,"Valine":0.04,"Arginine":0.01,"Histidine":0.01,"Alanine":0.02,"AsparticAcid":0.05,"GlutamicAcid":0.14,"Glycine":0.01,"Proline":0.07,"Serine":0.02,"omega3":0.03,"omega6":0.22,"AddedSugars":0.0,"IntrinsicSugars":14.94},"addedSugars":0.0,"intrinsicSugars":17.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14051","name":"Alcoholic beverage, distilled, vodka, 80 proof","grams":27.8},{"ndb":"14736","name":"Alcoholic beverage, liqueur, coffee, Kahlua Original, 32 proof","grams":32.2},{"ndb":"14737","name":"Alcoholic beverage, liqueur, cream, Irish, Baileys Original, 34 proof","grams":29.6},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":29.8}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":119.36,"raw_water_grams":66.74,"raw_fat_grams":14.76,"raw_protein_grams":1.67,"raw_carb_grams":18.87,"final_grams":119.36}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Mudslide', quantity: 'custom (g)', foodWord: 'MUDSLIDE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Vodka', quantity: '1 oz', section: 'cocktail', ndbNo: '14051', portionDesc: 'g', portionGrams: 27.8 },
+      { name: 'coffee liqueur (Kahlúa)', quantity: '1 oz', section: 'cocktail', ndbNo: '14736', portionDesc: 'g', portionGrams: 32.24 },
+      { name: 'Baileys Irish cream', quantity: '1 oz', section: 'cocktail', ndbNo: '14737', portionDesc: 'g', portionGrams: 29.57 },
+      { name: 'heavy cream', quantity: '1 oz', section: 'cocktail', ndbNo: '1053', portionDesc: 'g', portionGrams: 29.75 }
+    ],
+    recipeInstructions: [
+      'Combine vodka, coffee liqueur, Irish cream liqueur, and heavy cream in a cocktail shaker with ice.',
+      'Shake well until chilled.',
+      'Strain into a rocks glass over ice.',
+      'Suggestions (not included): Garnish with whipped cream and a drizzle of chocolate syrup.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
