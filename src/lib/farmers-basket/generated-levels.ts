@@ -25233,5 +25233,46 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_094',
+    name: 'Mulled Wine',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 536,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'cocktail',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":203.2,"pro":0.5,"fat":0.2,"carb":24.5,"fib":1.0,"h2o":144.7,"sug":19.5,"perServing":{"cal":203.2,"pro":0.5,"fat":0.2,"carb":24.5,"fib":1.0,"h2o":144.7,"sug":19.5,"AddedSugars":17.2,"IntrinsicSugars":2.2},"micros":{"vitaminA":1.04,"vitaminC":4.37,"vitaminD":0.0,"vitaminE":0.03,"vitaminK":0.74,"vitaminB6":0.05,"vitaminB12":0.0,"thiamin":0.01,"riboflavin":0.03,"niacin":0.25,"folate":3.65,"calcium":19.44,"iron":0.71,"magnesium":12.36,"phosphorus":23.11,"potassium":135.4,"sodium":4.24,"zinc":0.19,"copper":0.02,"selenium":0.32,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.06,"polyFat":0.03,"omega3":0.0,"omega6":0.0},"gramsPerServing":186.1,"servings":1,"per100g":{"Energy_KCal":109.2,"Water":77.74,"Protein":0.28,"TotalLipidFat":0.13,"Carbohydrate":13.16,"FiberTotalDietary":0.54,"SugarsTotal":10.47,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.06,"FattyAcids_totalPolyunsaturated":0.03,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":1.04,"Retinol":0.0,"Carotene_beta":4.38,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.03,"VitaminK_phylloquinone":0.74,"VitaminC_totalAscorbicAcid":4.37,"Thiamin":0.01,"Riboflavin":0.03,"Niacin":0.25,"PantothenicAcid":0.05,"VitaminB6":0.05,"Folate_total":3.65,"Folate_food":3.65,"Folate_DFE":3.65,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":5.4,"Betaine":0.46,"LuteinZeaxanthin":15.87,"Lycopene":0.1,"Calcium_Ca":19.44,"Iron_Fe":0.71,"Magnesium_Mg":12.36,"Phosphorus_P":23.11,"Potassium_K":135.4,"Sodium_Na":4.24,"Zinc_Zn":0.19,"Copper_Cu":0.02,"Manganese_Mn":0.33,"Selenium_Se":0.32,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.01,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.01,"GlutamicAcid":0.01,"Glycine":0.0,"Proline":0.02,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":9.27,"IntrinsicSugars":1.21},"addedSugars":17.2,"intrinsicSugars":2.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14096","name":"Alcoholic beverage, wine, table, red","grams":147.0},{"ndb":"9206","name":"","grams":15.5},{"ndb":"19296","name":"Honey","grams":21.0},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":1.3},{"ndb":"2011","name":"Spices, cloves, ground","grams":0.3},{"ndb":"2002","name":"Spices, anise seed","grams":1.1}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":186.11,"raw_water_grams":144.68,"raw_fat_grams":0.25,"raw_protein_grams":0.53,"raw_carb_grams":24.5,"final_grams":186.11}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Mulled Wine', quantity: 'custom (g)', foodWord: 'MULLEDWINE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'red wine', quantity: '5 oz', section: 'cocktail', ndbNo: '14096', portionDesc: 'g', portionGrams: 147.0 },
+      { name: 'orange juice', quantity: '½ oz', section: 'cocktail', ndbNo: '9206', portionDesc: 'g', portionGrams: 15.5 },
+      { name: 'honey', quantity: '1 tbsp', section: 'cocktail', ndbNo: '19296', portionDesc: 'g', portionGrams: 21.0 },
+      { name: 'ground cinnamon', quantity: '½ tsp', section: 'cocktail', ndbNo: '2010', portionDesc: 'g', portionGrams: 1.3 },
+      { name: 'ground cloves', quantity: '⅛ tsp', section: 'cocktail', ndbNo: '2011', portionDesc: 'g', portionGrams: 0.26 },
+      { name: 'anise seed', quantity: '½ tsp whole', section: 'cocktail', ndbNo: '2002', portionDesc: 'g', portionGrams: 1.05 }
+    ],
+    recipeInstructions: [
+      'Combine red wine, orange juice, honey, cinnamon, cloves, and anise seed in a small saucepan.',
+      'Heat over medium-low heat, stirring until honey dissolves. Do not boil.',
+      'Reduce heat to low and simmer for 10 minutes to allow the spices to infuse.',
+      'Strain into a mug or heatproof glass and serve warm.',
+      'Suggestions (not included): Garnish with a cinnamon stick and an orange slice.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
