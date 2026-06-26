@@ -26755,5 +26755,47 @@ export const LEVELS: Level[] = [
       { key: 'eggnog', label: 'Eggnog', cookingMethod: '', yieldFactorWater: 1.0 },
       { key: 'rum', label: 'Dark Rum', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_133',
+    name: 'Spiked Hot Cocoa',
+    category: 'cocktails',
+    dietaryCategory: 'veggie',
+    levelNum: 575,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 mug (makes 1)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":351.9,"pro":9.7,"fat":9.3,"carb":30.2,"fib":3.7,"h2o":252.9,"sug":25.2,"perServing":{"cal":351.9,"pro":9.7,"fat":9.3,"carb":30.2,"fib":3.7,"h2o":252.9,"sug":25.2,"AddedSugars":12.6,"IntrinsicSugars":12.6},"micros":{"vitaminA":31.18,"vitaminC":0.0,"vitaminD":38.41,"vitaminE":0.05,"vitaminK":0.29,"vitaminB6":0.02,"vitaminB12":0.29,"thiamin":0.02,"riboflavin":0.11,"niacin":0.08,"folate":3.09,"calcium":75.8,"iron":0.36,"magnesium":18.38,"phosphorus":73.04,"potassium":117.62,"sodium":104.39,"zinc":0.42,"copper":0.11,"selenium":3.09,"cholesterol":7.53,"saturatedFat":1.65,"monoFat":0.75,"polyFat":0.13,"omega3":0.0,"omega6":0.0},"gramsPerServing":324.0,"servings":1,"per100g":{"Energy_KCal":108.6,"Water":78.06,"Protein":2.98,"TotalLipidFat":2.87,"Carbohydrate":9.33,"FiberTotalDietary":1.14,"SugarsTotal":7.78,"Cholesterol":7.53,"FattyAcids_totalSaturated":1.65,"FattyAcids_totalMonounsaturated":0.75,"FattyAcids_totalPolyunsaturated":0.13,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":31.18,"Retinol":30.5,"Carotene_beta":4.74,"VitaminD":38.41,"VitaminE_alphaTocopherol":0.05,"VitaminK_phylloquinone":0.29,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.02,"Riboflavin":0.11,"Niacin":0.08,"PantothenicAcid":0.2,"VitaminB6":0.02,"Folate_total":3.09,"Folate_food":3.09,"Folate_DFE":3.09,"FolicAcid":0.0,"VitaminB12":0.29,"Choline_total":9.47,"Betaine":0.45,"LuteinZeaxanthin":0.88,"Lycopene":0.0,"Calcium_Ca":75.8,"Iron_Fe":0.36,"Magnesium_Mg":18.38,"Phosphorus_P":73.04,"Potassium_K":117.62,"Sodium_Na":104.39,"Zinc_Zn":0.42,"Copper_Cu":0.11,"Manganese_Mn":0.12,"Selenium_Se":3.09,"Tryptophan":0.04,"Threonine":0.12,"Isoleucine":0.14,"Leucine":0.25,"Lysine":0.23,"Methionine":0.07,"Cystine":0.01,"Phenylalanine":0.15,"Tyrosine":0.14,"Valine":0.19,"Arginine":0.1,"Histidine":0.08,"Alanine":0.1,"AsparticAcid":0.26,"GlutamicAcid":0.62,"Glycine":0.07,"Proline":0.26,"Serine":0.17,"omega3":0.0,"omega6":0.0,"AddedSugars":3.88,"IntrinsicSugars":3.9},"addedSugars":12.6,"intrinsicSugars":12.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":244.0},{"ndb":"19165","name":"Cocoa, dry powder, unsweetened","grams":10.0},{"ndb":"19335","name":"Sugars, granulated","grams":12.6},{"ndb":"2050","name":"Vanilla extract","grams":1.1},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"14748","name":"Alcoholic beverage, distilled, rum, dark, aged, 80 proof","grams":55.6}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":324.0,"raw_water_grams":252.92,"raw_fat_grams":9.3,"raw_protein_grams":9.65,"raw_carb_grams":30.23,"final_grams":324.0}],"cookingMethod":"boiled"},
+    recipeIngredients: [
+      { name: 'Spiked Hot Cocoa', quantity: 'custom (g)', foodWord: 'SPIKEDHOTCOCOA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'whole milk', quantity: '1 cup', section: 'cocktail', ndbNo: '1077', portionDesc: 'g', portionGrams: 244.0 },
+      { name: 'unsweetened cocoa powder', quantity: '2 tbsp', section: 'cocktail', ndbNo: '19165', portionDesc: 'g', portionGrams: 10.0 },
+      { name: 'sugar', quantity: '1 tbsp', section: 'cocktail', ndbNo: '19335', portionDesc: 'g', portionGrams: 12.6 },
+      { name: 'vanilla extract', quantity: '¼ tsp', section: 'cocktail', ndbNo: '2050', portionDesc: 'g', portionGrams: 1.05 },
+      { name: 'salt', quantity: '⅛ tsp', section: 'cocktail', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.75 },
+      { name: 'dark rum', quantity: '2 oz', section: 'cocktail', ndbNo: '14748', portionDesc: 'g', portionGrams: 55.6 }
+    ],
+    recipeInstructions: [
+      'In a small saucepan, whisk together the cocoa powder, sugar, and salt.',
+      'Add a splash of the milk and whisk into a smooth paste.',
+      'Pour in the remaining milk and heat over medium heat, whisking frequently, until steaming and just beginning to simmer.',
+      'Remove from heat and stir in the vanilla extract.',
+      'Pour the dark rum into a mug, then add the hot cocoa and stir to combine.',
+      'Suggestions (not included): Top with whipped cream or marshmallows.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
