@@ -194,7 +194,6 @@ Alcohol Sangria, White
 - ✅ Spiked Hot Cocoa (BVRG_133)
 - ✅ Spritz (BVRG_134)
 Alcohol Stinger
-Alcohol Stinger
 Alcohol Strawberry Daiquiri
 Alcohol Suffering Bastard
 Alcohol TattleTale
