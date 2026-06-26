@@ -188,7 +188,7 @@ Alcohol Sangria, White
 - ✅ Sherry Cobbler (BVRG_127)
 - ✅ Sidecar (BVRG_128)
 - ✅ Singapore Sling (BVRG_129)
-Alcohol South Side
+- ✅ South Side (BVRG_130)
 Alcohol Spicy Fifty
 Alcohol Spiked Eggnog
 Alcohol Spiked Hot Cocoa
