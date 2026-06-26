@@ -25349,5 +25349,45 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_097',
+    name: 'New York Sour',
+    category: 'cocktails',
+    dietaryCategory: 'veggie',
+    levelNum: 539,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'cocktail',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":203.3,"pro":1.9,"fat":0.1,"carb":15.2,"fib":0.1,"h2o":97.0,"sug":13.9,"perServing":{"cal":203.3,"pro":1.9,"fat":0.1,"carb":15.2,"fib":0.1,"h2o":97.0,"sug":13.9,"AddedSugars":13.1,"IntrinsicSugars":0.8},"micros":{"vitaminA":0.0,"vitaminC":6.5,"vitaminD":0.0,"vitaminE":0.03,"vitaminK":0.04,"vitaminB6":0.01,"vitaminB12":0.01,"thiamin":0.0,"riboflavin":0.06,"niacin":0.05,"folate":3.96,"calcium":2.75,"iron":0.07,"magnesium":3.68,"phosphorus":5.72,"potassium":51.32,"sodium":21.05,"zinc":0.03,"copper":0.01,"selenium":2.5,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":133.9,"servings":1,"per100g":{"Energy_KCal":151.75,"Water":72.43,"Protein":1.41,"TotalLipidFat":0.06,"Carbohydrate":11.33,"FiberTotalDietary":0.05,"SugarsTotal":10.38,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.28,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.03,"VitaminK_phylloquinone":0.04,"VitaminC_totalAscorbicAcid":6.5,"Thiamin":0.0,"Riboflavin":0.06,"Niacin":0.05,"PantothenicAcid":0.05,"VitaminB6":0.01,"Folate_total":3.96,"Folate_food":3.96,"Folate_DFE":3.96,"FolicAcid":0.0,"VitaminB12":0.01,"Choline_total":1.62,"Betaine":0.07,"LuteinZeaxanthin":3.18,"Lycopene":0.0,"Calcium_Ca":2.75,"Iron_Fe":0.07,"Magnesium_Mg":3.68,"Phosphorus_P":5.72,"Potassium_K":51.32,"Sodium_Na":21.05,"Zinc_Zn":0.03,"Copper_Cu":0.01,"Manganese_Mn":0.02,"Selenium_Se":2.5,"Tryptophan":0.01,"Threonine":0.05,"Isoleucine":0.08,"Leucine":0.12,"Lysine":0.1,"Methionine":0.05,"Cystine":0.03,"Phenylalanine":0.08,"Tyrosine":0.06,"Valine":0.1,"Arginine":0.08,"Histidine":0.04,"Alanine":0.09,"AsparticAcid":0.15,"GlutamicAcid":0.19,"Glycine":0.05,"Proline":0.05,"Serine":0.1,"omega3":0.0,"omega6":0.0,"AddedSugars":9.8,"IntrinsicSugars":0.58},"addedSugars":13.1,"intrinsicSugars":0.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14738","name":"Alcoholic beverage, distilled, bourbon whiskey, 80 proof","grams":54.0},{"ndb":"9152","name":"Lemon juice, raw","grams":22.5},{"ndb":"14801","name":"Cocktail mixer, simple syrup, 1:1 sugar-water","grams":26.2},{"ndb":"1124","name":"Egg, white, raw, fresh","grams":16.5},{"ndb":"14096","name":"Alcoholic beverage, wine, table, red","grams":14.7}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":133.95,"raw_water_grams":97.02,"raw_fat_grams":0.08,"raw_protein_grams":1.89,"raw_carb_grams":15.18,"final_grams":133.95}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'New York Sour', quantity: 'custom (g)', foodWord: 'NEWYORKSOUR', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'bourbon', quantity: '2 oz', section: 'cocktail', ndbNo: '14738', portionDesc: 'g', portionGrams: 54.0 },
+      { name: 'lemon juice', quantity: '¾ oz', section: 'cocktail', ndbNo: '9152', portionDesc: 'g', portionGrams: 22.5 },
+      { name: 'simple syrup', quantity: '¾ oz', section: 'cocktail', ndbNo: '14801', portionDesc: 'g', portionGrams: 26.25 },
+      { name: 'egg whites', quantity: '½ white', section: 'cocktail', ndbNo: '1124', portionDesc: 'g', portionGrams: 16.5 },
+      { name: 'red wine (float)', quantity: '½ oz', section: 'cocktail', ndbNo: '14096', portionDesc: 'g', portionGrams: 14.7 }
+    ],
+    recipeInstructions: [
+      'Dry shake bourbon, lemon juice, simple syrup, and egg white without ice for 15 seconds to emulsify.',
+      'Add ice and shake again until well chilled.',
+      'Strain into a rocks glass over a large ice cube.',
+      'Slowly pour the red wine over the back of a spoon to float it on top.',
+      'Suggestions (not included):'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
