@@ -200,7 +200,7 @@ Alcohol Sangria, White
 - ✅ Tequila Sunrise (BVRG_139)
 - ✅ Tipperary (BVRG_140)
 - ✅ Tommy's Margarita (BVRG_141)
-Alcohol Tom Collins
+- ✅ Tom Collins (BVRG_142)
 Alcohol Three Dots and a Dash
 Alcohol Trindad Sour
 Alcohol Tuxedo
