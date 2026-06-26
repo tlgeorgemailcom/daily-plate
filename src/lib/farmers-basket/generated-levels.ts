@@ -26089,5 +26089,46 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_116',
+    name: 'Rum Runner',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 558,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'ingredient',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":365.2,"pro":0.7,"fat":0.2,"carb":46.6,"fib":0.2,"h2o":172.2,"sug":39.6,"perServing":{"cal":365.2,"pro":0.7,"fat":0.2,"carb":46.6,"fib":0.2,"h2o":172.2,"sug":39.6,"AddedSugars":15.3,"IntrinsicSugars":24.3},"micros":{"vitaminA":2.52,"vitaminC":15.06,"vitaminD":0.0,"vitaminE":0.01,"vitaminK":0.1,"vitaminB6":0.03,"vitaminB12":0.0,"thiamin":0.04,"riboflavin":0.01,"niacin":0.15,"folate":11.96,"calcium":6.44,"iron":0.14,"magnesium":6.03,"phosphorus":7.13,"potassium":84.7,"sodium":3.05,"zinc":0.06,"copper":0.03,"selenium":0.1,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.01,"polyFat":0.02,"omega3":0.0,"omega6":0.0},"gramsPerServing":245.8,"servings":1,"per100g":{"Energy_KCal":148.63,"Water":70.06,"Protein":0.26,"TotalLipidFat":0.08,"Carbohydrate":18.96,"FiberTotalDietary":0.1,"SugarsTotal":16.1,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.01,"FattyAcids_totalPolyunsaturated":0.02,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":2.52,"Retinol":0.0,"Carotene_beta":9.06,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.01,"VitaminK_phylloquinone":0.1,"VitaminC_totalAscorbicAcid":15.06,"Thiamin":0.04,"Riboflavin":0.01,"Niacin":0.15,"PantothenicAcid":0.06,"VitaminB6":0.03,"Folate_total":11.96,"Folate_food":11.96,"Folate_DFE":11.96,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":2.37,"Betaine":0.0,"LuteinZeaxanthin":29.01,"Lycopene":0.0,"Calcium_Ca":6.44,"Iron_Fe":0.14,"Magnesium_Mg":6.03,"Phosphorus_P":7.13,"Potassium_K":84.7,"Sodium_Na":3.05,"Zinc_Zn":0.06,"Copper_Cu":0.03,"Manganese_Mn":0.13,"Selenium_Se":0.1,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.01,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.02,"GlutamicAcid":0.01,"Glycine":0.0,"Proline":0.01,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":6.23,"IntrinsicSugars":9.87},"addedSugars":15.3,"intrinsicSugars":24.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14748","name":"Alcoholic beverage, distilled, rum, dark, aged, 80 proof","grams":27.8},{"ndb":"14050","name":"Alcoholic beverage, distilled, rum, 80 proof","grams":27.8},{"ndb":"14713","name":"Alcoholic beverage, liqueur, blackberry, creme de mure, 36 proof","grams":16.2},{"ndb":"14723","name":"Alcoholic beverage, liqueur, banana, creme de banane, 40 proof","grams":31.9},{"ndb":"42040","name":"Syrups, grenadine","grams":20.0},{"ndb":"9206","name":"","grams":62.0},{"ndb":"9273","name":"Pineapple juice, canned, unsweetened","grams":60.0}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":245.75,"raw_water_grams":172.17,"raw_fat_grams":0.2,"raw_protein_grams":0.65,"raw_carb_grams":46.61,"final_grams":245.75}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Rum Runner', quantity: 'custom (g)', foodWord: 'RUMRUNNER', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'dark rum', quantity: '1 oz', section: 'cocktail', ndbNo: '14748', portionDesc: 'g', portionGrams: 27.8 },
+      { name: 'rum', quantity: '1 oz', section: 'cocktail', ndbNo: '14050', portionDesc: 'g', portionGrams: 27.8 },
+      { name: 'blackberry liqueur', quantity: '½ oz', section: 'cocktail', ndbNo: '14713', portionDesc: 'g', portionGrams: 16.25 },
+      { name: 'banana liqueur', quantity: '1 oz', section: 'cocktail', ndbNo: '14723', portionDesc: 'g', portionGrams: 31.9 },
+      { name: 'grenadine', quantity: '½ oz', section: 'cocktail', ndbNo: '42040', portionDesc: 'g', portionGrams: 20.0 },
+      { name: 'orange juice', quantity: '2 oz', section: 'cocktail', ndbNo: '9206', portionDesc: 'g', portionGrams: 62.0 },
+      { name: 'pineapple juice', quantity: '2 oz', section: 'cocktail', ndbNo: '9273', portionDesc: 'g', portionGrams: 60.0 }
+    ],
+    recipeInstructions: [
+      'Add the dark rum, light rum, blackberry liqueur, banana liqueur, grenadine, orange juice, and pineapple juice to a shaker filled with ice.',
+      'Shake well until chilled, about 15 seconds.',
+      'Strain into a tall glass over fresh ice.',
+      'Suggestions (not included): Garnish with an orange slice and maraschino cherry.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
