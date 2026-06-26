@@ -25002,5 +25002,42 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_088',
+    name: 'Mint Julep',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 530,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'cocktail',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":161.1,"pro":0.1,"fat":0.0,"carb":9.0,"fib":0.2,"h2o":47.3,"sug":8.8,"perServing":{"cal":161.1,"pro":0.1,"fat":0.0,"carb":9.0,"fib":0.2,"h2o":47.3,"sug":8.8,"AddedSugars":8.8,"IntrinsicSugars":0.0},"micros":{"vitaminA":8.17,"vitaminC":0.54,"vitaminD":0.0,"vitaminE":0.0,"vitaminK":0.0,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.01,"niacin":0.04,"folate":4.23,"calcium":8.01,"iron":0.48,"magnesium":2.54,"phosphorus":2.42,"potassium":18.44,"sodium":1.21,"zinc":0.04,"copper":0.01,"selenium":0.0,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.0,"polyFat":0.02,"omega3":0.0,"omega6":0.0},"gramsPerServing":74.5,"servings":1,"per100g":{"Energy_KCal":216.19,"Water":63.46,"Protein":0.13,"TotalLipidFat":0.03,"Carbohydrate":12.08,"FiberTotalDietary":0.27,"SugarsTotal":11.74,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.02,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":8.17,"Retinol":0.0,"Carotene_beta":0.0,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.0,"VitaminK_phylloquinone":0.0,"VitaminC_totalAscorbicAcid":0.54,"Thiamin":0.0,"Riboflavin":0.01,"Niacin":0.04,"PantothenicAcid":0.01,"VitaminB6":0.01,"Folate_total":4.23,"Folate_food":4.23,"Folate_DFE":4.23,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":0.0,"Betaine":0.0,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":8.01,"Iron_Fe":0.48,"Magnesium_Mg":2.54,"Phosphorus_P":2.42,"Potassium_K":18.44,"Sodium_Na":1.21,"Zinc_Zn":0.04,"Copper_Cu":0.01,"Manganese_Mn":0.04,"Selenium_Se":0.0,"Tryptophan":0.0,"Threonine":0.01,"Isoleucine":0.01,"Leucine":0.01,"Lysine":0.01,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.01,"Tyrosine":0.0,"Valine":0.01,"Arginine":0.01,"Histidine":0.0,"Alanine":0.01,"AsparticAcid":0.02,"GlutamicAcid":0.01,"Glycine":0.01,"Proline":0.01,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":11.74,"IntrinsicSugars":0.0},"addedSugars":8.8,"intrinsicSugars":0.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14738","name":"Alcoholic beverage, distilled, bourbon whiskey, 80 proof","grams":54.0},{"ndb":"14801","name":"Cocktail mixer, simple syrup, 1:1 sugar-water","grams":17.5},{"ndb":"2065","name":"Spearmint, fresh","grams":3.0}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":74.5,"raw_water_grams":47.28,"raw_fat_grams":0.02,"raw_protein_grams":0.1,"raw_carb_grams":9.0,"final_grams":74.5}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Mint Julep', quantity: 'custom (g)', foodWord: 'MINTJULEP', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'bourbon', quantity: '2 oz', section: 'cocktail', ndbNo: '14738', portionDesc: 'g', portionGrams: 54.0 },
+      { name: 'simple syrup', quantity: '½ oz', section: 'cocktail', ndbNo: '14801', portionDesc: 'g', portionGrams: 17.5 },
+      { name: 'fresh mint', quantity: '10 leaves', section: 'cocktail', ndbNo: '2065', portionDesc: 'g', portionGrams: 3.0 }
+    ],
+    recipeInstructions: [
+      'Add mint leaves and simple syrup to a julep cup or rocks glass and muddle gently to release the mint\'s aroma without bruising.',
+      'Fill the cup with crushed ice.',
+      'Pour bourbon over the ice and stir until the outside of the cup frosts.',
+      'Suggestions (not included): Garnish with a fresh mint sprig.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
