@@ -25120,5 +25120,43 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_091',
+    name: 'Monkey Gland',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 533,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'cocktail',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":172.8,"pro":0.3,"fat":0.1,"carb":11.5,"fib":0.1,"h2o":74.1,"sug":8.6,"perServing":{"cal":172.8,"pro":0.3,"fat":0.1,"carb":11.5,"fib":0.1,"h2o":74.1,"sug":8.6,"AddedSugars":4.7,"IntrinsicSugars":3.9},"micros":{"vitaminA":4.45,"vitaminC":22.27,"vitaminD":0.0,"vitaminE":0.02,"vitaminK":0.04,"vitaminB6":0.02,"vitaminB12":0.0,"thiamin":0.04,"riboflavin":0.01,"niacin":0.18,"folate":13.36,"calcium":5.47,"iron":0.09,"magnesium":5.28,"phosphorus":7.96,"potassium":91.77,"sodium":3.03,"zinc":0.03,"copper":0.02,"selenium":0.1,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.01,"polyFat":0.02,"omega3":0.0,"omega6":0.0},"gramsPerServing":104.4,"servings":1,"per100g":{"Energy_KCal":165.55,"Water":71.0,"Protein":0.31,"TotalLipidFat":0.09,"Carbohydrate":11.04,"FiberTotalDietary":0.09,"SugarsTotal":8.2,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.01,"FattyAcids_totalPolyunsaturated":0.02,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":4.45,"Retinol":0.0,"Carotene_beta":14.7,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.02,"VitaminK_phylloquinone":0.04,"VitaminC_totalAscorbicAcid":22.27,"Thiamin":0.04,"Riboflavin":0.01,"Niacin":0.18,"PantothenicAcid":0.08,"VitaminB6":0.02,"Folate_total":13.36,"Folate_food":13.36,"Folate_DFE":13.36,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":2.76,"Betaine":0.0,"LuteinZeaxanthin":51.23,"Lycopene":0.0,"Calcium_Ca":5.47,"Iron_Fe":0.09,"Magnesium_Mg":5.28,"Phosphorus_P":7.96,"Potassium_K":91.77,"Sodium_Na":3.03,"Zinc_Zn":0.03,"Copper_Cu":0.02,"Manganese_Mn":0.0,"Selenium_Se":0.1,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.02,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.03,"GlutamicAcid":0.01,"Glycine":0.0,"Proline":0.02,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":4.46,"IntrinsicSugars":3.74},"addedSugars":4.7,"intrinsicSugars":3.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14759","name":"Alcoholic beverage, gin, London dry, 80 proof","grams":40.5},{"ndb":"9206","name":"","grams":46.5},{"ndb":"42040","name":"Syrups, grenadine","grams":10.0},{"ndb":"14704","name":"Alcoholic beverage, distilled, absinthe, 136 proof","grams":7.4}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":104.39,"raw_water_grams":74.12,"raw_fat_grams":0.09,"raw_protein_grams":0.33,"raw_carb_grams":11.53,"final_grams":104.39}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Monkey Gland', quantity: 'custom (g)', foodWord: 'MONKEYGLAND', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'dry gin', quantity: '1½ oz', section: 'cocktail', ndbNo: '14759', portionDesc: 'g', portionGrams: 40.5 },
+      { name: 'orange juice', quantity: '1½ oz', section: 'cocktail', ndbNo: '9206', portionDesc: 'g', portionGrams: 46.5 },
+      { name: 'grenadine', quantity: '¼ oz', section: 'cocktail', ndbNo: '42040', portionDesc: 'g', portionGrams: 10.0 },
+      { name: 'absinthe', quantity: '¼ oz', section: 'cocktail', ndbNo: '14704', portionDesc: 'g', portionGrams: 7.39 }
+    ],
+    recipeInstructions: [
+      'Combine gin, orange juice, grenadine, and absinthe in a cocktail shaker with ice.',
+      'Shake well until chilled.',
+      'Strain into a chilled cocktail glass.',
+      'Suggestions (not included): Garnish with an orange twist.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
