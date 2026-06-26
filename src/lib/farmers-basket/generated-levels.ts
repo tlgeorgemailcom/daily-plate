@@ -27414,5 +27414,44 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_150',
+    name: 'Whiskey Sour',
+    category: 'cocktails',
+    dietaryCategory: 'veggie',
+    levelNum: 592,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail',
+    prepTime: '5',
+    linkType: 'ingredient',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":161.7,"pro":1.7,"fat":0.1,"carb":14.8,"fib":0.1,"h2o":74.8,"sug":13.8,"perServing":{"cal":161.7,"pro":1.7,"fat":0.1,"carb":14.8,"fib":0.1,"h2o":74.8,"sug":13.8,"AddedSugars":13.2,"IntrinsicSugars":0.7},"micros":{"vitaminA":0.0,"vitaminC":8.25,"vitaminD":0.0,"vitaminE":0.03,"vitaminK":0.0,"vitaminB6":0.01,"vitaminB12":0.01,"thiamin":0.0,"riboflavin":0.06,"niacin":0.03,"folate":4.83,"calcium":2.27,"iron":0.03,"magnesium":2.84,"phosphorus":3.84,"potassium":45.14,"sodium":23.82,"zinc":0.01,"copper":0.0,"selenium":2.86,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":105.5,"servings":1,"per100g":{"Energy_KCal":153.25,"Water":70.93,"Protein":1.62,"TotalLipidFat":0.08,"Carbohydrate":14.04,"FiberTotalDietary":0.06,"SugarsTotal":13.1,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.21,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.03,"VitaminK_phylloquinone":0.0,"VitaminC_totalAscorbicAcid":8.25,"Thiamin":0.0,"Riboflavin":0.06,"Niacin":0.03,"PantothenicAcid":0.05,"VitaminB6":0.01,"Folate_total":4.83,"Folate_food":4.83,"Folate_DFE":4.83,"FolicAcid":0.0,"VitaminB12":0.01,"Choline_total":1.24,"Betaine":0.04,"LuteinZeaxanthin":3.2,"Lycopene":0.0,"Calcium_Ca":2.27,"Iron_Fe":0.03,"Magnesium_Mg":2.84,"Phosphorus_P":3.84,"Potassium_K":45.14,"Sodium_Na":23.82,"Zinc_Zn":0.01,"Copper_Cu":0.0,"Manganese_Mn":0.0,"Selenium_Se":2.86,"Tryptophan":0.02,"Threonine":0.06,"Isoleucine":0.09,"Leucine":0.14,"Lysine":0.11,"Methionine":0.06,"Cystine":0.04,"Phenylalanine":0.1,"Tyrosine":0.06,"Valine":0.11,"Arginine":0.09,"Histidine":0.04,"Alanine":0.1,"AsparticAcid":0.17,"GlutamicAcid":0.22,"Glycine":0.06,"Proline":0.06,"Serine":0.11,"omega3":0.0,"omega6":0.0,"AddedSugars":12.46,"IntrinsicSugars":0.64},"addedSugars":13.2,"intrinsicSugars":0.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14738","name":"Alcoholic beverage, distilled, bourbon whiskey, 80 proof","grams":41.7},{"ndb":"9152","name":"Lemon juice, raw","grams":22.5},{"ndb":"14801","name":"Cocktail mixer, simple syrup, 1:1 sugar-water","grams":26.3},{"ndb":"1124","name":"Egg, white, raw, fresh","grams":15.0}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":105.5,"raw_water_grams":74.83,"raw_fat_grams":0.08,"raw_protein_grams":1.71,"raw_carb_grams":14.81,"final_grams":105.5}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Whiskey Sour', quantity: 'custom (g)', foodWord: 'WHISKEYSOUR', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'bourbon', quantity: '1 1/2 oz', section: 'cocktail', ndbNo: '14738', portionDesc: 'g', portionGrams: 41.7 },
+      { name: 'lemon juice', quantity: '3/4 oz', section: 'cocktail', ndbNo: '9152', portionDesc: 'g', portionGrams: 22.5 },
+      { name: 'simple syrup', quantity: '3/4 oz', section: 'cocktail', ndbNo: '14801', portionDesc: 'g', portionGrams: 26.3 },
+      { name: 'egg whites', quantity: '1/2 oz', section: 'cocktail', ndbNo: '1124', portionDesc: 'g', portionGrams: 15.0 }
+    ],
+    recipeInstructions: [
+      'Combine bourbon, lemon juice, simple syrup, and egg white in a shaker without ice.',
+      'Dry shake vigorously for 15 seconds to emulsify the egg white.',
+      'Add ice and shake again until well chilled.',
+      'Strain into a rocks glass over a large ice cube.',
+      'Suggestions (not included): Garnish with an Angostura bitters dash and a cherry.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

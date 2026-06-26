@@ -590,3 +590,4 @@ BVRG_146,VENTE,VE.N.TE,cocktails,veggie,,,5,1 glass (makes 1),1,Rule D,raw,1.0,1
 BVRG_147,VESPER,Vesper,cocktails,vegan,,,5,1 glass (makes 1),1,Rule D,raw,1.0,1.0,1.0,1.0,1.0,approved,,gin 3oz + vodka 1oz + Lillet Blanc 0.5oz; 126.0g; vegan; Rule D,,PASS,,
 BVRG_148,VIEUXCARRE,Vieux Carré,cocktails,vegan,,,5,1 glass (makes 1),1,Rule D,raw,1.0,1.0,1.0,1.0,1.0,approved,,rye 1oz + cognac 1oz + sweet vermouth 1oz + benedictine 1 tsp + angostura 1d + peychauds 1d; 93.5g; vegan; Rule D,,PASS,,
 BVRG_149,VODKATONIC,Vodka Tonic,cocktails,vegan,,,5,1 cocktail,1,Rule D,raw,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,Rule D — no canonical; 2 oz vodka + 4 oz tonic + 1/4 oz lime; 183.9g; vegan,
+BVRG_150,WHISKEYSOUR,Whiskey Sour,cocktails,veggie,,,5,1 cocktail,1,Rule D,raw,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,Rule D — no canonical; 1.5 oz bourbon + 3/4 oz lemon + 3/4 oz simple syrup + 1/2 oz egg white; 105.5g; veggie,

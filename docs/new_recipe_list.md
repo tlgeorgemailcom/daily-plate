@@ -207,7 +207,7 @@ Alcohol Sangria, White
 - ✅ VE.N.TE (BVRG_146)
 - ✅ Vesper (BVRG_147)
 - ✅ Vieux Carré (BVRG_148)
-Alcohol Vodka Tonic
+- ✅ Vodka Tonic (BVRG_149)
 Alcohol Whiskey Sour
 Alcohol White Russian
 
