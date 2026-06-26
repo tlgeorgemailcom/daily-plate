@@ -24966,5 +24966,41 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_087',
+    name: 'Mimosa',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 529,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'cocktail',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":113.8,"pro":0.4,"fat":0.1,"carb":8.2,"fib":0.1,"h2o":159.3,"sug":6.3,"perServing":{"cal":113.8,"pro":0.4,"fat":0.1,"carb":8.2,"fib":0.1,"h2o":159.3,"sug":6.3,"AddedSugars":0.0,"IntrinsicSugars":6.3},"micros":{"vitaminA":3.45,"vitaminC":17.26,"vitaminD":0.0,"vitaminE":0.01,"vitaminK":0.03,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.03,"riboflavin":0.01,"niacin":0.14,"folate":10.36,"calcium":3.8,"iron":0.07,"magnesium":3.8,"phosphorus":5.87,"potassium":69.04,"sodium":0.35,"zinc":0.02,"copper":0.01,"selenium":0.03,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.01,"polyFat":0.01,"omega3":0.0,"omega6":0.0},"gramsPerServing":179.6,"servings":1,"per100g":{"Energy_KCal":63.33,"Water":88.69,"Protein":0.24,"TotalLipidFat":0.07,"Carbohydrate":4.57,"FiberTotalDietary":0.07,"SugarsTotal":3.49,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.01,"FattyAcids_totalPolyunsaturated":0.01,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":3.45,"Retinol":0.0,"Carotene_beta":11.39,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.01,"VitaminK_phylloquinone":0.03,"VitaminC_totalAscorbicAcid":17.26,"Thiamin":0.03,"Riboflavin":0.01,"Niacin":0.14,"PantothenicAcid":0.07,"VitaminB6":0.01,"Folate_total":10.36,"Folate_food":10.36,"Folate_DFE":10.36,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":2.14,"Betaine":0.0,"LuteinZeaxanthin":39.7,"Lycopene":0.0,"Calcium_Ca":3.8,"Iron_Fe":0.07,"Magnesium_Mg":3.8,"Phosphorus_P":5.87,"Potassium_K":69.04,"Sodium_Na":0.35,"Zinc_Zn":0.02,"Copper_Cu":0.01,"Manganese_Mn":0.0,"Selenium_Se":0.03,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.01,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.02,"GlutamicAcid":0.01,"Glycine":0.0,"Proline":0.01,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":3.49},"addedSugars":0.0,"intrinsicSugars":6.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14733","name":"Alcoholic beverage, wine, sparkling, brut (champagne, prosecco)","grams":117.6},{"ndb":"9206","name":"","grams":62.0}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":179.6,"raw_water_grams":159.29,"raw_fat_grams":0.12,"raw_protein_grams":0.43,"raw_carb_grams":8.21,"final_grams":179.6}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Mimosa', quantity: 'custom (g)', foodWord: 'MIMOSA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'sparkling wine', quantity: '4 oz', section: 'cocktail', ndbNo: '14733', portionDesc: 'g', portionGrams: 117.6 },
+      { name: 'orange juice', quantity: '2 oz', section: 'cocktail', ndbNo: '9206', portionDesc: 'g', portionGrams: 62.0 }
+    ],
+    recipeInstructions: [
+      'Chill a champagne flute in the freezer for a few minutes.',
+      'Pour orange juice into the flute.',
+      'Top with sparkling wine and stir gently.',
+      'Suggestions (not included): Garnish with an orange slice or twist.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
