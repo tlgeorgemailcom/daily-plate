@@ -189,10 +189,11 @@ Alcohol Sangria, White
 - ✅ Sidecar (BVRG_128)
 - ✅ Singapore Sling (BVRG_129)
 - ✅ South Side (BVRG_130)
-Alcohol Spicy Fifty
-Alcohol Spiked Eggnog
-Alcohol Spiked Hot Cocoa
-Alcohol Spritz
+- ✅ Spicy Fifty (BVRG_131)
+- ✅ Spiked Eggnog (BVRG_132)
+- ✅ Spiked Hot Cocoa (BVRG_133)
+- ✅ Spritz (BVRG_134)
+Alcohol Stinger
 Alcohol Stinger
 Alcohol Strawberry Daiquiri
 Alcohol Suffering Bastard

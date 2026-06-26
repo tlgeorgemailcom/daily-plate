@@ -26797,5 +26797,43 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_134',
+    name: 'Spritz',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 576,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 glass (makes 1)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":141.1,"pro":0.0,"fat":0.0,"carb":11.5,"fib":0.0,"h2o":154.3,"sug":11.0,"perServing":{"cal":141.1,"pro":0.0,"fat":0.0,"carb":11.5,"fib":0.0,"h2o":154.3,"sug":11.0,"AddedSugars":0.0,"IntrinsicSugars":11.0},"micros":{"vitaminA":0.0,"vitaminC":0.0,"vitaminD":0.0,"vitaminE":0.0,"vitaminK":0.0,"vitaminB6":0.0,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.0,"niacin":0.0,"folate":0.0,"calcium":0.82,"iron":0.0,"magnesium":0.16,"phosphorus":0.0,"potassium":0.33,"sodium":3.46,"zinc":0.02,"copper":0.0,"selenium":0.0,"cholesterol":0.0,"saturatedFat":0.0,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":179.8,"servings":1,"per100g":{"Energy_KCal":78.5,"Water":85.83,"Protein":0.0,"TotalLipidFat":0.0,"Carbohydrate":6.42,"FiberTotalDietary":0.0,"SugarsTotal":6.12,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.0,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.0,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.0,"VitaminK_phylloquinone":0.0,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.0,"Riboflavin":0.0,"Niacin":0.0,"PantothenicAcid":0.0,"VitaminB6":0.0,"Folate_total":0.0,"Folate_food":0.0,"Folate_DFE":0.0,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":0.0,"Betaine":0.0,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":0.82,"Iron_Fe":0.0,"Magnesium_Mg":0.16,"Phosphorus_P":0.0,"Potassium_K":0.33,"Sodium_Na":3.46,"Zinc_Zn":0.02,"Copper_Cu":0.0,"Manganese_Mn":0.0,"Selenium_Se":0.0,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":6.12},"addedSugars":0.0,"intrinsicSugars":11.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14795","name":"Alcoholic beverage, wine, sparkling, Prosecco, 11% ABV, brut","grams":88.2},{"ndb":"14705","name":"Alcoholic beverage, aperol, 22 proof","grams":62.0},{"ndb":"14121","name":"Beverages, Carbonated beverage, club soda","grams":29.6}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":179.8,"raw_water_grams":154.33,"raw_fat_grams":0.0,"raw_protein_grams":0.0,"raw_carb_grams":11.54,"final_grams":179.8}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Spritz', quantity: 'custom (g)', foodWord: 'SPRITZ', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Prosecco', quantity: '3 oz', section: 'cocktail', ndbNo: '14795', portionDesc: 'g', portionGrams: 88.2 },
+      { name: 'Aperol', quantity: '2 oz', section: 'cocktail', ndbNo: '14705', portionDesc: 'g', portionGrams: 62.0 },
+      { name: 'club soda', quantity: '1 oz splash', section: 'cocktail', ndbNo: '14121', portionDesc: 'g', portionGrams: 29.6 }
+    ],
+    recipeInstructions: [
+      'Fill a large wine glass with ice.',
+      'Pour the Aperol over the ice.',
+      'Add the Prosecco and stir gently.',
+      'Top with a splash of club soda.',
+      'Suggestions (not included): Garnish with a half-slice of orange.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
