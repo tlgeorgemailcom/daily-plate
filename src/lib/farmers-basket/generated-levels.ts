@@ -26130,5 +26130,45 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_117',
+    name: 'Russian Spring Punch',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 559,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'ingredient',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":216.5,"pro":0.1,"fat":0.1,"carb":17.9,"fib":0.1,"h2o":115.8,"sug":16.5,"perServing":{"cal":216.5,"pro":0.1,"fat":0.1,"carb":17.9,"fib":0.1,"h2o":115.8,"sug":16.5,"AddedSugars":8.8,"IntrinsicSugars":7.8},"micros":{"vitaminA":0.0,"vitaminC":5.54,"vitaminD":0.0,"vitaminE":0.02,"vitaminK":0.0,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.0,"niacin":0.01,"folate":2.86,"calcium":0.86,"iron":0.01,"magnesium":0.86,"phosphorus":2.49,"potassium":15.02,"sodium":0.41,"zinc":0.01,"copper":0.0,"selenium":0.01,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":155.0,"servings":1,"per100g":{"Energy_KCal":139.71,"Water":74.71,"Protein":0.05,"TotalLipidFat":0.03,"Carbohydrate":11.52,"FiberTotalDietary":0.04,"SugarsTotal":10.66,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.14,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.02,"VitaminK_phylloquinone":0.0,"VitaminC_totalAscorbicAcid":5.54,"Thiamin":0.0,"Riboflavin":0.0,"Niacin":0.01,"PantothenicAcid":0.02,"VitaminB6":0.01,"Folate_total":2.86,"Folate_food":2.86,"Folate_DFE":2.86,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":0.73,"Betaine":0.0,"LuteinZeaxanthin":2.15,"Lycopene":0.0,"Calcium_Ca":0.86,"Iron_Fe":0.01,"Magnesium_Mg":0.86,"Phosphorus_P":2.49,"Potassium_K":15.02,"Sodium_Na":0.41,"Zinc_Zn":0.01,"Copper_Cu":0.0,"Manganese_Mn":0.0,"Selenium_Se":0.01,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":5.65,"IntrinsicSugars":5.02},"addedSugars":8.8,"intrinsicSugars":7.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14051","name":"Alcoholic beverage, distilled, vodka, 80 proof","grams":41.7},{"ndb":"9152","name":"Lemon juice, raw","grams":22.2},{"ndb":"14801","name":"Cocktail mixer, simple syrup, 1:1 sugar-water","grams":17.5},{"ndb":"14709","name":"Alcoholic beverage, liqueur, creme de cassis, blackcurrant, 30 proof","grams":14.8},{"ndb":"14733","name":"Alcoholic beverage, wine, sparkling, brut (champagne, prosecco)","grams":58.8}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":154.99,"raw_water_grams":115.79,"raw_fat_grams":0.05,"raw_protein_grams":0.08,"raw_carb_grams":17.85,"final_grams":154.99}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Russian Spring Punch', quantity: 'custom (g)', foodWord: 'RUSSIANSPRINGPUNCH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Vodka', quantity: '1½ oz', section: 'cocktail', ndbNo: '14051', portionDesc: 'g', portionGrams: 41.7 },
+      { name: 'lemon juice', quantity: '¾ oz', section: 'cocktail', ndbNo: '9152', portionDesc: 'g', portionGrams: 22.2 },
+      { name: 'simple syrup', quantity: '½ oz', section: 'cocktail', ndbNo: '14801', portionDesc: 'g', portionGrams: 17.5 },
+      { name: 'crème de cassis', quantity: '½ oz', section: 'cocktail', ndbNo: '14709', portionDesc: 'g', portionGrams: 14.79 },
+      { name: 'sparkling wine', quantity: '2 oz (to top)', section: 'cocktail', ndbNo: '14733', portionDesc: 'g', portionGrams: 58.8 }
+    ],
+    recipeInstructions: [
+      'Add the vodka, lemon juice, simple syrup, and crème de cassis to a shaker filled with ice.',
+      'Shake well until chilled, about 15 seconds.',
+      'Strain into a highball glass over fresh ice.',
+      'Top with sparkling wine and gently stir to combine.',
+      'Suggestions (not included): Garnish with a lemon slice and fresh raspberries.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
