@@ -26989,5 +26989,42 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_139',
+    name: 'Tequila Sunrise',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 581,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 glass (makes 1)',
+    prepTime: '5',
+    linkType: 'ingredient',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":211.0,"pro":0.9,"fat":0.2,"carb":19.6,"fib":0.2,"h2o":149.8,"sug":15.1,"perServing":{"cal":211.0,"pro":0.9,"fat":0.2,"carb":19.6,"fib":0.2,"h2o":149.8,"sug":15.1,"AddedSugars":4.7,"IntrinsicSugars":10.4},"micros":{"vitaminA":6.54,"vitaminC":32.7,"vitaminD":0.0,"vitaminE":0.03,"vitaminK":0.07,"vitaminB6":0.03,"vitaminB12":0.0,"thiamin":0.06,"riboflavin":0.02,"niacin":0.26,"folate":19.62,"calcium":7.51,"iron":0.13,"magnesium":7.41,"phosphorus":11.33,"potassium":132.28,"sodium":2.08,"zinc":0.04,"copper":0.03,"selenium":0.1,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.02,"polyFat":0.03,"omega3":0.0,"omega6":0.0},"gramsPerServing":189.6,"servings":1,"per100g":{"Energy_KCal":111.31,"Water":78.99,"Protein":0.46,"TotalLipidFat":0.13,"Carbohydrate":10.33,"FiberTotalDietary":0.13,"SugarsTotal":7.95,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.02,"FattyAcids_totalPolyunsaturated":0.03,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":6.54,"Retinol":0.0,"Carotene_beta":21.58,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.03,"VitaminK_phylloquinone":0.07,"VitaminC_totalAscorbicAcid":32.7,"Thiamin":0.06,"Riboflavin":0.02,"Niacin":0.26,"PantothenicAcid":0.12,"VitaminB6":0.03,"Folate_total":19.62,"Folate_food":19.62,"Folate_DFE":19.62,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":4.05,"Betaine":0.0,"LuteinZeaxanthin":75.21,"Lycopene":0.0,"Calcium_Ca":7.51,"Iron_Fe":0.13,"Magnesium_Mg":7.41,"Phosphorus_P":11.33,"Potassium_K":132.28,"Sodium_Na":2.08,"Zinc_Zn":0.04,"Copper_Cu":0.03,"Manganese_Mn":0.01,"Selenium_Se":0.1,"Tryptophan":0.0,"Threonine":0.01,"Isoleucine":0.01,"Leucine":0.01,"Lysine":0.01,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.01,"Tyrosine":0.0,"Valine":0.01,"Arginine":0.03,"Histidine":0.0,"Alanine":0.01,"AsparticAcid":0.05,"GlutamicAcid":0.02,"Glycine":0.01,"Proline":0.03,"Serine":0.01,"omega3":0.0,"omega6":0.0,"AddedSugars":2.46,"IntrinsicSugars":5.49},"addedSugars":4.7,"intrinsicSugars":10.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14741","name":"Alcoholic beverage, distilled, tequila, blanco, 80 proof","grams":55.6},{"ndb":"9206","name":"","grams":124.0},{"ndb":"42040","name":"Syrups, grenadine","grams":10.0}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":189.6,"raw_water_grams":149.76,"raw_fat_grams":0.25,"raw_protein_grams":0.87,"raw_carb_grams":19.59,"final_grams":189.6}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Tequila Sunrise', quantity: 'custom (g)', foodWord: 'TEQUILASUNRISE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'tequila', quantity: '2 oz', section: 'cocktail', ndbNo: '14741', portionDesc: 'g', portionGrams: 55.6 },
+      { name: 'orange juice', quantity: '4 oz', section: 'cocktail', ndbNo: '9206', portionDesc: 'g', portionGrams: 124.0 },
+      { name: 'grenadine', quantity: '1/2 oz', section: 'cocktail', ndbNo: '42040', portionDesc: 'g', portionGrams: 10.0 }
+    ],
+    recipeInstructions: [
+      'Fill a highball glass with ice.',
+      'Pour the tequila and orange juice over the ice and stir to combine.',
+      'Slowly pour the grenadine down the inside of the glass — it will sink to the bottom, creating the sunrise effect. Do not stir.',
+      'Suggestions (not included): Garnish with an orange slice and a maraschino cherry.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

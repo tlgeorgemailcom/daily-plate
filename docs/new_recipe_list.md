@@ -196,7 +196,7 @@ Alcohol Sangria, White
 - ✅ Stinger (BVRG_135)
 - ✅ Strawberry Daiquiri (BVRG_136)
 - ✅ Suffering Bastard (BVRG_137)
-Alcohol TattleTale
+- ✅ TattleTale (BVRG_138)
 Alcohol Tequila Sunrise
 Alcohol Tipperary
 Alcohol Tommy's Margarita
