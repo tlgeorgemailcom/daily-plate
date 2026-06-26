@@ -198,7 +198,7 @@ Alcohol Sangria, White
 - ✅ Suffering Bastard (BVRG_137)
 - ✅ TattleTale (BVRG_138)
 - ✅ Tequila Sunrise (BVRG_139)
-Alcohol Tipperary
+- ✅ Tipperary (BVRG_140)
 Alcohol Tommy's Margarita
 Alcohol Tom Collins
 Alcohol Three Dots and a Dash

@@ -27064,5 +27064,42 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_141',
+    name: 'Tommy\'s Margarita',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 583,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 glass (makes 1)',
+    prepTime: '5',
+    linkType: 'ingredient',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":200.0,"pro":0.1,"fat":0.1,"carb":18.3,"fib":0.2,"h2o":68.7,"sug":14.6,"perServing":{"cal":200.0,"pro":0.1,"fat":0.1,"carb":18.3,"fib":0.2,"h2o":68.7,"sug":14.6,"AddedSugars":14.1,"IntrinsicSugars":0.5},"micros":{"vitaminA":2.12,"vitaminC":11.71,"vitaminD":0.0,"vitaminE":0.25,"vitaminK":4.57,"vitaminB6":0.05,"vitaminB12":0.0,"thiamin":0.03,"riboflavin":0.03,"niacin":0.17,"folate":8.66,"calcium":4.11,"iron":0.04,"magnesium":2.43,"phosphorus":4.11,"potassium":33.48,"sodium":1.34,"zinc":0.02,"copper":0.01,"selenium":0.36,"cholesterol":0.0,"saturatedFat":0.0,"monoFat":0.0,"polyFat":0.01,"omega3":0.0,"omega6":0.0},"gramsPerServing":105.9,"servings":1,"per100g":{"Energy_KCal":188.86,"Water":64.83,"Protein":0.13,"TotalLipidFat":0.11,"Carbohydrate":17.28,"FiberTotalDietary":0.15,"SugarsTotal":13.77,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.0,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.01,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":2.12,"Retinol":0.0,"Carotene_beta":26.76,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.25,"VitaminK_phylloquinone":4.57,"VitaminC_totalAscorbicAcid":11.71,"Thiamin":0.03,"Riboflavin":0.03,"Niacin":0.17,"PantothenicAcid":0.03,"VitaminB6":0.05,"Folate_total":8.66,"Folate_food":8.66,"Folate_DFE":8.66,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":4.03,"Betaine":0.06,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":4.11,"Iron_Fe":0.04,"Magnesium_Mg":2.43,"Phosphorus_P":4.11,"Potassium_K":33.48,"Sodium_Na":1.34,"Zinc_Zn":0.02,"Copper_Cu":0.01,"Manganese_Mn":0.0,"Selenium_Se":0.36,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.01,"AsparticAcid":0.03,"GlutamicAcid":0.02,"Glycine":0.0,"Proline":0.01,"Serine":0.01,"omega3":0.0,"omega6":0.0,"AddedSugars":13.3,"IntrinsicSugars":0.47},"addedSugars":14.1,"intrinsicSugars":0.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14741","name":"Alcoholic beverage, distilled, tequila, blanco, 80 proof","grams":55.6},{"ndb":"9160","name":"Lime juice, raw","grams":29.6},{"ndb":"19912","name":"Sweetener, syrup, agave","grams":20.7}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":105.9,"raw_water_grams":68.65,"raw_fat_grams":0.11,"raw_protein_grams":0.14,"raw_carb_grams":18.3,"final_grams":105.9}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Tommy\'s Margarita', quantity: 'custom (g)', foodWord: 'TOMMYSMARGARITA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'tequila', quantity: '2 oz', section: 'cocktail', ndbNo: '14741', portionDesc: 'g', portionGrams: 55.6 },
+      { name: 'lime juice', quantity: '1 oz', section: 'cocktail', ndbNo: '9160', portionDesc: 'g', portionGrams: 29.6 },
+      { name: 'agave syrup', quantity: '1/2 oz', section: 'cocktail', ndbNo: '19912', portionDesc: 'g', portionGrams: 20.7 }
+    ],
+    recipeInstructions: [
+      'Add the tequila, lime juice, and agave syrup to a cocktail shaker with ice.',
+      'Shake until well chilled.',
+      'Strain into a rocks glass over fresh ice.',
+      'Suggestions (not included): Salt the rim and garnish with a lime wheel.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
