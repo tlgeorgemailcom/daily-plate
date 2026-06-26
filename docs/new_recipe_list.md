@@ -180,14 +180,14 @@ Alcohol Rusty Nail
 Alcohol Pabol de Galo
 Alcohol Sangria
 Alcohol Sangria, White
-Alcohol Sazerac
-Alcohol Screwdriver
-Alcohol Sea Breeze
-Alcohol Sex on the Beach
-Alcohol Shandy
-Alcohol Sherry Cobbler
-Alcohol Sidecar
-Alcohol singapore Sling
+- ✅ Sazerac (BVRG_122)
+- ✅ Screwdriver (BVRG_123)
+- ✅ Sea Breeze (BVRG_124)
+- ✅ Sex on the Beach (BVRG_125)
+- ✅ Shandy (BVRG_126)
+- ✅ Sherry Cobbler (BVRG_127)
+- ✅ Sidecar (BVRG_128)
+- ✅ Singapore Sling (BVRG_129)
 Alcohol South Side
 Alcohol Spicy Fifty
 Alcohol Spiked Eggnog
