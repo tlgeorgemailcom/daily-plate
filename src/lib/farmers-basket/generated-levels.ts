@@ -26871,5 +26871,44 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_136',
+    name: 'Strawberry Daiquiri',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 578,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 glass (makes 1)',
+    prepTime: '5',
+    linkType: 'ingredient',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":186.3,"pro":0.5,"fat":0.2,"carb":15.8,"fib":1.3,"h2o":244.5,"sug":12.2,"perServing":{"cal":186.3,"pro":0.5,"fat":0.2,"carb":15.8,"fib":1.3,"h2o":244.5,"sug":12.2,"AddedSugars":8.8,"IntrinsicSugars":3.4},"micros":{"vitaminA":0.43,"vitaminC":15.79,"vitaminD":0.0,"vitaminE":0.09,"vitaminK":0.54,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.01,"riboflavin":0.01,"niacin":0.1,"folate":6.21,"calcium":6.19,"iron":0.1,"magnesium":4.06,"phosphorus":6.63,"potassium":45.22,"sodium":2.12,"zinc":0.04,"copper":0.01,"selenium":0.1,"cholesterol":0.0,"saturatedFat":0.0,"monoFat":0.01,"polyFat":0.03,"omega3":0.0,"omega6":0.0},"gramsPerServing":279.6,"servings":1,"per100g":{"Energy_KCal":66.65,"Water":87.46,"Protein":0.19,"TotalLipidFat":0.07,"Carbohydrate":5.67,"FiberTotalDietary":0.47,"SugarsTotal":4.36,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.0,"FattyAcids_totalMonounsaturated":0.01,"FattyAcids_totalPolyunsaturated":0.03,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.43,"Retinol":0.0,"Carotene_beta":4.68,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.09,"VitaminK_phylloquinone":0.54,"VitaminC_totalAscorbicAcid":15.79,"Thiamin":0.01,"Riboflavin":0.01,"Niacin":0.1,"PantothenicAcid":0.04,"VitaminB6":0.01,"Folate_total":6.21,"Folate_food":6.21,"Folate_DFE":6.21,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":1.76,"Betaine":0.06,"LuteinZeaxanthin":5.58,"Lycopene":0.0,"Calcium_Ca":6.19,"Iron_Fe":0.1,"Magnesium_Mg":4.06,"Phosphorus_P":6.63,"Potassium_K":45.22,"Sodium_Na":2.12,"Zinc_Zn":0.04,"Copper_Cu":0.01,"Manganese_Mn":0.08,"Selenium_Se":0.1,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.01,"Lysine":0.01,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.01,"Histidine":0.0,"Alanine":0.01,"AsparticAcid":0.04,"GlutamicAcid":0.03,"Glycine":0.01,"Proline":0.01,"Serine":0.01,"omega3":0.0,"omega6":0.0,"AddedSugars":3.13,"IntrinsicSugars":1.23},"addedSugars":8.8,"intrinsicSugars":3.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14754","name":"Alcoholic beverage, rum, white, 80 proof","grams":54.0},{"ndb":"9160","name":"Lime juice, raw","grams":29.6},{"ndb":"14801","name":"Cocktail mixer, simple syrup, 1:1 sugar-water","grams":17.5},{"ndb":"9316","name":"Strawberries, raw","grams":60.0},{"ndb":"14411","name":"Water, tap, drinking","grams":118.5}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":279.6,"raw_water_grams":244.54,"raw_fat_grams":0.2,"raw_protein_grams":0.53,"raw_carb_grams":15.85,"final_grams":279.6}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Strawberry Daiquiri', quantity: 'custom (g)', foodWord: 'STRAWBERRYDAIQUIRI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'White Rum', quantity: '2 oz', section: 'cocktail', ndbNo: '14754', portionDesc: 'g', portionGrams: 54.0 },
+      { name: 'lime juice', quantity: '1 oz', section: 'cocktail', ndbNo: '9160', portionDesc: 'g', portionGrams: 29.6 },
+      { name: 'simple syrup', quantity: '1/2 oz', section: 'cocktail', ndbNo: '14801', portionDesc: 'g', portionGrams: 17.5 },
+      { name: 'strawberries', quantity: '4 medium strawberries, hulled', section: 'cocktail', ndbNo: '9316', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'ice', quantity: '1/2 cup crushed ice', section: 'cocktail', ndbNo: '14411', portionDesc: 'g', portionGrams: 118.5 }
+    ],
+    recipeInstructions: [
+      'Add the white rum, lime juice, simple syrup, hulled strawberries, and crushed ice to a blender.',
+      'Blend until smooth and slushy.',
+      'Pour into a chilled cocktail glass.',
+      'Suggestions (not included): Garnish with a fresh strawberry on the rim.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];

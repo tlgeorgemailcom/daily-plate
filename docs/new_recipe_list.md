@@ -193,7 +193,8 @@ Alcohol Sangria, White
 - ✅ Spiked Eggnog (BVRG_132)
 - ✅ Spiked Hot Cocoa (BVRG_133)
 - ✅ Spritz (BVRG_134)
-Alcohol Stinger
+- ✅ Stinger (BVRG_135)
+Alcohol Strawberry Daiquiri
 Alcohol Strawberry Daiquiri
 Alcohol Suffering Bastard
 Alcohol TattleTale
