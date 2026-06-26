@@ -25039,5 +25039,46 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_089',
+    name: 'Missionary\'s Downfall',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 531,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'cocktail',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":193.6,"pro":0.4,"fat":0.1,"carb":29.2,"fib":0.8,"h2o":86.9,"sug":26.1,"perServing":{"cal":193.6,"pro":0.4,"fat":0.1,"carb":29.2,"fib":0.8,"h2o":86.9,"sug":26.1,"AddedSugars":16.9,"IntrinsicSugars":9.2},"micros":{"vitaminA":4.17,"vitaminC":20.86,"vitaminD":0.0,"vitaminE":0.05,"vitaminK":0.33,"vitaminB6":0.04,"vitaminB12":0.0,"thiamin":0.03,"riboflavin":0.01,"niacin":0.2,"folate":9.03,"calcium":9.45,"iron":0.3,"magnesium":6.16,"phosphorus":6.97,"potassium":62.58,"sodium":1.31,"zinc":0.08,"copper":0.05,"selenium":0.05,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.0,"polyFat":0.02,"omega3":0.0,"omega6":0.0},"gramsPerServing":128.3,"servings":1,"per100g":{"Energy_KCal":150.88,"Water":67.74,"Protein":0.29,"TotalLipidFat":0.06,"Carbohydrate":22.72,"FiberTotalDietary":0.62,"SugarsTotal":20.37,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.02,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":4.17,"Retinol":0.0,"Carotene_beta":16.55,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.05,"VitaminK_phylloquinone":0.33,"VitaminC_totalAscorbicAcid":20.86,"Thiamin":0.03,"Riboflavin":0.01,"Niacin":0.2,"PantothenicAcid":0.09,"VitaminB6":0.04,"Folate_total":9.03,"Folate_food":9.03,"Folate_DFE":9.03,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":2.67,"Betaine":0.07,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":9.45,"Iron_Fe":0.3,"Magnesium_Mg":6.16,"Phosphorus_P":6.97,"Potassium_K":62.58,"Sodium_Na":1.31,"Zinc_Zn":0.08,"Copper_Cu":0.05,"Manganese_Mn":0.32,"Selenium_Se":0.05,"Tryptophan":0.0,"Threonine":0.01,"Isoleucine":0.01,"Leucine":0.01,"Lysine":0.01,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.01,"Tyrosine":0.0,"Valine":0.01,"Arginine":0.01,"Histidine":0.0,"Alanine":0.02,"AsparticAcid":0.06,"GlutamicAcid":0.04,"Glycine":0.01,"Proline":0.01,"Serine":0.02,"omega3":0.0,"omega6":0.0,"AddedSugars":13.17,"IntrinsicSugars":7.2},"addedSugars":16.9,"intrinsicSugars":9.2,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14050","name":"Alcoholic beverage, distilled, rum, 80 proof","grams":27.8},{"ndb":"14711","name":"Alcoholic beverage, liqueur, peach, 40 proof","grams":14.8},{"ndb":"14753","name":"Beverage, syrup, honey, Monin, non-alcoholic","grams":20.0},{"ndb":"9160","name":"Lime juice, raw","grams":22.7},{"ndb":"9266","name":"Pineapple, raw, all varieties","grams":41.2},{"ndb":"2065","name":"Spearmint, fresh","grams":1.8}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":128.33,"raw_water_grams":86.93,"raw_fat_grams":0.08,"raw_protein_grams":0.38,"raw_carb_grams":29.16,"final_grams":128.33}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Missionary\'s Downfall', quantity: 'custom (g)', foodWord: 'MISSIONARYSDOWNFALL', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'rum', quantity: '1 oz', section: 'cocktail', ndbNo: '14050', portionDesc: 'g', portionGrams: 27.8 },
+      { name: 'peach liqueur', quantity: '½ oz', section: 'cocktail', ndbNo: '14711', portionDesc: 'g', portionGrams: 14.79 },
+      { name: 'honey syrup', quantity: '½ oz', section: 'cocktail', ndbNo: '14753', portionDesc: 'g', portionGrams: 20.0 },
+      { name: 'lime juice', quantity: '¾ oz', section: 'cocktail', ndbNo: '9160', portionDesc: 'g', portionGrams: 22.69 },
+      { name: 'pineapple', quantity: '¼ cup', section: 'cocktail', ndbNo: '9266', portionDesc: 'g', portionGrams: 41.25 },
+      { name: 'fresh mint', quantity: '6 leaves', section: 'cocktail', ndbNo: '2065', portionDesc: 'g', portionGrams: 1.8 }
+    ],
+    recipeInstructions: [
+      'Add pineapple chunks and mint leaves to a blender.',
+      'Add rum, peach liqueur, honey syrup, and lime juice.',
+      'Fill the blender with crushed ice and blend until smooth.',
+      'Pour into a chilled glass.',
+      'Suggestions (not included): Garnish with a fresh mint sprig and a pineapple wedge.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
