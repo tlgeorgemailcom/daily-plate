@@ -205,7 +205,7 @@ Alcohol Sangria, White
 - ✅ Trinidad Sour (BVRG_144)
 - ✅ Tuxedo (BVRG_145)
 - ✅ VE.N.TE (BVRG_146)
-Alcohol Vesper
+- ✅ Vesper (BVRG_147)
 Alcohol Vieux Carre
 Alcohol Vodka Tonic
 Alcohol Whiskey Sour
