@@ -57863,6 +57863,29 @@ export const FOODS: Food[] = [
         "gm": 41.7
       }
     ]
+  },
+  {
+    "word": "CHERRYHEERING",
+    "display": "Cherry Heering Liqueur",
+    "groups": [
+      "beverage"
+    ],
+    "ndb": "14809",
+    "desc": "Cherry Heering liqueur, 48 proof",
+    "cal": 309.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 44.0,
+    "fib": 0.0,
+    "h2o": 37.06,
+    "sug": 44.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.8
+      }
+    ]
   }
 ];
 
