@@ -24654,5 +24654,48 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_079',
+    name: 'Long Island Iced Tea',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 521,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'cocktail',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":228.7,"pro":0.1,"fat":0.1,"carb":17.6,"fib":0.1,"h2o":99.7,"sug":16.5,"perServing":{"cal":228.7,"pro":0.1,"fat":0.1,"carb":17.6,"fib":0.1,"h2o":99.7,"sug":16.5,"AddedSugars":8.8,"IntrinsicSugars":7.8},"micros":{"vitaminA":0.0,"vitaminC":6.19,"vitaminD":0.0,"vitaminE":0.02,"vitaminK":0.0,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.0,"niacin":0.01,"folate":3.2,"calcium":1.18,"iron":0.03,"magnesium":0.96,"phosphorus":4.23,"potassium":17.87,"sodium":1.01,"zinc":0.03,"copper":0.01,"selenium":0.04,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":140.6,"servings":1,"per100g":{"Energy_KCal":162.67,"Water":70.88,"Protein":0.06,"TotalLipidFat":0.09,"Carbohydrate":12.54,"FiberTotalDietary":0.05,"SugarsTotal":11.75,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.16,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.02,"VitaminK_phylloquinone":0.0,"VitaminC_totalAscorbicAcid":6.19,"Thiamin":0.0,"Riboflavin":0.0,"Niacin":0.01,"PantothenicAcid":0.02,"VitaminB6":0.01,"Folate_total":3.2,"Folate_food":3.2,"Folate_DFE":3.2,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":0.88,"Betaine":0.0,"LuteinZeaxanthin":2.4,"Lycopene":0.0,"Calcium_Ca":1.18,"Iron_Fe":0.03,"Magnesium_Mg":0.96,"Phosphorus_P":4.23,"Potassium_K":17.87,"Sodium_Na":1.01,"Zinc_Zn":0.03,"Copper_Cu":0.01,"Manganese_Mn":0.0,"Selenium_Se":0.04,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":6.22,"IntrinsicSugars":5.52},"addedSugars":8.8,"intrinsicSugars":7.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14051","name":"Alcoholic beverage, distilled, vodka, 80 proof","grams":13.9},{"ndb":"14050","name":"Alcoholic beverage, distilled, rum, 80 proof","grams":13.9},{"ndb":"14759","name":"Alcoholic beverage, gin, London dry, 80 proof","grams":13.5},{"ndb":"14700","name":"Alcoholic beverage, liqueur, triple sec, orange, 80 proof","grams":15.1},{"ndb":"14741","name":"Alcoholic beverage, distilled, tequila, blanco, 80 proof","grams":13.5},{"ndb":"9152","name":"Lemon juice, raw","grams":22.5},{"ndb":"14801","name":"Cocktail mixer, simple syrup, 1:1 sugar-water","grams":17.5},{"ndb":"14148","name":"Beverages, carbonated, cola, regular","grams":30.7}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":140.6,"raw_water_grams":99.66,"raw_fat_grams":0.13,"raw_protein_grams":0.08,"raw_carb_grams":17.63,"final_grams":140.6}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Long Island Iced Tea', quantity: 'custom (g)', foodWord: 'LONGISLANDEDTEA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Vodka', quantity: '½ oz', section: 'cocktail', ndbNo: '14051', portionDesc: 'g', portionGrams: 13.9 },
+      { name: 'rum', quantity: '½ oz', section: 'cocktail', ndbNo: '14050', portionDesc: 'g', portionGrams: 13.9 },
+      { name: 'dry gin', quantity: '½ oz', section: 'cocktail', ndbNo: '14759', portionDesc: 'g', portionGrams: 13.5 },
+      { name: 'triple sec', quantity: '½ oz', section: 'cocktail', ndbNo: '14700', portionDesc: 'g', portionGrams: 15.1 },
+      { name: 'tequila', quantity: '½ oz', section: 'cocktail', ndbNo: '14741', portionDesc: 'g', portionGrams: 13.5 },
+      { name: 'lemon juice', quantity: '¾ oz', section: 'cocktail', ndbNo: '9152', portionDesc: 'g', portionGrams: 22.5 },
+      { name: 'simple syrup', quantity: '½ oz', section: 'cocktail', ndbNo: '14801', portionDesc: 'g', portionGrams: 17.5 },
+      { name: 'cola', quantity: '1 oz', section: 'cocktail', ndbNo: '14148', portionDesc: 'g', portionGrams: 30.7 }
+    ],
+    recipeInstructions: [
+      'Combine the vodka, rum, gin, triple sec, tequila, lemon juice, and simple syrup in a cocktail shaker filled with ice.',
+      'Shake well for 15 seconds until chilled.',
+      'Strain into a tall glass filled with fresh ice.',
+      'Top with a splash of cola and stir gently.',
+      'Suggestions (not included): Garnish with a lemon wedge and a maraschino cherry.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
