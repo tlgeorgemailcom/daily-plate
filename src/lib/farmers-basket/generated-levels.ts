@@ -26362,5 +26362,41 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_123',
+    name: 'Screwdriver',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 565,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'ingredient',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":184.2,"pro":0.9,"fat":0.2,"carb":12.9,"fib":0.2,"h2o":146.5,"sug":10.4,"perServing":{"cal":184.2,"pro":0.9,"fat":0.2,"carb":12.9,"fib":0.2,"h2o":146.5,"sug":10.4,"AddedSugars":0.0,"IntrinsicSugars":10.4},"micros":{"vitaminA":6.9,"vitaminC":34.52,"vitaminD":0.0,"vitaminE":0.03,"vitaminK":0.07,"vitaminB6":0.03,"vitaminB12":0.0,"thiamin":0.06,"riboflavin":0.02,"niacin":0.28,"folate":20.71,"calcium":7.59,"iron":0.14,"magnesium":7.59,"phosphorus":13.29,"potassium":138.39,"sodium":1.0,"zinc":0.03,"copper":0.03,"selenium":0.07,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.02,"polyFat":0.03,"omega3":0.0,"omega6":0.0},"gramsPerServing":179.6,"servings":1,"per100g":{"Energy_KCal":102.58,"Water":81.58,"Protein":0.48,"TotalLipidFat":0.14,"Carbohydrate":7.18,"FiberTotalDietary":0.14,"SugarsTotal":5.8,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.02,"FattyAcids_totalPolyunsaturated":0.03,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":6.9,"Retinol":0.0,"Carotene_beta":22.78,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.03,"VitaminK_phylloquinone":0.07,"VitaminC_totalAscorbicAcid":34.52,"Thiamin":0.06,"Riboflavin":0.02,"Niacin":0.28,"PantothenicAcid":0.13,"VitaminB6":0.03,"Folate_total":20.71,"Folate_food":20.71,"Folate_DFE":20.71,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":4.28,"Betaine":0.0,"LuteinZeaxanthin":79.4,"Lycopene":0.0,"Calcium_Ca":7.59,"Iron_Fe":0.14,"Magnesium_Mg":7.59,"Phosphorus_P":13.29,"Potassium_K":138.39,"Sodium_Na":1.0,"Zinc_Zn":0.03,"Copper_Cu":0.03,"Manganese_Mn":0.01,"Selenium_Se":0.07,"Tryptophan":0.0,"Threonine":0.01,"Isoleucine":0.01,"Leucine":0.01,"Lysine":0.01,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.01,"Tyrosine":0.0,"Valine":0.01,"Arginine":0.03,"Histidine":0.0,"Alanine":0.01,"AsparticAcid":0.05,"GlutamicAcid":0.02,"Glycine":0.01,"Proline":0.03,"Serine":0.01,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":5.8},"addedSugars":0.0,"intrinsicSugars":10.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14051","name":"Alcoholic beverage, distilled, vodka, 80 proof","grams":55.6},{"ndb":"9206","name":"","grams":124.0}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":179.6,"raw_water_grams":146.52,"raw_fat_grams":0.25,"raw_protein_grams":0.87,"raw_carb_grams":12.9,"final_grams":179.6}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Screwdriver', quantity: 'custom (g)', foodWord: 'SCREWDRIVER', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Vodka', quantity: '2 oz', section: 'cocktail', ndbNo: '14051', portionDesc: 'g', portionGrams: 55.6 },
+      { name: 'orange juice', quantity: '4 oz', section: 'cocktail', ndbNo: '9206', portionDesc: 'g', portionGrams: 124.0 }
+    ],
+    recipeInstructions: [
+      'Fill a highball glass with ice.',
+      'Pour the vodka over the ice, then add the orange juice.',
+      'Stir gently to combine.',
+      'Suggestions (not included): Garnish with an orange slice or wedge.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
