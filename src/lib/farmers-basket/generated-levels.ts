@@ -25660,5 +25660,42 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_105',
+    name: 'Piña Colada',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 547,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":295.9,"pro":0.7,"fat":6.3,"carb":27.9,"fib":0.2,"h2o":99.9,"sug":25.6,"perServing":{"cal":295.9,"pro":0.7,"fat":6.3,"carb":27.9,"fib":0.2,"h2o":99.9,"sug":25.6,"AddedSugars":25.6,"IntrinsicSugars":0.0},"micros":{"vitaminA":0.0,"vitaminC":3.91,"vitaminD":0.0,"vitaminE":0.04,"vitaminK":0.14,"vitaminB6":0.04,"vitaminB12":0.0,"thiamin":0.03,"riboflavin":0.02,"niacin":0.08,"folate":10.49,"calcium":6.07,"iron":0.2,"magnesium":8.89,"phosphorus":10.38,"potassium":76.49,"sodium":10.05,"zinc":0.22,"copper":0.1,"selenium":1.4,"cholesterol":0.0,"saturatedFat":3.83,"monoFat":0.17,"polyFat":0.05,"omega3":0.0,"omega6":0.0},"gramsPerServing":153.6,"servings":1,"per100g":{"Energy_KCal":192.64,"Water":65.01,"Protein":0.43,"TotalLipidFat":4.08,"Carbohydrate":18.19,"FiberTotalDietary":0.13,"SugarsTotal":16.64,"Cholesterol":0.0,"FattyAcids_totalSaturated":3.83,"FattyAcids_totalMonounsaturated":0.17,"FattyAcids_totalPolyunsaturated":0.05,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":1.17,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.04,"VitaminK_phylloquinone":0.14,"VitaminC_totalAscorbicAcid":3.91,"Thiamin":0.03,"Riboflavin":0.02,"Niacin":0.08,"PantothenicAcid":0.06,"VitaminB6":0.04,"Folate_total":10.49,"Folate_food":10.49,"Folate_DFE":10.49,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":2.92,"Betaine":0.0,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":6.07,"Iron_Fe":0.2,"Magnesium_Mg":8.89,"Phosphorus_P":10.38,"Potassium_K":76.49,"Sodium_Na":10.05,"Zinc_Zn":0.22,"Copper_Cu":0.1,"Manganese_Mn":0.4,"Selenium_Se":1.4,"Tryptophan":0.0,"Threonine":0.01,"Isoleucine":0.01,"Leucine":0.02,"Lysine":0.01,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.01,"Tyrosine":0.01,"Valine":0.02,"Arginine":0.05,"Histidine":0.0,"Alanine":0.01,"AsparticAcid":0.03,"GlutamicAcid":0.06,"Glycine":0.01,"Proline":0.01,"Serine":0.01,"omega3":0.0,"omega6":0.0,"AddedSugars":16.64,"IntrinsicSugars":0.0},"addedSugars":25.6,"intrinsicSugars":0.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14050","name":"Alcoholic beverage, distilled, rum, 80 proof","grams":55.6},{"ndb":"12116","name":"Nuts, coconut cream, canned, sweetened","grams":38.0},{"ndb":"9273","name":"Pineapple juice, canned, unsweetened","grams":60.0}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":153.6,"raw_water_grams":99.86,"raw_fat_grams":6.27,"raw_protein_grams":0.66,"raw_carb_grams":27.94,"final_grams":153.6}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Piña Colada', quantity: 'custom (g)', foodWord: 'PINACOLADA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'rum', quantity: '2 oz', section: 'cocktail', ndbNo: '14050', portionDesc: 'g', portionGrams: 55.6 },
+      { name: 'coconut cream (canned, sweetened)', quantity: '2 tbsp (1 oz)', section: 'cocktail', ndbNo: '12116', portionDesc: 'g', portionGrams: 38.0 },
+      { name: 'pineapple juice', quantity: '2 oz', section: 'cocktail', ndbNo: '9273', portionDesc: 'g', portionGrams: 60.0 }
+    ],
+    recipeInstructions: [
+      'Combine the rum, coconut cream, and pineapple juice in a blender with 1 cup of crushed ice.',
+      'Blend on high until smooth and creamy.',
+      'Pour into a chilled hurricane or highball glass.',
+      'Suggestions (not included): Garnish with a pineapple wedge and a maraschino cherry.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
