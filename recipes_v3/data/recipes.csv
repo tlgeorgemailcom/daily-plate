@@ -572,3 +572,4 @@ BVRG_128,SIDECAR,Sidecar,cocktails,vegan,,,5,1 cocktail (makes 1),1,Rule D,raw,1
 BVRG_129,SINGAPORESLING,Singapore Sling,cocktails,vegan,,,5,1 cocktail (makes 1),1,Rule D,raw,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,,
 BVRG_130,SOUTHSIDE,South Side,cocktails,vegan,,,5,1 cocktail (makes 1),1,Rule D,raw,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,,
 BVRG_131,SPICYFIFTY,Spicy Fifty,cocktails,vegan,,,5,1 cocktail (makes 1),1,Rule D,raw,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,,
+BVRG_132,SPIKEDEGGNOG,Spiked Eggnog,cocktails,veggie,dish,,5,1 cocktail (makes 3),3,Rule D,raw,1.0,1.0,1.0,1.0,1.0,approved,,,,PASS,Rule D — composite: @BVRG_019 (924.55g) + dark_rum 6oz (166.8g); 1091.35g total; 3 servings x 363.8g,

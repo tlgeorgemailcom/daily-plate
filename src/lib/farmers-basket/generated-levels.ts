@@ -26717,5 +26717,43 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_132',
+    name: 'Spiked Eggnog',
+    category: 'cocktails',
+    dietaryCategory: 'veggie',
+    levelNum: 574,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 3)',
+    prepTime: '5',
+    linkType: 'dish',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":402.5,"pro":14.0,"fat":12.8,"carb":24.9,"fib":0.0,"h2o":290.9,"sug":25.3,"perServing":{"cal":402.5,"pro":14.0,"fat":12.8,"carb":24.9,"fib":0.0,"h2o":290.9,"sug":25.3,"AddedSugars":12.6,"IntrinsicSugars":12.7},"micros":{"vitaminA":47.56,"vitaminC":0.0,"vitaminD":45.48,"vitaminE":0.18,"vitaminK":0.23,"vitaminB6":0.03,"vitaminB12":0.36,"thiamin":0.02,"riboflavin":0.14,"niacin":0.04,"folate":6.4,"calcium":71.11,"iron":0.21,"magnesium":6.79,"phosphorus":71.14,"potassium":86.66,"sodium":41.17,"zinc":0.36,"copper":0.02,"selenium":6.39,"cholesterol":57.84,"saturatedFat":1.69,"monoFat":1.05,"polyFat":0.33,"omega3":0.01,"omega6":0.19},"gramsPerServing":363.8,"servings":3,"per100g":{"Energy_KCal":110.65,"Water":79.96,"Protein":3.85,"TotalLipidFat":3.51,"Carbohydrate":6.85,"FiberTotalDietary":0.01,"SugarsTotal":6.95,"Cholesterol":57.84,"FattyAcids_totalSaturated":1.69,"FattyAcids_totalMonounsaturated":1.05,"FattyAcids_totalPolyunsaturated":0.33,"LinoleicAcid":0.19,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":47.56,"Retinol":46.96,"Carotene_beta":4.24,"VitaminD":45.48,"VitaminE_alphaTocopherol":0.18,"VitaminK_phylloquinone":0.23,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.02,"Riboflavin":0.14,"Niacin":0.04,"PantothenicAcid":0.32,"VitaminB6":0.03,"Folate_total":6.4,"Folate_food":6.4,"Folate_DFE":6.4,"FolicAcid":0.0,"VitaminB12":0.36,"Choline_total":42.48,"Betaine":0.44,"LuteinZeaxanthin":51.85,"Lycopene":0.0,"Calcium_Ca":71.11,"Iron_Fe":0.21,"Magnesium_Mg":6.79,"Phosphorus_P":71.14,"Potassium_K":86.66,"Sodium_Na":41.17,"Zinc_Zn":0.36,"Copper_Cu":0.02,"Manganese_Mn":0.01,"Selenium_Se":6.39,"Tryptophan":0.05,"Threonine":0.16,"Isoleucine":0.2,"Leucine":0.34,"Lysine":0.3,"Methionine":0.1,"Cystine":0.04,"Phenylalanine":0.2,"Tyrosine":0.17,"Valine":0.25,"Arginine":0.17,"Histidine":0.1,"Alanine":0.17,"AsparticAcid":0.36,"GlutamicAcid":0.7,"Glycine":0.1,"Proline":0.28,"Serine":0.26,"omega3":0.01,"omega6":0.19,"AddedSugars":3.46,"IntrinsicSugars":3.49},"addedSugars":12.6,"intrinsicSugars":12.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Eggnog","grams":308.2},{"ndb":"14748","name":"Alcoholic beverage, distilled, rum, dark, aged, 80 proof","grams":55.6}],"sections":[{"section_key":"eggnog","section_label":"Eggnog","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":924.55,"raw_water_grams":761.55,"raw_fat_grams":38.28,"raw_protein_grams":41.97,"raw_carb_grams":74.8,"final_grams":924.55},{"section_key":"rum","section_label":"Dark Rum","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":166.8,"raw_water_grams":111.09,"raw_fat_grams":0.0,"raw_protein_grams":0.0,"raw_carb_grams":0.0,"final_grams":166.8}],"cookingMethod":"multi"},
+    recipeIngredients: [
+      { name: 'Spiked Eggnog', quantity: 'custom (g)', foodWord: 'SPIKEDEGGNOG', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Eggnog recipe', quantity: '1 recipe Eggnog (3 cups, 924.55g)', section: 'eggnog', foodWord: 'EGGNOG', ndbNo: '1057', portionDesc: 'g', portionGrams: 924.55, isDish: true, componentRef: 'BVRG_019' },
+      { name: 'dark rum', quantity: '6 oz', section: 'rum', ndbNo: '14748', portionDesc: 'g', portionGrams: 166.8 }
+    ],
+    recipeInstructions: [
+      'Make the Eggnog recipe (see the Eggnog recipe).',
+      'Pour the prepared eggnog into a large pitcher.',
+      'Add the dark rum and stir gently to combine.',
+      'Serve chilled, divided among 3 glasses.',
+      'Suggestions (not included): Garnish each glass with a sprinkle of freshly grated nutmeg and a dollop of whipped cream.'
+    ],
+    sections: [
+      { key: 'eggnog', label: 'Eggnog', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'rum', label: 'Dark Rum', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
