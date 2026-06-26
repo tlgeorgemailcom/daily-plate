@@ -24466,5 +24466,44 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_074',
+    name: 'Jungle Bird',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 516,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'cocktail',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":205.1,"pro":0.3,"fat":0.1,"carb":19.9,"fib":0.2,"h2o":110.8,"sug":17.0,"perServing":{"cal":205.1,"pro":0.3,"fat":0.1,"carb":19.9,"fib":0.2,"h2o":110.8,"sug":17.0,"AddedSugars":13.2,"IntrinsicSugars":3.8},"micros":{"vitaminA":0.3,"vitaminC":7.52,"vitaminD":0.0,"vitaminE":0.04,"vitaminK":0.18,"vitaminB6":0.03,"vitaminB12":0.0,"thiamin":0.02,"riboflavin":0.01,"niacin":0.08,"folate":6.92,"calcium":6.02,"iron":0.11,"magnesium":4.81,"phosphorus":4.51,"potassium":56.71,"sodium":0.9,"zinc":0.05,"copper":0.02,"selenium":0.05,"cholesterol":0.0,"saturatedFat":0.0,"monoFat":0.0,"polyFat":0.02,"omega3":0.0,"omega6":0.0},"gramsPerServing":149.6,"servings":1,"per100g":{"Energy_KCal":137.14,"Water":74.06,"Protein":0.17,"TotalLipidFat":0.05,"Carbohydrate":13.27,"FiberTotalDietary":0.12,"SugarsTotal":11.39,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.0,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.02,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.3,"Retinol":0.0,"Carotene_beta":5.42,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.04,"VitaminK_phylloquinone":0.18,"VitaminC_totalAscorbicAcid":7.52,"Thiamin":0.02,"Riboflavin":0.01,"Niacin":0.08,"PantothenicAcid":0.03,"VitaminB6":0.03,"Folate_total":6.92,"Folate_food":6.92,"Folate_DFE":6.92,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":1.76,"Betaine":0.03,"LuteinZeaxanthin":0.0,"Lycopene":0.0,"Calcium_Ca":6.02,"Iron_Fe":0.11,"Magnesium_Mg":4.81,"Phosphorus_P":4.51,"Potassium_K":56.71,"Sodium_Na":0.9,"Zinc_Zn":0.05,"Copper_Cu":0.02,"Manganese_Mn":0.15,"Selenium_Se":0.05,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.02,"GlutamicAcid":0.01,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":8.85,"IntrinsicSugars":2.54},"addedSugars":13.2,"intrinsicSugars":3.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14748","name":"Alcoholic beverage, distilled, rum, dark, aged, 80 proof","grams":41.7},{"ndb":"14703","name":"Alcoholic beverage, campari bitters, 48 proof","grams":22.9},{"ndb":"9273","name":"Pineapple juice, canned, unsweetened","grams":45.0},{"ndb":"9160","name":"Lime juice, raw","grams":22.5},{"ndb":"14801","name":"Cocktail mixer, simple syrup, 1:1 sugar-water","grams":17.5}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":149.57,"raw_water_grams":110.78,"raw_fat_grams":0.07,"raw_protein_grams":0.26,"raw_carb_grams":19.86,"final_grams":149.57}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Jungle Bird', quantity: 'custom (g)', foodWord: 'JUNGLEBIRD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'dark rum', quantity: '1½ oz', section: 'cocktail', ndbNo: '14748', portionDesc: 'g', portionGrams: 41.7 },
+      { name: 'Campari', quantity: '¾ oz', section: 'cocktail', ndbNo: '14703', portionDesc: 'g', portionGrams: 22.875 },
+      { name: 'pineapple juice', quantity: '1½ oz', section: 'cocktail', ndbNo: '9273', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'lime juice', quantity: '¾ oz', section: 'cocktail', ndbNo: '9160', portionDesc: 'g', portionGrams: 22.5 },
+      { name: 'simple syrup', quantity: '½ oz', section: 'cocktail', ndbNo: '14801', portionDesc: 'g', portionGrams: 17.5 }
+    ],
+    recipeInstructions: [
+      'Combine dark rum, Campari, pineapple juice, lime juice, and simple syrup in a cocktail shaker with ice.',
+      'Shake vigorously until well chilled, about 15 seconds.',
+      'Strain into a rocks glass over a large ice cube.',
+      'Suggestions (not included): Garnish with a pineapple wedge or pineapple leaf.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
