@@ -25697,5 +25697,43 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_106',
+    name: 'Pimm\'s Cup',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 548,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail (makes 1)',
+    prepTime: '5',
+    linkType: 'builtin',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":166.1,"pro":0.2,"fat":0.1,"carb":20.6,"fib":0.2,"h2o":182.5,"sug":19.8,"perServing":{"cal":166.1,"pro":0.2,"fat":0.1,"carb":20.6,"fib":0.2,"h2o":182.5,"sug":19.8,"AddedSugars":0.0,"IntrinsicSugars":19.8},"micros":{"vitaminA":0.33,"vitaminC":2.96,"vitaminD":0.0,"vitaminE":0.01,"vitaminK":0.6,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.0,"niacin":0.01,"folate":2.56,"calcium":1.59,"iron":0.02,"magnesium":1.42,"phosphorus":2.31,"potassium":18.54,"sodium":0.24,"zinc":0.02,"copper":0.01,"selenium":0.02,"cholesterol":0.0,"saturatedFat":0.0,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":215.4,"servings":1,"per100g":{"Energy_KCal":77.13,"Water":84.73,"Protein":0.07,"TotalLipidFat":0.03,"Carbohydrate":9.56,"FiberTotalDietary":0.08,"SugarsTotal":9.19,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.0,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.33,"Retinol":0.0,"Carotene_beta":2.66,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.01,"VitaminK_phylloquinone":0.6,"VitaminC_totalAscorbicAcid":2.96,"Thiamin":0.0,"Riboflavin":0.0,"Niacin":0.01,"PantothenicAcid":0.03,"VitaminB6":0.01,"Folate_total":2.56,"Folate_food":2.56,"Folate_DFE":2.56,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":0.83,"Betaine":0.01,"LuteinZeaxanthin":2.38,"Lycopene":0.0,"Calcium_Ca":1.59,"Iron_Fe":0.02,"Magnesium_Mg":1.42,"Phosphorus_P":2.31,"Potassium_K":18.54,"Sodium_Na":0.24,"Zinc_Zn":0.02,"Copper_Cu":0.01,"Manganese_Mn":0.01,"Selenium_Se":0.02,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.02,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":9.19},"addedSugars":0.0,"intrinsicSugars":19.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14731","name":"Alcoholic beverage, liqueur, pimm's no. 1, 50 proof","grams":59.2},{"ndb":"14734","name":"Beverages, carbonated, ginger beer, non-alcoholic","grams":123.2},{"ndb":"9152","name":"Lemon juice, raw","grams":15.0},{"ndb":"11206","name":"Cucumber, peeled, raw","grams":18.0}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":215.4,"raw_water_grams":182.5,"raw_fat_grams":0.06,"raw_protein_grams":0.16,"raw_carb_grams":20.6,"final_grams":215.4}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Pimm\'s Cup', quantity: 'custom (g)', foodWord: 'PIMMSCUP', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Pimm\'s No. 1', quantity: '2 oz', section: 'cocktail', ndbNo: '14731', portionDesc: 'g', portionGrams: 59.2 },
+      { name: 'ginger beer', quantity: '4 oz', section: 'cocktail', ndbNo: '14734', portionDesc: 'g', portionGrams: 123.2 },
+      { name: 'lemon juice', quantity: '½ oz', section: 'cocktail', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'cucumber peeled', quantity: '2 slices', section: 'cocktail', ndbNo: '11206', portionDesc: 'g', portionGrams: 18.0 }
+    ],
+    recipeInstructions: [
+      'Fill a highball glass or jug with ice.',
+      'Pour in the Pimm\'s No. 1 and lemon juice.',
+      'Top with ginger beer and stir gently.',
+      'Suggestions (not included): Garnish with cucumber slices, a strawberry, a sprig of mint, and an orange wheel.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
