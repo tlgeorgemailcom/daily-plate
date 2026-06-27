@@ -5743,9 +5743,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'remoulade', label: 'Remoulade sauce:', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'shrimp', label: 'Fried shrimp:', cookingMethod: '', yieldFactorWater: 0.85 },
-      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'remoulade', label: 'Remoulade sauce', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'shrimp', label: 'Fried shrimp', cookingMethod: '', yieldFactorWater: 0.85 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -5800,9 +5800,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'remoulade', label: 'Remoulade sauce:', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'oyster', label: 'Fried oysters:', cookingMethod: '', yieldFactorWater: 0.85 },
-      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'remoulade', label: 'Remoulade sauce', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'oyster', label: 'Fried oysters', cookingMethod: '', yieldFactorWater: 0.85 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -5956,8 +5956,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'chicken', label: 'Breaded chicken:', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'chicken', label: 'Breaded chicken', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6001,8 +6001,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'filling', label: 'Beef filling:', cookingMethod: '', yieldFactorWater: 0.82 },
-      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'filling', label: 'Beef filling', cookingMethod: '', yieldFactorWater: 0.82 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6054,8 +6054,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'pork', label: 'Pork:', cookingMethod: '', yieldFactorWater: 0.8 },
-      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'pork', label: 'Pork', cookingMethod: '', yieldFactorWater: 0.8 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6099,7 +6099,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6140,8 +6140,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'eggs', label: 'Eggs:', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'eggs', label: 'Eggs', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6181,8 +6181,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'eggs', label: 'Eggs:', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'eggs', label: 'Eggs', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6222,9 +6222,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'sausage', label: 'Sausage:', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'eggs', label: 'Eggs:', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'sausage', label: 'Sausage', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'eggs', label: 'Eggs', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6264,9 +6264,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'ham', label: 'Ham:', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'eggs', label: 'Eggs:', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'ham', label: 'Ham', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'eggs', label: 'Eggs', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6305,7 +6305,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6362,8 +6362,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'falafel', label: 'Falafel:', cookingMethod: '', yieldFactorWater: 0.8 },
-      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'falafel', label: 'Falafel', cookingMethod: '', yieldFactorWater: 0.8 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6414,9 +6414,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'lamb', label: 'Lamb:', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'tzatziki', label: 'Tzatziki:', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'lamb', label: 'Lamb', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'tzatziki', label: 'Tzatziki', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6458,8 +6458,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'coleslaw', label: 'Coleslaw:', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'coleslaw', label: 'Coleslaw', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -6501,8 +6501,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'patty', label: 'Patty:', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'patty', label: 'Patty', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6546,8 +6546,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'patty', label: 'Patty:', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'patty', label: 'Patty', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6592,8 +6592,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'patty', label: 'Patty:', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'patty', label: 'Patty', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6637,8 +6637,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'patty', label: 'Patties:', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'patty', label: 'Patties', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6686,9 +6686,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'mushrooms', label: 'Mushrooms:', cookingMethod: '', yieldFactorWater: 0.9 },
-      { key: 'patty', label: 'Patty:', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'mushrooms', label: 'Mushrooms', cookingMethod: '', yieldFactorWater: 0.9 },
+      { key: 'patty', label: 'Patty', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6731,8 +6731,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'patty', label: 'Patty:', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'patty', label: 'Patty', cookingMethod: '', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6821,8 +6821,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'patty', label: 'Patty:', cookingMethod: '', yieldFactorWater: 0.85 },
-      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'patty', label: 'Patty', cookingMethod: '', yieldFactorWater: 0.85 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6903,8 +6903,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'frank', label: 'Frank:', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'frank', label: 'Frank', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6943,8 +6943,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'frank', label: 'Frank:', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'frank', label: 'Frank', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6989,7 +6989,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with mustard or ketchup for dipping.'
     ],
     sections: [
-      { key: 'corn_dog', label: 'Corn Dog:', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'corn_dog', label: 'Corn Dog', cookingMethod: '', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -7030,8 +7030,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'coleslaw', label: 'Coleslaw:', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Assembly:', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'coleslaw', label: 'Coleslaw', cookingMethod: '', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -7080,7 +7080,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'sauce', label: 'Sauce:', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -7384,7 +7384,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
+      { key: 'stock', label: 'Stock', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
     ],
   },
   {
@@ -7435,7 +7435,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
+      { key: 'stock', label: 'Stock', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
     ],
   },
   {
@@ -7485,7 +7485,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
+      { key: 'stock', label: 'Stock', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
     ],
   },
   {
@@ -7535,7 +7535,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
+      { key: 'stock', label: 'Stock', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
     ],
   },
   {
@@ -7586,7 +7586,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
+      { key: 'stock', label: 'Stock', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
     ],
   },
   {
@@ -7638,7 +7638,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.9, yieldFactorOther: 0.02 }
+      { key: 'stock', label: 'Stock', cookingMethod: '', yieldFactorWater: 0.9, yieldFactorOther: 0.02 }
     ],
   },
   {
@@ -7690,7 +7690,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'stock', label: 'Stock:', cookingMethod: '', yieldFactorWater: 0.82, yieldFactorFat: 0.95, yieldFactorOther: 0.02 }
+      { key: 'stock', label: 'Stock', cookingMethod: '', yieldFactorWater: 0.82, yieldFactorFat: 0.95, yieldFactorOther: 0.02 }
     ],
   },
   {
@@ -7736,7 +7736,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve immediately over pasta.'
     ],
     sections: [
-      { key: 'sauce', label: 'Sauce:', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -7781,7 +7781,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'sauce', label: 'Sauce:', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -7824,7 +7824,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'sauce', label: 'Sauce:', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -7871,7 +7871,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'sauce', label: 'Sauce:', cookingMethod: '', yieldFactorWater: 0.603 }
+      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.603 }
     ],
   },
   {
@@ -7921,7 +7921,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'sauce', label: 'Sauce:', cookingMethod: '', yieldFactorWater: 0.63 }
+      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.63 }
     ],
   },
   {
