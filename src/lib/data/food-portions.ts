@@ -19446,7 +19446,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "EGGYOLK",
-    "display": "Egg Yolk",
+    "display": "egg yolk",
     "groups": [
       "protein"
     ],
@@ -49854,7 +49854,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "YOLK",
-    "display": "Yolk",
+    "display": "egg yolk",
     "groups": [
       "protein"
     ],

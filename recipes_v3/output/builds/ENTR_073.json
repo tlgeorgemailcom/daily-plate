@@ -73,7 +73,7 @@
       "grams": 150.0,
       "section": "filling",
       "ingredient_group": "filling",
-      "qty_display": "1 medium, finely diced",
+      "qty_display": "1 medium onion, finely diced",
       "contribution": {
         "Energy_KCal": 60.0,
         "Protein": 1.65,
@@ -94,7 +94,7 @@
       "grams": 122.0,
       "section": "filling",
       "ingredient_group": "filling",
-      "qty_display": "2 medium, peeled and finely diced",
+      "qty_display": "2 medium carrots, peeled and finely diced",
       "contribution": {
         "Energy_KCal": 50.02,
         "Protein": 1.135,
@@ -115,7 +115,7 @@
       "grams": 75.0,
       "section": "filling",
       "ingredient_group": "filling",
-      "qty_display": "3 stalks, finely diced",
+      "qty_display": "3 celery stalks, finely diced",
       "contribution": {
         "Energy_KCal": 12.0,
         "Protein": 0.517,
@@ -136,7 +136,7 @@
       "grams": 12.0,
       "section": "filling",
       "ingredient_group": "filling",
-      "qty_display": "4 cloves, minced",
+      "qty_display": "4 cloves garlic, minced",
       "contribution": {
         "Energy_KCal": 17.88,
         "Protein": 0.763,
@@ -241,7 +241,7 @@
       "grams": 2.4,
       "section": "filling",
       "ingredient_group": "filling",
-      "qty_display": "1 tsp, leaves stripped",
+      "qty_display": "1 tsp fresh thyme leaves, stripped",
       "contribution": {
         "Energy_KCal": 2.424,
         "Protein": 0.133,
@@ -262,7 +262,7 @@
       "grams": 1.7,
       "section": "filling",
       "ingredient_group": "filling",
-      "qty_display": "1 tsp, finely chopped",
+      "qty_display": "1 tsp fresh rosemary, finely chopped",
       "contribution": {
         "Energy_KCal": 2.227,
         "Protein": 0.056,
@@ -346,7 +346,7 @@
       "grams": 907.2,
       "section": "topping",
       "ingredient_group": "topping",
-      "qty_display": "2 lb, peeled and cut into 2-inch chunks",
+      "qty_display": "2 lb russet potatoes, peeled and cut into 2-inch chunks",
       "contribution": {
         "Energy_KCal": 716.688,
         "Protein": 19.414,
@@ -409,7 +409,7 @@
       "grams": 17.0,
       "section": "topping",
       "ingredient_group": "topping",
-      "qty_display": "1 yolk",
+      "qty_display": "1 egg yolk",
       "contribution": {
         "Energy_KCal": 54.74,
         "Protein": 2.696,

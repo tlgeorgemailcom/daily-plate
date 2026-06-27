@@ -142,7 +142,7 @@ export const LEVELS: Level[] = [
       { name: 'sugar', quantity: '5 tablespoons', section: 'filling', ndbNo: '19335', portionDesc: 'g', portionGrams: 62.5 },
       { name: 'cornstarch', quantity: '4 tablespoons', section: 'filling', ndbNo: '20027', portionDesc: 'g', portionGrams: 32.0 },
       { name: 'salt', quantity: '1/4 teaspoon', section: 'filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
-      { name: 'egg yolks (lightly beaten)', quantity: '2 large yolks', section: 'filling', ndbNo: '1125', portionDesc: 'g', portionGrams: 35.0 },
+      { name: 'egg yolks (lightly beaten)', quantity: '2 large egg yolks', section: 'filling', ndbNo: '1125', portionDesc: 'g', portionGrams: 35.0 },
       { name: 'butter (cut into pieces)', quantity: '1 1/4 tablespoons', section: 'filling', ndbNo: '1145', portionDesc: 'g', portionGrams: 17.75 },
       { name: 'vanilla extract', quantity: '1 teaspoon', section: 'filling', ndbNo: '2050', portionDesc: 'g', portionGrams: 4.2 },
       { name: 'bananas (sliced ~1/4 inch thick) a little more than 1/3 medium banana', quantity: '50 grams (sliced)', section: 'assembly', ndbNo: '9040', portionDesc: 'g', portionGrams: 50.0 },
@@ -313,7 +313,7 @@ export const LEVELS: Level[] = [
       { name: 'ice water', quantity: '3 tablespoon ice water', section: 'crust', ndbNo: '14411', portionDesc: 'g', portionGrams: 44.4375 },
       { name: 'sugar', quantity: '1 cup', section: 'filling', ndbNo: '19335', portionDesc: 'g', portionGrams: 200.0 },
       { name: 'finely grated zest', quantity: '1 tablespoon', section: 'filling', ndbNo: '9156', portionDesc: 'g', portionGrams: 6.0 },
-      { name: 'egg yolks (reserve whites)', quantity: '5 large yolks', section: 'filling', ndbNo: '1125', portionDesc: 'g', portionGrams: 85.0 },
+      { name: 'egg yolks (reserve whites)', quantity: '5 large egg yolks', section: 'filling', ndbNo: '1125', portionDesc: 'g', portionGrams: 85.0 },
       { name: 'salt', quantity: '1/2 teaspoon', section: 'filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'unsalted butter (cut into 1/2-inch pieces)', quantity: '7 tablespoons', section: 'filling', ndbNo: '1145', portionDesc: 'g', portionGrams: 99.4 },
       { name: 'lemon juice (fresh squeezed)', quantity: '2/3 cup', section: 'filling', ndbNo: '9152', portionDesc: 'g', portionGrams: 162.6667 },
@@ -616,7 +616,7 @@ export const LEVELS: Level[] = [
       { name: 'cornstarch', quantity: '1/4 cup', section: 'filling', ndbNo: '20027', portionDesc: 'g', portionGrams: 32.0 },
       { name: 'all-purpose enriched unbleached white flour', quantity: '6 1/2 tablespoons', section: 'filling', ndbNo: '20581', portionDesc: 'g', portionGrams: 50.7812 },
       { name: 'salt', quantity: '3/4 teaspoon', section: 'filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 4.5 },
-      { name: 'egg yolks (lightly beaten)', quantity: '4 large yolks', section: 'filling', ndbNo: '1125', portionDesc: 'g', portionGrams: 80.0 },
+      { name: 'egg yolks (lightly beaten)', quantity: '4 large egg yolks', section: 'filling', ndbNo: '1125', portionDesc: 'g', portionGrams: 80.0 },
       { name: 'butter (cut into pieces)', quantity: '1 tablespoon', section: 'filling', ndbNo: '1145', portionDesc: 'g', portionGrams: 14.2 },
       { name: 'pure vanilla extract', quantity: '2 teaspoons', section: 'filling', ndbNo: '2050', portionDesc: 'g', portionGrams: 8.4 },
       { name: 'heavy cream', quantity: '1/2 cup', section: 'topping', ndbNo: '1053', portionDesc: 'g', portionGrams: 119.0 },
@@ -679,7 +679,7 @@ export const LEVELS: Level[] = [
       { name: 'sugar', quantity: '1/3 cup', section: 'filling', ndbNo: '19335', portionDesc: 'g', portionGrams: 66.6667 },
       { name: 'cornstarch', quantity: '2 tablespoons', section: 'filling', ndbNo: '20027', portionDesc: 'g', portionGrams: 16.0 },
       { name: 'salt', quantity: '1/8 teaspoon', section: 'filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.75 },
-      { name: 'egg yolks (lightly beaten)', quantity: '3 large yolks', section: 'filling', ndbNo: '1125', portionDesc: 'g', portionGrams: 51.0 },
+      { name: 'egg yolks (lightly beaten)', quantity: '3 large egg yolks', section: 'filling', ndbNo: '1125', portionDesc: 'g', portionGrams: 51.0 },
       { name: 'butter (cut in pieces)', quantity: '1 tablespoon', section: 'filling', ndbNo: '1145', portionDesc: 'g', portionGrams: 14.2 },
       { name: 'vanilla extract', quantity: '1 teaspoon', section: 'filling', ndbNo: '2050', portionDesc: 'g', portionGrams: 4.2 },
       { name: 'heavy cream', quantity: '1/4 cup', section: 'glaze', ndbNo: '1053', portionDesc: 'g', portionGrams: 59.5 },
@@ -739,7 +739,7 @@ export const LEVELS: Level[] = [
       { name: 'cornstarch', quantity: '3 tablespoons', section: 'filling', ndbNo: '20027', portionDesc: 'g', portionGrams: 24.0 },
       { name: 'unsweetened cocoa powder', quantity: '2 tablespoons', section: 'filling', ndbNo: '19165', portionDesc: 'g', portionGrams: 10.8 },
       { name: 'salt', quantity: '1/8 teaspoon', section: 'filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.75 },
-      { name: 'egg yolks (lightly beaten)', quantity: '4 large yolks', section: 'filling', ndbNo: '1125', portionDesc: 'g', portionGrams: 68.0 },
+      { name: 'egg yolks (lightly beaten)', quantity: '4 large egg yolks', section: 'filling', ndbNo: '1125', portionDesc: 'g', portionGrams: 68.0 },
       { name: 'semisweet chocolate, chopped', quantity: '8 ounces', section: 'filling', ndbNo: '19080', portionDesc: 'g', portionGrams: 227.0 },
       { name: 'butter', quantity: '3 tablespoons', section: 'filling', ndbNo: '1145', portionDesc: 'g', portionGrams: 42.6 },
       { name: 'vanilla extract', quantity: '1 teaspoon', section: 'filling', ndbNo: '2050', portionDesc: 'g', portionGrams: 4.2 },
@@ -798,7 +798,7 @@ export const LEVELS: Level[] = [
       { name: 'sugar', quantity: '2/3 cup', section: 'filling', ndbNo: '19335', portionDesc: 'g', portionGrams: 133.3333 },
       { name: 'cornstarch', quantity: '4 tablespoons', section: 'filling', ndbNo: '20027', portionDesc: 'g', portionGrams: 32.0 },
       { name: 'salt', quantity: '1/2 teaspoon', section: 'filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
-      { name: 'egg yolks (lightly beaten)', quantity: '4 large yolks', section: 'filling', ndbNo: '1125', portionDesc: 'g', portionGrams: 68.0 },
+      { name: 'egg yolks (lightly beaten)', quantity: '4 large egg yolks', section: 'filling', ndbNo: '1125', portionDesc: 'g', portionGrams: 68.0 },
       { name: 'butter', quantity: '2 tablespoons', section: 'filling', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
       { name: 'vanilla extract', quantity: '1 teaspoon', section: 'filling', ndbNo: '2050', portionDesc: 'g', portionGrams: 4.2 },
       { name: 'sweetened flaked coconut', quantity: '1 cup', section: 'filling', ndbNo: '12109', portionDesc: 'g', portionGrams: 74.0 },
@@ -1029,7 +1029,7 @@ export const LEVELS: Level[] = [
       { name: 'whole milk', quantity: '2/3 cup', section: 'cake', ndbNo: '1077', portionDesc: 'g', portionGrams: 162.6667 },
       { name: 'pure vanilla extract', quantity: '1 1/4 teaspoons', section: 'cake', ndbNo: '2050', portionDesc: 'g', portionGrams: 5.25 },
       { name: 'large eggs, unbeaten', quantity: '2 large', section: 'cake', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
-      { name: 'extra yolk for richness', quantity: '1 large yolk', section: 'cake', ndbNo: '1125', portionDesc: 'g', portionGrams: 17.0 }
+      { name: 'extra yolk for richness', quantity: '1 large egg yolk', section: 'cake', ndbNo: '1125', portionDesc: 'g', portionGrams: 17.0 }
     ],
     recipeInstructions: [
       'Preheat the oven to 350 degrees F (175 degrees C). Grease two 9-inch round cake pans, then dust with flour or line the bottoms with parchment.',
@@ -1122,7 +1122,7 @@ export const LEVELS: Level[] = [
       { name: 'whole buttermilk', quantity: '1 cup', section: 'cake', ndbNo: '1230', portionDesc: 'g', portionGrams: 245.0 },
       { name: 'pure vanilla extract', quantity: '1 tablespoon', section: 'cake', ndbNo: '2050', portionDesc: 'g', portionGrams: 13.0 },
       { name: 'large eggs, unbeaten', quantity: '3 large', section: 'cake', ndbNo: '1123', portionDesc: 'g', portionGrams: 150.0 },
-      { name: 'large egg yolks', quantity: '2 large yolks', section: 'cake', ndbNo: '1125', portionDesc: 'g', portionGrams: 34.0 },
+      { name: 'large egg yolks', quantity: '2 large egg yolks', section: 'cake', ndbNo: '1125', portionDesc: 'g', portionGrams: 34.0 },
       { name: 'powdered sugar', quantity: '3 cups', section: 'frosting', ndbNo: '19336', portionDesc: 'g', portionGrams: 360.0 },
       { name: 'unsweetened cocoa powder', quantity: '2/3 cup', section: 'frosting', ndbNo: '19165', portionDesc: 'g', portionGrams: 57.3333 },
       { name: 'unsalted butter, melted', quantity: '1/2 cup', section: 'frosting', ndbNo: '1145', portionDesc: 'g', portionGrams: 113.5 },
@@ -1336,7 +1336,7 @@ export const LEVELS: Level[] = [
     nutritionJson: {"cal":166.0,"pro":4.1,"fat":2.4,"carb":32.0,"fib":0.2,"h2o":15.3,"sug":22.8,"perServing":{"cal":166.0,"pro":4.1,"fat":2.4,"carb":32.0,"fib":0.2,"h2o":15.3,"sug":22.8,"AddedSugars":22.4,"IntrinsicSugars":0.3},"micros":{"vitaminA":50.48,"vitaminC":0.6,"vitaminD":32.28,"vitaminE":0.35,"vitaminK":0.16,"vitaminB6":0.05,"vitaminB12":0.3,"thiamin":0.16,"riboflavin":0.29,"niacin":1.24,"folate":50.73,"calcium":26.26,"iron":2.01,"magnesium":7.83,"phosphorus":83.38,"potassium":115.84,"sodium":219.08,"zinc":0.51,"copper":0.05,"selenium":16.06,"cholesterol":169.14,"saturatedFat":1.52,"monoFat":1.75,"polyFat":0.59,"omega3":0.01,"omega6":0.0},"gramsPerServing":54.5,"servings":10,"per100g":{"Energy_KCal":304.5,"Water":28.12,"Protein":7.5,"TotalLipidFat":4.38,"Carbohydrate":58.73,"FiberTotalDietary":0.36,"SugarsTotal":41.72,"Cholesterol":169.14,"FattyAcids_totalSaturated":1.52,"FattyAcids_totalMonounsaturated":1.75,"FattyAcids_totalPolyunsaturated":0.59,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":50.48,"Retinol":49.16,"Carotene_beta":11.0,"VitaminD":32.28,"VitaminE_alphaTocopherol":0.35,"VitaminK_phylloquinone":0.16,"VitaminC_totalAscorbicAcid":0.6,"Thiamin":0.16,"Riboflavin":0.29,"Niacin":1.24,"PantothenicAcid":0.53,"VitaminB6":0.05,"Folate_total":50.73,"Folate_food":27.48,"Folate_DFE":66.79,"FolicAcid":28.85,"VitaminB12":0.3,"Choline_total":117.46,"Betaine":0.23,"LuteinZeaxanthin":120.11,"Lycopene":0.0,"Calcium_Ca":26.26,"Iron_Fe":2.01,"Magnesium_Mg":7.83,"Phosphorus_P":83.38,"Potassium_K":115.84,"Sodium_Na":219.08,"Zinc_Zn":0.51,"Copper_Cu":0.05,"Manganese_Mn":0.15,"Selenium_Se":16.06,"Tryptophan":0.09,"Threonine":0.29,"Isoleucine":0.4,"Leucine":0.64,"Lysine":0.49,"Methionine":0.2,"Cystine":0.14,"Phenylalanine":0.39,"Tyrosine":0.29,"Valine":0.46,"Arginine":0.43,"Histidine":0.19,"Alanine":0.39,"AsparticAcid":0.68,"GlutamicAcid":1.34,"Glycine":0.26,"Proline":0.42,"Serine":0.53,"omega3":0.01,"omega6":0.0,"AddedSugars":41.18,"IntrinsicSugars":0.53},"addedSugars":22.4,"intrinsicSugars":0.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"18134","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":0.55,"yieldFactorFat":1.0,"sources":[{"ndb":"1125","name":"Egg, yolk, raw, fresh","grams":8.5},{"ndb":"1124","name":"Egg, white, raw, fresh","grams":16.5},{"ndb":"19335","name":"Sugars, granulated","grams":22.5},{"ndb":"20084","name":"Wheat flour, white, cake, enriched","grams":11.4},{"ndb":"14411","name":"Water, tap, drinking","grams":5.9},{"ndb":"9152","name":"Lemon juice, raw","grams":1.5},{"ndb":"2050","name":"Vanilla extract","grams":0.4},{"ndb":"2047","name":"Salt, table","grams":0.2},{"ndb":"18373","name":"Leavening agents, cream of tartar","grams":0.1}],"sections":[{"section_key":"cake","section_label":"Cake","prep_method":"mixed","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.55,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":670.7,"raw_water_grams":278.75,"raw_fat_grams":23.86,"raw_protein_grams":40.87,"raw_carb_grams":320.21,"final_grams":545.26}],"cookingMethod":"baked"},
     recipeIngredients: [
       { name: 'Cake, sponge, prepared from recipe', quantity: 'custom (g)', foodWord: 'SPONGECAKE', ndbNo: '18134', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
-      { name: '5 large egg yolks', quantity: '5 large yolks', section: 'cake', ndbNo: '1125', portionDesc: 'g', portionGrams: 85.0 },
+      { name: '5 large egg yolks', quantity: '5 large egg yolks', section: 'cake', ndbNo: '1125', portionDesc: 'g', portionGrams: 85.0 },
       { name: '5 large egg whites', quantity: '5 large whites', section: 'cake', ndbNo: '1124', portionDesc: 'g', portionGrams: 165.0 },
       { name: 'granulated sugar', quantity: '1 cup + 2 tablespoons', section: 'cake', ndbNo: '19335', portionDesc: 'g', portionGrams: 225.0 },
       { name: 'sifted cake flour', quantity: '1 cup', section: 'cake', ndbNo: '20084', portionDesc: 'g', portionGrams: 114.0 },
@@ -1450,7 +1450,7 @@ export const LEVELS: Level[] = [
       { name: 'full-fat sour cream, room temperature', quantity: '1/2 cup', section: 'filling', ndbNo: '1056', portionDesc: 'g', portionGrams: 115.0 },
       { name: 'vanilla extract', quantity: '1 teaspoon', section: 'filling', ndbNo: '2050', portionDesc: 'g', portionGrams: 4.2 },
       { name: 'large egg (room temperature)', quantity: '4 large eggs', section: 'filling', ndbNo: '1123', portionDesc: 'g', portionGrams: 200.0 },
-      { name: 'egg yolks', quantity: '1 large yolk', section: 'filling', ndbNo: '1125', portionDesc: 'g', portionGrams: 17.0 },
+      { name: 'egg yolk', quantity: '1 large egg yolk', section: 'filling', ndbNo: '1125', portionDesc: 'g', portionGrams: 17.0 },
       { name: 'all-purpose flour', quantity: '2 tablespoons', section: 'filling', ndbNo: '20581', portionDesc: 'g', portionGrams: 15.625 },
       { name: 'freshly grated lemon zest', quantity: '1 teaspoon', section: 'filling', ndbNo: '9156', portionDesc: 'g', portionGrams: 2.0 }
     ],
@@ -1860,7 +1860,7 @@ export const LEVELS: Level[] = [
       { name: 'brown sugar', quantity: '¾ cup packed', ndbNo: '19334', portionDesc: 'g', portionGrams: 150.0 },
       { name: 'sugar', quantity: '½ cup', ndbNo: '19335', portionDesc: 'g', portionGrams: 100.0 },
       { name: 'large egg', quantity: '1 large', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
-      { name: 'egg yolks', quantity: '1 egg yolk', ndbNo: '1125', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'egg yolk', quantity: '1 egg yolk', ndbNo: '1125', portionDesc: 'g', portionGrams: 18.0 },
       { name: 'vanilla extract', quantity: '2 teaspoons', ndbNo: '2050', portionDesc: 'g', portionGrams: 8.4 },
       { name: 'chocolate chips semi-sweet', quantity: '2 cups', ndbNo: '19080', portionDesc: 'g', portionGrams: 340.0 }
     ],
@@ -2641,7 +2641,7 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Hollandaise Sauce', quantity: 'custom (g)', foodWord: 'HOLLANDAISESAUCE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'salted butter', quantity: '7 tablespoons', section: 'sauce', ndbNo: '1001', portionDesc: 'g', portionGrams: 102.0 },
-      { name: 'egg yolks', quantity: '3 large yolks', section: 'sauce', ndbNo: '1125', portionDesc: 'g', portionGrams: 51.0 },
+      { name: 'egg yolks', quantity: '3 large egg yolks', section: 'sauce', ndbNo: '1125', portionDesc: 'g', portionGrams: 51.0 },
       { name: 'fresh lemon juice', quantity: '1 tablespoon + 1 teaspoon', section: 'sauce', ndbNo: '9152', portionDesc: 'g', portionGrams: 17.0 }
     ],
     recipeInstructions: [
@@ -7317,7 +7317,7 @@ export const LEVELS: Level[] = [
       { name: 'white wine', quantity: '3 tbsp', section: 'reduction', ndbNo: '14106', portionDesc: 'g', portionGrams: 45.0 },
       { name: 'dried tarragon', quantity: '1½ tsp dried (or stems for small bunch of fresh tarragon)', section: 'reduction', ndbNo: '2041', portionDesc: 'g', portionGrams: 2.25 },
       { name: 'ground black pepper', quantity: '¼ tsp', section: 'reduction', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.75 },
-      { name: 'egg yolks', quantity: '3 large yolks', section: 'emulsion', ndbNo: '1125', portionDesc: 'g', portionGrams: 54.0 },
+      { name: 'egg yolk', quantity: '3 large egg yolks', section: 'emulsion', ndbNo: '1125', portionDesc: 'g', portionGrams: 54.0 },
       { name: 'unsalted butter', quantity: '~2¾ sticks raw (yields ~1 cup clarified; see step 1)', section: 'emulsion', ndbNo: '1145', portionDesc: 'g', portionGrams: 227.0 },
       { name: 'salt', quantity: '½ tsp', section: 'emulsion', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'fresh chives', quantity: '1 tbsp, chopped', section: 'emulsion', ndbNo: '11156', portionDesc: 'g', portionGrams: 3.0 },
@@ -7762,7 +7762,7 @@ export const LEVELS: Level[] = [
     nutritionJson: {"cal":113.4,"pro":0.3,"fat":12.6,"carb":0.1,"fib":0.0,"h2o":1.8,"sug":0.0,"perServing":{"cal":113.4,"pro":0.3,"fat":12.6,"carb":0.1,"fib":0.0,"h2o":1.8,"sug":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.0},"micros":{"vitaminA":47.88,"vitaminC":2.2,"vitaminD":27.4,"vitaminE":23.54,"vitaminK":0.09,"vitaminB6":0.05,"vitaminB12":0.25,"thiamin":0.02,"riboflavin":0.07,"niacin":0.01,"folate":19.49,"calcium":17.11,"iron":0.37,"magnesium":1.08,"phosphorus":49.66,"potassium":19.67,"sodium":435.86,"zinc":0.29,"copper":0.01,"selenium":7.05,"cholesterol":136.35,"saturatedFat":8.94,"monoFat":14.45,"polyFat":56.85,"omega3":0.01,"omega6":0.0},"gramsPerServing":15.0,"servings":18,"per100g":{"Energy_KCal":754.33,"Water":11.79,"Protein":2.02,"TotalLipidFat":83.93,"Carbohydrate":0.92,"FiberTotalDietary":0.05,"SugarsTotal":0.21,"Cholesterol":136.35,"FattyAcids_totalSaturated":8.94,"FattyAcids_totalMonounsaturated":14.45,"FattyAcids_totalPolyunsaturated":56.85,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":47.88,"Retinol":46.62,"Carotene_beta":11.12,"VitaminD":27.4,"VitaminE_alphaTocopherol":23.54,"VitaminK_phylloquinone":0.09,"VitaminC_totalAscorbicAcid":2.2,"Thiamin":0.02,"Riboflavin":0.07,"Niacin":0.01,"PantothenicAcid":0.38,"VitaminB6":0.05,"Folate_total":19.49,"Folate_food":19.49,"Folate_DFE":19.49,"FolicAcid":0.0,"VitaminB12":0.25,"Choline_total":103.36,"Betaine":0.11,"LuteinZeaxanthin":138.33,"Lycopene":0.0,"Calcium_Ca":17.11,"Iron_Fe":0.37,"Magnesium_Mg":1.08,"Phosphorus_P":49.66,"Potassium_K":19.67,"Sodium_Na":435.86,"Zinc_Zn":0.29,"Copper_Cu":0.01,"Manganese_Mn":0.01,"Selenium_Se":7.05,"Tryptophan":0.02,"Threonine":0.09,"Isoleucine":0.11,"Leucine":0.17,"Lysine":0.15,"Methionine":0.05,"Cystine":0.03,"Phenylalanine":0.09,"Tyrosine":0.08,"Valine":0.12,"Arginine":0.14,"Histidine":0.05,"Alanine":0.1,"AsparticAcid":0.19,"GlutamicAcid":0.25,"Glycine":0.06,"Proline":0.08,"Serine":0.17,"omega3":0.01,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.21},"addedSugars":0.0,"intrinsicSugars":0.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"1125","name":"Egg, yolk, raw, fresh","grams":1.9},{"ndb":"9152","name":"Lemon juice, raw","grams":0.8},{"ndb":"4517","name":"Oil, grapeseed","grams":12.1},{"ndb":"2047","name":"Salt, table","grams":0.2},{"ndb":"2032","name":"Spices, pepper, white","grams":0.0}],"sections":[{"section_key":"sauce","section_label":"Sauce:","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":270.55,"raw_water_grams":31.9,"raw_fat_grams":227.07,"raw_protein_grams":5.48,"raw_carb_grams":2.48,"final_grams":270.55}],"cookingMethod":"raw"},
     recipeIngredients: [
       { name: 'Mayonnaise', quantity: 'custom (g)', foodWord: 'MAYONNAISE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
-      { name: 'egg yolks', quantity: '2 large', section: 'sauce', ndbNo: '1125', portionDesc: 'g', portionGrams: 34.0 },
+      { name: 'egg yolk', quantity: '2 large egg yolks', section: 'sauce', ndbNo: '1125', portionDesc: 'g', portionGrams: 34.0 },
       { name: 'lemon juice', quantity: '1 tbsp', section: 'sauce', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.25 },
       { name: 'grapeseed oil', quantity: '1 cup', section: 'sauce', ndbNo: '4517', portionDesc: 'g', portionGrams: 218.0 },
       { name: 'salt', quantity: '½ tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
@@ -9705,7 +9705,7 @@ export const LEVELS: Level[] = [
     nutritionJson: {"cal":168.6,"pro":2.4,"fat":17.4,"carb":1.1,"fib":0.1,"h2o":9.1,"sug":0.3,"perServing":{"cal":168.6,"pro":2.4,"fat":17.4,"carb":1.1,"fib":0.1,"h2o":9.1,"sug":0.3,"AddedSugars":0.0,"IntrinsicSugars":0.3},"micros":{"vitaminA":54.86,"vitaminC":6.65,"vitaminD":23.2,"vitaminE":7.74,"vitaminK":31.86,"vitaminB6":0.1,"vitaminB12":0.34,"thiamin":0.04,"riboflavin":0.11,"niacin":1.26,"folate":18.41,"calcium":174.39,"iron":1.2,"magnesium":17.05,"phosphorus":144.29,"potassium":110.11,"sodium":702.0,"zinc":0.77,"copper":0.05,"selenium":14.14,"cholesterol":98.04,"saturatedFat":9.77,"monoFat":39.09,"polyFat":5.99,"omega3":0.12,"omega6":0.0},"gramsPerServing":30.8,"servings":7,"per100g":{"Energy_KCal":546.67,"Water":29.46,"Protein":7.61,"TotalLipidFat":56.58,"Carbohydrate":3.62,"FiberTotalDietary":0.34,"SugarsTotal":0.87,"Cholesterol":98.04,"FattyAcids_totalSaturated":9.77,"FattyAcids_totalMonounsaturated":39.09,"FattyAcids_totalPolyunsaturated":5.99,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.04,"DPA_22_5n3":0.0,"DHA_22_6n3":0.08,"VitaminA_RAE":54.86,"Retinol":53.18,"Carotene_beta":16.92,"VitaminD":23.2,"VitaminE_alphaTocopherol":7.74,"VitaminK_phylloquinone":31.86,"VitaminC_totalAscorbicAcid":6.65,"Thiamin":0.04,"Riboflavin":0.11,"Niacin":1.26,"PantothenicAcid":0.39,"VitaminB6":0.1,"Folate_total":18.41,"Folate_food":18.41,"Folate_DFE":18.41,"FolicAcid":0.0,"VitaminB12":0.34,"Choline_total":74.5,"Betaine":0.17,"LuteinZeaxanthin":98.93,"Lycopene":0.05,"Calcium_Ca":174.39,"Iron_Fe":1.2,"Magnesium_Mg":17.05,"Phosphorus_P":144.29,"Potassium_K":110.11,"Sodium_Na":702.0,"Zinc_Zn":0.77,"Copper_Cu":0.05,"Manganese_Mn":0.13,"Selenium_Se":14.14,"Tryptophan":0.09,"Threonine":0.29,"Isoleucine":0.38,"Leucine":0.68,"Lysine":0.66,"Methionine":0.2,"Cystine":0.08,"Phenylalanine":0.36,"Tyrosine":0.35,"Valine":0.47,"Arginine":0.38,"Histidine":0.25,"Alanine":0.3,"AsparticAcid":0.6,"GlutamicAcid":1.44,"Glycine":0.22,"Proline":0.64,"Serine":0.42,"omega3":0.12,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.87},"addedSugars":0.0,"intrinsicSugars":0.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"1125","name":"Egg, yolk, raw, fresh","grams":2.4},{"ndb":"9152","name":"Lemon juice, raw","grams":4.3},{"ndb":"11215","name":"Garlic, raw","grams":0.9},{"ndb":"6971","name":"Sauce, worcestershire","grams":0.7},{"ndb":"15002","name":"Fish, anchovy, european, canned in oil, drained solids","grams":1.7},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":15.5},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":3.6},{"ndb":"2047","name":"Salt, table","grams":0.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"","name":"Dijon-Style Mustard","grams":1.4}],"sections":[{"section_key":"dressing","section_label":"Dressing","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":205.88,"raw_water_grams":57.43,"raw_fat_grams":121.06,"raw_protein_grams":15.65,"raw_carb_grams":6.81,"final_grams":205.88},{"section_key":"mustard","section_label":"Dijon-Style Mustard","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":10.0,"raw_water_grams":6.17,"raw_fat_grams":1.09,"raw_protein_grams":0.79,"raw_carb_grams":1.0,"final_grams":10.0}],"cookingMethod":"multi"},
     recipeIngredients: [
       { name: 'Caesar Salad Dressing', quantity: 'custom (g)', foodWord: 'CAESARDRESSING', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
-      { name: 'egg yolks', quantity: '1 large yolk', section: 'dressing', ndbNo: '1125', portionDesc: 'g', portionGrams: 17.0 },
+      { name: 'egg yolk', quantity: '1 large egg yolk', section: 'dressing', ndbNo: '1125', portionDesc: 'g', portionGrams: 17.0 },
       { name: 'lemon juice', quantity: '2 tbsp', section: 'dressing', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'garlic', quantity: '2 cloves', section: 'dressing', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'Worcestershire sauce', quantity: '1 tsp', section: 'dressing', ndbNo: '6971', portionDesc: 'g', portionGrams: 5.0 },
@@ -14783,7 +14783,7 @@ export const LEVELS: Level[] = [
       { name: 'russet potato', quantity: '2 lb russet potatoes, peeled and cut into 2-inch chunks', section: 'topping', ndbNo: '11353', portionDesc: 'g', portionGrams: 907.2 },
       { name: 'unsalted butter', quantity: '4 tbsp', section: 'topping', ndbNo: '1145', portionDesc: 'g', portionGrams: 56.8 },
       { name: 'whole milk', quantity: '1/2 cup', section: 'topping', ndbNo: '1077', portionDesc: 'g', portionGrams: 122.0 },
-      { name: 'egg yolk', quantity: '1', section: 'topping', ndbNo: '1125', portionDesc: 'g', portionGrams: 17.0 },
+      { name: 'egg yolk', quantity: '1 egg yolk', section: 'topping', ndbNo: '1125', portionDesc: 'g', portionGrams: 17.0 },
       { name: 'salt', quantity: '1/2 tsp', section: 'topping', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'ground black pepper', quantity: '1/4 tsp', section: 'topping', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
     ],
@@ -21492,7 +21492,7 @@ export const LEVELS: Level[] = [
       { name: 'water', quantity: '4 cups', section: 'pasta', ndbNo: '14411', portionDesc: 'g', portionGrams: 946.0 },
       { name: 'bacon', quantity: '4 oz, diced', section: 'carbonara', ndbNo: '10862', portionDesc: 'g', portionGrams: 113.4 },
       { name: 'large egg', quantity: '2 large eggs', section: 'carbonara', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
-      { name: 'egg yolks', quantity: '2 yolks', section: 'carbonara', ndbNo: '1125', portionDesc: 'g', portionGrams: 34.0 },
+      { name: 'egg yolk', quantity: '2 egg yolks', section: 'carbonara', ndbNo: '1125', portionDesc: 'g', portionGrams: 34.0 },
       { name: 'Parmesan cheese', quantity: '½ cup finely grated (Pecorino Romano proxy)', section: 'carbonara', ndbNo: '1033', portionDesc: 'g', portionGrams: 50.0 },
       { name: 'ground black pepper', quantity: '½ tsp, coarsely ground', section: 'carbonara', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
     ],
@@ -25918,7 +25918,7 @@ export const LEVELS: Level[] = [
       { name: 'Porto Flip', quantity: 'custom (g)', foodWord: 'PORTOFLIP', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'port wine', quantity: '1½ oz', section: 'cocktail', ndbNo: '14057', portionDesc: 'g', portionGrams: 45.75 },
       { name: 'cognac', quantity: '½ oz', section: 'cocktail', ndbNo: '14743', portionDesc: 'g', portionGrams: 13.9 },
-      { name: 'egg yolks', quantity: '1 large yolk', section: 'cocktail', ndbNo: '1125', portionDesc: 'g', portionGrams: 17.0 }
+      { name: 'egg yolk', quantity: '1 large egg yolk', section: 'cocktail', ndbNo: '1125', portionDesc: 'g', portionGrams: 17.0 }
     ],
     recipeInstructions: [
       'Combine port wine, cognac, and egg yolk in a cocktail shaker with ice.',
