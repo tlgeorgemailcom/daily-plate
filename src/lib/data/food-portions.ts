@@ -56784,7 +56784,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "RHUMAGRICOLE",
-    "display": "Rhum Agricole Blanc",
+    "display": "rhum agricole blanc",
     "groups": [
       "bar"
     ],

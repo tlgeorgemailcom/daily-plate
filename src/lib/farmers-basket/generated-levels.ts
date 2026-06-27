@@ -27165,7 +27165,7 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Three Dots and a Dash', quantity: 'custom (g)', foodWord: 'THREEDOTSANDADASH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'dark rum', quantity: '1 1/2 oz', section: 'cocktail', ndbNo: '14748', portionDesc: 'g', portionGrams: 41.7 },
-      { name: 'Rhum Agricole Blanc', quantity: '1/2 oz', section: 'cocktail', ndbNo: '14769', portionDesc: 'g', portionGrams: 13.5 },
+      { name: 'rhum agricole blanc', quantity: '1/2 oz', section: 'cocktail', ndbNo: '14769', portionDesc: 'g', portionGrams: 13.5 },
       { name: 'lime juice', quantity: '3/4 oz', section: 'cocktail', ndbNo: '9160', portionDesc: 'g', portionGrams: 22.5 },
       { name: 'lemon juice', quantity: '1/4 oz', section: 'cocktail', ndbNo: '9152', portionDesc: 'g', portionGrams: 7.5 },
       { name: 'falernum', quantity: '1/2 oz', section: 'cocktail', ndbNo: '14710', portionDesc: 'g', portionGrams: 16.6 },
