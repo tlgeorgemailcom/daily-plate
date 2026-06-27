@@ -543,7 +543,7 @@ BKFST_012,1,ground_pork_raw,3/4 lb,340.19,339,342,sausage,sausage,false,raw grou
 BKFST_012,2,sage_ground,scant 1 1/4 tsp dried,0.79,0.7,0.9,sausage,sausage,false,ground sage,
 BKFST_012,3,salt_table,3/4 teaspoon,4.5,4.4,4.6,sausage,sausage,false,table salt,
 BKFST_012,4,black_pepper_ground,3/4 teaspoon,1.73,1.6,1.8,sausage,sausage,false,ground black pepper,
-BKFST_012,5,oregano_dried_ground,scant 1/2 tsp dried,0.68,0.6,0.8,sausage,sausage,false,dried oregano,
+BKFST_012,5,oregano_dried_ground,scant 1/2 tsp,0.68,0.6,0.8,sausage,sausage,false,,
 BKFST_012,6,garlic_powder,scant 1/2 teaspoon,1.16,1.0,1.3,sausage,sausage,false,garlic powder,
 BKFST_012,7,onion_powder,scant 1/2 teaspoon,0.9,0.8,1.0,sausage,sausage,false,onion powder,
 BKFST_012,8,paprika_ground,scant 1/4 teaspoon,0.44,0.4,0.5,sausage,sausage,false,paprika,

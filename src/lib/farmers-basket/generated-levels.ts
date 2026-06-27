@@ -2466,7 +2466,7 @@ export const LEVELS: Level[] = [
       { name: 'ground sage', quantity: 'scant 1 1/4 tsp dried', section: 'sausage', ndbNo: '2038', portionDesc: 'g', portionGrams: 0.79 },
       { name: 'table salt', quantity: '3/4 teaspoon', section: 'sausage', ndbNo: '2047', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'ground black pepper', quantity: '3/4 teaspoon', section: 'sausage', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.73 },
-      { name: 'dried oregano', quantity: 'scant 1/2 tsp dried', section: 'sausage', ndbNo: '2027', portionDesc: 'g', portionGrams: 0.68 },
+      { name: 'dried oregano', quantity: 'scant 1/2 tsp', section: 'sausage', ndbNo: '2027', portionDesc: 'g', portionGrams: 0.68 },
       { name: 'garlic powder', quantity: 'scant 1/2 teaspoon', section: 'sausage', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.16 },
       { name: 'onion powder', quantity: 'scant 1/2 teaspoon', section: 'sausage', ndbNo: '2026', portionDesc: 'g', portionGrams: 0.9 },
       { name: 'paprika', quantity: 'scant 1/4 teaspoon', section: 'sausage', ndbNo: '2028', portionDesc: 'g', portionGrams: 0.44 },
