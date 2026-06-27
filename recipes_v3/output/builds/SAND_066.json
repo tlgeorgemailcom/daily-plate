@@ -94,7 +94,7 @@
       "grams": 4.6,
       "section": "corn_dog",
       "ingredient_group": "corn_dog",
-      "qty_display": "1 tsp (4.6g)",
+      "qty_display": "1 tsp",
       "contribution": {
         "Energy_KCal": 2.346,
         "Protein": 0.005,
@@ -115,7 +115,7 @@
       "grams": 12.6,
       "section": "corn_dog",
       "ingredient_group": "corn_dog",
-      "qty_display": "1 tbsp (12.6g)",
+      "qty_display": "1 tbsp",
       "contribution": {
         "Energy_KCal": 48.762,
         "Protein": 0.0,
@@ -136,7 +136,7 @@
       "grams": 3.0,
       "section": "corn_dog",
       "ingredient_group": "corn_dog",
-      "qty_display": "\u00bd tsp (3g)",
+      "qty_display": "\u00bd tsp",
       "contribution": {
         "Energy_KCal": 0.0,
         "Protein": 0.0,
@@ -199,7 +199,7 @@
       "grams": 27.0,
       "section": "corn_dog",
       "ingredient_group": "corn_dog",
-      "qty_display": "6 tsp absorbed (27g)",
+      "qty_display": "6 tsp absorbed",
       "contribution": {
         "Energy_KCal": 238.68,
         "Protein": 0.0,
@@ -360,7 +360,7 @@
   "sections": [
     {
       "section_key": "corn_dog",
-      "section_label": "Corn Dog:",
+      "section_label": "Corn Dog",
       "prep_method": "raw",
       "cook_method": "fried",
       "cooking_method": "fried",
