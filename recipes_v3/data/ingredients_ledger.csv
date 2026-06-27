@@ -334,7 +334,7 @@ turmeric_ground,2043,TURMERIC,"Spices, turmeric, ground",ground turmeric,tsp,3.0
 vanilla_extract,2050,VANILLA,Vanilla extract,vanilla extract,teaspoon,4.2,Pure vanilla extract; 1 tsp ~4.2g
 vegetable_oil,4513,VEGETABLEOIL,"Vegetable oil, palm kernel",vegetable oil,tablespoon,13.6,Auto-added 2026-06-17 from Turso+food-portions backfill
 vegetable_shortening,4031,SHORTENING,"Shortening, household, soybean (partially hydrogenated)-cottonseed (partially hydrogenated)",vegetable shortening,tablespoon,12.8,Crisco-equivalent solid vegetable shortening; pure fat 0% water for flakier pie crust
-vinegar_distilled,2053,VINEGARDISTILLED,"Vinegar, distilled",rice wine vinegar (distilled vinegar),tbsp,14.9,Auto-added 2026-06-17 from Turso+food-portions backfill
+vinegar_distilled,2053,VINEGARDISTILLED,"Vinegar, distilled",rice wine vinegar (distilled vinegar proxy),tbsp,14.9,Auto-added 2026-06-17 from Turso+food-portions backfill
 vinegar_red_wine,2068,VINEGARREDWINE,"Vinegar, red wine",red wine vinegar,tbsp,14.9,Auto-added 2026-06-17 from Turso+food-portions backfill
 walnuts_raw,12155,WALNUTRAW,"Nuts, walnuts, english",walnuts,oz,28.35,Auto-added 2026-06-17 from Turso+food-portions backfill
 water,14411,WATER,"Water, tap, drinking",water,cup,237.0,Tap water; nutritionally inert (0 kcal)
