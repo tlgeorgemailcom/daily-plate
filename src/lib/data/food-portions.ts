@@ -56553,7 +56553,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "GRAPPA",
-    "display": "Grappa",
+    "display": "grappa",
     "groups": [
       "bar"
     ],
@@ -56990,7 +56990,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CHAMOMILECORDIAL",
-    "display": "Chamomile Cordial",
+    "display": "chamomile cordial",
     "groups": [
       "bar"
     ],
