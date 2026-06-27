@@ -20483,7 +20483,7 @@ export const LEVELS: Level[] = [
       { name: 'tomato', quantity: '1 small tomato, diced', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 61.25 },
       { name: 'onion', quantity: '2 thin slices red onion', section: 'assembly', ndbNo: '11282', portionDesc: 'g', portionGrams: 18.0 },
       { name: 'feta cheese crumbles', quantity: '2 oz feta cheese crumbles', section: 'assembly', ndbNo: '1019', portionDesc: 'g', portionGrams: 56.7 },
-      { name: 'black olives canned', quantity: '10 black olives', section: 'assembly', ndbNo: '9193', portionDesc: 'g', portionGrams: 44.0 },
+      { name: 'black olives', quantity: '10 black olives', section: 'assembly', ndbNo: '9193', portionDesc: 'g', portionGrams: 44.0 },
       { name: 'lemon juice', quantity: '1 tbsp', section: 'assembly', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
       { name: 'olive oil', quantity: '1 tbsp', section: 'assembly', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
       { name: 'dried oregano', quantity: 'pinch dried oregano', section: 'assembly', ndbNo: '2027', portionDesc: 'g', portionGrams: 0.9 }
