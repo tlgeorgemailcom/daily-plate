@@ -31,7 +31,7 @@
       "grams": 14.2,
       "section": "mushrooms",
       "ingredient_group": "mushrooms",
-      "qty_display": "1 tbsp (14.2g)",
+      "qty_display": "1 tbsp",
       "contribution": {
         "Energy_KCal": 101.814,
         "Protein": 0.121,
@@ -73,7 +73,7 @@
       "grams": 85.0,
       "section": "mushrooms",
       "ingredient_group": "mushrooms",
-      "qty_display": "3 oz sliced (85g)",
+      "qty_display": "3 oz sliced",
       "contribution": {
         "Energy_KCal": 18.7,
         "Protein": 2.125,
@@ -115,7 +115,7 @@
       "grams": 1.5,
       "section": "mushrooms",
       "ingredient_group": "mushrooms",
-      "qty_display": "\u00bc tsp (1.5g)",
+      "qty_display": "\u00bc tsp",
       "contribution": {
         "Energy_KCal": 0.0,
         "Protein": 0.0,
@@ -136,7 +136,7 @@
       "grams": 0.3,
       "section": "mushrooms",
       "ingredient_group": "mushrooms",
-      "qty_display": "\u215b tsp (0.3g)",
+      "qty_display": "\u215b tsp",
       "contribution": {
         "Energy_KCal": 0.753,
         "Protein": 0.031,
@@ -157,7 +157,7 @@
       "grams": 113.0,
       "section": "patty",
       "ingredient_group": "patty",
-      "qty_display": "4 oz raw (113g)",
+      "qty_display": "4 oz raw",
       "contribution": {
         "Energy_KCal": 287.02,
         "Protein": 19.402,
@@ -178,7 +178,7 @@
       "grams": 1.5,
       "section": "patty",
       "ingredient_group": "patty",
-      "qty_display": "\u00bc tsp (1.5g)",
+      "qty_display": "\u00bc tsp",
       "contribution": {
         "Energy_KCal": 0.0,
         "Protein": 0.0,
@@ -199,7 +199,7 @@
       "grams": 0.3,
       "section": "patty",
       "ingredient_group": "patty",
-      "qty_display": "\u215b tsp (0.3g)",
+      "qty_display": "\u215b tsp",
       "contribution": {
         "Energy_KCal": 0.753,
         "Protein": 0.031,
@@ -402,7 +402,7 @@
   "sections": [
     {
       "section_key": "mushrooms",
-      "section_label": "Mushrooms:",
+      "section_label": "Mushrooms",
       "prep_method": "raw",
       "cook_method": "pan grilled",
       "cooking_method": "pan grilled",
@@ -422,7 +422,7 @@
     },
     {
       "section_key": "patty",
-      "section_label": "Patty:",
+      "section_label": "Patty",
       "prep_method": "raw",
       "cook_method": "pan grilled",
       "cooking_method": "pan grilled",
@@ -442,7 +442,7 @@
     },
     {
       "section_key": "assembly",
-      "section_label": "Assembly:",
+      "section_label": "Assembly",
       "prep_method": "raw",
       "cook_method": "raw",
       "cooking_method": "raw",
