@@ -22759,7 +22759,7 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Bellini', quantity: 'custom (g)', foodWord: 'BELLINI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'Prosecco', quantity: '3½ oz', section: 'cocktail', ndbNo: '14795', portionDesc: 'g', portionGrams: 100.0 },
-      { name: 'White Peach Puree', quantity: '1¾ oz', section: 'cocktail', ndbNo: '14776', portionDesc: 'g', portionGrams: 51.0 }
+      { name: 'white peach purée', quantity: '1¾ oz', section: 'cocktail', ndbNo: '14776', portionDesc: 'g', portionGrams: 51.0 }
     ],
     recipeInstructions: [
       'Chill a Champagne flute in the freezer for at least 10 minutes.',
