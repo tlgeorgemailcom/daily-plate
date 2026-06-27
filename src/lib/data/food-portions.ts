@@ -56289,7 +56289,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "WHITERUM",
-    "display": "White Rum",
+    "display": "white rum",
     "groups": [
       "bar"
     ],
