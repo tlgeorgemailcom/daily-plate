@@ -199,7 +199,7 @@
       "grams": 7.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "1\u00bd tsp (7g)",
+      "qty_display": "1\u00bd tsp red wine vinegar",
       "contribution": {
         "Energy_KCal": 1.33,
         "Protein": 0.003,
@@ -423,7 +423,7 @@
   "sections": [
     {
       "section_key": "assembly",
-      "section_label": "Assembly:",
+      "section_label": "Assembly",
       "prep_method": "raw",
       "cook_method": "raw",
       "cooking_method": "raw",

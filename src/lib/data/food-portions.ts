@@ -48433,7 +48433,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "VINEGARREDWINE",
-    "display": "Red Wine Vinegar",
+    "display": "red wine vinegar",
     "groups": [
       "spice"
     ],
