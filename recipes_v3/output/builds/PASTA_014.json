@@ -73,7 +73,7 @@
       "grams": 113.4,
       "section": "carbonara",
       "ingredient_group": "carbonara",
-      "qty_display": "4 oz, diced",
+      "qty_display": "4 oz bacon diced",
       "contribution": {
         "Energy_KCal": 530.712,
         "Protein": 38.465,
@@ -136,7 +136,7 @@
       "grams": 50.0,
       "section": "carbonara",
       "ingredient_group": "carbonara",
-      "qty_display": "\u00bd cup finely grated (Pecorino Romano proxy)",
+      "qty_display": "\u00bd cup Parmesan cheese finely grated (Pecorino Romano proxy)",
       "contribution": {
         "Energy_KCal": 196.0,
         "Protein": 17.875,
@@ -157,7 +157,7 @@
       "grams": 1.15,
       "section": "carbonara",
       "ingredient_group": "carbonara",
-      "qty_display": "\u00bd tsp, coarsely ground",
+      "qty_display": "\u00bd tsp coarsely ground black pepper",
       "contribution": {
         "Energy_KCal": 2.886,
         "Protein": 0.119,
