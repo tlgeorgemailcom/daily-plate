@@ -209,7 +209,7 @@ Alcohol Sangria, White
 - ✅ Vieux Carré (BVRG_148)
 - ✅ Vodka Tonic (BVRG_149)
 - ✅ Whiskey Sour (BVRG_150)
-Alcohol White Russian
+- ✅ White Russian (BVRG_151)
 
 
 

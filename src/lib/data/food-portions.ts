@@ -57909,6 +57909,32 @@ export const FOODS: Food[] = [
         "gm": 30.5
       }
     ]
+  },
+  {
+    "word": "SLOEGIN",
+    "display": "Sloe Gin",
+    "groups": [],
+    "ndb": "14812",
+    "desc": "Alcoholic beverage, liqueur, sloe gin, 52 proof",
+    "cal": 254.0,
+    "pro": 0.0,
+    "fat": 0.0,
+    "carb": 28.4,
+    "fib": 0.0,
+    "h2o": 51.5,
+    "sug": 28.4,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "fl oz",
+        "gm": 30.2
+      },
+      {
+        "amt": 1.0,
+        "desc": "tbsp",
+        "gm": 15.1
+      }
+    ]
   }
 ];
 
