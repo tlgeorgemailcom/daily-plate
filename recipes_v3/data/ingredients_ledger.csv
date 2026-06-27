@@ -69,7 +69,7 @@ carrot_raw,11124,CARROT,"Carrots, raw",carrot,medium,61.0,
 cashews_raw,12087,CASHEWSRAW,"Nuts, cashew nuts, raw",cashews,oz,28.35,Auto-added 2026-06-17 from Turso+food-portions backfill
 cayenne_pepper,2031,CAYENNE,"Spices, pepper, red or cayenne",cayenne pepper,tsp,1.8,Auto-added 2026-06-17 from Turso+food-portions backfill
 celery_raw,11143,CELERY,"Celery, raw",celery stalk,stalk,40.0,
-celery_seed,2007,CELERYSEED,"Spices, celery seed",Celery seed,tsp,2.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+celery_seed,2007,CELERYSEED,"Spices, celery seed",celery seed,tsp,2.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 cheese_american,1253,AMERICANFAT,"Cheese, pasteurized process, American, without added vitamin D",American cheese,oz,28.35,
 cheese_blue,1004,BLUECHEESE,"Cheese, blue",blue cheese crumbles,oz,28.35,Auto-added 2026-06-17 from Turso+food-portions backfill
 cheese_brie,1006,BRIECHEESE,"Cheese, brie",Brie cheese (Reblochon substitute — not in SR Legacy),oz,28.35,Auto-added 2026-06-17 from Turso+food-portions backfill
@@ -177,7 +177,7 @@ hoisin_sauce,6175,HOISINSAUCE,"Sauce, hoisin, ready-to-serve",hoisin sauce,tbsp,
 honey,19296,HONEY,Honey,honey,cup,339.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 horseradish_prepared,2055,HORSERADISH,"Horseradish, prepared",prepared horseradish,tsp,5.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 hot_sauce,6169,HOTSAUCE,"Sauce, ready-to-serve, pepper, TABASCO",hot sauce,tablespoon,15.0,
-hot_sauce_tabasco,6169,HOTSAUCE,"Sauce, ready-to-serve, pepper, TABASCO",Hot sauce (Tabasco),tsp,4.7,
+hot_sauce_tabasco,6169,HOTSAUCE,"Sauce, ready-to-serve, pepper, TABASCO",hot sauce (Tabasco),tsp,4.7,
 jalapeno_raw,11979,JALAPENO,"Peppers, jalapeno, raw",jalapeño,pepper,14.0,
 jam_preserves,19297,JAM,Jams and preserves,jelly or jam,tablespoon,20.0,
 ketchup,11935,CATSUP,Catsup,ketchup,tablespoon,17.0,

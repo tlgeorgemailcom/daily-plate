@@ -10279,7 +10279,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CELERYSEED",
-    "display": "Celery Seed",
+    "display": "celery seed",
     "groups": [
       "nuts"
     ],
@@ -51079,7 +51079,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "HOTSAUCE",
-    "display": "Hot Sauce",
+    "display": "hot sauce",
     "groups": [
       "condiment"
     ],

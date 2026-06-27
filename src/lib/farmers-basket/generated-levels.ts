@@ -5718,7 +5718,7 @@ export const LEVELS: Level[] = [
       { name: 'yellow mustard', quantity: '1½ tsp', section: 'remoulade', ndbNo: '2046', portionDesc: 'g', portionGrams: 8.0 },
       { name: 'sweet pickle relish', quantity: '1 tbsp (15g)', section: 'remoulade', ndbNo: '11945', portionDesc: 'g', portionGrams: 15.0 },
       { name: 'lemon juice', quantity: '1 tsp', section: 'remoulade', ndbNo: '9152', portionDesc: 'g', portionGrams: 5.0 },
-      { name: 'Hot sauce (Tabasco)', quantity: '½ tsp', section: 'remoulade', ndbNo: '6169', portionDesc: 'g', portionGrams: 2.35 },
+      { name: 'hot sauce (Tabasco)', quantity: '½ tsp', section: 'remoulade', ndbNo: '6169', portionDesc: 'g', portionGrams: 2.35 },
       { name: 'paprika', quantity: '¼ tsp', section: 'remoulade', ndbNo: '2028', portionDesc: 'g', portionGrams: 1.0 },
       { name: 'garlic powder', quantity: '⅛ tsp', section: 'remoulade', ndbNo: '2020', portionDesc: 'g', portionGrams: 0.5 },
       { name: 'shrimp', quantity: '~13 medium (41/50), 4.8 oz (136g)', section: 'shrimp', ndbNo: '15270', portionDesc: 'g', portionGrams: 136.0 },
@@ -5775,7 +5775,7 @@ export const LEVELS: Level[] = [
       { name: 'yellow mustard', quantity: '1½ tsp', section: 'remoulade', ndbNo: '2046', portionDesc: 'g', portionGrams: 8.0 },
       { name: 'sweet pickle relish', quantity: '1 tbsp (15g)', section: 'remoulade', ndbNo: '11945', portionDesc: 'g', portionGrams: 15.0 },
       { name: 'lemon juice', quantity: '1 tsp', section: 'remoulade', ndbNo: '9152', portionDesc: 'g', portionGrams: 5.0 },
-      { name: 'Hot sauce (Tabasco)', quantity: '½ tsp', section: 'remoulade', ndbNo: '6169', portionDesc: 'g', portionGrams: 2.35 },
+      { name: 'hot sauce (Tabasco)', quantity: '½ tsp', section: 'remoulade', ndbNo: '6169', portionDesc: 'g', portionGrams: 2.35 },
       { name: 'paprika', quantity: '¼ tsp', section: 'remoulade', ndbNo: '2028', portionDesc: 'g', portionGrams: 1.0 },
       { name: 'garlic powder', quantity: '⅛ tsp', section: 'remoulade', ndbNo: '2020', portionDesc: 'g', portionGrams: 0.5 },
       { name: 'oysters', quantity: '10 medium oysters (125g)', section: 'oyster', ndbNo: '15167', portionDesc: 'g', portionGrams: 125.0 },
@@ -6894,7 +6894,7 @@ export const LEVELS: Level[] = [
       { name: 'tomato', quantity: '2 Roma wedges (31g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 31.0 },
       { name: 'dill pickle', quantity: '1 small spear (35g)', section: 'assembly', ndbNo: '11937', portionDesc: 'g', portionGrams: 35.0 },
       { name: 'Pickled hot peppers', quantity: '2 peppers (12g)', section: 'assembly', ndbNo: '31034', portionDesc: 'g', portionGrams: 12.0 },
-      { name: 'Celery seed', quantity: '⅛ tsp (0.25g)', section: 'assembly', ndbNo: '2007', portionDesc: 'g', portionGrams: 0.25 },
+      { name: 'celery seed', quantity: '⅛ tsp (0.25g)', section: 'assembly', ndbNo: '2007', portionDesc: 'g', portionGrams: 0.25 },
       { name: 'salt', quantity: '1 dash (0.4g)', section: 'assembly', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.4 }
     ],
     recipeInstructions: [
@@ -7858,7 +7858,7 @@ export const LEVELS: Level[] = [
       { name: 'garlic powder', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2020', portionDesc: 'g', portionGrams: 0.775 },
       { name: 'allspice', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2001', portionDesc: 'g', portionGrams: 0.475 },
       { name: 'ground cloves', quantity: '1/8 tsp', section: 'sauce', ndbNo: '2011', portionDesc: 'g', portionGrams: 0.2625 },
-      { name: 'Celery seed', quantity: '1/8 tsp', section: 'sauce', ndbNo: '2007', portionDesc: 'g', portionGrams: 0.25 }
+      { name: 'celery seed', quantity: '1/8 tsp', section: 'sauce', ndbNo: '2007', portionDesc: 'g', portionGrams: 0.25 }
     ],
     recipeInstructions: [
       'Combine the chopped fresh tomatoes (or crushed canned tomatoes), apple cider vinegar, brown sugar, salt, onion powder, garlic powder, allspice, cloves, and celery seed in a medium saucepan.',
@@ -8269,7 +8269,7 @@ export const LEVELS: Level[] = [
       { name: 'onion', quantity: '1 large', section: 'dressing', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
       { name: 'apple cider vinegar', quantity: '4 tbsp', section: 'dressing', ndbNo: '2048', portionDesc: 'g', portionGrams: 59.6 },
       { name: 'sugar', quantity: '3 tsp', section: 'dressing', ndbNo: '19335', portionDesc: 'g', portionGrams: 12.6 },
-      { name: 'Celery seed', quantity: '1 tsp', section: 'dressing', ndbNo: '2007', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'celery seed', quantity: '1 tsp', section: 'dressing', ndbNo: '2007', portionDesc: 'g', portionGrams: 2.0 },
       { name: 'salt', quantity: '1 tsp', section: 'dressing', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'ground black pepper', quantity: '1/4 tsp (0.6g)', section: 'dressing', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.6 },
       { name: 'fresh parsley', quantity: '2 tbsp', section: 'dressing', ndbNo: '11297', portionDesc: 'g', portionGrams: 7.6 }
@@ -8642,7 +8642,7 @@ export const LEVELS: Level[] = [
       { name: 'honey', quantity: '1 tbsp', section: 'slaw', ndbNo: '19296', portionDesc: 'g', portionGrams: 21.0 },
       { name: 'salt', quantity: '1 tsp', section: 'slaw', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'ground black pepper', quantity: '1/4 tsp', section: 'slaw', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.7 },
-      { name: 'Celery seed', quantity: '1/4 tsp', section: 'slaw', ndbNo: '2007', portionDesc: 'g', portionGrams: 0.7 }
+      { name: 'celery seed', quantity: '1/4 tsp', section: 'slaw', ndbNo: '2007', portionDesc: 'g', portionGrams: 0.7 }
     ],
     recipeInstructions: [
       'Shred the green cabbage, red cabbage, and carrots; thinly slice the red bell pepper and scallions.',
@@ -8952,7 +8952,7 @@ export const LEVELS: Level[] = [
       { name: 'cayenne pepper', quantity: '1 tbsp', section: 'blend', ndbNo: '2031', portionDesc: 'g', portionGrams: 5.3 },
       { name: 'dried oregano', quantity: '1 tbsp', section: 'blend', ndbNo: '2027', portionDesc: 'g', portionGrams: 5.4 },
       { name: 'dried thyme', quantity: '1 tbsp', section: 'blend', ndbNo: '2042', portionDesc: 'g', portionGrams: 4.2 },
-      { name: 'Celery seed', quantity: '1 tbsp', section: 'blend', ndbNo: '2007', portionDesc: 'g', portionGrams: 6.5 },
+      { name: 'celery seed', quantity: '1 tbsp', section: 'blend', ndbNo: '2007', portionDesc: 'g', portionGrams: 6.5 },
       { name: 'white pepper', quantity: '1 tbsp', section: 'blend', ndbNo: '2032', portionDesc: 'g', portionGrams: 7.2 }
     ],
     recipeInstructions: [
@@ -22877,9 +22877,9 @@ export const LEVELS: Level[] = [
       { name: 'tomato juice', quantity: '3 fl oz', section: 'cocktail', ndbNo: '11540', portionDesc: 'g', portionGrams: 90.6 },
       { name: 'lemon juice', quantity: '1 tbsp', section: 'cocktail', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
       { name: 'Worcestershire sauce', quantity: '½ tsp', section: 'cocktail', ndbNo: '6971', portionDesc: 'g', portionGrams: 2.5 },
-      { name: 'Hot sauce (Tabasco)', quantity: '3 dashes', section: 'cocktail', ndbNo: '6169', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'hot sauce (Tabasco)', quantity: '3 dashes', section: 'cocktail', ndbNo: '6169', portionDesc: 'g', portionGrams: 1.2 },
       { name: 'prepared horseradish', quantity: '1 tsp', section: 'cocktail', ndbNo: '2055', portionDesc: 'g', portionGrams: 5.0 },
-      { name: 'Celery seed', quantity: '¼ tsp', section: 'cocktail', ndbNo: '2007', portionDesc: 'g', portionGrams: 0.5 },
+      { name: 'celery seed', quantity: '¼ tsp', section: 'cocktail', ndbNo: '2007', portionDesc: 'g', portionGrams: 0.5 },
       { name: 'ground black pepper', quantity: 'pinch', section: 'cocktail', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
       { name: 'salt', quantity: 'pinch', section: 'cocktail', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.4 }
     ],
