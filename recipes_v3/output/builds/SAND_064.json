@@ -73,7 +73,7 @@
       "grams": 5.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "1 tsp (5g)",
+      "qty_display": "1 tsp",
       "contribution": {
         "Energy_KCal": 3.0,
         "Protein": 0.187,
@@ -94,7 +94,7 @@
       "grams": 15.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "1 tbsp (15g)",
+      "qty_display": "1 tbsp",
       "contribution": {
         "Energy_KCal": 19.5,
         "Protein": 0.056,
@@ -178,7 +178,7 @@
       "grams": 0.25,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "\u215b tsp (0.25g)",
+      "qty_display": "\u215b tsp",
       "contribution": {
         "Energy_KCal": 0.98,
         "Protein": 0.045,
@@ -360,7 +360,7 @@
   "sections": [
     {
       "section_key": "frank",
-      "section_label": "Frank:",
+      "section_label": "Frank",
       "prep_method": "raw",
       "cook_method": "grilled",
       "cooking_method": "grilled",
@@ -380,7 +380,7 @@
     },
     {
       "section_key": "assembly",
-      "section_label": "Assembly:",
+      "section_label": "Assembly",
       "prep_method": "raw",
       "cook_method": "raw",
       "cooking_method": "raw",
