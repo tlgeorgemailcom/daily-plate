@@ -94,7 +94,7 @@
       "grams": 2.1,
       "section": "marinade",
       "ingredient_group": "marinade",
-      "qty_display": "1 tsp cumin",
+      "qty_display": "1 tsp ground cumin",
       "contribution": {
         "Energy_KCal": 7.875,
         "Protein": 0.374,
@@ -157,7 +157,7 @@
       "grams": 1.15,
       "section": "marinade",
       "ingredient_group": "marinade",
-      "qty_display": "1/2 tsp black pepper",
+      "qty_display": "1/2 tsp ground black pepper",
       "contribution": {
         "Energy_KCal": 2.886,
         "Protein": 0.119,
@@ -178,7 +178,7 @@
       "grams": 907.2,
       "section": "beef",
       "ingredient_group": "beef",
-      "qty_display": "2 lbs skirt steak",
+      "qty_display": "2 lbs beef skirt steak",
       "contribution": {
         "Energy_KCal": 2104.704,
         "Protein": 163.115,
@@ -220,7 +220,7 @@
       "grams": 0.57,
       "section": "beef",
       "ingredient_group": "beef",
-      "qty_display": "1/4 tsp black pepper",
+      "qty_display": "1/4 tsp ground black pepper",
       "contribution": {
         "Energy_KCal": 1.443,
         "Protein": 0.06,

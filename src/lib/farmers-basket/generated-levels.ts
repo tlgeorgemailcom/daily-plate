@@ -11536,13 +11536,13 @@ export const LEVELS: Level[] = [
       { name: 'olive oil', quantity: '1/4 cup olive oil', section: 'marinade', ndbNo: '4053', portionDesc: 'g', portionGrams: 54.4 },
       { name: 'lime juice', quantity: '1/4 cup lime juice', section: 'marinade', ndbNo: '9160', portionDesc: 'g', portionGrams: 61.0 },
       { name: 'garlic', quantity: '6 cloves garlic', section: 'marinade', ndbNo: '11215', portionDesc: 'g', portionGrams: 18.0 },
-      { name: 'ground cumin', quantity: '1 tsp cumin', section: 'marinade', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.1 },
+      { name: 'ground cumin', quantity: '1 tsp ground cumin', section: 'marinade', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.1 },
       { name: 'dried oregano', quantity: '1 tsp dried oregano', section: 'marinade', ndbNo: '2027', portionDesc: 'g', portionGrams: 2.7 },
       { name: 'salt', quantity: '1 tsp salt', section: 'marinade', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
-      { name: 'ground black pepper', quantity: '1/2 tsp black pepper', section: 'marinade', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
-      { name: 'beef skirt steak', quantity: '2 lbs skirt steak', section: 'beef', ndbNo: '23224', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'ground black pepper', quantity: '1/2 tsp ground black pepper', section: 'marinade', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'beef skirt steak', quantity: '2 lbs beef skirt steak', section: 'beef', ndbNo: '23224', portionDesc: 'g', portionGrams: 907.2 },
       { name: 'salt', quantity: '1/2 tsp salt', section: 'beef', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
-      { name: 'ground black pepper', quantity: '1/4 tsp black pepper', section: 'beef', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+      { name: 'ground black pepper', quantity: '1/4 tsp ground black pepper', section: 'beef', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
     ],
     recipeInstructions: [
       'Whisk together olive oil, lime juice, minced garlic, cumin, oregano, salt, and pepper in a bowl to form the marinade.',
