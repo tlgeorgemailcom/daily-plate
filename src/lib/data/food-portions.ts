@@ -57066,7 +57066,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "ORANGEFLOWERWATER",
-    "display": "Orange Flower Water",
+    "display": "orange flower water",
     "groups": [
       "bar"
     ],

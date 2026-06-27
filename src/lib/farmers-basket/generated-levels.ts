@@ -25997,7 +25997,7 @@ export const LEVELS: Level[] = [
       { name: 'simple syrup', quantity: '1 oz', section: 'cocktail', ndbNo: '14801', portionDesc: 'g', portionGrams: 35.0 },
       { name: 'egg whites', quantity: '1 large', section: 'cocktail', ndbNo: '1124', portionDesc: 'g', portionGrams: 33.0 },
       { name: 'heavy cream', quantity: '1 oz', section: 'cocktail', ndbNo: '1053', portionDesc: 'g', portionGrams: 29.75 },
-      { name: 'Orange Flower Water', quantity: '3 dashes', section: 'cocktail', ndbNo: '14777', portionDesc: 'g', portionGrams: 1.9 },
+      { name: 'orange flower water', quantity: '3 dashes', section: 'cocktail', ndbNo: '14777', portionDesc: 'g', portionGrams: 1.9 },
       { name: 'club soda', quantity: '2 oz (to top)', section: 'cocktail', ndbNo: '14121', portionDesc: 'g', portionGrams: 59.25 }
     ],
     recipeInstructions: [
