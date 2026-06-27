@@ -31,7 +31,7 @@
       "grams": 113.0,
       "section": "pork",
       "ingredient_group": "pork",
-      "qty_display": "4 oz (113g)",
+      "qty_display": "4 oz",
       "contribution": {
         "Energy_KCal": 123.17,
         "Protein": 23.673,
@@ -52,7 +52,7 @@
       "grams": 15.0,
       "section": "pork",
       "ingredient_group": "pork",
-      "qty_display": "1 tbsp (15g)",
+      "qty_display": "1 tbsp",
       "contribution": {
         "Energy_KCal": 9.0,
         "Protein": 1.577,
@@ -73,7 +73,7 @@
       "grams": 4.5,
       "section": "pork",
       "ingredient_group": "pork",
-      "qty_display": "1 tsp (4.5g)",
+      "qty_display": "1 tsp",
       "contribution": {
         "Energy_KCal": 39.78,
         "Protein": 0.0,
@@ -94,7 +94,7 @@
       "grams": 15.0,
       "section": "pork",
       "ingredient_group": "pork",
-      "qty_display": "1 tbsp (15g)",
+      "qty_display": "1 tbsp",
       "contribution": {
         "Energy_KCal": 3.75,
         "Protein": 0.063,
@@ -115,7 +115,7 @@
       "grams": 4.0,
       "section": "pork",
       "ingredient_group": "pork",
-      "qty_display": "1 tsp (4g)",
+      "qty_display": "1 tsp",
       "contribution": {
         "Energy_KCal": 15.48,
         "Protein": 0.0,
@@ -136,7 +136,7 @@
       "grams": 1.0,
       "section": "pork",
       "ingredient_group": "pork",
-      "qty_display": "\u00bd tsp (1g)",
+      "qty_display": "\u00bd tsp",
       "contribution": {
         "Energy_KCal": 3.31,
         "Protein": 0.166,
@@ -178,7 +178,7 @@
       "grams": 14.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "1 tbsp (14g)",
+      "qty_display": "1 tbsp",
       "contribution": {
         "Energy_KCal": 95.2,
         "Protein": 0.134,
@@ -283,7 +283,7 @@
       "grams": 1.5,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "\u00bc tsp (1.5g)",
+      "qty_display": "\u00bc tsp",
       "contribution": {
         "Energy_KCal": 0.0,
         "Protein": 0.0,
@@ -507,7 +507,7 @@
   "sections": [
     {
       "section_key": "pork",
-      "section_label": "Pork:",
+      "section_label": "Pork",
       "prep_method": "raw",
       "cook_method": "pan grilled",
       "cooking_method": "pan grilled",
@@ -527,7 +527,7 @@
     },
     {
       "section_key": "assembly",
-      "section_label": "Assembly:",
+      "section_label": "Assembly",
       "prep_method": "raw",
       "cook_method": "raw",
       "cooking_method": "raw",
