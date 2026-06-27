@@ -17325,7 +17325,7 @@ export const LEVELS: Level[] = [
       { name: 'lime juice', quantity: '2 tbsp', section: 'poblanos', ndbNo: '9160', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'fresh cilantro', quantity: '½ cup fresh cilantro, chopped', section: 'poblanos', ndbNo: '11165', portionDesc: 'g', portionGrams: 8.0 },
       { name: 'poblano pepper', quantity: '4 medium poblano peppers, halved and seeded', section: 'poblanos', ndbNo: '11333', portionDesc: 'g', portionGrams: 476.0 },
-      { name: 'Cheddar cheese', quantity: '4 oz Cheddar cheese, shredded', section: 'poblanos', ndbNo: '1009', portionDesc: 'g', portionGrams: 113.0 }
+      { name: 'Cheddar cheese', quantity: '4 oz cheddar cheese, shredded', section: 'poblanos', ndbNo: '1009', portionDesc: 'g', portionGrams: 113.0 }
     ],
     recipeInstructions: [
       'Set the oven to broil on high. Rinse the rice until water is clear and combine with 1½ cups of water in a medium saucepan. If rice is rinsed, reduce water by 2 tablespoons. Bring to a boil, reduce heat to low, cover, and cook for 18 minutes. Remove from heat and let stand, covered, for 5 minutes. Fluff with a fork.',
@@ -18294,7 +18294,7 @@ export const LEVELS: Level[] = [
       { name: 'carrot', quantity: '2 medium carrots, finely grated', section: 'soup', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
       { name: 'broccoli', quantity: '1 lb broccoli, cut into small florets', section: 'soup', ndbNo: '11090', portionDesc: 'g', portionGrams: 453.6 },
       { name: 'half-and-half', quantity: '2 cups', section: 'soup', ndbNo: '1049', portionDesc: 'g', portionGrams: 484.0 },
-      { name: 'Cheddar cheese', quantity: '8 oz sharp Cheddar cheese, shredded', section: 'soup', ndbNo: '1009', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'Cheddar cheese', quantity: '8 oz sharp cheddar cheese, shredded', section: 'soup', ndbNo: '1009', portionDesc: 'g', portionGrams: 226.8 },
       { name: 'salt', quantity: '¾ tsp', section: 'soup', ndbNo: '2047', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'ground black pepper', quantity: '¼ tsp', section: 'soup', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
       { name: 'ground nutmeg', quantity: '⅛ tsp', section: 'soup', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.275 }
@@ -20573,7 +20573,7 @@ export const LEVELS: Level[] = [
       { name: 'flour tortilla', quantity: '4 large flour tortillas (10-inch)', section: 'pinwheels', ndbNo: '18364', portionDesc: 'g', portionGrams: 192.0 },
       { name: 'cream cheese', quantity: '1 package (8 oz) cream cheese, softened', section: 'pinwheels', ndbNo: '1017', portionDesc: 'g', portionGrams: 227.0 },
       { name: 'deli turkey breast', quantity: '8 oz deli turkey breast, thin-sliced', section: 'pinwheels', ndbNo: '7081', portionDesc: 'g', portionGrams: 226.8 },
-      { name: 'Cheddar cheese', quantity: '4 oz Cheddar cheese, shredded', section: 'pinwheels', ndbNo: '1009', portionDesc: 'g', portionGrams: 113.4 },
+      { name: 'Cheddar cheese', quantity: '4 oz cheddar cheese, shredded', section: 'pinwheels', ndbNo: '1009', portionDesc: 'g', portionGrams: 113.4 },
       { name: 'spinach', quantity: '2 cups fresh spinach, whole leaves', section: 'pinwheels', ndbNo: '11457', portionDesc: 'g', portionGrams: 60.0 },
       { name: 'red bell pepper', quantity: '1 medium red bell pepper, thinly sliced', section: 'pinwheels', ndbNo: '11821', portionDesc: 'g', portionGrams: 119.0 },
       { name: 'scallions', quantity: '2 scallions, thinly sliced', section: 'pinwheels', ndbNo: '11291', portionDesc: 'g', portionGrams: 30.0 },
