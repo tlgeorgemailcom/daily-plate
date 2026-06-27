@@ -7107,8 +7107,8 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Mornay Sauce', quantity: 'custom (g)', foodWord: 'MORNAYSAUCE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'Béchamel Sauce', quantity: '1 recipe Béchamel (1 cup, 245.08g)', section: 'bechamel', foodWord: 'BECHAMEL', portionDesc: 'g', portionGrams: 245.08, isDish: true, componentRef: 'SAUCE_001' },
-      { name: 'Gruyere cheese', quantity: '1/2 oz, grated', section: 'cheese', ndbNo: '1023', portionDesc: 'g', portionGrams: 14.175 },
-      { name: 'Parmesan cheese', quantity: '1/2 oz, grated (Parmigiano-Reggiano)', section: 'cheese', ndbNo: '1033', portionDesc: 'g', portionGrams: 14.175 }
+      { name: 'Gruyere cheese', quantity: '1/2 oz Gruyere cheese, grated', section: 'cheese', ndbNo: '1023', portionDesc: 'g', portionGrams: 14.175 },
+      { name: 'Parmesan cheese', quantity: '1/2 oz Parmesan cheese (Parmigiano-Reggiano), grated', section: 'cheese', ndbNo: '1033', portionDesc: 'g', portionGrams: 14.175 }
     ],
     recipeInstructions: [
       'Prepare one full recipe of Béchamel sauce (see instructions in the recipe: Béchamel Sauce).',

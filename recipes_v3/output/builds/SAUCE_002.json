@@ -53,7 +53,7 @@
       "grams": 14.18,
       "section": "cheese",
       "ingredient_group": "cheese",
-      "qty_display": "1/2 oz, grated",
+      "qty_display": "1/2 oz Gruyere cheese, grated",
       "contribution": {
         "Energy_KCal": 58.543,
         "Protein": 4.226,
@@ -74,7 +74,7 @@
       "grams": 14.18,
       "section": "cheese",
       "ingredient_group": "cheese",
-      "qty_display": "1/2 oz, grated (Parmigiano-Reggiano)",
+      "qty_display": "1/2 oz Parmesan cheese (Parmigiano-Reggiano), grated",
       "contribution": {
         "Energy_KCal": 55.566,
         "Protein": 5.068,
