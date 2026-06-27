@@ -57206,7 +57206,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "PASSIONFRUITPUREE",
-    "display": "Passion Fruit Puree",
+    "display": "passion fruit pur\u00e9e",
     "groups": [
       "fruit"
     ],
@@ -57502,7 +57502,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "PASSIONFRUITLEUR",
-    "display": "Passion Fruit Liqueur",
+    "display": "passion fruit liqueur",
     "groups": [
       "beverage"
     ],

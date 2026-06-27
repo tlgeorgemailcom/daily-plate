@@ -503,7 +503,7 @@ orange_flower_water,14777,ORANGEFLOWERWATER,"Flavoring, orange flower water, ora
 vanilla_sugar,14778,VANILLASUGAR,"Sugar, vanilla, granulated, flavored with vanilla",Vanilla Sugar,tsp,4.2,"granulated sugar + vanilla; label: ~385 kcal/100g, 96g C 2026-06-24"
 old_tom_gin,14779,OLDTOMGIN,"Gin, Old Tom, 80 proof",old tom gin,ml,1,
 blackstrap_rum,14780,BLACKSTRAPRUM,"Rum, blackstrap, 80 proof",Blackstrap Rum,ml,1,
-passion_fruit_puree,14781,PASSIONFRUITPUREE,"Passion fruit, puree, unsweetened",Passion Fruit Puree,ml,1,
+passion_fruit_puree,14781,PASSIONFRUITPUREE,"Passion fruit, puree, unsweetened",passion fruit purée,ml,1,
 raspberry_liqueur,14783,RASPBERRYLIQUEUR,"Alcoholic beverage, liqueur, raspberry, 34 proof",Raspberry Liqueur,ml,1,
 espadin_mezcal,14784,ESPADINMEZCAL,"Alcoholic beverage, distilled, mezcal, espadin agave, 80 proof",Espadin Mezcal,ml,1,
 palo_cortado,14785,PALOCORTADO,"Alcoholic beverage, wine, sherry, palo cortado, dry, 40 proof",Palo Cortado Sherry,ml,1,
@@ -516,7 +516,7 @@ creme_de_cacao_brown,14789,CREMEDECACAOBROWN,"Alcoholic beverage, liqueur, creme
 maraschino,14790,MARASCHINO,"Alcoholic beverage, liqueur, maraschino, Luxardo, cherry, 64 proof",Maraschino Liqueur,ml,1,
 creme_de_mure,14791,CREMEDMURE,"Alcoholic beverage, liqueur, blackberry, creme de mure, 36 proof",Crème de Mûre (blackberry liqueur),ml,1,
 orgeat_syrup,14792,ORGEATYRUP,"Beverage, syrup, orgeat, almond syrup, non-alcoholic",Orgeat Syrup,ml,1,
-passion_fruit_liqueur,14793,PASSIONFRUITLEUR,"Alcoholic beverage, liqueur, passoa, passion fruit, 34 proof",Passion Fruit Liqueur,ml,1,
+passion_fruit_liqueur,14793,PASSIONFRUITLEUR,"Alcoholic beverage, liqueur, passoa, passion fruit, 34 proof",passion fruit liqueur,ml,1,
 prosecco,14795,PROSECCO,"Alcoholic beverage, wine, sparkling, Prosecco, 11% ABV, brut",Prosecco,fl oz,29.4,new NDB 14795; Prosecco brut sparkling wine 2026-06-25
 peach_schnapps_99,14800,PEACHSCHNAPPS99,"Alcoholic beverage, liqueur, peach schnapps, high-proof, 99 proof",Peach Schnapps (99 Proof),fl oz,26.5,new NDB 14800; 99-proof peach schnapps 0g carbs 2026-06-25
 simple_syrup,14801,SIMPLESYRUP,"Cocktail mixer, simple syrup, 1:1 sugar-water",simple syrup,fl oz,35.0,Custom NDB 14801; 1:1 sugar:water by weight; 200 kcal/100g; 50g carbs; density ~1.18 g/mL 2026-06-25

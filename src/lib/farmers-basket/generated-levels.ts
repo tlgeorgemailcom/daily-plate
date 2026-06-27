@@ -24333,7 +24333,7 @@ export const LEVELS: Level[] = [
       { name: 'amaretto', quantity: '½ oz', section: 'cocktail', ndbNo: '14720', portionDesc: 'g', portionGrams: 15.4 },
       { name: 'Frangelico', quantity: '¼ oz', section: 'cocktail', ndbNo: '14806', portionDesc: 'g', portionGrams: 7.5 },
       { name: 'maraschino liqueur', quantity: '5 drops', section: 'cocktail', ndbNo: '14702', portionDesc: 'g', portionGrams: 0.5 },
-      { name: 'Passion Fruit Puree', quantity: '1 oz', section: 'cocktail', ndbNo: '14781', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'passion fruit purée', quantity: '1 oz', section: 'cocktail', ndbNo: '14781', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'pineapple juice', quantity: '3 oz', section: 'cocktail', ndbNo: '9273', portionDesc: 'g', portionGrams: 90.0 },
       { name: 'lime juice', quantity: '1 oz', section: 'cocktail', ndbNo: '9160', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'fresh ginger', quantity: '1 slice', section: 'cocktail', ndbNo: '11216', portionDesc: 'g', portionGrams: 3.0 }
@@ -25876,7 +25876,7 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Porn Star Martini', quantity: 'custom (g)', foodWord: 'PORNSTARMARTINI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'Vanilla Vodka', quantity: '1½ oz', section: 'cocktail', ndbNo: '14760', portionDesc: 'g', portionGrams: 40.5 },
-      { name: 'Passion Fruit Puree', quantity: '1 oz (30 ml)', section: 'cocktail', ndbNo: '14781', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'passion fruit purée', quantity: '1 oz (30 ml)', section: 'cocktail', ndbNo: '14781', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'Passoa', quantity: '½ oz', section: 'cocktail', ndbNo: '14730', portionDesc: 'g', portionGrams: 15.65 },
       { name: 'lime juice', quantity: '½ oz', section: 'cocktail', ndbNo: '9160', portionDesc: 'g', portionGrams: 15.0 },
       { name: 'simple syrup', quantity: '¼ oz', section: 'cocktail', ndbNo: '14801', portionDesc: 'g', portionGrams: 8.75 },
