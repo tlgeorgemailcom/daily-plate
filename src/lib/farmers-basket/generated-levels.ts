@@ -7313,15 +7313,15 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Béarnaise Sauce', quantity: 'custom (g)', foodWord: 'BEARNAISE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'shallots', quantity: '2 medium shallots, minced', section: 'reduction', ndbNo: '11677', portionDesc: 'g', portionGrams: 60.0 },
-      { name: 'apple cider vinegar', quantity: '3 tbsp (or white wine vinegar)', section: 'reduction', ndbNo: '2048', portionDesc: 'g', portionGrams: 45.0 },
+      { name: 'apple cider vinegar', quantity: '3 tbsp apple cider vinegar (or white wine vinegar)', section: 'reduction', ndbNo: '2048', portionDesc: 'g', portionGrams: 45.0 },
       { name: 'white wine', quantity: '3 tbsp', section: 'reduction', ndbNo: '14106', portionDesc: 'g', portionGrams: 45.0 },
-      { name: 'dried tarragon', quantity: '1½ tsp dried (or stems for small bunch of fresh tarragon)', section: 'reduction', ndbNo: '2041', portionDesc: 'g', portionGrams: 2.25 },
+      { name: 'dried tarragon', quantity: '1½ tsp dried tarragon (or a small bunch of fresh stems)', section: 'reduction', ndbNo: '2041', portionDesc: 'g', portionGrams: 2.25 },
       { name: 'ground black pepper', quantity: '¼ tsp', section: 'reduction', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.75 },
       { name: 'egg yolk', quantity: '3 large egg yolks', section: 'emulsion', ndbNo: '1125', portionDesc: 'g', portionGrams: 54.0 },
-      { name: 'unsalted butter', quantity: '~2¾ sticks raw (yields ~1 cup clarified; see step 1)', section: 'emulsion', ndbNo: '1145', portionDesc: 'g', portionGrams: 227.0 },
+      { name: 'unsalted butter', quantity: '~2¾ sticks unsalted butter (yields ~1 cup clarified; see step 1)', section: 'emulsion', ndbNo: '1145', portionDesc: 'g', portionGrams: 227.0 },
       { name: 'salt', quantity: '½ tsp', section: 'emulsion', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
-      { name: 'fresh chives', quantity: '1 tbsp, chopped', section: 'emulsion', ndbNo: '11156', portionDesc: 'g', portionGrams: 3.0 },
-      { name: 'dried tarragon', quantity: '1 tsp (finish) (or 1 tbsp of fresh chopped tarragon)', section: 'emulsion', ndbNo: '2041', portionDesc: 'g', portionGrams: 1.5 }
+      { name: 'fresh chives', quantity: '1 tbsp fresh chives, chopped', section: 'emulsion', ndbNo: '11156', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'dried tarragon', quantity: '1 tsp dried tarragon (to finish; or 1 tbsp fresh)', section: 'emulsion', ndbNo: '2041', portionDesc: 'g', portionGrams: 1.5 }
     ],
     recipeInstructions: [
       'To clarify the butter: melt 2¾ sticks (about 310g) of unsalted butter in a small saucepan over low heat without stirring. Skim the white foam from the surface and discard. Slowly pour the clear golden liquid into a bowl, leaving the milky white solids behind on the bottom of the pan; discard the solids. You should have about 1 cup (8 oz / 227g) of clarified butter. Keep it warm while you prepare the sauce. (Note: it takes roughly 16 oz of butter to yield 12 oz clarified; this recipe uses about 8 oz clarified, so ~11 oz raw unsalted butter is sufficient.)',
