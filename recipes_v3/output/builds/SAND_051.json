@@ -52,7 +52,7 @@
       "grams": 85.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "3 oz (85g)",
+      "qty_display": "3 oz",
       "contribution": {
         "Energy_KCal": 255.0,
         "Protein": 18.845,
@@ -115,7 +115,7 @@
       "grams": 14.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "1 tbsp (14g)",
+      "qty_display": "1 tbsp",
       "contribution": {
         "Energy_KCal": 123.76,
         "Protein": 0.0,
@@ -136,7 +136,7 @@
       "grams": 15.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "1 tbsp (15g)",
+      "qty_display": "1 tbsp",
       "contribution": {
         "Energy_KCal": 13.2,
         "Protein": 0.073,
@@ -157,7 +157,7 @@
       "grams": 1.5,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "\u00bc tsp (1.5g)",
+      "qty_display": "\u00bc tsp",
       "contribution": {
         "Energy_KCal": 0.0,
         "Protein": 0.0,
@@ -339,7 +339,7 @@
   "sections": [
     {
       "section_key": "assembly",
-      "section_label": "Assembly:",
+      "section_label": "Assembly",
       "prep_method": "raw",
       "cook_method": "raw",
       "cooking_method": "raw",
