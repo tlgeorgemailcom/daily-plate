@@ -18760,7 +18760,7 @@ export const LEVELS: Level[] = [
       { name: 'Fish Stock', quantity: '12 cups Fish Stock (recipe)', section: 'fish_stock', foodWord: 'FISHBROTH', ndbNo: '6963', portionDesc: 'g', portionGrams: 2844.0, isDish: true, componentRef: 'STOCK_006' },
       { name: 'Creole Seasoning', quantity: '2 tbsp Creole Seasoning (recipe)', section: 'cajun_spice', foodWord: 'CREOLESEASONING', portionDesc: 'g', portionGrams: 17.4, isDish: true, componentRef: 'SAUCE_014' },
       { name: 'vegetable oil', quantity: '1 cup vegetable oil (for roux)', section: 'gumbo', ndbNo: '4513', portionDesc: 'g', portionGrams: 218.0 },
-      { name: 'all-purpose enriched unbleached white flour', quantity: '1 cup all-purpose flour', section: 'gumbo', ndbNo: '20581', portionDesc: 'g', portionGrams: 125.0 },
+      { name: 'all-purpose flour', quantity: '1 cup all-purpose flour', section: 'gumbo', ndbNo: '20581', portionDesc: 'g', portionGrams: 125.0 },
       { name: 'onion', quantity: '1 large onion, coarsely chopped', section: 'gumbo', ndbNo: '11282', portionDesc: 'g', portionGrams: 220.0 },
       { name: 'celery stalk', quantity: '4 celery stalks, diced', section: 'gumbo', ndbNo: '11143', portionDesc: 'g', portionGrams: 200.0 },
       { name: 'green bell pepper', quantity: '1 large green bell pepper, diced', section: 'gumbo', ndbNo: '11333', portionDesc: 'g', portionGrams: 119.0 },
@@ -18769,12 +18769,12 @@ export const LEVELS: Level[] = [
       { name: 'shrimp', quantity: '1½ lb large shrimp, peeled and deveined', section: 'gumbo', ndbNo: '15270', portionDesc: 'g', portionGrams: 680.4 },
       { name: 'crab meat', quantity: '1 lb lump crab meat', section: 'gumbo', ndbNo: '15140', portionDesc: 'g', portionGrams: 453.6 },
       { name: 'oysters', quantity: '12 oz oysters, shucked with brine', section: 'gumbo', ndbNo: '15167', portionDesc: 'g', portionGrams: 340.0 },
-      { name: 'scallions', quantity: '¼ cup green onions, chopped', section: 'gumbo', ndbNo: '11291', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'green onions', quantity: '¼ cup green onions, chopped', section: 'gumbo', ndbNo: '11291', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'fresh parsley', quantity: '¼ cup fresh parsley, minced', section: 'gumbo', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.2 },
       { name: 'Worcestershire sauce', quantity: '2 tbsp Worcestershire sauce', section: 'gumbo', ndbNo: '6971', portionDesc: 'g', portionGrams: 34.0 },
-      { name: 'bay leaf', quantity: '4 whole bay leaves', section: 'gumbo', ndbNo: '2004', portionDesc: 'g', portionGrams: 2.4 },
+      { name: 'bay leaves', quantity: '4 whole bay leaves', section: 'gumbo', ndbNo: '2004', portionDesc: 'g', portionGrams: 2.4 },
       { name: 'salt', quantity: '1½ tsp salt', section: 'gumbo', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
-      { name: 'ground black pepper', quantity: '½ tsp black pepper', section: 'gumbo', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
+      { name: 'black pepper', quantity: '½ tsp black pepper', section: 'gumbo', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
     ],
     recipeInstructions: [
       'Make or prepare the Fish Stock (see the Fish Stock recipe) if not already made.',
