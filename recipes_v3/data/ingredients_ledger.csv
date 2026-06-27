@@ -508,7 +508,7 @@ raspberry_liqueur,14783,RASPBERRYLIQUEUR,"Alcoholic beverage, liqueur, raspberry
 espadin_mezcal,14784,ESPADINMEZCAL,"Alcoholic beverage, distilled, mezcal, espadin agave, 80 proof",Espadin Mezcal,ml,1,
 palo_cortado,14785,PALOCORTADO,"Alcoholic beverage, wine, sherry, palo cortado, dry, 40 proof",Palo Cortado Sherry,ml,1,
 martinique_molasses_rhum,14786,MARTINIQUERHUM,"Alcoholic beverage, distilled, rhum, Martinique, molasses, 80 proof",Martinique Molasses Rhum,ml,1,
-vodka,14051,VODKA,"Alcoholic beverage, distilled, vodka, 80 proof",Vodka,fl oz,27.8,
+vodka,14051,VODKA,"Alcoholic beverage, distilled, vodka, 80 proof",vodka,fl oz,27.8,
 smirnoff_vodka,14787,VODKASMIRNOFF,"Alcoholic beverage, vodka, Smirnoff, 80 proof",Smirnoff Vodka,ml,1,
 red_wine,14794,REDWINE,"Alcoholic beverage, wine, table, red, dry",Red Wine,ml,1,
 port_wine,14788,PORTWINE,"Alcoholic beverage, wine, port, tawny, red, 20 proof",Red Tawny Port Wine,ml,1,

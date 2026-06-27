@@ -48471,7 +48471,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "VODKA",
-    "display": "Vodka",
+    "display": "vodka",
     "groups": [
       "beverage"
     ],
@@ -57239,7 +57239,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "VODKA",
-    "display": "Vodka",
+    "display": "vodka",
     "groups": [
       "beverage"
     ],
