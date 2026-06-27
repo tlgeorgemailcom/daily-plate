@@ -4164,12 +4164,12 @@ SOUP_015,4,butter_unsalted,2 tbsp unsalted butter,28.4,,,chowder,,,,
 SOUP_015,5,onion_raw,"1 large onion, diced",150.0,,,chowder,,,,
 SOUP_015,6,celery_raw,"3 celery stalks, diced",112.5,,,chowder,,,,
 SOUP_015,7,garlic_raw,"3 cloves garlic, minced",9.0,,,chowder,,,,
-SOUP_015,8,flour_ap_white_enriched_unbleached,3 tbsp all-purpose flour,23.4,,,chowder,,,,all-purpose flour
+SOUP_015,8,flour_ap_white_enriched_unbleached,3 tbsp all-purpose flour,23.4,,,chowder,,,all-purpose flour,
 SOUP_015,9,milk_whole,2 cups whole milk,488.0,,,chowder,,,,
 SOUP_015,10,heavy_cream,1 cup heavy cream,238.0,,,chowder,,,,
 SOUP_015,11,potato_russet_raw,"1½ lb russet potatoes, peeled and diced",680.4,,,chowder,,,,
-SOUP_015,12,thyme_fresh,4 sprigs fresh thyme,4.8,,,chowder,,,,fresh thyme
-SOUP_015,13,bay_leaf_dried,2 whole bay leaves,1.2,,,chowder,,,,bay leaves
+SOUP_015,12,thyme_fresh,4 sprigs fresh thyme,4.8,,,chowder,,,fresh thyme,
+SOUP_015,13,bay_leaf_dried,2 whole bay leaves,1.2,,,chowder,,,bay leaves,
 SOUP_015,14,salt_table,1½ tsp salt,9.0,,,chowder,,,,
 SOUP_015,15,white_pepper_ground,½ tsp white pepper,1.2,,,chowder,,,,
 SOUP_016,1,@STOCK_006,"1 recipe Fish Stock (~2 cups, 474g)",474.0,,,fish_stock,,,,

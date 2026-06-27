@@ -95,7 +95,7 @@
       "grams": 28.4,
       "section": "chowder",
       "ingredient_group": "chowder",
-      "qty_display": "2 tbsp butter, unsalted",
+      "qty_display": "2 tbsp unsalted butter",
       "contribution": {
         "Energy_KCal": 203.628,
         "Protein": 0.241,
@@ -137,7 +137,7 @@
       "grams": 112.5,
       "section": "chowder",
       "ingredient_group": "chowder",
-      "qty_display": "3 stalks celery, diced",
+      "qty_display": "3 celery stalks, diced",
       "contribution": {
         "Energy_KCal": 18.0,
         "Protein": 0.776,
