@@ -5674,7 +5674,7 @@ export const LEVELS: Level[] = [
       { name: 'red pepper flakes', quantity: '⅛ tsp', section: 'au_jus', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.23 },
       { name: 'salt', quantity: 'pinch', section: 'au_jus', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.5 },
       { name: 'olive oil', quantity: '1 tsp', section: 'sweet_peppers', ndbNo: '4053', portionDesc: 'g', portionGrams: 4.5 },
-      { name: 'green bell pepper', quantity: '½ medium pepper, sliced', section: 'sweet_peppers', ndbNo: '11333', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'green bell pepper', quantity: '½ medium green bell pepper, sliced', section: 'sweet_peppers', ndbNo: '11333', portionDesc: 'g', portionGrams: 40.0 },
       { name: 'French roll', quantity: '1 roll', section: 'assembly', ndbNo: '18349', portionDesc: 'g', portionGrams: 38.0 },
       { name: 'deli roast beef', quantity: '5 oz, thinly sliced', section: 'assembly', ndbNo: '7043', portionDesc: 'g', portionGrams: 141.75 }
     ],
