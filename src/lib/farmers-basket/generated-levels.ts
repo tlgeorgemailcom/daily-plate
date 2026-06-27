@@ -2423,7 +2423,7 @@ export const LEVELS: Level[] = [
       { name: 'garlic powder', quantity: '1/2 teaspoon', section: 'sausage', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.55 },
       { name: 'onion powder', quantity: '1/2 teaspoon', section: 'sausage', ndbNo: '2026', portionDesc: 'g', portionGrams: 1.2 },
       { name: 'paprika', quantity: '1/4 teaspoon', section: 'sausage', ndbNo: '2028', portionDesc: 'g', portionGrams: 0.58 },
-      { name: 'false', quantity: '2 1/4 tablespoons pork backfat', section: '34', ndbNo: '10004', portionDesc: 'g' },
+      { name: 'pork backfat', quantity: '2 1/4 tablespoons pork backfat (finely chopped)', section: 'sausage', ndbNo: '10004', portionDesc: 'g', portionGrams: 32.0 },
       { name: 'brown sugar', quantity: '1 teaspoon packed', section: 'sausage', ndbNo: '19334', portionDesc: 'g', portionGrams: 4.6 }
     ],
     recipeInstructions: [

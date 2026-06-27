@@ -537,7 +537,7 @@ BKFST_015,5,oregano_dried_ground,1/2 tsp dried or 1 1/2 tsp fresh chopped,0.9,0.
 BKFST_015,6,garlic_powder,1/2 teaspoon,1.55,1.4,1.7,sausage,sausage,false,garlic powder,
 BKFST_015,7,onion_powder,1/2 teaspoon,1.2,1.1,1.3,sausage,sausage,false,onion powder,
 BKFST_015,8,paprika_ground,1/4 teaspoon,0.58,0.5,0.7,sausage,sausage,false,paprika,
-BKFST_015,9,pork_backfat_raw,2 1/4 tablespoons pork backfat, finely chopped,32,30,34,sausage,sausage,false,,
+BKFST_015,9,pork_backfat_raw,2 1/4 tablespoons pork backfat (finely chopped),32,30,34,sausage,sausage,false,,
 BKFST_015,10,sugar_brown,1 teaspoon packed,4.6,4.5,4.8,sausage,sausage,false,brown sugar,
 BKFST_012,1,ground_pork_raw,3/4 lb,340.19,339,342,sausage,sausage,false,raw ground pork,
 BKFST_012,2,sage_ground,scant 1 1/4 tsp dried,0.79,0.7,0.9,sausage,sausage,false,ground sage,
