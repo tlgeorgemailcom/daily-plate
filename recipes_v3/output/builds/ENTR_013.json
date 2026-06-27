@@ -31,7 +31,7 @@
       "grams": 907.2,
       "section": "curry",
       "ingredient_group": "curry",
-      "qty_display": "2 lbs chuck roast",
+      "qty_display": "2 lbs beef chuck roast",
       "contribution": {
         "Energy_KCal": 1270.08,
         "Protein": 191.691,
@@ -241,7 +241,7 @@
       "grams": 1.15,
       "section": "curry",
       "ingredient_group": "curry",
-      "qty_display": "1/2 tsp black pepper",
+      "qty_display": "1/2 tsp ground black pepper",
       "contribution": {
         "Energy_KCal": 2.886,
         "Protein": 0.119,

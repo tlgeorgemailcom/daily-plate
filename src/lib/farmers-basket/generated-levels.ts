@@ -11581,8 +11581,8 @@ export const LEVELS: Level[] = [
     nutritionJson: {"cal":588.8,"pro":52.1,"fat":35.6,"carb":15.0,"fib":4.4,"h2o":266.9,"sug":4.4,"perServing":{"cal":588.8,"pro":52.1,"fat":35.6,"carb":15.0,"fib":4.4,"h2o":266.9,"sug":4.4,"AddedSugars":0.0,"IntrinsicSugars":4.4},"micros":{"vitaminA":9.6,"vitaminC":2.03,"vitaminD":2.41,"vitaminE":0.83,"vitaminK":5.5,"vitaminB6":0.18,"vitaminB12":1.59,"thiamin":0.04,"riboflavin":0.11,"niacin":1.95,"folate":7.1,"calcium":21.51,"iron":2.13,"magnesium":25.96,"phosphorus":136.85,"potassium":300.69,"sodium":244.26,"zinc":4.22,"copper":0.12,"selenium":15.47,"cholesterol":39.77,"saturatedFat":6.65,"monoFat":3.57,"polyFat":0.42,"omega3":0.0,"omega6":0.13},"gramsPerServing":376.3,"servings":4,"per100g":{"Energy_KCal":156.45,"Water":70.93,"Protein":13.85,"TotalLipidFat":9.46,"Carbohydrate":3.98,"FiberTotalDietary":1.17,"SugarsTotal":1.17,"Cholesterol":39.77,"FattyAcids_totalSaturated":6.65,"FattyAcids_totalMonounsaturated":3.57,"FattyAcids_totalPolyunsaturated":0.42,"LinoleicAcid":0.13,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":9.6,"Retinol":1.08,"Carotene_beta":93.67,"VitaminD":2.41,"VitaminE_alphaTocopherol":0.83,"VitaminK_phylloquinone":5.5,"VitaminC_totalAscorbicAcid":2.03,"Thiamin":0.04,"Riboflavin":0.11,"Niacin":1.95,"PantothenicAcid":0.37,"VitaminB6":0.18,"Folate_total":7.1,"Folate_food":7.1,"Folate_DFE":7.1,"FolicAcid":0.0,"VitaminB12":1.59,"Choline_total":41.61,"Betaine":10.89,"LuteinZeaxanthin":17.45,"Lycopene":945.92,"Calcium_Ca":21.51,"Iron_Fe":2.13,"Magnesium_Mg":25.96,"Phosphorus_P":136.85,"Potassium_K":300.69,"Sodium_Na":244.26,"Zinc_Zn":4.22,"Copper_Cu":0.12,"Manganese_Mn":0.35,"Selenium_Se":15.47,"Tryptophan":0.15,"Threonine":0.6,"Isoleucine":0.59,"Leucine":1.11,"Lysine":1.19,"Methionine":0.38,"Cystine":0.14,"Phenylalanine":0.54,"Tyrosine":0.47,"Valine":0.63,"Arginine":0.97,"Histidine":0.43,"Alanine":0.78,"AsparticAcid":1.29,"GlutamicAcid":2.37,"Glycine":0.61,"Proline":0.57,"Serine":0.54,"omega3":0.0,"omega6":0.13,"AddedSugars":0.0,"IntrinsicSugars":1.17},"addedSugars":0.0,"intrinsicSugars":4.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"13293","name":"Beef, chuck, under blade pot roast or steak, boneless, separable lean only, trimmed to 0\" fat, all grades, raw","grams":226.8},{"ndb":"12118","name":"Nuts, coconut milk, canned","grams":95.8},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":61.5},{"ndb":"11282","name":"Onions, raw","grams":37.5},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11216","name":"Ginger root, raw","grams":1.5},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"2015","name":"Spices, curry powder","grams":4.7},{"ndb":"11546","name":"Tomato products, canned, paste, without salt added","grams":8.2},{"ndb":"2047","name":"Salt, table","grams":2.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"11165","name":"Coriander (cilantro) leaves, raw","grams":1.0}],"sections":[{"section_key":"curry","section_label":"Curry","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.8,"yield_factor_fat":0.85,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":12,"raw_grams":1797.45,"raw_water_grams":1334.68,"raw_fat_grams":167.57,"raw_protein_grams":208.45,"raw_carb_grams":59.86,"final_grams":1505.38}],"cookingMethod":"boiled"},
     recipeIngredients: [
       { name: 'Beef Curry', quantity: 'custom (g)', foodWord: 'BEEFCURRY', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
-      { name: 'beef chuck roast', quantity: '2 lbs chuck roast', section: 'curry', ndbNo: '13293', portionDesc: 'g', portionGrams: 907.2 },
-      { name: 'canned coconut milk', quantity: '1 can (13.5 oz) coconut milk', section: 'curry', ndbNo: '12118', portionDesc: 'g', portionGrams: 383.0 },
+      { name: 'beef chuck roast', quantity: '2 lbs beef chuck roast', section: 'curry', ndbNo: '13293', portionDesc: 'g', portionGrams: 907.2 },
+      { name: 'coconut milk', quantity: '1 can (13.5 oz) coconut milk', section: 'curry', ndbNo: '12118', portionDesc: 'g', portionGrams: 383.0 },
       { name: 'tomato', quantity: '2 medium tomatoes', section: 'curry', ndbNo: '11529', portionDesc: 'g', portionGrams: 246.0 },
       { name: 'onion', quantity: '1 large onion', section: 'curry', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
       { name: 'garlic', quantity: '4 cloves garlic', section: 'curry', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
@@ -11591,7 +11591,7 @@ export const LEVELS: Level[] = [
       { name: 'curry powder', quantity: '3 tbsp curry powder', section: 'curry', ndbNo: '2015', portionDesc: 'g', portionGrams: 18.9 },
       { name: 'tomato paste', quantity: '2 tbsp tomato paste', section: 'curry', ndbNo: '11546', portionDesc: 'g', portionGrams: 33.0 },
       { name: 'salt', quantity: '1 1/2 tsp salt', section: 'curry', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
-      { name: 'ground black pepper', quantity: '1/2 tsp black pepper', section: 'curry', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
+      { name: 'ground black pepper', quantity: '1/2 tsp ground black pepper', section: 'curry', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
       { name: 'fresh cilantro', quantity: '¼ cup fresh cilantro, chopped', section: 'curry', ndbNo: '11165', portionDesc: 'g', portionGrams: 4.0 }
     ],
     recipeInstructions: [
@@ -13368,7 +13368,7 @@ export const LEVELS: Level[] = [
       { name: 'fresh ginger', quantity: '1 tbsp', section: 'curry', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'olive oil', quantity: '1 tbsp', section: 'curry', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
       { name: 'crushed tomatoes', quantity: '14 oz', section: 'curry', ndbNo: '11693', portionDesc: 'g', portionGrams: 397.0 },
-      { name: 'canned coconut milk', quantity: '13.5 oz', section: 'curry', ndbNo: '12118', portionDesc: 'g', portionGrams: 383.0 },
+      { name: 'coconut milk', quantity: '13.5 oz', section: 'curry', ndbNo: '12118', portionDesc: 'g', portionGrams: 383.0 },
       { name: 'curry powder', quantity: '2 tbsp', section: 'curry', ndbNo: '2015', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'ground cumin', quantity: '1 tsp', section: 'curry', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
       { name: 'coriander seed', quantity: '1 tsp', section: 'curry', ndbNo: '2013', portionDesc: 'g', portionGrams: 1.8 },
@@ -14282,7 +14282,7 @@ export const LEVELS: Level[] = [
       { name: 'garlic', quantity: '4 cloves', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'fresh ginger', quantity: '1 tbsp', section: 'sauce', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'cashews', quantity: '1/4 cup', section: 'sauce', ndbNo: '12087', portionDesc: 'g', portionGrams: 28.35 },
-      { name: 'canned coconut milk', quantity: '1 cup', section: 'sauce', ndbNo: '12118', portionDesc: 'g', portionGrams: 226.0 },
+      { name: 'coconut milk', quantity: '1 cup', section: 'sauce', ndbNo: '12118', portionDesc: 'g', portionGrams: 226.0 },
       { name: 'heavy cream', quantity: '1/4 cup', section: 'sauce', ndbNo: '1053', portionDesc: 'g', portionGrams: 59.5 },
       { name: 'coriander seed', quantity: '1.5 tsp', section: 'sauce', ndbNo: '2013', portionDesc: 'g', portionGrams: 2.7 },
       { name: 'ground cumin', quantity: '1 tsp', section: 'sauce', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
@@ -22085,7 +22085,7 @@ export const LEVELS: Level[] = [
       { name: 'mango', quantity: '1 cup mango, cubed', section: 'tropical_smoothie', ndbNo: '9176', portionDesc: 'g', portionGrams: 165.0 },
       { name: 'banana', quantity: '1 medium banana', section: 'tropical_smoothie', ndbNo: '9040', portionDesc: 'g', portionGrams: 118.0 },
       { name: 'pineapple juice', quantity: '1/2 cup pineapple juice', section: 'tropical_smoothie', ndbNo: '9273', portionDesc: 'g', portionGrams: 125.0 },
-      { name: 'canned coconut milk', quantity: '1/4 cup', section: 'tropical_smoothie', ndbNo: '12118', portionDesc: 'g', portionGrams: 56.5 }
+      { name: 'coconut milk', quantity: '1/4 cup', section: 'tropical_smoothie', ndbNo: '12118', portionDesc: 'g', portionGrams: 56.5 }
     ],
     recipeInstructions: [
       'Peel and cube the mango. Peel the banana and break it into chunks.',
