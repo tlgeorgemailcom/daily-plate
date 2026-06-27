@@ -27490,5 +27490,43 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
     ],
+  },
+  {
+    id: 'BVRG_152',
+    name: 'Sloe Gin Fizz',
+    category: 'cocktails',
+    dietaryCategory: 'vegan',
+    levelNum: 594,
+    recipe: ['bread'],
+    tools: [
+      { type: 'wall', count: 6, emoji: '🧱' },
+      { type: 'fence', count: 2, emoji: '🚧' },
+      { type: 'scarecrow', count: 1, emoji: '🧹' }
+    ],
+    animalSpawns: [
+      { type: 'mouse', delay: 3500 }
+    ],
+    foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 0, bread: 5, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
+    servings: '1 cocktail',
+    prepTime: '5',
+    linkType: 'ingredient',
+    sr28Rule: 'Rule D',
+    nutritionJson: {"cal":156.7,"pro":0.1,"fat":0.1,"carb":23.7,"fib":0.1,"h2o":148.6,"sug":22.4,"perServing":{"cal":156.7,"pro":0.1,"fat":0.1,"carb":23.7,"fib":0.1,"h2o":148.6,"sug":22.4,"AddedSugars":8.8,"IntrinsicSugars":13.6},"micros":{"vitaminA":0.0,"vitaminC":6.39,"vitaminD":0.0,"vitaminE":0.02,"vitaminK":0.0,"vitaminB6":0.01,"vitaminB12":0.0,"thiamin":0.0,"riboflavin":0.0,"niacin":0.01,"folate":3.3,"calcium":3.44,"iron":0.02,"magnesium":1.48,"phosphorus":1.32,"potassium":17.98,"sodium":10.44,"zinc":0.06,"copper":0.0,"selenium":0.02,"cholesterol":0.0,"saturatedFat":0.01,"monoFat":0.0,"polyFat":0.0,"omega3":0.0,"omega6":0.0},"gramsPerServing":181.7,"servings":1,"per100g":{"Energy_KCal":86.22,"Water":81.77,"Protein":0.06,"TotalLipidFat":0.04,"Carbohydrate":13.04,"FiberTotalDietary":0.05,"SugarsTotal":12.31,"Cholesterol":0.0,"FattyAcids_totalSaturated":0.01,"FattyAcids_totalMonounsaturated":0.0,"FattyAcids_totalPolyunsaturated":0.0,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.0,"Retinol":0.0,"Carotene_beta":0.17,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.02,"VitaminK_phylloquinone":0.0,"VitaminC_totalAscorbicAcid":6.39,"Thiamin":0.0,"Riboflavin":0.0,"Niacin":0.01,"PantothenicAcid":0.02,"VitaminB6":0.01,"Folate_total":3.3,"Folate_food":3.3,"Folate_DFE":3.3,"FolicAcid":0.0,"VitaminB12":0.0,"Choline_total":0.84,"Betaine":0.0,"LuteinZeaxanthin":2.48,"Lycopene":0.0,"Calcium_Ca":3.44,"Iron_Fe":0.02,"Magnesium_Mg":1.48,"Phosphorus_P":1.32,"Potassium_K":17.98,"Sodium_Na":10.44,"Zinc_Zn":0.06,"Copper_Cu":0.0,"Manganese_Mn":0.0,"Selenium_Se":0.02,"Tryptophan":0.0,"Threonine":0.0,"Isoleucine":0.0,"Leucine":0.0,"Lysine":0.0,"Methionine":0.0,"Cystine":0.0,"Phenylalanine":0.0,"Tyrosine":0.0,"Valine":0.0,"Arginine":0.0,"Histidine":0.0,"Alanine":0.0,"AsparticAcid":0.0,"GlutamicAcid":0.0,"Glycine":0.0,"Proline":0.0,"Serine":0.0,"omega3":0.0,"omega6":0.0,"AddedSugars":4.82,"IntrinsicSugars":7.5},"addedSugars":8.8,"intrinsicSugars":13.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"14812","name":"Alcoholic beverage, liqueur, sloe gin, 52 proof","grams":45.3},{"ndb":"9152","name":"Lemon juice, raw","grams":30.0},{"ndb":"14801","name":"Cocktail mixer, simple syrup, 1:1 sugar-water","grams":17.5},{"ndb":"14121","name":"Beverages, Carbonated beverage, club soda","grams":88.9}],"sections":[{"section_key":"cocktail","section_label":"Cocktail","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":181.7,"raw_water_grams":148.58,"raw_fat_grams":0.07,"raw_protein_grams":0.1,"raw_carb_grams":23.69,"final_grams":181.7}],"cookingMethod":"raw"},
+    recipeIngredients: [
+      { name: 'Sloe Gin Fizz', quantity: 'custom (g)', foodWord: 'SLOEGINFIZZ', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'sloe gin', quantity: '1 1/2 oz', section: 'cocktail', ndbNo: '14812', portionDesc: 'g', portionGrams: 45.3 },
+      { name: 'lemon juice', quantity: '1 oz', section: 'cocktail', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'simple syrup', quantity: '1/2 oz', section: 'cocktail', ndbNo: '14801', portionDesc: 'g', portionGrams: 17.5 },
+      { name: 'club soda', quantity: '3 oz', section: 'cocktail', ndbNo: '14121', portionDesc: 'g', portionGrams: 88.9 }
+    ],
+    recipeInstructions: [
+      'Combine sloe gin, lemon juice, and simple syrup in a shaker with ice.',
+      'Shake until well chilled, then strain into a highball glass over fresh ice.',
+      'Top with club soda and stir gently.',
+      'Suggestions (not included): Garnish with a lemon wheel or cherry.'
+    ],
+    sections: [
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+    ],
   }
 ];
