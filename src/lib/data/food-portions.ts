@@ -57456,7 +57456,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "CREMEDMURE",
-    "display": "Cr\u00e8me de M\u00fbre",
+    "display": "Cr\u00e8me de M\u00fbre (blackberry liqueur)",
     "groups": [
       "beverage"
     ],

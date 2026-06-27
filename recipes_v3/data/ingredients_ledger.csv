@@ -514,7 +514,7 @@ red_wine,14794,REDWINE,"Alcoholic beverage, wine, table, red, dry",Red Wine,ml,1
 port_wine,14788,PORTWINE,"Alcoholic beverage, wine, port, tawny, red, 20 proof",Red Tawny Port Wine,ml,1,
 creme_de_cacao_brown,14789,CREMEDECACAOBROWN,"Alcoholic beverage, liqueur, creme de cacao, brown, 50 proof",brown crème de cacao,ml,1,
 maraschino,14790,MARASCHINO,"Alcoholic beverage, liqueur, maraschino, Luxardo, cherry, 64 proof",Maraschino Liqueur,ml,1,
-creme_de_mure,14791,CREMEDMURE,"Alcoholic beverage, liqueur, blackberry, creme de mure, 36 proof",crème de mûre,ml,1,
+creme_de_mure,14791,CREMEDMURE,"Alcoholic beverage, liqueur, blackberry, creme de mure, 36 proof",Crème de Mûre (blackberry liqueur),ml,1,
 orgeat_syrup,14792,ORGEATYRUP,"Beverage, syrup, orgeat, almond syrup, non-alcoholic",Orgeat Syrup,ml,1,
 passion_fruit_liqueur,14793,PASSIONFRUITLEUR,"Alcoholic beverage, liqueur, passoa, passion fruit, 34 proof",Passion Fruit Liqueur,ml,1,
 prosecco,14795,PROSECCO,"Alcoholic beverage, wine, sparkling, Prosecco, 11% ABV, brut",Prosecco,fl oz,29.4,new NDB 14795; Prosecco brut sparkling wine 2026-06-25
