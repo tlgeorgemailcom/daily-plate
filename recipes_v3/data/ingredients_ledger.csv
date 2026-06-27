@@ -476,20 +476,20 @@ honey_syrup,14753,HONEYSYRUP,"Beverage, syrup, honey, Monin, non-alcoholic",hone
 white_rum,14754,WHITERUM,"Alcoholic beverage, rum, white, 80 proof",White Rum,fl oz,27.0,new named NDB 2026-06-24
 goslings_rum,14755,GOSLINGSRUM,"Alcoholic beverage, rum, dark, Goslings Black Seal, 80 proof",Goslings Black Seal Rum,fl oz,27.0,new named NDB 2026-06-24
 cuban_rum,14756,CUBANRUM,"Alcoholic beverage, rum, Cuban, Havana Club, 80 proof",Cuban Rum,fl oz,27.0,new named NDB 2026-06-24
-jamaican_rum,14757,JAMAICANRUM,"Alcoholic beverage, rum, Jamaican, Appleton, 80 proof",Jamaican Rum,fl oz,27.0,new named NDB 2026-06-24
+jamaican_rum,14757,JAMAICANRUM,"Alcoholic beverage, rum, Jamaican, Appleton, 80 proof",Jamaican rum,fl oz,27.0,new named NDB 2026-06-24
 irish_whiskey,14758,IRISHWHISKEY,"Alcoholic beverage, whiskey, Irish, 80 proof",Irish Whiskey,fl oz,27.0,new named NDB 2026-06-24
 dry_gin,14759,LONDONDRYGIN,"Alcoholic beverage, gin, London dry, 80 proof",dry gin,fl oz,27.0,new named NDB 2026-06-24
 vanilla_vodka,14760,VANILLAVODKA,"Alcoholic beverage, vodka, vanilla, 80 proof",Vanilla Vodka,fl oz,27.0,new named NDB 2026-06-24
 vodka_citron,14761,CITRONVODKA,"Alcoholic beverage, vodka, citron, lemon, 80 proof",Citron Vodka,fl oz,27.0,new named NDB 2026-06-24
 grappa,14762,GRAPPA,"Alcoholic beverage, grappa, Italian pomace brandy, 80 proof",Grappa,fl oz,27.0,new named NDB 2026-06-24
 cuban_aguardiente,14763,AGUARDIENTE,"Alcoholic beverage, aguardiente, Cuban cane spirit, 80 proof",Cuban Aguardiente,fl oz,27.0,new named NDB 2026-06-24
-gold_jamaican_rum,14764,GOLDJAMAICANRUM,"Alcoholic beverage, rum, gold, Jamaican, 80 proof",Gold Jamaican Rum,fl oz,27.0,new named NDB 80 proof 2026-06-24
-amber_jamaican_rum,14765,AMBERRUM,"Alcoholic beverage, rum, amber, Jamaican, 80 proof",Amber Rum,fl oz,27.0,new named NDB 80 proof 2026-06-24
+gold_jamaican_rum,14764,GOLDJAMAICANRUM,"Alcoholic beverage, rum, gold, Jamaican, 80 proof",gold Jamaican rum,fl oz,27.0,new named NDB 80 proof 2026-06-24
+amber_jamaican_rum,14765,AMBERRUM,"Alcoholic beverage, rum, amber, Jamaican, 80 proof",amber rum,fl oz,27.0,new named NDB 80 proof 2026-06-24
 ron_profundo,14766,RONPROFUNDO,"Alcoholic beverage, rum, Havana Club Profundo, ron oscuro, 80 proof",Havana Club Profundo,fl oz,27.0,new named NDB 80 proof 2026-06-24
 ron_smoky,14767,RONSMOKY,"Alcoholic beverage, rum, Havana Club Smoky, ron ahumado, 80 proof",Havana Club Smoky,fl oz,27.0,new named NDB 80 proof 2026-06-24
 lagavulin,14768,LAGAVULIN,"Alcoholic beverage, whisky, Scotch, single malt, Lagavulin, 86 proof",Lagavulin Single Malt Scotch,fl oz,27.0,new named NDB 86 proof 2026-06-24
 rhum_agricole_blanc,14769,RHUMAGRICOLE,"Alcoholic beverage, rhum agricole, blanc, Martinique, 100 proof",Rhum Agricole Blanc,fl oz,27.0,new named NDB 100 proof 2026-06-24
-overproof_jamaican_rum,14770,OVERPROOFJAMAICANRUM,"Alcoholic beverage, rum, overproof, Jamaican, 126 proof",Overproof Jamaican Rum,fl oz,27.0,new named NDB 126 proof 2026-06-24
+overproof_jamaican_rum,14770,OVERPROOFJAMAICANRUM,"Alcoholic beverage, rum, overproof, Jamaican, 126 proof",overproof Jamaican rum,fl oz,27.0,new named NDB 126 proof 2026-06-24
 cointreau,14771,COINTREAU,"Alcoholic beverage, Cointreau, orange liqueur, 80 proof",Cointreau,fl oz,27.0,"label: 95 kcal/oz, 7.1g C/oz, 40% ABV 2026-06-24"
 amontillado_sherry,14772,AMONTILLADO,"Alcoholic beverage, wine, sherry, Amontillado, dry, 40 proof",Amontillado Sherry,fl oz,27.0,"label: 136 kcal/100ml, 15-22% ABV, dry; using 20% ABV 2026-06-24"
 creme_de_menthe_white,14796,CREMEMENTHEWHITE,"Alcoholic beverage, creme de menthe, white (clear), 72 proof",white crème de menthe,fl oz,30.5,new NDB 14796; white creme de menthe 72 proof 2026-06-25

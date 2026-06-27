@@ -56388,7 +56388,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "JAMAICANRUM",
-    "display": "Jamaican Rum",
+    "display": "Jamaican rum",
     "groups": [
       "bar"
     ],
@@ -56619,7 +56619,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "GOLDJAMAICANRUM",
-    "display": "Gold Jamaican Rum",
+    "display": "gold Jamaican rum",
     "groups": [
       "bar"
     ],
@@ -56652,7 +56652,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "AMBERRUM",
-    "display": "Amber Rum",
+    "display": "amber rum",
     "groups": [
       "bar"
     ],
@@ -56817,7 +56817,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "OVERPROOFJAMAICANRUM",
-    "display": "Overproof Jamaican Rum",
+    "display": "overproof Jamaican rum",
     "groups": [
       "bar"
     ],
