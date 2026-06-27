@@ -111,7 +111,7 @@ coconut_oil,4047,OILCOCONUT,"Oil, coconut",coconut oil,tbsp,13.6,Auto-added 2026
 coconut_shredded_sweetened,12179,COCONUTSHREDDEDSWEET12179,"Nuts, coconut meat, dried (desiccated), sweetened, shredded",sweetened shredded coconut,cup,74.0,USDA shredded sweetened coconut; preferred for macaroons
 coconut_water,12119,COCONUTWATER,"Nuts, coconut water",coconut water,cup,240.0,Fresh coconut water; ~19 kcal/cup; NDB 12119
 cod_atlantic_raw,15015,CODRAW,"Fish, cod, Atlantic, raw",cod fillet,oz,28.35,
-coriander_seed,2013,CORIANDERSEED,"Spices, coriander seed",ground coriander,teaspoon,1.8,Ground coriander spice
+coriander_seed,2013,CORIANDERSEED,"Spices, coriander seed",coriander seed,teaspoon,1.8,Ground coriander spice
 corn_sweet_cooked,11168,CORN,"Corn, sweet, yellow, cooked, boiled, drained, without salt",sweet corn,"ear small (5-1/2"" to 6-1/2"" long)",89.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 corn_syrup_light,19350,SYRUPCORNLIGHT,"Syrups, corn, light",light corn syrup,cup,328.0,
 corn_tortilla,18363,TORTILLACORN,"Tortillas, ready-to-bake or -fry, corn",corn tortilla,oz,28.35,Auto-added 2026-06-17 from Turso+food-portions backfill
@@ -261,7 +261,7 @@ pork_tenderloin_raw,10060,PORKTENDERLOIN,"Pork, fresh, loin, tenderloin, separab
 potato_boiled_no_skin,11367,POTATOESBOILED,"Potatoes, boiled, cooked without skin, flesh, without salt",boiled potato (flesh),medium_potato,150.0,Pre-boiled potato flesh; grate or shred before pan-frying
 potato_raw,11352,POTATOESRAW,"Potatoes, flesh and skin, raw",raw potato (diced),medium_potato,150.0,
 potato_russet_raw,11353,POTATOESRUSSET,"Potatoes, russet, flesh and skin, raw",russet potato,large potato,369.0,Auto-added 2026-06-17 from Turso+food-portions backfill
-potato_white_raw,11354,POTATOESWHITE,"Potatoes, white, flesh and skin, raw",Yukon Gold potatoes (White potatoes in the database),medium potato,150.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+potato_white_raw,11354,POTATOESWHITE,"Potatoes, white, flesh and skin, raw",potato,medium potato,150.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 poultry_seasoning,2034,POULTRYSEASONING,"Spices, poultry seasoning",poultry seasoning,tsp,1.5,Auto-added 2026-06-17 from Turso+food-portions backfill
 powdered_sugar,19336,SUGARPOWDERED,"Sugars, powdered",powdered sugar,tsp,4.0,
 prosciutto,10141,PROSCIUTTO,"Pork, cured, ham, center slice, country-style, separable lean only, raw",Prosciutto,oz,28.35,FNDDS proxy for prosciutto; SR Legacy has no direct entry

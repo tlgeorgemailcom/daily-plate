@@ -283,7 +283,7 @@
       "grams": 2.3,
       "section": "beef",
       "ingredient_group": "beef",
-      "qty_display": "1 tsp black pepper",
+      "qty_display": "1 tsp ground black pepper",
       "contribution": {
         "Energy_KCal": 5.773,
         "Protein": 0.239,
@@ -430,7 +430,7 @@
       "grams": 160.0,
       "section": "vegetables",
       "ingredient_group": "vegetables",
-      "qty_display": "4 stalks",
+      "qty_display": "4 stalks celery",
       "contribution": {
         "Energy_KCal": 25.6,
         "Protein": 1.104,
