@@ -494,7 +494,7 @@ cointreau,14771,COINTREAU,"Alcoholic beverage, Cointreau, orange liqueur, 80 pro
 amontillado_sherry,14772,AMONTILLADO,"Alcoholic beverage, wine, sherry, Amontillado, dry, 40 proof",Amontillado Sherry,fl oz,27.0,"label: 136 kcal/100ml, 15-22% ABV, dry; using 20% ABV 2026-06-24"
 creme_de_menthe_white,14796,CREMEMENTHEWHITE,"Alcoholic beverage, creme de menthe, white (clear), 72 proof",white crème de menthe,fl oz,30.5,new NDB 14796; white creme de menthe 72 proof 2026-06-25
 creme_de_cacao_white,14797,CREMEDECACAOWHITE,"Alcoholic beverage, liqueur, creme de cacao, white, 50 proof",white crème de cacao,fl oz,31.6,new NDB 14797; white creme de cacao 50 proof 2026-06-25
-peach_schnapps,14799,PEACHSCHNAPPS,"Alcoholic beverage, liqueur, peach schnapps, 30 proof",Peach Schnapps,fl oz,27.0,new NDB 14799; 30 proof DeKuyper peach schnapps 2026-06-25
+peach_schnapps,14799,PEACHSCHNAPPS,"Alcoholic beverage, liqueur, peach schnapps, 30 proof",peach schnapps,fl oz,27.0,new NDB 14799; 30 proof DeKuyper peach schnapps 2026-06-25
 demerara_syrup,14773,DEMERARA,"Syrup, demerara sugar, cocktail mixer",Demerara Syrup,fl oz,30.0,"label: 41 kcal/tbsp, 11g C/tbsp → 1:1 simple syrup from demerara sugar 2026-06-24"
 elderflower_cordial,14774,ELDERFLOWERCORDIAL,"Cordial, elderflower, non-alcoholic, undiluted",Elderflower Cordial,fl oz,30.0,non-alcoholic undiluted concentrate; user data 17-45 kcal/100ml diluted → undiluted ~215 2026-06-24
 chamomile_cordial,14775,CHAMOMILECORDIAL,"Cordial, chamomile, non-alcoholic, botanical",Chamomile Cordial,fl oz,30.0,label: 30-60 kcal/fl oz midpoint 45 → 152 kcal/100ml; 8-15g C/fl oz midpoint → 38g/100ml 2026-06-24
@@ -518,7 +518,7 @@ creme_de_mure,14791,CREMEDMURE,"Alcoholic beverage, liqueur, blackberry, creme d
 orgeat_syrup,14792,ORGEATYRUP,"Beverage, syrup, orgeat, almond syrup, non-alcoholic",Orgeat Syrup,ml,1,
 passion_fruit_liqueur,14793,PASSIONFRUITLEUR,"Alcoholic beverage, liqueur, passoa, passion fruit, 34 proof",passion fruit liqueur,ml,1,
 prosecco,14795,PROSECCO,"Alcoholic beverage, wine, sparkling, Prosecco, 11% ABV, brut",Prosecco,fl oz,29.4,new NDB 14795; Prosecco brut sparkling wine 2026-06-25
-peach_schnapps_99,14800,PEACHSCHNAPPS99,"Alcoholic beverage, liqueur, peach schnapps, high-proof, 99 proof",Peach Schnapps (99 Proof),fl oz,26.5,new NDB 14800; 99-proof peach schnapps 0g carbs 2026-06-25
+peach_schnapps_99,14800,PEACHSCHNAPPS99,"Alcoholic beverage, liqueur, peach schnapps, high-proof, 99 proof",peach schnapps (99 proof),fl oz,26.5,new NDB 14800; 99-proof peach schnapps 0g carbs 2026-06-25
 simple_syrup,14801,SIMPLESYRUP,"Cocktail mixer, simple syrup, 1:1 sugar-water",simple syrup,fl oz,35.0,Custom NDB 14801; 1:1 sugar:water by weight; 200 kcal/100g; 50g carbs; density ~1.18 g/mL 2026-06-25
 orange_bitters,14802,ORANGEBITTERS,,orange bitters,dash,0.9,,,,,,
 raspberry_syrup,14803,RASPBERRYSYRUP,,raspberry syrup,fl oz,35.0,,,,,,,

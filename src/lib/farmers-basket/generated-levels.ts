@@ -26461,7 +26461,7 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Sex on the Beach', quantity: 'custom (g)', foodWord: 'SEXONTHEBEACH', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'vodka', quantity: '1½ oz', section: 'cocktail', ndbNo: '14051', portionDesc: 'g', portionGrams: 41.7 },
-      { name: 'Peach Schnapps', quantity: '1½ oz', section: 'cocktail', ndbNo: '14799', portionDesc: 'g', portionGrams: 40.5 },
+      { name: 'peach schnapps', quantity: '1½ oz', section: 'cocktail', ndbNo: '14799', portionDesc: 'g', portionGrams: 40.5 },
       { name: 'orange juice', quantity: '2 oz', section: 'cocktail', ndbNo: '9206', portionDesc: 'g', portionGrams: 62.0 },
       { name: 'cranberry juice cocktail', quantity: '1½ oz', section: 'cocktail', ndbNo: '14242', portionDesc: 'g', portionGrams: 47.4 }
     ],

@@ -55104,7 +55104,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "PEACHLIQUEUR",
-    "display": "Peach Liqueur",
+    "display": "peach liqueur",
     "groups": [
       "beverage"
     ],
@@ -56223,7 +56223,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "PEACHBRANDY",
-    "display": "Peach Brandy",
+    "display": "peach brandy",
     "groups": [
       "bar"
     ],
@@ -57640,7 +57640,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "PEACHSCHNAPPS",
-    "display": "Peach Schnapps",
+    "display": "peach schnapps",
     "groups": [
       "beverage"
     ],
@@ -57663,7 +57663,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "PEACHSCHNAPPS99",
-    "display": "Peach Schnapps (99 Proof)",
+    "display": "peach schnapps (99 proof)",
     "groups": [
       "beverage"
     ],
