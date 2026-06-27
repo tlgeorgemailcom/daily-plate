@@ -152,7 +152,7 @@ flour_cake_white_enriched,20084,FLOURCAKE,"Wheat flour, white, cake, enriched",c
 flour_pastry_white_enriched_bleached,20623,FLOURPASTRY,"Wheat flour, white (industrial), 9% protein, bleached, enriched",pastry flour (9% protein),cup,125.0,Lower-protein enriched flour for pie crust; same enrichment as AP
 flour_whole_wheat,20080,WHEATWHOLE,"Wheat flour, whole-grain",whole wheat flour,cup,120.0,Whole wheat flour; ~120g per cup
 focaccia_bread,18973,FOCACCIA,"Focaccia, Italian flatbread, plain",focaccia,piece,120,
-frankfurter_beef,7022,FRANKFURTERRAW,"Frankfurter, beef, unheated",Beef frankfurter,frankfurter,48.0,Auto-added 2026-06-17 from Turso+food-portions backfill
+frankfurter_beef,7022,FRANKFURTERRAW,"Frankfurter, beef, unheated",beef frankfurter,frankfurter,48.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 french_bread,18029,FRENCHBREAD,"Bread, french or vienna (includes sourdough)",French bread,oz,28.35,
 french_roll,18349,ROLLFRENCH,"Rolls, french",French roll,roll,38.0,
 garlic_powder,2020,GARLICPOWDER,"Spices, garlic powder",garlic powder,teaspoon,3.1,

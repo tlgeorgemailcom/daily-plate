@@ -73,7 +73,7 @@
       "grams": 17.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "1 tbsp (17g)",
+      "qty_display": "1 tbsp",
       "contribution": {
         "Energy_KCal": 17.17,
         "Protein": 0.177,
@@ -94,7 +94,7 @@
       "grams": 5.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "1 tsp (5g)",
+      "qty_display": "1 tsp",
       "contribution": {
         "Energy_KCal": 3.0,
         "Protein": 0.187,
@@ -115,7 +115,7 @@
       "grams": 15.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "1 tbsp (15g)",
+      "qty_display": "1 tbsp",
       "contribution": {
         "Energy_KCal": 19.5,
         "Protein": 0.056,
