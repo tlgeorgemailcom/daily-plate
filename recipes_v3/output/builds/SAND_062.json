@@ -52,7 +52,7 @@
       "grams": 13.5,
       "section": "patty",
       "ingredient_group": "patty",
-      "qty_display": "2 tbsp (13.5g)",
+      "qty_display": "2 tbsp",
       "contribution": {
         "Energy_KCal": 53.325,
         "Protein": 1.802,
@@ -73,7 +73,7 @@
       "grams": 10.0,
       "section": "patty",
       "ingredient_group": "patty",
-      "qty_display": "1 tbsp minced (10g)",
+      "qty_display": "1 tbsp minced",
       "contribution": {
         "Energy_KCal": 4.0,
         "Protein": 0.11,
@@ -115,7 +115,7 @@
       "grams": 1.1,
       "section": "patty",
       "ingredient_group": "patty",
-      "qty_display": "\u00bd tsp (1.1g)",
+      "qty_display": "\u00bd tsp",
       "contribution": {
         "Energy_KCal": 4.125,
         "Protein": 0.196,
@@ -136,7 +136,7 @@
       "grams": 3.0,
       "section": "patty",
       "ingredient_group": "patty",
-      "qty_display": "\u00bd tsp (3.0g)",
+      "qty_display": "\u00bd tsp",
       "contribution": {
         "Energy_KCal": 0.0,
         "Protein": 0.0,
@@ -157,7 +157,7 @@
       "grams": 0.6,
       "section": "patty",
       "ingredient_group": "patty",
-      "qty_display": "\u00bc tsp (0.6g)",
+      "qty_display": "\u00bc tsp",
       "contribution": {
         "Energy_KCal": 1.506,
         "Protein": 0.062,
@@ -178,7 +178,7 @@
       "grams": 13.5,
       "section": "patty",
       "ingredient_group": "patty",
-      "qty_display": "1 tbsp for pan (13.5g)",
+      "qty_display": "1 tbsp for pan",
       "contribution": {
         "Energy_KCal": 119.34,
         "Protein": 0.0,
@@ -262,7 +262,7 @@
       "grams": 13.8,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "1 tbsp (13.8g)",
+      "qty_display": "1 tbsp",
       "contribution": {
         "Energy_KCal": 93.84,
         "Protein": 0.132,
@@ -423,7 +423,7 @@
   "sections": [
     {
       "section_key": "patty",
-      "section_label": "Patty:",
+      "section_label": "Patty",
       "prep_method": "raw",
       "cook_method": "pan grilled",
       "cooking_method": "pan grilled",
@@ -443,7 +443,7 @@
     },
     {
       "section_key": "assembly",
-      "section_label": "Assembly:",
+      "section_label": "Assembly",
       "prep_method": "raw",
       "cook_method": "raw",
       "cooking_method": "raw",
