@@ -31,7 +31,7 @@
       "grams": 907.2,
       "section": "ropa",
       "ingredient_group": "ropa",
-      "qty_display": "2 lbs flank steak",
+      "qty_display": "2 lbs beef flank steak",
       "contribution": {
         "Energy_KCal": 1279.152,
         "Protein": 195.683,
@@ -283,7 +283,7 @@
       "grams": 2.1,
       "section": "ropa",
       "ingredient_group": "ropa",
-      "qty_display": "1 tsp cumin",
+      "qty_display": "1 tsp ground cumin",
       "contribution": {
         "Energy_KCal": 7.875,
         "Protein": 0.374,
@@ -367,7 +367,7 @@
       "grams": 1.15,
       "section": "ropa",
       "ingredient_group": "ropa",
-      "qty_display": "1/2 tsp black pepper",
+      "qty_display": "1/2 tsp ground black pepper",
       "contribution": {
         "Energy_KCal": 2.886,
         "Protein": 0.119,
