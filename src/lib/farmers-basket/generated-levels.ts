@@ -6849,7 +6849,7 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Classic Hot Dog', quantity: 'custom (g)', foodWord: 'HOTDOG', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'beef frankfurter', quantity: '1 frank (48g)', section: 'frank', ndbNo: '7022', portionDesc: 'g', portionGrams: 48.0 },
-      { name: 'hamburger bun', quantity: '1 bun (44g)', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 44.0 },
+      { name: 'hot dog bun', quantity: '1 hot dog bun (44g)', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 44.0 },
       { name: 'ketchup', quantity: '1 tbsp', section: 'assembly', ndbNo: '11935', portionDesc: 'g', portionGrams: 17.0 },
       { name: 'yellow mustard', quantity: '1 tsp', section: 'assembly', ndbNo: '2046', portionDesc: 'g', portionGrams: 5.0 },
       { name: 'sweet pickle relish', quantity: '1 tbsp', section: 'assembly', ndbNo: '11945', portionDesc: 'g', portionGrams: 15.0 }
@@ -6888,7 +6888,7 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Chicago Style Hot Dog', quantity: 'custom (g)', foodWord: 'CHICAGOSTYLEHOTDOG', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'beef frankfurter', quantity: '1 frank (48g)', section: 'frank', ndbNo: '7022', portionDesc: 'g', portionGrams: 48.0 },
-      { name: 'hamburger bun', quantity: '1 bun (44g)', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 44.0 },
+      { name: 'hot dog bun', quantity: '1 hot dog bun (44g)', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 44.0 },
       { name: 'yellow mustard', quantity: '1 tsp', section: 'assembly', ndbNo: '2046', portionDesc: 'g', portionGrams: 5.0 },
       { name: 'sweet pickle relish', quantity: '1 tbsp', section: 'assembly', ndbNo: '11945', portionDesc: 'g', portionGrams: 15.0 },
       { name: 'tomato', quantity: '2 Roma wedges (31g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 31.0 },
@@ -6931,7 +6931,7 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Chili Dog', quantity: 'custom (g)', foodWord: 'CHILIDOG', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'beef frankfurter', quantity: '1 frank (48g)', section: 'frank', ndbNo: '7022', portionDesc: 'g', portionGrams: 48.0 },
-      { name: 'hamburger bun', quantity: '1 bun (44g)', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 44.0 },
+      { name: 'hot dog bun', quantity: '1 hot dog bun (44g)', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 44.0 },
       { name: 'beef chili, no beans', quantity: '¼ cup (60g)', section: 'assembly', ndbNo: '22911', portionDesc: 'g', portionGrams: 60.0 },
       { name: 'onion', quantity: '1 tbsp chopped', section: 'assembly', ndbNo: '11282', portionDesc: 'g', portionGrams: 10.0 },
       { name: 'Cheddar cheese', quantity: '¼ cup shredded (28.25g)', section: 'assembly', ndbNo: '1009', portionDesc: 'g', portionGrams: 28.25 }
@@ -7020,7 +7020,7 @@ export const LEVELS: Level[] = [
       { name: 'apple cider vinegar', quantity: '¼ tsp', section: 'coleslaw', ndbNo: '2048', portionDesc: 'g', portionGrams: 1.25 },
       { name: 'salt', quantity: 'pinch (0.4g)', section: 'coleslaw', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.4 },
       { name: 'beef frankfurter', quantity: '1 frank (48g)', section: 'assembly', ndbNo: '7022', portionDesc: 'g', portionGrams: 48.0 },
-      { name: 'hamburger bun', quantity: '1 bun (44g)', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 44.0 },
+      { name: 'hot dog bun', quantity: '1 hot dog bun (44g)', section: 'assembly', ndbNo: '18350', portionDesc: 'g', portionGrams: 44.0 },
       { name: 'yellow mustard', quantity: '1 tsp', section: 'assembly', ndbNo: '2046', portionDesc: 'g', portionGrams: 5.0 }
     ],
     recipeInstructions: [
