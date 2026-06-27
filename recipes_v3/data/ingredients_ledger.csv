@@ -147,7 +147,7 @@ egg_yolk_raw,1125,YOLK,"Egg, yolk, raw, fresh",egg yolk,large_yolk,17.0,Large eg
 eggplant_raw,11209,EGGPLANT,"Eggplant, raw",eggplant,g,100.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 figs_dried_uncooked,9094,FIG,"Figs, dried, uncooked",dried figs,cup,150,Dried figs uncooked; 1 cup ~150g
 five_spice_powder,2010,CINNAMON,"Spices, cinnamon, ground",five-spice powder,tsp,2.6,Auto-added 2026-06-17 from Turso+food-portions backfill
-flour_ap_white_enriched_unbleached,20581,FLOURAPENRICHED,"Wheat flour, white, all-purpose, enriched, unbleached",all-purpose enriched unbleached white flour,cup,125.0,
+flour_ap_white_enriched_unbleached,20581,FLOURAPENRICHED,"Wheat flour, white, all-purpose, enriched, unbleached",flour,cup,125.0,
 flour_cake_white_enriched,20084,FLOURCAKE,"Wheat flour, white, cake, enriched",cake flour,cup,125.0,Home-cook accessible enriched flour; lower protein than AP for tender crust
 flour_pastry_white_enriched_bleached,20623,FLOURPASTRY,"Wheat flour, white (industrial), 9% protein, bleached, enriched",pastry flour (9% protein),cup,125.0,Lower-protein enriched flour for pie crust; same enrichment as AP
 flour_whole_wheat,20080,WHEATWHOLE,"Wheat flour, whole-grain",whole wheat flour,cup,120.0,Whole wheat flour; ~120g per cup
