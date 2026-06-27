@@ -910,7 +910,7 @@ OILPALM,Palm Oil,fats,,,,,4055,"Oil, palm",884.0,0.0,100.0,0.0,0.0,0.0,0.0,1.0,c
 OILPOPPYSEED,Poppyseed Oil,fats,,,,,4514,"Oil, poppyseed",884.0,0.0,100.0,0.0,0.0,0.0,0.0,1.0,custom (g),100.0,1.0,tablespoon,13.6,1.0,cup,218.0,1.0,tsp,4.5,,,,,,,,,,,,,,,,,,,,,,,,,,,
 OILRICEBRAN,Rice Bran,fats,,,,,4037,"Oil, rice bran",884.0,0.0,100.0,0.0,0.0,0.0,0.0,1.0,custom (g),100.0,1.0,tablespoon,13.6,1.0,cup,218.0,1.0,tsp,4.5,,,,,,,,,,,,,,,,,,,,,,,,,,,
 OILSALMON,Salmon Oil,fats,,,,,4593,"Fish oil, salmon",902.0,0.0,100.0,0.0,0.0,0.0,0.0,1.0,custom (g),100.0,1.0,tbsp,13.6,1.0,tsp,4.5,1.0,cup,218.0,,,,,,,,,,,,,,,,,,,,,,,,,,,
-OILSESAME,Sesame Oil,fats,,,,,4058,"Oil, sesame, salad or cooking",884.0,0.0,100.0,0.0,0.0,0.0,0.0,1.0,custom (g),100.0,1.0,tablespoon,13.6,1.0,cup,218.0,1.0,tsp,4.5,,,,,,,,,,,,,,,,,,,,,,,,,,,
+OILSESAME,sesame oil,fats,,,,,4058,"Oil, sesame, salad or cooking",884.0,0.0,100.0,0.0,0.0,0.0,0.0,1.0,custom (g),100.0,1.0,tablespoon,13.6,1.0,cup,218.0,1.0,tsp,4.5,,,,,,,,,,,,,,,,,,,,,,,,,,,
 OILSUNFLOWER,Sunflower Oil,fats,,,,,4545,"Oil, sunflower, linoleic, (partially hydrogenated)",884.0,0.0,100.0,0.0,0.0,0.0,0.0,1.0,custom (g),100.0,1.0,tbsp,13.6,1.0,cup,218.0,1.0,tsp,4.5,,,,,,,,,,,,,,,,,,,,,,,,,,,
 OILWHEATGERM,Wheat Germ Oil,fats,,,,,4038,"Oil, wheat germ",884.0,0.0,100.0,0.0,0.0,0.0,0.0,1.0,custom (g),100.0,1.0,tsp,4.5,1.0,tablespoon,13.6,1.0,cup,218.0,,,,,,,,,,,,,,,,,,,,,,,,,,,
 OKARA,Okara,legume,,,,,16130,Okara,76.0,3.5,1.7,12.2,0.0,81.6,0.0,1.0,custom (g),100.0,1.0,cup,122.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

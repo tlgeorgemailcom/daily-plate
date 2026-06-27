@@ -30306,7 +30306,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "OILSESAME",
-    "display": "Sesame Oil",
+    "display": "sesame oil",
     "groups": [
       "fats"
     ],

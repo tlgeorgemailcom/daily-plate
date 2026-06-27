@@ -6030,7 +6030,7 @@ export const LEVELS: Level[] = [
       { name: 'Banh Mi Sandwich', quantity: 'custom (g)', foodWord: 'BANHMI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'pork tenderloin', quantity: '4 oz (113g)', section: 'pork', ndbNo: '10060', portionDesc: 'g', portionGrams: 113.0 },
       { name: 'tamari', quantity: '1 tbsp (15g)', section: 'pork', ndbNo: '16124', portionDesc: 'g', portionGrams: 15.0 },
-      { name: 'Sesame oil', quantity: '1 tsp (4.5g)', section: 'pork', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'sesame oil', quantity: '1 tsp (4.5g)', section: 'pork', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'lime juice', quantity: '1 tbsp (15g)', section: 'pork', ndbNo: '9160', portionDesc: 'g', portionGrams: 15.0 },
       { name: 'sugar', quantity: '1 tsp (4g)', section: 'pork', ndbNo: '19335', portionDesc: 'g', portionGrams: 4.0 },
       { name: 'garlic powder', quantity: '½ tsp (1g)', section: 'pork', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.0 },
@@ -10515,7 +10515,7 @@ export const LEVELS: Level[] = [
       { name: 'ramen noodles (crushed, dry — discard flavor packet)', quantity: '1 pkg noodles', section: 'salad', ndbNo: '6583', portionDesc: 'g', portionGrams: 81.0 },
       { name: 'almonds', quantity: '¼ cup', section: 'salad', ndbNo: '12061', portionDesc: 'g', portionGrams: 23.0 },
       { name: 'sunflower seeds', quantity: '¼ cup', section: 'salad', ndbNo: '12037', portionDesc: 'g', portionGrams: 32.0 },
-      { name: 'Sesame oil', quantity: '2 tbsp', section: 'salad', ndbNo: '4058', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'sesame oil', quantity: '2 tbsp', section: 'salad', ndbNo: '4058', portionDesc: 'g', portionGrams: 27.2 },
       { name: 'olive oil', quantity: '2 tbsp', section: 'salad', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
       { name: 'rice vinegar (distilled vinegar used as proxy — see note)', quantity: '3 tbsp', section: 'salad', ndbNo: '2053', portionDesc: 'g', portionGrams: 45.0 },
       { name: 'tamari', quantity: '2 tbsp', section: 'salad', ndbNo: '16124', portionDesc: 'g', portionGrams: 30.0 },
@@ -10994,7 +10994,7 @@ export const LEVELS: Level[] = [
       { name: 'garlic', quantity: '6 cloves', section: 'stir_fry', ndbNo: '11215', portionDesc: 'g', portionGrams: 18.0 },
       { name: 'fresh ginger', quantity: '2 tbsp', section: 'stir_fry', ndbNo: '11216', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'tamari', quantity: '2½ tbsp', section: 'stir_fry', ndbNo: '16124', portionDesc: 'g', portionGrams: 45.0 },
-      { name: 'Sesame oil', quantity: '2 tsp', section: 'stir_fry', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'sesame oil', quantity: '2 tsp', section: 'stir_fry', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'olive oil', quantity: '2 tbsp', section: 'stir_fry', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.0 },
       { name: 'beef broth', quantity: '¼ cup', section: 'stir_fry', ndbNo: '6008', portionDesc: 'g', portionGrams: 60.0 },
       { name: 'cornstarch', quantity: '1 tbsp', section: 'stir_fry', ndbNo: '20027', portionDesc: 'g', portionGrams: 8.0 },
@@ -12132,7 +12132,7 @@ export const LEVELS: Level[] = [
       { name: 'olive oil', quantity: '2 tbsp neutral oil', section: 'stir_fry', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
       { name: 'soy sauce', quantity: '4 tbsp soy sauce', section: 'stir_fry', ndbNo: '16123', portionDesc: 'g', portionGrams: 64.0 },
       { name: 'hoisin sauce', quantity: '2 tbsp hoisin sauce', section: 'stir_fry', ndbNo: '6175', portionDesc: 'g', portionGrams: 32.0 },
-      { name: 'Sesame oil', quantity: '2 tsp sesame oil', section: 'stir_fry', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'sesame oil', quantity: '2 tsp sesame oil', section: 'stir_fry', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'cornstarch', quantity: '1 tbsp cornstarch', section: 'stir_fry', ndbNo: '20027', portionDesc: 'g', portionGrams: 8.0 },
       { name: 'ground black pepper', quantity: '1/2 tsp black pepper', section: 'stir_fry', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
     ],
@@ -12278,7 +12278,7 @@ export const LEVELS: Level[] = [
       { name: 'fresh ginger', quantity: '2 tbsp fresh ginger, grated', section: 'beef', ndbNo: '11216', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'soy sauce', quantity: '1/4 cup soy sauce', section: 'beef', ndbNo: '16123', portionDesc: 'g', portionGrams: 64.0 },
       { name: 'brown sugar', quantity: '3 tbsp brown sugar', section: 'beef', ndbNo: '19334', portionDesc: 'g', portionGrams: 27.0 },
-      { name: 'Sesame oil', quantity: '2 tsp sesame oil', section: 'beef', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'sesame oil', quantity: '2 tsp sesame oil', section: 'beef', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'scallions', quantity: '3 scallions, sliced', section: 'beef', ndbNo: '11291', portionDesc: 'g', portionGrams: 45.0 },
       { name: 'ground black pepper', quantity: '1/2 tsp black pepper', section: 'beef', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
       { name: 'red pepper flakes', quantity: '1/4 tsp red pepper flakes', section: 'beef', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.3 }
@@ -12384,7 +12384,7 @@ export const LEVELS: Level[] = [
       { name: 'garlic', quantity: '2 cloves', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'fresh ginger', quantity: '1 tbsp grated', section: 'sauce', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'hoisin sauce', quantity: '2 tbsp hoisin sauce', section: 'sauce', ndbNo: '6175', portionDesc: 'g', portionGrams: 32.0 },
-      { name: 'Sesame oil', quantity: '1 tbsp', section: 'sauce', ndbNo: '4058', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'sesame oil', quantity: '1 tbsp', section: 'sauce', ndbNo: '4058', portionDesc: 'g', portionGrams: 13.6 },
       { name: 'red pepper flakes', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.3 },
       { name: 'scallions', quantity: '4 large scallions', section: 'sauce', ndbNo: '11291', portionDesc: 'g', portionGrams: 100.0 }
     ],
@@ -12494,7 +12494,7 @@ export const LEVELS: Level[] = [
       { name: 'soy sauce', quantity: '3 tbsp soy sauce', section: 'stir_fry', ndbNo: '16123', portionDesc: 'g', portionGrams: 48.0 },
       { name: 'beef broth', quantity: '1/2 cup beef broth', section: 'stir_fry', ndbNo: '6008', portionDesc: 'g', portionGrams: 120.0 },
       { name: 'cornstarch', quantity: '1 tbsp cornstarch', section: 'stir_fry', ndbNo: '20027', portionDesc: 'g', portionGrams: 8.0 },
-      { name: 'Sesame oil', quantity: '1 tsp', section: 'stir_fry', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'sesame oil', quantity: '1 tsp', section: 'stir_fry', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'ground black pepper', quantity: '1/2 tsp black pepper', section: 'stir_fry', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
     ],
     recipeInstructions: [
@@ -13058,7 +13058,7 @@ export const LEVELS: Level[] = [
       { name: 'brown sugar', quantity: '3 tbsp', section: 'teriyaki', ndbNo: '19334', portionDesc: 'g', portionGrams: 41.4 },
       { name: 'garlic', quantity: '3 cloves', section: 'teriyaki', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'fresh ginger', quantity: '1 tbsp', section: 'teriyaki', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
-      { name: 'Sesame oil', quantity: '1 tsp', section: 'teriyaki', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'sesame oil', quantity: '1 tsp', section: 'teriyaki', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'cornstarch', quantity: '1 tsp', section: 'teriyaki', ndbNo: '20027', portionDesc: 'g', portionGrams: 2.7 }
     ],
     recipeInstructions: [
@@ -13153,7 +13153,7 @@ export const LEVELS: Level[] = [
       { name: 'Beef Stir Fry', quantity: 'custom (g)', foodWord: 'BEEFSTIRFRY', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'beef top sirloin', quantity: '1 lb', section: 'stir_fry', ndbNo: '23611', portionDesc: 'g', portionGrams: 453.6 },
       { name: 'soy sauce', quantity: '3 tbsp', section: 'stir_fry', ndbNo: '16123', portionDesc: 'g', portionGrams: 48.0 },
-      { name: 'Sesame oil', quantity: '1 tbsp', section: 'stir_fry', ndbNo: '4058', portionDesc: 'g', portionGrams: 13.5 },
+      { name: 'sesame oil', quantity: '1 tbsp', section: 'stir_fry', ndbNo: '4058', portionDesc: 'g', portionGrams: 13.5 },
       { name: 'cornstarch', quantity: '2 tsp', section: 'stir_fry', ndbNo: '20027', portionDesc: 'g', portionGrams: 5.4 },
       { name: 'coconut oil', quantity: '2 tbsp', section: 'stir_fry', ndbNo: '4047', portionDesc: 'g', portionGrams: 27.2 },
       { name: 'garlic', quantity: '4 cloves', section: 'stir_fry', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
@@ -13256,7 +13256,7 @@ export const LEVELS: Level[] = [
       { name: 'Chicken & Broccoli', quantity: 'custom (g)', foodWord: 'CHICKENBROCCOLI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'chicken breast (boneless/skinless)', quantity: '1 lb', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 453.6 },
       { name: 'soy sauce', quantity: '2 tbsp', section: 'chicken', ndbNo: '16123', portionDesc: 'g', portionGrams: 32.0 },
-      { name: 'Sesame oil', quantity: '1 tsp', section: 'chicken', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'sesame oil', quantity: '1 tsp', section: 'chicken', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'cornstarch', quantity: '1 tbsp', section: 'chicken', ndbNo: '20027', portionDesc: 'g', portionGrams: 8.1 },
       { name: 'broccoli', quantity: '4 cups', section: 'sauce', ndbNo: '11090', portionDesc: 'g', portionGrams: 364.0 },
       { name: 'coconut oil', quantity: '2 tbsp', section: 'sauce', ndbNo: '4047', portionDesc: 'g', portionGrams: 27.2 },
@@ -13267,7 +13267,7 @@ export const LEVELS: Level[] = [
       { name: 'beef broth', quantity: '1/2 cup', section: 'sauce', ndbNo: '6008', portionDesc: 'g', portionGrams: 120.0 },
       { name: 'brown sugar', quantity: '1 tbsp', section: 'sauce', ndbNo: '19334', portionDesc: 'g', portionGrams: 13.8 },
       { name: 'cornstarch', quantity: '1 tbsp', section: 'sauce', ndbNo: '20027', portionDesc: 'g', portionGrams: 8.1 },
-      { name: 'Sesame oil', quantity: '1 tsp', section: 'sauce', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 }
+      { name: 'sesame oil', quantity: '1 tsp', section: 'sauce', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 }
     ],
     recipeInstructions: [
       'Cut the chicken breast into bite-sized pieces. In a bowl, toss with 2 tbsp soy sauce, 1 tsp sesame oil, and 1 tbsp cornstarch. Set aside to marinate for 10 minutes.',
@@ -13527,7 +13527,7 @@ export const LEVELS: Level[] = [
       { name: 'garlic', quantity: '3 cloves', section: 'stir_fry', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'scallions', quantity: '4 stalks', section: 'stir_fry', ndbNo: '11291', portionDesc: 'g', portionGrams: 48.0 },
       { name: 'tamari', quantity: '3 tbsp', section: 'stir_fry', ndbNo: '16124', portionDesc: 'g', portionGrams: 54.0 },
-      { name: 'Sesame oil', quantity: '1 tsp', section: 'stir_fry', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'sesame oil', quantity: '1 tsp', section: 'stir_fry', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'olive oil', quantity: '2 tbsp', section: 'stir_fry', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
       { name: 'salt', quantity: '1/2 tsp', section: 'stir_fry', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'ground black pepper', quantity: '1/4 tsp', section: 'stir_fry', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
@@ -13582,7 +13582,7 @@ export const LEVELS: Level[] = [
       { name: 'brown sugar', quantity: '2 tbsp', section: 'sauce', ndbNo: '19334', portionDesc: 'g', portionGrams: 18.0 },
       { name: 'garlic', quantity: '4 cloves', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'fresh ginger', quantity: '1 tbsp', section: 'sauce', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
-      { name: 'Sesame oil', quantity: '1 tsp', section: 'sauce', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'sesame oil', quantity: '1 tsp', section: 'sauce', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'cornstarch', quantity: '1 tbsp', section: 'sauce', ndbNo: '20027', portionDesc: 'g', portionGrams: 8.0 },
       { name: 'red pepper flakes', quantity: '1/2 tsp', section: 'sauce', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.9 },
       { name: 'scallions', quantity: '3 stalks', section: 'sauce', ndbNo: '11291', portionDesc: 'g', portionGrams: 36.0 },
@@ -13631,7 +13631,7 @@ export const LEVELS: Level[] = [
       { name: 'chicken breast (boneless/skinless)', quantity: '1.5 lb', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 680.4 },
       { name: 'tamari', quantity: '1 tbsp', section: 'chicken', ndbNo: '16124', portionDesc: 'g', portionGrams: 18.0 },
       { name: 'cornstarch', quantity: '1 tbsp', section: 'chicken', ndbNo: '20027', portionDesc: 'g', portionGrams: 8.0 },
-      { name: 'Sesame oil', quantity: '1 tsp', section: 'chicken', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'sesame oil', quantity: '1 tsp', section: 'chicken', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'olive oil', quantity: '2 tbsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
       { name: 'Chicken Broth', quantity: '1/2 cup Chicken Broth (recipe)', section: 'broth', foodWord: 'CHICKENBROTH', portionDesc: 'g', portionGrams: 120.0, isDish: true, componentRef: 'STOCK_003' },
       { name: 'crimini mushrooms', quantity: '8 oz', section: 'stir_fry', ndbNo: '11266', portionDesc: 'g', portionGrams: 226.8 },
@@ -13642,7 +13642,7 @@ export const LEVELS: Level[] = [
       { name: 'fresh ginger', quantity: '1 tbsp', section: 'stir_fry', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'tamari', quantity: '2 tbsp', section: 'stir_fry', ndbNo: '16124', portionDesc: 'g', portionGrams: 36.0 },
       { name: 'oyster sauce', quantity: '1 tbsp', section: 'stir_fry', ndbNo: '6176', portionDesc: 'g', portionGrams: 18.0 },
-      { name: 'Sesame oil', quantity: '1 tsp', section: 'stir_fry', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'sesame oil', quantity: '1 tsp', section: 'stir_fry', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'cornstarch', quantity: '1 tbsp', section: 'stir_fry', ndbNo: '20027', portionDesc: 'g', portionGrams: 8.0 },
       { name: 'scallions', quantity: '3 stalks', section: 'stir_fry', ndbNo: '11291', portionDesc: 'g', portionGrams: 36.0 }
     ],
@@ -14016,7 +14016,7 @@ export const LEVELS: Level[] = [
       { name: 'salt', quantity: '1/2 tsp', section: 'rice', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'chicken breast (boneless/skinless)', quantity: '1.5 lb', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 680.4 },
       { name: 'tamari', quantity: '2 tbsp', section: 'chicken', ndbNo: '16124', portionDesc: 'g', portionGrams: 36.0 },
-      { name: 'Sesame oil', quantity: '1 tbsp', section: 'chicken', ndbNo: '4058', portionDesc: 'g', portionGrams: 13.5 },
+      { name: 'sesame oil', quantity: '1 tbsp', section: 'chicken', ndbNo: '4058', portionDesc: 'g', portionGrams: 13.5 },
       { name: 'garlic powder', quantity: '1 tsp', section: 'chicken', ndbNo: '2020', portionDesc: 'g', portionGrams: 3.1 },
       { name: 'fresh ginger', quantity: '1/2 tsp', section: 'chicken', ndbNo: '11216', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'olive oil', quantity: '1 tbsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
@@ -14024,7 +14024,7 @@ export const LEVELS: Level[] = [
       { name: 'tamari', quantity: '2 tbsp', section: 'peanut_sauce', ndbNo: '16124', portionDesc: 'g', portionGrams: 36.0 },
       { name: 'lime juice', quantity: '2 tbsp', section: 'peanut_sauce', ndbNo: '9160', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'honey', quantity: '1 tbsp', section: 'peanut_sauce', ndbNo: '19296', portionDesc: 'g', portionGrams: 21.0 },
-      { name: 'Sesame oil', quantity: '1 tsp', section: 'peanut_sauce', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'sesame oil', quantity: '1 tsp', section: 'peanut_sauce', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'fresh ginger', quantity: '1 tsp', section: 'peanut_sauce', ndbNo: '11216', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'garlic', quantity: '1 clove', section: 'peanut_sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'water', quantity: '2 tbsp', section: 'peanut_sauce', ndbNo: '14411', portionDesc: 'g', portionGrams: 30.0 },
@@ -14085,7 +14085,7 @@ export const LEVELS: Level[] = [
       { name: 'tamari', quantity: '3 tbsp', section: 'sauce', ndbNo: '16124', portionDesc: 'g', portionGrams: 54.0 },
       { name: 'honey', quantity: '3 tbsp', section: 'sauce', ndbNo: '19296', portionDesc: 'g', portionGrams: 63.0 },
       { name: 'rice wine vinegar (distilled vinegar)', quantity: '1 tbsp', section: 'sauce', ndbNo: '2053', portionDesc: 'g', portionGrams: 14.9 },
-      { name: 'Sesame oil', quantity: '1 tbsp', section: 'sauce', ndbNo: '4058', portionDesc: 'g', portionGrams: 13.5 },
+      { name: 'sesame oil', quantity: '1 tbsp', section: 'sauce', ndbNo: '4058', portionDesc: 'g', portionGrams: 13.5 },
       { name: 'garlic', quantity: '3 cloves', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'fresh ginger', quantity: '1 tbsp', section: 'sauce', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'cornstarch', quantity: '1 tbsp', section: 'sauce', ndbNo: '20027', portionDesc: 'g', portionGrams: 8.0 },
@@ -15314,7 +15314,7 @@ export const LEVELS: Level[] = [
       { name: 'honey', quantity: '3 tbsp', section: 'char_siu', ndbNo: '19296', portionDesc: 'g', portionGrams: 63.0 },
       { name: 'brown sugar', quantity: '2 tbsp', section: 'char_siu', ndbNo: '19334', portionDesc: 'g', portionGrams: 27.0 },
       { name: 'white wine', quantity: '2 tbsp white wine (sub for Shaoxing rice wine)', section: 'char_siu', ndbNo: '14106', portionDesc: 'g', portionGrams: 30.0 },
-      { name: 'Sesame oil', quantity: '1 tsp', section: 'char_siu', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'sesame oil', quantity: '1 tsp', section: 'char_siu', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'char_siu', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'fresh ginger', quantity: '1 tbsp fresh ginger, grated', section: 'char_siu', ndbNo: '11216', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'five-spice powder', quantity: '1 tsp five-spice powder (nutrition counted as cinnamon — closest SR Legacy proxy)', section: 'char_siu', ndbNo: '2010', portionDesc: 'g', portionGrams: 3.0 }
@@ -15451,7 +15451,7 @@ export const LEVELS: Level[] = [
       { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'rolls', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'fresh ginger', quantity: '1 tsp fresh ginger, minced', section: 'rolls', ndbNo: '11216', portionDesc: 'g', portionGrams: 4.0 },
       { name: 'tamari', quantity: '2 tbsp tamari', section: 'rolls', ndbNo: '16124', portionDesc: 'g', portionGrams: 30.0 },
-      { name: 'Sesame oil', quantity: '2 tsp sesame oil', section: 'rolls', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'sesame oil', quantity: '2 tsp sesame oil', section: 'rolls', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'wonton/egg roll wrapper', quantity: '12 large wonton/egg roll wrappers', section: 'rolls', ndbNo: '18368', portionDesc: 'g', portionGrams: 360.0 },
       { name: 'vegetable oil', quantity: '¼ cup vegetable oil (absorbed into rolls during frying)', section: 'rolls', ndbNo: '4513', portionDesc: 'g', portionGrams: 30.0 }
     ],
@@ -15501,7 +15501,7 @@ export const LEVELS: Level[] = [
       { name: 'fresh ginger', quantity: '1 tsp fresh ginger, minced', section: 'filling', ndbNo: '11216', portionDesc: 'g', portionGrams: 4.0 },
       { name: 'tamari', quantity: '2 tbsp tamari', section: 'filling', ndbNo: '16124', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'vegetable oil', quantity: '1 tbsp vegetable oil', section: 'filling', ndbNo: '4513', portionDesc: 'g', portionGrams: 13.6 },
-      { name: 'Sesame oil', quantity: '2 tsp sesame oil', section: 'filling', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 }
+      { name: 'sesame oil', quantity: '2 tsp sesame oil', section: 'filling', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 }
     ],
     recipeInstructions: [
       'Cook the rice: rinse 2 cups of white rice until water runs clear. Combine with 3 cups water in a medium saucepan. Bring to a boil, reduce heat to low, cover, and cook for 18 minutes. Remove from heat and let steam, covered, for 5 minutes.',
@@ -15900,7 +15900,7 @@ export const LEVELS: Level[] = [
       { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'filling', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'fresh ginger', quantity: '1 tsp fresh ginger, grated', section: 'filling', ndbNo: '11216', portionDesc: 'g', portionGrams: 4.0 },
       { name: 'tamari', quantity: '2 tbsp', section: 'filling', ndbNo: '16124', portionDesc: 'g', portionGrams: 30.0 },
-      { name: 'Sesame oil', quantity: '2 tsp', section: 'filling', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'sesame oil', quantity: '2 tsp', section: 'filling', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'vegetable oil', quantity: '1 tbsp', section: 'filling', ndbNo: '4513', portionDesc: 'g', portionGrams: 13.6 }
     ],
     recipeInstructions: [
@@ -16207,7 +16207,7 @@ export const LEVELS: Level[] = [
       { name: 'salt', quantity: '1/2 tsp', section: 'rice', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'raw salmon (chinook)', quantity: '8 oz, cubed', section: 'assembly', ndbNo: '15078', portionDesc: 'g', portionGrams: 226.8 },
       { name: 'tamari', quantity: '2 tbsp', section: 'assembly', ndbNo: '16124', portionDesc: 'g', portionGrams: 36.0 },
-      { name: 'Sesame oil', quantity: '2 tsp', section: 'assembly', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'sesame oil', quantity: '2 tsp', section: 'assembly', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'fresh ginger', quantity: '1 tsp, minced', section: 'assembly', ndbNo: '11216', portionDesc: 'g', portionGrams: 2.0 },
       { name: 'avocado', quantity: '1/2 avocado, thinly sliced', section: 'assembly', ndbNo: '9038', portionDesc: 'g', portionGrams: 75.0 },
       { name: 'cucumber', quantity: '1 cup, sliced', section: 'assembly', ndbNo: '11206', portionDesc: 'g', portionGrams: 119.0 },
@@ -16261,7 +16261,7 @@ export const LEVELS: Level[] = [
       { name: 'raw salmon (chinook)', quantity: '12 oz', section: 'salmon', ndbNo: '15078', portionDesc: 'g', portionGrams: 340.0 },
       { name: 'olive oil', quantity: '2 tbsp', section: 'salmon', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
       { name: 'tamari', quantity: '2 tbsp', section: 'salmon', ndbNo: '16124', portionDesc: 'g', portionGrams: 36.0 },
-      { name: 'Sesame oil', quantity: '2 tsp', section: 'salmon', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'sesame oil', quantity: '2 tsp', section: 'salmon', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'lime juice', quantity: '2 tbsp', section: 'salmon', ndbNo: '9160', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'salt', quantity: '1/2 tsp', section: 'salmon', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'quinoa dry', quantity: '1 1/3 cups dry', section: 'quinoa', ndbNo: '20035', portionDesc: 'g', portionGrams: 242.4 },
@@ -16524,7 +16524,7 @@ export const LEVELS: Level[] = [
       { name: 'water', quantity: '1 1/2 cups water', section: 'rice', ndbNo: '14411', portionDesc: 'g', portionGrams: 355.5 },
       { name: 'fresh yellowfin tuna', quantity: '16 oz fresh yellowfin tuna, cut into 3/4-inch cubes', section: 'poke', ndbNo: '15127', portionDesc: 'g', portionGrams: 453.6 },
       { name: 'tamari', quantity: '3 tbsp tamari', section: 'poke', ndbNo: '16124', portionDesc: 'g', portionGrams: 54.0 },
-      { name: 'Sesame oil', quantity: '2 tsp sesame oil', section: 'poke', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'sesame oil', quantity: '2 tsp sesame oil', section: 'poke', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'lime juice', quantity: '1 tbsp fresh lime juice', section: 'poke', ndbNo: '9160', portionDesc: 'g', portionGrams: 15.0 },
       { name: 'honey', quantity: '1 tsp honey', section: 'poke', ndbNo: '19296', portionDesc: 'g', portionGrams: 7.1 },
       { name: 'fresh ginger', quantity: '1 tbsp fresh ginger, grated', section: 'poke', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
@@ -16846,7 +16846,7 @@ export const LEVELS: Level[] = [
       { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'egg_rolls', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'fresh ginger', quantity: '1 tsp fresh ginger, grated', section: 'egg_rolls', ndbNo: '11216', portionDesc: 'g', portionGrams: 8.0 },
       { name: 'tamari', quantity: '1 tbsp', section: 'egg_rolls', ndbNo: '16124', portionDesc: 'g', portionGrams: 18.0 },
-      { name: 'Sesame oil', quantity: '2 tsp', section: 'egg_rolls', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'sesame oil', quantity: '2 tsp', section: 'egg_rolls', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'vegetable oil', quantity: '3 tbsp vegetable oil (absorbed during frying)', section: 'egg_rolls', ndbNo: '4513', portionDesc: 'g', portionGrams: 40.8 }
     ],
     recipeInstructions: [
@@ -16894,7 +16894,7 @@ export const LEVELS: Level[] = [
       { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'filling', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'fresh ginger', quantity: '1 tsp fresh ginger, grated', section: 'filling', ndbNo: '11216', portionDesc: 'g', portionGrams: 8.0 },
       { name: 'tamari', quantity: '2 tbsp', section: 'filling', ndbNo: '16124', portionDesc: 'g', portionGrams: 30.0 },
-      { name: 'Sesame oil', quantity: '2 tsp', section: 'filling', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 }
+      { name: 'sesame oil', quantity: '2 tsp', section: 'filling', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 }
     ],
     recipeInstructions: [
       'Bring 1½ cups of water to a boil in a medium saucepan; if the rice was rinsed, reduce the water by 2 tablespoons. Add the rice, reduce heat to low, cover, and cook until water is absorbed and rice is tender, about 18 minutes. Remove from heat and let stand 5 minutes, then fluff with a fork.',
@@ -16989,7 +16989,7 @@ export const LEVELS: Level[] = [
       { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'stir_fry', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'fresh ginger', quantity: '1 tbsp fresh ginger, grated', section: 'stir_fry', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'tamari', quantity: '3 tbsp', section: 'stir_fry', ndbNo: '16124', portionDesc: 'g', portionGrams: 54.0 },
-      { name: 'Sesame oil', quantity: '2 tsp', section: 'stir_fry', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'sesame oil', quantity: '2 tsp', section: 'stir_fry', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'vegetable oil', quantity: '2 tbsp', section: 'stir_fry', ndbNo: '4513', portionDesc: 'g', portionGrams: 27.2 },
       { name: 'cornstarch', quantity: '1 tbsp', section: 'stir_fry', ndbNo: '20027', portionDesc: 'g', portionGrams: 8.0 },
       { name: 'salt', quantity: '½ tsp', section: 'stir_fry', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
@@ -17043,7 +17043,7 @@ export const LEVELS: Level[] = [
       { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'sesame_tofu', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'fresh ginger', quantity: '1 tbsp fresh ginger, grated', section: 'sesame_tofu', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'tamari', quantity: '3 tbsp', section: 'sesame_tofu', ndbNo: '16124', portionDesc: 'g', portionGrams: 54.0 },
-      { name: 'Sesame oil', quantity: '2 tbsp', section: 'sesame_tofu', ndbNo: '4058', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'sesame oil', quantity: '2 tbsp', section: 'sesame_tofu', ndbNo: '4058', portionDesc: 'g', portionGrams: 27.2 },
       { name: 'honey', quantity: '1 tbsp', section: 'sesame_tofu', ndbNo: '19296', portionDesc: 'g', portionGrams: 21.0 },
       { name: 'rice vinegar', quantity: '1 tbsp', section: 'sesame_tofu', ndbNo: '2053', portionDesc: 'g', portionGrams: 14.9 },
       { name: 'cornstarch', quantity: '1 tbsp', section: 'sesame_tofu', ndbNo: '20027', portionDesc: 'g', portionGrams: 8.0 },
@@ -18339,7 +18339,7 @@ export const LEVELS: Level[] = [
       { name: 'large egg', quantity: '3 large eggs', section: 'egg_drop', ndbNo: '1123', portionDesc: 'g', portionGrams: 150.0 },
       { name: 'cornstarch', quantity: '3 tbsp', section: 'egg_drop', ndbNo: '20027', portionDesc: 'g', portionGrams: 24.0 },
       { name: 'tamari', quantity: '1 tbsp', section: 'egg_drop', ndbNo: '16124', portionDesc: 'g', portionGrams: 15.0 },
-      { name: 'Sesame oil', quantity: '1 tsp', section: 'egg_drop', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'sesame oil', quantity: '1 tsp', section: 'egg_drop', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'scallions', quantity: '4 medium scallions, thinly sliced', section: 'egg_drop', ndbNo: '11291', portionDesc: 'g', portionGrams: 60.0 },
       { name: 'fresh ginger', quantity: '½ tsp fresh ginger root, grated', section: 'egg_drop', ndbNo: '11216', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'salt', quantity: '½ tsp', section: 'egg_drop', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
@@ -18391,7 +18391,7 @@ export const LEVELS: Level[] = [
       { name: 'rice wine vinegar (distilled vinegar)', quantity: '3 tbsp', section: 'hot_sour', ndbNo: '2053', portionDesc: 'g', portionGrams: 45.0 },
       { name: 'tamari', quantity: '2 tbsp', section: 'hot_sour', ndbNo: '16124', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'white pepper', quantity: '1 tsp', section: 'hot_sour', ndbNo: '2032', portionDesc: 'g', portionGrams: 2.4 },
-      { name: 'Sesame oil', quantity: '1 tsp', section: 'hot_sour', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'sesame oil', quantity: '1 tsp', section: 'hot_sour', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'hot_sour', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'fresh ginger', quantity: '1 tbsp fresh ginger root, grated', section: 'hot_sour', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'salt', quantity: '½ tsp', section: 'hot_sour', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 }
