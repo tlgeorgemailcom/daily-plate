@@ -31,7 +31,7 @@
       "grams": 113.4,
       "section": "patty",
       "ingredient_group": "patty",
-      "qty_display": "4 oz raw (113.4g)",
+      "qty_display": "4 oz raw",
       "contribution": {
         "Energy_KCal": 170.1,
         "Protein": 21.24,
@@ -52,7 +52,7 @@
       "grams": 0.75,
       "section": "patty",
       "ingredient_group": "patty",
-      "qty_display": "\u00bd tsp (0.75g)",
+      "qty_display": "\u00bd tsp",
       "contribution": {
         "Energy_KCal": 2.302,
         "Protein": 0.072,
@@ -73,7 +73,7 @@
       "grams": 1.5,
       "section": "patty",
       "ingredient_group": "patty",
-      "qty_display": "\u00bc tsp (1.5g)",
+      "qty_display": "\u00bc tsp",
       "contribution": {
         "Energy_KCal": 0.0,
         "Protein": 0.0,
@@ -94,7 +94,7 @@
       "grams": 0.3,
       "section": "patty",
       "ingredient_group": "patty",
-      "qty_display": "\u215b tsp (0.3g)",
+      "qty_display": "\u215b tsp",
       "contribution": {
         "Energy_KCal": 0.753,
         "Protein": 0.031,
@@ -178,7 +178,7 @@
       "grams": 13.8,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "1 tbsp (13.8g)",
+      "qty_display": "1 tbsp",
       "contribution": {
         "Energy_KCal": 93.84,
         "Protein": 0.132,
