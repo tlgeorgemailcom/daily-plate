@@ -52,7 +52,7 @@
       "grams": 14.0,
       "section": "coleslaw",
       "ingredient_group": "coleslaw",
-      "qty_display": "1 tbsp (14g)",
+      "qty_display": "1 tbsp",
       "contribution": {
         "Energy_KCal": 95.2,
         "Protein": 0.134,
@@ -73,7 +73,7 @@
       "grams": 5.0,
       "section": "coleslaw",
       "ingredient_group": "coleslaw",
-      "qty_display": "1 tsp (5g)",
+      "qty_display": "1 tsp",
       "contribution": {
         "Energy_KCal": 1.05,
         "Protein": 0.0,
@@ -136,7 +136,7 @@
       "grams": 85.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "3 oz (85g)",
+      "qty_display": "3 oz",
       "contribution": {
         "Energy_KCal": 90.1,
         "Protein": 12.588,
@@ -178,7 +178,7 @@
       "grams": 14.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "1 tbsp (14g)",
+      "qty_display": "1 tbsp",
       "contribution": {
         "Energy_KCal": 100.38,
         "Protein": 0.119,
@@ -339,7 +339,7 @@
   "sections": [
     {
       "section_key": "coleslaw",
-      "section_label": "Coleslaw:",
+      "section_label": "Coleslaw",
       "prep_method": "raw",
       "cook_method": "raw",
       "cooking_method": "raw",
@@ -359,7 +359,7 @@
     },
     {
       "section_key": "assembly",
-      "section_label": "Assembly:",
+      "section_label": "Assembly",
       "prep_method": "raw",
       "cook_method": "pan grilled",
       "cooking_method": "pan grilled",
