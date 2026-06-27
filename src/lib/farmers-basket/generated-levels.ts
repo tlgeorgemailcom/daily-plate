@@ -3237,7 +3237,7 @@ export const LEVELS: Level[] = [
       { name: 'eggs', quantity: '2 large', section: 'omelette', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
       { name: 'salt', quantity: '⅛ tsp', section: 'omelette', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.3 },
       { name: 'butter', quantity: '1½ tsp', section: 'omelette', ndbNo: '1001', portionDesc: 'g', portionGrams: 7.0 },
-      { name: 'shredded cheese', quantity: '3 tbsp', section: 'omelette', ndbNo: '1251', portionDesc: 'g', portionGrams: 15.0 }
+      { name: 'Mexican blend cheese', quantity: '3 tbsp shredded Mexican blend cheese', section: 'omelette', ndbNo: '1251', portionDesc: 'g', portionGrams: 15.0 }
     ],
     recipeInstructions: [
       'Beat eggs with salt in a bowl until lightly combined.',
