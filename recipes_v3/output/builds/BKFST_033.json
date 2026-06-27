@@ -31,7 +31,7 @@
       "grams": 264.0,
       "section": "frittata",
       "ingredient_group": "frittata",
-      "qty_display": "6 medium eggs",
+      "qty_display": "6 large eggs",
       "contribution": {
         "Energy_KCal": 377.52,
         "Protein": 33.158,
@@ -157,7 +157,7 @@
       "grams": 2.0,
       "section": "frittata",
       "ingredient_group": "frittata",
-      "qty_display": "2 teaspoons leaves",
+      "qty_display": "2 teaspoons fresh thyme leaves",
       "contribution": {
         "Energy_KCal": 2.02,
         "Protein": 0.111,
