@@ -282,6 +282,7 @@ display_name = "fresh thyme leaves"
 - **Fresh/raw ingredients**: always include a prep state — active (`chopped`, `minced`, `sliced`) or explicit no-prep (`whole`, `leaves`, `sprigs`). Never leave a fresh ingredient with just a quantity.
 - **Component-ref rows**: `qty_display` must include the child recipe name and the word "recipe". Never a bare measure. Never "N servings" — use a real culinary measure (tbsp, cup, oz, g).
 - **Prep notes belong in `qty_display`, not in instructions**: embed dicing, mincing, etc. in `qty_display`. The instruction step just says "Add the garlic."
+- **Never embed a comma in `qty_display`**: commas are CSV field delimiters. `"2 1/4 tablespoons pork backfat, finely chopped"` parses as two fields, silently putting `"finely chopped"` in the `grams` column and corrupting the build. Use parentheses instead: `"2 1/4 tablespoons pork backfat (finely chopped)"`. (Discovered June 2026, BKFST_015 pork backfat row.)
 - **`Suggestions (not included):` for serving suggestions**: when a recipe has optional accompaniments not in the ingredient list, write a dedicated final instruction step: `Suggestions (not included): [serving text].` — never append `(not included)` inline to a regular instruction step.
 
 ### 4f — display_name_override rules
