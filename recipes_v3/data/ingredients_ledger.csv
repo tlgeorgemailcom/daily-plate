@@ -165,7 +165,7 @@ grapes_raw,9132,GRAPE,"Grapes, red or green (European type, such as Thompson see
 grapeseed_oil,4517,GRAPESEEDOIL,"Oil, grapeseed",grapeseed oil,tablespoon,13.6,Auto-added 2026-06-17 from Turso+food-portions backfill
 great_northern_beans_raw,16024,NORTHERNBEANRAW,"Beans, great northern, mature seeds, raw","great northern beans, dry",cup,200.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 green_beans_cooked,11053,SNAPBEAN,"Beans, snap, green, cooked, boiled, drained, without salt",green beans,cup,125.0,Auto-added 2026-06-17 from Turso+food-portions backfill
-ground_pork_raw,10219,GROUNDPORK,"Pork, fresh, ground, raw",raw ground pork,oz,28.35,
+ground_pork_raw,10219,GROUNDPORK,"Pork, fresh, ground, raw",ground pork,oz,28.35,
 ground_turkey_raw,5665,TURKEYBURGER,"Ground turkey, 93% lean, 7% fat, raw",ground turkey,oz,28.35,Auto-added 2026-06-17 from Turso+food-portions backfill
 half_and_half,1049,HALFANDHALF,"Cream, fluid, half and half",half-and-half,cup,242.0,Half cream half whole milk ~12% milkfat
 ham_diced_cooked,10136,HAM,"Pork, cured, ham, boneless, regular (approximately 11% fat), roasted",diced ham,oz,28.0,Cooked cured ham; NDB is already a roasted/cooked value
@@ -253,7 +253,7 @@ pork_backfat_raw,10004,PORKBACKFAT,"Pork, fresh, backfat, raw",pork backfat,tbsp
 pork_boston_butt_raw,10080,PORKBOSTONBUTT,"Pork, fresh, shoulder, (Boston butt), blade (steaks), separable lean and fat, raw",pork shoulder,oz,28.35,
 pork_center_rib_roast_raw,10044,PORKCROWNROAST,"Pork, fresh, loin, center rib (chops or roasts), bone-in, separable lean and fat, raw",pork center rib roast,serving,155.8,Auto-added 2026-06-17 from Turso+food-portions backfill
 pork_country_style_ribs_raw,10204,PORKCOUNTRYSTYLERIBS,"Pork, fresh, loin, country-style ribs, separable lean and fat, raw",pork country-style ribs,rib without refuse,128.0,Auto-added 2026-06-17 from Turso+food-portions backfill
-pork_ground_raw,10219,GROUNDPORK,"Pork, fresh, ground, raw",Ground pork (raw),oz,28.35,
+pork_ground_raw,10219,GROUNDPORK,"Pork, fresh, ground, raw",ground pork,oz,28.35,
 pork_loin_chop_boneless_raw,10062,PORKLOINCHOPBONELESS,"Pork, fresh, loin, top loin (chops), boneless, separable lean and fat, raw",pork loin chop boneless,oz,85.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 pork_loin_chop_raw,10036,PORKCHOP,"Pork, fresh, loin, center loin (chops), bone-in, separable lean and fat, raw",pork loin chop,serving,158.0,Auto-added 2026-06-17 from Turso+food-portions backfill
 pork_spareribs_raw,10088,PORKSPARERIBS,"Pork, fresh, spareribs, separable lean and fat, raw",pork spareribs,oz,85.0,Auto-added 2026-06-17 from Turso+food-portions backfill

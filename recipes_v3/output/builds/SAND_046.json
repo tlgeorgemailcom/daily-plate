@@ -31,7 +31,7 @@
       "grams": 85.0,
       "section": "meatballs",
       "ingredient_group": "meatballs",
-      "qty_display": "3 oz raw (85g)",
+      "qty_display": "3 oz raw",
       "contribution": {
         "Energy_KCal": 215.9,
         "Protein": 14.595,
@@ -52,7 +52,7 @@
       "grams": 43.0,
       "section": "meatballs",
       "ingredient_group": "meatballs",
-      "qty_display": "1\u00bd oz raw (43g)",
+      "qty_display": "1\u00bd oz ground pork",
       "contribution": {
         "Energy_KCal": 113.09,
         "Protein": 7.258,
@@ -73,7 +73,7 @@
       "grams": 21.0,
       "section": "meatballs",
       "ingredient_group": "meatballs",
-      "qty_display": "3 tbsp (21g)",
+      "qty_display": "3 tbsp",
       "contribution": {
         "Energy_KCal": 82.95,
         "Protein": 2.803,
@@ -115,7 +115,7 @@
       "grams": 30.0,
       "section": "meatballs",
       "ingredient_group": "meatballs",
-      "qty_display": "3 tbsp grated (30g)",
+      "qty_display": "3 tbsp grated",
       "contribution": {
         "Energy_KCal": 12.0,
         "Protein": 0.33,
@@ -136,7 +136,7 @@
       "grams": 10.0,
       "section": "meatballs",
       "ingredient_group": "meatballs",
-      "qty_display": "2 tbsp (10g)",
+      "qty_display": "2 tbsp",
       "contribution": {
         "Energy_KCal": 39.2,
         "Protein": 3.575,
@@ -304,7 +304,7 @@
       "grams": 75.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "\u00bc cup + 2 tbsp (75g)",
+      "qty_display": "\u00bc cup + 2 tbsp",
       "contribution": {
         "Energy_KCal": 37.5,
         "Protein": 1.042,
@@ -325,7 +325,7 @@
       "grams": 42.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "1\u00bd oz (42g)",
+      "qty_display": "1\u00bd oz",
       "contribution": {
         "Energy_KCal": 126.0,
         "Protein": 9.311,
@@ -486,7 +486,7 @@
   "sections": [
     {
       "section_key": "meatballs",
-      "section_label": "Meatballs:",
+      "section_label": "Meatballs",
       "prep_method": "raw",
       "cook_method": "pan grilled",
       "cooking_method": "pan grilled",
@@ -506,7 +506,7 @@
     },
     {
       "section_key": "assembly",
-      "section_label": "Assembly:",
+      "section_label": "Assembly",
       "prep_method": "raw",
       "cook_method": "raw",
       "cooking_method": "raw",

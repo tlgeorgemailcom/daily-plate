@@ -1493,7 +1493,7 @@ CEREALOATSDRY8120,Cereal Oats Dry,grains,,,,,8120,"Cereals, oats, regular and qu
 COCONUTSHREDDEDSWEET12179,Coconut Shredded Sweetened,fruits,,,,,12179,"Nuts, coconut meat, dried (desiccated), sweetened, shredded",501.0,2.88,35.49,47.67,4.5,12.55,43.17,1.0,custom (g),100.0,1.0,"cup, shredded",93.0,1.0,package (7 oz),199.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 BLACKPEPPER,Black Pepper,spice,,,,,2030,"Spices, pepper, black",251.0,10.4,3.3,64.0,25.3,12.5,0.6,1.0,custom (g),100.0,1.0,tsp,2.3,1.0,tbsp,6.9,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 GARLICPOWDER,Garlic Powder,spice,,,,,2020,"Spices, garlic powder",331.0,16.6,0.7,72.7,9.0,6.5,2.4,1.0,custom (g),100.0,1.0,tsp,3.1,1.0,tbsp,9.7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-GROUNDPORK,Ground Pork (Raw),protein,,,,,10219,"Pork, fresh, ground, raw",263.0,16.9,21.2,0.0,0.0,61.1,0.0,1.0,custom (g),100.0,1.0,oz,28.35,4.0,oz,113.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+GROUNDPORK,ground pork,protein,,,,,10219,"Pork, fresh, ground, raw",263.0,16.9,21.2,0.0,0.0,61.1,0.0,1.0,custom (g),100.0,1.0,oz,28.35,4.0,oz,113.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ONIONPOWDER,Onion Powder,spice,,,,,2026,"Spices, onion powder",341.0,10.4,1.0,79.1,15.2,5.4,6.6,1.0,custom (g),100.0,1.0,tsp,2.4,1.0,tbsp,6.9,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 OREGANO,Oregano (Dried),spice,,,,,2027,"Spices, oregano, dried",265.0,9.0,4.3,68.9,42.5,9.9,4.1,1.0,custom (g),100.0,1.0,"tsp, ground",1.8,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 PAPRIKA,Paprika,spice,,,,,2028,"Spices, paprika",282.0,14.1,12.9,54.0,34.9,11.2,10.3,1.0,custom (g),100.0,1.0,tsp,2.3,1.0,tbsp,6.8,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

@@ -50208,7 +50208,7 @@ export const FOODS: Food[] = [
   },
   {
     "word": "GROUNDPORK",
-    "display": "Ground Pork (Raw)",
+    "display": "ground pork",
     "groups": [
       "protein"
     ],
