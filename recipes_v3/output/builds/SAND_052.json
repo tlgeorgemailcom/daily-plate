@@ -31,7 +31,7 @@
       "grams": 100.0,
       "section": "falafel",
       "ingredient_group": "falafel",
-      "qty_display": "\u00bd cup dried (100g), soaked overnight",
+      "qty_display": "\u00bd cup dried chickpeas, soaked overnight (100g)",
       "contribution": {
         "Energy_KCal": 378.0,
         "Protein": 20.47,
@@ -52,7 +52,7 @@
       "grams": 15.0,
       "section": "falafel",
       "ingredient_group": "falafel",
-      "qty_display": "\u00bc cup fresh (15g)",
+      "qty_display": "\u00bc cup fresh parsley (15g)",
       "contribution": {
         "Energy_KCal": 5.4,
         "Protein": 0.446,
@@ -115,7 +115,7 @@
       "grams": 1.5,
       "section": "falafel",
       "ingredient_group": "falafel",
-      "qty_display": "\u00bd tsp (1.5g)",
+      "qty_display": "\u00bd tsp",
       "contribution": {
         "Energy_KCal": 4.965,
         "Protein": 0.248,
@@ -136,7 +136,7 @@
       "grams": 2.0,
       "section": "falafel",
       "ingredient_group": "falafel",
-      "qty_display": "1 tsp (2g)",
+      "qty_display": "1 tsp",
       "contribution": {
         "Energy_KCal": 7.5,
         "Protein": 0.356,
@@ -157,7 +157,7 @@
       "grams": 2.0,
       "section": "falafel",
       "ingredient_group": "falafel",
-      "qty_display": "1 tsp ground (2g)",
+      "qty_display": "1 tsp ground coriander",
       "contribution": {
         "Energy_KCal": 5.96,
         "Protein": 0.247,
@@ -178,7 +178,7 @@
       "grams": 1.5,
       "section": "falafel",
       "ingredient_group": "falafel",
-      "qty_display": "\u00bc tsp (1.5g)",
+      "qty_display": "\u00bc tsp",
       "contribution": {
         "Energy_KCal": 0.0,
         "Protein": 0.0,
@@ -283,7 +283,7 @@
       "grams": 20.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "4 tsp (20g)",
+      "qty_display": "4 tsp",
       "contribution": {
         "Energy_KCal": 119.0,
         "Protein": 3.4,
@@ -304,7 +304,7 @@
       "grams": 30.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "2 tbsp (30g)",
+      "qty_display": "2 tbsp",
       "contribution": {
         "Energy_KCal": 29.1,
         "Protein": 2.7,
@@ -325,7 +325,7 @@
       "grams": 0.7,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "1 tsp chopped (0.7g)",
+      "qty_display": "1 tsp chopped",
       "contribution": {
         "Energy_KCal": 0.301,
         "Protein": 0.024,
@@ -346,7 +346,7 @@
       "grams": 1.3,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "1 tsp chopped (1.3g)",
+      "qty_display": "1 tsp chopped",
       "contribution": {
         "Energy_KCal": 0.468,
         "Protein": 0.039,
@@ -367,7 +367,7 @@
       "grams": 0.7,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "1 tsp chopped (0.7g)",
+      "qty_display": "1 tsp chopped",
       "contribution": {
         "Energy_KCal": 0.308,
         "Protein": 0.023,
@@ -388,7 +388,7 @@
       "grams": 2.5,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "\u00bd tsp (2.5g)",
+      "qty_display": "\u00bd tsp",
       "contribution": {
         "Energy_KCal": 0.55,
         "Protein": 0.009,
@@ -570,7 +570,7 @@
   "sections": [
     {
       "section_key": "falafel",
-      "section_label": "Falafel:",
+      "section_label": "Falafel",
       "prep_method": "raw",
       "cook_method": "fried",
       "cooking_method": "fried",
@@ -590,7 +590,7 @@
     },
     {
       "section_key": "assembly",
-      "section_label": "Assembly:",
+      "section_label": "Assembly",
       "prep_method": "raw",
       "cook_method": "raw",
       "cooking_method": "raw",
