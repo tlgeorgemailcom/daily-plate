@@ -4403,7 +4403,7 @@ export const LEVELS: Level[] = [
       { name: 'sliced ham', quantity: '2 oz', section: 'sandwich', ndbNo: '7029', portionDesc: 'g', portionGrams: 56.0 },
       { name: 'deli turkey breast', quantity: '2 oz', section: 'sandwich', ndbNo: '7081', portionDesc: 'g', portionGrams: 56.7 },
       { name: 'Swiss cheese', quantity: '1½ oz', section: 'sandwich', ndbNo: '1040', portionDesc: 'g', portionGrams: 42.525 },
-      { name: 'large egg', quantity: '1 large', section: 'sandwich', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'large egg', quantity: '1 large egg', section: 'sandwich', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
       { name: 'whole milk', quantity: '2 tbsp', section: 'sandwich', ndbNo: '1077', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'salted butter', quantity: '2 tbsp', section: 'sandwich', ndbNo: '1001', portionDesc: 'g', portionGrams: 28.4 },
       { name: 'powdered sugar', quantity: '1 tsp', section: 'sandwich', ndbNo: '19336', portionDesc: 'g', portionGrams: 2.5 }

@@ -848,7 +848,7 @@ SAND_015,1,bread_white_commercial,2 slices (30g each),60,56,64,sandwich,sandwich
 SAND_015,2,ham_sliced_regular,2 oz,56.0,50,64,sandwich,sandwich,false,,
 SAND_015,3,turkey_breast_deli,2 oz,56.7,50,64,sandwich,sandwich,false,,
 SAND_015,4,cheese_swiss,1½ oz,42.525,35,50,sandwich,sandwich,false,,
-SAND_015,5,egg_whole_raw,1 large,50,50,50,sandwich,sandwich,false,,
+SAND_015,5,egg_whole_raw,1 large egg,50,50,50,sandwich,sandwich,false,,
 SAND_015,6,milk_whole,2 tbsp,30,25,35,sandwich,sandwich,false,,
 SAND_015,7,butter_salted,2 tbsp,28.4,21,35,sandwich,sandwich,false,,
 SAND_015,8,powdered_sugar,1 tsp,2.5,3,6,sandwich,sandwich,false,,
