@@ -18830,11 +18830,11 @@ export const LEVELS: Level[] = [
       { name: 'paprika', quantity: '1 tsp smoked paprika', section: 'soup', ndbNo: '2028', portionDesc: 'g', portionGrams: 2.3 },
       { name: 'cayenne pepper', quantity: '¼ tsp cayenne pepper', section: 'soup', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.45 },
       { name: 'black beans', quantity: '3 cans (15 oz) black beans, drained and rinsed', section: 'soup', ndbNo: '16015', portionDesc: 'g', portionGrams: 765.0 },
-      { name: 'bay leaf', quantity: '2 whole bay leaves', section: 'soup', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'bay leaves', quantity: '2 whole bay leaves', section: 'soup', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
       { name: 'lime juice', quantity: '2 tbsp lime juice', section: 'soup', ndbNo: '9160', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'fresh cilantro', quantity: '¼ cup fresh cilantro, chopped', section: 'soup', ndbNo: '11165', portionDesc: 'g', portionGrams: 8.0 },
       { name: 'salt', quantity: '1 tsp salt', section: 'soup', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
-      { name: 'ground black pepper', quantity: '¼ tsp black pepper', section: 'soup', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
+      { name: 'black pepper', quantity: '¼ tsp black pepper', section: 'soup', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
     ],
     recipeInstructions: [
       'Make or prepare the Vegetable Stock (see the Vegetable Stock recipe) if not already made.',
