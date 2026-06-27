@@ -52,7 +52,7 @@
       "grams": 4.6,
       "section": "coleslaw",
       "ingredient_group": "coleslaw",
-      "qty_display": "1 tsp (4.6g)",
+      "qty_display": "1 tsp",
       "contribution": {
         "Energy_KCal": 31.28,
         "Protein": 0.044,
@@ -73,7 +73,7 @@
       "grams": 1.25,
       "section": "coleslaw",
       "ingredient_group": "coleslaw",
-      "qty_display": "\u00bc tsp (1.25g)",
+      "qty_display": "\u00bc tsp",
       "contribution": {
         "Energy_KCal": 0.263,
         "Protein": 0.0,
@@ -157,7 +157,7 @@
       "grams": 5.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "1 tsp (5g)",
+      "qty_display": "1 tsp",
       "contribution": {
         "Energy_KCal": 3.0,
         "Protein": 0.187,
@@ -318,7 +318,7 @@
   "sections": [
     {
       "section_key": "coleslaw",
-      "section_label": "Coleslaw:",
+      "section_label": "Coleslaw",
       "prep_method": "raw",
       "cook_method": "raw",
       "cooking_method": "raw",
@@ -338,7 +338,7 @@
     },
     {
       "section_key": "assembly",
-      "section_label": "Assembly:",
+      "section_label": "Assembly",
       "prep_method": "raw",
       "cook_method": "grilled",
       "cooking_method": "grilled",
