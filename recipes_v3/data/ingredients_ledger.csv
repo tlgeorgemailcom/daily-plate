@@ -249,7 +249,7 @@ pineapple_canned_juice_pack_drained,9354,PINEAPPLECANNED,"Pineapple, canned, jui
 pineapple_juice_canned,9273,PINEAPPLEJUICE,"Pineapple juice, canned, unsweetened",pineapple juice,tablespoon,15.0,Reserved juice from canned pineapple; 1 tbsp = ~15g
 pita_white,18413,PITA,"Bread, pita, white, enriched","pita bread, white",pita,60.0,1 standard pita ~60g
 pork_back_ribs_raw,10192,PORKBACKRIBS,"Pork, fresh, backribs, separable lean and fat, raw",pork back ribs,lb,453.592,Auto-added 2026-06-17 from Turso+food-portions backfill
-pork_backfat_raw,10004,PORKBACKFAT,"Pork, fresh, backfat, raw",pork backfat (finely chopped),tbsp,14.0,Raw pork fatback used to enrich lean ground pork in homemade sausage recipes
+pork_backfat_raw,10004,PORKBACKFAT,"Pork, fresh, backfat, raw",pork backfat,tbsp,14.0,Raw pork fatback used to enrich lean ground pork in homemade sausage recipes
 pork_boston_butt_raw,10080,PORKBOSTONBUTT,"Pork, fresh, shoulder, (Boston butt), blade (steaks), separable lean and fat, raw",pork shoulder,oz,28.35,
 pork_center_rib_roast_raw,10044,PORKCROWNROAST,"Pork, fresh, loin, center rib (chops or roasts), bone-in, separable lean and fat, raw",pork center rib roast,serving,155.8,Auto-added 2026-06-17 from Turso+food-portions backfill
 pork_country_style_ribs_raw,10204,PORKCOUNTRYSTYLERIBS,"Pork, fresh, loin, country-style ribs, separable lean and fat, raw",pork country-style ribs,rib without refuse,128.0,Auto-added 2026-06-17 from Turso+food-portions backfill
