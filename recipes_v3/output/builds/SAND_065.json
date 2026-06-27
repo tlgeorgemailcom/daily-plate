@@ -94,7 +94,7 @@
       "grams": 10.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "1 tbsp chopped (10g)",
+      "qty_display": "1 tbsp chopped",
       "contribution": {
         "Energy_KCal": 4.0,
         "Protein": 0.11,
@@ -276,7 +276,7 @@
   "sections": [
     {
       "section_key": "frank",
-      "section_label": "Frank:",
+      "section_label": "Frank",
       "prep_method": "raw",
       "cook_method": "grilled",
       "cooking_method": "grilled",
@@ -296,7 +296,7 @@
     },
     {
       "section_key": "assembly",
-      "section_label": "Assembly:",
+      "section_label": "Assembly",
       "prep_method": "raw",
       "cook_method": "raw",
       "cooking_method": "raw",
