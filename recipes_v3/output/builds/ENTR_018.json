@@ -111,7 +111,7 @@
     {
       "ingredient_key": "chili_powder",
       "ndb_no": "2009",
-      "long_desc": "Spices, chili powder",
+      "long_desc": "",
       "grams": 2.7,
       "section": "marinade",
       "ingredient_group": "marinade",
@@ -279,7 +279,7 @@
     {
       "ingredient_key": "chili_powder",
       "ndb_no": "2009",
-      "long_desc": "Spices, chili powder",
+      "long_desc": "",
       "grams": 2.7,
       "section": "fajitas",
       "ingredient_group": "fajitas",
@@ -325,7 +325,7 @@
       "grams": 0.57,
       "section": "fajitas",
       "ingredient_group": "fajitas",
-      "qty_display": "1/4 tsp black pepper",
+      "qty_display": "1/4 tsp ground black pepper",
       "contribution": {
         "Energy_KCal": 1.443,
         "Protein": 0.06,

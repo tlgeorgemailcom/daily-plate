@@ -94,7 +94,7 @@
       "grams": 2.3,
       "section": "beef",
       "ingredient_group": "beef",
-      "qty_display": "1 tsp black pepper",
+      "qty_display": "1 tsp ground black pepper",
       "contribution": {
         "Energy_KCal": 5.773,
         "Protein": 0.239,
@@ -136,7 +136,7 @@
       "grams": 149.0,
       "section": "stir_fry",
       "ingredient_group": "stir_fry",
-      "qty_display": "1 large green pepper",
+      "qty_display": "1 large",
       "contribution": {
         "Energy_KCal": 29.8,
         "Protein": 1.281,
@@ -157,7 +157,7 @@
       "grams": 119.0,
       "section": "stir_fry",
       "ingredient_group": "stir_fry",
-      "qty_display": "1 medium red pepper",
+      "qty_display": "1 medium",
       "contribution": {
         "Energy_KCal": 36.89,
         "Protein": 1.178,
@@ -325,7 +325,7 @@
       "grams": 1.15,
       "section": "stir_fry",
       "ingredient_group": "stir_fry",
-      "qty_display": "1/2 tsp black pepper",
+      "qty_display": "1/2 tsp ground black pepper",
       "contribution": {
         "Energy_KCal": 2.886,
         "Protein": 0.119,

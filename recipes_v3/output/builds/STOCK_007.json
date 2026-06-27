@@ -444,7 +444,7 @@
   "sections": [
     {
       "section_key": "stock",
-      "section_label": "Stock:",
+      "section_label": "Stock",
       "prep_method": "raw",
       "cook_method": "boiled",
       "cooking_method": "boiled",

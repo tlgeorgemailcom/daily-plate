@@ -136,7 +136,7 @@
       "grams": 120.0,
       "section": "braise",
       "ingredient_group": "braise",
-      "qty_display": "3 stalks",
+      "qty_display": "3 stalks celery",
       "contribution": {
         "Energy_KCal": 19.2,
         "Protein": 0.828,
@@ -304,7 +304,7 @@
       "grams": 0.57,
       "section": "braise",
       "ingredient_group": "braise",
-      "qty_display": "1/4 tsp black pepper",
+      "qty_display": "1/4 tsp ground black pepper",
       "contribution": {
         "Energy_KCal": 1.443,
         "Protein": 0.06,

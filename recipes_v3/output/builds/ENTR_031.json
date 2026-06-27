@@ -94,7 +94,7 @@
       "grams": 149.0,
       "section": "picadillo",
       "ingredient_group": "picadillo",
-      "qty_display": "1 large green pepper",
+      "qty_display": "1 large",
       "contribution": {
         "Energy_KCal": 29.8,
         "Protein": 1.281,
@@ -325,7 +325,7 @@
       "grams": 0.57,
       "section": "picadillo",
       "ingredient_group": "picadillo",
-      "qty_display": "1/4 tsp black pepper",
+      "qty_display": "1/4 tsp ground black pepper",
       "contribution": {
         "Energy_KCal": 1.443,
         "Protein": 0.06,

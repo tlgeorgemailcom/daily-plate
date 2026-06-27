@@ -178,7 +178,7 @@
       "grams": 0.57,
       "section": "patties",
       "ingredient_group": "patties",
-      "qty_display": "1/4 tsp black pepper",
+      "qty_display": "1/4 tsp ground black pepper",
       "contribution": {
         "Energy_KCal": 1.443,
         "Protein": 0.06,
@@ -367,7 +367,7 @@
       "grams": 0.57,
       "section": "gravy",
       "ingredient_group": "gravy",
-      "qty_display": "1/4 tsp black pepper",
+      "qty_display": "1/4 tsp ground black pepper",
       "contribution": {
         "Energy_KCal": 1.443,
         "Protein": 0.06,

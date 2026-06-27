@@ -94,7 +94,7 @@
       "grams": 720.0,
       "section": "meat_sauce",
       "ingredient_group": "meat_sauce",
-      "qty_display": "3 cups crushed tomatoes (one 28 oz can)",
+      "qty_display": "3 cups (28 oz can)",
       "contribution": {
         "Energy_KCal": 230.4,
         "Protein": 11.808,
@@ -262,7 +262,7 @@
       "grams": 1.15,
       "section": "meat_sauce",
       "ingredient_group": "meat_sauce",
-      "qty_display": "1/2 tsp black pepper",
+      "qty_display": "1/2 tsp ground black pepper",
       "contribution": {
         "Energy_KCal": 2.886,
         "Protein": 0.119,
@@ -409,7 +409,7 @@
       "grams": 0.57,
       "section": "cheese_filling",
       "ingredient_group": "cheese_filling",
-      "qty_display": "1/4 tsp black pepper",
+      "qty_display": "1/4 tsp ground black pepper",
       "contribution": {
         "Energy_KCal": 1.443,
         "Protein": 0.06,

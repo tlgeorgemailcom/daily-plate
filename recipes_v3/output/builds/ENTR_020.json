@@ -132,7 +132,7 @@
     {
       "ingredient_key": "chili_powder",
       "ndb_no": "2009",
-      "long_desc": "Spices, chili powder",
+      "long_desc": "",
       "grams": 2.7,
       "section": "marinade",
       "ingredient_group": "marinade",
@@ -157,7 +157,7 @@
       "grams": 2.3,
       "section": "marinade",
       "ingredient_group": "marinade",
-      "qty_display": "1 tsp black pepper",
+      "qty_display": "1 tsp ground black pepper",
       "contribution": {
         "Energy_KCal": 5.773,
         "Protein": 0.239,
