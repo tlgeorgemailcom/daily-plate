@@ -31,7 +31,7 @@
       "grams": 113.0,
       "section": "patty",
       "ingredient_group": "patty",
-      "qty_display": "4 oz raw (113g)",
+      "qty_display": "4 oz raw",
       "contribution": {
         "Energy_KCal": 287.02,
         "Protein": 19.402,
@@ -52,7 +52,7 @@
       "grams": 1.5,
       "section": "patty",
       "ingredient_group": "patty",
-      "qty_display": "\u00bc tsp (1.5g)",
+      "qty_display": "\u00bc tsp",
       "contribution": {
         "Energy_KCal": 0.0,
         "Protein": 0.0,
@@ -73,7 +73,7 @@
       "grams": 0.3,
       "section": "patty",
       "ingredient_group": "patty",
-      "qty_display": "\u215b tsp (0.3g)",
+      "qty_display": "\u215b tsp",
       "contribution": {
         "Energy_KCal": 0.753,
         "Protein": 0.031,
@@ -157,7 +157,7 @@
       "grams": 17.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "1 tbsp (17g)",
+      "qty_display": "1 tbsp",
       "contribution": {
         "Energy_KCal": 17.17,
         "Protein": 0.177,
@@ -178,7 +178,7 @@
       "grams": 5.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "1 tsp (5g)",
+      "qty_display": "1 tsp",
       "contribution": {
         "Energy_KCal": 3.0,
         "Protein": 0.187,
@@ -381,7 +381,7 @@
   "sections": [
     {
       "section_key": "patty",
-      "section_label": "Patty:",
+      "section_label": "Patty",
       "prep_method": "raw",
       "cook_method": "pan grilled",
       "cooking_method": "pan grilled",
@@ -401,7 +401,7 @@
     },
     {
       "section_key": "assembly",
-      "section_label": "Assembly:",
+      "section_label": "Assembly",
       "prep_method": "raw",
       "cook_method": "raw",
       "cooking_method": "raw",
