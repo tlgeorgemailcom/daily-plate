@@ -3654,7 +3654,7 @@ export const LEVELS: Level[] = [
       'Scatter the shredded Swiss cheese, crumbled bacon, and diced onion evenly over the bottom of the prepared pan.',
       'Pour the egg custard over the filling.',
       'Bake for 35 to 40 minutes until the custard is just set in the center and the top is lightly golden. Cool on a rack for at least 10 minutes before slicing.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with an arugula salad, mixed green salad, or asparagus.'
     ],
     sections: [
       { key: 'filling', label: 'Bacon filling', cookingMethod: '', yieldFactorWater: 0.9 }
