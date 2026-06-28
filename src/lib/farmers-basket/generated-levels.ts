@@ -6138,7 +6138,7 @@ export const LEVELS: Level[] = [
       'Melt butter in a non-toxic nonstick skillet over medium-low heat. Add the eggs and scramble gently, stirring slowly, until just set. Remove from heat while still slightly glossy.',
       'Split the croissant in half horizontally. Lay the cheddar slice on the bottom half.',
       'Spoon the scrambled eggs over the cheese. Close the sandwich and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with a green salad, fresh berries, or hash browns.'
     ],
     sections: [
       { key: 'eggs', label: 'Eggs', cookingMethod: '', yieldFactorWater: 1.0 },
