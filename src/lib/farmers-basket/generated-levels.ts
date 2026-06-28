@@ -2734,7 +2734,7 @@ export const LEVELS: Level[] = [
       'Melt the butter in a skillet or griddle over medium heat until foamy.',
       'Place the soaked bread slices in the pan and cook until golden brown on the bottom, about 2–3 minutes.',
       'Flip and cook the second side until golden brown, about 2 minutes more. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with scrambled eggs, fresh fruit, bacon, or maple syrup.'
     ],
     sections: [
       { key: 'main', label: 'French toast', cookingMethod: '', yieldFactorWater: 0.9 }
