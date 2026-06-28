@@ -436,6 +436,11 @@ BKFST_012,4,"Gradually pour in the whole milk, whisking continuously to prevent 
 BKFST_012,5,"Bring the gravy to a gentle simmer, whisking often, and cook 4–6 minutes until thickened to a pourable sauce that coats the back of a spoon."
 BKFST_012,6,Return the browned sausage to the skillet and stir to combine. Simmer 1–2 minutes more to reheat. Taste and adjust salt and pepper.
 BKFST_012,7,Suggestions (not included): Serve hot over split biscuits.
+BKFST_013,1,Wash and scrub the potatoes and remove any blemishes.
+BKFST_013,2,"Using the large holes of a box grater, grate the potatoes with the skin on. Transfer to a strainer and rinse under cold water until clear. Wrap tightly in cheesecloth and squeeze firmly to remove as much liquid as possible."
+BKFST_013,3,Season the potatoes with salt and toss to combine.
+BKFST_013,4,Heat the olive oil in a large skillet over medium-high heat until shimmering.
+BKFST_013,5,"Add the potatoes in an even layer and press down firmly. Cook undisturbed until the bottom is deep golden brown, about 5–6 minutes. Flip in sections and cook the second side until crisp and golden, 4–5 minutes more."
 BKFST_002,1,For each serving:
 BKFST_002,2,Split 2 warm biscuits open and arrange on a plate.
 BKFST_002,3,Ladle about 1/2 cup (115 g) of hot sausage gravy over the split biscuits. Serve immediately.
@@ -494,10 +499,6 @@ BKFST_014,1,"Whisk together the flour, baking powder, sugar, and salt in a large
 BKFST_014,2,"In a separate bowl, beat the eggs, then stir in the milk and melted butter."
 BKFST_014,3,Pour the wet ingredients into the dry and stir just until combined; a few lumps are fine.
 BKFST_014,4,"Preheat a waffle iron and lightly grease it. Pour batter into the center and cook until the waffle is golden brown and crisp, about 4–5 minutes."
-BKFST_013,1,"Place the potatoes in a saucepan, cover with cold water, and bring to a boil. Turn off heat and let potatoes sit in water for 5 minutes. Drain, let cool slightly, then peel and coarsely shred."
-BKFST_013,2,Season the shredded potato with the salt and toss to combine.
-BKFST_013,3,Heat the olive oil in a large skillet over medium-high heat until shimmering.
-BKFST_013,4,"Add the potato in an even layer and press down firmly. Cook undisturbed until the bottom is deep golden brown, about 5–6 minutes. Flip in sections and cook the second side until crisp and golden, 4–5 minutes more."
 BKFST_017,1,"Warm the flour tortilla in a dry skillet over medium heat for 30 seconds per side, or microwave for 15–20 seconds, until soft and pliable."
 BKFST_017,2,"Warm the refried beans and black beans together in a small saucepan over medium heat, stirring until heated through, about 3 minutes."
 BKFST_017,3,Spoon the bean mixture onto the center of the tortilla and season with a pinch of salt.
@@ -1025,15 +1026,15 @@ SAUCE_008,6,"Remove from heat. Add Parmesan a little at a time, stirring until f
 SAUCE_008,7,"Season with salt, white pepper, and a pinch of nutmeg. Stir to combine."
 SAUCE_008,8,"Hold warm over very low heat, stirring occasionally, if not serving immediately."
 SAUCE_008,9,Suggestions (not included): Serve immediately over pasta.
-SAUCE_009,1,Do not use aluminum to prepare or store. It will gray the mixture.,
-SAUCE_009,2,"In a small heatproof bowl, whisk together the egg yolks and lemon juice until smooth and combined.",
-SAUCE_009,3,"Set the bowl over a saucepan of barely simmering water, ensuring the bottom of the bowl does not touch the water.",
-SAUCE_009,4,"Whisk constantly over gentle heat until the yolk mixture thickens, turns pale yellow, and reaches 160°F (71°C), about 3–4 minutes. When the whisk is lifted, the mixture should ribbon and hold a trail briefly.",
-SAUCE_009,5,Remove from heat and continue whisking for 1 minute to cool slightly.,
-SAUCE_009,6,"Begin adding the grapeseed oil one drop at a time, whisking constantly to establish the emulsion.",
-SAUCE_009,7,"Once the mayonnaise begins to thicken and hold its shape, add the remaining oil in a thin, steady stream, whisking continuously.",
-SAUCE_009,8,Season with salt and white pepper. Taste and adjust seasoning.,
-SAUCE_009,9,Transfer to a jar and refrigerate immediately. Use within 5 days.,
+SAUCE_009,1,Do not use aluminum to prepare or store. It will gray the mixture.
+SAUCE_009,2,"In a small heatproof bowl, whisk together the egg yolks and lemon juice until smooth and combined."
+SAUCE_009,3,"Set the bowl over a saucepan of barely simmering water, ensuring the bottom of the bowl does not touch the water."
+SAUCE_009,4,"Whisk constantly over gentle heat until the yolk mixture thickens, turns pale yellow, and reaches 160°F (71°C), about 3–4 minutes. When the whisk is lifted, the mixture should ribbon and hold a trail briefly."
+SAUCE_009,5,Remove from heat and continue whisking for 1 minute to cool slightly.
+SAUCE_009,6,"Begin adding the grapeseed oil one drop at a time, whisking constantly to establish the emulsion."
+SAUCE_009,7,"Once the mayonnaise begins to thicken and hold its shape, add the remaining oil in a thin, steady stream, whisking continuously."
+SAUCE_009,8,Season with salt and white pepper. Taste and adjust seasoning.
+SAUCE_009,9,Transfer to a jar and refrigerate immediately. Use within 5 days.
 SAUCE_010,1,"Combine the ground mustard, white wine, and apple cider vinegar in a small non-reactive bowl and whisk until smooth."
 SAUCE_010,2,Let stand uncovered at room temperature for 30 minutes to hydrate the mustard powder.
 SAUCE_010,3,Whisk again until the paste is uniform and no dry clumps remain.
