@@ -3742,7 +3742,7 @@ export const LEVELS: Level[] = [
       'Add the lemon juice and mash with a fork to your preferred texture — smooth or slightly chunky.',
       'Spread the mashed avocado evenly on top of the warm toast.',
       'Drizzle with olive oil, then finish with a pinch of flaked salt and red pepper flakes.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with a sunny-side-up egg, bacon, or smoked salmon.'
     ],
     sections: [
       { key: 'toast', label: 'Avocado Toast', cookingMethod: '', yieldFactorWater: 1.0 }
