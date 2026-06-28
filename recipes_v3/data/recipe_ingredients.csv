@@ -574,7 +574,7 @@ BKFST_003,1,egg_cooked_poached,4 large eggs,200.0,180,220,egg,egg,false,poached 
 BKFST_003,2,@BKFST_004,2 English muffins,114.0,102,126,muffin,muffin,false,split in half,
 BKFST_003,3,canadian_bacon_raw,4 slices,114.0,102,126,bacon,bacon,false,Canadian bacon,
 BKFST_003,4,@BKFST_006,1 cup,240.0,216,264,hollandaise,hollandaise,false,hollandaise (4 x 1/4 cup),
-BKFST_005,1,bread_white_commercial,4 slices,120.0,115,125,main,main,false,white sandwich bread,
+BKFST_005,1,bread_white_commercial,4 slices (30g each),120.0,115,125,main,main,false,white sandwich bread,
 BKFST_005,2,egg_whole_raw,"1 large egg, beaten",50.0,48,52,main,main,false,"large egg, beaten",
 BKFST_005,3,milk_lowfat_2pct,¼ cup,70.0,65,75,main,main,false,2% milk,
 BKFST_005,4,butter_salted,1½ tablespoons,21.0,19,23,main,main,false,butter,
