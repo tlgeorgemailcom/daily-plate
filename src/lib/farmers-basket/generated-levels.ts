@@ -2935,7 +2935,7 @@ export const LEVELS: Level[] = [
       'In a separate bowl, beat the eggs, then stir in the milk and melted butter.',
       'Pour the wet ingredients into the dry and stir just until combined; a few lumps are fine.',
       'Preheat a waffle iron and lightly grease it. Pour batter into the center and cook until the waffle is golden brown and crisp, about 4–5 minutes.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with maple syrup, whipped cream, or fresh berries.'
     ],
     sections: [
       { key: 'batter', label: 'Waffle batter', cookingMethod: '', yieldFactorWater: 0.62 }
