@@ -120,7 +120,8 @@ class Recipe:
     yield_factor_protein: float
     yield_factor_carbohydrate: float
     yield_factor_other: float
-    status: str
+    yield_factor_fiber: float = 1.0
+    status: str = ""
     audit_status: str = ""
     audit_notes: str = ""
     skip_macros: str = ""  # comma-sep USDA nutrient keys to exclude from scoring (defective canonical)
@@ -163,6 +164,7 @@ class Section:
     yield_factor_protein: float
     yield_factor_carbohydrate: float
     yield_factor_other: float
+    yield_factor_fiber: float = 1.0
     filling_class: str = ""   # e.g. 'dense_fruit' — selects BINDING coefficient in yield_calc
     cook_stages: str = ""     # e.g. '425:15,350:37' — temp_f:minutes pairs, comma-sep
     boil_stages: str = ""     # e.g. '8' — stovetop boil minutes (temp fixed at 212°F)
@@ -232,6 +234,7 @@ def load_recipes() -> dict[str, Recipe]:
                 yield_factor_protein=_parse_float(row.get("yield_factor_protein"), 1.0),
                 yield_factor_carbohydrate=_parse_float(row.get("yield_factor_carbohydrate"), 1.0),
                 yield_factor_other=_parse_float(row.get("yield_factor_other"), 1.0),
+                yield_factor_fiber=_parse_float(row.get("yield_factor_fiber"), 1.0),
                 status=row.get("status", "").strip(),
                 audit_status=row.get("audit_status", "").strip(),
                 audit_notes=row.get("audit_notes", "").strip(),
@@ -320,6 +323,7 @@ def load_sections() -> dict[str, list[Section]]:
                 yield_factor_protein=_parse_float(row.get("yield_factor_protein"), 1.0),
                 yield_factor_carbohydrate=_parse_float(row.get("yield_factor_carbohydrate"), 1.0),
                 yield_factor_other=_parse_float(row.get("yield_factor_other"), 1.0),
+                yield_factor_fiber=_parse_float(row.get("yield_factor_fiber"), 1.0),
                 filling_class=(row.get("filling_class") or "").strip(),
                 cook_stages=(row.get("cook_stages") or "").strip(),
                 boil_stages=(row.get("boil_stages") or "").strip(),

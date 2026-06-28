@@ -267,6 +267,7 @@ def _build_recipe_single(
     yfp = recipe.yield_factor_protein
     yfc = recipe.yield_factor_carbohydrate
     yfo = recipe.yield_factor_other
+    yfi = recipe.yield_factor_fiber
 
     retained: dict[str, float] = {}
     for n in EXTENDED_NUTRIENTS:
@@ -278,6 +279,8 @@ def _build_recipe_single(
             retained[n] = sums[n] * yfp
         elif n == "Carbohydrate":
             retained[n] = sums[n] * yfc
+        elif n == "FiberTotalDietary":
+            retained[n] = sums[n] * yfi
         elif n in _MACRO_SET:
             retained[n] = sums[n]
         elif n in _FAT_SOLUBLE_NUTRIENTS:
@@ -298,7 +301,7 @@ def _build_recipe_single(
     retained_added = sum_added_sugar * sugar_retention
     retained_intrinsic = sum_intrinsic_sugar * sugar_retention
 
-    final_grams = cooked_total_grams(raw_total_grams, raw_water, raw_fat, yfw, yff, sums.get("Protein", 0.0), yfp, sums.get("Carbohydrate", 0.0), yfc)
+    final_grams = cooked_total_grams(raw_total_grams, raw_water, raw_fat, yfw, yff, sums.get("Protein", 0.0), yfp, sums.get("Carbohydrate", 0.0), yfc, sums.get("FiberTotalDietary", 0.0), yfi)
     grams_per_serving = final_grams / recipe.servings_count
     per100g_scale = 100.0 / final_grams
     serving_scale = grams_per_serving / 100.0
@@ -334,6 +337,7 @@ def _build_recipe_single(
         "yield_factor_fat": yff,
         "yield_factor_protein": yfp,
         "yield_factor_carbohydrate": yfc,
+        "yield_factor_fiber": yfi,
         "servings_count": recipe.servings_count,
         "audit_status": recipe.audit_status,
         "audit_notes": recipe.audit_notes,
@@ -346,6 +350,7 @@ def _build_recipe_single(
         "fat_lost_grams": _round(raw_fat * (1 - yff), 2),
         "protein_lost_grams": _round(sums.get("Protein", 0.0) * (1 - yfp), 2),
         "carb_lost_grams": _round(sums.get("Carbohydrate", 0.0) * (1 - yfc), 2),
+        "fiber_lost_grams": _round(sums.get("FiberTotalDietary", 0.0) * (1 - yfi), 2),
         "cooked_total_grams": _round(final_grams, 2),
         "grams_per_serving": _round(grams_per_serving, 2),
         "ingredients": ingredient_breakdown,
@@ -385,6 +390,7 @@ def _build_recipe_multi(
             "raw_fat": 0.0,
             "raw_protein": 0.0,
             "raw_carb": 0.0,
+            "raw_fiber": 0.0,
             "added_sugar": 0.0,
             "intrinsic_sugar": 0.0,
             "ingredient_count": 0,
@@ -422,6 +428,7 @@ def _build_recipe_multi(
             st["raw_fat"] += float(p100.get("TotalLipidFat", 0.0)) * scale
             st["raw_protein"] += float(p100.get("Protein", 0.0)) * scale
             st["raw_carb"] += float(p100.get("Carbohydrate", 0.0)) * scale
+            st["raw_fiber"] += float(p100.get("FiberTotalDietary", 0.0)) * scale
             st["ingredient_count"] += 1
             contrib_full: dict[str, float] = {}
             for n in EXTENDED_NUTRIENTS:
@@ -472,6 +479,7 @@ def _build_recipe_multi(
         st["raw_fat"] += nuts.get("TotalLipidFat", 0.0) * scale
         st["raw_protein"] += nuts.get("Protein", 0.0) * scale
         st["raw_carb"] += nuts.get("Carbohydrate", 0.0) * scale
+        st["raw_fiber"] += nuts.get("FiberTotalDietary", 0.0) * scale
         st["ingredient_count"] += 1
 
         # Track submersion-boil absorbers (pasta, rice, oats, legumes).
@@ -575,6 +583,7 @@ def _build_recipe_multi(
         yfp = s.yield_factor_protein
         yfc = s.yield_factor_carbohydrate
         yfo_S = s.yield_factor_other
+        yfi_S = s.yield_factor_fiber
         sums_S = st["sums"]
         retained_S: dict[str, float] = {}
         for n in EXTENDED_NUTRIENTS:
@@ -586,6 +595,8 @@ def _build_recipe_multi(
                 retained_S[n] = sums_S[n] * yfp
             elif n == "Carbohydrate":
                 retained_S[n] = sums_S[n] * yfc
+            elif n == "FiberTotalDietary":
+                retained_S[n] = sums_S[n] * yfi_S
             elif n in _MACRO_SET:
                 retained_S[n] = sums_S[n]
             elif n in _FAT_SOLUBLE_NUTRIENTS:
@@ -610,7 +621,7 @@ def _build_recipe_multi(
         retained_added_dish += st["added_sugar"] * sugar_retention_S
         retained_intrinsic_dish += st["intrinsic_sugar"] * sugar_retention_S
 
-        final_S = cooked_total_grams(st["raw_total"], st["raw_water"], st["raw_fat"], yfw, yff, st["raw_protein"], yfp, st["raw_carb"], yfc)
+        final_S = cooked_total_grams(st["raw_total"], st["raw_water"], st["raw_fat"], yfw, yff, st["raw_protein"], yfp, st["raw_carb"], yfc, st["raw_fiber"], yfi_S)
         final_grams += final_S
         raw_total_grams += st["raw_total"]
         raw_water += st["raw_water"]
@@ -627,6 +638,7 @@ def _build_recipe_multi(
             "yield_factor_fat": yff,
             "yield_factor_protein": yfp,
             "yield_factor_carbohydrate": yfc,
+            "yield_factor_fiber": yfi_S,
             "yield_factor_other": s.yield_factor_other,
             "ingredient_count": st["ingredient_count"],
             "raw_grams": _round(st["raw_total"], 2),
@@ -634,6 +646,7 @@ def _build_recipe_multi(
             "raw_fat_grams": _round(st["raw_fat"], 2),
             "raw_protein_grams": _round(st["raw_protein"], 2),
             "raw_carb_grams": _round(st["raw_carb"], 2),
+            "raw_fiber_grams": _round(st["raw_fiber"], 2),
             "final_grams": _round(final_S, 2),
         })
 
@@ -699,11 +712,18 @@ def _build_recipe_multi(
         st["raw_carb"] * (1 - st["section"].yield_factor_carbohydrate)
         for st in sec_state.values() if st["ingredient_count"] > 0
     )
+    fiber_lost_total = sum(
+        st["raw_fiber"] * (1 - st["section"].yield_factor_fiber)
+        for st in sec_state.values() if st["ingredient_count"] > 0
+    )
     raw_protein_total = sum(
         st["raw_protein"] for st in sec_state.values()
     )
     raw_carb_total = sum(
         st["raw_carb"] for st in sec_state.values()
+    )
+    raw_fiber_total = sum(
+        st["raw_fiber"] for st in sec_state.values()
     )
 
     return {
@@ -717,6 +737,7 @@ def _build_recipe_multi(
         "yield_factor_fat": recipe.yield_factor_fat,
         "yield_factor_protein": recipe.yield_factor_protein,
         "yield_factor_carbohydrate": recipe.yield_factor_carbohydrate,
+        "yield_factor_fiber": recipe.yield_factor_fiber,
         "servings_count": recipe.servings_count,
         "audit_status": recipe.audit_status,
         "audit_notes": recipe.audit_notes,
@@ -725,10 +746,12 @@ def _build_recipe_multi(
         "raw_fat_grams": _round(raw_fat, 2),
         "raw_protein_grams": _round(raw_protein_total, 2),
         "raw_carb_grams": _round(raw_carb_total, 2),
+        "raw_fiber_grams": _round(raw_fiber_total, 2),
         "water_lost_grams": _round(water_lost_total, 2),
         "fat_lost_grams": _round(fat_lost_total, 2),
         "protein_lost_grams": _round(protein_lost_total, 2),
         "carb_lost_grams": _round(carb_lost_total, 2),
+        "fiber_lost_grams": _round(fiber_lost_total, 2),
         "cooked_total_grams": _round(final_grams, 2),
         "grams_per_serving": _round(grams_per_serving, 2),
         "ingredients": ingredient_breakdown,

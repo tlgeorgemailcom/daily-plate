@@ -37,6 +37,11 @@ export interface CalcSR28Options {
   /** Fat-mass yield factor (0–1). Fraction of raw fat retained after cooking.
    *  e.g. 0.95 means 5% fat drip. Default 1.0 (no loss). */
   yieldFactorFat?: number;
+  /** Fiber-mass yield factor (0–1). Fraction of raw dietary fiber retained after
+   *  cooking/prep (e.g. 0.579 when potato skin is discarded after boiling).
+   *  Fiber has Atwater coefficient 0 — losing fiber reduces mass but not energy.
+   *  Default 1.0 (no loss). */
+  yieldFactorFiber?: number;
 }
 
 interface IngRow {
@@ -130,6 +135,7 @@ export async function calcNutritionSR28(
 ): Promise<NutritionJson | null> {
   const yieldFactorWater = options.yieldFactorWater ?? 1.0;
   const yieldFactorFat   = options.yieldFactorFat   ?? 1.0;
+  const yieldFactorFiber = options.yieldFactorFiber ?? 1.0;
 
   // Collect NDB numbers to batch-fetch.
   const ndbNos = new Set<string>();
@@ -219,13 +225,15 @@ export async function calcNutritionSR28(
 
   let totCal = 0, totPro = 0, totFat = 0, totCarb = 0, totFib = 0, totH2o = 0, totSug = 0;
   let rawTotalGrams = 0;
-  // Raw water and fat totals (BEFORE yield factors) — used to compute mass lost
-  // during cooking, per v2 spec:
-  //   cooked_grams = raw - water_lost - fat_lost
+  // Raw water, fat, and fiber totals (BEFORE yield factors) — used to compute mass lost
+  // during cooking, per v2/v3 spec:
+  //   cooked_grams = raw - water_lost - fat_lost - fiber_lost
   //   water_lost   = sum(ing_water_g) * (1 - yieldFactorWater)
   //   fat_lost     = sum(ing_fat_g)   * (1 - yieldFactorFat)
+  //   fiber_lost   = sum(ing_fiber_g) * (1 - yieldFactorFiber)
   let rawWaterTotal = 0;
   let rawFatTotal   = 0;
+  let rawFiberTotal = 0;
   const sources: NutritionSource[] = [];
 
   for (const ing of ingredients) {
@@ -248,11 +256,12 @@ export async function calcNutritionSR28(
       totPro  += food.Protein           * scale * pf;
       totFat  += food.TotalLipidFat     * scale * yieldFactorFat;
       totCarb += food.Carbohydrate      * scale;
-      totFib  += food.FiberTotalDietary * scale;
+      totFib  += food.FiberTotalDietary * scale * yieldFactorFiber;
       totH2o  += food.Water             * scale * yieldFactorWater;
       totSug  += food.SugarsTotal       * scale;
       rawWaterTotal += food.Water         * scale;
       rawFatTotal   += food.TotalLipidFat * scale;
+      rawFiberTotal += food.FiberTotalDietary * scale;
       sources.push({ ndb: ing.ndbNo, name: food.longDesc, grams: round1(g / servings) });
 
     } else if (ing.foodWord) {
@@ -264,11 +273,12 @@ export async function calcNutritionSR28(
       totPro  += food.pro  * scale * pf;
       totFat  += food.fat  * scale * yieldFactorFat;
       totCarb += food.carb * scale;
-      totFib  += food.fib  * scale;
+      totFib  += food.fib  * scale * yieldFactorFiber;
       totH2o  += food.h2o  * scale * yieldFactorWater;
       totSug  += food.sug  * scale;
       rawWaterTotal += food.h2o * scale;
       rawFatTotal   += food.fat * scale;
+      rawFiberTotal += food.fib * scale;
       sources.push({ ndb: food.ndb, name: food.display, grams: round1(g / servings) });
     }
     // Skip ingredients with neither ndbNo nor foodWord.
@@ -283,7 +293,8 @@ export async function calcNutritionSR28(
   // values are unaffected (per100g × gramsPS/100 cancels the divisor change).
   const waterLost = rawWaterTotal * (1 - yieldFactorWater);
   const fatLost   = rawFatTotal   * (1 - yieldFactorFat);
-  const cookedTotalGrams = Math.max(rawTotalGrams - waterLost - fatLost, 1);
+  const fiberLost = rawFiberTotal * (1 - yieldFactorFiber);
+  const cookedTotalGrams = Math.max(rawTotalGrams - waterLost - fatLost - fiberLost, 1);
   const totalGrams = cookedTotalGrams;
 
   const gramsPS = round1(totalGrams / servings);
