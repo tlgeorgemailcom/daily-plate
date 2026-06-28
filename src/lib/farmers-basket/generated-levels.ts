@@ -3011,7 +3011,7 @@ export const LEVELS: Level[] = [
       'Warm the refried beans and black beans together in a small saucepan over medium heat, stirring until heated through, about 3 minutes.',
       'Spoon the bean mixture onto the center of the tortilla and season with a pinch of salt.',
       'Fold the sides in and roll tightly into a burrito.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Add cilantro, diced white onion, shredded lettuce or slaw, salsa, or sour cream.'
     ],
     sections: [
       { key: 'burrito', label: 'Bean burrito', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -3050,7 +3050,7 @@ export const LEVELS: Level[] = [
       'Warm the refried beans and black beans together in a small saucepan over medium heat, stirring until heated through, about 3 minutes.',
       'Spoon the bean mixture onto the center of the tortilla, top with the shredded cheese, and season with a pinch of salt.',
       'Fold the sides in and roll tightly into a burrito.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Add cilantro, diced white onion, shredded lettuce or slaw, salsa, or sour cream.'
     ],
     sections: [
       { key: 'burrito', label: 'Bean and cheese burrito', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -3085,7 +3085,7 @@ export const LEVELS: Level[] = [
       'Warm the flour tortilla in a dry skillet over medium heat for 30 seconds per side, or microwave for 15–20 seconds, until soft and pliable.',
       'Sprinkle the shredded Mexican cheese blend evenly over the center of the warm tortilla.',
       'Fold the sides in and roll tightly into a burrito.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Add cilantro, diced white onion, shredded lettuce or slaw, salsa, or sour cream.'
     ],
     sections: [
       { key: 'burrito', label: 'Cheese burrito', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -3126,7 +3126,7 @@ export const LEVELS: Level[] = [
       'Sprinkle the Mexican cheese blend over the eggs and fold to melt, about 30 seconds.',
       'Warm the flour tortilla in a dry skillet for 30 seconds per side, or microwave for 15–20 seconds.',
       'Spoon the egg and cheese mixture onto the center of the tortilla. Fold in the sides and roll up tightly.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Add cilantro, diced white onion, shredded lettuce or slaw, salsa, or sour cream.'
     ],
     sections: [
       { key: 'burrito', label: 'Egg burrito', cookingMethod: '', yieldFactorWater: 0.783 }
@@ -3165,7 +3165,7 @@ export const LEVELS: Level[] = [
       'Spoon the cooked beef onto the center of the warm tortilla.',
       'Sprinkle the Mexican cheese blend over the beef.',
       'Fold in the sides and roll up tightly into a burrito.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Add cilantro, diced white onion, shredded lettuce or slaw, salsa, or sour cream.'
     ],
     sections: [
       { key: 'beef', label: 'Ground beef', cookingMethod: '', yieldFactorWater: 0.6669, yieldFactorFat: 0.593 },
@@ -3207,7 +3207,7 @@ export const LEVELS: Level[] = [
       'Warm the flour tortilla in a dry skillet over medium heat for 30 seconds per side, or microwave for 15–20 seconds, until pliable.',
       'Spoon the potato-egg mixture onto the center of the warm tortilla.',
       'Sprinkle the Mexican cheese blend evenly over the filling. Fold in the sides and roll up tightly into a burrito.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Add cilantro, diced white onion, shredded lettuce or slaw, salsa, or sour cream.'
     ],
     sections: [
       { key: 'burrito', label: 'Breakfast burrito', cookingMethod: '', yieldFactorWater: 0.82 }
