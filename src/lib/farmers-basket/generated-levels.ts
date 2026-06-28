@@ -3246,7 +3246,7 @@ export const LEVELS: Level[] = [
       'Pour in the egg mixture; let the edges set, then gently push cooked edges toward the center.',
       'When eggs are nearly set but still glossy on top, sprinkle cheese over one half.',
       'Fold the omelette in half over the cheese, press lightly, and slide onto a plate.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with a lemon vinaigrette salad, hash browns, or sourdough toast.'
     ],
     sections: [
       { key: 'omelette', label: 'Cheese omelette', cookingMethod: '', yieldFactorWater: 1.0 }
