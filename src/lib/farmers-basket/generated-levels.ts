@@ -2770,7 +2770,7 @@ export const LEVELS: Level[] = [
       'Stir in the rolled oats. Reduce heat to medium-low.',
       'Cook, stirring occasionally, for 5 minutes until the oats are tender and most of the water is absorbed.',
       'Remove from heat and let stand 1–2 minutes before serving.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with fresh fruit, nuts, or maple syrup.'
     ],
     sections: [
       { key: 'oatmeal', label: 'Oatmeal', cookingMethod: '', yieldFactorWater: 0.76 }
