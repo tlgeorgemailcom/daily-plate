@@ -3701,7 +3701,7 @@ export const LEVELS: Level[] = [
       'Whisk the eggs with the milk, salt, and pepper in a bowl until well combined.',
       'Pour the egg mixture over the herbs in the skillet. Sprinkle the grated Parmesan evenly over the top. Cook undisturbed for 2 to 3 minutes until the edges begin to set.',
       'Transfer the skillet to a broiler set to high and broil for 3 to 4 minutes until the top is set and lightly golden. Let rest for 2 minutes before slicing into 4 wedges.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with an arugula salad, crispy potatoes, or roasted tomatoes.'
     ],
     sections: [
       { key: 'frittata', label: 'Frittata', cookingMethod: '', yieldFactorWater: 0.9 }
