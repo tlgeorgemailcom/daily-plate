@@ -3525,7 +3525,7 @@ export const LEVELS: Level[] = [
       'Scatter the shredded Swiss cheese and diced onion evenly over the bottom of the prepared pan.',
       'Pour the egg custard over the cheese and onion.',
       'Bake for 35 to 40 minutes until the custard is just set in the center and the top is lightly golden. Cool on a rack for at least 10 minutes before slicing.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with a green salad, roasted root vegetables, or fresh fruit.'
     ],
     sections: [
       { key: 'filling', label: 'Cheese filling', cookingMethod: '', yieldFactorWater: 0.9 }
