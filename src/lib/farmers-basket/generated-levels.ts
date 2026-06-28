@@ -3433,7 +3433,7 @@ export const LEVELS: Level[] = [
       'Roll the chilled dough out on a lightly floured surface and fit it into a 9-inch pie pan. Fold over and crimp the edges. Line with parchment and fill with pie weights or dried beans. Blind-bake for 15 minutes; remove the weights and parchment and bake 5 minutes more until just beginning to brown.',
       'Whisk the eggs, heavy cream, salt, pepper, and nutmeg until smooth. Scatter the diced ham, shredded Swiss cheese, and diced onion evenly over the warm crust.',
       'Pour the custard over the cheese and onion. Bake for 35 to 40 minutes until the custard is just set in the center and the top is lightly golden. Cool on a rack for at least 10 minutes before slicing.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with a fresh green salad, roasted potatoes, or fresh fruit.'
     ],
     sections: [
       { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.38 },
