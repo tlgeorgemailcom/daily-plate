@@ -2811,7 +2811,7 @@ export const LEVELS: Level[] = [
       'In a separate bowl, beat the egg, then stir in the milk and melted butter.',
       'Pour the wet ingredients into the dry and stir just until combined; a few lumps are fine.',
       'Heat a lightly greased griddle or skillet over medium heat. Pour ¼ cup batter per pancake and cook until bubbles form on the surface and edges look set, about 2 minutes. Flip and cook until golden brown, about 1–2 minutes more.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with maple syrup, fresh berries, sliced bananas, or whipped cream.'
     ],
     sections: [
       { key: 'batter', label: 'Pancake batter', cookingMethod: '', yieldFactorWater: 0.96 }
