@@ -6179,7 +6179,7 @@ export const LEVELS: Level[] = [
       'Melt the butter in a non-toxic nonstick skillet over medium-low heat. Whisk the eggs with salt and pepper, pour into the pan, and scramble gently until just set. Remove from heat while still slightly glossy.',
       'Split the croissant in half horizontally. Lay the cheddar slice on the bottom half.',
       'Spoon the scrambled eggs over the cheese, then lay the bacon strips on top. Close the sandwich and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with a green salad, fresh berries, or hash browns.'
     ],
     sections: [
       { key: 'eggs', label: 'Eggs', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -6220,7 +6220,7 @@ export const LEVELS: Level[] = [
       'Form about 2 oz (48g) of the sausage mixture into a patty sized to fit the croissant. Cook in a non-toxic nonstick skillet over medium heat until browned and cooked through to an internal temperature of 160°F (71°C), about 3–4 minutes per side. Set aside.',
       'Melt the butter in the same skillet over medium-low heat. Whisk the eggs with salt and pepper, pour into the pan, and scramble gently until just set. Remove from heat while still slightly glossy.',
       'Split the croissant in half horizontally. Lay the cheddar slice on the bottom half, spoon the scrambled eggs over the cheese, and top with the sausage patty. Close the sandwich and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with a green salad, fresh berries, or hash browns.'
     ],
     sections: [
       { key: 'sausage', label: 'Sausage', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -6262,7 +6262,7 @@ export const LEVELS: Level[] = [
       'Warm the ham slices in a non-toxic nonstick skillet over medium heat for about 1 minute per side until lightly browned. Set aside.',
       'Melt the butter in the same skillet over medium-low heat. Whisk the eggs with salt and pepper, pour into the pan, and scramble gently until just set. Remove from heat while still slightly glossy.',
       'Split the croissant in half horizontally. Lay the cheddar slice on the bottom half, spoon the scrambled eggs over the cheese, and top with the ham slices. Close the sandwich and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with a green salad, fresh berries, or hash browns.'
     ],
     sections: [
       { key: 'ham', label: 'Ham', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -6303,7 +6303,7 @@ export const LEVELS: Level[] = [
       'Split the croissant in half horizontally. Spread 2 tablespoons of cream cheese evenly over the cut sides.',
       'Layer the smoked salmon slices on the bottom half. Squeeze lemon juice over the salmon, scatter the chopped dill on top, and finish with a pinch of black pepper.',
       'Close the sandwich and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with a green salad, fresh berries, or hash browns.'
     ],
     sections: [
       { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
