@@ -3288,7 +3288,7 @@ export const LEVELS: Level[] = [
       'Melt butter in a non-toxic nonstick skillet over medium heat; add ham, bell pepper, and onion and sauté 2–3 minutes until softened.',
       'Pour the egg mixture over the filling; let the edges set, then gently push cooked edges toward the center.',
       'When eggs are nearly set but still glossy on top, sprinkle cheese over one half; fold the omelette in half and slide onto a plate.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with hash browns, salsa, toast, or sour cream.'
     ],
     sections: [
       { key: 'omelette', label: 'Denver omelette', cookingMethod: '', yieldFactorWater: 1.0 }
