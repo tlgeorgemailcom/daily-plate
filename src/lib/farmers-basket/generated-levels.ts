@@ -16206,14 +16206,14 @@ export const LEVELS: Level[] = [
       { name: 'rice wine vinegar (distilled vinegar used as proxy)', quantity: '2 tbsp', section: 'rice', ndbNo: '2053', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'sugar', quantity: '1 tbsp', section: 'rice', ndbNo: '19335', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'salt', quantity: '1/2 tsp', section: 'rice', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
-      { name: 'raw salmon (chinook)', quantity: '8 oz, cubed', section: 'assembly', ndbNo: '15078', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'raw salmon (chinook)', quantity: '8 oz raw salmon (chinook), cubed', section: 'assembly', ndbNo: '15078', portionDesc: 'g', portionGrams: 226.8 },
       { name: 'tamari', quantity: '2 tbsp', section: 'assembly', ndbNo: '16124', portionDesc: 'g', portionGrams: 36.0 },
       { name: 'sesame oil', quantity: '2 tsp', section: 'assembly', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
-      { name: 'fresh ginger', quantity: '1 tsp, minced', section: 'assembly', ndbNo: '11216', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'fresh ginger', quantity: '1 tsp fresh ginger, minced', section: 'assembly', ndbNo: '11216', portionDesc: 'g', portionGrams: 2.0 },
       { name: 'avocado', quantity: '1/2 avocado, thinly sliced', section: 'assembly', ndbNo: '9038', portionDesc: 'g', portionGrams: 75.0 },
-      { name: 'cucumber', quantity: '1 cup, sliced', section: 'assembly', ndbNo: '11206', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'cucumber', quantity: '1 cup cucumber, sliced', section: 'assembly', ndbNo: '11206', portionDesc: 'g', portionGrams: 119.0 },
       { name: 'edamame cooked', quantity: '1 cup', section: 'assembly', ndbNo: '11212', portionDesc: 'g', portionGrams: 155.0 },
-      { name: 'scallions', quantity: '2 medium, thinly sliced', section: 'assembly', ndbNo: '11291', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'scallions', quantity: '2 medium scallions, thinly sliced', section: 'assembly', ndbNo: '11291', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'sesame seeds raw', quantity: '2 tsp', section: 'assembly', ndbNo: '12024', portionDesc: 'g', portionGrams: 6.0 }
     ],
     recipeInstructions: [
@@ -16229,7 +16229,7 @@ export const LEVELS: Level[] = [
       'Cut raw chinook salmon into 3/4-inch cubes. Gently toss salmon with the tamari-sesame oil marinade in a bowl; let sit for 5 minutes.',
       'To compose the poke bowl: place 1 cup cooled sushi rice in the base of a bowl. Arrange marinated salmon, sliced avocado, sliced cucumber, cooked edamame, and sliced scallions in separate sections on top of the rice. Sprinkle with sesame seeds.',
       'Top with 1 tsp fresh minced ginger. Serve immediately (poke is best served chilled or at room temperature within 30 minutes of assembly; do not refrigerate assembled bowl).',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with additional soy sauce or spicy mayo on the side.'
     ],
     sections: [
       { key: 'rice', label: 'Sushi Rice', cookingMethod: '', yieldFactorWater: 1.0 },
