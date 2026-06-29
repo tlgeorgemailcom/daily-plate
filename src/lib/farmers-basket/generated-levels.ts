@@ -18110,7 +18110,7 @@ export const LEVELS: Level[] = [
       'Melt the butter in a large skillet over medium heat. Add the diced onion and green bell pepper and cook, stirring occasionally, until softened, about 5 minutes.',
       'Add the sweet corn kernels and lima beans. Stir to combine and cook until heated through and any excess moisture has cooked off, about 5-7 minutes.',
       'Season with salt and pepper. Taste and adjust seasoning. Serve warm.',
-      'Suggestions (not included):'
+      'Suggestions (not included): A Southern classic. Serve alongside fried chicken, pork chops, or BBQ. Add diced bacon or okra for a more traditional variation.'
     ],
     sections: [
       { key: 'succotash', label: 'Succotash', cookingMethod: '', yieldFactorWater: 0.9 }
