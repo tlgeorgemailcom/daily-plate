@@ -15911,7 +15911,7 @@ export const LEVELS: Level[] = [
       'Crack the eggs into the center of the pan and scramble until just set, then break up and fold into the pork and vegetables.',
       'Add the cold cooked rice, breaking up any clumps. Stir-fry over high heat, tossing constantly, until the rice is heated through and beginning to dry out and separate, 3 to 4 minutes.',
       'Drizzle in the tamari and sesame oil, toss to coat evenly, and cook 1 minute more. Remove from heat, scatter the scallions over the top, and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Garnish with additional scallions and sesame seeds. Serve with sriracha or chili garlic sauce on the side.'
     ],
     sections: [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
