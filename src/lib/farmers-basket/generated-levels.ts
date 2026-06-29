@@ -8186,7 +8186,7 @@ export const LEVELS: Level[] = [
       'While potatoes cook, cut the butter into small pieces and let it come to room temperature.',
       'Drain the potatoes and peel them while still hot. Pass through a ricer or food mill then put back into the warm pot.',
       'Over low heat, beat in the softened butter a piece at a time, then stir in the sour cream. Fold in the prepared horseradish and season with salt. Taste and adjust horseradish as desired. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve alongside prime rib, roast beef, or beef tenderloin. The horseradish heat pairs especially well with rich, fatty beef cuts.'
     ],
     sections: [
       { key: 'puree', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 }
