@@ -9337,18 +9337,17 @@ export const LEVELS: Level[] = [
       { name: 'olive oil', quantity: '3/4 cup', section: 'dressing', ndbNo: '4053', portionDesc: 'g', portionGrams: 163.2 },
       { name: 'apple cider vinegar', quantity: '1/4 cup', section: 'dressing', ndbNo: '2048', portionDesc: 'g', portionGrams: 59.6 },
       { name: 'honey', quantity: '1/2 tsp', section: 'dressing', ndbNo: '19296', portionDesc: 'g', portionGrams: 3.5 },
-      { name: 'garlic', quantity: '1 clove, minced', section: 'dressing', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'garlic', quantity: '1 clove garlic, minced', section: 'dressing', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'salt', quantity: '1/2 tsp', section: 'dressing', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'ground black pepper', quantity: '1/4 tsp', section: 'dressing', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
       { name: 'Dijon-Style Mustard', quantity: '1/2 tsp Dijon-Style Mustard (recipe)', section: 'mustard', foodWord: 'DIJONTYPEMUSTARD', portionDesc: 'g', portionGrams: 2.5, isDish: true, componentRef: 'SAUCE_010' }
     ],
     recipeInstructions: [
       'Make or prepare the Dijon-Style Mustard (see the Dijon-Style Mustard recipe).',
-      'Mince the garlic clove finely or use a garlic press.',
       'Combine apple cider vinegar, mustard, honey, minced garlic, salt, and black pepper in a small bowl or jar. Whisk or shake to combine.',
       'Slowly drizzle in the olive oil while whisking constantly, or add olive oil to the jar and shake vigorously until the dressing is emulsified.',
       'Taste and adjust seasoning. Use immediately or refrigerate in a sealed jar for up to 1 week. Shake well before each use.',
-      'Suggestions (not included):'
+      'Suggestions (not included): The dressing for Grilled Chicken Salad and Niçoise Salad. Also excellent over any green salad, roasted vegetables, or as a marinade for grilled chicken or fish.'
     ],
     sections: [
       { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 },
