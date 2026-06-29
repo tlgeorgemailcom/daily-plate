@@ -6684,7 +6684,7 @@ export const LEVELS: Level[] = [
       'After flipping continue cooking the patty and lay the cheese on top the last 30–60 seconds.',
       'Remove the patty and add the sliced mushrooms to the same pan and cook until browning. Lower to medium-low heat and add the minced garlic. Sauté for 30–60 seconds and deglaze the pan with 1 tablespoon of water while scraping with a spatula.',
       'Place patty on the bun cheese side up then top with caramelized onion and then the sautéed mushrooms. Close with top bun.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with french fries, onion rings, or a dill pickle on the side.'
     ],
     sections: [
       { key: 'mushrooms', label: 'Mushrooms', cookingMethod: '', yieldFactorWater: 0.9 },
