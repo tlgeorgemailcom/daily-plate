@@ -10856,17 +10856,17 @@ export const LEVELS: Level[] = [
       { name: 'Spinach Salad', quantity: 'custom (g)', foodWord: 'SPINACHSALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'Lemon Vinaigrette (4 tbsp total; 2 tbsp per serving)', quantity: '4 tbsp', section: 'dressing', foodWord: 'LEMONVINAIGRETTE', portionDesc: 'g', portionGrams: 64.0, isDish: true, componentRef: 'SAUCE_019' },
       { name: 'spinach', quantity: '6 oz baby spinach', section: 'salad', ndbNo: '11457', portionDesc: 'g', portionGrams: 170.0 },
-      { name: 'bacon', quantity: '4 slices', section: 'salad', ndbNo: '10862', portionDesc: 'g', portionGrams: 46.0 },
-      { name: 'hard-boiled egg', quantity: '2 large', section: 'salad', ndbNo: '1129', portionDesc: 'g', portionGrams: 100.0 },
-      { name: 'crimini mushrooms', quantity: '4 oz', section: 'salad', ndbNo: '11266', portionDesc: 'g', portionGrams: 113.4 },
-      { name: 'onion', quantity: '¼ small red onion', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 18.0 }
+      { name: 'bacon', quantity: '4 slices bacon, crumbled', section: 'salad', ndbNo: '10862', portionDesc: 'g', portionGrams: 46.0 },
+      { name: 'hard-boiled egg', quantity: '2 large hard-boiled eggs, halved', section: 'salad', ndbNo: '1129', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'crimini mushrooms', quantity: '4 oz cremini mushrooms, thinly sliced', section: 'salad', ndbNo: '11266', portionDesc: 'g', portionGrams: 113.4 },
+      { name: 'onion', quantity: '¼ small red onion, thinly sliced', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 18.0 }
     ],
     recipeInstructions: [
       'Make or portion the Lemon Vinaigrette (see the Lemon Vinaigrette recipe).',
       'Slice mushrooms thinly. Slice red onion into thin half-rings. Halve the hard-boiled eggs. Crumble or chop the bacon.',
       'Place spinach in a large bowl or on a platter. Arrange mushrooms, red onion, hard-boiled eggs, and bacon on top.',
       'Drizzle the Lemon Vinaigrette over the salad and toss gently to coat. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve as a starter or alongside grilled chicken or seared salmon.'
     ],
     sections: [
       { key: 'dressing', label: 'Lemon Vinaigrette', cookingMethod: '', yieldFactorWater: 1.0 },
