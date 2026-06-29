@@ -20497,7 +20497,7 @@ export const LEVELS: Level[] = [
       'Warm the tortillas in a dry skillet over medium heat for 30 seconds per side until pliable.',
       'Spread 2 tbsp hummus over each warm tortilla. Layer romaine, sliced chicken, cucumber, tomato, red onion, feta, and olives. Drizzle with the lemon dressing.',
       'Fold in the sides of each tortilla and roll up tightly. Cut in half on the diagonal and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with a cup of lemon rice soup or a side of tabbouleh.'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
