@@ -20441,7 +20441,7 @@ export const LEVELS: Level[] = [
       'Make the tzatziki: in a small bowl, stir together the Greek yogurt, cucumber, mint, lemon juice, and garlic. Season with a pinch of salt.',
       'Lightly toast the hamburger buns in the same skillet.',
       'Place arugula on the bottom bun, top with the lamb patty, feta crumbles, tomato, and red onion. Spoon tzatziki over the top, close with the top bun, and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with a greek salad or seasoned fries on the side.'
     ],
     sections: [
       { key: 'patty', label: 'Patty', cookingMethod: '', yieldFactorWater: 0.75 },
