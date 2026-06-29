@@ -17982,7 +17982,7 @@ export const LEVELS: Level[] = [
       'Drizzle with the olive oil and scatter the minced garlic over the spears. Season with salt and pepper. Toss to coat evenly, then arrange in a single layer.',
       'Roast until tender and the tips are lightly caramelized, 10-14 minutes depending on thickness. Thin spears need 10 minutes; thick spears 12-14.',
       'Remove from oven and drizzle with the lemon juice. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Pairs well with roast chicken, grilled salmon, or steak. Finish with grated Parmesan or wrap spears in prosciutto before roasting.'
     ],
     sections: [
       { key: 'asparagus', label: 'Roasted Asparagus', cookingMethod: '', yieldFactorWater: 0.85 }
