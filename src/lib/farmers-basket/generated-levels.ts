@@ -14799,7 +14799,7 @@ export const LEVELS: Level[] = [
       'Remove from heat and stir in the frozen peas. Transfer filling to a 9x13 inch baking dish if not using an oven-safe pan.',
       'Spoon the mashed potato topping over the filling and spread evenly. Use a fork to create ridges on the surface.',
       'Bake at 400°F for 20 to 25 minutes until the topping is golden brown and the filling is bubbling at the edges. Let rest 5 minutes before serving.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with a simple green salad and crusty bread.'
     ],
     sections: [
       { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.85 },
