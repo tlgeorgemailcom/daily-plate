@@ -17484,9 +17484,9 @@ export const LEVELS: Level[] = [
       { name: 'red pepper flakes', quantity: '1/4 tsp (optional)', section: 'sauce', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.45 },
       { name: 'Ricotta cheese', quantity: '1 (15-oz) container Ricotta cheese', section: 'cheese_filling', ndbNo: '1036', portionDesc: 'g', portionGrams: 425.0 },
       { name: 'whole milk mozzarella', quantity: '16 oz (1 lb) whole milk mozzarella, shredded', section: 'cheese_filling', ndbNo: '1026', portionDesc: 'g', portionGrams: 453.6 },
-      { name: 'Parmesan cheese', quantity: '3/4 cup, grated', section: 'cheese_filling', ndbNo: '1033', portionDesc: 'g', portionGrams: 75.0 },
+      { name: 'Parmesan cheese', quantity: '3/4 cup Parmesan cheese, grated', section: 'cheese_filling', ndbNo: '1033', portionDesc: 'g', portionGrams: 75.0 },
       { name: 'large egg', quantity: '1 large egg', section: 'cheese_filling', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
-      { name: 'fresh parsley', quantity: '1/4 cup parsley, chopped', section: 'cheese_filling', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'fresh parsley', quantity: '1/4 cup fresh parsley, chopped', section: 'cheese_filling', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.0 },
       { name: 'salt', quantity: '1/2 tsp', section: 'cheese_filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'ground black pepper', quantity: '1/4 tsp', section: 'cheese_filling', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
       { name: 'ground nutmeg', quantity: 'pinch', section: 'cheese_filling', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.14 }
@@ -17500,7 +17500,7 @@ export const LEVELS: Level[] = [
       'Finish with a final layer of noodles, the remaining sauce, and the remaining mozzarella. Sprinkle any remaining parmesan over the top.',
       'Cover tightly with foil and bake at 375°F for 40 minutes. Remove foil and bake an additional 15–20 minutes until the cheese is bubbly and lightly golden.',
       'Let the lasagna rest 15 minutes before cutting into 8 equal pieces and serving.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with a simple green salad and garlic bread on the side.'
     ],
     sections: [
       { key: 'noodles', label: 'Noodles', cookingMethod: '', yieldFactorWater: 1.0 },
