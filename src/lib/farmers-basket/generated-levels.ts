@@ -10075,7 +10075,7 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Burrata Salad', quantity: 'custom (g)', foodWord: 'BURRATASALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'arugula', quantity: '4 cups', section: 'salad', ndbNo: '11959', portionDesc: 'g', portionGrams: 80.0 },
-      { name: 'tomato', quantity: '2 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 246.0 },
+      { name: 'tomato', quantity: '2 medium tomatoes (123g each), sliced into ¼-inch rounds', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 246.0 },
       { name: 'whole milk mozzarella', quantity: '6 oz', section: 'salad', ndbNo: '1026', portionDesc: 'g', portionGrams: 170.0 },
       { name: 'pine nuts', quantity: '2 tbsp', section: 'salad', ndbNo: '12147', portionDesc: 'g', portionGrams: 20.0 },
       { name: 'fresh basil', quantity: '10 leaves', section: 'salad', ndbNo: '2044', portionDesc: 'g', portionGrams: 25.0 },
@@ -10088,7 +10088,7 @@ export const LEVELS: Level[] = [
       'Slice tomatoes into ¼-inch rounds. Slice or tear the mozzarella into similar-sized pieces.',
       'Arrange arugula on a large plate. Layer tomato and mozzarella over the arugula, alternating slices.',
       'Scatter pine nuts and fresh basil leaves over the top. Drizzle with olive oil and balsamic vinegar. Season with salt and pepper and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with crusty bread or crostini. Makes an elegant starter or light lunch.'
     ],
     sections: [
       { key: 'salad', label: 'Burrata Salad', cookingMethod: '', yieldFactorWater: 1.0 }
