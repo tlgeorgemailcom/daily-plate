@@ -4998,7 +4998,7 @@ export const LEVELS: Level[] = [
       'Lay the limburger cheese on top of the mustard on one slice.',
       'Top with the thin onion slices.',
       'Close the sandwich with the second bread slice, press gently, and serve.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with dark rye crackers, extra pickles, or a cold beverage.'
     ],
     sections: [
       { key: 'sandwich', label: 'Limburger Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
