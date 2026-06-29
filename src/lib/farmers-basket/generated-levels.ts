@@ -7868,7 +7868,7 @@ export const LEVELS: Level[] = [
       'Taste and adjust seasoning — add a pinch more salt or a splash more vinegar if needed.',
       'Let cool for 10 minutes, then blend until smooth with an immersion blender (or transfer to a blender in batches).',
       'Transfer to clean glass jars and refrigerate. The ketchup keeps for up to 3 weeks.',
-      'Suggestions (not included):'
+      'Suggestions (not included): The definitive homemade ketchup. Use anywhere store-bought ketchup would go — burgers, fries, meatloaf, and as the base for barbecue sauce.'
     ],
     sections: [
       { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.603 }
