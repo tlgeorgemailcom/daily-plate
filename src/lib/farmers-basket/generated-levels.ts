@@ -8593,7 +8593,7 @@ export const LEVELS: Level[] = [
       { name: 'baking powder', quantity: '1 tbsp', section: 'batter', ndbNo: '18370', portionDesc: 'g', portionGrams: 13.8 },
       { name: 'baking soda', quantity: '½ tsp', section: 'batter', ndbNo: '18372', portionDesc: 'g', portionGrams: 2.3 },
       { name: 'salt', quantity: '1 tsp', section: 'batter', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
-      { name: 'large egg', quantity: '1 large', section: 'batter', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'large egg', quantity: '1 large egg', section: 'batter', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
       { name: 'whole buttermilk', quantity: '1 cup', section: 'batter', ndbNo: '1230', portionDesc: 'g', portionGrams: 245.0 },
       { name: 'unsalted butter', quantity: '4 tbsp', section: 'batter', ndbNo: '1145', portionDesc: 'g', portionGrams: 56.8 }
     ],
@@ -8604,7 +8604,7 @@ export const LEVELS: Level[] = [
       'Pour the wet ingredients into the dry ingredients and stir until just combined — a few lumps are fine. Do not overmix; the baking soda reacts quickly with the buttermilk.',
       'Pour the batter into the prepared pan. Bake for 20–25 minutes, until the top is golden and a toothpick inserted in the center comes out clean.',
       'Let cool in the pan for 5 minutes before cutting into 7 pieces. Serve warm.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve warm alongside chili, soups, or BBQ. The tang from the buttermilk makes it especially good with spicy dishes.'
     ],
     sections: [
       { key: 'batter', label: 'Batter', cookingMethod: '', yieldFactorWater: 0.73 }
