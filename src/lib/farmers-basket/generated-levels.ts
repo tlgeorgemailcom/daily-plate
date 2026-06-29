@@ -12244,7 +12244,7 @@ export const LEVELS: Level[] = [
       'Thread the marinated beef and vegetables alternately onto 8 metal or soaked wooden skewers (each skewer gets 2 to 3 pieces of beef and a mix of vegetables), leaving a small gap between each piece.',
       'Heat a grill to high heat (450 to 500°F). Brush the grates lightly with oil. Grill the kabobs 3 to 4 minutes per side, turning once or twice, until the beef is cooked to medium (internal temperature 145°F) and vegetables are tender with char marks.',
       'Transfer to a platter and rest 2 to 3 minutes before serving.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with warm pita bread, tzatziki sauce, and a Greek salad or rice pilaf.'
     ],
     sections: [
       { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
