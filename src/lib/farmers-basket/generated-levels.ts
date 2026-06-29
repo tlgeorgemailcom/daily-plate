@@ -8469,7 +8469,6 @@ export const LEVELS: Level[] = [
       'Layer half the potato rounds in the baking dish. Spread the bacon and onion mixture over the top. Add the remaining potatoes.',
       'Slice the Brie (or Reblochon if available) in half horizontally through the rind. Place it cut-side down on top of the potatoes, covering as much surface as possible.',
       'Bake for 25–30 minutes until the cheese is melted and bubbling and the top is golden. Serve immediately directly from the baking dish.',
-      'Suggestions (not included): Serve with crusty bread and a simple green salad. Best enjoyed straight from the oven while the cheese is still bubbling.',
       'Suggestions (not included): Serve with crusty bread and a simple green salad. Best enjoyed straight from the oven while the cheese is still bubbling.'
     ],
     sections: [
