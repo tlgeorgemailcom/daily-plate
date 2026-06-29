@@ -4959,7 +4959,7 @@ export const LEVELS: Level[] = [
       'Spread the liverwurst evenly on top of the mustard on one slice.',
       'Top with the onion slices and dill pickle slices.',
       'Close the sandwich with the second slice of bread, press gently, and cut in half to serve.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with potato chips, extra pickles, or a cold beverage.'
     ],
     sections: [
       { key: 'sandwich', label: 'Liverwurst Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
