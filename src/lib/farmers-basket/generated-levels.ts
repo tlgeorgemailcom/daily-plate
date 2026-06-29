@@ -8865,7 +8865,7 @@ export const LEVELS: Level[] = [
       { name: 'unsalted butter', quantity: '3 tbsp', section: 'sauce', ndbNo: '1145', portionDesc: 'g', portionGrams: 42.6 },
       { name: 'all-purpose enriched unbleached white flour', quantity: '3 tbsp', section: 'sauce', ndbNo: '20581', portionDesc: 'g', portionGrams: 23.4 },
       { name: 'whole milk', quantity: '2 cups', section: 'sauce', ndbNo: '1077', portionDesc: 'g', portionGrams: 488.0 },
-      { name: 'Cheddar cheese', quantity: '1½ cups shredded', section: 'sauce', ndbNo: '1009', portionDesc: 'g', portionGrams: 170.0 },
+      { name: 'Cheddar cheese', quantity: '1½ cups Cheddar cheese, shredded', section: 'sauce', ndbNo: '1009', portionDesc: 'g', portionGrams: 170.0 },
       { name: 'salt', quantity: '1 tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'white pepper', quantity: '¼ tsp', section: 'sauce', ndbNo: '2032', portionDesc: 'g', portionGrams: 0.6 }
     ],
@@ -8875,7 +8875,7 @@ export const LEVELS: Level[] = [
       'Gradually whisk in the milk, adding it in a slow stream. Bring to a gentle simmer, whisking frequently, and cook for 5 to 7 minutes until the sauce thickens enough to coat a spoon.',
       'Remove from heat. Stir in the shredded cheddar a handful at a time until fully melted. Season with salt and white pepper.',
       'Add the drained macaroni to the cheese sauce and stir to coat. Serve immediately or transfer to a buttered baking dish and bake at 350°F for 20 minutes for a firmer, slightly crusted version.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve alongside BBQ, hot dogs, or as a comforting main. Top with buttered breadcrumbs before baking for extra crunch.'
     ],
     sections: [
       { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
