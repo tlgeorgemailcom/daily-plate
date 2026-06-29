@@ -7666,14 +7666,14 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Soup, vegetable broth, ready to serve', quantity: 'custom (g)', foodWord: 'VEGETABLEBROTH', ndbNo: '6700', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'water', quantity: '8 cups', section: 'stock', ndbNo: '14411', portionDesc: 'g', portionGrams: 1892.7 },
-      { name: 'onion', quantity: '2 medium', section: 'stock', ndbNo: '11282', portionDesc: 'g', portionGrams: 300.0 },
-      { name: 'carrot', quantity: '2 medium', section: 'stock', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
-      { name: 'celery', quantity: '3 stalks celery', section: 'stock', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
-      { name: 'leek', quantity: '1 medium', section: 'stock', ndbNo: '11246', portionDesc: 'g', portionGrams: 89.0 },
+      { name: 'onion', quantity: '2 medium onions, roughly chopped', section: 'stock', ndbNo: '11282', portionDesc: 'g', portionGrams: 300.0 },
+      { name: 'carrot', quantity: '2 medium carrots, roughly chopped', section: 'stock', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'celery', quantity: '3 stalks celery, roughly chopped', section: 'stock', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'leek', quantity: '1 medium leek, roughly chopped', section: 'stock', ndbNo: '11246', portionDesc: 'g', portionGrams: 89.0 },
       { name: 'crimini mushrooms', quantity: '1 cup sliced', section: 'stock', ndbNo: '11266', portionDesc: 'g', portionGrams: 72.0 },
-      { name: 'garlic', quantity: '3 cloves', section: 'stock', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'garlic', quantity: '3 cloves garlic, smashed', section: 'stock', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'tomato paste', quantity: '1 tbsp', section: 'stock', ndbNo: '11546', portionDesc: 'g', portionGrams: 16.0 },
-      { name: 'fresh parsley', quantity: '¾ oz', section: 'stock', ndbNo: '11297', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'fresh parsley', quantity: '¾ oz fresh parsley, whole sprigs', section: 'stock', ndbNo: '11297', portionDesc: 'g', portionGrams: 18.0 },
       { name: 'fresh thyme leaves', quantity: '3 sprigs', section: 'stock', ndbNo: '2049', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'bay leaf', quantity: '2 leaves', section: 'stock', ndbNo: '2004', portionDesc: 'g', portionGrams: 0.8 },
       { name: 'ground black pepper', quantity: '½ tsp', section: 'stock', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
@@ -7688,7 +7688,7 @@ export const LEVELS: Level[] = [
       'Strain the stock through a fine-mesh strainer or cheesecloth-lined colander. Press gently on the solids to extract remaining liquid, then discard the solids.',
       'Taste and adjust salt. Cool to room temperature.',
       'Refrigerate for up to 5 days, or freeze for up to 6 months.',
-      'Suggestions (not included):'
+      'Suggestions (not included): A clean-tasting all-purpose base for vegetable soups, risotto, and grain dishes. Also a substitute for chicken broth in vegetarian recipes.'
     ],
     sections: [
       { key: 'stock', label: 'Stock', cookingMethod: '', yieldFactorWater: 0.82, yieldFactorFat: 0.95, yieldFactorOther: 0.02 }
