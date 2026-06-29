@@ -6858,7 +6858,7 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Grill or pan-sear the frank over medium-high heat, turning occasionally, until heated through and lightly charred, about 4–5 minutes.',
       'Place the frank in the bun. Top with ketchup, yellow mustard, and sweet relish.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with french fries, potato chips, or baked beans on the side.'
     ],
     sections: [
       { key: 'frank', label: 'Grilled frank', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -6901,7 +6901,7 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Grill the frank over medium-high heat, turning occasionally, until lightly charred and heated through, about 4–5 minutes.',
       'Place the frank in the bun. Top with yellow mustard, sweet relish, 2 Roma tomato wedges, the dill pickle spear (quartered lengthwise), 2 sport peppers (slivered), and a pinch of celery salt (⅛ tsp celery seed + 1 dash salt). Do not add ketchup.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with french fries, potato chips, or baked beans on the side.'
     ],
     sections: [
       { key: 'frank', label: 'Frank', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -6941,7 +6941,7 @@ export const LEVELS: Level[] = [
       'Grill the frank over medium-high heat, turning occasionally, until lightly charred and heated through, about 4–5 minutes.',
       'Warm the canned chili in a small saucepan over medium heat, stirring, until hot.',
       'Place the frank in the bun. Spoon the chili over the frank. Top with chopped onion and shredded cheddar cheese.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with french fries, potato chips, or baked beans on the side.'
     ],
     sections: [
       { key: 'frank', label: 'Frank', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -7028,7 +7028,7 @@ export const LEVELS: Level[] = [
       'In a small bowl, toss the shredded cabbage with the mayonnaise, apple cider vinegar, and a pinch of salt. Let the coleslaw rest for 5 minutes to soften slightly.',
       'Grill the frank over medium-high heat, turning occasionally, until lightly charred and heated through, about 4–5 minutes.',
       'Place the frank in the bun. Spread mustard along the frank. Pile the coleslaw on top and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with french fries, potato chips, or baked beans on the side.'
     ],
     sections: [
       { key: 'coleslaw', label: 'Coleslaw', cookingMethod: '', yieldFactorWater: 1.0 },
