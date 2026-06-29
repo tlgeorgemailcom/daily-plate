@@ -11422,18 +11422,18 @@ export const LEVELS: Level[] = [
       { name: 'dill seed', quantity: '2 tsp dill seed', section: 'brine', ndbNo: '2016', portionDesc: 'g', portionGrams: 4.2 },
       { name: 'ground mace', quantity: '1 tsp ground mace', section: 'brine', ndbNo: '2022', portionDesc: 'g', portionGrams: 1.7 },
       { name: 'red pepper flakes', quantity: '1 tsp red pepper flakes', section: 'brine', ndbNo: '2031', portionDesc: 'g', portionGrams: 1.8 },
-      { name: 'fresh ginger', quantity: '1 large knob fresh ginger', section: 'brine', ndbNo: '11216', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'fresh ginger', quantity: '1 large knob fresh ginger, peeled', section: 'brine', ndbNo: '11216', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'cinnamon', quantity: '2 cinnamon sticks', section: 'brine', ndbNo: '2010', portionDesc: 'g', portionGrams: 5.2 },
       { name: 'beef brisket flat', quantity: '3 lbs beef brisket flat', section: 'beef', ndbNo: '13805', portionDesc: 'g', portionGrams: 1360.8 },
       { name: 'ground black pepper', quantity: '1 tsp ground black pepper', section: 'beef', ndbNo: '2030', portionDesc: 'g', portionGrams: 2.3 },
       { name: 'allspice', quantity: '1 tsp ground allspice', section: 'beef', ndbNo: '2001', portionDesc: 'g', portionGrams: 1.9 },
-      { name: 'bay', quantity: '3 bay leaves', section: 'beef', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.8 },
+      { name: 'bay leaves', quantity: '3 bay leaves', section: 'beef', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.8 },
       { name: 'salt', quantity: '1 tsp salt', section: 'beef', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
-      { name: 'green cabbage', quantity: '½ head green cabbage', section: 'vegetables', ndbNo: '11109', portionDesc: 'g', portionGrams: 453.6 },
-      { name: 'potato', quantity: '4 medium potatoes', section: 'vegetables', ndbNo: '11354', portionDesc: 'g', portionGrams: 600.0 },
-      { name: 'carrot', quantity: '4 large carrots', section: 'vegetables', ndbNo: '11124', portionDesc: 'g', portionGrams: 244.0 },
-      { name: 'celery', quantity: '4 stalks celery', section: 'vegetables', ndbNo: '11143', portionDesc: 'g', portionGrams: 160.0 },
-      { name: 'onion', quantity: '1 medium onion', section: 'vegetables', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 }
+      { name: 'green cabbage', quantity: '½ head green cabbage, cut into wedges', section: 'vegetables', ndbNo: '11109', portionDesc: 'g', portionGrams: 453.6 },
+      { name: 'potato', quantity: '4 medium white potatoes, halved (173g each)', section: 'vegetables', ndbNo: '11354', portionDesc: 'g', portionGrams: 600.0 },
+      { name: 'carrot', quantity: '4 large carrots, peeled and cut into 2-inch pieces', section: 'vegetables', ndbNo: '11124', portionDesc: 'g', portionGrams: 244.0 },
+      { name: 'celery', quantity: '4 stalks celery, cut into 2-inch pieces', section: 'vegetables', ndbNo: '11143', portionDesc: 'g', portionGrams: 160.0 },
+      { name: 'onion', quantity: '1 medium onion, quartered', section: 'vegetables', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 }
     ],
     recipeInstructions: [
       'Prepare the brine: Combine the water, salt, sugar, mustard seed, coriander seed, cloves, dill seed, mace, red pepper flakes, ginger, and cinnamon sticks in a large saucepan. Bring to a boil over high heat, stirring until the salt and sugar fully dissolve. Remove from heat and add 4 cups of ice to cool the brine rapidly. Once completely cold, proceed to curing.',
@@ -11442,7 +11442,7 @@ export const LEVELS: Level[] = [
       'Move the brisket to a cutting board and tent loosely with foil. Keep the pot at a low simmer.',
       'Add the potatoes and carrots to the simmering liquid and cook for 10 minutes. Add the cabbage wedges, celery, and onion and cook uncovered for 15 to 20 minutes more, until all vegetables are tender.',
       'Discard the bay leaves. Slice the brisket against the grain into 1/4-inch slices. Serve on a platter with the vegetables and a ladle of the cooking broth poured over the top.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with Irish soda bread, whole grain mustard, and horseradish sauce on the side.'
     ],
     sections: [
       { key: 'brine', label: 'Brine', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
