@@ -8453,11 +8453,11 @@ export const LEVELS: Level[] = [
       { name: 'Tartiflette', quantity: 'custom (g)', foodWord: 'TARTIFLETTE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'Yukon Gold potatoes (White potatoes in the database)', quantity: '2 lb', section: 'potatoes', ndbNo: '11354', portionDesc: 'g', portionGrams: 907.2 },
       { name: 'Brie cheese (Reblochon substitute — not in SR Legacy)', quantity: '14 oz', section: 'gratin', ndbNo: '1006', portionDesc: 'g', portionGrams: 396.9 },
-      { name: 'bacon', quantity: '4 oz', section: 'gratin', ndbNo: '10862', portionDesc: 'g', portionGrams: 113.4 },
-      { name: 'onion', quantity: '1 large', section: 'gratin', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'bacon', quantity: '4 oz thick bacon (lardons)', section: 'gratin', ndbNo: '10862', portionDesc: 'g', portionGrams: 113.4 },
+      { name: 'onion', quantity: '1 large onion, thinly sliced', section: 'gratin', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
       { name: 'white wine', quantity: '2 fl oz', section: 'gratin', ndbNo: '14106', portionDesc: 'g', portionGrams: 58.8 },
       { name: 'heavy cream', quantity: '4 tbsp', section: 'gratin', ndbNo: '1053', portionDesc: 'g', portionGrams: 60.0 },
-      { name: 'garlic', quantity: '2 cloves', section: 'gratin', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'gratin', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'salt', quantity: '1/2 tsp', section: 'gratin', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'ground black pepper', quantity: '1/4 tsp', section: 'gratin', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.6 }
     ],
@@ -8469,7 +8469,7 @@ export const LEVELS: Level[] = [
       'Layer half the potato rounds in the baking dish. Spread the bacon and onion mixture over the top. Add the remaining potatoes.',
       'Slice the Brie (or Reblochon if available) in half horizontally through the rind. Place it cut-side down on top of the potatoes, covering as much surface as possible.',
       'Bake for 25–30 minutes until the cheese is melted and bubbling and the top is golden. Serve immediately directly from the baking dish.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with crusty bread and a simple green salad. Best enjoyed straight from the oven while the cheese is still bubbling.'
     ],
     sections: [
       { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 },
