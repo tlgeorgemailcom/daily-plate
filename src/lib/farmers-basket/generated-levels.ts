@@ -6052,7 +6052,7 @@ export const LEVELS: Level[] = [
       'Heat a skillet over medium-high heat. Remove the pork from the marinade, pat lightly dry, and cook 3–4 minutes per side until cooked through (internal temp 145°F). Rest 5 minutes, then slice thinly.',
       'Split the baguette lengthwise and lightly toast the cut sides in the pan. Spread mayonnaise on both sides.',
       'Layer the sliced pork on the bottom half. Top with pickled daikon and carrot, cucumber slices, jalapeño, and cilantro. Close the sandwich and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with a light clear soup or Vietnamese iced coffee on the side.'
     ],
     sections: [
       { key: 'pork', label: 'Pork', cookingMethod: '', yieldFactorWater: 0.8 },
