@@ -4234,7 +4234,7 @@ export const LEVELS: Level[] = [
       'Mix shredded cheddar, softened cream cheese, mayonnaise, drained pimentos, salt, and pepper until well combined.',
       'Spread generously on both slices of white bread.',
       'Press the slices together and serve. Cut diagonally if desired.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with potato chips, a dill pickle, or alongside a bowl of tomato soup.'
     ],
     sections: [
       { key: 'sandwich', label: 'Pimento Cheese', cookingMethod: '', yieldFactorWater: 1.0 }
