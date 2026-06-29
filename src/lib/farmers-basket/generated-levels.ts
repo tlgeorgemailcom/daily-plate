@@ -6412,7 +6412,7 @@ export const LEVELS: Level[] = [
       'Make the tzatziki: grate cucumber and squeeze out as much liquid as possible with a paper towel. In a small bowl, stir together yogurt, drained cucumber, dill, garlic powder, lemon juice, and salt until combined. Set aside.',
       'Warm pita briefly in skillet or microwave. Slice off the top third to open a pocket.',
       'Fill the pita with tomato slices and red onion. Add the lamb patties. Spoon tzatziki generously over the top. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with Greek salad, roasted potatoes, or extra tzatziki on the side.'
     ],
     sections: [
       { key: 'lamb', label: 'Lamb', cookingMethod: '', yieldFactorWater: 0.75 },
