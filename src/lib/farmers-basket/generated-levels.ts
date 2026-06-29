@@ -3946,7 +3946,7 @@ export const LEVELS: Level[] = [
       'Spread mayonnaise evenly over one side of each toast slice.',
       'On one slice (mayo side up), layer the lettuce leaf, tomato slices, and bacon. Top with the second slice, mayo side down.',
       'Cut diagonally and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with potato chips, a dill pickle, or a bowl of tomato soup.'
     ],
     sections: [
       { key: 'sandwich', label: 'BLT', cookingMethod: '', yieldFactorWater: 1.0 }
