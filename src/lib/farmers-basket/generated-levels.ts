@@ -17676,7 +17676,7 @@ export const LEVELS: Level[] = [
       'Melt the butter in the same skillet over medium heat. Add the onion and cook until softened, about 5 minutes. Add the garlic and cook 1 minute more.',
       'Sprinkle the flour over the onion mixture and whisk to combine. Cook 1 minute, then pour in the heavy cream and whisk until smooth. Cook for 2–3 minutes until the sauce thickens.',
       'Stir in the squeezed spinach, nutmeg, salt, and black pepper. Cook for 2 minutes until heated through. Taste and adjust seasoning as needed. Serve warm.',
-      'Suggestions (not included):'
+      'Suggestions (not included): A steakhouse classic. Pairs especially well with grilled steak, roasted chicken, or prime rib.'
     ],
     sections: [
       { key: 'cream', label: 'Creamed Spinach', cookingMethod: '', yieldFactorWater: 0.39 }
