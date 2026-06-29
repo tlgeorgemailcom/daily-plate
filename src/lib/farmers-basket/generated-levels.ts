@@ -8218,9 +8218,9 @@ export const LEVELS: Level[] = [
       { name: 'Potato salad, home-prepared', quantity: 'custom (g)', foodWord: 'POTATOSALAD', ndbNo: '11414', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'Yukon Gold potatoes (White potatoes in the database)', quantity: '2 lb', section: 'potatoes', ndbNo: '11354', portionDesc: 'g', portionGrams: 907.2 },
       { name: 'mayonnaise', quantity: '3/4 cup', section: 'dressing', ndbNo: '4025', portionDesc: 'g', portionGrams: 165.0 },
-      { name: 'hard-boiled egg', quantity: '3 large', section: 'dressing', ndbNo: '1129', portionDesc: 'g', portionGrams: 150.0 },
-      { name: 'celery', quantity: '3 stalks celery', section: 'dressing', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
-      { name: 'onion', quantity: '1/4 cup', section: 'dressing', ndbNo: '11282', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'hard-boiled egg', quantity: '3 large hard-boiled eggs, roughly chopped', section: 'dressing', ndbNo: '1129', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'celery', quantity: '3 stalks celery, diced', section: 'dressing', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'onion', quantity: '1/4 cup onion, finely diced', section: 'dressing', ndbNo: '11282', portionDesc: 'g', portionGrams: 40.0 },
       { name: 'yellow mustard', quantity: '1 tbsp', section: 'dressing', ndbNo: '2046', portionDesc: 'g', portionGrams: 15.0 },
       { name: 'apple cider vinegar', quantity: '1 tbsp', section: 'dressing', ndbNo: '2048', portionDesc: 'g', portionGrams: 14.9 },
       { name: 'salt', quantity: '1 tsp', section: 'dressing', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
@@ -8234,7 +8234,7 @@ export const LEVELS: Level[] = [
       'Add the warm potato cubes to the bowl and fold gently to coat. Season with salt and black pepper. Warm potatoes absorb the dressing better — do not wait until they are fully cold.',
       'Fold in the chopped hard-boiled eggs last, being careful not to mash them. Taste and adjust salt, pepper, mustard, or vinegar as needed.',
       'Cover and refrigerate at least 1 hour before serving. The flavors improve significantly as the salad rests. Serve cold or at cool room temperature.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve alongside grilled burgers, hot dogs, or fried chicken. A classic pairing for summer barbecues and picnics.'
     ],
     sections: [
       { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 },
