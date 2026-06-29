@@ -16117,7 +16117,7 @@ export const LEVELS: Level[] = [
       'In a small bowl, mix the crab meat with mayonnaise until lightly bound.',
       'Lay a nori sheet on a bamboo mat, spread an even layer of sushi rice with a 1/2-inch gap near the top, and arrange crab mixture, avocado slices, and julienned cucumber slightly toward the bottom.',
       'Roll tightly, seal the edge, and repeat for remaining sheets. Slice each roll into even pieces and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with soy sauce, pickled ginger, and wasabi.'
     ],
     sections: [
       { key: 'rice', label: 'Sushi rice', cookingMethod: '', yieldFactorWater: 1.0 },
