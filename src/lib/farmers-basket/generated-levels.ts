@@ -12382,12 +12382,12 @@ export const LEVELS: Level[] = [
       { name: 'vegetable oil', quantity: '2 tbsp', section: 'beef', ndbNo: '4513', portionDesc: 'g', portionGrams: 27.2 },
       { name: 'soy sauce', quantity: '4 tbsp soy sauce', section: 'sauce', ndbNo: '16123', portionDesc: 'g', portionGrams: 64.0 },
       { name: 'brown sugar', quantity: '1/4 cup packed', section: 'sauce', ndbNo: '19334', portionDesc: 'g', portionGrams: 55.0 },
-      { name: 'garlic', quantity: '2 cloves', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'fresh ginger', quantity: '1 tbsp grated', section: 'sauce', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'hoisin sauce', quantity: '2 tbsp hoisin sauce', section: 'sauce', ndbNo: '6175', portionDesc: 'g', portionGrams: 32.0 },
       { name: 'sesame oil', quantity: '1 tbsp', section: 'sauce', ndbNo: '4058', portionDesc: 'g', portionGrams: 13.6 },
       { name: 'red pepper flakes', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.3 },
-      { name: 'scallions', quantity: '4 large scallions', section: 'sauce', ndbNo: '11291', portionDesc: 'g', portionGrams: 100.0 }
+      { name: 'scallions', quantity: '4 large scallions, sliced', section: 'sauce', ndbNo: '11291', portionDesc: 'g', portionGrams: 100.0 }
     ],
     recipeInstructions: [
       'Slice the flank steak across the grain into 1/4-inch strips. Toss with cornstarch and let sit for 10 minutes.',
