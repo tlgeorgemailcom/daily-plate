@@ -13521,12 +13521,12 @@ export const LEVELS: Level[] = [
       { name: 'water', quantity: '4 cups', section: 'rice', ndbNo: '14411', portionDesc: 'g', portionGrams: 946.0 },
       { name: 'salt', quantity: '1 tsp', section: 'rice', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'chicken breast (boneless/skinless)', quantity: '1 lb', section: 'stir_fry', ndbNo: '5062', portionDesc: 'g', portionGrams: 453.6 },
-      { name: 'large egg', quantity: '3 large', section: 'stir_fry', ndbNo: '1123', portionDesc: 'g', portionGrams: 150.0 },
-      { name: 'carrot', quantity: '2 medium', section: 'stir_fry', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'large egg', quantity: '3 large eggs, beaten', section: 'stir_fry', ndbNo: '1123', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'carrot', quantity: '2 medium carrots, diced', section: 'stir_fry', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
       { name: 'frozen peas', quantity: '1 cup', section: 'stir_fry', ndbNo: '11313', portionDesc: 'g', portionGrams: 80.0 },
-      { name: 'onion', quantity: '1 medium', section: 'stir_fry', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
-      { name: 'garlic', quantity: '3 cloves', section: 'stir_fry', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
-      { name: 'scallions', quantity: '4 stalks', section: 'stir_fry', ndbNo: '11291', portionDesc: 'g', portionGrams: 48.0 },
+      { name: 'onion', quantity: '1 medium onion, finely chopped', section: 'stir_fry', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'stir_fry', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'scallions', quantity: '4 scallions, thinly sliced', section: 'stir_fry', ndbNo: '11291', portionDesc: 'g', portionGrams: 48.0 },
       { name: 'tamari', quantity: '3 tbsp', section: 'stir_fry', ndbNo: '16124', portionDesc: 'g', portionGrams: 54.0 },
       { name: 'sesame oil', quantity: '1 tsp', section: 'stir_fry', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'olive oil', quantity: '2 tbsp', section: 'stir_fry', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
@@ -13541,7 +13541,7 @@ export const LEVELS: Level[] = [
       'Push the vegetables to the side. Pour the eggs into the empty side of the wok and scramble, stirring until just set, then mix with the vegetables.',
       'Add the cooked rice, peas, and chicken. Pour the tamari over the rice and toss everything together over high heat for 2 to 3 minutes.',
       'Stir in the sesame oil and scallions. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve on its own or with egg drop soup or hot and sour soup on the side.'
     ],
     sections: [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
