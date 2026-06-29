@@ -8420,7 +8420,7 @@ export const LEVELS: Level[] = [
       'Press the top firmly with a spatula. Cook on the stovetop over medium heat for 5 minutes until the bottom begins to brown.',
       'Transfer to the oven and bake for 40–45 minutes until the potatoes are cooked through and the top is golden.',
       'Invert onto a serving plate so the crispy bottom becomes the top. Cut into wedges and serve.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve alongside roast beef, pan-seared steak, or roasted lamb chops. Elegant enough for a dinner party.'
     ],
     sections: [
       { key: 'gratin', label: 'Pommes Anna', cookingMethod: '', yieldFactorWater: 0.85 }
