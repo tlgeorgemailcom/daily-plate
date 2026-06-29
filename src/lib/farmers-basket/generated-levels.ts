@@ -16394,7 +16394,7 @@ export const LEVELS: Level[] = [
       'Pour in the White Chicken Stock, Worcestershire sauce, and lemon juice. Simmer for 2–3 minutes, scraping up any browned bits, until the sauce reduces slightly.',
       'Return the shrimp and crumbled bacon to the pan. Add the scallions and toss to combine.',
       'Spoon the grits into bowls and top with the shrimp mixture. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with a simple green salad or steamed asparagus on the side.'
     ],
     sections: [
       { key: 'grits', label: 'Grits', cookingMethod: '', yieldFactorWater: 0.82 },
