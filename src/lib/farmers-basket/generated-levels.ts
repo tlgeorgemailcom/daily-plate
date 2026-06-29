@@ -16987,7 +16987,7 @@ export const LEVELS: Level[] = [
       { name: 'snap peas', quantity: '2 cups snap peas, trimmed', section: 'stir_fry', ndbNo: '11300', portionDesc: 'g', portionGrams: 126.0 },
       { name: 'red bell pepper', quantity: '1 medium red bell pepper, thinly sliced', section: 'stir_fry', ndbNo: '11821', portionDesc: 'g', portionGrams: 119.0 },
       { name: 'carrot', quantity: '2 medium carrots, thinly sliced', section: 'stir_fry', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
-      { name: 'crimini mushrooms', quantity: '4 oz cremini mushrooms, sliced', section: 'stir_fry', ndbNo: '11266', portionDesc: 'g', portionGrams: 113.0 },
+      { name: 'crimini mushrooms', quantity: '4 oz crimini mushrooms, sliced', section: 'stir_fry', ndbNo: '11266', portionDesc: 'g', portionGrams: 113.0 },
       { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'stir_fry', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'fresh ginger', quantity: '1 tbsp fresh ginger, grated', section: 'stir_fry', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'tamari', quantity: '3 tbsp', section: 'stir_fry', ndbNo: '16124', portionDesc: 'g', portionGrams: 54.0 },
@@ -17008,7 +17008,7 @@ export const LEVELS: Level[] = [
       'Return the tofu to the pan. Pour the sauce over everything and toss to coat. Cook for 1 minute until the sauce thickens.',
       'Remove from heat and drizzle the sesame oil over the stir-fry. Season with salt and pepper to taste.',
       'Divide the cooked rice among four bowls and top with the stir-fry. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Garnish with sesame seeds and sliced scallions. Serve with additional tamari or sriracha on the side.'
     ],
     sections: [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
