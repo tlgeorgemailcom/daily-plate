@@ -13057,8 +13057,8 @@ export const LEVELS: Level[] = [
       { name: 'soy sauce', quantity: '1/4 cup', section: 'teriyaki', ndbNo: '16123', portionDesc: 'g', portionGrams: 64.0 },
       { name: 'mirin', quantity: '3 tbsp', section: 'teriyaki', ndbNo: '14106', portionDesc: 'g', portionGrams: 44.0 },
       { name: 'brown sugar', quantity: '3 tbsp', section: 'teriyaki', ndbNo: '19334', portionDesc: 'g', portionGrams: 41.4 },
-      { name: 'garlic', quantity: '3 cloves', section: 'teriyaki', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
-      { name: 'fresh ginger', quantity: '1 tbsp', section: 'teriyaki', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'teriyaki', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'fresh ginger', quantity: '1 tbsp fresh ginger, grated', section: 'teriyaki', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'sesame oil', quantity: '1 tsp', section: 'teriyaki', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'cornstarch', quantity: '1 tsp', section: 'teriyaki', ndbNo: '20027', portionDesc: 'g', portionGrams: 2.7 }
     ],
