@@ -12347,7 +12347,7 @@ export const LEVELS: Level[] = [
       'Make the glaze: whisk together the ketchup, brown sugar, Worcestershire sauce, and apple cider vinegar. Spread half the glaze over the top of the meatloaf.',
       'Bake for 45 minutes. Spread the remaining glaze over the top and bake an additional 15 to 20 minutes until the internal temperature reaches 160°F.',
       'Remove from the oven and let rest 10 minutes before slicing. Cut into 8 slices and serve.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with creamy mashed potatoes and green beans, with extra ketchup or brown gravy on the side.'
     ],
     sections: [
       { key: 'meatloaf', label: 'Meatloaf', cookingMethod: '', yieldFactorWater: 0.82 },
