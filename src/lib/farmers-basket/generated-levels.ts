@@ -10030,12 +10030,12 @@ export const LEVELS: Level[] = [
       { name: 'Asparagus Salad', quantity: 'custom (g)', foodWord: 'ASPARAGUSSALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'asparagus raw', quantity: '¾ lb', section: 'asparagus', ndbNo: '11011', portionDesc: 'g', portionGrams: 340.0 },
       { name: 'arugula', quantity: '2 cups', section: 'salad', ndbNo: '11959', portionDesc: 'g', portionGrams: 40.0 },
-      { name: 'tomato', quantity: '1 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'tomato', quantity: '1 medium tomato, halved or quartered', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 120.0 },
       { name: 'pine nuts', quantity: '2 tbsp', section: 'salad', ndbNo: '12147', portionDesc: 'g', portionGrams: 20.0 },
       { name: 'Parmesan cheese', quantity: '1 tbsp', section: 'salad', ndbNo: '1033', portionDesc: 'g', portionGrams: 10.0 },
       { name: 'lemon juice', quantity: '1½ tbsp', section: 'salad', ndbNo: '9152', portionDesc: 'g', portionGrams: 22.5 },
       { name: 'olive oil', quantity: '2 tbsp', section: 'salad', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.0 },
-      { name: 'garlic', quantity: '1 clove', section: 'salad', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'garlic', quantity: '1 clove garlic, minced', section: 'salad', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'salt', quantity: '¼ tsp', section: 'salad', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
       { name: 'ground black pepper', quantity: '⅛ tsp', section: 'salad', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 }
     ],
@@ -10044,7 +10044,7 @@ export const LEVELS: Level[] = [
       'Cut the cooled asparagus on the bias into 2-inch pieces. Halve or quarter the tomato.',
       'Whisk together olive oil, lemon juice, garlic, salt, and pepper to make the dressing.',
       'Arrange arugula on a platter. Top with asparagus, tomato, pine nuts, and parmesan. Drizzle with the lemon vinaigrette and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve as a starter or light side. Pairs well with grilled salmon or chicken.'
     ],
     sections: [
       { key: 'asparagus', label: 'Asparagus', cookingMethod: '', yieldFactorWater: 0.92 },
