@@ -18155,7 +18155,7 @@ export const LEVELS: Level[] = [
       'Add the asparagus and chicken broth. Bring to a boil, then reduce heat and simmer until the asparagus is very tender, about 15-18 minutes.',
       'Use an immersion blender (or transfer in batches to a blender) to purée the soup until very smooth. Return to the pot over low heat.',
       'Stir in the heavy cream and lemon juice. Season with salt and pepper to taste. Warm through and serve.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with crusty bread or croutons. Top with a swirl of cream and fresh chives for garnish.'
     ],
     sections: [
       { key: 'stock', label: 'Chicken stock', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -18306,7 +18306,7 @@ export const LEVELS: Level[] = [
       'Gradually whisk in the chicken stock and half-and-half. Bring to a gentle simmer over medium heat, stirring often.',
       'Add broccoli; reduce heat to low and cook 15 to 20 minutes until very tender. Season with salt, pepper, and nutmeg.',
       'Reduce heat to the lowest setting. Add shredded cheddar a handful at a time, stirring until fully melted before adding the next. Do not boil after adding the cheese. For a smoother texture, use an immersion blender to partially blend. Taste and adjust seasoning.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with crusty bread or a soft pretzel. A bread bowl makes a classic presentation.'
     ],
     sections: [
       { key: 'stock', label: 'Chicken stock', cookingMethod: '', yieldFactorWater: 1.0 },
