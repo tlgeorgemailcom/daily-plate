@@ -8363,7 +8363,7 @@ export const LEVELS: Level[] = [
       { name: 'Yukon Gold potatoes (White potatoes in the database)', quantity: '2 lb', section: 'gratin', ndbNo: '11354', portionDesc: 'g', portionGrams: 907.2 },
       { name: 'heavy cream', quantity: '1 cup', section: 'gratin', ndbNo: '1053', portionDesc: 'g', portionGrams: 238.0 },
       { name: 'whole milk', quantity: '1/2 cup', section: 'gratin', ndbNo: '1077', portionDesc: 'g', portionGrams: 122.0 },
-      { name: 'Gruyere cheese', quantity: '1 cup shredded', section: 'gratin', ndbNo: '1023', portionDesc: 'g', portionGrams: 108.0 },
+      { name: 'Gruyere cheese', quantity: '1 cup Gruyère cheese, shredded', section: 'gratin', ndbNo: '1023', portionDesc: 'g', portionGrams: 108.0 },
       { name: 'unsalted butter', quantity: '1 tbsp', section: 'gratin', ndbNo: '1145', portionDesc: 'g', portionGrams: 14.2 },
       { name: 'garlic', quantity: '2 cloves', section: 'gratin', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'salt', quantity: '1 tsp', section: 'gratin', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
@@ -8377,7 +8377,7 @@ export const LEVELS: Level[] = [
       'Arrange one-third of the potato slices in the prepared dish. Pour one-third of the cream mixture over the potatoes and sprinkle with one-third of the shredded Gruyère. Repeat for two more layers, finishing with cheese on top.',
       'Cover with foil and bake for 45 minutes. Remove foil and bake an additional 25–30 minutes, until the top is golden and bubbling and the potatoes are completely tender.',
       'Let rest 10 minutes before serving.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve alongside roast chicken, pork tenderloin, or a simple green salad for a lighter meal.'
     ],
     sections: [
       { key: 'gratin', label: 'Gratin', cookingMethod: '', yieldFactorWater: 0.85 }
