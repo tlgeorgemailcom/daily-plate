@@ -17105,7 +17105,7 @@ export const LEVELS: Level[] = [
       { name: 'fresh ginger', quantity: '1 tbsp fresh ginger, grated', section: 'dal_base', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'tomato', quantity: '2 medium tomatoes, diced (123g each)', section: 'dal_base', ndbNo: '11529', portionDesc: 'g', portionGrams: 246.0 },
       { name: 'ground turmeric', quantity: '1 tsp ground turmeric', section: 'dal_base', ndbNo: '2043', portionDesc: 'g', portionGrams: 3.0 },
-      { name: 'coriander seed', quantity: '1 tsp ground coriander', section: 'dal_base', ndbNo: '2013', portionDesc: 'g', portionGrams: 1.8 },
+      { name: 'coriander seed', quantity: '1 tsp ground coriander seed', section: 'dal_base', ndbNo: '2013', portionDesc: 'g', portionGrams: 1.8 },
       { name: 'chili powder', quantity: '1 tsp chili powder', section: 'dal_base', ndbNo: '2009', portionDesc: 'g', portionGrams: 2.7 },
       { name: 'salt', quantity: '1 tsp', section: 'dal_base', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'lemon juice', quantity: '2 tbsp', section: 'dal_base', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
@@ -17121,7 +17121,7 @@ export const LEVELS: Level[] = [
       'Add the cooked lentils to the tomato base and stir to combine. Season with salt and simmer together for 3 to 4 minutes until the flavors meld. Add a splash of water if the dal is too thick.',
       'Remove from heat and stir in the lemon juice. Taste and adjust seasoning.',
       'Divide the rice among four bowls and ladle the dal over the top. Garnish with fresh cilantro and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Top with additional fresh cilantro and a squeeze of lemon juice.'
     ],
     sections: [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
