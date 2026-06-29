@@ -14233,8 +14233,8 @@ export const LEVELS: Level[] = [
       { name: 'boneless/skinless thighs', quantity: '2 lb', section: 'chicken', ndbNo: '5096', portionDesc: 'g', portionGrams: 907.2 },
       { name: 'tamari', quantity: '1/2 cup', section: 'chicken', ndbNo: '16124', portionDesc: 'g', portionGrams: 108.0 },
       { name: 'white cane vinegar or rice vinegar (distilled vinegar used as proxy)', quantity: '1/2 cup', section: 'chicken', ndbNo: '2053', portionDesc: 'g', portionGrams: 118.3 },
-      { name: 'garlic', quantity: '6 cloves', section: 'chicken', ndbNo: '11215', portionDesc: 'g', portionGrams: 18.0 },
-      { name: 'bay leaf', quantity: '3 leaves', section: 'chicken', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.8 },
+      { name: 'garlic', quantity: '6 cloves garlic, crushed', section: 'chicken', ndbNo: '11215', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'bay leaves', quantity: '3 bay leaves', section: 'chicken', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.8 },
       { name: 'ground black pepper', quantity: '1 tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 2.3 },
       { name: 'olive oil', quantity: '1 tbsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.5 },
       { name: 'water', quantity: '1/4 cup', section: 'chicken', ndbNo: '14411', portionDesc: 'g', portionGrams: 59.15 }
