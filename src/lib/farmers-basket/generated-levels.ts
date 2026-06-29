@@ -11693,13 +11693,13 @@ export const LEVELS: Level[] = [
       { name: 'beef tenderloin', quantity: '4 6oz beef tenderloin steaks', section: 'steak', ndbNo: '23372', portionDesc: 'g', portionGrams: 680.4 },
       { name: 'unsalted butter', quantity: '3 tbsp unsalted butter', section: 'steak', ndbNo: '1145', portionDesc: 'g', portionGrams: 42.6 },
       { name: 'shallots', quantity: '3 tbsp minced shallots', section: 'steak', ndbNo: '11677', portionDesc: 'g', portionGrams: 30.0 },
-      { name: 'garlic', quantity: '2 cloves garlic', section: 'steak', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
-      { name: 'crimini mushrooms', quantity: '8 oz crimini mushrooms', section: 'steak', ndbNo: '11266', portionDesc: 'g', portionGrams: 227.0 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'steak', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'crimini mushrooms', quantity: '8 oz crimini mushrooms, sliced ¼ inch thick', section: 'steak', ndbNo: '11266', portionDesc: 'g', portionGrams: 227.0 },
       { name: 'brandy', quantity: '1/4 cup brandy', section: 'steak', ndbNo: '14747', portionDesc: 'g', portionGrams: 60.0 },
       { name: 'heavy cream', quantity: '1/2 cup heavy cream', section: 'steak', ndbNo: '1053', portionDesc: 'g', portionGrams: 119.0 },
       { name: 'beef broth', quantity: '1/2 cup beef broth', section: 'steak', ndbNo: '6008', portionDesc: 'g', portionGrams: 120.0 },
       { name: 'Worcestershire sauce', quantity: '1 tbsp Worcestershire sauce', section: 'steak', ndbNo: '6971', portionDesc: 'g', portionGrams: 17.0 },
-      { name: 'fresh parsley', quantity: '2 tbsp fresh parsley', section: 'steak', ndbNo: '11297', portionDesc: 'g', portionGrams: 7.6 },
+      { name: 'fresh parsley', quantity: '2 tbsp fresh parsley, chopped', section: 'steak', ndbNo: '11297', portionDesc: 'g', portionGrams: 7.6 },
       { name: 'salt', quantity: '1 tsp salt', section: 'steak', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'ground black pepper', quantity: '1/2 tsp ground black pepper', section: 'steak', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
       { name: 'Dijon-Style Mustard', quantity: '1 tbsp Dijon-Style Mustard (recipe)', section: 'dijon', foodWord: 'DIJONTYPEMUSTARD', portionDesc: 'g', portionGrams: 15.0, isDish: true, componentRef: 'SAUCE_010' }
@@ -11713,7 +11713,7 @@ export const LEVELS: Level[] = [
       'Add the beef broth and Worcestershire sauce. Stir, scraping up any browned bits. Simmer 2 minutes. Add the heavy cream and Dijon mustard. Stir to combine and simmer 3 to 4 minutes until the sauce thickens enough to coat a spoon.',
       'Return the steaks and any accumulated juices to the pan. Spoon the sauce over them and warm through 1 minute. Taste and adjust seasoning.',
       'Plate the steaks, spoon the mushroom pan sauce over the top, and garnish with chopped parsley. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with creamy mashed potatoes and roasted asparagus.'
     ],
     sections: [
       { key: 'steak', label: 'Steak Diane', cookingMethod: '', yieldFactorWater: 0.8 },
