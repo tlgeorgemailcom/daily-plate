@@ -14078,7 +14078,7 @@ export const LEVELS: Level[] = [
       { name: 'Chicken Sesame', quantity: 'custom (g)', foodWord: 'CHICKENSESAME', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'chicken breast', quantity: '1.5 lb', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 680.4 },
       { name: 'cornstarch', quantity: '1/2 cup', section: 'chicken', ndbNo: '20027', portionDesc: 'g', portionGrams: 64.0 },
-      { name: 'large egg', quantity: '1 large', section: 'chicken', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'large egg', quantity: '1 large egg, beaten', section: 'chicken', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
       { name: 'salt', quantity: '1/2 tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'ground black pepper', quantity: '1/4 tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
       { name: 'olive oil', quantity: '1/4 cup', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 54.4 },
@@ -14087,11 +14087,11 @@ export const LEVELS: Level[] = [
       { name: 'honey', quantity: '3 tbsp', section: 'sauce', ndbNo: '19296', portionDesc: 'g', portionGrams: 63.0 },
       { name: 'rice wine vinegar (distilled vinegar used as proxy)', quantity: '1 tbsp', section: 'sauce', ndbNo: '2053', portionDesc: 'g', portionGrams: 14.9 },
       { name: 'sesame oil', quantity: '1 tbsp', section: 'sauce', ndbNo: '4058', portionDesc: 'g', portionGrams: 13.5 },
-      { name: 'garlic', quantity: '3 cloves', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
-      { name: 'fresh ginger', quantity: '1 tbsp', section: 'sauce', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'fresh ginger', quantity: '1 tbsp fresh ginger, minced', section: 'sauce', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'cornstarch', quantity: '1 tbsp', section: 'sauce', ndbNo: '20027', portionDesc: 'g', portionGrams: 8.0 },
       { name: 'sesame seeds', quantity: '1 tbsp', section: 'sauce', ndbNo: '12024', portionDesc: 'g', portionGrams: 9.0 },
-      { name: 'scallions', quantity: '3 stalks', section: 'sauce', ndbNo: '11291', portionDesc: 'g', portionGrams: 36.0 },
+      { name: 'scallions', quantity: '3 scallions, thinly sliced', section: 'sauce', ndbNo: '11291', portionDesc: 'g', portionGrams: 36.0 },
       { name: 'red pepper flakes', quantity: '1/8 tsp', section: 'sauce', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.225 }
     ],
     recipeInstructions: [
