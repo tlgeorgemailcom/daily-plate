@@ -7821,7 +7821,7 @@ export const LEVELS: Level[] = [
       'Transfer to a clean glass jar.',
       'Refrigerate uncovered until fully cooled, then seal.',
       'Rest in the refrigerator at least 24 hours before using — the sharpness mellows and the flavor develops considerably.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Use in vinaigrettes, marinades, and compound butters. An excellent sandwich spread and the base for honey mustard dressing.'
     ],
     sections: [
       { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 1.0 }
