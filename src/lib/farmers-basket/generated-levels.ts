@@ -9519,9 +9519,9 @@ export const LEVELS: Level[] = [
       { name: 'mayonnaise', quantity: '½ cup', section: 'dressing', ndbNo: '4025', portionDesc: 'g', portionGrams: 112.0 },
       { name: 'sour cream', quantity: '½ cup', section: 'dressing', ndbNo: '1056', portionDesc: 'g', portionGrams: 115.0 },
       { name: 'whole buttermilk', quantity: '½ cup', section: 'dressing', ndbNo: '1230', portionDesc: 'g', portionGrams: 122.5 },
-      { name: 'fresh dill', quantity: '1 tbsp', section: 'dressing', ndbNo: '2045', portionDesc: 'g', portionGrams: 1.0 },
-      { name: 'fresh parsley', quantity: '1 tbsp', section: 'dressing', ndbNo: '11297', portionDesc: 'g', portionGrams: 3.8 },
-      { name: 'fresh chives', quantity: '1 tbsp', section: 'dressing', ndbNo: '11156', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'fresh dill', quantity: '1 tbsp fresh dill, finely chopped', section: 'dressing', ndbNo: '2045', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'fresh parsley', quantity: '1 tbsp fresh parsley, finely chopped', section: 'dressing', ndbNo: '11297', portionDesc: 'g', portionGrams: 3.8 },
+      { name: 'fresh chives', quantity: '1 tbsp fresh chives, thinly sliced', section: 'dressing', ndbNo: '11156', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'garlic powder', quantity: '½ tsp', section: 'dressing', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.55 },
       { name: 'onion powder', quantity: '¼ tsp', section: 'dressing', ndbNo: '2026', portionDesc: 'g', portionGrams: 0.6 },
       { name: 'lemon juice', quantity: '1 tsp', section: 'dressing', ndbNo: '9152', portionDesc: 'g', portionGrams: 5.0 },
@@ -9529,12 +9529,11 @@ export const LEVELS: Level[] = [
       { name: 'ground black pepper', quantity: '¼ tsp', section: 'dressing', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
     ],
     recipeInstructions: [
-      'Finely chop the fresh dill, parsley, and chives.',
       'In a bowl, whisk together the mayonnaise, sour cream, and buttermilk until smooth.',
       'Add the dill, parsley, chives, garlic powder, onion powder, lemon juice, salt, and black pepper. Whisk to combine.',
       'Taste and adjust seasoning, adding more lemon juice for brightness or buttermilk to thin the dressing.',
       'Cover and refrigerate for at least 30 minutes before serving to allow the flavors to meld. Store refrigerated for up to 1 week.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve as a salad dressing, vegetable dip, or sandwich spread. Also excellent with buffalo wings, chicken tenders, pizza, and raw vegetables.'
     ],
     sections: [
       { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
