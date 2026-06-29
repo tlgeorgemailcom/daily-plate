@@ -16265,14 +16265,14 @@ export const LEVELS: Level[] = [
       { name: 'sesame oil', quantity: '2 tsp', section: 'salmon', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'lime juice', quantity: '2 tbsp', section: 'salmon', ndbNo: '9160', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'salt', quantity: '1/2 tsp', section: 'salmon', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
-      { name: 'quinoa dry', quantity: '1 1/3 cups dry', section: 'quinoa', ndbNo: '20035', portionDesc: 'g', portionGrams: 242.4 },
+      { name: 'quinoa', quantity: '1 1/3 cups quinoa (dry)', section: 'quinoa', ndbNo: '20035', portionDesc: 'g', portionGrams: 242.4 },
       { name: 'water', quantity: '2 1/3 cups', section: 'quinoa', ndbNo: '14411', portionDesc: 'g', portionGrams: 560.0 },
       { name: 'edamame cooked', quantity: '2 cups', section: 'assembly', ndbNo: '11212', portionDesc: 'g', portionGrams: 310.0 },
-      { name: 'avocado', quantity: '1 fruit', section: 'assembly', ndbNo: '9038', portionDesc: 'g', portionGrams: 136.0 },
-      { name: 'cucumber', quantity: '1 1/2 cups, sliced', section: 'assembly', ndbNo: '11206', portionDesc: 'g', portionGrams: 178.5 },
-      { name: 'scallions', quantity: '4 medium, thinly sliced', section: 'assembly', ndbNo: '11291', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'avocado', quantity: '1 avocado, halved and sliced', section: 'assembly', ndbNo: '9038', portionDesc: 'g', portionGrams: 136.0 },
+      { name: 'cucumber', quantity: '1 1/2 cups cucumber, sliced', section: 'assembly', ndbNo: '11206', portionDesc: 'g', portionGrams: 178.5 },
+      { name: 'scallions', quantity: '4 medium scallions, thinly sliced', section: 'assembly', ndbNo: '11291', portionDesc: 'g', portionGrams: 60.0 },
       { name: 'sesame seeds', quantity: '2 tbsp', section: 'assembly', ndbNo: '12024', portionDesc: 'g', portionGrams: 18.0 },
-      { name: 'fresh ginger', quantity: '1 tbsp, minced', section: 'assembly', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 }
+      { name: 'fresh ginger', quantity: '1 tbsp fresh ginger, minced', section: 'assembly', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 }
     ],
     recipeInstructions: [
       'Rinse 1 1/3 cups dry quinoa under cold water in a fine-mesh strainer.',
@@ -16286,7 +16286,7 @@ export const LEVELS: Level[] = [
       'Top each bowl with cooked salmon, edamame, sliced avocado, cucumber, and scallions.',
       'Sprinkle sesame seeds and minced ginger over each bowl.',
       'Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with additional lime wedges and a drizzle of sriracha or spicy mayo.'
     ],
     sections: [
       { key: 'quinoa', label: 'Quinoa', cookingMethod: '', yieldFactorWater: 0.7 },
