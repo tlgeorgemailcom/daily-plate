@@ -1273,14 +1273,6 @@ SAUCE_022,1,"Combine the mayonnaise, mustard, honey, lemon juice, and apple cide
 SAUCE_022,2,Season with salt and black pepper. Whisk again to combine.
 SAUCE_022,3,Taste and adjust honey or mustard to balance sweetness and tang to your preference.
 SAUCE_022,4,Use immediately or cover and refrigerate for up to 2 weeks. Stir before serving.
-SAUCE_024,1,Make or prepare the Dijon-Style Mustard (see the Dijon-Style Mustard recipe).
-SAUCE_024,2,Mince the garlic and mash or finely chop the anchovy fillets into a paste.
-SAUCE_024,3,"Pasteurize the egg yolk: whisk it in a small bowl set over barely simmering water (double boiler), whisking constantly, until it reaches 145°F (63°C) and has slightly thickened, about 2–3 minutes. Remove from heat immediately and let cool for 1 minute."
-SAUCE_024,4,"Whisk the lemon juice, garlic, mustard, Worcestershire sauce, and anchovy paste into the warm yolk until fully combined."
-SAUCE_024,5,"Add the olive oil in a very slow, thin stream while whisking constantly to emulsify the dressing into a creamy consistency."
-SAUCE_024,6,Fold in the freshly grated Parmesan. Season with salt and black pepper to taste.
-SAUCE_024,7,"If the dressing is too thick, thin with 1–2 tablespoons of water. Taste and adjust lemon juice or anchovy to preference."
-SAUCE_024,8,Store refrigerated in a sealed jar for up to 5 days. Whisk or shake before each use.
 SALAD_001,1,Wash and dry the romaine leaves. Tear or chop into bite-sized pieces and place in a large bowl.
 SALAD_001,2,Add the croutons and freshly grated Parmesan to the bowl.
 SALAD_001,3,Make or portion the Caesar Salad Dressing (see the Caesar Salad Dressing recipe).
@@ -3856,3 +3848,11 @@ SAUCE_023,3,Season with salt and black pepper. Taste and adjust lemon juice or s
 SAUCE_023,4,"For a smoother dressing, blend all ingredients together until the herbs are fully incorporated and the dressing is uniformly green."
 SAUCE_023,5,Cover and refrigerate for at least 30 minutes before serving. Store refrigerated for up to 1 week.
 SAUCE_023,6,"Suggestions (not included): Excellent over garden salads, grain bowls, and crudités. Also excellent as a sandwich spread, burger sauce, or dip for vegetables."
+SAUCE_024,1,Make or prepare the Dijon-Style Mustard (see the Dijon-Style Mustard recipe).
+SAUCE_024,2,"Pasteurize the egg yolk: whisk it in a small bowl set over barely simmering water (double boiler), whisking constantly, until it reaches 145°F (63°C) and has slightly thickened, about 2–3 minutes. Remove from heat immediately and let cool for 1 minute."
+SAUCE_024,3,"Whisk the lemon juice, garlic, mustard, Worcestershire sauce, and anchovy paste into the warm yolk until fully combined."
+SAUCE_024,4,"Add the olive oil in a very slow, thin stream while whisking constantly to emulsify the dressing into a creamy consistency."
+SAUCE_024,5,Fold in the freshly grated Parmesan. Season with salt and black pepper to taste.
+SAUCE_024,6,"If the dressing is too thick, thin with 1–2 tablespoons of water. Taste and adjust lemon juice or anchovy to preference."
+SAUCE_024,7,Store refrigerated in a sealed jar for up to 5 days. Whisk or shake before each use.
+SAUCE_024,8,"Suggestions (not included): The dressing for Caesar Salad, Chicken Caesar Salad, Shrimp Caesar Salad, and Chicken Caesar Wrap."

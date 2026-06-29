@@ -9700,9 +9700,9 @@ export const LEVELS: Level[] = [
       { name: 'Caesar Salad Dressing', quantity: 'custom (g)', foodWord: 'CAESARDRESSING', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'egg yolk', quantity: '1 large egg yolk', section: 'dressing', ndbNo: '1125', portionDesc: 'g', portionGrams: 17.0 },
       { name: 'lemon juice', quantity: '2 tbsp', section: 'dressing', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
-      { name: 'garlic', quantity: '2 cloves', section: 'dressing', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'dressing', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'Worcestershire sauce', quantity: '1 tsp', section: 'dressing', ndbNo: '6971', portionDesc: 'g', portionGrams: 5.0 },
-      { name: 'anchovy canned', quantity: '3 fillets', section: 'dressing', ndbNo: '15002', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'anchovy', quantity: '3 anchovy fillets, mashed into a paste', section: 'dressing', ndbNo: '15002', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'olive oil', quantity: '½ cup', section: 'dressing', ndbNo: '4053', portionDesc: 'g', portionGrams: 108.8 },
       { name: 'Parmesan cheese', quantity: '¼ cup grated', section: 'dressing', ndbNo: '1033', portionDesc: 'g', portionGrams: 25.0 },
       { name: 'salt', quantity: '¼ tsp', section: 'dressing', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
@@ -9711,14 +9711,13 @@ export const LEVELS: Level[] = [
     ],
     recipeInstructions: [
       'Make or prepare the Dijon-Style Mustard (see the Dijon-Style Mustard recipe).',
-      'Mince the garlic and mash or finely chop the anchovy fillets into a paste.',
       'Pasteurize the egg yolk: whisk it in a small bowl set over barely simmering water (double boiler), whisking constantly, until it reaches 145°F (63°C) and has slightly thickened, about 2–3 minutes. Remove from heat immediately and let cool for 1 minute.',
       'Whisk the lemon juice, garlic, mustard, Worcestershire sauce, and anchovy paste into the warm yolk until fully combined.',
       'Add the olive oil in a very slow, thin stream while whisking constantly to emulsify the dressing into a creamy consistency.',
       'Fold in the freshly grated Parmesan. Season with salt and black pepper to taste.',
       'If the dressing is too thick, thin with 1–2 tablespoons of water. Taste and adjust lemon juice or anchovy to preference.',
       'Store refrigerated in a sealed jar for up to 5 days. Whisk or shake before each use.',
-      'Suggestions (not included):'
+      'Suggestions (not included): The dressing for Caesar Salad, Chicken Caesar Salad, Shrimp Caesar Salad, and Chicken Caesar Wrap.'
     ],
     sections: [
       { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 },
