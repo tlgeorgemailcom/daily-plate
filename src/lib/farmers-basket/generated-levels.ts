@@ -9854,7 +9854,7 @@ export const LEVELS: Level[] = [
       { name: 'bacon', quantity: '4 slices', section: 'salad', ndbNo: '10862', portionDesc: 'g', portionGrams: 46.0 },
       { name: 'avocado', quantity: '1 avocado, sliced', section: 'salad', ndbNo: '9038', portionDesc: 'g', portionGrams: 136.0 },
       { name: 'hard-boiled egg', quantity: '2 large hard-boiled eggs, sliced', section: 'salad', ndbNo: '1129', portionDesc: 'g', portionGrams: 100.0 },
-      { name: 'tomato', quantity: '1 medium tomato, diced', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'tomato', quantity: '1 medium tomato (123g), diced', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
       { name: 'blue cheese crumbles', quantity: '2 oz', section: 'salad', ndbNo: '1004', portionDesc: 'g', portionGrams: 56.7 },
       { name: 'onion', quantity: '⅛ cup', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 20.0 }
     ],
@@ -9899,7 +9899,7 @@ export const LEVELS: Level[] = [
       { name: 'diced ham', quantity: '2 oz', section: 'salad', ndbNo: '10136', portionDesc: 'g', portionGrams: 56.0 },
       { name: 'hard-boiled egg', quantity: '2 large hard-boiled eggs, sliced', section: 'salad', ndbNo: '1129', portionDesc: 'g', portionGrams: 100.0 },
       { name: 'Cheddar cheese', quantity: '2 oz', section: 'salad', ndbNo: '1009', portionDesc: 'g', portionGrams: 56.7 },
-      { name: 'tomato', quantity: '1 medium tomato, cut into wedges', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'tomato', quantity: '1 medium tomato (123g), cut into wedges', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
       { name: 'cucumber', quantity: '1 cup sliced', section: 'salad', ndbNo: '11206', portionDesc: 'g', portionGrams: 119.0 }
     ],
     recipeInstructions: [
@@ -9938,7 +9938,7 @@ export const LEVELS: Level[] = [
       { name: 'Greek Salad', quantity: 'custom (g)', foodWord: 'GREEKSALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'romaine lettuce', quantity: '4 cups shredded', section: 'salad', ndbNo: '11251', portionDesc: 'g', portionGrams: 188.0 },
       { name: 'cucumber', quantity: '1 cup sliced', section: 'salad', ndbNo: '11206', portionDesc: 'g', portionGrams: 119.0 },
-      { name: 'tomato', quantity: '1 medium tomato, cut into wedges', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'tomato', quantity: '1 medium tomato (123g), cut into wedges', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
       { name: 'black olives', quantity: '10 large', section: 'salad', ndbNo: '9193', portionDesc: 'g', portionGrams: 44.0 },
       { name: 'feta cheese crumbles', quantity: '2 oz', section: 'salad', ndbNo: '1019', portionDesc: 'g', portionGrams: 56.7 },
       { name: 'onion', quantity: '¼ cup onion, thinly sliced', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 40.0 },
@@ -9988,7 +9988,7 @@ export const LEVELS: Level[] = [
       { name: 'black beans', quantity: '1 cup', section: 'salad', ndbNo: '16015', portionDesc: 'g', portionGrams: 172.0 },
       { name: 'Cheddar cheese', quantity: '2 oz', section: 'salad', ndbNo: '1009', portionDesc: 'g', portionGrams: 56.7 },
       { name: 'tortilla chips', quantity: '1 oz', section: 'salad', ndbNo: '19056', portionDesc: 'g', portionGrams: 28.35 },
-      { name: 'tomato', quantity: '1 medium tomato, diced', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'tomato', quantity: '1 medium tomato (123g), diced', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
       { name: 'sour cream', quantity: '¼ cup', section: 'salad', ndbNo: '1056', portionDesc: 'g', portionGrams: 57.5 },
       { name: 'onion', quantity: '¼ cup onion, diced', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 40.0 }
     ],
@@ -10030,7 +10030,7 @@ export const LEVELS: Level[] = [
       { name: 'Asparagus Salad', quantity: 'custom (g)', foodWord: 'ASPARAGUSSALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'asparagus raw', quantity: '¾ lb', section: 'asparagus', ndbNo: '11011', portionDesc: 'g', portionGrams: 340.0 },
       { name: 'arugula', quantity: '2 cups', section: 'salad', ndbNo: '11959', portionDesc: 'g', portionGrams: 40.0 },
-      { name: 'tomato', quantity: '1 medium tomato, halved or quartered', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'tomato', quantity: '1 medium tomato (120g), halved or quartered', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 120.0 },
       { name: 'pine nuts', quantity: '2 tbsp', section: 'salad', ndbNo: '12147', portionDesc: 'g', portionGrams: 20.0 },
       { name: 'Parmesan cheese', quantity: '1 tbsp', section: 'salad', ndbNo: '1033', portionDesc: 'g', portionGrams: 10.0 },
       { name: 'lemon juice', quantity: '1½ tbsp', section: 'salad', ndbNo: '9152', portionDesc: 'g', portionGrams: 22.5 },
