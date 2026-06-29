@@ -9428,19 +9428,18 @@ export const LEVELS: Level[] = [
       { name: 'olive oil', quantity: '¾ cup', section: 'dressing', ndbNo: '4053', portionDesc: 'g', portionGrams: 163.2 },
       { name: 'balsamic vinegar', quantity: '¼ cup', section: 'dressing', ndbNo: '2069', portionDesc: 'g', portionGrams: 60.0 },
       { name: 'honey', quantity: '1 tbsp', section: 'dressing', ndbNo: '19296', portionDesc: 'g', portionGrams: 21.0 },
-      { name: 'garlic', quantity: '1 clove', section: 'dressing', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'garlic', quantity: '1 clove garlic, minced', section: 'dressing', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'salt', quantity: '½ tsp', section: 'dressing', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'ground black pepper', quantity: '¼ tsp', section: 'dressing', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
       { name: 'Dijon-Style Mustard', quantity: '1 tsp Dijon-Style Mustard (recipe)', section: 'mustard', foodWord: 'DIJONTYPEMUSTARD', portionDesc: 'g', portionGrams: 5.0, isDish: true, componentRef: 'SAUCE_010' }
     ],
     recipeInstructions: [
       'Make or prepare the Dijon-Style Mustard (see the Dijon-Style Mustard recipe).',
-      'Mince or grate the garlic clove.',
       'In a small bowl or jar, combine the balsamic vinegar, honey, garlic, Dijon-style mustard, salt, and black pepper. Whisk until the honey dissolves.',
       'Add the olive oil in a slow, steady stream while whisking constantly, or seal the jar and shake vigorously until the dressing emulsifies.',
       'Taste and adjust salt, pepper, or honey as needed. The dressing will separate on standing — shake or whisk before each use.',
       'Store in a sealed jar in the refrigerator for up to 2 weeks.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Excellent over arugula, mixed greens, or caprese. Also works as a marinade for grilled chicken or salmon, or as a drizzle over roasted vegetables.'
     ],
     sections: [
       { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 },
