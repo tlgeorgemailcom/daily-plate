@@ -8329,7 +8329,7 @@ export const LEVELS: Level[] = [
       'Transfer the potato mixture to the prepared baking dish, spreading evenly. Dot the top with small pieces of butter.',
       'Bake uncovered for 60–70 minutes, until the top is deep golden brown and a knife inserted in the center meets no resistance.',
       'Let rest 10 minutes before slicing and serving.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve alongside roast lamb, beef tenderloin, or pan-seared duck breast.'
     ],
     sections: [
       { key: 'gratin', label: 'Gratin', cookingMethod: '', yieldFactorWater: 0.85 }
