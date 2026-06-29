@@ -4548,7 +4548,7 @@ export const LEVELS: Level[] = [
       'Layer the turkey breast slices on one slice of bread.',
       'Top the turkey with the lettuce and tomato slices.',
       'Close the sandwich with the second bread slice, press gently, and cut in half to serve.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with potato chips, a dill pickle, or a simple green salad.'
     ],
     sections: [
       { key: 'sandwich', label: 'Turkey Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -4589,7 +4589,7 @@ export const LEVELS: Level[] = [
       'Layer the turkey breast slices on one slice of bread.',
       'Top the turkey with both slices of provolone, then add the lettuce and tomato.',
       'Close the sandwich with the second bread slice, press gently, and cut in half to serve.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with potato chips, a dill pickle, or a simple green salad.'
     ],
     sections: [
       { key: 'sandwich', label: 'Turkey with Provolone Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -4631,7 +4631,7 @@ export const LEVELS: Level[] = [
       'Top the avocado with the turkey breast slices.',
       'Add the lettuce and tomato slices.',
       'Close the sandwich with the second bread slice, press gently, and cut in half to serve.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with tortilla chips, a dill pickle, or a simple green salad.'
     ],
     sections: [
       { key: 'sandwich', label: 'Turkey & Avocado Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -4674,7 +4674,7 @@ export const LEVELS: Level[] = [
       'Top the avocado with the turkey breast slices, then layer both slices of provolone.',
       'Add the lettuce and tomato slices.',
       'Close the sandwich with the second bread slice, press gently, and cut in half to serve.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with tortilla chips, a dill pickle, or a simple green salad.'
     ],
     sections: [
       { key: 'sandwich', label: 'Turkey & Avocado with Provolone Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -4718,7 +4718,7 @@ export const LEVELS: Level[] = [
       'Top the avocado with the turkey breast slices and bacon.',
       'Add the lettuce and tomato slices.',
       'Close the sandwich with the second bread slice, press gently, and cut in half to serve.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with tortilla chips, a dill pickle, or a simple green salad.'
     ],
     sections: [
       { key: 'sandwich', label: 'Turkey & Avocado with Bacon Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
