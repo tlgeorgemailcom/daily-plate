@@ -8916,7 +8916,7 @@ export const LEVELS: Level[] = [
       'In a large skillet or saucepan over medium heat, melt the butter. Add the drained macaroni and stir to coat.',
       'Pour in the crushed tomatoes, season with salt and black pepper, and stir to combine.',
       'Simmer over medium-low heat, stirring occasionally, for 8 to 10 minutes until the sauce has thickened and coated the pasta. Taste and adjust salt before serving.',
-      'Suggestions (not included):'
+      'Suggestions (not included): A classic weeknight comfort dish. Serve with a simple green salad or garlic bread.'
     ],
     sections: [
       { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
