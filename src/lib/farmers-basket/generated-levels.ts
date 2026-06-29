@@ -3989,7 +3989,7 @@ export const LEVELS: Level[] = [
       'On the bottom slice (mayo side up), layer the lettuce leaf and 4 thin tomato slices.',
       'Place the middle slice on top, mayo-side down. Spread mayo on the top of the middle slice, then layer the thin-sliced turkey (prepackaged thin-sliced or deli-sliced) and bacon.',
       'Top with the third slice, mayo-side down. Secure with 4 toothpicks, cut diagonally into 4 triangles, and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with potato chips, a dill pickle spear, or a cup of soup.'
     ],
     sections: [
       { key: 'sandwich', label: 'Club Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
