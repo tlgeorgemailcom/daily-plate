@@ -9180,7 +9180,7 @@ export const LEVELS: Level[] = [
       { name: 'maple syrup', quantity: '4 tbsp', section: 'filling', ndbNo: '19353', portionDesc: 'g', portionGrams: 80.0 },
       { name: 'unsalted butter', quantity: '4 tbsp', section: 'filling', ndbNo: '1145', portionDesc: 'g', portionGrams: 56.8 },
       { name: 'whole milk', quantity: '1/2 cup', section: 'filling', ndbNo: '1077', portionDesc: 'g', portionGrams: 122.0 },
-      { name: 'large egg', quantity: '1 large', section: 'filling', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'large egg', quantity: '1 large egg', section: 'filling', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
       { name: 'vanilla extract', quantity: '1 tsp', section: 'filling', ndbNo: '2050', portionDesc: 'g', portionGrams: 4.2 },
       { name: 'ground cinnamon', quantity: '1 tsp', section: 'filling', ndbNo: '2010', portionDesc: 'g', portionGrams: 2.6 },
       { name: 'ground nutmeg', quantity: '1/4 tsp', section: 'filling', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.55 },
@@ -9202,7 +9202,7 @@ export const LEVELS: Level[] = [
       'Spread the oat-pecan topping evenly over the sweet potato filling.',
       'Bake at 350°F (175°C) for 25–30 minutes, until the topping is golden and the filling is heated through.',
       'Let rest 5 minutes before serving.',
-      'Suggestions (not included):'
+      'Suggestions (not included): A classic Thanksgiving and holiday side. Pairs especially well with roasted turkey, glazed ham, or prime rib.'
     ],
     sections: [
       { key: 'filling', label: 'Sweet Potato Filling', cookingMethod: '', yieldFactorWater: 0.85 },
