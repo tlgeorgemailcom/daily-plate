@@ -4193,7 +4193,7 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Spread peanut butter evenly on one bread slice and jelly on the other.',
       'Press the slices together and cut diagonally.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with potato chips, fresh fruit, or a glass of milk.'
     ],
     sections: [
       { key: 'sandwich', label: 'Peanut Butter & Jelly', cookingMethod: '', yieldFactorWater: 1.0 }
