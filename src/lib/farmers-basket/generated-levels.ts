@@ -17282,7 +17282,7 @@ export const LEVELS: Level[] = [
       'Spoon the rice and bean filling into each pepper half, mounding slightly. Sprinkle the Mexican blend cheese evenly over the tops.',
       'Cover the baking dish tightly with aluminum foil and bake for 30 minutes. Uncover and bake for an additional 10 to 15 minutes, until the peppers are tender and the cheese is melted and lightly browned.',
       'Let cool for 5 minutes before serving.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Top with sliced avocado or a drizzle of hot sauce before serving.'
     ],
     sections: [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
