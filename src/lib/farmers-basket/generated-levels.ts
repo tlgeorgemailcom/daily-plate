@@ -5091,7 +5091,7 @@ export const LEVELS: Level[] = [
       'Push the meat to one side, add the tomato paste to the center of the pan, and cook for 1 minute, stirring, until it darkens slightly.',
       'Stir in the ketchup, water, Worcestershire sauce, and mustard. Reduce heat to medium-low and simmer, stirring occasionally, until the sauce thickens, about 8–10 minutes.',
       'Spoon the meat mixture onto the bottom bun and close with the top bun.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with potato chips, coleslaw, or baked beans.'
     ],
     sections: [
       { key: 'sandwich', label: 'Sloppy Joe', cookingMethod: '', yieldFactorWater: 0.8 }
