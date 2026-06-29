@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 1,
   "audit_status": "",
   "audit_notes": "",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 43.65,
   "raw_protein_grams": 20.49,
   "raw_carb_grams": 30.65,
+  "raw_fiber_grams": 1.62,
   "water_lost_grams": 4.63,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 140.47,
   "grams_per_serving": 140.47,
   "ingredients": [
@@ -52,7 +55,7 @@
       "grams": 28.35,
       "section": "sandwich",
       "ingredient_group": "sandwich",
-      "qty_display": "1 oz",
+      "qty_display": "1 oz Cheddar cheese (shredded)",
       "contribution": {
         "Energy_KCal": 114.534,
         "Protein": 6.484,
@@ -73,7 +76,7 @@
       "grams": 28.35,
       "section": "sandwich",
       "ingredient_group": "sandwich",
-      "qty_display": "1 oz",
+      "qty_display": "1 oz Gruyere cheese (shredded)",
       "contribution": {
         "Energy_KCal": 117.086,
         "Protein": 8.451,
@@ -94,7 +97,7 @@
       "grams": 28.4,
       "section": "sandwich",
       "ingredient_group": "sandwich",
-      "qty_display": "2 tbsp",
+      "qty_display": "2 tbsp salted butter (softened)",
       "contribution": {
         "Energy_KCal": 203.628,
         "Protein": 0.241,
@@ -264,6 +267,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 4,
       "raw_grams": 145.1,
@@ -271,6 +275,7 @@
       "raw_fat_grams": 43.65,
       "raw_protein_grams": 20.49,
       "raw_carb_grams": 30.65,
+      "raw_fiber_grams": 1.62,
       "final_grams": 140.47
     }
   ]

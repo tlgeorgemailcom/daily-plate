@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 1,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 31.8,
   "raw_protein_grams": 35.53,
   "raw_carb_grams": 5.16,
+  "raw_fiber_grams": 0.97,
   "water_lost_grams": 0.0,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 285.5,
   "grams_per_serving": 285.5,
   "ingredients": [
@@ -73,7 +76,7 @@
       "grams": 37.0,
       "section": "scramble",
       "ingredient_group": "scramble",
-      "qty_display": "\u00bc cup",
+      "qty_display": "\u00bc cup green bell pepper (diced)",
       "contribution": {
         "Energy_KCal": 7.4,
         "Protein": 0.318,
@@ -94,7 +97,7 @@
       "grams": 20.0,
       "section": "scramble",
       "ingredient_group": "scramble",
-      "qty_display": "2 tbsp",
+      "qty_display": "2 tbsp onion (diced)",
       "contribution": {
         "Energy_KCal": 8.0,
         "Protein": 0.22,
@@ -327,6 +330,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 7,
       "raw_grams": 285.5,
@@ -334,6 +338,7 @@
       "raw_fat_grams": 31.8,
       "raw_protein_grams": 35.53,
       "raw_carb_grams": 5.16,
+      "raw_fiber_grams": 0.97,
       "final_grams": 285.5
     }
   ]

@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 1,
   "audit_status": "",
   "audit_notes": "",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 31.54,
   "raw_protein_grams": 15.71,
   "raw_carb_grams": 31.76,
+  "raw_fiber_grams": 1.62,
   "water_lost_grams": 4.66,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 126.24,
   "grams_per_serving": 126.24,
   "ingredients": [
@@ -52,7 +55,7 @@
       "grams": 56.7,
       "section": "sandwich",
       "ingredient_group": "sandwich",
-      "qty_display": "2 oz",
+      "qty_display": "2 oz American cheese (sliced)",
       "contribution": {
         "Energy_KCal": 210.357,
         "Protein": 10.28,
@@ -73,7 +76,7 @@
       "grams": 14.2,
       "section": "sandwich",
       "ingredient_group": "sandwich",
-      "qty_display": "1 tbsp",
+      "qty_display": "1 tbsp salted butter (softened)",
       "contribution": {
         "Energy_KCal": 101.814,
         "Protein": 0.121,
@@ -243,6 +246,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 3,
       "raw_grams": 130.9,
@@ -250,6 +254,7 @@
       "raw_fat_grams": 31.54,
       "raw_protein_grams": 15.71,
       "raw_carb_grams": 31.76,
+      "raw_fiber_grams": 1.62,
       "final_grams": 126.24
     }
   ]
