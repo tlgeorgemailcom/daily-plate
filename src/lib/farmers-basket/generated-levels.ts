@@ -8145,7 +8145,7 @@ export const LEVELS: Level[] = [
       'While potatoes cook, cut the butter into small pieces and let it come to room temperature.',
       'Drain the potatoes and peel them while still hot — hold each one with a clean towel and pull off the skin. Pass through a ricer or fine-mesh food mill then put back into the warm pot. For chunky potatoes use a hand masher.',
       'Over low heat, beat in the softened butter a few pieces at a time using a wooden spoon or rubber spatula, working each addition fully in before adding the next. Season with salt and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve alongside pan-seared steak, roast chicken, or braised short ribs. Finish with a grind of black pepper or a sprinkle of fresh chives.'
     ],
     sections: [
       { key: 'puree', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 }
