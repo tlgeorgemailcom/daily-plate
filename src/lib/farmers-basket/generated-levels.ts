@@ -7719,14 +7719,13 @@ export const LEVELS: Level[] = [
       { name: 'Alfredo Sauce', quantity: 'custom (g)', foodWord: 'ALFREDO', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'unsalted butter', quantity: '2 tbsp', section: 'sauce', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
       { name: 'heavy cream', quantity: '½ cup', section: 'sauce', ndbNo: '1053', portionDesc: 'g', portionGrams: 120.0 },
-      { name: 'Parmesan cheese', quantity: '½ cup, finely grated', section: 'sauce', ndbNo: '1033', portionDesc: 'g', portionGrams: 50.0 },
-      { name: 'garlic', quantity: '1 clove', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 4.5 },
+      { name: 'Parmesan cheese', quantity: '½ cup Parmesan cheese, finely grated', section: 'sauce', ndbNo: '1033', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'garlic', quantity: '1 clove garlic, minced', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'salt', quantity: '⅛ tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.75 },
       { name: 'white pepper', quantity: '⅛ tsp', section: 'sauce', ndbNo: '2032', portionDesc: 'g', portionGrams: 0.6 },
       { name: 'ground nutmeg', quantity: 'pinch', section: 'sauce', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.14 }
     ],
     recipeInstructions: [
-      'Mince or press the garlic clove.',
       'Melt butter in a small saucepan over medium-low heat.',
       'Add garlic and cook, stirring, about 1 minute until fragrant but not browned.',
       'Pour in heavy cream and bring to a gentle simmer, stirring occasionally.',
@@ -7734,7 +7733,7 @@ export const LEVELS: Level[] = [
       'Remove from heat. Add Parmesan a little at a time, stirring until fully melted and smooth.',
       'Season with salt, white pepper, and a pinch of nutmeg. Stir to combine.',
       'Hold warm over very low heat, stirring occasionally, if not serving immediately.',
-      'Suggestions (not included): Serve immediately over pasta.'
+      'Suggestions (not included): Serve immediately over fettuccine or linguine. Also excellent with gnocchi, or as a finishing sauce for grilled chicken or shrimp.'
     ],
     sections: [
       { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
