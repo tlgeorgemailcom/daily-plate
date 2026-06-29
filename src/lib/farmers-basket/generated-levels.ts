@@ -15022,9 +15022,9 @@ export const LEVELS: Level[] = [
       { name: 'tomato paste', quantity: '2 tbsp', section: 'braise', ndbNo: '11546', portionDesc: 'g', portionGrams: 33.0 },
       { name: 'red wine', quantity: '1 cup', section: 'braise', ndbNo: '14096', portionDesc: 'g', portionGrams: 235.2 },
       { name: 'beef broth', quantity: '2 cups', section: 'braise', ndbNo: '6008', portionDesc: 'g', portionGrams: 490.0 },
-      { name: 'fresh rosemary', quantity: '2 sprigs', section: 'braise', ndbNo: '2063', portionDesc: 'g', portionGrams: 3.4 },
-      { name: 'fresh thyme leaves', quantity: '3 sprigs', section: 'braise', ndbNo: '2049', portionDesc: 'g', portionGrams: 2.4 },
-      { name: 'bay leaf', quantity: '2 leaves', section: 'braise', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 }
+      { name: 'fresh rosemary', quantity: '2 sprigs fresh rosemary, whole', section: 'braise', ndbNo: '2063', portionDesc: 'g', portionGrams: 3.4 },
+      { name: 'fresh thyme leaves', quantity: '3 sprigs fresh thyme, whole', section: 'braise', ndbNo: '2049', portionDesc: 'g', portionGrams: 2.4 },
+      { name: 'bay leaves', quantity: '2 bay leaves', section: 'braise', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 }
     ],
     recipeInstructions: [
       'Pat the lamb shanks dry with paper towels. Season generously on all sides with salt and black pepper.',
