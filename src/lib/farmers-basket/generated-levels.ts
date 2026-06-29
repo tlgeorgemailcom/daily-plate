@@ -9256,7 +9256,7 @@ export const LEVELS: Level[] = [
       'Spread the oat-pecan topping evenly over the sweet potato filling.',
       'Bake at 350°F (175°C) for 25–30 minutes, until the topping is golden and the filling is heated through.',
       'Let rest 5 minutes before serving.',
-      'Suggestions (not included):'
+      'Suggestions (not included): A classic vegan Thanksgiving side. Pairs especially well with roasted vegetables, lentil loaf, or stuffed mushrooms.'
     ],
     sections: [
       { key: 'filling', label: 'Sweet Potato Filling', cookingMethod: '', yieldFactorWater: 0.85 },
