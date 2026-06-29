@@ -15415,7 +15415,7 @@ export const LEVELS: Level[] = [
       'Stand crown with bones upright in roasting pan. Roast at 450°F 15 min, then reduce to 375°F for 60–80 min to 145°F internal. (Center cavity may be filled with stuffing — not included.)',
       'Remove the foil from the bone tips. Transfer to a cutting board and rest 20 minutes before carving.',
       'Carve by slicing straight down between the rib bones to divide into individual chops. Serve 2 ribs per person.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with roasted root vegetables, mashed potatoes, and a savory pan sauce or gravy.'
     ],
     sections: [
       { key: 'crown', label: 'Crown Roast', cookingMethod: '', yieldFactorWater: 0.64 }
