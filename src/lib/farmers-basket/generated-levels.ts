@@ -12764,7 +12764,7 @@ export const LEVELS: Level[] = [
       'Make or prepare the BBQ Sauce (see the BBQ Sauce recipe). Carefully unwrap the ribs and brush generously with BBQ sauce on all sides.',
       'Increase oven temperature to 425°F. Return the ribs, uncovered, to the oven and bake for 15 minutes until the sauce is caramelized and sticky.',
       'Rest 5 minutes before slicing between bones. Serve with remaining BBQ sauce on the side.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with coleslaw, baked beans, and corn on the cob.'
     ],
     sections: [
       { key: 'rub', label: 'Dry Rub', cookingMethod: '', yieldFactorWater: 1.0 },
