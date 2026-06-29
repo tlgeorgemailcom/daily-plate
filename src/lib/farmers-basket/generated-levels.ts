@@ -5902,7 +5902,7 @@ export const LEVELS: Level[] = [
       'Layer the salami slices on the bottom half, followed by the prosciutto, then the provolone.',
       'Top with shredded lettuce, tomato slices, and onion rings.',
       'Season with oregano, salt, and black pepper. Close the sandwich and press gently. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with kettle chips, a dill pickle, or a simple green salad.'
     ],
     sections: [
       { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
