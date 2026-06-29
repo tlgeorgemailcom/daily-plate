@@ -7778,7 +7778,7 @@ export const LEVELS: Level[] = [
       'Once the mayonnaise begins to thicken and hold its shape, add the remaining oil in a thin, steady stream, whisking continuously.',
       'Season with salt and white pepper. Taste and adjust seasoning.',
       'Transfer to a jar and refrigerate immediately. Use within 5 days.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Use as the base for tartar sauce, ranch dressing, aioli, and potato salad. Vastly superior to store-bought for egg salad and chicken salad.'
     ],
     sections: [
       { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 1.0 }
