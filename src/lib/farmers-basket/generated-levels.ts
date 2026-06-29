@@ -13421,8 +13421,8 @@ export const LEVELS: Level[] = [
       { name: 'olive oil', quantity: '1 tbsp', section: 'filling', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
       { name: 'Red Enchilada Sauce', quantity: '1 recipe Red Enchilada Sauce (full batch, 706.7g)', section: 'sauce', foodWord: 'ENCHILADASAUCE', portionDesc: 'g', portionGrams: 706.7, isDish: true, componentRef: 'SAUCE_025' },
       { name: 'corn tortilla', quantity: '12 each', section: 'assembly', ndbNo: '18363', portionDesc: 'g', portionGrams: 288.0 },
-      { name: 'Cheddar cheese', quantity: '2 cups', section: 'assembly', ndbNo: '1009', portionDesc: 'g', portionGrams: 226.8 },
-      { name: 'onion', quantity: '1/2 medium', section: 'assembly', ndbNo: '11282', portionDesc: 'g', portionGrams: 55.0 }
+      { name: 'Cheddar cheese', quantity: '2 cups cheddar cheese, shredded', section: 'assembly', ndbNo: '1009', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'onion', quantity: '1/2 medium onion, diced', section: 'assembly', ndbNo: '11282', portionDesc: 'g', portionGrams: 55.0 }
     ],
     recipeInstructions: [
       'Make or prepare the Red Enchilada Sauce (see the Red Enchilada Sauce recipe). Set aside.',
@@ -13433,7 +13433,7 @@ export const LEVELS: Level[] = [
       'Fill each tortilla with chicken, diced onion, and a small handful of shredded cheddar cheese. Roll up tightly and place seam-side down in the baking dish.',
       'Pour the remaining enchilada sauce evenly over the rolled enchiladas. Top with the remaining shredded cheddar cheese.',
       'Bake at 375°F for 20 to 25 minutes until the cheese is melted and bubbly. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with Mexican rice, refried beans, and sour cream or guacamole on the side.'
     ],
     sections: [
       { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.8 },
