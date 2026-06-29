@@ -6097,7 +6097,7 @@ export const LEVELS: Level[] = [
       'Layer mozzarella slices on the bottom half, followed by tomato slices. Season the tomatoes with a pinch of salt and pepper.',
       'Scatter fresh basil leaves over the tomatoes. Drizzle balsamic vinegar over the filling.',
       'Close the sandwich, press gently, and slice in half. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with a simple arugula salad or a cup of tomato soup on the side.'
     ],
     sections: [
       { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
