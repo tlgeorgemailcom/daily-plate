@@ -9852,9 +9852,9 @@ export const LEVELS: Level[] = [
       { name: 'chicken breast', quantity: '6 oz', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 170.1 },
       { name: 'romaine lettuce', quantity: '4 cups shredded', section: 'salad', ndbNo: '11251', portionDesc: 'g', portionGrams: 188.0 },
       { name: 'bacon', quantity: '4 slices', section: 'salad', ndbNo: '10862', portionDesc: 'g', portionGrams: 46.0 },
-      { name: 'avocado', quantity: '1', section: 'salad', ndbNo: '9038', portionDesc: 'g', portionGrams: 136.0 },
-      { name: 'hard-boiled egg', quantity: '2 large', section: 'salad', ndbNo: '1129', portionDesc: 'g', portionGrams: 100.0 },
-      { name: 'tomato', quantity: '1 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'avocado', quantity: '1 avocado, sliced', section: 'salad', ndbNo: '9038', portionDesc: 'g', portionGrams: 136.0 },
+      { name: 'hard-boiled egg', quantity: '2 large hard-boiled eggs, sliced', section: 'salad', ndbNo: '1129', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'tomato', quantity: '1 medium tomato, diced', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
       { name: 'blue cheese crumbles', quantity: '2 oz', section: 'salad', ndbNo: '1004', portionDesc: 'g', portionGrams: 56.7 },
       { name: 'onion', quantity: '⅛ cup', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 20.0 }
     ],
