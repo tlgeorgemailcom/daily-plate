@@ -17590,7 +17590,7 @@ export const LEVELS: Level[] = [
       'Add the chopped collard greens in batches, stirring each addition to begin wilting before adding more.',
       'Add the water, apple cider vinegar, salt, black pepper, and red pepper flakes. Stir to combine. Bring to a boil, then reduce heat to low, cover, and simmer for 45–60 minutes, stirring occasionally, until the collard greens are very tender and most of the liquid has reduced.',
       'Taste and adjust seasoning with additional salt, vinegar, or red pepper flakes as needed. Serve warm with any remaining pot likker (the flavorful cooking liquid).',
-      'Suggestions (not included):'
+      'Suggestions (not included): A Southern classic. Serve alongside fried chicken, BBQ ribs, or pulled pork. Don\'t discard the pot likker — it\'s delicious sopped up with cornbread.'
     ],
     sections: [
       { key: 'greens', label: 'Collard Greens', cookingMethod: '', yieldFactorWater: 0.65 }
