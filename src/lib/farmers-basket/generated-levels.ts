@@ -13852,13 +13852,13 @@ export const LEVELS: Level[] = [
       { name: 'soup cream of mushroom', quantity: '1 can (10.5 oz)', section: 'filling', ndbNo: '6043', portionDesc: 'g', portionGrams: 298.0 },
       { name: 'soup cream of chicken', quantity: '1 can (10.5 oz)', section: 'filling', ndbNo: '6336', portionDesc: 'g', portionGrams: 298.0 },
       { name: 'diced tomatoes with green chiles (Rotel-style)', quantity: '1 can (10 oz)', section: 'filling', ndbNo: '11537', portionDesc: 'g', portionGrams: 283.0 },
-      { name: 'onion', quantity: '1 medium', section: 'filling', ndbNo: '11282', portionDesc: 'g', portionGrams: 160.0 },
-      { name: 'green bell pepper', quantity: '1 medium', section: 'filling', ndbNo: '11333', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'onion', quantity: '1 medium onion, diced', section: 'filling', ndbNo: '11282', portionDesc: 'g', portionGrams: 160.0 },
+      { name: 'green bell pepper', quantity: '1 medium green bell pepper, diced', section: 'filling', ndbNo: '11333', portionDesc: 'g', portionGrams: 119.0 },
       { name: 'chili powder', quantity: '1 tsp', section: 'filling', ndbNo: '2009', portionDesc: 'g', portionGrams: 2.65 },
-      { name: 'ground cumin', quantity: '1 tsp', section: 'filling', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.1 },
+      { name: 'ground cumin', quantity: '1 tsp ground cumin', section: 'filling', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.1 },
       { name: 'garlic powder', quantity: '1/2 tsp', section: 'filling', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.55 },
       { name: 'corn tortillas', quantity: '12 each', section: 'filling', ndbNo: '18363', portionDesc: 'g', portionGrams: 288.0 },
-      { name: 'Cheddar cheese', quantity: '2 cups', section: 'filling', ndbNo: '1009', portionDesc: 'g', portionGrams: 226.8 }
+      { name: 'Cheddar cheese', quantity: '2 cups cheddar cheese, shredded', section: 'filling', ndbNo: '1009', portionDesc: 'g', portionGrams: 226.8 }
     ],
     recipeInstructions: [
       'Preheat the oven to 350°F. Lightly grease a 9x13-inch baking dish.',
@@ -13868,7 +13868,7 @@ export const LEVELS: Level[] = [
       'Tear or cut the corn tortillas into quarters. Layer half the tortilla pieces across the bottom of the prepared baking dish. Spoon half the chicken mixture over the tortillas and sprinkle with half the cheddar cheese.',
       'Repeat with the remaining tortillas, chicken mixture, and cheddar cheese.',
       'Cover with foil and bake for 30 minutes. Remove the foil and bake an additional 10 to 15 minutes until the cheese is bubbly and lightly browned. Let rest 5 minutes before serving.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with sour cream, guacamole, or a simple green salad on the side.'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
