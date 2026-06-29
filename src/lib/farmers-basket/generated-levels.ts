@@ -13796,18 +13796,18 @@ export const LEVELS: Level[] = [
       { name: 'Chicken Kabobs', quantity: 'custom (g)', foodWord: 'CHICKENKABOB', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'olive oil', quantity: '3 tbsp', section: 'marinade', ndbNo: '4053', portionDesc: 'g', portionGrams: 40.8 },
       { name: 'lemon juice', quantity: '2 tbsp', section: 'marinade', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
-      { name: 'garlic', quantity: '3 cloves', section: 'marinade', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'marinade', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'dried oregano', quantity: '1 tsp', section: 'marinade', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.8 },
       { name: 'paprika', quantity: '1 tsp', section: 'marinade', ndbNo: '2028', portionDesc: 'g', portionGrams: 2.3 },
-      { name: 'ground cumin', quantity: '1/2 tsp', section: 'marinade', ndbNo: '2014', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'ground cumin', quantity: '1/2 tsp ground cumin', section: 'marinade', ndbNo: '2014', portionDesc: 'g', portionGrams: 1.0 },
       { name: 'salt', quantity: '1/2 tsp', section: 'marinade', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'ground black pepper', quantity: '1/2 tsp', section: 'marinade', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
       { name: 'chicken breast (boneless/skinless)', quantity: '1.5 lb', section: 'kabobs', ndbNo: '5062', portionDesc: 'g', portionGrams: 680.4 },
-      { name: 'zucchini', quantity: '1 large', section: 'kabobs', ndbNo: '11477', portionDesc: 'g', portionGrams: 196.0 },
-      { name: 'red bell pepper', quantity: '1 medium', section: 'kabobs', ndbNo: '11821', portionDesc: 'g', portionGrams: 119.0 },
-      { name: 'green bell pepper', quantity: '1 medium', section: 'kabobs', ndbNo: '11333', portionDesc: 'g', portionGrams: 119.0 },
-      { name: 'onion', quantity: '1 medium', section: 'kabobs', ndbNo: '11282', portionDesc: 'g', portionGrams: 160.0 },
-      { name: 'crimini mushrooms', quantity: '8 oz', section: 'kabobs', ndbNo: '11266', portionDesc: 'g', portionGrams: 227.0 },
+      { name: 'zucchini', quantity: '1 large zucchini, cut into 1-1/2-inch pieces', section: 'kabobs', ndbNo: '11477', portionDesc: 'g', portionGrams: 196.0 },
+      { name: 'red bell pepper', quantity: '1 medium red bell pepper, cut into 1-1/2-inch pieces', section: 'kabobs', ndbNo: '11821', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'green bell pepper', quantity: '1 medium green bell pepper, cut into 1-1/2-inch pieces', section: 'kabobs', ndbNo: '11333', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'onion', quantity: '1 medium onion, cut into 1-1/2-inch pieces', section: 'kabobs', ndbNo: '11282', portionDesc: 'g', portionGrams: 160.0 },
+      { name: 'crimini mushrooms', quantity: '8 oz crimini mushrooms, halved if large', section: 'kabobs', ndbNo: '11266', portionDesc: 'g', portionGrams: 227.0 },
       { name: 'salt', quantity: '1/2 tsp', section: 'kabobs', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 }
     ],
     recipeInstructions: [
@@ -13816,7 +13816,7 @@ export const LEVELS: Level[] = [
       'Thread the marinated chicken and vegetables alternately onto 8 metal or soaked wooden skewers (each skewer gets 2 to 3 pieces of chicken and a mix of vegetables), leaving a small gap between each piece.',
       'Heat a grill to medium-high heat (400 to 450°F). Brush the grates lightly with oil. Grill the kabobs 4 to 5 minutes per side, turning once or twice, until the chicken is cooked through to an internal temperature of 165°F and the vegetables are tender with char marks.',
       'Transfer to a platter and rest 2 to 3 minutes before serving.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve over steamed rice or with warm pita bread and a simple salad.'
     ],
     sections: [
       { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
