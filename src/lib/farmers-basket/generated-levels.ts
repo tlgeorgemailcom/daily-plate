@@ -14333,7 +14333,7 @@ export const LEVELS: Level[] = [
       { name: 'Chicken Saltimbocca', quantity: 'custom (g)', foodWord: 'CHICKENSALTIMBOCCA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'chicken breast', quantity: '1.25 lb', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 567.0 },
       { name: 'Prosciutto', quantity: '4 slices', section: 'chicken', ndbNo: '10141', portionDesc: 'g', portionGrams: 60.0 },
-      { name: 'fresh sage leaves', quantity: '8 leaves', section: 'chicken', ndbNo: '2038', portionDesc: 'g', portionGrams: 1.0 },
+      { name: 'fresh sage leaves', quantity: '8 fresh sage leaves, whole', section: 'chicken', ndbNo: '2038', portionDesc: 'g', portionGrams: 1.0 },
       { name: 'all-purpose enriched unbleached white flour', quantity: '1/4 cup', section: 'chicken', ndbNo: '20581', portionDesc: 'g', portionGrams: 31.25 },
       { name: 'salt', quantity: '1/4 tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
       { name: 'ground black pepper', quantity: '1/4 tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
@@ -14354,7 +14354,7 @@ export const LEVELS: Level[] = [
       'Add chicken broth (see Chicken Broth recipe) and lemon juice. Simmer 3 to 4 minutes until sauce reduces by about half.',
       'Remove from heat and swirl in remaining 1 tablespoon of butter until sauce is glossy. Taste and adjust seasoning.',
       'Return chicken to the pan briefly to coat in sauce. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with pasta, creamy polenta, or mashed potatoes to soak up the pan sauce.'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
