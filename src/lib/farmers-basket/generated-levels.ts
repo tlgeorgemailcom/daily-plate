@@ -6499,7 +6499,7 @@ export const LEVELS: Level[] = [
       'Shape the ground beef into a patty a little larger than the bun due to shrinkage. Do not overwork the meat or pack tightly. Season both sides with salt and pepper.',
       'Heat a skillet over medium-high heat. Cook patty 3–4 minutes per side until cooked through (160°F / 71°C internal temperature). For best results use a pan where the meat sticks to the pan to prevent shrinkage. Then carefully release all sides of the patty from the pan with the back of a spatula before flipping. Serve immediately on prepared bun.',
       'Prepare the bun by grilling the inside of each half until golden. Then spread ketchup on one bun and mustard on the other bun. Add the pickle slices and onion on the bottom bun and then top with the patty.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with french fries, onion rings, or a dill pickle on the side.'
     ],
     sections: [
       { key: 'patty', label: 'Patty', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -6544,7 +6544,7 @@ export const LEVELS: Level[] = [
       'Heat a skillet over medium-high heat. Cook patty 3–4 minutes per side until cooked through (160°F / 71°C internal temperature). For best results use a pan where the meat sticks to the pan to prevent shrinkage. Then carefully release all sides of the patty from the pan with the back of a spatula before flipping.',
       'After flipping lay the cheese on top of the patty and continue cooking. Serve immediately on prepared bun.',
       'Prepare the bun by grilling the inside of each half until golden. Then spread ketchup on one bun and mustard on the other bun. Add the pickle slices and onion on the bottom bun and then top with the patty cheese side up.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with french fries, onion rings, or a dill pickle on the side.'
     ],
     sections: [
       { key: 'patty', label: 'Patty', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -6590,7 +6590,7 @@ export const LEVELS: Level[] = [
       'Heat a skillet over medium-high heat. Cook patty 3–4 minutes per side until cooked through (160°F / 71°C internal temperature). For best results use a pan where the meat sticks to the pan to prevent shrinkage. Then carefully release all sides of the patty from the pan with the back of a spatula before flipping.',
       'After flipping lay the cheese on top of the patty and continue cooking. Serve immediately on prepared bun.',
       'Prepare the bun by grilling the inside of each half until golden. Then spread ketchup on one bun and mustard on the other bun. Add the pickle slices and onion on the bottom bun and then top with the patty cheese side up. Lay bacon slices on the cheese.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with french fries, onion rings, or a dill pickle on the side.'
     ],
     sections: [
       { key: 'patty', label: 'Patty', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -6635,7 +6635,7 @@ export const LEVELS: Level[] = [
       'Heat a skillet large enough for 2 patties over medium-high heat. Cook patties 3–4 minutes per side until cooked through (160°F / 71°C internal temperature). For best results use a pan where the meat sticks to the pan to prevent shrinkage. Then carefully release all sides of each patty from the pan with the back of a spatula before flipping.',
       'After flipping lay a slice of cheese on top of each patty and continue cooking. Serve immediately on prepared bun.',
       'Prepare the bun by grilling the inside of each half until golden. Then spread ketchup on one bun and mustard on the other bun. Add the pickle slices and onion on the bottom bun and top with a patty cheese side up. Then top the first patty with the second patty cheese side up.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with french fries, onion rings, or a dill pickle on the side.'
     ],
     sections: [
       { key: 'patty', label: 'Patties', cookingMethod: '', yieldFactorWater: 0.75 },
