@@ -15271,7 +15271,7 @@ export const LEVELS: Level[] = [
       { name: 'dried oregano', quantity: '¾ tsp', section: 'carnitas', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.5 },
       { name: 'ground cinnamon', quantity: '¼ tsp', section: 'carnitas', ndbNo: '2010', portionDesc: 'g', portionGrams: 0.65 },
       { name: 'ground black pepper', quantity: '½ tsp', section: 'carnitas', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
-      { name: 'bay leaf', quantity: '2 leaves', section: 'carnitas', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'bay leaves', quantity: '2 bay leaves', section: 'carnitas', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
       { name: 'salt', quantity: '1½ tsp', section: 'carnitas', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 }
     ],
     recipeInstructions: [
