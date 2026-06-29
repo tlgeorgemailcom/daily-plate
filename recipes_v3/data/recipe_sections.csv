@@ -577,6 +577,7 @@ ENTR_108,fish_stock,Fish Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_006
 ENTR_108,stew,Cioppino,,boiled,0.88,1.0,1.0,1.0,1.0,,,,,
 ENTR_109,fish,Battered Fish,,fried,0.75,1.0,1.0,1.0,1.0,,,,,
 ENTR_109,chips,Chips,,fried,0.55,1.0,1.0,1.0,1.0,,,,,
+ENTR_110,fish_stock,Fish Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_006
 ENTR_110,rice,Saffron Rice,,boiled,1.0,1.0,1.0,1.0,1.0,,,,,
 ENTR_110,paella,Seafood and Sofrito,,pan grilled,0.85,1.0,1.0,1.0,1.0,,,,,
 ENTR_111,scampi,Shrimp Scampi,,pan grilled,0.82,1.0,1.0,1.0,1.0,,,,,

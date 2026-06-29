@@ -3635,7 +3635,7 @@ ENTR_109,9,potato_russet_raw,"2 lbs russet potatoes, cut into thick wedges",907.
 ENTR_109,10,vegetable_oil,5 tbsp vegetable oil (absorbed into chips),68.0,,,chips,,,,
 ENTR_109,11,salt_table,3/4 tsp,4.5,,,chips,,,,
 ENTR_109,12,black_pepper_ground,1/4 tsp,0.575,,,chips,,,,
-ENTR_110,1,@STOCK_006,3 cups Fish Stock (recipe),720.0,,,rice,,,,
+ENTR_110,1,@STOCK_006,3 cups Fish Stock (recipe),720.0,,,fish_stock,,,,
 ENTR_110,2,rice_white_short_raw,1-1/2 cups,300.0,,,rice,,,,
 ENTR_110,3,saffron,1/4 tsp saffron threads,0.2,,,rice,,,,
 ENTR_110,4,paprika,1 tsp smoked paprika,2.3,,,rice,,,,
