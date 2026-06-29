@@ -4371,7 +4371,7 @@ export const LEVELS: Level[] = [
       'Melt remaining butter in a skillet over medium heat. Place the sandwich in the pan and cook 3 minutes until the bottom is golden.',
       'Flip the sandwich, spoon remaining béchamel over the top, and scatter remaining Gruyère over it. Cover the pan and cook 2–3 minutes until the bottom is golden and the cheese on top is melted. Remove to a plate.',
       'In the same pan, fry the egg sunny side up until the white is set but the yolk is still runny. Place on top of the sandwich and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with a simple green salad, cornichons, or a bowl of French onion soup.'
     ],
     sections: [
       { key: 'sandwich', label: 'Croque Madame', cookingMethod: '', yieldFactorWater: 0.88 }
