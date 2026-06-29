@@ -8267,13 +8267,13 @@ export const LEVELS: Level[] = [
       { name: 'Potato Salad (German Style)', quantity: 'custom (g)', foodWord: 'GERMANPOTATOSALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'Yukon Gold potatoes (White potatoes in the database)', quantity: '2 lb', section: 'potatoes', ndbNo: '11354', portionDesc: 'g', portionGrams: 907.2 },
       { name: 'bacon', quantity: '4 oz', section: 'dressing', ndbNo: '10862', portionDesc: 'g', portionGrams: 113.4 },
-      { name: 'onion', quantity: '1 large', section: 'dressing', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'onion', quantity: '1 large onion, thinly sliced', section: 'dressing', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
       { name: 'apple cider vinegar', quantity: '4 tbsp', section: 'dressing', ndbNo: '2048', portionDesc: 'g', portionGrams: 59.6 },
       { name: 'sugar', quantity: '3 tsp', section: 'dressing', ndbNo: '19335', portionDesc: 'g', portionGrams: 12.6 },
       { name: 'celery seed', quantity: '1 tsp', section: 'dressing', ndbNo: '2007', portionDesc: 'g', portionGrams: 2.0 },
       { name: 'salt', quantity: '1 tsp', section: 'dressing', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'ground black pepper', quantity: '1/4 tsp (0.6g)', section: 'dressing', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.6 },
-      { name: 'fresh parsley', quantity: '2 tbsp', section: 'dressing', ndbNo: '11297', portionDesc: 'g', portionGrams: 7.6 }
+      { name: 'fresh parsley', quantity: '2 tbsp fresh parsley, chopped', section: 'dressing', ndbNo: '11297', portionDesc: 'g', portionGrams: 7.6 }
     ],
     recipeInstructions: [
       'Use Yukon Gold potatoes — their waxy texture holds its shape well for a warm-dressed salad. White potatoes are listed in the ingredients since they are a close nutritional match and they are in the database while Yukon Gold is not. Put the unpeeled potatoes in a large pot — uniform size matters so they cook evenly. Cover with cold salted water, bring to a boil, then drop to a gentle simmer. Cook 15–20 minutes until a knife slides through without any resistance.',
@@ -8283,7 +8283,7 @@ export const LEVELS: Level[] = [
       'Add the apple cider vinegar, sugar, celery seed, salt, and black pepper to the skillet. Stir well and bring to a simmer. Cook 2–3 minutes, stirring, until the dressing is slightly thickened and the sugar is fully dissolved.',
       'Add the warm potato slices to the skillet and toss gently to coat with the hot dressing. Work carefully to keep the slices intact.',
       'Add the crumbled bacon and toss once more. Taste and adjust salt, pepper, and vinegar as needed. Transfer to a serving dish, scatter the fresh parsley over the top, and serve warm.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve warm alongside bratwurst, pork schnitzel, or grilled sausages.'
     ],
     sections: [
       { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 },
