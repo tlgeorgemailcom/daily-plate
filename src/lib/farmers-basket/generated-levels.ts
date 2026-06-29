@@ -5798,7 +5798,7 @@ export const LEVELS: Level[] = [
       'Heat the olive oil in a skillet over medium-high heat until shimmering. Working in batches, cook the oysters 1–2 minutes per side until golden and cooked through. Transfer to a plate.',
       'Slice the French bread roll and lightly toast the cut sides if desired. Spread the remoulade generously on both cut sides.',
       'Layer the shredded lettuce and tomato slices on the bottom half of the roll. Top with the fried oysters and close the sandwich.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with french fries, coleslaw, or a cup of gumbo on the side.'
     ],
     sections: [
       { key: 'remoulade', label: 'Remoulade sauce', cookingMethod: '', yieldFactorWater: 1.0 },
