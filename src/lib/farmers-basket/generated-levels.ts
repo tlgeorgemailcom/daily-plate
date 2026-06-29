@@ -6729,7 +6729,7 @@ export const LEVELS: Level[] = [
       'Heat a skillet over medium-high heat. Cook the patty 3–4 minutes per side until cooked through (160°F / 71°C). Lay the cheddar slice on top during the last 30–60 seconds; cover to melt.',
       'While the patty rests, heat the onion rings according to package directions if frozen, or use pre-fried rings.',
       'Spread BBQ sauce on the bun bottom. Place the patty cheese side up, top with bacon strips and onion rings. Close with the bun top.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with french fries, coleslaw, or extra BBQ sauce on the side.'
     ],
     sections: [
       { key: 'patty', label: 'Patty', cookingMethod: '', yieldFactorWater: 0.75 },
