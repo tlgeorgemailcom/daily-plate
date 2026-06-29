@@ -13009,9 +13009,9 @@ export const LEVELS: Level[] = [
       { name: 'beef tenderloin', quantity: '2 lb', section: 'tenderloin', ndbNo: '23372', portionDesc: 'g', portionGrams: 907.2 },
       { name: 'olive oil', quantity: '2 tbsp', section: 'tenderloin', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
       { name: 'unsalted butter', quantity: '2 tbsp', section: 'tenderloin', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
-      { name: 'garlic', quantity: '4 cloves', section: 'tenderloin', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
-      { name: 'fresh thyme leaves', quantity: '4 sprigs', section: 'tenderloin', ndbNo: '2049', portionDesc: 'g', portionGrams: 9.6 },
-      { name: 'fresh rosemary', quantity: '2 sprigs', section: 'tenderloin', ndbNo: '2063', portionDesc: 'g', portionGrams: 6.8 },
+      { name: 'garlic', quantity: '4 cloves garlic, smashed', section: 'tenderloin', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'fresh thyme leaves', quantity: '4 sprigs fresh thyme, whole', section: 'tenderloin', ndbNo: '2049', portionDesc: 'g', portionGrams: 9.6 },
+      { name: 'fresh rosemary', quantity: '2 sprigs fresh rosemary, whole', section: 'tenderloin', ndbNo: '2063', portionDesc: 'g', portionGrams: 6.8 },
       { name: 'salt', quantity: '1-1/2 tsp', section: 'tenderloin', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'ground black pepper', quantity: '1 tsp', section: 'tenderloin', ndbNo: '2030', portionDesc: 'g', portionGrams: 2.3 }
     ],
@@ -13023,7 +13023,7 @@ export const LEVELS: Level[] = [
       'Transfer the skillet to a 425°F oven. Roast for 15 to 20 minutes until an instant-read thermometer inserted into the thickest part reads 130°F for medium-rare.',
       'Transfer to a cutting board, tent loosely with foil, and rest for 10 minutes before slicing.',
       'Slice into 4 equal portions, each about 2 to 3 inches thick, and serve with the pan juices spooned over the top.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with creamy mashed potatoes and roasted asparagus, with the pan drippings spooned over the top.'
     ],
     sections: [
       { key: 'tenderloin', label: 'Tenderloin', cookingMethod: '', yieldFactorWater: 0.75 }
