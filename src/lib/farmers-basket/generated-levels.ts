@@ -7203,7 +7203,7 @@ export const LEVELS: Level[] = [
       'Pour the heavy cream into the hot Béchamel and bring to a gentle simmer.',
       'Reduce, stirring frequently, until the sauce lightly coats the back of a spoon — about 10–15 minutes. The sauce will lose roughly 15–20% of its volume.',
       'Remove from heat and finish with 1 tsp of lemon juice. Adjust salt and white pepper.',
-      'Suggestions (not included):'
+      'Suggestions (not included): An enriched béchamel for delicate dishes. Spoon over poached chicken, veal, fish fillets, or steamed vegetables.'
     ],
     sections: [
       { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: '', yieldFactorWater: 1.0 },
