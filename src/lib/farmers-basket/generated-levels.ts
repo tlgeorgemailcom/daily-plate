@@ -12797,7 +12797,7 @@ export const LEVELS: Level[] = [
       { name: 'Beef Salisbury Steak', quantity: 'custom (g)', foodWord: 'SALISBURYSTEAK', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'ground beef (80% lean)', quantity: '1-1/2 lb', section: 'patties', ndbNo: '23572', portionDesc: 'g', portionGrams: 680.4 },
       { name: 'dry bread crumbs', quantity: '1/4 cup', section: 'patties', ndbNo: '18079', portionDesc: 'g', portionGrams: 27.0 },
-      { name: 'large egg', quantity: '1 large', section: 'patties', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'large egg', quantity: '1 large egg', section: 'patties', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
       { name: 'Worcestershire sauce', quantity: '1 tbsp', section: 'patties', ndbNo: '6971', portionDesc: 'g', portionGrams: 17.0 },
       { name: 'yellow mustard', quantity: '1 tsp', section: 'patties', ndbNo: '2046', portionDesc: 'g', portionGrams: 5.0 },
       { name: 'garlic powder', quantity: '1/2 tsp', section: 'patties', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.55 },
@@ -12805,9 +12805,9 @@ export const LEVELS: Level[] = [
       { name: 'salt', quantity: '1 tsp', section: 'patties', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'ground black pepper', quantity: '1/2 tsp', section: 'patties', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
       { name: 'unsalted butter', quantity: '2 tbsp', section: 'gravy', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
-      { name: 'crimini mushrooms', quantity: '8 oz', section: 'gravy', ndbNo: '11266', portionDesc: 'g', portionGrams: 226.8 },
-      { name: 'onion', quantity: '1 medium', section: 'gravy', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
-      { name: 'garlic', quantity: '2 cloves', section: 'gravy', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'crimini mushrooms', quantity: '8 oz crimini mushrooms, sliced 1/4 inch thick', section: 'gravy', ndbNo: '11266', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'onion', quantity: '1 medium onion, finely chopped', section: 'gravy', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'gravy', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'all-purpose enriched unbleached white flour', quantity: '3 tbsp', section: 'gravy', ndbNo: '20581', portionDesc: 'g', portionGrams: 23.4 },
       { name: 'beef broth', quantity: '2 cups', section: 'gravy', ndbNo: '6008', portionDesc: 'g', portionGrams: 480.0 },
       { name: 'Worcestershire sauce', quantity: '1 tbsp', section: 'gravy', ndbNo: '6971', portionDesc: 'g', portionGrams: 17.0 },
@@ -12824,7 +12824,7 @@ export const LEVELS: Level[] = [
       'Gradually whisk in the beef broth and Worcestershire sauce, scraping up any browned bits. Add thyme, salt, and pepper.',
       'Simmer, stirring occasionally, for 5 to 7 minutes until the gravy is thickened.',
       'Return the patties to the skillet and spoon gravy over them. Simmer 3 to 4 minutes until heated through. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with creamy mashed potatoes or egg noodles, and steamed green beans or peas.'
     ],
     sections: [
       { key: 'patties', label: 'Patties', cookingMethod: '', yieldFactorWater: 0.75 },
