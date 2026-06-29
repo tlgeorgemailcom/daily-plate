@@ -14726,7 +14726,7 @@ export const LEVELS: Level[] = [
       { name: 'lamb (cubed for kabobs)', quantity: '2 lb', section: 'souvlaki', ndbNo: '17059', portionDesc: 'g', portionGrams: 907.2 },
       { name: 'olive oil', quantity: '1/4 cup', section: 'souvlaki', ndbNo: '4053', portionDesc: 'g', portionGrams: 54.0 },
       { name: 'lemon juice', quantity: '3 tbsp', section: 'souvlaki', ndbNo: '9152', portionDesc: 'g', portionGrams: 45.0 },
-      { name: 'garlic', quantity: '4 cloves', section: 'souvlaki', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'souvlaki', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'dried oregano', quantity: '2 tsp', section: 'souvlaki', ndbNo: '2027', portionDesc: 'g', portionGrams: 3.6 },
       { name: 'salt', quantity: '1 tsp', section: 'souvlaki', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'ground black pepper', quantity: '1/2 tsp', section: 'souvlaki', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
