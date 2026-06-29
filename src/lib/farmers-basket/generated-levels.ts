@@ -20061,8 +20061,8 @@ export const LEVELS: Level[] = [
       { name: 'ancho', quantity: '4 ancho dried chiles', section: 'sauce', ndbNo: '11978', portionDesc: 'g', portionGrams: 68.0 },
       { name: 'pasilla', quantity: '6 pasilla dried chiles (guajillo proxy)', section: 'sauce', ndbNo: '11982', portionDesc: 'g', portionGrams: 42.0 },
       { name: 'onion', quantity: '3/4 cup chopped white onion', section: 'sauce', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
-      { name: 'garlic', quantity: '3 cloves garlic', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
-      { name: 'tomato', quantity: '2 Roma tomatoes', section: 'sauce', ndbNo: '11529', portionDesc: 'g', portionGrams: 180.0 },
+      { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'tomato', quantity: '2 Roma tomatoes, quartered', section: 'sauce', ndbNo: '11529', portionDesc: 'g', portionGrams: 180.0 },
       { name: 'ground cumin', quantity: '1 tsp ground cumin', section: 'sauce', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
       { name: 'dried oregano', quantity: '1 tsp dried oregano', section: 'sauce', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.0 },
       { name: 'salt', quantity: '3/4 tsp salt', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 4.5 },
@@ -20079,7 +20079,7 @@ export const LEVELS: Level[] = [
       'Strain the blended sauce through a fine-mesh sieve into the skillet, pressing with a spatula to push through as much pulp as possible. Discard the remaining skins and seeds in the strainer.',
       'Bring the strained sauce to a simmer over medium heat. Cook uncovered, stirring occasionally, for 10 to 15 minutes until the sauce thickens to the consistency of heavy cream. Taste and adjust salt.',
       'Cool completely and refrigerate for up to 1 week. The sauce can also be frozen for up to 3 months.',
-      'Suggestions (not included): Use for red enchiladas.'
+      'Suggestions (not included): Use as the sauce for red enchiladas, chicken enchiladas, and enchilada casserole. Also excellent as a braising liquid for chicken or pork, or as a base for enchilada soup.'
     ],
     sections: [
       { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.73 }
