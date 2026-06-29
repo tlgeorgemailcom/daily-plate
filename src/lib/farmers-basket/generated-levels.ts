@@ -13214,8 +13214,8 @@ export const LEVELS: Level[] = [
       { name: 'ground black pepper', quantity: '1/4 tsp', section: 'taco_meat', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
       { name: 'water', quantity: '1/4 cup', section: 'taco_meat', ndbNo: '14411', portionDesc: 'g', portionGrams: 60.0 },
       { name: 'corn tortilla', quantity: '8 each', section: 'assembly', ndbNo: '18363', portionDesc: 'g', portionGrams: 192.0 },
-      { name: 'Cheddar cheese', quantity: '1/2 cup', section: 'assembly', ndbNo: '1009', portionDesc: 'g', portionGrams: 56.7 },
-      { name: 'iceberg lettuce', quantity: '1 cup', section: 'assembly', ndbNo: '11252', portionDesc: 'g', portionGrams: 75.0 },
+      { name: 'Cheddar cheese', quantity: '1/2 cup cheddar cheese, shredded', section: 'assembly', ndbNo: '1009', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'iceberg lettuce', quantity: '1 cup iceberg lettuce, shredded', section: 'assembly', ndbNo: '11252', portionDesc: 'g', portionGrams: 75.0 },
       { name: 'tomato', quantity: '1 medium tomato, diced (123g)', section: 'assembly', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
       { name: 'sour cream', quantity: '1/2 cup', section: 'assembly', ndbNo: '1056', portionDesc: 'g', portionGrams: 115.0 }
     ],
@@ -13225,7 +13225,7 @@ export const LEVELS: Level[] = [
       'Add the taco seasoning and water to the browned beef. Stir to combine and simmer for 3 to 5 minutes until the liquid is absorbed and the meat is well coated. Remove from heat.',
       'Warm the corn tortillas in a dry skillet or directly over a gas flame for 30 seconds per side until pliable.',
       'Assemble the tacos: fill each tortilla with taco meat, shredded cheddar cheese, shredded lettuce, diced tomato, and a dollop of sour cream. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with Mexican rice, refried beans, and guacamole or pico de gallo on the side.'
     ],
     sections: [
       { key: 'taco_meat', label: 'Taco Meat', cookingMethod: '', yieldFactorWater: 0.8, yieldFactorFat: 0.75 },
