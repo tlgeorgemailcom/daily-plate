@@ -5853,7 +5853,7 @@ export const LEVELS: Level[] = [
       'Split the hoagie roll lengthwise (do not cut all the way through). Lightly toast cut-side down in a dry skillet over medium heat, about 1 minute.',
       'Arrange the meatballs on the roll and spoon sauce generously over them. Top with shredded mozzarella.',
       'Place the open sandwich under the broiler for 2–3 minutes until the mozzarella is melted and bubbly. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with a simple green salad, roasted vegetables, or kettle chips on the side.'
     ],
     sections: [
       { key: 'meatballs', label: 'Meatballs', cookingMethod: '', yieldFactorWater: 0.74 },
