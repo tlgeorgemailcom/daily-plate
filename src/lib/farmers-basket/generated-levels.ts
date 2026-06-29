@@ -20332,6 +20332,7 @@ export const LEVELS: Level[] = [
       'Make or prepare the Caesar Salad Dressing (see the Caesar Salad Dressing recipe).',
       'Warm the flour tortillas in a dry skillet for 30 seconds per side, or wrap in a damp paper towel and microwave for 20 seconds.',
       'Lay a tortilla flat. Arrange half the romaine down the center, top with chicken strips, croutons, and Parmesan. Drizzle with half the Caesar dressing, fold in the sides, and roll tightly. Repeat with the second tortilla.',
+      'Suggestions (not included): Serve with a cup of tomato soup or a side of seasoned potato wedges.',
       'Suggestions (not included): Serve with a cup of tomato soup or a side of seasoned potato wedges.'
     ],
     sections: [
