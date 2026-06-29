@@ -4279,7 +4279,7 @@ export const LEVELS: Level[] = [
       'Cut each sandwich into three fingers or four triangles.',
       'Chill sandwiches in the refrigerator until they firm up slightly and maintain their shape when served.',
       'Sandwiches can be stored covered overnight.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve alongside other tea sandwiches, scones with clotted cream, or a pot of hot tea.'
     ],
     sections: [
       { key: 'sandwich', label: 'Cucumber Tea', cookingMethod: '', yieldFactorWater: 1.0 }
