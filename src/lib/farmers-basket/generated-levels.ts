@@ -12911,7 +12911,7 @@ export const LEVELS: Level[] = [
       { name: 'olive oil', quantity: '3 tbsp', section: 'steak', ndbNo: '4053', portionDesc: 'g', portionGrams: 40.8 },
       { name: 'lime juice', quantity: '3 tbsp', section: 'steak', ndbNo: '9160', portionDesc: 'g', portionGrams: 45.0 },
       { name: 'soy sauce', quantity: '2 tbsp', section: 'steak', ndbNo: '16123', portionDesc: 'g', portionGrams: 32.0 },
-      { name: 'garlic', quantity: '4 cloves', section: 'steak', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'steak', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'ground cumin', quantity: '1 tsp', section: 'steak', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
       { name: 'chili powder', quantity: '1 tsp', section: 'steak', ndbNo: '2009', portionDesc: 'g', portionGrams: 2.7 },
       { name: 'ground black pepper', quantity: '1/2 tsp', section: 'steak', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
@@ -12924,7 +12924,7 @@ export const LEVELS: Level[] = [
       'Heat a cast-iron skillet or grill pan over high heat until very hot. Cook the steak for 3 to 4 minutes per side for medium-rare, or until desired doneness.',
       'Transfer to a cutting board and rest for 5 minutes.',
       'Slice thinly against the grain and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with warm flour tortillas and pico de gallo for fajitas, or over rice with grilled vegetables.'
     ],
     sections: [
       { key: 'steak', label: 'Steak', cookingMethod: '', yieldFactorWater: 0.75 }
