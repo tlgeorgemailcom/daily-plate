@@ -7078,7 +7078,7 @@ export const LEVELS: Level[] = [
       'Cook 15–30 minutes until the sauce is thick enough to coat the back of a wooden spoon and hold a clear line when wiped.',
       'If the sauce becomes too thick, whisk in additional milk a little at a time to reach the desired consistency.',
       'Remove from heat. Season with the salt, white pepper, and freshly grated nutmeg, then strain through a fine-mesh strainer. Stir occasionally while cooling to prevent skinning.',
-      'Suggestions (not included):'
+      'Suggestions (not included): The French mother sauce. Use as the base for Mornay (add cheese), lasagna, moussaka, croque monsieur, mac and cheese, or any gratin.'
     ],
     sections: [
       { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
