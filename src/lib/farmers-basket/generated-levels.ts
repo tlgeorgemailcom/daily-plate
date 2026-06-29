@@ -15217,11 +15217,11 @@ export const LEVELS: Level[] = [
       { name: 'ground cinnamon', quantity: '1 tsp', section: 'lamb', ndbNo: '2010', portionDesc: 'g', portionGrams: 2.6 },
       { name: 'cayenne pepper', quantity: '½ tsp', section: 'lamb', ndbNo: '2031', portionDesc: 'g', portionGrams: 1.5 },
       { name: 'ground cloves', quantity: '¼ tsp', section: 'lamb', ndbNo: '2011', portionDesc: 'g', portionGrams: 0.525 },
-      { name: 'bay leaf', quantity: '2 leaves', section: 'lamb', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'bay leaves', quantity: '2 bay leaves', section: 'lamb', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
       { name: 'salt', quantity: '1½ tsp', section: 'lamb', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'white rice (dry)', quantity: '2 cups', section: 'rice', ndbNo: '20044', portionDesc: 'g', portionGrams: 400.0 },
       { name: 'fresh cilantro', quantity: '¼ cup fresh cilantro, chopped', section: 'rice', ndbNo: '11165', portionDesc: 'g', portionGrams: 16.0 },
-      { name: 'fresh mint', quantity: '2 tbsp fresh', section: 'rice', ndbNo: '2065', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'fresh mint', quantity: '2 tbsp fresh mint, chopped', section: 'rice', ndbNo: '2065', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'salt', quantity: '½ tsp', section: 'rice', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 }
     ],
     recipeInstructions: [
@@ -15232,7 +15232,7 @@ export const LEVELS: Level[] = [
       'Meanwhile, bring a large pot of salted water to a boil. Add the rice and cook for 6–7 minutes until about 70% cooked (it should still have a firm bite at the center). Drain well.',
       'Spread the par-cooked rice evenly over the lamb. Scatter the cilantro and mint over the rice, then top with the reserved fried onions. Cover the pot tightly (seal with foil, then the lid) and cook over very low heat for 20–25 minutes until the rice is fully cooked.',
       'To serve, scoop portions from the pot so each serving contains both lamb and rice. Arrange on a platter and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with raita, a fresh cucumber and tomato salad, or warm naan bread.'
     ],
     sections: [
       { key: 'lamb', label: 'Lamb', cookingMethod: '', yieldFactorWater: 0.78 },
