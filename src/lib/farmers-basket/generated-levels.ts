@@ -9897,9 +9897,9 @@ export const LEVELS: Level[] = [
       { name: 'iceberg lettuce', quantity: '4 cups', section: 'salad', ndbNo: '11252', portionDesc: 'g', portionGrams: 288.0 },
       { name: 'deli turkey breast', quantity: '4 slices', section: 'salad', ndbNo: '7081', portionDesc: 'g', portionGrams: 64.0 },
       { name: 'diced ham', quantity: '2 oz', section: 'salad', ndbNo: '10136', portionDesc: 'g', portionGrams: 56.0 },
-      { name: 'hard-boiled egg', quantity: '2 large', section: 'salad', ndbNo: '1129', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'hard-boiled egg', quantity: '2 large hard-boiled eggs, sliced', section: 'salad', ndbNo: '1129', portionDesc: 'g', portionGrams: 100.0 },
       { name: 'Cheddar cheese', quantity: '2 oz', section: 'salad', ndbNo: '1009', portionDesc: 'g', portionGrams: 56.7 },
-      { name: 'tomato', quantity: '1 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'tomato', quantity: '1 medium tomato, cut into wedges', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
       { name: 'cucumber', quantity: '1 cup sliced', section: 'salad', ndbNo: '11206', portionDesc: 'g', portionGrams: 119.0 }
     ],
     recipeInstructions: [
