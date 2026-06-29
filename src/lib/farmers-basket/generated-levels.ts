@@ -16542,7 +16542,7 @@ export const LEVELS: Level[] = [
       'Arrange the marinated tuna, diced avocado, and diced cucumber over the rice.',
       'Top each bowl with the sliced scallions and toasted sesame seeds.',
       'Drizzle any remaining marinade over the top and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with additional soy sauce, sriracha, or spicy mayo on the side. Top with pickled ginger for extra brightness.'
     ],
     sections: [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
