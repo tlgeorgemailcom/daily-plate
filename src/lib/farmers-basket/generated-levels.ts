@@ -17927,7 +17927,7 @@ export const LEVELS: Level[] = [
       { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'risotto', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'olive oil', quantity: '1 tbsp', section: 'risotto', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
       { name: 'unsalted butter', quantity: '3 tbsp', section: 'risotto', ndbNo: '1145', portionDesc: 'g', portionGrams: 42.6 },
-      { name: 'Parmesan cheese', quantity: '2 oz, finely grated', section: 'risotto', ndbNo: '1033', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'Parmesan cheese', quantity: '2 oz Parmesan cheese, finely grated', section: 'risotto', ndbNo: '1033', portionDesc: 'g', portionGrams: 56.7 },
       { name: 'fresh thyme leaves', quantity: '1 sprig', section: 'risotto', ndbNo: '2049', portionDesc: 'g', portionGrams: 1.2 },
       { name: 'salt', quantity: '1/2 tsp', section: 'risotto', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'ground black pepper', quantity: '1/4 tsp', section: 'risotto', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
@@ -17939,7 +17939,7 @@ export const LEVELS: Level[] = [
       'Pour in the white wine and stir until fully absorbed, about 2 minutes.',
       'Add the hot broth one ladleful (about 1/2 cup) at a time, stirring constantly and waiting for each addition to be absorbed before adding the next. Continue until the rice is tender with a slight bite (al dente) and the mixture is creamy, about 18-20 minutes total. You may not need all the broth.',
       'Remove the thyme sprig. Remove from heat and stir in the remaining 2 tablespoons cold butter and the Parmesan until melted and creamy (mantecatura). Season with salt and pepper. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): A classic Italian comfort food. Serve alongside grilled chicken, veal, or seared scallops. Try adding sautéed mushrooms or asparagus for a hearty variation.'
     ],
     sections: [
       { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 },
