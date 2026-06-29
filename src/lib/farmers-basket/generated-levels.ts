@@ -9949,7 +9949,7 @@ export const LEVELS: Level[] = [
       'Make or portion the Italian Vinaigrette (see the Italian Vinaigrette recipe).',
       'Drizzle with the Italian Vinaigrette (2 tablespoons per serving) and toss gently to coat.',
       'Serve immediately or refrigerate up to 1 hour before serving (add dressing just before serving if making ahead).',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with warm pita bread, grilled chicken or lamb, or as a side to grilled fish.'
     ],
     sections: [
       { key: 'salad', label: 'Greek Salad', cookingMethod: '', yieldFactorWater: 1.0 },
