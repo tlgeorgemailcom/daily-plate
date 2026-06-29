@@ -9380,10 +9380,10 @@ export const LEVELS: Level[] = [
       { name: 'olive oil', quantity: '1/2 cup', section: 'dressing', ndbNo: '4053', portionDesc: 'g', portionGrams: 108.8 },
       { name: 'red wine vinegar', quantity: '1/4 cup', section: 'dressing', ndbNo: '2068', portionDesc: 'g', portionGrams: 60.0 },
       { name: 'lemon juice', quantity: '1 tbsp', section: 'dressing', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
-      { name: 'garlic', quantity: '2 cloves, minced', section: 'dressing', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'dressing', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'dried oregano', quantity: '1 tsp', section: 'dressing', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.0 },
       { name: 'dried basil', quantity: '1 tsp', section: 'dressing', ndbNo: '2003', portionDesc: 'g', portionGrams: 0.7 },
-      { name: 'fresh parsley', quantity: '1 tbsp, chopped', section: 'dressing', ndbNo: '11297', portionDesc: 'g', portionGrams: 3.8 },
+      { name: 'fresh parsley', quantity: '1 tbsp fresh parsley, chopped', section: 'dressing', ndbNo: '11297', portionDesc: 'g', portionGrams: 3.8 },
       { name: 'honey', quantity: '1/2 tsp', section: 'dressing', ndbNo: '19296', portionDesc: 'g', portionGrams: 3.5 },
       { name: 'red pepper flakes', quantity: '1/4 tsp', section: 'dressing', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.575 },
       { name: 'salt', quantity: '1/2 tsp', section: 'dressing', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
@@ -9392,11 +9392,10 @@ export const LEVELS: Level[] = [
     ],
     recipeInstructions: [
       'Make or prepare the Dijon-Style Mustard (see the Dijon-Style Mustard recipe).',
-      'Finely mince the garlic and chop the parsley.',
       'Combine red wine vinegar, lemon juice, mustard, honey, garlic, oregano, basil, parsley, red pepper flakes, salt, and black pepper in a small bowl or jar. Whisk or shake to combine.',
       'Slowly drizzle in the olive oil while whisking constantly, or add to the jar and shake vigorously until the dressing is emulsified.',
       'Taste and adjust seasoning. Use immediately or refrigerate in a sealed jar for up to 1 week. Shake well before each use.',
-      'Suggestions (not included):'
+      'Suggestions (not included): The dressing for Greek Salad, Gnocchi Antipasto Salad, and Mediterranean Pasta Salad. Also excellent as a marinade for grilled vegetables, chicken, or shrimp.'
     ],
     sections: [
       { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 },
