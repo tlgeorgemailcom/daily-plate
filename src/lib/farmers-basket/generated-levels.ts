@@ -14019,21 +14019,21 @@ export const LEVELS: Level[] = [
       { name: 'tamari', quantity: '2 tbsp', section: 'chicken', ndbNo: '16124', portionDesc: 'g', portionGrams: 36.0 },
       { name: 'sesame oil', quantity: '1 tbsp', section: 'chicken', ndbNo: '4058', portionDesc: 'g', portionGrams: 13.5 },
       { name: 'garlic powder', quantity: '1 tsp', section: 'chicken', ndbNo: '2020', portionDesc: 'g', portionGrams: 3.1 },
-      { name: 'fresh ginger', quantity: '1/2 tsp', section: 'chicken', ndbNo: '11216', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'fresh ginger', quantity: '1/2 tsp fresh ginger, grated', section: 'chicken', ndbNo: '11216', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'olive oil', quantity: '1 tbsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
       { name: 'smooth peanut butter', quantity: '1/4 cup', section: 'peanut_sauce', ndbNo: '16098', portionDesc: 'g', portionGrams: 66.0 },
       { name: 'tamari', quantity: '2 tbsp', section: 'peanut_sauce', ndbNo: '16124', portionDesc: 'g', portionGrams: 36.0 },
       { name: 'lime juice', quantity: '2 tbsp', section: 'peanut_sauce', ndbNo: '9160', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'honey', quantity: '1 tbsp', section: 'peanut_sauce', ndbNo: '19296', portionDesc: 'g', portionGrams: 21.0 },
       { name: 'sesame oil', quantity: '1 tsp', section: 'peanut_sauce', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
-      { name: 'fresh ginger', quantity: '1 tsp', section: 'peanut_sauce', ndbNo: '11216', portionDesc: 'g', portionGrams: 3.0 },
-      { name: 'garlic', quantity: '1 clove', section: 'peanut_sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'fresh ginger', quantity: '1 tsp fresh ginger, grated', section: 'peanut_sauce', ndbNo: '11216', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'garlic', quantity: '1 clove garlic, minced', section: 'peanut_sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'water', quantity: '2 tbsp', section: 'peanut_sauce', ndbNo: '14411', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'green cabbage', quantity: '1 cup green cabbage, shredded', section: 'toppings', ndbNo: '11109', portionDesc: 'g', portionGrams: 89.0 },
       { name: 'carrot', quantity: '1 cup shredded', section: 'toppings', ndbNo: '11124', portionDesc: 'g', portionGrams: 110.0 },
       { name: 'edamame (cooked)', quantity: '1 cup', section: 'toppings', ndbNo: '11212', portionDesc: 'g', portionGrams: 155.0 },
-      { name: 'broccoli', quantity: '1 cup', section: 'toppings', ndbNo: '11090', portionDesc: 'g', portionGrams: 91.0 },
-      { name: 'scallions', quantity: '3 stalks', section: 'toppings', ndbNo: '11291', portionDesc: 'g', portionGrams: 36.0 },
+      { name: 'broccoli', quantity: '1 cup broccoli, cut into 1/2-inch florets', section: 'toppings', ndbNo: '11090', portionDesc: 'g', portionGrams: 91.0 },
+      { name: 'scallions', quantity: '3 scallions, thinly sliced', section: 'toppings', ndbNo: '11291', portionDesc: 'g', portionGrams: 36.0 },
       { name: 'sesame seeds', quantity: '1 tbsp', section: 'toppings', ndbNo: '12024', portionDesc: 'g', portionGrams: 9.0 }
     ],
     recipeInstructions: [
@@ -14044,7 +14044,7 @@ export const LEVELS: Level[] = [
       'Cook the edamame according to package directions (typically boil or microwave 3 to 5 minutes until heated through and tender). Drain and set aside.',
       'Cut the broccoli into 1/2 inch florets. Steam or blanch for 3 to 4 minutes until tender-crisp. Drain and set aside.',
       'Divide the cooked rice among 4 bowls. Arrange the chicken, cabbage, carrot, edamame, and broccoli over the rice. Drizzle generously with peanut sauce, then garnish with sliced scallions and sesame seeds.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve immediately or store components separately for easy meal prep throughout the week.'
     ],
     sections: [
       { key: 'rice', label: 'Brown Rice', cookingMethod: '', yieldFactorWater: 1.0 },
