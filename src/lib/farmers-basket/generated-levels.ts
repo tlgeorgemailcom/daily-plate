@@ -13635,17 +13635,17 @@ export const LEVELS: Level[] = [
       { name: 'sesame oil', quantity: '1 tsp', section: 'chicken', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'olive oil', quantity: '2 tbsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
       { name: 'Chicken Broth', quantity: '1/2 cup Chicken Broth (recipe)', section: 'broth', foodWord: 'CHICKENBROTH', portionDesc: 'g', portionGrams: 120.0, isDish: true, componentRef: 'STOCK_003' },
-      { name: 'crimini mushrooms', quantity: '8 oz', section: 'stir_fry', ndbNo: '11266', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'crimini mushrooms', quantity: '8 oz crimini mushrooms, sliced 1/4 inch thick', section: 'stir_fry', ndbNo: '11266', portionDesc: 'g', portionGrams: 226.8 },
       { name: 'snow peas', quantity: '1 cup', section: 'stir_fry', ndbNo: '11300', portionDesc: 'g', portionGrams: 98.0 },
       { name: 'waterchestnut canned', quantity: '1 can (8 oz)', section: 'stir_fry', ndbNo: '11590', portionDesc: 'g', portionGrams: 227.0 },
       { name: 'bamboo shoots canned', quantity: '1 can (8 oz)', section: 'stir_fry', ndbNo: '11028', portionDesc: 'g', portionGrams: 227.0 },
-      { name: 'garlic', quantity: '3 cloves', section: 'stir_fry', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
-      { name: 'fresh ginger', quantity: '1 tbsp', section: 'stir_fry', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'stir_fry', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'fresh ginger', quantity: '1 tbsp fresh ginger, grated', section: 'stir_fry', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'tamari', quantity: '2 tbsp', section: 'stir_fry', ndbNo: '16124', portionDesc: 'g', portionGrams: 36.0 },
       { name: 'oyster sauce', quantity: '1 tbsp', section: 'stir_fry', ndbNo: '6176', portionDesc: 'g', portionGrams: 18.0 },
       { name: 'sesame oil', quantity: '1 tsp', section: 'stir_fry', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'cornstarch', quantity: '1 tbsp', section: 'stir_fry', ndbNo: '20027', portionDesc: 'g', portionGrams: 8.0 },
-      { name: 'scallions', quantity: '3 stalks', section: 'stir_fry', ndbNo: '11291', portionDesc: 'g', portionGrams: 36.0 }
+      { name: 'scallions', quantity: '3 scallions, thinly sliced', section: 'stir_fry', ndbNo: '11291', portionDesc: 'g', portionGrams: 36.0 }
     ],
     recipeInstructions: [
       'Slice the chicken breast thinly across the grain. In a bowl, combine 1 tablespoon tamari, 1 tablespoon cornstarch, and 1 teaspoon sesame oil. Add the chicken, toss to coat, and marinate for 10 to 15 minutes.',
@@ -13656,7 +13656,7 @@ export const LEVELS: Level[] = [
       'Add the snow peas, water chestnuts, and bamboo shoots. Stir-fry for 2 minutes until just tender-crisp.',
       'Return the chicken to the wok. Pour in the sauce and toss everything together for 1 to 2 minutes until the sauce thickens and coats everything.',
       'Stir in the scallions. Serve immediately. (Rice not included.)',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve over steamed rice or with steamed dumplings on the side.'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
