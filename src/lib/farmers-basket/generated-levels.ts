@@ -5542,7 +5542,7 @@ export const LEVELS: Level[] = [
       'Melt 1 tsp butter in a skillet over medium heat. Place the hot dog bun cut-side down and toast 1–2 minutes until golden.',
       'Fill the toasted bun generously with the lobster salad.',
       'Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with kettle chips, a dill pickle, or a cup of clam chowder.'
     ],
     sections: [
       { key: 'lobster_salad', label: 'Lobster salad', cookingMethod: '', yieldFactorWater: 1.0 },
