@@ -12130,7 +12130,7 @@ export const LEVELS: Level[] = [
       { name: 'scallions', quantity: '3 scallions, sliced', section: 'stir_fry', ndbNo: '11291', portionDesc: 'g', portionGrams: 45.0 },
       { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'stir_fry', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'fresh ginger', quantity: '2 tbsp fresh ginger, grated', section: 'stir_fry', ndbNo: '11216', portionDesc: 'g', portionGrams: 12.0 },
-      { name: 'olive oil', quantity: '2 tbsp neutral oil', section: 'stir_fry', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'olive oil', quantity: '2 tbsp olive oil', section: 'stir_fry', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
       { name: 'soy sauce', quantity: '4 tbsp soy sauce', section: 'stir_fry', ndbNo: '16123', portionDesc: 'g', portionGrams: 64.0 },
       { name: 'hoisin sauce', quantity: '2 tbsp hoisin sauce', section: 'stir_fry', ndbNo: '6175', portionDesc: 'g', portionGrams: 32.0 },
       { name: 'sesame oil', quantity: '2 tsp sesame oil', section: 'stir_fry', ndbNo: '4058', portionDesc: 'g', portionGrams: 9.0 },
@@ -12145,7 +12145,7 @@ export const LEVELS: Level[] = [
       'Add the cabbage and bean sprouts. Stir-fry 1 to 2 minutes until the cabbage just begins to wilt.',
       'Return the beef to the wok. Add the cooked noodles and pour the sauce over everything. Toss and stir-fry over high heat for 1 to 2 minutes until everything is coated and heated through.',
       'Remove from heat. Drizzle with sesame oil, scatter the scallions over the top, and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with egg drop soup or hot and sour soup, and steamed dumplings on the side.'
     ],
     sections: [
       { key: 'noodles', label: 'Noodles', cookingMethod: '', yieldFactorWater: 1.0 },
