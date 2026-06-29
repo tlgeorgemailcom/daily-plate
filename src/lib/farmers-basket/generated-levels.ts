@@ -7331,7 +7331,7 @@ export const LEVELS: Level[] = [
       'Begin adding the clarified butter very slowly — drop by drop at first — while whisking constantly. Once the emulsion is established (after the first few tablespoons), you can add the butter in a thin, steady stream. Continue whisking until all the butter is incorporated and the sauce is thick and creamy.',
       'Season with salt. Stir in the finishing tarragon and chopped chives. Taste and adjust seasoning. Serve immediately, or keep warm in the bain-marie with the heat off, whisking occasionally, for up to 30 minutes.',
       '(The tarragon in the ingredient list appears twice: the first portion infuses the reduction and is strained out; the second portion is stirred in at the end as a fresh finish.)',
-      'Suggestions (not included):'
+      'Suggestions (not included): The classic accompaniment to a beef steak — especially filet mignon or ribeye. Also excellent over grilled chicken, salmon, or lamb chops.'
     ],
     sections: [
       { key: 'reduction', label: 'Tarragon reduction', cookingMethod: '', yieldFactorWater: 0.2 },
