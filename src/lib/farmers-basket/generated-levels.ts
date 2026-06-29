@@ -6772,7 +6772,7 @@ export const LEVELS: Level[] = [
       'In a bowl, combine the ground turkey with poultry seasoning, salt, and pepper. Mix gently — do not overwork. Shape into a patty slightly larger than the bun to account for shrinkage. Press indentation in patty with your thumb or a spoon to prevent doming.',
       'Heat a skillet over medium heat. Cook the patty 5–6 minutes per side until cooked through (165°F / 74°C). Do not press down on the patty.',
       'Spread mayonnaise on the inside of both buns. Place the patty, then top with lettuce and tomato slices. Close with the bun top.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with sweet potato fries, a dill pickle, or a light garden salad on the side.'
     ],
     sections: [
       { key: 'patty', label: 'Patty', cookingMethod: '', yieldFactorWater: 0.75 },
@@ -6819,7 +6819,7 @@ export const LEVELS: Level[] = [
       'Mash the black beans in a bowl with a fork until mostly smooth — a few whole beans add texture. Mix in bread crumbs, minced onion, minced garlic, cumin, salt, and pepper until combined. The mixture should hold together when pressed; if too wet, add a pinch more bread crumbs. Form into a patty slightly wider than the bun.',
       'Heat olive oil in a skillet over medium heat. Cook the patty 4–5 minutes per side until a firm, golden crust forms. Handle gently — the patty is more fragile than a meat burger.',
       'Spread mayonnaise on the inside of both buns. Place the patty, then top with lettuce and tomato slices. Close with the bun top.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with sweet potato fries, a green salad, or sliced avocado on the side.'
     ],
     sections: [
       { key: 'patty', label: 'Patty', cookingMethod: '', yieldFactorWater: 0.85 },
