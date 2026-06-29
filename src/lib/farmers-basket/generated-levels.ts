@@ -15513,7 +15513,7 @@ export const LEVELS: Level[] = [
       'Add the bean sprouts and scallions. Stir-fry for 1–2 minutes.',
       'Add the tamari and sesame oil. Toss to combine and cook for 1 minute more.',
       'Divide the rice among 4 bowls. Top with the pork filling and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Garnish with additional scallions and sesame seeds. Serve with sriracha or chili garlic sauce on the side.'
     ],
     sections: [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
