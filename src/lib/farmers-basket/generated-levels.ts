@@ -11763,7 +11763,7 @@ export const LEVELS: Level[] = [
       'Warm the corn tortillas briefly in the microwave or a dry skillet to make them pliable. Place about 3 tablespoons of the beef filling down the center of each tortilla. Roll tightly and place seam-side down in the baking dish.',
       'Pour the remaining enchilada sauce evenly over the rolled enchiladas. Sprinkle the shredded cheese over the top.',
       'Cover the dish with foil and bake for 20 minutes. Remove the foil and bake an additional 10 minutes until the cheese is melted and bubbly. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with Mexican rice, refried beans, sour cream, and fresh guacamole.'
     ],
     sections: [
       { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.8, yieldFactorFat: 0.593 },
