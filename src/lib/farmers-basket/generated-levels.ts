@@ -6456,7 +6456,7 @@ export const LEVELS: Level[] = [
       'In a small bowl, combine shredded cabbage, mayonnaise, apple cider vinegar, and a pinch of salt. Toss well and set aside.',
       'Lay turkey slices and Swiss cheese on one slice of rye bread. Top with the coleslaw. Close the sandwich with the second slice.',
       'Melt butter in a non-toxic nonstick skillet over medium heat. Add the sandwich and press lightly. Cook 3–4 minutes per side until the bread is golden brown and the cheese is melted. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with kettle chips, a dill pickle, or tomato soup on the side.'
     ],
     sections: [
       { key: 'coleslaw', label: 'Coleslaw', cookingMethod: '', yieldFactorWater: 1.0 },
