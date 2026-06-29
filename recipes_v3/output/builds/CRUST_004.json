@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 1,
   "audit_status": "NO_CANON",
   "audit_notes": "Rule D \u2014 no canonical USDA NDB for an unbaked double pie crust; not audited. Ingredients are exactly 2x CRUST_003 (single unbaked, NDB 18402 validated Rule B). yfw=1.00 (raw dough \u2014 no moisture loss). Locked May 14 2026.",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 171.58,
   "raw_protein_grams": 32.88,
   "raw_carb_grams": 238.51,
+  "raw_fiber_grams": 8.44,
   "water_lost_grams": 0.0,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 559.57,
   "grams_per_serving": 559.57,
   "ingredients": [
@@ -285,6 +288,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 5,
       "raw_grams": 559.57,
@@ -292,6 +296,7 @@
       "raw_fat_grams": 171.58,
       "raw_protein_grams": 32.88,
       "raw_carb_grams": 238.51,
+      "raw_fiber_grams": 8.44,
       "final_grams": 559.57
     }
   ]
