@@ -13696,9 +13696,9 @@ export const LEVELS: Level[] = [
       { name: 'Chicken Broth', quantity: '1/2 cup Chicken Broth (recipe)', section: 'broth', foodWord: 'CHICKENBROTH', portionDesc: 'g', portionGrams: 120.0, isDish: true, componentRef: 'STOCK_003' },
       { name: 'white wine', quantity: '1/2 cup', section: 'sauce', ndbNo: '14106', portionDesc: 'g', portionGrams: 120.0 },
       { name: 'lemon juice', quantity: '3 tbsp', section: 'sauce', ndbNo: '9152', portionDesc: 'g', portionGrams: 45.0 },
-      { name: 'capers', quantity: '2 tbsp', section: 'sauce', ndbNo: '2054', portionDesc: 'g', portionGrams: 17.2 },
+      { name: 'capers', quantity: '2 tbsp capers, drained', section: 'sauce', ndbNo: '2054', portionDesc: 'g', portionGrams: 17.2 },
       { name: 'unsalted butter', quantity: '3 tbsp', section: 'sauce', ndbNo: '1145', portionDesc: 'g', portionGrams: 42.6 },
-      { name: 'fresh parsley', quantity: '2 tbsp', section: 'sauce', ndbNo: '11297', portionDesc: 'g', portionGrams: 7.6 },
+      { name: 'fresh parsley', quantity: '2 tbsp fresh parsley, chopped', section: 'sauce', ndbNo: '11297', portionDesc: 'g', portionGrams: 7.6 },
       { name: 'salt', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
       { name: 'ground black pepper', quantity: 'pinch', section: 'sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 }
     ],
