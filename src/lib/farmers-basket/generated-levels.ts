@@ -10261,13 +10261,13 @@ export const LEVELS: Level[] = [
       { name: 'salt', quantity: '¼ tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
       { name: 'ground black pepper', quantity: '⅛ tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
       { name: 'wide pasta, dry', quantity: '2 cups dry', section: 'pasta', ndbNo: '20420', portionDesc: 'g', portionGrams: 244.0 },
-      { name: 'artichoke hearts cooked', quantity: '7 oz', section: 'salad', ndbNo: '11008', portionDesc: 'g', portionGrams: 200.0 },
-      { name: 'tomato', quantity: '1 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
-      { name: 'black olives', quantity: '10 large', section: 'salad', ndbNo: '9193', portionDesc: 'g', portionGrams: 44.0 },
+      { name: 'artichoke hearts cooked', quantity: '7 oz artichoke hearts, coarsely chopped', section: 'salad', ndbNo: '11008', portionDesc: 'g', portionGrams: 200.0 },
+      { name: 'tomato', quantity: '1 medium tomato (123g), diced', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'black olives', quantity: '10 large black olives, sliced', section: 'salad', ndbNo: '9193', portionDesc: 'g', portionGrams: 44.0 },
       { name: 'Parmesan cheese', quantity: '¼ cup grated', section: 'salad', ndbNo: '1033', portionDesc: 'g', portionGrams: 25.0 },
       { name: 'olive oil', quantity: '2 tbsp', section: 'salad', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.0 },
       { name: 'lemon juice', quantity: '2 tbsp', section: 'salad', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
-      { name: 'garlic', quantity: '2 cloves', section: 'salad', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'salad', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'dried oregano', quantity: '¼ tsp', section: 'salad', ndbNo: '2027', portionDesc: 'g', portionGrams: 1.0 },
       { name: 'dried basil', quantity: '¼ tsp', section: 'salad', ndbNo: '2003', portionDesc: 'g', portionGrams: 0.7 },
       { name: 'salt', quantity: '½ tsp', section: 'salad', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
@@ -10278,7 +10278,7 @@ export const LEVELS: Level[] = [
       'Season chicken with salt and pepper. Cook in a lightly oiled skillet over medium-high heat, 6–7 minutes per side, until an instant-read thermometer reads 165°F (74°C). Let rest 5 minutes, then slice or dice.',
       'Whisk together olive oil, lemon juice, minced garlic, oregano, basil, salt, and pepper in a large bowl to make the vinaigrette.',
       'Add pasta, chicken, chopped artichoke hearts, tomato, sliced olives, and parmesan. Toss to coat. Refrigerate at least 30 minutes before serving. Serve cold or at room temperature.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve chilled with crusty bread or as a picnic main course.'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
