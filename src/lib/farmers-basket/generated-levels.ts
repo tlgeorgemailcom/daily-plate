@@ -9986,7 +9986,7 @@ export const LEVELS: Level[] = [
       { name: 'ground black pepper', quantity: '¼ tsp', section: 'beef', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
       { name: 'iceberg lettuce', quantity: '4 cups', section: 'salad', ndbNo: '11252', portionDesc: 'g', portionGrams: 288.0 },
       { name: 'black beans', quantity: '1 cup', section: 'salad', ndbNo: '16015', portionDesc: 'g', portionGrams: 172.0 },
-      { name: 'Cheddar cheese', quantity: '2 oz', section: 'salad', ndbNo: '1009', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'Cheddar cheese', quantity: '2 oz cheddar cheese, shredded', section: 'salad', ndbNo: '1009', portionDesc: 'g', portionGrams: 56.7 },
       { name: 'tortilla chips', quantity: '1 oz', section: 'salad', ndbNo: '19056', portionDesc: 'g', portionGrams: 28.35 },
       { name: 'tomato', quantity: '1 medium tomato (123g), diced', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
       { name: 'sour cream', quantity: '¼ cup', section: 'salad', ndbNo: '1056', portionDesc: 'g', portionGrams: 57.5 },
