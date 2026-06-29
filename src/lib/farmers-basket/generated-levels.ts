@@ -12089,7 +12089,7 @@ export const LEVELS: Level[] = [
       'Assemble the lasagna: spread a thin layer of meat sauce on the bottom of a 9×13-inch baking dish. Layer 3 to 4 noodles over the sauce. Spread one-third of the cheese filling, then one-third of the remaining meat sauce. Repeat the layers twice more, ending with meat sauce on top. Scatter the remaining mozzarella over the top.',
       'Cover tightly with foil and bake for 30 minutes. Uncover and bake for an additional 15 to 20 minutes until the cheese is bubbly and golden.',
       'Let rest for 15 minutes before slicing. Cut into 8 pieces and serve.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with garlic bread and a simple green salad or Caesar salad.'
     ],
     sections: [
       { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
