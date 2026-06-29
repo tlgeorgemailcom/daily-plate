@@ -19979,7 +19979,7 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Seafood Cornmeal Fried Shrimp', quantity: 'custom (g)', foodWord: 'SHRIMPCORNMEALFRIED', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'shrimp', quantity: '1 lb shrimp, peeled, deveined, and dry-patted', section: 'main', ndbNo: '15270', portionDesc: 'g', portionGrams: 453.6 },
-      { name: 'whole buttermilk', quantity: '¼ cup buttermilk', section: 'main', ndbNo: '1230', portionDesc: 'g', portionGrams: 61.25 },
+      { name: 'whole buttermilk', quantity: '¼ cup whole buttermilk', section: 'main', ndbNo: '1230', portionDesc: 'g', portionGrams: 61.25 },
       { name: 'large egg', quantity: '1 large egg, beaten', section: 'main', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
       { name: 'all-purpose enriched unbleached white flour', quantity: '½ cup', section: 'main', ndbNo: '20581', portionDesc: 'g', portionGrams: 62.5 },
       { name: 'yellow cornmeal', quantity: '½ cup yellow cornmeal', section: 'main', ndbNo: '20022', portionDesc: 'g', portionGrams: 69.0 },
