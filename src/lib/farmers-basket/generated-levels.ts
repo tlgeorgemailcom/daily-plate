@@ -20542,7 +20542,7 @@ export const LEVELS: Level[] = [
       'Heat a large skillet or griddle over medium-high heat (no oil needed). Cook the patties 2–3 minutes per side until cooked through (internal temperature 160°F). During the last 30 seconds, place a half-slice of American cheese on each patty, cover the pan, and cook until melted.',
       'While still hot, top each cheesy patty with a half-strip of bacon and a dill pickle slice.',
       'Arrange on a platter and serve with ketchup and mustard for dipping. Serve 3 bites per person.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with french fries, onion rings, or a simple green salad on the side.'
     ],
     sections: [
       { key: 'patties', label: 'Patties', cookingMethod: '', yieldFactorWater: 0.75 },
