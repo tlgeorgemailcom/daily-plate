@@ -11316,7 +11316,7 @@ export const LEVELS: Level[] = [
       { name: 'orange juice', quantity: '¼ cup', section: 'main', ndbNo: '9206', portionDesc: 'g', portionGrams: 61.0 },
       { name: 'lime juice', quantity: '¼ cup', section: 'main', ndbNo: '9160', portionDesc: 'g', portionGrams: 61.6 },
       { name: 'olive oil', quantity: '2 tbsp', section: 'main', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.0 },
-      { name: 'garlic', quantity: '4 cloves', section: 'main', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'main', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'ground cumin', quantity: '2 tsp', section: 'main', ndbNo: '2014', portionDesc: 'g', portionGrams: 4.2 },
       { name: 'dried oregano', quantity: '2 tsp', section: 'main', ndbNo: '2027', portionDesc: 'g', portionGrams: 2.0 },
       { name: 'paprika', quantity: '1 tsp', section: 'main', ndbNo: '2028', portionDesc: 'g', portionGrams: 2.3 },
