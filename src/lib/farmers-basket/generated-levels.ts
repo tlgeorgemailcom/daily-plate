@@ -5338,7 +5338,7 @@ export const LEVELS: Level[] = [
       'Spread ranch dressing on both buns, then place the lettuce on the bottom bun.',
       'Place the buffalo chicken on top of the lettuce, close with the top bun, and serve.',
       '(Oil in the ingredient list reflects only the amount absorbed into the crust.)',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with celery sticks, carrot sticks, and extra ranch or blue cheese dressing on the side.'
     ],
     sections: [
       { key: 'chicken', label: 'Fried chicken', cookingMethod: '', yieldFactorWater: 0.82 },
