@@ -7910,7 +7910,6 @@ export const LEVELS: Level[] = [
     ],
     recipeInstructions: [
       'Score the base of each fresh tomato with an X. Blanch in boiling water for 30 seconds, then transfer to ice water. Peel and quarter the tomatoes, then press through a coarse strainer or food mill to remove the seeds (discard seeds; keep pulp and juice). If using canned crushed tomatoes, simply press through a coarse strainer to remove seeds.',
-      'Finely dice the onion and green bell pepper.',
       'Combine the prepared tomatoes, diced onion, diced bell pepper, apple cider vinegar, brown sugar, salt, cinnamon, cloves, allspice, and red pepper flakes in a medium saucepan.',
       'Bring to a boil over medium-high heat, stirring to dissolve the sugar.',
       'Reduce heat to medium-low and simmer uncovered, stirring occasionally, until the sauce thickens and reduces by about a third — approximately 45 to 60 minutes.',
@@ -7918,7 +7917,7 @@ export const LEVELS: Level[] = [
       'Taste and adjust seasoning — add a pinch more salt, a splash more vinegar, or extra red pepper flakes if needed.',
       'Remove from heat and let cool. Unlike ketchup, chili sauce is not blended — it keeps its chunky, relish-like texture.',
       'Transfer to clean glass jars and refrigerate. The chili sauce keeps for up to 3 weeks.',
-      'Suggestions (not included):'
+      'Suggestions (not included): The base for Russian Dressing (see the Russian Dressing recipe). Also excellent as a condiment for hot dogs and burgers, spooned over cream cheese with crackers, or stirred into cocktail sauce for shrimp.'
     ],
     sections: [
       { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.63 }
