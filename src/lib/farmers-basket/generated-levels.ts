@@ -5233,7 +5233,7 @@ export const LEVELS: Level[] = [
       'Spread mayonnaise on both buns, then layer the lettuce, sliced tomato, and sliced pickles on the bottom bun.',
       'Place the grilled chicken on top of the toppings.',
       'Close with the top bun and serve.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with french fries, a side salad, or coleslaw.'
     ],
     sections: [
       { key: 'chicken', label: 'Grilled chicken', cookingMethod: '', yieldFactorWater: 0.8, yieldFactorFat: 0.98 },
