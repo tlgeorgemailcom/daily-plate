@@ -15360,8 +15360,8 @@ export const LEVELS: Level[] = [
       { name: 'olive oil', quantity: '1 tbsp', section: 'chops', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
       { name: 'unsalted butter', quantity: '2 tbsp', section: 'chops', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
       { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'chops', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
-      { name: 'fresh thyme leaves', quantity: '3 sprigs', section: 'chops', ndbNo: '2049', portionDesc: 'g', portionGrams: 2.4 },
-      { name: 'fresh rosemary', quantity: '1 sprig', section: 'chops', ndbNo: '2063', portionDesc: 'g', portionGrams: 1.7 },
+      { name: 'fresh thyme leaves', quantity: '3 sprigs fresh thyme, leaves stripped', section: 'chops', ndbNo: '2049', portionDesc: 'g', portionGrams: 2.4 },
+      { name: 'fresh rosemary', quantity: '1 sprig fresh rosemary, whole', section: 'chops', ndbNo: '2063', portionDesc: 'g', portionGrams: 1.7 },
       { name: 'salt', quantity: '1 tsp', section: 'chops', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'ground black pepper', quantity: '½ tsp', section: 'chops', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
     ],
@@ -15371,7 +15371,7 @@ export const LEVELS: Level[] = [
       'Flip the chops. Add the butter, garlic, thyme, and rosemary to the pan. As the butter melts and foams, tilt the pan slightly and use a spoon to continuously baste the chops with the herb butter for 2–3 minutes.',
       'Continue cooking, basting frequently, until the internal temperature reaches 145°F (63°C) at the thickest point away from the bone, about 2–3 minutes more.',
       'Transfer to a cutting board and rest for 5 minutes before serving.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with mashed potatoes, roasted vegetables, or steamed green beans.'
     ],
     sections: [
       { key: 'chops', label: 'Pork Chops', cookingMethod: '', yieldFactorWater: 0.82 }
