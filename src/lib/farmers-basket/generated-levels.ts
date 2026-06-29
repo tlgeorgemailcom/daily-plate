@@ -19451,7 +19451,7 @@ export const LEVELS: Level[] = [
       'Add tomato and cook 1 minute more, stirring.',
       'Pour in the beaten eggs. Cook, stirring gently, until just set, 2–3 minutes.',
       'Remove from heat, top with shredded cheese and fresh cilantro, and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with refried beans, avocado, salsa, or warm tortillas.'
     ],
     sections: [
       { key: 'migas', label: 'Migas', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -19497,7 +19497,7 @@ export const LEVELS: Level[] = [
       'Add the crushed tortilla chips and stir to coat, 30 seconds.',
       'Pour in the beaten eggs. Cook, stirring gently, until just set and chips are softened, 2–3 minutes.',
       'Remove from heat, top with shredded cheese and fresh cilantro, and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with refried beans, avocado, or salsa.'
     ],
     sections: [
       { key: 'migas', label: 'Migas', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -19536,7 +19536,7 @@ export const LEVELS: Level[] = [
       'Spoon the remaining yogurt on top.',
       'Top with the remaining granola and blueberries.',
       'Drizzle with honey and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve chilled with sliced strawberries, sliced bananas, or a sprinkle of toasted coconut flakes.'
     ],
     sections: [
       { key: 'parfait', label: 'Parfait', cookingMethod: '', yieldFactorWater: 1.0 }
