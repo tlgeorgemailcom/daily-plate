@@ -20588,7 +20588,7 @@ export const LEVELS: Level[] = [
       'Layer a quarter of the turkey, shredded cheddar, spinach leaves, red bell pepper slices, and scallions evenly over the cream cheese.',
       'Starting from the filled edge, roll the tortilla tightly into a log. Repeat with the remaining 3 tortillas. Wrap each roll in plastic wrap and refrigerate for at least 1 hour (or overnight) to firm up.',
       'Unwrap and slice each roll into 8–10 rounds about 1 inch thick using a sharp serrated knife. Arrange on a platter and serve chilled.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve alongside a vegetable crudité platter, a fruit salad, or a light soup.'
     ],
     sections: [
       { key: 'pinwheels', label: 'Pinwheels', cookingMethod: '', yieldFactorWater: 1.0 }
