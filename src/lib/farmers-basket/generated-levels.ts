@@ -5637,7 +5637,7 @@ export const LEVELS: Level[] = [
       'Top the beef with the sautéed onions and 1 slice of provolone. Broil on high for 2–3 minutes until the cheese is melted and bubbly and the top roll is lightly golden.',
       'Remove from oven and fold the top half of the roll over the melted cheese.',
       'Ladle the warm au jus into a small ramekin and serve alongside for dipping.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with french fries, a simple green salad, or horseradish sauce on the side.'
     ],
     sections: [
       { key: 'onion_saute', label: 'Sautéed onion', cookingMethod: '', yieldFactorWater: 1.0 },
