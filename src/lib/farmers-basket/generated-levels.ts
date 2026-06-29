@@ -5999,7 +5999,7 @@ export const LEVELS: Level[] = [
       'Add the beef to the empty side of the pan. Cook 2–3 minutes, breaking apart with a spatula, until browned and just cooked through. Mix the beef together with the onions and peppers.',
       'Lay the provolone slices over the beef mixture. Cover loosely with a lid or foil for 30–60 seconds to melt the cheese.',
       'Split the hoagie roll and lightly toast the cut sides on the griddle for 1 minute. Scoop the cheesy beef filling into the roll cheese side down and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with french fries, onion rings, or a dill pickle on the side.'
     ],
     sections: [
       { key: 'filling', label: 'Beef filling', cookingMethod: '', yieldFactorWater: 0.82 },
