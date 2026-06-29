@@ -11089,10 +11089,10 @@ export const LEVELS: Level[] = [
       { name: 'wide pasta, dry', quantity: '8 oz', section: 'pasta', ndbNo: '20420', portionDesc: 'g', portionGrams: 226.8 },
       { name: 'water', quantity: 'enough to boil', section: 'pasta', ndbNo: '14411', portionDesc: 'g', portionGrams: 1800.0 },
       { name: 'ground beef (80% lean)', quantity: '1 lb', section: 'sauce', ndbNo: '23572', portionDesc: 'g', portionGrams: 454.0 },
-      { name: 'onion', quantity: '1 medium', section: 'sauce', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
-      { name: 'carrot', quantity: '1 cup chopped', section: 'sauce', ndbNo: '11124', portionDesc: 'g', portionGrams: 128.0 },
-      { name: 'celery', quantity: '1 cup chopped celery', section: 'sauce', ndbNo: '11143', portionDesc: 'g', portionGrams: 101.0 },
-      { name: 'garlic', quantity: '4 cloves', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'onion', quantity: '1 medium onion, finely diced', section: 'sauce', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'carrot', quantity: '1 cup carrot, finely diced', section: 'sauce', ndbNo: '11124', portionDesc: 'g', portionGrams: 128.0 },
+      { name: 'celery', quantity: '1 cup celery, finely diced', section: 'sauce', ndbNo: '11143', portionDesc: 'g', portionGrams: 101.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, crushed', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'olive oil', quantity: '2 tbsp', section: 'sauce', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.0 },
       { name: 'crushed tomatoes', quantity: '14.5 oz can', section: 'sauce', ndbNo: '11693', portionDesc: 'g', portionGrams: 411.0 },
       { name: 'tomato paste', quantity: '2 tbsp', section: 'sauce', ndbNo: '11546', portionDesc: 'g', portionGrams: 33.0 },
@@ -11116,7 +11116,7 @@ export const LEVELS: Level[] = [
       'Reduce heat to low and simmer uncovered, stirring occasionally, for 45 minutes to 1 hour until the sauce is thick and the fat begins to pool on the surface. Remove the bay leaf.',
       'Meanwhile, bring a large pot of salted water to a boil. Cook pasta according to package directions until al dente. Reserve ½ cup pasta water, then drain.',
       'Toss the drained pasta with the Bolognese sauce, adding a splash of pasta water if needed to loosen. Serve with grated Parmesan if desired.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Top with freshly grated Parmesan cheese and serve with crusty bread on the side.'
     ],
     sections: [
       { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
