@@ -15545,7 +15545,7 @@ export const LEVELS: Level[] = [
       { name: 'Pork Milanese', quantity: 'custom (g)', foodWord: 'PORKMILANESE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'pork tenderloin', quantity: '2 pork tenderloin cutlets (4 oz each), pounded to 1/4 inch', section: 'main', ndbNo: '10060', portionDesc: 'g', portionGrams: 226.8 },
       { name: 'all-purpose enriched unbleached white flour', quantity: '1/4 cup', section: 'main', ndbNo: '20581', portionDesc: 'g', portionGrams: 31.25 },
-      { name: 'large egg', quantity: '1 large, beaten', section: 'main', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'large egg', quantity: '1 large egg, beaten', section: 'main', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
       { name: 'dry bread crumbs', quantity: '1/2 cup dry bread crumbs (prefer panko)', section: 'main', ndbNo: '18079', portionDesc: 'g', portionGrams: 54.0 },
       { name: 'olive oil', quantity: '1 tbsp olive oil (absorbed into crust)', section: 'main', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
       { name: 'salt', quantity: '1/2 tsp', section: 'main', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
