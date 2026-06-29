@@ -16809,7 +16809,7 @@ export const LEVELS: Level[] = [
       'Add chickpeas, cumin, paprika, salt, and pepper. Stir to combine and cook until the chickpeas are heated through, about 2 minutes.',
       'Remove from heat and stir in the lime juice.',
       'Divide the rice among 4 bowls. Top with the vegetable-chickpea mixture, garnish with scallions and cilantro, and serve.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with a lime wedge and your favorite hot sauce on the side.'
     ],
     sections: [
       { key: 'rice', label: 'White Rice', cookingMethod: '', yieldFactorWater: 1.0 },
