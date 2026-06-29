@@ -17537,7 +17537,7 @@ export const LEVELS: Level[] = [
       { name: 'apple cider vinegar', quantity: '1 tsp', section: 'filling', ndbNo: '2048', portionDesc: 'g', portionGrams: 5.0 },
       { name: 'salt', quantity: '1/4 tsp', section: 'filling', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
       { name: 'ground black pepper', quantity: '1/8 tsp', section: 'filling', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.275 },
-      { name: 'paprika', quantity: '1/2 tsp, for garnish', section: 'filling', ndbNo: '2028', portionDesc: 'g', portionGrams: 1.15 }
+      { name: 'paprika', quantity: '1/2 tsp paprika (for garnish)', section: 'filling', ndbNo: '2028', portionDesc: 'g', portionGrams: 1.15 }
     ],
     recipeInstructions: [
       'Start with 6 hard-boiled eggs, cooled and peeled. (To hard-boil: place eggs in a saucepan, cover with cold water by 1 inch, bring to a boil, remove from heat, cover, and let stand 12 minutes; then transfer to an ice bath for 10 minutes before peeling.)',
@@ -17546,7 +17546,7 @@ export const LEVELS: Level[] = [
       'Taste and adjust seasoning. The filling should be tangy and well-seasoned.',
       'Fill each egg white half with the yolk mixture using a small spoon or piping bag.',
       'Dust lightly with paprika. Refrigerate until ready to serve, up to 24 hours.',
-      'Suggestions (not included):'
+      'Suggestions (not included): A party and picnic classic. Serve chilled on a platter and garnish with additional paprika or fresh chives.'
     ],
     sections: [
       { key: 'filling', label: 'Deviled Egg Filling', cookingMethod: '', yieldFactorWater: 1.0 }
