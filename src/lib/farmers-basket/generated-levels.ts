@@ -17064,7 +17064,7 @@ export const LEVELS: Level[] = [
       'Return the tofu to the pan and pour the sesame sauce over everything. Toss to coat and cook for 1 to 2 minutes until the sauce thickens and glazes the tofu and broccoli.',
       'Remove from heat and sprinkle with sesame seeds and scallions. Add red pepper flakes for heat if desired.',
       'Divide the rice among four bowls and top with the sesame tofu and broccoli. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Garnish with additional sesame seeds and scallions. Pairs well with steamed edamame or a simple cucumber salad on the side.'
     ],
     sections: [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
