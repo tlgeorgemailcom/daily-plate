@@ -4157,7 +4157,7 @@ export const LEVELS: Level[] = [
       'Spread mustard and mayonnaise on one or both bread slices.',
       'Layer the sliced ham and Swiss cheese on one slice, then top with the second slice.',
       'Cut diagonally and serve.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with potato chips, a dill pickle, or a cup of soup.'
     ],
     sections: [
       { key: 'sandwich', label: 'Ham and Cheese', cookingMethod: '', yieldFactorWater: 1.0 }
