@@ -7617,14 +7617,14 @@ export const LEVELS: Level[] = [
       { name: 'water', quantity: '8 cups', section: 'stock', ndbNo: '14411', portionDesc: 'g', portionGrams: 1892.7 },
       { name: 'white wine', quantity: '1 cup', section: 'stock', ndbNo: '14106', portionDesc: 'g', portionGrams: 240.0 },
       { name: 'unsalted butter', quantity: '1 tbsp', section: 'stock', ndbNo: '1145', portionDesc: 'g', portionGrams: 14.2 },
-      { name: 'onion', quantity: '1 medium', section: 'stock', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
-      { name: 'leek', quantity: '1 medium', section: 'stock', ndbNo: '11246', portionDesc: 'g', portionGrams: 89.0 },
-      { name: 'celery', quantity: '2 stalks celery', section: 'stock', ndbNo: '11143', portionDesc: 'g', portionGrams: 80.0 },
-      { name: 'fresh parsley', quantity: '¾ oz', section: 'stock', ndbNo: '11297', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'onion', quantity: '1 medium onion, thinly sliced', section: 'stock', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'leek', quantity: '1 medium leek, thinly sliced', section: 'stock', ndbNo: '11246', portionDesc: 'g', portionGrams: 89.0 },
+      { name: 'celery', quantity: '2 stalks celery, thinly sliced', section: 'stock', ndbNo: '11143', portionDesc: 'g', portionGrams: 80.0 },
+      { name: 'fresh parsley', quantity: '¾ oz fresh parsley, whole sprigs', section: 'stock', ndbNo: '11297', portionDesc: 'g', portionGrams: 18.0 },
       { name: 'fresh thyme leaves', quantity: '3 sprigs', section: 'stock', ndbNo: '2049', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'bay leaf', quantity: '2 leaves', section: 'stock', ndbNo: '2004', portionDesc: 'g', portionGrams: 0.8 },
       { name: 'ground black pepper', quantity: '½ tsp', section: 'stock', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 },
-      { name: 'lemon juice', quantity: 'juice of 1 lemon', section: 'stock', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'lemon', quantity: 'juice of 1 lemon', section: 'stock', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'salt', quantity: '1 tsp', section: 'stock', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 }
     ],
     recipeInstructions: [
@@ -7636,7 +7636,7 @@ export const LEVELS: Level[] = [
       'Do not stir — stirring emulsifies fats and impurities back into the liquid.',
       'Strain the stock through a fine-mesh strainer or cheesecloth-lined colander. Discard the solids.',
       'Cool to room temperature and refrigerate for up to 3 days, or freeze for up to 3 months.',
-      'Suggestions (not included):'
+      'Suggestions (not included): The base for fish chowder, seafood bisque, seafood gumbo, and sauces for poached fish. Use within 3 days — fish stock does not keep as long as meat stocks.'
     ],
     sections: [
       { key: 'stock', label: 'Stock', cookingMethod: '', yieldFactorWater: 0.9, yieldFactorOther: 0.02 }
