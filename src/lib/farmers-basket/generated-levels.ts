@@ -14393,11 +14393,11 @@ export const LEVELS: Level[] = [
       { name: 'ground black pepper', quantity: '1/4 tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
       { name: 'olive oil', quantity: '1 tbsp', section: 'sauce', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
       { name: 'unsalted butter', quantity: '4 tbsp', section: 'sauce', ndbNo: '1145', portionDesc: 'g', portionGrams: 56.8 },
-      { name: 'garlic', quantity: '6 cloves', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'garlic', quantity: '6 cloves garlic, minced', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 18.0 },
       { name: 'red pepper flakes', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.575 },
       { name: 'white wine', quantity: '1/2 cup', section: 'sauce', ndbNo: '14106', portionDesc: 'g', portionGrams: 120.0 },
       { name: 'lemon juice', quantity: '2 tbsp', section: 'sauce', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
-      { name: 'fresh parsley', quantity: '1/4 cup', section: 'sauce', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'fresh parsley', quantity: '1/4 cup fresh parsley, chopped', section: 'sauce', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.0 },
       { name: 'salt', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
       { name: 'ground black pepper', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
       { name: 'Chicken Broth', quantity: '1/2 cup Chicken Broth (recipe)', section: 'broth', foodWord: 'CHICKENBROTH', portionDesc: 'g', portionGrams: 120.0, isDish: true, componentRef: 'STOCK_003' }
@@ -14411,7 +14411,7 @@ export const LEVELS: Level[] = [
       'Add chicken broth (see Chicken Broth recipe) and lemon juice. Simmer 3 to 4 minutes until sauce reduces slightly.',
       'Add drained pasta and toss to coat, adding reserved pasta water a splash at a time if needed to loosen the sauce.',
       'Return sliced chicken to the pan, top with parsley, and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with crusty bread to soak up the sauce and a simple green salad.'
     ],
     sections: [
       { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
