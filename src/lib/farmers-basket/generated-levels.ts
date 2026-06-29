@@ -8104,7 +8104,7 @@ export const LEVELS: Level[] = [
       'Dry the riced potato over low heat 1–2 minutes, stirring with a wooden spoon to drive off excess moisture.',
       'Remove from heat. Stir in garlic paste, then add butter in pieces, stirring vigorously to incorporate.',
       'Warm the milk gently and stir in gradually until potatoes reach desired consistency. Season with salt and serve at once.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve alongside roast chicken, grilled steak, or braised lamb. Garnish with fresh chives.'
     ],
     sections: [
       { key: 'garlic', label: 'Roasted garlic', cookingMethod: '', yieldFactorWater: 0.62 },
