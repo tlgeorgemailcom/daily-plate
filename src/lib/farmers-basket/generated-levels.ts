@@ -7364,7 +7364,7 @@ export const LEVELS: Level[] = [
       { name: 'chicken back', quantity: '3 lbs', section: 'stock', ndbNo: '5048', portionDesc: 'g', portionGrams: 1360.776 },
       { name: 'chicken neck', quantity: '1 lb', section: 'stock', ndbNo: '5084', portionDesc: 'g', portionGrams: 453.592 },
       { name: 'water', quantity: '1 gallon (cold start)', section: 'stock', ndbNo: '14411', portionDesc: 'g', portionGrams: 3785.0 },
-      { name: 'onion', quantity: '1 large, quartered', section: 'stock', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'onion', quantity: '1 large onion, quartered', section: 'stock', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
       { name: 'carrot', quantity: '2 medium', section: 'stock', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
       { name: 'celery', quantity: '3 stalks celery', section: 'stock', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
       { name: 'leek', quantity: '1 leek, halved lengthwise', section: 'stock', ndbNo: '11246', portionDesc: 'g', portionGrams: 89.0 },
@@ -7382,7 +7382,7 @@ export const LEVELS: Level[] = [
       'Simmer uncovered for 3 to 4 hours, skimming occasionally. You\'re clarifying the stock by skimming the oil, as well. Do not let the stock boil — it will cloud. Do not stir — stirring emulsifies fats and impurities back into the liquid.',
       'Strain through a fine-mesh strainer, pressing lightly on the solids. Discard solids.',
       'Cool to room temperature, then refrigerate. Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid.',
-      'Suggestions (not included):'
+      'Suggestions (not included): The foundation for soups, risotto, rice pilaf, and sauces. Freeze in quart containers for up to 3 months.'
     ],
     sections: [
       { key: 'stock', label: 'Stock', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
