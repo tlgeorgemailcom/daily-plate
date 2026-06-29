@@ -5495,7 +5495,7 @@ export const LEVELS: Level[] = [
       'Heat olive oil in a skillet over medium-high heat until shimmering.',
       'Cook the crab cake until deeply golden on the bottom, about 4 minutes. Flip carefully and cook the second side until golden and heated through, about 3–4 more minutes.',
       'Spread tartar sauce on both halves of the hamburger bun. Place the crab cake on the bottom bun, then top with the lettuce leaf and tomato slices. (Oil in the ingredient list reflects only the amount absorbed into the crab cake.)',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with coleslaw, a lemon wedge, or a simple green salad.'
     ],
     sections: [
       { key: 'crab_cake', label: 'Crab cake', cookingMethod: '', yieldFactorWater: 0.9 },
