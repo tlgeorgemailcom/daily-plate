@@ -4117,7 +4117,7 @@ export const LEVELS: Level[] = [
       'Add the shredded chicken, diced apple, chopped celery, and green onion. Toss to coat evenly.',
       'Spread the chicken salad evenly over one bread slice and top with the second slice.',
       'Cut diagonally and serve immediately, or refrigerate the chicken salad up to 3 days.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with potato chips, a dill pickle, or a simple green salad.'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.82 },
