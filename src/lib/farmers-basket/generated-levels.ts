@@ -17390,7 +17390,7 @@ export const LEVELS: Level[] = [
       'Add the reserved zucchini flesh, tomatoes, dried oregano, salt, and ground black pepper. Cook for 3 to 4 minutes, stirring often, until most of the liquid has evaporated. Remove from heat and stir in the fresh basil.',
       'Spoon the filling into the zucchini shells, mounding slightly. Sprinkle with the shredded mozzarella, then the grated Parmesan.',
       'Bake for 20 to 25 minutes, until the zucchini is tender and the cheese is melted and lightly golden. Let cool for 5 minutes before serving.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Top with a drizzle of balsamic glaze or serve with a simple green salad on the side.'
     ],
     sections: [
       { key: 'zucchini_boats', label: 'Zucchini Boats', cookingMethod: '', yieldFactorWater: 0.88 }
