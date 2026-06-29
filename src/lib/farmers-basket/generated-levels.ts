@@ -17890,7 +17890,7 @@ export const LEVELS: Level[] = [
       'Pour in the chicken broth, salt, and pepper. (Make or prepare the Chicken Broth recipe ahead of time — see the Chicken Broth recipe.) Bring to a boil over medium-high heat.',
       'Reduce heat to low, cover tightly, and simmer 18 minutes until the liquid is absorbed and the rice is tender.',
       'Remove from heat and let stand covered 5 minutes. Fluff with a fork, stir in the fresh parsley, and serve.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve alongside roasted chicken, grilled fish, or lamb chops. Stir in toasted pine nuts or dried cranberries for a festive variation.'
     ],
     sections: [
       { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 },
