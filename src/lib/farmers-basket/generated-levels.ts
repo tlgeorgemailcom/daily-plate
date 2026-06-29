@@ -5285,7 +5285,7 @@ export const LEVELS: Level[] = [
       'Spread mayonnaise on both buns, then layer the lettuce, sliced tomato, and sliced pickles on the bottom bun.',
       'Place the fried chicken on top of the toppings, close with the top bun, and serve.',
       '(Oil in the ingredient list reflects only the amount absorbed into the crust.)',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with french fries, coleslaw, or pickled jalapeños on the side.'
     ],
     sections: [
       { key: 'chicken', label: 'Fried chicken', cookingMethod: '', yieldFactorWater: 0.82 },
