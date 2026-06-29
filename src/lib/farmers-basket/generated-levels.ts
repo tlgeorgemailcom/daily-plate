@@ -7960,7 +7960,7 @@ export const LEVELS: Level[] = [
       'Taste and adjust: add more horseradish for extra bite, a splash of lemon juice for brightness, or a small pinch of salt if needed.',
       'Cover tightly and refrigerate for at least 30 minutes before serving to allow the flavors to meld.',
       'Store covered in the refrigerator for up to 1 week; stir before each use.',
-      'Suggestions (not included): Serve as a sandwich spread, salad dressing, or dipping sauce.'
+      'Suggestions (not included): The classic spread for Reuben and Rachel sandwiches. Also excellent as a salad dressing over wedge salad, or as a dipping sauce for crab cakes and fried shrimp.'
     ],
     sections: [
       { key: 'mayonnaise', label: 'Mayonnaise', cookingMethod: '', yieldFactorWater: 1.0 },
