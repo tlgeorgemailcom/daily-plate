@@ -13470,7 +13470,7 @@ export const LEVELS: Level[] = [
       { name: 'olive oil', quantity: '2 tbsp', section: 'chicken', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
       { name: 'Chicken Broth', quantity: '1/2 cup Chicken Broth (recipe)', section: 'broth', foodWord: 'CHICKENBROTH', portionDesc: 'g', portionGrams: 120.0, isDish: true, componentRef: 'STOCK_003' },
       { name: 'unsalted butter', quantity: '2 tbsp', section: 'sauce', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
-      { name: 'garlic', quantity: '3 cloves', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'heavy cream', quantity: '1 cup', section: 'sauce', ndbNo: '1053', portionDesc: 'g', portionGrams: 238.0 },
       { name: 'Parmesan cheese', quantity: '1/2 cup grated', section: 'sauce', ndbNo: '1033', portionDesc: 'g', portionGrams: 50.0 },
       { name: 'baby spinach', quantity: '3 oz (85g)', section: 'sauce', ndbNo: '11457', portionDesc: 'g', portionGrams: 85.05 },
@@ -13486,7 +13486,7 @@ export const LEVELS: Level[] = [
       'Pour in the chicken broth and heavy cream. Stir to combine, scraping up any browned bits from the bottom of the pan.',
       'Stir in the Parmesan, salt, black pepper, and nutmeg. Simmer for 3 to 4 minutes until the sauce thickens slightly.',
       'Stir in the baby spinach, thoroughly coating with sauce. Return the chicken breasts to the skillet and spoon the sauce over them. Simmer for 2 to 3 minutes to heat through. Serve immediately with the creamed spinach sauce spooned over the top.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with pasta, mashed potatoes, or crusty bread to soak up the creamy spinach sauce.'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
