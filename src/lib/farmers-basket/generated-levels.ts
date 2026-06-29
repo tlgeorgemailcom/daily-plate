@@ -6360,7 +6360,7 @@ export const LEVELS: Level[] = [
       'In a small bowl, stir together 2 tablespoons of yogurt, 1 teaspoon each of chopped dill, chopped parsley, and chopped fresh mint, ½ teaspoon of lemon juice, and a pinch of salt until smooth. Set the yogurt sauce aside.',
       'Warm the pita briefly in the skillet or microwave. Slice off the top third to open a pocket, or split in half.',
       'Spread the tahini inside the pita. Add the tomato slices, red onion, and falafel patties. Drizzle the yogurt sauce over the top. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with tabbouleh, a simple cucumber salad, or hummus on the side.'
     ],
     sections: [
       { key: 'falafel', label: 'Falafel', cookingMethod: '', yieldFactorWater: 0.8 },
