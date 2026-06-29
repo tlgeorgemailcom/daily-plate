@@ -7283,7 +7283,7 @@ export const LEVELS: Level[] = [
       'Gradually whisk in the chicken broth, a little at a time, making sure each addition is fully incorporated before adding more. Return to heat.',
       'Bring to a gentle simmer, whisking frequently, and cook for 20–30 minutes, skimming skin that forms on the surface.',
       'Season with salt and white pepper. Strain through a fine-mesh sieve before serving.',
-      'Suggestions (not included):'
+      'Suggestions (not included): A French mother sauce. Use as the base for Sauce Suprême (add cream and butter) or Mushroom Velouté. Excellent spooned over poached chicken, veal, or white fish.'
     ],
     sections: [
       { key: 'stock', label: 'White Chicken Stock', cookingMethod: '', yieldFactorWater: 1.0 },
