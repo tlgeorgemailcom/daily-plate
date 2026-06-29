@@ -7118,7 +7118,7 @@ export const LEVELS: Level[] = [
       'Add the cheese in two or three additions, stirring gently with a wooden spoon or silicone spatula after each addition until just melted.',
       'Do not allow the sauce to boil after adding the cheese; boiling causes the proteins to seize and the sauce to become grainy or stringy.',
       'Taste and adjust seasoning. Serve immediately, or keep warm over a bain-marie with plastic wrap pressed directly onto the surface to prevent skinning.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Pour over cauliflower, broccoli, or leeks for a vegetable gratin. Use in croque monsieur, macaroni and cheese, or anywhere a creamy cheese sauce is needed.'
     ],
     sections: [
       { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: '', yieldFactorWater: 1.0 },
