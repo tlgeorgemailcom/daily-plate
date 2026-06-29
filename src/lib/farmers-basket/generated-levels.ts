@@ -16492,7 +16492,7 @@ export const LEVELS: Level[] = [
       'Reduce heat to medium. Add the 3 tablespoons of butter to the pan and swirl until golden-brown and nutty-smelling, about 1–2 minutes.',
       'Remove from heat. Add the lemon juice and fresh parsley; the butter will foam briefly — swirl to combine.',
       'Pour the butter sauce over the fillets and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with steamed green beans, roasted asparagus, or boiled new potatoes.'
     ],
     sections: [
       { key: 'meuniere', label: 'Meunière', cookingMethod: '', yieldFactorWater: 0.82 }
