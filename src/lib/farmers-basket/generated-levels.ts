@@ -18024,7 +18024,7 @@ export const LEVELS: Level[] = [
       'Drizzle with the olive oil and scatter the minced garlic over the sprouts. Season with salt and pepper. Toss to coat evenly, then arrange cut side down for maximum caramelization.',
       'Roast until the cut sides are deeply golden and the outer leaves are crispy, 20-25 minutes. Do not stir during the first 15 minutes.',
       'Remove from oven and drizzle with the balsamic vinegar. Toss gently and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): A great holiday side. Pairs well with roast chicken, pork tenderloin, or turkey. Try tossing with crumbled bacon or pancetta before roasting.'
     ],
     sections: [
       { key: 'sprouts', label: 'Roasted Brussels Sprouts', cookingMethod: '', yieldFactorWater: 0.85 }
