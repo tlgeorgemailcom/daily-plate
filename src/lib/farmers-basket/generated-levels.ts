@@ -10565,7 +10565,7 @@ export const LEVELS: Level[] = [
       { name: 'salt', quantity: '¼ tsp', section: 'shrimp', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
       { name: 'ground black pepper', quantity: '⅛ tsp', section: 'shrimp', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
       { name: 'Caesar dressing (4 tbsp total; 2 tbsp per serving)', quantity: '4 tbsp', section: 'dressing', foodWord: 'CAESARDRESSING', portionDesc: 'g', portionGrams: 61.7, isDish: true, componentRef: 'SAUCE_024' },
-      { name: 'romaine lettuce', quantity: '1 large head', section: 'salad', ndbNo: '11251', portionDesc: 'g', portionGrams: 188.0 },
+      { name: 'romaine lettuce', quantity: '1 large head romaine lettuce, torn or roughly chopped', section: 'salad', ndbNo: '11251', portionDesc: 'g', portionGrams: 188.0 },
       { name: 'plain croutons', quantity: '½ cup', section: 'salad', ndbNo: '18242', portionDesc: 'g', portionGrams: 15.0 },
       { name: 'Parmesan cheese', quantity: '¼ cup', section: 'salad', ndbNo: '1033', portionDesc: 'g', portionGrams: 25.0 }
     ],
@@ -10574,7 +10574,7 @@ export const LEVELS: Level[] = [
       'Make or portion the Caesar dressing (see the Caesar Salad Dressing recipe).',
       'Toss romaine with croutons, Parmesan, and Caesar dressing.',
       'Arrange shrimp over the salad. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with crusty bread or garlic bread on the side.'
     ],
     sections: [
       { key: 'shrimp', label: 'Shrimp', cookingMethod: '', yieldFactorWater: 0.75 },
