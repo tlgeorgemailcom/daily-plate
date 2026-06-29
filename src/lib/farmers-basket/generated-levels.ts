@@ -5041,7 +5041,7 @@ export const LEVELS: Level[] = [
       'In the same skillet over medium-low heat, cook the onion slices in the beef drippings, stirring occasionally, until golden and caramelized, about 15 minutes.',
       'Layer the Swiss cheese, cooked patty, caramelized onions, and second slice of Swiss cheese on one slice of rye bread. Close with the second slice.',
       'Melt the butter in the skillet over medium heat. Cook the assembled sandwich until golden-brown on both sides and the cheese is melted, about 2–3 minutes per side.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with french fries, onion rings, or a dill pickle spear.'
     ],
     sections: [
       { key: 'sandwich', label: 'Patty Melt', cookingMethod: '', yieldFactorWater: 0.82 }
