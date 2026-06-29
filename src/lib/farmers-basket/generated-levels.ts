@@ -9938,10 +9938,10 @@ export const LEVELS: Level[] = [
       { name: 'Greek Salad', quantity: 'custom (g)', foodWord: 'GREEKSALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'romaine lettuce', quantity: '4 cups shredded', section: 'salad', ndbNo: '11251', portionDesc: 'g', portionGrams: 188.0 },
       { name: 'cucumber', quantity: '1 cup sliced', section: 'salad', ndbNo: '11206', portionDesc: 'g', portionGrams: 119.0 },
-      { name: 'tomato', quantity: '1 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'tomato', quantity: '1 medium tomato, cut into wedges', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
       { name: 'black olives', quantity: '10 large', section: 'salad', ndbNo: '9193', portionDesc: 'g', portionGrams: 44.0 },
       { name: 'feta cheese crumbles', quantity: '2 oz', section: 'salad', ndbNo: '1019', portionDesc: 'g', portionGrams: 56.7 },
-      { name: 'onion', quantity: '¼ cup', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'onion', quantity: '¼ cup onion, thinly sliced', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 40.0 },
       { name: 'Italian vinaigrette (4 tbsp total; 2 tbsp per serving)', quantity: '4 tbsp', section: 'dressing', foodWord: 'ITALIANVINAIGRETTE', portionDesc: 'g', portionGrams: 68.4, isDish: true, componentRef: 'SAUCE_017' }
     ],
     recipeInstructions: [
