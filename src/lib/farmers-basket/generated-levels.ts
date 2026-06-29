@@ -4463,7 +4463,7 @@ export const LEVELS: Level[] = [
       'Top evenly with the sliced turkey, tomato slices and cheese sauce. Sprinkle with the remaining 1 tablespoon of parmesan.',
       'Broil 3–4 minutes until the sauce is bubbling and parmesan lightly browned on top.',
       'Remove from the oven and transfer to serving plate. Cross two bacon strips over the top of each slice and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with a simple green salad or fresh fruit on the side.'
     ],
     sections: [
       { key: 'sandwich', label: 'Hot Brown', cookingMethod: '', yieldFactorWater: 0.92 }
