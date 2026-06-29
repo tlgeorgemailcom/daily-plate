@@ -17758,7 +17758,7 @@ export const LEVELS: Level[] = [
       'Reduce heat to medium-low, cover, and simmer for 12 to 15 minutes until the carrots are just tender when pierced with a fork.',
       'Remove the lid and increase the heat to medium-high. Cook, stirring occasionally, for 5 to 7 minutes until the liquid reduces to a glossy glaze that coats the carrots.',
       'Taste and adjust salt if needed. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve alongside roast chicken, pork tenderloin, or holiday ham. A simple vegetable side that also works well for Thanksgiving or Easter.'
     ],
     sections: [
       { key: 'carrots', label: 'Glazed Carrots', cookingMethod: '', yieldFactorWater: 0.8 }
