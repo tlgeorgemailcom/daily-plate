@@ -4910,7 +4910,7 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Corned Beef Sandwich', quantity: 'custom (g)', foodWord: 'CORNEDBEEF', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'rye bread', quantity: '2 slices (32g each)', section: 'sandwich', ndbNo: '18060', portionDesc: 'g', portionGrams: 64.0 },
-      { name: 'corned beef', quantity: '4 oz', section: 'sandwich', ndbNo: '13347', portionDesc: 'g', portionGrams: 113.3 },
+      { name: 'corned beef', quantity: '4 oz corned beef (thinly sliced)', section: 'sandwich', ndbNo: '13347', portionDesc: 'g', portionGrams: 113.3 },
       { name: 'Swiss cheese', quantity: '1 slice', section: 'sandwich', ndbNo: '1040', portionDesc: 'g', portionGrams: 28.0 },
       { name: 'yellow mustard', quantity: '1 tbsp', section: 'sandwich', ndbNo: '2046', portionDesc: 'g', portionGrams: 15.0 }
     ],
@@ -4919,7 +4919,7 @@ export const LEVELS: Level[] = [
       'Layer the swiss cheese on one slice of bread.',
       'Pile the corned beef on top of the swiss cheese.',
       'Close the sandwich with the second slice of bread, press gently, and cut in half to serve.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with potato chips, a dill pickle spear, or a cup of coleslaw.'
     ],
     sections: [
       { key: 'sandwich', label: 'Corned Beef Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
