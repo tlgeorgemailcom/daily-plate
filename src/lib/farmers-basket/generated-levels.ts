@@ -10720,7 +10720,7 @@ export const LEVELS: Level[] = [
       { name: 'water', quantity: '4 cups', section: 'pasta', ndbNo: '14411', portionDesc: 'g', portionGrams: 946.0 },
       { name: 'canned light tuna', quantity: '2 cans (5 oz each, drained)', section: 'salad', ndbNo: '15121', portionDesc: 'g', portionGrams: 284.0 },
       { name: 'mayonnaise', quantity: '¾ cup', section: 'salad', ndbNo: '4025', portionDesc: 'g', portionGrams: 165.0 },
-      { name: 'celery', quantity: '3 stalks celery', section: 'salad', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'celery', quantity: '3 stalks celery, diced', section: 'salad', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
       { name: 'onion', quantity: '2 thin slices', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 18.0 },
       { name: 'sweet pickle relish', quantity: '2 tbsp', section: 'salad', ndbNo: '11945', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'yellow mustard', quantity: '1 tbsp', section: 'salad', ndbNo: '2046', portionDesc: 'g', portionGrams: 15.0 },
@@ -10733,7 +10733,7 @@ export const LEVELS: Level[] = [
       'Drain tuna thoroughly. Combine tuna, mayonnaise, celery, onion, sweet relish, mustard, lemon juice, salt, and pepper in a large bowl and mix well.',
       'Add cooled pasta and stir to combine. Taste and adjust seasoning.',
       'Refrigerate at least 30 minutes before serving to allow flavors to meld. Serve chilled.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve chilled alongside grilled corn, crusty bread, or fresh fruit.'
     ],
     sections: [
       { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
