@@ -17632,7 +17632,7 @@ export const LEVELS: Level[] = [
       'Pour in the heavy cream and whisk until smooth. Cook for 1–2 minutes until the sauce begins to thicken.',
       'Add the frozen corn kernels, sugar, salt, and black pepper. Stir to combine.',
       'Cook over medium heat, stirring frequently, for 6–8 minutes until the corn is tender and the sauce coats the kernels. Taste and adjust seasoning with additional salt, pepper, or sugar as needed. Serve warm.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve alongside fried chicken, BBQ ribs, meatloaf, or roast turkey. Also makes a great filling for cornbread.'
     ],
     sections: [
       { key: 'cream', label: 'Creamed Corn', cookingMethod: '', yieldFactorWater: 0.9 }
