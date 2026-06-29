@@ -10764,19 +10764,19 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Wedge Salad', quantity: 'custom (g)', foodWord: 'WEDGESALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'Blue Cheese Dressing (4 tbsp total; 2 tbsp per serving)', quantity: '4 tbsp', section: 'dressing', foodWord: 'BLUECHEESEDRESSING', portionDesc: 'g', portionGrams: 61.6, isDish: true, componentRef: 'SAUCE_021' },
-      { name: 'iceberg lettuce', quantity: '½ head', section: 'salad', ndbNo: '11252', portionDesc: 'g', portionGrams: 288.0 },
-      { name: 'bacon', quantity: '4 slices', section: 'salad', ndbNo: '10862', portionDesc: 'g', portionGrams: 46.0 },
-      { name: 'tomato', quantity: '1 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
-      { name: 'blue cheese crumbles', quantity: '2 oz', section: 'salad', ndbNo: '1004', portionDesc: 'g', portionGrams: 56.7 },
-      { name: 'scallions', quantity: '2 stalks', section: 'salad', ndbNo: '11291', portionDesc: 'g', portionGrams: 30.0 },
-      { name: 'fresh chives', quantity: '2 tbsp', section: 'salad', ndbNo: '11156', portionDesc: 'g', portionGrams: 6.0 }
+      { name: 'iceberg lettuce', quantity: '½ head iceberg lettuce, cut into 2 wedges', section: 'salad', ndbNo: '11252', portionDesc: 'g', portionGrams: 288.0 },
+      { name: 'bacon', quantity: '4 slices bacon, crumbled', section: 'salad', ndbNo: '10862', portionDesc: 'g', portionGrams: 46.0 },
+      { name: 'tomato', quantity: '1 medium tomato (123g), diced', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'blue cheese crumbles', quantity: '2 oz blue cheese, crumbled', section: 'salad', ndbNo: '1004', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'scallions', quantity: '2 stalks scallions, sliced', section: 'salad', ndbNo: '11291', portionDesc: 'g', portionGrams: 30.0 },
+      { name: 'fresh chives', quantity: '2 tbsp fresh chives, chopped', section: 'salad', ndbNo: '11156', portionDesc: 'g', portionGrams: 6.0 }
     ],
     recipeInstructions: [
       'Cut the half head of iceberg lettuce into 2 wedges through the core (each serving is ¼ of a full head). Keep the core intact to hold each wedge together.',
       'Make or portion the blue cheese dressing (see the Blue Cheese Dressing recipe).',
       'Place each wedge on a plate. Spoon blue cheese dressing over the top.',
       'Top with crumbled bacon, diced tomato, blue cheese crumbles, sliced scallions, and chopped chives. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve as a starter before grilled steak, beef tenderloin, or roasted chicken.'
     ],
     sections: [
       { key: 'dressing', label: 'Blue Cheese Dressing', cookingMethod: '', yieldFactorWater: 1.0 },
