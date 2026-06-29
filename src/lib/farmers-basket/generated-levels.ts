@@ -10611,11 +10611,11 @@ export const LEVELS: Level[] = [
       { name: 'garlic powder', quantity: '¼ tsp', section: 'chicken', ndbNo: '2020', portionDesc: 'g', portionGrams: 0.775 },
       { name: 'salt', quantity: '¼ tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
       { name: 'ground black pepper', quantity: '⅛ tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
-      { name: 'romaine lettuce', quantity: '1 large head (~1 lb 6 oz)', section: 'salad', ndbNo: '11251', portionDesc: 'g', portionGrams: 188.0 },
+      { name: 'romaine lettuce', quantity: '1 large head romaine lettuce, torn or chopped', section: 'salad', ndbNo: '11251', portionDesc: 'g', portionGrams: 188.0 },
       { name: 'black beans', quantity: '½ cup', section: 'salad', ndbNo: '16015', portionDesc: 'g', portionGrams: 86.0 },
       { name: 'sweet corn', quantity: '½ cup', section: 'salad', ndbNo: '11168', portionDesc: 'g', portionGrams: 75.0 },
-      { name: 'avocado', quantity: '½ medium', section: 'salad', ndbNo: '9038', portionDesc: 'g', portionGrams: 68.0 },
-      { name: 'tomato', quantity: '1 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'avocado', quantity: '½ medium avocado, sliced', section: 'salad', ndbNo: '9038', portionDesc: 'g', portionGrams: 68.0 },
+      { name: 'tomato', quantity: '1 medium tomato (123g), diced', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
       { name: 'onion', quantity: '2 thin slices', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 18.0 },
       { name: 'tortilla chips', quantity: '1 oz', section: 'salad', ndbNo: '19056', portionDesc: 'g', portionGrams: 28.35 },
       { name: 'Mexican blend cheese', quantity: '¼ cup', section: 'salad', ndbNo: '1251', portionDesc: 'g', portionGrams: 28.25 },
@@ -10632,7 +10632,7 @@ export const LEVELS: Level[] = [
       'Whisk together olive oil, lime juice, honey, cumin, salt, and pepper to make the dressing.',
       'Combine romaine, black beans, corn, avocado, tomato, onion, cheese, and cilantro in a large bowl.',
       'Top with sliced chicken and tortilla chips. Drizzle with dressing and serve.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with warm tortillas or tortilla chips and extra salsa on the side.'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
