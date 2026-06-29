@@ -11536,7 +11536,7 @@ export const LEVELS: Level[] = [
       { name: 'Beef Churrasco', quantity: 'custom (g)', foodWord: 'CHURRASCO', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'olive oil', quantity: '1/4 cup olive oil', section: 'marinade', ndbNo: '4053', portionDesc: 'g', portionGrams: 54.4 },
       { name: 'lime juice', quantity: '1/4 cup lime juice', section: 'marinade', ndbNo: '9160', portionDesc: 'g', portionGrams: 61.0 },
-      { name: 'garlic', quantity: '6 cloves garlic', section: 'marinade', ndbNo: '11215', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'garlic', quantity: '6 cloves garlic, minced', section: 'marinade', ndbNo: '11215', portionDesc: 'g', portionGrams: 18.0 },
       { name: 'ground cumin', quantity: '1 tsp ground cumin', section: 'marinade', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.1 },
       { name: 'dried oregano', quantity: '1 tsp dried oregano', section: 'marinade', ndbNo: '2027', portionDesc: 'g', portionGrams: 2.7 },
       { name: 'salt', quantity: '1 tsp salt', section: 'marinade', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
@@ -11552,7 +11552,7 @@ export const LEVELS: Level[] = [
       'Heat a grill or grill pan to high heat. The grill should be very hot — skirt steak needs quick, intense heat to develop a crust without overcooking the interior.',
       'Grill the steak 3 to 4 minutes per side for medium-rare, or until it reaches an internal temperature of 130 to 135°F. Skirt steak is thin; do not walk away.',
       'Transfer to a cutting board and let rest 5 minutes. Slice thinly against the grain at a steep angle. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with white rice, black beans, and fried plantains.'
     ],
     sections: [
       { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
