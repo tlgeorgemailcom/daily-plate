@@ -8684,7 +8684,7 @@ export const LEVELS: Level[] = [
       { name: 'potato', quantity: '4 medium', section: 'potatoes', ndbNo: '11354', portionDesc: 'g', portionGrams: 600.0 },
       { name: 'unsalted butter', quantity: '4 tbsp', section: 'potatoes', ndbNo: '1145', portionDesc: 'g', portionGrams: 56.8 },
       { name: 'olive oil', quantity: '2 tbsp', section: 'potatoes', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.0 },
-      { name: 'garlic', quantity: '4 cloves', section: 'potatoes', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, thinly sliced', section: 'potatoes', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'fresh thyme leaves', quantity: '1 tbsp', section: 'potatoes', ndbNo: '2049', portionDesc: 'g', portionGrams: 2.4 },
       { name: 'salt', quantity: '1 tsp', section: 'potatoes', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'ground black pepper', quantity: '1/4 tsp', section: 'potatoes', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
@@ -8693,10 +8693,10 @@ export const LEVELS: Level[] = [
       'Preheat oven to 425°F (220°C).',
       'Wash and dry the potatoes. Place each potato between two wooden chopsticks or spoon handles, then cut thin slices about 3mm apart across the potato, stopping just before the bottom so slices stay connected.',
       'Melt the butter and mix with the olive oil. Brush generously between the potato slices and over the surface.',
-      'Tuck thin slices of garlic and thyme sprigs between the potato slices. Season with salt and black pepper.',
+      'Tuck the garlic and thyme between the potato slices. Season with salt and black pepper.',
       'Place potatoes on a baking sheet or in a baking dish and roast for 50 to 60 minutes, brushing with remaining butter mixture halfway through, until the tops are golden and crispy and the centers are tender.',
       'Remove from the oven and let rest for 5 minutes before serving.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve alongside roast beef, steak, or roast chicken. Finish with a sprinkle of fresh parsley or grated Parmesan.'
     ],
     sections: [
       { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.85 }
