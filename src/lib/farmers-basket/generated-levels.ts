@@ -4324,7 +4324,7 @@ export const LEVELS: Level[] = [
       'Spread mustard on the inside of both bread slices, then spread a layer of béchamel over the mustard. Layer ham over one slice, add half the Gruyère, and close the sandwich.',
       'Melt remaining butter in a skillet over medium heat. Place the sandwich in the pan and cook 3 minutes until the bottom is golden.',
       'Flip the sandwich, spoon remaining béchamel over the top, and scatter remaining Gruyère over it. Cover the pan and cook 2–3 minutes until the bottom is golden and the cheese on top is melted.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with a simple green salad, cornichons, or a bowl of French onion soup.'
     ],
     sections: [
       { key: 'sandwich', label: 'Croque Monsieur', cookingMethod: '', yieldFactorWater: 0.88 }
