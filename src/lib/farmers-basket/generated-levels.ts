@@ -5186,7 +5186,7 @@ export const LEVELS: Level[] = [
       'Remove the brisket from the pan and let it rest for 10 minutes, then slice thinly against the grain.',
       'Spread the BBQ sauce on the bottom bun and pile on the sliced brisket.',
       'Top with the sliced onion and pickle slices, then close with the top bun.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with baked beans, coleslaw, or corn on the cob.'
     ],
     sections: [
       { key: 'brisket', label: 'Barbecue brisket', cookingMethod: '', yieldFactorWater: 0.62, yieldFactorFat: 0.92 },
