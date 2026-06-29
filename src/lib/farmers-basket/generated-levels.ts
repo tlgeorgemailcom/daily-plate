@@ -10410,15 +10410,15 @@ export const LEVELS: Level[] = [
       { name: 'Mediterranean Orzo Salad', quantity: 'custom (g)', foodWord: 'MEDORZOSALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'orzo (dry semolina pasta)', quantity: '8 oz dry', section: 'orzo', ndbNo: '20420', portionDesc: 'g', portionGrams: 226.8 },
       { name: 'water', quantity: '4 cups', section: 'orzo', ndbNo: '14411', portionDesc: 'g', portionGrams: 946.0 },
-      { name: 'cucumber', quantity: '1 medium', section: 'salad', ndbNo: '11206', portionDesc: 'g', portionGrams: 201.0 },
-      { name: 'tomato', quantity: '1½ medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 185.0 },
-      { name: 'black olives', quantity: '½ cup', section: 'salad', ndbNo: '9193', portionDesc: 'g', portionGrams: 88.0 },
-      { name: 'feta cheese crumbles', quantity: '4 oz', section: 'salad', ndbNo: '1019', portionDesc: 'g', portionGrams: 113.4 },
-      { name: 'onion', quantity: '¼ cup', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 40.0 },
-      { name: 'fresh parsley', quantity: '¼ cup', section: 'salad', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'cucumber', quantity: '1 medium cucumber, diced', section: 'salad', ndbNo: '11206', portionDesc: 'g', portionGrams: 201.0 },
+      { name: 'tomato', quantity: '1½ medium tomatoes (185g), diced', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 185.0 },
+      { name: 'black olives', quantity: '½ cup black olives, sliced', section: 'salad', ndbNo: '9193', portionDesc: 'g', portionGrams: 88.0 },
+      { name: 'feta cheese crumbles', quantity: '4 oz feta cheese, crumbled', section: 'salad', ndbNo: '1019', portionDesc: 'g', portionGrams: 113.4 },
+      { name: 'onion', quantity: '¼ cup onion, thinly sliced', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'fresh parsley', quantity: '¼ cup fresh parsley, chopped', section: 'salad', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.0 },
       { name: 'olive oil', quantity: '3 tbsp', section: 'salad', ndbNo: '4053', portionDesc: 'g', portionGrams: 40.5 },
       { name: 'lemon juice', quantity: '3 tbsp', section: 'salad', ndbNo: '9152', portionDesc: 'g', portionGrams: 45.0 },
-      { name: 'garlic', quantity: '2 cloves', section: 'salad', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'garlic', quantity: '2 cloves garlic, minced', section: 'salad', ndbNo: '11215', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'dried oregano', quantity: '1 tsp', section: 'salad', ndbNo: '2027', portionDesc: 'g', portionGrams: 2.7 },
       { name: 'salt', quantity: '½ tsp', section: 'salad', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'ground black pepper', quantity: '¼ tsp', section: 'salad', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
@@ -10428,7 +10428,7 @@ export const LEVELS: Level[] = [
       'Cook orzo in a large pot of salted boiling water according to package directions (typically 8–10 minutes). Drain, rinse under cold water, and spread on a sheet pan to cool completely.',
       'Whisk together olive oil, lemon juice, garlic, oregano, salt, and pepper in a large bowl to make the vinaigrette.',
       'Add cooled orzo, cucumber, tomato, olives, feta, onion, and parsley to the bowl. Toss to coat evenly. Refrigerate at least 30 minutes before serving.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve chilled alongside grilled chicken, lamb, or fish.'
     ],
     sections: [
       { key: 'orzo', label: 'Orzo', cookingMethod: '', yieldFactorWater: 1.0 },
