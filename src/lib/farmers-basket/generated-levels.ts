@@ -10211,11 +10211,11 @@ export const LEVELS: Level[] = [
       { name: 'ground black pepper', quantity: '⅛ tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
       { name: 'elbow macaroni, dry', quantity: '2 cups', section: 'pasta', ndbNo: '20420', portionDesc: 'g', portionGrams: 244.0 },
       { name: 'mayonnaise', quantity: '½ cup', section: 'salad', ndbNo: '4025', portionDesc: 'g', portionGrams: 112.0 },
-      { name: 'celery', quantity: '3 stalks celery', section: 'salad', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
-      { name: 'red bell pepper', quantity: '1 medium', section: 'salad', ndbNo: '11821', portionDesc: 'g', portionGrams: 119.0 },
-      { name: 'onion', quantity: '¼ cup', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'celery', quantity: '3 stalks celery, diced', section: 'salad', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'red bell pepper', quantity: '1 medium red bell pepper (119g), diced', section: 'salad', ndbNo: '11821', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'onion', quantity: '¼ cup onion, diced', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 40.0 },
       { name: 'lemon juice', quantity: '1 tbsp', section: 'salad', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
-      { name: 'fresh parsley', quantity: '¼ cup', section: 'salad', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'fresh parsley', quantity: '¼ cup fresh parsley, chopped', section: 'salad', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.0 },
       { name: 'garlic powder', quantity: '¼ tsp', section: 'salad', ndbNo: '2020', portionDesc: 'g', portionGrams: 0.775 },
       { name: 'salt', quantity: '½ tsp', section: 'salad', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'ground black pepper', quantity: '¼ tsp', section: 'salad', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
@@ -10225,7 +10225,7 @@ export const LEVELS: Level[] = [
       'Season chicken breast with salt and pepper. Cook in a lightly oiled skillet over medium-high heat, 6–7 minutes per side, until an instant-read thermometer reads 165°F (74°C). Let rest 5 minutes, then dice into bite-sized pieces.',
       'In a large bowl, whisk together mayonnaise, lemon juice, garlic powder, salt, and pepper to make the dressing.',
       'Add cooled pasta, diced chicken, celery, bell pepper, onion, and parsley to the bowl. Toss to coat evenly with the dressing. Refrigerate at least 30 minutes before serving.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve chilled alongside grilled corn, garlic bread, or fresh fruit.'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
