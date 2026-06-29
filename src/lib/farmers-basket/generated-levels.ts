@@ -4030,7 +4030,7 @@ export const LEVELS: Level[] = [
       'In a bowl, combine the chopped eggs, mayonnaise, green onion, mustard, and salt. Mix well.',
       'Spread the egg salad evenly over one bread slice and top with the second slice.',
       'Cut diagonally and serve immediately, or refrigerate the egg salad up to 2 days.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with potato chips, a dill pickle, or a cup of tomato soup.'
     ],
     sections: [
       { key: 'sandwich', label: 'Egg Salad', cookingMethod: '', yieldFactorWater: 1.0 }
