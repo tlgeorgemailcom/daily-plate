@@ -2651,7 +2651,7 @@ export const LEVELS: Level[] = [
       'With the top bowl over the barely simmering water, slowly drizzle the melted butter into the yolk mixture one tablespoon at a time, whisking constantly. Adding it too fast will break the emulsion.',
       'Once all the butter is incorporated, the sauce should be thick enough to coat the back of a spoon. To thin add a little water. Remove from heat immediately.',
       'Season with a pinch of salt and lemon juice. Serve right away over poached eggs, or keep warm by setting the bowl over the hot water (heat off) for up to 15 minutes, whisking occasionally.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Classic for Eggs Benedict and poached eggs. Also excellent over steamed asparagus, broccoli, or other vegetables.'
     ],
     sections: [
       { key: 'sauce', label: 'Hollandaise sauce', cookingMethod: '', yieldFactorWater: 1.0 }
