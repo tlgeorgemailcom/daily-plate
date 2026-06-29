@@ -5441,7 +5441,7 @@ export const LEVELS: Level[] = [
       'Spread tartar sauce on both halves of the bun.',
       'Place the lettuce on the bottom bun, top with the fried cod fillet, close with the top bun, and serve.',
       '(Oil in the ingredient list reflects only the amount absorbed into the crust.)',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with french fries, coleslaw, or malt vinegar on the side.'
     ],
     sections: [
       { key: 'fish', label: 'Fried cod', cookingMethod: '', yieldFactorWater: 0.85 },
