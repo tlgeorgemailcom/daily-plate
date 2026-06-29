@@ -9652,25 +9652,24 @@ export const LEVELS: Level[] = [
       { name: 'Green Goddess Dressing', quantity: 'custom (g)', foodWord: 'GREENGODDESS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'mayonnaise', quantity: '½ cup', section: 'dressing', ndbNo: '4025', portionDesc: 'g', portionGrams: 112.0 },
       { name: 'sour cream', quantity: '¼ cup', section: 'dressing', ndbNo: '1056', portionDesc: 'g', portionGrams: 57.5 },
-      { name: 'fresh parsley', quantity: '½ cup chopped', section: 'dressing', ndbNo: '11297', portionDesc: 'g', portionGrams: 30.4 },
-      { name: 'fresh chives', quantity: '3 tbsp', section: 'dressing', ndbNo: '11156', portionDesc: 'g', portionGrams: 9.0 },
-      { name: 'fresh dill', quantity: '2 tbsp', section: 'dressing', ndbNo: '2045', portionDesc: 'g', portionGrams: 2.0 },
+      { name: 'fresh parsley', quantity: '½ cup fresh parsley, chopped', section: 'dressing', ndbNo: '11297', portionDesc: 'g', portionGrams: 30.4 },
+      { name: 'fresh chives', quantity: '3 tbsp fresh chives, thinly sliced', section: 'dressing', ndbNo: '11156', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'fresh dill', quantity: '2 tbsp fresh dill, finely chopped', section: 'dressing', ndbNo: '2045', portionDesc: 'g', portionGrams: 2.0 },
       { name: 'dried tarragon', quantity: '½ tsp', section: 'dressing', ndbNo: '2041', portionDesc: 'g', portionGrams: 0.75 },
       { name: 'lemon juice', quantity: '2 tbsp', section: 'dressing', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'olive oil', quantity: '1 tbsp', section: 'dressing', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
-      { name: 'anchovy canned', quantity: '2 fillets', section: 'dressing', ndbNo: '15002', portionDesc: 'g', portionGrams: 8.0 },
-      { name: 'garlic', quantity: '1 clove', section: 'dressing', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'anchovy', quantity: '2 anchovy fillets, mashed or finely chopped', section: 'dressing', ndbNo: '15002', portionDesc: 'g', portionGrams: 8.0 },
+      { name: 'garlic', quantity: '1 clove garlic, minced', section: 'dressing', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'salt', quantity: '½ tsp', section: 'dressing', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'ground black pepper', quantity: '¼ tsp', section: 'dressing', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
     ],
     recipeInstructions: [
-      'Finely chop the parsley, chives, and dill. Mince the garlic. Mash or finely chop the anchovy fillets.',
       'Combine the mayonnaise, sour cream, lemon juice, olive oil, anchovies, and garlic in a bowl or blender. Mix or blend until smooth.',
       'Stir in the parsley, chives, dill, and dried tarragon.',
       'Season with salt and black pepper. Taste and adjust lemon juice or salt as needed.',
       'For a smoother dressing, blend all ingredients together until the herbs are fully incorporated and the dressing is uniformly green.',
       'Cover and refrigerate for at least 30 minutes before serving. Store refrigerated for up to 1 week.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Excellent over garden salads, grain bowls, and crudités. Also excellent as a sandwich spread, burger sauce, or dip for vegetables.'
     ],
     sections: [
       { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
