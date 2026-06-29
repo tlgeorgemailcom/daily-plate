@@ -15738,7 +15738,7 @@ export const LEVELS: Level[] = [
       { name: 'Pork Schnitzel', quantity: 'custom (g)', foodWord: 'PORKSCHNITZEL', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'pork loin chop boneless', quantity: '4 cutlets (6 oz each), pounded thin', section: 'main', ndbNo: '10062', portionDesc: 'g', portionGrams: 680.0 },
       { name: 'all-purpose enriched unbleached white flour', quantity: '1/2 cup', section: 'main', ndbNo: '20581', portionDesc: 'g', portionGrams: 62.5 },
-      { name: 'large egg', quantity: '2 large', section: 'main', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'large egg', quantity: '2 large eggs, beaten', section: 'main', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
       { name: 'dry bread crumbs', quantity: '1 cup dry bread crumbs', section: 'main', ndbNo: '18079', portionDesc: 'g', portionGrams: 108.0 },
       { name: 'dried rosemary', quantity: '3 tsp', section: 'main', ndbNo: '2036', portionDesc: 'g', portionGrams: 3.6 },
       { name: 'dried marjoram', quantity: '1 1/4 tsp', section: 'main', ndbNo: '2023', portionDesc: 'g', portionGrams: 0.75 },
