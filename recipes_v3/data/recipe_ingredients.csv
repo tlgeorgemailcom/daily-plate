@@ -916,7 +916,7 @@ SAND_024,4,tomato_red_raw,2 thin slices (30g),30.0,30,50,sandwich,sandwich,false
 SAND_024,5,lemon_juice_raw,1 tsp,5,3,7,sandwich,sandwich,false,,
 SAND_024,6,salt_table,pinch,0.3,0.2,0.8,sandwich,sandwich,false,,
 SAND_025,1,bread_rye,2 slices (32g each),64,56,72,sandwich,sandwich,false,,
-SAND_025,2,corned_beef_brisket_cooked,3 oz,85,70,100,sandwich,sandwich,false,,
+SAND_025,2,corned_beef_brisket_cooked,3 oz corned beef (thinly sliced),85,70,100,sandwich,sandwich,false,,
 SAND_025,3,cheese_swiss,2 slices,56.0,35,50,sandwich,sandwich,false,,
 SAND_025,4,sauerkraut_canned,¼ cup,59.0,50,70,sandwich,sandwich,false,,
 SAND_025,5,thousand_island_dressing,2 tbsp,30,20,40,sandwich,sandwich,false,,

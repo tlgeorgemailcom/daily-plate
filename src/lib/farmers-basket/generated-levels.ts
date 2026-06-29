@@ -4830,7 +4830,7 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Reuben Sandwich', quantity: 'custom (g)', foodWord: 'REUBEN', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'rye bread', quantity: '2 slices (32g each)', section: 'sandwich', ndbNo: '18060', portionDesc: 'g', portionGrams: 64.0 },
-      { name: 'corned beef', quantity: '3 oz', section: 'sandwich', ndbNo: '13347', portionDesc: 'g', portionGrams: 85.0 },
+      { name: 'corned beef', quantity: '3 oz corned beef (thinly sliced)', section: 'sandwich', ndbNo: '13347', portionDesc: 'g', portionGrams: 85.0 },
       { name: 'Swiss cheese', quantity: '2 slices', section: 'sandwich', ndbNo: '1040', portionDesc: 'g', portionGrams: 56.0 },
       { name: 'sauerkraut', quantity: '¼ cup', section: 'sandwich', ndbNo: '11439', portionDesc: 'g', portionGrams: 59.0 },
       { name: 'thousand island dressing', quantity: '2 tbsp', section: 'sandwich', ndbNo: '4017', portionDesc: 'g', portionGrams: 30.0 },
@@ -4841,7 +4841,7 @@ export const LEVELS: Level[] = [
       'Spread thousand island dressing on the unbuttered side of each slice.',
       'Layer one slice of swiss cheese, then the corned beef, then drained sauerkraut and then the other slice of swiss cheese on one slice of bread.',
       'Close the sandwich butter-side out and pan grill over medium heat 3-4 minutes per side until the bread is golden and the cheese melts.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with potato chips, a dill pickle spear, or a cup of coleslaw.'
     ],
     sections: [
       { key: 'sandwich', label: 'Reuben Sandwich', cookingMethod: '', yieldFactorWater: 0.9 }
