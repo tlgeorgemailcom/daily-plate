@@ -17844,7 +17844,7 @@ export const LEVELS: Level[] = [
       'Add the cooked green beans and half the onion rings (broken into pieces). Stir to coat evenly, then spread into the prepared baking dish.',
       'Bake for 25 minutes, until bubbling at the edges. Remove from oven and scatter the remaining onion rings over the top. (Make or prepare the Onion Rings recipe ahead of time — see the Onion Rings recipe.)',
       'Return to oven and bake 5 minutes more until the topping is heated through. Rest 5 minutes before serving.',
-      'Suggestions (not included):'
+      'Suggestions (not included): A Thanksgiving classic. Pairs perfectly with roast turkey, mashed potatoes, and cranberry sauce.'
     ],
     sections: [
       { key: 'casserole', label: 'Green Bean Casserole', cookingMethod: '', yieldFactorWater: 0.88 },
