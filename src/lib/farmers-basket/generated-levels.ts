@@ -8959,7 +8959,7 @@ export const LEVELS: Level[] = [
       'Stir with a fork or whisk until evenly blended.',
       'Transfer to an airtight jar and store in a cool, dry place for up to 6 months.',
       'To use, add 1 to 2 teaspoons per pound of protein, per cup of sauce, or to taste.',
-      'Suggestions (not included):'
+      'Suggestions (not included): The seasoning blend used in Stewed Okra and Tomatoes, Fried Okra, Fried Squash, Chicken Gumbo, and Seafood Gumbo. Also excellent as a dry rub for chicken, shrimp, or fish before grilling or pan-frying.'
     ],
     sections: [
       { key: 'blend', label: 'Spice blend', cookingMethod: '', yieldFactorWater: 1.0 }
