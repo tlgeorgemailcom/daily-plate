@@ -10957,7 +10957,7 @@ export const LEVELS: Level[] = [
       'Combine apples, celery, grapes, walnuts, and raisins in a large bowl.',
       'Add the mayonnaise and salt. Toss gently until everything is evenly coated.',
       'Refrigerate at least 30 minutes before serving to allow flavors to meld. Serve chilled.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve on a bed of lettuce or alongside grilled chicken and crusty bread.'
     ],
     sections: [
       { key: 'salad', label: 'Waldorf Salad', cookingMethod: '', yieldFactorWater: 1.0 }
