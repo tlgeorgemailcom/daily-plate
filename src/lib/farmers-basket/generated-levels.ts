@@ -9988,9 +9988,9 @@ export const LEVELS: Level[] = [
       { name: 'black beans', quantity: '1 cup', section: 'salad', ndbNo: '16015', portionDesc: 'g', portionGrams: 172.0 },
       { name: 'Cheddar cheese', quantity: '2 oz', section: 'salad', ndbNo: '1009', portionDesc: 'g', portionGrams: 56.7 },
       { name: 'tortilla chips', quantity: '1 oz', section: 'salad', ndbNo: '19056', portionDesc: 'g', portionGrams: 28.35 },
-      { name: 'tomato', quantity: '1 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'tomato', quantity: '1 medium tomato, diced', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
       { name: 'sour cream', quantity: '¼ cup', section: 'salad', ndbNo: '1056', portionDesc: 'g', portionGrams: 57.5 },
-      { name: 'onion', quantity: '¼ cup', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 40.0 }
+      { name: 'onion', quantity: '¼ cup onion, diced', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 40.0 }
     ],
     recipeInstructions: [
       'Heat a lightly oiled skillet over medium-high heat. Add the ground beef and cook, breaking it up, until browned and cooked through, about 6–8 minutes.',
