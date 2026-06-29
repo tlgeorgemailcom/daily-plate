@@ -10311,13 +10311,13 @@ export const LEVELS: Level[] = [
       { name: 'Gnocchi Antipasto Salad', quantity: 'custom (g)', foodWord: 'GNOCCHIANTIPASTO', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'Potato Gnocchi (2 cups; 1 cup per serving)', quantity: '2 cups', section: 'gnocchi', foodWord: 'GNOCCHI', portionDesc: 'g', portionGrams: 411.2, isDish: true, componentRef: 'SIDE_011' },
       { name: 'Italian vinaigrette (4 tbsp total; 2 tbsp per serving)', quantity: '4 tbsp', section: 'dressing', foodWord: 'ITALIANVINAIGRETTE', portionDesc: 'g', portionGrams: 68.5, isDish: true, componentRef: 'SAUCE_017' },
-      { name: 'salami', quantity: '2 oz', section: 'salad', ndbNo: '7926', portionDesc: 'g', portionGrams: 56.0 },
-      { name: 'provolone cheese', quantity: '2 oz', section: 'salad', ndbNo: '1035', portionDesc: 'g', portionGrams: 56.7 },
-      { name: 'black olives', quantity: '¼ cup', section: 'salad', ndbNo: '9193', portionDesc: 'g', portionGrams: 44.0 },
-      { name: 'artichoke hearts cooked', quantity: '3½ oz', section: 'salad', ndbNo: '11008', portionDesc: 'g', portionGrams: 100.0 },
-      { name: 'tomato', quantity: '1 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
-      { name: 'red bell pepper', quantity: '½ medium', section: 'salad', ndbNo: '11821', portionDesc: 'g', portionGrams: 60.0 },
-      { name: 'fresh basil', quantity: '¼ cup', section: 'salad', ndbNo: '2044', portionDesc: 'g', portionGrams: 10.0 },
+      { name: 'salami', quantity: '2 oz salami, sliced or cubed', section: 'salad', ndbNo: '7926', portionDesc: 'g', portionGrams: 56.0 },
+      { name: 'provolone cheese', quantity: '2 oz provolone, sliced or cubed', section: 'salad', ndbNo: '1035', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'black olives', quantity: '¼ cup black olives, sliced lengthwise', section: 'salad', ndbNo: '9193', portionDesc: 'g', portionGrams: 44.0 },
+      { name: 'artichoke hearts cooked', quantity: '3½ oz artichoke hearts, quartered', section: 'salad', ndbNo: '11008', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'tomato', quantity: '1 medium tomato (123g), chopped', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'red bell pepper', quantity: '½ medium red bell pepper (60g), chopped', section: 'salad', ndbNo: '11821', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'fresh basil', quantity: '¼ cup fresh basil, torn', section: 'salad', ndbNo: '2044', portionDesc: 'g', portionGrams: 10.0 },
       { name: 'salt', quantity: '¼ tsp', section: 'salad', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
       { name: 'ground black pepper', quantity: '¼ tsp', section: 'salad', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
     ],
@@ -10327,7 +10327,7 @@ export const LEVELS: Level[] = [
       'Combine cooled gnocchi, salami, provolone, olives, artichoke hearts, tomato, bell pepper, and basil in a large bowl.',
       'Make or portion the Italian Vinaigrette (see the Italian Vinaigrette recipe).',
       'Drizzle the Italian Vinaigrette over the salad. Season with salt and pepper. Toss gently to coat. Serve at room temperature or refrigerate 30 minutes before serving.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with garlic bread or as a starter before a pasta main course.'
     ],
     sections: [
       { key: 'gnocchi', label: 'Potato Gnocchi', cookingMethod: '', yieldFactorWater: 1.0 },
