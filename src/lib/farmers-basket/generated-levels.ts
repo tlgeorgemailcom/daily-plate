@@ -17717,7 +17717,7 @@ export const LEVELS: Level[] = [
       'Let the blanched fries rest 10 minutes. Increase oil temperature to 375°F (190°C).',
       'Return fries in batches to the hot oil and cook 2 to 3 minutes until deep golden brown and crispy. Drain on a wire rack or paper towels.',
       'Season immediately with salt and serve hot. (The nutrition reflects approximately 60g of vegetable oil absorbed into the finished fries.)',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve alongside burgers, sandwiches, or grilled meats. Season with garlic salt, Cajun spice, or Parmesan cheese for variations.'
     ],
     sections: [
       { key: 'fries', label: 'French Fries', cookingMethod: '', yieldFactorWater: 0.21 }
