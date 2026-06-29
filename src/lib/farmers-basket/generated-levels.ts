@@ -17790,7 +17790,7 @@ export const LEVELS: Level[] = [
       { name: 'onion', quantity: '2 large onions, sliced into 1/2-inch rings', section: 'rings', ndbNo: '11282', portionDesc: 'g', portionGrams: 400.0 },
       { name: 'all-purpose flour', quantity: '1 1/2 cups', section: 'rings', ndbNo: '20581', portionDesc: 'g', portionGrams: 187.5 },
       { name: 'whole milk', quantity: '3/4 cup', section: 'rings', ndbNo: '1077', portionDesc: 'g', portionGrams: 183.0 },
-      { name: 'vegetable oil', quantity: 'for deep frying (78g absorbed), vegetable oil', section: 'rings', ndbNo: '4513', portionDesc: 'g', portionGrams: 78.0 },
+      { name: 'vegetable oil', quantity: '78g vegetable oil (absorbed during frying)', section: 'rings', ndbNo: '4513', portionDesc: 'g', portionGrams: 78.0 },
       { name: 'salt', quantity: '1 tsp', section: 'rings', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'ground black pepper', quantity: '1/4 tsp', section: 'rings', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
       { name: 'garlic powder', quantity: '1/4 tsp', section: 'rings', ndbNo: '2020', portionDesc: 'g', portionGrams: 0.775 },
@@ -17802,7 +17802,7 @@ export const LEVELS: Level[] = [
       'Heat 2–3 inches of vegetable oil in a heavy pot or Dutch oven to 375°F (190°C).',
       'Working in batches, dip each onion ring in the batter, letting excess drip off, then carefully lower into the hot oil. Fry 2–3 minutes per side until golden brown and crispy.',
       'Remove with a slotted spoon and drain on a wire rack or paper towel-lined plate. Season lightly with salt while hot and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve alongside burgers, hot dogs, or fried chicken. Also good as an appetizer with ranch dressing or dipping sauce.'
     ],
     sections: [
       { key: 'rings', label: 'Onion Rings', cookingMethod: '', yieldFactorWater: 0.29 }
