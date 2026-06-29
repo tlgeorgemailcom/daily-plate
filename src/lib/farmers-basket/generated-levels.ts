@@ -11925,7 +11925,7 @@ export const LEVELS: Level[] = [
       'Sprinkle the flour over the vegetables and stir to coat. Cook 1 minute.',
       'Gradually pour in the beef broth, stirring constantly to prevent lumps. Add the Worcestershire sauce, salt, and pepper. Bring to a simmer and cook 4 to 5 minutes until the gravy thickens.',
       'Return the patties to the skillet, nestling them into the gravy. Simmer 3 to 4 minutes to heat through and meld the flavors. Serve immediately, spooning the onion-mushroom gravy over the patties.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with egg noodles, mashed potatoes, or crusty bread.'
     ],
     sections: [
       { key: 'patties', label: 'Patties', cookingMethod: '', yieldFactorWater: 0.75, yieldFactorFat: 0.593 },
