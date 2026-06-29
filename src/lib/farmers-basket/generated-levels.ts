@@ -9998,7 +9998,7 @@ export const LEVELS: Level[] = [
       'Divide the iceberg lettuce between two large bowls or plates. Top with the seasoned beef, black beans, cheddar cheese, tortilla chips, tomato, sour cream, and onion.',
       'Serve immediately so the tortilla chips stay crisp.',
       'Nutrition note: values reflect 6 oz raw ground beef (80% lean) with fat drained; serving weight approximately 449g per person.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with salsa, guacamole, sour cream, or warm tortillas.'
     ],
     sections: [
       { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.75, yieldFactorFat: 0.593 },
@@ -10823,7 +10823,7 @@ export const LEVELS: Level[] = [
       'Make or portion the Basic Vinaigrette (see the Basic Vinaigrette recipe).',
       'Arrange romaine on a large platter or divide between 2 bowls. Top with potatoes, green beans, tuna, halved hard-boiled eggs, tomato wedges, olives, and anchovies. Scatter capers over the top.',
       'Drizzle the Basic Vinaigrette over the salad and serve at room temperature or chilled.',
-      'Suggestions (not included): Serve with crusty French bread and a glass of dry rosé or white wine.'
+      'Suggestions (not included): Serve with crusty French bread for a classic French bistro-style meal.'
     ],
     sections: [
       { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 },
