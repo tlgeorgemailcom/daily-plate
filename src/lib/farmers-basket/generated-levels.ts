@@ -10160,9 +10160,9 @@ export const LEVELS: Level[] = [
       { name: 'Chickpea Salad', quantity: 'custom (g)', foodWord: 'CHICKPEASALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'chickpeas, cooked', quantity: '1½ cups', section: 'salad', ndbNo: '16057', portionDesc: 'g', portionGrams: 246.0 },
       { name: 'cucumber', quantity: '1 cup diced', section: 'salad', ndbNo: '11205', portionDesc: 'g', portionGrams: 150.0 },
-      { name: 'tomato', quantity: '1 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
-      { name: 'red bell pepper', quantity: '1 medium', section: 'salad', ndbNo: '11821', portionDesc: 'g', portionGrams: 119.0 },
-      { name: 'onion', quantity: '¼ cup', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 40.0 },
+      { name: 'tomato', quantity: '1 medium tomato (123g), diced into ½-inch pieces', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'red bell pepper', quantity: '1 medium red bell pepper (119g), diced into ½-inch pieces', section: 'salad', ndbNo: '11821', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'onion', quantity: '¼ cup red onion, thinly sliced', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 40.0 },
       { name: 'feta cheese crumbles', quantity: '2 oz', section: 'salad', ndbNo: '1019', portionDesc: 'g', portionGrams: 56.7 },
       { name: 'black olives', quantity: '10 large', section: 'salad', ndbNo: '9193', portionDesc: 'g', portionGrams: 44.0 },
       { name: 'fresh parsley', quantity: '¼ cup', section: 'salad', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.0 },
@@ -10176,7 +10176,7 @@ export const LEVELS: Level[] = [
       'Combine chickpeas, cucumber, tomato, bell pepper, onion, olives, and parsley in a large bowl.',
       'Whisk together olive oil, lemon juice, salt, and pepper. Pour over the salad and toss to coat.',
       'Crumble feta over the top. Toss gently and serve immediately, or refrigerate up to 2 days (the flavors improve as the salad sits).',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with warm pita bread or as a side to grilled chicken or lamb.'
     ],
     sections: [
       { key: 'salad', label: 'Chickpea Salad', cookingMethod: '', yieldFactorWater: 1.0 }
