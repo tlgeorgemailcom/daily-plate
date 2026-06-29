@@ -10364,12 +10364,12 @@ export const LEVELS: Level[] = [
       { name: 'salt', quantity: '¼ tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
       { name: 'ground black pepper', quantity: '¼ tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
       { name: 'Basic vinaigrette (4 tbsp total; 2 tbsp per serving)', quantity: '4 tbsp', section: 'dressing', foodWord: 'BASICVINAIGRETTE', portionDesc: 'g', portionGrams: 67.2, isDish: true, componentRef: 'SAUCE_016' },
-      { name: 'romaine lettuce', quantity: '4 cups', section: 'salad', ndbNo: '11251', portionDesc: 'g', portionGrams: 188.0 },
-      { name: 'tomato', quantity: '1 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
-      { name: 'cucumber', quantity: '1 medium', section: 'salad', ndbNo: '11206', portionDesc: 'g', portionGrams: 201.0 },
-      { name: 'red bell pepper', quantity: '½ medium', section: 'salad', ndbNo: '11821', portionDesc: 'g', portionGrams: 60.0 },
+      { name: 'romaine lettuce', quantity: '4 cups romaine lettuce, torn or roughly chopped', section: 'salad', ndbNo: '11251', portionDesc: 'g', portionGrams: 188.0 },
+      { name: 'tomato', quantity: '1 medium tomato (123g), cut into wedges', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'cucumber', quantity: '1 medium cucumber, sliced', section: 'salad', ndbNo: '11206', portionDesc: 'g', portionGrams: 201.0 },
+      { name: 'red bell pepper', quantity: '½ medium red bell pepper (60g), sliced', section: 'salad', ndbNo: '11821', portionDesc: 'g', portionGrams: 60.0 },
       { name: 'onion', quantity: '2 thin slices', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 18.0 },
-      { name: 'carrot', quantity: '1 medium', section: 'salad', ndbNo: '11124', portionDesc: 'g', portionGrams: 61.0 },
+      { name: 'carrot', quantity: '1 medium carrot, shredded', section: 'salad', ndbNo: '11124', portionDesc: 'g', portionGrams: 61.0 },
       { name: 'plain croutons', quantity: '¼ cup', section: 'salad', ndbNo: '18242', portionDesc: 'g', portionGrams: 15.0 }
     ],
     recipeInstructions: [
@@ -10377,7 +10377,7 @@ export const LEVELS: Level[] = [
       'While chicken rests, arrange romaine, tomato, cucumber, bell pepper, onion, carrot, and croutons in a large bowl or on a platter.',
       'Make or portion the Basic Vinaigrette (see the Basic Vinaigrette recipe).',
       'Top salad with sliced chicken. Drizzle with the Basic Vinaigrette and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with crusty bread or garlic bread on the side.'
     ],
     sections: [
       { key: 'chicken', label: 'Grilled chicken', cookingMethod: '', yieldFactorWater: 0.75 },
