@@ -5954,7 +5954,7 @@ export const LEVELS: Level[] = [
       'Heat olive oil in a skillet over medium-high heat. Pan-fry the cutlet 3–4 minutes per side until golden brown and cooked through (internal temp 165°F). Transfer to a paper-towel-lined plate.',
       'Preheat broiler. Place the hoagie roll cut-side up on a baking sheet. Spoon marinara sauce over the bottom half. Set the chicken cutlet on top, then spoon more sauce over the chicken. Layer mozzarella and Parmesan over the top.',
       'Broil 2–3 minutes until the cheese is melted and bubbling. Close the sandwich and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with a simple green salad or roasted vegetables on the side.'
     ],
     sections: [
       { key: 'chicken', label: 'Breaded chicken', cookingMethod: '', yieldFactorWater: 0.75 },
