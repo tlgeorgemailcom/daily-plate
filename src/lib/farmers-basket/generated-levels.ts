@@ -9472,22 +9472,21 @@ export const LEVELS: Level[] = [
       { name: 'olive oil', quantity: '½ cup', section: 'dressing', ndbNo: '4053', portionDesc: 'g', portionGrams: 108.8 },
       { name: 'lemon juice', quantity: '¼ cup', section: 'dressing', ndbNo: '9152', portionDesc: 'g', portionGrams: 60.0 },
       { name: 'honey', quantity: '1 tsp', section: 'dressing', ndbNo: '19296', portionDesc: 'g', portionGrams: 3.5 },
-      { name: 'garlic', quantity: '1 clove', section: 'dressing', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
-      { name: 'fresh chives', quantity: '2 tbsp', section: 'dressing', ndbNo: '11156', portionDesc: 'g', portionGrams: 6.0 },
-      { name: 'fresh thyme leaves', quantity: '1 tbsp', section: 'dressing', ndbNo: '2049', portionDesc: 'g', portionGrams: 2.4 },
+      { name: 'garlic', quantity: '1 clove garlic, minced', section: 'dressing', ndbNo: '11215', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'fresh chives', quantity: '2 tbsp fresh chives, thinly sliced', section: 'dressing', ndbNo: '11156', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'fresh thyme leaves', quantity: '1 tbsp fresh thyme leaves, finely minced', section: 'dressing', ndbNo: '2049', portionDesc: 'g', portionGrams: 2.4 },
       { name: 'salt', quantity: '½ tsp', section: 'dressing', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'ground black pepper', quantity: '¼ tsp', section: 'dressing', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
       { name: 'Dijon-Style Mustard', quantity: '1 tsp Dijon-Style Mustard (recipe)', section: 'mustard', foodWord: 'DIJONTYPEMUSTARD', portionDesc: 'g', portionGrams: 5.0, isDish: true, componentRef: 'SAUCE_010' }
     ],
     recipeInstructions: [
       'Make or prepare the Dijon-Style Mustard (see the Dijon-Style Mustard recipe).',
-      'Mince or grate the garlic clove. Thinly slice the chives and finely mince the fresh thyme leaves.',
       'In a small bowl or jar, combine the lemon juice, Dijon-style mustard, honey, garlic, salt, and black pepper. Whisk until the honey dissolves.',
       'Add the olive oil in a slow, steady stream while whisking constantly, or seal the jar and shake vigorously until the dressing emulsifies.',
       'Stir in the chives and thyme.',
       'Taste and adjust seasoning. The dressing will separate on standing — shake or whisk before each use.',
       'Store in a sealed jar in the refrigerator for up to 1 week.',
-      'Suggestions (not included):'
+      'Suggestions (not included): The dressing for Spinach Salad. Also excellent over grilled fish, steamed asparagus, or any salad where you want bright citrus flavor.'
     ],
     sections: [
       { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 },
