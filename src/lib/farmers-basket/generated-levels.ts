@@ -5139,7 +5139,7 @@ export const LEVELS: Level[] = [
       'Toss the shredded cabbage with the mayonnaise, apple cider vinegar, and a pinch of salt until evenly coated.',
       'Spread the BBQ sauce over the bottom bun, pile on the pulled pork, and top with the slaw.',
       'Close with the top bun and serve.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with baked beans, potato chips, or corn on the cob.'
     ],
     sections: [
       { key: 'pork', label: 'Pulled pork', cookingMethod: '', yieldFactorWater: 0.6, yieldFactorFat: 0.88 },
