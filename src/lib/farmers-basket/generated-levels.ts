@@ -7242,7 +7242,7 @@ export const LEVELS: Level[] = [
       'Prepare one full recipe of Béchamel sauce (see instructions in the recipe: Béchamel Sauce).',
       'Stir in the tomato purée until the sauce is evenly tinted a pale rosy pink.',
       'Taste and adjust seasoning with salt and white pepper. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): A rosy-pink béchamel. Use over poached eggs, white fish, chicken breasts, or as a filling sauce for seafood crêpes.'
     ],
     sections: [
       { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: '', yieldFactorWater: 1.0 },
