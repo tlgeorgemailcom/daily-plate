@@ -14182,7 +14182,7 @@ export const LEVELS: Level[] = [
       { name: 'chicken thigh (boneless/skinless)', quantity: '2 lb', section: 'chicken', ndbNo: '5096', portionDesc: 'g', portionGrams: 907.2 },
       { name: 'all-purpose enriched unbleached white flour', quantity: '1 cup', section: 'chicken', ndbNo: '20581', portionDesc: 'g', portionGrams: 125.0 },
       { name: 'cornstarch', quantity: '1/4 cup', section: 'chicken', ndbNo: '20027', portionDesc: 'g', portionGrams: 32.0 },
-      { name: 'large egg', quantity: '2 large', section: 'chicken', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'large egg', quantity: '2 large eggs, beaten', section: 'chicken', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
       { name: 'whole buttermilk', quantity: '1/2 cup', section: 'chicken', ndbNo: '1230', portionDesc: 'g', portionGrams: 122.5 },
       { name: 'salt', quantity: '1.5 tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'ground black pepper', quantity: '1 tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 2.3 },
@@ -14199,7 +14199,7 @@ export const LEVELS: Level[] = [
       'Pat chicken thighs dry with paper towels. Dredge in seasoned flour, dip in the egg-buttermilk wash, then dredge in the seasoned flour a second time, pressing firmly so the coating adheres fully.',
       'Heat olive oil in a large skillet over medium-high heat to 350°. Working in batches, fry chicken thighs 5 to 6 minutes per side until deep golden brown and cooked through (165°F internal). Transfer to a wire rack.',
       'Place one waffle on each plate and top with a piece of fried chicken. Drizzle 1 tablespoon of maple syrup over each serving.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Drizzle with hot sauce or honey for a sweet-and-spicy kick.'
     ],
     sections: [
       { key: 'waffles', label: 'Waffles plain', cookingMethod: '', yieldFactorWater: 1.0 },
