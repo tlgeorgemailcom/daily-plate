@@ -12192,7 +12192,7 @@ export const LEVELS: Level[] = [
       'Heat a grill or broiler to high heat. For a grill: cook the steak 5 to 7 minutes per side for medium-rare (internal temperature 130 to 135°F). For a broiler: broil 4 inches from the heat, 5 to 6 minutes per side.',
       'Transfer to a cutting board and rest for 10 minutes.',
       'Slice very thinly against the grain and serve immediately. London broil must always be sliced against the grain to be tender.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with creamy mashed potatoes and roasted asparagus or a simple green salad.'
     ],
     sections: [
       { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
