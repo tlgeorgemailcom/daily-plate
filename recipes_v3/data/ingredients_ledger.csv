@@ -535,3 +535,4 @@ cherry_heering,14809,CHERRYHEERING,"Cherry Heering liqueur, 48 proof",Cherry Hee
 cynar,14810,CYNAR,"Alcoholic beverage, liqueur, Cynar, artichoke amaro, 33 proof",Cynar,fl oz,30.5,artichoke amaro 16.5% ABV; 8g sugar/fl oz per label; custom NDB 14810 2026-06-26
 angostura_bitters,14749,AROMATICBITTERS,"Alcoholic beverage, bitters, aromatic, Angostura type, 89.4 proof",Angostura bitters,dash,0.9,cocktail ingredient; alias of aromatic_bitters NDB 14749 2026-06-26
 sloe_gin,14812,SLOEGIN,"Alcoholic beverage, liqueur, sloe gin, 52 proof",sloe gin,fl oz,30.2,custom NDB 14812; Plymouth/Hayman's 26% ABV 52 proof; ~29g sugar/100mL; 2026-06-27
+yellow_snap_beans_canned,11932,YELLOWWAXBEANS,"Beans, snap, yellow, canned, regular pack, drained solids",yellow wax beans,cup,125.0,Added during SALAD_025 correction pass

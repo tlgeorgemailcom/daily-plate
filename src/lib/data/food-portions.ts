@@ -57935,6 +57935,29 @@ export const FOODS: Food[] = [
         "gm": 15.1
       }
     ]
+  },
+  {
+    "word": "YELLOWWAXBEANS",
+    "display": "Yellow Wax Beans",
+    "groups": [
+      "legume"
+    ],
+    "ndb": "11932",
+    "desc": "Beans, snap, yellow, canned, regular pack, drained solids",
+    "cal": 20.0,
+    "pro": 1.15,
+    "fat": 0.1,
+    "carb": 4.5,
+    "fib": 1.3,
+    "h2o": 93.3,
+    "sug": 0.78,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "cup",
+        "gm": 125.0
+      }
+    ]
   }
 ];
 
