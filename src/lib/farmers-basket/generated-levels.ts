@@ -13581,12 +13581,12 @@ export const LEVELS: Level[] = [
       { name: 'hoisin sauce', quantity: '2 tbsp', section: 'sauce', ndbNo: '6175', portionDesc: 'g', portionGrams: 32.0 },
       { name: 'rice wine vinegar (distilled vinegar used as proxy)', quantity: '2 tbsp', section: 'sauce', ndbNo: '2053', portionDesc: 'g', portionGrams: 29.8 },
       { name: 'brown sugar', quantity: '2 tbsp', section: 'sauce', ndbNo: '19334', portionDesc: 'g', portionGrams: 18.0 },
-      { name: 'garlic', quantity: '4 cloves', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
-      { name: 'fresh ginger', quantity: '1 tbsp', section: 'sauce', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'fresh ginger', quantity: '1 tbsp fresh ginger, grated', section: 'sauce', ndbNo: '11216', portionDesc: 'g', portionGrams: 6.0 },
       { name: 'sesame oil', quantity: '1 tsp', section: 'sauce', ndbNo: '4058', portionDesc: 'g', portionGrams: 4.5 },
       { name: 'cornstarch', quantity: '1 tbsp', section: 'sauce', ndbNo: '20027', portionDesc: 'g', portionGrams: 8.0 },
       { name: 'red pepper flakes', quantity: '1/2 tsp', section: 'sauce', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.9 },
-      { name: 'scallions', quantity: '3 stalks', section: 'sauce', ndbNo: '11291', portionDesc: 'g', portionGrams: 36.0 },
+      { name: 'scallions', quantity: '3 scallions, thinly sliced', section: 'sauce', ndbNo: '11291', portionDesc: 'g', portionGrams: 36.0 },
       { name: 'sesame seeds', quantity: '1 tsp', section: 'sauce', ndbNo: '12024', portionDesc: 'g', portionGrams: 3.0 }
     ],
     recipeInstructions: [
