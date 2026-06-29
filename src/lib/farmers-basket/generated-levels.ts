@@ -7565,10 +7565,10 @@ export const LEVELS: Level[] = [
       { name: 'beef shank', quantity: '4 lb', section: 'stock', ndbNo: '13227', portionDesc: 'g', portionGrams: 1814.369 },
       { name: 'water', quantity: '1 gallon (cold start)', section: 'stock', ndbNo: '14411', portionDesc: 'g', portionGrams: 3785.0 },
       { name: 'apple cider vinegar', quantity: '2 tbsp', section: 'stock', ndbNo: '2048', portionDesc: 'g', portionGrams: 29.6 },
-      { name: 'onion', quantity: '1 large, quartered', section: 'stock', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
-      { name: 'carrot', quantity: '3 medium', section: 'stock', ndbNo: '11124', portionDesc: 'g', portionGrams: 183.0 },
-      { name: 'celery', quantity: '3 stalks celery', section: 'stock', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
-      { name: 'garlic', quantity: '4 cloves', section: 'stock', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'onion', quantity: '1 large onion, quartered', section: 'stock', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'carrot', quantity: '3 medium carrots, roughly chopped', section: 'stock', ndbNo: '11124', portionDesc: 'g', portionGrams: 183.0 },
+      { name: 'celery', quantity: '3 stalks celery, roughly chopped', section: 'stock', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, halved', section: 'stock', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'fresh parsley', quantity: '6 sprigs', section: 'stock', ndbNo: '11297', portionDesc: 'g', portionGrams: 18.0 },
       { name: 'fresh thyme leaves', quantity: '3 sprigs', section: 'stock', ndbNo: '2049', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'bay leaf', quantity: '2 leaves', section: 'stock', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
@@ -7584,7 +7584,7 @@ export const LEVELS: Level[] = [
       'Strain the broth through a fine-mesh strainer or cheesecloth-lined colander. Discard the solids.',
       'Cool to room temperature, then refrigerate. The broth will gel when cold — this is normal and desirable.',
       'Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Drink warm as a sipping broth, or use as the base for soups, stews, and braises. Refrigerate up to 5 days or freeze up to 6 months.'
     ],
     sections: [
       { key: 'stock', label: 'Stock', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
