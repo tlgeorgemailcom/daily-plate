@@ -15174,7 +15174,7 @@ export const LEVELS: Level[] = [
       'Reduce the oven temperature to 325°F (165°C). Continue roasting for 1½–2 hours, until a thermometer inserted into the thickest part reads 130°F (54°C) for medium-rare or 140°F (60°C) for medium.',
       'Transfer the leg to a cutting board, tent loosely with foil, and rest for 20 minutes before carving.',
       'Carve by making parallel slices along the length of the leg, angling the knife along the bone to free each slice. Arrange on a platter and serve.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with roasted potatoes, a Greek salad, or warm pita bread.'
     ],
     sections: [
       { key: 'lamb', label: 'Leg of Lamb', cookingMethod: '', yieldFactorWater: 0.62, yieldFactorFat: 0.705 }
