@@ -4072,7 +4072,7 @@ export const LEVELS: Level[] = [
       'Add the mayonnaise, diced apple, green onion, lemon juice, and salt. Mix to combine.',
       'Spread the tuna salad evenly over one bread slice and top with the second slice.',
       'Cut diagonally and serve immediately, or refrigerate the tuna salad up to 2 days.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with potato chips, a dill pickle, or a simple green salad.'
     ],
     sections: [
       { key: 'sandwich', label: 'Tuna Salad', cookingMethod: '', yieldFactorWater: 1.0 }
