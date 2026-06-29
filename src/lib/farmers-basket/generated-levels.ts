@@ -17162,7 +17162,7 @@ export const LEVELS: Level[] = [
       { name: 'tomato', quantity: '2 large tomatoes, diced (182g each)', section: 'chana_masala', ndbNo: '11529', portionDesc: 'g', portionGrams: 369.0 },
       { name: 'chickpeas, cooked', quantity: '3 cups', section: 'chana_masala', ndbNo: '16057', portionDesc: 'g', portionGrams: 492.0 },
       { name: 'ground turmeric', quantity: '1 tsp ground turmeric', section: 'chana_masala', ndbNo: '2043', portionDesc: 'g', portionGrams: 3.0 },
-      { name: 'coriander seed', quantity: '2 tsp ground coriander', section: 'chana_masala', ndbNo: '2013', portionDesc: 'g', portionGrams: 3.6 },
+      { name: 'coriander seed', quantity: '2 tsp ground coriander seed', section: 'chana_masala', ndbNo: '2013', portionDesc: 'g', portionGrams: 3.6 },
       { name: 'chili powder', quantity: '1 tsp chili powder', section: 'chana_masala', ndbNo: '2009', portionDesc: 'g', portionGrams: 2.7 },
       { name: 'salt', quantity: '1½ tsp', section: 'chana_masala', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'lemon juice', quantity: '2 tbsp', section: 'chana_masala', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
@@ -17177,7 +17177,7 @@ export const LEVELS: Level[] = [
       'Add the chickpeas and stir to coat in the masala sauce. Reduce heat to medium-low and simmer for 8 to 10 minutes, stirring occasionally, until the chickpeas have absorbed the flavors. Add a splash of water if the masala becomes too thick.',
       'Remove from heat and stir in the lemon juice. Season with salt to taste.',
       'Divide the rice among four bowls, spoon the chana masala over the top, garnish with fresh cilantro, and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Garnish with thinly sliced red onion. A pinch of garam masala stirred in at the end adds warmth and depth.'
     ],
     sections: [
       { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
