@@ -12856,16 +12856,16 @@ export const LEVELS: Level[] = [
       { name: 'Beef Short Ribs', quantity: 'custom (g)', foodWord: 'BEEFSHORTRIBS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'beef short ribs', quantity: '2 lb', section: 'braise', ndbNo: '23068', portionDesc: 'g', portionGrams: 907.2 },
       { name: 'olive oil', quantity: '2 tbsp', section: 'braise', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
-      { name: 'onion', quantity: '1 large', section: 'braise', ndbNo: '11282', portionDesc: 'g', portionGrams: 200.0 },
-      { name: 'carrot', quantity: '2 medium', section: 'braise', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
-      { name: 'celery', quantity: '2 stalks celery', section: 'braise', ndbNo: '11143', portionDesc: 'g', portionGrams: 80.0 },
-      { name: 'garlic', quantity: '4 cloves', section: 'braise', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'onion', quantity: '1 large onion, diced', section: 'braise', ndbNo: '11282', portionDesc: 'g', portionGrams: 200.0 },
+      { name: 'carrot', quantity: '2 medium carrots, sliced', section: 'braise', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'celery', quantity: '2 stalks celery, sliced', section: 'braise', ndbNo: '11143', portionDesc: 'g', portionGrams: 80.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'braise', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'tomato paste', quantity: '2 tbsp', section: 'braise', ndbNo: '11546', portionDesc: 'g', portionGrams: 32.0 },
       { name: 'red wine', quantity: '1 cup', section: 'braise', ndbNo: '14096', portionDesc: 'g', portionGrams: 236.0 },
       { name: 'beef broth', quantity: '2 cups', section: 'braise', ndbNo: '6008', portionDesc: 'g', portionGrams: 480.0 },
       { name: 'dried thyme', quantity: '1 tsp', section: 'braise', ndbNo: '2042', portionDesc: 'g', portionGrams: 1.4 },
-      { name: 'fresh rosemary', quantity: '1 sprig', section: 'braise', ndbNo: '2063', portionDesc: 'g', portionGrams: 3.4 },
-      { name: 'bay leaf', quantity: '2', section: 'braise', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'fresh rosemary', quantity: '1 sprig fresh rosemary, whole', section: 'braise', ndbNo: '2063', portionDesc: 'g', portionGrams: 3.4 },
+      { name: 'bay leaves', quantity: '2 bay leaves', section: 'braise', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
       { name: 'salt', quantity: '1-1/2 tsp', section: 'braise', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'ground black pepper', quantity: '1 tsp', section: 'braise', ndbNo: '2030', portionDesc: 'g', portionGrams: 2.3 }
     ],
@@ -12878,7 +12878,7 @@ export const LEVELS: Level[] = [
       'Cover and braise in a 325°F oven for 2-1/2 to 3 hours until the meat is very tender and pulling away from the bone.',
       'Remove the ribs. Discard the bay leaves and rosemary sprig. Skim excess fat from the braising liquid and adjust seasoning.',
       'Serve the ribs with the braising liquid spooned over the top.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with creamy mashed potatoes or soft polenta, and crusty bread to soak up the braising liquid.'
     ],
     sections: [
       { key: 'braise', label: 'Braise', cookingMethod: '', yieldFactorWater: 0.72 }
