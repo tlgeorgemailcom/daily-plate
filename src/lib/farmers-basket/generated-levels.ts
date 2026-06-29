@@ -18619,7 +18619,7 @@ export const LEVELS: Level[] = [
       'Add the egg noodles. Continue simmering for 8–10 minutes, stirring occasionally, until the noodles are tender.',
       'Remove and discard the bay leaves. Stir in the parsley. Taste and adjust seasoning with additional salt if needed.',
       'Serve immediately in warmed bowls. If making ahead, store the cooked noodles separately to prevent them from absorbing all the broth.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with oyster crackers, crusty bread, or a simple green salad.'
     ],
     sections: [
       { key: 'stock', label: 'White Chicken Stock', cookingMethod: '', yieldFactorWater: 1.0 },
