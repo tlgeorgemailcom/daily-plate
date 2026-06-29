@@ -8548,7 +8548,7 @@ export const LEVELS: Level[] = [
       { name: 'all-purpose enriched unbleached white flour', quantity: '½ cup', section: 'batter', ndbNo: '20581', portionDesc: 'g', portionGrams: 62.5 },
       { name: 'baking powder', quantity: '1 tbsp', section: 'batter', ndbNo: '18370', portionDesc: 'g', portionGrams: 13.8 },
       { name: 'salt', quantity: '1 tsp', section: 'batter', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 },
-      { name: 'large egg', quantity: '1 large', section: 'batter', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'large egg', quantity: '1 large egg', section: 'batter', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
       { name: '2% milk', quantity: '1 cup', section: 'batter', ndbNo: '1079', portionDesc: 'g', portionGrams: 244.0 },
       { name: 'unsalted butter', quantity: '2 tbsp', section: 'batter', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 }
     ],
@@ -8559,7 +8559,7 @@ export const LEVELS: Level[] = [
       'Pour the wet ingredients into the dry ingredients and stir until just combined — a few lumps are fine. Do not overmix.',
       'Pour the batter into the prepared pan. Bake for 20–25 minutes, until the top is golden and a toothpick inserted in the center comes out clean.',
       'Let cool in the pan for 5 minutes before cutting into 8 pieces. Serve warm.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve warm alongside chili, soups, or BBQ. Pairs especially well with baked beans or collard greens.'
     ],
     sections: [
       { key: 'batter', label: 'Batter', cookingMethod: '', yieldFactorWater: 0.73 }
