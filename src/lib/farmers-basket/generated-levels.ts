@@ -5392,7 +5392,7 @@ export const LEVELS: Level[] = [
       'Spread mayonnaise on both buns. Place the sliced pickles on the bottom bun.',
       'Place the Nashville hot chicken on top of the pickles, close with the top bun, and serve.',
       '(Oil in the ingredient list reflects only the amount absorbed into the crust.)',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with extra pickles, coleslaw, and a cold beverage to balance the heat.'
     ],
     sections: [
       { key: 'chicken', label: 'Fried chicken', cookingMethod: '', yieldFactorWater: 0.82 },
