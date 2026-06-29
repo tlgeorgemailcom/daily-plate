@@ -8058,7 +8058,7 @@ export const LEVELS: Level[] = [
       'Take the pot off the heat. Add the cold, cubed butter a few pieces at a time, whisking vigorously after each addition. The temperature contrast between cold butter and hot potato is what creates the emulsion — add it too fast or while the pot is still on the flame and you get grease instead of cream.',
       'Whisk in the warm milk gradually until the purée flows easily from the whisk. For the ultra-smooth Robuchon finish, press the entire batch through a fine-mesh drum sieve (tamis) — this step removes any remaining fibrous texture.',
       'Taste for salt, and serve at once. The purée tightens quickly as it cools and does not reheat well without breaking.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve alongside roast chicken, seared duck breast, or braised beef short ribs. Garnish with fresh chives.'
     ],
     sections: [
       { key: 'puree', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 }
