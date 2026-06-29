@@ -14450,9 +14450,9 @@ export const LEVELS: Level[] = [
       { name: 'salt', quantity: '1/2 tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'ground black pepper', quantity: '1/4 tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
       { name: 'unsalted butter', quantity: '4 tbsp', section: 'sauce', ndbNo: '1145', portionDesc: 'g', portionGrams: 56.8 },
-      { name: 'onion', quantity: '1 medium', section: 'sauce', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
-      { name: 'garlic', quantity: '3 cloves', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
-      { name: 'crimini mushrooms', quantity: '8 oz', section: 'sauce', ndbNo: '11266', portionDesc: 'g', portionGrams: 226.8 },
+      { name: 'onion', quantity: '1 medium onion, finely diced', section: 'sauce', ndbNo: '11282', portionDesc: 'g', portionGrams: 110.0 },
+      { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'crimini mushrooms', quantity: '8 oz crimini mushrooms, sliced 1/4 inch thick', section: 'sauce', ndbNo: '11266', portionDesc: 'g', portionGrams: 226.8 },
       { name: 'all-purpose enriched unbleached white flour', quantity: '1/3 cup', section: 'sauce', ndbNo: '20581', portionDesc: 'g', portionGrams: 41.7 },
       { name: 'white wine', quantity: '1/2 cup', section: 'sauce', ndbNo: '14106', portionDesc: 'g', portionGrams: 120.0 },
       { name: 'heavy cream', quantity: '1 cup', section: 'sauce', ndbNo: '1053', portionDesc: 'g', portionGrams: 238.0 },
@@ -14474,7 +14474,7 @@ export const LEVELS: Level[] = [
       'Fold cooked pasta and shredded chicken into the sauce until evenly coated. Transfer to a greased 9x13-inch baking dish.',
       'Combine bread crumbs, Parmesan, and melted butter; sprinkle evenly over the top.',
       'Bake 25 to 30 minutes until bubbling and the topping is golden brown. Let rest 5 minutes before serving.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with a simple green salad and crusty bread.'
     ],
     sections: [
       { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
