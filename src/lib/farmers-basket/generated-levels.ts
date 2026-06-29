@@ -9621,7 +9621,7 @@ export const LEVELS: Level[] = [
       'Season with salt and black pepper. Whisk again to combine.',
       'Taste and adjust honey or mustard to balance sweetness and tang to your preference.',
       'Use immediately or cover and refrigerate for up to 2 weeks. Stir before serving.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve as a dipping sauce for chicken tenders, nuggets, or pretzels. Also excellent as a salad dressing or sandwich spread.'
     ],
     sections: [
       { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
