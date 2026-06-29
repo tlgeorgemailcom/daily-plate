@@ -7995,7 +7995,7 @@ export const LEVELS: Level[] = [
       { name: 'Chicken Fried Steak', quantity: 'custom (g)', foodWord: 'CHICKENFRIEDSTEAK', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'sirloin tip steak', quantity: '2 steaks (4 oz each)', section: 'steak', ndbNo: '23061', portionDesc: 'g', portionGrams: 226.7 },
       { name: 'flour', quantity: '½ cup', section: 'steak', ndbNo: '20581', portionDesc: 'g', portionGrams: 62.5 },
-      { name: 'large egg', quantity: '1 large', section: 'steak', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
+      { name: 'large egg', quantity: '1 large egg', section: 'steak', ndbNo: '1123', portionDesc: 'g', portionGrams: 50.0 },
       { name: 'paprika', quantity: '1 tsp', section: 'steak', ndbNo: '2028', portionDesc: 'g', portionGrams: 2.3 },
       { name: 'garlic powder', quantity: '½ tsp', section: 'steak', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.55 },
       { name: 'salt', quantity: '½ tsp', section: 'steak', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
@@ -8015,7 +8015,7 @@ export const LEVELS: Level[] = [
       'Pour off all but 2 tablespoons of drippings from the skillet. Add the butter and let it melt over medium heat. Whisk in the 2 tbsp of flour and cook, stirring constantly, 1 to 2 minutes until the roux turns light golden.',
       'Gradually pour in the milk while whisking, scraping up any browned bits from the bottom of the pan. Continue to cook, stirring frequently, 4 to 6 minutes until the gravy thickens to a pourable consistency.',
       'Season the gravy with salt and black pepper. Plate the steaks and ladle the cream gravy over the top. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with mashed potatoes, collard greens, or steamed green beans.'
     ],
     sections: [
       { key: 'steak', label: 'Chicken fried steak', cookingMethod: '', yieldFactorWater: 0.82 },
