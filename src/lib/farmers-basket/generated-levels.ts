@@ -5684,7 +5684,7 @@ export const LEVELS: Level[] = [
       'Add the sliced roast beef to the simmering broth. Warm through for 2–3 minutes, then remove with tongs and set aside. Keep the au jus warm on low heat.',
       'Heat 1 tsp olive oil in a skillet over medium-high heat. Add the sliced green peppers and sauté 4–5 minutes until softened and lightly charred.',
       'Split the French roll and pile on the roast beef on both sides of the split roll. Top with the sautéed peppers. Serve with the au jus in a small ramekin alongside for dipping or ladle over the sandwich. (Add hot or mild giardiniera if desired.)',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with french fries or kettle chips, and giardiniera on the side.'
     ],
     sections: [
       { key: 'au_jus', label: 'Au jus', cookingMethod: '', yieldFactorWater: 1.0 },
