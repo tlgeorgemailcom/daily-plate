@@ -9565,7 +9565,7 @@ export const LEVELS: Level[] = [
       { name: 'mayonnaise', quantity: '½ cup', section: 'dressing', ndbNo: '4025', portionDesc: 'g', portionGrams: 112.0 },
       { name: 'sour cream', quantity: '¼ cup', section: 'dressing', ndbNo: '1056', portionDesc: 'g', portionGrams: 57.5 },
       { name: 'whole buttermilk', quantity: '¼ cup', section: 'dressing', ndbNo: '1230', portionDesc: 'g', portionGrams: 61.25 },
-      { name: 'blue cheese crumbles', quantity: '2 oz', section: 'dressing', ndbNo: '1004', portionDesc: 'g', portionGrams: 56.7 },
+      { name: 'blue cheese crumbles', quantity: '2 oz blue cheese crumbles', section: 'dressing', ndbNo: '1004', portionDesc: 'g', portionGrams: 56.7 },
       { name: 'lemon juice', quantity: '1 tbsp', section: 'dressing', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
       { name: 'Worcestershire sauce', quantity: '½ tsp', section: 'dressing', ndbNo: '6971', portionDesc: 'g', portionGrams: 2.5 },
       { name: 'garlic powder', quantity: '¼ tsp', section: 'dressing', ndbNo: '2020', portionDesc: 'g', portionGrams: 0.775 },
@@ -9579,7 +9579,7 @@ export const LEVELS: Level[] = [
       'Fold in the crumbled blue cheese, mashing some pieces slightly into the dressing for a creamy texture while leaving some crumbles intact.',
       'Taste and adjust salt, pepper, or lemon juice as needed. Thin with additional buttermilk if a pourable consistency is desired.',
       'Cover and refrigerate for at least 30 minutes before serving. Store refrigerated for up to 1 week.',
-      'Suggestions (not included):'
+      'Suggestions (not included): The dressing for Wedge Salad. Also excellent as a dip for buffalo wings, chicken tenders, and raw vegetables.'
     ],
     sections: [
       { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
