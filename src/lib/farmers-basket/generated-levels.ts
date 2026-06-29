@@ -9134,7 +9134,7 @@ export const LEVELS: Level[] = [
       { name: 'unsalted butter', quantity: '2 tbsp', section: 'sauce', ndbNo: '1145', portionDesc: 'g', portionGrams: 28.4 },
       { name: 'all-purpose enriched unbleached white flour', quantity: '2 tbsp', section: 'sauce', ndbNo: '20581', portionDesc: 'g', portionGrams: 15.6 },
       { name: 'whole milk', quantity: '1 cup', section: 'sauce', ndbNo: '1077', portionDesc: 'g', portionGrams: 244.0 },
-      { name: 'Cheddar cheese', quantity: '1½ cups, shredded', section: 'sauce', ndbNo: '1009', portionDesc: 'g', portionGrams: 169.5 },
+      { name: 'Cheddar cheese', quantity: '1½ cups cheddar cheese, shredded', section: 'sauce', ndbNo: '1009', portionDesc: 'g', portionGrams: 169.5 },
       { name: 'garlic powder', quantity: '¼ tsp', section: 'sauce', ndbNo: '2020', portionDesc: 'g', portionGrams: 0.775 },
       { name: 'onion powder', quantity: '¼ tsp', section: 'sauce', ndbNo: '2026', portionDesc: 'g', portionGrams: 0.6 },
       { name: 'salt', quantity: '¼ tsp', section: 'sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
@@ -9145,7 +9145,7 @@ export const LEVELS: Level[] = [
       'Gradually whisk in the milk in a thin stream, whisking constantly to prevent lumps. Cook, stirring, for 3 to 4 minutes until the sauce thickens enough to coat the back of a spoon.',
       'Remove from heat. Stir in the shredded cheddar a handful at a time until fully melted and smooth. Season with garlic powder, onion powder, salt, and black pepper.',
       'Reheat gently over low heat, whisking in a splash of milk if needed to loosen.',
-      'Suggestions (not included): Serve over steamed broccoli, cauliflower, or other vegetables.'
+      'Suggestions (not included): Serve over steamed broccoli, cauliflower, Brussels sprouts, or asparagus. Also excellent as a quick stovetop mac and cheese sauce, or as a warm dip with tortilla chips.'
     ],
     sections: [
       { key: 'sauce', label: 'Cheese Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
