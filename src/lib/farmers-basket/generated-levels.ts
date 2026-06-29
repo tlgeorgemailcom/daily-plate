@@ -8634,10 +8634,10 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Rainbow Coleslaw', quantity: 'custom (g)', foodWord: 'RAINBOWCOLESLAW', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'green cabbage', quantity: '3 cups green cabbage, shredded', section: 'slaw', ndbNo: '11109', portionDesc: 'g', portionGrams: 210.0 },
-      { name: 'red cabbage', quantity: '2 cups shredded', section: 'slaw', ndbNo: '11112', portionDesc: 'g', portionGrams: 140.0 },
-      { name: 'carrot', quantity: '2 cups shredded', section: 'slaw', ndbNo: '11124', portionDesc: 'g', portionGrams: 220.0 },
-      { name: 'red bell pepper', quantity: '1 medium', section: 'slaw', ndbNo: '11821', portionDesc: 'g', portionGrams: 119.0 },
-      { name: 'scallions', quantity: '3 stalks', section: 'slaw', ndbNo: '11291', portionDesc: 'g', portionGrams: 36.0 },
+      { name: 'red cabbage', quantity: '2 cups red cabbage, shredded', section: 'slaw', ndbNo: '11112', portionDesc: 'g', portionGrams: 140.0 },
+      { name: 'carrot', quantity: '2 cups carrot, shredded', section: 'slaw', ndbNo: '11124', portionDesc: 'g', portionGrams: 220.0 },
+      { name: 'red bell pepper', quantity: '1 medium red bell pepper, thinly sliced', section: 'slaw', ndbNo: '11821', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'scallions', quantity: '3 scallions, thinly sliced', section: 'slaw', ndbNo: '11291', portionDesc: 'g', portionGrams: 36.0 },
       { name: 'mayonnaise', quantity: '1/2 cup', section: 'slaw', ndbNo: '4025', portionDesc: 'g', portionGrams: 112.0 },
       { name: 'apple cider vinegar', quantity: '2 tbsp', section: 'slaw', ndbNo: '2048', portionDesc: 'g', portionGrams: 29.8 },
       { name: 'honey', quantity: '1 tbsp', section: 'slaw', ndbNo: '19296', portionDesc: 'g', portionGrams: 21.0 },
@@ -8646,13 +8646,13 @@ export const LEVELS: Level[] = [
       { name: 'celery seed', quantity: '1/4 tsp', section: 'slaw', ndbNo: '2007', portionDesc: 'g', portionGrams: 0.7 }
     ],
     recipeInstructions: [
-      'Shred the green cabbage, red cabbage, and carrots; thinly slice the red bell pepper and scallions.',
+      'Combine the cabbage, carrots, bell pepper, and scallions in a large bowl.',
       'In a large bowl, whisk together the mayonnaise, apple cider vinegar, honey, salt, black pepper, and celery seed until smooth.',
       'Add the shredded vegetables to the dressing and toss well to coat.',
       'Taste and adjust seasoning with additional salt or vinegar as needed.',
       'Cover and refrigerate for at least 30 minutes before serving to allow flavors to meld.',
       'Toss again before serving. Store covered in the refrigerator for up to 3 days.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve alongside BBQ ribs, fried chicken, pulled pork sandwiches, or burgers.'
     ],
     sections: [
       { key: 'slaw', label: 'Slaw', cookingMethod: '', yieldFactorWater: 1.0 }
