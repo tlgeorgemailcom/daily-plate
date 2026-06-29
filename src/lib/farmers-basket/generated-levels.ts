@@ -5588,7 +5588,7 @@ export const LEVELS: Level[] = [
       'Heat a skillet over medium heat. Place one slice butter-side down.',
       'Layer one slice of American cheese, the tuna salad, then the second slice of American cheese on top.',
       'Place the second bread slice on top, butter-side up. Cook 3–4 minutes until golden, then flip and cook another 2–3 minutes until cheese is melted.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with tomato soup, kettle chips, or a dill pickle.'
     ],
     sections: [
       { key: 'tuna_salad', label: 'Tuna salad', cookingMethod: '', yieldFactorWater: 1.0 },
