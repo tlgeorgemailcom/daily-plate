@@ -19324,7 +19324,7 @@ export const LEVELS: Level[] = [
       'Toast the bagel halves in a toaster or toaster oven until golden and crisp, 2–3 minutes (optional but recommended).',
       'Spread 1 tablespoon of cream cheese evenly on each half.',
       'Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with sliced tomatoes, cucumber, fresh fruit, or a hot cup of coffee.'
     ],
     sections: [
       { key: 'bagel', label: 'Bagel', cookingMethod: '', yieldFactorWater: 1.0 }
@@ -19364,7 +19364,7 @@ export const LEVELS: Level[] = [
       'Layer the smoked salmon evenly over each half.',
       'Top with red onion slices and capers.',
       'Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with sliced cucumber, fresh dill, lemon wedges, or fresh fruit on the side.'
     ],
     sections: [
       { key: 'bagel', label: 'Bagel', cookingMethod: '', yieldFactorWater: 1.0 }
