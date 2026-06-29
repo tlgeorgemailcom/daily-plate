@@ -9770,7 +9770,7 @@ export const LEVELS: Level[] = [
       'Drizzle the Caesar Salad Dressing over the salad, starting with 2 tablespoons per serving. Toss well to coat every leaf evenly.',
       'Taste and add more dressing if desired. Finish with an extra pinch of Parmesan and black pepper at the table.',
       'Serve immediately — Caesar salad does not hold after dressing.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve as a starter before pasta or grilled chicken, or add sliced grilled chicken or shrimp to make it a main course.'
     ],
     sections: [
       { key: 'salad', label: 'Caesar Salad', cookingMethod: '', yieldFactorWater: 1.0 },
@@ -9816,7 +9816,7 @@ export const LEVELS: Level[] = [
       'Drizzle the Caesar Salad Dressing over the salad and toss well to coat every leaf evenly.',
       'Divide between two plates and top each with the sliced chicken breast.',
       'Finish with an extra pinch of Parmesan and freshly cracked black pepper. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with a slice of garlic bread or crusty sourdough on the side.'
     ],
     sections: [
       { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
