@@ -10669,10 +10669,10 @@ export const LEVELS: Level[] = [
       { name: 'paprika', quantity: '½ tsp', section: 'shrimp', ndbNo: '2028', portionDesc: 'g', portionGrams: 1.55 },
       { name: 'salt', quantity: '¼ tsp', section: 'shrimp', ndbNo: '2047', portionDesc: 'g', portionGrams: 1.5 },
       { name: 'ground black pepper', quantity: '⅛ tsp', section: 'shrimp', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.3 },
-      { name: 'romaine lettuce', quantity: '1 large head (~1 lb 6 oz)', section: 'salad', ndbNo: '11251', portionDesc: 'g', portionGrams: 188.0 },
-      { name: 'avocado', quantity: '1 medium', section: 'salad', ndbNo: '9038', portionDesc: 'g', portionGrams: 136.0 },
-      { name: 'tomato', quantity: '1 medium', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
-      { name: 'cucumber', quantity: '1 medium', section: 'salad', ndbNo: '11206', portionDesc: 'g', portionGrams: 119.0 },
+      { name: 'romaine lettuce', quantity: '1 large head romaine lettuce, torn or chopped', section: 'salad', ndbNo: '11251', portionDesc: 'g', portionGrams: 188.0 },
+      { name: 'avocado', quantity: '1 medium avocado, sliced', section: 'salad', ndbNo: '9038', portionDesc: 'g', portionGrams: 136.0 },
+      { name: 'tomato', quantity: '1 medium tomato (123g), diced', section: 'salad', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'cucumber', quantity: '1 medium cucumber, sliced', section: 'salad', ndbNo: '11206', portionDesc: 'g', portionGrams: 119.0 },
       { name: 'onion', quantity: '2 thin slices', section: 'salad', ndbNo: '11282', portionDesc: 'g', portionGrams: 18.0 },
       { name: 'fresh cilantro', quantity: '¼ cup fresh cilantro, chopped', section: 'salad', ndbNo: '11165', portionDesc: 'g', portionGrams: 8.0 },
       { name: 'olive oil', quantity: '2 tbsp', section: 'salad', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
@@ -10686,7 +10686,7 @@ export const LEVELS: Level[] = [
       'Whisk together olive oil, lime juice, honey, salt, and pepper to make the dressing.',
       'Arrange romaine, avocado, tomato, cucumber, onion, and cilantro in a large bowl.',
       'Top with shrimp, drizzle with dressing, and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with warm tortillas or crusty bread.'
     ],
     sections: [
       { key: 'shrimp', label: 'Shrimp', cookingMethod: '', yieldFactorWater: 0.75 },
