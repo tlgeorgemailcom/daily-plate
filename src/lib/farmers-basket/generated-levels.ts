@@ -4508,7 +4508,7 @@ export const LEVELS: Level[] = [
       'Gradually whisk in beef broth. Add Worcestershire sauce, onion powder, salt, and pepper. Bring to a simmer, stirring constantly, until gravy thickens, about 3–4 minutes.',
       'Add the sliced roast beef to the gravy and heat through, about 1 minute.',
       'Arrange the beef over the toasted bread and spoon the gravy generously over everything. Serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with mashed potatoes, roasted vegetables, or steamed green beans.'
     ],
     sections: [
       { key: 'sandwich', label: 'Open-Faced Roast Beef with Gravy', cookingMethod: '', yieldFactorWater: 0.87 }
