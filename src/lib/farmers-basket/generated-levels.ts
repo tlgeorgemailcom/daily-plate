@@ -14135,7 +14135,7 @@ export const LEVELS: Level[] = [
       { name: 'chicken breast', quantity: '1.5 lb', section: 'chicken', ndbNo: '5062', portionDesc: 'g', portionGrams: 680.4 },
       { name: 'all-purpose enriched unbleached white flour', quantity: '1 cup', section: 'chicken', ndbNo: '20581', portionDesc: 'g', portionGrams: 125.0 },
       { name: 'cornstarch', quantity: '1/2 cup', section: 'chicken', ndbNo: '20027', portionDesc: 'g', portionGrams: 64.0 },
-      { name: 'large egg', quantity: '2 large', section: 'chicken', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'large egg', quantity: '2 large eggs, beaten', section: 'chicken', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
       { name: 'whole buttermilk', quantity: '1/2 cup', section: 'chicken', ndbNo: '1230', portionDesc: 'g', portionGrams: 122.5 },
       { name: 'salt', quantity: '1.5 tsp', section: 'chicken', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'ground black pepper', quantity: '1 tsp', section: 'chicken', ndbNo: '2030', portionDesc: 'g', portionGrams: 2.3 },
