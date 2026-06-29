@@ -14960,13 +14960,13 @@ export const LEVELS: Level[] = [
       { name: 'ground cinnamon', quantity: '1 tsp', section: 'meat_sauce', ndbNo: '2010', portionDesc: 'g', portionGrams: 2.6 },
       { name: 'allspice', quantity: '1 tsp', section: 'meat_sauce', ndbNo: '2001', portionDesc: 'g', portionGrams: 2.0 },
       { name: 'dried oregano', quantity: '1 tsp', section: 'meat_sauce', ndbNo: '2027', portionDesc: 'g', portionGrams: 2.0 },
-      { name: 'bay leaf', quantity: '2 leaves', section: 'meat_sauce', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'bay leaves', quantity: '2 bay leaves', section: 'meat_sauce', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
       { name: 'salt', quantity: '½ tsp', section: 'meat_sauce', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
       { name: 'ground black pepper', quantity: '¼ tsp', section: 'meat_sauce', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 },
       { name: 'unsalted butter', quantity: '4 tbsp', section: 'bechamel', ndbNo: '1145', portionDesc: 'g', portionGrams: 56.8 },
       { name: 'all-purpose enriched unbleached white flour', quantity: '¼ cup', section: 'bechamel', ndbNo: '20581', portionDesc: 'g', portionGrams: 31.25 },
       { name: 'whole milk', quantity: '2 cups', section: 'bechamel', ndbNo: '1077', portionDesc: 'g', portionGrams: 488.0 },
-      { name: 'large egg', quantity: '2 large', section: 'bechamel', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'large egg', quantity: '2 large eggs, beaten', section: 'bechamel', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
       { name: 'Parmesan cheese', quantity: '¼ cup Parmesan cheese, freshly grated', section: 'bechamel', ndbNo: '1033', portionDesc: 'g', portionGrams: 25.0 },
       { name: 'ground nutmeg', quantity: '½ tsp', section: 'bechamel', ndbNo: '2025', portionDesc: 'g', portionGrams: 1.1 },
       { name: 'salt', quantity: '½ tsp', section: 'bechamel', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
@@ -14980,7 +14980,7 @@ export const LEVELS: Level[] = [
       'Make the béchamel: melt the butter in a medium saucepan over medium heat. Whisk in the flour and cook for 1 to 2 minutes. Gradually whisk in the milk and cook, stirring constantly, for 6 to 8 minutes until thickened. Remove from heat. Whisk in the eggs one at a time, then stir in the freshly grated Parmesan, ground nutmeg, salt, and white pepper.',
       'Lightly oil a 9×13-inch baking dish. Arrange half the roasted eggplant slices in an even layer. Spread all of the meat sauce over the eggplant. Top with the remaining eggplant slices. Pour the béchamel evenly over the top and smooth with a spatula.',
       'Bake at 375°F for 40 to 45 minutes until the top is set and golden brown. Let rest for 15 to 20 minutes before cutting. Cut into 6 portions and serve.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with a simple green salad and crusty bread.'
     ],
     sections: [
       { key: 'eggplant', label: 'Eggplant', cookingMethod: '', yieldFactorWater: 0.75 },
