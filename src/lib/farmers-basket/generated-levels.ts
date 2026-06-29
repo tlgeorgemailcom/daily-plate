@@ -8503,7 +8503,7 @@ export const LEVELS: Level[] = [
       { name: 'Potato Gnocchi', quantity: 'custom (g)', foodWord: 'GNOCCHI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'potato', quantity: '2 lbs', section: 'potatoes', ndbNo: '11354', portionDesc: 'g', portionGrams: 907.2 },
       { name: 'all-purpose enriched unbleached white flour', quantity: '2 cups', section: 'dough', ndbNo: '20581', portionDesc: 'g', portionGrams: 250.0 },
-      { name: 'large egg', quantity: '2 large', section: 'dough', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'large egg', quantity: '2 large eggs', section: 'dough', ndbNo: '1123', portionDesc: 'g', portionGrams: 100.0 },
       { name: 'salt', quantity: '1 tsp', section: 'dough', ndbNo: '2047', portionDesc: 'g', portionGrams: 6.0 }
     ],
     recipeInstructions: [
