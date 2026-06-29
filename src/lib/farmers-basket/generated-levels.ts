@@ -18069,7 +18069,7 @@ export const LEVELS: Level[] = [
       'Finely chop the reserved mushroom stems. In a bowl, combine the cream cheese, chopped stems, Parmesan cheese, minced garlic, chopped parsley, bread crumbs, salt, and pepper. Mix until well combined.',
       'Spoon the filling generously into each mushroom cap, mounding it slightly. Each cap should hold about 1 tablespoon of filling.',
       'Bake until the mushrooms are tender and the filling is golden on top, 18-22 minutes. Serve warm.',
-      'Suggestions (not included):'
+      'Suggestions (not included): A classic party appetizer. Serve warm before an Italian dinner, steak, or holiday gathering. Add cooked crumbled sausage to the filling for a heartier version.'
     ],
     sections: [
       { key: 'mushrooms', label: 'Stuffed Mushrooms', cookingMethod: '', yieldFactorWater: 0.9 }
