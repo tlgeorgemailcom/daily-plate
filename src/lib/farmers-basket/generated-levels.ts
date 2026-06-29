@@ -11971,7 +11971,7 @@ export const LEVELS: Level[] = [
       'Heat a grill or grill pan over high heat until very hot. Grill the flank steak 4 to 5 minutes per side for medium-rare (internal temperature 130 to 135°F), or until desired doneness.',
       'Transfer to a cutting board and rest for 5 to 10 minutes.',
       'Slice thinly against the grain and serve immediately.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve with chimichurri sauce, roasted vegetables, or a simple green salad.'
     ],
     sections: [
       { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
