@@ -7514,9 +7514,9 @@ export const LEVELS: Level[] = [
       { name: 'Beef Stock', quantity: 'custom (g)', foodWord: 'BEEFSTOCK', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'beef shank', quantity: '4 lb', section: 'stock', ndbNo: '13227', portionDesc: 'g', portionGrams: 1814.368 },
       { name: 'water', quantity: '12 cups', section: 'stock', ndbNo: '14411', portionDesc: 'g', portionGrams: 2839.1 },
-      { name: 'onion', quantity: '1 large, quartered', section: 'stock', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
-      { name: 'carrot', quantity: '2 medium', section: 'stock', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
-      { name: 'celery', quantity: '3 stalks celery', section: 'stock', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
+      { name: 'onion', quantity: '1 large onion, quartered', section: 'stock', ndbNo: '11282', portionDesc: 'g', portionGrams: 150.0 },
+      { name: 'carrot', quantity: '2 medium carrots, roughly chopped', section: 'stock', ndbNo: '11124', portionDesc: 'g', portionGrams: 122.0 },
+      { name: 'celery', quantity: '3 stalks celery, roughly chopped', section: 'stock', ndbNo: '11143', portionDesc: 'g', portionGrams: 120.0 },
       { name: 'leek', quantity: '1 leek, halved lengthwise', section: 'stock', ndbNo: '11246', portionDesc: 'g', portionGrams: 89.0 },
       { name: 'tomato paste', quantity: '2 tbsp', section: 'stock', ndbNo: '11546', portionDesc: 'g', portionGrams: 32.0 },
       { name: 'fresh parsley', quantity: '6 sprigs', section: 'stock', ndbNo: '11297', portionDesc: 'g', portionGrams: 18.0 },
@@ -7533,7 +7533,7 @@ export const LEVELS: Level[] = [
       'Simmer uncovered for 6 to 8 hours, skimming any fat and foam occasionally. Keep at a gentle simmer — do not let it boil hard. Do not stir — stirring emulsifies fats and impurities back into the liquid.',
       'Strain the stock through a fine-mesh strainer or cheesecloth-lined colander. Discard the solids.',
       'Cool to room temperature, then refrigerate. Skim and discard the solidified fat cap from the surface before using. A small amount of emulsified fat will remain in the liquid.',
-      'Suggestions (not included):'
+      'Suggestions (not included): The base for French onion soup, pot roast, and dark sauces. Freeze in quart containers for up to 3 months.'
     ],
     sections: [
       { key: 'stock', label: 'Stock', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
