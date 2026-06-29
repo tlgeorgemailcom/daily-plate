@@ -12290,7 +12290,7 @@ export const LEVELS: Level[] = [
       'Add the garlic and ginger to the beef and cook 1 to 2 minutes until fragrant.',
       'Pour the sauce over the beef and stir to coat. Cook 1 to 2 minutes until the sauce thickens and coats the beef. Remove from heat and stir in the scallions and black pepper.',
       'Serve the Korean beef on its own or over steamed white rice (not included). Garnish with additional sliced scallions and sesame seeds if desired.',
-      'Suggestions (not included):'
+      'Suggestions (not included): Serve over steamed jasmine rice with kimchi, steamed bok choy, or a cucumber salad on the side.'
     ],
     sections: [
       { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.85, yieldFactorFat: 0.593 }
