@@ -2317,7 +2317,7 @@
               <label class="section-time-field" title="Oven temperature °F for the primary bake">
                 <span class="section-time-label">Temp (°F)</span>
                 <input
-                  type="number" min="200" max="600" step="25" placeholder="350"
+                  type="number" min="200" max="600" step="25" placeholder="–"
                   value={sec.cookTempF ?? ''}
                   oninput={(e) => { const v = (e.currentTarget as HTMLInputElement).valueAsNumber; sections = sections.map((s, i) => i === sIdx ? { ...s, cookTempF: Number.isFinite(v) && v > 0 ? v : undefined } : s); }}
                   class="form-input time-number-input"
