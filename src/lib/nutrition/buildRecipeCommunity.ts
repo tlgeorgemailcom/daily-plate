@@ -143,6 +143,16 @@ export function buildRecipeCommunity(
     ? mapDishMethodToCookingMethod(dishCookMethod)
     : undefined;
 
+  // Preserve original raw method for temperature + lid-state lookup so Braise /
+  // Simmer / Sub-simmer use the correct evaporation constants (primaryCookMethod
+  // normalises them all to 'boiled', losing the distinction).
+  const rawDish = dishCookMethod?.trim().toLowerCase() ?? '';
+  const primaryCookTempF =
+    rawDish === 'sub-simmer' ? 180 :
+    rawDish === 'simmer'     ? 195 :
+    rawDish === 'braise'     ? 185 : 212;
+  const primaryCookLidOn = rawDish === 'braise';
+
   const sectionResults: SectionBuildResult[] = [];
   const globalSkipped: SkippedIngredient[]   = [];
 
@@ -293,8 +303,8 @@ export function buildRecipeCommunity(
       // For a boiled primary, use cookMinutes as the stovetop time.
       const interWaterG = initialWaterG * yfw_prep;
       const primaryBoilMins = effectiveCookMethod === 'boiled' ? (sec.cookMinutes ?? 0) : 0;
-      const yfw_primary = calcYieldWater(stages, interWaterG, fillingClass, primaryBoilMins);
-      // Note: primary cook temp is always 212 °F — recipe-level COOKING_METHODS has 'Boil' only.
+      const yfw_primary = calcYieldWater(stages, interWaterG, fillingClass,
+        primaryBoilMins, primaryCookTempF, primaryCookLidOn);
 
       // Compound: total water yield = prep × primary
       yieldWater = yfw_prep * yfw_primary;
@@ -312,10 +322,12 @@ export function buildRecipeCommunity(
           // yieldWater may be >> 1 when initialWaterG is only the dry ingredient's own moisture.
           yieldWater = initialWaterG > 0 ? retainedWaterG / initialWaterG : 1.0;
         } else {
-          yieldWater = calcYieldWater(stages, initialWaterG, fillingClass, boilMinutes);
+          yieldWater = calcYieldWater(stages, initialWaterG, fillingClass, boilMinutes,
+            primaryCookTempF, primaryCookLidOn);
         }
       } else {
-        yieldWater = calcYieldWater(stages, initialWaterG, fillingClass, boilMinutes);
+        yieldWater = calcYieldWater(stages, initialWaterG, fillingClass, boilMinutes,
+          primaryCookTempF, primaryCookLidOn);
       }
     }
 

@@ -153,7 +153,13 @@
   const GAME_FOODS = Object.keys(FOOD_EMOJI) as FoodType[];
   const ANIMAL_TYPES: AnimalType[] = ['rabbit', 'squirrel', 'raccoon', 'bird', 'mouse', 'fox'];
   
-  const COOKING_METHODS = ['Bake', 'Boil', 'Grill', 'Fry', 'No heat'];
+  const COOKING_METHODS = ['Bake', 'Boil', 'Simmer', 'Sub-simmer', 'Braise', 'Grill', 'Fry', 'No heat'];
+  const COOK_METHOD_DISPLAY: Record<string, string> = {
+    'Boil':      'Boil (lid off)',
+    'Simmer':    'Simmer (lid off)',
+    'Sub-simmer':'Sub-simmer (lid off)',
+    'Braise':    'Braise (covered)',
+  };
   // v3.md §18.1 — lowercase enum stored in recipe_sections.csv::cooking_method.
   const SECTION_COOKING_METHODS = ['raw', 'boiled', 'steamed', 'baked', 'fried', 'pan grilled', 'grilled', 'microwave'];
   const SECTION_PREP_METHODS    = ['boiled', 'simmer', 'sub-simmer', 'braise', 'steamed', 'blanched', 'baked', 'par-baked', 'fried', 'pan grilled', 'grilled', 'marinated', 'chilled', 'microwave'];
@@ -2536,13 +2542,13 @@
           <span class="primary-cook-name">Cook *</span>
           <select bind:value={cookingMethod} class="form-select primary-cook-select">
             {#each COOKING_METHODS as m}
-              <option value={m}>{m}</option>
+              <option value={m}>{COOK_METHOD_DISPLAY[m] ?? m}</option>
             {/each}
           </select>
         </label>
         {#if cookingMethod !== 'No heat'}
           <label class="section-time-field" title="Total cook time in minutes">
-            <span class="section-time-label">{cookingMethod === 'Bake' ? 'Bake (min)' : 'Cook (min)'}</span>
+            <span class="section-time-label">{['Bake','Braise','Simmer','Sub-simmer'].includes(cookingMethod) ? `${cookingMethod} (min)` : 'Cook (min)'}</span>
             <input
               type="number" min="0" max="600" step="1" placeholder="–"
               value={cookMinutes ?? ''}
@@ -2572,10 +2578,14 @@
             <h3 class="cook-help-title">How the cook fields work</h3>
 
             <h4 class="cook-help-section">Cook * — the primary heat (top bar)</h4>
-            <p>This is the <strong>final application of heat</strong> after all sections are assembled — the oven, the stovetop, or the grill that finishes the whole dish. Set it once and it applies to every section.</p>
+            <p>This is the <strong>final application of heat</strong> after all sections are assembled. Set it once and it applies to every section.</p>
             <ul>
-              <li><strong>Bake (min) / Cook (min)</strong> — how long the finished dish stays in the oven or on the burner. Longer time = more moisture driven off = higher calorie density per gram.</li>
-              <li><strong>Temp (°F)</strong> — oven temperature (Bake only). Higher heat accelerates water loss and affects fat-soluble vitamin survival.</li>
+              <li><strong>Bake</strong> — oven. Enter Bake (min) and Temp (°F).</li>
+              <li><strong>Boil (lid off)</strong> — rolling boil, 212 °F, uncovered. Pasta, blanching.</li>
+              <li><strong>Simmer (lid off)</strong> — 195 °F, uncovered. Sauce reductions, soups.</li>
+              <li><strong>Sub-simmer (lid off)</strong> — 180 °F, uncovered. Concentrating stock.</li>
+              <li><strong>Braise (covered)</strong> — 185 °F, lid on. ~5 % of open-pot evaporation. Covered stews, pot roasts, Dutch-oven braises.</li>
+              <li><strong>Grill / Fry</strong> — dry heat; no water model applied.</li>
             </ul>
 
             <h4 class="cook-help-section">Each section's Prep method</h4>
