@@ -2251,7 +2251,7 @@
           />
           <span class="section-card-dash">—</span>
           {#if sec.isPrepStep === true}
-            <!-- Prep step: type toggle + prepMethod select -->
+            <!-- Prep step: type toggle + cookingMethod select (drives retention same as Cook; prepMethod kept in sync for header display) -->
             <select
               value="prep"
               onchange={() => { sections = sections.map((s, i) => i === sIdx ? { ...s, isPrepStep: false, prepMethod: undefined } : s); }}
@@ -2262,11 +2262,11 @@
               <option value="cook">Cook</option>
             </select>
             <select
-              value={sec.prepMethod ?? 'raw'}
-              onchange={(e) => { sections = sections.map((s, i) => i === sIdx ? { ...s, prepMethod: (e.currentTarget as HTMLSelectElement).value } : s); }}
+              value={sec.cookingMethod}
+              onchange={(e) => { const v = (e.currentTarget as HTMLSelectElement).value; sections = sections.map((s, i) => i === sIdx ? { ...s, cookingMethod: v, prepMethod: v } : s); }}
               class="form-input section-method-select section-prep-select"
             >
-              {#each SECTION_PREP_METHODS as m}
+              {#each SECTION_COOKING_METHODS as m}
                 <option value={m}>{m}</option>
               {/each}
             </select>
@@ -2274,7 +2274,7 @@
             <!-- Cook step: type toggle + cookingMethod select -->
             <select
               value="cook"
-              onchange={() => { sections = sections.map((s, i) => i === sIdx ? { ...s, isPrepStep: true, prepMethod: s.prepMethod ?? 'raw' } : s); }}
+              onchange={() => { sections = sections.map((s, i) => i === sIdx ? { ...s, isPrepStep: true, prepMethod: s.cookingMethod } : s); }}
               class="form-input section-type-select"
               title="Switch to Prep step"
             >
