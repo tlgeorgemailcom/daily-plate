@@ -605,7 +605,7 @@
   }
   function addSection() {
     const key = uniqueSectionKey('section_' + (sections.length + 1));
-    sections = [...sections, { key, label: '', cookingMethod: 'baked', yieldFactorWater: 1.0 }];
+    sections = [...sections, { key, label: '', prepMethod: 'baked', cookingMethod: 'baked', yieldFactorWater: 1.0 }];
   }
   function removeSection(idx: number) {
     const removedKey = sections[idx]?.key;
@@ -642,7 +642,7 @@
   function addSectionWithRow() {
     const idx = sections.length;
     const key = uniqueSectionKey(`section_${idx + 1}`);
-    sections = [...sections, { key, label: '', cookingMethod: 'baked', yieldFactorWater: 1.0 }];
+    sections = [...sections, { key, label: '', prepMethod: 'baked', cookingMethod: 'baked', yieldFactorWater: 1.0 }];
     addIngredientToSection(key);
   }
 
@@ -2245,6 +2245,17 @@
             class="form-input section-label-input"
           />
           <span class="section-card-dash">—</span>
+          <select
+            value={sec.prepMethod ?? sec.cookingMethod}
+            onchange={(e) => { sections = sections.map((s, i) => i === sIdx ? { ...s, prepMethod: (e.currentTarget as HTMLSelectElement).value } : s); }}
+            class="form-input section-method-select section-prep-select"
+            title="Prep method (how ingredients are prepared before cooking)"
+          >
+            {#each SECTION_COOKING_METHODS as m}
+              <option value={m}>{m}</option>
+            {/each}
+          </select>
+          <span class="section-arrow" title="prep → cook">→</span>
           <select bind:value={sec.cookingMethod} class="form-input section-method-select">
             {#each SECTION_COOKING_METHODS as m}
               <option value={m}>{m}</option>
@@ -3096,14 +3107,22 @@
     color: #2d3748;
   }
   .section-header-bar .section-method-select {
-    flex: 0 0 110px;
+    flex: 0 0 100px;
     padding: 5px 6px;
     font-size: 0.85rem;
     background: white;
   }
+  .section-header-bar .section-prep-select {
+    background: #f7fafc;
+  }
   .section-card-dash {
     color: #a0aec0;
     font-weight: 600;
+  }
+  .section-arrow {
+    color: #a0aec0;
+    font-size: 0.8rem;
+    flex-shrink: 0;
   }
   .section-gear-btn {
     background: transparent;
