@@ -250,7 +250,11 @@ export function buildRecipeCommunity(
       const m = method.toLowerCase();
       if (m === 'sub-simmer') return 180;
       if (m === 'simmer')     return 195;
+      if (m === 'braise')     return 185;  // covered — temp ≈ open 275°F oven max
       return 212;
+    }
+    function prepMethodIsLidOn(method: string | undefined | null): boolean {
+      return method?.toLowerCase() === 'braise';
     }
 
     // Chained (hasPrepStep): yfw_total = yfw_prep × yfw_primary (compounding).
@@ -276,7 +280,8 @@ export function buildRecipeCommunity(
           const retainedWaterG_prep = dryNonWaterG * weightedFactor_prep / (1 - weightedFactor_prep);
           yfw_prep = initialWaterG > 0 ? retainedWaterG_prep / initialWaterG : 1.0;
         } else {
-          yfw_prep = calcYieldWater([], initialWaterG, fillingClass, boilMinutes, prepMethodToTempF(sec.prepMethod));
+          yfw_prep = calcYieldWater([], initialWaterG, fillingClass, boilMinutes,
+            prepMethodToTempF(sec.prepMethod), prepMethodIsLidOn(sec.prepMethod));
         }
       } else {
         // Non-boiled prep (steamed, fried, etc.): use evaporation model with no oven stages.

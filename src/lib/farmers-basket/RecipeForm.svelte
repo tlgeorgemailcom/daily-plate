@@ -156,7 +156,15 @@
   const COOKING_METHODS = ['Bake', 'Boil', 'Grill', 'Fry', 'No heat'];
   // v3.md §18.1 — lowercase enum stored in recipe_sections.csv::cooking_method.
   const SECTION_COOKING_METHODS = ['raw', 'boiled', 'steamed', 'baked', 'fried', 'pan grilled', 'grilled', 'microwave'];
-  const SECTION_PREP_METHODS    = ['boiled', 'simmer', 'sub-simmer', 'steamed', 'blanched', 'baked', 'par-baked', 'fried', 'pan grilled', 'grilled', 'marinated', 'chilled', 'microwave'];
+  const SECTION_PREP_METHODS    = ['boiled', 'simmer', 'sub-simmer', 'braise', 'steamed', 'blanched', 'baked', 'par-baked', 'fried', 'pan grilled', 'grilled', 'marinated', 'chilled', 'microwave'];
+  // Display labels for prep methods — stored values are clean identifiers;
+  // UI annotations clarify open-pot vs covered assumption for the water model.
+  const PREP_METHOD_DISPLAY: Record<string, string> = {
+    'boiled':     'boiled (lid off)',
+    'simmer':     'simmer (lid off)',
+    'sub-simmer': 'sub-simmer (lid off)',
+    'braise':     'braise (covered)',
+  };
   // v3.md §18.6 — datalist suggestions; free-typing is always allowed.
   const SECTION_LABEL_VOCAB = [
     'base', 'batter', 'broth', 'cold prep', 'crust', 'dough', 'filling',
@@ -2272,7 +2280,7 @@
           >
             <option value="none">no heat</option>
             {#each SECTION_PREP_METHODS as m}
-              <option value={m}>{m}</option>
+              <option value={m}>{PREP_METHOD_DISPLAY[m] ?? m}</option>
             {/each}
           </select>
           {#if moderatorMode}
@@ -2291,7 +2299,7 @@
             aria-label="Remove section"
           >✕</button>
         </div>
-        {#if sec.prepMethod && ['boiled','simmer','sub-simmer','steamed','blanched','baked','par-baked','fried','pan grilled','grilled','microwave'].includes(sec.prepMethod)}
+        {#if sec.prepMethod && ['boiled','simmer','sub-simmer','braise','steamed','blanched','baked','par-baked','fried','pan grilled','grilled','microwave'].includes(sec.prepMethod)}
           <div class="section-times-bar">
             <label class="section-time-field" title="Time for the prep step in minutes">
               <span class="section-time-label">Prep (min)</span>
@@ -2574,7 +2582,11 @@
             <p>Some sections need cooking <strong>before</strong> they join the rest of the dish. Pick the method that applies:</p>
             <ul>
               <li><strong>no heat</strong> — ingredients go in as-is (cold, raw, or already cooked). This is correct for most sections.</li>
-              <li><strong>boiled / simmer / sub-simmer / steamed</strong> — stovetop pre-cook. Enter Prep (min) so the model knows how much water evaporated before assembly. <em>boiled</em> uses 212 °F (rolling boil); <em>simmer</em> 195 °F (gentle bubble); <em>sub-simmer</em> 180 °F (stock / braise pace).</li>
+              <li><strong>boiled (lid off)</strong> — rolling boil, 212 °F, uncovered. Blanching, par-boiling.</li>
+              <li><strong>simmer (lid off)</strong> — 195 °F, uncovered. Sauce reductions, hollandaise bases.</li>
+              <li><strong>sub-simmer (lid off)</strong> — 180 °F, uncovered. Concentrating stock, uncovered slow stews.</li>
+              <li><strong>braise (covered)</strong> — 185 °F, <em>lid on</em>. Model uses only 5 % of open-pot evaporation (steam recondenses on lid and drips back). Use for any covered braise, covered stew, or Dutch-oven prep step.</li>
+              <li><strong>steamed</strong> — steam basket or steamer insert.</li>
               <li><strong>baked / par-baked</strong> — pre-baked separately (e.g. blind-baking a pie crust). Enter Prep (min) and Prep (°F).</li>
               <li><strong>pan grilled / fried</strong> — sautéed or fried before combining. If fat drains off and is discarded, the model removes those calories from that section.</li>
               <li><strong>marinated / chilled</strong> — cold prep only; no heat calculations apply.</li>

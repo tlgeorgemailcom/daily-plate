@@ -577,14 +577,18 @@ def _build_recipe_multi(
             # Handles: oven-only, boil-only, and boil-then-bake sequences.
             boil_min = float(s.boil_stages) if s.boil_stages else 0.0
             stages   = _parse_stages(s.cook_stages) if s.cook_stages else []
-            # Pass stovetop temperature so simmer/sub-simmer use reduced evap rate.
+            # Pass stovetop temperature and lid flag so all method variants compute
+            # the correct evaporation rate.
             _boil_temp = (
                 180.0 if s.cook_method in ('sub-simmer', 'sub_simmer') else
                 195.0 if s.cook_method == 'simmer' else
+                185.0 if s.cook_method in ('braise', 'braised') else
                 212.0
             )
+            _boil_covered = s.cook_method in ('braise', 'braised')
             yfw = calc_yield_water(stages, st["raw_water"], s.filling_class,
-                                   boil_minutes=boil_min, boil_temp_f=_boil_temp)
+                                   boil_minutes=boil_min, boil_temp_f=_boil_temp,
+                                   boil_covered=_boil_covered)
         else:
             yfw = 1.0
         yff = s.yield_factor_fat

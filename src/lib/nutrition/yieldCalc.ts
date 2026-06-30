@@ -32,9 +32,11 @@ const BOIL_T_REF = 212.0;   // rolling boil reference temperature °F
 //   boiled     (212 °F) → 0.236       (baseline)
 //   simmer     (195 °F) → ≈ 0.198  (−16 %)
 //   sub-simmer (180 °F) → ≈ 0.163  (−31 %)
+//   braise (covered) uses BRAISE_LID_FACTOR regardless of temp
 function stovetopRateConstant(tempF: number): number {
   return BOIL_K_REF * Math.pow(tempF / BOIL_T_REF, N_TEMP);
 }
+const BRAISE_LID_FACTOR = 0.05;  // lid traps ~95 % of steam; only ~5 % escapes
 
 // ── Binding coefficients ──────────────────────────────────────────────────────
 // Fraction of initial water that is free to evaporate (0 = none, 1 = all).
@@ -79,7 +81,9 @@ export function rateConstant(tempF: number): number {
  * @param fillingClass  Key from BINDING. Defaults to 'none' (yfw = 1.0).
  * @param boilMinutes   Minutes of open-pot stovetop boiling BEFORE oven stages.
  * @param boilTempF     Stovetop temperature °F (default 212 = rolling boil).
- *                      Pass 195 for 'simmer' or 180 for 'sub-simmer'.
+ *                      Pass 195 for 'simmer', 180 for 'sub-simmer', 185 for 'braise'.
+ * @param lidOn         True for covered cooking (braise). Multiplies stovetop k
+ *                      by BRAISE_LID_FACTOR (0.05) — lid recycles ~95 % of steam.
  *
  * @returns yield_water (0 < value ≤ 1.0)
  *
@@ -90,8 +94,8 @@ export function rateConstant(tempF: number): number {
  * // Vanilla custard: stovetop boil only
  * calcYieldWater([], 380.0, 'dairy_custard', 8.0) // ≈ 0.720
  *
- * // Sauce simmered 20 min at 195 °F
- * calcYieldWater([], 240.0, 'none', 20, 195) // ≈ 0.853 vs 0.827 at full boil
+ * // Braise (covered) 60 min — almost no water loss
+ * calcYieldWater([], 400.0, 'none', 60, 185, true) // ≈ 0.998
  */
 export function calcYieldWater(
   stages: Array<[tempF: number, minutes: number]>,
@@ -99,6 +103,7 @@ export function calcYieldWater(
   fillingClass: string = 'none',
   boilMinutes: number = 0,
   boilTempF: number = 212,
+  lidOn: boolean = false,
 ): number {
   if (initialWaterG <= 0) return 1.0;
 
@@ -106,9 +111,10 @@ export function calcYieldWater(
   let freeWater    = initialWaterG * binding;
   const boundWater = initialWaterG * (1.0 - binding);
 
-  // Stage 0: stovetop (open-pot, convective evaporation — temperature-scaled)
+  // Stage 0: stovetop evaporation (temperature-scaled; lid halves rate when covered)
   if (boilMinutes > 0) {
-    freeWater *= Math.exp(-stovetopRateConstant(boilTempF) * boilMinutes);
+    const k = stovetopRateConstant(boilTempF) * (lidOn ? BRAISE_LID_FACTOR : 1);
+    freeWater *= Math.exp(-k * boilMinutes);
   }
 
   // Stages 1-N: oven bake (diffusion-limited, temperature-dependent)

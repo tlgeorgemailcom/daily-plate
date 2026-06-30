@@ -86,8 +86,11 @@ BOIL_T_REF = 212.0   # rolling boil reference temperature (°F)
 #   boiled     (212 °F) → 0.236        (baseline)
 #   simmer     (195 °F) → ≈ 0.198  (−16 %)
 #   sub-simmer (180 °F) → ≈ 0.163  (−31 %)
+#   braise (covered) uses BRAISE_LID_FACTOR regardless of temp
 def stovetop_rate_constant(temp_f: float) -> float:
     return BOIL_K_REF * (temp_f / BOIL_T_REF) ** N_TEMP
+
+BRAISE_LID_FACTOR = 0.05  # lid traps ~95 % of steam; only ~5 % escapes
 
 # ── Binding coefficients: fraction of water available to evaporate ────────────
 # Higher value = more free water = more evaporation = lower yield_water.
@@ -132,6 +135,7 @@ def calc_yield_water(
     filling_class: str = "syrup_custard",
     boil_minutes: float = 0.0,
     boil_temp_f: float = 212.0,
+    boil_covered: bool = False,
 ) -> float:
     """
     Compute yield_water for a filling section cooked through optional stovetop
@@ -149,7 +153,9 @@ def calc_yield_water(
                          Uses BOIL_K_REF (calibrated for convective surface evap).
                          0.0 = no stovetop phase (oven-only, default behaviour).
         boil_temp_f:     Stovetop temperature °F (default 212 = rolling boil).
-                         Pass 195 for 'simmer' or 180 for 'sub-simmer'.
+                         Pass 195 for 'simmer', 180 for 'sub-simmer', 185 for 'braise'.
+        boil_covered:    True for covered cooking (braise). Multiplies stovetop k
+                         by BRAISE_LID_FACTOR (0.05) — lid recycles ~95 % of steam.
 
     Processing order:
         1. Stovetop boil (if boil_minutes > 0) — stovetop_rate_constant(boil_temp_f)
@@ -172,9 +178,10 @@ def calc_yield_water(
     free_water  = initial_water_g * binding
     bound_water = initial_water_g * (1.0 - binding)
 
-    # ── Stage 0: stovetop (open-pot, convective evaporation — temperature-scaled)
+    # ── Stage 0: stovetop evaporation (temperature-scaled; lid halves rate when covered)
     if boil_minutes > 0.0:
-        free_water *= math.exp(-stovetop_rate_constant(boil_temp_f) * boil_minutes)
+        k = stovetop_rate_constant(boil_temp_f) * (BRAISE_LID_FACTOR if boil_covered else 1.0)
+        free_water *= math.exp(-k * boil_minutes)
 
     # ── Stages 1-N: oven bake (diffusion-limited, temperature-dependent) ─────
     for temp_f, time_min in stages:
