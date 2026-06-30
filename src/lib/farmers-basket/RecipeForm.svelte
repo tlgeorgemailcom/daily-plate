@@ -29,6 +29,8 @@
   export interface RecipeSection {
     key: string;
     label: string;
+    /** What the cook does to prepare this section — display-only label (from prep_method in recipe_sections.csv). */
+    prepMethod?: string;
     cookingMethod: string;
     yieldFactorWater?: number;
     yieldFactorFat?: number;
@@ -579,7 +581,13 @@
     const meta = sections.find((s) => s.key === sectionKey);
     if (meta) {
       const label = meta.label || (sectionKey.charAt(0).toUpperCase() + sectionKey.slice(1));
-      return meta.cookingMethod ? `${label} — ${meta.cookingMethod}` : `${label}:`;
+      if (meta.cookingMethod) {
+        if (meta.prepMethod && meta.prepMethod !== meta.cookingMethod) {
+          return `${label} — ${meta.prepMethod} → ${meta.cookingMethod}`;
+        }
+        return `${label} — ${meta.cookingMethod}`;
+      }
+      return `${label}:`;
     }
     return sectionKey.charAt(0).toUpperCase() + sectionKey.slice(1) + ':';
   }
@@ -842,6 +850,7 @@
     sections?: Array<{
       section_key: string;
       section_label: string;
+      prep_method?: string;
       cooking_method: string;
       yield_factor_water?: number;
       yield_factor_fat?: number;
@@ -883,6 +892,7 @@
           sections = data.sections.map((s) => ({
             key: s.section_key,
             label: autoLabel ?? s.section_label,
+            prepMethod: s.prep_method ?? undefined,
             cookingMethod: s.cooking_method,
             yieldFactorWater: s.yield_factor_water,
             yieldFactorFat: s.yield_factor_fat,
@@ -1452,6 +1462,7 @@
             nextSections = data.sections.map((s: Record<string, unknown>) => ({
               key: String(s.section_key ?? s.key ?? ''),
               label: String(s.section_label ?? s.label ?? ''),
+              prepMethod: typeof s.prep_method === 'string' ? s.prep_method : undefined,
               cookingMethod: String(s.cooking_method ?? s.cookingMethod ?? 'baked'),
               yieldFactorWater: typeof s.yield_factor_water === 'number' ? s.yield_factor_water : (typeof s.yieldFactorWater === 'number' ? s.yieldFactorWater : undefined),
               yieldFactorFat: typeof s.yield_factor_fat === 'number' ? s.yield_factor_fat : (typeof s.yieldFactorFat === 'number' ? s.yieldFactorFat : undefined),
