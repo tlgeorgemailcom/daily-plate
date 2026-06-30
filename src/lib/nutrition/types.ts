@@ -78,6 +78,7 @@ export interface CommunitySection {
   cookTempF?: number;       // oven temp °F — used when stages[] is absent
   cookMinutes?: number;     // oven time in minutes — used when stages[] is absent
   boilMinutes?: number;     // stovetop boil/simmer time in minutes
+  prepTempF?: number;       // oven temp °F for a baked/par-baked prep step
   /** Multi-stage oven sequence.  When present, overrides cookTempF/cookMinutes.
    *  Each element is one sequential oven stage: [tempF, minutes].
    *  Example: twice-baked potato — stage 1 [400,60] then stage 2 [375,30].

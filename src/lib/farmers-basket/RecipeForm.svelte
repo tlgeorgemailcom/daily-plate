@@ -38,6 +38,8 @@
     yieldFactorOther?: number;
     /** Stovetop uncovered time for the prep step in minutes (feeds calcYieldWater prep pass). */
     boilMinutes?: number;
+    /** Oven temperature °F for a baked/par-baked prep step. */
+    prepTempF?: number;
   }
   
   export interface RecipeInstruction {
@@ -2267,7 +2269,7 @@
             class="form-input section-method-select"
             title="How this section is prepared before the primary cook"
           >
-            <option value="none">no prep</option>
+            <option value="none">no heat</option>
             {#each SECTION_PREP_METHODS as m}
               <option value={m}>{m}</option>
             {/each}
@@ -2288,9 +2290,9 @@
             aria-label="Remove section"
           >✕</button>
         </div>
-        {#if sec.prepMethod === 'boiled' || sec.prepMethod === 'steamed'}
+        {#if sec.prepMethod && ['boiled','steamed','blanched','baked','par-baked','fried','pan grilled','grilled','microwave'].includes(sec.prepMethod)}
           <div class="section-times-bar">
-            <label class="section-time-field" title="Stovetop time for the pre-step (uncovered), in minutes">
+            <label class="section-time-field" title="Time for the prep step in minutes">
               <span class="section-time-label">Prep (min)</span>
               <input
                 type="number" min="0" max="600" step="1" placeholder="–"
@@ -2299,6 +2301,17 @@
                 class="form-input time-number-input"
               />
             </label>
+            {#if sec.prepMethod === 'baked' || sec.prepMethod === 'par-baked'}
+              <label class="section-time-field" title="Oven temperature °F for the prep step">
+                <span class="section-time-label">Prep (°F)</span>
+                <input
+                  type="number" min="200" max="600" step="25" placeholder="–"
+                  value={sec.prepTempF ?? ''}
+                  oninput={(e) => { const v = (e.currentTarget as HTMLInputElement).valueAsNumber; sections = sections.map((s, i) => i === sIdx ? { ...s, prepTempF: Number.isFinite(v) && v > 0 ? v : undefined } : s); }}
+                  class="form-input time-number-input"
+                />
+              </label>
+            {/if}
           </div>
         {/if}
         {#if moderatorMode && sectionAdvancedOpen[sIdx]}
