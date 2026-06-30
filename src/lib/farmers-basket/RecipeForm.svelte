@@ -2280,13 +2280,13 @@
           <span class="section-card-dash">—</span>
           <!-- Prep method for this section (fires before the recipe-level primary Cook) -->
           <select
-            bind:value={sections[sIdx].prepMethod}
+            onchange={(e) => { const v = (e.currentTarget as HTMLSelectElement).value; sections = sections.map((s, i) => i === sIdx ? { ...s, prepMethod: v } : s); }}
             class="form-input section-method-select"
             title="How this section is prepared before the primary cook"
           >
-            <option value="none">no heat</option>
+            <option value="none" selected={!sec.prepMethod || sec.prepMethod === 'none'}>no heat</option>
             {#each SECTION_PREP_METHODS as m}
-              <option value={m}>{PREP_METHOD_DISPLAY[m] ?? m}</option>
+              <option value={m} selected={sec.prepMethod === m}>{PREP_METHOD_DISPLAY[m] ?? m}</option>
             {/each}
           </select>
           {#if moderatorMode}
