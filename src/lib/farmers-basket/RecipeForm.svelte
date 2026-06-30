@@ -3254,7 +3254,7 @@
     color: #4a5568;
   }
   .time-number-input {
-    width: 64px;
+    width: 80px;
     padding: 3px 6px;
     font-size: 0.85rem;
     text-align: center;
