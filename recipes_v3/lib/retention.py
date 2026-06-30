@@ -46,6 +46,8 @@ COOK_METHOD_ALIASES = {
     "boil":       "boiled",
     "boiled":     "boiled",
     "simmer":     "boiled",
+    "sub-simmer": "boiled",
+    "sub_simmer": "boiled",
     "stew":       "boiled",
     "poach":      "boiled",
     "blanch":     "boiled",

@@ -553,7 +553,9 @@ def _build_recipe_multi(
         #   2. Manual yield_factor_water override from recipe_sections.csv.
         #   3. Physics-based evaporation model (calc_yield_water).
         #   4. Default yfw=1.0 (no water change).
-        if s.cook_method in ('boiled', 'simmered') and st["absorbers"]:
+        # Check against the normalised method so 'simmer' / 'sub-simmer' also
+        # trigger the absorption model (they all normalise to 'boiled').
+        if method == 'boiled' and st["absorbers"]:
             total_absorber_g = sum(g for g, _ in st["absorbers"])
             weighted_factor  = sum(g * f for g, f in st["absorbers"]) / total_absorber_g
             dry_non_water_g  = st["raw_total"] - st["raw_water"]
@@ -575,8 +577,14 @@ def _build_recipe_multi(
             # Handles: oven-only, boil-only, and boil-then-bake sequences.
             boil_min = float(s.boil_stages) if s.boil_stages else 0.0
             stages   = _parse_stages(s.cook_stages) if s.cook_stages else []
+            # Pass stovetop temperature so simmer/sub-simmer use reduced evap rate.
+            _boil_temp = (
+                180.0 if s.cook_method in ('sub-simmer', 'sub_simmer') else
+                195.0 if s.cook_method == 'simmer' else
+                212.0
+            )
             yfw = calc_yield_water(stages, st["raw_water"], s.filling_class,
-                                   boil_minutes=boil_min)
+                                   boil_minutes=boil_min, boil_temp_f=_boil_temp)
         else:
             yfw = 1.0
         yff = s.yield_factor_fat
