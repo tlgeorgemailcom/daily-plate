@@ -38,10 +38,6 @@
     yieldFactorOther?: number;
     /** Stovetop uncovered time for the prep step in minutes (feeds calcYieldWater prep pass). */
     boilMinutes?: number;
-    /** Primary cook time in minutes (baked: oven time; boiled: stove time). */
-    cookMinutes?: number;
-    /** Primary cook temperature °F for baked sections (feeds oven stages in calcYieldWater). */
-    cookTempF?: number;
   }
   
   export interface RecipeInstruction {
@@ -76,6 +72,8 @@
     dishName: string;       // common dish name e.g. "Apple Pie"
     recipeSuffix: string;   // personal suffix e.g. "Grandma's"
     cookingMethod: string;  // Bake | Boil | Grill | Fry | No heat
+    cookMinutes?: number;         // Primary cook time in minutes (recipe-level)
+    cookTempF?: number;           // Oven temperature °F (recipe-level, Bake only)
     category: string;
     dietaryCategory: DietaryCategory;
     submitterName: string;
@@ -171,6 +169,8 @@
   let dishName = $state(initialData.dishName || (initialData.recipeName?.includes(' — ') ? initialData.recipeName.split(' — ')[0] : initialData.recipeName || ''));
   let recipeSuffix = $state(initialData.recipeSuffix || (initialData.recipeName?.includes(' — ') ? initialData.recipeName.split(' — ')[1] : ''));
   let cookingMethod = $state(initialData.cookingMethod || 'Bake');
+  let cookMinutes = $state<number | undefined>(initialData.cookMinutes);
+  let cookTempF = $state<number | undefined>(initialData.cookTempF);
   let dishFamily = $state(initialData.dishFamily || '');
   let category = $state(toStoredRecipeCategory(initialData.category));
   let dietaryCategory = $state<DietaryCategory>(initialData.dietaryCategory || 'all');
@@ -614,7 +614,7 @@
   }
   function addSection() {
     const key = uniqueSectionKey('section_' + (sections.length + 1));
-    sections = [...sections, { key, label: '', prepMethod: undefined, cookingMethod: 'baked', yieldFactorWater: 1.0, boilMinutes: undefined, cookMinutes: undefined, cookTempF: undefined }];
+    sections = [...sections, { key, label: '', prepMethod: undefined, cookingMethod: 'baked', yieldFactorWater: 1.0, boilMinutes: undefined }];
   }
   function removeSection(idx: number) {
     const removedKey = sections[idx]?.key;
@@ -651,7 +651,7 @@
   function addSectionWithRow() {
     const idx = sections.length;
     const key = uniqueSectionKey(`section_${idx + 1}`);
-    sections = [...sections, { key, label: '', prepMethod: undefined, cookingMethod: 'baked', yieldFactorWater: 1.0, boilMinutes: undefined, cookMinutes: undefined, cookTempF: undefined }];
+    sections = [...sections, { key, label: '', prepMethod: undefined, cookingMethod: 'baked', yieldFactorWater: 1.0, boilMinutes: undefined }];
     addIngredientToSection(key);
   }
 
@@ -1208,6 +1208,8 @@
       dishName: dishName.trim(),
       recipeSuffix: recipeSuffix.trim(),
       cookingMethod,
+      cookMinutes: cookMinutes ?? undefined,
+      cookTempF: cookTempF ?? undefined,
       dishFamily: dishFamily || undefined,
       category,
       dietaryCategory,
@@ -1238,7 +1240,11 @@
       instructions: instructions.filter(i => i.text.trim()),
       foodSupply: moderatorMode ? foodSupply : undefined,
       nutritionComplete: linked || undefined,
-      ...(sections.length > 0 ? { sections } : {})
+      ...(sections.length > 0 ? {
+        // Inject recipe-level cook time/temp into every section so the pipeline
+        // can build oven stages without needing per-section overrides.
+        sections: sections.map(s => ({ ...s, cookMinutes: cookMinutes ?? undefined, cookTempF: cookTempF ?? undefined }))
+      } : {})
     };
     
     onsubmit(data);
@@ -1521,6 +1527,8 @@
     dishName: dishName.trim(),
     recipeSuffix: recipeSuffix.trim(),
     cookingMethod,
+    cookMinutes: cookMinutes ?? undefined,
+    cookTempF: cookTempF ?? undefined,
     dishFamily: dishFamily || undefined,
     category,
     dietaryCategory,
@@ -1608,7 +1616,31 @@
             <option value={m}>{m}</option>
           {/each}
         </select>
-        <span class="field-hint">The primary cooking method — applies to all ingredients. Sections may add a pre-step below.</span>
+        {#if cookingMethod !== 'No heat'}
+          <div class="cook-timing-row">
+            <label class="section-time-field" title="Total cook time in minutes">
+              <span class="section-time-label">{cookingMethod === 'Bake' ? 'Bake (min)' : 'Cook (min)'}</span>
+              <input
+                type="number" min="0" max="600" step="1" placeholder="–"
+                value={cookMinutes ?? ''}
+                oninput={(e) => { const v = (e.currentTarget as HTMLInputElement).valueAsNumber; cookMinutes = Number.isFinite(v) && v >= 0 ? v : undefined; }}
+                class="form-input time-number-input"
+              />
+            </label>
+            {#if cookingMethod === 'Bake'}
+              <label class="section-time-field" title="Oven temperature °F">
+                <span class="section-time-label">Temp (°F)</span>
+                <input
+                  type="number" min="200" max="600" step="25" placeholder="–"
+                  value={cookTempF ?? ''}
+                  oninput={(e) => { const v = (e.currentTarget as HTMLInputElement).valueAsNumber; cookTempF = Number.isFinite(v) && v > 0 ? v : undefined; }}
+                  class="form-input time-number-input"
+                />
+              </label>
+            {/if}
+          </div>
+        {/if}
+        <span class="field-hint">The primary cooking method — applies to all sections. Sections may add a stovetop pre-step below.</span>
       </label>
     </div>
     
@@ -2290,40 +2322,17 @@
             aria-label="Remove section"
           >✕</button>
         </div>
-        {#if cookingMethod !== 'No heat' || (sec.prepMethod === 'boiled' || sec.prepMethod === 'steamed')}
+        {#if sec.prepMethod === 'boiled' || sec.prepMethod === 'steamed'}
           <div class="section-times-bar">
-            {#if sec.prepMethod === 'boiled' || sec.prepMethod === 'steamed'}
-              <label class="section-time-field" title="Stovetop time for the pre-step (uncovered), in minutes">
-                <span class="section-time-label">Prep (min)</span>
-                <input
-                  type="number" min="0" max="600" step="1" placeholder="–"
-                  value={sec.boilMinutes ?? ''}
-                  oninput={(e) => { const v = (e.currentTarget as HTMLInputElement).valueAsNumber; sections = sections.map((s, i) => i === sIdx ? { ...s, boilMinutes: Number.isFinite(v) && v >= 0 ? v : undefined } : s); }}
-                  class="form-input time-number-input"
-                />
-              </label>
-              <span class="section-time-arrow">→</span>
-            {/if}
-            <label class="section-time-field" title="Total cook time for this section, in minutes">
-              <span class="section-time-label">Cook (min)</span>
+            <label class="section-time-field" title="Stovetop time for the pre-step (uncovered), in minutes">
+              <span class="section-time-label">Prep (min)</span>
               <input
                 type="number" min="0" max="600" step="1" placeholder="–"
-                value={sec.cookMinutes ?? ''}
-                oninput={(e) => { const v = (e.currentTarget as HTMLInputElement).valueAsNumber; sections = sections.map((s, i) => i === sIdx ? { ...s, cookMinutes: Number.isFinite(v) && v >= 0 ? v : undefined } : s); }}
+                value={sec.boilMinutes ?? ''}
+                oninput={(e) => { const v = (e.currentTarget as HTMLInputElement).valueAsNumber; sections = sections.map((s, i) => i === sIdx ? { ...s, boilMinutes: Number.isFinite(v) && v >= 0 ? v : undefined } : s); }}
                 class="form-input time-number-input"
               />
             </label>
-            {#if cookingMethod === 'Bake'}
-              <label class="section-time-field" title="Oven temperature °F for the primary bake">
-                <span class="section-time-label">Temp (°F)</span>
-                <input
-                  type="number" min="200" max="600" step="25" placeholder="–"
-                  value={sec.cookTempF ?? ''}
-                  oninput={(e) => { const v = (e.currentTarget as HTMLInputElement).valueAsNumber; sections = sections.map((s, i) => i === sIdx ? { ...s, cookTempF: Number.isFinite(v) && v > 0 ? v : undefined } : s); }}
-                  class="form-input time-number-input"
-                />
-              </label>
-            {/if}
           </div>
         {/if}
         {#if moderatorMode && sectionAdvancedOpen[sIdx]}
@@ -3187,6 +3196,13 @@
   }
   .section-gear-btn:hover { background: #edf2f7; }
   .section-remove-btn { padding: 2px 8px; }
+  .cook-timing-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 6px;
+  }
   .section-times-bar {
     display: flex;
     align-items: center;
