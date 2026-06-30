@@ -2260,15 +2260,15 @@
             class="form-input section-label-input"
           />
           <span class="section-card-dash">—</span>
-          <!-- Section pre-step (optional): fires before the recipe-level primary Cook -->
+          <!-- Prep method for this section (fires before the recipe-level primary Cook) -->
           <select
             value={sec.prepMethod ?? 'none'}
             onchange={(e) => { const v = (e.currentTarget as HTMLSelectElement).value; sections = sections.map((s, i) => i === sIdx ? { ...s, prepMethod: v === 'none' ? undefined : v } : s); }}
             class="form-input section-method-select"
-            title="Optional pre-step before the primary cook"
+            title="How this section is prepared before the primary cook"
           >
-            <option value="none">no pre-step</option>
-            {#each SECTION_COOKING_METHODS as m}
+            <option value="none">raw / no prep</option>
+            {#each SECTION_PREP_METHODS as m}
               <option value={m}>{m}</option>
             {/each}
           </select>
