@@ -153,7 +153,7 @@
   const GAME_FOODS = Object.keys(FOOD_EMOJI) as FoodType[];
   const ANIMAL_TYPES: AnimalType[] = ['rabbit', 'squirrel', 'raccoon', 'bird', 'mouse', 'fox'];
   
-  const COOKING_METHODS = ['Bake', 'Boil', 'Simmer', 'Sub-simmer', 'Braise', 'Grill', 'Fry', 'No heat'];
+  const COOKING_METHODS = ['Bake', 'Boil', 'Simmer', 'Sub-simmer', 'Braise', 'Pan grill', 'Fry', 'No heat'];
   const COOK_METHOD_DISPLAY: Record<string, string> = {
     'Boil':      'Boil (lid off)',
     'Simmer':    'Simmer (lid off)',
@@ -2585,7 +2585,7 @@
               <li><strong>Simmer (lid off)</strong> — 195 °F, uncovered. Sauce reductions, soups.</li>
               <li><strong>Sub-simmer (lid off)</strong> — 180 °F, uncovered. Concentrating stock.</li>
               <li><strong>Braise (covered)</strong> — 185 °F, lid on. ~5 % of open-pot evaporation. Covered stews, pot roasts, Dutch-oven braises.</li>
-              <li><strong>Grill / Fry</strong> — dry heat; no water model applied.</li>
+              <li><strong>Pan grill / Fry</strong> — dry heat; no water model applied.</li>
             </ul>
 
             <h4 class="cook-help-section">Each section's Prep method</h4>
