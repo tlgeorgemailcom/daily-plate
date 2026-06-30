@@ -2245,6 +2245,7 @@
             class="form-input section-label-input"
           />
           <span class="section-card-dash">—</span>
+          <span class="section-method-label">Prep</span>
           <select
             value={sec.prepMethod ?? sec.cookingMethod}
             onchange={(e) => { sections = sections.map((s, i) => i === sIdx ? { ...s, prepMethod: (e.currentTarget as HTMLSelectElement).value } : s); }}
@@ -2256,6 +2257,7 @@
             {/each}
           </select>
           <span class="section-arrow" title="prep → cook">→</span>
+          <span class="section-method-label">Cook</span>
           <select bind:value={sec.cookingMethod} class="form-input section-method-select">
             {#each SECTION_COOKING_METHODS as m}
               <option value={m}>{m}</option>
@@ -3122,6 +3124,14 @@
   .section-arrow {
     color: #a0aec0;
     font-size: 0.8rem;
+    flex-shrink: 0;
+  }
+  .section-method-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #718096;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
     flex-shrink: 0;
   }
   .section-gear-btn {
