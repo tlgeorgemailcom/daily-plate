@@ -631,7 +631,7 @@
   }
   function addSection() {
     const key = uniqueSectionKey('section_' + (sections.length + 1));
-    sections = [...sections, { key, label: '', prepMethod: undefined, cookingMethod: 'baked', yieldFactorWater: 1.0, boilMinutes: undefined }];
+    sections = [...sections, { key, label: '', prepMethod: 'none', cookingMethod: 'baked', yieldFactorWater: 1.0, boilMinutes: undefined }];
   }
   function removeSection(idx: number) {
     const removedKey = sections[idx]?.key;
@@ -668,7 +668,7 @@
   function addSectionWithRow() {
     const idx = sections.length;
     const key = uniqueSectionKey(`section_${idx + 1}`);
-    sections = [...sections, { key, label: '', prepMethod: undefined, cookingMethod: 'baked', yieldFactorWater: 1.0, boilMinutes: undefined }];
+    sections = [...sections, { key, label: '', prepMethod: 'none', cookingMethod: 'baked', yieldFactorWater: 1.0, boilMinutes: undefined }];
     addIngredientToSection(key);
   }
 
@@ -918,7 +918,7 @@
           sections = data.sections.map((s) => ({
             key: s.section_key,
             label: autoLabel ?? s.section_label,
-            prepMethod: (s.prep_method === 'raw' || !s.prep_method) ? undefined : s.prep_method,
+            prepMethod: (!s.prep_method || s.prep_method === 'raw') ? 'none' : s.prep_method,
             cookingMethod: s.cooking_method,
             yieldFactorWater: s.yield_factor_water,
             yieldFactorFat: s.yield_factor_fat,
@@ -1494,7 +1494,7 @@
             nextSections = data.sections.map((s: Record<string, unknown>) => ({
               key: String(s.section_key ?? s.key ?? ''),
               label: String(s.section_label ?? s.label ?? ''),
-              prepMethod: (() => { const v = typeof s.prep_method === 'string' ? s.prep_method : (typeof s.prepMethod === 'string' ? s.prepMethod : undefined); return (v === 'raw' || !v) ? undefined : v; })(),
+              prepMethod: (() => { const v = typeof s.prep_method === 'string' ? s.prep_method : (typeof s.prepMethod === 'string' ? s.prepMethod : undefined); return (!v || v === 'raw') ? 'none' : v; })(),
               cookingMethod: String(s.cooking_method ?? s.cookingMethod ?? 'baked'),
               yieldFactorWater: typeof s.yield_factor_water === 'number' ? s.yield_factor_water : (typeof s.yieldFactorWater === 'number' ? s.yieldFactorWater : undefined),
               yieldFactorFat: typeof s.yield_factor_fat === 'number' ? s.yield_factor_fat : (typeof s.yieldFactorFat === 'number' ? s.yieldFactorFat : undefined),
@@ -1521,6 +1521,7 @@
           derived.push({
             key: k,
             label: formatSectionHeader(k),
+            prepMethod: 'none',
             cookingMethod: 'baked',
           });
         }
@@ -2279,8 +2280,7 @@
           <span class="section-card-dash">—</span>
           <!-- Prep method for this section (fires before the recipe-level primary Cook) -->
           <select
-            value={sec.prepMethod ?? 'none'}
-            onchange={(e) => { const v = (e.currentTarget as HTMLSelectElement).value; sections = sections.map((s, i) => i === sIdx ? { ...s, prepMethod: v === 'none' ? undefined : v } : s); }}
+            bind:value={sections[sIdx].prepMethod}
             class="form-input section-method-select"
             title="How this section is prepared before the primary cook"
           >
