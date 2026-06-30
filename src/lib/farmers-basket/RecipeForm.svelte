@@ -29,10 +29,9 @@
   export interface RecipeSection {
     key: string;
     label: string;
-    /** Explicit editor toggle: true = Prep step (display label only), false/undefined = Cook step (drives nutrition). */
-    isPrepStep?: boolean;
-    /** What the cook does to prepare this section — display-only label (from prep_method in recipe_sections.csv). */
+    /** Optional pre-step before the primary (recipe-level) cook. undefined/'none' = no pre-step. */
     prepMethod?: string;
+    /** Section cook method — driven by the recipe-level cookingMethod; used by the pipeline. Not shown in UI. */
     cookingMethod: string;
     yieldFactorWater?: number;
     yieldFactorFat?: number;
@@ -584,13 +583,14 @@
     const meta = sections.find((s) => s.key === sectionKey);
     if (meta) {
       const label = meta.label || (sectionKey.charAt(0).toUpperCase() + sectionKey.slice(1));
-      if (meta.cookingMethod) {
-        if (meta.prepMethod && meta.prepMethod !== meta.cookingMethod) {
+      if (meta.prepMethod && meta.prepMethod !== 'none') {
+        if (meta.cookingMethod && meta.cookingMethod !== meta.prepMethod) {
           return `${label} — ${meta.prepMethod} → ${meta.cookingMethod}`;
         }
-        return `${label} — ${meta.cookingMethod}`;
+        return `${label} — ${meta.prepMethod}`;
       }
-      return `${label}:`;
+      if (meta.cookingMethod) return `${label} — ${meta.cookingMethod}`;
+      return `${label}`;
     }
     return sectionKey.charAt(0).toUpperCase() + sectionKey.slice(1) + ':';
   }
@@ -608,7 +608,7 @@
   }
   function addSection() {
     const key = uniqueSectionKey('section_' + (sections.length + 1));
-    sections = [...sections, { key, label: '', isPrepStep: false, cookingMethod: 'baked', yieldFactorWater: 1.0 }];
+    sections = [...sections, { key, label: '', prepMethod: undefined, cookingMethod: 'baked', yieldFactorWater: 1.0 }];
   }
   function removeSection(idx: number) {
     const removedKey = sections[idx]?.key;
@@ -645,7 +645,7 @@
   function addSectionWithRow() {
     const idx = sections.length;
     const key = uniqueSectionKey(`section_${idx + 1}`);
-    sections = [...sections, { key, label: '', isPrepStep: false, cookingMethod: 'baked', yieldFactorWater: 1.0 }];
+    sections = [...sections, { key, label: '', prepMethod: undefined, cookingMethod: 'baked', yieldFactorWater: 1.0 }];
     addIngredientToSection(key);
   }
 
@@ -895,7 +895,6 @@
           sections = data.sections.map((s) => ({
             key: s.section_key,
             label: autoLabel ?? s.section_label,
-            isPrepStep: false,
             prepMethod: s.prep_method ?? undefined,
             cookingMethod: s.cooking_method,
             yieldFactorWater: s.yield_factor_water,
@@ -1466,7 +1465,6 @@
             nextSections = data.sections.map((s: Record<string, unknown>) => ({
               key: String(s.section_key ?? s.key ?? ''),
               label: String(s.section_label ?? s.label ?? ''),
-              isPrepStep: typeof s.isPrepStep === 'boolean' ? s.isPrepStep : false,
               prepMethod: typeof s.prep_method === 'string' ? s.prep_method : (typeof s.prepMethod === 'string' ? s.prepMethod : undefined),
               cookingMethod: String(s.cooking_method ?? s.cookingMethod ?? 'baked'),
               yieldFactorWater: typeof s.yield_factor_water === 'number' ? s.yield_factor_water : (typeof s.yieldFactorWater === 'number' ? s.yieldFactorWater : undefined),
@@ -1594,10 +1592,15 @@
         </select>
       </label>
 
-      <div class="form-label sections-cooking-note">
-        <span class="field-label-text">Cooking Method</span>
-        <span class="field-hint">Driven per section below — each section has its own method (raw, baked, boiled, etc.). Add a section to start adding ingredients.</span>
-      </div>
+      <label class="form-label">
+        Cook *
+        <select bind:value={cookingMethod} class="form-select">
+          {#each COOKING_METHODS as m}
+            <option value={m}>{m}</option>
+          {/each}
+        </select>
+        <span class="field-hint">The primary cooking method — applies to all ingredients. Sections may add a pre-step below.</span>
+      </label>
     </div>
     
     {#if !moderatorMode}
@@ -2250,43 +2253,18 @@
             class="form-input section-label-input"
           />
           <span class="section-card-dash">—</span>
-          {#if sec.isPrepStep === true}
-            <!-- Prep step: type toggle + cookingMethod select (drives retention same as Cook; prepMethod kept in sync for header display) -->
-            <select
-              value="prep"
-              onchange={() => { sections = sections.map((s, i) => i === sIdx ? { ...s, isPrepStep: false, prepMethod: undefined } : s); }}
-              class="form-input section-type-select"
-              title="Switch to Cook step"
-            >
-              <option value="prep">Prep</option>
-              <option value="cook">Cook</option>
-            </select>
-            <select
-              value={sec.cookingMethod}
-              onchange={(e) => { const v = (e.currentTarget as HTMLSelectElement).value; sections = sections.map((s, i) => i === sIdx ? { ...s, cookingMethod: v, prepMethod: v } : s); }}
-              class="form-input section-method-select section-prep-select"
-            >
-              {#each SECTION_COOKING_METHODS as m}
-                <option value={m}>{m}</option>
-              {/each}
-            </select>
-          {:else}
-            <!-- Cook step: type toggle + cookingMethod select -->
-            <select
-              value="cook"
-              onchange={() => { sections = sections.map((s, i) => i === sIdx ? { ...s, isPrepStep: true, prepMethod: s.cookingMethod } : s); }}
-              class="form-input section-type-select"
-              title="Switch to Prep step"
-            >
-              <option value="cook">Cook</option>
-              <option value="prep">Prep</option>
-            </select>
-            <select bind:value={sec.cookingMethod} class="form-input section-method-select">
-              {#each SECTION_COOKING_METHODS as m}
-                <option value={m}>{m}</option>
-              {/each}
-            </select>
-          {/if}
+          <!-- Section pre-step (optional): fires before the recipe-level primary Cook -->
+          <select
+            value={sec.prepMethod ?? 'none'}
+            onchange={(e) => { const v = (e.currentTarget as HTMLSelectElement).value; sections = sections.map((s, i) => i === sIdx ? { ...s, prepMethod: v === 'none' ? undefined : v } : s); }}
+            class="form-input section-method-select"
+            title="Optional pre-step before the primary cook"
+          >
+            <option value="none">no pre-step</option>
+            {#each SECTION_COOKING_METHODS as m}
+              <option value={m}>{m}</option>
+            {/each}
+          </select>
           {#if moderatorMode}
             <button
               type="button"
