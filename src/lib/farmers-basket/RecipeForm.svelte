@@ -29,6 +29,8 @@
   export interface RecipeSection {
     key: string;
     label: string;
+    /** Explicit editor toggle: true = Prep step (display label only), false/undefined = Cook step (drives nutrition). */
+    isPrepStep?: boolean;
     /** What the cook does to prepare this section — display-only label (from prep_method in recipe_sections.csv). */
     prepMethod?: string;
     cookingMethod: string;
@@ -606,7 +608,7 @@
   }
   function addSection() {
     const key = uniqueSectionKey('section_' + (sections.length + 1));
-    sections = [...sections, { key, label: '', prepMethod: 'baked', cookingMethod: 'baked', yieldFactorWater: 1.0 }];
+    sections = [...sections, { key, label: '', isPrepStep: false, cookingMethod: 'baked', yieldFactorWater: 1.0 }];
   }
   function removeSection(idx: number) {
     const removedKey = sections[idx]?.key;
@@ -643,7 +645,7 @@
   function addSectionWithRow() {
     const idx = sections.length;
     const key = uniqueSectionKey(`section_${idx + 1}`);
-    sections = [...sections, { key, label: '', prepMethod: 'baked', cookingMethod: 'baked', yieldFactorWater: 1.0 }];
+    sections = [...sections, { key, label: '', isPrepStep: false, cookingMethod: 'baked', yieldFactorWater: 1.0 }];
     addIngredientToSection(key);
   }
 
@@ -893,6 +895,7 @@
           sections = data.sections.map((s) => ({
             key: s.section_key,
             label: autoLabel ?? s.section_label,
+            isPrepStep: false,
             prepMethod: s.prep_method ?? undefined,
             cookingMethod: s.cooking_method,
             yieldFactorWater: s.yield_factor_water,
@@ -1463,7 +1466,8 @@
             nextSections = data.sections.map((s: Record<string, unknown>) => ({
               key: String(s.section_key ?? s.key ?? ''),
               label: String(s.section_label ?? s.label ?? ''),
-              prepMethod: typeof s.prep_method === 'string' ? s.prep_method : undefined,
+              isPrepStep: typeof s.isPrepStep === 'boolean' ? s.isPrepStep : false,
+              prepMethod: typeof s.prep_method === 'string' ? s.prep_method : (typeof s.prepMethod === 'string' ? s.prepMethod : undefined),
               cookingMethod: String(s.cooking_method ?? s.cookingMethod ?? 'baked'),
               yieldFactorWater: typeof s.yield_factor_water === 'number' ? s.yield_factor_water : (typeof s.yieldFactorWater === 'number' ? s.yieldFactorWater : undefined),
               yieldFactorFat: typeof s.yield_factor_fat === 'number' ? s.yield_factor_fat : (typeof s.yieldFactorFat === 'number' ? s.yieldFactorFat : undefined),
@@ -2246,11 +2250,11 @@
             class="form-input section-label-input"
           />
           <span class="section-card-dash">—</span>
-          {#if sec.prepMethod && sec.prepMethod !== sec.cookingMethod}
+          {#if sec.isPrepStep === true}
             <!-- Prep step: type toggle + prepMethod select -->
             <select
               value="prep"
-              onchange={() => { sections = sections.map((s, i) => i === sIdx ? { ...s, prepMethod: undefined } : s); }}
+              onchange={() => { sections = sections.map((s, i) => i === sIdx ? { ...s, isPrepStep: false, prepMethod: undefined } : s); }}
               class="form-input section-type-select"
               title="Switch to Cook step"
             >
@@ -2258,7 +2262,7 @@
               <option value="cook">Cook</option>
             </select>
             <select
-              value={sec.prepMethod}
+              value={sec.prepMethod ?? 'raw'}
               onchange={(e) => { sections = sections.map((s, i) => i === sIdx ? { ...s, prepMethod: (e.currentTarget as HTMLSelectElement).value } : s); }}
               class="form-input section-method-select section-prep-select"
             >
@@ -2270,7 +2274,7 @@
             <!-- Cook step: type toggle + cookingMethod select -->
             <select
               value="cook"
-              onchange={() => { sections = sections.map((s, i) => i === sIdx ? { ...s, prepMethod: 'raw' } : s); }}
+              onchange={() => { sections = sections.map((s, i) => i === sIdx ? { ...s, isPrepStep: true, prepMethod: s.prepMethod ?? 'raw' } : s); }}
               class="form-input section-type-select"
               title="Switch to Prep step"
             >
